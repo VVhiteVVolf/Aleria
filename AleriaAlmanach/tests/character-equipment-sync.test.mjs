@@ -67,6 +67,40 @@ test('Inventar- und Kampfbogenaenderungen werden in beide Richtungen uebernommen
   assert.equal(removedFromInventory.combatProfile.weapons.length, 0);
 });
 
+test('ein Import verknuepft mehrere bislang unverknuepfte Waffen vor dem Inventar-Rueckweg verlustfrei', () => {
+  const imported = synchronizeEquipmentFromCombat({
+    inventory: {
+      items: [{ id: 'placeholder', category: 'weapon', name: 'Hauptwaffe' }]
+    },
+    combatProfile: baseProfile({
+      weapons: [
+        { id: 'default-unarmed-melee', name: 'Nahkampf', weaponType: 'unarmed' },
+        { id: 'fenrir-greataxe', name: 'GroÃŸaxt', weaponType: 'axe', damageFormula: '1d12' },
+        { id: 'fenrir-handaxe-pair', name: 'EinhandÃ¤xte (Paar)', weaponType: 'axe', damageFormula: '1d6' },
+        { id: 'fenrir-throwing-axe', name: 'Wurfaxt', weaponType: 'axe', damageFormula: '1d6' },
+        { id: 'fenrir-roundshield-bash', name: 'Huskarl-Rundschild', weaponType: 'shield', damageFormula: '1d4' }
+      ]
+    }),
+    characterId: 'fenrir',
+    characterName: 'Fenrir Varulv',
+    now: '2026-08-08T16:00:00.000Z'
+  });
+
+  assert.equal(imported.combatProfile.weapons.length, 5);
+  assert.equal(imported.inventory.items.length, 5, 'vier echte Waffen werden zum bestehenden Platzhalter ergänzt');
+  imported.combatProfile.weapons.slice(1).forEach(weapon => {
+    assert.ok(weapon.inventoryItemId, `${weapon.name} muss vor dem Speichern verknüpft sein`);
+    assert.ok(imported.inventory.items.some(item => item.id === weapon.inventoryItemId));
+  });
+
+  const collected = synchronizeEquipmentFromInventory(imported);
+  assert.deepEqual(
+    collected.combatProfile.weapons.map(weapon => weapon.id),
+    imported.combatProfile.weapons.map(weapon => weapon.id),
+    'der anschließende Inventar-Rückweg darf keine importierte Waffe entfernen'
+  );
+});
+
 test('Draig-Ruestung schaltet den Geschicklichkeitsmodifikator erst ab Stufe sechs frei', () => {
   const profile = sanitizeCharacterCombatProfile({
     progression: { level: 1 },

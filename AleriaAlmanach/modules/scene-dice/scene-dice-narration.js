@@ -3,7 +3,7 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js?v=20260803-character-creation-v1';
+} from './scene-dice-narration-core.js?v=20260808-duncan-v1';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,

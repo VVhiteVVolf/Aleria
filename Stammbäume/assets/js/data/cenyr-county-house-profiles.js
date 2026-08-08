@@ -1,6 +1,7 @@
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { AEHRENTAL_HOUSE_PROFILES } from './aehrental-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_PROFILES } from './graue-weite-house-profiles.js';
+import { KLAUENINSEL_HOUSE_PROFILES } from './klaueninseln-house-profiles.js';
 import { SONNENKUESTE_HOUSE_PROFILES } from './sonnenkueste-house-profiles.js';
 import { SILBERINSEL_HOUSE_PROFILES } from './silberinsel-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
@@ -93,6 +94,6 @@ export const CENYR_COUNTY_HOUSE_PROFILES = Object.freeze({
   grawn: AEHRENTAL_HOUSE_PROFILES.grawn,
   neidr: SILBERINSEL_HOUSE_PROFILES.neidr,
   pysgod: GRAUE_WEITE_HOUSE_PROFILES.pysgod,
-  arth: countyProfile('county', 'Klaueninsel', 'Talgarth'),
+  arth: KLAUENINSEL_HOUSE_PROFILES.arth,
   aderyn: TAL_DER_MILANE_HOUSE_PROFILES.aderyn
 });

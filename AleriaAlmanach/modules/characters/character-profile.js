@@ -2,9 +2,11 @@ let _editingChar = null;
 let _charPortraitUrl = null;
 const MAX_EMOTES = CHARACTER_AVATAR_LIMIT;
 let _emoteSlots = [];
+let _pendingCharacterImport = null;
+let _charProfileSavePromise = null;
 
-// Schnappschuss dessen, was beim Öffnen des Bogens tatsächlich geladen wurde (Bilder/Emotes,
-// Inventar, Kampfprofil) - jeweils über dieselben collect...()-Funktionen wie beim Speichern,
+// Schnappschuss dessen, was beim Öffnen des Bogens tatsächlich geladen wurde (Profil,
+// Bilder/Emotes, Inventar, Kampfprofil) - jeweils über dieselben collect...()-Funktionen wie beim Speichern,
 // damit der Vergleich später wirklich "Apfel mit Apfel" ist. Damit kann saveCharacter() Bereiche,
 // die in dieser Sitzung nie angefasst wurden, komplett aus dem Schreibvorgang weglassen, statt sie
 // aus dem (potenziell veralteten) Formularzustand einfach immer wieder mitzuspeichern. Genau das
@@ -40,6 +42,7 @@ function populateCharacterProfileForm(c = {}) {
 
   const equipmentBaseline = collectCharacterEquipmentProfileData(c);
   _charProfileLoadedSnapshot = {
+    profile: collectCharacterProfileSectionData(c),
     images: collectCharacterImageSetEditorData(),
     inventory: equipmentBaseline.inventory,
     combatProfile: equipmentBaseline.combatProfile
@@ -48,6 +51,7 @@ function populateCharacterProfileForm(c = {}) {
 
 function openCharProfile(id) {
   _editingChar = id;
+  _pendingCharacterImport = null;
   const c = id ? (getCharacterById(id) || {}) : {};
   const isBuiltin = isBuiltinCharacterId(id);
   populateCharacterProfileForm(c);
@@ -183,15 +187,53 @@ function switchCharTab(tab) {
   });
 }
 
-function closeCharProfile() {
-  if (window.AleriaCharacterCombatProfile?.hasUnsavedDraftNotice?.()) {
-    const discard = confirm('Stufenaufstieg oder Starthilfe wurden noch nicht gespeichert. Ohne Klick auf „Figur speichern" gehen diese Änderungen jetzt verloren. Trotzdem schließen?');
+function getUnsavedCharacterProfileSectionLabels() {
+  if (!_charProfileLoadedSnapshot || !window.AleriaCharacterSaveGuard?.selectChangedSections) return [];
+  const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
+  const equipment = collectCharacterEquipmentProfileData(existing);
+  const current = {
+    profile: collectCharacterProfileSectionData(existing),
+    inventory: equipment.inventory,
+    combatProfile: equipment.combatProfile
+  };
+  const labels = {
+    profile: 'Profil',
+    inventory: 'Inventar',
+    combatProfile: 'Charakterbogen'
+  };
+  return window.AleriaCharacterSaveGuard
+    .selectChangedSections(current, _charProfileLoadedSnapshot, Object.keys(labels))
+    .map(section => labels[section]);
+}
+
+function setCharacterProfileSavingState(isSaving) {
+  const overlay = document.getElementById('char-profile-overlay');
+  if (!overlay) return;
+  overlay.inert = !!isSaving;
+  if (isSaving) overlay.setAttribute('aria-busy', 'true');
+  else overlay.removeAttribute('aria-busy');
+}
+
+function closeCharProfile(options = {}) {
+  if (options.skipUnsavedCheck !== true && _charProfileSavePromise) {
+    const status = document.getElementById('cp-save-status');
+    if (status) status.textContent = 'Speichern läuft noch …';
+    return;
+  }
+  const changedSections = options.skipUnsavedCheck === true ? [] : getUnsavedCharacterProfileSectionLabels();
+  const hasPendingImport = options.skipUnsavedCheck !== true && !!_pendingCharacterImport;
+  const hasCombatDraftNotice = options.skipUnsavedCheck !== true
+    && window.AleriaCharacterCombatProfile?.hasUnsavedDraftNotice?.();
+  if (changedSections.length || hasPendingImport || hasCombatDraftNotice) {
+    const details = changedSections.length ? ` (${changedSections.join(', ')})` : '';
+    const discard = confirm(`Ungespeicherte Charakteränderungen${details} gehen beim Schließen verloren. Trotzdem schließen?`);
     if (!discard) return;
   }
   deactivateDialog('char-profile-overlay');
   _editingChar = null;
   _charPortraitUrl = null;
   _charProfileLoadedSnapshot = null;
+  _pendingCharacterImport = null;
 }
 
 function previewPortraitUrl(url) {
@@ -200,6 +242,7 @@ function previewPortraitUrl(url) {
     err.style.display = 'none';
     syncPortraitDisplay(null, document.getElementById('cp-name').value || '?');
     _charPortraitUrl = null;
+    scheduleCharacterImageLibraryPersistence('clear-portrait');
     return;
   }
 
@@ -214,9 +257,12 @@ function previewPortraitUrl(url) {
   const img = new Image();
   img.crossOrigin = 'anonymous';
   img.addEventListener('load', () => {
+    const currentValue = normalizeImageUrlForStorage(document.getElementById('cp-portrait-url')?.value || '');
+    if (currentValue !== safeUrl) return;
     err.style.display = 'none';
     _charPortraitUrl = safeUrl;
     syncPortraitDisplay(safeUrl, document.getElementById('cp-name').value || '?');
+    scheduleCharacterImageLibraryPersistence('portrait');
   }, { once: true });
   img.addEventListener('error', () => {
     err.style.display = 'block';
@@ -240,6 +286,7 @@ function openEmoteUrlInput(slotIndex) {
     const label = _emoteSlots[slotIndex]?.label || '';
     _emoteSlots[slotIndex] = { img: safeUrl, label };
     renderEmoteGrid();
+    scheduleCharacterImageLibraryPersistence('emote');
   }, { once: true });
   img.addEventListener('error', () => alert('Bild konnte nicht geladen werden. Bitte prüfe die URL.'), { once: true });
   img.src = safeUrl;
@@ -284,7 +331,60 @@ function renderEmoteGrid() {
 function removeEmote(i) {
   _emoteSlots[i] = null;
   renderEmoteGrid();
+  scheduleCharacterImageLibraryPersistence('remove-emote');
 }
+
+function setCharacterImageLibrarySaveStatus(message, isError = false) {
+  const status = document.getElementById('cp-save-status');
+  if (!status) return;
+  status.style.color = isError ? 'var(--red-wax)' : 'var(--gold)';
+  status.textContent = message;
+}
+
+window.AleriaCharacterProfileMediaPersistence = Object.freeze({
+  capture(reason = '') {
+    const characterId = String(_editingChar || '');
+    if (!characterId || isBuiltinCharacterId(characterId)) return null;
+    return {
+      characterId,
+      reason,
+      images: collectCharacterImageSetEditorData()
+    };
+  },
+  showDeferred() {
+    setCharacterImageLibrarySaveStatus('Bilder werden beim ersten Speichern der Figur gesichert.');
+  },
+  showQueued() {
+    setCharacterImageLibrarySaveStatus('Bilder werden gespeichert…');
+  },
+  applySaved(snapshot, { isLatest } = {}) {
+    const idx = _characters.findIndex(character => character.id === snapshot.characterId);
+    if (idx >= 0) {
+      _characters[idx] = {
+        ..._characters[idx],
+        ...snapshot.images,
+        updatedAt: new Date().toISOString()
+      };
+    }
+    if (_editingChar !== snapshot.characterId || !isLatest) return;
+    _charProfileLoadedSnapshot = {
+      ...(_charProfileLoadedSnapshot || {}),
+      images: snapshot.images
+    };
+    setCharacterImageLibrarySaveStatus('Bilder gespeichert ✓');
+    setTimeout(() => {
+      const status = document.getElementById('cp-save-status');
+      if (status?.textContent === 'Bilder gespeichert ✓') status.textContent = '';
+    }, 2000);
+  },
+  showError(error, snapshot, { isLatest } = {}) {
+    const message = getFriendlyErrorMessage(error, 'Bilder konnten nicht gespeichert werden.');
+    if (_editingChar === snapshot?.characterId && isLatest) {
+      setCharacterImageLibrarySaveStatus(message, true);
+    }
+    if (isLatest) showAppStatus(message, 'error');
+  }
+});
 
 function collectCharacterEquipmentProfileData(existing = {}) {
   const inventory = typeof collectCharacterInventoryProfileData === 'function'
@@ -304,15 +404,9 @@ function collectCharacterEquipmentProfileData(existing = {}) {
   };
 }
 
-function collectCharacterProfileDataFromForm() {
-  const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
-  const profileLink = normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || '');
-  const now = new Date().toISOString();
+function collectCharacterProfileSectionData(existing = {}) {
   const genealogy = getCharacterGenealogyFormData(existing);
-  const imageSetData = collectCharacterImageSetEditorData();
-  const equipmentData = collectCharacterEquipmentProfileData(existing);
   return {
-    id: _editingChar || '',
     name: document.getElementById('cp-name')?.value.trim() || existing.name || '',
     title: document.getElementById('cp-title')?.value.trim() || '',
     fraktion: document.getElementById('cp-fraktion')?.value.trim() || '',
@@ -323,16 +417,11 @@ function collectCharacterProfileDataFromForm() {
     currentLocation: document.getElementById('cp-current-location')?.value.trim() || '',
     origin: document.getElementById('cp-origin')?.value.trim() || '',
     plotNode: document.getElementById('cp-plot-node')?.value.trim() || '',
-    profileLink,
+    profileLink: normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || ''),
     playerOwner: normalizeCharacterPlayerOwner(document.getElementById('cp-player-owner')?.value || ''),
     bio: document.getElementById('cp-bio')?.value.trim() || '',
     aliases: parseAliasInput(document.getElementById('cp-aliases')?.value || ''),
     archived: !!document.getElementById('cp-archived')?.checked,
-    createdAt: existing.createdAt || now,
-    updatedAt: now,
-    ...imageSetData,
-    inventory: equipmentData.inventory,
-    combatProfile: equipmentData.combatProfile,
     ...(existing.localRecord ? {
       localRecord: cloneCharacterStructuredValue(existing.localRecord, existing.localRecord)
     } : {}),
@@ -340,6 +429,23 @@ function collectCharacterProfileDataFromForm() {
       ? existing.identity
       : { worldPersonId: genealogy.worldPersonId }),
     genealogy
+  };
+}
+
+function collectCharacterProfileDataFromForm() {
+  const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
+  const now = new Date().toISOString();
+  const profile = collectCharacterProfileSectionData(existing);
+  const imageSetData = collectCharacterImageSetEditorData();
+  const equipmentData = collectCharacterEquipmentProfileData(existing);
+  return {
+    id: _editingChar || '',
+    ...profile,
+    createdAt: existing.createdAt || now,
+    updatedAt: now,
+    ...imageSetData,
+    inventory: equipmentData.inventory,
+    combatProfile: equipmentData.combatProfile
   };
 }
 
@@ -365,6 +471,11 @@ function exportCurrentCharacterProfile() {
 }
 
 function openCurrentCharacterImportFilePicker() {
+  if (_charProfileSavePromise) {
+    const status = document.getElementById('cp-save-status');
+    if (status) status.textContent = 'Bitte warte, bis der laufende Speichervorgang abgeschlossen ist.';
+    return;
+  }
   const input = document.createElement('input');
   input.type = 'file';
   input.accept = '.json,application/json';
@@ -377,17 +488,33 @@ function openCurrentCharacterImportFilePicker() {
       const normalized = normalizeCharacterImportPayload(parsed);
       const records = normalized.characters.filter(character => character && typeof character === 'object');
       if (records.length !== 1) throw new Error('Bitte wähle für den geöffneten Bogen genau einen Charakter aus.');
-      const imported = {
+      const importedRecord = {
         ...records[0],
         aliases: Array.isArray(records[0].aliases) ? records[0].aliases : parseAliasInput(records[0].aliases || ''),
         emotes: Array.isArray(records[0].emotes) ? records[0].emotes : [],
         imageSets: Array.isArray(records[0].imageSets) ? records[0].imageSets : []
       };
+      const currentRecord = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
+      const imported = window.AleriaCharacterSaveGuard?.mergeCharacterImageLibrary
+        ? window.AleriaCharacterSaveGuard.mergeCharacterImageLibrary(currentRecord, importedRecord)
+        : importedRecord;
+      // Ein Einzelimport ist kein unverbindlicher Formularentwurf: Er ersetzt den geoeffneten
+      // Charakter vollstaendig und wird direkt in Firestore verankert. Bleibt der Schreibvorgang
+      // z. B. wegen einer aktiven Kampfsperre erfolglos, merkt sich _pendingCharacterImport den
+      // Vollimport, damit ein spaeterer Klick auf "Speichern" denselben Ersatzschreibvorgang
+      // wiederholt und nicht versehentlich nur einzelne Formularfelder zusammenfuehrt.
+      _pendingCharacterImport = imported;
       populateCharacterProfileForm(imported);
       if (status) {
         status.style.color = 'var(--gold)';
-        status.textContent = 'Importiert – mit „Speichern“ dauerhaft übernehmen.';
+        status.textContent = 'Import wird vollständig gespeichert…';
       }
+      await saveCharacter({
+        importedRecord: imported,
+        forceOverwrite: true,
+        replaceExisting: true,
+        successMessage: 'Import vollständig gespeichert ✓'
+      });
     } catch (error) {
       if (status) {
         status.style.color = 'var(--red-wax)';
@@ -398,49 +525,81 @@ function openCurrentCharacterImportFilePicker() {
   input.click();
 }
 
-async function saveCharacter() {
+async function saveCharacter(options = {}) {
+  const previous = _charProfileSavePromise;
+  const operation = (previous ? previous.catch(() => null) : Promise.resolve())
+    .then(async () => {
+      setCharacterProfileSavingState(true);
+      try {
+        return await saveCharacterOnce(options);
+      } finally {
+        setCharacterProfileSavingState(false);
+      }
+    });
+  _charProfileSavePromise = operation;
+  try {
+    return await operation;
+  } finally {
+    if (_charProfileSavePromise === operation) _charProfileSavePromise = null;
+  }
+}
+
+async function saveCharacterOnce(options = {}) {
+  await window.AleriaCharacterImageLibraryAutosave?.flush?.(_editingChar);
+  const importedRecord = options.importedRecord || _pendingCharacterImport;
+  const replaceExisting = options.replaceExisting === true || !!importedRecord;
+  const forceOverwrite = options.forceOverwrite === true || !!importedRecord;
   const selectedCommentCharId = _selectedCharId;
   const selectedCommentEmoteIdx = _selectedEmoteIdx;
   const selectedCommentImageSetId = _selectedImageSetId;
-  const name     = document.getElementById('cp-name').value.trim();
-  const title    = document.getElementById('cp-title').value.trim();
-  const fraktion = document.getElementById('cp-fraktion').value.trim();
-  const role = document.getElementById('cp-role')?.value.trim() || '';
-  const characterStatus = getCharacterStatusValue(document.getElementById('cp-status')?.value || '');
-  const relevance = getCharacterRelevanceValue(document.getElementById('cp-relevance')?.value || '');
-  const taxonomyPath = document.getElementById('cp-taxonomy-path')?.value.trim() || '';
-  const currentLocation = document.getElementById('cp-current-location')?.value.trim() || '';
-  const origin = document.getElementById('cp-origin')?.value.trim() || '';
-  const plotNode = document.getElementById('cp-plot-node')?.value.trim() || '';
   const profileLinkInput = document.getElementById('cp-profile-link-url')?.value || '';
   const profileLink = normalizeCharacterProfileLinkForStorage(profileLinkInput);
-  const playerOwner = normalizeCharacterPlayerOwner(document.getElementById('cp-player-owner')?.value || '');
-  const bio      = document.getElementById('cp-bio').value.trim();
-  const aliases  = parseAliasInput(document.getElementById('cp-aliases')?.value || '');
-  const archived = !!document.getElementById('cp-archived')?.checked;
   const status   = document.getElementById('cp-save-status');
   const sourceId = _editingChar;
   const isBuiltin = isBuiltinCharacterId(sourceId);
 
-  if (!name) {
+  if (!window._fb?.saveCharacter || !window.AleriaCharacterSaveGuard?.selectChangedSections) {
+    const message = 'Die Online-Speicherung ist noch nicht bereit. Bitte versuche es gleich erneut.';
+    status.style.color = 'var(--red-wax)';
+    status.textContent = message;
+    showAppStatus(message, 'error');
+    return null;
+  }
+
+  if (!document.getElementById('cp-name').value.trim()) {
     status.style.color = 'var(--red-wax)';
     status.textContent = 'Name ist Pflicht.';
-    return;
+    return null;
   }
 
   if (profileLinkInput.trim() && !profileLink) {
     status.style.color = 'var(--red-wax)';
     status.textContent = 'Profil-Link muss mit http(s), /, ./ oder ../ beginnen.';
-    return;
+    return null;
   }
 
   const existing = sourceId ? (getCharacterById(sourceId) || {}) : {};
   const saveTargetId = isBuiltin ? null : sourceId;
   const now = new Date().toISOString();
+  const recordSource = replaceExisting && importedRecord && window.AleriaCharacterSaveGuard?.mergeCharacterImageLibrary
+    ? window.AleriaCharacterSaveGuard.mergeCharacterImageLibrary(existing, importedRecord)
+    : (replaceExisting && importedRecord ? importedRecord : existing);
 
-  const genealogy = getCharacterGenealogyFormData(existing);
-  const imageSetData = collectCharacterImageSetEditorData();
-  const equipmentData = collectCharacterEquipmentProfileData(existing);
+  const profileData = collectCharacterProfileSectionData(recordSource);
+  const name = profileData.name;
+  const imageSetData = replaceExisting && importedRecord
+    ? buildCharacterImageLibraryStorage(recordSource)
+    : collectCharacterImageSetEditorData();
+  const equipmentData = replaceExisting && importedRecord
+    ? (window.AleriaCharacterCombatProfile?.prepareImported?.(recordSource)
+      || {
+        inventory: typeof sanitizeCharacterInventoryData === 'function'
+          ? sanitizeCharacterInventoryData(recordSource.inventory || {})
+          : cloneCharacterStructuredValue(recordSource.inventory, {}),
+        combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(recordSource.combatProfile || {})
+          || cloneCharacterStructuredValue(recordSource.combatProfile, {})
+      })
+    : collectCharacterEquipmentProfileData(recordSource);
 
   // Profil, Bilder & Emotes, Inventar und Kampfdaten sind vier eigenständige Bereiche - der
   // gemeinsame "Speichern"-Knopf darf einen davon nur dann tatsächlich mit anfassen, wenn er in
@@ -448,50 +607,86 @@ async function saveCharacter() {
   // Kampfprofil/Inventar mit dem (möglicherweise veralteten) beim Öffnen geladenen Stand
   // überschreiben. Bei einer neu angelegten Figur (kein Schnappschuss vorhanden) greift die
   // Prüfung nicht - die braucht von Anfang an ein vollständiges Kampfprofil/Inventar/Bilderset.
-  const baseline = saveTargetId ? _charProfileLoadedSnapshot : null;
-  const current = { images: imageSetData, inventory: equipmentData.inventory, combatProfile: equipmentData.combatProfile };
-  const changedSections = new Set(window.AleriaCharacterSaveGuard.selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']));
+  const baseline = saveTargetId && !replaceExisting ? _charProfileLoadedSnapshot : null;
+  const current = {
+    profile: profileData,
+    images: imageSetData,
+    inventory: equipmentData.inventory,
+    combatProfile: equipmentData.combatProfile
+  };
+  const changedSections = new Set(window.AleriaCharacterSaveGuard.selectChangedSections(
+    current,
+    baseline,
+    ['profile', 'images', 'inventory', 'combatProfile']
+  ));
+  const profileChanged = changedSections.has('profile');
   const imagesChanged = changedSections.has('images');
   const inventoryChanged = changedSections.has('inventory');
   const combatProfileChanged = changedSections.has('combatProfile');
 
+  if (!changedSections.size) {
+    status.style.color = 'var(--gold)';
+    status.textContent = 'Keine Änderungen.';
+    setTimeout(() => {
+      if (status.textContent === 'Keine Änderungen.') status.textContent = '';
+    }, 2000);
+    return saveTargetId;
+  }
+
   const data = {
-    name, title, fraktion, role, status: characterStatus, relevance,
-    taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
-    aliases,
-    archived,
-    createdAt: existing.createdAt || now,
+    ...(replaceExisting && importedRecord
+      ? cloneCharacterStructuredValue(recordSource, {})
+      : {}),
+    ...(profileChanged ? profileData : {}),
+    ...(!saveTargetId || replaceExisting ? {
+      createdAt: recordSource.createdAt || existing.createdAt || now
+    } : {}),
     updatedAt: now,
     ...(imagesChanged ? imageSetData : {}),
     ...(inventoryChanged ? { inventory: equipmentData.inventory } : {}),
-    ...(combatProfileChanged ? { combatProfile: equipmentData.combatProfile } : {}),
-    ...(existing.localRecord ? {
-      localRecord: cloneCharacterStructuredValue(existing.localRecord, existing.localRecord)
-    } : {}),
-    identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
-      ? existing.identity
-      : { worldPersonId: genealogy.worldPersonId }),
-    genealogy
+    ...(combatProfileChanged ? { combatProfile: equipmentData.combatProfile } : {})
   };
+  delete data.id;
+  delete data._builtin;
+  delete data._imageSetsExplicit;
+  delete data.ownerUid;
+  delete data.createdBy;
 
   status.style.color = 'var(--gold)';
   status.textContent = 'Wird gespeichert…';
 
   try {
-    const newId = await window._fb.saveCharacter(saveTargetId, data);
+    const saveResult = await window._fb.saveCharacter(saveTargetId, data, {
+      forceOverwrite,
+      replaceExisting,
+      returnWriteResult: true
+    });
+    const newId = typeof saveResult === 'object' && saveResult ? saveResult.id : saveResult;
+    const persistedData = typeof saveResult === 'object' && saveResult?.data
+      ? saveResult.data
+      : data;
+    let persistedRecord;
     if (saveTargetId) {
       const idx = _characters.findIndex(x => x.id === saveTargetId);
       // data kann inventory/combatProfile/Bilder-Felder bewusst auslassen (siehe oben) - der
       // lokale Zwischenspeicher braucht trotzdem den vollständigen Datensatz, sonst "vergisst"
       // die Sitzung diese Felder bis zum nächsten kompletten Neuladen.
-      if (idx >= 0) _characters[idx] = { ..._characters[idx], ...data, id: saveTargetId };
+      if (idx >= 0) {
+        _characters[idx] = replaceExisting
+          ? { id: saveTargetId, ...persistedData }
+          : { ..._characters[idx], ...persistedData, id: saveTargetId };
+      } else {
+        _characters.push({ id: saveTargetId, ...persistedData });
+      }
+      persistedRecord = getCharacterById(saveTargetId) || { id: saveTargetId, ...persistedData };
     } else {
       if (isBuiltin && sourceId) {
         replaceCharacterIdInTabs(sourceId, newId);
         saveCharTabs();
       }
-      _characters.push({ id: newId, ...data });
+      _characters.push({ id: newId, ...persistedData });
       _editingChar = newId;
+      persistedRecord = getCharacterById(newId) || { id: newId, ...persistedData };
       document.getElementById('cp-delete-btn').style.display = 'inline-block';
       if (_activeCharTab !== 'Alle' && _activeCharTab !== CHARACTER_ARCHIVE_TAB) {
         if (_activeCharSubtab && _activeCharSubtab !== 'Alle') {
@@ -501,13 +696,22 @@ async function saveCharacter() {
         }
       }
     }
-    // Nach erfolgreichem Speichern gilt der gerade geschriebene Stand als neuer Sync-Punkt fuer
-    // die "wurde dieser Bereich in dieser Sitzung ueberhaupt angefasst"-Pruefung oben.
+    // Firestore vergibt für Inventar und Kampfprofil frische Revisionsnummern. Der Editor und der
+    // Vergleichsschnappschuss müssen genau diesen geschriebenen Stand übernehmen; andernfalls
+    // würde der nächste legitime Speichervorgang wie ein veralteter Browser-Tab aussehen.
+    if (inventoryChanged || combatProfileChanged) {
+      window.AleriaCharacterCombatProfile?.init?.(persistedRecord);
+    }
+    const persistedEquipment = inventoryChanged || combatProfileChanged
+      ? collectCharacterEquipmentProfileData(persistedRecord)
+      : null;
     _charProfileLoadedSnapshot = {
-      images: imagesChanged ? imageSetData : _charProfileLoadedSnapshot?.images,
-      inventory: inventoryChanged ? equipmentData.inventory : _charProfileLoadedSnapshot?.inventory,
-      combatProfile: combatProfileChanged ? equipmentData.combatProfile : _charProfileLoadedSnapshot?.combatProfile
+      profile: profileChanged ? profileData : (baseline?.profile || current.profile),
+      images: imagesChanged ? imageSetData : (baseline?.images || current.images),
+      inventory: persistedEquipment?.inventory || baseline?.inventory || current.inventory,
+      combatProfile: persistedEquipment?.combatProfile || baseline?.combatProfile || current.combatProfile
     };
+    _pendingCharacterImport = null;
     renderCharSubtabs();
     renderCharGrid();
     renderCharPickerInForm();
@@ -521,13 +725,15 @@ async function saveCharacter() {
         }
       }
     }
-    status.textContent = 'Gespeichert ✓';
+    status.textContent = options.successMessage || 'Gespeichert ✓';
     setTimeout(() => { status.textContent = ''; }, 2000);
+    return newId;
   } catch(e) {
     const message = getFriendlyErrorMessage(e, 'Charakter konnte nicht gespeichert werden.');
     status.style.color = 'var(--red-wax)';
     status.textContent = message;
     showAppStatus(message, 'error');
+    return null;
   }
 }
 
@@ -535,17 +741,21 @@ async function deleteCharacter() {
   if (!_editingChar) return;
   if (isBuiltinCharacterId(_editingChar)) {
     if (!confirm('Integrierten Kommentator aus Listen ausblenden? Bestehende Kommentare bleiben erhalten.')) return;
+    if (_charProfileSavePromise) await _charProfileSavePromise;
     _hiddenBuiltinCharacterIds.add(_editingChar);
     saveCharTabs();
     renderCharSubtabs();
     renderCharGrid();
     renderCharPickerInForm();
-    closeCharProfile();
+    closeCharProfile({ skipUnsavedCheck: true });
     return;
   }
   if (!confirm('Charakter wirklich löschen?')) return;
 
   try {
+    if (_charProfileSavePromise) await _charProfileSavePromise;
+    window.AleriaCharacterImageLibraryAutosave?.cancel?.(_editingChar);
+    await window.AleriaCharacterImageLibraryAutosave?.flush?.(_editingChar);
     await window._fb.deleteCharacter(_editingChar);
     _characters = _characters.filter(x => x.id !== _editingChar);
     Object.keys(_charTabMap).forEach(tab => {
@@ -556,7 +766,7 @@ async function deleteCharacter() {
     renderCharSubtabs();
     renderCharGrid();
     renderCharPickerInForm();
-    closeCharProfile();
+    closeCharProfile({ skipUnsavedCheck: true });
   } catch(e) {
     const message = getFriendlyErrorMessage(e, 'Charakter konnte nicht gelöscht werden.');
     document.getElementById('cp-save-status').textContent = message;

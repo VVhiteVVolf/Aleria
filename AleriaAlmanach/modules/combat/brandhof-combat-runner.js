@@ -1,7 +1,7 @@
-import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js';
-import { resolveCombatProfile } from './combat-profile-resolver.js';
-import { CombatResolutionService } from './combat-resolution-service.js';
-import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js';
+import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260808-duncan-v1';
+import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260808-duncan-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260808-duncan-v1';
+import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260808-duncan-v1';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 const TEAM_EEL = 'Schwarzer Zitteraal';

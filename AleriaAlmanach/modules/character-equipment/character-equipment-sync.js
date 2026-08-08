@@ -230,3 +230,10 @@ export const characterEquipmentSyncInternals = Object.freeze({
   combatEntryFromInventory,
   inventoryItemFromCombat
 });
+
+// Klassische Charakter-Editor-Skripte können dieses ES-Modul nicht direkt importieren. Die
+// schmale, featurebezogene Brücke hält die Synchronisationslogik trotzdem an genau einer Stelle.
+globalThis.AleriaCharacterEquipmentSync = Object.freeze({
+  synchronizeFromCombat: synchronizeEquipmentFromCombat,
+  synchronizeFromInventory: synchronizeEquipmentFromInventory
+});

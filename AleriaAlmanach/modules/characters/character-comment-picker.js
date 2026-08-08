@@ -2,6 +2,7 @@
 let _manualMode = false;
 let _selectedEmoteIdx = null;
 let _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
+let _commentCharacterMediaSavePending = false;
 
 function renderCharPickerInForm() {
   const picker = document.getElementById('cf-char-picker');
@@ -239,14 +240,19 @@ async function saveCommentCharacterFromPicker(char, data) {
   const sourceId = char.id;
   const isBuiltin = isBuiltinCharacterId(sourceId);
   const saveTargetId = isBuiltin ? null : sourceId;
-  const savedId = await window._fb.saveCharacter(saveTargetId, data);
+  // Bei einer bereits gespeicherten Figur gehört diese Aktion ausschließlich der
+  // Avatarsektion. Die vollständigen Profildaten in `data` werden nur benötigt, wenn ein
+  // integrierter Kommentator erstmalig als eigener Charakter angelegt werden muss.
+  const outgoingData = saveTargetId
+    ? (window.AleriaCharacterSaveGuard?.selectCharacterImageLibraryWrite?.(data)
+      || { ...buildCharacterImageLibraryStorage(data), updatedAt: data.updatedAt })
+    : data;
+  const savedId = await window._fb.saveCharacter(saveTargetId, outgoingData);
 
   if (saveTargetId) {
     const idx = _characters.findIndex(item => item.id === saveTargetId);
-    // data laesst inventory/combatProfile bewusst aus (siehe buildCommentCharacterSaveData) - der
-    // lokale Zwischenspeicher braucht trotzdem den vollstaendigen, zuvor bekannten Datensatz.
-    if (idx >= 0) _characters[idx] = { ..._characters[idx], ...data, id: saveTargetId };
-    else _characters.push({ ...char, id: saveTargetId, ...data });
+    if (idx >= 0) _characters[idx] = { ..._characters[idx], ...outgoingData, id: saveTargetId };
+    else _characters.push({ ...char, id: saveTargetId, ...outgoingData });
     return saveTargetId;
   }
 
@@ -266,6 +272,10 @@ async function addEmoteToSelectedCommentCharacter() {
     ? (getAvailableCommentCharacterById(_selectedCharId) || getCharacterById(_selectedCharId))
     : null;
   if (!char) return;
+  if (_commentCharacterMediaSavePending) {
+    if (status) status.textContent = 'Eine Avataränderung wird bereits gespeichert.';
+    return;
+  }
   if (char.entityType === 'creature') {
     if (status) status.textContent = 'Kreaturen verwenden ihr Portrait aus dem Kreaturenbogen.';
     return;
@@ -288,6 +298,7 @@ async function addEmoteToSelectedCommentCharacter() {
   if (status) status.textContent = 'Bild wird geprüft...';
   const selectedImageSetId = _selectedImageSetId;
 
+  _commentCharacterMediaSavePending = true;
   try {
     await new Promise((resolve, reject) => {
       const test = new Image();
@@ -316,6 +327,8 @@ async function addEmoteToSelectedCommentCharacter() {
       : 'Bild konnte nicht geladen werden. Bitte prüfe die URL.';
     if (status) status.textContent = message;
     if (error?.code) showAppStatus(message, 'error');
+  } finally {
+    _commentCharacterMediaSavePending = false;
   }
 }
 
@@ -329,16 +342,22 @@ async function removeEmoteFromSelectedCommentCharacter(idx, event) {
   if (!char) return;
   if (char.entityType === 'creature') return;
 
+  const status = document.getElementById('cf-emote-add-status');
+  if (_commentCharacterMediaSavePending) {
+    if (status) status.textContent = 'Eine Avataränderung wird bereits gespeichert.';
+    return;
+  }
+
   const presentation = getSelectedCommentCharacterPresentation(char);
   const emotes = Array.isArray(presentation?.emotes) ? presentation.emotes.slice() : [];
   if (!emotes[idx]) return;
   const label = emotes[idx].label ? ` "${emotes[idx].label}"` : '';
   if (!confirm(`Avatar${label} wirklich löschen?`)) return;
 
-  const status = document.getElementById('cf-emote-add-status');
   if (status) status.textContent = 'Avatar wird gelöscht...';
   const selectedImageSetId = _selectedImageSetId;
 
+  _commentCharacterMediaSavePending = true;
   try {
     const nextEmotes = emotes.filter((_, index) => index !== idx);
     const data = buildCommentCharacterSaveData(char, nextEmotes, null, _selectedImageSetId);
@@ -358,6 +377,8 @@ async function removeEmoteFromSelectedCommentCharacter(idx, event) {
     const message = getFriendlyErrorMessage(error, 'Avatar konnte nicht gelöscht werden.');
     if (status) status.textContent = message;
     showAppStatus(message, 'error');
+  } finally {
+    _commentCharacterMediaSavePending = false;
   }
 }
 

@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
     "sourceUpdatedAt": "2026-07-20T17:06:56.958Z",
     "sourceDocumentIds": [
       "person--haus-gwefrydd--stennis-gwefrydd"
     ],
-    "contentHash": "76235694b8b7eb688329b42fb9e608b8780309fb025bf92813ee97e636456957"
+    "contentHash": "ecd2a69d6bf0b51b288cdb6a14b7f4b5d3b54b49e8882a3c9a0ec22054f1bde8"
   },
   "local": {
     "notes": "",
@@ -1343,8 +1343,8 @@
           "personId": "stennis-gwefrydd",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-03T18:28:54.436Z",
-          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view&person=stennis-gwefrydd",
           "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dyngwn/stennis-gwefrydd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[]}}"
         }

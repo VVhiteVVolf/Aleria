@@ -84,12 +84,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
     "sourceUpdatedAt": "2026-07-26T10:49:58.551Z",
     "sourceDocumentIds": [
       "7VjIYgifnq4uqNNfjzcM"
     ],
-    "contentHash": "54212d09d4bbe64b574d18024c22bf663c201e11e6c64a529a620ee8f133b9ef"
+    "contentHash": "1f3d599b9d07a89e7b2b54772745c5f9fcb465e647699c138dc1a9aa0aac0ae1"
   },
   "local": {
     "notes": "",
@@ -823,8 +823,8 @@
           "personId": "odyar-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-03T18:28:54.436Z",
-          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=odyar-draig",
           "fingerprint": "{\"name\":\"Odyar Draig\",\"title\":\"Kämmerer der Grafschaft Celtigerns Wacht\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gethin-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gethin-draig\",\"name\":\"Gethin Draig\"},{\"personId\":\"gwenllian-saethwyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-saethwyr--gwenllian-saethwyr\",\"name\":\"Gwenllian Saethwyr\"}],\"partners\":[{\"personId\":\"beibhinn-eirce\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eirce--beibhinn-eirce\",\"name\":\"Beibhinn Eirce\"}],\"children\":[{\"personId\":\"steffan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"},{\"personId\":\"tecwyn-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--tecwyn-draig\",\"name\":\"Tecwyn Draig\"}]}}"
         }

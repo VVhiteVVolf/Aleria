@@ -6,13 +6,13 @@ import {
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-save-guard-v1';
+} from './combat-profile-model.js?v=20260808-duncan-v1';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts
-} from './combat-action-economy.js?v=20260807-magic-system-v1';
+} from './combat-action-economy.js?v=20260808-duncan-v1';
 import { getSpellLevelLabel, getSpellSlotLevel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260807-magic-system-v2';
+import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260808-duncan-v1';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 function buildCombatProfileActions(character, profile) {

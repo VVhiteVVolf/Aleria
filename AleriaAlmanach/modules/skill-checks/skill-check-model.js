@@ -1,7 +1,7 @@
 import {
   getSkillTotal,
   resolveCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
+} from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
 
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
 

@@ -2,11 +2,12 @@ import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getMaximumHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-save-guard-v1';
+} from './combat-profile-model.js?v=20260808-duncan-v1';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
-} from './character-creation-templates.js?v=20260807-freya-v1';
+} from './character-creation-templates.js?v=20260808-drachentanz-v1';
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260808-drachentanz-v1';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([
   { id: 'standard-array', label: 'Standard-Array', description: '15, 14, 13, 12, 10 und 8 frei verteilen.' },
@@ -357,6 +358,11 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
     profile.weapons = mergeItems(existingWeapons, starterWeapons, draft.replaceStartingEquipment ? ['starter-'] : []);
     profile.armorItems = mergeItems(profile.armorItems, classTemplate.armorItems || [], draft.replaceStartingEquipment ? ['starter-'] : []);
     profile.abilities = mergeItems(profile.abilities, classTemplate.abilities || [], draft.replaceStartingEquipment ? ['starter-'] : []);
+    profile.techniques = mergeItems(
+      profile.techniques,
+      getCombatStyleTechniquesForGrants(classTemplate.combatStyleGrants, 1),
+      draft.replaceStartingEquipment ? ['combat-style-'] : []
+    );
     profile.magic = {
       ...profile.magic,
       enabled: Boolean(classTemplate.magic?.enabled),

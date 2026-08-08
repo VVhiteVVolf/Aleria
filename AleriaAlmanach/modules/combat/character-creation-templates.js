@@ -171,7 +171,11 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     savingThrowProficiencies: ['strength', 'constitution'],
     proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'sword'] },
     weapons: [weapon('teulu-longsword', 'Langschwert', 'sword', '1d8', 'Hieb')],
-    armorItems: [armor('teulu-chainmail', 'Kettenhemd', 'heavy', 16, 'none')]
+    armorItems: [armor('teulu-chainmail', 'Kettenhemd', 'heavy', 16, 'none')],
+    combatStyleGrants: [
+      { styleId: 'drachentanz', formId: 'drachentanz-form-i-jungdrache', minimumLevel: 1 },
+      { styleId: 'drachentanz', formId: 'drachentanz-form-ii-schwertdrache', minimumLevel: 7 }
+    ]
   },
   {
     id: 'cantref', group: 'Ritterkasten', label: 'Cantref', subtitle: 'Speerkämpfer',

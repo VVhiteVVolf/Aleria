@@ -37,7 +37,15 @@ function handleCharacterProfileClick(event) {
   }
 
   if (action === 'save') {
-    saveCharacter();
+    void saveCharacter().catch(error => {
+      const message = getFriendlyErrorMessage(error, 'Charakter konnte nicht gespeichert werden.');
+      const status = document.getElementById('cp-save-status');
+      if (status) {
+        status.style.color = 'var(--red-wax)';
+        status.textContent = message;
+      }
+      showAppStatus(message, 'error');
+    });
     return;
   }
 
@@ -136,6 +144,7 @@ function handleCharacterProfileInput(event) {
   if (!Number.isInteger(index) || index < 0) return;
   _emoteSlots[index] = _emoteSlots[index] || {};
   _emoteSlots[index].label = target.value;
+  scheduleCharacterImageLibraryPersistence('emote-label');
 }
 
 document.addEventListener('click', event => {

@@ -161,13 +161,22 @@ async function setSelectedCharactersArchived(archived) {
   const verb = archived ? 'archivieren' : 'wiederherstellen';
   if (!confirm(`${selectedIds.length} Charaktere ${verb}?`)) return;
 
+  let savedCount = 0;
   try {
     for (const sourceId of selectedIds) {
       const character = getCharacterById(sourceId);
       if (!character) continue;
       const isBuiltin = isBuiltinCharacterId(sourceId);
       const saveTargetId = isBuiltin ? null : sourceId;
-      const data = buildStoredCharacterFromRecord(character, archived);
+      // Ein bestehendes Dokument bekommt nur das Archivflag. Das vollständige Profil wird
+      // ausschließlich benötigt, wenn ein integrierter Charakter dabei erstmals als eigenes
+      // Firestore-Dokument angelegt wird.
+      const data = saveTargetId
+        ? window.AleriaCharacterSaveGuard.selectCharacterArchiveStatusWrite({
+            archived,
+            updatedAt: new Date().toISOString()
+          })
+        : buildStoredCharacterFromRecord(character, archived);
       const savedId = await window._fb.saveCharacter(saveTargetId, data);
       if (saveTargetId) {
         const index = _characters.findIndex(item => String(item.id || '') === String(saveTargetId));
@@ -179,6 +188,7 @@ async function setSelectedCharactersArchived(archived) {
         replaceCharacterIdInTabs(sourceId, savedId);
         _characters.push({ ...character, id: savedId, ...data });
       }
+      savedCount += 1;
     }
     saveCharTabs();
     clearCharacterBulkSelection({ render: false });
@@ -188,6 +198,10 @@ async function setSelectedCharactersArchived(archived) {
     showAppStatus(`${selectedIds.length} Charaktere ${archived ? 'archiviert' : 'wiederhergestellt'}.`, 'success');
   } catch (error) {
     const message = getFriendlyErrorMessage(error, 'Massenaktion konnte nicht gespeichert werden.');
-    showAppStatus(message, 'error');
+    if (savedCount) saveCharTabs();
+    renderCharSubtabs();
+    renderCharGrid();
+    renderCharPickerInForm();
+    showAppStatus(`Massenaktion nach ${savedCount} von ${selectedIds.length} Figuren abgebrochen. ${message}`, 'error');
   }
 }

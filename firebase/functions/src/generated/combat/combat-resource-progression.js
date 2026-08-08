@@ -10,6 +10,19 @@
 export const CASTER_TIERS = Object.freeze(['full', 'half']);
 export const MANA_BYPASS_RESOURCE_IDS = Object.freeze(['celestial-points', 'infernal-points']);
 
+// Die Aktionsökonomie wächst in klaren Ausbildungsstufen. Stufe 16, Stufe 20 und
+// Gesamtrang 30 sind feste Designanker; die beiden früheren Schwellen verteilen
+// Reaktionen, Bonus- und Besondere Aktionen, bevor zusätzliche Hauptaktionen
+// freigeschaltet werden.
+export const COMBAT_ACTION_ECONOMY_LADDER = Object.freeze([
+  { effectiveLevel: 30, action: 4, bonusAction: 3, reaction: 4, specialAction: 5 },
+  { effectiveLevel: 20, action: 3, bonusAction: 2, reaction: 3, specialAction: 4 },
+  { effectiveLevel: 16, action: 2, bonusAction: 2, reaction: 3, specialAction: 3 },
+  { effectiveLevel: 11, action: 1, bonusAction: 2, reaction: 2, specialAction: 3 },
+  { effectiveLevel: 6, action: 1, bonusAction: 1, reaction: 2, specialAction: 2 },
+  { effectiveLevel: 1, action: 1, bonusAction: 1, reaction: 1, specialAction: 2 }
+]);
+
 // Index 0 = Zaubertrick (cantrip), index N = Grad N. Zaubertricks kosten immer 1 Mana - das ist
 // ein echter, wiederkehrender Verbrauch (kein Freebie wie in D&D), also müssen die Manapools
 // unten das mit einrechnen. Grade I-IX übernehmen D&Ds eigene DMG-Spielpunkte-Umrechnung
@@ -131,6 +144,18 @@ export function getAuraFocusMaximum(level = 1, specialLevels = 0) {
   return ordinary + boundedSpecialLevels(specialLevels) * AURA_FOCUS_PER_SPECIAL_RANK;
 }
 
+export function getCombatActionEconomy(level = 1, specialLevels = 0) {
+  const effectiveLevel = Math.min(30, boundedLevel(level) + boundedSpecialLevels(specialLevels));
+  const rung = COMBAT_ACTION_ECONOMY_LADDER.find(entry => effectiveLevel >= entry.effectiveLevel)
+    || COMBAT_ACTION_ECONOMY_LADDER[COMBAT_ACTION_ECONOMY_LADDER.length - 1];
+  return Object.freeze({
+    action: rung.action,
+    'bonus-action': rung.bonusAction,
+    reaction: rung.reaction,
+    'special-action': rung.specialAction
+  });
+}
+
 // Celestiale/Infernale Punkte: a smaller supplementary pool a Kleriker/Hexer can spend
 // instead of mana. Same simple curve for both, since they are thematic opposites, not a
 // power imbalance - floor(effective level / 2), reaching 10 at ordinary level 20 and 15 at
@@ -166,6 +191,7 @@ export const combatResourceProgressionInternals = Object.freeze({
   SPECIAL_RANK_MANA_BONUS,
   AURA_FOCUS_ORDINARY_LADDER,
   AURA_FOCUS_PER_SPECIAL_RANK,
+  COMBAT_ACTION_ECONOMY_LADDER,
   boundedLevel,
   boundedSpecialLevels,
   resolveCasterTier

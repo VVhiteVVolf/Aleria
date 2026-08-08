@@ -9,6 +9,11 @@ const almanachRoot = dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = resolve(almanachRoot, '..');
 const buildRoot = resolve(almanachRoot, 'dist');
 const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
+const combatIconDirectories = [
+  ['Zauber Icons', 'Oblivion Style'],
+  ['Zauber Icons', 'Baldurs Gate'],
+  ['Traits Icon']
+];
 
 function preserveClassicAlmanachScripts() {
   return {
@@ -29,6 +34,11 @@ function preserveClassicAlmanachScripts() {
         resolve(buildRoot, 'CharakterDatenbank'),
         { recursive: true, force: true }
       );
+      await Promise.all(combatIconDirectories.map(pathParts => cp(
+        resolve(workspaceRoot, 'IconOrdner', ...pathParts),
+        resolve(buildRoot, 'IconOrdner', ...pathParts),
+        { recursive: true, force: true }
+      )));
     }
   };
 }

@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources, resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
@@ -534,7 +535,12 @@ export const commitCombatComment = onCall({
         before,
         previousMechanicalCommentId: update.record?.combatProfile?.lastMechanicalCommentId || null
       };
-      transaction.update(update.entry.ref, values);
+      transaction.update(update.entry.ref, withProtectedRecordRevisions(
+        update.record || {},
+        values,
+        update.inventory ? ['combatProfile', 'inventory'] : ['combatProfile'],
+        nowClient
+      ));
       return {
         kind: update.entry.kind,
         recordId: update.entry.recordId,

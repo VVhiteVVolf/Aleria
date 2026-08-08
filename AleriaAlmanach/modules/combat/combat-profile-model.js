@@ -2,18 +2,18 @@ import {
   ensureCombatActionResources,
   getDefaultActivationCosts,
   normalizeCombatResourceCosts
-} from './combat-action-economy.js?v=20260807-magic-system-v1';
+} from './combat-action-economy.js?v=20260808-duncan-v1';
 import {
   ensureSpellSlotResources,
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260804-referee-v2';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260808-duncan-v1';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260804-referee-v2';
+} from './combat-effect-model.js?v=20260808-duncan-v1';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -24,11 +24,11 @@ import {
   getHighestUnlockedSpellGrade,
   getPactPointsMaximum,
   getSpellManaCost
-} from './combat-resource-progression.js?v=20260807-mana-audit-v1';
+} from './combat-resource-progression.js?v=20260808-duncan-v1';
 
 const PACT_POINTS_RESOURCE_ID = 'pact-points';
 
-export const COMBAT_PROFILE_SCHEMA_VERSION = 9;
+export const COMBAT_PROFILE_SCHEMA_VERSION = 10;
 
 export const COMBAT_ATTRIBUTE_DEFINITIONS = Object.freeze([
   { key: 'strength', label: 'Kraft', shortLabel: 'KRF' },
@@ -154,6 +154,7 @@ function sanitizeMechanicalModifiers(value = {}) {
     spellSaveDc: normalizeNumber(source.spellSaveDc, 0, -99, 99),
     movement: normalizeNumber(source.movement, 0, -999, 999),
     maximumHitPoints: normalizeNumber(source.maximumHitPoints, 0, -9999, 9999),
+    combatStartTemporaryHitPoints: normalizeNumber(source.combatStartTemporaryHitPoints, 0, 0, 9999),
     passivePerception: normalizeNumber(source.passivePerception, 0, -99, 99),
     attackRollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
     // Ein zusätzlicher Würfel (z.B. "1w6"), der on-hit an den regulären Schaden angehängt wird,
@@ -721,8 +722,13 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     .slice(0, 60)
     .map((spell, index) => sanitizeSpell(spell, index, normalizedManaResourceId));
   const configuredSlotResourceIds = sanitizeList(magic.slotResourceIds, item => normalizeText(item, 120), 20).filter(Boolean);
+  const normalizedNormalLevel = normalizeNumber(progression.level ?? source.level, 1, 1, 20);
+  const normalizedSpecialLevels = normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10);
   const resourceSources = ensureSpellSlotResources(
-    ensureCombatActionResources(ensureDefaultCoreResources(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES)),
+    ensureCombatActionResources(
+      ensureDefaultCoreResources(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES),
+      { level: normalizedNormalLevel, specialLevels: normalizedSpecialLevels }
+    ),
     {
       enabled: magicEnabled,
       spells: sanitizedSpells,
@@ -731,8 +737,6 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     }
   );
   const sanitizedResources = sanitizeList(resourceSources, sanitizeResource, 100);
-  const normalizedNormalLevel = normalizeNumber(progression.level ?? source.level, 1, 1, 20);
-  const normalizedSpecialLevels = normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10);
   applyLevelDerivedResourceCeiling(sanitizedResources, 'aura-focus', getAuraFocusMaximum(normalizedNormalLevel, normalizedSpecialLevels));
   if (magicEnabled) {
     // Paktpunkte (Hexer) replace Mana entirely rather than growing like a full/half caster

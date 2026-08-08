@@ -4,12 +4,34 @@ import test from 'node:test';
 import {
   getAuraFocusMaximum,
   getCasterManaMaximum,
+  getCombatActionEconomy,
   getDivineOrInfernalPointsMaximum,
   getHighestUnlockedSpellGrade,
   getPactPointsMaximum,
   getSpellManaCost,
   SPELL_GRADE_MANA_COST
 } from '../modules/combat/combat-resource-progression.js';
+
+test('Aktionsökonomie wächst über die festgelegten Stufen bis Rang 30', () => {
+  assert.deepEqual(getCombatActionEconomy(1), {
+    action: 1, 'bonus-action': 1, reaction: 1, 'special-action': 2
+  });
+  assert.deepEqual(getCombatActionEconomy(6), {
+    action: 1, 'bonus-action': 1, reaction: 2, 'special-action': 2
+  });
+  assert.deepEqual(getCombatActionEconomy(11), {
+    action: 1, 'bonus-action': 2, reaction: 2, 'special-action': 3
+  });
+  assert.deepEqual(getCombatActionEconomy(16), {
+    action: 2, 'bonus-action': 2, reaction: 3, 'special-action': 3
+  });
+  assert.deepEqual(getCombatActionEconomy(20), {
+    action: 3, 'bonus-action': 2, reaction: 3, 'special-action': 4
+  });
+  assert.deepEqual(getCombatActionEconomy(20, 10), {
+    action: 4, 'bonus-action': 3, reaction: 4, 'special-action': 5
+  });
+});
 
 test('Zaubergrade werden teurer: Zaubertrick kostet 1 Mana, Grad X kostet 15 (D&Ds DMG-Umrechnung, fortgesetzt)', () => {
   assert.equal(SPELL_GRADE_MANA_COST.length, 11);

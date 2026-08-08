@@ -23,6 +23,15 @@ function exportCharacterArchive() {
   showAppStatus(`Charakterarchiv exportiert: ${payload.characters.length} angelegte Charaktere.`, 'success');
 }
 
+async function refreshCharactersAfterArchiveWrite() {
+  _characters = await window._fb.loadCharacters({ throwOnError: true });
+  _charactersLoaded = true;
+  renderCharSubtabs();
+  renderCharGrid();
+  renderCharPickerInForm();
+  refreshAllModuleCastPickers();
+}
+
 function normalizeCharacterImportPayload(parsed) {
   if (!parsed || typeof parsed !== 'object') throw new Error('Charakterdatei ist ungültig.');
   if (parsed.type === 'aleria-almanach-backup') {
@@ -63,37 +72,50 @@ async function importCharacterArchivePayload(payload) {
     return;
   }
 
-  for (const char of characters) {
-    const id = String(char.id || '').trim();
-    const imageSets = buildCharacterImageSetStorage(normalizeCharacterImageSets(char));
-    const standardSet = imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || imageSets[0];
-    const data = {
-      ...char,
-      aliases: Array.isArray(char.aliases) ? char.aliases : parseAliasInput(char.aliases || ''),
-      archived: !!char.archived,
-      portrait: standardSet?.portrait || null,
-      emotes: (standardSet?.emotes || []).map(emote => ({ ...emote })),
-      imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,
-      imageSets,
-      activeImageSetId: imageSets.some(set => set.id === char.activeImageSetId)
-        ? char.activeImageSetId
-        : CHARACTER_IMAGE_SET_DEFAULT_ID,
-      imageSetsOverride: true,
-      inventory: typeof sanitizeCharacterInventoryData === 'function'
-        ? sanitizeCharacterInventoryData(char.inventory || {})
-        : cloneCharacterStructuredValue(char.inventory, {}),
-      combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(char.combatProfile || {})
-        || cloneCharacterStructuredValue(char.combatProfile, {}),
-      identity: normalizeCharacterIdentityRecord(char.identity),
-      genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
-    };
-    delete data.id;
-    delete data._builtin;
-    delete data._imageSetsExplicit;
-    // Ein bewusster Import setzt sich immer durch (der Bestätigungsdialog oben ist die
-    // Freigabe dafür) und wird dadurch selbst zum neuen, vor veralteten Tabs geschützten Stand -
-    // siehe die Revisionsprüfung in saveCharacter().
-    await window._fb.saveCharacter(id || null, data, { forceOverwrite: true });
+  let savedCount = 0;
+  try {
+    for (const char of characters) {
+      const id = String(char.id || '').trim();
+      const imageLibrary = buildCharacterImageLibraryStorage(char);
+      const importedEquipment = window.AleriaCharacterCombatProfile?.prepareImported?.(char);
+      const data = {
+        ...char,
+        aliases: Array.isArray(char.aliases) ? char.aliases : parseAliasInput(char.aliases || ''),
+        archived: !!char.archived,
+        ...imageLibrary,
+        inventory: importedEquipment?.inventory
+          || (typeof sanitizeCharacterInventoryData === 'function'
+            ? sanitizeCharacterInventoryData(char.inventory || {})
+            : cloneCharacterStructuredValue(char.inventory, {})),
+        combatProfile: importedEquipment?.combatProfile
+          || window.AleriaCharacterCombatProfile?.sanitize?.(char.combatProfile || {})
+          || cloneCharacterStructuredValue(char.combatProfile, {}),
+        identity: normalizeCharacterIdentityRecord(char.identity),
+        genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
+      };
+      delete data.id;
+      delete data._builtin;
+      delete data._imageSetsExplicit;
+      // Ein bewusster Import setzt sich immer durch (der Bestätigungsdialog oben ist die
+      // Freigabe dafür) und wird dadurch selbst zum neuen, vor veralteten Tabs geschützten Stand -
+      // siehe die Revisionsprüfung in saveCharacter().
+      await window._fb.saveCharacter(id || null, data, {
+        forceOverwrite: true,
+        replaceExisting: true
+      });
+      savedCount += 1;
+    }
+  } catch (error) {
+    // Mehrere Firestore-Dokumente bilden keine unbegrenzt große atomare Operation. Nach einem
+    // Teilfehler wird deshalb sofort der tatsächlich erreichte Serverstand geladen, statt lokal
+    // einen falschen Alles-oder-nichts-Eindruck zu hinterlassen.
+    try {
+      await refreshCharactersAfterArchiveWrite();
+    } catch (refreshError) {
+      console.error('character refresh after partial import failed:', refreshError);
+    }
+    const reason = error?.message || 'Unbekannter Speicherfehler';
+    throw new Error(`Charakterimport nach ${savedCount} von ${characters.length} Figuren abgebrochen. Bereits gespeicherte Figuren bleiben erhalten. Ursache: ${reason}`);
   }
 
   if (normalized.charTabs) {
@@ -138,12 +160,7 @@ async function importCharacterArchivePayload(payload) {
     await saveCharTabs();
   }
 
-  _characters = await window._fb.loadCharacters();
-  _charactersLoaded = true;
-  renderCharSubtabs();
-  renderCharGrid();
-  renderCharPickerInForm();
-  refreshAllModuleCastPickers();
+  await refreshCharactersAfterArchiveWrite();
   showAppStatus(`Charakterimport abgeschlossen: ${characters.length} Charaktere.`, 'success');
 }
 

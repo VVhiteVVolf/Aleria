@@ -10,14 +10,21 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
+} from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260808-combat-cards-v1';
 import {
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260803-gawain-level4-v1';
+} from '../combat/combat-level-up-model.js?v=20260808-drachentanz-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
+import {
+  getActivationIconSource,
+  getCombatEntryIconPresentation,
+  getDamageTypeIconSource,
+  getRangeIconSource,
+  getRollIconSource
+} from '../combat/combat-entry-icons.js?v=20260808-combat-cards-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -25,11 +32,11 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260807-alben-aldrimar-classes-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260808-drachentanz-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
-} from '../character-equipment/character-equipment-sync.js?v=20260803-gawain-level4-v1';
+} from '../character-equipment/character-equipment-sync.js?v=20260808-character-storage-audit-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -148,6 +155,39 @@ function activateResourceIconFallbacks(root) {
     const markFailed = () => image.closest('.cp-sheet-resource-icon-frame')?.classList.add('is-missing');
     if (image.complete && image.naturalWidth === 0) markFailed();
     else image.addEventListener('error', markFailed, { once: true });
+  });
+}
+
+function getSafeImageSource(source, fallback = '') {
+  const value = String(source || '').trim();
+  const sanitized = typeof globalThis.sanitizeImageSrc === 'function' ? globalThis.sanitizeImageSrc(value) : value;
+  return String(sanitized || fallback || '').trim();
+}
+
+function renderEntryIcon(kind, item, className = '') {
+  const presentation = getCombatEntryIconPresentation(kind, item);
+  const fallbackSource = getSafeImageSource(presentation.fallbackSource);
+  const source = getSafeImageSource(presentation.source, fallbackSource);
+  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"><img class="cp-entry-icon" data-combat-entry-icon src="${escapeMarkup(source)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
+}
+
+function renderPropertyIcon(source) {
+  return `<span class="cp-card-property-icon" aria-hidden="true"><img data-combat-entry-icon src="${escapeMarkup(getSafeImageSource(source))}" alt="" loading="lazy" decoding="async"></span>`;
+}
+
+function activateEntryIconFallbacks(root) {
+  root?.querySelectorAll?.('[data-combat-entry-icon]').forEach(image => {
+    const useFallback = () => {
+      const fallback = String(image.dataset.fallbackSrc || '').trim();
+      if (fallback && image.src !== new URL(fallback, document.baseURI).href) {
+        image.src = fallback;
+        image.removeAttribute('data-fallback-src');
+        return;
+      }
+      image.closest('.cp-entry-icon-frame, .cp-card-property-icon')?.classList.add('is-missing');
+    };
+    if (image.complete && image.naturalWidth === 0) useFallback();
+    else image.addEventListener('error', useFallback);
   });
 }
 
@@ -517,8 +557,85 @@ function renderMechanicsFields(collection, item) {
   </div>`;
 }
 
+const CARD_MECHANIC_LABELS = Object.freeze({
+  attack: 'Angriff', damage: 'Schaden', armorClass: 'RK', initiative: 'Initiative',
+  skill: 'Fertigkeiten', savingThrow: 'Rettungswürfe', spellAttack: 'Zauberangriff',
+  spellSaveDc: 'Zauber-SG', movement: 'Bewegung', maximumHitPoints: 'Max. TP',
+  passivePerception: 'Wahrnehmung'
+});
+
+function renderMechanicsSummary(mechanics = {}) {
+  const values = Object.entries(CARD_MECHANIC_LABELS)
+    .map(([key, label]) => [label, Number(mechanics[key]) || 0])
+    .filter(([, value]) => value !== 0)
+    .map(([label, value]) => `${label} ${displayModifier(value)}`);
+  if (mechanics.attackRollMode === 'advantage') values.push('Angriff mit Vorteil');
+  if (mechanics.attackRollMode === 'disadvantage') values.push('Angriff mit Nachteil');
+  return values.join(' · ');
+}
+
+function getActivationLabel(value) {
+  return ({
+    action: 'Aktion',
+    'bonus-action': 'Bonusaktion',
+    reaction: 'Reaktion',
+    'special-action': 'Besondere Aktion',
+    passive: 'Passiv'
+  })[value] || value || 'Aktion';
+}
+
+function getResolutionLabel(spell) {
+  if (spell.resolutionType === 'saving-throw') {
+    const attribute = COMBAT_ATTRIBUTE_DEFINITIONS.find(entry => entry.key === spell.saveAttribute)?.label || 'Attribut';
+    return `${attribute}-Rettungswurf${spell.halfDamageOnSave ? ' · halber Schaden bei Erfolg' : ''}`;
+  }
+  if (spell.resolutionType === 'automatic') return 'Automatische Wirkung';
+  return 'Zauberangriff';
+}
+
+function renderCardProperty(iconSource, label, value) {
+  if (!String(value || '').trim()) return '';
+  return `<div class="cp-card-property">${renderPropertyIcon(iconSource)}<div><span>${escapeMarkup(label)}</span><strong>${escapeMarkup(value)}</strong></div></div>`;
+}
+
+function renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items) {
+  return `<article class="cp-sheet-card cp-sheet-detail-cards cp-sheet-presentation-cards">
+    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}">+ ${addLabel}</button></div>
+    <div class="cp-entry-card-list">${items.map(item => {
+      const costs = (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · ');
+      const meta = kind === 'quirk'
+        ? [item.type, item.appliesWhen, item.target].filter(Boolean).join(' · ')
+        : [getActivationLabel(item.activationType), item.delivery, costs].filter(Boolean).join(' · ');
+      const mechanics = renderMechanicsSummary(item.mechanics);
+      const propertyRows = kind === 'ability'
+        ? [
+          renderCardProperty(getActivationIconSource(item.activationType), 'Aktivierung', getActivationLabel(item.activationType)),
+          renderCardProperty(getRollIconSource(item.rollFormula, item.damageType), 'Wirkung', [String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'), item.damageType].filter(Boolean).join(' · ')),
+          renderCardProperty(getRangeIconSource(), 'Ziel & Reichweite', [item.target, item.range].filter(Boolean).join(' · '))
+        ].join('')
+        : [
+          renderCardProperty(getActivationIconSource('passive'), 'Gilt', item.appliesWhen || 'Dauerhaft'),
+          renderCardProperty(getRangeIconSource(), 'Betroffene', item.target || 'Selbst')
+        ].join('');
+      return `<details class="cp-entry-card ${item.active ? 'active' : 'inactive'}">
+        <summary>${renderEntryIcon(kind, item, 'cp-entry-card-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup(meta || (item.active ? 'Aktiv' : 'Inaktiv'))}</small><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><span>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</span></span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
+        <div class="cp-entry-card-body">
+          <section><h5>Beschreibung</h5><p>${escapeMarkup(item.description || 'Noch keine Beschreibung eingetragen.')}</p></section>
+          ${propertyRows ? `<section><h5>Eigenschaften</h5><div class="cp-card-property-grid">${propertyRows}</div></section>` : ''}
+          ${mechanics ? `<p class="cp-entry-mechanics-note"><strong>Strukturierte Wirkung:</strong> ${escapeMarkup(mechanics)}</p>` : ''}
+          ${item.requirements || item.limitations ? `<p class="cp-entry-limitations"><strong>Grenzen:</strong> ${escapeMarkup(item.requirements || item.limitations)}</p>` : ''}
+          <div class="cp-sheet-detail-actions"><button type="button" data-combat-action="edit-detail-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-entry-kind="${kind}">Bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" aria-label="${escapeMarkup(item.name || 'Eintrag')} entfernen">×</button></div>
+        </div>
+      </details>`;
+    }).join('') || `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
+  </article>`;
+}
+
 function renderDetailCards(profile, collection, title, kicker, kind, addLabel, itemsOverride = null, defaultActivation = '') {
   const items = itemsOverride || profile[collection] || [];
+  if (kind === 'quirk' || kind === 'ability') {
+    return renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items);
+  }
   const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || null;
   return `<article class="cp-sheet-card cp-sheet-detail-cards">
     <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}"${defaultActivation ? ` data-combat-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
@@ -538,20 +655,28 @@ function renderDetailCards(profile, collection, title, kicker, kind, addLabel, i
   </article>`;
 }
 
+function renderConditionCollection(profile, title, kicker, addLabel) {
+  const collection = 'conditions';
+  return `<article class="cp-sheet-card cp-sheet-conditions">
+    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="${collection}">+ ${addLabel}</button></div>
+    <div class="cp-condition-card-list">${profile.conditions.map(item => {
+      const meta = [item.duration, item.source].filter(Boolean).join(' · ') || (item.active ? 'Aktiver Zustand' : 'Inaktiv');
+      return `<details class="cp-condition-card ${item.active ? 'active' : 'inactive'}">
+        <summary>${renderEntryIcon('condition', item, 'cp-condition-card-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup(meta)}</small><strong>${escapeMarkup(item.name || 'Unbenannter Zustand')}</strong><span>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</span></span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
+        <div class="cp-condition-card-body">
+          <div class="cp-sheet-narrative-title"><label><input type="checkbox" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="active"${checked(item.active)}> aktiv</label><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="name" value="${escapeMarkup(item.name)}" maxlength="100" placeholder="Name"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" aria-label="${escapeMarkup(item.name || 'Zustand')} entfernen">×</button></div>
+          <div class="cp-sheet-fields compact"><label><span>Dauer</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="duration" value="${escapeMarkup(item.duration)}" maxlength="100"></label><label><span>Quelle</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" maxlength="160"></label></div>
+          <textarea data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="description" maxlength="1200" placeholder="Beschreibung und erzählerische Bedeutung">${escapeMarkup(item.description)}</textarea>
+          ${renderMechanicsFields(collection, item)}
+        </div>
+      </details>`;
+    }).join('') || `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
+  </article>`;
+}
+
 function renderNarrativeCollection(profile, collection, title, kicker, addLabel) {
   if (collection === 'quirks') return renderDetailCards(profile, collection, title, kicker, 'quirk', addLabel);
-  const typeOptions = collection === 'quirks'
-    ? '<option value="quirk">Marotte</option><option value="trait">Eigenschaft</option><option value="ideal">Ideal</option><option value="bond">Bindung</option><option value="flaw">Fehler</option><option value="rule">Sonderregel</option>'
-    : '';
-  return `<article class="cp-sheet-card">
-    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="${collection}">+ ${addLabel}</button></div>
-    <div class="cp-sheet-narrative-list">${profile[collection].length ? profile[collection].map(item => `<article>
-      <div class="cp-sheet-narrative-title"><label><input type="checkbox" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="active"${checked(item.active)}> aktiv</label>${typeOptions ? `<select data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="type">${typeOptions.replace(`value="${item.type}"`, `value="${item.type}" selected`)}</select>` : ''}<input data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="name" value="${escapeMarkup(item.name)}" maxlength="100" placeholder="Name"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}">×</button></div>
-      ${collection === 'conditions' ? `<div class="cp-sheet-fields compact"><label><span>Dauer</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="duration" value="${escapeMarkup(item.duration)}" maxlength="100"></label><label><span>Quelle</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" maxlength="160"></label></div>` : `<input class="cp-sheet-when" data-combat-collection="quirks" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="appliesWhen" value="${escapeMarkup(item.appliesWhen || '')}" maxlength="500" placeholder="Gilt wann? (optional)">`}
-      <textarea data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="description" maxlength="1200" placeholder="Beschreibung und erzählerische Bedeutung">${escapeMarkup(item.description)}</textarea>
-      ${renderMechanicsFields(collection, item)}
-    </article>`).join('') : `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
-  </article>`;
+  return renderConditionCollection(profile, title, kicker, addLabel);
 }
 
 function renderAbilities(profile) {
@@ -570,11 +695,12 @@ function renderTechniques(profile) {
 const AURA_MECHANIC_FIELDS = Object.freeze([
   ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'RK'], ['savingThrow', 'Rettung'],
   ['skill', 'Fertigkeit'], ['spellAttack', 'Zauberangriff'], ['spellSaveDc', 'Zauber-SG'],
-  ['movement', 'Bewegung'], ['maximumHitPoints', 'Max. TP'], ['passivePerception', 'Wahrnehmung']
+  ['movement', 'Bewegung'], ['maximumHitPoints', 'Max. TP'],
+  ['combatStartTemporaryHitPoints', 'Temp. TP bei Kampfbeginn', 0, 9999], ['passivePerception', 'Wahrnehmung']
 ]);
 
 function renderAuraMechanics(path, title, mechanics = {}) {
-  return `<fieldset class="cp-aura-mechanics"><legend>${title}</legend>${AURA_MECHANIC_FIELDS.map(([key, label]) => `<label><span>${label}</span><input type="number" min="-9999" max="9999" data-combat-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}<label><span>Wurfmodus</span><select data-combat-path="${path}.attackRollMode"><option value="normal"${selected(mechanics.attackRollMode, 'normal')}>Normal</option><option value="advantage"${selected(mechanics.attackRollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(mechanics.attackRollMode, 'disadvantage')}>Nachteil</option></select></label></fieldset>`;
+  return `<fieldset class="cp-aura-mechanics"><legend>${title}</legend>${AURA_MECHANIC_FIELDS.map(([key, label, minimum = -9999, maximum = 9999]) => `<label><span>${label}</span><input type="number" min="${minimum}" max="${maximum}" data-combat-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}<label><span>Wurfmodus</span><select data-combat-path="${path}.attackRollMode"><option value="normal"${selected(mechanics.attackRollMode, 'normal')}>Normal</option><option value="advantage"${selected(mechanics.attackRollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(mechanics.attackRollMode, 'disadvantage')}>Nachteil</option></select></label></fieldset>`;
 }
 
 function renderAuraComponent(component, path, title) {
@@ -634,9 +760,45 @@ function renderSpellSlotProfile(profile) {
   </section>`;
 }
 
+function renderSpellCard(spell) {
+  const icon = getCombatEntryIconPresentation('spell', spell);
+  const fallbackSource = getSafeImageSource(icon.fallbackSource);
+  const iconSource = getSafeImageSource(icon.source, fallbackSource);
+  const rollFormula = String(spell.rollFormula || '').toUpperCase().replace(/D/g, 'W');
+  const presentationLabel = ({ spell: 'Zauberformel', prayer: 'Gebet', song: 'Gesang' })[spell.presentationKind] || 'Zauberformel';
+  const damageLabel = [rollFormula, spell.damageType].filter(Boolean).join(' · ');
+  const costLabel = Number(spell.level) === 0
+    ? 'Kein Mana · kein Zauberplatz'
+    : `${spell.manaCost} Mana · ${spell.slotCost || 1} ${getSpellLevelLabel(spell.level)}`;
+  const upcast = spell.upcast || {};
+  const upcastParts = [
+    upcast.formulaPerLevel ? `${String(upcast.formulaPerLevel).toUpperCase().replace(/D/g, 'W')} je Grad` : '',
+    Number(upcast.amountPerLevel) ? `+${upcast.amountPerLevel} je Grad` : '',
+    upcast.maximumLevel ? `bis Grad ${upcast.maximumLevel}` : ''
+  ].filter(Boolean);
+  return `<details class="cp-spell-card ${spell.prepared ? 'prepared' : 'unprepared'}">
+    <summary>${renderEntryIcon('spell', spell, 'cp-spell-summary-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup([spell.school, presentationLabel, getSpellLevelLabel(spell.level)].filter(Boolean).join(' · '))}</small><strong>${escapeMarkup(spell.name || 'Unbenannter Zauber')}</strong><span>${escapeMarkup(spell.description || 'Noch keine Zauberbeschreibung.')}</span></span><span class="cp-spell-ready-state">${spell.prepared ? 'Bereit' : 'Nicht bereit'}</span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
+    <div class="cp-spell-card-body">
+      <section class="cp-spell-card-hero">
+        <div><p><strong>${escapeMarkup(spell.name || 'Dieser Zauber')}</strong> ist ${escapeMarkup(getSpellLevelLabel(spell.level).toLowerCase())}${spell.damageType ? ` und wirkt mit ${escapeMarkup(spell.damageType)}.` : '.'}</p><h5>Beschreibung</h5><p>${escapeMarkup(spell.description || 'Noch keine Wirkung beschrieben.')}</p></div>
+        <img class="cp-spell-card-art" data-combat-entry-icon src="${escapeMarkup(iconSource)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
+      </section>
+      <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
+        ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', `${getActivationLabel(spell.activationType)} · ${costLabel}`)}
+        ${renderCardProperty(getRollIconSource(spell.rollFormula, spell.damageType), 'Schaden / Wurf', damageLabel || 'Keine Schadensformel')}
+        ${renderCardProperty(getDamageTypeIconSource(spell.damageType), 'Auflösung', getResolutionLabel(spell))}
+        ${renderCardProperty(getRangeIconSource(), 'Reichweite', spell.range || 'Zauberreichweite')}
+        ${renderCardProperty(getActivationIconSource(spell.concentration ? 'reaction' : 'passive'), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
+      </div></section>
+      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5><p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann mit einem höheren Zauberplatz gewirkt werden.')}</p></section>` : ''}
+      <details class="cp-spell-technical"><summary>Technische Details</summary><div><p><strong>Voraussetzungen:</strong> ${escapeMarkup(spell.requirements || 'Keine besonderen Voraussetzungen.')}</p><p><strong>Schlagworte:</strong> ${escapeMarkup(spell.tags || 'Keine Schlagworte.')}</p>${spell.aiInstructions ? `<p><strong>AleriaGPT:</strong> ${escapeMarkup(spell.aiInstructions)}</p>` : ''}</div></details>
+      <div class="cp-spell-card-actions"><label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> vorbereitet</label><button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Zauber bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" aria-label="${escapeMarkup(spell.name || 'Zauber')} entfernen">×</button></div>
+    </div>
+  </details>`;
+}
+
 function renderMagic(profile) {
   const magic = profile.magic;
-  const spellSlots = getOrderedSpellSlotResources(profile.resources, magic.slotResourceIds);
   return `<article class="cp-sheet-card cp-sheet-magic">
     <div class="cp-sheet-section-head"><div><span>Mana, Zauberwerte &amp; Repertoire</span><h4>Magie</h4></div><label class="cp-sheet-toggle"><input type="checkbox" data-combat-path="magic.enabled"${checked(magic.enabled)}> Magie aktiv</label></div>
     <div class="cp-sheet-fields compact">
@@ -647,26 +809,8 @@ function renderMagic(profile) {
       <label class="wide"><span>Magische Regeln / Tradition</span><textarea data-combat-path="magic.notes" maxlength="1600" placeholder="Magiesystem, Grenzen, Fokus, Tradition …">${escapeMarkup(magic.notes)}</textarea></label>
     </div>
     ${renderSpellSlotProfile(profile)}
-    <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Vorbereitet für den künftigen Zauberersteller und die zentrale Zauberliste.</small></div><button type="button" data-combat-action="add-item" data-combat-collection="magic.spells">+ Zauber</button></div>
-    <div class="cp-sheet-spell-list">${magic.spells.map(spell => `<div>
-      <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> bereit</label>
-      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="name" value="${escapeMarkup(spell.name)}" maxlength="120" placeholder="Zaubername">
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="level" aria-label="Zaubergrad">${renderSpellLevelOptions(spell.level)}</select>
-      <input type="number" min="0" max="999" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="manaCost" value="${spell.manaCost}" aria-label="Manakosten"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}>
-      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="rollFormula" value="${escapeMarkup(spell.rollFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="Wurf">
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="presentationKind" aria-label="Darstellung"><option value="spell"${selected(spell.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(spell.presentationKind, 'prayer')}>Gebet</option><option value="song"${selected(spell.presentationKind, 'song')}>Gesang</option></select>
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="activationType" aria-label="Aktivierung"><option value="action"${selected(spell.activationType, 'action')}>Aktion</option><option value="bonus-action"${selected(spell.activationType, 'bonus-action')}>Bonusaktion</option><option value="reaction"${selected(spell.activationType, 'reaction')}>Reaktion</option><option value="special-action"${selected(spell.activationType, 'special-action')}>Besondere Aktion</option></select>
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="resolutionType" aria-label="Zauberprüfung"><option value="spell-attack"${selected(spell.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(spell.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(spell.resolutionType, 'automatic')}>Automatische Wirkung</option></select>
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="saveAttribute" aria-label="Rettungswurf-Attribut">${renderAttributeOptions(spell.saveAttribute)}</select>
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotResourceId" aria-label="Zauberplatz"${spell.level === 0 ? ' disabled' : ''}><option value="">${spell.level === 0 ? 'Zaubertrick · kein Platz' : 'Zauberplatz wählen'}</option>${spellSlots.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(spell.slotResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select>
-      <input type="number" min="0" max="99" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotCost" value="${spell.slotCost}" aria-label="Zauberplatzkosten"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}>
-      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="damageType" value="${escapeMarkup(spell.damageType)}" placeholder="Schadensart">
-      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="range" value="${escapeMarkup(spell.range)}" placeholder="Reichweite">
-      <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="halfDamageOnSave"${checked(spell.halfDamageOnSave)}> halber Schaden bei Rettung</label>
-      <button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Kosten &amp; Regeln</button>
-      <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}">×</button>
-      <textarea data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="description" maxlength="1600" placeholder="Wirkung, Reichweite, Ziel, Dauer …">${escapeMarkup(spell.description)}</textarea>
-    </div>`).join('')}</div>
+    <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Ein Zauber öffnet seine vollständige Karte mit Wirkung, Kosten und Regeln.</small></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="magic.spells" data-combat-entry-kind="spell">+ Zauber</button></div>
+    <div class="cp-sheet-spell-list">${magic.spells.map(renderSpellCard).join('') || '<p class="cp-sheet-empty">Noch keine Zauber eingetragen.</p>'}</div>
   </article>`;
 }
 
@@ -702,6 +846,7 @@ function renderSheet() {
     ${renderLevelUpDialog(profile)}
   </div>`;
   activateResourceIconFallbacks(root);
+  activateEntryIconFallbacks(root);
   updateDerivedView();
 }
 
@@ -865,7 +1010,7 @@ function createEmptyItem(collection) {
   if (collection === 'conditions') return { id, name: '', duration: '', source: '', description: '', active: true, mechanics: {} };
   if (collection === 'damageAffinities') return { id, damageType: 'all', response: 'resistant', magicScope: 'any', source: '', notes: '' };
   if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', recoveryDayKey: '', rollFormula: '', damageType: 'physisch', activationType: 'action', delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, inventoryUseTrigger: { enabled: false, itemTags: [], restoreResources: [], requireActualRecovery: true } };
-  if (collection === 'magic.spells') return { id, name: '', level: 0, manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', activationType: 'action', resolutionType: 'spell-attack', saveAttribute: 'dexterity', halfDamageOnSave: false, damageType: 'Magie', range: 'Zauber', rollFormula: '', description: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, prepared: true };
+  if (collection === 'magic.spells') return { id, name: '', icon: '', level: 0, manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', activationType: 'action', resolutionType: 'spell-attack', saveAttribute: 'dexterity', halfDamageOnSave: false, damageType: 'Magie', range: 'Zauber', rollFormula: '', description: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, prepared: true };
   return { id };
 }
 
@@ -953,7 +1098,7 @@ function init(character = {}) {
   activeCharacter = character;
   draftProfile = sanitizeCharacterCombatProfile(character.combatProfile);
   synchronizeDraftFromInventory(character.inventory || {});
-  synchronizeDraftFromCombat({ inventory: character.inventory || {} });
+  synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: true });
   levelUpState = null;
   levelUpNotice = '';
   setupNotice = '';
@@ -963,6 +1108,23 @@ function init(character = {}) {
 function collect() {
   synchronizeDraftFromCombat();
   return sanitizeCharacterCombatProfile(draftProfile);
+}
+
+function prepareImported(character = {}) {
+  const inventory = typeof globalThis.sanitizeCharacterInventoryData === 'function'
+    ? globalThis.sanitizeCharacterInventoryData(character.inventory || {})
+    : structuredClone(character.inventory || {});
+  const result = synchronizeEquipmentFromCombat({
+    inventory,
+    combatProfile: sanitizeCharacterCombatProfile(character.combatProfile || {}),
+    characterId: character.id || '',
+    characterName: character.name || '',
+    now: new Date().toISOString()
+  });
+  return {
+    inventory: result.inventory,
+    combatProfile: sanitizeCharacterCombatProfile(result.combatProfile)
+  };
 }
 
 function refreshInventory(character = activeCharacter || {}) {
@@ -1035,6 +1197,7 @@ globalThis.AleriaCharacterCombatProfile = Object.freeze({
     const result = synchronizeDraftFromCombat({ inventory });
     return { inventory: result.inventory, combatProfile: sanitizeCharacterCombatProfile(draftProfile) };
   },
+  prepareImported,
   sanitize: sanitizeCharacterCombatProfile,
   refreshDerived: updateDerivedView,
   hasUnsavedDraftNotice: () => !!(levelUpNotice || setupNotice)

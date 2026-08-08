@@ -7,7 +7,8 @@ export const BLODYN_REGION_EMBLEMS = Object.freeze({
   lyndor: 'assets/images/regions/lyndor.png',
   cenyr: 'assets/images/regions/koenigreich-cenyr.png',
   klaueninsel: 'assets/images/regions/klaueninsel.png',
-  blutklaue: 'assets/images/regions/blutklaue.webp',
+  sturmklaue: 'assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png',
+  blutklaue: 'assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png',
   aberdail: 'assets/images/placeholders/neutral-crest.png'
 });
 
@@ -31,6 +32,17 @@ export const BLODYN_HOUSE_PROFILES = Object.freeze({
       seat: BLODYN_REGION_EMBLEMS.lyndor
     }
   ),
+  talgarth: profile(
+    ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'],
+    'knight-prince',
+    {
+      kingdom: BLODYN_REGION_EMBLEMS.cenyr,
+      county: BLODYN_REGION_EMBLEMS.klaueninsel,
+      barony: BLODYN_REGION_EMBLEMS.sturmklaue,
+      seat: ''
+    },
+    { liegeHouseId: 'haus-arth', liegeHouseName: "Haus Arth O'Talgarth" }
+  ),
   aberdail: profile(
     ['Cenyr', 'Klaueninsel', 'Blutklaue', 'Aberdail'],
     'barony',
@@ -40,6 +52,6 @@ export const BLODYN_HOUSE_PROFILES = Object.freeze({
       barony: BLODYN_REGION_EMBLEMS.blutklaue,
       seat: BLODYN_REGION_EMBLEMS.aberdail
     },
-    { liegeHouseId: 'house-arth', liegeHouseName: 'Haus Arth' }
+    { liegeHouseId: 'haus-arth', liegeHouseName: "Haus Arth O'Talgarth" }
   )
 });

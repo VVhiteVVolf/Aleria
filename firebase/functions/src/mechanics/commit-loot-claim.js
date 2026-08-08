@@ -4,6 +4,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { collectClaimedLootActorIds, normalizeLootClaimEvent } from '../generated/loot/loot-model.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -124,7 +125,10 @@ export const commitLootClaim = onCall({
     const receiver = { id: receiverId, ...(receiverSnapshot.data() || {}) };
     const receiverInventory = applyLootToInventory(receiver, items, now);
 
-    transaction.update(receiverRef, { inventory: receiverInventory, updatedAt: now.toISOString() });
+    transaction.update(receiverRef, withProtectedRecordRevisions(receiver, {
+      inventory: receiverInventory,
+      updatedAt: now.toISOString()
+    }, ['inventory'], now.getTime()));
 
     lootClaim = normalizeLootClaimEvent({
       encounterId,

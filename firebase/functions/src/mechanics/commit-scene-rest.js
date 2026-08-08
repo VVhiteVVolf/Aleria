@@ -4,6 +4,7 @@ import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../ge
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { buildSceneRestParticipant, getSceneRestType, normalizeSceneRest } from '../generated/scene-rest/scene-rest-model.js';
 import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -149,14 +150,14 @@ export const commitSceneRest = onCall({
       const key = `${descriptor.kind}:${descriptor.recordId}`;
       const target = unique.get(key);
       const record = records.get(key) || {};
-      transaction.update(target.ref, {
+      transaction.update(target.ref, withProtectedRecordRevisions(record, {
         'combatProfile.hitPoints.current': committed.after.hitPoints.current,
         'combatProfile.hitPoints.temporary': committed.after.hitPoints.temporary,
         'combatProfile.resources': committed.after.resources,
         'combatProfile.abilities': committed.after.abilities,
         'combatProfile.lastMechanicalCommentId': commentRef.id,
         updatedAt: new Date(nowClient).toISOString()
-      });
+      }, ['combatProfile'], nowClient));
       mechanicalUndo[key] = {
         kind: descriptor.kind,
         recordId: descriptor.recordId,

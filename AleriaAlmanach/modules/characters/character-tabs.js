@@ -104,8 +104,15 @@ function handleExternallySavedCharacter(event) {
   const record = event?.detail?.record;
   const id = String(record?.id || '').trim();
   if (!id) return;
-  const normalized = cloneCharacterRecord({ ...record, id });
   const index = _characters.findIndex(character => String(character.id || '') === id);
+  // Externe Feature-Editoren veröffentlichen gezielte Teilbereichs-Patches. Ein solcher Patch
+  // darf den bereits geladenen Rest der Figur (vor allem Inventar und Kampfprofil) lokal ebenso
+  // wenig löschen wie der zugehörige Firestore-Merge.
+  const normalized = cloneCharacterRecord({
+    ...(index >= 0 ? _characters[index] : {}),
+    ...record,
+    id
+  });
   if (index >= 0) _characters[index] = normalized;
   else _characters.push(normalized);
   _charactersLoaded = true;

@@ -3,8 +3,8 @@ import { narrateCombatResolution } from './combat-narration-service.js?v=2026080
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260807-freya-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260807-rhiannon-v1';
+} from './combat-profile-resolver.js?v=20260808-duncan-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260808-duncan-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -20,26 +20,26 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260807-freya-v1';
+} from './combat-state-model.js?v=20260808-duncan-v1';
 import {
   canUseAuraPayment,
   canUseManaSubstitutePayment,
   getActionPaymentCosts,
   recoverDailyCombatResources,
   resetCommentScopedResources
-} from './combat-action-economy.js?v=20260807-magic-system-v1';
+} from './combat-action-economy.js?v=20260808-duncan-v1';
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260807-mana-audit-v1';
+} from './ui/combat-ui.js?v=20260808-duncan-v1';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260804-referee-v2';
-import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260806-encounter-card-v1';
+} from './combat-trigger-rules.js?v=20260808-duncan-v1';
+import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260808-duncan-v1';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -168,24 +168,7 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
           phaseLabel: rule.phase === 'pre-roll' ? 'vor Wurf' : (rule.phase === 'post-roll' ? 'nach Wurf' : (rule.phase === 'post-hit' ? 'nach Trefferpr\u00fcfung' : 'vor Schaden'))
         };
       });
-    const isDirectParticipant = [String(actorCharacter.id), String(targetCharacter.id)].includes(String(character.id));
-    const auraOptions = !isDirectParticipant && source.aura?.enabled
-      ? [['@aura:actor', 'Aura auf handelnde Figur'], ['@aura:target', 'Aura auf Ziel']].map(([ruleId, ruleName]) => {
-          const selected = selections.find(item => String(item.sourceActorId) === String(source.characterId) && String(item.ruleId) === ruleId);
-          return {
-            sourceActorId: source.characterId,
-            sourceActorName: source.name,
-            persistence: source.persistence || null,
-            ruleId,
-            ruleName: `${source.aura.name || 'Aura'} \u00b7 ${ruleName}`,
-            costs: [],
-            selected: !!selected,
-            distanceMeters: selected?.distanceMeters ?? 0,
-            phaseLabel: 'Pr\u00e4senz \u00b7 Radius wird gepr\u00fcft'
-          };
-        })
-      : [];
-    return [...reactionOptions, ...auraOptions];
+    return reactionOptions;
   });
 }
 

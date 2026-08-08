@@ -3,6 +3,10 @@
 let _characterImageSets = [];
 let _activeCharacterImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
 
+function scheduleCharacterImageLibraryPersistence(reason) {
+  window.AleriaCharacterImageLibraryAutosave?.schedule?.(reason);
+}
+
 function getActiveCharacterImageSet() {
   return _characterImageSets.find(set => set.id === _activeCharacterImageSetId) || _characterImageSets[0] || null;
 }
@@ -10,9 +14,13 @@ function getActiveCharacterImageSet() {
 function syncActiveCharacterImageSetFromForm() {
   const active = getActiveCharacterImageSet();
   if (!active) return;
-  active.portrait = normalizeCharacterImageSetImageUrl(document.getElementById('cp-portrait-url')?.value || '') || null;
-  active.emotes = normalizeCharacterImageSetEmotes((_emoteSlots || []).filter(Boolean));
-  active.updatedAt = new Date().toISOString();
+  const portrait = normalizeCharacterImageSetImageUrl(document.getElementById('cp-portrait-url')?.value || '') || null;
+  const emotes = normalizeCharacterImageSetEmotes((_emoteSlots || []).filter(Boolean));
+  const contentChanged = active.portrait !== portrait
+    || JSON.stringify(active.emotes || []) !== JSON.stringify(emotes);
+  active.portrait = portrait;
+  active.emotes = emotes;
+  if (contentChanged) active.updatedAt = new Date().toISOString();
 }
 
 function renderCharacterImageSetTabs() {
@@ -66,6 +74,7 @@ function selectCharacterImageSet(setId) {
   syncActiveCharacterImageSetFromForm();
   _activeCharacterImageSetId = nextId;
   loadActiveCharacterImageSetIntoForm();
+  scheduleCharacterImageLibraryPersistence('active-image-set');
 }
 
 function addCharacterImageSet() {
@@ -98,6 +107,7 @@ function addCharacterImageSet() {
   _activeCharacterImageSetId = set.id;
   if (input) input.value = '';
   loadActiveCharacterImageSetIntoForm();
+  scheduleCharacterImageLibraryPersistence('add-image-set');
 }
 
 function renameActiveCharacterImageSet(value) {
@@ -113,6 +123,7 @@ function renameActiveCharacterImageSet(value) {
   active.name = name;
   active.updatedAt = new Date().toISOString();
   renderCharacterImageSetTabs();
+  scheduleCharacterImageLibraryPersistence('rename-image-set');
 }
 
 function deleteActiveCharacterImageSet() {
@@ -122,11 +133,19 @@ function deleteActiveCharacterImageSet() {
   _characterImageSets = _characterImageSets.filter(set => set.id !== active.id);
   _activeCharacterImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
   loadActiveCharacterImageSetIntoForm();
+  scheduleCharacterImageLibraryPersistence('delete-image-set');
 }
 
 function collectCharacterImageSetEditorData() {
   syncActiveCharacterImageSetFromForm();
   const imageSets = buildCharacterImageSetStorage(_characterImageSets);
+  // Beim ersten Lesen alter Datensätze ergänzt buildStorage fehlende Zeitstempel. Diese
+  // normalisierte Fassung wird zum lokalen Editorstand, damit ein zweites Einsammeln nicht
+  // allein wegen neu erzeugter Zeitstempel fälschlich als Avataränderung gilt.
+  _characterImageSets = imageSets.map(set => ({
+    ...set,
+    emotes: set.emotes.map(emote => ({ ...emote }))
+  }));
   const standard = imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || imageSets[0];
   return {
     imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,

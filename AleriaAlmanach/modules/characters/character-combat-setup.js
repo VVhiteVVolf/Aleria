@@ -11,14 +11,14 @@ import {
   rollAttributeSet,
   setCreationAttributeMethod,
   validateCharacterCreationDraft
-} from '../combat/character-creation-model.js?v=20260803-character-creation-v1';
+} from '../combat/character-creation-model.js?v=20260808-drachentanz-v1';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
-} from '../combat/character-creation-templates.js?v=20260807-freya-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
+} from '../combat/character-creation-templates.js?v=20260808-drachentanz-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
 
 let activeSetup = null;
 

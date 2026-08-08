@@ -9,6 +9,7 @@ const files = [
   'combat/combat-action-economy.js',
   'combat/combat-ability-uses.js',
   'combat/combat-condition-duration.js',
+  'combat/combat-encounter-aura.js',
   'combat/combat-effect-model.js',
   'combat/combat-encounter-model.js',
   'combat/combat-progression.js',

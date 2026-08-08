@@ -398,9 +398,18 @@ async function saveCandidate({ existing = null, forceSeparate = false } = {}) {
     return;
   }
 
-  const data = buildImportedCharacter(candidate, existing);
+  const importedData = buildImportedCharacter(candidate, existing);
+  // Beim Verknüpfen einer bestehenden Figur besitzt dieser Dialog nur Genealogie und Identität.
+  // Profil, Bilder, Inventar und Kampfprofil bleiben dadurch selbst dann unangetastet, wenn der
+  // lokale Treffer aus einer älteren Sitzung stammt. Eine neue Figur braucht dagegen den
+  // vollständigen Startdatensatz.
+  const data = existing
+    ? window.AleriaCharacterSaveGuard.selectCharacterGenealogyWrite(importedData)
+    : importedData;
   const targetId = existing?.id || candidate.worldPersonId;
-  const savedId = await window._fb.saveCharacter(targetId, data);
+  const savedId = await window._fb.saveCharacter(targetId, data, {
+    createWithId: !existing
+  });
   publishSavedCharacter(savedId, data);
   window.showAppStatus?.(
     existing

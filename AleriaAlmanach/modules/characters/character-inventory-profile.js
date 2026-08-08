@@ -128,16 +128,10 @@ function initCharacterInventoryProfile(char = {}) {
 
 function collectCharacterInventoryProfileData() {
   const card = document.querySelector('#cp-inventory-editor [data-ci-embedded-card]');
-  if (!card || typeof collectCharacterInventoryModuleEditorPage !== 'function') {
-    const page = document.querySelector('#cp-inventory-editor .character-inventory-page');
-    if (page?.dataset?.ciData) {
-      try {
-        _characterInventoryDraft = sanitizeCharacterInventoryData(JSON.parse(page.dataset.ciData || '{}'));
-        return _characterInventoryDraft;
-      } catch (error) {
-        console.warn('Charakter-Inventar konnte nicht aus der Ansicht gelesen werden:', error);
-      }
-    }
+  // Die gerenderte Leseansicht ist nur eine Darstellung und darf einen zwischenzeitlich durch
+  // den Kampfbogen aktualisierten Inventarentwurf nicht wieder ueberschreiben. Nur der echte
+  // eingebettete Editor wird beim Einsammeln aus dem DOM gelesen.
+  if (!_characterInventoryEditMode || !card || typeof collectCharacterInventoryModuleEditorPage !== 'function') {
     return sanitizeCharacterInventoryData(_characterInventoryDraft || {});
   }
   const page = collectCharacterInventoryModuleEditorPage(card, {});
@@ -215,6 +209,18 @@ function buildCharacterInventoryForCharacterFromTemplate(template, char = {}) {
   });
 }
 
+function refreshCharacterInventoryTemplateViews() {
+  const current = _editingChar ? getCharacterById(_editingChar) : null;
+  if (current) {
+    _characterInventoryDraft = getCharacterInventoryProfileSource(current);
+    renderCharacterInventoryProfileEditor();
+    window.AleriaCharacterCombatProfile?.init?.(current);
+  }
+  renderCharGrid();
+  renderCharPickerInForm();
+  refreshAllModuleCastPickers();
+}
+
 function exportCharacterInventoryProfileTemplate() {
   const inventory = buildCharacterInventoryTemplatePayload(collectCharacterInventoryProfileData());
   const payload = {
@@ -247,34 +253,46 @@ async function stampCharacterInventoryProfileTemplateToAll() {
   }
 
   const template = buildCharacterInventoryTemplatePayload(collectCharacterInventoryProfileData());
+  let savedCount = 0;
   try {
     for (const char of targets) {
       // Nur das Inventar wird geschickt (siehe Speichersystem-Checkup) - ein voller Spread von
       // "char" wuerde bei jeder einzelnen Figur zusaetzlich Name/Bio/Kampfprofil/Bilder aus dem
       // moeglicherweise veralteten Zwischenspeicher zurueckschreiben, obwohl diese Aktion
       // ausdruecklich nur das Inventar aendern soll.
+      const templateInventory = buildCharacterInventoryForCharacterFromTemplate(template, char);
+      const synchronized = window.AleriaCharacterEquipmentSync?.synchronizeFromInventory?.({
+        inventory: templateInventory,
+        combatProfile: char.combatProfile || {}
+      });
+      const synchronizedInventory = synchronized?.inventory || templateInventory;
+      const combatProfileChanged = !!char.combatProfile
+        && !!synchronized?.combatProfile
+        && JSON.stringify(synchronized.combatProfile) !== JSON.stringify(char.combatProfile);
       const data = {
-        inventory: buildCharacterInventoryForCharacterFromTemplate(template, char),
+        inventory: synchronizedInventory,
+        ...(combatProfileChanged ? { combatProfile: synchronized.combatProfile } : {}),
         updatedAt: new Date().toISOString()
       };
-      await window._fb.saveCharacter(char.id, data);
+      const result = await window._fb.saveCharacter(char.id, data, { returnWriteResult: true });
+      const persistedData = typeof result === 'object' && result?.data ? result.data : data;
+      const targetIndex = _characters.findIndex(candidate => candidate.id === char.id);
+      if (targetIndex >= 0) {
+        _characters[targetIndex] = {
+          ..._characters[targetIndex],
+          inventory: persistedData.inventory,
+          ...(persistedData.combatProfile ? { combatProfile: persistedData.combatProfile } : {}),
+          updatedAt: persistedData.updatedAt || data.updatedAt
+        };
+      }
+      savedCount += 1;
     }
-    _characters = _characters.map(char => ({
-      ...char,
-      inventory: buildCharacterInventoryForCharacterFromTemplate(template, char)
-    }));
-    const current = _editingChar ? getCharacterById(_editingChar) : null;
-    if (current) {
-      _characterInventoryDraft = getCharacterInventoryProfileSource(current);
-      renderCharacterInventoryProfileEditor();
-    }
-    renderCharGrid();
-    renderCharPickerInForm();
-    refreshAllModuleCastPickers();
+    refreshCharacterInventoryTemplateViews();
     showAppStatus(`Inventarvorlage auf ${targets.length} Charaktere gestempelt.`, 'success');
   } catch (error) {
     const message = getFriendlyErrorMessage(error, 'Inventarvorlage konnte nicht auf alle Charaktere angewendet werden.');
-    showAppStatus(message, 'error');
+    refreshCharacterInventoryTemplateViews();
+    showAppStatus(`Inventarvorlage nach ${savedCount} von ${targets.length} Figuren abgebrochen. ${message}`, 'error');
   }
 }
 

@@ -2,6 +2,7 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -66,7 +67,13 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
     if (entry.before?.progression !== undefined) values['combatProfile.progression'] = entry.before.progression;
     if (entry.before?.inventory !== undefined) values.inventory = entry.before.inventory;
     values['combatProfile.lastMechanicalCommentId'] = entry.previousMechanicalCommentId || FieldValue.delete();
-    transaction.update(ref, values);
+    const changedSections = ['combatProfile'];
+    if (entry.before?.inventory !== undefined) changedSections.push('inventory');
+    transaction.update(ref, withProtectedRecordRevisions(
+      snapshots[index].data() || {},
+      values,
+      changedSections
+    ));
   });
 
   return blockingDescriptions;

@@ -33,14 +33,14 @@ export const HOUSE_BLODYN_ABERDAIL_FAMILY = Object.freeze({
   schemaVersion: 1,
   document: {
     id: 'haus-blodyn-aberdail',
-    title: 'Haus Blodyn von Aberdail',
+    title: "Haus Blodyn O'Aberdail",
     motto: 'Datblyg dy nerth a thyfu!',
-    description: 'Die ausschließlich von Yvain Blodyn und Bronwen Blaidd ausgehende Baroniallinie von Aberdail in der Baronie Blutklaue.',
+    description: 'Die ausschließlich von Yvain Blodyn und Bronwen Blaidd ausgehende Baroniallinie von Aberdail in der Herrschaft Blutklaue.',
     emblem: BLODYN_EMBLEM,
     houseProfile: BLODYN_HOUSE_PROFILES.aberdail
   },
   houses: [
-    { id: ABERDAIL_HOUSE_ID, name: 'Haus Blodyn von Aberdail', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
+    { id: ABERDAIL_HOUSE_ID, name: "Haus Blodyn O'Aberdail", motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
     { id: BLODYN_HOUSE_ID, name: 'Haus Blodyn', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
     { id: 'house-blaidd', name: "Haus Blaidd O'Branon", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' },
     { id: 'house-blaidd-tredegar', name: "Haus Blaidd O'Tredegar", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' }
@@ -91,6 +91,18 @@ export const HOUSE_BLODYN_ABERDAIL_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Diese Akte bildet absichtlich nur Yvain Blodyn, Bronwen Blaidd und ihre Söhne Dalvin und Erec ab. Die Eltern und Geschwister Yvains bleiben in der verknüpften Lyndor-Akte; die Kinder werden dort nicht gedoppelt.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
   }
 });

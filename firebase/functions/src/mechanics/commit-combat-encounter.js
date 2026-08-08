@@ -1,10 +1,12 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import {
   buildEncounterExperienceAwards,
   deriveCombatEncounterState,
   normalizeCombatEncounterEvent
 } from '../generated/combat/combat-encounter-model.js';
+import { buildCombatEncounterAuraApplications } from '../generated/combat/combat-encounter-aura.js';
 import {
   applyExperienceAward,
   getDefeatExperienceReward,
@@ -163,7 +165,7 @@ export const commitCombatEncounter = onCall({
         status: requested.operation === 'remove' && participant.status === 'active' ? 'left' : participant.status
       });
     });
-    const participantsToLoad = requested.operation === 'start' || requested.operation === 'add'
+    const participantsToLoad = requested.operation === 'start'
       ? requested.participants
       : [...mergedParticipants.values()];
     const descriptors = participantsToLoad.map(participant => ({ participant, descriptor: persistenceDescriptor(participant) }));
@@ -182,21 +184,47 @@ export const commitCombatEncounter = onCall({
       records.set(entry.key, recordSnapshots[index].data() || {});
     });
 
+    const resolvedProfiles = new Map(participantsToLoad.map(participant => {
+      const descriptor = persistenceDescriptor(participant);
+      const record = records.get(recordKey(descriptor));
+      return [participant.actorId, resolveCombatProfile({
+        ...record,
+        id: participant.actorId,
+        entityType: descriptor.kind === 'creature' ? 'creature' : 'character'
+      })];
+    }));
+
     if (requested.operation === 'start' || requested.operation === 'add') {
       requested.participants = requested.participants.map(participant => {
-        const descriptor = persistenceDescriptor(participant);
-        const record = records.get(recordKey(descriptor));
-        const profile = resolveCombatProfile({
-          ...record,
-          id: participant.actorId,
-          entityType: descriptor.kind === 'creature' ? 'creature' : 'character'
-        });
+        const profile = resolvedProfiles.get(participant.actorId);
         return {
           ...participant,
           experienceValue: getDefeatExperienceReward(profile.progression?.level, profile.progression?.experienceReward)
         };
       });
+      requested.participants.forEach(participant => {
+        const previous = mergedParticipants.get(participant.actorId) || {};
+        mergedParticipants.set(participant.actorId, { ...previous, ...participant });
+      });
     }
+
+    const enteringActorIds = requested.operation === 'start' || requested.operation === 'add'
+      ? requested.participants.filter(participant => participant.status === 'active').map(participant => participant.actorId)
+      : [];
+    requested.auraApplications = requested.operation === 'end' ? [] : buildCombatEncounterAuraApplications(
+      [...mergedParticipants.values()]
+        .filter(participant => participant.status === 'active')
+        .map(participant => ({
+          ...participant,
+          profile: resolvedProfiles.get(participant.actorId)
+        })),
+      {
+        encounterId: requested.encounterId,
+        grantAllTemporaryHitPoints: requested.operation === 'start',
+        grantTemporaryHitPointSourceIds: requested.operation === 'add' ? enteringActorIds : [],
+        grantTemporaryHitPointTargetIds: requested.operation === 'add' ? enteringActorIds : []
+      }
+    );
 
     const encounterKey = `${entryId}:${requested.encounterId}`;
     let lockDescriptors = [];
@@ -234,11 +262,11 @@ export const commitCombatEncounter = onCall({
         const progression = record.combatProfile?.progression || {};
         const change = applyExperienceAward(progression, award.experience);
         const target = recordsToLoad.find(entry => entry.key === recordKey(descriptor));
-        transaction.update(target.ref, {
+        transaction.update(target.ref, withProtectedRecordRevisions(record, {
           'combatProfile.progression': change.after,
           'combatProfile.lastMechanicalCommentId': commentRef.id,
           updatedAt: new Date(now).toISOString()
-        });
+        }, ['combatProfile'], now));
         mechanicalUndo[recordKey(descriptor)] = {
           kind: descriptor.kind,
           recordId: descriptor.recordId,

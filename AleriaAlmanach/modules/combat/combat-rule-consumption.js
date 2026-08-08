@@ -1,4 +1,4 @@
-import { applyCombatResourceCosts } from './combat-state-model.js?v=20260807-freya-v1';
+import { applyCombatResourceCosts } from './combat-state-model.js?v=20260808-duncan-v1';
 
 export function consumeCombatRuleResources(applications = [], sources = [], options = {}) {
   const relevant = (Array.isArray(applications) ? applications : [])

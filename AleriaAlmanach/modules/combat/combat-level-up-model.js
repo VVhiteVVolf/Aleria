@@ -5,7 +5,9 @@ import {
   getMaximumHitPoints,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-save-guard-v1';
+} from './combat-profile-model.js?v=20260808-duncan-v1';
+import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260808-drachentanz-v1';
+import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260808-drachentanz-v1';
 
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);
@@ -255,9 +257,38 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
     appendChange(changes, `resource-${resource.id}-current`, `${resource.name} aktuell`, beforeCurrent, resource.current);
   });
 
+  const classTemplate = getCharacterCreationTemplate('class', interimProfile.templateSelections.classId);
+  const styleProgression = addMissingCombatStyleTechniques(
+    interimProfile.techniques,
+    classTemplate?.combatStyleGrants,
+    beforeLevel + 1
+  );
+  interimProfile.techniques = styleProgression.techniques;
+  styleProgression.added.forEach(technique => {
+    changes.push({
+      key: `combat-style-technique-${technique.id}`,
+      label: 'Neue Kampfstiltechnik',
+      before: '—',
+      after: technique.name
+    });
+  });
+
   applyOptionalAdditions(interimProfile, plan, beforeLevel + 1, changes);
   const finalProfile = sanitizeCharacterCombatProfile(interimProfile);
   const afterProficiency = getProficiencyBonus(finalProfile);
+
+  ['action', 'bonus-action', 'reaction', 'special-action'].forEach(resourceId => {
+    const beforeResource = beforeProfile.resources.find(resource => resource.id === resourceId);
+    const afterResource = finalProfile.resources.find(resource => resource.id === resourceId);
+    if (!beforeResource || !afterResource) return;
+    appendChange(
+      changes,
+      `resource-${resourceId}-maximum`,
+      `${afterResource.name} Maximum`,
+      beforeResource.maximum,
+      afterResource.maximum
+    );
+  });
 
   changes.unshift({ key: 'level', label: nextProgression.kind === 'special' ? 'Sonderstufe' : 'Stufe', before: beforeLevel, after: beforeLevel + 1 });
   appendChange(changes, 'experience', 'Erfahrung', beforeProfile.progression.experience, finalProfile.progression.experience);

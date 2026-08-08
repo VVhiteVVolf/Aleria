@@ -2,6 +2,7 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { buildSceneRestParticipant } from '../generated/scene-rest/scene-rest-model.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 
@@ -55,7 +56,7 @@ export const commitResetCombatParticipants = onCall({
         dayChanged: true,
         recoveryDayKey: 'cheat-reset'
       });
-      transaction.update(refs[index], {
+      transaction.update(refs[index], withProtectedRecordRevisions(record, {
         'combatProfile.hitPoints': {
           ...(record.combatProfile?.hitPoints || {}),
           current: participant.after.hitPoints.current,
@@ -65,7 +66,7 @@ export const commitResetCombatParticipants = onCall({
         'combatProfile.abilities': participant.after.abilities,
         'combatProfile.lastMechanicalCommentId': FieldValue.delete(),
         updatedAt: FieldValue.serverTimestamp()
-      });
+      }, ['combatProfile']));
       transaction.set(
         database.collection('combat_profile_locks')
           .doc(descriptor.kind === 'creature' ? 'creatures' : 'characters')

@@ -1,5 +1,5 @@
-import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260807-magic-system-v1';
-import { normalizeCombatEffects } from './combat-effect-model.js?v=20260804-referee-v2';
+import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260808-duncan-v1';
+import { normalizeCombatEffects } from './combat-effect-model.js?v=20260808-duncan-v1';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
   'pre-roll', 'post-roll', 'post-hit', 'pre-damage', 'on-damaged', 'post-damage',

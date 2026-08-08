@@ -1,4 +1,4 @@
-import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
+import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260808-duncan-v1';
 import { collectClaimedLootActorIds } from '../loot/loot-model.js?v=20260807-loot-v1';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';

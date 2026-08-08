@@ -70,6 +70,7 @@ async function importCharacterImgurAlbum(rawValue) {
       if (slot) slot.label = image.label;
     });
     renderEmoteGrid();
+    if (result.addedCount) scheduleCharacterImageLibraryPersistence('album-import');
     if (input) input.value = '';
     const details = [];
     if (result.duplicateCount) details.push(`${result.duplicateCount} bereits vorhanden`);

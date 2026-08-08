@@ -1,4 +1,4 @@
-import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260807-freya-v1';
+import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260808-duncan-v1';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([

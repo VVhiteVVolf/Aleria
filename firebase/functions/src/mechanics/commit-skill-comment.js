@@ -14,6 +14,7 @@ import {
 } from './trusted-scene-history.js';
 import { skillSegments, validateSkillCommentSegments } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -85,7 +86,12 @@ export const commitSkillComment = onCall({
       const values = { updatedAt: new Date(now).toISOString() };
       if (update.resources) values['combatProfile.resources'] = update.resources;
       if (update.abilities) values['combatProfile.abilities'] = update.abilities;
-      transaction.update(update.entry.ref, values);
+      transaction.update(update.entry.ref, withProtectedRecordRevisions(
+        update.record || {},
+        values,
+        ['combatProfile'],
+        now
+      ));
       return {
         kind: update.entry.kind,
         recordId: update.entry.recordId,

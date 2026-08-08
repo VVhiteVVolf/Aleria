@@ -59,6 +59,32 @@ test('Set-IDs sind stabil, eindeutig und das Set-Limit wird eingehalten', () => 
   assert.equal(model.normalize({ imageSets }).length, model.limit);
 });
 
+test('reines Serialisieren bewahrt bestehende Set-Zeitstempel', () => {
+  const model = loadImageSetModel();
+  const createdAt = '2026-07-01T10:00:00.000Z';
+  const updatedAt = '2026-07-02T11:00:00.000Z';
+  const stored = model.buildStorage([{
+    id: 'standard',
+    name: 'Standard',
+    portrait: 'https://i.imgur.com/main.png',
+    emotes: [],
+    createdAt,
+    updatedAt
+  }]);
+  assert.equal(stored[0].createdAt, createdAt);
+  assert.equal(stored[0].updatedAt, updatedAt);
+});
+
+test('neue Sets erhalten beim ersten Serialisieren stabile Zeitstempel', () => {
+  const model = loadImageSetModel();
+  const first = model.buildStorage([{ id: 'standard', name: 'Standard', emotes: [] }]);
+  const second = model.buildStorage(first);
+  assert.ok(first[0].createdAt);
+  assert.equal(first[0].updatedAt, first[0].createdAt);
+  assert.equal(second[0].createdAt, first[0].createdAt);
+  assert.equal(second[0].updatedAt, first[0].updatedAt);
+});
+
 test('Imgur-Proxy verwendet den offiziellen Album-Endpunkt und gibt nur direkte Bildlinks zurück', async () => {
   const previousClientId = process.env.ALERIA_IMGUR_CLIENT_ID;
   const previousFetch = globalThis.fetch;

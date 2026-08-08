@@ -1,6 +1,7 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { BLODYN_HOUSE_PROFILES } from './blodyn-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -39,7 +40,7 @@ const HOUSE_HEAD_IDS = new Set([
   'yhon-blodyn'
 ]);
 
-const MAINLINE_IDS = new Set(['cerys-blodyn', 'griffin-blodyn']);
+const MAINLINE_IDS = new Set();
 
 function lineageRoleFor(personId) {
   if (HOUSE_HEAD_IDS.has(personId)) return 'head';
@@ -139,7 +140,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     id: 'haus-blodyn',
     title: "Haus Blodyn O'Llyndor",
     motto: 'Datblyg dy nerth a thyfu!',
-    description: 'Das alte Königshaus von Vennyr aus Lyndor. Nach dem Verlust des Blütenlandes setzt Yhon Blodyn die königliche Hauptlinie fort, während Yvains Zweig das Baronshaus von Aberdail begründet.',
+    description: 'Das alte Königshaus von Vennyr aus Lyndor. Yhons Talgarther und Yvains Aberdailer Nachkommen werden in zwei getrennten, direkt verknüpften Klaueninsel-Akten fortgeführt.',
     emblem: BLODYN_EMBLEM,
     houseProfile: BLODYN_HOUSE_PROFILES.lyndor
   },
@@ -151,14 +152,14 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-blaidd', "Haus Blaidd O'Branon", HOUSE_EMBLEMS.blaidd),
     house('house-blaidd-tredegar', "Haus Blaidd O'Tredegar", HOUSE_EMBLEMS.blaidd),
     house('house-dobhar', 'Haus Dobhar'),
-    house('house-dianc', 'Haus Dianc'),
+    house('house-dianc', "Haus Dianc O'Gwynlann", KLAUENINSEL_HOUSE_EMBLEMS.dianc),
     house('house-trachwyll', 'Haus Trachwyll'),
-    house('house-arfordir', 'Haus Arfordir'),
+    house('house-arfordir', "Haus Arfordir O'Serenlyn", KLAUENINSEL_HOUSE_EMBLEMS.arfordir),
     house('house-morlais', 'Haus Morlais'),
     house('house-urquhart', 'Haus Urquhart'),
     house('house-mac-duilb', 'Haus Mac Duilb'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
-    house('house-walwrs', 'Haus Walwrs'),
+    house('house-walwrs', "Haus Walwrs O'Traeth", KLAUENINSEL_HOUSE_EMBLEMS.walwrs),
     house('house-llyfant', "Haus Lyfant O'Derwyddion", HOUSE_EMBLEMS.lyfant),
     house('house-dubglais', 'Haus Dubglais'),
     house('house-wargh', 'Haus Wargh'),
@@ -169,13 +170,14 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-illygoden', "Haus Illygoden O'Tirwedd", HOUSE_EMBLEMS.illygoden),
     house('house-morgant', 'Haus Morgant'),
     house('house-mochdear', 'Haus Mochdear'),
-    house('house-dyfrgi', 'Haus Dyfrgi'),
+    house('house-dyfrgi', "Haus Dyfrgi O'Mynyddharbwr", KLAUENINSEL_HOUSE_EMBLEMS.dyfrgi),
     house('house-drewi', 'Haus Drewi'),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-serenoc', 'Haus Serenoc'),
-    house('house-diafol', 'Haus Diafol'),
+    house('house-diafol', "Haus Diafol O'Trefgoch", KLAUENINSEL_HOUSE_EMBLEMS.diafol),
+    house('house-blodyn-talgarth', "Haus Blodyn O'Talgarth", BLODYN_EMBLEM),
     house('house-blodyn-aberdail', 'Haus Blodyn von Aberdail', BLODYN_EMBLEM)
   ],
   persons: [
@@ -289,12 +291,6 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('siriol-blodyn', 'Siriol Blodyn', 'female', '1694', '1720'),
     person('trachmyr-serenoc', 'Trachmyr Serenoc', 'male', '1692', '1720', 'house-serenoc'),
 
-    person('cerys-blodyn', 'Cerys Blodyn', 'female', '1714', '', BLODYN_HOUSE_ID, { title: 'Erste in der Erbfolge Vennyrs' }),
-    person('griffin-blodyn', 'Griffin Blodyn', 'male', '1715', '1720'),
-    person('telyn-diafol', 'Telyn Diafol', 'male', '1717', '', 'house-diafol', {
-      familyRole: 'ward',
-      title: 'Mündel Yhons'
-    })
   ],
   partnerships: [
     createMarriage('marriage-kerrylin-mordred', ...MORDRED_IDS),
@@ -359,19 +355,24 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     ...childrenOf(['yhon-blodyn', 'catrin-blodyn', 'dylis-blodyn'], JYGALLAG_IDS, 'marriage-jygallag-sheena'),
     ...childrenOf(['yvain-blodyn', 'meggan-blodyn', 'talara-blodyn'], TARRANT_IDS, 'marriage-tarrant-luned'),
     ...childrenOf(['wynfor-blodyn', 'siriol-blodyn'], BLEDDYN_IDS, 'marriage-fflur-bleddyn'),
-    ...childrenOf(['cerys-blodyn', 'griffin-blodyn'], YHON_IDS, 'marriage-yhon-cerny'),
     ...childrenOf(['tarrant-1703-arth'], TARRANT_IDS, 'marriage-tarrant-luned', {
       type: 'foster',
       legitimacy: 'unknown',
       notes: 'Tarrant Arth ist ein aufgenommener Mündel Tarrants und kein leibliches Kind der Blodyn.'
     }),
-    ...childrenOf(['telyn-diafol'], YHON_IDS, 'marriage-yhon-cerny', {
-      type: 'foster',
-      legitimacy: 'unknown',
-      notes: 'Telyn Diafol ist ein aufgenommener Mündel Yhons und kein leibliches Kind der Blodyn.'
-    })
   ],
   cadetBranches: [
+    createCadetHouseBranch({
+      id: 'cadet-blodyn-talgarth-yhon',
+      name: "Haus Blodyn O'Talgarth",
+      subtitle: 'Talgarther Linie Yhon Blodyns',
+      parentPartnershipId: 'marriage-yhon-cerny',
+      houseId: 'house-blodyn-talgarth',
+      targetFamilyId: 'haus-blodyn-talgarth',
+      emblem: BLODYN_EMBLEM,
+      crestFrame: 'gold',
+      notes: 'Der Knoten hängt direkt unter Yhon Blodyn und Cerny Dianc. Cerys, Griffin und das Mündel Telyn werden ausschließlich in der Talgarther Akte weitergeführt.'
+    }),
     createCadetHouseBranch({
       id: 'cadet-blodyn-aberdail-yvain',
       name: 'Haus Blodyn von Aberdail',
@@ -447,8 +448,12 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth und Telyn Diafol sind als aufgenommene Mündel und nicht als leibliche Blodyn-Kinder erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yvains Nachkommen Dalvin und Erec stehen ausschließlich in der verknüpften Aberdail-Akte, damit dieselben Kinder nicht in zwei Diagrammen weitergeführt werden.',
+    sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth ist als aufgenommenes Mündel und nicht als leibliches Blodyn-Kind erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yhons Kinder Cerys und Griffin sowie sein Mündel Telyn stehen ausschließlich in der verknüpften Talgarther Akte; Yvains Nachkommen Dalvin und Erec ausschließlich in der verknüpften Aberdailer Akte. Dadurch wird keine der beiden Nachkommenschaften in zwei Diagrammen weitergeführt.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2,
+    registryTombstones: {
+      persons: ['cerys-blodyn', 'griffin-blodyn', 'telyn-diafol'],
+      parentages: ['parentage-cerys-blodyn', 'parentage-griffin-blodyn', 'parentage-telyn-diafol']
+    }
   }
 });

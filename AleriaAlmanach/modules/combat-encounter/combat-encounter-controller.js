@@ -1,11 +1,11 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260808-duncan-v1';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
 import {
   deriveCombatEncounterState,
   getActiveCombatEncounter,
   normalizeCombatEncounterEvent
-} from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260807-freya-v1';
+} from '../combat/combat-encounter-model.js?v=20260808-duncan-v1';
+import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260808-duncan-v1';
 import {
   ensureCombatEncounterDialog,
   filterEncounterCandidates,
@@ -16,7 +16,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260807-loot-v1';
+} from './combat-encounter-ui.js?v=20260808-duncan-v1';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';

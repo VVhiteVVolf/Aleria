@@ -2,13 +2,13 @@
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
-import { resetCommentScopedResources } from './combat-action-economy.js?v=20260807-magic-system-v1';
+import { resetCommentScopedResources } from './combat-action-economy.js?v=20260808-duncan-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260804-referee-v2';
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260806-encounter-card-v1';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260808-duncan-v1';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;

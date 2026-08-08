@@ -1,5 +1,5 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260807-save-guard-v1';
-import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260807-magic-system-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260808-duncan-v1';
+import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260808-duncan-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -351,6 +351,7 @@ function renderSpell(item) {
   const spellSlots = getOrderedSpellSlotResources(state.resources);
   const upcast = item.upcast || {};
   return `<div class="combat-entry-editor-grid">
+    <label class="wide"><span>Zaubericon (optional)</span><input data-entry-field="icon" value="${escapeHtml(item.icon)}" placeholder="Leer lassen für automatische Auswahl aus den Oblivion-Icons"><small>Akzeptiert einen relativen Bildpfad oder eine Bild-URL. Ohne Angabe wird das Icon passend zu Name, Schule und Schadensart gewählt.</small></label>
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Darstellung</span><select data-entry-field="presentationKind"><option value="spell"${selected(item.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(item.presentationKind, 'prayer')}>Gebet / heiliger Schwur</option><option value="song"${selected(item.presentationKind, 'song')}>Gesang</option></select></label>
     <label><span>Auflösung</span><select data-entry-field="resolutionType"><option value="spell-attack"${selected(item.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(item.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(item.resolutionType, 'automatic')}>Automatische Wirkung</option></select></label>

@@ -1,4 +1,8 @@
 import { splitEncounterExperience } from './combat-progression.js?v=20260807-magic-system-v1';
+import {
+  applyCombatEncounterAuraApplicationsToStateMap,
+  normalizeCombatEncounterAuraApplication
+} from './combat-encounter-aura.js?v=20260808-duncan-v1';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 1;
@@ -48,6 +52,9 @@ export function normalizeCombatEncounterEvent(value = {}) {
     title: text(source.title || 'Kampfankündigung', 180),
     body: text(source.body, 4000),
     participants,
+    auraApplications: (Array.isArray(source.auraApplications) ? source.auraApplications : [])
+      .slice(0, 500)
+      .map(normalizeCombatEncounterAuraApplication),
     winningPartyId: text(source.winningPartyId, 100),
     awardExperience: source.awardExperience !== false,
     experience: {
@@ -173,6 +180,9 @@ export function buildEncounterExperienceAwards(encounter = {}, winningPartyId = 
 export function applyCombatEncounterCommentToStateMap(states, comment = {}) {
   if (!(states instanceof Map) || !isCombatEncounterComment(comment)) return states;
   const event = normalizeCombatEncounterEvent(comment.combatEncounter || comment);
+  if (['start', 'add', 'remove', 'end'].includes(event.operation)) {
+    applyCombatEncounterAuraApplicationsToStateMap(states, event);
+  }
   if (!['remove', 'end'].includes(event.operation)) return states;
   const participantIds = event.operation === 'end'
     ? new Set([...states.keys()].map(String))

@@ -30,6 +30,27 @@ test('feste Aktions- und Zauberplatzregeln können im Profil nicht versehentlich
   );
 });
 
+test('Stufen- und Sonderstufenwerte bestimmen die festen Aktionsressourcen', () => {
+  const level16 = sanitizeCharacterCombatProfile({ progression: { level: 16 } });
+  const level20 = sanitizeCharacterCombatProfile({ progression: { level: 20 } });
+  const rank30 = sanitizeCharacterCombatProfile({ progression: { level: 20, specialLevels: 10 } });
+  const economy = profile => Object.fromEntries(
+    profile.resources
+      .filter(resource => ['action', 'bonus-action', 'reaction', 'special-action'].includes(resource.id))
+      .map(resource => [resource.id, resource.maximum])
+  );
+
+  assert.deepEqual(economy(level16), {
+    action: 2, 'bonus-action': 2, reaction: 3, 'special-action': 3
+  });
+  assert.deepEqual(economy(level20), {
+    action: 3, 'bonus-action': 2, reaction: 3, 'special-action': 4
+  });
+  assert.deepEqual(economy(rank30), {
+    action: 4, 'bonus-action': 3, reaction: 4, 'special-action': 5
+  });
+});
+
 test('begrenzte Fähigkeiten werden innerhalb eines Kommentars fortlaufend verbraucht und erst am Folgetag erholt', () => {
   const abilities = [{
     id: 'shield-bash', name: 'Schildstoß', usesCurrent: 2, usesMaximum: 2, recovery: 'day'

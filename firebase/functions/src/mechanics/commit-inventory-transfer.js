@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { applySceneInventoryTransfer } from '../generated/scene-inventory/scene-inventory-transfer-model.js';
+import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -55,8 +56,14 @@ export const commitInventoryTransfer = onCall({
       fail('failed-precondition', error?.message || 'Die InventarÃ¼bergabe ist nicht mehr gÃ¼ltig.');
     }
 
-    transaction.update(giverRef, { inventory: result.giverInventory, updatedAt: now.toISOString() });
-    transaction.update(receiverRef, { inventory: result.receiverInventory, updatedAt: now.toISOString() });
+    transaction.update(giverRef, withProtectedRecordRevisions(giver, {
+      inventory: result.giverInventory,
+      updatedAt: now.toISOString()
+    }, ['inventory'], now.getTime()));
+    transaction.update(receiverRef, withProtectedRecordRevisions(receiver, {
+      inventory: result.receiverInventory,
+      updatedAt: now.toISOString()
+    }, ['inventory'], now.getTime()));
     const transfer = {
       transferId: randomUUID(),
       giver: { id: giverId, name: clean(giver.name, 160), portrait: clean(giver.portrait, 2000) },

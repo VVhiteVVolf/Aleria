@@ -1,4 +1,4 @@
-import { sanitizeCreature } from './creature-model.js?v=20260808-loot-revision-v1';
+import { sanitizeCreature } from './creature-model.js?v=20260808-duncan-v1';
 
 export const CREATURE_LEVEL_GUIDELINES = Object.freeze([
   { label: 'Bauer', minimum: 1, maximum: 1 },

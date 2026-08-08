@@ -1,3 +1,5 @@
+import { mergeCharacterImageLibrary } from './character-import-policy.js?v=20260808-character-storage-audit-v1';
+
 // Reine Entscheidungslogik hinter dem Zurücküberschreiben-Schutz aus firebase.js#saveCharacter.
 // Getrennt in ein eigenes, Firebase-freies Modul, damit die eigentliche Vergleichslogik echt
 // getestet werden kann (firebase.js selbst lässt sich ohne Firestore-Verbindung nicht laden).
@@ -17,7 +19,7 @@ function fieldRevision(record, field) {
 export function detectStaleCharacterFields(currentDocData, outgoingData, fieldLabels = { combatProfile: 'Kampfprofil', inventory: 'Inventar' }) {
   if (!currentDocData || !outgoingData) return [];
   return Object.keys(fieldLabels).filter(field => {
-    if (!(field in outgoingData) || !outgoingData[field]) return false;
+    if (!Object.prototype.hasOwnProperty.call(outgoingData, field)) return false;
     return fieldRevision(currentDocData, field) > fieldRevision(outgoingData, field);
   }).map(field => fieldLabels[field]);
 }
@@ -31,6 +33,105 @@ export function stampFreshRevisions(outgoingData, fields = ['combatProfile', 'in
     if (stamped[field]) stamped[field] = { ...stamped[field], revision: now };
   });
   return stamped;
+}
+
+function getNextCharacterRevision(currentDocData, fields, requestedRevision = Date.now()) {
+  const requested = Math.max(1, Math.trunc(Number(requestedRevision) || Date.now()));
+  if (!currentDocData || typeof currentDocData !== 'object') return requested;
+  const highestCurrent = fields.reduce((highest, field) => Math.max(highest, fieldRevision(currentDocData, field)), 0);
+  return Math.max(requested, highestCurrent + 1);
+}
+
+const CHARACTER_IMAGE_LIBRARY_FIELDS = Object.freeze([
+  'imageSetSchemaVersion',
+  'imageSets',
+  'activeImageSetId',
+  'portrait',
+  'emotes',
+  'emotesOverride',
+  'imageSetsOverride'
+]);
+
+// Liefert exakt den Firestore-Patch der Avatarsektion. Andere Aufrufer (Kommentar-Picker,
+// Autosave) können dadurch keine Profil-, Inventar- oder Kampffelder aus einem alten lokalen
+// Charakterdatensatz versehentlich mitschreiben.
+export function selectCharacterImageLibraryWrite(source = {}, options = {}) {
+  const write = {};
+  CHARACTER_IMAGE_LIBRARY_FIELDS.forEach(field => {
+    if (Object.prototype.hasOwnProperty.call(source, field)) write[field] = source[field];
+  });
+  if (options.includeUpdatedAt !== false && Object.prototype.hasOwnProperty.call(source, 'updatedAt')) {
+    write.updatedAt = source.updatedAt;
+  }
+  return write;
+}
+
+export function selectCharacterArchiveStatusWrite(source = {}) {
+  return {
+    archived: !!source.archived,
+    ...(Object.prototype.hasOwnProperty.call(source, 'updatedAt') ? { updatedAt: source.updatedAt } : {})
+  };
+}
+
+export function selectCharacterGenealogyWrite(source = {}) {
+  return {
+    ...(Object.prototype.hasOwnProperty.call(source, 'identity') ? { identity: source.identity } : {}),
+    ...(Object.prototype.hasOwnProperty.call(source, 'genealogy') ? { genealogy: source.genealogy } : {}),
+    ...(Object.prototype.hasOwnProperty.call(source, 'updatedAt') ? { updatedAt: source.updatedAt } : {})
+  };
+}
+
+// Eine Kampfsperre schützt nur die kampfrelevanten Bereiche. Reine Profil- oder
+// Bildbibliothek-Schreibvorgänge dürfen unabhängig davon als gezielte Merges weiterlaufen.
+export function shouldBlockCharacterWriteDuringEncounter(outgoingData, activeEncounterKeys) {
+  if (!Array.isArray(activeEncounterKeys) || activeEncounterKeys.length === 0) return false;
+  return !!outgoingData && (
+    Object.prototype.hasOwnProperty.call(outgoingData, 'combatProfile')
+    || Object.prototype.hasOwnProperty.call(outgoingData, 'inventory')
+  );
+}
+
+// Bereitet den eigentlichen Firestore-Schreibvorgang vor. Normale Formularspeicherungen bleiben
+// absichtlich Merge-Schreibvorgaenge, damit ein spezialisierter Teil-Editor keine fremden Bereiche
+// loescht. Ein ausdruecklicher Vollimport ersetzt dagegen das Dokument vollstaendig. Nur die
+// serverseitige Besitz-/Erstellerkennung wird aus dem bestehenden Dokument bewahrt, weil diese
+// Verwaltungsdaten nicht aus einer exportierten Charakterdatei uebernommen werden duerfen.
+export function prepareCharacterDocumentWrite(currentDocData, outgoingData, options = {}) {
+  const current = currentDocData && typeof currentDocData === 'object' ? currentDocData : null;
+  const userId = String(options.userId || '').trim();
+  const fields = Array.isArray(options.revisionFields) ? options.revisionFields : ['combatProfile', 'inventory'];
+  const replaceExisting = !!current && options.replaceExisting === true;
+  const protectedOutgoing = replaceExisting
+    ? mergeCharacterImageLibrary(current, outgoingData || {}, {
+        replaceImageLibrary: options.replaceImageLibrary === true
+      })
+    : (outgoingData || {});
+  const nextRevision = getNextCharacterRevision(current, fields, options.now);
+  const stamped = stampFreshRevisions(protectedOutgoing, fields, nextRevision);
+
+  if (!current) {
+    return {
+      data: {
+        ...stamped,
+        ownerUid: userId,
+        createdBy: userId
+      },
+      merge: false
+    };
+  }
+
+  if (!replaceExisting) return { data: stamped, merge: true };
+
+  const ownerUid = String(current.ownerUid || userId).trim();
+  const createdBy = String(current.createdBy || current.ownerUid || userId).trim();
+  return {
+    data: {
+      ...stamped,
+      ownerUid,
+      createdBy
+    },
+    merge: false
+  };
 }
 
 // Vergleicht mehrere benannte Abschnitte (z. B. Kampfprofil, Inventar, Bilder & Emotes) zwischen
@@ -50,6 +151,12 @@ export function selectChangedSections(current, baseline, sectionNames) {
 // als type="module" vor allen defer-Skripten, das Fenster-Objekt steht rechtzeitig bereit.
 globalThis.AleriaCharacterSaveGuard = Object.freeze({
   detectStaleCharacterFields,
+  mergeCharacterImageLibrary,
   stampFreshRevisions,
+  shouldBlockCharacterWriteDuringEncounter,
+  prepareCharacterDocumentWrite,
+  selectCharacterArchiveStatusWrite,
+  selectCharacterGenealogyWrite,
+  selectCharacterImageLibraryWrite,
   selectChangedSections
 });

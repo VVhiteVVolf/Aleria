@@ -158,7 +158,7 @@ class FakeSkillDiceAdapter {
   }
 }
 
-test('migriert das alte Kampfprofil verlustarm in Schema neun', () => {
+test('migriert das alte Kampfprofil verlustarm in Schema zehn', () => {
   const profile = sanitizeCharacterCombatProfile({
     defense: 13,
     maximumHitPoints: 22,
@@ -168,7 +168,7 @@ test('migriert das alte Kampfprofil verlustarm in Schema neun', () => {
     weapon: { name: 'Speer', damageFormula: '1W6 + 1' },
     armor: { name: 'Lederrüstung', defenseBonus: 2 }
   });
-  assert.equal(profile.schemaVersion, 9);
+  assert.equal(profile.schemaVersion, 10);
   assert.equal(profile.armorClass.base, 13);
   assert.equal(profile.hitPoints.maximumOverride, 22);
   assert.equal(profile.combat.attackBonus, 4);

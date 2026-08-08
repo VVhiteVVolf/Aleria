@@ -5,31 +5,31 @@ import {
   getSavingThrowTotal,
   resolveAttackRollMode,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260807-save-guard-v1';
+} from './combat-profile-model.js?v=20260808-duncan-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260807-freya-v1';
+} from './combat-profile-resolver.js?v=20260808-duncan-v1';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260807-freya-v1';
+} from './combat-state-model.js?v=20260808-duncan-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
   normalizeCombatEffect,
   normalizeCombatEffects
-} from './combat-effect-model.js?v=20260804-referee-v2';
+} from './combat-effect-model.js?v=20260808-duncan-v1';
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260804-referee-v2';
+import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260808-duncan-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260804-referee-v2';
+} from './combat-trigger-rules.js?v=20260808-duncan-v1';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-4';
 

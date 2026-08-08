@@ -1,5 +1,5 @@
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-import { COMBAT_ACTION_RESOURCE_DEFINITIONS } from '../combat-action-economy.js?v=20260807-magic-system-v1';
+import { COMBAT_ACTION_RESOURCE_DEFINITIONS } from '../combat-action-economy.js?v=20260808-duncan-v1';
 import {
   getSpellLevelLabel,
   getSpellSlotLevel,

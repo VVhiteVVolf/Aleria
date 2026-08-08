@@ -38,6 +38,22 @@ function mergeRegisteredManagedFields(registeredValue = {}, localValue = {}, fie
   return result;
 }
 
+function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}) {
+  const result = { ...registeredExtensions, ...localExtensions };
+  const managedExtensionFields = Array.isArray(registeredExtensions.registryManagedExtensionFields)
+    ? registeredExtensions.registryManagedExtensionFields
+    : [];
+
+  managedExtensionFields.forEach(fieldName => {
+    if (Object.hasOwn(registeredExtensions, fieldName)) {
+      result[fieldName] = registeredExtensions[fieldName];
+      return;
+    }
+    delete result[fieldName];
+  });
+  return result;
+}
+
 function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set()) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
   const merged = registeredEntities.filter(entity => !tombstones.has(entity.id)).map(entity => {
@@ -50,10 +66,7 @@ function mergeEntities(registeredEntities = [], localEntities = [], tombstones =
     const result = {
       ...entity,
       ...localEntity,
-      extensions: {
-        ...(entity.extensions || {}),
-        ...(localEntity.extensions || {})
-      }
+      extensions: mergeEntityExtensions(entity.extensions, localEntity.extensions)
     };
     registryManagedFields.forEach(fieldName => {
       if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {

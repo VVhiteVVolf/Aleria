@@ -2,18 +2,18 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-  "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+  "sourceExportedAt": "2026-08-08T12:00:00.000Z",
   "summary": {
-    "sourceDocuments": 179,
-    "total": 173,
-    "mergedSameNameGroups": 4,
+    "sourceDocuments": 186,
+    "total": 175,
+    "mergedSameNameGroups": 9,
     "familyLinked": 93,
     "familyAmbiguous": 0,
-    "familyPending": 80,
+    "familyPending": 82,
     "primaryFamily": 93,
     "primaryGroup": 26,
     "primaryPlace": 25,
-    "primaryUnassigned": 29,
+    "primaryUnassigned": 31,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -795,6 +795,28 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--pZOlHOyG7aKr8xFX2rIU",
       "name": "Fürsprecher",
       "status": "pending",
@@ -960,11 +982,42 @@
       "ages": []
     },
     {
+      "name": "Duncan Gafyr",
+      "canonicalDocumentId": "tmfBA2zPTc88EMMGkyyA",
+      "documentIds": [
+        "tmfBA2zPTc88EMMGkyyA",
+        "tmfBA2zPTc88EMMGkyyA"
+      ],
+      "ages": [
+        "Geburtsjahr 1670"
+      ]
+    },
+    {
       "name": "Gawain Draig",
       "canonicalDocumentId": "q1QtSIug74FzzwUAqWrs",
       "documentIds": [
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs"
+      ],
+      "ages": [
+        "Geburtsjahr 1722"
+      ]
+    },
+    {
+      "name": "Gethin",
+      "canonicalDocumentId": "6atOllMA637Z2VNAZAxf",
+      "documentIds": [
+        "6atOllMA637Z2VNAZAxf",
+        "6atOllMA637Z2VNAZAxf"
+      ],
+      "ages": []
+    },
+    {
+      "name": "Guinevere Neidr",
+      "canonicalDocumentId": "person--haus-neidr--guinevere-neidr",
+      "documentIds": [
+        "person--haus-neidr--guinevere-neidr",
+        "person--haus-neidr--guinevere-neidr"
       ],
       "ages": [
         "Geburtsjahr 1722"
@@ -981,6 +1034,17 @@
       "ages": []
     },
     {
+      "name": "Kane Draig",
+      "canonicalDocumentId": "HjDXMMexahez1G0rJrBE",
+      "documentIds": [
+        "HjDXMMexahez1G0rJrBE",
+        "HjDXMMexahez1G0rJrBE"
+      ],
+      "ages": [
+        "Geburtsjahr 1721"
+      ]
+    },
+    {
       "name": "Meurig Draig",
       "canonicalDocumentId": "E8HXkgi2kdkXaqkxrnRo",
       "documentIds": [
@@ -989,6 +1053,17 @@
         "oVvNboWTUionb0PCZDf7"
       ],
       "ages": []
+    },
+    {
+      "name": "Rhiannon Draig",
+      "canonicalDocumentId": "y7MBxDiAaesbWHBtmw5Q",
+      "documentIds": [
+        "y7MBxDiAaesbWHBtmw5Q",
+        "y7MBxDiAaesbWHBtmw5Q"
+      ],
+      "ages": [
+        "Geburtsjahr 1721"
+      ]
     }
   ],
   "duplicateWorldPersonIds": []

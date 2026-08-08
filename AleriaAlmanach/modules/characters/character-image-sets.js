@@ -134,8 +134,27 @@ function buildCharacterImageSetStorage(imageSets = []) {
   return normalized.map(set => ({
     ...set,
     createdAt: set.createdAt || now,
-    updatedAt: now
+    // Serialisieren ist keine Bearbeitung. Der Zeitstempel wird vom Editor nur dann
+    // erneuert, wenn sich Name, Portrait oder Emotes des Sets wirklich aendern.
+    updatedAt: set.updatedAt || set.createdAt || now
   }));
+}
+
+function buildCharacterImageLibraryStorage(character = {}) {
+  const imageSets = buildCharacterImageSetStorage(normalizeCharacterImageSets(character));
+  const standard = imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || imageSets[0];
+  const requestedActiveId = String(character?.activeImageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+  return {
+    imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,
+    imageSets,
+    activeImageSetId: imageSets.some(set => set.id === requestedActiveId)
+      ? requestedActiveId
+      : CHARACTER_IMAGE_SET_DEFAULT_ID,
+    portrait: standard?.portrait || null,
+    emotes: (standard?.emotes || []).map(emote => ({ ...emote })),
+    emotesOverride: true,
+    imageSetsOverride: true
+  };
 }
 
 window.AleriaCharacterImageSets = Object.freeze({
@@ -148,5 +167,6 @@ window.AleriaCharacterImageSets = Object.freeze({
   getPresentation: getCharacterImageSetPresentation,
   applyPresentation: applyCharacterImageSetPresentation,
   createId: createCharacterImageSetId,
-  buildStorage: buildCharacterImageSetStorage
+  buildStorage: buildCharacterImageSetStorage,
+  prepareStorage: buildCharacterImageLibraryStorage
 });

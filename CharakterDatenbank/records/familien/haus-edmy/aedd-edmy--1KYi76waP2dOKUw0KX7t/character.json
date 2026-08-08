@@ -82,12 +82,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "1KYi76waP2dOKUw0KX7t"
     ],
-    "contentHash": "0dee216cffa3338f69dd2b4f33bca45cf1d3ee42e4a9e193d24025b32a343aa3"
+    "contentHash": "5e10911d92f9a78acf8b906b893acfee5487cacfdccd371eb46532d256815556"
   },
   "local": {
     "notes": "",
@@ -1260,8 +1260,8 @@
           "personId": "aedd-edmy",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-03T18:28:54.436Z",
-          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-edmy&mode=view&person=aedd-edmy",
           "fingerprint": "{\"name\":\"Aedd Edmy\",\"title\":\"Jungritter · Anwärter auf den isobelitischen Eid\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-edmy\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-edmy/aedd-edmy.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bran-edmy\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-edmy--bran-edmy\",\"name\":\"Bran Edmy\"},{\"personId\":\"unknown-spouse-bran-edmy\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-bran-edmy\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}"
         }

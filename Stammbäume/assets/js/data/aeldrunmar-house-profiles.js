@@ -5,6 +5,18 @@ export const AELDRUNMAR_REGION_EMBLEMS = Object.freeze({
 });
 
 export const AELDRUNMAR_HOUSE_PROFILES = Object.freeze({
+  kendryck: createHouseProfileFromFolderPath(
+    ['Aeldrunmar', 'Königliches Jarltum', 'Königliche Thainschaft', 'Aeldrunhal'],
+    {
+      rankId: 'royal',
+      regionEmblems: {
+        kingdom: AELDRUNMAR_REGION_EMBLEMS.aeldrunmar,
+        county: '',
+        barony: '',
+        seat: ''
+      }
+    }
+  ),
   scandyn: createHouseProfileFromFolderPath(
     ['Aeldrunmar', 'Earltum der Tharn', 'Thaintum Trenmorath', 'Scandmere'],
     {

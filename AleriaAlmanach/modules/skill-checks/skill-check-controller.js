@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260808-duncan-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -15,10 +15,10 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260807-guinevere-v1';
+} from './skill-check-model.js?v=20260808-duncan-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService } from './skill-resolution-service.js?v=20260804-referee-v2';
-import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260804-referee-v2';
+import { SkillResolutionService } from './skill-resolution-service.js?v=20260808-duncan-v1';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260808-duncan-v1';
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({

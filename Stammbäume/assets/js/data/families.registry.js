@@ -41,6 +41,10 @@ import {
   GRAUE_WEITE_DEPENDENT_HOUSE_FAMILIES,
   GRAUE_WEITE_ORIGIN_HOUSE_FAMILIES
 } from './graue-weite-house-families.js';
+import {
+  KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES,
+  KLAUENINSEL_ORIGIN_HOUSE_FAMILIES
+} from './klaueninseln-house-families.js';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
@@ -184,7 +188,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: family.document.id,
     title: family.document.title,
     family,
-    type: 'lower-nobility'
+    type: family.document.houseProfile.rankId === 'royal' ? 'dynasty' : 'lower-nobility'
   })),
   ...TALYNDOR_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,
@@ -313,6 +317,20 @@ export const FAMILY_REGISTRY = Object.freeze([
       : 'dynasty'
   })),
   ...GRAUE_WEITE_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'dynasty'
+  })),
+  ...KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'knight'
+      ? 'lower-nobility'
+      : 'dynasty'
+  })),
+  ...KLAUENINSEL_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,
     family,

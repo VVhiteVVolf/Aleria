@@ -1,6 +1,8 @@
 // Shared action-economy rules for character sheets, creature sheets and scene comments.
 // Comment-scoped resources reset for every complete comment; persistent resources do not.
 
+import { getCombatActionEconomy } from './combat-resource-progression.js?v=20260808-duncan-v1';
+
 export const COMBAT_ACTION_RESOURCE_DEFINITIONS = Object.freeze([
   { id: 'action', name: 'Aktion', current: 1, maximum: 1, scope: 'comment', category: 'action', recovery: 'scene', icon: './public/assets/combat-profile-icons/action.png' },
   { id: 'bonus-action', name: 'Bonusaktion', current: 1, maximum: 1, scope: 'comment', category: 'action', recovery: 'scene', icon: './public/assets/combat-profile-icons/bonus-action.png' },
@@ -59,13 +61,17 @@ export function getDefaultActivationCosts(activationType = 'action') {
   }] : [];
 }
 
-export function ensureCombatActionResources(resources = []) {
+export function ensureCombatActionResources(resources = [], progression = {}) {
   const result = (Array.isArray(resources) ? resources : []).map(resource => ({ ...resource }));
+  const actionMaximums = getCombatActionEconomy(progression.level, progression.specialLevels);
   COMBAT_ACTION_RESOURCE_DEFINITIONS.forEach(definition => {
+    const targetMaximum = actionMaximums[definition.id] ?? definition.maximum;
     const existing = result.find(resource => resource.id === definition.id)
       || result.find(resource => String(resource.name || '').trim().toLocaleLowerCase('de') === definition.name.toLocaleLowerCase('de'));
     if (existing) {
       const migratedLegacySpecialAction = definition.id === 'special-action' && existing.scope !== 'persistent';
+      const previousMaximum = normalizeAmount(existing.maximum, definition.maximum);
+      const previousCurrent = normalizeAmount(existing.current, definition.current);
       existing.id = definition.id;
       existing.name ||= definition.name;
       existing.scope = definition.scope;
@@ -73,11 +79,16 @@ export function ensureCombatActionResources(resources = []) {
       if (definition.paymentRole) existing.paymentRole = definition.paymentRole;
       existing.icon ||= definition.icon;
       if (definition.scope === 'comment') {
-        existing.maximum = definition.maximum;
-        existing.current = definition.current;
+        existing.maximum = targetMaximum;
+        existing.current = targetMaximum;
       } else if (migratedLegacySpecialAction) {
-        existing.maximum = definition.maximum;
-        existing.current = definition.current;
+        existing.maximum = targetMaximum;
+        existing.current = targetMaximum;
+      } else if (definition.id === 'special-action') {
+        existing.maximum = targetMaximum;
+        existing.current = previousMaximum < targetMaximum
+          ? Math.min(targetMaximum, previousCurrent + (targetMaximum - previousMaximum))
+          : Math.min(previousCurrent, targetMaximum);
       } else {
         if (existing.maximum == null) existing.maximum = definition.maximum;
         if (existing.current == null) existing.current = definition.current;
@@ -88,6 +99,8 @@ export function ensureCombatActionResources(resources = []) {
     }
     result.push({
       ...definition,
+      maximum: targetMaximum,
+      current: definition.id === 'aura-focus' ? definition.current : targetMaximum,
       recovery: definition.recovery || (definition.scope === 'comment' ? 'scene' : 'manual'),
       notes: definition.scope === 'comment' ? 'Wird für jeden neuen Gesamtkommentar aufgefüllt.' : ''
     });

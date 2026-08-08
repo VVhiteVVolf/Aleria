@@ -132,6 +132,7 @@ async function importCharacterAvatarLinks(rawValue) {
   const result = await buildCharacterAvatarImport({ rawValue: source, slots: _emoteSlots });
   _emoteSlots = result.slots;
   renderEmoteGrid();
+  if (result.addedCount) scheduleCharacterImageLibraryPersistence('avatar-import');
   if (input) input.value = '';
 
   if (!result.parsedCount) {

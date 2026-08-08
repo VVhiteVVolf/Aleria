@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260803-composer-costs-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260803-character-image-sets-v1">
-<link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260803-character-creation-v1">
+<link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260808-combat-cards-v1">
 <link rel="stylesheet" href="./styles/character-combat-setup.css?v=20260803-character-creation-v1">
 <link rel="stylesheet" href="./styles/combat-entry-editor.css?v=20260803-spell-grades-v1">
 <link rel="stylesheet" href="./styles/creatures.css?v=20260803-spell-grades-v1">
@@ -80,8 +80,8 @@
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260802-combat-state-v2">
   <!-- Firebase -->
-  <script type="module" src="./firebase.js?v=20260808-genealogy-owner-fix-v1"></script>
-  <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260807-save-scope-v1"></script>
+  <script type="module" src="./firebase.js?v=20260808-character-storage-audit-v1"></script>
+  <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260808-character-storage-audit-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
@@ -225,42 +225,43 @@
   <script src="./modules/archive/archive-dashboard.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
   <script src="./modules/archive/archive-view.js?v=20260802-brandhof-combat-v1" defer></script>
-  <script src="./modules/characters/character-image-sets.js?v=20260803-character-image-sets-v1" defer></script>
+  <script src="./modules/characters/character-image-sets.js?v=20260808-character-sections-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260803-character-image-sets-v1" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-tabs.js?v=20260803-scene-rest-v1" defer></script>
-  <script src="./modules/characters/character-archive-io.js?v=20260807-save-guard-v2" defer></script>
-  <script src="./modules/characters/character-inventory-profile.js?v=20260807-save-scope-v1" defer></script>
-  <script type="module" src="./modules/characters/character-combat-profile.js?v=20260807-save-guard-v1"></script>
-  <script type="module" src="./modules/creatures/creature-system.js?v=20260808-loot-revision-v1"></script>
-  <script src="./modules/characters/character-avatar-import.js?v=20260803-character-image-sets-v1" defer></script>
-  <script src="./modules/characters/character-album-import.js?v=20260803-character-image-sets-v1" defer></script>
-  <script src="./modules/characters/character-image-set-editor.js?v=20260803-character-image-sets-v1" defer></script>
-  <script src="./modules/characters/character-profile.js?v=20260807-save-scope-v1" defer></script>
-  <script src="./modules/characters/character-bulk-actions.js?v=20260807-save-scope-v1" defer></script>
+  <script src="./modules/characters/character-tabs.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script src="./modules/characters/character-archive-io.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script src="./modules/characters/character-inventory-profile.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script type="module" src="./modules/characters/character-combat-profile.js?v=20260808-character-storage-audit-v1"></script>
+  <script type="module" src="./modules/creatures/creature-system.js?v=20260808-character-storage-audit-v1"></script>
+  <script src="./modules/characters/character-avatar-import.js?v=20260808-character-media-save-v1" defer></script>
+  <script src="./modules/characters/character-album-import.js?v=20260808-character-media-save-v1" defer></script>
+  <script src="./modules/characters/character-image-set-editor.js?v=20260808-character-sections-v1" defer></script>
+  <script src="./modules/characters/character-profile.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script type="module" src="./modules/characters/character-image-library-autosave.js?v=20260808-character-storage-audit-v1"></script>
+  <script src="./modules/characters/character-bulk-actions.js?v=20260808-character-storage-audit-v1" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20260807-save-scope-v1" defer></script>
-  <script src="./modules/characters/character-profile-events.js?v=20260803-character-image-sets-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script src="./modules/characters/character-profile-events.js?v=20260808-character-media-save-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-renderer.js?v=20260710-scene-inventory-v2" defer></script>
   <script type="module" src="./modules/scene-dice/scene-dice-bridge.js?v=20260802-dice-audio-v2"></script>
   <script type="module" src="./modules/scene-dice/scene-dice-participants.js?v=20260803-system-audit-v1"></script>
-  <script type="module" src="./modules/scene-dice/scene-dice-narration.js?v=20260803-character-creation-v1"></script>
-  <script type="module" src="./modules/skill-checks/skill-check-controller.js?v=20260807-save-guard-v1"></script>
-  <script type="module" src="./modules/combat/combat-controller.js?v=20260807-save-guard-v1"></script>
+  <script type="module" src="./modules/scene-dice/scene-dice-narration.js?v=20260808-duncan-v1"></script>
+  <script type="module" src="./modules/skill-checks/skill-check-controller.js?v=20260808-duncan-v1"></script>
+  <script type="module" src="./modules/combat/combat-controller.js?v=20260808-duncan-v1"></script>
   <script type="module" src="./modules/inventory-use/inventory-use-controller.js?v=20260804-composer-perf-v1"></script>
   <script src="./modules/scene-dice/scene-dice-state.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-ui.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-time/scene-time-state.js?v=20260803-scene-rest-v1" defer></script>
   <script src="./modules/scene-time/scene-time-ui.js?v=20260803-scene-rest-v1" defer></script>
-  <script type="module" src="./modules/scene-rest/scene-rest-controller.js?v=20260806-undo-btn-v1"></script>
-  <script type="module" src="./modules/combat-encounter/combat-encounter-controller.js?v=20260807-save-guard-v1"></script>
+  <script type="module" src="./modules/scene-rest/scene-rest-controller.js?v=20260808-duncan-v1"></script>
+  <script type="module" src="./modules/combat-encounter/combat-encounter-controller.js?v=20260808-duncan-v1"></script>
   <script type="module" src="./modules/loot/loot-controller.js?v=20260807-loot-v1"></script>
-  <script type="module" src="./modules/herausforderung/herausforderung-controller.js?v=20260805-herausforderung-v2"></script>
+  <script type="module" src="./modules/herausforderung/herausforderung-controller.js?v=20260808-duncan-v1"></script>
   <script src="./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3" defer></script>
   <script src="./modules/scene-polls/scene-polls-state.js?v=20260625-scene-polls-v1" defer></script>
@@ -1278,7 +1279,7 @@
     <div class="char-profile-actions">
       <button class="char-delete-btn" id="cp-delete-btn" type="button" data-char-profile-action="delete" style="display:none">Löschen</button>
       <span class="char-status-msg" id="cp-save-status"></span>
-      <button class="comment-btn-cancel" type="button" data-char-profile-action="import">Importieren</button>
+      <button class="comment-btn-cancel" type="button" data-char-profile-action="import" title="JSON-Bogen vollständig übernehmen und sofort speichern">Importieren &amp; überschreiben</button>
       <button class="comment-btn-cancel" type="button" data-char-profile-action="export">Exportieren</button>
       <button class="comment-btn-cancel" type="button" data-char-profile-action="close">Abbrechen</button>
       <button class="char-save-btn" type="button" data-char-profile-action="save">Speichern</button>

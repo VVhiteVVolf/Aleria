@@ -9,8 +9,8 @@
       from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
-    import { detectStaleCharacterFields, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20260807-save-scope-v1";
+    import { detectStaleCharacterFields, prepareCharacterDocumentWrite, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
+      from "./modules/characters/character-save-guard.js?v=20260808-character-storage-audit-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -779,7 +779,7 @@
         assertCommentMutable(snap.data(), 'gelöscht');
         return deleteDoc(ref);
       },
-      async loadCharacters() {
+      async loadCharacters(options = {}) {
         try {
           const q = query(collection(db, 'characters'), orderBy('name', 'asc'));
           const snap = await getDocs(q);
@@ -787,6 +787,7 @@
         } catch(e) {
           console.error('loadCharacters error:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Charaktere konnten nicht geladen werden.'));
+          if (options.throwOnError === true) throw e;
           return [];
         }
       },
@@ -828,45 +829,76 @@
       },
       async saveCharacter(id, data, options = {}) {
         const user = await requireFirebaseUser();
-        const { setDoc, doc, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         if (id) {
           const ref = doc(db, 'characters', id);
-          const lockSnap = await getDoc(doc(db, 'combat_profile_locks', 'characters', 'records', id));
-          if ((lockSnap.data()?.activeEncounterKeys || []).length) {
-            throw new Error('Diese Figur nimmt gerade an einem aktiven Kampf teil, deshalb ist das Kampfprofil gesperrt. Beende den Kampf zuerst über die Kampfliste ("Kampf beenden"), um den Bogen wieder speichern zu können.');
-          }
+          const lockRef = doc(db, 'combat_profile_locks', 'characters', 'records', id);
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
+          const needsProtectedTransaction = options.replaceExisting === true
+            || options.createWithId === true
+            || Object.prototype.hasOwnProperty.call(safeData, 'combatProfile')
+            || Object.prototype.hasOwnProperty.call(safeData, 'inventory');
+
+          // Reine Profil-, Archiv-, Genealogie- und Avatar-Patches verändern keine
+          // revisionsgeschützten Mechanikfelder. Sie bleiben normale Merge-Writes, damit die
+          // Firestore-Warteschlange sie auch bei einer kurzen Verbindungsunterbrechung annehmen
+          // kann. Atomare Transaktionen sind den konfliktkritischen Pfaden vorbehalten.
+          if (!needsProtectedTransaction) {
+            await setDoc(ref, safeData, { merge: true });
+            return options.returnWriteResult === true ? { id, data: safeData } : id;
+          }
           // Manche Aufrufer (z. B. der Stammbaum-Import) vergeben für eine NEUE Figur bewusst eine
           // vorbestimmte ID (worldPersonId), damit Dokument-ID und Stammbaum-Identität übereinstimmen,
           // statt eine zufällige addDoc()-ID zu bekommen. Ohne existierendes Dokument zählt das für die
           // Firestore-Regeln als "create" (verlangt ownerUid == auth.uid) - deshalb muss hier genau wie
           // in saveCreature() geprüft werden, ob das Dokument schon existiert, statt das anhand der
           // bloßen Anwesenheit einer id anzunehmen.
-          const existingSnap = await getDoc(ref);
-          // Schutz gegen veraltete Browser-Tabs, die ein Kampfprofil/Inventar aus dem
-          // Zwischenspeicher zurückschreiben und dabei z. B. einen frisch importierten
-          // Charakterbogen wieder überschreiben würden. Ein expliziter Import (forceOverwrite)
-          // setzt sich immer durch und wird dadurch selbst zum neuen, geschützten Stand.
-          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite && existingSnap.exists()) {
-            const staleFields = detectStaleCharacterFields(existingSnap.data(), safeData);
-            if (staleFields.length) {
-              throw new Error(`Diese Figur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
+          // Sperrprüfung, Revisionsvergleich und Schreibvorgang gehören in dieselbe Transaktion.
+          // Sonst könnte ein zweiter Tab genau zwischen getDoc() und setDoc() schreiben und trotz
+          // korrekter Einzelprüfungen einen neueren Inventar- oder Kampfstand verlieren.
+          const preparedWrite = await runTransaction(db, async transaction => {
+            const lockSnap = await transaction.get(lockRef);
+            const existingSnap = await transaction.get(ref);
+            if (shouldBlockCharacterWriteDuringEncounter(safeData, lockSnap.data()?.activeEncounterKeys || [])) {
+              throw new Error('Diese Figur nimmt gerade an einem aktiven Kampf teil, deshalb ist das Kampfprofil gesperrt. Beende den Kampf zuerst über die Kampfliste ("Kampf beenden"), um den Bogen wieder speichern zu können.');
             }
-          }
-          const stamped = stampFreshRevisions(safeData);
-          const outgoingData = existingSnap.exists() ? stamped : { ...stamped, ownerUid: user.uid, createdBy: user.uid };
-          await setDoc(ref, outgoingData, { merge: true });
-          return id;
+            // Schutz gegen veraltete Browser-Tabs, die ein Kampfprofil/Inventar aus dem
+            // Zwischenspeicher zurückschreiben und dabei z. B. einen frisch importierten
+            // Charakterbogen wieder überschreiben würden. Ein expliziter Import (forceOverwrite)
+            // setzt sich immer durch und wird dadurch selbst zum neuen, geschützten Stand.
+            if (needsProtectedTransaction && !options.forceOverwrite && existingSnap.exists()) {
+              const staleFields = detectStaleCharacterFields(existingSnap.data(), safeData);
+              if (staleFields.length) {
+                throw new Error(`Diese Figur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
+              }
+            }
+            const write = prepareCharacterDocumentWrite(
+              existingSnap.exists() ? existingSnap.data() : null,
+              safeData,
+              {
+                userId: user.uid,
+                replaceExisting: options.replaceExisting === true,
+                replaceImageLibrary: options.replaceImageLibrary === true
+              }
+            );
+            transaction.set(ref, write.data, { merge: write.merge });
+            return write;
+          });
+          return options.returnWriteResult === true
+            ? { id, data: preparedWrite.data }
+            : id;
         } else {
           const newCharacterData = stampFreshRevisions(data || {});
-          const ref = await addDoc(collection(db, 'characters'), {
+          const storedData = {
             ...newCharacterData,
             ownerUid: user.uid,
             createdBy: user.uid
-          });
-          return ref.id;
+          };
+          const ref = await addDoc(collection(db, 'characters'), storedData);
+          return options.returnWriteResult === true
+            ? { id: ref.id, data: storedData }
+            : ref.id;
         }
       },
       async deleteCharacter(id) {

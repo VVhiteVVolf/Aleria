@@ -11,8 +11,8 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
+} from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260808-combat-cards-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -31,13 +31,13 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260808-loot-revision-v1';
+} from './creature-model.js?v=20260808-duncan-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260808-loot-revision-v1';
-import { selectChangedSections } from '../characters/character-save-guard.js?v=20260807-save-scope-v1';
+} from './creature-catalog.js?v=20260808-duncan-v1';
+import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
   creatures: getBuiltinCreatureTemplates().map(creature => ({ ...creature, _builtin: true })),
@@ -424,8 +424,18 @@ function renderCreatureResources(profile) {
   </section>`;
 }
 
+const CREATURE_AURA_MECHANIC_FIELDS = Object.freeze([
+  ['attack', 'Angriff', -99, 99],
+  ['damage', 'Schaden', -99, 99],
+  ['armorClass', 'RK', -99, 99],
+  ['savingThrow', 'Rettung', -99, 99],
+  ['spellAttack', 'Zauberangriff', -99, 99],
+  ['spellSaveDc', 'Zauber-SG', -99, 99],
+  ['combatStartTemporaryHitPoints', 'Temp. TP bei Kampfbeginn', 0, 9999]
+]);
+
 function renderCreatureAuraMechanics(path, title, mechanics = {}) {
-  return `<fieldset><legend>${title}</legend>${[['attack','Angriff'],['damage','Schaden'],['armorClass','RK'],['savingThrow','Rettung'],['spellAttack','Zauberangriff'],['spellSaveDc','Zauber-SG']].map(([key, label]) => `<label><span>${label}</span><input type="number" min="-99" max="99" data-creature-profile-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}</fieldset>`;
+  return `<fieldset><legend>${title}</legend>${CREATURE_AURA_MECHANIC_FIELDS.map(([key, label, minimum, maximum]) => `<label><span>${label}</span><input type="number" min="${minimum}" max="${maximum}" data-creature-profile-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}</fieldset>`;
 }
 
 function renderCreatureAura(profile) {

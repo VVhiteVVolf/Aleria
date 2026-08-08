@@ -121,14 +121,14 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
     "sourceUpdatedAt": "2026-07-26T10:53:49.740Z",
     "sourceDocumentIds": [
       "E8HXkgi2kdkXaqkxrnRo",
       "N11mTG3vo2rLq2eQxOXE",
       "oVvNboWTUionb0PCZDf7"
     ],
-    "contentHash": "cfe1fbefec1439f2ed76bfedb6c31a9692db266f442d2fc0d859681d15406ebe"
+    "contentHash": "680207f8ef5308911c61dabc85c1533640ca05ea1392cc68a4d1482379dc0763"
   },
   "local": {
     "notes": "",
@@ -3056,8 +3056,8 @@
           "personId": "meurig-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-03T18:28:54.436Z",
-          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=meurig-draig",
           "fingerprint": "{\"name\":\"Meurig Draig\",\"title\":\"Justiziar der Grafschaft Celtigerns Wacht\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cahir-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cahir-draig\",\"name\":\"Cahir Draig\"},{\"personId\":\"alawen-cumhail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cumhail--alawen-cumhail\",\"name\":\"Alawen Cumhail\"}],\"partners\":[{\"personId\":\"heledd-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--heledd-gwyvern\",\"name\":\"Heledd Gwyvern\"}],\"children\":[{\"personId\":\"alicyn-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--alicyn-draig\",\"name\":\"Alicyn Draig\"},{\"personId\":\"rhys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhys-draig\",\"name\":\"Rhys Draig\"}]}}"
         },
@@ -3066,8 +3066,8 @@
           "personId": "meurig-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-03T18:28:54.436Z",
-          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=meurig-draig",
           "fingerprint": "{\"name\":\"Meurig Draig\",\"title\":\"\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"heledd-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--heledd-gwyvern\",\"name\":\"Heledd Gwyvern\"}],\"children\":[]}}"
         }

@@ -1,5 +1,5 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260807-freya-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260808-duncan-v1';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260808-duncan-v1';
 import {
   buildSceneRestParticipant,
   getSceneRestType,

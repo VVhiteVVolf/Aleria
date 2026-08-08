@@ -21,10 +21,10 @@ test('lokale Charakterdatenbank enthält jede exportierte Figur als eigene Akte'
   const snapshot = await readJson('generated', 'characters.snapshot.json');
   const report = await readJson('generated', 'sync-report.json');
   assert.equal(registry.schema, 'aleria.character-registry');
-  assert.equal(registry.count, 173);
+  assert.equal(registry.count, 175);
   assert.equal(snapshot.characters.length, registry.count);
-  assert.equal(report.summary.sourceDocuments, 179);
-  assert.equal(registry.records.reduce((sum, entry) => sum + entry.firestoreDocumentIds.length, 0), 179);
+  assert.equal(report.summary.sourceDocuments, 186);
+  assert.equal(registry.records.reduce((sum, entry) => sum + entry.firestoreDocumentIds.length, 0), 186);
 
   await Promise.all(registry.records.map(async entry => {
     const record = await readJson(...entry.path.split('/'));
@@ -45,7 +45,7 @@ test('gleichnamige Online-Dokumente werden ohne Alterskonflikt als eine Person g
   assert.equal(gwendolyn.length, 1);
   assert.equal(meurig[0].firestoreDocumentIds.length, 3);
   assert.equal(gwendolyn[0].firestoreDocumentIds.length, 3);
-  assert.equal(report.summary.mergedSameNameGroups, 4);
+  assert.equal(report.summary.mergedSameNameGroups, 9);
   assert.equal(report.summary.familyAmbiguous, 0);
 });
 
