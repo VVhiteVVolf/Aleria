@@ -1,0 +1,1502 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-beryn",
+  "revision": 1,
+  "updatedAt": "2026-08-09T07:40:10.165Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-beryn",
+      "title": "Haus Beryn",
+      "motto": "",
+      "description": "Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.",
+      "emblem": "assets/images/houses/Klaueninsel/haus-beryn.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-arth",
+        "liegeHouseName": "Haus Arth O'Talgarth",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "caradog-beryn",
+        "worldPersonId": "person--haus-beryn--caradog-beryn",
+        "name": "Caradog Beryn",
+        "title": "Ältester belegter Beryn · Ifors Urgroßvater",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1628",
+        "death": "1696",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "efa-caradog-spouse",
+        "worldPersonId": "person--family-tree--efa-caradog-spouse",
+        "name": "Efa",
+        "title": "Gemahlin Caradogs",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "madog-beryn",
+        "worldPersonId": "person--haus-beryn--madog-beryn",
+        "name": "Madog Beryn",
+        "title": "Ritterherr von Talgarth bis 1725",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1725",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gwenllian-madog-spouse",
+        "worldPersonId": "person--family-tree--gwenllian-madog-spouse",
+        "name": "Gwenllian",
+        "title": "Gemahlin Madogs",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1731",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rhodri-beryn",
+        "worldPersonId": "person--haus-beryn--rhodri-beryn",
+        "name": "Rhodri Beryn",
+        "title": "Ältester Sohn Madogs · Vater Ifors",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1737",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Erste Linie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "angharad-rhodri-spouse",
+        "worldPersonId": "person--family-tree--angharad-rhodri-spouse",
+        "name": "Angharad",
+        "title": "Witwe Rhodris · Mutter Ifors",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "cadell-beryn",
+        "worldPersonId": "person--haus-beryn--cadell-beryn",
+        "name": "Cadell Beryn",
+        "title": "Ritter und zweiter Sohn Madogs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1683",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Zweite Linie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedExtensionFields": [
+            "chartCenterBetweenSpousePersonIds"
+          ],
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "eira-cadell-spouse",
+        "worldPersonId": "person--family-tree--eira-cadell-spouse",
+        "name": "Eira",
+        "title": "Gemahlin Cadells",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "lowri-cadell-affair",
+        "worldPersonId": "person--family-tree--lowri-cadell-affair",
+        "name": "Lowri",
+        "title": "Affäre Cadell Beryns · Mutter von Emrys und Elin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [
+          "Affäre"
+        ],
+        "notes": "Aus dieser Affäre stammen ausschließlich Emrys und Elin Beryn.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "brychan-beryn",
+        "worldPersonId": "person--haus-beryn--brychan-beryn",
+        "name": "Brychan Beryn",
+        "title": "Ritter und jüngster Sohn Madogs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1686",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Dritte Linie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "seren-brychan-spouse",
+        "worldPersonId": "person--family-tree--seren-brychan-spouse",
+        "name": "Seren",
+        "title": "Gemahlin Brychans",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "owain-beryn",
+        "worldPersonId": "person--haus-beryn--owain-beryn",
+        "name": "Owain Beryn",
+        "title": "Ritterherr von Talgarth · Oberhaupt des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mared-owain-spouse",
+        "worldPersonId": "person--family-tree--mared-owain-spouse",
+        "name": "Mared",
+        "title": "Gemahlin Owains",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "cadfan-beryn",
+        "worldPersonId": "person--haus-beryn--cadfan-beryn",
+        "name": "Cadfan Beryn",
+        "title": "Zweiter Sohn Rhodris · Ritter des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "nerys-cadfan-spouse",
+        "worldPersonId": "person--family-tree--nerys-cadfan-spouse",
+        "name": "Nerys",
+        "title": "Gemahlin Cadfans",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1711",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ifor-beryn",
+        "worldPersonId": "person--haus-beryn--ifor-beryn",
+        "name": "Ifor Beryn",
+        "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-beryn/ifor-beryn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Dritter Sohn",
+          "Unverheiratet"
+        ],
+        "notes": "Ifor ist im Jahr 1740 achtundzwanzig Jahre alt und bewusst unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Biografie",
+              "biographyText": "",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Verbindungen",
+              "connections": [],
+              "documentsTitle": "Eigentum & Besitz",
+              "documents": [],
+              "footer": ""
+            }
+          }
+        }
+      },
+      {
+        "id": "gethin-beryn",
+        "worldPersonId": "person--haus-beryn--gethin-beryn",
+        "name": "Gethin Beryn",
+        "title": "Ältester legitimer Sohn Cadells",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "catrin-gethin-spouse",
+        "worldPersonId": "person--family-tree--catrin-gethin-spouse",
+        "name": "Catrin",
+        "title": "Gemahlin Gethins",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "meilyr-beryn",
+        "worldPersonId": "person--haus-beryn--meilyr-beryn",
+        "name": "Meilyr Beryn",
+        "title": "Jüngerer legitimer Sohn Cadells · unverheiratet",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Unverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "emrys-beryn-bastard",
+        "worldPersonId": "person--haus-beryn--emrys-beryn-bastard",
+        "name": "Emrys Beryn",
+        "title": "Bastardkind von Cadell Beryn und Lowri",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [
+          "Bastard"
+        ],
+        "notes": "Emrys Beryn stammt eindeutig aus Cadells Affäre mit Lowri.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "elin-beryn-bastard",
+        "worldPersonId": "person--haus-beryn--elin-beryn-bastard",
+        "name": "Elin Beryn",
+        "title": "Bastardkind von Cadell Beryn und Lowri",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [
+          "Bastard"
+        ],
+        "notes": "Elin Beryn stammt eindeutig aus Cadells Affäre mit Lowri.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "tudur-beryn",
+        "worldPersonId": "person--haus-beryn--tudur-beryn",
+        "name": "Tudur Beryn",
+        "title": "Ältester Sohn Brychans",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rhosyn-tudur-spouse",
+        "worldPersonId": "person--family-tree--rhosyn-tudur-spouse",
+        "name": "Rhosyn",
+        "title": "Gemahlin Tudurs",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mair-beryn",
+        "worldPersonId": "person--haus-beryn--mair-beryn",
+        "name": "Mair Beryn",
+        "title": "Wegverheiratet an ein unbekanntes Haus",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "branoc-mair-spouse",
+        "worldPersonId": "person--haus-unknown--branoc-mair-spouse",
+        "name": "Branoc",
+        "title": "Gemahl Mairs · Haus unbekannt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unknown",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "llewelyn-beryn",
+        "worldPersonId": "person--haus-beryn--llewelyn-beryn",
+        "name": "Llewelyn Beryn",
+        "title": "Jüngster Sohn Brychans · unverheiratet",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Unverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-caradog-efa-beryn",
+        "participantIds": [
+          "caradog-beryn",
+          "efa-caradog-spouse"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1696",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-madog-gwenllian-beryn",
+        "participantIds": [
+          "madog-beryn",
+          "gwenllian-madog-spouse"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1725",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhodri-angharad-beryn",
+        "participantIds": [
+          "rhodri-beryn",
+          "angharad-rhodri-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1737",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadell-eira-beryn",
+        "participantIds": [
+          "cadell-beryn",
+          "eira-cadell-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId"
+          ]
+        }
+      },
+      {
+        "id": "affair-cadell-lowri-beryn",
+        "participantIds": [
+          "cadell-beryn",
+          "lowri-cadell-affair"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "lowri-cadell-affair"
+        }
+      },
+      {
+        "id": "marriage-brychan-seren-beryn",
+        "participantIds": [
+          "brychan-beryn",
+          "seren-brychan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-mared-beryn",
+        "participantIds": [
+          "owain-beryn",
+          "mared-owain-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadfan-nerys-beryn",
+        "participantIds": [
+          "cadfan-beryn",
+          "nerys-cadfan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gethin-catrin-beryn",
+        "participantIds": [
+          "gethin-beryn",
+          "catrin-gethin-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tudur-rhosyn-beryn",
+        "participantIds": [
+          "tudur-beryn",
+          "rhosyn-tudur-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-mair-branoc-beryn",
+        "participantIds": [
+          "mair-beryn",
+          "branoc-mair-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "beryn-parentage-madog-beryn",
+        "childId": "madog-beryn",
+        "parentIds": [
+          "caradog-beryn",
+          "efa-caradog-spouse"
+        ],
+        "partnershipId": "marriage-caradog-efa-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-rhodri-beryn",
+        "childId": "rhodri-beryn",
+        "parentIds": [
+          "madog-beryn",
+          "gwenllian-madog-spouse"
+        ],
+        "partnershipId": "marriage-madog-gwenllian-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-cadell-beryn",
+        "childId": "cadell-beryn",
+        "parentIds": [
+          "madog-beryn",
+          "gwenllian-madog-spouse"
+        ],
+        "partnershipId": "marriage-madog-gwenllian-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-brychan-beryn",
+        "childId": "brychan-beryn",
+        "parentIds": [
+          "madog-beryn",
+          "gwenllian-madog-spouse"
+        ],
+        "partnershipId": "marriage-madog-gwenllian-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-owain-beryn",
+        "childId": "owain-beryn",
+        "parentIds": [
+          "rhodri-beryn",
+          "angharad-rhodri-spouse"
+        ],
+        "partnershipId": "marriage-rhodri-angharad-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-cadfan-beryn",
+        "childId": "cadfan-beryn",
+        "parentIds": [
+          "rhodri-beryn",
+          "angharad-rhodri-spouse"
+        ],
+        "partnershipId": "marriage-rhodri-angharad-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-ifor-beryn",
+        "childId": "ifor-beryn",
+        "parentIds": [
+          "rhodri-beryn",
+          "angharad-rhodri-spouse"
+        ],
+        "partnershipId": "marriage-rhodri-angharad-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-gethin-beryn",
+        "childId": "gethin-beryn",
+        "parentIds": [
+          "cadell-beryn",
+          "eira-cadell-spouse"
+        ],
+        "partnershipId": "marriage-cadell-eira-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-meilyr-beryn",
+        "childId": "meilyr-beryn",
+        "parentIds": [
+          "cadell-beryn",
+          "eira-cadell-spouse"
+        ],
+        "partnershipId": "marriage-cadell-eira-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-emrys-beryn-bastard",
+        "childId": "emrys-beryn-bastard",
+        "parentIds": [
+          "cadell-beryn",
+          "lowri-cadell-affair"
+        ],
+        "partnershipId": "affair-cadell-lowri-beryn",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Beide Bastardkinder stammen ausschließlich aus Cadells Affäre mit Lowri.",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-elin-beryn-bastard",
+        "childId": "elin-beryn-bastard",
+        "parentIds": [
+          "cadell-beryn",
+          "lowri-cadell-affair"
+        ],
+        "partnershipId": "affair-cadell-lowri-beryn",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Beide Bastardkinder stammen ausschließlich aus Cadells Affäre mit Lowri.",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-tudur-beryn",
+        "childId": "tudur-beryn",
+        "parentIds": [
+          "brychan-beryn",
+          "seren-brychan-spouse"
+        ],
+        "partnershipId": "marriage-brychan-seren-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-mair-beryn",
+        "childId": "mair-beryn",
+        "parentIds": [
+          "brychan-beryn",
+          "seren-brychan-spouse"
+        ],
+        "partnershipId": "marriage-brychan-seren-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-llewelyn-beryn",
+        "childId": "llewelyn-beryn",
+        "parentIds": [
+          "brychan-beryn",
+          "seren-brychan-spouse"
+        ],
+        "partnershipId": "marriage-brychan-seren-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-beryn",
+        "name": "Haus Beryn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-beryn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-unknown",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-mair-beryn-unknown",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet an ein unbekanntes Haus",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-mair-branoc-beryn",
+        "parentPersonId": "",
+        "houseId": "house-unknown",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-caradog-efa-beryn",
+      "houseId": "house-beryn",
+      "crestSubtitle": "Niederes Ritterherrenhaus aus Talgarth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": ""
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "caradog-beryn",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 3,
+      "sourceNote": "Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt.",
+      "registryManagedExtensionFields": [
+        "sourceNote"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ]
+    }
+  }
+}
