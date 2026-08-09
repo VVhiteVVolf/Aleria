@@ -3,7 +3,6 @@ import { RETIRED_FAMILY_IDS } from './data/families.registry.js';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
-import { createGitHubPublisherAuthService } from './modules/github-publication/github-publisher-auth.js';
 import { createAlmanachCharacterRepository } from './modules/almanach-bridge/almanach-character-repository.js';
 import { createFamilyAssetUploadController } from './modules/family-assets/family-asset-upload-controller.js';
 import { createFamilySyncController } from './modules/family-sync/family-sync-controller.js';
@@ -41,7 +40,6 @@ if (requestedQuery.get('action') === 'start-tree-generator') {
 const workspaceAccess = resolveWorkspaceAccess(globalThis.location, globalThis.sessionStorage);
 const firebaseClient = createFirebaseClient();
 const cloudRepository = createGitHubFamilyRepository();
-const authService = createGitHubPublisherAuthService(cloudRepository);
 const localRepository = createLocalFamilyRepository(globalThis.localStorage);
 const latestLocalFamilySource = createLatestLocalFamilySource({
   draftRepository: localRepository,
@@ -79,7 +77,6 @@ const syncController = createFamilySyncController({
   store,
   localRepository,
   cloudRepository,
-  authService,
   editing: workspaceAccess.mode === 'edit',
   resolveOriginFamily: resolveProjectFamilyOrigin
 });

@@ -26,7 +26,6 @@
 
 .cloud-sync-status[data-phase='saving']::before,
 .cloud-sync-status[data-phase='loading']::before,
-.cloud-sync-status[data-phase='auth']::before,
 .cloud-sync-status[data-phase='pending']::before {
   background: #d3a84e;
   box-shadow: 0 0 0 3px rgb(211 168 78 / 18%);
@@ -36,10 +35,6 @@
 .cloud-sync-status[data-phase='offline']::before {
   background: #c86a62;
   box-shadow: 0 0 0 3px rgb(200 106 98 / 18%);
-}
-
-.cloud-account-panel[hidden] {
-  display: none;
 }
 
 .asset-upload-status {

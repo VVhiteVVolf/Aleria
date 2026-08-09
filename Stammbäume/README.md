@@ -150,8 +150,7 @@ Family Chart, D3 und html2canvas liegen fest versioniert unter `vendor/`. Fireba
 Der Browser erhält niemals einen GitHub-Token. `netlify/functions/family-publisher.mjs` führt den atomaren Commit serverseitig aus. In Netlify müssen dafür folgende Umgebungsvariablen gesetzt werden:
 
 - `ALERIA_GITHUB_TOKEN`: Fine-grained Token mit Schreibrecht auf Repository-Inhalte.
-- `ALERIA_GITHUB_PUBLISH_KEY`: eigener langer Veröffentlichungsschlüssel für den Editor.
 - `ALERIA_GITHUB_REPOSITORY`: optional, Standard `VVhiteVVolf/Aleria`.
 - `ALERIA_GITHUB_BRANCH`: optional, Standard `master`.
 
-Der Veröffentlichungsschlüssel wird nur im Arbeitsspeicher der geöffneten Seite gehalten. Jede Speicherung erzeugt genau einen Commit mit den geänderten Familienakten und `assets/data/published-families/registry.json`. Im selben Commit wird jede betroffene Familie zusätzlich als unveränderliche Revisionskopie unter `assets/data/published-families/backups/<familien-id>/` abgelegt. GitHub löst anschließend den normalen Netlify-Build aus; bis dieser fertig ist, liest der angemeldete Editor die neue Revision direkt über die geschützte Function.
+Der Publisher ist für den bewusst klein gehaltenen privaten Bearbeiterkreis ohne zusätzliche Anmeldung erreichbar; der lokale Bearbeitungsmodus bleibt die einzige UI-Hürde. Der GitHub-Token wird weiterhin niemals an den Browser ausgeliefert. Jede Speicherung erzeugt genau einen Commit mit den geänderten Familienakten und `assets/data/published-families/registry.json`. Im selben Commit wird jede betroffene Familie zusätzlich als unveränderliche Revisionskopie unter `assets/data/published-families/backups/<familien-id>/` abgelegt. GitHub löst anschließend den normalen Netlify-Build aus; bis dieser fertig ist, liest der Editor die neue Revision direkt über die Function.

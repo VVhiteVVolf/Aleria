@@ -1,4 +1,3 @@
-import { timingSafeEqual } from 'node:crypto';
 import { assertValidFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
 import { assertMirroredCrossFamilyBatch } from '../../Stammbäume/assets/js/modules/family-sync/cross-family-sync-invariant.js';
 
@@ -21,17 +20,6 @@ function json(statusCode, body) {
   };
 }
 
-function secureEqual(first, second) {
-  const left = Buffer.from(String(first || ''));
-  const right = Buffer.from(String(second || ''));
-  return left.length === right.length && timingSafeEqual(left, right);
-}
-
-function bearerToken(headers = {}) {
-  const value = String(headers.authorization || headers.Authorization || '');
-  return value.startsWith('Bearer ') ? value.slice(7).trim() : '';
-}
-
 function repositoryConfig() {
   const repository = String(process.env.ALERIA_GITHUB_REPOSITORY || 'VVhiteVVolf/Aleria').trim();
   const [owner, repo, ...rest] = repository.split('/');
@@ -41,8 +29,7 @@ function repositoryConfig() {
     repo,
     repository,
     branch: String(process.env.ALERIA_GITHUB_BRANCH || 'master').trim() || 'master',
-    token: String(process.env.ALERIA_GITHUB_TOKEN || ''),
-    publishKey: String(process.env.ALERIA_GITHUB_PUBLISH_KEY || '')
+    token: String(process.env.ALERIA_GITHUB_TOKEN || '')
   };
 }
 
@@ -321,9 +308,6 @@ async function loadPublishedFamily(familyId, config, fetchRef = fetch) {
 export async function handler(event) {
   try {
     const config = repositoryConfig();
-    if (!config.publishKey || !secureEqual(bearerToken(event.headers), config.publishKey)) {
-      return json(401, { code: 'unauthorized', message: 'Der Veröffentlichungsschlüssel ist nicht korrekt.' });
-    }
     if (event.httpMethod === 'GET') {
       const familyId = String(event.queryStringParameters?.familyId || '').trim();
       if (familyId) {
@@ -367,7 +351,6 @@ export const __testables = Object.freeze({
   revisionBackupPath,
   createPublicationFiles,
   materializeStagedImages,
-  secureEqual,
   parseRecords,
   publish,
   loadPublishedFamily

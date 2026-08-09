@@ -38,50 +38,23 @@ export function createGitHubFamilyRepository({
   endpoint = PUBLISH_ENDPOINT,
   registryUrl = REGISTRY_URL
 } = {}) {
-  let sessionKey = '';
-
   async function fetchJson(url, options = {}) {
     if (!fetchRef) throw new Error('Die GitHub-Registry ist in dieser Umgebung nicht erreichbar.');
     const response = await fetchRef(url, { cache: 'no-store', ...options });
     return readJson(response, 'Die GitHub-Registry konnte nicht geladen werden.');
   }
 
-  async function authenticate(key) {
-    const candidate = String(key || '').trim();
-    if (!candidate) throw new Error('Bitte den Veröffentlichungsschlüssel eingeben.');
-    const payload = await fetchJson(endpoint, {
-      method: 'GET',
-      headers: { Authorization: `Bearer ${candidate}` }
-    });
-    sessionKey = candidate;
-    return Object.freeze({
-      repository: String(payload.repository || ''),
-      branch: String(payload.branch || 'master')
-    });
-  }
-
   async function loadDraft(familyId) {
     if (!fetchRef) return null;
-    if (sessionKey) {
-      const url = `${endpoint}?familyId=${encodeURIComponent(familyId)}`;
-      const response = await fetchRef(url, {
-        cache: 'no-store',
-        headers: { Authorization: `Bearer ${sessionKey}` }
-      });
-      if (response.status === 404) return null;
-      return repositoryRecord(await readJson(response, 'Die GitHub-Familienakte konnte nicht geladen werden.'));
-    }
-    const response = await fetchRef(familyUrl(familyId), { cache: 'no-store' });
+    const response = await fetchRef(`${endpoint}?familyId=${encodeURIComponent(familyId)}`, { cache: 'no-store' });
     if (response.status === 404) return null;
-    return repositoryRecord(await readJson(response, 'Die veröffentlichte Familienakte konnte nicht geladen werden.'));
+    return repositoryRecord(await readJson(response, 'Die GitHub-Familienakte konnte nicht geladen werden.'));
   }
 
   async function saveDraftBatch(records) {
-    if (!sessionKey) throw new Error('Zum GitHub-Speichern ist eine Anmeldung erforderlich.');
     const payload = await fetchJson(endpoint, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${sessionKey}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -112,6 +85,13 @@ export function createGitHubFamilyRepository({
     return saved;
   }
 
+  async function loadPublished(familyId) {
+    if (!fetchRef) return null;
+    const response = await fetchRef(familyUrl(familyId), { cache: 'no-store' });
+    if (response.status === 404) return null;
+    return repositoryRecord(await readJson(response, 'Die veröffentlichte Familienakte konnte nicht geladen werden.'));
+  }
+
   async function listPublishedRegistry() {
     if (!fetchRef) return [];
     const response = await fetchRef(registryUrl, { cache: 'no-store' });
@@ -122,13 +102,10 @@ export function createGitHubFamilyRepository({
 
   return Object.freeze({
     kind: 'github',
-    authenticate,
-    clearSession: () => { sessionKey = ''; },
-    hasSession: () => Boolean(sessionKey),
     loadDraft,
     saveDraft,
     saveDraftBatch,
-    loadPublished: loadDraft,
+    loadPublished,
     listPublishedRegistry,
     watchDraftMetadata: async () => () => {}
   });

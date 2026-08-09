@@ -54,7 +54,6 @@
           <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur auf diesem Gerät</span>
           <button class="button" type="button" data-action="cloud-save" data-edit-only>Online speichern</button>
           <button class="button button--quiet" type="button" data-action="cloud-reset-origin" data-edit-only hidden>Zum Ursprung</button>
-          <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>GitHub-Verbindung</button>
           <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
           <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
@@ -985,50 +984,6 @@
         <button class="button button--quiet" type="button" data-action="close-edit-access">Abbrechen</button>
         <button class="button" value="default" type="submit">Bearbeitungsmodus öffnen</button>
       </footer>
-    </form>
-  </dialog>
-
-  <dialog class="dialog dialog--compact" id="cloud-account-dialog">
-    <div class="cloud-account-panel" id="cloud-signed-in" hidden>
-      <header class="dialog-header">
-        <div>
-          <p class="eyebrow">GitHub-Veröffentlichung</p>
-          <h2>Repository verbunden</h2>
-        </div>
-        <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
-      </header>
-      <div class="dialog-body">
-        <p>Verbunden mit <strong id="cloud-account-email">GitHub-Registry</strong>.</p>
-        <p class="form-help">Änderungen werden automatisch nur auf diesem Gerät gesichert. „Online speichern“ schreibt Familienakte und Registereintrag gemeinsam als revisionsgeprüften Commit nach GitHub.</p>
-        <p class="form-error" id="cloud-account-error" role="alert" hidden></p>
-      </div>
-      <footer class="dialog-footer">
-        <button class="button button--quiet" type="button" data-action="cloud-logout">Verbindung lösen</button>
-        <button class="button" type="button" data-action="retry-cloud-sync">GitHub-Fassung neu laden</button>
-      </footer>
-    </div>
-
-    <form method="dialog" id="cloud-login-form">
-      <div id="cloud-signed-out">
-        <header class="dialog-header">
-          <div>
-            <p class="eyebrow">Online speichern</p>
-            <h2>Mit GitHub-Registry verbinden</h2>
-          </div>
-          <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
-        </header>
-        <div class="dialog-body form-grid">
-          <label class="field field--wide">Veröffentlichungsschlüssel
-            <input name="password" type="password" autocomplete="current-password" required>
-          </label>
-          <p class="form-error field--wide" id="cloud-login-error" role="alert" hidden></p>
-          <p class="form-help field--wide">Der Schlüssel wird nur für diese geöffnete Seite im Arbeitsspeicher gehalten. Der eigentliche GitHub-Token bleibt geschützt auf dem Server.</p>
-        </div>
-        <footer class="dialog-footer">
-          <button class="button button--quiet" type="button" data-action="close-cloud-account">Abbrechen</button>
-          <button class="button" value="default" type="submit">Verbinden</button>
-        </footer>
-      </div>
     </form>
   </dialog>
 

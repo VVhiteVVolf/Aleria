@@ -27966,10 +27966,10 @@ test('liest und speichert revisionsgebundene GitHub-Familienakten über das Publ
   const calls = [];
   const fetchRef = async (url, options = {}) => {
     calls.push({ url: String(url), options });
-    if (String(url).endsWith('/.netlify/functions/family-publisher') && options.method === 'GET') {
-      return new Response(JSON.stringify({ repository: 'VVhiteVVolf/Aleria', branch: 'master' }), { status: 200 });
-    }
     if (String(url).includes('/.netlify/functions/family-publisher?familyId=haus-aderyn')) {
+      return new Response(JSON.stringify({ family: HOUSE_ADERYN_FAMILY, revision: 4, updatedAt: '2026-07-30T00:00:00.000Z' }), { status: 200 });
+    }
+    if (String(url).endsWith('assets/data/published-families/haus-aderyn.json')) {
       return new Response(JSON.stringify({ family: HOUSE_ADERYN_FAMILY, revision: 4, updatedAt: '2026-07-30T00:00:00.000Z' }), { status: 200 });
     }
     if (String(url).endsWith('/.netlify/functions/family-publisher') && options.method === 'POST') {
@@ -27981,14 +27981,22 @@ test('liest und speichert revisionsgebundene GitHub-Familienakten über das Publ
     return new Response('', { status: 404 });
   };
   const repository = createGitHubFamilyRepository({ fetchRef });
-  await repository.authenticate('sicherer-schluessel');
   const loaded = await repository.loadDraft('haus-aderyn');
   assert.equal(loaded.revision, 4);
+  const published = await repository.loadPublished('haus-aderyn');
+  assert.equal(published.revision, 4);
   const saved = await repository.saveDraft({ family: HOUSE_ADERYN_FAMILY, expectedRevision: 4 });
   assert.equal(saved.revision, 5);
   const post = calls.find(call => call.options.method === 'POST');
-  assert.equal(post.options.headers.Authorization, 'Bearer sicherer-schluessel');
+  assert.equal(post.options.headers.Authorization, undefined);
   assert.equal(JSON.parse(post.options.body).records[0].expectedRevision, 4);
+  assert.ok(calls.some(call => call.url.endsWith('assets/data/published-families/haus-aderyn.json')));
+});
+
+test('hält den GitHub-Token serverseitig, benötigt aber keinen Veröffentlichungsschlüssel', async () => {
+  const publisherSource = await readFile(new URL('../../netlify/functions/family-publisher.mjs', import.meta.url), 'utf8');
+  assert.match(publisherSource, /process\.env\.ALERIA_GITHUB_TOKEN/);
+  assert.doesNotMatch(publisherSource, /ALERIA_GITHUB_PUBLISH_KEY|bearerToken|Veröffentlichungsschlüssel/);
 });
 
 test('erzeugt für GitHub denselben Registerpfad und eine fortlaufende Revision', () => {

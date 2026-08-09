@@ -20,7 +20,6 @@ export function createFamilySyncController({
   store,
   localRepository,
   cloudRepository,
-  authService,
   documentRef = document,
   runtime = globalThis,
   editing = false,
@@ -28,7 +27,6 @@ export function createFamilySyncController({
   uiFactory = createFamilySyncStatusUi
 }) {
   const ui = uiFactory(documentRef);
-  let user = null;
   let activeFamilyId = store.getState().family.document.id;
   let connectedFamilyId = '';
   let originFamily = resolveOriginFamily(activeFamilyId);
@@ -37,23 +35,18 @@ export function createFamilySyncController({
   let localBaseRevision = 0;
   let dirty = false;
   let saving = false;
-  let publishing = false;
   let connecting = false;
   let destroyed = false;
   let contextVersion = 0;
-  let pendingSaveFamilyId = '';
-  let preservePendingIntentOnClose = false;
   let identityChangeBlock = null;
   const identityCollisionProvenances = new Map();
   let connectionPromise = null;
   let unsubscribeStore = null;
-  let unsubscribeAuth = null;
   let unsubscribeRemote = null;
 
   function renderStatus(phase, message) {
     ui.render({
       phase,
-      user,
       message,
       dirty,
       saving,
@@ -77,7 +70,7 @@ export function createFamilySyncController({
       baseFamily: options.baseFamily
         ?? (hasActiveCollision ? collisionProvenance?.originalFamily : undefined)
     });
-    if (!user && options.render !== false) {
+    if (options.render !== false) {
       renderStatus(
         saved ? (dirty ? 'pending' : 'local') : 'error',
         saved
@@ -252,7 +245,7 @@ export function createFamilySyncController({
   async function watchRemote(familyId, version) {
     const unsubscribe = await cloudRepository.watchDraftMetadata(familyId, metadata => {
       if (!metadata || metadata.revision <= remoteRevision || destroyed || version !== contextVersion) return;
-      if (saving && metadata.updatedBy === user?.uid && metadata.revision === remoteRevision + 1) return;
+      if (saving && metadata.revision === remoteRevision + 1) return;
       void cloudRepository.loadDraft(familyId).then(record => {
         if (!record || record.revision <= remoteRevision || destroyed || version !== contextVersion) return;
         if (dirty) localRepository.archiveDraft?.(familyId, 'newer-repository-revision');
@@ -271,7 +264,7 @@ export function createFamilySyncController({
   }
 
   async function performConnect({ forceRemote = false } = {}) {
-    if (!editing || !user || destroyed) return false;
+    if (!editing || destroyed) return false;
     const familyAtStart = store.getState().family;
     const familyId = familyAtStart.document.id;
     if (familyId !== activeFamilyId) activateFamilyContext(familyAtStart);
@@ -283,17 +276,29 @@ export function createFamilySyncController({
       connectedFamilyId = familyId;
       const localDraft = localRepository.loadDraft?.(familyId);
       if (!remote) {
-        remoteBase = null;
-        remoteRevision = 0;
-        localBaseRevision = 0;
-        dirty = true;
-        const locallySaved = persistLocally(store.getState().family, { baseRevision: 0, dirty: true, render: false });
-        renderStatus(
-          locallySaved ? 'pending' : 'error',
-          locallySaved
-            ? 'Lokaler Entwurf nur auf diesem Gerät · noch nicht in GitHub angelegt'
-            : 'Lokaler Entwurf konnte nicht gesichert werden'
-        );
+        const knownRevision = Math.max(0, Number(localDraft?.baseRevision || 0));
+        if (knownRevision > 0) {
+          remoteBase = localDraft?.baseFamily || localDraft?.family || familyAtStart;
+          remoteRevision = knownRevision;
+          localBaseRevision = knownRevision;
+          dirty = localDraft?.dirty === true;
+          renderStatus(
+            'offline',
+            `GitHub-Fassung nicht gefunden · lokale ID-Bindung an Revision ${knownRevision} bleibt geschützt`
+          );
+        } else {
+          remoteBase = null;
+          remoteRevision = 0;
+          localBaseRevision = 0;
+          dirty = true;
+          const locallySaved = persistLocally(store.getState().family, { baseRevision: 0, dirty: true, render: false });
+          renderStatus(
+            locallySaved ? 'pending' : 'error',
+            locallySaved
+              ? 'Lokaler Entwurf nur auf diesem Gerät · noch nicht in GitHub angelegt'
+              : 'Lokaler Entwurf konnte nicht gesichert werden'
+          );
+        }
       } else {
         remoteBase = remote.family;
         remoteRevision = remote.revision;
@@ -359,12 +364,6 @@ export function createFamilySyncController({
 
   async function saveNow() {
     if (!editing || destroyed) return false;
-    if (!user) {
-      pendingSaveFamilyId = activeFamilyId;
-      renderStatus('auth', 'Zum Online-Speichern mit der GitHub-Registry verbinden');
-      ui.open();
-      return false;
-    }
     if (identityChangeBlock) {
       throw new Error(identityChangeBlock.sameIdCollision
         ? identityBlockMessage()
@@ -512,30 +511,6 @@ export function createFamilySyncController({
     }
   }
 
-  async function onAuthChanged(nextUser) {
-    user = nextUser;
-    resetRemoteContext();
-    contextVersion += 1;
-    if (!user) {
-      renderStatus(dirty ? 'pending' : 'local', dirty
-        ? 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar'
-        : 'Lokal auf diesem Gerät gespeichert · nicht mit GitHub verbunden');
-      return;
-    }
-    if (identityChangeBlock) {
-      renderStatus('error', identityBlockMessage());
-      return;
-    }
-    renderStatus('loading', `Verbunden mit ${user.email || user.displayName || 'GitHub-Registry'}`);
-    const connected = await connectCurrentFamily();
-    if (pendingSaveFamilyId === activeFamilyId) {
-      pendingSaveFamilyId = '';
-      if (connected && dirty) await saveNow();
-    } else if (pendingSaveFamilyId) {
-      pendingSaveFamilyId = '';
-    }
-  }
-
   function onStoreChange(state, event) {
     if (!event?.affectsFamily) return;
     const source = event.details?.source || event.type;
@@ -570,7 +545,7 @@ export function createFamilySyncController({
           ? 'Beide verknüpften Familien nur auf diesem Gerät gespeichert · für andere noch nicht sichtbar'
           : 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar'
     );
-    if (familyChanged && user && !identityChangeBlock) void connectCurrentFamily();
+    if (familyChanged && !identityChangeBlock) void connectCurrentFamily();
   }
 
   async function resetToOrigin() {
@@ -587,24 +562,8 @@ export function createFamilySyncController({
       case 'cloud-save':
         await saveNow();
         break;
-      case 'open-cloud-login':
-      case 'open-cloud-account':
-        ui.open();
-        break;
-      case 'close-cloud-account':
-        pendingSaveFamilyId = '';
-        ui.close();
-        break;
       case 'cloud-reset-origin':
         await resetToOrigin();
-        break;
-      case 'cloud-logout':
-        await authService.logout();
-        ui.close();
-        break;
-      case 'retry-cloud-sync':
-        if (dirty && runtime.confirm?.('Die aktuelle lokale Fassung verwerfen und die GitHub-Fassung neu laden? Der lokale Stand wird als Wiederherstellungskopie archiviert.') === false) break;
-        await connectCurrentFamily({ forceRemote: true });
         break;
       default:
         break;
@@ -613,12 +572,7 @@ export function createFamilySyncController({
 
   const handledActions = new Set([
     'cloud-save',
-    'open-cloud-login',
-    'open-cloud-account',
-    'close-cloud-account',
-    'cloud-reset-origin',
-    'cloud-logout',
-    'retry-cloud-sync'
+    'cloud-reset-origin'
   ]);
 
   function onClick(event) {
@@ -626,27 +580,6 @@ export function createFamilySyncController({
     if (!handledActions.has(actionElement?.dataset.action)) return;
     event.preventDefault();
     void handleAction(actionElement.dataset.action).catch(error => ui.showError(error.message));
-  }
-
-  function onCloudDialogClosed() {
-    if (preservePendingIntentOnClose) {
-      preservePendingIntentOnClose = false;
-      return;
-    }
-    pendingSaveFamilyId = '';
-  }
-
-  function onSubmit(event) {
-    if (event.target !== ui.form) return;
-    event.preventDefault();
-    const credentials = ui.readCredentials();
-    void authService.login(credentials.email, credentials.password)
-      .then(() => {
-        ui.clearPassword();
-        preservePendingIntentOnClose = true;
-        ui.close();
-      })
-      .catch(error => ui.showError(error.message));
   }
 
   async function init() {
@@ -684,25 +617,14 @@ export function createFamilySyncController({
     );
     unsubscribeStore = store.subscribe(onStoreChange);
     documentRef.addEventListener('click', onClick);
-    documentRef.addEventListener('submit', onSubmit);
-    ui.dialog?.addEventListener('close', onCloudDialogClosed);
-    try {
-      unsubscribeAuth = await authService.observe(nextUser => {
-        void onAuthChanged(nextUser).catch(error => ui.showError(error.message));
-      });
-    } catch (error) {
-      renderStatus('offline', 'Nur auf diesem Gerät · GitHub-Veröffentlichung ist nicht erreichbar');
-    }
+    if (!identityChangeBlock) await connectCurrentFamily();
   }
 
   function destroy() {
     destroyed = true;
     contextVersion += 1;
     documentRef.removeEventListener('click', onClick);
-    documentRef.removeEventListener('submit', onSubmit);
-    ui.dialog?.removeEventListener('close', onCloudDialogClosed);
     unsubscribeStore?.();
-    unsubscribeAuth?.();
     unsubscribeRemote?.();
   }
 
@@ -718,9 +640,8 @@ export function createFamilySyncController({
       localBaseRevision,
       dirty,
       saving,
-      publishing,
       identityChangeBlock,
-      user
+      connected: connectedFamilyId === activeFamilyId
     })
   });
 }
