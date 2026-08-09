@@ -1,0 +1,745 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-ysgrif",
+  "revision": 1,
+  "updatedAt": "2026-08-09T02:32:54.523Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-ysgrif",
+      "title": "Haus Ysgrif",
+      "motto": "",
+      "description": "Ein kleines bürgerliches Haus aus Gwynthor, dessen jüngste Generation um Floyd Ysgrif bewusst offen bleibt.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-ysgrif-gruender",
+        "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-ysgrif-gruenderin",
+        "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "idris-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--idris-ysgrif",
+        "name": "Idris Ysgrif",
+        "title": "Ältestes überliefertes Oberhaupt des Hauses Ysgrif",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "efa-spouse-ysgrif",
+        "worldPersonId": "person--family-tree--efa-spouse-ysgrif",
+        "name": "Efa",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "name": "Gwenllian Ysgrif",
+        "title": "An Haus Maerllys verheiratete Ysgrif",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Idris Ysgrifs; heiratete Owain Maerllys.",
+        "extensions": {}
+      },
+      {
+        "id": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "name": "Owain Maerllys",
+        "title": "Großonkel Nia Maerllys’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1665",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bruder Cadfan Maerllys’; heiratete Gwenllian Ysgrif.",
+        "extensions": {}
+      },
+      {
+        "id": "aneirin-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--aneirin-ysgrif",
+        "name": "Aneirin Ysgrif",
+        "title": "Vater Floyd Ysgrifs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "catrin-spouse-ysgrif",
+        "worldPersonId": "person--family-tree--catrin-spouse-ysgrif",
+        "name": "Catrin",
+        "title": "Mutter Floyd Ysgrifs",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bryn-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--bryn-ysgrif",
+        "name": "Bryn Ysgrif",
+        "title": "Onkel Floyds · Vater dreier Söhne",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elen-spouse-ysgrif",
+        "worldPersonId": "person--family-tree--elen-spouse-ysgrif",
+        "name": "Elen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "madoc-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--madoc-ysgrif",
+        "name": "Madoc Ysgrif",
+        "title": "Söldner",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Floyds zweiter Onkel; arbeitet als Söldner, blieb unverheiratet und kinderlos.",
+        "extensions": {}
+      },
+      {
+        "id": "floyd-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--floyd-ysgrif",
+        "name": "Floyd Ysgrif",
+        "title": "Angehöriger des Hauses Ysgrif",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-ysgrif/floyd-ysgrif.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "21 Jahre"
+        ],
+        "notes": "Einundzwanzigjähriger Sohn Aneirin Ysgrifs; unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "mair-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--mair-ysgrif",
+        "name": "Mair Ysgrif",
+        "title": "Schwester Floyd Ysgrifs",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; ihre weitere Lebenslinie bleibt bewusst offen.",
+        "extensions": {}
+      },
+      {
+        "id": "eleri-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--eleri-ysgrif",
+        "name": "Eleri Ysgrif",
+        "title": "Jüngere Schwester Floyds",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet; ihre weitere Lebenslinie bleibt bewusst offen.",
+        "extensions": {}
+      },
+      {
+        "id": "cadell-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--cadell-ysgrif",
+        "name": "Cadell Ysgrif",
+        "title": "Vetter Floyds",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "https://i.imgur.com/SaDQCjc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "huw-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--huw-ysgrif",
+        "name": "Huw Ysgrif",
+        "title": "Vetter Floyds",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "emrys-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--emrys-ysgrif",
+        "name": "Emrys Ysgrif",
+        "title": "Vetter Floyds",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-ysgrif-founders",
+        "participantIds": [
+          "haus-ysgrif-gruender",
+          "haus-ysgrif-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-idris-efa-ysgrif",
+        "participantIds": [
+          "idris-ysgrif",
+          "efa-spouse-ysgrif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-maerllys-gwenllian-ysgrif",
+        "participantIds": [
+          "owain-maerllys",
+          "gwenllian-ysgrif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aneirin-catrin-ysgrif",
+        "participantIds": [
+          "aneirin-ysgrif",
+          "catrin-spouse-ysgrif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-bryn-elen-ysgrif",
+        "participantIds": [
+          "bryn-ysgrif",
+          "elen-spouse-ysgrif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-idris-ysgrif",
+        "childId": "idris-ysgrif",
+        "parentIds": [
+          "haus-ysgrif-gruender",
+          "haus-ysgrif-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-ysgrif-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Idris und Gwenllian.",
+        "extensions": {
+          "timeJumpId": "gap-ysgrif-to-1666"
+        }
+      },
+      {
+        "id": "parentage-gwenllian-ysgrif",
+        "childId": "gwenllian-ysgrif",
+        "parentIds": [
+          "haus-ysgrif-gruender",
+          "haus-ysgrif-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-ysgrif-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Idris und Gwenllian.",
+        "extensions": {
+          "timeJumpId": "gap-ysgrif-to-1666"
+        }
+      },
+      {
+        "id": "parentage-aneirin-ysgrif",
+        "childId": "aneirin-ysgrif",
+        "parentIds": [
+          "idris-ysgrif",
+          "efa-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-idris-efa-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bryn-ysgrif",
+        "childId": "bryn-ysgrif",
+        "parentIds": [
+          "idris-ysgrif",
+          "efa-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-idris-efa-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-madoc-ysgrif",
+        "childId": "madoc-ysgrif",
+        "parentIds": [
+          "idris-ysgrif",
+          "efa-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-idris-efa-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-floyd-ysgrif",
+        "childId": "floyd-ysgrif",
+        "parentIds": [
+          "aneirin-ysgrif",
+          "catrin-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-mair-ysgrif",
+        "childId": "mair-ysgrif",
+        "parentIds": [
+          "aneirin-ysgrif",
+          "catrin-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eleri-ysgrif",
+        "childId": "eleri-ysgrif",
+        "parentIds": [
+          "aneirin-ysgrif",
+          "catrin-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadell-ysgrif",
+        "childId": "cadell-ysgrif",
+        "parentIds": [
+          "bryn-ysgrif",
+          "elen-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-bryn-elen-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-huw-ysgrif",
+        "childId": "huw-ysgrif",
+        "parentIds": [
+          "bryn-ysgrif",
+          "elen-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-bryn-elen-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emrys-ysgrif",
+        "childId": "emrys-ysgrif",
+        "parentIds": [
+          "bryn-ysgrif",
+          "elen-spouse-ysgrif"
+        ],
+        "partnershipId": "marriage-bryn-elen-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-ysgrif",
+        "name": "Haus Ysgrif",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
+        "status": "active"
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-maerllys-gwenllian-ysgrif",
+        "name": "Haus Maerllys",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-owain-maerllys-gwenllian-ysgrif",
+        "parentPersonId": "",
+        "houseId": "house-maerllys",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-maerllys",
+        "notes": "Floyds Großtante Gwenllian wurde an Owain Maerllys verheiratet; dieselbe Ehe wird in der Maerllys-Gegenakte geführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-ysgrif-to-1666",
+        "parentPartnershipId": "marriage-haus-ysgrif-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "idris-ysgrif",
+          "gwenllian-ysgrif"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1666",
+        "label": "Die belegte Ysgrif-Linie setzt mit Idris und Gwenllian um 1666 wieder ein",
+        "notes": "Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Ysgrif-Wappen; Idris und seine Schwester Gwenllian folgen gemeinsam dahinter.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-ysgrif-founders",
+      "houseId": "house-ysgrif",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": ""
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-ysgrif-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 4,
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "registryTombstones": {
+        "persons": [
+          "sioned-draenmelyn",
+          "gareth-swyll",
+          "unknown-spouse-gwenllian-ysgrif"
+        ],
+        "partnerships": [
+          "marriage-floyd-ysgrif-sioned-draenmelyn",
+          "marriage-mair-ysgrif-gareth-swyll",
+          "marriage-gwenllian-unknown-ysgrif"
+        ],
+        "houses": [
+          "house-draenmelyn",
+          "house-swyll",
+          "house-unbekannt-gwenllian-ysgrif"
+        ],
+        "cadetBranches": [
+          "married-away-swyll-mair-ysgrif",
+          "married-away-unknown-gwenllian-ysgrif"
+        ]
+      },
+      "sourceNote": "Floyd Ysgrif ist im Jahr 1740 einundzwanzig Jahre alt, unverheiratet und besitzt zwei ebenfalls unverheiratete Schwestern. Ihre weiteren Lebenslinien bleiben bewusst offen. Bryn hat drei unverheiratete Söhne; Madoc lebt als kinderloser Söldner. Idris ist der einzige konkret ausgearbeitete Großvater; seine Schwester Gwenllian ist an Owain Maerllys verheiratet und führt einen direkten, beidseitig registrierten Wegverheiratet-Knoten zu Haus Maerllys. Das eigene Ysgrif-Wappen und Floyds Portrait wurden lokal aus den vorgegebenen Quellen gesichert."
+    }
+  }
+}
