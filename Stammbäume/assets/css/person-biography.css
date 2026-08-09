@@ -28,6 +28,13 @@
   overflow: hidden;
   padding: 0;
   background: var(--paper-100);
+  /* Ohne eigenen Flex-Kontext hier kommt die Hoehenbegrenzung des Dialogs nie bei
+     .biography-page an - dessen drei Spalten wollen unabhaengig voneinander scrollen
+     (siehe .biography-left/.biography-main/.biography-right in module-page-biography.css),
+     bekommen dafuer aber eine durchgehende flex:1;min-height:0-Kette bis hierher noetig.
+     Ohne sie clippt .person-biography-dialog__body einfach alles ueberschuessige. */
+  display: flex;
+  flex-direction: column;
 }
 
 .person-biography-dialog__body.is-editing {
@@ -37,6 +44,7 @@
 
 .person-biography-dialog__preview {
   display: flex;
+  flex: 1;
   min-width: 0;
   min-height: 0;
   overflow: hidden;

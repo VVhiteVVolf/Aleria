@@ -943,7 +943,13 @@
   .cp-biography-editor {
     flex: 1;
     min-height: 0;
-    overflow: auto;
+    /* Scrollt bewusst nicht selbst - das wuerde der Ansicht/Bearbeitung eine zweite,
+       redundante Scrollbar aufzwingen. Leerzustand und Bearbeitungsmodus haben ihr
+       eigenes Overflow-Verhalten, der Ansichtsmodus scrollt seine drei Spalten
+       unabhaengig voneinander (siehe .cp-biography-view-render). */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .cp-biography-editor .character-biography-embedded-editor,
   .cp-biography-editor .module-page-type-block {
@@ -952,7 +958,177 @@
   .cp-biography-editor .module-page-type-block {
     display: block;
   }
+
+  /* Leerzustand: noch keine Biographie */
+  .cp-biography-empty {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    text-align: center;
+    padding: 2rem;
+    color: var(--ink);
+  }
+  .cp-biography-empty-icon {
+    font-size: 2rem;
+    color: var(--gold);
+  }
+  .cp-biography-empty h3 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+  }
+  .cp-biography-empty p {
+    margin: 0;
+    max-width: 32rem;
+    opacity: 0.8;
+  }
+  .cp-biography-empty-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Ansichtszustand: fertiges Bio-Modul, read-only */
+  .cp-biography-view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-height: 0;
+  }
+  .cp-biography-view-toolbar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cp-biography-view-render {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    border: 1px solid rgba(139,105,20,0.22);
+    /* Eigener Flex-Kontext noetig, damit .biography-page (flex:1;min-height:0 aus
+       module-page-biography.css) die Hoehenbegrenzung erbt und seine drei Spalten
+       (Infotabelle/Haupttext/Trivia&Co.) unabhaengig voneinander scrollen koennen,
+       statt dass hier alles als ein einziger langer Block durchlaeuft. */
+    display: flex;
+    flex-direction: column;
+  }
+  .cp-biography-view-render .biography-page {
+    min-height: 520px;
+  }
+
+  /* Bearbeitungszustand: Formular + Live-Vorschau nebeneinander */
+  .cp-biography-edit {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-height: 0;
+  }
+  .cp-biography-edit-toolbar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  .cp-biography-edit-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid rgba(139,105,20,0.22);
+  }
+  .cp-biography-edit-preview {
+    flex: 1 1 45%;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    background: rgba(255,255,255,0.12);
+  }
+  .cp-biography-edit-preview .biography-page {
+    min-height: 480px;
+    /* Die Live-Vorschau ist nur gut halb so breit wie die Ansichtsseite - das normale
+       3-Spalten-Raster der Biographie wuerde den Haupttext auf wenige Zeichen pro Zeile
+       zusammenquetschen. Hier deshalb gestapelt statt nebeneinander. */
+    display: block;
+    overflow: visible;
+    padding: 0.9rem;
+  }
+  .cp-biography-edit-preview .biography-left,
+  .cp-biography-edit-preview .biography-main,
+  .cp-biography-edit-preview .biography-right {
+    overflow: visible;
+    border: none;
+    padding: 0 0 0.9rem;
+  }
+  .cp-biography-edit-preview .biography-left {
+    align-items: flex-start;
+  }
+  .cp-biography-edit-preview .biography-left,
+  .cp-biography-edit-preview .biography-main {
+    border-bottom: 1px solid rgba(139,105,20,0.24);
+    margin-bottom: 0.9rem;
+  }
+  .cp-biography-edit-preview .biography-portrait,
+  .cp-biography-edit-preview .biography-portrait.placeholder {
+    max-width: 12rem;
+  }
+  .cp-biography-edit-divider {
+    flex-shrink: 0;
+    width: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--ink);
+    border-left: 1px solid rgba(139,105,20,0.4);
+    border-right: 1px solid rgba(139,105,20,0.4);
+  }
+  .cp-biography-edit-divider span {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.55rem;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+  .cp-biography-edit-form {
+    flex: 1 1 55%;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    padding: 0.9rem;
+  }
+
+  /* Maximieren-Umschalter: gilt nur, waehrend die Biographie in Bearbeitung ist */
+  .char-profile-card.cp-biography-maximized {
+    width: 100vw;
+    height: 100dvh;
+  }
+
   @media (max-width: 900px) {
+    .cp-biography-edit-body {
+      flex-direction: column;
+      overflow: auto;
+    }
+    .cp-biography-edit-divider {
+      width: 100%;
+      height: 1.6rem;
+      flex-direction: row;
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid rgba(139,105,20,0.4);
+      border-bottom: 1px solid rgba(139,105,20,0.4);
+    }
+    .cp-biography-edit-divider span {
+      writing-mode: horizontal-tb;
+    }
     .cp-biography-toolbar {
       flex-direction: column;
       align-items: stretch;
