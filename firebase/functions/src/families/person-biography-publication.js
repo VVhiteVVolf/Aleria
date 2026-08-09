@@ -111,11 +111,14 @@ export function createPublicPersonExtensions(extensions = {}) {
     biographyModule: {
       schema: BIOGRAPHY_SCHEMA,
       schemaVersion: 1,
+      // Firestore lehnt Arrays ab, die direkt weitere Arrays enthalten - deshalb {label, value}-
+      // Objekte statt [label, wert]-Paare. person-biography-model.js#normalizeStats() liest beim
+      // Rendern beide Formen ein.
       stats: stats.map(item => (
         Array.isArray(item)
-          ? [text(item[0], 200), text(item[1], 1000)]
-          : [text(item?.label, 200), text(item?.value, 1000)]
-      )).filter(([label, value]) => label || value).slice(0, 48),
+          ? { label: text(item[0], 200), value: text(item[1], 1000) }
+          : { label: text(item?.label, 200), value: text(item?.value, 1000) }
+      )).filter(({ label, value }) => label || value).slice(0, 48),
       quote: text(source.quote, 6000),
       quoteBy: text(source.quoteBy, 300),
       biography: biographyData(source.biography)

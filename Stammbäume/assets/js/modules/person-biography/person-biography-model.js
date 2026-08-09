@@ -131,6 +131,19 @@ export function normalizePersonBiographyModule(value = {}) {
   };
 }
 
+// Firestore lehnt Arrays ab, die direkt weitere Arrays enthalten ("Nested arrays are not
+// supported"). normalizeStats() haelt die Infotabelle intern als [label, wert]-Paare - praktisch
+// fuer Rendering/Editor, aber ein Array von Arrays und deshalb nicht Firestore-tauglich. Vor jedem
+// Schreibvorgang (privater Entwurf wie Veroeffentlichung) muessen die Zeilen deshalb in
+// {label, value}-Objekte gewandelt werden; normalizeStats() liest beide Formen bereits wieder ein.
+export function sanitizeBiographyStatsForFirestore(stats) {
+  return Array.isArray(stats)
+    ? stats.map(item => (Array.isArray(item)
+        ? { label: String(item[0] ?? ''), value: String(item[1] ?? '') }
+        : item))
+    : [];
+}
+
 export function getPersonBiographyModule(person) {
   const stored = person?.extensions?.[PERSON_BIOGRAPHY_EXTENSION_ID];
   return stored && typeof stored === 'object'

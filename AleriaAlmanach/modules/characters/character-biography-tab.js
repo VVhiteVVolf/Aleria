@@ -17,12 +17,23 @@ let _characterBiographyDraft = null;
 let _characterBiographyEditMode = false;
 let _characterBiographyMaximized = false;
 
+// Firestore speichert stats-Zeilen als {label, value}-Objekte (sanitizeCharacterBiographyForFirestore
+// in character-save-guard.js, da Firestore keine Arrays-in-Arrays erlaubt). Rendering/Editor hier
+// erwarten weiterhin [label, wert]-Paare, deshalb hier wieder zurückwandeln.
+function normalizeCharacterBiographyStats(stats) {
+  return Array.isArray(stats)
+    ? stats.map(item => (Array.isArray(item)
+        ? [String(item[0] ?? ''), String(item[1] ?? '')]
+        : [String(item?.label ?? ''), String(item?.value ?? '')]))
+    : [];
+}
+
 function getCharacterBiographyProfileSource(char = {}) {
   const source = char.biography && typeof char.biography === 'object' ? char.biography : {};
   return {
     schema: 'aleria.biography-module',
     schemaVersion: 1,
-    stats: Array.isArray(source.stats) ? source.stats : [],
+    stats: normalizeCharacterBiographyStats(source.stats),
     quote: String(source.quote || ''),
     quoteBy: String(source.quoteBy || ''),
     biography: sanitizeBiographyData(source.biography || {})

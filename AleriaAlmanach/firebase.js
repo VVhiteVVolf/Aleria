@@ -9,8 +9,8 @@
       from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
-    import { detectStaleCharacterFields, prepareCharacterDocumentWrite, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20260808-character-storage-audit-v1";
+    import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
+      from "./modules/characters/character-save-guard.js?v=20260809-biography-stats-firestore-fix-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -858,10 +858,11 @@
       },
       async saveCharacter(id, data, options = {}) {
         const user = await requireFirebaseUser();
+        const sanitizedData = sanitizeCharacterBiographyForFirestore(data);
         if (id) {
           const ref = doc(db, 'characters', id);
           const lockRef = doc(db, 'combat_profile_locks', 'characters', 'records', id);
-          const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
+          const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = sanitizedData || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
           const needsProtectedTransaction = options.replaceExisting === true
@@ -918,7 +919,7 @@
             ? { id, data: preparedWrite.data }
             : id;
         } else {
-          const newCharacterData = stampFreshRevisions(data || {});
+          const newCharacterData = stampFreshRevisions(sanitizedData || {});
           const storedData = {
             ...newCharacterData,
             ownerUid: user.uid,

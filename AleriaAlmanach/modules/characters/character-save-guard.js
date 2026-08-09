@@ -91,6 +91,28 @@ export function shouldBlockCharacterWriteDuringEncounter(outgoingData, activeEnc
   );
 }
 
+// Firestore lehnt Arrays ab, die direkt weitere Arrays enthalten ("Nested arrays are not
+// supported"). Die Infotabelle einer Biographie (biography.stats) wird im restlichen Code
+// intern als [label, wert]-Paare gehalten (character-biography-tab.js, module-editor-biography.js)
+// - das ist für Rendering/Editor bequem, aber ein Array von Arrays und deshalb nicht
+// Firestore-tauglich. Vor jedem Schreibvorgang werden die Zeilen deshalb in {label, value}-Objekte
+// gewandelt; bereits konvertierte Zeilen bleiben unverändert (idempotent).
+export function sanitizeCharacterBiographyForFirestore(data) {
+  if (!data || typeof data !== 'object') return data;
+  if (!Object.prototype.hasOwnProperty.call(data, 'biography')) return data;
+  const biography = data.biography;
+  if (!biography || typeof biography !== 'object' || !Array.isArray(biography.stats)) return data;
+  return {
+    ...data,
+    biography: {
+      ...biography,
+      stats: biography.stats.map(item => (Array.isArray(item)
+        ? { label: String(item[0] ?? ''), value: String(item[1] ?? '') }
+        : item))
+    }
+  };
+}
+
 // Bereitet den eigentlichen Firestore-Schreibvorgang vor. Normale Formularspeicherungen bleiben
 // absichtlich Merge-Schreibvorgaenge, damit ein spezialisierter Teil-Editor keine fremden Bereiche
 // loescht. Ein ausdruecklicher Vollimport ersetzt dagegen das Dokument vollstaendig. Nur die

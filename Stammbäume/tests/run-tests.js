@@ -488,7 +488,8 @@ import {
   createPersonBiographyStats,
   getPersonBiographyModule,
   normalizePersonBiographyModule,
-  PERSON_BIOGRAPHY_EXTENSION_ID
+  PERSON_BIOGRAPHY_EXTENSION_ID,
+  sanitizeBiographyStatsForFirestore
 } from '../assets/js/modules/person-biography/person-biography-model.js';
 import { renderPersonBiography } from '../assets/js/modules/person-biography/person-biography-renderer.js';
 import { buildRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-model.js';
@@ -1665,6 +1666,20 @@ test('übernimmt den Biographie-Vertrag des Almanachs als Personen-Erweiterung',
   assert.equal(module.biography.extraSections[0].position, 'afterWorks');
   assert.equal(module.biography.connections[0].imageFormat, 'square');
   assert.equal(module.biography.documents[0].link, './ring.html');
+});
+
+test('wandelt Infotabellenzeilen für Firestore in {label, value}-Objekte, da Firestore keine verschachtelten Arrays erlaubt', () => {
+  const stats = sanitizeBiographyStatsForFirestore([['Haus', 'Haus Arwydd'], ['Titel', 'Ritter']]);
+  assert.deepEqual(stats, [{ label: 'Haus', value: 'Haus Arwydd' }, { label: 'Titel', value: 'Ritter' }]);
+
+  const alreadySanitized = sanitizeBiographyStatsForFirestore(stats);
+  assert.deepEqual(alreadySanitized, stats, 'bereits gewandelte Zeilen bleiben unveraendert (idempotent)');
+
+  assert.deepEqual(sanitizeBiographyStatsForFirestore([]), []);
+  assert.deepEqual(sanitizeBiographyStatsForFirestore(undefined), []);
+
+  assert.deepEqual(normalizePersonBiographyModule({ stats }).stats, [['Haus', 'Haus Arwydd'], ['Titel', 'Ritter']],
+    'normalizeStats() liest das Firestore-Format beim Rendern wieder korrekt als Paare ein');
 });
 
 test('legt neue Biographien mit zwölf sinnvollen Infotabellenzeilen an', () => {

@@ -16,6 +16,26 @@ import {
   summarizeFamilyChangeSet
 } from './family-change-set.js';
 import { FamilyRevisionConflictError } from './family-sync-errors.js';
+import { PERSON_BIOGRAPHY_EXTENSION_ID, sanitizeBiographyStatsForFirestore } from '../person-biography/person-biography-model.js';
+
+// Firestore lehnt Arrays ab, die direkt weitere Arrays enthalten. Personen-Datensaetze koennen in
+// extensions.biographyModule.stats [label, wert]-Paare (Arrays) tragen - vor jedem Schreibvorgang
+// muessen diese in {label, value}-Objekte gewandelt werden (siehe sanitizeBiographyStatsForFirestore).
+function sanitizeEntityRecordForFirestore(collectionName, record) {
+  if (collectionName !== 'persons') return record;
+  const biographyModule = record?.extensions?.[PERSON_BIOGRAPHY_EXTENSION_ID];
+  if (!biographyModule || !Array.isArray(biographyModule.stats) || !biographyModule.stats.length) return record;
+  return {
+    ...record,
+    extensions: {
+      ...record.extensions,
+      [PERSON_BIOGRAPHY_EXTENSION_ID]: {
+        ...biographyModule,
+        stats: sanitizeBiographyStatsForFirestore(biographyModule.stats)
+      }
+    }
+  };
+}
 
 export { FamilyRevisionConflictError } from './family-sync-errors.js';
 
@@ -134,7 +154,10 @@ export function createFirestoreFamilyRepository(firebaseClient) {
         }
         FAMILY_ENTITY_COLLECTIONS.forEach(collectionName => {
           const changes = changeSet.collections[collectionName];
-          changes.upsert.forEach(record => transaction.set(doc(reference, collectionName, record.id), record));
+          changes.upsert.forEach(record => transaction.set(
+            doc(reference, collectionName, record.id),
+            sanitizeEntityRecordForFirestore(collectionName, record)
+          ));
           changes.remove.forEach(recordId => transaction.delete(doc(reference, collectionName, recordId)));
         });
         transaction.set(doc(reference, 'changeSets', String(revision).padStart(10, '0')), {

@@ -184,7 +184,7 @@ test('entfernt private Daten, veröffentlicht aber das Biographie-Modul', () => 
     published.collections.persons[0].extensions.biographyModule.biography.biographyText,
     'Öffentliche Lebensgeschichte'
   );
-  assert.deepEqual(published.collections.persons[0].extensions.biographyModule.stats, [['Haus', 'Haus Test']]);
+  assert.deepEqual(published.collections.persons[0].extensions.biographyModule.stats, [{ label: 'Haus', value: 'Haus Test' }]);
   assert.deepEqual(
     published.collections.persons[0].extensions.biographyModule.biography.portraitStages,
     ['https://i.imgur.com/a-young.png', '', '', 'https://i.imgur.com/a-old.png']

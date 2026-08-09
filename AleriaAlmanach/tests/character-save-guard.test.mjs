@@ -4,6 +4,7 @@ import test from 'node:test';
 import {
   detectStaleCharacterFields,
   prepareCharacterDocumentWrite,
+  sanitizeCharacterBiographyForFirestore,
   selectCharacterArchiveStatusWrite,
   selectCharacterGenealogyWrite,
   selectCharacterImageLibraryWrite,
@@ -12,6 +13,27 @@ import {
   selectChangedSections
 } from '../modules/characters/character-save-guard.js';
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
+
+test('sanitizeCharacterBiographyForFirestore wandelt [label, wert]-Paare in {label, value}-Objekte, damit Firestore keine verschachtelten Arrays sieht', () => {
+  const input = { name: 'Ifor', biography: { stats: [['Titel', 'Ritter'], ['Alter', '28']], quote: 'x' } };
+  const result = sanitizeCharacterBiographyForFirestore(input);
+  assert.deepEqual(result.biography.stats, [
+    { label: 'Titel', value: 'Ritter' },
+    { label: 'Alter', value: '28' }
+  ]);
+  assert.equal(result.biography.quote, 'x');
+  assert.equal(input.biography.stats[0][0], 'Titel', 'Original bleibt unveraendert');
+});
+
+test('sanitizeCharacterBiographyForFirestore laesst bereits konvertierte Zeilen und fehlende Biographie unangetastet', () => {
+  const alreadyObjects = { biography: { stats: [{ label: 'a', value: 'b' }] } };
+  assert.deepEqual(sanitizeCharacterBiographyForFirestore(alreadyObjects).biography.stats, [{ label: 'a', value: 'b' }]);
+
+  const noBiography = { name: 'Ohne Bio' };
+  assert.equal(sanitizeCharacterBiographyForFirestore(noBiography), noBiography);
+
+  assert.equal(sanitizeCharacterBiographyForFirestore(null), null);
+});
 
 test('sanitizeCharacterCombatProfile bewahrt eine mitgegebene Revision und faellt sonst auf 0 zurueck', () => {
   assert.equal(sanitizeCharacterCombatProfile({}).revision, 0);
