@@ -79,13 +79,13 @@ function gapChildren(childIds, parentIds, partnershipId, timeJumpId) {
   });
 }
 
-function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+function marriedAway(id, name, partnershipId, houseId, emblem = '', targetFamilyId = '') {
   return createMarriedAwayBranch({
     id,
     name,
     parentPartnershipId: partnershipId,
     houseId,
-    targetFamilyId: houseId.replace(/^house-/, 'haus-'),
+    targetFamilyId: targetFamilyId || houseId.replace(/^house-/, 'haus-'),
     emblem
   });
 }
@@ -171,6 +171,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-morgant', 'Haus Morgant'),
     house('house-mochdear', 'Haus Mochdear'),
     house('house-dyfrgi', "Haus Dyfrgi O'Mynyddharbwr", KLAUENINSEL_HOUSE_EMBLEMS.dyfrgi),
+    house('house-dyfrgi-caer-cryftlawd', "Haus Dyfrgi O'Caer Cryftlawd", KLAUENINSEL_HOUSE_EMBLEMS.dyfrgi),
     house('house-drewi', 'Haus Drewi'),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
@@ -257,8 +258,15 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('tarrant-blodyn', 'Tarrant Blodyn', 'male', '1672', '1720'),
     person('luned-mochdear', 'Luned Mochdear', 'female', '1675', '1710', 'house-mochdear'),
     person('carys-blodyn', 'Carys Blodyn', 'female', '1673', '1679'),
-    person('elin-blodyn', 'Elin Blodyn', 'female', '1675', '????'),
-    person('mevyn-dyfrgi', 'Mevyn Dyfrgi', 'male', '1672', '????', 'house-dyfrgi'),
+    person('elin-blodyn', 'Elin Blodyn', 'female', '1675', '', BLODYN_HOUSE_ID, {
+      extensions: { registryManagedFields: ['status', 'death'] }
+    }),
+    person('mevyn-dyfrgi', 'Mervyn Dyfrgi', 'male', '1672', '', 'house-dyfrgi-caer-cryftlawd', {
+      worldPersonId: 'person--haus-dyfrgi--mevyn-dyfrgi',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'name', 'status', 'death', 'houseId']
+      }
+    }),
 
     person('bleddyn-blodyn', 'Bleddyn Blodyn', 'male', '1669', '1720'),
     person('fflur-draig', 'Fflur Draig', 'female', '1670', '1720', 'house-draig'),
@@ -385,7 +393,10 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
       notes: 'Der Knoten hängt direkt unter Yvain Blodyn und Bronwen Blaidd. Dalvin und Erec werden ausschließlich im separaten Aberdail-Stammbaum weitergeführt.'
     }),
     marriedAway('married-away-blaidd-ceridwen', "Haus Blaidd O'Branon", 'marriage-ceridwen-gwynfor', 'house-blaidd', HOUSE_EMBLEMS.blaidd),
-    marriedAway('married-away-dobhar-morfydd', 'Haus Dobhar', 'marriage-morfydd-breseal', 'house-dobhar'),
+    {
+      ...marriedAway('married-away-dobhar-morfydd', "Haus Dyfrgi O'Mynyddharbwr", 'marriage-morfydd-breseal', 'house-dyfrgi', KLAUENINSEL_HOUSE_EMBLEMS.dyfrgi, 'haus-dyfrgi'),
+      extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] }
+    },
     marriedAway('married-away-dianc-gwendolen', 'Haus Dianc', 'marriage-gwendolen-arthfael', 'house-dianc'),
     marriedAway('married-away-trachwyll-morwenna', 'Haus Trachwyll', 'marriage-morwenna-gwalchmai', 'house-trachwyll'),
     marriedAway('married-away-arfordir-tudurwen', 'Haus Arfordir', 'marriage-tudurwen-ysbryd', 'house-arfordir'),
@@ -397,12 +408,15 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     marriedAway('married-away-wylan-arryn', 'Haus Wylan', 'marriage-gendry-arryn', 'house-wylan', HOUSE_EMBLEMS.wylan),
     marriedAway('married-away-blaidd-arvyn', "Haus Blaidd O'Branon", 'marriage-arvyn-trystan', 'house-blaidd', HOUSE_EMBLEMS.blaidd),
     marriedAway('married-away-arth-blawd', 'Haus Arth', 'marriage-rhys-blawd', 'house-arth', HOUSE_EMBLEMS.arth),
-    marriedAway('married-away-dyfrgi-elin', 'Haus Dyfrgi', 'marriage-elin-mevyn', 'house-dyfrgi'),
+    {
+      ...marriedAway('married-away-dyfrgi-elin', "Haus Dyfrgi O'Caer Cryftlawd", 'marriage-elin-mevyn', 'house-dyfrgi-caer-cryftlawd', KLAUENINSEL_HOUSE_EMBLEMS.dyfrgi, 'haus-dyfrgi-caer-cryftlawd'),
+      extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] }
+    },
     marriedAway('married-away-drewi-afanen', 'Haus Drewi', 'marriage-afanen-grugyn', 'house-drewi'),
     marriedAway('married-away-morlais-tanwen', 'Haus Morlais', 'marriage-tanwen-kynwas', 'house-morlais'),
     marriedAway('married-away-aderyn-catrin', 'Haus Aderyn', 'marriage-gareth-catrin', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-pendrag-dylis', 'Haus Pendrag', 'marriage-dystan-dylis', 'house-pendrag', HOUSE_EMBLEMS.pendrag),
-    marriedAway('married-away-arfordir-meggan', 'Haus Arfordir', 'marriage-meggan-micah', 'house-arfordir'),
+    marriedAway('married-away-arfordir-meggan', "Haus Arfordir O'Aberdail", 'marriage-meggan-micah', 'house-arfordir', KLAUENINSEL_HOUSE_EMBLEMS.arfordir, 'haus-arfordir-aberdail'),
     marriedAway('married-away-serenoc-siriol', 'Haus Serenoc', 'marriage-siriol-trachmyr', 'house-serenoc')
   ],
   timeJumps: [
@@ -448,9 +462,9 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth ist als aufgenommenes Mündel und nicht als leibliches Blodyn-Kind erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yhons Kinder Cerys und Griffin sowie sein Mündel Telyn stehen ausschließlich in der verknüpften Talgarther Akte; Yvains Nachkommen Dalvin und Erec ausschließlich in der verknüpften Aberdailer Akte. Dadurch wird keine der beiden Nachkommenschaften in zwei Diagrammen weitergeführt.',
+    sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth ist als aufgenommenes Mündel und nicht als leibliches Blodyn-Kind erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yhons Kinder Cerys und Griffin sowie sein Mündel Telyn stehen ausschließlich in der verknüpften Talgarther Akte; Yvains Nachkommen Dalvin und Erec ausschließlich in der verknüpften Aberdailer Akte. Dadurch wird keine der beiden Nachkommenschaften in zwei Diagrammen weitergeführt. Morfydds Ehe mit Breseal führt zum gegründeten Haus Dyfrgi in Mynyddharbwr; Elins Ehe mit Mervyn verlinkt dagegen zur neuen Caer-Cryftlawd-Linie. Die ältere technische ID mevyn-dyfrgi bleibt stabil, während die sichtbare Quellschreibweise Mervyn verwendet wird.',
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     registryTombstones: {
       persons: ['cerys-blodyn', 'griffin-blodyn', 'telyn-diafol'],
       parentages: ['parentage-cerys-blodyn', 'parentage-griffin-blodyn', 'parentage-telyn-diafol']

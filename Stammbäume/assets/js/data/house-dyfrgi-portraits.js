@@ -1,0 +1,66 @@
+import { HOUSE_BLODYN_PORTRAITS } from './house-blodyn-portraits.js';
+
+const PORTRAIT_ROOT = 'assets/images/portraits/haus-dyfrgi';
+
+export const HOUSE_DYFRGI_LOCAL_PORTRAIT_FILES = Object.freeze({
+  'mawr-dyfrgi': 'mawr-dyfrgi.jpg',
+  'idwal-dyfrgi': 'idwal-dyfrgi.jpg',
+  'gwayne-dyfrgi': 'gwayne-dyfrgi.jpg',
+  'meuric-morlais': 'meuric-morlais.png',
+  'rhondda-dyfrgi': 'rhondda-dyfrgi.jpg',
+  'tudur-dyfrgi': 'tudur-dyfrgi.jpg',
+  'lyr-dyfrgi': 'lyr-dyfrgi.jpg',
+  'ynyr-dyfrgi': 'ynyr-dyfrgi.jpg',
+  'glyn-dyfrgi': 'glyn-dyfrgi.jpg',
+  'oth-dyfrgi': 'oth-dyfrgi.jpg',
+  'bronwen-bochdew': 'bronwen-bochdew.png',
+  'ifan-dyfrgi': 'ifan-dyfrgi.jpg',
+  'eira-dyfrgi': 'eira-dyfrgi.jpg',
+  'llew-dyfrgi': 'llew-dyfrgi.jpg',
+  'una-dyfrgi': 'una-dyfrgi.jpg',
+  'iob-dyfrgi': 'iob-dyfrgi.jpg',
+  'nia-dyfrgi': 'nia-dyfrgi.jpg',
+  'orbo-dyfrgi': 'orbo-dyfrgi.jpg'
+});
+
+export const HOUSE_DYFRGI_PORTRAIT_SOURCES = Object.freeze({
+  'mawr-dyfrgi': 'https://64.media.tumblr.com/04ec5f8de9e429266a9fe0bfa894ebf2/f88695240d4a0d50-f9/s250x400/fc898fa1605c6d1343f618d2e976a80e8e9c11b8.pnj',
+  'idwal-dyfrgi': 'https://64.media.tumblr.com/ed1a2010f99bc85823cd072b70d320a6/f88695240d4a0d50-6f/s250x400/a662cd20d5a5f481fd10c40a9a32d05b5d64d925.pnj',
+  'gwayne-dyfrgi': 'https://64.media.tumblr.com/7920308c08fe7afca5caf1d9b6ea9902/f88695240d4a0d50-96/s250x400/dffe9e8291b32e00d000c07c80de82fabedb53f1.pnj',
+  'meuric-morlais': 'https://i.imgur.com/gXu2Fow.png',
+  'rhondda-dyfrgi': 'https://64.media.tumblr.com/dd5fefdc5cf3db5a29fc4d1560e8ba39/f88695240d4a0d50-ca/s250x400/1e6db2ca4021a589ef3c4d85cbd04069c871b436.pnj',
+  'tudur-dyfrgi': 'https://64.media.tumblr.com/74eedf6ea50b7c15917211f3dfd29d17/f88695240d4a0d50-26/s250x400/ac52d8946a570406ac8ead5459e38acee72fefcc.pnj',
+  'lyr-dyfrgi': 'https://64.media.tumblr.com/786c95a1ccdb120ed719bafef3006b0f/f88695240d4a0d50-e2/s250x400/bfd0719ca134d655b955fbd7118f466d2315acd0.pnj',
+  'ynyr-dyfrgi': 'https://64.media.tumblr.com/15d84c76ecd46838815750af3d9b0be9/f88695240d4a0d50-79/s400x600/76628378e84ffc1272ee45cedd0449b383b0e18a.pnj',
+  'glyn-dyfrgi': 'https://64.media.tumblr.com/5e3cf88f298127ab365e0f5d6a9e3761/f88695240d4a0d50-0d/s250x400/d72ed77658b421724df4a3399b0e11a0336e0b36.pnj',
+  'oth-dyfrgi': 'https://64.media.tumblr.com/0545a94f8935f49f9d8e7daa50a7d128/f88695240d4a0d50-7f/s250x400/ca7c9fa2266f86d183aaf24e769daa9131f8c2c2.pnj',
+  'bronwen-bochdew': 'https://i.imgur.com/BwR0JiQ.png',
+  'ifan-dyfrgi': 'https://64.media.tumblr.com/ff1d0f6a896717fdc3f705f347d33c56/f88695240d4a0d50-63/s250x400/da891d38c69b50d544618e4d19c9f9465661b39b.pnj',
+  'eira-dyfrgi': 'https://64.media.tumblr.com/326c5893f14313a3307d2aa03d55fbfb/f88695240d4a0d50-03/s250x400/0e79a3ef9ddcd35616585a4e24dd27e1b5370f95.pnj',
+  'llew-dyfrgi': 'https://64.media.tumblr.com/5a621b17bef6d4ccd03ee4f8342b9a7d/f88695240d4a0d50-b4/s250x400/9b3c25019dc07f6f6582708e46f324e5b8611b49.pnj',
+  'una-dyfrgi': 'https://64.media.tumblr.com/74f6d3e83e832e596b3b516850eac711/f88695240d4a0d50-64/s400x600/f73ec3c8a89f6d75beecbde52123e45fd81e0ef3.pnj',
+  'iob-dyfrgi': 'https://64.media.tumblr.com/b14b513acdd5a67a4f332a73435b2fd1/f88695240d4a0d50-90/s250x400/e31f5bc44d838eaf6d86dd775f84a00e8930377a.pnj',
+  'nia-dyfrgi': 'https://64.media.tumblr.com/a1209d662a50c8f567d26c19b08dccc7/f88695240d4a0d50-0c/s250x400/2c9ca952b9d4cf3a76152489b4e187db5d86e5a7.pnj',
+  'orbo-dyfrgi': 'https://64.media.tumblr.com/14502c605a0114a858f716e2904e899c/f88695240d4a0d50-27/s250x400/828d260709e07cf89684084f8632618f502f4905.pnj'
+});
+
+const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
+  Object.entries(HOUSE_DYFRGI_LOCAL_PORTRAIT_FILES)
+    .filter(([, fileName]) => fileName)
+    .map(([personId, fileName]) => [personId, `${PORTRAIT_ROOT}/${fileName}`])
+));
+
+// Bereits ausgearbeitete Blodyn-Gegenakten bleiben für dieselbe Weltperson
+// die kanonische Bildquelle. Schwarze Standardsilhouetten der Altquelle sind
+// keine Individualporträts und werden deshalb bewusst nicht importiert.
+const SHARED_PORTRAITS = Object.freeze({
+  'breseal-dobhar': HOUSE_BLODYN_PORTRAITS['breseal-dobhar'],
+  'morfydd-blodyn': HOUSE_BLODYN_PORTRAITS['morfydd-blodyn'],
+  'mevyn-dyfrgi': HOUSE_BLODYN_PORTRAITS['mevyn-dyfrgi'],
+  'elin-blodyn': HOUSE_BLODYN_PORTRAITS['elin-blodyn']
+});
+
+export const HOUSE_DYFRGI_PORTRAITS = Object.freeze({
+  ...LOCAL_PORTRAITS,
+  ...Object.fromEntries(Object.entries(SHARED_PORTRAITS).filter(([, portrait]) => portrait))
+});

@@ -1,6 +1,10 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
+import {
+  HOUSE_ARFORDIR_ABERDAIL_FAMILY,
+  HOUSE_ARFORDIR_SERENLYN_FAMILY
+} from './house-arfordir-family.js';
 import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import {
@@ -11,6 +15,10 @@ import {
   HOUSE_DIANC_ABERDAIL_FAMILY,
   HOUSE_DIANC_GWYNLANN_FAMILY
 } from './house-dianc-family.js';
+import {
+  HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY,
+  HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY
+} from './house-dyfrgi-family.js';
 import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
 import {
   KLAUENINSEL_HOUSE_EMBLEMS,
@@ -52,24 +60,6 @@ const CADET_DEFINITIONS = Object.freeze([
 ]);
 
 const MIGRATION_DEFINITIONS = Object.freeze([
-  Object.freeze({
-    slug: 'arfordir',
-    familySlug: 'arfordir-aberdail',
-    title: "Haus Arfordir O'Aberdail",
-    originSlug: 'arfordir-serenlyn',
-    originFamilySlug: 'arfordir',
-    originHouseId: 'house-arfordir',
-    originTitle: "Haus Arfordir O'Serenlyn"
-  }),
-  Object.freeze({
-    slug: 'dyfrgi',
-    familySlug: 'dyfrgi-caer-cryftlawd',
-    title: "Haus Dyfrgi O'Caer Cryftlawd",
-    originSlug: 'dyfrgi-mynyddharbwr',
-    originFamilySlug: 'dyfrgi',
-    originHouseId: 'house-dyfrgi',
-    originTitle: "Haus Dyfrgi O'Mynyddharbwr"
-  }),
   Object.freeze({
     slug: 'walwrs',
     familySlug: 'walwrs-caer-deheuol',
@@ -265,6 +255,8 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_CRAFANC_FAMILY,
   HOUSE_DIAFOL_TALGARTH_FAMILY,
   HOUSE_DIANC_ABERDAIL_FAMILY,
+  HOUSE_ARFORDIR_ABERDAIL_FAMILY,
+  HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY,
   ...CADET_DEFINITIONS.map(createCadetFounderFamily),
   ...MIGRATION_DEFINITIONS.map(createMigrationCurrentFamily),
   HOUSE_BERYN_FAMILY,
@@ -275,6 +267,8 @@ export const KLAUENINSEL_ORIGIN_HOUSE_FAMILIES = Object.freeze(
   [
     HOUSE_DIAFOL_TREFGOCH_FAMILY,
     HOUSE_DIANC_GWYNLANN_FAMILY,
+    HOUSE_ARFORDIR_SERENLYN_FAMILY,
+    HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY,
     ...MIGRATION_DEFINITIONS.map(createOriginFamily)
   ]
 );

@@ -12,12 +12,14 @@ import {
   GRAUE_WEITE_ORIGIN_HOUSE_PROFILES
 } from './graue-weite-house-profiles.js';
 import { HOUSE_GWAEDLYD_PORTRAITS } from './house-gwaedlyd-portraits.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 
 const CAER_GORWEL_HOUSE_ID = 'house-gwaedlyd';
 const TREDEGAR_HOUSE_ID = 'house-gwaedlyd-tredegar';
 const GWAEDLYD_EMBLEM = GRAUE_WEITE_HOUSE_EMBLEMS.gwaedlyd;
 
 const HOUSE_EMBLEMS = Object.freeze({
+  arfordir: KLAUENINSEL_HOUSE_EMBLEMS.arfordir,
   blodyn: 'assets/images/houses/Blütenland/haus-blodyn.png',
   coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   draenog: GRAUE_WEITE_HOUSE_EMBLEMS.draenog,
@@ -126,7 +128,7 @@ const ORIGIN_HOUSES = Object.freeze([
   house('house-blodyn', 'Haus Blodyn', HOUSE_EMBLEMS.blodyn),
   house('house-morgryn', 'Haus Morgryn'),
   house('house-gwenyen', 'Haus Gwenyen'),
-  house('house-arfordir', 'Haus Arfordir'),
+  house('house-arfordir', "Haus Arfordir O'Serenlyn", HOUSE_EMBLEMS.arfordir),
   house('house-bochdew', 'Haus Bochdew'),
   house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
   house('house-diafol', 'Haus Diafol'),
@@ -319,7 +321,7 @@ export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = Object.freeze({
   cadetBranches: [
     marriedAway('married-away-meeghan-gwaedlyd-trachwyll', 'Haus Trachwyll', 'marriage-meeghan-bethwyn-gwaedlyd', 'house-trachwyll', 'haus-trachwyll'),
     marriedAway('married-away-bettrys-gwaedlyd-blodyn', 'Haus Blodyn', 'marriage-tathal-bettrys', 'house-blodyn', 'haus-blodyn', HOUSE_EMBLEMS.blodyn),
-    marriedAway('married-away-arianrhod-gwaedlyd-arfordir', 'Haus Arfordir', 'marriage-arianrhod-luc-arfordir', 'house-arfordir', 'haus-arfordir'),
+    marriedAway('married-away-arianrhod-gwaedlyd-arfordir', "Haus Arfordir O'Aberdail", 'marriage-arianrhod-luc-arfordir', 'house-arfordir', 'haus-arfordir-aberdail', HOUSE_EMBLEMS.arfordir),
     createSingleFounderHouseBranch({
       id: 'migration-gronw-gwaedlyd-tredegar',
       name: "Haus Gwaedlyd O'Tredegar",

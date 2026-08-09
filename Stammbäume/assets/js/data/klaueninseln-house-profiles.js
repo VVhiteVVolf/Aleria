@@ -87,9 +87,9 @@ function cenyrProfile(rankId, folderPath, options = {}) {
   }));
 }
 
-function vennyrProfile(folderPath) {
+function vennyrProfile(folderPath, options = {}) {
   return freezeProfile(createHouseProfileFromFolderPath(folderPath, {
-    rankId: 'unknown',
+    rankId: options.rankId || 'unknown',
     regionEmblems: {
       kingdom: KLAUENINSEL_REGION_EMBLEMS.vennyr,
       county: KLAUENINSEL_REGION_EMBLEMS.vennyrRegions[folderPath[1]] || '',
@@ -113,7 +113,7 @@ export const KLAUENINSEL_HOUSE_PROFILES = Object.freeze({
     liegeHouseId: 'haus-blodyn-aberdail',
     liegeHouseName: "Haus Blodyn O'Aberdail"
   }),
-  dyfrgi: cenyrProfile('knight', CAER_CRYFTLAWD_PATH, {
+  dyfrgi: cenyrProfile('knight-prince', CAER_CRYFTLAWD_PATH, {
     liegeHouseId: 'haus-cwningod',
     liegeHouseName: 'Haus Cwningod'
   }),
@@ -132,8 +132,8 @@ export const KLAUENINSEL_HOUSE_PROFILES = Object.freeze({
 
 export const KLAUENINSEL_ORIGIN_HOUSE_PROFILES = Object.freeze({
   'diafol-trefgoch': vennyrProfile(DIAFOL_TREFGOCH_PATH),
-  'dyfrgi-mynyddharbwr': vennyrProfile(DYFRGI_MYNYDDHARBWR_PATH),
-  'arfordir-serenlyn': vennyrProfile(ARFORDIR_SERENLYN_PATH),
+  'dyfrgi-mynyddharbwr': vennyrProfile(DYFRGI_MYNYDDHARBWR_PATH, { rankId: 'county' }),
+  'arfordir-serenlyn': vennyrProfile(ARFORDIR_SERENLYN_PATH, { rankId: 'county' }),
   'dianc-gwynlann': vennyrProfile(DIANC_GWYNLANN_PATH),
   'walwrs-traeth': vennyrProfile(WALWRS_TRAETH_PATH)
 });
