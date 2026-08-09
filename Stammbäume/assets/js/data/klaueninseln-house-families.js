@@ -19,7 +19,10 @@ import {
   HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY,
   HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY
 } from './house-dyfrgi-family.js';
+import { HOUSE_EIRTH_FAMILY } from './house-eirth-family.js';
+import { HOUSE_MORTHWYLL_FAMILY } from './house-morthwyll-family.js';
 import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
+import { HOUSE_UNIGOL_FAMILY } from './house-unigol-family.js';
 import {
   HOUSE_WALWRS_CAER_DEHEUOL_FAMILY,
   HOUSE_WALWRS_TRAETH_FAMILY
@@ -35,24 +38,6 @@ const CADET_DEFINITIONS = Object.freeze([
     title: 'Haus Cwningod',
     partnershipId: 'marriage-galeshin-arianhrod',
     founderNote: 'Galeshin Arth und Arianrhod begründen Haus Cwningod.'
-  }),
-  Object.freeze({
-    slug: 'unigol',
-    title: 'Haus Unigol',
-    partnershipId: 'marriage-trahaern-ceridwen',
-    founderNote: 'Trahaern Arth und Ceridwen Pawen begründen Haus Unigol.'
-  }),
-  Object.freeze({
-    slug: 'morthwyll',
-    title: 'Haus Morthwyl',
-    partnershipId: 'marriage-heddwen-sayres',
-    founderNote: 'Heddwen Arth und Sayres Morthwyll begründen die fortgeführte Linie von Haus Morthwyl.'
-  }),
-  Object.freeze({
-    slug: 'eirth',
-    title: 'Haus Eirth',
-    partnershipId: 'marriage-rhynnon-kyndra',
-    founderNote: 'Rhynnon Arth und Kyndra Crafanc begründen Haus Eirth.'
   }),
   Object.freeze({
     slug: 'selwyn',
@@ -174,6 +159,9 @@ function createSimpleFamily(definition) {
 export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_PAWEN_FAMILY,
   HOUSE_CRAFANC_FAMILY,
+  HOUSE_UNIGOL_FAMILY,
+  HOUSE_MORTHWYLL_FAMILY,
+  HOUSE_EIRTH_FAMILY,
   HOUSE_DIAFOL_TALGARTH_FAMILY,
   HOUSE_DIANC_ABERDAIL_FAMILY,
   HOUSE_ARFORDIR_ABERDAIL_FAMILY,

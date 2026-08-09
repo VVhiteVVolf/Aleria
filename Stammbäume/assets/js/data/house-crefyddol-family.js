@@ -257,7 +257,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
     house('house-penderyn', 'Haus Penderyn', HOUSE_EMBLEMS.penderyn),
     house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-eirth', 'Haus Eirth'),
-    house('house-morthwyl', 'Haus Morthwyl'),
+    house('house-morthwyll', 'Haus Morthwyll'),
     house('house-chiffyddlon', 'Haus Chiffyddlon', HOUSE_EMBLEMS.chiffyddlon),
     house('house-gwarchod', 'Haus Gwarchod', HOUSE_EMBLEMS.gwarchod),
     house('house-unigol', 'Haus Unigol')
@@ -340,7 +340,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
     spouse('darwyn-saith', 'Darwyn Saith', 'male', '1676', '', 'house-saith'),
     spouse('telyn-coedwig', 'Telyn Coedwig', 'female', '1674', '', 'house-coedwig'),
     spouse('wyndham-eirth', 'Wyndham Eirth', 'male', '1676', '', 'house-eirth'),
-    spouse('katewen-morthwyl', 'Katewen Morthwyl', 'female', '1679', '1735', 'house-morthwyl'),
+    spouse('katewen-morthwyl', 'Katewen Morthwyll', 'female', '1679', '1735', 'house-morthwyll'),
     spouse('anwen-penderyn', 'Anwen Penderyn', 'female', '1678', '1733', 'house-penderyn'),
 
     person('merrion-crefyddol', 'Merrion Crefyddol', 'male', '1698', ''),
@@ -502,9 +502,9 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: "Haus Crefyddoll O'Llanvane (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Crefyddoll-Hausseite. Die Nutzerfestlegung und der ausführliche Geschichtstext haben Vorrang vor der widersprüchlichen Tabellenzeile, die fälschlich Bors Saith und Gwennan Neidr als Ursprung nennt: Sieffre der Fromme und Jinelle Neidr sind die gemeinsamen Eltern der Hausgründer. Sieffre trägt den Holy Frame. Llwyarch und Lynette tragen allein den Crefyddol-Hausknoten und führen diese Akte fort; Llwellyn und Hafren tragen ausschließlich den verknüpften Bruderhaus-Knoten Canwyll. Beide überlieferten Punktreihen werden als strikt serielle Zeitsprünge geführt. Die Schreibweisen Crefyddoll/Crefydoll und Beyon werden unter den bestehenden Projektformen Crefyddol und Beynon vereinheitlicht; die stabilen Gegenakten-IDs gwindor-crefydoll und kimball-crefydoll bleiben zur Identitätserhaltung bestehen. Penkawrs unmögliches Todesjahr 1625 ist zu 1725 normalisiert. Célyn Wylans Todesjahr 1712 folgt ihrer ausführlicheren Wylan-Herkunftsakte statt der hier genannten 1705. Kinder werden nur im fortführenden Haus geführt: Rhondia bei Dyngwn, Argylls Nachkommen bei Saith, Gregorys Nachkommen bei Marwolaeth, Glendowers Nachkommen bei Dyngwn, Darwyns Nachkommen bei Saith und Ninians Nachkommen bei Neidr; die Crefyddol-Nachkommen stehen ausschließlich hier. Sämtliche zwölf wegverheirateten Crefyddol-Frauen besitzen direkte Zielhausknoten. Revision 2 ergänzt das inzwischen belegte Gwialen-Wappen an der gemeinsamen Ehe Arwel/Angharad.',
+    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Crefyddoll-Hausseite. Die Nutzerfestlegung und der ausführliche Geschichtstext haben Vorrang vor der widersprüchlichen Tabellenzeile, die fälschlich Bors Saith und Gwennan Neidr als Ursprung nennt: Sieffre der Fromme und Jinelle Neidr sind die gemeinsamen Eltern der Hausgründer. Sieffre trägt den Holy Frame. Llwyarch und Lynette tragen allein den Crefyddol-Hausknoten und führen diese Akte fort; Llwellyn und Hafren tragen ausschließlich den verknüpften Bruderhaus-Knoten Canwyll. Beide überlieferten Punktreihen werden als strikt serielle Zeitsprünge geführt. Die Schreibweisen Crefyddoll/Crefydoll und Beyon werden unter den bestehenden Projektformen Crefyddol und Beynon vereinheitlicht; die stabilen Gegenakten-IDs gwindor-crefydoll und kimball-crefydoll bleiben zur Identitätserhaltung bestehen. Penkawrs unmögliches Todesjahr 1625 ist zu 1725 normalisiert. Célyn Wylans Todesjahr 1712 folgt ihrer ausführlicheren Wylan-Herkunftsakte statt der hier genannten 1705. Kinder werden nur im fortführenden Haus geführt: Rhondia bei Dyngwn, Argylls Nachkommen bei Saith, Gregorys Nachkommen bei Marwolaeth, Glendowers Nachkommen bei Dyngwn, Darwyns Nachkommen bei Saith und Ninians Nachkommen bei Neidr; die Crefyddol-Nachkommen stehen ausschließlich hier. Sämtliche zwölf wegverheirateten Crefyddol-Frauen besitzen direkte Zielhausknoten. Revision 2 ergänzt das inzwischen belegte Gwialen-Wappen an der gemeinsamen Ehe Arwel/Angharad; Revision 4 vereinheitlicht Katewens Herkunft technisch mit der kanonischen Haus-ID `house-morthwyll`.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

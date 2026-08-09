@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_DIENYDDIWR_PORTRAITS } from './house-dienyddiwr-portraits.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import {
   VORTIGERNS_RUH_HOUSE_EMBLEMS,
   VORTIGERNS_RUH_HOUSE_PROFILES
@@ -25,6 +26,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   marwolaeth: VORTIGERNS_RUH_HOUSE_EMBLEMS.marwolaeth,
   penderyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.penderyn,
   pendrag: VORTIGERNS_RUH_HOUSE_EMBLEMS.pendrag,
+  unigol: KLAUENINSEL_HOUSE_EMBLEMS.unigol,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -48,6 +50,7 @@ const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
 function person(id, name, sex, birth, death = '', options = {}) {
   return createFamilyPerson({
     id,
+    worldPersonId: options.worldPersonId || '',
     name,
     sex,
     birth,
@@ -172,6 +175,7 @@ export const HOUSE_DIENYDDIWR_FAMILY = Object.freeze({
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
     house('house-pyrth', 'Haus Pyrth'),
     house('house-selwyn', 'Haus Selwyn'),
+    house('house-unigol', "Haus Unigol O'Caer Marwor", HOUSE_EMBLEMS.unigol),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-illewod', 'Haus Illewod', HOUSE_EMBLEMS.illewod),
     house('house-gaeth', 'Haus Gaeth'),
@@ -235,7 +239,11 @@ export const HOUSE_DIENYDDIWR_FAMILY = Object.freeze({
     spouse('dyngannon-arth', 'Dyngannon Arth', 'male', '1620', '1670', {
       houseId: 'house-arth'
     }),
-    spouse('sioned-dienyddiwr-spouse', 'Sioned', 'female', '1617', '1691'),
+    spouse('sioned-dienyddiwr-spouse', 'Sioned Unigol', 'female', '1617', '1691', {
+      houseId: 'house-unigol',
+      worldPersonId: 'person--haus-unigol--sioned-dienyddiwr-spouse',
+      title: 'Eingeheiratete Tochter des Hauses Unigol'
+    }),
 
     person('anarawd-dienyddiwr', 'Anarawd Dienyddiwr', 'male', '1626', '1693', {
       title: 'Ritterfürst des Hauses Dienyddiwr von 1675 bis 1693',
@@ -496,9 +504,9 @@ export const HOUSE_DIENYDDIWR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Dienyddiwr O'Mathragon (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Ehen, Hausgeschichte, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Dienyddiwr-Hausseite. Taredd und Irmgard bilden das Gründerpaar; der Punkttrenner der Quelle wird als einziger absoluter serieller Zeitsprung nach dem Hauswappen und vor Trayvon/Arianell geführt. Die Ritterfürstenfolge lautet Taredd, Trayvon, Gruffydd, Anarawd, Mervyn und Robyert; Robyn und Arawn bilden die ausdrückliche Erbfolge. Gwennan und Delwen sind anhand ihrer Quellporträts männlich und führen ihre jeweiligen Dienyddiwr-Linien fort. Die dreizehn verheirateten Dienyddiwr-Frauen ohne fortgeführten Dienyddiwr-Zweig besitzen direkte Zielhausknoten. Kinder aus den Zielhäusern Arth, Pendrag, Illewod, Penderyn und Aderyn werden nicht parallel in dieser Akte kopiert. Gemeinsame Personen und Ehen mit Arth, Pendrag, Wylan, Illewod, Grawn, Penderyn, Ceirwyn und Aderyn behalten ihre vorhandenen Weltpersonen- und Partnerschafts-IDs; die älteren Schreib-IDs hefin-dieniddiwr und rhondda-dieniddiwr bleiben aus Stabilitätsgründen erhalten, während der sichtbare Hausname kanonisch Dienyddiwr lautet. Gwenolas in ihrer Marwolaeth-Heimatakte belegtes Todesjahr 1681 ersetzt die bislang offene Gegenaktenangabe. Wiederholte generische Silhouetten werden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Ehen, Hausgeschichte, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Dienyddiwr-Hausseite. Taredd und Irmgard bilden das Gründerpaar; der Punkttrenner der Quelle wird als einziger absoluter serieller Zeitsprung nach dem Hauswappen und vor Trayvon/Arianell geführt. Die Ritterfürstenfolge lautet Taredd, Trayvon, Gruffydd, Anarawd, Mervyn und Robyert; Robyn und Arawn bilden die ausdrückliche Erbfolge. Gwennan und Delwen sind anhand ihrer Quellporträts männlich und führen ihre jeweiligen Dienyddiwr-Linien fort. Die dreizehn verheirateten Dienyddiwr-Frauen ohne fortgeführten Dienyddiwr-Zweig besitzen direkte Zielhausknoten. Kinder aus den Zielhäusern Arth, Pendrag, Illewod, Penderyn und Aderyn werden nicht parallel in dieser Akte kopiert. Gemeinsame Personen und Ehen mit Arth, Pendrag, Wylan, Illewod, Grawn, Penderyn, Ceirwyn und Aderyn behalten ihre vorhandenen Weltpersonen- und Partnerschafts-IDs; die älteren Schreib-IDs hefin-dieniddiwr und rhondda-dieniddiwr bleiben aus Stabilitätsgründen erhalten, während der sichtbare Hausname kanonisch Dienyddiwr lautet. Die Unigol-Gegenakte identifiziert Gwennans Frau als Sioned Unigol und führt dieselbe Weltpersonen-ID. Gwenolas in ihrer Marwolaeth-Heimatakte belegtes Todesjahr 1681 ersetzt die bislang offene Gegenaktenangabe. Wiederholte generische Silhoutten werden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']

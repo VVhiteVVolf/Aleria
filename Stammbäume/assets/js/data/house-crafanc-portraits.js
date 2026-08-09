@@ -56,6 +56,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // Weltpersonen. Wiederholte Standardsilhouetten der Altquelle werden ausgelassen.
 export const HOUSE_CRAFANC_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'trachmyr-unigol': 'assets/images/portraits/haus-unigol/trachmyr-unigol.jpg',
   'artgal-arth': HOUSE_ARTH_PORTRAITS['artgal-arth'],
   'cynwrig-crafanc': HOUSE_ARTH_PORTRAITS['cynwrig-crafanc'],
   'rhynnon-arth': HOUSE_ARTH_PORTRAITS['rhynnon-arth'],

@@ -228,7 +228,7 @@ export const HOUSE_SGWARNOG_FAMILY = Object.freeze({
     spouse('gwendolyn-grawn', "Gwendolyn Grawn O'Glyndraith", 'female', '1672', '', 'house-grawn'),
     spouse('edern-selwyn', "Edern Selwyn O'Caer Eldrith", 'male', '1680', '', 'house-selwyn'),
     spouse('alastar-mac-eala', 'Alastar Mac Eala', 'male', '1670', '1720', 'house-mac-eala'),
-    spouse('ewynn-unigol', "Ewynn Unigol O'Caer Marwon", 'male', '1682', '', 'house-unigol'),
+    spouse('ewynn-unigol', "Ewynn Unigol O'Caer Marwor", 'male', '1682', '', 'house-unigol'),
 
     person('mabon-sgwarnog', 'Mabon Sgwarnog', 'male', '1692'),
     awayWoman('mabli-swgarnog', 'Mabil Sgwarnog', '1694', '', 'Haus Wyrm'),
@@ -329,9 +329,9 @@ export const HOUSE_SGWARNOG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Sgwarnog O'Aldwynd (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Barons- und Erbfolge sowie Porträtzuordnungen folgen der bereitgestellten Sgwarnog-Hausseite und ihrer vollständigen Stammbaumgrafik. Mael und Meiriona bilden das Gründerpaar; das Hauswappen steht direkt unter ihnen und der einzige Punkttrenner wird anschließend als absoluter serieller Zeitsprung vor Mathonwy und Morfudd geführt. Mathonwy und Lynesse führen die Sgwarnog-Linie über Maldwyn, Morcant und Mabon fort. Morfudd, Magwena, Myfanwy, Meiriona, Marsaili, Mabil, Meghan und Meinir besitzen an ihren Ehen direkte Wegverheiratet-Knoten. Gemeinsame Weltpersonen, Partnerschafts-IDs, Teilnehmerreihenfolgen und Porträts mit Grawn, Baedd, Dienyddiwr und Penderyn werden unverändert wiederverwendet. Die Kinder von Maldwyn/Marve und Morcant/Gwendolyn stehen ausschließlich in der fortführenden Sgwarnog-Akte; Nolwen Dienyddiwr sowie Rhon, Revelyn, Dwnn und Jinell Penderyn bleiben ausschließlich in ihren jeweiligen Gegenakten. Wiederholte neutrale Standardsilhouetten werden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Barons- und Erbfolge sowie Porträtzuordnungen folgen der bereitgestellten Sgwarnog-Hausseite und ihrer vollständigen Stammbaumgrafik. Mael und Meiriona bilden das Gründerpaar; das Hauswappen steht direkt unter ihnen und der einzige Punkttrenner wird anschließend als absoluter serieller Zeitsprung vor Mathonwy und Morfudd geführt. Mathonwy und Lynesse führen die Sgwarnog-Linie über Maldwyn, Morcant und Mabon fort. Morfudd, Magwena, Myfanwy, Meiriona, Marsaili, Mabil, Meghan und Meinir besitzen an ihren Ehen direkte Wegverheiratet-Knoten. Gemeinsame Weltpersonen, Partnerschafts-IDs, Teilnehmerreihenfolgen und Porträts mit Grawn, Baedd, Dienyddiwr, Penderyn und Unigol werden unverändert wiederverwendet; Ewynn stammt kanonisch aus Caer Marwor. Die Kinder von Maldwyn/Marve und Morcant/Gwendolyn stehen ausschließlich in der fortführenden Sgwarnog-Akte; Nolwen Dienyddiwr sowie Rhon, Revelyn, Dwnn und Jinell Penderyn bleiben ausschließlich in ihren jeweiligen Gegenakten. Wiederholte neutrale Standardsilhouetten werden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

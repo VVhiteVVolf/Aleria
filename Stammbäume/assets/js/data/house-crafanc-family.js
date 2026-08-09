@@ -243,7 +243,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
     }),
     spouse('wenonah-arth', 'Wenonah Arth', 'female', '1615', '1647', 'house-arth'),
     spouse('taran-walwrs', 'Taran Walwrs', 'male', '1612', '1665', 'house-walwrs'),
-    spouse('trachmyr-unigol', 'Trachmyr Unigol', 'male', '????', '????', 'house-unigol'),
+    spouse('trachmyr-unigol', 'Trachmyr Unigol', 'male', '1628', '1684', 'house-unigol'),
 
     person('clinoch-crafanc', 'Clinoch Crafanc', 'male', '1637', '1698', {
       title: 'Ritterfürst des Hauses Crafanc 1677–1698'
@@ -409,11 +409,11 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-artgal-amdarch',
     sourceModule: "Haus Crafanc O'Talgarth (bereitgestellte Altdaten)",
-    sourceNote: 'Artgal Arth und Amdarch begründen Haus Crafanc. Der Hausknoten und genau ein serieller Zeitsprung stehen vor Caradoc und der älteren Kerenza. Kyndra und Rhynnon Arth begründen direkt Haus Eirth. Die ältere Kerenza, Nesta, die jüngere Kerenza, Andarch, Glaw, Glinda, Glynis und Glesni führen mit geraden Zielhausknoten in ihre jeweiligen Gegenhäuser; deren Kinder bleiben ausschließlich dort. Gwenna bleibt biologischer Crafanc-Spross, trägt als weggegebenes Mündel den dunkelblauen Rahmen und besitzt einen direkten Vermittlungsknoten zu Haus Gafyr. Gegenakten haben bei Widersprüchen Vorrang: die ältere Kerenza lebt 1596–1643, Elisud wird 1661 geboren, Kyndra 1655 und Andarch ist die Ehefrau Gereint Gwialens. Tarans Walwrs-Gegenakte präzisiert seine Lebensdaten auf 1612–1665; Nestas Verbindung führt historisch zur Traeth-Herkunftsakte und nicht zur erst 1720 begründeten Caer-Deheuol-Linie. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Artgal Arth und Amdarch begründen Haus Crafanc. Der Hausknoten und genau ein serieller Zeitsprung stehen vor Caradoc und der älteren Kerenza. Kyndra und Rhynnon Arth begründen direkt Haus Eirth. Die ältere Kerenza, Nesta, die jüngere Kerenza, Andarch, Glaw, Glinda, Glynis und Glesni führen mit geraden Zielhausknoten in ihre jeweiligen Gegenhäuser; deren Kinder bleiben ausschließlich dort. Gwenna bleibt biologischer Crafanc-Spross, trägt als weggegebenes Mündel den dunkelblauen Rahmen und besitzt einen direkten Vermittlungsknoten zu Haus Gafyr. Gegenakten haben bei Widersprüchen Vorrang: die ältere Kerenza lebt 1596–1643, Elisud wird 1661 geboren, Kyndra 1655 und Andarch ist die Ehefrau Gereint Gwialens. Tarans Walwrs-Gegenakte präzisiert seine Lebensdaten auf 1612–1665; Nestas Verbindung führt historisch zur Traeth-Herkunftsakte und nicht zur erst 1720 begründeten Caer-Deheuol-Linie. Die ausgearbeitete Unigol-Gegenakte ergänzt Trachmyrs Lebensdaten 1628–1684 und liefert sein kanonisches Porträt. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',
