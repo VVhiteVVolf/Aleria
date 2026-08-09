@@ -252,30 +252,33 @@ test('ein Import mit neuer fester ID erhaelt die aktuelle Nutzerkennung', () => 
   assert.equal(prepared.data.combatProfile.revision, 999);
 });
 
-test('selectChangedSections meldet nur echte Aenderungen - ein reiner Avatar-Upload laesst Kampfprofil/Inventar unberuehrt', () => {
+test('selectChangedSections meldet nur echte Aenderungen - ein reiner Avatar-Upload laesst Kampfprofil/Inventar/Biographie unberuehrt', () => {
   const baseline = {
     images: { portrait: 'alt.png', emotes: [] },
     inventory: { items: [{ id: 'sword' }] },
-    combatProfile: { weapons: [{ id: 'axe' }] }
+    combatProfile: { weapons: [{ id: 'axe' }] },
+    biography: { biographyText: 'Alt' }
   };
-  // Nur das Bild wurde tatsaechlich veraendert, Inventar/Kampfprofil kommen unveraendert
-  // aus dem (potenziell veralteten) Formularzustand zurueck.
+  // Nur das Bild wurde tatsaechlich veraendert, Inventar/Kampfprofil/Biographie kommen
+  // unveraendert aus dem (potenziell veralteten) Formularzustand zurueck.
   const current = {
     images: { portrait: 'neu.png', emotes: [] },
     inventory: { items: [{ id: 'sword' }] },
-    combatProfile: { weapons: [{ id: 'axe' }] }
+    combatProfile: { weapons: [{ id: 'axe' }] },
+    biography: { biographyText: 'Alt' }
   };
-  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), ['images']);
+  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile', 'biography']), ['images']);
 });
 
-test('Profil, Avatare, Inventar und Charakterbogen werden als vier getrennte Schreibbereiche erkannt', () => {
+test('Profil, Avatare, Inventar, Charakterbogen und Biographie werden als fuenf getrennte Schreibbereiche erkannt', () => {
   const baseline = {
     profile: { name: 'Fenrir', bio: 'Alt' },
     images: { portrait: 'fenrir.png', imageSets: [] },
     inventory: { revision: 10, items: [{ id: 'axe' }] },
-    combatProfile: { revision: 10, weapons: [{ id: 'axe' }] }
+    combatProfile: { revision: 10, weapons: [{ id: 'axe' }] },
+    biography: { biographyText: 'Alt' }
   };
-  const sectionNames = ['profile', 'images', 'inventory', 'combatProfile'];
+  const sectionNames = ['profile', 'images', 'inventory', 'combatProfile', 'biography'];
 
   for (const sectionName of sectionNames) {
     const current = structuredClone(baseline);
@@ -289,16 +292,20 @@ test('Profil, Avatare, Inventar und Charakterbogen werden als vier getrennte Sch
 });
 
 test('selectChangedSections erkennt Aenderungen in mehreren Abschnitten gleichzeitig', () => {
-  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
-  const current = { images: { a: 1 }, inventory: { a: 2 }, combatProfile: { a: 2 } };
-  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), ['inventory', 'combatProfile']);
+  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 }, biography: { a: 1 } };
+  const current = { images: { a: 1 }, inventory: { a: 2 }, combatProfile: { a: 2 }, biography: { a: 2 } };
+  assert.deepEqual(
+    selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile', 'biography']),
+    ['inventory', 'combatProfile', 'biography']
+  );
 });
 
 test('ein importierter Charakterbogen wird gegen den zuvor geladenen Serverstand verglichen', () => {
   const persistedBaseline = {
     images: { portrait: 'fenrir-alt.png' },
     inventory: { items: [{ id: 'placeholder-weapon', name: 'Hauptwaffe' }] },
-    combatProfile: { weapons: [{ id: 'default-unarmed-melee', name: 'Nahkampf' }] }
+    combatProfile: { weapons: [{ id: 'default-unarmed-melee', name: 'Nahkampf' }] },
+    biography: { biographyText: 'Alt' }
   };
   const importedDraft = {
     images: { portrait: 'fenrir-neu.png' },
@@ -309,18 +316,22 @@ test('ein importierter Charakterbogen wird gegen den zuvor geladenen Serverstand
         { id: 'fenrir-greataxe', name: 'Großaxt' },
         { id: 'fenrir-throwing-axe', name: 'Wurfaxt' }
       ]
-    }
+    },
+    biography: { biographyText: 'Neu' }
   };
   assert.deepEqual(
-    selectChangedSections(importedDraft, persistedBaseline, ['images', 'inventory', 'combatProfile']),
-    ['images', 'inventory', 'combatProfile'],
-    'die importierten Waffen müssen beim unmittelbaren Vollspeichern als Änderung vorliegen'
+    selectChangedSections(importedDraft, persistedBaseline, ['images', 'inventory', 'combatProfile', 'biography']),
+    ['images', 'inventory', 'combatProfile', 'biography'],
+    'die importierten Waffen und die importierte Biographie müssen beim unmittelbaren Vollspeichern als Änderung vorliegen'
   );
 });
 
 test('selectChangedSections behandelt eine fehlende Baseline (neu angelegte Figur) als "alles geaendert"', () => {
-  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
-  assert.deepEqual(selectChangedSections(current, null, ['images', 'inventory', 'combatProfile']), ['images', 'inventory', 'combatProfile']);
+  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 }, biography: { a: 1 } };
+  assert.deepEqual(
+    selectChangedSections(current, null, ['images', 'inventory', 'combatProfile', 'biography']),
+    ['images', 'inventory', 'combatProfile', 'biography']
+  );
 });
 
 test('detectStaleCharacterFields funktioniert mit eigenen Feldnamen (Kreaturen: loot statt inventory)', () => {
@@ -339,7 +350,18 @@ test('stampFreshRevisions funktioniert mit eigener Feldliste (Kreaturen: loot st
 });
 
 test('selectChangedSections meldet keine Aenderung, wenn ueberhaupt nichts angefasst wurde', () => {
-  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
-  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
-  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), []);
+  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 }, biography: { a: 1 } };
+  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 }, biography: { a: 1 } };
+  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile', 'biography']), []);
+});
+
+test('stampFreshRevisions laesst ein mitgeschicktes biography-Feld unangetastet (kein Revisionsschutz noetig)', () => {
+  const stamped = stampFreshRevisions(
+    { name: 'Rhiannon', combatProfile: { revision: 1 }, inventory: { revision: 1 }, biography: { biographyText: 'x' } },
+    ['combatProfile', 'inventory'],
+    999
+  );
+  assert.equal(stamped.combatProfile.revision, 999);
+  assert.equal(stamped.inventory.revision, 999);
+  assert.deepEqual(stamped.biography, { biographyText: 'x' }, 'Biographie ist kein revisionsgeschuetztes Feld wie Inventar/Kampfprofil');
 });

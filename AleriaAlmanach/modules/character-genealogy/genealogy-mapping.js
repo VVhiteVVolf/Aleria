@@ -220,6 +220,9 @@ export function buildImportedCharacter(candidate, existing = null, now = new Dat
     // jeweils aktuellen Serverstand unangetastet. Nur eine neu angelegte Figur (kein "existing")
     // braucht von Anfang an ein Inventar-Feld.
     ...(existing ? {} : { inventory: prior.inventory && typeof prior.inventory === 'object' ? prior.inventory : null }),
+    // Dieselbe Regel gilt fuer die Biographie: eine Stammbaum-Verknuepfung/-Aktualisierung darf
+    // eine bereits gesetzte Biographie niemals ueberschreiben.
+    ...(existing ? {} : { biography: prior.biography && typeof prior.biography === 'object' ? prior.biography : null }),
     identity: normalizeCharacterIdentity({ worldPersonId: candidate.worldPersonId }),
     genealogy
   };

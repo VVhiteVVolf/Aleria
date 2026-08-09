@@ -38,6 +38,7 @@ function populateCharacterProfileForm(c = {}) {
   syncCharacterGenealogyFields(c);
   initCharacterImageSetEditor(c);
   if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
+  if (typeof initCharacterBiographyTab === 'function') initCharacterBiographyTab(c);
   window.AleriaCharacterCombatProfile?.init?.(c);
 
   const equipmentBaseline = collectCharacterEquipmentProfileData(c);
@@ -45,7 +46,8 @@ function populateCharacterProfileForm(c = {}) {
     profile: collectCharacterProfileSectionData(c),
     images: collectCharacterImageSetEditorData(),
     inventory: equipmentBaseline.inventory,
-    combatProfile: equipmentBaseline.combatProfile
+    combatProfile: equipmentBaseline.combatProfile,
+    biography: collectCharacterBiographyData()
   };
 }
 
@@ -193,13 +195,17 @@ function getUnsavedCharacterProfileSectionLabels() {
   const equipment = collectCharacterEquipmentProfileData(existing);
   const current = {
     profile: collectCharacterProfileSectionData(existing),
+    images: collectCharacterImageSetEditorData(),
     inventory: equipment.inventory,
-    combatProfile: equipment.combatProfile
+    combatProfile: equipment.combatProfile,
+    biography: collectCharacterBiographyData()
   };
   const labels = {
     profile: 'Profil',
+    images: 'Bilder & Emotes',
     inventory: 'Inventar',
-    combatProfile: 'Charakterbogen'
+    combatProfile: 'Charakterbogen',
+    biography: 'Biographie'
   };
   return window.AleriaCharacterSaveGuard
     .selectChangedSections(current, _charProfileLoadedSnapshot, Object.keys(labels))
@@ -445,7 +451,8 @@ function collectCharacterProfileDataFromForm() {
     updatedAt: now,
     ...imageSetData,
     inventory: equipmentData.inventory,
-    combatProfile: equipmentData.combatProfile
+    combatProfile: equipmentData.combatProfile,
+    biography: collectCharacterBiographyData()
   };
 }
 
@@ -601,28 +608,31 @@ async function saveCharacterOnce(options = {}) {
       })
     : collectCharacterEquipmentProfileData(recordSource);
 
-  // Profil, Bilder & Emotes, Inventar und Kampfdaten sind vier eigenständige Bereiche - der
-  // gemeinsame "Speichern"-Knopf darf einen davon nur dann tatsächlich mit anfassen, wenn er in
-  // dieser Sitzung auch wirklich bearbeitet wurde. Sonst würde z.B. ein reiner Avatar-Upload das
-  // Kampfprofil/Inventar mit dem (möglicherweise veralteten) beim Öffnen geladenen Stand
-  // überschreiben. Bei einer neu angelegten Figur (kein Schnappschuss vorhanden) greift die
-  // Prüfung nicht - die braucht von Anfang an ein vollständiges Kampfprofil/Inventar/Bilderset.
+  // Profil, Bilder & Emotes, Inventar, Kampfdaten und Biographie sind fünf eigenständige
+  // Bereiche - der gemeinsame "Speichern"-Knopf darf einen davon nur dann tatsächlich mit
+  // anfassen, wenn er in dieser Sitzung auch wirklich bearbeitet wurde. Sonst würde z.B. ein
+  // reiner Avatar-Upload das Kampfprofil/Inventar mit dem (möglicherweise veralteten) beim
+  // Öffnen geladenen Stand überschreiben. Bei einer neu angelegten Figur (kein Schnappschuss
+  // vorhanden) greift die Prüfung nicht - die braucht von Anfang an ein vollständiges
+  // Kampfprofil/Inventar/Bilderset.
   const baseline = saveTargetId && !replaceExisting ? _charProfileLoadedSnapshot : null;
   const current = {
     profile: profileData,
     images: imageSetData,
     inventory: equipmentData.inventory,
-    combatProfile: equipmentData.combatProfile
+    combatProfile: equipmentData.combatProfile,
+    biography: collectCharacterBiographyData()
   };
   const changedSections = new Set(window.AleriaCharacterSaveGuard.selectChangedSections(
     current,
     baseline,
-    ['profile', 'images', 'inventory', 'combatProfile']
+    ['profile', 'images', 'inventory', 'combatProfile', 'biography']
   ));
   const profileChanged = changedSections.has('profile');
   const imagesChanged = changedSections.has('images');
   const inventoryChanged = changedSections.has('inventory');
   const combatProfileChanged = changedSections.has('combatProfile');
+  const biographyChanged = changedSections.has('biography');
 
   if (!changedSections.size) {
     status.style.color = 'var(--gold)';
@@ -644,7 +654,8 @@ async function saveCharacterOnce(options = {}) {
     updatedAt: now,
     ...(imagesChanged ? imageSetData : {}),
     ...(inventoryChanged ? { inventory: equipmentData.inventory } : {}),
-    ...(combatProfileChanged ? { combatProfile: equipmentData.combatProfile } : {})
+    ...(combatProfileChanged ? { combatProfile: equipmentData.combatProfile } : {}),
+    ...(biographyChanged ? { biography: current.biography } : {})
   };
   delete data.id;
   delete data._builtin;
@@ -709,7 +720,8 @@ async function saveCharacterOnce(options = {}) {
       profile: profileChanged ? profileData : (baseline?.profile || current.profile),
       images: imagesChanged ? imageSetData : (baseline?.images || current.images),
       inventory: persistedEquipment?.inventory || baseline?.inventory || current.inventory,
-      combatProfile: persistedEquipment?.combatProfile || baseline?.combatProfile || current.combatProfile
+      combatProfile: persistedEquipment?.combatProfile || baseline?.combatProfile || current.combatProfile,
+      biography: biographyChanged ? current.biography : (baseline?.biography || current.biography)
     };
     _pendingCharacterImport = null;
     renderCharSubtabs();

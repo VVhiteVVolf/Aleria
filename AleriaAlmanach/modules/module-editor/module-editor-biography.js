@@ -277,7 +277,7 @@ function collectModuleBiographyConnections(card) {
 }
 
 function addModuleBiographyStatRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = button.closest('.module-editor-field')?.querySelector('.module-biography-stats')
     || pageCard?.querySelector('.module-biography-stats');
   if (!pageCard || !wrap) return;
@@ -287,7 +287,7 @@ function addModuleBiographyStatRow(button) {
 }
 
 function removeModuleBiographyStatRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-biography-stat-row');
   const wrap = button.closest('.module-editor-field')?.querySelector('.module-biography-stats')
     || pageCard?.querySelector('.module-biography-stats');
@@ -300,7 +300,7 @@ function removeModuleBiographyStatRow(button) {
 }
 
 function addModuleBiographyAbilityRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = pageCard?.querySelector('.module-biography-abilities');
   if (!pageCard || !wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
@@ -309,7 +309,7 @@ function addModuleBiographyAbilityRow(button) {
 }
 
 function removeModuleBiographyAbilityRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-biography-ability-row');
   const wrap = pageCard?.querySelector('.module-biography-abilities');
   if (!pageCard || !row || !wrap) return;
@@ -321,7 +321,7 @@ function removeModuleBiographyAbilityRow(button) {
 }
 
 function addModuleBiographySectionRow(button, position = 'afterIntro') {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = pageCard?.querySelector('.module-biography-sections');
   if (!pageCard || !wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
@@ -335,7 +335,7 @@ function addModuleBiographySectionRow(button, position = 'afterIntro') {
 }
 
 function removeModuleBiographySectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-biography-section-row');
   const wrap = pageCard?.querySelector('.module-biography-sections');
   if (!pageCard || !row || !wrap) return;
@@ -347,7 +347,7 @@ function removeModuleBiographySectionRow(button) {
 }
 
 function addModuleBiographyDocumentRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = pageCard?.querySelector('.module-biography-documents');
   if (!pageCard || !wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
@@ -356,7 +356,7 @@ function addModuleBiographyDocumentRow(button) {
 }
 
 function removeModuleBiographyDocumentRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-biography-document-row');
   const wrap = pageCard?.querySelector('.module-biography-documents');
   if (!pageCard || !row || !wrap) return;
@@ -368,7 +368,7 @@ function removeModuleBiographyDocumentRow(button) {
 }
 
 function addModuleBiographyConnectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = pageCard?.querySelector('.module-biography-connections');
   if (!pageCard || !wrap) return;
   const kind = button.dataset.biographyConnectionKind === 'heading' ? 'heading' : 'connection';
@@ -381,7 +381,7 @@ function addModuleBiographyConnectionRow(button) {
 }
 
 function removeModuleBiographyConnectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-biography-connection-row');
   const wrap = pageCard?.querySelector('.module-biography-connections');
   if (!pageCard || !row || !wrap) return;

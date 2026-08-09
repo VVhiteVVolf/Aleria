@@ -36,6 +36,16 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'import-biography-module') {
+    if (typeof openCurrentCharacterBiographyImportFilePicker === 'function') openCurrentCharacterBiographyImportFilePicker();
+    return;
+  }
+
+  if (action === 'export-biography-module') {
+    if (typeof exportCurrentCharacterBiographyModule === 'function') exportCurrentCharacterBiographyModule();
+    return;
+  }
+
   if (action === 'save') {
     void saveCharacter().catch(error => {
       const message = getFriendlyErrorMessage(error, 'Charakter konnte nicht gespeichert werden.');

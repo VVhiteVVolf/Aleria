@@ -214,6 +214,7 @@ function buildCommentCharacterSaveData(char, emotes, portraitFallback = null, im
     profileLink: char.profileLink || '',
     playerOwner: normalizeCharacterPlayerOwner(char.playerOwner || char.playedBy || char.player),
     bio: char.bio || '',
+    biography: char.biography && typeof char.biography === 'object' ? char.biography : null,
     aliases: Array.isArray(char.aliases) ? char.aliases : [],
     archived: !!char.archived,
     createdAt: char.createdAt || now,

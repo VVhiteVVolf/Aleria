@@ -76,7 +76,7 @@ function collectModuleSimpleLineRows(card, listName) {
 
 function addModuleSimpleLineRow(button, listName) {
   const config = getModuleSimpleLineConfig(listName);
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const wrap = pageCard?.querySelector(`[data-simple-line-list="${listName}"]`);
   if (!pageCard || !wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
@@ -85,7 +85,7 @@ function addModuleSimpleLineRow(button, listName) {
 }
 
 function removeModuleSimpleLineRow(button) {
-  const pageCard = button.closest('.module-page-card');
+  const pageCard = button.closest('.module-page-card') || button.closest('[data-biography-embedded-card]');
   const row = button.closest('.module-simple-line-row');
   const wrap = row?.parentElement;
   if (!pageCard || !row || !wrap) return;

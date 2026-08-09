@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260803-character-image-sets-v1">
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260803-composer-costs-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
-<link rel="stylesheet" href="./styles/characters.css?v=20260803-character-image-sets-v1">
+<link rel="stylesheet" href="./styles/characters.css?v=20260809-character-biography-tab-v1">
 <link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260808-combat-cards-v1">
 <link rel="stylesheet" href="./styles/character-archive.css?v=20260810-character-archive-groups-v1">
 <link rel="stylesheet" href="./styles/character-combat-setup.css?v=20260803-character-creation-v1">
@@ -82,7 +82,7 @@
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260802-combat-state-v2">
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260808-shared-editor-role-removed-v1"></script>
-  <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260808-character-storage-audit-v1"></script>
+  <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260809-character-biography-tab-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
@@ -138,7 +138,7 @@
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260712-name-list-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260708-house-template-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/module-editor/module-editor-scene-blocks.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-comment-blocks.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-page-cards.js?v=20260715-family-workbench-v1" defer></script>
@@ -148,7 +148,7 @@
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260807-save-guard-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-biography.js?v=20260712-image-tabs-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-biography.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
@@ -238,13 +238,14 @@
   <script src="./modules/characters/character-avatar-import.js?v=20260808-character-media-save-v1" defer></script>
   <script src="./modules/characters/character-album-import.js?v=20260808-character-media-save-v1" defer></script>
   <script src="./modules/characters/character-image-set-editor.js?v=20260808-character-sections-v1" defer></script>
-  <script src="./modules/characters/character-profile.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script src="./modules/characters/character-profile.js?v=20260809-character-biography-tab-v1" defer></script>
+  <script src="./modules/characters/character-biography-tab.js?v=20260809-character-biography-tab-v1" defer></script>
   <script type="module" src="./modules/characters/character-image-library-autosave.js?v=20260808-character-storage-audit-v1"></script>
-  <script src="./modules/characters/character-bulk-actions.js?v=20260808-character-storage-audit-v1" defer></script>
+  <script src="./modules/characters/character-bulk-actions.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20260808-character-storage-audit-v1" defer></script>
-  <script src="./modules/characters/character-profile-events.js?v=20260808-character-media-save-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20260809-character-biography-tab-v1" defer></script>
+  <script src="./modules/characters/character-profile-events.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
@@ -1054,6 +1055,7 @@
     <div class="char-profile-header">
       <div class="char-profile-tabs">
         <button class="char-profile-tab active" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="info">✦ Profil</button>
+        <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="biography">✎ Biographie</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="bilder">⊞ Bilder &amp; Emotes</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="inventory">✦ Inventar</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="combat">⚔ Kampfdaten</button>
@@ -1185,6 +1187,23 @@
           <input type="checkbox" id="cp-archived">
           <span>Charakter archivieren</span>
         </label>
+      </div>
+    </div>
+
+    <!-- TAB: BIOGRAPHIE -->
+    <div class="char-tab-panel" id="cp-tab-biography">
+      <div class="cp-biography-panel">
+        <div class="cp-biography-toolbar">
+          <div>
+            <div class="cp-section-title">Biographie</div>
+            <div class="char-field-hint">Eigenständiger Bereich, unabhängig von Profil/Bilder/Inventar/Kampfdaten. Import/Export hier betrifft ausschließlich die Biographie-Datei (gleiches Format wie im Stammbaum-Editor) – die Speicherung selbst läuft weiterhin über den Speichern-Knopf.</div>
+          </div>
+          <div class="cp-biography-actions">
+            <button class="comment-btn-cancel" type="button" data-char-profile-action="import-biography-module" title="Nur die Biographie aus einer *-biographie.json Datei übernehmen">Biographie importieren</button>
+            <button class="comment-btn-cancel" type="button" data-char-profile-action="export-biography-module" title="Nur die Biographie als eigenständige Datei exportieren">Biographie exportieren</button>
+          </div>
+        </div>
+        <div id="cp-biography-editor" class="cp-biography-editor"></div>
       </div>
     </div>
 

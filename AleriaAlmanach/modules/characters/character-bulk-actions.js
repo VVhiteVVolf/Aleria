@@ -130,6 +130,7 @@ function buildStoredCharacterFromRecord(char, archived) {
     profileLink: cloned.profileLink || '',
     playerOwner: normalizeCharacterPlayerOwner(cloned.playerOwner),
     bio: cloned.bio || '',
+    biography: cloned.biography && typeof cloned.biography === 'object' ? cloned.biography : null,
     aliases: cloned.aliases || [],
     archived: !!archived,
     createdAt: cloned.createdAt || now,
