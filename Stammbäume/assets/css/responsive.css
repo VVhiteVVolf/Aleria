@@ -1,10 +1,29 @@
+@media (max-width: 88rem) {
+  .app-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-tools {
+    flex: 1 1 36rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+
+  .header-stats {
+    display: none;
+  }
+
+  .workspace-mode-switch {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
 @media (max-width: 78rem) {
   .workspace {
     grid-template-columns: minmax(0, 1fr) 19rem;
-  }
-
-  .toolbar .button span {
-    display: none;
   }
 
   .search-field {
@@ -25,10 +44,6 @@
     align-items: flex-end;
     flex-direction: column;
     gap: 0.65rem;
-  }
-
-  .header-stats {
-    display: none;
   }
 
   .toolbar {
@@ -78,6 +93,10 @@
   .header-tools,
   .workspace-mode-switch {
     width: 100%;
+  }
+
+  .header-tools {
+    flex: 0 1 auto;
   }
 
   .workspace-mode-switch {

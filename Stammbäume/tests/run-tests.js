@@ -1572,6 +1572,29 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
 });
 
+test('bündelt seltene Familienwerkzeuge in klar benannten Toolbar-Menüs', async () => {
+  const html = await readFile(new URL('../Stammbaum.html', import.meta.url), 'utf8');
+  const controller = await readFile(new URL('../assets/js/modules/editor-toolbar/editor-toolbar-controller.js', import.meta.url), 'utf8');
+  const styles = await readFile(new URL('../assets/css/editor-toolbar.css', import.meta.url), 'utf8');
+  const toolbar = html.match(/<section class="toolbar"[\s\S]+?<\/section>/)?.[0] || '';
+
+  assert.equal((toolbar.match(/data-toolbar-menu/g) || []).length, 4);
+  assert.match(toolbar, />Ansicht<\/summary>/);
+  assert.match(toolbar, />Baum bearbeiten<\/summary>/);
+  assert.match(toolbar, />Familie<\/summary>/);
+  assert.match(toolbar, />Export &amp; Backup<\/summary>/);
+  assert.match(toolbar, /Ausgangsansicht/);
+  assert.match(toolbar, /Unverbundene Person anlegen/);
+  assert.match(toolbar, /Nur auf diesem Gerät/);
+  assert.doesNotMatch(toolbar, /href="(?:index|register)\.html"/);
+  assert.match(html, /<a class="button button--quiet" href="index\.html">Startseite<\/a>/);
+  assert.match(html, /<a class="button button--quiet" href="register\.html">Familienregister<\/a>/);
+  assert.match(html, /assets\/css\/editor-toolbar\.css/);
+  assert.match(controller, /closeMenus/);
+  assert.match(controller, /event\.key === 'Escape'/);
+  assert.match(styles, /\.toolbar-menu__panel/);
+});
+
 test('übernimmt den Biographie-Vertrag des Almanachs als Personen-Erweiterung', () => {
   const module = normalizePersonBiographyModule({
     stats: [{ label: 'Haus', value: 'Haus Arwydd' }],

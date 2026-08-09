@@ -4,6 +4,7 @@ import { createEmptyFamily, createFoundingFamily } from '../domain/family-factor
 import { createFamilyGraph } from '../domain/family-graph.js';
 import { formatHouseProfile, getHouseRank, getHouseRankIcon, isHouseProfileEmpty } from '../domain/house-profile.js';
 import { createAlmanachCharacterController } from '../modules/almanach-bridge/almanach-character-controller.js';
+import { createEditorToolbarController } from '../modules/editor-toolbar/editor-toolbar-controller.js';
 import { buildRegisteredHouseIndex } from '../modules/family-assets/house-emblem-index.js';
 import { createTreeGeneratorController } from '../modules/tree-generator/tree-generator-controller.js';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
@@ -103,6 +104,10 @@ export function createAppController({
   const importInput = documentRef.getElementById('family-import');
   const bundleImportInput = documentRef.getElementById('family-bundle-import');
   const toast = createToast(documentRef.getElementById('app-toast'));
+  const editorToolbarController = createEditorToolbarController({
+    toolbar: documentRef.querySelector('.toolbar'),
+    documentRef
+  });
   const localFamilySource = latestLocalFamilySource || Object.freeze({
     loadById: familyId => loadFamilyById(familyId, runtime.localStorage),
     listRecords: () => listFamilyRecords(runtime.localStorage)
@@ -1526,6 +1531,7 @@ export function createAppController({
       element.textContent = String(ALERIA_CURRENT_YEAR);
     });
     if (isEditing) renderFamilyLegend(documentRef.getElementById('family-legend'));
+    if (isEditing) editorToolbarController.init();
     documentRef.addEventListener('click', onClick);
     documentRef.addEventListener('input', onInput);
     documentRef.addEventListener('change', onChange);
@@ -1554,6 +1560,7 @@ export function createAppController({
     documentRef.removeEventListener('change', onChange);
     documentRef.removeEventListener('submit', onSubmit);
     documentRef.removeEventListener('keydown', onKeydown);
+    editorToolbarController.destroy();
     unsubscribe?.();
     chartSession?.destroy();
     personBiographyDialog.destroy();

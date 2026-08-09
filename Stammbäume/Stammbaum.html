@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/editor-toolbar.css">
   <link rel="stylesheet" href="assets/css/family-chart-theme.css">
   <link rel="stylesheet" href="assets/css/family-sync.css">
   <link rel="stylesheet" href="assets/css/almanach-bridge.css">
@@ -58,8 +59,8 @@
             <span>Deploy überspringen</span>
           </label>
           <button class="button button--quiet" type="button" data-action="cloud-reset-origin" data-edit-only hidden>Zum Ursprung</button>
-          <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
-          <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
+          <a class="button button--quiet" href="index.html">Startseite</a>
+          <a class="button button--quiet" href="register.html">Familienregister</a>
           <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
           <a class="button button--quiet" id="view-mode-link" href="?mode=view" target="_blank" rel="noopener" data-edit-only>Ansicht öffnen</a>
         </div>
@@ -74,7 +75,7 @@
         <div class="search-results" id="search-results" hidden></div>
       </div>
 
-      <div class="toolbar-group">
+      <div class="toolbar-group" aria-label="Verlauf">
         <button class="button button--quiet" type="button" data-action="undo" title="Rückgängig" disabled>
           <img class="toolbar-icon toolbar-icon--undo" src="assets/images/toolbar/history-arrow.png" alt="" aria-hidden="true">
           <span>Rückgängig</span>
@@ -85,51 +86,89 @@
         </button>
       </div>
 
-      <div class="toolbar-group">
+      <div class="toolbar-group" aria-label="Ansicht">
         <button class="button button--quiet" type="button" data-action="fit-chart">
           <img class="toolbar-icon" src="assets/images/toolbar/fit-chart.png" alt="" aria-hidden="true">
           <span>Einpassen</span>
         </button>
-        <button class="button button--quiet" type="button" data-action="show-default-view">
-          <img class="toolbar-icon" src="assets/images/toolbar/overview.png" alt="" aria-hidden="true">
-          <span>Gesamtansicht</span>
-        </button>
-        <button class="button button--quiet" type="button" data-action="toggle-orientation">
-          <img class="toolbar-icon" src="assets/images/toolbar/orientation.png" alt="" aria-hidden="true">
-          <span>Ausrichtung</span>
-        </button>
-        <button class="button button--quiet" type="button" data-action="open-lineage-settings">
-          <img class="toolbar-icon" src="assets/images/toolbar/lineage.png" alt="" aria-hidden="true">
-          <span>Baumaufbau</span>
-        </button>
-        <button class="button button--quiet" type="button" data-action="open-line-colors">
-          <img class="toolbar-icon" src="assets/images/toolbar/line-colors.png" alt="" aria-hidden="true">
-          <span>Linienfarben</span>
-        </button>
+        <details class="toolbar-menu" data-toolbar-menu>
+          <summary class="button button--quiet toolbar-menu__trigger">Ansicht</summary>
+          <div class="toolbar-menu__panel" aria-label="Ansichtsoptionen">
+            <button class="toolbar-menu__item" type="button" data-action="show-default-view">
+              <img class="toolbar-icon" src="assets/images/toolbar/overview.png" alt="" aria-hidden="true">
+              <span>Ausgangsansicht</span>
+            </button>
+            <button class="toolbar-menu__item" type="button" data-action="toggle-orientation">
+              <img class="toolbar-icon" src="assets/images/toolbar/orientation.png" alt="" aria-hidden="true">
+              <span>Ausrichtung wechseln</span>
+            </button>
+            <button class="toolbar-menu__item" type="button" data-action="open-line-colors">
+              <img class="toolbar-icon" src="assets/images/toolbar/line-colors.png" alt="" aria-hidden="true">
+              <span>Linienfarben</span>
+            </button>
+          </div>
+        </details>
       </div>
 
-      <div class="toolbar-group" aria-label="Baum ergänzen">
-        <button class="button button--quiet" type="button" data-action="open-person-create">＋ Person</button>
-        <button class="button button--quiet" type="button" data-action="open-cadet-create">＋ Hausverknüpfung</button>
-        <button class="button button--quiet" type="button" data-action="open-time-jump-create">＋ Zeitsprung</button>
+      <div class="toolbar-group" aria-label="Baum bearbeiten">
+        <details class="toolbar-menu" data-toolbar-menu>
+          <summary class="button button--quiet toolbar-menu__trigger">Baum bearbeiten</summary>
+          <div class="toolbar-menu__panel" aria-label="Baum bearbeiten">
+            <button class="toolbar-menu__item" type="button" data-action="open-lineage-settings">
+              <img class="toolbar-icon" src="assets/images/toolbar/lineage.png" alt="" aria-hidden="true">
+              <span>Gründerpaar und Hauswappen</span>
+            </button>
+            <button class="toolbar-menu__item" type="button" data-action="open-cadet-create">＋ Hausverknüpfung</button>
+            <button class="toolbar-menu__item" type="button" data-action="open-time-jump-create">＋ Zeitsprung</button>
+            <div class="toolbar-menu__divider" role="separator"></div>
+            <p class="toolbar-menu__hint">Spezialfall</p>
+            <button class="toolbar-menu__item" type="button" data-action="open-person-create">Unverbundene Person anlegen</button>
+          </div>
+        </details>
         <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Abgleich</button>
       </div>
 
       <div class="toolbar-group" aria-label="Familienakte">
-        <button class="button" type="button" data-action="start-new-family" title="Haus und Gründerpaar in einem Schritt anlegen">＋ Neue Familie · Schnellstart</button>
-        <button class="button" type="button" data-action="open-tree-generator" title="Familie automatisch aus einer Vorlage oder etappenweise aufbauen">Stammbaum-Generator</button>
-        <button class="button button--quiet" type="button" data-action="open-family-save">Im Familienregister speichern</button>
-        <a class="button button--quiet" href="index.html">Startseite</a>
-        <a class="button button--quiet" href="register.html">Familienregister</a>
+        <details class="toolbar-menu" data-toolbar-menu>
+          <summary class="button toolbar-menu__trigger">Familie</summary>
+          <div class="toolbar-menu__panel" aria-label="Familienaktionen">
+            <button class="toolbar-menu__item" type="button" data-action="open-tree-generator">
+              <span class="toolbar-menu__item-description">
+                <strong>Aktuelle Familie weiterbauen</strong>
+                <small>Geführt oder aus einer Vorlage</small>
+              </span>
+            </button>
+            <button class="toolbar-menu__item" type="button" data-action="start-new-family">
+              <span class="toolbar-menu__item-description">
+                <strong>Neue Familie anlegen</strong>
+                <small>Haus und Gründerpaar als Schnellstart</small>
+              </span>
+            </button>
+            <div class="toolbar-menu__divider" role="separator"></div>
+            <p class="toolbar-menu__hint">Nur auf diesem Gerät</p>
+            <button class="toolbar-menu__item" type="button" data-action="open-family-save">
+              Lokal im Familienregister ablegen
+            </button>
+          </div>
+        </details>
       </div>
 
       <div class="toolbar-group toolbar-group--end" aria-label="Export und Import">
-        <button class="button button--quiet" type="button" data-action="export-png">PNG · hohe Auflösung</button>
-        <button class="button button--quiet" type="button" data-action="export-family" title="Nur die Rohdaten als JSON, ohne Bilder">JSON exportieren</button>
-        <button class="button button--quiet" type="button" data-action="trigger-import" title="Nur Rohdaten aus einer JSON-Datei importieren">JSON importieren</button>
+        <details class="toolbar-menu toolbar-menu--end" data-toolbar-menu>
+          <summary class="button button--quiet toolbar-menu__trigger">Export &amp; Backup</summary>
+          <div class="toolbar-menu__panel" aria-label="Export und Import">
+            <button class="toolbar-menu__item" type="button" data-action="export-png">PNG in hoher Auflösung</button>
+            <div class="toolbar-menu__divider" role="separator"></div>
+            <p class="toolbar-menu__hint">Vollständig mit Bildern</p>
+            <button class="toolbar-menu__item" type="button" data-action="export-family-bundle">Paket exportieren (.zip)</button>
+            <button class="toolbar-menu__item" type="button" data-action="trigger-bundle-import">Paket importieren (.zip)</button>
+            <div class="toolbar-menu__divider" role="separator"></div>
+            <p class="toolbar-menu__hint">Rohdaten ohne Bilder</p>
+            <button class="toolbar-menu__item" type="button" data-action="export-family">JSON exportieren</button>
+            <button class="toolbar-menu__item" type="button" data-action="trigger-import">JSON importieren</button>
+          </div>
+        </details>
         <input class="sr-only" id="family-import" type="file" accept="application/json,.json">
-        <button class="button button--quiet" type="button" data-action="export-family-bundle" title="Vollständiges Paket als .zip (Daten und alle Bilder)">Paket exportieren (.zip)</button>
-        <button class="button button--quiet" type="button" data-action="trigger-bundle-import" title="Vollständiges Paket aus einer .zip-Datei importieren">Paket importieren (.zip)</button>
         <input class="sr-only" id="family-bundle-import" type="file" accept="application/zip,.zip">
       </div>
     </section>

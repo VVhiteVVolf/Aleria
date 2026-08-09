@@ -1,5 +1,6 @@
 .app-shell {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto auto minmax(0, 1fr) auto;
   width: min(100%, 120rem);
   min-height: 100vh;
