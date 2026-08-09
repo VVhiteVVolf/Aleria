@@ -1,0 +1,169 @@
+{
+  "schema": "aleria.biography-module",
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-09T02:58:11.673Z",
+  "personId": "caradog-bastard-tonnarth",
+  "personName": "Caradog Tonnarth",
+  "biographyModule": {
+    "schema": "aleria.biography-module",
+    "schemaVersion": 1,
+    "stats": [
+      [
+        "Vollständiger Name",
+        "Caradog Tonnarth"
+      ],
+      [
+        "Haus",
+        "Haus Tonnarth"
+      ],
+      [
+        "Titel / Anrede",
+        "Bastard aus Gareths Affäre mit Mair"
+      ],
+      [
+        "Geboren",
+        "1718"
+      ],
+      [
+        "Geburtsort",
+        ""
+      ],
+      [
+        "Gestorben",
+        "Lebend"
+      ],
+      [
+        "Alter im Jahr 1740",
+        "22 Jahre"
+      ],
+      [
+        "Geschlecht",
+        "Männlich"
+      ],
+      [
+        "Familienstand",
+        "Ledig"
+      ],
+      [
+        "Rang / Stand",
+        "Bürgerlich, legitimiert"
+      ],
+      [
+        "Tätigkeit",
+        "Schreiber & Adjutant der Tiefenwyrm"
+      ],
+      [
+        "Wohnsitz",
+        "An Bord der Tiefenwyrm"
+      ]
+    ],
+    "quote": "",
+    "quoteBy": "",
+    "biography": {
+      "portraitStages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "sideWidth": 100,
+      "connectionPortraitHeight": 68,
+      "connectionTextOffset": 0,
+      "biographyTitle": "Biografie",
+      "biographyText": "Caradog entstammt dem bürgerlichen Haus Tonnarth. Sein Vater ist Gareth Tonnarth, seine Mutter Mair - eine Affäre Gareths, was ihn zu einem unehelichen Kind macht. Im bürgerlichen Haus Tonnarth sieht man dies jedoch nicht so eng, weshalb Caradog als Kind legitimiert und offiziell anerkannt wurde. Sein Vetter <strong>Llewarch Tonnarth</strong>, einst Idwals Kammerdiener und heute Quartiermeister der <em>Tiefenwyrm</em>, ist ihm bis heute eng verbunden.<br><br>Anders als der Kern der Mannschaft gehörte Caradog nicht von Beginn an zu Idwals Männern. Er wurde erst nachträglich angeheuert - persönlich ausgesucht von <strong>Cadell Ysgrif</strong>, der in ihm sofort den passenden Mann für die schriftlichen Angelegenheiten des Schiffes erkannte. Von allen an Bord verstehen sich die beiden am besten: Ihre Aufgaben ähneln sich, und beide teilen dieselbe ruhige, akribische Art.",
+      "abilitiesTitle": "Persönlichkeit",
+      "abilities": [
+        {
+          "title": "Gebildet",
+          "detail": "Ein belesener Kopf mit klarer Feder, der sich in Sprache und Schrift gleichermaßen zuhause fühlt.",
+          "icon": "../IconOrdner/Traits Icon/Erudite.png"
+        },
+        {
+          "title": "Legitimierter Bastard",
+          "detail": "Obwohl offiziell anerkannt, haftet ihm der Makel unehelicher Geburt in manchen Kreisen noch immer an.",
+          "icon": "../IconOrdner/Traits Icon/Legitimized_bastard.png"
+        },
+        {
+          "title": "Freundlich",
+          "detail": "Er begegnet Offizieren wie einfachen Matrosen gleichermaßen zuvorkommend, was ihm überall an Bord Sympathien einbringt.",
+          "icon": "../IconOrdner/Traits Icon/Kind.png"
+        },
+        {
+          "title": "Geduldig",
+          "detail": "Lange Diktate, umständliche Berichte oder wiederholte Abschriften bringen ihn nicht aus der Ruhe.",
+          "icon": "../IconOrdner/Traits Icon/Patient.png"
+        },
+        {
+          "title": "Schüchtern",
+          "detail": "In größerer Gesellschaft oder gegenüber Fremden zieht er sich lieber zurück, als das Wort zu ergreifen.",
+          "icon": "../IconOrdner/Traits Icon/Shy.png"
+        },
+        {
+          "title": "Ehrlich",
+          "detail": "Was er festhält, entspricht der Wahrheit - Schönfärberei ist ihm in Logbuch wie Gespräch fremd.",
+          "icon": "../IconOrdner/Traits Icon/Honest.png"
+        }
+      ],
+      "extraSections": [],
+      "historyTitle": "Hintergrund",
+      "historyText": "Als Schreiber & Adjutant führt Caradog Idwals Logbuch, schreibt nieder, was der Kapitän ihm diktiert, und verfasst es so, dass es auch später noch lesbar und verständlich bleibt. Daneben assistiert er Cadell Ysgrif, fertigt Abschriften an und kümmert sich allgemein um Korrespondenz und Dokumente an Bord der <em>Tiefenwyrm</em>.",
+      "worksTitle": "Bekannte Werke",
+      "works": [],
+      "triviaTitle": "Trivia",
+      "trivia": [
+        "Versteht sich mit Cadell Ysgrif besser als mit jedem anderen an Bord - ihre Aufgaben liegen eng beieinander."
+      ],
+      "quotesTitle": "Zitate",
+      "quotes": [],
+      "connectionsTitle": "Verbindungen",
+      "connections": [
+        {
+          "type": "heading",
+          "title": "Familie",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Llewarch Tonnarth",
+          "detail": "Vetter & Quartiermeister",
+          "image": "https://i.imgur.com/YXLDnVs.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Vertrauenspersonen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Cadell Ysgrif",
+          "detail": "Schiffsmeier & engster Vertrauter",
+          "image": "https://i.imgur.com/SaDQCjc.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "connection",
+          "name": "Idwal Draig",
+          "detail": "Kapitän",
+          "image": "https://i.imgur.com/ENTDAnR.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Verbindungen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Mannschaft der Tiefenwyrm",
+          "detail": "Schreiber & Adjutant",
+          "image": "https://i.imgur.com/UvZ5sUf.png",
+          "imageFormat": "square"
+        }
+      ],
+      "documentsTitle": "Eigentum & Besitz",
+      "documents": [],
+      "footer": "Personenakte · Caradog Tonnarth"
+    }
+  }
+}

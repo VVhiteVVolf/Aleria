@@ -1,0 +1,162 @@
+{
+  "schema": "aleria.biography-module",
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-09T03:02:57.578Z",
+  "personId": "rhodri-aelmor",
+  "personName": "Rhodri Aelmor",
+  "biographyModule": {
+    "schema": "aleria.biography-module",
+    "schemaVersion": 1,
+    "stats": [
+      [
+        "Vollständiger Name",
+        "Rhodri Aelmor"
+      ],
+      [
+        "Haus",
+        "Haus Aelmor"
+      ],
+      [
+        "Titel / Anrede",
+        "Jüngerer Sohn Goronwy Aelmors"
+      ],
+      [
+        "Geboren",
+        "1720"
+      ],
+      [
+        "Geburtsort",
+        ""
+      ],
+      [
+        "Gestorben",
+        "Lebend"
+      ],
+      [
+        "Alter im Jahr 1740",
+        "20 Jahre"
+      ],
+      [
+        "Geschlecht",
+        "Männlich"
+      ],
+      [
+        "Familienstand",
+        "Ledig"
+      ],
+      [
+        "Rang / Stand",
+        "Ritter, bürgerlicher Herkunft"
+      ],
+      [
+        "Tätigkeit",
+        "Waffenmeister der Tiefenwyrm"
+      ],
+      [
+        "Wohnsitz",
+        "An Bord der Tiefenwyrm"
+      ]
+    ],
+    "quote": "",
+    "quoteBy": "",
+    "biography": {
+      "portraitStages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "sideWidth": 100,
+      "connectionPortraitHeight": 68,
+      "connectionTextOffset": 0,
+      "biographyTitle": "Biografie",
+      "biographyText": "Rhodri entstammt dem bürgerlichen Haus Aelmor aus Gwynthor, bekannten Seeleuten, die dem Haus Draig seit jeher fähige Waffenknechte stellten. Obwohl ein bürgerliches Haus, war bereits sein Großvater Ritter im Dienste Rhodris und kämpfte einst oben in Vennyr. Rhodri selbst diente ihm als Knappe und wuchs so mit dem Handwerk der Waffen auf.<br><br>Nach seinem Ritterschlag - den sein Großvater auf Empfehlung von <strong>Graf Galahad Draig</strong> erwirkte - trat Rhodri in die Dienste des Prinzen <strong>Idwal Draig</strong>.",
+      "abilitiesTitle": "Persönlichkeit",
+      "abilities": [
+        {
+          "title": "Ausdauernd",
+          "detail": "Stunden im Training oder auf Wache können ihn nicht erschöpfen; er hält durch, wo andere längst aufgeben.",
+          "icon": "../IconOrdner/Traits Icon/Tough_soldier.png"
+        },
+        {
+          "title": "Stolz",
+          "detail": "Als Enkel eines geadelten Ritters lässt er niemanden vergessen, wofür seine Familie steht - manchmal mehr, als es die Situation verlangt.",
+          "icon": "../IconOrdner/Traits Icon/Proud.png"
+        },
+        {
+          "title": "Ehrgeizig",
+          "detail": "Er will sich seinen Rang nicht nur durch Herkunft, sondern durch eigene Leistung verdienen und immer wieder aufs Neue beweisen.",
+          "icon": "../IconOrdner/Traits Icon/Ambitious.png"
+        },
+        {
+          "title": "Jähzornig",
+          "detail": "Geduld ist nicht seine Stärke; bei Nachlässigkeit im Training kann seine Stimme schnell laut werden.",
+          "icon": "../IconOrdner/Traits Icon/Wroth.png"
+        },
+        {
+          "title": "Pflichtbewusst",
+          "detail": "Ein gegebener Befehl wird ausgeführt, ganz gleich wie unbequem er ist.",
+          "icon": "../IconOrdner/Traits Icon/Diligent.png"
+        },
+        {
+          "title": "Kräftig",
+          "detail": "Jahre des Waffentrainings haben ihn zu einem der kräftigsten Männer an Bord gemacht.",
+          "icon": "../IconOrdner/Traits Icon/Brawny.png"
+        }
+      ],
+      "extraSections": [],
+      "historyTitle": "Hintergrund",
+      "historyText": "Heute dient Rhodri als <strong>Waffenmeister</strong> an Bord der <em>Tiefenwyrm</em>. Er leitet die Waffenknechte an, überwacht deren Ausbildung im Kampf und weiß auch dem einen oder anderen Ritter noch etwas beizubringen.",
+      "worksTitle": "Bekannte Werke",
+      "works": [],
+      "triviaTitle": "Trivia",
+      "trivia": [
+        "Sein Ritterschlag geht auf eine persönliche Empfehlung Graf Galahad Draigs zurück, die sein Großvater für ihn erwirkte."
+      ],
+      "quotesTitle": "Zitate",
+      "quotes": [],
+      "connectionsTitle": "Verbindungen",
+      "connections": [
+        {
+          "type": "heading",
+          "title": "Vertrauenspersonen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Idwal Draig",
+          "detail": "Kapitän & Prinz, dem er dient",
+          "image": "https://i.imgur.com/ENTDAnR.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Gönner",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Graf Galahad Draig",
+          "detail": "Vermittelte seinen Ritterschlag",
+          "image": "",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Verbindungen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Mannschaft der Tiefenwyrm",
+          "detail": "Waffenmeister",
+          "image": "https://i.imgur.com/UvZ5sUf.png",
+          "imageFormat": "square"
+        }
+      ],
+      "documentsTitle": "Eigentum & Besitz",
+      "documents": [],
+      "footer": "Personenakte · Rhodri Aelmor"
+    }
+  }
+}

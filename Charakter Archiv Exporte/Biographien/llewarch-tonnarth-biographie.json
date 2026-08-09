@@ -1,0 +1,163 @@
+{
+  "schema": "aleria.biography-module",
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-09T03:02:57.578Z",
+  "personId": "llewarch-tonnarth",
+  "personName": "Llewarch Tonnarth",
+  "biographyModule": {
+    "schema": "aleria.biography-module",
+    "schemaVersion": 1,
+    "stats": [
+      [
+        "Vollständiger Name",
+        "Llewarch Tonnarth"
+      ],
+      [
+        "Haus",
+        "Haus Tonnarth"
+      ],
+      [
+        "Titel / Anrede",
+        "Angehöriger des Hauses Tonnarth"
+      ],
+      [
+        "Geboren",
+        "1715"
+      ],
+      [
+        "Geburtsort",
+        ""
+      ],
+      [
+        "Gestorben",
+        "Lebend"
+      ],
+      [
+        "Alter im Jahr 1740",
+        "25 Jahre"
+      ],
+      [
+        "Geschlecht",
+        "Männlich"
+      ],
+      [
+        "Familienstand",
+        "Ledig"
+      ],
+      [
+        "Rang / Stand",
+        "Bürgerlich"
+      ],
+      [
+        "Tätigkeit",
+        "Quartiermeister der Tiefenwyrm"
+      ],
+      [
+        "Wohnsitz",
+        "An Bord der Tiefenwyrm"
+      ]
+    ],
+    "quote": "",
+    "quoteBy": "",
+    "biography": {
+      "portraitStages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "sideWidth": 100,
+      "connectionPortraitHeight": 68,
+      "connectionTextOffset": 0,
+      "biographyTitle": "Biografie",
+      "biographyText": "Llewarch diente ursprünglich als Kammerdiener im Hause Draig. Da <strong>Idwal Draig</strong> jedoch kaum daheim auf der Burg war, stand Llewarch zunächst im Dienst anderer Herrschaften, ehe Idwal ihn schließlich mit an Deck der <em>Tiefenwyrm</em> holte.<br><br>Bevor er zum Quartiermeister wurde, war er ein blasser, dürrer Kammerdiener. Die harte Zeit an Deck hat ihn seither mehr als gestählert und abgehärtet - so sehr, dass ihn selbst seine eigene Familie, allen voran seine Eltern, kaum wiedererkannten.",
+      "abilitiesTitle": "Persönlichkeit",
+      "abilities": [
+        {
+          "title": "Zäh",
+          "detail": "Was ihn früher als dürren Kammerdiener beinahe umgeworfen hätte, steckt er heute mit stoischer Gelassenheit weg.",
+          "icon": "../IconOrdner/Traits Icon/Sturdy.png"
+        },
+        {
+          "title": "Trunkenbold",
+          "detail": "An Land oder unter Deck ist er dafür berüchtigt, jeden an Bord unter den Tisch zu saufen.",
+          "icon": "../IconOrdner/Traits Icon/Drunkard.png"
+        },
+        {
+          "title": "Kräftig",
+          "detail": "Aus dem blassen Kammerdiener von einst ist durch harte Deckarbeit ein kräftiger Seemann geworden.",
+          "icon": "../IconOrdner/Traits Icon/Strong.png"
+        },
+        {
+          "title": "Rüpelhaft",
+          "detail": "Höfische Manieren hat er auf See weitgehend abgelegt; sein Ton ist derb und unverblümt geworden.",
+          "icon": "../IconOrdner/Traits Icon/Rowdy.png"
+        },
+        {
+          "title": "Genügsam",
+          "detail": "Er braucht wenig, um zufrieden zu sein - eine warme Mahlzeit, ein trockenes Lager und Gesellschaft reichen ihm.",
+          "icon": "../IconOrdner/Traits Icon/Content.png"
+        },
+        {
+          "title": "Gesellig",
+          "detail": "Ob beim Kartenspiel, beim Trinken oder bei derben Geschichten - Llewarch findet überall an Bord Gesellschaft.",
+          "icon": "../IconOrdner/Traits Icon/Gregarious.png"
+        }
+      ],
+      "extraSections": [],
+      "historyTitle": "Hintergrund",
+      "historyText": "Heute ist Llewarch als <strong>Quartiermeister</strong> der <em>Tiefenwyrm</em> ein zäher Seemann. Er verwaltet Vorräte, Ausrüstung und Lagerbestände und stellt die Versorgung der Besatzung sicher.",
+      "worksTitle": "Bekannte Werke",
+      "works": [],
+      "triviaTitle": "Trivia",
+      "trivia": [
+        "Wurde nach seiner ersten Zeit an Deck von der eigenen Familie kaum wiedererkannt.",
+        "Gilt an Bord der Tiefenwyrm als unangefochtener Trinkchampion."
+      ],
+      "quotesTitle": "Zitate",
+      "quotes": [],
+      "connectionsTitle": "Verbindungen",
+      "connections": [
+        {
+          "type": "heading",
+          "title": "Familie",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Caradog Tonnarth",
+          "detail": "Vetter & Schreiber",
+          "image": "https://i.imgur.com/LK3q0UI.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Vertrauenspersonen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Idwal Draig",
+          "detail": "Kapitän & einstiger Dienstherr",
+          "image": "https://i.imgur.com/ENTDAnR.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "heading",
+          "title": "Verbindungen",
+          "detail": ""
+        },
+        {
+          "type": "connection",
+          "name": "Mannschaft der Tiefenwyrm",
+          "detail": "Quartiermeister",
+          "image": "https://i.imgur.com/UvZ5sUf.png",
+          "imageFormat": "square"
+        }
+      ],
+      "documentsTitle": "Eigentum & Besitz",
+      "documents": [],
+      "footer": "Personenakte · Llewarch Tonnarth"
+    }
+  }
+}

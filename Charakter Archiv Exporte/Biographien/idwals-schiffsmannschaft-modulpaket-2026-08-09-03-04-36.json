@@ -1,0 +1,951 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-08-09T03:04:36.792Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 2,
+    "section": {
+      "key": "Haus Draig",
+      "tab": "Gruppen",
+      "desc": "",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Haus Draig"
+      ],
+      "nodeId": "node:gruppen:cenyr/celtigerns-wacht/haus-draig"
+    },
+    "entry": {
+      "id": "idwals-schiffsmannschaft",
+      "title": "Idwals Schiffsmannschaft",
+      "subtitle": "Untertitel",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": null,
+      "stamp": "BEREICH · ORT · WELT",
+      "icon": "",
+      "symbol": null,
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/aUWVQc1.jpeg",
+          "imageWidth": 38,
+          "pageTitle": "Die Mannschaft des Tiefenwyrm",
+          "description": "<strong>Tiefenwyrm</strong> ist das persönliche Flaggschiff des Kapitäns <strong>Sir Idwal Draig</strong> und dient dem Haus Draig als Kriegsschiff, Geleitschiff und Symbol seiner Herrschaft über die westlichen Gewässer Celtigerns Wacht.<!--EndFragment--><br><br><!--StartFragment-->Seinen Namen trägt das Schiff zu Ehren des gefallenen Drachenfürsten <strong>Uffyrmael</strong>. Einst galt dieser als höchster unter den Drachen Ordans und trug das leuchtende Platinschuppenkleid des Himmels. Als das avallornische Volk im Äon der Druiden dem Untergang entgegensah, verweigerte Uffyrmael jedoch den Ruf seines Gottes. Zur Strafe entriss Ordan ihm Schwingen, Glieder und seinen himmlischen Glanz, verdammte ihn zur Gestalt eines gewaltigen Meereswyrms und verbannte ihn in die bodenlosen Untiefen zwischen Emberon und Estryll.<br><br><!--StartFragment-->Noch heute erzählen sich Seeleute, dass sein tiefes Grollen aus den westlichen Meeren emporsteigt. Wer es hört, weiß, dass der Tiefenwyrm schläft. Wer es nicht mehr hört, der sollte beten.<br><br><!--StartFragment-->Idwal wählte diesen Namen nicht aus Ehrfurcht vor dem gefallenen Drachen, sondern als Mahnung. Für ihn erinnert <strong>Tiefenwyrm</strong> daran, dass selbst die größten Diener eines Gottes durch Hochmut oder Pflichtvergessenheit zu Fall gebracht werden können. Jeder Mann seiner Besatzung kennt die Geschichte und weiß, weshalb über der Kajüte des Kapitäns ein geschnitzter, schlafender weißer Drache wacht: Nicht als Sinnbild des Ruhmes, sondern als ständige Erinnerung daran, dass Ehre nur durch erfüllte Pflicht Bestand hat.",
+          "quote": "",
+          "quoteBy": "",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Name",
+              "Tiefenwyrm"
+            ],
+            [
+              "Typ",
+              "Schwere Kriegskogge"
+            ],
+            [
+              "Hauptquartier",
+              "Hafen von Gwynthor, Celtigerns Wacht"
+            ],
+            [
+              "Anführer",
+              "Sir Idwal Draig, Kapitän des Hauses Draig"
+            ],
+            [
+              "Zugehörigkeit",
+              "Haus Draig · Grafschaft Celtigerns Wacht · Königreich Cenyr"
+            ],
+            [
+              "Mitgliederstärke",
+              "50 Besatzungsmitglieder"
+            ],
+            [
+              "Dienst",
+              "Küstenschutz, Piratenbekämpfung"
+            ],
+            [
+              "Ziel",
+              "Herrschaft des Hauses Draig auf See durchsetzen."
+            ]
+          ],
+          "commentSequence": [
+            {
+              "narrator": true,
+              "text": "Ein kurzer Kommentar kann die Stimmung bündeln, ohne die Erzählung zu überladen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/ENTDAnR.png",
+          "imageWidth": 30,
+          "pageTitle": "Sir Idwal Draig",
+          "description": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein <b>Vormund </b>Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.<br><br><!--StartFragment-->Zwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter <strong>Trevor Gwyvern</strong>, <strong>Cederic Chwedonol</strong> und <strong>Llewarch Tonnarth</strong>, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+          "quote": "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“",
+          "quoteBy": "— Idwal Draig",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Idwal Draig"
+            ],
+            [
+              "Titel",
+              "Ritter zur See"
+            ],
+            [
+              "Klasse",
+              "Cantref"
+            ],
+            [
+              "Haus",
+              "Haus Draig"
+            ],
+            [
+              "Geburt",
+              "1716"
+            ],
+            [
+              "Alter",
+              "24"
+            ],
+            [
+              "Rolle",
+              "Schiffskapitän"
+            ],
+            [
+              "Status",
+              "Wert"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein <b>Vormund </b>Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.<br><br><!--StartFragment-->Zwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter <strong>Trevor Gwyvern</strong>, <strong>Cederic Chwedonol</strong> und <strong>Llewarch Tonnarth</strong>, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Impulsiv",
+                "detail": "Idwal entscheidet oft aus dem Bauch heraus und handelt lieber sofort, als lange über alle Möglichkeiten nachzudenken.",
+                "icon": "../IconOrdner/Traits Icon/Wroth.png"
+              },
+              {
+                "title": "Bodenständig",
+                "detail": "Er hält wenig von höfischem Gehabe und begegnet einfachen Matrosen mit demselben Respekt wie Rittern, sofern sie ihre Pflicht erfüllen.",
+                "icon": "../IconOrdner/Traits Icon/Humble.png"
+              },
+              {
+                "title": "Schroff",
+                "detail": "Freundliche Worte sind selten seine Stärke; Kritik äußert er direkt, unverblümt und ohne Rücksicht auf verletzten Stolz.",
+                "icon": "../IconOrdner/Traits Icon/Wounded.png"
+              },
+              {
+                "title": "Pflichtbewusst",
+                "detail": "Ein gegebener Befehl oder ein geschworener Eid wiegt für ihn schwerer als persönliche Wünsche oder Bequemlichkeit.",
+                "icon": "../IconOrdner/Traits Icon/Diligent.png"
+              },
+              {
+                "title": "Unerschrocken",
+                "detail": "Gefahr schreckt ihn nicht ab. Er ist oft der Erste, der ein feindliches Schiff entert oder sich einem Sturm entgegenstellt.",
+                "icon": "../IconOrdner/Traits Icon/Brave.png"
+              },
+              {
+                "title": "Einfach gestrickt",
+                "detail": "Komplizierte Zusammenhänge, Intrigen oder philosophische Gedankenspiele interessieren ihn wenig. Er sucht stets nach der einfachsten Lösung.",
+                "icon": "../IconOrdner/Traits Icon/Conscientious.png"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": "Heute dient Sir Idwal als <strong>Kapitän zur See</strong> unter dem Seemarschall des Hauses Draig. Er befehligt die <strong>schwere Kriegskogge <em>Tiefenwyrm</em></strong> und führt eine sechzig Mann starke Besatzung. Das Schiff soll einst <strong>Cahir dem Schwarzen</strong>, seinem Urgroßvater und einem der bedeutendsten Seefahrer des Hauses Draig, gehört haben. Obwohl die <em>Tiefenwyrm</em> nicht zu den größten Kriegsschiffen Cenyrs zählt, gilt sie als außergewöhnlich schnelle, wendige und seetüchtige Kriegskogge. Sie ist ideal für Küstenpatrouillen, Geleitschutz, Aufklärungsfahrten und das rasche Abfangen feindlicher Schiffe in den Gewässern Celtigerns Wacht. Idwal genießt den Ruf eines besonnenen, pflichtbewussten Kapitäns, der seine Mannschaft stets vor sich selbst stellt und auf See ebenso viel Wert auf Disziplin wie auf Kameradschaft legt.",
+            "worksTitle": "Bekannte Werke",
+            "works": [
+              "Nahm als junger Kapitän an der Seeschlacht um Rhonwens Tränen teil und kämpfte gemeinsam mit der Flotte des Hauses Draig gegen eine Piratenflotte.",
+              "Brachte im Laufe seiner Dienstzeit mehrere kleinere Piraten- und Schmugglerbanden zur Strecke und eskortierte zahlreiche Handelsschiffe sicher entlang der Küste.",
+              "Gilt trotz seines jungen Alters als fähiger und verlässlicher Kapitän, dessen disziplinierte Mannschaft und erfolgreiche Patrouillen ihm einen guten Ruf innerhalb der cenyrischen Küstenflotte eingebracht haben."
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Versteht Metaphern und feine Ironie oft erst, wenn sie ihm jemand erklärt."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Vertrauenspersonen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Trevor Gwyvern",
+                "detail": "Erster Maat",
+                "image": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cederic Chwedonol",
+                "detail": "Zweiter Maat",
+                "image": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Llewarch Tonnarth",
+                "detail": "Quartiermeister & Kammerdiener",
+                "image": "https://i.imgur.com/YXLDnVs.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Talon Trydar",
+                "detail": "Knappe",
+                "image": "https://i.imgur.com/pRAdLZx.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Verbindungen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Mannschaft der Tiefenwyrm",
+                "detail": "Schiffskapitän",
+                "image": "https://i.imgur.com/UvZ5sUf.png",
+                "imageFormat": "square"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "..."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "image": null,
+          "pageTitle": "Hierarchie der Mannschaft",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 83,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Die Schiffsmannschaft",
+            "centerLabel": "der Aufbau der Truppe",
+            "emblem": "https://i.imgur.com/IKqEmmm.png",
+            "sideImage": "https://i.imgur.com/KG7Gq27.png",
+            "organizationTitle": "Tiefenwyrm Mannschaft",
+            "motto": "Pflicht. Ehre. See.",
+            "description": "<!--StartFragment-->Die Besatzung der <strong>Tiefenwyrm</strong> setzt sich aus einer kleinen Zahl handverlesener Ritter und Edelknechte zusammen, die gemeinsam mit Sir Idwal Draig aufwuchsen oder sich bereits in jungen Jahren seinen Dienst verdienten. Sie bilden den Offizierskern des Schiffes und übernehmen Ämter wie Erster Maat, Quartiermeister, Bootsmann oder Waffenmeister. Den Großteil der sechzigköpfigen Besatzung stellen erfahrene Matrosen, Waffenknechte, Handwerker und Schiffsjungen, die gemeinsam das Rückgrat der Kriegskogge bilden. Trotz ihrer unterschiedlichen Herkunft gilt an Bord vor allem eines: Wer seinen Dienst erfüllt und seinen Kameraden den Rücken freihält, gehört zur Mannschaft der <strong>Tiefenwyrm</strong>.<!--EndFragment-->",
+            "detailsTitle": "Details",
+            "details": [],
+            "quoteLabel": "Wahrspruch",
+            "quote": ".....",
+            "chartTitle": "Hierarchie des Tiefenwyrm",
+            "chartIntro": "<!--StartFragment-->An Bord der <strong>Tiefenwyrm</strong> herrscht eine klar geregelte Befehlskette. An ihrer Spitze steht Kapitän <strong>Sir Idwal Draig</strong>, dessen Befehle über den Ersten Maat an die Offiziere weitergegeben werden. Diese führen jeweils ihren eigenen Aufgabenbereich, von Navigation und Versorgung bis hin zu Waffen, Verwaltung und Decksdienst. Den Kern der Besatzung bilden schließlich Matrosen, Waffenknechte, Handwerker und Schiffsjungen, die gemeinsam für den Betrieb und die Verteidigung des Schiffes verantwortlich sind. Auf See kennt jeder seinen Platz und seine Aufgabe.<!--EndFragment-->",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Führung",
+                "levels": [
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/ENTDAnR.png",
+                        "title": "Schiffskapitän",
+                        "subtitle": "Idwal Draig",
+                        "text": "<!--StartFragment-->Führt die Tiefenwyrm und trägt die oberste Verantwortung für Schiff, Besatzung und Auftrag.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+                        "title": "Erster Maat",
+                        "subtitle": "Trevor Gwyvern",
+                        "text": "<!--StartFragment-->Stellvertreter des Kapitäns und verantwortlich für die Umsetzung seiner Befehle im täglichen Schiffsbetrieb.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                        "title": "Zweiter Maat",
+                        "subtitle": "Cederic Chwedonol",
+                        "text": "<!--StartFragment-->Unterstützt den Ersten Maat, beaufsichtigt Wachen und übernimmt dessen Aufgaben bei Bedarf.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/rQJvCDf.png",
+                        "title": "Steuermann",
+                        "subtitle": "Ifor Beryn",
+                        "text": "<!--StartFragment-->Ein Steuermann ist die für die Navigation und Kurslenkung verantwortliche Person an Bord eines Schiffes oder Bootes."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffskaplan",
+                        "subtitle": "",
+                        "text": "Fungiert als spiritueller Seelsorger und Führung im bezug auf Celestiale oder Infernale Themenbereiche."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/LxDm2IG.png",
+                        "title": "Bootsmann",
+                        "subtitle": "Sindre Brandstolz",
+                        "text": "<!--StartFragment-->Leitet die Decksmannschaft und sorgt für den ordnungsgemäßen Zustand von Schiff, Takelage und Ausrüstung.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                        "title": "Navigator",
+                        "subtitle": "Cederic Chwedonol",
+                        "text": "<!--StartFragment-->Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs des Schiffes.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/YXLDnVs.png",
+                        "title": "Quartiermeister",
+                        "subtitle": "Llewarch Tonnarth",
+                        "text": "<!--StartFragment-->Verwaltet Vorräte, Ausrüstung und Lagerbestände und stellt die Versorgung der Besatzung sicher.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/RE5WMSF.png",
+                        "title": "Waffenmeister",
+                        "subtitle": "Rhodri Aelmor",
+                        "text": "<!--StartFragment-->Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffszimmermann",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Repariert Schäden am Schiff und hält Rumpf, Masten und Deck jederzeit seetüchtig.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Feldscher",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Versorgt Verwundete und Kranke und wacht über die Gesundheit der Besatzung.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/SaDQCjc.png",
+                        "title": "Schiffsmeier",
+                        "subtitle": "Cadell Ysgrif",
+                        "text": "<!--StartFragment-->Verwaltet Schiffskasse, Sold und wertvolle Güter und führt die wirtschaftlichen Belange des Schiffes.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsbarde",
+                        "subtitle": "Glendower Cysgodion",
+                        "text": "Sorgt mit Satire, Musik, Lyrik und Schabernak für mehr Stimmung unter der Mannschaft."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/0uRopVw.png",
+                        "title": "Ausguck auf dem Krähennest",
+                        "subtitle": "Cenric Scandyn",
+                        "text": "<!--StartFragment-->Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Segelmeister",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Wachführer",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Befehligt die Bordwachen und sorgt für Sicherheit, Ordnung und Verteidigung an Bord.<!--EndFragment-->"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "baum-2",
+                "parentTreeId": "",
+                "label": "Kämpfer",
+                "levels": [
+                  {
+                    "label": "Ritter zur See",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/eaOTyw6.png",
+                        "title": "Ritter zur See",
+                        "subtitle": "Afan Gwyntog",
+                        "text": "<!--StartFragment-->Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappe zur See",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/pRAdLZx.png",
+                        "title": "Knappe zur See",
+                        "subtitle": "Talon Trydar",
+                        "text": "Idwals persönlicher Knappe."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Page zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Pagen",
+                        "text": "<!--StartFragment-->Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<!--EndFragment-->"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "baum-3",
+                "parentTreeId": "",
+                "label": "Besatzung",
+                "levels": [
+                  {
+                    "label": "Verwaltung",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/LK3q0UI.png",
+                        "title": "Schreiber & Adjutant",
+                        "subtitle": "Caradog Tonnarth",
+                        "text": "<!--StartFragment-->Führt Logbücher, Karten, Berichte und die gesamte schriftliche Korrespondenz des Schiffes.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgung",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/sCA9xaB.png",
+                        "title": "Schiffskoch",
+                        "subtitle": "Murdo Marlòn",
+                        "text": "<!--StartFragment-->Bereitet die Mahlzeiten zu und sorgt dafür, dass die Besatzung auch auf langen Fahrten ausreichend versorgt wird.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/UifKxKa.png",
+                        "title": "Proviantmeister",
+                        "subtitle": "Angus Lònan",
+                        "text": "<!--StartFragment-->Verwaltet Lebensmittel, Trinkwasser und Verbrauchsgüter und überwacht deren Ausgabe.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Handwerk",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Matrosen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br><!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br><!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<!--EndFragment-->"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schiffsjungen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See.<!--EndFragment-->"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": "<!--StartFragment-->Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See.<!--EndFragment-->"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/ENTDAnR.png",
+                    "title": "Schiffskapitän",
+                    "subtitle": "Idwal Draig",
+                    "text": "<!--StartFragment-->Führt die Tiefenwyrm und trägt die oberste Verantwortung für Schiff, Besatzung und Auftrag.<br><!--EndFragment-->"
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+                    "title": "Erster Maat",
+                    "subtitle": "Trevor Gwyvern",
+                    "text": "<!--StartFragment-->Stellvertreter des Kapitäns und verantwortlich für die Umsetzung seiner Befehle im täglichen Schiffsbetrieb.<!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                    "title": "Zweiter Maat",
+                    "subtitle": "Cederic Chwedonol",
+                    "text": "<!--StartFragment-->Unterstützt den Ersten Maat, beaufsichtigt Wachen und übernimmt dessen Aufgaben bei Bedarf.<!--EndFragment-->"
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/rQJvCDf.png",
+                    "title": "Steuermann",
+                    "subtitle": "Ifor Beryn",
+                    "text": "<!--StartFragment-->Ein Steuermann ist die für die Navigation und Kurslenkung verantwortliche Person an Bord eines Schiffes oder Bootes."
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Schiffskaplan",
+                    "subtitle": "",
+                    "text": "Fungiert als spiritueller Seelsorger und Führung im bezug auf Celestiale oder Infernale Themenbereiche."
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/LxDm2IG.png",
+                    "title": "Bootsmann",
+                    "subtitle": "Sindre Brandstolz",
+                    "text": "<!--StartFragment-->Leitet die Decksmannschaft und sorgt für den ordnungsgemäßen Zustand von Schiff, Takelage und Ausrüstung.<!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                    "title": "Navigator",
+                    "subtitle": "Cederic Chwedonol",
+                    "text": "<!--StartFragment-->Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs des Schiffes.<!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/YXLDnVs.png",
+                    "title": "Quartiermeister",
+                    "subtitle": "Llewarch Tonnarth",
+                    "text": "<!--StartFragment-->Verwaltet Vorräte, Ausrüstung und Lagerbestände und stellt die Versorgung der Besatzung sicher.<br><!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/RE5WMSF.png",
+                    "title": "Waffenmeister",
+                    "subtitle": "Rhodri Aelmor",
+                    "text": "<!--StartFragment-->Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf.<!--EndFragment-->"
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Schiffszimmermann",
+                    "subtitle": "",
+                    "text": "<!--StartFragment-->Repariert Schäden am Schiff und hält Rumpf, Masten und Deck jederzeit seetüchtig.<br><!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Feldscher",
+                    "subtitle": "",
+                    "text": "<!--StartFragment-->Versorgt Verwundete und Kranke und wacht über die Gesundheit der Besatzung.<!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/SaDQCjc.png",
+                    "title": "Schiffsmeier",
+                    "subtitle": "Cadell Ysgrif",
+                    "text": "<!--StartFragment-->Verwaltet Schiffskasse, Sold und wertvolle Güter und führt die wirtschaftlichen Belange des Schiffes.<br><!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Schiffsbarde",
+                    "subtitle": "Glendower Cysgodion",
+                    "text": "Sorgt mit Satire, Musik, Lyrik und Schabernak für mehr Stimmung unter der Mannschaft."
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/0uRopVw.png",
+                    "title": "Ausguck auf dem Krähennest",
+                    "subtitle": "Cenric Scandyn",
+                    "text": "<!--StartFragment-->Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht<!--EndFragment-->"
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Segelmeister",
+                    "subtitle": "",
+                    "text": "<!--StartFragment-->Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br><!--EndFragment-->"
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Wachführer",
+                    "subtitle": "",
+                    "text": "<!--StartFragment-->Befehligt die Bordwachen und sorgt für Sicherheit, Ordnung und Verteidigung an Bord.<!--EndFragment-->"
+                  }
+                ]
+              }
+            ],
+            "footerNote": "",
+            "backLabel": "Zurueck zur Uebersicht",
+            "printLabel": "Akte drucken"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/aUWVQc1.jpeg",
+          "imageWidth": 20,
+          "pageTitle": "Schiff",
+          "sessionPage": true,
+          "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true
+    }
+  },
+  "commentsExport": {
+    "type": "aleria-module-comments-export",
+    "version": 1,
+    "exportedAt": "2026-08-09T03:04:36.792Z",
+    "source": {
+      "moduleId": "idwals-schiffsmannschaft",
+      "moduleTitle": "Idwals Schiffsmannschaft",
+      "sectionKey": "Haus Draig",
+      "sectionTab": "Gruppen"
+    },
+    "summary": {
+      "threadCount": 6,
+      "commentCount": 0,
+      "turnCount": 0
+    },
+    "threads": [
+      {
+        "threadId": "idwals-schiffsmannschaft",
+        "kind": "entry-comments",
+        "pageIndex": null,
+        "pageTitle": "Modulkommentare",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      },
+      {
+        "threadId": "idwals-schiffsmannschaft::page:0",
+        "kind": "page",
+        "pageIndex": 0,
+        "pageTitle": "Die Mannschaft des Tiefenwyrm",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      },
+      {
+        "threadId": "idwals-schiffsmannschaft::page:1",
+        "kind": "page",
+        "pageIndex": 1,
+        "pageTitle": "Sir Idwal Draig",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      },
+      {
+        "threadId": "idwals-schiffsmannschaft::page:2",
+        "kind": "page",
+        "pageIndex": 2,
+        "pageTitle": "Hierarchie der Mannschaft",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      },
+      {
+        "threadId": "idwals-schiffsmannschaft::session:3",
+        "kind": "session",
+        "pageIndex": 3,
+        "pageTitle": "Schiff",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      },
+      {
+        "threadId": "idwals-schiffsmannschaft::page:3",
+        "kind": "page",
+        "pageIndex": 3,
+        "pageTitle": "Schiff",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      }
+    ],
+    "comments": [],
+    "commentTurns": []
+  },
+  "summary": {
+    "moduleId": "idwals-schiffsmannschaft",
+    "moduleTitle": "Idwals Schiffsmannschaft",
+    "pageCount": 4,
+    "threadCount": 6,
+    "commentCount": 0,
+    "turnCount": 0
+  }
+}
