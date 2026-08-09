@@ -1,0 +1,653 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-aelmor",
+  "revision": 1,
+  "updatedAt": "2026-08-09T02:11:47.016Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-aelmor",
+      "title": "Haus Aelmor",
+      "motto": "",
+      "description": "Ein kleines bürgerliches Haus aus Gwynthor mit höchstens drei Linien unter der Großelterngeneration.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aelmor.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-aelmor-gruender",
+        "worldPersonId": "person--haus-aelmor--haus-aelmor-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-aelmor-gruenderin",
+        "worldPersonId": "person--haus-aelmor--haus-aelmor-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "bledri-aelmor",
+        "worldPersonId": "person--haus-aelmor--bledri-aelmor",
+        "name": "Bledri Aelmor",
+        "title": "Ältestes überliefertes Oberhaupt des Hauses Aelmor",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1663",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nest-spouse-aelmor",
+        "worldPersonId": "person--family-tree--nest-spouse-aelmor",
+        "name": "Nest",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1667",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eirlys-aelmor",
+        "worldPersonId": "person--haus-aelmor--eirlys-aelmor",
+        "name": "Eirlys Aelmor",
+        "title": "Wegverheiratete Großtante der jüngsten Aelmor-Generation",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Bledri Aelmors; wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "unknown-spouse-eirlys-aelmor",
+        "worldPersonId": "person--haus-unbekannt-eirlys-aelmor--unknown-spouse-eirlys-aelmor",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann Eirlys Aelmors",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-eirlys-aelmor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "goronwy-aelmor",
+        "worldPersonId": "person--haus-aelmor--goronwy-aelmor",
+        "name": "Goronwy Aelmor",
+        "title": "Fortführer der Aelmor-Hauptlinie",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1689",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "catrin-spouse-aelmor",
+        "worldPersonId": "person--family-tree--catrin-spouse-aelmor",
+        "name": "Catrin",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "madoc-aelmor",
+        "worldPersonId": "person--haus-aelmor--madoc-aelmor",
+        "name": "Madoc Aelmor",
+        "title": "Lediger Seitenzweig des Hauses Aelmor",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Blieb unverheiratet und ohne Kinder.",
+        "extensions": {}
+      },
+      {
+        "id": "anwen-aelmor",
+        "worldPersonId": "person--haus-aelmor--anwen-aelmor",
+        "name": "Anwen Aelmor",
+        "title": "An Haus Braglas verheiratete Aelmor",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Goronwy Aelmors; heiratete Bryn Braglas.",
+        "extensions": {}
+      },
+      {
+        "id": "bryn-braglas",
+        "worldPersonId": "person--haus-braglas--bryn-braglas",
+        "name": "Bryn Braglas",
+        "title": "Bruder Cadfan Braglas’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-braglas",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete Anwen Aelmor; mit ihr hat er die Söhne Madoc und Iestyn.",
+        "extensions": {}
+      },
+      {
+        "id": "owain-aelmor",
+        "worldPersonId": "person--haus-aelmor--owain-aelmor",
+        "name": "Owain Aelmor",
+        "title": "Ältester Sohn Goronwy Aelmors",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "26 Jahre"
+        ],
+        "notes": "Unverheiratet und ohne Verlobung; führt die nächste Aelmor-Generation an.",
+        "extensions": {}
+      },
+      {
+        "id": "rhodri-aelmor",
+        "worldPersonId": "person--haus-aelmor--rhodri-aelmor",
+        "name": "Rhodri Aelmor",
+        "title": "Jüngerer Sohn Goronwy Aelmors",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "https://i.imgur.com/RE5WMSF.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "20 Jahre"
+        ],
+        "notes": "Unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "tegan-aelmor",
+        "worldPersonId": "person--haus-aelmor--tegan-aelmor",
+        "name": "Tegan Aelmor",
+        "title": "Jüngste Tochter Goronwy Aelmors",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aelmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "8 Jahre"
+        ],
+        "notes": "Unverheiratet; ihre weitere Lebenslinie bleibt altersbedingt offen.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-aelmor-founders",
+        "participantIds": [
+          "haus-aelmor-gruender",
+          "haus-aelmor-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-bledri-nest-aelmor",
+        "participantIds": [
+          "bledri-aelmor",
+          "nest-spouse-aelmor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-eirlys-unknown-aelmor",
+        "participantIds": [
+          "eirlys-aelmor",
+          "unknown-spouse-eirlys-aelmor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-goronwy-catrin-aelmor",
+        "participantIds": [
+          "goronwy-aelmor",
+          "catrin-spouse-aelmor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-bryn-braglas-anwen-aelmor",
+        "participantIds": [
+          "bryn-braglas",
+          "anwen-aelmor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-bledri-aelmor",
+        "childId": "bledri-aelmor",
+        "parentIds": [
+          "haus-aelmor-gruender",
+          "haus-aelmor-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-aelmor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Bledri und Eirlys.",
+        "extensions": {
+          "timeJumpId": "gap-aelmor-to-1663"
+        }
+      },
+      {
+        "id": "parentage-eirlys-aelmor",
+        "childId": "eirlys-aelmor",
+        "parentIds": [
+          "haus-aelmor-gruender",
+          "haus-aelmor-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-aelmor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Bledri und Eirlys.",
+        "extensions": {
+          "timeJumpId": "gap-aelmor-to-1663"
+        }
+      },
+      {
+        "id": "parentage-goronwy-aelmor",
+        "childId": "goronwy-aelmor",
+        "parentIds": [
+          "bledri-aelmor",
+          "nest-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-bledri-nest-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-madoc-aelmor",
+        "childId": "madoc-aelmor",
+        "parentIds": [
+          "bledri-aelmor",
+          "nest-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-bledri-nest-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-anwen-aelmor",
+        "childId": "anwen-aelmor",
+        "parentIds": [
+          "bledri-aelmor",
+          "nest-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-bledri-nest-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-owain-aelmor",
+        "childId": "owain-aelmor",
+        "parentIds": [
+          "goronwy-aelmor",
+          "catrin-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-goronwy-catrin-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhodri-aelmor",
+        "childId": "rhodri-aelmor",
+        "parentIds": [
+          "goronwy-aelmor",
+          "catrin-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-goronwy-catrin-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tegan-aelmor",
+        "childId": "tegan-aelmor",
+        "parentIds": [
+          "goronwy-aelmor",
+          "catrin-spouse-aelmor"
+        ],
+        "partnershipId": "marriage-goronwy-catrin-aelmor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-aelmor",
+        "name": "Haus Aelmor",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aelmor.png",
+        "status": "active"
+      },
+      {
+        "id": "house-braglas",
+        "name": "Haus Braglas",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-eirlys-aelmor",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-unknown-eirlys-aelmor",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-eirlys-unknown-aelmor",
+        "parentPersonId": "",
+        "houseId": "house-unbekannt-eirlys-aelmor",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Eirlys Aelmor wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-braglas-anwen-aelmor",
+        "name": "Haus Braglas",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-bryn-braglas-anwen-aelmor",
+        "parentPersonId": "",
+        "houseId": "house-braglas",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-braglas",
+        "notes": "Anwen Aelmor wurde an Bryn Braglas verheiratet; dieselbe Ehe wird in der Braglas-Gegenakte geführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-aelmor-to-1663",
+        "parentPartnershipId": "marriage-haus-aelmor-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "bledri-aelmor",
+          "eirlys-aelmor"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1663",
+        "label": "Die belegte Aelmor-Linie setzt mit Bledri und Eirlys um 1663 wieder ein",
+        "notes": "Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Aelmor-Wappen; Bledri und seine Schwester Eirlys folgen erst geschlossen dahinter.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-aelmor-founders",
+      "houseId": "house-aelmor",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": ""
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-aelmor-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "sourceNote": "Haus Aelmor bleibt mit 14 Personen und genau drei Linien unter der Großelterngeneration kompakt. Goronwy führt die Hauptlinie über die unverheirateten Sprösslinge Owain, Rhodri und Tegan fort; alle sind im Jahr 1740 zwischen acht und sechsundzwanzig Jahre alt. Madoc ist ein lediger, kinderloser Seitenzweig. Eirlys führt als wegverheiratete Großtante zu einem unbekannten Haus; Anwen ist an Bryn Braglas verheiratet und ihre Ehe wird beidseitig registriert."
+    }
+  }
+}
