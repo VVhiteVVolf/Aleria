@@ -204,7 +204,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
     house('house-unbekannt-amdarch', 'Unbekanntes Haus'),
     house('house-unbekannt-katelyn-crafanc', 'Unbekanntes Haus'),
     house('house-pawen', "Haus Pawen O'Talgarth", HOUSE_EMBLEMS.pawen),
-    house('house-walwrs', "Haus Walwrs O'Caer Deheuol", HOUSE_EMBLEMS.walwrs),
+    house('house-walwrs', "Haus Walwrs O'Traeth", HOUSE_EMBLEMS.walwrs),
     house('house-unigol', "Haus Unigol O'Caer Marwor", HOUSE_EMBLEMS.unigol),
     house('house-unbekannt-ffraid-crafanc', 'Unbekanntes Haus'),
     house('house-eirth', "Haus Eirth O'Caer Glaslyn", HOUSE_EMBLEMS.eirth),
@@ -242,7 +242,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
       notes: 'Nicht mit der 1596 geborenen Kerenza Crafanc zu verwechseln.'
     }),
     spouse('wenonah-arth', 'Wenonah Arth', 'female', '1615', '1647', 'house-arth'),
-    spouse('taran-walwrs', 'Taran Walwrs', 'male', '????', '????', 'house-walwrs'),
+    spouse('taran-walwrs', 'Taran Walwrs', 'male', '1612', '1665', 'house-walwrs'),
     spouse('trachmyr-unigol', 'Trachmyr Unigol', 'male', '????', '????', 'house-unigol'),
 
     person('clinoch-crafanc', 'Clinoch Crafanc', 'male', '1637', '1698', {
@@ -314,7 +314,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
     createMarriage('marriage-caradoc-katelyn-crafanc', ...COUPLES.caradoc, { status: 'ended', end: '1652' }),
     createMarriage('marriage-cadoc-kerenza-pawen', ...COUPLES.kerenzaOlder, { status: 'ended', end: '1643' }),
     createMarriage('marriage-wenonah-cynwrig', ...COUPLES.cynwrig, { status: 'ended', end: '1647' }),
-    createMarriage('marriage-nesta-taran-crafanc', ...COUPLES.nesta, { status: 'ended', end: '1672' }),
+    createMarriage('marriage-nesta-taran-crafanc', ...COUPLES.nesta, { status: 'ended', end: '1665' }),
     createMarriage('marriage-kerenza-trachmyr-crafanc', ...COUPLES.kerenzaYounger, { status: 'ended', end: '1669' }),
     createMarriage('marriage-clinoch-ffraid-crafanc', ...COUPLES.clinoch, { status: 'ended', end: '1671' }),
     createMarriage('marriage-afanen-elisud', ...COUPLES.elisud, { status: 'ended', end: '1710' }),
@@ -347,7 +347,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
   ],
   cadetBranches: [
     marriedAway('married-away-kerenza-crafanc-pawen', 'Haus Pawen', 'marriage-cadoc-kerenza-pawen', 'house-pawen', 'haus-pawen', HOUSE_EMBLEMS.pawen),
-    marriedAway('married-away-nesta-crafanc-walwrs', 'Haus Walwrs', 'marriage-nesta-taran-crafanc', 'house-walwrs', 'haus-walwrs-caer-deheuol', HOUSE_EMBLEMS.walwrs),
+    marriedAway('married-away-nesta-crafanc-walwrs', "Haus Walwrs O'Traeth", 'marriage-nesta-taran-crafanc', 'house-walwrs', 'haus-walwrs', HOUSE_EMBLEMS.walwrs),
     marriedAway('married-away-kerenza-1627-crafanc-unigol', 'Haus Unigol', 'marriage-kerenza-trachmyr-crafanc', 'house-unigol', 'haus-unigol', HOUSE_EMBLEMS.unigol),
     createCadetHouseBranch({
       id: 'cadet-eirth-kyndra-crafanc',
@@ -409,11 +409,11 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-artgal-amdarch',
     sourceModule: "Haus Crafanc O'Talgarth (bereitgestellte Altdaten)",
-    sourceNote: 'Artgal Arth und Amdarch begründen Haus Crafanc. Der Hausknoten und genau ein serieller Zeitsprung stehen vor Caradoc und der älteren Kerenza. Kyndra und Rhynnon Arth begründen direkt Haus Eirth. Die ältere Kerenza, Nesta, die jüngere Kerenza, Andarch, Glaw, Glinda, Glynis und Glesni führen mit geraden Zielhausknoten in ihre jeweiligen Gegenhäuser; deren Kinder bleiben ausschließlich dort. Gwenna bleibt biologischer Crafanc-Spross, trägt als weggegebenes Mündel den dunkelblauen Rahmen und besitzt einen direkten Vermittlungsknoten zu Haus Gafyr. Gegenakten haben bei Widersprüchen Vorrang: die ältere Kerenza lebt 1596–1643, Elisud wird 1661 geboren, Kyndra 1655 und Andarch ist die Ehefrau Gereint Gwialens. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Artgal Arth und Amdarch begründen Haus Crafanc. Der Hausknoten und genau ein serieller Zeitsprung stehen vor Caradoc und der älteren Kerenza. Kyndra und Rhynnon Arth begründen direkt Haus Eirth. Die ältere Kerenza, Nesta, die jüngere Kerenza, Andarch, Glaw, Glinda, Glynis und Glesni führen mit geraden Zielhausknoten in ihre jeweiligen Gegenhäuser; deren Kinder bleiben ausschließlich dort. Gwenna bleibt biologischer Crafanc-Spross, trägt als weggegebenes Mündel den dunkelblauen Rahmen und besitzt einen direkten Vermittlungsknoten zu Haus Gafyr. Gegenakten haben bei Widersprüchen Vorrang: die ältere Kerenza lebt 1596–1643, Elisud wird 1661 geboren, Kyndra 1655 und Andarch ist die Ehefrau Gereint Gwialens. Tarans Walwrs-Gegenakte präzisiert seine Lebensdaten auf 1612–1665; Nestas Verbindung führt historisch zur Traeth-Herkunftsakte und nicht zur erst 1720 begründeten Caer-Deheuol-Linie. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

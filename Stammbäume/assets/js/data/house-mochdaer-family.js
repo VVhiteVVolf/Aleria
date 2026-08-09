@@ -108,7 +108,7 @@ const CERRIGARTH_HOUSES = Object.freeze([
   house('house-dianc', "Haus Dianc O'Gwynlann", KLAUENINSEL_HOUSE_EMBLEMS.dianc),
   house('house-dianc-aberdail', "Haus Dianc O'Aberdail", KLAUENINSEL_HOUSE_EMBLEMS.dianc),
   house('house-dinefwr', 'Haus Dinefwr', HOUSE_EMBLEMS.dinefwr),
-  house('house-walwrs', 'Haus Walwrs'),
+  house('house-walwrs-caer-deheuol', "Haus Walwrs O'Caer Deheuol", KLAUENINSEL_HOUSE_EMBLEMS.walwrs),
   house('house-hwyaden', 'Haus Hwyaden', HOUSE_EMBLEMS.hwyaden),
   house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
   house('house-creyr', 'Haus Créyr', HOUSE_EMBLEMS.creyr)
@@ -290,7 +290,9 @@ export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = Object.freeze({
     cerrigarthPerson('catrin-mochdaer', 'Catrin Mochdaer', 'female', '1699', ''),
     cerrigarthPerson('murvin-dianc', 'Murvin Dianc', 'male', '1698', '1720', 'house-dianc'),
     cerrigarthPerson('jenica-dinefwr', 'Jenica Dinefwr', 'female', '1698', '', 'house-dinefwr'),
-    cerrigarthPerson('tathal-walwrs', 'Tathal Walwrs', 'male', '1694', '', 'house-walwrs'),
+    cerrigarthPerson('tathal-walwrs', 'Tathal Walwrs', 'male', '1694', '', 'house-walwrs-caer-deheuol', {
+      worldPersonId: 'person--haus-walwrs--tathal-walwrs'
+    }),
     cerrigarthPerson('jareth-mochdaer', 'Jareth Mochdaer', 'male', '1721', '', CERRIGARTH_HOUSE_ID, {
       title: 'Zweiter in der Erbfolge von Cerrigarth',
       lineageRole: 'mainline'
@@ -326,7 +328,7 @@ export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = Object.freeze({
       'haus-dianc-aberdail',
       KLAUENINSEL_HOUSE_EMBLEMS.dianc
     ),
-    marriedAway('married-away-walwrs-catrin', 'Haus Walwrs', 'marriage-catrin-tathal-mochdaer', 'house-walwrs', 'haus-walwrs')
+    marriedAway('married-away-walwrs-catrin', "Haus Walwrs O'Caer Deheuol", 'marriage-catrin-tathal-mochdaer', 'house-walwrs-caer-deheuol', 'haus-walwrs-caer-deheuol', KLAUENINSEL_HOUSE_EMBLEMS.walwrs)
   ],
   timeJumps: [],
   lineage: {
@@ -349,7 +351,7 @@ export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
-    sourceNote: 'Eigenständige Cerrigarth-Akte ab Aethlem Mochdaer. Aethlem verwendet dieselbe Weltidentität wie in Gwyliau; seine Ehe mit Lunet Blaidd, ihre drei Kinder und ausschließlich Micahs Nachkommen werden nur hier geführt. Vannas Ehe mit Murvin verweist auf die ausgearbeitete Aberdail-Akte, in der beide als Eltern Delwyns erneut erscheinen. Dadurch entstehen beim Wechsel zwischen den Akten keine gedoppelten Kinder.'
+    sourceRevision: 3,
+    sourceNote: 'Eigenständige Cerrigarth-Akte ab Aethlem Mochdaer. Aethlem verwendet dieselbe Weltidentität wie in Gwyliau; seine Ehe mit Lunet Blaidd, ihre drei Kinder und ausschließlich Micahs Nachkommen werden nur hier geführt. Vannas Ehe mit Murvin verweist auf die ausgearbeitete Aberdail-Akte, in der beide als Eltern Delwyns erneut erscheinen. Catrins Ehe mit Tathal verweist auf die neue Caer-Deheuol-Akte, in der ihre Walwrs-Kinder ausschließlich fortgeführt werden. Dadurch entstehen beim Wechsel zwischen den Akten keine gedoppelten Kinder.'
   }
 });

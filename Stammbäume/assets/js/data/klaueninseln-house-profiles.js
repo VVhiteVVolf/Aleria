@@ -135,5 +135,5 @@ export const KLAUENINSEL_ORIGIN_HOUSE_PROFILES = Object.freeze({
   'dyfrgi-mynyddharbwr': vennyrProfile(DYFRGI_MYNYDDHARBWR_PATH, { rankId: 'county' }),
   'arfordir-serenlyn': vennyrProfile(ARFORDIR_SERENLYN_PATH, { rankId: 'county' }),
   'dianc-gwynlann': vennyrProfile(DIANC_GWYNLANN_PATH),
-  'walwrs-traeth': vennyrProfile(WALWRS_TRAETH_PATH)
+  'walwrs-traeth': vennyrProfile(WALWRS_TRAETH_PATH, { rankId: 'knight-prince' })
 });

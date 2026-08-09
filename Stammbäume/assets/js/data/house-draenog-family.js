@@ -10,6 +10,7 @@ import {
   GRAUE_WEITE_HOUSE_PROFILES
 } from './graue-weite-house-profiles.js';
 import { HOUSE_DRAENOG_PORTRAITS } from './house-draenog-portraits.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 
 const DRAENOG_HOUSE_ID = 'house-draenog';
 const DRAENOG_EMBLEM = GRAUE_WEITE_HOUSE_EMBLEMS.draenog;
@@ -35,6 +36,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   pysgod: GRAUE_WEITE_HOUSE_EMBLEMS.pysgod,
   saith: 'assets/images/houses/Silberinsel/Silberbucht/haus-saith.png',
+  walwrs: KLAUENINSEL_HOUSE_EMBLEMS.walwrs,
   wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
@@ -79,6 +81,7 @@ function person(id, name, sex, birth = '????', death = '', options = {}) {
   const houseId = options.houseId === undefined ? DRAENOG_HOUSE_ID : options.houseId;
   return createFamilyPerson({
     id,
+    worldPersonId: options.worldPersonId || '',
     name,
     sex,
     birth,
@@ -226,7 +229,7 @@ export const HOUSE_DRAENOG_FAMILY = Object.freeze({
     house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-hwyaden', 'Haus Hwyaden', HOUSE_EMBLEMS.hwyaden),
     house('house-tylwyth', 'Haus Tylwyth'),
-    house('house-walvers', 'Haus Walvers'),
+    house('house-walwrs', "Haus Walwrs O'Traeth", HOUSE_EMBLEMS.walwrs),
     house('house-neidr', 'Haus Neidr', HOUSE_EMBLEMS.neidr),
     house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
     house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
@@ -302,8 +305,10 @@ export const HOUSE_DRAENOG_FAMILY = Object.freeze({
       title: 'Baron von Trefyddin 1703–1717'
     }),
     spouse('idwallon-tylwyth', 'Idwallon Tylwyth', 'male', '1650', '1695', 'house-tylwyth'),
-    spouse('lleucu-walvers', 'Lleucu Walvers', 'female', '1656', '1712', 'house-walvers', {
-      title: 'Wegverheiratet an Haus Draenog'
+    spouse('lleucu-walvers', 'Lleucu Walwrs', 'female', '1656', '1712', 'house-walwrs', {
+      worldPersonId: 'person--haus-walwrs--lleucu-walvers',
+      title: 'Wegverheiratet an Haus Draenog',
+      notes: 'Die stabile technische ID behält die ältere Schreibweise walvers; die sichtbare Walwrs-Schreibweise und Hauszuordnung folgen der ausgearbeiteten Herkunftsakte.'
     }),
 
     person('mathonwy-draenog', 'Mathonwy Draenog', 'male', '1670', '', {
@@ -464,9 +469,9 @@ export const HOUSE_DRAENOG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Draenog O'Llanforwyn (bereitgestellte Altdaten)",
-    sourceNote: 'Der vollständige Stammbaum beginnt beim unbekannt datierten Gründerpaar und führt nach Hausknoten und genau einem seriellen Zeitsprung zu Llywellyn und Rhianu. Alle zwölf Draenog-Frauen, deren Linien in anderen Häusern enden, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten. Kinder solcher Ehen werden nur dort geführt, wo die jeweilige Hauslinie tatsächlich fortgesetzt wird. Geteilte Weltpersonen, Partnerschafts-IDs und Porträts mit bereits ausgearbeiteten Gegenakten werden unverändert wiederverwendet. Bei Rhianu, Cariad, Ariana und Arianwen gelten die vorhandenen Gegenakten als kanonisch; abweichende Todesjahre der Draenog-Altquelle sind an den Personen dokumentiert. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Der vollständige Stammbaum beginnt beim unbekannt datierten Gründerpaar und führt nach Hausknoten und genau einem seriellen Zeitsprung zu Llywellyn und Rhianu. Alle zwölf Draenog-Frauen, deren Linien in anderen Häusern enden, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten. Kinder solcher Ehen werden nur dort geführt, wo die jeweilige Hauslinie tatsächlich fortgesetzt wird. Geteilte Weltpersonen, Partnerschafts-IDs und Porträts mit bereits ausgearbeiteten Gegenakten werden unverändert wiederverwendet. Bei Rhianu, Cariad, Ariana und Arianwen gelten die vorhandenen Gegenakten als kanonisch; abweichende Todesjahre der Draenog-Altquelle sind an den Personen dokumentiert. Lleucu wird mit stabiler technischer ID sichtbar und genealogisch korrekt dem Haus Walwrs O’Traeth zugeordnet. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

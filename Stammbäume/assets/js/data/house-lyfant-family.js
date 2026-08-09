@@ -11,6 +11,7 @@ import {
   GRAUE_WEITE_HOUSE_PROFILES,
   GRAUE_WEITE_ORIGIN_HOUSE_PROFILES
 } from './graue-weite-house-profiles.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 import { HOUSE_LYFANT_PORTRAITS } from './house-lyfant-portraits.js';
 
@@ -141,7 +142,7 @@ const CAER_ASGWRN_HOUSES = Object.freeze([
   house('house-mochdaer-gwyliau', "Haus Mochdaer O'Gwyliau", HOUSE_EMBLEMS.mochdaer),
   house('house-serenoc', 'Haus Serenoc'),
   house('house-eisenbieger', 'Haus Eisenbieger'),
-  house('house-walwrs', 'Haus Walwrs'),
+  house('house-walwrs-caer-deheuol', "Haus Walwrs O'Caer Deheuol", KLAUENINSEL_HOUSE_EMBLEMS.walwrs),
   house('house-drummond', 'Haus Drummond'),
   house('house-arfordir', 'Haus Arfordir'),
   house('house-morfil', "Haus Morfil O'Talsarn", HOUSE_EMBLEMS.morfil)
@@ -441,7 +442,8 @@ export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
       title: 'Wegverheiratet an Haus Walwrs'
     }),
     caerAsgwrnPerson('pryderi-walwrs', 'Pryderi Walwrs', 'male', '1699', '', {
-      houseId: 'house-walwrs',
+      worldPersonId: 'person--haus-walwrs--pryderi-walwrs',
+      houseId: 'house-walwrs-caer-deheuol',
       familyRole: 'married'
     }),
     caerAsgwrnPerson('yale-lyfant', 'Yale Lyfant', 'male', '1696', '', {
@@ -483,7 +485,7 @@ export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
     ...childrenOf(['crispin-lyfant', 'eilin-lyfant'], ['yale-lyfant', 'morgana-arfordir'], 'marriage-yale-morgana-lyfant')
   ],
   cadetBranches: [
-    marriedAway('married-away-bethan-lyfant-walwrs', 'Haus Walwrs', 'marriage-bethan-pryderi-lyfant', 'house-walwrs', 'haus-walwrs'),
+    marriedAway('married-away-bethan-lyfant-walwrs', "Haus Walwrs O'Caer Deheuol", 'marriage-bethan-pryderi-lyfant', 'house-walwrs-caer-deheuol', 'haus-walwrs-caer-deheuol', KLAUENINSEL_HOUSE_EMBLEMS.walwrs),
     marriedAway('married-away-eilun-lyfant-morfil', "Haus Morfil O'Talsarn", 'marriage-guto-eilun-morfil', 'house-morfil', 'haus-morfil', HOUSE_EMBLEMS.morfil)
   ],
   timeJumps: [],
@@ -521,11 +523,11 @@ export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     originFamilyId: 'haus-lyfant',
     registryManagedLineageFields: ['founderPartnershipId', 'houseId', 'originHouse'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
-    sourceNote: 'Getrennte Caer-Asgwrn-Nachfolgeakte mit Cledwyn als primärem Linienführer. Cledwyn und Cadwgan erscheinen erneut als genealogische Anker; nur ihre Kinder und Kindeskinder werden hier fortgeführt. Meredydd, Main, Deiniol, Frewi, Ceri und Cadi verbleiben ausschließlich in Derwyddion. Die Kinder der wegverheirateten Eilun werden nur im Morfil-Stammbaum geführt.'
+    sourceNote: 'Getrennte Caer-Asgwrn-Nachfolgeakte mit Cledwyn als primärem Linienführer. Cledwyn und Cadwgan erscheinen erneut als genealogische Anker; nur ihre Kinder und Kindeskinder werden hier fortgeführt. Meredydd, Main, Deiniol, Frewi, Ceri und Cadi verbleiben ausschließlich in Derwyddion. Die Kinder der wegverheirateten Eilun werden nur im Morfil-Stammbaum geführt. Bethans Ehe mit Pryderi verweist auf die neue Caer-Deheuol-Akte, in der ihre Walwrs-Kinder ausschließlich fortgeführt werden.'
   }
 });
 
