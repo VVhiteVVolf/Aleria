@@ -16,6 +16,26 @@ let _hiddenBuiltinCharacterIds = new Set();
 let _charOrganizeMode = false;
 let _collapsedCharGroups = new Set();
 
+let charactersChangedDispatchQueued = false;
+
+function emitCharactersChanged() {
+  charactersChangedDispatchQueued = false;
+  document.dispatchEvent(new CustomEvent('aleria:characters-changed', {
+    detail: { characters: getAllCharacterRecords().map(cloneCharacterRecord) }
+  }));
+}
+
+function dispatchCharactersChanged() {
+  if (typeof document?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return;
+  if (document.readyState !== 'complete' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+    if (charactersChangedDispatchQueued) return;
+    charactersChangedDispatchQueued = true;
+    window.addEventListener('load', emitCharactersChanged, { once: true });
+    return;
+  }
+  emitCharactersChanged();
+}
+
 function loadLocalCharacterDatabaseState() {
   if (!_localCharacterDatabaseRequest) {
     _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs')
@@ -60,6 +80,7 @@ async function loadCharacters() {
     renderCharSubtabs();
     renderCharGrid();
     renderCharPickerInForm();
+    dispatchCharactersChanged();
     return;
   }
 
@@ -98,6 +119,7 @@ async function loadCharacters() {
   renderCharGrid();
   renderCharPickerInForm();
   refreshAllModuleCastPickers();
+  dispatchCharactersChanged();
 }
 
 function handleExternallySavedCharacter(event) {
@@ -120,6 +142,7 @@ function handleExternallySavedCharacter(event) {
   renderCharGrid();
   renderCharPickerInForm();
   refreshAllModuleCastPickers();
+  dispatchCharactersChanged();
 }
 
 document.addEventListener('aleria:character-saved', handleExternallySavedCharacter);
@@ -159,6 +182,7 @@ function applyCommittedCharacterCombatProfile(event) {
   if (!changed) return;
   renderCharGrid();
   renderCharPickerInForm();
+  dispatchCharactersChanged();
 }
 
 document.addEventListener('aleria:combat-profile-committed', applyCommittedCharacterCombatProfile);
@@ -622,6 +646,12 @@ function handleCharacterSubtabClick(event) {
 }
 
 document.addEventListener('click', handleCharacterSubtabClick);
+
+window.AleriaCharacters = Object.freeze({
+  getAll: () => getAllCharacterRecords().map(cloneCharacterRecord),
+  getById: id => cloneCharacterRecord(getCharacterById(id)),
+  reload: loadCharacters
+});
 
 function assignCharToTab(charId, tab, options = {}) {
   const shouldRender = options.render !== false;

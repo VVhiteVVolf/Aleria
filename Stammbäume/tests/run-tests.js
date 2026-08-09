@@ -230,6 +230,36 @@ import { HOUSE_DUBHAN_FAMILY } from '../assets/js/data/house-dubhan-family.js';
 import { HOUSE_DUBHAN_PORTRAITS } from '../assets/js/data/house-dubhan-portraits.js';
 import { HOUSE_BERYN_FAMILY } from '../assets/js/data/house-beryn-family.js';
 import { HOUSE_BERYN_PORTRAITS } from '../assets/js/data/house-beryn-portraits.js';
+import { HOUSE_CRAFANC_FAMILY } from '../assets/js/data/house-crafanc-family.js';
+import {
+  HOUSE_CRAFANC_LOCAL_PORTRAIT_FILES,
+  HOUSE_CRAFANC_PORTRAITS,
+  HOUSE_CRAFANC_PORTRAIT_SOURCES
+} from '../assets/js/data/house-crafanc-portraits.js';
+import {
+  HOUSE_DIAFOL_TALGARTH_FAMILY,
+  HOUSE_DIAFOL_TREFGOCH_FAMILY
+} from '../assets/js/data/house-diafol-family.js';
+import {
+  HOUSE_DIAFOL_LOCAL_PORTRAIT_FILES,
+  HOUSE_DIAFOL_PORTRAITS,
+  HOUSE_DIAFOL_PORTRAIT_SOURCES
+} from '../assets/js/data/house-diafol-portraits.js';
+import {
+  HOUSE_DIANC_ABERDAIL_FAMILY,
+  HOUSE_DIANC_GWYNLANN_FAMILY
+} from '../assets/js/data/house-dianc-family.js';
+import {
+  HOUSE_DIANC_LOCAL_PORTRAIT_FILES,
+  HOUSE_DIANC_PORTRAITS,
+  HOUSE_DIANC_PORTRAIT_SOURCES
+} from '../assets/js/data/house-dianc-portraits.js';
+import { HOUSE_PAWEN_FAMILY } from '../assets/js/data/house-pawen-family.js';
+import {
+  HOUSE_PAWEN_LOCAL_PORTRAIT_FILES,
+  HOUSE_PAWEN_PORTRAITS,
+  HOUSE_PAWEN_PORTRAIT_SOURCES
+} from '../assets/js/data/house-pawen-portraits.js';
 import {
   DUBHAN_GWYNTHOR_PERSON_IDS,
   HOUSE_DUBHAN_GWYNTHOR_FAMILY
@@ -1438,6 +1468,22 @@ test('setzt Auswanderungshäuser seitlich an die Gründerperson statt in eine Ki
     { x: 430, y: -106.5 },
     { x: 430, y: -122.5 }
   ]);
+
+  const directBelow = createFamilyChartHouseOffshootLayout({
+    anchorPersonId: 'hrolf',
+    preferredPlacement: 'below'
+  }, new Map([
+    ['hrolf', { x: 0, y: 326 }]
+  ]), 'vertical');
+  assert.deepEqual(directBelow, {
+    x: 0,
+    y: 506.5,
+    side: 'below',
+    route: [
+      { x: 0, y: 432.5 },
+      { x: 0, y: 448.5 }
+    ]
+  }, 'Explizit geradlinige Auswanderungsknoten sitzen mittig unter der Gründerperson.');
 });
 
 test('schützt den Bearbeitungsmodus mit einer sitzungsgebundenen Freigabe', () => {
@@ -1508,6 +1554,8 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /assets\/css\/relationship-matrix\.css/);
   assert.match(html, /id="living-count"/);
   assert.match(html, /id="partnership-count"/);
+  assert.match(html, /data-role="skip-netlify-deploy" checked/);
+  assert.match(html, /Deploy überspringen/);
   assert.match(inspectorScript, /data-action="open-relation-actions"/);
   assert.doesNotMatch(
     inspectorScript,
@@ -15099,6 +15147,13 @@ test('trennt die fünf Vennyr-Herkunftshäuser von ihren Klaueninsel-Nachfolgeak
     ['haus-dianc', 'haus-dianc-aberdail'],
     ['haus-walwrs', 'haus-walwrs-caer-deheuol']
   ]);
+  const expectedOriginChildCounts = new Map([
+    ['haus-diafol', 3],
+    ['haus-dyfrgi', 2],
+    ['haus-arfordir', 2],
+    ['haus-dianc', 2],
+    ['haus-walwrs', 2]
+  ]);
 
   assert.equal(KLAUENINSEL_ORIGIN_HOUSE_FAMILIES.length, expectedOrigins.size);
   expectedOrigins.forEach((path, familyId) => {
@@ -15113,16 +15168,14 @@ test('trennt die fünf Vennyr-Herkunftshäuser von ihren Klaueninsel-Nachfolgeak
     assert.ok(successor, `${familyId}: Nachfolgeakte fehlt.`);
     assert.equal(successor.extensions.originFamilyId, familyId);
     assert.equal(successor.lineage.originHouse.targetFamilyId, familyId);
-    assert.equal(successor.lineage.originHouse.childIds.length, 2);
+    assert.equal(successor.lineage.originHouse.childIds.length, expectedOriginChildCounts.get(familyId));
   });
 
   assert.deepEqual(createFolderPathFromHouseProfile(KLAUENINSEL_ORIGIN_HOUSE_PROFILES['diafol-trefgoch']), ['Vennyr', 'Tir Gogledd', 'Trefgoch']);
 });
 
-test('übernimmt die sieben belegten Arth-Gründerpaare in ihre Kadettenhausakten ohne erfundene Nachkommen', () => {
+test('übernimmt die fünf noch nicht ausgearbeiteten Arth-Gründerpaare ohne erfundene Nachkommen', () => {
   const expectedFounders = new Map([
-    ['haus-pawen', 'marriage-lamorak-mared'],
-    ['haus-crafanc', 'marriage-artgal-amdarch'],
     ['haus-cwningod', 'marriage-galeshin-arianhrod'],
     ['haus-unigol', 'marriage-trahaern-ceridwen'],
     ['haus-morthwyll', 'marriage-heddwen-sayres'],
@@ -15145,6 +15198,867 @@ test('übernimmt die sieben belegten Arth-Gründerpaare in ihre Kadettenhausakte
       assert.equal(person.worldPersonId, arthPerson.worldPersonId);
       assert.equal(person.portrait, arthPerson.portrait);
     });
+  });
+});
+
+test('bildet Haus Pawen vollständig als ältestes Kadettenhaus der Arth ab', () => {
+  const family = HOUSE_PAWEN_FAMILY;
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 43);
+  assert.equal(family.partnerships.length, 19);
+  assert.equal(family.parentages.length, 23);
+  assert.equal(family.cadetBranches.length, 8);
+  assert.equal(family.view.focusPersonId, 'lamorak-arth');
+  assert.equal(family.view.limitGenerations, false);
+
+  const arthFounderMarriage = HOUSE_ARTH_FAMILY.partnerships.find(
+    partnership => partnership.id === 'marriage-lamorak-mared'
+  );
+  assert.deepEqual(family.partnerships[0].participantIds, arthFounderMarriage.participantIds);
+  arthFounderMarriage.participantIds.forEach(personId => {
+    const pawenPerson = family.persons.find(person => person.id === personId);
+    const arthPerson = HOUSE_ARTH_FAMILY.persons.find(person => person.id === personId);
+    assert.equal(pawenPerson.worldPersonId, arthPerson.worldPersonId);
+    assert.equal(pawenPerson.portrait, arthPerson.portrait);
+  });
+
+  const founderBranch = HOUSE_ARTH_FAMILY.cadetBranches.find(
+    branch => branch.targetFamilyId === family.document.id
+  );
+  assert.equal(founderBranch.parentPartnershipId, 'marriage-lamorak-mared');
+  assert.equal(founderBranch.emblem, family.document.emblem);
+
+  const { reachableNodeIds } = collectReachableChartNodeIds(family);
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht vom Pawen-Gründer aus erreichbar`);
+  });
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
+  assert.equal(records[0].type, 'dynasty');
+});
+
+test('ersetzt Pawens frühere lokale Gründer-Leerakte durch den vollständigen Stammbaum', () => {
+  const staleFamily = structuredClone(HOUSE_PAWEN_FAMILY);
+  staleFamily.persons = staleFamily.persons.slice(0, 2);
+  staleFamily.partnerships = staleFamily.partnerships.slice(0, 1);
+  staleFamily.parentages = [];
+  staleFamily.cadetBranches = [];
+  staleFamily.timeJumps = [];
+  staleFamily.extensions.blankFamily = true;
+  staleFamily.extensions.sourceRevision = 1;
+
+  const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_PAWEN_FAMILY, staleFamily);
+  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.blankFamily, false);
+  assert.equal(upgraded.persons.length, 43);
+  assert.equal(upgraded.parentages.length, 23);
+  assert.equal(upgraded.timeJumps.length, 1);
+  assert.equal(upgraded.view.focusPersonId, 'lamorak-arth');
+});
+
+test('setzt Pawens Hausknoten und einzigen Zeitsprung strikt seriell vor Cadoc und Ceridwen', () => {
+  const family = HOUSE_PAWEN_FAMILY;
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-lamorak-mared');
+  assert.equal(family.lineage.houseId, 'house-pawen');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.timeJumps.length, 1);
+
+  const timeJump = family.timeJumps[0];
+  assert.equal(timeJump.parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.equal(timeJump.parentPersonId, '');
+  assert.deepEqual(timeJump.childIds, ['cadoc-pawen', 'ceridwen-pawen']);
+  timeJump.childIds.forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.partnershipId, family.lineage.founderPartnershipId);
+    assert.equal(parentage.extensions.timeJumpId, timeJump.id);
+    assert.equal(parentage.certainty, 'probable');
+  });
+});
+
+test('ordnet Pawens Wegverheiratungen und Unigol-Gründung den richtigen Ehen zu', () => {
+  const family = HOUSE_PAWEN_FAMILY;
+  const expectedBranches = new Map([
+    ['cadet-unigol-ceridwen-pawen', ['marriage-trahaern-ceridwen', 'haus-unigol', 'cadet-house']],
+    ['married-away-tegwyn-pawen-crefyddol', ['marriage-emrys-tegwyn-crefyddol', 'haus-crefyddol', 'married-away']],
+    ['married-away-morwen-pawen-tiwna', ['marriage-madoc-morwen-tiwna', 'haus-tiwna', 'married-away']],
+    ['married-away-libet-pawen-gwialen', ['marriage-libet-artus-gwialen', 'haus-gwialen', 'married-away']],
+    ['married-away-rhonwen-pawen-brithyll', ['marriage-aneirin-rhonwen-brithyll', 'haus-brithyll', 'married-away']],
+    ['married-away-gwenfrewi-pawen-arth', ['marriage-domnall-gwenfrewi', 'haus-arth', 'married-away']],
+    ['married-away-joally-pawen-cwningod', ['marriage-joally-tegid-pawen', 'haus-cwningod', 'married-away']],
+    ['married-away-mared-pawen-eirth', ['marriage-mared-urien-pawen', 'haus-eirth', 'married-away']]
+  ]);
+
+  expectedBranches.forEach(([partnershipId, targetFamilyId, linkType], branchId) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId}: Verknüpfung fehlt`);
+    assert.equal(branch.parentPartnershipId, partnershipId);
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+    assert.equal(branch.linkType, linkType);
+    assert.ok(branch.emblem, `${branchId}: Zielwappen fehlt`);
+  });
+
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'cadet-unigol-ceridwen-pawen').parentPersonId,
+    ''
+  );
+});
+
+test('führt fremde Nachkommen nur in den Zielhäusern und lässt Pawens jüngste Generation unverheiratet', () => {
+  const family = HOUSE_PAWEN_FAMILY;
+  const foreignDescendantIds = [
+    'beynon-crefyddol',
+    'gwindor-crefydoll',
+    'lunet-crefyddol',
+    'gavin-tiwna',
+    'dylis-tiwna',
+    'gereint-gwialen',
+    'morfudd-gwialen',
+    'llwellyn-brithyll',
+    'llewella-brithyll'
+  ];
+  foreignDescendantIds.forEach(personId => {
+    assert.equal(family.persons.some(person => person.id === personId), false, `${personId}: doppelte Ziellinie`);
+  });
+
+  const partneredIds = new Set(family.partnerships.flatMap(partnership => partnership.participantIds));
+  ['ianto-pawen', 'owena-pawen', 'thalen-pawen', 'niniel-pawen', 'guto-pawen'].forEach(personId => {
+    assert.equal(partneredIds.has(personId), false, `${personId}: jüngste Generation muss unverheiratet bleiben`);
+  });
+});
+
+test('liefert Pawens individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch', async () => {
+  assert.deepEqual(
+    Object.keys(HOUSE_PAWEN_LOCAL_PORTRAIT_FILES),
+    Object.keys(HOUSE_PAWEN_PORTRAIT_SOURCES)
+  );
+  await Promise.all(Object.entries(HOUSE_PAWEN_LOCAL_PORTRAIT_FILES).map(async ([personId, fileName]) => {
+    assert.equal(HOUSE_PAWEN_PORTRAITS[personId], `assets/images/portraits/haus-pawen/${fileName}`);
+    const image = await readFile(new URL(`../assets/images/portraits/haus-pawen/${fileName}`, import.meta.url));
+    assert.ok(image.length > 100, `${personId}: lokales Portrait fehlt`);
+  }));
+
+  [
+    ['lamorak-arth', HOUSE_ARTH_FAMILY],
+    ['rhodri-pawen', HOUSE_CANWYLL_FAMILY],
+    ['madoc-tiwna', HOUSE_TIWNA_FAMILY],
+    ['grufudd-pawen', HOUSE_CATH_FAMILY],
+    ['artus-gwialen', HOUSE_GWIALEN_FAMILY],
+    ['aneirin-brithyll', HOUSE_BRITHYLL_FAMILY],
+    ['march-pawen', HOUSE_MORFIL_FAMILY]
+  ].forEach(([personId, counterFamily]) => {
+    const pawenPerson = HOUSE_PAWEN_FAMILY.persons.find(person => person.id === personId);
+    const counterPerson = counterFamily.persons.find(person => person.id === personId);
+    assert.equal(pawenPerson.worldPersonId, counterPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(pawenPerson.portrait, counterPerson.portrait, `${personId}: Portrait`);
+  });
+});
+
+test('bildet Haus Crafanc vollständig als zweites Kadettenhaus der Arth ab', () => {
+  const family = HOUSE_CRAFANC_FAMILY;
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 42);
+  assert.equal(family.partnerships.length, 18);
+  assert.equal(family.parentages.length, 23);
+  assert.equal(family.cadetBranches.length, 10);
+  assert.equal(family.view.focusPersonId, 'artgal-arth');
+  assert.equal(family.view.limitGenerations, false);
+
+  const arthFounderMarriage = HOUSE_ARTH_FAMILY.partnerships.find(
+    partnership => partnership.id === 'marriage-artgal-amdarch'
+  );
+  assert.deepEqual(family.partnerships[0].participantIds, arthFounderMarriage.participantIds);
+  arthFounderMarriage.participantIds.forEach(personId => {
+    const crafancPerson = family.persons.find(person => person.id === personId);
+    const arthPerson = HOUSE_ARTH_FAMILY.persons.find(person => person.id === personId);
+    assert.equal(crafancPerson.worldPersonId, arthPerson.worldPersonId);
+    assert.equal(crafancPerson.portrait, arthPerson.portrait);
+  });
+
+  const founderBranch = HOUSE_ARTH_FAMILY.cadetBranches.find(
+    branch => branch.targetFamilyId === family.document.id
+  );
+  assert.equal(founderBranch.parentPartnershipId, 'marriage-artgal-amdarch');
+  assert.equal(founderBranch.emblem, family.document.emblem);
+
+  const { reachableNodeIds } = collectReachableChartNodeIds(family);
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht vom Crafanc-Gründer aus erreichbar`);
+  });
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
+  assert.equal(records[0].type, 'dynasty');
+});
+
+test('ersetzt Crafancs frühere lokale Gründer-Leerakte durch den vollständigen Stammbaum', () => {
+  const staleFamily = structuredClone(HOUSE_CRAFANC_FAMILY);
+  staleFamily.persons = staleFamily.persons.slice(0, 2);
+  staleFamily.partnerships = staleFamily.partnerships.slice(0, 1);
+  staleFamily.parentages = [];
+  staleFamily.cadetBranches = [];
+  staleFamily.timeJumps = [];
+  staleFamily.extensions.blankFamily = true;
+  staleFamily.extensions.sourceRevision = 1;
+
+  const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_CRAFANC_FAMILY, staleFamily);
+  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.blankFamily, false);
+  assert.equal(upgraded.persons.length, 42);
+  assert.equal(upgraded.parentages.length, 23);
+  assert.equal(upgraded.timeJumps.length, 1);
+  assert.equal(upgraded.view.focusPersonId, 'artgal-arth');
+});
+
+test('setzt Crafancs Hausknoten und einzigen Zeitsprung strikt seriell vor Caradoc und Kerenza', () => {
+  const family = HOUSE_CRAFANC_FAMILY;
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-artgal-amdarch');
+  assert.equal(family.lineage.houseId, 'house-crafanc');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.timeJumps.length, 1);
+
+  const timeJump = family.timeJumps[0];
+  assert.equal(timeJump.parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.equal(timeJump.parentPersonId, '');
+  assert.deepEqual(timeJump.childIds, ['caradoc-crafanc', 'kerenza-crafanc']);
+  timeJump.childIds.forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.partnershipId, family.lineage.founderPartnershipId);
+    assert.equal(parentage.extensions.timeJumpId, timeJump.id);
+    assert.equal(parentage.certainty, 'probable');
+  });
+});
+
+test('ordnet Crafancs Zielhauslinien, Eirth-Gründung und Gwennas Mündelknoten korrekt zu', () => {
+  const family = HOUSE_CRAFANC_FAMILY;
+  const expectedBranches = new Map([
+    ['married-away-kerenza-crafanc-pawen', ['marriage-cadoc-kerenza-pawen', 'haus-pawen', 'married-away']],
+    ['married-away-nesta-crafanc-walwrs', ['marriage-nesta-taran-crafanc', 'haus-walwrs-caer-deheuol', 'married-away']],
+    ['married-away-kerenza-1627-crafanc-unigol', ['marriage-kerenza-trachmyr-crafanc', 'haus-unigol', 'married-away']],
+    ['cadet-eirth-kyndra-crafanc', ['marriage-rhynnon-kyndra', 'haus-eirth', 'cadet-house']],
+    ['married-away-andarch-crafanc-gwialen', ['marriage-andarch-gereint-gwialen', 'haus-gwialen', 'married-away']],
+    ['married-away-glaw-crafanc-dianc', ['marriage-glaw-gingalain-crafanc', 'haus-dianc-aberdail', 'married-away']],
+    ['married-away-glinda-crafanc-pawen', ['marriage-amaethon-glinda-pawen', 'haus-pawen', 'married-away']],
+    ['married-away-glynis-crafanc-blaidd', ['marriage-glynis-tewdur-crafanc', 'haus-blaidd-tredegar', 'married-away']],
+    ['married-away-glesni-crafanc-arfordir', ['marriage-glesni-madoc-crafanc', 'haus-arfordir-aberdail', 'married-away']],
+    ['ward-away-gwenna-crafanc-gafyr', ['', 'haus-gafyr', 'ward-away']]
+  ]);
+
+  expectedBranches.forEach(([partnershipId, targetFamilyId, linkType], branchId) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId}: Verknüpfung fehlt`);
+    assert.equal(branch.parentPartnershipId, partnershipId);
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+    assert.equal(branch.linkType, linkType);
+    assert.ok(branch.emblem, `${branchId}: Zielwappen fehlt`);
+  });
+
+  const eirthBranch = family.cadetBranches.find(branch => branch.id === 'cadet-eirth-kyndra-crafanc');
+  assert.equal(eirthBranch.parentPersonId, '');
+  const wardBranch = family.cadetBranches.find(branch => branch.id === 'ward-away-gwenna-crafanc-gafyr');
+  assert.equal(wardBranch.parentPersonId, 'gwenna-crafanc');
+  assert.equal(family.persons.find(person => person.id === 'gwenna-crafanc').familyRole, 'ward-away');
+});
+
+test('synchronisiert Crafancs Gegenakten und führt fremde Kinder nur im fortführenden Zielhaus', () => {
+  const sharedPersons = [
+    ['kerenza-crafanc', HOUSE_PAWEN_FAMILY],
+    ['cadoc-pawen', HOUSE_PAWEN_FAMILY],
+    ['glinda-crafanc', HOUSE_PAWEN_FAMILY],
+    ['amaethon-pawen', HOUSE_PAWEN_FAMILY],
+    ['cynwrig-crafanc', HOUSE_ARTH_FAMILY],
+    ['elisud-crafanc', HOUSE_ARTH_FAMILY],
+    ['kyndra-crafanc', HOUSE_ARTH_FAMILY],
+    ['rhynnon-arth', HOUSE_ARTH_FAMILY],
+    ['melwas-crafanc', HOUSE_ARTH_FAMILY],
+    ['olwen-arth', HOUSE_ARTH_FAMILY],
+    ['andarch-crafanc', HOUSE_GWIALEN_FAMILY],
+    ['gereint-gwialen', HOUSE_GWIALEN_FAMILY],
+    ['artgal-crafanc', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['jowna-1681-mochdaer', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['tutagual-crafanc', HOUSE_COEDWIG_FAMILY],
+    ['tegan-coedwig', HOUSE_COEDWIG_FAMILY],
+    ['gwenna-crafanc', HOUSE_GAFYR_FAMILY]
+  ];
+  sharedPersons.forEach(([personId, counterFamily]) => {
+    const crafancPerson = HOUSE_CRAFANC_FAMILY.persons.find(person => person.id === personId);
+    const counterPerson = counterFamily.persons.find(person => person.id === personId);
+    assert.equal(crafancPerson.worldPersonId, counterPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(crafancPerson.portrait, counterPerson.portrait, `${personId}: Portrait`);
+  });
+
+  const sharedPartnerships = [
+    ['marriage-cadoc-kerenza-pawen', HOUSE_PAWEN_FAMILY],
+    ['marriage-amaethon-glinda-pawen', HOUSE_PAWEN_FAMILY],
+    ['marriage-wenonah-cynwrig', HOUSE_ARTH_FAMILY],
+    ['marriage-rhynnon-kyndra', HOUSE_ARTH_FAMILY],
+    ['marriage-afanen-elisud', HOUSE_ARTH_FAMILY],
+    ['marriage-olwen-melwas', HOUSE_ARTH_FAMILY],
+    ['marriage-andarch-gereint-gwialen', HOUSE_GWIALEN_FAMILY],
+    ['marriage-jowna-artgal-mochdaer', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['marriage-tutagual-tegan-coedwig', HOUSE_COEDWIG_FAMILY]
+  ];
+  sharedPartnerships.forEach(([partnershipId, counterFamily]) => {
+    const crafancPartnership = HOUSE_CRAFANC_FAMILY.partnerships.find(entry => entry.id === partnershipId);
+    const counterPartnership = counterFamily.partnerships.find(entry => entry.id === partnershipId);
+    assert.deepEqual(crafancPartnership.participantIds, counterPartnership.participantIds, partnershipId);
+  });
+
+  const gafyrFosterParentage = HOUSE_GAFYR_FAMILY.parentages.find(
+    parentage => parentage.childId === 'gwenna-crafanc'
+  );
+  assert.equal(gafyrFosterParentage.type, 'foster');
+  assert.deepEqual(gafyrFosterParentage.parentIds, ['egon-gafyr']);
+
+  [
+    'sadwrn-pawen',
+    'tegwyn-pawen',
+    'ianto-pawen',
+    'owena-pawen',
+    'cwrgi-gwialen',
+    'cloten-gwialen'
+  ].forEach(personId => {
+    assert.equal(HOUSE_CRAFANC_FAMILY.persons.some(person => person.id === personId), false, `${personId}: doppelte Ziellinie`);
+  });
+
+  const partneredIds = new Set(HOUSE_CRAFANC_FAMILY.partnerships.flatMap(partnership => partnership.participantIds));
+  ['iestyn-crafanc', 'gwenna-crafanc', 'sadwyn-crafanc', 'eogan-crafanc', 'arwen-1725-crafanc'].forEach(personId => {
+    assert.equal(partneredIds.has(personId), false, `${personId}: jüngste Generation muss unverheiratet bleiben`);
+  });
+});
+
+test('liefert Crafancs individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch', async () => {
+  assert.deepEqual(
+    Object.keys(HOUSE_CRAFANC_LOCAL_PORTRAIT_FILES),
+    Object.keys(HOUSE_CRAFANC_PORTRAIT_SOURCES)
+  );
+  await Promise.all(Object.entries(HOUSE_CRAFANC_LOCAL_PORTRAIT_FILES).map(async ([personId, fileName]) => {
+    assert.equal(HOUSE_CRAFANC_PORTRAITS[personId], `assets/images/portraits/haus-crafanc/${fileName}`);
+    const image = await readFile(new URL(`../assets/images/portraits/haus-crafanc/${fileName}`, import.meta.url));
+    assert.ok(image.length > 100, `${personId}: lokales Portrait fehlt`);
+  }));
+
+  [
+    ['artgal-arth', HOUSE_ARTH_FAMILY],
+    ['cynwrig-crafanc', HOUSE_ARTH_FAMILY],
+    ['cadoc-pawen', HOUSE_PAWEN_FAMILY],
+    ['andarch-crafanc', HOUSE_GWIALEN_FAMILY],
+    ['artgal-crafanc', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['tutagual-crafanc', HOUSE_COEDWIG_FAMILY],
+    ['gwenna-crafanc', HOUSE_GAFYR_FAMILY]
+  ].forEach(([personId, counterFamily]) => {
+    const crafancPerson = HOUSE_CRAFANC_FAMILY.persons.find(person => person.id === personId);
+    const counterPerson = counterFamily.persons.find(person => person.id === personId);
+    assert.equal(crafancPerson.worldPersonId, counterPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(crafancPerson.portrait, counterPerson.portrait, `${personId}: Portrait`);
+  });
+});
+
+test('bildet Diafols vollständige Herkunftslinie aus Trefgoch ohne Fokusbegrenzung ab', () => {
+  const family = HOUSE_DIAFOL_TREFGOCH_FAMILY;
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.originLine, true);
+  assert.equal(family.extensions.successorFamilyId, 'haus-diafol-talgarth');
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 30);
+  assert.equal(family.partnerships.length, 13);
+  assert.equal(family.parentages.length, 16);
+  assert.equal(family.cadetBranches.length, 5);
+  assert.equal(family.view.focusPersonId, 'gwrgwst-diafol');
+  assert.equal(family.view.limitGenerations, false);
+
+  const { reachableNodeIds } = collectReachableChartNodeIds(family);
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht vom Diafol-Gründer aus erreichbar`);
+  });
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Vennyr', 'Tir Gogledd', 'Trefgoch']);
+});
+
+test('führt in Talgarth alle acht überlebenden Diafol mit ihren notwendigen Partnern fort', () => {
+  const family = HOUSE_DIAFOL_TALGARTH_FAMILY;
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.originFamilyId, 'haus-diafol');
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 12);
+  assert.equal(family.partnerships.length, 4);
+  assert.equal(family.parentages.length, 5);
+  assert.equal(family.cadetBranches.length, 1);
+  assert.equal(family.view.limitGenerations, false);
+  assert.deepEqual(
+    family.lineage.originHouse.childIds,
+    ['tryffin-diafol', 'torri-diafol', 'tarawg-diafol']
+  );
+
+  const survivingDiafolIds = [
+    'tryffin-diafol',
+    'torri-diafol',
+    'tarawg-diafol',
+    'tawr-diafol',
+    'telyn-diafol',
+    'meic-diafol',
+    'medi-diafol',
+    'tref-diafol'
+  ];
+  assert.deepEqual(
+    family.persons
+      .filter(person => person.houseId === 'house-diafol-talgarth' && person.status === 'alive')
+      .map(person => person.id)
+      .sort(),
+    [...survivingDiafolIds].sort()
+  );
+  ['morcant-gwaedlyd', 'slevin-diafol', 'maygan-caerdyn', 'madog-diafol'].forEach(personId => {
+    assert.ok(family.persons.some(person => person.id === personId), `${personId}: notwendiger Elternteil fehlt`);
+  });
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
+});
+
+test('setzt Diafols Hausknoten und einzigen Zeitsprung strikt seriell vor Ercwlff und Griff', () => {
+  const family = HOUSE_DIAFOL_TREFGOCH_FAMILY;
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-gwrgwst-celyn-diafol');
+  assert.equal(family.lineage.houseId, 'house-diafol');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.timeJumps.length, 1);
+
+  const timeJump = family.timeJumps[0];
+  assert.equal(timeJump.parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.deepEqual(timeJump.sharedParentPartnershipIds, []);
+  assert.deepEqual(timeJump.childIds, ['ercwlff-diafol', 'griff-diafol']);
+  timeJump.childIds.forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.partnershipId, family.lineage.founderPartnershipId);
+    assert.equal(parentage.extensions.timeJumpId, timeJump.id);
+    assert.equal(parentage.certainty, 'probable');
+  });
+});
+
+test('ordnet Torri Diafols Kinder eindeutig ihren beiden Affären zu', () => {
+  [HOUSE_DIAFOL_TREFGOCH_FAMILY, HOUSE_DIAFOL_TALGARTH_FAMILY].forEach(family => {
+    assert.equal(family.persons.filter(person => person.id === 'torri-diafol').length, 1);
+    const alignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
+    assert.equal(alignmentPlan.invalidRequests.length, 0);
+    assert.equal(alignmentPlan.partnerOverChildrenRoutes.length, 2);
+
+    const expected = new Map([
+      ['meic-diafol', ['affair-torri-madog-diafol', ['torri-diafol', 'madog-diafol'], 'madog-diafol']],
+      ['medi-diafol', ['affair-torri-slevin-diafol', ['torri-diafol', 'slevin-diafol'], 'slevin-diafol']]
+    ]);
+    expected.forEach(([partnershipId, parentIds, alignedPartnerId], childId) => {
+      const parentage = family.parentages.find(entry => entry.childId === childId);
+      const partnership = family.partnerships.find(entry => entry.id === partnershipId);
+      assert.deepEqual(parentage.parentIds, parentIds, `${childId}: leibliche Eltern`);
+      assert.equal(parentage.partnershipId, partnershipId, `${childId}: Affärenzuordnung`);
+      assert.equal(parentage.legitimacy, 'legitimized', `${childId}: Legitimierung`);
+      assert.equal(partnership.type, 'affair');
+      assert.equal(partnership.extensions.chartAlignPartnerOverChildrenPersonId, alignedPartnerId);
+    });
+  });
+});
+
+test('verteilt kollidierende Partnerkarten bei beiden Diafol-Linien links und rechts der Kernperson', () => {
+  [HOUSE_DIAFOL_TREFGOCH_FAMILY, HOUSE_DIAFOL_TALGARTH_FAMILY].forEach(family => {
+    const plan = createFamilyChartPartnerAlignmentPlan(family);
+    assert.deepEqual(
+      plan.partnerOverChildrenRoutes.map(route => [
+        route.partnershipId,
+        route.sharedPersonId,
+        route.partnerPersonId,
+        route.partnershipType
+      ]),
+      [
+        ['affair-torri-madog-diafol', 'torri-diafol', 'madog-diafol', 'affair'],
+        ['affair-torri-slevin-diafol', 'torri-diafol', 'slevin-diafol', 'affair']
+      ]
+    );
+
+    const tree = {
+      data: [
+        { data: { id: 'torri-diafol' }, x: 640, y: 0, sx: 640 },
+        { data: { id: 'slevin-diafol' }, spouse: {}, x: 40, y: 0, sx: 40 },
+        { data: { id: 'medi-diafol' }, x: 0, y: 326, sx: 0 },
+        { data: { id: 'madog-diafol' }, spouse: {}, x: 520, y: 0, sx: 520 },
+        { data: { id: 'meic-diafol' }, x: 500, y: 326, sx: 500 }
+      ]
+    };
+    const applied = applyFamilyChartPartnerAlignmentPlan({ tree, plan });
+    const byId = new Map(tree.data.map(node => [node.data.id, node]));
+
+    assert.equal(byId.get('slevin-diafol').x, -64, 'Slevin bleibt direkt über Medi auf Torris linker Seite.');
+    assert.equal(byId.get('medi-diafol').x, -64);
+    assert.equal(byId.get('madog-diafol').x, 288, 'Madog erhält neben Slevin eine eigene kollisionsfreie Partnerspalte.');
+    assert.equal(byId.get('madog-diafol').sx, 288);
+    assert.equal(byId.get('meic-diafol').x, 288, 'Meics gesamter Elternzweig folgt Madog, damit die Zuordnung sichtbar bleibt.');
+    assert.equal(byId.get('meic-diafol').sx, 288);
+    assert.ok(
+      byId.get('madog-diafol').x + 320 < byId.get('torri-diafol').x,
+      'Zwischen Madog und Torri muss ein sichtbarer Kartenabstand verbleiben.'
+    );
+    assert.deepEqual(applied.collisionResolutions.map(resolution => [
+      resolution.partnershipId,
+      resolution.side,
+      resolution.strategy,
+      resolution.collisionCount
+    ]), [
+      ['affair-torri-slevin-diafol', 'before', 'pack-partner-lanes', 0],
+      ['affair-torri-madog-diafol', 'before', 'pack-partner-lanes', 0]
+    ]);
+  });
+});
+
+test('stellt bei einer Kollision zuerst die sichtbare Diagrammposition des Partners wieder her', () => {
+  const family = HOUSE_DIAFOL_TALGARTH_FAMILY;
+  const completePlan = createFamilyChartPartnerAlignmentPlan(family);
+  const plan = {
+    ...completePlan,
+    partnerOverChildrenRoutes: completePlan.partnerOverChildrenRoutes.filter(route => (
+      route.partnershipId === 'affair-torri-madog-diafol'
+    ))
+  };
+  const tree = {
+    data: [
+      { data: { id: 'torri-diafol' }, x: 640, y: 0, sx: 640 },
+      { data: { id: 'slevin-diafol' }, spouse: {}, x: 0, y: 0, sx: 0 },
+      { data: { id: 'medi-diafol' }, x: 0, y: 326, sx: 0 },
+      { data: { id: 'madog-diafol' }, spouse: {}, x: 992, y: 0, sx: 992 },
+      { data: { id: 'meic-diafol' }, x: 640, y: 326, sx: 640 }
+    ]
+  };
+
+  const applied = applyFamilyChartPartnerAlignmentPlan({ tree, plan });
+  const byId = new Map(tree.data.map(node => [node.data.id, node]));
+  assert.equal(byId.get('madog-diafol').x, 992);
+  assert.equal(byId.get('madog-diafol').sx, 992);
+  assert.equal(byId.get('meic-diafol').x, 640, 'Das Kind bleibt in der vom Diagramm berechneten Generationenspalte.');
+  assert.deepEqual(applied.collisionResolutions.map(resolution => [
+    resolution.partnershipId,
+    resolution.side,
+    resolution.strategy,
+    resolution.collisionCount
+  ]), [['affair-torri-madog-diafol', 'after', 'restore-chart-position', 0]]);
+});
+
+test('synchronisiert Diafols Migration, Gwaedlyd-Ehe und Telyns Mündel-Gegenakte', () => {
+  const origin = HOUSE_DIAFOL_TREFGOCH_FAMILY;
+  const successor = HOUSE_DIAFOL_TALGARTH_FAMILY;
+  const sharedDiafolIds = [
+    'tryffin-diafol', 'torri-diafol', 'tarawg-diafol', 'tawr-diafol',
+    'telyn-diafol', 'meic-diafol', 'medi-diafol', 'tref-diafol'
+  ];
+  sharedDiafolIds.forEach(personId => {
+    const originPerson = origin.persons.find(person => person.id === personId);
+    const successorPerson = successor.persons.find(person => person.id === personId);
+    assert.equal(originPerson.worldPersonId, successorPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(originPerson.portrait, successorPerson.portrait, `${personId}: Portrait`);
+  });
+
+  ['tryffin-diafol', 'morcant-gwaedlyd'].forEach(personId => {
+    const diafolPerson = successor.persons.find(person => person.id === personId);
+    const gwaedlydPerson = HOUSE_GWAEDLYD_TREDEGAR_FAMILY.persons.find(person => person.id === personId);
+    assert.equal(diafolPerson.worldPersonId, gwaedlydPerson.worldPersonId, `${personId}: Gwaedlyd-Weltperson`);
+    assert.equal(diafolPerson.portrait, gwaedlydPerson.portrait, `${personId}: Gwaedlyd-Portrait`);
+  });
+  assert.deepEqual(
+    successor.partnerships.find(entry => entry.id === 'marriage-morcant-tryffin-gwaedlyd').participantIds,
+    HOUSE_GWAEDLYD_TREDEGAR_FAMILY.partnerships.find(entry => entry.id === 'marriage-morcant-tryffin-gwaedlyd').participantIds
+  );
+
+  const telynDiafol = successor.persons.find(person => person.id === 'telyn-diafol');
+  const telynBlodyn = HOUSE_BLODYN_TALGARTH_FAMILY.persons.find(person => person.id === 'telyn-diafol');
+  assert.equal(telynDiafol.familyRole, 'ward-away');
+  assert.equal(telynDiafol.worldPersonId, telynBlodyn.worldPersonId);
+  assert.equal(telynDiafol.portrait, telynBlodyn.portrait);
+  assert.equal(
+    HOUSE_BLODYN_TALGARTH_FAMILY.parentages.find(entry => entry.childId === 'telyn-diafol').type,
+    'foster'
+  );
+
+  [origin, successor].forEach(family => {
+    const wardBranch = family.cadetBranches.find(branch => branch.id === 'ward-away-telyn-diafol-blodyn');
+    assert.equal(wardBranch.parentPersonId, 'telyn-diafol');
+    assert.equal(wardBranch.targetFamilyId, 'haus-blodyn-talgarth');
+    assert.equal(wardBranch.linkType, 'ward-away');
+    assert.equal(wardBranch.emblem, KLAUENINSEL_HOUSE_EMBLEMS.blodyn);
+  });
+
+  const migration = origin.cadetBranches.find(branch => branch.id === 'migration-tryffin-diafol-talgarth');
+  assert.equal(migration.parentPersonId, 'tryffin-diafol');
+  assert.equal(migration.parentPartnershipId, '');
+  assert.equal(migration.targetFamilyId, 'haus-diafol-talgarth');
+  assert.equal(migration.linkType, 'migration-offshoot');
+});
+
+test('liefert Diafols individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch', async () => {
+  assert.deepEqual(
+    Object.keys(HOUSE_DIAFOL_LOCAL_PORTRAIT_FILES),
+    Object.keys(HOUSE_DIAFOL_PORTRAIT_SOURCES)
+  );
+  await Promise.all(Object.entries(HOUSE_DIAFOL_LOCAL_PORTRAIT_FILES).map(async ([personId, fileName]) => {
+    assert.equal(HOUSE_DIAFOL_PORTRAITS[personId], `assets/images/portraits/haus-diafol/${fileName}`);
+    const image = await readFile(new URL(`../assets/images/portraits/haus-diafol/${fileName}`, import.meta.url));
+    assert.ok(image.length > 100, `${personId}: lokales Portrait fehlt`);
+  }));
+
+  [
+    ['tryffin-diafol', HOUSE_GWAEDLYD_TREDEGAR_FAMILY],
+    ['morcant-gwaedlyd', HOUSE_GWAEDLYD_TREDEGAR_FAMILY],
+    ['telyn-diafol', HOUSE_BLODYN_TALGARTH_FAMILY]
+  ].forEach(([personId, counterFamily]) => {
+    const diafolPerson = HOUSE_DIAFOL_TALGARTH_FAMILY.persons.find(person => person.id === personId);
+    const counterPerson = counterFamily.persons.find(person => person.id === personId);
+    assert.equal(diafolPerson.worldPersonId, counterPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(diafolPerson.portrait, counterPerson.portrait, `${personId}: Portrait`);
+  });
+});
+
+test('ersetzt Diafols frühere lokale Platzhalterakten in Vennyr und Talgarth', () => {
+  [HOUSE_DIAFOL_TREFGOCH_FAMILY, HOUSE_DIAFOL_TALGARTH_FAMILY].forEach(family => {
+    const staleFamily = structuredClone(family);
+    staleFamily.persons = staleFamily.persons.slice(0, 2);
+    staleFamily.partnerships = staleFamily.partnerships.slice(0, 1);
+    staleFamily.parentages = [];
+    staleFamily.cadetBranches = [];
+    staleFamily.timeJumps = [];
+    staleFamily.extensions.blankFamily = true;
+    staleFamily.extensions.sourceRevision = 1;
+
+    const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
+    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.blankFamily, false);
+    assert.equal(upgraded.persons.length, family.persons.length);
+    assert.equal(upgraded.parentages.length, family.parentages.length);
+    assert.equal(upgraded.view.limitGenerations, false);
+  });
+});
+
+test('bildet Diancs vollständige Herkunftslinie aus Gwynlann ohne Fokusbegrenzung ab', () => {
+  const family = HOUSE_DIANC_GWYNLANN_FAMILY;
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.originLine, true);
+  assert.equal(family.extensions.successorFamilyId, 'haus-dianc-aberdail');
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 41);
+  assert.equal(family.partnerships.length, 18);
+  assert.equal(family.parentages.length, 22);
+  assert.equal(family.cadetBranches.length, 8);
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.view.focusPersonId, 'arthfael-dianc');
+  assert.equal(family.view.limitGenerations, false);
+
+  const { reachableNodeIds } = collectReachableChartNodeIds(family);
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht vom Dianc-Gründer aus erreichbar`);
+  });
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Vennyr', 'Tir Mynddoedd', 'Gwynlann']);
+});
+
+test('setzt Diancs Hausknoten und einzigen Zeitsprung strikt seriell vor Kynwrig und Jenifrydd', () => {
+  const family = HOUSE_DIANC_GWYNLANN_FAMILY;
+  const converted = toFamilyChartData(family);
+  const byId = new Map(converted.data.map(node => [node.id, node]));
+  const crestId = '__lineage-crest-haus-dianc';
+  const jumpId = '__time-jump-gap-founders-to-kynwrig-jenifrydd-dianc';
+  const timeJump = family.timeJumps[0];
+
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-gwendolen-arthfael');
+  assert.equal(family.lineage.houseId, 'house-dianc');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(timeJump.parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.deepEqual(timeJump.sharedParentPartnershipIds, []);
+  assert.deepEqual(timeJump.childIds, ['kynwrig-dianc', 'jenifrydd-dianc']);
+  assert.deepEqual(byId.get(crestId).rels.children, [jumpId]);
+  assert.deepEqual(byId.get(jumpId).rels.parents, [crestId]);
+  assert.deepEqual(byId.get(jumpId).rels.children, timeJump.childIds);
+  timeJump.childIds.forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.partnershipId, family.lineage.founderPartnershipId);
+    assert.equal(parentage.extensions.timeJumpId, timeJump.id);
+    assert.equal(parentage.certainty, 'probable');
+  });
+});
+
+test('führt Diancs Aberdail-Linie mit einem gemeinsamen Knoten über Gingalain und Murvin fort', () => {
+  const family = HOUSE_DIANC_ABERDAIL_FAMILY;
+  const converted = toFamilyChartData(family);
+  const byId = new Map(converted.data.map(node => [node.id, node]));
+  const originId = '__origin-house-haus-dianc-aberdail-dianc-gwynlann-origin';
+
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.originFamilyId, 'haus-dianc');
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.persons.length, 8);
+  assert.equal(family.partnerships.length, 2);
+  assert.equal(family.parentages.length, 4);
+  assert.equal(family.cadetBranches.length, 0);
+  assert.equal(family.view.limitGenerations, false);
+  assert.deepEqual(family.lineage.originHouse.childIds, ['gingalain-dianc', 'murvin-dianc']);
+  assert.deepEqual(byId.get(originId).rels.children, ['gingalain-dianc', 'murvin-dianc']);
+
+  assert.deepEqual(
+    family.parentages
+      .filter(parentage => parentage.partnershipId === 'marriage-glaw-gingalain-crafanc')
+      .map(parentage => parentage.childId),
+    ['marn-dianc', 'gwenifer-dianc', 'barry-dianc']
+  );
+  assert.deepEqual(
+    family.parentages
+      .filter(parentage => parentage.partnershipId === 'marriage-vanna-murvin-mochdaer')
+      .map(parentage => parentage.childId),
+    ['delwyn-dianc']
+  );
+  assert.deepEqual(
+    family.parentages.find(parentage => parentage.childId === 'delwyn-dianc').parentIds,
+    ['vanna-mochdaer', 'murvin-dianc']
+  );
+  assert.equal(
+    family.parentages.some(parentage => (
+      parentage.childId === 'delwyn-dianc'
+      && parentage.parentIds.includes('gingalain-dianc')
+    )),
+    false,
+    'Delwyn darf nicht fälschlich unter Gingalain hängen.'
+  );
+
+  const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
+  assert.equal(records.length, 1);
+  assert.equal(records[0].family, family);
+  assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Blutklaue', 'Aberdail']);
+});
+
+test('synchronisiert Diancs Migration und sämtliche vorhandenen Gegenakten ohne doppelte Kinder', () => {
+  const origin = HOUSE_DIANC_GWYNLANN_FAMILY;
+  const successor = HOUSE_DIANC_ABERDAIL_FAMILY;
+  const sharedMigrationIds = [
+    'gingalain-dianc', 'glaw-crafanc', 'murvin-dianc', 'vanna-mochdaer',
+    'marn-dianc', 'delwyn-dianc'
+  ];
+  sharedMigrationIds.forEach(personId => {
+    const originPerson = origin.persons.find(person => person.id === personId);
+    const successorPerson = successor.persons.find(person => person.id === personId);
+    assert.equal(originPerson.worldPersonId, successorPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(originPerson.portrait, successorPerson.portrait, `${personId}: Portrait`);
+  });
+
+  const counterpartPeople = [
+    ['arthfael-dianc', HOUSE_BLODYN_FAMILY],
+    ['gwendolen-blodyn', HOUSE_BLODYN_FAMILY],
+    ['kynwrig-dianc', HOUSE_BLODYN_FAMILY],
+    ['myfanwy-1618-blodyn', HOUSE_BLODYN_FAMILY],
+    ['gareth-dianc', HOUSE_ARTH_FAMILY],
+    ['ffraid-arth', HOUSE_ARTH_FAMILY],
+    ['macsen-lyfant', HOUSE_LYFANT_DERWYDDION_FAMILY],
+    ['gwenhwyfach-dianc', HOUSE_LYFANT_DERWYDDION_FAMILY],
+    ['sywlch-dianc', HOUSE_ILLYGODEN_TIRWEDD_FAMILY],
+    ['wynne-illygoden', HOUSE_ILLYGODEN_TIRWEDD_FAMILY],
+    ['mairwen-dianc', HOUSE_PYSGOD_FAMILY],
+    ['idris-pysgod', HOUSE_PYSGOD_FAMILY],
+    ['caron-dianc', HOUSE_BLAIDD_BRANON_FAMILY],
+    ['pelleas-blaidd', HOUSE_BLAIDD_BRANON_FAMILY],
+    ['cerny-dianc', HOUSE_BLODYN_FAMILY],
+    ['yhon-blodyn', HOUSE_BLODYN_FAMILY],
+    ['gingalain-dianc', HOUSE_CRAFANC_FAMILY],
+    ['glaw-crafanc', HOUSE_CRAFANC_FAMILY],
+    ['murvin-dianc', HOUSE_MOCHDAER_CERRIGARTH_FAMILY],
+    ['vanna-mochdaer', HOUSE_MOCHDAER_CERRIGARTH_FAMILY]
+  ];
+  counterpartPeople.forEach(([personId, counterpartFamily]) => {
+    const diancPerson = origin.persons.find(person => person.id === personId);
+    const counterpartPerson = counterpartFamily.persons.find(person => person.id === personId);
+    assert.equal(diancPerson.worldPersonId, counterpartPerson.worldPersonId, `${personId}: Weltperson`);
+    assert.equal(diancPerson.portrait, counterpartPerson.portrait, `${personId}: Portrait`);
+  });
+
+  const counterpartPartnerships = [
+    ['marriage-gwendolen-arthfael', HOUSE_BLODYN_FAMILY],
+    ['marriage-myfanwy-kynwrig', HOUSE_BLODYN_FAMILY],
+    ['marriage-ffraid-gareth', HOUSE_ARTH_FAMILY],
+    ['marriage-macsen-gwenhwyfach-lyfant', HOUSE_LYFANT_DERWYDDION_FAMILY],
+    ['marriage-wynne-sywlch-illygoden', HOUSE_ILLYGODEN_TIRWEDD_FAMILY],
+    ['marriage-idris-mairwen', HOUSE_PYSGOD_FAMILY],
+    ['marriage-pelleas-caron-blaidd', HOUSE_BLAIDD_BRANON_FAMILY],
+    ['marriage-yhon-cerny', HOUSE_BLODYN_FAMILY],
+    ['marriage-glaw-gingalain-crafanc', HOUSE_CRAFANC_FAMILY],
+    ['marriage-vanna-murvin-mochdaer', HOUSE_MOCHDAER_CERRIGARTH_FAMILY]
+  ];
+  counterpartPartnerships.forEach(([partnershipId, counterpartFamily]) => {
+    assert.deepEqual(
+      origin.partnerships.find(partnership => partnership.id === partnershipId).participantIds,
+      counterpartFamily.partnerships.find(partnership => partnership.id === partnershipId).participantIds,
+      partnershipId
+    );
+  });
+
+  assert.equal(HOUSE_ILLYGODEN_TIRWEDD_FAMILY.persons.find(person => person.id === 'sywlch-dianc').death, '1720');
+  const migration = origin.cadetBranches.find(branch => branch.id === 'migration-gingalain-dianc-aberdail');
+  assert.equal(migration.parentPersonId, 'gingalain-dianc');
+  assert.equal(migration.parentPartnershipId, '');
+  assert.equal(migration.targetFamilyId, 'haus-dianc-aberdail');
+  assert.equal(migration.linkType, 'migration-offshoot');
+  const vannaBranch = HOUSE_MOCHDAER_CERRIGARTH_FAMILY.cadetBranches
+    .find(branch => branch.id === 'married-away-dianc-vanna');
+  assert.equal(vannaBranch.targetFamilyId, 'haus-dianc-aberdail');
+  assert.equal(vannaBranch.emblem, KLAUENINSEL_HOUSE_EMBLEMS.dianc);
+});
+
+test('liefert Diancs individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch', async () => {
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-dianc/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+  assert.deepEqual(sourceManifest, HOUSE_DIANC_PORTRAIT_SOURCES);
+  assert.deepEqual(Object.keys(HOUSE_DIANC_LOCAL_PORTRAIT_FILES), Object.keys(HOUSE_DIANC_PORTRAIT_SOURCES));
+  assert.ok(Object.values(HOUSE_DIANC_PORTRAIT_SOURCES).every(source => !/7yB9PR6|51CghpL/.test(source)));
+
+  await Promise.all(Object.entries(HOUSE_DIANC_LOCAL_PORTRAIT_FILES).map(async ([personId, fileName]) => {
+    assert.equal(HOUSE_DIANC_PORTRAITS[personId], `assets/images/portraits/haus-dianc/${fileName}`);
+    const image = await readFile(new URL(`../assets/images/portraits/haus-dianc/${fileName}`, import.meta.url));
+    assert.ok(image.length > 30_000, `${personId}: lokales Portrait fehlt`);
+    assert.deepEqual([...image.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47], `${personId}: kein PNG`);
+  }));
+
+  ['jenifrydd-dianc', 'kerenza-dianc', 'eleri-drewi', 'fionnghuala-forsyth', 'wynne-illygoden', 'lowri-arfordir', 'zenna-walwrs']
+    .forEach(personId => assert.equal(HOUSE_DIANC_PORTRAITS[personId], undefined, `${personId}: Standardsilhouette darf nicht importiert werden`));
+});
+
+test('ersetzt Diancs frühere lokale Platzhalterakten in Gwynlann und Aberdail', () => {
+  [HOUSE_DIANC_GWYNLANN_FAMILY, HOUSE_DIANC_ABERDAIL_FAMILY].forEach(family => {
+    const staleFamily = structuredClone(family);
+    staleFamily.persons = staleFamily.persons.slice(0, 2);
+    staleFamily.partnerships = staleFamily.partnerships.slice(0, 1);
+    staleFamily.parentages = [];
+    staleFamily.cadetBranches = [];
+    staleFamily.timeJumps = [];
+    staleFamily.extensions.blankFamily = true;
+    staleFamily.extensions.sourceRevision = 1;
+
+    const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
+    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.blankFamily, false);
+    assert.equal(upgraded.persons.length, family.persons.length);
+    assert.equal(upgraded.parentages.length, family.parentages.length);
+    assert.equal(upgraded.view.limitGenerations, false);
   });
 });
 
@@ -21039,7 +21953,7 @@ test('hält die belegten Mochdaer-Gegenbeziehungen und Wegverheiratet-Knoten vol
   );
   assert.deepEqual(
     cerrigarth.cadetBranches.map(branch => branch.targetFamilyId),
-    ['haus-dianc', 'haus-walwrs']
+    ['haus-dianc-aberdail', 'haus-walwrs']
   );
 
   const localLuned = gwyliau.persons.find(person => person.id === 'luned-mochdear');
@@ -25546,7 +26460,7 @@ test('app-start wartet vor dem lokalen Rendern nicht auf das Online-Repository',
   assert.match(appSource, /controller\.init\(\);[\s\S]*void applyPublishedFamilyPriority\(/);
 });
 
-function createSyncHarness({ family, storage = createMemoryStorage(), remoteRecords = new Map() }) {
+function createSyncHarness({ family, storage = createMemoryStorage(), remoteRecords = new Map(), skipDeploy = true }) {
   const store = createFamilyStore(family);
   const localRepository = createLocalFamilyRepository(storage);
   let authListener = () => {};
@@ -25554,6 +26468,7 @@ function createSyncHarness({ family, storage = createMemoryStorage(), remoteReco
   let batchCalls = 0;
   let lastSave = null;
   let lastBatch = null;
+  let lastSaveOptions = null;
   const statusElement = { textContent: '' };
   const documentRef = {
     getElementById: id => id === 'save-status' ? statusElement : null,
@@ -25567,6 +26482,7 @@ function createSyncHarness({ family, storage = createMemoryStorage(), remoteReco
     open() {},
     close() {},
     showError() {},
+    getSaveOptions: () => ({ skipDeploy }),
     readCredentials: () => ({}),
     clearPassword() {}
   };
@@ -25583,18 +26499,20 @@ function createSyncHarness({ family, storage = createMemoryStorage(), remoteReco
     async loadDraft(familyId) {
       return remoteRecords.get(familyId) || null;
     },
-    async saveDraft(record) {
+    async saveDraft(record, options) {
       saveCalls += 1;
       lastSave = record;
-      const result = { family: record.family, revision: record.expectedRevision + 1 };
+      lastSaveOptions = options;
+      const result = { family: record.family, revision: record.expectedRevision + 1, deploySkipped: options?.skipDeploy === true };
       remoteRecords.set(record.family.document.id, result);
       return result;
     },
-    async saveDraftBatch(records) {
+    async saveDraftBatch(records, options) {
       batchCalls += 1;
       lastBatch = records;
+      lastSaveOptions = options;
       return records.map(record => {
-        const result = { family: record.family, revision: record.expectedRevision + 1 };
+        const result = { family: record.family, revision: record.expectedRevision + 1, deploySkipped: options?.skipDeploy === true };
         remoteRecords.set(record.family.document.id, result);
         return result;
       });
@@ -25624,7 +26542,7 @@ function createSyncHarness({ family, storage = createMemoryStorage(), remoteReco
     signIn(user = { uid: 'test-user', email: 'test@aleria.invalid' }) {
       authListener(user);
     },
-    metrics: () => ({ saveCalls, batchCalls, lastSave, lastBatch })
+    metrics: () => ({ saveCalls, batchCalls, lastSave, lastBatch, lastSaveOptions })
   };
 }
 
@@ -25728,7 +26646,19 @@ test('schreibt Änderungen erst nach Online-speichern und niemals durch lokales 
   assert.equal(harness.metrics().saveCalls, 0);
   await harness.controller.saveNow();
   assert.equal(harness.metrics().saveCalls, 1);
+  assert.equal(harness.metrics().lastSaveOptions.skipDeploy, true);
   assert.equal(harness.localRepository.loadDraft(family.document.id).dirty, false);
+});
+
+test('reicht einen ausdrücklich gewünschten Netlify-Deploy bis zum Online-Repository weiter', async () => {
+  const family = createFoundingFamily({
+    documentTitle: 'Haus Direktdeploy', founderManName: 'A', founderWomanName: 'B'
+  });
+  const harness = createSyncHarness({ family, skipDeploy: false });
+  await harness.controller.init();
+  harness.store.updateDocument({ motto: 'Sofort veröffentlichen' });
+  await harness.controller.saveNow();
+  assert.equal(harness.metrics().lastSaveOptions.skipDeploy, false);
 });
 
 test('lässt eine neuere Firebase-Revision gewinnen und archiviert den lokalen Entwurf', async () => {
@@ -27975,7 +28905,8 @@ test('liest und speichert revisionsgebundene GitHub-Familienakten über das Publ
     if (String(url).endsWith('/.netlify/functions/family-publisher') && options.method === 'POST') {
       return new Response(JSON.stringify({
         records: [{ family: HOUSE_ADERYN_FAMILY, revision: 5 }],
-        commitSha: 'abc123'
+        commitSha: 'abc123',
+        deploySkipped: true
       }), { status: 200 });
     }
     return new Response('', { status: 404 });
@@ -27985,11 +28916,17 @@ test('liest und speichert revisionsgebundene GitHub-Familienakten über das Publ
   assert.equal(loaded.revision, 4);
   const published = await repository.loadPublished('haus-aderyn');
   assert.equal(published.revision, 4);
-  const saved = await repository.saveDraft({ family: HOUSE_ADERYN_FAMILY, expectedRevision: 4 });
+  const saved = await repository.saveDraft(
+    { family: HOUSE_ADERYN_FAMILY, expectedRevision: 4 },
+    { skipDeploy: true }
+  );
   assert.equal(saved.revision, 5);
+  assert.equal(saved.deploySkipped, true);
   const post = calls.find(call => call.options.method === 'POST');
   assert.equal(post.options.headers.Authorization, undefined);
-  assert.equal(JSON.parse(post.options.body).records[0].expectedRevision, 4);
+  const postBody = JSON.parse(post.options.body);
+  assert.equal(postBody.records[0].expectedRevision, 4);
+  assert.equal(postBody.skipDeploy, true);
   assert.ok(calls.some(call => call.url.endsWith('assets/data/published-families/haus-aderyn.json')));
 });
 
@@ -28000,15 +28937,32 @@ test('hält den GitHub-Token serverseitig, benötigt aber keinen Veröffentlichu
 });
 
 test('erzeugt für GitHub denselben Registerpfad und eine fortlaufende Revision', () => {
-  const records = githubPublisherTestables.parseRecords(JSON.stringify({
+  const publicationRequest = githubPublisherTestables.parsePublicationRequest(JSON.stringify({
+    skipDeploy: true,
     records: [{ family: HOUSE_ADERYN_FAMILY, expectedRevision: 7 }]
   }));
+  const records = publicationRequest.records;
+  assert.equal(publicationRequest.skipDeploy, true);
+  assert.equal(githubPublisherTestables.parsePublicationRequest(JSON.stringify({
+    records: [{ family: HOUSE_ADERYN_FAMILY, expectedRevision: 7 }]
+  })).skipDeploy, false);
   assert.equal(records[0].expectedRevision, 7);
   const entry = githubPublisherTestables.registryEntry(HOUSE_ADERYN_FAMILY, 8, '2026-07-30T00:00:00.000Z');
   assert.equal(entry.familyId, 'haus-aderyn');
   assert.deepEqual(entry.folderPath, ['Cenyr', 'Tal der Milane', 'Yvains Klamm', 'Penbryn']);
   assert.equal(entry.revision, 8);
   assert.equal(entry.personCount, HOUSE_ADERYN_FAMILY.persons.length);
+  assert.match(
+    githubPublisherTestables.publicationCommitMessage(
+      [{ family: HOUSE_ADERYN_FAMILY }],
+      { skipDeploy: true }
+    ),
+    /\[skip netlify\]$/
+  );
+  assert.doesNotMatch(
+    githubPublisherTestables.publicationCommitMessage([{ family: HOUSE_ADERYN_FAMILY }]),
+    /\[skip netlify\]/
+  );
 });
 
 test('wandelt lokal vorgemerkte Portraitdateien vor dem GitHub-Commit in Projektassets um', () => {

@@ -725,6 +725,15 @@ async function saveCharacterOnce(options = {}) {
         }
       }
     }
+    document.dispatchEvent(new CustomEvent('aleria:character-saved', {
+      detail: { record: persistedRecord }
+    }));
+    try {
+      await window.AleriaCharacterArchive?.archiveRecord?.(persistedRecord, 'character');
+    } catch (archiveError) {
+      console.info('Charakter wurde gespeichert; der Online-Abgleich des Charakterbogen-Archivs folgt später.', archiveError);
+      showAppStatus('Charakter gespeichert. Das Charakterbogen-Archiv wurde vorerst lokal ergänzt.', 'info');
+    }
     status.textContent = options.successMessage || 'Gespeichert ✓';
     setTimeout(() => { status.textContent = ''; }, 2000);
     return newId;

@@ -20,11 +20,11 @@ import {
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   getActivationIconSource,
-  getCombatEntryIconPresentation,
   getDamageTypeIconSource,
   getRangeIconSource,
   getRollIconSource
 } from '../combat/combat-entry-icons.js?v=20260808-combat-cards-v1';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260810-character-archive-icons-v2';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -165,10 +165,10 @@ function getSafeImageSource(source, fallback = '') {
 }
 
 function renderEntryIcon(kind, item, className = '') {
-  const presentation = getCombatEntryIconPresentation(kind, item);
+  const presentation = getCharacterSheetEntryIconPresentation(kind, item);
   const fallbackSource = getSafeImageSource(presentation.fallbackSource);
   const source = getSafeImageSource(presentation.source, fallbackSource);
-  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"><img class="cp-entry-icon" data-combat-entry-icon src="${escapeMarkup(source)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
+  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}" src="${escapeMarkup(source)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
 }
 
 function renderPropertyIcon(source) {
@@ -188,6 +188,21 @@ function activateEntryIconFallbacks(root) {
     };
     if (image.complete && image.naturalWidth === 0) useFallback();
     else image.addEventListener('error', useFallback);
+  });
+}
+
+function refreshArchiveLinkedEntryIcons(root = document.getElementById('cp-combat-sheet-root')) {
+  root?.querySelectorAll?.('[data-combat-entry-icon][data-combat-entry-kind][data-combat-entry-name]').forEach(image => {
+    const presentation = getCharacterSheetEntryIconPresentation(
+      image.dataset.combatEntryKind,
+      { name: image.dataset.combatEntryName }
+    );
+    if (!presentation.linked) return;
+    const fallbackSource = getSafeImageSource(presentation.fallbackSource);
+    const source = getSafeImageSource(presentation.source, fallbackSource);
+    if (source) image.src = source;
+    if (fallbackSource && fallbackSource !== source) image.dataset.fallbackSrc = fallbackSource;
+    else image.removeAttribute('data-fallback-src');
   });
 }
 
@@ -761,7 +776,7 @@ function renderSpellSlotProfile(profile) {
 }
 
 function renderSpellCard(spell) {
-  const icon = getCombatEntryIconPresentation('spell', spell);
+  const icon = getCharacterSheetEntryIconPresentation('spell', spell);
   const fallbackSource = getSafeImageSource(icon.fallbackSource);
   const iconSource = getSafeImageSource(icon.source, fallbackSource);
   const rollFormula = String(spell.rollFormula || '').toUpperCase().replace(/D/g, 'W');
@@ -781,7 +796,7 @@ function renderSpellCard(spell) {
     <div class="cp-spell-card-body">
       <section class="cp-spell-card-hero">
         <div><p><strong>${escapeMarkup(spell.name || 'Dieser Zauber')}</strong> ist ${escapeMarkup(getSpellLevelLabel(spell.level).toLowerCase())}${spell.damageType ? ` und wirkt mit ${escapeMarkup(spell.damageType)}.` : '.'}</p><h5>Beschreibung</h5><p>${escapeMarkup(spell.description || 'Noch keine Wirkung beschrieben.')}</p></div>
-        <img class="cp-spell-card-art" data-combat-entry-icon src="${escapeMarkup(iconSource)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
+        <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}" src="${escapeMarkup(iconSource)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
       </section>
       <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
         ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', `${getActivationLabel(spell.activationType)} · ${costLabel}`)}
@@ -1014,6 +1029,34 @@ function createEmptyItem(collection) {
   return { id };
 }
 
+function getArchiveKindForCollection(collectionPath, editorKind = '') {
+  if (collectionPath === 'magic.spells') return 'spell';
+  if (collectionPath === 'quirks' || editorKind === 'quirk') return 'trait';
+  if (collectionPath === 'abilities' || editorKind === 'ability') return 'ability';
+  if (collectionPath === 'techniques' || editorKind === 'technique') return 'technique';
+  if (collectionPath === 'weapons') return 'attack';
+  if (collectionPath === 'conditions') return 'condition';
+  if (collectionPath === 'skills') return 'skill';
+  return '';
+}
+
+function addItemFromCharacterArchive(collectionPath, editorKind = '', createFallback) {
+  const archiveKind = getArchiveKindForCollection(collectionPath, editorKind);
+  const archive = window.AleriaCharacterArchive;
+  if (!archiveKind || !archive?.openPicker) {
+    createFallback();
+    return;
+  }
+  archive.openPicker({
+    kind: archiveKind,
+    onSelect(entry) {
+      const item = archive.createProfileItem?.(entry, collectionPath) || entry?.data;
+      if (item) addItem(collectionPath, item);
+    },
+    onCreate: createFallback
+  });
+}
+
 function addItem(collectionPath, item = null) {
   const collection = getAtPath(draftProfile, collectionPath);
   if (!Array.isArray(collection)) return;
@@ -1154,12 +1197,24 @@ document.addEventListener('change', event => {
   }
 });
 
+document.addEventListener('aleria:character-archive-changed', () => {
+  refreshArchiveLinkedEntryIcons();
+});
+
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-combat-action]');
   if (!trigger || !trigger.closest('#cp-tab-combat')) return;
   const action = trigger.dataset.combatAction;
-  if (action === 'add-item') addItem(trigger.dataset.combatCollection);
-  if (action === 'add-detail-item') openDetailItemEditor(trigger.dataset.combatCollection, '', trigger.dataset.combatEntryKind, trigger.dataset.combatDefaultActivation || '');
+  if (action === 'add-item') {
+    const collection = trigger.dataset.combatCollection;
+    addItemFromCharacterArchive(collection, '', () => addItem(collection));
+  }
+  if (action === 'add-detail-item') {
+    const collection = trigger.dataset.combatCollection;
+    const kind = trigger.dataset.combatEntryKind;
+    const activation = trigger.dataset.combatDefaultActivation || '';
+    addItemFromCharacterArchive(collection, kind, () => openDetailItemEditor(collection, '', kind, activation));
+  }
   if (action === 'edit-detail-item') openDetailItemEditor(trigger.dataset.combatCollection, trigger.dataset.combatItemId, trigger.dataset.combatEntryKind);
   if (action === 'edit-action-rules') openDetailItemEditor(trigger.dataset.combatCollection, trigger.dataset.combatItemId, trigger.dataset.combatEntryKind);
   if (action === 'remove-item') removeItem(trigger.dataset.combatCollection, trigger.dataset.combatItemId);

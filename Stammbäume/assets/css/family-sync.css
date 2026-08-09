@@ -37,6 +37,28 @@
   box-shadow: 0 0 0 3px rgb(200 106 98 / 18%);
 }
 
+.cloud-deploy-option {
+  align-items: center;
+  color: #d7bc8d;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.72rem;
+  gap: 0.38rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.cloud-deploy-option input {
+  accent-color: var(--gold-500);
+  cursor: inherit;
+  margin: 0;
+}
+
+.cloud-deploy-option:has(input:disabled) {
+  cursor: wait;
+  opacity: 0.62;
+}
+
 .asset-upload-status {
   color: var(--ink-500);
   display: block;

@@ -2,6 +2,16 @@ import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
 import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js';
+import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
+import {
+  HOUSE_DIAFOL_TALGARTH_FAMILY,
+  HOUSE_DIAFOL_TREFGOCH_FAMILY
+} from './house-diafol-family.js';
+import {
+  HOUSE_DIANC_ABERDAIL_FAMILY,
+  HOUSE_DIANC_GWYNLANN_FAMILY
+} from './house-dianc-family.js';
+import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
 import {
   KLAUENINSEL_HOUSE_EMBLEMS,
   KLAUENINSEL_HOUSE_PROFILES,
@@ -9,18 +19,6 @@ import {
 } from './klaueninseln-house-profiles.js';
 
 const CADET_DEFINITIONS = Object.freeze([
-  Object.freeze({
-    slug: 'pawen',
-    title: 'Haus Pawen',
-    partnershipId: 'marriage-lamorak-mared',
-    founderNote: 'Lamorak Arth und Mared begründen Haus Pawen.'
-  }),
-  Object.freeze({
-    slug: 'crafanc',
-    title: 'Haus Crafanc',
-    partnershipId: 'marriage-artgal-amdarch',
-    founderNote: 'Artgal Arth und Amdarch begründen Haus Crafanc.'
-  }),
   Object.freeze({
     slug: 'cwningod',
     title: 'Haus Cwningod',
@@ -54,24 +52,6 @@ const CADET_DEFINITIONS = Object.freeze([
 ]);
 
 const MIGRATION_DEFINITIONS = Object.freeze([
-  Object.freeze({
-    slug: 'diafol',
-    familySlug: 'diafol-talgarth',
-    title: "Haus Diafol O'Talgarth",
-    originSlug: 'diafol-trefgoch',
-    originFamilySlug: 'diafol',
-    originHouseId: 'house-diafol',
-    originTitle: "Haus Diafol O'Trefgoch"
-  }),
-  Object.freeze({
-    slug: 'dianc',
-    familySlug: 'dianc-aberdail',
-    title: "Haus Dianc O'Aberdail",
-    originSlug: 'dianc-gwynlann',
-    originFamilySlug: 'dianc',
-    originHouseId: 'house-dianc',
-    originTitle: "Haus Dianc O'Gwynlann"
-  }),
   Object.freeze({
     slug: 'arfordir',
     familySlug: 'arfordir-aberdail',
@@ -281,6 +261,10 @@ function createSimpleFamily(definition) {
 }
 
 export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
+  HOUSE_PAWEN_FAMILY,
+  HOUSE_CRAFANC_FAMILY,
+  HOUSE_DIAFOL_TALGARTH_FAMILY,
+  HOUSE_DIANC_ABERDAIL_FAMILY,
   ...CADET_DEFINITIONS.map(createCadetFounderFamily),
   ...MIGRATION_DEFINITIONS.map(createMigrationCurrentFamily),
   HOUSE_BERYN_FAMILY,
@@ -288,5 +272,9 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
 ]);
 
 export const KLAUENINSEL_ORIGIN_HOUSE_FAMILIES = Object.freeze(
-  MIGRATION_DEFINITIONS.map(createOriginFamily)
+  [
+    HOUSE_DIAFOL_TREFGOCH_FAMILY,
+    HOUSE_DIANC_GWYNLANN_FAMILY,
+    ...MIGRATION_DEFINITIONS.map(createOriginFamily)
+  ]
 );

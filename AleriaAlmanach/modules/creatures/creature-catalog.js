@@ -346,6 +346,200 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
       ]
     },
     notes: 'Ausgebildeter Lehensschütze. Beobachtet ruhig, warnt seine Kameraden vor Flankenangriffen und verschwendet ungern Pfeile auf schlechte Ziele.'
+  },
+  {
+    id: 'companion-tanor',
+    name: 'Tanor',
+    type: 'Reittier',
+    species: 'Rhyfel',
+    habitat: 'Draig-Ländereien und Gawains Stallungen',
+    challengeRating: 1,
+    size: 'Groß',
+    level: 1,
+    portrait: 'https://i.imgur.com/TuGHu7s.png',
+    portraitCaption: 'Tanor, Gawains prachtvoller Rhyfelhengst.',
+    avatars: [
+      { id: 'tanor-avatar-portrait', img: 'https://i.imgur.com/YcL98jJ.png', label: 'Portrait' },
+      { id: 'tanor-avatar-sheet', img: 'https://i.imgur.com/iCkIwnO.png', label: 'Sheetbild' }
+    ],
+    combatProfile: {
+      attributes: [
+        { key: 'strength', score: 17 }, { key: 'dexterity', score: 13 },
+        { key: 'constitution', score: 14 }, { key: 'intelligence', score: 3 },
+        { key: 'wisdom', score: 11 }, { key: 'charisma', score: 15 }
+      ],
+      hitPoints: { current: 16, maximumOverride: 16, temporary: 0, hitDie: 10 },
+      armorClass: { override: 12 },
+      combat: { movement: 15, initiativeBonus: 0, attackBonus: 0, damageBonus: 0, passivePerceptionBonus: 0 },
+      savingThrows: [{ attributeKey: 'strength', proficient: true }],
+      skills: [
+        { id: 'tanor-einschuechtern', name: 'Einschüchtern', attributeKey: 'charisma', proficiency: 'trained', bonus: 0, notes: 'Schnaubt, schnaubt und stampft, bis selbst der Himmel kleinlaut wird.' }
+      ],
+      weapons: [
+        { id: 'tanor-tritt', name: 'Tritt', damageFormula: '1d4', damageType: 'Wucht', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Setzt ihn ein, wenn Gawain die roten Äpfel vergisst.', equipped: true },
+        { id: 'tanor-biss', name: 'Biss', damageFormula: '1d4', damageType: 'Stich', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Ein gezielter Nachdruck, falls der Tritt allein nicht überzeugt.', equipped: false }
+      ],
+      armorItems: [],
+      resources: [
+        { id: 'tanor-apfellaune', name: 'Apfellaune', current: 1, maximum: 1, recovery: 'scene', notes: 'Ohne pünktliche rote Äpfel erinnert Tanor seinen Reiter mit einem gezielten Biss oder Tritt.' }
+      ],
+      abilities: [
+        { id: 'tanor-eitler-diva', name: 'Eitler Diva', description: 'Ein einziger Schlammfleck genügt, um Tanor in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig – und wehe, man versucht ihn zu überreden.', active: true },
+        { id: 'tanor-rassehochmut', name: 'Rassehochmut', description: 'Tanor duldet nur Pferde der Rassen Rhyfel, Ceffyl und Hest in seiner Nähe – alle anderen ignoriert er mit kühler Verachtung.', active: true },
+        { id: 'tanor-apfelnarr', name: 'Apfelnarr', description: 'Rote Äpfel sind sein größtes Verlangen. Bleibt die Fütterung aus, erinnert er Gawain deutlich daran.', usesCurrent: 1, usesMaximum: 1, recovery: 'scene', active: true }
+      ],
+      magic: { enabled: false, spells: [] },
+      notes: 'Ein schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.'
+    },
+    loot: { currency: '', notes: '', items: [] },
+    notes: 'Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.'
+  },
+  {
+    id: 'companion-eldfaxi',
+    name: 'Eldfaxi',
+    type: 'Reittier',
+    species: 'Hest-Mischling',
+    habitat: 'Mit Freya auf Wanderschaft',
+    challengeRating: 1,
+    size: 'Groß',
+    level: 2,
+    portrait: 'https://i.imgur.com/xZxmDDi.png',
+    portraitCaption: 'Eldfaxi, Freyas gescheckte Hest-Mischlingsstute.',
+    avatars: [
+      { id: 'eldfaxi-avatar-portrait', img: 'https://i.imgur.com/O7igyaP.png', label: 'Portrait' },
+      { id: 'eldfaxi-avatar-sheet', img: 'https://i.imgur.com/CB7XysD.png', label: 'Sheetbild' }
+    ],
+    combatProfile: {
+      attributes: [
+        { key: 'strength', score: 16 }, { key: 'dexterity', score: 12 },
+        { key: 'constitution', score: 15 }, { key: 'intelligence', score: 4 },
+        { key: 'wisdom', score: 13 }, { key: 'charisma', score: 14 }
+      ],
+      hitPoints: { current: 22, maximumOverride: 22, temporary: 0, hitDie: 10 },
+      armorClass: { override: 12 },
+      combat: { movement: 13, initiativeBonus: 0, attackBonus: 0, damageBonus: 0, passivePerceptionBonus: 0 },
+      savingThrows: [{ attributeKey: 'constitution', proficient: true }],
+      skills: [
+        { id: 'eldfaxi-auftreten', name: 'Auftreten', attributeKey: 'charisma', proficiency: 'trained', bonus: 0, notes: 'Summt ein tiefes, vibrierendes Brummen im Duett mit Freyas Gesang.' }
+      ],
+      weapons: [
+        { id: 'eldfaxi-tritt', name: 'Tritt', damageFormula: '1d4', damageType: 'Wucht', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Selten nötig – Eldfaxi bleibt meist gelassen.', equipped: true },
+        { id: 'eldfaxi-biss', name: 'Biss', damageFormula: '1d4', damageType: 'Stich', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Nur wenn wirklich nötig.', equipped: false }
+      ],
+      armorItems: [],
+      resources: [
+        { id: 'eldfaxi-duett', name: 'Duett', current: 1, maximum: 1, recovery: 'scene', notes: 'Sobald Freya zu singen beginnt, brummt Eldfaxi im Duett mit – angeblich trifft er keinen einzigen Ton.' }
+      ],
+      abilities: [
+        { id: 'eldfaxi-freigeist', name: 'Freigeist', description: 'Fröhlich, charmant und freigeistig – Eldfaxi lässt sich von Launen kaum beeindrucken und bleibt gelassen.', active: true },
+        { id: 'eldfaxi-summen', name: 'Summen im Duett', description: 'Sobald Freya zu singen beginnt, antwortet Eldfaxi mit einem tiefen, vibrierenden Brummen – besonders, wenn sie schlecht gelaunt ist. Viele Wirte schwören, in Tavernen schon Duette zwischen Frau und Pferd gehört zu haben.', usesCurrent: 1, usesMaximum: 1, recovery: 'scene', active: true },
+        { id: 'eldfaxi-hest-erbe', name: 'Hest-Erbe', description: 'Der starke Hest-Einschlag macht Eldfaxi ruhig, unbeirrbar im Tritt und kaum aus der Fassung zu bringen.', active: true }
+      ],
+      magic: { enabled: false, spells: [] },
+      notes: 'Freya behauptet, er könne keinen einzigen Ton halten – aber sie lächelt, wenn sie es sagt.'
+    },
+    loot: { currency: '', notes: '', items: [] },
+    notes: 'Eldfaxi begleitet Freya seit über sechs Jahren, ein zäher Mischling mit starkem Einschlag des Hest – jener aldrimarischen Kaltblutrasse, die für ihren ruhigen Geist und unbeirrbaren Tritt bekannt ist. Sein Fell ist gescheckt, die Mähne dicht und dunkel wie Sturmwolken, und seine Augen tragen dieses eigenwillige Glitzern, das nur Tiere haben, die mehr denken als man ihnen zutraut.\n\nSeine liebenswerteste Eigenart: Eldfaxi summt. Nicht wirklich wie ein Mensch, eher ein tiefes, vibrierendes Brummen, sobald Freya zu singen beginnt – besonders dann, wenn sie schlecht gelaunt ist. Viele Wirte schwören, sie hätten in Tavernen schon Duette zwischen Frau und Pferd gehört. Freya behauptet, er könne keinen einzigen Ton halten – aber sie lächelt, wenn sie es sagt.'
+  },
+  {
+    id: 'companion-gaul',
+    name: 'Gaul',
+    type: 'Reittier',
+    species: 'Hest',
+    habitat: 'Fenrirs Stall, irgendwo unter dreihundert anderen Gäulen',
+    challengeRating: 1,
+    size: 'Groß',
+    level: 4,
+    portrait: 'https://i.imgur.com/UcjejAc.png',
+    portraitCaption: 'Gaul, Fenrirs grauer, kriegsmüder Hest.',
+    avatars: [
+      { id: 'gaul-avatar-portrait', img: 'https://i.imgur.com/MCyuN1q.png', label: 'Portrait' },
+      { id: 'gaul-avatar-sheet', img: 'https://i.imgur.com/KVqNG6l.png', label: 'Sheetbild' }
+    ],
+    combatProfile: {
+      attributes: [
+        { key: 'strength', score: 15 }, { key: 'dexterity', score: 9 },
+        { key: 'constitution', score: 17 }, { key: 'intelligence', score: 3 },
+        { key: 'wisdom', score: 15 }, { key: 'charisma', score: 5 }
+      ],
+      hitPoints: { current: 30, maximumOverride: 30, temporary: 0, hitDie: 10 },
+      armorClass: { override: 11 },
+      combat: { movement: 10, initiativeBonus: 0, attackBonus: 0, damageBonus: 0, passivePerceptionBonus: 0 },
+      savingThrows: [
+        { attributeKey: 'constitution', proficient: true },
+        { attributeKey: 'wisdom', proficient: true }
+      ],
+      skills: [
+        { id: 'gaul-ueberleben', name: 'Überleben', attributeKey: 'wisdom', proficiency: 'trained', bonus: 0, notes: 'Soll angeblich im Großen Krieg gedient haben – vermutlich auf der Seite der Zuschauer.' }
+      ],
+      weapons: [
+        { id: 'gaul-tritt', name: 'Tritt', damageFormula: '1d4', damageType: 'Wucht', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Halbherzig, wie fast alles an ihm.', equipped: true },
+        { id: 'gaul-biss', name: 'Biss', damageFormula: '1d4', damageType: 'Stich', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Kaum mehr als ein müdes Schnappen.', equipped: false }
+      ],
+      armorItems: [],
+      resources: [
+        { id: 'gaul-unermuedlich', name: 'Unermüdliche Ausdauer', current: 1, maximum: 1, recovery: 'long-rest', notes: 'Reitet nicht schnell, aber ewig – vermutlich der einzige Grund, warum Fenrir ihn noch nicht geschlachtet hat.' }
+      ],
+      abilities: [
+        { id: 'gaul-resignierter-blick', name: 'Resignierter Blick', description: 'Kaut meist stumpf auf dem Heu, das Fenrir ihm halbherzig ins Maul stopft, und glotzt dabei so leer, als hätte er das Denken längst ausgelagert.', active: true },
+        { id: 'gaul-unermuedlich-trotz-allem', name: 'Unermüdlich trotz allem', description: 'Reitet nicht schnell, aber ewig. Der resignierte Blick eines Tiers, das zu viele Winter gesehen hat und nur noch auf den Feierabend des Lebens wartet.', active: true },
+        { id: 'gaul-schlimmeres-ueberlebt', name: 'Schlimmeres überlebt', description: 'Droht Fenrir, ihn auf den Spieß zu stecken, schaut Gaul nur gelangweilt – als dächte er: „Mach schon, ich hab Schlimmeres überlebt."', active: true }
+      ],
+      magic: { enabled: false, spells: [] },
+      notes: 'Fenrir ist sich nie sicher, ob er überhaupt sein eigenes Pferd aus dem Stall geholt hat oder irgendeines der dreihundert anderen Viecher, die dort herumstehen.'
+    },
+    loot: { currency: '', notes: '', items: [] },
+    notes: 'Gaul ist ein alter, grauer Hest, der aussieht, als wäre er schon beim Schmieden des ersten Hufeisens dabei gewesen – und dabei eingeschlafen. Fenrir nennt ihn einfach Gaul, manchmal auch Klepper oder Fetti, je nach Laune und Alkoholpegel. Einen richtigen Namen hat das Tier nie bekommen, weil Fenrir sich nie sicher ist, ob er überhaupt sein eigenes Pferd aus dem Stall geholt hat oder einfach irgendeines der dreihundert anderen Viecher, die dort herumstehen.\n\nDas Pferd selbst scheint das nicht weiter zu stören. Es hat den resignierten Blick eines Wesens, das zu viele Winter gesehen hat und nur noch darauf wartet, dass das Leben endlich Feierabend macht. Meistens kaut Gaul stumpf auf dem Heu herum, das Fenrir ihm halbherzig ins Maul stopft, und glotzt dabei so leer, als hätte er das Denken längst ausgelagert. Angeblich soll er im Großen Krieg gedient haben, aber wenn das stimmt, dann vermutlich auf der Seite der Zuschauer. Er reitet nicht schnell, aber er reitet ewig – vermutlich der einzige Grund, warum Fenrir ihn noch nicht geschlachtet hat. Und wenn Fenrir mal droht, ihn auf den Spieß zu stecken, schaut Gaul nur gelangweilt und scheint zu denken: „Mach schon, ich hab Schlimmeres überlebt."'
+  },
+  {
+    id: 'companion-uath',
+    name: 'Uath',
+    type: 'Reittier',
+    species: 'Rhyfel',
+    habitat: 'Stets an Guineveres Seite, kampfbereit',
+    challengeRating: 2,
+    size: 'Groß',
+    level: 2,
+    portrait: 'https://i.imgur.com/8uWOM1M.png',
+    portraitCaption: 'Uath, Guineveres kampfbereite Rhyfelstute.',
+    avatars: [
+      { id: 'uath-avatar-portrait', img: 'https://i.imgur.com/8HPNtIr.png', label: 'Portrait' },
+      { id: 'uath-avatar-sheet', img: 'https://i.imgur.com/2DT70Ns.png', label: 'Sheetbild' }
+    ],
+    combatProfile: {
+      attributes: [
+        { key: 'strength', score: 16 }, { key: 'dexterity', score: 14 },
+        { key: 'constitution', score: 14 }, { key: 'intelligence', score: 4 },
+        { key: 'wisdom', score: 14 }, { key: 'charisma', score: 8 }
+      ],
+      hitPoints: { current: 24, maximumOverride: 24, temporary: 0, hitDie: 10 },
+      armorClass: { override: 13 },
+      combat: { movement: 14, initiativeBonus: 0, attackBonus: 0, damageBonus: 0, passivePerceptionBonus: 0 },
+      savingThrows: [
+        { attributeKey: 'strength', proficient: true },
+        { attributeKey: 'wisdom', proficient: true }
+      ],
+      skills: [
+        { id: 'uath-wahrnehmung', name: 'Wahrnehmung', attributeKey: 'wisdom', proficiency: 'trained', bonus: 0, notes: 'Steht kerzengerade, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt.' }
+      ],
+      weapons: [
+        { id: 'uath-tritt', name: 'Tritt', damageFormula: '1d4', damageType: 'Wucht', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Ein Hufschlag mit militärischer Präzision.', equipped: true },
+        { id: 'uath-biss', name: 'Biss', damageFormula: '1d4', damageType: 'Stich', attackAttribute: 'strength', proficient: true, range: 'Nahkampf · 1,5 m', properties: 'Naturwaffe', notes: 'Schnappt zu, als folge sie einem Befehl.', equipped: false }
+      ],
+      armorItems: [],
+      resources: [
+        { id: 'uath-pfeilroutine', name: 'Pfeilroutine', current: 1, maximum: 1, recovery: 'scene', notes: 'Schnappt mit fast beängstigender Routine einen Pfeil aus dem Köcher, sobald Guinevere die Hand zum Bogen hebt.' }
+      ],
+      abilities: [
+        { id: 'uath-militaerische-disziplin', name: 'Militärische Disziplin', description: 'Steht oder marschiert, als sei sie von einem General ausgebildet worden – die Disziplin einer Legion und die Nervenstärke eines Kommandanten.', active: true },
+        { id: 'uath-pfeiltraegerin', name: 'Pfeilträgerin', description: 'Führt am Sattel stets ein Bündel Pfeile. Manchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert.', usesCurrent: 1, usesMaximum: 1, recovery: 'scene', active: true },
+        { id: 'uath-duldet-kaum-andere', name: 'Duldet kaum andere Tiere', description: 'Verachtet Tanor wie eine Parfümflasche mit Beinen und hält Gaul für einen Irrtum der Schöpfung – einzig Eldfaxi begegnet sie mit etwas, das man fast Respekt nennen könnte.', active: true }
+      ],
+      magic: { enabled: false, spells: [] },
+      notes: 'Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht.'
+    },
+    loot: { currency: '', notes: '', items: [] },
+    notes: 'Uath, benannt nach dem albischen Wort für Schrecken, trägt den Namen mit einer Konsequenz, die einem Soldaten zur Ehre gereicht. Diese Stute steht – oder marschiert – als wäre sie von einem General ausgebildet worden. Ihr helles Fell täuscht: hinter dem makellosen Äußeren steckt ein Tier mit der Disziplin einer Legion und der Nervenstärke eines Kommandanten. Am Sattel führt sie stets ein Bündel Pfeile, und mit fast beängstigender Routine schnappt sie einen davon mit den Zähnen, sobald Guinevere auch nur die Hand nach dem Bogen hebt.\n\nManchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert. Woher diese Mordlust stammt, weiß niemand, aber sie liegt ihr tief im Blut. Uath duldet kaum andere Tiere: Gawains Tanor verachtet sie wie eine Parfümflasche mit Beinen, Fenrirs Gaul scheint sie für einen Irrtum der Schöpfung zu halten – einzig Freyas Pferd betrachtet sie mit etwas, das man fast Respekt nennen könnte. Wenn sie nicht gerade unterwegs sind, steht Uath kerzengerade, regungslos, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt. Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht.'
   }
 ]);
 

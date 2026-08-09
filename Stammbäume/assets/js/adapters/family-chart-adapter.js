@@ -445,7 +445,8 @@ function createHouseOffshoots({ family, chartById, houseById }) {
         crestFrameAsset: isLineEnd ? EXTINCT_LINE_FRAME.asset : getCrestFrame(branch.crestFrame).asset,
         emblemScale: branch.emblemScale,
         frameScale: branch.frameScale,
-        preferredSide: branch.extensions?.offshootSide === 'after' ? 'after' : 'before'
+        preferredSide: branch.extensions?.offshootSide === 'after' ? 'after' : 'before',
+        preferredPlacement: branch.extensions?.offshootPlacement === 'below' ? 'below' : 'side'
       });
     });
 }

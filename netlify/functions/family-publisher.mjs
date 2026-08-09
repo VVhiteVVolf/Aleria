@@ -201,7 +201,7 @@ function createPublicationFiles({ preparedRecords, saved, registry, updatedAt })
   ];
 }
 
-function parseRecords(body) {
+function parsePublicationRequest(body) {
   const parsed = JSON.parse(body || '{}');
   if (!Array.isArray(parsed.records) || !parsed.records.length) {
     throw new Error('Es wurde keine Familienakte zum Speichern übergeben.');
@@ -216,10 +216,24 @@ function parseRecords(body) {
   const ids = records.map(record => record.family.document.id);
   if (new Set(ids).size !== ids.length) throw new Error('Eine Familienakte wurde im GitHub-Paket doppelt übergeben.');
   assertMirroredCrossFamilyBatch(records);
-  return records;
+  return Object.freeze({
+    records,
+    skipDeploy: parsed.skipDeploy === true
+  });
 }
 
-async function publish(records, config, fetchRef = fetch) {
+function parseRecords(body) {
+  return parsePublicationRequest(body).records;
+}
+
+function publicationCommitMessage(saved, { skipDeploy = false } = {}) {
+  const message = saved.length === 1
+    ? `Stammbaum online speichern: ${saved[0].family.document.title}`
+    : `${saved.length} verknüpfte Stammbäume online speichern`;
+  return skipDeploy ? `${message} [skip netlify]` : message;
+}
+
+async function publish(records, config, fetchRef = fetch, { skipDeploy = false } = {}) {
   if (!config.token) throw new Error('ALERIA_GITHUB_TOKEN ist in Netlify noch nicht gesetzt.');
   const github = createGitHubClient(config, fetchRef);
   const reference = await github.request(`/git/ref/heads/${encodeURIComponent(config.branch)}`);
@@ -282,9 +296,7 @@ async function publish(records, config, fetchRef = fetch) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      message: saved.length === 1
-        ? `Stammbaum online speichern: ${saved[0].family.document.title}`
-        : `${saved.length} verknüpfte Stammbäume online speichern`,
+      message: publicationCommitMessage(saved, { skipDeploy }),
       tree: tree.sha,
       parents: [headSha]
     })
@@ -294,7 +306,7 @@ async function publish(records, config, fetchRef = fetch) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sha: commit.sha, force: false })
   });
-  return { saved, commitSha: commit.sha };
+  return { saved, commitSha: commit.sha, deploySkipped: skipDeploy === true };
 }
 
 async function loadPublishedFamily(familyId, config, fetchRef = fetch) {
@@ -322,14 +334,20 @@ export async function handler(event) {
     if (Buffer.byteLength(event.body || '', 'utf8') > MAX_REQUEST_BYTES) {
       return json(413, { message: 'Das Speicherpaket ist zu groß. Bilder bitte als HTTPS-Adresse einbinden.' });
     }
-    const records = parseRecords(event.body);
-    const result = await publish(records, config);
+    const publicationRequest = parsePublicationRequest(event.body);
+    const result = await publish(
+      publicationRequest.records,
+      config,
+      fetch,
+      { skipDeploy: publicationRequest.skipDeploy }
+    );
     if (result.conflict) {
       return json(409, { code: 'revision-conflict', ...result.conflict, message: 'Die GitHub-Fassung ist inzwischen neuer.' });
     }
     return json(200, {
       records: result.saved,
       commitSha: result.commitSha,
+      deploySkipped: result.deploySkipped,
       commitUrl: `https://github.com/${config.repository}/commit/${result.commitSha}`
     });
   } catch (error) {
@@ -351,7 +369,9 @@ export const __testables = Object.freeze({
   revisionBackupPath,
   createPublicationFiles,
   materializeStagedImages,
+  parsePublicationRequest,
   parseRecords,
+  publicationCommitMessage,
   publish,
   loadPublishedFamily
 });

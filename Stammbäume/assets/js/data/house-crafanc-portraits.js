@@ -1,0 +1,75 @@
+import { HOUSE_ARTH_PORTRAITS } from './house-arth-portraits.js';
+import { HOUSE_COEDWIG_PORTRAITS } from './house-coedwig-portraits.js';
+import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
+import { HOUSE_GWIALEN_PORTRAITS } from './house-gwialen-portraits.js';
+import { HOUSE_MOCHDAER_PORTRAITS } from './house-mochdaer-portraits.js';
+import { HOUSE_PAWEN_PORTRAITS } from './house-pawen-portraits.js';
+
+const PORTRAIT_ROOT = 'assets/images/portraits/haus-crafanc';
+
+export const HOUSE_CRAFANC_LOCAL_PORTRAIT_FILES = Object.freeze({
+  'caradoc-crafanc': 'caradoc-crafanc.jpg',
+  'taran-walwrs': 'taran-walwrs.jpg',
+  'clinoch-crafanc': 'clinoch-crafanc.jpg',
+  'dumnagual-crafanc': 'dumnagual-crafanc.jpg',
+  'ffion-cwningod': 'ffion-cwningod.jpg',
+  'glaw-crafanc': 'glaw-crafanc.jpg',
+  'glynis-crafanc': 'glynis-crafanc.jpg',
+  'glesni-crafanc': 'glesni-crafanc.jpg',
+  'gingalain-dianc': 'gingalain-dianc.png',
+  'tewdur-blaidd': 'tewdur-blaidd.png',
+  'madoc-arfordir': 'madoc-arfordir.png',
+  'arwen-1700-crafanc': 'arwen-1700-crafanc.jpg',
+  'iestyn-crafanc': 'iestyn-crafanc.jpg',
+  'sadwyn-crafanc': 'sadwyn-crafanc.jpg',
+  'eogan-crafanc': 'eogan-crafanc.jpg',
+  'arwen-1725-crafanc': 'arwen-1725-crafanc.jpg'
+});
+
+export const HOUSE_CRAFANC_PORTRAIT_SOURCES = Object.freeze({
+  'caradoc-crafanc': 'https://64.media.tumblr.com/4c7915e8b64598d19b494da677019327/deb6c6d744f2a5cc-57/s250x400/d9c25c6162aeb51fe10782c1c81ade8ad99280b7.pnj',
+  'taran-walwrs': 'https://64.media.tumblr.com/00d077a96e2494c7395451c2bf4ca428/5cb9705b68b3ce6b-8e/s250x400/96487f7539de92fa7a88c5a6070d28f02c1e9b39.pnj',
+  'clinoch-crafanc': 'https://64.media.tumblr.com/87ce473bd16ef9dc3ef494a3331cc3a1/deb6c6d744f2a5cc-cd/s250x400/733bfed5aa5326b2188ba3667bf65135493a6bb6.pnj',
+  'dumnagual-crafanc': 'https://64.media.tumblr.com/5349b2b41a1d514302f8cfe420203754/deb6c6d744f2a5cc-e1/s250x400/7e6f5d681a0d353d3aec140e08973019a40ac908.pnj',
+  'ffion-cwningod': 'https://64.media.tumblr.com/50428716476e006fcf70d433cea03e17/2bfa0e4852a1cce2-29/s250x400/c14d103c29e584de8b8cbbc4448b9bab2e1346d4.pnj',
+  'glaw-crafanc': 'https://64.media.tumblr.com/6b414fba72c8a6c8fe54143527a1a2e0/4c55b10ade6a3edd-7a/s1280x1920/5ca885ceb5ff05b2ab7e4dea5150865d8a53b796.pnj',
+  'glynis-crafanc': 'https://64.media.tumblr.com/9c4afac391465ece3860d770847a2614/deb6c6d744f2a5cc-d6/s250x400/f3d1ba9616c07a5ec77f73577c6d39041d4b0b96.pnj',
+  'glesni-crafanc': 'https://64.media.tumblr.com/7851ca2c7dcbc7252433c7c86d73407c/deb6c6d744f2a5cc-32/s250x400/3da144a5a50c0edc6dd309e739c6afb4d2c6172f.pnj',
+  'gingalain-dianc': 'https://i.imgur.com/XhGjtoG.png',
+  'tewdur-blaidd': 'https://i.imgur.com/zegM0iR.png',
+  'madoc-arfordir': 'https://i.imgur.com/pANZMBx.png',
+  'arwen-1700-crafanc': 'https://64.media.tumblr.com/ea2972c112e215d73ad70574ac67d0c9/deb6c6d744f2a5cc-c5/s250x400/39d0b3121b50538b477e7f8a792de64ba02bc3a3.pnj',
+  'iestyn-crafanc': 'https://64.media.tumblr.com/10a2870657c1103848c8d9f7e58f5cb3/deb6c6d744f2a5cc-c0/s250x400/ad99c202c33bbb94b20f515b2328b9a1d239b2cc.pnj',
+  'sadwyn-crafanc': 'https://64.media.tumblr.com/6a58f991f928e210543e9eaa410a644b/deb6c6d744f2a5cc-9f/s250x400/d7aeaecaaae5e01a99eeed5386c45f51a4b4c683.pnj',
+  'eogan-crafanc': 'https://64.media.tumblr.com/b61956f96b9893c341f00613514bcfde/deb6c6d744f2a5cc-81/s250x400/990f31f41c6fbcf77095aa2985175de70ce09d31.pnj',
+  'arwen-1725-crafanc': 'https://64.media.tumblr.com/65e2ce68597ec4da892e46e8faf9b79e/deb6c6d744f2a5cc-c3/s250x400/48e330b24d316c2d180022d2d83864a4eb638efd.pnj'
+});
+
+const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
+  Object.entries(HOUSE_CRAFANC_LOCAL_PORTRAIT_FILES).map(([personId, fileName]) => [
+    personId,
+    `${PORTRAIT_ROOT}/${fileName}`
+  ])
+));
+
+// Bereits ausgearbeitete Gegenakten bleiben die kanonische Bildquelle geteilter
+// Weltpersonen. Wiederholte Standardsilhouetten der Altquelle werden ausgelassen.
+export const HOUSE_CRAFANC_PORTRAITS = Object.freeze({
+  ...LOCAL_PORTRAITS,
+  'artgal-arth': HOUSE_ARTH_PORTRAITS['artgal-arth'],
+  'cynwrig-crafanc': HOUSE_ARTH_PORTRAITS['cynwrig-crafanc'],
+  'rhynnon-arth': HOUSE_ARTH_PORTRAITS['rhynnon-arth'],
+  'elisud-crafanc': HOUSE_ARTH_PORTRAITS['elisud-crafanc'],
+  'olwen-arth': HOUSE_ARTH_PORTRAITS['olwen-arth'],
+  'melwas-crafanc': HOUSE_ARTH_PORTRAITS['melwas-crafanc'],
+  'cadoc-pawen': HOUSE_PAWEN_PORTRAITS['cadoc-pawen'],
+  'glinda-crafanc': HOUSE_PAWEN_PORTRAITS['glinda-crafanc'],
+  'amaethon-pawen': HOUSE_PAWEN_PORTRAITS['amaethon-pawen'],
+  'andarch-crafanc': HOUSE_GWIALEN_PORTRAITS['andarch-crafanc'],
+  'gereint-gwialen': HOUSE_GWIALEN_PORTRAITS['gereint-gwialen'],
+  'artgal-crafanc': HOUSE_MOCHDAER_PORTRAITS['artgal-crafanc'],
+  'jowna-1681-mochdaer': HOUSE_MOCHDAER_PORTRAITS['jowna-1681-mochdaer'],
+  'tutagual-crafanc': HOUSE_COEDWIG_PORTRAITS['tutagual-crafanc'],
+  'tegan-coedwig': HOUSE_COEDWIG_PORTRAITS['tegan-coedwig'],
+  'gwenna-crafanc': HOUSE_GAFYR_PORTRAITS['gwenna-crafanc']
+});

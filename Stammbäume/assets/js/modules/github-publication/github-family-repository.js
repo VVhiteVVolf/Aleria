@@ -51,13 +51,14 @@ export function createGitHubFamilyRepository({
     return repositoryRecord(await readJson(response, 'Die GitHub-Familienakte konnte nicht geladen werden.'));
   }
 
-  async function saveDraftBatch(records) {
+  async function saveDraftBatch(records, { skipDeploy = true } = {}) {
     const payload = await fetchJson(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        skipDeploy: skipDeploy !== false,
         records: records.map(record => ({
           family: record.family,
           expectedRevision: Math.max(0, Number(record.expectedRevision || 0))
@@ -76,12 +77,13 @@ export function createGitHubFamilyRepository({
     return Object.freeze((payload.records || []).map(record => Object.freeze({
       family: record.family,
       revision: Number(record.revision || 0),
-      commitSha: String(payload.commitSha || '')
+      commitSha: String(payload.commitSha || ''),
+      deploySkipped: payload.deploySkipped === true
     })));
   }
 
-  async function saveDraft(record) {
-    const [saved] = await saveDraftBatch([record]);
+  async function saveDraft(record, options) {
+    const [saved] = await saveDraftBatch([record], options);
     return saved;
   }
 

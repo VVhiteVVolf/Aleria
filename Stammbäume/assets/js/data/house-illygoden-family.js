@@ -249,9 +249,10 @@ export const HOUSE_ILLYGODEN_TIRWEDD_FAMILY = Object.freeze({
       title: 'Wegverheiratet an Haus Dianc',
       tags: ['Wegverheiratet']
     }),
-    tirweddPerson('sywlch-dianc', 'Sywlch Dianc', 'male', '1655', '1705', {
+    tirweddPerson('sywlch-dianc', 'Sywlch Dianc', 'male', '1655', '1720', {
       houseId: 'house-dianc',
-      familyRole: 'married'
+      familyRole: 'married',
+      notes: 'Das Todesjahr 1720 folgt der direkten Dianc-Herkunftsakte; die Ehe endet bereits 1690 mit Wynnes Tod.'
     }),
     tirweddPerson('griflet-illygoden', 'Griflet Illygoden', 'male', '1657', '1720'),
     tirweddPerson('delwen-gwenyen', 'Delwen Gwenyen', 'female', '1658', '1703', {
@@ -394,10 +395,10 @@ export const HOUSE_ILLYGODEN_TIRWEDD_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-illygoden-tredegar',
-    sourceRevision: 4,
+    sourceRevision: 5,
     registryManagedLineageFields: ['founderPartnershipId', 'houseId'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
-    sourceNote: 'Vollständige Herkunftsakte nach der bereitgestellten Illygoden-Tabelle: unbekanntes Elternpaar, Corryn und Hafren, erst danach der Hausknoten, zwei serielle Quellenlücken und sämtliche belegten Personen bis zur Fluchtgeneration. Bleddyn und Meredydd bleiben mit Eltern und Ehepartnern in Tirwedd sichtbar; ihre Nachkommen werden ausschließlich in der verknüpften Tredegar-Akte geführt. Je ein Übergabeknoten zur neuen Linie hängt allein und geradlinig unter Bleddyn beziehungsweise Meredydd.'
+    sourceNote: 'Vollständige Herkunftsakte nach der bereitgestellten Illygoden-Tabelle: unbekanntes Elternpaar, Corryn und Hafren, erst danach der Hausknoten, zwei serielle Quellenlücken und sämtliche belegten Personen bis zur Fluchtgeneration. Bleddyn und Meredydd bleiben mit Eltern und Ehepartnern in Tirwedd sichtbar; ihre Nachkommen werden ausschließlich in der verknüpften Tredegar-Akte geführt. Je ein Übergabeknoten zur neuen Linie hängt allein und geradlinig unter Bleddyn beziehungsweise Meredydd. Sywlchs Todesjahr ist mit der direkten Dianc-Gegenakte auf 1720 synchronisiert; seine Ehe mit Wynne endet weiterhin 1690.'
   }
 });
 

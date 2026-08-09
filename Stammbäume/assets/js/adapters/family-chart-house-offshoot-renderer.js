@@ -64,6 +64,27 @@ function candidateLayouts(anchorPoint, orientation) {
   ];
 }
 
+function directBelowLayout(anchorPoint) {
+  const offset = (FAMILY_CHART_CARD_LAYOUT.height / 2)
+    + FAMILY_CHART_HOUSE_OFFSHOOT_LAYOUT.gap
+    + (FAMILY_CHART_HOUSE_OFFSHOOT_LAYOUT.height / 2);
+  const point = { x: anchorPoint.x, y: anchorPoint.y + offset };
+  return {
+    side: 'below',
+    point,
+    route: [
+      {
+        x: anchorPoint.x,
+        y: anchorPoint.y + (FAMILY_CHART_CARD_LAYOUT.height / 2)
+      },
+      {
+        x: point.x,
+        y: point.y - (FAMILY_CHART_HOUSE_OFFSHOOT_LAYOUT.height / 2)
+      }
+    ]
+  };
+}
+
 function connectionRoute(anchorPoint, offshootPoint, side, orientation) {
   if (orientation === 'horizontal') {
     const anchorEdgeY = side === 'before'
@@ -97,6 +118,16 @@ export function createFamilyChartHouseOffshootLayout(
 ) {
   const anchorPoint = cardPositions.get(offshoot.anchorPersonId);
   if (!anchorPoint) return null;
+
+  if (orientation === 'vertical' && offshoot.preferredPlacement === 'below') {
+    const directLayout = directBelowLayout(anchorPoint);
+    return Object.freeze({
+      x: directLayout.point.x,
+      y: directLayout.point.y,
+      side: directLayout.side,
+      route: Object.freeze(directLayout.route)
+    });
+  }
 
   const preferredSide = offshoot.preferredSide === 'after' ? 'after' : 'before';
   const candidates = candidateLayouts(anchorPoint, orientation)

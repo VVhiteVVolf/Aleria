@@ -384,6 +384,8 @@ export function createFamilySyncController({
       return true;
     }
     if (saving) return false;
+    const saveOptions = ui.getSaveOptions?.() || { skipDeploy: true };
+    const skipDeploy = saveOptions.skipDeploy !== false;
     saving = true;
     renderStatus(
       'saving',
@@ -431,12 +433,16 @@ export function createFamilySyncController({
         }
         const batchRecords = [primaryRecord, ...relatedRecords];
         assertMirroredCrossFamilyBatch(batchRecords);
-        savedRecords = await cloudRepository.saveDraftBatch(batchRecords);
+        savedRecords = await cloudRepository.saveDraftBatch(batchRecords, { skipDeploy });
       } else {
         assertMirroredCrossFamilyBatch([primaryRecord]);
-        savedRecords = [await cloudRepository.saveDraft(primaryRecord)];
+        savedRecords = [await cloudRepository.saveDraft(primaryRecord, { skipDeploy })];
       }
       const result = savedRecords[0];
+      const deploySkipped = result.deploySkipped ?? skipDeploy;
+      const deployMessage = deploySkipped
+        ? 'Netlify-Deploy übersprungen'
+        : 'Netlify-Deploy wird gestartet';
       if (familyToSave.document.id !== activeFamilyId) return false;
       remoteBase = result.family;
       remoteRevision = result.revision;
@@ -464,8 +470,8 @@ export function createFamilySyncController({
         renderStatus(
           locallySaved ? 'pending' : 'error',
           locallySaved
-            ? 'Online gespeichert · weitere lokale Änderungen ausstehend'
-            : 'Online gespeichert · neuer lokaler Entwurf konnte nicht gesichert werden'
+            ? `Online gespeichert · ${deployMessage} · weitere lokale Änderungen ausstehend`
+            : `Online gespeichert · ${deployMessage} · neuer lokaler Entwurf konnte nicht gesichert werden`
         );
       } else {
         if (!finalizedRelatedBatch) {
@@ -474,8 +480,8 @@ export function createFamilySyncController({
         renderStatus(
           'synced',
           savedRecords.length > 1
-            ? `${savedRecords.length} verknüpfte Familien online gespeichert · Revision ${remoteRevision}`
-            : `Online gespeichert · Revision ${remoteRevision}`
+            ? `${savedRecords.length} verknüpfte Familien online gespeichert · ${deployMessage} · Revision ${remoteRevision}`
+            : `Online gespeichert · ${deployMessage} · Revision ${remoteRevision}`
         );
       }
       return !dirty;

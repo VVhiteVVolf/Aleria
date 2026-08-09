@@ -53,6 +53,10 @@
           <span class="workspace-mode-label" id="workspace-mode-label">Ansichtsmodus</span>
           <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur auf diesem Gerät</span>
           <button class="button" type="button" data-action="cloud-save" data-edit-only>Online speichern</button>
+          <label class="cloud-deploy-option" data-edit-only title="Aktiv: auf GitHub sichern, ohne einen Netlify-Deploy auszulösen. Die öffentliche Seite wird erst beim nächsten Deploy aktualisiert.">
+            <input type="checkbox" data-role="skip-netlify-deploy" checked>
+            <span>Deploy überspringen</span>
+          </label>
           <button class="button button--quiet" type="button" data-action="cloud-reset-origin" data-edit-only hidden>Zum Ursprung</button>
           <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>

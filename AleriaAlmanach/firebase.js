@@ -57,6 +57,7 @@
     const ITEM_DATABASE_DOC = 'global';
     const ITEM_DATABASE_ENTRY_COLLECTION = 'item_database_entries';
     const ITEM_DATABASE_SPLIT_FORMAT = 'split-v1';
+    const CHARACTER_ARCHIVE_ENTRY_COLLECTION = 'character_archive_entries';
 
     async function requireFirebaseUser() {
       return authSession.requireUser();
@@ -783,6 +784,41 @@
           if (options.throwOnError === true) throw e;
           return [];
         }
+      },
+      async loadCharacterArchiveEntries() {
+        try {
+          const snap = await getDocs(collection(db, CHARACTER_ARCHIVE_ENTRY_COLLECTION));
+          return snap.docs.map(entry => ({ id: entry.id, ...entry.data() }));
+        } catch (error) {
+          console.error('loadCharacterArchiveEntries error:', error);
+          throw error;
+        }
+      },
+      async saveCharacterArchiveEntries(entries = []) {
+        await requireFirebaseUser();
+        const records = (Array.isArray(entries) ? entries : []).filter(entry => {
+          const id = String(entry?.id || '').trim();
+          return id && id.length <= 180;
+        });
+        for (let offset = 0; offset < records.length; offset += 400) {
+          const batch = writeBatch(db);
+          records.slice(offset, offset + 400).forEach(entry => {
+            const id = String(entry.id).trim();
+            const data = { ...entry };
+            delete data.id;
+            batch.set(doc(db, CHARACTER_ARCHIVE_ENTRY_COLLECTION, id), data);
+          });
+          await batch.commit();
+        }
+        return records.length;
+      },
+      subscribeCharacterArchiveEntries(onNext, onError) {
+        return onSnapshot(collection(db, CHARACTER_ARCHIVE_ENTRY_COLLECTION), snapshot => {
+          onNext(snapshot.docs.map(entry => ({ id: entry.id, ...entry.data() })));
+        }, error => {
+          console.error('subscribeCharacterArchiveEntries error:', error);
+          if (onError) onError(error);
+        });
       },
       async loadCreatures() {
         try {

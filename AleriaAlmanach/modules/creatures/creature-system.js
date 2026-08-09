@@ -36,7 +36,7 @@ import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260808-duncan-v1';
+} from './creature-catalog.js?v=20260810-companion-horses-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
@@ -156,10 +156,24 @@ async function materializeBuiltinCreature(id) {
   return run;
 }
 
-function dispatchChanged() {
+let changedDispatchQueued = false;
+
+function emitChanged() {
+  changedDispatchQueued = false;
   document.dispatchEvent(new CustomEvent('aleria:creatures-changed', {
     detail: { creatures: getSceneActors() }
   }));
+}
+
+function dispatchChanged() {
+  if (typeof document?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return;
+  if (document.readyState !== 'complete' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+    if (changedDispatchQueued) return;
+    changedDispatchQueued = true;
+    window.addEventListener('load', emitChanged, { once: true });
+    return;
+  }
+  emitChanged();
 }
 
 function getSearchNeedle() {
@@ -709,6 +723,12 @@ async function saveCurrent() {
     renderLibrary();
     renderSheet();
     dispatchChanged();
+    try {
+      await window.AleriaCharacterArchive?.archiveRecord?.({ ...state.draft, entityType: 'creature' }, 'creature');
+    } catch (archiveError) {
+      console.info('Kreatur wurde gespeichert; der Online-Abgleich des Charakterbogen-Archivs folgt später.', archiveError);
+      notify('Kreatur gespeichert. Das Charakterbogen-Archiv wurde vorerst lokal ergänzt.', 'info');
+    }
     notify(`${creature.name} wurde gespeichert.`, 'success');
   } catch (error) {
     console.error('save creature failed:', error);
@@ -853,6 +873,38 @@ function addRow(kind) {
   renderSheet();
 }
 
+function getCreatureArchiveTarget(kind) {
+  return ({
+    attack: { archiveKind: 'attack', collection: 'weapons' },
+    ability: { archiveKind: 'ability', collection: 'abilities' },
+    spell: { archiveKind: 'spell', collection: 'magic.spells' },
+    skill: { archiveKind: 'skill', collection: 'skills' },
+    condition: { archiveKind: 'condition', collection: 'conditions' }
+  })[kind] || null;
+}
+
+function addCreatureRowFromArchive(kind) {
+  const target = getCreatureArchiveTarget(kind);
+  const archive = window.AleriaCharacterArchive;
+  if (!target || !archive?.openPicker) {
+    addRow(kind);
+    return;
+  }
+  collectDraftFromForm();
+  archive.openPicker({
+    kind: target.archiveKind,
+    onSelect(entry) {
+      const collection = getAtPath(state.draft.combatProfile, target.collection);
+      const item = archive.createProfileItem?.(entry, target.collection) || entry?.data;
+      if (Array.isArray(collection) && item) collection.push(item);
+      state.draft.combatProfile = sanitizeCharacterCombatProfile(state.draft.combatProfile, { ensureRequiredSkills: false, ensureSpellSlots: false });
+      renderSheet();
+      setStatus('Archiveintrag in den Entwurf übernommen. Online speichern nicht vergessen.', 'success');
+    },
+    onCreate: () => addRow(kind)
+  });
+}
+
 function createCreatureDetailItem(collection, defaultActivation = '') {
   const id = makeId(collection === 'quirks' ? 'quirk' : (collection === 'abilities' ? 'ability' : 'technique'));
   if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', trigger: '', target: 'Selbst', duration: '', stacking: 'normal', tags: '', limitations: '', aiInstructions: '', priority: 0, active: true, mechanics: {} };
@@ -888,6 +940,29 @@ function openCreatureDetailEditor(trigger) {
   });
 }
 
+function openCreatureDetailPicker(trigger) {
+  const archiveKind = trigger.dataset.entryKind === 'quirk' ? 'trait' : trigger.dataset.entryKind;
+  const archive = window.AleriaCharacterArchive;
+  if (!archive?.openPicker) {
+    openCreatureDetailEditor(trigger);
+    return;
+  }
+  collectDraftFromForm();
+  archive.openPicker({
+    kind: archiveKind,
+    onSelect(entry) {
+      const collectionPath = trigger.dataset.collection;
+      const items = getAtPath(state.draft.combatProfile, collectionPath);
+      const item = archive.createProfileItem?.(entry, collectionPath) || entry?.data;
+      if (Array.isArray(items) && item) items.push(item);
+      state.draft.combatProfile = sanitizeCharacterCombatProfile(state.draft.combatProfile, { ensureRequiredSkills: false, ensureSpellSlots: false });
+      renderSheet();
+      setStatus('Archiveintrag in den Entwurf übernommen. Online speichern nicht vergessen.', 'success');
+    },
+    onCreate: () => openCreatureDetailEditor(trigger)
+  });
+}
+
 function removeCreatureDetail(collection, itemId) {
   collectDraftFromForm();
   const items = state.draft.combatProfile[collection];
@@ -920,11 +995,12 @@ function handleClick(event) {
   else if (action === 'export-archive') exportArchive();
   else if (action === 'import-current') importCurrent();
   else if (action === 'import-archive') importArchive();
-  else if (action === 'add-detail' || action === 'edit-detail') openCreatureDetailEditor(trigger);
+  else if (action === 'add-detail') openCreatureDetailPicker(trigger);
+  else if (action === 'edit-detail') openCreatureDetailEditor(trigger);
   else if (action === 'remove-detail') removeCreatureDetail(trigger.dataset.collection, trigger.dataset.itemId);
-  else if (action === 'add-spell') addRow('spell');
+  else if (action === 'add-spell') addCreatureRowFromArchive('spell');
   else if (action === 'remove-spell') removeRow('spell', Number(trigger.dataset.index));
-  else if (action.startsWith('add-')) addRow(action.slice(4));
+  else if (action.startsWith('add-')) addCreatureRowFromArchive(action.slice(4));
   else if (action.startsWith('remove-')) removeRow(action.slice(7), Number(trigger.dataset.index));
 }
 
