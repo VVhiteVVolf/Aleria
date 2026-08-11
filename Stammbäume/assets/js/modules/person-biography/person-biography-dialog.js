@@ -1,4 +1,5 @@
 import { escapeHtml } from '../../ui/dom.js';
+import { createBiographySplitPane } from '../biography-page/biography-split-pane.js';
 import {
   sanitizeBiographyHref,
   sanitizeBiographyRichText
@@ -267,6 +268,7 @@ export function createPersonBiographyDialog({
   onRemove
 } = {}) {
   const dialog = documentRef.getElementById('person-biography-dialog');
+  const splitPane = createBiographySplitPane({ dialog, runtime });
   const iconPicker = createPersonBiographyIconPicker({ documentRef, runtime });
   const richTextRanges = new WeakMap();
   let person = null;
@@ -293,7 +295,7 @@ export function createPersonBiographyDialog({
         ? `<div class="person-biography-dialog__empty"><span aria-hidden="true">✦</span><h3>Noch keine Biographie angelegt</h3><p>Für diese Person wurde bislang kein Biographie-Modul gespeichert.</p></div>`
         : `<div class="person-biography-dialog__body${editable ? ' is-editing' : ''}">
             <section class="person-biography-dialog__preview" data-biography-preview>${renderPersonBiography({ person, biographyModule: draft, documentRef })}</section>
-            ${editable ? `<div class="person-biography-dialog__divider" role="separator" aria-orientation="vertical"><span>Liveversion</span><span>Bearbeitung</span></div><aside class="person-biography-dialog__editor-pane">${renderEditor(draft, documentRef)}</aside>` : ''}
+            ${editable ? `<div class="person-biography-dialog__divider" role="separator" aria-orientation="vertical" aria-label="Breite zwischen Live-Vorschau und Bearbeitung ändern" aria-valuemin="30" aria-valuemax="75" aria-valuenow="55" tabindex="0" data-biography-splitter><span>Liveversion</span><span>Bearbeitung</span></div><aside class="person-biography-dialog__editor-pane">${renderEditor(draft, documentRef)}</aside>` : ''}
           </div>`}
       <footer class="dialog-footer person-biography-dialog__footer">
         ${editable && exists ? '<button class="button button--danger" type="button" data-biography-action="remove-module">Biographie entfernen</button>' : ''}
@@ -319,6 +321,7 @@ export function createPersonBiographyDialog({
     exists = Boolean(stored);
     draft = clone(stored || createPersonBiographyModule(person, options.house));
     renderDialog();
+    splitPane.sync();
     dialog.showModal();
   }
 
@@ -600,6 +603,7 @@ export function createPersonBiographyDialog({
     dialog.removeEventListener('mouseup', onRichTextSelection);
     dialog.removeEventListener('keyup', onRichTextSelection);
     iconPicker.destroy();
+    splitPane.destroy();
   }
 
   return Object.freeze({ dialog, open, close, destroy });

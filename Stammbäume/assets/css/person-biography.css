@@ -15,6 +15,30 @@
   border-radius: 0;
 }
 
+.house-biography-dialog__header {
+  position: relative;
+  min-height: 6.4rem;
+  padding: 0;
+}
+
+.house-biography-dialog__header-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.house-biography-dialog__header-content .house-header {
+  min-height: 6.4rem;
+  padding-right: 6.5rem;
+}
+
+.house-biography-dialog__header > .icon-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+}
+
 .person-biography-dialog__form {
   height: 100%;
 }
@@ -39,7 +63,7 @@
 
 .person-biography-dialog__body.is-editing {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) 2.15rem minmax(25rem, 0.9fr);
+  grid-template-columns: minmax(20rem, var(--biography-preview-share, 55%)) 2.15rem minmax(25rem, 1fr);
 }
 
 .person-biography-dialog__preview {
@@ -71,12 +95,30 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
+  cursor: col-resize;
+  touch-action: none;
+  user-select: none;
 }
 
 .person-biography-dialog__divider::before {
   content: '◆';
   color: var(--gold-500);
   font-size: 0.65rem;
+}
+
+.person-biography-dialog__divider::after {
+  content: '⋮';
+  color: var(--gold-600);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.person-biography-dialog__divider:hover,
+.person-biography-dialog__divider:focus-visible,
+.person-biography-dialog__divider.is-dragging {
+  outline: 2px solid rgba(154, 114, 38, 0.72);
+  outline-offset: -2px;
+  background-color: #ead7b2;
 }
 
 .person-biography-dialog__preview .biography-page {
@@ -447,7 +489,7 @@
 
 @media (max-width: 82rem) {
   .person-biography-dialog__body.is-editing {
-    grid-template-columns: minmax(0, 1.05fr) 1.8rem minmax(23rem, 0.95fr);
+    grid-template-columns: minmax(18rem, var(--biography-preview-share, 52%)) 1.8rem minmax(23rem, 1fr);
   }
 
   .person-biography-dialog .biography-page {
@@ -470,6 +512,8 @@
     border-inline: 0;
     border-block: 1px solid rgba(91, 60, 30, 0.34);
     writing-mode: horizontal-tb;
+    cursor: default;
+    touch-action: auto;
   }
 
   .person-biography-dialog__preview,

@@ -216,8 +216,9 @@ export const HOUSE_CEIRWYN_FAMILY = Object.freeze({
       title: 'Wegverheiratet an Haus Urquhart',
       tags: ['Wegverheiratet']
     }),
-    spouse('aslaug-skald', 'Aslaug Skald', 'female', '1592', '1690', {
-      houseId: 'house-skald'
+    spouse('aslaug-skald', 'Aslaug Skald', 'female', '1592', '1693', {
+      houseId: 'house-skald',
+      notes: 'Die spätere Skald-Hausquelle nennt 1693 als Todesjahr und korrigiert damit die ältere Ceirwyn-Angabe 1690.'
     }),
     spouse('eochaidh-urquhart', 'Eochaidh Urquhart', 'male', '1590', '1652', {
       houseId: 'house-urquhart'
@@ -503,7 +504,7 @@ export const HOUSE_CEIRWYN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Ceirwyn O'Calon (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Ehen, Baronsfolge und Porträts folgen der bereitgestellten Ceirwyn-Hausseite. Die beiden Auslassungszeichen werden als strikt serielle Zeitsprünge nach dem Gründerwappen und nach Gorsedd/Sunniva geführt. Die Hauptlinie folgt Ceirwyn, Gorsedd, Caedmon, Gruffudd, Taliesin, Morgan und Mandon; Meiron ist der ausdrücklich genannte Erbe. Sämtliche verheirateten Ceirwyn-Frauen besitzen einen direkten Wegverheiratet-Knoten. Merlion wird anhand des Quellporträts als fortführender Sohn und Irnskar als angeheiratete Frau geführt. Das genealogische grün-silberne Meiron-Porträt hat Vorrang vor der abweichenden goldenen Hofübersichtsvariante. Wiederholte generische Silhouetten werden nicht als individuelle Porträts importiert. Gemeinsame Personen und Ehen mit Pendrag, Grael, Illewod, Gwefrydd, Draig und Saethwyr behalten ihre vorhandenen IDs.',
     registryManagedExtensionFields: ['sourceNote'],

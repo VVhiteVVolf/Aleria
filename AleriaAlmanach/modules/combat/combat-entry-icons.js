@@ -1,7 +1,12 @@
 const ICON_ROOT = '../../../IconOrdner';
+const CARD_ICON_ROOT = '../../../IconOrdner/Zauberkarten Icons';
 
 function assetUrl(path) {
   return new URL(`${ICON_ROOT}/${path}`, import.meta.url).href;
+}
+
+function cardIconUrl(path) {
+  return new URL(`${CARD_ICON_ROOT}/${path}`, import.meta.url).href;
 }
 
 function normalizeSearchText(value) {
@@ -149,17 +154,50 @@ export function getDamageTypeIconSource(damageType) {
 
 export function getActivationIconSource(activationType) {
   const fileName = {
-    action: 'Action_Icon.png',
-    'bonus-action': 'Bonus_Action_Icon.png',
-    reaction: 'Reaction_Icon.png',
-    'special-action': 'Red_Star_Icon.png',
-    passive: 'Red_Star_Icon.png'
-  }[String(activationType || '').toLocaleLowerCase('de')] || 'Action_Icon.png';
-  return assetUrl(`Zauber Icons/Baldurs Gate/Ressourcen/${fileName}`);
+    action: 'Aktionskosten/Aktion.svg',
+    'bonus-action': 'Aktionskosten/Bonusaktion.svg',
+    reaction: 'Aktionskosten/Reaktion.svg',
+    'special-action': 'Aktionskosten/Besondere Aktion.svg',
+    passive: 'Aktionskosten/Passiv.svg'
+  }[String(activationType || '').toLocaleLowerCase('de')] || 'Aktionskosten/Aktion.svg';
+  return cardIconUrl(fileName);
+}
+
+// "Auflösung" beschreibt WIE ein Zauber/eine Technik entschieden wird (Zauberangriff vs.
+// Rettungswurf vs. automatische Wirkung) - vorher zeigte diese Kachel faelschlich ein
+// Schadenstyp-Icon (getDamageTypeIconSource), obwohl das Label "Auflösung" nie den Schaden meint.
+export function getResolutionIconSource({ resolutionType, saveAttribute } = {}) {
+  if (resolutionType === 'saving-throw') {
+    const fileName = {
+      strength: 'Rettungswurf Staerke.svg',
+      dexterity: 'Rettungswurf Geschicklichkeit.svg',
+      constitution: 'Rettungswurf Konstitution.svg',
+      intelligence: 'Rettungswurf Intelligenz.svg',
+      wisdom: 'Rettungswurf Weisheit.svg',
+      charisma: 'Rettungswurf Charisma.svg'
+    }[String(saveAttribute || '').toLocaleLowerCase('de')] || 'Rettungswurf Allgemein.svg';
+    return cardIconUrl(`Rettungswurf und Angriff/${fileName}`);
+  }
+  if (resolutionType === 'automatic') return cardIconUrl('Rettungswurf und Angriff/Rettungswurf Allgemein.svg');
+  return cardIconUrl('Rettungswurf und Angriff/Angriff Fernkampf.svg');
 }
 
 export function getRangeIconSource() {
-  return assetUrl('Zauber Icons/Baldurs Gate/Ressourcen/Movement_Speed_Icon.png');
+  return cardIconUrl('Reichweite und Ziel/Reichweite.svg');
+}
+
+// Dauer-Icon: Konzentration hat Vorrang (eigene, staerker sichtbare Ressourcen-Optik),
+// sonst wird aus dem freien Dauer-Text auf eine der sechs Dauer-Kategorien geraten.
+export function getDurationIconSource({ duration, concentration } = {}) {
+  if (concentration) return cardIconUrl('Ressourcen/Konzentration.svg');
+  const searchText = normalizeSearchText(duration);
+  if (!searchText || /sofort|instant/.test(searchText)) return cardIconUrl('Dauer/Sofort.svg');
+  if (/runde/.test(searchText)) return cardIconUrl('Dauer/Runden.svg');
+  if (/minute/.test(searchText)) return cardIconUrl('Dauer/Minuten.svg');
+  if (/stunde/.test(searchText)) return cardIconUrl('Dauer/Stunden.svg');
+  if (/tag/.test(searchText)) return cardIconUrl('Dauer/Tage.svg');
+  if (/dauerhaft|permanent|bis (?:aufgehoben|widerruf)/.test(searchText)) return cardIconUrl('Dauer/Dauerhaft.svg');
+  return cardIconUrl('Dauer/Sofort.svg');
 }
 
 export function getRollIconSource(formula, damageType) {

@@ -138,7 +138,7 @@ function partnershipRoute(first, second, orientation, routeSide = 'after') {
   return [first, { x: laneX, y: first.y }, { x: laneX, y: second.y }, second];
 }
 
-function alignedEngagementRoute(first, second, orientation) {
+function alignedPartnershipRoute(first, second, orientation) {
   if (orientation !== 'horizontal') {
     if (Math.abs(first.y - second.y) > ALIGNED_CARD_TOLERANCE) return [];
     const left = first.x <= second.x ? first : second;
@@ -174,11 +174,12 @@ export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orient
   const first = cardPositions.get(extraLink.firstId);
   const second = cardPositions.get(extraLink.secondId);
   if (!first || !second) return [];
-  const directEngagementRoute = extraLink.type === 'engagement'
-    ? alignedEngagementRoute(first, second, orientation)
+  const directCenteredRoute = extraLink.routeMode === 'centered'
+    || extraLink.type === 'engagement'
+    ? alignedPartnershipRoute(first, second, orientation)
     : [];
-  return directEngagementRoute.length
-    ? directEngagementRoute
+  return directCenteredRoute.length
+    ? directCenteredRoute
     : partnershipRoute(first, second, orientation, extraLink.routeSide);
 }
 
@@ -197,6 +198,7 @@ export function createFamilyChartLinkRenderer({
   let destroyed = false;
 
   function applyLineStyle(path, metadata) {
+    path.style.display = metadata.hidden ? 'none' : '';
     path.style.stroke = metadata.color;
     path.style.strokeWidth = '3.25px';
     path.style.strokeDasharray = metadata.dashed ? '8 6' : '';
@@ -212,6 +214,46 @@ export function createFamilyChartLinkRenderer({
     const cardPositions = collectFamilyChartCardPositions(container);
     const orientation = typeof resolveOrientation === 'function' ? resolveOrientation() : 'vertical';
     extraLinks.forEach(extraLink => {
+      if (extraLink.kind === 'parentage-group') {
+        const parentPoint = cardPositions.get(extraLink.parentId);
+        const childPoints = (extraLink.childIds || [])
+          .map(childId => cardPositions.get(childId))
+          .filter(Boolean);
+        if (!parentPoint || childPoints.length !== extraLink.childIds.length) return;
+
+        const childAxisValues = childPoints.map(point => (
+          orientation === 'horizontal' ? point.y : point.x
+        ));
+        const childGeneration = childPoints.reduce((sum, point) => (
+          sum + (orientation === 'horizontal' ? point.x : point.y)
+        ), 0) / childPoints.length;
+        const parentGeneration = orientation === 'horizontal' ? parentPoint.x : parentPoint.y;
+        const railGeneration = parentGeneration + ((childGeneration - parentGeneration) / 2);
+        const firstCrossAxis = Math.min(...childAxisValues);
+        const lastCrossAxis = Math.max(...childAxisValues);
+        const routes = orientation === 'horizontal'
+          ? [
+              [parentPoint, { x: railGeneration, y: parentPoint.y }],
+              [{ x: railGeneration, y: firstCrossAxis }, { x: railGeneration, y: lastCrossAxis }],
+              ...childPoints.map(point => [{ x: railGeneration, y: point.y }, point])
+            ]
+          : [
+              [parentPoint, { x: parentPoint.x, y: railGeneration }],
+              [{ x: firstCrossAxis, y: railGeneration }, { x: lastCrossAxis, y: railGeneration }],
+              ...childPoints.map(point => [{ x: point.x, y: railGeneration }, point])
+            ];
+
+        routes.forEach(route => {
+          const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
+          path.setAttribute('class', 'link aleria-link--routed aleria-extra-link');
+          path.setAttribute('fill', 'none');
+          path.setAttribute('d', createRoundedOrthogonalPath(route, 0));
+          path.dataset.extraLinkKind = extraLink.kind;
+          applyLineStyle(path, extraLink);
+          linksView.appendChild(path);
+        });
+        return;
+      }
       const route = createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation);
       if (route.length < 2) return;
       const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');

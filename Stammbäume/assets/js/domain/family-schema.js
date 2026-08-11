@@ -240,7 +240,8 @@ function normalizeOriginHouse(originHouse = {}) {
     frameScale: boundedNumber(originHouse.frameScale, 1, 0.6, 1.5),
     childIds: uniqueText(originHouse.childIds),
     targetFamilyId: text(originHouse.targetFamilyId),
-    notes: text(originHouse.notes)
+    notes: text(originHouse.notes),
+    timeGap: normalizeTimeGap(originHouse.timeGap)
   };
 }
 

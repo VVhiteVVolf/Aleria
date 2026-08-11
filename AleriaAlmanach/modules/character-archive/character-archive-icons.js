@@ -1,5 +1,5 @@
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260810-character-archive-icons-v2';
-import { getCombatEntryIconPresentation } from '../combat/combat-entry-icons.js?v=20260810-character-archive-icons-v1';
+import { getCombatEntryIconPresentation } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
 
 const PLACEHOLDER_ICON = new URL('../../../IconOrdner/ReiterIcons/Platzhalter.png', import.meta.url).href;
 const COMBAT_ICON_KIND_BY_ARCHIVE_KIND = Object.freeze({

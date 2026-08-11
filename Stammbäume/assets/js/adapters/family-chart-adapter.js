@@ -21,6 +21,10 @@ import {
   detachFamilyChartParentLinks
 } from './family-chart-cycle-router.js';
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
+import {
+  applyFamilyChartDescendantAlignmentPlan,
+  createFamilyChartDescendantAlignmentPlan
+} from './family-chart-descendant-alignment.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
 import {
@@ -31,6 +35,7 @@ import {
   applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
+import { createFamilyChartParentageGroupPlan } from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
 
@@ -52,6 +57,8 @@ const CERTAINTY_PRIORITY = Object.freeze({
   disputed: 3,
   unknown: 4
 });
+
+const CHART_PRIMARY_PARENTAGE_EXTENSION = 'chartPrimaryParentage';
 
 const ROLE_LINE_COLORS = Object.freeze({
   bastard: '#62615e',
@@ -123,6 +130,9 @@ function layoutGender(person, diagnostics) {
 function selectPrimaryParentage(parentages, person) {
   const preferredType = person?.familyRole === 'ward' ? 'foster' : '';
   return [...parentages].sort((first, second) => (
+    (first.extensions?.[CHART_PRIMARY_PARENTAGE_EXTENSION] === true ? -1 : 0)
+      - (second.extensions?.[CHART_PRIMARY_PARENTAGE_EXTENSION] === true ? -1 : 0)
+    ||
     (first.type === preferredType ? -1 : 0) - (second.type === preferredType ? -1 : 0)
     ||
     (PARENTAGE_PRIORITY[first.type] ?? 99) - (PARENTAGE_PRIORITY[second.type] ?? 99)
@@ -451,7 +461,7 @@ function createHouseOffshoots({ family, chartById, houseById }) {
     });
 }
 
-function applyOriginHouseStructure({ family, chartById, parentageLines, houseById }) {
+function applyOriginHouseStructure({ family, chartById, parentageLines, houseById, personById }) {
   const origin = family.lineage.originHouse;
   if (!origin?.enabled) return;
 
@@ -473,20 +483,43 @@ function applyOriginHouseStructure({ family, chartById, parentageLines, houseByI
     emblemScale: origin.emblemScale,
     frameScale: origin.frameScale
   });
-  node.rels.children = [...childIds];
+  const gap = origin.timeGap;
+  const gapId = gap?.enabled
+    ? `__origin-gap-${family.document.id}-${origin.id}`
+    : '';
+  node.rels.children = gapId ? [gapId] : [...childIds];
 
   childIds.forEach(childId => {
     const child = chartById.get(childId);
     child.rels.parents.forEach(parentId => removeValue(chartById.get(parentId)?.rels.children || [], childId));
-    child.rels.parents = [nodeId];
+    child.rels.parents = [gapId || nodeId];
     parentageLines.set(childId, {
-      type: 'biological',
-      color: relationColor(family, 'biological'),
-      dashed: false
+      type: gapId ? 'claimed' : 'biological',
+      color: relationColor(family, gapId ? 'claimed' : 'biological'),
+      dashed: Boolean(gapId)
     });
   });
 
   chartById.set(nodeId, node);
+  if (gapId) {
+    const gapNode = createVirtualNode({
+      id: gapId,
+      name: gap.label || 'Nicht einzeln überlieferte Generationen',
+      title: gap.years ? `${gap.years} Jahre ohne lückenlose Überlieferung` : 'Unbekannter Zeitraum',
+      nodeKind: 'time-gap',
+      frameAsset: TIME_JUMP_FRAME.asset,
+      fromYear: gap.fromYear,
+      toYear: gap.toYear || earliestKnownBirthYear(childIds, personById)
+    });
+    gapNode.rels.parents = [nodeId];
+    gapNode.rels.children = [...childIds];
+    chartById.set(gapId, gapNode);
+    parentageLines.set(gapId, {
+      type: 'time-gap',
+      color: relationColor(family, 'claimed'),
+      dashed: true
+    });
+  }
 }
 
 function applyTimeJumps({
@@ -700,6 +733,15 @@ export function toFamilyChartData(input, options = {}) {
       appearancePlan.resolveParticipantId(personId, partnership.id)
     ))
   }));
+  const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);
+  parentageGroupPlan.invalidRequests.forEach(request => {
+    diagnostics.push(Object.freeze({
+      severity: 'warning',
+      code: 'INVALID_CHART_PARENTAGE_GROUP',
+      message: 'Eine sichtbare Elternschaftsgruppe ist unvollständig oder verwendet einen fremden Elternanker.',
+      details: request
+    }));
+  });
   const layoutParentageByChild = new Map([...selectedParentageByChild].map(([childId, parentage]) => [
     childId,
     {
@@ -749,6 +791,9 @@ export function toFamilyChartData(input, options = {}) {
             firstId,
             secondId,
             routeSide: cycleDecision.sharedChildIds.length ? 'before' : 'after',
+            routeMode: partnership.extensions?.chartCenteredPartnershipLine === true
+              ? 'centered'
+              : 'orthogonal',
             ...metadata
           }));
           diagnostics.push(Object.freeze({
@@ -847,7 +892,8 @@ export function toFamilyChartData(input, options = {}) {
     parentageLines.set(childId, Object.freeze({
       type: selected.type,
       color: ROLE_LINE_COLORS[childRole] || relationColor(family, selected.type),
-      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole])
+      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole]),
+      hidden: parentageGroupPlan.groupedChildIds.has(childId)
     }));
     if (selected.parentIds.length > 2) {
       diagnostics.push(Object.freeze({
@@ -861,7 +907,7 @@ export function toFamilyChartData(input, options = {}) {
 
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
   applyCadetBranches({ family, chartById, parentageLines, houseById, appearancePlan });
-  applyOriginHouseStructure({ family, chartById, parentageLines, houseById });
+  applyOriginHouseStructure({ family, chartById, parentageLines, houseById, personById });
   applyTimeJumps({
     family,
     chartById,
@@ -894,6 +940,7 @@ export function toFamilyChartData(input, options = {}) {
     route.childIds.forEach(childId => {
       const parentIds = detachFamilyChartParentLinks(chartById, childId, [route.personId]);
       if (!parentIds.length) return;
+      if (parentageGroupPlan.groupedChildIds.has(childId)) return;
       const metadata = parentageLines.get(childId) || Object.freeze({
         type: 'biological',
         color: relationColor(family, 'biological'),
@@ -908,6 +955,22 @@ export function toFamilyChartData(input, options = {}) {
         dashed: metadata.dashed
       }));
     });
+  });
+
+  parentageGroupPlan.groups.forEach(group => {
+    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({
+      type: 'biological',
+      color: relationColor(family, 'biological'),
+      dashed: false
+    });
+    extraParentageLines.push(Object.freeze({
+      kind: 'parentage-group',
+      parentId: group.anchorPersonId,
+      childIds: group.childIds,
+      type: lineMetadata.type,
+      color: lineMetadata.color,
+      dashed: lineMetadata.dashed
+    }));
   });
 
   return Object.freeze({
@@ -1195,6 +1258,12 @@ export function createFamilyChartSession(config) {
     applyFamilyChartPartnerAlignmentPlan({
       tree: chart.store?.getTree?.(),
       plan: alignmentPlan,
+      orientation: view.orientation
+    });
+    const descendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(family);
+    applyFamilyChartDescendantAlignmentPlan({
+      tree: chart.store?.getTree?.(),
+      plan: descendantAlignmentPlan,
       orientation: view.orientation
     });
     const houseLinkAlignmentPlan = createFamilyChartHouseLinkAlignmentPlan(family);

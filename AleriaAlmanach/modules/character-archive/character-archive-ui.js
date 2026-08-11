@@ -1,5 +1,5 @@
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260809-character-archive-v1';
-import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260810-character-archive-icons-v2';
+import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260810-zauberkarten-icons-v1';
 import {
   getCharacterArchiveAttackGroups,
   matchesCharacterArchiveKind
@@ -19,7 +19,7 @@ import {
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260810-character-archive-register-v1';
+} from './character-archive-store.js?v=20260810-fire-spell-arsenal-v1';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },

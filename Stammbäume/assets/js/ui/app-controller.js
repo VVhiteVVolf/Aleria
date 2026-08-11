@@ -7,6 +7,8 @@ import { createAlmanachCharacterController } from '../modules/almanach-bridge/al
 import { createEditorToolbarController } from '../modules/editor-toolbar/editor-toolbar-controller.js';
 import { buildRegisteredHouseIndex } from '../modules/family-assets/house-emblem-index.js';
 import { createTreeGeneratorController } from '../modules/tree-generator/tree-generator-controller.js';
+import { createHouseBiographyDialog } from '../modules/house-biography/house-biography-dialog.js';
+import { HOUSE_BIOGRAPHY_EXTENSION_ID } from '../modules/house-biography/house-biography-model.js';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
 import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
 import { assertUsablePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
@@ -170,6 +172,18 @@ export function createAppController({
       toast('Biographie wurde entfernt.');
     }
   });
+  const houseBiographyDialog = createHouseBiographyDialog({
+    documentRef,
+    runtime,
+    onSave(_familyId, biographyModule) {
+      store.setFamilyExtension(HOUSE_BIOGRAPHY_EXTENSION_ID, biographyModule);
+      toast('Clanbeschreibung wurde lokal gespeichert.');
+    },
+    onRemove() {
+      store.setFamilyExtension(HOUSE_BIOGRAPHY_EXTENSION_ID, null);
+      toast('Clanbeschreibung wurde entfernt.');
+    }
+  });
   const relationshipMatrixDialog = createRelationshipMatrixDialog(documentRef);
 
   function emptyChartMessage() {
@@ -234,6 +248,11 @@ export function createAppController({
     }
     if (actionId === 'continue-house') {
       treeNodeActionsDialog.showHouseContinuation(state.family);
+      return;
+    }
+    if (actionId === 'edit-house-biography') {
+      treeNodeActionsDialog.close();
+      houseBiographyDialog.open(state.family, { editable: true });
       return;
     }
     if (actionId === 'edit-house') {
@@ -683,6 +702,11 @@ export function createAppController({
     return true;
   }
 
+  function openHouseBiography() {
+    houseBiographyDialog.open(store.getState().family, { editable: isEditing });
+    return true;
+  }
+
   function createChart(family) {
     if (chartSession) chartSession.destroy();
     chartSession = null;
@@ -747,8 +771,8 @@ export function createAppController({
             openTreeNodeActions({ kind: 'house-crest', partnershipId, label: lineageHouseName(family) });
             return;
           }
-          const link = buildHouseLoreLink(runtime, store.getState().family.document.id);
-          if (link) runtime.open?.(link, '_blank', 'noopener');
+          openHouseBiography();
+          return true;
         },
         onLineageTimeGapClick({ partnershipId }) {
           if (isEditing) {
@@ -805,8 +829,10 @@ export function createAppController({
     documentRef.getElementById('living-stat').setAttribute('aria-label', livingDescription);
     documentRef.getElementById('partnership-count').textContent = String(family.partnerships.length);
     const emblem = documentRef.getElementById('family-emblem');
+    const emblemButton = documentRef.getElementById('family-emblem-button');
     const source = family.document.emblem || family.houses[0]?.emblem;
     emblem.hidden = !source;
+    emblemButton.hidden = !source;
     if (source) emblem.src = source;
     emblem.alt = source ? `Wappen von ${family.document.title}` : '';
     documentRef.title = `${family.document.title} · ${isEditing ? 'Stammbaum-Werkstatt' : 'Stammbaum'}`;
@@ -870,6 +896,10 @@ export function createAppController({
       // bleiben, sonst würde ein später an ganz anderer Stelle gewährter
       // Bearbeitungszugang unerwartet die dort offene Familie zurücksetzen.
       clearPendingTreeGeneratorLaunch(runtime.sessionStorage);
+      return;
+    }
+    if (action === 'open-house-biography') {
+      openHouseBiography();
       return;
     }
     if (!isEditing) return;
@@ -1564,6 +1594,7 @@ export function createAppController({
     unsubscribe?.();
     chartSession?.destroy();
     personBiographyDialog.destroy();
+    houseBiographyDialog.destroy();
   }
 
   return Object.freeze({ init, destroy });

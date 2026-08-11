@@ -16,7 +16,23 @@ import {
   summarizeFamilyChangeSet
 } from './family-change-set.js';
 import { FamilyRevisionConflictError } from './family-sync-errors.js';
+import {
+  HOUSE_BIOGRAPHY_EXTENSION_ID,
+  sanitizeHouseBiographyForFirestore
+} from '../house-biography/house-biography-model.js';
 import { PERSON_BIOGRAPHY_EXTENSION_ID, sanitizeBiographyStatsForFirestore } from '../person-biography/person-biography-model.js';
+
+function sanitizeFamilyRootForFirestore(root) {
+  const biographyModule = root?.extensions?.[HOUSE_BIOGRAPHY_EXTENSION_ID];
+  if (!biographyModule) return root;
+  return {
+    ...root,
+    extensions: {
+      ...root.extensions,
+      [HOUSE_BIOGRAPHY_EXTENSION_ID]: sanitizeHouseBiographyForFirestore(biographyModule)
+    }
+  };
+}
 
 // Firestore lehnt Arrays ab, die direkt weitere Arrays enthalten. Personen-Datensaetze koennen in
 // extensions.biographyModule.stats [label, wert]-Paare (Arrays) tragen - vor jedem Schreibvorgang
@@ -133,7 +149,7 @@ export function createFirestoreFamilyRepository(firebaseClient) {
         const revision = actualRevision + 1;
         nextRevisions.push(revision);
         transaction.set(reference, {
-          ...changeSet.root,
+          ...sanitizeFamilyRootForFirestore(changeSet.root),
           familyId: changeSet.family.document.id,
           title: changeSet.family.document.title,
           lifecycle: 'draft',

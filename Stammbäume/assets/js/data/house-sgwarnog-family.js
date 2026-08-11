@@ -9,6 +9,7 @@ import {
   AEHRENTAL_HOUSE_EMBLEMS,
   AEHRENTAL_HOUSE_PROFILES
 } from './aehrental-house-profiles.js';
+import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 import { HOUSE_SGWARNOG_PORTRAITS } from './house-sgwarnog-portraits.js';
 
@@ -23,6 +24,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   grawn: AEHRENTAL_HOUSE_EMBLEMS.grawn,
   gwarchod: AEHRENTAL_HOUSE_EMBLEMS.gwarchod,
   penderyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.penderyn,
+  selwyn: KLAUENINSEL_HOUSE_EMBLEMS.selwyn,
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
@@ -196,7 +198,7 @@ export const HOUSE_SGWARNOG_FAMILY = Object.freeze({
     house('house-dienyddiwr', "Haus Dienyddiwr O'Mathragon", HOUSE_EMBLEMS.dienyddiwr),
     house('house-crefyddol', 'Haus Crefyddol'),
     house('house-grawn', "Haus Grawn O'Glyndraith", HOUSE_EMBLEMS.grawn),
-    house('house-selwyn', 'Haus Selwyn'),
+    house('house-selwyn', "Haus Sélwyn O'Caer Ebirth", HOUSE_EMBLEMS.selwyn),
     house('house-mac-eala', 'Haus Mac Eala'),
     house('house-unigol', 'Haus Unigol'),
     house('house-wyrm', 'Haus Wyrm', HOUSE_EMBLEMS.wyrm),
@@ -226,7 +228,7 @@ export const HOUSE_SGWARNOG_FAMILY = Object.freeze({
     awayWoman('marsaili-sgwarnog', 'Marsaili Sgwarnog', '1673', '1720', 'Haus Mac Eala'),
     person('morganwg-sgwarnog', 'Morganwg Sgwarnog', 'male', '1677'),
     spouse('gwendolyn-grawn', "Gwendolyn Grawn O'Glyndraith", 'female', '1672', '', 'house-grawn'),
-    spouse('edern-selwyn', "Edern Selwyn O'Caer Eldrith", 'male', '1680', '', 'house-selwyn'),
+    spouse('edern-selwyn', "Edern Sélwyn O'Caer Ebirth", 'male', '1680', '', 'house-selwyn'),
     spouse('alastar-mac-eala', 'Alastar Mac Eala', 'male', '1670', '1720', 'house-mac-eala'),
     spouse('ewynn-unigol', "Ewynn Unigol O'Caer Marwor", 'male', '1682', '', 'house-unigol'),
 
@@ -329,9 +331,9 @@ export const HOUSE_SGWARNOG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Sgwarnog O'Aldwynd (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Barons- und Erbfolge sowie Porträtzuordnungen folgen der bereitgestellten Sgwarnog-Hausseite und ihrer vollständigen Stammbaumgrafik. Mael und Meiriona bilden das Gründerpaar; das Hauswappen steht direkt unter ihnen und der einzige Punkttrenner wird anschließend als absoluter serieller Zeitsprung vor Mathonwy und Morfudd geführt. Mathonwy und Lynesse führen die Sgwarnog-Linie über Maldwyn, Morcant und Mabon fort. Morfudd, Magwena, Myfanwy, Meiriona, Marsaili, Mabil, Meghan und Meinir besitzen an ihren Ehen direkte Wegverheiratet-Knoten. Gemeinsame Weltpersonen, Partnerschafts-IDs, Teilnehmerreihenfolgen und Porträts mit Grawn, Baedd, Dienyddiwr, Penderyn und Unigol werden unverändert wiederverwendet; Ewynn stammt kanonisch aus Caer Marwor. Die Kinder von Maldwyn/Marve und Morcant/Gwendolyn stehen ausschließlich in der fortführenden Sgwarnog-Akte; Nolwen Dienyddiwr sowie Rhon, Revelyn, Dwnn und Jinell Penderyn bleiben ausschließlich in ihren jeweiligen Gegenakten. Wiederholte neutrale Standardsilhouetten werden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Barons- und Erbfolge sowie Porträtzuordnungen folgen der bereitgestellten Sgwarnog-Hausseite und ihrer vollständigen Stammbaumgrafik. Mael und Meiriona bilden das Gründerpaar; das Hauswappen steht direkt unter ihnen und der einzige Punkttrenner wird anschließend als absoluter serieller Zeitsprung vor Mathonwy und Morfudd geführt. Mathonwy und Lynesse führen die Sgwarnog-Linie über Maldwyn, Morcant und Mabon fort. Morfudd, Magwena, Myfanwy, Meiriona, Marsaili, Mabil, Meghan und Meinir besitzen an ihren Ehen direkte Wegverheiratet-Knoten. Gemeinsame Weltpersonen, Partnerschafts-IDs, Teilnehmerreihenfolgen und Porträts mit Grawn, Baedd, Dienyddiwr, Penderyn und Unigol werden unverändert wiederverwendet; Ewynn stammt kanonisch aus Caer Marwor. Edern wird anhand der vollständigen Sélwyn-Gegenakte als Edern Sélwyn O\'Caer Ebirth geführt. Die Kinder von Maldwyn/Marve und Morcant/Gwendolyn stehen ausschließlich in der fortführenden Sgwarnog-Akte; Nolwen Dienyddiwr sowie Rhon, Revelyn, Dwnn und Jinell Penderyn bleiben ausschließlich in ihren jeweiligen Gegenakten. Wiederholte neutrale Standardsilhouetten werden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

@@ -4,6 +4,7 @@ import {
 } from '../../domain/family-generation-depth.js';
 
 const NODE_ACTIONS = Object.freeze({
+  editHouseBiography: Object.freeze({ id: 'edit-house-biography', glyph: '▤', label: 'Clanbeschreibung bearbeiten', hint: 'Das vollständige Häuser-Template des Aleria Almanachs öffnen' }),
   editHouse: Object.freeze({ id: 'edit-house', glyph: '⚙', label: 'Haus bearbeiten', hint: 'Gründerpaar, Wappen und Darstellung dieses Hausknotens ändern' }),
   continueHouse: Object.freeze({ id: 'continue-house', glyph: '↓', label: 'Linie fortsetzen', hint: 'Direkte Nachkommen oder einen Zeitsprung unter diesem Haus anlegen' }),
   addDirect: Object.freeze({ id: 'add-direct', glyph: '✦', label: 'Direkte Nachkommen', hint: 'Ohne Zeitsprung mit der nächsten Generation beginnen' }),
@@ -35,7 +36,7 @@ export function findLineageBarrier(family, partnershipId = family.lineage.founde
 }
 
 export function primaryNodeActions(kind) {
-  if (kind === 'house-crest') return Object.freeze([NODE_ACTIONS.editHouse, NODE_ACTIONS.continueHouse]);
+  if (kind === 'house-crest') return Object.freeze([NODE_ACTIONS.editHouseBiography, NODE_ACTIONS.editHouse, NODE_ACTIONS.continueHouse]);
   if (kind === 'time-jump' || kind === 'lineage-gap') {
     return Object.freeze([NODE_ACTIONS.editGap, NODE_ACTIONS.addAfterGap]);
   }

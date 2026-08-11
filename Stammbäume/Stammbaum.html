@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/css/family-sync.css">
   <link rel="stylesheet" href="assets/css/almanach-bridge.css">
   <link rel="stylesheet" href="../AleriaAlmanach/styles/module-page-biography.css">
+  <link rel="stylesheet" href="../AleriaAlmanach/styles/module-page-house.css">
   <link rel="stylesheet" href="../AleriaAlmanach/styles/icon-directory.css">
   <link rel="stylesheet" href="assets/css/person-biography.css">
   <link rel="stylesheet" href="assets/css/relationship-matrix.css">
@@ -30,7 +31,9 @@
   <div class="app-shell" id="family-app" data-workspace-mode="view">
     <header class="app-header">
       <div class="brand-block">
-        <img class="brand-emblem" id="family-emblem" src="assets/images/placeholders/neutral-crest.png" alt="Wappen des Hauses">
+        <button class="brand-emblem-button" id="family-emblem-button" type="button" data-action="open-house-biography" aria-label="Clanbeschreibung öffnen">
+          <img class="brand-emblem" id="family-emblem" src="assets/images/placeholders/neutral-crest.png" alt="Wappen des Hauses">
+        </button>
         <div>
           <p class="eyebrow" id="workspace-eyebrow">Aleria Almanach · Stammbaum</p>
           <h1 id="family-title">Familienregister</h1>
@@ -132,6 +135,13 @@
         <details class="toolbar-menu" data-toolbar-menu>
           <summary class="button toolbar-menu__trigger">Familie</summary>
           <div class="toolbar-menu__panel" aria-label="Familienaktionen">
+            <button class="toolbar-menu__item" type="button" data-action="open-house-biography">
+              <span class="toolbar-menu__item-description">
+                <strong>Clanbeschreibung bearbeiten</strong>
+                <small>Häuser-Template des Aleria Almanachs</small>
+              </span>
+            </button>
+            <div class="toolbar-menu__divider" role="separator"></div>
             <button class="toolbar-menu__item" type="button" data-action="open-tree-generator">
               <span class="toolbar-menu__item-description">
                 <strong>Aktuelle Familie weiterbauen</strong>
@@ -1031,6 +1041,7 @@
   </dialog>
 
   <dialog class="dialog person-biography-dialog" id="person-biography-dialog" aria-label="Biographie"></dialog>
+  <dialog class="dialog person-biography-dialog house-biography-dialog" id="house-biography-dialog" aria-label="Clanbeschreibung"></dialog>
 
   <dialog class="dialog relationship-matrix-dialog" id="relationship-matrix-dialog" aria-labelledby="relationship-matrix-title">
     <header class="relationship-matrix-dialog__header">

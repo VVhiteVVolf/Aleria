@@ -20,11 +20,12 @@ import {
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   getActivationIconSource,
-  getDamageTypeIconSource,
+  getDurationIconSource,
   getRangeIconSource,
+  getResolutionIconSource,
   getRollIconSource
-} from '../combat/combat-entry-icons.js?v=20260808-combat-cards-v1';
-import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260810-character-archive-icons-v2';
+} from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260810-zauberkarten-icons-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -801,9 +802,9 @@ function renderSpellCard(spell) {
       <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
         ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', `${getActivationLabel(spell.activationType)} · ${costLabel}`)}
         ${renderCardProperty(getRollIconSource(spell.rollFormula, spell.damageType), 'Schaden / Wurf', damageLabel || 'Keine Schadensformel')}
-        ${renderCardProperty(getDamageTypeIconSource(spell.damageType), 'Auflösung', getResolutionLabel(spell))}
+        ${renderCardProperty(getResolutionIconSource(spell), 'Auflösung', getResolutionLabel(spell))}
         ${renderCardProperty(getRangeIconSource(), 'Reichweite', spell.range || 'Zauberreichweite')}
-        ${renderCardProperty(getActivationIconSource(spell.concentration ? 'reaction' : 'passive'), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
+        ${renderCardProperty(getDurationIconSource(spell), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
       </div></section>
       ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5><p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann mit einem höheren Zauberplatz gewirkt werden.')}</p></section>` : ''}
       <details class="cp-spell-technical"><summary>Technische Details</summary><div><p><strong>Voraussetzungen:</strong> ${escapeMarkup(spell.requirements || 'Keine besonderen Voraussetzungen.')}</p><p><strong>Schlagworte:</strong> ${escapeMarkup(spell.tags || 'Keine Schlagworte.')}</p>${spell.aiInstructions ? `<p><strong>AleriaGPT:</strong> ${escapeMarkup(spell.aiInstructions)}</p>` : ''}</div></details>
@@ -855,7 +856,8 @@ function renderSheet() {
     ${renderDamageAffinities(profile)}
     ${renderAura(profile)}
     <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Zustände & Effekte', 'Dauerhafte und temporäre Einflüsse', 'Zustand')}</section>
-    <section class="cp-sheet-grid cp-sheet-grid-two">${renderAbilities(profile)}${renderMagic(profile)}</section>
+    ${renderAbilities(profile)}
+    ${renderMagic(profile)}
     ${renderCheats(profile)}
     ${renderNotes(profile)}
     ${renderLevelUpDialog(profile)}

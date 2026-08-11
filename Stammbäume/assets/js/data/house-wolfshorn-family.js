@@ -22,9 +22,9 @@ const HOUSE_EMBLEMS = Object.freeze({
 });
 
 const REGION_EMBLEMS = Object.freeze({
-  aldrimar: 'https://i.imgur.com/OnNslhr.png',
-  roriksheim: 'https://i.imgur.com/enlRWCv.png',
-  daemmergrund: 'https://i.imgur.com/KyBhKyq.png'
+  aldrimar: 'assets/images/regions/aldrimar.png',
+  roriksheim: 'assets/images/regions/aldrimar-roriksheim.png',
+  daemmergrund: 'assets/images/regions/aldrimar-daemmergrund.png'
 });
 
 const WOLFSHORN_HOUSE_ID = 'house-wolfshorn';
@@ -66,10 +66,10 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     id: 'haus-wolfshorn',
     title: 'Clan Wolfshorn',
     motto: 'Lieber fallen als weichen.',
-    description: 'Clan Wolfshorn, ein aldrimarisches Huskarlgeschlecht, diente Generationen lang dem Clan Vangandr als Grenzwaechter der Wehrhalle Hornhall in Daemmergrund. Als der Dunkelhain ihre Grenzlande verschlang, hielten sie ihre Feste ueber Jahre gegen Hunger und Verfall, ehe Huskarlherr Hrolf Wolfshorn sie schliesslich aufgab. Die Vangandr werteten dies als Bruch des Lehnseides und verbannten den Clan aus ihrem Thanentum. Hrolf fuehrt die letzten Wolfshorn nun nach Cenyr, um Haus Draig einen neuen Eid anzubieten.',
+    description: 'Clan Wolfshorn, ein aldrimarisches Huskarlgeschlecht, diente Generationen lang dem Clan Vangandr als Grenzwaechter der Wehrhalle Hornhall in Dämmergrund. Als der Dunkelhain ihre Grenzlande verschlang, hielten sie ihre Feste ueber Jahre gegen Hunger und Verfall, ehe Huskarlherr Hrolf Wolfshorn sie schliesslich aufgab. Die Vangandr werteten dies als Bruch des Lehnseides und verbannten den Clan aus ihrem Thanentum. Hrolf fuehrt die letzten Wolfshorn nun nach Cenyr, um Haus Draig einen neuen Eid anzubieten.',
     emblem: HOUSE_EMBLEMS.wolfshorn,
     houseProfile: createHouseProfileFromFolderPath(
-      ['Aldrimar', 'Roriksheim', 'Daemmergrund', 'Hornhall'],
+      ['Aldrimar', 'Roriksheim', 'Dämmergrund', 'Hornhall'],
       {
         rankId: 'knight',
         liegeHouseName: 'Clan Vangandr',
@@ -465,5 +465,19 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     limitGenerations: false,
     showSiblings: true
   },
-  extensions: { sourceRevision: 3 }
+  extensions: {
+    sourceRevision: 4,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
+  }
 });

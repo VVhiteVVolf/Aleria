@@ -20,6 +20,8 @@ import { WEISENFLUH_HOUSE_FAMILIES } from './weisenfluh-house-families.js';
 import { VENALYS_HOUSE_FAMILIES } from './venalys-house-families.js';
 import { MORGORN_HOUSE_FAMILIES } from './morgorn-house-families.js';
 import { AELDRUNMAR_HOUSE_FAMILIES } from './aeldrunmar-house-families.js';
+import { ALDRIMAR_HOUSE_FAMILIES } from './aldrimar-house-families.js';
+import { RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES } from './roriksheim-house-families.js';
 import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
 import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
@@ -189,6 +191,22 @@ export const FAMILY_REGISTRY = Object.freeze([
     title: family.document.title,
     family,
     type: family.document.houseProfile.rankId === 'royal' ? 'dynasty' : 'lower-nobility'
+  })),
+  ...ALDRIMAR_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'dynasty'
+  })),
+  ...RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'huskarl'
+        ? 'lower-nobility'
+        : 'dynasty'
   })),
   ...TALYNDOR_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

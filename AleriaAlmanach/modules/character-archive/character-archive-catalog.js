@@ -9,6 +9,7 @@ import {
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260810-character-archive-register-v1';
+import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
 
 const SPELL_ATTACK_LIBRARY_URL = new URL('../../data/spell-attack-library.json', import.meta.url);
 
@@ -80,6 +81,19 @@ function buildTemplateEntries() {
     })));
   });
   return entries;
+}
+
+function buildFireSpellArsenalEntries() {
+  return FIRE_SPELL_ARSENAL.map(spell => normalizeCharacterArchiveEntry({
+    id: `builtin--spell--${spell.id}`,
+    kind: 'spell',
+    name: spell.name,
+    description: spell.description,
+    data: spell,
+    tags: [spell.school, spell.damageType, `Grad ${spell.level}`],
+    sources: [{ kind: 'system', id: 'fire-spell-arsenal', name: 'Feuerarsenal · Aleria-Regelvorlagen' }],
+    builtin: true
+  }));
 }
 
 function buildCombatStyleEntries() {
@@ -165,6 +179,7 @@ export function loadBuiltinCharacterArchiveEntries() {
     catalogPromise = loadSpellAttackLibraryEntries().then(libraryEntries => mergeCharacterArchiveEntries(
       buildTemplateEntries(),
       buildCombatStyleEntries(),
+      buildFireSpellArsenalEntries(),
       libraryEntries
     ));
   }

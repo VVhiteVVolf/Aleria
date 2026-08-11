@@ -1519,11 +1519,9 @@
 }
 
 .cp-entry-card-heading > strong {
-  overflow: hidden;
+  overflow-wrap: break-word;
   color: #e0bf7b;
-  font: 600 15px/1.2 Georgia, serif;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font: 600 15px/1.25 Georgia, serif;
 }
 
 .cp-entry-card-heading > span {
@@ -1567,32 +1565,37 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
 
 .cp-card-property-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 6px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
 }
 
 .cp-card-property {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
-  gap: 8px;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 10px;
   align-items: center;
   min-width: 0;
-  padding: 6px 8px;
-  border: 1px solid rgba(156, 113, 47, .24);
-  background: rgba(3, 4, 4, .28);
+  padding: 5px 4px;
+  border: 0;
+  border-bottom: 1px solid rgba(156, 113, 47, .16);
+  background: none;
 }
+
+.cp-card-property:last-child { border-bottom: 0; }
 
 .cp-card-property-icon {
   display: grid;
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   place-items: center;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .6));
 }
 
 .cp-card-property-icon img { width: 100%; height: 100%; object-fit: contain; }
-.cp-card-property div { min-width: 0; }
-.cp-card-property span { display: block; color: #93784d; font: 600 9px/1.2 var(--font-smallcaps, Georgia, serif); letter-spacing: .08em; text-transform: uppercase; }
-.cp-card-property strong { display: block; overflow: hidden; margin-top: 2px; color: #d9c29b; font: 600 11px/1.25 Georgia, serif; text-overflow: ellipsis; }
+.cp-card-property div { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; min-width: 0; }
+.cp-card-property span { flex: 0 0 auto; color: #8a7a5c; font: 600 10px/1.2 var(--font-smallcaps, Georgia, serif); letter-spacing: .06em; text-transform: uppercase; }
+.cp-card-property span::after { content: ':'; }
+.cp-card-property strong { min-width: 0; overflow-wrap: break-word; color: #f0b25e; font: 600 13px/1.3 Georgia, serif; text-shadow: 0 0 12px rgba(240, 178, 94, .18); }
 .cp-entry-mechanics-note,
 .cp-entry-limitations { padding: 7px 9px; border-left: 2px solid rgba(175, 127, 52, .55); background: rgba(113, 78, 26, .08); }
 .cp-entry-card-body .cp-sheet-detail-actions { justify-content: flex-end; }
@@ -1600,11 +1603,14 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
 .cp-condition-card-body textarea { min-height: 76px; }
 
 .cp-spell-card {
-  border-color: rgba(177, 126, 34, .68);
+  border: 1px solid #a97a2e;
   background:
-    radial-gradient(circle at 90% 12%, rgba(155, 111, 32, .14), transparent 30%),
-    linear-gradient(145deg, rgba(34, 29, 25, .96), rgba(20, 20, 22, .98));
+    radial-gradient(circle at 90% 12%, rgba(155, 111, 32, .16), transparent 30%),
+    linear-gradient(145deg, rgba(34, 29, 25, .97), rgba(18, 18, 20, .99));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 6px 22px rgba(0, 0, 0, .38), inset 0 0 0 1px rgba(235, 195, 110, .07);
 }
+
+.cp-spell-card > summary .cp-entry-card-heading > small { color: #d69a4c; }
 
 .cp-spell-card.unprepared { filter: saturate(.62); opacity: .72; }
 .cp-spell-summary-icon { width: 54px; height: 54px; border-radius: 50%; background: rgba(224, 211, 178, .9); }
@@ -1634,7 +1640,12 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
   filter: drop-shadow(0 0 14px rgba(203, 157, 45, .3));
 }
 
-.cp-spell-property-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cp-spell-property-grid {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 4px 12px;
+  border: 1px solid rgba(169, 122, 46, .3);
+  background: rgba(3, 4, 4, .35);
+}
 .cp-spell-upcast { padding: 8px 10px; border-left: 2px solid #9e742d; background: linear-gradient(90deg, rgba(102, 71, 28, .15), transparent); }
 .cp-spell-technical { border-top: 1px solid rgba(165, 117, 39, .4); border-bottom: 1px solid rgba(165, 117, 39, .24); }
 .cp-spell-technical > summary { padding: 8px 0; color: #d5b36e; cursor: pointer; font: 600 12px/1.2 Georgia, serif; }

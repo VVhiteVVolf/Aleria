@@ -1,4 +1,4 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260810-character-archive-icons-v2';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260810-fire-spell-arsenal-v1';
 import {
   cloneArchiveValue,
   extractCharacterArchiveEntries,

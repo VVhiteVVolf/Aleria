@@ -1,13 +1,31 @@
 import { FAMILY_CHART_CARD_LAYOUT } from './family-chart-card-renderer.js';
 
 const PARTNER_OVER_CHILDREN_EXTENSION = 'chartAlignPartnerOverChildrenPersonId';
+const PARTNER_OVER_ADDITIONAL_CHILDREN_EXTENSION = 'chartAlignPartnerOverAdditionalChildrenIds';
+const ARRANGE_LEAF_CHILDREN_EVENLY_EXTENSION = 'chartArrangeLeafChildrenEvenly';
 const CENTER_BETWEEN_SPOUSES_EXTENSION = 'chartCenterBetweenSpousePersonIds';
 const ALIGN_LINEAGE_ORIGIN_EXTENSION = 'chartAlignLineageOriginOverPersonId';
 const PARTNER_COLLISION_GAP = 32;
+const MAX_NEARBY_RESTORE_SLOTS = 2;
 
 function configuredPartnerId(partnership) {
   const value = partnership?.extensions?.[PARTNER_OVER_CHILDREN_EXTENSION];
   return typeof value === 'string' ? value.trim() : '';
+}
+
+function configuredAdditionalChildIds(partnership) {
+  const value = partnership?.extensions?.[PARTNER_OVER_ADDITIONAL_CHILDREN_EXTENSION];
+  if (value === undefined) return null;
+  if (!Array.isArray(value)) return [];
+
+  return [...new Set(value
+    .filter(childId => typeof childId === 'string')
+    .map(childId => childId.trim())
+    .filter(Boolean))];
+}
+
+function shouldArrangeLeafChildrenEvenly(partnership) {
+  return partnership?.extensions?.[ARRANGE_LEAF_CHILDREN_EVENLY_EXTENSION] === true;
 }
 
 function configuredSpouseIds(person) {
@@ -74,21 +92,41 @@ function createPartnerOverChildrenRoutes(family, invalidRequests) {
     const partnerPersonId = configuredPartnerId(partnership);
     if (!partnerPersonId) return;
 
-    const childIds = parentages
+    const directChildIds = parentages
       .filter(parentage => parentage.partnershipId === partnership.id)
       .map(parentage => parentage.childId);
+    const additionalChildIds = configuredAdditionalChildIds(partnership);
+    const invalidAdditionalChildIds = (additionalChildIds || []).filter(childId => (
+      !parentages.some(parentage => (
+        parentage.childId === childId
+        && parentage.parentIds?.includes(partnerPersonId)
+      ))
+    ));
+    const childIds = [...new Set([
+      ...directChildIds,
+      ...(additionalChildIds || [])
+    ])];
     const sharedPersonIds = (partnership.participantIds || [])
       .filter(personId => personId !== partnerPersonId);
+    const arrangeLeafChildrenEvenly = shouldArrangeLeafChildrenEvenly(partnership);
+    const nonLeafChildIds = arrangeLeafChildrenEvenly
+      ? childIds.filter(childId => parentages.some(parentage => parentage.parentIds?.includes(childId)))
+      : [];
     if (
       !partnership.participantIds?.includes(partnerPersonId)
       || sharedPersonIds.length !== 1
       || !childIds.length
+      || additionalChildIds?.length === 0
+      || invalidAdditionalChildIds.length
+      || nonLeafChildIds.length
     ) {
       invalidRequests.push(Object.freeze({
         kind: 'partner-over-children',
         partnershipId: partnership.id,
         partnerPersonId,
-        childIds: Object.freeze([...childIds])
+        childIds: Object.freeze([...childIds]),
+        invalidAdditionalChildIds: Object.freeze([...invalidAdditionalChildIds]),
+        nonLeafChildIds: Object.freeze([...nonLeafChildIds])
       }));
       return;
     }
@@ -98,7 +136,9 @@ function createPartnerOverChildrenRoutes(family, invalidRequests) {
       partnershipType: partnership.type || 'marriage',
       sharedPersonId: sharedPersonIds[0],
       partnerPersonId,
-      childIds: Object.freeze([...new Set(childIds)])
+      childIds: Object.freeze(childIds),
+      additionalChildIds: Object.freeze([...(additionalChildIds || [])]),
+      arrangeLeafChildrenEvenly
     }));
   });
 
@@ -176,6 +216,16 @@ function moveNodeAlongCrossAxis(node, axis, targetCoordinate) {
   node.sx = targetCoordinate;
 }
 
+function arrangeNodesEvenly(nodes, axis) {
+  const center = centeredCoordinate(nodes, axis);
+  if (center === null || nodes.length < 2) return;
+  const step = cardStepForAxis(axis);
+  const midpointIndex = (nodes.length - 1) / 2;
+  nodes.forEach((node, index) => {
+    moveNodeAlongCrossAxis(node, axis, center + ((index - midpointIndex) * step));
+  });
+}
+
 function shiftNodeAlongCrossAxis(node, axis, delta) {
   const coordinate = Number(node?.[axis]);
   if (Number.isFinite(coordinate)) node[axis] = coordinate + delta;
@@ -203,31 +253,6 @@ function rectanglesOverlap(first, second, padding = 8) {
     || first.bottom + padding <= second.top
     || second.bottom + padding <= first.top
   );
-}
-
-function collectDescendantNodes(node) {
-  const descendants = [];
-  const pending = [...(node?.children || [])];
-  const visited = new Set();
-  while (pending.length) {
-    const descendant = pending.shift();
-    if (!descendant || visited.has(descendant)) continue;
-    visited.add(descendant);
-    descendants.push(descendant);
-    pending.push(...(descendant.children || []));
-  }
-  return descendants;
-}
-
-function branchNodesForRoute(nodes, route, partnerNode) {
-  const branchNodes = new Set([partnerNode]);
-  route.childIds.forEach(childId => {
-    const childNode = displayedNodeById(nodes, childId);
-    if (!childNode) return;
-    branchNodes.add(childNode);
-    collectDescendantNodes(childNode).forEach(node => branchNodes.add(node));
-  });
-  return [...branchNodes];
 }
 
 function shiftedCollisionCount(movingNodes, stationaryNodes, axis, delta) {
@@ -325,7 +350,7 @@ function resolvePartnerGroupCollisions(nodes, routes, axis) {
     const branches = group.map(route => {
       const partnerNode = displayedNodeById(nodes, route.partnerPersonId, { partnerCard: true });
       return partnerNode
-        ? { route, partnerNode, nodes: branchNodesForRoute(nodes, route, partnerNode) }
+        ? { route, partnerNode, nodes: [partnerNode] }
         : null;
     }).filter(Boolean).sort((first, second) => (
       Number(first.partnerNode?.[axis]) - Number(second.partnerNode?.[axis])
@@ -414,7 +439,7 @@ function resolvePartnerCardCollisions(nodes, routes, axis, originalPartnerCoordi
     const sharedNode = displayedNodeById(nodes, route.sharedPersonId);
     if (!partnerNode || !sharedNode) return;
 
-    const movingNodes = branchNodesForRoute(nodes, route, partnerNode);
+    const movingNodes = [partnerNode];
     const movingNodeSet = new Set(movingNodes);
     const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node));
     const partnerRectangle = cardRectangle(partnerNode);
@@ -426,11 +451,17 @@ function resolvePartnerCardCollisions(nodes, routes, axis, originalPartnerCoordi
 
     // Die Diagrammbibliothek hat Partner bereits kollisionsfrei links oder
     // rechts der Kernperson eingeplant. Falls das zusätzliche Ausrichten über
-    // einem Kind eine Karte überdeckt, ist diese ursprüngliche Position der
-    // engste und zugleich innerhalb der berechneten Zeichenfläche liegende
-    // Rückfall. Nur wenn auch sie belegt ist, verschieben wir den ganzen Zweig.
+    // einem Kind eine Karte überdeckt, ist diese ursprüngliche Position nur
+    // dann ein sinnvoller Rückfall, wenn sie noch nahe an der Kernperson liegt.
+    // Weiter entfernte Bibliothekspositionen erzeugen sonst extrem lange Linien.
     const originalCoordinate = Number(originalPartnerCoordinates?.get(route.partnershipId));
-    if (Number.isFinite(originalCoordinate) && originalCoordinate !== partnerCoordinate) {
+    const originalDistanceFromShared = Math.abs(originalCoordinate - sharedCoordinate);
+    const maximumNearbyRestoreDistance = cardStepForAxis(axis) * MAX_NEARBY_RESTORE_SLOTS;
+    if (
+      Number.isFinite(originalCoordinate)
+      && originalCoordinate !== partnerCoordinate
+      && originalDistanceFromShared <= maximumNearbyRestoreDistance
+    ) {
       const originalDelta = originalCoordinate - partnerCoordinate;
       const otherNodes = nodes.filter(node => node !== partnerNode);
       const originalCollisions = shiftedCollisionCount([partnerNode], otherNodes, axis, originalDelta);
@@ -483,7 +514,7 @@ function resolvePartnerCardCollisions(nodes, routes, axis, originalPartnerCoordi
     });
     if (!bestCandidate || !bestCandidate.delta) return;
 
-    movingNodes.forEach(node => shiftNodeAlongCrossAxis(node, axis, bestCandidate.delta));
+    shiftNodeAlongCrossAxis(partnerNode, axis, bestCandidate.delta);
     resolutions.push(Object.freeze({
       partnershipId: route.partnershipId,
       sharedPersonId: route.sharedPersonId,
@@ -516,6 +547,9 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
     const childNodes = route.childIds
       .map(childId => displayedNodeById(nodes, childId))
       .filter(Boolean);
+    if (route.arrangeLeafChildrenEvenly && childNodes.length === route.childIds.length) {
+      arrangeNodesEvenly(childNodes, axis);
+    }
     const targetCoordinate = centeredCoordinate(childNodes, axis);
     if (!partnerNode || childNodes.length !== route.childIds.length || targetCoordinate === null) return;
 
@@ -546,8 +580,9 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
 
   // Das Ausrichten einer Partnerkarte über ihrem Kinderblock darf die Karte
   // der gemeinsamen Kernperson oder eine weitere Partnerkarte niemals
-  // überdecken. Kollidierende Partnerzweige werden mitsamt ihrem Kinderblock
-  // auf den nächsten freien Platz links beziehungsweise rechts verschoben.
+  // überdecken. Nur die betroffene Partnerkarte weicht auf den nächsten freien
+  // Platz aus. Kinder und spätere Generationen bleiben als stabiler Graphblock
+  // unverändert und werden nicht von ihren eigenen Partnerkarten getrennt.
   collisionResolutions = resolvePartnerCardCollisions(
     nodes,
     plan?.partnerOverChildrenRoutes || [],

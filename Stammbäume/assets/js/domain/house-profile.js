@@ -9,11 +9,15 @@ const RANK_DEFINITIONS = Object.freeze({
   patrician: Object.freeze({ id: 'patrician', label: 'Patrizierhaus', order: 15 }),
   ducal: Object.freeze({ id: 'ducal', label: 'Herzogsgeschlecht', order: 20 }),
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
+  jarl: Object.freeze({ id: 'jarl', label: 'Jarlsclan', order: 30 }),
   'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mór Tiarna (Graf)', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
+  thane: Object.freeze({ id: 'thane', label: 'Thanenclan', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
   'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Herzog/Fürst)', order: 20 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
+  hesire: Object.freeze({ id: 'hesire', label: 'Hesire-Clan', order: 50 }),
+  huskarl: Object.freeze({ id: 'huskarl', label: 'Huskarlclan', order: 60 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
   magnarian: Object.freeze({ id: 'magnarian', label: 'Magnarierhaus', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
@@ -27,11 +31,15 @@ export const HOUSE_RANKS = RANK_DEFINITIONS;
 // Stand-Icons zeigen den Rang eines Hauses; nicht jeder Rang hat bislang ein eigenes Icon.
 const RANK_ICONS = Object.freeze({
   county: 'assets/images/ranks/graf.png',
+  jarl: 'assets/images/ranks/graf.png',
   'mor-tiarna': 'assets/images/ranks/graf.png',
   barony: 'assets/images/ranks/baron.png',
+  thane: 'assets/images/ranks/baron.png',
   // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.
   'dun-tiarna': 'assets/images/ranks/baron.png',
   'knight-prince': 'assets/images/ranks/ritterfuerst.png',
+  hesire: 'assets/images/ranks/ritterfuerst.png',
+  huskarl: 'assets/images/ranks/ritterherr.png',
   knight: 'assets/images/ranks/ritterherr.png',
   'knight-simple': 'assets/images/ranks/ritter.png',
   // Platzhalter, bis ein eigenes Bürgerlich-Icon vorliegt.
@@ -139,6 +147,7 @@ export function isHouseProfileEmpty(profile = {}) {
 export function formatHouseProfile(profile = {}, separator = ' · ') {
   const normalized = normalizeHouseProfile(profile);
   const venalysRank = ['patrician', 'magnarian', 'mercantian', 'plebeian'].includes(normalized.rankId);
+  const aldrimarClan = normalized.kingdom === 'Aldrimar';
   const labels = venalysRank
     ? {
         seat: 'Sitz',
@@ -148,6 +157,15 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
         secondarySeats: 'Weitere Sitze',
         liegeHouse: 'Patrizierhaus'
       }
+    : aldrimarClan
+      ? {
+          seat: 'Stammsitz',
+          barony: 'Thaintum',
+          county: 'Jarltum',
+          kingdom: 'Königreich',
+          secondarySeats: 'Weitere Sitze',
+          liegeHouse: 'Königsclan'
+        }
     : {
         seat: 'Stammsitz',
         barony: 'Baronie',

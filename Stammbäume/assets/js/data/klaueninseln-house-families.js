@@ -22,6 +22,7 @@ import {
 import { HOUSE_EIRTH_FAMILY } from './house-eirth-family.js';
 import { HOUSE_MORTHWYLL_FAMILY } from './house-morthwyll-family.js';
 import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
+import { HOUSE_SELWYN_FAMILY } from './house-selwyn-family.js';
 import { HOUSE_UNIGOL_FAMILY } from './house-unigol-family.js';
 import {
   HOUSE_WALWRS_CAER_DEHEUOL_FAMILY,
@@ -38,12 +39,6 @@ const CADET_DEFINITIONS = Object.freeze([
     title: 'Haus Cwningod',
     partnershipId: 'marriage-galeshin-arianhrod',
     founderNote: 'Galeshin Arth und Arianrhod begründen Haus Cwningod.'
-  }),
-  Object.freeze({
-    slug: 'selwyn',
-    title: 'Haus Sélwyn',
-    partnershipId: 'marriage-tegwen-morgan',
-    founderNote: 'Tegwen Arth und Morgan Selwyn begründen die fortgeführte Linie von Haus Sélwyn.'
   })
 ]);
 
@@ -162,6 +157,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_UNIGOL_FAMILY,
   HOUSE_MORTHWYLL_FAMILY,
   HOUSE_EIRTH_FAMILY,
+  HOUSE_SELWYN_FAMILY,
   HOUSE_DIAFOL_TALGARTH_FAMILY,
   HOUSE_DIANC_ABERDAIL_FAMILY,
   HOUSE_ARFORDIR_ABERDAIL_FAMILY,
