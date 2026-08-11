@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 1,
+  "familyId": "seolfor",
+  "revision": 1,
+  "updatedAt": "2026-08-11T16:50:52.842Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "seolfor",
+      "title": "Seolfor",
+      "motto": "",
+      "description": "",
+      "emblem": "https://i.imgur.com/pdjCjDZ.png",
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "seolfor-gruender",
+        "worldPersonId": "person--seolfor--seolfor-gruender",
+        "name": "Walhart",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "seolfor-gruenderin",
+        "worldPersonId": "person--seolfor--seolfor-gruenderin",
+        "name": "Burgflaed",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-seolfor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f8d352e2",
+        "worldPersonId": "person--seolfor--person-f8d352e2",
+        "name": "Walrik Cenred",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1118",
+        "death": "1190",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-dccf58ef",
+        "worldPersonId": "person--seolfor--person-dccf58ef",
+        "name": "Walheart Alfred",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1120",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [
+          "Magier"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-afc96997",
+        "worldPersonId": "person--seolfor--person-afc96997",
+        "name": "Cynegifu",
+        "title": "",
+        "sex": "unknown",
+        "status": "dead",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-444b07be",
+        "worldPersonId": "person--seolfor--person-444b07be",
+        "name": "Cynegifu",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1122",
+        "death": "1180",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3cabcb02",
+        "worldPersonId": "person--seolfor--person-3cabcb02",
+        "name": "Walmar Cedric",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-8b0758ad",
+        "worldPersonId": "person--seolfor--person-8b0758ad",
+        "name": "Walrun Godswith",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3da5fd59",
+        "worldPersonId": "person--seolfor--person-3da5fd59",
+        "name": "Walbeard Ordgar",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-seolfor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-95b2fccf",
+        "worldPersonId": "person--seolfor--person-95b2fccf",
+        "name": "????",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-75d95e86",
+        "worldPersonId": "person--seolfor--person-75d95e86",
+        "name": "?????",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-bc58aba9",
+        "worldPersonId": "person--seolfor--person-bc58aba9",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0e1d5c6c",
+        "worldPersonId": "person--seolfor--person-0e1d5c6c",
+        "name": "Walhyld Saewine",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1694",
+        "death": "1726",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-659f30e1",
+        "worldPersonId": "person--seolfor--person-659f30e1",
+        "name": "Walmaris Saewynn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3b24d991",
+        "worldPersonId": "person--seolfor--person-3b24d991",
+        "name": "Walher Osmund",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-9f0dac70",
+        "worldPersonId": "person--seolfor--person-9f0dac70",
+        "name": "Walffrith Cengifu",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c864cdfd",
+        "worldPersonId": "person--seolfor--person-c864cdfd",
+        "name": "Walberht Harold",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f1f61398",
+        "worldPersonId": "person--seolfor--person-f1f61398",
+        "name": "????????????????",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-seolfor-founders",
+        "participantIds": [
+          "seolfor-gruender",
+          "seolfor-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-a614f39a",
+        "participantIds": [
+          "person-dccf58ef",
+          "person-afc96997"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-059a3325",
+        "participantIds": [
+          "person-f8d352e2",
+          "person-444b07be"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-0ec78b37",
+        "participantIds": [
+          "person-3da5fd59",
+          "person-95b2fccf"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-0001b085",
+        "participantIds": [
+          "person-3cabcb02",
+          "person-75d95e86"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-69eb670c",
+        "participantIds": [
+          "person-8b0758ad",
+          "person-bc58aba9"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-fc6f2407",
+        "participantIds": [
+          "person-3b24d991",
+          "person-f1f61398"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-6a1492af",
+        "childId": "person-f8d352e2",
+        "parentIds": [
+          "seolfor-gruender",
+          "seolfor-gruenderin"
+        ],
+        "partnershipId": "marriage-seolfor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-109528c9",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-eb7e0f26",
+        "childId": "person-dccf58ef",
+        "parentIds": [
+          "seolfor-gruender",
+          "seolfor-gruenderin"
+        ],
+        "partnershipId": "marriage-seolfor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-109528c9",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-1b14878b",
+        "childId": "person-3cabcb02",
+        "parentIds": [
+          "person-f8d352e2",
+          "person-444b07be"
+        ],
+        "partnershipId": "partnership-059a3325",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-d77bb506",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-4f1259ee",
+        "childId": "person-8b0758ad",
+        "parentIds": [
+          "person-f8d352e2",
+          "person-444b07be"
+        ],
+        "partnershipId": "partnership-059a3325",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-d77bb506",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-58003c59",
+        "childId": "person-3da5fd59",
+        "parentIds": [
+          "person-f8d352e2",
+          "person-444b07be"
+        ],
+        "partnershipId": "partnership-059a3325",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-d77bb506",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-cc1bc1c9",
+        "childId": "person-0e1d5c6c",
+        "parentIds": [
+          "person-3da5fd59",
+          "person-95b2fccf"
+        ],
+        "partnershipId": "partnership-0ec78b37",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-052fcda2",
+        "childId": "person-659f30e1",
+        "parentIds": [
+          "person-3da5fd59",
+          "person-95b2fccf"
+        ],
+        "partnershipId": "partnership-0ec78b37",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-db73f45b",
+        "childId": "person-3b24d991",
+        "parentIds": [
+          "person-3cabcb02",
+          "person-75d95e86"
+        ],
+        "partnershipId": "partnership-0001b085",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-962d3c42",
+        "childId": "person-9f0dac70",
+        "parentIds": [
+          "person-3cabcb02",
+          "person-75d95e86"
+        ],
+        "partnershipId": "partnership-0001b085",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-f6acb12e",
+        "childId": "person-c864cdfd",
+        "parentIds": [
+          "person-3cabcb02",
+          "person-75d95e86"
+        ],
+        "partnershipId": "partnership-0001b085",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-seolfor",
+        "name": "Seolfor",
+        "motto": "",
+        "emblem": "https://i.imgur.com/pdjCjDZ.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "cadet-branch-4242edd9",
+        "name": "Seolfor",
+        "subtitle": "",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-seolfor-founders",
+        "parentPersonId": "",
+        "houseId": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "Haus Seolfor",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "time-jump-109528c9",
+        "parentPartnershipId": "marriage-seolfor-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-f8d352e2",
+          "person-dccf58ef"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "time-jump-d77bb506",
+        "parentPartnershipId": "partnership-059a3325",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-3cabcb02",
+          "person-8b0758ad",
+          "person-3da5fd59"
+        ],
+        "years": 460,
+        "fromYear": "1190",
+        "toYear": "1666",
+        "label": "",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-seolfor-founders",
+      "houseId": "house-seolfor",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "seolfor-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "generatorProfile": {
+        "origin": "",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      }
+    }
+  }
+}
