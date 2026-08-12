@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "familyId": "tharn",
+  "revision": 1,
+  "updatedAt": "2026-08-12T11:03:00.281Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "tharn",
+      "title": "Tharn",
+      "motto": "",
+      "description": "",
+      "emblem": "https://i.imgur.com/qsWVYlf.png",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "tharn-gruender",
+        "worldPersonId": "person--tharn--tharn-gruender",
+        "name": "Aethelstan",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tharn-gruenderin",
+        "worldPersonId": "person--tharn--tharn-gruenderin",
+        "name": "Osburg",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tharn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a8dfbf21",
+        "worldPersonId": "person--tharn--person-a8dfbf21",
+        "name": "Æthelreid Garred",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1711",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0e7a7d2e",
+        "worldPersonId": "person--tharn--person-0e7a7d2e",
+        "name": "Æthelgwen Herehild",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1653",
+        "death": "1705",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-61303801",
+        "worldPersonId": "person--tharn--person-61303801",
+        "name": "???",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1733",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-98e8a55e",
+        "worldPersonId": "person--tharn--person-98e8a55e",
+        "name": "?? ??",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1722",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-02ad9ad5",
+        "worldPersonId": "person--tharn--person-02ad9ad5",
+        "name": "Æthelbald Alfgar",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1669",
+        "death": "1733",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-cf978789",
+        "worldPersonId": "person--tharn--person-cf978789",
+        "name": "Aethelgarda Darla",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1673",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a02bbbbc",
+        "worldPersonId": "person--tharn--person-a02bbbbc",
+        "name": "Aethelorn Grover",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d3298fe8",
+        "worldPersonId": "person--tharn--person-d3298fe8",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-e18f72a3",
+        "worldPersonId": "person--tharn--person-e18f72a3",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-88016d81",
+        "worldPersonId": "person--tharn--person-88016d81",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-b1efe081",
+        "worldPersonId": "person--tharn--person-b1efe081",
+        "name": "Aethelbold Kenelm",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1690",
+        "death": "1722",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a3422a99",
+        "worldPersonId": "person--tharn--person-a3422a99",
+        "name": "Æthelwald Abnur",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-b97e5c98",
+        "worldPersonId": "person--tharn--person-b97e5c98",
+        "name": "Æthelborg Jagar",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-48464164",
+        "worldPersonId": "person--tharn--person-48464164",
+        "name": "Æthelfrit Leighann Trevelyan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "1722",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-7458f6aa",
+        "worldPersonId": "person--tharn--person-7458f6aa",
+        "name": "Æthelfryd Merewyn Estmere",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d28c0961",
+        "worldPersonId": "person--tharn--person-d28c0961",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-db3cb74b",
+        "worldPersonId": "person--tharn--person-db3cb74b",
+        "name": "Æthelweird Ralof",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-df33250a",
+        "worldPersonId": "person--tharn--person-df33250a",
+        "name": "Æthelberd Ælle",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-4018ea1a",
+        "worldPersonId": "person--tharn--person-4018ea1a",
+        "name": "Æthelswith Kendra",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3c23e306",
+        "worldPersonId": "person--tharn--person-3c23e306",
+        "name": "Æthelflory Eawyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-bc6441db",
+        "worldPersonId": "person--tharn--person-bc6441db",
+        "name": "Coelferth Osric Kendryck",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-dfbc8c0e",
+        "worldPersonId": "person--tharn--person-dfbc8c0e",
+        "name": "Aethelberga Melba",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3a73437e",
+        "worldPersonId": "person--tharn--person-3a73437e",
+        "name": "Æthelmund Ymar",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-30bba854",
+        "worldPersonId": "person--tharn--person-30bba854",
+        "name": "Aethelbritha",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a8bad6cb",
+        "worldPersonId": "person--tharn--person-a8bad6cb",
+        "name": "Aethelgyr Raylan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-44cc36a3",
+        "worldPersonId": "person--tharn--person-44cc36a3",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-084e74bd",
+        "worldPersonId": "person--tharn--person-084e74bd",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-93abe95c",
+        "worldPersonId": "person--tharn--person-93abe95c",
+        "name": "Aethelflæd Saxana",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-6556d4da",
+        "worldPersonId": "person--tharn--person-6556d4da",
+        "name": "Aethelgisel Sherman",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1735",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-tharn-founders",
+        "participantIds": [
+          "tharn-gruender",
+          "tharn-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-440060d1",
+        "participantIds": [
+          "person-a8dfbf21",
+          "person-61303801"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-4499edef",
+        "participantIds": [
+          "person-0e7a7d2e",
+          "person-98e8a55e"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-95744620",
+        "participantIds": [
+          "person-02ad9ad5",
+          "person-d3298fe8"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-452447e0",
+        "participantIds": [
+          "person-cf978789",
+          "person-e18f72a3"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-e8d88dda",
+        "participantIds": [
+          "person-a02bbbbc",
+          "person-88016d81"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-adc0ea83",
+        "participantIds": [
+          "person-b1efe081",
+          "person-48464164"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-118b416b",
+        "participantIds": [
+          "person-a3422a99",
+          "person-7458f6aa"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-2c506180",
+        "participantIds": [
+          "person-b97e5c98",
+          "person-d28c0961"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-a33ffc53",
+        "participantIds": [
+          "person-3c23e306",
+          "person-bc6441db"
+        ],
+        "type": "engagement",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-8b63a252",
+        "participantIds": [
+          "person-30bba854",
+          "person-44cc36a3"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-1c232e07",
+        "participantIds": [
+          "person-a8bad6cb",
+          "person-084e74bd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-4f9fca6d",
+        "childId": "person-a8dfbf21",
+        "parentIds": [
+          "tharn-gruender",
+          "tharn-gruenderin"
+        ],
+        "partnershipId": "marriage-tharn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-f0605a75",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-8f5d7ed5",
+        "childId": "person-0e7a7d2e",
+        "parentIds": [
+          "tharn-gruender",
+          "tharn-gruenderin"
+        ],
+        "partnershipId": "marriage-tharn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-f0605a75",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-bdbf577e",
+        "childId": "person-02ad9ad5",
+        "parentIds": [
+          "person-a8dfbf21",
+          "person-61303801"
+        ],
+        "partnershipId": "partnership-440060d1",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bd67e241",
+        "childId": "person-cf978789",
+        "parentIds": [
+          "person-a8dfbf21",
+          "person-61303801"
+        ],
+        "partnershipId": "partnership-440060d1",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-fc07aa64",
+        "childId": "person-a02bbbbc",
+        "parentIds": [
+          "person-a8dfbf21",
+          "person-61303801"
+        ],
+        "partnershipId": "partnership-440060d1",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-2f8a05cf",
+        "childId": "person-b1efe081",
+        "parentIds": [
+          "person-02ad9ad5",
+          "person-d3298fe8"
+        ],
+        "partnershipId": "partnership-95744620",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-e8206b6c",
+        "childId": "person-a3422a99",
+        "parentIds": [
+          "person-02ad9ad5",
+          "person-d3298fe8"
+        ],
+        "partnershipId": "partnership-95744620",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-82f687cc",
+        "childId": "person-b97e5c98",
+        "parentIds": [
+          "person-02ad9ad5",
+          "person-d3298fe8"
+        ],
+        "partnershipId": "partnership-95744620",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-be54f0c2",
+        "childId": "person-db3cb74b",
+        "parentIds": [
+          "person-a3422a99",
+          "person-7458f6aa"
+        ],
+        "partnershipId": "partnership-118b416b",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ddd5bca5",
+        "childId": "person-df33250a",
+        "parentIds": [
+          "person-a3422a99",
+          "person-7458f6aa"
+        ],
+        "partnershipId": "partnership-118b416b",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-a922df5d",
+        "childId": "person-4018ea1a",
+        "parentIds": [
+          "person-b1efe081",
+          "person-48464164"
+        ],
+        "partnershipId": "partnership-adc0ea83",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-17d31b58",
+        "childId": "person-3c23e306",
+        "parentIds": [
+          "person-b1efe081",
+          "person-48464164"
+        ],
+        "partnershipId": "partnership-adc0ea83",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-c3ca70ac",
+        "childId": "person-dfbc8c0e",
+        "parentIds": [
+          "person-a3422a99",
+          "person-7458f6aa"
+        ],
+        "partnershipId": "partnership-118b416b",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-83c84561",
+        "childId": "person-3a73437e",
+        "parentIds": [
+          "person-a3422a99",
+          "person-7458f6aa"
+        ],
+        "partnershipId": "partnership-118b416b",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-7c3a78a2",
+        "childId": "person-30bba854",
+        "parentIds": [
+          "person-a02bbbbc",
+          "person-88016d81"
+        ],
+        "partnershipId": "partnership-e8d88dda",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-a6b8c3eb",
+        "childId": "person-a8bad6cb",
+        "parentIds": [
+          "person-a02bbbbc",
+          "person-88016d81"
+        ],
+        "partnershipId": "partnership-e8d88dda",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-da8d1c0c",
+        "childId": "person-93abe95c",
+        "parentIds": [
+          "person-a8bad6cb",
+          "person-084e74bd"
+        ],
+        "partnershipId": "partnership-1c232e07",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-d54dd721",
+        "childId": "person-6556d4da",
+        "parentIds": [
+          "person-a8bad6cb",
+          "person-084e74bd"
+        ],
+        "partnershipId": "partnership-1c232e07",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-tharn",
+        "name": "Tharn",
+        "motto": "",
+        "emblem": "https://i.imgur.com/qsWVYlf.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "time-jump-f0605a75",
+        "parentPartnershipId": "marriage-tharn-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-a8dfbf21",
+          "person-0e7a7d2e"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-tharn-founders",
+      "houseId": "house-tharn",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "tharn-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "generatorProfile": {
+        "origin": "Aeldrunmar",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      }
+    }
+  }
+}
