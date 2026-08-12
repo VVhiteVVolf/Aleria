@@ -2,6 +2,35 @@
   "schemaVersion": 1,
   "families": [
     {
+      "id": "estmere",
+      "familyId": "estmere",
+      "title": "Estmere",
+      "motto": "",
+      "emblem": "https://i.imgur.com/OXYIVF3.png",
+      "folderPath": [],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 50,
+      "revision": 1,
+      "updatedAt": "2026-08-12T12:04:18.200Z",
+      "link": "Stammbaum.html?family=estmere&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-aelmor",
       "familyId": "haus-aelmor",
       "title": "Haus Aelmor",
