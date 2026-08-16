@@ -1,4 +1,5 @@
 import { assertValidFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
+import { createFolderPathFromHouseProfile } from '../../Stammbäume/assets/js/domain/house-profile.js';
 import { assertMirroredCrossFamilyBatch } from '../../Stammbäume/assets/js/modules/family-sync/cross-family-sync-invariant.js';
 
 const API_VERSION = '2026-03-10';
@@ -78,8 +79,7 @@ function decodeContent(record, fallback) {
 }
 
 function folderPath(family) {
-  const profile = family.document.houseProfile || {};
-  return [profile.kingdom, profile.county, profile.barony, profile.seat].map(String).filter(Boolean);
+  return createFolderPathFromHouseProfile(family.document.houseProfile || {});
 }
 
 function hasValidImageSignature(buffer, type) {
@@ -137,6 +137,13 @@ function materializeStagedImages(record) {
   family.houses.forEach(house => replace(house, 'emblem', `house-${house.id}`));
   family.persons.forEach(person => replace(person, 'portrait', `person-${person.id}`));
   family.cadetBranches.forEach(branch => replace(branch, 'emblem', `branch-${branch.id}`));
+  const houseProfile = family.document.houseProfile || {};
+  Object.keys(houseProfile.regionEmblems || {}).forEach(level => {
+    replace(houseProfile.regionEmblems, level, `region-${level}`);
+  });
+  (houseProfile.folderIcons || []).forEach((unused, index) => {
+    replace(houseProfile.folderIcons, index, `region-folder-${index}`);
+  });
   return Object.freeze({
     family: assertValidFamily(family).family,
     expectedRevision: record.expectedRevision,

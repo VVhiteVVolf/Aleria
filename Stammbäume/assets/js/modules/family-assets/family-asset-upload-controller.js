@@ -5,7 +5,8 @@ export function createFamilyAssetUploadController({
   editing = false
 }) {
   function familyIdFor(input) {
-    const formFamilyId = input.form?.elements.namedItem('documentId')?.value?.trim();
+    const formFamilyId = input.form?.elements.namedItem('documentId')?.value?.trim()
+      || input.form?.elements.namedItem('id')?.value?.trim();
     return formFamilyId || store.getState().family.document.id;
   }
 

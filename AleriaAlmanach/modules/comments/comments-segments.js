@@ -153,10 +153,7 @@ function setCommentSegmentSide(id, side) {
 
 function setCommentSegmentEmote(id, value) {
   const segment = _commentSegments.find(item => item.id === id);
-  if (!segment) return;
-  const idx = value === '' ? null : Number(value);
-  segment.emoteIndex = Number.isInteger(idx) ? idx : null;
-  segment.imageSetId = _selectedImageSetId;
+  if (!applyCommentSegmentEmoteSelection(segment, value, false)) return;
   updateCommentFormPreview();
   persistCommentDraft();
 }

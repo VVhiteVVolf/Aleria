@@ -5,6 +5,10 @@ import {
 } from '../data/families.registry.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
+import {
+  applyHousePlacementToProfile,
+  assertValidHousePlacement
+} from '../modules/family-registry/house-placement-policy.js';
 import { loadSavedFamilyRecords, saveFamilyRecord } from './family-persistence.js';
 import { createFamilyViewLink } from './family-links.js';
 import {
@@ -86,26 +90,46 @@ export function loadFamilyById(familyId, storage = globalThis.localStorage) {
   return resolveFamilyRecord(registered, local);
 }
 
-export function saveFamilyToLibrary({ family, id, title, folderPath, rankId }, storage = globalThis.localStorage) {
+export function saveFamilyToLibrary({
+  family,
+  id,
+  title,
+  folderPath,
+  folderIcons,
+  rankId,
+  unclassified
+}, storage = globalThis.localStorage) {
   const normalizedId = normalizeFamilyId(id || title);
   if (!normalizedId) throw new Error('Die Familie benötigt eine gültige ID.');
-  const normalizedFolderPath = Array.isArray(folderPath) ? folderPath.map(String).filter(Boolean) : parseFolderPath(folderPath);
+  const usesStructuredPlacement = unclassified !== undefined || folderIcons !== undefined;
+  const placement = usesStructuredPlacement
+    ? assertValidHousePlacement({ unclassified, folderPath, folderIcons, rankId })
+    : null;
+  const normalizedFolderPath = placement
+    ? [...placement.folderPath]
+    : Array.isArray(folderPath)
+      ? folderPath.map(String).filter(Boolean)
+      : parseFolderPath(folderPath);
+  const nextHouseProfile = placement
+    ? applyHousePlacementToProfile(family.document.houseProfile, placement)
+    : createHouseProfileFromFolderPath(normalizedFolderPath, {
+      ...family.document.houseProfile,
+      rankId: rankId || family.document.houseProfile?.rankId
+    });
   const nextFamily = normalizeFamily({
     ...family,
     document: {
       ...family.document,
       id: normalizedId,
       title: String(title || family.document.title).trim(),
-      houseProfile: createHouseProfileFromFolderPath(normalizedFolderPath, {
-        ...family.document.houseProfile,
-        rankId: rankId || family.document.houseProfile?.rankId
-      })
+      houseProfile: nextHouseProfile
     },
     extensions: {
       ...family.extensions,
       registry: {
         ...(family.extensions?.registry || {}),
-        folderPath: normalizedFolderPath
+        folderPath: normalizedFolderPath,
+        ...(placement ? { unclassified: placement.unclassified } : {})
       }
     }
   });

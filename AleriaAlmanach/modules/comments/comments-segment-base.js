@@ -252,6 +252,25 @@ function getCommentSegmentImageSetContext(segment, edit = false) {
   return selectedSet ? { imageSets, selectedSet } : null;
 }
 
+function applyCommentSegmentEmoteSelection(segment, value, edit = false) {
+  if (!segment) return false;
+
+  const actor = getCommentSegmentActor(segment, edit);
+  if (!actor) return false;
+
+  const imageSetContext = getCommentSegmentImageSetContext(segment, edit);
+  const emotes = imageSetContext?.selectedSet?.emotes || (Array.isArray(actor.emotes) ? actor.emotes : []);
+  const requestedIndex = value === '' ? null : Number(value);
+  segment.emoteIndex = Number.isInteger(requestedIndex) && requestedIndex >= 0 && requestedIndex < emotes.length
+    ? requestedIndex
+    : null;
+
+  // Das Set des Abschnitts ist die Quelle der Avatar-Auswahl. Das globale Set
+  // dient nur als Vorgabe für neue Abschnitte und darf diese Auswahl nicht ersetzen.
+  if (imageSetContext?.selectedSet) segment.imageSetId = imageSetContext.selectedSet.id;
+  return true;
+}
+
 function getCommentSegmentImageSetPicker(segment, edit = false) {
   const context = getCommentSegmentImageSetContext(segment, edit);
   if (!context || context.imageSets.length < 2) return '';

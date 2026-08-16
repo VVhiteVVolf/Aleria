@@ -107,6 +107,36 @@ test('Avatar-Sets werden beim Bearbeiten nur für den gewählten Abschnitt geän
   assert.equal(vm.runInContext('_editSelectedImageSetId', context), 'standard');
 });
 
+test('Avatarwahl behaelt das Set des neuen Kommentarabschnitts bei', () => {
+  const context = loadSegmentEditors();
+  vm.runInContext("setCommentSegmentImageSet('create-a', 'kampf')", context);
+  vm.runInContext("setCommentSegmentEmote('create-a', '0')", context);
+
+  const segment = vm.runInContext('({ ..._commentSegments[0] })', context);
+  const actor = vm.runInContext('getCommentSegmentActor(_commentSegments[0], false)', context);
+
+  assert.equal(segment.imageSetId, 'kampf');
+  assert.equal(segment.emoteIndex, 0);
+  assert.equal(actor.selectedImageSetId, 'kampf');
+  assert.equal(actor.emotes[0].img, 'https://i.imgur.com/kampf-emote.png');
+  assert.equal(vm.runInContext('_selectedImageSetId', context), 'standard');
+});
+
+test('Avatarwahl behaelt das Set des bearbeiteten Kommentarabschnitts bei', () => {
+  const context = loadSegmentEditors();
+  vm.runInContext("setEditCommentSegmentImageSet('edit-b', 'kampf')", context);
+  vm.runInContext("setEditCommentSegmentEmote('edit-b', '0')", context);
+
+  const segment = vm.runInContext('({ ..._editCommentSegments[1] })', context);
+  const actor = vm.runInContext('getCommentSegmentActor(_editCommentSegments[1], true)', context);
+
+  assert.equal(segment.imageSetId, 'kampf');
+  assert.equal(segment.emoteIndex, 0);
+  assert.equal(actor.selectedImageSetId, 'kampf');
+  assert.equal(actor.emotes[0].img, 'https://i.imgur.com/kampf-emote.png');
+  assert.equal(vm.runInContext('_editSelectedImageSetId', context), 'standard');
+});
+
 test('Abschnittsauswahl rendert alle Sets und markiert nur das aktive', () => {
   const context = loadSegmentEditors();
   const markup = vm.runInContext("getCommentSegmentImageSetPicker(_commentSegments[0], false)", context);

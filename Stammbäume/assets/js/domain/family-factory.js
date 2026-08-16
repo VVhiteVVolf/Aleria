@@ -2,6 +2,10 @@ import { normalizeFamily } from './family-schema.js';
 import { normalizeHouseProfile } from './house-profile.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
+import {
+  applyHousePlacementToProfile,
+  assertValidHousePlacement
+} from '../modules/family-registry/house-placement-policy.js';
 
 function familySlug(value) {
   return String(value || '')
@@ -11,6 +15,34 @@ function familySlug(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '') || 'neue-familie';
+}
+
+function creationPlacement(values = {}) {
+  const usesStructuredPlacement = values.unclassified !== undefined
+    || values.folderPath !== undefined
+    || values.folderIcons !== undefined;
+  return usesStructuredPlacement
+    ? assertValidHousePlacement(values)
+    : null;
+}
+
+function creationHouseProfile(values = {}, placement = null) {
+  const legacyProfile = normalizeHouseProfile({
+    rankId: values.rankId,
+    seat: String(values.seat || '').trim()
+  });
+  return placement ? applyHousePlacementToProfile(legacyProfile, placement) : legacyProfile;
+}
+
+function registryExtension(placement) {
+  return placement
+    ? {
+        registry: {
+          folderPath: [...placement.folderPath],
+          unclassified: placement.unclassified
+        }
+      }
+    : {};
 }
 
 function founderPerson({ id, name, title, sex, birth, death, houseId, familyRole }) {
@@ -65,6 +97,7 @@ export function createFamilyProfileDraft(values = {}) {
   const documentTitle = String(values.documentTitle || 'Neue Familie').trim();
   const familyId = familySlug(values.documentId || documentTitle);
   const emblem = String(values.emblem || '').trim() || PORTRAIT_PLACEHOLDERS.crest;
+  const placement = creationPlacement(values);
   return normalizeFamily({
     document: {
       id: familyId,
@@ -72,10 +105,7 @@ export function createFamilyProfileDraft(values = {}) {
       motto: String(values.motto || '').trim(),
       description: String(values.description || '').trim(),
       emblem,
-      houseProfile: normalizeHouseProfile({
-        rankId: values.rankId,
-        seat: String(values.seat || '').trim()
-      })
+      houseProfile: creationHouseProfile(values, placement)
     },
     persons: [],
     partnerships: [],
@@ -91,6 +121,7 @@ export function createFamilyProfileDraft(values = {}) {
       showSiblings: true
     },
     extensions: {
+      ...registryExtension(placement),
       generatorProfile: {
         origin: String(values.origin || '').trim(),
         culture: String(values.culture || '').trim(),
@@ -182,6 +213,7 @@ export function createFoundingFamily(values = {}) {
   const founderWomanId = `${familyId}-gruenderin`;
   const partnershipId = `marriage-${familyId}-founders`;
   const emblem = String(values.emblem || '').trim() || PORTRAIT_PLACEHOLDERS.crest;
+  const placement = creationPlacement(values);
   const persons = [
     founderPerson({
       id: founderManId,
@@ -243,7 +275,7 @@ export function createFoundingFamily(values = {}) {
       motto: String(values.motto || '').trim(),
       description: 'In der Aleria-Stammbaum-Werkstatt angelegte Familienakte.',
       emblem,
-      houseProfile: normalizeHouseProfile({ rankId: values.rankId })
+      houseProfile: creationHouseProfile(values, placement)
     },
     houses: [{
       id: houseId,
@@ -282,6 +314,7 @@ export function createFoundingFamily(values = {}) {
       ancestorDepth: 8,
       descendantDepth: 8,
       showSiblings: true
-    }
+    },
+    extensions: registryExtension(placement)
   });
 }

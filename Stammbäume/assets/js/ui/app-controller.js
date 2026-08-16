@@ -19,7 +19,6 @@ import { importFamilyBundle } from '../services/family-bundle-import.js';
 import {
   listFamilyRecords,
   loadFamilyById,
-  parseFolderPath,
   saveFamilyToLibrary
 } from '../services/family-library.js';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
@@ -1513,14 +1512,14 @@ export function createAppController({
 
   function submitFamilySaveForm() {
     const values = familySaveDialog.read();
-    const folderPath = parseFolderPath(values.folderPath);
-    if (!folderPath.length) throw new Error('Bitte mindestens einen Ordner für das Register angeben.');
     const record = saveFamilyToLibrary({
       family: store.getState().family,
       id: values.id,
       title: values.title,
-      folderPath,
-      rankId: values.rankId
+      folderPath: values.folderPath,
+      folderIcons: values.folderIcons,
+      rankId: values.rankId,
+      unclassified: values.unclassified
     }, runtime.localStorage);
     store.replaceFamily(record.family, { source: 'family-library-save' });
     const target = new URL(runtime.location.href);

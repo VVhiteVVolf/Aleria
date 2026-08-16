@@ -229,9 +229,10 @@
         <label class="field">Hauswort / Motto
           <input name="motto" maxlength="180" placeholder="Im Schatten wächst die Klinge.">
         </label>
-        <label class="field">Adelsrang
-          <select name="rankId"></select>
+        <label class="field">Rang / Tier-Level
+          <select name="rankId" required></select>
         </label>
+        <section class="house-placement field--wide" data-new-family-placement></section>
         <label class="field">Rahmen des Wappens
           <select name="crestFrame"></select>
         </label>
@@ -986,7 +987,7 @@
     </form>
   </dialog>
 
-  <dialog class="dialog dialog--compact" id="family-save-dialog">
+  <dialog class="dialog dialog--wide" id="family-save-dialog">
     <form method="dialog" id="family-save-form">
       <header class="dialog-header">
         <div>
@@ -1002,14 +1003,12 @@
         <label class="field">Anzeigename
           <input name="title" required maxlength="120" placeholder="Haus Morgenrot">
         </label>
-        <label class="field field--wide">Ordnerpfad
-          <input name="folderPath" required maxlength="500" placeholder="Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor">
+        <label class="field field--wide">Rang / Tier-Level
+          <select name="rankId" required></select>
         </label>
-        <label class="field field--wide">Adelsrang
-          <select name="rankId"></select>
-        </label>
+        <section class="house-placement field--wide" data-family-save-placement></section>
         <p class="house-profile-preview field--wide" data-house-profile-preview></p>
-        <p class="form-hint field--wide">Die ersten vier Pfadstufen werden zugleich als Königreich, Grafschaft, Baronie und Stammsitz gespeichert. Der Adelsrang bleibt davon unabhängig.</p>
+        <p class="form-hint field--wide">Die ersten vier Pfadstufen werden zugleich als Königreich, Grafschaft, Baronie und Stammsitz gespeichert. Zusätzliche Ebenen bleiben vollständig erhalten.</p>
       </div>
       <footer class="dialog-footer">
         <button class="button button--quiet" type="button" data-action="close-family-save">Abbrechen</button>

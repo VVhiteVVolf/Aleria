@@ -150,10 +150,7 @@ function setEditCommentSegmentSide(id, side) {
 
 function setEditCommentSegmentEmote(id, value) {
   const segment = _editCommentSegments.find(item => item.id === id);
-  if (!segment) return;
-  const idx = value === '' ? null : Number(value);
-  segment.emoteIndex = Number.isInteger(idx) ? idx : null;
-  segment.imageSetId = _editSelectedImageSetId;
+  if (!applyCommentSegmentEmoteSelection(segment, value, true)) return;
   updateEditFormPreview();
 }
 

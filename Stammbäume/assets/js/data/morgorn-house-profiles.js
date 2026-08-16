@@ -5,6 +5,15 @@ export const MORGORN_REGION_EMBLEMS = Object.freeze({
 });
 
 export const MORGORN_HOUSE_PROFILES = Object.freeze({
+  eisenherz: createHouseProfileFromFolderPath(
+    ['Morgorn', 'Region Felsbreche', 'Felsbreche'],
+    {
+      rankId: 'royal',
+      regionEmblems: {
+        kingdom: MORGORN_REGION_EMBLEMS.morgorn
+      }
+    }
+  ),
   karreg: createHouseProfileFromFolderPath(
     ['Morgorn', 'Region Felsbreche', 'Felsbreche'],
     {

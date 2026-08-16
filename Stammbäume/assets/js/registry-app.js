@@ -10,8 +10,9 @@ import {
   countRegistryRecords,
   getRegistryRecordHouseProfile
 } from './modules/family-registry/registry-folder-tree.js';
+import { mergePublishedRegistryRecords } from './modules/family-registry/published-registry-merge.js';
 import { listFamilyRecords } from './services/family-library.js';
-import { createFamilyViewLink, normalizeFamilyViewLink } from './services/family-links.js';
+import { createFamilyViewLink } from './services/family-links.js';
 import { escapeHtml } from './ui/dom.js';
 
 function recordRank(record) {
@@ -175,23 +176,7 @@ async function loadPublishedRegistry() {
   try {
     const repository = createGitHubFamilyRepository();
     const published = await repository.listPublishedRegistry();
-    const records = new Map(allRecords.map(record => [record.id, record]));
-    published.forEach(record => {
-      const id = String(record.familyId || record.id);
-      const projectFallback = records.get(id);
-      records.set(id, {
-        ...projectFallback,
-        ...record,
-        id,
-        title: String(record.title || id),
-        folderPath: Array.isArray(record.folderPath) ? record.folderPath.map(String).filter(Boolean) : [],
-        houseProfile: record.houseProfile || projectFallback?.houseProfile || projectFallback?.family?.document.houseProfile,
-        family: projectFallback?.family,
-        link: normalizeFamilyViewLink(record.link, id),
-        source: 'github'
-      });
-    });
-    allRecords = [...records.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
+    allRecords = mergePublishedRegistryRecords(allRecords, published);
     document.getElementById('registry-count').textContent = String(allRecords.length);
     render(search.value);
   } catch (error) {

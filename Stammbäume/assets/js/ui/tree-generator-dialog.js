@@ -1,5 +1,6 @@
 import { resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { fillHouseRankSelect } from './house-profile-fields.js';
+import { createHousePlacementFields } from './house-placement-fields.js';
 import { escapeHtml } from './dom.js';
 import {
   defaultGenerationParams,
@@ -33,6 +34,7 @@ export function createTreeGeneratorDialog(documentRef = document) {
   // wer zuletzt hinzugefügt wurde (für den "Zwilling"-Kurzweg).
   let activeChildFormLineId = '';
   let lastAddedChild = null;
+  let phaseOnePlacementFields = null;
 
   function resetSessionState() {
     activeChildFormLineId = '';
@@ -80,6 +82,8 @@ export function createTreeGeneratorDialog(documentRef = document) {
   }
 
   function renderPhaseOne(family) {
+    phaseOnePlacementFields?.destroy();
+    phaseOnePlacementFields = null;
     titleEl.textContent = 'Familiendaten';
     renderSteps(1);
     const profile = (family.extensions && family.extensions.generatorProfile) || {};
@@ -96,12 +100,10 @@ export function createTreeGeneratorDialog(documentRef = document) {
         <label class="field">Motto
           <input name="motto" value="${escapeHtml(family.document.motto || '')}">
         </label>
-        <label class="field">Adelstitel
-          <select name="rankId" id="tree-generator-rank"></select>
+        <label class="field">Rang / Tier-Level
+          <select name="rankId" id="tree-generator-rank" required></select>
         </label>
-        <label class="field">Stammsitz
-          <input name="seat" value="${escapeHtml(family.document.houseProfile?.seat || '')}" placeholder="Unbekannt">
-        </label>
+        <section class="house-placement field--wide" data-tree-generator-placement></section>
         <label class="field">Gründungsjahr
           <input name="foundingYear" value="${escapeHtml(profile.foundingYear || '')}" placeholder="????">
         </label>
@@ -134,7 +136,18 @@ export function createTreeGeneratorDialog(documentRef = document) {
         </label>
       </div>
     `;
-    fillHouseRankSelect(form.elements.namedItem('rankId'), family.document.houseProfile?.rankId || 'unknown');
+    const rankSelect = form.elements.namedItem('rankId');
+    fillHouseRankSelect(rankSelect, family.document.houseProfile?.rankId || 'unknown', {
+      requireKnownRank: true
+    });
+    phaseOnePlacementFields = createHousePlacementFields(
+      bodyEl.querySelector('[data-tree-generator-placement]'),
+      { rankSelect }
+    );
+    phaseOnePlacementFields.setFromProfile(family.document.houseProfile, {
+      folderPath: family.extensions?.registry?.folderPath || [],
+      unclassified: family.extensions?.registry?.unclassified === true
+    });
     footerEl.innerHTML = `
       <button class="button" type="button" data-action="tree-generator-commit-phase-1">Weiter zu Gründerpaar</button>
     `;
@@ -443,9 +456,13 @@ export function createTreeGeneratorDialog(documentRef = document) {
 
   function renderPhase(phaseInfo, family, params, automaticState = {}) {
     if (phaseInfo.phase === 1) renderPhaseOne(family);
-    else if (phaseInfo.phase === 2) renderPhaseTwo(family);
-    else if (phaseInfo.phase === 3) renderPhaseThree(family, params, automaticState);
-    else renderPhaseFour(family, phaseInfo, params);
+    else {
+      phaseOnePlacementFields?.destroy();
+      phaseOnePlacementFields = null;
+      if (phaseInfo.phase === 2) renderPhaseTwo(family);
+      else if (phaseInfo.phase === 3) renderPhaseThree(family, params, automaticState);
+      else renderPhaseFour(family, phaseInfo, params);
+    }
   }
 
   function toggleChildForm(lineId) {
@@ -455,13 +472,13 @@ export function createTreeGeneratorDialog(documentRef = document) {
   function read(section) {
     const values = Object.fromEntries(new FormData(form).entries());
     if (section === 'phase-1') {
+      const placement = phaseOnePlacementFields?.read();
       return {
         documentTitle: String(values.documentTitle || '').trim(),
         documentId: String(values.documentTitle || '').trim(),
         emblem: String(values.emblem || '').trim(),
         motto: String(values.motto || '').trim(),
-        rankId: String(values.rankId || 'unknown'),
-        seat: String(values.seat || '').trim(),
+        ...(placement || {}),
         description: String(values.description || '').trim(),
         origin: String(values.origin || '').trim(),
         culture: String(values.culture || '').trim(),

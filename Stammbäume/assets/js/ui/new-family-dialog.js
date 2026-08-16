@@ -3,19 +3,26 @@ import { normalizeFamilyId } from '../services/family-library.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
 import { fillCrestFrameSelect } from './crest-frame-options.js';
 import { fillHouseRankSelect } from './house-profile-fields.js';
+import { createHousePlacementFields } from './house-placement-fields.js';
 
 export function createNewFamilyDialog(documentRef = document) {
   const dialog = documentRef.getElementById('new-family-dialog');
   const form = documentRef.getElementById('new-family-form');
   const titleInput = form.elements.namedItem('documentTitle');
   const idInput = form.elements.namedItem('documentId');
+  const rankSelect = form.elements.namedItem('rankId');
+  const placementFields = createHousePlacementFields(
+    form.querySelector('[data-new-family-placement]'),
+    { rankSelect }
+  );
   let idWasEdited = false;
 
   function open() {
     form.reset();
     idWasEdited = false;
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), DEFAULT_CREST_FRAME);
-    fillHouseRankSelect(form.elements.namedItem('rankId'), 'unknown');
+    fillHouseRankSelect(rankSelect, 'unknown', { requireKnownRank: true });
+    placementFields.setValue({ unclassified: false, rankId: 'unknown' });
     form.elements.namedItem('emblem').value = PORTRAIT_PLACEHOLDERS.crest;
     form.elements.namedItem('nextStep').value = 'guided';
     dialog.showModal();
@@ -24,11 +31,12 @@ export function createNewFamilyDialog(documentRef = document) {
 
   function read() {
     const values = Object.fromEntries(new FormData(form).entries());
+    const placement = placementFields.read();
     return {
       documentTitle: String(values.documentTitle || '').trim(),
       documentId: normalizeFamilyId(values.documentId || values.documentTitle),
       motto: String(values.motto || '').trim(),
-      rankId: String(values.rankId || 'unknown'),
+      ...placement,
       emblem: String(values.emblem || '').trim(),
       crestSubtitle: String(values.crestSubtitle || '').trim(),
       crestFrame: String(values.crestFrame || DEFAULT_CREST_FRAME),

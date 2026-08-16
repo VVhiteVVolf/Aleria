@@ -65,7 +65,7 @@ const EXTERNAL_HOUSES = Object.freeze({
   tharn: {
     id: HOUSE_IDS.tharn,
     name: 'Haus Tharn',
-    emblem: 'https://i.imgur.com/qsWVYlf.png'
+    emblem: 'assets/images/houses/Aeldrunmar/haus-tharn.png'
   }
 });
 

@@ -725,6 +725,12 @@ import {
 } from '../assets/js/domain/house-profile.js';
 import { calculateAge, formatLifeLine } from '../assets/js/domain/person-presentation.js';
 import { buildRegistryFolderTree } from '../assets/js/modules/family-registry/registry-folder-tree.js';
+import { mergePublishedRegistryRecords } from '../assets/js/modules/family-registry/published-registry-merge.js';
+import {
+  applyHousePlacementToProfile,
+  assertValidHousePlacement,
+  createHousePlacementFromProfile
+} from '../assets/js/modules/family-registry/house-placement-policy.js';
 import {
   FamilyValidationError,
   assertValidFamily,
@@ -2575,6 +2581,56 @@ test('erstellt eine unabhängige Familie mit Gründerpaar und Wappen', () => {
   assert.equal(crest.data.aleria.sourcePartnershipId, family.partnerships[0].id);
 });
 
+test('fordert bei neuen Häusern Rang, vollständigen Registerpfad und ein Icon je Ebene', () => {
+  const folderPath = ['Cenyr', 'Sonnenküste', 'Jungferntal', 'Carngol'];
+  const folderIcons = [
+    'assets/images/regions/cenyr.png',
+    'assets/images/regions/sonnenkueste.png',
+    'assets/images/regions/jungferntal.png',
+    'assets/images/regions/carngol.png'
+  ];
+  const family = createFoundingFamily({
+    documentTitle: 'Haus Pfadwacht',
+    founderManName: 'Ardan Pfadwacht',
+    founderWomanName: 'Liora Pfadwacht',
+    rankId: 'knight',
+    folderPath,
+    folderIcons,
+    unclassified: false
+  });
+  assert.deepEqual(createFolderPathFromHouseProfile(family.document.houseProfile), folderPath);
+  assert.deepEqual(family.document.houseProfile.folderIcons, folderIcons);
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.extensions.registry.unclassified, false);
+  assert.deepEqual(family.extensions.registry.folderPath, folderPath);
+
+  assert.throws(
+    () => assertValidHousePlacement({ rankId: 'knight', folderPath, folderIcons: folderIcons.slice(0, 3) }),
+    /Icon für „Carngol“/
+  );
+  assert.throws(
+    () => assertValidHousePlacement({ rankId: 'unknown', folderPath, folderIcons }),
+    /Rang-Tier/
+  );
+});
+
+test('speichert ein Haus auf ausdrücklichen Wunsch ohne Ortszuordnung unter Nicht einsortiert', () => {
+  const sortedProfile = applyHousePlacementToProfile({}, assertValidHousePlacement({
+    rankId: 'county',
+    folderPath: ['Morgorn', 'Region Felsbreche', 'Felsbreche', 'Karregtor'],
+    folderIcons: ['reich.png', 'region.png', 'herrschaft.png', 'ort.png']
+  }));
+  const unclassified = assertValidHousePlacement({ unclassified: true, rankId: 'commoner' });
+  const clearedProfile = applyHousePlacementToProfile(sortedProfile, unclassified);
+  const restoredPlacement = createHousePlacementFromProfile(clearedProfile, { unclassified: true });
+
+  assert.deepEqual(createFolderPathFromHouseProfile(clearedProfile), []);
+  assert.equal(clearedProfile.rankId, 'commoner');
+  assert.equal(clearedProfile.folderIcons, undefined);
+  assert.equal(restoredPlacement.unclassified, true);
+  assert.deepEqual(restoredPlacement.folderPath, []);
+});
+
 test('ordnet ein optionales erstes Kind direkt unter dem Gründerwappen ein', () => {
   const family = createFoundingFamily({
     documentTitle: 'Haus Morgenrot',
@@ -2987,6 +3043,38 @@ test('speichert Familien unter verschachtelten Registerpfaden', () => {
     regionEmblems: { seat: '', barony: '', county: '', kingdom: '' }
   });
   assert.equal(loaded.family.document.title, 'Haus Test');
+});
+
+test('bewahrt Pfad-Icons im Register und kann die Einsortierung bewusst entfernen', () => {
+  const storage = createMemoryStorage();
+  const folderPath = ['Aldrimar', 'Roriksheim', 'Rorikstal', 'Rorikshall'];
+  const folderIcons = ['aldrimar.png', 'roriksheim.png', 'rorikstal.png', 'rorikshall.png'];
+  const sorted = saveFamilyToLibrary({
+    family: SAMPLE_FAMILY,
+    id: 'haus-iconpfad',
+    title: 'Haus Iconpfad',
+    folderPath,
+    folderIcons,
+    rankId: 'huskarl',
+    unclassified: false
+  }, storage);
+  assert.deepEqual(sorted.folderPath, folderPath);
+  assert.deepEqual(sorted.family.document.houseProfile.folderIcons, folderIcons);
+  assert.equal(sorted.family.extensions.registry.unclassified, false);
+
+  const unsorted = saveFamilyToLibrary({
+    family: sorted.family,
+    id: 'haus-iconpfad',
+    title: 'Haus Iconpfad',
+    folderPath: [],
+    folderIcons: [],
+    rankId: 'huskarl',
+    unclassified: true
+  }, storage);
+  assert.deepEqual(unsorted.folderPath, []);
+  assert.deepEqual(createFolderPathFromHouseProfile(unsorted.family.document.houseProfile), []);
+  assert.equal(unsorted.family.document.houseProfile.folderIcons, undefined);
+  assert.equal(unsorted.family.extensions.registry.unclassified, true);
 });
 
 test('zerlegt Cloud-Änderungen nach Entität und setzt sie verlustfrei zusammen', () => {
@@ -30845,7 +30933,8 @@ test('liefert Cenrics Portrait sowie Scandyn- und Aeldrunmar-Wappen lokal aus', 
     'haus-frye.png': 'https://i.imgur.com/O5KtbfU.png',
     'haus-kendryck.png': 'https://i.imgur.com/LryLwmS.png',
     'haus-scandyn.png': 'https://i.imgur.com/roQc7AB.png',
-    'haus-seolfor.png': 'https://i.imgur.com/pdjCjDZ.png'
+    'haus-seolfor.png': 'https://i.imgur.com/pdjCjDZ.png',
+    'haus-tharn.png': 'https://i.imgur.com/qsWVYlf.png'
   });
   assert.equal(HOUSE_SCANDYN_PORTRAITS['cenric-scandyn'], HOUSE_SCANDYN_FAMILY.persons.find(
     person => person.id === 'cenric-scandyn'
@@ -31255,6 +31344,19 @@ test('erzeugt für GitHub denselben Registerpfad und eine fortlaufende Revision'
   assert.deepEqual(entry.folderPath, ['Cenyr', 'Tal der Milane', 'Yvains Klamm', 'Penbryn']);
   assert.equal(entry.revision, 8);
   assert.equal(entry.personCount, HOUSE_ADERYN_FAMILY.persons.length);
+  const deepFamily = createFoundingFamily({
+    documentTitle: 'Clan Tiefpfad',
+    founderManName: 'Gründer Tiefpfad',
+    founderWomanName: 'Gründerin Tiefpfad',
+    rankId: 'huskarl',
+    folderPath: ['Aldrimar', 'Roriksheim', 'Rorikstal', 'Winterfänge', 'Wolfswacht'],
+    folderIcons: ['a.png', 'b.png', 'c.png', 'd.png', 'e.png'],
+    unclassified: false
+  });
+  assert.deepEqual(
+    githubPublisherTestables.registryEntry(deepFamily, 1, '2026-08-16T00:00:00.000Z').folderPath,
+    ['Aldrimar', 'Roriksheim', 'Rorikstal', 'Winterfänge', 'Wolfswacht']
+  );
   assert.match(
     githubPublisherTestables.publicationCommitMessage(
       [{ family: HOUSE_ADERYN_FAMILY }],
@@ -31285,6 +31387,32 @@ test('wandelt lokal vorgemerkte Portraitdateien vor dem GitHub-Commit in Projekt
   assert.equal(prepared.assetFiles.length, 1);
   assert.equal(prepared.assetFiles[0].encoding, 'base64');
   assert.equal(stagedFamily.persons.find(person => person.id === personId).portrait.startsWith('data:image/png'), true);
+});
+
+test('veröffentlicht lokal ausgewählte Register-Icons gemeinsam mit der Familienakte', () => {
+  const stagedIcon = 'data:image/png;base64,iVBORw0KGgo=';
+  const stagedFamily = createFoundingFamily({
+    documentTitle: 'Haus Registerbild',
+    founderManName: 'Ardan Registerbild',
+    founderWomanName: 'Liora Registerbild',
+    rankId: 'knight',
+    folderPath: ['Cenyr', 'Sonnenküste', 'Jungferntal', 'Carngol'],
+    folderIcons: [stagedIcon, stagedIcon, stagedIcon, stagedIcon],
+    unclassified: false
+  });
+  const prepared = githubPublisherTestables.materializeStagedImages({
+    family: stagedFamily,
+    expectedRevision: 2
+  });
+
+  assert.equal(prepared.assetFiles.length, 1, 'identische Icons werden nur einmal committed');
+  prepared.family.document.houseProfile.folderIcons.forEach(icon => {
+    assert.match(icon, /^assets\/images\/published\/haus-registerbild\//);
+    assert.equal(icon.startsWith('data:image/'), false);
+  });
+  Object.values(prepared.family.document.houseProfile.regionEmblems).forEach(icon => {
+    assert.match(icon, /^assets\/images\/published\/haus-registerbild\//);
+  });
 });
 
 test('bildet Haus Gaeth vollständig mit drei absoluten seriellen Zeitsprüngen ab', () => {
@@ -32985,6 +33113,51 @@ test('registriert Aeldrunmars Earltumshäuser und Seolfor in der neuen Jarltumss
   assert.ok(aeldrunmar.folders.has('Jarltum der Earncynne'));
   assert.ok(aeldrunmar.folders.has('Jarltum der Beran'));
   assert.ok(aeldrunmar.folders.has('Königliches Jarltum der Kendryck'));
+});
+
+test('ordnet veröffentlichte Aeldrunmar-Häuser kanonisch ein und entfernt ihre statischen Doppelakten', async () => {
+  const publishedRegistry = JSON.parse(await readFile(
+    new URL('../assets/data/published-families/registry.json', import.meta.url),
+    'utf8'
+  ));
+  const merged = mergePublishedRegistryRecords(FAMILY_REGISTRY, publishedRegistry.families);
+  const expectedPaths = new Map([
+    ['beran', ['Aeldrunmar', 'Jarltum der Beran']],
+    ['estmere', ['Aeldrunmar', 'Jarltum der Estmere']],
+    ['frye', ['Aeldrunmar', 'Jarltum der Fyr']],
+    ['seolfor', ['Aeldrunmar', 'Königliches Jarltum der Kendryck', 'Thainschaft der Seolfor']],
+    ['tharn', ['Aeldrunmar', 'Jarltum der Tharn']]
+  ]);
+
+  expectedPaths.forEach((folderPath, familyId) => {
+    const record = merged.find(entry => entry.id === familyId);
+    assert.ok(record, `${familyId} muss als veröffentlichte Akte erhalten bleiben.`);
+    assert.equal(record.source, 'github');
+    assert.deepEqual(record.folderPath, folderPath);
+    assert.equal(record.houseProfile.rankId, familyId === 'seolfor' ? 'barony' : 'county');
+    assert.equal(merged.some(entry => entry.id === `haus-${familyId}`), false);
+  });
+
+  const ironheart = merged.find(entry => entry.id === 'eisenherz');
+  assert.deepEqual(ironheart.folderPath, ['Morgorn', 'Region Felsbreche', 'Felsbreche']);
+  assert.equal(ironheart.houseProfile.rankId, 'royal');
+});
+
+test('bewahrt beim GitHub-Ersatz den kanonischen Projektpfad, wenn die Online-Metadaten leer sind', () => {
+  const projectFamily = FAMILY_REGISTRY.find(record => record.id === 'haus-estmere');
+  const [merged] = mergePublishedRegistryRecords([projectFamily], [{
+    id: 'estmere',
+    familyId: 'estmere',
+    title: 'Estmere',
+    folderPath: [],
+    houseProfile: { rankId: 'unknown' },
+    link: 'Stammbaum.html?family=estmere&mode=view'
+  }]);
+
+  assert.equal(merged.id, 'estmere');
+  assert.equal(merged.canonicalRegistryId, 'haus-estmere');
+  assert.deepEqual(merged.folderPath, ['Aeldrunmar', 'Jarltum der Estmere']);
+  assert.equal(merged.houseProfile.rankId, 'county');
 });
 
 test('zeigt jeden importierten Aeldrunmar-Export vollständig und ohne verwaiste jüngste Generation', () => {

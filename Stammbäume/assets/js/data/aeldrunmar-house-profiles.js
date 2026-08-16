@@ -10,7 +10,8 @@ export const AELDRUNMAR_HOUSE_EMBLEMS = Object.freeze({
   estmere: 'assets/images/houses/Aeldrunmar/haus-estmere.png',
   frye: 'assets/images/houses/Aeldrunmar/haus-frye.png',
   kendryck: 'assets/images/houses/Aeldrunmar/haus-kendryck.png',
-  seolfor: 'assets/images/houses/Aeldrunmar/haus-seolfor.png'
+  seolfor: 'assets/images/houses/Aeldrunmar/haus-seolfor.png',
+  tharn: 'assets/images/houses/Aeldrunmar/haus-tharn.png'
 });
 
 const createAeldrunmarProfile = (folderPath, options = {}) =>
@@ -50,6 +51,9 @@ export const AELDRUNMAR_HOUSE_PROFILES = Object.freeze({
       liegeHouseName: 'Haus Kendryck'
     }
   ),
+  tharn: createAeldrunmarProfile(['Aeldrunmar', 'Jarltum der Tharn'], {
+    rankId: 'county'
+  }),
   scandyn: createAeldrunmarProfile(
     ['Aeldrunmar', 'Jarltum der Tharn', 'Thaintum Trenmorath', 'Scandmere'],
     {
