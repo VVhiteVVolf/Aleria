@@ -1,5 +1,18 @@
 const ALMANACH_LEFT_REGISTER_ITEMS = [
-  { key: 'bestiarium', label: 'Bestiarium', icon: 'Bestiarium.png' },
+  {
+    key: 'charaktere',
+    label: 'Charaktere',
+    note: 'Personenregister und Rollenprofile',
+    icon: 'Charaktere.png',
+    archiveTab: 'Charaktere'
+  },
+  {
+    key: 'kreaturen',
+    label: 'Kreaturen',
+    note: 'Monster, NSCs und Gegner-Vorlagen',
+    icon: 'Kreaturen.png',
+    archiveTab: 'Kreaturen'
+  },
   { key: 'dunkle-gilden', label: 'Dunkle Gilden', icon: 'Dunkle Gilden.png' },
   { key: 'ereignisse', label: 'Ereignisse', icon: 'Ereignisse.png' },
   { key: 'gilden', label: 'Gilden', icon: 'Gilden.png' },
@@ -10,7 +23,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'markt', label: 'Markt', note: 'Items und Güter', icon: 'Markt.png', action: 'open-item-database' },
   { key: 'orden', label: 'Orden', icon: 'Orden.png' },
   { key: 'organisationen', label: 'Organisationen', icon: 'Organisationen.png' },
-  { key: 'charakterbogen-archiv', label: 'Charakterbogen Archiv', note: 'Traits, Zauber, Klassen & mehr', icon: 'Platzhalter.png', action: 'open-character-archive' },
+  { key: 'charakterbogen-archiv', label: 'Charakterbogen Archiv', note: 'Traits, Zauber, Klassen & mehr', icon: 'Charakterbogen Archiv.png', action: 'open-character-archive' },
   { key: 'religion', label: 'Religion', icon: 'Religion.png' },
   { key: 'stammbaeume', label: 'Stammbäume', note: 'Familienregister der Häuser', icon: 'Stammbäume.png', href: '../Stammbäume/register.html' },
   { key: 'sternzeichen', label: 'Sternzeichen', icon: 'Sternzeichen.png' },
@@ -37,12 +50,15 @@ function buildAlmanachLeftRegisterItem(item) {
   }
 
   let actionAttrs = 'aria-disabled="true" tabindex="-1" title="Noch nicht verknüpft"';
-  if (item.action === 'open-item-database') {
+  if (item.archiveTab) {
+    actionAttrs = `data-archive-action="switch-tab" data-tab="${escapeHtml(item.archiveTab)}" data-archive-register-tab="${escapeHtml(item.archiveTab)}" title="${escapeHtml(item.label)} öffnen"`;
+  } else if (item.action === 'open-item-database') {
     actionAttrs = 'data-item-db-action="open" title="Items und Güter öffnen"';
   } else if (item.action === 'open-character-archive') {
     actionAttrs = 'data-character-archive-action="open" title="Charakterbogen Archiv öffnen"';
   }
-  return `<button class="almanach-left-register${item.action ? ' active' : ''}" type="button" ${actionAttrs} data-register-key="${escapeHtml(item.key)}">
+  const isInteractive = !!(item.action || item.archiveTab);
+  return `<button class="almanach-left-register${isInteractive ? ' active' : ''}" type="button" ${actionAttrs} data-register-key="${escapeHtml(item.key)}">
     ${content}
   </button>`;
 }

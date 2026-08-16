@@ -70,10 +70,34 @@ function normalizeTextList(value) {
     .filter(Boolean))];
 }
 
+function normalizeLiegeHouses(value) {
+  const seen = new Set();
+  return (Array.isArray(value) ? value : [])
+    .map(entry => ({
+      id: cleanText(entry?.id),
+      name: cleanText(entry?.name)
+    }))
+    .filter(entry => entry.id || entry.name)
+    .filter(entry => {
+      const key = `${entry.id}\u0000${entry.name}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
 function normalizeFolderPath(value) {
   return (Array.isArray(value) ? value : [])
     .map(cleanText)
     .filter(Boolean);
+}
+
+// Tief verschachtelte Registerpfade können mehr als die vier historischen
+// Ebenen (Königreich/Jarltum/Herrschaft/Sitz) besitzen. Die Icons bleiben
+// deshalb positionsgebunden; leere Einträge dürfen hier nicht herausgefiltert
+// werden, weil sich sonst alle nachfolgenden Ebenen verschieben würden.
+function normalizeFolderIcons(value) {
+  return (Array.isArray(value) ? value : []).map(cleanText);
 }
 
 export function listHouseRanks() {
@@ -87,6 +111,8 @@ export function getHouseRank(rankId) {
 export function normalizeHouseProfile(profile = {}) {
   const source = profile && typeof profile === 'object' ? profile : {};
   const folderPath = normalizeFolderPath(source.folderPath);
+  const folderIcons = normalizeFolderIcons(source.folderIcons);
+  const liegeHouses = normalizeLiegeHouses(source.liegeHouses);
   return {
     rankId: getHouseRank(cleanText(source.rankId)).id,
     seat: cleanText(source.seat),
@@ -96,7 +122,9 @@ export function normalizeHouseProfile(profile = {}) {
     secondarySeats: normalizeTextList(source.secondarySeats),
     liegeHouseId: cleanText(source.liegeHouseId),
     liegeHouseName: cleanText(source.liegeHouseName),
+    ...(liegeHouses.length ? { liegeHouses } : {}),
     ...(folderPath.length > 4 ? { folderPath } : {}),
+    ...(folderIcons.some(Boolean) ? { folderIcons } : {}),
     regionEmblems: normalizeRegionEmblems(source.regionEmblems)
   };
 }
@@ -141,11 +169,14 @@ export function isHouseProfileEmpty(profile = {}) {
     && !normalized.secondarySeats.length
     && !normalized.liegeHouseId
     && !normalized.liegeHouseName
+    && !(Array.isArray(normalized.liegeHouses) && normalized.liegeHouses.length)
+    && !(Array.isArray(normalized.folderIcons) && normalized.folderIcons.some(Boolean))
     && !(Array.isArray(normalized.folderPath) && normalized.folderPath.length);
 }
 
 export function formatHouseProfile(profile = {}, separator = ' · ') {
   const normalized = normalizeHouseProfile(profile);
+  const liegeHouseNames = normalized.liegeHouses?.map(entry => entry.name).filter(Boolean) || [];
   const venalysRank = ['patrician', 'magnarian', 'mercantian', 'plebeian'].includes(normalized.rankId);
   const aldrimarClan = normalized.kingdom === 'Aldrimar';
   const labels = venalysRank
@@ -155,7 +186,8 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
         county: 'Region',
         kingdom: 'Stadtrepublik',
         secondarySeats: 'Weitere Sitze',
-        liegeHouse: 'Patrizierhaus'
+        liegeHouse: 'Patrizierhaus',
+        liegeHouses: 'Patrizierhäuser'
       }
     : aldrimarClan
       ? {
@@ -164,7 +196,8 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
           county: 'Jarltum',
           kingdom: 'Königreich',
           secondarySeats: 'Weitere Sitze',
-          liegeHouse: 'Königsclan'
+          liegeHouse: 'Königsclan',
+          liegeHouses: 'Lehnshäuser'
         }
     : {
         seat: 'Stammsitz',
@@ -172,7 +205,8 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
         county: 'Grafschaft',
         kingdom: 'Königreich',
         secondarySeats: 'Weitere Sitze',
-        liegeHouse: 'Lehnshaus'
+        liegeHouse: 'Lehnshaus',
+        liegeHouses: 'Lehnshäuser'
       };
   const location = [
     normalized.seat ? `${labels.seat}: ${normalized.seat}` : '',
@@ -180,7 +214,11 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
     normalized.county ? `${labels.county}: ${normalized.county}` : '',
     normalized.kingdom ? `${labels.kingdom}: ${normalized.kingdom}` : '',
     normalized.secondarySeats.length ? `${labels.secondarySeats}: ${normalized.secondarySeats.join(', ')}` : '',
-    normalized.liegeHouseName ? `${labels.liegeHouse}: ${normalized.liegeHouseName}` : ''
+    liegeHouseNames.length
+      ? `${liegeHouseNames.length > 1 ? labels.liegeHouses : labels.liegeHouse}: ${liegeHouseNames.join(' & ')}`
+      : normalized.liegeHouseName
+        ? `${labels.liegeHouse}: ${normalized.liegeHouseName}`
+        : ''
   ].filter(Boolean);
   const rank = getHouseRank(normalized.rankId);
   return [rank.id === 'unknown' ? '' : rank.label, ...location].filter(Boolean).join(separator);
@@ -196,6 +234,7 @@ export function getHouseProfileSearchTerms(profile = {}) {
     normalized.kingdom,
     ...(normalized.folderPath || []),
     ...normalized.secondarySeats,
-    normalized.liegeHouseName
+    normalized.liegeHouseName,
+    ...(normalized.liegeHouses?.flatMap(entry => [entry.id, entry.name]) || [])
   ].filter(Boolean))];
 }

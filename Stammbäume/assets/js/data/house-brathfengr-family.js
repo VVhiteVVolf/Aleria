@@ -77,6 +77,7 @@ function person(id, name, sex, birth = '????', death = '', options = {}) {
   const houseId = options.houseId === undefined ? BRATHFENGR_HOUSE_ID : options.houseId;
   return createFamilyPerson({
     id,
+    worldPersonId: options.worldPersonId || '',
     name,
     sex,
     birth,
@@ -177,6 +178,7 @@ const PARTNERS_BY_ID = Object.freeze({
 });
 
 const PARTNERSHIP_OPTIONS = Object.freeze({
+  'marriage-ingjald-skeggjadis-brathfengr': Object.freeze({ status: 'ended', end: '1661' }),
   'marriage-hakon-svanhild-skjegg': Object.freeze({ status: 'ended', end: '1653' }),
   'marriage-skjold-fridgerd-brathfengr': Object.freeze({ status: 'ended', end: '1706' }),
   'marriage-halstein-ylfrun-kampfgeborene': Object.freeze({ status: 'ended', end: '1702' })
@@ -264,7 +266,7 @@ export const HOUSE_BRATHFENGR_FAMILY = Object.freeze({
     house('house-nachtjaeger', 'Clan Nachtjäger', HOUSE_EMBLEMS.nachtjaeger),
     house('house-blutklinge', 'Clan Blutklinge'),
     house('house-skaife', 'Clan Skaife'),
-    house('house-hrymgardr', 'Clan Hrymgarðr'),
+    house('house-hyrmgardr', 'Clan Hyrmgarthr'),
     house('house-todbrand', 'Clan Todbrand'),
     house('house-skjegg', 'Clan Skjegg', HOUSE_EMBLEMS.skjegg),
     house('house-freiwinter', 'Clan Freiwinter', HOUSE_EMBLEMS.freiwinter),
@@ -309,7 +311,9 @@ export const HOUSE_BRATHFENGR_FAMILY = Object.freeze({
     person('ingjald-brathfengr', 'Ingjald Brathfengr', 'male', '1563', '1665', {
       title: 'Thane des Clans Brathfengr 1663–1665'
     }),
-    spouse('skeggjadis-hrymgardr', 'Skeggjadís Hrymgarðr', 'female', '1563', '1661', 'house-hrymgardr'),
+    spouse('skeggjadis-hrymgardr', 'Skeggjadís Hyrmgarthr', 'female', '1563', '1661', 'house-hyrmgardr', {
+      worldPersonId: 'person--haus-hrymgardr--skeggjadis-hrymgardr'
+    }),
     person('valir-brathfengr', 'Valir Brathfengr', 'male', '1566', '', {
       status: 'unknown',
       title: 'Dritter Erbe des Clans Brathfengr',
@@ -472,7 +476,7 @@ export const HOUSE_BRATHFENGR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: 'Clan Brathfengr (bereitgestellte Altdaten)',
     sourceNote: 'Die vollständige Akte übernimmt alle im Quellstammbaum belegten Personen und Ehen. Nach dem Gründerpaar folgt zuerst das Hauswappen und anschließend ein absolut serieller Zeitsprung zu Isbjörg, Tryggvar und Ingeborg. Ein zweiter absolut serieller Zeitsprung führt ausschließlich unter Tryggvar und Saoirse zu Bjarn und Steinunn. Die Kinder anderer Häuser werden nicht doppelt fortgeführt; gemeinsam vorkommende Personen und Partnerschaften verwenden dieselben Register-IDs wie ihre Gegenakten. Alle vierzehn belegten auswärtigen Ehen von Brathfengr-Frauen besitzen direkte Wegverheiratet-Knoten. Für Valir nennt die Quelle trotz des Geburtsjahres 1566 kein Todeszeichen; der Status bleibt ungeklärt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],

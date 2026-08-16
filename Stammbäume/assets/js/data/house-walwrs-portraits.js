@@ -52,6 +52,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // dieselbe Weltperson. Die mehrfach verwendeten schwarzen Silhouetten der
 // Walwrs-Quelle sind keine Individualporträts und werden nicht importiert.
 const SHARED_PORTRAITS = Object.freeze({
+  'sioned-trachwyll': 'assets/images/portraits/haus-trachwyll/sioned-trachwyll.jpg',
   'taran-walwrs': HOUSE_CRAFANC_PORTRAITS['taran-walwrs'],
   'llaesgwynyn-walwrs': HOUSE_ARFORDIR_PORTRAITS['llaesgwynyn-walwrs'],
   'iorwerth-blodyn': HOUSE_BLODYN_PORTRAITS['iorwerth-blodyn'],

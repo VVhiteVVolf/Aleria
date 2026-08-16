@@ -4,6 +4,7 @@ function configuredChildId(partnership) {
   const value = partnership?.extensions?.[PARENT_PAIR_OVER_CHILD_EXTENSION];
   return typeof value === 'string' ? value.trim() : '';
 }
+
 function displayedMainNode(nodes, personId) {
   const candidates = nodes.filter(node => node?.data?.id === personId);
   return candidates.find(node => !node.spouse) || candidates[0] || null;

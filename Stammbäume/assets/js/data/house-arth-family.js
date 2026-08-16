@@ -207,7 +207,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     house('house-blodyn', 'Haus Blodyn'),
     house('house-eirth', 'Haus Eirth', HOUSE_EMBLEMS.eirth),
     house('house-penderyn', 'Haus Penderyn'),
-    house('house-trachwyll', 'Haus Trachwyll'),
+    house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-gwyvern', 'Haus Gwyvern'),
     house('house-cenyr', "Haus O'Cenyr"),
@@ -325,7 +325,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     person('domnall-arth', 'Domnall Arth', 'male', '1672', '1720'),
     person('gwenfrewi-pawen', 'Gwenfrewi Pawen', 'female', '1678', '1720', 'house-pawen'),
     person('denawal-1680-arth', 'Denawal Arth', 'male', '1680', '1710'),
-    person('dolena-trachwyll', 'Dolena Trachwyll', 'female', '1685', '1710', 'house-trachwyll'),
+    person('dolena-trachwyll', 'Dolena Trachwyll', 'female', '1685', '1710', 'house-trachwyll-talfronwyn'),
     person('llewella-arth', 'Llewella Arth', 'female', '1675', '1720'),
     person('gingalain-1671-pysgod', 'Gingalain Pysgod', 'male', '1671', '1720', 'house-pysgod'),
     person('melyn-arth', 'Melyn Arth', 'male', '1684', '1735', ARTH_HOUSE_ID, {
@@ -434,7 +434,11 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     createMarriage('marriage-ffodor-ffionwen', ...FFODOR_IDS),
     createMarriage('marriage-run-morfadd', ...RUN_IDS),
     createMarriage('marriage-domnall-gwenfrewi', ...DOMNALL_IDS),
-    createMarriage('marriage-denawal-dolena', ...DENAWAL_1680_IDS),
+    createMarriage('marriage-denawal-dolena', ...DENAWAL_1680_IDS, {
+      status: 'ended',
+      end: '1710',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-gingalain1671-llewella', ...LLEWELLA_IDS),
     createMarriage('marriage-gwalchgwyn-melyn', ...MELYN_IDS),
     createMarriage('marriage-delyth-afal', ...AFAL_IDS),
@@ -545,7 +549,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 11,
+    sourceRevision: 12,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

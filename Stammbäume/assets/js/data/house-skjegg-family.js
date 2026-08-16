@@ -249,7 +249,7 @@ export const HOUSE_SKJEGG_FAMILY = Object.freeze({
     person('hakon-skjegg', 'Hakon Skjegg', 'male', '1582', '1653', {
       title: 'Hesir des Clans Skjegg 1629–1653'
     }),
-    spouse('dagnhild-helgr', 'Dagnhild Helgr', 'female', '1582', '????', 'house-helgr'),
+    spouse('dagnhild-helgr', 'Dagnhild Helgr', 'female', '1582', '1629', 'house-helgr'),
     spouse('brodd-silberzunge', 'Brodd Silberzunge', 'male', '1582', '1629', 'house-silberzunge'),
     spouse('svanhild-brathfengr', 'Svanhild Brathfengr', 'female', '1583', '1668', 'house-brathfengr'),
 
@@ -422,7 +422,7 @@ export const HOUSE_SKJEGG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceModule: 'Clan Skjegg (bereitgestellte Altdaten)',
     sourceNote: 'Die vollständige Skjegg-Genealogie folgt der bereitgestellten Hausseite. Meili und Hnoss stehen vor dem Hauswappen; genau ein strikt serieller Generationentrenner führt danach zu Hjorleif, Hildigunn und Hakon. Normale Kinderlinien entspringen gemeinsam der Verbindung beider Eltern; die zuvor pauschal auf Ehefrauen gesetzten Ausrichtungsmarker werden entfernt. Sweyn und Ragnfrid waren nicht verheiratet; ihre Verbindung wird ausschließlich als beendete Affäre geführt und Ragnfrid trägt den Affärenrahmen. Hildigunn, Gudlaug, Finngunn, Thurid, Sigrid, Vedis, Revna, Dagmar und Borghild besitzen direkte Wegverheiratet-Knoten zu ihren jeweiligen Zielclans; ihre Nachkommen werden ausschließlich in den fortführenden Gegenakten geführt. Skadi Varulv bleibt leibliche Varulv und ist ausschließlich als Harolds aufgenommenes Mündel erfasst. Die Angaben 1617/1619 für Njord, Kolga und Skadi wurden wegen Elternjahrgängen, Gegenakte und eindeutiger Generationsposition zu 1717/1719 normalisiert. Hjorleifs genealogisches Geburtsjahr 1580 bleibt trotz der widersprechenden Altersangabe seiner historischen Kurzbiografie erhalten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryTombstones: {

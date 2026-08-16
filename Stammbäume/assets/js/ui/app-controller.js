@@ -56,9 +56,13 @@ import { createTreeNodeActionsDialog } from '../modules/tree-node-actions/tree-n
 import { findLineageBarrier } from '../modules/tree-node-actions/tree-node-actions-model.js';
 import {
   createMirroredPartnershipChange,
+  removeMirroredPartnershipChange,
   updateMirroredPartnershipChange
 } from '../modules/relationships/cross-family-relationship.js';
-import { createMirroredGuardianshipChange } from '../modules/relationships/cross-family-guardianship.js';
+import {
+  createMirroredGuardianshipChange,
+  removeMirroredGuardianshipChange
+} from '../modules/relationships/cross-family-guardianship.js';
 import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
 
 function isTypingTarget(target) {
@@ -295,12 +299,21 @@ export function createAppController({
     throw new Error('Diese Knotenaktion ist nicht verfügbar.');
   }
 
-  function firstSpouseId(family, personId) {
-    const preferred = family.partnerships.find(partnership => (
+  function preferredSpouseId(family, personId) {
+    const candidates = family.partnerships.filter(partnership => (
       partnership.participantIds.includes(personId)
       && ['marriage', 'union'].includes(partnership.type)
       && partnership.status === 'active'
+    )).map(partnership => ({
+      partnership,
+      partnerId: partnership.participantIds.find(id => id !== personId),
+      partner: family.persons.find(person => person.id === partnership.participantIds.find(id => id !== personId))
+    })).sort((first, second) => (
+      Number(second.partner?.status !== 'dead' && !second.partner?.death)
+      - Number(first.partner?.status !== 'dead' && !first.partner?.death)
+      || Number(second.partnership.start || 0) - Number(first.partnership.start || 0)
     ));
+    const preferred = candidates[0]?.partnership;
     return preferred?.participantIds.find(id => id !== personId) || '';
   }
 
@@ -337,7 +350,7 @@ export function createAppController({
         relationActionsDialog.close();
         relatedPersonDialog.open(person.id, state.family, {
           relationKind: 'child',
-          secondParentId: firstSpouseId(state.family, person.id),
+          secondParentId: preferredSpouseId(state.family, person.id),
           heading: `Kind von ${person.name} zeugen`
         });
         return;
@@ -346,7 +359,7 @@ export function createAppController({
         relatedPersonDialog.open(person.id, state.family, {
           relationKind: 'child',
           parentageType: 'adoptive',
-          secondParentId: firstSpouseId(state.family, person.id),
+          secondParentId: preferredSpouseId(state.family, person.id),
           heading: `Adoptivkind von ${person.name} anlegen`
         });
         return;
@@ -368,6 +381,12 @@ export function createAppController({
         relationActionsDialog.close();
         relationshipDialog.open(person.id, state.family);
         return;
+      case 'delete-current-person':
+        if (!runtime.confirm(`${person.name} samt direkten Verknüpfungen vollständig aus diesem Stammbaum entfernen?`)) return;
+        relationActionsDialog.close();
+        store.deletePerson(person.id);
+        toast(`${person.name} wurde vollständig entfernt. Über „Rückgängig“ kann die Löschung sofort zurückgenommen werden.`);
+        return;
       default:
         if (!relationActionsDialog.showStep(actionId)) {
           throw new Error('Diese Aktion ist noch nicht verfügbar.');
@@ -384,7 +403,7 @@ export function createAppController({
 
   function connectExistingPartner(action, person, partnerId, family) {
     if (action === 'import-ward') {
-      const spouseId = firstSpouseId(family, person.id);
+      const spouseId = preferredSpouseId(family, person.id);
       const parentIds = [person.id, spouseId].filter(Boolean).filter(id => id !== partnerId);
       store.addParentage({
         childId: partnerId,
@@ -523,7 +542,7 @@ export function createAppController({
         relatedPersonDialog.open(person.id, state.family, {
           relationKind: 'child',
           parentageType: 'foster',
-          secondParentId: firstSpouseId(state.family, person.id),
+          secondParentId: preferredSpouseId(state.family, person.id),
           heading: `Mündel bei ${person.name} aufnehmen`
         });
         return;
@@ -663,6 +682,42 @@ export function createAppController({
       return;
     }
 
+    if (values.action === 'delete-partnership') {
+      const partnership = state.family.partnerships.find(item => item.id === values.removalId);
+      if (!partnership) throw new Error('Bitte eine Verbindung zum Entfernen wählen.');
+      const otherPersonIds = partnership.participantIds.filter(id => id !== person.id);
+      const mirrored = removeRegistryPartnership({ state, partnership });
+      if (!mirrored) {
+        store.deletePartnership(partnership.id, {
+          removeUnconnectedPersonIds: values.removeUnconnectedPartner ? otherPersonIds : []
+        });
+      }
+      relationActionsDialog.close();
+      toast(`Die Verbindung wurde vollständig entfernt${mirrored ? ' – in beiden Familienakten' : ''}. Über „Rückgängig“ kann eine lokale Löschung sofort zurückgenommen werden.`);
+      return;
+    }
+
+    if (values.action === 'delete-parentage') {
+      const parentage = state.family.parentages.find(item => item.id === values.removalId);
+      if (!parentage) throw new Error('Bitte eine Kind-/Elternverknüpfung zum Entfernen wählen.');
+      const mirrored = removeRegistryGuardianship({ state, parentage });
+      if (!mirrored) {
+        store.deleteParentage(parentage.id, {
+          removeUnconnectedChild: values.removeUnconnectedChild
+        });
+      }
+      relationActionsDialog.close();
+      toast(`Die Kind-/Elternverknüpfung wurde vollständig entfernt${mirrored ? ' – in beiden Familienakten' : ''}.`);
+      return;
+    }
+
+    if (values.action === 'delete-guardianship') {
+      removeRegistryGuardianshipForPerson({ state, person });
+      relationActionsDialog.close();
+      toast('Die Mündelvermittlung wurde vollständig aus beiden Familienakten entfernt.');
+      return;
+    }
+
     if (values.action === 'upgrade-engagement') {
       const partnership = state.family.partnerships.find(item => item.id === values.partnershipId);
       if (!partnership) throw new Error('Bitte ein Verlöbnis wählen.');
@@ -705,6 +760,87 @@ export function createAppController({
   function openHouseBiography() {
     houseBiographyDialog.open(store.getState().family, { editable: isEditing });
     return true;
+  }
+
+  function removeRegistryPartnership({ state, partnership }) {
+    const relationship = partnership.extensions?.crossFamilyRelationship;
+    if (!relationship?.linkId || !relationship.counterpartFamilyId) return false;
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    const counterpartRecord = localFamilySource.loadById(relationship.counterpartFamilyId);
+    if (!currentRecord || !counterpartRecord) {
+      throw new Error('Mindestens eine Akte der gespiegelten Verbindung fehlt im Familienregister.');
+    }
+    const change = removeMirroredPartnershipChange({
+      currentFamily: state.family,
+      counterpartFamily: counterpartRecord.family,
+      partnershipId: partnership.id
+    });
+    persistMirroredFamilyChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord,
+      change,
+      source: 'cross-family-relationship-removed'
+    });
+    return true;
+  }
+
+  function removeRegistryGuardianship({ state, parentage }) {
+    const guardianship = parentage.extensions?.crossFamilyGuardianship;
+    if (!guardianship?.linkId) return false;
+    const counterpartFamilyId = guardianship.wardFamilyId === state.family.document.id
+      ? guardianship.guardianFamilyId
+      : guardianship.wardFamilyId;
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    const counterpartRecord = localFamilySource.loadById(counterpartFamilyId);
+    if (!currentRecord || !counterpartRecord) {
+      throw new Error('Mindestens eine Akte der gespiegelten Mündelverknüpfung fehlt im Familienregister.');
+    }
+    const change = removeMirroredGuardianshipChange({
+      currentFamily: state.family,
+      counterpartFamily: counterpartRecord.family,
+      parentageId: parentage.id
+    });
+    persistMirroredFamilyChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord,
+      change,
+      source: 'cross-family-guardianship-removed'
+    });
+    return true;
+  }
+
+  function removeRegistryGuardianshipForPerson({ state, person }) {
+    const localParentage = state.family.parentages.find(parentage => (
+      parentage.extensions?.crossFamilyGuardianship?.linkId
+      && (parentage.childId === person.id || parentage.parentIds.includes(person.id))
+    ));
+    const guardianship = person.extensions?.crossFamilyGuardianship
+      || localParentage?.extensions?.crossFamilyGuardianship;
+    if (!guardianship?.linkId) throw new Error('Für diese Person wurde keine gespiegelte Mündelvermittlung gefunden.');
+    const counterpartFamilyId = guardianship.wardFamilyId === state.family.document.id
+      ? guardianship.guardianFamilyId
+      : guardianship.wardFamilyId;
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    const counterpartRecord = localFamilySource.loadById(counterpartFamilyId);
+    if (!currentRecord || !counterpartRecord) {
+      throw new Error('Mindestens eine Akte der gespiegelten Mündelverknüpfung fehlt im Familienregister.');
+    }
+    const change = removeMirroredGuardianshipChange({
+      currentFamily: state.family,
+      counterpartFamily: counterpartRecord.family,
+      parentageId: localParentage?.id || '',
+      personId: person.id,
+      linkId: guardianship.linkId
+    });
+    persistMirroredFamilyChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord,
+      change,
+      source: 'cross-family-guardianship-removed'
+    });
   }
 
   function createChart(family) {

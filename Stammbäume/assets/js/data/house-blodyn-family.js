@@ -153,7 +153,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-blaidd-tredegar', "Haus Blaidd O'Tredegar", HOUSE_EMBLEMS.blaidd),
     house('house-dobhar', 'Haus Dobhar'),
     house('house-dianc', "Haus Dianc O'Gwynlann", KLAUENINSEL_HOUSE_EMBLEMS.dianc),
-    house('house-trachwyll', 'Haus Trachwyll'),
+    house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
     house('house-arfordir', "Haus Arfordir O'Serenlyn", KLAUENINSEL_HOUSE_EMBLEMS.arfordir),
     house('house-morlais', 'Haus Morlais'),
     house('house-urquhart', 'Haus Urquhart'),
@@ -198,20 +198,20 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('gwendolen-blodyn', 'Gwendolen Blodyn', 'female', '????', '????'),
     person('arthfael-dianc', 'Arthfael Dianc', 'male', '????', '????', 'house-dianc'),
     person('morwenna-blodyn', 'Morwenna Blodyn', 'female', '????', '????'),
-    person('gwalchmai-trachwyll', 'Gwalchmai Trachwyll', 'male', '????', '????', 'house-trachwyll'),
+    person('gwalchmai-trachwyll', 'Gwalchmai Trachwyll', 'male', '????', '????', 'house-trachwyll-talfronwyn'),
     person('tudurwen-blodyn', 'Tudurwen Blodyn', 'female', '????', '????'),
     person('ysbryd-arfordir', 'Ysbryd Arfordir', 'male', '????', '????', 'house-arfordir'),
 
     person('gogyvwlch-blodyn', 'Gogyvwlch Blodyn', 'male', '????', '????'),
-    person('sulwen-trachwyll', 'Sulwen Trachwyll', 'female', '????', '????', 'house-trachwyll'),
+    person('sulwen-trachwyll', 'Sulwen Trachwyll', 'female', '????', '????', 'house-trachwyll-talfronwyn'),
     person('mieftagoet-blodyn', 'Mieftagoet Blodyn', 'male', '????', '????'),
     person('uryen-blodyn', 'Uryen Blodyn', 'male', '????', '????'),
     person('maygan-morlais', 'Maygan Morlais', 'female', '????', '????', 'house-morlais'),
 
     person('dyvynwal-blodyn', 'Dyvynwal Blodyn', 'male', '1599', '1643', BLODYN_HOUSE_ID, { title: 'König von Vennyr 1626–1643' }),
     person('orfllaith-urquhart', 'Òrfllaith Urquhart', 'female', '1600', '1662', 'house-urquhart'),
-    person('angharad-blodyn', 'Angharad Blodyn', 'female', '1600', '1660'),
-    person('gavin-trachwyll', "Gavin Trachwyll O'Talfronwy", 'male', '1605', '1662', 'house-trachwyll'),
+    person('angharad-blodyn', 'Angharad Blodyn', 'female', '1603', '1660'),
+    person('gavin-trachwyll', "Gavin Trachwyll O'Talfronwyn", 'male', '1605', '1662', 'house-trachwyll-talfronwyn'),
 
     person('mailgwin-blodyn', 'Mailgwin Blodyn', 'male', '1617', '1668', BLODYN_HOUSE_ID, { title: 'König von Vennyr 1643–1668' }),
     person('aoirghe-mac-duilb', 'Aoirghe Mac Duilb', 'female', '1618', '1672', 'house-mac-duilb'),
@@ -230,7 +230,10 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('blodeuwedd-blodyn', 'Blodeuwedd Blodyn', 'female', '1637', '1670'),
     person('lulach-dubglais', 'Lulach Dubglais', 'male', '1636', '1678', 'house-dubglais'),
     person('kethtrwm-blodyn', 'Kethtrwm Blodyn', 'male', '1635', '1690'),
-    person('hildegard-wargh', 'Hildegard Wargh', 'female', '1636', '1689', 'house-wargh'),
+    person('hildegard-wargh', 'Hildegard Wargh', 'female', '1636', '1689', 'house-wargh', {
+      worldPersonId: 'person--haus-wargh--hildegard-1636-wargh',
+      notes: 'Nicht identisch mit der 1724 geborenen Hildegard Wargh aus der Arth-Gegenakte.'
+    }),
     person('siani-blodyn', 'Siani Blodyn', 'female', '1636', '1637'),
     person('olwyn-blodyn', 'Olwyn Blodyn', 'female', '1636', '1667'),
     person('colwin-gwenyen', 'Colwin Gwenyen', 'male', '1629', '1672', 'house-gwenyen'),
@@ -294,8 +297,8 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
       title: 'Mündel Tarrants; mit Talara verlobt'
     }),
 
-    person('wynfor-blodyn', 'Wynfor Blodyn', 'male', '1690', '1720'),
-    person('delwen-trachwyll', 'Delwen Trachwyll', 'female', '1699', '1720', 'house-trachwyll'),
+    person('wynfor-blodyn', 'Wynfor Blodyn', 'male', '1689', '1720'),
+    person('delwen-trachwyll', 'Delwen Trachwyll', 'female', '1699', '1720', 'house-trachwyll-talfronwyn'),
     person('siriol-blodyn', 'Siriol Blodyn', 'female', '1694', '1720'),
     person('trachmyr-serenoc', 'Trachmyr Serenoc', 'male', '1692', '1720', 'house-serenoc'),
 
@@ -310,7 +313,10 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     createMarriage('marriage-gwendolen-arthfael', ...GWENDOLEN_IDS),
     createMarriage('marriage-morwenna-gwalchmai', ...MORWENNA_IDS),
     createMarriage('marriage-tudurwen-ysbryd', ...TUDURWEN_IDS),
-    createMarriage('marriage-gogyvwlch-sulwen', ...GOGYVWLCH_IDS),
+    createMarriage('marriage-gogyvwlch-sulwen', ...GOGYVWLCH_IDS, {
+      status: 'ended',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-uryen-maygan', ...URYEN_IDS),
     createMarriage('marriage-dyvynwal-orfllaith', ...DYVYNWAL_IDS),
     createMarriage('marriage-angharad-gavin', ...ANGHARAD_IDS),
@@ -345,7 +351,11 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
       status: 'ended',
       notes: 'Tarrant Arth ist zugleich Tarrants Mündel und Talaras Verlobter; die Verbindung endete mit Talaras Tod 1720.'
     }),
-    createMarriage('marriage-wynfor-delwen', ...WYNFOR_IDS),
+    createMarriage('marriage-wynfor-delwen', ...WYNFOR_IDS, {
+      status: 'ended',
+      end: '1720',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-siriol-trachmyr', ...SIRIOL_IDS)
   ],
   parentages: [
@@ -398,9 +408,9 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
       extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] }
     },
     marriedAway('married-away-dianc-gwendolen', 'Haus Dianc', 'marriage-gwendolen-arthfael', 'house-dianc'),
-    marriedAway('married-away-trachwyll-morwenna', 'Haus Trachwyll', 'marriage-morwenna-gwalchmai', 'house-trachwyll'),
+    marriedAway('married-away-trachwyll-morwenna', "Haus Trachwyll O'Talfronwyn", 'marriage-morwenna-gwalchmai', 'house-trachwyll-talfronwyn', '', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-arfordir-tudurwen', 'Haus Arfordir', 'marriage-tudurwen-ysbryd', 'house-arfordir'),
-    marriedAway('married-away-trachwyll-angharad', 'Haus Trachwyll', 'marriage-angharad-gavin', 'house-trachwyll'),
+    marriedAway('married-away-trachwyll-angharad', "Haus Trachwyll O'Talfronwyn", 'marriage-angharad-gavin', 'house-trachwyll-talfronwyn', '', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-draig-gwyneth', 'Haus Draig', 'marriage-howell-gwyneth', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-dianc-myfanwy', 'Haus Dianc', 'marriage-myfanwy-kynwrig', 'house-dianc'),
     marriedAway('married-away-dubglais-blodeuwedd', 'Haus Dubglais', 'marriage-blodeuwedd-lulach', 'house-dubglais'),
@@ -464,7 +474,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth ist als aufgenommenes Mündel und nicht als leibliches Blodyn-Kind erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yhons Kinder Cerys und Griffin sowie sein Mündel Telyn stehen ausschließlich in der verknüpften Talgarther Akte; Yvains Nachkommen Dalvin und Erec ausschließlich in der verknüpften Aberdailer Akte. Dadurch wird keine der beiden Nachkommenschaften in zwei Diagrammen weitergeführt. Morfydds Ehe mit Breseal führt zum gegründeten Haus Dyfrgi in Mynyddharbwr; Elins Ehe mit Mervyn verlinkt dagegen zur neuen Caer-Cryftlawd-Linie. Die ältere technische ID mevyn-dyfrgi bleibt stabil, während die sichtbare Quellschreibweise Mervyn verwendet wird.',
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     registryTombstones: {
       persons: ['cerys-blodyn', 'griffin-blodyn', 'telyn-diafol'],
       parentages: ['parentage-cerys-blodyn', 'parentage-griffin-blodyn', 'parentage-telyn-diafol']

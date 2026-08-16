@@ -308,7 +308,7 @@ export const HOUSE_SKALD_FAMILY = Object.freeze({
     house('house-soekeren', 'Clan Sökeren', HOUSE_EMBLEMS.soekeren),
     house('house-sterkr', 'Clan Sterkr', HOUSE_EMBLEMS.sterkr),
     house('house-ceirwyn', 'Haus Ceirwyn', HOUSE_EMBLEMS.ceirwyn),
-    house('house-grindel', 'Clan Grindel'),
+    house('house-grendel', 'Clan Grendel'),
     house('house-freiwinter', 'Clan Freiwinter', HOUSE_EMBLEMS.freiwinter),
     house('house-adorin', 'Haus Adorin'),
     house('house-urquhart', 'Clan Urquhart'),
@@ -367,7 +367,7 @@ export const HOUSE_SKALD_FAMILY = Object.freeze({
       title: 'Chronist und Gefährte Galmars',
       notes: 'War laut Quelle 15 Jahre alt zu Beginn des von Ragnor besungenen Krieges und schrieb ihn später anhand von Zeugnissen nieder.'
     }),
-    spouse('ormrun-grindel', 'Ormrún Grindel', 'female', '1608', '1681', 'house-grindel', {
+    spouse('ormrun-grindel', 'Ormrún Grendel', 'female', '1608', '1681', 'house-grendel', {
       notes: 'Ehefrau Eirekrs und anhand der Stammbaumgrafik Mutter von Oleg, Svanhild und Lodvar. Die Kinderüberschrift ersetzt ihren Namen widersprüchlich durch „??“.'
     }),
     spouse('hoskuld-freiwinter', 'Hoskuld Freiwinter', 'male', '1605', '1628', 'house-freiwinter'),

@@ -22,6 +22,7 @@ function renderEditCommentSegmentList() {
         ${getCommentSegmentActorControl(segment, true)}
         ${getSegmentSideControl(segment, true)}
         ${getCommentLanguageControls(segment, true)}
+        ${getCommentSegmentImageSetPicker(segment, true)}
         ${canUseEmote ? getSegmentEmotePalette(segment, true) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -156,9 +157,22 @@ function setEditCommentSegmentEmote(id, value) {
   updateEditFormPreview();
 }
 
+function setEditCommentSegmentImageSet(id, setId) {
+  const segment = _editCommentSegments.find(item => item.id === id);
+  const context = segment ? getCommentSegmentImageSetContext(segment, true) : null;
+  const selectedSet = context?.imageSets.find(set => set.id === String(setId || ''));
+  if (!segment || !selectedSet) return;
+  segment.imageSetId = selectedSet.id;
+  segment.emoteIndex = null;
+  renderEditCommentSegmentList();
+  updateEditFormPreview();
+}
+
 function addEditCommentSegment(kind = 'speech') {
   if (!getAllowedCommentSegmentKinds(true).includes(kind)) kind = 'action';
-  _editCommentSegments.push(makeCommentSegment(kind));
+  _editCommentSegments.push(makeCommentSegment(kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
+    imageSetId: kind === 'action' ? '' : _editSelectedImageSetId
+  }));
   renderEditCommentSegmentList();
   updateEditFormPreview();
   setTimeout(() => {
@@ -169,7 +183,12 @@ function addEditCommentSegment(kind = 'speech') {
 
 function removeEditCommentSegment(id) {
   _editCommentSegments = _editCommentSegments.filter(segment => segment.id !== id);
-  if (!_editCommentSegments.length) _editCommentSegments = [makeCommentSegment(_editMode === 'narrator' ? 'action' : 'speech')];
+  if (!_editCommentSegments.length) {
+    const fallbackKind = _editMode === 'narrator' ? 'action' : 'speech';
+    _editCommentSegments = [makeCommentSegment(fallbackKind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
+      imageSetId: fallbackKind === 'action' ? '' : _editSelectedImageSetId
+    })];
+  }
   renderEditCommentSegmentList();
   updateEditFormPreview();
 }

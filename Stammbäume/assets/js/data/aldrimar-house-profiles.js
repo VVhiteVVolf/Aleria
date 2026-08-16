@@ -19,9 +19,30 @@ export const ALDRIMAR_HOUSE_EMBLEMS = Object.freeze({
 
 const JARL_CLAN_DEFINITIONS = Object.freeze({
   vaeren: Object.freeze({ jarltum: 'Kronental', jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.kronental, rankId: 'royal' }),
-  wargh: Object.freeze({ jarltum: 'Ivarsheim', jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.ivarsheim, rankId: 'jarl' }),
-  ragnulf: Object.freeze({ jarltum: 'Schwarzfenn', jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.schwarzfenn, rankId: 'jarl' }),
-  varangr: Object.freeze({ jarltum: 'Krähenmoor', jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.kraehenmoor, rankId: 'jarl' }),
+  wargh: Object.freeze({
+    jarltum: 'Ivarsheim',
+    jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.ivarsheim,
+    rankId: 'jarl',
+    folderPath: Object.freeze(['Aldrimar', 'Ivarsheim', 'Ivarsklamm', 'Ivarsfels']),
+    baronyEmblem: 'assets/images/regions/aldrimar-ivarsklamm.png',
+    seatEmblem: 'assets/images/regions/aldrimar-stadt.png'
+  }),
+  ragnulf: Object.freeze({
+    jarltum: 'Schwarzfenn',
+    jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.schwarzfenn,
+    rankId: 'jarl',
+    folderPath: Object.freeze(['Aldrimar', 'Schwarzfenn', 'Wolfsfenn', 'Wolfsklamm']),
+    baronyEmblem: 'assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png',
+    seatEmblem: 'assets/images/regions/aldrimar-stadt.png'
+  }),
+  varangr: Object.freeze({
+    jarltum: 'Krähenmoor',
+    jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.kraehenmoor,
+    rankId: 'jarl',
+    folderPath: Object.freeze(['Aldrimar', 'Krähenmoor', 'Jarltümliche Herrschaft von Nebelmoor', 'Moortal']),
+    baronyEmblem: 'assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png',
+    seatEmblem: 'assets/images/regions/aldrimar-stadt.png'
+  }),
   varulv: Object.freeze({
     jarltum: 'Roriksheim',
     jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.roriksheim,

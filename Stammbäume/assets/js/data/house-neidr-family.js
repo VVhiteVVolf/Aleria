@@ -181,7 +181,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-saith', 'Haus Saith', HOUSE_EMBLEMS.saith),
     house('house-tiwna', 'Haus Tiwna', HOUSE_EMBLEMS.tiwna),
-    house('house-trachwyll', 'Haus Trachwyll'),
+    house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan)
   ],
   persons: [
@@ -311,7 +311,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     person('ael-neidr', 'Ael Neidr', 'female', '1700', ''),
     person('morgana-wylan', 'Morgana Wylan', 'female', '1694', '', 'house-wylan'),
     person('morholt-tiwna', 'Morholt Tiwna', 'male', '1690', '', 'house-tiwna'),
-    person('falka-trachwyll', 'Falka Trachwyll', 'female', '1699', '', 'house-trachwyll'),
+    person('falka-trachwyll', 'Falka Trachwyll', 'female', '1699', '', 'house-trachwyll-talfronwyn'),
     person('ariana-saith', 'Ariana Saith', 'female', '1698', '', 'house-saith'),
     person('crystin-crefyddol', 'Crystin Crefyddol', 'female', '1700', '', 'house-crefyddol'),
     person('afanen-morforwyn', 'Afanen Morforwyn', 'female', '1692', '', 'house-morforwyn'),

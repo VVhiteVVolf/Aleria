@@ -33,6 +33,10 @@ export const PERSON_CARD_FRAMES = Object.freeze({
   holy: Object.freeze({
     ...personFrame('HolyFrame.png', 50, 12.6, 'holy'),
     displayCrest: false
+  }),
+  infernal: Object.freeze({
+    ...personFrame('InfernalerRahmen.png', 50, 12.6, 'infernal'),
+    displayCrest: false
   })
 });
 

@@ -264,7 +264,7 @@ export const HOUSE_VARULV_FAMILY = Object.freeze({
     house('house-soekeren', 'Clan Sökeren', HOUSE_EMBLEMS.soekeren),
     house('house-sterkr', 'Clan Sterkr', HOUSE_EMBLEMS.sterkr),
     house('house-schwarzdorn', 'Clan Schwarzdorn', HOUSE_EMBLEMS.schwarzdorn),
-    house('house-trachwyll', "Haus Trachwyll O'Talfronwy"),
+    house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
     house('house-ard-dubglais', 'Clan Ard Dubglais'),
     house('house-sturmgeborene', 'Clan Sturmgeborene'),
     house('house-frostauge', 'Clan Frostauge'),
@@ -300,8 +300,8 @@ export const HOUSE_VARULV_FAMILY = Object.freeze({
 
     person('erling-varulv', 'Erling Varulv', 'male', '1577', '1625', { title: 'Jarl von Roriksheim' }),
     spouse('dagni-brathfengr', 'Dagni Brathfengr', 'female', '1579', '1654', 'house-brathfengr'),
-    awayWoman('edda-varulv', 'Edda Varulv', '1583', '1627', "Haus Trachwyll O'Talfronwy"),
-    spouse('macsen-trachwyll', "Macsen Trachwyll O'Talfronwy", 'male', '1580', '1650', 'house-trachwyll'),
+    awayWoman('edda-varulv', 'Edda Varulv', '1583', '1627', "Haus Trachwyll O'Talfronwyn"),
+    spouse('macsen-trachwyll', "Macsen Trachwyll O'Talfronwyn", 'male', '1580', '1650', 'house-trachwyll-talfronwyn'),
     person('eldgrim-varulv', 'Eldgrim Varulv', 'male', '1580', '1625', { title: 'Jarl von Roriksheim' }),
     spouse('saoirse-ard-dubglais', 'Saoirse Ard Dubglais', 'female', '1581', '1635', 'house-ard-dubglais'),
 
@@ -445,7 +445,7 @@ export const HOUSE_VARULV_FAMILY = Object.freeze({
       notes: 'Fannarr Varulv und Ingeborg Brathfengr begründen den Clan Nachtjäger; der Hausknoten hängt direkt unter ihrem Paar.'
     }),
     marriedAway('married-away-herdis-varulv-kampfgeborene', 'Clan Kampfgeborene', 'marriage-herdis-hjolm-varulv', 'house-kampfgeborene', 'haus-kampfgeborene', HOUSE_EMBLEMS.kampfgeborene),
-    marriedAway('married-away-edda-varulv-trachwyll', "Haus Trachwyll O'Talfronwy", 'marriage-edda-macsen-varulv', 'house-trachwyll', 'haus-trachwyll'),
+    marriedAway('married-away-edda-varulv-trachwyll', "Haus Trachwyll O'Talfronwyn", 'marriage-edda-macsen-varulv', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-astrid-varulv-vaeren', 'Clan Vaeren', 'marriage-astrid-roger-varulv', 'house-vaeren', 'haus-vaeren', HOUSE_EMBLEMS.vaeren),
     marriedAway('married-away-rannveig-varulv-sturmgeborene', 'Clan Sturmgeborene', 'marriage-rannveig-torger-varulv', 'house-sturmgeborene', 'haus-sturmgeborene'),
     marriedAway('married-away-torborg-varulv-freiwinter', 'Clan Freiwinter', 'marriage-torborg-jakul-varulv', 'house-freiwinter', 'haus-freiwinter', HOUSE_EMBLEMS.freiwinter),

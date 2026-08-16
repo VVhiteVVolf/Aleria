@@ -12,6 +12,7 @@ import {
 import { HOUSE_COEDWIG_PORTRAITS } from './house-coedwig-portraits.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SCHWARZFENN_HOUSE_EMBLEMS } from './schwarzfenn-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 
 const COEDWIG_HOUSE_ID = 'house-coedwig';
@@ -34,6 +35,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   pysgod: GRAUE_WEITE_HOUSE_EMBLEMS.pysgod,
   pyrth: SILBERINSEL_HOUSE_EMBLEMS.pyrth,
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  schmetterschild: SCHWARZFENN_HOUSE_EMBLEMS.schmetterschild,
   tiwna: SILBERINSEL_HOUSE_EMBLEMS.tiwna,
   wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern,
   wylan: WEIDEBUCHT_HOUSE_EMBLEMS.wylan,
@@ -232,7 +234,7 @@ export const HOUSE_COEDWIG_FAMILY = Object.freeze({
     house('house-pysgod', "Haus Pysgod O'Tredegar", HOUSE_EMBLEMS.pysgod),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
-    house('house-brakskjold', 'Haus Brakskjold'),
+    house('house-schmetterschild', 'Clan Schmetterschild', HOUSE_EMBLEMS.schmetterschild),
     house('house-duff', 'Haus Duff'),
     house('house-draenog', 'Haus Draenog', HOUSE_EMBLEMS.draenog),
     house('house-mochdaer-gwyliau', "Haus Mochdaer O'Gwyliau", HOUSE_EMBLEMS.mochdaer),
@@ -289,7 +291,9 @@ export const HOUSE_COEDWIG_FAMILY = Object.freeze({
       title: 'Verlobter Gwyneth Coedwigs'
     }),
     spouse('rhydian-brithyll', 'Rhydian Brithyll', 'male', '1639', '1675', 'house-brithyll'),
-    spouse('ottilie-brakskjold', 'Ottilie Brakskjold', 'female', '1636', '1703', 'house-brakskjold'),
+    spouse('ottilie-brakskjold', 'Ottilie Schmetterschild', 'female', '1636', '1703', 'house-schmetterschild', {
+      notes: 'Die Schmetterschild-Ursprungsakte identifiziert Ottilie eindeutig als Tochter Sighvats und Isbjörgs.'
+    }),
 
     person('cynddelw-coedwig', 'Cynddelw Coedwig', 'male', '1650', '1720', {
       title: 'Baron des Hauses Coedwig 1699–1720',
@@ -447,9 +451,9 @@ export const HOUSE_COEDWIG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 5,
     sourceModule: "Haus Coedwig O'Llanfyn (bereitgestellte Altdaten)",
-    sourceNote: 'Hoyer Coedwig und Tanwyn stehen als Gründerpaar vor Hausknoten und genau einem seriellen Zeitsprung. Die Stammbaumgrafik ergänzt Gwyneth als viertes Kind Meredydds: Nach Gareths Tod heiratet sie Rhydian Brithyll; Nachkommen werden nur in der Brithyll-Akte geführt. Cyndellw/Cynddelw, Mererid/Meredid und Trahaern/Trahaearn wurden anhand bestehender Gegenakten und der Ämterliste vereinheitlicht. Die fehlerhafte Kinderüberschrift „Jac’s & Ysbail’s“ meint nach Partnerschaft, Stammbaumgrafik und Erbfolge Lucan und Ysbail. Kinder wegverheirateter Coedwig-Frauen werden ausschließlich in den jeweiligen Zielhäusern fortgeführt. Die neuere Gwaedlyd-Quelle weist Zara eindeutig Talan Gwaedlyd statt Talan Créyr zu; die Verlobung wird unter ihrer neuen gemeinsamen ID in beiden richtigen Akten gespiegelt. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Hoyer Coedwig und Tanwyn stehen als Gründerpaar vor Hausknoten und genau einem seriellen Zeitsprung. Die Stammbaumgrafik ergänzt Gwyneth als viertes Kind Meredydds: Nach Gareths Tod heiratet sie Rhydian Brithyll; Nachkommen werden nur in der Brithyll-Akte geführt. Cyndellw/Cynddelw, Mererid/Meredid und Trahaern/Trahaearn wurden anhand bestehender Gegenakten und der Ämterliste vereinheitlicht. Die fehlerhafte Kinderüberschrift „Jac’s & Ysbail’s“ meint nach Partnerschaft, Stammbaumgrafik und Erbfolge Lucan und Ysbail. Kinder wegverheirateter Coedwig-Frauen werden ausschließlich in den jeweiligen Zielhäusern fortgeführt. Die neuere Gwaedlyd-Quelle weist Zara eindeutig Talan Gwaedlyd statt Talan Créyr zu; die Verlobung wird unter ihrer neuen gemeinsamen ID in beiden richtigen Akten gespiegelt. Die Schmetterschild-Ursprungsakte korrigiert Ottilies bislang als Brakskjold geführten Hausnamen zu Schmetterschild; ihre stabile Personen-ID, Ehe mit Rhodri und ihr Kind Morgan bleiben erhalten. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryTombstones: {
       persons: ['talan-creyr'],
       partnerships: ['engagement-talan-zara-coedwig']

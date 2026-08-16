@@ -19,6 +19,7 @@
         ${getCommentSegmentActorControl(segment, false)}
         ${getSegmentSideControl(segment, false)}
         ${getCommentLanguageControls(segment, false)}
+        ${getCommentSegmentImageSetPicker(segment, false)}
         ${canUseEmote ? getSegmentEmotePalette(segment, false) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -160,9 +161,23 @@ function setCommentSegmentEmote(id, value) {
   persistCommentDraft();
 }
 
+function setCommentSegmentImageSet(id, setId) {
+  const segment = _commentSegments.find(item => item.id === id);
+  const context = segment ? getCommentSegmentImageSetContext(segment, false) : null;
+  const selectedSet = context?.imageSets.find(set => set.id === String(setId || ''));
+  if (!segment || !selectedSet) return;
+  segment.imageSetId = selectedSet.id;
+  segment.emoteIndex = null;
+  renderCommentSegmentList();
+  updateCommentFormPreview();
+  persistCommentDraft();
+}
+
 function addCommentSegment(kind = 'speech') {
   if (!getAllowedCommentSegmentKinds(false).includes(kind)) kind = 'action';
-  _commentSegments.push(makeCommentSegment(kind));
+  _commentSegments.push(makeCommentSegment(kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
+    imageSetId: kind === 'action' ? '' : _selectedImageSetId
+  }));
   renderCommentSegmentList();
   updateCommentFormPreview();
   persistCommentDraft();
@@ -174,7 +189,12 @@ function addCommentSegment(kind = 'speech') {
 
 function removeCommentSegment(id) {
   _commentSegments = _commentSegments.filter(segment => segment.id !== id);
-  if (!_commentSegments.length) _commentSegments = [makeCommentSegment(_commentMode === 'narrator' ? 'action' : 'speech')];
+  if (!_commentSegments.length) {
+    const fallbackKind = _commentMode === 'narrator' ? 'action' : 'speech';
+    _commentSegments = [makeCommentSegment(fallbackKind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
+      imageSetId: fallbackKind === 'action' ? '' : _selectedImageSetId
+    })];
+  }
   renderCommentSegmentList();
   updateCommentFormPreview();
   persistCommentDraft();

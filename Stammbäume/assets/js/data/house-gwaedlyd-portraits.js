@@ -67,6 +67,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // nicht als individuelle Porträts importiert.
 export const HOUSE_GWAEDLYD_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'bethwyn-trachwyll': 'assets/images/portraits/haus-trachwyll/bethwyn-trachwyll.jpg',
   'tathal-blodyn': HOUSE_BLODYN_PORTRAITS['tathal-blodyn'],
   'gronw-gwaedlyd': HOUSE_MORFIL_PORTRAITS['gronw-gwaedlyd'],
   'caraf-morfil': HOUSE_MORFIL_PORTRAITS['caraf-morfil'],

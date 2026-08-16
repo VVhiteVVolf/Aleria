@@ -22,6 +22,11 @@ export function rewriteFamilyImageRefs(family, resolvedByKey) {
   regionEmblems.barony = resolve('houseProfile.regionEmblems.barony', family.document.id, regionEmblems.barony);
   regionEmblems.county = resolve('houseProfile.regionEmblems.county', family.document.id, regionEmblems.county);
   regionEmblems.kingdom = resolve('houseProfile.regionEmblems.kingdom', family.document.id, regionEmblems.kingdom);
+  if (Array.isArray(next.document.houseProfile.folderIcons)) {
+    next.document.houseProfile.folderIcons = next.document.houseProfile.folderIcons.map((current, index) => (
+      resolve(`houseProfile.folderIcons.${index}`, family.document.id, current)
+    ));
+  }
   next.persons.forEach(person => {
     person.portrait = resolve('person.portrait', person.id, person.portrait);
   });

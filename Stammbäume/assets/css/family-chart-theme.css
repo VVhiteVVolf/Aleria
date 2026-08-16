@@ -393,6 +393,67 @@
   left: 42.5%;
 }
 
+/* Der Infernale Rahmen besitzt eine schmalere Portraitöffnung und ein eigenes
+   Medaillon. Das Clanwappen wird nicht darübergelegt; Inhalt und Text folgen
+   ausschließlich der freien Innenfläche des Rahmenbilds. */
+/* Die ausgreifenden Zacken erhalten innerhalb des bestehenden Chart-Rasters
+   mehr sichtbare Flaeche; die fremden Kartenvarianten bleiben unveraendert. */
+.family-chart-host.f3 .aleria-person-card.frame-infernal {
+  top: -0.5rem;
+  left: -0.75rem;
+  width: 21.5rem;
+  height: 14.3125rem;
+  min-height: 14.3125rem;
+}
+
+.aleria-person-card.frame-infernal .aleria-person-card__portrait-backdrop,
+.aleria-person-card.frame-infernal .aleria-person-card__portrait {
+  top: 24.3%;
+  left: 11.8%;
+  width: 25.5%;
+  height: 58.4%;
+}
+
+.aleria-person-card.frame-infernal .aleria-person-card__fill {
+  inset: 24.5% 9.5% 17.5% 38%;
+  clip-path: none;
+}
+
+.aleria-person-card.frame-infernal .aleria-person-card__text {
+  top: 29.5%;
+  right: 9.5%;
+  bottom: 18%;
+  left: 38.8%;
+  overflow: visible;
+}
+
+.aleria-person-card.frame-infernal .family-card-name,
+.aleria-person-card.frame-infernal .family-card-title {
+  display: block;
+  overflow: visible;
+  text-overflow: clip;
+  -webkit-line-clamp: unset;
+}
+
+.aleria-person-card.frame-infernal .family-card-name {
+  font-size: 0.72rem;
+  line-height: 1.06;
+}
+
+.aleria-person-card.frame-infernal .family-card-title {
+  font-size: 0.56rem;
+  line-height: 1.13;
+}
+
+.aleria-person-card.frame-infernal .family-card-house {
+  margin-top: 0.5rem;
+  font-size: 0.5rem;
+}
+
+.aleria-person-card.frame-infernal .family-card-life {
+  font-size: 0.53rem;
+}
+
 .aleria-crest-node {
   display: flex !important;
   flex-direction: column;

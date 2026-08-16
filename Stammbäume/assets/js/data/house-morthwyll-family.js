@@ -126,7 +126,7 @@ const COUPLES = Object.freeze({
   katewen: ['gethin-crefyddol', 'katewen-morthwyl'],
   grugyn: ['grugyn-morthwyll', 'hedvig-hyrmgardr'],
   guenevere: ['guenevere-morthwyll', 'kane-trachwyll'],
-  kynwrig: ['kynwrig-morthwyll', 'ursula-skog'],
+  kynwrig: ['kynwrig-morthwyll', 'ursula-skogg'],
   lowri: ['lowri-morthwyll', 'unknown-grindel-betrothed-lowri']
 });
 
@@ -199,10 +199,10 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     house('house-selwyn', "Haus Sélwyn O'Caer Ebirth", HOUSE_EMBLEMS.selwyn),
     house('house-krigsfodt', 'Haus Krigsfodt'),
     house('house-crefyddol', "Haus Crefyddol O'Llanvane", HOUSE_EMBLEMS.crefyddol),
-    house('house-hyrmgardr', 'Clan Hyrmgardr'),
-    house('house-trachwyll', "Haus Trachwyll O'Talfronwy"),
+    house('house-hyrmgardr', 'Clan Hyrmgarthr'),
+    house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
     house('house-skogg', 'Haus Skogg'),
-    house('house-clan-grindel', 'Clan Grindel')
+    house('house-clan-grendel', 'Clan Grendel')
   ],
   persons: [
     person('collen-founder-morthwyll', 'Collen Morthwyll', 'male', '????', '????', {
@@ -253,11 +253,11 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     person('grugyn-morthwyll', 'Grugyn Morthwyll', 'male', '1695', '', {
       title: 'Erster Erbe des Hauses Morthwyll'
     }),
-    spouse('hedvig-hyrmgardr', 'Hedvig Hyrmgardr', 'female', '1698', '', 'house-hyrmgardr'),
+    spouse('hedvig-hyrmgardr', 'Hedvig Hyrmgarthr', 'female', '1698', '', 'house-hyrmgardr'),
     marriedAwayPerson('guenevere-morthwyll', 'Guenevere Morthwyll', 'female', '1697', '', 'Haus Trachwyll'),
-    spouse('kane-trachwyll', 'Kane Trachwyll', 'male', '1700', '', 'house-trachwyll'),
+    spouse('kane-trachwyll', 'Kane Trachwyll', 'male', '1700', '', 'house-trachwyll-talfronwyn'),
     person('kynwrig-morthwyll', 'Kynwrig Morthwyll', 'male', '1700', ''),
-    spouse('ursula-skog', 'Ursula Skogg', 'female', '1699', '', 'house-skogg'),
+    spouse('ursula-skogg', 'Ursula Skogg', 'female', '1699', '', 'house-skogg'),
 
     person('arawn-morthwyll', 'Arawn Morthwyll', 'male', '1719', '', {
       title: 'Zweiter Erbe des Hauses Morthwyll'
@@ -268,11 +268,11 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     }),
     person('drwst-morthwyll', 'Drwst Morthwyll', 'male', '1723', ''),
     person('lowri-morthwyll', 'Lowri Morthwyll', 'female', '1723', '', {
-      title: 'Verlobt mit einem Mitglied des Clans Grindel',
+      title: 'Verlobt mit einem Mitglied des Clans Grendel',
       tags: ['Verlobt']
     }),
-    spouse('unknown-grindel-betrothed-lowri', 'Unbekannter Verlobter', 'male', '????', '', 'house-clan-grindel', {
-      title: 'Mitglied des Clans Grindel',
+    spouse('unknown-grindel-betrothed-lowri', 'Unbekannter Verlobter', 'male', '????', '', 'house-clan-grendel', {
+      title: 'Mitglied des Clans Grendel',
       tags: ['Platzhalter', 'Verlobt']
     })
   ],
@@ -295,7 +295,7 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     createMarriage('marriage-kynwrig-ursula-morthwyll', ...COUPLES.kynwrig),
     createMarriage('engagement-lowri-grindel-morthwyll', ...COUPLES.lowri, {
       type: 'engagement',
-      notes: 'Die Hausgeschichte belegt Lowris Verlobung mit einem namentlich nicht genannten Mitglied des Clans Grindel.'
+      notes: 'Die Hausgeschichte belegt Lowris Verlobung mit einem namentlich nicht genannten Mitglied des Clans Grendel.'
     })
   ],
   parentages: [
@@ -313,7 +313,7 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     marriedAway('married-away-tymora-morthwyll-unigol', 'Haus Unigol', 'marriage-tryffin-tymora-unigol', 'house-unigol', 'haus-unigol', HOUSE_EMBLEMS.unigol),
     marriedAway('married-away-senara-morthwyll-selwyn', 'Haus Sélwyn', 'marriage-senara-berwyn-morthwyll', 'house-selwyn', 'haus-selwyn', HOUSE_EMBLEMS.selwyn),
     marriedAway('married-away-katewen-morthwyll-crefyddol', 'Haus Crefyddol', 'marriage-gethin-katewen-crefyddol', 'house-crefyddol', 'haus-crefyddol', HOUSE_EMBLEMS.crefyddol),
-    marriedAway('married-away-guenevere-morthwyll-trachwyll', 'Haus Trachwyll', 'marriage-guenevere-kane-morthwyll', 'house-trachwyll', 'haus-trachwyll')
+    marriedAway('married-away-guenevere-morthwyll-trachwyll', "Haus Trachwyll O'Talfronwyn", 'marriage-guenevere-kane-morthwyll', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn')
   ],
   timeJumps: [
     {
@@ -349,11 +349,11 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceFamilyId: '',
     sourcePartnershipId: '',
     sourceModule: "Haus Morthwyl O'Caer Morben (bereitgestellte Altdaten)",
-    sourceNote: 'Haus Morthwyll ist ein eigenständiges Ritterfürsten- und Vasallenhaus der Arth, ausdrücklich kein Arth-Kadettenhaus. Collen und Tymora stehen vor dem Hausknoten; genau ein absoluter Zeitsprung führt danach zu Merlion und Gwenfrewi. Heddwen Arth heiratet erst später zu Sayres Morthwyll ein. Gwenfrewi, Braih, Tymora, Senara, Katewen und Guenevere erhalten direkte Wegverheiratet-Knoten; ihre fremden Kinderlinien bleiben ausschließlich in Penderyn, Cwningod, Unigol, Sélwyn, Crefyddol beziehungsweise Trachwyll. Lowris in der Hausgeschichte belegte Verlobung mit einem namentlich unbekannten Mitglied des Clans Grindel wird als Verlobung ohne Wegheirat geführt. Gegenakten haben bei abweichenden Daten Vorrang: Gwenfrewi 1612–1664, Dadweir 1611–1678 und Rhondia 1622–1699. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Haus Morthwyll ist ein eigenständiges Ritterfürsten- und Vasallenhaus der Arth, ausdrücklich kein Arth-Kadettenhaus. Collen und Tymora stehen vor dem Hausknoten; genau ein absoluter Zeitsprung führt danach zu Merlion und Gwenfrewi. Heddwen Arth heiratet erst später zu Sayres Morthwyll ein. Gwenfrewi, Braih, Tymora, Senara, Katewen und Guenevere erhalten direkte Wegverheiratet-Knoten; ihre fremden Kinderlinien bleiben ausschließlich in Penderyn, Cwningod, Unigol, Sélwyn, Crefyddol beziehungsweise Trachwyll. Lowris in der Hausgeschichte belegte Verlobung mit einem namentlich unbekannten Mitglied des Clans Grendel wird als Verlobung ohne Wegheirat geführt. Gegenakten haben bei abweichenden Daten Vorrang: Gwenfrewi 1612–1664, Dadweir 1611–1678 und Rhondia 1622–1699. Ursulas frühere Tippfehler-ID „ursula-skog“ wurde für die gemeinsame Skogg-Gegenakte auf „ursula-skogg“ vereinheitlicht. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote', 'sourceFamilyId', 'sourcePartnershipId'],
     registryManagedHouseProfileFields: [
       'rankId',

@@ -16,7 +16,7 @@ export function extensionForContentType(contentType, fallbackSource = '') {
   return match ? `.${match[1].toLocaleLowerCase('de')}` : '.png';
 }
 
-// Sammelt alle sechs bild-tragenden Stellen im Schema. Jeder Eintrag trägt einen
+// Sammelt alle bild-tragenden Stellen im Schema. Jeder Eintrag trägt einen
 // strukturierten "kind" (statt eines geparsten Pfadstrings), damit sich Export und
 // Import ohne fragile String-Zerlegung wieder zuordnen lassen (siehe
 // family-bundle-import.js#rewriteFamilyImageRefs).
@@ -33,6 +33,9 @@ export function collectFamilyImageRefs(family) {
   push('houseProfile.regionEmblems.barony', family.document.id, regionEmblems.barony);
   push('houseProfile.regionEmblems.county', family.document.id, regionEmblems.county);
   push('houseProfile.regionEmblems.kingdom', family.document.id, regionEmblems.kingdom);
+  (family.document.houseProfile?.folderIcons || []).forEach((source, index) => {
+    push(`houseProfile.folderIcons.${index}`, family.document.id, source);
+  });
   family.persons.forEach(person => push('person.portrait', person.id, person.portrait));
   family.houses.forEach(house => push('house.emblem', house.id, house.emblem));
   family.cadetBranches.forEach(branch => push('cadetBranch.emblem', branch.id, branch.emblem));
@@ -57,7 +60,10 @@ const ZIP_NAME_PREFIXES = Object.freeze({
 const OWNED_KINDS = new Set(['person.portrait', 'house.emblem', 'cadetBranch.emblem']);
 
 export function zipFilenameFor(ref, extension) {
-  const prefix = ZIP_NAME_PREFIXES[ref.kind] || 'image';
+  const folderIconMatch = /^houseProfile\.folderIcons\.(\d+)$/.exec(ref.kind);
+  const prefix = folderIconMatch
+    ? `region-folder-${folderIconMatch[1]}`
+    : ZIP_NAME_PREFIXES[ref.kind] || 'image';
   const suffix = OWNED_KINDS.has(ref.kind) && ref.ownerId ? `-${ref.ownerId}` : '';
   return `images/${prefix}${suffix}${extension}`;
 }

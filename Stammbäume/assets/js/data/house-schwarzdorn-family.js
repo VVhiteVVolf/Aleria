@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_SCHWARZDORN_PORTRAITS } from './house-schwarzdorn-portraits.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
 import {
   RORIKSHEIM_HOUSE_EMBLEMS,
   RORIKSHEIM_HOUSE_PROFILES
@@ -23,7 +24,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   kampfgeborene: RORIKSHEIM_HOUSE_EMBLEMS.kampfgeborene,
   skjegg: RORIKSHEIM_HOUSE_EMBLEMS.skjegg,
   sterkr: RORIKSHEIM_HOUSE_EMBLEMS.sterkr,
-  brathfengr: RORIKSHEIM_HOUSE_EMBLEMS.brathfengr
+  brathfengr: RORIKSHEIM_HOUSE_EMBLEMS.brathfengr,
+  hyrmgardr: IVARSHEIM_HOUSE_EMBLEMS.hyrmgardr
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -246,12 +248,12 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     house('house-brathfengr', 'Clan Brathfengr', HOUSE_EMBLEMS.brathfengr),
     house('house-graumahne', 'Clan Graumähne'),
     house('house-feuerhaar', 'Clan Feuerhaar'),
-    house('house-grindel', 'Clan Grindel'),
+    house('house-grendel', 'Clan Grendel'),
     house('house-haeghra', 'Clan Haeghra'),
     house('house-skogg', 'Clan Skogg'),
     house('house-silberzunge', 'Clan Silberzunge'),
     house('house-frostauge', 'Clan Frostauge'),
-    house('house-hyrmgardr', 'Clan Hyrmgaðr'),
+    house('house-hyrmgardr', 'Clan Hyrmgarthr', HOUSE_EMBLEMS.hyrmgardr),
     house('house-teyrngarch', 'Haus Teyrngarch'),
     house('house-sturmgeborene', 'Clan Sturmgeborene'),
     house('house-unknown', 'Unbekanntes Haus')
@@ -264,7 +266,7 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     spouse('svanlaug', 'Svanlaug', 'female', '????', '????'),
 
     person('inigmund-schwarzdorn', 'Inigmund Schwarzdorn', 'male', '1570', '1624', { title: 'Hesir des Clans Schwarzdorn' }),
-    spouse('hallbera-graumahne', 'Hallbera Graumähne', 'female', '1571', '1640?', 'house-graumahne'),
+    spouse('hallbera-graumahne', 'Hallbera Graumähne', 'female', '1571', '1640', 'house-graumahne'),
     person('sigmund-schwarzdorn', 'Sigmund Schwarzdorn', 'male', '1576', '1622'),
     spouse('ermingard', 'Ermingard', 'female', '1577', '1654'),
 
@@ -289,7 +291,7 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     spouse('thurid-skjegg', 'Thurid Skjegg', 'female', '1621', '1694', 'house-skjegg'),
 
     person('tormund-1643-schwarzdorn', 'Tormund Schwarzdorn', 'male', '1643', '1709', { title: 'Hesir des Clans Schwarzdorn' }),
-    spouse('yrsa-grindel', 'Yrsa Grindel', 'female', '1645', '1711', 'house-grindel'),
+    spouse('yrsa-grindel', 'Yrsa Grendel', 'female', '1645', '1711', 'house-grendel'),
     awayWoman('maeve-schwarzdorn', 'Maeve Schwarzdorn', '1645', '1719', 'Clan Haeghra'),
     spouse('seamus-haeghra', 'Seamus Haeghra', 'male', '1644', '1707', 'house-haeghra'),
     person('vignar-schwarzdorn', 'Vignar Schwarzdorn', 'male', '1647', '1703'),
@@ -320,10 +322,13 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     spouse('borghild-skjegg', 'Borghild Skjegg', 'female', '1695', '', 'house-skjegg', {
       notes: 'Die Ehezeile der Quelle nennt Borghild als Mathons Frau. Die Kinderüberschrift nennt abweichend „Lydia“, ohne dafür einen eigenen Personeneintrag zu liefern; deshalb wird keine zweite Person erfunden.'
     }),
-    awayWoman('maven-schwarzdorn', 'Maven Schwarzdorn', '1693', '', 'Clan Hyrmgaðr', {
-      title: 'Leiterin der Schwarzdorn-Brauerei · Wegverheiratet an Clan Hyrmgaðr'
+    person('maven-schwarzdorn', 'Maven Schwarzdorn', 'female', '1693', '', {
+      title: 'Leiterin der Schwarzdorn-Brauerei'
     }),
-    spouse('jarell-hyrmgardr', 'Jarell Hyrmgaðr', 'male', '1673', '', 'house-hyrmgardr'),
+    spouse('jarell-hyrmgardr', 'Jarell Hyrmgarthr', 'male', '1673', '', 'house-hyrmgardr', {
+      title: 'Wegverheiratet an Clan Schwarzdorn',
+      tags: ['Wegverheiratet']
+    }),
     person('miermir-schwarzdorn', 'Miermir Schwarzdorn', 'male', '1696', '1720'),
     spouse('angreboda-freiwinter', 'Angreboda Freiwinter', 'female', '1697', '1721', 'house-freiwinter'),
     awayWoman('maeva-schwarzdorn', 'Maeva Schwarzdorn', '1707', '', 'Clan Freiwinter'),
@@ -341,6 +346,16 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
 
     person('tormund-1713-schwarzdorn', 'Tormund Schwarzdorn', 'male', '1713', '', { title: 'Hesir des Clans Schwarzdorn seit 1721' }),
     person('honmund-schwarzdorn', 'Honmund Schwarzdorn', 'male', '1718', '', { title: 'Erster Erbe des Clans Schwarzdorn' }),
+    person('ayleth-hyrmgardr', 'Ayleth Hyrmgarthr', 'female', '1714', '', {
+      houseId: 'house-hyrmgardr',
+      familyRole: 'core',
+      title: 'Tochter Mavens Schwarzdorn und Jarells Hyrmgarthr'
+    }),
+    person('aradin-hyrmgardr', 'Aradin Hyrmgarthr', 'male', '1716', '', {
+      houseId: 'house-hyrmgardr',
+      familyRole: 'core',
+      title: 'Sohn Mavens Schwarzdorn und Jarells Hyrmgarthr'
+    }),
     person('sigmir-schwarzdorn', 'Sigmir Schwarzdorn', 'male', '1715', ''),
     person('hermir-schwarzdorn', 'Hermir Schwarzdorn', 'male', '1719', ''),
     person('hermina-schwarzdorn', 'Hermina Schwarzdorn', 'female', '1721', ''),
@@ -413,6 +428,9 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     ...childrenOf(['tormund-1713-schwarzdorn', 'honmund-schwarzdorn'], 'marriage-mathon-borghild-schwarzdorn', {
       notes: 'Die Kinderüberschrift der Quelle nennt „Lydia“, obwohl die unmittelbar vorangehende Ehezeile ausschließlich Borghild Skjegg als Mathons Frau ausweist.'
     }),
+    ...childrenOf(['ayleth-hyrmgardr', 'aradin-hyrmgardr'], 'marriage-jarell-maven-schwarzdorn', {
+      notes: 'Die Schwarzdorn-Quelle weist Ayleth und Aradin ausdrücklich Maven Schwarzdorn und Jarell Hyrmgarthr zu. Auf Nutzerfestlegung wird diese Kinderlinie ausschließlich im Schwarzdorn-Baum fortgeführt.'
+    }),
     ...childrenOf(['sigmir-schwarzdorn', 'hermir-schwarzdorn', 'hermina-schwarzdorn'], 'marriage-angreboda-miermir-freiwinter'),
     ...childrenOf(['grimkell-schwarzdorn', 'grimvard-schwarzdorn'], 'marriage-hoskuld-hildigunn-schwarzdorn'),
     ...childrenOf(['finnbogi-schwarzdorn', 'frida-schwarzdorn'], 'marriage-modolf-hervera-schwarzdorn'),
@@ -424,7 +442,6 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
     marriedAway('married-away-vorga-schwarzdorn-kampfgeborene', 'Clan Kampfgeborene', 'marriage-alrek-vorga-schwarzdorn', 'house-kampfgeborene', 'haus-kampfgeborene', HOUSE_EMBLEMS.kampfgeborene),
     marriedAway('married-away-maeve-schwarzdorn-haeghra', 'Clan Haeghra', 'marriage-seamus-maeve-schwarzdorn', 'house-haeghra', 'haus-haeghra'),
     marriedAway('married-away-ingrid-schwarzdorn-varulv', 'Clan Varulv', 'marriage-torygg-ingrid-varulv', 'house-varulv', 'haus-varulv', HOUSE_EMBLEMS.varulv),
-    marriedAway('married-away-maven-schwarzdorn-hyrmgardr', 'Clan Hyrmgaðr', 'marriage-jarell-maven-schwarzdorn', 'house-hyrmgardr', 'haus-hyrmgardr'),
     marriedAway('married-away-maeva-schwarzdorn-freiwinter', 'Clan Freiwinter', 'marriage-brunwulf-maeva-freiwinter', 'house-freiwinter', 'haus-freiwinter', HOUSE_EMBLEMS.freiwinter),
     marriedAway('married-away-annegret-schwarzdorn-teyrngarch', 'Haus Teyrngarch', 'marriage-arfon-annegret-teyrngarch', 'house-teyrngarch', 'haus-teyrngarch')
   ],
@@ -462,9 +479,12 @@ export const HOUSE_SCHWARZDORN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 5,
     sourceModule: 'Clan Schwarzdorn (bereitgestellte Altdaten)',
-    sourceNote: 'Die vollständige Schwarzdorn-Genealogie folgt der bereitgestellten Hausseite. Der Hausknoten und ein serieller Zeitsprung stehen zwischen Geirmundr/Svanlaug und Inigmund/Sigmund. Thorir wird für Affäre und Ehe nicht gedoppelt; Dagny und Thurid stehen jeweils über ihrem eigenen Kind. Mathons Ehezeile nennt Borghild, während die Kinderzeile einmalig den nicht weiter belegten Namen Lydia verwendet; ohne eigenen Personeneintrag wird keine zweite Frau erfunden. Kinder wegverheirateter Schwarzdorn-Frauen werden in der Zielakte geführt und nicht im Ursprungshaus gedoppelt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Die vollständige Schwarzdorn-Genealogie folgt der bereitgestellten Hausseite. Der Hausknoten und ein serieller Zeitsprung stehen zwischen Geirmundr/Svanlaug und Inigmund/Sigmund. Thorir wird für Affäre und Ehe nicht gedoppelt; Dagny und Thurid stehen jeweils über ihrem eigenen Kind. Mathons Ehezeile nennt Borghild, während die Kinderzeile einmalig den nicht weiter belegten Namen Lydia verwendet; ohne eigenen Personeneintrag wird keine zweite Frau erfunden. Kinder wegverheirateter Schwarzdorn-Frauen werden grundsätzlich in der Zielakte geführt. Maven bleibt als Schwarzdorn-Kernmitglied in ihrer eigenen Linie; Jarell Hyrmgarthr ist zu Clan Schwarzdorn wegverheiratet. Die belegten Kinder Ayleth und Aradin stehen ausschließlich unter Maven und Jarell im Schwarzdorn-Baum und werden bei Hyrmgarthr nicht gedoppelt. Hallberas in dieser Gegenakte zuvor nur als 1640? geführtes Todesjahr wird durch ihre ausgearbeitete Graumähne-Herkunftsakte auf 1640 präzisiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    registryTombstones: {
+      cadetBranches: ['married-away-maven-schwarzdorn-hyrmgardr']
+    },
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

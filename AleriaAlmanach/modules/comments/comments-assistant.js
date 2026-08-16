@@ -451,7 +451,9 @@ function insertCommentAssistantSuggestion() {
     emptySegment.text = text;
     if (emptySegment.kind === 'action') emptySegment.side = '';
   } else {
-    _commentSegments.push(makeCommentSegment(insertKind, text));
+    _commentSegments.push(makeCommentSegment(insertKind, text, null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
+      imageSetId: insertKind === 'action' ? '' : _selectedImageSetId
+    }));
   }
 
   renderCommentSegmentList();

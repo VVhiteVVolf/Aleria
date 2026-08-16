@@ -123,7 +123,7 @@ const DERWYDDION_HOUSES = Object.freeze([
   house(CAER_ASGWRN_HOUSE_ID, "Haus Lyfant O'Caer Asgwrn", HOUSE_EMBLEMS.lyfant),
   house('house-drummond', 'Haus Drummond'),
   house('house-blodyn', 'Haus Blodyn', HOUSE_EMBLEMS.blodyn),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-dianc', 'Haus Dianc'),
   house('house-gwenyen', 'Haus Gwenyen'),
   house('house-drewi', 'Haus Drewi'),
@@ -192,7 +192,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
       title: 'Wegverheiratet an Haus Trachwyll'
     }),
     derwyddionPerson('dafydd-trachwyll', 'Dafydd Trachwyll', 'male', '1636', '1705', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married',
       notes: 'Das Quellbild ist veraltet und wird daher bewusst nicht übernommen.'
     }),
@@ -267,7 +267,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
       title: 'In Derwyddion verbliebener Seitenzweig'
     }),
     derwyddionPerson('main-trachwyll', 'Main Trachwyll', 'female', '1671', '1720', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
     derwyddionPerson('deiniol-lyfant', 'Deiniol Lyfant', 'male', '1696', '1720', {
@@ -325,7 +325,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
   ],
   cadetBranches: [
     marriedAway('married-away-catryn-lyfant-blodyn', 'Haus Blodyn', 'marriage-gruffydd-catryn', 'house-blodyn', 'haus-blodyn', HOUSE_EMBLEMS.blodyn),
-    marriedAway('married-away-glesni-lyfant-trachwyll', 'Haus Trachwyll', 'marriage-glesni-dafydd-lyfant', 'house-trachwyll', 'haus-trachwyll'),
+    marriedAway('married-away-glesni-lyfant-trachwyll', "Haus Trachwyll O'Talfronwyn", 'marriage-glesni-dafydd-lyfant', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-mairwen-lyfant-drewi', 'Haus Drewi', 'marriage-mairwen-gereint-lyfant', 'house-drewi', 'haus-drewi'),
     marriedAway('married-away-telyn-lyfant-crwynog', 'Haus Crwynog', 'marriage-telyn-wynfor-lyfant', 'house-crwynog', 'haus-crwynog'),
     createSingleFounderHouseBranch({

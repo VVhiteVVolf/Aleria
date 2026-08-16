@@ -10,11 +10,36 @@ import {
   applyExclusivePartnershipChange,
   isExclusiveActivePartnership
 } from '../modules/relationships/exclusive-partnership-policy.js';
+import {
+  removeParentageRecord,
+  removePartnershipRecord,
+  removePersonRecord
+} from '../modules/relationships/family-record-removal.js';
+import { assertNoDuplicateHouseBranch } from '../modules/houses/house-branch-deduplication.js';
+import { refreshAutomaticSingleChildAlignment } from '../modules/relationships/single-child-alignment-policy.js';
+import { refreshMultiplePartnershipAlignment } from '../modules/relationships/multiple-partnership-alignment-policy.js';
 
 const RELATED_PERSON_KINDS = new Set(['partnership', 'child', 'parent', 'time-jump-child', 'lineage-gap-child']);
 
 function createSnapshot(family) {
   return cloneValue(family);
+}
+
+function refreshRelationshipLayout(family, partnershipIds = null) {
+  refreshAutomaticSingleChildAlignment(family, partnershipIds);
+  refreshMultiplePartnershipAlignment(family);
+}
+
+function appendRegistryTombstone(family, collection, id) {
+  if (!id) return;
+  const current = family.extensions?.registryTombstones || {};
+  family.extensions = {
+    ...(family.extensions || {}),
+    registryTombstones: {
+      ...current,
+      [collection]: [...new Set([...(current[collection] || []), id])]
+    }
+  };
 }
 
 function createPersonRecord(values, id, familyId) {
@@ -268,6 +293,7 @@ export function createFamilyStore(initialFamily, options = {}) {
             extensions: {}
           });
         }
+        refreshRelationshipLayout(draft);
         return;
       }
 
@@ -339,6 +365,7 @@ export function createFamilyStore(initialFamily, options = {}) {
             ? { lineageTimeGap: true }
             : {}
       });
+      if (partnershipId) refreshRelationshipLayout(draft, [partnershipId]);
     }, { personId, referencePersonId, relationKind });
     selectedPersonId = personId;
     emit('selection-changed', { personId }, false);
@@ -381,47 +408,10 @@ export function createFamilyStore(initialFamily, options = {}) {
 
   function deletePerson(personId) {
     return commit('person-deleted', draft => {
-      draft.persons = draft.persons.filter(person => person.id !== personId);
-      draft.partnerships = draft.partnerships
-        .map(partnership => ({
-          ...partnership,
-          participantIds: partnership.participantIds.filter(id => id !== personId)
-        }))
-        .filter(partnership => partnership.participantIds.length >= 2);
-      const remainingPartnershipIds = new Set(draft.partnerships.map(partnership => partnership.id));
-      draft.parentages = draft.parentages
-        .filter(parentage => parentage.childId !== personId)
-        .map(parentage => ({
-          ...parentage,
-          parentIds: parentage.parentIds.filter(id => id !== personId),
-          partnershipId: remainingPartnershipIds.has(parentage.partnershipId) ? parentage.partnershipId : ''
-        }))
-        .filter(parentage => parentage.parentIds.length > 0);
-      if (!remainingPartnershipIds.has(draft.lineage.founderPartnershipId)) {
-        draft.lineage.founderPartnershipId = '';
-      }
-      draft.cadetBranches = draft.cadetBranches.filter(branch => (
-        branch.parentPersonId
-          ? branch.parentPersonId !== personId
-          : remainingPartnershipIds.has(branch.parentPartnershipId)
-      ));
-      draft.timeJumps = draft.timeJumps
-        .filter(timeJump => (
-          timeJump.parentPartnershipId
-            ? remainingPartnershipIds.has(timeJump.parentPartnershipId)
-            : timeJump.parentPersonId !== personId
-        ))
-        .map(timeJump => ({
-          ...timeJump,
-          sharedParentPartnershipIds: timeJump.sharedParentPartnershipIds
-            .filter(partnershipId => remainingPartnershipIds.has(partnershipId)),
-          childIds: timeJump.childIds.filter(childId => childId !== personId)
-        }));
-      const remainingTimeJumpIds = new Set(draft.timeJumps.map(timeJump => timeJump.id));
-      draft.parentages = draft.parentages.filter(parentage => (
-        !parentage.extensions?.timeJumpId || remainingTimeJumpIds.has(parentage.extensions.timeJumpId)
-      ));
-      if (draft.view.focusPersonId === personId) draft.view.focusPersonId = draft.persons[0]?.id || '';
+      const nextFamily = removePersonRecord(draft, personId);
+      Object.keys(draft).forEach(key => delete draft[key]);
+      Object.assign(draft, nextFamily);
+      refreshRelationshipLayout(draft);
     }, { personId });
   }
 
@@ -448,6 +438,7 @@ export function createFamilyStore(initialFamily, options = {}) {
         notes: values.notes || '',
         extensions: {}
       });
+      refreshRelationshipLayout(draft);
     }, { partnershipId: id });
     return id;
   }
@@ -459,6 +450,7 @@ export function createFamilyStore(initialFamily, options = {}) {
       resultPlan = result.plan;
       Object.keys(draft).forEach(key => delete draft[key]);
       Object.assign(draft, result.family);
+      refreshRelationshipLayout(draft);
     }, { participantIds: [...new Set(values.participantIds || [])], type: values.type });
     return resultPlan;
   }
@@ -471,6 +463,16 @@ export function createFamilyStore(initialFamily, options = {}) {
       allowed.forEach(key => {
         if (Object.hasOwn(values, key)) partnership[key] = values[key];
       });
+      refreshRelationshipLayout(draft);
+    }, { partnershipId });
+  }
+
+  function deletePartnership(partnershipId, options = {}) {
+    return commit('partnership-deleted', draft => {
+      const nextFamily = removePartnershipRecord(draft, partnershipId, options);
+      Object.keys(draft).forEach(key => delete draft[key]);
+      Object.assign(draft, nextFamily);
+      refreshRelationshipLayout(draft);
     }, { partnershipId });
   }
 
@@ -482,6 +484,16 @@ export function createFamilyStore(initialFamily, options = {}) {
       allowed.forEach(key => {
         if (Object.hasOwn(values, key)) parentage[key] = values[key];
       });
+      refreshRelationshipLayout(draft);
+    }, { parentageId });
+  }
+
+  function deleteParentage(parentageId, options = {}) {
+    return commit('parentage-deleted', draft => {
+      const nextFamily = removeParentageRecord(draft, parentageId, options);
+      Object.keys(draft).forEach(key => delete draft[key]);
+      Object.assign(draft, nextFamily);
+      refreshRelationshipLayout(draft);
     }, { parentageId });
   }
 
@@ -523,6 +535,7 @@ export function createFamilyStore(initialFamily, options = {}) {
         notes: values.notes || '',
         extensions: {}
       });
+      if (values.partnershipId) refreshRelationshipLayout(draft, [values.partnershipId]);
     }, { parentageId: id });
     return id;
   }
@@ -592,6 +605,7 @@ export function createFamilyStore(initialFamily, options = {}) {
   }
 
   function addCadetBranch(values) {
+    assertNoDuplicateHouseBranch(family, values);
     const id = values.id || createRecordId('cadet-branch', family.cadetBranches.map(item => item.id));
     commit('cadet-branch-added', draft => {
       draft.cadetBranches.push({
@@ -616,6 +630,7 @@ export function createFamilyStore(initialFamily, options = {}) {
   }
 
   function updateCadetBranch(branchId, values) {
+    assertNoDuplicateHouseBranch(family, values, branchId);
     return commit('cadet-branch-updated', draft => {
       const branch = draft.cadetBranches.find(item => item.id === branchId);
       if (!branch) throw new Error('Die Hausverknüpfung wurde nicht gefunden.');
@@ -640,6 +655,7 @@ export function createFamilyStore(initialFamily, options = {}) {
   function deleteCadetBranch(branchId) {
     return commit('cadet-branch-deleted', draft => {
       draft.cadetBranches = draft.cadetBranches.filter(branch => branch.id !== branchId);
+      appendRegistryTombstone(draft, 'cadetBranches', branchId);
     }, { branchId });
   }
 
@@ -747,6 +763,7 @@ export function createFamilyStore(initialFamily, options = {}) {
         const restored = restoreParentageBeforeTimeJump(parentage);
         return restored ? [restored] : [];
       });
+      appendRegistryTombstone(draft, 'timeJumps', timeJumpId);
     }, { timeJumpId });
   }
 
@@ -787,8 +804,10 @@ export function createFamilyStore(initialFamily, options = {}) {
     addPartnership,
     setExclusivePartnership,
     updatePartnership,
+    deletePartnership,
     addParentage,
     updateParentage,
+    deleteParentage,
     ensureHouse,
     setOrientation,
     updateDocument,

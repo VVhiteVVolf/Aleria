@@ -540,6 +540,12 @@ function switchTab(tab, options = {}) {
     if (isActive) btn.setAttribute('aria-current', 'page');
     else btn.removeAttribute('aria-current');
   });
+  document.querySelectorAll('[data-archive-register-tab]').forEach(register => {
+    const isActive = register.dataset.archiveRegisterTab === tab;
+    register.classList.toggle('is-current', isActive);
+    if (isActive) register.setAttribute('aria-current', 'page');
+    else register.removeAttribute('aria-current');
+  });
   document.querySelectorAll('[data-archive-dashboard]').forEach(dashboard => {
     dashboard.hidden = tab !== 'Alle' || !!_archiveSearchNeedle;
   });
@@ -582,10 +588,11 @@ function renderAll() {
   main.innerHTML = '';
   tabsNav.innerHTML = '';
 
-  // Collect unique tabs in order
-  // Build tab order: 'Alle' first, then unique section tabs (skip 'Alle' if a section uses it), then 'Charaktere'
-  const sectionTabs = [...new Set(sections.map(s => s.tab || s.key).filter(t => t !== 'Alle'))];
-  const tabOrder = ['Alle', ...sectionTabs, 'Charaktere', 'Kreaturen'];
+  // Die Themenleiste enthält nur Archivthemen. Eigenständige Register wie
+  // Charaktere und Kreaturen werden über die Register-Navigation geöffnet.
+  const primaryRegisterTabs = new Set(['Alle', 'Charaktere', 'Kreaturen']);
+  const sectionTabs = [...new Set(sections.map(s => s.tab || s.key).filter(t => !primaryRegisterTabs.has(t)))];
+  const tabOrder = ['Alle', ...sectionTabs];
   const tabGroup = document.createElement('div');
   tabGroup.className = 'gallery-tab-group gallery-tab-group-main';
   tabsNav.appendChild(tabGroup);

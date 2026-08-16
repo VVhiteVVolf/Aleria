@@ -59,14 +59,6 @@ export function planExclusivePartnershipChange(familyInput, values) {
     return Object.freeze({ mode: 'idempotent', partnershipId: samePair.id, removePartnershipIds: Object.freeze([]), removePersonIds: Object.freeze([]) });
   }
   if (samePair?.type === 'engagement' && values.type === 'marriage') {
-    const competing = family.partnerships.filter(partnership => (
-      partnership.id !== samePair.id
-      && isExclusiveActivePartnership(partnership)
-      && partnership.participantIds.some(personId => participantIds.includes(personId))
-    ));
-    if (competing.length) {
-      throw new Error('Das Verlöbnis kann nicht zur Ehe werden, solange für eine beteiligte Person noch eine andere aktive Ehe, Verlobung oder Verbindung besteht.');
-    }
     return Object.freeze({ mode: 'upgrade', partnershipId: samePair.id, removePartnershipIds: Object.freeze([]), removePersonIds: Object.freeze([]) });
   }
   if (samePair) throw new Error('Diese bestehende aktive Verbindung kann nicht still in die gewählte Art umgewandelt werden.');
@@ -80,8 +72,10 @@ export function planExclusivePartnershipChange(familyInput, values) {
         const otherIds = partnership.participantIds.filter(id => id !== personId);
         const placeholders = otherIds.map(id => family.persons.find(person => person.id === id));
         if (!placeholders.length || placeholders.some(person => !isReplaceableRelationshipPlaceholder(person))) {
+          const blocksFurtherEngagement = values.type === 'engagement' && partnership.type === 'engagement';
+          if (!blocksFurtherEngagement) return;
           const partnerNames = otherIds.map(id => family.persons.find(person => person.id === id)?.name || id).join(', ');
-          throw new Error(`Es besteht bereits eine aktive Verbindung mit ${partnerNames}. Bitte diese Verbindung zuerst gezielt bearbeiten oder lösen.`);
+          throw new Error(`Es besteht bereits ein aktives Verlöbnis mit ${partnerNames}. Dieses Verlöbnis zuerst umwandeln, beenden oder vollständig entfernen.`);
         }
         removePartnershipIds.add(partnership.id);
         placeholders.forEach(person => {

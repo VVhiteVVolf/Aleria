@@ -161,7 +161,7 @@ const TIRWEDD_HOUSES = Object.freeze([
   house('house-blodyn', 'Haus Blodyn', HOUSE_EMBLEMS.blodyn),
   house('house-dianc', 'Haus Dianc'),
   house('house-gwenyen', 'Haus Gwenyen'),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-gwialen', 'Haus Gwialen', HOUSE_EMBLEMS.gwialen),
   house('house-bochdew', 'Haus Bochdew'),
   house('house-culloch', 'Haus Culloch'),
@@ -228,12 +228,12 @@ export const HOUSE_ILLYGODEN_TIRWEDD_FAMILY = Object.freeze({
       houseId: 'house-blaidd',
       familyRole: 'married'
     }),
-    tirweddPerson('sulwen-illygoden', 'Sulwen Illygoden', 'female', '????', '????', {
+    tirweddPerson('sulwen-illygoden', 'Sulwen Illygoden', 'female', '1634', '1689', {
       title: 'Wegverheiratet an Haus Trachwyll',
       tags: ['Wegverheiratet']
     }),
-    tirweddPerson('griffudd-trachwyll', 'Griffudd Trachwyll', 'male', '????', '????', {
-      houseId: 'house-trachwyll',
+    tirweddPerson('griffudd-trachwyll', 'Griffudd Trachwyll', 'male', '1629', '1702', {
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
 
@@ -325,7 +325,7 @@ export const HOUSE_ILLYGODEN_TIRWEDD_FAMILY = Object.freeze({
     ...childrenOf(['crystin-illygoden', 'meredydd-illygoden'], ['griflet-illygoden', 'delwen-gwenyen'], 'marriage-griflet-delwen-illygoden')
   ],
   cadetBranches: [
-    marriedAway('married-away-sulwen-illygoden-trachwyll', 'Haus Trachwyll', 'marriage-sulwen-griffudd-illygoden', 'house-trachwyll', 'haus-trachwyll'),
+    marriedAway('married-away-sulwen-illygoden-trachwyll', "Haus Trachwyll O'Talfronwyn", 'marriage-sulwen-griffudd-illygoden', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-wynne-illygoden-dianc', 'Haus Dianc', 'marriage-wynne-sywlch-illygoden', 'house-dianc', 'haus-dianc'),
     marriedAway('married-away-gaynor-illygoden-bochdew', 'Haus Bochdew', 'marriage-gaynor-emrys-illygoden', 'house-bochdew', 'haus-bochdew'),
     marriedAway('married-away-crystin-illygoden-culloch', 'Haus Culloch', 'marriage-crystin-darragh-illygoden', 'house-culloch', 'haus-culloch'),

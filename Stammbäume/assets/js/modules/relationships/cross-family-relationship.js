@@ -14,6 +14,7 @@ import {
   stableCrossFamilyLinkId,
   withCanonicalWorldPersonIds
 } from './cross-family-person-projection.js';
+import { removePartnershipRecord } from './family-record-removal.js';
 
 function primaryHouse(family) {
   return family.houses.find(house => house.id === family.lineage.houseId) || null;
@@ -223,5 +224,42 @@ export function updateMirroredPartnershipChange({
     linkId: relationship.linkId,
     currentFamily: patchMirroredPartnership(currentFamily, relationship.linkId, values),
     counterpartFamily: patchMirroredPartnership(counterpartFamily, relationship.linkId, values)
+  });
+}
+
+function removableProjectedPeople(family, partnership) {
+  return partnership.participantIds.filter(personId => {
+    const person = family.persons.find(item => item.id === personId);
+    return person && person.houseId && person.houseId !== family.lineage.houseId;
+  });
+}
+
+function removeMirroredPartnershipFromFamily(family, linkId) {
+  const partnership = mirroredPartnershipByLink(family, linkId);
+  return removePartnershipRecord(family, partnership.id, {
+    removeUnconnectedPersonIds: removableProjectedPeople(family, partnership)
+  });
+}
+
+export function removeMirroredPartnershipChange({
+  currentFamily: currentInput,
+  counterpartFamily: counterpartInput,
+  partnershipId
+}) {
+  const currentFamily = normalizeFamily(currentInput);
+  const counterpartFamily = normalizeFamily(counterpartInput);
+  const currentPartnership = currentFamily.partnerships.find(item => item.id === partnershipId);
+  const relationship = currentPartnership?.extensions?.crossFamilyRelationship;
+  if (!relationship?.linkId || !relationship.counterpartFamilyId) {
+    throw new Error('Diese Verbindung ist nicht als registerübergreifende Beziehung markiert.');
+  }
+  if (relationship.counterpartFamilyId !== counterpartFamily.document.id) {
+    throw new Error('Die verknüpfte Familienakte passt nicht zur gespiegelten Verbindung.');
+  }
+  mirroredPartnershipByLink(counterpartFamily, relationship.linkId);
+  return Object.freeze({
+    linkId: relationship.linkId,
+    currentFamily: removeMirroredPartnershipFromFamily(currentFamily, relationship.linkId),
+    counterpartFamily: removeMirroredPartnershipFromFamily(counterpartFamily, relationship.linkId)
   });
 }

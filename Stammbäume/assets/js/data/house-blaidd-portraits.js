@@ -75,6 +75,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // kanonische Bildquelle. Standardsilhouetten der Altquelle werden ausgelassen.
 export const HOUSE_BLAIDD_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'jinell-trachwyll': 'assets/images/portraits/haus-trachwyll/jinell-trachwyll.jpg',
   'breunor-blodyn': HOUSE_BLODYN_PORTRAITS['breunor-blodyn'],
   'myfanwy-blaidd': HOUSE_BLODYN_PORTRAITS['myfanwy-blaidd'],
   'ceridwen-blodyn': HOUSE_BLODYN_PORTRAITS['ceridwen-blodyn'],

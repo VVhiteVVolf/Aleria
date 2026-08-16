@@ -7,6 +7,7 @@ import {
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { HOUSE_HEBOG_PORTRAITS } from './house-hebog-portraits.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
 import {
@@ -25,6 +26,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   aderyn: TAL_DER_MILANE_HOUSE_EMBLEMS.aderyn,
   crefyddol: SILBERINSEL_HOUSE_EMBLEMS.crefyddol,
   eryr: TAL_DER_MILANE_HOUSE_EMBLEMS.eryr,
+  feuerhaar: IVARSHEIM_HOUSE_EMBLEMS.feuerhaar,
   gaeth: TAL_DER_MILANE_HOUSE_EMBLEMS.gaeth,
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwarchod: AEHRENTAL_HOUSE_EMBLEMS.gwarchod,
@@ -144,7 +146,7 @@ const COUPLES = Object.freeze({
   myfanwy1270: ['gwalchgwyn-aderyn', 'myfanwy-hebog'],
   trahaern: ['myfanwy-gaeth', 'trahaern-hebog'],
   malvina: ['kelyddon-mwyalchen', 'malvina-hebog-mwyalchen'],
-  mordred: ['mordred-hebog', 'ingeborg-eldhari'],
+  mordred: ['mordred-hebog', 'ingeborg-feuerhaar'],
   armela: ['lunet-crefyddol', 'armela-hebog'],
   thalen: ['thalen-hebog', 'tesni-aderyn'],
   meredyddwynn: ['meredyddwynn-hebog', 'maiwyn-gwarchod'],
@@ -241,7 +243,7 @@ export const HOUSE_HEBOG_FAMILY = Object.freeze({
     house('house-airdmhor', 'Haus Airdmhor'),
     house('house-gaeth', "Haus Gaeth O'Penllyn", HOUSE_EMBLEMS.gaeth),
     house('house-mwyalchen', "Haus Mwyalchen O'Penbryn", HOUSE_EMBLEMS.mwyalchen),
-    house('house-eldhari', 'Haus Eldhári'),
+    house('house-feuerhaar', 'Clan Feuerhaar', HOUSE_EMBLEMS.feuerhaar),
     house('house-crefyddol', "Haus Crefyddol O'Llanvane", HOUSE_EMBLEMS.crefyddol),
     house('house-gwarchod', 'Haus Gwarchod', HOUSE_EMBLEMS.gwarchod),
     house('house-ridderspore', 'Haus Ridderspore'),
@@ -282,7 +284,9 @@ export const HOUSE_HEBOG_FAMILY = Object.freeze({
     awayWoman('armela-hebog', 'Armela Hebog', '1635', '1689', 'Haus Crefyddol', {
       notes: 'Die Hebog-Quelle nennt 1636–1712; die ausgearbeitete Crefyddol-Gegenakte führt dieselbe Weltperson kanonisch als 1635–1689.'
     }),
-    spouse('ingeborg-eldhari', 'Ingeborg Eldhári', 'female', '1632', '1699', 'house-eldhari'),
+    spouse('ingeborg-feuerhaar', 'Ingeborg Feuerhaar', 'female', '1632', '1699', 'house-feuerhaar', {
+      notes: 'Die ältere Hebog-Akte führte Ingeborg widersprüchlich als Eldhári. Die Feuerhaar-Quelle und ihre eingezeichnete Abstammung belegen sie als Tochter Ketills und Unndís.'
+    }),
     spouse('lunet-crefyddol', 'Lunet Crefyddol', 'male', '1634', '1709', 'house-crefyddol'),
 
     person('thalen-hebog', 'Thalen Hebog', 'male', '1655', '1692', {
@@ -339,7 +343,11 @@ export const HOUSE_HEBOG_FAMILY = Object.freeze({
     createMarriage('marriage-gwalchgwyn-myfanwy', ...COUPLES.myfanwy1270),
     endedMarriage('marriage-myfanwy-trahaern-hebog', COUPLES.trahaern, '1676'),
     endedMarriage('marriage-kelyddon-malvina-mwyalchen', COUPLES.malvina, '1653'),
-    endedMarriage('marriage-mordred-ingeborg-hebog', COUPLES.mordred, '1689'),
+    createMarriage('marriage-mordred-ingeborg-hebog', ...COUPLES.mordred, {
+      status: 'ended',
+      end: '1689',
+      extensions: { registryManagedFields: ['participantIds', 'status', 'end'] }
+    }),
     createMarriage('marriage-lunet-armela-crefyddol', ...COUPLES.armela),
     createMarriage('marriage-thalen-tesni', ...COUPLES.thalen),
     endedMarriage('marriage-maiwyn-meredyddwynn-gwarchod', COUPLES.meredyddwynn, '1717'),
@@ -451,9 +459,12 @@ export const HOUSE_HEBOG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Hebog O'Talwyn (bereitgestellte Altdaten)",
     sourceNote: 'Mordred Aderyn und Thalena begründen Haus Hebog. Drei Überlieferungslücken sind als strikt serielle, globale Generationentrenner modelliert: Der erste folgt auf Gründerpaar und Hausknoten; der zweite wird gemeinsam von Ivain/Raewyn und Hafren/Noghán gespeist; der dritte gemeinsam von Hywel/Gwenlian und Myfanwy/Gwalchgwyn. Dahinter bleiben die fachlichen Elternschaften getrennt, sodass kein paralleler Zeitsprung und keine falsche Abstammung entsteht. Die Hauptlinie führt über Ivain, Hywel, Trahaern, Mordred, Thalen, Sabrian, Meilyr und Leolin. Malvina, Armela, Meredyddwynn, Ewynn, Thalena, Saeth, Chryl, Glinda und Aliza erhalten direkte Wegverheiratet- beziehungsweise Wegverlobt-Knoten; fremde Nachkommen werden ausschließlich in ihrer fortführenden Hausakte gezeigt. Die Mwyalchen-Kinder Malvinas, die Gwarchod-Kinder Meredyddwynns, die Eryr-Kinder Ewynns, die Tylluan-Kinder Thalenas und das Mwyalchen-Kind Chryls werden daher hier nicht gedoppelt. Die fehlerhafte Kinderüberschrift „Sabrian & Solveig“ wurde anhand der unmittelbar zugeordneten Partnerkarte zu Sabrian und Klothilde berichtigt. Bereits ausgearbeitete Gegenakten bestimmen bei Abweichungen Namen, Lebensdaten, Partnerschafts-IDs und Porträts; dies betrifft insbesondere Trahaern, Armela, Thalen, Dilys und Iorwerth. Wiederholte schwarze Standardsilhouetten und die gerenderte Gesamtgrafik wurden nicht als Individualporträts importiert.',
+    registryTombstones: {
+      persons: ['ingeborg-eldhari']
+    },
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

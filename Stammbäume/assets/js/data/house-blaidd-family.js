@@ -166,7 +166,7 @@ const BRANON_HOUSES = Object.freeze([
   house('house-arfordir', 'Haus Arfordir'),
   house('house-stwatchn', 'Haus Stwatchn'),
   house('house-helgr', 'Haus Helgr'),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-pysgod', "Haus Pysgod O'Tredegar", HOUSE_EMBLEMS.pysgod),
   house('house-bochdew', 'Haus Bochdew'),
   house('house-drewi', 'Haus Drewi'),
@@ -290,7 +290,7 @@ export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
     branonPerson('llenlleawg-blaidd', 'Llenlleawg Blaidd', 'male', '1616', '1640'),
     branonPerson('iesin-blaidd', 'Iesin Blaidd', 'male', '1618', '1650'),
     branonPerson('dyvynwal-trachwyll', 'Dyvynwal Trachwyll', 'female', '1616', '1676', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
 
@@ -299,7 +299,7 @@ export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
       lineageRole: 'head'
     }),
     branonPerson('jinell-trachwyll', 'Jinell Trachwyll', 'female', '1633', '1674', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
     branonPerson('braith-blaidd', 'Braith Blaidd', 'female', '1635', '1705', {
@@ -391,8 +391,14 @@ export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
     endedMarriage('marriage-galahad-tamsin-blaidd', 'galahad-blaidd', 'tamsin-stwatchn'),
     endedMarriage('marriage-gwyneth-seissylwch-blaidd', 'gwyneth-blaidd', 'seissylwch-arfordir'),
     endedMarriage('marriage-llwyarch-ingrid-blaidd', 'llwyarch-blaidd', 'ingrid-helgr'),
-    endedMarriage('marriage-iesin-dyvynwal-blaidd', 'iesin-blaidd', 'dyvynwal-trachwyll'),
-    endedMarriage('marriage-kyvwlch-jinell-blaidd', 'kyvwlch-blaidd', 'jinell-trachwyll'),
+    endedMarriage('marriage-iesin-dyvynwal-blaidd', 'iesin-blaidd', 'dyvynwal-trachwyll', {
+      end: '1650',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
+    endedMarriage('marriage-kyvwlch-jinell-blaidd', 'kyvwlch-blaidd', 'jinell-trachwyll', {
+      end: '1674',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     endedMarriage('marriage-braith-taliesin-blaidd', 'braith-blaidd', 'taliesin-illygoden'),
     endedMarriage('marriage-vorath-glenys-blaidd', 'vorath-blaidd', 'glenys-bochdew'),
     endedMarriage('marriage-arvyn-trystan', 'arvyn-blodyn', 'trystan-blaidd'),
@@ -490,7 +496,7 @@ export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-blaidd-tredegar',
-    sourceRevision: 4,
+    sourceRevision: 5,
     registryManagedLineageFields: ['founderPartnershipId', 'houseId'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Branon-Herkunftsakte nach der bereitgestellten Blaidd-Tabelle. Ein unbekanntes Elternpaar führt zu den Brüdern Llewelyn und Sieffre samt ihren Ehefrauen. Sieffres Tochter Myfanwy endet in der Wegverheiratung nach Haus Blodyn. Llewelyns Sohn Gwynfor begründet mit Ceridwen Blodyn erst danach das Haus Blaidd; der erste Zeitsprung folgt seriell unmittelbar unter diesem Hausknoten. Pelleas und Caron schließen die Herkunftsakte mit einem gemeinsamen Übergabeknoten nach Tredegar ab; keine ihrer Nachkommen wird hier gedoppelt. Der Name Arvyn folgt der bereits kanonischen Blodyn-Gegenakte statt der widersprüchlichen Altquellenbezeichnung Caryln.'

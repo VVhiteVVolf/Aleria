@@ -89,12 +89,6 @@ function selectEditImageSet(setId) {
   _editSelectedImageSetId = setId;
   _editImageSetChangedByUser = true;
   _editSelectedEmoteIdx = null;
-  _editCommentSegments.forEach(segment => {
-    if (segment.kind !== 'action') {
-      segment.imageSetId = setId;
-      segment.emoteIndex = null;
-    }
-  });
   renderEditEmotePicker();
   renderEditCommentSegmentList();
   updateEditFormPreview();
@@ -110,6 +104,7 @@ function selectEditChar(id, options = {}) {
     }
     return;
   }
+  const characterChanged = _editSelectedCharId !== id;
   _editSelectedCharId = id;
   _editSelectedEmoteIdx = null;
   _editImageSetChangedByUser = true;
@@ -117,6 +112,14 @@ function selectEditChar(id, options = {}) {
   _editSelectedImageSetId = char.entityType !== 'creature' && normalizeCharacterImageSets(char).some(set => set.id === requestedImageSetId)
     ? requestedImageSetId
     : CHARACTER_IMAGE_SET_DEFAULT_ID;
+  if (characterChanged && !options.preserveSegmentImageSets) {
+    _editCommentSegments.forEach(segment => {
+      if (segment.kind !== 'action') {
+        segment.imageSetId = char.entityType === 'creature' ? '' : _editSelectedImageSetId;
+        segment.emoteIndex = null;
+      }
+    });
+  }
   _editManualMode = false;
   _editPortraitUrl = null;
   document.getElementById('ec-portrait-url').value = '';

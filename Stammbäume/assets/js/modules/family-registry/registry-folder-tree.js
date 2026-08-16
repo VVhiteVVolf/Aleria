@@ -15,6 +15,8 @@ export function getRegistryRecordHouseProfile(record) {
 
 function iconForPathLevel(record, levelIndex) {
   const profile = getRegistryRecordHouseProfile(record);
+  const explicitFolderIcon = profile.folderIcons?.[levelIndex] || '';
+  if (explicitFolderIcon) return explicitFolderIcon;
   return profile.regionEmblems[FOLDER_ICON_LEVELS[levelIndex]] || '';
 }
 

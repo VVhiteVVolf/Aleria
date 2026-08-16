@@ -1,6 +1,5 @@
 import {
-  isExclusiveActivePartnership,
-  isReplaceableRelationshipPlaceholder
+  isExclusiveActivePartnership
 } from './exclusive-partnership-policy.js';
 
 const ACTIVE_STATUSES = new Set(['active', 'secret']);
@@ -10,30 +9,18 @@ function personById(family, personId) {
   return family.persons.find(person => person.id === personId) || null;
 }
 
-function partnerNames(family, partnerships, personId) {
-  return [...new Set(partnerships.flatMap(partnership => (
-    partnership.participantIds
-      .filter(id => id !== personId)
-      .map(id => personById(family, id)?.name || id)
-  )))].join(', ');
-}
-
-function exclusiveBlock(family, personId) {
+function engagementBlock(family, personId) {
   const active = family.partnerships.filter(partnership => (
-    partnership.participantIds.includes(personId) && isExclusiveActivePartnership(partnership)
+    partnership.participantIds.includes(personId)
+    && partnership.type === 'engagement'
+    && isExclusiveActivePartnership(partnership)
   ));
-  const real = active.filter(partnership => partnership.participantIds
+  if (!active.length) return '';
+  const names = active.flatMap(partnership => partnership.participantIds)
     .filter(id => id !== personId)
-    .some(id => !isReplaceableRelationshipPlaceholder(personById(family, id))));
-  if (!real.length) return '';
-  const names = partnerNames(family, real, personId);
-  if (real.some(partnership => partnership.type === 'marriage')) {
-    return `Bereits mit ${names} verheiratet. Zuerst die bestehende Verbindung lösen; Affären bleiben möglich.`;
-  }
-  if (real.some(partnership => partnership.type === 'engagement')) {
-    return `Bereits mit ${names} verlobt. Das Verlöbnis zuerst umwandeln oder lösen.`;
-  }
-  return `Bereits in einer aktiven Verbindung mit ${names}. Diese Verbindung zuerst bearbeiten oder lösen.`;
+    .map(id => personById(family, id)?.name || id)
+    .join(', ');
+  return `Bereits mit ${names} verlobt. Das Verlöbnis zuerst umwandeln, beenden oder vollständig entfernen.`;
 }
 
 export function relationshipActionState(family, personId) {
@@ -46,7 +33,12 @@ export function relationshipActionState(family, personId) {
   const separable = partnerships.filter(partnership => (
     SEPARABLE_TYPES.has(partnership.type) && ACTIVE_STATUSES.has(partnership.status || 'active')
   ));
-  const block = exclusiveBlock(family, personId);
+  const removableParentages = family.parentages.filter(parentage => (
+    parentage.childId === personId || parentage.parentIds.includes(personId)
+  ));
+  const hasMirroredGuardianship = Boolean(person.extensions?.crossFamilyGuardianship?.linkId)
+    || removableParentages.some(parentage => parentage.extensions?.crossFamilyGuardianship?.linkId);
+  const betrothalBlock = engagementBlock(family, personId);
   const alreadySent = person.familyRole === 'ward-away'
     || family.cadetBranches.some(branch => branch.linkType === 'ward-away' && branch.parentPersonId === personId);
   return Object.freeze({
@@ -54,10 +46,12 @@ export function relationshipActionState(family, personId) {
     partnerships,
     engagements,
     separable,
-    exclusiveBlock: block,
+    removablePartnerships: partnerships,
+    removableParentages,
+    hasMirroredGuardianship,
     actionAvailability: Object.freeze({
-      marry: Object.freeze({ enabled: !block, reason: block }),
-      betroth: Object.freeze({ enabled: !block, reason: block }),
+      marry: Object.freeze({ enabled: true, reason: '' }),
+      betroth: Object.freeze({ enabled: !betrothalBlock, reason: betrothalBlock }),
       affair: Object.freeze({ enabled: true, reason: '' }),
       'send-ward': Object.freeze({
         enabled: !alreadySent,
@@ -68,7 +62,7 @@ export function relationshipActionState(family, personId) {
 }
 
 export function partnerCandidateAvailability(family, personId, action) {
-  if (!['marry', 'betroth'].includes(action)) return Object.freeze({ enabled: true, reason: '' });
-  const reason = exclusiveBlock(family, personId);
+  if (action !== 'betroth') return Object.freeze({ enabled: true, reason: '' });
+  const reason = engagementBlock(family, personId);
   return Object.freeze({ enabled: !reason, reason });
 }

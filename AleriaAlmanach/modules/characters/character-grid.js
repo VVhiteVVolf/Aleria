@@ -9,6 +9,9 @@ function setCharacterSubgroupFromSelect(selectEl, charId) {
 
 function toggleCharacterOrganizeMode() {
   _charOrganizeMode = !_charOrganizeMode;
+  if (_charOrganizeMode && typeof setCharacterRegisterViewMode === 'function') {
+    setCharacterRegisterViewMode('collections', { render: false });
+  }
   if (!_charOrganizeMode && typeof clearCharacterBulkSelection === 'function') {
     clearCharacterBulkSelection({ render: false });
   }
@@ -266,8 +269,9 @@ function renderCharGrid() {
   if (!grid) return;
   grid.innerHTML = '';
   const groupBySubtab = shouldRenderCharacterSubgroupBuckets();
+  const facetView = typeof isCharacterRegisterFacetView === 'function' && isCharacterRegisterFacetView();
   grid.classList.toggle('organizing', _charOrganizeMode);
-  grid.classList.toggle('grouped', _activeCharTab === 'Alle' || groupBySubtab);
+  grid.classList.toggle('grouped', facetView || _activeCharTab === 'Alle' || groupBySubtab);
 
   const block = document.querySelector('.section-block[data-tab="Charaktere"]');
   const actions = document.createElement('div');
@@ -278,6 +282,10 @@ function renderCharGrid() {
     <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>
     <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>`;
   grid.appendChild(actions);
+
+  if (typeof renderCharacterRegisterViewToolbar === 'function') {
+    renderCharacterRegisterViewToolbar(grid);
+  }
 
   if (_activeCharTab === 'Alle' && _hiddenBuiltinCharacterIds.size) {
     const restoreBtn = document.createElement('button');
@@ -301,11 +309,24 @@ function renderCharGrid() {
 
   const unfilteredChars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
   if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, unfilteredChars);
-  const chars = typeof filterCharactersForDashboard === 'function'
+  const filteredChars = typeof filterCharactersForDashboard === 'function'
     ? filterCharactersForDashboard(unfilteredChars, _activeCharTab)
     : unfilteredChars;
+  const chars = typeof sortCharacterRegisterEntries === 'function'
+    ? sortCharacterRegisterEntries(filteredChars)
+    : filteredChars;
   if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
-  if (_activeCharTab === 'Alle') {
+  if (facetView && typeof buildCharacterRegisterFacetBuckets === 'function') {
+    const buckets = buildCharacterRegisterFacetBuckets(chars);
+    buckets.forEach(group => {
+      grid.appendChild(createCharacterGroupSection(group, {
+        sectionModifier: 'facet',
+        datasetName: 'charFacet',
+        emptyLabel: '',
+        getGroupKey: getCharacterRegisterFacetKey
+      }));
+    });
+  } else if (_activeCharTab === 'Alle') {
     const groups = buildCharacterGroupBuckets(chars);
     groups.forEach(group => {
       grid.appendChild(createCharacterGroupSection(group, {

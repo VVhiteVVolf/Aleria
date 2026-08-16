@@ -79,6 +79,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // Drummond, Gereint Drewi und Dafydd Trachwyll werden bewusst nicht importiert.
 export const HOUSE_LYFANT_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'main-trachwyll': 'assets/images/portraits/haus-trachwyll/main-trachwyll.jpg',
   'catryn-llyfant': HOUSE_BLODYN_PORTRAITS['catryn-llyfant'],
   'gruffydd-blodyn': HOUSE_BLODYN_PORTRAITS['gruffydd-blodyn'],
   'cledwyn-lyfant': HOUSE_MOCHDAER_PORTRAITS['cledwyn-lyfant'],

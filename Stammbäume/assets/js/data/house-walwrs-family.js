@@ -140,7 +140,7 @@ const ORIGIN_HOUSES = Object.freeze([
   house('house-gwaedlyd', "Haus Gwaedlyd O'Caer Gorwel", HOUSE_EMBLEMS.gwaedlyd),
   house('house-morgryn', 'Haus Morgryn'),
   house('house-draenog', 'Haus Draenog', HOUSE_EMBLEMS.draenog),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-gwenyen', 'Haus Gwenyen'),
   house('house-dianc', "Haus Dianc O'Gwynlann", HOUSE_EMBLEMS.dianc),
   house('house-bochdew', 'Haus Bochdew')
@@ -256,7 +256,7 @@ export const HOUSE_WALWRS_TRAETH_FAMILY = Object.freeze({
     }),
     traethPerson('cadwallen-walwrs', 'Cadwallen Walwrs', 'male', '1658', '1715'),
     traethPerson('sioned-trachwyll', 'Sioned Trachwyll', 'female', '1659', '1702', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
 

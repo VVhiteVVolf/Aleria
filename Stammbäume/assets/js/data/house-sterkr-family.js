@@ -266,7 +266,7 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
     house('house-ceirwyn', 'Haus Ceirwyn', HOUSE_EMBLEMS.ceirwyn),
     house('house-gulvig', 'Clan Gulvig'),
     house('house-urquhart', 'Haus Urquhart'),
-    house('house-grindel', 'Clan Grindel'),
+    house('house-grendel', 'Clan Grendel'),
     house('house-feuerhaar', 'Clan Feuerhaar'),
     house('house-soekeren', 'Clan Sökeren', HOUSE_EMBLEMS.soekeren),
     house('house-tordarroch', 'Clan Tordarroch'),
@@ -304,8 +304,8 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
       title: 'Hesir des Clans Sterkr 1699–1705'
     }),
     spouse('muirne-urquhart', 'Muirne Urquhart', 'female', '1614', '1706', 'house-urquhart'),
-    awayWoman('austveig-sterkr', 'Austveig Sterkr', '1616', '1711', 'Clan Grindel'),
-    spouse('finnr-grindel', 'Finnr Grindel', 'male', '1610', '1671', 'house-grindel'),
+    awayWoman('austveig-sterkr', 'Austveig Sterkr', '1616', '1711', 'Clan Grendel'),
+    spouse('finnr-grindel', 'Finnr Grendel', 'male', '1610', '1671', 'house-grendel'),
 
     person('skjalg-sterkr', 'Skjalg Sterkr', 'male', '1631', '1720', {
       title: 'Hesir des Clans Sterkr 1705–1720',
@@ -399,7 +399,7 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
   cadetBranches: [
     marriedAway('married-away-sunniva-sterkr-ceirwyn', 'Haus Ceirwyn', 'marriage-gorsedd-sunniva-ceirwyn', 'house-ceirwyn', 'haus-ceirwyn', HOUSE_EMBLEMS.ceirwyn),
     marriedAway('married-away-mistkatla-sterkr-skald', 'Clan Skald', 'marriage-ragnor-mistkatla-sterkr', 'house-skald', 'haus-skald', HOUSE_EMBLEMS.skald),
-    marriedAway('married-away-austveig-sterkr-grindel', 'Clan Grindel', 'marriage-austveig-finnr-sterkr', 'house-grindel', 'haus-grindel'),
+    marriedAway('married-away-austveig-sterkr-grindel', 'Clan Grendel', 'marriage-austveig-finnr-sterkr', 'house-grendel', 'haus-grendel'),
     marriedAway('married-away-skadi-sterkr-soekeren', 'Clan Sökeren', 'marriage-skadi-langarr-sterkr', 'house-soekeren', 'haus-soekeren', HOUSE_EMBLEMS.soekeren),
     marriedAway('married-away-gwelda-sterkr-skaal', 'Clan Skaal', 'marriage-thrand-gwelda-skaal', 'house-skaal', 'haus-skaal', HOUSE_EMBLEMS.skaal),
     marriedAway('married-away-vedis-sterkr-schwarzdorn', 'Clan Schwarzdorn', 'marriage-torger-vedis-schwarzdorn', 'house-schwarzdorn', 'haus-schwarzdorn', HOUSE_EMBLEMS.schwarzdorn),

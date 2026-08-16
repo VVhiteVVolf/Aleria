@@ -238,6 +238,40 @@ function getCommentSegmentActor(segment, edit = false) {
   return applyCharacterImageSetPresentation(character, segment?.imageSetId || selectedSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
 }
 
+function getCommentSegmentImageSetContext(segment, edit = false) {
+  const mode = edit ? _editMode : _commentMode;
+  if (mode !== 'charakter' || normalizeCommentKind(segment?.kind) === 'action') return null;
+
+  const character = getCommentSegmentActor(segment, edit);
+  if (!character || character.entityType === 'creature') return null;
+
+  const imageSets = normalizeCharacterImageSets(character);
+  const fallbackSetId = edit ? _editSelectedImageSetId : _selectedImageSetId;
+  const requestedSetId = String(segment?.imageSetId || fallbackSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+  const selectedSet = imageSets.find(set => set.id === requestedSetId) || imageSets[0];
+  return selectedSet ? { imageSets, selectedSet } : null;
+}
+
+function getCommentSegmentImageSetPicker(segment, edit = false) {
+  const context = getCommentSegmentImageSetContext(segment, edit);
+  if (!context || context.imageSets.length < 2) return '';
+
+  const action = edit ? 'set-edit-comment-segment-image-set' : 'set-comment-segment-image-set';
+  const segmentId = escapeHtml(segment.id);
+  return `
+    <div class="comment-segment-image-set-picker" aria-label="Avatar-Set für diesen Abschnitt wählen">
+      <span class="comment-segment-image-set-label">Avatar-Set</span>
+      <div class="comment-segment-image-set-options">
+        ${context.imageSets.map(set => `
+          <button type="button" class="comment-segment-image-set-option${set.id === context.selectedSet.id ? ' active' : ''}"
+            data-action="${action}" data-segment-id="${segmentId}" data-image-set-id="${escapeHtml(set.id)}"
+            aria-pressed="${set.id === context.selectedSet.id ? 'true' : 'false'}">
+            <span>${escapeHtml(set.name)}</span><small>${set.emotes.length}</small>
+          </button>`).join('')}
+      </div>
+    </div>`;
+}
+
 function getCommentSegmentActorControl(segment, edit = false) {
   const mode = edit ? _editMode : _commentMode;
   if (mode !== 'creature' || segment.kind === 'action') return '';

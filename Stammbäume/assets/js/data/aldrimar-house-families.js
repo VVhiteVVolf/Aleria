@@ -4,12 +4,15 @@ import {
   ALDRIMAR_HOUSE_PROFILES
 } from './aldrimar-house-profiles.js';
 import { HOUSE_VARULV_FAMILY } from './house-varulv-family.js';
+import { HOUSE_VARANGR_FAMILY } from './house-varangr-family.js';
+import { HOUSE_WARGH_FAMILY } from './house-wargh-family.js';
+import { HOUSE_RAGNULF_FAMILY } from './house-ragnulf-family.js';
 
 export const ALDRIMAR_JARL_CLAN_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'vaeren', title: 'Clan Vaeren', jarltum: 'Kronental', royal: true }),
   Object.freeze({ slug: 'wargh', title: 'Clan Wargh', jarltum: 'Ivarsheim' }),
   Object.freeze({ slug: 'ragnulf', title: 'Clan Ragnulf', jarltum: 'Schwarzfenn' }),
-  Object.freeze({ slug: 'varangr', title: 'Clan Varangr', jarltum: 'Krähenmoor' }),
+  Object.freeze({ slug: 'varangr', title: 'Clan Varangr', jarltum: 'Krähenmoor', sourceRevision: 3 }),
   Object.freeze({ slug: 'varulv', title: 'Clan Varulv', jarltum: 'Roriksheim' })
 ]);
 
@@ -34,7 +37,7 @@ function createJarlClanPlaceholder(definition) {
       ...base.extensions,
       preparedMainLine: true,
       jarltum: definition.jarltum,
-      sourceRevision: 1,
+      sourceRevision: definition.sourceRevision || 1,
       registryManagedHouseProfileFields: Object.freeze([
         'rankId',
         'seat',
@@ -52,9 +55,11 @@ function createJarlClanPlaceholder(definition) {
 }
 
 export const ALDRIMAR_HOUSE_FAMILIES = Object.freeze(
-  ALDRIMAR_JARL_CLAN_DEFINITIONS.map(definition => (
-    definition.slug === 'varulv'
-      ? HOUSE_VARULV_FAMILY
-      : createJarlClanPlaceholder(definition)
-  ))
+  ALDRIMAR_JARL_CLAN_DEFINITIONS.map(definition => {
+    if (definition.slug === 'wargh') return HOUSE_WARGH_FAMILY;
+    if (definition.slug === 'ragnulf') return HOUSE_RAGNULF_FAMILY;
+    if (definition.slug === 'varangr') return HOUSE_VARANGR_FAMILY;
+    if (definition.slug === 'varulv') return HOUSE_VARULV_FAMILY;
+    return createJarlClanPlaceholder(definition);
+  })
 );

@@ -188,8 +188,17 @@ const PARTNERS_BY_ID = Object.freeze({
   'marriage-reidar-estridd-freiwinter': COUPLES.reidar
 });
 
+const PARTNERSHIP_OPTIONS_BY_ID = Object.freeze({
+  'marriage-ljosdis-thorkel-freiwinter': Object.freeze({ status: 'ended', end: '1709' }),
+  'marriage-hjalmar-gwelda-freiwinter': Object.freeze({ status: 'ended', end: '1720' })
+});
+
 function marriage(partnershipId) {
-  return createMarriage(partnershipId, ...PARTNERS_BY_ID[partnershipId]);
+  return createMarriage(
+    partnershipId,
+    ...PARTNERS_BY_ID[partnershipId],
+    PARTNERSHIP_OPTIONS_BY_ID[partnershipId] || {}
+  );
 }
 
 function childrenOf(childIds, partnershipId, options = {}) {
@@ -252,7 +261,7 @@ export const HOUSE_FREIWINTER_FAMILY = Object.freeze({
     house('house-feuerhaar', 'Clan Feuerhaar'),
     house('house-skaal', 'Clan Skaal', HOUSE_EMBLEMS.skaal),
     house('house-skogg', 'Clan Skogg'),
-    house('house-grindel', 'Clan Grindel'),
+    house('house-grendel', 'Clan Grendel'),
     house('house-durthacht', 'Clan Durthacht'),
     house('house-sterkr', 'Clan Sterkr', HOUSE_EMBLEMS.sterkr)
   ],
@@ -306,7 +315,7 @@ export const HOUSE_FREIWINTER_FAMILY = Object.freeze({
     awayWoman('freydis-freiwinter', 'Freydis Freiwinter', '1673', '', 'Clan Skogg'),
     spouse('skule-skogg', 'Skule Skogg', 'male', '1672', '', 'house-skogg'),
     person('hjalmar-freiwinter', 'Hjalmar Freiwinter', 'male', '1673', '1720'),
-    spouse('gwelda-grindel', 'Gwelda Grindel', 'female', '????', '????', 'house-grindel'),
+    spouse('gwelda-grindel', 'Gwelda Grendel', 'female', '1674', '', 'house-grendel'),
     awayWoman('hjalmfrid-freiwinter', 'Hjalmfrid Freiwinter', '1675', '', 'Clan Durthacht'),
     spouse('brychan-durthacht', 'Brychan Durthacht', 'male', '1674', '', 'house-durthacht'),
 
@@ -391,9 +400,9 @@ export const HOUSE_FREIWINTER_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 5,
     sourceModule: 'Clan Freiwinter (bereitgestellte Altdaten)',
-    sourceNote: 'Die vollständige Genealogie folgt der bereitgestellten Freiwinter-Hausseite. Vigulf Varulv und Sif stehen als Gründer vor dem Freiwinter-Wappen; genau ein serieller Zeitsprung führt danach zu Ketill, Svangun und Fenrir. Die im Hofteil genannten Jahresbereiche der Hesire sind Amtszeiten, nicht Lebensdaten; Lebensdaten stammen aus der genealogischen Tabelle. Sämtliche belegten Ehen von Freiwinter-Frauen erhalten direkte Wegverheiratet-Knoten. Jakul/Torborg sowie Edda/Gunnvor verwenden dieselben Weltpersonen und Partnerschaften wie die Varulv-Gegenakte; die Kinder Eddas und Gunnvors werden ausschließlich bei den Varulv fortgeführt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Die vollständige Genealogie folgt der bereitgestellten Freiwinter-Hausseite. Vigulf Varulv und Sif stehen als Gründer vor dem Freiwinter-Wappen; genau ein serieller Zeitsprung führt danach zu Ketill, Svangun und Fenrir. Die im Hofteil genannten Jahresbereiche der Hesire sind Amtszeiten, nicht Lebensdaten; Lebensdaten stammen aus der genealogischen Tabelle. Sämtliche belegten Ehen von Freiwinter-Frauen erhalten direkte Wegverheiratet-Knoten. Jakul/Torborg sowie Edda/Gunnvor verwenden dieselben Weltpersonen und Partnerschaften wie die Varulv-Gegenakte; die Kinder Eddas und Gunnvors werden ausschließlich bei den Varulv fortgeführt. Ljosdis Freiwinter und Thorkel Silberzunge teilen ihre 1709 durch Ljosdis Tod beendete Ehe mit der Silberzungen-Gegenakte. Die Grendel-Gegenakte präzisiert Gwelda Grendel auf 1674–lebend und beendet ihre Ehe mit Hjalmar durch dessen Tod 1720; ihr Sohn Reidar bleibt ausschließlich in der Freiwinter-Linie. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

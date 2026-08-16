@@ -134,7 +134,8 @@ function restoreCommentDraft() {
     if (!draft || typeof draft !== 'object') return false;
 
     setRichEditorContent('cf-text', String(draft.text || ''));
-    if (Array.isArray(draft.segments) && draft.segments.length) {
+    const hasSegmentDraft = Array.isArray(draft.segments) && draft.segments.length > 0;
+    if (hasSegmentDraft) {
       _commentSegments = draft.segments.map(segment => makeCommentSegment(
         segment.kind || 'speech',
         segment.text || '',
@@ -200,8 +201,11 @@ function restoreCommentDraft() {
       const restoredMode = draft.mode === 'creature' || restoredActor?.entityType === 'creature' ? 'creature' : 'charakter';
       setCommentMode(restoredMode);
       if (restoredActor && commentActorMatchesComposerMode(restoredActor, restoredMode)) {
-        selectCharForComment(draft.selectedCharId, { imageSetId: draft.selectedImageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID });
-        if (Number.isInteger(draft.selectedEmoteIdx) && draft.selectedEmoteIdx >= 0) {
+        selectCharForComment(draft.selectedCharId, {
+          imageSetId: draft.selectedImageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID,
+          preserveSegmentImageSets: true
+        });
+        if (!hasSegmentDraft && Number.isInteger(draft.selectedEmoteIdx) && draft.selectedEmoteIdx >= 0) {
           selectEmote(draft.selectedEmoteIdx);
         }
       } else if (draft.manualMode) {

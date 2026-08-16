@@ -129,6 +129,37 @@ const ACTION_DEFINITIONS = Object.freeze([
     glyph: '∞',
     label: 'Bestehende Personen verknüpfen',
     hint: 'Zwei vorhandene Personen frei verbinden (auch Affäre, politisch, erzwungen …)'
+  },
+  {
+    id: 'delete-partnership',
+    group: 'Entfernen',
+    glyph: '−',
+    label: 'Ehe / Verbindung entfernen',
+    hint: 'Einen versehentlich angelegten Bund vollständig löschen – nicht nur historisch beenden',
+    requires: 'removable-partnership'
+  },
+  {
+    id: 'delete-parentage',
+    group: 'Entfernen',
+    glyph: '⌫',
+    label: 'Kind-/Elternverknüpfung entfernen',
+    hint: 'Eine versehentlich angelegte Abstammung oder Mündelaufnahme vollständig lösen',
+    requires: 'removable-parentage'
+  },
+  {
+    id: 'delete-guardianship',
+    group: 'Entfernen',
+    glyph: '↮',
+    label: 'Mündelvermittlung entfernen',
+    hint: 'Eine gespiegelte Mündelaufnahme vollständig in Herkunfts- und Zielhaus entfernen',
+    requires: 'mirrored-guardianship'
+  },
+  {
+    id: 'delete-current-person',
+    group: 'Entfernen',
+    glyph: '×',
+    label: 'Person vollständig entfernen',
+    hint: 'Diese Personenkarte samt ihren direkten Verknüpfungen aus dem Stammbaum löschen'
   }
 ]);
 
@@ -177,7 +208,7 @@ export function createRelationActionsDialog(
 
   function availability(person) {
     const policy = relationshipActionState(context.family, person.id);
-    const { partnerships, engagements, separable } = policy;
+    const { partnerships, engagements, separable, removablePartnerships, removableParentages } = policy;
     const lineagePartnerships = listLineagePartnerships(context.family, person.id);
     const nonLegitimate = context.family.parentages.filter(parentage => (
       parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
@@ -187,12 +218,17 @@ export function createRelationActionsDialog(
       partnership: partnerships.length > 0,
       'lineage-partnership': lineagePartnerships.length > 0,
       separable: separable.length > 0,
+      'removable-partnership': removablePartnerships.length > 0,
+      'removable-parentage': removableParentages.length > 0,
+      'mirrored-guardianship': policy.hasMirroredGuardianship,
       dead: person.status === 'dead' || Boolean(person.death),
       'not-dead': person.status !== 'dead',
       'non-legitimate': nonLegitimate.length > 0,
       partnerships,
       engagements,
       separable_list: separable,
+      removable_partnerships: removablePartnerships,
+      removable_parentages: removableParentages,
       lineage_partnerships: lineagePartnerships,
       nonLegitimate,
       actionAvailability: policy.actionAvailability
@@ -407,6 +443,54 @@ export function createRelationActionsDialog(
     `;
   }
 
+  function parentageLabel(parentage, person) {
+    const child = personById(parentage.childId);
+    const parents = parentage.parentIds.map(parentId => personById(parentId)?.name || parentId).join(' & ');
+    if (parentage.childId === person.id) return `${person.name} als Kind von ${parents}`;
+    return `${child?.name || parentage.childId} als Kind von ${parents}`;
+  }
+
+  function renderRemovalStep(person, action) {
+    const available = availability(person);
+    const isPartnership = action === 'delete-partnership';
+    const candidates = isPartnership
+      ? available.removable_partnerships
+      : available.removable_parentages;
+    step.innerHTML = `
+      <p class="relation-step-lead">${isPartnership ? 'Welche Verbindung soll vollständig entfernt werden?' : 'Welche Kind-/Elternverknüpfung soll vollständig entfernt werden?'}</p>
+      <label class="field">Eintrag
+        <select name="removalId">
+          ${candidates.map(record => `
+            <option value="${escapeHtml(record.id)}">
+              ${isPartnership
+                ? `${escapeHtml(partnershipTypeLabel(record.type))} mit ${escapeHtml(partnerName(record, person.id))} · ${escapeHtml(partnershipStatusLabel(record.status))}`
+                : escapeHtml(parentageLabel(record, person))}
+            </option>
+          `).join('')}
+        </select>
+      </label>
+      ${isPartnership ? `
+        <label class="relation-step-checkbox">
+          <input type="checkbox" name="removeUnconnectedPartner" checked>
+          Danach vollständig unverbundene, hinzugefügte Partnerkarte ebenfalls entfernen
+        </label>
+      ` : `
+        <label class="relation-step-checkbox">
+          <input type="checkbox" name="removeUnconnectedChild">
+          Danach vollständig unverbundene Kinderkarte ebenfalls entfernen
+        </label>
+      `}
+      <p class="relation-step-note"><strong>Vollständig entfernen</strong> löscht den Eintrag. Für eine historische Trennung bleibt weiterhin „Verbindung lösen“ zuständig. Die Änderung kann unmittelbar über „Rückgängig“ zurückgenommen werden.</p>
+    `;
+  }
+
+  function renderGuardianshipRemovalStep(person) {
+    step.innerHTML = `
+      <p class="relation-step-lead">Mündelvermittlung von ${escapeHtml(person.name)} vollständig entfernen?</p>
+      <p class="relation-step-note">Die Mündelkarte, der Mündelrahmen und der Zielhaus-Wappenknoten werden gemeinsam aus beiden Familienakten bereinigt. Biologische Abstammungen bleiben bestehen.</p>
+    `;
+  }
+
   function syncPartnerSource() {
     const source = form.elements.namedItem('partnerSource')?.value || 'registry';
     step.querySelectorAll('[data-partner-source]').forEach(container => {
@@ -480,6 +564,8 @@ export function createRelationActionsDialog(
     else if (actionId === 'die') renderDeathStep(person);
     else if (actionId === 'send-ward') renderSendWardStep(person);
     else if (['divorce', 'upgrade-engagement', 'marry-away'].includes(actionId)) renderPartnershipStep(person, actionId);
+    else if (['delete-partnership', 'delete-parentage'].includes(actionId)) renderRemovalStep(person, actionId);
+    else if (actionId === 'delete-guardianship') renderGuardianshipRemovalStep(person);
     else return false;
     const definition = ACTION_DEFINITIONS.find(item => item.id === actionId);
     submitButton.textContent = actionId === 'change-portrait'
@@ -511,6 +597,9 @@ export function createRelationActionsDialog(
       targetFamilyId: values.targetFamilyId || '',
       targetGuardianId: values.targetGuardianId || '',
       partnershipId: values.partnershipId || '',
+      removalId: values.removalId || '',
+      removeUnconnectedPartner: Boolean(values.removeUnconnectedPartner),
+      removeUnconnectedChild: Boolean(values.removeUnconnectedChild),
       portrait: normalizePortraitSource(values.portrait)
     };
   }

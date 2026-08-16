@@ -8,6 +8,8 @@ import { AELDRUNMAR_HOUSE_PROFILES } from './aeldrunmar-house-profiles.js';
 
 const KENDRYCK_HOUSE_ID = 'house-kendryck';
 const KENDRYCK_EMBLEM = 'assets/images/houses/Aeldrunmar/haus-kendryck.png';
+const SEOLFOR_HOUSE_ID = 'house-seolfor';
+const SEOLFOR_EMBLEM = 'assets/images/houses/Aeldrunmar/haus-seolfor.png';
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
   'worldPersonId',
@@ -42,7 +44,8 @@ const PERSON_ROWS = Object.freeze([
   ['person-3951aee7', 'Coelgyth Wulfgifu', 'female', '1704', '', '', 'core', 'branch'],
   ['person-d6bd71eb', 'Coeldran Wulfric', 'male', '1708', '', '', 'core', 'mainline'],
   ['person-e9b36eea', '??? Leofrun', 'female', '', '', '', 'married', 'mainline'],
-  ['person-09e39e2e', 'Coelgar Wulfstan', 'male', '1723', '', 'Kronprinz', 'core', 'branch'],
+  ['person-659f30e1', 'Walmaris Saewynn Seolfor', 'female', '1694', '', 'Schwester Walhyld Saewines', 'married', 'branch', SEOLFOR_HOUSE_ID],
+  ['person-09e39e2e', 'Coelgar Wulfstan', 'male', '1713', '', 'Kronprinz', 'core', 'branch'],
   ['person-589a5bfe', 'Coelferth Osric', 'male', '1721', '', 'Prinz', 'core', 'mainline'],
   ['person-2ecef67d', 'Coelgyth Cyneswith', 'female', '1722', '', '', 'core', 'branch'],
   ['person-eacdecf2', 'Coelswyth Mildred', 'female', '1723', '', '', 'core', 'mainline'],
@@ -75,6 +78,7 @@ const PARTNERSHIP_ROWS = Object.freeze([
   ['partnership-abdd6ce6', 'marriage', 'person-6a655385', 'person-600dab7b'],
   ['partnership-1970b790', 'marriage', 'person-b334cace', 'person-80afee79'],
   ['partnership-21d70a5c', 'marriage', 'person-322c0257', 'person-e9b36eea'],
+  ['marriage-coelwulf-walmaris-kendryck-seolfor', 'marriage', 'person-322c0257', 'person-659f30e1'],
   ['partnership-221fb8d0', 'marriage', 'person-69788a2b', 'person-68da5d45'],
   ['partnership-95055e5a', 'marriage', 'person-7fcf16c8', 'person-7769a2d1'],
   ['partnership-9d5ba965', 'marriage', 'person-3951aee7', 'person-3da018b4'],
@@ -103,21 +107,23 @@ const UNKNOWN_HOUSE_PARTNER_IDS = new Set([
 ]);
 
 function createPerson(row) {
-  const [id, name, sex, birth, death, title, familyRole, lineageRole] = row;
+  const [id, name, sex, birth, death, title, familyRole, lineageRole, houseIdOverride = ''] = row;
   const isMarriedAway = MARRIED_AWAY_PERSON_IDS.has(id);
   return createFamilyPerson({
     id,
-    worldPersonId: `person--haus-kendryck--${id}`,
+    worldPersonId: id === 'person-659f30e1'
+      ? 'person--haus-seolfor--person-659f30e1'
+      : `person--haus-kendryck--${id}`,
     name,
     sex,
     birth,
     death,
     title: title || (isMarriedAway ? 'Wegverheiratet an ein unbekanntes Haus' : ''),
-    houseId: familyRole === 'core'
+    houseId: houseIdOverride || (familyRole === 'core'
       ? KENDRYCK_HOUSE_ID
       : UNKNOWN_HOUSE_PARTNER_IDS.has(id)
         ? 'house-unknown'
-        : '',
+        : ''),
     familyRole,
     lineageRole,
     tags: isMarriedAway ? ['Wegverheiratet'] : [],
@@ -163,10 +169,10 @@ const PARENTAGES = Object.freeze([
   parentage('parentage-92c5c079', 'person-3951aee7', ['person-b334cace', 'person-80afee79'], 'partnership-1970b790'),
   parentage('parentage-1c23d590', 'person-d6bd71eb', ['person-b334cace', 'person-80afee79'], 'partnership-1970b790'),
   parentage('parentage-1f378528', 'person-09e39e2e', ['person-322c0257', 'person-e9b36eea'], 'partnership-21d70a5c'),
-  parentage('parentage-e36c0e21', 'person-589a5bfe', ['person-322c0257', 'person-e9b36eea'], 'partnership-21d70a5c'),
-  parentage('parentage-58d4d6ed', 'person-2ecef67d', ['person-322c0257', 'person-e9b36eea'], 'partnership-21d70a5c'),
-  parentage('parentage-e6026839', 'person-eacdecf2', ['person-322c0257', 'person-e9b36eea'], 'partnership-21d70a5c'),
-  parentage('parentage-a2bc8693', 'person-7ee11855', ['person-322c0257', 'person-e9b36eea'], 'partnership-21d70a5c'),
+  parentage('parentage-e36c0e21', 'person-589a5bfe', ['person-322c0257', 'person-659f30e1'], 'marriage-coelwulf-walmaris-kendryck-seolfor'),
+  parentage('parentage-58d4d6ed', 'person-2ecef67d', ['person-322c0257', 'person-659f30e1'], 'marriage-coelwulf-walmaris-kendryck-seolfor'),
+  parentage('parentage-e6026839', 'person-eacdecf2', ['person-322c0257', 'person-659f30e1'], 'marriage-coelwulf-walmaris-kendryck-seolfor'),
+  parentage('parentage-a2bc8693', 'person-7ee11855', ['person-322c0257', 'person-659f30e1'], 'marriage-coelwulf-walmaris-kendryck-seolfor'),
   parentage('parentage-42d3591e', 'person-93d44f22', ['person-7fcf16c8', 'person-7769a2d1'], 'partnership-95055e5a'),
   parentage('parentage-ef74e271', 'person-4da19909', ['person-7fcf16c8', 'person-7769a2d1'], 'partnership-95055e5a'),
   parentage('parentage-5c30d967', 'person-469e8324', ['person-d6bd71eb', 'person-da869a9b'], 'partnership-114c8758'),
@@ -203,6 +209,13 @@ export const HOUSE_KENDRYCK_FAMILY = Object.freeze({
       name: 'Unbekanntes Haus',
       motto: '',
       emblem: '',
+      status: 'active'
+    }),
+    Object.freeze({
+      id: SEOLFOR_HOUSE_ID,
+      name: 'Haus Seolfor',
+      motto: '',
+      emblem: SEOLFOR_EMBLEM,
       status: 'active'
     })
   ]),
@@ -278,8 +291,8 @@ export const HOUSE_KENDRYCK_FAMILY = Object.freeze({
   }),
   extensions: Object.freeze({
     blankFamily: false,
-    sourceRevision: 1,
-    sourceNote: 'Der vollständige verbundene Graph stammt aus „Stammbäume Manuell exportiert/Kendrck.json“. Die unverbundene doppelte Mildgyth-Karte wurde nicht übernommen; der unmögliche Eintrag 1998–1720 wurde als offensichtlicher Zahlendreher zu 1698–1720 normalisiert. Alle 15 Partnerschaften, 25 Abstammungen und der serielle Zeitsprung der manuellen Fassung bleiben erhalten. Vier im Export bereits verheiratete Frauen des Hauses führen zusätzlich die verbindliche direkte Wegverheiratet-Verknüpfung zum unbekannten Zielhaus.',
+    sourceRevision: 2,
+    sourceNote: 'Der vollständige verbundene Graph stammt aus „Stammbäume Manuell exportiert/Kendrck.json“. Die unverbundene doppelte Mildgyth-Karte wurde nicht übernommen; der unmögliche Eintrag 1998–1720 wurde als offensichtlicher Zahlendreher zu 1698–1720 normalisiert. Coelgar Wulfstan ist auf 1713 korrigiert. Coelwulfs erste Frau ist ausschließlich Coelgars Mutter; Coelferth, Coelgyth, Coelswyth und Coelrun entstammen seiner zweiten Ehe mit Walmaris Saewynn Seolfor. Diese Ehe ist spiegelbildlich im Seolfor-Stammbaum registriert.',
     registryManagedHouseProfileFields: Object.freeze([
       'rankId',
       'seat',

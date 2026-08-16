@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-  <link rel="stylesheet" href="./styles/comments.css?v=20260807-fazit-v10">
+  <link rel="stylesheet" href="./styles/comments.css?v=20260816-segment-avatar-sets-v1">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260803-character-image-sets-v1">
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260803-composer-costs-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
-<link rel="stylesheet" href="./styles/characters.css?v=20260809-character-biography-tab-v1">
+<link rel="stylesheet" href="./styles/characters.css?v=20260816-character-register-views-v1">
 <link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260811-zauberkarten-breiter-v1">
 <link rel="stylesheet" href="./styles/character-archive.css?v=20260810-zauberkarten-redesign-v1">
 <link rel="stylesheet" href="./styles/character-combat-setup.css?v=20260803-character-creation-v1">
@@ -74,7 +74,7 @@
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/scene-blocks.css?v=20260712-layout-ownership-v1">
-<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260712-dashboard-responsive-v1">
+<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260816-primary-registers-v1">
 <link rel="stylesheet" href="./styles/item-database.css?v=20260625-item-db-register-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260712-dashboard-readable-v1" media="(max-width: 640px)">
@@ -225,7 +225,7 @@
   <script src="./modules/dashboard/dashboard-state.js?v=20260712-continuation-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20260802-brandhof-combat-v1" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20260816-primary-registers-v1" defer></script>
   <script src="./modules/characters/character-image-sets.js?v=20260808-character-sections-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260803-character-image-sets-v1" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260703-character-dashboard-v1" defer></script>
@@ -242,9 +242,10 @@
   <script src="./modules/characters/character-biography-tab.js?v=20260809-biography-stats-firestore-fix-v1" defer></script>
   <script type="module" src="./modules/characters/character-image-library-autosave.js?v=20260808-character-storage-audit-v1"></script>
   <script src="./modules/characters/character-bulk-actions.js?v=20260809-character-biography-tab-v1" defer></script>
+  <script src="./modules/characters/character-register-views.js?v=20260816-character-register-views-v1" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20260809-character-biography-tab-v1" defer></script>
+  <script src="./modules/characters/character-grid.js?v=20260816-character-register-views-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20260816-segment-avatar-sets-v1" defer></script>
   <script src="./modules/characters/character-profile-events.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
@@ -287,11 +288,11 @@
   <script src="./modules/comments/comments-form-state.js?v=20260804-char-filter-perf-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20260804-char-filter-perf-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20260804-referee-v2" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20260804-preview-debounce-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20260816-segment-avatar-sets-v1" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20260816-segment-avatar-sets-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260804-preview-debounce-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20260804-referee-v2" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20260816-segment-avatar-sets-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
   <script src="./modules/comments/comments-thread.js?v=20260802-combat-state-v2" defer></script>
@@ -313,10 +314,10 @@
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260803-character-image-sets-v1" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20260804-preview-debounce-v1" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20260816-segment-avatar-sets-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260804-preview-debounce-v1" defer></script>
   <script src="./modules/comments/comments-edit.js?v=20260804-referee-v2" defer></script>
-  <script src="./modules/comments/comments-edit-character-picker.js?v=20260804-char-filter-perf-v1" defer></script>
+  <script src="./modules/comments/comments-edit-character-picker.js?v=20260816-segment-avatar-sets-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260804-referee-v2" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
@@ -337,7 +338,7 @@
   <script src="./modules/modal/modal-controller.js?v=20260715-family-workbench-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
-  <script src="./modules/sidebar/sidebar-registers.js?v=20260717-stammbaeume-register-v1" defer></script>
+  <script src="./modules/sidebar/sidebar-registers.js?v=20260816-primary-register-icons-v1" defer></script>
 </head>
 <body>
 
@@ -404,8 +405,8 @@
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
-<script src="./modules/comments/comments-segment-events.js?v=20260802-brandhof-combat-v1" defer></script>
-<script src="./modules/comments/comments-assistant.js?v=20260802-creature-picker-v1" defer></script>
+<script src="./modules/comments/comments-segment-events.js?v=20260816-segment-avatar-sets-v1" defer></script>
+<script src="./modules/comments/comments-assistant.js?v=20260816-segment-avatar-sets-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20260807-fazit-v4" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
 <script src="./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1" defer></script>

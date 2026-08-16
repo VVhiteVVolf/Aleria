@@ -149,7 +149,7 @@ const SERENLYN_HOUSES = Object.freeze([
   house('house-morgryn', 'Haus Morgryn'),
   house('house-morlais', 'Haus Morlais'),
   house('house-pysgod', "Haus Pysgod O'Tredegar", HOUSE_EMBLEMS.pysgod),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-walwrs', "Haus Walwrs O'Traeth", HOUSE_EMBLEMS.walwrs),
   house('house-blodeuwedd', 'Haus Blodeuwedd')
 ]);
@@ -162,7 +162,7 @@ const ABERDAIL_HOUSES = Object.freeze([
   house('house-gwaedlyd', "Haus Gwaedlyd O'Caer Gorwel", HOUSE_EMBLEMS.gwaedlyd),
   house('house-blaidd-tredegar', "Haus Blaidd O'Tredegar", HOUSE_EMBLEMS.blaidd),
   house('house-lyfant-caer-asgwrn', "Haus Lyfant O'Caer Asgwrn", HOUSE_EMBLEMS.lyfant),
-  house('house-trachwyll', 'Haus Trachwyll')
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn")
 ]);
 
 const ORIGIN_PARTNERS = Object.freeze({
@@ -297,7 +297,7 @@ export const HOUSE_ARFORDIR_SERENLYN_FAMILY = Object.freeze({
       notes: 'Leodegrance bleibt als Sohn Thalens und Aignéis in Serenlyn sichtbar. Seine Nachkommen werden ausschließlich in der verknüpften Aberdail-Akte fortgeführt.'
     }),
     serenlynPerson('cryl-trachwyll', 'Cryl Trachwyll', 'female', '1676', '1700', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
     serenlynPerson('luc-arfordir', 'Luc Arfordir', 'male', '1677', '', {
@@ -472,7 +472,7 @@ export const HOUSE_ARFORDIR_ABERDAIL_FAMILY = Object.freeze({
       title: 'Gründer und Ritterfürst von Aberdail seit 1720'
     }),
     aberdailPerson('cryl-trachwyll', 'Cryl Trachwyll', 'female', '1676', '1700', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
     aberdailPerson('luc-arfordir', 'Luc Arfordir', 'male', '1677', '', {

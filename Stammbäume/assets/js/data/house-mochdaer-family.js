@@ -85,7 +85,7 @@ const GWYLIAU_HOUSES = Object.freeze([
   house(CERRIGARTH_HOUSE_ID, "Haus Mochdaer O'Cerrigarth", MOCHDAER_EMBLEM),
   house('house-unknown', 'Unbekanntes Haus'),
   house('house-lockart', 'Haus Lockart'),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-arfordir', 'Haus Arfordir'),
   house('house-drewi', 'Haus Drewi'),
   house('house-balauric', 'Haus Balauric'),
@@ -140,7 +140,7 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
     gwyliauPerson('armella-mochdaer', 'Armella Mochdaer', 'female', '1630', '1669'),
     gwyliauPerson('marmaduke-mochdaer', 'Marmaduke Mochdaer', 'male', '1631', '1692'),
     gwyliauPerson('bonnie-lockart', 'Bonnie Lockart', 'female', '1630', '1715', 'house-lockart'),
-    gwyliauPerson('mordred-trachwyll', 'Mordred Trachwyll', 'male', '1631', '1698', 'house-trachwyll'),
+    gwyliauPerson('mordred-trachwyll', 'Mordred Trachwyll', 'male', '1631', '1698', 'house-trachwyll-talfronwyn'),
     gwyliauPerson('arglwyddes-arfordir', 'Arglwyddes Arfordir', 'female', '1632', '1711', 'house-arfordir'),
 
     gwyliauPerson('merwin-mochdaer', 'Merwin Mochdaer', 'male', '1650', '1714', GWYLIAU_HOUSE_ID, {
@@ -210,7 +210,7 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
     ...childrenOf(['arian-mochdaer', 'afon-mochdaer'], ['idris-mochdaer', 'senga-haig'], 'marriage-idris-senga-mochdaer')
   ],
   cadetBranches: [
-    marriedAway('married-away-trachwyll-armella', 'Haus Trachwyll', 'marriage-armella-mordred-mochdaer', 'house-trachwyll', 'haus-trachwyll'),
+    marriedAway('married-away-trachwyll-armella', "Haus Trachwyll O'Talfronwyn", 'marriage-armella-mordred-mochdaer', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-balauric-jinell', 'Haus Balauric', 'marriage-jinell-heveydd-mochdaer', 'house-balauric', 'haus-balauric'),
     marriedAway('married-away-dobhar-marvine', 'Haus Dobhar', 'marriage-marvine-donnacha-mochdaer', 'house-dobhar', 'haus-dobhar'),
     marriedAway('married-away-blodyn-luned', 'Haus Blodyn', 'marriage-luned-tarrant-mochdaer', 'house-blodyn', 'haus-blodyn', HOUSE_EMBLEMS.blodyn),

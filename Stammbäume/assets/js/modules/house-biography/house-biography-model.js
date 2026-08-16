@@ -87,6 +87,13 @@ function houseLands(profile = {}) {
   return [profile.seat, profile.barony, profile.county, profile.kingdom].filter(Boolean).join(' · ');
 }
 
+function houseLieges(profile = {}) {
+  const names = Array.isArray(profile.liegeHouses)
+    ? profile.liegeHouses.map(entry => entry?.name).filter(Boolean)
+    : [];
+  return names.length ? names.join(' & ') : profile.liegeHouseName || '';
+}
+
 export function createHouseBiographyModule(family = {}) {
   const house = currentHouse(family);
   const profile = family.document?.houseProfile || {};
@@ -102,7 +109,7 @@ export function createHouseBiographyModule(family = {}) {
       ['Gegründet', 'Noch festlegen'],
       ['Oberhaupt', houseHead(family)?.name || 'Noch festlegen'],
       ['Erbe', 'Noch festlegen'],
-      ['Lehensherr', profile.liegeHouseName || 'Noch festlegen'],
+      ['Lehensherr', houseLieges(profile) || 'Noch festlegen'],
       ['Vasallen', 'Noch festlegen'],
       ['Ländereien', houseLands(profile) || 'Noch festlegen'],
       ['Wappen', 'Noch festlegen'],

@@ -9,10 +9,11 @@ const almanachRoot = dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = resolve(almanachRoot, '..');
 const buildRoot = resolve(almanachRoot, 'dist');
 const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
-const combatIconDirectories = [
+const workspaceIconDirectories = [
   ['Zauber Icons', 'Oblivion Style'],
   ['Zauber Icons', 'Baldurs Gate'],
-  ['Traits Icon']
+  ['Traits Icon'],
+  ['ReiterIcons']
 ];
 
 function preserveClassicAlmanachScripts() {
@@ -34,7 +35,7 @@ function preserveClassicAlmanachScripts() {
         resolve(buildRoot, 'CharakterDatenbank'),
         { recursive: true, force: true }
       );
-      await Promise.all(combatIconDirectories.map(pathParts => cp(
+      await Promise.all(workspaceIconDirectories.map(pathParts => cp(
         resolve(workspaceRoot, 'IconOrdner', ...pathParts),
         resolve(buildRoot, 'IconOrdner', ...pathParts),
         { recursive: true, force: true }

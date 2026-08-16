@@ -6,6 +6,7 @@ import {
   withCanonicalWorldPersonIds
 } from './cross-family-person-projection.js';
 import { isExclusiveActivePartnership } from './exclusive-partnership-policy.js';
+import { isPersonUnconnected } from './family-record-removal.js';
 
 function primaryHouse(family) {
   return family.houses.find(house => house.id === family.lineage.houseId) || null;
@@ -144,5 +145,97 @@ export function createMirroredGuardianshipChange({
     linkId,
     currentFamily: currentRole === 'guardian' ? nextGuardianFamily : nextWardFamily,
     counterpartFamily: currentRole === 'guardian' ? nextWardFamily : nextGuardianFamily
+  });
+}
+
+function appendTombstones(family, collection, ids) {
+  if (!ids.length) return;
+  const current = family.extensions?.registryTombstones || {};
+  family.extensions = {
+    ...(family.extensions || {}),
+    registryTombstones: {
+      ...current,
+      [collection]: [...new Set([...(current[collection] || []), ...ids])]
+    }
+  };
+}
+
+function removeGuardianshipFromFamily(familyInput, linkId) {
+  const family = cloneValue(normalizeFamily(familyInput));
+  const removedBranchIds = family.cadetBranches
+    .filter(branch => branch.extensions?.crossFamilyGuardianship?.linkId === linkId)
+    .map(branch => branch.id);
+  const removedParentages = family.parentages
+    .filter(parentage => parentage.extensions?.crossFamilyGuardianship?.linkId === linkId);
+  const removedParentageIds = removedParentages.map(parentage => parentage.id);
+  const projectedWardIds = removedParentages.map(parentage => parentage.childId);
+  family.cadetBranches = family.cadetBranches
+    .filter(branch => !removedBranchIds.includes(branch.id));
+  family.parentages = family.parentages
+    .filter(parentage => !removedParentageIds.includes(parentage.id));
+
+  family.persons.forEach(person => {
+    if (person.extensions?.crossFamilyGuardianship?.linkId !== linkId) return;
+    const extensions = { ...(person.extensions || {}) };
+    delete extensions.crossFamilyGuardianship;
+    person.extensions = extensions;
+    if (person.familyRole === 'ward-away') person.familyRole = 'core';
+    person.tags = (person.tags || []).filter(tag => tag !== 'Fortgegebenes Mündel');
+    person.notes = String(person.notes || '')
+      .replace(/\s*Als Mündel an [^.]+ gegeben\./gu, '')
+      .trim();
+  });
+
+  const removedPersonIds = projectedWardIds.filter(personId => {
+    const person = family.persons.find(item => item.id === personId);
+    return person?.familyRole === 'ward' && isPersonUnconnected(family, personId);
+  });
+  family.persons = family.persons.filter(person => !removedPersonIds.includes(person.id));
+  if (removedPersonIds.includes(family.view.focusPersonId)) family.view.focusPersonId = family.persons[0]?.id || '';
+  appendTombstones(family, 'cadetBranches', removedBranchIds);
+  appendTombstones(family, 'parentages', removedParentageIds);
+  appendTombstones(family, 'persons', removedPersonIds);
+  return normalizeFamily(family);
+}
+
+function guardianshipLink(family, { parentageId = '', personId = '', linkId = '' }) {
+  if (linkId) {
+    return family.parentages.find(parentage => parentage.extensions?.crossFamilyGuardianship?.linkId === linkId)
+      ?.extensions?.crossFamilyGuardianship
+      || family.persons.find(person => person.extensions?.crossFamilyGuardianship?.linkId === linkId)
+        ?.extensions?.crossFamilyGuardianship
+      || null;
+  }
+  if (parentageId) {
+    return family.parentages.find(parentage => parentage.id === parentageId)
+      ?.extensions?.crossFamilyGuardianship || null;
+  }
+  return family.persons.find(person => person.id === personId)
+    ?.extensions?.crossFamilyGuardianship || null;
+}
+
+export function removeMirroredGuardianshipChange({
+  currentFamily: currentInput,
+  counterpartFamily: counterpartInput,
+  parentageId = '',
+  personId = '',
+  linkId = ''
+}) {
+  const currentFamily = normalizeFamily(currentInput);
+  const counterpartFamily = normalizeFamily(counterpartInput);
+  const relationship = guardianshipLink(currentFamily, { parentageId, personId, linkId });
+  if (!relationship?.linkId) {
+    throw new Error('Diese Mündelverknüpfung ist nicht als registerübergreifend markiert.');
+  }
+  const counterpartHasLink = counterpartFamily.cadetBranches.some(branch => (
+    branch.extensions?.crossFamilyGuardianship?.linkId === relationship.linkId
+  )) || counterpartFamily.parentages.some(parentage => (
+    parentage.extensions?.crossFamilyGuardianship?.linkId === relationship.linkId
+  ));
+  if (!counterpartHasLink) throw new Error('Die gespiegelte Mündelverknüpfung fehlt in der Gegenakte.');
+  return Object.freeze({
+    linkId: relationship.linkId,
+    currentFamily: removeGuardianshipFromFamily(currentFamily, relationship.linkId),
+    counterpartFamily: removeGuardianshipFromFamily(counterpartFamily, relationship.linkId)
   });
 }

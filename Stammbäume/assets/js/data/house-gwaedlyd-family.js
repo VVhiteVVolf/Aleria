@@ -123,7 +123,7 @@ const ORIGIN_HOUSES = Object.freeze([
   house(CAER_GORWEL_HOUSE_ID, "Haus Gwaedlyd O'Caer Gorwel", HOUSE_EMBLEMS.gwaedlyd),
   house(TREDEGAR_HOUSE_ID, "Haus Gwaedlyd O'Tredegar", HOUSE_EMBLEMS.gwaedlyd),
   house('house-walwrs', 'Haus Walwrs'),
-  house('house-trachwyll', 'Haus Trachwyll'),
+  house('house-trachwyll-talfronwyn', "Haus Trachwyll O'Talfronwyn"),
   house('house-culloch', 'Haus Culloch'),
   house('house-blodyn', 'Haus Blodyn', HOUSE_EMBLEMS.blodyn),
   house('house-morgryn', 'Haus Morgryn'),
@@ -193,7 +193,7 @@ export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = Object.freeze({
       notes: 'Die Altquelle nennt unmöglich 1722–1770. Genealogische Position und Ehepartner Bethwyn (1623–1654) ergeben 1622–1670.'
     }),
     originPerson('bethwyn-trachwyll', 'Bethwyn Trachwyll', 'male', '1623', '1654', {
-      houseId: 'house-trachwyll',
+      houseId: 'house-trachwyll-talfronwyn',
       familyRole: 'married'
     }),
 
@@ -319,7 +319,7 @@ export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = Object.freeze({
     ...childrenOf(['twm-gwaedlyd', 'tre-gwaedlyd'], ['uryen-gwaedlyd', 'frewi-llyfant'], 'marriage-uryen-frewi-gwaedlyd')
   ],
   cadetBranches: [
-    marriedAway('married-away-meeghan-gwaedlyd-trachwyll', 'Haus Trachwyll', 'marriage-meeghan-bethwyn-gwaedlyd', 'house-trachwyll', 'haus-trachwyll'),
+    marriedAway('married-away-meeghan-gwaedlyd-trachwyll', "Haus Trachwyll O'Talfronwyn", 'marriage-meeghan-bethwyn-gwaedlyd', 'house-trachwyll-talfronwyn', 'haus-trachwyll-talfronwyn'),
     marriedAway('married-away-bettrys-gwaedlyd-blodyn', 'Haus Blodyn', 'marriage-tathal-bettrys', 'house-blodyn', 'haus-blodyn', HOUSE_EMBLEMS.blodyn),
     marriedAway('married-away-arianrhod-gwaedlyd-arfordir', "Haus Arfordir O'Aberdail", 'marriage-arianrhod-luc-arfordir', 'house-arfordir', 'haus-arfordir-aberdail', HOUSE_EMBLEMS.arfordir),
     createSingleFounderHouseBranch({

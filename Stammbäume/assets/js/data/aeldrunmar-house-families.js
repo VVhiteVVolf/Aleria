@@ -1,7 +1,19 @@
 import { HOUSE_KENDRYCK_FAMILY } from './house-kendryck-family.js';
 import { HOUSE_SCANDYN_FAMILY } from './house-scandyn-family.js';
+import {
+  HOUSE_BERAN_FAMILY,
+  HOUSE_EARNCYNNE_FAMILY,
+  HOUSE_ESTMERE_FAMILY,
+  HOUSE_FRYE_FAMILY,
+  HOUSE_SEOLFOR_FAMILY
+} from './aeldrunmar-earltum-families.js';
 
 export const AELDRUNMAR_HOUSE_FAMILIES = Object.freeze([
+  HOUSE_FRYE_FAMILY,
+  HOUSE_ESTMERE_FAMILY,
+  HOUSE_EARNCYNNE_FAMILY,
+  HOUSE_BERAN_FAMILY,
   HOUSE_KENDRYCK_FAMILY,
+  HOUSE_SEOLFOR_FAMILY,
   HOUSE_SCANDYN_FAMILY
 ]);

@@ -300,14 +300,14 @@ export const HOUSE_SKAAL_FAMILY = Object.freeze({
     awayWoman('yngvild-skaal', 'Yngvild Skaal', '1616', '1650', 'Clan Wargh'),
     spouse('gudlaug-skjegg', 'Gudlaug Skjegg', 'female', '1612', '1687', 'house-skjegg'),
     spouse('thordis-skogg', 'Thordis Skogg', 'female', '1616', '????', 'house-skogg'),
-    spouse('hogne-wargh', 'Hogne Wargh', 'male', '1614', '????', 'house-wargh'),
+    spouse('hogne-wargh', 'Hogne Wargh', 'male', '1614', '1679', 'house-wargh'),
 
     person('steinarr-skaal', 'Steinarr Skaal', 'male', '1630', '1699'),
     awayWoman('fridgerd-skaal', 'Fridgerd Skaal', '1633', '1706', 'Clan Brathfengr'),
     person('sigmund-skaal', 'Sigmund Skaal', 'male', '1635', '1720'),
     spouse('vallgerd-skaal-spouse', 'Vallgerd', 'female', '1630', '1702'),
     spouse('skjold-brathfengr', 'Skjold Brathfengr', 'male', '1631', '1715', 'house-brathfengr'),
-    spouse('eldrid-helgr', 'Eldrid Helgr', 'female', '1636', '????', 'house-helgr'),
+    spouse('eldrid-helgr', 'Eldrid Helgr', 'female', '1636', '1734', 'house-helgr'),
 
     person('sigvard-skaal', 'Sigvard Skaal', 'male', '1648', '1719'),
     awayWoman('freydis-skaal', 'Freydis Skaal', '1651', '1717', 'Clan Skald'),
@@ -440,7 +440,7 @@ export const HOUSE_SKAAL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceModule: 'Clan Skaal (bereitgestellte Altdaten)',
     sourceNote: 'Der vollständige Skaal-Stammbaum folgt der bereitgestellten Hausseite. Thor und Sif stehen als überlieferte Ursprungsfiguren vor dem Wappen; genau ein strikt serieller Generationentrenner führt zu Hjalmar, Helga und Asmund. Bjoern Vaeren und Svanhild Skaal werden ausschließlich als Verlobung geführt; eine frühere Mündel-, Pflege- oder Ehedarstellung wird entfernt. Bei der missverständlich vertauschten Partnerüberschrift der jüngeren Generation folgt die Zuordnung den ausdrücklich benannten Kindergruppen: Sven und Runa sind Eltern von Jorah, Juna, Duna und Dora; Svantje ist mit Sleipnir Varulv verheiratet. Verheiratete und wegverlobte Skaal-Frauen erhalten direkte Zielclanknoten; Nachkommen in Skjegg, Freiwinter und Varulv werden ausschließlich in den Zielakten fortgeführt.',
     registryTombstones: {

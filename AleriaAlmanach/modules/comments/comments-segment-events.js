@@ -8,6 +8,8 @@ const COMMENT_SEGMENT_CLICK_ACTIONS = new Set([
   'set-edit-comment-segment-side',
   'set-comment-segment-emote',
   'set-edit-comment-segment-emote',
+  'set-comment-segment-image-set',
+  'set-edit-comment-segment-image-set',
   'remove-comment-segment',
   'remove-edit-comment-segment',
   'format-comment-segment-wrap',
@@ -54,6 +56,14 @@ function handleCommentSegmentActionClick(event) {
   }
   if (action === 'set-edit-comment-segment-emote') {
     setEditCommentSegmentEmote(segmentId, trigger.dataset.emoteIndex || '');
+    return;
+  }
+  if (action === 'set-comment-segment-image-set') {
+    setCommentSegmentImageSet(segmentId, trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+    return;
+  }
+  if (action === 'set-edit-comment-segment-image-set') {
+    setEditCommentSegmentImageSet(segmentId, trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
     return;
   }
   if (action === 'remove-comment-segment') {

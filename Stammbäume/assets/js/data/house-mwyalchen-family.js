@@ -8,6 +8,7 @@ import {
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_MWYALCHEN_PORTRAITS } from './house-mwyalchen-portraits.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,
@@ -26,6 +27,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   ciarog: AEHRENTAL_HOUSE_EMBLEMS.ciarog,
   dyngwn: VORTIGERNS_RUH_HOUSE_EMBLEMS.dyngwn,
   eryr: TAL_DER_MILANE_HOUSE_EMBLEMS.eryr,
+  feuerhaar: IVARSHEIM_HOUSE_EMBLEMS.feuerhaar,
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
   gaeth: TAL_DER_MILANE_HOUSE_EMBLEMS.gaeth,
   hebog: TAL_DER_MILANE_HOUSE_EMBLEMS.hebog,
@@ -154,7 +156,7 @@ const COUPLES = Object.freeze({
   arglwydd: ['ceridwen-wyrm', 'arglwydd-mwyalchen'],
   gwynham: ['caradwyn-dyngwn', 'gwynham-mwyalchen'],
   arwyn: ['ysgonan-pyrth', 'arwyn-mwyalchen'],
-  cieran: ['cieran-mwyalchen', 'ingrid-eldhari'],
+  cieran: ['cieran-mwyalchen', 'ingrid-feuerhaar'],
   agravaine: ['agravaine-1673-mwyalchen', 'gwenog-gaeth'],
   carwyn: ['gruffyd-eryr', 'carwyn-mwyalchen-eryr'],
   gwalchgwyn: ['gwalchgwyn-mwyalchen', 'laragh-nessa'],
@@ -249,7 +251,7 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
     house('house-wyrm', 'Haus Wyrm', HOUSE_EMBLEMS.wyrm),
     house('house-dyngwn', 'Haus Dyngwn', HOUSE_EMBLEMS.dyngwn),
     house('house-pyrth', 'Haus Pyrth', HOUSE_EMBLEMS.pyrth),
-    house('house-eldhari', 'Haus Eldhári'),
+    house('house-feuerhaar', 'Clan Feuerhaar', HOUSE_EMBLEMS.feuerhaar),
     house('house-nessa', 'Haus Nessa'),
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
     house('house-ciarog', 'Haus Ciaróg', HOUSE_EMBLEMS.ciarog),
@@ -294,10 +296,14 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
 
     person('gwynham-mwyalchen', 'Gwynham Mwyalchen', 'male', '1650', '1718'),
     awayWoman('arwyn-mwyalchen', 'Arwyn Mwyalchen', '1654', '1724', 'Haus Pyrth'),
-    person('cieran-mwyalchen', 'Cieran Mwyalchen', 'male', '1655', '????'),
+    person('cieran-mwyalchen', 'Cieran Mwyalchen', 'male', '1655', '1700', {
+      notes: 'Die ausgearbeitete Feuerhaar-Gegenakte präzisiert das zuvor offene Todesjahr auf 1700.'
+    }),
     spouse('caradwyn-dyngwn', 'Caradwyn Dyngwn', 'female', '1653', '1711', 'house-dyngwn'),
     spouse('ysgonan-pyrth', 'Ysgonan Pyrth', 'male', '1652', '1723', 'house-pyrth'),
-    spouse('ingrid-eldhari', 'Ingrid Eldhári', 'female', '1655', '????', 'house-eldhari'),
+    spouse('ingrid-feuerhaar', 'Ingrid Feuerhaar', 'female', '1655', '1710', 'house-feuerhaar', {
+      notes: 'Die ältere Mwyalchen-Akte führte Ingrid widersprüchlich als Eldhári. Die Feuerhaar-Quelle und ihre eingezeichnete Abstammung belegen sie als Tochter Odins und Heledd Aderyns.'
+    }),
 
     person('agravaine-1673-mwyalchen', 'Agravaine Mwyalchen', 'male', '1673', ''),
     awayWoman('carwyn-mwyalchen-eryr', 'Carwyn Mwyalchen', '1675', '', 'Haus Eryr'),
@@ -370,7 +376,10 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
     createMarriage('marriage-ceridwen-arglwydd', ...COUPLES.arglwydd),
     createMarriage('marriage-caradwyn-gwynham-dyngwn', ...COUPLES.gwynham),
     endedMarriage('marriage-ysgonan-arwyn-pyrth', ...COUPLES.arwyn, '1723'),
-    endedMarriage('marriage-cieran-ingrid-mwyalchen', ...COUPLES.cieran),
+    createMarriage('marriage-cieran-ingrid-mwyalchen', ...COUPLES.cieran, {
+      status: 'ended',
+      extensions: { registryManagedFields: ['participantIds', 'status', 'end'] }
+    }),
     createMarriage('marriage-agravaine-gwenog-mwyalchen', ...COUPLES.agravaine),
     endedMarriage('marriage-gruffyd-carwyn-eryr', ...COUPLES.carwyn, '1734'),
     endedMarriage('marriage-gwalchgwyn-laragh-mwyalchen', ...COUPLES.gwalchgwyn, '1720'),
@@ -477,9 +486,12 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Mwyalchen O'Penbryn (bereitgestellte Altdaten)",
     sourceNote: 'Agravaine Aderyn und Thalena begründen Haus Mwyalchen. Hausknoten und einziger Zeitsprung stehen strikt seriell vor Iorwerth und Eirwyn. Frauen, deren Nachkommen in einem anderen Haus fortgeführt werden, erhalten direkte Wegverheiratet- oder Wegverlobt-Knoten; die fremden Kinder werden in dieser Akte nicht gedoppelt. Umgekehrt werden nur die Mwyalchen-Linien von Iorwerth, Kelyddon, Cadwallen, Arglwydd, Gwynham, Cieran, Agravaine, Gwalchgwyn, Daddweir, Sheev, Gwindor, Gower und Conway hier fortgeführt. Mithlas Camoran ist ausdrücklich Gwindors aufgenommenes Mündel und daher als Mündel statt als leibliches Kind gerahmt. Die fehlerhafte Quellüberschrift „Sheev & Chryl“ wurde anhand der unmittelbar zugeordneten Partnerzeilen berichtigt: Tirion und Orbo stammen von Sheev und Rheanne; Chryl ist Conways Ehefrau und Mutter Ieuans. Die Hofliste nennt einen dritten Erben namens Iorwerth, liefert ihm jedoch weder Abstammung noch eigene Karte; er wurde deshalb nicht als unverbundene Person erfunden. Die Schreibvariante Dadweir wurde mit der kanonischen Ciaróg-Gegenakte Daddweir zusammengeführt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    registryTombstones: {
+      persons: ['ingrid-eldhari']
+    },
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',
