@@ -131,7 +131,7 @@ const COUPLES = Object.freeze({
   gudrun: ['ketill-freiwinter', 'gudrun-nachtjaeger'],
   vidarr: ['vidarr-nachtjaeger', 'arnkatla-schattenherz'],
   asthildr: ['asthildr-nachtjaeger', 'ulfgar-schattenherz'],
-  sturlaugrIngunn: ['sturlaugr-nachtjaeger', 'ingunn-feuerherz'],
+  sturlaugrIngunn: ['sturlaugr-nachtjaeger', 'ingunn-1614-feuerherz'],
   sturlaugrOrka: ['sturlaugr-nachtjaeger', 'orka-riesentot'],
   valdis: ['valdis-nachtjaeger', 'hrafnkell-vragi'],
   joekull: ['joekull-nachtjaeger', 'malfrid-kaltherz'],
@@ -267,9 +267,9 @@ export const HOUSE_NACHTJAEGER_FAMILY = Object.freeze({
 
     person('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1650', {
       title: 'Hesir des Clans Nachtjäger',
-      extensions: { chartCenterBetweenSpousePersonIds: ['ingunn-feuerherz', 'orka-riesentot'] }
+      extensions: { chartCenterBetweenSpousePersonIds: ['ingunn-1614-feuerherz', 'orka-riesentot'] }
     }),
-    spouse('ingunn-feuerherz', 'Ingunn Feuerherz', 'female', '1614', '1645', 'house-feuerherz', { title: 'Erste Ehefrau Sturlaugrs' }),
+    spouse('ingunn-1614-feuerherz', 'Ingunn Feuerherz', 'female', '1614', '1645', 'house-feuerherz', { title: 'Erste Ehefrau Sturlaugrs' }),
     spouse('orka-riesentot', 'Orka Riesentot', 'female', '1630', '1704', 'house-riesentot', { title: 'Zweite Ehefrau Sturlaugrs' }),
     awayWoman('valdis-nachtjaeger', 'Valdís Nachtjäger', '1614', '1701', 'Clan Vragi'),
     spouse('hrafnkell-vragi', 'Hrafnkell Vragi', 'male', '1610', '1677', 'house-vragi'),
@@ -328,7 +328,7 @@ export const HOUSE_NACHTJAEGER_FAMILY = Object.freeze({
     marriage('marriage-ketill-gudrun-freiwinter'),
     marriage('marriage-vidarr-arnkatla-nachtjaeger'),
     marriage('marriage-asthildr-ulfgar-nachtjaeger'),
-    alignPartnerOverChildren(marriage('marriage-sturlaugr-ingunn-nachtjaeger'), 'ingunn-feuerherz'),
+    alignPartnerOverChildren(marriage('marriage-sturlaugr-ingunn-nachtjaeger'), 'ingunn-1614-feuerherz'),
     marriage('marriage-sturlaugr-orka-nachtjaeger'),
     marriage('marriage-valdis-hrafnkell-nachtjaeger'),
     marriage('marriage-joekull-malfrid-nachtjaeger'),

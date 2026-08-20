@@ -1,8 +1,8 @@
-import beranSource from '../../../Stammbäume Manuell exportiert/beran.json' with { type: 'json' };
-import earncynneSource from '../../../Stammbäume Manuell exportiert/earncynne.json' with { type: 'json' };
-import estmereSource from '../../../Stammbäume Manuell exportiert/estmere.json' with { type: 'json' };
-import fryeSource from '../../../Stammbäume Manuell exportiert/frye.json' with { type: 'json' };
-import seolforSource from '../../../Stammbäume Manuell exportiert/seolfor.json' with { type: 'json' };
+import beranSource from '../../data/family-sources/aeldrunmar/beran.json' with { type: 'json' };
+import earncynneSource from '../../data/family-sources/aeldrunmar/earncynne.json' with { type: 'json' };
+import estmereSource from '../../data/family-sources/aeldrunmar/estmere.json' with { type: 'json' };
+import fryeSource from '../../data/family-sources/aeldrunmar/frye.json' with { type: 'json' };
+import seolforSource from '../../data/family-sources/aeldrunmar/seolfor.json' with { type: 'json' };
 import { prepareAeldrunmarExportFamily } from './aeldrunmar-export-family.js';
 import {
   AELDRUNMAR_HOUSE_EMBLEMS,

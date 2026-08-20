@@ -9,8 +9,9 @@ import { createFamilySyncController } from './modules/family-sync/family-sync-co
 import { createLocalFamilyRepository } from './modules/family-sync/local-family-repository.js';
 import { createLatestLocalFamilySource } from './modules/family-sync/latest-local-family-source.js';
 import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js';
+import { reconcileInitialFamilyDraft } from './modules/family-sync/project-origin-reconciliation.js';
 import { applyPublishedFamilyPriority } from './modules/family-sync/published-family-priority.js';
-import { loadFamilyById } from './services/family-library.js';
+import { loadFamilyById, normalizeFamilyId } from './services/family-library.js';
 import { loadPersistedFamily } from './services/family-persistence.js';
 import {
   hasPendingTreeGeneratorLaunch,
@@ -22,7 +23,7 @@ import { createFamilyStore } from './state/family-store.js';
 import { createAppController } from './ui/app-controller.js';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
-const requestedFamilyId = requestedQuery.get('family');
+const requestedFamilyId = normalizeFamilyId(requestedQuery.get('family'));
 const requestedPersonId = requestedQuery.get('person');
 
 // Die Landingpage-Kachel "＋ Neue Familie beginnen" verlinkt hierher mit
@@ -48,7 +49,25 @@ const latestLocalFamilySource = createLatestLocalFamilySource({
 const assetRepository = createLocalImageDraftRepository();
 const almanachCharacterRepository = createAlmanachCharacterRepository(firebaseClient);
 const registeredOrSavedFamily = requestedFamilyId ? loadFamilyById(requestedFamilyId) : null;
-const localDraft = requestedFamilyId ? localRepository.loadDraft(requestedFamilyId) : null;
+const storedLocalDraft = requestedFamilyId ? localRepository.loadDraft(requestedFamilyId) : null;
+const initialDraftReconciliation = reconcileInitialFamilyDraft({
+  draft: storedLocalDraft,
+  projectOriginFamily: requestedFamilyId ? resolveProjectFamilyOrigin(requestedFamilyId) : null
+});
+const localDraft = initialDraftReconciliation.draft;
+if (initialDraftReconciliation.upgraded) {
+  if (storedLocalDraft?.dirty) {
+    localRepository.archiveDraft(requestedFamilyId, 'registry-upgrade-before-edit');
+  }
+  localRepository.persistDraft(localDraft.family, {
+    baseFamily: localDraft.baseFamily,
+    baseRevision: localDraft.baseRevision,
+    dirty: localDraft.dirty,
+    cloudFamilyId: localDraft.cloudFamilyId,
+    identityCollision: localDraft.identityCollision,
+    relatedFamilyIds: localDraft.relatedFamilyIds
+  });
+}
 const localDraftRecord = localDraft ? { ...localDraft, source: 'local-draft' } : null;
 const requestedFamily = workspaceAccess.mode === WORKSPACE_MODE.edit
   ? localDraftRecord || registeredOrSavedFamily
@@ -93,6 +112,7 @@ if (workspaceAccess.mode === WORKSPACE_MODE.view && requestedFamilyId) {
   void applyPublishedFamilyPriority({
     requestedFamilyId,
     initialFamilyId: loadedFamily.document.id,
+    projectOriginFamily: resolveProjectFamilyOrigin(requestedFamilyId),
     store,
     cloudRepository,
     onUnavailable(error) {

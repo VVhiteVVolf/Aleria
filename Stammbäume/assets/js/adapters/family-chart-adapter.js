@@ -35,7 +35,10 @@ import {
   applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
-import { createFamilyChartParentageGroupPlan } from './family-chart-parentage-group.js';
+import {
+  createFamilyChartAlignedParentageGroupPlan,
+  createFamilyChartParentageGroupPlan
+} from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
 
@@ -376,7 +379,14 @@ function createHouseLinkNode(branch, house) {
   });
 }
 
-function applyCadetBranches({ family, chartById, parentageLines, houseById, appearancePlan }) {
+function applyCadetBranches({
+  family,
+  chartById,
+  parentageLines,
+  houseById,
+  appearancePlan,
+  extraParentageLines
+}) {
   family.cadetBranches.forEach(branch => {
     const isSidePlacedLineEnd = branch.linkType === 'line-extinct'
       && branch.parentPersonId
@@ -422,11 +432,28 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById, appe
     node.rels.parents = [...parentIds];
     parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
     chartById.set(nodeId, node);
-    parentageLines.set(nodeId, {
+    const lineMetadata = {
       type: branch.linkType === 'ward-away' ? 'ward-away' : 'cadet-house',
       color: branch.linkType === 'ward-away' ? ROLE_LINE_COLORS['ward-away'] : '#b88b37',
-      dashed: branch.linkType === 'ward-away'
-    });
+      dashed: branch.linkType === 'ward-away',
+      // Paargebundene Hausverknotungen werden nach dem Layout aus den
+      // aktuellen Kartenpositionen neu aufgebaut. Zusammen mit der
+      // Hausknoten-Ausrichtung entsteht damit immer eine senkrechte Leitung
+      // aus der Mitte beider Partner statt einer Eck- oder Zickzackroute.
+      hidden: parentIds.length === 2
+        && branch.linkType !== 'line-extinct'
+    };
+    parentageLines.set(nodeId, lineMetadata);
+    if (lineMetadata.hidden) {
+      extraParentageLines.push(Object.freeze({
+        kind: 'parentage',
+        parentIds: Object.freeze([...parentIds]),
+        childId: nodeId,
+        type: lineMetadata.type,
+        color: lineMetadata.color,
+        dashed: lineMetadata.dashed
+      }));
+    }
   });
 }
 
@@ -734,6 +761,14 @@ export function toFamilyChartData(input, options = {}) {
     ))
   }));
   const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);
+  const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
+  const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(family);
+  const alignedParentageGroupPlan = createFamilyChartAlignedParentageGroupPlan({
+    selectedParentageByChild,
+    explicitGroupPlan: parentageGroupPlan,
+    partnerAlignmentPlan: conversionPartnerAlignmentPlan,
+    descendantAlignmentPlan: conversionDescendantAlignmentPlan
+  });
   parentageGroupPlan.invalidRequests.forEach(request => {
     diagnostics.push(Object.freeze({
       severity: 'warning',
@@ -894,6 +929,7 @@ export function toFamilyChartData(input, options = {}) {
       color: ROLE_LINE_COLORS[childRole] || relationColor(family, selected.type),
       dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole]),
       hidden: parentageGroupPlan.groupedChildIds.has(childId)
+        || alignedParentageGroupPlan.groupedChildIds.has(childId)
     }));
     if (selected.parentIds.length > 2) {
       diagnostics.push(Object.freeze({
@@ -906,7 +942,14 @@ export function toFamilyChartData(input, options = {}) {
   });
 
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
-  applyCadetBranches({ family, chartById, parentageLines, houseById, appearancePlan });
+  applyCadetBranches({
+    family,
+    chartById,
+    parentageLines,
+    houseById,
+    appearancePlan,
+    extraParentageLines
+  });
   applyOriginHouseStructure({ family, chartById, parentageLines, houseById, personById });
   applyTimeJumps({
     family,
@@ -940,7 +983,10 @@ export function toFamilyChartData(input, options = {}) {
     route.childIds.forEach(childId => {
       const parentIds = detachFamilyChartParentLinks(chartById, childId, [route.personId]);
       if (!parentIds.length) return;
-      if (parentageGroupPlan.groupedChildIds.has(childId)) return;
+      if (
+        parentageGroupPlan.groupedChildIds.has(childId)
+        || alignedParentageGroupPlan.groupedChildIds.has(childId)
+      ) return;
       const metadata = parentageLines.get(childId) || Object.freeze({
         type: 'biological',
         color: relationColor(family, 'biological'),
@@ -966,6 +1012,24 @@ export function toFamilyChartData(input, options = {}) {
     extraParentageLines.push(Object.freeze({
       kind: 'parentage-group',
       parentId: group.anchorPersonId,
+      childIds: group.childIds,
+      type: lineMetadata.type,
+      color: lineMetadata.color,
+      dashed: lineMetadata.dashed
+    }));
+  });
+
+  alignedParentageGroupPlan.groups.forEach(group => {
+    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({
+      type: 'biological',
+      color: relationColor(family, 'biological'),
+      dashed: false
+    });
+    extraParentageLines.push(Object.freeze({
+      kind: 'parentage-group',
+      ...(group.kind === 'parent-pair'
+        ? { parentIds: group.parentIds }
+        : { parentId: group.parentId }),
       childIds: group.childIds,
       type: lineMetadata.type,
       color: lineMetadata.color,

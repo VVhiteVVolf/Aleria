@@ -163,6 +163,54 @@ function alignedPartnershipRoute(first, second, orientation) {
   ];
 }
 
+export function createFamilyChartParentageGroupRoutes(
+  extraLink,
+  cardPositions,
+  orientation = 'vertical'
+) {
+  const parentPoints = (extraLink.parentIds || [])
+    .map(parentId => cardPositions.get(parentId))
+    .filter(Boolean);
+  const parentPoint = parentPoints.length
+    ? midpoint(parentPoints)
+    : cardPositions.get(extraLink.parentId);
+  const childPoints = (extraLink.childIds || [])
+    .map(childId => cardPositions.get(childId))
+    .filter(Boolean);
+  if (
+    !parentPoint
+    || (extraLink.parentIds?.length && parentPoints.length !== extraLink.parentIds.length)
+    || childPoints.length !== extraLink.childIds.length
+  ) return [];
+
+  const childAxisValues = childPoints.map(point => (
+    orientation === 'horizontal' ? point.y : point.x
+  ));
+  const parentCrossAxis = orientation === 'horizontal' ? parentPoint.y : parentPoint.x;
+  const childGeneration = childPoints.reduce((sum, point) => (
+    sum + (orientation === 'horizontal' ? point.x : point.y)
+  ), 0) / childPoints.length;
+  const parentGeneration = orientation === 'horizontal' ? parentPoint.x : parentPoint.y;
+  const railGeneration = parentGeneration + ((childGeneration - parentGeneration) / 2);
+  // The rail must span the parent anchor as well as every child. Previously a
+  // one-child group produced two disconnected vertical stubs whenever a later
+  // layout pass had shifted the child away from its parent.
+  const firstCrossAxis = Math.min(parentCrossAxis, ...childAxisValues);
+  const lastCrossAxis = Math.max(parentCrossAxis, ...childAxisValues);
+
+  return orientation === 'horizontal'
+    ? [
+        [parentPoint, { x: railGeneration, y: parentPoint.y }],
+        [{ x: railGeneration, y: firstCrossAxis }, { x: railGeneration, y: lastCrossAxis }],
+        ...childPoints.map(point => [{ x: railGeneration, y: point.y }, point])
+      ]
+    : [
+        [parentPoint, { x: parentPoint.x, y: railGeneration }],
+        [{ x: firstCrossAxis, y: railGeneration }, { x: lastCrossAxis, y: railGeneration }],
+        ...childPoints.map(point => [{ x: point.x, y: railGeneration }, point])
+      ];
+}
+
 export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation = 'vertical') {
   if (extraLink.kind === 'parentage') {
     const parentPoints = (extraLink.parentIds || []).map(parentId => cardPositions.get(parentId)).filter(Boolean);
@@ -215,33 +263,11 @@ export function createFamilyChartLinkRenderer({
     const orientation = typeof resolveOrientation === 'function' ? resolveOrientation() : 'vertical';
     extraLinks.forEach(extraLink => {
       if (extraLink.kind === 'parentage-group') {
-        const parentPoint = cardPositions.get(extraLink.parentId);
-        const childPoints = (extraLink.childIds || [])
-          .map(childId => cardPositions.get(childId))
-          .filter(Boolean);
-        if (!parentPoint || childPoints.length !== extraLink.childIds.length) return;
-
-        const childAxisValues = childPoints.map(point => (
-          orientation === 'horizontal' ? point.y : point.x
-        ));
-        const childGeneration = childPoints.reduce((sum, point) => (
-          sum + (orientation === 'horizontal' ? point.x : point.y)
-        ), 0) / childPoints.length;
-        const parentGeneration = orientation === 'horizontal' ? parentPoint.x : parentPoint.y;
-        const railGeneration = parentGeneration + ((childGeneration - parentGeneration) / 2);
-        const firstCrossAxis = Math.min(...childAxisValues);
-        const lastCrossAxis = Math.max(...childAxisValues);
-        const routes = orientation === 'horizontal'
-          ? [
-              [parentPoint, { x: railGeneration, y: parentPoint.y }],
-              [{ x: railGeneration, y: firstCrossAxis }, { x: railGeneration, y: lastCrossAxis }],
-              ...childPoints.map(point => [{ x: railGeneration, y: point.y }, point])
-            ]
-          : [
-              [parentPoint, { x: parentPoint.x, y: railGeneration }],
-              [{ x: firstCrossAxis, y: railGeneration }, { x: lastCrossAxis, y: railGeneration }],
-              ...childPoints.map(point => [{ x: point.x, y: railGeneration }, point])
-            ];
+        const routes = createFamilyChartParentageGroupRoutes(
+          extraLink,
+          cardPositions,
+          orientation
+        );
 
         routes.forEach(route => {
           const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');

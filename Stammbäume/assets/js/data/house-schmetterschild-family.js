@@ -378,7 +378,9 @@ export const HOUSE_SCHMETTERSCHILD_FAMILY = Object.freeze({
       title: 'Erbe des Clans Schmetterschild'
     }),
     ward('saedis-schmetterschild-ward', 'Saedís', 'female', '1721'),
-    ward('kjallak-goldglanz', 'Kjallak Goldglanz', 'male', '1724', 'house-goldglanz'),
+    ward('kjallak-goldglanz', 'Kjallak Goldglanz', 'male', '1720', 'house-goldglanz', {
+      notes: 'Die Goldglanz-Stammhausquelle führt 1720; die ältere Schmetterschild-Quelle nannte 1724.'
+    }),
     person('armod-schmetterschild', 'Armod Schmetterschild', 'male', '1722', ''),
     person('idunn-schmetterschild', 'Idunn Schmetterschild', 'female', '1724', ''),
     person('ivarr-schmetterschild', 'Ivarr Schmetterschild', 'male', '1723', ''),
@@ -516,9 +518,9 @@ export const HOUSE_SCHMETTERSCHILD_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: 'Clan Schmetterschild (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Schmetterschild-Stammbaum wurde ohne Personenfokus von Hurin und Irmgard bis zur Generation von 1740 übernommen. Nach dem Gründerpaar folgen genau ein Hauswappen und ein serieller Quellenabstand; daneben steht kein paralleler Zeitsprung. Alle Nachkommen sind ihrer tatsächlichen Elternverbindung zugeordnet. Die Affären von Thorarin und Valtyr bilden eigene, bei Bedarf verbreiterte Mutter-Kind-Blöcke; jeder Bastard steht direkt unter seiner Mutter. Saedís und Kjallak Goldglanz sind als aufgenommene Mündel Magnus zugeordnet und nicht als leibliche Kinder. Belegte Wegverheiratungen besitzen direkte Zielhausknoten; Nachkommen aus extern fortgeführten Ehen werden ausschließlich in der jeweiligen Gegenakte gezeigt. Ottilie wird mit stabiler Weltpersonen-ID aus der Coedwig-Akte übernommen, dort aber anhand dieser Quelle von Brakskjold zu Schmetterschild korrigiert. Lodvars kanonisches Todesjahr 1622 stammt aus der Todbrand-Ursprungsakte; Alfrúns kanonisches Geburtsjahr 1676 aus der Helgr-Ursprungsakte. Die fünf namenlosen Verlobten-Platzhalter und wiederholte Standardsilhouetten der Altquelle wurden nicht importiert.',
+    sourceNote: 'Der vollständige Schmetterschild-Stammbaum wurde ohne Personenfokus von Hurin und Irmgard bis zur Generation von 1740 übernommen. Nach dem Gründerpaar folgen genau ein Hauswappen und ein serieller Quellenabstand; daneben steht kein paralleler Zeitsprung. Alle Nachkommen sind ihrer tatsächlichen Elternverbindung zugeordnet. Die Affären von Thorarin und Valtyr bilden eigene, bei Bedarf verbreiterte Mutter-Kind-Blöcke; jeder Bastard steht direkt unter seiner Mutter. Saedís und Kjallak Goldglanz sind als aufgenommene Mündel Magnus zugeordnet und nicht als leibliche Kinder. Belegte Wegverheiratungen besitzen direkte Zielhausknoten; Nachkommen aus extern fortgeführten Ehen werden ausschließlich in der jeweiligen Gegenakte gezeigt. Ottilie wird mit stabiler Weltpersonen-ID aus der Coedwig-Akte übernommen, dort aber anhand dieser Quelle von Brakskjold zu Schmetterschild korrigiert. Lodvars kanonisches Todesjahr 1622 stammt aus der Todbrand-Ursprungsakte; Alfrúns kanonisches Geburtsjahr 1676 aus der Helgr-Ursprungsakte. Kjallaks Geburtsjahr wurde nach seiner Goldglanz-Stammhausakte von 1724 auf 1720 vereinheitlicht. Die fünf namenlosen Verlobten-Platzhalter und wiederholte Standardsilhouetten der Altquelle wurden nicht importiert.',
     registryTombstones: {
       persons: ['haus-schmetterschild-gruender', 'haus-schmetterschild-gruenderin'],
       partnerships: ['marriage-haus-schmetterschild-founders']

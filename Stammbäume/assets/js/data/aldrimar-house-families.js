@@ -47,6 +47,7 @@ function createJarlClanPlaceholder(definition) {
         'secondarySeats',
         'liegeHouseId',
         'liegeHouseName',
+        'folderIcons',
         'regionEmblems'
       ]),
       registryManagedRecordFields: Object.freeze(['folderPath'])

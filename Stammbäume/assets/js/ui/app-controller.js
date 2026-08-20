@@ -1,4 +1,5 @@
 import { createFamilyChartSession } from '../adapters/family-chart-adapter.js';
+import { requiresFamilyChartRebuild } from '../adapters/family-chart-lifecycle-policy.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
 import { createFamilyGraph } from '../domain/family-graph.js';
@@ -928,6 +929,12 @@ export function createAppController({
       return;
     }
     if (!chartSession) {
+      createChart(state.family);
+      return;
+    }
+    if (requiresFamilyChartRebuild(event)) {
+      chartSession.destroy();
+      chartSession = null;
       createChart(state.family);
       return;
     }

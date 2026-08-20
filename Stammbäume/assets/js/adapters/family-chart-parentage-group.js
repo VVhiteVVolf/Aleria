@@ -74,3 +74,56 @@ export function createFamilyChartParentageGroupPlan(selectedParentageByChild) {
     invalidRequests: Object.freeze(invalidRequests)
   });
 }
+
+/**
+ * Converts opt-in card alignment into matching visible parentage routes.
+ * Family Chart keeps the full parent graph for layout purposes, while the
+ * overlay renderer draws the line from the card position that the editor
+ * explicitly selected (partner card or center of the parent pair).
+ */
+export function createFamilyChartAlignedParentageGroupPlan({
+  selectedParentageByChild,
+  explicitGroupPlan,
+  partnerAlignmentPlan,
+  descendantAlignmentPlan
+}) {
+  const groupedChildIds = new Set(explicitGroupPlan?.groupedChildIds || []);
+  const groups = [];
+
+  (descendantAlignmentPlan?.childGroupRoutes || []).forEach(route => {
+    const childIds = route.childPersonIds.filter(childId => {
+      const parentage = selectedParentageByChild.get(childId);
+      return parentage?.partnershipId === route.partnershipId
+        && !groupedChildIds.has(childId);
+    });
+    if (!childIds.length) return;
+    childIds.forEach(childId => groupedChildIds.add(childId));
+    groups.push(Object.freeze({
+      kind: 'parent-pair',
+      partnershipId: route.partnershipId,
+      parentIds: Object.freeze([...route.parentPersonIds]),
+      childIds: Object.freeze(childIds)
+    }));
+  });
+
+  (partnerAlignmentPlan?.partnerOverChildrenRoutes || []).forEach(route => {
+    const childIds = route.childIds.filter(childId => {
+      const parentage = selectedParentageByChild.get(childId);
+      return parentage?.partnershipId === route.partnershipId
+        && !groupedChildIds.has(childId);
+    });
+    if (!childIds.length) return;
+    childIds.forEach(childId => groupedChildIds.add(childId));
+    groups.push(Object.freeze({
+      kind: 'partner',
+      partnershipId: route.partnershipId,
+      parentId: route.partnerPersonId,
+      childIds: Object.freeze(childIds)
+    }));
+  });
+
+  return Object.freeze({
+    groups: Object.freeze(groups),
+    groupedChildIds
+  });
+}

@@ -167,8 +167,7 @@ const COUPLES = Object.freeze({
   einarr: ['einarr-ragnulf', 'bergdis-arnvild'],
   egil: ['egil-ragnulf', 'svanhildr-varangr'],
   estrid: ['raveld-blutstahl', 'estrid-ragnulf'],
-  bergtor: ['bergtor-ragnulf', 'hjordis-schattenherz'],
-  ketill: ['ketill-ragnulf', 'ingunn-feuerherz'],
+  ketill: ['ketill-ragnulf', 'ingunn-1611-feuerherz'],
   eldgrim: ['eldgrim-ragnulf', 'hildegard-kaltherz'],
   oddvar: ['oddvar-ragnulf', 'sigfuss'],
   oddvarAffair: ['oddvar-ragnulf', 'lofn'],
@@ -198,7 +197,6 @@ const PARTNERS_BY_ID = Object.freeze({
   'marriage-einarr-bergdis-ragnulf': COUPLES.einarr,
   'marriage-egil-svanhildr-ragnulf': COUPLES.egil,
   'marriage-estrid-raveld-ragnulf': COUPLES.estrid,
-  'engagement-bergtor-hjordis-ragnulf': COUPLES.bergtor,
   'marriage-ketill-ingunn-ragnulf': COUPLES.ketill,
   'marriage-eldgrim-hildegard-ragnulf': COUPLES.eldgrim,
   'marriage-oddvar-sigfuss-ragnulf': COUPLES.oddvar,
@@ -397,10 +395,7 @@ export const HOUSE_RAGNULF_FAMILY = Object.freeze({
     person('eldgrim-ragnulf', 'Eldgrim Ragnulf', 'male', '1610', '1660', {
       title: 'Jarl des Clans Ragnulf von 1649 bis 1660'
     }),
-    spouse('hjordis-schattenherz', 'Hjördis Schattenherz', 'female', '1610', '1701', 'house-schattenherz', {
-      title: 'Verlobte Bergtors'
-    }),
-    spouse('ingunn-feuerherz', 'Ingunn Feuerherz', 'female', '1611', '1685', 'house-feuerherz'),
+    spouse('ingunn-1611-feuerherz', 'Ingunn Feuerherz', 'female', '1611', '1685', 'house-feuerherz'),
     spouse('hildegard-kaltherz', 'Hildegard Kaltherz', 'female', '1612', '1698', 'house-kaltherz'),
 
     person('oddvar-ragnulf', 'Oddvar Ragnulf', 'male', '1631', '1695', {
@@ -511,7 +506,6 @@ export const HOUSE_RAGNULF_FAMILY = Object.freeze({
     partnership('marriage-einarr-bergdis-ragnulf'),
     partnership('marriage-egil-svanhildr-ragnulf'),
     partnership('marriage-estrid-raveld-ragnulf'),
-    partnership('engagement-bergtor-hjordis-ragnulf', { type: 'engagement', status: 'ended', end: '1628' }),
     partnership('marriage-ketill-ingunn-ragnulf', { status: 'ended', end: '1645' }),
     partnership('marriage-eldgrim-hildegard-ragnulf', { status: 'ended', end: '1660' }),
     alignPartnerOverChildren(partnership('marriage-oddvar-sigfuss-ragnulf', { status: 'ended', end: '1695' }), 'sigfuss'),
@@ -638,9 +632,13 @@ export const HOUSE_RAGNULF_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 4,
     sourceModule: 'Clan Ragnulf (bereitgestellte Altdaten)',
-    sourceNote: 'Die vollständige Genealogie folgt der bereitgestellten Ragnulf-Hausseite. Freki ist der erste namentlich überlieferte Gründer; seine unbekannten Eltern bleiben sichtbar, ohne den Hausknoten zu übernehmen. Das Ragnulf-Wappen steht direkt unter Freki und Aoife Dubhfenn. Zwei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Torleif und seine Halbschwester Tordis sind dieselben Weltpersonen sowohl als Geschwister als auch als Ehepaar: Tordis bleibt als Bastardtochter direkt unter Oddvar und Lofn sichtbar, am fortgeführten Torleif-Zweig erscheint eine kontrollierte Partnerwiederholung und Torleif wird an Tordis’ Herkunftsstelle nur gespiegelt. Die Nachkommen werden einmalig unter Torleif und der wiederholten Tordis geführt. Oddvars legitime Kinder und seine Bastarde mit Lofn bleiben klar nach Mutter getrennt. Thorald steht zwischen seinen beiden legitimen Ehefrauen; Gunnar und Gulvar gehören ausschließlich zu Aethelflaed Estmere, Gulda und Gudrun ausschließlich zu Drifa. Die Gegenakten präzisieren Gulda und Bjoern als Verlobte sowie Erik als leiblichen Ragnulf-Sohn und fortgegebenes Mündel bei Clan Skogg. Tinna Kummerherz ist dagegen Gunnars aufgenommenes Mündel. Die Quelle markiert Gudrids Vaterschaft mit „Eldgrim?“ als unsicher und behandelt Sigfuss trotz des gewöhnlich männlich gelesenen Namens als Oddvars Ehefrau; beides wird transparent beibehalten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Die vollständige Genealogie folgt der bereitgestellten Ragnulf-Hausseite. Freki ist der erste namentlich überlieferte Gründer; seine unbekannten Eltern bleiben sichtbar, ohne den Hausknoten zu übernehmen. Das Ragnulf-Wappen steht direkt unter Freki und Aoife Dubhfenn. Zwei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Torleif und seine Halbschwester Tordis sind dieselben Weltpersonen sowohl als Geschwister als auch als Ehepaar: Tordis bleibt als Bastardtochter direkt unter Oddvar und Lofn sichtbar, am fortgeführten Torleif-Zweig erscheint eine kontrollierte Partnerwiederholung und Torleif wird an Tordis’ Herkunftsstelle nur gespiegelt. Die Nachkommen werden einmalig unter Torleif und der wiederholten Tordis geführt. Oddvars legitime Kinder und seine Bastarde mit Lofn bleiben klar nach Mutter getrennt. Thorald steht zwischen seinen beiden legitimen Ehefrauen; Gunnar und Gulvar gehören ausschließlich zu Aethelflaed Estmere, Gulda und Gudrun ausschließlich zu Drifa. Die Gegenakten präzisieren Gulda und Bjoern als Verlobte sowie Erik als leiblichen Ragnulf-Sohn und fortgegebenes Mündel bei Clan Skogg. Tinna Kummerherz ist dagegen Gunnars aufgenommenes Mündel. Svanhildrs nachweislich falsches männliches Quellbild wird in beiden Familienakten durch die weibliche Standardsilhouette ersetzt. Die Quelle markiert Gudrids Vaterschaft mit „Eldgrim?“ als unsicher und behandelt Sigfuss trotz des gewöhnlich männlich gelesenen Namens als Oddvars Ehefrau; beides wird transparent beibehalten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    registryTombstones: {
+      persons: ['hjordis-schattenherz'],
+      partnerships: ['engagement-bergtor-hjordis-ragnulf']
+    },
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

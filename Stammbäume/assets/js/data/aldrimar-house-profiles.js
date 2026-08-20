@@ -18,7 +18,14 @@ export const ALDRIMAR_HOUSE_EMBLEMS = Object.freeze({
 });
 
 const JARL_CLAN_DEFINITIONS = Object.freeze({
-  vaeren: Object.freeze({ jarltum: 'Kronental', jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.kronental, rankId: 'royal' }),
+  vaeren: Object.freeze({
+    jarltum: 'Kronental',
+    jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.kronental,
+    rankId: 'royal',
+    folderPath: Object.freeze(['Aldrimar', 'Kronental', 'Jarltümliche Herrschaft – Tal der Helden', 'Heldenwacht']),
+    baronyEmblem: 'assets/images/regions/aldrimar-kronental-tal-der-helden.png',
+    seatEmblem: 'assets/images/regions/aldrimar-stadt.png'
+  }),
   wargh: Object.freeze({
     jarltum: 'Ivarsheim',
     jarltumEmblem: ALDRIMAR_REGION_EMBLEMS.ivarsheim,
@@ -69,7 +76,17 @@ function createJarlClanProfile(definition) {
         county: definition.jarltumEmblem,
         barony: definition.baronyEmblem || '',
         seat: definition.seatEmblem || ''
-      }
+      },
+      ...(definition.folderPath
+        ? {
+            folderIcons: [
+              ALDRIMAR_REGION_EMBLEMS.aldrimar,
+              definition.jarltumEmblem,
+              definition.baronyEmblem || '',
+              definition.seatEmblem || ''
+            ]
+          }
+        : {})
     }
   );
 }

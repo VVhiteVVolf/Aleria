@@ -3,6 +3,15 @@ import {
   createFounderPlaceholderHouseFamily
 } from './blank-house-family-factory.js';
 import { HOUSE_HJERTE_FAMILY } from './house-hjerte-family.js';
+import { HOUSE_JAERNBLOD_FAMILY } from './house-jaernblod-family.js';
+import { HOUSE_BLUTSTAHL_FAMILY } from './house-blutstahl-family.js';
+import { HOUSE_FEUERHERZ_FAMILY } from './house-feuerherz-family.js';
+import { HOUSE_GOLDGLANZ_FAMILY } from './house-goldglanz-family.js';
+import { HOUSE_KALTHERZ_FAMILY } from './house-kaltherz-family.js';
+import { HOUSE_SCHATTENHERZ_FAMILY } from './house-schattenherz-family.js';
+import { HOUSE_SCHWARZBLUT_FAMILY } from './house-schwarzblut-family.js';
+import { HOUSE_SILBERBLUT_FAMILY } from './house-silberblut-family.js';
+import { HOUSE_VRAGI_FAMILY } from './house-vragi-family.js';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
@@ -92,6 +101,14 @@ function withManagedCrest(base, extensions, crestFrame) {
 }
 
 function activeClanFamily(definition) {
+  if (definition.slug === 'schattenherz') return HOUSE_SCHATTENHERZ_FAMILY;
+  if (definition.slug === 'blutstahl') return HOUSE_BLUTSTAHL_FAMILY;
+  if (definition.slug === 'silberblut') return HOUSE_SILBERBLUT_FAMILY;
+  if (definition.slug === 'kaltherz') return HOUSE_KALTHERZ_FAMILY;
+  if (definition.slug === 'feuerherz') return HOUSE_FEUERHERZ_FAMILY;
+  if (definition.slug === 'goldglanz') return HOUSE_GOLDGLANZ_FAMILY;
+  if (definition.slug === 'vragi') return HOUSE_VRAGI_FAMILY;
+  if (definition.slug === 'schwarzblut') return HOUSE_SCHWARZBLUT_FAMILY;
   const base = createFounderPlaceholderHouseFamily({
     id: `haus-${definition.slug}`,
     title: definition.title,
@@ -139,6 +156,7 @@ function civilClanFamily(definition) {
 
 function extinctClanFamily(definition) {
   if (definition.slug === 'hjerte') return HOUSE_HJERTE_FAMILY;
+  if (definition.slug === 'jaernblod') return HOUSE_JAERNBLOD_FAMILY;
   const base = createExtinctPlaceholderHouseFamily({
     id: `haus-${definition.slug}`,
     title: definition.title,

@@ -16,9 +16,19 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-edit-attachment-form',
   'open-edit-fazit-form',
   'add-fazit-line',
+  'move-fazit-line',
+  'duplicate-fazit-line',
   'remove-fazit-line',
+  'add-fazit-list-item',
+  'remove-fazit-list-item',
+  'move-fazit-list-item',
+  'pick-fazit-list-bullet-icon',
+  'clear-fazit-list-bullet-icon',
   'add-fazit-token',
   'add-fazit-connector',
+  'add-fazit-symbol-preset',
+  'duplicate-fazit-token',
+  'toggle-fazit-token-flip',
   'remove-fazit-token',
   'move-fazit-token',
   'pick-fazit-token-icon',
@@ -119,8 +129,36 @@ function handleCommentFormActionClick(event) {
     addFazitLine(trigger.dataset.lineKind || 'tokens');
     return;
   }
+  if (action === 'move-fazit-line') {
+    moveFazitLine(trigger.dataset.lineId, trigger.dataset.direction);
+    return;
+  }
+  if (action === 'duplicate-fazit-line') {
+    duplicateFazitLine(trigger.dataset.lineId);
+    return;
+  }
   if (action === 'remove-fazit-line') {
     removeFazitLine(trigger.dataset.lineId);
+    return;
+  }
+  if (action === 'add-fazit-list-item') {
+    addFazitListItem(trigger.dataset.lineId, trigger.dataset.afterItemId);
+    return;
+  }
+  if (action === 'remove-fazit-list-item') {
+    removeFazitListItem(trigger.dataset.lineId, trigger.dataset.itemId);
+    return;
+  }
+  if (action === 'move-fazit-list-item') {
+    moveFazitListItem(trigger.dataset.lineId, trigger.dataset.itemId, trigger.dataset.direction);
+    return;
+  }
+  if (action === 'pick-fazit-list-bullet-icon') {
+    openFazitListBulletIconPicker(trigger.dataset.lineId);
+    return;
+  }
+  if (action === 'clear-fazit-list-bullet-icon') {
+    clearFazitListBulletIcon(trigger.dataset.lineId);
     return;
   }
   if (action === 'add-fazit-token') {
@@ -129,6 +167,18 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'add-fazit-connector') {
     addFazitConnectorToken(trigger.dataset.lineId, trigger.dataset.connector);
+    return;
+  }
+  if (action === 'add-fazit-symbol-preset') {
+    addFazitSymbolPresetToken(trigger.dataset.lineId, trigger.dataset.preset);
+    return;
+  }
+  if (action === 'duplicate-fazit-token') {
+    duplicateFazitToken(trigger.dataset.lineId, trigger.dataset.tokenId);
+    return;
+  }
+  if (action === 'toggle-fazit-token-flip') {
+    toggleFazitTokenFlip(trigger.dataset.lineId, trigger.dataset.tokenId);
     return;
   }
   if (action === 'remove-fazit-token') {

@@ -1,0 +1,835 @@
+/* Fazit feature: block editor and rich scene card. Base comment form primitives live in comments.css. */
+#fazit-form-overlay .fazit-form-card {
+  position: relative;
+  height: min(96vh, 1080px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 0, rgba(255, 249, 226, 0.78), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(139, 105, 20, 0.035)),
+    var(--parchment);
+}
+
+#fazit-form-overlay .comment-form-title {
+  display: flex;
+  align-items: center;
+  min-height: 2rem;
+  color: var(--gold-dark);
+  border-bottom-color: rgba(139, 105, 20, 0.38);
+}
+
+.fazit-title-field {
+  padding: 0.05rem;
+}
+
+.fazit-title-field input {
+  min-height: 2.7rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.fazit-editor-toolbar {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.75fr) minmax(420px, 1.5fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(139, 105, 20, 0.36);
+  background:
+    linear-gradient(100deg, rgba(139, 105, 20, 0.14), transparent 48%),
+    rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.fazit-editor-toolbar-copy {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.fazit-editor-toolbar-kicker {
+  font-family: 'Cinzel', serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.fazit-editor-toolbar-copy strong {
+  font: 600 0.95rem/1.25 'Cinzel', serif;
+  color: var(--ink);
+}
+
+.fazit-editor-toolbar-copy small {
+  color: var(--ink-faded);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.fazit-lines-editor-head-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.42rem;
+}
+
+.fazit-add-block-btn {
+  min-height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(139, 105, 20, 0.42);
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--ink);
+  font: 600 0.61rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.fazit-add-block-btn span {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+.fazit-add-block-btn:hover,
+.fazit-add-block-btn:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.14);
+  box-shadow: 0 3px 10px rgba(80, 52, 18, 0.1);
+  outline: none;
+}
+
+#fazit-form-overlay .fazit-lines-editor {
+  gap: 0.85rem;
+  padding: 0 0.12rem 0.2rem 0;
+}
+
+#fazit-form-overlay .fazit-line-editor {
+  padding: 0;
+  gap: 0;
+  overflow: visible;
+  border-left-width: 1px;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.08)),
+    rgba(238, 217, 161, 0.22);
+  box-shadow: 0 5px 14px rgba(80, 52, 18, 0.07);
+}
+
+.fazit-line-editor-head {
+  min-height: 2.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  padding: 0.42rem 0.55rem 0.42rem 0.72rem;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.2);
+  background: linear-gradient(90deg, rgba(139, 105, 20, 0.13), rgba(255, 255, 255, 0.12));
+}
+
+.fazit-line-kind {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  font-family: 'Cinzel', serif;
+  color: var(--gold-dark);
+}
+
+.fazit-line-kind > span {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  font-size: 0.62rem;
+}
+
+.fazit-line-kind strong {
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fazit-line-kind small {
+  min-width: 1.35rem;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid rgba(139, 105, 20, 0.22);
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.52rem;
+  color: var(--ink-faded);
+}
+
+.fazit-line-order-actions,
+.fazit-token-editor-actions,
+.fazit-list-item-actions {
+  display: inline-flex;
+  gap: 0.22rem;
+}
+
+.fazit-line-order-actions button,
+.fazit-token-editor-actions button,
+.fazit-list-item-actions button {
+  width: 1.65rem;
+  height: 1.65rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(139, 105, 20, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--gold-dark);
+  font: 0.78rem/1 'Cinzel', serif;
+  cursor: pointer;
+}
+
+.fazit-line-order-actions button:hover:not(:disabled),
+.fazit-token-editor-actions button:hover:not(:disabled),
+.fazit-list-item-actions button:hover:not(:disabled) {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.13);
+  color: var(--ink);
+}
+
+.fazit-line-order-actions button:disabled,
+.fazit-token-editor-actions button:disabled,
+.fazit-list-item-actions button:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+.fazit-line-order-actions button.is-danger:hover,
+.fazit-token-editor-actions button.is-danger:hover,
+.fazit-list-item-actions button.is-danger:hover {
+  border-color: rgba(126, 42, 42, 0.6);
+  background: rgba(126, 42, 42, 0.1);
+  color: #742c2c;
+}
+
+.fazit-line-editor-body {
+  padding: 0.7rem;
+}
+
+#fazit-form-overlay .fazit-line-actions {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.6rem 0.7rem;
+  border-top: 1px solid rgba(139, 105, 20, 0.16);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.fazit-line-add-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.fazit-line-alignment,
+.fazit-list-style {
+  display: flex !important;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+.fazit-list-icon-control {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0.15rem;
+}
+
+.fazit-list-icon-control > span {
+  color: var(--gold-dark);
+  font: 0.54rem/1 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fazit-list-icon-picker,
+.fazit-list-icon-clear {
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(139, 105, 20, 0.32);
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--gold-dark);
+  font: 0.56rem/1.2 'Cinzel', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fazit-list-icon-picker:hover,
+.fazit-list-icon-clear:hover:not(:disabled) {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.12);
+  color: var(--ink);
+}
+
+.fazit-list-icon-picker img {
+  width: 1.35rem;
+  height: 1.35rem;
+  object-fit: contain;
+}
+
+.fazit-list-icon-fallback {
+  width: 1.35rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+
+.fazit-list-icon-clear:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+
+#fazit-form-overlay .fazit-line-alignment select,
+#fazit-form-overlay .fazit-list-style select {
+  width: auto;
+  min-height: 1.9rem;
+  padding: 0.25rem 1.7rem 0.25rem 0.45rem;
+  font-size: 0.72rem;
+}
+
+#fazit-form-overlay .fazit-line-tokens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 0.55rem;
+  align-items: stretch;
+}
+
+#fazit-form-overlay .fazit-token-editor {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  gap: 0;
+  min-width: 0;
+  padding: 0;
+  border: 1px solid rgba(139, 105, 20, 0.28);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fazit-token-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.28rem 0.38rem 0.28rem 0.55rem;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.16);
+  color: var(--gold-dark);
+  font: 600 0.52rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.fazit-token-main-fields {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem;
+}
+
+.fazit-token-label-field {
+  min-width: 0;
+  margin: 0 !important;
+}
+
+#fazit-form-overlay .fazit-token-label-input {
+  width: 100%;
+  min-height: 2.15rem;
+}
+
+.fazit-token-symbol-picker {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fazit-token-symbol-preview {
+  width: 3rem;
+  height: 3rem;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  padding: 0.25rem;
+  border: 1px dashed rgba(139, 105, 20, 0.55);
+  background: rgba(246, 232, 190, 0.38);
+  color: var(--gold-dark);
+  cursor: pointer;
+}
+
+.fazit-token-symbol-preview:hover {
+  border-style: solid;
+  background: rgba(139, 105, 20, 0.12);
+}
+
+.fazit-token-symbol-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#fazit-form-overlay .fazit-token-icon-input {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  min-height: 1.75rem;
+  padding: 0.3rem 0.42rem;
+  font-size: 0.68rem;
+}
+
+#fazit-form-overlay .fazit-token-portrait-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  justify-self: center;
+}
+
+.fazit-token-options {
+  min-width: 0;
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.42rem 0.55rem 0.55rem;
+  border-top: 1px solid rgba(139, 105, 20, 0.14);
+}
+
+.fazit-token-option {
+  flex: 1 1 6.5rem;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+#fazit-form-overlay .fazit-token-option select {
+  min-height: 1.9rem;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.72rem;
+}
+
+.fazit-token-option-btn {
+  min-height: 1.9rem;
+  flex: 1 1 6.5rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(139, 105, 20, 0.3);
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--gold-dark);
+  font: 0.56rem/1.2 'Cinzel', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fazit-token-option-btn.is-active {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.18);
+  color: var(--ink);
+}
+
+.fazit-symbol-library {
+  flex: 1 1 100%;
+  border: 1px solid rgba(139, 105, 20, 0.22);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.fazit-symbol-library summary {
+  padding: 0.45rem 0.6rem;
+  color: var(--gold-dark);
+  font: 600 0.56rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fazit-symbol-presets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 0.35rem;
+  padding: 0 0.5rem 0.5rem;
+}
+
+.fazit-symbol-preset {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.4rem;
+  border: 1px solid rgba(139, 105, 20, 0.24);
+  background: rgba(246, 232, 190, 0.36);
+  color: var(--ink);
+  font: 0.62rem/1.2 'EB Garamond', serif;
+  cursor: pointer;
+}
+
+.fazit-symbol-preset:hover {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.12);
+}
+
+.fazit-symbol-preset img {
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.fazit-symbol-preset span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fazit-connector-group {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.fazit-connector-group > span {
+  color: var(--gold-dark);
+  font: 0.54rem/1 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#fazit-form-overlay .fazit-connector-buttons {
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#fazit-form-overlay .fazit-connector-btn {
+  width: auto;
+  min-width: 1.9rem;
+  padding: 0 0.4rem;
+  font-size: 0.72rem;
+}
+
+.fazit-heading-editor-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 10rem;
+  gap: 0.65rem;
+}
+
+.fazit-heading-editor-fields label,
+.fazit-line-text-editor label {
+  margin: 0 !important;
+}
+
+.fazit-heading-editor-fields input {
+  font-family: 'Cinzel', serif !important;
+  font-weight: 600;
+}
+
+#fazit-form-overlay .fazit-line-text-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 10rem;
+  align-items: start;
+  gap: 0.65rem;
+}
+
+#fazit-form-overlay .fazit-line-text-editor textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.fazit-list-editor {
+  display: grid;
+  gap: 0.38rem;
+}
+
+.fazit-list-item-editor {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.42rem;
+}
+
+.fazit-list-item-marker {
+  min-height: 2.25rem;
+  display: grid;
+  place-items: center;
+  color: var(--gold-dark);
+  font: 600 0.82rem/1 'Cinzel', serif;
+}
+
+.fazit-list-item-marker img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+#fazit-form-overlay .fazit-list-item-editor textarea {
+  min-height: 2.25rem;
+  resize: vertical;
+  line-height: 1.35;
+}
+
+.fazit-list-item-actions {
+  padding-top: 0.3rem;
+}
+
+#fazit-form-overlay .fazit-person-picker {
+  margin: 0;
+  border-width: 1px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#fazit-form-overlay > .fazit-form-card > .comment-form-actions {
+  flex: 0 0 auto;
+  margin: 0 -1.95rem -1.75rem;
+  padding: 0.85rem 1.95rem 1rem;
+  border-top: 1px solid rgba(139, 105, 20, 0.32);
+  background: linear-gradient(180deg, rgba(246, 232, 190, 0.95), var(--parchment));
+  box-shadow: 0 -7px 18px rgba(80, 52, 18, 0.08);
+}
+
+/* Rich Fazit card */
+.comment-fazit-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.comment-fazit-card::before,
+.comment-fazit-card::after {
+  content: '✦';
+  position: absolute;
+  top: 0.45rem;
+  color: rgba(139, 105, 20, 0.42);
+  font-size: 0.7rem;
+}
+
+.comment-fazit-card::before { left: 0.65rem; }
+.comment-fazit-card::after { right: 0.65rem; }
+
+.fazit-line-heading {
+  max-width: 42rem;
+  margin: 0.95rem auto 0.35rem;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  text-align: left;
+}
+
+.fazit-line-heading:first-child { margin-top: 0.2rem; }
+
+.fazit-line-heading-section {
+  padding: 0 0 0.38rem;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.26);
+  font-size: 0.83rem;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+}
+
+.fazit-line-heading-subsection {
+  font-size: 0.78rem;
+  letter-spacing: 0.045em;
+}
+
+.fazit-line-list {
+  width: min(40rem, calc(100% - 1rem));
+  margin: 0.35rem auto 0.55rem;
+  padding-left: 1.5rem;
+  color: var(--ink);
+  text-align: left;
+  font: 0.92rem/1.5 'EB Garamond', serif;
+}
+
+.fazit-line-list li {
+  padding: 0.12rem 0 0.12rem 0.18rem;
+}
+
+.fazit-line-list li::marker {
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+}
+
+.fazit-line-list-check {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fazit-line-list-check li {
+  position: relative;
+  padding-left: 1.45rem;
+}
+
+.fazit-line-list-check li::before {
+  content: '□';
+  position: absolute;
+  left: 0;
+  top: 0.08rem;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+}
+
+.fazit-line-list-custom-icon {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fazit-line-list-custom-icon li {
+  display: grid;
+  grid-template-columns: 1.35rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.55rem;
+  padding-left: 0;
+}
+
+.fazit-line-list-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.12rem;
+  object-fit: contain;
+}
+
+.fazit-line-text-plain {
+  padding-left: 0.2rem;
+}
+
+.fazit-line-text-plain p {
+  font-style: normal !important;
+}
+
+.fazit-line-text-note {
+  padding: 0.55rem 0.7rem;
+  border-left: 2px solid rgba(139, 105, 20, 0.55);
+  background: rgba(139, 105, 20, 0.07);
+}
+
+.fazit-line-text-quote {
+  gap: 0.25rem;
+  padding: 0.45rem 1rem;
+}
+
+.fazit-quote-mark {
+  flex: 0 0 auto;
+  margin-top: -0.15rem;
+  color: rgba(139, 105, 20, 0.6);
+  font: 2rem/1 'EB Garamond', serif;
+}
+
+.fazit-line-text-quote p {
+  font-size: 1rem !important;
+}
+
+.fazit-line-align-left { justify-content: flex-start; }
+.fazit-line-align-center { justify-content: center; }
+.fazit-line-align-right { justify-content: flex-end; }
+
+.fazit-token-size-small .fazit-token-icon { width: 2.25rem; height: 2.25rem; }
+.fazit-token-size-medium .fazit-token-icon { width: 3rem; height: 3rem; }
+.fazit-token-size-large .fazit-token-icon { width: 4rem; height: 4rem; }
+.fazit-token-size-small .fazit-token-caption { font-size: 0.56rem; }
+.fazit-token-size-large .fazit-token-caption { font-size: 0.7rem; }
+
+.fazit-token-icon img.is-flipped { transform: scaleX(-1); }
+
+.fazit-token-icon-symbol.fazit-token-variant-tile {
+  padding: 0.32rem;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  background: var(--ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.fazit-token-icon-symbol.fazit-token-variant-seal {
+  padding: 0.32rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(246, 232, 190, 0.7);
+  box-shadow: 0 0 0 2px var(--parchment), 0 0 0 3px rgba(139, 105, 20, 0.45);
+}
+
+@media (max-width: 1100px) {
+  .fazit-editor-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .fazit-lines-editor-head-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  #fazit-form-overlay {
+    padding: 8px;
+  }
+
+  #fazit-form-overlay .fazit-form-card {
+    width: calc(100vw - 16px);
+    height: calc(100dvh - 16px);
+    max-height: none;
+    padding: 1rem;
+  }
+
+  #fazit-form-overlay .fazit-form-grid {
+    overflow-y: auto;
+  }
+
+  #fazit-form-overlay .fazit-form-fields,
+  #fazit-form-overlay .fazit-form-preview-col {
+    overflow: visible;
+    min-width: 0;
+  }
+
+  .fazit-editor-toolbar {
+    padding: 0.7rem;
+  }
+
+  .fazit-lines-editor-head-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fazit-add-block-btn {
+    justify-content: flex-start;
+  }
+
+  .fazit-heading-editor-fields,
+  #fazit-form-overlay .fazit-line-text-editor {
+    grid-template-columns: 1fr;
+  }
+
+  #fazit-form-overlay .fazit-line-tokens {
+    grid-template-columns: 1fr;
+  }
+
+  .fazit-token-main-fields {
+    grid-template-columns: 3.7rem minmax(0, 1fr);
+  }
+
+  .fazit-list-item-editor {
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+  }
+
+  .fazit-list-item-actions {
+    grid-column: 2;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+
+  #fazit-form-overlay > .fazit-form-card > .comment-form-actions {
+    margin: 0 -1rem -1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .comment-fazit-card {
+    padding: 0.9rem;
+  }
+}

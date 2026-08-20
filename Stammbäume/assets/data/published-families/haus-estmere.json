@@ -1,0 +1,3361 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-estmere",
+  "revision": 2,
+  "updatedAt": "2026-08-12T13:01:39.837Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-estmere",
+      "title": "Haus Estmere",
+      "motto": "",
+      "description": "Vollständiger Registerstammbaum des Haus Estmere in Aeldrunmar.",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-estmere.png",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Estmere",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "estmere-gruender",
+        "worldPersonId": "person--haus-estmere--estmere-gruender",
+        "name": "Aethelmaric",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "estmere-gruenderin",
+        "worldPersonId": "person--haus-estmere--estmere-gruenderin",
+        "name": "Herethryth",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-f542358e",
+        "worldPersonId": "person--haus-estmere--person-f542358e",
+        "name": "Ætheltorr Cenhelm",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1736",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-94d7e9fc",
+        "worldPersonId": "person--haus-estmere--person-94d7e9fc",
+        "name": "Aethelwinna Eadgyth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1654",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-3b2afa12",
+        "worldPersonId": "person--haus-estmere--person-3b2afa12",
+        "name": "Aethelgarn Godric",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1658",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-6a80c3f2",
+        "worldPersonId": "person--estmere--person-6a80c3f2",
+        "name": "Æthelgwen Herehild Tharn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1653",
+        "death": "1730",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-tharn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-55534963",
+        "worldPersonId": "person--estmere--person-55534963",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-fa2f3d58",
+        "worldPersonId": "person--estmere--person-fa2f3d58",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1661",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-371b30d8",
+        "worldPersonId": "person--haus-estmere--person-371b30d8",
+        "name": "Æthelsted  Hrothgar",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-ee45de67",
+        "worldPersonId": "person--haus-estmere--person-ee45de67",
+        "name": "Æthelflead Aesa",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-f94be272",
+        "worldPersonId": "person--haus-estmere--person-f94be272",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-2c6c81a8",
+        "worldPersonId": "person--haus-estmere--person-2c6c81a8",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1683",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-eda3913a",
+        "worldPersonId": "person--haus-estmere--person-eda3913a",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-1334198a",
+        "worldPersonId": "person--haus-estmere--aethelbeth-estmere",
+        "name": "Æthelbeth Hadley",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-21824b32",
+        "worldPersonId": "person--estmere--person-21824b32",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-d3e74c5b",
+        "worldPersonId": "person--estmere--person-d3e74c5b",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-230af6d3",
+        "worldPersonId": "person--estmere--person-230af6d3",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-2adc7e06",
+        "worldPersonId": "person--estmere--person-2adc7e06",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a976d0f9",
+        "worldPersonId": "person--estmere--person-a976d0f9",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-c5496cf7",
+        "worldPersonId": "person--haus-pysgod--eskill-pysgod",
+        "name": "Eskill Pysgod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "1720",
+        "portrait": "https://i.imgur.com/foPbLN1.png",
+        "portraitPlaceholder": "male",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-31cc0705",
+        "worldPersonId": "person--haus-estmere--person-31cc0705",
+        "name": "Æthelfryd Merewyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-225e2567",
+        "worldPersonId": "person--haus-estmere--person-225e2567",
+        "name": "Æthelwith Birna",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-39db003b",
+        "worldPersonId": "person--haus-estmere--person-39db003b",
+        "name": "Æthelmae Ymma",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-d6e660f4",
+        "worldPersonId": "person--haus-estmere--person-d6e660f4",
+        "name": "Aethelreda Hrodwyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-7099ba04",
+        "worldPersonId": "person--haus-estmere--person-7099ba04",
+        "name": "Aethelorn Heregar",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-c784e0de",
+        "worldPersonId": "person--haus-estmere--person-c784e0de",
+        "name": "Æthelhere Holden",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-8a7adf2b",
+        "worldPersonId": "person--estmere--person-8a7adf2b",
+        "name": "Æthelwald Abnur Tharn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-tharn",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-c2386f90",
+        "worldPersonId": "person--haus-frye--person-244ec1e6",
+        "name": "Æthelstan Aylett",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-frye",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-f710c562",
+        "worldPersonId": "person--haus-earncynne--person-ed5dfb3c",
+        "name": "Æthelshore Finnegan Earncynne",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-earncynne",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-b4e2dd53",
+        "worldPersonId": "person--estmere--person-b4e2dd53",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-4cdc7d5a",
+        "worldPersonId": "person--estmere--person-4cdc7d5a",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-e297b4e2",
+        "worldPersonId": "person--estmere--person-e297b4e2",
+        "name": "Victoria Königshaus Baldreska",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-baldreska",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-582c147d",
+        "worldPersonId": "person--haus-estmere--person-582c147d",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-de33a775",
+        "worldPersonId": "person--haus-estmere--person-de33a775",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-77b0e101",
+        "worldPersonId": "person--haus-estmere--person-77b0e101",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-8f9d3563",
+        "worldPersonId": "person--haus-estmere--person-8f9d3563",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-71c8d853",
+        "worldPersonId": "person--haus-estmere--person-71c8d853",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-4f91eaa7",
+        "worldPersonId": "person--haus-estmere--person-4f91eaa7",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-afce717e",
+        "worldPersonId": "person--estmere--person-afce717e",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-5788f05b",
+        "worldPersonId": "person--estmere--person-5788f05b",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-eee1f9cf",
+        "worldPersonId": "person--haus-estmere--person-eee1f9cf",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-7bc6ec61",
+        "worldPersonId": "person--estmere--person-7bc6ec61",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-0a3fdaa8",
+        "worldPersonId": "person--estmere--person-0a3fdaa8",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-f0b2a7ec",
+        "worldPersonId": "person--haus-estmere--person-f0b2a7ec",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-36380ddb",
+        "worldPersonId": "person--haus-estmere--person-36380ddb",
+        "name": "Æthelfin Ardis",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-810e0543",
+        "worldPersonId": "person--haus-estmere--person-810e0543",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-ec2108dd",
+        "worldPersonId": "person--haus-estmere--person-ec2108dd",
+        "name": "Æthelfryth Odette",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-c32ee2d0",
+        "worldPersonId": "person--haus-estmere--person-c32ee2d0",
+        "name": "Ætheljurg Orvyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-d257d226",
+        "worldPersonId": "person--haus-estmere--person-d257d226",
+        "name": "Aethelleof Moira",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-5876b246",
+        "worldPersonId": "person--haus-estmere--person-5876b246",
+        "name": "Æthelfred Selwyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "male",
+        "houseId": "house-estmere",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-estmere-founders",
+        "participantIds": [
+          "estmere-gruender",
+          "estmere-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-5dee7b8a",
+        "participantIds": [
+          "person-f542358e",
+          "person-6a80c3f2"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-7213daa7",
+        "participantIds": [
+          "person-94d7e9fc",
+          "person-55534963"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-e3cf05f6",
+        "participantIds": [
+          "person-3b2afa12",
+          "person-fa2f3d58"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-d1d410b5",
+        "participantIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-455bc0c5",
+        "participantIds": [
+          "person-ee45de67",
+          "person-d3e74c5b"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-e994de53",
+        "participantIds": [
+          "person-f94be272",
+          "person-230af6d3"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-5deb79ee",
+        "participantIds": [
+          "person-2c6c81a8",
+          "person-2adc7e06"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-47d9479a",
+        "participantIds": [
+          "person-eda3913a",
+          "person-a976d0f9"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "marriage-aethelbeth-eskill-estmere-pysgod",
+        "participantIds": [
+          "person-1334198a",
+          "person-c5496cf7"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-6896e447",
+        "participantIds": [
+          "person-31cc0705",
+          "person-8a7adf2b"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "marriage-aethelstan-birna-frye-estmere",
+        "participantIds": [
+          "person-225e2567",
+          "person-c2386f90"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "marriage-ymma-finnegan-estmere-earncynne",
+        "participantIds": [
+          "person-39db003b",
+          "person-f710c562"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-8402786b",
+        "participantIds": [
+          "person-d6e660f4",
+          "person-b4e2dd53"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-f271a16d",
+        "participantIds": [
+          "person-7099ba04",
+          "person-4cdc7d5a"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-4d2ed275",
+        "participantIds": [
+          "person-c784e0de",
+          "person-e297b4e2"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-c508b1dd",
+        "participantIds": [
+          "person-77b0e101",
+          "person-afce717e"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-c3b05a9d",
+        "participantIds": [
+          "person-4f91eaa7",
+          "person-5788f05b"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-444a2fa3",
+        "participantIds": [
+          "person-8f9d3563",
+          "person-7bc6ec61"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-108ca3da",
+        "participantIds": [
+          "person-71c8d853",
+          "person-0a3fdaa8"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-3482f798",
+        "childId": "person-f542358e",
+        "parentIds": [
+          "estmere-gruender",
+          "estmere-gruenderin"
+        ],
+        "partnershipId": "marriage-estmere-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-6d0f9de5",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-937cb69e",
+        "childId": "person-94d7e9fc",
+        "parentIds": [
+          "estmere-gruender",
+          "estmere-gruenderin"
+        ],
+        "partnershipId": "marriage-estmere-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-6d0f9de5",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-2982a311",
+        "childId": "person-3b2afa12",
+        "parentIds": [
+          "estmere-gruender",
+          "estmere-gruenderin"
+        ],
+        "partnershipId": "marriage-estmere-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-6d0f9de5",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-13fb4082",
+        "childId": "person-371b30d8",
+        "parentIds": [
+          "person-f542358e",
+          "person-6a80c3f2"
+        ],
+        "partnershipId": "partnership-5dee7b8a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-cfae3854",
+        "childId": "person-ee45de67",
+        "parentIds": [
+          "person-f542358e",
+          "person-6a80c3f2"
+        ],
+        "partnershipId": "partnership-5dee7b8a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-556cbc6b",
+        "childId": "person-f94be272",
+        "parentIds": [
+          "person-f542358e",
+          "person-6a80c3f2"
+        ],
+        "partnershipId": "partnership-5dee7b8a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-cb3fd3cc",
+        "childId": "person-2c6c81a8",
+        "parentIds": [
+          "person-3b2afa12",
+          "person-fa2f3d58"
+        ],
+        "partnershipId": "partnership-e3cf05f6",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-92138422",
+        "childId": "person-eda3913a",
+        "parentIds": [
+          "person-3b2afa12",
+          "person-fa2f3d58"
+        ],
+        "partnershipId": "partnership-e3cf05f6",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-05afe58d",
+        "childId": "person-1334198a",
+        "parentIds": [
+          "person-3b2afa12",
+          "person-fa2f3d58"
+        ],
+        "partnershipId": "partnership-e3cf05f6",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-0a9be402",
+        "childId": "person-31cc0705",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-8022083e",
+        "childId": "person-225e2567",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-540e9f88",
+        "childId": "person-39db003b",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-d20849f2",
+        "childId": "person-d6e660f4",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-a67cc238",
+        "childId": "person-7099ba04",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-2c50178e",
+        "childId": "person-c784e0de",
+        "parentIds": [
+          "person-371b30d8",
+          "person-21824b32"
+        ],
+        "partnershipId": "partnership-d1d410b5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-b2d855c4",
+        "childId": "person-582c147d",
+        "parentIds": [
+          "person-7099ba04",
+          "person-4cdc7d5a"
+        ],
+        "partnershipId": "partnership-f271a16d",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-dbec6762",
+        "childId": "person-de33a775",
+        "parentIds": [
+          "person-7099ba04",
+          "person-4cdc7d5a"
+        ],
+        "partnershipId": "partnership-f271a16d",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-eef08c56",
+        "childId": "person-77b0e101",
+        "parentIds": [
+          "person-2c6c81a8",
+          "person-2adc7e06"
+        ],
+        "partnershipId": "partnership-5deb79ee",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-756e78c3",
+        "childId": "person-8f9d3563",
+        "parentIds": [
+          "person-eda3913a",
+          "person-a976d0f9"
+        ],
+        "partnershipId": "partnership-47d9479a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-63b0b557",
+        "childId": "person-71c8d853",
+        "parentIds": [
+          "person-eda3913a",
+          "person-a976d0f9"
+        ],
+        "partnershipId": "partnership-47d9479a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-e77306ea",
+        "childId": "person-4f91eaa7",
+        "parentIds": [
+          "person-2c6c81a8",
+          "person-2adc7e06"
+        ],
+        "partnershipId": "partnership-5deb79ee",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-7fd342d3",
+        "childId": "person-eee1f9cf",
+        "parentIds": [
+          "person-8f9d3563"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-9eaae1d6",
+        "childId": "person-f0b2a7ec",
+        "parentIds": [
+          "person-71c8d853",
+          "person-0a3fdaa8"
+        ],
+        "partnershipId": "partnership-108ca3da",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-8e80bf9a",
+        "childId": "person-36380ddb",
+        "parentIds": [
+          "person-77b0e101",
+          "person-afce717e"
+        ],
+        "partnershipId": "partnership-c508b1dd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-97ca3152",
+        "childId": "person-810e0543",
+        "parentIds": [
+          "person-77b0e101",
+          "person-afce717e"
+        ],
+        "partnershipId": "partnership-c508b1dd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-fd641230",
+        "childId": "person-ec2108dd",
+        "parentIds": [
+          "person-c784e0de",
+          "person-e297b4e2"
+        ],
+        "partnershipId": "partnership-4d2ed275",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-b87b02a0",
+        "childId": "person-c32ee2d0",
+        "parentIds": [
+          "person-c784e0de",
+          "person-e297b4e2"
+        ],
+        "partnershipId": "partnership-4d2ed275",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-10d41f64",
+        "childId": "person-d257d226",
+        "parentIds": [
+          "person-c784e0de",
+          "person-e297b4e2"
+        ],
+        "partnershipId": "partnership-4d2ed275",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-2ee5c35b",
+        "childId": "person-5876b246",
+        "parentIds": [
+          "person-c784e0de",
+          "person-e297b4e2"
+        ],
+        "partnershipId": "partnership-4d2ed275",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-estmere",
+        "name": "Haus Estmere",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-estmere.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-tharn",
+        "name": "Haus Tharn",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-tharn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-frye",
+        "name": "Haus Frye",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-frye.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-earncynne",
+        "name": "Haus Earncynne",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-earncynne.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-pysgod",
+        "name": "Haus Pysgod",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-baldreska",
+        "name": "Königshaus Baldreska",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "cadet-branch-32a0daf1",
+        "name": "Haus Pysgod",
+        "subtitle": "Wegverheiratet an Haus Pysgod",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aethelbeth-eskill-estmere-pysgod",
+        "parentPersonId": "",
+        "houseId": "",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pysgod",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "name",
+            "emblem",
+            "subtitle",
+            "targetFamilyId",
+            "linkType",
+            "anchorMode",
+            "founded",
+            "ended"
+          ]
+        }
+      },
+      {
+        "id": "cadet-branch-a14a1492",
+        "name": "Haus Tharn",
+        "subtitle": "Wegverheiratet an Haus Tharn",
+        "linkType": "married-away",
+        "parentPartnershipId": "partnership-6896e447",
+        "parentPersonId": "",
+        "houseId": "",
+        "emblem": "https://i.imgur.com/qsWVYlf.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-tharn",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "name",
+            "emblem",
+            "subtitle",
+            "targetFamilyId",
+            "linkType",
+            "anchorMode",
+            "founded",
+            "ended"
+          ]
+        }
+      },
+      {
+        "id": "cadet-branch-c6e954fe",
+        "name": "Haus Frye",
+        "subtitle": "Wegverheiratet an Haus Frye",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aethelstan-birna-frye-estmere",
+        "parentPersonId": "",
+        "houseId": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-frye.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-frye",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "name",
+            "emblem",
+            "subtitle",
+            "targetFamilyId",
+            "linkType",
+            "anchorMode",
+            "founded",
+            "ended"
+          ]
+        }
+      },
+      {
+        "id": "cadet-branch-cc4c67d1",
+        "name": "Haus Earncynne",
+        "subtitle": "Wegverheiratet an Haus Earncynne",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-ymma-finnegan-estmere-earncynne",
+        "parentPersonId": "",
+        "houseId": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-earncynne.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-earncynne",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "name",
+            "emblem",
+            "subtitle",
+            "targetFamilyId",
+            "linkType",
+            "anchorMode",
+            "founded",
+            "ended"
+          ]
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "time-jump-6d0f9de5",
+        "parentPartnershipId": "marriage-estmere-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-f542358e",
+          "person-94d7e9fc",
+          "person-3b2afa12"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPersonId",
+            "parentPartnershipId",
+            "sharedParentPartnershipIds",
+            "childIds",
+            "years",
+            "label",
+            "fromYear",
+            "toYear",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-estmere-founders",
+      "houseId": "house-estmere",
+      "crestSubtitle": "Earltumshaus im Jarltum der Estmere",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "estmere-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 99,
+      "descendantDepth": 99,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "integrationSource": {
+        "type": "manual-export",
+        "originalDocumentId": "estmere",
+        "promotedOn": "2026-08-18"
+      },
+      "generatorProfile": {
+        "origin": "",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      },
+      "sourceRevision": 1,
+      "sourceNote": "Aus dem manuellen Export estmere.json übernommen und für das Aeldrunmar-Register bereinigt.",
+      "sourceFamilyId": "haus-estmere",
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "ancestorDepth",
+        "descendantDepth",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "registryTombstones": {
+        "persons": [],
+        "partnerships": [],
+        "parentages": [],
+        "cadetBranches": []
+      }
+    }
+  }
+}

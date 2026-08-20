@@ -71,11 +71,13 @@ export function mergePublishedRegistryRecords(projectRecords = [], publishedReco
   const records = new Map(canonicalProjectRecords.map(record => [record.id, record]));
 
   publishedRecords.forEach(publishedRecord => {
-    const id = String(publishedRecord.familyId || publishedRecord.id || '').trim();
-    if (!id) return;
-    const projectRecord = records.get(id)
+    const publishedId = String(publishedRecord.familyId || publishedRecord.id || '').trim();
+    if (!publishedId) return;
+    const projectRecord = records.get(publishedId)
       || findUniqueProjectRecord(canonicalProjectRecords, publishedRecord);
-    if (projectRecord?.id && projectRecord.id !== id) records.delete(projectRecord.id);
+    const canonicalId = projectRecord?.id || publishedId;
+    if (projectRecord?.id) records.delete(projectRecord.id);
+    if (canonicalId !== publishedId) records.delete(publishedId);
 
     const publishedFolderPath = nonEmptyList(publishedRecord.folderPath);
     const folderPath = publishedFolderPath.length
@@ -86,17 +88,19 @@ export function mergePublishedRegistryRecords(projectRecords = [], publishedReco
       || {};
     const houseProfile = mergeHouseProfiles(projectProfile, publishedRecord.houseProfile || {});
 
-    records.set(id, {
+    records.set(canonicalId, {
       ...projectRecord,
       ...publishedRecord,
-      id,
-      title: String(publishedRecord.title || projectRecord?.title || id),
+      id: canonicalId,
+      familyId: canonicalId,
+      title: String(publishedRecord.title || projectRecord?.title || canonicalId),
       folderPath,
       houseProfile,
       family: projectRecord?.family,
-      link: normalizeFamilyViewLink(publishedRecord.link, id),
+      link: normalizeFamilyViewLink('', canonicalId),
       source: 'github',
-      canonicalRegistryId: projectRecord?.id || id
+      canonicalRegistryId: canonicalId,
+      publishedFamilyId: publishedId
     });
   });
 

@@ -4,6 +4,7 @@ import {
 } from './family-sync-errors.js';
 import { assertMirroredCrossFamilyBatch } from './cross-family-sync-invariant.js';
 import { createFamilySyncStatusUi } from './family-sync-status-ui.js';
+import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js';
 
 const REMOTE_SOURCES = new Set(['repository-sync', 'repository-priority']);
 const NEW_FAMILY_SOURCES = new Set([
@@ -302,6 +303,10 @@ export function createFamilySyncController({
       } else {
         remoteBase = remote.family;
         remoteRevision = remote.revision;
+        const projectReconciliation = reconcileFamilyWithProjectOrigin({
+          family: remote.family,
+          projectOriginFamily: originFamily
+        });
         const hasLocalChanges = localDraft?.dirty === true
           && !sameFamily(localDraft.family, remote.family);
         const localIsBasedOnRemote = Number(localDraft?.baseRevision || 0) === remote.revision
@@ -323,6 +328,17 @@ export function createFamilySyncController({
             locallySaved
               ? `Lokaler Entwurf nur auf diesem Gerät · GitHub-Basis Revision ${remote.revision}`
               : 'Lokaler Entwurf konnte nicht gesichert werden'
+          );
+        } else if (projectReconciliation.upgraded) {
+          if (hasLocalChanges) localRepository.archiveDraft?.(familyId, 'project-origin-reconciliation');
+          localBaseRevision = remote.revision;
+          dirty = true;
+          store.synchronizeFamily(projectReconciliation.family, {
+            source: 'project-origin-reconciliation'
+          });
+          renderStatus(
+            'pending',
+            `Projektkorrekturen mit GitHub-Revision ${remote.revision} zusammengeführt · online speichern steht aus`
           );
         } else if (sameFamily(remote.family, store.getState().family)) {
           localBaseRevision = remote.revision;

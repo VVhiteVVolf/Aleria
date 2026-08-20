@@ -75,6 +75,12 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
     liegeHouseId: 'haus-draig',
     liegeHouseName: 'Haus Draig'
   }),
+  // Von Aldo Falveri neu begründetes Ritterherrenhaus am eigenen Sitz Tŵr Traethlan.
+  // Der Falveri-Ursprung bleibt in der Familienakte als Herkunftshaus verknüpft.
+  cymrathOTraethlan: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Tŵr Traethlan'], {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  }),
   // Bürgerliches Haus, kein Rittergeschlecht: sitzt im generischen Gwynthor-Pfad, aber
   // außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS (die ist strikt an rankId 'knight' gebunden).
   gwyllach: profile('commoner', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'], {

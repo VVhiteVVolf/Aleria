@@ -15,12 +15,14 @@ import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
 import { HOUSE_DUBHAN_GWYNTHOR_FAMILY } from './house-dubhan-gwynthor-family.js';
 import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
 import { HOUSE_BLEIDDORN_FAMILY } from './house-bleiddorn-family.js';
+import { HOUSE_CYMRATH_O_TRAETHLAN_FAMILY } from './house-cymrath-o-traethlan-family.js';
 import { HOUSE_HOCHREUTH_FAMILY } from './house-hochreuth-family.js';
 import { WEISENFLUH_HOUSE_FAMILIES } from './weisenfluh-house-families.js';
 import { VENALYS_HOUSE_FAMILIES } from './venalys-house-families.js';
 import { MORGORN_HOUSE_FAMILIES } from './morgorn-house-families.js';
 import { AELDRUNMAR_HOUSE_FAMILIES } from './aeldrunmar-house-families.js';
 import { ALDRIMAR_HOUSE_FAMILIES } from './aldrimar-house-families.js';
+import { KRONENTAL_DEPENDENT_HOUSE_FAMILIES } from './kronental-house-families.js';
 import {
   IVARSHEIM_DEPENDENT_HOUSE_FAMILIES,
   IVARSHEIM_ORIGIN_HOUSE_FAMILIES
@@ -169,6 +171,12 @@ export const FAMILY_REGISTRY = Object.freeze([
     type: 'lower-nobility'
   }),
   familyRecord({
+    id: 'haus-cymrath-o-traethlan',
+    title: "Haus Cymrath O'Traethlan",
+    family: HOUSE_CYMRATH_O_TRAETHLAN_FAMILY,
+    type: 'lower-nobility'
+  }),
+  familyRecord({
     id: 'haus-von-hochreuth',
     title: 'Haus von Hochreuth',
     family: HOUSE_HOCHREUTH_FAMILY,
@@ -203,6 +211,16 @@ export const FAMILY_REGISTRY = Object.freeze([
     title: family.document.title,
     family,
     type: 'dynasty'
+  })),
+  ...KRONENTAL_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'huskarl'
+        ? 'lower-nobility'
+        : 'dynasty'
   })),
   ...IVARSHEIM_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

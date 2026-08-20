@@ -4,7 +4,8 @@ import {
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
-  createParentages
+  createParentages,
+  createWardAwayBranch
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_HELGR_PORTRAITS } from './house-helgr-portraits.js';
@@ -25,6 +26,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   hrafn: SCHWARZFENN_HOUSE_EMBLEMS.hrafn,
   schmetterschild: SCHWARZFENN_HOUSE_EMBLEMS.schmetterschild,
   todbrand: SCHWARZFENN_HOUSE_EMBLEMS.todbrand,
+  silberblut: 'assets/images/houses/Aldrimar/Kraehenmoor/clan-silberblut.png',
   silberzunge: IVARSHEIM_HOUSE_EMBLEMS.silberzunge,
   wargh: ALDRIMAR_HOUSE_EMBLEMS.wargh,
   skaal: RORIKSHEIM_HOUSE_EMBLEMS.skaal,
@@ -240,6 +242,28 @@ function marriedAway(id, name, partnershipId, houseId, targetFamilyId, emblem = 
   });
 }
 
+function wardAway(id, name, parentPersonId, houseId, targetFamilyId, emblem = '') {
+  return createWardAwayBranch({
+    id,
+    name,
+    parentPersonId,
+    houseId,
+    targetFamilyId,
+    emblem,
+    subtitle: `Als Mündel an ${name} vermittelt`,
+    extensions: {
+      registryManagedFields: [
+        'name',
+        'parentPersonId',
+        'houseId',
+        'targetFamilyId',
+        'emblem',
+        'subtitle'
+      ]
+    }
+  });
+}
+
 function timeJump(id, parentPartnershipId, childIds) {
   return {
     id,
@@ -268,6 +292,7 @@ export const HOUSE_HELGR_FAMILY = Object.freeze({
   },
   houses: [
     house(HELGR_HOUSE_ID, 'Clan Helgr', HOUSE_EMBLEMS.helgr),
+    house('house-silberblut', 'Clan Silberblut', HOUSE_EMBLEMS.silberblut),
     house('house-arnvild', 'Clan Arnvild', HOUSE_EMBLEMS.arnvild),
     house('house-silberzunge', 'Clan Silberzunge', HOUSE_EMBLEMS.silberzunge),
     house('house-schmetterschild', 'Clan Schmetterschild', HOUSE_EMBLEMS.schmetterschild),
@@ -399,7 +424,10 @@ export const HOUSE_HELGR_FAMILY = Object.freeze({
     person('mysa-helgr', 'Mysa Helgr', 'female', '1725', ''),
     person('vidar-helgr', 'Vidar Helgr', 'male', '1726', ''),
     person('olna-helgr', 'Olna Helgr', 'female', '1730', '', {
-      notes: 'Die alte Schaubildfassung markiert Olna abweichend blau, erläutert diese Farbe jedoch nicht. Ohne belastbare Quellenangabe bleibt sie als leibliche Helgr-Tochter erfasst.'
+      familyRole: 'ward-away',
+      title: 'Als Mündel an Clan Silberblut vermittelt',
+      tags: ['Mündel', 'Fortgegeben'],
+      notes: 'Olna bleibt leibliche Tochter Peders und Gyrids. Die Silberblut-Quelle identifiziert sie ausdrücklich als Thongvirs aufgenommenes Mündel.'
     })
   ],
   partnerships: Object.keys(PARTNERS_BY_ID).map((partnershipId) => partnership(partnershipId)),
@@ -450,7 +478,8 @@ export const HOUSE_HELGR_FAMILY = Object.freeze({
     marriedAway('married-away-dagny-helgr-skaal', 'Clan Skaal', 'marriage-sjovald-dagny-skaal', 'house-skaal', 'haus-skaal', HOUSE_EMBLEMS.skaal),
     marriedAway('married-away-sighild-helgr-skjegg', 'Clan Skjegg', 'marriage-harold-sighild-skjegg', 'house-skjegg', 'haus-skjegg', HOUSE_EMBLEMS.skjegg),
     marriedAway('married-away-irma-helgr-mac-ailella', 'Clan Mac Ailella', 'marriage-irma-finnbar-mac-ailella', 'house-mac-ailella', 'haus-mac-ailella'),
-    marriedAway('married-away-birta-helgr-todbrand', 'Clan Todbrand', 'marriage-birta-gudbrand-todbrand', 'house-todbrand', 'haus-todbrand', HOUSE_EMBLEMS.todbrand)
+    marriedAway('married-away-birta-helgr-todbrand', 'Clan Todbrand', 'marriage-birta-gudbrand-todbrand', 'house-todbrand', 'haus-todbrand', HOUSE_EMBLEMS.todbrand),
+    wardAway('ward-away-olna-helgr-silberblut', 'Clan Silberblut', 'olna-helgr', 'house-silberblut', 'haus-silberblut', HOUSE_EMBLEMS.silberblut)
   ],
   timeJumps: [
     timeJump('gap-aegir-arvid-helgr', 'marriage-aegir-pallvor-helgr', [
@@ -480,9 +509,9 @@ export const HOUSE_HELGR_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 5,
+    sourceRevision: 6,
     sourceModule: 'Clan Helgr (bereitgestellte Altdaten)',
-    sourceNote: 'Der Stammbaum bildet die vollständige überlieferte Helgr-Genealogie ohne Personenfokus ab. Aegir und Pallvör bilden das Gründerpaar; der einzige Quellenzeitsprung folgt strikt seriell auf den ersten Hausknoten. Die Oberhauptfolge Aegir, Arvid, Avulstein, Ithmar und Heimskr sowie die Erbfolge Magnus, Torgeir, Útgar und Kalf stammen aus der Hoftabelle. Sämtliche verheirateten Helgr-Frauen erhalten direkte Wegverheiratet-Verknüpfungen; Nachkommen in den Zielhäusern werden dort und nicht doppelt im Helgr-Baum fortgeführt. Bestehende Gegenregister-Porträts werden wiederverwendet. Die Schreibweise Anvild wurde als offensichtlicher Quellenfehler zu Arnvild normalisiert, Fjörgyn aus der beschädigten HTML-Kodierung wiederhergestellt und Idunn entsprechend ihrer Rolle als Ehefrau weiblich erfasst. Die Quelle nennt Eldrids Tod 1734 und Dagnhilds Tod 1629; diese präziseren Daten ersetzen die bisherigen unbekannten Todesangaben in den Gegenakten. Die alte Bildgrafik färbt Hedin und Olna blau, liefert dafür aber weder Legende noch Statusangabe. Beide bleiben daher bis zu einer belastbaren Klärung als leibliche Helgr-Kinder erfasst. Die fünf unbenannten Verlobten-Platzhalter der HTML-Tabelle wurden nicht erfunden und nicht in den Stammbaum übernommen.',
+    sourceNote: 'Der Stammbaum bildet die vollständige überlieferte Helgr-Genealogie ohne Personenfokus ab. Aegir und Pallvör bilden das Gründerpaar; der einzige Quellenzeitsprung folgt strikt seriell auf den ersten Hausknoten. Die Oberhauptfolge Aegir, Arvid, Avulstein, Ithmar und Heimskr sowie die Erbfolge Magnus, Torgeir, Útgar und Kalf stammen aus der Hoftabelle. Sämtliche verheirateten Helgr-Frauen erhalten direkte Wegverheiratet-Verknüpfungen; Nachkommen in den Zielhäusern werden dort und nicht doppelt im Helgr-Baum fortgeführt. Bestehende Gegenregister-Porträts werden wiederverwendet. Die Schreibweise Anvild wurde als offensichtlicher Quellenfehler zu Arnvild normalisiert, Fjörgyn aus der beschädigten HTML-Kodierung wiederhergestellt und Idunn entsprechend ihrer Rolle als Ehefrau weiblich erfasst. Die Quelle nennt Eldrids Tod 1734 und Dagnhilds Tod 1629; diese präziseren Daten ersetzen die bisherigen unbekannten Todesangaben in den Gegenakten. Hedin bleibt ein regulärer leiblicher Helgr-Sohn. Olna bleibt ebenfalls leibliche Tochter Peders und Gyrids, wird nach dem eindeutigen Silberblut-Beleg jedoch im dunkelblauen Rahmen als Mündel an Clan Silberblut fortgegeben und dort als Thongvirs aufgenommenes Mündel gespiegelt. Die fünf unbenannten Verlobten-Platzhalter der HTML-Tabelle wurden nicht erfunden und nicht in den Stammbaum übernommen.',
     registryTombstones: {
       persons: ['haus-helgr-gruender', 'haus-helgr-gruenderin'],
       partnerships: ['marriage-haus-helgr-founders']

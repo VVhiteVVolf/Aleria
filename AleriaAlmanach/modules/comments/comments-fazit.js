@@ -3,6 +3,7 @@
 let _fazitLines = [];
 let _fazitLineCounter = 0;
 let _fazitTokenCounter = 0;
+let _fazitListItemCounter = 0;
 let _fazitIconPickerTarget = null;
 let _fazitPersonPickerTarget = null;
 let _fazitPersonSearch = '';
@@ -17,26 +18,32 @@ function fazitAvailableCharacters() {
   }
 }
 
-const FAZIT_CONNECTOR_PRESETS = {
-  // "Pfeillinks" gespiegelt statt eines zweiten Icons - siehe flip-Feld im Token-Modell.
-  'arrow-right': { icon: '../IconOrdner/Pfeillinks.png', label: '', flip: true },
-  'arrow-left': { icon: '../IconOrdner/Pfeillinks.png', label: '' },
-  dash: { icon: '', label: '–' },
-  plus: { icon: '../IconOrdner/Plus.png', label: '' },
-  minus: { icon: '../IconOrdner/minus2.png', label: '' },
-  and: { icon: '../IconOrdner/Undsymbol.png', label: '' }
-};
-
 function newFazitLine(kind = 'tokens') {
   _fazitLineCounter += 1;
-  return kind === 'text'
-    ? { id: `line-${_fazitLineCounter}`, kind: 'text', text: '', tokens: [] }
-    : { id: `line-${_fazitLineCounter}`, kind: 'tokens', tokens: [], text: '' };
+  const id = `line-${_fazitLineCounter}`;
+  if (kind === 'text') return { id, kind: 'text', text: '', tone: 'plain', tokens: [], items: [] };
+  if (kind === 'heading') return { id, kind: 'heading', text: '', level: 'section', tokens: [], items: [] };
+  if (kind === 'list') return { id, kind: 'list', style: 'bullet', bulletIcon: '', items: [newFazitListItem()], text: '', tokens: [] };
+  return { id, kind: 'tokens', tokens: [], text: '', items: [], align: 'center' };
 }
 
 function newFazitToken(kind) {
   _fazitTokenCounter += 1;
-  return { id: `token-${_fazitTokenCounter}`, kind: kind === 'person' ? 'person' : 'symbol', icon: '', label: '', characterId: '', flip: false };
+  return {
+    id: `token-${_fazitTokenCounter}`,
+    kind: kind === 'person' ? 'person' : 'symbol',
+    icon: '',
+    label: '',
+    characterId: '',
+    flip: false,
+    size: 'medium',
+    variant: kind === 'person' ? 'portrait' : 'plain'
+  };
+}
+
+function newFazitListItem(text = '') {
+  _fazitListItemCounter += 1;
+  return { id: `item-${_fazitListItemCounter}`, text: String(text || '') };
 }
 
 function findFazitLine(lineId) {
@@ -46,24 +53,6 @@ function findFazitLine(lineId) {
 function findFazitToken(lineId, tokenId) {
   const line = findFazitLine(lineId);
   return line?.tokens.find(token => token.id === String(tokenId)) || null;
-}
-
-function renderFazitTokenEditor(line, token) {
-  const picker = token.kind === 'person'
-    ? `<button type="button" class="fazit-token-portrait-btn" data-action="pick-fazit-token-person" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Figur wählen">
-        ${token.icon ? `<img src="${escapeHtml(sanitizeImageSrc(token.icon))}" alt="">` : '<span>?</span>'}
-      </button>`
-    : `<span class="fazit-token-icon-field">
-        <input type="text" class="fazit-token-icon-input" value="${escapeHtml(token.icon)}" placeholder="Icon-URL" data-action="update-fazit-token-icon" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}">
-        <button type="button" data-action="pick-fazit-token-icon" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Icon-Verzeichnis öffnen">Icon</button>
-      </span>`;
-  return `<div class="fazit-token-editor" data-token-id="${escapeHtml(token.id)}">
-    <button type="button" class="fazit-token-move" data-action="move-fazit-token" data-direction="left" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Nach links verschieben" aria-label="Nach links verschieben">◀</button>
-    ${picker}
-    <input type="text" class="fazit-token-label-input" value="${escapeHtml(token.label)}" maxlength="80" placeholder="${token.kind === 'person' ? 'Name' : 'Beschriftung'}" data-action="update-fazit-token-label" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}">
-    <button type="button" class="fazit-token-move" data-action="move-fazit-token" data-direction="right" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Nach rechts verschieben" aria-label="Nach rechts verschieben">▶</button>
-    <button type="button" class="fazit-token-remove" data-action="remove-fazit-token" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Baustein entfernen" aria-label="Baustein entfernen">×</button>
-  </div>`;
 }
 
 function fazitPersonOptionsMarkup(characters) {
@@ -99,40 +88,11 @@ function renderFazitPersonPicker(line) {
   </div>`;
 }
 
-function renderFazitConnectorButtons(line) {
-  const buttons = [
-    ['arrow-right', '→', 'Pfeil nach rechts'],
-    ['arrow-left', '←', 'Pfeil nach links'],
-    ['dash', '–', 'Bindestrich'],
-    ['plus', '+', 'Plus'],
-    ['minus', '−', 'Minus'],
-    ['and', '&', 'Und-Symbol']
-  ];
-  return buttons.map(([key, glyph, title]) => `<button type="button" class="fazit-connector-btn" data-action="add-fazit-connector" data-connector="${key}" data-line-id="${escapeHtml(line.id)}" title="${escapeHtml(title)}" aria-label="${escapeHtml(title)}">${glyph}</button>`).join('');
-}
-
-function renderFazitLineEditor(line) {
-  if (line.kind === 'text') {
-    return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
-      <div class="fazit-line-text-editor">
-        <span class="fazit-bullet" aria-hidden="true">✦</span>
-        <textarea rows="2" maxlength="600" placeholder="Freier Text für diese Zeile …" data-action="update-fazit-line-text" data-line-id="${escapeHtml(line.id)}">${escapeHtml(line.text)}</textarea>
-      </div>
-      <div class="fazit-line-actions">
-        <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
-      </div>
-    </div>`;
-  }
-  return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
-    <div class="fazit-line-tokens">${line.tokens.map(token => renderFazitTokenEditor(line, token)).join('') || '<span class="fazit-line-empty">Noch keine Bausteine — füge Personen, Symbole oder Verbindungszeichen hinzu.</span>'}</div>
-    <div class="fazit-line-actions">
-      <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="person" data-line-id="${escapeHtml(line.id)}">+ Person</button>
-      <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="symbol" data-line-id="${escapeHtml(line.id)}">+ Symbol</button>
-      <span class="fazit-connector-buttons">${renderFazitConnectorButtons(line)}</span>
-      <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
-    </div>
-    ${renderFazitPersonPicker(line)}
-  </div>`;
+function renderFazitLineEditor(line, index) {
+  if (line.kind === 'heading') return renderFazitHeadingLineEditor(line, index, _fazitLines.length);
+  if (line.kind === 'list') return renderFazitListLineEditor(line, index, _fazitLines.length);
+  if (line.kind === 'text') return renderFazitTextLineEditor(line, index, _fazitLines.length);
+  return renderFazitTokenLineEditor(line, index, _fazitLines.length, renderFazitPersonPicker(line));
 }
 
 function renderFazitLinesEditor() {
@@ -160,15 +120,68 @@ function updateFazitPreview() {
 }
 
 function addFazitLine(kind = 'tokens') {
-  _fazitLines.push(newFazitLine(kind));
+  if (_fazitLines.length >= 24) return;
+  const line = newFazitLine(kind);
+  _fazitLines.push(line);
   renderFazitLinesEditor();
   updateFazitPreview();
+  const field = document.querySelector(`[data-line-id="${CSS.escape(line.id)}"] input, [data-line-id="${CSS.escape(line.id)}"] textarea`);
+  field?.focus({ preventScroll: true });
 }
 
 function updateFazitLineText(lineId, value) {
   const line = findFazitLine(lineId);
+  if (!line || !['text', 'heading'].includes(line.kind)) return;
+  line.text = String(value || '').slice(0, line.kind === 'heading' ? 160 : 600);
+  updateFazitPreview();
+}
+
+function updateFazitLineTone(lineId, tone) {
+  const line = findFazitLine(lineId);
   if (!line || line.kind !== 'text') return;
-  line.text = String(value || '').trim().slice(0, 600);
+  line.tone = ['plain', 'note', 'quote'].includes(tone) ? tone : 'plain';
+  updateFazitPreview();
+}
+
+function updateFazitHeadingLevel(lineId, level) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'heading') return;
+  line.level = level === 'subsection' ? 'subsection' : 'section';
+  updateFazitPreview();
+}
+
+function updateFazitLineAlign(lineId, align) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'tokens') return;
+  line.align = ['left', 'center', 'right'].includes(align) ? align : 'center';
+  updateFazitPreview();
+}
+
+function moveFazitLine(lineId, direction) {
+  const index = _fazitLines.findIndex(line => line.id === String(lineId));
+  const targetIndex = index + (direction === 'down' ? 1 : -1);
+  if (index < 0 || targetIndex < 0 || targetIndex >= _fazitLines.length) return;
+  [_fazitLines[index], _fazitLines[targetIndex]] = [_fazitLines[targetIndex], _fazitLines[index]];
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function duplicateFazitLine(lineId) {
+  if (_fazitLines.length >= 24) return;
+  const index = _fazitLines.findIndex(line => line.id === String(lineId));
+  if (index < 0) return;
+  const source = _fazitLines[index];
+  const duplicate = newFazitLine(source.kind);
+  duplicate.text = source.text || '';
+  duplicate.tone = source.tone;
+  duplicate.level = source.level;
+  duplicate.style = source.style;
+  duplicate.bulletIcon = source.bulletIcon || '';
+  duplicate.align = source.align;
+  duplicate.tokens = (source.tokens || []).map(token => ({ ...token, id: newFazitToken(token.kind).id }));
+  duplicate.items = (source.items || []).map(item => newFazitListItem(item.text));
+  _fazitLines.splice(index + 1, 0, duplicate);
+  renderFazitLinesEditor();
   updateFazitPreview();
 }
 
@@ -185,8 +198,84 @@ function addFazitConnectorToken(lineId, presetKey) {
   updateFazitPreview();
 }
 
+function addFazitSymbolPresetToken(lineId, presetKey) {
+  const line = findFazitLine(lineId);
+  const preset = FAZIT_SYMBOL_PRESETS.find(entry => entry.key === presetKey);
+  if (!line || line.kind !== 'tokens' || !preset || line.tokens.length >= 24) return;
+  const token = newFazitToken('symbol');
+  token.icon = preset.icon;
+  token.label = preset.label;
+  token.variant = 'plain';
+  line.tokens.push(token);
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
 function removeFazitLine(lineId) {
   _fazitLines = _fazitLines.filter(line => line.id !== String(lineId));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function addFazitListItem(lineId, afterItemId = '') {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list' || line.items.length >= 16) return;
+  const item = newFazitListItem();
+  const afterIndex = line.items.findIndex(entry => entry.id === String(afterItemId));
+  const insertionIndex = afterIndex >= 0 ? afterIndex + 1 : line.items.length;
+  line.items.splice(insertionIndex, 0, item);
+  renderFazitLinesEditor();
+  updateFazitPreview();
+  document.querySelector(`[data-item-id="${CSS.escape(item.id)}"] textarea`)?.focus({ preventScroll: true });
+}
+
+function updateFazitListItem(lineId, itemId, value) {
+  const line = findFazitLine(lineId);
+  const item = line?.kind === 'list' ? line.items.find(entry => entry.id === String(itemId)) : null;
+  if (!item) return;
+  item.text = String(value || '').slice(0, 300);
+  updateFazitPreview();
+}
+
+function removeFazitListItem(lineId, itemId) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list') return;
+  line.items = line.items.filter(item => item.id !== String(itemId));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function moveFazitListItem(lineId, itemId, direction) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list') return;
+  const index = line.items.findIndex(item => item.id === String(itemId));
+  const targetIndex = index + (direction === 'down' ? 1 : -1);
+  if (index < 0 || targetIndex < 0 || targetIndex >= line.items.length) return;
+  [line.items[index], line.items[targetIndex]] = [line.items[targetIndex], line.items[index]];
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function updateFazitListStyle(lineId, style) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list') return;
+  line.style = ['bullet', 'numbered', 'check'].includes(style) ? style : 'bullet';
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function openFazitListBulletIconPicker(lineId) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list' || line.style !== 'bullet') return;
+  _fazitIconPickerTarget = { kind: 'list-bullet', lineId: String(lineId) };
+  if (typeof openIconDirectory === 'function') openIconDirectory();
+  else _fazitIconPickerTarget = null;
+}
+
+function clearFazitListBulletIcon(lineId) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'list') return;
+  line.bulletIcon = '';
   renderFazitLinesEditor();
   updateFazitPreview();
 }
@@ -208,6 +297,18 @@ function removeFazitToken(lineId, tokenId) {
   const line = findFazitLine(lineId);
   if (!line) return;
   line.tokens = line.tokens.filter(token => token.id !== String(tokenId));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function duplicateFazitToken(lineId, tokenId) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'tokens' || line.tokens.length >= 24) return;
+  const index = line.tokens.findIndex(token => token.id === String(tokenId));
+  if (index < 0) return;
+  const source = line.tokens[index];
+  const duplicate = { ...source, id: newFazitToken(source.kind).id };
+  line.tokens.splice(index + 1, 0, duplicate);
   renderFazitLinesEditor();
   updateFazitPreview();
 }
@@ -237,10 +338,32 @@ function updateFazitTokenLabel(lineId, tokenId, value) {
   updateFazitPreview();
 }
 
+function updateFazitTokenSize(lineId, tokenId, size) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token) return;
+  token.size = ['small', 'medium', 'large'].includes(size) ? size : 'medium';
+  updateFazitPreview();
+}
+
+function updateFazitTokenVariant(lineId, tokenId, variant) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token || token.kind !== 'symbol') return;
+  token.variant = ['plain', 'tile', 'seal'].includes(variant) ? variant : 'plain';
+  updateFazitPreview();
+}
+
+function toggleFazitTokenFlip(lineId, tokenId) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token || token.kind !== 'symbol') return;
+  token.flip = !token.flip;
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
 function openFazitTokenIconPicker(lineId, tokenId) {
   const input = document.querySelector(`.fazit-token-icon-input[data-line-id="${CSS.escape(String(lineId))}"][data-token-id="${CSS.escape(String(tokenId))}"]`);
   if (!input) return;
-  _fazitIconPickerTarget = { lineId: String(lineId), tokenId: String(tokenId) };
+  _fazitIconPickerTarget = { kind: 'token', lineId: String(lineId), tokenId: String(tokenId) };
   if (typeof openIconDirectory === 'function') openIconDirectory();
   else _fazitIconPickerTarget = null;
 }
@@ -250,6 +373,15 @@ function handleFazitIconSelected(event) {
   const src = String(event?.detail?.src || '').trim();
   _fazitIconPickerTarget = null;
   if (!target || !src) return;
+  if (target.kind === 'list-bullet') {
+    const line = findFazitLine(target.lineId);
+    if (!line || line.kind !== 'list') return;
+    line.bulletIcon = src;
+    renderFazitLinesEditor();
+    updateFazitPreview();
+    if (typeof closeIconDirectory === 'function') closeIconDirectory();
+    return;
+  }
   const token = findFazitToken(target.lineId, target.tokenId);
   if (!token) return;
   token.icon = src;
@@ -305,6 +437,8 @@ function resetFazitForm() {
   _fazitLines = [];
   _fazitLineCounter = 0;
   _fazitTokenCounter = 0;
+  _fazitListItemCounter = 0;
+  _fazitIconPickerTarget = null;
   _fazitPersonPickerTarget = null;
   _fazitPersonSearch = '';
   _editingFazitCommentId = null;
@@ -350,9 +484,15 @@ function openEditFazitForm(commentId) {
   if (title) title.value = item.title;
   _fazitLines = item.lines.map(line => ({
     id: `line-${(_fazitLineCounter += 1)}`,
-    kind: line.kind === 'text' ? 'text' : 'tokens',
+    kind: line.kind,
     text: line.text || '',
-    tokens: line.tokens.map(token => ({ ...token, id: `token-${(_fazitTokenCounter += 1)}` }))
+    tone: line.tone,
+    level: line.level,
+    style: line.style,
+    bulletIcon: line.bulletIcon || '',
+    align: line.align,
+    items: (line.items || []).map(item => ({ ...item, id: `item-${(_fazitListItemCounter += 1)}` })),
+    tokens: (line.tokens || []).map(token => ({ ...token, id: `token-${(_fazitTokenCounter += 1)}` }))
   }));
   renderFazitLinesEditor();
   updateFazitPreview();

@@ -300,8 +300,8 @@ export const HOUSE_FEUERHAAR_FAMILY = Object.freeze({
       title: 'Thane des Clans Feuerhaar'
     }),
     spouse('ormrun-feuerhaar-spouse', 'Ormrún', 'female', '1570', '1629'),
-    awayWoman('lyngvild-feuerhaar', 'Lyngvild Feuerhaar', '????', '????', 'Clan Silberblut'),
-    spouse('vikar-silberblut', 'Vikar Silberblut', 'male', '????', '????', 'house-silberblut'),
+    awayWoman('lyngvild-feuerhaar', 'Lyngvild Feuerhaar', '1569', '1615', 'Clan Silberblut'),
+    spouse('vikar-silberblut', 'Vikar Silberblut', 'male', '1564', '1611', 'house-silberblut'),
 
     person('ketill-feuerhaar', 'Ketill Feuerhaar', 'male', '1597', '1665', {
       title: 'Thane des Clans Feuerhaar'
@@ -491,9 +491,9 @@ export const HOUSE_FEUERHAAR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceModule: 'Clan Feuerhaar (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Stammbaum wurde ohne Personenfokus übernommen. Robyn Pengoch und Ermingard stehen vor dem goldenen Hauswappen; genau ein serieller Zeitsprung führt danach zu Thorsleikr und Lysveig. Die Stammbaumgrafik löst die in der Tabelle als „?? & ??“ offenen Eltern von Armod, Fenya und Aksel eindeutig als Ingvar Feuerhaar und Wynthonya Tylluan auf. Die Eheüberschrift „Gunnar“ über Fjornirs Partnerin Svanlaug ist ein Tabellenfehler; Kinderblock und Grafik belegen Fjornir. Svanlaugs Lebensdaten 1650–1711 stammen aus der nun ausgearbeiteten Skogg-Gegenakte. Ingrid und Ingeborg werden nach der Feuerhaar-Abstammung statt der widersprüchlichen Eldhári-Zuordnung ihrer älteren Gegenakten geführt. Rafn ist ein regulärer leiblicher Sohn Armods und Astas; die zuvor abgeleitete Skogg-Mündelverbindung ist ausdrücklich verworfen und wird migrationsfest entfernt. Magni Gullvig ist ausschließlich Armods aufgenommenes Mündel. Thorarin ist Sigbjorns Bastard aus der Affäre mit Saeba und wird unmittelbar unter ihr ausgerichtet. Frauen mit belegter Ehe in eine andere Linie erhalten direkte Wegverheiratet-Knoten; deren Nachkommen werden ausschließlich in den fortführenden Gegenakten gezeigt. Standardsilhouetten wurden nicht als individuelle Porträts gespeichert.',
+    sourceNote: 'Der vollständige Stammbaum wurde ohne Personenfokus übernommen. Robyn Pengoch und Ermingard stehen vor dem goldenen Hauswappen; genau ein serieller Zeitsprung führt danach zu Thorsleikr und Lysveig. Die Stammbaumgrafik löst die in der Tabelle als „?? & ??“ offenen Eltern von Armod, Fenya und Aksel eindeutig als Ingvar Feuerhaar und Wynthonya Tylluan auf. Die Eheüberschrift „Gunnar“ über Fjornirs Partnerin Svanlaug ist ein Tabellenfehler; Kinderblock und Grafik belegen Fjornir. Svanlaugs Lebensdaten 1650–1711 stammen aus der nun ausgearbeiteten Skogg-Gegenakte. Ingrid und Ingeborg werden nach der Feuerhaar-Abstammung statt der widersprüchlichen Eldhári-Zuordnung ihrer älteren Gegenakten geführt. Rafn ist ein regulärer leiblicher Sohn Armods und Astas; die zuvor abgeleitete Skogg-Mündelverbindung ist ausdrücklich verworfen und wird migrationsfest entfernt. Magni Gullvig ist ausschließlich Armods aufgenommenes Mündel. Thorarin ist Sigbjorns Bastard aus der Affäre mit Saeba und wird unmittelbar unter ihr ausgerichtet. Lyngvilds bisher unbekannte Lebensdaten und die ihres Ehemanns Vikar Silberblut werden durch die Silberblut-Quelle zu 1569–1615 beziehungsweise 1564–1611 präzisiert. Frauen mit belegter Ehe in eine andere Linie erhalten direkte Wegverheiratet-Knoten; deren Nachkommen werden ausschließlich in den fortführenden Gegenakten gezeigt. Standardsilhouetten wurden nicht als individuelle Porträts gespeichert.',
     registryTombstones: {
       persons: ['haus-feuerhaar-gruender', 'haus-feuerhaar-gruenderin'],
       partnerships: ['marriage-haus-feuerhaar-founders'],

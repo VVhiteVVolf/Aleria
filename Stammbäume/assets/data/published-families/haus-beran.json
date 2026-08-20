@@ -1,0 +1,2727 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-beran",
+  "revision": 1,
+  "updatedAt": "2026-08-12T13:26:15.356Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-beran",
+      "title": "Haus Beran",
+      "motto": "",
+      "description": "Vollständiger Registerstammbaum des Haus Beran in Aeldrunmar.",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-beran.png",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Beran",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "beran-gruender",
+        "worldPersonId": "person--haus-beran--beran-gruender",
+        "name": "Æðelstān",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "beran-gruenderin",
+        "worldPersonId": "person--haus-beran--beran-gruenderin",
+        "name": "Eadgyth",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a96e45fa",
+        "worldPersonId": "person--haus-beran--person-a96e45fa",
+        "name": "Æthelbearn Leofwine",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1738",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-015f6b31",
+        "worldPersonId": "person--haus-beran--person-015f6b31",
+        "name": "Æthelymma Eadlyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1657",
+        "death": "1714",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-2ecdae64",
+        "worldPersonId": "person--haus-beran--person-2ecdae64",
+        "name": "Æthelweard Rodene",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1659",
+        "death": "1729",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-b9217247",
+        "worldPersonId": "person--beran--person-b9217247",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-8c9f0bec",
+        "worldPersonId": "person--beran--person-8c9f0bec",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-b1f5b68c",
+        "worldPersonId": "person--beran--person-b1f5b68c",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-d1862a41",
+        "worldPersonId": "person--haus-beran--person-d1862a41",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-b91c5692",
+        "worldPersonId": "person--haus-beran--person-b91c5692",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-ee3d9ccb",
+        "worldPersonId": "person--haus-beran--person-ee3d9ccb",
+        "name": "Æthelmaer Cole",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1683",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-66297253",
+        "worldPersonId": "person--haus-beran--person-66297253",
+        "name": "Æthelcynn Cedric",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-1f974519",
+        "worldPersonId": "person--beran--person-1f974519",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-22034cb9",
+        "worldPersonId": "person--beran--person-22034cb9",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a95bd3c5",
+        "worldPersonId": "person--haus-frye--person-6ae03c39",
+        "name": "Ætheloslafa Ceolwynne Frye",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-frye",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-502e755f",
+        "worldPersonId": "person--beran--person-502e755f",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-388f7e89",
+        "worldPersonId": "person--haus-beran--person-388f7e89",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-438c0c41",
+        "worldPersonId": "person--haus-beran--person-438c0c41",
+        "name": "Æthelmar Desmond",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-c03c5b65",
+        "worldPersonId": "person--haus-beran--person-c03c5b65",
+        "name": "Æthelgwin Lot",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-ff2aa562",
+        "worldPersonId": "person--beran--person-ff2aa562",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-463e92dc",
+        "worldPersonId": "person--haus-beran--person-463e92dc",
+        "name": "Æthelweyn Xerdic",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-5a47f728",
+        "worldPersonId": "person--haus-beran--person-5a47f728",
+        "name": "Æthelward Freawyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-8cd355a8",
+        "worldPersonId": "person--beran--person-8cd355a8",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-19728f16",
+        "worldPersonId": "person--beran--person-19728f16",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-00f72505",
+        "worldPersonId": "person--haus-beran--person-00f72505",
+        "name": "???",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-33aa21c4",
+        "worldPersonId": "person--haus-beran--person-33aa21c4",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a7110ce1",
+        "worldPersonId": "person--haus-beran--person-a7110ce1",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-18156a2d",
+        "worldPersonId": "person--haus-beran--person-18156a2d",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-8c044693",
+        "worldPersonId": "person--haus-beran--person-8c044693",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-047c783a",
+        "worldPersonId": "person--beran--person-047c783a",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-636e7ec6",
+        "worldPersonId": "person--beran--person-636e7ec6",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-e5e0ac50",
+        "worldPersonId": "person--haus-beran--person-e5e0ac50",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a55d2d31",
+        "worldPersonId": "person--beran--person-a55d2d31",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-a760bfc0",
+        "worldPersonId": "person--haus-beran--person-a760bfc0",
+        "name": "??",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-49ab8d3e",
+        "worldPersonId": "person--beran--person-49ab8d3e",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-3a0e085a",
+        "worldPersonId": "person--beran--person-3a0e085a",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-12af744d",
+        "worldPersonId": "person--haus-beran--person-12af744d",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-cb0a6336",
+        "worldPersonId": "person--haus-beran--person-cb0a6336",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-e8f4eaed",
+        "worldPersonId": "person--haus-beran--person-e8f4eaed",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-40f2509d",
+        "worldPersonId": "person--haus-beran--person-40f2509d",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-ce2c60c3",
+        "worldPersonId": "person--haus-beran--person-ce2c60c3",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      },
+      {
+        "id": "person-459afa03",
+        "worldPersonId": "person--haus-beran--person-459afa03",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beran",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "sex",
+            "birth",
+            "death",
+            "status",
+            "title",
+            "house",
+            "houseId",
+            "portrait",
+            "frameType",
+            "familyRole",
+            "legitimacy",
+            "worldPersonId"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-beran-founders",
+        "participantIds": [
+          "beran-gruender",
+          "beran-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-9a9f62a1",
+        "participantIds": [
+          "person-2ecdae64",
+          "person-b9217247"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-80b326bc",
+        "participantIds": [
+          "person-a96e45fa",
+          "person-8c9f0bec"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-5cb77989",
+        "participantIds": [
+          "person-015f6b31",
+          "person-b1f5b68c"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-4f07045a",
+        "participantIds": [
+          "person-d1862a41",
+          "person-1f974519"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-753f1959",
+        "participantIds": [
+          "person-b91c5692",
+          "person-22034cb9"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "marriage-ceolwynne-cole-frye-beran",
+        "participantIds": [
+          "person-ee3d9ccb",
+          "person-a95bd3c5"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-4a0b5804",
+        "participantIds": [
+          "person-66297253",
+          "person-502e755f"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-022ac828",
+        "participantIds": [
+          "person-388f7e89",
+          "person-ff2aa562"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-c6153661",
+        "participantIds": [
+          "person-463e92dc",
+          "person-8cd355a8"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-1a327851",
+        "participantIds": [
+          "person-5a47f728",
+          "person-19728f16"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-fd27289a",
+        "participantIds": [
+          "person-a7110ce1",
+          "person-047c783a"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-422d33c9",
+        "participantIds": [
+          "person-33aa21c4",
+          "person-636e7ec6"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-3504eaec",
+        "participantIds": [
+          "person-00f72505",
+          "person-a55d2d31"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-7b75dc56",
+        "participantIds": [
+          "person-18156a2d",
+          "person-49ab8d3e"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-194e20f9",
+        "participantIds": [
+          "person-8c044693",
+          "person-3a0e085a"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "partnership-349c18e3",
+        "participantIds": [
+          "person-8c044693",
+          "person-00f72505"
+        ],
+        "type": "affair",
+        "status": "secret",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "union-a760-a55-beran",
+        "participantIds": [
+          "person-a760bfc0",
+          "person-a55d2d31"
+        ],
+        "type": "union",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "start",
+            "end",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-1f16914c",
+        "childId": "person-a96e45fa",
+        "parentIds": [
+          "beran-gruender",
+          "beran-gruenderin"
+        ],
+        "partnershipId": "marriage-beran-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-f97193a2",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-7eb3db26",
+        "childId": "person-015f6b31",
+        "parentIds": [
+          "beran-gruender",
+          "beran-gruenderin"
+        ],
+        "partnershipId": "marriage-beran-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-f97193a2",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-28274d18",
+        "childId": "person-2ecdae64",
+        "parentIds": [
+          "beran-gruender",
+          "beran-gruenderin"
+        ],
+        "partnershipId": "marriage-beran-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-f97193a2",
+          "timeJumpCreated": true,
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-f30850c3",
+        "childId": "person-d1862a41",
+        "parentIds": [
+          "person-a96e45fa",
+          "person-8c9f0bec"
+        ],
+        "partnershipId": "partnership-80b326bc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-f6367971",
+        "childId": "person-b91c5692",
+        "parentIds": [
+          "person-a96e45fa",
+          "person-8c9f0bec"
+        ],
+        "partnershipId": "partnership-80b326bc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-209173a5",
+        "childId": "person-ee3d9ccb",
+        "parentIds": [
+          "person-a96e45fa",
+          "person-8c9f0bec"
+        ],
+        "partnershipId": "partnership-80b326bc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-5647041b",
+        "childId": "person-66297253",
+        "parentIds": [
+          "person-a96e45fa",
+          "person-8c9f0bec"
+        ],
+        "partnershipId": "partnership-80b326bc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-ed87460c",
+        "childId": "person-388f7e89",
+        "parentIds": [
+          "person-b91c5692",
+          "person-22034cb9"
+        ],
+        "partnershipId": "partnership-753f1959",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-3933e4de",
+        "childId": "person-438c0c41",
+        "parentIds": [
+          "person-ee3d9ccb",
+          "person-a95bd3c5"
+        ],
+        "partnershipId": "marriage-ceolwynne-cole-frye-beran",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-d3bde663",
+        "childId": "person-c03c5b65",
+        "parentIds": [
+          "person-ee3d9ccb",
+          "person-a95bd3c5"
+        ],
+        "partnershipId": "marriage-ceolwynne-cole-frye-beran",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-c6722b9d",
+        "childId": "person-463e92dc",
+        "parentIds": [
+          "person-2ecdae64",
+          "person-b9217247"
+        ],
+        "partnershipId": "partnership-9a9f62a1",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-4ffe6772",
+        "childId": "person-5a47f728",
+        "parentIds": [
+          "person-2ecdae64",
+          "person-b9217247"
+        ],
+        "partnershipId": "partnership-9a9f62a1",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-daf89147",
+        "childId": "person-00f72505",
+        "parentIds": [
+          "person-463e92dc",
+          "person-8cd355a8"
+        ],
+        "partnershipId": "partnership-c6153661",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-355a332e",
+        "childId": "person-33aa21c4",
+        "parentIds": [
+          "person-463e92dc",
+          "person-8cd355a8"
+        ],
+        "partnershipId": "partnership-c6153661",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-3d98ec25",
+        "childId": "person-a7110ce1",
+        "parentIds": [
+          "person-463e92dc",
+          "person-8cd355a8"
+        ],
+        "partnershipId": "partnership-c6153661",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-52fdcd68",
+        "childId": "person-18156a2d",
+        "parentIds": [
+          "person-66297253",
+          "person-502e755f"
+        ],
+        "partnershipId": "partnership-4a0b5804",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-536f9fd2",
+        "childId": "person-8c044693",
+        "parentIds": [
+          "person-66297253",
+          "person-502e755f"
+        ],
+        "partnershipId": "partnership-4a0b5804",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-ed585a18",
+        "childId": "person-e5e0ac50",
+        "parentIds": [
+          "person-a760bfc0",
+          "person-a55d2d31"
+        ],
+        "partnershipId": "union-a760-a55-beran",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-dfd63ff7",
+        "childId": "person-12af744d",
+        "parentIds": [
+          "person-18156a2d",
+          "person-49ab8d3e"
+        ],
+        "partnershipId": "partnership-7b75dc56",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-23ca7f7b",
+        "childId": "person-cb0a6336",
+        "parentIds": [
+          "person-18156a2d",
+          "person-49ab8d3e"
+        ],
+        "partnershipId": "partnership-7b75dc56",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-acf10a1e",
+        "childId": "person-e8f4eaed",
+        "parentIds": [
+          "person-33aa21c4",
+          "person-636e7ec6"
+        ],
+        "partnershipId": "partnership-422d33c9",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-df78b704",
+        "childId": "person-40f2509d",
+        "parentIds": [
+          "person-33aa21c4",
+          "person-636e7ec6"
+        ],
+        "partnershipId": "partnership-422d33c9",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-790c35dc",
+        "childId": "person-ce2c60c3",
+        "parentIds": [
+          "person-00f72505",
+          "person-a55d2d31"
+        ],
+        "partnershipId": "partnership-3504eaec",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-aa7658e6",
+        "childId": "person-459afa03",
+        "parentIds": [
+          "person-8c044693",
+          "person-00f72505"
+        ],
+        "partnershipId": "partnership-349c18e3",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "partnershipId",
+            "parentIds",
+            "childId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "visibility",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-beran",
+        "name": "Haus Beran",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-beran.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      },
+      {
+        "id": "house-frye",
+        "name": "Haus Frye",
+        "motto": "",
+        "emblem": "assets/images/houses/Aeldrunmar/haus-frye.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ]
+        }
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "time-jump-f97193a2",
+        "parentPartnershipId": "marriage-beran-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-a96e45fa",
+          "person-015f6b31",
+          "person-2ecdae64"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "parentPersonId",
+            "parentPartnershipId",
+            "sharedParentPartnershipIds",
+            "childIds",
+            "years",
+            "label",
+            "fromYear",
+            "toYear",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-beran-founders",
+      "houseId": "house-beran",
+      "crestSubtitle": "Earltumshaus im Jarltum der Beran",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "beran-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 99,
+      "descendantDepth": 99,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "integrationSource": {
+        "type": "manual-export",
+        "originalDocumentId": "beran",
+        "promotedOn": "2026-08-18"
+      },
+      "generatorProfile": {
+        "origin": "",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      },
+      "sourceRevision": 1,
+      "sourceNote": "Aus dem manuellen Export beran.json übernommen und für das Aeldrunmar-Register bereinigt.",
+      "sourceFamilyId": "haus-beran",
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "ancestorDepth",
+        "descendantDepth",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "registryTombstones": {
+        "persons": [],
+        "partnerships": [],
+        "parentages": [],
+        "cadetBranches": []
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import {
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
+  createMigrationHouseBranch,
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_FALVERI_PORTRAITS } from './house-falveri-portraits.js';
@@ -10,6 +11,8 @@ import { VENALYS_HOUSE_PROFILES } from './venalys-house-profiles.js';
 
 const FALVERI_HOUSE_ID = 'house-falveri';
 const FALVERI_EMBLEM = 'assets/images/houses/Venalys/haus-falveri.png';
+const CYMRATH_HOUSE_ID = 'house-cymrath-o-traethlan';
+const CYMRATH_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-cymrath-o-traethlan.png';
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
   'worldPersonId',
@@ -144,6 +147,13 @@ export const HOUSE_FALVERI_FAMILY = Object.freeze({
       name: 'Haus Falveri',
       motto: '',
       emblem: FALVERI_EMBLEM,
+      status: 'active'
+    },
+    {
+      id: CYMRATH_HOUSE_ID,
+      name: "Haus Cymrath O'Traethlan",
+      motto: '',
+      emblem: CYMRATH_EMBLEM,
       status: 'active'
     }
   ],
@@ -389,6 +399,26 @@ export const HOUSE_FALVERI_FAMILY = Object.freeze({
     ...childrenOf(['potenellus-falveri', 'fidelella-falveri'], 'marriage-ordinian-venturia-falveri')
   ],
   cadetBranches: [
+    createMigrationHouseBranch({
+      id: 'founded-cymrath-o-traethlan-aldo',
+      name: "Haus Cymrath O'Traethlan",
+      subtitle: 'Neu begründetes Ritterherrenhaus in Cenyr',
+      parentPersonId: 'aldo-falveri',
+      houseId: CYMRATH_HOUSE_ID,
+      targetFamilyId: 'haus-cymrath-o-traethlan',
+      emblem: CYMRATH_EMBLEM,
+      crestFrame: 'silver',
+      notes: "Aldo Falveri begründet in Tŵr Traethlan das Haus Cymrath O'Traethlan. Die vollständige Gründungsakte mit seiner unbekannten Braut ist über diesen Knoten erreichbar.",
+      extensions: {
+        registryManagedFields: [
+          'linkType',
+          'parentPartnershipId',
+          'parentPersonId',
+          'subtitle',
+          'notes'
+        ]
+      }
+    }),
     createMarriedAwayBranch({
       id: 'married-away-fidelia-falveri',
       name: 'Unbekanntes Haus',

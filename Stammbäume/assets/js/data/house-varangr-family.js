@@ -198,8 +198,6 @@ const COUPLES = Object.freeze({
   andorAffair: ['andor-varangr', 'line'],
   ingmarAffair: ['ingmar-varangr', 'vefa'],
   ingmund: ['ingmund-varangr', 'gudrun-ragnulf'],
-  ingemar1718: ['ingemar-1718-varangr', 'unknown-wife-ingemar-varangr'],
-  inga: ['unknown-spouse-inga-varangr', 'inga-varangr'],
   ingulf: ['ingulf-varangr', 'unknown-wife-ingulf-varangr']
 });
 
@@ -248,8 +246,6 @@ const PARTNERS_BY_ID = Object.freeze({
   'affair-andor-line-varangr': COUPLES.andorAffair,
   'affair-ingmar-vefa-varangr': COUPLES.ingmarAffair,
   'marriage-gudrun-ingmund-ragnulf': COUPLES.ingmund,
-  'marriage-ingemar-unknown-varangr': COUPLES.ingemar1718,
-  'marriage-inga-unknown-varangr': COUPLES.inga,
   'marriage-ingulf-unknown-varangr': COUPLES.ingulf
 });
 
@@ -263,6 +259,31 @@ function alignPartnerOverChildren(record, partnerPersonId) {
     extensions: {
       ...record.extensions,
       chartAlignPartnerOverChildrenPersonId: partnerPersonId,
+      registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId']
+    }
+  };
+}
+
+function alignChildGroupBelowParentPair(record) {
+  const managedFields = new Set(record.extensions?.registryManagedExtensionFields || []);
+  managedFields.add('chartAlignChildGroupBelowParentPair');
+  return {
+    ...record,
+    extensions: {
+      ...record.extensions,
+      chartAlignChildGroupBelowParentPair: true,
+      registryManagedExtensionFields: [...managedFields]
+    }
+  };
+}
+
+function clearPartnerOverChildrenAlignment(record) {
+  const extensions = { ...(record.extensions || {}) };
+  delete extensions.chartAlignPartnerOverChildrenPersonId;
+  return {
+    ...record,
+    extensions: {
+      ...extensions,
       registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId']
     }
   };
@@ -428,11 +449,14 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     awayWoman('vanadis-varangr', 'Vanadis Varangr', '1609', '', 'Clan Feuerherz'),
     person('jerrik-varangr', 'Jerrik Varangr', 'male', '1612', '1639'),
     person('marduk-varangr', 'Marduk Varangr', 'male', '1617', '1639'),
-    awayWoman('frideborg-varangr', 'Frideborg Varangr', '1611', '', 'Clan Kaltherz'),
+    awayWoman('frideborg-varangr', 'Frideborg Varangr', '1611', '1671', 'Clan Kaltherz'),
     person('fannar-varangr', 'Fannar Varangr', 'male', '1615', '1641', {
       extensions: {
-        chartCenterBetweenSpousePersonIds: ['islaug-vragi', 'dagmar'],
-        registryManagedExtensionFields: ['chartCenterBetweenSpousePersonIds']
+        chartCenterBetweenPartnerPersonIds: ['islaug-vragi', 'dagmar'],
+        registryManagedExtensionFields: [
+          'chartCenterBetweenSpousePersonIds',
+          'chartCenterBetweenPartnerPersonIds'
+        ]
       }
     }),
     spouse('camilla-avenicci', 'Camilla Avenicci', 'female', '1608', '', 'house-avenicci'),
@@ -507,8 +531,11 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     awayWoman('frida-varangr', 'Frida Varangr', '1694', '', 'Clan Feuerherz'),
     person('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1720', {
       extensions: {
-        chartCenterBetweenSpousePersonIds: ['gisrun-schattenherz', 'urd'],
-        registryManagedExtensionFields: ['chartCenterBetweenSpousePersonIds']
+        chartCenterBetweenPartnerPersonIds: ['gisrun-schattenherz', 'urd'],
+        registryManagedExtensionFields: [
+          'chartCenterBetweenSpousePersonIds',
+          'chartCenterBetweenPartnerPersonIds'
+        ]
       }
     }),
     awayWoman('erna-varangr', 'Erna Varangr', '1698', '', 'Clan Kaltherz'),
@@ -517,8 +544,11 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     awayWoman('iseld-varangr', 'Iseld Varangr', '1699', '', 'Clan Vragi'),
     person('andor-varangr', 'Andor Varangr', 'male', '1703', '', {
       extensions: {
-        chartCenterBetweenSpousePersonIds: ['askla-blutstahl', 'line'],
-        registryManagedExtensionFields: ['chartCenterBetweenSpousePersonIds']
+        chartCenterBetweenPartnerPersonIds: ['askla-blutstahl', 'line'],
+        registryManagedExtensionFields: [
+          'chartCenterBetweenSpousePersonIds',
+          'chartCenterBetweenPartnerPersonIds'
+        ]
       }
     }),
     spouse('brynhildr-goldglanz', 'Brynhildr Goldglanz', 'female', '1690', '', 'house-goldglanz'),
@@ -535,7 +565,7 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     person('ingmar-varangr', 'Ingmar Varangr', 'male', '1710', ''),
     person('ingmund-varangr', 'Ingmund Varangr', 'male', '1712', ''),
     person('ingemar-1718-varangr', 'Ingemar Varangr', 'male', '1718', ''),
-    awayWoman('inga-varangr', 'Inga Varangr', '1722', '', 'unbekanntes Haus'),
+    person('inga-varangr', 'Inga Varangr', 'female', '1722', ''),
     sentWard('ingulf-varangr', 'Ingulf Varangr', 'male', '1726', '', 'Clan Skogg', {
       title: 'Mündel bei Clan Skogg'
     }),
@@ -555,12 +585,6 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     }),
     affair('vefa', 'Vefa', 'female', '1712', '', '', { title: 'Affäre Ingmars' }),
     spouse('gudrun-ragnulf', 'Gudrun Ragnulf', 'female', '1714', '', 'house-ragnulf'),
-    spouse('unknown-wife-ingemar-varangr', '???', 'female', '????', '????', '', {
-      title: 'Unbekannte Ehefrau Ingemars'
-    }),
-    spouse('unknown-spouse-inga-varangr', '???', 'male', '????', '????', '', {
-      title: 'Unbekannter Ehepartner Ingas'
-    }),
     spouse('unknown-wife-ingulf-varangr', '???', 'female', '????', '????', '', {
       title: 'Unbekannte Ehefrau Ingulfs'
     }),
@@ -590,7 +614,7 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     partnership('marriage-vanadis-drengur-varangr', { status: 'ended', end: '1641' }),
     partnership('marriage-jerrik-quolga-varangr', { status: 'ended', end: '1639' }),
     partnership('marriage-marduk-kenhild-varangr', { status: 'ended', end: '1639' }),
-    partnership('marriage-frideborg-galvar-varangr', { status: 'ended', end: '1693' }),
+    partnership('marriage-frideborg-galvar-varangr', { status: 'ended', end: '1671' }),
     alignPartnerOverChildren(partnership('marriage-fannar-islaug-varangr', { status: 'ended', end: '1641' }), 'islaug-vragi'),
     alignPartnerOverChildren(partnership('affair-fannar-dagmar-varangr', {
       type: 'affair',
@@ -614,7 +638,11 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     partnership('marriage-valran-serana-varangr', { status: 'ended' }),
     partnership('marriage-hakon-brynhildr-varangr'),
     partnership('marriage-frida-rolfur-varangr'),
-    alignPartnerOverChildren(partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1720' }), 'gisrun-schattenherz'),
+    alignChildGroupBelowParentPair(
+      clearPartnerOverChildrenAlignment(
+        partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1720' })
+      )
+    ),
     alignPartnerOverChildren(partnership('affair-rorik-urd-varangr', {
       type: 'affair',
       status: 'ended',
@@ -630,13 +658,11 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
       type: 'affair',
       visibility: 'private'
     }), 'line'),
-    alignPartnerOverChildren(partnership('affair-ingmar-vefa-varangr', {
+    clearPartnerOverChildrenAlignment(partnership('affair-ingmar-vefa-varangr', {
       type: 'affair',
       visibility: 'private'
-    }), 'vefa'),
+    })),
     partnership('marriage-gudrun-ingmund-ragnulf'),
-    partnership('marriage-ingemar-unknown-varangr'),
-    partnership('marriage-inga-unknown-varangr'),
     partnership('marriage-ingulf-unknown-varangr')
   ],
   parentages: [
@@ -721,7 +747,6 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
     marriedAway('married-away-frida-varangr-feuerherz', 'Clan Feuerherz', 'marriage-frida-rolfur-varangr', 'house-feuerherz', 'haus-feuerherz', HOUSE_EMBLEMS.feuerherz),
     marriedAway('married-away-erna-varangr-kaltherz', 'Clan Kaltherz', 'marriage-erna-njvar-varangr', 'house-kaltherz', 'haus-kaltherz', HOUSE_EMBLEMS.kaltherz),
     marriedAway('married-away-iseld-varangr-vragi', 'Clan Vragi', 'marriage-iseld-tjodmar-varangr', 'house-vragi', 'haus-vragi', HOUSE_EMBLEMS.vragi),
-    marriedAway('married-away-inga-varangr-unknown', 'Unbekanntes Haus', 'marriage-inga-unknown-varangr', 'house-unknown', 'haus-unbekannt'),
     wardAway('ward-away-ingulf-varangr-skogg', 'Clan Skogg', 'ingulf-varangr', 'house-skogg', 'haus-skogg')
   ],
   timeJumps: [
@@ -758,9 +783,20 @@ export const HOUSE_VARANGR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 7,
+    registryTombstones: {
+      persons: [
+        'unknown-wife-ingemar-varangr',
+        'unknown-spouse-inga-varangr'
+      ],
+      partnerships: [
+        'marriage-ingemar-unknown-varangr',
+        'marriage-inga-unknown-varangr'
+      ],
+      cadetBranches: ['married-away-inga-varangr-unknown']
+    },
     sourceModule: 'Clan Varangr (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Varangr-Stammbaum wird ohne Personenfokus von Lokis unbekannten Eltern bis zur jüngsten Generation des Jahres 1740 gezeigt. Loki ist der ausdrücklich benannte Gründer; der Hausknoten hängt direkt unter Loki und Brigid Mac Corcaigh. Zwei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Torvalds Kinder werden der unmittelbar zuvor genannten Ehe mit Gulda Goldglanz zugeordnet, obwohl die Kinderüberschrift die Mutter als unbekannt bezeichnet. Dasselbe gilt für Hakons Kinder und Brynhildr Goldglanz. Inghtor Varangr und seine Ehe mit Siglíf Skogg stammen aus der neueren Skogg-Gegenakte; seine zeitlich passende Elternschaft unter Hadvar und Ingeborg ist wahrscheinlich, in der Varangr-Alttafel aber ausgelassen und daher nicht als sicher markiert. Die Quellvarianten Haakon/Hakon, Valron/Valran, Adnor/Andor und „Fri da“/Frida werden vereinheitlicht. Die Herrscherliste schreibt Othriks Amtszeit offenkundig als 1713–1629; anhand seines Todesjahres wird 1729 verwendet. Magdis Varangr und Trianne Eldath werden wie überliefert als Ehepaar geführt. Fannars, Röriks, Andors und Ingmars Affären besitzen getrennte Partnerschaften; jedes Bastardkind hängt ausschließlich unter seiner jeweiligen Mutter. Ingulf bleibt leiblicher Varangr-Sohn, erhält wegen der Skogg-Gegenakte jedoch den Rahmen und die Verknotung eines fortgegebenen Mündels. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Der vollständige Varangr-Stammbaum wird ohne Personenfokus von Lokis unbekannten Eltern bis zur jüngsten Generation des Jahres 1740 gezeigt. Loki ist der ausdrücklich benannte Gründer; der Hausknoten hängt direkt unter Loki und Brigid Mac Corcaigh. Zwei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Torvalds Kinder werden der unmittelbar zuvor genannten Ehe mit Gulda Goldglanz zugeordnet, obwohl die Kinderüberschrift die Mutter als unbekannt bezeichnet. Dasselbe gilt für Hakons Kinder und Brynhildr Goldglanz. Inghtor Varangr und seine Ehe mit Siglíf Skogg stammen aus der neueren Skogg-Gegenakte; seine zeitlich passende Elternschaft unter Hadvar und Ingeborg ist wahrscheinlich, in der Varangr-Alttafel aber ausgelassen und daher nicht als sicher markiert. Die Quellvarianten Haakon/Hakon, Valron/Valran, Adnor/Andor und „Fri da“/Frida werden vereinheitlicht. Die Herrscherliste schreibt Othriks Amtszeit offenkundig als 1713–1629; anhand seines Todesjahres wird 1729 verwendet. Frideborgs Todesjahr wird anhand der ausgearbeiteten Kaltherz-Gegenakte auf 1671 präzisiert. Magdis Varangr und Trianne Eldath werden wie überliefert als Ehepaar geführt. Fannar, Rörik und Andor stehen bei ihren gemischten Ehe-/Affärengruppen zwischen den jeweiligen Partnerinnen; die Mütter bleiben über den eindeutig zugeordneten Kindergruppen. Bei Rörik und Gisrun sowie bei Ingmar und Vefa gehen die Kinderleitungen als normale Paarleitungen aus der Mitte beider Eltern hervor. Ingulfs Mündelknoten steht senkrecht direkt unter ihm. Svanhildr erhält wegen des nachweislich falschen Quellbildes die weibliche Standardsilhouette. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

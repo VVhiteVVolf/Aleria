@@ -2,38 +2,6 @@
   "schemaVersion": 1,
   "families": [
     {
-      "id": "beran",
-      "familyId": "beran",
-      "title": "Beran",
-      "motto": "",
-      "emblem": "https://i.imgur.com/BP4R87p.png",
-      "folderPath": [
-        "Aeldrunmar",
-        "Jarltum der Beran"
-      ],
-      "houseProfile": {
-        "rankId": "county",
-        "seat": "",
-        "barony": "",
-        "county": "Jarltum der Beran",
-        "kingdom": "Aeldrunmar",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": "assets/images/regions/aeldrunmar.png"
-        }
-      },
-      "personCount": 42,
-      "revision": 1,
-      "updatedAt": "2026-08-12T13:26:15.356Z",
-      "link": "Stammbaum.html?family=beran&mode=view",
-      "source": "github"
-    },
-    {
       "id": "eisenherz",
       "familyId": "eisenherz",
       "title": "Eisenherz",
@@ -64,70 +32,6 @@
       "revision": 1,
       "updatedAt": "2026-08-16T14:51:32.987Z",
       "link": "Stammbaum.html?family=eisenherz&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "estmere",
-      "familyId": "estmere",
-      "title": "Estmere",
-      "motto": "",
-      "emblem": "https://i.imgur.com/OXYIVF3.png",
-      "folderPath": [
-        "Aeldrunmar",
-        "Jarltum der Estmere"
-      ],
-      "houseProfile": {
-        "rankId": "county",
-        "seat": "",
-        "barony": "",
-        "county": "Jarltum der Estmere",
-        "kingdom": "Aeldrunmar",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": "assets/images/regions/aeldrunmar.png"
-        }
-      },
-      "personCount": 50,
-      "revision": 2,
-      "updatedAt": "2026-08-12T13:01:39.837Z",
-      "link": "Stammbaum.html?family=estmere&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "frye",
-      "familyId": "frye",
-      "title": "Frye",
-      "motto": "",
-      "emblem": "https://i.imgur.com/O5KtbfU.png",
-      "folderPath": [
-        "Aeldrunmar",
-        "Jarltum der Fyr"
-      ],
-      "houseProfile": {
-        "rankId": "county",
-        "seat": "",
-        "barony": "",
-        "county": "Jarltum der Fyr",
-        "kingdom": "Aeldrunmar",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": "assets/images/regions/aeldrunmar.png"
-        }
-      },
-      "personCount": 25,
-      "revision": 1,
-      "updatedAt": "2026-08-12T12:35:03.951Z",
-      "link": "Stammbaum.html?family=frye&mode=view",
       "source": "github"
     },
     {
@@ -165,6 +69,38 @@
       "source": "github"
     },
     {
+      "id": "haus-beran",
+      "familyId": "haus-beran",
+      "title": "Haus Beran",
+      "motto": "",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-beran.png",
+      "folderPath": [
+        "Aeldrunmar",
+        "Jarltum der Beran"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Beran",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      },
+      "personCount": 42,
+      "revision": 1,
+      "updatedAt": "2026-08-12T13:26:15.356Z",
+      "link": "Stammbaum.html?family=haus-beran&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-beryn",
       "familyId": "haus-beryn",
       "title": "Haus Beryn",
@@ -196,6 +132,103 @@
       "revision": 2,
       "updatedAt": "2026-08-09T07:56:06.787Z",
       "link": "Stammbaum.html?family=haus-beryn&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-estmere",
+      "familyId": "haus-estmere",
+      "title": "Haus Estmere",
+      "motto": "",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-estmere.png",
+      "folderPath": [
+        "Aeldrunmar",
+        "Jarltum der Estmere"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Estmere",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      },
+      "personCount": 50,
+      "revision": 2,
+      "updatedAt": "2026-08-12T13:01:39.837Z",
+      "link": "Stammbaum.html?family=haus-estmere&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-frye",
+      "familyId": "haus-frye",
+      "title": "Haus Frye",
+      "motto": "",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-frye.png",
+      "folderPath": [
+        "Aeldrunmar",
+        "Jarltum der Fyr"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Fyr",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      },
+      "personCount": 25,
+      "revision": 1,
+      "updatedAt": "2026-08-12T12:35:03.951Z",
+      "link": "Stammbaum.html?family=haus-frye&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-seolfor",
+      "familyId": "haus-seolfor",
+      "title": "Haus Seolfor",
+      "motto": "",
+      "emblem": "assets/images/houses/Aeldrunmar/haus-seolfor.png",
+      "folderPath": [
+        "Aeldrunmar",
+        "Königliches Jarltum der Kendryck",
+        "Thainschaft der Seolfor"
+      ],
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "",
+        "barony": "Thainschaft der Seolfor",
+        "county": "Königliches Jarltum der Kendryck",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kendryck",
+        "liegeHouseName": "Haus Kendryck",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      },
+      "personCount": 22,
+      "revision": 2,
+      "updatedAt": "2026-08-11T17:05:02.807Z",
+      "link": "Stammbaum.html?family=haus-seolfor&mode=view",
       "source": "github"
     },
     {
@@ -264,39 +297,6 @@
       "revision": 2,
       "updatedAt": "2026-08-09T03:41:38.250Z",
       "link": "Stammbaum.html?family=haus-ysgrif&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "seolfor",
-      "familyId": "seolfor",
-      "title": "Seolfor",
-      "motto": "",
-      "emblem": "https://i.imgur.com/pdjCjDZ.png",
-      "folderPath": [
-        "Aeldrunmar",
-        "Königliches Jarltum der Kendryck",
-        "Thainschaft der Seolfor"
-      ],
-      "houseProfile": {
-        "rankId": "barony",
-        "seat": "",
-        "barony": "Thainschaft der Seolfor",
-        "county": "Königliches Jarltum der Kendryck",
-        "kingdom": "Aeldrunmar",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": "assets/images/regions/aeldrunmar.png"
-        }
-      },
-      "personCount": 21,
-      "revision": 2,
-      "updatedAt": "2026-08-11T17:05:02.807Z",
-      "link": "Stammbaum.html?family=seolfor&mode=view",
       "source": "github"
     },
     {

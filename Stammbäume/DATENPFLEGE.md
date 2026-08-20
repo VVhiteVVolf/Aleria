@@ -90,6 +90,7 @@ Bei einem Elternpaar mit genau einem fortgeführten Kind darf die Elternschaftsl
 - Das Elternpaar wird als gemeinsamer Block mittig über seinem Kind ausgerichtet; die senkrechte Linie fällt aus der Paarmitte gerade zum Kind.
 - Bei mehreren aufeinanderfolgenden Einzelkindgenerationen erfolgt die Ausrichtung von unten nach oben, damit nicht nur der Knick in die vorherige Generation verschoben wird.
 - Benötigt die Familie dadurch mehr Breite, wird der betreffende Zweig einschließlich seiner Partner auseinandergezogen. Freier Raum ist einem erzwungenen rechtwinkligen Linienumweg vorzuziehen.
+- Die Regel gilt ebenso für uneheliche Kinder, Opfer- und Affärenverbindungen: Auch dort steht ein einzelnes Kind direkt unter der gemeinsamen Elternmitte. Der Beziehungstyp ändert die Linienart, nicht die geometrische Grundregel.
 - Diese Ausrichtung ist eine ausdrückliche Chart-Erweiterung der betroffenen Partnerschaften. Sie verändert weder Elternschaften noch Weltpersonen und darf nicht durch künstliche Personenduplikate nachgebildet werden.
 - Nach der Ausrichtung werden Kartenkollisionen und die tatsächliche Linie im Browser geprüft; ein bestandener Datenmodelltest allein genügt nicht.
 
@@ -184,12 +185,14 @@ Für jeden Hausknoten gilt zwingend:
 
 - `parentPartnershipId` bezeichnet exakt das Ehe- oder Gründerpaar, unter dem der Knoten sichtbar sein muss.
 - Der konvertierte Knoten besitzt genau die beiden Teilnehmer dieses Paares als Eltern, beziehungsweise die eine ausdrücklich erlaubte Einzelperson.
+- Ein paargebundener Hausknoten steht immer auf der gemeinsamen Mittelachse beider Partner. Seine sichtbare Leitung läuft aus der Paarmitte senkrecht nach unten; Eck-, Zickzack- und seitliche Umwegführungen sind unzulässig. Fehlt dafür Platz, werden benachbarte Zweige weiter auseinander geschoben statt die Verknotung zu verbiegen.
+- Diese Geradlinigkeitsregel gilt einheitlich für `married-away`, `cadet-house`, Bruderhaus- und andere paargebundene Zielhausknoten. Sie darf nicht durch eine familienbezogene Sonderoption aufgeweicht werden.
 - `name`, `houseId`, `targetFamilyId` und `emblem` beziehen sich auf das gegründete oder erreichte Zielhaus.
 - Das Zielhaus darf nicht aus dem Geburtsnamen eines Partners abgeleitet werden. Beispiel: Morholt Pysgod und Caitrin Neidr gründen Haus Tiwna; der Knoten ist deshalb Tiwna, nicht Pysgod.
 - Ein eingeheirateter Partner erzeugt im aktuellen Baum keinen Herkunfts-Hausknoten. Der reziproke Wegverheiratet-Knoten gehört in seine eigene Familienakte.
 - Verlobungen erzeugen noch keinen Wegverheiratet-Knoten.
 - Jede Person des dargestellten Hauses, die laut Quelle verheiratet wurde und deren Zielhaus nicht überliefert ist, erhält an genau dieser Ehe einen `married-away`-Knoten „Unbekanntes Haus“ (`targetFamilyId: haus-unbekannt`). Ein „???“-Ehepartner ist kein Grund, den Knoten wegzulassen.
-- Jede als Mündel fortgegebene Person besitzt zusätzlich zu `familyRole: ward-away` genau einen `ward-away`-Hausknoten. Dieser hängt über `parentPersonId` unmittelbar unter der Person und nennt das Zielhaus; ist auch dieses unbekannt, wird „Unbekanntes Haus“ verwendet. Eine nicht belegte Vormundsperson oder Pflege-Elternschaft wird dabei nicht erfunden.
+- Jede als Mündel fortgegebene Person besitzt zusätzlich zu `familyRole: ward-away` genau einen `ward-away`-Hausknoten. Dieser hängt über `parentPersonId` unmittelbar und **auf derselben senkrechten Mittelachse** unter der Person und nennt das Zielhaus; Eck-, Zickzack- oder seitliche Umwegleitungen sind auch hier verboten. Fehlt auf dieser Achse Platz, werden benachbarte Zweige verschoben. Ist auch das Zielhaus unbekannt, wird „Unbekanntes Haus“ verwendet. Eine nicht belegte Vormundsperson oder Pflege-Elternschaft wird dabei nicht erfunden.
 - Eine ausdrückliche Vermittlung als Page oder Knappe an eine Person eines anderen Hauses gilt in der Heimatakte ebenfalls als fortgegebenes Mündel. Die Person behält ihr Geburtshaus und ihre biologische Abstammung, erhält aber zwingend `familyRole: ward-away`, den dunkelblauen Mündelrahmen und genau einen direkten `ward-away`-Zielknoten zum Haus des Ritters oder Vormunds. Formulierungen wie „zu X gegeben“, „X angeboten“ oder „dient als Page/Knappe von X“ dürfen nicht als bloßer Titel ohne Vermittlungsknoten abgelegt werden.
 - Fehlt in einer Gegenakte die Kopie eines bereits registrierten Hauses vollständig oder besitzt ihr lokaler Hauseintrag noch kein Wappen, bleibt die primäre Familienakte die einzige kanonische Quelle für Hausname und Bild. `house-emblem-index.js` ergänzt beides anhand der stabilen Haus-ID; dasselbe Wappen darf nicht in Dutzenden Gegenakten manuell und widerspruchsanfällig nachgepflegt werden. Ein echtes Wappen hat dabei immer Vorrang vor einem älteren neutralen Platzhalter. Nur für tatsächlich unregistrierte oder unbelegte Häuser sowie ausdrücklich unlegitimierte Bastarde bleibt das neutrale Siegel zulässig.
 
@@ -205,6 +208,7 @@ Zeitsprünge sind absolute serielle Generationentrenner:
 - alle genealogischen Fortsetzungen dieser Ebene laufen durch den Trenner;
 - `childIds` enthalten ausschließlich Personen;
 - Haus- und Linienendknoten bleiben direkt an ihrem Paar;
+- Eine Kadettenlinie, die vor einem späteren Zeitsprung bereits in ihrem eigenen Hausknoten endet, darf nicht über `sharedParentPartnershipIds` in diesen Trenner zurückgeführt werden. Nur der tatsächlich fortsetzende Personen- oder Paarzweig speist den nächsten Zeitsprung.
 - die unsichtbare `time-jump-stage` ist ausschließlich ein Adapterdetail und wird nicht in der Familienakte gespeichert.
 
 Bei nicht belegten Zwischengenerationen wird die Abstammung als `claimed` mit passender `certainty` und `extensions.timeJumpId` modelliert. Sie darf nicht als direkte biologische Elternschaft ausgegeben werden.
@@ -507,6 +511,15 @@ Referenzfall Graumähne: Hrothgars unbekannte Eltern bleiben als genealogischer 
 - Der Gründer bleibt in seiner Herkunftsakte dieselbe Weltperson. Dort verweist ein geradliniger `single-founder-house`-Knoten direkt unter seiner Person auf die neue Akte; Nachkommen werden nur im neuen Haus fortgeführt.
 
 Referenzfall Todbrand/Eisbrand: Audun Todbrand bleibt Kveldulfs Bastard mit Isgerd und begründet allein das nicht anerkannte Haus Eisbrand in Hallsvalr. Die Eisbrand-Akte enthält keine Ehe und keine Verlobung: Yrsael und alle weiteren Partnerbindungen sind Affären, sämtliche Nachkommen unehelich. Eydis und Skjolda bleiben ausdrücklich als Opfer kenntlich. Die fünf unbenannten Verlobtenfelder der jüngsten Generation werden nicht erfunden.
+
+### 13.11 Herkunft, Vormundschaft und eindeutige Quellenkorrekturen
+
+- Ein fortgegebenes Mündel bleibt biologisches Kind in seiner Herkunftsakte. Dort erhält es `familyRole: 'ward-away'` und einen direkten Zielhausknoten; die Zielakte führt dieselbe Weltperson mit `familyRole: 'ward'` und einer eigenen Pflegeelternschaft. Biologische und Pflegeeltern dürfen niemals zu einer gemeinsamen Elternschaft vermischt werden.
+- Mündelrahmen und Mündelknoten bilden einen gegenwärtigen oder für die jüngste Generation ausdrücklich fortwirkenden Obhutsstatus ab. Ein bloßes historisches Altdaten-Relikt bei einem längst erwachsenen oder verstorbenen Vorfahren wird nicht als dauerhafte Mündelrolle geführt; Rahmen, Titel, Tags und Zielknoten werden gemeinsam entfernt. Eine quellenrelevante frühere Vormundschaft kann stattdessen als Notiz erhalten bleiben, sofern sie tatsächlich belegt ist.
+- Opfer einer erzwungenen Verbindung bleiben legitime Kernmitglieder ihres Herkunftshauses. Der Opfer- oder Zwangsrahmen gehört an den Verursacher beziehungsweise an ausdrücklich als Opfer geführte Fremdpersonen; das betroffene Kernmitglied darf nicht allein wegen der Tat zum Affärenmitglied umgefärbt werden.
+- Ein offenkundig unmögliches Einzeljahr darf nur korrigiert werden, wenn Generation, Elternjahre und umgebende Quellangaben genau eine plausible Lesart ergeben. Die Korrektur wird in `sourceNote` und Regressionstest festgehalten; echte Unsicherheit bleibt als Unsicherheit bestehen.
+
+Referenzfall Blutstahl/Silberblut: Sigrun Blutstahl bleibt trotz Wallmars erzwungener Tat ein rotes Kernmitglied; Einar wird der erzwungenen Verbindung als uneheliches Kind zugeordnet und steht senkrecht unter der Mitte von Sigrun und Wallmar. Rangrid steht ebenso senkrecht unter Birger und Vallborg. Birgers frühere Mündelkennzeichnung bei den Sturmgeborenen war ein Altdaten-Relikt und ist einschließlich Zielknoten entfernt. Olna Helgr bleibt biologisches Kind Peders und Gyrids, erscheint aber als tatsächlich aufgenommenes Mündel bei Thongvir Silberblut. Sigrid Silberbluts in der Quelle unmögliches Todesjahr 1540 wird wegen Geburt 1580 und der folgenden Generation eindeutig zu 1640 berichtigt. Fanne Blutstahl und Thongvir Silberblut teilen in beiden Akten dieselbe Ehe; ihre Kinder werden ausschließlich in Silberblut fortgeführt.
 
 ## 14. Abschlussprotokoll
 

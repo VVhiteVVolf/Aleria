@@ -1,3 +1,5 @@
+import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js';
+
 /**
  * Loads the public repository release without delaying the local application
  * bootstrap. The release is applied only while the page still shows the same
@@ -17,6 +19,7 @@ export function isStalePublishedPlaceholder(publishedFamily, currentFamily) {
 export async function applyPublishedFamilyPriority({
   requestedFamilyId,
   initialFamilyId,
+  projectOriginFamily = null,
   store,
   cloudRepository,
   onUnavailable = () => {}
@@ -29,7 +32,15 @@ export async function applyPublishedFamilyPriority({
     if (!published?.family || published.family.document?.id !== familyId) return false;
     if (store.getState().family.document.id !== initialFamilyId) return false;
     if (isStalePublishedPlaceholder(published.family, store.getState().family)) return false;
-    store.synchronizeFamily(published.family, { source: 'repository-published-priority' });
+    const reconciliation = reconcileFamilyWithProjectOrigin({
+      family: published.family,
+      projectOriginFamily
+    });
+    store.synchronizeFamily(reconciliation.family, {
+      source: reconciliation.upgraded
+        ? 'repository-published-project-reconciliation'
+        : 'repository-published-priority'
+    });
     return true;
   } catch (error) {
     onUnavailable(error);

@@ -55,7 +55,6 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 
 export const HOUSE_RAGNULF_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
-  'svanhildr-varangr': 'assets/images/portraits/haus-varangr/svanhildr-varangr.png',
   'torger-varulv': HOUSE_VARULV_PORTRAITS['torger-varulv'],
   'gunnar-ragnulf': HOUSE_WARGH_PORTRAITS['gunnar-ragnulf'],
   'ranveig-wargh': HOUSE_WARGH_PORTRAITS['ranveig-wargh'],

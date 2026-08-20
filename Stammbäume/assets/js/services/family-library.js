@@ -16,15 +16,10 @@ import {
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
 } from './family-registry-upgrade.js';
+import { resolveCanonicalFamilyId } from '../modules/family-registry/family-id-aliases.js';
 
 export function normalizeFamilyId(value) {
-  return String(value || '')
-    .trim()
-    .toLocaleLowerCase('de')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+  return resolveCanonicalFamilyId(value);
 }
 
 export function parseFolderPath(value) {
