@@ -32,15 +32,20 @@ function loadFazitRuntime() {
 
 function loadFazitEditorRuntime() {
   const context = loadFazitRuntime();
+  const storage = new Map();
   const nodes = {
     'fz-lines': { innerHTML: '' },
     'fz-preview': { innerHTML: '' },
-    'fz-title': { value: 'Fazit' }
+    'fz-title': { value: 'Fazit' },
+    'fz-primary-toolbar': { innerHTML: '' },
+    'fz-commandbar': { innerHTML: '' },
+    'fz-outline': { innerHTML: '' }
   };
   context.document = {
     body: { classList: { add() {}, remove() {} } },
     addEventListener() {},
     querySelector() { return null; },
+    querySelectorAll() { return []; },
     getElementById(id) { return nodes[id] || null; }
   };
   context.window = {
@@ -48,9 +53,26 @@ function loadFazitEditorRuntime() {
     removeEventListener() {}
   };
   context.CSS = { escape: value => String(value) };
+  context.setTimeout = callback => { callback(); return null; };
+  context.clearTimeout = () => {};
+  context.localStorage = {
+    get length() { return storage.size; },
+    key(index) { return Array.from(storage.keys())[index] || null; },
+    getItem(key) { return storage.has(key) ? storage.get(key) : null; },
+    setItem(key, value) { storage.set(key, String(value)); },
+    removeItem(key) { storage.delete(key); }
+  };
+  context.getCurrentCommentThreadId = () => 'thread-test';
   context.openIconDirectory = () => {};
   context.closeIconDirectory = () => {};
-  vm.runInContext(fs.readFileSync(new URL('../modules/comments/comments-fazit.js', import.meta.url), 'utf8'), context);
+  for (const relativePath of [
+    '../modules/comments/comments-fazit-history.js',
+    '../modules/comments/comments-fazit-draft.js',
+    '../modules/comments/comments-fazit.js',
+    '../modules/comments/comments-fazit-workbench.js'
+  ]) {
+    vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
+  }
   return context;
 }
 
@@ -139,6 +161,124 @@ test('Editor-Markup bietet alle neuen Aktionen ohne Inline-Handler an', () => {
   assert.match(list, /data-action="move-fazit-list-item"/);
   assert.match(list, /data-action="pick-fazit-list-bullet-icon"/);
   assert.doesNotMatch(`${heading}${list}`, /onclick=|oninput=|onchange=/i);
+});
+
+test('jede Fazit-Zeile erhält eine vollständige Einfügeleiste für die Position danach', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext(`
+    addFazitLine('heading');
+    addFazitLine('text');
+    addFazitLine('list', _fazitLines[0].id);
+  `, context);
+
+  vm.runInContext(fs.readFileSync(new URL('../modules/comments/comments-action-events.js', import.meta.url), 'utf8'), context);
+  vm.runInContext(`
+    const insertionTrigger = {
+      dataset: { action: 'add-fazit-line', lineKind: 'tokens', afterLineId: _fazitLines[0].id },
+      closest() { return null; }
+    };
+    handleCommentFormActionClick({
+      target: { closest() { return insertionTrigger; } },
+      preventDefault() {}
+    });
+  `, context);
+
+  const kinds = vm.runInContext('_fazitLines.map(line => line.kind)', context);
+  const editorMarkup = vm.runInContext("document.getElementById('fz-lines').innerHTML", context);
+  const primaryMarkup = vm.runInContext("document.getElementById('fz-primary-toolbar').innerHTML", context);
+
+  assert.deepEqual(Array.from(kinds), ['heading', 'tokens', 'list', 'text']);
+  assert.equal((editorMarkup.match(/fazit-editor-toolbar-inline/g) || []).length, 4);
+  assert.equal((editorMarkup.match(/data-action="add-fazit-line"/g) || []).length, 16);
+  assert.match(editorMarkup, /data-after-line-id="line-1"/);
+  assert.match(editorMarkup, /Nach Abschnitt 1/);
+  assert.match(primaryMarkup, /Bausteine · 4 von 100/);
+});
+
+test('erweiterte Grenzen erhalten deutlich mehr Abschnitte und Listenpunkte', () => {
+  const context = loadFazitRuntime();
+  const normalized = vm.runInContext(`normalizeCommentFazitItem({
+    title: 'Großes Fazit',
+    lines: Array.from({ length: 40 }, (_, lineIndex) => ({
+      kind: 'list',
+      items: Array.from({ length: 40 }, (_, itemIndex) => ({ text: 'Punkt ' + lineIndex + '-' + itemIndex }))
+    }))
+  })`, context);
+
+  assert.equal(normalized.lines.length, 40);
+  assert.equal(normalized.lines[0].items.length, 40);
+  assert.equal(vm.runInContext('FAZIT_CONTENT_LIMITS.maxLines', context), 100);
+  assert.equal(vm.runInContext('FAZIT_CONTENT_LIMITS.maxListItemsPerLine', context), 100);
+});
+
+test('Workbench rendert Gliederung, Entwurfsstatus und einklappbare Bausteine', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext(`
+    addFazitLine('heading');
+    updateFazitLineText(_fazitLines[0].id, 'Entscheidungen');
+    addFazitLine('list');
+    toggleFazitLineCollapse(_fazitLines[0].id);
+  `, context);
+
+  const commandbar = vm.runInContext("document.getElementById('fz-commandbar').innerHTML", context);
+  const outline = vm.runInContext("document.getElementById('fz-outline').innerHTML", context);
+  const editor = vm.runInContext("document.getElementById('fz-lines').innerHTML", context);
+
+  assert.match(commandbar, /data-action="undo-fazit-change"/);
+  assert.match(commandbar, /Entwurf gespeichert/);
+  assert.match(outline, /Fazit-Gliederung|class="fazit-outline"/);
+  assert.match(outline, /Entscheidungen/);
+  assert.match(editor, /fazit-line-editor-heading is-collapsed/);
+  assert.match(editor, /data-role="fazit-drag-handle"/);
+});
+
+test('Undo und Redo stellen Titel und Bausteinzustand wieder her', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext(`
+    updateFazitTitle('Ratssitzung');
+    undoFazitChange();
+  `, context);
+  assert.equal(vm.runInContext('_fazitTitle', context), 'Fazit');
+  assert.equal(vm.runInContext("document.getElementById('fz-title').value", context), 'Fazit');
+
+  vm.runInContext('redoFazitChange()', context);
+  assert.equal(vm.runInContext('_fazitTitle', context), 'Ratssitzung');
+
+  vm.runInContext(`
+    addFazitLine('heading');
+    addFazitLine('list');
+    undoFazitChange();
+  `, context);
+  assert.equal(vm.runInContext('_fazitLines.length', context), 1);
+  vm.runInContext('redoFazitChange()', context);
+  assert.equal(vm.runInContext('_fazitLines.length', context), 2);
+});
+
+test('Drag-Reihenfolge wird als rückgängig machbarer Editorbefehl behandelt', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext(`
+    addFazitLine('heading');
+    addFazitLine('list');
+    addFazitLine('text');
+    moveFazitLineRelative(_fazitLines[0].id, _fazitLines[2].id, 'after');
+  `, context);
+  assert.deepEqual(Array.from(vm.runInContext('_fazitLines.map(line => line.kind)', context)), ['list', 'text', 'heading']);
+
+  vm.runInContext('undoFazitChange()', context);
+  assert.deepEqual(Array.from(vm.runInContext('_fazitLines.map(line => line.kind)', context)), ['heading', 'list', 'text']);
+});
+
+test('lokaler Fazit-Entwurf speichert strukturierte, noch nicht eingetragene Inhalte', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext(`
+    addFazitLine('text');
+    updateFazitLineText(_fazitLines[0].id, 'Nicht verlieren');
+  `, context);
+  const draft = vm.runInContext("readFazitDraft('thread-test', '')", context);
+
+  assert.equal(draft.version, 1);
+  assert.equal(draft.snapshot.lines[0].text, 'Nicht verlieren');
+  assert.equal(draft.snapshot.title, 'Fazit');
 });
 
 test('Editor-State kombiniert, sortiert und dupliziert neue Bausteine verlustfrei', () => {

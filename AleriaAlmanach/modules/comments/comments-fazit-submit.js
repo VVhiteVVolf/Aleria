@@ -35,6 +35,7 @@ async function submitFazitItem() {
   try {
     backend = await getCommentBackend({ timeoutMs: 1200 });
     await backend.addComment(threadId, 'Erzähler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
+    clearCurrentFazitDraft();
     closeFazitForm();
     await loadCommentsIntoPage(threadId, true, { page: 'last' });
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
@@ -45,6 +46,7 @@ async function submitFazitItem() {
         const localBackend = getLocalCommentBackend();
         await localBackend.addComment(threadId, 'Erzähler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
         showCommentFallbackNotice();
+        clearCurrentFazitDraft();
         closeFazitForm();
         await loadCommentsIntoPage(threadId, true, { page: 'last' });
         return;

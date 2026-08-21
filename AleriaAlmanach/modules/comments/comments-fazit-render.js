@@ -1,6 +1,12 @@
 // Rendering and normalization for "Fazit" (session conclusion) comments: a title plus one or
 // more lines of icon+caption tokens (Personen aus dem Charakterarchiv oder frei gewaehlte Symbole
 // aus dem Icon-Verzeichnis / per Bild-URL).
+const FAZIT_CONTENT_LIMITS = Object.freeze({
+  maxLines: 100,
+  maxListItemsPerLine: 100,
+  maxTokensPerLine: 48
+});
+
 function normalizeFazitToken(token, index) {
   const source = token && typeof token === 'object' ? token : {};
   const kind = source.kind === 'person' ? 'person' : 'symbol';
@@ -43,14 +49,14 @@ function normalizeFazitLine(line, index) {
     const style = ['bullet', 'numbered', 'check'].includes(source.style) ? source.style : 'bullet';
     const bulletIcon = String(source.bulletIcon || '').trim().slice(0, 1000);
     const items = (Array.isArray(source.items) ? source.items : [])
-      .slice(0, 16)
+      .slice(0, FAZIT_CONTENT_LIMITS.maxListItemsPerLine)
       .map(normalizeFazitListItem)
       .filter(item => item.text);
     return { id: String(source.id || `line-${index + 1}`), kind, style, bulletIcon, items, text: '', tokens: [] };
   }
   const align = ['left', 'center', 'right'].includes(source.align) ? source.align : 'center';
   const tokens = (Array.isArray(source.tokens) ? source.tokens : [])
-    .slice(0, 24)
+    .slice(0, FAZIT_CONTENT_LIMITS.maxTokensPerLine)
     .map(normalizeFazitToken)
     .filter(token => token.icon || token.label);
   return { id: String(source.id || `line-${index + 1}`), kind, tokens, text: '', items: [], align };
@@ -65,7 +71,7 @@ function fazitLineHasContent(line) {
 function normalizeCommentFazitItem(item) {
   if (!item || typeof item !== 'object') return null;
   const lines = (Array.isArray(item.lines) ? item.lines : [])
-    .slice(0, 24)
+    .slice(0, FAZIT_CONTENT_LIMITS.maxLines)
     .map(normalizeFazitLine)
     .filter(fazitLineHasContent);
   if (!lines.length) return null;

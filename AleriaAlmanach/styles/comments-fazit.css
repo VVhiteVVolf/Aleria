@@ -29,6 +29,185 @@
   letter-spacing: 0.03em;
 }
 
+.fazit-commandbar {
+  position: sticky;
+  top: -1px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid rgba(139, 105, 20, 0.34);
+  background: rgba(242, 226, 183, 0.96);
+  box-shadow: 0 4px 12px rgba(67, 43, 13, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.fazit-commandbar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fazit-commandbar button {
+  min-height: 1.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(139, 105, 20, 0.3);
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--ink);
+  font: 600 0.54rem/1.1 'Cinzel', serif;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+}
+
+.fazit-commandbar button:hover:not(:disabled),
+.fazit-commandbar button:focus-visible {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.13);
+  outline: none;
+}
+
+.fazit-commandbar button:disabled {
+  opacity: 0.36;
+  cursor: default;
+}
+
+.fazit-draft-status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ink-faded);
+  font: 0.56rem/1.2 'Cinzel', serif;
+  white-space: nowrap;
+}
+
+.fazit-draft-status > span {
+  color: #71834b;
+  font-size: 0.48rem;
+}
+
+.fazit-draft-status-saving > span {
+  color: var(--gold-dark);
+  animation: fazit-draft-pulse 0.8s ease-in-out infinite alternate;
+}
+
+.fazit-draft-status-unavailable > span { color: #9b4a42; }
+
+@keyframes fazit-draft-pulse {
+  to { opacity: 0.3; transform: scale(0.82); }
+}
+
+.fazit-outline {
+  border: 1px solid rgba(139, 105, 20, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.fazit-outline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.38rem 0.55rem;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.18);
+  color: var(--gold-dark);
+  font: 600 0.56rem/1.2 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fazit-outline-head small {
+  color: var(--ink-faded);
+  font-size: 0.48rem;
+  letter-spacing: 0.04em;
+}
+
+.fazit-outline-list {
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding: 0.4rem;
+  scrollbar-width: thin;
+}
+
+.fazit-outline-item {
+  flex: 0 0 clamp(170px, 23%, 235px);
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1.35rem 1.35rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.38rem;
+  border: 1px solid rgba(139, 105, 20, 0.24);
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.fazit-outline-item:hover,
+.fazit-outline-item:focus-visible,
+.fazit-outline-item.is-active {
+  border-color: var(--gold);
+  background: rgba(139, 105, 20, 0.12);
+  outline: none;
+}
+
+.fazit-outline-item.is-active {
+  box-shadow: inset 3px 0 0 var(--gold-dark);
+}
+
+.fazit-outline-index,
+.fazit-outline-glyph {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font: 0.52rem/1 'Cinzel', serif;
+}
+
+.fazit-outline-index {
+  border: 1px solid rgba(139, 105, 20, 0.28);
+  color: var(--ink-faded);
+}
+
+.fazit-outline-glyph {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.fazit-outline-copy {
+  min-width: 0;
+  display: grid;
+  gap: 0.04rem;
+}
+
+.fazit-outline-copy strong {
+  color: var(--gold-dark);
+  font: 600 0.51rem/1.15 'Cinzel', serif;
+  text-transform: uppercase;
+}
+
+.fazit-outline-copy small {
+  overflow: hidden;
+  color: var(--ink-faded);
+  font-size: 0.61rem;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fazit-outline-collapsed {
+  color: var(--gold-dark);
+  font-size: 1rem;
+}
+
 .fazit-editor-toolbar {
   display: grid;
   grid-template-columns: minmax(200px, 0.75fr) minmax(420px, 1.5fr);
@@ -109,12 +288,68 @@
   outline: none;
 }
 
+.fazit-add-block-btn:disabled {
+  opacity: 0.42;
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.fazit-editor-toolbar-inline {
+  grid-template-columns: minmax(155px, 0.52fr) minmax(420px, 1.48fr);
+  gap: 0.65rem;
+  margin-top: -0.58rem;
+  padding: 0.5rem 0.6rem;
+  border-top-style: dashed;
+  background:
+    linear-gradient(90deg, rgba(139, 105, 20, 0.1), transparent 42%),
+    rgba(255, 255, 255, 0.11);
+  box-shadow: none;
+}
+
+.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy {
+  gap: 0.02rem;
+}
+
+.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy strong {
+  font-size: 0.72rem;
+}
+
+.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy small {
+  font-size: 0.62rem;
+}
+
+.fazit-editor-toolbar-inline .fazit-add-block-btn {
+  min-height: 2.15rem;
+  padding: 0.32rem 0.45rem;
+  font-size: 0.55rem;
+}
+
+.fazit-editor-toolbar-inline .fazit-add-block-btn span {
+  width: 1.12rem;
+  height: 1.12rem;
+  font-size: 0.58rem;
+}
+
+.fazit-capacity-count {
+  margin-left: 0.18rem;
+  color: var(--ink-faded);
+  font-size: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+#fazit-form-overlay .module-editor-mini-btn:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+
 #fazit-form-overlay .fazit-lines-editor {
   gap: 0.85rem;
   padding: 0 0.12rem 0.2rem 0;
 }
 
 #fazit-form-overlay .fazit-line-editor {
+  position: relative;
   padding: 0;
   gap: 0;
   overflow: visible;
@@ -135,6 +370,77 @@
   border-bottom: 1px solid rgba(139, 105, 20, 0.2);
   background: linear-gradient(90deg, rgba(139, 105, 20, 0.13), rgba(255, 255, 255, 0.12));
 }
+
+.fazit-line-drag-handle {
+  flex: 0 0 1.55rem;
+  width: 1.55rem;
+  height: 1.65rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(73, 52, 25, 0.52);
+  font: 0.78rem/1 monospace;
+  letter-spacing: -0.15em;
+  cursor: grab;
+}
+
+.fazit-line-drag-handle:hover,
+.fazit-line-drag-handle:focus-visible {
+  border-color: rgba(139, 105, 20, 0.34);
+  background: rgba(255, 255, 255, 0.26);
+  color: var(--ink);
+  outline: none;
+}
+
+.fazit-line-drag-handle:active { cursor: grabbing; }
+
+.fazit-line-collapsed-summary {
+  min-width: 0;
+  display: none;
+  overflow: hidden;
+  color: var(--ink-faded);
+  font-size: 0.72rem;
+  font-style: italic;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#fazit-form-overlay .fazit-line-editor.is-active {
+  border-color: rgba(139, 105, 20, 0.68);
+  box-shadow: 0 7px 18px rgba(80, 52, 18, 0.12), inset 3px 0 0 var(--gold-dark);
+}
+
+#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-editor-body,
+#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-actions,
+#fazit-form-overlay .fazit-line-editor.is-collapsed > .fazit-person-picker {
+  display: none;
+}
+
+#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-collapsed-summary {
+  display: block;
+}
+
+#fazit-form-overlay .fazit-line-editor.is-dragging {
+  opacity: 0.42;
+}
+
+#fazit-form-overlay .fazit-line-editor.is-drop-before::before,
+#fazit-form-overlay .fazit-line-editor.is-drop-after::after {
+  content: '';
+  position: absolute;
+  z-index: 6;
+  left: 0.4rem;
+  right: 0.4rem;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--gold-dark);
+  box-shadow: 0 0 0 2px rgba(242, 226, 183, 0.92);
+}
+
+#fazit-form-overlay .fazit-line-editor.is-drop-before::before { top: -0.45rem; }
+#fazit-form-overlay .fazit-line-editor.is-drop-after::after { bottom: -0.45rem; }
 
 .fazit-line-kind {
   display: flex;
@@ -758,6 +1064,15 @@
 }
 
 @media (max-width: 1100px) {
+  .fazit-commandbar {
+    flex-wrap: wrap;
+  }
+
+  .fazit-draft-status {
+    flex: 1 1 100%;
+    margin-left: 0;
+  }
+
   .fazit-editor-toolbar {
     grid-template-columns: 1fr;
   }
@@ -789,6 +1104,23 @@
     min-width: 0;
   }
 
+  .fazit-commandbar {
+    position: static;
+    gap: 0.35rem;
+  }
+
+  .fazit-commandbar-group {
+    flex: 1 1 100%;
+  }
+
+  .fazit-commandbar button {
+    flex: 1 1 0;
+  }
+
+  .fazit-outline-item {
+    flex-basis: 190px;
+  }
+
   .fazit-editor-toolbar {
     padding: 0.7rem;
   }
@@ -799,6 +1131,16 @@
 
   .fazit-add-block-btn {
     justify-content: flex-start;
+  }
+
+  .fazit-line-editor-head {
+    flex-wrap: wrap;
+  }
+
+  .fazit-line-collapsed-summary {
+    order: 4;
+    flex: 1 1 100%;
+    padding-left: 2rem;
   }
 
   .fazit-heading-editor-fields,

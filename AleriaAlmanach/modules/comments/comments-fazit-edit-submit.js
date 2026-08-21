@@ -45,6 +45,7 @@ async function submitEditFazit() {
       narrator: true,
       ...metadata
     });
+    clearCurrentFazitDraft();
     closeFazitForm();
     _editingFazitCommentId = null;
     await loadCommentsIntoPage(threadId, true);
@@ -63,6 +64,7 @@ async function submitEditFazit() {
           ...metadata
         });
         showCommentFallbackNotice();
+        clearCurrentFazitDraft();
         closeFazitForm();
         _editingFazitCommentId = null;
         await loadCommentsIntoPage(threadId, true);

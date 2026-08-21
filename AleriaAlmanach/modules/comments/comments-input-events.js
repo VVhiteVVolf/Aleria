@@ -22,8 +22,8 @@ function handleEditCommentInput(event) {
     setEditPortraitUrl(field.value);
     return;
   }
-  if (field?.dataset?.action === 'update-fazit-preview') {
-    updateFazitPreview();
+  if (field?.dataset?.action === 'update-fazit-title') {
+    updateFazitTitle(field.value);
     return;
   }
   if (field?.dataset?.action === 'update-fazit-token-icon') {

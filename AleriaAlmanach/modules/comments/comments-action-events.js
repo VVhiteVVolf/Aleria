@@ -16,6 +16,12 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-edit-attachment-form',
   'open-edit-fazit-form',
   'add-fazit-line',
+  'undo-fazit-change',
+  'redo-fazit-change',
+  'toggle-fazit-line-collapse',
+  'collapse-all-fazit-lines',
+  'expand-all-fazit-lines',
+  'focus-fazit-line',
   'move-fazit-line',
   'duplicate-fazit-line',
   'remove-fazit-line',
@@ -126,7 +132,31 @@ function handleCommentFormActionClick(event) {
     return;
   }
   if (action === 'add-fazit-line') {
-    addFazitLine(trigger.dataset.lineKind || 'tokens');
+    addFazitLine(trigger.dataset.lineKind || 'tokens', trigger.dataset.afterLineId || '');
+    return;
+  }
+  if (action === 'undo-fazit-change') {
+    undoFazitChange();
+    return;
+  }
+  if (action === 'redo-fazit-change') {
+    redoFazitChange();
+    return;
+  }
+  if (action === 'toggle-fazit-line-collapse') {
+    toggleFazitLineCollapse(trigger.dataset.lineId);
+    return;
+  }
+  if (action === 'collapse-all-fazit-lines') {
+    setAllFazitLinesCollapsed(true);
+    return;
+  }
+  if (action === 'expand-all-fazit-lines') {
+    setAllFazitLinesCollapsed(false);
+    return;
+  }
+  if (action === 'focus-fazit-line') {
+    focusFazitLine(trigger.dataset.lineId);
     return;
   }
   if (action === 'move-fazit-line') {
