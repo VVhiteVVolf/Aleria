@@ -21,6 +21,7 @@ import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
 } from './kraehenmoor-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { SCHWARZFENN_HOUSE_EMBLEMS } from './schwarzfenn-house-profiles.js';
 
 const BLUTSTAHL_HOUSE_ID = 'house-blutstahl';
@@ -53,6 +54,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   varangr: ALDRIMAR_HOUSE_EMBLEMS.varangr,
   ragnulf: SCHWARZFENN_HOUSE_EMBLEMS.ragnulf,
   kummerherz: SCHWARZFENN_HOUSE_EMBLEMS.kummerherz,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig,
   graumahne: SCHWARZFENN_HOUSE_EMBLEMS.graumahne,
   todbrand: SCHWARZFENN_HOUSE_EMBLEMS.todbrand,
   feuerhaar: IVARSHEIM_HOUSE_EMBLEMS.feuerhaar
@@ -222,7 +224,7 @@ export const HOUSE_BLUTSTAHL_FAMILY = Object.freeze({
     house('house-vragi', 'Clan Vragi', HOUSE_EMBLEMS.vragi),
     house('house-goldglanz', 'Clan Goldglanz', HOUSE_EMBLEMS.goldglanz),
     house('house-sturmgeborene', 'Clan Sturmgeborene'),
-    house('house-gullvig', 'Clan Gullvig'),
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig),
     house('house-culloch', 'Clan Culloch'),
     house('house-silberblut', 'Clan Silberblut', HOUSE_EMBLEMS.silberblut),
     house('house-schwarzblut', 'Clan Schwarzblut', HOUSE_EMBLEMS.schwarzblut),

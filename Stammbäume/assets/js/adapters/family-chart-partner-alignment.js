@@ -1,4 +1,11 @@
-import { FAMILY_CHART_CARD_LAYOUT } from './family-chart-card-renderer.js';
+import {
+  cardRectangle,
+  cardStepForAxis,
+  rectanglesOverlap,
+  shiftedCollisionCount,
+  shiftNodeAlongCrossAxis
+} from './family-chart-collision-geometry.js';
+import { createAutomaticFamilyChartMultiPartnerPlan } from './family-chart-multi-partner-policy.js';
 
 const PARTNER_OVER_CHILDREN_EXTENSION = 'chartAlignPartnerOverChildrenPersonId';
 const PARTNER_OVER_ADDITIONAL_CHILDREN_EXTENSION = 'chartAlignPartnerOverAdditionalChildrenIds';
@@ -8,7 +15,7 @@ const RESERVE_DESCENDANT_BRANCH_LANE_EXTENSION = 'chartReserveDescendantBranchLa
 const CENTER_BETWEEN_SPOUSES_EXTENSION = 'chartCenterBetweenSpousePersonIds';
 const CENTER_BETWEEN_PARTNERS_EXTENSION = 'chartCenterBetweenPartnerPersonIds';
 const ALIGN_LINEAGE_ORIGIN_EXTENSION = 'chartAlignLineageOriginOverPersonId';
-const PARTNER_COLLISION_GAP = 32;
+const ALIGN_LINEAGE_ORIGIN_OVER_TREE_EXTENSION = 'chartAlignLineageOriginOverTree';
 const MAX_NEARBY_RESTORE_SLOTS = 2;
 
 function configuredPartnerId(partnership) {
@@ -98,48 +105,95 @@ function partnershipBetween(partnerships, firstPersonId, secondPersonId) {
 }
 
 function createLineageOriginRoute(family, invalidRequests) {
-  const configuredPersonId = family?.extensions?.[ALIGN_LINEAGE_ORIGIN_EXTENSION];
-  if (configuredPersonId === undefined) return null;
+  const alignOverVisibleTree = family?.extensions?.[ALIGN_LINEAGE_ORIGIN_OVER_TREE_EXTENSION] === true;
+  const configuredTarget = family?.extensions?.[ALIGN_LINEAGE_ORIGIN_EXTENSION];
+  if (configuredTarget === undefined && !alignOverVisibleTree) return null;
 
-  const targetPersonId = typeof configuredPersonId === 'string' ? configuredPersonId.trim() : '';
+  const configuredTargetPersonIds = [...new Set((Array.isArray(configuredTarget)
+    ? configuredTarget
+    : [configuredTarget])
+    .filter(personId => typeof personId === 'string')
+    .map(personId => personId.trim())
+    .filter(Boolean))];
+  const usesTargetGroup = Array.isArray(configuredTarget);
   const founderPartnership = (family?.partnerships || []).find(partnership => (
     partnership.id === family?.lineage?.founderPartnershipId
   ));
-  const targetIsFounderDescendant = (family?.parentages || []).some(parentage => (
-    parentage.partnershipId === founderPartnership?.id
-    && parentage.childId === targetPersonId
+  const founderPersonIds = new Set(founderPartnership?.participantIds || []);
+  const targetPersonIds = alignOverVisibleTree
+    ? (family?.persons || [])
+      .map(person => person.id)
+      .filter(personId => !founderPersonIds.has(personId))
+    : configuredTargetPersonIds;
+  const founderDescendantIds = new Set((family?.parentages || [])
+    .filter(parentage => parentage.partnershipId === founderPartnership?.id)
+    .map(parentage => parentage.childId));
+  const targetsAreValid = targetPersonIds.length > 0 && (
+    alignOverVisibleTree
+    || targetPersonIds.every(personId => founderDescendantIds.has(personId))
+  );
+  const directTimeJump = (family?.timeJumps || []).find(timeJump => (
+    timeJump.parentPartnershipId === founderPartnership?.id
+    && (
+      alignOverVisibleTree
+      || targetPersonIds.every(personId => timeJump.childIds?.includes(personId))
+    )
   ));
 
-  if (!targetPersonId || !founderPartnership || !targetIsFounderDescendant) {
+  if (!founderPartnership || !targetsAreValid) {
     invalidRequests.push(Object.freeze({
       kind: 'lineage-origin-over-person',
-      targetPersonId,
+      targetPersonIds: Object.freeze([...targetPersonIds]),
       founderPartnershipId: founderPartnership?.id || ''
     }));
     return null;
   }
 
   const crestNodeId = `__lineage-crest-${family.document.id}`;
-  const timeGapNodeId = family?.lineage?.timeGap?.enabled
+  const lineageTimeGapNodeId = family?.lineage?.timeGap?.enabled
     ? `__lineage-gap-${family.document.id}`
     : '';
+  const explicitTimeJumpNodeId = directTimeJump
+    ? `__time-jump-${directTimeJump.id}`
+    : '';
+  const anchorNodeId = explicitTimeJumpNodeId || lineageTimeGapNodeId || crestNodeId;
   return Object.freeze({
-    targetPersonId,
-    anchorNodeId: timeGapNodeId || crestNodeId,
+    ...(alignOverVisibleTree
+      ? {
+          targetScope: 'visible-tree',
+          targetPersonIds: Object.freeze([...targetPersonIds])
+        }
+      : usesTargetGroup
+      ? { targetPersonIds: Object.freeze([...targetPersonIds]) }
+      : { targetPersonId: targetPersonIds[0] }),
+    anchorNodeId,
     originNodeIds: Object.freeze([
       ...founderPartnership.participantIds,
       crestNodeId,
-      ...(timeGapNodeId ? [timeGapNodeId] : [])
-    ])
+      ...(lineageTimeGapNodeId ? [lineageTimeGapNodeId] : []),
+      ...(explicitTimeJumpNodeId ? [explicitTimeJumpNodeId] : [])
+    ]),
+    ...(explicitTimeJumpNodeId
+      ? { optionalOriginNodeIds: Object.freeze([`${explicitTimeJumpNodeId}--layout-stage`]) }
+      : {})
   });
 }
 
-function createPartnerOverChildrenRoutes(family, invalidRequests) {
+function createPartnerOverChildrenRoutes(
+  family,
+  invalidRequests,
+  automaticLaneRequests = []
+) {
   const parentages = family?.parentages || [];
   const routes = [];
+  const automaticRequestByPartnershipId = new Map(
+    automaticLaneRequests.map(request => [request.partnershipId, request])
+  );
 
   (family?.partnerships || []).forEach(partnership => {
-    const partnerPersonId = configuredPartnerId(partnership);
+    const automaticRequest = automaticRequestByPartnershipId.get(partnership.id);
+    const configuredPersonId = configuredPartnerId(partnership);
+    const partnerPersonId = configuredPersonId || automaticRequest?.partnerPersonId || '';
     if (!partnerPersonId) return;
 
     const directChildIds = parentages
@@ -158,12 +212,17 @@ function createPartnerOverChildrenRoutes(family, invalidRequests) {
     ])];
     const sharedPersonIds = (partnership.participantIds || [])
       .filter(personId => personId !== partnerPersonId);
-    const arrangeLeafChildrenEvenly = shouldArrangeLeafChildrenEvenly(partnership);
-    const reserveLeafChildLane = shouldReserveLeafChildLane(partnership);
-    const reserveDescendantBranchLane = shouldReserveDescendantBranchLane(partnership);
     const continuingChildIds = childIds.filter(childId => parentages.some(parentage => (
       parentage.parentIds?.includes(childId)
     )));
+    const inferred = !configuredPersonId && Boolean(automaticRequest);
+    const arrangeLeafChildrenEvenly = shouldArrangeLeafChildrenEvenly(partnership)
+      || (inferred && childIds.length > 1 && continuingChildIds.length === 0);
+    const reserveLeafChildLane = shouldReserveLeafChildLane(partnership)
+      || (inferred && continuingChildIds.length === 0);
+    const reserveDescendantBranchLane = shouldReserveDescendantBranchLane(partnership)
+      || (inferred && continuingChildIds.length > 0)
+      || undefined;
     const nonLeafChildIds = (
       arrangeLeafChildrenEvenly
       || (reserveLeafChildLane && !reserveDescendantBranchLane)
@@ -211,7 +270,8 @@ function createPartnerOverChildrenRoutes(family, invalidRequests) {
       reserveLeafChildLane,
       reserveDescendantBranchLane,
       descendantPersonIds: descendantBranch.descendantPersonIds,
-      descendantPartnerPersonIds: descendantBranch.descendantPartnerPersonIds
+      descendantPartnerPersonIds: descendantBranch.descendantPartnerPersonIds,
+      source: inferred ? automaticRequest.source : 'family-extension'
     }));
   });
 
@@ -292,15 +352,29 @@ function createCenterBetweenPartnersRoutes(family, invalidRequests) {
 
 export function createFamilyChartPartnerAlignmentPlan(family) {
   const invalidRequests = [];
-  const partnerOverChildrenRoutes = createPartnerOverChildrenRoutes(family, invalidRequests);
+  const automaticMultiPartnerPlan = createAutomaticFamilyChartMultiPartnerPlan(family);
+  const partnerOverChildrenRoutes = createPartnerOverChildrenRoutes(
+    family,
+    invalidRequests,
+    automaticMultiPartnerPlan.partnerLaneRequests
+  );
   const centerBetweenSpousesRoutes = createCenterBetweenSpousesRoutes(family, invalidRequests);
   const centerBetweenPartnersRoutes = createCenterBetweenPartnersRoutes(family, invalidRequests);
+  const explicitlyCenteredPersonIds = new Set([
+    ...centerBetweenSpousesRoutes.map(route => route.centeredPersonId),
+    ...centerBetweenPartnersRoutes.map(route => route.centeredPersonId)
+  ]);
+  automaticMultiPartnerPlan.hubs.forEach(hub => {
+    if (explicitlyCenteredPersonIds.has(hub.centeredPersonId)) return;
+    centerBetweenPartnersRoutes.push(Object.freeze({ ...hub }));
+  });
   const lineageOriginRoute = createLineageOriginRoute(family, invalidRequests);
 
   return Object.freeze({
     partnerOverChildrenRoutes: Object.freeze(partnerOverChildrenRoutes),
     centerBetweenSpousesRoutes: Object.freeze(centerBetweenSpousesRoutes),
     centerBetweenPartnersRoutes: Object.freeze(centerBetweenPartnersRoutes),
+    automaticMultiPartnerPlan,
     lineageOriginRoute,
     invalidRequests: Object.freeze(invalidRequests)
   });
@@ -348,46 +422,6 @@ function arrangeNodesEvenly(nodes, axis) {
   });
 }
 
-function shiftNodeAlongCrossAxis(node, axis, delta) {
-  const coordinate = Number(node?.[axis]);
-  if (Number.isFinite(coordinate)) node[axis] = coordinate + delta;
-  const sourceCoordinate = Number(node?.sx);
-  if (Number.isFinite(sourceCoordinate)) node.sx = sourceCoordinate + delta;
-}
-
-function cardRectangle(node, deltaAxis = '', delta = 0) {
-  const x = Number(node?.x) + (deltaAxis === 'x' ? delta : 0);
-  const y = Number(node?.y) + (deltaAxis === 'y' ? delta : 0);
-  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
-  return {
-    left: x,
-    right: x + FAMILY_CHART_CARD_LAYOUT.width,
-    top: y,
-    bottom: y + FAMILY_CHART_CARD_LAYOUT.height
-  };
-}
-
-function rectanglesOverlap(first, second, padding = 8) {
-  if (!first || !second) return false;
-  return !(
-    first.right + padding <= second.left
-    || second.right + padding <= first.left
-    || first.bottom + padding <= second.top
-    || second.bottom + padding <= first.top
-  );
-}
-
-function shiftedCollisionCount(movingNodes, stationaryNodes, axis, delta) {
-  let collisions = 0;
-  movingNodes.forEach(movingNode => {
-    const movingRectangle = cardRectangle(movingNode, axis, delta);
-    stationaryNodes.forEach(stationaryNode => {
-      if (rectanglesOverlap(movingRectangle, cardRectangle(stationaryNode))) collisions += 1;
-    });
-  });
-  return collisions;
-}
-
 function partnerSideCounts(nodes, routes, sharedPersonId, sharedCoordinate, axis, excludedPartnerId) {
   return routes.reduce((counts, route) => {
     if (route.sharedPersonId !== sharedPersonId || route.partnerPersonId === excludedPartnerId) return counts;
@@ -419,13 +453,6 @@ function collisionCandidates(sharedCoordinate, axis, sideCounts, maximumSlots) {
   return candidates;
 }
 
-function cardStepForAxis(axis) {
-  const cardSize = axis === 'x'
-    ? FAMILY_CHART_CARD_LAYOUT.width
-    : FAMILY_CHART_CARD_LAYOUT.height;
-  return cardSize + PARTNER_COLLISION_GAP;
-}
-
 function collisionSearchSlots(nodes, movingNodes, sharedCoordinate, axis) {
   const step = cardStepForAxis(axis);
   const coordinates = [...nodes, ...movingNodes]
@@ -438,6 +465,137 @@ function collisionSearchSlots(nodes, movingNodes, sharedCoordinate, axis) {
   );
   const movingSpan = Math.max(0, ...coordinates) - Math.min(...coordinates);
   return Math.max(3, Math.ceil((furthestDistance + movingSpan) / step) + 2);
+}
+
+function nodeLiesBetweenRelationshipPartners(
+  node,
+  sharedNode,
+  partnerNode,
+  axis,
+  excludedNodes = new Set()
+) {
+  if (!node || excludedNodes.has(node) || node === sharedNode || node === partnerNode) return false;
+  const mainAxis = axis === 'x' ? 'y' : 'x';
+  const coordinate = Number(node?.[axis]);
+  const sharedCoordinate = Number(sharedNode?.[axis]);
+  const partnerCoordinate = Number(partnerNode?.[axis]);
+  const mainCoordinate = Number(node?.[mainAxis]);
+  const sharedMainCoordinate = Number(sharedNode?.[mainAxis]);
+  const partnerMainCoordinate = Number(partnerNode?.[mainAxis]);
+  if ([
+    coordinate,
+    sharedCoordinate,
+    partnerCoordinate,
+    mainCoordinate,
+    sharedMainCoordinate,
+    partnerMainCoordinate
+  ].some(value => !Number.isFinite(value))) return false;
+
+  const minimum = Math.min(sharedCoordinate, partnerCoordinate);
+  const maximum = Math.max(sharedCoordinate, partnerCoordinate);
+  if (coordinate <= minimum || coordinate >= maximum) return false;
+
+  // Nur Karten im selben sichtbaren Beziehungsband blockieren die direkte
+  // Partnernähe. Tiefere Generationen dürfen unter dem Paar liegen.
+  const bandPadding = cardStepForAxis(mainAxis) * 0.55;
+  const bandMinimum = Math.min(sharedMainCoordinate, partnerMainCoordinate) - bandPadding;
+  const bandMaximum = Math.max(sharedMainCoordinate, partnerMainCoordinate) + bandPadding;
+  return mainCoordinate >= bandMinimum && mainCoordinate <= bandMaximum;
+}
+
+function relationshipHasInterveningCards(
+  nodes,
+  sharedNode,
+  partnerNode,
+  axis,
+  excludedNodes = new Set()
+) {
+  return nodes.some(node => nodeLiesBetweenRelationshipPartners(
+    node,
+    sharedNode,
+    partnerNode,
+    axis,
+    excludedNodes
+  ));
+}
+
+function collisionCountAfterOpeningLane(
+  movingNodes,
+  movingDelta,
+  stationaryNodes,
+  shiftedStationaryNodes,
+  stationaryDelta,
+  axis
+) {
+  const shiftedSet = new Set(shiftedStationaryNodes);
+  let collisions = 0;
+  movingNodes.forEach(movingNode => {
+    const movingRectangle = cardRectangle(movingNode, axis, movingDelta);
+    stationaryNodes.forEach(stationaryNode => {
+      const stationaryRectangle = cardRectangle(
+        stationaryNode,
+        axis,
+        shiftedSet.has(stationaryNode) ? stationaryDelta : 0
+      );
+      if (rectanglesOverlap(movingRectangle, stationaryRectangle)) collisions += 1;
+    });
+  });
+  return collisions;
+}
+
+/**
+ * Inserts one complete card lane beside a relationship core. Every unrelated
+ * card on that side moves by the same amount, so existing local spacing stays
+ * intact. The insertion is only committed after a collision-free simulation.
+ */
+function openAdjacentRelationshipLane({
+  nodes,
+  movingNodes,
+  sharedNode,
+  axis,
+  candidates
+}) {
+  const movingNodeSet = new Set(movingNodes);
+  const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node) && node !== sharedNode);
+  const sharedCoordinate = Number(sharedNode?.[axis]);
+  const step = cardStepForAxis(axis);
+  if (!Number.isFinite(sharedCoordinate)) return null;
+
+  const nearbyCandidates = candidates
+    .filter(candidate => candidate.slot === 1)
+    .sort((first, second) => first.collisionCount - second.collisionCount);
+  for (const candidate of nearbyCandidates) {
+    const direction = candidate.coordinate < sharedCoordinate ? -1 : 1;
+    const shiftedStationaryNodes = stationaryNodes.filter(node => {
+      const coordinate = Number(node?.[axis]);
+      return Number.isFinite(coordinate)
+        && ((coordinate - sharedCoordinate) * direction) > (step * 0.45);
+    });
+    const stationaryDelta = direction * step;
+    const collisionCount = collisionCountAfterOpeningLane(
+      movingNodes,
+      candidate.delta,
+      stationaryNodes,
+      shiftedStationaryNodes,
+      stationaryDelta,
+      axis
+    );
+    if (collisionCount > 0) continue;
+
+    shiftedStationaryNodes.forEach(node => (
+      shiftNodeAlongCrossAxis(node, axis, stationaryDelta)
+    ));
+    return Object.freeze({
+      ...candidate,
+      collisionCount: 0,
+      strategy: 'open-adjacent-partner-lane',
+      openedLaneDelta: stationaryDelta,
+      openedLaneNodeIds: Object.freeze(shiftedStationaryNodes
+        .map(node => String(node?.data?.id || node?.id || ''))
+        .filter(Boolean))
+    });
+  }
+  return null;
 }
 
 function shiftedBranchPairCollisions(firstBranch, firstDelta, secondBranch, secondDelta, axis) {
@@ -684,7 +842,7 @@ function resolveCenteredPartnerCardPacking(
   centeredRoutes.forEach(centeredRoute => {
     if (
       alreadyPackedPersonIds.has(centeredRoute.centeredPersonId)
-      || centeredRoute.partnerPersonIds.length !== 2
+      || centeredRoute.partnerPersonIds.length < 2
     ) return;
 
     const centeredNode = displayedNodeById(nodes, centeredRoute.centeredPersonId);
@@ -707,9 +865,8 @@ function resolveCenteredPartnerCardPacking(
     if (!centeredNode || partnerPlacements.some(placement => !placement)) return;
 
     const visibleCards = [
-      partnerPlacements[0].partnerNode,
-      centeredNode,
-      partnerPlacements[1].partnerNode
+      ...partnerPlacements.map(placement => placement.partnerNode),
+      centeredNode
     ];
     const hasCurrentCollision = visibleCards.some((node, index) => (
       visibleCards.slice(index + 1).some(otherNode => (
@@ -720,19 +877,22 @@ function resolveCenteredPartnerCardPacking(
     // Eine Kernperson kann außerhalb zweier bereits kollisionsfreier
     // Partnerkarten liegen. Das bloße Mitteln weiter unten würde sie dann in
     // beide Karten hineinschieben. Deshalb wird auch die *künftige*
-    // Mittelpunktposition geprüft und bei Bedarf als echte Dreierspur gepackt.
+    // Mittelpunktposition geprüft und bei Bedarf als echte Mehrpartnerspur
+    // gepackt. Bei einer ungeraden Partnerzahl darf der rechnerische Mittelpunkt
+    // niemals auf der mittleren Partnerkarte landen: Die Kernperson erhält stets
+    // einen eigenen Slot zwischen den beiden Partnerhälften.
     const centeredCoordinateNow = Number(centeredNode?.[axis]);
-    const firstPartnerCoordinate = Number(partnerPlacements[0].partnerNode?.[axis]);
-    const secondPartnerCoordinate = Number(partnerPlacements[1].partnerNode?.[axis]);
+    const partnerCoordinates = partnerPlacements.map(placement => Number(placement.partnerNode?.[axis]));
     if (
       !Number.isFinite(centeredCoordinateNow)
-      || !Number.isFinite(firstPartnerCoordinate)
-      || !Number.isFinite(secondPartnerCoordinate)
+      || partnerCoordinates.some(coordinate => !Number.isFinite(coordinate))
     ) return;
 
-    const prospectiveCenteredCoordinate = (
-      firstPartnerCoordinate + secondPartnerCoordinate
-    ) / 2;
+    const prospectiveCenteredCoordinate = centeredCoordinate(
+      partnerPlacements.map(placement => placement.partnerNode),
+      axis
+    );
+    if (prospectiveCenteredCoordinate === null) return;
     const prospectiveCenteredRectangle = cardRectangle(
       centeredNode,
       axis,
@@ -744,19 +904,39 @@ function resolveCenteredPartnerCardPacking(
         cardRectangle(placement.partnerNode)
       )
     ));
-    if (!hasCurrentCollision && !hasProspectiveCollision) return;
-
     const movingNodeSet = new Set([
       centeredNode,
       ...partnerPlacements.flatMap(placement => placement.nodes)
     ]);
     const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node));
 
+    const centeredSlotIndex = Math.ceil(partnerPlacements.length / 2);
+    const partnerSlotOffsets = partnerPlacements.map((placement, index) => {
+      const slotIndex = index < centeredSlotIndex ? index : index + 1;
+      return slotIndex - centeredSlotIndex;
+    });
+    const enforcesAutomaticProximity = String(centeredRoute.source || '').startsWith('automatic-');
+    const hasProximityViolation = enforcesAutomaticProximity && partnerPlacements.some((placement, index) => {
+      const desiredCoordinate = centeredCoordinateNow + (partnerSlotOffsets[index] * step);
+      return (
+        Math.abs(partnerCoordinates[index] - desiredCoordinate) > (step * 0.35)
+        || relationshipHasInterveningCards(
+          nodes,
+          centeredNode,
+          placement.partnerNode,
+          axis,
+          movingNodeSet
+        )
+      );
+    });
+    if (!hasCurrentCollision && !hasProspectiveCollision && !hasProximityViolation) return;
+
     const baseCoordinates = [...new Set([
       centeredCoordinateNow,
-      (firstPartnerCoordinate + secondPartnerCoordinate) / 2,
-      firstPartnerCoordinate + step,
-      secondPartnerCoordinate - step
+      prospectiveCenteredCoordinate,
+      ...partnerCoordinates.map((coordinate, index) => (
+        coordinate - (partnerSlotOffsets[index] * step)
+      ))
     ])];
     const maximumSlots = collisionSearchSlots(
       stationaryNodes,
@@ -771,17 +951,15 @@ function resolveCenteredPartnerCardPacking(
     ]))];
     const candidates = candidateCoordinates.map(targetCoordinate => {
       const placements = [
-        {
-          nodes: partnerPlacements[0].nodes,
-          delta: (targetCoordinate - step) - firstPartnerCoordinate
-        },
+        ...partnerPlacements.map((placement, index) => ({
+          nodes: placement.nodes,
+          delta: (
+            targetCoordinate + (partnerSlotOffsets[index] * step)
+          ) - partnerCoordinates[index]
+        })),
         {
           nodes: [centeredNode],
           delta: targetCoordinate - centeredCoordinateNow
-        },
-        {
-          nodes: partnerPlacements[1].nodes,
-          delta: (targetCoordinate + step) - secondPartnerCoordinate
         }
       ];
       return {
@@ -848,9 +1026,23 @@ function resolvePartnerGroupCollisions(nodes, routes, axis) {
         && rectanglesOverlap(partnerRectangle, cardRectangle(node))
       ));
     });
-    if (!hasCollision) return;
-
     const step = cardStepForAxis(axis);
+    const enforcesAutomaticProximity = group.some(route => (
+      String(route.source || '').startsWith('automatic-')
+    ));
+    const hasProximityViolation = enforcesAutomaticProximity && branches.some(branch => (
+      Math.abs(Number(branch.partnerNode?.[axis]) - sharedCoordinate)
+        > step * (branches.length + 0.25)
+      || relationshipHasInterveningCards(
+        nodes,
+        sharedNode,
+        branch.partnerNode,
+        axis,
+        new Set([sharedNode, ...allBranchNodes])
+      )
+    ));
+    if (!hasCollision && !hasProximityViolation) return;
+
     let bestLayout = null;
     for (let leftCount = 0; leftCount <= branches.length; leftCount += 1) {
       const placements = branches.map((branch, index) => {
@@ -930,11 +1122,26 @@ function resolvePartnerCardCollisions(
     const movingNodeSet = new Set(movingNodes);
     const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node));
     const partnerRectangle = cardRectangle(partnerNode);
-    if (!stationaryNodes.some(node => rectanglesOverlap(partnerRectangle, cardRectangle(node)))) return;
+    const hasCollision = stationaryNodes.some(node => (
+      rectanglesOverlap(partnerRectangle, cardRectangle(node))
+    ));
 
     const sharedCoordinate = Number(sharedNode?.[axis]);
     const partnerCoordinate = Number(partnerNode?.[axis]);
     if (!Number.isFinite(sharedCoordinate) || !Number.isFinite(partnerCoordinate)) return;
+    const maximumPartnerDistance = cardStepForAxis(axis) * 1.25;
+    const enforcesAutomaticProximity = String(route.source || '').startsWith('automatic-');
+    const hasProximityViolation = enforcesAutomaticProximity && (
+      Math.abs(partnerCoordinate - sharedCoordinate) > maximumPartnerDistance
+      || relationshipHasInterveningCards(
+        nodes,
+        sharedNode,
+        partnerNode,
+        axis,
+        new Set([sharedNode, ...movingNodes])
+      )
+    );
+    if (!hasCollision && !hasProximityViolation) return;
 
     // Die Diagrammbibliothek hat Partner bereits kollisionsfrei links oder
     // rechts der Kernperson eingeplant. Falls das zusätzliche Ausrichten über
@@ -984,21 +1191,34 @@ function resolvePartnerCardCollisions(
       sideCounts,
       collisionSearchSlots(stationaryNodes, movingNodes, sharedCoordinate, axis)
     );
-    let bestCandidate = null;
-    candidates.forEach(candidate => {
+    const evaluatedCandidates = candidates.map(candidate => {
       const delta = candidate.coordinate - partnerCoordinate;
       const collisionCount = shiftedCollisionCount(movingNodes, stationaryNodes, axis, delta);
-      if (
-        !bestCandidate
-        || collisionCount < bestCandidate.collisionCount
-        || (
-          collisionCount === bestCandidate.collisionCount
-          && Math.abs(delta) < Math.abs(bestCandidate.delta)
-        )
-      ) {
-        bestCandidate = { ...candidate, delta, collisionCount };
-      }
+      return { ...candidate, delta, collisionCount };
     });
+    const nearbyCandidates = evaluatedCandidates.filter(candidate => candidate.slot <= 2);
+    const selectCandidate = candidateSet => [...candidateSet].sort((first, second) => (
+      first.collisionCount - second.collisionCount
+      || first.slot - second.slot
+      || Math.abs(first.delta) - Math.abs(second.delta)
+    ))[0] || null;
+    let bestCandidate = selectCandidate(
+      nearbyCandidates.filter(candidate => candidate.collisionCount === 0)
+    );
+    if (!bestCandidate && enforcesAutomaticProximity) {
+      bestCandidate = openAdjacentRelationshipLane({
+        nodes,
+        movingNodes,
+        sharedNode,
+        axis,
+        candidates: evaluatedCandidates
+      });
+    }
+    if (!bestCandidate) {
+      bestCandidate = selectCandidate(
+        evaluatedCandidates.filter(candidate => candidate.collisionCount === 0)
+      );
+    }
     if (!bestCandidate || !bestCandidate.delta) return;
 
     movingNodes.forEach(node => shiftNodeAlongCrossAxis(node, axis, bestCandidate.delta));
@@ -1011,13 +1231,67 @@ function resolvePartnerCardCollisions(
       side: bestCandidate.side,
       slot: bestCandidate.slot,
       delta: bestCandidate.delta,
-      collisionCount: bestCandidate.collisionCount
+      collisionCount: bestCandidate.collisionCount,
+      ...(bestCandidate.strategy ? { strategy: bestCandidate.strategy } : {}),
+      ...(bestCandidate.openedLaneDelta
+        ? {
+            openedLaneDelta: bestCandidate.openedLaneDelta,
+            openedLaneNodeIds: bestCandidate.openedLaneNodeIds
+          }
+        : {})
     }));
   });
   return resolutions;
 }
 
-export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation = 'vertical' }) {
+export function applyFamilyChartLineageOriginAlignment({
+  tree,
+  route,
+  orientation = 'vertical'
+}) {
+  if (!route) return null;
+  const nodes = tree?.data || [];
+  const axis = orientation === 'horizontal' ? 'y' : 'x';
+  const targetPersonIds = Array.isArray(route.targetPersonIds)
+    ? route.targetPersonIds
+    : [route.targetPersonId].filter(Boolean);
+  const targetNodes = targetPersonIds
+    .map(personId => displayedNodeById(nodes, personId))
+    .filter(Boolean);
+  const anchorNode = displayedNodeById(nodes, route.anchorNodeId);
+  const originNodes = route.originNodeIds.flatMap(nodeId => (
+    nodes.filter(node => node?.data?.id === nodeId)
+  ));
+  const optionalOriginNodes = (route.optionalOriginNodeIds || []).flatMap(nodeId => (
+    nodes.filter(node => node?.data?.id === nodeId)
+  ));
+  const targetCoordinate = centeredCoordinate(targetNodes, axis);
+  const anchorCoordinate = Number(anchorNode?.[axis]);
+  if (
+    targetNodes.length !== targetPersonIds.length
+    || !anchorNode
+    || originNodes.length < route.originNodeIds.length
+    || targetCoordinate === null
+    || !Number.isFinite(anchorCoordinate)
+  ) return null;
+
+  const delta = targetCoordinate - anchorCoordinate;
+  [...originNodes, ...optionalOriginNodes]
+    .forEach(node => shiftNodeAlongCrossAxis(node, axis, delta));
+  return Object.freeze({
+    ...route,
+    axis,
+    targetCoordinate,
+    delta
+  });
+}
+
+export function applyFamilyChartPartnerAlignmentPlan({
+  tree,
+  plan,
+  orientation = 'vertical',
+  alignLineageOrigin = true
+}) {
   const nodes = tree?.data || [];
   const axis = orientation === 'horizontal' ? 'y' : 'x';
   const partnerOverChildren = [];
@@ -1026,6 +1300,25 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
   let collisionResolutions = [];
   let descendantAnchorResolutions = [];
   let alignedLineageOrigin = null;
+
+  // Die fachlich engere Option "zwischen Ehefrauen" braucht dieselbe
+  // Kollisionsbehandlung wie eine gemischte Mehrpartnergruppe. Das reine
+  // Mitteln der beiden Ehefrauenkoordinaten konnte die Kernperson sonst genau
+  // in eine Partnerkarte schieben. Für die Packlogik werden beide Varianten
+  // lokal vereinheitlicht; am gespeicherten Familiendatensatz ändert sich
+  // dadurch nichts.
+  const centeredPartnerRoutes = new Map();
+  (plan?.centerBetweenSpousesRoutes || []).forEach(route => {
+    centeredPartnerRoutes.set(route.centeredPersonId, Object.freeze({
+      centeredPersonId: route.centeredPersonId,
+      partnerPersonIds: Object.freeze([...route.spousePersonIds]),
+      partnershipIds: Object.freeze([...route.partnershipIds])
+    }));
+  });
+  (plan?.centerBetweenPartnersRoutes || []).forEach(route => {
+    centeredPartnerRoutes.set(route.centeredPersonId, route);
+  });
+  const collisionAwareCenteredRoutes = [...centeredPartnerRoutes.values()];
 
   // Zuerst stehen die Ehefrauen beziehungsweise Affären über ihren eigenen
   // Kinderblöcken. Erst danach wird die gemeinsame Person zwischen den
@@ -1071,7 +1364,7 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
   // einmal vorhandene gemeinsame Person wird zwischen den Partnerkarten gesetzt.
   const packedPartnerGroups = resolveCenteredLeafPartnerPacking(
     nodes,
-    plan?.centerBetweenPartnersRoutes || [],
+    collisionAwareCenteredRoutes,
     plan?.partnerOverChildrenRoutes || [],
     axis
   );
@@ -1083,7 +1376,7 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
   // Opt-in-Seitenzweige (Partner samt Blattkindern) bleiben dabei zusammen.
   const packedPartnerCards = resolveCenteredPartnerCardPacking(
     nodes,
-    plan?.centerBetweenPartnersRoutes || [],
+    collisionAwareCenteredRoutes,
     plan?.partnerOverChildrenRoutes || [],
     axis,
     packedPartnerGroups.packedCenteredPersonIds
@@ -1129,31 +1422,12 @@ export function applyFamilyChartPartnerAlignmentPlan({ tree, plan, orientation =
     axis
   );
 
-  if (plan?.lineageOriginRoute) {
-    const route = plan.lineageOriginRoute;
-    const targetNode = displayedNodeById(nodes, route.targetPersonId);
-    const anchorNode = displayedNodeById(nodes, route.anchorNodeId);
-    const originNodes = route.originNodeIds.flatMap(nodeId => (
-      nodes.filter(node => node?.data?.id === nodeId)
-    ));
-    const targetCoordinate = Number(targetNode?.[axis]);
-    const anchorCoordinate = Number(anchorNode?.[axis]);
-    if (
-      targetNode
-      && anchorNode
-      && originNodes.length >= route.originNodeIds.length
-      && Number.isFinite(targetCoordinate)
-      && Number.isFinite(anchorCoordinate)
-    ) {
-      const delta = targetCoordinate - anchorCoordinate;
-      originNodes.forEach(node => shiftNodeAlongCrossAxis(node, axis, delta));
-      alignedLineageOrigin = Object.freeze({
-        ...route,
-        axis,
-        targetCoordinate,
-        delta
-      });
-    }
+  if (alignLineageOrigin) {
+    alignedLineageOrigin = applyFamilyChartLineageOriginAlignment({
+      tree,
+      route: plan?.lineageOriginRoute,
+      orientation
+    });
   }
 
   return Object.freeze({

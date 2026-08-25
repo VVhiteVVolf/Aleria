@@ -805,6 +805,26 @@
   stroke-width: 3.25px !important;
 }
 
+.family-chart-host .aleria-line-crossing-overlay {
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.family-chart-host .aleria-line-crossing-overlay--casing {
+  stroke: var(--family-chart-crossing-gap, #ead6ae) !important;
+  stroke-width: 10px !important;
+  stroke-dasharray: none !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.family-chart-host .aleria-line-crossing-overlay--foreground {
+  stroke-width: 4px !important;
+  stroke-dasharray: none !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .family-chart-host .link-text {
   display: none !important;
 }

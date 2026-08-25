@@ -292,8 +292,8 @@ export const HOUSE_VRAGI_FAMILY = Object.freeze({
     })
   ],
   partnerships: [
-    alignChildGroupBelowParentPair(partnership('marriage-knar-odinhild-vragi', { status: 'ended' })),
-    alignChildGroupBelowParentPair(partnership('marriage-modgud-torgun-vragi', { status: 'ended' })),
+    partnership('marriage-knar-odinhild-vragi', { status: 'ended' }),
+    partnership('marriage-modgud-torgun-vragi', { status: 'ended' }),
     alignChildGroupBelowParentPair(partnership('marriage-magnus-jutha-vragi', { status: 'ended', end: '1660' })),
     alignChildGroupBelowParentPair(partnership('marriage-valdis-hrafnkell-nachtjaeger', { status: 'ended', end: '1677' })),
     partnership('marriage-fannar-islaug-varangr', { status: 'ended', end: '1641' }),
@@ -387,7 +387,8 @@ export const HOUSE_VRAGI_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 3,
+    chartLayoutPolicy: 'strict-v1',
+    sourceRevision: 4,
     sourceModule: 'Clan Vragi (bereitgestellte Altdaten)',
     sourceNote: 'Der vollständige Vragi-Stammbaum wird ohne Personenfokus von Knar und Odinhild bis zur jüngsten Generation des Jahres 1740 gezeigt. Zwei Quellenlücken sind strikt serielle absolute Generationentrenner. Auswärtig fortgeführte Kinder verbleiben in ihren Gegenakten. Stenvar und Monhild sind dieselben Weltpersonen sowohl als Angehörige ihrer Herkunftszweige als auch als Ehepaar; Monhild wird deshalb am fortgeführten Stenvar-Zweig kontrolliert wiederholt und die drei Kinder werden nur einmal geführt. Artair Luga ist ausschließlich Tjodmars aufgenommenes Mündel. Sechs namenlose Verlobten-Platzhalter der jüngsten Generation werden nicht importiert. Wiederholte Standardsilhouetten werden nicht als Individualporträts gespeichert. Vidkuns Todesjahr wurde nach seiner Goldglanz-Stammhausakte von 1716 auf 1720 vereinheitlicht.',
     sourceConflicts: [{
@@ -423,6 +424,7 @@ export const HOUSE_VRAGI_FAMILY = Object.freeze({
     registryManagedExtensionFields: [
       'blankFamily',
       'preparedMainLine',
+      'chartLayoutPolicy',
       'sourceModule',
       'sourceNote',
       'sourceConflicts'

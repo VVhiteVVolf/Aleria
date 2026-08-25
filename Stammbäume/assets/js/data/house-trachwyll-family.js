@@ -15,6 +15,7 @@ import {
   IVARSHEIM_ORIGIN_HOUSE_PROFILES
 } from './ivarsheim-house-profiles.js';
 import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 
@@ -41,7 +42,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   silberzunge: IVARSHEIM_HOUSE_EMBLEMS.silberzunge,
   wargh: ALDRIMAR_HOUSE_EMBLEMS.wargh,
   skogg: IVARSHEIM_HOUSE_EMBLEMS.skogg,
-  grendel: IVARSHEIM_HOUSE_EMBLEMS.grendel
+  grendel: IVARSHEIM_HOUSE_EMBLEMS.grendel,
+  wellensaenger: KRONENTAL_HOUSE_EMBLEMS.wellensaenger
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -169,6 +171,7 @@ const ORIGIN_HOUSES = Object.freeze([
   house('house-drewi', 'Haus Drewi'),
   house('house-varulv', 'Clan Varulv', HOUSE_EMBLEMS.varulv),
   house('house-wellenschild', 'Clan Wellenschild'),
+  house('house-wellensaenger', 'Clan Wellensänger', HOUSE_EMBLEMS.wellensaenger),
   house('house-vaeren', 'Clan Vaeren', HOUSE_EMBLEMS.vaeren),
   house('house-frostauge', 'Clan Frostauge'),
   house('house-blaidd', "Haus Blaidd O'Branon", HOUSE_EMBLEMS.blaidd),
@@ -290,7 +293,7 @@ export const HOUSE_TRACHWYLL_TALFRONWYN_FAMILY = Object.freeze({
     }),
     talfronwynPerson('arthan-trachwyll', 'Arthan Trachwyll', 'male', '1607', '1694'),
     talfronwynPerson('bergljot-wellensaenger', 'Bergljot Wellensänger', 'female', '1610', '1677', {
-      houseId: 'house-wellenschild'
+      houseId: 'house-wellensaenger'
     }),
     awayWoman(talfronwynPerson, 'alinor-trachwyll', 'Alinor Trachwyll', '1619', '1661', 'Clan Vaeren'),
     talfronwynPerson('arn-vaeren', 'Arn Vaeren', 'male', '1608', '1647', {
@@ -532,9 +535,9 @@ export const HOUSE_TRACHWYLL_TALFRONWYN_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-trachwyll',
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Haus Trachwyll (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Talfronwyn-Stammbaum wurde ohne Personenfokus übernommen. Zwei Quellenlücken sind strikt serielle Zeitsprünge: zuerst nach dem Gründerwappen, danach ausschließlich unter Breandan und Genofeva. Kenyon bleibt mit Eltern und Ehefrau in Talfronwyn sichtbar und erhält allein den geradlinigen Übergang nach Ivarsfels; seine Kinder stehen ausschließlich in der Zielakte. Die Zweige Talfryns und Merlions verbleiben dagegen vollständig in Vennyr. Alle belegten wegverheirateten Trachwyll-Frauen besitzen direkte Zielhausknoten. Kenyons Geburtsjahr 1720 in der kurzen Oberhauptübersicht widerspricht der ausführlichen Hierarchie und der Generationenfolge; verwendet wird 1676. Rhodhri wird mit der bereits kanonischen Form Rhodri geführt. Die abweichenden Partnerdaten Angharad 1603/1600 und Wynfor 1689/1690 bleiben als Quellenkonflikte vermerkt. Die als veraltet markierten Bilder von Geraint Drewi und Dafydd Trachwyll wurden nicht importiert; Standardsilhouetten wurden ebenfalls nicht als Porträts gespeichert.',
+    sourceNote: 'Der vollständige Talfronwyn-Stammbaum wurde ohne Personenfokus übernommen. Zwei Quellenlücken sind strikt serielle Zeitsprünge: zuerst nach dem Gründerwappen, danach ausschließlich unter Breandan und Genofeva. Kenyon bleibt mit Eltern und Ehefrau in Talfronwyn sichtbar und erhält allein den geradlinigen Übergang nach Ivarsfels; seine Kinder stehen ausschließlich in der Zielakte. Die Zweige Talfryns und Merlions verbleiben dagegen vollständig in Vennyr. Alle belegten wegverheirateten Trachwyll-Frauen besitzen direkte Zielhausknoten. Bergljot wird entsprechend ihrer Herkunftsakte dem Clan Wellensänger statt dem ähnlich benannten Clan Wellenschild zugeordnet. Kenyons Geburtsjahr 1720 in der kurzen Oberhauptübersicht widerspricht der ausführlichen Hierarchie und der Generationenfolge; verwendet wird 1676. Rhodhri wird mit der bereits kanonischen Form Rhodri geführt. Die abweichenden Partnerdaten Angharad 1603/1600 und Wynfor 1689/1690 bleiben als Quellenkonflikte vermerkt. Die als veraltet markierten Bilder von Geraint Drewi und Dafydd Trachwyll wurden nicht importiert; Standardsilhouetten wurden ebenfalls nicht als Porträts gespeichert.',
     registryTombstones: {
       persons: ['haus-trachwyll-talfronwyn-gruender', 'haus-trachwyll-talfronwyn-gruenderin'],
       partnerships: ['marriage-haus-trachwyll-talfronwyn-founders']

@@ -1,6 +1,7 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { ARGALL_DRAIG_AFFAIR } from './argall-draig-affair.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -12,6 +13,7 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  argall: 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png',
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
@@ -175,7 +177,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-eisenherz', 'Haus Eisenherz'),
     house('house-cenyr', 'Haus Cenyr'),
-    house('house-argall', 'Haus Argall'),
+    house('house-argall', 'Haus Argall', HOUSE_EMBLEMS.argall),
     house('house-fiachrach', 'Haus Fiachrach'),
     house('house-arwydd', 'Haus Arwydd', HOUSE_EMBLEMS.arwydd),
     house('house-varulv', 'Haus Varulv')
@@ -332,7 +334,15 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('beibhinn-eirce', 'Beibhinn Eirce', 'female', '1669', '', 'house-eirce'),
     person('bleddyn-blodyn', 'Bleddyn Blodyn', 'male', '1669', '1720', 'house-blodyn'),
     person('alaw-grawn', 'Alaw Grawn', 'female', '1676', '1720', 'house-grawn'),
-    person('owain-draig', 'Owain', 'male', '1694', ''),
+    person(
+      ARGALL_DRAIG_AFFAIR.owain.id,
+      ARGALL_DRAIG_AFFAIR.owain.name,
+      ARGALL_DRAIG_AFFAIR.owain.sex,
+      ARGALL_DRAIG_AFFAIR.owain.birth,
+      '',
+      ARGALL_DRAIG_AFFAIR.owain.houseId,
+      { worldPersonId: ARGALL_DRAIG_AFFAIR.owain.worldPersonId }
+    ),
     person('galahad-draig', 'Galahad', 'male', '1695', '', DRAIG_HOUSE_ID, { title: 'Graf von Celtigerns Wacht' }),
     person('rhonwen-draig', 'Rhonwen', 'female', '1702', '1720'),
     person('alicyn-draig', 'Alicyn', 'female', '1697', ''),
@@ -352,7 +362,18 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('nesta', 'Nesta', 'female', '????', '????', '', { familyRole: 'affair' }),
     person('matilda', 'Matilda', 'female', '????', '????', '', { familyRole: 'affair' }),
     person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'affair' }),
-    person('shylene-argall', 'Shylene Argall', 'female', '1710', '', 'house-argall', { familyRole: 'affair' }),
+    person(
+      ARGALL_DRAIG_AFFAIR.shylene.id,
+      ARGALL_DRAIG_AFFAIR.shylene.name,
+      ARGALL_DRAIG_AFFAIR.shylene.sex,
+      ARGALL_DRAIG_AFFAIR.shylene.birth,
+      '',
+      ARGALL_DRAIG_AFFAIR.shylene.houseId,
+      {
+        worldPersonId: ARGALL_DRAIG_AFFAIR.shylene.worldPersonId,
+        familyRole: 'affair'
+      }
+    ),
     person('branwen-gwefrydd', 'Branwen Gwefrydd', 'female', '1700', '', 'house-gwefrydd'),
     person('ianto-arwydd', 'Ianto Arwydd', 'male', '1700', '', 'house-arwydd'),
     person('wynonna-fiachrach', 'Wynonna Fiachrach', 'female', '1700', '', 'house-fiachrach'),
@@ -371,7 +392,18 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('rhygifarch-draig', 'Rhygifarch', 'male', '????', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
     person('rollo-draig', 'Rollo', 'male', '????', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
     person('siana-draig', 'Siana', 'female', '1725', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
-    person('iolo-draig', 'Iolo', 'male', '1735', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
+    person(
+      ARGALL_DRAIG_AFFAIR.child.id,
+      ARGALL_DRAIG_AFFAIR.child.name,
+      ARGALL_DRAIG_AFFAIR.child.sex,
+      ARGALL_DRAIG_AFFAIR.child.birth,
+      '',
+      ARGALL_DRAIG_AFFAIR.child.houseId,
+      {
+        worldPersonId: ARGALL_DRAIG_AFFAIR.child.worldPersonId,
+        familyRole: 'bastard'
+      }
+    ),
     person('mair-draig', 'Mair', 'female', '1720', ''),
     person('kane-draig', 'Kane', 'male', '1721', ''),
     person('oweta-draig', 'Oweta', 'female', '1723', ''),
@@ -469,7 +501,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     createMarriage('affair-owain-nesta', 'owain-draig', 'nesta', { type: 'affair', status: 'ended' }),
     createMarriage('affair-owain-matilda', 'owain-draig', 'matilda', { type: 'affair', status: 'ended' }),
     createMarriage('affair-owain-sylvia', 'owain-draig', 'sylvia-cenyr', { type: 'affair', status: 'ended' }),
-    createMarriage('affair-owain-shylene', 'owain-draig', 'shylene-argall', { type: 'affair', status: 'secret' }),
+    createMarriage(ARGALL_DRAIG_AFFAIR.id, ...ARGALL_DRAIG_AFFAIR.participantIds, { type: 'affair', status: 'secret' }),
     createMarriage('marriage-steffan-branwen', ...STEFFAN_IDS),
     createMarriage('marriage-tecwyn-ianto', 'tecwyn-draig', 'ianto-arwydd'),
     createMarriage('marriage-cadfan-wynonna', ...CADFAN_IDS),
@@ -556,7 +588,12 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     ...childrenOf(['rhygifarch-draig'], ['owain-draig', 'nesta'], 'affair-owain-nesta', { legitimacy: 'illegitimate' }),
     ...childrenOf(['rollo-draig'], ['owain-draig', 'matilda'], 'affair-owain-matilda', { legitimacy: 'illegitimate' }),
     ...childrenOf(['siana-draig'], ['owain-draig', 'sylvia-cenyr'], 'affair-owain-sylvia', { legitimacy: 'illegitimate' }),
-    ...childrenOf(['iolo-draig'], ['owain-draig', 'shylene-argall'], 'affair-owain-shylene', { legitimacy: 'illegitimate' })
+    ...childrenOf(
+      [ARGALL_DRAIG_AFFAIR.child.id],
+      ARGALL_DRAIG_AFFAIR.participantIds,
+      ARGALL_DRAIG_AFFAIR.id,
+      { legitimacy: 'illegitimate' }
+    )
   ],
   lineage: {
     founderPartnershipId: 'marriage-celtigern-findabhair',

@@ -12,6 +12,7 @@ import {
 import { HOUSE_WARGH_PORTRAITS } from './house-wargh-portraits.js';
 import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
 import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 
 const WARGH_HOUSE_ID = 'house-wargh';
@@ -34,7 +35,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   skaal: RORIKSHEIM_HOUSE_EMBLEMS.skaal,
   skald: RORIKSHEIM_HOUSE_EMBLEMS.skald,
   morthwyll: KLAUENINSEL_HOUSE_EMBLEMS.morthwyll,
-  arth: KLAUENINSEL_HOUSE_EMBLEMS.arth
+  arth: KLAUENINSEL_HOUSE_EMBLEMS.arth,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -306,7 +308,7 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
     house('house-helgr', 'Clan Helgr'),
     house('house-kummerherz', 'Clan Kummerherz'),
     house('house-wellenschild', 'Clan Wellenschild'),
-    house('house-gullvig', 'Clan Gullvig'),
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig),
     house('house-todbrand', 'Clan Todbrand'),
     house('house-arth', "Haus Arth O'Talgarth", HOUSE_EMBLEMS.arth)
   ],

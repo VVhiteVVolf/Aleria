@@ -7,6 +7,11 @@ import {
   KRONENTAL_HOUSE_EMBLEMS,
   KRONENTAL_HOUSE_PROFILES
 } from './kronental-house-profiles.js';
+import { HOUSE_WELLENSCHILD_FAMILY } from './house-wellenschild-family.js';
+import { HOUSE_EIBENSCHILD_FAMILY } from './house-eibenschild-family.js';
+import { HOUSE_GULLVIG_FAMILY } from './house-gullvig-family.js';
+import { HOUSE_RIESENTOD_FAMILY } from './house-riesentod-family.js';
+import { HOUSE_WELLENSAENGER_FAMILY } from './house-wellensaenger-family.js';
 
 export const KRONENTAL_HESIRE_CLAN_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'riesentod', title: 'Clan Riesentod', territory: 'Heldenwacht' }),
@@ -19,6 +24,7 @@ export const KRONENTAL_HESIRE_CLAN_DEFINITIONS = Object.freeze([
 ]);
 
 export const KRONENTAL_HUSKARL_CLAN_DEFINITIONS = Object.freeze([
+  Object.freeze({ slug: 'eibenschild', title: 'Clan Eibenschild', territory: 'Vagaborg auf den Klageschild-Inseln' }),
   Object.freeze({ slug: 'spindelschlag', title: 'Clan Spindelschlag', territory: 'Spindelheim' }),
   Object.freeze({ slug: 'suedstahl', title: 'Clan Südstahl', territory: 'Heldenwacht' }),
   Object.freeze({ slug: 'albholz', title: 'Clan Albholz', territory: 'Heldenwacht' }),
@@ -139,8 +145,22 @@ function extinctClanFamily(definition) {
 }
 
 export const KRONENTAL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
-  ...KRONENTAL_HESIRE_CLAN_DEFINITIONS.map(definition => activeClanFamily(definition, 'Hesire', 'gold')),
-  ...KRONENTAL_HUSKARL_CLAN_DEFINITIONS.map(definition => activeClanFamily(definition, 'Huskarl', 'silver')),
+  ...KRONENTAL_HESIRE_CLAN_DEFINITIONS.map(definition => (
+    definition.slug === 'riesentod'
+      ? HOUSE_RIESENTOD_FAMILY
+      : definition.slug === 'wellenschild'
+      ? HOUSE_WELLENSCHILD_FAMILY
+      : definition.slug === 'gullvig'
+        ? HOUSE_GULLVIG_FAMILY
+        : definition.slug === 'wellensaenger'
+          ? HOUSE_WELLENSAENGER_FAMILY
+          : activeClanFamily(definition, 'Hesire', 'gold')
+  )),
+  ...KRONENTAL_HUSKARL_CLAN_DEFINITIONS.map(definition => (
+    definition.slug === 'eibenschild'
+      ? HOUSE_EIBENSCHILD_FAMILY
+      : activeClanFamily(definition, 'Huskarl', 'silver')
+  )),
   ...KRONENTAL_CIVIL_CLAN_DEFINITIONS.map(civilClanFamily),
   ...KRONENTAL_OUTLAW_CLAN_DEFINITIONS.map(outlawClanFamily),
   ...KRONENTAL_EXTINCT_CLAN_DEFINITIONS.map(extinctClanFamily)

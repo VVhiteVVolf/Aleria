@@ -7,6 +7,7 @@ import { HOUSE_VARULV_FAMILY } from './house-varulv-family.js';
 import { HOUSE_VARANGR_FAMILY } from './house-varangr-family.js';
 import { HOUSE_WARGH_FAMILY } from './house-wargh-family.js';
 import { HOUSE_RAGNULF_FAMILY } from './house-ragnulf-family.js';
+import { HOUSE_VAEREN_FAMILY } from './house-vaeren-family.js';
 
 export const ALDRIMAR_JARL_CLAN_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'vaeren', title: 'Clan Vaeren', jarltum: 'Kronental', royal: true }),
@@ -57,6 +58,7 @@ function createJarlClanPlaceholder(definition) {
 
 export const ALDRIMAR_HOUSE_FAMILIES = Object.freeze(
   ALDRIMAR_JARL_CLAN_DEFINITIONS.map(definition => {
+    if (definition.slug === 'vaeren') return HOUSE_VAEREN_FAMILY;
     if (definition.slug === 'wargh') return HOUSE_WARGH_FAMILY;
     if (definition.slug === 'ragnulf') return HOUSE_RAGNULF_FAMILY;
     if (definition.slug === 'varangr') return HOUSE_VARANGR_FAMILY;

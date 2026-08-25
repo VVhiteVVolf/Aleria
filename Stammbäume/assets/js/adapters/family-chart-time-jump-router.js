@@ -1,4 +1,3 @@
-const SERIAL_PREDECESSOR_KINDS = new Set(['house-crest']);
 const TERMINAL_ATTACHMENT_KINDS = new Set(['cadet-house', 'line-end']);
 
 function addUnique(target, value) {
@@ -10,12 +9,34 @@ function removeValue(target, value) {
   if (index >= 0) target.splice(index, 1);
 }
 
-function findSerialPredecessor(chartById, parentIds, sourcePartnershipId) {
-  return [...chartById.values()].find(node => (
-    SERIAL_PREDECESSOR_KINDS.has(node.data?.nodeKind)
+function relationshipParentIds(node) {
+  const configured = node?.data?.aleria?.relationshipParentIds;
+  return Array.isArray(configured) && configured.length
+    ? configured.filter(Boolean)
+    : Array.isArray(node?.rels?.parents)
+      ? node.rels.parents.filter(Boolean)
+      : [];
+}
+
+export function resolveFamilyChartSerialPredecessorId({
+  chartById,
+  parentIds,
+  sourcePartnershipId = '',
+  includePairBoundBranches = false
+}) {
+  const candidates = [...chartById.values()];
+  const lineageCrest = candidates.find(node => (
+    node.data?.nodeKind === 'house-crest'
     && node.data?.aleria?.sourcePartnershipId === sourcePartnershipId
-    && parentIds.every(parentId => node.rels.parents.includes(parentId))
-  )) || null;
+    && parentIds.every(parentId => relationshipParentIds(node).includes(parentId))
+  ));
+  if (lineageCrest) return lineageCrest.id;
+  if (!includePairBoundBranches) return '';
+  const predecessor = candidates.find(node => (
+    node.data?.nodeKind === 'cadet-house'
+    && parentIds.every(parentId => relationshipParentIds(node).includes(parentId))
+  ));
+  return predecessor?.id || '';
 }
 
 function detachExistingBarrier(chartById, barrierNode) {
@@ -95,9 +116,10 @@ export function insertTimeJumpAsSerialBarrier({
   declaredChildIds = []
 }) {
   detachExistingBarrier(chartById, timeJumpNode);
-  const predecessor = sourcePartnershipId
-    ? findSerialPredecessor(chartById, parentIds, sourcePartnershipId)
-    : null;
+  const predecessorId = sourcePartnershipId
+    ? resolveFamilyChartSerialPredecessorId({ chartById, parentIds, sourcePartnershipId })
+    : '';
+  const predecessor = predecessorId ? chartById.get(predecessorId) : null;
   const serialParentIds = predecessor ? [predecessor.id] : [...parentIds];
   const depths = computeNodeDepths(chartById);
   const anchorDepth = Math.max(0, ...serialParentIds.map(parentId => depths.get(parentId) || 0));

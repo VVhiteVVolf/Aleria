@@ -14,6 +14,7 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
     // Neue Sitz-Wappen liegen in einer nach der Orts-Hierarchie verschachtelten Ordnerstruktur.
     Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png',
     Lynthor: 'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png',
+    Llysfaen: 'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Llysfaen.png',
     // Antike, längst verfallene Sitze der Crannath-Clans tragen dasselbe Ruinen-Icon.
     Lycath: 'assets/images/regions/AntikeIcon.png',
     'Antikes Gwynthor': 'assets/images/regions/AntikeIcon.png'
@@ -135,6 +136,24 @@ export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
   braglas: gwynthorCommonerProfile(),
   tonnarth: gwynthorCommonerProfile(),
   ysgrif: gwynthorCommonerProfile()
+});
+
+const LLYSFAEN_COMMONER_PATH = Object.freeze([
+  'Cenyr',
+  'Celtigerns Wacht',
+  'Llamreis Ankunft',
+  'Llysfaen'
+]);
+
+function llysfaenCommonerProfile() {
+  return profile('commoner', LLYSFAEN_COMMONER_PATH, {
+    liegeHouseId: 'haus-wyrm',
+    liegeHouseName: 'Haus Wyrm'
+  });
+}
+
+export const LLYSFAEN_COMMONER_HOUSE_PROFILES = Object.freeze({
+  argall: llysfaenCommonerProfile()
 });
 
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);

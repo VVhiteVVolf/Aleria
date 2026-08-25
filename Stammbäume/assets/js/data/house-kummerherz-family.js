@@ -10,6 +10,7 @@ import { ALDRIMAR_HOUSE_EMBLEMS } from './aldrimar-house-profiles.js';
 import { HOUSE_KUMMERHERZ_PORTRAITS } from './house-kummerherz-portraits.js';
 import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
 import { KRAEHENMOOR_HOUSE_EMBLEMS } from './kraehenmoor-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import {
   SCHWARZFENN_HOUSE_EMBLEMS,
@@ -27,7 +28,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   todbrand: SCHWARZFENN_HOUSE_EMBLEMS.todbrand,
   wargh: ALDRIMAR_HOUSE_EMBLEMS.wargh,
   sterkr: RORIKSHEIM_HOUSE_EMBLEMS.sterkr,
-  feuerhaar: IVARSHEIM_HOUSE_EMBLEMS.feuerhaar
+  feuerhaar: IVARSHEIM_HOUSE_EMBLEMS.feuerhaar,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -275,7 +277,7 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
     house('house-wellenschild', 'Clan Wellenschild'),
     house('house-wargh', 'Clan Wargh', HOUSE_EMBLEMS.wargh),
     house('house-eisenbieger', 'Clan Eisenbieger'),
-    house('house-gullvig', 'Clan Gullvig'),
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig),
     house('house-schmetterschild', 'Clan Schmetterschild', HOUSE_EMBLEMS.schmetterschild),
     house('house-spindelschlag', 'Clan Spindelschlag'),
     house('house-feuerhaar', 'Clan Feuerhaar', HOUSE_EMBLEMS.feuerhaar),
@@ -360,7 +362,7 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
     sentWard('tinna-kummerherz', 'Tinna Kummerherz', 'female', '1724', '', 'Clan Ragnulf', {
       title: 'Leibliche Tochter Tyrfingrs · als Mündel bei Clan Ragnulf'
     }),
-    receivedWard('isaura-wellensaenger', 'Isaura Wellensänger', 'female', '1725', 'house-wellensaenger', {
+    receivedWard('isaura-wellensaenger', 'Isaura Wellensänger', 'female', '1726', 'house-wellensaenger', {
       title: 'Aufgenommenes Mündel Tyrfingrs'
     }),
     person('orm-kummerherz', 'Orm Kummerherz', 'male', '1723', ''),
@@ -393,7 +395,7 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
     marriedAway('married-away-gunnlaug-kummerherz-sturmgeborene', 'Clan Sturmgeborene', 'marriage-floki-gunnlaug-kummerherz', 'house-sturmgeborene', 'haus-sturmgeborene'),
     marriedAway('married-away-holmdis-kummerherz-sterkr', 'Clan Sterkr', 'marriage-heremod-holmdis-sterkr', 'house-sterkr', 'haus-sterkr', HOUSE_EMBLEMS.sterkr),
     marriedAway('married-away-ljosdis-kummerherz-eisenbieger', 'Clan Eisenbieger', 'marriage-thorgils-ljosdis-kummerherz', 'house-eisenbieger', 'haus-eisenbieger'),
-    marriedAway('married-away-njaldis-kummerherz-gullvig', 'Clan Gullvig', 'marriage-nattfar-njaldis-kummerherz', 'house-gullvig', 'haus-gullvig'),
+    marriedAway('married-away-njaldis-kummerherz-gullvig', 'Clan Gullvig', 'marriage-nattfar-njaldis-kummerherz', 'house-gullvig', 'haus-gullvig', HOUSE_EMBLEMS.gullvig),
     marriedAway('married-away-asta-kummerherz-feuerhaar', 'Clan Feuerhaar', 'marriage-armod-asta-feuerhaar', 'house-feuerhaar', 'haus-feuerhaar', HOUSE_EMBLEMS.feuerhaar),
     marriedAway('married-away-froya-kummerherz-todbrand', 'Clan Todbrand', 'marriage-calthar-froya-todbrand', 'house-todbrand', 'haus-todbrand', HOUSE_EMBLEMS.todbrand),
     wardAway('ward-away-tinna-kummerherz-ragnulf', 'Clan Ragnulf', 'tinna-kummerherz', 'house-ragnulf', 'haus-ragnulf', HOUSE_EMBLEMS.ragnulf)
@@ -447,9 +449,9 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Clan Kummerherz (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige überlieferte Kummerherz-Stammbaum wird ohne Personenfokus von Brynjar Hjerte und Hallveig bis zur jüngsten Generation des Jahres 1740 gezeigt. Ein verlinkter Hjerte-Ursprung steht über Brynjar; der Kummerherz-Hausknoten hängt direkt unter dem Gründerpaar und genau ein serieller Zeitsprung führt danach zu Jorunn und Jothmund. Die Oberhauptfolge lautet Brynjar, Jothmund, Jorah, Lagmar, Naddvar und Hogrand; Tyrfingr, Rórik und Finnur bilden die angegebene Erbfolge. Jorunn, Johild, Gunnlaug, Hólmdís, Ljosdis, Njaldis, Asta und Froya besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Tinna ist ein leibliches Kind Tyrfingrs und Midnas, zugleich aber als Mündel an Clan Ragnulf vermittelt. Isaura Wellensänger ist ausschließlich Tyrfingrs aufgenommenes Mündel. Die isolierte Quellüberschrift „Modgunn“ wird nach der eigentlichen Personenzeile als Mogunn normalisiert. Die fünf unbenannten Verlobtenfelder der jüngsten Generation werden nicht als reale Personen importiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts übernommen.',
+    sourceNote: 'Der vollständige überlieferte Kummerherz-Stammbaum wird ohne Personenfokus von Brynjar Hjerte und Hallveig bis zur jüngsten Generation des Jahres 1740 gezeigt. Ein verlinkter Hjerte-Ursprung steht über Brynjar; der Kummerherz-Hausknoten hängt direkt unter dem Gründerpaar und genau ein serieller Zeitsprung führt danach zu Jorunn und Jothmund. Die Oberhauptfolge lautet Brynjar, Jothmund, Jorah, Lagmar, Naddvar und Hogrand; Tyrfingr, Rórik und Finnur bilden die angegebene Erbfolge. Jorunn, Johild, Gunnlaug, Hólmdís, Ljosdis, Njaldis, Asta und Froya besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Tinna ist ein leibliches Kind Tyrfingrs und Midnas, zugleich aber als Mündel an Clan Ragnulf vermittelt. Isaura Wellensänger ist ausschließlich Tyrfingrs aufgenommenes Mündel. Ihre Wellensänger-Herkunftsakte belegt 1726 statt der älteren Kummerherz-Angabe 1725; die Herkunftsakte ist für ihr Geburtsjahr maßgeblich. Die isolierte Quellüberschrift „Modgunn“ wird nach der eigentlichen Personenzeile als Mogunn normalisiert. Die fünf unbenannten Verlobtenfelder der jüngsten Generation werden nicht als reale Personen importiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts übernommen.',
     registryTombstones: {
       persons: ['haus-kummerherz-gruender', 'haus-kummerherz-gruenderin'],
       partnerships: ['marriage-haus-kummerherz-founders']

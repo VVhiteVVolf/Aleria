@@ -18,7 +18,9 @@ const SPINDELHEIM_PATH = Object.freeze([
 ]);
 const MOEWENFELS_PATH = Object.freeze([...KRONENTAL_ROOT, 'Hesirentum von Möwenfels', 'Kastav']);
 const WELLENKLANG_PATH = Object.freeze([...KRONENTAL_ROOT, 'Hesirentum von Wellenklang', 'Amol']);
-const KLAGESCHILD_PATH = Object.freeze([...KRONENTAL_ROOT, 'Hesirentum der Klageschild-Inseln', 'Wellenruh']);
+const KLAGESCHILD_ROOT = Object.freeze([...KRONENTAL_ROOT, 'Klageschild-Inseln']);
+const KLAGESCHILD_PATH = Object.freeze([...KLAGESCHILD_ROOT, 'Wellenruh']);
+const EIBENSCHILD_PATH = Object.freeze([...KLAGESCHILD_ROOT, 'Vagaborg']);
 const UNLOCATED_PATH = Object.freeze([...KRONENTAL_ROOT, 'Nicht verortet']);
 const OUTLAW_PATH = Object.freeze([
   ...KRONENTAL_ROOT,
@@ -54,6 +56,7 @@ export const KRONENTAL_HOUSE_EMBLEMS = Object.freeze({
   sturmgeborene: `${HOUSE_ROOT}/clan-sturmgeborene.png`,
   frostauge: `${HOUSE_ROOT}/clan-frostauge.png`,
   wellenschild: `${HOUSE_ROOT}/clan-wellenschild.png`,
+  eibenschild: `${HOUSE_ROOT}/clan-eibenschild.png`,
   gullvig: `${HOUSE_ROOT}/clan-gullvig.png`,
   wellensaenger: `${HOUSE_ROOT}/clan-wellensaenger.png`,
   spindelschlag: `${HOUSE_ROOT}/clan-spindelschlag.png`,
@@ -162,6 +165,17 @@ export const KRONENTAL_HOUSE_PROFILES = Object.freeze({
   }),
   wellenschild: kronentalProfile('hesire', KLAGESCHILD_PATH, {
     baronyEmblem: KRONENTAL_REGION_EMBLEMS.klageschildInseln
+  }),
+  eibenschild: kronentalProfile('huskarl', EIBENSCHILD_PATH, {
+    liegeHouseId: 'house-wellenschild',
+    liegeHouseName: 'Clan Wellenschild',
+    baronyEmblem: KRONENTAL_REGION_EMBLEMS.klageschildInseln,
+    folderIcons: [
+      ALDRIMAR_REGION_EMBLEMS.aldrimar,
+      ALDRIMAR_REGION_EMBLEMS.kronental,
+      KRONENTAL_REGION_EMBLEMS.klageschildInseln,
+      KRONENTAL_REGION_EMBLEMS.city
+    ]
   }),
   spindelschlag: kronentalProfile('huskarl', SPINDELHEIM_PATH, {
     baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden

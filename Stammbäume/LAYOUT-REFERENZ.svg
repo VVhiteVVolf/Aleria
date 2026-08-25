@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" role="img" aria-labelledby="title description">
+  <title id="title">Verbindliche Layoutreferenz für Aleria-Stammbäume</title>
+  <desc id="description">Richtige und falsche Anordnung von Mehrpartnergruppen, Kinderlinien und unvermeidbaren Linienkreuzungen.</desc>
+  <defs>
+    <style>
+      .background { fill: #f0dfbd; }
+      .panel { fill: #f8ecd0; stroke: #9b6b2e; stroke-width: 2; rx: 16; }
+      .card-main { fill: #8b3434; stroke: #d4a63e; stroke-width: 3; rx: 10; }
+      .card-partner { fill: #285c49; stroke: #d4a63e; stroke-width: 3; rx: 10; }
+      .card-affair { fill: #654275; stroke: #d4a63e; stroke-width: 3; rx: 10; }
+      .card-child { fill: #4d4d4d; stroke: #d4a63e; stroke-width: 3; rx: 10; }
+      .card-obstacle { fill: #b98b68; stroke: #5f2a20; stroke-width: 3; rx: 10; }
+      .genealogy { fill: none; stroke: #8f2727; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .marriage { fill: none; stroke: #2d725d; stroke-width: 5; }
+      .affair { fill: none; stroke: #7c4890; stroke-width: 5; stroke-dasharray: 12 9; }
+      .house { fill: none; stroke: #b78a31; stroke-width: 5; }
+      .cross-a { fill: none; stroke: #8f2727; stroke-width: 5; }
+      .cross-b { fill: none; stroke: #2d725d; stroke-width: 5; }
+      .bridge-gap { fill: none; stroke: #f8ecd0; stroke-width: 15; stroke-linecap: round; }
+      .bridge-top { fill: none; stroke: #8f2727; stroke-width: 5; stroke-linecap: round; }
+      .heading { font: 700 27px Georgia, serif; fill: #402018; }
+      .subheading { font: 700 20px Georgia, serif; fill: #6d3c1e; }
+      .label { font: 600 18px Georgia, serif; fill: #fff9e8; text-anchor: middle; dominant-baseline: middle; }
+      .caption { font: 17px Georgia, serif; fill: #4b3528; }
+      .good { font: 700 20px Georgia, serif; fill: #206b43; }
+      .bad { font: 700 20px Georgia, serif; fill: #9a2626; }
+    </style>
+  </defs>
+
+  <rect class="background" width="1400" height="940" />
+  <text class="heading" x="50" y="48">Aleria-Stammbäume · verbindliche Linien- und Mehrpartnerregeln</text>
+
+  <rect class="panel" x="35" y="75" width="650" height="390" />
+  <text class="subheading" x="65" y="112">1. Mehrere Partner: Kernperson einmal, Kinder bei ihrer Mutter</text>
+  <rect class="card-partner" x="85" y="160" width="145" height="72" />
+  <text class="label" x="157" y="196">Ehefrau I</text>
+  <rect class="card-main" x="260" y="160" width="145" height="72" />
+  <text class="label" x="332" y="196">Kernperson</text>
+  <rect class="card-partner" x="435" y="160" width="145" height="72" />
+  <text class="label" x="507" y="196">Ehefrau II</text>
+  <path class="marriage" d="M230 196 H260 M405 196 H435" />
+  <path class="genealogy" d="M157 232 V285 H117 V315 M157 285 H197 V315" />
+  <path class="genealogy" d="M507 232 V285 H467 V315 M507 285 H547 V315" />
+  <rect class="card-child" x="62" y="315" width="110" height="58" />
+  <rect class="card-child" x="182" y="315" width="110" height="58" />
+  <rect class="card-child" x="412" y="315" width="110" height="58" />
+  <rect class="card-child" x="532" y="315" width="110" height="58" />
+  <text class="label" x="117" y="344">Kind</text>
+  <text class="label" x="237" y="344">Kind</text>
+  <text class="label" x="467" y="344">Kind</text>
+  <text class="label" x="587" y="344">Kind</text>
+  <text class="good" x="65" y="420">Richtig:</text>
+  <text class="caption" x="145" y="420">legitime Partner innen; jeder Kinderblock senkrecht darunter.</text>
+
+  <rect class="panel" x="715" y="75" width="650" height="390" />
+  <text class="subheading" x="745" y="112">2. Affären: außen platzieren, eindeutige Kinderzuordnung</text>
+  <rect class="card-affair" x="755" y="160" width="135" height="72" />
+  <text class="label" x="822" y="196">Affäre I</text>
+  <rect class="card-main" x="930" y="160" width="135" height="72" />
+  <text class="label" x="997" y="196">Kernperson</text>
+  <rect class="card-affair" x="1105" y="160" width="135" height="72" />
+  <text class="label" x="1172" y="196">Affäre II</text>
+  <path class="affair" d="M890 196 H930 M1065 196 H1105" />
+  <path class="genealogy" d="M822 232 V315" />
+  <path class="genealogy" d="M1172 232 V315" />
+  <rect class="card-child" x="767" y="315" width="110" height="58" />
+  <rect class="card-child" x="1117" y="315" width="110" height="58" />
+  <text class="label" x="822" y="344">Bastard</text>
+  <text class="label" x="1172" y="344">Bastard</text>
+  <text class="good" x="745" y="420">Richtig:</text>
+  <text class="caption" x="825" y="420">keine Kernperson-Dopplung und keine fremden Kinderlinien.</text>
+
+  <rect class="panel" x="35" y="495" width="650" height="395" />
+  <text class="subheading" x="65" y="532">3. Reine Linienkreuzung: nur am Schnittpunkt markieren</text>
+  <path class="cross-b" d="M105 670 H615" />
+  <path class="cross-a" d="M360 575 V765" />
+  <circle cx="360" cy="670" r="10" fill="#f8ecd0" />
+  <circle cx="360" cy="670" r="5" fill="#8f2727" />
+  <circle cx="360" cy="670" r="18" fill="none" stroke="#206b43" stroke-width="3" />
+  <text class="good" x="65" y="820">Richtig:</text>
+  <text class="caption" x="145" y="820">ein lokaler Punkt; Karten werden niemals damit kaschiert.</text>
+  <text class="caption" x="65" y="855">Vorrang: Hausknoten → Zeitsprung → Abstammung → Ehe → Verlobung → Affäre.</text>
+
+  <rect class="panel" x="715" y="495" width="650" height="395" />
+  <text class="subheading" x="745" y="532">4. Verboten: Linie durch fremde Karte oder unnötiger Zickzack</text>
+  <path class="genealogy" d="M770 620 H1305" />
+  <rect class="card-obstacle" x="955" y="570" width="170" height="100" />
+  <text class="label" x="1040" y="612">unbeteiligte</text>
+  <text class="label" x="1040" y="636">Person</text>
+  <path d="M935 550 L1145 690 M1145 550 L935 690" fill="none" stroke="#aa2020" stroke-width="8" stroke-linecap="round" />
+  <text class="bad" x="745" y="755">Falsch:</text>
+  <text class="caption" x="825" y="755">Linie kaschieren oder um die Karte herumwürgen.</text>
+  <text class="good" x="745" y="805">Richtig:</text>
+  <text class="caption" x="825" y="805">fremden Block versetzen und die senkrechte Achse freihalten.</text>
+  <text class="caption" x="745" y="850">Parallele oder überlappende Linien erhalten eigene Spuren; keine Brücke.</text>
+</svg>

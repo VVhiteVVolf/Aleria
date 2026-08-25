@@ -11,6 +11,7 @@ import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
 } from './kraehenmoor-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 
 const SCHWARZBLUT_HOUSE_ID = 'house-schwarzblut';
 
@@ -226,7 +227,7 @@ export const HOUSE_SCHWARZBLUT_FAMILY = Object.freeze({
     house(SCHWARZBLUT_HOUSE_ID, 'Clan Schwarzblut', KRAEHENMOOR_HOUSE_EMBLEMS.schwarzblut),
     house('house-jaernblod', 'Clan Järnblod', KRAEHENMOOR_HOUSE_EMBLEMS.jaernblod, 'extinct'),
     house('house-varangr', 'Clan Varangr', ALDRIMAR_HOUSE_EMBLEMS.varangr),
-    house('house-gullvig', 'Clan Gullvig'),
+    house('house-gullvig', 'Clan Gullvig', KRONENTAL_HOUSE_EMBLEMS.gullvig),
     house('house-silberblut', 'Clan Silberblut', KRAEHENMOOR_HOUSE_EMBLEMS.silberblut),
     house('house-goldglanz', 'Clan Goldglanz', KRAEHENMOOR_HOUSE_EMBLEMS.goldglanz),
     house('house-kaltherz', 'Clan Kaltherz', KRAEHENMOOR_HOUSE_EMBLEMS.kaltherz),
@@ -512,7 +513,8 @@ export const HOUSE_SCHWARZBLUT_FAMILY = Object.freeze({
       'Clan Gullvig',
       'marriage-svantje-aksel-schwarzblut',
       'house-gullvig',
-      'haus-gullvig'
+      'haus-gullvig',
+      KRONENTAL_HOUSE_EMBLEMS.gullvig
     )
   ],
   timeJumps: [{

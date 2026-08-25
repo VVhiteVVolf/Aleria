@@ -12,6 +12,7 @@ import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
 } from './ivarsheim-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 
 const GRENDEL_HOUSE_ID = 'house-grendel';
@@ -27,7 +28,9 @@ const HOUSE_EMBLEMS = Object.freeze({
   trachwyll: IVARSHEIM_HOUSE_EMBLEMS.trachwyll,
   sterkr: RORIKSHEIM_HOUSE_EMBLEMS.sterkr,
   schwarzdorn: RORIKSHEIM_HOUSE_EMBLEMS.schwarzdorn,
-  freiwinter: RORIKSHEIM_HOUSE_EMBLEMS.freiwinter
+  freiwinter: RORIKSHEIM_HOUSE_EMBLEMS.freiwinter,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig,
+  wellensaenger: KRONENTAL_HOUSE_EMBLEMS.wellensaenger
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -288,14 +291,14 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     house('house-silberzunge', 'Clan Silberzunge', HOUSE_EMBLEMS.silberzunge),
     house('house-skogg', 'Clan Skogg', HOUSE_EMBLEMS.skogg),
     house('house-drewi', 'Haus Drewi'),
-    house('house-gullvig', 'Clan Gullvig'),
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig),
     house('house-schwarzdorn', 'Clan Schwarzdorn', HOUSE_EMBLEMS.schwarzdorn),
     house('house-sturmgeborener', 'Clan Sturmgeborener'),
     house('house-freiwinter', 'Clan Freiwinter', HOUSE_EMBLEMS.freiwinter),
     house('house-frostauge', 'Clan Frostauge'),
     house('house-feuerhaar', 'Clan Feuerhaar', IVARSHEIM_HOUSE_EMBLEMS.feuerhaar),
     house('house-trachwyll', 'Haus Trachwyll', HOUSE_EMBLEMS.trachwyll),
-    house('house-unbekannter-kuestenclan', 'Unbekannter Küstenclan')
+    house('house-wellensaenger', 'Clan Wellensänger', HOUSE_EMBLEMS.wellensaenger)
   ],
   persons: [
     person('leif-grendel', 'Leif Grendel', 'male', '????', '????', {
@@ -389,9 +392,9 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
       title: 'Zweiter Erbe des Clans Grendel'
     }),
     person('gudrid-grendel', 'Gudrid Grendel', 'female', '1722', ''),
-    sentWard('bjarni-grendel', 'Bjarni Grendel', 'male', '1726', 'einen unbekannten Küstenclan', {
-      title: 'Dritter Erbe · als Mündel an einen unbekannten Küstenclan vermittelt',
-      notes: 'Die Stammbaumgrafik zeigt den Mündelrahmen und ein Meerfrauenwappen, nennt den Zielclan aber nicht.'
+    sentWard('bjarni-grendel', 'Bjarni Grendel', 'male', '1726', 'Clan Wellensänger', {
+      title: 'Dritter Erbe · als Mündel an Clan Wellensänger vermittelt',
+      notes: 'Die Grendel-Quelle nennt das Meerfrauenwappen noch ohne Zielnamen. Die jüngere Wellensänger-Hausquelle identifiziert Bjarni mit identischem Namen, Geburtsjahr und Porträt ausdrücklich als Uthars Mündel.'
     }),
     sentWard('isdis-grendel', 'Ísdís Grendel', 'female', '1731', 'Clan Sturmgeborener', {
       notes: 'Der Zielclan wird aus dem identischen Sturmgeborenen-Wappen bei Astrids Ehe erschlossen.'
@@ -463,7 +466,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     marriedAway('married-away-halldis-grendel-windhueter', 'Haus Windhüter', 'marriage-halldis-thorgrimm-grendel', 'house-windhueter', 'haus-windhueter', HOUSE_EMBLEMS.windhueter),
     marriedAway('married-away-hlokk-grendel-blutklinge', 'Haus Blutklinge', 'marriage-hlokk-thorfid-grendel', 'house-blutklinge', 'haus-blutklinge', HOUSE_EMBLEMS.blutklinge),
     marriedAway('married-away-thordis-grendel-silberzunge', 'Clan Silberzunge', 'marriage-gunnvar-thordis-silberzunge', 'house-silberzunge', 'haus-silberzunge', HOUSE_EMBLEMS.silberzunge),
-    marriedAway('married-away-estrid-grendel-gullvig', 'Clan Gullvig', 'marriage-estrid-grimleik-grendel', 'house-gullvig', 'haus-gullvig'),
+    marriedAway('married-away-estrid-grendel-gullvig', 'Clan Gullvig', 'marriage-estrid-grimleik-grendel', 'house-gullvig', 'haus-gullvig', HOUSE_EMBLEMS.gullvig),
     marriedAway('married-away-yrsa-grendel-schwarzdorn', 'Clan Schwarzdorn', 'marriage-tormund-yrsa-schwarzdorn', 'house-schwarzdorn', 'haus-schwarzdorn', HOUSE_EMBLEMS.schwarzdorn),
     marriedAway('married-away-astrid-grendel-sturmgeborener', 'Clan Sturmgeborener', 'marriage-astrid-thorbrand-grendel', 'house-sturmgeborener', 'haus-sturmgeborener'),
     marriedAway('married-away-gwelda-grendel-freiwinter', 'Clan Freiwinter', 'marriage-hjalmar-gwelda-freiwinter', 'house-freiwinter', 'haus-freiwinter', HOUSE_EMBLEMS.freiwinter),
@@ -472,12 +475,12 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     marriedAway('married-away-ingrid-grendel-trachwyll', 'Haus Trachwyll', 'marriage-gwilym-ingrid-trachwyll', 'house-trachwyll', 'haus-trachwyll', HOUSE_EMBLEMS.trachwyll),
     wardAway(
       'ward-away-bjarni-grendel-kuestenclan',
-      'Unbekannter Küstenclan',
+      'Clan Wellensänger',
       'bjarni-grendel',
-      'house-unbekannter-kuestenclan',
-      'haus-unbekannter-kuestenclan',
-      '',
-      'Als Mündel an einen unbekannten Küstenclan mit Meerfrauenwappen vermittelt'
+      'house-wellensaenger',
+      'haus-wellensaenger',
+      HOUSE_EMBLEMS.wellensaenger,
+      'Als Mündel an Clan Wellensänger vermittelt'
     ),
     wardAway('ward-away-isdis-grendel-sturmgeborener', 'Clan Sturmgeborener', 'isdis-grendel', 'house-sturmgeborener', 'haus-sturmgeborener')
   ],
@@ -515,9 +518,9 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Clan Grendel (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Quellenstammbaum wurde ohne Personenfokus vom Gründerpaar Leif und Ljotunn bis zur Generation von 1740 übernommen. Das Clanwappen und genau ein Zeitsprung liegen strikt seriell zwischen dem Gründerpaar und Eiríkr beziehungsweise Halldís. Die alte Schreibweise Grindel wird entsprechend der Registerregel als Grendel normalisiert; stabile Gegenakten-IDs mit „grindel“ bleiben aus Kompatibilitätsgründen unverändert. Hlökk folgt der eindeutigen Stammbaumgrafik statt der fehlerhaften Tabellenform Hlölkk. Der alte Quellkasten nennt Horunn als Sitz, während die verbindliche Ivarsheim-Gliederung Clan Grendel unter Klippenschlag/Hjerimsheim führt; Hjerimsheim bleibt maßgeblich. Thordis wird 1630 geboren, obwohl ihr Vater Gunnar laut derselben Quelle 1625 stirbt; Asgeir wird 1628 geboren, obwohl Bagsecg 1627 stirbt. Beide Chronologiefehler bleiben sichtbar dokumentiert und wurden nicht spekulativ umdatiert. Bjarni und Ísdís tragen in der Stammbaumgrafik eindeutig den hellblauen Mündelrahmen. Ísdís’ Zielwappen entspricht dem bei Thorbrand gezeigten Clan Sturmgeborener. Bjarnis Meerfrauenwappen ist keinem benannten Clan der Quelle zugeordnet und wird daher ausdrücklich als unbekannter Küstenclan geführt. Die namenlosen Verlobtenfelder der Tabelle werden nicht als reale Beziehungen angelegt. Verheiratete Grendel-Frauen erhalten direkte Wegverheiratet-Knoten; Kinder ihrer auswärtigen Ehen verbleiben ausschließlich in den fortführenden Gegenakten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Der vollständige Quellenstammbaum wurde ohne Personenfokus vom Gründerpaar Leif und Ljotunn bis zur Generation von 1740 übernommen. Das Clanwappen und genau ein Zeitsprung liegen strikt seriell zwischen dem Gründerpaar und Eiríkr beziehungsweise Halldís. Die alte Schreibweise Grindel wird entsprechend der Registerregel als Grendel normalisiert; stabile Gegenakten-IDs mit „grindel“ bleiben aus Kompatibilitätsgründen unverändert. Hlökk folgt der eindeutigen Stammbaumgrafik statt der fehlerhaften Tabellenform Hlölkk. Der alte Quellkasten nennt Horunn als Sitz, während die verbindliche Ivarsheim-Gliederung Clan Grendel unter Klippenschlag/Hjerimsheim führt; Hjerimsheim bleibt maßgeblich. Thordis wird 1630 geboren, obwohl ihr Vater Gunnar laut derselben Quelle 1625 stirbt; Asgeir wird 1628 geboren, obwohl Bagsecg 1627 stirbt. Beide Chronologiefehler bleiben sichtbar dokumentiert und wurden nicht spekulativ umdatiert. Bjarni und Ísdís tragen in der Stammbaumgrafik eindeutig den hellblauen Mündelrahmen. Ísdís’ Zielwappen entspricht dem bei Thorbrand gezeigten Clan Sturmgeborener. Die Grendel-Quelle lässt Bjarnis Meerfrauenwappen unbenannt; die Wellensänger-Hausquelle identifiziert dieselbe Person mit identischem Namen, Geburtsjahr und Porträt ausdrücklich als Uthars Mündel, weshalb das Ziel nun Clan Wellensänger ist. Die namenlosen Verlobtenfelder der Tabelle werden nicht als reale Beziehungen angelegt. Verheiratete Grendel-Frauen erhalten direkte Wegverheiratet-Knoten; Kinder ihrer auswärtigen Ehen verbleiben ausschließlich in den fortführenden Gegenakten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryTombstones: {
       persons: ['haus-grendel-gruender', 'haus-grendel-gruenderin'],
       partnerships: ['marriage-haus-grendel-founders']

@@ -332,7 +332,12 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
       notes: 'Geschlecht, Ehe und Nachkommen folgen der bereits ausgearbeiteten Saethwyr-Gegenakte.'
     }),
     person('gwalchgwyn-saethwyr', 'Gwalchgwyn Saethwyr', 'male', '1680', '', 'house-saethwyr'),
-    person('afal-arth', 'Afal Arth', 'male', '1675', ''),
+    person('afal-arth', 'Afal Arth', 'male', '1675', '', ARTH_HOUSE_ID, {
+      extensions: {
+        chartCenterBetweenPartnerPersonIds: ['delyth-gwyvern', 'ysbail-cenyr'],
+        registryManagedExtensionFields: ['chartCenterBetweenPartnerPersonIds']
+      }
+    }),
     person('delyth-gwyvern', 'Delyth Gwyvern', 'female', '1675', '1705', 'house-gwyvern'),
     person('ysbail-cenyr', "Ysbail O'Cenyr", 'female', '1680', '1710', 'house-cenyr', { familyRole: 'affair' }),
     person('tegwen-arth', 'Tegwen Arth', 'female', '1676', '', ARTH_HOUSE_ID, {
@@ -441,8 +446,20 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     }),
     createMarriage('marriage-gingalain1671-llewella', ...LLEWELLA_IDS),
     createMarriage('marriage-gwalchgwyn-melyn', ...MELYN_IDS),
-    createMarriage('marriage-delyth-afal', ...AFAL_IDS),
-    createMarriage('affair-afal-ysbail', ...AFAL_AFFAIR_IDS, { type: 'affair', status: 'ended' }),
+    createMarriage('marriage-delyth-afal', ...AFAL_IDS, {
+      extensions: {
+        chartAlignPartnerOverChildrenPersonId: 'delyth-gwyvern',
+        registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId']
+      }
+    }),
+    createMarriage('affair-afal-ysbail', ...AFAL_AFFAIR_IDS, {
+      type: 'affair',
+      status: 'ended',
+      extensions: {
+        chartAlignPartnerOverChildrenPersonId: 'ysbail-cenyr',
+        registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId']
+      }
+    }),
     createMarriage('marriage-tegwen-morgan', ...TEGWEN_IDS),
     createMarriage('engagement-griff-jowna', ...GRIFF_IDS, { type: 'engagement', status: 'ended' }),
     createMarriage('marriage-cadfael-gwendolen', ...CADFAEL_1681_IDS),

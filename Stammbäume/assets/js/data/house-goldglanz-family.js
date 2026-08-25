@@ -167,6 +167,17 @@ function alignChildGroupBelowParentPair(record) {
   };
 }
 
+function alignParentPairOverChild(record, childPersonId) {
+  return {
+    ...record,
+    extensions: {
+      ...record.extensions,
+      chartAlignParentPairOverChildPersonId: childPersonId,
+      registryManagedExtensionFields: ['chartAlignParentPairOverChildPersonId']
+    }
+  };
+}
+
 function childrenOf(childIds, partnershipId, options = {}) {
   return createParentages(childIds, PARTNERS_BY_ID[partnershipId], partnershipId, {
     idPrefix: 'goldglanz-parentage',
@@ -313,13 +324,19 @@ export const HOUSE_GOLDGLANZ_FAMILY = Object.freeze({
     person('magnus-1735-goldglanz', 'Magnus Goldglanz', 'male', '1735', '')
   ],
   partnerships: [
-    alignChildGroupBelowParentPair(partnership('marriage-ljotmar-wodrun-goldglanz', { status: 'ended' })),
+    partnership('marriage-ljotmar-wodrun-goldglanz', { status: 'ended' }),
     alignChildGroupBelowParentPair(partnership('marriage-sigrid-wulfgar-silberblut', { status: 'ended', end: '1640' })),
     partnership('marriage-torvald-gulda-varangr', { status: 'ended', end: '1646' }),
     alignChildGroupBelowParentPair(partnership('marriage-haraldr-rimla-goldglanz', { status: 'ended', end: '1681' })),
     partnership('marriage-eirik-iseld-schwarzblut', { status: 'ended', end: '1662' }),
-    alignChildGroupBelowParentPair(partnership('marriage-birger-kragnis-goldglanz', { status: 'ended', end: '1674' })),
-    alignChildGroupBelowParentPair(partnership('marriage-skule-poldis-goldglanz', { status: 'ended', end: '1686' })),
+    alignParentPairOverChild(
+      partnership('marriage-birger-kragnis-goldglanz', { status: 'ended', end: '1674' }),
+      'krister-goldglanz'
+    ),
+    alignParentPairOverChild(
+      partnership('marriage-skule-poldis-goldglanz', { status: 'ended', end: '1686' }),
+      'hekla-goldglanz'
+    ),
     alignChildGroupBelowParentPair(partnership('marriage-magnus-eystra-goldglanz', { status: 'ended', end: '1704' })),
     partnership('marriage-harald-myrna-blutstahl', { status: 'ended', end: '1679' }),
     alignChildGroupBelowParentPair(partnership('marriage-krister-blanda-goldglanz', { status: 'ended', end: '1709' })),
@@ -336,7 +353,10 @@ export const HOUSE_GOLDGLANZ_FAMILY = Object.freeze({
     partnership('marriage-hakon-brynhildr-varangr'),
     alignChildGroupBelowParentPair(partnership('marriage-urdin-hadda-goldglanz')),
     partnership('marriage-tyrfing-thera-schattenherz'),
-    alignChildGroupBelowParentPair(partnership('marriage-sverre-eithne-goldglanz'))
+    alignParentPairOverChild(
+      partnership('marriage-sverre-eithne-goldglanz'),
+      'magnus-1735-goldglanz'
+    )
   ],
   parentages: [
     ...childrenOf(['wulfgar-goldglanz', 'gulda-goldglanz'], 'marriage-ljotmar-wodrun-goldglanz', {
@@ -413,7 +433,8 @@ export const HOUSE_GOLDGLANZ_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 2,
+    chartLayoutPolicy: 'strict-v1',
+    sourceRevision: 3,
     sourceModule: 'Clan Goldglanz (bereitgestellte Altdaten)',
     sourceNote: 'Der vollständige Goldglanz-Stammbaum wird ohne Personenfokus von Ljotmar und Wodrun bis zur jüngsten Generation des Jahres 1740 gezeigt. Das Hauswappen und genau ein absolut serieller Zeitsprung stehen direkt unter dem Gründerpaar. Kinder werden ausschließlich unter dem belegten Elternpaar geführt; Nachkommen aus auswärtig fortgeführten Linien bleiben in deren Gegenakten. Zehn Goldglanz-Frauen erhalten direkte, senkrechte Wegverheiratet-Knoten unter ihrer jeweiligen Ehe. Kjallak bleibt leiblicher Sohn Tyrkirs und Ljots, erhält den blauen Mündelstatus und eine direkte senkrechte Verknüpfung zu Clan Schmetterschild. Fünf namenlose Verlobten-Platzhalter der jüngsten Generation werden nicht importiert. Wiederholte Standardsilhouetten werden nicht als Individualporträts gespeichert. Sigrids Todesjahr 1540 ist chronologisch unmöglich und wird nach ihrer Silberblut-Gegenakte als 1640 geführt. Vidkuns Todesjahr sowie Kjallaks Geburtsjahr werden nach der Goldglanz-Stammhausquelle auf 1720 vereinheitlicht.',
     sourceConflicts: [{
@@ -439,6 +460,7 @@ export const HOUSE_GOLDGLANZ_FAMILY = Object.freeze({
     registryManagedExtensionFields: [
       'blankFamily',
       'preparedMainLine',
+      'chartLayoutPolicy',
       'sourceModule',
       'sourceNote',
       'sourceConflicts'

@@ -11,6 +11,7 @@ import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
 } from './ivarsheim-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_EMBLEMS } from './tal-der-milane-house-profiles.js';
 
@@ -31,7 +32,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   hebog: TAL_DER_MILANE_HOUSE_EMBLEMS.hebog,
   mwyalchen: TAL_DER_MILANE_HOUSE_EMBLEMS.mwyalchen,
   tylluan: TAL_DER_MILANE_HOUSE_EMBLEMS.tylluan,
-  eryr: TAL_DER_MILANE_HOUSE_EMBLEMS.eryr
+  eryr: TAL_DER_MILANE_HOUSE_EMBLEMS.eryr,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -278,7 +280,7 @@ export const HOUSE_FEUERHAAR_FAMILY = Object.freeze({
     house('house-arnvild', 'Clan Arnvild'),
     house('house-silberblut', 'Clan Silberblut'),
     house('house-kummerherz', 'Clan Kummerherz'),
-    house('house-gullvig', 'Clan Gullvig')
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig)
   ],
   persons: [
     person('robyn-pengoch', 'Robyn Pengoch', 'male', '????', '????', {

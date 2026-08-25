@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_STERKR_PORTRAITS } from './house-sterkr-portraits.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import {
   RORIKSHEIM_HOUSE_EMBLEMS,
   RORIKSHEIM_HOUSE_PROFILES
@@ -26,7 +27,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   skaal: RORIKSHEIM_HOUSE_EMBLEMS.skaal,
   schwarzdorn: RORIKSHEIM_HOUSE_EMBLEMS.schwarzdorn,
   freiwinter: RORIKSHEIM_HOUSE_EMBLEMS.freiwinter,
-  ceirwyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.ceirwyn
+  ceirwyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.ceirwyn,
+  gullvig: KRONENTAL_HOUSE_EMBLEMS.gullvig
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -123,7 +125,7 @@ const COUPLES = Object.freeze({
   ragnfred: ['isbjorg-brathfengr', 'ragnfred-sterkr'],
   sunniva: ['gorsedd-ceirwyn', 'sunniva-sterkr'],
   mistkatla: ['ragnor-skald', 'mistkatla-sterkr'],
-  ubbe: ['ubbe-sterkr', 'rannveig-gulvig'],
+  ubbe: ['ubbe-sterkr', 'rannveig-gullvig'],
   einarr1614: ['einarr-1614-sterkr', 'muirne-urquhart'],
   austveig: ['austveig-sterkr', 'finnr-grindel'],
   skjalg: ['skjalg-sterkr', 'geirny-feuerhaar'],
@@ -264,7 +266,7 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
     house('house-skald', 'Clan Skald', HOUSE_EMBLEMS.skald),
     house('house-brathfengr', 'Clan Brathfengr', HOUSE_EMBLEMS.brathfengr),
     house('house-ceirwyn', 'Haus Ceirwyn', HOUSE_EMBLEMS.ceirwyn),
-    house('house-gulvig', 'Clan Gulvig'),
+    house('house-gullvig', 'Clan Gullvig', HOUSE_EMBLEMS.gullvig),
     house('house-urquhart', 'Haus Urquhart'),
     house('house-grendel', 'Clan Grendel'),
     house('house-feuerhaar', 'Clan Feuerhaar'),
@@ -298,7 +300,7 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
     person('ubbe-sterkr', 'Ubbe Sterkr', 'male', '1594', '1699', {
       title: 'Hesir des Clans Sterkr bis 1699'
     }),
-    spouse('rannveig-gulvig', 'Rannveig Gulvig', 'female', '1596', '1656', 'house-gulvig'),
+    spouse('rannveig-gullvig', 'Rannveig Gullvig', 'female', '1596', '1656', 'house-gullvig'),
 
     person('einarr-1614-sterkr', 'Einarr Sterkr', 'male', '1614', '1705', {
       title: 'Hesir des Clans Sterkr 1699–1705'
@@ -445,7 +447,7 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: 'Clan Sterkr (bereitgestellte Altdaten)',
     sourceNote: 'Die vollständige Akte übernimmt alle 51 benannten Quellpersonen, 22 Ehen und 28 Abstammungen. Nach Aegir und Vár folgen Hauswappen und ein absolut serieller Zeitsprung zu Ragnfred und Sunniva; ein zweiter serieller Zeitsprung führt ausschließlich unter Ragnfred und Isbjörg zu Mistkatla und Ubbe. Neun belegte auswärtige Ehen von Sterkr-Frauen besitzen direkte Wegverheiratet-Knoten. Kinder in den Gegenakten Ceirwyn, Skaal, Schwarzdorn und Freiwinter werden hier nicht gedoppelt. Kanonische Weltpersonen und Partnerschafts-IDs werden mit diesen Gegenakten geteilt. Dokumentierte Quellwidersprüche: Skjalg und Heremod erhalten in der Oberhauptliste ihre Geburtsjahre als scheinbare Amtsanfänge; die Amtsfolgen werden deshalb aus der Nachfolge 1705/1720 abgeleitet. Einarrs Altersangaben im Bürgerkrieg passen nicht zum Geburtsjahr 1674, sofern der Krieg der Prätendenten 1720–1740 gemeint ist. Vedis und Astrid wären nach den Quelljahren bei der Geburt Töchter 15-jähriger Mütter. Hallgards Herkunft schwankt zwischen Sökering und dem registrierten Clan Sökeren, Rognvalds kanonische Gegenakte schreibt Rognvaldr, und Stûn erscheint auch als Stún. Skadis hohes Lebensalter ohne Todeszeichen gilt in Aleria wegen möglicher magischer Langlebigkeit ausdrücklich nicht als Widerspruch. Keine der offenen Angaben wurde still erfunden oder überschrieben. Wiederholte Standardsilhouetten wurden nicht als Individualportraits importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
@@ -461,6 +463,13 @@ export const HOUSE_STERKR_FAMILY = Object.freeze({
       'regionEmblems'
     ],
     registryManagedRecordFields: ['folderPath'],
-    registryManagedViewFields: ['focusPersonId', 'limitGenerations']
+    registryManagedViewFields: ['focusPersonId', 'limitGenerations'],
+    registryTombstones: {
+      persons: ['rannveig-gulvig'],
+      partnerships: [],
+      parentages: [],
+      cadetBranches: [],
+      timeJumps: []
+    }
   }
 });

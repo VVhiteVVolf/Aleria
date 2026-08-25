@@ -31,6 +31,8 @@ import {
   applyFamilyChartHouseLinkAlignmentPlan,
   createFamilyChartHouseLinkAlignmentPlan
 } from './family-chart-house-link-alignment.js';
+import { applyFamilyChartPairCompaction } from './family-chart-pair-compaction.js';
+import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
 import {
   applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
@@ -39,8 +41,12 @@ import {
   createFamilyChartAlignedParentageGroupPlan,
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
+import { resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
-import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
+import {
+  insertTimeJumpAsSerialBarrier,
+  resolveFamilyChartSerialPredecessorId
+} from './family-chart-time-jump-router.js';
 
 const ADAPTER_ID = 'family-chart';
 const LIBRARY_VERSION = '0.9.0';
@@ -429,9 +435,17 @@ function applyCadetBranches({
     const house = houseById.get(branch.houseId);
     const node = createHouseLinkNode(branch, house);
     const nodeId = node.id;
-    node.rels.parents = [...parentIds];
-    parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
-    chartById.set(nodeId, node);
+    const usesNativeSpousePair = parentIds.length === 2
+      && chartById.get(parentIds[0])?.rels?.spouses?.includes(parentIds[1])
+      && chartById.get(parentIds[1])?.rels?.spouses?.includes(parentIds[0]);
+    // Family Chart duplicates a child node when it receives two parents that
+    // are intentionally connected by an extra line instead of its native
+    // spouse graph (for example related fiancés). Keep both semantic anchors
+    // for Aleria's straight pair route, but give the layout library only one
+    // structural parent so exactly one crest card is created.
+    const layoutParentIds = parentIds.length === 2 && !usesNativeSpousePair
+      ? [parentIds[0]]
+      : parentIds;
     const lineMetadata = {
       type: branch.linkType === 'ward-away' ? 'ward-away' : 'cadet-house',
       color: branch.linkType === 'ward-away' ? ROLE_LINE_COLORS['ward-away'] : '#b88b37',
@@ -443,6 +457,10 @@ function applyCadetBranches({
       hidden: parentIds.length === 2
         && branch.linkType !== 'line-extinct'
     };
+    node.data.aleria.relationshipParentIds = [...parentIds];
+    node.rels.parents = [...layoutParentIds];
+    layoutParentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
+    chartById.set(nodeId, node);
     parentageLines.set(nodeId, lineMetadata);
     if (lineMetadata.hidden) {
       extraParentageLines.push(Object.freeze({
@@ -689,9 +707,18 @@ function applyTimeJumps({
         .filter(personId => chartById.has(personId))
         .slice(0, 2);
       if (!sharedPartnership || !chartById.has(nodeId) || !sharedParentIds.length) return;
+      const serialPredecessorId = resolveFamilyChartSerialPredecessorId({
+        chartById,
+        parentIds: sharedParentIds,
+        sourcePartnershipId: sharedPartnershipId,
+        includePairBoundBranches: true
+      });
+      const visualParentIds = serialPredecessorId
+        ? [serialPredecessorId]
+        : sharedParentIds;
       extraParentageLines.push(Object.freeze({
         kind: 'parentage',
-        parentIds: Object.freeze([...sharedParentIds]),
+        parentIds: Object.freeze([...visualParentIds]),
         childId: nodeId,
         type: 'time-jump',
         color: relationColor(family, 'claimed'),
@@ -1028,8 +1055,17 @@ export function toFamilyChartData(input, options = {}) {
     extraParentageLines.push(Object.freeze({
       kind: 'parentage-group',
       ...(group.kind === 'parent-pair'
-        ? { parentIds: group.parentIds }
-        : { parentId: group.parentId }),
+        ? {
+            parentIds: group.parentIds.map(parentId => (
+              appearancePlan.resolveParticipantId(parentId, group.partnershipId)
+            ))
+          }
+        : {
+            parentId: appearancePlan.resolveParticipantId(
+              group.parentId,
+              group.partnershipId
+            )
+          }),
       childIds: group.childIds,
       type: lineMetadata.type,
       color: lineMetadata.color,
@@ -1105,7 +1141,6 @@ export function createFamilyChartSession(config) {
 
   let focusPersonId = resolveDefaultMainId();
   let destroyed = false;
-
   container.classList.add('f3', 'f3-cont');
   const chart = runtime.f3.createChart(container, converted.data);
 
@@ -1211,14 +1246,12 @@ export function createFamilyChartSession(config) {
     });
   }
 
-  function configuredFocusViewport() {
-    const chartViewport = family.extensions?.chartViewport;
-    if (chartViewport?.initialPosition !== 'focus') return null;
-    const configuredScale = Number(chartViewport.initialScale);
-    const scale = Number.isFinite(configuredScale)
-      ? Math.min(1, Math.max(0.25, configuredScale))
-      : 0.55;
-    return { scale };
+  function initialFocusViewport() {
+    const fittedScale = Number(container.querySelector('#f3Canvas')?.__zoom?.k);
+    return resolveFamilyChartInitialViewport({
+      chartViewport: family.extensions?.chartViewport,
+      fittedScale
+    });
   }
 
   function centerExistingChartNode(personId, scale) {
@@ -1250,6 +1283,17 @@ export function createFamilyChartSession(config) {
     return true;
   }
 
+  function scheduleReadableInitialViewport(personId = focusPersonId) {
+    const applyViewport = () => {
+      if (destroyed) return;
+      const focusViewport = initialFocusViewport();
+      if (focusViewport) centerExistingChartNode(personId, focusViewport.scale);
+    };
+    if (typeof runtime.requestAnimationFrame === 'function') {
+      runtime.requestAnimationFrame(() => runtime.requestAnimationFrame(applyViewport));
+    } else applyViewport();
+  }
+
   function update(nextFamily, nextView = nextFamily?.view) {
     ensureActive();
     const nextConverted = toFamilyChartData(nextFamily, config.options);
@@ -1273,7 +1317,7 @@ export function createFamilyChartSession(config) {
     focusPersonId = personId;
     applyView(false);
     chart.updateMainId?.(personId);
-    const focusViewport = configuredFocusViewport();
+    const focusViewport = initialFocusViewport();
     if (focusViewport && centerExistingChartNode(personId, focusViewport.scale)) return true;
     chart.updateTree?.({
       initial: false,
@@ -1294,9 +1338,8 @@ export function createFamilyChartSession(config) {
     focusPersonId = defaultPersonId;
     applyView(false);
     chart.updateMainId?.(defaultPersonId);
-    const focusViewport = configuredFocusViewport();
-    if (focusViewport && centerExistingChartNode(defaultPersonId, focusViewport.scale)) return true;
     chart.updateTree?.({ initial: false, tree_position: 'fit' });
+    scheduleReadableInitialViewport(defaultPersonId);
     return true;
   }
 
@@ -1318,24 +1361,39 @@ export function createFamilyChartSession(config) {
   configureCard();
   applyView(false);
   chart.setBeforeUpdate?.(() => {
+    const tree = chart.store?.getTree?.();
     const alignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
     applyFamilyChartPartnerAlignmentPlan({
-      tree: chart.store?.getTree?.(),
+      tree,
       plan: alignmentPlan,
       orientation: view.orientation
     });
     const descendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(family);
     applyFamilyChartDescendantAlignmentPlan({
-      tree: chart.store?.getTree?.(),
+      tree,
       plan: descendantAlignmentPlan,
       orientation: view.orientation
     });
     const houseLinkAlignmentPlan = createFamilyChartHouseLinkAlignmentPlan(family);
-    applyFamilyChartHouseLinkAlignmentPlan({
-      tree: chart.store?.getTree?.(),
+    applyFamilyChartPairCompaction({
+      tree,
+      family,
       plan: houseLinkAlignmentPlan,
       orientation: view.orientation
     });
+    applyFamilyChartHouseLinkAlignmentPlan({
+      tree,
+      plan: houseLinkAlignmentPlan,
+      orientation: view.orientation
+    });
+    const spacingGuard = applyFamilyChartSpacingGuard({
+      tree,
+      family,
+      orientation: view.orientation,
+      maximumScale: 1
+    });
+    container.dataset.layoutCollisionCount = String(spacingGuard.remainingCollisions.length);
+    container.dataset.layoutSpacingScale = String(spacingGuard.scale);
   });
   chart.setAfterUpdate?.(options => {
     linkRenderer.refresh(options?.transition_time);
@@ -1343,15 +1401,7 @@ export function createFamilyChartSession(config) {
   });
   chart.updateMainId?.(focusPersonId);
   chart.updateTree?.({ initial: true, tree_position: 'fit', transition_time: 0 });
-  const focusViewport = configuredFocusViewport();
-  if (focusViewport) {
-    const applyConfiguredViewport = () => {
-      if (!destroyed) centerExistingChartNode(focusPersonId, focusViewport.scale);
-    };
-    if (typeof runtime.requestAnimationFrame === 'function') {
-      runtime.requestAnimationFrame(() => runtime.requestAnimationFrame(applyConfiguredViewport));
-    } else applyConfiguredViewport();
-  }
+  scheduleReadableInitialViewport();
 
   return Object.freeze({
     update,
