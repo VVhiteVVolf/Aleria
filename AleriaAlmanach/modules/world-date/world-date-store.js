@@ -76,7 +76,9 @@ async function publishNewerLocalWorldDate(backend) {
   _worldDateRemoteError = '';
   emitWorldDateChanged();
   try {
-    const saved = await backend.saveCurrentAleriaDate(_worldDateRecord);
+    const saved = typeof backend.initializeCurrentAleriaDate === 'function'
+      ? await backend.initializeCurrentAleriaDate(_worldDateRecord)
+      : await backend.saveCurrentAleriaDate(_worldDateRecord);
     applyWorldDateRecord(saved || _worldDateRecord, { remoteConnected: true });
   } catch (error) {
     _worldDateRemoteState = 'error';

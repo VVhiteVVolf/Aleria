@@ -863,6 +863,22 @@
           if (onError) onError(error);
         });
       },
+      async initializeCurrentAleriaDate(data = {}) {
+        const user = await requireFirebaseUser();
+        const safe = normalizeCurrentAleriaDateWrite(data);
+        const reference = doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC);
+        return runTransaction(db, async transaction => {
+          const snapshot = await transaction.get(reference);
+          if (snapshot.exists()) return snapshot.data();
+          const record = {
+            ...safe,
+            updatedBy: user.uid,
+            updatedAt: serverTimestamp()
+          };
+          transaction.set(reference, record);
+          return { ...record, updatedAt: null };
+        });
+      },
       async saveCurrentAleriaDate(data = {}) {
         const user = await requireFirebaseUser();
         const safe = normalizeCurrentAleriaDateWrite(data);

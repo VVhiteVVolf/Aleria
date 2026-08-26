@@ -66,6 +66,36 @@ test('das gemeinsame Firebase-Datum gewinnt beim Laden gegen einen älteren loka
   assert.equal(state.syncState, 'online');
 });
 
+test('bei der ersten Onlinesynchronisierung gewinnt atomar das bereits von einem anderen Gerät gesetzte Datum', async () => {
+  const initializations = [];
+  const remote = { year: 1740, month: 3, day: 12, updatedAtClient: 5, updatedBy: 'player-b' };
+  const backend = {
+    subscribeCurrentAleriaDate(onNext) {
+      onNext(null);
+      return () => {};
+    },
+    async initializeCurrentAleriaDate(value) {
+      initializations.push({ ...value });
+      return remote;
+    },
+    async saveCurrentAleriaDate() {
+      throw new Error('Die normale Speicherung darf bei der Initialisierung nicht verwendet werden.');
+    }
+  };
+  const { context } = loadWorldDateStore({
+    localRecord: { year: 1740, month: 3, day: 20, updatedAtClient: 999, updatedBy: 'player-a' },
+    backend
+  });
+
+  vm.runInContext('AleriaWorldDateStore.initialize()', context);
+  await new Promise(resolve => setImmediate(resolve));
+
+  const state = vm.runInContext('AleriaWorldDateStore.getState()', context);
+  assert.equal(initializations.length, 1);
+  assert.deepEqual({ ...state.date }, { year: 1740, month: 3, day: 12 });
+  assert.equal(state.syncState, 'online');
+});
+
 test('eine Datumsänderung wird zuerst online gespeichert und danach als geteilt angezeigt', async () => {
   const writes = [];
   const backend = {
