@@ -34,6 +34,7 @@
 
     renderProfile(data.profile || {});
     renderSections(data.sections || {});
+    renderFigures(data.figures || null);
     renderImages(data.images || {});
     scheduleImageRefresh(data.images || {});
     renderContentTargets(data.contentTargets || {});
@@ -103,6 +104,53 @@
     Object.entries(targets).forEach(([key, value]) => {
       setText(`[data-haeuser-content="${escapeSelector(key)}"]`, value);
     });
+  }
+
+  function renderFigures(figures) {
+    const entries = Array.isArray(figures?.entries) ? figures.entries : [];
+    const target = root.querySelector("[data-haeuser-figures-table-body]");
+    if (!target || !entries.length) return;
+
+    setText("[data-haeuser-figures-heading]", figures.heading || "12. Historische Figuren");
+
+    const rows = [];
+    let currentGroup = null;
+
+    rows.push(`
+      <tr><th class="haeuser-table-title" colspan="4" data-haeuser-figures-title>${escapeHtml(figures.tableTitle || "Historische Personen und Figuren des Hauses")}</th></tr>
+      <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+      <tr class="sub-header haeuser-history-header">
+        <td class="haeuser-history-heading-name">Name &amp; Titel</td>
+        <td class="haeuser-history-heading-desc" colspan="3">Beschreibung</td>
+      </tr>
+      <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+    `);
+
+    entries.forEach((entry, index) => {
+      const group = entry.group || "Weitere Figuren";
+      if (group !== currentGroup) {
+        rows.push(`<tr><td class="haeuser-history-divider" colspan="4"><b>${escapeHtml(group)}</b></td></tr>`);
+        rows.push('<tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>');
+        currentGroup = group;
+      }
+
+      const imageKey = entry.imageKey || `historische-figur-portrait-${String(index + 1).padStart(4, "0")}`;
+      rows.push(`
+        <tr>
+          <td class="portrait-cell haeuser-history-role"><b data-orte-explicit-inline>${escapeHtml(entry.role || "Figur des Hauses")}</b></td>
+          <td class="desc-cell pt-s-0077 haeuser-history-desc" colspan="3" rowspan="3" data-orte-explicit-inline>${escapeHtml(entry.description || "")}</td>
+        </tr>
+        <tr>
+          <td class="portrait-cell haeuser-history-portrait">
+            <span class="orte-image-slot haeuser-history-portrait-slot" data-orte-image-key="${escapeAttr(imageKey)}" data-orte-image-label="Portrait ${escapeAttr(entry.name || "historische Figur")}" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait ${escapeAttr(entry.name || "historische Figur")}"></span>
+          </td>
+        </tr>
+        <tr><td class="portrait-cell haeuser-history-name"><b data-orte-explicit-inline>${escapeHtml(entry.name || "Unbekannt")}</b></td></tr>
+        <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+      `);
+    });
+
+    target.innerHTML = rows.join("");
   }
 
   function renderFamilyTreeEmbed(embed) {

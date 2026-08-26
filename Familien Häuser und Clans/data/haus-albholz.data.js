@@ -1,0 +1,263 @@
+(() => {
+  "use strict";
+
+  function portrait(personId, alt, fileName = `${personId}.png`) {
+    return {
+      src: `../Stammb%C3%A4ume/assets/images/portraits/haus-albholz/${fileName}`,
+      alt,
+      format: "portrait",
+    };
+  }
+
+  window.HAEUSER_DATA = {
+  meta: {
+    id: "haus-albholz",
+    title: "Clan Albholz - Aleria",
+    type: "Huskarl-Clan",
+    status: "Active",
+    editorVersion: 1,
+    template: "haus",
+    storage: {
+      document: "haus-albholz",
+      firebaseCollections: {
+        houses: "familien_haeuser_und_clans",
+        inlineContent: "familien_haeuser_und_clans_inline_content",
+        scenes: "familien_haeuser_und_clans_scenes",
+      },
+      imageStorage: {
+        currentMode: "local-feature-assets",
+        plannedProvider: "firebase-storage",
+        plannedRoot: "haeuser/haus-albholz/images",
+        plannedFirestoreMode: "reference",
+      },
+    },
+  },
+
+  name: "Clan Albholz",
+  hierarchy: [
+    { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
+    { type: "Königreich", name: "Aldrimar", slug: "aldrimar" },
+    { type: "Jarltum", name: "Kronental", slug: "kronental" },
+    { type: "Herrschaft", name: "Tal der Helden", slug: "tal-der-helden" },
+    { type: "Sitz", name: "Heldenwacht", slug: "heldenwacht" },
+    { type: "Clan", name: "Clan Albholz", slug: "haus-albholz" },
+  ],
+
+  classification: {
+    category: "Familien Häuser und Clans",
+    houseType: "Huskarl-Clan",
+    scale: "Vasallenclan",
+    parentHouseId: "haus-vaeren",
+    rootHouseId: "haus-albholz",
+    territoryId: "heldenwacht",
+  },
+
+  profile: {
+    motto: "Nicht überliefert",
+    quoteAuthor: "Die Altquelle enthält nur einen Platzhalter",
+    highestTitle: "Huskarl",
+    houseType: "Huskarl-Clan",
+    seat: "Heldenwacht",
+    affiliation: "Königreich Aldrimar | Clan Vaeren",
+    troopStrength: "Klein; keine Heeresstärke überliefert",
+    tiarna: "Keine eigene Tiarnatradition belegt",
+    kerns: "Wachsame Kundschafter, Netzweber und Clankrieger",
+    fleet: "Keine eigene Flotte überliefert",
+    founding: "1691 in Heldenwacht",
+    milestoneOne: "1690 wird Albhric zum Schatten Rag Blauzahns und obersten Netzweber ernannt.",
+    milestoneTwo: "1738 übernimmt Branoc nach Albhrics Tod die Führung des Clans.",
+    people: "Gründer aus dem Druidenhain; nachfolgende Generationen nordisch-aldrimarisch geprägt",
+    wealth: "Mittelmäßig; gezielt eingesetzte Tavernen und Geschäfte",
+    religion: "Alerische Kirche",
+    patronDeities: "Skadia",
+    origin: "Albhric Albholz und Liorain Grünhand",
+    cadetBranches: "Keine überliefert",
+    allies: "Clan Vaeren; Clan Südstahl; Clan Sturmgeborene; Clan Riesentod",
+    enemies: "Keine Fehde überliefert",
+  },
+
+  sections: {
+    overview: "Clan Albholz ist ein kleiner, eigenwilliger Huskarl-Clan aus Heldenwacht. Seine Macht gründet weder auf alter Abstammung noch auf großen Ländereien, sondern auf Naturkenntnis, Kräuterkunde, Beobachtung und den alten Schattenwegen Albhrics. Die Familie gilt als still, wachsam und unorthodox. Wer Wissen sucht, das nicht für jede Halle bestimmt ist, wendet sich an ihr Netzwerk.",
+    classification: "Albholz ist als Huskarl-Clan des Königlichen Jarltums Kronental erfasst. Der Clan sitzt in Heldenwacht und steht als Vasall in unmittelbarer Treue zu Clan Vaeren. Sein Gründer erhielt Adel und Gründungsrecht erst durch seine Dienste für Rag Blauzahn.",
+    history: "Albhric Albholz, von den Nordmännern Alberick genannt, stammte als Schurke und ehemaliger Gauner aus dem Druidenhain. Sein Weg führte ihn von Tirnara über Lothir bis nach Estryll. Nachdem er beim Versuch scheiterte, die Gilde Wintersonne auszurauben, wurde er ihr Gefährte und ein enger Vertrauter Rag Blauzahns. Als Rag König wurde, diente Albhric ihm als Meister der Schatten und oberster Netzweber. 1691 erhob Rag ihn in den Adelsstand und gewährte ihm die Gründung eines eigenen Clans in Heldenwacht. 1692 heiratete Albhric Liorain Grünhand; aus der zunächst arrangierten Verbindung erwuchs eine beständige Ehe. Nach Albhrics Tod im Jahr 1738 übernahm der Erstgeborene Branoc die Führung.",
+    traditions: "Albholz verbindet Bräuche des Druidenhains mit nordischen Hausritualen. Die Sippe pflegt Kräuterkunde, Alchemie und stillen Respekt vor alten Hainen. Jedes Mitglied soll einmal die Wurzelprüfung bestehen: eine einsame Reise in die Wälder rund um Heldenwacht, bei der Beobachtung, Bodenhaftung und das Ertragen der Stille zählen. Große Reden und prunkvolle Gesten genießen wenig Ansehen.",
+    knighthood: "Eine eigene Tiarnatradition ist nicht überliefert. Die Wehrhaftigkeit des Clans zeigt sich stattdessen in Kundschaftern, Schattenläufern und bodenständigen Kriegern. Branoc verkörpert die offene, nordisch geprägte Kampfkraft des Hauses; Toran führt die verborgene Tradition Albhrics als Schatten des Jarls fort.",
+    succession: "Branoc führt den Clan seit 1738. Als pflichtbewusster Erstgeborener sieht er seine wichtigste Aufgabe im Fortbestand des Hauses. Sein ältester Sohn Albhrin ist als nächster Nachfolger verzeichnet. Toran hätte nach Einschätzung der Quelle die Kraft zur Führung, lehnt Herrschaft und Verantwortung jedoch zugunsten seines Dienstes im Verborgenen ab.",
+    holdings: "Der Besitz Albholzes ist im Vergleich zu den alten Häusern Heldenwachts bescheiden, aber zielgerichtet. Der Clan verfügt über keine großen Ländereien. Einige Tavernen und Geschäfte dienen zugleich als Stützpunkte, Nachrichtenquellen und Tarnung für das von Albhric aufgebaute Spionagenetzwerk.",
+    cultureReligion: "Albholz steht kulturell zwischen dem alten Druidenhain seiner Gründer und dem nordischen Heldenwacht, das ihre Kinder und Enkel prägte. Die Altquelle ordnet den Clan der Alerischen Kirche zu und nennt Skadia als Hauptpatronin. Daneben bleiben Kräuterwissen, Alchemie und der Respekt vor Hainen wichtige Teile der Familienkultur.",
+    conflictsAlliances: "Der kleine Clan besitzt keine überlieferte Fehde, wird wegen seiner Nähe zu Rag Blauzahn und seines Wissensnetzes jedoch mit respektvoller Vorsicht betrachtet. Albholz steht Clan Südstahl freundschaftlich nahe, da beide Häuser aus den Bindungen der Wintersonne hervorgingen. Auch zu Sturmgeborene und Riesentod bestehen gute Beziehungen; deren Seefahrer schätzen Albholzer Kräuterkunde bei Krankheiten an Bord.",
+    values: "Albholz baut nicht auf Ruhm oder altes Blut, sondern auf Wahrheit, Beobachtung und Wurzeln. Wissen gilt als gefährlicher als ein Schwert, Stärke muss nicht laut sein, und jedes Urteil soll zuerst den Boden berücksichtigen, auf dem es gefällt wird. Loyalität zu Clan Vaeren verbindet diese stillen Werte mit verlässlichem Dienst am Reich.",
+    court: "Albhric gründete den Clan und führte ihn bis 1738. Heute steht Branoc als geradliniger Krieger an der Spitze. Toran verwaltet das von seinem Vater geerbte Spionagenetz und dient als Schatten des Jarls. Mornhild Moorbrand stabilisiert Branocs Haus durch Ordnung und Pflichtbewusstsein; Albhrin gilt als vorgesehener Erbe.",
+    familyTree: "Die Hauptlinie beginnt mit Albhric und Liorain. Aus ihrer Ehe stammen Branoc, Toran, Eiran und die totgeborene Liora. Branoc und Mornhild Moorbrand haben fünf Kinder: Albhrin, Maelaith, Elbric, Torwynn und Lorcan. Toran unterhält eine Affäre mit Saga; Eiran ist mit Sven Bjarnvarg verheiratet. Für beide Verbindungen sind keine Kinder überliefert.",
+    historicalFigures: "Die Figurenliste umfasst die benannten Mitglieder und eng verbundenen Personen der überlieferten Familienakte. Namenlose Verlobtenfelder und leere Figurenplätze der Altvorlage werden nicht als Personen geführt.",
+  },
+
+  figures: {
+    heading: "12. Figuren des Clans",
+    tableTitle: "Figuren des Clans Albholz",
+    entries: [
+      {
+        group: "Gründer",
+        role: "Gründer · Meister der Schatten · Oberster Netzweber",
+        name: "Albhric „Alberick“ Albholz",
+        imageKey: "figur-albhric-albholz",
+        description: "Albhric war kein Held aus edlem Hause, sondern ein Schurke aus dem Druidenhain. Nach einem gescheiterten Versuch, die Wintersonne auszurauben, wurde er ihr Gefährte und schließlich einer der wichtigsten Männer hinter Rag Blauzahns Thron. Seine Loyalität, sein schmutziger Witz und sein Talent als Netzweber brachten ihm 1691 den Adelsstand und das Recht zur Gründung des Clans Albholz ein.",
+      },
+      {
+        group: "Gründer",
+        role: "Mitgründerin · Kräuterkundige aus dem Druidenhain",
+        name: "Liorain Grünhand",
+        imageKey: "figur-liorain-gruenhand",
+        description: "Liorain war die kluge, naturverbundene Frau Albhrics. Ihre Ehe begann als nüchtern arrangierte Verbindung, entwickelte sich jedoch zu einer ehrlichen, ruhigen und tragfähigen Liebe. Sie gab dem jungen Clan kulturelle Wurzeln und Stabilität.",
+      },
+      {
+        group: "Hausführung",
+        role: "Oberhaupt · Krieger",
+        name: "Branoc Albholz",
+        imageKey: "figur-branoc-albholz",
+        description: "Branoc ist der pflichtbewusste Erstgeborene und amtierende Clankopf. Er ist stärker nordisch geprägt als sein Vater und denkt in klaren Pflichten statt in Geheimnissen. Den Fortbestand Albholzes sichert er durch Standhaftigkeit, Familie und offene Stärke.",
+      },
+      {
+        group: "Hausführung",
+        role: "Schatten des Jarls · Leiter des Spionagenetzes",
+        name: "Toran Albholz",
+        imageKey: "figur-toran-albholz",
+        description: "Toran schlägt am stärksten nach Albhrics verborgener Seite. Herrschaft reizt ihn nicht; er übernahm stattdessen das väterliche Netzwerk und dient König Sigurd als Schatten des Jarls. Im Clan gilt er als schneller und gefährlicher als Branoc, aber als vollkommen uninteressiert an der Sippenführung.",
+      },
+      {
+        group: "Gründergeneration",
+        role: "In Clan Bjarnvarg verheiratet",
+        name: "Eiran Albholz",
+        imageKey: "figur-eiran-albholz",
+        description: "Eiran ist Albhrics älteste Tochter und lebt nach ihrer arrangierten Ehe mit Sven Bjarnvarg in dessen kriegerischem Clan. Ihre Bindung zu Albholz ist heute gering, ohne dass eine Feindschaft besteht; ihr eigener Weg führt durch die rauere Ordnung der Bjarnvarg.",
+      },
+      {
+        group: "Gründergeneration",
+        role: "Totgeborene Tochter",
+        name: "Liora Albholz",
+        imageKey: "figur-liora-albholz",
+        description: "Liora wurde im Jahr 1700 tot geboren. Die Familienakte bewahrt sie ausdrücklich als viertes Kind Albhrics und Liorains.",
+      },
+      {
+        group: "Hausführung",
+        role: "Ehefrau Branocs · Hüterin der Hausordnung",
+        name: "Mornhild Moorbrand",
+        imageKey: "figur-mornhild-moorbrand",
+        description: "Mornhild ist sittsam, nüchtern und pflichtbewusst. Ihre Verbindung mit Branoc beruht weniger auf Leidenschaft als auf Stabilität und gegenseitigem Respekt. Sie hält Haus, Abläufe und Kinder mit leiser Hand zusammen.",
+      },
+      {
+        group: "Verbindungen",
+        role: "Affäre Torans",
+        name: "Saga",
+        imageKey: "figur-saga-toran-affair",
+        description: "Saga ist Torans andauernde, heißblütige Affäre. Herkunft und Sippe hält sie bewusst im Dunkeln. Im Clan gilt sie als laut und provozierend und wird vor allem deshalb geduldet, weil Toran an ihr festhält.",
+      },
+      {
+        group: "Verbindungen",
+        role: "Krieger des Clans Bjarnvarg · Ehemann Eirans",
+        name: "Sven Bjarnvarg",
+        imageKey: "figur-sven-bjarnvarg",
+        description: "Sven ist ein schwerer, lauter und selbstsicherer Krieger des Clans Bjarnvarg. Seine von Albhric arrangierte Ehe mit Eiran ist funktional, aber kein Liebesmärchen. Eiran lebt seitdem in Svens Sippe.",
+      },
+      {
+        group: "Junge Generation",
+        role: "Vorgesehener Erbe",
+        name: "Albhrin Albholz",
+        imageKey: "figur-albhrin-albholz",
+        description: "Albhrin ist der älteste Sohn Branocs und Mornhilds. Die Hierarchie der Quelle führt ihn als nächsten Erben des Clans.",
+      },
+      {
+        group: "Junge Generation",
+        role: "Tochter Branocs und Mornhilds",
+        name: "Maelaith Albholz",
+        imageKey: "figur-maelaith-albholz",
+        description: "Maelaith wurde 1719 geboren. Eine besondere Aufgabe oder Verlobung ist noch nicht überliefert.",
+      },
+      {
+        group: "Junge Generation",
+        role: "Sohn Branocs und Mornhilds",
+        name: "Elbric Albholz",
+        imageKey: "figur-elbric-albholz",
+        description: "Elbric wurde 1721 geboren. Eine besondere Aufgabe oder Verlobung ist noch nicht überliefert.",
+      },
+      {
+        group: "Junge Generation",
+        role: "Tochter Branocs und Mornhilds",
+        name: "Torwynn Albholz",
+        imageKey: "figur-torwynn-albholz",
+        description: "Torwynn wurde 1722 geboren. Eine besondere Aufgabe oder Verlobung ist noch nicht überliefert.",
+      },
+      {
+        group: "Junge Generation",
+        role: "Sohn Branocs und Mornhilds",
+        name: "Lorcan Albholz",
+        imageKey: "figur-lorcan-albholz",
+        description: "Lorcan wurde 1725 geboren und ist das jüngste der fünf überlieferten Kinder Branocs und Mornhilds.",
+      },
+    ],
+  },
+
+  images: {
+    "haus-wappen": {
+      src: "../Stammb%C3%A4ume/assets/images/houses/Aldrimar/Kronental/clan-albholz.png",
+      alt: "Wappen des Clans Albholz",
+      format: "square",
+      maxHeight: 220,
+    },
+    "haus-hauptbild": {
+      src: "assets/images/scenes/haus-albholz.png",
+      alt: "Gerüsteter Kundschafter des Clans Albholz",
+      format: "portrait",
+      maxHeight: 380,
+    },
+    "haus-banner": {
+      src: "../Stammb%C3%A4ume/assets/images/houses/Aldrimar/Kronental/clan-albholz.png",
+      alt: "Clanzeichen Albholzes",
+      format: "square",
+      maxHeight: 220,
+    },
+    "hof-gruender-portrait": portrait("albhric-albholz", "Albhric, Gründer des Clans Albholz"),
+    "hof-oberhaupt-portrait-0001": portrait("branoc-albholz", "Branoc Albholz"),
+    "hof-oberhaupt-portrait-0002": portrait("toran-albholz", "Toran Albholz"),
+    "hof-oberhaupt-portrait-0003": portrait("mornhild-moorbrand", "Mornhild Moorbrand"),
+    "hof-oberhaupt-portrait-0004": portrait("liorain-gruenhand", "Liorain Grünhand"),
+    "hof-erbfolge-portrait-0001": portrait("albhrin-albholz", "Albhrin Albholz"),
+    "figur-albhric-albholz": portrait("albhric-albholz", "Albhric Albholz in jüngeren Jahren", "albhric-albholz-young.png"),
+    "figur-liorain-gruenhand": portrait("liorain-gruenhand", "Liorain Grünhand"),
+    "figur-branoc-albholz": portrait("branoc-albholz", "Branoc Albholz"),
+    "figur-toran-albholz": portrait("toran-albholz", "Toran Albholz"),
+    "figur-eiran-albholz": portrait("eiran-albholz", "Eiran Albholz"),
+    "figur-liora-albholz": portrait("liora-albholz", "Liora Albholz"),
+    "figur-mornhild-moorbrand": portrait("mornhild-moorbrand", "Mornhild Moorbrand"),
+    "figur-saga-toran-affair": portrait("saga-toran-affair", "Saga"),
+    "figur-sven-bjarnvarg": portrait("sven-bjarnvarg", "Sven Bjarnvarg"),
+    "figur-albhrin-albholz": portrait("albhrin-albholz", "Albhrin Albholz"),
+    "figur-maelaith-albholz": portrait("maelaith-albholz", "Maelaith Albholz"),
+    "figur-elbric-albholz": portrait("elbric-albholz", "Elbric Albholz"),
+    "figur-torwynn-albholz": portrait("torwynn-albholz", "Torwynn Albholz"),
+    "figur-lorcan-albholz": portrait("lorcan-albholz", "Lorcan Albholz"),
+  },
+
+  contentTargets: {
+    courtFounder: "† Albhric „Alberick“ Albholz †\n(1660 - 1738)",
+    courtHead: "Branoc Albholz\n(1693 - ????)",
+    courtDeputy: "Toran Albholz\n(1695 - ????)",
+    courtCouncilOne: "Mornhild Moorbrand\n(1695 - ????)",
+    courtCouncilTwo: "Liorain Grünhand\n(1670 - ????)",
+    successionOne: "Albhrin Albholz\n(1716 - ????)",
+    courtOfficeTwo: "Toran Albholz",
+    courtOfficeSix: "Branoc Albholz",
+  },
+
+  familyTreeEmbed: {
+    src: "../Stammb%C3%A4ume/Stammbaum.html?family=haus-albholz&mode=view",
+    title: "Stammbaum des Clans Albholz",
+  },
+
+  trivia: [
+    "Albhric schloss sich der Wintersonne erst an, nachdem sein Versuch gescheitert war, die Gilde auszurauben.",
+    "Die Wurzelprüfung führt jedes Clanmitglied allein in die Wälder rund um Heldenwacht.",
+    "Albholzes Tavernen und Geschäfte dienen zugleich als Knotenpunkte seines Nachrichten- und Spionagenetzes.",
+  ],
+  };
+})();

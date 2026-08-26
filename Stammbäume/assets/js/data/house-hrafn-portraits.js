@@ -38,6 +38,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 
 export const HOUSE_HRAFN_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'morkur-eisenbieger': 'assets/images/portraits/haus-eisenbieger/morkur-eisenbieger.png',
   'hakon-hrafn': HOUSE_RAGNULF_PORTRAITS['hakon-hrafn'],
   'gudrid-1630-ragnulf': HOUSE_RAGNULF_PORTRAITS['gudrid-1630-ragnulf'],
   'osvald-hrafn': HOUSE_HELGR_PORTRAITS['osvald-hrafn'],

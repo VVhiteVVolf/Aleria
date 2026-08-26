@@ -22,19 +22,12 @@ import {
 } from './family-chart-cycle-router.js';
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import {
-  applyFamilyChartDescendantAlignmentPlan,
   createFamilyChartDescendantAlignmentPlan
 } from './family-chart-descendant-alignment.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
+import { applyFamilyChartLayoutPipeline } from './family-chart-layout-pipeline.js';
 import {
-  applyFamilyChartHouseLinkAlignmentPlan,
-  createFamilyChartHouseLinkAlignmentPlan
-} from './family-chart-house-link-alignment.js';
-import { applyFamilyChartPairCompaction } from './family-chart-pair-compaction.js';
-import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
-import {
-  applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
 import {
@@ -284,6 +277,12 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
   if (!partnership) return;
   const founderIds = partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2);
   if (!founderIds.length) return;
+  const configuredCrestParentId = typeof family.extensions?.chartLineageCrestParentPersonId === 'string'
+    ? family.extensions.chartLineageCrestParentPersonId.trim()
+    : '';
+  const crestParentIds = configuredCrestParentId && founderIds.includes(configuredCrestParentId)
+    ? [configuredCrestParentId]
+    : founderIds;
   const descendants = [...selectedParentageByChild.entries()]
     .filter(([, parentage]) => parentage.partnershipId === partnershipId)
     .map(([childId]) => childId)
@@ -302,8 +301,11 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
     emblemScale: family.lineage.crestEmblemScale,
     frameScale: family.lineage.crestFrameScale
   });
-  crest.rels.parents = [...founderIds];
-  founderIds.forEach(founderId => addUnique(chartById.get(founderId).rels.children, crestId));
+  // Manche Kadettenlinien besitzen einen eindeutig benannten Stammvater. In
+  // diesem Opt-in-Fall trägt ausschließlich seine Karte die senkrechte
+  // Wappenachse; die Gründerpartnerschaft selbst bleibt unverändert bestehen.
+  crest.rels.parents = [...crestParentIds];
+  crestParentIds.forEach(founderId => addUnique(chartById.get(founderId).rels.children, crestId));
   chartById.set(crestId, crest);
   parentageLines.set(crestId, {
     type: 'foundation',
@@ -1362,38 +1364,30 @@ export function createFamilyChartSession(config) {
   applyView(false);
   chart.setBeforeUpdate?.(() => {
     const tree = chart.store?.getTree?.();
-    const alignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
-    applyFamilyChartPartnerAlignmentPlan({
-      tree,
-      plan: alignmentPlan,
-      orientation: view.orientation
-    });
-    const descendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(family);
-    applyFamilyChartDescendantAlignmentPlan({
-      tree,
-      plan: descendantAlignmentPlan,
-      orientation: view.orientation
-    });
-    const houseLinkAlignmentPlan = createFamilyChartHouseLinkAlignmentPlan(family);
-    applyFamilyChartPairCompaction({
-      tree,
-      family,
-      plan: houseLinkAlignmentPlan,
-      orientation: view.orientation
-    });
-    applyFamilyChartHouseLinkAlignmentPlan({
-      tree,
-      plan: houseLinkAlignmentPlan,
-      orientation: view.orientation
-    });
-    const spacingGuard = applyFamilyChartSpacingGuard({
+    const layout = applyFamilyChartLayoutPipeline({
       tree,
       family,
       orientation: view.orientation,
-      maximumScale: 1
+      maximumSpacingScale: 1,
+      alignPersonAppearances: true
     });
-    container.dataset.layoutCollisionCount = String(spacingGuard.remainingCollisions.length);
-    container.dataset.layoutSpacingScale = String(spacingGuard.scale);
+    container.dataset.layoutCollisionCount = String(layout.spacingGuard.remainingCollisions.length);
+    container.dataset.layoutSpacingScale = String(layout.spacingGuard.scale);
+    container.dataset.layoutLocalResolutionCount = String(
+      layout.spacingGuard.localResolutions.length
+    );
+    container.dataset.layoutLocalMaximumShift = String(
+      Math.max(
+        0,
+        ...layout.spacingGuard.localResolutions.map(resolution => Math.abs(resolution.delta))
+      )
+    );
+    container.dataset.layoutLocalResolutionRoots = layout.spacingGuard.localResolutions
+      .map(resolution => `${resolution.rootPersonId}:${resolution.delta}`)
+      .join(',');
+    container.dataset.layoutAppearanceAlignmentCount = String(
+      layout.appearanceAlignment.resolutions.length
+    );
   });
   chart.setAfterUpdate?.(options => {
     linkRenderer.refresh(options?.transition_time);

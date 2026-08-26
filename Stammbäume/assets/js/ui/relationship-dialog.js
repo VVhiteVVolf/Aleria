@@ -1,3 +1,5 @@
+import { resolveParentageSelection } from '../modules/relationships/relationship-form-policy.js';
+
 function replacePersonOptions(select, people, emptyLabel = '') {
   select.replaceChildren();
   if (emptyLabel) select.add(new Option(emptyLabel, ''));
@@ -19,6 +21,21 @@ export function createRelationshipDialog(documentRef = document) {
         field.disabled = container.hidden;
       });
     });
+    syncSecondParentOptions();
+  }
+
+  function syncSecondParentOptions() {
+    if (recordTypeSelect.value !== 'parentage') return;
+    const referencePersonId = form.elements.namedItem('referencePersonId').value;
+    const otherPersonId = personSelect.value;
+    const direction = form.elements.namedItem('parentageDirection').value;
+    if (!referencePersonId || !otherPersonId || !direction) return;
+    const selection = resolveParentageSelection({ referencePersonId, otherPersonId, direction });
+    const unavailableIds = new Set(selection.unavailableSecondParentIds);
+    [...secondParentSelect.options].forEach(option => {
+      option.disabled = Boolean(option.value) && unavailableIds.has(option.value);
+    });
+    if (unavailableIds.has(secondParentSelect.value)) secondParentSelect.value = '';
   }
 
   function open(referencePersonId, family) {
@@ -41,6 +58,7 @@ export function createRelationshipDialog(documentRef = document) {
   }
 
   recordTypeSelect.addEventListener('change', syncFields);
+  personSelect.addEventListener('change', syncSecondParentOptions);
+  form.elements.namedItem('parentageDirection').addEventListener('change', syncSecondParentOptions);
   return Object.freeze({ dialog, form, open, close, read, syncFields });
 }
-

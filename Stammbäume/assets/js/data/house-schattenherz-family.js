@@ -342,13 +342,16 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
     person('selrik-schattenherz', 'Selrik Schattenherz', 'male', '1724', ''),
     person('volga-schattenherz', 'Volga Schattenherz', 'female', '1729', ''),
     person('rimbert-schattenherz', 'Rimbert Schattenherz', 'male', '1723', '', {
-      notes: 'Als Kind Simuns und Dagnis anerkannt; die biologische Vaterschaft eines der drei Geschwister bleibt laut Quelle ungeklärt.'
+      notes: 'Leiblicher Sohn Simuns und Dagnis. Die Eisenbieger-Gegenakte klärt, dass nicht Rimbert, sondern Hilda aus Dagnis Affäre stammt.'
     }),
     person('jurgla-schattenherz', 'Jurgla Schattenherz', 'female', '1725', '', {
-      notes: 'Als Kind Simuns und Dagnis anerkannt; die biologische Vaterschaft eines der drei Geschwister bleibt laut Quelle ungeklärt.'
+      notes: 'Leibliche Tochter Simuns und Dagnis. Die Eisenbieger-Gegenakte klärt, dass nicht Jurgla, sondern Hilda aus Dagnis Affäre stammt.'
     }),
     person('hilda-schattenherz', 'Hilda Schattenherz', 'female', '1728', '', {
-      notes: 'Als Kind Simuns und Dagnis anerkannt; die biologische Vaterschaft eines der drei Geschwister bleibt laut Quelle ungeklärt.'
+      familyRole: 'bastard',
+      title: 'Öffentlich Simun zugerechnet · Tochter Nordall Eisenbiegers und Dagnis',
+      tags: ['Bastard'],
+      notes: 'Die Eisenbieger-Herkunftsakte identifiziert Hilda ausdrücklich als Kind der geheimen Affäre Nordall Eisenbieger–Dagni Kaltherz.'
     })
   ],
   partnerships: [
@@ -377,12 +380,12 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
     partnership('marriage-brogan-tjalda-schattenherz'),
     partnership('marriage-tyrfing-thera-schattenherz'),
     partnership('marriage-simun-dagni-schattenherz', {
-      notes: 'Alle drei Kinder gelten öffentlich als Simuns und Dagnis Kinder. Die Quelle nennt jedoch eines davon als Kind von Dagnis Affäre mit Nordall Eisenbieger, ohne das Kind zu identifizieren.'
+      notes: 'Rimbert und Jurgla sind leibliche Kinder Simuns und Dagnis. Hilda wurde öffentlich Simun zugerechnet, stammt laut Eisenbieger-Gegenakte jedoch aus Dagnis Affäre mit Nordall.'
     }),
     partnership('affair-dagni-nordall-kaltherz', {
       type: 'affair',
       visibility: 'private',
-      notes: 'Nordall ist als Affärenpartner Dagnis belegt; welches ihrer drei Kinder aus dieser Verbindung stammt, ist nicht überliefert.'
+      notes: 'Nordall ist Dagnis Affärenpartner und laut Eisenbieger-Herkunftsakte Hildas biologischer Vater.'
     }),
     partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1720' })
   ],
@@ -415,11 +418,11 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
       'Inga Wellenschild ist Isbrands aufgenommenes Mündel und kein leibliches Kind von Isbrand und Kjara.'
     ),
     ...childrenOf(['selrik-schattenherz', 'volga-schattenherz'], 'marriage-tyrfing-thera-schattenherz'),
-    ...childrenOf(['rimbert-schattenherz', 'jurgla-schattenherz', 'hilda-schattenherz'], 'marriage-simun-dagni-schattenherz', {
-      type: 'claimed',
-      legitimacy: 'unknown',
-      certainty: 'disputed',
-      notes: 'Alle drei werden Simun zugerechnet. Laut Quelle stammt genau eines der Kinder aus einer unbekannten Affäre Dagnis; welches, bleibt offen.'
+    ...childrenOf(['rimbert-schattenherz', 'jurgla-schattenherz'], 'marriage-simun-dagni-schattenherz'),
+    ...childrenOf(['hilda-schattenherz'], 'affair-dagni-nordall-kaltherz', {
+      legitimacy: 'illegitimate',
+      visibility: 'private',
+      notes: 'Die biologische Abstammung von Nordall und Dagni ist geheim; öffentlich gilt Hilda als Simuns Tochter.'
     })
   ],
   cadetBranches: [
@@ -486,8 +489,9 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
     blankFamily: false,
     preparedMainLine: true,
     sourceFamilyId: 'haus-hjerte',
-    sourceRevision: 5,
+    sourceRevision: 6,
     sourceModule: 'Clan Schattenherz (bereitgestellte Altdaten)',
+    sourceCrossRecordNote: 'Die Eisenbieger-Herkunftsakte beseitigt die bisherige Mehrdeutigkeit: Hilda ist das Kind der Affäre Nordall Eisenbieger–Dagni Kaltherz; Rimbert und Jurgla bleiben leibliche Kinder Simuns und Dagnis.',
     sourceNote: 'Der vollständige überlieferte Schattenherz-Stammbaum wird ohne Personenfokus von Zarnik Hjerte und Gluthilda bis zur jüngsten Generation des Jahres 1740 gezeigt. Der Hjerte-Ursprung steht verlinkt über Zarnik; der Schattenherz-Hausknoten folgt direkt unter dem Gründerpaar und genau ein serieller Zeitsprung führt danach zu Ulfgar, Gelda, Arnkatla, Vemund und Gulda. Die Oberhauptfolge lautet Zarnik, Ulfgar, Jorulf, Iokul, Eggert, Ornulf und Ulfrik; Isbrand und Thjald bilden die angegebene Erbfolge. Zwölf belegte auswärtige Ehen von Schattenherz-Frauen besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Inga Wellenschild ist ausschließlich Isbrands aufgenommenes Mündel. Arnsten Kaltherz wird anhand der ausgearbeiteten Kaltherz-Gegenakte auf 1610–1645 präzisiert. Die Quelle berichtet, dass eines der drei als Simuns Kinder geführten Geschwister Rimbert, Jurgla und Hilda aus Dagnis geheimer Affäre stammt. Die Kaltherz-Gegenakte benennt den Vater als Nordall Eisenbieger, aber weiterhin nicht das betroffene Kind. Deshalb wird kein Kind willkürlich als Bastard ausgezeichnet; die Vaterschaft aller drei bleibt als bestrittene, öffentlich anerkannte Abstammung dokumentiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryTombstones: {
       persons: [

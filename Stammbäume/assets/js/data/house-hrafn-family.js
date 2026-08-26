@@ -3,10 +3,12 @@ import {
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
-  createParentages
+  createParentages,
+  createWardAwayBranch
 } from './family-record-builders.js';
 import { HOUSE_HRAFN_PORTRAITS } from './house-hrafn-portraits.js';
 import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import {
   SCHWARZFENN_HOUSE_EMBLEMS,
   SCHWARZFENN_HOUSE_PROFILES
@@ -19,7 +21,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   ragnulf: SCHWARZFENN_HOUSE_EMBLEMS.ragnulf,
   helgr: SCHWARZFENN_HOUSE_EMBLEMS.helgr,
   graumahne: SCHWARZFENN_HOUSE_EMBLEMS.graumahne,
-  skogg: IVARSHEIM_HOUSE_EMBLEMS.skogg
+  skogg: IVARSHEIM_HOUSE_EMBLEMS.skogg,
+  eisenbieger: KRONENTAL_HOUSE_EMBLEMS.eisenbieger
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -111,7 +114,7 @@ function house(id, name, emblem = '') {
 
 const COUPLES = Object.freeze({
   founders: ['raleif-hrafn', 'hallveig'],
-  ornthrud: ['morkur', 'ornthrud-hrafn'],
+  ornthrud: ['morkur-eisenbieger', 'ornthrud-hrafn'],
   hakon: ['hakon-hrafn', 'gudrid-1630-ragnulf'],
   osvald: ['osvald-hrafn', 'leikny-helgr'],
   reginleif: ['skirnir-skogg', 'reginleif-hrafn'],
@@ -168,6 +171,23 @@ function marriedAway(id, name, partnershipId, houseId, targetFamilyId, emblem = 
   });
 }
 
+function wardAway(id, name, parentPersonId, houseId, targetFamilyId, emblem = '') {
+  return createWardAwayBranch({
+    id,
+    name,
+    parentPersonId,
+    houseId,
+    targetFamilyId,
+    emblem,
+    subtitle: `Als Mündel an ${name} vermittelt`,
+    extensions: {
+      registryManagedFields: [
+        'name', 'parentPersonId', 'houseId', 'targetFamilyId', 'emblem', 'subtitle'
+      ]
+    }
+  });
+}
+
 export const HOUSE_HRAFN_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
@@ -185,7 +205,7 @@ export const HOUSE_HRAFN_FAMILY = Object.freeze({
     house('house-helgr', 'Clan Helgr', HOUSE_EMBLEMS.helgr),
     house('house-skogg', 'Clan Skogg', HOUSE_EMBLEMS.skogg),
     house('house-graumahne', 'Clan Graumähne', HOUSE_EMBLEMS.graumahne),
-    house('house-unknown-ornthrud-hrafn', 'Unbekanntes Haus'),
+    house('house-eisenbieger', 'Clan Eisenbieger', HOUSE_EMBLEMS.eisenbieger),
     house('house-unknown-reyka-hrafn', 'Unbekanntes Haus')
   ],
   persons: [
@@ -194,11 +214,11 @@ export const HOUSE_HRAFN_FAMILY = Object.freeze({
     }),
     spouse('hallveig', 'Hallveig', 'female', '1605', '1660'),
 
-    awayWoman('ornthrud-hrafn', 'Ornthrud Hrafn', '1628', '1677', 'unbekanntes Haus'),
+    awayWoman('ornthrud-hrafn', 'Ornthrud Hrafn', '1628', '1677', 'Clan Eisenbieger'),
     person('hakon-hrafn', 'Hakon Hrafn', 'male', '1630', '1704', {
       title: 'Hesir des Clans Hrafn von 1676 bis 1704'
     }),
-    spouse('morkur', 'Morkur', 'male', '1627', '1659'),
+    spouse('morkur-eisenbieger', 'Morkur Eisenbieger', 'male', '1628', '1659', 'house-eisenbieger'),
     spouse('gudrid-1630-ragnulf', 'Gudrid Ragnulf', 'female', '1630', '1712', 'house-ragnulf'),
 
     person('osvald-hrafn', 'Osvald Hrafn', 'male', '1650', '1717', {
@@ -230,7 +250,11 @@ export const HOUSE_HRAFN_FAMILY = Object.freeze({
     }),
     person('geira-hrafn', 'Geira Hrafn', 'female', '1728', ''),
     person('nokkvi-hrafn', 'Nokkvi Hrafn', 'male', '1725', ''),
-    person('asta-hrafn', 'Asta Hrafn', 'female', '1729', '')
+    person('asta-hrafn', 'Asta Hrafn', 'female', '1729', '', {
+      familyRole: 'ward-away',
+      title: 'Als Mündel an Clan Eisenbieger vermittelt',
+      tags: ['Mündel', 'Weggegeben']
+    })
   ],
   partnerships: Object.keys(PARTNERS_BY_ID).map((partnershipId) => partnership(partnershipId)),
   parentages: [
@@ -243,9 +267,10 @@ export const HOUSE_HRAFN_FAMILY = Object.freeze({
     ...childrenOf(['nokkvi-hrafn', 'asta-hrafn'], 'marriage-ketilbjorn-tindra-hrafn')
   ],
   cadetBranches: [
-    marriedAway('married-away-ornthrud-hrafn-unknown', 'Unbekanntes Haus', 'marriage-ornthrud-morkur-hrafn', 'house-unknown-ornthrud-hrafn', 'haus-unbekannt'),
+    marriedAway('married-away-ornthrud-hrafn-eisenbieger', 'Clan Eisenbieger', 'marriage-ornthrud-morkur-hrafn', 'house-eisenbieger', 'haus-eisenbieger', HOUSE_EMBLEMS.eisenbieger),
     marriedAway('married-away-reginleif-hrafn-skogg', 'Clan Skogg', 'marriage-skirnir-reginleif-skogg', 'house-skogg', 'haus-skogg', HOUSE_EMBLEMS.skogg),
-    marriedAway('married-away-reyka-hrafn-unknown', 'Unbekanntes Haus', 'marriage-reyka-toste-hrafn', 'house-unknown-reyka-hrafn', 'haus-unbekannt')
+    marriedAway('married-away-reyka-hrafn-unknown', 'Unbekanntes Haus', 'marriage-reyka-toste-hrafn', 'house-unknown-reyka-hrafn', 'haus-unbekannt'),
+    wardAway('ward-away-asta-hrafn-eisenbieger', 'Clan Eisenbieger', 'asta-hrafn', 'house-eisenbieger', 'haus-eisenbieger', HOUSE_EMBLEMS.eisenbieger)
   ],
   timeJumps: [],
   lineage: {
@@ -269,11 +294,12 @@ export const HOUSE_HRAFN_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Clan Hrafn (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige überlieferte Hrafn-Stammbaum wird ohne Personenfokus von Raleif und Hallveig bis zu den 1740 lebenden jüngsten Sprösslingen gezeigt. Der erste Hausknoten folgt direkt auf das Gründerpaar; ein Zeitsprung ist in der Quelle nicht belegt. Die Oberhauptfolge lautet Raleif, Hakon, Osvald und Rognstein; Haraldur und Róald bilden die ausgewiesene Erbfolge. Ornthrud und Reyka erhalten wegen ihrer belegten Ehen mit Partnern ohne Hauszuordnung direkte Wegverheiratet-Knoten zu unbekannten Häusern. Reginleif wird mit direkter Verknüpfung an Clan Skogg wegverheiratet; ihre dort fortgeführte Nachkommenschaft wird nicht gedoppelt. Gudrid Ragnulf, Leikny Helgr, Hervor Ragnulf und Unndís Graumähne bleiben als eingeheiratete Frauen mit ihren bereits registrierten Weltpersonen und Partnerschaften synchron. Die Hrafn-Quelle bezeichnet Leiknir Silberzunge abweichend als Haraldurs Mündel. Die bereits ausgearbeiteten und gegenseitig konsistenten Silberzunge- und Skogg-Akten führen Leiknir dagegen ausdrücklich als an Clan Skogg vermitteltes Mündel; dieser Widerspruch wird nicht still überschrieben, weshalb Leiknir bis zur Klärung nicht zusätzlich im Hrafn-Baum erscheint. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceCrossRecordNote: 'Die Eisenbieger-Gegenakte identifiziert Ornthruds Ehemann als Morkur Eisenbieger (1628–1659) und Asta Hrafn als in der jüngsten Generation an Clan Eisenbieger vermitteltes Mündel. Beide Verbindungen werden nun beidseitig gespiegelt.',
+    sourceNote: 'Der vollständige überlieferte Hrafn-Stammbaum wird ohne Personenfokus von Raleif und Hallveig bis zu den 1740 lebenden jüngsten Sprösslingen gezeigt. Der erste Hausknoten folgt direkt auf das Gründerpaar; ein Zeitsprung ist in der Quelle nicht belegt. Die Oberhauptfolge lautet Raleif, Hakon, Osvald und Rognstein; Haraldur und Róald bilden die ausgewiesene Erbfolge. Die Eisenbieger-Gegenakte identifiziert Ornthruds Ehemann als Morkur Eisenbieger und präzisiert beide Lebensdaten; ihre direkte Wegverheiratet-Verknüpfung führt daher zu Clan Eisenbieger. Asta Hrafn bleibt biologisches Kind Ketilbjorns und Tindras, wird in der jüngsten Generation jedoch als an Clan Eisenbieger vermitteltes Mündel beidseitig gespiegelt. Reyka erhält weiterhin einen direkten Knoten zum unbekannten Haus. Reginleif wird mit direkter Verknüpfung an Clan Skogg wegverheiratet; ihre dort fortgeführte Nachkommenschaft wird nicht gedoppelt. Die Hrafn-Quelle bezeichnet Leiknir Silberzunge abweichend als Haraldurs Mündel. Die bereits ausgearbeiteten und gegenseitig konsistenten Silberzunge- und Skogg-Akten führen Leiknir dagegen ausdrücklich als an Clan Skogg vermitteltes Mündel; dieser Widerspruch wird nicht still überschrieben, weshalb Leiknir bis zur Klärung nicht zusätzlich im Hrafn-Baum erscheint. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryTombstones: {
-      persons: ['haus-hrafn-gruender', 'haus-hrafn-gruenderin'],
+      persons: ['haus-hrafn-gruender', 'haus-hrafn-gruenderin', 'morkur'],
       partnerships: ['marriage-haus-hrafn-founders']
     },
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],

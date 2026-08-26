@@ -9,6 +9,27 @@ function personById(family, personId) {
   return family.persons.find(person => person.id === personId) || null;
 }
 
+function hasCrossFamilyLink(record) {
+  return Boolean(
+    record?.extensions?.crossFamilyRelationship?.linkId
+    || record?.extensions?.crossFamilyGuardianship?.linkId
+  );
+}
+
+export function personHasMirroredConnections(family, personId) {
+  if (hasCrossFamilyLink(personById(family, personId))) return true;
+  if (family.partnerships.some(partnership => (
+    partnership.participantIds.includes(personId) && hasCrossFamilyLink(partnership)
+  ))) return true;
+  if (family.parentages.some(parentage => (
+    (parentage.childId === personId || parentage.parentIds.includes(personId))
+    && hasCrossFamilyLink(parentage)
+  ))) return true;
+  return family.cadetBranches.some(branch => (
+    branch.parentPersonId === personId && hasCrossFamilyLink(branch)
+  ));
+}
+
 function engagementBlock(family, personId) {
   const active = family.partnerships.filter(partnership => (
     partnership.participantIds.includes(personId)
@@ -41,6 +62,7 @@ export function relationshipActionState(family, personId) {
   const betrothalBlock = engagementBlock(family, personId);
   const alreadySent = person.familyRole === 'ward-away'
     || family.cadetBranches.some(branch => branch.linkType === 'ward-away' && branch.parentPersonId === personId);
+  const mirroredConnections = personHasMirroredConnections(family, personId);
   return Object.freeze({
     person,
     partnerships,
@@ -56,12 +78,40 @@ export function relationshipActionState(family, personId) {
       'send-ward': Object.freeze({
         enabled: !alreadySent,
         reason: alreadySent ? 'Diese Person ist bereits als fortgegebenes Mündel verzeichnet.' : ''
+      }),
+      'delete-current-person': Object.freeze({
+        enabled: !mirroredConnections,
+        reason: mirroredConnections
+          ? 'Zuerst die gespiegelten Ehen, Affären oder Mündelverknüpfungen entfernen. So bleibt die Gegenakte konsistent.'
+          : ''
       })
     })
   });
 }
 
-export function partnerCandidateAvailability(family, personId, action) {
+function partnershipTypeForAction(action) {
+  if (action === 'marry') return 'marriage';
+  if (action === 'betroth') return 'engagement';
+  if (action === 'affair') return 'affair';
+  return '';
+}
+
+export function partnerCandidateAvailability(family, personId, action, referencePersonId = '') {
+  const relationshipType = partnershipTypeForAction(action);
+  if (referencePersonId && relationshipType) {
+    const duplicate = family.partnerships.find(partnership => (
+      partnership.type === relationshipType
+      && ACTIVE_STATUSES.has(partnership.status || 'active')
+      && partnership.participantIds.includes(referencePersonId)
+      && partnership.participantIds.includes(personId)
+    ));
+    if (duplicate) {
+      return Object.freeze({
+        enabled: false,
+        reason: 'Diese aktive Verbindung ist bereits eingetragen.'
+      });
+    }
+  }
   if (action !== 'betroth') return Object.freeze({ enabled: true, reason: '' });
   const reason = engagementBlock(family, personId);
   return Object.freeze({ enabled: !reason, reason });

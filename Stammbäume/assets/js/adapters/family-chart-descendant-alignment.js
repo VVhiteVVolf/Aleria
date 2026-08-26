@@ -4,6 +4,10 @@ import {
   shiftedCollisionCount,
   shiftNodeAlongCrossAxis
 } from './family-chart-collision-geometry.js';
+import {
+  familyChartPartnerMirrorId,
+  familyChartPersonAppearanceId
+} from './family-chart-person-appearance-router.js';
 
 const PARENT_PAIR_OVER_CHILD_EXTENSION = 'chartAlignParentPairOverChildPersonId';
 const CHILD_GROUP_BELOW_PARENT_PAIR_EXTENSION = 'chartAlignChildGroupBelowParentPair';
@@ -26,9 +30,49 @@ function displayedPartnerNode(nodes, personId) {
   return nodes.find(node => node?.data?.id === personId && node.spouse) || null;
 }
 
+function requestsPartnershipAppearance(person, extensionName, partnershipId) {
+  const configuredPartnershipIds = person?.extensions?.[extensionName];
+  return Array.isArray(configuredPartnershipIds)
+    && configuredPartnershipIds.includes(partnershipId);
+}
+
+function repeatedParticipantId(family, personId, partnershipId) {
+  const person = (family?.persons || []).find(entry => entry.id === personId);
+  return requestsPartnershipAppearance(
+    person,
+    'chartRepeatForPartnershipIds',
+    partnershipId
+  )
+    ? familyChartPersonAppearanceId(personId, partnershipId)
+    : personId;
+}
+
+function originPartnerId(family, personId, partnerPersonId, partnershipId) {
+  const person = (family?.persons || []).find(entry => entry.id === personId);
+  const partner = (family?.persons || []).find(entry => entry.id === partnerPersonId);
+  const personUsesRepeatedPair = requestsPartnershipAppearance(
+    person,
+    'chartRepeatForPartnershipIds',
+    partnershipId
+  );
+
+  if (
+    personUsesRepeatedPair
+    && requestsPartnershipAppearance(
+      partner,
+      'chartPartnerMirrorForPartnershipIds',
+      partnershipId
+    )
+  ) {
+    return familyChartPartnerMirrorId(partnerPersonId, partnershipId);
+  }
+
+  return repeatedParticipantId(family, partnerPersonId, partnershipId);
+}
+
 function collectDescendantBranchPersonIds(family, rootPersonId) {
   const descendantPersonIds = new Set([rootPersonId]);
-  const partnerPersonIds = new Set();
+  const partnerNodeIds = new Set();
   const queue = [rootPersonId];
 
   while (queue.length) {
@@ -36,9 +80,25 @@ function collectDescendantBranchPersonIds(family, rootPersonId) {
     (family?.partnerships || [])
       .filter(partnership => partnership.participantIds?.includes(personId))
       .forEach(partnership => {
+        const person = (family?.persons || []).find(entry => entry.id === personId);
+        const originPairIsChildless = requestsPartnershipAppearance(
+          person,
+          'chartRepeatForPartnershipIds',
+          partnership.id
+        );
         partnership.participantIds
           .filter(participantId => participantId !== personId)
-          .forEach(partnerPersonId => partnerPersonIds.add(partnerPersonId));
+          .forEach(partnerPersonId => partnerNodeIds.add(
+            originPartnerId(family, personId, partnerPersonId, partnership.id)
+          ));
+
+        // Bei einer internen Ehe bleibt die Herkunftskarte bewusst kinderlos.
+        // Nur die wiederholte Partnerkarte im fortgefuehrten Zweig besitzt die
+        // Nachkommen. Folgt die Zweigsammlung trotzdem von der Herkunftskarte
+        // zu diesen Kindern, werden beide Familienaeste als ein einziger Block
+        // verschoben und erzeugen kilometerlange Querlinien.
+        if (originPairIsChildless) return;
+
         (family?.parentages || [])
           .filter(parentage => parentage.partnershipId === partnership.id)
           .forEach(parentage => {
@@ -67,15 +127,31 @@ function collectDescendantBranchPersonIds(family, rootPersonId) {
       });
   }
 
-  descendantPersonIds.forEach(personId => partnerPersonIds.delete(personId));
-  return [...descendantPersonIds, ...partnerPersonIds];
+  descendantPersonIds.forEach(personId => partnerNodeIds.delete(personId));
+  return [...descendantPersonIds, ...partnerNodeIds];
+}
+
+function displayedPartnershipParticipantId(family, personId, partnershipId) {
+  return repeatedParticipantId(family, personId, partnershipId);
+}
+
+function displayedPartnershipParticipantIds(family, partnership) {
+  return (partnership?.participantIds || []).map(personId => (
+    displayedPartnershipParticipantId(family, personId, partnership.id)
+  ));
 }
 
 function directPartnerPersonIds(family, personId) {
   return [...new Set((family?.partnerships || [])
     .filter(partnership => partnership.participantIds?.includes(personId))
-    .flatMap(partnership => partnership.participantIds)
-    .filter(partnerPersonId => partnerPersonId !== personId))];
+    .flatMap(partnership => partnership.participantIds
+      .filter(partnerPersonId => partnerPersonId !== personId)
+      .map(partnerPersonId => originPartnerId(
+        family,
+        personId,
+        partnerPersonId,
+        partnership.id
+      ))))];
 }
 
 function linkedHouseNodeIds(family, personId) {
@@ -375,18 +451,19 @@ export function createFamilyChartDescendantAlignmentPlan(family) {
     const childPersonId = configuredChildId(partnership);
     if (!childPersonId) return;
 
-    const parentPersonIds = Array.isArray(partnership.participantIds)
+    const canonicalParentPersonIds = Array.isArray(partnership.participantIds)
       ? [...partnership.participantIds]
       : [];
+    const parentPersonIds = displayedPartnershipParticipantIds(family, partnership);
     const isDirectChild = (family?.parentages || []).some(parentage => (
       parentage.partnershipId === partnership.id
       && parentage.childId === childPersonId
-      && parentPersonIds.every(parentId => parentage.parentIds?.includes(parentId))
+      && canonicalParentPersonIds.every(parentId => parentage.parentIds?.includes(parentId))
     ));
 
     if (
-      parentPersonIds.length !== 2
-      || !parentPersonIds.every(parentId => personIds.has(parentId))
+      canonicalParentPersonIds.length !== 2
+      || !canonicalParentPersonIds.every(parentId => personIds.has(parentId))
       || !personIds.has(childPersonId)
       || !isDirectChild
     ) {
@@ -402,7 +479,7 @@ export function createFamilyChartDescendantAlignmentPlan(family) {
       partnershipId: partnership.id,
       parentPersonIds: Object.freeze(parentPersonIds),
       childPersonId,
-      preserveParentPairPosition: hasUpstreamParentage(family, parentPersonIds),
+      preserveParentPairPosition: hasUpstreamParentage(family, canonicalParentPersonIds),
       alignedChildPartnerPersonIds: Object.freeze((family?.partnerships || [])
         .filter(candidate => candidate.participantIds?.includes(childPersonId))
         .flatMap(candidate => candidate.participantIds)
@@ -469,9 +546,10 @@ export function createFamilyChartDescendantAlignmentPlan(family) {
   (family?.partnerships || []).forEach(partnership => {
     if (partnership?.extensions?.[CHILD_GROUP_BELOW_PARENT_PAIR_EXTENSION] !== true) return;
 
-    const parentPersonIds = Array.isArray(partnership.participantIds)
+    const canonicalParentPersonIds = Array.isArray(partnership.participantIds)
       ? [...partnership.participantIds]
       : [];
+    const parentPersonIds = displayedPartnershipParticipantIds(family, partnership);
     const childPersonIds = [...new Set((family?.parentages || [])
       .filter(parentage => (
         parentage.partnershipId === partnership.id
@@ -484,7 +562,7 @@ export function createFamilyChartDescendantAlignmentPlan(family) {
         && !parentage.partnershipId
         && !parentage.extensions?.timeJumpId
         && parentage.parentIds?.length === 1
-        && parentPersonIds.includes(parentage.parentIds[0])
+        && canonicalParentPersonIds.includes(parentage.parentIds[0])
         && !childPersonIds.includes(parentage.childId)
         && personIds.has(parentage.childId)
         && !(family?.parentages || []).some(candidate => (
@@ -506,8 +584,8 @@ export function createFamilyChartDescendantAlignmentPlan(family) {
     )))];
 
     if (
-      parentPersonIds.length !== 2
-      || !parentPersonIds.every(parentId => personIds.has(parentId))
+      canonicalParentPersonIds.length !== 2
+      || !canonicalParentPersonIds.every(parentId => personIds.has(parentId))
       || !childPersonIds.length
       || !childPersonIds.every(childPersonId => personIds.has(childPersonId))
     ) {

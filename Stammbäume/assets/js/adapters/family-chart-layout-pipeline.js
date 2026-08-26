@@ -29,17 +29,26 @@ import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
 export function applyFamilyChartLayoutPipeline({
   tree,
   family,
-  orientation = 'vertical'
+  orientation = 'vertical',
+  maximumSpacingScale = 2,
+  alignPersonAppearances = true
 }) {
   const partnerPlan = createFamilyChartPartnerAlignmentPlan(family);
   const descendantPlan = createFamilyChartDescendantAlignmentPlan(family);
   const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(family);
   const appearancePlan = createFamilyChartAppearanceAlignmentPlan(family);
-  const appearanceAlignment = applyFamilyChartAppearanceAlignmentPlan({
-    tree,
-    plan: appearancePlan,
-    orientation
-  });
+  // Kopierte Karten interner Ehen müssen vor allen Zweigverschiebungen an
+  // ihrer lokalen Paaransicht sitzen. Werden sie erst nachträglich in einen
+  // fertigen Baum geschoben, interpretiert der Kollisionsschutz die neue
+  // Überschneidung als ganzen zu versetzenden Familienzweig und erzeugt dabei
+  // kilometerlange Elternlinien.
+  const appearanceAlignment = alignPersonAppearances
+    ? applyFamilyChartAppearanceAlignmentPlan({
+        tree,
+        plan: appearancePlan,
+        orientation
+      })
+    : Object.freeze({ resolutions: Object.freeze([]) });
   const partnerAlignment = applyFamilyChartPartnerAlignmentPlan({
     tree,
     plan: partnerPlan,
@@ -67,7 +76,12 @@ export function applyFamilyChartLayoutPipeline({
     route: partnerPlan.lineageOriginRoute,
     orientation
   });
-  const spacingGuard = applyFamilyChartSpacingGuard({ tree, family, orientation });
+  const spacingGuard = applyFamilyChartSpacingGuard({
+    tree,
+    family,
+    orientation,
+    maximumScale: maximumSpacingScale
+  });
 
   return Object.freeze({
     plans: Object.freeze({ appearancePlan, partnerPlan, descendantPlan, houseLinkPlan }),

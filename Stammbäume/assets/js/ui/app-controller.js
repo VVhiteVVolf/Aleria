@@ -64,6 +64,8 @@ import {
   removeMirroredGuardianshipChange
 } from '../modules/relationships/cross-family-guardianship.js';
 import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
+import { relationshipActionState } from '../modules/relationships/relationship-action-policy.js';
+import { resolveParentageSelection } from '../modules/relationships/relationship-form-policy.js';
 
 function isTypingTarget(target) {
   return target instanceof HTMLInputElement
@@ -325,6 +327,12 @@ export function createAppController({
     return true;
   }
 
+  function assertPersonCanBeDeleted(family, personId) {
+    const deletionPolicy = relationshipActionState(family, personId)
+      .actionAvailability['delete-current-person'];
+    if (!deletionPolicy.enabled) throw new Error(deletionPolicy.reason);
+  }
+
   function performRelationAction(actionId) {
     const state = store.getState();
     const person = state.family.persons.find(item => item.id === relationActionsDialog.getPersonId());
@@ -337,12 +345,8 @@ export function createAppController({
         toast(`${person.name} wird wieder als lebend geführt.`);
         return;
       case 'legitimize': {
-        const targets = state.family.parentages.filter(parentage => (
-          parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
-        ));
-        if (!targets.length) throw new Error('Für diese Person ist keine uneheliche Abstammung eingetragen.');
         relationActionsDialog.close();
-        targets.forEach(parentage => store.updateParentage(parentage.id, { legitimacy: 'legitimized' }));
+        store.legitimizePerson(person.id);
         toast(`${person.name} wurde legitimiert.`);
         return;
       }
@@ -382,6 +386,7 @@ export function createAppController({
         relationshipDialog.open(person.id, state.family);
         return;
       case 'delete-current-person':
+        assertPersonCanBeDeleted(state.family, person.id);
         if (!runtime.confirm(`${person.name} samt direkten Verknüpfungen vollständig aus diesem Stammbaum entfernen?`)) return;
         relationActionsDialog.close();
         store.deletePerson(person.id);
@@ -401,11 +406,12 @@ export function createAppController({
     else toast(`${partnerName} wurde als Mündel bei ${person.name} aufgenommen.`);
   }
 
-  function connectExistingPartner(action, person, partnerId, family) {
+  function connectExistingPartner(action, person, partnerId, family, options = {}) {
     if (action === 'import-ward') {
-      const spouseId = preferredSpouseId(family, person.id);
-      const parentIds = [person.id, spouseId].filter(Boolean).filter(id => id !== partnerId);
-      store.addParentage({
+      const parentIds = [person.id, options.guardianPartnerId]
+        .filter(Boolean)
+        .filter(id => id !== partnerId);
+      store.addWard({
         childId: partnerId,
         parentIds,
         partnershipId: findPartnershipId(family, parentIds),
@@ -414,8 +420,6 @@ export function createAppController({
         certainty: 'confirmed',
         visibility: 'public'
       });
-      const wardPerson = family.persons.find(item => item.id === partnerId);
-      if (wardPerson && wardPerson.familyRole !== 'ward') store.updatePerson(partnerId, { familyRole: 'ward' });
       return;
     }
     const relation = relationForAction(action);
@@ -489,7 +493,7 @@ export function createAppController({
     });
   }
 
-  function mirrorRegistryGuardianship({ state, person, record, otherPerson, currentRole }) {
+  function mirrorRegistryGuardianship({ state, person, record, otherPerson, currentRole, guardianPartnerId = '' }) {
     const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
     if (!currentRecord) {
       throw new Error('Bitte speichere die aktuelle Familienakte zuerst im Register, bevor du ein Mündel zwischen zwei Stammbäumen vermittelst.');
@@ -499,7 +503,8 @@ export function createAppController({
       counterpartFamily: record.family,
       currentPersonId: person.id,
       counterpartPersonId: otherPerson.id,
-      currentRole
+      currentRole,
+      guardianPartnerId
     });
     persistMirroredFamilyChange({
       currentRecord,
@@ -542,7 +547,7 @@ export function createAppController({
         relatedPersonDialog.open(person.id, state.family, {
           relationKind: 'child',
           parentageType: 'foster',
-          secondParentId: preferredSpouseId(state.family, person.id),
+          secondParentId: values.coGuardianId,
           heading: `Mündel bei ${person.name} aufnehmen`
         });
         return;
@@ -563,7 +568,9 @@ export function createAppController({
     if (values.partnerSource === 'tree') {
       if (!values.partnerPersonId) throw new Error('Bitte eine Person aus dem Baum wählen.');
       relationActionsDialog.close();
-      connectExistingPartner(action, person, values.partnerPersonId, state.family);
+      connectExistingPartner(action, person, values.partnerPersonId, state.family, {
+        guardianPartnerId: values.coGuardianId
+      });
       const partner = state.family.persons.find(item => item.id === values.partnerPersonId);
       toastPartnerSuccess(action, person, partner?.name || 'die gewählte Person');
       return;
@@ -577,7 +584,9 @@ export function createAppController({
     const existing = findExistingImport(state.family, sourcePerson);
     if (record.id === state.family.document.id && existing) {
       relationActionsDialog.close();
-      connectExistingPartner(action, person, existing.id, state.family);
+      connectExistingPartner(action, person, existing.id, state.family, {
+        guardianPartnerId: values.coGuardianId
+      });
       toastPartnerSuccess(action, person, existing.name);
       return;
     }
@@ -600,7 +609,8 @@ export function createAppController({
       person,
       record,
       otherPerson: sourcePerson,
-      currentRole: 'guardian'
+      currentRole: 'guardian',
+      guardianPartnerId: values.coGuardianId
     });
     relationActionsDialog.close();
     toastPartnerSuccess(action, person, sourcePerson.name);
@@ -645,7 +655,8 @@ export function createAppController({
         person,
         record,
         otherPerson: guardian,
-        currentRole: 'ward'
+        currentRole: 'ward',
+        guardianPartnerId: values.targetCoGuardianId
       });
       relationActionsDialog.close();
       toast(`${person.name} wurde an ${record.title} vermittelt und dort direkt als Mündel bei ${guardian.name} eingesetzt. Beide Akten warten gemeinsam auf „Online speichern“.`, { duration: 7000 });
@@ -1305,6 +1316,9 @@ export function createAppController({
         searchInput.value = '';
         break;
       case 'delete-person':
+        if (selected) {
+          assertPersonCanBeDeleted(state.family, selected.id);
+        }
         if (selected && runtime.confirm(`„${selected.name}“ und ihre direkten Verknüpfungen löschen?`)) {
           store.deletePerson(selected.id);
           toast(`${selected.name} wurde gelöscht.`);
@@ -1439,13 +1453,16 @@ export function createAppController({
         visibility: values.visibility
       });
     } else {
-      const childId = values.parentageDirection === 'reference-is-child' ? referenceId : otherId;
-      const primaryParentId = values.parentageDirection === 'reference-is-child' ? otherId : referenceId;
-      const parentIds = [...new Set([primaryParentId, values.secondParentId].filter(id => id && id !== childId))];
+      const selection = resolveParentageSelection({
+        referencePersonId: referenceId,
+        otherPersonId: otherId,
+        direction: values.parentageDirection,
+        secondParentId: values.secondParentId
+      });
       store.addParentage({
-        childId,
-        parentIds,
-        partnershipId: findPartnershipId(state.family, parentIds),
+        childId: selection.childId,
+        parentIds: selection.parentIds,
+        partnershipId: findPartnershipId(state.family, selection.parentIds),
         type: values.parentageType,
         legitimacy: values.legitimacy,
         certainty: values.certainty,

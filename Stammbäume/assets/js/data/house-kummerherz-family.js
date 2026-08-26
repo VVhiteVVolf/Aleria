@@ -348,7 +348,7 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
     awayWoman('asta-kummerherz', 'Asta Kummerherz', '1699', '', 'Clan Feuerhaar'),
     awayWoman('froya-kummerherz', 'Froya Kummerherz', '1699', '', 'Clan Todbrand'),
     person('nottulf-kummerherz', 'Nottulf Kummerherz', 'male', '1702', ''),
-    spouse('midna-spindelschlag', 'Midna Spindelschlag', 'female', '1700', '', 'house-spindelschlag'),
+    spouse('midna-spindelschlag', 'Midna Spindelschlag', 'female', '1695', '', 'house-spindelschlag'),
     spouse('armod-feuerhaar', 'Armod Feuerhaar', 'male', '1695', '', 'house-feuerhaar'),
     spouse('calthar-todbrand', 'Calthar Todbrand', 'male', '1695', '', 'house-todbrand'),
     spouse('casthild-sturmgeborene', 'Casthild Sturmgeborene', 'female', '1705', '', 'house-sturmgeborene'),
@@ -449,9 +449,9 @@ export const HOUSE_KUMMERHERZ_FAMILY = Object.freeze({
   extensions: {
     blankFamily: false,
     preparedMainLine: true,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: 'Clan Kummerherz (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige überlieferte Kummerherz-Stammbaum wird ohne Personenfokus von Brynjar Hjerte und Hallveig bis zur jüngsten Generation des Jahres 1740 gezeigt. Ein verlinkter Hjerte-Ursprung steht über Brynjar; der Kummerherz-Hausknoten hängt direkt unter dem Gründerpaar und genau ein serieller Zeitsprung führt danach zu Jorunn und Jothmund. Die Oberhauptfolge lautet Brynjar, Jothmund, Jorah, Lagmar, Naddvar und Hogrand; Tyrfingr, Rórik und Finnur bilden die angegebene Erbfolge. Jorunn, Johild, Gunnlaug, Hólmdís, Ljosdis, Njaldis, Asta und Froya besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Tinna ist ein leibliches Kind Tyrfingrs und Midnas, zugleich aber als Mündel an Clan Ragnulf vermittelt. Isaura Wellensänger ist ausschließlich Tyrfingrs aufgenommenes Mündel. Ihre Wellensänger-Herkunftsakte belegt 1726 statt der älteren Kummerherz-Angabe 1725; die Herkunftsakte ist für ihr Geburtsjahr maßgeblich. Die isolierte Quellüberschrift „Modgunn“ wird nach der eigentlichen Personenzeile als Mogunn normalisiert. Die fünf unbenannten Verlobtenfelder der jüngsten Generation werden nicht als reale Personen importiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts übernommen.',
+    sourceNote: 'Der vollständige überlieferte Kummerherz-Stammbaum wird ohne Personenfokus von Brynjar Hjerte und Hallveig bis zur jüngsten Generation des Jahres 1740 gezeigt. Ein verlinkter Hjerte-Ursprung steht über Brynjar; der Kummerherz-Hausknoten hängt direkt unter dem Gründerpaar und genau ein serieller Zeitsprung führt danach zu Jorunn und Jothmund. Die Oberhauptfolge lautet Brynjar, Jothmund, Jorah, Lagmar, Naddvar und Hogrand; Tyrfingr, Rórik und Finnur bilden die angegebene Erbfolge. Jorunn, Johild, Gunnlaug, Hólmdís, Ljosdis, Njaldis, Asta und Froya besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Tinna ist ein leibliches Kind Tyrfingrs und Midnas, zugleich aber als Mündel an Clan Ragnulf vermittelt. Isaura Wellensänger ist ausschließlich Tyrfingrs aufgenommenes Mündel. Ihre Wellensänger-Herkunftsakte belegt 1726 statt der älteren Kummerherz-Angabe 1725; die Herkunftsakte ist für ihr Geburtsjahr maßgeblich. Midna Spindelschlags Geburtsjahr wird anhand ihrer Herkunftsakte von 1700 auf 1695 berichtigt. Die isolierte Quellüberschrift „Modgunn“ wird nach der eigentlichen Personenzeile als Mogunn normalisiert. Die fünf unbenannten Verlobtenfelder der jüngsten Generation werden nicht als reale Personen importiert. Wiederholte Standardsilhouetten wurden nicht als Individualporträts übernommen.',
     registryTombstones: {
       persons: ['haus-kummerherz-gruender', 'haus-kummerherz-gruenderin'],
       partnerships: ['marriage-haus-kummerherz-founders']

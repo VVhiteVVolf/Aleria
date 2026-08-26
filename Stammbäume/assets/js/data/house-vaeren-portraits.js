@@ -97,6 +97,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // kanonisiertes Porträt. Die wiederkehrende Quell-Silhouette wird nicht kopiert.
 export const HOUSE_VAEREN_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  gerdur: 'assets/images/portraits/haus-spindelschlag/gerdur-spindelschlag.png',
   'oystein-vaeren': HOUSE_VARANGR_PORTRAITS['oystein-vaeren'],
   'balgruuf-vaeren': HOUSE_RAGNULF_PORTRAITS['balgruuf-vaeren'],
   'hoskuld-wargh': HOUSE_WARGH_PORTRAITS['hoskuld-wargh'],

@@ -1,4 +1,5 @@
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
+import { isPersonRecordedDead } from './person-life-state.js';
 
 function parseYear(value) {
   const normalized = String(value ?? '').trim();
@@ -8,7 +9,7 @@ function parseYear(value) {
 
 export function formatLifeLine(person) {
   const birth = person?.birth || '????';
-  if (person?.status === 'dead' || person?.death) {
+  if (isPersonRecordedDead(person)) {
     return `† ${birth} - ${person.death || '????'} †`;
   }
   if (person?.status === 'alive') return `${birth} - lebend`;

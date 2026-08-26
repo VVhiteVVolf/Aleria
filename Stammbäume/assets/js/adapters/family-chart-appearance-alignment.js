@@ -3,20 +3,26 @@ import {
   shiftedCollisionCount,
   shiftNodeAlongCrossAxis
 } from './family-chart-collision-geometry.js';
-import { familyChartPartnerMirrorId } from './family-chart-person-appearance-router.js';
+import {
+  familyChartPartnerMirrorId,
+  familyChartPersonAppearanceId
+} from './family-chart-person-appearance-router.js';
 
-function requestedPartnershipIds(person) {
-  const value = person?.extensions?.chartPartnerMirrorForPartnershipIds;
+function requestedPartnershipIds(person, extensionKey) {
+  const value = person?.extensions?.[extensionKey];
   return Array.isArray(value)
     ? [...new Set(value.filter(partnershipId => typeof partnershipId === 'string' && partnershipId.trim()))]
     : [];
 }
 
 /**
- * A partner mirror is the childless copy shown beside a person's original
- * family card during an internal marriage. The chart library knows that it is
- * a spouse, but not beside which occurrence it belongs. The plan makes this
- * ownership explicit without moving the continued descendant branch.
+ * Internal marriages use two deliberately separate pair views:
+ * - a childless origin pair beside the person's siblings;
+ * - a continuing pair at the partner's branch.
+ *
+ * The chart library knows the copied cards, but not beside which occurrence
+ * they belong. The plan makes that ownership explicit without connecting the
+ * two pair views or duplicating their descendants.
  */
 export function createFamilyChartAppearanceAlignmentPlan(family) {
   const partnershipById = new Map((family?.partnerships || []).map(partnership => [
@@ -26,17 +32,31 @@ export function createFamilyChartAppearanceAlignmentPlan(family) {
   const routes = [];
 
   (family?.persons || []).forEach(person => {
-    requestedPartnershipIds(person).forEach(partnershipId => {
-      const partnership = partnershipById.get(partnershipId);
-      const anchorPersonId = (partnership?.participantIds || [])
-        .find(participantId => participantId !== person.id) || '';
-      if (!anchorPersonId) return;
-      routes.push(Object.freeze({
-        partnershipId,
-        anchorPersonId,
-        mirrorNodeId: familyChartPartnerMirrorId(person.id, partnershipId)
-      }));
-    });
+    const addRoutes = (extensionKey, createNodeId, role) => {
+      requestedPartnershipIds(person, extensionKey).forEach(partnershipId => {
+        const partnership = partnershipById.get(partnershipId);
+        const anchorPersonId = (partnership?.participantIds || [])
+          .find(participantId => participantId !== person.id) || '';
+        if (!anchorPersonId) return;
+        routes.push(Object.freeze({
+          partnershipId,
+          anchorPersonId,
+          appearanceNodeId: createNodeId(person.id, partnershipId),
+          role
+        }));
+      });
+    };
+
+    addRoutes(
+      'chartRepeatForPartnershipIds',
+      familyChartPersonAppearanceId,
+      'partnership-participant'
+    );
+    addRoutes(
+      'chartPartnerMirrorForPartnershipIds',
+      familyChartPartnerMirrorId,
+      'partner-mirror'
+    );
   });
 
   return Object.freeze({ routes: Object.freeze(routes) });
@@ -66,39 +86,59 @@ export function applyFamilyChartAppearanceAlignmentPlan({
   const resolutions = [];
 
   (plan?.routes || []).forEach(route => {
-    const mirrorNode = displayedNodeById(nodes, route.mirrorNodeId);
+    const appearanceNode = displayedNodeById(nodes, route.appearanceNodeId);
     const anchorNode = displayedNodeById(nodes, route.anchorPersonId);
-    const mirrorCoordinate = Number(mirrorNode?.[axis]);
+    const appearanceCoordinate = Number(appearanceNode?.[axis]);
     const anchorCoordinate = Number(anchorNode?.[axis]);
-    if (!mirrorNode || !anchorNode || !Number.isFinite(mirrorCoordinate) || !Number.isFinite(anchorCoordinate)) {
+    if (
+      !appearanceNode
+      || !anchorNode
+      || !Number.isFinite(appearanceCoordinate)
+      || !Number.isFinite(anchorCoordinate)
+    ) {
       return;
     }
 
-    // The copy belongs on the outside of its origin branch. Putting it on the
-    // inside would place its pair-bound house knot over the continued children
-    // of the second occurrence of the same marriage.
+    // A copied spouse must stay in the immediately adjacent card slot. Moving
+    // it several slots away creates a misleading long-distance partnership
+    // line between unrelated branches. If an adjacent slot is occupied, the
+    // following spacing guard moves the blocking local branch and keeps this
+    // pair intact.
     const direction = anchorCoordinate < center ? -1 : 1;
-    const stationaryNodes = nodes.filter(node => node !== mirrorNode);
-    let selected = null;
-    for (let slot = 1; slot <= 12; slot += 1) {
-      const targetCoordinate = anchorCoordinate + (direction * step * slot);
-      const delta = targetCoordinate - mirrorCoordinate;
-      const collisionCount = shiftedCollisionCount([mirrorNode], stationaryNodes, axis, delta);
-      if (collisionCount === 0) {
-        selected = { targetCoordinate, delta, slot, direction };
-        break;
-      }
-    }
-    if (!selected) return;
+    const stationaryNodes = nodes.filter(node => node !== appearanceNode);
+    const selected = [direction, -direction]
+      .map((candidateDirection, preference) => {
+        const targetCoordinate = anchorCoordinate + (candidateDirection * step);
+        const delta = targetCoordinate - appearanceCoordinate;
+        return {
+          targetCoordinate,
+          delta,
+          slot: 1,
+          direction: candidateDirection,
+          preference,
+          collisionCount: shiftedCollisionCount(
+            [appearanceNode],
+            stationaryNodes,
+            axis,
+            delta
+          )
+        };
+      })
+      .sort((first, second) => (
+        first.collisionCount - second.collisionCount
+        || first.preference - second.preference
+        || Math.abs(first.delta) - Math.abs(second.delta)
+      ))[0];
 
-    shiftNodeAlongCrossAxis(mirrorNode, axis, selected.delta);
+    shiftNodeAlongCrossAxis(appearanceNode, axis, selected.delta);
     resolutions.push(Object.freeze({
       ...route,
       axis,
       targetCoordinate: selected.targetCoordinate,
       delta: selected.delta,
       side: selected.direction < 0 ? 'before' : 'after',
-      slot: selected.slot
+      slot: selected.slot,
+      collisionCountBeforeSpacingGuard: selected.collisionCount
     }));
   });
 

@@ -5,6 +5,7 @@ import {
   partnerCandidateAvailability,
   relationshipActionState
 } from '../modules/relationships/relationship-action-policy.js';
+import { isPersonRecordedDead } from '../domain/person-life-state.js';
 import { normalizePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
 import { listFamilyRecords } from '../services/family-library.js';
 import { escapeHtml } from './dom.js';
@@ -213,6 +214,7 @@ export function createRelationActionsDialog(
     const nonLegitimate = context.family.parentages.filter(parentage => (
       parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
     ));
+    const isDead = isPersonRecordedDead(person);
     return {
       engagement: engagements.length > 0,
       partnership: partnerships.length > 0,
@@ -221,8 +223,8 @@ export function createRelationActionsDialog(
       'removable-partnership': removablePartnerships.length > 0,
       'removable-parentage': removableParentages.length > 0,
       'mirrored-guardianship': policy.hasMirroredGuardianship,
-      dead: person.status === 'dead' || Boolean(person.death),
-      'not-dead': person.status !== 'dead',
+      dead: isDead,
+      'not-dead': !isDead,
       'non-legitimate': nonLegitimate.length > 0,
       partnerships,
       engagements,
@@ -330,8 +332,54 @@ export function createRelationActionsDialog(
       .join('');
   }
 
-  function candidateOption(candidate, family, action) {
-    const availability = partnerCandidateAvailability(family, candidate.id, action);
+  function activePartnerIds(family, personId) {
+    return family.partnerships
+      .filter(partnership => (
+        partnership.participantIds.includes(personId)
+        && ['marriage', 'union'].includes(partnership.type)
+        && ['active', 'secret'].includes(partnership.status || 'active')
+      ))
+      .map(partnership => partnership.participantIds.find(id => id !== personId))
+      .filter(Boolean);
+  }
+
+  function orderedGuardianPartners(family, guardianId) {
+    const preferredIds = new Set(activePartnerIds(family, guardianId));
+    return family.persons
+      .filter(person => person.id !== guardianId)
+      .sort((first, second) => (
+        Number(preferredIds.has(second.id)) - Number(preferredIds.has(first.id))
+        || first.name.localeCompare(second.name, 'de')
+      ));
+  }
+
+  function guardianPartnerOptions(family, guardianId) {
+    const preferredIds = new Set(activePartnerIds(family, guardianId));
+    return [
+      '<option value="">— Nur die gewählte Person —</option>',
+      ...orderedGuardianPartners(family, guardianId).map(person => `
+        <option value="${escapeHtml(person.id)}" ${preferredIds.has(person.id) ? 'data-active-partner' : ''}>
+          ${escapeHtml(person.name)}${preferredIds.has(person.id) ? ' · aktive Partnerschaft' : ''}
+        </option>
+      `)
+    ].join('');
+  }
+
+  function syncWardCoGuardianAvailability() {
+    const coGuardianSelect = form.elements.namedItem('coGuardianId');
+    if (!coGuardianSelect) return;
+    const source = form.elements.namedItem('partnerSource')?.value;
+    const wardId = source === 'tree'
+      ? form.elements.namedItem('partnerPersonId')?.value || ''
+      : '';
+    [...coGuardianSelect.options].forEach(option => {
+      option.disabled = Boolean(option.value) && option.value === wardId;
+    });
+    if (coGuardianSelect.selectedOptions[0]?.disabled) coGuardianSelect.value = '';
+  }
+
+  function candidateOption(candidate, family, action, referencePersonId = '') {
+    const availability = partnerCandidateAvailability(family, candidate.id, action, referencePersonId);
     const life = candidate.birth ? ` (${escapeHtml(candidate.birth)}${candidate.death ? `–${escapeHtml(candidate.death)}` : ''})` : '';
     const reason = availability.enabled ? '' : ` — ${escapeHtml(availability.reason)}`;
     return `<option value="${escapeHtml(candidate.id)}" ${availability.enabled ? '' : 'disabled'}>${escapeHtml(candidate.name)}${life}${reason}</option>`;
@@ -340,7 +388,7 @@ export function createRelationActionsDialog(
   function treePartnerOptions(person, action) {
     return context.family.persons
       .filter(candidate => candidate.id !== person.id)
-      .map(candidate => candidateOption(candidate, context.family, action))
+      .map(candidate => candidateOption(candidate, context.family, action, person.id))
       .join('');
   }
 
@@ -388,9 +436,19 @@ export function createRelationActionsDialog(
       <div data-partner-source="new" hidden>
         <p class="relation-step-note">Es öffnet sich der Dialog „Neue Person mit Beziehung“ mit passender Voreinstellung.</p>
       </div>
+      ${action === 'import-ward' ? `
+        <label class="field">Optionales weiteres aufnehmendes Elternteil
+          <select name="coGuardianId">${guardianPartnerOptions(context.family, person.id)}</select>
+        </label>
+        <p class="relation-step-note">Bei mehreren Ehen bitte bewusst auswählen. Ohne Auswahl wird das Mündel ausschließlich der gewählten Person zugeordnet.</p>
+      ` : ''}
     `;
     syncPartnerSource();
     populateRegistryPersons();
+    const coGuardianSelect = form.elements.namedItem('coGuardianId');
+    const preferredCoGuardians = coGuardianSelect?.querySelectorAll('[data-active-partner]') || [];
+    if (preferredCoGuardians.length === 1) coGuardianSelect.value = preferredCoGuardians[0].value;
+    syncWardCoGuardianAvailability();
   }
 
   function renderDeathStep(person) {
@@ -412,6 +470,10 @@ export function createRelationActionsDialog(
       <label class="field">Aufnehmende Person
         <select name="targetGuardianId"></select>
       </label>
+      <label class="field">Optionales weiteres aufnehmendes Elternteil
+        <select name="targetCoGuardianId"></select>
+      </label>
+      <p class="relation-step-note">Bei mehreren Ehen bitte bewusst auswählen. Ohne Auswahl wird das Mündel ausschließlich der gewählten Person zugeordnet.</p>
       <p class="relation-step-note">Beide Familienakten werden gemeinsam geändert: hier fortgegebenes Mündel samt Zielhaus-Verknüpfung, dort aufgenommenes Mündel im dunkelblauen Rahmen unter der gewählten Person. Für andere wird beides erst nach „Online speichern“ sichtbar.</p>
     `;
     populateTargetGuardians();
@@ -542,6 +604,28 @@ export function createRelationActionsDialog(
     });
     if (!guardianSelect.options.length) guardianSelect.add(new Option('Keine aufnehmende Person in dieser Akte', ''));
     submitButton.disabled = !guardianSelect.value;
+    populateTargetCoGuardians();
+  }
+
+  function populateTargetCoGuardians() {
+    const familySelect = form.elements.namedItem('targetFamilyId');
+    const guardianSelect = form.elements.namedItem('targetGuardianId');
+    const coGuardianSelect = form.elements.namedItem('targetCoGuardianId');
+    if (!familySelect || !guardianSelect || !coGuardianSelect) return;
+    const record = listAvailableFamilyRecords().find(item => item.id === familySelect.value);
+    const family = record?.family;
+    const guardianId = guardianSelect.value;
+    coGuardianSelect.replaceChildren(new Option('— Nur die gewählte Person —', ''));
+    if (!family || !guardianId) return;
+    const preferredIds = new Set(activePartnerIds(family, guardianId));
+    orderedGuardianPartners(family, guardianId).forEach(person => {
+      coGuardianSelect.add(new Option(
+        `${person.name}${preferredIds.has(person.id) ? ' · aktive Partnerschaft' : ''}`,
+        person.id
+      ));
+    });
+    const preferred = [...coGuardianSelect.options].filter(option => preferredIds.has(option.value));
+    if (preferred.length === 1) coGuardianSelect.value = preferred[0].value;
   }
 
   function open(person, family) {
@@ -592,10 +676,12 @@ export function createRelationActionsDialog(
       registryFamilyId: values.registryFamilyId || '',
       registryPersonId: values.registryPersonId || '',
       marriageDirection: values.marriageDirection || 'partner-leaves',
+      coGuardianId: values.coGuardianId || '',
       deathYear: String(values.deathYear || '').trim(),
       deathUnknown: Boolean(values.deathUnknown),
       targetFamilyId: values.targetFamilyId || '',
       targetGuardianId: values.targetGuardianId || '',
+      targetCoGuardianId: values.targetCoGuardianId || '',
       partnershipId: values.partnershipId || '',
       removalId: values.removalId || '',
       removeUnconnectedPartner: Boolean(values.removeUnconnectedPartner),
@@ -612,9 +698,12 @@ export function createRelationActionsDialog(
     if (event.target.name === 'partnerSource') {
       syncPartnerSource();
       if (event.target.value === 'registry') populateRegistryPersons();
+      syncWardCoGuardianAvailability();
     }
+    if (event.target.name === 'partnerPersonId') syncWardCoGuardianAvailability();
     if (event.target.name === 'registryFamilyId') populateRegistryPersons();
     if (event.target.name === 'targetFamilyId') populateTargetGuardians();
+    if (event.target.name === 'targetGuardianId') populateTargetCoGuardians();
   });
 
   return Object.freeze({

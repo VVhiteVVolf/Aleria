@@ -88,6 +88,32 @@ Wichtig:
 - `classification.rootHouseId` verweist auf die oberste Linie.
 - `hierarchy` dokumentiert den sichtbaren fachlichen Pfad.
 
+## Strukturierte Figurenlisten
+
+Größere Häuser können ihre bekannten Personen optional als strukturierte Liste
+ausgeben. Dadurch bleiben Namen, Rollen, Beschreibungen und Bildzuordnungen in
+der Datendatei statt in kopiertem Tabellen-HTML:
+
+```js
+figures: {
+  heading: "12. Figuren des Hauses",
+  tableTitle: "Figuren des Hauses Beispiel",
+  entries: [
+    {
+      group: "Gründer",
+      role: "Gründer und erstes Oberhaupt",
+      name: "Name der Figur",
+      imageKey: "figur-gruender",
+      description: "Quellenbasierte Beschreibung der Figur.",
+    },
+  ],
+},
+```
+
+Das zugehörige Bild wird wie alle anderen Hausbilder über denselben Schlüssel
+in `images` registriert. Fehlt `figures`, bleibt die bisherige statische
+Vorlagentabelle unverändert erhalten.
+
 ## Keine HTML-Kopien
 
 Neue konkrete Familien brauchen standardmaessig keine eigene HTML-Datei. Der Link bleibt je nach Vorlage:

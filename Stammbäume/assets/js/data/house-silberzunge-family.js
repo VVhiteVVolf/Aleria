@@ -373,7 +373,7 @@ export const HOUSE_SILBERZUNGE_FAMILY = Object.freeze({
       title: 'Dritter Erbe des Clans Silberzunge'
     }),
     person('fjola-silberzunge', 'Fjóla Silberzunge', 'female', '1724', ''),
-    receivedWard('asdis-eisenbieger', 'Ásdís Eisenbieger', 'female', '1723', 'house-eisenbieger', {
+    receivedWard('asdis-eisenbieger', 'Ásdís Eisenbieger', 'female', '1720', 'house-eisenbieger', {
       title: 'Aufgenommenes Mündel Hjalprek Silberzunges'
     }),
     person('eyjolf-silberzunge', 'Eyjolf Silberzunge', 'male', '1722', ''),
@@ -479,8 +479,9 @@ export const HOUSE_SILBERZUNGE_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Clan Silberzunge (bereitgestellte Altdaten)',
+    sourceCrossRecordNote: 'Ásdís’ Geburtsjahr wurde anhand ihrer Herkunftsakte des Clans Eisenbieger von 1723 auf 1720 berichtigt; ihre Mündelschaft bei Hjalprek bleibt unverändert.',
     sourceNote: 'Der vollständige Quellenstammbaum wurde von Surtr und Skalli bis zu den 1740 lebenden jüngsten Silberzungen ohne Personenfokus übernommen. Das Hauswappen und genau ein Zeitsprung stehen strikt seriell zwischen dem Gründerpaar und den Geschwistern Snorri und Glódís. Glódís, Bryndís, Bjarnhild, Ísrún, Freydis, Eldkatla, Asgerd, Oddny und Ranva erhalten direkte Wegverheiratet-Knoten; Nachkommen ihrer auswärtigen Ehen werden ausschließlich in den fortführenden Gegenakten gezeigt. Ásdís Eisenbieger ist nur Hjalpreks aufgenommenes Mündel. Leiknir bleibt biologischer Sohn Sverrirs und Gundels, trägt als fortgegebenes Mündel den dunkelblauen Rahmen und ist direkt mit Clan Skogg verknüpft; die Gegenakte führt ihn dort als aufgenommenes Mündel. Die Hierarchietabelle schreibt Gerdruns Namen einmal als „Gerdun“, während Kinderüberschrift und Stammbaumgrafik „Gerdrun“ belegen; diese Form wird verwendet. Die blaue Leiknir-Karte nennt keinen konkreten Skogg-Vormund, weshalb die Gegenakte ihn transparent als Clan-Mündel beim amtierenden Oberhaupt Kjallak einordnet. Wiederholte Standardsilhouetten wurden nicht als Individualporträts gespeichert.',
     registryTombstones: {
       persons: ['haus-silberzunge-gruender', 'haus-silberzunge-gruenderin'],

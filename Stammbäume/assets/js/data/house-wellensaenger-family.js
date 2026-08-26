@@ -312,7 +312,9 @@ export const HOUSE_WELLENSAENGER_FAMILY = Object.freeze({
       title: 'Hesir und Herr von Burg Amol · Zweiter Admiral der Grünen'
     }),
     awayWoman('dagfrid-wellensaenger', 'Dagfrid Wellensänger', '1594', '1651', 'Clan Gullvig'),
-    spouse('thorkel-sturmgeborener', 'Thorkel Sturmgeborener', 'male', '1580', '1623', 'house-sturmgeborene'),
+    spouse('thorkel-sturmgeborener', 'Thorkel Sturmgeborener', 'male', '1580', '1625', 'house-sturmgeborene', {
+      notes: 'Das Todesjahr 1625 folgt der vollständigen Sturmgeborenen-Gegenakte; 1623 bezeichnet dort den Beginn der nächsten überlieferten Phase und war hier fälschlich als Todesjahr übernommen worden.'
+    }),
     spouse('lathgertha-frostauge', 'Lathgertha Frostauge', 'female', '1583', '1655', 'house-frostauge'),
     spouse('skeld-gullvig', 'Skeld Gullvig', 'male', '1594', '1630', 'house-gullvig'),
 
@@ -497,9 +499,9 @@ export const HOUSE_WELLENSAENGER_FAMILY = Object.freeze({
     preparedMainLine: true,
     chartLayoutPolicy: 'strict-v1',
     chartAlignLineageOriginOverTree: true,
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceModule: 'Clan Wellensänger (überlieferte HTML-Familienakte)',
-    sourceNote: 'Vollständiger Stammbaum ohne Personenfokus von Snorri und Gwendolyn bis zur jüngsten Generation des Jahres 1740. Das Hauswappen und genau ein absolut serieller Zeitsprung liegen zwischen dem Gründerpaar und Gunnar beziehungsweise Gunnora. Acht auswärtige Ehen von Wellensänger-Frauen besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Hildrun, Ulrika und Maiken führen dagegen entsprechend ihren ausdrücklich überlieferten Wellensänger-Kindern die eigene Linie fort. Zwei Quellüberschriften verschweigen Gilda Eisenbieger beziehungsweise Una als Mutter, obwohl die jeweils unmittelbar zugeordnete Ehezeile sie als einzige Ehefrau des Vaters führt; beide werden daher als Mütter der zugehörigen Kinderblöcke verwendet. Die Wellensänger-Quelle datiert Isaura auf 1726, während die ältere Kummerherz-Gegenakte 1725 nannte; als Hausquelle ihrer Herkunft ist hier 1726 maßgeblich und wird in der Gegenakte gespiegelt. Dasselbe Bild und derselbe Name identifizieren den in der Grendel-Akte nur als an einen unbekannten Küstenclan vermittelten Bjarni eindeutig als Uthars Mündel bei den Wellensängern. Die Schreibweise Sökaren wird zum registrierten Clan Sökeren normalisiert. Die fünf unbenannten Verlobtenfelder und wiederholte Standardsilhouetten werden nicht als Personen oder Individualporträts importiert.',
+    sourceNote: 'Vollständiger Stammbaum ohne Personenfokus von Snorri und Gwendolyn bis zur jüngsten Generation des Jahres 1740. Das Hauswappen und genau ein absolut serieller Zeitsprung liegen zwischen dem Gründerpaar und Gunnar beziehungsweise Gunnora. Acht auswärtige Ehen von Wellensänger-Frauen besitzen direkte Wegverheiratet-Knoten; ihre fremden Nachkommen bleiben ausschließlich in den Zielakten. Hildrun, Ulrika und Maiken führen dagegen entsprechend ihren ausdrücklich überlieferten Wellensänger-Kindern die eigene Linie fort. Zwei Quellüberschriften verschweigen Gilda Eisenbieger beziehungsweise Una als Mutter, obwohl die jeweils unmittelbar zugeordnete Ehezeile sie als einzige Ehefrau des Vaters führt; beide werden daher als Mütter der zugehörigen Kinderblöcke verwendet. Die Wellensänger-Quelle datiert Isaura auf 1726, während die ältere Kummerherz-Gegenakte 1725 nannte; als Hausquelle ihrer Herkunft ist hier 1726 maßgeblich und wird in der Gegenakte gespiegelt. Dasselbe Bild und derselbe Name identifizieren den in der Grendel-Akte nur als an einen unbekannten Küstenclan vermittelten Bjarni eindeutig als Uthars Mündel bei den Wellensängern. Die Schreibweise Sökaren wird zum registrierten Clan Sökeren normalisiert. Thorkel Sturmgeboreners Todesjahr wurde anhand der vollständigen Sturmgeborenen-Gegenakte von 1623 auf 1625 berichtigt. Die fünf unbenannten Verlobtenfelder und wiederholte Standardsilhouetten werden nicht als Personen oder Individualporträts importiert.',
     registryManagedExtensionFields: [
       'blankFamily', 'sourceNote', 'chartLayoutPolicy', 'chartAlignLineageOriginOverTree'
     ],

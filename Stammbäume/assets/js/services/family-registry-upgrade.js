@@ -162,6 +162,11 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     local.document.houseProfile,
     registryManagedFieldNames(registered, 'registryManagedHouseProfileFields')
   );
+  const mergedDocument = mergeRegisteredManagedFields(
+    registered.document,
+    local.document,
+    registryManagedFieldNames(registered, 'registryManagedDocumentFields')
+  );
   const mergedView = mergeRegisteredManagedFields(
     registered.view,
     local.view,
@@ -178,6 +183,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     registryManagedFieldNames(registered, 'registryManagedExtensionFields')
   );
   const registryManagedUpgradeMetadata = Object.fromEntries([
+    'registryManagedDocumentFields',
     'registryManagedExtensionFields',
     'registryManagedHouseProfileFields',
     'registryManagedLineageFields',
@@ -193,8 +199,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     ...local,
     ...mergedCollections,
     document: {
-      ...registered.document,
-      ...local.document,
+      ...mergedDocument,
       houseProfile: mergedHouseProfile
     },
     lineage: {

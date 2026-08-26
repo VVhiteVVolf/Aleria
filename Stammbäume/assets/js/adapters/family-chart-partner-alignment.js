@@ -14,8 +14,10 @@ const RESERVE_LEAF_CHILD_LANE_EXTENSION = 'chartReserveLeafChildLane';
 const RESERVE_DESCENDANT_BRANCH_LANE_EXTENSION = 'chartReserveDescendantBranchLane';
 const CENTER_BETWEEN_SPOUSES_EXTENSION = 'chartCenterBetweenSpousePersonIds';
 const CENTER_BETWEEN_PARTNERS_EXTENSION = 'chartCenterBetweenPartnerPersonIds';
+const KEEP_PARTNER_GROUP_TOGETHER_EXTENSION = 'chartKeepPartnerGroupTogether';
 const ALIGN_LINEAGE_ORIGIN_EXTENSION = 'chartAlignLineageOriginOverPersonId';
 const ALIGN_LINEAGE_ORIGIN_OVER_TREE_EXTENSION = 'chartAlignLineageOriginOverTree';
+const LINEAGE_CREST_PARENT_EXTENSION = 'chartLineageCrestParentPersonId';
 const MAX_NEARBY_RESTORE_SLOTS = 2;
 
 function configuredPartnerId(partnership) {
@@ -120,6 +122,12 @@ function createLineageOriginRoute(family, invalidRequests) {
     partnership.id === family?.lineage?.founderPartnershipId
   ));
   const founderPersonIds = new Set(founderPartnership?.participantIds || []);
+  const configuredLineageAnchorPersonId = typeof family?.extensions?.[LINEAGE_CREST_PARENT_EXTENSION] === 'string'
+    ? family.extensions[LINEAGE_CREST_PARENT_EXTENSION].trim()
+    : '';
+  const lineageAnchorPersonId = founderPersonIds.has(configuredLineageAnchorPersonId)
+    ? configuredLineageAnchorPersonId
+    : '';
   const targetPersonIds = alignOverVisibleTree
     ? (family?.persons || [])
       .map(person => person.id)
@@ -173,6 +181,16 @@ function createLineageOriginRoute(family, invalidRequests) {
       ...(lineageTimeGapNodeId ? [lineageTimeGapNodeId] : []),
       ...(explicitTimeJumpNodeId ? [explicitTimeJumpNodeId] : [])
     ]),
+    ...(lineageAnchorPersonId
+      ? {
+          lineageAnchorPersonId,
+          lineageNodeIds: Object.freeze([
+            crestNodeId,
+            ...(lineageTimeGapNodeId ? [lineageTimeGapNodeId] : []),
+            ...(explicitTimeJumpNodeId ? [explicitTimeJumpNodeId] : [])
+          ])
+        }
+      : {}),
     ...(explicitTimeJumpNodeId
       ? { optionalOriginNodeIds: Object.freeze([`${explicitTimeJumpNodeId}--layout-stage`]) }
       : {})
@@ -307,7 +325,10 @@ function createCenterBetweenSpousesRoutes(family, invalidRequests) {
     routes.push(Object.freeze({
       centeredPersonId: person.id,
       spousePersonIds: Object.freeze([...spousePersonIds]),
-      partnershipIds: Object.freeze(marriages.map(partnership => partnership.id))
+      partnershipIds: Object.freeze(marriages.map(partnership => partnership.id)),
+      ...(person?.extensions?.[KEEP_PARTNER_GROUP_TOGETHER_EXTENSION] === true
+        ? { keepTogether: true }
+        : {})
     }));
   });
 
@@ -343,7 +364,10 @@ function createCenterBetweenPartnersRoutes(family, invalidRequests) {
     routes.push(Object.freeze({
       centeredPersonId: person.id,
       partnerPersonIds: Object.freeze([...partnerPersonIds]),
-      partnershipIds: Object.freeze(partnerPartnerships.map(partnership => partnership.id))
+      partnershipIds: Object.freeze(partnerPartnerships.map(partnership => partnership.id)),
+      ...(person?.extensions?.[KEEP_PARTNER_GROUP_TOGETHER_EXTENSION] === true
+        ? { keepTogether: true }
+        : {})
     }));
   });
 
@@ -915,8 +939,9 @@ function resolveCenteredPartnerCardPacking(
       const slotIndex = index < centeredSlotIndex ? index : index + 1;
       return slotIndex - centeredSlotIndex;
     });
-    const enforcesAutomaticProximity = String(centeredRoute.source || '').startsWith('automatic-');
-    const hasProximityViolation = enforcesAutomaticProximity && partnerPlacements.some((placement, index) => {
+    const enforcesLocalProximity = centeredRoute.keepTogether === true
+      || String(centeredRoute.source || '').startsWith('automatic-');
+    const hasProximityViolation = enforcesLocalProximity && partnerPlacements.some((placement, index) => {
       const desiredCoordinate = centeredCoordinateNow + (partnerSlotOffsets[index] * step);
       return (
         Math.abs(partnerCoordinates[index] - desiredCoordinate) > (step * 0.35)
@@ -1266,7 +1291,25 @@ export function applyFamilyChartLineageOriginAlignment({
     nodes.filter(node => node?.data?.id === nodeId)
   ));
   const targetCoordinate = centeredCoordinate(targetNodes, axis);
-  const anchorCoordinate = Number(anchorNode?.[axis]);
+  let anchorCoordinate = Number(anchorNode?.[axis]);
+  let lineageAnchorDelta = 0;
+  if (route.lineageAnchorPersonId) {
+    const lineageAnchorPersonNode = displayedNodeById(nodes, route.lineageAnchorPersonId);
+    const lineageNodes = (route.lineageNodeIds || [])
+      .map(nodeId => displayedNodeById(nodes, nodeId))
+      .filter(Boolean);
+    const lineageAnchorPersonCoordinate = Number(lineageAnchorPersonNode?.[axis]);
+    if (
+      lineageAnchorPersonNode
+      && lineageNodes.length === (route.lineageNodeIds || []).length
+      && Number.isFinite(lineageAnchorPersonCoordinate)
+      && Number.isFinite(anchorCoordinate)
+    ) {
+      lineageAnchorDelta = lineageAnchorPersonCoordinate - anchorCoordinate;
+      lineageNodes.forEach(node => shiftNodeAlongCrossAxis(node, axis, lineageAnchorDelta));
+      anchorCoordinate = Number(anchorNode?.[axis]);
+    }
+  }
   if (
     targetNodes.length !== targetPersonIds.length
     || !anchorNode
@@ -1282,7 +1325,8 @@ export function applyFamilyChartLineageOriginAlignment({
     ...route,
     axis,
     targetCoordinate,
-    delta
+    delta,
+    lineageAnchorDelta
   });
 }
 
@@ -1312,7 +1356,8 @@ export function applyFamilyChartPartnerAlignmentPlan({
     centeredPartnerRoutes.set(route.centeredPersonId, Object.freeze({
       centeredPersonId: route.centeredPersonId,
       partnerPersonIds: Object.freeze([...route.spousePersonIds]),
-      partnershipIds: Object.freeze([...route.partnershipIds])
+      partnershipIds: Object.freeze([...route.partnershipIds]),
+      ...(route.keepTogether === true ? { keepTogether: true } : {})
     }));
   });
   (plan?.centerBetweenPartnersRoutes || []).forEach(route => {

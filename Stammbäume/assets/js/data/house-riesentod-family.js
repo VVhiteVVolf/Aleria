@@ -374,7 +374,9 @@ export const HOUSE_RIESENTOD_FAMILY = Object.freeze({
     }),
     spouse('hranvald-hyrmgardr', 'Hranvald Hyrmgarthr', 'male', '1652', '', 'house-hyrmgardr'),
     awayWoman('svana-riesentod', 'Svana Riesentod', '1654', '1725', 'Clan Sturmgeborene'),
-    spouse('erlend-sturmgeborener', 'Erlend Sturmgeborener', 'male', '1654', '1731', 'house-sturmgeborene'),
+    spouse('erlend-sturmgeborener', 'Erlend Sturmgeborener', 'male', '1654', '1738', 'house-sturmgeborene', {
+      notes: 'Das Todesjahr 1738 folgt der vollständigen Sturmgeborenen-Gegenakte und berichtigt den älteren Übertragungswert 1731.'
+    }),
     person('tormund-riesentod', 'Tormund Riesentod', 'male', '1656', '1738', {
       title: 'Hesir des Clans Riesentod · legendärer Seefahrer und Kriegsherr'
     }),
@@ -557,9 +559,9 @@ export const HOUSE_RIESENTOD_FAMILY = Object.freeze({
     preparedMainLine: true,
     chartLayoutPolicy: 'strict-v1',
     chartAlignLineageOriginOverPersonId: 'toste-riesentod',
-    sourceRevision: 5,
+    sourceRevision: 6,
     sourceModule: 'Clan Riesentod (überlieferte HTML-Familienakte)',
-    sourceNote: 'Vollständiger Stammbaum ohne Personenfokus von Leif und Sigrid bis zur jüngsten Generation des Jahres 1740. Die Altquelle schreibt den Namen Riesentot; für Namen und Registerpfad gilt die bestehende Projektform Riesentod, während bereits veröffentlichte technische IDs mit Riesentot aus Gründen stabiler Gegenverknüpfungen erhalten bleiben. Die Übersichtsprosa nennt für Eorlund 1627 als Geburtsjahr, die eigentliche Personen- und Stammbaumtabelle nennt eindeutig 1608; die genealogische Tabelle ist maßgeblich. Die Riesentod-Akte nennt Hranvalds Frau Edla, die Hyrmgarthr-Akte dieselbe Person Yrnhild; Weltpersonen-ID und Ehe bleiben identisch, der Widerspruch ist an beiden Datensätzen dokumentiert. Kinder aus den Ehen Geirný–Kolbjorn, Petka–Torgeir, Fjola–Skjor, Elsa–Askold und Isfir–Uthar bleiben ausschließlich in den jeweiligen Zielakten, damit sie nicht doppelt dargestellt werden. Historische Mündelschaftsnotizen und alle unbenannten Verlobtenfelder der jüngsten Generation werden auf Nutzerwunsch nicht importiert.',
+    sourceNote: 'Vollständiger Stammbaum ohne Personenfokus von Leif und Sigrid bis zur jüngsten Generation des Jahres 1740. Die Altquelle schreibt den Namen Riesentot; für Namen und Registerpfad gilt die bestehende Projektform Riesentod, während bereits veröffentlichte technische IDs mit Riesentot aus Gründen stabiler Gegenverknüpfungen erhalten bleiben. Die Übersichtsprosa nennt für Eorlund 1627 als Geburtsjahr, die eigentliche Personen- und Stammbaumtabelle nennt eindeutig 1608; die genealogische Tabelle ist maßgeblich. Die Riesentod-Akte nennt Hranvalds Frau Edla, die Hyrmgarthr-Akte dieselbe Person Yrnhild; Weltpersonen-ID und Ehe bleiben identisch, der Widerspruch ist an beiden Datensätzen dokumentiert. Erlend Sturmgeboreners Todesjahr wurde anhand der vollständigen Sturmgeborenen-Gegenakte von 1731 auf 1738 berichtigt. Kinder aus den Ehen Geirný–Kolbjorn, Petka–Torgeir, Fjola–Skjor, Elsa–Askold und Isfir–Uthar bleiben ausschließlich in den jeweiligen Zielakten, damit sie nicht doppelt dargestellt werden. Historische Mündelschaftsnotizen und alle unbenannten Verlobtenfelder der jüngsten Generation werden auf Nutzerwunsch nicht importiert.',
     registryManagedExtensionFields: [
       'blankFamily', 'sourceNote', 'chartLayoutPolicy', 'chartAlignLineageOriginOverPersonId'
     ],

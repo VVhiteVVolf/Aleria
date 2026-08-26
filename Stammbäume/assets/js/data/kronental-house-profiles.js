@@ -18,10 +18,14 @@ const SPINDELHEIM_PATH = Object.freeze([
 ]);
 const MOEWENFELS_PATH = Object.freeze([...KRONENTAL_ROOT, 'Hesirentum von Möwenfels', 'Kastav']);
 const WELLENKLANG_PATH = Object.freeze([...KRONENTAL_ROOT, 'Hesirentum von Wellenklang', 'Amol']);
+const TORRENWACHT_PATH = Object.freeze([
+  ...KRONENTAL_ROOT,
+  'Hesirentum von Torrenwacht (ausgestorben / inaktiv)',
+  'Torrenheim'
+]);
 const KLAGESCHILD_ROOT = Object.freeze([...KRONENTAL_ROOT, 'Klageschild-Inseln']);
 const KLAGESCHILD_PATH = Object.freeze([...KLAGESCHILD_ROOT, 'Wellenruh']);
 const EIBENSCHILD_PATH = Object.freeze([...KLAGESCHILD_ROOT, 'Vagaborg']);
-const UNLOCATED_PATH = Object.freeze([...KRONENTAL_ROOT, 'Nicht verortet']);
 const OUTLAW_PATH = Object.freeze([
   ...KRONENTAL_ROOT,
   'Abtrünnige Clans',
@@ -64,13 +68,13 @@ export const KRONENTAL_HOUSE_EMBLEMS = Object.freeze({
   albholz: `${HOUSE_ROOT}/clan-albholz.png`,
   daemmerrufer: `${HOUSE_ROOT}/clan-daemmerrufer.png`,
   wellenkrone: `${HOUSE_ROOT}/clan-wellenkrone.png`,
-  donnerblut: PLACEHOLDER_EMBLEM,
-  moorbrand: PLACEHOLDER_EMBLEM,
-  jormung: PLACEHOLDER_EMBLEM,
+  donnerblut: `${HOUSE_ROOT}/clan-donnerblut.png`,
+  moorbrand: `${HOUSE_ROOT}/clan-moorbrand.png`,
+  jormung: `${HOUSE_ROOT}/clan-jormung.png`,
   nidfengr: PLACEHOLDER_EMBLEM,
   tarbhann: PLACEHOLDER_EMBLEM,
-  bjarnvarg: PLACEHOLDER_EMBLEM,
-  tauwind: PLACEHOLDER_EMBLEM,
+  bjarnvarg: `${HOUSE_ROOT}/clan-bjarnvarg.png`,
+  tauwind: `${HOUSE_ROOT}/clan-tauwind.png`,
   morchaon: PLACEHOLDER_EMBLEM,
   hvelgrson: PLACEHOLDER_EMBLEM,
   frostzorn: `${HOUSE_ROOT}/clan-frostzorn.png`,
@@ -141,7 +145,9 @@ function extinctProfile(slug, group, options = {}) {
 }
 
 const HELDENWACHT_HUSKARLS = Object.freeze(['suedstahl', 'albholz', 'daemmerrufer', 'wellenkrone']);
-const UNLOCATED_HUSKARLS = Object.freeze(['donnerblut', 'moorbrand', 'jormung', 'nidfengr', 'tarbhann', 'bjarnvarg', 'tauwind']);
+const HELDENWACHT_ADDITIONAL_HUSKARLS = Object.freeze([
+  'donnerblut', 'moorbrand', 'jormung', 'nidfengr', 'tarbhann', 'bjarnvarg', 'tauwind'
+]);
 
 export const KRONENTAL_HOUSE_PROFILES = Object.freeze({
   vaeren: ALDRIMAR_HOUSE_PROFILES.vaeren,
@@ -177,31 +183,24 @@ export const KRONENTAL_HOUSE_PROFILES = Object.freeze({
       KRONENTAL_REGION_EMBLEMS.city
     ]
   }),
-  spindelschlag: kronentalProfile('huskarl', SPINDELHEIM_PATH, {
+  spindelschlag: kronentalProfile('commoner', SPINDELHEIM_PATH, {
     baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden
   }),
   ...Object.fromEntries(HELDENWACHT_HUSKARLS.map(slug => [slug, kronentalProfile('huskarl', HELDENWACHT_PATH, {
     baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden
   })])),
-  ...Object.fromEntries(UNLOCATED_HUSKARLS.map(slug => [slug, kronentalProfile('huskarl', UNLOCATED_PATH, {
-    seatEmblem: '',
-    folderIcons: [
-      ALDRIMAR_REGION_EMBLEMS.aldrimar,
-      ALDRIMAR_REGION_EMBLEMS.kronental,
-      ''
-    ]
+  ...Object.fromEntries(HELDENWACHT_ADDITIONAL_HUSKARLS.map(slug => [slug, kronentalProfile('huskarl', HELDENWACHT_PATH, {
+    baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden
   })])),
-  morchaon: kronentalProfile('commoner', UNLOCATED_PATH, {
+  morchaon: kronentalProfile('commoner', HELDENWACHT_PATH, {
     liegeHouseId: '',
     liegeHouseName: '',
-    seatEmblem: '',
-    folderIcons: [ALDRIMAR_REGION_EMBLEMS.aldrimar, ALDRIMAR_REGION_EMBLEMS.kronental, '']
+    baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden
   }),
-  hvelgrson: kronentalProfile('commoner', UNLOCATED_PATH, {
+  hvelgrson: kronentalProfile('commoner', HELDENWACHT_PATH, {
     liegeHouseId: '',
     liegeHouseName: '',
-    seatEmblem: '',
-    folderIcons: [ALDRIMAR_REGION_EMBLEMS.aldrimar, ALDRIMAR_REGION_EMBLEMS.kronental, '']
+    baronyEmblem: KRONENTAL_REGION_EMBLEMS.talDerHelden
   }),
   frostzorn: kronentalProfile('unknown', OUTLAW_PATH, {
     liegeHouseId: '',
@@ -215,18 +214,11 @@ export const KRONENTAL_HOUSE_PROFILES = Object.freeze({
       KRONENTAL_REGION_EMBLEMS.city
     ]
   }),
-  grimr: extinctProfile('grimr', KRONENTAL_EXTINCT_CLAN_GROUPS.norrnaigh, {
-    location: ['Hesirentum von Torrenwacht', 'Torrenheim'],
-    territoryEmblem: KRONENTAL_REGION_EMBLEMS.torrenwacht
-  }),
-  skaife: extinctProfile('skaife', KRONENTAL_EXTINCT_CLAN_GROUPS.norrnaigh, {
-    location: ['Hesirentum von Torrenwacht', 'Torrenheim'],
-    territoryEmblem: KRONENTAL_REGION_EMBLEMS.torrenwacht
-  }),
-  holmr: extinctProfile('holmr', KRONENTAL_EXTINCT_CLAN_GROUPS.norrnaigh, {
-    location: ['Hesirentum von Torrenwacht', 'Torrenheim'],
-    territoryEmblem: KRONENTAL_REGION_EMBLEMS.torrenwacht
-  }),
+  ...Object.fromEntries(['grimr', 'skaife', 'holmr'].map(slug => [slug, kronentalProfile('unknown', TORRENWACHT_PATH, {
+    liegeHouseId: '',
+    liegeHouseName: '',
+    baronyEmblem: KRONENTAL_REGION_EMBLEMS.torrenwacht
+  })])),
   isvanyr: extinctProfile('isvanyr', KRONENTAL_EXTINCT_CLAN_GROUPS.norrnaigh),
   'mac-mamhar': extinctProfile('mac-mamhar', KRONENTAL_EXTINCT_CLAN_GROUPS.glaennath)
 });

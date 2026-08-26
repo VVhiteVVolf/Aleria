@@ -31,6 +31,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   eisenbieger: KRONENTAL_HOUSE_EMBLEMS.eisenbieger,
   sturmgeborene: KRONENTAL_HOUSE_EMBLEMS.sturmgeborene,
   frostauge: KRONENTAL_HOUSE_EMBLEMS.frostauge,
+  spindelschlag: KRONENTAL_HOUSE_EMBLEMS.spindelschlag,
   wellenschild: KRONENTAL_HOUSE_EMBLEMS.wellenschild,
   wellensaenger: KRONENTAL_HOUSE_EMBLEMS.wellensaenger,
   holmr: KRONENTAL_HOUSE_EMBLEMS.holmr
@@ -294,6 +295,7 @@ export const HOUSE_VAEREN_FAMILY = Object.freeze({
     house('house-eisenbieger', 'Clan Eisenbieger', HOUSE_EMBLEMS.eisenbieger),
     house('house-sturmgeborene', 'Clan Sturmgeborene', HOUSE_EMBLEMS.sturmgeborene),
     house('house-frostauge', 'Clan Frostauge', HOUSE_EMBLEMS.frostauge),
+    house('house-spindelschlag', 'Clan Spindelschlag', HOUSE_EMBLEMS.spindelschlag),
     house('house-wellenschild', 'Clan Wellenschild', HOUSE_EMBLEMS.wellenschild),
     house('house-wellensaenger', 'Clan Wellensänger', HOUSE_EMBLEMS.wellensaenger),
     house('house-holmr', 'Clan Holmr', HOUSE_EMBLEMS.holmr),
@@ -379,7 +381,10 @@ export const HOUSE_VAEREN_FAMILY = Object.freeze({
     }),
     spouse('sorcha-rochraide', 'Sorcha Rochraide', 'female', '????', '????', 'house-rochraide'),
     person('galmar-vaeren', 'Galmar Vaeren', 'male', '1613', '1676'),
-    spouse('gerdur', 'Gerdur', 'female', '1630', '1676'),
+    spouse('gerdur', 'Gerdur Spindelschlag', 'female', '1630', '1676', 'house-spindelschlag', {
+      title: 'Königin von Aldrimar · Aus Clan Spindelschlag',
+      notes: 'Gerdur und König Galmar verschwanden 1676 gemeinsam auf hoher See.'
+    }),
 
     person('rollo-vaeren', 'Rollo Vaeren', 'male', '1655', '', { status: 'missing', title: 'Verschollen' }),
     person('ragnar-vaeren', 'Ragnar Vaeren', 'male', '1656', '', { status: 'missing', title: 'Verschollen' }),
@@ -544,9 +549,9 @@ export const HOUSE_VAEREN_FAMILY = Object.freeze({
     blankFamily: false,
     preparedMainLine: true,
     jarltum: 'Kronental',
-    sourceRevision: 7,
+    sourceRevision: 8,
     sourceModule: 'Clan Vaeren (bereitgestellte Altdaten)',
-    sourceNote: 'Der vollständige Vaeren-Stammbaum folgt der bereitgestellten Hausseite von Odin bis zur Generation von 1740. Drei Quellenlücken werden ausschließlich als serielle, absolute Generationentrenner dargestellt; die beiden mittleren Trenner vereinen jeweils zwei parallele Vorfahrenpaare, ohne neben einem anderen Knoten zu stehen. Balgruuf der Jüngere steht zwischen seinen beiden Ehefrauen, deren Kinder strikt nach Mutter getrennt bleiben. Dasselbe gilt für Sigurds Ehe und Affäre sowie für Sjorings Ehe und zwei Affären. Die namenlosen Verlobten-Platzhalter der jungen Generation werden nicht angelegt; Durathor behält stattdessen die beidseitig belegte Verlobung mit Hildessa Wargh. Mündelrahmen und Mündelknoten werden ausschließlich bei diesem jungen Sprössling geführt. Bjoerns Patenschaft bei den Skaal und Sinding historische Obhut bei den Varangr werden nicht als alte Mündelrahmen wiederholt. Sigmirs drei überlieferte Affären bleiben sichtbar, aber mangels namentlich belegter Kinder werden keine Bastarde erfunden. Die Schreibweise Riesentot wird zum registrierten Clan Riesentod normalisiert. Die Quelle variiert Dunneir/Duneirr; die Stammbaum-Schreibweise Dunneir bleibt erhalten. Øystein und Fridleif werden in der Varangr-Gegenakte beide männlich geführt, während die Vaeren-Tafel sie als Paar darstellt; die bestehende Weltidentität wird nicht stillschweigend geändert. Gunnoras Wellensänger-Herkunftsakte präzisiert ihre Lebensdaten auf 1562–1605; das Ende ihrer Ehe mit Siegthrygre wird deshalb ebenfalls 1605 geführt.',
+    sourceNote: 'Der vollständige Vaeren-Stammbaum folgt der bereitgestellten Hausseite von Odin bis zur Generation von 1740. Drei Quellenlücken werden ausschließlich als serielle, absolute Generationentrenner dargestellt; die beiden mittleren Trenner vereinen jeweils zwei parallele Vorfahrenpaare, ohne neben einem anderen Knoten zu stehen. Balgruuf der Jüngere steht zwischen seinen beiden Ehefrauen, deren Kinder strikt nach Mutter getrennt bleiben. Dasselbe gilt für Sigurds Ehe und Affäre sowie für Sjorings Ehe und zwei Affären. Die namenlosen Verlobten-Platzhalter der jungen Generation werden nicht angelegt; Durathor behält stattdessen die beidseitig belegte Verlobung mit Hildessa Wargh. Mündelrahmen und Mündelknoten werden ausschließlich bei diesem jungen Sprössling geführt. Bjoerns Patenschaft bei den Skaal und Sinding historische Obhut bei den Varangr werden nicht als alte Mündelrahmen wiederholt. Sigmirs drei überlieferte Affären bleiben sichtbar, aber mangels namentlich belegter Kinder werden keine Bastarde erfunden. Die Schreibweise Riesentot wird zum registrierten Clan Riesentod normalisiert. Die Quelle variiert Dunneir/Duneirr; die Stammbaum-Schreibweise Dunneir bleibt erhalten. Øystein und Fridleif werden in der Varangr-Gegenakte beide männlich geführt, während die Vaeren-Tafel sie als Paar darstellt; die bestehende Weltidentität wird nicht stillschweigend geändert. Gunnoras Wellensänger-Herkunftsakte präzisiert ihre Lebensdaten auf 1562–1605; das Ende ihrer Ehe mit Siegthrygre wird deshalb ebenfalls 1605 geführt. Gerdur wird anhand ihrer Herkunftsakte vollständig als Gerdur Spindelschlag registriert und verwendet dieselbe Weltperson wie im Spindelschlag-Stammbaum.',
     registryTombstones: {
       persons: ['haus-vaeren-gruender', 'haus-vaeren-gruenderin'],
       partnerships: ['marriage-haus-vaeren-founders']

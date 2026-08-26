@@ -5,19 +5,10 @@ import {
   stableCrossFamilyLinkId,
   withCanonicalWorldPersonIds
 } from './cross-family-person-projection.js';
-import { isExclusiveActivePartnership } from './exclusive-partnership-policy.js';
 import { isPersonUnconnected } from './family-record-removal.js';
 
 function primaryHouse(family) {
   return family.houses.find(house => house.id === family.lineage.houseId) || null;
-}
-
-function activeSpouseId(family, guardianId) {
-  return family.partnerships.find(partnership => (
-    partnership.participantIds.includes(guardianId)
-    && isExclusiveActivePartnership(partnership)
-    && ['marriage', 'union'].includes(partnership.type)
-  ))?.participantIds.find(personId => personId !== guardianId) || '';
 }
 
 function guardianshipDetails(linkId, wardFamily, ward, guardianFamily, guardian) {
@@ -74,7 +65,7 @@ function projectWardHome(familyInput, guardianFamily, wardId, details) {
   return normalizeFamily(family);
 }
 
-function projectGuardianHome(familyInput, wardFamily, guardianId, wardId, details) {
+function projectGuardianHome(familyInput, wardFamily, guardianId, guardianPartnerId, wardId, details) {
   const family = cloneValue(normalizeFamily(familyInput));
   const ward = wardFamily.persons.find(person => person.id === wardId);
   if (!ward || !family.persons.some(person => person.id === guardianId)) {
@@ -88,8 +79,9 @@ function projectGuardianHome(familyInput, wardFamily, guardianId, wardId, detail
     ...(importedWard.extensions || {}),
     crossFamilyGuardianship: details
   };
-  const spouseId = activeSpouseId(family, guardianId);
-  const parentIds = [guardianId, spouseId].filter(Boolean).filter(personId => personId !== importedWard.id);
+  const parentIds = [guardianId, guardianPartnerId]
+    .filter(Boolean)
+    .filter(personId => personId !== importedWard.id);
   const partnershipId = family.partnerships.find(partnership => (
     parentIds.length === partnership.participantIds.length
     && parentIds.every(personId => partnership.participantIds.includes(personId))
@@ -122,7 +114,8 @@ export function createMirroredGuardianshipChange({
   counterpartFamily: counterpartInput,
   currentPersonId,
   counterpartPersonId,
-  currentRole
+  currentRole,
+  guardianPartnerId = ''
 }) {
   const currentFamily = withCanonicalWorldPersonIds(currentInput);
   const counterpartFamily = withCanonicalWorldPersonIds(counterpartInput);
@@ -137,10 +130,23 @@ export function createMirroredGuardianshipChange({
   const guardian = guardianFamily.persons.find(person => person.id === guardianId);
   const ward = wardFamily.persons.find(person => person.id === wardId);
   if (!guardian || !ward) throw new Error('Mündel oder aufnehmende Person wurde nicht gefunden.');
+  if (guardianPartnerId && (
+    guardianPartnerId === guardianId
+    || !guardianFamily.persons.some(person => person.id === guardianPartnerId)
+  )) {
+    throw new Error('Das weitere aufnehmende Elternteil ist ungültig.');
+  }
   const linkId = stableCrossFamilyLinkId('guardianship', wardFamily, ward, guardianFamily, guardian);
   const details = guardianshipDetails(linkId, wardFamily, ward, guardianFamily, guardian);
   const nextWardFamily = projectWardHome(wardFamily, guardianFamily, wardId, details);
-  const nextGuardianFamily = projectGuardianHome(guardianFamily, wardFamily, guardianId, wardId, details);
+  const nextGuardianFamily = projectGuardianHome(
+    guardianFamily,
+    wardFamily,
+    guardianId,
+    guardianPartnerId,
+    wardId,
+    details
+  );
   return Object.freeze({
     linkId,
     currentFamily: currentRole === 'guardian' ? nextGuardianFamily : nextWardFamily,

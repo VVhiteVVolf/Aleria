@@ -18,6 +18,7 @@ import {
 import { assertNoDuplicateHouseBranch } from '../modules/houses/house-branch-deduplication.js';
 import { refreshAutomaticSingleChildAlignment } from '../modules/relationships/single-child-alignment-policy.js';
 import { refreshMultiplePartnershipAlignment } from '../modules/relationships/multiple-partnership-alignment-policy.js';
+import { personHasMirroredConnections } from '../modules/relationships/relationship-action-policy.js';
 
 const RELATED_PERSON_KINDS = new Set(['partnership', 'child', 'parent', 'time-jump-child', 'lineage-gap-child']);
 
@@ -69,6 +70,16 @@ function findPartnershipId(partnerships, participantIds) {
     ids.length === partnership.participantIds.length
     && ids.every(personId => partnership.participantIds.includes(personId))
   ))?.id || '';
+}
+
+function hasMatchingParentage(family, values) {
+  const parentIds = [...new Set(values.parentIds || [])];
+  return family.parentages.some(parentage => (
+    parentage.childId === values.childId
+    && parentage.type === values.type
+    && parentIds.length === parentage.parentIds.length
+    && parentIds.every(personId => parentage.parentIds.includes(personId))
+  ));
 }
 
 function resolveTimeJumpAnchor(draft, values) {
@@ -380,6 +391,27 @@ export function createFamilyStore(initialFamily, options = {}) {
     }, { personId });
   }
 
+  function legitimizePerson(personId) {
+    if (!family.persons.some(person => person.id === personId)) {
+      throw new Error('Die Person wurde nicht gefunden.');
+    }
+    const targetIds = family.parentages
+      .filter(parentage => (
+        parentage.childId === personId
+        && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
+      ))
+      .map(parentage => parentage.id);
+    if (!targetIds.length) {
+      throw new Error('Für diese Person ist keine uneheliche Abstammung eingetragen.');
+    }
+    const targets = new Set(targetIds);
+    return commit('person-legitimized', draft => {
+      draft.parentages.forEach(parentage => {
+        if (targets.has(parentage.id)) parentage.legitimacy = 'legitimized';
+      });
+    }, { personId, parentageIds: targetIds });
+  }
+
   function setPersonExtension(personId, extensionId, value) {
     const key = String(extensionId || '').trim();
     if (!key) throw new Error('Die Erweiterungs-ID darf nicht leer sein.');
@@ -407,6 +439,9 @@ export function createFamilyStore(initialFamily, options = {}) {
   }
 
   function deletePerson(personId) {
+    if (personHasMirroredConnections(family, personId)) {
+      throw new Error('Zuerst die gespiegelten Ehen, Affären oder Mündelverknüpfungen entfernen. So bleibt die Gegenakte konsistent.');
+    }
     return commit('person-deleted', draft => {
       const nextFamily = removePersonRecord(draft, personId);
       Object.keys(draft).forEach(key => delete draft[key]);
@@ -514,13 +549,9 @@ export function createFamilyStore(initialFamily, options = {}) {
 
   function addParentage(values) {
     const parentIds = [...new Set(values.parentIds || [])];
-    const existing = family.parentages.find(parentage => (
-      parentage.childId === values.childId
-      && parentage.type === values.type
-      && parentIds.length === parentage.parentIds.length
-      && parentIds.every(personId => parentage.parentIds.includes(personId))
-    ));
-    if (existing) throw new Error('Diese Abstammung ist bereits eingetragen.');
+    if (hasMatchingParentage(family, { ...values, parentIds })) {
+      throw new Error('Diese Abstammung ist bereits eingetragen.');
+    }
     const id = values.id || createRecordId('parentage', family.parentages.map(item => item.id));
     commit('parentage-added', draft => {
       draft.parentages.push({
@@ -537,6 +568,43 @@ export function createFamilyStore(initialFamily, options = {}) {
       });
       if (values.partnershipId) refreshRelationshipLayout(draft, [values.partnershipId]);
     }, { parentageId: id });
+    return id;
+  }
+
+  function addWard(values) {
+    const childId = values.childId;
+    const parentIds = [...new Set(values.parentIds || [])]
+      .filter(personId => personId && personId !== childId);
+    if (!family.persons.some(person => person.id === childId)) {
+      throw new Error('Das Mündel wurde nicht gefunden.');
+    }
+    if (!parentIds.length || parentIds.some(personId => !family.persons.some(person => person.id === personId))) {
+      throw new Error('Mindestens eine aufnehmende Person wurde nicht gefunden.');
+    }
+    const parentageValues = { ...values, childId, parentIds, type: 'foster' };
+    if (hasMatchingParentage(family, parentageValues)) {
+      throw new Error('Diese Mündelaufnahme ist bereits eingetragen.');
+    }
+    const id = values.id || createRecordId('parentage', family.parentages.map(item => item.id));
+    commit('ward-added', draft => {
+      draft.parentages.push({
+        id,
+        childId,
+        parentIds,
+        partnershipId: values.partnershipId || findPartnershipId(draft.partnerships, parentIds),
+        type: 'foster',
+        legitimacy: values.legitimacy || 'unknown',
+        certainty: values.certainty || 'confirmed',
+        visibility: values.visibility || 'public',
+        notes: values.notes || '',
+        extensions: cloneValue(values.extensions || {})
+      });
+      const ward = draft.persons.find(person => person.id === childId);
+      ward.familyRole = 'ward';
+      refreshRelationshipLayout(draft);
+    }, { parentageId: id, childId, parentIds });
+    selectedPersonId = childId;
+    emit('selection-changed', { personId: childId }, false);
     return id;
   }
 
@@ -798,6 +866,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     addPerson,
     addRelatedPerson,
     updatePerson,
+    legitimizePerson,
     setPersonExtension,
     setFamilyExtension,
     deletePerson,
@@ -806,6 +875,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     updatePartnership,
     deletePartnership,
     addParentage,
+    addWard,
     updateParentage,
     deleteParentage,
     ensureHouse,

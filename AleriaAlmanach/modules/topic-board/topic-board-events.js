@@ -48,6 +48,14 @@ function handleTopicBoardClick(event) {
   } else if (action === 'set-view') {
     event.preventDefault();
     setTopicBoardView(button.dataset.topicBoardView || TOPIC_BOARD_STATUS_OPEN);
+    globalThis.AleriaTopicBoardListState.clearExpanded();
+    renderTopicBoard();
+  } else if (action === 'toggle-details') {
+    event.preventDefault();
+    toggleTopicBoardProposalDetails(button.dataset.topicBoardId || '');
+  } else if (action === 'clear-list-filters') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardListState.resetFilters();
     renderTopicBoard();
   } else if (action === 'edit') {
     event.preventDefault();
@@ -80,6 +88,14 @@ function handleTopicBoardClick(event) {
 }
 
 function handleTopicBoardInput(event) {
+  const listField = event.target?.dataset?.topicBoardListField;
+  if (listField) {
+    if (listField === 'query') globalThis.AleriaTopicBoardListState.setQuery(event.target.value || '');
+    else if (listField === 'category') globalThis.AleriaTopicBoardListState.setCategory(event.target.value || 'all');
+    else if (listField === 'sort') globalThis.AleriaTopicBoardListState.setSort(event.target.value || 'votes');
+    renderTopicBoardList();
+    return;
+  }
   const form = event.target?.closest?.('[data-topic-board-form]');
   if (!form) return;
   if (event.target?.dataset?.topicBoardField === 'character-search') {
