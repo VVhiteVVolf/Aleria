@@ -36,6 +36,30 @@ function loadScheduleUi() {
   return context;
 }
 
+function loadCompletePlanningEditorUi() {
+  const context = vm.createContext({
+    console,
+    Date,
+    Math,
+    AleriaWorldDateStore: {
+      getState: () => ({ date: { year: 1740, month: 3, day: 9 } })
+    }
+  });
+  for (const relativePath of [
+    '../modules/core/aleria-calendar.js',
+    '../modules/world-date/world-date-model.js',
+    '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-schedule.js',
+    '../modules/topic-board/topic-board-model.js',
+    '../modules/topic-board/topic-board-travel-ui.js',
+    '../modules/topic-board/topic-board-schedule-ui.js',
+    '../modules/topic-board/topic-board-ui.js'
+  ]) {
+    vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
+  }
+  return context;
+}
+
 test('ein allgemeiner Termin berechnet sein inklusives Enddatum', () => {
   const context = loadSchedule();
   const schedule = vm.runInContext(`AleriaTopicBoardSchedule.normalize({
@@ -116,9 +140,36 @@ test('der Editor startet am Seitendatum und bietet relative Schnelltermine', () 
   assert.deepEqual({ ...target }, { year: 1740, month: 3, day: 13 });
 });
 
+test('der vollständige Editor montiert Termin- und Reiseplanung in feste Formularplätze', () => {
+  const context = loadCompletePlanningEditorUi();
+  const scheduleSlot = { innerHTML: '', dataset: {} };
+  const travelSlot = { innerHTML: '', dataset: {} };
+  context.testForm = {
+    querySelector(selector) {
+      if (selector.includes('schedule')) return scheduleSlot;
+      if (selector.includes('travel')) return travelSlot;
+      return null;
+    },
+    querySelectorAll: () => [scheduleSlot, travelSlot]
+  };
+
+  const ready = vm.runInContext('mountTopicBoardPlanningEditors(testForm)', context);
+
+  assert.equal(ready, true);
+  assert.equal(scheduleSlot.dataset.topicBoardPlanningState, 'ready');
+  assert.equal(travelSlot.dataset.topicBoardPlanningState, 'ready');
+  assert.match(scheduleSlot.innerHTML, /name="scheduleStartDay"/);
+  assert.match(scheduleSlot.innerHTML, /data-topic-board-schedule-offset="4"/);
+  assert.match(travelSlot.innerHTML, /name="travelEnabled"/);
+  assert.equal(vm.runInContext('isTopicBoardPlanningReady(testForm)', context), true);
+});
+
 test('Kalendermodul und Firebase-Feldfreigabe sind in der Anwendung verdrahtet', () => {
   const html = fs.readFileSync(new URL('../AleriaAlmanach.html', import.meta.url), 'utf8');
   const firebase = fs.readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
+  const ui = fs.readFileSync(new URL('../modules/topic-board/topic-board-ui.js', import.meta.url), 'utf8');
+  const events = fs.readFileSync(new URL('../modules/topic-board/topic-board-events.js', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles/topic-board.css', import.meta.url), 'utf8');
   const scheduleIndex = html.indexOf('topic-board-schedule.js');
   const modelIndex = html.indexOf('topic-board-model.js');
 
@@ -126,4 +177,12 @@ test('Kalendermodul und Firebase-Feldfreigabe sind in der Anwendung verdrahtet',
   assert.ok(modelIndex > scheduleIndex);
   assert.match(html, /topic-board-schedule-ui\.js/);
   assert.match(firebase, /'schedule', 'travel'/);
+  assert.ok(ui.indexOf('data-topic-board-planning-slot="schedule"') < ui.indexOf('<span>Art des Themas</span>'));
+  assert.match(ui, /mountTopicBoardPlanningEditors\(editor\.querySelector/);
+  assert.match(ui, /data-topic-board-editor-section-target="schedule"/);
+  assert.match(ui, /data-topic-board-editor-section-target="travel"/);
+  assert.match(events, /action === 'scroll-editor-section'/);
+  assert.match(css, /\.topic-board-editor-sections\s*\{/);
+  assert.match(css, /\.topic-board-dialog\s*\{[^}]*width:\s*min\(1600px/s);
+  assert.match(css, /\.topic-board-editor\s*\{[^}]*width:\s*min\(640px/s);
 });

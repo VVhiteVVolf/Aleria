@@ -5,6 +5,10 @@ let _worldDateRemoteConnected = false;
 let _worldDateRemoteUnsubscribe = null;
 let _worldDateInitialized = false;
 let _worldDateRemotePublishInFlight = false;
+let _worldDateRemoteState = 'connecting';
+let _worldDateRemoteError = '';
+let _worldDateReconnectTimer = null;
+let _worldDateReconnectAttempt = 0;
 
 function readLocalWorldDate() {
   try {
@@ -38,7 +42,9 @@ function getCurrentWorldDateState() {
   return {
     date: AleriaWorldDateModel.normalize(record),
     record: { ...record },
-    remoteConnected: _worldDateRemoteConnected
+    remoteConnected: _worldDateRemoteConnected,
+    syncState: _worldDateRemoteState,
+    syncError: _worldDateRemoteError
   };
 }
 
@@ -54,6 +60,10 @@ function applyWorldDateRecord(value, { remoteConnected = _worldDateRemoteConnect
   if (!AleriaWorldDateModel.isValid(record)) return false;
   _worldDateRecord = record;
   _worldDateRemoteConnected = remoteConnected;
+  if (remoteConnected) {
+    _worldDateRemoteState = 'online';
+    _worldDateRemoteError = '';
+  }
   writeLocalWorldDate(record);
   emitWorldDateChanged();
   return true;
@@ -62,52 +72,116 @@ function applyWorldDateRecord(value, { remoteConnected = _worldDateRemoteConnect
 async function publishNewerLocalWorldDate(backend) {
   if (_worldDateRemotePublishInFlight || !backend || !Number(_worldDateRecord?.updatedAtClient)) return;
   _worldDateRemotePublishInFlight = true;
+  _worldDateRemoteState = 'syncing';
+  _worldDateRemoteError = '';
+  emitWorldDateChanged();
   try {
     const saved = await backend.saveCurrentAleriaDate(_worldDateRecord);
     applyWorldDateRecord(saved || _worldDateRecord, { remoteConnected: true });
   } catch (error) {
+    _worldDateRemoteState = 'error';
+    _worldDateRemoteError = String(error?.message || 'Das Aleria-Datum konnte nicht online gespeichert werden.');
     console.warn('Das lokal neuere Aleria-Datum konnte noch nicht online gespeichert werden:', error);
+    emitWorldDateChanged();
   } finally {
     _worldDateRemotePublishInFlight = false;
   }
 }
 
-function connectWorldDateRemote(attempt = 0) {
+function clearWorldDateReconnectTimer() {
+  if (_worldDateReconnectTimer === null) return;
+  globalThis.clearTimeout?.(_worldDateReconnectTimer);
+  _worldDateReconnectTimer = null;
+}
+
+function scheduleWorldDateReconnect() {
+  if (_worldDateReconnectTimer !== null) return;
+  const delay = Math.min(30000, 1000 * (2 ** Math.min(_worldDateReconnectAttempt, 5)));
+  _worldDateReconnectAttempt += 1;
+  _worldDateReconnectTimer = globalThis.setTimeout?.(() => {
+    _worldDateReconnectTimer = null;
+    connectWorldDateRemote();
+  }, delay) ?? null;
+}
+
+function disconnectWorldDateRemote() {
+  if (typeof _worldDateRemoteUnsubscribe === 'function') _worldDateRemoteUnsubscribe();
+  _worldDateRemoteUnsubscribe = null;
+}
+
+function connectWorldDateRemote() {
   const backend = getWorldDateBackend();
   if (!backend) {
-    if (attempt < 80) globalThis.setTimeout?.(() => connectWorldDateRemote(attempt + 1), 250);
+    _worldDateRemoteConnected = false;
+    _worldDateRemoteState = 'connecting';
+    emitWorldDateChanged();
+    scheduleWorldDateReconnect();
     return;
   }
   if (_worldDateRemoteUnsubscribe) return;
-  _worldDateRemoteUnsubscribe = backend.subscribeCurrentAleriaDate(record => {
-    if (!record || !AleriaWorldDateModel.isValid(record)) {
+  clearWorldDateReconnectTimer();
+  _worldDateRemoteState = 'connecting';
+  _worldDateRemoteError = '';
+  try {
+    _worldDateRemoteUnsubscribe = backend.subscribeCurrentAleriaDate(record => {
       _worldDateRemoteConnected = true;
+      _worldDateRemoteState = 'online';
+      _worldDateRemoteError = '';
+      _worldDateReconnectAttempt = 0;
+      if (!record || !AleriaWorldDateModel.isValid(record)) {
+        emitWorldDateChanged();
+        publishNewerLocalWorldDate(backend);
+        return;
+      }
+      applyWorldDateRecord(record, { remoteConnected: true });
+    }, error => {
+      disconnectWorldDateRemote();
+      _worldDateRemoteConnected = false;
+      _worldDateRemoteState = 'error';
+      _worldDateRemoteError = String(error?.message || 'Das Aleria-Datum konnte nicht live abgeglichen werden.');
+      console.warn('Das Aleria-Datum konnte nicht live abgeglichen werden:', error);
       emitWorldDateChanged();
-      publishNewerLocalWorldDate(backend);
-      return;
-    }
-    const incoming = AleriaWorldDateModel.normalizeRecord(record);
-    const currentUpdated = Number(_worldDateRecord?.updatedAtClient) || 0;
-    if (!currentUpdated || incoming.updatedAtClient >= currentUpdated) {
-      applyWorldDateRecord(incoming, { remoteConnected: true });
-    } else {
-      _worldDateRemoteConnected = true;
-      emitWorldDateChanged();
-      publishNewerLocalWorldDate(backend);
-    }
-  }, error => {
+      scheduleWorldDateReconnect();
+    });
+  } catch (error) {
+    disconnectWorldDateRemote();
     _worldDateRemoteConnected = false;
+    _worldDateRemoteState = 'error';
+    _worldDateRemoteError = String(error?.message || 'Das Aleria-Datum konnte nicht verbunden werden.');
     console.warn('Das Aleria-Datum konnte nicht live abgeglichen werden:', error);
     emitWorldDateChanged();
-  });
+    scheduleWorldDateReconnect();
+  }
+}
+
+function retryWorldDateRemote() {
+  clearWorldDateReconnectTimer();
+  disconnectWorldDateRemote();
+  _worldDateReconnectAttempt = 0;
+  _worldDateRemoteState = 'connecting';
+  _worldDateRemoteError = '';
+  emitWorldDateChanged();
+  connectWorldDateRemote();
 }
 
 function initializeWorldDateStore() {
   if (_worldDateInitialized) return;
   _worldDateInitialized = true;
   _worldDateRecord = readLocalWorldDate();
+  globalThis.addEventListener?.('fb-ready', retryWorldDateRemote);
+  globalThis.addEventListener?.('online', retryWorldDateRemote);
+  globalThis.addEventListener?.('aleria:auth-state-changed', () => {
+    if (!_worldDateRemoteConnected) retryWorldDateRemote();
+  });
   emitWorldDateChanged();
   connectWorldDateRemote();
+}
+
+function requireWorldDateBackend() {
+  const backend = getWorldDateBackend();
+  if (backend) return backend;
+  retryWorldDateRemote();
+  throw new Error('Das Aleria-Datum ist noch nicht mit Firebase verbunden. Bitte versuche es gleich erneut.');
 }
 
 async function setCurrentWorldDate(value) {
@@ -117,18 +191,11 @@ async function setCurrentWorldDate(value) {
     ...date,
     updatedAtClient: Date.now()
   });
-  applyWorldDateRecord(record);
-  const backend = getWorldDateBackend();
-  if (!backend) return { record, localOnly: true };
-  try {
-    const saved = await backend.saveCurrentAleriaDate(record);
-    const remote = AleriaWorldDateModel.normalizeRecord(saved || record);
-    applyWorldDateRecord(remote, { remoteConnected: true });
-    return { record: remote, localOnly: false };
-  } catch (error) {
-    console.warn('Das Aleria-Datum bleibt vorerst lokal gespeichert:', error);
-    return { record, localOnly: true, error };
-  }
+  const backend = requireWorldDateBackend();
+  const saved = await backend.saveCurrentAleriaDate(record);
+  const remote = AleriaWorldDateModel.normalizeRecord(saved || record);
+  applyWorldDateRecord(remote, { remoteConnected: true });
+  return { record: remote, localOnly: false };
 }
 
 function shiftCurrentWorldDate(days) {
@@ -138,6 +205,7 @@ function shiftCurrentWorldDate(days) {
 globalThis.AleriaWorldDateStore = Object.freeze({
   getState: getCurrentWorldDateState,
   initialize: initializeWorldDateStore,
+  retrySync: retryWorldDateRemote,
   setDate: setCurrentWorldDate,
   shiftDate: shiftCurrentWorldDate
 });

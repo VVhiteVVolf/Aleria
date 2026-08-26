@@ -130,6 +130,8 @@ test('ein Themenzettel rendert zuerst als Vorschau und zeigt Details erst nach d
   assert.match(collapsed, /data-topic-board-action="toggle-details"/);
   assert.match(collapsed, /aria-expanded="false"/);
   assert.match(collapsed, /data-topic-board-details hidden/);
+  assert.match(collapsed, /topic-board-card-actions is-persistent/);
+  assert.match(collapsed, />Bearbeiten</);
 
   const expanded = vm.runInContext(`(() => {
     AleriaTopicBoardListState.toggleExpanded('segelreise');

@@ -57,6 +57,13 @@ function handleTopicBoardClick(event) {
     event.preventDefault();
     globalThis.AleriaTopicBoardListState.resetFilters();
     renderTopicBoard();
+  } else if (action === 'retry-sync') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardStore.retrySync();
+    renderTopicBoard();
+  } else if (action === 'scroll-editor-section') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardUI.scrollEditorToSection(button.dataset.topicBoardEditorSectionTarget || '');
   } else if (action === 'edit') {
     event.preventDefault();
     openTopicBoardEditor(button.dataset.topicBoardId || '');

@@ -72,7 +72,7 @@ function ensureTopicBoardDialog() {
           <label><span class="topic-board-visually-hidden">Themen sortieren</span><select data-topic-board-list-field="sort"><option value="votes">Beliebteste zuerst</option><option value="due">Als Nächstes fällig</option><option value="newest">Neueste zuerst</option><option value="title">Nach Titel</option></select></label>
           <span class="topic-board-result-count" data-topic-board-result-count aria-live="polite"></span>
         </div>
-        <div class="topic-board-sync" data-topic-board-sync></div>
+        <button class="topic-board-sync" type="button" data-topic-board-sync data-topic-board-action="retry-sync" title="Online-Verbindung erneut prüfen"></button>
         <button class="topic-board-new" type="button" data-topic-board-action="open-editor"><span aria-hidden="true">＋</span> Vorschlag anheften</button>
       </div>
       <div class="topic-board-workspace">
@@ -160,7 +160,7 @@ function renderTopicBoardProposalCard(input, options = {}) {
   const excerpt = topicBoardEscape(getTopicBoardExcerpt(proposal.description));
   const description = topicBoardEscape(proposal.description || 'Noch keine nähere Beschreibung.')
     .replace(/\n/g, '<br>');
-  const actions = preview ? '' : `<div class="topic-board-card-actions">
+  const actions = preview ? '' : `<div class="topic-board-card-actions is-persistent">
     <button type="button" data-topic-board-action="vote" data-topic-board-id="${topicBoardEscape(proposal.id)}" aria-pressed="${viewerVoted}">
       <span class="topic-board-vote-seal" aria-hidden="true">${viewerVoted ? '✓' : '✦'}</span>
       <span>${viewerVoted ? 'Stimme zurücknehmen' : 'Dafür stimmen'}</span>
@@ -200,10 +200,10 @@ function renderTopicBoardProposalCard(input, options = {}) {
       ${globalThis.AleriaTopicBoardTravelUI.renderCard(proposal.travel)}
       <footer>
         <div><small>Betroffene Personen</small>${renderTopicBoardPortraits(proposal.participants)}</div>
-        ${proposal.localOnly ? '<span class="topic-board-local-badge">nur hier gespeichert</span>' : ''}
+        ${proposal.localOnly ? '<span class="topic-board-local-badge">Online-Veröffentlichung ausstehend</span>' : ''}
       </footer>
-      ${actions}
     </div>
+    ${actions}
   </article>`;
 }
 
@@ -259,8 +259,15 @@ function renderTopicBoard() {
   });
   const sync = overlay.querySelector('[data-topic-board-sync]');
   if (sync) {
-    sync.dataset.state = state.remoteConnected ? 'online' : 'local';
-    sync.textContent = state.remoteConnected ? 'Gemeinsam synchronisiert' : 'Lokale Ablage bereit';
+    const labels = {
+      online: 'Gemeinsam synchronisiert',
+      syncing: state.pendingCount === 1 ? '1 Thema wird veröffentlicht …' : `${state.pendingCount} Themen werden veröffentlicht …`,
+      error: 'Online-Sync gestört · erneut prüfen',
+      connecting: 'Firebase wird verbunden …'
+    };
+    sync.dataset.state = state.syncState || 'connecting';
+    sync.textContent = labels[state.syncState] || labels.connecting;
+    sync.title = state.syncError || 'Online-Verbindung erneut prüfen';
   }
   syncTopicBoardListControls(overlay);
   renderTopicBoardList();
@@ -309,6 +316,70 @@ function renderTopicBoardIconField(kind, label, iconUrl) {
   </div>`;
 }
 
+function renderTopicBoardPlanningUnavailable(label) {
+  return `<section class="topic-board-form-section topic-board-planning-unavailable" role="alert">
+    <strong>${topicBoardEscape(label)} konnte nicht geladen werden.</strong>
+    <span>Der Themenzettel kann erst gespeichert werden, wenn alle Bearbeitungsfelder bereitstehen.</span>
+  </section>`;
+}
+
+function mountTopicBoardPlanningEditors(form, proposal = null) {
+  if (!form) return false;
+  const scheduleSlot = form.querySelector('[data-topic-board-planning-slot="schedule"]');
+  const travelSlot = form.querySelector('[data-topic-board-planning-slot="travel"]');
+  const scheduleRenderer = globalThis.AleriaTopicBoardScheduleUI?.renderEditor;
+  const travelRenderer = globalThis.AleriaTopicBoardTravelUI?.renderEditor;
+  let ready = true;
+
+  if (scheduleSlot) {
+    try {
+      const markup = typeof scheduleRenderer === 'function'
+        ? scheduleRenderer(proposal?.schedule, proposal?.travel)
+        : '';
+      scheduleSlot.innerHTML = markup || renderTopicBoardPlanningUnavailable('Die Terminplanung');
+      scheduleSlot.dataset.topicBoardPlanningState = markup ? 'ready' : 'error';
+      ready = ready && Boolean(markup);
+    } catch (error) {
+      console.error('Terminplanung der Themenwand konnte nicht gerendert werden:', error);
+      scheduleSlot.innerHTML = renderTopicBoardPlanningUnavailable('Die Terminplanung');
+      scheduleSlot.dataset.topicBoardPlanningState = 'error';
+      ready = false;
+    }
+  }
+
+  if (travelSlot) {
+    try {
+      const markup = typeof travelRenderer === 'function'
+        ? travelRenderer(proposal?.travel)
+        : '';
+      travelSlot.innerHTML = markup || renderTopicBoardPlanningUnavailable('Die Reiseplanung');
+      travelSlot.dataset.topicBoardPlanningState = markup ? 'ready' : 'error';
+      ready = ready && Boolean(markup);
+    } catch (error) {
+      console.error('Reiseplanung der Themenwand konnte nicht gerendert werden:', error);
+      travelSlot.innerHTML = renderTopicBoardPlanningUnavailable('Die Reiseplanung');
+      travelSlot.dataset.topicBoardPlanningState = 'error';
+      ready = false;
+    }
+  }
+
+  return ready;
+}
+
+function isTopicBoardPlanningReady(form) {
+  if (!form) return false;
+  const slots = Array.from(form.querySelectorAll('[data-topic-board-planning-slot]'));
+  return slots.length === 2 && slots.every(slot => slot.dataset.topicBoardPlanningState === 'ready');
+}
+
+function scrollTopicBoardEditorToSection(sectionName) {
+  const allowed = new Set(['schedule', 'content', 'appearance', 'travel', 'participants', 'preview']);
+  const safeName = String(sectionName || '').trim();
+  if (!allowed.has(safeName)) return;
+  const section = document.querySelector(`[data-topic-board-editor-section="${safeName}"]`);
+  section?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+}
+
 function openTopicBoardEditor(proposalId = '') {
   const overlay = ensureTopicBoardDialog();
   const proposal = proposalId ? getTopicBoardProposalById(proposalId) : null;
@@ -325,13 +396,21 @@ function openTopicBoardEditor(proposalId = '') {
     </header>
     <div class="topic-board-form-scroll">
       <label class="topic-board-field topic-board-field-wide"><span>Überschrift *</span><input name="title" type="text" maxlength="${TOPIC_BOARD_LIMITS.title}" value="${topicBoardEscape(proposal?.title || '')}" placeholder="Idwal und Trevor segeln nach Abergwint" required></label>
-      <label class="topic-board-field"><span>Art des Themas</span><select name="category">${TOPIC_BOARD_CATEGORIES.map(category => `<option value="${category.id}"${proposal?.category === category.id ? ' selected' : ''}>${topicBoardEscape(category.label)}</option>`).join('')}</select></label>
+      <nav class="topic-board-editor-sections topic-board-field-wide" aria-label="Bearbeitungsbereiche">
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="schedule">Termin</button>
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="content">Inhalt</button>
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="appearance">Gestaltung</button>
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="travel">Reise</button>
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="participants">Personen</button>
+        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="preview">Vorschau</button>
+      </nav>
+      <div class="topic-board-planning-slot topic-board-field-wide" data-topic-board-planning-slot="schedule" data-topic-board-editor-section="schedule"></div>
+      <label class="topic-board-field" data-topic-board-editor-section="content"><span>Art des Themas</span><select name="category">${TOPIC_BOARD_CATEGORIES.map(category => `<option value="${category.id}"${proposal?.category === category.id ? ' selected' : ''}>${topicBoardEscape(category.label)}</option>`).join('')}</select></label>
       <label class="topic-board-field"><span>Zeitangabe (erzählerisch)</span><input name="timeframe" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.timeframe || '')}" placeholder="Nach dem Herbstmarkt"></label>
       <label class="topic-board-field"><span>Dauer (Freitext)</span><input name="duration" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.duration || '')}" placeholder="2–3 Tage Fahrt"></label>
       <label class="topic-board-field"><span>Ort / Ziel</span><input name="location" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.location || '')}" placeholder="Abergwint"></label>
-      ${globalThis.AleriaTopicBoardScheduleUI.renderEditor(proposal?.schedule, proposal?.travel)}
       <label class="topic-board-field topic-board-field-wide"><span>Worum geht es?</span><textarea name="description" rows="4" maxlength="${TOPIC_BOARD_LIMITS.description}" placeholder="Beschreibe den Aufhänger, offene Fragen und mögliche Beteiligte …">${topicBoardEscape(proposal?.description || '')}</textarea></label>
-      <section class="topic-board-form-section topic-board-field-wide">
+      <section class="topic-board-form-section topic-board-field-wide" data-topic-board-editor-section="appearance">
         <span class="topic-board-form-label">Themen-Icon</span>
         <div data-topic-board-theme-icon>${renderTopicBoardIconField('theme', 'Hauptsymbol des Vorschlags', _topicBoardSelectedThemeIcon)}</div>
       </section>
@@ -340,8 +419,8 @@ function openTopicBoardEditor(proposalId = '') {
         <label class="topic-board-field"><span>Bezeichnung</span><input name="vehicle" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.vehicle || '')}" placeholder="Idwals Schiff"></label>
         <div data-topic-board-vehicle-icon>${renderTopicBoardIconField('vehicle', 'Icon für Schiff, Pferd oder Wagen', _topicBoardSelectedVehicleIcon)}</div>
       </section>
-      ${globalThis.AleriaTopicBoardTravelUI.renderEditor(proposal?.travel)}
-      <section class="topic-board-form-section topic-board-field-wide">
+      <div class="topic-board-planning-slot topic-board-field-wide" data-topic-board-planning-slot="travel" data-topic-board-editor-section="travel"></div>
+      <section class="topic-board-form-section topic-board-field-wide" data-topic-board-editor-section="participants">
         <span class="topic-board-form-label">Betroffene Personen</span>
         <div class="topic-board-character-filter">
           <input class="topic-board-character-search" type="search" data-topic-board-field="character-search" placeholder="Figur suchen …" autocomplete="off">
@@ -350,7 +429,7 @@ function openTopicBoardEditor(proposalId = '') {
         <div class="topic-board-character-list" data-topic-board-characters>${getTopicBoardParticipantPickerMarkup(Array.from(_topicBoardSelectedParticipantIds))}</div>
         <div class="topic-board-character-filter-empty" data-topic-board-character-empty hidden>Keine Figur passt zu dieser Suche.</div>
       </section>
-      <section class="topic-board-form-section topic-board-field-wide topic-board-preview-section">
+      <section class="topic-board-form-section topic-board-field-wide topic-board-preview-section" data-topic-board-editor-section="preview">
         <span class="topic-board-form-label">Vorschau</span>
         <div data-topic-board-preview></div>
       </section>
@@ -366,6 +445,7 @@ function openTopicBoardEditor(proposalId = '') {
       </div>
     </footer>
   </form>`;
+  mountTopicBoardPlanningEditors(editor.querySelector('[data-topic-board-form]'), proposal);
   renderTopicBoardEditorPreview();
   globalThis.setTimeout?.(() => editor.querySelector('input[name="title"]')?.focus(), 20);
 }
@@ -393,7 +473,9 @@ function collectTopicBoardFormPayload() {
     } : null;
   }).filter(Boolean);
   const current = _topicBoardEditingProposalId ? getTopicBoardProposalById(_topicBoardEditingProposalId) : null;
-  const travel = globalThis.AleriaTopicBoardTravelUI.collect(form);
+  const travel = globalThis.AleriaTopicBoardTravelUI?.collect?.(form)
+    || globalThis.AleriaTopicBoardTravel?.normalize?.(current?.travel || {})
+    || {};
   return normalizeTopicProposal({
     ...current,
     title: form.elements.title?.value || '',
@@ -405,7 +487,9 @@ function collectTopicBoardFormPayload() {
     themeIconUrl: _topicBoardSelectedThemeIcon,
     vehicle: form.elements.vehicle?.value || '',
     vehicleIconUrl: _topicBoardSelectedVehicleIcon,
-    schedule: globalThis.AleriaTopicBoardScheduleUI.collect(form, travel),
+    schedule: globalThis.AleriaTopicBoardScheduleUI?.collect?.(form, travel)
+      || globalThis.AleriaTopicBoardSchedule?.normalize?.(current?.schedule || {}, { travel })
+      || {},
     travel,
     participants
   });
@@ -420,9 +504,9 @@ function renderTopicBoardEditorPreview() {
 
 function refreshTopicBoardEditorPlanning(form) {
   if (!form) return;
-  globalThis.AleriaTopicBoardTravelUI.refresh(form);
-  const travel = globalThis.AleriaTopicBoardTravelUI.collect(form);
-  globalThis.AleriaTopicBoardScheduleUI.refresh(form, travel);
+  globalThis.AleriaTopicBoardTravelUI?.refresh?.(form);
+  const travel = globalThis.AleriaTopicBoardTravelUI?.collect?.(form) || {};
+  globalThis.AleriaTopicBoardScheduleUI?.refresh?.(form, travel);
 }
 
 function setTopicBoardFormStatus(message = '', type = 'info') {
@@ -476,6 +560,11 @@ function setTopicBoardSelectedIcon(target, src = '') {
 async function submitTopicBoardEditor() {
   if (_topicBoardSubmitting) return;
   const payload = collectTopicBoardFormPayload();
+  const form = document.querySelector('[data-topic-board-form]');
+  if (!isTopicBoardPlanningReady(form)) {
+    setTopicBoardFormStatus('Termin- oder Reiseplanung wurde nicht vollständig geladen. Der unvollständige Themenzettel wird nicht gespeichert.', 'error');
+    return;
+  }
   if (!payload.title) {
     setTopicBoardFormStatus('Bitte gib dem Vorschlag eine Überschrift.', 'error');
     document.querySelector('[data-topic-board-form] input[name="title"]')?.focus();
@@ -536,6 +625,7 @@ globalThis.AleriaTopicBoardUI = Object.freeze({
   openTopicBoardEditor,
   openTopicBoardIconPicker,
   renderTopicBoard,
+  scrollEditorToSection: scrollTopicBoardEditorToSection,
   renderTopicBoardList,
   renderTopicBoardEditorPreview,
   refreshTopicBoardEditorPlanning,

@@ -7,6 +7,11 @@ let _topicBoardLoading = true;
 let _topicBoardRemoteConnected = false;
 let _topicBoardRemoteUnsubscribe = null;
 let _topicBoardInitialized = false;
+let _topicBoardRemoteState = 'connecting';
+let _topicBoardRemoteError = '';
+let _topicBoardReconnectTimer = null;
+let _topicBoardReconnectAttempt = 0;
+let _topicBoardLocalPublishInFlight = false;
 
 function cloneTopicBoardValue(value) {
   return JSON.parse(JSON.stringify(value ?? null));
@@ -57,6 +62,15 @@ function getTopicBoardRemoteBackend() {
   return required.every(method => typeof backend[method] === 'function') ? backend : null;
 }
 
+function getTopicBoardErrorMessage(error, fallback = 'Die Online-Synchronisierung ist derzeit nicht verfügbar.') {
+  const message = String(error?.message || '').trim();
+  return message || fallback;
+}
+
+function getPendingTopicBoardProposals() {
+  return readLocalTopicProposals().filter(proposal => proposal.localOnly);
+}
+
 function getTopicBoardViewerId() {
   const backend = getTopicBoardRemoteBackend();
   const remoteId = backend && typeof backend.getTopicProposalViewerId === 'function'
@@ -96,11 +110,15 @@ function setTopicBoardProposals(proposals) {
 }
 
 function getTopicBoardState() {
+  const pendingCount = getPendingTopicBoardProposals().length;
   return {
     proposals: _topicBoardProposals.map(proposal => cloneTopicBoardValue(proposal)),
     view: _topicBoardView,
     loading: _topicBoardLoading,
     remoteConnected: _topicBoardRemoteConnected,
+    syncState: pendingCount && _topicBoardRemoteState === 'online' ? 'syncing' : _topicBoardRemoteState,
+    syncError: _topicBoardRemoteError,
+    pendingCount,
     viewerId: getTopicBoardViewerId()
   };
 }
@@ -122,62 +140,133 @@ function setTopicBoardView(view) {
   emitTopicBoardStateChanged();
 }
 
-function saveLocalTopicProposal(input, proposalId = '') {
-  const now = Date.now();
-  const current = proposalId ? getTopicBoardProposalById(proposalId) : null;
-  const proposal = normalizeTopicProposal({
-    ...current,
-    ...input,
-    id: current?.id || proposalId || makeTopicBoardLocalId(),
-    votes: Object.prototype.hasOwnProperty.call(input || {}, 'votes')
-      ? input.votes
-      : (current?.votes || {}),
-    createdAtClient: current?.createdAtClient || now,
-    updatedAtClient: now,
-    localOnly: true
-  });
-  const next = _topicBoardProposals.filter(item => item.id !== proposal.id);
-  next.push(proposal);
-  writeLocalTopicProposals(next.filter(item => item.localOnly));
-  setTopicBoardProposals(next);
-  return proposal;
+function removePendingTopicBoardProposal(proposalId) {
+  const safeId = String(proposalId || '').trim();
+  writeLocalTopicProposals(getPendingTopicBoardProposals().filter(proposal => proposal.id !== safeId));
 }
 
-function toggleLocalTopicProposalVote(proposalId) {
-  const current = getTopicBoardProposalById(proposalId);
-  if (!current) throw new Error('Der Themenvorschlag wurde nicht gefunden.');
-  const voterId = getLocalTopicBoardVoterId();
-  const votes = { ...current.votes };
-  if (votes[voterId]) delete votes[voterId];
-  else votes[voterId] = true;
-  const proposal = saveLocalTopicProposal({ ...current, votes }, current.id);
-  return { proposal, voted: !!proposal.votes[voterId], localOnly: true };
+function isTopicBoardLocalId(proposalId) {
+  return String(proposalId || '').startsWith('topic-');
 }
 
-function connectTopicBoardRemote(attempt = 0) {
+async function publishTopicBoardLocalProposal(backend, input) {
+  const proposal = normalizeTopicProposal(input);
+  if (!isTopicBoardLocalId(proposal.id)) {
+    try {
+      return await backend.updateTopicProposal(proposal.id, proposal);
+    } catch (error) {
+      if (!String(error?.message || '').includes('nicht gefunden')) throw error;
+    }
+  }
+  return backend.createTopicProposal({ ...proposal, id: '' });
+}
+
+async function publishPendingTopicBoardProposals(backend = getTopicBoardRemoteBackend()) {
+  if (_topicBoardLocalPublishInFlight || !backend) return false;
+  const pending = getPendingTopicBoardProposals();
+  if (!pending.length) return true;
+  _topicBoardLocalPublishInFlight = true;
+  _topicBoardRemoteState = 'syncing';
+  _topicBoardRemoteError = '';
+  emitTopicBoardStateChanged();
+  try {
+    for (const localProposal of pending) {
+      const result = await publishTopicBoardLocalProposal(backend, localProposal);
+      const published = normalizeTopicProposal({ ...localProposal, ...(result || {}), localOnly: false });
+      removePendingTopicBoardProposal(localProposal.id);
+      _topicBoardProposals = [
+        ..._topicBoardProposals.filter(proposal => proposal.id !== localProposal.id && proposal.id !== published.id),
+        published
+      ];
+    }
+    _topicBoardRemoteState = 'online';
+    _topicBoardRemoteConnected = true;
+    emitTopicBoardStateChanged();
+    return true;
+  } catch (error) {
+    _topicBoardRemoteState = 'error';
+    _topicBoardRemoteError = getTopicBoardErrorMessage(error, 'Lokale Themen konnten noch nicht online veröffentlicht werden.');
+    console.warn('Lokale Themen konnten noch nicht online veröffentlicht werden:', error);
+    emitTopicBoardStateChanged();
+    return false;
+  } finally {
+    _topicBoardLocalPublishInFlight = false;
+  }
+}
+
+function clearTopicBoardReconnectTimer() {
+  if (_topicBoardReconnectTimer === null) return;
+  globalThis.clearTimeout?.(_topicBoardReconnectTimer);
+  _topicBoardReconnectTimer = null;
+}
+
+function scheduleTopicBoardReconnect() {
+  if (_topicBoardReconnectTimer !== null) return;
+  const delay = Math.min(30000, 1000 * (2 ** Math.min(_topicBoardReconnectAttempt, 5)));
+  _topicBoardReconnectAttempt += 1;
+  _topicBoardReconnectTimer = globalThis.setTimeout?.(() => {
+    _topicBoardReconnectTimer = null;
+    connectTopicBoardRemote();
+  }, delay) ?? null;
+}
+
+function disconnectTopicBoardRemote() {
+  if (typeof _topicBoardRemoteUnsubscribe === 'function') _topicBoardRemoteUnsubscribe();
+  _topicBoardRemoteUnsubscribe = null;
+}
+
+function connectTopicBoardRemote() {
   const backend = getTopicBoardRemoteBackend();
   if (!backend) {
-    if (attempt < 80) globalThis.setTimeout?.(() => connectTopicBoardRemote(attempt + 1), 250);
+    _topicBoardRemoteState = 'connecting';
+    _topicBoardRemoteConnected = false;
+    emitTopicBoardStateChanged();
+    scheduleTopicBoardReconnect();
     return;
   }
   if (_topicBoardRemoteUnsubscribe) return;
+  clearTopicBoardReconnectTimer();
+  _topicBoardRemoteState = 'connecting';
+  _topicBoardRemoteError = '';
   try {
     _topicBoardRemoteUnsubscribe = backend.subscribeTopicProposals(proposals => {
       _topicBoardRemoteConnected = true;
+      _topicBoardRemoteState = 'online';
+      _topicBoardRemoteError = '';
+      _topicBoardReconnectAttempt = 0;
       _topicBoardLoading = false;
       setTopicBoardProposals(mergeTopicBoardRemoteAndLocal(proposals));
+      publishPendingTopicBoardProposals(backend);
     }, error => {
+      disconnectTopicBoardRemote();
       _topicBoardRemoteConnected = false;
+      _topicBoardRemoteState = 'error';
+      _topicBoardRemoteError = getTopicBoardErrorMessage(error);
       _topicBoardLoading = false;
       console.warn('Themenwand-Liveabgleich nicht verfuegbar:', error);
       emitTopicBoardStateChanged();
+      scheduleTopicBoardReconnect();
     });
   } catch (error) {
+    disconnectTopicBoardRemote();
     _topicBoardRemoteConnected = false;
+    _topicBoardRemoteState = 'error';
+    _topicBoardRemoteError = getTopicBoardErrorMessage(error);
     _topicBoardLoading = false;
     console.warn('Themenwand konnte nicht mit Firebase verbunden werden:', error);
     emitTopicBoardStateChanged();
+    scheduleTopicBoardReconnect();
   }
+}
+
+function retryTopicBoardRemote() {
+  clearTopicBoardReconnectTimer();
+  disconnectTopicBoardRemote();
+  _topicBoardReconnectAttempt = 0;
+  _topicBoardRemoteState = 'connecting';
+  _topicBoardRemoteError = '';
+  emitTopicBoardStateChanged();
+  connectTopicBoardRemote();
 }
 
 function initializeTopicBoardState() {
@@ -185,8 +274,21 @@ function initializeTopicBoardState() {
   _topicBoardInitialized = true;
   _topicBoardProposals = readLocalTopicProposals();
   _topicBoardLoading = false;
+  globalThis.addEventListener?.('fb-ready', retryTopicBoardRemote);
+  globalThis.addEventListener?.('online', retryTopicBoardRemote);
+  globalThis.addEventListener?.('aleria:auth-state-changed', () => {
+    if (_topicBoardRemoteConnected) publishPendingTopicBoardProposals();
+    else retryTopicBoardRemote();
+  });
   emitTopicBoardStateChanged();
   connectTopicBoardRemote();
+}
+
+function requireTopicBoardRemoteBackend() {
+  const backend = getTopicBoardRemoteBackend();
+  if (backend) return backend;
+  retryTopicBoardRemote();
+  throw new Error('Die Themenwand ist noch nicht mit Firebase verbunden. Bitte versuche es gleich erneut.');
 }
 
 async function createTopicBoardProposal(input) {
@@ -200,18 +302,11 @@ async function createTopicBoardProposal(input) {
     updatedAtClient: Date.now()
   });
   if (!payload.title) throw new Error('Bitte gib dem Vorschlag eine Überschrift.');
-  const backend = getTopicBoardRemoteBackend();
-  if (backend) {
-    try {
-      const result = await backend.createTopicProposal(payload);
-      const created = normalizeTopicProposal({ ...payload, ...(result || {}), localOnly: false });
-      if (created.id) setTopicBoardProposals([..._topicBoardProposals.filter(item => item.id !== created.id), created]);
-      return { proposal: created, localOnly: false };
-    } catch (error) {
-      console.warn('Themenvorschlag wird lokal gesichert:', error);
-    }
-  }
-  return { proposal: saveLocalTopicProposal(payload), localOnly: true };
+  const backend = requireTopicBoardRemoteBackend();
+  const result = await backend.createTopicProposal(payload);
+  const created = normalizeTopicProposal({ ...payload, ...(result || {}), localOnly: false });
+  if (created.id) setTopicBoardProposals([..._topicBoardProposals.filter(item => item.id !== created.id), created]);
+  return { proposal: created, localOnly: false };
 }
 
 async function updateTopicBoardProposal(proposalId, changes) {
@@ -227,18 +322,17 @@ async function updateTopicBoardProposal(proposalId, changes) {
     updatedAtClient: Date.now()
   });
   if (!payload.title) throw new Error('Bitte gib dem Vorschlag eine Überschrift.');
-  const backend = getTopicBoardRemoteBackend();
-  if (backend && !current.localOnly) {
-    try {
-      const result = await backend.updateTopicProposal(current.id, payload);
-      const updated = normalizeTopicProposal({ ...payload, ...(result || {}), localOnly: false });
-      setTopicBoardProposals(_topicBoardProposals.map(item => item.id === current.id ? updated : item));
-      return { proposal: updated, localOnly: false };
-    } catch (error) {
-      console.warn('Aenderung am Themenvorschlag wird lokal gesichert:', error);
-    }
-  }
-  return { proposal: saveLocalTopicProposal(payload, current.id), localOnly: true };
+  const backend = requireTopicBoardRemoteBackend();
+  const result = current.localOnly
+    ? await publishTopicBoardLocalProposal(backend, payload)
+    : await backend.updateTopicProposal(current.id, payload);
+  const updated = normalizeTopicProposal({ ...payload, ...(result || {}), localOnly: false });
+  if (current.localOnly) removePendingTopicBoardProposal(current.id);
+  setTopicBoardProposals([
+    ..._topicBoardProposals.filter(item => item.id !== current.id && item.id !== updated.id),
+    updated
+  ]);
+  return { proposal: updated, localOnly: false };
 }
 
 async function setTopicBoardProposalArchived(proposalId, archived) {
@@ -251,20 +345,25 @@ async function setTopicBoardProposalArchived(proposalId, archived) {
 async function toggleTopicBoardProposalVote(proposalId) {
   const current = getTopicBoardProposalById(proposalId);
   if (!current) throw new Error('Der Themenvorschlag wurde nicht gefunden.');
-  const backend = getTopicBoardRemoteBackend();
-  if (backend && !current.localOnly) {
-    try {
-      const result = await backend.toggleTopicProposalVote(current.id);
-      if (result?.proposal) {
-        const updated = normalizeTopicProposal({ ...result.proposal, localOnly: false });
-        setTopicBoardProposals(_topicBoardProposals.map(item => item.id === current.id ? updated : item));
-      }
-      return { ...result, localOnly: false };
-    } catch (error) {
-      console.warn('Stimme wird lokal gesichert:', error);
-    }
+  const backend = requireTopicBoardRemoteBackend();
+  let remoteId = current.id;
+  if (current.localOnly) {
+    const published = await publishTopicBoardLocalProposal(backend, current);
+    remoteId = String(published?.id || '').trim();
+    if (!remoteId) throw new Error('Der lokale Themenvorschlag konnte nicht online veröffentlicht werden.');
+    removePendingTopicBoardProposal(current.id);
+    const synchronized = normalizeTopicProposal({ ...current, ...published, localOnly: false });
+    _topicBoardProposals = [
+      ..._topicBoardProposals.filter(item => item.id !== current.id && item.id !== synchronized.id),
+      synchronized
+    ];
   }
-  return toggleLocalTopicProposalVote(current.id);
+  const result = await backend.toggleTopicProposalVote(remoteId);
+  if (result?.proposal) {
+    const updated = normalizeTopicProposal({ ...result.proposal, localOnly: false });
+    setTopicBoardProposals(_topicBoardProposals.map(item => item.id === remoteId ? updated : item));
+  }
+  return { ...result, localOnly: false };
 }
 
 globalThis.AleriaTopicBoardStore = Object.freeze({
@@ -274,6 +373,7 @@ globalThis.AleriaTopicBoardStore = Object.freeze({
   getTopicBoardViewerId,
   getTopicBoardVisibleProposals,
   initializeTopicBoardState,
+  retrySync: retryTopicBoardRemote,
   setTopicBoardProposalArchived,
   setTopicBoardView,
   toggleTopicBoardProposalVote,

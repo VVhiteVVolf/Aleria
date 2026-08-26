@@ -80,6 +80,10 @@
 }
 
 .world-date-card-copy span[data-state='online']::before { background: #66824a; }
+.world-date-card-copy span[data-state='syncing']::before,
+.world-date-card-copy span[data-state='connecting']::before { background: #b2862b; }
+.world-date-card-copy span[data-state='error'] { color: #8a3f31; }
+.world-date-card-copy span[data-state='error']::before { background: #9b4434; }
 
 .world-date-actions {
   display: grid;
@@ -87,6 +91,8 @@
   gap: 0.38rem;
   margin-top: 0.48rem;
 }
+
+.world-date-actions button:last-child { grid-column: 1 / -1; }
 
 .world-date-actions button {
   min-height: 1.9rem;

@@ -78,8 +78,8 @@
 <link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260816-primary-registers-v1">
 <link rel="stylesheet" href="./styles/item-database.css?v=20260625-item-db-register-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
-<link rel="stylesheet" href="./styles/topic-board.css?v=20260826-topic-board-schedule-v1">
-<link rel="stylesheet" href="./styles/world-date.css?v=20260826-world-date-display-v2">
+<link rel="stylesheet" href="./styles/topic-board.css?v=20260826-topic-board-editor-v3">
+<link rel="stylesheet" href="./styles/world-date.css?v=20260826-world-date-shared-v3">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260712-dashboard-readable-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260802-combat-state-v2">
@@ -107,10 +107,10 @@
   <script src="./modules/module-store/module-store-sync.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-sections.js?v=20260826-world-date-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
-  <script src="./modules/world-date/world-date-store.js?v=20260826-world-date-v1" defer></script>
+  <script src="./modules/world-date/world-date-store.js?v=20260826-world-date-shared-v3" defer></script>
   <script src="./modules/world-date/world-date-scene-default.js?v=20260826-world-date-v1" defer></script>
-  <script src="./modules/world-date/world-date-ui.js?v=20260826-world-date-display-v2" defer></script>
-  <script src="./modules/world-date/world-date-events.js?v=20260826-world-date-v1" defer></script>
+  <script src="./modules/world-date/world-date-ui.js?v=20260826-world-date-shared-v3" defer></script>
+  <script src="./modules/world-date/world-date-events.js?v=20260826-world-date-shared-v3" defer></script>
   <script src="./modules/icon-directory/icon-directory-data.js?v=20260826-world-path-icons-v1" defer></script>
   <script src="./modules/icon-directory/icon-directory.js?v=20260704-trait-icons-v1" defer></script>
   <script src="../Karten/karten.registry.js?v=20260723-landing-map-picker-v1" defer></script>
@@ -353,15 +353,15 @@
   <script src="./modules/modal/modal-events.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20260816-primary-register-icons-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-travel.js?v=20260826-topic-board-travel-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-schedule.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-model.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-travel-ui.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-schedule-ui.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-store.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-list-state.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-ui.js?v=20260826-topic-board-schedule-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-events.js?v=20260826-topic-board-schedule-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-travel.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-schedule.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-model.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-travel-ui.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-schedule-ui.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-store.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-list-state.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-ui.js?v=20260826-topic-board-editor-v3" defer></script>
+  <script src="./modules/topic-board/topic-board-events.js?v=20260826-topic-board-editor-v3" defer></script>
 </head>
 <body>
 
@@ -394,12 +394,13 @@
         <div class="world-date-card-copy">
           <small>Heute in Aleria</small>
           <strong data-world-date-label>Datum wird geladen …</strong>
-          <span data-world-date-sync>Lokal gespeichert</span>
+          <span data-world-date-sync>Firebase wird verbunden …</span>
         </div>
       </div>
       <div class="world-date-actions">
         <button type="button" data-world-date-action="open-editor">Datum ändern</button>
         <button type="button" data-world-date-action="next-day" title="Das aktuelle Datum um einen Tag erhöhen">Nächster Tag</button>
+        <button type="button" data-world-date-action="retry-sync">Sync prüfen</button>
       </div>
     </div>
     <div class="sidebar-section topic-board-sidebar-section">

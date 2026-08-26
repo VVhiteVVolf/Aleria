@@ -27,8 +27,15 @@ function renderWorldDateSidebar() {
   if (sidebar) sidebar.hidden = false;
   if (label) label.textContent = formattedDate;
   if (sync) {
-    sync.textContent = state.remoteConnected ? 'Mit dem Almanach geteilt' : 'Lokal gespeichert';
-    sync.dataset.state = state.remoteConnected ? 'online' : 'local';
+    const labels = {
+      online: 'Mit allen Spielern geteilt',
+      syncing: 'Wird mit Firebase synchronisiert …',
+      error: 'Online-Synchronisierung gestört',
+      connecting: 'Firebase wird verbunden …'
+    };
+    sync.textContent = labels[state.syncState] || labels.connecting;
+    sync.dataset.state = state.syncState || 'connecting';
+    sync.title = state.syncError || '';
   }
 }
 

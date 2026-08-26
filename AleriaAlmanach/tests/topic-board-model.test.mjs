@@ -16,8 +16,10 @@ function loadTopicBoardModel() {
   return context;
 }
 
-function loadTopicBoardStore() {
+function loadTopicBoardStore({ withBackend = true } = {}) {
   const storage = new Map();
+  const remoteProposals = [];
+  const subscribers = new Set();
   const context = vm.createContext({
     console,
     Date,
@@ -30,8 +32,41 @@ function loadTopicBoardStore() {
       getItem(key) { return storage.has(key) ? storage.get(key) : null; },
       setItem(key, value) { storage.set(key, String(value)); }
     },
-    setTimeout() {}
+    setTimeout() {},
+    clearTimeout() {},
+    addEventListener() {}
   });
+  if (withBackend) {
+    context._fb = {
+      getTopicProposalViewerId: () => 'player-1',
+      subscribeTopicProposals(onNext) {
+        subscribers.add(onNext);
+        onNext(remoteProposals.map(item => ({ ...item })));
+        return () => subscribers.delete(onNext);
+      },
+      async createTopicProposal(data) {
+        const proposal = { ...data, id: `remote-${remoteProposals.length + 1}`, createdBy: 'player-1', votes: {} };
+        remoteProposals.push(proposal);
+        subscribers.forEach(listener => listener(remoteProposals.map(item => ({ ...item }))));
+        return proposal;
+      },
+      async updateTopicProposal(proposalId, data) {
+        const index = remoteProposals.findIndex(item => item.id === proposalId);
+        if (index < 0) throw new Error('Der Themenvorschlag wurde nicht gefunden.');
+        remoteProposals[index] = { ...remoteProposals[index], ...data, id: proposalId };
+        subscribers.forEach(listener => listener(remoteProposals.map(item => ({ ...item }))));
+        return remoteProposals[index];
+      },
+      async toggleTopicProposalVote(proposalId) {
+        const proposal = remoteProposals.find(item => item.id === proposalId);
+        const votes = { ...(proposal?.votes || {}) };
+        if (votes['player-1']) delete votes['player-1'];
+        else votes['player-1'] = true;
+        proposal.votes = votes;
+        return { voted: !!votes['player-1'], proposal: { ...proposal } };
+      }
+    };
+  }
   for (const relativePath of [
     '../modules/world-date/world-date-model.js',
     '../modules/topic-board/topic-board-travel.js',
@@ -104,7 +139,7 @@ test('Archivansicht enthaelt nur abgehakte Themen', () => {
   assert.deepEqual(Array.from(ids), ['frisch', 'alt']);
 });
 
-test('lokale Stimmen lassen sich setzen und wieder zuruecknehmen', async () => {
+test('gemeinsame Stimmen werden online gesetzt und wieder zurückgenommen', async () => {
   const context = loadTopicBoardStore();
   vm.runInContext('initializeTopicBoardState()', context);
   const created = await vm.runInContext("createTopicBoardProposal({ title: 'Hofempfang' })", context);
@@ -116,4 +151,15 @@ test('lokale Stimmen lassen sich setzen und wieder zuruecknehmen', async () => {
 
   await vm.runInContext(`toggleTopicBoardProposalVote('${proposalId}')`, context);
   assert.equal(vm.runInContext(`getTopicBoardProposalById('${proposalId}').voteCount`, context), 0);
+});
+
+test('neue Themen werden ohne Firebase nicht mehr still nur lokal gespeichert', async () => {
+  const context = loadTopicBoardStore({ withBackend: false });
+  vm.runInContext('initializeTopicBoardState()', context);
+
+  await assert.rejects(
+    vm.runInContext("createTopicBoardProposal({ title: 'Nicht nur lokal' })", context),
+    /noch nicht mit Firebase verbunden/
+  );
+  assert.equal(vm.runInContext('getTopicBoardState().proposals.length', context), 0);
 });

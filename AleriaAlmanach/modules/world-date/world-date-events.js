@@ -12,12 +12,19 @@ async function handleWorldDateClick(event) {
     event.preventDefault();
     button.disabled = true;
     try {
-      const result = await AleriaWorldDateStore.shiftDate(1);
-      const note = result.localOnly ? 'Das Datum wurde lokal auf den nächsten Tag gesetzt.' : 'Das Datum wurde auf den nächsten Tag gesetzt.';
-      if (typeof showAppStatus === 'function') showAppStatus(note, 'success');
+      await AleriaWorldDateStore.shiftDate(1);
+      if (typeof showAppStatus === 'function') showAppStatus('Das gemeinsame Aleria-Datum wurde auf den nächsten Tag gesetzt.', 'success');
+    } catch (error) {
+      if (typeof showAppStatus === 'function') {
+        showAppStatus(String(error?.message || 'Das gemeinsame Aleria-Datum konnte nicht geändert werden.'), 'error');
+      }
     } finally {
       button.disabled = false;
     }
+  } else if (action === 'retry-sync') {
+    event.preventDefault();
+    AleriaWorldDateStore.retrySync();
+    if (typeof showAppStatus === 'function') showAppStatus('Die Verbindung zum gemeinsamen Aleria-Datum wird erneut geprüft.', 'info');
   }
 }
 
@@ -34,10 +41,10 @@ async function handleWorldDateSubmit(event) {
   if (submit) submit.disabled = true;
   AleriaWorldDateUI.setStatus('Das Datum wird gespeichert …');
   try {
-    const result = await AleriaWorldDateStore.setDate(AleriaWorldDateUI.getFormValue(form));
+    await AleriaWorldDateStore.setDate(AleriaWorldDateUI.getFormValue(form));
     AleriaWorldDateUI.close();
     if (typeof showAppStatus === 'function') {
-      showAppStatus(result.localOnly ? 'Aktuelles Datum lokal gespeichert.' : 'Aktuelles Datum im Almanach gespeichert.', 'success');
+      showAppStatus('Aktuelles Datum für alle Spieler im Almanach gespeichert.', 'success');
     }
   } catch (error) {
     AleriaWorldDateUI.setStatus(String(error?.message || 'Das Datum konnte nicht gespeichert werden.'), 'error');
