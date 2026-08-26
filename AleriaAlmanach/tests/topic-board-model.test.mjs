@@ -8,6 +8,7 @@ function loadTopicBoardModel() {
   for (const relativePath of [
     '../modules/world-date/world-date-model.js',
     '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js'
   ]) {
     vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
@@ -34,6 +35,7 @@ function loadTopicBoardStore() {
   for (const relativePath of [
     '../modules/world-date/world-date-model.js',
     '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js',
     '../modules/topic-board/topic-board-store.js'
   ]) {
@@ -60,6 +62,24 @@ test('Themenvorschlaege normalisieren Metadaten und entfernen doppelte Figuren',
   assert.deepEqual(Array.from(proposal.participants, participant => participant.id), ['idwal', 'trevor']);
   assert.equal(proposal.voteCount, 1);
   assert.equal(proposal.travel.enabled, false);
+  assert.equal(proposal.schedule.startDate.year, null);
+});
+
+test('alte Reiseabfahrten werden als Kalendereintrag übernommen und weiterberechnet', () => {
+  const context = loadTopicBoardModel();
+  const proposal = vm.runInContext(`normalizeTopicProposal({
+    title: 'Reise nach Abergwint',
+    travel: {
+      enabled: true,
+      manualTravelDays: 4,
+      departureDate: { year: 1740, month: 3, day: 34 }
+    }
+  })`, context);
+
+  assert.deepEqual({ ...proposal.schedule.startDate }, { year: 1740, month: 3, day: 34 });
+  assert.deepEqual({ ...proposal.schedule.endDate }, { year: 1740, month: 4, day: 2 });
+  assert.deepEqual({ ...proposal.travel.arrivalDate }, { year: 1740, month: 4, day: 2 });
+  assert.equal(proposal.schedule.durationSource, 'travel');
 });
 
 test('offene Themen werden nach Stimmen und Aktualitaet sortiert', () => {
@@ -89,6 +109,7 @@ test('lokale Stimmen lassen sich setzen und wieder zuruecknehmen', async () => {
   vm.runInContext('initializeTopicBoardState()', context);
   const created = await vm.runInContext("createTopicBoardProposal({ title: 'Hofempfang' })", context);
   const proposalId = created.proposal.id;
+  assert.deepEqual({ ...created.proposal.schedule.startDate }, { year: 1740, month: 3, day: 9 });
 
   await vm.runInContext(`toggleTopicBoardProposalVote('${proposalId}')`, context);
   assert.equal(vm.runInContext(`getTopicBoardProposalById('${proposalId}').voteCount`, context), 1);

@@ -21,6 +21,7 @@ test('Aleria-Weltdatum normalisiert Werte und wechselt korrekt über Monats- und
   assert.deepEqual({ ...nextMonth }, { year: 1740, month: 4, day: 1 });
   const nextYear = vm.runInContext('AleriaWorldDateModel.shift({ year: 1740, month: 13, day: 36 }, 1)', context);
   assert.deepEqual({ ...nextYear }, { year: 1741, month: 1, day: 1 });
+  assert.equal(vm.runInContext('AleriaWorldDateModel.differenceInDays({ year: 1740, month: 3, day: 34 }, { year: 1740, month: 4, day: 2 })', context), 4);
 });
 
 test('Familien wird entfernt, Test bleibt gespeichert aber unsichtbar', () => {

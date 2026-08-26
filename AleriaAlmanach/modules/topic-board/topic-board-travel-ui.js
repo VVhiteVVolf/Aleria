@@ -113,13 +113,6 @@ function renderTopicBoardTravelEditor(input) {
         <label class="topic-board-field"><span>Strecke pro Reisetag</span><input name="travelDailyDistance" type="number" min="0" max="1000000" step="0.1" value="${travel.dailyDistance ?? ''}" placeholder="90"></label>
         <label class="topic-board-field"><span>Reisetage manuell</span><input name="travelManualDays" type="number" min="1" max="3650" step="1" value="${travel.manualTravelDays ?? ''}" placeholder="optional"></label>
         <label class="topic-board-field"><span>Rast- / Puffertage</span><input name="travelRestDays" type="number" min="0" max="3650" step="1" value="${travel.restDays || ''}" placeholder="0"></label>
-        <fieldset class="topic-board-travel-date">
-          <legend>Abreisedatum</legend>
-          <label><span>Tag</span><input name="travelDepartureDay" type="number" min="1" max="36" value="${travel.departureDate.day ?? ''}" placeholder="TT"></label>
-          <label><span>Monat</span><input name="travelDepartureMonth" type="number" min="1" max="13" value="${travel.departureDate.month ?? ''}" placeholder="MM"></label>
-          <label><span>Jahr</span><input name="travelDepartureYear" type="number" min="1" value="${travel.departureDate.year ?? ''}" placeholder="Jahr"></label>
-          <button type="button" data-topic-board-action="use-current-world-date">Aktuelles Datum</button>
-        </fieldset>
       </div>
       <div class="topic-board-travel-stopovers">
         <div class="topic-board-travel-stopovers-head"><div><strong>Zwischenstopps</strong><small>Ort, Position auf der Route und Aufenthaltsdauer</small></div><button type="button" data-topic-board-action="add-travel-stop">＋ Zwischenstopp</button></div>
@@ -148,11 +141,6 @@ function collectTopicBoardTravelForm(form) {
     dailyDistance: value('travelDailyDistance'),
     manualTravelDays: value('travelManualDays'),
     restDays: value('travelRestDays'),
-    departureDate: {
-      day: value('travelDepartureDay'),
-      month: value('travelDepartureMonth'),
-      year: value('travelDepartureYear')
-    },
     stopovers
   });
 }
@@ -189,24 +177,11 @@ function removeTopicBoardTravelStopover(button) {
   return true;
 }
 
-function useCurrentTopicBoardTravelDate(form) {
-  if (!form) return false;
-  const model = globalThis.AleriaWorldDateModel;
-  const current = globalThis.AleriaWorldDateStore?.getState?.().date || model?.getDefault?.();
-  if (!model?.isValid?.(current)) return false;
-  form.elements.travelDepartureDay.value = current.day;
-  form.elements.travelDepartureMonth.value = current.month;
-  form.elements.travelDepartureYear.value = current.year;
-  refreshTopicBoardTravelEditor(form);
-  return true;
-}
-
 globalThis.AleriaTopicBoardTravelUI = Object.freeze({
   addStopover: addTopicBoardTravelStopover,
   collect: collectTopicBoardTravelForm,
   refresh: refreshTopicBoardTravelEditor,
   removeStopover: removeTopicBoardTravelStopover,
   renderCard: renderTopicBoardTravelCard,
-  renderEditor: renderTopicBoardTravelEditor,
-  useCurrentDate: useCurrentTopicBoardTravelDate
+  renderEditor: renderTopicBoardTravelEditor
 });

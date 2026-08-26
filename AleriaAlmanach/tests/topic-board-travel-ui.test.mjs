@@ -54,10 +54,7 @@ test('die Formauswertung uebergibt optionale Reisefelder strukturiert an das Mod
       travelDistanceUnit: { value: 'km' },
       travelDailyDistance: { value: '90' },
       travelManualDays: { value: '' },
-      travelRestDays: { value: '1' },
-      travelDepartureDay: { value: '34' },
-      travelDepartureMonth: { value: '3' },
-      travelDepartureYear: { value: '1740' }
+      travelRestDays: { value: '1' }
     };
     const stopValues = {
       travelStopPlace: { value: 'Dunvar' },
@@ -76,5 +73,14 @@ test('die Formauswertung uebergibt optionale Reisefelder strukturiert an das Mod
   assert.equal(travel.enabled, true);
   assert.equal(travel.travelDays, 5);
   assert.equal(travel.totalDays, 7);
-  assert.deepEqual({ ...travel.arrivalDate }, { year: 1740, month: 4, day: 5 });
+  assert.equal(travel.arrivalDate, null);
+  assert.equal(travel.departureDate.year, null);
+});
+
+test('der Reiseeditor besitzt kein zweites konkurrierendes Abreisedatum', () => {
+  const context = loadTravelUi();
+  const markup = vm.runInContext('AleriaTopicBoardTravelUI.renderEditor({ enabled: true })', context);
+
+  assert.doesNotMatch(markup, /travelDeparture/);
+  assert.doesNotMatch(markup, /use-current-world-date/);
 });

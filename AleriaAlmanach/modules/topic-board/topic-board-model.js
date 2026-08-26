@@ -1,4 +1,4 @@
-const TOPIC_BOARD_SCHEMA_VERSION = 2;
+const TOPIC_BOARD_SCHEMA_VERSION = 3;
 const TOPIC_BOARD_STATUS_OPEN = 'open';
 const TOPIC_BOARD_STATUS_ARCHIVED = 'archived';
 
@@ -86,6 +86,16 @@ function normalizeTopicProposal(input = {}) {
     ? Number(input.updatedAtClient)
     : createdAtClient;
   const votes = normalizeTopicBoardVotes(input.votes);
+  const initialTravel = globalThis.AleriaTopicBoardTravel?.normalize(input.travel);
+  const initialSchedule = globalThis.AleriaTopicBoardSchedule?.normalize(input.schedule, {
+    travel: initialTravel,
+    fallbackDate: initialTravel?.departureDate
+  });
+  const travel = globalThis.AleriaTopicBoardTravel?.normalize({
+    ...(input.travel || {}),
+    departureDate: initialSchedule?.startDate
+  });
+  const schedule = globalThis.AleriaTopicBoardSchedule?.normalize(initialSchedule, { travel });
   return {
     id: normalizeTopicBoardLine(input.id, 180),
     title: normalizeTopicBoardLine(input.title, TOPIC_BOARD_LIMITS.title),
@@ -97,7 +107,8 @@ function normalizeTopicProposal(input = {}) {
     themeIconUrl: normalizeTopicBoardImage(input.themeIconUrl || input.iconUrl),
     vehicle: normalizeTopicBoardLine(input.vehicle),
     vehicleIconUrl: normalizeTopicBoardImage(input.vehicleIconUrl),
-    travel: globalThis.AleriaTopicBoardTravel?.normalize(input.travel),
+    schedule,
+    travel,
     participants: normalizeTopicBoardParticipants(input.participants),
     votes,
     voteCount: Object.keys(votes).length,

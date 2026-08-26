@@ -49,6 +49,12 @@ function shiftWorldDate(value, days = 0) {
   return ordinal === null ? getDefaultWorldDate() : worldDateFromOrdinal(ordinal + Math.round(Number(days) || 0));
 }
 
+function getWorldDateDifferenceInDays(fromValue, toValue) {
+  const fromOrdinal = getWorldDateOrdinal(fromValue);
+  const toOrdinal = getWorldDateOrdinal(toValue);
+  return fromOrdinal === null || toOrdinal === null ? null : toOrdinal - fromOrdinal;
+}
+
 function worldDatesEqual(left, right) {
   const a = normalizeWorldDate(left);
   const b = normalizeWorldDate(right);
@@ -68,10 +74,12 @@ function normalizeWorldDateRecord(value = {}) {
 
 globalThis.AleriaWorldDateModel = Object.freeze({
   defaultDate: WORLD_DATE_DEFAULT,
+  differenceInDays: getWorldDateDifferenceInDays,
   getDefault: getDefaultWorldDate,
   isValid: isValidWorldDate,
   normalize: normalizeWorldDate,
   normalizeRecord: normalizeWorldDateRecord,
   shift: shiftWorldDate,
-  same: worldDatesEqual
+  same: worldDatesEqual,
+  toOrdinal: getWorldDateOrdinal
 });

@@ -8,6 +8,7 @@ function loadTopicBoardListState() {
   for (const relativePath of [
     '../modules/world-date/world-date-model.js',
     '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js',
     '../modules/topic-board/topic-board-list-state.js'
   ]) {
@@ -31,9 +32,11 @@ function loadTopicBoardUi() {
   for (const relativePath of [
     '../modules/world-date/world-date-model.js',
     '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js',
     '../modules/topic-board/topic-board-list-state.js',
     '../modules/topic-board/topic-board-travel-ui.js',
+    '../modules/topic-board/topic-board-schedule-ui.js',
     '../modules/topic-board/topic-board-ui.js'
   ]) {
     vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
@@ -96,6 +99,20 @@ test('Themenart und Sortierung bleiben im gekapselten Listen-State', () => {
   assert.equal(result.state.sort, 'title');
 });
 
+test('Kalendersortierung stellt den nächsten festen Termin zuerst', () => {
+  const context = loadTopicBoardListState();
+  const ids = vm.runInContext(`(() => {
+    AleriaTopicBoardListState.setSort('due');
+    return AleriaTopicBoardListState.selectProposals([
+      { id: 'spaeter', schedule: { startDate: { year: 1740, month: 4, day: 2 } } },
+      { id: 'offen' },
+      { id: 'zuerst', schedule: { startDate: { year: 1740, month: 3, day: 12 } } }
+    ]).map(item => item.id);
+  })()`, context);
+
+  assert.deepEqual(Array.from(ids), ['zuerst', 'spaeter', 'offen']);
+});
+
 test('in der kompakten Liste ist immer hoechstens ein Thema aufgeklappt', () => {
   const context = loadTopicBoardListState();
   const expanded = vm.runInContext(`[
@@ -121,6 +138,7 @@ test('ein Themenzettel rendert zuerst als Vorschau und zeigt Details erst nach d
   assert.match(expanded, /aria-expanded="true"/);
   assert.match(expanded, /data-topic-board-details>/);
   assert.doesNotMatch(expanded, /data-topic-board-details hidden/);
+  assert.match(expanded, /topic-board-schedule-badge/);
 });
 
 test('die Figurenfilterung blendet nicht passende Namen tatsaechlich aus', () => {

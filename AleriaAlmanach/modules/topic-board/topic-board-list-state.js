@@ -1,4 +1,5 @@
 const TOPIC_BOARD_LIST_SORT_VOTES = 'votes';
+const TOPIC_BOARD_LIST_SORT_DUE = 'due';
 const TOPIC_BOARD_LIST_SORT_NEWEST = 'newest';
 const TOPIC_BOARD_LIST_SORT_TITLE = 'title';
 
@@ -27,6 +28,9 @@ function getTopicBoardProposalSearchText(proposal = {}) {
     proposal.duration,
     proposal.location,
     proposal.vehicle,
+    proposal.schedule?.startDate?.day,
+    proposal.schedule?.startDate?.month,
+    proposal.schedule?.startDate?.year,
     ...(Array.isArray(proposal.participants) ? proposal.participants.map(participant => participant?.name) : []),
     travel.origin,
     travel.destination,
@@ -55,7 +59,7 @@ function setTopicBoardListCategory(value) {
 
 function setTopicBoardListSort(value) {
   const sort = String(value || '').trim().toLowerCase();
-  _topicBoardListState.sort = [TOPIC_BOARD_LIST_SORT_VOTES, TOPIC_BOARD_LIST_SORT_NEWEST, TOPIC_BOARD_LIST_SORT_TITLE].includes(sort)
+  _topicBoardListState.sort = [TOPIC_BOARD_LIST_SORT_VOTES, TOPIC_BOARD_LIST_SORT_DUE, TOPIC_BOARD_LIST_SORT_NEWEST, TOPIC_BOARD_LIST_SORT_TITLE].includes(sort)
     ? sort
     : TOPIC_BOARD_LIST_SORT_VOTES;
   return cloneTopicBoardListState();
@@ -83,6 +87,11 @@ function hasTopicBoardListFilters() {
   return !!_topicBoardListState.query || _topicBoardListState.category !== 'all';
 }
 
+function getTopicBoardDueOrdinal(proposal) {
+  const ordinal = globalThis.AleriaWorldDateModel?.toOrdinal?.(proposal?.schedule?.startDate);
+  return Number.isFinite(ordinal) ? ordinal : Number.MAX_SAFE_INTEGER;
+}
+
 function selectTopicBoardListProposals(input) {
   const proposals = Array.isArray(input) ? input.slice() : [];
   const filtered = proposals.filter(proposal => {
@@ -90,6 +99,12 @@ function selectTopicBoardListProposals(input) {
     return !_topicBoardListState.query || getTopicBoardProposalSearchText(proposal).includes(_topicBoardListState.query);
   });
   return filtered.sort((left, right) => {
+    if (_topicBoardListState.sort === TOPIC_BOARD_LIST_SORT_DUE) {
+      const dueDelta = getTopicBoardDueOrdinal(left) - getTopicBoardDueOrdinal(right);
+      if (dueDelta) return dueDelta;
+      const voteDelta = Number(right.voteCount || 0) - Number(left.voteCount || 0);
+      return voteDelta || Number(right.updatedAtClient || 0) - Number(left.updatedAtClient || 0);
+    }
     if (_topicBoardListState.sort === TOPIC_BOARD_LIST_SORT_TITLE) {
       return String(left.title || '').localeCompare(String(right.title || ''), 'de', { sensitivity: 'base' });
     }

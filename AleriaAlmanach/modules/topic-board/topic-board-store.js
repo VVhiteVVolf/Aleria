@@ -65,6 +65,16 @@ function getTopicBoardViewerId() {
   return remoteId || getLocalTopicBoardVoterId();
 }
 
+function getTopicBoardCreationSchedule(input = {}) {
+  if (globalThis.AleriaTopicBoardSchedule?.hasDate(input?.schedule?.startDate)) return input.schedule;
+  const model = globalThis.AleriaWorldDateModel;
+  const current = globalThis.AleriaWorldDateStore?.getState?.().date || model?.getDefault?.();
+  return {
+    ...(input?.schedule || {}),
+    startDate: model?.isValid?.(current) ? model.normalize(current) : null
+  };
+}
+
 function mergeTopicBoardRemoteAndLocal(remoteProposals) {
   const remote = (Array.isArray(remoteProposals) ? remoteProposals : []).map(normalizeTopicProposal);
   const remoteIds = new Set(remote.map(proposal => proposal.id));
@@ -182,6 +192,7 @@ function initializeTopicBoardState() {
 async function createTopicBoardProposal(input) {
   const payload = normalizeTopicProposal({
     ...input,
+    schedule: getTopicBoardCreationSchedule(input),
     id: '',
     status: TOPIC_BOARD_STATUS_OPEN,
     votes: {},

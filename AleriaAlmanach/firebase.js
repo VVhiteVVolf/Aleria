@@ -124,7 +124,7 @@
     function normalizeTopicProposalWrite(data = {}) {
       const allowedFields = [
         'title', 'description', 'category', 'timeframe', 'duration', 'location',
-        'themeIconUrl', 'vehicle', 'vehicleIconUrl', 'travel', 'participants', 'status',
+        'themeIconUrl', 'vehicle', 'vehicleIconUrl', 'schedule', 'travel', 'participants', 'status',
         'archivedAtClient', 'createdAtClient', 'updatedAtClient', 'schemaVersion'
       ];
       return allowedFields.reduce((next, field) => {

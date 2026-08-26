@@ -80,9 +80,11 @@ function handleTopicBoardClick(event) {
     event.preventDefault();
     globalThis.AleriaTopicBoardTravelUI.removeStopover(button);
     renderTopicBoardEditorPreview();
-  } else if (action === 'use-current-world-date') {
+  } else if (action === 'set-schedule-offset') {
     event.preventDefault();
-    globalThis.AleriaTopicBoardTravelUI.useCurrentDate(button.closest('[data-topic-board-form]'));
+    const form = button.closest('[data-topic-board-form]');
+    const travel = globalThis.AleriaTopicBoardTravelUI.collect(form);
+    globalThis.AleriaTopicBoardScheduleUI.setOffset(form, button.dataset.topicBoardScheduleOffset, travel);
     renderTopicBoardEditorPreview();
   }
 }
@@ -102,7 +104,6 @@ function handleTopicBoardInput(event) {
     filterTopicBoardCharacters(event.target.value || '');
     return;
   }
-  globalThis.AleriaTopicBoardTravelUI.refresh(form);
   renderTopicBoardEditorPreview();
 }
 
@@ -121,7 +122,9 @@ function handleTopicBoardIconSelected(event) {
 
 function handleTopicBoardStateChanged() {
   updateTopicBoardSidebarSummary();
-  if (document.getElementById('topic-board-overlay')?.classList.contains('active')) renderTopicBoard();
+  if (!document.getElementById('topic-board-overlay')?.classList.contains('active')) return;
+  renderTopicBoard();
+  if (document.querySelector('[data-topic-board-form]')) renderTopicBoardEditorPreview();
 }
 
 function initializeTopicBoardFeature() {
@@ -135,6 +138,7 @@ document.addEventListener('change', handleTopicBoardInput);
 document.addEventListener('submit', handleTopicBoardSubmit);
 document.addEventListener('almanach-icon-selected', handleTopicBoardIconSelected);
 document.addEventListener('almanach-topic-board-state', handleTopicBoardStateChanged);
+document.addEventListener('almanach-world-date-state', handleTopicBoardStateChanged);
 
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeTopicBoardFeature, { once: true });
 else initializeTopicBoardFeature();
