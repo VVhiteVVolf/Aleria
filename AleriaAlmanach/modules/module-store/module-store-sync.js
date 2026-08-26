@@ -7,34 +7,64 @@ function normalizeModuleStorePayload(payload) {
     }
   }
 
+  const sectionPolicy = globalThis.AleriaModuleSectionPolicy;
+  const customSections = Array.isArray(payload?.customSections)
+    ? payload.customSections.map(cleanCustomSection)
+    : [];
+  const treeState = typeof normalizeModuleTreeState === 'function'
+    ? normalizeModuleTreeState(payload || {})
+    : { nodes: [], assignments: {} };
+  const removedEntryIds = new Set(
+    customSections
+      .filter(section => sectionPolicy?.isRemoved?.(section))
+      .flatMap(section => section.entries || [])
+      .map(entry => String(entry?.id || '').trim())
+      .filter(Boolean)
+  );
+  const removedNodeIds = new Set(
+    treeState.nodes
+      .filter(node => sectionPolicy?.isRemoved?.(node))
+      .map(node => String(node?.id || '').trim())
+      .filter(Boolean)
+  );
+  Object.entries(treeState.assignments || {}).forEach(([entryId, nodeId]) => {
+    if (removedNodeIds.has(String(nodeId || ''))) removedEntryIds.add(String(entryId || '').trim());
+  });
+  const moduleSectionMoves = Object.fromEntries(
+    Object.entries(payload?.moduleSectionMoves || {})
+      .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
+      .filter(([entryId, section]) => {
+        if (!entryId) return false;
+        if (!sectionPolicy?.isRemoved?.(section)) return true;
+        removedEntryIds.add(entryId);
+        return false;
+      })
+  );
+  const moduleSectionNodes = treeState.nodes.filter(node => !sectionPolicy?.isRemoved?.(node));
+  const retainedNodeIds = new Set(moduleSectionNodes.map(node => String(node.id || '')).filter(Boolean));
+  const moduleNodeAssignments = Object.fromEntries(
+    Object.entries(treeState.assignments || {})
+      .filter(([entryId, nodeId]) => !removedEntryIds.has(String(entryId || '').trim()) && retainedNodeIds.has(String(nodeId || '')))
+  );
   const entryOverrides = {};
   Object.entries(payload?.entryOverrides || {}).forEach(([entryId, entry]) => {
     const id = String(entryId || entry?.id || '').trim();
-    if (!id) return;
+    if (!id || removedEntryIds.has(id)) return;
     entryOverrides[id] = sanitizeModuleEntry({ ...entry, id });
   });
   const hiddenModuleIds = {};
   Object.entries(payload?.hiddenModuleIds || {}).forEach(([entryId, hidden]) => {
     const id = String(entryId || '').trim();
-    if (id && hidden) hiddenModuleIds[id] = true;
+    if (id && hidden && !removedEntryIds.has(id)) hiddenModuleIds[id] = true;
   });
-  const treeState = typeof normalizeModuleTreeState === 'function'
-    ? normalizeModuleTreeState(payload || {})
-    : { nodes: [], assignments: {} };
 
   return {
     version: Number(payload?.version) || MODULE_STORE_SCHEMA_VERSION,
     updatedAtClient: Number(payload?.updatedAtClient) || 0,
-    customSections: Array.isArray(payload?.customSections)
-      ? payload.customSections.map(cleanCustomSection)
-      : [],
-    moduleSectionNodes: treeState.nodes,
-    moduleNodeAssignments: treeState.assignments,
-    moduleSectionMoves: Object.fromEntries(
-      Object.entries(payload?.moduleSectionMoves || {})
-        .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
-        .filter(([entryId]) => entryId)
-    ),
+    customSections: customSections.filter(section => !sectionPolicy?.isRemoved?.(section)),
+    moduleSectionNodes,
+    moduleNodeAssignments,
+    moduleSectionMoves,
     hiddenModuleIds,
     archiveDashboardInsights: normalizeArchiveDashboardInsights(payload?.archiveDashboardInsights),
     entryOverrides
@@ -469,7 +499,8 @@ function saveModuleStore(options = {}) {
 }
 
 function applyRemoteModuleStore(payload) {
-  if (!hasModuleStoreContent(payload)) return;
+  const removedContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(payload);
+  if (!hasModuleStoreContent(payload) && !removedContentWasPruned) return;
   if (_inlineModuleEdit?.active) return;
 
   try {
@@ -479,7 +510,12 @@ function applyRemoteModuleStore(payload) {
     const localUpdated = getModuleStoreUpdatedAt(localPayload);
     const sameContent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(localPayload);
 
-    if (sameContent) return;
+    if (sameContent) {
+      if (removedContentWasPruned) {
+        scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
+      }
+      return;
+    }
     if (hasModuleStoreContent(localPayload) && !isLocalModuleStoreSynced(localPayload)) {
       showModuleStoreSyncConflict(localPayload, remotePayload);
       return;
@@ -493,6 +529,9 @@ function applyRemoteModuleStore(payload) {
     renderAll();
     updateFirebaseSyncStatus('synced', 'Online-Stand übernommen.');
     showAppStatus('Almanach-Module wurden synchronisiert.', 'success');
+    if (removedContentWasPruned) {
+      scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
+    }
   } catch (error) {
     console.error('remote module store apply failed:', error);
     updateFirebaseSyncStatus('error', 'Online gespeicherte Module konnten nicht übernommen werden.');
@@ -513,7 +552,9 @@ async function setupModuleStoreRemoteSync() {
     updateFirebaseSyncStatus('syncing', 'Online-Speicher wird geprüft...');
 
     const localPayload = readLocalModuleStorePayload();
-    const remotePayload = normalizeModuleStorePayload(await window._fb.loadModuleStore());
+    const remoteSource = await window._fb.loadModuleStore();
+    const removedRemoteContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(remoteSource);
+    const remotePayload = normalizeModuleStorePayload(remoteSource);
     const localHasContent = hasModuleStoreContent(localPayload);
     const remoteHasContent = hasModuleStoreContent(remotePayload);
     const localUpdated = getModuleStoreUpdatedAt(localPayload);
@@ -525,7 +566,15 @@ async function setupModuleStoreRemoteSync() {
       return;
     }
 
-    if (remoteHasContent && (!localHasContent || !localUpdated || remoteUpdated >= localUpdated)) {
+    if (removedRemoteContentWasPruned && !remoteHasContent && !localHasContent) {
+      const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
+      applyModuleStorePayload(migratedPayload);
+      writeLocalModuleStorePayload(migratedPayload);
+      await pushModuleStoreToFirebase(migratedPayload);
+      writeModuleStoreSyncMeta(migratedPayload);
+      updateModuleStoreSizePanel(migratedPayload);
+      updateFirebaseSyncStatus('synced', 'Entfernte Modulbereiche wurden online bereinigt.');
+    } else if (remoteHasContent && (!localHasContent || !localUpdated || remoteUpdated >= localUpdated)) {
       applyModuleStorePayload(remotePayload);
       writeLocalModuleStorePayload(remotePayload);
       writeModuleStoreSyncMeta(remotePayload);
@@ -535,6 +584,13 @@ async function setupModuleStoreRemoteSync() {
         showAppStatus('Almanach-Module wurden vom Online-Speicher geladen.', 'success');
       }
       updateFirebaseSyncStatus('synced', 'Online-Stand geladen.');
+      if (removedRemoteContentWasPruned) {
+        const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
+        applyModuleStorePayload(migratedPayload);
+        writeLocalModuleStorePayload(migratedPayload);
+        await pushModuleStoreToFirebase(migratedPayload);
+        writeModuleStoreSyncMeta(migratedPayload);
+      }
     } else if (localHasContent && (!remoteHasContent || !remoteUpdated || localUpdated > remoteUpdated)) {
       const publishPayload = localUpdated ? localPayload : { ...localPayload, updatedAtClient: Date.now() };
       writeLocalModuleStorePayload(publishPayload);

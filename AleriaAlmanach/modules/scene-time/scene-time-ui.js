@@ -51,13 +51,30 @@ function renderSceneTimeEventComment(comment, index = 0) {
 }
 
 function buildSceneClockControl(threadId, page = {}) {
-  const startDate = sanitizeAleriaDate(page?.sessionDateAleria);
+  const resolved = globalThis.AleriaSceneDateDefaults?.resolve?.({ page, threadId });
+  const startDate = resolved || sanitizeAleriaDate(page?.sessionDateAleria);
   const hasStart = hasAleriaDate(startDate);
   const dateAttrs = hasStart
     ? ` data-scene-aleria-year="${startDate.year}" data-scene-aleria-month="${startDate.month}" data-scene-aleria-day="${startDate.day}"`
     : '';
   const dateLabel = hasStart ? formatAleriaDate(startDate) : '';
   return `<div class="scene-clock" data-scene-clock data-scene-thread-id="${escapeHtml(threadId)}"${dateAttrs} title="Zeit dieser Szenenseite"><span class="scene-clock-icon" aria-hidden="true"><img src="../IconOrdner/Etablissement Icons/Sanduhr.PNG" alt="" decoding="async"></span><span class="scene-clock-copy"><span class="scene-clock-label">Szenenzeit</span><strong data-scene-clock-value>Zeit nicht gesetzt</strong>${hasStart ? `<span class="scene-clock-date" data-scene-clock-date>${escapeHtml(dateLabel)}</span>` : ''}</span><button type="button" data-scene-time-action="open-event-dialog" aria-label="Szenenzeit einstellen" title="Szenenzeit einstellen">✎</button></div>`;
+}
+
+function syncSceneClockStartDate(clockRoot, value) {
+  const date = sanitizeAleriaDate(value);
+  if (!clockRoot || !hasAleriaDate(date)) return;
+  clockRoot.dataset.sceneAleriaYear = String(date.year);
+  clockRoot.dataset.sceneAleriaMonth = String(date.month);
+  clockRoot.dataset.sceneAleriaDay = String(date.day);
+  let label = clockRoot.querySelector('[data-scene-clock-date]');
+  if (!label) {
+    label = document.createElement('span');
+    label.className = 'scene-clock-date';
+    label.dataset.sceneClockDate = '';
+    clockRoot.querySelector('.scene-clock-copy')?.appendChild(label);
+  }
+  label.textContent = formatAleriaDate(date);
 }
 
 function renderSceneCommentTime(entry) {

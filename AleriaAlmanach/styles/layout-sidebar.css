@@ -288,6 +288,7 @@
   }
   .sidebar-section {
     position: relative;
+    flex: 0 0 auto;
     margin: 0 0 1rem 0.7rem;
     padding: 0.9rem 0.95rem 0.95rem;
     border: 1px solid color-mix(in srgb, var(--theme-accent) 24%, transparent);

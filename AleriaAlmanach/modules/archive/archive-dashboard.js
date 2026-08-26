@@ -170,6 +170,30 @@ function buildArchiveDashboardQuickCards(sections = []) {
   return buildArchiveDashboardSectionCards(sections);
 }
 
+const ARCHIVE_DASHBOARD_TAB_ICONS = Object.freeze({
+  'Völker & Kulturen': '../IconOrdner/ReiterIcons/Weltpfade/voelker-kulturen.png',
+  Magie: '../IconOrdner/ReiterIcons/Weltpfade/magie.png',
+  Infernales: '../IconOrdner/ReiterIcons/Weltpfade/infernales.png',
+  Celestiales: '../IconOrdner/ReiterIcons/Weltpfade/celestiales.png',
+  Schiffe: '../IconOrdner/ReiterIcons/Weltpfade/schiffe.png',
+  Werke: '../IconOrdner/ReiterIcons/Weltpfade/werke.png',
+  Kriminalität: '../IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png',
+  Forschung: '../IconOrdner/ReiterIcons/Weltpfade/forschung.png',
+  Religion: '../IconOrdner/ReiterIcons/Weltpfade/religion.png',
+  Söldner: '../IconOrdner/ReiterIcons/Weltpfade/soeldner.png',
+  Sport: '../IconOrdner/ReiterIcons/Weltpfade/sport.png',
+  Sprachen: '../IconOrdner/ReiterIcons/Weltpfade/sprachen.png',
+  Chroniken: '../IconOrdner/ReiterIcons/Weltpfade/chroniken.png',
+  Void: '../IconOrdner/ReiterIcons/Weltpfade/void.png',
+  Events: '../IconOrdner/ReiterIcons/Weltpfade/events.png',
+  Gruppen: '../IconOrdner/ReiterIcons/Weltpfade/gruppen.png',
+  Techniken: '../IconOrdner/ReiterIcons/Weltpfade/techniken.png'
+});
+
+function getArchiveDashboardTabIcon(label, sectionIconUrl = '') {
+  return sanitizeImageSrc(sectionIconUrl || ARCHIVE_DASHBOARD_TAB_ICONS[label] || '');
+}
+
 function buildArchiveDashboardSectionCards(sections = []) {
   const grouped = new Map();
   sections.forEach(section => {
@@ -180,7 +204,7 @@ function buildArchiveDashboardSectionCards(sections = []) {
       iconUrl: '',
       entries: []
     };
-    if (!existing.iconUrl) existing.iconUrl = sanitizeImageSrc(section.iconUrl || '');
+    if (!existing.iconUrl) existing.iconUrl = getArchiveDashboardTabIcon(label, section.iconUrl);
     existing.entries.push(...(Array.isArray(section.entries) ? section.entries : []));
     grouped.set(label, existing);
   });

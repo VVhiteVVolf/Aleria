@@ -180,7 +180,10 @@ function getAllSections() {
 }
 
 function getValidSections() {
-  return getAllSections();
+  const sectionPolicy = globalThis.AleriaModuleSectionPolicy;
+  return getAllSections().filter(section => (
+    !sectionPolicy?.isRemoved?.(section) && !sectionPolicy?.isHidden?.(section)
+  ));
 }
 
 function findBuiltinSectionByEntryId(entryId) {
@@ -238,6 +241,40 @@ function removeCustomModuleById(entryId) {
       ...section,
       entries: (section.entries || []).filter(entry => entry?.id !== entryId)
     }));
+}
+
+function setModuleSceneStartDateAleria(entryId, pageIndex, value) {
+  const id = String(entryId || '').trim();
+  const index = Math.max(0, Math.floor(Number(pageIndex) || 0));
+  const date = typeof sanitizeAleriaDate === 'function' ? sanitizeAleriaDate(value) : value;
+  if (!id || typeof hasAleriaDate !== 'function' || !hasAleriaDate(date)) return false;
+
+  const current = findCurrentSectionByEntryId(id);
+  if (!current?.entry) return false;
+  const entry = deepClone(current.entry);
+  const pages = Array.isArray(entry.pages) ? entry.pages.map(page => ({ ...(page || {}) })) : [];
+  const page = pages[index];
+  if (!page?.sessionPage || hasAleriaDate(page.sessionDateAleria)) return false;
+
+  page.sessionDateAleria = date;
+  entry.pages = pages;
+  const savedEntry = sanitizeModuleEntry({ ...entry, id });
+  if (findCustomSectionByEntryId(id)) {
+    removeCustomModuleById(id);
+    upsertCustomModule(current.section, savedEntry);
+  } else {
+    _entryOverrides[id] = savedEntry;
+    unhideModuleEntry(id);
+  }
+
+  if (typeof currentEntry !== 'undefined' && String(currentEntry?.id || '') === id) {
+    currentEntry = savedEntry;
+  }
+  saveModuleStore();
+  document.dispatchEvent(new CustomEvent('almanach:scene-start-date-assigned', {
+    detail: { entryId: id, pageIndex: index, date: deepClone(date) }
+  }));
+  return true;
 }
 
 function buildModuleExportPayload(entryId) {

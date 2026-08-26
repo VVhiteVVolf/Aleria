@@ -58,6 +58,9 @@
     const ITEM_DATABASE_ENTRY_COLLECTION = 'item_database_entries';
     const ITEM_DATABASE_SPLIT_FORMAT = 'split-v1';
     const CHARACTER_ARCHIVE_ENTRY_COLLECTION = 'character_archive_entries';
+    const TOPIC_PROPOSAL_COLLECTION = 'topic_proposals';
+    const ALMANACH_SETTINGS_COLLECTION = 'almanach_settings';
+    const CURRENT_ALERIA_DATE_DOC = 'current-date';
 
     async function requireFirebaseUser() {
       return authSession.requireUser();
@@ -116,6 +119,34 @@
       if (!value || typeof value !== 'object') return value;
       if (typeof structuredClone === 'function') return structuredClone(value);
       return JSON.parse(JSON.stringify(value));
+    }
+
+    function normalizeTopicProposalWrite(data = {}) {
+      const allowedFields = [
+        'title', 'description', 'category', 'timeframe', 'duration', 'location',
+        'themeIconUrl', 'vehicle', 'vehicleIconUrl', 'participants', 'status',
+        'archivedAtClient', 'createdAtClient', 'updatedAtClient', 'schemaVersion'
+      ];
+      return allowedFields.reduce((next, field) => {
+        if (Object.prototype.hasOwnProperty.call(data, field)) next[field] = cloneSerializableValue(data[field]);
+        return next;
+      }, {});
+    }
+
+    function normalizeCurrentAleriaDateWrite(data = {}) {
+      const year = Math.round(Number(data.year));
+      const month = Math.round(Number(data.month));
+      const day = Math.round(Number(data.day));
+      if (!Number.isFinite(year) || year < 1 || !Number.isFinite(month) || month < 1 || month > 13 || !Number.isFinite(day) || day < 1 || day > 36) {
+        throw new Error('Das aktuelle Aleria-Datum ist ungültig.');
+      }
+      return {
+        year,
+        month,
+        day,
+        schemaVersion: 1,
+        updatedAtClient: Math.max(0, Number(data.updatedAtClient) || Date.now())
+      };
     }
 
     function normalizeFirebaseModuleStore(data) {
@@ -818,6 +849,113 @@
         }, error => {
           console.error('subscribeCharacterArchiveEntries error:', error);
           if (onError) onError(error);
+        });
+      },
+      async loadCurrentAleriaDate() {
+        const snapshot = await getDoc(doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC));
+        return snapshot.exists() ? snapshot.data() : null;
+      },
+      subscribeCurrentAleriaDate(onNext, onError) {
+        return onSnapshot(doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC), snapshot => {
+          onNext(snapshot.exists() ? snapshot.data() : null);
+        }, error => {
+          console.error('subscribeCurrentAleriaDate error:', error);
+          if (onError) onError(error);
+        });
+      },
+      async saveCurrentAleriaDate(data = {}) {
+        const user = await requireFirebaseUser();
+        const safe = normalizeCurrentAleriaDateWrite(data);
+        const record = {
+          ...safe,
+          updatedBy: user.uid,
+          updatedAt: serverTimestamp()
+        };
+        await setDoc(doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC), record, { merge: false });
+        return { ...record, updatedAt: null };
+      },
+      getTopicProposalViewerId() {
+        return auth.currentUser?.uid || '';
+      },
+      async loadTopicProposals() {
+        const snapshot = await getDocs(collection(db, TOPIC_PROPOSAL_COLLECTION));
+        return snapshot.docs.map(entry => ({ id: entry.id, ...entry.data() }));
+      },
+      subscribeTopicProposals(onNext, onError) {
+        return onSnapshot(collection(db, TOPIC_PROPOSAL_COLLECTION), snapshot => {
+          onNext(snapshot.docs.map(entry => ({ id: entry.id, ...entry.data() })));
+        }, error => {
+          console.error('subscribeTopicProposals error:', error);
+          if (onError) onError(error);
+        });
+      },
+      async createTopicProposal(data = {}) {
+        const user = await requireFirebaseUser();
+        const nowClient = Date.now();
+        const safe = normalizeTopicProposalWrite(data);
+        const record = {
+          ...safe,
+          status: 'open',
+          archivedAtClient: 0,
+          votes: {},
+          voteCount: 0,
+          createdBy: user.uid,
+          createdAtClient: Number(safe.createdAtClient) || nowClient,
+          updatedAtClient: nowClient,
+          createdAt: serverTimestamp(),
+          updatedAt: serverTimestamp()
+        };
+        const reference = await addDoc(collection(db, TOPIC_PROPOSAL_COLLECTION), record);
+        return { id: reference.id, ...record, createdAt: null, updatedAt: null };
+      },
+      async updateTopicProposal(proposalId, data = {}) {
+        const user = await requireFirebaseUser();
+        const safeId = String(proposalId || '').trim();
+        if (!safeId) throw new Error('Themenvorschlag ohne ID kann nicht gespeichert werden.');
+        const reference = doc(db, TOPIC_PROPOSAL_COLLECTION, safeId);
+        const safe = normalizeTopicProposalWrite(data);
+        return runTransaction(db, async transaction => {
+          const snapshot = await transaction.get(reference);
+          if (!snapshot.exists()) throw new Error('Der Themenvorschlag wurde nicht gefunden.');
+          const current = snapshot.data();
+          const next = {
+            ...safe,
+            votes: current.votes || {},
+            voteCount: Object.keys(current.votes || {}).length,
+            createdBy: current.createdBy,
+            createdAtClient: current.createdAtClient,
+            updatedBy: user.uid,
+            updatedAtClient: Date.now(),
+            updatedAt: serverTimestamp()
+          };
+          transaction.set(reference, next, { merge: true });
+          return { id: safeId, ...current, ...next, updatedAt: null };
+        });
+      },
+      async toggleTopicProposalVote(proposalId) {
+        const user = await requireFirebaseUser();
+        const safeId = String(proposalId || '').trim();
+        if (!safeId) throw new Error('Themenvorschlag ohne ID kann nicht bewertet werden.');
+        const reference = doc(db, TOPIC_PROPOSAL_COLLECTION, safeId);
+        return runTransaction(db, async transaction => {
+          const snapshot = await transaction.get(reference);
+          if (!snapshot.exists()) throw new Error('Der Themenvorschlag wurde nicht gefunden.');
+          const current = snapshot.data();
+          const votes = current.votes && typeof current.votes === 'object' ? { ...current.votes } : {};
+          if (votes[user.uid] === true) delete votes[user.uid];
+          else votes[user.uid] = true;
+          const update = {
+            votes,
+            voteCount: Object.keys(votes).length,
+            updatedBy: user.uid,
+            updatedAtClient: Date.now(),
+            updatedAt: serverTimestamp()
+          };
+          transaction.set(reference, update, { merge: true });
+          return {
+            voted: votes[user.uid] === true,
+            proposal: { id: safeId, ...current, ...update, updatedAt: null }
+          };
         });
       },
       async loadCreatures() {

@@ -61,6 +61,10 @@ async function submitComment() {
   if (text.length > COMMENT_MAX_LENGTH) { errEl.textContent = `Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`; errEl.style.display='block'; return; }
   if (!threadId) { errEl.textContent = 'Der Kommentar konnte keinem Eintrag zugeordnet werden.'; errEl.style.display='block'; return; }
   if (_commentSubmitInFlight) return;
+  const automaticSceneDate = globalThis.AleriaSceneDateDefaults?.ensureForCurrentThread?.();
+  if (automaticSceneDate && globalThis.AleriaWorldDateModel?.isValid?.(automaticSceneDate)) {
+    commentMetadata.sceneStartDateAleria = globalThis.AleriaWorldDateModel.normalize(automaticSceneDate);
+  }
   _commentSubmitInFlight = true;
   errEl.style.display = 'none';
   btn.disabled = true;

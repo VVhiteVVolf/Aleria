@@ -1,0 +1,281 @@
+.world-date-sidebar {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 234, 0.74), transparent 52%),
+    rgba(236, 220, 181, 0.42);
+}
+
+.world-date-sidebar::after {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  right: -1.1rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 1px solid rgba(139, 105, 20, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.world-date-card {
+  display: grid;
+  grid-template-columns: 2.7rem minmax(0, 1fr);
+  gap: 0.62rem;
+  align-items: center;
+  margin-top: 0.62rem;
+  padding: 0.58rem;
+  border: 1px solid rgba(126, 87, 22, 0.28);
+  background: rgba(255, 252, 237, 0.38);
+}
+
+.world-date-card-mark {
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(126, 87, 22, 0.4);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #fff2be, #c99b3a 80%);
+  color: #684610;
+  box-shadow: 0 3px 8px rgba(74, 43, 8, 0.18);
+  font-size: 1.15rem;
+}
+
+.world-date-card-copy { min-width: 0; }
+
+.world-date-card-copy small,
+.world-date-card-copy strong,
+.world-date-card-copy span {
+  display: block;
+}
+
+.world-date-card-copy small {
+  color: var(--gold-dark);
+  font: 700 0.46rem 'Cinzel', serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.world-date-card-copy strong {
+  margin-top: 0.12rem;
+  color: var(--ink);
+  font: 600 0.7rem/1.35 'EB Garamond', serif;
+}
+
+.world-date-card-copy span {
+  margin-top: 0.14rem;
+  color: var(--ink-faded);
+  font: italic 0.57rem 'EB Garamond', serif;
+}
+
+.world-date-card-copy span::before {
+  content: '';
+  width: 0.36rem;
+  height: 0.36rem;
+  display: inline-block;
+  margin-right: 0.28rem;
+  border-radius: 50%;
+  background: #8b6c3d;
+}
+
+.world-date-card-copy span[data-state='online']::before { background: #66824a; }
+
+.world-date-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.38rem;
+  margin-top: 0.48rem;
+}
+
+.world-date-actions button {
+  min-height: 1.9rem;
+  border: 1px solid rgba(126, 87, 22, 0.28);
+  background: rgba(255, 252, 237, 0.26);
+  color: var(--gold-dark);
+  cursor: pointer;
+  font: 700 0.46rem/1.25 'Cinzel', serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.world-date-actions button:hover,
+.world-date-actions button:focus-visible {
+  border-color: var(--gold);
+  background: rgba(126, 87, 22, 0.1);
+  color: var(--ink);
+}
+
+.world-date-actions button:disabled { cursor: wait; opacity: 0.55; }
+
+.world-date-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2270;
+  display: none;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(31, 20, 8, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.world-date-overlay.active { display: grid; }
+
+.world-date-dialog {
+  width: min(590px, 100%);
+  border: 1px solid #9f792c;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.45), transparent 42%),
+    repeating-linear-gradient(0deg, rgba(103, 73, 30, 0.022) 0 1px, transparent 1px 5px),
+    #eee0bd;
+  box-shadow: 0 24px 72px rgba(20, 11, 2, 0.56), inset 0 0 0 4px rgba(255, 250, 227, 0.32);
+  color: var(--ink);
+  padding: 1rem;
+}
+
+.world-date-dialog header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.72rem;
+  border-bottom: 1px solid rgba(126, 87, 22, 0.26);
+}
+
+.world-date-dialog header small,
+.world-date-dialog h2,
+.world-date-dialog label > span,
+.world-date-preview small,
+.world-date-dialog footer button {
+  font-family: 'Cinzel', serif;
+}
+
+.world-date-dialog header small {
+  color: var(--gold-dark);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.world-date-dialog h2 {
+  margin: 0.12rem 0 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.world-date-dialog header button {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(126, 87, 22, 0.3);
+  background: rgba(255, 252, 237, 0.25);
+  color: var(--gold-dark);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.world-date-dialog > p {
+  margin: 0.78rem 0;
+  color: var(--ink-faded);
+  font: italic 0.83rem/1.45 'EB Garamond', serif;
+}
+
+.world-date-fields {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.world-date-dialog label > span {
+  display: block;
+  margin-bottom: 0.28rem;
+  color: var(--gold-dark);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.world-date-dialog input,
+.world-date-dialog select {
+  width: 100%;
+  min-height: 2.35rem;
+  border: 1px solid rgba(126, 87, 22, 0.35);
+  border-radius: 0;
+  outline: 0;
+  background: rgba(255, 253, 240, 0.58);
+  color: var(--ink);
+  font: 0.78rem 'EB Garamond', serif;
+  padding: 0.45rem;
+}
+
+.world-date-dialog input:focus,
+.world-date-dialog select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(139, 105, 20, 0.1);
+}
+
+.world-date-preview {
+  margin-top: 0.72rem;
+  padding: 0.64rem 0.75rem;
+  border: 1px solid rgba(126, 87, 22, 0.22);
+  background: rgba(255, 252, 237, 0.3);
+  text-align: center;
+}
+
+.world-date-preview small {
+  display: block;
+  color: var(--gold-dark);
+  font-size: 0.48rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.world-date-preview strong {
+  display: block;
+  margin-top: 0.2rem;
+  font: 600 0.9rem 'EB Garamond', serif;
+}
+
+.world-date-dialog footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+  padding-top: 0.72rem;
+  border-top: 1px solid rgba(126, 87, 22, 0.26);
+}
+
+.world-date-dialog footer span {
+  flex: 1;
+  color: var(--ink-faded);
+  font: 0.68rem 'EB Garamond', serif;
+}
+
+.world-date-dialog footer span[data-status='error'] { color: var(--red-wax); }
+
+.world-date-dialog footer button {
+  min-height: 2.15rem;
+  border: 1px solid rgba(126, 87, 22, 0.3);
+  background: transparent;
+  color: var(--ink-faded);
+  cursor: pointer;
+  font-size: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.world-date-dialog footer button.primary {
+  border-color: #755015;
+  background: #2d1d0c;
+  color: #f0d98e;
+}
+
+@media (max-width: 520px) {
+  .world-date-overlay { padding: 0.5rem; }
+  .world-date-fields { grid-template-columns: 1fr; }
+  .world-date-dialog footer { align-items: stretch; flex-wrap: wrap; }
+  .world-date-dialog footer span { flex-basis: 100%; }
+  .world-date-dialog footer button { flex: 1; }
+}

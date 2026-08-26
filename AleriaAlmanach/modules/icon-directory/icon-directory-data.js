@@ -14896,6 +14896,159 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "celestiales",
+    "fileName": "celestiales.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/celestiales.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "chroniken",
+    "fileName": "chroniken.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/chroniken.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "events",
+    "fileName": "events.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/events.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "forschung",
+    "fileName": "forschung.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/forschung.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "gruppen",
+    "fileName": "gruppen.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/gruppen.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "infernales",
+    "fileName": "infernales.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/infernales.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "kriminalitaet",
+    "fileName": "kriminalitaet.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "magie",
+    "fileName": "magie.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/magie.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "religion",
+    "fileName": "religion.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/religion.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "schiffe",
+    "fileName": "schiffe.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/schiffe.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "soeldner",
+    "fileName": "soeldner.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/soeldner.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "sport",
+    "fileName": "sport.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/sport.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "sprachen",
+    "fileName": "sprachen.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/sprachen.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "techniken",
+    "fileName": "techniken.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/techniken.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "voelker-kulturen",
+    "fileName": "voelker-kulturen.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/voelker-kulturen.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "void",
+    "fileName": "void.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/void.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
+    "name": "werke",
+    "fileName": "werke.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/werke.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
     "name": "Fragezeichen",
     "fileName": "Fragezeichen.png",
     "folder": "Siluetten",

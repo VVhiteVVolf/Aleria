@@ -15,6 +15,8 @@ const DIALOG_CONFIGS = {
   'scene-rest-overlay': { label: 'Rast einlegen', initialFocus: '[data-scene-rest-action="select-type"], input, button, textarea' },
   'combat-encounter-overlay': { label: 'Kampfliste verwalten', initialFocus: '[data-combat-encounter-action="operation"], input, button, textarea, select' },
   'scene-transition-overlay': { label: 'Szenenwechsel anlegen', initialFocus: '#scene-transition-target, button, input, textarea, select' },
+  'topic-board-overlay': { label: 'Themenwand', initialFocus: '[data-topic-board-action="set-view"], button, input, textarea, select' },
+  'world-date-overlay': { label: 'Aktuelles Aleria-Datum', initialFocus: '[data-world-date-field="year"], button, input, select' },
 };
 
 const DIALOG_FOCUSABLE_SELECTOR = [

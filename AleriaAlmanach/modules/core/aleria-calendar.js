@@ -56,14 +56,20 @@ function compareAleriaDates(a, b) {
   return ordinalA - ordinalB;
 }
 
-function getAleriaDateEra(value) {
-  const date = sanitizeAleriaDate(value);
-  if (!hasAleriaDate(date)) return '';
-  const delta = compareAleriaDates(date, {
+function getAleriaCurrentDate() {
+  const sharedDate = globalThis.AleriaWorldDateStore?.getState?.().date;
+  if (sharedDate && hasAleriaDate(sharedDate)) return sanitizeAleriaDate(sharedDate);
+  return sanitizeAleriaDate({
     year: ALERIA_CALENDAR.currentYear,
     month: ALERIA_CALENDAR.currentMonth,
     day: ALERIA_CALENDAR.currentDay
   });
+}
+
+function getAleriaDateEra(value) {
+  const date = sanitizeAleriaDate(value);
+  if (!hasAleriaDate(date)) return '';
+  const delta = compareAleriaDates(date, getAleriaCurrentDate());
   if (delta < 0) return 'past';
   if (delta > 0) return 'future';
   return 'present';

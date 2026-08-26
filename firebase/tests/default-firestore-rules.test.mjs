@@ -154,3 +154,57 @@ test('geteilte Konfiguration darf jeder angemeldete Spieler pflegen', async () =
   await assertFails(setDoc(doc(anonymous, 'char_tabs/config'), { tabs: [] }));
   await assertSucceeds(setDoc(doc(player, 'char_tabs/config'), { tabs: [] }));
 });
+
+test('Themenvorschlaege sind oeffentlich lesbar und gemeinsam pflegbar', async () => {
+  const anonymous = environment.unauthenticatedContext().firestore();
+  const owner = environment.authenticatedContext('owner').firestore();
+  const other = environment.authenticatedContext('other').firestore();
+  const proposal = {
+    title: 'Reise nach Abergwint',
+    status: 'open',
+    votes: {},
+    voteCount: 0,
+    createdBy: 'owner',
+    createdAtClient: 1,
+    updatedAtClient: 1
+  };
+
+  await assertFails(setDoc(doc(anonymous, 'topic_proposals/reise'), proposal));
+  await assertSucceeds(setDoc(doc(owner, 'topic_proposals/reise'), proposal));
+  await assertSucceeds(getDoc(doc(anonymous, 'topic_proposals/reise')));
+  await assertSucceeds(updateDoc(doc(other, 'topic_proposals/reise'), {
+    votes: { other: true },
+    voteCount: 1,
+    updatedAtClient: 2
+  }));
+  await assertFails(updateDoc(doc(other, 'topic_proposals/reise'), { createdBy: 'other' }));
+  await assertFails(deleteDoc(doc(owner, 'topic_proposals/reise')));
+});
+
+test('das aktuelle Aleria-Datum ist öffentlich lesbar und nur gültig aktualisierbar', async () => {
+  const anonymous = environment.unauthenticatedContext().firestore();
+  const player = environment.authenticatedContext('player').firestore();
+  const other = environment.authenticatedContext('other').firestore();
+  const dateRef = doc(player, 'almanach_settings/current-date');
+  const validDate = {
+    year: 1740,
+    month: 3,
+    day: 9,
+    schemaVersion: 1,
+    updatedAtClient: 1,
+    updatedBy: 'player'
+  };
+
+  await assertFails(setDoc(doc(anonymous, 'almanach_settings/current-date'), validDate));
+  await assertSucceeds(setDoc(dateRef, validDate));
+  await assertSucceeds(getDoc(doc(anonymous, 'almanach_settings/current-date')));
+  await assertSucceeds(setDoc(doc(other, 'almanach_settings/current-date'), {
+    ...validDate,
+    day: 10,
+    updatedAtClient: 2,
+    updatedBy: 'other'
+  }));
+  await assertFails(setDoc(dateRef, { ...validDate, month: 14 }));
+  await assertFails(setDoc(dateRef, { ...validDate, updatedBy: 'other' }));
+  await assertFails(deleteDoc(dateRef));
+});

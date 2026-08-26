@@ -112,8 +112,9 @@ function formatSceneTimeRomanNumeral(value) {
 // der Sitzung (page.sessionDateAleria) + Segment-Index (1 = Starttag, 2 = Starttag+1, ...).
 // Ist kein Startdatum fuer diese Szene hinterlegt, gibt es kein Datum zurueck.
 function getSceneTimeSegmentAleriaDate(segmentIndex = 1) {
-  const page = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread()?.page : null;
-  const startDate = page ? sanitizeAleriaDate(page.sessionDateAleria) : null;
+  const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
+  const resolved = globalThis.AleriaSceneDateDefaults?.resolve?.(thread);
+  const startDate = resolved || (thread?.page ? sanitizeAleriaDate(thread.page.sessionDateAleria) : null);
   if (!startDate || !hasAleriaDate(startDate)) return null;
   const index = Math.max(1, Math.floor(Number(segmentIndex) || 1));
   return index > 1 ? addAleriaDays(startDate, index - 1) : startDate;

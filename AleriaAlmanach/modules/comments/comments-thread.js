@@ -240,11 +240,17 @@ function renderCommentsToScroll(scroll, comments) {
   const visibleComments = pageInfo.comments;
   const sceneTimeline = typeof buildSceneTimeline === 'function' ? buildSceneTimeline(sortedComments) : [];
   const clockRoot = document.querySelector(`[data-scene-clock][data-scene-thread-id="${getCommentThreadSelectorValue(threadId)}"]`);
-  const sceneStartDate = clockRoot?.dataset.sceneAleriaYear ? sanitizeAleriaDate({
+  const clockStartDate = clockRoot?.dataset.sceneAleriaYear ? sanitizeAleriaDate({
     year: clockRoot.dataset.sceneAleriaYear,
     month: clockRoot.dataset.sceneAleriaMonth,
     day: clockRoot.dataset.sceneAleriaDay
   }) : null;
+  const currentThread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
+  const resolvedStartDate = globalThis.AleriaSceneDateDefaults?.resolve?.(currentThread, sortedComments);
+  const sceneStartDate = resolvedStartDate || clockStartDate;
+  if (clockRoot && sceneStartDate && typeof syncSceneClockStartDate === 'function') {
+    syncSceneClockStartDate(clockRoot, sceneStartDate);
+  }
   // Jeder Beitrag mit eigener Uhrzeit bekommt sein Aleria-Datum + eine Seitenzahl, die pro
   // Tag bei 1 beginnt. Bricht ein neuer Tag an, faengt die Zaehlung fuer diesen Tag neu an.
   if (sceneStartDate && hasAleriaDate(sceneStartDate)) {
