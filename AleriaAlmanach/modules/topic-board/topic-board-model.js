@@ -1,4 +1,4 @@
-const TOPIC_BOARD_SCHEMA_VERSION = 1;
+const TOPIC_BOARD_SCHEMA_VERSION = 2;
 const TOPIC_BOARD_STATUS_OPEN = 'open';
 const TOPIC_BOARD_STATUS_ARCHIVED = 'archived';
 
@@ -97,6 +97,7 @@ function normalizeTopicProposal(input = {}) {
     themeIconUrl: normalizeTopicBoardImage(input.themeIconUrl || input.iconUrl),
     vehicle: normalizeTopicBoardLine(input.vehicle),
     vehicleIconUrl: normalizeTopicBoardImage(input.vehicleIconUrl),
+    travel: globalThis.AleriaTopicBoardTravel?.normalize(input.travel),
     participants: normalizeTopicBoardParticipants(input.participants),
     votes,
     voteCount: Object.keys(votes).length,

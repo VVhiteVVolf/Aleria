@@ -164,6 +164,15 @@ test('Themenvorschlaege sind oeffentlich lesbar und gemeinsam pflegbar', async (
     status: 'open',
     votes: {},
     voteCount: 0,
+    travel: {
+      enabled: true,
+      distance: 420,
+      distanceUnit: 'km',
+      dailyDistance: 90,
+      travelDays: 5,
+      totalDays: 6,
+      stopovers: [{ place: 'Dunvar', stayDays: 1 }]
+    },
     createdBy: 'owner',
     createdAtClient: 1,
     updatedAtClient: 1

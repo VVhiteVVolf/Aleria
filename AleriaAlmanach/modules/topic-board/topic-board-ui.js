@@ -150,6 +150,7 @@ function renderTopicBoardProposalCard(input, options = {}) {
     </header>
     <div class="topic-board-description">${description}</div>
     ${renderTopicBoardMeta(proposal)}
+    ${globalThis.AleriaTopicBoardTravelUI.renderCard(proposal.travel)}
     <footer>
       <div><small>Betroffene Personen</small>${renderTopicBoardPortraits(proposal.participants)}</div>
       ${proposal.localOnly ? '<span class="topic-board-local-badge">nur hier gespeichert</span>' : ''}
@@ -250,6 +251,7 @@ function openTopicBoardEditor(proposalId = '') {
         <label class="topic-board-field"><span>Bezeichnung</span><input name="vehicle" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.vehicle || '')}" placeholder="Idwals Schiff"></label>
         <div data-topic-board-vehicle-icon>${renderTopicBoardIconField('vehicle', 'Icon für Schiff, Pferd oder Wagen', _topicBoardSelectedVehicleIcon)}</div>
       </section>
+      ${globalThis.AleriaTopicBoardTravelUI.renderEditor(proposal?.travel)}
       <section class="topic-board-form-section topic-board-field-wide">
         <span class="topic-board-form-label">Betroffene Personen</span>
         <input class="topic-board-character-search" type="search" data-topic-board-field="character-search" placeholder="Figur suchen …">
@@ -271,6 +273,7 @@ function openTopicBoardEditor(proposalId = '') {
       </div>
     </footer>
   </form>`;
+  globalThis.AleriaTopicBoardTravelUI.refresh(editor.querySelector('[data-topic-board-form]'));
   renderTopicBoardEditorPreview();
   globalThis.setTimeout?.(() => editor.querySelector('input[name="title"]')?.focus(), 20);
 }
@@ -309,6 +312,7 @@ function collectTopicBoardFormPayload() {
     themeIconUrl: _topicBoardSelectedThemeIcon,
     vehicle: form.elements.vehicle?.value || '',
     vehicleIconUrl: _topicBoardSelectedVehicleIcon,
+    travel: globalThis.AleriaTopicBoardTravelUI.collect(form),
     participants
   });
 }
@@ -316,6 +320,7 @@ function collectTopicBoardFormPayload() {
 function renderTopicBoardEditorPreview() {
   const preview = document.querySelector('[data-topic-board-preview]');
   if (!preview) return;
+  globalThis.AleriaTopicBoardTravelUI.refresh(preview.closest('[data-topic-board-form]'));
   preview.innerHTML = renderTopicBoardProposalCard(collectTopicBoardFormPayload(), { preview: true });
 }
 

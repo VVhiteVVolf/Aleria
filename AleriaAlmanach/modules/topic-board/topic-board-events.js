@@ -64,6 +64,18 @@ function handleTopicBoardClick(event) {
   } else if (action === 'clear-icon') {
     event.preventDefault();
     setTopicBoardSelectedIcon(button.dataset.topicBoardIconTarget || 'theme', '');
+  } else if (action === 'add-travel-stop') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardTravelUI.addStopover(button.closest('[data-topic-board-form]'));
+    renderTopicBoardEditorPreview();
+  } else if (action === 'remove-travel-stop') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardTravelUI.removeStopover(button);
+    renderTopicBoardEditorPreview();
+  } else if (action === 'use-current-world-date') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardTravelUI.useCurrentDate(button.closest('[data-topic-board-form]'));
+    renderTopicBoardEditorPreview();
   }
 }
 
@@ -74,6 +86,7 @@ function handleTopicBoardInput(event) {
     filterTopicBoardCharacters(event.target.value || '');
     return;
   }
+  globalThis.AleriaTopicBoardTravelUI.refresh(form);
   renderTopicBoardEditorPreview();
 }
 

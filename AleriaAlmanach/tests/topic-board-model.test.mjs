@@ -5,10 +5,13 @@ import vm from 'node:vm';
 
 function loadTopicBoardModel() {
   const context = vm.createContext({ console, Date });
-  vm.runInContext(
-    fs.readFileSync(new URL('../modules/topic-board/topic-board-model.js', import.meta.url), 'utf8'),
-    context
-  );
+  for (const relativePath of [
+    '../modules/world-date/world-date-model.js',
+    '../modules/topic-board/topic-board-travel.js',
+    '../modules/topic-board/topic-board-model.js'
+  ]) {
+    vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
+  }
   return context;
 }
 
@@ -29,6 +32,8 @@ function loadTopicBoardStore() {
     setTimeout() {}
   });
   for (const relativePath of [
+    '../modules/world-date/world-date-model.js',
+    '../modules/topic-board/topic-board-travel.js',
     '../modules/topic-board/topic-board-model.js',
     '../modules/topic-board/topic-board-store.js'
   ]) {
@@ -54,6 +59,7 @@ test('Themenvorschlaege normalisieren Metadaten und entfernen doppelte Figuren',
   assert.equal(proposal.category, 'reise');
   assert.deepEqual(Array.from(proposal.participants, participant => participant.id), ['idwal', 'trevor']);
   assert.equal(proposal.voteCount, 1);
+  assert.equal(proposal.travel.enabled, false);
 });
 
 test('offene Themen werden nach Stimmen und Aktualitaet sortiert', () => {
