@@ -82,6 +82,15 @@ function getCachedCommentsForThread(threadId) {
   return sortCommentsByTimeline(_commentCache[String(threadId || '')] || []);
 }
 
+function announceCommentThreadUpdate(threadId, comments = []) {
+  document.dispatchEvent(new CustomEvent('aleria:comments-updated', {
+    detail: {
+      threadId: String(threadId || ''),
+      comments: Array.isArray(comments) ? comments : []
+    }
+  }));
+}
+
 function getNextCommentOrderKey(threadId, insertAfterId = null) {
   const comments = sortCommentsByTimeline(_commentCache[String(threadId || '')] || []);
   if (!comments.length) return Date.now();
@@ -198,6 +207,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
     _commentLiveUnsubscribe = backend.subscribeComments(entryId, comments => {
       const mergedComments = withBuiltinTestComments(comments);
       _commentCache[entryId] = mergedComments;
+      announceCommentThreadUpdate(entryId, mergedComments);
       applyPageTarget(mergedComments);
       const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
       if (currentScroll?.dataset.commentThreadId === entryId) {
@@ -213,6 +223,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
       showCommentFallbackNotice();
       const comments = withBuiltinTestComments(await fallbackBackend.loadComments(entryId));
       _commentCache[entryId] = comments;
+      announceCommentThreadUpdate(entryId, comments);
       applyPageTarget(comments);
       const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
       if (currentScroll?.dataset.commentThreadId === entryId) {
@@ -225,6 +236,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
 
   const comments = withBuiltinTestComments(await backend.loadComments(entryId));
   _commentCache[entryId] = comments;
+  announceCommentThreadUpdate(entryId, comments);
   applyPageTarget(comments);
   renderCommentsToScroll(scroll, comments);
   maybeAutoScrollComments(scroll, comments);

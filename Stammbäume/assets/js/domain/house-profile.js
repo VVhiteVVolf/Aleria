@@ -1,27 +1,31 @@
 // Rangfolge in Cenyr: König > Graf > Baron > Ritterfürst > Ritterherr > einfacher Ritter > Bürger.
-// Albische Clans (Crannath) verwenden eigene Titel: Laird=Ritterfürst, Dún Tiarna=Baron,
-// Mor Tiarna=Graf, Ard Tiarna=Herzog/Fürst, Ri Tiarna=König/Kaiser. Die verdrahteten
-// albischen Titel teilen sich jeweils die Rangstufe ihres Cenyr-Äquivalents.
-// Rangstufe (order) ihres Cenyr-Äquivalents.
+// Albische Clans verwenden eigene Titel: Ri Tiarna=König/Kaiser, Ard Tiarna=Fürst,
+// Mor Tiarna=Graf, Dún Tiarna=Baron und Laird=Ritterfürst. Unter einem Laird stehen
+// keine Ritter- oder Huskarlherren, sondern Septen. Deren Septherren und zivile
+// Septoberhäupter teilen sich jeweils die Rangstufe ihres funktionalen Äquivalents.
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
   royal: Object.freeze({ id: 'royal', label: 'Königsgeschlecht', order: 10 }),
+  'ri-tiarna': Object.freeze({ id: 'ri-tiarna', label: 'Ri Tiarna (König/Kaiser)', order: 10 }),
   patrician: Object.freeze({ id: 'patrician', label: 'Patrizierhaus', order: 15 }),
   ducal: Object.freeze({ id: 'ducal', label: 'Herzogsgeschlecht', order: 20 }),
+  'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Fürst)', order: 20 }),
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
   jarl: Object.freeze({ id: 'jarl', label: 'Jarlsclan', order: 30 }),
-  'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mór Tiarna (Graf)', order: 30 }),
+  'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mor Tiarna (Graf)', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
   thane: Object.freeze({ id: 'thane', label: 'Thanenclan', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
-  'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Herzog/Fürst)', order: 20 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
+  laird: Object.freeze({ id: 'laird', label: 'Laird (Ritterfürst)', order: 50 }),
   hesire: Object.freeze({ id: 'hesire', label: 'Hesire-Clan', order: 50 }),
   huskarl: Object.freeze({ id: 'huskarl', label: 'Huskarlclan', order: 60 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
+  'sept-lord': Object.freeze({ id: 'sept-lord', label: 'Septherr (Ritterherrenrang)', order: 60 }),
   magnarian: Object.freeze({ id: 'magnarian', label: 'Magnarierhaus', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
   commoner: Object.freeze({ id: 'commoner', label: 'Bürgerfamilie', order: 80 }),
+  'sept-head': Object.freeze({ id: 'sept-head', label: 'Septoberhaupt (bürgerlicher Rang)', order: 80 }),
   mercantian: Object.freeze({ id: 'mercantian', label: 'Mercantierhaus', order: 80 }),
   plebeian: Object.freeze({ id: 'plebeian', label: 'Plebejerfamilie', order: 90 })
 });
@@ -38,12 +42,15 @@ const RANK_ICONS = Object.freeze({
   // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.
   'dun-tiarna': 'assets/images/ranks/baron.png',
   'knight-prince': 'assets/images/ranks/ritterfuerst.png',
+  laird: 'assets/images/ranks/ritterfuerst.png',
   hesire: 'assets/images/ranks/ritterfuerst.png',
   huskarl: 'assets/images/ranks/ritterherr.png',
   knight: 'assets/images/ranks/ritterherr.png',
+  'sept-lord': 'assets/images/ranks/ritterherr.png',
   'knight-simple': 'assets/images/ranks/ritter.png',
   // Platzhalter, bis ein eigenes Bürgerlich-Icon vorliegt.
-  commoner: 'assets/images/ranks/page.png'
+  commoner: 'assets/images/ranks/page.png',
+  'sept-head': 'assets/images/ranks/page.png'
 });
 
 export function getHouseRankIcon(rankId) {

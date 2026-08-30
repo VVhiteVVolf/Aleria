@@ -16,7 +16,6 @@ export const HOUSE_NACHTJAEGER_LOCAL_PORTRAIT_FILES = Object.freeze({
   'baldvin-nachtjaeger': 'baldvin-nachtjaeger.png',
   'styrmir-nachtjaeger': 'styrmir-nachtjaeger.png',
   'ardal-nachtjaeger': 'ardal-nachtjaeger.png',
-  'stiofan-blar': 'stiofan-blar.png',
   'rognar-nachtjaeger': 'rognar-nachtjaeger.png',
   'starkad-nachtjaeger': 'starkad-nachtjaeger.png',
   'gulda-nachtjaeger': 'gulda-nachtjaeger.png',
@@ -44,7 +43,6 @@ export const HOUSE_NACHTJAEGER_PORTRAIT_SOURCES = Object.freeze({
   'baldvin-nachtjaeger': 'https://i.imgur.com/iUhroql.png',
   'styrmir-nachtjaeger': 'https://i.imgur.com/Xf2xpx4.png',
   'ardal-nachtjaeger': 'https://i.imgur.com/psqsbSA.png',
-  'stiofan-blar': 'https://i.imgur.com/Lf6lFgJ.png',
   'rognar-nachtjaeger': 'https://i.imgur.com/Bkbqyxn.png',
   'starkad-nachtjaeger': 'https://i.imgur.com/hQjtfG4.png',
   'gulda-nachtjaeger': 'https://i.imgur.com/DrOasok.png',
@@ -71,6 +69,7 @@ const LOCAL_PORTRAITS = Object.freeze(Object.fromEntries(
 // als vermeintliche Individualbilder importiert.
 export const HOUSE_NACHTJAEGER_PORTRAITS = Object.freeze({
   ...LOCAL_PORTRAITS,
+  'stiofan-blar': 'assets/images/portraits/haus-nic-blar/stiofan-blar.png',
   'fannarr-varulv': HOUSE_VARULV_PORTRAITS['fannarr-varulv'],
   'torvard-nachtjaeger': HOUSE_VARULV_PORTRAITS['torvard-nachtjaeger'],
   'alva-varulv': HOUSE_VARULV_PORTRAITS['alva-varulv'],

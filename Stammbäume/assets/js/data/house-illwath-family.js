@@ -72,7 +72,14 @@ function awayWoman(id, name, birth, targetHouse, options = {}) {
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    extensions: { registryManagedFields: ['name', 'emblem', 'status'] }
+  };
 }
 
 const COUPLES = Object.freeze({
@@ -112,7 +119,12 @@ function marriedAway(id, name, partnershipId, houseId, options = {}) {
     targetFamilyId: houseId.replace(/^house-/, 'haus-'),
     emblem: options.emblem || '',
     subtitle: options.subtitle || `Wegverheiratet an ${name}`,
-    notes: options.notes || ''
+    notes: options.notes || '',
+    extensions: {
+      registryManagedFields: [
+        'name', 'parentPartnershipId', 'houseId', 'targetFamilyId', 'emblem', 'subtitle', 'notes'
+      ]
+    }
   });
 }
 
@@ -132,12 +144,12 @@ export const HOUSE_ILLWATH_FAMILY = Object.freeze({
     house('house-illewod', "Haus Illewod O'Aberon", SONNENKUESTE_HOUSE_EMBLEMS.illewod),
     house('house-llwynog', "Haus Llwynog O'Aberon", SONNENKUESTE_HOUSE_EMBLEMS.llwynog),
     house('house-morforwyn', 'Haus Morforwyn', SONNENKUESTE_HOUSE_EMBLEMS.morforwyn),
-    house('house-ceardaiocht', 'Haus Ceardaíocht'),
+    house('house-dal-ceardaiocht', 'Clan Dál’Ceardaíocht'),
     house('house-blach', "Haus Blach O'Aberon", SONNENKUESTE_HOUSE_EMBLEMS.blach),
     house('house-cleir', 'Haus Cléir'),
     house('house-airt', 'Haus Airt'),
     house('house-teyrngarch', 'Haus Teyrngarch', SONNENKUESTE_HOUSE_EMBLEMS.teyrngarch),
-    house('house-mhuir', 'Haus Mhuir')
+    house('house-na-mhuir', 'Clan Na’Mhuir')
   ],
   persons: [
     person('ehangwen-illewod', 'Ehangwen Illewod', 'male', '1652', '1720', {
@@ -162,7 +174,7 @@ export const HOUSE_ILLWATH_FAMILY = Object.freeze({
       notes: 'Das ausdrücklich ausgeschlossene ältere Quellenporträt wird nicht übernommen.'
     }),
     spouse('caibrel-ceardaiocht', 'Caibrel Ceardaíocht', 'male', '1675', '', {
-      houseId: 'house-ceardaiocht',
+      houseId: 'house-dal-ceardaiocht',
       notes: 'Die Quelltabelle schreibt den Hausnamen einmal Caerdaíocht; die kanonische Schreibweise im Projekt lautet Ceardaíocht.'
     }),
     spouse('alicyn-blach', 'Alicyn Blach', 'female', '1678', '', {
@@ -190,7 +202,7 @@ export const HOUSE_ILLWATH_FAMILY = Object.freeze({
       houseId: 'house-teyrngarch'
     }),
     spouse('khellen-mhuir', 'Khellen Mhuir', 'male', '1697', '', {
-      houseId: 'house-mhuir'
+      houseId: 'house-na-mhuir'
     }),
 
     person('arthgal-illwath', 'Arthgal Illwath', 'male', '1721', '', {
@@ -223,9 +235,9 @@ export const HOUSE_ILLWATH_FAMILY = Object.freeze({
     ...childrenOf(['urien-illwath', 'mared-illwath'], 'marriage-shylene-gwifredd-teyrngarch')
   ],
   cadetBranches: [
-    marriedAway('married-away-sianwen-illwath-ceardaiocht', 'Haus Ceardaíocht', 'marriage-sianwen-caibrel-illwath', 'house-ceardaiocht'),
+    marriedAway('married-away-sianwen-illwath-ceardaiocht', 'Clan Dál’Ceardaíocht', 'marriage-sianwen-caibrel-illwath', 'house-dal-ceardaiocht'),
     marriedAway('married-away-rhianu-illwath-airt', 'Haus Airt', 'marriage-rhianu-fintan-illwath', 'house-airt'),
-    marriedAway('married-away-branwen-illwath-mhuir', 'Haus Mhuir', 'marriage-branwen-khellen-illwath', 'house-mhuir')
+    marriedAway('married-away-branwen-illwath-mhuir', 'Clan Na’Mhuir', 'marriage-branwen-khellen-illwath', 'house-na-mhuir')
   ],
   timeJumps: [],
   lineage: {
@@ -249,9 +261,10 @@ export const HOUSE_ILLWATH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 3,
     sourceModule: "Haus Illwath O'Caer Llew (bereitgestellte Altdaten)",
-    sourceNote: 'Personen, Lebensdaten, Partnerschaften, Elternschaften und Erbfolge folgen der bereitgestellten Illwath-Tabelle. Ehangwens männliches Geschlecht ist durch Quelltext und Porträt belegt; Rhondda ist seine Ehefrau. Das Hauswappen steht direkt unter ihrem Gründerpaar, bevor Tarawg, Sianwen und Vorath folgen. Der offenkundige Zahlendreher 1996 bei Kynwas wird generationengerecht zu 1696 korrigiert. Gwiffred wird anhand der Teyrngarch-Gegenakte als Gwifredd normalisiert; Caerdaíocht zur bestehenden Projektschreibweise Ceardaíocht. Die Partnerschaften Ehangwen/Rhondda, Vorath/Alicyn und Gwifredd/Shylene verwenden dieselben IDs und Weltidentitäten wie ihre Gegenakten; Kinder werden ausschließlich im fortgeführten Illwath-Zweig geführt. Sianwen, Rhianu und Branwen besitzen direkte Wegverheiratet-Knoten. Die jüngste Generation bleibt auf ausdrückliche Vorgabe vollständig unverlobt. Die ausdrücklich ausgeschlossenen älteren Porträts von Rheanne Morforwyn und Fintan Airt werden nicht übernommen. Wiederholte generische Silhouetten werden ebenfalls nicht als individuelle Bilddateien importiert.',
+    sourceNote: 'Personen, Lebensdaten, Partnerschaften, Elternschaften und Erbfolge folgen der bereitgestellten Illwath-Tabelle. Ehangwens männliches Geschlecht ist durch Quelltext und Porträt belegt; Rhondda ist seine Ehefrau. Das Hauswappen steht direkt unter ihrem Gründerpaar, bevor Tarawg, Sianwen und Vorath folgen. Der offenkundige Zahlendreher 1996 bei Kynwas wird generationengerecht zu 1696 korrigiert. Gwiffred wird anhand der Teyrngarch-Gegenakte als Gwifredd normalisiert; Caerdaíocht zur bestehenden Projektschreibweise Ceardaíocht. Die Zielhäuser Sianwens und Branwens verwenden nun durchgängig die kanonischen Kennungen der Clans Dál’Ceardaíocht und Na’Mhuir. Die Partnerschaften Ehangwen/Rhondda, Vorath/Alicyn, Gwifredd/Shylene und Branwen/Khellen verwenden dieselben IDs und Weltidentitäten wie ihre Gegenakten; Kinder werden ausschließlich im fortgeführten Zielzweig geführt. Sianwen, Rhianu und Branwen besitzen direkte Wegverheiratet-Knoten. Die jüngste Generation bleibt auf ausdrückliche Vorgabe vollständig unverlobt. Die ausdrücklich ausgeschlossenen älteren Porträts von Rheanne Morforwyn und Fintan Airt werden nicht übernommen. Wiederholte generische Silhouetten werden ebenfalls nicht als individuelle Bilddateien importiert.',
+    registryTombstones: { houses: ['house-ceardaiocht', 'house-mhuir'] },
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

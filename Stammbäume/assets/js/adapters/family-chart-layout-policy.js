@@ -7,6 +7,9 @@ import {
 import {
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
+import {
+  createFamilyChartPairPlacementPlan
+} from './family-chart-pair-placement.js';
 
 export const STRICT_FAMILY_CHART_LAYOUT_POLICY = 'strict-v1';
 
@@ -73,11 +76,15 @@ export function auditFamilyChartLayoutPolicy(family) {
 
   const issues = [];
   const partnerPlan = createFamilyChartPartnerAlignmentPlan(family);
+  const pairPlacementPlan = createFamilyChartPairPlacementPlan(family);
   const descendantPlan = createFamilyChartDescendantAlignmentPlan(family);
   const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(family);
 
   partnerPlan.invalidRequests.forEach(request => {
     issues.push(issue('INVALID_PARTNER_LAYOUT_REQUEST', { request }));
+  });
+  pairPlacementPlan.invalidRequests.forEach(request => {
+    issues.push(issue('INVALID_PAIR_PLACEMENT_REQUEST', { request }));
   });
   descendantPlan.invalidRequests.forEach(request => {
     issues.push(issue('INVALID_DESCENDANT_LAYOUT_REQUEST', { request }));

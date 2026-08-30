@@ -1,3 +1,5 @@
+import { HOUSE_UA_EIRCE_LOCAL_PORTRAITS } from './house-ua-eirce-local-portraits.js';
+
 const GAFYR_PORTRAIT_ROOT = 'assets/images/portraits/haus-gafyr';
 const ARWYDD_PORTRAIT_ROOT = 'assets/images/portraits/haus-arwydd';
 const WYRM_PORTRAIT_ROOT = 'assets/images/portraits/haus-wyrm';
@@ -23,6 +25,7 @@ export const HOUSE_GAFYR_PORTRAITS = Object.freeze({
   'bronwyn-gafyr': `${GAFYR_PORTRAIT_ROOT}/bronwyn-gafyr.jpg`,
   'ferydnand-gafyr': `${GAFYR_PORTRAIT_ROOT}/ferydnand-gafyr.jpg`,
   'hywell-gafyr': `${GAFYR_PORTRAIT_ROOT}/hywell-gafyr.jpg`,
+  'tallula-eirce': HOUSE_UA_EIRCE_LOCAL_PORTRAITS['tallula-eirce'],
   'morfudd-gwialen': `${GAFYR_PORTRAIT_ROOT}/morfudd-gwialen.jpg`,
   'grufydd-aderyn': `${GAFYR_PORTRAIT_ROOT}/grufydd-aderyn.jpg`,
   'niniel-mwyalchen': `${GAFYR_PORTRAIT_ROOT}/niniel-mwyalchen.jpg`,

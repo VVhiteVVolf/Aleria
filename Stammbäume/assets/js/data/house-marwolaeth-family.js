@@ -276,8 +276,7 @@ export const HOUSE_MARWOLAETH_FAMILY = Object.freeze({
     awayWoman('jenniffer-marwolaeth', 'Jenniffer Marwolaeth', '1695', '', 'Haus Saethwyr'),
     awayWoman('eleri-marwolaeth', 'Eleri Marwolaeth', '1698', '', 'Haus Gafyr'),
     person('penryn-marwolaeth', 'Penryn Marwolaeth', 'male', '1696', ''),
-    spouse('sinna-cumhail', 'Sinna Cumhail', 'male', '????', '', {
-      status: 'unknown',
+    spouse('sinna-cumhail', 'Sinna Cumhail', 'male', '1693', '', {
       houseId: 'house-cumhail',
       familyRole: 'affair',
       title: 'Morwennas Schänder',
@@ -290,7 +289,7 @@ export const HOUSE_MARWOLAETH_FAMILY = Object.freeze({
     spouse('roderic-gafyr', 'Roderic Gafyr', 'male', '1699', '', { houseId: 'house-gafyr' }),
     spouse('tanwen-blach', 'Tanwen Blach', 'female', '1700', '', { houseId: 'house-blach' }),
 
-    person('peredur-geoffrey-marwolaeth', 'Peredur Geoffrey Marwolaeth', 'male', '????', '', {
+    person('peredur-geoffrey-marwolaeth', 'Peredur Geoffrey Marwolaeth', 'male', '1721', '', {
       status: 'alive',
       lineageRole: 'mainline',
       title: 'Legitimierter Erstgeborener · umstrittener Erbe',
@@ -404,9 +403,9 @@ export const HOUSE_MARWOLAETH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Marwolaeth O'Mathragon (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Hausgeschichte, Oberhäupter und Portraitzuordnungen folgen der bereitgestellten Marwolaeth-Hausseite und ihrer eingebetteten Stammbaumgrafik. Uryen der Gesegnete und Eimear Ailella bilden das Gründerpaar. Der einzige Punkttrenner wird nach dem Stammwappen als absoluter Zeitsprung zu Llwyrddyddwg und Braith geführt; beide sind ausdrücklich keine direkten Kinder des Gründerpaars. Die belegte Kopfschaft verläuft über Llwyrddyddwg, Llwyarch, Sieffre, Ninian, Gregory und den seit 1719 amtierenden Griffith. Dreizehn verheiratete Marwolaeth-Frauen ohne fortgeführten Marwolaeth-Zweig besitzen direkte Zielhausknoten. Morwenna bleibt unverheiratet: Sinna Cumhail wird gemäß Quelle als ihr Schänder in einer erzwungenen, beendeten Verbindung geführt, nicht als Affäre. Ihr Sohn Peredur Geoffrey ist biologisch aus dieser Verbindung hervorgegangen, wurde nachträglich legitimiert und bleibt als umstrittener Erbe gekennzeichnet. Kinder aus auswärtigen, im Zielhaus fortgesetzten Ehen werden nicht parallel kopiert. Gemeinsame Personen und Ehen mit Wylan, Dienyddiwr, Penderyn, Gwyvern, Dyngwn, Gwefrydd, Draig, Arth, Pysgod, Ceirwyn, Saethwyr und Gafyr behalten ihre vorhandenen Weltpersonen- und Partnerschafts-IDs. Ninians Todesjahr 1709, Gwenolas Todesjahr 1681, Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740 werden aus dieser jeweiligen Gegenquelle synchronisiert. Gradas unmögliches Quellenjahr 1652 ist als offenkundiger Zahlendreher zu 1552 normalisiert. Wiederholte generische Silhouetten wurden nicht als individuelle Portraits importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Hausgeschichte, Oberhäupter und Portraitzuordnungen folgen der bereitgestellten Marwolaeth-Hausseite und ihrer eingebetteten Stammbaumgrafik. Uryen der Gesegnete und Eimear Ailella bilden das Gründerpaar. Der einzige Punkttrenner wird nach dem Stammwappen als absoluter Zeitsprung zu Llwyrddyddwg und Braith geführt; beide sind ausdrücklich keine direkten Kinder des Gründerpaars. Die belegte Kopfschaft verläuft über Llwyrddyddwg, Llwyarch, Sieffre, Ninian, Gregory und den seit 1719 amtierenden Griffith. Dreizehn verheiratete Marwolaeth-Frauen ohne fortgeführten Marwolaeth-Zweig besitzen direkte Zielhausknoten. Morwenna bleibt unverheiratet: Sinna Cumhail wird gemäß Quelle als ihr Schänder in einer erzwungenen, beendeten Verbindung geführt, nicht als Affäre. Ihr Sohn Peredur Geoffrey ist biologisch aus dieser Verbindung hervorgegangen, wurde nachträglich legitimiert und bleibt als umstrittener Erbe gekennzeichnet. Sinnas Geburtsjahr 1693 und Peredurs Geburtsjahr 1721 werden aus der ergänzenden Mac-Ard-Cumhaill-Gegenakte synchronisiert. Kinder aus auswärtigen, im Zielhaus fortgesetzten Ehen werden nicht parallel kopiert. Gemeinsame Personen und Ehen mit Wylan, Dienyddiwr, Penderyn, Gwyvern, Dyngwn, Gwefrydd, Draig, Arth, Pysgod, Ceirwyn, Saethwyr und Gafyr behalten ihre vorhandenen Weltpersonen- und Partnerschafts-IDs. Ninians Todesjahr 1709, Gwenolas Todesjahr 1681, Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740 werden aus dieser jeweiligen Gegenquelle synchronisiert. Gradas unmögliches Quellenjahr 1652 ist als offenkundiger Zahlendreher zu 1552 normalisiert. Wiederholte generische Silhouetten wurden nicht als individuelle Portraits importiert.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']

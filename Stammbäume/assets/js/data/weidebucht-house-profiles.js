@@ -101,6 +101,6 @@ export const WEIDEBUCHT_HOUSE_PROFILES = Object.freeze({
   derlan: wylanVassalProfile('knight'),
   tannau: wylanVassalProfile('commoner'),
   asyn: wylanVassalProfile('knight-prince'),
-  fhaire: profile('knight-prince', BHIORACH_PATH),
+  fhaire: profile('laird', BHIORACH_PATH),
   trisceil: profile('mor-tiarna', ANCIENT_CERRIGARTH_PATH)
 });

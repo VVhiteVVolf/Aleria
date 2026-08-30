@@ -9,6 +9,7 @@ import {
   KRONENTAL_HOUSE_EMBLEMS,
   KRONENTAL_HOUSE_PROFILES
 } from './kronental-house-profiles.js';
+import { TIR_NA_SINSEAR_HOUSE_EMBLEMS } from './tir-na-sinsear-house-profiles.js';
 
 const ALBHOLZ_HOUSE_ID = 'house-albholz';
 
@@ -108,7 +109,7 @@ export const HOUSE_ALBHOLZ_FAMILY = Object.freeze({
   },
   houses: [
     house(ALBHOLZ_HOUSE_ID, 'Clan Albholz', KRONENTAL_HOUSE_EMBLEMS.albholz),
-    house('house-gruenhand', 'Clan Grünhand'),
+    house('house-gruenhand', 'Sept Grünhand aus Leith', TIR_NA_SINSEAR_HOUSE_EMBLEMS.gruenhand),
     house('house-moorbrand', 'Clan Moorbrand', KRONENTAL_HOUSE_EMBLEMS.moorbrand),
     house('house-bjarnvarg', 'Clan Bjarnvarg', KRONENTAL_HOUSE_EMBLEMS.bjarnvarg)
   ],
@@ -221,9 +222,9 @@ export const HOUSE_ALBHOLZ_FAMILY = Object.freeze({
     blankFamily: false,
     preparedMainLine: true,
     chartLayoutPolicy: 'strict-v1',
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceModule: 'Clan Albholz (überlieferte HTML-Familienakte)',
-    sourceNote: 'Vollständiger benannter Stammbaum von Albhric und Liorain bis zu Branocs fünf Kindern. Albhrics Geburtsjahr 1660 stammt aus der genealogischen Hierarchietabelle; die einmalige Angabe 1691 in der Hofübersicht bezeichnet erkennbar die Clangründung. Die Namensvariante „Tolan“ in den Figurenbeschreibungen wurde zugunsten des mehrfach belegten „Toran“ verworfen. Namenlose Verlobten-Platzhalter wurden nicht importiert.',
+    sourceNote: 'Vollständiger benannter Stammbaum von Albhric und Liorain bis zu Branocs fünf Kindern. Albhrics Geburtsjahr 1660 stammt aus der genealogischen Hierarchietabelle; die einmalige Angabe 1691 in der Hofübersicht bezeichnet erkennbar die Clangründung. Die Namensvariante „Tolan“ in den Figurenbeschreibungen wurde zugunsten des mehrfach belegten „Toran“ verworfen. Liorains Herkunftshaus ist nun mit Name und Wappen der ausgearbeiteten Sept Grünhand aus Leith verknüpft. Namenlose Verlobten-Platzhalter wurden nicht importiert.',
     jarltum: 'Kronental',
     aldrimarRank: 'Huskarl',
     registryManagedExtensionFields: [

@@ -1,11 +1,13 @@
 let _archiveDashboardInsightGenerationInFlight = false;
 
 function getArchiveDashboardInsights() {
-  return normalizeArchiveDashboardInsights(_archiveDashboardInsights);
+  return normalizeArchiveDashboardInsights(_archiveDashboardInsights)
+    .filter(item => typeof isArchiveDashboardPlaceholderText !== 'function' || !isArchiveDashboardPlaceholderText(item.text));
 }
 
 function setArchiveDashboardInsights(items = [], options = {}) {
-  _archiveDashboardInsights = normalizeArchiveDashboardInsights(items);
+  _archiveDashboardInsights = normalizeArchiveDashboardInsights(items)
+    .filter(item => typeof isArchiveDashboardPlaceholderText !== 'function' || !isArchiveDashboardPlaceholderText(item.text));
   if (options.persist !== false) saveModuleStore();
   return _archiveDashboardInsights;
 }
@@ -24,8 +26,8 @@ function getArchiveDashboardInsightAvatar(item = {}) {
   return match ? getArchiveDashboardEntryImage(match.entry) : '';
 }
 
-function renderArchiveDashboardInsightCards(items = getArchiveDashboardInsights(), fallbackSections = []) {
-  if (!items.length) return buildArchiveDashboardTriviaCards(fallbackSections);
+function renderArchiveDashboardInsightCards(items = getArchiveDashboardInsights()) {
+  if (!items.length) return '';
   return items.map(item => {
     const text = String(item.text || '').trim();
     const avatar = getArchiveDashboardInsightAvatar(item);
@@ -54,7 +56,10 @@ function setArchiveDashboardInsightStatus(message, state = 'idle') {
   const status = document.querySelector('[data-dashboard-insights-status]');
   const button = document.querySelector('[data-archive-action="generate-dashboard-insights"]');
   if (panel) panel.dataset.insightState = state;
-  if (status) status.textContent = String(message || '');
+  if (status) {
+    status.textContent = String(message || '');
+    status.hidden = !message;
+  }
   if (button) button.disabled = _archiveDashboardInsightGenerationInFlight;
 }
 

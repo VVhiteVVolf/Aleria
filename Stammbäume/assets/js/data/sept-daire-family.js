@@ -4,7 +4,10 @@ import {
   createMarriage,
   createParentages
 } from './family-record-builders.js';
-import { CEITHEACH_HOUSE_PROFILES } from './ceitheach-house-profiles.js';
+import {
+  CEITHEACH_HOUSE_PROFILES,
+  CEITHEACH_MANAGED_PROFILE_FIELDS
+} from './ceitheach-house-profiles.js';
 import { SEPT_DAIRE_PORTRAITS } from './sept-daire-portraits.js';
 
 const DAIRE_HOUSE_ID = 'sept-daire';
@@ -218,10 +221,11 @@ export const SEPT_DAIRE_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Modulvorlagen/lorcan-daire.json',
     sourceNote: 'Lorcáns Name, Geburtsjahr 1702, Alter 18 beim Kriegsbeginn 1720 und 38 im Jahr 1740, Herkunft aus einer einfachen bürgerlichen Sept Ceitheachs, Aufgebot durch die Mac Tuirseach, spätere Heimatlosigkeit, Dienst beim Clan Dal’Leite und Weg nach Celtigerns Wacht folgen der Modulvorlage. Die aktuelle Benutzervorgabe verortet die Sept in Tulachinis unter Tír na Droma und Tir na Dorcha und bestimmt Lorcán als ihren einzigen Überlebenden. Der Stammbaum bleibt deshalb auf Großvater-, Eltern- und Lorcán-Generation begrenzt. Die Daire werden nicht als Bauernfamilie, sondern als bürgerliche Hügelbewohner geführt; die Männer sind Tiarna-Krieger und sterben ausdrücklich im Kriegsaufgebot. Die Frauen behalten ausschließlich ihre zivilen Berufsbezeichnungen. Alle acht ergänzten Daire und Eheangehörigen sterben im Krieg von 1720 oder bis 1723 an seinen unmittelbaren Folgen.',
     registryManagedExtensionFields: ['sourceNote', 'extinction'],
+    registryManagedHouseProfileFields: CEITHEACH_MANAGED_PROFILE_FIELDS,
     extinction: {
       warStartYear: 1720,
       settlement: 'Tulachinis',

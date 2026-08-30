@@ -32,6 +32,7 @@ import { KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES } from './kraehenmoor-house-famili
 import { RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES } from './roriksheim-house-families.js';
 import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
 import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
+import { LEITHEACH_HOUSE_FAMILIES } from './leitheach-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -74,8 +75,28 @@ function hierarchyFor(path, familyId, familyTitle) {
   ]);
 }
 
+function additionalPlacementsFor(family) {
+  const placements = Array.isArray(family.extensions?.registryAdditionalPlacements)
+    ? family.extensions.registryAdditionalPlacements
+    : [];
+  return Object.freeze(placements.flatMap(placement => {
+    const houseProfile = placement?.houseProfile;
+    if (!houseProfile) return [];
+    const folderPath = Array.isArray(placement.folderPath) && placement.folderPath.length
+      ? placement.folderPath.map(String).filter(Boolean)
+      : createFolderPathFromHouseProfile(houseProfile);
+    if (!folderPath.length) return [];
+    return [Object.freeze({
+      ...placement,
+      folderPath: Object.freeze(folderPath),
+      houseProfile
+    })];
+  }));
+}
+
 function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' }) {
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
+  const additionalPlacements = additionalPlacementsFor(family);
   return Object.freeze({
     id,
     title,
@@ -83,6 +104,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' 
     type,
     listing,
     folderPath,
+    additionalPlacements,
     houseProfile: family.document.houseProfile,
     hierarchy: hierarchyFor(folderPath, id, title),
     link: `Stammbaum.html?family=${encodeURIComponent(id)}&mode=view`,
@@ -271,7 +293,21 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: family.document.id,
     title: family.document.title,
     family,
-    type: 'commoner'
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : ['laird', 'sept-lord'].includes(family.document.houseProfile.rankId)
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...LEITHEACH_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'sept-head'
+      ? 'commoner'
+      : ['laird', 'sept-lord'].includes(family.document.houseProfile.rankId)
+        ? 'lower-nobility'
+        : 'dynasty'
   })),
   familyRecord({
     id: 'haus-gwyllach',

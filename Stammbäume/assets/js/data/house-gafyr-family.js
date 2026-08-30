@@ -157,7 +157,9 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     person('morfudd-gwialen', 'Morfudd Gwialen', 'female', '1676', '', 'house-gwialen'),
     person('grufydd-aderyn', 'Grufydd Aderyn', 'male', '1670', '', 'house-aderyn'),
     person('niniel-mwyalchen', 'Niniel Mwyalchen', 'female', '1678', '', 'house-mwyalchen'),
-    person('tallula-eirce', 'Tallula Eirce', 'female', '1680', '', 'house-eirce'),
+    person('tallula-eirce', 'Tallula Eirce', 'female', '1680', '', 'house-eirce', {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
 
     // Generation 1694 bis 1700
     person('egon-gafyr', 'Egon', 'male', '1694', '', GAFYR_HOUSE_ID, {
@@ -369,8 +371,8 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd.',
+    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd. Revision 4 übernimmt Tallulas individuelles Porträt aus ihrer ausgearbeiteten Ua’Eirce-Gegenakte.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 4
   }
 });

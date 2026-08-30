@@ -27,19 +27,8 @@ function getArchiveDashboardEntries(sections = []) {
 }
 
 function getArchiveDashboardEntryImage(entry) {
-  return getArchiveEntryPreviewImage(entry);
-}
-
-function getArchiveDashboardCommentator(entry) {
-  const commentator = entry?.commentator && typeof entry.commentator === 'object' ? entry.commentator : null;
-  const name = String(commentator?.name || '').trim() || String(entry?.title || 'Archiv').trim();
-  const mood = String(entry?.commentatorMood || '').trim();
-  const avatar = sanitizeImageSrc(
-    (mood && commentator?.avatars?.[mood]) ||
-    Object.values(commentator?.avatars || {}).find(Boolean) ||
-    getArchiveDashboardEntryImage(entry)
-  );
-  return { name, avatar };
+  const image = getArchiveEntryPreviewImage(entry);
+  return /(?:platzhalter|placeholder)/i.test(String(image || '')) ? '' : image;
 }
 
 function stripArchiveDashboardText(value) {
@@ -55,7 +44,11 @@ function stripArchiveDashboardText(value) {
     .trim();
 }
 
-function getArchiveDashboardTriviaText(entry) {
+function isArchiveDashboardPlaceholderText(value) {
+  return /(?:lorem ipsum|platzhalter|placeholder|todo\b|noch ausf[üu]llen|coming soon)/i.test(String(value || ''));
+}
+
+function getArchiveDashboardEntryExcerpt(entry) {
   const candidates = [];
   if (entry?.subtitle) candidates.push(entry.subtitle);
   (entry?.pages || []).forEach(page => {
@@ -66,63 +59,111 @@ function getArchiveDashboardTriviaText(entry) {
       if (block?.text) candidates.push(block.text);
     });
   });
-  return stripArchiveDashboardText(candidates.find(text => stripArchiveDashboardText(text).length >= 80) || candidates[0] || '');
+  return candidates
+    .map(stripArchiveDashboardText)
+    .find(text => text.length >= 55 && !isArchiveDashboardPlaceholderText(text)) || '';
 }
 
-function buildArchiveDashboardTriviaCards(sections = []) {
-  const items = getArchiveDashboardEntries(sections)
-    .map(item => ({
-      ...item,
-      text: getArchiveDashboardTriviaText(item.entry),
-      image: getArchiveDashboardEntryImage(item.entry),
-      commentator: getArchiveDashboardCommentator(item.entry)
-    }))
-    .filter(item => item.text && item.entry?.id)
-    .slice(0, 3);
+function getArchiveDashboardDailyDiscovery(sections = [], date = new Date()) {
+  const candidates = getArchiveDashboardEntries(sections)
+    .map(item => ({ ...item, excerpt: getArchiveDashboardEntryExcerpt(item.entry) }))
+    .filter(item => item.entry?.id && item.entry?.title && item.excerpt)
+    .sort((left, right) => String(left.entry.id).localeCompare(String(right.entry.id), 'de'));
+  if (!candidates.length) return null;
 
-  if (!items.length) {
-    return '<div class="archive-dashboard-empty">Noch keine verwertbaren Fakten gefunden.</div>';
-  }
+  const dateKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  const seed = [...dateKey].reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 7);
+  return candidates[seed % candidates.length];
+}
 
-  return items.map(item => {
-    const text = item.text.length > 190 ? `${item.text.slice(0, 187).trim()}...` : item.text;
-    const avatar = item.commentator.avatar
-      ? `<img src="${escapeHtml(item.commentator.avatar)}" alt="${escapeHtml(item.commentator.name)}" loading="lazy" decoding="async">`
-      : `<span>${escapeHtml(getInitialChar(item.commentator.name))}</span>`;
-    return `
-      <article class="archive-dashboard-trivia-card">
-        <div class="archive-dashboard-trivia-avatar">${avatar}</div>
+function buildArchiveDashboardDiscoveryPanel(sections = []) {
+  const item = getArchiveDashboardDailyDiscovery(sections);
+  if (!item) return '';
+  const image = getArchiveDashboardEntryImage(item.entry);
+  const excerpt = item.excerpt.length > 220 ? `${item.excerpt.slice(0, 217).trim()}…` : item.excerpt;
+  return `
+    <section class="archive-dashboard-panel archive-dashboard-discovery-panel" data-dashboard-discovery-panel>
+      <div class="archive-dashboard-panel-head">
         <div>
-          <div class="archive-dashboard-card-kicker">Wusstest du das?</div>
-          <p>${escapeHtml(text)}</p>
-          <button type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}">
-            ${escapeHtml(item.entry.title || item.entry.id)}
-          </button>
-          <small>${escapeHtml(getSectionOptionLabel(item.section))}</small>
+          <div class="archive-dashboard-kicker">Aus dem Archiv</div>
+          <h3>Fundstück des Tages</h3>
         </div>
-      </article>`;
-  }).join('');
+        <span class="archive-dashboard-panel-mark" aria-hidden="true">✦</span>
+      </div>
+      <button class="archive-dashboard-discovery-card" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}">
+        ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : ''}
+        <span class="archive-dashboard-discovery-copy">
+          <strong>${escapeHtml(item.entry.title)}</strong>
+          <span>${escapeHtml(excerpt)}</span>
+          <small>${escapeHtml(getSectionOptionLabel(item.section))} <b aria-hidden="true">→</b></small>
+        </span>
+      </button>
+    </section>`;
 }
 
-function buildArchiveDashboardSceneCards(sections = []) {
-  const scenes = getArchiveDashboardEntries(sections)
-    .filter(item => (item.entry?.pages || []).some(page => page?.sessionPage))
-    .slice(0, 4);
-  if (!scenes.length) return '<div class="archive-dashboard-empty">Keine interaktiven Szenen gefunden.</div>';
+function formatArchiveDashboardRelativeTime(timestamp) {
+  const elapsed = Math.max(0, Date.now() - Number(timestamp || 0));
+  const minutes = Math.floor(elapsed / 60_000);
+  if (minutes < 1) return 'gerade eben';
+  if (minutes < 60) return `vor ${minutes} Min.`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `vor ${hours} Std.`;
+  const days = Math.floor(hours / 24);
+  if (days < 7) return `vor ${days} Tag${days === 1 ? '' : 'en'}`;
+  return new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: 'short' }).format(new Date(timestamp));
+}
+
+function getArchiveDashboardPrimaryScenePageIndex(entry) {
+  const pageIndex = (Array.isArray(entry?.pages) ? entry.pages : []).findIndex(page => page?.sessionPage);
+  return Math.max(0, pageIndex);
+}
+
+function getArchiveDashboardScenes(sections = [], options = {}) {
+  let scenes = getArchiveDashboardEntries(sections)
+    .filter(item => (item.entry?.pages || []).some(page => page?.sessionPage));
+  if (typeof sortAlmanachDashboardScenesByActivity === 'function') {
+    scenes = sortAlmanachDashboardScenesByActivity(scenes);
+  }
+  if (options.activityOnly && typeof getAlmanachDashboardSceneActivity === 'function') {
+    scenes = scenes.filter(item => getAlmanachDashboardSceneActivity(item.entry.id));
+  }
+  return scenes;
+}
+
+function buildArchiveDashboardSceneCards(sections = [], options = {}) {
+  const scenes = getArchiveDashboardScenes(sections, options).slice(0, 4);
   return scenes.map(item => {
     const image = getArchiveDashboardEntryImage(item.entry);
+    const activity = typeof getAlmanachDashboardSceneActivity === 'function'
+      ? getAlmanachDashboardSceneActivity(item.entry.id)
+      : null;
+    const portrait = sanitizeImageSrc(activity?.authorPortrait || '');
+    const pageIndex = activity?.pageIndex ?? getArchiveDashboardPrimaryScenePageIndex(item.entry);
+    const excerpt = activity?.excerpt
+      ? (activity.excerpt.length > 110 ? `${activity.excerpt.slice(0, 107).trim()}…` : activity.excerpt)
+      : '';
     return `
-      <button class="archive-dashboard-scene-card" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}">
-        ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span></span>'}
-        <strong>${escapeHtml(item.entry.title || item.entry.id)}</strong>
-        <small>${escapeHtml(getSectionOptionLabel(item.section))}</small>
+      <button class="archive-dashboard-scene-card" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}" data-page-index="${pageIndex}">
+        ${image ? `<img class="archive-dashboard-scene-cover" src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-scene-cover"></span>'}
+        <span class="archive-dashboard-scene-copy">
+          <span class="archive-dashboard-scene-heading">
+            <strong>${escapeHtml(item.entry.title || item.entry.id)}</strong>
+            ${activity ? `<em>${activity.commentCount} Beitr${activity.commentCount === 1 ? 'ag' : 'äge'}</em>` : ''}
+          </span>
+          ${activity ? `
+            <span class="archive-dashboard-scene-activity">
+              ${portrait ? `<img src="${escapeHtml(portrait)}" alt="" loading="lazy" decoding="async">` : '<i aria-hidden="true">✦</i>'}
+              <span>Zuletzt ${escapeHtml(activity.authorName)} · ${escapeHtml(formatArchiveDashboardRelativeTime(activity.activityAt))}</span>
+            </span>
+            ${excerpt ? `<span class="archive-dashboard-scene-excerpt">${escapeHtml(excerpt)}</span>` : ''}` : `
+            <small>${escapeHtml(getSectionOptionLabel(item.section))}</small>`}
+        </span>
       </button>`;
   }).join('');
 }
 
 function getArchiveDashboardPrimaryScene(sections = []) {
-  return getArchiveDashboardEntries(sections)
-    .find(item => (item.entry?.pages || []).some(page => page?.sessionPage)) || null;
+  return getArchiveDashboardScenes(sections)[0] || null;
 }
 
 function getArchiveDashboardPrimarySection(sections = []) {
@@ -132,6 +173,9 @@ function getArchiveDashboardPrimarySection(sections = []) {
 function buildArchiveDashboardHeroActions(sections = []) {
   const primarySection = getArchiveDashboardPrimarySection(sections);
   const primaryScene = getArchiveDashboardPrimaryScene(sections);
+  const primarySceneActivity = primaryScene && typeof getAlmanachDashboardSceneActivity === 'function'
+    ? getAlmanachDashboardSceneActivity(primaryScene.entry.id)
+    : null;
   const continuation = typeof getAlmanachDashboardContinuation === 'function'
     ? getAlmanachDashboardContinuation(sections)
     : null;
@@ -148,7 +192,7 @@ function buildArchiveDashboardHeroActions(sections = []) {
           <small>Register und Weltwissen öffnen</small>
         </button>` : ''}
       ${primaryScene && primaryScene.entry.id !== continuation?.entry?.id ? `
-        <button class="archive-dashboard-primary-action" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(primaryScene.entry.id)}">
+        <button class="archive-dashboard-primary-action" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(primaryScene.entry.id)}" data-page-index="${primarySceneActivity?.pageIndex ?? getArchiveDashboardPrimaryScenePageIndex(primaryScene.entry)}">
           <span>Szene öffnen</span>
           <small>${escapeHtml(primaryScene.entry.title || 'Interaktive Szene')}</small>
         </button>` : ''}
@@ -158,10 +202,32 @@ function buildArchiveDashboardHeroActions(sections = []) {
     </div>`;
 }
 
+function buildArchiveDashboardRecentTrail(sections = []) {
+  const recent = typeof getAlmanachDashboardRecentEntries === 'function'
+    ? getAlmanachDashboardRecentEntries(sections, 4)
+    : [];
+  if (!recent.length) return '';
+  return `
+    <div class="archive-dashboard-recent-head">
+      <span>Deine letzten Spuren</span>
+      <small>Lokal auf diesem Gerät</small>
+    </div>
+    <div class="archive-dashboard-recent-list">
+      ${recent.map(item => `
+        <button type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}" data-page-index="${item.pageIndex}">
+          <span>${escapeHtml(item.entry.title || item.entry.id)}</span>
+          <small>${escapeHtml(item.pageLabel || getSectionOptionLabel(item.section))}</small>
+        </button>`).join('')}
+    </div>`;
+}
+
 function refreshArchiveDashboardHeroActions() {
   const current = document.querySelector('[data-dashboard-hero-actions]');
-  if (!current) return;
-  current.outerHTML = buildArchiveDashboardHeroActions(getValidSections());
+  const recent = document.querySelector('[data-dashboard-recent]');
+  if (!current && !recent) return;
+  const sections = getValidSections();
+  if (current) current.outerHTML = buildArchiveDashboardHeroActions(sections);
+  if (recent) recent.innerHTML = buildArchiveDashboardRecentTrail(sections);
 }
 
 document.addEventListener('almanach:dashboard-history-changed', refreshArchiveDashboardHeroActions);
@@ -225,8 +291,32 @@ function buildArchiveDashboardSectionCards(sections = []) {
   }).join('');
 }
 
+function buildArchiveDashboardInsightsPanel() {
+  const insights = typeof getArchiveDashboardInsights === 'function'
+    ? getArchiveDashboardInsights()
+    : [];
+  const cards = typeof renderArchiveDashboardInsightCards === 'function'
+    ? renderArchiveDashboardInsightCards(insights)
+    : '';
+  return `
+    <section class="archive-dashboard-panel archive-dashboard-panel-full archive-dashboard-insights-panel${cards ? '' : ' is-empty'}" data-dashboard-insights-panel>
+      <div class="archive-dashboard-panel-head">
+        <div>
+          <div class="archive-dashboard-kicker">Archivfunken</div>
+          <h3>Wusstest du schon?</h3>
+        </div>
+        <button class="archive-dashboard-ai-btn" type="button" data-archive-action="generate-dashboard-insights">
+          ${cards ? 'Neue Entdeckungen' : 'Archivfunken entdecken'}
+        </button>
+      </div>
+      <div class="archive-dashboard-insight-status" data-dashboard-insights-status role="status" aria-live="polite" hidden></div>
+      <div class="archive-dashboard-trivia-grid" data-dashboard-insights-grid>${cards}</div>
+    </section>`;
+}
+
 function renderArchiveDashboard(sections = []) {
   const stats = getArchiveDashboardStats(sections);
+  const discoveryPanel = buildArchiveDashboardDiscoveryPanel(sections);
   return `
     <section class="archive-dashboard" aria-label="Archivuebersicht">
       <div class="archive-dashboard-hero">
@@ -243,6 +333,9 @@ function renderArchiveDashboard(sections = []) {
           <span><strong>${stats.sceneCount}</strong> Szenen</span>
         </div>
       </div>
+      <div class="archive-dashboard-recent" data-dashboard-recent>
+        ${buildArchiveDashboardRecentTrail(sections)}
+      </div>
       <div class="archive-dashboard-grid">
         <section class="archive-dashboard-panel archive-dashboard-panel-paths archive-dashboard-panel-full">
           <div class="archive-dashboard-panel-head">
@@ -255,36 +348,20 @@ function renderArchiveDashboard(sections = []) {
             ${buildArchiveDashboardQuickCards(sections)}
           </div>
         </section>
-        <section class="archive-dashboard-panel archive-dashboard-panel-wide" data-dashboard-insights-panel>
+        <section class="archive-dashboard-panel archive-dashboard-panel-scenes archive-dashboard-panel-wide" data-dashboard-scenes-panel>
           <div class="archive-dashboard-panel-head">
             <div>
-              <div class="archive-dashboard-kicker">Archivfunken</div>
-              <h3>Wusstest du das?</h3>
+              <div class="archive-dashboard-kicker">Szenenchronik</div>
+              <h3>Zuletzt kommentiert</h3>
             </div>
-            <button class="archive-dashboard-ai-btn" type="button" data-archive-action="generate-dashboard-insights">Neue Entdeckungen</button>
+            <span class="archive-dashboard-panel-count" data-dashboard-scene-count hidden></span>
           </div>
-          <div class="archive-dashboard-insight-status" data-dashboard-insights-status>
-            ${typeof getArchiveDashboardInsights === 'function' && getArchiveDashboardInsights().length
-              ? `${getArchiveDashboardInsights().length} gespeicherte Archivfunken.`
-              : 'Noch keine KI-Funken gespeichert.'}
-          </div>
-          <div class="archive-dashboard-trivia-grid" data-dashboard-insights-grid>
-            ${typeof renderArchiveDashboardInsightCards === 'function'
-              ? renderArchiveDashboardInsightCards(undefined, sections)
-              : buildArchiveDashboardTriviaCards(sections)}
-          </div>
-        </section>
-        <section class="archive-dashboard-panel">
-          <div class="archive-dashboard-panel-head">
-            <div>
-              <div class="archive-dashboard-kicker">Szenen</div>
-              <h3>Interaktive Einstiege</h3>
-            </div>
-          </div>
-          <div class="archive-dashboard-scene-list">
+          <div class="archive-dashboard-scene-list" data-dashboard-scene-list>
             ${buildArchiveDashboardSceneCards(sections)}
           </div>
         </section>
+        ${discoveryPanel}
+        ${buildArchiveDashboardInsightsPanel()}
       </div>
     </section>`;
 }

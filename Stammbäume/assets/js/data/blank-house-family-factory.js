@@ -137,8 +137,8 @@ export function createFounderTimeJumpPlaceholderHouseFamily({
 
 // Variante für bereits erloschene Häuser: dasselbe Platzhalter-Gründerpaar, aber mit
 // einem sofort angehängten Ausgestorben-Knoten (wie createExtinctBranch() in
-// family-record-builders.js) an der Gründerehe, damit das Erlöschen von Anfang an
-// sichtbar ist, statt es wie eine gewöhnliche noch fortbestehende Linie wirken zu lassen.
+// family-record-builders.js) direkt unter der vorläufig letzten Erbperson. Auch eine
+// Leerakte darf den Endknoten niemals parallel zu Geschwistern oder einem Paar zeigen.
 export function createExtinctPlaceholderHouseFamily({
   id,
   title,
@@ -156,7 +156,8 @@ export function createExtinctPlaceholderHouseFamily({
         name: 'Ausgestorben',
         subtitle: 'Die Linie endet hier',
         linkType: 'line-extinct',
-        parentPartnershipId: base.lineage.founderPartnershipId,
+        parentPartnershipId: '',
+        parentPersonId: base.view.focusPersonId,
         houseId: base.lineage.houseId,
         emblem: '',
         emblemScale: 0.86,
@@ -165,7 +166,17 @@ export function createExtinctPlaceholderHouseFamily({
         founded: '',
         targetFamilyId: '',
         notes: 'Die Linie ist ohne bekannte Nachkommen erloschen.',
-        extensions: {}
+        extensions: {
+          registryManagedFields: [
+            'name',
+            'parentPartnershipId',
+            'parentPersonId',
+            'houseId',
+            'emblem',
+            'subtitle',
+            'notes'
+          ]
+        }
       }
     ]
   });

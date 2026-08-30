@@ -58,6 +58,7 @@ function resolveFamilyRecord(registered, local) {
     ...local,
     listing: registered.listing,
     folderPath: usesRegisteredFolderPath ? registered.folderPath : local.folderPath,
+    additionalPlacements: registered.additionalPlacements,
     family: upgradedFamily,
     source: needsUpgrade ? 'registry-upgrade' : local.source,
     link: createFamilyViewLink(local.id)

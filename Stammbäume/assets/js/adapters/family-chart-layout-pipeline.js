@@ -16,6 +16,10 @@ import {
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
 import { applyFamilyChartPairCompaction } from './family-chart-pair-compaction.js';
+import {
+  applyFamilyChartPairPlacementPlan,
+  createFamilyChartPairPlacementPlan
+} from './family-chart-pair-placement.js';
 import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
 
 /**
@@ -37,6 +41,7 @@ export function applyFamilyChartLayoutPipeline({
   const descendantPlan = createFamilyChartDescendantAlignmentPlan(family);
   const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(family);
   const appearancePlan = createFamilyChartAppearanceAlignmentPlan(family);
+  const pairPlacementPlan = createFamilyChartPairPlacementPlan(family);
   // Kopierte Karten interner Ehen müssen vor allen Zweigverschiebungen an
   // ihrer lokalen Paaransicht sitzen. Werden sie erst nachträglich in einen
   // fertigen Baum geschoben, interpretiert der Kollisionsschutz die neue
@@ -58,6 +63,11 @@ export function applyFamilyChartLayoutPipeline({
   const descendantAlignment = applyFamilyChartDescendantAlignmentPlan({
     tree,
     plan: descendantPlan,
+    orientation
+  });
+  const pairPlacement = applyFamilyChartPairPlacementPlan({
+    tree,
+    plan: pairPlacementPlan,
     orientation
   });
   const pairCompaction = applyFamilyChartPairCompaction({
@@ -84,10 +94,17 @@ export function applyFamilyChartLayoutPipeline({
   });
 
   return Object.freeze({
-    plans: Object.freeze({ appearancePlan, partnerPlan, descendantPlan, houseLinkPlan }),
+    plans: Object.freeze({
+      appearancePlan,
+      partnerPlan,
+      descendantPlan,
+      pairPlacementPlan,
+      houseLinkPlan
+    }),
     appearanceAlignment,
     partnerAlignment,
     descendantAlignment,
+    pairPlacement,
     pairCompaction,
     houseLinkAlignment,
     lineageOriginAlignment,

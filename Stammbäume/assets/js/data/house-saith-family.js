@@ -185,6 +185,16 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
   });
 }
 
+function manageBranchTarget(record) {
+  return {
+    ...record,
+    extensions: {
+      ...record.extensions,
+      registryManagedFields: ['name', 'houseId', 'targetFamilyId']
+    }
+  };
+}
+
 export const HOUSE_SAITH_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
@@ -202,7 +212,7 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
     house('house-crefyddol', 'Haus Crefyddol', HOUSE_EMBLEMS.crefyddol),
     house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-creyr', 'Haus Créyr', HOUSE_EMBLEMS.creyr),
-    house('house-tsaoir', "Haus T'Saoir"),
+    house('house-dal-t-saor', 'Dal T’Saor'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-pyrth', 'Haus Pyrth', HOUSE_EMBLEMS.pyrth),
     house('house-marwolaeth', 'Haus Marwolaeth', HOUSE_EMBLEMS.marwolaeth),
@@ -229,8 +239,8 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
 
     person('lancel-saith', 'Lancel Saith', 'male', '1646', '1717'),
     spouse('blodwen-creyr', 'Blodwen Créyr', 'female', '1648', '1714', 'house-creyr'),
-    awayWoman('ygraine-saith', 'Ygraine Saith', '1650', '????', "Haus T'Saoir"),
-    spouse('luan-tsaoir', "Luan T'Saoir", 'male', '1649', '????', 'house-tsaoir'),
+    awayWoman('ygraine-saith', 'Ygraine Saith', '1650', '1731', 'Dal T’Saor'),
+    spouse('luan-tsaoir', 'Luan T’Saoir', 'male', '1649', '1719', 'house-dal-t-saor'),
     person('hetwn-saith', 'Hetwn Saith', 'male', '1654', '1717'),
     spouse('jinell-neidr', 'Jinell Neidr', 'female', '1659', '1703', 'house-neidr'),
     person('hopcyn-saith', 'Hopcyn Saith', 'male', '1652', '1713'),
@@ -281,7 +291,11 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
     createMarriage('marriage-argyll-ysella-saith', ...COUPLES.argyll, { status: 'ended', end: '1694' }),
     createMarriage('marriage-enfys-sieffre-saith', ...COUPLES.enfys, { status: 'ended', end: '1698' }),
     createMarriage('marriage-blodwen-lancel-creyr', ...COUPLES.lancel, { status: 'ended', end: '1714' }),
-    createMarriage('marriage-ygraine-luan-saith', ...COUPLES.ygraine, { status: 'ended' }),
+    createMarriage('marriage-ygraine-luan-saith', ...COUPLES.ygraine, {
+      status: 'ended',
+      end: '1719',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-jinell-hetwn', ...COUPLES.hetwn),
     createMarriage('marriage-enid-hopcyn', ...COUPLES.hopcyn),
     createMarriage('marriage-merlijn-ysolt-saith', ...COUPLES.merlijn, { status: 'ended', end: '1720' }),
@@ -327,7 +341,12 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
   cadetBranches: [
     marriedAway('married-away-elinor-saith-neidr', 'Haus Neidr', 'marriage-merwin-elinor', 'house-neidr', HOUSE_EMBLEMS.neidr),
     marriedAway('married-away-enfys-saith-draenog', 'Haus Draenog', 'marriage-enfys-sieffre-saith', 'house-draenog'),
-    marriedAway('married-away-ygraine-saith-tsaoir', "Haus T'Saoir", 'marriage-ygraine-luan-saith', 'house-tsaoir'),
+    manageBranchTarget(marriedAway(
+      'married-away-ygraine-saith-tsaoir',
+      'Dal T’Saor',
+      'marriage-ygraine-luan-saith',
+      'house-dal-t-saor'
+    )),
     marriedAway('married-away-yseut-saith-gwarchod', 'Haus Gwarchod', 'marriage-waleran-yseut-gwarchod', 'house-gwarchod', HOUSE_EMBLEMS.gwarchod),
     marriedAway('married-away-lyabelle-saith-tiwna', 'Haus Tiwna', 'marriage-lyabelle-bran-saith', 'house-tiwna', HOUSE_EMBLEMS.tiwna),
     marriedAway('married-away-maelyn-saith-pyrth', 'Haus Pyrth', 'marriage-maelyn-wynoc-saith', 'house-pyrth', HOUSE_EMBLEMS.pyrth),
@@ -375,9 +394,9 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Saith O'Llanvane (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Saith-Hausseite. Bors Saith und Gwennan Neidr bilden das Gründerpaar; der Hausknoten und die erste Überlieferungslücke folgen strikt seriell. Der zweite, einzige freie Zeitsprung ist ein gemeinsamer absoluter Trenner der Linien Dadweir/Llewella und Elinor/Merwin. Die Quellenform Crefyddoll wird als projektweit kanonisches Crefyddol geführt. Bei Merlijn nennt eine Kinderüberschrift irrtümlich Yseut; die zugehörige Ehezeile weist eindeutig Ysolt Pyrth als Ehefrau und Saselia als gemeinsames Kind aus. Bereits vorhandene Gegenakten verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen. Kinder erscheinen nur in der fortführenden Akte: Arianas Kinder ausschließlich bei Neidr, Yseuts Kind bei Gwarchod und Yvettes Kinder bei Tir Addawol; Xylons und Maelrons Kinder ausschließlich hier. Walerans Todesjahr bleibt gemäß seiner ausführlicheren Gwarchod-Herkunftsakte unbekannt und liegt nach 1730. Wiederholte Standardsilhouetten der Altdaten bleiben Systemplatzhalter.',
+    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Saith-Hausseite. Bors Saith und Gwennan Neidr bilden das Gründerpaar; der Hausknoten und die erste Überlieferungslücke folgen strikt seriell. Der zweite, einzige freie Zeitsprung ist ein gemeinsamer absoluter Trenner der Linien Dadweir/Llewella und Elinor/Merwin. Die Quellenform Crefyddoll wird als projektweit kanonisches Crefyddol geführt. Bei Merlijn nennt eine Kinderüberschrift irrtümlich Yseut; die zugehörige Ehezeile weist eindeutig Ysolt Pyrth als Ehefrau und Saselia als gemeinsames Kind aus. Bereits vorhandene Gegenakten verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen. Kinder erscheinen nur in der fortführenden Akte: Arianas Kinder ausschließlich bei Neidr, Yseuts Kind bei Gwarchod und Yvettes Kinder bei Tir Addawol; Xylons und Maelrons Kinder ausschließlich hier. Walerans Todesjahr bleibt gemäß seiner ausführlicheren Gwarchod-Herkunftsakte unbekannt und liegt nach 1730. Wiederholte Standardsilhouetten der Altdaten bleiben Systemplatzhalter. Die Dal-T’Saoir-Gegenakte präzisiert Ygraines Tod auf 1731 und Luans Tod auf 1719; die Hauskennung verweist nun auf die ausgearbeitete Hauptakte.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',
@@ -390,6 +409,7 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
       'secondarySeats',
       'regionEmblems'
     ],
-    registryManagedRecordFields: ['folderPath']
+    registryManagedRecordFields: ['folderPath'],
+    registryTombstones: { houses: ['house-tsaoir'] }
   }
 });

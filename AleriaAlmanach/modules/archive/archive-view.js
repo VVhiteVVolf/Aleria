@@ -697,6 +697,9 @@ function renderAll() {
   dashboard.dataset.archiveDashboard = 'true';
   dashboard.innerHTML = renderArchiveDashboard(sections);
   main.appendChild(dashboard);
+  if (typeof refreshAlmanachDashboardSceneActivity === 'function') {
+    refreshAlmanachDashboardSceneActivity(sections);
+  }
 
   const searchInput = toolbar.querySelector('#archive-search-input');
   const clearBtn = toolbar.querySelector('#archive-search-clear');

@@ -152,6 +152,10 @@ function render(query = '') {
       record.title,
       record.id,
       ...(record.folderPath || []),
+      ...(record.additionalPlacements || []).flatMap(placement => [
+        placement.title,
+        ...(placement.folderPath || [])
+      ]),
       ...getHouseProfileSearchTerms(getRegistryRecordHouseProfile(record))
     ]
       .some(value => String(value).toLocaleLowerCase('de').includes(needle)))

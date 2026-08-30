@@ -683,6 +683,7 @@ export function createFamilyStore(initialFamily, options = {}) {
         linkType: values.linkType,
         parentPartnershipId: values.parentPartnershipId || '',
         parentPersonId: values.parentPersonId || '',
+        childIds: [...new Set(values.childIds || [])],
         houseId: values.houseId || '',
         emblem: values.emblem || '',
         emblemScale: Number(values.emblemScale || 0.86),
@@ -708,6 +709,9 @@ export function createFamilyStore(initialFamily, options = {}) {
         linkType: values.linkType,
         parentPartnershipId: values.parentPartnershipId || '',
         parentPersonId: values.parentPersonId || '',
+        childIds: values.childIds === undefined
+          ? [...(branch.childIds || [])]
+          : [...new Set(values.childIds || [])],
         houseId: values.houseId || '',
         emblem: values.emblem || '',
         emblemScale: Number(values.emblemScale || 0.86),

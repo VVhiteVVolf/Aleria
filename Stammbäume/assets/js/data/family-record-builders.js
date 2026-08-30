@@ -82,6 +82,7 @@ function createHouseBranch({
   name,
   parentPartnershipId = '',
   parentPersonId = '',
+  childIds = [],
   houseId,
   targetFamilyId,
   linkType,
@@ -100,6 +101,7 @@ function createHouseBranch({
     linkType,
     parentPartnershipId,
     parentPersonId,
+    childIds: [...new Set(childIds)],
     houseId,
     emblem,
     emblemScale: 0.86,
@@ -163,11 +165,47 @@ export function createMigrationHouseBranch(options) {
 }
 
 export function createExtinctBranch(options) {
+  const parentPersonId = String(options?.parentPersonId || '').trim();
+  if (!parentPersonId) {
+    throw new TypeError('Ein Ausgestorben-Knoten muss direkt unter der letzten Erbperson verankert sein.');
+  }
+
+  const extensions = { ...(options.extensions || {}) };
+  const registryManagedExtensionFields = [
+    ...new Set([
+      ...(extensions.registryManagedExtensionFields || []),
+      'sidePlacement',
+      'offshootSide',
+      'offshootPlacement'
+    ])
+  ];
+  delete extensions.sidePlacement;
+  delete extensions.offshootSide;
+  delete extensions.offshootPlacement;
+
   return createHouseBranch({
-    targetFamilyId: '',
     ...options,
+    parentPartnershipId: '',
+    parentPersonId,
+    targetFamilyId: '',
     name: options.name || 'Ausgestorben',
     linkType: 'line-extinct',
-    subtitle: options.subtitle || 'Die Linie endet hier'
+    subtitle: options.subtitle || 'Die Linie endet hier',
+    extensions: {
+      ...extensions,
+      registryManagedExtensionFields,
+      registryManagedFields: [
+        ...new Set([
+          ...(extensions.registryManagedFields || []),
+          'name',
+          'parentPartnershipId',
+          'parentPersonId',
+          'houseId',
+          'emblem',
+          'subtitle',
+          'notes'
+        ])
+      ]
+    }
   });
 }

@@ -83,7 +83,14 @@ function spouse(id, name, sex, birth, death = '', options = {}) {
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    extensions: { registryManagedFields: ['name', 'emblem', 'status'] }
+  };
 }
 
 const COUPLES = Object.freeze({
@@ -191,7 +198,7 @@ export const HOUSE_BLACH_FAMILY = Object.freeze({
     house('house-hwyaden', 'Haus Hwyaden'),
     house('house-teyrngarch', 'Haus Teyrngarch', HOUSE_EMBLEMS.teyrngarch),
     house('house-illwath', 'Haus Illwath', HOUSE_EMBLEMS.illwath),
-    house('house-ceardaiocht', 'Haus Ceardaíocht'),
+    house('house-dal-ceardaiocht', 'Clan Dál’Ceardaíocht'),
     house('house-tiwna', 'Haus Tiwna'),
     house('house-baedd', 'Haus Baedd'),
     house('house-dyngwn', 'Haus Dyngwn', HOUSE_EMBLEMS.dyngwn),
@@ -373,7 +380,7 @@ export const HOUSE_BLACH_FAMILY = Object.freeze({
       tags: ['Wegverheiratet']
     }),
     spouse('caitriona-ceardaiocht', 'Caitriona Ceardaíocht', 'female', '1696', '', {
-      houseId: 'house-ceardaiocht'
+      houseId: 'house-dal-ceardaiocht'
     }),
     spouse('morien-tiwna', 'Morien Tiwna', 'male', '1697', '', {
       houseId: 'house-tiwna'
@@ -587,9 +594,10 @@ export const HOUSE_BLACH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Blach O'Aberon (bereitgestellte Altdaten)",
-    sourceNote: 'Personen, Lebensdaten, Ehen, Amtsfolge und Porträts folgen der bereitgestellten Blach-Tabelle. Die Vereinigung von Tir an Muirghin und Nic Ríordáin bildet das Gründerpaar vor dem Blach-Wappen. Vier Punktreihen werden als vier strikt serielle, niemals parallele Generationentrenner geführt. Bei den zwei alten Doppelzweigen speist jeweils ein einziger globaler Trenner beide Paarungen, während die fachlichen Abstammungen getrennt bleiben. Ceridwen, Rheuwen, Angharad, Gwyneth, Gwenlian, Millena, Artura, Tegin, Alicyn, Betws, Gwerful und Tanwen besitzen direkte Wegverheiratet-Knoten zu ihren Zielhäusern. Betws wird nach ihrem eindeutigen Quellporträt als Blach-Tochter geführt; ihre Ehe mit Morien beendet ihren Herkunftszweig am Zielknoten Haus Tiwna. Ailis Ghaiscioch ist als aufgenommenes Mündel Emyrs’ mit Mündelrahmen und ausschließlich einer Pflegebeziehung erfasst. Geteilte Weltpersonen, Partnerschaften und Porträts mit Illewod, Wyrm, Illysywen, Wylan, Dienyddiwr, Teyrngarch, Dyngwn und Marwolaeth verwenden dieselben technischen IDs. Nachkommen werden nur auf der fortgeführten Seite dargestellt: Gwyneth/Gogyvwlch, Tegin/Edlym und Tanwen/Penryn ausschließlich in den Zielhäusern; Ifan/Malvina, Dafydd/Carwyn, Dylan/Quendolin, Idwallon/Marve und Meurig/Dolena ausschließlich hier. Die Varianten Jeanae/Jeannae, Penrys/Penryn und Emyrs/Emrys wurden zugunsten bestehender Gegenakten beziehungsweise der ausführlichen Hierarchie normalisiert. Idwallons bereits kanonisches Geburtsjahr 1704 aus der Wyrm-Akte bleibt trotz der Blach-Angabe 1703 stabil. Wiederholte schwarze Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    sourceNote: 'Personen, Lebensdaten, Ehen, Amtsfolge und Porträts folgen der bereitgestellten Blach-Tabelle. Die Vereinigung von Tir an Muirghin und Nic Ríordáin bildet das Gründerpaar vor dem Blach-Wappen. Vier Punktreihen werden als vier strikt serielle, niemals parallele Generationentrenner geführt. Bei den zwei alten Doppelzweigen speist jeweils ein einziger globaler Trenner beide Paarungen, während die fachlichen Abstammungen getrennt bleiben. Ceridwen, Rheuwen, Angharad, Gwyneth, Gwenlian, Millena, Artura, Tegin, Alicyn, Betws, Gwerful und Tanwen besitzen direkte Wegverheiratet-Knoten zu ihren Zielhäusern. Betws wird nach ihrem eindeutigen Quellporträt als Blach-Tochter geführt; ihre Ehe mit Morien beendet ihren Herkunftszweig am Zielknoten Haus Tiwna. Ailis Ghaiscioch ist als aufgenommenes Mündel Emyrs’ mit Mündelrahmen und ausschließlich einer Pflegebeziehung erfasst. Geteilte Weltpersonen, Partnerschaften und Porträts mit Illewod, Wyrm, Illysywen, Wylan, Dienyddiwr, Teyrngarch, Dyngwn und Marwolaeth verwenden dieselben technischen IDs. Caitrionas Herkunftshaus verwendet nun durchgängig die kanonische Kennung des Clans Dál’Ceardaíocht. Nachkommen werden nur auf der fortgeführten Seite dargestellt: Gwyneth/Gogyvwlch, Tegin/Edlym und Tanwen/Penryn ausschließlich in den Zielhäusern; Ifan/Malvina, Dafydd/Carwyn, Dylan/Quendolin, Idwallon/Marve und Meurig/Dolena ausschließlich hier. Die Varianten Jeanae/Jeannae, Penrys/Penryn und Emyrs/Emrys wurden zugunsten bestehender Gegenakten beziehungsweise der ausführlichen Hierarchie normalisiert. Idwallons bereits kanonisches Geburtsjahr 1704 aus der Wyrm-Akte bleibt trotz der Blach-Angabe 1703 stabil. Wiederholte schwarze Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
+    registryTombstones: { houses: ['house-ceardaiocht'] },
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

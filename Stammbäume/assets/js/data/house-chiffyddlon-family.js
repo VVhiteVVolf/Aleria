@@ -318,11 +318,7 @@ export const HOUSE_CHIFFYDDLON_FAMILY = Object.freeze({
       parentPersonId: 'gwilym-chiffyddlon',
       houseId: CHIFFYDDLON_HOUSE_ID,
       emblem: CHIFFYDDLON_EMBLEM,
-      notes: 'Gwilym fiel 1720 ohne männlichen Nachkommen. Seine drei Töchter waren bereits in andere Häuser verheiratet; damit endet die dynastische Linie.',
-      extensions: {
-        sidePlacement: true,
-        offshootSide: 'before'
-      }
+      notes: 'Gwilym fiel 1720 ohne männlichen Nachkommen. Seine drei Töchter waren bereits in andere Häuser verheiratet; damit endet die dynastische Linie.'
     })
   ],
   timeJumps: [
@@ -371,7 +367,7 @@ export const HOUSE_CHIFFYDDLON_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: "Haus Chiffyddlon O'Glyndraith (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Erbfolge und Porträtzuordnungen folgen der bereitgestellten Chiffyddlon-Hausseite und ihrer vollständigen Stammbaumgrafik. Iorwerth und Arddunwen bilden das Gründerpaar; ihr Hauswappen und der erste Zeitsprung stehen strikt seriell darüber beziehungsweise darunter. Der zweite Zeitsprung gehört ausschließlich unter Maelor und Malvina. Zwölf aus dem Haus führende Frauenlinien erhalten direkte Wegverheiratet-Knoten. Acht in ausgearbeiteten Gegenakten vorhandene Ehen verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen; Kinder erscheinen stets nur in der tatsächlich fortführenden Hausakte. Die Chiffyddlon-Kinder bleiben deshalb bei Iorwerth und Morfudd ausschließlich hier, während die Nachkommen von Alys, Eilun, Arddunwen, Llinos, Angharad, Rhondda und Tegan ausschließlich in Grawn, Blach, Dyngwn, Ciaróg, Baedd, Sgwarnog beziehungsweise Penderyn stehen. Die ausgearbeitete Eryr-Gegenakte präzisiert Sheev auf 1655–1697 und Mererid auf 1657–1715; ihre Kinder Gruffyd und Venora erscheinen ausschließlich dort. Drystans Lebensdaten wurden nach seiner nun ausgearbeiteten Gwarchod-Herkunftsakte auf 1608–1683 präzisiert. Das Haus endet 1720 mit Gwilym, da alle drei Töchter in andere Häuser verheiratet waren. Wiederholte neutrale Standardsilhouetten wurden nicht als individuelle Porträts übernommen.',
     registryManagedExtensionFields: ['sourceNote'],

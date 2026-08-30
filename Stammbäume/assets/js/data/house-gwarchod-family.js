@@ -291,14 +291,10 @@ export const HOUSE_GWARCHOD_FAMILY = Object.freeze({
     marriedAway('married-away-gwenya-gwarchod-sgwarnog', 'Haus Sgwarnog', 'marriage-march-gwenya-sgwarnog', 'house-sgwarnog', HOUSE_EMBLEMS.sgwarnog),
     createExtinctBranch({
       id: 'extinct-house-gwarchod',
-      parentPersonId: 'gwernwy-gwarchod',
+      parentPersonId: 'delwyn-gwarchod',
       houseId: GWARCHOD_HOUSE_ID,
       emblem: GWARCHOD_EMBLEM,
-      notes: 'Gwernwy und sein Erbe Delwyn fielen 1720. Waleran galt damals als tot; die übrigen fortbestehenden Nachkommen waren bereits in andere Häuser verheiratet.',
-      extensions: {
-        sidePlacement: true,
-        offshootSide: 'before'
-      }
+      notes: 'Gwernwy und sein Erbe Delwyn fielen 1720. Waleran galt damals als tot; die übrigen fortbestehenden Nachkommen waren bereits in andere Häuser verheiratet.'
     })
   ],
   timeJumps: [
@@ -335,9 +331,9 @@ export const HOUSE_GWARCHOD_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Gwarchod O'Glyndraith (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Gwarchod-Hausseite und ihrer vollständigen Stammbaumgrafik. Ector und Morfudd bilden das Gründerpaar; der Hausknoten und der einzige Überlieferungssprung folgen strikt seriell, bevor Drystan und Gwendolyn erscheinen. Die Hauptlinie führt über Drystan, Garselid, Maiwyn und Gwernwy. Gwendolyn, Lynesse, Gwendolen, Jinell, Tegan, Jeanae, Gwen, Gwynndie und Gwenya erhalten direkte Wegverheiratet-Knoten zu ihren Zielhäusern. Zehn bereits ausgearbeitete Gegenbeziehungen verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen. Kinder erscheinen nur in der fortführenden Akte: Ormund/Efa bei Gwefrydd, Maldwyn/Magwena/Myfanwy und Madog/Main bei Sgwarnog, Rhun/Gwlithen bei Baedd, Cloi bei Grawn sowie Tirian/Frewi bei Dienyddiwr; die eigentlichen Gwarchod-Nachkommen bleiben ausschließlich hier. Die Gwarchod-Quelle nennt für Ysobel 1609–1661, doch ihre Chiffyddlon-Herkunftsakte ist mit 1607–1672 maßgeblich. Umgekehrt korrigiert die Gwarchod-Herkunftsquelle Drystan auf 1608–1683. Walerans Tabellen-Todesjahr 1720 widerspricht der ausführlichen Hausgeschichte, nach der er erst um 1730 aus Gefangenschaft zurückkehrte und später beim Blutbund fiel; deshalb bleibt sein genaues Todesjahr unbekannt. Das Haus endet dynastisch 1720 mit Gwernwy und dem Erben Delwyn. Der Ausgestorben-Knoten steht seitlich parallel an Gwernwy; die übrigen Kinderlinien bleiben regulär darunter.',
+    sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Gwarchod-Hausseite und ihrer vollständigen Stammbaumgrafik. Ector und Morfudd bilden das Gründerpaar; der Hausknoten und der einzige Überlieferungssprung folgen strikt seriell, bevor Drystan und Gwendolyn erscheinen. Die Hauptlinie führt über Drystan, Garselid, Maiwyn und Gwernwy. Gwendolyn, Lynesse, Gwendolen, Jinell, Tegan, Jeanae, Gwen, Gwynndie und Gwenya erhalten direkte Wegverheiratet-Knoten zu ihren Zielhäusern. Zehn bereits ausgearbeitete Gegenbeziehungen verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen. Kinder erscheinen nur in der fortführenden Akte: Ormund/Efa bei Gwefrydd, Maldwyn/Magwena/Myfanwy und Madog/Main bei Sgwarnog, Rhun/Gwlithen bei Baedd, Cloi bei Grawn sowie Tirian/Frewi bei Dienyddiwr; die eigentlichen Gwarchod-Nachkommen bleiben ausschließlich hier. Die Gwarchod-Quelle nennt für Ysobel 1609–1661, doch ihre Chiffyddlon-Herkunftsakte ist mit 1607–1672 maßgeblich. Umgekehrt korrigiert die Gwarchod-Herkunftsquelle Drystan auf 1608–1683. Walerans Tabellen-Todesjahr 1720 widerspricht der ausführlichen Hausgeschichte, nach der er erst um 1730 aus Gefangenschaft zurückkehrte und später beim Blutbund fiel; deshalb bleibt sein genaues Todesjahr unbekannt. Das Haus endet dynastisch 1720 mit Gwernwy und dem Erben Delwyn. Der Ausgestorben-Knoten folgt als eigener Kindknoten direkt unter Delwyn.',
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

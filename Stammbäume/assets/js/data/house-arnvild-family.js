@@ -278,15 +278,11 @@ export const HOUSE_ARNVILD_FAMILY = Object.freeze({
     marriedAway('married-away-orka-arnvild-helgr', 'Clan Helgr', 'marriage-ithmar-orka-helgr', 'house-helgr', 'haus-helgr', SCHWARZFENN_HOUSE_EMBLEMS.helgr),
     createExtinctBranch({
       id: 'extinct-house-arnvild',
-      parentPersonId: 'magnus-arnvild',
+      parentPersonId: 'vorn-arnvild',
       houseId: ARNVILD_HOUSE_ID,
       emblem: SCHWARZFENN_HOUSE_EMBLEMS.arnvild,
       subtitle: '1628 bei der Schändung von Flusswall ausgelöscht',
-      notes: 'Magnus, seine Söhne und der verbliebene männliche Seitenzweig starben 1628. Die außerhalb Flusswalls lebende Orka führte die Arnvild-Linie nicht fort.',
-      extensions: {
-        sidePlacement: true,
-        offshootSide: 'before'
-      }
+      notes: 'Magnus, seine Söhne und der verbliebene männliche Seitenzweig starben 1628. Die außerhalb Flusswalls lebende Orka führte die Arnvild-Linie nicht fort.'
     })
   ],
   timeJumps: [{
@@ -343,7 +339,7 @@ export const HOUSE_ARNVILD_FAMILY = Object.freeze({
     extinctGroup: SCHWARZFENN_EXTINCT_HOUSE_GROUPS.aldrimar,
     jarltum: 'Schwarzfenn',
     aldrimarRank: 'Hesire',
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Clan Arnvild (bereitgestellte Altdaten)',
     sourceNote: 'Der vollständige Arnvild-Stammbaum wird ohne Personenfokus von Kodlak und Alva bis zur Vernichtung Flusswalls 1628 gezeigt. Das Clanwappen und genau ein serieller Quellenzeitsprung stehen strikt zwischen dem Gründerpaar und Lifthrasir beziehungsweise Skalli. Die in der Quelle offene Elternüberschrift vor Sigtrygg und Vefrún wird aufgrund der unmittelbar vorangehenden Paarung Lifthrasirs und der älteren Saga Helgr als deren Abstammung modelliert und ausdrücklich als Quelleninferenz behandelt. Die Hauptlinie führt über Sigtrygg, Ljotulf und den letzten Hesir Magnus. Skalli, Vefrún, Bergdis, Torgunna und Orka besitzen direkte Wegverheiratet-Knoten; ihre Nachkommen werden ausschließlich in Graumähne, Helgr beziehungsweise Ragnulf fortgeführt. Bestehende Weltpersonen, Ehen und Porträts werden mit diesen Gegenakten geteilt. Der Quelltext nennt Orka als einzige Überlebende des Clans, während dieselbe Tabelle Vefrúns Tod 1632 und Torgunnas Tod 1640 nennt. Dies wird als einzige Überlebende der in Flusswall verbliebenen Kernlinie verstanden; beide anderen Frauen waren bereits wegverheiratet. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryTombstones: {

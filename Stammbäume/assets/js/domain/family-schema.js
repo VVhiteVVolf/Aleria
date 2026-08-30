@@ -174,6 +174,7 @@ function normalizeCadetBranch(branch = {}, index = 0) {
     linkType: enumValue(branch.linkType, HOUSE_LINK_TYPES, 'cadet-house'),
     parentPartnershipId: text(branch.parentPartnershipId),
     parentPersonId: text(branch.parentPersonId),
+    childIds: uniqueText(branch.childIds),
     houseId: text(branch.houseId),
     emblem: text(branch.emblem),
     emblemScale: boundedNumber(branch.emblemScale, 0.86, 0.5, 1.6),
@@ -520,6 +521,24 @@ export function validateFamily(input) {
         branchId: branch.id
       }));
     }
+    if (branch.linkType === 'line-extinct' && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'EXTINCT_LINK_REQUIRES_PERSON', 'Ein Ausgestorben-Knoten muss als Kind direkt unter der letzten Erbperson hängen.', {
+        branchId: branch.id
+      }));
+    }
+    if (
+      branch.linkType === 'line-extinct'
+      && (
+        branch.extensions?.sidePlacement === true
+        || branch.extensions?.offshootSide
+        || branch.extensions?.offshootPlacement
+      )
+    ) {
+      diagnostics.push(diagnostic('error', 'EXTINCT_LINK_MUST_FOLLOW_HEIR', 'Ein Ausgestorben-Knoten darf nicht seitlich oder parallel platziert werden.', {
+        branchId: branch.id,
+        personId: branch.parentPersonId
+      }));
+    }
     if (branch.linkType === 'single-founder-house' && !hasPersonAnchor) {
       diagnostics.push(diagnostic('error', 'SINGLE_FOUNDER_LINK_REQUIRES_PERSON', 'Ein von einer Einzelperson gegründetes Haus muss direkt an dieser Gründerperson hängen.', {
         branchId: branch.id
@@ -541,6 +560,31 @@ export function validateFamily(input) {
         branchId: branch.id
       }));
     }
+    if (branch.childIds.length && !hasPartnershipAnchor) {
+      diagnostics.push(diagnostic('error', 'HOUSE_CONTINUATION_REQUIRES_PARTNERSHIP', 'Ein fortführender Hausknoten muss an einem Elternpaar hängen.', {
+        branchId: branch.id
+      }));
+    }
+    branch.childIds.forEach(childId => {
+      if (!personIds.has(childId)) {
+        diagnostics.push(diagnostic('error', 'UNKNOWN_HOUSE_CONTINUATION_CHILD', 'Ein fortführender Hausknoten verweist auf eine unbekannte Person.', {
+          branchId: branch.id,
+          childId
+        }));
+        return;
+      }
+      const matchingParentage = family.parentages.some(parentage => (
+        parentage.childId === childId
+        && parentage.partnershipId === branch.parentPartnershipId
+      ));
+      if (!matchingParentage) {
+        diagnostics.push(diagnostic('error', 'HOUSE_CONTINUATION_CHILD_WRONG_PARENTS', 'Die Person unter einem fortführenden Hausknoten muss aus dessen Elternpaar hervorgehen.', {
+          branchId: branch.id,
+          childId,
+          partnershipId: branch.parentPartnershipId
+        }));
+      }
+    });
   });
 
   family.persons.filter(person => person.familyRole === 'ward-away').forEach(person => {

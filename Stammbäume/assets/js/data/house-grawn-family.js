@@ -128,7 +128,7 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-warthog', 'Haus Warthog'),
     house('house-ciarog', 'Haus Ciarog'),
-    house('house-tsaoir', "Haus T'Saoir"),
+    house('house-dal-t-saor', 'Dal T’Saor'),
     house('house-airt', 'Haus Airt'),
     house('house-durachd', 'Haus Dùrachd'),
     house('house-blar', 'Haus Blár'),
@@ -183,7 +183,9 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     person('tatumn-grawn', 'Tatumn Grawn', 'female', '1611', '1685'),
     person('mervyn-grawn', 'Mervyn Grawn', 'male', '1613', '1689'),
     person('gwennog-ciarog', 'Gwennog Ciarog', 'female', '1608', '1673', 'house-ciarog'),
-    person('maoliosa-tsaoir', "Maoliosa T'Saoir", 'female', '1606', '1681', 'house-tsaoir'),
+    person('maoliosa-tsaoir', 'Maoliosa T’Saoir', 'female', '1606', '1681', 'house-dal-t-saor', {
+      extensions: { registryManagedFields: ['worldPersonId', 'name', 'houseId'] }
+    }),
     person('coemgen-airt', 'Coemgen Airt', 'male', '1605', '1659', 'house-airt'),
     person('cailte-durachd', 'Cailte Dùrachd', 'male', '1602', '1679', 'house-durachd'),
     person('seamus-blar', 'Seamus Blár', 'male', '1605', '1680', 'house-blar'),
@@ -469,9 +471,9 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Grawn-Tabelle und ihrer Stammbaumgrafik. Die Galeriezeiträume der Grafen sind Amtszeiten und wurden nicht als Geburtsdaten übernommen. Der einzige sichtbare Zeitsprung liegt nach Iorwerth und Aranrhod; die sieben anschließend belegten Geschwister werden wegen der unbekannten Zwischengenerationen nur als wahrscheinliche Linienfortsetzung geführt. Die doppelte Darstellung Yvains und Ceridwens ist eine einzige Ehe. Die Stammbaumgrafik belegt Annegret Skogg, während ihre Partnerkarte in der Hierarchietabelle namenlos bleibt. Nerys bleibt entsprechend der Quelle Wivern. Efas Todesjahr 1691 und Neithons Geburtsjahr 1718 folgen den bereits kanonischen Gegenakten. Mordreds sechs Bastarde mit Glada und seine zwei Bastarde mit Gwenllian sind über getrennte Affären, Elternschaften und sichtbare Kartentitel zugeordnet. Vollständig anonyme Verlobungsvorlagen sowie unverbundene Hofamts-Platzhalter wurden nicht zu Personen erhoben. Die Quelle nennt ausdrücklich keine Kadettenhäuser. Seit Revision 2 liegt Glyndraith verbindlich in Tristams Ebene; ältere direkte Ährental/Glyndraith-Registerpfade werden auf die vierstufige Hierarchie migriert.',
+    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Grawn-Tabelle und ihrer Stammbaumgrafik. Die Galeriezeiträume der Grafen sind Amtszeiten und wurden nicht als Geburtsdaten übernommen. Der einzige sichtbare Zeitsprung liegt nach Iorwerth und Aranrhod; die sieben anschließend belegten Geschwister werden wegen der unbekannten Zwischengenerationen nur als wahrscheinliche Linienfortsetzung geführt. Die doppelte Darstellung Yvains und Ceridwens ist eine einzige Ehe. Die Stammbaumgrafik belegt Annegret Skogg, während ihre Partnerkarte in der Hierarchietabelle namenlos bleibt. Nerys bleibt entsprechend der Quelle Wivern. Efas Todesjahr 1691 und Neithons Geburtsjahr 1718 folgen den bereits kanonischen Gegenakten. Mordreds sechs Bastarde mit Glada und seine zwei Bastarde mit Gwenllian sind über getrennte Affären, Elternschaften und sichtbare Kartentitel zugeordnet. Vollständig anonyme Verlobungsvorlagen sowie unverbundene Hofamts-Platzhalter wurden nicht zu Personen erhoben. Die Quelle nennt ausdrücklich keine Kadettenhäuser. Seit Revision 2 liegt Glyndraith verbindlich in Tristams Ebene; ältere direkte Ährental/Glyndraith-Registerpfade werden auf die vierstufige Hierarchie migriert. Maoliosas Hauskennung verweist nun auf die ausgearbeitete Hauptakte Dal T’Saor.',
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',
@@ -483,6 +485,7 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
       'secondarySeats',
       'regionEmblems'
     ],
-    registryManagedRecordFields: ['folderPath']
+    registryManagedRecordFields: ['folderPath'],
+    registryTombstones: { houses: ['house-tsaoir'] }
   }
 });

@@ -396,10 +396,7 @@ function applyCadetBranches({
   extraParentageLines
 }) {
   family.cadetBranches.forEach(branch => {
-    const isSidePlacedLineEnd = branch.linkType === 'line-extinct'
-      && branch.parentPersonId
-      && branch.extensions?.sidePlacement === true;
-    if (branch.linkType === 'migration-offshoot' || isSidePlacedLineEnd) return;
+    if (branch.linkType === 'migration-offshoot') return;
     const partnership = family.partnerships.find(item => item.id === branch.parentPartnershipId);
     const parentIds = partnership
       ? partnership.participantIds
@@ -462,6 +459,23 @@ function applyCadetBranches({
     node.data.aleria.relationshipParentIds = [...parentIds];
     node.rels.parents = [...layoutParentIds];
     layoutParentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
+    const continuationChildIds = (branch.childIds || [])
+      .filter(childId => chartById.has(childId));
+    continuationChildIds.forEach(childId => {
+      const child = chartById.get(childId);
+      [...child.rels.parents].forEach(parentId => {
+        if (chartById.has(parentId)) removeValue(chartById.get(parentId).rels.children, childId);
+      });
+      child.rels.parents = [nodeId];
+      addUnique(node.rels.children, childId);
+      const inheritedLine = parentageLines.get(childId);
+      parentageLines.set(childId, {
+        type: inheritedLine?.type || 'biological',
+        color: inheritedLine?.color || relationColor(family, 'biological'),
+        dashed: inheritedLine?.dashed === true,
+        hidden: false
+      });
+    });
     chartById.set(nodeId, node);
     parentageLines.set(nodeId, lineMetadata);
     if (lineMetadata.hidden) {
@@ -480,26 +494,22 @@ function applyCadetBranches({
 function createHouseOffshoots({ family, chartById, houseById }) {
   return family.cadetBranches
     .filter(branch => (
-      (
-        branch.linkType === 'migration-offshoot'
-        || (branch.linkType === 'line-extinct' && branch.extensions?.sidePlacement === true)
-      )
+      branch.linkType === 'migration-offshoot'
       && branch.parentPersonId
       && chartById.has(branch.parentPersonId)
     ))
     .map(branch => {
       const house = houseById.get(branch.houseId);
-      const isLineEnd = branch.linkType === 'line-extinct';
       return Object.freeze({
         id: `__house-offshoot-${branch.id}`,
         branchId: branch.id,
         anchorPersonId: branch.parentPersonId,
         targetFamilyId: branch.targetFamilyId,
         name: branch.name,
-        subtitle: branch.subtitle || (isLineEnd ? 'Die Linie endet hier' : 'Ausgewanderte Hauslinie'),
-        nodeKind: isLineEnd ? 'line-end' : 'house-offshoot',
-        emblem: isLineEnd ? '' : branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
-        crestFrameAsset: isLineEnd ? EXTINCT_LINE_FRAME.asset : getCrestFrame(branch.crestFrame).asset,
+        subtitle: branch.subtitle || 'Ausgewanderte Hauslinie',
+        nodeKind: 'house-offshoot',
+        emblem: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+        crestFrameAsset: getCrestFrame(branch.crestFrame).asset,
         emblemScale: branch.emblemScale,
         frameScale: branch.frameScale,
         preferredSide: branch.extensions?.offshootSide === 'after' ? 'after' : 'before',

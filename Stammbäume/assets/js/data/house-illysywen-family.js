@@ -219,13 +219,13 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
     marriedAway('married-away-grawn-morwen', 'Haus Grawn', 'marriage-morwen-owen', 'house-grawn', HOUSE_EMBLEMS.grawn),
     createExtinctBranch({
       id: 'extinct-hugwan',
-      parentPartnershipId: 'engagement-hugwan-nasuada',
+      parentPersonId: 'hugwan-illysywen',
       houseId: ILLYSYWEN_HOUSE_ID,
       notes: 'Hugwan starb 1720 ohne Nachkommen; die Linie endet hier.'
     }),
     createExtinctBranch({
       id: 'extinct-sior',
-      parentPartnershipId: 'engagement-sior-innogen',
+      parentPersonId: 'sior-illysywen',
       houseId: ILLYSYWEN_HOUSE_ID,
       notes: 'Sior starb 1720 ohne Nachkommen; die Linie endet hier.'
     })
@@ -242,6 +242,6 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Illysywen-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Gwefrydd, Gwyvern und Saethwyr verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die männliche Linie erlosch 1720 mit Hugwan und Sior; die Linie wird nicht über Bastarde oder Töchter fortgeführt.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });
