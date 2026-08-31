@@ -4,36 +4,7 @@ window.HAEUSER_DATA = {
     title: "Häuser-Vorlage - Aleria",
     type: "Haus / Familie / Clan",
     status: "Template",
-    editorVersion: 1,
     template: "haus",
-    storage: {
-      document: "haeuser-vorlage",
-      firebaseCollections: {
-        houses: "familien_haeuser_und_clans",
-        inlineContent: "familien_haeuser_und_clans_inline_content",
-        scenes: "familien_haeuser_und_clans_scenes",
-      },
-      imageStorage: {
-        currentMode: "inline-url-or-base64",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "haeuser/haeuser-vorlage/images",
-        plannedFirestoreMode: "reference",
-      },
-      tableStorage: {
-        currentMode: "html",
-        plannedStructuredMode: "optional",
-      },
-      localStoragePrefixes: [
-        "aleria:haeuser:inline-content:v2:haeuser-vorlage",
-        "aleria:haeuser:inline-reset:haeuser-vorlage",
-        "aleria:haeuser:inline-status-position:haeuser-vorlage",
-        "aleria:haeuser:scene-index:haeuser-vorlage",
-        "aleria:haeuser:scene-index-meta:haeuser-vorlage",
-        "aleria:haeuser:session-module:haeuser-vorlage:",
-        "aleria:haeuser:session-module-meta:haeuser-vorlage:",
-        "aleria:haeuser:comments:haeuser:haeuser-vorlage:",
-      ],
-    },
   },
 
   name: "Häuser-Vorlage",

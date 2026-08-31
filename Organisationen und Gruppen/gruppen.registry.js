@@ -30,8 +30,6 @@
       status: GROUP_STATUS.TEMPLATE,
       type: GROUP_TYPES.ORGANIZATION,
       data: "data/gruppen-vorlage.data.js",
-      inlineCollection: "organisationen_und_gruppen_inline_content",
-      sceneCollection: "organisationen_und_gruppen_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Organisationen und Gruppen", slug: "organisationen-und-gruppen" },
         { type: "Vorlage", name: "Gilden / Orden / Organisationen / Kulte", slug: "gruppen-vorlage" },
@@ -51,8 +49,6 @@
       type: GROUP_TYPES.TROOP,
       page: "kleingruppe.html",
       data: "data/kleingruppen-vorlage.data.js",
-      inlineCollection: "organisationen_und_gruppen_inline_content",
-      sceneCollection: "organisationen_und_gruppen_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Organisationen und Gruppen", slug: "organisationen-und-gruppen" },
         { type: "Vorlage", name: "Kleine Gruppierungen / Trupps / Zellen", slug: "kleingruppen-vorlage" },

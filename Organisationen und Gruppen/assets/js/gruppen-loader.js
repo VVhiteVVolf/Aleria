@@ -23,31 +23,6 @@
       docId,
       dataPath: entry.data || "",
     };
-    window.ORTE_CONFIG = {
-      ...(window.ORTE_CONFIG || {}),
-      registryEntry: entry,
-      docId,
-      dataPath: entry.data || "",
-    };
-    window.AleriaOrteScenes = {
-      schemaVersion: 2,
-      ortId: docId,
-      ortName: entry.name || docId,
-      firebase: {
-        collection: entry.sceneCollection || "organisationen_und_gruppen_scenes",
-      },
-      inlineFirebase: {
-        collection: entry.inlineCollection || "organisationen_und_gruppen_inline_content",
-        appName: "gruppen-inline-content",
-        contentType: "gruppen-inline-content",
-      },
-      localStorage: {
-        namespace: "gruppen",
-        legacyNamespaces: ["orte"],
-        commentsScope: "gruppen",
-      },
-      modules: entry.defaultScenes || {},
-    };
 
     document.title = `${entry.name || "Gruppe"} - Aleria`;
     withRoot(() => applyEntryShell(entry, docId));

@@ -4,25 +4,7 @@ window.ORT_DATA = {
     title: "Lysfaen - Aleria",
     type: "Kleinstadt",
     status: "Draft",
-    editorVersion: 1,
     template: "grossstadt",
-    storage: {
-      inlineContentDocument: "lysfaen",
-      sceneIndexDocument: "lysfaen__scene-index",
-      sceneDocumentPrefix: "lysfaen__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen",
-        "aleria:orte:scene-index:lysfaen",
-        "aleria:orte:scene-index-meta:lysfaen",
-        "aleria:orte:session-module:lysfaen:",
-        "aleria:orte:session-module-meta:lysfaen:",
-        "aleria:orte:comments:orte:lysfaen:"
-      ]
-    }
   },
 
   name: "Lysfaen",

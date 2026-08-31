@@ -4,17 +4,7 @@ window.ORT_DATA = {
     title: "Zunfts-Vorlage - Aleria",
     type: "Zunft / Gewerbe / Standort",
     status: "Vorlage",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "zunfts-vorlage",
-      sceneIndexDocument: "zunfts-vorlage__scene-index",
-      sceneDocumentPrefix: "zunfts-vorlage__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      }
-    }
   },
 
   name: "Name der Einrichtung",

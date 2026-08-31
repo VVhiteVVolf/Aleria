@@ -23,31 +23,6 @@
       docId,
       dataPath: entry.data || "",
     };
-    window.ORTE_CONFIG = {
-      ...(window.ORTE_CONFIG || {}),
-      registryEntry: entry,
-      docId,
-      dataPath: entry.data || "",
-    };
-    window.AleriaOrteScenes = {
-      schemaVersion: 2,
-      ortId: docId,
-      ortName: entry.name || docId,
-      firebase: {
-        collection: entry.sceneCollection || "familien_haeuser_und_clans_scenes",
-      },
-      inlineFirebase: {
-        collection: entry.inlineCollection || "familien_haeuser_und_clans_inline_content",
-        appName: "haeuser-inline-content",
-        contentType: "haeuser-inline-content",
-      },
-      localStorage: {
-        namespace: "haeuser",
-        legacyNamespaces: [],
-        commentsScope: "haeuser",
-      },
-      modules: entry.defaultScenes || {},
-    };
 
     document.title = `${entry.name || "Haus"} - Aleria`;
     withRoot(() => applyEntryShell(entry, docId));

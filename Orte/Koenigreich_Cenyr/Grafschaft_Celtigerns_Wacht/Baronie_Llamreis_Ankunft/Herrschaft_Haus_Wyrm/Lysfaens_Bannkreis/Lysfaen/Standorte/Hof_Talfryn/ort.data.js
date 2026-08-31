@@ -5,22 +5,7 @@ window.ORT_DATA = {
     type: "Standort / Hof",
     subtype: "Hof",
     status: "Draft",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "lysfaen-zunft-hof-talfryn",
-      sceneIndexDocument: "lysfaen-zunft-hof-talfryn__scene-index",
-      sceneDocumentPrefix: "lysfaen-zunft-hof-talfryn__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen-zunft-hof-talfryn",
-        "aleria:orte:scene-index:lysfaen-zunft-hof-talfryn",
-        "aleria:orte:session-module:lysfaen-zunft-hof-talfryn:"
-      ]
-    }
   },
 
   name: "Hof Talfryn",

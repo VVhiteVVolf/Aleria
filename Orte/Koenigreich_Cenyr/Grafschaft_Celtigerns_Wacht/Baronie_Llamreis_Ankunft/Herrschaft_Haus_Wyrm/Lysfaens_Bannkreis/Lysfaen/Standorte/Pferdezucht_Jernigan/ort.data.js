@@ -5,22 +5,7 @@ window.ORT_DATA = {
     type: "Standort / Gewerbe",
     subtype: "Pferdezucht",
     status: "Draft",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "lysfaen-zunft-pferdezucht-jernigan",
-      sceneIndexDocument: "lysfaen-zunft-pferdezucht-jernigan__scene-index",
-      sceneDocumentPrefix: "lysfaen-zunft-pferdezucht-jernigan__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen-zunft-pferdezucht-jernigan",
-        "aleria:orte:scene-index:lysfaen-zunft-pferdezucht-jernigan",
-        "aleria:orte:session-module:lysfaen-zunft-pferdezucht-jernigan:"
-      ]
-    }
   },
 
   name: "Pferdezucht Jernigan",

@@ -4,22 +4,7 @@ window.HAEUSER_DATA = {
     title: "Haus Arwydd O'Castellbryn - Aleria",
     type: "Ritterfürstenhaus",
     status: "Active",
-    editorVersion: 1,
     template: "haus",
-    storage: {
-      document: "haus-arwydd",
-      firebaseCollections: {
-        houses: "familien_haeuser_und_clans",
-        inlineContent: "familien_haeuser_und_clans_inline_content",
-        scenes: "familien_haeuser_und_clans_scenes",
-      },
-      imageStorage: {
-        currentMode: "local-feature-assets",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "haeuser/haus-arwydd/images",
-        plannedFirestoreMode: "reference",
-      },
-    },
   },
 
   name: "Haus Arwydd O'Castellbryn",

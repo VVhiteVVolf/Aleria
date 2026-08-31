@@ -5,22 +5,7 @@ window.ORT_DATA = {
     type: "Standort / Hof",
     subtype: "Hof",
     status: "Draft",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "lysfaen-zunft-hof-glyn",
-      sceneIndexDocument: "lysfaen-zunft-hof-glyn__scene-index",
-      sceneDocumentPrefix: "lysfaen-zunft-hof-glyn__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen-zunft-hof-glyn",
-        "aleria:orte:scene-index:lysfaen-zunft-hof-glyn",
-        "aleria:orte:session-module:lysfaen-zunft-hof-glyn:"
-      ]
-    }
   },
 
   name: "Hof Glyn",

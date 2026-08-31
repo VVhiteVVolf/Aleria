@@ -15,22 +15,7 @@
     title: "Clan Albholz - Aleria",
     type: "Huskarl-Clan",
     status: "Active",
-    editorVersion: 1,
     template: "haus",
-    storage: {
-      document: "haus-albholz",
-      firebaseCollections: {
-        houses: "familien_haeuser_und_clans",
-        inlineContent: "familien_haeuser_und_clans_inline_content",
-        scenes: "familien_haeuser_und_clans_scenes",
-      },
-      imageStorage: {
-        currentMode: "local-feature-assets",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "haeuser/haus-albholz/images",
-        plannedFirestoreMode: "reference",
-      },
-    },
   },
 
   name: "Clan Albholz",

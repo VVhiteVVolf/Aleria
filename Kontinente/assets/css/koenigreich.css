@@ -192,6 +192,8 @@ body {
 }
 
 .kingdom-infobox tr:first-child td,
+.kingdom-infobox .kingdom-infobox-title,
+.kingdom-infobox .kingdom-infobox-section,
 .kingdom-infobox td[colspan='2'][style*='background-color:rgb(51,51,51)'],
 .kingdom-infobox td[colspan='2'][style*='background-color:rgb(51, 51, 51)'] {
   padding: 9px 10px !important;
@@ -205,11 +207,14 @@ body {
 }
 
 .kingdom-infobox tr:first-child td b,
+.kingdom-infobox .kingdom-infobox-title b,
+.kingdom-infobox .kingdom-infobox-section b,
 .kingdom-infobox td[colspan='2'][style*='background-color:rgb(51,51,51)'] b,
 .kingdom-infobox td[colspan='2'][style*='background-color:rgb(51, 51, 51)'] b {
   color: #fff2cf !important;
 }
 
+.kingdom-infobox .kingdom-infobox-label,
 .kingdom-infobox td[style*='background-color:rgb(102,102,102)'],
 .kingdom-infobox td[style*='background-color:rgb(102, 102, 102)'] {
   width: 34% !important;
@@ -219,10 +224,19 @@ body {
   font-size: 0.92rem;
 }
 
+.kingdom-infobox .kingdom-infobox-map,
+.kingdom-infobox .kingdom-infobox-value,
 .kingdom-infobox td[style*='background-color:rgb(204,204,204)'],
 .kingdom-infobox td[style*='background-color:rgb(204, 204, 204)'] {
   background:
     linear-gradient(180deg, #f6e7bd, #ead4a0) !important;
+}
+
+.kingdom-infobox .kingdom-infobox-value a {
+  color: #573713;
+  font-weight: 700;
+  text-decoration-color: rgba(87, 55, 19, 0.46);
+  text-underline-offset: 0.14em;
 }
 
 .kingdom-infobox td[colspan='2'] img {
@@ -301,64 +315,9 @@ body {
   max-height: none;
 }
 
-body:not(.orte-inline-editing) .kingdom-table-scroll.is-county-card-source-wrapper,
-body:not(.orte-inline-editing) .kingdom-table-scroll.is-family-card-source-wrapper {
+.kingdom-table-scroll.is-county-card-source-wrapper,
+.kingdom-table-scroll.is-family-card-source-wrapper {
   display: none;
-}
-
-body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper,
-body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
-  display: block;
-  width: min(100%, 980px);
-  margin: 0.25rem auto 1.5rem;
-  padding: 0.85rem;
-  border: 1px dashed rgba(107, 72, 29, 0.62);
-  border-radius: 7px;
-  background:
-    linear-gradient(180deg, rgba(255, 247, 220, 0.74), rgba(224, 193, 118, 0.5)),
-    rgba(255, 248, 225, 0.56);
-  box-shadow: inset 0 0 0 1px rgba(255, 252, 234, 0.5);
-}
-
-body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper,
-body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
-  display: none;
-}
-
-body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper::before,
-body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper::before {
-  content: "Bearbeitungsdaten fuer die Ansicht oben";
-  display: block;
-  margin: 0 0 0.55rem;
-  color: #5d3210;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-body.orte-inline-editing .kingdom-family-card-view {
-  position: relative;
-  padding-top: 1.75rem;
-}
-
-body.orte-inline-editing .kingdom-family-card-view::before {
-  content: "Live-Vorschau";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding: 0.18rem 0.62rem;
-  color: #fff4d0;
-  border: 1px solid rgba(255, 246, 213, 0.36);
-  border-radius: 999px;
-  background: rgba(62, 36, 10, 0.86);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transform: translateX(-50%);
 }
 
 .kingdom-county-card-view {
@@ -371,16 +330,33 @@ body.orte-inline-editing .kingdom-family-card-view::before {
 .kingdom-county-map-panel,
 .kingdom-domain-card {
   overflow: hidden;
+  position: relative;
   color: #2a1708;
   background:
-    radial-gradient(circle at 15% 18%, rgba(255, 247, 217, 0.74), transparent 15rem),
-    repeating-linear-gradient(45deg, rgba(96, 62, 24, 0.026), rgba(96, 62, 24, 0.026) 1px, transparent 1px, transparent 17px),
-    linear-gradient(180deg, rgba(255, 244, 206, 0.92), rgba(233, 205, 138, 0.82));
-  border: 1px solid rgba(109, 76, 34, 0.58);
-  border-radius: 7px;
+    radial-gradient(circle at 11% 12%, rgba(255, 252, 229, 0.94), transparent 18rem),
+    radial-gradient(circle at 93% 92%, rgba(129, 76, 22, 0.15), transparent 22rem),
+    repeating-linear-gradient(45deg, rgba(96, 62, 24, 0.032), rgba(96, 62, 24, 0.032) 1px, transparent 1px, transparent 16px),
+    linear-gradient(155deg, rgba(255, 246, 211, 0.96), rgba(226, 191, 115, 0.87));
+  border: 1px solid rgba(91, 57, 19, 0.68);
+  border-radius: 12px;
   box-shadow:
-    0 12px 28px rgba(46, 28, 8, 0.18),
-    inset 0 0 0 1px rgba(255, 250, 229, 0.5);
+    0 15px 34px rgba(46, 28, 8, 0.21),
+    inset 0 0 0 1px rgba(255, 252, 235, 0.64);
+}
+
+.kingdom-domain-card::after {
+  content: "";
+  position: absolute;
+  inset: 0.38rem;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid rgba(116, 75, 27, 0.16);
+  border-radius: 9px;
+}
+
+.kingdom-domain-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .kingdom-county-map-panel {
@@ -405,68 +381,19 @@ body.orte-inline-editing .kingdom-family-card-view::before {
 
 .kingdom-county-map-panel a,
 .kingdom-domain-crest a,
+.kingdom-domain-title a,
 .kingdom-place-card,
 .kingdom-place-card a {
   color: inherit;
   text-decoration: none;
 }
 
-.kingdom-geography-controls {
-  display: none;
+.kingdom-domain-title a:hover,
+.kingdom-domain-title a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
-body.orte-inline-editing .kingdom-geography-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  justify-content: center;
-  margin: 0 0 0.55rem;
-}
-
-.kingdom-domain-crest .kingdom-geography-controls,
-.kingdom-domain-center-icon .kingdom-geography-controls {
-  position: absolute;
-  z-index: 3;
-  top: -0.55rem;
-  left: 50%;
-  margin: 0;
-  transform: translateX(-50%);
-}
-
-.kingdom-place-card > .kingdom-geography-controls {
-  align-self: start;
-  order: -1;
-  margin: -0.18rem 0 0.3rem;
-}
-
-.kingdom-geography-controls button {
-  min-height: 25px;
-  padding: 0.18rem 0.52rem;
-  cursor: pointer;
-  border: 1px solid rgba(109, 76, 34, 0.58);
-  border-radius: 999px;
-  background: linear-gradient(180deg, #f7e6ba, #d4b067);
-  color: #2d1b09;
-  font: 700 0.76rem Georgia, 'Times New Roman', serif;
-}
-
-.kingdom-geography-controls button:hover,
-.kingdom-geography-controls button:focus-visible {
-  border-color: #5f370c;
-  background: #fff4cf;
-}
-
-body.orte-inline-editing [data-kingdom-geography-edit] {
-  cursor: text;
-  border-radius: 5px;
-  outline: 1px dashed rgba(126, 82, 25, 0.38);
-  outline-offset: 3px;
-}
-
-body.orte-inline-editing [data-kingdom-geography-edit]:focus {
-  background: rgba(255, 247, 220, 0.75);
-  outline-color: rgba(94, 52, 12, 0.85);
-}
 
 .kingdom-county-map-panel img {
   display: block;
@@ -487,7 +414,9 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
   grid-template-columns: auto minmax(0, 1fr);
   gap: clamp(0.85rem, 2.5vw, 1.6rem);
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
+  padding: 0.1rem 0.25rem 0.9rem;
+  border-bottom: 1px solid rgba(112, 73, 25, 0.28);
 }
 
 .kingdom-domain-crest {
@@ -533,11 +462,11 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
   margin: -0.18rem 0 0 clamp(128px, 19vw, 178px);
   padding: 0.58rem 0.9rem;
   border: 1px solid rgba(126, 91, 41, 0.34);
-  border-radius: 8px;
+  border-radius: 11px;
   background:
-    linear-gradient(90deg, rgba(126, 91, 41, 0.16), transparent 4px),
-    radial-gradient(circle at 16% 50%, rgba(255, 250, 228, 0.94), rgba(228, 198, 129, 0.42) 70%, rgba(142, 97, 39, 0.1)),
-    rgba(255, 249, 228, 0.58);
+    linear-gradient(90deg, rgba(87, 50, 14, 0.25), transparent 5px),
+    radial-gradient(circle at 16% 50%, rgba(255, 252, 235, 0.98), rgba(229, 199, 130, 0.55) 72%, rgba(142, 97, 39, 0.14)),
+    rgba(255, 249, 228, 0.72);
   box-shadow:
     inset 0 0 0 1px rgba(255, 252, 234, 0.58),
     0 9px 24px rgba(54, 32, 10, 0.12);
@@ -598,8 +527,8 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
 
 .kingdom-place-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
-  gap: 0.95rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+  gap: 1rem;
 }
 
 .kingdom-domain-card-compact .kingdom-place-grid {
@@ -608,19 +537,21 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
 
 .kingdom-place-card {
   display: grid;
-  grid-template-rows: 86px auto 1fr;
+  grid-template-rows: 92px auto 1fr;
   justify-items: center;
   align-content: stretch;
   position: relative;
   isolation: isolate;
-  min-height: 170px;
-  padding: 0.68rem 0.55rem 0.78rem;
-  border: 1px solid rgba(119, 82, 33, 0.32);
-  border-radius: 6px;
+  min-height: 192px;
+  padding: 0.78rem 0.65rem 0.7rem;
+  border: 1px solid rgba(105, 67, 24, 0.46);
+  border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(255, 250, 232, 0.78), rgba(240, 219, 166, 0.72)),
-    rgba(255, 247, 222, 0.64);
-  box-shadow: inset 0 0 0 1px rgba(255, 254, 242, 0.45);
+    radial-gradient(circle at 50% 34%, rgba(255, 244, 191, 0.66), transparent 6.5rem),
+    linear-gradient(180deg, rgba(255, 252, 237, 0.94), rgba(230, 199, 131, 0.82));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 254, 242, 0.64),
+    0 5px 12px rgba(59, 36, 11, 0.11);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
@@ -628,10 +559,10 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 0.62rem;
+  top: 0.7rem;
   left: 50%;
-  width: 88px;
-  height: 88px;
+  width: 96px;
+  height: 96px;
   border-radius: 999px;
   background: radial-gradient(circle, rgba(255, 238, 164, 0.48), transparent 68%);
   opacity: 0;
@@ -658,14 +589,16 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
   display: grid;
   align-self: start;
   place-items: center;
-  width: 84px;
-  height: 64px;
-  margin-bottom: 0.38rem;
-  border: 1px solid rgba(111, 82, 38, 0.24);
-  border-radius: 999px;
+  width: 96px;
+  height: 76px;
+  margin-bottom: 0.42rem;
+  border: 1px solid rgba(91, 57, 19, 0.34);
+  border-radius: 52% 52% 44% 44%;
   background:
-    radial-gradient(circle at 50% 42%, rgba(255, 251, 232, 0.86), rgba(201, 174, 109, 0.28) 70%, rgba(129, 91, 36, 0.14));
-  box-shadow: inset 0 -10px 18px rgba(69, 44, 14, 0.14);
+    radial-gradient(circle at 50% 38%, rgba(255, 254, 240, 0.98), rgba(213, 181, 108, 0.38) 69%, rgba(111, 70, 24, 0.2));
+  box-shadow:
+    inset 0 -13px 22px rgba(69, 44, 14, 0.15),
+    0 5px 12px rgba(64, 39, 12, 0.13);
 }
 
 .kingdom-place-icon-frame img {
@@ -702,17 +635,33 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
 }
 
 .kingdom-place-type {
+  min-width: min(100%, 8.8rem);
   margin-top: 0;
+  padding: 0.27rem 0.48rem;
   text-align: center;
-  min-height: 2.1em;
+  min-height: 1.15rem;
+  border: 1px solid rgba(79, 44, 12, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #744819, #4b2a0d);
+  color: #fff0c6;
+  box-shadow: inset 0 1px 0 rgba(255, 243, 202, 0.2);
   overflow-wrap: anywhere;
 }
 
 .kingdom-place-name {
-  display: block;
-  margin-top: 0.34rem;
+  display: grid;
+  place-items: center;
+  width: calc(100% - 0.2rem);
+  min-height: 2.8rem;
+  margin-top: 0.46rem;
+  padding: 0.38rem 0.42rem;
   text-align: center;
   align-self: start;
+  border: 1px solid rgba(121, 84, 34, 0.28);
+  border-radius: 7px;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 230, 0.84), rgba(224, 191, 118, 0.58));
+  box-shadow: inset 0 0 0 1px rgba(255, 254, 241, 0.42);
   overflow-wrap: anywhere;
 }
 
@@ -765,6 +714,10 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
 }
 
 .kingdom-family-section h3 {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 0 0.85rem;
   color: #321b06;
   font-family: Georgia, 'Times New Roman', serif;
@@ -773,51 +726,19 @@ body.orte-inline-editing [data-kingdom-geography-edit]:focus {
   text-shadow: 0 1px 0 rgba(255, 246, 213, 0.88);
 }
 
-.kingdom-family-section-controls,
-.kingdom-family-card-controls {
-  display: none;
-}
-
-body.orte-inline-editing .kingdom-family-section-controls,
-body.orte-inline-editing .kingdom-family-card-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  justify-content: center;
-}
-
-.kingdom-family-section-controls {
-  margin: -0.3rem 0 0.85rem;
-}
-
-.kingdom-family-card-controls {
-  align-self: start;
-  order: -1;
-  padding: 0.25rem;
-  border: 1px dashed rgba(109, 76, 34, 0.38);
+.kingdom-family-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.4rem;
+  color: #fff0c8;
+  font: 700 0.82rem system-ui, sans-serif;
   border-radius: 999px;
-  background: rgba(255, 247, 220, 0.58);
+  background: linear-gradient(180deg, #744819, #452508);
+  box-shadow: inset 0 1px 0 rgba(255, 246, 214, 0.22);
 }
 
-.kingdom-family-section-controls button,
-.kingdom-family-card-controls button {
-  min-height: 25px;
-  padding: 0.18rem 0.52rem;
-  cursor: pointer;
-  border: 1px solid rgba(109, 76, 34, 0.58);
-  border-radius: 999px;
-  background: linear-gradient(180deg, #f7e6ba, #d4b067);
-  color: #2d1b09;
-  font: 700 0.76rem Georgia, 'Times New Roman', serif;
-}
-
-.kingdom-family-section-controls button:hover,
-.kingdom-family-section-controls button:focus-visible,
-.kingdom-family-card-controls button:hover,
-.kingdom-family-card-controls button:focus-visible {
-  border-color: #5f370c;
-  background: #fff4cf;
-}
 
 .kingdom-family-grid {
   display: grid;
@@ -861,40 +782,6 @@ body.orte-inline-editing .kingdom-family-card-controls {
     inset 0 0 0 1px rgba(255, 254, 242, 0.58);
 }
 
-.kingdom-family-add-card {
-  display: none;
-  justify-items: center;
-  align-content: center;
-  border-style: dashed;
-  color: #5d3210;
-  cursor: pointer;
-  font-family: Georgia, 'Times New Roman', serif;
-  text-align: center;
-}
-
-body.orte-inline-editing .kingdom-family-add-card {
-  display: grid;
-}
-
-.kingdom-family-add-card span {
-  display: grid;
-  place-items: center;
-  width: 76px;
-  height: 76px;
-  margin-bottom: 0.1rem;
-  border: 1px dashed rgba(109, 76, 34, 0.48);
-  border-radius: 999px;
-  background:
-    radial-gradient(circle, rgba(255, 248, 223, 0.78), rgba(177, 135, 61, 0.2) 66%, transparent 68%);
-  font-size: 2.2rem;
-  line-height: 1;
-  box-shadow: inset 0 -10px 18px rgba(69, 44, 14, 0.12);
-}
-
-.kingdom-family-add-card strong {
-  font-size: 1rem;
-  line-height: 1.2;
-}
 
 .kingdom-family-card:hover,
 .kingdom-family-card:focus-within {
@@ -957,11 +844,10 @@ body.orte-inline-editing .kingdom-family-add-card {
 }
 
 .kingdom-family-crest-placeholder {
-  display: none;
+  display: grid;
   place-items: center;
   width: 86px;
   height: 86px;
-  cursor: pointer;
   border: 1px dashed rgba(109, 76, 34, 0.5);
   border-radius: 999px;
   background:
@@ -971,20 +857,6 @@ body.orte-inline-editing .kingdom-family-add-card {
   box-shadow:
     inset 0 -10px 18px rgba(69, 44, 14, 0.13),
     0 7px 14px rgba(45, 29, 10, 0.13);
-}
-
-body.orte-inline-editing .kingdom-family-crest-placeholder {
-  display: grid;
-}
-
-.kingdom-family-crest-placeholder:hover,
-.kingdom-family-crest-placeholder:focus-visible {
-  border-color: #5f370c;
-  background:
-    radial-gradient(circle, rgba(255, 246, 209, 0.98), rgba(216, 177, 95, 0.42) 70%, rgba(129, 91, 36, 0.12));
-  box-shadow:
-    inset 0 -10px 18px rgba(69, 44, 14, 0.13),
-    0 0 18px rgba(255, 223, 132, 0.72);
 }
 
 .kingdom-family-crest img {
@@ -1010,6 +882,22 @@ body.orte-inline-editing .kingdom-family-crest-placeholder {
   font-size: 1rem;
   line-height: 1.2;
   text-align: center;
+}
+
+.kingdom-family-name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.kingdom-family-name-link:hover,
+.kingdom-family-name-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.kingdom-portrait-link {
+  display: inline-block;
+  color: inherit;
 }
 
 .kingdom-family-card.is-family-featured .kingdom-family-name {

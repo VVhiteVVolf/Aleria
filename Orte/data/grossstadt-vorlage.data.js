@@ -4,7 +4,6 @@ window.ORT_DATA = {
     title: "Großstadt-Vorlage - Aleria",
     type: "Großstadt",
     status: "Vorlage",
-    editorVersion: 1
   },
 
   name: "Name der Großstadt",

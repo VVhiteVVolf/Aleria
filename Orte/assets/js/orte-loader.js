@@ -22,7 +22,6 @@
       docId,
       dataPath: entry.data || ""
     };
-    window.AleriaOrteScenes = buildSceneConfig(entry, docId);
     document.title = `${entry.name || "Ort"} - Aleria`;
     withRoot(() => applyEntryShell(entry, docId));
     loadDataScript(entry);
@@ -44,21 +43,6 @@
 
   function findDefaultEntry() {
     return registry.find((entry) => entry.id === "grossstadt-vorlage") || registry[0] || null;
-  }
-
-  function buildSceneConfig(entry, docId) {
-    return {
-      schemaVersion: 2,
-      ortId: docId,
-      ortName: entry.name || docId,
-      firebase: {
-        collection: entry.sceneCollection || "orte_scenes"
-      },
-      inlineFirebase: {
-        collection: entry.inlineCollection || "orte_inline_content"
-      },
-      modules: entry.defaultScenes || {}
-    };
   }
 
   function loadDataScript(entry) {

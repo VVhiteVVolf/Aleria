@@ -4,36 +4,7 @@ window.GRUPPEN_DATA = {
     title: "Gruppen-Vorlage - Aleria",
     type: "Organisation / Gruppe",
     status: "Template",
-    editorVersion: 1,
     template: "gruppe",
-    storage: {
-      document: "gruppen-vorlage",
-      firebaseCollections: {
-        groups: "organisationen_und_gruppen",
-        inlineContent: "organisationen_und_gruppen_inline_content",
-        scenes: "organisationen_und_gruppen_scenes",
-      },
-      imageStorage: {
-        currentMode: "inline-url-or-base64",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "gruppen/gruppen-vorlage/images",
-        plannedFirestoreMode: "reference",
-      },
-      tableStorage: {
-        currentMode: "html",
-        plannedStructuredMode: "optional",
-      },
-      localStoragePrefixes: [
-        "aleria:gruppen:inline-content:v2:gruppen-vorlage",
-        "aleria:gruppen:inline-reset:gruppen-vorlage",
-        "aleria:gruppen:inline-status-position:gruppen-vorlage",
-        "aleria:gruppen:scene-index:gruppen-vorlage",
-        "aleria:gruppen:scene-index-meta:gruppen-vorlage",
-        "aleria:gruppen:session-module:gruppen-vorlage:",
-        "aleria:gruppen:session-module-meta:gruppen-vorlage:",
-        "aleria:gruppen:comments:gruppen:gruppen-vorlage:",
-      ],
-    },
   },
 
   name: "Gruppen-Vorlage",

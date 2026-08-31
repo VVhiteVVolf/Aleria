@@ -4,36 +4,7 @@ window.HAEUSER_DATA = {
     title: "Kleineh\u00e4user-Vorlage - Aleria",
     type: "Kleines Haus / Familie / Clan",
     status: "Template",
-    editorVersion: 1,
     template: "kleinehaeuser",
-    storage: {
-      document: "kleinehaeuser-vorlage",
-      firebaseCollections: {
-        houses: "familien_haeuser_und_clans",
-        inlineContent: "familien_haeuser_und_clans_inline_content",
-        scenes: "familien_haeuser_und_clans_scenes",
-      },
-      imageStorage: {
-        currentMode: "inline-url-or-base64",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "haeuser/kleinehaeuser-vorlage/images",
-        plannedFirestoreMode: "reference",
-      },
-      tableStorage: {
-        currentMode: "html",
-        plannedStructuredMode: "optional",
-      },
-      localStoragePrefixes: [
-        "aleria:haeuser:inline-content:v2:kleinehaeuser-vorlage",
-        "aleria:haeuser:inline-reset:kleinehaeuser-vorlage",
-        "aleria:haeuser:inline-status-position:kleinehaeuser-vorlage",
-        "aleria:haeuser:scene-index:kleinehaeuser-vorlage",
-        "aleria:haeuser:scene-index-meta:kleinehaeuser-vorlage",
-        "aleria:haeuser:session-module:kleinehaeuser-vorlage:",
-        "aleria:haeuser:session-module-meta:kleinehaeuser-vorlage:",
-        "aleria:haeuser:comments:haeuser:kleinehaeuser-vorlage:",
-      ],
-    },
   },
 
   name: "Kleineh\u00e4user-Vorlage",

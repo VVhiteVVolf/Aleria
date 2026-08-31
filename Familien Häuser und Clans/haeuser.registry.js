@@ -30,9 +30,6 @@
       status: HOUSE_STATUS.TEMPLATE,
       type: HOUSE_TYPES.HOUSE,
       data: "data/haeuser-vorlage.data.js",
-      contentData: "published/haeuser-vorlage/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Vorlage", name: "Häuser / Familien / Clans", slug: "haeuser-vorlage" },
@@ -58,9 +55,6 @@
       type: HOUSE_TYPES.HOUSE,
       page: "kleinehaeuser.html",
       data: "data/kleinehaeuser-vorlage.data.js",
-      contentData: "published/kleinehaeuser-vorlage/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien H\u00e4user und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Vorlage", name: "Kleine H\u00e4user / kleinere Clans", slug: "kleinehaeuser-vorlage" },
@@ -79,9 +73,6 @@
       status: HOUSE_STATUS.ACTIVE,
       type: HOUSE_TYPES.HOUSE,
       data: "data/haus-arwydd.data.js",
-      contentData: "published/haus-arwydd/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Königreich", name: "Cenyr", slug: "cenyr" },
@@ -103,9 +94,6 @@
       status: HOUSE_STATUS.ACTIVE,
       type: HOUSE_TYPES.HOUSE,
       data: "data/haus-chwedonl.data.js",
-      contentData: "published/haus-chwedonl/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
       ],
@@ -124,9 +112,6 @@
       status: HOUSE_STATUS.ACTIVE,
       type: HOUSE_TYPES.CLAN,
       data: "data/haus-suedstahl.data.js",
-      contentData: "published/haus-suedstahl/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Königreich", name: "Aldrimar", slug: "aldrimar" },
@@ -148,9 +133,6 @@
       status: HOUSE_STATUS.ACTIVE,
       type: HOUSE_TYPES.CLAN,
       data: "data/haus-albholz.data.js",
-      contentData: "published/haus-albholz/data.json",
-      inlineCollection: "familien_haeuser_und_clans_inline_content",
-      sceneCollection: "familien_haeuser_und_clans_scenes",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Königreich", name: "Aldrimar", slug: "aldrimar" },

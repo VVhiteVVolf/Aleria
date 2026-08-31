@@ -5,22 +5,7 @@ window.ORT_DATA = {
     type: "Standort / Taverne",
     subtype: "Taverne",
     status: "Draft",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "lysfaen-zunft-taverne-zur-weissen-drachin",
-      sceneIndexDocument: "lysfaen-zunft-taverne-zur-weissen-drachin__scene-index",
-      sceneDocumentPrefix: "lysfaen-zunft-taverne-zur-weissen-drachin__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen-zunft-taverne-zur-weissen-drachin",
-        "aleria:orte:scene-index:lysfaen-zunft-taverne-zur-weissen-drachin",
-        "aleria:orte:session-module:lysfaen-zunft-taverne-zur-weissen-drachin:"
-      ]
-    }
   },
 
   name: "Taverne - Zur Weißen Drachin",

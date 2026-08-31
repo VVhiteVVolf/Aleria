@@ -23,31 +23,6 @@
       docId,
       dataPath: entry.data || "",
     };
-    window.ORTE_CONFIG = {
-      ...(window.ORTE_CONFIG || {}),
-      registryEntry: entry,
-      docId,
-      dataPath: entry.data || "",
-    };
-    window.AleriaOrteScenes = {
-      schemaVersion: 2,
-      ortId: docId,
-      ortName: entry.name || docId,
-      firebase: {
-        collection: entry.sceneCollection || "kontinente_scenes",
-      },
-      inlineFirebase: {
-        collection: entry.inlineCollection || "kontinente_inline_content",
-        appName: "kontinente-inline-content",
-        contentType: "kontinente-inline-content",
-      },
-      localStorage: {
-        namespace: "kontinente",
-        legacyNamespaces: ["orte"],
-        commentsScope: "kontinente",
-      },
-      modules: entry.defaultScenes || {},
-    };
 
     document.title = `${entry.name || "Kontinent"} - Aleria`;
     withRoot(() => applyEntryShell(entry, docId));

@@ -22,10 +22,9 @@
 
   enhanceCountyGeographyTables();
   enhanceCountyFamilyTables();
-  window.addEventListener('aleria-inline-images-rendered', scheduleCountyViewsRefresh);
-  document.addEventListener('click', handleCountyGeographyAction);
-  document.addEventListener('focusout', handleCountyGeographyTextCommit);
-  document.addEventListener('click', handleCountyFamilyAction);
+  enhanceCountyCouncilPortraits();
+  window.addEventListener('aleria:kontinente:content-ready', scheduleCountyViewsRefresh);
+  window.addEventListener('aleria:kontinente:data-ready', scheduleCountyViewsRefresh);
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
@@ -84,8 +83,7 @@
     const id = decodeURIComponent(window.location.hash.slice(1) || '');
     const target = id ? document.getElementById(id) : null;
     if (!target) return;
-    const offset = document.querySelector('.orte-inline-toolbar')?.offsetHeight || 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - offset - 12;
+    const top = target.getBoundingClientRect().top + window.scrollY - 12;
     window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
   }
 
@@ -103,6 +101,7 @@
     countyViewsRefreshTimer = window.setTimeout(() => {
       enhanceCountyGeographyTables();
       enhanceCountyFamilyTables();
+      enhanceCountyCouncilPortraits();
     }, 40);
   }
 
@@ -151,23 +150,13 @@
   }
 
   function syncCountyViewMode() {
-    const editing = document.body.classList.contains('orte-inline-editing');
     page.querySelectorAll('.kingdom-county-geography-table.is-county-card-source').forEach((table) => {
       table.setAttribute('aria-hidden', 'true');
     });
     page.querySelectorAll('.kingdom-county-family-table.is-family-card-source').forEach((table) => {
-      table.setAttribute('aria-hidden', editing ? 'false' : 'true');
-    });
-    page.querySelectorAll('[data-kingdom-geography-edit]').forEach((node) => {
-      node.contentEditable = String(editing);
-      node.spellcheck = true;
+      table.setAttribute('aria-hidden', 'true');
     });
   }
-
-  new MutationObserver(syncCountyViewMode).observe(document.body, {
-    attributes: true,
-    attributeFilter: ['class'],
-  });
 
   function buildCountyGeographyView(table) {
     const rows = Array.from(table.tBodies[0]?.rows || []);
@@ -179,7 +168,6 @@
     const data = { title: '', titleSource: null, mapCell: null, mapSource: null, domains: [] };
     let currentDomain = null;
     let currentGroupLabel = '';
-    let repairedImageCells = false;
 
     for (let index = 0; index < rows.length; index += 1) {
       const row = rows[index];
@@ -251,7 +239,7 @@
         continue;
       }
 
-      const hasImageContent = rowHasImages(row) || rowHasImageFallbacks(table, row, index);
+      const hasImageContent = rowHasImages(row);
       if (!currentDomain || !hasImageContent) continue;
 
       const previousRow = rows[index - 1];
@@ -260,7 +248,6 @@
       const nameRow = nextRow && isPlaceNameRow(nextRow, columnCount) ? nextRow : null;
       if (!nameRow) continue;
 
-      repairedImageCells = repairGeographyImageRow(table, row, index) || repairedImageCells;
       currentDomain.places.push(...extractPlaceCards(table, typeRow, row, nameRow, currentGroupLabel, {
         typeRowIndex: typeRow ? rows.indexOf(typeRow) : -1,
         imageRowIndex: index,
@@ -275,12 +262,8 @@
     if (data.mapCell) {
       const mapPanel = document.createElement('section');
       mapPanel.className = 'kingdom-county-map-panel';
-      applyGeographySourceDataset(mapPanel, data.mapSource);
-      mapPanel.append(renderGeographyControls(data.mapSource, [{ action: 'edit-image', label: 'Bild' }]));
       const title = document.createElement('h3');
       title.textContent = data.title || 'Karte der Grafschaft';
-      applyGeographySourceDataset(title, data.titleSource);
-      title.dataset.kingdomGeographyEdit = 'text';
       mapPanel.append(title);
       const mapImage = cloneLinkedImage(data.mapCell);
       if (mapImage) mapPanel.append(mapImage);
@@ -290,10 +273,6 @@
     data.domains
       .filter((domain) => domain.title || domain.crestCell || domain.center || domain.places.length)
       .forEach((domain) => view.append(renderDomainCard(domain)));
-
-    if (repairedImageCells) {
-      window.AleriaInlineEditor?.syncTableState?.(table);
-    }
 
     return view.children.length ? view : null;
   }
@@ -349,6 +328,9 @@
   }
 
   function buildCountyFamilyView(table) {
+    const configuredSections = getConfiguredFamilySections();
+    if (configuredSections.length) return buildConfiguredFamilyView(configuredSections);
+
     const rows = Array.from(table.tBodies[0]?.rows || []);
     if (!rows.length) return null;
 
@@ -474,15 +456,51 @@
     return view;
   }
 
+  function getConfiguredFamilySections() {
+    const sections = window.KONTINENTE_DATA?.view?.familySections;
+    return Array.isArray(sections) ? sections.filter((section) => Array.isArray(section?.cards)) : [];
+  }
+
+  function buildConfiguredFamilyView(sections) {
+    const view = document.createElement('div');
+    view.className = 'kingdom-family-card-view is-structured-family-view';
+
+    sections.forEach((section) => {
+      const cards = section.cards.map((card) => ({
+        ...card,
+        image: createConfiguredImage(card.imageSrc, card.imageAlt || `Wappen Haus ${card.name || ''}`),
+      }));
+      if (!cards.length) return;
+      view.append(renderFamilySection({ ...section, cards }));
+    });
+
+    return view.children.length ? view : null;
+  }
+
+  function createConfiguredImage(source, alt) {
+    if (!source) return null;
+    const image = document.createElement('img');
+    image.src = source;
+    image.alt = alt || '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    return image;
+  }
+
   function renderFamilySection(section) {
     const block = document.createElement('section');
     block.className = 'kingdom-family-section';
+    if (section.variant) block.dataset.familyVariant = section.variant;
 
     const title = document.createElement('h3');
-    title.textContent = section.title || 'Adelshaeuser';
+    const titleText = document.createElement('span');
+    titleText.textContent = section.title || 'Adelshäuser';
+    const count = document.createElement('span');
+    count.className = 'kingdom-family-count';
+    count.textContent = String(section.cards.length);
+    count.setAttribute('aria-label', `${section.cards.length} Häuser`);
+    title.append(titleText, count);
     block.append(title);
-
-    block.append(renderFamilySectionControls(section));
 
     const grid = document.createElement('div');
     grid.className = 'kingdom-family-grid';
@@ -497,29 +515,13 @@
     }
 
     regularCards.forEach((card) => grid.append(renderFamilyCard(card)));
-    grid.append(renderFamilyAddCard(section));
     block.append(grid);
     return block;
-  }
-
-  function renderFamilyAddCard(section) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'kingdom-family-card kingdom-family-add-card';
-    button.dataset.kingdomFamilyAction = 'add-card';
-    button.dataset.kingdomFamilySourceId = section.table?.dataset?.kingdomFamilySourceId || '';
-    button.dataset.kingdomFamilyTitleRow = String(section.titleRowIndex);
-    button.innerHTML = '<span aria-hidden="true">+</span><strong>Haus hinzufuegen</strong>';
-    return button;
   }
 
   function renderFamilyCard(card, featured = false) {
     const element = document.createElement('article');
     element.className = `kingdom-family-card${featured ? ' is-family-featured' : ''}`;
-    applyFamilySourceDataset(element, card.source);
-
-    element.append(renderFamilyCardControls(card.source));
-
     const meta = document.createElement('div');
     meta.className = 'kingdom-family-meta';
     if (card.liege) meta.append(renderFamilyMetaItem('Lehenstreue', card.liege));
@@ -532,8 +534,6 @@
     if (hasRealImage && card.href) {
       const link = document.createElement('a');
       link.href = card.href;
-      link.rel = 'noopener noreferrer';
-      link.target = '_blank';
       link.append(card.image);
       crest.append(link);
     } else if (hasRealImage) {
@@ -545,310 +545,78 @@
 
     const name = document.createElement('strong');
     name.className = 'kingdom-family-name';
-    name.textContent = card.name || 'Unbenanntes Haus';
+    if (card.href) {
+      const link = document.createElement('a');
+      link.className = 'kingdom-family-name-link';
+      link.href = card.href;
+      link.textContent = card.name || 'Unbenanntes Haus';
+      name.append(link);
+    } else {
+      name.textContent = card.name || 'Unbenanntes Haus';
+    }
     element.append(name);
     return element;
   }
 
-  function renderFamilyCrestPlaceholder(source) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'kingdom-family-crest-placeholder';
-    button.dataset.kingdomFamilyAction = 'edit-image';
-    button.textContent = '+ Bild';
-    applyFamilySourceDataset(button, source);
-    return button;
-  }
+  function enhanceCountyCouncilPortraits() {
+    const view = window.KONTINENTE_DATA?.view;
+    const familyIds = view?.portraitFamilyIds;
+    const familyTreePage = view?.familyTreePage;
+    if (!familyTreePage || !familyIds || typeof familyIds !== 'object') return;
 
-  function renderFamilySectionControls(section) {
-    const controls = document.createElement('div');
-    controls.className = 'kingdom-family-section-controls';
-    controls.dataset.kingdomFamilySourceId = section.table?.dataset?.kingdomFamilySourceId || '';
-    controls.dataset.kingdomFamilyTitleRow = String(section.titleRowIndex);
-    controls.innerHTML = `
-      <button type="button" data-kingdom-family-action="add-row">+ Reihe</button>
-      <button type="button" data-kingdom-family-action="add-card">+ Haus</button>
-    `;
-    return controls;
-  }
+    page.querySelectorAll('.kingdom-council-table').forEach((table) => {
+      const rows = Array.from(table.tBodies[0]?.rows || []);
+      rows.forEach((row, rowIndex) => {
+        if (!row.querySelector('img[src]')) return;
+        const nameRow = rows[rowIndex + 1];
+        if (!nameRow) return;
 
-  function renderFamilyCardControls(source) {
-    const controls = document.createElement('div');
-    controls.className = 'kingdom-family-card-controls';
-    applyFamilySourceDataset(controls, source);
-    if (source?.kind === 'single') {
-      controls.innerHTML = '<button type="button" data-kingdom-family-action="edit-image" title="Bild bearbeiten">Bild</button>';
-      return controls;
-    }
+        Array.from(row.cells || []).forEach((cell, cellIndex) => {
+          const image = cell.querySelector('img[src]');
+          const name = getCleanText(nameRow.cells?.[cellIndex]);
+          if (!image || !name) return;
 
-    controls.innerHTML = `
-      <button type="button" data-kingdom-family-action="edit-image" title="Bild bearbeiten">Bild</button>
-      <button type="button" data-kingdom-family-action="add-after" title="Haus danach einfuegen">+</button>
-      <button type="button" data-kingdom-family-action="move-left" title="Nach links verschieben">&larr;</button>
-      <button type="button" data-kingdom-family-action="move-right" title="Nach rechts verschieben">&rarr;</button>
-      <button type="button" data-kingdom-family-action="remove" title="Haus entfernen">-</button>
-    `;
-    return controls;
-  }
+          const replacementImage = view.portraitImages?.[name];
+          if (replacementImage) {
+            image.src = replacementImage;
+            image.alt = name === 'Name unklar (Haus Draig)'
+              ? 'Männliche Silhouette für den unbesetzten Ritterfürsten'
+              : `Porträt von ${name}`;
+          }
 
-  function applyFamilySourceDataset(element, source) {
-    if (!element || !source?.table) return;
-    element.dataset.kingdomFamilySourceId = source.table.dataset.kingdomFamilySourceId || '';
-    element.dataset.kingdomFamilyKind = source.kind || 'grid';
-    element.dataset.kingdomFamilyCell = String(source.cellIndex ?? 0);
-    element.dataset.kingdomFamilySeatRow = String(source.seatRowIndex ?? -1);
-    element.dataset.kingdomFamilyImageRow = String(source.imageRowIndex ?? -1);
-    element.dataset.kingdomFamilyNameRow = String(source.nameRowIndex ?? -1);
-    element.dataset.kingdomFamilyLiegeRow = String(source.liegeRowIndex ?? -1);
-    element.dataset.kingdomFamilyTitleRow = String(source.titleRowIndex ?? -1);
-  }
+          const familyId = resolvePortraitFamilyId(name, familyIds);
+          if (!familyId) return;
+          const href = `${familyTreePage}?family=${encodeURIComponent(familyId)}&mode=view`;
+          const existingLink = image.closest('a');
+          if (existingLink) {
+            existingLink.href = href;
+            existingLink.removeAttribute('target');
+            existingLink.removeAttribute('rel');
+            return;
+          }
 
-  function handleCountyFamilyAction(event) {
-    const button = event.target.closest('[data-kingdom-family-action]');
-    if (!button || !page.contains(button) || !document.body.classList.contains('orte-inline-editing')) return;
-
-    const action = button.dataset.kingdomFamilyAction;
-    const sourceElement = button.closest('[data-kingdom-family-source-id]') || button;
-    const source = getFamilyActionSource(sourceElement);
-    if (!source.table) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    if (action === 'edit-image') editFamilyCardImage(source);
-    if (action === 'add-after') addFamilyCardAfter(source);
-    if (action === 'remove') removeFamilyCard(source);
-    if (action === 'move-left') moveFamilyCard(source, -1);
-    if (action === 'move-right') moveFamilyCard(source, 1);
-    if (action === 'add-row') addFamilyRowToSection(source);
-    if (action === 'add-card') addFamilyCardToSection(source);
-
-    notifyFamilyTableChanged(source.table);
-  }
-
-  function getFamilyActionSource(element) {
-    const sourceId = element?.dataset?.kingdomFamilySourceId || '';
-    const table = sourceId ? page.querySelector(`table[data-kingdom-family-source-id="${cssEscape(sourceId)}"]`) : null;
-    return {
-      table,
-      kind: element?.dataset?.kingdomFamilyKind || 'grid',
-      cellIndex: Number(element?.dataset?.kingdomFamilyCell) || 0,
-      titleRowIndex: Number(element?.dataset?.kingdomFamilyTitleRow),
-      seatRowIndex: Number(element?.dataset?.kingdomFamilySeatRow),
-      imageRowIndex: Number(element?.dataset?.kingdomFamilyImageRow),
-      nameRowIndex: Number(element?.dataset?.kingdomFamilyNameRow),
-      liegeRowIndex: Number(element?.dataset?.kingdomFamilyLiegeRow)
-    };
-  }
-
-  function editFamilyCardImage(source) {
-    const cell = getFamilySourceCell(source.table, source.imageRowIndex, source.cellIndex);
-    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key], .orte-image-slot');
-    if (slot?.dataset?.orteImageKey) {
-      window.AleriaInlineEditor?.editImageSlot?.(slot);
-      return;
-    }
-
-    if (slot) {
-      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
-      window.setTimeout(() => {
-        const normalizedSlot = cell.querySelector('.orte-image-slot[data-orte-image-key]');
-        window.AleriaInlineEditor?.editImageSlot?.(normalizedSlot || slot);
-      }, 60);
-      return;
-    }
-
-    if (cell) {
-      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Hauswappen" aria-label="Hauswappen"></span>';
-      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
-      const nextSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
-      window.setTimeout(() => window.AleriaInlineEditor?.editImageSlot?.(nextSlot), 60);
-    }
-  }
-
-  function addFamilyCardAfter(source) {
-    const sourceRows = getFamilySourceRows(source);
-    const currentColumnCount = Math.max(0, ...sourceRows.map(({ row }) => row?.cells?.length || 0));
-    if (currentColumnCount >= getFamilyColumnLimit(source.table)) {
-      addFamilyRowToSection(source, 1);
-      return;
-    }
-
-    const nextIndex = Math.max(0, source.cellIndex + 1);
-    sourceRows.forEach(({ row, role }) => {
-      if (!row) return;
-      const reference = row.cells[Math.min(source.cellIndex, row.cells.length - 1)] || row.cells[row.cells.length - 1];
-      const cell = cloneFamilyCell(reference, role);
-      row.insertBefore(cell, row.cells[nextIndex] || null);
-    });
-  }
-
-  function addFamilyCardToSection(source) {
-    const rowSet = getLastFamilyGridRowSet(source.table, source.titleRowIndex);
-    if (!rowSet?.seatRow || !rowSet?.imageRow || !rowSet?.nameRow) {
-      addFamilyRowToSection(source);
-      return;
-    }
-
-    const nextIndex = rowSet.seatRow.cells.length;
-    if (nextIndex >= getFamilyColumnLimit(source.table)) {
-      addFamilyRowToSection(source, 1);
-      return;
-    }
-
-    [
-      { row: rowSet.liegeRow, role: 'liege' },
-      { row: rowSet.seatRow, role: 'seat' },
-      { row: rowSet.imageRow, role: 'image' },
-      { row: rowSet.nameRow, role: 'name' }
-    ].forEach(({ row, role }) => {
-      if (!row) return;
-      const reference = row.cells[row.cells.length - 1];
-      const cell = cloneFamilyCell(reference, role);
-      row.insertBefore(cell, row.cells[nextIndex] || null);
-    });
-  }
-
-  function addFamilyRowToSection(source, requestedColumnCount = 0) {
-    const table = source.table;
-    const rows = Array.from(table?.tBodies[0]?.rows || []);
-    if (!table || !rows.length) return;
-
-    const insertBefore = getNextFamilySectionRow(table, source.titleRowIndex);
-    const columnCount = requestedColumnCount > 0 ? requestedColumnCount : getFamilyColumnLimit(table);
-    const rowSet = getLastFamilyGridRowSet(table, source.titleRowIndex);
-    const seatRow = createFamilyTableRow(rowSet?.seatRow, 'seat', columnCount);
-    const imageRow = createFamilyTableRow(rowSet?.imageRow, 'image', columnCount);
-    const nameRow = createFamilyTableRow(rowSet?.nameRow, 'name', columnCount);
-    const tbody = table.tBodies[0];
-
-    tbody.insertBefore(seatRow, insertBefore);
-    tbody.insertBefore(imageRow, insertBefore);
-    tbody.insertBefore(nameRow, insertBefore);
-  }
-
-  function removeFamilyCard(source) {
-    if (source.kind === 'grid') {
-      getFamilySourceRows(source).forEach(({ row, role }) => {
-        const cell = row?.cells?.[source.cellIndex];
-        if (!cell) return;
-        resetFamilyCell(cell, role);
-        cell.dataset.kingdomFamilyDeleted = '1';
+          const link = document.createElement('a');
+          link.href = href;
+          link.className = 'kingdom-portrait-link';
+          image.replaceWith(link);
+          link.append(image);
+        });
       });
-      return;
-    }
-
-    getFamilySourceRows(source).forEach(({ row, role }) => {
-      const cell = row?.cells?.[source.cellIndex];
-      if (!cell) return;
-      resetFamilyCell(cell, role);
     });
   }
 
-  function moveFamilyCard(source, direction) {
-    const targetIndex = source.cellIndex + direction;
-    if (targetIndex < 0) return;
-
-    getFamilySourceRows(source).forEach(({ row }) => {
-      const cells = row?.cells || [];
-      if (!cells[source.cellIndex] || !cells[targetIndex]) return;
-      swapFamilyCells(cells[source.cellIndex], cells[targetIndex]);
-    });
+  function resolvePortraitFamilyId(personName, familyIds) {
+    const entry = Object.entries(familyIds).find(([houseName]) => (
+      personName.endsWith(` ${houseName}`) || personName.includes(`(Haus ${houseName})`)
+    ));
+    return entry?.[1] || '';
   }
 
-  function getFamilySourceRows(source) {
-    return [
-      { row: getFamilySourceRow(source.table, source.liegeRowIndex), role: 'liege' },
-      { row: getFamilySourceRow(source.table, source.seatRowIndex), role: 'seat' },
-      { row: getFamilySourceRow(source.table, source.imageRowIndex), role: 'image' },
-      { row: getFamilySourceRow(source.table, source.nameRowIndex), role: 'name' }
-    ].filter((item) => item.row);
-  }
-
-  function getFamilySourceRow(table, rowIndex) {
-    const rows = Array.from(table?.tBodies[0]?.rows || []);
-    return rowIndex >= 0 ? rows[rowIndex] || null : null;
-  }
-
-  function getFamilySourceCell(table, rowIndex, cellIndex) {
-    return getFamilySourceRow(table, rowIndex)?.cells?.[cellIndex] || null;
-  }
-
-  function getFamilyColumnLimit(table) {
-    return Math.max(1, getTableColumnCount(table));
-  }
-
-  function cloneFamilyCell(reference, role) {
-    const cell = reference ? reference.cloneNode(false) : document.createElement('td');
-    cell.colSpan = 1;
-    resetFamilyCell(cell, role);
-    return cell;
-  }
-
-  function resetFamilyCell(cell, role) {
-    if (!cell) return;
-    cell.removeAttribute('data-orte-inline-text');
-    delete cell.dataset.kingdomFamilyDeleted;
-    cell.removeAttribute('contenteditable');
-    if (role === 'image') {
-      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Hauswappen" aria-label="Hauswappen"></span>';
-      return;
-    }
-    cell.innerHTML = role === 'name' || role === 'seat' ? '<b>...</b>' : '&nbsp;';
-  }
-
-  function swapFamilyCells(first, second) {
-    const firstHtml = first.innerHTML;
-    first.innerHTML = second.innerHTML;
-    second.innerHTML = firstHtml;
-  }
-
-  function createFamilyTableRow(templateRow, role, columnCount) {
-    const row = templateRow ? templateRow.cloneNode(false) : document.createElement('tr');
-    row.innerHTML = '';
-    for (let index = 0; index < columnCount; index += 1) {
-      row.append(cloneFamilyCell(templateRow?.cells?.[Math.min(index, templateRow.cells.length - 1)], role));
-    }
-    return row;
-  }
-
-  function getLastFamilyGridRowSet(table, titleRowIndex) {
-    const rows = Array.from(table?.tBodies[0]?.rows || []);
-    let last = null;
-    const start = Number.isFinite(titleRowIndex) && titleRowIndex >= 0 ? titleRowIndex + 1 : 0;
-
-    for (let index = start; index < rows.length - 2; index += 1) {
-      const text = getCleanText(rows[index]);
-      if (index > start && isFamilySectionTitle(rows[index], text)) break;
-      if (!isFamilySeatRow(rows[index])) continue;
-
-      const imageRow = rows[index + 1];
-      const nameRow = rows[index + 2];
-      if (!imageRow || !nameRow || !isPlaceNameRow(nameRow, getTableColumnCount(table))) continue;
-      last = {
-        liegeRow: isFamilyLiegeRow(rows[index - 1]) ? rows[index - 1] : null,
-        seatRow: rows[index],
-        imageRow,
-        nameRow
-      };
-    }
-    return last;
-  }
-
-  function getNextFamilySectionRow(table, titleRowIndex) {
-    const rows = Array.from(table?.tBodies[0]?.rows || []);
-    const start = Number.isFinite(titleRowIndex) && titleRowIndex >= 0 ? titleRowIndex + 1 : 0;
-    for (let index = start; index < rows.length; index += 1) {
-      const text = getCleanText(rows[index]);
-      if (index > start && isFamilySectionTitle(rows[index], text)) return rows[index];
-    }
-    return null;
-  }
-
-  function notifyFamilyTableChanged(table) {
-    window.AleriaInlineEditor?.notifyTableChanged?.(table, { rebuild: false });
-    renderCountyFamilyView(table);
-    syncCountyViewMode();
+  function renderFamilyCrestPlaceholder(source) {
+    const placeholder = document.createElement('span');
+    placeholder.className = 'kingdom-family-crest-placeholder';
+    placeholder.textContent = '...';
+    return placeholder;
   }
 
   function renderFamilyMetaItem(label, value) {
@@ -861,19 +629,17 @@
 
   function renderDomainCard(domain) {
     const placeCount = domain.places.filter((place) => place.kind !== 'separator').length;
+    const domainHref = getImageHref(domain.crestCell);
     const section = document.createElement('section');
     section.className = `kingdom-domain-card${placeCount === 1 ? ' kingdom-domain-card-compact' : ''}`;
-    applyGeographySourceDataset(section, domain.titleSource);
 
     const header = document.createElement('header');
     header.className = 'kingdom-domain-header';
 
-    const crest = cloneLinkedImage(domain.crestCell, getGeographyTableImage(domain.crestSource));
+    const crest = cloneLinkedImage(domain.crestCell);
     if (crest) {
       const crestWrap = document.createElement('div');
       crestWrap.className = 'kingdom-domain-crest';
-      applyGeographySourceDataset(crestWrap, domain.crestSource);
-      crestWrap.append(renderGeographyControls(domain.crestSource, [{ action: 'edit-image', label: 'Bild' }]));
       crestWrap.append(crest);
       header.append(crestWrap);
     }
@@ -881,17 +647,20 @@
     const titleWrap = document.createElement('div');
     titleWrap.className = 'kingdom-domain-title';
     const title = document.createElement('h3');
-    title.textContent = domain.title || 'Herrschaft';
-    applyGeographySourceDataset(title, domain.titleSource);
-    title.dataset.kingdomGeographyEdit = 'text';
+    if (domainHref) {
+      const link = document.createElement('a');
+      link.href = domainHref;
+      link.textContent = domain.title || 'Herrschaft';
+      title.append(link);
+    } else {
+      title.textContent = domain.title || 'Herrschaft';
+    }
     titleWrap.append(title);
     if (domain.center && domain.places.length) {
       const center = document.createElement('p');
       center.append(document.createTextNode('Zentrum: '));
       const centerValue = document.createElement('strong');
       centerValue.textContent = domain.center;
-      applyGeographySourceDataset(centerValue, domain.centerSource);
-      centerValue.dataset.kingdomGeographyEdit = 'text';
       center.append(centerValue);
       titleWrap.append(center);
     }
@@ -906,13 +675,11 @@
     } else if (domain.center) {
       const centerPanel = document.createElement('div');
       centerPanel.className = 'kingdom-domain-center-panel';
-      const centerImage = cloneImage(domain.centerCell, getGeographyTableImage(domain.centerImageSource));
+      const centerImage = cloneImage(domain.centerCell);
       centerPanel.classList.toggle('has-center-icon', !!centerImage);
       if (centerImage) {
         const imageFrame = document.createElement('span');
         imageFrame.className = 'kingdom-domain-center-icon';
-        applyGeographySourceDataset(imageFrame, domain.centerImageSource);
-        imageFrame.append(renderGeographyControls(domain.centerImageSource, [{ action: 'edit-image', label: 'Bild' }]));
         imageFrame.append(centerImage);
         centerPanel.append(imageFrame);
       }
@@ -922,8 +689,6 @@
       const value = document.createElement('strong');
       value.className = 'kingdom-domain-center-name';
       value.textContent = domain.center;
-      applyGeographySourceDataset(value, domain.centerSource);
-      value.dataset.kingdomGeographyEdit = 'text';
       centerPanel.append(label, value);
       section.append(centerPanel);
     }
@@ -941,8 +706,6 @@
 
     const card = document.createElement('article');
     card.className = 'kingdom-place-card';
-    applyGeographySourceDataset(card, place.source);
-    card.append(renderGeographyControls(place.source, [{ action: 'edit-image', label: 'Bild' }]));
 
     const iconFrame = document.createElement('span');
     iconFrame.className = 'kingdom-place-icon-frame';
@@ -961,15 +724,11 @@
       const type = document.createElement('span');
       type.className = 'kingdom-place-type';
       type.textContent = place.type || 'Ort';
-      applyGeographySourceDataset(type, place.typeSource);
-      if (place.typeSource) type.dataset.kingdomGeographyEdit = 'text';
       card.append(type);
 
     const name = document.createElement('strong');
       name.className = 'kingdom-place-name';
       name.textContent = place.name || 'Unbenannter Ort';
-      applyGeographySourceDataset(name, place.nameSource);
-      if (place.nameSource) name.dataset.kingdomGeographyEdit = 'text';
       card.append(name);
 
     return card;
@@ -983,11 +742,10 @@
 
     return imageCells.map((cell, index) => {
       const source = createGeographySource(table, 'place-image', rowSource.imageRowIndex, index);
-      const fallbackImage = isInlineImageCleared(cell) ? null : getGeographyTableImage(source);
-      const image = cloneImage(cell, fallbackImage);
+      const image = cloneImage(cell);
       const name = getCleanText(nameCells[index]);
       const type = getCleanText(typeCells[index]) || fallbackType;
-      const href = getImageHref(cell) || fallbackImage?.href || '';
+      const href = getImageHref(cell);
       return {
         image,
         name,
@@ -1004,87 +762,6 @@
     }).filter((place) => place.image || place.name);
   }
 
-  function rowHasImageFallbacks(table, row, rowIndex) {
-    return Array.from(row?.cells || []).some((cell, cellIndex) => (
-      !!getGeographyTableImage(createGeographySource(table, 'place-image', rowIndex, cellIndex))?.src
-    ));
-  }
-
-  function repairGeographyImageRow(table, row, rowIndex) {
-    let repaired = false;
-    Array.from(row?.cells || []).forEach((cell, cellIndex) => {
-      const image = getGeographyTableImage(createGeographySource(table, 'place-image', rowIndex, cellIndex));
-      if (!image?.src) return;
-
-      const existingSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
-      if (existingSlot) {
-        if (shouldRepairLegacyGeographySlot(existingSlot, image)) {
-          applyGeographyFallbackSlot(table, existingSlot, image, rowIndex, cellIndex);
-          repaired = true;
-        }
-        return;
-      }
-
-      if (cell.querySelector('img[src]')) return;
-
-      const slot = document.createElement('span');
-      slot.className = 'orte-image-slot has-image';
-      applyGeographyFallbackSlot(table, slot, image, rowIndex, cellIndex);
-      cell.append(slot);
-      repaired = true;
-    });
-    return repaired;
-  }
-
-  function shouldRepairLegacyGeographySlot(slot, fallbackImage) {
-    if (!slot || !fallbackImage?.src || isInlineSlotCleared(slot)) return false;
-    const key = slot.dataset?.orteImageKey || '';
-    if (key.startsWith('geography-')) return false;
-
-    const currentSrc = slot.dataset?.orteRenderedImageSrc
-      || slot.querySelector?.('img[src]')?.getAttribute('src')
-      || (key ? window.AleriaInlineImages?.getImage?.(key)?.src : '')
-      || '';
-    if (!currentSrc || currentSrc === fallbackImage.src) return false;
-
-    return key.startsWith('bild-') || !key;
-  }
-
-  function applyGeographyFallbackSlot(table, slot, image, rowIndex, cellIndex) {
-    slot.dataset.orteImageKey = createGeographyRepairImageKey(table, rowIndex, cellIndex);
-    slot.dataset.orteImageLabel = image.alt || getImageFileName(image.src) || 'Bildplatzhalter';
-    slot.dataset.orteTemplateImageSrc = image.src;
-    slot.dataset.orteTemplateImageHref = image.href || '';
-    slot.dataset.orteTemplateImageAlt = image.alt || '';
-    slot.setAttribute('aria-label', image.alt || 'Bildplatzhalter');
-    delete slot.dataset.orteRenderedImageSrc;
-    delete slot.dataset.orteRenderedImageHref;
-    delete slot.dataset.orteRenderedImageAlt;
-    slot.innerHTML = '';
-  }
-
-  function getGeographyTableImage(source) {
-    if (!source?.table) return null;
-    const tableId = source.table.dataset.orteTableId || '';
-    return window.AleriaInlineImages?.getTableImage?.(tableId, source.rowIndex, source.cellIndex, 0) || null;
-  }
-
-  function createGeographyRepairImageKey(table, rowIndex, cellIndex) {
-    const tableId = String(table?.dataset?.orteTableId || 'table')
-      .toLowerCase()
-      .replace(/[^a-z0-9-]+/g, '-')
-      .replace(/^-|-$/g, '') || 'table';
-    return `geography-${tableId}-r${rowIndex}-c${cellIndex}`;
-  }
-
-  function getImageFileName(src) {
-    try {
-      return new URL(src, document.baseURI).pathname.split('/').pop() || '';
-    } catch (error) {
-      return String(src || '').split('/').pop() || '';
-    }
-  }
-
   function createGeographySource(table, kind, rowIndex, cellIndex) {
     if (!table || rowIndex < 0 || cellIndex < 0) return null;
     return {
@@ -1093,100 +770,6 @@
       rowIndex,
       cellIndex
     };
-  }
-
-  function applyGeographySourceDataset(element, source) {
-    if (!element || !source?.table) return;
-    element.dataset.kingdomGeographySourceId = source.table.dataset.kingdomGeographySourceId || '';
-    element.dataset.kingdomGeographyKind = source.kind || '';
-    element.dataset.kingdomGeographyRow = String(source.rowIndex ?? -1);
-    element.dataset.kingdomGeographyCell = String(source.cellIndex ?? -1);
-  }
-
-  function renderGeographyControls(source, actions) {
-    const controls = document.createElement('div');
-    controls.className = 'kingdom-geography-controls';
-    applyGeographySourceDataset(controls, source);
-    controls.innerHTML = (actions || [])
-      .map((item) => `<button type="button" data-kingdom-geography-action="${escapeHtml(item.action)}">${escapeHtml(item.label)}</button>`)
-      .join('');
-    return controls;
-  }
-
-  function handleCountyGeographyAction(event) {
-    const button = event.target.closest('[data-kingdom-geography-action]');
-    if (!button || !page.contains(button) || !document.body.classList.contains('orte-inline-editing')) return;
-
-    const sourceElement = button.closest('[data-kingdom-geography-source-id]') || button;
-    const source = getGeographyActionSource(sourceElement);
-    if (!source.table) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    if (button.dataset.kingdomGeographyAction === 'edit-image') {
-      editGeographyImage(source);
-    }
-  }
-
-  function handleCountyGeographyTextCommit(event) {
-    const editable = event.target.closest('[data-kingdom-geography-edit]');
-    if (!editable || !page.contains(editable) || !document.body.classList.contains('orte-inline-editing')) return;
-
-    const source = getGeographyActionSource(editable);
-    const cell = getGeographySourceCell(source);
-    if (!cell) return;
-
-    const value = getCleanText(editable) || '...';
-    cell.innerHTML = `<b>${escapeHtml(value)}</b>`;
-    notifyGeographyTableChanged(source.table);
-  }
-
-  function getGeographyActionSource(element) {
-    const sourceId = element?.dataset?.kingdomGeographySourceId || '';
-    const table = sourceId ? page.querySelector(`table[data-kingdom-geography-source-id="${cssEscape(sourceId)}"]`) : null;
-    return {
-      table,
-      kind: element?.dataset?.kingdomGeographyKind || '',
-      rowIndex: Number(element?.dataset?.kingdomGeographyRow),
-      cellIndex: Number(element?.dataset?.kingdomGeographyCell)
-    };
-  }
-
-  function getGeographySourceCell(source) {
-    const rows = Array.from(source?.table?.tBodies?.[0]?.rows || []);
-    return source?.rowIndex >= 0 ? rows[source.rowIndex]?.cells?.[source.cellIndex] || null : null;
-  }
-
-  function editGeographyImage(source) {
-    const cell = getGeographySourceCell(source);
-    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key], .orte-image-slot');
-    if (slot?.dataset?.orteImageKey) {
-      window.AleriaInlineEditor?.editImageSlot?.(slot);
-      return;
-    }
-
-    if (slot) {
-      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
-      window.setTimeout(() => {
-        const normalizedSlot = cell.querySelector('.orte-image-slot[data-orte-image-key]');
-        window.AleriaInlineEditor?.editImageSlot?.(normalizedSlot || slot);
-      }, 60);
-      return;
-    }
-
-    if (cell) {
-      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
-      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
-      const nextSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
-      window.setTimeout(() => window.AleriaInlineEditor?.editImageSlot?.(nextSlot), 60);
-    }
-  }
-
-  function notifyGeographyTableChanged(table) {
-    window.AleriaInlineEditor?.notifyTableChanged?.(table, { rebuild: false });
-    renderCountyGeographyView(table);
-    syncCountyViewMode();
   }
 
   function getImageHref(cell) {
@@ -1205,28 +788,27 @@
     domain.places.push({ kind: 'separator', title: normalizedTitle });
   }
 
-  function cloneLinkedImage(cell, fallbackImage = null) {
+  function cloneLinkedImage(cell) {
     if (!cell) return null;
-    const image = cloneImage(cell, fallbackImage);
+    const image = cloneImage(cell);
     if (!image) return null;
 
     const link = cell.querySelector('img')?.closest('a[href]');
-    if (!link && !fallbackImage?.href) return image;
+    if (!link) return image;
 
     const anchor = document.createElement('a');
-    anchor.href = link?.getAttribute('href') || fallbackImage.href;
-    anchor.rel = link?.getAttribute('rel') || 'noopener noreferrer';
-    anchor.target = link?.getAttribute('target') || '_blank';
+    anchor.href = link.getAttribute('href');
+    if (link.hasAttribute('rel')) anchor.rel = link.getAttribute('rel');
+    if (link.hasAttribute('target')) anchor.target = link.getAttribute('target');
     anchor.append(image);
     return anchor;
   }
 
-  function cloneImage(cell, fallbackImage = null) {
+  function cloneImage(cell) {
     const source = cell?.querySelector?.('img[src]');
     const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key]');
-    const isCleared = isInlineSlotCleared(slot);
-    const slotImage = !source && !isCleared ? getInlineSlotImage(slot) : null;
-    const src = source?.getAttribute('src') || slotImage?.src || (!isCleared ? fallbackImage?.src : '') || '';
+    const slotImage = !source ? getInlineSlotImage(slot) : null;
+    const src = source?.getAttribute('src') || slotImage?.src || '';
     if (!src) {
       const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
       const label = slot?.getAttribute?.('aria-label') || getCleanText(slot);
@@ -1240,7 +822,7 @@
 
     const image = document.createElement('img');
     image.src = src;
-    image.alt = source?.getAttribute('alt') || slotImage?.alt || fallbackImage?.alt || '';
+    image.alt = source?.getAttribute('alt') || slotImage?.alt || '';
     image.loading = 'lazy';
     image.decoding = 'async';
     return image;
@@ -1258,11 +840,6 @@
       };
     }
 
-    const key = slot.dataset?.orteImageKey || '';
-    const image = window.AleriaInlineImages?.getImage?.(key);
-    if (image?.src) return image;
-    if (image?.clearedAtClient) return null;
-
     const fallbackSrc = slot.dataset?.orteTemplateImageSrc || '';
     if (!fallbackSrc) return null;
     return {
@@ -1270,16 +847,6 @@
       href: slot.dataset.orteTemplateImageHref || '',
       alt: slot.dataset.orteTemplateImageAlt || slot.getAttribute('aria-label') || ''
     };
-  }
-
-  function isInlineImageCleared(cell) {
-    return isInlineSlotCleared(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]'));
-  }
-
-  function isInlineSlotCleared(slot) {
-    const key = slot?.dataset?.orteImageKey || '';
-    if (!key) return false;
-    return !!window.AleriaInlineImages?.getImage?.(key)?.clearedAtClient;
   }
 
   function getTableColumnCount(table) {
@@ -1424,11 +991,6 @@
     const clone = node?.cloneNode?.(true);
     const source = clone || node;
     clone?.querySelectorAll?.([
-      '.orte-table-add-control',
-      '.orte-table-row-controls',
-      '.orte-cell-image-insert',
-      '.table-editor-toolbar',
-      '.orte-inline-image-hint',
       '.orte-image-slot',
       '.orte-image-placeholder',
       '.orte-image-placeholder-media'
@@ -1458,8 +1020,4 @@
       .replace(/'/g, '&#039;');
   }
 
-  function cssEscape(value) {
-    if (window.CSS?.escape) return window.CSS.escape(String(value || ''));
-    return String(value || '').replace(/["\\]/g, '\\$&');
-  }
 })();

@@ -1,0 +1,420 @@
+:root {
+  --herrschaft-sea-deep: #15343b;
+  --herrschaft-sea: #2e6871;
+  --herrschaft-sea-light: #79a7a7;
+  --herrschaft-foam: #e3eee6;
+  --herrschaft-gold: #c49a46;
+}
+
+body.herrschaft-body {
+  background:
+    radial-gradient(circle at 50% -8rem, rgba(116, 169, 171, 0.32), transparent 36rem),
+    linear-gradient(155deg, rgba(255, 244, 210, 0.035), transparent 34%),
+    var(--herrschaft-sea-deep);
+}
+
+body.herrschaft-theme-gafyr {
+  --herrschaft-sea-deep: #26382a;
+  --herrschaft-sea: #49694a;
+  --herrschaft-sea-light: #8eaa78;
+  --herrschaft-foam: #e7ecdb;
+  --herrschaft-gold: #c19a50;
+}
+
+body.herrschaft-theme-wyrm {
+  --herrschaft-sea-deep: #412416;
+  --herrschaft-sea: #8a4a24;
+  --herrschaft-sea-light: #c38b4a;
+  --herrschaft-foam: #f1e2c6;
+  --herrschaft-gold: #d4a43f;
+}
+
+body.herrschaft-theme-saethwyr {
+  --herrschaft-sea-deep: #172f46;
+  --herrschaft-sea: #315e7a;
+  --herrschaft-sea-light: #76a6b7;
+  --herrschaft-foam: #e0edf0;
+  --herrschaft-gold: #c7a95f;
+}
+
+body.herrschaft-theme-arthus {
+  --herrschaft-sea-deep: #291b15;
+  --herrschaft-sea: #6f3025;
+  --herrschaft-sea-light: #ac7452;
+  --herrschaft-foam: #eee0c8;
+  --herrschaft-gold: #c69a48;
+  background:
+    radial-gradient(circle at 18% 5rem, rgba(173, 117, 72, 0.22), transparent 28rem),
+    radial-gradient(circle at 82% 14rem, rgba(82, 108, 67, 0.18), transparent 30rem),
+    linear-gradient(155deg, rgba(255, 237, 193, 0.05), transparent 42%),
+    #291b15;
+}
+
+body.herrschaft-theme-rhonwen {
+  --herrschaft-sea-deep: #171525;
+  --herrschaft-sea: #583665;
+  --herrschaft-sea-light: #9b76a5;
+  --herrschaft-foam: #eee4f0;
+  --herrschaft-gold: #c9aa62;
+  background:
+    radial-gradient(circle at 18% 8rem, rgba(116, 83, 132, 0.28), transparent 30rem),
+    radial-gradient(circle at 82% 18rem, rgba(66, 108, 124, 0.2), transparent 34rem),
+    linear-gradient(155deg, rgba(238, 228, 240, 0.045), transparent 42%),
+    #171525;
+}
+
+body.herrschaft-theme-camruisge {
+  --herrschaft-sea-deep: #172629;
+  --herrschaft-sea: #486f70;
+  --herrschaft-sea-light: #89aaa0;
+  --herrschaft-foam: #e5ece2;
+  --herrschaft-gold: #c7a45d;
+  background:
+    radial-gradient(circle at 20% 8rem, rgba(76, 119, 119, 0.3), transparent 30rem),
+    radial-gradient(circle at 82% 17rem, rgba(124, 67, 58, 0.2), transparent 34rem),
+    linear-gradient(155deg, rgba(236, 228, 205, 0.05), transparent 42%),
+    #172629;
+}
+
+.herrschaft-page[data-herrschaft-shell]:empty {
+  min-height: 100vh;
+}
+
+.herrschaft-page .kingdom-frame {
+  background:
+    linear-gradient(180deg, rgba(246, 244, 222, 0.72), rgba(206, 214, 184, 0.42)),
+    repeating-linear-gradient(-45deg, rgba(31, 83, 89, 0.028), rgba(31, 83, 89, 0.028) 1px, transparent 1px, transparent 18px),
+    var(--kingdom-paper);
+}
+
+.herrschaft-page .kingdom-title {
+  color: #f9efd3;
+  background: linear-gradient(180deg, #477d82, #244e56);
+  border-color: rgba(196, 154, 70, 0.82);
+  text-shadow: 0 1px 1px rgba(5, 20, 22, 0.7);
+}
+
+.herrschaft-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem auto 0.75rem;
+  color: #516260;
+  font-size: 0.82rem;
+}
+
+.herrschaft-breadcrumbs a {
+  color: #244e56;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.herrschaft-breadcrumbs a:hover,
+.herrschaft-breadcrumbs a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.herrschaft-crest-stage {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.herrschaft-intro-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 370px;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  align-items: start;
+}
+
+.herrschaft-intro-row > .kingdom-content-column,
+.herrschaft-intro-row > .kingdom-sidebar-column {
+  display: block;
+  width: auto !important;
+  min-width: 0;
+}
+
+.herrschaft-intro-row > .kingdom-sidebar-column {
+  justify-self: end;
+}
+
+.herrschaft-intro-row .kingdom-infobox {
+  margin: 0 0 0 auto !important;
+}
+
+.herrschaft-page .kingdom-main-crest {
+  width: 190px;
+  height: 190px !important;
+}
+
+.herrschaft-kicker {
+  margin: -0.2rem auto 0.85rem !important;
+  color: #36565a;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.herrschaft-copy {
+  text-align: justify;
+}
+
+.herrschaft-page .kingdom-section-heading {
+  border-left-color: var(--herrschaft-sea);
+  background:
+    linear-gradient(90deg, rgba(71, 125, 130, 0.24), rgba(196, 154, 70, 0.08) 72%, transparent),
+    rgba(255, 246, 219, 0.46) !important;
+}
+
+.herrschaft-subheading {
+  margin: 1.1rem 0 0.55rem;
+  color: #27484d;
+  font: 700 1.05rem Georgia, 'Times New Roman', serif;
+}
+
+.herrschaft-source-note {
+  padding: 0.65rem 0.8rem;
+  color: #4f4a3b;
+  border-left: 3px solid var(--herrschaft-sea-light);
+  background: rgba(227, 238, 230, 0.56);
+}
+
+.herrschaft-person-root {
+  display: grid;
+  gap: 1rem;
+}
+
+.herrschaft-person-group {
+  overflow: hidden;
+  padding: 0.9rem;
+  border: 1px solid rgba(35, 77, 83, 0.36);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 0, rgba(227, 238, 230, 0.8), transparent 20rem),
+    rgba(246, 231, 191, 0.54);
+  box-shadow: 0 10px 24px rgba(27, 48, 48, 0.12);
+}
+
+.herrschaft-person-group h3 {
+  margin: 0 0 0.8rem;
+  padding: 0.48rem 0.7rem;
+  color: #f8edcf;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #477d82, #244e56);
+  font: 700 1.12rem Georgia, 'Times New Roman', serif;
+  text-align: center;
+}
+
+.herrschaft-person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.herrschaft-person-card {
+  display: grid;
+  grid-template-rows: auto 205px auto auto auto;
+  gap: 0.48rem;
+  align-content: start;
+  min-width: 0;
+  padding: 0.65rem;
+  border: 1px solid rgba(65, 79, 64, 0.32);
+  border-radius: 7px;
+  background: linear-gradient(180deg, rgba(255, 250, 231, 0.94), rgba(224, 218, 180, 0.76));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 245, 0.48);
+}
+
+.herrschaft-person-card.is-featured {
+  width: min(100%, 330px);
+  justify-self: center;
+  grid-column: 1 / -1;
+}
+
+.herrschaft-person-office {
+  display: grid;
+  place-items: center;
+  min-height: 2.5rem;
+  padding: 0.36rem 0.5rem;
+  color: #f8edcf;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #34666d, #21464d);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.herrschaft-person-portrait {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  min-height: 205px;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle, rgba(255, 250, 225, 0.88), rgba(121, 167, 167, 0.2) 72%),
+    #d8cfaa;
+}
+
+.herrschaft-person-portrait a {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.herrschaft-person-portrait img {
+  display: block;
+  width: 100%;
+  height: 205px !important;
+  object-fit: contain;
+}
+
+.herrschaft-person-placeholder {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 148px;
+  padding: 0.8rem;
+  color: #486268;
+  border: 1px dashed rgba(36, 78, 86, 0.48);
+  border-radius: 48% 48% 8px 8px;
+  background: rgba(227, 238, 230, 0.72);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.herrschaft-person-name,
+.herrschaft-person-seat,
+.herrschaft-person-note {
+  text-align: center;
+}
+
+.herrschaft-person-name {
+  color: #1d3032;
+  line-height: 1.2;
+}
+
+.herrschaft-person-seat {
+  color: #57604f;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.herrschaft-person-note {
+  color: #6d6652;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.herrschaft-family-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.herrschaft-family-link:hover,
+.herrschaft-family-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.herrschaft-administration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 0.8rem;
+  margin: 0.7rem 0 1.2rem;
+}
+
+.herrschaft-administration-card {
+  display: grid;
+  gap: 0.55rem;
+  place-items: center;
+  min-height: 176px;
+  padding: 0.75rem;
+  border: 1px solid rgba(39, 75, 78, 0.34);
+  border-radius: 7px;
+  background: linear-gradient(180deg, rgba(227, 238, 230, 0.82), rgba(230, 211, 158, 0.68));
+  text-align: center;
+}
+
+.herrschaft-administration-card img {
+  width: 112px;
+  height: 112px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 8px rgba(25, 53, 56, 0.2));
+}
+
+.herrschaft-administration-card strong {
+  color: #254a50;
+}
+
+.herrschaft-page .kingdom-county-map-panel,
+.herrschaft-page .kingdom-domain-card,
+.herrschaft-page .kingdom-family-section {
+  border-color: rgba(40, 85, 91, 0.44);
+}
+
+.herrschaft-page .kingdom-domain-title h3,
+.herrschaft-page .kingdom-family-section h3 {
+  color: #1f484f;
+}
+
+.herrschaft-page .kingdom-place-separator {
+  color: #28555b;
+}
+
+.herrschaft-page .kingdom-county-map-panel > a {
+  display: block;
+}
+
+.herrschaft-page .kingdom-county-map-panel img {
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.herrschaft-empty-copy {
+  padding: 0.75rem 0.9rem;
+  color: #625b48;
+  border: 1px dashed rgba(40, 85, 91, 0.42);
+  border-radius: 6px;
+  background: rgba(227, 238, 230, 0.42);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .herrschaft-intro-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .herrschaft-intro-row > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .herrschaft-page .kingdom-infobox {
+    width: min(100%, 620px) !important;
+    margin: 0.8rem auto 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .herrschaft-person-grid,
+  .herrschaft-administration-grid {
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .herrschaft-person-card {
+    grid-template-rows: auto 180px auto auto auto;
+  }
+
+  .herrschaft-person-portrait,
+  .herrschaft-person-portrait img {
+    min-height: 180px;
+    height: 180px !important;
+  }
+}

@@ -5,22 +5,7 @@ window.ORT_DATA = {
     type: "Standort / Hof",
     subtype: "Hof",
     status: "Draft",
-    editorVersion: 1,
     template: "zunft",
-    storage: {
-      inlineContentDocument: "lysfaen-zunft-hof-blevins",
-      sceneIndexDocument: "lysfaen-zunft-hof-blevins__scene-index",
-      sceneDocumentPrefix: "lysfaen-zunft-hof-blevins__",
-      firebaseCollections: {
-        inlineContent: "orte_inline_content",
-        scenes: "orte_scenes"
-      },
-      localStoragePrefixes: [
-        "aleria:orte:inline-content:v2:lysfaen-zunft-hof-blevins",
-        "aleria:orte:scene-index:lysfaen-zunft-hof-blevins",
-        "aleria:orte:session-module:lysfaen-zunft-hof-blevins:"
-      ]
-    }
   },
 
   name: "Hof Blevins",

@@ -4,36 +4,7 @@ window.GRUPPEN_DATA = {
     title: "Kleingruppen-Vorlage - Aleria",
     type: "Kleine Gruppierung",
     status: "Template",
-    editorVersion: 1,
     template: "kleingruppe",
-    storage: {
-      document: "kleingruppen-vorlage",
-      firebaseCollections: {
-        groups: "organisationen_und_gruppen",
-        inlineContent: "organisationen_und_gruppen_inline_content",
-        scenes: "organisationen_und_gruppen_scenes",
-      },
-      imageStorage: {
-        currentMode: "inline-url-or-base64",
-        plannedProvider: "firebase-storage",
-        plannedRoot: "gruppen/kleingruppen-vorlage/images",
-        plannedFirestoreMode: "reference",
-      },
-      tableStorage: {
-        currentMode: "html",
-        plannedStructuredMode: "optional",
-      },
-      localStoragePrefixes: [
-        "aleria:gruppen:inline-content:v2:kleingruppen-vorlage",
-        "aleria:gruppen:inline-reset:kleingruppen-vorlage",
-        "aleria:gruppen:inline-status-position:kleingruppen-vorlage",
-        "aleria:gruppen:scene-index:kleingruppen-vorlage",
-        "aleria:gruppen:scene-index-meta:kleingruppen-vorlage",
-        "aleria:gruppen:session-module:kleingruppen-vorlage:",
-        "aleria:gruppen:session-module-meta:kleingruppen-vorlage:",
-        "aleria:gruppen:comments:gruppen:kleingruppen-vorlage:",
-      ],
-    },
   },
 
   name: "Kleingruppen-Vorlage",
