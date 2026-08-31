@@ -7,6 +7,7 @@ window.KONTINENTE_REGISTRY = [
     type: "Uebersicht",
     page: "index.html",
     data: "data/kontinente-startseite.data.js",
+    contentData: "published/kontinente-startseite/data.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [
@@ -22,6 +23,7 @@ window.KONTINENTE_REGISTRY = [
     type: "Kontinent",
     page: "Estryll/Estryll.html",
     data: "Estryll/kontinent.data.js",
+    contentData: "published/kontinent-estryll/data.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [
@@ -36,6 +38,7 @@ window.KONTINENTE_REGISTRY = [
     status: "template",
     page: "_template/KoenigreichTemplate.html",
     data: "data/koenigreich-vorlage.data.js",
+    contentData: "published/koenigreich-vorlage/data.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [
@@ -50,6 +53,7 @@ window.KONTINENTE_REGISTRY = [
     status: "template",
     page: "_template/GrafschaftTemplate.html",
     data: "data/grafschaft-vorlage.data.js",
+    contentData: "published/grafschaft-vorlage/data.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [
@@ -65,6 +69,7 @@ window.KONTINENTE_REGISTRY = [
     type: "Königreich",
     page: "Estryll/Königreich Cenyr/Königreich von Cenyr.html",
     data: "Estryll/Königreich Cenyr/koenigreich.data.js",
+    contentData: "published/koenigreich-cenyr/data.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [
@@ -81,6 +86,8 @@ window.KONTINENTE_REGISTRY = [
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
     data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js",
+    contentData: "published/grafschaft-celtigerns-wacht/data.json",
+    contentExport: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json",
     inlineCollection: "kontinente_inline_content",
     sceneCollection: "kontinente_scenes",
     hierarchy: [

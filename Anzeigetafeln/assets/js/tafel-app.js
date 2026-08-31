@@ -440,6 +440,7 @@ function exitEdit(){
   document.getElementById('btn-overwrite').style.display='none';
   document.getElementById('btn-board-images').style.display='none';
   document.getElementById('btn-export').style.display='none';
+  document.getElementById('btn-publish').style.display='none';
   document.getElementById('dm-btn-cats').style.display='none';
   document.getElementById('dm-btn-mcat').style.display='none';
   document.getElementById('dm-btn-backup').style.display='none';
@@ -457,6 +458,7 @@ function enterEdit(){
   syncLayerEditControls();
   document.getElementById('btn-board-images').style.display='block';
   document.getElementById('btn-export').style.display='block';
+  document.getElementById('btn-publish').style.display=window.TafelPublish?.isConfigured()?'block':'none';
   document.getElementById('dm-btn-cats').style.display='block';
   document.getElementById('dm-btn-mcat').style.display='block';
   document.getElementById('dm-btn-backup').style.display='block';

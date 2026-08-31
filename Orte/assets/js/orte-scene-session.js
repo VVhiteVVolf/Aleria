@@ -430,6 +430,12 @@ function openModuleEditorForCurrent() {
       return;
     }
 
+    if (action === "orte-scene-publish") {
+      event.preventDefault();
+      publishScenes();
+      return;
+    }
+
     if (action === "orte-scene-edit") {
       event.preventDefault();
       const state = states.get(trigger.dataset.sceneId || "");
@@ -634,6 +640,7 @@ function openModuleEditorForCurrent() {
           <div class="orte-scene-sidebar-head-actions">
             <span class="orte-scene-count" data-orte-scene-count>0</span>
             <button type="button" data-action="orte-scene-add">+ Szene</button>
+            <button type="button" data-action="orte-scene-publish" data-orte-scenes-publish hidden>Online speichern</button>
           </div>
         </div>
         <div class="orte-scene-sidebar-list" data-orte-scene-list></div>
@@ -1078,6 +1085,20 @@ function openModuleEditorForCurrent() {
     if (store?.saveScene) await store.saveScene(ortId, state.sceneId, state.module);
   }
 
+  async function publishScenes() {
+    const store = await waitForSceneStore(900);
+    if (!store?.publish) return;
+    sceneIndexStatus = "Szenen werden online gespeichert.";
+    renderSidebar();
+    try {
+      const result = await store.publish(ortId);
+      sceneIndexStatus = `Szenen online gespeichert · Revision ${result.revision}.`;
+    } catch (error) {
+      sceneIndexStatus = error?.message || "Szenen konnten nicht online gespeichert werden.";
+    }
+    renderSidebar();
+  }
+
   function persistSceneIndex() {
     persistSceneIndex.lastLocalUpdatedAtClient = Date.now();
     sceneIndexStatus = "Szenenliste lokal geändert.";
@@ -1088,7 +1109,9 @@ function openModuleEditorForCurrent() {
       const store = await waitForSceneStore(900);
       if (store?.saveSceneIndex) {
         await store.saveSceneIndex(ortId, { order: sceneOrder });
-        sceneIndexStatus = "Szenenliste online gespeichert.";
+        sceneIndexStatus = store.persistenceMode === "draft-publish"
+          ? "Szenenliste als lokaler Entwurf gespeichert."
+          : "Szenenliste online gespeichert.";
         renderSidebar();
       }
     }, 250);
@@ -1097,6 +1120,8 @@ function openModuleEditorForCurrent() {
   async function connectSceneIndex() {
     const store = await waitForSceneStore();
     if (!store?.subscribeSceneIndex) return;
+    const publishButton = sidebar?.querySelector("[data-orte-scenes-publish]");
+    if (publishButton) publishButton.hidden = store.persistenceMode !== "draft-publish";
     store.subscribeSceneIndex(ortId, (remoteIndex) => {
       if (!remoteIndex?.order) return;
       const remoteUpdatedAtClient = Number(remoteIndex._remoteUpdatedAtClient) || 0;

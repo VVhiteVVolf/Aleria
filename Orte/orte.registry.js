@@ -6,6 +6,8 @@ window.ORTE_REGISTRY = [
     status: "template",
     type: "grossstadt",
     data: "data/grossstadt-vorlage.data.js",
+    contentData: "published/grossstadt-vorlage/data.json",
+    sceneData: "published/grossstadt-vorlage/scenes/data.json",
     hierarchy: [
       { type: "Königreich", name: "Cenyr", slug: "cenyr" },
       { type: "Grafschaft", name: "Grafschaft", slug: "grafschaft" },
@@ -27,6 +29,9 @@ window.ORTE_REGISTRY = [
     status: "template",
     type: "zunft",
     data: "data/zunfts-vorlage.data.js",
+    contentData: "published/zunfts-vorlage/data.json",
+    sceneData: "published/zunfts-vorlage/scenes/data.json",
+    marketData: "published/zunfts-vorlage/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -50,6 +55,8 @@ window.ORTE_REGISTRY = [
     status: "draft",
     type: "kleinstadt",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js",
+    contentData: "published/lysfaen/data.json",
+    sceneData: "published/lysfaen/scenes/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -74,6 +81,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "pferdezucht",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Pferdezucht_Jernigan/ort.data.js",
+    contentData: "published/lysfaen-zunft-pferdezucht-jernigan/data.json",
+    sceneData: "published/lysfaen-zunft-pferdezucht-jernigan/scenes/data.json",
+    marketData: "published/lysfaen-zunft-pferdezucht-jernigan/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -99,6 +109,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "hof",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Hof_Blevins/ort.data.js",
+    contentData: "published/lysfaen-zunft-hof-blevins/data.json",
+    sceneData: "published/lysfaen-zunft-hof-blevins/scenes/data.json",
+    marketData: "published/lysfaen-zunft-hof-blevins/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -124,6 +137,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "hof",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Hof_Glyn/ort.data.js",
+    contentData: "published/lysfaen-zunft-hof-glyn/data.json",
+    sceneData: "published/lysfaen-zunft-hof-glyn/scenes/data.json",
+    marketData: "published/lysfaen-zunft-hof-glyn/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -149,6 +165,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "hof",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Hof_Talfryn/ort.data.js",
+    contentData: "published/lysfaen-zunft-hof-talfryn/data.json",
+    sceneData: "published/lysfaen-zunft-hof-talfryn/scenes/data.json",
+    marketData: "published/lysfaen-zunft-hof-talfryn/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -174,6 +193,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "hof",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Hof_Crewe/ort.data.js",
+    contentData: "published/lysfaen-zunft-hof-crewe/data.json",
+    sceneData: "published/lysfaen-zunft-hof-crewe/scenes/data.json",
+    marketData: "published/lysfaen-zunft-hof-crewe/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [
@@ -199,6 +221,9 @@ window.ORTE_REGISTRY = [
     type: "zunft",
     subtype: "taverne",
     data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/Standorte/Taverne_Zur_Weissen_Drachin/ort.data.js",
+    contentData: "published/lysfaen-zunft-taverne-zur-weissen-drachin/data.json",
+    sceneData: "published/lysfaen-zunft-taverne-zur-weissen-drachin/scenes/data.json",
+    marketData: "published/lysfaen-zunft-taverne-zur-weissen-drachin/market/data.json",
     sceneCollection: "orte_scenes",
     inlineCollection: "orte_inline_content",
     hierarchy: [

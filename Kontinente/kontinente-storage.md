@@ -17,7 +17,7 @@ Beispiel:
 }
 ```
 
-Die normalisierte `id` ist die Dokument-ID für lokale Speicherung und Firebase.
+Die normalisierte `id` ist die stabile Dokument-ID für lokale Entwürfe und GitHub-Veröffentlichungen.
 
 Vorlagen verwenden dieselbe Regel. Die Grafschaftsvorlage ist registriert als:
 
@@ -25,28 +25,30 @@ Vorlagen verwenden dieselbe Regel. Die Grafschaftsvorlage ist registriert als:
 id: grafschaft-vorlage
 page: _template/GrafschaftTemplate.html
 data: data/grafschaft-vorlage.data.js
-Firebase-Dokument: kontinente_inline_content/grafschaft-vorlage
+contentData: published/grafschaft-vorlage/data.json
 ```
 
-## Firebase
+## GitHub-Veröffentlichung
 
-Direktbearbeitung:
+Jeder Registry-Eintrag besitzt zusätzlich zu seinem statischen `data`-Skript
+einen eigenen `contentData`-Pfad. `data` beschreibt weiterhin die Seite und
+ihre Grundstruktur; `contentData` enthält ausschließlich den veröffentlichten
+Stand der Direktbearbeitung.
 
-```text
-Collection:
-kontinente_inline_content
+Änderungen werden zunächst lokal gespeichert. Der gemeinsame Inline-Editor
+zeigt dafür `Online speichern` an und veröffentlicht den Entwurf anschließend
+über `world-content-publisher.mjs` nach GitHub. Die Datendatei besitzt eine
+Revision, sodass ein neuerer GitHub-Stand nicht still überschrieben wird.
 
-Dokument:
-{kontinent-id}
-```
+## Firebase-Übergangsimport
 
-Beispiel:
+Solange eine `contentData`-Datei noch `state: null` enthält, darf
+`kontinente-storage.js` eine bestehende Exportdatei oder den früheren
+Firestore-Stand ausschließlich lesend als Ausgangsentwurf übernehmen. Neue
+Änderungen werden nicht mehr nach Firebase geschrieben. Nach erfolgreicher
+GitHub-Veröffentlichung ist der Firebase-Fallback für diese Seite wirkungslos.
 
-```text
-kontinente_inline_content/koenigreich-cenyr
-```
-
-Das Dokument enthält `type: "kontinente-inline-content"` und im Feld `data` denselben Inline-Payload wie Orte und Gruppen:
+Die GitHub-Datei enthält denselben Inline-Payload wie Orte und Gruppen:
 
 ```js
 {
@@ -57,13 +59,6 @@ Das Dokument enthält `type: "kontinente-inline-content"` und im Feld `data` den
   images: {},
   hiddenSections: {}
 }
-```
-
-Szenenmodule verwenden später:
-
-```text
-kontinente_scenes/{kontinent-id}__scene-index
-kontinente_scenes/{kontinent-id}__{scene-id}
 ```
 
 ## LocalStorage
@@ -85,7 +80,7 @@ Alte lokale Stände unter `aleria:orte:inline-content:*:{kontinent-id}` werden n
 
 ## Bilder und Tabellen
 
-Bilder liegen aktuell noch als externe URL oder Base64 im Inline-Payload. Langfristig sollten große Uploads in Firebase Storage verschoben werden:
+Bilder liegen aktuell noch als externe URL oder Base64 im Inline-Payload. Große Dateien sollen langfristig als versionierte Assets oder über einen dafür vorgesehenen Medien-Publisher gespeichert werden:
 
 ```text
 kontinente/{kontinent-id}/images/{image-key}.{ext}

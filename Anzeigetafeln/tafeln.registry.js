@@ -33,6 +33,7 @@
         board: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafel.png",
         marker: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafelMarker.png",
       },
+      dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
       firebase: {
         collection: "anzeigetafeln",
         docId: "cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",
@@ -61,6 +62,7 @@
       folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen",
       config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/tafel.config.js",
       images: {},
+      dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
       firebase: {
         collection: "anzeigetafeln",
         docId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",

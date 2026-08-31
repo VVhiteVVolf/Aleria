@@ -85,6 +85,7 @@
     "toggle-orte-inline-edit",
     "toggle-orte-final-status",
     "save-orte-inline-edit",
+    "publish-orte-inline-edit",
     "hard-reset-orte-template",
     "toggle-orte-status-panel",
     "use-orte-local-version",
@@ -229,6 +230,7 @@
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
       <button type="button" data-action="toggle-orte-final-status" data-orte-final-action>Finalisieren</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
+      <button type="button" data-action="publish-orte-inline-edit" data-orte-inline-edit-only data-orte-publish-only hidden>Online speichern</button>
       <button type="button" data-action="undo-orte-inline-change" data-orte-history-action="undo" data-orte-inline-edit-only title="Änderung zurück">Zurück</button>
       <button type="button" data-action="redo-orte-inline-change" data-orte-history-action="redo" data-orte-inline-edit-only title="Änderung vor">Vor</button>
       <button type="button" data-action="export-orte-inline-data" data-orte-inline-edit-only>Export</button>
@@ -451,6 +453,12 @@
 
     if (action === "save-orte-inline-edit") {
       saveNow();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "publish-orte-inline-edit") {
+      publishNow();
       event.preventDefault();
       return;
     }
@@ -3334,10 +3342,33 @@
     try {
       await store.save(pageId, payload);
       clearInlineResetPending();
-      dirty = false;
-      setStatus("online gespeichert");
+      if (store.persistenceMode === "draft-publish") {
+        dirty = true;
+        setStatus("lokaler Entwurf · online speichern steht aus", "warning");
+      } else {
+        dirty = false;
+        setStatus("online gespeichert");
+      }
     } catch (error) {
       setStatus("lokal gespeichert, online fehlgeschlagen");
+    }
+  }
+
+  async function publishNow() {
+    const store = await waitForInlineStore(900);
+    if (!store?.publish) {
+      setStatus("Online-Veröffentlichung nicht verfügbar", "error");
+      return;
+    }
+    const payload = clonePayload();
+    saveLocal(payload);
+    setStatus("wird online gespeichert");
+    try {
+      const result = await store.publish(pageId, payload);
+      dirty = false;
+      setStatus(`online gespeichert · Revision ${result.revision}`, "ok");
+    } catch (error) {
+      setStatus(error?.status === 409 ? "GitHub-Konflikt · neu laden" : "online speichern fehlgeschlagen", "error");
     }
   }
 
@@ -3532,6 +3563,8 @@
 
   async function connectRemote() {
     const store = await waitForInlineStore();
+    const publishButton = document.querySelector("[data-orte-publish-only]");
+    if (publishButton) publishButton.hidden = store?.persistenceMode !== "draft-publish";
     if (!store?.subscribe) return;
 
     store.subscribe(pageId, (payload) => {

@@ -13,6 +13,9 @@
     'save-board-images': () => window.saveBoardImages(),
     'clear-board-images': () => window.clearBoardImages(),
     'open-data-manager': () => window.openDataMgr(),
+    'open-tafel-publish': () => window.TafelPublishUi.open(),
+    'tafel-publish-login': () => window.TafelPublishUi.login(),
+    'tafel-publish-online': () => window.TafelPublishUi.publish(),
     'open-category-manager': () => window.openCatMgr(),
     'open-marker-catalog': () => window.openMarkerCatalog(),
     'open-backup-history': () => window.openBackupMo(),
@@ -188,6 +191,9 @@
     },
     'check-password': (el, event) => {
       if(event.key === 'Enter') window.checkPw();
+    },
+    'tafel-publish-login': (el, event) => {
+      if(event.key === 'Enter') window.TafelPublishUi.login();
     },
     'blur-on-enter': (el, event) => {
       if(event.key === 'Enter') el.blur();

@@ -2,7 +2,7 @@
 
 Der Ordner `Anzeigetafeln` soll wie `Karten` als langfristig wartbare Plattform wachsen:
 
-- Jede Tafel besitzt eigene Bilder, Konfiguration und Firebase-Daten.
+- Jede Tafel besitzt eigene Bilder, Konfiguration und eine versionierte GitHub-Datendatei.
 - Gemeinsame Bedienlogik liegt in `assets/js`.
 - Neue Tafeln kopieren keine Feature-Logik.
 - Statische Bedienung soll ueber zentrale `data-*`-Attribute laufen.
@@ -14,7 +14,7 @@ Anzeigetafeln/
   assets/
     js/
       tafel-app.js              # Runtime-Bruecke, Rest-Orchestrierung, Pan/Touch und verbleibende LSB-UI
-      tafel-firebase.js         # Firebase-Persistenz pro Tafel
+      tafel-storage.js          # lokale Entwuerfe, GitHub-Publikation und temporaerer Firebase-Leseimport
       core/
         tafel-actions.js        # zentrale data-action/data-input-action Event-Delegation
         tafel-bootstrap.js      # Startet die Tafel nach geladenen Modulen

@@ -6,6 +6,9 @@ window.TAFEL_CONFIG = {
     board: "Bilder/MorddynTafel.png",
     marker: "Bilder/MorddynTafelMarker.png",
   },
+  storage: {
+    dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
+  },
   firebase: {
     collection: "anzeigetafeln",
     docId: "cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",

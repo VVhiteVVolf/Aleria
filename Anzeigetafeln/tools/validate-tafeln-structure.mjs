@@ -116,11 +116,8 @@ function validateActiveTafel(tafel) {
   if (tafel.folder && !fileExists(tafel.folder)) reportWarning(`${label}: folder not found yet: ${tafel.folder}`);
   if (tafel.config && !fileExists(tafel.config)) reportError(`${label}: config not found: ${tafel.config}`);
 
-  if (!tafel.firebase?.docId) {
-    reportError(`${label}: active tafel needs firebase.docId`);
-  } else if (tafel.firebase.docId !== tafel.id) {
-    reportWarning(`${label}: firebase.docId differs from tafel id`);
-  }
+  if (!tafel.dataPath) reportError(`${label}: active tafel needs dataPath`);
+  else if (!fileExists(tafel.dataPath)) reportError(`${label}: dataPath not found: ${tafel.dataPath}`);
 
   if (!tafel.images || typeof tafel.images !== "object") {
     reportError(`${label}: active tafel needs images object`);
@@ -141,11 +138,9 @@ function validateActiveTafel(tafel) {
 function validatePlannedTafel(tafel) {
   const label = tafel.id;
 
-  if (tafel.editableDraft && !tafel.firebase?.docId) {
-    reportError(`${label}: editable draft needs firebase.docId`);
-  }
-  if (tafel.editableDraft && tafel.firebase?.docId !== tafel.id) {
-    reportWarning(`${label}: editable draft firebase.docId differs from tafel id`);
+  if (tafel.editableDraft && !tafel.dataPath) reportError(`${label}: editable draft needs dataPath`);
+  if (tafel.editableDraft && tafel.dataPath && !fileExists(tafel.dataPath)) {
+    reportError(`${label}: editable draft dataPath not found: ${tafel.dataPath}`);
   }
   if (tafel.config) {
     reportWarning(`${label}: planned tafel already has config; consider switching to active when assets are ready`);
@@ -197,6 +192,7 @@ function validateRegistry() {
   const registry = readRegistry();
   const ids = new Map();
   const docIds = new Map();
+  const dataPaths = new Map();
 
   registry.forEach((tafel, index) => {
     validateTafelShape(tafel, index);
@@ -209,6 +205,11 @@ function validateRegistry() {
     if (docId) {
       if (docIds.has(docId)) reportError(`Duplicate firebase.docId: ${docId}`);
       docIds.set(docId, tafel.id);
+    }
+
+    if (tafel.dataPath) {
+      if (dataPaths.has(tafel.dataPath)) reportError(`Duplicate dataPath: ${tafel.dataPath}`);
+      dataPaths.set(tafel.dataPath, tafel.id);
     }
 
     if (tafel.status === "active") validateActiveTafel(tafel);

@@ -93,6 +93,13 @@
     window.TAFEL_CONFIG.images = { ...selectedTafel.images };
   }
 
+  if (selectedTafel?.dataPath) {
+    window.TAFEL_CONFIG.storage = {
+      ...(window.TAFEL_CONFIG.storage || {}),
+      dataPath: selectedTafel.dataPath,
+    };
+  }
+
   if (selectedTafel?.firebase) {
     window.TAFEL_CONFIG.firebase = {
       ...(window.TAFEL_CONFIG.firebase || {}),
@@ -101,7 +108,7 @@
   }
 })();
 </script>
-<script type="module" src="assets/js/tafel-firebase.js"></script>
+<script src="assets/js/tafel-storage.js"></script>
 <script src="assets/js/notes/zettel-config.js?v=tafel-rich-render-20260701a"></script>
 </head>
 <body>
@@ -143,6 +150,7 @@
   <button class="tbtn" id="btn-stamp" data-action="open-stamp-picker" style="display:none">🔖 Kopieren &amp; stempeln</button>
   <button class="tbtn" id="btn-overwrite" data-action="open-overwrite-picker" style="display:none">✏️ Überschreiben</button>
   <button class="tbtn" id="btn-export" data-action="open-data-manager" style="display:none">📦 Daten</button>
+  <button class="tbtn" id="btn-publish" data-action="open-tafel-publish" style="display:none">Online speichern</button>
   <button class="tbtn" style="display:none" id="dm-btn-cats" data-action="open-category-manager">🏷 Kategorien</button>
   <button class="tbtn" style="display:none" id="dm-btn-mcat" data-action="open-marker-catalog">🗂 Marker</button>
   <button class="tbtn" style="display:none" id="dm-btn-backup" data-action="open-backup-history">🕓 Backup</button>
@@ -167,6 +175,29 @@
   <div style="display:flex;align-items:center;gap:4px;flex-shrink:0;">
     <div id="sdot"></div>
     <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:#5a3a08;opacity:.65;letter-spacing:0.05em">SYNC</span>
+  </div>
+</div>
+
+<div class="mo" id="tafel-publish-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px))">
+    <div class="lmh"><span>Online speichern</span><button data-action="close-modal" data-modal-id="tafel-publish-mo">x</button></div>
+    <div class="lmb-body">
+      <div id="tafel-publish-key-row">
+        <label class="e-lbl" for="tafel-publish-key">Veröffentlichungsschlüssel</label>
+        <input class="e-inp" id="tafel-publish-key" type="password" data-keydown-action="tafel-publish-login">
+        <div id="tafel-publish-key-error" style="display:none;color:var(--red)"></div>
+      </div>
+      <div id="tafel-publish-confirm-row" style="display:none">
+        <div>Repository: <span id="tafel-publish-repository"></span></div>
+        <div>Aktuelle Tafel: <strong id="tafel-publish-title"></strong></div>
+      </div>
+      <div id="tafel-publish-result" style="display:none"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="tafel-publish-mo">Schließen</button>
+      <button class="s-btn s-save" id="tafel-publish-login" data-action="tafel-publish-login">Anmelden</button>
+      <button class="s-btn s-save" id="tafel-publish-confirm" data-action="tafel-publish-online" style="display:none">Jetzt veröffentlichen</button>
+    </div>
   </div>
 </div>
 
@@ -771,6 +802,7 @@
 <script src="assets/js/pins/pin-editor.js"></script>
 <script src="assets/js/pins/marker-catalog.js"></script>
 <script src="assets/js/pins/categories.js"></script>
+<script src="assets/js/core/tafel-publish-ui.js"></script>
 <script src="assets/js/core/tafel-actions.js?v=tafel-rich-render-20260701a"></script>
 <script src="assets/js/core/tafel-bootstrap.js"></script>
 </body>

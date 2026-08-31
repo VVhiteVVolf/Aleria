@@ -20,7 +20,7 @@ Gemeinsame Ressourcen:
 - `tafel.html`
 - `assets/css/tafel.css`
 - `assets/js/tafel-app.js`
-- `assets/js/tafel-firebase.js`
+- `assets/js/tafel-storage.js`
 - `assets/js/core/tafel-actions.js`
 - `assets/js/core/tafel-bootstrap.js`
 - `assets/js/board/board-layers.js`
@@ -45,9 +45,9 @@ Der konkrete Ablauf fuer neue Tafeln liegt in `NEUE-TAFEL.md`.
 
 Als Vorlage dient `_template/AnzeigetafelTemplate.html` mit `_template/tafel.config.js`.
 
-Jede neue Tafel braucht eine eigene `firebase.docId`, damit Zettel, Marker, Kategorien und DM-Daten getrennt gespeichert werden.
+Jede neue Tafel braucht einen eigenen `dataPath`, damit Zettel, Marker, Kategorien und DM-Daten getrennt als versionierte GitHub-Datei gespeichert werden.
 
-Tafelbild und Minimap-/Markerbild koennen im Editormodus ueber `Bilder` als HTTPS-/Imgur-Links gesetzt werden. Diese Links werden im Firebase-Zustand der jeweiligen Tafel gespeichert und ueberschreiben nur fuer diese Tafel die Registry-/Config-Bilder.
+Tafelbild und Minimap-/Markerbild koennen im Editormodus ueber `Bilder` als HTTPS-/Imgur-Links gesetzt werden. Diese Links landen zuerst im lokalen Entwurf und nach `Online speichern` in der Datendatei der jeweiligen Tafel.
 
 Registry pruefen:
 

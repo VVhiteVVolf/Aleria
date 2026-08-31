@@ -1,6 +1,6 @@
 # Häuser-Speicherung
 
-Dieses Dokument beschreibt, wie Familien, Häuser und Clans lokal und in Firebase gespeichert werden.
+Dieses Dokument beschreibt, wie Familien, Häuser und Clans lokal und als versionierte GitHub-Daten gespeichert werden.
 
 ## Grundregel
 
@@ -19,7 +19,17 @@ Beispiel:
 
 Diese `id` wird normalisiert und ist die Basis für alle Speicherorte.
 
-## Firebase
+## GitHub-Veröffentlichung
+
+Jeder Registry-Eintrag besitzt einen eindeutigen `contentData`-Pfad unter
+`published/<haus-id>/data.json`. Die statische `data`-Datei bleibt die
+Grundlage der Seite; `contentData` enthält den veröffentlichten Stand der
+Direktbearbeitung.
+
+Änderungen werden zunächst lokal gesichert. `Online speichern` veröffentlicht
+sie über den gemeinsamen World-Content-Publisher mit Revisionsprüfung. Der
+frühere Firestore-Zugriff ist nur noch ein dynamisch geladener read-only
+Übergangsimport, solange noch keine GitHub-Fassung vorhanden ist.
 
 ### Direktbearbeitung
 
@@ -98,17 +108,17 @@ aleria:haeuser:comments:haeuser:{haus-id}:{scene-id}
 
 ## Bildspeicherung: geplanter Ausbau
 
-Bilder sollten langfristig nicht im Firestore-Dokument selbst liegen.
-
-Zielstruktur:
+Große Bilder sollen langfristig als versionierte Assets oder über einen
+eigenen Medien-Publisher gespeichert werden. Im Inhaltszustand bleibt nur die
+Referenz:
 
 ```text
-Firebase Storage:
-haeuser/{haus-id}/images/{image-key}.{ext}
+Repository-Asset:
+Familien Häuser und Clans/assets/uploads/{haus-id}/{image-key}.{ext}
 
-Firestore Inline Payload:
+Inline-Payload:
 images[imageKey] = {
-  src: "storage://haeuser/{haus-id}/images/{image-key}.webp",
+  src: "assets/uploads/{haus-id}/{image-key}.webp",
   alt: "...",
   href: "",
   width: 100,

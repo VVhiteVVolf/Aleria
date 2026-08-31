@@ -19,7 +19,8 @@
     activeSlotId: "",
     saveTimer: 0,
     remoteUnsubscribe: null,
-    remoteLoaded: false
+    remoteLoaded: false,
+    persistenceMode: ""
   };
 
   const originalRenderPage = window.renderPage;
@@ -71,7 +72,8 @@
       "remove",
       "export",
       "export-all",
-      "trigger-import"
+      "trigger-import",
+      "publish"
     ].includes(action);
   }
 
@@ -330,6 +332,12 @@
       getImportInput(trigger.dataset.orteMarketImportSlot || "").click();
       return;
     }
+
+    if (action === "publish") {
+      event.preventDefault();
+      publishMarket();
+      return;
+    }
   }
 
   function handleImportChange(event) {
@@ -371,6 +379,7 @@
           <button type="button" data-orte-market-action="create-trade">+ Handelsgut & Tiere</button>
           <button type="button" data-orte-market-action="export-all" ${state.modules.length ? "" : "disabled"}>Alle exportieren</button>
           <button type="button" data-orte-market-action="trigger-import">Importieren</button>
+          <button type="button" data-orte-market-action="publish" data-orte-market-publish ${state.persistenceMode === "draft-publish" ? "" : "hidden"}>Online speichern</button>
         </div>` : ""}
       </div>
       <div class="orte-market-slot-grid">
@@ -774,6 +783,9 @@
   async function connectRemote() {
     const store = await waitForMarketStore();
     if (!store?.subscribe) return;
+    state.persistenceMode = store.persistenceMode || "";
+    const publishButton = host.querySelector("[data-orte-market-publish]");
+    if (publishButton) publishButton.hidden = store.persistenceMode !== "draft-publish";
     state.remoteUnsubscribe = store.subscribe(pageId, (payload) => {
       if (!payload?.modules) return;
       const localSavedAt = Number(loadLocalPayload()?.savedAtClient) || 0;
@@ -784,6 +796,20 @@
       localStorage.setItem(storageKey, JSON.stringify(payload));
       renderSlots();
     });
+  }
+
+  async function publishMarket() {
+    const store = await waitForMarketStore(900);
+    if (!store?.publish) return;
+    const status = host.querySelector(".orte-market-slot-status");
+    if (status) status.textContent = "Marktmodule werden online gespeichert.";
+    try {
+      const payload = { schemaVersion: STORE_SCHEMA_VERSION, savedAtClient: Date.now(), modules: state.modules };
+      const result = await store.publish(pageId, payload);
+      if (status) status.textContent = `Marktmodule online gespeichert · Revision ${result.revision}.`;
+    } catch (error) {
+      if (status) status.textContent = error?.message || "Marktmodule konnten nicht online gespeichert werden.";
+    }
   }
 
   function waitForMarketStore(timeout = 4500) {
