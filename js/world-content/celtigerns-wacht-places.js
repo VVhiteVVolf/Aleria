@@ -4,6 +4,65 @@
   const countyRoot = "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht";
   const blankDataPath = "data/celtigerns-wacht-place.data.js";
 
+  const domainHeraldryByName = Object.freeze({
+    "celtigerns-wacht": heraldryPath("regions", "celtigerns-wacht"),
+    "arthus-streben": heraldryPath("regions", "artus-streben"),
+    "gwendolyns-ufer": heraldryPath("regions", "gwendolyns-ufer"),
+    "herrschaft-der-gafyr": heraldryPath("houses", "Llamreis Ankunft", "haus-gafyr"),
+    "herrschaft-der-saethwyr": heraldryPath("houses", "Llamreis Ankunft", "haus-saethwyr"),
+    "herrschaft-der-wyrm": heraldryPath("houses", "Llamreis Ankunft", "haus-wyrm"),
+    "rhonwens-tranen": heraldryPath("regions", "rhonwens-traenen"),
+    camruisge: heraldryPath("regions", "camruisge")
+  });
+
+  const placeHeraldryById = Object.freeze({
+    gwynthor: heraldryPath("regions", "gwynthor"),
+    rhosmere: heraldryPath("regions", "rhosmere"),
+    abergwint: heraldryPath("regions", "abergwint"),
+    aberllan: settlementHeraldryPath("Camruisge", "Aberllan"),
+    castellbryn: heraldryPath("regions", "castellbryn"),
+
+    "tan-maelfa": settlementHeraldryPath("Llamreis Ankunft", "Tan Maelfa"),
+    lynthor: settlementHeraldryPath("Llamreis Ankunft", "Lynthor"),
+    "cor-ffynnonfaen": settlementHeraldryPath("Llamreis Ankunft", "Côr Ffynnonfaen"),
+    mwynfaen: settlementHeraldryPath("Llamreis Ankunft", "Mwynfaen"),
+    carregdrag: settlementHeraldryPath("Llamreis Ankunft", "Carregdrag"),
+    "twr-gwyntstorm": settlementHeraldryPath("Llamreis Ankunft", "Tŵr Gwyntstorm"),
+    "twr-rhewgorn": settlementHeraldryPath("Llamreis Ankunft", "Tŵr Rhewgorn"),
+
+    "twr-morlan": settlementHeraldryPath("Gwendolyns Ufer", "Twr Morlan"),
+    "castell-rhewglyn": settlementHeraldryPath("Gwendolyns Ufer", "Castell Rhewglyn"),
+    lysbryn: settlementHeraldryPath("Gwendolyns Ufer", "Lysbryn"),
+    garwfaen: settlementHeraldryPath("Gwendolyns Ufer", "Garwfaen"),
+    morcarryn: settlementHeraldryPath("Gwendolyns Ufer", "Morcarryn"),
+    traethfael: settlementHeraldryPath("Gwendolyns Ufer", "Treathfael"),
+    glasdraeth: settlementHeraldryPath("Gwendolyns Ufer", "Glasdraith"),
+    traethgorn: settlementHeraldryPath("Gwendolyns Ufer", "Treathgorn"),
+    "cor-mynyddfaen": settlementHeraldryPath("Gwendolyns Ufer", "Côr Mynyddfaen"),
+    mwyncarw: settlementHeraldryPath("Gwendolyns Ufer", "Mwyncarw"),
+    carregmawr: settlementHeraldryPath("Gwendolyns Ufer", "Carregmawr"),
+    craithfael: settlementHeraldryPath("Gwendolyns Ufer", "Craithfael"),
+    morddyn: settlementHeraldryPath("Gwendolyns Ufer", "Morddyn"),
+
+    morddwr: settlementHeraldryPath("Llamreis Ankunft", "Morddwr"),
+    gwaulwyn: settlementHeraldryPath("Llamreis Ankunft", "Gwaulwyn"),
+    bronfelen: settlementHeraldryPath("Llamreis Ankunft", "Bronfelen"),
+    mwyncairn: settlementHeraldryPath("Llamreis Ankunft", "Mwyncairn"),
+    carregfael: settlementHeraldryPath("Llamreis Ankunft", "Carregfael"),
+
+    "twr-gwaunhir": settlementHeraldryPath("Llamreis Ankunft", "Tŵr Gwaunhir"),
+    morfaen: settlementHeraldryPath("Llamreis Ankunft", "Morfaen"),
+    glastraeth: settlementHeraldryPath("Llamreis Ankunft", "Glastraeth"),
+    llysfael: settlementHeraldryPath("Llamreis Ankunft", "Llysfael"),
+    craithllyn: settlementHeraldryPath("Llamreis Ankunft", "Craithllyn"),
+
+    "twr-brynmawr": settlementHeraldryPath("Llamreis Ankunft", "Brynmawr"),
+    mwyncreig: settlementHeraldryPath("Llamreis Ankunft", "Mwyncreig"),
+    craithglyn: settlementHeraldryPath("Llamreis Ankunft", "Craithglyn"),
+    lysfaen: settlementHeraldryPath("Llamreis Ankunft", "Llysfaen"),
+    bronhir: settlementHeraldryPath("Llamreis Ankunft", "Bronhir")
+  });
+
   const baseHierarchy = Object.freeze([
     Object.freeze({ type: "Königreich", name: "Cenyr", slug: "cenyr" }),
     Object.freeze({ type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" })
@@ -15,6 +74,7 @@
       type: "Grafschaft",
       pageHref: countyPage(),
       liege: "Gwyl Celtigern",
+      heraldry: domainHeraldryByName["celtigerns-wacht"],
       hierarchy: baseHierarchy
     }),
     arthus: domain("Arthus Streben", "Baronie", domainPage("Baronie Arthus Streben"), "Haus Gwefrydd"),
@@ -169,6 +229,7 @@
       type,
       pageHref,
       liege,
+      heraldry: domainHeraldryByName[normalizeId(name)] || "",
       hierarchy: Object.freeze([
         ...baseHierarchy,
         ...extraHierarchy.map(freezeHierarchyItem),
@@ -179,6 +240,10 @@
 
   function define(id, name, placeType, domainId, options = {}) {
     const parent = domains[domainId];
+    const images = Object.freeze({
+      "icon-png": placeHeraldryById[id] || "",
+      "wappen-banner-png": parent.heraldry || ""
+    });
     return Object.freeze({
       id,
       name,
@@ -186,6 +251,7 @@
       featured: options.featured === true,
       domain: parent,
       parentHref: parent.pageHref,
+      images,
       hierarchy: Object.freeze([
         ...parent.hierarchy,
         Object.freeze({ type: placeType, name, slug: id })
@@ -206,6 +272,7 @@
   function createPlaceData(nameOrId, overrides = {}) {
     const entry = find(nameOrId);
     if (!entry) return null;
+    const presentationOverrides = overrides.presentation || {};
 
     return Object.freeze({
       meta: Object.freeze({
@@ -234,9 +301,14 @@
       }),
       presentation: Object.freeze({
         motto: "...",
-        heraldry: "",
+        heraldry: entry.images["icon-png"],
+        banner: entry.images["wappen-banner-png"],
         map: "",
-        ...(overrides.presentation || {})
+        ...presentationOverrides,
+        images: Object.freeze({
+          ...entry.images,
+          ...(presentationOverrides.images || {})
+        })
       }),
       sections: Object.freeze({ ...(overrides.sections || {}) })
     });
@@ -252,6 +324,14 @@
 
   function freezeHierarchyItem(item) {
     return Object.freeze({ ...item });
+  }
+
+  function heraldryPath(...segments) {
+    return encodeURI(`/Stammbäume/assets/images/${segments.join("/")}.png`);
+  }
+
+  function settlementHeraldryPath(domainName, placeName) {
+    return heraldryPath("regions", "Cenyr", "Celtigerns Wacht", domainName, placeName);
   }
 
   function normalizeId(value) {

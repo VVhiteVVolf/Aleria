@@ -176,22 +176,27 @@ img {
 .orte-image-slot[data-orte-image-format="portrait"],
 .orte-image-slot[data-orte-image-format="landscape"],
 .orte-image-slot[data-orte-image-format="banner"] {
+  position: relative;
   min-height: 0;
 }
 
 .orte-image-slot[data-orte-image-format="square"] {
+  --orte-image-width: 220px;
   aspect-ratio: 1 / 1;
 }
 
 .orte-image-slot[data-orte-image-format="portrait"] {
+  --orte-image-width: 315px;
   aspect-ratio: 3 / 4;
 }
 
 .orte-image-slot[data-orte-image-format="landscape"] {
+  --orte-image-width: 640px;
   aspect-ratio: 4 / 3;
 }
 
 .orte-image-slot[data-orte-image-format="banner"] {
+  --orte-image-width: 704px;
   aspect-ratio: 16 / 5;
 }
 
@@ -203,6 +208,26 @@ img {
   width: 100%;
   height: 100%;
   max-height: none;
+}
+
+.orte-image-slot.has-image:is(
+  [data-orte-image-format="square"],
+  [data-orte-image-format="portrait"],
+  [data-orte-image-format="landscape"],
+  [data-orte-image-format="banner"]
+) > :is(img, a) {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orte-image-slot.has-image > a > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .orte-image-slot[data-orte-image-fit="cover"] img {
@@ -234,11 +259,21 @@ img {
   content: "Bildplatzhalter";
 }
 
+.orte-image-slot:empty:is(
+  [data-orte-image-format="square"],
+  [data-orte-image-format="portrait"],
+  [data-orte-image-format="landscape"],
+  [data-orte-image-format="banner"]
+)::before {
+  height: 100%;
+  min-height: 100%;
+}
+
 .orte-image-slot.has-image .orte-image-placeholder {
   display: none;
 }
 
-.orte-image-slot:not(.has-image):not(.is-compact-image):not(.is-portrait-image) {
+.orte-image-slot:not([data-orte-image-format]):not(.has-image):not(.is-compact-image):not(.is-portrait-image) {
   min-width: min(100%, 260px);
 }
 
