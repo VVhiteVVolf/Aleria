@@ -26,11 +26,16 @@
     const catalogEntry = window.ALERIA_CELTIGERNS_PLACES?.find(data.meta?.id || data.name);
     const parentage = data.parentage || {};
     const placeType = data.meta?.type || catalogEntry?.placeType || "Ort";
-    const parentName = parentage.domain
-      || parentage.region
+    const governingDomainName = catalogEntry?.domain?.name
+      || parentage.domain
       || parentage.lordship
       || parentage.barony
+      || parentage.region
       || "Celtigerns Wacht";
+    const geographicRegionName = parentage.region
+      || parentage.domain
+      || parentage.barony
+      || governingDomainName;
 
     page.dataset.orteName = data.name;
     page.dataset.orteType = placeType;
@@ -39,20 +44,46 @@
     if (primaryTitle) primaryTitle.textContent = data.name;
 
     const infoboxTitle = page.querySelector(".pt-s-0024 .pt-s-0025 b");
-    if (infoboxTitle) infoboxTitle.textContent = parentName;
+    if (infoboxTitle) infoboxTitle.textContent = governingDomainName;
 
     setStructureValues({
       land: parentage.kingdom || "Cenyr",
       provinz: parentage.county || "Celtigerns Wacht",
-      region: parentName,
+      region: geographicRegionName,
       name: data.name,
       "vorherrschender adel": parentage.liege || "...",
       region2: placeType,
-      herrschaft: parentage.lordship || parentage.domain || parentage.barony || "...",
+      herrschaft: governingDomainName,
       lehnsherr: parentage.liege || "...",
     });
 
+    setFeatureVisibility("districts", supportsDistricts(placeType, catalogEntry));
     renderContextNavigation(data, catalogEntry);
+  }
+
+  function supportsDistricts(placeType, catalogEntry) {
+    const normalizedType = normalizeLabel(placeType);
+    return catalogEntry?.featured === true
+      || normalizedType === "großstadt"
+      || normalizedType === "grossstadt";
+  }
+
+  function setFeatureVisibility(featureName, visible) {
+    const featureElements = Array.from(page.querySelectorAll(`[data-orte-feature="${featureName}"]`));
+    const headingIds = featureElements
+      .flatMap((element) => Array.from(element.querySelectorAll("h2[id]")))
+      .map((heading) => heading.id);
+
+    featureElements.forEach((element) => {
+      element.hidden = !visible;
+    });
+
+    headingIds.forEach((headingId) => {
+      const tocLink = document.querySelector(`.place-template-toc [data-toc-link="${headingId}"]`);
+      if (tocLink?.closest("li")) {
+        tocLink.closest("li").hidden = !visible;
+      }
+    });
   }
 
   function setStructureValues(values) {
