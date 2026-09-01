@@ -630,6 +630,7 @@
   function renderDomainCard(domain) {
     const placeCount = domain.places.filter((place) => place.kind !== 'separator').length;
     const domainHref = getImageHref(domain.crestCell);
+    const centerHref = getPlaceHref(domain.center);
     const section = document.createElement('section');
     section.className = `kingdom-domain-card${placeCount === 1 ? ' kingdom-domain-card-compact' : ''}`;
 
@@ -661,7 +662,15 @@
       center.append(document.createTextNode('Zentrum: '));
       const centerValue = document.createElement('strong');
       centerValue.textContent = domain.center;
-      center.append(centerValue);
+      if (centerHref) {
+        const link = document.createElement('a');
+        link.className = 'kingdom-domain-center-link';
+        link.href = centerHref;
+        link.append(centerValue);
+        center.append(link);
+      } else {
+        center.append(centerValue);
+      }
       titleWrap.append(center);
     }
     header.append(titleWrap);
@@ -675,6 +684,13 @@
     } else if (domain.center) {
       const centerPanel = document.createElement('div');
       centerPanel.className = 'kingdom-domain-center-panel';
+      if (centerHref) {
+        const link = document.createElement('a');
+        link.className = 'kingdom-place-card-link';
+        link.href = centerHref;
+        link.setAttribute('aria-label', `${domain.center} öffnen`);
+        centerPanel.append(link);
+      }
       const centerImage = cloneImage(domain.centerCell);
       centerPanel.classList.toggle('has-center-icon', !!centerImage);
       if (centerImage) {
@@ -707,16 +723,22 @@
     const card = document.createElement('article');
     card.className = 'kingdom-place-card';
 
+    if (place.href) {
+      const link = document.createElement('a');
+      link.className = 'kingdom-place-card-link';
+      link.href = place.href;
+      link.setAttribute('aria-label', `${place.name || 'Ort'} öffnen`);
+      if (/^https?:\/\//i.test(place.href) && !place.href.startsWith(window.location.origin)) {
+        link.rel = 'noopener noreferrer';
+        link.target = '_blank';
+      }
+      card.classList.add('is-linked');
+      card.append(link);
+    }
+
     const iconFrame = document.createElement('span');
     iconFrame.className = 'kingdom-place-icon-frame';
-    if (place.image && place.href) {
-      const link = document.createElement('a');
-      link.href = place.href;
-      link.rel = 'noopener noreferrer';
-      link.target = '_blank';
-      link.append(place.image);
-      iconFrame.append(link);
-    } else if (place.image) {
+    if (place.image) {
       iconFrame.append(place.image);
     }
     card.append(iconFrame);
@@ -745,7 +767,7 @@
       const image = cloneImage(cell);
       const name = getCleanText(nameCells[index]);
       const type = getCleanText(typeCells[index]) || fallbackType;
-      const href = getImageHref(cell);
+      const href = getPlaceHref(name) || getImageHref(cell);
       return {
         image,
         name,
@@ -778,6 +800,10 @@
 
     const slotImage = getInlineSlotImage(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]'));
     return slotImage?.href || '';
+  }
+
+  function getPlaceHref(name) {
+    return window.ALERIA_CELTIGERNS_PLACES?.hrefFor(name) || '';
   }
 
   function appendPlaceSeparator(domain, title) {

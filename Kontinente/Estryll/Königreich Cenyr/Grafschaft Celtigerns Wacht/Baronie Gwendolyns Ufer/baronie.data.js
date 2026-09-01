@@ -42,6 +42,7 @@
       type,
       iconSrc: `${placeIconRoot}/${icon}`,
       iconAlt: `${type}: ${name}`,
+      href: window.ALERIA_CELTIGERNS_PLACES?.hrefFor(name) || "",
     });
   }
 

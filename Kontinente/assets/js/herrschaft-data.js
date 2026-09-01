@@ -50,6 +50,7 @@
       type,
       iconSrc: `/IconOrdner/Welt%20Pins/${iconFile}`,
       iconAlt: `${type}: ${name}`,
+      href: window.ALERIA_CELTIGERNS_PLACES?.hrefFor(name) || "",
     });
   }
 

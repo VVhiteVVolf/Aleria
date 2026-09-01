@@ -51,6 +51,14 @@
     script.src = resolveOrtePath(entry.data);
     script.defer = true;
     script.dataset.orteDataScript = entry.id || "";
+    script.onload = () => {
+      document.dispatchEvent(new CustomEvent("aleria:orte:data-ready", {
+        detail: {
+          entry,
+          data: window.ORT_DATA || null,
+        },
+      }));
+    };
     script.onerror = () => {
       console.warn(`Ortsdaten konnten nicht geladen werden: ${entry.data}`);
     };

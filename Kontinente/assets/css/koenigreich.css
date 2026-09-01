@@ -452,6 +452,18 @@ body {
   font-weight: 700 !important;
 }
 
+.kingdom-domain-center-link {
+  color: inherit;
+  text-decoration-color: rgba(106, 61, 18, 0.46);
+  text-underline-offset: 0.16em;
+}
+
+.kingdom-domain-center-link:hover,
+.kingdom-domain-center-link:focus-visible {
+  color: #7b3f0d;
+  text-decoration-color: currentColor;
+}
+
 .kingdom-domain-center-panel {
   display: inline-grid;
   grid-template-columns: minmax(0, 1fr);
@@ -553,6 +565,23 @@ body {
     inset 0 0 0 1px rgba(255, 254, 242, 0.64),
     0 5px 12px rgba(59, 36, 11, 0.11);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.kingdom-place-card.is-linked,
+.kingdom-domain-center-panel:has(.kingdom-place-card-link) {
+  cursor: pointer;
+}
+
+.kingdom-place-card-link {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.kingdom-place-card-link:focus-visible {
+  outline: 3px solid #8b4a16;
+  outline-offset: 3px;
 }
 
 .kingdom-place-card::before {

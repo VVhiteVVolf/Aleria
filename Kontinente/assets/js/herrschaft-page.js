@@ -397,7 +397,16 @@
       center.append(document.createTextNode("Zentrum: "));
       const value = document.createElement("strong");
       value.textContent = domain.center;
-      center.append(value);
+      const centerHref = getPlaceHref(domain.center);
+      if (centerHref) {
+        const link = document.createElement("a");
+        link.className = "kingdom-domain-center-link";
+        link.href = centerHref;
+        link.append(value);
+        center.append(link);
+      } else {
+        center.append(value);
+      }
       title.append(center);
     }
 
@@ -422,6 +431,15 @@
     const card = document.createElement("article");
     card.className = "kingdom-place-card";
 
+    if (place.href) {
+      const link = document.createElement("a");
+      link.className = "kingdom-place-card-link";
+      link.href = place.href;
+      link.setAttribute("aria-label", `${place.name || "Ort"} öffnen`);
+      card.classList.add("is-linked");
+      card.append(link);
+    }
+
     const icon = document.createElement("span");
     icon.className = "kingdom-place-icon-frame";
     if (place.iconSrc) icon.append(createImage(place.iconSrc, place.iconAlt || `${place.type || "Ort"}: ${place.name || ""}`));
@@ -437,6 +455,10 @@
     name.textContent = place.name || "Unbenannter Ort";
     card.append(name);
     return card;
+  }
+
+  function getPlaceHref(name) {
+    return window.ALERIA_CELTIGERNS_PLACES?.hrefFor(name) || "";
   }
 
   function wrapFamilyLink(content, familyId, familyTreePage) {

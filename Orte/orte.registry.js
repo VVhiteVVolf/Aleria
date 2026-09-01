@@ -195,5 +195,6 @@ window.ORTE_REGISTRY = [
       { type: "Einrichtung", name: "Taverne - \"Zur Weißen Drachin\"", slug: "taverne-zur-weissen-drachin" }
     ],
     tags: ["orte", "lysfaen", "standort", "taverne", "gewerbe", "zunft-template"]
-  }
+  },
+  ...(window.ALERIA_CELTIGERNS_PLACES?.registryEntries || [])
 ];
