@@ -7,7 +7,16 @@
     runtime.renderMapContent();
   }
 
-  function onImgErr(){
+  function onImgErr(img){
+    const layer = img?.dataset?.mapLayer || 'normal';
+    if(runtime.recoverConfiguredMapImage?.(layer, img)){
+      runtime.toast(`⚠ ${layer === 'normal' ? 'Kartenbild' : 'Kartenebene'} aus der Registry wiederhergestellt`);
+      return;
+    }
+    if(layer !== 'normal'){
+      runtime.toast('⚠ Kartenebene nicht gefunden — Pfad prüfen');
+      return;
+    }
     runtime.setMapImageSize(1400, 1000);
     runtime.fitMapView();
     runtime.renderMapContent();

@@ -195,14 +195,43 @@ function applyMapConfig(){
   if(cfg.documentTitle) document.title=cfg.documentTitle;
 }
 function applyMapImages(){
-  const imgs=cleanMapImages(S.mapImages||KARTO_CONFIG.images||{});
-  S.mapImages=imgs;
+  const saved=cleanMapImages(S.mapImages||{});
+  const configured=cleanMapImages(KARTO_CONFIG.images||{});
+  const sources=window.KartoMapImageSources;
+  const effective={
+    normal:sources?.select(saved.normal,configured.normal)||saved.normal||configured.normal,
+    regions:sources?.select(saved.regions,configured.regions)||saved.regions||configured.regions,
+    pins:sources?.select(saved.pins,configured.pins)||saved.pins||configured.pins,
+  };
+  // Keep the editable state portable. Missing or machine-local legacy paths
+  // are healed from the registry, while valid custom URLs stay untouched.
+  S.mapImages={
+    normal:sources?.toPublicUrl(saved.normal)?saved.normal:(configured.normal||saved.normal),
+    regions:sources?.toPublicUrl(saved.regions)?saved.regions:(configured.regions||saved.regions),
+    pins:sources?.toPublicUrl(saved.pins)?saved.pins:(configured.pins||saved.pins),
+  };
   const normal=document.getElementById('ln');
   const regions=document.getElementById('lr');
   const pins=document.getElementById('lm');
-  if(normal) normal.src=imgs.normal||EMPTY_MAP_IMAGE;
-  if(regions) regions.src=imgs.regions||EMPTY_LAYER_IMAGE;
-  if(pins) pins.src=imgs.pins||EMPTY_LAYER_IMAGE;
+  setMapImageSource(normal,effective.normal||EMPTY_MAP_IMAGE);
+  setMapImageSource(regions,effective.regions||EMPTY_LAYER_IMAGE);
+  setMapImageSource(pins,effective.pins||EMPTY_LAYER_IMAGE);
+}
+
+function setMapImageSource(img,source){
+  if(!img)return;
+  delete img.dataset.registryFallback;
+  img.src=source;
+}
+
+function recoverConfiguredMapImage(layer,img){
+  const sources=window.KartoMapImageSources;
+  const fallback=sources?.configured(layer);
+  if(!img||!fallback||img.dataset.registryFallback==='tried'||sources.equivalent(img.currentSrc||img.src,fallback)) return false;
+  img.dataset.registryFallback='tried';
+  S.mapImages={...cleanMapImages(S.mapImages||{}),[layer]:KARTO_CONFIG.images?.[layer]||fallback};
+  img.src=fallback;
+  return true;
 }
 // Beyond the 3 built-in overlay <img>s (#lr/#lm), custom layers get their
 // own <img class="ml" data-overlay="extra-<id>"> created on demand here -
@@ -328,6 +357,7 @@ window.KartoRuntime = {
   mapImageSize(){
     return {width:imgW, height:imgH};
   },
+  recoverConfiguredMapImage,
   mapViewportSize(){
     return {width:mapWrap.clientWidth, height:mapWrap.clientHeight};
   },
