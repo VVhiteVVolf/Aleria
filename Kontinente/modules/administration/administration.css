@@ -1,0 +1,360 @@
+.administration-grid,
+.herrschaft-administration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.85rem;
+  width: min(100%, 850px);
+  margin: 1rem auto;
+}
+
+.administration-card,
+.herrschaft-administration-card {
+  appearance: none;
+  display: grid;
+  grid-template-rows: 112px auto auto;
+  place-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.8rem;
+  border: 1px solid rgba(92, 55, 22, 0.38);
+  border-radius: 10px;
+  color: #352313;
+  background: linear-gradient(145deg, rgba(250, 239, 210, 0.98), rgba(218, 186, 132, 0.94));
+  box-shadow: 0 7px 16px rgba(49, 30, 12, 0.18);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.administration-card:hover,
+.herrschaft-administration-card:hover {
+  transform: translateY(-3px);
+  border-color: #8d571e;
+  box-shadow: 0 10px 22px rgba(49, 30, 12, 0.26);
+}
+
+.administration-card:focus-visible,
+.herrschaft-administration-card:focus-visible,
+.administration-dialog-close:focus-visible {
+  outline: 3px solid #b57a27;
+  outline-offset: 3px;
+}
+
+.administration-card img,
+.herrschaft-administration-card img {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+}
+
+.administration-card > span,
+.herrschaft-administration-card > span {
+  color: #72502c;
+  font-size: 0.72rem;
+}
+
+.administration-dialog {
+  width: min(1180px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 1px solid #8d612d;
+  border-radius: 14px;
+  color: #352313;
+  background: #efe0bd;
+  box-shadow: 0 28px 80px rgba(18, 10, 3, 0.55);
+}
+
+.administration-dialog::backdrop {
+  background: rgba(18, 12, 7, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+.administration-dialog-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  max-height: calc(100vh - 2rem);
+}
+
+.administration-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  color: #fff7e5;
+  background: linear-gradient(135deg, #2f1d10, #70401e);
+  border-bottom: 3px double #c4964e;
+}
+
+.administration-dialog-header h2 {
+  margin: 0.15rem 0 0;
+  font-family: Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.administration-dialog-kicker {
+  color: #e3c58c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.administration-dialog-close {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255, 247, 229, 0.5);
+  border-radius: 50%;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  font: 400 1.8rem/1 Georgia, serif;
+  cursor: pointer;
+}
+
+.administration-dialog-body {
+  overflow: auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 250, 230, 0.7), transparent 18rem),
+    linear-gradient(rgba(245, 229, 191, 0.96), rgba(226, 201, 153, 0.96));
+}
+
+.administration-dialog-facts {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.35fr) 1fr;
+  margin: 0 0 1.4rem;
+  border: 1px solid rgba(91, 55, 24, 0.35);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.administration-dialog-facts dt,
+.administration-dialog-facts dd {
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid rgba(91, 55, 24, 0.22);
+}
+
+.administration-dialog-facts dt {
+  color: #fff8e9;
+  background: #75421e;
+  font-weight: 700;
+}
+
+.administration-dialog-facts dd {
+  background: rgba(255, 248, 225, 0.64);
+}
+
+.administration-dialog-section {
+  margin-top: 1.5rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(94, 58, 26, 0.3);
+}
+
+.administration-dialog-heading {
+  margin: 0.35rem 0 0.8rem;
+  font: 700 1.2rem/1.3 Georgia, serif;
+  color: #5d3218;
+}
+
+.administration-dialog-table-scroll {
+  width: 100%;
+  margin: 0.8rem 0;
+  overflow-x: auto;
+  border: 1px solid rgba(89, 53, 23, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 250, 235, 0.68);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.administration-dialog-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.administration-dialog-table th,
+.administration-dialog-table td {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(89, 53, 23, 0.3);
+  text-align: left;
+  vertical-align: top;
+}
+
+.administration-dialog-table th {
+  color: #3b2414;
+  background: #d4ae6d;
+  font-family: Georgia, serif;
+}
+
+.administration-dialog-table tbody tr:nth-child(even) > td:not([colspan]) {
+  background: rgba(219, 190, 139, 0.24);
+}
+
+.administration-dialog-table td[colspan] {
+  color: #fff8e9;
+  background: #6a3b1d;
+  font-weight: 700;
+  text-align: center;
+}
+
+.administration-dialog-table.is-office-table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+
+.administration-dialog-table.is-office-table th:nth-child(1) { width: 23%; }
+.administration-dialog-table.is-office-table th:nth-child(2) { width: 29%; }
+.administration-dialog-table.is-office-table th:nth-child(3) { width: 32%; }
+.administration-dialog-table.is-office-table th:nth-child(4) { width: 16%; }
+
+.administration-dialog-table.is-hierarchy-table {
+  min-width: 700px;
+  table-layout: fixed;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.administration-dialog-table.is-hierarchy-table td {
+  padding: 0.4rem 0.45rem;
+  text-align: center;
+}
+
+.administration-dialog-table.is-hierarchy-table tr:has(img) td {
+  padding: 0.55rem 0.4rem;
+  vertical-align: bottom;
+}
+
+.administration-dialog-table.is-hierarchy-table .is-primary-leader-title-row td,
+.administration-dialog-table.is-hierarchy-table .is-primary-leader-name-row td {
+  padding: 0.42rem 0.65rem;
+  color: #fff8e9;
+  background: #523019;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.015em;
+}
+
+.administration-dialog-table.is-hierarchy-table .is-primary-leader-row td {
+  padding: 0.65rem;
+  background: rgba(207, 171, 109, 0.42);
+}
+
+.administration-dialog-table.is-hierarchy-table .is-primary-leader-row .administration-dialog-portrait {
+  width: 82px;
+}
+
+.administration-dialog-table.is-compact-table {
+  min-width: 520px;
+}
+
+.administration-dialog-section img {
+  display: block;
+  height: auto;
+  margin: 0.45rem auto;
+  object-fit: contain;
+}
+
+.administration-dialog-emblem {
+  width: 88px;
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.administration-dialog-portrait {
+  width: 76px;
+  max-width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 2px solid #6c4424;
+  border-radius: 5px;
+  background: rgba(83, 50, 23, 0.12);
+  box-shadow: 0 3px 8px rgba(42, 25, 11, 0.2);
+  object-fit: cover !important;
+  object-position: center top;
+}
+
+.administration-dialog-landscape {
+  width: min(100%, 440px);
+  max-height: 280px;
+}
+
+.administration-dialog-details > summary {
+  padding: 0.7rem 0.85rem;
+  color: #fff8e9;
+  background: #4c2c17;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.administration-dialog-status {
+  padding: 2rem;
+  text-align: center;
+}
+
+.administration-dialog-status.is-error {
+  color: #811d16;
+}
+
+.administration-dialog-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(94, 58, 26, 0.3);
+  color: #79512c;
+}
+
+.administration-dialog-navigation button {
+  padding: 0.25rem 0.4rem;
+  border: 0;
+  color: #4f2e18;
+  background: transparent;
+  font: 700 0.9rem/1.3 Georgia, serif;
+  cursor: pointer;
+}
+
+.administration-dialog-navigation button:hover {
+  color: #9a5b1e;
+  text-decoration: underline;
+}
+
+.administration-dialog-navigation button:focus-visible {
+  outline: 2px solid #9a5b1e;
+  outline-offset: 2px;
+}
+
+@media (max-width: 680px) {
+  .administration-grid,
+  .herrschaft-administration-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .administration-dialog-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .administration-dialog-facts dt,
+  .administration-dialog-facts dd {
+    border-bottom: 0;
+  }
+
+  .administration-dialog-table.is-hierarchy-table {
+    min-width: 620px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .administration-card,
+  .herrschaft-administration-card {
+    transition: none;
+  }
+}

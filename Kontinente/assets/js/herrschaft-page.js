@@ -125,7 +125,7 @@
     familyTable.setAttribute("aria-label", `Familien ${article.title || "der Herrschaft"}`);
     const familyBody = document.createElement("tbody");
     const familyRow = document.createElement("tr");
-    const familyCell = createElement("td", "", "Die Familienübersicht wird geladen.");
+    const familyCell = createElement("td");
     familyCell.colSpan = 5;
     familyRow.append(familyCell);
     familyBody.append(familyRow);
@@ -327,19 +327,38 @@
   function renderAdministration(root, entries) {
     if (!root || !Array.isArray(entries)) return;
     const fragment = document.createDocumentFragment();
+    const administrationKeys = {
+      "Militär": "militaer",
+      "Klerus": "klerus",
+      "Gerichtsbarkeit": "gerichtsbarkeit",
+      "Finanzen": "finanzen",
+      "Spionage": "spionage",
+      "Diplomatie": "diplomatie",
+      "Magie": "magie",
+      "Unterhaltung": "unterhaltung",
+    };
 
     entries.forEach((entry) => {
-      const card = document.createElement("article");
+      const card = document.createElement("button");
+      card.type = "button";
       card.className = "herrschaft-administration-card";
+      card.dataset.administrationKey = entry.key || administrationKeys[entry.name] || "";
+      card.dataset.action = "open-administration";
+      card.setAttribute("aria-haspopup", "dialog");
       if (entry.imageSrc) card.append(createImage(entry.imageSrc, `Symbol für ${entry.name || "Verwaltungsbereich"}`));
 
       const name = document.createElement("strong");
       name.textContent = entry.name || "Verwaltungsbereich";
       card.append(name);
+
+      const hint = document.createElement("span");
+      hint.textContent = "Struktur ansehen";
+      card.append(hint);
       fragment.append(card);
     });
 
     root.replaceChildren(fragment);
+    document.dispatchEvent(new CustomEvent("aleria:administration-rendered"));
   }
 
   function renderGeography(root, geography) {
