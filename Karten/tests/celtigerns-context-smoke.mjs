@@ -115,7 +115,12 @@ await navigate("/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtige
 const countyAdministration = await evaluate(`(async () => {
   const card = document.querySelector('[data-administration-key="militaer"]');
   card?.click();
-  await new Promise((resolve) => setTimeout(resolve, 350));
+  const deadline = Date.now() + 4000;
+  while (Date.now() < deadline) {
+    const body = document.querySelector('[data-role="administration-dialog-body"]');
+    if (body && !body.textContent.includes('Inhalte werden geladen')) break;
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
   return {
     scope: card?.dataset.administrationScope,
     empty: Boolean(document.querySelector('.administration-dialog-section.is-empty')),
