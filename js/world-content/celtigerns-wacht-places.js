@@ -35,6 +35,24 @@
     define("aberllan", "Aberllan", "Großstadt", "camruisge", { featured: true }),
     define("castellbryn", "Castellbryn", "Großstadt", "rhonwen", { featured: true }),
 
+    define("nyth-conraich", "Nyth Conraich", "Ruine", "county"),
+    define("lycath", "Lycath", "Ruine", "county"),
+    define("conbryn", "Conbryn", "Ruine", "county"),
+    define("conmar", "Conmar", "Ruine", "county"),
+    define("brawneth", "Brawneth", "Ruine", "county"),
+    define("zum-roten-drachen", "Zum roten Drachen", "Taverne", "county"),
+    define("tan-maelfa", "Tan Maelfa", "Abendschilde", "county"),
+    define("twr-dragwyn", "Tŵr Dragwyn", "Arkanum von Avallorn", "county"),
+    define("lynthor", "Lynthor", "Bewahrer von Avallorn", "county"),
+    define("fluesterspalt", "Flüsterspalt", "Höhle", "county"),
+    define("wetterspalte", "Wetterspalte", "Höhle", "county"),
+    define("perlentaucherin", "Perlentaucherin", "Schiffswrack", "county"),
+    define("cor-ffynnonfaen", "Côr Ffynnonfaen", "Befestigte Siedlung", "county"),
+    define("mwynfaen", "Mwynfaen", "Bergbausiedlung", "county"),
+    define("carregdrag", "Carregdrag", "Bergbausiedlung", "county"),
+    define("twr-gwyntstorm", "Tŵr Gwyntstorm", "Turm", "county"),
+    define("twr-rhewgorn", "Tŵr Rhewgorn", "Turm", "county"),
+
     define("twr-coedlorn", "Tŵr Coedlorn", "Turm", "arthus"),
     define("llyswynfa", "Llyswynfa", "Siedlung", "arthus"),
     define("gwaulhir", "Gwaulhir", "Siedlung", "arthus"),
@@ -47,6 +65,13 @@
     define("nantaur", "Nantaur", "Bergbausiedlung", "arthus"),
     define("rhuddor", "Rhuddor", "Bergbausiedlung", "arthus"),
     define("castell-rhoswen", "Castell Rhoswen", "Burg", "arthus"),
+    define("bernsteingrotte", "Bernsteingrotte", "Höhle", "arthus"),
+    define("blutfels", "Blutfels", "Höhle", "arthus"),
+    define("nebelgrotte", "Nebelgrotte", "Höhle", "arthus"),
+    define("broncelyn", "Broncelyn", "Rhosmeres Rösser", "arthus"),
+    define("maesglann", "Maesglann", "Rhosmeres Rösser", "arthus"),
+    define("turnierplatz", "Turnierplatz", "Turnierfeld", "arthus"),
+    define("turnierfeld", "Turnierfeld", "Turnierplatz", "arthus"),
 
     define("twr-morlan", "Tŵr Morlan", "Turm", "gwendolyn"),
     define("castell-rhewglyn", "Castell Rhewglyn", "Festung", "gwendolyn"),
@@ -60,6 +85,12 @@
     define("mwyncarw", "Mwyncarw", "Bergbausiedlung", "gwendolyn"),
     define("carregmawr", "Carregmawr", "Bergbausiedlung", "gwendolyn"),
     define("craithfael", "Craithfael", "Bergbausiedlung", "gwendolyn"),
+    define("feuerstollen", "Feuerstollen", "Höhle", "gwendolyn"),
+    define("kompassrose", "Kompassrose", "Schiffswrack", "gwendolyn"),
+    define("schwarzer-rumpf", "Schwarzer Rumpf", "Schiffswrack", "gwendolyn"),
+    define("sirenentraene", "Sirenenträne", "Schiffswrack", "gwendolyn"),
+    define("der-rostige-haken", "Der rostige Haken", "Taverne", "gwendolyn"),
+    define("morddyn", "Morddyn", "Hafen", "gwendolyn"),
 
     define("morddwr", "Morddwr", "Hafensiedlung", "gafyr"),
     define("gwaulwyn", "Gwaulwyn", "Bauernsiedlung", "gafyr"),
@@ -92,7 +123,13 @@
     define("twr-gwaunfaen", "Tŵr Gwaunfaen", "Turm", "rhonwen"),
     define("twr-caerlan", "Tŵr Caerlan", "Turm", "rhonwen"),
     define("twr-tidemor", "Tŵr Tidemor", "Turm", "rhonwen"),
-    define("twr-dreathmor", "Tŵr Dreathmor", "Turm", "rhonwen")
+    define("twr-dreathmor", "Tŵr Dreathmor", "Turm", "rhonwen"),
+    define("schiffswrack", "Schiffswrack", "Wrack", "rhonwen"),
+    define("achatorden", "Achatorden", "Orden", "rhonwen"),
+    define("wellenschnitter", "Wellenschnitter", "Wahrzeichen", "rhonwen"),
+    define("ath-fynach", "Ath Fynach", "Heiligtum", "rhonwen"),
+
+    define("oilean", "Oilean", "Stadt", "camruisge")
   ]);
 
   const placesById = new Map(definitions.map((entry) => [entry.id, entry]));
@@ -151,7 +188,7 @@
       parentHref: parent.pageHref,
       hierarchy: Object.freeze([
         ...parent.hierarchy,
-        Object.freeze({ type: "Siedlung", name, slug: id })
+        Object.freeze({ type: placeType, name, slug: id })
       ])
     });
   }
