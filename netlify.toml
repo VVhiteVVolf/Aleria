@@ -1,4 +1,5 @@
 [build]
+  command = "node Karten/tools/build-media-library.mjs"
   publish = "."
   functions = "netlify/functions"
 

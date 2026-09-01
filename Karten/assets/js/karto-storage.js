@@ -44,6 +44,7 @@
         draftStorageKey,
         JSON.stringify({ basedOnRevision: publishedRevision, savedAt: new Date().toISOString(), state }),
       );
+      window.dispatchEvent(new CustomEvent('aleria:karto:draft-status', { detail: { hasDraft: true } }));
     } catch (error) {
       console.warn('[karto-storage] Lokaler Entwurf konnte nicht gespeichert werden:', error);
     }
@@ -52,6 +53,7 @@
   function clearDraft() {
     try {
       localStorage.removeItem(draftStorageKey);
+      window.dispatchEvent(new CustomEvent('aleria:karto:draft-status', { detail: { hasDraft: false } }));
     } catch {
       /* ignore */
     }
@@ -109,6 +111,7 @@
   window.KartoPublish = {
     isConfigured: () => !!dataPath,
     hasSession: () => !!publishSessionKey,
+    hasLocalDraft: () => !!readDraft(),
     publishedRevision: () => publishedRevision,
 
     // Turns a locally picked file into a data: URL that already works as

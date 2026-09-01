@@ -1,0 +1,102 @@
+.orte-house-table {
+  width: 100% !important;
+  table-layout: fixed;
+  background: linear-gradient(180deg, #f3e4be, #ddc58d);
+}
+
+.orte-house-table th,
+.orte-house-table td {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--place-border-dark);
+  vertical-align: middle;
+}
+
+.orte-house-table > tbody > tr:first-child > th,
+.orte-house-table .orte-house-group > th {
+  color: var(--place-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+
+.orte-house-table > tbody > tr:first-child > th:nth-child(1) {
+  width: 88px;
+}
+
+.orte-house-table > tbody > tr:first-child > th:nth-child(2) {
+  width: 22%;
+}
+
+.orte-house-table > tbody > tr:first-child > th:nth-child(3) {
+  width: 18%;
+}
+
+.orte-house-table > tbody > tr:first-child > th:nth-child(4) {
+  width: 27%;
+}
+
+.orte-house-table .orte-house-entry:nth-child(odd) {
+  background: rgba(255, 248, 226, 0.45);
+}
+
+.orte-house-table .orte-house-entry > td:not(.orte-house-emblem) {
+  text-align: center;
+}
+
+.orte-house-table .orte-house-emblem {
+  width: 88px;
+  text-align: center;
+}
+
+.orte-house-table .orte-house-emblem img {
+  display: block;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(48, 27, 8, 0.28));
+}
+
+.orte-house-table a {
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .orte-house-table,
+  .orte-house-table tbody,
+  .orte-house-table tr,
+  .orte-house-table td,
+  .orte-house-table th {
+    display: block;
+    width: 100% !important;
+  }
+
+  .orte-house-table > tbody > tr:first-child {
+    display: none;
+  }
+
+  .orte-house-table .orte-house-entry {
+    margin-bottom: 0.7rem;
+    border: 1px solid var(--place-border-dark);
+  }
+
+  .orte-house-table .orte-house-entry > td {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 0.65rem;
+    text-align: left !important;
+  }
+
+  .orte-house-table .orte-house-entry > td::before {
+    content: attr(data-label);
+    font-weight: 700;
+  }
+
+  .orte-house-table .orte-house-emblem {
+    display: block !important;
+  }
+
+  .orte-house-table .orte-house-emblem::before {
+    display: none;
+  }
+}

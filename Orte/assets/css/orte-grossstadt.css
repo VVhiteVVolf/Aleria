@@ -172,6 +172,38 @@ img {
   object-fit: contain;
 }
 
+.orte-heraldic-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(180px, 260px) minmax(0, 260px);
+  align-items: end;
+  justify-content: center;
+  gap: clamp(0.4rem, 2vw, 1.5rem);
+  width: min(100%, 820px);
+  margin: 0 auto 0.8rem;
+}
+
+.orte-heraldic-stage:not(:has(.orte-heraldic-supporter.has-image)) {
+  grid-template-columns: minmax(180px, 260px);
+}
+
+.orte-heraldic-supporter:not(.has-image) {
+  display: none;
+}
+
+.orte-heraldic-supporter {
+  align-self: end;
+  filter: drop-shadow(0 12px 10px rgba(41, 24, 8, 0.24));
+}
+
+.orte-heraldic-supporter--left img {
+  transform: scaleX(-1);
+}
+
+.orte-heraldic-main-crest {
+  align-self: center;
+  filter: drop-shadow(0 10px 9px rgba(41, 24, 8, 0.28));
+}
+
 .orte-image-slot[data-orte-image-format="square"],
 .orte-image-slot[data-orte-image-format="portrait"],
 .orte-image-slot[data-orte-image-format="landscape"],
@@ -317,7 +349,7 @@ img {
   .pt-s-0082,
   .pt-s-0083,
   .region-s-0005
-)[colspan]:not(:has(.orte-image-slot, [data-orte-image-key], img)) {
+)[colspan]:not(.region-map-cell):not(:has(.orte-image-slot, [data-orte-image-key], img)) {
   height: 18px;
   min-height: 18px;
   padding: 2px 8px;
@@ -335,7 +367,7 @@ img {
   .pt-s-0082,
   .pt-s-0083,
   .region-s-0005
-)[colspan]:not(:has(.orte-image-slot, [data-orte-image-key], img)) > * {
+)[colspan]:not(.region-map-cell):not(:has(.orte-image-slot, [data-orte-image-key], img)) > * {
   display: none;
 }
 
@@ -519,6 +551,12 @@ img {
   --orte-balanced-text-min-height: 320px;
 }
 
+.grossstadt-template-frame > tbody > tr > .orte-full-width-section {
+  width: 100% !important;
+  min-width: 0;
+  max-width: none;
+}
+
 .grossstadt-template .pt-s-0067 .pt-s-0077 {
   width: 987px !important;
   height: 420px !important;
@@ -639,5 +677,9 @@ img {
     width: 1101px;
     border-left: 0;
     border-right: 0;
+  }
+
+  .orte-heraldic-stage {
+    grid-template-columns: minmax(0, 210px) minmax(150px, 210px) minmax(0, 210px);
   }
 }

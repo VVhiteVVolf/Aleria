@@ -247,6 +247,12 @@ window.ORT_DATA = {
       ]
     },
     {
+      id: "stadtbild-architektur",
+      title: "Stadtbild & Architektur",
+      shortTitle: "Stadtbild",
+      text: "Baustile, Materialien, Straßenbild, prägende Bauwerke, Befestigungen und das Erscheinungsbild der Stadt."
+    },
+    {
       id: "militaer",
       title: "Militär",
       shortTitle: "Militär",

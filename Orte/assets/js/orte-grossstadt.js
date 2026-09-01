@@ -36,6 +36,9 @@
       || parentage.domain
       || parentage.barony
       || governingDomainName;
+    const structure = data.structure || {};
+    const features = data.features || {};
+    const presentation = data.presentation || {};
 
     page.dataset.orteName = data.name;
     page.dataset.orteType = placeType;
@@ -46,6 +49,8 @@
     const infoboxTitle = page.querySelector(".pt-s-0024 .pt-s-0025 b");
     if (infoboxTitle) infoboxTitle.textContent = governingDomainName;
 
+    setMotto(presentation.motto, presentation.mottoSource);
+
     setStructureValues({
       land: parentage.kingdom || "Cenyr",
       provinz: parentage.county || "Celtigerns Wacht",
@@ -55,10 +60,36 @@
       region2: placeType,
       herrschaft: governingDomainName,
       lehnsherr: parentage.liege || "...",
+      ...structure,
     });
 
-    setFeatureVisibility("districts", supportsDistricts(placeType, catalogEntry));
+    const hasDistricts = supportsDistricts(placeType, catalogEntry);
+    setFeatureVisibility("districts", hasDistricts);
+    setBuiltEnvironmentHeading(hasDistricts);
+    setFeatureVisibility("notice-board", features.noticeBoard !== false);
     renderContextNavigation(data, catalogEntry);
+  }
+
+  function setBuiltEnvironmentHeading(isCity) {
+    const heading = page.querySelector('[data-orte-section="built-environment"] h2');
+    if (!heading) return;
+
+    const title = isCity ? "Stadtbild & Architektur" : "Ortsbild & Bauweise";
+    heading.textContent = title;
+
+    const tocLink = page.ownerDocument.querySelector(`.place-template-toc [data-toc-link="${heading.id}"]`);
+    if (tocLink) tocLink.textContent = title;
+  }
+
+  function setMotto(motto, source) {
+    const lines = page.querySelectorAll(".grossstadt-template-frame > thead .pt-s-0005");
+    const quoteLine = lines[0];
+    const sourceLine = lines[1];
+    if (!quoteLine || !sourceLine) return;
+
+    quoteLine.textContent = motto && motto !== "…" ? `„${motto}“` : "…";
+    sourceLine.textContent = source ? `– ${source}` : "";
+    sourceLine.hidden = !source;
   }
 
   function supportsDistricts(placeType, catalogEntry) {

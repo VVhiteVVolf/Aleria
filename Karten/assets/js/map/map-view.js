@@ -30,7 +30,7 @@
   }
 
   function activeLayerButtons(){
-    return [...document.querySelectorAll('#layer-btns .lbtn.on')];
+    return [...document.querySelectorAll('#layer-btns .lbtn.on:not([data-layer="normal"])')];
   }
 
   function applyLayerOpacities(){
@@ -49,7 +49,10 @@
   }
 
   function resetLayers(){
-    activeLayerButtons().forEach(button => setLayerActive(button.dataset.layer, false));
+    document.querySelectorAll('#layer-btns .lbtn:not([data-layer="normal"])').forEach(button => {
+      setLayerActive(button.dataset.layer, false);
+    });
+    document.getElementById('lb-normal')?.classList.add('on');
     applyLayerOpacities();
   }
 

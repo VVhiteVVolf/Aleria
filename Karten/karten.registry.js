@@ -204,6 +204,28 @@
       notes: "Geplanter Stadt-Link fuer die spaetere Morddyn-Ortsseite.",
     },
     {
+      id: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+      title: "Gwynthor – Bannkreis",
+      status: MAP_STATUS.ACTIVE,
+      type: MAP_TYPES.REGION,
+      hierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "llamrais-ankunft", title: "Llamreis Ankunft" },
+        { level: "region", slug: "gwynthor-bannkreis", title: "Gwynthors Bannkreis" },
+      ],
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis",
+      config: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/template.config.js",
+      images: {
+        normal: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.png",
+        regions: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.png",
+        pins: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.png",
+      },
+      dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
+      link: "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+      rulingHouse: "Haus Draig",
+    },
+    {
       id: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
       title: "Llysfaens Stadtkarte",
       status: MAP_STATUS.ACTIVE,

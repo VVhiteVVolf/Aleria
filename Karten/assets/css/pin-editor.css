@@ -1,0 +1,189 @@
+.pin-editor-header-actions {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin-left: auto;
+}
+
+.pin-editor-status {
+  padding: 4px 10px;
+  border: 1px solid rgba(96, 67, 18, .32);
+  border-radius: 999px;
+  color: var(--ink2);
+  background: rgba(255, 248, 220, .5);
+  font-family: 'Cinzel', serif;
+  font-size: var(--fs-xs);
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+.pin-editor-status.is-dirty {
+  border-color: #a86a20;
+  color: #7a3e08;
+  background: rgba(231, 176, 66, .2);
+}
+
+.pin-editor-publish {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 1px solid #6a4208;
+  border-radius: 2px;
+  color: #fff8dd;
+  background: linear-gradient(180deg, #9a6a13, #684008);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .18);
+  font-family: 'Cinzel', serif;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .035em;
+  cursor: pointer;
+}
+
+.pin-editor-publish:hover {
+  background: linear-gradient(180deg, #b27c19, #754907);
+}
+
+.pin-editor-tabs {
+  position: sticky;
+  top: -1rem;
+  z-index: 3;
+  display: flex;
+  gap: 2px;
+  padding: .35rem 0 .65rem;
+  margin-bottom: .8rem;
+  background: linear-gradient(180deg, var(--p1) 78%, rgba(240, 228, 192, 0));
+}
+
+.pin-editor-tab {
+  flex: 1 1 auto;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid var(--border2);
+  border-bottom: 2px solid #81530e;
+  color: var(--ink2);
+  background: rgba(255, 248, 220, .58);
+  font-family: 'Cinzel', serif;
+  font-size: var(--fs-xs);
+  letter-spacing: .025em;
+  cursor: pointer;
+}
+
+.pin-editor-tab:hover,
+.pin-editor-tab.is-active {
+  color: #fff8dc;
+  border-color: #5c3606;
+  background: linear-gradient(180deg, #80520d, #4b2b06);
+}
+
+.pin-editor-panel[hidden] {
+  display: none;
+}
+
+.pin-editor-panel-title {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin: 0 0 .8rem;
+  padding: .45rem .65rem;
+  color: #fff6d8;
+  background: linear-gradient(90deg, #4f2c06, #795016 70%, #4f2c06);
+  border: 1px solid #3f2305;
+  font-family: 'Cinzel', serif;
+  font-size: .92rem;
+  letter-spacing: .035em;
+}
+
+.pin-editor-help {
+  margin: -.35rem 0 .8rem;
+  color: var(--ink3);
+  font-family: 'EB Garamond', serif;
+  font-size: .92rem;
+  font-style: italic;
+}
+
+.pin-editor-media-field {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: .7rem;
+  padding: .7rem;
+  margin-bottom: .7rem;
+  border: 1px solid var(--border2);
+  background: rgba(255, 248, 220, .36);
+}
+
+.pin-editor-media-preview {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  background: linear-gradient(145deg, rgba(255,255,255,.5), rgba(184,137,48,.12));
+  color: var(--ink3);
+  font-size: 1.5rem;
+}
+
+.pin-editor-media-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pin-editor-media-content {
+  min-width: 0;
+}
+
+.pin-editor-media-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .42rem;
+}
+
+.pin-editor-media-button {
+  padding: 5px 9px;
+  border: 1px solid var(--border2);
+  color: var(--ink2);
+  background: rgba(255, 248, 220, .68);
+  font-family: 'Cinzel', serif;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+}
+
+.pin-editor-media-button:hover {
+  color: #fff8dc;
+  background: #6b420a;
+}
+
+.pin-editor-footer-note {
+  flex: 1 1 130px;
+  min-width: 0;
+  align-self: center;
+  color: var(--ink3);
+  font-family: 'EB Garamond', serif;
+  font-size: .86rem;
+  font-style: italic;
+}
+
+#sidebar.editor-fullscreen #sb-footer {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#sidebar.editor-fullscreen #sb-footer .s-btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1080px) {
+  .pin-editor-header-actions .pin-editor-status { display: none; }
+  .pin-editor-publish { padding-inline: 8px; }
+  .pin-editor-tab { font-size: .62rem; }
+}
+
+@media (max-width: 640px) {
+  #sidebar.editor-fullscreen #sb-mode-lbl { display: none; }
+  .pin-editor-publish { max-width: 165px; padding-inline: 7px; font-size: .56rem; }
+  .pin-editor-tabs { overflow-x: auto; }
+  .pin-editor-tab { flex: 0 0 auto; min-width: 112px; }
+  .pin-editor-media-field { grid-template-columns: 64px minmax(0, 1fr); }
+  .pin-editor-media-preview { width: 64px; height: 64px; }
+}

@@ -92,14 +92,9 @@
     runtime.closeModal('pin-tpl-mo');
     runtime.addPin(pendingPin);
     const newPinId = pendingPin.id;
-    runtime.pushUndo('Pin gesetzt: ' + pendingPin.title, () => {
-      const s = runtime.state();
-      s.pins = s.pins.filter(item => item.id !== newPinId);
-    });
     runtime.renderPins();
-    runtime.save();
-    runtime.openPin(pendingPin.id, 'edit');
-    runtime.toast('Pin gesetzt — Eintrag ausfüllen');
+    window.KartoPinEditor?.open(newPinId, { isNew: true });
+    runtime.toast('Pin platziert — Eintrag ausfüllen und übernehmen');
     pendingPin = null;
     selectedTemplate = null;
   }

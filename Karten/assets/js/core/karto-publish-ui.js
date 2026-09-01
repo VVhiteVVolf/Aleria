@@ -42,6 +42,7 @@
     button.textContent = 'Speichere …';
     resultEl.style.display = 'none';
     try {
+      await window.KartoRuntime?.flushSave?.();
       const result = await window.KartoPublish.publish(window.KartoRuntime.state());
       resultEl.style.color = '#3a7a3a';
       resultEl.innerHTML = `✓ Online gespeichert (Revision ${result.revision}). <a href="${result.commitUrl}" target="_blank" rel="noopener">Commit ansehen</a>`;

@@ -1,0 +1,199 @@
+:root {
+  --news-ink: #25180f;
+  --news-ink-soft: #5d432d;
+  --news-red: #6e211b;
+  --news-red-dark: #3f100d;
+  --news-gold: #9a6c28;
+  --news-gold-light: #d5b56c;
+  --news-paper: #ead6a5;
+  --news-paper-light: #f8edcf;
+  --news-paper-deep: #c9a969;
+  --news-shadow: rgba(16, 8, 4, 0.48);
+  color: var(--news-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  background: #26160e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 50%, transparent 50%) 0 0 / 46px 46px,
+    linear-gradient(rgba(255, 255, 255, 0.018) 50%, transparent 50%) 0 0 / 46px 46px,
+    radial-gradient(circle at 50% 0, #59412f 0, #2e1a10 48%, #160d08 100%);
+}
+
+a {
+  color: var(--news-red);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+  color: #9e3027;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #b74b35;
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.newspaper-page {
+  width: min(1440px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 64px;
+}
+
+.newspaper-sheet {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(24px, 4vw, 58px);
+  border: 1px solid #7a592d;
+  border-radius: 3px;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.3), transparent 28%),
+    repeating-linear-gradient(8deg, transparent 0 12px, rgba(92, 61, 27, 0.025) 13px 14px),
+    linear-gradient(135deg, var(--news-paper-light), var(--news-paper) 58%, #d1b778);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 0 0 9px rgba(77, 46, 23, 0.28),
+    0 28px 70px var(--news-shadow);
+}
+
+.newspaper-sheet::before,
+.newspaper-sheet::after {
+  position: absolute;
+  z-index: -1;
+  inset: 10px;
+  border: 1px solid rgba(80, 43, 17, 0.35);
+  content: "";
+  pointer-events: none;
+}
+
+.newspaper-sheet::after {
+  inset: 15px;
+  border-color: rgba(154, 108, 40, 0.42);
+}
+
+.newspaper-loading,
+.newspaper-error {
+  width: min(760px, 100%);
+  margin: 15vh auto 0;
+  padding: 42px;
+  border: 5px double #6f4a22;
+  background: var(--news-paper-light);
+  text-align: center;
+  box-shadow: 0 24px 60px var(--news-shadow);
+}
+
+.newspaper-error h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.newspaper-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(82, 51, 24, 0.35);
+  color: var(--news-ink-soft);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.newspaper-breadcrumbs a {
+  color: var(--news-ink);
+}
+
+.newspaper-kicker {
+  margin: 0 0 7px;
+  color: var(--news-red);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.newspaper-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border: 1px solid #4b2e16;
+  border-radius: 2px;
+  color: #fff4d5;
+  background: linear-gradient(#844526, #4e2515);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2) inset, 0 3px 8px rgba(52, 27, 10, 0.22);
+}
+
+.newspaper-button:hover,
+.newspaper-button:focus-visible {
+  color: #fff;
+  background: linear-gradient(#9b5531, #63301b);
+}
+
+[class$="-fallback"] {
+  display: none;
+}
+
+.is-missing > [class$="-fallback"] {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: #f8e9c2;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 54%),
+    linear-gradient(135deg, #76412b, #2f1a12);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .newspaper-page {
+    width: calc(100% - 16px);
+    padding: 16px 0 36px;
+  }
+
+  .newspaper-sheet {
+    padding: 22px 16px 32px;
+  }
+
+  .newspaper-sheet::before {
+    inset: 6px;
+  }
+
+  .newspaper-sheet::after {
+    inset: 10px;
+  }
+}

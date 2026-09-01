@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Karten-Vorlage — Aleria</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/karto-map.css">
+<link rel="stylesheet" href="assets/css/karto-map.css?v=20260901c">
+<link rel="stylesheet" href="assets/css/pin-editor.css?v=20260901c">
+<link rel="stylesheet" href="assets/css/media-library.css?v=20260901c">
 
+<script src="assets/js/data/celtigerns-wacht-dominions.js?v=20260901a"></script>
 <script src="karten.registry.js"></script>
 <script>
 (function(){
@@ -94,7 +97,7 @@
 </script>
 <script>
 if (window.KARTO_BOOT_STATUS === 'active') {
-  document.write('<script src="assets/js/karto-storage.js"><\/script>');
+  document.write('<script src="assets/js/karto-storage.js?v=20260901a"><\/script>');
 }
 </script>
 </head>
@@ -114,7 +117,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 
   <!-- Layers: independently toggleable overlays, not a radio group -->
   <div id="layer-btns">
-    <button class="lbtn" id="lb-normal"  data-action="set-layer" data-layer="normal">Karte</button>
+    <button class="lbtn on" id="lb-normal"  data-action="set-layer" data-layer="normal">Karte</button>
     <button class="lbtn" id="lb-regions" data-action="set-layer" data-layer="regions">Regionen</button>
     <button class="lbtn" id="lb-pins"    data-action="set-layer" data-layer="pins">Markierungen</button>
   </div>
@@ -149,7 +152,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <button class="tbtn" id="btn-overwrite" data-action="open-overwrite-picker" style="display:none">✏️ Überschreiben</button>
   <button class="tbtn" id="btn-map-images" data-action="open-map-images" style="display:none">🖼 Bilder</button>
   <button class="tbtn" id="btn-export" data-action="open-data-manager" style="display:none">📦 Daten</button>
-  <button class="tbtn" id="btn-publish" data-action="open-publish-modal" style="display:none">🌐 Online speichern</button>
+  <button class="tbtn" id="btn-publish" data-action="open-publish-modal" style="display:none">🌐 Auf GitHub veröffentlichen</button>
   <div style="position:relative;display:none" id="dm-btn-wrap">
     <button class="tbtn" id="btn-dm" data-action="toggle-dm-menu">📋 DM ▾</button>
     <div id="dm-menu" style="display:none;position:absolute;top:100%;right:0;background:var(--p1);border:1px solid var(--border);border-radius:2px;box-shadow:0 4px 14px var(--shadow);z-index:500;min-width:160px;margin-top:3px;">
@@ -226,13 +229,13 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   </div>
 </div>
 
-<!-- ONLINE SPEICHERN MODAL (GitHub-Veroeffentlichung, ersetzt Firebase) -->
+<!-- GITHUB-VERÖFFENTLICHUNG (ersetzt Firebase) -->
 <div class="mo" id="publish-mo">
   <div class="lmc" style="width:min(480px,calc(100vw - 32px))">
-    <div class="lmh"><span>🌐 Online speichern</span><button data-action="close-modal" data-modal-id="publish-mo">✕</button></div>
+    <div class="lmh"><span>🌐 Kartenstand veröffentlichen</span><button data-action="close-modal" data-modal-id="publish-mo">✕</button></div>
     <div class="lmb-body">
       <div style="font-family:'EB Garamond',serif;font-size:.9rem;color:var(--ink2);line-height:1.6;">
-        Deine Änderungen sind bereits lokal in diesem Browser gespeichert. "Online speichern" committet den aktuellen Stand dieser Karte direkt in das GitHub-Repository — damit sehen ihn auch andere Geräte/Browser, sobald Netlify neu deployt hat.
+        Übernommene Änderungen liegen zunächst als lokaler Entwurf in diesem Browser. „Jetzt veröffentlichen“ überträgt den vollständigen Kartenstand in das GitHub-Repository — danach sehen ihn auch andere Geräte, sobald Netlify neu deployt hat.
       </div>
       <div id="publish-key-row">
         <label class="lml">Veröffentlichungsschlüssel</label>
@@ -484,9 +487,9 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <div id="map-wrap" style="flex:1;position:relative;overflow:hidden;">
   <div id="map-stage">
     <img id="ln" class="ml" alt="" draggable="false" onload="onImgLoad(this)" onerror="onImgErr()"/>
-    <img id="lr" class="ml" data-overlay="regions" alt="" draggable="false"/>
-    <img id="lm" class="ml" data-overlay="pins" alt="" draggable="false"/>
-    <div id="pl"></div>
+    <img id="lr" class="ml" data-overlay="regions" alt="" draggable="false" style="opacity:0"/>
+    <img id="lm" class="ml" data-overlay="pins" alt="" draggable="false" style="opacity:0"/>
+    <div id="pl" style="display:none;opacity:1"></div>
   </div>
   <canvas id="measure-canvas"></canvas>
   <div id="pc"></div>
@@ -534,6 +537,10 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <div id="sb-header">
     <span id="sb-title">Ort</span>
     <span id="sb-mode-lbl">Ansicht</span>
+    <div class="pin-editor-header-actions" id="sb-header-actions" hidden>
+      <span class="pin-editor-status" id="sb-editor-status">Keine offenen Eingaben</span>
+      <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; auf GitHub veröffentlichen</button>
+    </div>
     <button id="sb-close" data-action="close-sidebar">✕</button>
   </div>
   <div id="sb-main">
@@ -842,7 +849,9 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/lsb/lsb-canvas.js"></script>
 <script src="assets/js/lsb/lsb-interaction.js"></script>
 <script src="assets/js/data/default-marker-catalog.js"></script>
-<script src="assets/js/karto-app.js"></script>
+<script src="assets/js/media/media-assets.registry.js?v=20260901a"></script>
+<script src="assets/js/karto-app.js?v=20260901b"></script>
+<script src="assets/js/media/media-library.js?v=20260901b"></script>
 <script src="assets/js/lsb/lsb-groups.js"></script>
 <script src="assets/js/lsb/lsb-modals.js"></script>
 <script src="assets/js/data/data-manager.js"></script>
@@ -850,17 +859,19 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/map/map-panzoom.js"></script>
 <script src="assets/js/map/map-panning.js"></script>
 <script src="assets/js/map/map-interaction.js"></script>
-<script src="assets/js/map/map-view.js"></script>
+<script src="assets/js/map/map-view.js?v=20260901b"></script>
 <script src="assets/js/pins/marker-catalog.js"></script>
 <script src="assets/js/pins/categories.js"></script>
-<script src="assets/js/pins/pin-templates.js"></script>
+<script src="assets/js/pins/pin-templates.js?v=20260901a"></script>
 <script src="assets/js/pins/stamp-overwrite.js"></script>
 <script src="assets/js/pins/pin-renderer.js"></script>
 <script src="assets/js/pins/pin-detail-view.js"></script>
-<script src="assets/js/pins/pin-editor.js"></script>
+<script src="assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
+<script src="assets/js/pins/pin-editor.js?v=20260901a"></script>
 <script src="assets/js/pins/search.js"></script>
-<script src="assets/js/core/karto-publish-ui.js"></script>
-<script src="assets/js/core/karto-actions.js"></script>
+<script src="assets/js/integrations/orte-poi-bridge.js"></script>
+<script src="assets/js/core/karto-publish-ui.js?v=20260901a"></script>
+<script src="assets/js/core/karto-actions.js?v=20260901a"></script>
 <script>
 (function(){
   const status = window.KARTO_BOOT_STATUS;

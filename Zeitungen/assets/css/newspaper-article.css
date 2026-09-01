@@ -1,0 +1,294 @@
+.newspaper-reading-sheet {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.newspaper-article-header {
+  padding: clamp(24px, 5vw, 62px) clamp(4px, 4vw, 50px) 32px;
+  border-top: 7px double var(--news-ink);
+  border-bottom: 2px solid var(--news-ink);
+  text-align: center;
+}
+
+.newspaper-article-flag {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding: 7px 16px;
+  color: #fff2d2;
+  background: var(--news-red-dark);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.newspaper-article-header[data-article-type="bericht"] .newspaper-article-flag {
+  background: #38503c;
+}
+
+.newspaper-article-header[data-article-type="kanzel"] .newspaper-article-flag {
+  background: #4d3459;
+}
+
+.newspaper-article-header[data-article-type="klatsch"] .newspaper-article-flag {
+  background: #72461c;
+}
+
+.newspaper-article-header[data-article-type="satirekritik"] .newspaper-article-flag {
+  background: #314d57;
+}
+
+.newspaper-article-header h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(2.7rem, 7vw, 6rem);
+  line-height: 0.98;
+}
+
+.newspaper-article-deck {
+  max-width: 800px;
+  margin: 22px auto 0;
+  color: var(--news-ink-soft);
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.newspaper-full-byline {
+  display: grid;
+  grid-template-columns: 90px auto minmax(180px, 1fr);
+  gap: 16px;
+  align-items: center;
+  max-width: 800px;
+  margin: 32px auto 0;
+  text-align: left;
+}
+
+.newspaper-full-byline-portrait-frame {
+  width: 84px;
+  height: 84px;
+  overflow: hidden;
+  border: 4px double #6a451f;
+  border-radius: 50%;
+  background: #432619;
+}
+
+.newspaper-full-byline-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.newspaper-full-byline > div {
+  display: grid;
+}
+
+.newspaper-full-byline span,
+.newspaper-full-byline small {
+  color: var(--news-ink-soft);
+  font-size: 0.78rem;
+}
+
+.newspaper-full-byline strong {
+  margin: 3px 0;
+  font-size: 1.15rem;
+}
+
+.newspaper-full-byline > p {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 1px solid rgba(80, 48, 22, 0.4);
+  color: var(--news-ink-soft);
+  font-size: 0.84rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.newspaper-reading-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: clamp(30px, 5vw, 70px);
+  justify-content: center;
+  padding-top: clamp(38px, 6vw, 72px);
+}
+
+.newspaper-article-ledger {
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  padding: 18px;
+  border: 4px double #745026;
+  background: rgba(246, 227, 184, 0.62);
+}
+
+.newspaper-article-ledger h2 {
+  margin: 0 0 14px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(75, 44, 19, 0.4);
+  font-size: 1.2rem;
+}
+
+.newspaper-article-ledger dl {
+  margin: 0 0 20px;
+}
+
+.newspaper-article-ledger dl > div {
+  padding: 8px 0;
+  border-bottom: 1px dotted rgba(75, 44, 19, 0.4);
+}
+
+.newspaper-article-ledger dt {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.newspaper-article-ledger dd {
+  margin: 3px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.newspaper-article-body {
+  min-width: 0;
+  font-size: clamp(1.04rem, 1.5vw, 1.17rem);
+  line-height: 1.82;
+}
+
+.newspaper-article-body > p:first-child::first-letter {
+  float: left;
+  margin: 0.08em 0.11em 0 0;
+  color: var(--news-red);
+  font-size: 4.7rem;
+  font-weight: 800;
+  line-height: 0.72;
+}
+
+.newspaper-article-body p {
+  margin: 0 0 1.25em;
+}
+
+.newspaper-article-body h2,
+.newspaper-article-body h3,
+.newspaper-article-body h4 {
+  margin: 2.4em 0 0.8em;
+  padding: 10px 0 8px;
+  border-top: 3px double var(--news-gold);
+  border-bottom: 1px solid var(--news-gold);
+  color: var(--news-red-dark);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.18;
+}
+
+.newspaper-article-body hr {
+  height: 12px;
+  margin: 2.8em auto;
+  border: 0;
+  border-top: 1px solid var(--news-gold);
+  border-bottom: 1px solid var(--news-gold);
+}
+
+.newspaper-article-body blockquote {
+  position: relative;
+  margin: 2em 0;
+  padding: 20px 28px 20px 54px;
+  border-left: 6px double var(--news-red);
+  background: rgba(123, 71, 30, 0.08);
+  font-style: italic;
+}
+
+.newspaper-article-body blockquote::before {
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  color: var(--news-red);
+  content: "“";
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.newspaper-article-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.newspaper-article-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  padding-top: 22px;
+  border-top: 7px double var(--news-ink);
+  text-align: center;
+}
+
+.newspaper-article-footer span {
+  width: 100%;
+  color: var(--news-red);
+  font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .newspaper-reading-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .newspaper-article-ledger {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    align-items: end;
+  }
+
+  .newspaper-article-ledger h2 {
+    grid-column: 1 / -1;
+  }
+
+  .newspaper-article-ledger dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 18px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .newspaper-full-byline {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .newspaper-full-byline-portrait-frame {
+    width: 68px;
+    height: 68px;
+  }
+
+  .newspaper-full-byline > p {
+    grid-column: 1 / -1;
+    padding: 12px 0 0;
+    border-top: 1px solid rgba(80, 48, 22, 0.4);
+    border-left: 0;
+  }
+
+  .newspaper-article-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .newspaper-article-ledger dl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newspaper-article-body blockquote {
+    padding: 18px 16px 18px 34px;
+  }
+
+  .newspaper-article-body blockquote::before {
+    left: 7px;
+    font-size: 3rem;
+  }
+}

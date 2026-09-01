@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Großstadt-Vorlage - Aleria</title>
-  <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css?v=orte-media-sizing-20260901a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css?v=orte-heraldry-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt-template-map.css?v=orte-info-width-20260701a">
-  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=orte-region-map-sizing-20260701a">
-  <script src="/js/world-content/celtigerns-wacht-places.js?v=celtigerns-orte-20260901b"></script>
+  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-region-map-20260901b">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-houses.css?v=gwynthor-houses-20260901a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=gwynthor-merchants-20260901c">
+  <script src="/js/world-content/celtigerns-wacht-places.js?v=gwynthor-maps-20260901e"></script>
   <script src="/Orte/orte.registry.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
-  <script src="/Orte/assets/js/orte-grossstadt.js?v=celtigerns-orte-20260901b" defer></script>
+  <script src="/Orte/assets/js/orte-place-houses.js?v=gwynthor-houses-20260901a" defer></script>
+  <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-region-map-20260901a" defer></script>
+  <script src="/Orte/assets/js/orte-place-merchants.js?v=gwynthor-merchants-20260901d" defer></script>
+  <script src="/Orte/assets/js/orte-grossstadt.js?v=orte-stadtbild-20260901a" defer></script>
 </head>
 <body>
   <main class="place-page grossstadt-template" data-orte-static-template>
@@ -23,7 +28,11 @@
 
 			<p class="pt-s-0003">&nbsp;</p>
 
-			<p class="pt-s-0003"><span class="orte-image-slot" data-orte-image-key="icon-png" data-orte-image-label="Stadtwappen / Icon" data-orte-image-format="square" data-orte-image-max-height="220" aria-label="Stadtwappen / Icon"></span></p>
+			<div class="orte-heraldic-stage" aria-label="Stadtwappen mit Wappenhaltern">
+				<span class="orte-image-slot orte-heraldic-supporter orte-heraldic-supporter--left" data-orte-image-key="supporter-left-png" data-orte-image-label="Linker Wappenhalter" data-orte-image-format="portrait" data-orte-image-max-height="300" aria-label="Linker Wappenhalter"></span>
+				<span class="orte-image-slot orte-heraldic-main-crest" data-orte-image-key="icon-png" data-orte-image-label="Stadtwappen / Icon" data-orte-image-format="square" data-orte-image-max-height="220" aria-label="Stadtwappen / Icon"></span>
+				<span class="orte-image-slot orte-heraldic-supporter orte-heraldic-supporter--right" data-orte-image-key="supporter-right-png" data-orte-image-label="Rechter Wappenhalter" data-orte-image-format="portrait" data-orte-image-max-height="300" aria-label="Rechter Wappenhalter"></span>
+			</div>
 
 			<p class="pt-s-0003">&nbsp;</p>
 
@@ -201,7 +210,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="pt-s-0036" colspan="5" rowspan="3">
+			<td class="pt-s-0036 orte-full-width-section" colspan="8">
 			<div class="orte-balanced-text-panel orte-balanced-text-panel--conflicts">
 			<h2>Konflikte</h2>
 
@@ -217,15 +226,17 @@
 
 			</div>
 			</td>
-			<td class="pt-s-0037" colspan="3" rowspan="1">
+		</tr>
+		<tr>
+			<td class="pt-s-0037 orte-full-width-section" colspan="8" data-orte-feature="notice-board">
 			<h2 class="pt-s-0017"><span class="pt-s-0004"><span class="pt-s-0030">Anzeigetafeln</span></span></h2>
 			</td>
 		</tr>
 		<tr>
-			<td class="pt-s-0038" colspan="3"><span class="orte-image-slot" data-orte-image-key="anzeige-png" data-orte-image-label="Anzeigetafel" data-orte-image-format="banner" data-orte-image-max-height="260" aria-label="Anzeigetafel"></span></td>
+			<td class="pt-s-0038 orte-full-width-section" colspan="8" data-orte-feature="notice-board"><span class="orte-image-slot" data-orte-image-key="anzeige-png" data-orte-image-label="Anzeigetafel" data-orte-image-format="banner" data-orte-image-max-height="260" aria-label="Anzeigetafel"></span></td>
 		</tr>
 		<tr>
-			<td class="pt-s-0023" colspan="3">&nbsp;</td>
+			<td class="pt-s-0023 orte-full-width-section" colspan="8" data-orte-feature="notice-board">&nbsp;</td>
 		</tr>
 		<tr>
 			<td class="pt-s-0039" colspan="8">
@@ -247,7 +258,7 @@
 		</tr>
 		<tr>
 			<td class="pt-s-0039" colspan="8">
-			<table class="pt-s-0040" border="1" cellspacing="1">
+			<table class="pt-s-0040" border="1" cellspacing="1" data-orte-houses>
 				<tbody>
 					<tr>
 						<td class="wappen pt-s-0041"><span class="pt-s-0019"><span class="pt-s-0030"><b class="pt-s-0042"><span class="pt-s-0043">Wappen</span></b></span></span></td>
@@ -549,7 +560,7 @@
 			<p>POI, Orte und Gefahrenpunkte im Bannkreis und Umland der Stadt.</p>
 			<section class="grossstadt-region-block">
 
-			<table class="orte-region-table region-s-0001" border="1" cellspacing="1">
+			<table class="orte-region-table region-s-0001" border="1" cellspacing="1" data-orte-region-table>
 				<tbody class="region-s-0002">
 					<tr class="region-s-0002">
 						<td class="region-s-0005 region-map-cell" colspan="8"><span class="orte-image-slot region-map-slot" data-orte-image-key="regionen-karte-png" data-orte-image-label="Regionskarte" data-orte-image-format="landscape" data-orte-image-max-height="520" aria-label="Regionskarte"></span>
@@ -797,9 +808,9 @@
 			<p><span class="orte-image-slot" data-orte-image-key="stadtsektionen-png" data-orte-image-label="Bezirkskarte" data-orte-image-format="landscape" data-orte-image-max-height="360" aria-label="Bezirkskarte"></span></p>
 			</td>
 		</tr>
-		<tr>
+		<tr data-orte-section="built-environment">
 			<td class="pt-s-0064" colspan="8">
-			<h2>Kultur</h2>
+			<h2 id="stadtbild-architektur">Stadtbild &amp; Architektur</h2>
 
 			<p class="pt-s-0003">&nbsp;</p>
 
@@ -836,12 +847,12 @@
 		</tr>
 		<tr>
 			<td class="pt-s-0039" colspan="8">
-			<h2>H&auml;ndler &amp; Etablissemants</h2>
+			<h2>H&auml;ndler &amp; Etablissements</h2>
 			</td>
 		</tr>
 		<tr>
 			<td class="pt-s-0039" colspan="8">
-			<table class="pt-s-0040" border="1" cellspacing="1">
+			<table class="pt-s-0040" border="1" cellspacing="1" data-orte-merchants>
 				<tbody>
 					<tr>
 						<td class="wappen pt-s-0041"><span class="pt-s-0019"><span class="pt-s-0030"><b class="pt-s-0042"><span class="pt-s-0043">Symbol</span></b></span></span></td>

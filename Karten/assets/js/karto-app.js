@@ -114,6 +114,15 @@ let vx=0, vy=0, vz=1;
 // mapReady no longer needed - permanent RAF loop handles canvas sync
 let scrollPinId=null;
 let saveTimer=null, ignRemote=false;
+
+function announceStateChange(reason){
+  window.dispatchEvent(new CustomEvent('aleria:karto:state-changed', {
+    detail: {
+      mapId: KARTO_CONFIG.mapId,
+      reason,
+    },
+  }));
+}
 let activeFilter='all';
 
 const mapWrap=document.getElementById('map-wrap');
@@ -247,12 +256,17 @@ function renderLayerButtons(){
 
 // ═══════════════════════════════════════════
 function saveD(){
+  announceStateChange('local-change');
   clearTimeout(saveTimer);
-  saveTimer=setTimeout(()=>{
-    if(window.backupSave) window.backupSave('Automatisch');
-    ignRemote=true;
-    window._fb.saveAll(S).then(()=>setTimeout(()=>ignRemote=false,5000));
-  },800);
+  saveTimer=setTimeout(persistDraftNow,800);
+}
+
+function persistDraftNow(){
+  clearTimeout(saveTimer);
+  saveTimer=null;
+  if(window.backupSave) window.backupSave('Automatisch');
+  ignRemote=true;
+  return Promise.resolve(window._fb.saveAll(S)).finally(()=>setTimeout(()=>ignRemote=false,5000));
 }
 
 window.KartoRuntime = {
@@ -270,6 +284,7 @@ window.KartoRuntime = {
   esc,
   formatText: fmtText,
   save: saveD,
+  flushSave: persistDraftNow,
   toast,
   pushUndo,
   closeModal: closeLMo,
@@ -450,6 +465,8 @@ function applyState(remote){
   renderCatBar();
   lsbLoad(remote);
   window.KartoDmTools?.load();
+  window.resetLayers?.();
+  announceStateChange('loaded-state');
 }
 function applySizes(){
   const ds=document.getElementById('dot-sl'), ls=document.getElementById('lbl-sl');
@@ -946,6 +963,10 @@ function resetSidebarFrame(){
     <div id="sb-header">
       <span id="sb-title">Ort</span>
       <span id="sb-mode-lbl">Ansicht</span>
+      <div class="pin-editor-header-actions" id="sb-header-actions" hidden>
+        <span class="pin-editor-status" id="sb-editor-status">Keine offenen Eingaben</span>
+        <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; auf GitHub veröffentlichen</button>
+      </div>
       <button id="sb-close" data-action="close-sidebar">x</button>
     </div>
     <div id="sb-main">
@@ -980,12 +1001,12 @@ function closeEditorShell(){
   resetSidebarFrame();
 }
 
-function renderEditorPreview(){
+function renderEditorPreview(pinOverride){
   const sidebar=document.getElementById('sidebar');
   const content=document.getElementById('sb-preview-content');
   if(!sidebar||!content||!sidebar.classList.contains('editor-fullscreen'))return;
   const id=sidebar.dataset.editorId;
-  const pin=S.pins.find(item=>item.id===id);
+  const pin=pinOverride || S.pins.find(item=>item.id===id);
   if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
   const category=catOf(pin);
   const affiliations=[];
@@ -1066,8 +1087,9 @@ function openSidebar(id, mode){
   }
 }
 function closeSidebar(){
-  window.KartoPinEditor?.close();
+  if(window.KartoPinEditor?.isOpen?.()) return window.KartoPinEditor.close();
   closeEditorShell();
+  return true;
 }
 function closeScroll(){
   window.KartoPinDetailView?.close();
@@ -1087,7 +1109,9 @@ function askDel(id){
   if(!confirm('Pin "'+(p?.title||id)+'" wirklich löschen?'))return;
   S.pins.splice(index,1);
   pushUndo('Pin gelöscht: '+p.title, () => { S.pins.splice(index,0,p); });
-  closeScroll();closeSidebar();
+  closeScroll();
+  if(window.KartoPinEditor?.isOpen?.()) window.KartoPinEditor.close({force:true});
+  else closeSidebar();
   renderPins();saveD();toast('Pin gelöscht');
 }
 

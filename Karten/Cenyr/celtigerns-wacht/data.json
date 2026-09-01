@@ -5995,43 +5995,43 @@
         "name": "Herrschaft der Saethwyr",
         "type": "Herrschaft",
         "ruler": "Haus Saethwyr",
-        "seat": "",
+        "seat": "Gwynthor",
         "note": "",
-        "parentId": "msa3c53vvlq57o"
+        "parentId": "msa3c53vo1h89v"
       },
       {
         "id": "msa3c53vomlanj",
         "name": "Herrschaft der Gafyr",
         "type": "Herrschaft",
         "ruler": "Haus Gafyr",
-        "seat": "",
+        "seat": "Gwynthor",
         "note": "",
-        "parentId": "msa3c53vvlq57o"
+        "parentId": "msa3c53vo1h89v"
       },
       {
         "id": "msa3c53viyll7z",
         "name": "Herrschaft der Wyrm",
         "type": "Herrschaft",
         "ruler": "Haus Wyrm",
-        "seat": "",
+        "seat": "Gwynthor",
         "note": "",
-        "parentId": "msa3c53vvlq57o"
+        "parentId": "msa3c53vo1h89v"
       },
       {
         "id": "msa3c53vulpw53",
         "name": "Herrschaft Rhonwens Tränen",
         "type": "Herrschaft",
-        "ruler": "",
+        "ruler": "Haus Arwydd",
         "seat": "Castellbryn",
-        "note": "Inselgruppe im Osten."
+        "note": ""
       },
       {
         "id": "msa3c53vv33tbi",
         "name": "Baronie Arthus Streben",
         "type": "Baronie",
-        "ruler": "",
+        "ruler": "Haus Gwefrydd",
         "seat": "Rhosmere",
-        "note": "Quelle nutzt \"Artus\"/\"Arthus\" uneinheitlich."
+        "note": ""
       },
       {
         "id": "msa3c53vvlq57o",
@@ -6047,7 +6047,7 @@
         "type": "Region",
         "ruler": "",
         "seat": "Aberllan",
-        "note": "Eigenständige Inselstadtrepublik (Aberllan-Oilean)."
+        "note": ""
       },
       {
         "id": "msa3c53vyq3dvo",
@@ -6055,7 +6055,412 @@
         "type": "Exklave",
         "ruler": "Myrddin Draig (Haus Draig)",
         "seat": "",
-        "note": "Noch nicht auf der Grafschafts-Lore-Seite dokumentiert; aus den Kartendaten übernommen."
+        "note": ""
+      },
+      {
+        "id": "cw-haus-gelyn",
+        "name": "Haus Gelyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gelyn",
+        "seat": "Gwynthor, Gwynthstorm",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-balchder",
+        "name": "Haus Balchder",
+        "type": "Ritterhaus",
+        "ruler": "Haus Balchder",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-awenydd",
+        "name": "Haus Awenydd",
+        "type": "Ritterhaus",
+        "ruler": "Haus Awenydd",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-awenor",
+        "name": "Haus Awenor",
+        "type": "Ritterhaus",
+        "ruler": "Haus Awenor",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-dubhan-gwynthor",
+        "name": "Haus Dubhan-Gwynthor",
+        "type": "Ritterhaus",
+        "ruler": "Haus Dubhan-Gwynthor",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-bleiddorn",
+        "name": "Haus Bleiddorn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Bleiddorn",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-cymrath-o-traethlan",
+        "name": "Haus Cymrath O'Traethlan",
+        "type": "Ritterhaus",
+        "ruler": "Haus Cymrath O'Traethlan",
+        "seat": "Tŵr Traethlan",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-tlawd",
+        "name": "Haus Tlawd",
+        "type": "Ritterhaus",
+        "ruler": "Haus Tlawd",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vomlanj"
+      },
+      {
+        "id": "cw-haus-von-hochreuth",
+        "name": "Haus Von Hochreuth",
+        "type": "Ritterhaus",
+        "ruler": "Haus Von Hochreuth",
+        "seat": "",
+        "note": "",
+        "parentId": "msa3c53vomlanj"
+      },
+      {
+        "id": "cw-haus-gostyn",
+        "name": "Haus Gostyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gostyn",
+        "seat": "Gwynthor, Bronfelen",
+        "note": "",
+        "parentId": "msa3c53vomlanj"
+      },
+      {
+        "id": "cw-haus-rhyddid",
+        "name": "Haus Rhyddid",
+        "type": "Ritterhaus",
+        "ruler": "Haus Rhyddid",
+        "seat": "Gwynthor, Mwyncraig",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-cludwyr",
+        "name": "Haus Cludwyr",
+        "type": "Ritterhaus",
+        "ruler": "Haus Cludwyr",
+        "seat": "Gwynthor, Bronhir",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-loer",
+        "name": "Haus Loer",
+        "type": "Ritterhaus",
+        "ruler": "Haus Loer",
+        "seat": "Gwynthor, Craithglyn",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-chwedlonol",
+        "name": "Haus Chwedlonol",
+        "type": "Ritterhaus",
+        "ruler": "Haus Chwedlonol",
+        "seat": "Gwynthor, Glastraeth",
+        "note": "",
+        "parentId": "msa3c53vz3k80p"
+      },
+      {
+        "id": "cw-haus-eneiniog",
+        "name": "Haus Eneiniog",
+        "type": "Ritterhaus",
+        "ruler": "Haus Eneiniog",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vz3k80p"
+      },
+      {
+        "id": "cw-haus-gwared",
+        "name": "Haus Gwared",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gwared",
+        "seat": "Castellbryn",
+        "note": "",
+        "parentId": "msa3c53vulpw53"
+      },
+      {
+        "id": "cw-haus-rhenna",
+        "name": "Haus Rhenna",
+        "type": "Ritterhaus",
+        "ruler": "Haus Rhenna",
+        "seat": "Rhonwens Tränen",
+        "note": "",
+        "parentId": "msa3c53vulpw53"
+      },
+      {
+        "id": "cw-haus-madryn",
+        "name": "Haus Madryn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Madryn",
+        "seat": "Rhonwens Tränen",
+        "note": "",
+        "parentId": "msa3c53vulpw53"
+      },
+      {
+        "id": "cw-haus-talinvyr",
+        "name": "Haus Talinvyr",
+        "type": "Ritterhaus",
+        "ruler": "Haus Talinvyr",
+        "seat": "Rhonwens Tränen",
+        "note": "",
+        "parentId": "msa3c53vulpw53"
+      },
+      {
+        "id": "cw-haus-merek",
+        "name": "Haus Merek",
+        "type": "Ritterhaus",
+        "ruler": "Haus Merek",
+        "seat": "Rhonwens Tränen",
+        "note": "",
+        "parentId": "msa3c53vulpw53"
+      },
+      {
+        "id": "cw-haus-almarch",
+        "name": "Haus Almarch",
+        "type": "Ritterhaus",
+        "ruler": "Haus Almarch",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-brinmarch",
+        "name": "Haus Brinmarch",
+        "type": "Ritterhaus",
+        "ruler": "Haus Brinmarch",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-gwardin",
+        "name": "Haus Gwardin",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gwardin",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-tirwyn",
+        "name": "Haus Tirwyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Tirwyn",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-eirfael",
+        "name": "Haus Eirfael",
+        "type": "Ritterhaus",
+        "ruler": "Haus Eirfael",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-ghorswyn",
+        "name": "Haus Ghorswyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Ghorswyn",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-coedvarn",
+        "name": "Haus Coedvarn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Coedvarn",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-althin",
+        "name": "Haus Althin",
+        "type": "Ritterhaus",
+        "ruler": "Haus Althin",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-talmeirch",
+        "name": "Haus Talmeirch",
+        "type": "Ritterhaus",
+        "ruler": "Haus Talmeirch",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-gwynrhos",
+        "name": "Haus Gwynrhos",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gwynrhos",
+        "seat": "Rhosmere",
+        "note": "",
+        "parentId": "msa3c53vv33tbi"
+      },
+      {
+        "id": "cw-haus-rhuddgar",
+        "name": "Haus Rhuddgar",
+        "type": "Ritterhaus",
+        "ruler": "Haus Rhuddgar",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-gwyntog",
+        "name": "Haus Gwyntog",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gwyntog",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-trydar",
+        "name": "Haus Trydar",
+        "type": "Ritterhaus",
+        "ruler": "Haus Trydar",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-taranvyr",
+        "name": "Haus Taranvyr",
+        "type": "Ritterhaus",
+        "ruler": "Haus Taranvyr",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-selog",
+        "name": "Haus Selog",
+        "type": "Ritterhaus",
+        "ruler": "Haus Selog",
+        "seat": "Abergwint, Burg am Feuerstollen",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-penwyn",
+        "name": "Haus Penwyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Penwyn",
+        "seat": "Morddyn",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-annwyl",
+        "name": "Haus Annwyl",
+        "type": "Ritterhaus",
+        "ruler": "Haus Annwyl",
+        "seat": "Côr Mynyddfaen",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-seldryn",
+        "name": "Haus Seldryn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Seldryn",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-cysgodion",
+        "name": "Haus Cysgodion",
+        "type": "Ritterhaus",
+        "ruler": "Haus Cysgodion",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-edmy",
+        "name": "Haus Edmy",
+        "type": "Ritterhaus",
+        "ruler": "Haus Edmy",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-tawelgar",
+        "name": "Haus Tawelgar",
+        "type": "Ritterhaus",
+        "ruler": "Haus Tawelgar",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-ymladd",
+        "name": "Haus Ymladd",
+        "type": "Ritterhaus",
+        "ruler": "Haus Ymladd",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-daran",
+        "name": "Haus Daran",
+        "type": "Ritterhaus",
+        "ruler": "Haus Daran",
+        "seat": "Garwfaen",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-cenfig",
+        "name": "Haus Cenfig",
+        "type": "Ritterhaus",
+        "ruler": "Haus Cenfig",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
+      },
+      {
+        "id": "cw-haus-barus",
+        "name": "Haus Barus",
+        "type": "Ritterhaus",
+        "ruler": "Haus Barus",
+        "seat": "Abergwint",
+        "note": "",
+        "parentId": "msa3c53vvlq57o"
       }
     ]
   }

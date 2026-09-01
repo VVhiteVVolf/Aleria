@@ -88,3 +88,57 @@
   white-space: nowrap;
   line-height: 1.2;
 }
+
+.orte-region-map-embed {
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.orte-region-map-iframe {
+  display: block;
+  width: 100%;
+  height: clamp(720px, 74vw, 960px);
+  min-height: 720px;
+  border: 1px solid var(--place-border-dark);
+  background: #cbb989;
+}
+
+.orte-region-map-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0.2rem 0.15rem;
+}
+
+.orte-region-map-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--place-line);
+  background: linear-gradient(180deg, #f7e8bd, #d7b970);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.orte-region-poi > td {
+  padding: 0.45rem 0.5rem;
+  vertical-align: middle;
+  text-align: center;
+  background: linear-gradient(180deg, #f1dfb5, #e2c98b);
+}
+
+.orte-region-poi__icon img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .orte-region-map-iframe {
+    height: 70vh;
+    min-height: 560px;
+  }
+}

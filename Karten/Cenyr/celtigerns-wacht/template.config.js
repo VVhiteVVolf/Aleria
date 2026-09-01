@@ -7,6 +7,7 @@ window.KARTO_CONFIG = {
     regions: "Kartenbilder/CeltigernsWachtRegionen.png",
     pins: "Kartenbilder/CeltigernsWachtMarker.png",
   },
+  defaultDominions: window.KartoDominionPresets?.forMap("cenyr-celtigerns-wacht") || [],
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/data.json",
   },

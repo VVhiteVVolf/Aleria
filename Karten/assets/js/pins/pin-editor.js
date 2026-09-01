@@ -1,400 +1,431 @@
-(function(){
+(function () {
   const runtime = window.KartoRuntime;
+  const TABS = ['basis', 'zugehoerigkeit', 'medien', 'infotabelle', 'beschreibung'];
   let activePinId = null;
-  let pinMarkerPinId = null;
+  let activeTab = 'basis';
+  let session = null;
 
-  function state(){
-    return runtime.state();
+  function state() { return runtime.state(); }
+  function clone(value) { return JSON.parse(JSON.stringify(value)); }
+  function currentPin() { return session?.draft() || null; }
+  function actualPin() { return state().pins.find(item => item.id === activePinId) || null; }
+  function isOpen() { return !!session && !!document.getElementById('sidebar')?.classList.contains('editor-fullscreen'); }
+
+  function setHeader() {
+    const title = document.getElementById('sb-title');
+    const mode = document.getElementById('sb-mode-lbl');
+    const actions = document.getElementById('sb-header-actions');
+    if (title) title.textContent = session?.isNew() ? 'Neuen Pin anlegen' : 'Pin bearbeiten';
+    if (mode) mode.textContent = 'Editormodus';
+    if (actions) actions.hidden = false;
+    const publish = document.getElementById('sb-publish');
+    if (publish) publish.hidden = !window.KartoPublish?.isConfigured() || !window.openPublishModal || !document.getElementById('publish-mo');
+    updateStatus();
   }
 
-  function open(pinId){
+  function updateStatus() {
+    const status = document.getElementById('sb-editor-status');
+    if (!status || !session) return;
+    const dirty = session.isDirty();
+    status.textContent = dirty ? 'Nicht übernommen' : 'Keine offenen Eingaben';
+    status.classList.toggle('is-dirty', dirty);
+  }
+
+  function open(pinId, options = {}) {
     const pin = state().pins.find(item => item.id === pinId);
-    if(!pin) return;
+    if (!pin || !window.KartoPinDraft) return;
     activePinId = pinId;
+    activeTab = 'basis';
+    session = window.KartoPinDraft.create(pin, { isNew: options.isNew === true });
     document.getElementById('sidebar').classList.add('open');
-    renderSidebarEdit(pin);
+    runtime.openEditorShell?.('pin', pin.id);
+    setHeader();
+    renderSidebarEdit();
   }
 
-  function close(){
+  function discardNewPlaceholder() {
+    if (!session?.isNew()) return;
+    const index = state().pins.findIndex(item => item.id === activePinId);
+    if (index >= 0) state().pins.splice(index, 1);
+    runtime.renderPins();
+  }
+
+  function close(options = {}) {
+    if (!session) {
+      runtime.closeEditorShell?.();
+      return true;
+    }
+    const discard = options.discard === true || options.force === true;
+    if (session.isDirty() && !discard && !confirm('Nicht übernommene Änderungen verwerfen?')) return false;
+    if (!options.keepNew) discardNewPlaceholder();
     runtime.closeEditorShell?.();
     activePinId = null;
+    session = null;
+    activeTab = 'basis';
+    return true;
   }
 
-  function renderSidebarEdit(pin){
+  function tabButton(id, label) {
+    return `<button type="button" class="pin-editor-tab${activeTab === id ? ' is-active' : ''}" data-action="switch-pin-editor-tab" data-editor-tab="${id}">${label}</button>`;
+  }
+
+  function panel(id, content) {
+    return `<section class="pin-editor-panel" data-editor-panel="${id}"${activeTab === id ? '' : ' hidden'}>${content}</section>`;
+  }
+
+  function imagePreview(url, fallback) {
+    return url ? `<img src="${runtime.esc(url)}" alt=""/>` : `<span aria-hidden="true">${fallback}</span>`;
+  }
+
+  function mediaField({ role, label, url, link, fallback, hint }) {
+    return `
+      <div class="pin-editor-media-field">
+        <div class="pin-editor-media-preview">${imagePreview(url, fallback)}</div>
+        <div class="pin-editor-media-content">
+          <label class="e-lbl" for="sb-${role}">${label}</label>
+          ${hint ? `<div class="e-hint">${hint}</div>` : ''}
+          <input class="e-inp" id="sb-${role}" value="${runtime.esc(url || '')}" placeholder="Bildadresse oder Projektpfad …"/>
+          <input class="e-inp" id="sb-${role}link" value="${runtime.esc(link || '')}" placeholder="Link beim Anklicken (optional) …"/>
+          <div class="pin-editor-media-actions">
+            <button type="button" class="pin-editor-media-button" data-action="open-pin-media-library" data-media-target="${role}">Mediathek öffnen</button>
+            <button type="button" class="pin-editor-media-button" data-action="preview-pin-editor-image" data-preview-target="${role}">Vorschau laden</button>
+            ${url ? `<button type="button" class="pin-editor-media-button" data-action="clear-pin-media" data-media-target="${role}">Entfernen</button>` : ''}
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderSidebarEdit() {
+    const pin = currentPin();
+    if (!pin) return;
     const body = document.getElementById('sb-body');
     const footer = document.getElementById('sb-footer');
     const esc = runtime.esc;
-    document.getElementById('sb-title').textContent = 'Bearbeiten';
-    document.getElementById('sb-mode-lbl').textContent = 'Editormodus';
     const rows = (pin.table || []).map((row, index) => `
       <div class="tbl-row">
         <input class="tk" value="${esc(row.k)}" placeholder="Bezeichnung" data-c="k"/>
         <input class="tv" value="${esc(row.v)}" placeholder="Wert" data-c="v"/>
-        <button class="tbl-rm" data-action="delete-pin-table-row" data-row-index="${index}">✕</button>
+        <button type="button" class="tbl-rm" data-action="delete-pin-table-row" data-row-index="${index}" aria-label="Zeile entfernen">✕</button>
       </div>`).join('');
 
     body.innerHTML = `
       <div class="se-inner">
-        <div class="e-row">
-          <label class="e-lbl">Name / Titel</label>
-          <input class="e-inp" id="sb-title-inp" value="${esc(pin.title)}" maxlength="80" placeholder="Name des Ortes…"/>
-        </div>
-        <div class="e-row">
-          <label class="e-lbl">Kategorie</label>
-          <div style="display:flex;gap:.4rem;align-items:center;">
-            <select class="e-sel" id="sb-cat" style="flex:1;">
-              ${state().cats.map(cat => `<option value="${cat.id}"${(pin.cat || state().cats[0]?.id) === cat.id ? ' selected' : ''}>${esc(cat.label)}</option>`).join('')}
-            </select>
-            <div id="sb-pinmarker-preview" data-action="open-pin-marker-picker" data-pin-id="${pin.id}"
-                 title="Pin-Marker aus Katalog wählen"
-                 style="width:32px;height:38px;border:1px solid var(--border2);border-radius:3px;background:rgba(255,248,220,.6);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .13s;">
-              ${pin.pinMarker
-                ? `<img src="${esc(pin.pinMarker)}" style="width:28px;height:34px;object-fit:contain;"/>`
-                : `<span style="font-size:.65rem;color:var(--ink3);text-align:center;line-height:1.2;">📍<br>Icon</span>`}
-            </div>
-            ${pin.pinMarker ? `<button data-action="clear-pin-marker" title="Marker entfernen" style="background:none;border:none;color:var(--redl);cursor:pointer;font-size:.8rem;flex-shrink:0;">✕</button>` : ''}
-          </div>
-          ${pin.pinMarker ? `
-          <div style="display:flex;align-items:center;gap:.5rem;margin-top:.4rem;">
-            <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.7;white-space:nowrap;">Icon-Größe</span>
-            <input type="range" id="sb-pinmarker-scale" min="40" max="300" value="${Math.round((pin.pinMarkerScale || 1) * 100)}" style="flex:1;accent-color:var(--gold);" data-input-action="set-pin-marker-scale"/>
-            <span id="sb-pinmarker-scale-val" style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:var(--gold);min-width:34px;text-align:right;">${Math.round((pin.pinMarkerScale || 1) * 100)}%</span>
-          </div>` : ''}
-        </div>
+        <nav class="pin-editor-tabs" aria-label="Bereiche des Pin-Editors">
+          ${tabButton('basis', 'Basis')}
+          ${tabButton('zugehoerigkeit', 'Zugehörigkeit')}
+          ${tabButton('medien', 'Medien')}
+          ${tabButton('infotabelle', 'Infotabelle')}
+          ${tabButton('beschreibung', 'Beschreibung')}
+        </nav>
 
-        <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
-          <div class="e-lbl" style="margin-bottom:.4rem;">⚔ Zugehörigkeit</div>
+        ${panel('basis', `
+          <h3 class="pin-editor-panel-title">Grunddaten & Kartenzeichen</h3>
           <div class="e-row">
-            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Herrschaft <span style="font-family:'EB Garamond',serif;font-style:italic;opacity:.7;">(aus der Liste unter "🏰 Herrschaften")</span></label>
-            <select class="e-sel" id="sb-dominion">
-              <option value="">— Keine —</option>
-              ${runtime.orderedDominions().map(({dominion:d, depth}) => `<option value="${esc(d.id)}"${pin.dominionId === d.id ? ' selected' : ''}>${'  '.repeat(depth)}${depth ? '↳ ' : ''}${esc(d.name)}</option>`).join('')}
+            <label class="e-lbl" for="sb-title-inp">Name / Titel</label>
+            <input class="e-inp" id="sb-title-inp" value="${esc(pin.title)}" maxlength="80" placeholder="Name des Ortes …"/>
+          </div>
+          <div class="e-row">
+            <label class="e-lbl" for="sb-cat">Kategorie</label>
+            <select class="e-sel" id="sb-cat">
+              ${state().cats.map(cat => `<option value="${esc(cat.id)}"${(pin.cat || state().cats[0]?.id) === cat.id ? ' selected' : ''}>${esc(cat.label)}</option>`).join('')}
             </select>
           </div>
-          <div class="e-row">
-            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Region / Gebiet <span style="font-family:'EB Garamond',serif;font-style:italic;opacity:.7;">(Freitext, zusätzlich zur Herrschaft)</span></label>
-            <input class="e-inp" id="sb-region" value="${esc(pin.region || '')}" maxlength="80" placeholder="z.B. Grafschaft Celtigern…"/>
-          </div>
-          <div class="e-row">
-            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Herrschaft / Haus</label>
-            <input class="e-inp" id="sb-house" value="${esc(pin.house || '')}" maxlength="80" placeholder="z.B. Haus O'Gwynthor…"/>
-          </div>
-          <div class="e-row">
-            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Fraktion / Gilde</label>
-            <input class="e-inp" id="sb-faction" value="${esc(pin.faction || '')}" maxlength="80" placeholder="z.B. Händlergilde…"/>
-          </div>
-        </div>
-
-        <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
-          <div class="e-lbl" style="margin-bottom:.4rem;">🛡 Wappen / Ortsbanner</div>
-          <div class="e-img-row">
-            <div class="e-img-prev" id="sb-crest-prev" style="width:70px;height:70px;border-radius:2px;">
-              ${pin.crest ? `<img src="${esc(pin.crest)}" style="width:100%;height:100%;object-fit:cover"/>` : '🏰'}
-            </div>
-            <div class="e-img-col">
-              <input class="e-inp" id="sb-crest" value="${esc(pin.crest || '')}" placeholder="URL zum Wappen-Bild…"/>
-              <input class="e-inp" id="sb-crestlink" value="${esc(pin.crestLink || '')}" placeholder="🔗 Link beim Klick (optional)…" style="font-size:var(--fs-xs);opacity:.85;"/>
-              <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-editor-image" data-preview-target="crest">↻ Vorschau</button>
+          <div class="pin-editor-media-field">
+            <div class="pin-editor-media-preview">${imagePreview(pin.pinMarker, '📍')}</div>
+            <div class="pin-editor-media-content">
+              <span class="e-lbl">Kartenzeichen / Map-Pin</span>
+              <div class="e-hint">Wähle ein Zeichen aus dem Kartenordner oder dem bisherigen Marker-Katalog.</div>
+              <div class="pin-editor-media-actions">
+                <button type="button" class="pin-editor-media-button" data-action="open-pin-media-library" data-media-target="marker">Mediathek öffnen</button>
+                ${pin.pinMarker ? `<button type="button" class="pin-editor-media-button" data-action="clear-pin-marker">Entfernen</button>` : ''}
+              </div>
+              ${pin.pinMarker ? `
+                <label class="e-lbl" for="sb-pinmarker-scale">Größe <span id="sb-pinmarker-scale-val">${Math.round((pin.pinMarkerScale || 1) * 100)}%</span></label>
+                <input type="range" id="sb-pinmarker-scale" min="40" max="300" value="${Math.round((pin.pinMarkerScale || 1) * 100)}" data-input-action="set-pin-marker-scale"/>
+              ` : ''}
             </div>
           </div>
-        </div>
-
-        <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
-          <div class="e-lbl" style="margin-bottom:.4rem;">🚩 Regionsbanner <span style="font-family:'EB Garamond',serif;font-size:.75rem;font-style:italic;opacity:.6;">(optional)</span></div>
-          <div class="e-img-row">
-            <div class="e-img-prev" id="sb-banner-prev" style="width:70px;height:70px;border-radius:2px;background:rgba(0,0,0,.06);">
-              ${pin.banner ? `<img src="${esc(pin.banner)}" style="width:100%;height:100%;object-fit:contain;"/>` : '<span style="opacity:.25;font-size:1.4rem;">🚩</span>'}
-            </div>
-            <div class="e-img-col">
-              <input class="e-inp" id="sb-banner" value="${esc(pin.banner || '')}" placeholder="URL zum Regionsbanner…"/>
-              <input class="e-inp" id="sb-bannerlink" value="${esc(pin.bannerLink || '')}" placeholder="🔗 Link beim Klick (optional)…" style="font-size:var(--fs-xs);opacity:.85;"/>
-              <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-editor-image" data-preview-target="banner">↻ Vorschau</button>
-            </div>
-          </div>
-        </div>
-
-        <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
-          <div class="e-lbl" style="margin-bottom:.4rem;">🖼 Vorschaubild</div>
-          <div class="e-img-row">
-            <div class="e-img-prev" id="sb-img-prev">${pin.img ? `<img src="${esc(pin.img)}"/>` : '🖼'}</div>
-            <div class="e-img-col">
-              <input class="e-inp" id="sb-img" value="${esc(pin.img || '')}" placeholder="https://i.imgur.com/…"/>
-              <input class="e-inp" id="sb-imglink" value="${esc(pin.imgLink || '')}" placeholder="Link-Ziel beim Klick..." style="font-size:var(--fs-xs);opacity:.85;"/>
-              <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-editor-image" data-preview-target="image">↻ Vorschau</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="e-row">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.3rem;">
-            <label class="e-lbl" style="margin:0;">Infotabelle</label>
-            <div style="display:flex;gap:.35rem;align-items:center;">
-              <select class="e-sel" id="sb-tpl-sel" style="font-size:var(--fs-xs);padding:2px 6px;width:auto;"
-                data-input-action="apply-pin-template-preset">
-                <option value="">📋 Preset laden…</option>
-                ${window.PIN_TEMPLATES.map(template => `<option value="${template.id}">${template.icon} ${template.label}</option>`).join('')}
-              </select>
-              <button class="add-row" style="border-style:solid;opacity:.6;white-space:nowrap;padding:2px 8px;width:auto;"
-                data-action="clear-pin-table" title="Alle Zeilen löschen">🗑 Leeren</button>
-            </div>
-          </div>
-          <div class="tbl-ed" id="sb-tbl">${rows}</div>
-          <button class="add-row" data-action="add-pin-table-row">＋ Zeile hinzufügen</button>
-        </div>
-        <div class="e-row">
-          <label class="e-lbl">Beschreibung / Flavourtext</label>
-          <div class="fmt-bar">
-            <button class="fmt" data-action="format-pin-text" data-before="**" data-after="**"><b>B</b></button>
-            <button class="fmt" data-action="format-pin-text" data-before="*" data-after="*"><i>I</i></button>
-            <button class="fmt" data-action="format-pin-text" data-before="&#10;&#10;---&#10;&#10;" data-after="">—</button>
-          </div>
-          <textarea class="e-ta" id="sb-text" rows="5">${esc(pin.text || '')}</textarea>
-          <div class="e-hint">**fett** &nbsp;*kursiv* &nbsp;--- Trennlinie &nbsp;[URL=https://...]Linktext[/URL]</div>
-        </div>
-        <div class="e-row">
           <label class="e-check-row">
             <input type="checkbox" id="sb-secret" ${pin.secret ? 'checked' : ''}/>
             <span class="e-check-lbl">🔒 Geheimer Pin</span>
           </label>
-        </div>
+        `)}
+
+        ${panel('zugehoerigkeit', `
+          <h3 class="pin-editor-panel-title">Herrschaft, Region & Fraktion</h3>
+          <p class="pin-editor-help">Die feste Herrschaft kommt aus der Kartenverwaltung; zusätzliche Angaben bleiben frei formulierbar.</p>
+          <div class="e-row">
+            <label class="e-lbl" for="sb-dominion">Herrschaft</label>
+            <select class="e-sel" id="sb-dominion">
+              <option value="">— Keine —</option>
+              ${runtime.orderedDominions().map(({ dominion, depth }) => `<option value="${esc(dominion.id)}"${pin.dominionId === dominion.id ? ' selected' : ''}>${'  '.repeat(depth)}${depth ? '↳ ' : ''}${esc(dominion.name)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="e-row">
+            <label class="e-lbl" for="sb-region">Region / Gebiet</label>
+            <input class="e-inp" id="sb-region" value="${esc(pin.region || '')}" maxlength="80" placeholder="z. B. Grafschaft Celtigerns Wacht …"/>
+          </div>
+          <div class="e-row">
+            <label class="e-lbl" for="sb-house">Herrschaft / Haus</label>
+            <input class="e-inp" id="sb-house" value="${esc(pin.house || '')}" maxlength="80" placeholder="z. B. Haus O'Gwynthor …"/>
+          </div>
+          <div class="e-row">
+            <label class="e-lbl" for="sb-faction">Fraktion / Gilde</label>
+            <input class="e-inp" id="sb-faction" value="${esc(pin.faction || '')}" maxlength="80" placeholder="z. B. Händlergilde …"/>
+          </div>
+        `)}
+
+        ${panel('medien', `
+          <h3 class="pin-editor-panel-title">Bilder & Verlinkungen</h3>
+          <p class="pin-editor-help">Die Mediathek greift auf die vorhandenen Projektordner für Ortszeichen, Wappen und Banner zu.</p>
+          ${mediaField({ role: 'crest', label: 'Wappen / Ortsbanner', url: pin.crest, link: pin.crestLink, fallback: '🏰', hint: 'Kleines Wappen im Kopf des Eintrags.' })}
+          ${mediaField({ role: 'banner', label: 'Regionsbanner', url: pin.banner, link: pin.bannerLink, fallback: '⚑', hint: 'Optionales Banner der zugehörigen Herrschaft oder Region.' })}
+          ${mediaField({ role: 'img', label: 'Vorschaubild', url: pin.img, link: pin.imgLink, fallback: '▧', hint: 'Großes Motiv innerhalb des Eintrags.' })}
+        `)}
+
+        ${panel('infotabelle', `
+          <h3 class="pin-editor-panel-title">Infotabelle</h3>
+          <div class="e-row">
+            <div class="pin-editor-media-actions">
+              <select class="e-sel" id="sb-tpl-sel" data-input-action="apply-pin-template-preset">
+                <option value="">Vorlage laden …</option>
+                ${(window.PIN_TEMPLATES || []).map(template => `<option value="${template.id}">${template.icon} ${template.label}</option>`).join('')}
+              </select>
+              <button type="button" class="pin-editor-media-button" data-action="clear-pin-table">Tabelle leeren</button>
+            </div>
+          </div>
+          <div class="tbl-ed" id="sb-tbl">${rows}</div>
+          <button type="button" class="add-row" data-action="add-pin-table-row">＋ Zeile hinzufügen</button>
+        `)}
+
+        ${panel('beschreibung', `
+          <h3 class="pin-editor-panel-title">Beschreibung & Flavourtext</h3>
+          <div class="fmt-bar">
+            <button type="button" class="fmt" data-action="format-pin-text" data-before="**" data-after="**"><b>B</b></button>
+            <button type="button" class="fmt" data-action="format-pin-text" data-before="*" data-after="*"><i>I</i></button>
+            <button type="button" class="fmt" data-action="format-pin-text" data-before="&#10;&#10;---&#10;&#10;" data-after="">—</button>
+          </div>
+          <textarea class="e-ta" id="sb-text" rows="12">${esc(pin.text || '')}</textarea>
+          <div class="e-hint">**fett** &nbsp; *kursiv* &nbsp; --- Trennlinie &nbsp; [URL=https://…]Linktext[/URL]</div>
+        `)}
       </div>`;
 
     footer.innerHTML = `
-      <button class="s-btn s-del" data-action="delete-pin-from-editor" data-pin-id="${pin.id}" style="margin-right:auto">🗑</button>
-      <button class="s-btn s-cancel" data-action="close-sidebar">Abbrechen</button>
-      <button class="s-btn s-save" data-action="save-pin-editor" data-pin-id="${pin.id}">✓ Speichern</button>`;
-    runtime.openEditorShell?.('pin', pin.id);
-    body.querySelectorAll('input, textarea, select').forEach(control => {
-      control.addEventListener('input', () => {
-        sbSyncAll();
-        runtime.renderEditorPreview?.();
-        runtime.renderPins();
-      });
-      control.addEventListener('change', () => {
-        sbSyncAll();
-        runtime.renderEditorPreview?.();
-        runtime.renderPins();
-      });
-    });
+      ${session.isNew() ? '' : `<button type="button" class="s-btn s-del" data-action="delete-pin-from-editor" data-pin-id="${pin.id}">🗑 Löschen</button>`}
+      <span class="pin-editor-footer-note">„Übernehmen“ legt den Kartenstand zunächst lokal ab.</span>
+      <button type="button" class="s-btn s-cancel" data-action="cancel-pin-editor">Abbrechen</button>
+      <button type="button" class="s-btn s-save" data-action="save-pin-editor" data-pin-id="${pin.id}">✓ Pin übernehmen</button>`;
+
+    bindFormEvents(body);
+    setHeader();
+    runtime.renderEditorPreview?.(pin);
   }
 
-  function sbPrevImg(){
-    const url = document.getElementById('sb-img').value.trim();
-    const preview = document.getElementById('sb-img-prev');
-    preview.innerHTML = url ? `<img src="${url}" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='❌'"/>` : '🖼';
+  function bindFormEvents(body) {
+    if (body.dataset.pinEditorBound === 'true') return;
+    body.dataset.pinEditorBound = 'true';
+    const update = event => {
+      if (!event.target.matches('input, textarea, select')) return;
+      syncFromForm();
+      updateStatus();
+      runtime.renderEditorPreview?.(currentPin());
+    };
+    body.addEventListener('input', update);
+    body.addEventListener('change', update);
   }
 
-  function sbPrevCrest(){
-    const url = document.getElementById('sb-crest').value.trim();
-    const preview = document.getElementById('sb-crest-prev');
-    preview.innerHTML = url ? `<img src="${url}" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='❌'"/>` : '🏰';
-  }
-
-  function sbPrevBanner(){
-    const url = document.getElementById('sb-banner').value.trim();
-    const preview = document.getElementById('sb-banner-prev');
-    preview.innerHTML = url ? `<img src="${url}" style="width:100%;height:100%;object-fit:contain" onerror="this.parentElement.innerHTML='❌'"/>` : '<span style="opacity:.25;font-size:1.4rem;">🚩</span>';
-  }
-
-  function sbOpenPinMarkerPicker(pinId){
-    pinMarkerPinId = pinId;
-    document.getElementById('pinmkr-search').value = '';
-    const groups = [...new Set((state().markerCatalog || []).map(item => item.group || '').filter(Boolean))].sort();
-    const filter = document.getElementById('pinmkr-filter');
-    filter.innerHTML = '<option value="">Alle Gruppen</option>' + groups.map(group => `<option value="${runtime.esc(group)}">${runtime.esc(group)}</option>`).join('');
-    runtime.closeModal('pinmkr-mo');
-    document.getElementById('pinmkr-mo').classList.add('open');
-    renderPinMarkerGrid('');
-  }
-
-  function renderPinMarkerGrid(query){
-    const q = (query || '').toLowerCase();
-    const groupFilter = document.getElementById('pinmkr-filter')?.value || '';
-    const list = (state().markerCatalog || []).filter(marker => {
-      const matchesQuery = !q || marker.name.toLowerCase().includes(q) || (marker.group || '').toLowerCase().includes(q);
-      const matchesGroup = !groupFilter || (marker.group || '') === groupFilter;
-      return matchesQuery && matchesGroup;
-    });
-    const grid = document.getElementById('pinmkr-grid');
-    if(!list.length){
-      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:2rem;font-family:'EB Garamond',serif;color:var(--ink3);">Keine Marker.</div>`;
-      return;
-    }
-
-    const grouped = {};
-    list.forEach(marker => {
-      const group = marker.group || 'Ohne Gruppe';
-      if(!grouped[group]) grouped[group] = [];
-      grouped[group].push(marker);
-    });
-
-    const esc = runtime.esc;
-    grid.innerHTML = Object.entries(grouped).map(([group, items]) => `
-      <div class="mcat-grp-header">${esc(group)}</div>
-      ${items.map(marker => `
-        <div class="mcat-item" data-action="set-pin-marker" data-marker-url="${esc(marker.url)}" title="${esc(marker.name)}">
-          <img src="${esc(marker.url)}" style="width:48px;height:58px;object-fit:contain;"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 48%22><text y=%2230%22 font-size=%2224%22>📍</text></svg>'"/>
-          <span class="mcat-lbl">${esc(marker.name)}</span>
-        </div>`).join('')}
-    `).join('');
-  }
-
-  function sbSetPinMarker(url){
-    if(!pinMarkerPinId) return;
-    const pin = sbSyncAll();
-    if(!pin) return;
-    pin.pinMarker = url;
-    runtime.closeModal('pinmkr-mo');
-    renderSidebarEdit(pin);
-  }
-
-  function sbClearPinMarker(){
-    const pin = sbSyncAll();
-    if(!pin) return;
-    pin.pinMarker = '';
-    renderSidebarEdit(pin);
-  }
-
-  function sbSetPinMarkerScale(value){
-    const pin = sbSyncAll();
-    if(!pin) return;
-    pin.pinMarkerScale = Math.max(.4, Math.min(3, Number(value) / 100));
-    document.getElementById('sb-pinmarker-scale-val').textContent = `${Math.round(pin.pinMarkerScale * 100)}%`;
-    window.KartoPinRenderer?.renderPins();
-    runtime.save();
-    runtime.renderEditorPreview();
-  }
-
-  function sbSyncTbl(){
+  function syncTable() {
     return Array.from(document.querySelectorAll('#sb-tbl .tbl-row')).map(row => ({
       k: row.querySelector('[data-c="k"]')?.value || '',
       v: row.querySelector('[data-c="v"]')?.value || '',
     })).filter(row => row.k || row.v);
   }
 
-  function sbSyncAll(){
-    const pin = state().pins.find(item => item.id === activePinId);
-    if(!pin) return pin;
-    pin.title = document.getElementById('sb-title-inp')?.value || pin.title;
-    pin.cat = document.getElementById('sb-cat')?.value || pin.cat;
-    pin.img = document.getElementById('sb-img')?.value ?? pin.img;
-    pin.imgLink = document.getElementById('sb-imglink')?.value ?? pin.imgLink;
-    pin.crest = document.getElementById('sb-crest')?.value ?? pin.crest;
-    pin.crestLink = document.getElementById('sb-crestlink')?.value ?? pin.crestLink;
-    pin.banner = document.getElementById('sb-banner')?.value ?? pin.banner;
-    pin.bannerLink = document.getElementById('sb-bannerlink')?.value ?? pin.bannerLink;
-    pin.dominionId = document.getElementById('sb-dominion')?.value ?? pin.dominionId;
-    pin.region = document.getElementById('sb-region')?.value ?? pin.region;
-    pin.house = document.getElementById('sb-house')?.value ?? pin.house;
-    pin.faction = document.getElementById('sb-faction')?.value ?? pin.faction;
-    pin.text = document.getElementById('sb-text')?.value ?? pin.text;
+  function syncFromForm() {
+    const pin = currentPin();
+    if (!pin) return null;
+    const value = (id, previous = '') => document.getElementById(id)?.value ?? previous;
+    pin.title = value('sb-title-inp', pin.title);
+    pin.cat = value('sb-cat', pin.cat);
+    pin.img = value('sb-img', pin.img);
+    pin.imgLink = value('sb-imglink', pin.imgLink);
+    pin.crest = value('sb-crest', pin.crest);
+    pin.crestLink = value('sb-crestlink', pin.crestLink);
+    pin.banner = value('sb-banner', pin.banner);
+    pin.bannerLink = value('sb-bannerlink', pin.bannerLink);
+    pin.dominionId = value('sb-dominion', pin.dominionId);
+    pin.region = value('sb-region', pin.region);
+    pin.house = value('sb-house', pin.house);
+    pin.faction = value('sb-faction', pin.faction);
+    pin.text = value('sb-text', pin.text);
     pin.secret = document.getElementById('sb-secret')?.checked ?? pin.secret;
-    pin.table = sbSyncTbl();
+    if (document.getElementById('sb-tbl')) pin.table = syncTable();
     return pin;
   }
 
-  function sbAddRow(){
-    const pin = sbSyncAll();
-    if(!pin) return;
-    pin.table.push({k:'', v:''});
-    renderSidebarEdit(pin);
+  function switchTab(tab) {
+    if (!TABS.includes(tab)) return;
+    syncFromForm();
+    activeTab = tab;
+    document.querySelectorAll('[data-editor-tab]').forEach(button => button.classList.toggle('is-active', button.dataset.editorTab === tab));
+    document.querySelectorAll('[data-editor-panel]').forEach(section => { section.hidden = section.dataset.editorPanel !== tab; });
   }
 
-  function sbDelRow(index){
-    const pin = sbSyncAll();
-    if(!pin) return;
-    pin.table.splice(index, 1);
-    renderSidebarEdit(pin);
-  }
-
-  function sbClearTable(){
-    const pin = sbSyncAll();
-    if(!pin) return;
-    if(pin.table.length && !confirm('Alle Tabellenzeilen löschen?')) return;
-    pin.table = [];
-    renderSidebarEdit(pin);
-  }
-
-  function sbApplyPreset(templateId){
-    if(!templateId) return;
-    const template = window.PIN_TEMPLATES.find(item => item.id === templateId);
-    if(!template) return;
-    const pin = sbSyncAll();
-    if(!pin) return;
-    const existing = {};
-    (pin.table || []).forEach(row => {
-      if(row.k) existing[row.k.toLowerCase().trim()] = row.v;
+  function commit(options = {}) {
+    const target = actualPin();
+    if (!target || !session) return null;
+    syncFromForm();
+    const wasNew = session.isNew();
+    const changed = session.isDirty();
+    const before = session.original();
+    const pin = session.commitInto(target);
+    pin.title = String(pin.title || '').trim() || 'Unbekannter Ort';
+    pin.cat = pin.cat || state().cats[0]?.id || 'other';
+    ['img', 'imgLink', 'crest', 'crestLink', 'banner', 'bannerLink', 'dominionId', 'region', 'house', 'faction', 'text'].forEach(key => {
+      pin[key] = String(pin[key] || '').trim();
     });
-    pin.table = template.table.map(row => ({
-      k: row.k,
-      v: existing[row.k.toLowerCase().trim()] ?? '',
-    }));
-    renderSidebarEdit(pin);
-  }
+    pin.secret = !!pin.secret;
 
-  function sbSave(pinId){
-    const pin = state().pins.find(item => item.id === pinId);
-    if(!pin) return;
-    pin.title = (document.getElementById('sb-title-inp')?.value || '').trim() || 'Unbekannter Ort';
-    pin.cat = document.getElementById('sb-cat')?.value || (state().cats[0]?.id || 'other');
-    pin.img = (document.getElementById('sb-img')?.value || '').trim();
-    pin.imgLink = (document.getElementById('sb-imglink')?.value || '').trim();
-    pin.crest = (document.getElementById('sb-crest')?.value || '').trim();
-    pin.crestLink = (document.getElementById('sb-crestlink')?.value || '').trim();
-    pin.banner = (document.getElementById('sb-banner')?.value || '').trim();
-    pin.bannerLink = (document.getElementById('sb-bannerlink')?.value || '').trim();
-    pin.dominionId = (document.getElementById('sb-dominion')?.value || '').trim();
-    pin.region = (document.getElementById('sb-region')?.value || '').trim();
-    pin.house = (document.getElementById('sb-house')?.value || '').trim();
-    pin.faction = (document.getElementById('sb-faction')?.value || '').trim();
-    pin.text = (document.getElementById('sb-text')?.value || '').trim();
-    pin.secret = document.getElementById('sb-secret')?.checked || false;
-    pin.table = sbSyncTbl();
-    runtime.save();
+    if (wasNew) {
+      const id = pin.id;
+      runtime.pushUndo(`Pin gesetzt: ${pin.title}`, () => {
+        state().pins = state().pins.filter(item => item.id !== id);
+      });
+    } else if (changed) {
+      const id = pin.id;
+      runtime.pushUndo(`Pin bearbeitet: ${pin.title}`, () => {
+        const current = state().pins.find(item => item.id === id);
+        if (!current) return;
+        Object.keys(current).forEach(key => delete current[key]);
+        Object.assign(current, clone(before));
+      });
+    }
+
     runtime.renderPins();
-    close();
-    window.KartoPinDetailView?.open(pin.id);
-    runtime.toast('✓ Gespeichert: ' + pin.title);
+    runtime.save();
+    const id = pin.id;
+    const title = pin.title;
+    close({ force: true, keepNew: wasNew });
+    if (options.openDetail !== false) window.KartoPinDetailView?.open(id);
+    runtime.toast(`✓ Lokal übernommen: ${title}`);
+    return pin;
   }
 
-  function fmt(before, after){
+  function saveAndPublish() {
+    const pin = commit({ openDetail: false });
+    if (pin) window.openPublishModal?.();
+  }
+
+  function openMedia(target) {
+    syncFromForm();
+    const role = target === 'img' ? 'image' : target;
+    window.KartoMediaLibrary?.open({
+      target: role,
+      onSelect(url) {
+        const pin = currentPin();
+        if (!pin) return;
+        if (target === 'marker') pin.pinMarker = url;
+        else pin[target] = url;
+        renderSidebarEdit();
+      },
+    });
+  }
+
+  function clearMedia(target) {
+    const pin = syncFromForm();
+    if (!pin) return;
+    if (target === 'marker') pin.pinMarker = '';
+    else pin[target] = '';
+    renderSidebarEdit();
+  }
+
+  function setMarker(url) {
+    const pin = syncFromForm();
+    if (!pin) return;
+    pin.pinMarker = url;
+    runtime.closeModal('pinmkr-mo');
+    renderSidebarEdit();
+  }
+
+  function setMarkerScale(value) {
+    const pin = syncFromForm();
+    if (!pin) return;
+    pin.pinMarkerScale = Math.max(.4, Math.min(3, Number(value) / 100));
+    const label = document.getElementById('sb-pinmarker-scale-val');
+    if (label) label.textContent = `${Math.round(pin.pinMarkerScale * 100)}%`;
+    updateStatus();
+    runtime.renderEditorPreview?.(pin);
+  }
+
+  function addRow() {
+    const pin = syncFromForm();
+    if (!pin) return;
+    pin.table = pin.table || [];
+    pin.table.push({ k: '', v: '' });
+    renderSidebarEdit();
+  }
+
+  function deleteRow(index) {
+    const pin = syncFromForm();
+    if (!pin) return;
+    pin.table.splice(index, 1);
+    renderSidebarEdit();
+  }
+
+  function clearTable() {
+    const pin = syncFromForm();
+    if (!pin) return;
+    if (pin.table.length && !confirm('Alle Tabellenzeilen löschen?')) return;
+    pin.table = [];
+    renderSidebarEdit();
+  }
+
+  function applyPreset(templateId) {
+    if (!templateId) return;
+    const template = (window.PIN_TEMPLATES || []).find(item => item.id === templateId);
+    const pin = syncFromForm();
+    if (!template || !pin) return;
+    const existing = Object.fromEntries((pin.table || []).filter(row => row.k).map(row => [row.k.toLocaleLowerCase('de').trim(), row.v]));
+    pin.table = template.table.map(row => ({ k: row.k, v: existing[row.k.toLocaleLowerCase('de').trim()] ?? '' }));
+    renderSidebarEdit();
+  }
+
+  function formatText(before, after) {
     const textarea = document.getElementById('sb-text');
-    if(!textarea) return;
+    if (!textarea) return;
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const selection = textarea.value.substring(start, end);
     textarea.value = textarea.value.substring(0, start) + before + selection + after + textarea.value.substring(end);
     textarea.focus();
     textarea.setSelectionRange(start + before.length, end + before.length);
+    syncFromForm();
+    updateStatus();
+    runtime.renderEditorPreview?.(currentPin());
+  }
+
+  function preview() {
+    syncFromForm();
+    renderSidebarEdit();
   }
 
   window.KartoPinEditor = {
-    open,
-    close,
-    renderSidebarEdit,
-    preview(target){
-      if(target === 'crest') sbPrevCrest();
-      if(target === 'banner') sbPrevBanner();
-      if(target === 'image') sbPrevImg();
-    },
+    open, close, isOpen, renderSidebarEdit, switchTab,
+    save: commit, saveAndPublish, openMedia, clearMedia, preview,
   };
 
   window.renderSidebarEdit = renderSidebarEdit;
-  window.sbPrevImg = sbPrevImg;
-  window.sbPrevCrest = sbPrevCrest;
-  window.sbPrevBanner = sbPrevBanner;
-  window.sbOpenPinMarkerPicker = sbOpenPinMarkerPicker;
-  window.renderPinMarkerGrid = renderPinMarkerGrid;
-  window.sbSetPinMarker = sbSetPinMarker;
-  window.sbClearPinMarker = sbClearPinMarker;
-  window.sbSetPinMarkerScale = sbSetPinMarkerScale;
-  window.sbSyncTbl = sbSyncTbl;
-  window.sbSyncAll = sbSyncAll;
-  window.sbAddRow = sbAddRow;
-  window.sbDelRow = sbDelRow;
-  window.sbClearTable = sbClearTable;
-  window.sbApplyPreset = sbApplyPreset;
-  window.sbSave = sbSave;
-  window.fmt = fmt;
+  window.sbOpenPinMarkerPicker = () => openMedia('marker');
+  window.renderPinMarkerGrid = () => {};
+  window.sbSetPinMarker = setMarker;
+  window.sbClearPinMarker = () => clearMedia('marker');
+  window.sbSetPinMarkerScale = setMarkerScale;
+  window.sbSyncTbl = syncTable;
+  window.sbSyncAll = syncFromForm;
+  window.sbAddRow = addRow;
+  window.sbDelRow = deleteRow;
+  window.sbClearTable = clearTable;
+  window.sbApplyPreset = applyPreset;
+  window.sbSave = () => commit();
+  window.fmt = formatText;
 })();

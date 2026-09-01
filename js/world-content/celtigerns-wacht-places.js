@@ -89,7 +89,16 @@
   });
 
   const definitions = Object.freeze([
-    define("gwynthor", "Gwynthor", "Großstadt", "county", { featured: true }),
+    define("gwynthor", "Gwynthor", "Großstadt", "county", {
+      featured: true,
+      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-maps-20260901e",
+      hierarchy: [
+        ...baseHierarchy,
+        { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },
+        { type: "Bannkreis", name: "Gwynthors Bannkreis", slug: "gwynthors-bannkreis" },
+        { type: "Großstadt", name: "Gwynthor", slug: "gwynthor" }
+      ]
+    }),
     define("rhosmere", "Rhosmere", "Großstadt", "arthus", { featured: true }),
     define("abergwint", "Abergwint", "Großstadt", "gwendolyn", { featured: true }),
     define("aberllan", "Aberllan", "Großstadt", "camruisge", { featured: true }),
@@ -204,7 +213,7 @@
       name: entry.name,
       status: "draft",
       type: normalizeId(entry.placeType),
-      data: blankDataPath,
+      data: entry.dataPath || blankDataPath,
       hierarchy: entry.hierarchy,
       tags: Object.freeze([
         "orte",
@@ -249,13 +258,14 @@
       name,
       placeType,
       featured: options.featured === true,
+      dataPath: options.dataPath || "",
       domain: parent,
       parentHref: parent.pageHref,
       images,
-      hierarchy: Object.freeze([
+      hierarchy: Object.freeze((options.hierarchy || [
         ...parent.hierarchy,
-        Object.freeze({ type: placeType, name, slug: id })
-      ])
+        { type: placeType, name, slug: id }
+      ]).map(freezeHierarchyItem))
     });
   }
 

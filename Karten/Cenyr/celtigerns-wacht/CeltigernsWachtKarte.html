@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Celtigerns Wacht — Aleria</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../../assets/css/karto-map.css">
+<link rel="stylesheet" href="../../assets/css/karto-map.css?v=20260901c">
+<link rel="stylesheet" href="../../assets/css/pin-editor.css?v=20260901c">
+<link rel="stylesheet" href="../../assets/css/media-library.css?v=20260901c">
 
+<script src="../../assets/js/data/celtigerns-wacht-dominions.js?v=20260901a"></script>
 <script src="./template.config.js"></script>
 <script src="../../assets/js/karto-storage.js"></script>
 </head>
@@ -321,9 +324,9 @@
 <div id="map-wrap" style="flex:1;position:relative;overflow:hidden;">
   <div id="map-stage">
     <img id="ln" class="ml" src="Kartenbilder/CeltigernsWacht.png"         alt="" draggable="false" onload="onImgLoad(this)" onerror="onImgErr()"/>
-    <img id="lr" class="ml" data-overlay="regions" src="Kartenbilder/CeltigernsWachtRegionen.png" alt="" draggable="false"/>
-    <img id="lm" class="ml" data-overlay="pins" src="Kartenbilder/CeltigernsWachtMarker.png"   alt="" draggable="false"/>
-    <div id="pl"></div>
+    <img id="lr" class="ml" data-overlay="regions" src="Kartenbilder/CeltigernsWachtRegionen.png" alt="" draggable="false" style="opacity:0"/>
+    <img id="lm" class="ml" data-overlay="pins" src="Kartenbilder/CeltigernsWachtMarker.png" alt="" draggable="false" style="opacity:0"/>
+    <div id="pl" style="display:none;opacity:1"></div>
   </div>
   <canvas id="measure-canvas"></canvas>
   <div id="pc"></div>
@@ -670,7 +673,9 @@
 <script src="../../assets/js/lsb/lsb-canvas.js"></script>
 <script src="../../assets/js/lsb/lsb-interaction.js"></script>
 <script src="../../assets/js/data/default-marker-catalog.js"></script>
-<script src="../../assets/js/karto-app.js"></script>
+<script src="../../assets/js/media/media-assets.registry.js?v=20260901a"></script>
+<script src="../../assets/js/karto-app.js?v=20260901b"></script>
+<script src="../../assets/js/media/media-library.js?v=20260901b"></script>
 <script src="../../assets/js/lsb/lsb-groups.js"></script>
 <script src="../../assets/js/lsb/lsb-modals.js"></script>
 <script src="../../assets/js/data/data-manager.js"></script>
@@ -678,16 +683,17 @@
 <script src="../../assets/js/map/map-panzoom.js"></script>
 <script src="../../assets/js/map/map-panning.js"></script>
 <script src="../../assets/js/map/map-interaction.js"></script>
-<script src="../../assets/js/map/map-view.js"></script>
+<script src="../../assets/js/map/map-view.js?v=20260901b"></script>
 <script src="../../assets/js/pins/marker-catalog.js"></script>
 <script src="../../assets/js/pins/categories.js"></script>
-<script src="../../assets/js/pins/pin-templates.js"></script>
+<script src="../../assets/js/pins/pin-templates.js?v=20260901a"></script>
 <script src="../../assets/js/pins/stamp-overwrite.js"></script>
 <script src="../../assets/js/pins/pin-renderer.js"></script>
 <script src="../../assets/js/pins/pin-detail-view.js"></script>
-<script src="../../assets/js/pins/pin-editor.js"></script>
+<script src="../../assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
+<script src="../../assets/js/pins/pin-editor.js?v=20260901a"></script>
 <script src="../../assets/js/pins/search.js"></script>
-<script src="../../assets/js/core/karto-actions.js"></script>
+<script src="../../assets/js/core/karto-actions.js?v=20260901a"></script>
 <script src="../../assets/js/core/karto-bootstrap.js"></script>
 </body>
 </html>
