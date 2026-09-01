@@ -93,22 +93,21 @@ await navigate("/Zeitungen/zeitung.html?zeitung=schwarzbote-gwynthor", 900);
 const newspaperResult = await evaluate(`(() => {
   const editionBox = document.querySelector('.newspaper-edition-stamp')?.getBoundingClientRect();
   const headerStamp = document.querySelector('.newspaper-edition-ink-stamp')?.getBoundingClientRect();
-  const footerStamp = document.querySelector('.newspaper-colophon-ink-stamp')?.getBoundingClientRect();
   const footerSeal = document.querySelector('.newspaper-colophon-wax-seal')?.getBoundingClientRect();
   return {
     headerWaxSeals: document.querySelectorAll('.newspaper-edition-wax-seal').length,
+    footerInkStamps: document.querySelectorAll('.newspaper-colophon-ink-stamp').length,
     headerStampWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-edition-ink-stamp')).width) || 0,
     headerStampBelowEdition: Boolean(editionBox && headerStamp && headerStamp.top >= editionBox.top + editionBox.height * 0.65),
-    footerStampWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-colophon-ink-stamp')).width) || 0,
     footerSealWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-colophon-wax-seal')).width) || 0,
     imagesLoaded: [...document.querySelectorAll('.newspaper-edition-ink-stamp, .newspaper-colophon-imprint img')]
       .every((image) => image.complete && image.naturalWidth > 0),
   };
 })()`);
 assert.equal(newspaperResult.headerWaxSeals, 0);
+assert.equal(newspaperResult.footerInkStamps, 0);
 assert.ok(newspaperResult.headerStampWidth <= 90);
 assert.equal(newspaperResult.headerStampBelowEdition, true);
-assert.ok(newspaperResult.footerStampWidth <= 70);
 assert.ok(newspaperResult.footerSealWidth <= 80);
 assert.equal(newspaperResult.imagesLoaded, true);
 

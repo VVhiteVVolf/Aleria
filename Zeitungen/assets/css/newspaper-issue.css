@@ -60,8 +60,6 @@
 }
 
 .newspaper-edition-ink-stamp,
-.newspaper-edition-wax-seal,
-.newspaper-colophon-ink-stamp,
 .newspaper-colophon-wax-seal {
   position: absolute;
   height: auto;
@@ -441,15 +439,6 @@
   bottom: -10px;
   width: 150px;
   height: 120px;
-}
-
-.newspaper-colophon-ink-stamp {
-  right: 56px;
-  bottom: 10px;
-  width: 66px;
-  opacity: 0.64;
-  transform: rotate(-5deg);
-  mix-blend-mode: multiply;
 }
 
 .newspaper-colophon-wax-seal {

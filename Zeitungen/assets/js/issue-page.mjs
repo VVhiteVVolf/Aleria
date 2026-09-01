@@ -198,7 +198,6 @@ function renderColophon(newspaper) {
       element("a", { text: `Zurück nach ${newspaper.location.name}`, href: newspaper.location.href })
     ]),
     element("div", { className: "newspaper-colophon-imprint", attributes: { "aria-hidden": "true" } }, [
-      renderDecorativeImprint(newspaper.imprints?.inkStamp, "newspaper-colophon-ink-stamp"),
       renderDecorativeImprint(newspaper.imprints?.waxSeal, "newspaper-colophon-wax-seal")
     ])
   ]);
