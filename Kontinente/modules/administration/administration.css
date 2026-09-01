@@ -248,7 +248,20 @@
 }
 
 .administration-dialog-table.is-hierarchy-table .is-primary-leader-row .administration-dialog-portrait {
-  width: 82px;
+  width: 116px;
+}
+
+.administration-dialog-table.is-hierarchy-table .is-person-name-row td {
+  white-space: nowrap;
+}
+
+.administration-dialog-table.is-hierarchy-table .is-person-name-row td > p {
+  display: inline;
+  margin: 0;
+}
+
+.administration-dialog-table.is-hierarchy-table .is-person-name-row td > p + p::before {
+  content: " ";
 }
 
 .administration-dialog-table.is-compact-table {
@@ -269,7 +282,7 @@
 }
 
 .administration-dialog-portrait {
-  width: 76px;
+  width: 104px;
   max-width: 100%;
   aspect-ratio: 2 / 3;
   border: 2px solid #6c4424;

@@ -244,6 +244,7 @@
       const portraits = row.querySelectorAll(".administration-dialog-portrait");
       if (!portraits.length) return;
       row.classList.add("is-portrait-row");
+      rows[index + 1]?.classList.add("is-person-name-row");
       if (row.cells.length !== 1 || row.cells[0].colSpan < 3) return;
       row.classList.add("is-primary-leader-row");
       rows[index - 1]?.classList.add("is-primary-leader-title-row");

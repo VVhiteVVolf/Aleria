@@ -4,6 +4,8 @@ import { writeFile } from "node:fs/promises";
 const devtoolsPort = Number(process.argv[2] || 9224);
 const baseUrl = process.argv[3] || "http://127.0.0.1:4173";
 const screenshotPath = process.argv[4] || "";
+const footerScreenshotPath = process.argv[5] || "";
+const administrationScreenshotPath = process.argv[6] || "";
 const targets = await (await fetch(`http://127.0.0.1:${devtoolsPort}/json/list`)).json();
 const page = targets.find((target) => target.type === "page" && target.url === "about:blank")
   || targets.find((target) => target.type === "page");
@@ -87,9 +89,39 @@ assert.equal(placeResult.supporterImages, 2);
 assert.ok(placeResult.supporterWidths.every((width) => width > 0), "Beide Wappenhalter müssen geladen sein.");
 assert.match(placeResult.leftTransform, /^matrix\(-1,/);
 
+await navigate("/Zeitungen/zeitung.html?zeitung=schwarzbote-gwynthor", 900);
+const newspaperResult = await evaluate(`(() => {
+  const editionBox = document.querySelector('.newspaper-edition-stamp')?.getBoundingClientRect();
+  const headerStamp = document.querySelector('.newspaper-edition-ink-stamp')?.getBoundingClientRect();
+  const footerStamp = document.querySelector('.newspaper-colophon-ink-stamp')?.getBoundingClientRect();
+  const footerSeal = document.querySelector('.newspaper-colophon-wax-seal')?.getBoundingClientRect();
+  return {
+    headerWaxSeals: document.querySelectorAll('.newspaper-edition-wax-seal').length,
+    headerStampWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-edition-ink-stamp')).width) || 0,
+    headerStampBelowEdition: Boolean(editionBox && headerStamp && headerStamp.top >= editionBox.top + editionBox.height * 0.65),
+    footerStampWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-colophon-ink-stamp')).width) || 0,
+    footerSealWidth: Number.parseFloat(getComputedStyle(document.querySelector('.newspaper-colophon-wax-seal')).width) || 0,
+    imagesLoaded: [...document.querySelectorAll('.newspaper-edition-ink-stamp, .newspaper-colophon-imprint img')]
+      .every((image) => image.complete && image.naturalWidth > 0),
+  };
+})()`);
+assert.equal(newspaperResult.headerWaxSeals, 0);
+assert.ok(newspaperResult.headerStampWidth <= 90);
+assert.equal(newspaperResult.headerStampBelowEdition, true);
+assert.ok(newspaperResult.footerStampWidth <= 70);
+assert.ok(newspaperResult.footerSealWidth <= 80);
+assert.equal(newspaperResult.imagesLoaded, true);
+
 if (screenshotPath) {
   const screenshot = await command("Page.captureScreenshot", { format: "png", fromSurface: true });
   await writeFile(screenshotPath, Buffer.from(screenshot.data, "base64"));
+}
+
+if (footerScreenshotPath) {
+  await evaluate("window.scrollTo(0, document.documentElement.scrollHeight)");
+  await new Promise((resolve) => setTimeout(resolve, 150));
+  const screenshot = await command("Page.captureScreenshot", { format: "png", fromSurface: true });
+  await writeFile(footerScreenshotPath, Buffer.from(screenshot.data, "base64"));
 }
 
 await navigate("/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Herrschaft%20der%20Wyrm/Herrschaft%20der%20Wyrm.html", 1600);
@@ -131,6 +163,40 @@ assert.equal(countyAdministration.scope, "grafschaft-celtigerns-wacht");
 assert.equal(countyAdministration.empty, false);
 assert.ok(countyAdministration.contentLength > 100, "Celtigerns Wacht muss seine Verwaltungsstruktur behalten.");
 
+const administrationPortraits = await evaluate(`(async () => {
+  const card = document.querySelector('[data-administration-key="gerichtsbarkeit"]');
+  card?.click();
+  const deadline = Date.now() + 4000;
+  while (Date.now() < deadline) {
+    const row = [...document.querySelectorAll('.is-person-name-row')]
+      .find((candidate) => candidate.textContent.includes('Meurig'));
+    if (row) break;
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  const nameRow = [...document.querySelectorAll('.is-person-name-row')]
+    .find((candidate) => candidate.textContent.includes('Meurig'));
+  const nameParts = [...(nameRow?.querySelectorAll('p') || [])]
+    .map((part) => part.textContent.trim())
+    .filter(Boolean);
+  const portrait = document.querySelector('.is-primary-leader-row .administration-dialog-portrait');
+  return {
+    name: nameParts.join(' '),
+    namePartsInline: [...(nameRow?.querySelectorAll('p') || [])]
+      .every((part) => getComputedStyle(part).display === 'inline'),
+    portraitWidth: portrait?.getBoundingClientRect().width || 0,
+  };
+})()`);
+assert.equal(administrationPortraits.name, "Meurig Draig");
+assert.equal(administrationPortraits.namePartsInline, true);
+assert.ok(administrationPortraits.portraitWidth >= 110, "Leitungsporträts müssen sichtbar größer dargestellt werden.");
+
+if (administrationScreenshotPath) {
+  await evaluate("document.querySelector('.is-primary-leader-row')?.scrollIntoView({ block: 'center' })");
+  await new Promise((resolve) => setTimeout(resolve, 150));
+  const screenshot = await command("Page.captureScreenshot", { format: "png", fromSurface: true });
+  await writeFile(administrationScreenshotPath, Buffer.from(screenshot.data, "base64"));
+}
+
 await navigate("/Karten/karte.html?map=cenyr-celtigerns-wacht", 1300);
 const countyResult = await evaluate(`(() => {
   const dominions = KartoRuntime.state().dominions;
@@ -155,13 +221,17 @@ assert.equal(countyResult.gwaredParent, "msa3c53vulpw53");
 
 await navigate("/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html", 1500);
 const legacyMapResult = await evaluate(`(() => ({
-  normalWidth: document.getElementById('ln')?.naturalWidth || 0,
-  imageSource: document.getElementById('ln')?.currentSrc || '',
-  errorVisible: document.getElementById('toast')?.classList.contains('on')
-    && document.getElementById('toast')?.textContent.includes('Kartenbilder nicht gefunden')
+  pathname: location.pathname,
+  mapId: new URLSearchParams(location.search).get('map'),
+  hasImageLibrary: Boolean(document.getElementById('btn-map-images')),
+  hasPublishAction: Boolean(document.getElementById('btn-publish')),
+  normalWidth: document.getElementById('ln')?.naturalWidth || 0
 }))()`);
-assert.ok(legacyMapResult.normalWidth > 0, "Auch der alte Kartenlink muss das Kartenbild laden.");
-assert.equal(legacyMapResult.errorVisible, false);
+assert.equal(legacyMapResult.pathname, "/Karten/karte.html");
+assert.equal(legacyMapResult.mapId, "cenyr-celtigerns-wacht");
+assert.equal(legacyMapResult.hasImageLibrary, true);
+assert.equal(legacyMapResult.hasPublishAction, true);
+assert.ok(legacyMapResult.normalWidth > 0, "Der alte Kartenlink muss in der zentralen Kartenansicht landen.");
 
 await navigate("/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis", 1300);
 const regionalResult = await evaluate(`(() => ({
@@ -186,8 +256,10 @@ assert.deepEqual(browserErrors, [], `Browserfehler: ${browserErrors.join("; ")}`
 socket.close();
 console.log(JSON.stringify({
   placeResult,
+  newspaperResult,
   wyrmAdministration,
   countyAdministration,
+  administrationPortraits,
   countyResult,
   legacyMapResult,
   regionalResult,

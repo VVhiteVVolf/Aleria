@@ -49,10 +49,7 @@ function renderBreadcrumbs(newspaper) {
 function renderMasthead(newspaper) {
   const publicationDate = formatPublicationDate(newspaper.publicationDate);
   return element("header", { className: "newspaper-masthead" }, [
-    element("div", { className: "newspaper-edition-stamp" }, [
-      element("span", { text: "Ausgabe" }),
-      element("strong", { text: newspaper.edition })
-    ]),
+    renderEditionMark(newspaper),
     element("div", { className: "newspaper-masthead-center" }, [
       element("p", { className: "newspaper-kicker", text: newspaper.tagline }),
       element("h1", { text: newspaper.name }),
@@ -63,6 +60,16 @@ function renderMasthead(newspaper) {
       fact("Preis", newspaper.price),
       fact("Artikel", newspaper.articles.length)
     ])
+  ]);
+}
+
+function renderEditionMark(newspaper) {
+  return element("div", { className: "newspaper-edition-mark" }, [
+    element("div", { className: "newspaper-edition-stamp" }, [
+      element("span", { text: "Ausgabe" }),
+      element("strong", { text: newspaper.edition })
+    ]),
+    renderDecorativeImprint(newspaper.imprints?.inkStamp, "newspaper-edition-ink-stamp")
   ]);
 }
 
@@ -185,10 +192,28 @@ function renderAuthorCard(author) {
 function renderColophon(newspaper) {
   const publicationDate = formatPublicationDate(newspaper.publicationDate);
   return element("footer", { className: "newspaper-colophon" }, [
-    element("span", { text: "❦", attributes: { "aria-hidden": "true" } }),
-    element("p", { text: `Gedruckt beim ${newspaper.printLocation} · ${newspaper.edition} · ${publicationDate}` }),
-    element("a", { text: `Zurück nach ${newspaper.location.name}`, href: newspaper.location.href })
+    element("div", { className: "newspaper-colophon-copy" }, [
+      element("span", { text: "❦", attributes: { "aria-hidden": "true" } }),
+      element("p", { text: `Gedruckt beim ${newspaper.printLocation} · ${newspaper.edition} · ${publicationDate}` }),
+      element("a", { text: `Zurück nach ${newspaper.location.name}`, href: newspaper.location.href })
+    ]),
+    element("div", { className: "newspaper-colophon-imprint", attributes: { "aria-hidden": "true" } }, [
+      renderDecorativeImprint(newspaper.imprints?.inkStamp, "newspaper-colophon-ink-stamp"),
+      renderDecorativeImprint(newspaper.imprints?.waxSeal, "newspaper-colophon-wax-seal")
+    ])
   ]);
+}
+
+function renderDecorativeImprint(source, className) {
+  if (!source) return null;
+  return element("img", {
+    className,
+    attributes: {
+      src: source,
+      alt: "",
+      decoding: "async"
+    }
+  });
 }
 
 function fact(label, value) {

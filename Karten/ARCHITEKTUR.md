@@ -58,7 +58,7 @@ Karten/
     template.config.js          # Beispiel-Konfiguration
   Cenyr/
     celtigerns-wacht/
-      CeltigernsWachtKarte.html # alter Kompatibilitaetslink zur Referenzkarte
+      CeltigernsWachtKarte.html # reine Weiterleitung auf die zentrale Karten-Shell
       template.config.js        # individuelle Karten-Konfiguration
       Kartenbilder/             # aktive Kartenbilder fuer Celtigerns Wacht
 ```

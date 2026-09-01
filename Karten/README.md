@@ -1,10 +1,11 @@
 # Karten-Template
 
-Die Referenzkarte liegt unter `Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html`.
-
-Der neue zentrale Kartenlink fuer die Referenzkarte ist:
+Die Referenzkarte wird über die zentrale Kartenoberfläche geladen:
 
 - `Karten/karte.html?map=cenyr-celtigerns-wacht`
+
+Der frühere Direktpfad `Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html`
+bleibt ausschließlich als Weiterleitung auf diese zentrale Ansicht erhalten.
 
 Der Zukunftsplan liegt in `ZUKUNFTSPLAN.md`.
 

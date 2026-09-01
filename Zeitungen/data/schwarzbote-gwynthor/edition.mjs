@@ -149,6 +149,10 @@ export default Object.freeze({
   tagline: "Das meistgelesene Blatt der Grafschaft",
   summary: "Diese Gwynthorer Ausgabe führt von den Verbrechen der Schwarzen Zitteraale über das Wappenerbe der Gafyr bis zu Predigt, Hofskandal und Kunstkritik. Fünf Federn berichten, urteilen und spotten – jede mit ihrer eigenen Stimme.",
   logo: `${assetRoot}/schwarzbote-gwynthor.png`,
+  imprints: Object.freeze({
+    inkStamp: "/IconOrdner/StempelSchwarzbote.png",
+    waxSeal: "/IconOrdner/Wachssiegel Schwarzbote.png"
+  }),
   publicationDate: DEFAULT_PUBLICATION_DATE,
   year: "1740",
   price: "5 Kupferstücke",

@@ -8,6 +8,12 @@
   SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg"
 
 [[redirects]]
+  from = "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html"
+  to = "/Karten/karte.html?map=cenyr-celtigerns-wacht"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/karten-v2/assets/*"
   to = "/karten-v2/dist/assets/:splat"
   status = 200

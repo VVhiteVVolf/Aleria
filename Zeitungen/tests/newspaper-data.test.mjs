@@ -42,8 +42,13 @@ test("Artikel verweisen nur auf bekannte Autoren und Artikelarten", () => {
   });
 });
 
-test("Portraits, Logo und alle Artikeltexte liegen lokal vor", async () => {
-  const localAssets = [newspaper.logo, ...newspaper.authors.map((author) => author.portrait)];
+test("Portraits, Logo, Druckzeichen und alle Artikeltexte liegen lokal vor", async () => {
+  const localAssets = [
+    newspaper.logo,
+    newspaper.imprints.inkStamp,
+    newspaper.imprints.waxSeal,
+    ...newspaper.authors.map((author) => author.portrait)
+  ];
   await Promise.all(localAssets.map((assetPath) => access(toWorkspacePath(assetPath))));
 
   for (const article of newspaper.articles) {
