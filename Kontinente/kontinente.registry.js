@@ -75,7 +75,7 @@ window.KONTINENTE_REGISTRY = [
     contentPolicy: {
       blockedLinkHosts: ["animexx.de"],
       linkReplacements: {
-        "worldanvil.com": "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html",
+        "worldanvil.com": "/Karten/karte.html?map=cenyr-celtigerns-wacht",
       },
       assetReplacements: {
         "https://i.imgur.com/ig4QY5L.png": "/IconOrdner/Welt%20Pins/Stadt.png",

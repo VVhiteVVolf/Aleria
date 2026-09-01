@@ -37,9 +37,17 @@ test("Web- und Daten-URLs bleiben unverändert", () => {
 test("nicht portable Altpfade fallen auf die Registry-Konfiguration zurück", () => {
   assert.equal(imageSources.toPublicUrl("C:\\Users\\name\\map.png"), "");
   assert.equal(imageSources.toPublicUrl("file:///C:/Users/name/map.png"), "");
+  assert.equal(imageSources.toPublicUrl("blob:https://dieweltvonaleria.netlify.app/veraltet"), "");
   assert.equal(
     imageSources.select("C:\\Users\\name\\map.png", context.window.KARTO_CONFIG.images.normal),
     "/Karten/Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png",
+  );
+});
+
+test("die Fehlerwiederholung umgeht einen beschädigten Browsercache", () => {
+  assert.equal(
+    imageSources.recoveryUrl("Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png"),
+    "https://dieweltvonaleria.netlify.app/Karten/Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png?aleria-map-recovery=20260901b",
   );
 });
 

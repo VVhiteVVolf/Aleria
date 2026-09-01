@@ -227,10 +227,11 @@ function setMapImageSource(img,source){
 function recoverConfiguredMapImage(layer,img){
   const sources=window.KartoMapImageSources;
   const fallback=sources?.configured(layer);
-  if(!img||!fallback||img.dataset.registryFallback==='tried'||sources.equivalent(img.currentSrc||img.src,fallback)) return false;
-  img.dataset.registryFallback='tried';
+  const recovery=sources?.recoveryUrl(fallback);
+  if(!img||!fallback||!recovery||img.dataset.registryFallback===recovery) return false;
+  img.dataset.registryFallback=recovery;
   S.mapImages={...cleanMapImages(S.mapImages||{}),[layer]:KARTO_CONFIG.images?.[layer]||fallback};
-  img.src=fallback;
+  img.src=recovery;
   return true;
 }
 // Beyond the 3 built-in overlay <img>s (#lr/#lm), custom layers get their

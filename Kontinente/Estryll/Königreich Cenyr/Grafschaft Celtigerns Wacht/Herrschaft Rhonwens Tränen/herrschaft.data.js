@@ -9,7 +9,7 @@
   const portraitRoot = "/Stammbäume/assets/images/portraits/haus-arwydd";
   const banner = "/Stammbäume/assets/images/regions/rhonwens-traenen.png";
   const mapImage = "/Kontinente/assets/images/celtigerns-wacht-map-preview.jpg";
-  const mapHref = "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html";
+  const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
   const parentHref = "../Grafschaft%20Celtigerns%20Wacht.html";
 
   const familySections = Object.freeze([

@@ -95,7 +95,7 @@
         "Meurig Draig": "/Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
         "Name unklar (Haus Draig)": "/Stammbäume/assets/images/placeholders/male.png",
       },
-      mapHref: "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html",
+      mapHref: "/Karten/karte.html?map=cenyr-celtigerns-wacht",
       familyTreePage,
       defaultTownIcon: "/IconOrdner/Welt%20Pins/Stadt.png",
     },

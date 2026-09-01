@@ -148,7 +148,7 @@
       title: "Karte der Baronie Gwendolyns Ufer",
       imageSrc: "/Kontinente/assets/images/celtigerns-wacht-map-preview.jpg",
       imageAlt: "Karte von Celtigerns Wacht mit Gwendolyns Ufer",
-      href: "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html",
+      href: "/Karten/karte.html?map=cenyr-celtigerns-wacht",
     }),
     domain: Object.freeze({
       title: "Herrschaft des Hauses Gwyvern",

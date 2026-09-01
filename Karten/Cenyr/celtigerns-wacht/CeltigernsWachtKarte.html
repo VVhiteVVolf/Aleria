@@ -11,6 +11,7 @@
 
 <script src="../../assets/js/data/celtigerns-wacht-dominions.js?v=20260901a"></script>
 <script src="./template.config.js"></script>
+<script src="../../assets/js/map/map-image-sources.js?v=20260901b"></script>
 <script src="../../assets/js/karto-storage.js"></script>
 </head>
 <body>
@@ -323,9 +324,9 @@
 <!-- MAP -->
 <div id="map-wrap" style="flex:1;position:relative;overflow:hidden;">
   <div id="map-stage">
-    <img id="ln" class="ml" src="Kartenbilder/CeltigernsWacht.png"         alt="" draggable="false" onload="onImgLoad(this)" onerror="onImgErr()"/>
-    <img id="lr" class="ml" data-overlay="regions" src="Kartenbilder/CeltigernsWachtRegionen.png" alt="" draggable="false" style="opacity:0"/>
-    <img id="lm" class="ml" data-overlay="pins" src="Kartenbilder/CeltigernsWachtMarker.png" alt="" draggable="false" style="opacity:0"/>
+    <img id="ln" class="ml" data-map-layer="normal" src="Kartenbilder/CeltigernsWacht.png" alt="" draggable="false" onload="onImgLoad(this)" onerror="onImgErr(this)"/>
+    <img id="lr" class="ml" data-map-layer="regions" data-overlay="regions" src="Kartenbilder/CeltigernsWachtRegionen.png" alt="" draggable="false" onerror="onImgErr(this)" style="opacity:0"/>
+    <img id="lm" class="ml" data-map-layer="pins" data-overlay="pins" src="Kartenbilder/CeltigernsWachtMarker.png" alt="" draggable="false" onerror="onImgErr(this)" style="opacity:0"/>
     <div id="pl" style="display:none;opacity:1"></div>
   </div>
   <canvas id="measure-canvas"></canvas>
@@ -674,7 +675,7 @@
 <script src="../../assets/js/lsb/lsb-interaction.js"></script>
 <script src="../../assets/js/data/default-marker-catalog.js"></script>
 <script src="../../assets/js/media/media-assets.registry.js?v=20260901a"></script>
-<script src="../../assets/js/karto-app.js?v=20260901b"></script>
+<script src="../../assets/js/karto-app.js?v=20260901d"></script>
 <script src="../../assets/js/media/media-library.js?v=20260901b"></script>
 <script src="../../assets/js/lsb/lsb-groups.js"></script>
 <script src="../../assets/js/lsb/lsb-modals.js"></script>
@@ -683,7 +684,7 @@
 <script src="../../assets/js/map/map-panzoom.js"></script>
 <script src="../../assets/js/map/map-panning.js"></script>
 <script src="../../assets/js/map/map-interaction.js"></script>
-<script src="../../assets/js/map/map-view.js?v=20260901b"></script>
+<script src="../../assets/js/map/map-view.js?v=20260901d"></script>
 <script src="../../assets/js/pins/marker-catalog.js"></script>
 <script src="../../assets/js/pins/categories.js"></script>
 <script src="../../assets/js/pins/pin-templates.js?v=20260901a"></script>

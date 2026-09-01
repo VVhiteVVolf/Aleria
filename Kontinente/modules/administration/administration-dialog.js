@@ -8,10 +8,12 @@
   const areaByName = new Map(content.areas.map((area) => [normalize(area.name), area]));
   const sourceCache = new Map();
   let dialog;
+  let dialogKicker;
   let dialogTitle;
   let dialogBody;
   let lastTrigger;
   let activeAreaId;
+  let activeScopeId;
 
   function normalize(value) {
     return String(value || "")
@@ -39,6 +41,7 @@
         <div class="administration-dialog-body" data-role="administration-dialog-body"></div>
       </div>`;
     document.body.append(element);
+    dialogKicker = element.querySelector(".administration-dialog-kicker");
     dialogTitle = element.querySelector("#administration-dialog-title");
     dialogBody = element.querySelector('[data-role="administration-dialog-body"]');
     element.addEventListener("click", (event) => {
@@ -52,18 +55,20 @@
     if (dialog?.open) dialog.close();
   }
 
-  async function openDialog(areaId, trigger) {
+  async function openDialog(areaId, trigger, requestedScopeId) {
     const area = areaById.get(areaId);
     if (!area) return;
     if (trigger) lastTrigger = trigger;
     activeAreaId = area.id;
+    activeScopeId = normalize(requestedScopeId || trigger?.dataset.administrationScope || currentScopeId());
+    dialogKicker.textContent = `${currentDomainName()} · Verwaltungsstruktur`;
     dialogTitle.textContent = area.name;
     dialogBody.innerHTML = '<p class="administration-dialog-status">Inhalte werden geladen …</p>';
     if (!dialog.open) dialog.showModal();
 
     try {
-      const rendered = await loadArea(area);
-      rendered.append(createAreaNavigation(area));
+      const rendered = await loadArea(area, activeScopeId);
+      rendered.append(createAreaNavigation(area, activeScopeId));
       dialogBody.replaceChildren(rendered);
     } catch (error) {
       console.error("Verwaltungsbereich konnte nicht geladen werden.", error);
@@ -71,14 +76,28 @@
     }
   }
 
-  async function loadArea(area) {
-    if (!sourceCache.has(area.id)) {
-      sourceCache.set(area.id, fetch(area.source).then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}: ${area.source}`);
+  async function loadArea(area, scopeId) {
+    const source = content.sourceFor?.(scopeId, area.id) || "";
+    if (!source) return renderEmptyArea();
+    if (!sourceCache.has(source)) {
+      sourceCache.set(source, fetch(source).then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${source}`);
         return response.text();
       }));
     }
-    return renderLegacyContent(await sourceCache.get(area.id));
+    return renderLegacyContent(await sourceCache.get(source));
+  }
+
+  function renderEmptyArea() {
+    const result = document.createDocumentFragment();
+    const section = document.createElement("section");
+    section.className = "administration-dialog-section is-empty";
+    const placeholder = document.createElement("p");
+    placeholder.className = "administration-dialog-status";
+    placeholder.textContent = "…";
+    section.append(placeholder);
+    result.append(section);
+    return result;
   }
 
   function renderLegacyContent(source) {
@@ -124,7 +143,7 @@
     });
   }
 
-  function createAreaNavigation(area) {
+  function createAreaNavigation(area, scopeId) {
     const currentIndex = content.areas.findIndex((entry) => entry.id === area.id);
     const previous = content.areas[(currentIndex - 1 + content.areas.length) % content.areas.length];
     const next = content.areas[(currentIndex + 1) % content.areas.length];
@@ -132,9 +151,9 @@
     navigation.className = "administration-dialog-navigation";
     navigation.setAttribute("aria-label", "Zwischen Verwaltungsbereichen wechseln");
     navigation.innerHTML = `
-      <button type="button" data-action="navigate-administration" data-administration-key="${previous.id}" aria-label="Vorheriger Bereich: ${previous.name}">&lsaquo; Links</button>
+      <button type="button" data-action="navigate-administration" data-administration-key="${previous.id}" data-administration-scope="${scopeId}" aria-label="Vorheriger Bereich: ${previous.name}">&lsaquo; Links</button>
       <span aria-hidden="true">|</span>
-      <button type="button" data-action="navigate-administration" data-administration-key="${next.id}" aria-label="Nächster Bereich: ${next.name}">Rechts &rsaquo;</button>`;
+      <button type="button" data-action="navigate-administration" data-administration-key="${next.id}" data-administration-scope="${scopeId}" aria-label="Nächster Bereich: ${next.name}">Rechts &rsaquo;</button>`;
     return navigation;
   }
 
@@ -236,12 +255,13 @@
     return Boolean(element.textContent.replace(/\u00a0/g, "").trim() || element.querySelector("img"));
   }
 
-  function createAdministrationCard(area, imageSrc) {
+  function createAdministrationCard(area, imageSrc, scopeId) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "administration-card";
     button.dataset.action = "open-administration";
     button.dataset.administrationKey = area.id;
+    button.dataset.administrationScope = scopeId;
     button.setAttribute("aria-haspopup", "dialog");
     if (imageSrc) {
       const image = document.createElement("img");
@@ -264,7 +284,9 @@
     const images = Array.from(table.querySelectorAll("img")).map((image) => image.getAttribute("src") || "");
     const grid = document.createElement("div");
     grid.className = "administration-grid";
-    content.areas.forEach((area, index) => grid.append(createAdministrationCard(area, images[index])));
+    const scopeId = currentScopeId();
+    grid.dataset.administrationScope = scopeId;
+    content.areas.forEach((area, index) => grid.append(createAdministrationCard(area, images[index], scopeId)));
     const wrapper = table.parentElement?.classList.contains("kingdom-table-scroll")
       ? table.parentElement
       : null;
@@ -272,14 +294,31 @@
   }
 
   function enhanceRenderedCards() {
+    const scopeId = currentScopeId();
     document.querySelectorAll("[data-administration-key]").forEach((element) => {
       const area = areaById.get(element.dataset.administrationKey)
         || areaByName.get(normalize(element.textContent));
       if (!area) return;
       element.dataset.administrationKey = area.id;
+      if (!element.dataset.administrationScope) element.dataset.administrationScope = scopeId;
       element.dataset.action = "open-administration";
       element.setAttribute("aria-haspopup", "dialog");
     });
+  }
+
+  function currentScopeId() {
+    return normalize(
+      window.KONTINENTE_DATA?.meta?.id
+      || window.KONTINENTE_CONFIG?.docId
+      || document.querySelector("[data-kontinent-id]")?.dataset.kontinentId
+      || "unbekannte-herrschaft",
+    );
+  }
+
+  function currentDomainName() {
+    return window.KONTINENTE_DATA?.name
+      || window.KONTINENTE_CONFIG?.registryEntry?.name
+      || "Herrschaft";
   }
 
   function init() {
@@ -288,10 +327,10 @@
     document.addEventListener("aleria:administration-rendered", enhanceRenderedCards);
     document.addEventListener("click", (event) => {
       const trigger = event.target.closest('[data-action="open-administration"]');
-      if (trigger) openDialog(trigger.dataset.administrationKey, trigger);
+      if (trigger) openDialog(trigger.dataset.administrationKey, trigger, trigger.dataset.administrationScope);
       const navigation = event.target.closest('[data-action="navigate-administration"]');
       if (navigation && navigation.dataset.administrationKey !== activeAreaId) {
-        openDialog(navigation.dataset.administrationKey);
+        openDialog(navigation.dataset.administrationKey, null, navigation.dataset.administrationScope || activeScopeId);
       }
       if (event.target.closest('[data-action="close-administration"]')) closeDialog();
     });

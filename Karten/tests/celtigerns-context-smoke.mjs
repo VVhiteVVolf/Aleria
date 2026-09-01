@@ -92,6 +92,40 @@ if (screenshotPath) {
   await writeFile(screenshotPath, Buffer.from(screenshot.data, "base64"));
 }
 
+await navigate("/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Herrschaft%20der%20Wyrm/Herrschaft%20der%20Wyrm.html", 1600);
+const wyrmAdministration = await evaluate(`(async () => {
+  const card = document.querySelector('[data-herrschaft-administration] [data-administration-key="militaer"]');
+  card?.click();
+  await new Promise((resolve) => setTimeout(resolve, 200));
+  return {
+    scope: card?.dataset.administrationScope,
+    kicker: document.querySelector('.administration-dialog-kicker')?.textContent.trim(),
+    title: document.querySelector('#administration-dialog-title')?.textContent.trim(),
+    empty: Boolean(document.querySelector('.administration-dialog-section.is-empty')),
+  };
+})()`);
+assert.deepEqual(wyrmAdministration, {
+  scope: "herrschaft-wyrm",
+  kicker: "Herrschaft der Wyrm · Verwaltungsstruktur",
+  title: "Militär",
+  empty: true,
+});
+
+await navigate("/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Grafschaft%20Celtigerns%20Wacht.html", 3400);
+const countyAdministration = await evaluate(`(async () => {
+  const card = document.querySelector('[data-administration-key="militaer"]');
+  card?.click();
+  await new Promise((resolve) => setTimeout(resolve, 350));
+  return {
+    scope: card?.dataset.administrationScope,
+    empty: Boolean(document.querySelector('.administration-dialog-section.is-empty')),
+    contentLength: document.querySelector('[data-role="administration-dialog-body"]')?.textContent.trim().length || 0,
+  };
+})()`);
+assert.equal(countyAdministration.scope, "grafschaft-celtigerns-wacht");
+assert.equal(countyAdministration.empty, false);
+assert.ok(countyAdministration.contentLength > 100, "Celtigerns Wacht muss seine Verwaltungsstruktur behalten.");
+
 await navigate("/Karten/karte.html?map=cenyr-celtigerns-wacht", 1300);
 const countyResult = await evaluate(`(() => {
   const dominions = KartoRuntime.state().dominions;
@@ -114,6 +148,16 @@ assert.equal(countyResult.saethwyrParent, "msa3c53vo1h89v");
 assert.equal(countyResult.loerParent, "msa3c53viyll7z");
 assert.equal(countyResult.gwaredParent, "msa3c53vulpw53");
 
+await navigate("/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html", 1500);
+const legacyMapResult = await evaluate(`(() => ({
+  normalWidth: document.getElementById('ln')?.naturalWidth || 0,
+  imageSource: document.getElementById('ln')?.currentSrc || '',
+  errorVisible: document.getElementById('toast')?.classList.contains('on')
+    && document.getElementById('toast')?.textContent.includes('Kartenbilder nicht gefunden')
+}))()`);
+assert.ok(legacyMapResult.normalWidth > 0, "Auch der alte Kartenlink muss das Kartenbild laden.");
+assert.equal(legacyMapResult.errorVisible, false);
+
 await navigate("/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis", 1300);
 const regionalResult = await evaluate(`(() => ({
   count: KartoRuntime.state().dominions.length,
@@ -135,4 +179,12 @@ assert.deepEqual(localResult, { count: 1, name: "Herrschaft der Wyrm" });
 assert.deepEqual(browserErrors, [], `Browserfehler: ${browserErrors.join("; ")}`);
 
 socket.close();
-console.log(JSON.stringify({ placeResult, countyResult, regionalResult, localResult }, null, 2));
+console.log(JSON.stringify({
+  placeResult,
+  wyrmAdministration,
+  countyAdministration,
+  countyResult,
+  legacyMapResult,
+  regionalResult,
+  localResult,
+}, null, 2));

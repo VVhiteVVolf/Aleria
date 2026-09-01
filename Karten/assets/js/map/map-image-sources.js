@@ -3,7 +3,8 @@
 
   const KARTEN_ROOT = "/Karten/";
   const WINDOWS_PATH = /^[a-z]:[\\/]/i;
-  const PUBLIC_PROTOCOL = /^(?:data:|blob:|https?:|\/\/)/i;
+  const PUBLIC_PROTOCOL = /^(?:data:|https?:|\/\/)/i;
+  const RECOVERY_TOKEN = "20260901b";
 
   function clean(source) {
     return String(source || "").trim();
@@ -11,7 +12,7 @@
 
   function toPublicUrl(source, baseUrl) {
     const value = clean(source);
-    if (!value || WINDOWS_PATH.test(value) || /^file:/i.test(value)) return "";
+    if (!value || WINDOWS_PATH.test(value) || /^(?:file:|blob:)/i.test(value)) return "";
     if (PUBLIC_PROTOCOL.test(value) || value.startsWith("/")) return value;
 
     const normalized = value.replace(/\\/g, "/");
@@ -46,10 +47,23 @@
     }
   }
 
+  function recoveryUrl(source, baseUrl) {
+    const value = toPublicUrl(source, baseUrl);
+    if (!value || /^(?:data:|blob:)/i.test(value)) return value;
+    try {
+      const url = new URL(value, baseUrl || document.baseURI);
+      url.searchParams.set("aleria-map-recovery", RECOVERY_TOKEN);
+      return url.href;
+    } catch {
+      return value;
+    }
+  }
+
   window.KartoMapImageSources = Object.freeze({
     toPublicUrl,
     select,
     configured,
     equivalent,
+    recoveryUrl,
   });
 })();

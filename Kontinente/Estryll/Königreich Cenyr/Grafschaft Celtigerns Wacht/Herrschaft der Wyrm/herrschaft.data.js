@@ -7,7 +7,7 @@
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
   const banner = "https://i.imgur.com/E6oTNVH.png";
-  const mapHref = "/Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html";
+  const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
 
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [

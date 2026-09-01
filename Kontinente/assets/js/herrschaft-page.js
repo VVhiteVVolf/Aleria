@@ -14,7 +14,11 @@
     renderDataDrivenShell(page, view);
     renderPersonGroups(page.querySelector("[data-herrschaft-council]"), view.councilGroups, view.familyTreePage);
     renderPersonGroups(page.querySelector("[data-herrschaft-vassals]"), view.vassalGroups, view.familyTreePage);
-    renderAdministration(page.querySelector("[data-herrschaft-administration]"), view.administration);
+    renderAdministration(
+      page.querySelector("[data-herrschaft-administration]"),
+      view.administration,
+      window.KONTINENTE_DATA?.meta?.id || view.article?.id || "unbekannte-herrschaft"
+    );
     renderGeography(page.querySelector("[data-herrschaft-geography]"), view.geography);
   }
 
@@ -324,8 +328,9 @@
     return card;
   }
 
-  function renderAdministration(root, entries) {
+  function renderAdministration(root, entries, scopeId) {
     if (!root || !Array.isArray(entries)) return;
+    root.dataset.administrationScope = scopeId;
     const fragment = document.createDocumentFragment();
     const administrationKeys = {
       "Militär": "militaer",
@@ -343,6 +348,7 @@
       card.type = "button";
       card.className = "herrschaft-administration-card";
       card.dataset.administrationKey = entry.key || administrationKeys[entry.name] || "";
+      card.dataset.administrationScope = scopeId;
       card.dataset.action = "open-administration";
       card.setAttribute("aria-haspopup", "dialog");
       if (entry.imageSrc) card.append(createImage(entry.imageSrc, `Symbol für ${entry.name || "Verwaltungsbereich"}`));
