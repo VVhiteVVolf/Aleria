@@ -56,13 +56,14 @@
 
   function administration() {
     return Object.freeze([
-      Object.freeze({ name: "Militär", imageSrc: "https://i.imgur.com/F9LJyWL.png" }),
-      Object.freeze({ name: "Klerus", imageSrc: "https://i.imgur.com/L8uSMda.png" }),
-      Object.freeze({ name: "Gerichtsbarkeit", imageSrc: "https://i.imgur.com/kAjtrx1.png" }),
-      Object.freeze({ name: "Finanzen", imageSrc: "https://i.imgur.com/Be2sUY9.png" }),
-      Object.freeze({ name: "Spionage", imageSrc: "https://i.imgur.com/R8uzl5B.png" }),
-      Object.freeze({ name: "Diplomatie", imageSrc: "https://i.imgur.com/VTYpitY.png" }),
-      Object.freeze({ name: "Magie", imageSrc: "https://i.imgur.com/4lCe05E.png" }),
+      Object.freeze({ key: "militaer", name: "Militär", imageSrc: "https://i.imgur.com/F9LJyWL.png" }),
+      Object.freeze({ key: "klerus", name: "Klerus", imageSrc: "https://i.imgur.com/L8uSMda.png" }),
+      Object.freeze({ key: "gerichtsbarkeit", name: "Gerichtsbarkeit", imageSrc: "https://i.imgur.com/kAjtrx1.png" }),
+      Object.freeze({ key: "finanzen", name: "Finanzen", imageSrc: "https://i.imgur.com/Be2sUY9.png" }),
+      Object.freeze({ key: "spionage", name: "Spionage", imageSrc: "https://i.imgur.com/R8uzl5B.png" }),
+      Object.freeze({ key: "diplomatie", name: "Diplomatie", imageSrc: "https://i.imgur.com/VTYpitY.png" }),
+      Object.freeze({ key: "magie", name: "Magie", imageSrc: "https://i.imgur.com/4lCe05E.png" }),
+      Object.freeze({ key: "unterhaltung", name: "Unterhaltung", imageSrc: "https://i.imgur.com/xZDD0aV.png" }),
     ]);
   }
 

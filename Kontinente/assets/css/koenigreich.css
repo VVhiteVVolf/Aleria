@@ -133,6 +133,10 @@ body {
   margin: 0.2rem auto 0.9rem;
 }
 
+.kingdom-crest-stage--solo {
+  grid-template-columns: auto;
+}
+
 .kingdom-main-crest {
   display: block;
   width: 200px;
@@ -156,6 +160,10 @@ body {
 
 .kingdom-heraldic-figure-right {
   justify-self: start;
+}
+
+.kingdom-heraldic-figure-mirrored {
+  transform: scaleX(-1);
 }
 
 .kingdom-frame table {
