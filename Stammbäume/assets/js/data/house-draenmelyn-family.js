@@ -42,7 +42,8 @@ function person(id, name, sex, birth, options = {}) {
     title: options.title || '',
     portrait: options.portrait || HOUSE_DRAENMELYN_PORTRAITS[id] || '',
     tags: options.tags || [],
-    notes: options.notes || ''
+    notes: options.notes || '',
+    extensions: options.extensions || {}
   });
 }
 
@@ -52,7 +53,8 @@ function sharedMarriagePerson(definition, familyRole) {
     familyRole,
     title: definition.title,
     portrait: definition.portrait,
-    notes: definition.notes
+    notes: definition.notes,
+    extensions: definition.extensions
   });
 }
 
@@ -221,7 +223,7 @@ export const HOUSE_DRAENMELYN_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 6,
+    sourceRevision: 7,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
       persons: Object.freeze(['floyd-ysgrif']),

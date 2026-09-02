@@ -1255,6 +1255,7 @@ import { createFamilySyncController } from '../assets/js/modules/family-sync/fam
 import { assertMirroredCrossFamilyBatch } from '../assets/js/modules/family-sync/cross-family-sync-invariant.js';
 import { createLocalFamilyRepository } from '../assets/js/modules/family-sync/local-family-repository.js';
 import { createLatestLocalFamilySource } from '../assets/js/modules/family-sync/latest-local-family-source.js';
+import { createWorldPersonPortraitSyncChanges } from '../assets/js/modules/family-sync/world-person-portrait-sync.js';
 import {
   applyPublishedFamilyPriority,
   isStalePublishedPlaceholder
@@ -8609,6 +8610,11 @@ test('Caradogs Söldnerlinie und Rhiannons Wegheirat nach Swyll sind beidseitig 
     assert.equal(homeRecord.name, targetRecord.name);
     assert.equal(homeRecord.birth, targetRecord.birth);
   });
+  const rhiannonInDraenmelyn = draenmelyn.persons.find(person => person.id === 'rhiannon-draenmelyn');
+  const rhiannonInSwyll = swyll.persons.find(person => person.id === 'rhiannon-draenmelyn');
+  assert.equal(rhiannonInDraenmelyn.portrait, 'https://i.imgur.com/cyJqlDG.png');
+  assert.equal(rhiannonInSwyll.portrait, rhiannonInDraenmelyn.portrait);
+  assert.deepEqual(rhiannonInSwyll.extensions.registryManagedFields, ['portrait']);
   assert.equal(swyll.timeJumps[0].toYear, '1663');
   assert.deepEqual(swyll.timeJumps[0].childIds, ['emyr-swyll', 'gwenifer-swyll', 'madryn-swyll']);
   assert.equal(swyll.extensions.pendingDescendantReview, false);
@@ -8732,7 +8738,7 @@ test('Swyll-Registryupgrade entfernt den veralteten direkten Gründerpfad zu Ies
   });
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_SWYLL_FAMILY, oldSnapshot);
 
-  assert.equal(upgraded.extensions.sourceRevision, 8);
+  assert.equal(upgraded.extensions.sourceRevision, 9);
   assert.equal(upgraded.parentages.some(parentage => parentage.id === obsoleteParentage.id), false);
   assert.equal(upgraded.parentages.some(parentage => parentage.id === 'parentage-emyr-iestyn-swyll'), true);
   assert.deepEqual(upgraded.timeJumps[0].childIds, ['emyr-swyll', 'gwenifer-swyll', 'madryn-swyll']);
@@ -8762,7 +8768,7 @@ test('Draenmelyn-Registryupgrade ersetzt den alten Einlinien-Fokus und den leere
   });
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_DRAENMELYN_FAMILY, oldSnapshot);
 
-  assert.equal(upgraded.extensions.sourceRevision, 6);
+  assert.equal(upgraded.extensions.sourceRevision, 7);
   assert.equal(upgraded.view.focusPersonId, 'haus-draenmelyn-gruender');
   assert.equal(upgraded.view.limitGenerations, false);
   assert.equal(upgraded.view.ancestorDepth, 20);
@@ -31455,7 +31461,8 @@ function createSyncHarness({
   storage = createMemoryStorage(),
   remoteRecords = new Map(),
   skipDeploy = true,
-  resolveOriginFamily = () => null
+  resolveOriginFamily = () => null,
+  relatedFamilySource = null
 }) {
   const store = createFamilyStore(family);
   const localRepository = createLocalFamilyRepository(storage);
@@ -31528,6 +31535,7 @@ function createSyncHarness({
     documentRef,
     editing: true,
     resolveOriginFamily,
+    relatedFamilySource,
     uiFactory: () => ui,
     runtime: { confirm: () => true }
   });
@@ -31593,6 +31601,34 @@ test('liest Gegenfamilien und Beziehungskandidaten aus dem neuesten lokalen Draf
   assert.deepEqual(listed.folderPath, ['Cenyr', 'Gegenakten']);
 });
 
+test('projiziert ein geändertes Weltpersonen-Portrait auf jede bekannte Gegenakte', () => {
+  const currentFamily = normalizeFamily({
+    ...HOUSE_DRAENMELYN_FAMILY,
+    persons: HOUSE_DRAENMELYN_FAMILY.persons.map(person => person.id === 'rhiannon-draenmelyn'
+      ? { ...person, portrait: 'data:image/webp;base64,UklGRg==' }
+      : person)
+  });
+  const changes = createWorldPersonPortraitSyncChanges({
+    previousFamily: HOUSE_DRAENMELYN_FAMILY,
+    currentFamily,
+    familyRecords: [
+      { family: HOUSE_DRAENMELYN_FAMILY },
+      { family: HOUSE_SWYLL_FAMILY }
+    ]
+  });
+
+  assert.equal(changes.length, 1);
+  assert.equal(changes[0].family.document.id, 'haus-swyll');
+  assert.equal(
+    changes[0].family.persons.find(person => person.id === 'rhiannon-draenmelyn').portrait,
+    'data:image/webp;base64,UklGRg=='
+  );
+  assert.equal(
+    changes[0].family.persons.find(person => person.id === 'iestyn-swyll').portrait,
+    HOUSE_SWYLL_FAMILY.persons.find(person => person.id === 'iestyn-swyll').portrait
+  );
+});
+
 test('verwirft ein komplettes Spiegelpaket bei einer veralteten Gegenfamilien-Basis', () => {
   const storage = createMemoryStorage();
   const repository = createLocalFamilyRepository(storage);
@@ -31645,6 +31681,48 @@ test('schreibt Änderungen erst nach Online-speichern und niemals durch lokales 
   assert.equal(harness.metrics().saveCalls, 1);
   assert.equal(harness.metrics().lastSaveOptions.skipDeploy, true);
   assert.equal(harness.localRepository.loadDraft(family.document.id).dirty, false);
+});
+
+test('speichert ein geändertes Portrait derselben Weltperson in Draenmelyn und Swyll atomar', async () => {
+  const remoteRecords = new Map([[
+    HOUSE_DRAENMELYN_FAMILY.document.id,
+    { family: HOUSE_DRAENMELYN_FAMILY, revision: 1 }
+  ]]);
+  const relatedFamilySource = {
+    listRecords: () => [
+      { family: HOUSE_DRAENMELYN_FAMILY },
+      { family: HOUSE_SWYLL_FAMILY }
+    ]
+  };
+  const harness = createSyncHarness({
+    family: HOUSE_DRAENMELYN_FAMILY,
+    remoteRecords,
+    relatedFamilySource
+  });
+  await harness.controller.init();
+
+  const portrait = 'data:image/webp;base64,UklGRg==';
+  harness.store.updatePerson('rhiannon-draenmelyn', { portrait });
+  const swyllDraft = harness.localRepository.loadDraft('haus-swyll');
+  assert.equal(swyllDraft.dirty, true);
+  assert.equal(
+    swyllDraft.family.persons.find(person => person.id === 'rhiannon-draenmelyn').portrait,
+    portrait
+  );
+
+  await harness.controller.saveNow();
+  assert.equal(harness.metrics().saveCalls, 0);
+  assert.equal(harness.metrics().batchCalls, 1);
+  assert.deepEqual(
+    harness.metrics().lastBatch.map(record => record.family.document.id).sort(),
+    ['haus-draenmelyn', 'haus-swyll']
+  );
+  harness.metrics().lastBatch.forEach(record => {
+    assert.equal(
+      record.family.persons.find(person => person.id === 'rhiannon-draenmelyn').portrait,
+      portrait
+    );
+  });
 });
 
 test('übernimmt Patricks GitHub-Inhalte und hält neuere Registry-Korrekturen zum Speichern offen', async () => {

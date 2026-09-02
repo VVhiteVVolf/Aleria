@@ -14,7 +14,11 @@ export const DRAENMELYN_SWYLL_MARRIAGE = Object.freeze({
     birth: '1702',
     houseId: 'house-draenmelyn',
     title: 'Bedienstete des Hauses Draig',
-    notes: 'Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.'
+    portrait: 'https://i.imgur.com/cyJqlDG.png',
+    notes: 'Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.',
+    extensions: Object.freeze({
+      registryManagedFields: Object.freeze(['portrait'])
+    })
   }),
   iestyn: Object.freeze({
     id: 'iestyn-swyll',

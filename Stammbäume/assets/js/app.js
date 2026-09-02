@@ -97,7 +97,8 @@ const syncController = createFamilySyncController({
   localRepository,
   cloudRepository,
   editing: workspaceAccess.mode === 'edit',
-  resolveOriginFamily: resolveProjectFamilyOrigin
+  resolveOriginFamily: resolveProjectFamilyOrigin,
+  relatedFamilySource: latestLocalFamilySource
 });
 const assetUploadController = createFamilyAssetUploadController({
   store,

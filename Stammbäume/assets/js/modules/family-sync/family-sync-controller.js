@@ -5,6 +5,7 @@ import {
 import { assertMirroredCrossFamilyBatch } from './cross-family-sync-invariant.js';
 import { createFamilySyncStatusUi } from './family-sync-status-ui.js';
 import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js';
+import { createWorldPersonPortraitSyncChanges } from './world-person-portrait-sync.js';
 
 const REMOTE_SOURCES = new Set(['repository-sync', 'repository-priority']);
 const NEW_FAMILY_SOURCES = new Set([
@@ -25,6 +26,7 @@ export function createFamilySyncController({
   runtime = globalThis,
   editing = false,
   resolveOriginFamily = () => null,
+  relatedFamilySource = null,
   uiFactory = createFamilySyncStatusUi
 }) {
   const ui = uiFactory(documentRef);
@@ -538,10 +540,33 @@ export function createFamilySyncController({
     const source = event.details?.source || event.type;
     const changedFamily = state.family;
     const counterpartFamily = event.details?.counterpartFamily;
-    const relatedSaved = counterpartFamily
+    const previousFamily = localRepository.loadDraft?.(changedFamily.document.id)?.family || null;
+    const portraitSyncChanges = !REMOTE_SOURCES.has(source)
+      && !NEW_FAMILY_SOURCES.has(source)
+      && typeof relatedFamilySource?.listRecords === 'function'
+      ? createWorldPersonPortraitSyncChanges({
+        previousFamily,
+        currentFamily: changedFamily,
+        familyRecords: () => relatedFamilySource.listRecords()
+      })
+      : [];
+    const relatedChangesByFamilyId = new Map(
+      portraitSyncChanges.map(change => [change.family.document.id, change])
+    );
+    if (counterpartFamily) {
+      relatedChangesByFamilyId.set(counterpartFamily.document.id, {
+        family: counterpartFamily,
+        baseFamily: event.details?.counterpartBaseFamily || null
+      });
+    }
+    const relatedChanges = [...relatedChangesByFamilyId.values()];
+    const relatedSaved = relatedChanges.length
       ? localRepository.persistRelatedChanges?.([
-        { family: changedFamily, baseFamily: event.details?.currentBaseFamily || null },
-        { family: counterpartFamily, baseFamily: event.details?.counterpartBaseFamily || null }
+        {
+          family: changedFamily,
+          baseFamily: event.details?.currentBaseFamily || previousFamily
+        },
+        ...relatedChanges
       ]) !== false
       : true;
     const familyChanged = activateFamilyContext(changedFamily, {
@@ -563,8 +588,8 @@ export function createFamilySyncController({
       identityChangeBlock ? 'error' : 'pending',
       identityChangeBlock
         ? identityBlockMessage()
-        : counterpartFamily
-          ? 'Beide verknüpften Familien nur auf diesem Gerät gespeichert · für andere noch nicht sichtbar'
+        : relatedChanges.length
+          ? `${relatedChanges.length + 1} verknüpfte Familien nur auf diesem Gerät gespeichert · für andere noch nicht sichtbar`
           : 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar'
     );
     if (familyChanged && !identityChangeBlock) void connectCurrentFamily();

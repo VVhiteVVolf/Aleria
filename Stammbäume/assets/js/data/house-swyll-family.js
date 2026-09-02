@@ -43,7 +43,8 @@ function person(id, name, sex, birth = '????', death = '', houseId = SWYLL_HOUSE
     title: options.title || '',
     portrait: options.portrait || HOUSE_SWYLL_PORTRAITS[id] || '',
     tags: options.tags || [],
-    notes: options.notes || ''
+    notes: options.notes || '',
+    extensions: options.extensions || {}
   });
 }
 
@@ -52,7 +53,8 @@ function sharedPerson(definition, familyRole) {
     familyRole,
     title: definition.title,
     portrait: definition.portrait,
-    notes: definition.notes
+    notes: definition.notes,
+    extensions: definition.extensions
   });
 }
 
@@ -360,7 +362,7 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 8,
+    sourceRevision: 9,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
       persons: Object.freeze([
