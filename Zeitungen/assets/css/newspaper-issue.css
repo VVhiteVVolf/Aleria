@@ -16,8 +16,8 @@
 
 .newspaper-edition-mark {
   position: relative;
-  width: min(100%, 210px);
-  min-height: 158px;
+  width: min(100%, 240px);
+  min-height: 205px;
   align-self: start;
   justify-self: center;
 }
@@ -41,22 +41,22 @@
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 4px;
-  padding: 18px 12px;
+  gap: 6px;
+  padding: 20px 18px;
   border: 3px double var(--news-red);
   color: var(--news-red-dark);
   font-family: "Trebuchet MS", Arial, sans-serif;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transform: translateY(-9px) rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 .newspaper-edition-stamp span {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .newspaper-edition-stamp strong {
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
 }
 
 .newspaper-edition-ink-stamp,
@@ -69,9 +69,9 @@
 
 .newspaper-edition-ink-stamp {
   z-index: 1;
-  top: 66px;
+  top: 118px;
   left: 50%;
-  width: 88px;
+  width: 92px;
   opacity: 0.76;
   transform: translateX(-50%) rotate(-4deg);
   mix-blend-mode: multiply;
@@ -483,7 +483,7 @@
   }
 
   .newspaper-edition-stamp {
-    transform: translateY(-6px) rotate(-2deg);
+    transform: rotate(-2deg);
   }
 
   .newspaper-colophon {
