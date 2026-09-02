@@ -264,7 +264,8 @@ function renderCommentsToScroll(scroll, comments) {
     syncSceneClockStartDate(clockRoot, sceneStartDate);
   }
   // Jeder Beitrag mit eigener Uhrzeit bekommt sein Aleria-Datum + eine Seitenzahl, die pro
-  // Tag bei 1 beginnt. Bricht ein neuer Tag an, faengt die Zaehlung fuer diesen Tag neu an.
+  // Uhrentag bei 1 beginnt. Das Welt-Datum folgt dagegen nur den in der Zeitlinie
+  // ausdruecklich gesetzten Tageswechseln (siehe buildSceneTimeline).
   if (sceneStartDate && hasAleriaDate(sceneStartDate)) {
     let dayCursor = null;
     let pageCounter = 0;
@@ -274,7 +275,10 @@ function renderCommentsToScroll(scroll, comments) {
       pageCounter = dayIndex === dayCursor ? pageCounter + 1 : 1;
       dayCursor = dayIndex;
       entry.aleriaPageInDay = pageCounter;
-      entry.aleriaDate = dayIndex > 1 ? addAleriaDays(sceneStartDate, dayIndex - 1) : sceneStartDate;
+      const aleriaDayIndex = Math.max(1, Math.floor(Number(entry.aleriaDayIndex) || 1));
+      entry.aleriaDate = aleriaDayIndex > 1
+        ? addAleriaDays(sceneStartDate, aleriaDayIndex - 1)
+        : sceneStartDate;
     });
   }
   const sceneTimelineById = new Map(sceneTimeline.map(entry => [String(entry.comment?.id || ''), entry]));
@@ -283,8 +287,10 @@ function renderCommentsToScroll(scroll, comments) {
   if (clockValue) clockValue.textContent = lastTimedEntry ? formatSceneClock(lastTimedEntry.endSeconds) : 'Zeit nicht gesetzt';
   const dateValue = clockRoot?.querySelector('[data-scene-clock-date]');
   if (dateValue && sceneStartDate) {
-    const sceneDay = lastTimedEntry ? getSceneDayFromSeconds(lastTimedEntry.endSeconds) : 1;
-    const currentDate = sceneDay > 1 ? addAleriaDays(sceneStartDate, sceneDay - 1) : sceneStartDate;
+    const aleriaDayIndex = Math.max(1, Math.floor(Number(lastTimedEntry?.aleriaEndDayIndex) || 1));
+    const currentDate = aleriaDayIndex > 1
+      ? addAleriaDays(sceneStartDate, aleriaDayIndex - 1)
+      : sceneStartDate;
     dateValue.textContent = formatAleriaDateRange(sceneStartDate, currentDate);
   }
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);

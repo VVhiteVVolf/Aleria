@@ -1,6 +1,7 @@
-// Immutable comment transaction policy.
-// Mechanical scene records are an append-only ledger: UI and persistence
-// adapters must use this single classifier before updating or deleting them.
+// Comment transaction policy.
+// State-changing mechanical scene records are an append-only ledger. Pure
+// timeline markers remain classified, but may be removed without undoing a
+// character, inventory or combat state.
 (function initCommentTransactionPolicy(global) {
   const TRANSACTION_LABELS = Object.freeze({
     combat: 'Kampfauswertung',
@@ -10,6 +11,7 @@
     dice: 'Szenenwurf',
     time: 'Szenenzeit'
   });
+  const MUTABLE_TRANSACTION_KINDS = new Set(['time']);
 
   function isObject(value) {
     return !!value && typeof value === 'object';
@@ -59,7 +61,7 @@
   }
 
   function isImmutableMechanicalComment(comment = {}) {
-    return getCommentTransactionKinds(comment).length > 0;
+    return getCommentTransactionKinds(comment).some(kind => !MUTABLE_TRANSACTION_KINDS.has(kind));
   }
 
   function getMechanicalCommentLabel(comment = {}, options = {}) {

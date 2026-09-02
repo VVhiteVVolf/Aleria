@@ -182,12 +182,16 @@ function getDialogTimeRange() {
 }
 
 function getRecoveryDayKey(threadId, day) {
+  const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
+  const aleriaDay = typeof globalThis.getSceneAleriaDayIndex === 'function'
+    ? globalThis.getSceneAleriaDayIndex(comments, day)
+    : day;
   const date = typeof globalThis.getSceneTimeSegmentAleriaDate === 'function'
-    ? globalThis.getSceneTimeSegmentAleriaDate(day)
+    ? globalThis.getSceneTimeSegmentAleriaDate(aleriaDay)
     : null;
   return date?.year && date?.month && date?.day
     ? `aleria:${date.year}-${date.month}-${date.day}`
-    : `scene:${String(threadId || 'unknown')}:day-${day}`;
+    : `scene:${String(threadId || 'unknown')}:day-${aleriaDay}`;
 }
 
 function getSelectedActorIds() {

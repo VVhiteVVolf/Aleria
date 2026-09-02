@@ -121,10 +121,8 @@ function getStoredCombatStates(threadId = '', position = {}) {
 
 function getCombatRecoveryDayKey(threadId = '') {
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
-  const timeline = typeof globalThis.buildSceneTimeline === 'function' ? globalThis.buildSceneTimeline(comments) : [];
-  const lastTimedEntry = [...timeline].reverse().find(entry => Number.isFinite(entry?.endSeconds));
-  const day = typeof globalThis.getSceneDayFromSeconds === 'function'
-    ? globalThis.getSceneDayFromSeconds(lastTimedEntry?.endSeconds || 0)
+  const day = typeof globalThis.getSceneAleriaDayIndex === 'function'
+    ? globalThis.getSceneAleriaDayIndex(comments)
     : 1;
   return `scene:${String(threadId || 'unknown')}:day-${day}`;
 }

@@ -31,11 +31,28 @@ test('Profiltransaktionen werden als unveränderlicher Szenenverlauf erkannt', (
   samples.forEach(comment => assert.equal(policy.isImmutable(comment), true));
 });
 
-test('Würfel-, Fertigkeits- und Zeitbeiträge bleiben als Mechanikbeleg erhalten', () => {
+test('Würfel- und Fertigkeitsbeiträge bleiben als Mechanikbeleg erhalten', () => {
   const policy = loadPolicy();
   assert.deepEqual(Array.from(policy.getKinds({ sceneDiceRoll: { total: 12 } })), ['dice']);
-  assert.deepEqual(Array.from(policy.getKinds({ sceneTimeEvent: { anchorDay: 2 } })), ['time']);
   assert.deepEqual(Array.from(policy.getKinds({ commentSegments: [{ skillResolution: { resolutionId: 'skill-1' } }] })), ['skill']);
+});
+
+test('reine Szenenzeit-Einträge bleiben klassifiziert, sind aber löschbar', () => {
+  const policy = loadPolicy();
+  const comment = { sceneTimeEvent: { anchorDay: 2 } };
+  assert.deepEqual(Array.from(policy.getKinds(comment)), ['time']);
+  assert.equal(policy.isImmutable(comment), false);
+  assert.doesNotThrow(() => policy.assertMutable(comment, 'gelöscht'));
+});
+
+test('Szenenzeit hebt den Schutz einer verbundenen Zustandsänderung nicht auf', () => {
+  const policy = loadPolicy();
+  const comment = {
+    sceneTimeEvent: { anchorDay: 2 },
+    inventoryTransaction: { transactionId: 'inventory-1' }
+  };
+  assert.deepEqual(Array.from(policy.getKinds(comment)), ['inventory', 'time']);
+  assert.equal(policy.isImmutable(comment), true);
 });
 
 test('Sperrfehler erklärt die notwendige Gegenbuchung', () => {

@@ -222,17 +222,68 @@ function formatSceneClock(totalSeconds, includeDay = true) {
 
 function buildSceneTimeline(comments = []) {
   let cursor = null;
+  let aleriaDayIndex = 1;
   return (typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(comments) : comments).map(comment => {
     if (isSceneTimeEventComment(comment)) {
       const event = normalizeSceneTimeEvent(comment.sceneTimeEvent || comment);
+      const previousClockDay = Number.isFinite(cursor) ? getSceneDayFromSeconds(cursor) : null;
       if (Number.isFinite(event.anchorSeconds)) cursor = ((event.anchorDay - 1) * 86400) + event.anchorSeconds;
-      return { comment, startSeconds: cursor, endSeconds: cursor, durationSeconds: 0, anchor: true };
+      const currentClockDay = Number.isFinite(cursor) ? getSceneDayFromSeconds(cursor) : previousClockDay;
+
+      // Die numerische Szenenuhr darf vor- oder zurueckgesetzt werden, ohne dadurch
+      // stillschweigend das Welt-Datum zu veraendern. Nur ein ausdruecklicher
+      // Tages-/Segmentwechsel schreibt einen neuen Aleria-Kalendertag fest.
+      if (isSceneTimeSegmentBreakEvent(event) && Number.isFinite(currentClockDay)) {
+        const elapsedClockDays = previousClockDay == null
+          ? Math.max(0, currentClockDay - 1)
+          : Math.max(1, currentClockDay - previousClockDay);
+        aleriaDayIndex += elapsedClockDays;
+      }
+      return {
+        comment,
+        startSeconds: cursor,
+        endSeconds: cursor,
+        durationSeconds: 0,
+        anchor: true,
+        aleriaDayIndex,
+        aleriaEndDayIndex: aleriaDayIndex
+      };
     }
     const durationSeconds = getSceneTimeCommentDuration(comment);
     const startSeconds = cursor;
-    if (Number.isFinite(cursor)) cursor += durationSeconds;
-    return { comment, startSeconds, endSeconds: cursor, durationSeconds, anchor: false };
+    const startClockDay = Number.isFinite(startSeconds) ? getSceneDayFromSeconds(startSeconds) : null;
+    const entryAleriaDayIndex = aleriaDayIndex;
+    if (Number.isFinite(cursor)) {
+      cursor += durationSeconds;
+      const endClockDay = getSceneDayFromSeconds(cursor);
+      if (Number.isFinite(startClockDay) && endClockDay > startClockDay) {
+        aleriaDayIndex += endClockDay - startClockDay;
+      }
+    }
+    return {
+      comment,
+      startSeconds,
+      endSeconds: cursor,
+      durationSeconds,
+      anchor: false,
+      aleriaDayIndex: entryAleriaDayIndex,
+      aleriaEndDayIndex: aleriaDayIndex
+    };
   });
+}
+
+// Liefert den Aleria-Kalendertag am Ende der vorhandenen Zeitlinie. Ein optionaler
+// spaeterer Uhrentag wird nur um die tatsaechlich noch vergehenden Tage addiert.
+// So verwenden Anzeige, Rast und Tagesressourcen dieselbe Tagesdefinition.
+function getSceneAleriaDayIndex(comments = [], targetClockDay = null) {
+  const timeline = buildSceneTimeline(comments);
+  const lastTimedEntry = [...timeline].reverse().find(entry => Number.isFinite(entry?.endSeconds));
+  if (!lastTimedEntry) return 1;
+  const currentAleriaDay = Math.max(1, Math.floor(Number(lastTimedEntry.aleriaEndDayIndex) || 1));
+  const requestedClockDay = Math.floor(Number(targetClockDay));
+  if (!Number.isFinite(requestedClockDay)) return currentAleriaDay;
+  const currentClockDay = getSceneDayFromSeconds(lastTimedEntry.endSeconds);
+  return currentAleriaDay + Math.max(0, requestedClockDay - currentClockDay);
 }
 
 // Liest den Zeitcursor direkt NACH einem bestehenden Beitrag - damit ein
