@@ -3,8 +3,7 @@
 
   const MAP_IDS = Object.freeze({
     COUNTY: "cenyr-celtigerns-wacht",
-    GWYNTHOR: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
-    LLYSFAEN: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte"
+    GWYNTHOR: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis"
   });
 
   const IDS = Object.freeze({
@@ -111,15 +110,79 @@
   ]);
 
   const gwynthor = Object.freeze(county.filter((entry) => gwynthorIds.has(entry.id)));
-  const llysfaen = Object.freeze([
-    dominion(IDS.wyrm, "Herrschaft der Wyrm", "Herrschaft", "Haus Wyrm", "Gwynthor")
+  const mappedPlaces = Object.freeze([
+    {
+      prefix: "cenyr-celtigerns-wacht-llamrais-ankunft-lynthor",
+      dominionIds: [IDS.llamreis]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-llamrais-ankunft-twr-rhewgorn",
+      dominionIds: [IDS.llamreis]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-mwyncreig",
+      dominionIds: [IDS.wyrm, "cw-haus-rhyddid"]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen",
+      dominionIds: [IDS.wyrm]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-bronhir",
+      dominionIds: [IDS.wyrm, "cw-haus-cludwyr"]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-gwendolyns-ufer-abergwint",
+      dominionIds: [
+        IDS.gwendolyn,
+        "cw-haus-rhuddgar",
+        "cw-haus-gwyntog",
+        "cw-haus-trydar",
+        "cw-haus-taranvyr",
+        "cw-haus-selog",
+        "cw-haus-seldryn",
+        "cw-haus-cysgodion",
+        "cw-haus-edmy",
+        "cw-haus-tawelgar",
+        "cw-haus-ymladd",
+        "cw-haus-cenfig",
+        "cw-haus-barus"
+      ]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-rhonwens-traenen-castellbryn",
+      dominionIds: [IDS.rhonwen, "cw-haus-gwared"]
+    },
+    {
+      prefix: "cenyr-celtigerns-wacht-arthus-streben-rhosmere",
+      dominionIds: [
+        IDS.arthus,
+        "cw-haus-almarch",
+        "cw-haus-brinmarch",
+        "cw-haus-gwardin",
+        "cw-haus-tirwyn",
+        "cw-haus-eirfael",
+        "cw-haus-ghorswyn",
+        "cw-haus-coedvarn",
+        "cw-haus-althin",
+        "cw-haus-talmeirch",
+        "cw-haus-gwynrhos"
+      ]
+    }
   ]);
 
-  const presets = Object.freeze({
+  const presets = {
     [MAP_IDS.COUNTY]: county,
-    [MAP_IDS.GWYNTHOR]: gwynthor,
-    [MAP_IDS.LLYSFAEN]: llysfaen
+    [MAP_IDS.GWYNTHOR]: gwynthor
+  };
+
+  mappedPlaces.forEach((place) => {
+    const entries = Object.freeze(county.filter((entry) => place.dominionIds.includes(entry.id)));
+    presets[`${place.prefix}-stadtkarte`] = entries;
+    presets[`${place.prefix}-bannkreis`] = entries;
   });
+
+  Object.freeze(presets);
 
   function forMap(mapId) {
     return (presets[mapId] || []).map((entry) => ({ ...entry }));

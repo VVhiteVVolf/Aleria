@@ -5,6 +5,27 @@ const entries = Object.freeze([
     name: "Der Schwarzbote",
     edition: "Gwynthor",
     dataModule: "/Zeitungen/data/schwarzbote-gwynthor/edition.mjs?v=20260901a"
+  }),
+  Object.freeze({
+    id: "schwarzbote-abergwint",
+    aliases: Object.freeze(["abergwint"]),
+    name: "Der Schwarzbote",
+    edition: "Abergwint",
+    dataModule: "/Zeitungen/data/schwarzbote-abergwint/edition.mjs?v=20260902a"
+  }),
+  Object.freeze({
+    id: "schwarzbote-castellbryn",
+    aliases: Object.freeze(["castellbryn"]),
+    name: "Der Schwarzbote",
+    edition: "Castellbryn",
+    dataModule: "/Zeitungen/data/schwarzbote-castellbryn/edition.mjs?v=20260902a"
+  }),
+  Object.freeze({
+    id: "schwarzbote-rhosmere",
+    aliases: Object.freeze(["rhosmere"]),
+    name: "Der Schwarzbote",
+    edition: "Rhosmere",
+    dataModule: "/Zeitungen/data/schwarzbote-rhosmere/edition.mjs?v=20260902a"
   })
 ]);
 

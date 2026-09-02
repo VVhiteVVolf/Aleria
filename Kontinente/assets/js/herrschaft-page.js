@@ -12,6 +12,11 @@
     if (!view) return;
 
     renderDataDrivenShell(page, view);
+    renderInfoboxHouses(
+      page.querySelector("[data-herrschaft-infobox-houses]"),
+      view.familySections,
+      view.familyTreePage
+    );
     renderPersonGroups(page.querySelector("[data-herrschaft-council]"), view.councilGroups, view.familyTreePage);
     renderPersonGroups(page.querySelector("[data-herrschaft-vassals]"), view.vassalGroups, view.familyTreePage);
     renderAdministration(
@@ -232,6 +237,37 @@
     cell.replaceChildren(bold);
     row.append(cell);
     return row;
+  }
+
+  function renderInfoboxHouses(root, sections, familyTreePage) {
+    if (!root || !Array.isArray(sections)) return;
+    const fragment = document.createDocumentFragment();
+
+    sections.forEach((section) => {
+      const houses = Array.isArray(section?.cards) ? section.cards : [];
+      if (!houses.length) return;
+
+      const group = createElement("span", "herrschaft-infobox-house-group");
+      group.append(createElement("strong", "herrschaft-infobox-house-title", section.title || "Häuser"));
+
+      const list = createElement("span", "herrschaft-infobox-house-list");
+      houses.forEach((house, index) => {
+        if (index) list.append(document.createTextNode(", "));
+        const name = createElement("span", "", house.name || "...");
+        if (house.href) {
+          const link = document.createElement("a");
+          link.href = house.href;
+          link.append(name);
+          list.append(link);
+        } else {
+          list.append(wrapFamilyLink(name, house.id, familyTreePage));
+        }
+      });
+      group.append(list);
+      fragment.append(group);
+    });
+
+    if (fragment.childNodes.length) root.replaceChildren(fragment);
   }
 
   function renderCopySection(id, title, paragraphs, emptyText = "") {

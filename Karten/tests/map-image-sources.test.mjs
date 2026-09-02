@@ -56,3 +56,16 @@ test("der Registry-Rückfall ist kanonisch vergleichbar", () => {
   assert.equal(fallback, "/Karten/Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png");
   assert.equal(imageSources.equivalent(fallback, `https://dieweltvonaleria.netlify.app${fallback}`), true);
 });
+
+test("optionale Ebenen gelten nur mit einem auslieferbaren Bild als verfügbar", () => {
+  assert.deepEqual(
+    { ...imageSources.availability(
+      { normal: "", regions: "", pins: "C:\\Users\\name\\marker.png" },
+      {
+        normal: "Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png",
+        pins: "Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWachtMarker.png",
+      },
+    ) },
+    { normal: true, regions: false, pins: true },
+  );
+});

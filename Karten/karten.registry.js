@@ -14,6 +14,179 @@
     LOCAL: "local",
   });
 
+  const SETTLEMENT_MAPS = Object.freeze([
+    {
+      slug: "lynthor",
+      title: "Lynthor",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-lynthor",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/lynthor-bannkreis",
+      cityImage: "LynthorStadt.webp",
+      regionNormal: "LynthorBannkreisNormal.webp",
+      regionPins: "LynthorBannkreisMarker.webp",
+    },
+    {
+      slug: "twr-rhewgorn",
+      title: "Tŵr Rhewgorn",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-twr-rhewgorn",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/twr-rhewgorn-bannkreis",
+      cityImage: "TwrRhewgornStadt.webp",
+      regionNormal: "TwrRhewgornBannkreisNormal.webp",
+      regionPins: "TwrRhewgornBannkreisMarker.webp",
+    },
+    {
+      slug: "mwyncreig",
+      title: "Mwyncreig",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-mwyncreig",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/mwyncreig-bannkreis",
+      lordship: { slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+      rulingHouse: "Haus Wyrm",
+      cityImage: "MwyncreigStadt.webp",
+      regionNormal: "MwyncreigBannkreisNormal.webp",
+      regionPins: "MwyncreigBannkreisMarker.webp",
+    },
+    {
+      slug: "llysfaen",
+      title: "Llysfaen",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis",
+      lordship: { slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+      rulingHouse: "Haus Wyrm",
+      cityImage: "LlysfaenStadt.webp",
+      regionNormal: "LlysfaenBannkreisNormal.webp",
+      regionPins: "LlysfaenBannkreisMarker.webp",
+      cityLegacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/Llysfaens-Stadtkarte.html",
+    },
+    {
+      slug: "bronhir",
+      title: "Bronhir",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-bronhir",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis",
+      lordship: { slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+      rulingHouse: "Haus Wyrm",
+      cityImage: "BronhirStadt.webp",
+      regionNormal: "BronhirBannkreisNormal.webp",
+      regionPins: "BronhirBannkreisMarker.webp",
+    },
+    {
+      slug: "abergwint",
+      title: "Abergwint",
+      mapPrefix: "cenyr-celtigerns-wacht-gwendolyns-ufer-abergwint",
+      folder: "Cenyr/celtigerns-wacht/gwendolyns-ufer/abergwint-bannkreis",
+      baseHierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "gwendolyns-ufer", title: "Gwendolyns Ufer" },
+      ],
+      rulingHouse: "Haus Gwyvern",
+      cityImage: "AbergwintStadt.webp",
+      regionNormal: "AbergwintBannkreisNormal.webp",
+      regionRegions: "AbergwintBannkreisZonen.webp",
+      regionPins: "AbergwintBannkreisMarker.webp",
+    },
+    {
+      slug: "castellbryn",
+      title: "Castellbryn",
+      mapPrefix: "cenyr-celtigerns-wacht-rhonwens-traenen-castellbryn",
+      folder: "Cenyr/celtigerns-wacht/rhonwens-traenen/castellbryn-bannkreis",
+      baseHierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "lordship", slug: "rhonwens-traenen", title: "Rhonwens Tränen" },
+      ],
+      rulingHouse: "Haus Arwydd",
+      regionNormal: "CastellbrynBannkreisNormal.webp",
+      regionRegions: "CastellbrynBannkreisZonen.webp",
+      regionPins: "CastellbrynBannkreisMarker.webp",
+      regionLayerName: "Zonen",
+    },
+    {
+      slug: "rhosmere",
+      title: "Rhosmere",
+      mapPrefix: "cenyr-celtigerns-wacht-arthus-streben-rhosmere",
+      folder: "Cenyr/celtigerns-wacht/arthus-streben/rhosmere-bannkreis",
+      baseHierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "arthus-streben", title: "Arthus Streben" },
+      ],
+      rulingHouse: "Haus Gwefrydd",
+      regionNormal: "RhosmereBannkreisNormal.webp",
+      regionRegions: "RhosmereBannkreisZonen.webp",
+      regionPins: "RhosmereBannkreisMarker.webp",
+      regionLayerName: "Zonen",
+    },
+  ]);
+
+  function createSettlementMaps(place) {
+    const baseHierarchy = place.baseHierarchy || [
+      { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+      { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+      { level: "barony", slug: "llamrais-ankunft", title: "Llamreis Ankunft" },
+      ...(place.lordship ? [{ level: "lordship", ...place.lordship }] : []),
+    ];
+    const regionHierarchy = [
+      ...baseHierarchy,
+      { level: "region", slug: `${place.slug}-bannkreis`, title: `${place.title} – Bannkreis` },
+    ];
+    const cityFolder = `${place.folder}/${place.slug}`;
+    const cityId = `${place.mapPrefix}-stadtkarte`;
+    const regionId = `${place.mapPrefix}-bannkreis`;
+
+    const maps = [];
+
+    if (place.cityImage) {
+      maps.push({
+        id: cityId,
+        title: `${place.title} – Stadtkarte`,
+        status: MAP_STATUS.ACTIVE,
+        type: MAP_TYPES.LOCAL,
+        hierarchy: [
+          ...regionHierarchy,
+          { level: "settlement", slug: place.slug, title: place.title },
+        ],
+        folder: cityFolder,
+        images: {
+          normal: `${cityFolder}/Kartenbilder/${place.cityImage}`,
+        },
+        layerNames: {
+          normal: "Stadtkarte",
+          regions: "Regionen",
+          pins: "Markierungen",
+        },
+        dataPath: `${cityFolder}/data.json`,
+        link: `karte.html?map=${cityId}`,
+        ...(place.rulingHouse ? { rulingHouse: place.rulingHouse } : {}),
+        ...(place.cityLegacyLink ? { legacyLink: place.cityLegacyLink } : {}),
+      });
+    }
+
+    if (place.regionNormal) {
+      maps.push({
+        id: regionId,
+        title: `${place.title} – Bannkreis`,
+        status: MAP_STATUS.ACTIVE,
+        type: MAP_TYPES.REGION,
+        hierarchy: regionHierarchy,
+        folder: place.folder,
+        images: {
+          normal: `${place.folder}/Kartenbilder/${place.regionNormal}`,
+          ...(place.regionRegions ? { regions: `${place.folder}/Kartenbilder/${place.regionRegions}` } : {}),
+          ...(place.regionPins ? { pins: `${place.folder}/Kartenbilder/${place.regionPins}` } : {}),
+        },
+        layerNames: {
+          normal: "Normal",
+          regions: place.regionLayerName || "Regionen",
+          pins: "Markierungen",
+        },
+        dataPath: `${place.folder}/data.json`,
+        link: `karte.html?map=${regionId}`,
+        ...(place.rulingHouse ? { rulingHouse: place.rulingHouse } : {}),
+      });
+    }
+
+    return maps;
+  }
+
   const MAPS = [
     {
       id: "cenyr",
@@ -225,28 +398,7 @@
       link: "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
       rulingHouse: "Haus Draig",
     },
-    {
-      id: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
-      title: "Llysfaens Stadtkarte",
-      status: MAP_STATUS.ACTIVE,
-      type: MAP_TYPES.LOCAL,
-      hierarchy: [
-        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
-        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
-        { level: "barony", slug: "llamrais-ankunft", title: "Llamrais Ankunft" },
-        { level: "lordship", slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
-        { level: "region", slug: "llysfaen-bannkreis", title: "Llysfaen Bannkreis" },
-        { level: "settlement", slug: "llysfaen", title: "Llysfaen" },
-      ],
-      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen",
-      config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/template.config.js",
-      images: {},
-      dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/data.json",
-      link: "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
-      legacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/Llysfaens-Stadtkarte.html",
-      editableDraft: true,
-      notes: "Konkrete Stadtkarte fuer Llysfaen. Kartenbilder koennen im Editor als Bildlinks hinterlegt werden.",
-    },
+    ...SETTLEMENT_MAPS.flatMap(createSettlementMaps),
   ].map(Object.freeze);
 
   function all() {

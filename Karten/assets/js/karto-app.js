@@ -265,9 +265,21 @@ function applyExtraLayerImages(){
 }
 function renderLayerButtons(){
   const fixed={normal:S.layerNames.normal, regions:S.layerNames.regions, pins:S.layerNames.pins};
+  const availability=window.KartoMapImageSources?.availability(S.mapImages,KARTO_CONFIG.images)||{
+    normal:true,
+    regions:true,
+    pins:true,
+  };
   Object.keys(fixed).forEach(key=>{
     const btn=document.getElementById('lb-'+key);
-    if(btn) btn.textContent=fixed[key];
+    if(!btn) return;
+    btn.textContent=fixed[key];
+    btn.hidden=!availability[key];
+    if(availability[key] || key==='normal') return;
+    btn.classList.remove('on');
+    const overlay=document.querySelector(`.ml[data-overlay="${key}"]`);
+    if(overlay) overlay.style.opacity='0';
+    if(key==='pins') document.getElementById('pl').style.display='none';
   });
   const container=document.getElementById('layer-btns');
   if(!container) return;

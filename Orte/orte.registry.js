@@ -41,22 +41,24 @@ window.ORTE_REGISTRY = [
     id: "lysfaen",
     slug: "lysfaen",
     aliases: [
+      "llysfaen",
       "lysfaens-bannkreis",
+      "llysfaens-bannkreis",
       "celtigerns-wacht-llamreis-ankunft-wyrm-lysfaen"
     ],
-    name: "Lysfaen",
+    name: "Llysfaen",
     status: "draft",
-    type: "kleinstadt",
-    data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js",
+    type: "bauernsiedlung",
+    data: "data/llamreis-mapped-place.data.js?v=llamreis-maps-20260902a",
     hierarchy: [
       { type: "Königreich", name: "Cenyr", slug: "cenyr" },
       { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },
       { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },
       { type: "Herrschaft", name: "Haus Wyrm", slug: "haus-wyrm" },
-      { type: "Bannkreis", name: "Lysfaens Bannkreis", slug: "lysfaens-bannkreis" },
-      { type: "Siedlung", name: "Lysfaen", slug: "lysfaen" }
+      { type: "Bannkreis", name: "Llysfaen – Bannkreis", slug: "llysfaen-bannkreis" },
+      { type: "Siedlung", name: "Llysfaen", slug: "lysfaen" }
     ],
-    tags: ["orte", "kleinstadt", "cenyr", "celtigerns-wacht", "llamreis-ankunft", "haus-wyrm", "lysfaen"]
+    tags: ["orte", "bauernsiedlung", "cenyr", "celtigerns-wacht", "llamreis-ankunft", "haus-wyrm", "lysfaen", "llysfaen"]
   },
   {
     id: "lysfaen-zunft-pferdezucht-jernigan",

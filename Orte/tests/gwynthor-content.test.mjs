@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import test from "node:test";
 import vm from "node:vm";
@@ -65,12 +65,13 @@ test("Gwynthors Infobox und erste Etablissements beruhen auf belegten Angaben", 
     Array.from(data.merchants, (merchant) => merchant.owner),
     ["Brenn Vann", "Albrecht Sonnenfels", "Aedan, Hrolf & Merrik"]
   );
-  data.merchants.forEach((merchant) => {
-    assert.match(merchant.image, /^https:\/\/i\.imgur\.com\//);
+  for (const merchant of data.merchants) {
+    assert.match(merchant.image, /^\/Orte\/.+\/assets\/etablissements\/.+\.png$/);
+    await access(resolve(root, merchant.image.slice(1)));
     assert.notEqual(merchant.trade, "Szene");
     assert.notEqual(merchant.trade, "Story");
     assert.notEqual(merchant.description, "…");
-  });
+  }
 });
 
 test("Großstadtseite und Vorlage laden das gekapselte Inhaltsmodul", async () => {

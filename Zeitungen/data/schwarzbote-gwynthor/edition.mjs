@@ -1,4 +1,9 @@
 import { DEFAULT_PUBLICATION_DATE } from "../../assets/js/newspaper-aleria-date.mjs";
+import {
+  createArticle as article,
+  createAuthor as author,
+  STANDARD_ARTICLE_TYPES
+} from "../../assets/js/newspaper-model.mjs";
 
 const assetRoot = "/Zeitungen/data/schwarzbote-gwynthor/assets";
 const articleRoot = "/Zeitungen/data/schwarzbote-gwynthor/articles";
@@ -72,16 +77,7 @@ const authors = Object.freeze([
   })
 ]);
 
-const articleTypes = Object.freeze([
-  articleType("hauptartikel", "Hauptartikel", "Die große Geschichte auf der ersten Seite – ausführlich, dringlich und meinungsstark."),
-  articleType("nebenartikel", "Nebenartikel", "Kürzere Meldungen und ergänzende Stimmen aus Stadt und Grafschaft."),
-  articleType("bekanntmachung", "Bekanntmachung", "Amtliche Verlautbarungen, Aufrufe und öffentliche Mitteilungen."),
-  articleType("predigt", "Predigt", "Geistliche Worte, Mahnungen und Auslegungen für die Gläubigen."),
-  articleType("bericht", "Bericht", "Sachkundige Betrachtungen zu Geschichte, Natur, Heraldik und öffentlichem Leben."),
-  articleType("kanzel", "Kanzel", "Scharfe moralische Kommentare aus der Feder der Gwynthorer Sittenwächter."),
-  articleType("klatsch", "Klatsch", "Gerüchte, Skandale und höfische Fehltritte – bissig zu Papier gebracht."),
-  articleType("satirekritik", "Satirekritik", "Kunst und Kultur unter dem Vergrößerungsglas einer besonders spitzen Feder.")
-]);
+const articleTypes = STANDARD_ARTICLE_TYPES;
 
 const articles = Object.freeze([
   article({
@@ -167,15 +163,3 @@ export default Object.freeze({
   articleTypes,
   articles
 });
-
-function author(value) {
-  return Object.freeze({ ...value, biography: Object.freeze([...value.biography]) });
-}
-
-function articleType(id, label, description) {
-  return Object.freeze({ id, label, description });
-}
-
-function article(value) {
-  return Object.freeze({ language: "Gemeine Zunge", ...value });
-}

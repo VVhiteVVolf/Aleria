@@ -9,6 +9,7 @@
   const mapAssetRoot = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder";
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const commonerRoot = `${houseRoot}/Bürgerliche/Gwynthor`;
+  const establishmentAssetRoot = "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/assets/etablissements";
 
   const house = (familyId, name, rank, seat, liege, emblem) => Object.freeze({
     familyId,
@@ -217,7 +218,7 @@
     merchants: Object.freeze([
       Object.freeze({
         name: "Celtigerns Letzte Rast",
-        image: "https://i.imgur.com/jgiv25N.png",
+        image: `${establishmentAssetRoot}/celtigerns-letzte-rast.png`,
         symbolAlt: "Celtigerns Letzte Rast",
         trade: "Taverne & Gasthaus",
         owner: "Brenn Vann",
@@ -228,7 +229,7 @@
       }),
       Object.freeze({
         name: "Die Lachende Nixe",
-        image: "https://i.imgur.com/90yXuQA.png",
+        image: `${establishmentAssetRoot}/lachende-nixe.png`,
         symbolAlt: "Die Lachende Nixe",
         trade: "Freudenhaus & Salons",
         owner: "Albrecht Sonnenfels",
@@ -239,7 +240,7 @@
       }),
       Object.freeze({
         name: "Die Krumme Kanne",
-        image: "https://i.imgur.com/ItMoUMi.png",
+        image: `${establishmentAssetRoot}/krumme-kanne.png`,
         symbolAlt: "Die Krumme Kanne",
         trade: "Veteranenschänke",
         owner: "Aedan, Hrolf & Merrik",

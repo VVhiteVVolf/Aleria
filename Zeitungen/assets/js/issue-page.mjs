@@ -80,7 +80,7 @@ function renderEditionSummary(newspaper) {
     attributes: { "aria-labelledby": "edition-summary-title" }
   }, [
     element("div", { className: "newspaper-section-heading" }, [
-      element("p", { className: "newspaper-kicker", text: "Das Gwynthorer Blatt" }),
+      element("p", { className: "newspaper-kicker", text: `Die Ausgabe zu ${newspaper.edition}` }),
       element("h2", { id: "edition-summary-title", text: "In dieser Ausgabe" })
     ]),
     element("p", { className: "newspaper-deck", text: newspaper.summary }),
@@ -168,7 +168,7 @@ function renderAuthors(newspaper) {
   }, [
     element("div", { className: "newspaper-section-heading" }, [
       element("p", { className: "newspaper-kicker", text: "Tinte, Gerücht und Wahrheit" }),
-      element("h2", { id: "authors-title", text: "Die Redaktion zu Gwynthor" })
+      element("h2", { id: "authors-title", text: `Die Redaktion zu ${newspaper.edition}` })
     ]),
     element("div", { className: "newspaper-author-grid" }, newspaper.authors.map(renderAuthorCard))
   ]);

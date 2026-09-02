@@ -14,13 +14,17 @@
     ["unterhaltung", "Unterhaltung", "unterhaltung.html"],
   ].map(([id, name, file]) => Object.freeze({ id, name, file }));
 
-  // The imported legacy documents describe Celtigerns Wacht only. Other
-  // domains intentionally resolve to no source until their own structures
-  // are authored; this prevents content leaking between lordships.
+  function sourcesAt(root) {
+    return Object.freeze(Object.fromEntries(
+      areas.map((area) => [area.id, `${root}/${area.file}`]),
+    ));
+  }
+
+  // Each lordship is mapped to its own source directory. Unmapped domains
+  // deliberately resolve to no source so structures cannot leak between them.
   const sourcesByScope = Object.freeze({
-    "grafschaft-celtigerns-wacht": Object.freeze(Object.fromEntries(
-      areas.map((area) => [area.id, `${sourceRoot}/${area.file}`]),
-    )),
+    "grafschaft-celtigerns-wacht": sourcesAt(sourceRoot),
+    "baronie-gwendolyns-ufer": sourcesAt(`${sourceRoot}/gwendolyns-ufer`),
   });
 
   function sourceFor(scopeId, areaId) {

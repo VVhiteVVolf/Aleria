@@ -8,7 +8,8 @@ const ROOT = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const REGISTRY_FILE = path.join(ROOT, "karten.registry.js");
 const VALID_STATUSES = new Set(["active", "planned", "archived"]);
 const VALID_TYPES = new Set(["kingdom", "county", "barony", "city", "region", "local"]);
-const REQUIRED_IMAGE_KEYS = ["normal", "regions", "pins"];
+const REQUIRED_IMAGE_KEYS = ["normal"];
+const OPTIONAL_IMAGE_KEYS = ["regions", "pins"];
 
 const errors = [];
 const warnings = [];
@@ -141,6 +142,14 @@ function validateActiveMap(map) {
       return;
     }
     if (isExternalUrl(imagePath)) return;
+    if (!fileExists(imagePath)) {
+      reportError(`${label}: image "${key}" not found: ${imagePath}`);
+    }
+  });
+
+  OPTIONAL_IMAGE_KEYS.forEach((key) => {
+    const imagePath = map.images[key];
+    if (!imagePath || isExternalUrl(imagePath)) return;
     if (!fileExists(imagePath)) {
       reportError(`${label}: image "${key}" not found: ${imagePath}`);
     }

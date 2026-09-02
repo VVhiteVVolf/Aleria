@@ -3,6 +3,10 @@
 
   const countyRoot = "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht";
   const blankDataPath = "data/celtigerns-wacht-place.data.js";
+  const llamreisMappedDataPath = "data/llamreis-mapped-place.data.js?v=llamreis-maps-20260902a";
+  const abergwintDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Gwendolyns_Ufer/Abergwints_Bannkreis/Abergwint/ort.data.js?v=abergwint-content-20260902c";
+  const castellbrynDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Herrschaft_Rhonwens_Traenen/Castellbryns_Bannkreis/Castellbryn/ort.data.js?v=castellbryn-preparation-20260902a";
+  const rhosmereDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Arthus_Streben/Rhosmeres_Bannkreis/Rhosmere/ort.data.js?v=rhosmere-preparation-20260902a";
 
   const domainHeraldryByName = Object.freeze({
     "celtigerns-wacht": heraldryPath("regions", "celtigerns-wacht"),
@@ -84,14 +88,14 @@
     wyrm: domain("Herrschaft der Wyrm", "Herrschaft", domainPage("Herrschaft der Wyrm"), "Haus Wyrm", [
       { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" }
     ]),
-    rhonwen: domain("Rhonwens Tränen", "Herrschaft", domainPage("Herrschaft Rhonwens Tränen"), "Haus Awnydd"),
+    rhonwen: domain("Rhonwens Tränen", "Herrschaft", domainPage("Herrschaft Rhonwens Tränen"), "Haus Arwydd"),
     camruisge: domain("Camruisge", "Region", domainPage("Insel Camruisge"), "Gwyl Celtigern")
   });
 
   const definitions = Object.freeze([
     define("gwynthor", "Gwynthor", "Großstadt", "county", {
       featured: true,
-      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-content-20260902b",
+      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-content-20260902c",
       hierarchy: [
         ...baseHierarchy,
         { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },
@@ -99,10 +103,37 @@
         { type: "Großstadt", name: "Gwynthor", slug: "gwynthor" }
       ]
     }),
-    define("rhosmere", "Rhosmere", "Großstadt", "arthus", { featured: true }),
-    define("abergwint", "Abergwint", "Großstadt", "gwendolyn", { featured: true }),
+    define("rhosmere", "Rhosmere", "Großstadt", "arthus", {
+      featured: true,
+      dataPath: rhosmereDataPath,
+      hierarchy: [
+        ...baseHierarchy,
+        { type: "Baronie", name: "Arthus Streben", slug: "arthus-streben" },
+        { type: "Bannkreis", name: "Rhosmere – Bannkreis", slug: "rhosmere-bannkreis" },
+        { type: "Großstadt", name: "Rhosmere", slug: "rhosmere" }
+      ]
+    }),
+    define("abergwint", "Abergwint", "Großstadt", "gwendolyn", {
+      featured: true,
+      dataPath: abergwintDataPath,
+      hierarchy: [
+        ...baseHierarchy,
+        { type: "Baronie", name: "Gwendolyns Ufer", slug: "gwendolyns-ufer" },
+        { type: "Bannkreis", name: "Abergwint – Bannkreis", slug: "abergwint-bannkreis" },
+        { type: "Großstadt", name: "Abergwint", slug: "abergwint" }
+      ]
+    }),
     define("aberllan", "Aberllan", "Großstadt", "camruisge", { featured: true }),
-    define("castellbryn", "Castellbryn", "Großstadt", "rhonwen", { featured: true }),
+    define("castellbryn", "Castellbryn", "Großstadt", "rhonwen", {
+      featured: true,
+      dataPath: castellbrynDataPath,
+      hierarchy: [
+        ...baseHierarchy,
+        { type: "Herrschaft", name: "Rhonwens Tränen", slug: "rhonwens-traenen" },
+        { type: "Bannkreis", name: "Castellbryn – Bannkreis", slug: "castellbryn-bannkreis" },
+        { type: "Großstadt", name: "Castellbryn", slug: "castellbryn" }
+      ]
+    }),
 
     define("nyth-conraich", "Nyth Conraich", "Ruine", "county"),
     define("lycath", "Lycath", "Ruine", "county"),
@@ -112,7 +143,7 @@
     define("zum-roten-drachen", "Zum roten Drachen", "Taverne", "county"),
     define("tan-maelfa", "Tan Maelfa", "Abendschilde", "county"),
     define("twr-dragwyn", "Tŵr Dragwyn", "Arkanum von Avallorn", "county"),
-    define("lynthor", "Lynthor", "Bewahrer von Avallorn", "county"),
+    define("lynthor", "Lynthor", "Bewahrer von Avallorn", "county", mappedPlaceOptions("lynthor", "Lynthor", "Bewahrer von Avallorn")),
     define("fluesterspalt", "Flüsterspalt", "Höhle", "county"),
     define("wetterspalte", "Wetterspalte", "Höhle", "county"),
     define("perlentaucherin", "Perlentaucherin", "Schiffswrack", "county"),
@@ -120,7 +151,7 @@
     define("mwynfaen", "Mwynfaen", "Bergbausiedlung", "county"),
     define("carregdrag", "Carregdrag", "Bergbausiedlung", "county"),
     define("twr-gwyntstorm", "Tŵr Gwyntstorm", "Turm", "county"),
-    define("twr-rhewgorn", "Tŵr Rhewgorn", "Turm", "county"),
+    define("twr-rhewgorn", "Tŵr Rhewgorn", "Turm", "county", mappedPlaceOptions("twr-rhewgorn", "Tŵr Rhewgorn", "Turm")),
 
     define("twr-coedlorn", "Tŵr Coedlorn", "Turm", "arthus"),
     define("llyswynfa", "Llyswynfa", "Siedlung", "arthus"),
@@ -174,10 +205,10 @@
     define("craithllyn", "Craithllyn", "Bergbausiedlung", "saethwyr"),
 
     define("twr-brynmawr", "Tŵr Brynmawr", "Turm", "wyrm"),
-    define("mwyncreig", "Mwyncreig", "Bergbausiedlung", "wyrm"),
+    define("mwyncreig", "Mwyncreig", "Bergbausiedlung", "wyrm", mappedPlaceOptions("mwyncreig", "Mwyncreig", "Bergbausiedlung", true)),
     define("craithglyn", "Craithglyn", "Bergbausiedlung", "wyrm"),
-    define("lysfaen", "Llysfaen", "Bauernsiedlung", "wyrm"),
-    define("bronhir", "Bronhir", "Bauernsiedlung", "wyrm"),
+    define("lysfaen", "Llysfaen", "Bauernsiedlung", "wyrm", mappedPlaceOptions("llysfaen", "Llysfaen", "Bauernsiedlung", true)),
+    define("bronhir", "Bronhir", "Bauernsiedlung", "wyrm", mappedPlaceOptions("bronhir", "Bronhir", "Bauernsiedlung", true)),
 
     define("tan-gwaelon", "Tân Gwaelon", "Hafensiedlung", "rhonwen"),
     define("morfael", "Morfael", "Siedlung", "rhonwen"),
@@ -309,6 +340,7 @@
         parentLabel: entry.domain.name,
         ...(overrides.navigation || {})
       }),
+      features: Object.freeze({ ...(overrides.features || {}) }),
       presentation: Object.freeze({
         motto: "...",
         heraldry: entry.images["icon-png"],
@@ -330,6 +362,19 @@
 
   function domainPage(name) {
     return encodeURI(`${countyRoot}/${name}/${name}.html`);
+  }
+
+  function mappedPlaceOptions(id, name, placeType, underWyrm = false) {
+    return {
+      dataPath: llamreisMappedDataPath,
+      hierarchy: [
+        ...baseHierarchy,
+        { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },
+        ...(underWyrm ? [{ type: "Herrschaft", name: "Herrschaft der Wyrm", slug: "herrschaft-der-wyrm" }] : []),
+        { type: "Bannkreis", name: `${name} – Bannkreis`, slug: `${id}-bannkreis` },
+        { type: placeType, name, slug: id }
+      ]
+    };
   }
 
   function freezeHierarchyItem(item) {

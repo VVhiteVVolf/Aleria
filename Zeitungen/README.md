@@ -7,6 +7,7 @@ Das Zeitungssystem trennt wiederverwendbare Seitendarstellung, Ausgabedaten und 
 - `zeitung.html` zeigt eine komplette Ausgabe mit Artikelkarten, Artikelarten und Redaktion.
 - `artikel.html` zeigt einen einzelnen vollständigen Artikel samt Autorenportrait und Blattangaben.
 - `assets/js/newspaper-registry.mjs` registriert alle Zeitungen und Ausgaben.
+- `assets/js/newspaper-model.mjs` bündelt die gemeinsamen Artikelarten und unveränderlichen Datenmodelle.
 - `data/<ausgabe>/edition.mjs` enthält Blattdaten, Autoren, Artikelarten und das Artikelverzeichnis.
 - Das Standard-Erscheinungsdatum folgt dem Aleria-Kalender: `18. Tag, Dritter Monat, Jahr 1740`.
 - `data/<ausgabe>/articles/` enthält ausschließlich die eigentlichen, bereinigten Artikeltexte.
@@ -17,6 +18,9 @@ Eine Ortsseite verlinkt ihre Ausgabe über den `href` des Mediums `zeitung-png`.
 ## Lokale Ziele
 
 - Gwynthorer Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-gwynthor`
+- Abergwinter Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-abergwint`
+- Castellbryner Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-castellbryn`
+- Rhosmerer Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-rhosmere`
 - Einzelartikel: `/Zeitungen/artikel.html?zeitung=schwarzbote-gwynthor&artikel=<artikel-id>`
 
 Die alten HTML-Artikel können bei Bedarf mit `tools/import-legacy-article.mjs` in bereinigte Inhaltsfragmente überführt werden. Der Importer entfernt alte Layouttabellen, Inline-Stile und externe Links; die Laufzeitseite akzeptiert zusätzlich nur eine kleine Liste semantischer Textelemente.

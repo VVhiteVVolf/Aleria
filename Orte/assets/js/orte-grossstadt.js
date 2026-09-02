@@ -63,7 +63,9 @@
       ...structure,
     });
 
-    const hasDistricts = supportsDistricts(placeType, catalogEntry);
+    const hasDistricts = typeof features.districts === "boolean"
+      ? features.districts
+      : supportsDistricts(placeType, catalogEntry);
     setFeatureVisibility("districts", hasDistricts);
     setBuiltEnvironmentHeading(hasDistricts);
     setFeatureVisibility("notice-board", features.noticeBoard !== false);

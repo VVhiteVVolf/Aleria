@@ -59,11 +59,22 @@
     }
   }
 
+  function availability(savedImages, configuredImages, baseUrl) {
+    const saved = savedImages || {};
+    const configuredImagesSafe = configuredImages || {};
+    return Object.freeze({
+      normal: Boolean(select(saved.normal, configuredImagesSafe.normal, baseUrl)),
+      regions: Boolean(select(saved.regions, configuredImagesSafe.regions, baseUrl)),
+      pins: Boolean(select(saved.pins, configuredImagesSafe.pins, baseUrl)),
+    });
+  }
+
   window.KartoMapImageSources = Object.freeze({
     toPublicUrl,
     select,
     configured,
     equivalent,
     recoveryUrl,
+    availability,
   });
 })();

@@ -89,6 +89,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 .lbtn{font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.02em;padding:5px 12px;cursor:pointer;border:1px solid transparent;border-radius:1px;background:transparent;color:var(--ink2);transition:all .13s;}
 .lbtn:hover{color:var(--ink);}
 .lbtn.on{background:rgba(180,140,50,.2);border-color:var(--border2);color:var(--ink);}
+#layer-btns .lbtn[hidden]{display:none;}
 
 /* Search */
 #search-wrap{position:relative;flex-shrink:0;}

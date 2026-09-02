@@ -401,6 +401,29 @@ body.herrschaft-theme-camruisge {
   }
 }
 
+.herrschaft-infobox-house-group,
+.herrschaft-infobox-house-title,
+.herrschaft-infobox-house-list {
+  display: block;
+}
+
+.herrschaft-infobox-house-group + .herrschaft-infobox-house-group {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(95, 63, 24, 0.24);
+}
+
+.herrschaft-infobox-house-title {
+  margin-bottom: 0.18rem;
+  color: #66461f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.85rem;
+}
+
+.herrschaft-infobox-house-list {
+  line-height: 1.45;
+}
+
 @media (max-width: 560px) {
   .herrschaft-person-grid,
   .herrschaft-administration-grid {
