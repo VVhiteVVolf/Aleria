@@ -26,6 +26,12 @@ function createSnapshot(family) {
   return cloneValue(family);
 }
 
+function changedRecordFields(record, values) {
+  return Object.keys(values)
+    .filter(field => field !== 'id')
+    .filter(field => JSON.stringify(record?.[field]) !== JSON.stringify(values[field]));
+}
+
 function refreshRelationshipLayout(family, partnershipIds = null) {
   refreshAutomaticSingleChildAlignment(family, partnershipIds);
   refreshMultiplePartnershipAlignment(family);
@@ -384,11 +390,14 @@ export function createFamilyStore(initialFamily, options = {}) {
   }
 
   function updatePerson(personId, values) {
+    const current = family.persons.find(person => person.id === personId);
+    if (!current) throw new Error('Die Person wurde nicht gefunden.');
+    const changedFields = changedRecordFields(current, values);
     return commit('person-updated', draft => {
       const index = draft.persons.findIndex(person => person.id === personId);
       if (index < 0) throw new Error('Die Person wurde nicht gefunden.');
       draft.persons[index] = { ...draft.persons[index], ...values, id: personId };
-    }, { personId });
+    }, { personId, changedFields });
   }
 
   function legitimizePerson(personId) {

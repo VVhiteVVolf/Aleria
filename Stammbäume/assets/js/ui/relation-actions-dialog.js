@@ -268,7 +268,7 @@ export function createRelationActionsDialog(
           <label class="field" data-cloud-asset-field>Bilddatei auswählen
             <input type="file" accept="image/png,image/jpeg,image/webp"
               data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
-            <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · erst „Online speichern“ veröffentlicht das Bild für andere · maximal 1 MB</span>
+            <span class="asset-upload-status" data-asset-upload-status>Quelldatei bis 8 MB · größere Bilder werden automatisch optimiert · erst „Online speichern“ veröffentlicht das Bild für andere</span>
           </label>
           <p class="relation-step-note">„Portrait speichern“ sichert zunächst nur den Entwurf in diesem Browser. Erst „Online speichern“ schreibt ihn in die GitHub-Registry; danach sehen Patrick und andere Nutzer die Änderung beim nächsten Laden. Eine leere Adresse stellt wieder die passende Silhouette her.</p>
         </div>

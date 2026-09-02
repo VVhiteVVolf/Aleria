@@ -29,7 +29,7 @@ function renderLevel(index) {
         </label>
         <label class="field house-placement-level__upload" data-cloud-asset-field>Icon lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="folder-icon-${index}" data-asset-target="folderIconLevel${inputNumber}">
-          <span class="asset-upload-status" data-asset-upload-status>Bleibt bis „Online speichern“ lokal · maximal 1 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Quelldatei bis 8 MB · größere Bilder werden für den lokalen Entwurf automatisch optimiert</span>
         </label>
       </div>
     </div>

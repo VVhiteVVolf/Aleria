@@ -6,8 +6,11 @@ export function createFamilyAssetUploadController({
 }) {
   function familyIdFor(input) {
     const formFamilyId = input.form?.elements.namedItem('documentId')?.value?.trim()
-      || input.form?.elements.namedItem('id')?.value?.trim();
-    return formFamilyId || store.getState().family.document.id;
+      || '';
+    const activeFamilyId = store.getState()?.family?.document?.id || '';
+    const familyId = formFamilyId || activeFamilyId;
+    if (!familyId) throw new Error('Die Familien-ID für das Bild konnte nicht ermittelt werden.');
+    return familyId;
   }
 
   function renderStatus(input, message, isError = false) {
@@ -29,7 +32,11 @@ export function createFamilyAssetUploadController({
         kind: input.dataset.assetKind || 'image',
         visibility: 'public',
         onProgress(progress) {
-          renderStatus(input, progress < 0.5 ? 'Bild wird vorbereitet …' : 'Bild wird sicher hochgeladen …');
+          renderStatus(input, progress < 0.2
+            ? 'Bild wird geprüft …'
+            : progress < 0.9
+              ? 'Bild wird für den lokalen Entwurf optimiert …'
+              : 'Bild wird lokal gespeichert …');
         }
       });
       const target = input.form?.elements.namedItem(input.dataset.assetTarget);
@@ -37,7 +44,7 @@ export function createFamilyAssetUploadController({
       target.value = result.url;
       target.dispatchEvent(new Event('input', { bubbles: true }));
       renderStatus(input, result.staged
-        ? 'Bild nur auf diesem Gerät vorgemerkt · erst „Online speichern“ veröffentlicht es über GitHub für andere.'
+        ? `${result.optimized ? 'Bild automatisch optimiert · ' : ''}nur auf diesem Gerät vorgemerkt · erst „Online speichern“ veröffentlicht es über GitHub für andere.`
         : 'Bild übernommen.');
     } catch (error) {
       renderStatus(input, error.message, true);

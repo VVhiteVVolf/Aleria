@@ -375,6 +375,12 @@ import {
   buildRegisteredHouseEmblemIndex,
   buildRegisteredHouseIndex
 } from '../assets/js/modules/family-assets/house-emblem-index.js';
+import { createLocalImageDraftRepository } from '../assets/js/modules/family-assets/local-image-draft-repository.js';
+import {
+  MAX_IMAGE_SOURCE_BYTES,
+  MAX_STAGED_IMAGE_BYTES,
+  optimizeImageFileForStaging
+} from '../assets/js/modules/family-assets/image-file-optimizer.js';
 import { createGitHubFamilyRepository } from '../assets/js/modules/github-publication/github-family-repository.js';
 import {
   assertUsablePortraitSource,
@@ -46537,7 +46543,7 @@ test('aktualisiert eine alte Eisenbieger-Akte auf die kompakte Helga- und Nordal
   });
 });
 
-test('baut Family Chart nur bei vollstaendigem Aktenwechsel neu auf', () => {
+test('baut Family Chart bei Aktenwechseln und Portraitänderungen kontrolliert neu auf', () => {
   assert.equal(requiresFamilyChartRebuild({
     type: 'family-synchronized',
     affectsFamily: true
@@ -46551,9 +46557,114 @@ test('baut Family Chart nur bei vollstaendigem Aktenwechsel neu auf', () => {
     affectsFamily: true
   }), false);
   assert.equal(requiresFamilyChartRebuild({
+    type: 'person-updated',
+    affectsFamily: true,
+    details: { changedFields: ['portrait'] }
+  }), true);
+  assert.equal(requiresFamilyChartRebuild({
+    type: 'person-updated',
+    affectsFamily: true,
+    details: { changedFields: ['title'] }
+  }), false);
+  assert.equal(requiresFamilyChartRebuild({
     type: 'family-synchronized',
     affectsFamily: false
   }), false);
+});
+
+test('meldet Portraitänderungen aus dem Store an die Chart-Lifecycle-Policy', () => {
+  const store = createFamilyStore(SAMPLE_FAMILY);
+  const person = store.getState().family.persons[0];
+  let updateEvent = null;
+  store.subscribe((unusedState, event) => {
+    if (event.type === 'person-updated') updateEvent = event;
+  });
+
+  store.updatePerson(person.id, { portrait: 'assets/images/portraits/test-neu.webp' });
+  assert.deepEqual(updateEvent.details.changedFields, ['portrait']);
+  assert.equal(requiresFamilyChartRebuild(updateEvent), true);
+});
+
+test('optimiert Bildquellen über 1 MB vor dem lokalen Vormerken', async () => {
+  const source = { type: 'image/jpeg', size: 2 * 1024 * 1024 };
+  const optimized = { type: 'image/webp', size: 720 * 1024 };
+  const progress = [];
+  let optimizedInput = null;
+  const repository = createLocalImageDraftRepository({
+    async optimizeImage(file, options) {
+      optimizedInput = file;
+      assert.equal(options.targetBytes, MAX_STAGED_IMAGE_BYTES);
+      options.onProgress(0.5);
+      return optimized;
+    },
+    async readDataUrl(file, onProgress) {
+      assert.equal(file, optimized);
+      onProgress(1);
+      return 'data:image/webp;base64,UklGRg==';
+    }
+  });
+
+  const result = await repository.uploadImage({
+    file: source,
+    onProgress: value => progress.push(value)
+  });
+  assert.equal(optimizedInput, source);
+  assert.equal(result.optimized, true);
+  assert.equal(result.originalBytes, source.size);
+  assert.equal(result.storedBytes, optimized.size);
+  assert.match(result.url, /^data:image\/webp;base64,/);
+  assert.deepEqual(progress, [0.1, 0.475, 1]);
+});
+
+test('weist nur Bildquellen über 8 MB vor der Optimierung zurück', async () => {
+  const repository = createLocalImageDraftRepository({
+    optimizeImage: async () => assert.fail('Eine zu große Quelldatei darf nicht dekodiert werden.'),
+    readDataUrl: async () => ''
+  });
+  await assert.rejects(
+    repository.uploadImage({ file: { type: 'image/png', size: MAX_IMAGE_SOURCE_BYTES + 1 } }),
+    /höchstens 8 MB/
+  );
+});
+
+test('verkleinert große Bilder iterativ in das Veröffentlichungsbudget', async () => {
+  let encodePass = 0;
+  let bitmapClosed = false;
+  const canvas = {
+    width: 0,
+    height: 0,
+    getContext: () => ({
+      clearRect() {},
+      drawImage() {},
+      imageSmoothingEnabled: false,
+      imageSmoothingQuality: ''
+    }),
+    toBlob(callback) {
+      encodePass += 1;
+      callback({
+        type: 'image/webp',
+        size: encodePass === 1 ? MAX_STAGED_IMAGE_BYTES + 100_000 : 800_000
+      });
+    }
+  };
+  const runtime = {
+    createImageBitmap: async () => ({
+      width: 4000,
+      height: 3000,
+      close() { bitmapClosed = true; }
+    }),
+    document: { createElement: () => canvas }
+  };
+
+  const result = await optimizeImageFileForStaging(
+    { type: 'image/png', size: 2 * 1024 * 1024 },
+    { runtime, targetBytes: MAX_STAGED_IMAGE_BYTES }
+  );
+  assert.equal(result.size, 800_000);
+  assert.equal(encodePass, 2);
+  assert.equal(bitmapClosed, true);
+  assert.ok(canvas.width < 2400);
+  assert.ok(canvas.height < 1800);
 });
 
 test('bildet Clan Frostauge vollstaendig und ohne Platzhalter-Verlobungen ab', () => {
