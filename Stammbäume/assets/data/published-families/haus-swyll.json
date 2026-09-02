@@ -1,0 +1,1353 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-swyll",
+  "revision": 1,
+  "updatedAt": "2026-09-02T21:43:37.875Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-swyll",
+      "title": "Haus Swyll",
+      "motto": "",
+      "description": "Ein weit verzweigtes bürgerliches Geschlecht aus Gwynthor. Die jüngste Generation gruppiert sich um Meredith Swyll, ohne sie zum technischen Stammbaumknoten zu machen.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-swyll-gruender",
+        "worldPersonId": "person--haus-swyll--haus-swyll-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-swyll-gruenderin",
+        "worldPersonId": "person--haus-swyll--haus-swyll-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "emyr-swyll",
+        "worldPersonId": "person--haus-swyll--emyr-swyll",
+        "name": "Emyr Swyll",
+        "title": "Ältestes überliefertes Oberhaupt des Hauses Swyll",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1663",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tegwen-spouse-swyll",
+        "worldPersonId": "person--family-tree--tegwen-spouse-swyll",
+        "name": "Tegwen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1667",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenifer-swyll",
+        "worldPersonId": "person--haus-swyll--gwenifer-swyll",
+        "name": "Gwenifer Swyll",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Großtante Gwenifer wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "unknown-spouse-gwenifer-swyll",
+        "worldPersonId": "person--haus-unbekannt-gross-tante-gwenifer-swyll--unknown-spouse-gwenifer-swyll",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Gwenifer Swyll",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-gross-tante-gwenifer-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und genaue Herkunft des Ehemanns von Gwenifer Swyll sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "madryn-swyll",
+        "worldPersonId": "person--haus-swyll--madryn-swyll",
+        "name": "Madryn Swyll",
+        "title": "Im Krieg gefallener Großonkel",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1669",
+        "death": "1720",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Großonkel; fiel 1720 im Krieg und hinterließ weder Ehefrau noch Kinder.",
+        "extensions": {}
+      },
+      {
+        "id": "carys-swyll",
+        "worldPersonId": "person--haus-swyll--carys-swyll",
+        "name": "Carys Swyll",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Tante Carys wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "unknown-spouse-carys-swyll",
+        "worldPersonId": "person--haus-unbekannt-carys-swyll--unknown-spouse-carys-swyll",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Carys Swyll",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-carys-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und genaue Herkunft des Ehemanns von Carys Swyll sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "llio-swyll",
+        "worldPersonId": "person--haus-swyll--llio-swyll",
+        "name": "Llio Swyll",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Tante Llio wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "unknown-spouse-llio-swyll",
+        "worldPersonId": "person--haus-unbekannt-llio-swyll--unknown-spouse-llio-swyll",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Llio Swyll",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-llio-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und genaue Herkunft des Ehemanns von Llio Swyll sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "nerys-swyll",
+        "worldPersonId": "person--haus-swyll--nerys-swyll",
+        "name": "Nerys Swyll",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Tante Nerys wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "unknown-spouse-nerys-swyll",
+        "worldPersonId": "person--haus-unbekannt-nerys-swyll--unknown-spouse-nerys-swyll",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Nerys Swyll",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-nerys-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und genaue Herkunft des Ehemanns von Nerys Swyll sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "eirwen-swyll",
+        "worldPersonId": "person--haus-swyll--eirwen-swyll",
+        "name": "Eirwen Swyll",
+        "title": "An Haus Pendrwn verheiratete Swyll",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Iestyn Swylls; heiratete Meilyr Pendrwn.",
+        "extensions": {}
+      },
+      {
+        "id": "meilyr-pendrwn",
+        "worldPersonId": "person--haus-pendrwn--meilyr-pendrwn",
+        "name": "Meilyr Pendrwn",
+        "title": "Vater Emyr Pendrwns",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pendrwn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ehemann Eirwen Swylls und Vater der jüngsten Pendrwn-Geschwister.",
+        "extensions": {}
+      },
+      {
+        "id": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "name": "Bronwen Swyll",
+        "title": "An Haus Maerllys verheiratete Swyll",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Iestyn Swylls; heiratete Iorwerth Maerllys.",
+        "extensions": {}
+      },
+      {
+        "id": "iorwerth-maerllys",
+        "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+        "name": "Iorwerth Maerllys",
+        "title": "Vater Nia Maerllys’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1689",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Angehöriger des Hauses Maerllys; heiratete Bronwen Swyll.",
+        "extensions": {}
+      },
+      {
+        "id": "owain-swyll",
+        "worldPersonId": "person--haus-swyll--owain-swyll",
+        "name": "Owain Swyll",
+        "title": "Onkel Merediths",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eluned-spouse-swyll",
+        "worldPersonId": "person--family-tree--eluned-spouse-swyll",
+        "name": "Eluned",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "iestyn-swyll",
+        "worldPersonId": "person--haus-swyll--iestyn-swyll",
+        "name": "Iestyn Swyll",
+        "title": "Angehöriger des Hauses Swyll",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/published/haus-swyll/person-iestyn-swyll-r1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ehemann Rhiannon Draenmelyns; die Ehe verbindet die Bürgerhäuser Draenmelyn und Swyll.",
+        "extensions": {}
+      },
+      {
+        "id": "rhiannon-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "name": "Rhiannon Draenmelyn",
+        "title": "Bedienstete des Hauses Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.",
+        "extensions": {}
+      },
+      {
+        "id": "cadfan-swyll",
+        "worldPersonId": "person--haus-swyll--cadfan-swyll",
+        "name": "Cadfan Swyll",
+        "title": "Im Krieg gefallener Onkel",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1700",
+        "death": "1719",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Onkel; fiel 1719 im Krieg, unverheiratet und ohne Kinder.",
+        "extensions": {}
+      },
+      {
+        "id": "rhodri-swyll",
+        "worldPersonId": "person--haus-swyll--rhodri-swyll",
+        "name": "Rhodri Swyll",
+        "title": "Lebemann des Hauses Swyll",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merediths Onkel; unterhielt eine Affäre mit Morwen, aus der zwei nicht eheliche Kinder hervorgingen.",
+        "extensions": {}
+      },
+      {
+        "id": "morwen-affair-swyll",
+        "worldPersonId": "person--family-tree--morwen-affair-swyll",
+        "name": "Morwen",
+        "title": "Affäre Rhodri Swylls",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mutter von Rhodris zwei nicht ehelichen Kindern.",
+        "extensions": {}
+      },
+      {
+        "id": "gareth-swyll",
+        "worldPersonId": "person--haus-swyll--gareth-swyll",
+        "name": "Gareth Swyll",
+        "title": "Älterer Bruder Meredith Swylls",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; seine weitere Lebenslinie bleibt bewusst offen.",
+        "extensions": {}
+      },
+      {
+        "id": "meredith-swyll",
+        "worldPersonId": "person--haus-swyll--meredith-swyll",
+        "name": "Meredith Swyll",
+        "title": "Mittleres Kind Iestyns und Rhiannons",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-swyll/meredith-swyll.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "18 Jahre"
+        ],
+        "notes": "Achtzehnjährige Tochter von Iestyn Swyll und Rhiannon Draenmelyn; zwischen Gareth und Rhydwen geboren.",
+        "extensions": {}
+      },
+      {
+        "id": "rhydwen-swyll",
+        "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+        "name": "Rhydwen Swyll",
+        "title": "Jüngere Schwester Merediths",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "aled-swyll",
+        "worldPersonId": "person--haus-swyll--aled-swyll",
+        "name": "Aled Swyll",
+        "title": "Vetter Merediths",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "enid-swyll",
+        "worldPersonId": "person--haus-swyll--enid-swyll",
+        "name": "Enid Swyll",
+        "title": "Cousine Merediths",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "carwyn-swyll",
+        "worldPersonId": "person--haus-swyll--carwyn-swyll",
+        "name": "Carwyn Swyll",
+        "title": "Bastard aus Rhodris Affäre mit Morwen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nicht ehelicher Sohn Rhodri Swylls und Morwens; ungefähr in Merediths Alter.",
+        "extensions": {}
+      },
+      {
+        "id": "lowri-swyll",
+        "worldPersonId": "person--haus-swyll--lowri-swyll",
+        "name": "Lowri Swyll",
+        "title": "Bastard aus Rhodris Affäre mit Morwen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nicht eheliche Tochter Rhodri Swylls und Morwens; ungefähr in Merediths Alter.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-swyll-founders",
+        "participantIds": [
+          "haus-swyll-gruender",
+          "haus-swyll-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-emyr-tegwen-swyll",
+        "participantIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwenifer-unknown-swyll",
+        "participantIds": [
+          "gwenifer-swyll",
+          "unknown-spouse-gwenifer-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-carys-unknown-swyll",
+        "participantIds": [
+          "carys-swyll",
+          "unknown-spouse-carys-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-llio-unknown-swyll",
+        "participantIds": [
+          "llio-swyll",
+          "unknown-spouse-llio-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-nerys-unknown-swyll",
+        "participantIds": [
+          "nerys-swyll",
+          "unknown-spouse-nerys-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-eluned-swyll",
+        "participantIds": [
+          "owain-swyll",
+          "eluned-spouse-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "participantIds": [
+          "rhiannon-draenmelyn",
+          "iestyn-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-meilyr-pendrwn-eirwen-swyll",
+        "participantIds": [
+          "meilyr-pendrwn",
+          "eirwen-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "participantIds": [
+          "iorwerth-maerllys",
+          "bronwen-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "affair-rhodri-morwen-swyll",
+        "participantIds": [
+          "rhodri-swyll",
+          "morwen-affair-swyll"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Rhodris Affäre mit Morwen; aus ihr gingen Carwyn und Lowri hervor.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-emyr-swyll",
+        "childId": "emyr-swyll",
+        "parentIds": [
+          "haus-swyll-gruender",
+          "haus-swyll-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-swyll-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
+        "extensions": {
+          "timeJumpId": "gap-swyll-to-1663"
+        }
+      },
+      {
+        "id": "parentage-gwenifer-swyll",
+        "childId": "gwenifer-swyll",
+        "parentIds": [
+          "haus-swyll-gruender",
+          "haus-swyll-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-swyll-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
+        "extensions": {
+          "timeJumpId": "gap-swyll-to-1663"
+        }
+      },
+      {
+        "id": "parentage-madryn-swyll",
+        "childId": "madryn-swyll",
+        "parentIds": [
+          "haus-swyll-gruender",
+          "haus-swyll-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-swyll-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
+        "extensions": {
+          "timeJumpId": "gap-swyll-to-1663"
+        }
+      },
+      {
+        "id": "parentage-emyr-eirwen-swyll",
+        "childId": "eirwen-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-bronwen-swyll",
+        "childId": "bronwen-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-carys-swyll",
+        "childId": "carys-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-owain-swyll",
+        "childId": "owain-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-iestyn-swyll",
+        "childId": "iestyn-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-cadfan-swyll",
+        "childId": "cadfan-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-rhodri-swyll",
+        "childId": "rhodri-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-llio-swyll",
+        "childId": "llio-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emyr-nerys-swyll",
+        "childId": "nerys-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gareth-swyll",
+        "childId": "gareth-swyll",
+        "parentIds": [
+          "rhiannon-draenmelyn",
+          "iestyn-swyll"
+        ],
+        "partnershipId": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-meredith-swyll",
+        "childId": "meredith-swyll",
+        "parentIds": [
+          "rhiannon-draenmelyn",
+          "iestyn-swyll"
+        ],
+        "partnershipId": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhydwen-swyll",
+        "childId": "rhydwen-swyll",
+        "parentIds": [
+          "rhiannon-draenmelyn",
+          "iestyn-swyll"
+        ],
+        "partnershipId": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aled-swyll",
+        "childId": "aled-swyll",
+        "parentIds": [
+          "owain-swyll",
+          "eluned-spouse-swyll"
+        ],
+        "partnershipId": "marriage-owain-eluned-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-enid-swyll",
+        "childId": "enid-swyll",
+        "parentIds": [
+          "owain-swyll",
+          "eluned-spouse-swyll"
+        ],
+        "partnershipId": "marriage-owain-eluned-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-carwyn-swyll",
+        "childId": "carwyn-swyll",
+        "parentIds": [
+          "rhodri-swyll",
+          "morwen-affair-swyll"
+        ],
+        "partnershipId": "affair-rhodri-morwen-swyll",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nicht eheliches Kind aus Rhodri Swylls Affäre mit Morwen.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lowri-swyll",
+        "childId": "lowri-swyll",
+        "parentIds": [
+          "rhodri-swyll",
+          "morwen-affair-swyll"
+        ],
+        "partnershipId": "affair-rhodri-morwen-swyll",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nicht eheliches Kind aus Rhodri Swylls Affäre mit Morwen.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-swyll",
+        "name": "Haus Swyll",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+        "status": "active"
+      },
+      {
+        "id": "house-draenmelyn",
+        "name": "Haus Draenmelyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active"
+      },
+      {
+        "id": "house-pendrwn",
+        "name": "Haus Pendrwn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-gross-tante-gwenifer-swyll",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-carys-swyll",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-llio-swyll",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-nerys-swyll",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-gross-tante-gwenifer-swyll",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwenifer-unknown-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-gross-tante-gwenifer-swyll",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Merediths Großtante Gwenifer wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-carys-swyll",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-carys-unknown-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-carys-swyll",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Merediths Tante Carys wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-llio-swyll",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-llio-unknown-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-llio-swyll",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Merediths Tante Llio wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-nerys-swyll",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-nerys-unknown-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-nerys-swyll",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Merediths Tante Nerys wurde an ein nicht überliefertes Haus verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pendrwn-eirwen-swyll",
+        "name": "Haus Pendrwn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-meilyr-pendrwn-eirwen-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pendrwn",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pendrwn",
+        "notes": "Eirwen Swyll wurde an Meilyr Pendrwn verheiratet; dieselbe Ehe wird in der Pendrwn-Gegenakte geführt.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-maerllys-bronwen-swyll",
+        "name": "Haus Maerllys",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-maerllys",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-maerllys",
+        "notes": "Bronwen Swyll wurde an Iorwerth Maerllys verheiratet; dieselbe Ehe wird in der Maerllys-Gegenakte geführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-swyll-to-1663",
+        "parentPartnershipId": "marriage-haus-swyll-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "emyr-swyll",
+          "gwenifer-swyll",
+          "madryn-swyll"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1663",
+        "label": "Die belegte Swyll-Linie setzt mit Emyrs Generation um 1663 wieder ein",
+        "notes": "Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Swyll-Wappen; alle drei Geschwister der ältesten konkreten Generation folgen geschlossen dahinter.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-swyll-founders",
+      "houseId": "house-swyll",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-swyll-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 24,
+      "descendantDepth": 24,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 8,
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "registryTombstones": {
+        "persons": [
+          "mair-ysgrif",
+          "unknown-spouse-eirwen-swyll",
+          "unknown-spouse-bronwen-swyll"
+        ],
+        "partnerships": [
+          "marriage-mair-ysgrif-gareth-swyll",
+          "marriage-eirwen-unknown-swyll",
+          "marriage-bronwen-unknown-swyll"
+        ],
+        "parentages": [
+          "parentage-iestyn-swyll"
+        ],
+        "houses": [
+          "house-ysgrif",
+          "house-unbekannt-eirwen-swyll",
+          "house-unbekannt-bronwen-swyll"
+        ],
+        "cadetBranches": [
+          "married-away-eirwen-swyll",
+          "married-away-bronwen-swyll"
+        ]
+      },
+      "sourceNote": "Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt fünf wegverheiratete Schwestern: Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys werden in den jeweiligen Gegenakten gespiegelt; nur Carys, Llio und Nerys führen noch zu unbekannten Häusern. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert."
+    }
+  }
+}
