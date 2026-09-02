@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-draenmelyn",
+  "revision": 1,
+  "updatedAt": "2026-09-02T21:26:08.587Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-draenmelyn",
+      "title": "Haus Draenmelyn",
+      "motto": "",
+      "description": "Ein kleines bürgerliches Geschlecht aus Gwynthor, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt des Hauses Draig stehen.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-draenmelyn-gruender",
+        "worldPersonId": "person--haus-draenmelyn--haus-draenmelyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-draenmelyn-gruenderin",
+        "worldPersonId": "person--haus-draenmelyn--haus-draenmelyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "ifor-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn",
+        "name": "Ifor Draenmelyn",
+        "title": "Altgedienter Hausdiener der Draigs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1665",
+        "death": "",
+        "portrait": "https://i.imgur.com/6YW06jU.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nest-spouse-draenmelyn",
+        "worldPersonId": "person--family-tree--nest-spouse-draenmelyn",
+        "name": "Nest",
+        "title": "Altgediente Bedienstete im Draig-Haushalt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "afan-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn",
+        "name": "Afan Draenmelyn",
+        "title": "Hausdiener der Draigs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "https://i.imgur.com/yu4DXTn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elen-spouse-draenmelyn",
+        "worldPersonId": "person--family-tree--elen-spouse-draenmelyn",
+        "name": "Elen",
+        "title": "Bedienstete im Draig-Haushalt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "meurig-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--meurig-draenmelyn",
+        "name": "Meurig Draenmelyn",
+        "title": "Hausdiener der Draigs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "catrin-spouse-draenmelyn",
+        "worldPersonId": "person--family-tree--catrin-spouse-draenmelyn",
+        "name": "Catrin",
+        "title": "Bedienstete im Draig-Haushalt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "caradog-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--caradog-draenmelyn",
+        "name": "Caradog Draenmelyn",
+        "title": "Söldner",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Onkel von Taliesin und Myfanwy; verließ den Draig-Haushalt, schlägt sich als Söldner durch und ist mit Gwenith Pendrwn verheiratet.",
+        "extensions": {}
+      },
+      {
+        "id": "gwenith-pendrwn",
+        "worldPersonId": "person--haus-pendrwn--gwenith-pendrwn",
+        "name": "Gwenith Pendrwn",
+        "title": "Tante Emyr Pendrwns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pendrwn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Meilyr Pendrwns; heiratete Caradog Draenmelyn.",
+        "extensions": {}
+      },
+      {
+        "id": "rhiannon-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "name": "Rhiannon Draenmelyn",
+        "title": "Bedienstete des Hauses Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "https://i.imgur.com/cyJqlDG.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.",
+        "extensions": {}
+      },
+      {
+        "id": "iestyn-swyll",
+        "worldPersonId": "person--haus-swyll--iestyn-swyll",
+        "name": "Iestyn Swyll",
+        "title": "Angehöriger des Hauses Swyll",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ehemann Rhiannon Draenmelyns; die Ehe verbindet die Bürgerhäuser Draenmelyn und Swyll.",
+        "extensions": {}
+      },
+      {
+        "id": "sioned-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn",
+        "name": "Sioned Draenmelyn",
+        "title": "Bedienstete des Hauses Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Taliesin Draenmelyns; unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "taliesin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn",
+        "name": "Taliesin Draenmelyn",
+        "title": "Bediensteter des Hauses Draig",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "18 Jahre"
+        ],
+        "notes": "Achtzehnjähriger Vetter Myfanwy Draenmelyns.",
+        "extensions": {}
+      },
+      {
+        "id": "gethin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn",
+        "name": "Gethin Draenmelyn",
+        "title": "Junger Bediensteter des Hauses Draig",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "https://i.imgur.com/IEHF8TV.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owain-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--owain-draenmelyn",
+        "name": "Owain Draenmelyn",
+        "title": "Bediensteter des Hauses Draig",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "myfanwy-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn",
+        "name": "Myfanwy Draenmelyn",
+        "title": "Bedienstete des Hauses Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "17 Jahre"
+        ],
+        "notes": "Siebzehnjährige Cousine Taliesin Draenmelyns.",
+        "extensions": {}
+      },
+      {
+        "id": "eleri-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--eleri-draenmelyn",
+        "name": "Eleri Draenmelyn",
+        "title": "Junge Bedienstete des Hauses Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draenmelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-draenmelyn-founders",
+        "participantIds": [
+          "haus-draenmelyn-gruender",
+          "haus-draenmelyn-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ifor-nest-draenmelyn",
+        "participantIds": [
+          "ifor-draenmelyn",
+          "nest-spouse-draenmelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-afan-elen-draenmelyn",
+        "participantIds": [
+          "afan-draenmelyn",
+          "elen-spouse-draenmelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-meurig-catrin-draenmelyn",
+        "participantIds": [
+          "meurig-draenmelyn",
+          "catrin-spouse-draenmelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "participantIds": [
+          "rhiannon-draenmelyn",
+          "iestyn-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwenith-pendrwn-caradog-draenmelyn",
+        "participantIds": [
+          "gwenith-pendrwn",
+          "caradog-draenmelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-ifor-draenmelyn",
+        "childId": "ifor-draenmelyn",
+        "parentIds": [
+          "haus-draenmelyn-gruender",
+          "haus-draenmelyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-draenmelyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Ifors Großelterngeneration.",
+        "extensions": {
+          "timeJumpId": "gap-draenmelyn-to-1665"
+        }
+      },
+      {
+        "id": "parentage-afan-draenmelyn",
+        "childId": "afan-draenmelyn",
+        "parentIds": [
+          "ifor-draenmelyn",
+          "nest-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-ifor-nest-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-meurig-draenmelyn",
+        "childId": "meurig-draenmelyn",
+        "parentIds": [
+          "ifor-draenmelyn",
+          "nest-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-ifor-nest-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-caradog-draenmelyn",
+        "childId": "caradog-draenmelyn",
+        "parentIds": [
+          "ifor-draenmelyn",
+          "nest-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-ifor-nest-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhiannon-draenmelyn",
+        "childId": "rhiannon-draenmelyn",
+        "parentIds": [
+          "ifor-draenmelyn",
+          "nest-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-ifor-nest-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sioned-draenmelyn",
+        "childId": "sioned-draenmelyn",
+        "parentIds": [
+          "afan-draenmelyn",
+          "elen-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-afan-elen-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-taliesin-draenmelyn",
+        "childId": "taliesin-draenmelyn",
+        "parentIds": [
+          "afan-draenmelyn",
+          "elen-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-afan-elen-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gethin-draenmelyn",
+        "childId": "gethin-draenmelyn",
+        "parentIds": [
+          "afan-draenmelyn",
+          "elen-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-afan-elen-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-owain-draenmelyn",
+        "childId": "owain-draenmelyn",
+        "parentIds": [
+          "meurig-draenmelyn",
+          "catrin-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-meurig-catrin-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-myfanwy-draenmelyn",
+        "childId": "myfanwy-draenmelyn",
+        "parentIds": [
+          "meurig-draenmelyn",
+          "catrin-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-meurig-catrin-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eleri-draenmelyn",
+        "childId": "eleri-draenmelyn",
+        "parentIds": [
+          "meurig-draenmelyn",
+          "catrin-spouse-draenmelyn"
+        ],
+        "partnershipId": "marriage-meurig-catrin-draenmelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-draenmelyn",
+        "name": "Haus Draenmelyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-swyll",
+        "name": "Haus Swyll",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+        "status": "active"
+      },
+      {
+        "id": "house-pendrwn",
+        "name": "Haus Pendrwn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-swyll-rhiannon-draenmelyn",
+        "name": "Haus Swyll",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rhiannon-draenmelyn-iestyn-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-swyll",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-swyll",
+        "notes": "Rhiannon Draenmelyn wurde an Iestyn Swyll verheiratet und führt ihre gemeinsame Linie im Haus Swyll fort.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-draenmelyn-to-1665",
+        "parentPartnershipId": "marriage-haus-draenmelyn-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "ifor-draenmelyn"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1665",
+        "label": "Die belegte Linie setzt mit der Großelterngeneration um 1665 ein",
+        "notes": "Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Draenmelyn-Wappen; erst danach beginnt Ifors kompakte Familienlinie.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-draenmelyn-founders",
+      "houseId": "house-draenmelyn",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-draenmelyn-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 6,
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "registryTombstones": {
+        "persons": [
+          "floyd-ysgrif"
+        ],
+        "partnerships": [
+          "marriage-floyd-ysgrif-sioned-draenmelyn"
+        ],
+        "houses": [
+          "house-ysgrif"
+        ],
+        "cadetBranches": [
+          "married-away-ysgrif-sioned-draenmelyn"
+        ]
+      },
+      "sourceNote": "Taliesin (18) und Myfanwy (17) wurden nach der ergänzenden Vorgabe als Vetter und Cousine in zwei Geschwisterzweigen derselben Großeltern angelegt. Beide besitzen jeweils genau zwei Geschwister. Die einzige zusätzliche Onkellinie ist Caradog, der als Söldner lebt und mit Gwenith Pendrwn verheiratet ist; dieselbe Ehe wird in der Pendrwn-Gegenakte geführt. Rhiannon ist direkt an Iestyn Swyll wegverheiratet. Sioned bleibt unverheiratet und ohne Verlobung. Damit endet die konkret ausgearbeitete Abstammung oberhalb der Eltern bei genau einer Großelterngeneration. Das gesamte Bürgerhaus steht traditionell als Diener- und Bedienstetengeschlecht im Haushalt Haus Draigs. Die drei vorgegebenen Portraitquellen wurden lokal gesichert."
+    }
+  }
+}
