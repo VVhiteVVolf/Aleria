@@ -30,4 +30,6 @@ test("Großstadtseite und Vorlage binden den modularen Pressewechsler ein", asyn
   assert.match(styles, /\.orte-press-cover/);
   assert.match(styles, /width:\s*min\(100%,\s*420px\)/);
   assert.match(styles, /aspect-ratio:\s*8\s*\/\s*5/);
+  assert.match(styles, /inset:\s*14px\s+18px/);
+  assert.match(styles, /object-fit:\s*contain/);
 });
