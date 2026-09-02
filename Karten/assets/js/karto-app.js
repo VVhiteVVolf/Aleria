@@ -1048,6 +1048,10 @@ function renderEditorPreview(pinOverride){
   if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
   const rgb=hexToRgb(category.color||'#8a6510');
   const rows=(pin.table||[]).filter(row=>row.k||row.v);
+  const previewImage=window.KartoPinPlaceholders?.resolve(pin) || {
+    src:pin.img||'',
+    link:pin.imgLink||'',
+  };
   content.innerHTML=`
     <div class="editor-preview-card">
       <div class="sv-header">
@@ -1077,13 +1081,13 @@ function renderEditorPreview(pinOverride){
         ${pin.banner ? `<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/>`, pin.bannerLink)}</div>` : ''}
       </div>
 
-      ${(pin.img||rows.length) ? `
+      ${(previewImage.src||rows.length) ? `
       <div class="sv-body">
         <div class="sv-img-wrap">
           <div class="sv-img">
-            ${pin.img
-              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-                 <div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink)
+            ${previewImage.src
+              ? mediaLink(`<img src="${esc(previewImage.src)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+                 <div class="sv-img-ph" style="display:none">Bild</div>`, previewImage.link)
               : `<div class="sv-img-ph">Bild</div>`}
           </div>
         </div>

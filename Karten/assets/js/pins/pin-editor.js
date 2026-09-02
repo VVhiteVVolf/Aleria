@@ -77,10 +77,10 @@
     return url ? `<img src="${runtime.esc(url)}" alt=""/>` : `<span aria-hidden="true">${fallback}</span>`;
   }
 
-  function mediaField({ role, label, url, link, fallback, hint }) {
+  function mediaField({ role, label, url, link, previewUrl = url, fallback, hint }) {
     return `
       <div class="pin-editor-media-field">
-        <div class="pin-editor-media-preview">${imagePreview(url, fallback)}</div>
+        <div class="pin-editor-media-preview">${imagePreview(previewUrl, fallback)}</div>
         <div class="pin-editor-media-content">
           <label class="e-lbl" for="sb-${role}">${label}</label>
           ${hint ? `<div class="e-hint">${hint}</div>` : ''}
@@ -101,6 +101,7 @@
     const body = document.getElementById('sb-body');
     const footer = document.getElementById('sb-footer');
     const esc = runtime.esc;
+    const previewImage = window.KartoPinPlaceholders?.resolve(pin);
     const rows = (pin.table || []).map((row, index) => `
       <div class="tbl-row">
         <input class="tk" value="${esc(row.k)}" placeholder="Bezeichnung" data-c="k"/>
@@ -180,7 +181,7 @@
           <p class="pin-editor-help">Die Mediathek greift auf die vorhandenen Projektordner für Ortszeichen, Wappen und Banner zu.</p>
           ${mediaField({ role: 'crest', label: 'Wappen / Ortsbanner', url: pin.crest, link: pin.crestLink, fallback: '🏰', hint: 'Kleines Wappen im Kopf des Eintrags.' })}
           ${mediaField({ role: 'banner', label: 'Regionsbanner', url: pin.banner, link: pin.bannerLink, fallback: '⚑', hint: 'Optionales Banner der zugehörigen Herrschaft oder Region.' })}
-          ${mediaField({ role: 'img', label: 'Vorschaubild', url: pin.img, link: pin.imgLink, fallback: '▧', hint: 'Großes Motiv innerhalb des Eintrags.' })}
+          ${mediaField({ role: 'img', label: 'Vorschaubild', url: pin.img, link: pin.imgLink, previewUrl: previewImage?.src || pin.img, fallback: '▧', hint: 'Ohne eigenes Motiv erscheint automatisch ein fester, zufällig verteilter Ortsplatzhalter.' })}
         `)}
 
         ${panel('infotabelle', `
