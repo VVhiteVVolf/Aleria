@@ -12,6 +12,12 @@
   function setStatus(state) {
     const dot = document.getElementById('sdot');
     if (dot) dot.className = state;
+    const label = document.getElementById('sync-label');
+    if (label) {
+      if (state === 'sv') label.textContent = 'wird lokal gesichert';
+      else if (state === 'er') label.textContent = 'Speicherfehler';
+      else label.textContent = readDraft() ? 'lokaler Entwurf' : 'veröffentlicht';
+    }
   }
 
   function readDraft() {
@@ -27,8 +33,18 @@
   function writeDraft(state) {
     try {
       localStorage.setItem(draftKey, JSON.stringify({ basedOnRevision: publishedRevision, savedAt: new Date().toISOString(), state }));
+      window.dispatchEvent(new CustomEvent('aleria:tafel:draft-status', { detail: { hasDraft: true } }));
     } catch (error) {
       console.warn('[tafel-storage] Lokaler Entwurf konnte nicht gespeichert werden:', error);
+    }
+  }
+
+  function clearDraft() {
+    try {
+      localStorage.removeItem(draftKey);
+      window.dispatchEvent(new CustomEvent('aleria:tafel:draft-status', { detail: { hasDraft: false } }));
+    } catch {
+      /* Der veröffentlichte Stand bleibt davon unberührt. */
     }
   }
 
@@ -88,11 +104,16 @@
         publishedRevision = Math.max(0, Number(published?.revision || 0));
         const draft = readDraft();
         if (draft?.state) {
+          if (published && Number(draft.basedOnRevision || 0) < publishedRevision) {
+            window.setTimeout(() => window.TafelRuntime?.toast?.('Auf GitHub liegt eine neuere Fassung als dein lokaler Entwurf.'), 0);
+          }
           callback(draft.state);
+          setStatus('');
           return;
         }
         if (published?.state) {
           callback(published.state);
+          setStatus('');
           return;
         }
         const legacyState = await fetchLegacyFirebase();
@@ -108,6 +129,7 @@
   window.TafelPublish = Object.freeze({
     isConfigured: () => Boolean(dataPath),
     hasSession: () => Boolean(publishSessionKey),
+    hasLocalDraft: () => Boolean(readDraft()),
     publishedRevision: () => publishedRevision,
     async authenticate(key) {
       const candidate = String(key || '').trim();
@@ -117,6 +139,9 @@
       if (!response.ok) throw new Error(payload.message || 'Anmeldung fehlgeschlagen.');
       publishSessionKey = candidate;
       return payload;
+    },
+    clearSession() {
+      publishSessionKey = '';
     },
     async publish(state) {
       if (!publishSessionKey) throw new Error('Bitte zuerst den Veröffentlichungsschlüssel eingeben.');
@@ -133,7 +158,8 @@
         throw error;
       }
       publishedRevision = payload.revision;
-      localStorage.removeItem(draftKey);
+      clearDraft();
+      setStatus('');
       return payload;
     },
   });

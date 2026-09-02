@@ -6,15 +6,17 @@
   <title>Großstadt-Vorlage - Aleria</title>
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css?v=orte-heraldry-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt-template-map.css?v=orte-info-width-20260701a">
-  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-region-map-20260901b">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-map-embed-20260902a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-houses.css?v=gwynthor-houses-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=gwynthor-merchants-20260901c">
-  <script src="/js/world-content/celtigerns-wacht-places.js?v=gwynthor-maps-20260901e"></script>
+  <script src="/js/world-content/celtigerns-wacht-places.js?v=gwynthor-board-20260902a"></script>
   <script src="/Orte/orte.registry.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
   <script src="/Orte/assets/js/orte-place-houses.js?v=gwynthor-houses-20260901a" defer></script>
-  <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-region-map-20260901a" defer></script>
+  <script src="/Orte/assets/js/orte-map-embed.js?v=gwynthor-board-20260902a" defer></script>
+  <script src="/Orte/assets/js/orte-notice-board.js?v=gwynthor-board-20260902b" defer></script>
+  <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-map-embed-20260902a" defer></script>
   <script src="/Orte/assets/js/orte-place-merchants.js?v=gwynthor-merchants-20260901d" defer></script>
   <script src="/Orte/assets/js/orte-grossstadt.js?v=orte-stadtbild-20260901a" defer></script>
 </head>
@@ -233,10 +235,10 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="pt-s-0038 orte-full-width-section" colspan="8" data-orte-feature="notice-board"><span class="orte-image-slot" data-orte-image-key="anzeige-png" data-orte-image-label="Anzeigetafel" data-orte-image-format="banner" data-orte-image-max-height="260" aria-label="Anzeigetafel"></span></td>
+			<td class="pt-s-0038 orte-full-width-section orte-notice-board-cell" colspan="8" data-orte-feature="notice-board"><div data-orte-notice-board-map aria-label="Anzeigetafel"></div></td>
 		</tr>
 		<tr>
-			<td class="pt-s-0023 orte-full-width-section" colspan="8" data-orte-feature="notice-board">&nbsp;</td>
+			<td class="pt-s-0023 orte-full-width-section orte-notice-board-spacer" colspan="8" data-orte-feature="notice-board">&nbsp;</td>
 		</tr>
 		<tr>
 			<td class="pt-s-0039" colspan="8">

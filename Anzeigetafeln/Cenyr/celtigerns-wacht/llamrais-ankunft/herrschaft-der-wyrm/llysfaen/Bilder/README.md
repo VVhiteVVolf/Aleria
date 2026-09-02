@@ -2,7 +2,7 @@
 
 Dieser Ordner ist fuer spaetere lokale Tafelbilder reserviert.
 
-Die aktuelle Anzeigetafel speichert bearbeitbare Inhalte unter der Firebase-ID:
+Die aktuelle Anzeigetafel veröffentlicht ihre Inhalte unter der Registry-ID:
 
 ```text
 cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel

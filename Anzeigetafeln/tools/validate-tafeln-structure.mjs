@@ -9,7 +9,7 @@ const REGISTRY_FILE = path.join(ROOT, "tafeln.registry.js");
 const SHELL_FILE = path.join(ROOT, "tafel.html");
 const VALID_STATUSES = new Set(["active", "planned", "archived"]);
 const VALID_TYPES = new Set(["kingdom", "county", "barony", "lordship", "settlement", "city", "local"]);
-const REQUIRED_IMAGE_KEYS = ["board", "marker"];
+const REQUIRED_IMAGE_KEYS = ["board"];
 
 const errors = [];
 const warnings = [];
@@ -127,7 +127,8 @@ function validateActiveTafel(tafel) {
   REQUIRED_IMAGE_KEYS.forEach((key) => {
     const imagePath = tafel.images[key];
     if (!imagePath) {
-      reportError(`${label}: missing image "${key}"`);
+      if (tafel.editableDraft) reportWarning(`${label}: draft still uses the generated board placeholder`);
+      else reportError(`${label}: missing image "${key}"`);
       return;
     }
     if (isExternalUrl(imagePath)) return;

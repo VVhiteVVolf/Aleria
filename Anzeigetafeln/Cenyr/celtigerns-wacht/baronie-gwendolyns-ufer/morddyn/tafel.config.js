@@ -1,10 +1,9 @@
 window.TAFEL_CONFIG = {
   boardId: "cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",
-  title: "📋 Anzeigetafel — Morddyn",
+  title: "Anzeigetafel — Morddyn",
   documentTitle: "Anzeigetafel Morddyn - Aleria",
   images: {
     board: "Bilder/MorddynTafel.png",
-    marker: "Bilder/MorddynTafelMarker.png",
   },
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",

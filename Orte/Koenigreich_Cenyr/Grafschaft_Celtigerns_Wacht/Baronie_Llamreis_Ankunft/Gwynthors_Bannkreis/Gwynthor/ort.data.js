@@ -4,6 +4,8 @@
   const countyHref = encodeURI("/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html");
   const mapId = "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis";
   const mapHref = `/Karten/karte.html?map=${encodeURIComponent(mapId)}`;
+  const noticeBoardId = "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel";
+  const noticeBoardHref = `/Anzeigetafeln/tafel.html?tafel=${encodeURIComponent(noticeBoardId)}&ui=single-board-20260902b`;
   const mapAssetRoot = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder";
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const commonerRoot = `${houseRoot}/Bürgerliche/Gwynthor`;
@@ -126,8 +128,15 @@
     }),
 
     features: Object.freeze({
-      noticeBoard: false,
+      noticeBoard: true,
       districts: true
+    }),
+
+    noticeBoardMap: Object.freeze({
+      mapId: noticeBoardId,
+      title: "Gwynthors Anzeigetafel",
+      embedHref: noticeBoardHref,
+      fullHref: noticeBoardHref
     }),
 
     regionMap: Object.freeze({

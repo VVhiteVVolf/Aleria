@@ -27,7 +27,7 @@
   function renderAvatar(comment){
     const avatar = normalizeUrl(comment.avatar);
     if(avatar){
-      return `<img src="${esc(avatar)}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
+      return `<img src="${esc(avatar)}" alt="" loading="lazy" decoding="async" data-image-fallback="hide-self">`;
     }
     const name = String(comment.name || '').trim();
     return `<span>${esc(name ? name.slice(0, 1).toUpperCase() : '?')}</span>`;

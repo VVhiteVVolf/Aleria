@@ -31,7 +31,6 @@
       config: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/tafel.config.js",
       images: {
         board: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafel.png",
-        marker: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafelMarker.png",
       },
       dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
       firebase: {
@@ -71,6 +70,29 @@
       legacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Llysfaens-Anzeigetafel.html",
       editableDraft: true,
       notes: "Konkrete Anzeigetafel fuer Llysfaen. Tafelbilder koennen im Editor als Bildlinks hinterlegt werden.",
+    },
+    {
+      id: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",
+      title: "Gwynthors Anzeigetafel",
+      status: TAFEL_STATUS.ACTIVE,
+      type: TAFEL_TYPES.CITY,
+      hierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "llamrais-ankunft", title: "Llamreis Ankunft" },
+        { level: "city", slug: "gwynthor", title: "Gwynthor" },
+      ],
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor",
+      config: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/tafel.config.js",
+      images: {
+        board: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/Bilder/GwynthorAnzeigetafel.webp",
+      },
+      dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/data.json",
+      firebase: {
+        collection: "anzeigetafeln",
+        docId: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",
+      },
+      link: "tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",
     },
   ].map(Object.freeze);
 

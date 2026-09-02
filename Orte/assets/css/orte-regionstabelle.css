@@ -89,13 +89,13 @@
   line-height: 1.2;
 }
 
-.orte-region-map-embed {
+.orte-map-embed {
   display: grid;
   gap: 0.55rem;
   width: 100%;
 }
 
-.orte-region-map-iframe {
+.orte-map-iframe {
   display: block;
   width: 100%;
   height: clamp(720px, 74vw, 960px);
@@ -104,13 +104,13 @@
   background: #cbb989;
 }
 
-.orte-region-map-actions {
+.orte-map-actions {
   display: flex;
   justify-content: flex-end;
   padding: 0 0.2rem 0.15rem;
 }
 
-.orte-region-map-actions a {
+.orte-map-actions a {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
@@ -137,8 +137,23 @@
 }
 
 @media (max-width: 760px) {
-  .orte-region-map-iframe {
+  .orte-map-iframe {
     height: 70vh;
     min-height: 560px;
   }
+}
+
+.grossstadt-template .orte-notice-board-cell {
+  padding: 10px !important;
+}
+
+.grossstadt-template [data-orte-notice-board-map] {
+  width: 100%;
+}
+
+.grossstadt-template .orte-notice-board-spacer {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  background: linear-gradient(180deg, #e5c987, #efdca9) !important;
 }

@@ -62,8 +62,13 @@ function validateDocumentState(state) {
 
 function validateBoardState(state) {
   validateDocumentState(state);
-  for (const field of ['pins', 'zettel', 'cats']) {
+  for (const field of ['zettel']) {
     if (!Array.isArray(state[field])) throw new Error(`Der Tafelzustand benötigt ein ${field}-Array.`);
+  }
+  for (const notice of state.zettel) {
+    if (typeof notice?.id !== 'string' || typeof notice?.x !== 'number' || typeof notice?.y !== 'number') {
+      throw new Error(`Aushang "${notice?.title || notice?.id || '?'}" besitzt keine gültige id/x/y-Struktur.`);
+    }
   }
   return state;
 }

@@ -1,0 +1,322 @@
+:root {
+  --board-wood-dark: #2a1408;
+  --board-wood: #5a3218;
+  --board-brass: #b88937;
+  --paper-light: #f6e8bd;
+  --paper-mid: #dfc88e;
+  --paper-dark: #b58c4b;
+  --ink-dark: #241407;
+  --ink-red: #6f1f16;
+}
+
+.tafel-app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tafel-topbar {
+  flex-wrap: nowrap !important;
+  gap: .42rem !important;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.tafel-place-mark {
+  padding: 0;
+}
+
+.tafel-title-input:not([hidden]) {
+  display: block !important;
+}
+
+.tafel-mode-plaque {
+  flex: 0 0 auto;
+  padding: .34rem .78rem;
+  border: 1px solid rgba(200, 160, 64, .42);
+  background: linear-gradient(180deg, rgba(200, 160, 64, .18), rgba(83, 42, 11, .32));
+  color: var(--ink);
+  font: 600 .68rem/1 'Cinzel', serif;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.tafel-edit-tools:not([hidden]) {
+  display: contents;
+}
+
+.tafel-publish-button {
+  color: #f5da83;
+  border-color: rgba(224, 184, 80, .7);
+}
+
+.tafel-sync {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  flex: 0 0 auto;
+  color: var(--ink3);
+  font: .63rem/1 'Cinzel', serif;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.notice-board-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  user-select: none;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(178, 116, 54, .18), transparent 48%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, .018) 0 10px, rgba(0, 0, 0, .025) 10px 20px),
+    #170b04;
+  cursor: grab;
+  touch-action: none;
+}
+
+.notice-board-viewport.is-panning { cursor: grabbing; }
+.notice-board-viewport.is-placing { cursor: crosshair; }
+
+.notice-board-stage {
+  position: absolute;
+  inset: 0 auto auto 0;
+  transform-origin: 0 0;
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .72), 0 0 0 5px rgba(82, 43, 15, .92);
+}
+
+.notice-board-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.notice-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.notice-placement-cursor {
+  display: block;
+  position: fixed;
+  z-index: 330;
+  transform: translate(-50%, -95%);
+  pointer-events: none;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .7));
+  font-size: 28px;
+}
+
+.notice-placement-cursor[hidden] { display: none; }
+
+.tafel-notice-marker {
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  background: transparent;
+  outline: none;
+}
+
+.tafel-notice-marker::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 27px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(12, 5, 1, .7);
+  filter: blur(5px);
+  transform: translate(-46%, 8px);
+  transition: opacity .16s ease, transform .16s ease;
+  pointer-events: none;
+}
+
+.tafel-notice-nail {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 5px 3px rgba(10, 4, 0, .58));
+  transition: transform .16s ease, filter .16s ease;
+}
+
+.tafel-notice-marker:hover,
+.tafel-notice-marker.is-highlighted,
+.tafel-notice-marker:focus-visible {
+  z-index: 20;
+}
+
+.tafel-notice-marker:hover .tafel-notice-nail,
+.tafel-notice-marker.is-highlighted .tafel-notice-nail,
+.tafel-notice-marker:focus-visible .tafel-notice-nail {
+  transform: translateY(-2px) scale(1.16);
+  filter: drop-shadow(0 8px 5px rgba(10, 4, 0, .72));
+}
+
+.tafel-notice-marker:hover::before,
+.tafel-notice-marker.is-highlighted::before,
+.tafel-notice-marker:focus-visible::before {
+  opacity: .9;
+  transform: translate(-46%, 11px) scale(1.12);
+}
+
+.tafel-notice-marker:focus-visible {
+  box-shadow: 0 0 0 2px #f3d982, 0 0 0 5px rgba(66, 31, 8, .8);
+}
+
+.tafel-notice-marker.secret .tafel-notice-nail {
+  filter: grayscale(.55) drop-shadow(0 5px 3px rgba(10, 4, 0, .58));
+}
+
+.notice-tooltip {
+  position: fixed;
+  z-index: 800;
+  width: 250px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px) scale(.97);
+  overflow: hidden;
+  color: var(--ink-dark);
+  background: #f4e5b8;
+  border: 2px solid #9d6f2e;
+  box-shadow: 0 9px 25px rgba(0, 0, 0, .42);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.notice-tooltip.show { opacity: 1; transform: none; }
+.notice-tooltip-head { padding: .65rem .8rem .55rem; border-bottom: 1px solid #c5a15f; }
+.notice-tooltip-head span { display: block; color: #745424; font: .58rem/1 'Cinzel', serif; text-transform: uppercase; }
+.notice-tooltip-head strong { display: block; margin-top: .28rem; font: 700 .8rem/1.25 'Cinzel Decorative', serif; }
+.notice-tooltip p { padding: .55rem .8rem .7rem; font: italic .9rem/1.45 'EB Garamond', serif; }
+
+.tafel-dialog { width: min(620px, calc(100vw - 32px)); background: #f2e4bc; color: var(--ink-dark); }
+.tafel-dialog--small { width: min(390px, calc(100vw - 32px)); }
+.tafel-dialog--wide { width: min(780px, calc(100vw - 32px)); }
+.tafel-dialog .lmh { background: linear-gradient(180deg, #6f461d, #412307); color: #f5df9b; }
+.tafel-dialog .lmb-body { background: #f2e4bc; }
+.tafel-dialog .lmb-footer { background: #e3cd93; border-top-color: #b88d45; }
+.tafel-dialog-copy { color: #65451d; font: italic 1rem/1.5 'EB Garamond', serif; }
+.tafel-form-error:not([hidden]) { display: block !important; color: #8b271d; margin-top: .35rem; font: 700 .72rem/1.4 'Cinzel', serif; }
+.tafel-icon-preview { width: 92px; height: 92px; margin: 0 auto; display: grid; place-items: center; overflow: hidden; background: #dfc88e; border: 2px solid #9d6f2e; font-size: 2rem; }
+.tafel-icon-preview img { width: 100%; height: 100%; object-fit: cover; }
+.tafel-board-image-preview { height: 210px; display: grid; place-items: center; overflow: hidden; color: #80612e; border: 1px dashed #aa7d36; background: #dfca95; }
+.tafel-board-image-preview img { width: 100%; height: 100%; object-fit: contain; }
+
+.notice-type-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.notice-type-grid .tpl-label { color: #2d1908; }
+.notice-type-grid .tpl-desc { color: #725326; }
+
+.tafel-data-manager { display: grid !important; grid-template-columns: 1fr 1fr; gap: .8rem !important; }
+.tafel-data-manager section { padding: 1rem; border: 1px solid #b58c4b; background: rgba(255, 250, 229, .5); }
+.tafel-data-manager h3 { margin-bottom: .35rem; font: 700 .8rem/1.3 'Cinzel', serif; }
+.tafel-data-manager p { margin-bottom: .7rem; color: #65451d; font: .95rem/1.45 'EB Garamond', serif; }
+.tafel-file-drop { display: block; padding: .7rem; cursor: pointer; text-align: center; border: 1px dashed #8c622b; background: #e7d39e; font: .7rem/1.3 'Cinzel', serif; }
+#board-data-file { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+.tafel-backup-entry { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid #c2a261; }
+.tafel-backup-entry div { display: flex; flex-direction: column; }
+.tafel-backup-entry strong { font: 700 .75rem/1.3 'Cinzel', serif; }
+.tafel-backup-entry span { color: #6c4a20; font-size: .9rem; }
+
+.scroll-close {
+  position: absolute;
+  top: 26px;
+  right: 12px;
+  z-index: 12;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #5a320f;
+  background: #eedba8;
+  border: 1px solid #a87931;
+}
+
+.medieval-notice { min-height: 430px; color: var(--ink-dark); background: #f4e4b7; }
+.medieval-notice--quest { position: relative; overflow: hidden; border: 3px double #6d491c; box-shadow: inset 0 0 55px rgba(99, 59, 16, .13); }
+.medieval-notice--quest::before { content: ''; position: absolute; inset: 11px; pointer-events: none; border: 1px solid rgba(111, 74, 26, .42); }
+.medieval-notice-corner { position: absolute; z-index: 3; top: 17px; width: 58px; height: 58px; border-top: 3px solid #8c6329; }
+.medieval-notice-corner--left { left: 17px; border-left: 3px solid #8c6329; }
+.medieval-notice-corner--right { right: 17px; border-right: 3px solid #8c6329; }
+.quest-header { position: relative; z-index: 2; padding: 1.35rem 4.5rem 1rem; text-align: center; background: linear-gradient(180deg, rgba(153, 101, 34, .18), transparent); }
+.quest-kicker { color: #76511f; font: 700 .61rem/1 'Cinzel', serif; letter-spacing: .22em; text-transform: uppercase; }
+.quest-header h2 { margin: .42rem 0 .18rem; color: #2c1909; font: 700 clamp(1.35rem, 3vw, 2.2rem)/1.15 'Cinzel Decorative', serif; }
+.quest-header p { color: #6c4a20; font: italic 1.02rem/1.35 'EB Garamond', serif; }
+.quest-scene { position: relative; z-index: 2; height: 190px; margin: 0 1.4rem; overflow: hidden; border: 1px solid #8c6329; }
+.quest-scene::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 28px rgba(43, 22, 4, .45); }
+.quest-scene img { width: 100%; height: 100%; display: block; filter: sepia(.2) saturate(.85); }
+.quest-layout { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(190px, 29%) 1fr; min-height: 270px; margin: 1rem 1.4rem; border-top: 1px solid #a98543; border-bottom: 1px solid #a98543; }
+.quest-docket { padding: 1rem .8rem; background: rgba(173, 126, 52, .13); border-right: 1px solid #a98543; }
+.quest-patron { width: 104px; height: 104px; margin: 0 auto .45rem; overflow: hidden; border: 3px double #805721; border-radius: 50%; background: #dfc98f; box-shadow: 0 3px 8px rgba(61, 32, 5, .2); }
+.quest-patron img { width: 100%; height: 100%; display: block; }
+.quest-patron--empty { display: grid; place-items: center; color: #82602e; font-size: 2rem; }
+.quest-patron-name { margin-bottom: .8rem; text-align: center; }
+.quest-patron-name span { display: block; color: #80602f; font: .54rem/1.2 'Cinzel', serif; letter-spacing: .1em; text-transform: uppercase; }
+.quest-patron-name strong { display: block; margin-top: .18rem; font: 700 .95rem/1.25 'EB Garamond', serif; }
+.quest-copy { position: relative; padding: 1.2rem 1.45rem; font: 1.08rem/1.75 'EB Garamond', serif; }
+.quest-copy p { margin-bottom: .65rem; }
+.quest-copy-ornament { color: #936722; text-align: center; font-size: 1.5rem; }
+.quest-footer { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 64px 1fr; align-items: center; margin: 0 1.4rem 1.25rem; text-align: center; }
+.quest-footer div:not(.quest-seal) { padding: .55rem; border-top: 1px solid #9d7434; border-bottom: 1px solid #9d7434; }
+.quest-footer span { display: block; color: #80602f; font: .54rem/1.2 'Cinzel', serif; letter-spacing: .12em; text-transform: uppercase; }
+.quest-footer strong { font: 700 1rem/1.3 'Cinzel', serif; }
+.quest-seal { width: 56px; height: 56px; margin: 0 auto; display: grid; place-items: center; color: #e2bd73; background: radial-gradient(circle at 35% 30%, #9b301f, #69180f 72%); border-radius: 48% 52% 47% 53%; box-shadow: 0 3px 8px rgba(55, 17, 6, .4); }
+
+.medieval-info-table { width: 100%; border-collapse: collapse; font-size: .83rem; }
+.medieval-info-table tr { border-top: 1px solid rgba(145, 103, 43, .42); }
+.medieval-info-table th { width: 42%; padding: .35rem .4rem; color: #69471d; text-align: left; vertical-align: top; font: 700 .55rem/1.35 'Cinzel', serif; text-transform: uppercase; }
+.medieval-info-table td { padding: .35rem .4rem; font: .9rem/1.3 'EB Garamond', serif; }
+.medieval-empty { color: #775728; font-style: italic; }
+
+.medieval-notice--wanted { overflow: hidden; border: 4px double #6f281d; background: #ead5a2; box-shadow: inset 0 0 70px rgba(93, 36, 18, .16); }
+.wanted-header { padding: 1.15rem 1.4rem 1rem; text-align: center; border-bottom: 3px double #7d3023; background: linear-gradient(180deg, rgba(124, 38, 27, .19), rgba(124, 38, 27, .04)); }
+.wanted-authority { display: block; color: #6f281d; font: 700 .58rem/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; }
+.wanted-header h2 { margin: .35rem 0 .18rem; color: #701f16; font: 900 clamp(2rem, 5vw, 3.5rem)/.95 'Cinzel Decorative', serif; letter-spacing: .14em; text-transform: uppercase; }
+.wanted-header strong { display: block; font: 700 1.15rem/1.25 'Cinzel', serif; letter-spacing: .06em; }
+.wanted-header p { margin-top: .18rem; color: #714725; font: italic 1rem/1.3 'EB Garamond', serif; }
+.wanted-layout { display: grid; grid-template-columns: minmax(220px, 31%) 1fr; min-height: 320px; }
+.wanted-portrait { position: relative; min-height: 320px; margin: 0; overflow: hidden; background: #cfb67e; border-right: 3px double #795121; }
+.wanted-portrait img { width: 100%; height: 100%; display: block; filter: sepia(.28) contrast(.97); }
+.wanted-portrait figcaption { position: absolute; inset: auto 0 0; padding: .55rem .6rem; color: #f4e4b7; background: rgba(55, 24, 6, .82); text-align: center; font: 700 .62rem/1.35 'Cinzel', serif; text-transform: uppercase; }
+.wanted-portrait--empty { display: grid; place-items: center; }
+.wanted-portrait--empty span { color: rgba(89, 55, 20, .42); font: 900 6rem/1 'Cinzel Decorative', serif; }
+.wanted-record { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 34%); }
+.wanted-copy { padding: 1.15rem 1.3rem; font: 1.04rem/1.72 'EB Garamond', serif; }
+.wanted-copy p { margin-bottom: .6rem; }
+.medieval-info-table--wanted { align-self: stretch; border-left: 1px solid #a47d3d; background: rgba(129, 75, 25, .08); }
+.medieval-info-table--wanted th,
+.medieval-info-table--wanted td { padding: .5rem .55rem; }
+.wanted-reward { padding: .8rem 1rem; text-align: center; color: #f2ddaa; background: linear-gradient(90deg, #5a1c14, #872c20 48%, #5a1c14); border-top: 2px solid #3e110c; border-bottom: 2px solid #3e110c; }
+.wanted-reward span { display: block; font: .58rem/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; }
+.wanted-reward strong { display: block; margin-top: .25rem; font: 700 1.25rem/1.2 'Cinzel Decorative', serif; }
+.wanted-footer { padding: .55rem 1rem; color: #714725; text-align: center; font: italic .92rem/1.4 'EB Garamond', serif; }
+.wanted-pages { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .55rem 1rem; }
+.wanted-pages button { padding: .3rem .85rem; cursor: pointer; color: #602117; background: #e0c68e; border: 1px solid #8b4b33; font: 700 .65rem/1.2 'Cinzel', serif; }
+.wanted-pages button:disabled { cursor: default; opacity: .35; }
+.wanted-pages span { color: #714725; font: .65rem/1.2 'Cinzel', serif; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .tafel-mode-plaque, #lock-lbl { display: none; }
+  .tafel-data-manager { grid-template-columns: 1fr; }
+  .notice-type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quest-layout, .wanted-layout { grid-template-columns: 1fr; }
+  .quest-docket, .wanted-portrait { border-right: 0; border-bottom: 1px solid #a98543; }
+  .wanted-record { grid-template-columns: 1fr; }
+  .medieval-info-table--wanted { border-left: 0; border-top: 1px solid #a47d3d; }
+}

@@ -91,7 +91,7 @@
   const definitions = Object.freeze([
     define("gwynthor", "Gwynthor", "Großstadt", "county", {
       featured: true,
-      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-maps-20260901e",
+      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-board-20260902a",
       hierarchy: [
         ...baseHierarchy,
         { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },

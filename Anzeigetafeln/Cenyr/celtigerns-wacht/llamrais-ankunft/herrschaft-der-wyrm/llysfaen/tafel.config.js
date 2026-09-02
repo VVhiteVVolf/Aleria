@@ -3,7 +3,7 @@ window.TAFEL_CONFIG = {
     dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
   },
   boardId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
-  title: "📋 Anzeigetafel — Llysfaen",
+  title: "Anzeigetafel — Llysfaen",
   documentTitle: "Llysfaens Anzeigetafel - Aleria",
   images: {},
   firebase: {

@@ -5,31 +5,52 @@
   let dragOffsetX = 0;
   let dragOffsetY = 0;
   let dragMoved = false;
+  const noticePinImages = Object.freeze([
+    'assets/images/notice-pins/nail-straight.png',
+    'assets/images/notice-pins/nail-left.png',
+    'assets/images/notice-pins/nail-right.png',
+  ]);
 
   function rt(){ return window.TafelRuntime; }
   function state(){ return rt().state(); }
   function esc(value){ return rt().esc(value); }
   function typeById(id){ return window.TafelZettelConfig.typeById(id); }
-  function imageSize(){ return rt().imageSize(); }
-  function mapWrap(){ return rt().mapWrap(); }
+  function boardSize(){ return rt().boardSize(); }
+  function boardViewport(){ return rt().boardViewport(); }
+
+  function pinImageFor(id){
+    const value = String(id || 'aushang');
+    let hash = 0;
+    for(let index = 0; index < value.length; index += 1){
+      hash = ((hash << 5) - hash + value.charCodeAt(index)) | 0;
+    }
+    const imageIndex = Math.abs(hash) % noticePinImages.length;
+    return { src: noticePinImages[imageIndex], variant: imageIndex };
+  }
 
   function render(){
     const zl = document.getElementById('zettel-layer');
-    const size = imageSize();
+    const size = boardSize();
     if(!zl || !size.w) return;
     zl.innerHTML = '';
 
     const S = state();
-    const ds = S.dotSize || 18;
     (S.zettel || []).forEach(z => {
       if(z.secret && !rt().isEditMode()) return;
-      const el = document.createElement('div');
+      const type = typeById(z.typ);
+      const el = document.createElement('button');
+      const pinImage = pinImageFor(z.id);
+      el.type = 'button';
       el.dataset.id = z.id;
-      el.className = 'pin zettel-pin' + (rt().canEditZettel() ? ' edit-mode' : '') + (z.secret ? ' secret' : '');
+      el.dataset.noticeId = z.id;
+      el.dataset.noticeType = z.typ;
+      el.dataset.pinVariant = String(pinImage.variant);
+      el.className = 'tafel-notice-marker' + (rt().canEditZettel() ? ' edit-mode' : '') + (z.secret ? ' secret' : '');
+      el.setAttribute('aria-label', `${type?.label || 'Aushang'}: ${z.title || 'Ohne Titel'}`);
       el.style.cssText = `position:absolute;left:${z.x * size.w}px;top:${z.y * size.h}px;
         transform:translate(-50%,-50%);pointer-events:all;
         cursor:${rt().canEditZettel() ? 'grab' : 'pointer'};`;
-      el.innerHTML = `<div class="pin-dot" style="width:${ds}px;height:${ds}px;background:#8a641f;border:2.5px solid #f8efd2;box-shadow:0 2px 6px rgba(0,0,0,.35),0 0 0 1px #d0bb7a;"></div>`;
+      el.innerHTML = `<img class="tafel-notice-nail" src="${pinImage.src}" alt="" draggable="false">`;
 
       let downX = 0;
       let downY = 0;
@@ -48,7 +69,7 @@
         if(rt().canEditZettel()){
           dragId = z.id;
           dragMoved = false;
-          const point = rt().mapPointFromClient(e.clientX, e.clientY);
+          const point = rt().boardPointFromClient(e.clientX, e.clientY);
           dragOffsetX = point.x - z.x * size.w;
           dragOffsetY = point.y - z.y * size.h;
         }
@@ -73,20 +94,20 @@
 
   function showTooltip(z, cx, cy){
     const tdef = typeById(z.typ);
-    const tt = document.getElementById('pin-tooltip');
+    const tt = document.getElementById('notice-tooltip');
     if(!tt) return;
     const previewText = window.TafelZettelRichText.textPreview(z.text || '', 200);
-    tt.innerHTML = `<div class="pttt-top" style="background:#ead8a5;padding:.45rem .75rem;border-bottom:1px solid #d0bb7a;">
-    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#6f5725;letter-spacing:.04em;">${tdef.icon} ${tdef.label}</span>
-    <div style="font-family:'Cinzel Decorative',serif;font-size:.75rem;color:#1f1608;margin-top:.15rem;">${esc(z.title || tdef.label)}</div>
-  </div>${previewText ? `<div style="padding:.5rem .75rem;font-family:'EB Garamond',serif;font-size:.82rem;color:#1f1608;line-height:1.55;font-style:italic;">${esc(previewText)}</div>` : ''}`;
+    tt.innerHTML = `<div class="notice-tooltip-head">
+      <span>${tdef?.icon || '📜'} ${esc(tdef?.label || 'Aushang')}</span>
+      <strong>${esc(z.title || tdef?.label || 'Aushang')}</strong>
+    </div>${previewText ? `<p>${esc(previewText)}</p>` : ''}`;
     tt.style.display = 'block';
     tt.classList.add('show');
     moveTooltip(cx, cy);
   }
 
   function moveTooltip(cx, cy){
-    const tip = document.getElementById('pin-tooltip');
+    const tip = document.getElementById('notice-tooltip');
     if(!tip) return;
     const tw = tip.offsetWidth;
     const th = tip.offsetHeight;
@@ -103,25 +124,25 @@
   }
 
   function hideTooltip(){
-    const tip = document.getElementById('pin-tooltip');
+    const tip = document.getElementById('notice-tooltip');
     if(!tip) return;
     setTimeout(() => tip.classList.remove('show'), 80);
   }
 
   function attachDragListeners(){
-    mapWrap().addEventListener('mousemove', e => {
+    boardViewport().addEventListener('mousemove', e => {
       if(!dragId||!rt().canEditZettel()) return;
       dragMoved = true;
       const S = state();
-      const size = imageSize();
+      const size = boardSize();
       const z = S.zettel.find(x => x.id === dragId);
       if(!z || !size.w) return;
-      const point = rt().mapPointFromClient(e.clientX, e.clientY);
+      const point = rt().boardPointFromClient(e.clientX, e.clientY);
       z.x = Math.max(0, Math.min(1, (point.x - dragOffsetX) / size.w));
       z.y = Math.max(0, Math.min(1, (point.y - dragOffsetY) / size.h));
       render();
     });
-    mapWrap().addEventListener('mouseup', () => {
+    boardViewport().addEventListener('mouseup', () => {
       if(dragId && dragMoved){
         rt().save();
         dragId = null;

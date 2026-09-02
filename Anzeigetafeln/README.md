@@ -1,55 +1,46 @@
 # Anzeigetafeln
 
-Neocities wird nicht mehr als Laufzeit- oder Veröffentlichungsziel verwendet. Aktuelle Anzeigetafeln liegen ausschließlich in diesem Verzeichnis.
+`Anzeigetafeln` ist ein eigenes Aushangsystem. Es verwendet weder das Kartenmodul noch dessen Orts-Pins, Regionen, Markierungen, Kategorien oder Reiseverwaltung.
 
-Neue Anzeigetafeln liegen hierarchisch unter `Anzeigetafeln/`, z. B.:
+Jede Tafel besitzt genau:
 
-- `Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/`
+- ein Tafelbild
+- eine Ebene mit frei platzierbaren Aushängen
+- einen lokalen Browserentwurf
+- eine ausdrücklich ausgelöste Veröffentlichung in die GitHub-Registry
 
-Stabile Tafel-Links laufen ueber die zentrale Shell:
+Stabile Links laufen über die gemeinsame Shell:
 
-- `tafel.html?tafel=cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn`
+```txt
+tafel.html?tafel=<tafel-id>
+```
 
-Der alte Morddyn-Link bleibt als Weiterleitung bestehen:
+## Gemeinsame Module
 
-- `Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/MorddynAnzeigetafel.html`
+```txt
+tafel.html
+tafeln.registry.js
+assets/css/tafel.css
+assets/css/notice-board.css
+assets/js/tafel-app.js
+assets/js/tafel-storage.js
+assets/js/core/tafel-state.js
+assets/js/core/tafel-actions.js
+assets/js/core/tafel-publish-ui.js
+assets/js/core/tafel-bootstrap.js
+assets/js/board/notice-board.js
+assets/js/data/notice-data-manager.js
+assets/js/editor/notice-editor.js
+assets/js/notes/
+```
 
-Gemeinsame Ressourcen:
+Neue Tafeln erhalten keine kopierte HTML-Datei. Sie werden über einen Registry-Eintrag, eine kleine Konfiguration und eine eigene versionierte Datendatei angelegt. Der genaue Ablauf steht in `NEUE-TAFEL.md`.
 
-- `tafeln.registry.js`
-- `tafel.html`
-- `assets/css/tafel.css`
-- `assets/js/tafel-app.js`
-- `assets/js/tafel-storage.js`
-- `assets/js/core/tafel-actions.js`
-- `assets/js/core/tafel-bootstrap.js`
-- `assets/js/board/board-layers.js`
-- `assets/js/board/board-viewport.js`
-- `assets/js/data/data-manager.js`
-- `assets/js/pins/pin-scroll-view.js`
-- `assets/js/pins/pin-board.js`
-- `assets/js/pins/pin-editor.js`
-- `assets/js/pins/marker-catalog.js`
-- `assets/js/pins/categories.js`
-- `assets/js/lsb/lsb-config.js`
-- `assets/js/lsb/lsb-calculations.js`
-- `assets/js/lsb/lsb-diary.js`
-- `assets/js/notes/zettel-config.js`
-- `assets/js/notes/zettel-board.js`
-- `assets/js/notes/zettel-scroll-views.js`
-- `assets/js/notes/zettel-editor.js`
+## Speichern
 
-Die abgeschlossene Phase-1-Modularisierung und die geplanten Phase-2-Schnitte werden in `ARCHITEKTUR.md` dokumentiert.
-Der langfristige Ausbauplan fuer zentrale Tafel-Links, Registry, Imgur-Bildpflege und Ratifikation liegt in `ZUKUNFTSPLAN.md`.
-Der konkrete Ablauf fuer neue Tafeln liegt in `NEUE-TAFEL.md`.
+Änderungen werden während der Bearbeitung automatisch als lokaler Entwurf im Browser gesichert. Erst `Auf GitHub veröffentlichen` schreibt den geprüften Stand über die Netlify-Funktion in die Datendatei der jeweiligen Tafel. Ein Revisionsabgleich schützt vor dem Überschreiben neuerer Online-Stände.
 
-Als Vorlage dient `_template/AnzeigetafelTemplate.html` mit `_template/tafel.config.js`.
-
-Jede neue Tafel braucht einen eigenen `dataPath`, damit Zettel, Marker, Kategorien und DM-Daten getrennt als versionierte GitHub-Datei gespeichert werden.
-
-Tafelbild und Minimap-/Markerbild koennen im Editormodus ueber `Bilder` als HTTPS-/Imgur-Links gesetzt werden. Diese Links landen zuerst im lokalen Entwurf und nach `Online speichern` in der Datendatei der jeweiligen Tafel.
-
-Registry pruefen:
+## Struktur prüfen
 
 ```bash
 node Anzeigetafeln/tools/validate-tafeln-structure.mjs

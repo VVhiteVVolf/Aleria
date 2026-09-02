@@ -86,7 +86,6 @@
     }
     const z = state().zettel.find(x => x.id === id);
     if(!z) return;
-    rt().clearPinSidebar();
     activeZettelId = id;
     document.getElementById('sidebar').classList.add('open');
     renderZettelSidebarEdit(z);
@@ -162,7 +161,7 @@
   </div>
   <div id="sb-footer">
     <div style="width:100%;display:flex;align-items:center;gap:.5rem;padding:.3rem .1rem .4rem;border-bottom:1px solid var(--border2);margin-bottom:.15rem;">
-      <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#5a3a08;white-space:nowrap;">↔ Karte</span>
+      <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#5a3a08;white-space:nowrap;">↔ Detailansicht</span>
       <input type="range" id="card-w-slider-z" min="500" max="1600" step="20" value="${z.cardWidth || state().cardWidth || 1100}"
         style="flex:1;accent-color:var(--gold);cursor:pointer;"
         data-input-action="zettel-card-width" data-zettel-id="${z.id}"/>

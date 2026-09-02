@@ -30,29 +30,15 @@
     const mapCell = table.rows[0]?.cells[0];
     if (!mapCell) return;
 
-    const shell = document.createElement("div");
-    shell.className = "orte-region-map-embed";
-
-    const frame = document.createElement("iframe");
-    frame.className = "orte-region-map-iframe";
-    frame.src = String(config.embedHref);
-    frame.title = `Regionskarte ${config.title || placeName || ""}`.trim();
-    frame.loading = "lazy";
-    frame.referrerPolicy = "same-origin";
-    frame.allowFullscreen = true;
-    frame.dataset.mapId = activeMapId;
-    frame.addEventListener("load", requestPois);
-    activeFrame = frame;
-
-    const actions = document.createElement("div");
-    actions.className = "orte-region-map-actions";
-    const link = document.createElement("a");
-    link.href = String(config.fullHref || config.embedHref);
-    link.textContent = `${config.title || placeName || "Regionskarte"} vollständig öffnen`;
-    actions.append(link);
-
-    shell.append(frame, actions);
-    mapCell.replaceChildren(shell);
+    const embed = window.AleriaPlaceMapEmbed?.render({
+      container: mapCell,
+      config,
+      defaultTitle: placeName || "Regionskarte",
+      frameTitlePrefix: "Regionskarte",
+      variant: "region",
+      onLoad: requestPois,
+    });
+    activeFrame = embed?.frame || null;
   }
 
   function requestPois() {
