@@ -7,6 +7,7 @@ import newspaper from "../data/schwarzbote-gwynthor/edition.mjs";
 import {
   DEFAULT_PUBLICATION_DATE,
   formatPublicationDate,
+  getPublicationWeekday,
   isValidPublicationDate
 } from "../assets/js/newspaper-aleria-date.mjs";
 
@@ -16,6 +17,7 @@ const allowedBodyTags = new Set(["p", "h2", "h3", "h4", "blockquote", "hr", "b",
 
 test("Gwynthor-Ausgabe besitzt eindeutige und vollständige Redaktionsdaten", () => {
   assert.equal(newspaper.id, "schwarzbote-gwynthor");
+  assert.equal(newspaper.issueId, "1740-03-18");
   assert.equal(newspaper.articles.length, 5);
   assert.equal(newspaper.authors.length, 6);
   assert.equal(newspaper.articleTypes.length, 8);
@@ -27,9 +29,10 @@ test("Gwynthor-Ausgabe besitzt eindeutige und vollständige Redaktionsdaten", ()
 
 test("Zeitungsausgaben verwenden das Aleria-Datum als Standard", () => {
   assert.deepEqual(newspaper.publicationDate, DEFAULT_PUBLICATION_DATE);
-  assert.equal(formatPublicationDate(newspaper.publicationDate), "18. Tag, Dritter Monat, Jahr 1740");
+  assert.equal(getPublicationWeekday(newspaper.publicationDate), "Lyristag");
+  assert.equal(formatPublicationDate(newspaper.publicationDate), "Lyristag, 18.03 Jahr 1740");
   assert.equal(isValidPublicationDate(newspaper.publicationDate), true);
-  assert.equal(formatPublicationDate(), "18. Tag, Dritter Monat, Jahr 1740");
+  assert.equal(formatPublicationDate(), "Lyristag, 18.03 Jahr 1740");
 });
 
 test("Artikel verweisen nur auf bekannte Autoren und Artikelarten", () => {

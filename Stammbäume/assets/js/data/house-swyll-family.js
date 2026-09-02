@@ -362,7 +362,7 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 9,
+    sourceRevision: 10,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
       persons: Object.freeze([

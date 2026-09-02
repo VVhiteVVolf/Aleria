@@ -1,9 +1,11 @@
-import { DEFAULT_PUBLICATION_DATE } from "../../assets/js/newspaper-aleria-date.mjs";
+import { DEFAULT_PUBLICATION_DATE } from "../../assets/js/newspaper-aleria-date.mjs?v=20260903a";
 import {
   createArticle as article,
   createAuthor as author,
+  createIssue,
+  createPublication,
   STANDARD_ARTICLE_TYPES
-} from "../../assets/js/newspaper-model.mjs";
+} from "../../assets/js/newspaper-model.mjs?v=20260903a";
 
 const assetRoot = "/Zeitungen/data/schwarzbote-gwynthor/assets";
 const articleRoot = "/Zeitungen/data/schwarzbote-gwynthor/articles";
@@ -137,20 +139,19 @@ const articles = Object.freeze([
   })
 ]);
 
-export default Object.freeze({
+export const publication = createPublication({
   id: "schwarzbote-gwynthor",
+  titleId: "schwarzbote",
+  placeId: "gwynthor",
   name: "Der Schwarzbote",
   edition: "Gwynthor",
   subtitle: "Nachrichten, Gerüchte und Wahrheiten aus Celtigerns Wacht",
   tagline: "Das meistgelesene Blatt der Grafschaft",
-  summary: "Diese Gwynthorer Ausgabe führt von den Verbrechen der Schwarzen Zitteraale über das Wappenerbe der Gafyr bis zu Predigt, Hofskandal und Kunstkritik. Fünf Federn berichten, urteilen und spotten – jede mit ihrer eigenen Stimme.",
   logo: `${assetRoot}/schwarzbote-gwynthor.png`,
   imprints: Object.freeze({
     inkStamp: "/IconOrdner/StempelSchwarzbote.png",
     waxSeal: "/IconOrdner/Wachssiegel Schwarzbote.png"
   }),
-  publicationDate: DEFAULT_PUBLICATION_DATE,
-  year: "1740",
   price: "5 Kupferstücke",
   region: "Gräfische Baronie Llamreis Ankunft",
   printLocation: "Schwarzbote zu Gwynthor",
@@ -160,6 +161,12 @@ export default Object.freeze({
     href: "/Orte/grossstadt.html?id=gwynthor"
   }),
   authors,
-  articleTypes,
+  articleTypes
+});
+
+export default createIssue(publication, {
+  id: "1740-03-18",
+  publicationDate: DEFAULT_PUBLICATION_DATE,
+  summary: "Diese Gwynthorer Ausgabe führt von den Verbrechen der Schwarzen Zitteraale über das Wappenerbe der Gafyr bis zu Predigt, Hofskandal und Kunstkritik. Fünf Federn berichten, urteilen und spotten – jede mit ihrer eigenen Stimme.",
   articles
 });

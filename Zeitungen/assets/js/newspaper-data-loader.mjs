@@ -1,5 +1,9 @@
-import { findNewspaperEntry } from "./newspaper-registry.mjs";
-import { isValidPublicationDate } from "./newspaper-aleria-date.mjs";
+import { findNewspaperEntry } from "./newspaper-registry.mjs?v=20260903a";
+import { findIssueEntry } from "./newspaper-archive.mjs?v=20260903a";
+import {
+  isValidPublicationDate,
+  publicationDateToOrdinal
+} from "./newspaper-aleria-date.mjs?v=20260903a";
 
 export async function loadRequestedNewspaper() {
   const params = new URLSearchParams(window.location.search);
@@ -10,10 +14,19 @@ export async function loadRequestedNewspaper() {
     throw new NewspaperLoadError("Diese Zeitung ist im Archiv nicht verzeichnet.", "missing-newspaper");
   }
 
-  const module = await import(entry.dataModule);
+  const requestedIssueId = params.get("ausgabe") || params.get("issue") || "";
+  const issueEntry = findIssueEntry(entry, requestedIssueId);
+  if (!issueEntry) {
+    const message = requestedIssueId
+      ? "Diese Ausgabe ist im Archiv nicht verzeichnet."
+      : "Für diese Zeitung ist noch keine Ausgabe verzeichnet.";
+    throw new NewspaperLoadError(message, "missing-issue");
+  }
+
+  const module = await import(issueEntry.dataModule);
   const newspaper = module.default;
-  assertNewspaperData(newspaper);
-  return Object.freeze({ entry, newspaper, params });
+  assertNewspaperData(newspaper, entry, issueEntry);
+  return Object.freeze({ entry, issueEntry, newspaper, params });
 }
 
 export function findArticle(newspaper, articleId) {
@@ -36,7 +49,7 @@ export class NewspaperLoadError extends Error {
   }
 }
 
-function assertNewspaperData(newspaper) {
+function assertNewspaperData(newspaper, entry, issueEntry) {
   const requiredArrays = ["authors", "articles", "articleTypes"];
   if (!newspaper || typeof newspaper !== "object") {
     throw new NewspaperLoadError("Die Ausgabedaten sind beschädigt.", "invalid-data");
@@ -49,6 +62,12 @@ function assertNewspaperData(newspaper) {
   }
   if (newspaper.publicationDate && !isValidPublicationDate(newspaper.publicationDate)) {
     throw new NewspaperLoadError("Das Erscheinungsdatum liegt außerhalb des Aleria-Kalenders.", "invalid-publication-date");
+  }
+  if (newspaper.id !== entry.id || newspaper.issueId !== issueEntry.id) {
+    throw new NewspaperLoadError("Die Ausgabe ist dem falschen Blatt oder Archivstand zugeordnet.", "invalid-issue-reference");
+  }
+  if (publicationDateToOrdinal(newspaper.publicationDate) !== publicationDateToOrdinal(issueEntry.publicationDate)) {
+    throw new NewspaperLoadError("Das Erscheinungsdatum stimmt nicht mit dem Ausgabenarchiv überein.", "invalid-issue-date");
   }
 
   const authorIds = new Set(newspaper.authors.map((author) => author.id));

@@ -2,9 +2,16 @@ import {
   loadRequestedNewspaper,
   findAuthor,
   findArticleType
-} from "./newspaper-data-loader.mjs";
-import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs";
-import { formatPublicationDate } from "./newspaper-aleria-date.mjs";
+} from "./newspaper-data-loader.mjs?v=20260903a";
+import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs?v=20260903a";
+import { formatPublicationDate } from "./newspaper-aleria-date.mjs?v=20260903a";
+import {
+  buildArticleHref,
+  buildIssueHref,
+  formatIssueLabel,
+  getIssueNeighbors,
+  getSortedIssues
+} from "./newspaper-archive.mjs?v=20260903a";
 
 const root = document.querySelector("[data-newspaper-page]");
 
@@ -14,18 +21,20 @@ async function start() {
   if (!root) return;
 
   try {
-    const { newspaper } = await loadRequestedNewspaper();
+    const { entry, issueEntry, newspaper } = await loadRequestedNewspaper();
+    root.dataset.newspaperTheme = entry.themeId || "default";
     document.title = `${newspaper.name} – ${newspaper.edition} | Aleria`;
-    root.replaceChildren(renderIssue(newspaper));
+    root.replaceChildren(renderIssue(entry, issueEntry, newspaper));
   } catch (error) {
     console.error(error);
     renderError(root, "Ausgabe nicht gefunden", error.message || "Das Blatt konnte nicht geladen werden.");
   }
 }
 
-function renderIssue(newspaper) {
+function renderIssue(entry, issueEntry, newspaper) {
   return element("article", { className: "newspaper-sheet newspaper-issue" }, [
     renderBreadcrumbs(newspaper),
+    renderArchiveNavigation(entry, issueEntry),
     renderMasthead(newspaper),
     renderEditionSummary(newspaper),
     renderArticleSection(newspaper),
@@ -33,6 +42,53 @@ function renderIssue(newspaper) {
     renderAuthors(newspaper),
     renderColophon(newspaper)
   ]);
+}
+
+function renderArchiveNavigation(entry, issueEntry) {
+  const issues = getSortedIssues(entry);
+  const neighbors = getIssueNeighbors(entry, issueEntry.id);
+  const select = element("select", {
+    className: "newspaper-archive-select",
+    attributes: { "aria-label": "Ausgabe auswählen" }
+  }, issues.map((issue) => {
+    const option = element("option", {
+      text: formatIssueLabel(issue),
+      attributes: { value: issue.id }
+    });
+    option.selected = issue.id === issueEntry.id;
+    return option;
+  }));
+
+  select.addEventListener("change", () => {
+    window.location.assign(buildIssueHref(entry.id, select.value));
+  });
+
+  return element("nav", {
+    className: "newspaper-archive-navigation",
+    attributes: { "aria-label": "Ausgabenarchiv" }
+  }, [
+    archiveDirectionLink(entry, neighbors.older, "← Ältere Ausgabe", "older"),
+    element("label", { className: "newspaper-archive-picker" }, [
+      element("span", { text: "Ausgabenarchiv" }),
+      select
+    ]),
+    archiveDirectionLink(entry, neighbors.newer, "Neuere Ausgabe →", "newer")
+  ]);
+}
+
+function archiveDirectionLink(entry, issue, label, direction) {
+  if (!issue) {
+    return element("span", {
+      className: `newspaper-archive-direction is-disabled is-${direction}`,
+      text: label,
+      attributes: { "aria-disabled": "true" }
+    });
+  }
+  return element("a", {
+    className: `newspaper-archive-direction is-${direction}`,
+    text: label,
+    href: buildIssueHref(entry.id, issue.id)
+  });
 }
 
 function renderBreadcrumbs(newspaper) {
@@ -110,7 +166,7 @@ function renderArticleSection(newspaper) {
 function renderArticleCard(newspaper, article, index) {
   const author = findAuthor(newspaper, article.authorId);
   const type = findArticleType(newspaper, article.typeId);
-  const href = articleHref(newspaper.id, article.id);
+  const href = buildArticleHref(newspaper.id, newspaper.issueId, article.id);
   const portrait = imageWithFallback(author.portrait, author.name, "newspaper-article-portrait");
 
   return element("article", {
@@ -220,8 +276,4 @@ function fact(label, value) {
     element("dt", { text: label }),
     element("dd", { text: value })
   ]);
-}
-
-function articleHref(newspaperId, articleId) {
-  return `/Zeitungen/artikel.html?zeitung=${encodeURIComponent(newspaperId)}&artikel=${encodeURIComponent(articleId)}`;
 }

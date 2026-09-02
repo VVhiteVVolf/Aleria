@@ -12,6 +12,7 @@ const allowedBodyTags = new Set(["p", "h2", "h3", "h4", "blockquote", "hr", "b",
 
 test("Abergwint besitzt eine eigenständige Schwarzboten-Ausgabe", () => {
   assert.equal(newspaper.id, "schwarzbote-abergwint");
+  assert.equal(newspaper.issueId, "1740-03-18");
   assert.equal(newspaper.edition, "Abergwint");
   assert.equal(newspaper.authors.length, 6);
   assert.equal(newspaper.articleTypes.length, 8);

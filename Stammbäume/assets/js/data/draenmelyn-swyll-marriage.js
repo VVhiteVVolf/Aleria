@@ -27,6 +27,10 @@ export const DRAENMELYN_SWYLL_MARRIAGE = Object.freeze({
     birth: '1699',
     houseId: 'house-swyll',
     title: 'Angehöriger des Hauses Swyll',
-    notes: 'Ehemann Rhiannon Draenmelyns; die Ehe verbindet die Bürgerhäuser Draenmelyn und Swyll.'
+    portrait: 'https://i.imgur.com/VpjeTe7.png',
+    notes: 'Ehemann Rhiannon Draenmelyns; die Ehe verbindet die Bürgerhäuser Draenmelyn und Swyll.',
+    extensions: Object.freeze({
+      registryManagedFields: Object.freeze(['portrait'])
+    })
   })
 });

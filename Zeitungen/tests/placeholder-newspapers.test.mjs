@@ -35,6 +35,7 @@ test("Beide leeren Ausgaben stellen acht neutrale Redaktionsplätze bereit", () 
 
 test("Beide Ausgaben enthalten genau einen leeren Hauptartikel", async () => {
   for (const newspaper of editions) {
+    assert.equal(newspaper.issueId, "1740-03-18");
     assert.deepEqual(newspaper.publicationDate, DEFAULT_PUBLICATION_DATE);
     assert.equal(newspaper.articles.length, 1);
     assert.equal(newspaper.articles[0].typeId, "hauptartikel");

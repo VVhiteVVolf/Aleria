@@ -1,9 +1,11 @@
-import { DEFAULT_PUBLICATION_DATE } from "../../assets/js/newspaper-aleria-date.mjs";
+import { DEFAULT_PUBLICATION_DATE } from "../../assets/js/newspaper-aleria-date.mjs?v=20260903a";
 import {
   createArticle as article,
   createAuthor as author,
+  createIssue,
+  createPublication,
   STANDARD_ARTICLE_TYPES
-} from "../../assets/js/newspaper-model.mjs";
+} from "../../assets/js/newspaper-model.mjs?v=20260903a";
 
 const assetRoot = "/Zeitungen/data/schwarzbote-abergwint/assets";
 const articleRoot = "/Zeitungen/data/schwarzbote-abergwint/articles";
@@ -91,20 +93,19 @@ const articles = Object.freeze([
   })
 ]);
 
-export default Object.freeze({
+export const publication = createPublication({
   id: "schwarzbote-abergwint",
+  titleId: "schwarzbote",
+  placeId: "abergwint",
   name: "Der Schwarzbote",
   edition: "Abergwint",
   subtitle: "Nachrichten, Gerüchte und Wahrheiten aus Gwendolyns Ufer",
   tagline: "Das Abergwinter Blatt",
-  summary: "Die Abergwinter Ausgabe wird von Luca Acrias Redaktion getragen. Ihr erster vorbereiteter Leitartikel stammt von Claudia Acria und berichtet mit scharfer Feder über das gescheiterte Bündnis zwischen den Häusern Draig und Gwyvern.",
   logo: `${assetRoot}/schwarzbote-abergwint.png`,
   imprints: Object.freeze({
     inkStamp: "/IconOrdner/StempelSchwarzbote.png",
     waxSeal: "/IconOrdner/Wachssiegel Schwarzbote.png"
   }),
-  publicationDate: DEFAULT_PUBLICATION_DATE,
-  year: "1740",
   price: "5 Kupferstücke",
   region: "Baronie Gwendolyns Ufer",
   printLocation: "Schwarzbote zu Abergwint",
@@ -114,6 +115,12 @@ export default Object.freeze({
     href: "/Orte/grossstadt.html?id=abergwint"
   }),
   authors,
-  articleTypes: STANDARD_ARTICLE_TYPES,
+  articleTypes: STANDARD_ARTICLE_TYPES
+});
+
+export default createIssue(publication, {
+  id: "1740-03-18",
+  publicationDate: DEFAULT_PUBLICATION_DATE,
+  summary: "Die Abergwinter Ausgabe wird von Luca Acrias Redaktion getragen. Ihr erster vorbereiteter Leitartikel stammt von Claudia Acria und berichtet mit scharfer Feder über das gescheiterte Bündnis zwischen den Häusern Draig und Gwyvern.",
   articles
 });

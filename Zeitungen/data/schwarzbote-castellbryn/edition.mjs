@@ -1,9 +1,13 @@
-import { createPlaceholderEdition } from "../../assets/js/newspaper-placeholder-edition.mjs";
+import {
+  createPlaceholderIssue,
+  createPlaceholderPublication
+} from "../../assets/js/newspaper-placeholder-edition.mjs?v=20260903a";
 
 const dataRoot = "/Zeitungen/data/schwarzbote-castellbryn";
 
-export default createPlaceholderEdition({
+const config = Object.freeze({
   id: "schwarzbote-castellbryn",
+  placeId: "castellbryn",
   edition: "Castellbryn",
   subtitle: "Nachrichten, Gerüchte und Wahrheiten aus Rhonwens Tränen",
   tagline: "Das Castellbryner Blatt",
@@ -16,3 +20,6 @@ export default createPlaceholderEdition({
   },
   articleBodyPath: `${dataRoot}/articles/hauptartikel.html`
 });
+
+export const publication = createPlaceholderPublication(config);
+export default createPlaceholderIssue(publication, config);

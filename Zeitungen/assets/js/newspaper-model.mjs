@@ -20,6 +20,30 @@ export function createArticle(value) {
   return Object.freeze({ language: "Gemeine Zunge", ...value });
 }
 
+export function createPublication(value) {
+  return Object.freeze({
+    ...value,
+    imprints: Object.freeze({ ...(value.imprints || {}) }),
+    location: Object.freeze({ ...(value.location || {}) }),
+    authors: Object.freeze([...(value.authors || [])]),
+    articleTypes: Object.freeze([...(value.articleTypes || STANDARD_ARTICLE_TYPES)])
+  });
+}
+
+export function createIssue(publication, value) {
+  if (!publication?.id) {
+    throw new TypeError("Eine Zeitungsausgabe benötigt ein gültiges Blattprofil.");
+  }
+
+  return Object.freeze({
+    ...publication,
+    issueId: String(value?.id || "").trim(),
+    publicationDate: Object.freeze({ ...(value?.publicationDate || {}) }),
+    summary: String(value?.summary || ""),
+    articles: Object.freeze([...(value?.articles || [])])
+  });
+}
+
 function articleType(id, label, description) {
   return Object.freeze({ id, label, description });
 }

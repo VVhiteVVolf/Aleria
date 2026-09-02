@@ -3,9 +3,10 @@ import {
   findArticle,
   findAuthor,
   findArticleType
-} from "./newspaper-data-loader.mjs";
-import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs";
-import { formatPublicationDate } from "./newspaper-aleria-date.mjs";
+} from "./newspaper-data-loader.mjs?v=20260903a";
+import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs?v=20260903a";
+import { formatPublicationDate } from "./newspaper-aleria-date.mjs?v=20260903a";
+import { buildIssueHref } from "./newspaper-archive.mjs?v=20260903a";
 
 const root = document.querySelector("[data-newspaper-page]");
 const allowedTags = new Set(["P", "H2", "H3", "H4", "BLOCKQUOTE", "HR", "B", "STRONG", "I", "EM", "BR"]);
@@ -16,11 +17,12 @@ async function start() {
   if (!root) return;
 
   try {
-    const { newspaper, params } = await loadRequestedNewspaper();
+    const { entry, newspaper, params } = await loadRequestedNewspaper();
+    root.dataset.newspaperTheme = entry.themeId || "default";
     const articleId = params.get("artikel") || params.get("article") || "";
     const article = findArticle(newspaper, articleId);
     if (!article) {
-      renderError(root, "Artikel nicht gefunden", "Dieser Artikel ist in der Ausgabe nicht verzeichnet.", issueHref(newspaper.id));
+      renderError(root, "Artikel nicht gefunden", "Dieser Artikel ist in der Ausgabe nicht verzeichnet.", buildIssueHref(newspaper.id, newspaper.issueId));
       return;
     }
 
@@ -59,13 +61,13 @@ function renderArticle(newspaper, article, author, type, bodyHtml) {
           fact("Länge", article.length),
           fact("Sprache", article.language || newspaper.language)
         ]),
-        element("a", { className: "newspaper-button", text: "Zur ganzen Ausgabe", href: issueHref(newspaper.id) })
+        element("a", { className: "newspaper-button", text: "Zur ganzen Ausgabe", href: buildIssueHref(newspaper.id, newspaper.issueId) })
       ]),
       renderArticleBody(bodyHtml)
     ]),
     element("footer", { className: "newspaper-article-footer" }, [
       element("span", { text: "❦", attributes: { "aria-hidden": "true" } }),
-      element("a", { text: `${newspaper.name} – Ausgabe ${newspaper.edition}`, href: issueHref(newspaper.id) }),
+      element("a", { text: `${newspaper.name} – Ausgabe ${newspaper.edition}`, href: buildIssueHref(newspaper.id, newspaper.issueId) }),
       element("a", { text: `Zurück nach ${newspaper.location.name}`, href: newspaper.location.href })
     ])
   ]);
@@ -75,7 +77,7 @@ function renderBreadcrumbs(newspaper, article) {
   return element("nav", { className: "newspaper-breadcrumbs", attributes: { "aria-label": "Pfad" } }, [
     element("a", { text: newspaper.location.name, href: newspaper.location.href }),
     element("span", { text: "›", attributes: { "aria-hidden": "true" } }),
-    element("a", { text: newspaper.name, href: issueHref(newspaper.id) }),
+    element("a", { text: newspaper.name, href: buildIssueHref(newspaper.id, newspaper.issueId) }),
     element("span", { text: "›", attributes: { "aria-hidden": "true" } }),
     element("span", { text: article.title })
   ]);
@@ -119,8 +121,4 @@ function fact(label, value) {
     element("dt", { text: label }),
     element("dd", { text: value })
   ]);
-}
-
-function issueHref(newspaperId) {
-  return `/Zeitungen/zeitung.html?zeitung=${encodeURIComponent(newspaperId)}`;
 }
