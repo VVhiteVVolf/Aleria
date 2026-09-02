@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-map-embed-20260902a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-houses.css?v=gwynthor-houses-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=gwynthor-merchants-20260901c">
-  <script src="/js/world-content/celtigerns-wacht-places.js?v=gwynthor-board-20260902a"></script>
+  <link rel="stylesheet" href="/Orte/assets/css/orte-place-content.css?v=gwynthor-content-20260902b">
+  <script src="/js/world-content/celtigerns-wacht-places.js?v=gwynthor-content-20260902b"></script>
   <script src="/Orte/orte.registry.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
@@ -18,6 +19,7 @@
   <script src="/Orte/assets/js/orte-notice-board.js?v=gwynthor-board-20260902b" defer></script>
   <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-map-embed-20260902a" defer></script>
   <script src="/Orte/assets/js/orte-place-merchants.js?v=gwynthor-merchants-20260901d" defer></script>
+  <script src="/Orte/assets/js/orte-place-content.js?v=gwynthor-content-20260902b" defer></script>
   <script src="/Orte/assets/js/orte-grossstadt.js?v=orte-stadtbild-20260901a" defer></script>
 </head>
 <body>
@@ -49,11 +51,7 @@
 			<td class="pt-s-0007" colspan="5">
 			<h2>Einleitung</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">...</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="introduction"><p>...</p></div>
 
 			<hr /><p>&nbsp;</p>
 			<!-- Gesprächsvorlage 1 -->
@@ -73,31 +71,17 @@
 			<div class="orte-balanced-text-panel orte-balanced-text-panel--background">
 			<h2>Hintergrund</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">...</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="background"><p>...</p></div>
 
 			<hr class="pt-s-0018" />
 			<hr class="pt-s-0018" /><p class="pt-s-0003"><b class="pt-s-0019">Lage</b></p>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>...</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="location"><p>...</p></div>
 
 			<hr class="pt-s-0018" />
 			<hr class="pt-s-0018" /><p class="pt-s-0003"><span class="pt-s-0019"><b>Verwaltung</b></span></p>
 
-			<p class="pt-s-0020">&nbsp;</p>
-
-
-			<hr />
-			<hr /><p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">...</p>
+			<div data-orte-content="administration"><p>...</p></div>
 			</div>
 			</td>
 			<td class="pt-s-0023" colspan="3" rowspan="1">
@@ -216,15 +200,7 @@
 			<div class="orte-balanced-text-panel orte-balanced-text-panel--conflicts">
 			<h2>Konflikte</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">....</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<hr />
-			<hr /><p>&nbsp;</p>
-			<!-- Gesprächsvorlage 1 -->
+			<div data-orte-content="conflicts"><p>...</p></div>
 
 			</div>
 			</td>
@@ -244,13 +220,7 @@
 			<td class="pt-s-0039" colspan="8">
 			<h2>Geschichte</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">...</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="history"><p>...</p></div>
 			</td>
 		</tr>
 		<tr>
@@ -531,22 +501,14 @@
 			<td class="pt-s-0039" colspan="8">
 			<h2>Bev&ouml;lkerung</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
-
-			<p>&nbsp;</p>
+			<div data-orte-content="population"><p>...</p></div>
 			</td>
 		</tr>
 		<tr>
 			<td class="pt-s-0064" colspan="6" rowspan="1">
 			<h2>Zeitungsblatt</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
-
-			<p>&nbsp;</p>
+			<div data-orte-content="newspaper"><p>...</p></div>
 			</td>
 			<td class="pt-s-0065" colspan="2"><p>&nbsp;</p>
 
@@ -559,7 +521,7 @@
 			<td class="pt-s-0064 grossstadt-region-cell" colspan="8">
 			<h2>Region &amp; Umland</h2>
 
-			<p>POI, Orte und Gefahrenpunkte im Bannkreis und Umland der Stadt.</p>
+			<div data-orte-content="region"><p>POI, Orte und Gefahrenpunkte im Bannkreis und Umland der Stadt.</p></div>
 			<section class="grossstadt-region-block">
 
 			<table class="orte-region-table region-s-0001" border="1" cellspacing="1" data-orte-region-table>
@@ -790,20 +752,14 @@
 			<td class="pt-s-0064" colspan="8">
 			<h2>Kultur</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
-
-			<p>&nbsp;</p>
+			<div data-orte-content="culture"><p>...</p></div>
 			</td>
 		</tr>
 		<tr data-orte-feature="districts">
 			<td class="pt-s-0064" colspan="6">
 			<h2>Bezirke</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
+			<div data-orte-content="districts"><p>...</p></div>
 			</td>
 			<td class="pt-s-0065" colspan="2"><p>&nbsp;</p>
 
@@ -814,22 +770,14 @@
 			<td class="pt-s-0064" colspan="8">
 			<h2 id="stadtbild-architektur">Stadtbild &amp; Architektur</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="builtEnvironment"><p>...</p></div>
 			</td>
 		</tr>
 		<tr>
 			<td class="pt-s-0064" colspan="6">
 			<h2>Milit&auml;r</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
-
-			<p>&nbsp;</p>
+			<div data-orte-content="military"><p>...</p></div>
 			</td>
 			<td class="pt-s-0065" colspan="2"><p>&nbsp;</p>
 
@@ -842,9 +790,7 @@
 			<td class="pt-s-0039" colspan="8">
 			<h2>Wirtschaft</h2>
 
-			<p class="pt-s-0003">&nbsp;</p>
-
-			<p>....</p>
+			<div data-orte-content="economy"><p>...</p></div>
 			</td>
 		</tr>
 		<tr>
@@ -978,12 +924,12 @@
 			</table>
 			</td>
 		</tr>
-		<tr>
+		<tr data-orte-personalities-heading>
 			<td class="pt-s-0039" colspan="8">
 			<h2>Pers&ouml;nlichkeiten von Relevanz</h2>
 			</td>
 		</tr>
-		<tr>
+		<tr data-orte-personalities-content>
 			<td class="pt-s-0039" colspan="8">
 			<table class="pt-s-0067" border="5">
 				<tbody>
@@ -1424,12 +1370,7 @@
 			<td class="pt-s-0039" colspan="8">
 			<h2>Trivia</h2>
 
-			<ul>
-				<li class="pt-s-0086">...</li>
-				<li class="pt-s-0086">...</li>
-				<li class="pt-s-0086">...</li>
-				<li class="pt-s-0086">...</li>
-			</ul>
+			<div data-orte-content="trivia"><p>...</p></div>
 			</td>
 		</tr>
 	</tbody>
