@@ -157,3 +157,27 @@
   color: #fff;
   background: #653914;
 }
+
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] {
+  border-color: #9a5d42;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.58), transparent 30%),
+    rgba(244, 218, 162, 0.9);
+}
+
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-title,
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-arrow,
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-open {
+  border-color: #71392f;
+  color: #fff2d0;
+  background: linear-gradient(#9b5544, #613128);
+}
+
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-cover {
+  border-color: #9a6840;
+  background: linear-gradient(145deg, #fff3d2, #e8ca8e);
+}
+
+.orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-current-issue > span {
+  color: #804335;
+}

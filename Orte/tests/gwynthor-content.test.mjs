@@ -48,6 +48,13 @@ test("Gwynthor besitzt vollständige, strukturierte Ortsinhalte", async () => {
   assert.match(content, /Schwarzen Zitteraale/);
   assert.match(content, /Cochllamwyr/);
   assert.match(content, /400 und 600/);
+  assert.match(content, /Celtigerns Echo/);
+  const commonerHouses = data.houses.find(group => group.title === "Bürgerliche Häuser")?.items || [];
+  const falchdyn = commonerHouses.find(house => house.familyId === "haus-falchdyn");
+  assert.ok(falchdyn, "Haus Falchdyn fehlt bei den Gwynthorer Bürgerhäusern");
+  assert.equal(falchdyn.seat, "Gwynthor");
+  assert.equal(falchdyn.liege, "Haus Draig");
+  assert.match(decodeURI(falchdyn.emblem), /Bürgerliche\/Gwynthor\/Falchdyn\.png$/);
   assert.doesNotMatch(content, /im alten (?:Code|Quellcode)/i);
 });
 

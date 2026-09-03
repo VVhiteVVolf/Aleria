@@ -13,6 +13,7 @@ Das Zeitungssystem trennt Blattprofil, örtliche Zeitungsausgabe, datierten Arch
 - `data/<blatt-ort>/edition.mjs` enthält aktuell das Blattprofil und die erste datierte Ausgabe.
 - `data/<blatt-ort>/articles/` enthält ausschließlich bereinigte Artikeltexte.
 - `data/<blatt-ort>/assets/` hält Titelbild, Druckzeichen und Portraits lokal vor.
+- `data/celtigerns-echo/publication.mjs` bündelt das gemeinsame Profil, Erscheinungsbild und die Platzhalterlogik aller örtlichen Ausgaben von `Celtigerns Echo`.
 
 Das Standard-Erscheinungsdatum wird als `Lyristag, 18.03 Jahr 1740` angezeigt. Der Aleria-Kalender besitzt neun Wochentage, 36 Tage je Monat und 13 nummerierte Monate.
 
@@ -26,11 +27,12 @@ Die Reihenfolge im Register ist unerheblich. Das Archiv sortiert anhand des Aler
 
 ## Weiteres Blatt an einem Ort
 
-Ein Konkurrenzblatt erhält einen eigenen Registereintrag mit derselben `placeId`, einer eigenen `titleId`, einem Titelbild und einem `themeId`. Genau ein Blatt je Ort wird mit `isDefaultForPlace: true` ausgezeichnet; derzeit ist dies überall der Schwarzbote. Der Pressewechsler der Ortsseite erkennt weitere Einträge automatisch.
+Ein Konkurrenzblatt erhält einen eigenen Registereintrag mit derselben `placeId`, einer eigenen `titleId`, einem Titelbild und einem `themeId`. Genau ein Blatt je Ort wird mit `isDefaultForPlace: true` ausgezeichnet; derzeit ist dies überall der Schwarzbote. Der Pressewechsler der Ortsseite erkennt weitere Einträge automatisch. `Celtigerns Echo` ist in Gwynthor mit dreizehn Falchdyn-Mitgliedern und vier freien Autorenstellen besetzt; Abergwint, Castellbryn und Rhosmere besitzen davon unabhängige, zunächst unbesetzte Lokalredaktionen.
 
 ## Lokale Ziele
 
 - Gwynthorer Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-gwynthor`
+- Gwynthorer Echo-Ausgabe: `/Zeitungen/zeitung.html?zeitung=celtigerns-echo-gwynthor`
 - Abergwinter Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-abergwint`
 - Castellbryner Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-castellbryn`
 - Rhosmerer Ausgabe: `/Zeitungen/zeitung.html?zeitung=schwarzbote-rhosmere`

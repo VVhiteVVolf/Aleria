@@ -1,12 +1,12 @@
 import {
   findDefaultNewspaperEntryForPlace,
   getNewspaperEntriesForPlace
-} from "/Zeitungen/assets/js/newspaper-registry.mjs";
+} from "/Zeitungen/assets/js/newspaper-registry.mjs?v=20260903b";
 import {
   buildIssueHref,
   getLatestIssueEntry
-} from "/Zeitungen/assets/js/newspaper-archive.mjs";
-import { formatPublicationDate } from "/Zeitungen/assets/js/newspaper-aleria-date.mjs";
+} from "/Zeitungen/assets/js/newspaper-archive.mjs?v=20260903a";
+import { formatPublicationDate } from "/Zeitungen/assets/js/newspaper-aleria-date.mjs?v=20260903a";
 
 const page = document.querySelector("[data-orte-static-template]");
 const switcher = page?.querySelector("[data-orte-press-switcher]");

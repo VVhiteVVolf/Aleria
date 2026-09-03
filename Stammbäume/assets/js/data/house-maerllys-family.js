@@ -8,6 +8,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_MAERLLYS_PORTRAITS } from './house-maerllys-portraits.js';
+import { FALCHDYN_MAERLLYS_MARRIAGE } from './falchdyn-maerllys-marriage.js';
 import {
   MAERLLYS_SWYLL_MARRIAGE,
   MAERLLYS_YSGRIF_MARRIAGE
@@ -19,6 +20,7 @@ const MAERLLYS_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwyn
 const SWYLL_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png';
 const TONNARTH_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png';
 const YSGRIF_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png';
+const FALCHDYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png';
 
 const BASE_FAMILY = createFounderTimeJumpPlaceholderHouseFamily({
   id: 'haus-maerllys',
@@ -72,7 +74,8 @@ export const HOUSE_MAERLLYS_FAMILY = Object.freeze({
     ...BASE_FAMILY.houses,
     house('house-swyll', 'Haus Swyll', SWYLL_EMBLEM),
     house('house-tonnarth', 'Haus Tonnarth', TONNARTH_EMBLEM),
-    house('house-ysgrif', 'Haus Ysgrif', YSGRIF_EMBLEM)
+    house('house-ysgrif', 'Haus Ysgrif', YSGRIF_EMBLEM),
+    house('house-falchdyn', 'Haus Falchdyn', FALCHDYN_EMBLEM)
   ]),
   persons: Object.freeze([
     ...BASE_FAMILY.persons,
@@ -90,10 +93,8 @@ export const HOUSE_MAERLLYS_FAMILY = Object.freeze({
     sharedPerson(MAERLLYS_YSGRIF_MARRIAGE.second, 'married'),
 
     // Owains und Gwenllians Seitenzweig bleibt bewusst klein.
-    person('geraint-maerllys', 'Geraint Maerllys', 'male', '1691', MAERLLYS_HOUSE_ID, {
-      title: 'Sohn Owain Maerllys’ und Gwenllian Ysgrifs',
-      notes: 'Unverheirateter Angehöriger des Maerllys-Seitenzweigs.'
-    }),
+    sharedPerson(FALCHDYN_MAERLLYS_MARRIAGE.first, 'core'),
+    sharedPerson(FALCHDYN_MAERLLYS_MARRIAGE.second, 'married'),
     sharedPerson(TONNARTH_MAERLLYS_MARRIAGE.second, 'core'),
     sharedPerson(TONNARTH_MAERLLYS_MARRIAGE.first, 'married'),
 
@@ -120,6 +121,7 @@ export const HOUSE_MAERLLYS_FAMILY = Object.freeze({
     ...BASE_FAMILY.partnerships,
     createMarriage('marriage-cadfan-eira-maerllys', ...GRANDPARENT_IDS),
     createMarriage(MAERLLYS_YSGRIF_MARRIAGE.id, ...MAERLLYS_YSGRIF_MARRIAGE.participantIds),
+    createMarriage(FALCHDYN_MAERLLYS_MARRIAGE.id, ...FALCHDYN_MAERLLYS_MARRIAGE.participantIds),
     createMarriage(MAERLLYS_SWYLL_MARRIAGE.id, ...MAERLLYS_SWYLL_MARRIAGE.participantIds),
     createMarriage(TONNARTH_MAERLLYS_MARRIAGE.id, ...TONNARTH_MAERLLYS_MARRIAGE.participantIds)
   ]),
@@ -197,8 +199,8 @@ export const HOUSE_MAERLLYS_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
-    sourceNote: 'Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie sowie Elowen und Rhys bleiben unverheiratet und ohne Verlobung. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert.'
+    sourceNote: 'Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie sowie Elowen und Rhys bleiben unverheiratet und ohne Verlobung. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert.'
   })
 });

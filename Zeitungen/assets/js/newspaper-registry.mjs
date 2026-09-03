@@ -15,6 +15,17 @@ const entries = Object.freeze([
     issues: [issueEntry("/Zeitungen/data/schwarzbote-gwynthor/edition.mjs?v=20260903a")]
   }),
   publicationEntry({
+    id: "celtigerns-echo-gwynthor",
+    aliases: Object.freeze(["echo-gwynthor"]),
+    titleId: "celtigerns-echo",
+    placeId: "gwynthor",
+    name: "Celtigerns Echo",
+    edition: "Gwynthor",
+    cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+    themeId: "celtigerns-echo",
+    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-gwynthor/edition.mjs?v=20260903a")]
+  }),
+  publicationEntry({
     id: "schwarzbote-abergwint",
     aliases: Object.freeze(["abergwint"]),
     titleId: "schwarzbote",
@@ -25,6 +36,17 @@ const entries = Object.freeze([
     cover: "/Zeitungen/data/schwarzbote-abergwint/assets/schwarzbote-abergwint.png",
     themeId: "schwarzbote",
     issues: [issueEntry("/Zeitungen/data/schwarzbote-abergwint/edition.mjs?v=20260903a")]
+  }),
+  publicationEntry({
+    id: "celtigerns-echo-abergwint",
+    aliases: Object.freeze(["echo-abergwint"]),
+    titleId: "celtigerns-echo",
+    placeId: "abergwint",
+    name: "Celtigerns Echo",
+    edition: "Abergwint",
+    cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+    themeId: "celtigerns-echo",
+    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-abergwint/edition.mjs?v=20260903a")]
   }),
   publicationEntry({
     id: "schwarzbote-castellbryn",
@@ -39,6 +61,17 @@ const entries = Object.freeze([
     issues: [issueEntry("/Zeitungen/data/schwarzbote-castellbryn/edition.mjs?v=20260903a")]
   }),
   publicationEntry({
+    id: "celtigerns-echo-castellbryn",
+    aliases: Object.freeze(["echo-castellbryn"]),
+    titleId: "celtigerns-echo",
+    placeId: "castellbryn",
+    name: "Celtigerns Echo",
+    edition: "Castellbryn",
+    cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+    themeId: "celtigerns-echo",
+    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-castellbryn/edition.mjs?v=20260903a")]
+  }),
+  publicationEntry({
     id: "schwarzbote-rhosmere",
     aliases: Object.freeze(["rhosmere"]),
     titleId: "schwarzbote",
@@ -49,6 +82,17 @@ const entries = Object.freeze([
     cover: "/Zeitungen/data/schwarzbote-rhosmere/assets/schwarzbote-rhosmere.png",
     themeId: "schwarzbote",
     issues: [issueEntry("/Zeitungen/data/schwarzbote-rhosmere/edition.mjs?v=20260903a")]
+  }),
+  publicationEntry({
+    id: "celtigerns-echo-rhosmere",
+    aliases: Object.freeze(["echo-rhosmere"]),
+    titleId: "celtigerns-echo",
+    placeId: "rhosmere",
+    name: "Celtigerns Echo",
+    edition: "Rhosmere",
+    cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+    themeId: "celtigerns-echo",
+    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-rhosmere/edition.mjs?v=20260903a")]
   })
 ]);
 

@@ -59,6 +59,7 @@
       family("haus-braglas", "Braglas", "Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-tonnarth", "Tonnarth", "Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-ysgrif", "Ysgrif", "Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png", { seat: "Gwynthor", liege: "Draig" }),
+      family("haus-falchdyn", "Falchdyn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),
     ]),
   ]);

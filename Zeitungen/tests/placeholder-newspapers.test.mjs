@@ -13,7 +13,7 @@ const workspaceRoot = resolve(testDirectory, "../..");
 const editions = Object.freeze([castellbryn, rhosmere]);
 
 test("Castellbryn und Rhosmere besitzen eigenständige registrierte Ausgaben", () => {
-  assert.equal(getNewspaperEntries().length, 4);
+  assert.equal(getNewspaperEntries().length, 8);
   assert.equal(findNewspaperEntry("castellbryn")?.id, castellbryn.id);
   assert.equal(findNewspaperEntry("rhosmere")?.id, rhosmere.id);
   assert.equal(castellbryn.location.href, "/Orte/grossstadt.html?id=castellbryn");

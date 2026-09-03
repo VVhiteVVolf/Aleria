@@ -135,7 +135,8 @@ export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
   maerllys: gwynthorCommonerProfile(),
   braglas: gwynthorCommonerProfile(),
   tonnarth: gwynthorCommonerProfile(),
-  ysgrif: gwynthorCommonerProfile()
+  ysgrif: gwynthorCommonerProfile(),
+  falchdyn: gwynthorCommonerProfile()
 });
 
 const LLYSFAEN_COMMONER_PATH = Object.freeze([

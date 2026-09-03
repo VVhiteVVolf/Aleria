@@ -3,7 +3,7 @@ import {
   findArticle,
   findAuthor,
   findArticleType
-} from "./newspaper-data-loader.mjs?v=20260903a";
+} from "./newspaper-data-loader.mjs?v=20260903b";
 import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs?v=20260903a";
 import { formatPublicationDate } from "./newspaper-aleria-date.mjs?v=20260903a";
 import { buildIssueHref } from "./newspaper-archive.mjs?v=20260903a";

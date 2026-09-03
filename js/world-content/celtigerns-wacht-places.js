@@ -4,7 +4,7 @@
   const countyRoot = "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht";
   const blankDataPath = "data/celtigerns-wacht-place.data.js";
   const llamreisMappedDataPath = "data/llamreis-mapped-place.data.js?v=llamreis-maps-20260902a";
-  const abergwintDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Gwendolyns_Ufer/Abergwints_Bannkreis/Abergwint/ort.data.js?v=abergwint-content-20260902c";
+  const abergwintDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Gwendolyns_Ufer/Abergwints_Bannkreis/Abergwint/ort.data.js?v=abergwint-content-20260903a";
   const castellbrynDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Herrschaft_Rhonwens_Traenen/Castellbryns_Bannkreis/Castellbryn/ort.data.js?v=castellbryn-preparation-20260902a";
   const rhosmereDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Arthus_Streben/Rhosmeres_Bannkreis/Rhosmere/ort.data.js?v=rhosmere-preparation-20260902a";
 
@@ -95,7 +95,7 @@
   const definitions = Object.freeze([
     define("gwynthor", "Gwynthor", "Großstadt", "county", {
       featured: true,
-      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-content-20260902c",
+      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=gwynthor-content-20260903a",
       hierarchy: [
         ...baseHierarchy,
         { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },

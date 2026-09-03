@@ -70,9 +70,9 @@ test("Ausgaben- und Artikellinks bewahren den gewählten Archivstand", () => {
   );
 });
 
-test("Jeder vorbereitete Ort besitzt den Schwarzboten als Standardblatt", () => {
+test("Jeder vorbereitete Ort besitzt Schwarzboten und Celtigerns Echo mit eindeutigem Standardblatt", () => {
   const entries = getNewspaperEntries();
-  assert.equal(entries.length, 4);
+  assert.equal(entries.length, 8);
   const placeIds = new Set(entries.map((entry) => entry.placeId));
   for (const placeId of placeIds) {
     const placeEntries = getNewspaperEntriesForPlace(placeId);
@@ -81,9 +81,13 @@ test("Jeder vorbereitete Ort besitzt den Schwarzboten als Standardblatt", () => 
   }
   for (const placeId of ["gwynthor", "abergwint", "castellbryn", "rhosmere"]) {
     const placeEntries = getNewspaperEntriesForPlace(placeId);
-    assert.equal(placeEntries.length, 1);
+    assert.equal(placeEntries.length, 2);
     assert.equal(findDefaultNewspaperEntryForPlace(placeId)?.titleId, "schwarzbote");
-    assert.equal(placeEntries[0].issues[0].id, "1740-03-18");
+    assert.deepEqual(
+      new Set(placeEntries.map((entry) => entry.titleId)),
+      new Set(["schwarzbote", "celtigerns-echo"])
+    );
+    placeEntries.forEach((entry) => assert.equal(entry.issues[0].id, "1740-03-18"));
   }
 });
 

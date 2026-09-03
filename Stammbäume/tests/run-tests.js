@@ -1059,6 +1059,12 @@ import { HOUSE_AELMOR_FAMILY } from '../assets/js/data/house-aelmor-family.js';
 import { HOUSE_BRAGLAS_FAMILY } from '../assets/js/data/house-braglas-family.js';
 import { HOUSE_DRAENMELYN_FAMILY } from '../assets/js/data/house-draenmelyn-family.js';
 import { HOUSE_DRAENMELYN_PORTRAITS } from '../assets/js/data/house-draenmelyn-portraits.js';
+import {
+  FALCHDYN_HOUSE_BIOGRAPHY,
+  HOUSE_FALCHDYN_FAMILY
+} from '../assets/js/data/house-falchdyn-family.js';
+import { HOUSE_FALCHDYN_PORTRAITS } from '../assets/js/data/house-falchdyn-portraits.js';
+import { FALCHDYN_MAERLLYS_MARRIAGE } from '../assets/js/data/falchdyn-maerllys-marriage.js';
 import { HOUSE_MAERLLYS_FAMILY } from '../assets/js/data/house-maerllys-family.js';
 import { HOUSE_MAERLLYS_PORTRAITS } from '../assets/js/data/house-maerllys-portraits.js';
 import { HOUSE_PENDRWN_FAMILY } from '../assets/js/data/house-pendrwn-family.js';
@@ -8105,9 +8111,9 @@ test('createFounderTimeJumpPlaceholderHouseFamily setzt einen leeren Zeitsprung 
   assert.deepEqual(timeJump.rels.children, []);
 });
 
-test('registriert acht Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks', async () => {
-  const expectedSlugs = ['draenmelyn', 'pendrwn', 'swyll', 'aelmor', 'maerllys', 'braglas', 'tonnarth', 'ysgrif'];
-  const expectedTitles = ['Draenmelyn', 'Pendrwn', 'Swyll', 'Aelmor', 'Maerllys', 'Braglas', 'Tonnarth', 'Ysgrif'];
+test('registriert neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks', async () => {
+  const expectedSlugs = ['draenmelyn', 'pendrwn', 'swyll', 'aelmor', 'maerllys', 'braglas', 'tonnarth', 'ysgrif', 'falchdyn'];
+  const expectedTitles = ['Draenmelyn', 'Pendrwn', 'Swyll', 'Aelmor', 'Maerllys', 'Braglas', 'Tonnarth', 'Ysgrif', 'Falchdyn'];
   const placeholderSlugs = new Set();
   const sourceManifest = JSON.parse(await readFile(
     new URL('../assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/wappen-sources.json', import.meta.url),
@@ -8118,8 +8124,8 @@ test('registriert acht Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafsc
     'utf8'
   );
 
-  assert.equal(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.length, 8);
-  assert.equal(GWYNTHOR_COMMONER_HOUSE_FAMILIES.length, 8);
+  assert.equal(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.length, 9);
+  assert.equal(GWYNTHOR_COMMONER_HOUSE_FAMILIES.length, 9);
   assert.deepEqual(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.map(definition => definition.slug), expectedSlugs);
   assert.deepEqual(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.map(definition => definition.title), expectedTitles);
   assert.deepEqual(Object.keys(sourceManifest), expectedSlugs);
@@ -8176,6 +8182,189 @@ test('registriert acht Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafsc
       assert.deepEqual(timeJump.rels.children, []);
     }
   }));
+});
+
+test('bildet Haus Falchdyn mit drei Großvätern, vier wegverheirateten Töchtern und unverheirateten Sprösslingen ab', async () => {
+  const family = assertValidFamily(HOUSE_FALCHDYN_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+  const chartById = new Map(converted.data.map(node => [node.id, node]));
+  const crest = converted.data.find(node => node.data.nodeKind === 'house-crest');
+  const timeJump = converted.data.find(node => node.data.nodeKind === 'time-jump');
+  const founderPartnership = family.partnerships.find(partnership => (
+    partnership.id === family.lineage.founderPartnershipId
+  ));
+  const grandfathers = ['dafydd-falchdyn', 'iorwerth-falchdyn', 'madoc-falchdyn'];
+  const youngest = [
+    'ceredig-falchdyn',
+    'branwen-falchdyn',
+    'taliesin-falchdyn',
+    'tegid-falchdyn',
+    'eluned-falchdyn',
+    'gethin-falchdyn',
+    'seren-falchdyn',
+    'aled-falchdyn',
+    'maredudd-falchdyn',
+    'ffion-falchdyn',
+    'idris-falchdyn'
+  ];
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/falchdyn-sources.json', import.meta.url),
+    'utf8'
+  ));
+  const portraitSources = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-falchdyn/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+  const imagePaths = [
+    family.document.emblem,
+    family.extensions.houseBiographyModule.image,
+    family.extensions.houseBiographyModule.house.abilities[0].icon
+  ];
+  const reachableNodeIds = new Set();
+  const pendingNodeIds = [family.view.focusPersonId];
+
+  while (pendingNodeIds.length) {
+    const nodeId = pendingNodeIds.shift();
+    if (reachableNodeIds.has(nodeId)) continue;
+    reachableNodeIds.add(nodeId);
+    const node = chartById.get(nodeId);
+    if (!node) continue;
+    [...node.rels.children, ...node.rels.spouses].forEach(relativeId => {
+      if (!reachableNodeIds.has(relativeId)) pendingNodeIds.push(relativeId);
+    });
+  }
+
+  assert.equal(family.persons.length, 35);
+  assert.equal(family.partnerships.length, 12);
+  assert.equal(family.parentages.length, 22);
+  assert.equal(family.cadetBranches.length, 4);
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.extensions.blankFamily, false);
+  assert.equal(family.extensions.pendingDescendantReview, false);
+  assert.equal(family.extensions.chartLayoutPolicy, 'strict-v1');
+  assert.deepEqual(auditFamilyChartLayoutPolicy(family).issues, []);
+  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.document.houseProfile.rankId, 'commoner');
+  assert.equal(family.document.houseProfile.seat, 'Gwynthor');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+  assert.ok(founderPartnership);
+  founderPartnership.participantIds.forEach(personId => {
+    const founder = graph.getPerson(personId);
+    assert.equal(founder.name, '???');
+    assert.equal(founder.status, 'dead');
+    assert.equal(founder.death, '????');
+  });
+  assert.deepEqual(family.timeJumps[0].childIds, grandfathers);
+  assert.deepEqual(graph.getChildren('dafydd-falchdyn').map(person => person.id).sort(), [
+    'aneirin-falchdyn',
+    'rhodri-falchdyn'
+  ]);
+  assert.deepEqual(graph.getChildren('iorwerth-falchdyn').map(person => person.id).sort(), [
+    'emrys-falchdyn',
+    'owain-falchdyn'
+  ]);
+  assert.deepEqual(graph.getChildren('madoc-falchdyn').map(person => person.id).sort(), [
+    'angharad-falchdyn',
+    'efa-falchdyn',
+    'llio-falchdyn',
+    'nest-falchdyn'
+  ]);
+  assert.deepEqual(family.cadetBranches.map(branch => branch.parentPartnershipId).sort(), [
+    FALCHDYN_MAERLLYS_MARRIAGE.id,
+    'marriage-angharad-unknown-falchdyn',
+    'marriage-efa-unknown-falchdyn',
+    'marriage-nest-unknown-falchdyn'
+  ].sort());
+  assert.equal(family.cadetBranches.find(branch => (
+    branch.parentPartnershipId === FALCHDYN_MAERLLYS_MARRIAGE.id
+  )).targetFamilyId, 'haus-maerllys');
+  youngest.forEach(personId => {
+    assert.equal(
+      family.partnerships.some(partnership => partnership.participantIds.includes(personId)),
+      false,
+      `${graph.getPerson(personId).name} muss in der jüngsten Generation unverheiratet bleiben`
+    );
+  });
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.name} muss von der Falchdyn-Wurzel aus sichtbar erreichbar sein`);
+  });
+  assert.ok(crest);
+  assert.ok(timeJump);
+  assert.deepEqual(crest.rels.children, [timeJump.id]);
+  assert.deepEqual(timeJump.rels.parents, [crest.id]);
+  assert.deepEqual(timeJump.rels.children, grandfathers);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), [
+    'celtigernsEchoEmblem',
+    'crest',
+    'houseBiographyImage'
+  ]);
+  assert.deepEqual(Object.keys(portraitSources), Object.keys(HOUSE_FALCHDYN_PORTRAITS));
+  ['dafydd-falchdyn', 'iorwerth-falchdyn'].forEach(personId => {
+    assert.equal(graph.getPerson(personId).status, 'alive');
+    assert.equal(graph.getPerson(personId).death, '');
+  });
+  [
+    ['catrin-spouse-falchdyn', 'Catrin Pencaletwch'],
+    ['enid-spouse-falchdyn', 'Enid Braffwrdd'],
+    ['lowri-spouse-falchdyn', 'Lowri Llawen'],
+    ['nerys-spouse-falchdyn', 'Nerys Anfoesgarwch']
+  ].forEach(([personId, name]) => {
+    assert.equal(graph.getPerson(personId).name, name);
+    assert.equal(graph.getPerson(personId).title, 'Autorin bei Celtigerns Echo');
+  });
+  await Promise.all(imagePaths.map(async imagePath => {
+    const bytes = await readFile(new URL(`../${imagePath}`, import.meta.url));
+    assert.deepEqual([...bytes.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+    assert.ok(bytes.length > 100);
+  }));
+  await Promise.all(Object.values(HOUSE_FALCHDYN_PORTRAITS).map(async imagePath => {
+    const bytes = await readFile(new URL(`../${imagePath}`, import.meta.url));
+    assert.equal(bytes.subarray(0, 4).toString('ascii'), 'RIFF');
+    assert.ok(bytes.length < 1_000_000);
+  }));
+});
+
+test('spiegelt Llio Falchdyns Ehe mit Geraint Maerllys ohne doppelte Nachkommenslinie', () => {
+  const falchdyn = assertValidFamily(HOUSE_FALCHDYN_FAMILY).family;
+  const maerllys = assertValidFamily(HOUSE_MAERLLYS_FAMILY).family;
+  const falchdynMarriage = falchdyn.partnerships.find(partnership => (
+    partnership.id === FALCHDYN_MAERLLYS_MARRIAGE.id
+  ));
+  const maerllysMarriage = maerllys.partnerships.find(partnership => (
+    partnership.id === FALCHDYN_MAERLLYS_MARRIAGE.id
+  ));
+
+  assert.deepEqual(falchdynMarriage, maerllysMarriage);
+  FALCHDYN_MAERLLYS_MARRIAGE.participantIds.forEach(personId => {
+    const falchdynPerson = falchdyn.persons.find(person => person.id === personId);
+    const maerllysPerson = maerllys.persons.find(person => person.id === personId);
+    assert.equal(falchdynPerson.worldPersonId, maerllysPerson.worldPersonId);
+    assert.equal(falchdynPerson.name, maerllysPerson.name);
+    assert.equal(falchdynPerson.birth, maerllysPerson.birth);
+  });
+  assert.equal(falchdyn.parentages.some(parentage => (
+    parentage.partnershipId === FALCHDYN_MAERLLYS_MARRIAGE.id
+  )), false);
+  assert.equal(maerllys.parentages.some(parentage => (
+    parentage.partnershipId === FALCHDYN_MAERLLYS_MARRIAGE.id
+  )), false);
+});
+
+test('liefert Haus Falchdyns ausgearbeitete Hausbiografie mit Hauptbild und Zeitungsemblem aus', () => {
+  const module = getHouseBiographyModule(HOUSE_FALCHDYN_FAMILY);
+  const html = renderHouseBiography({ family: HOUSE_FALCHDYN_FAMILY, biographyModule: module });
+
+  assert.equal(HOUSE_FALCHDYN_FAMILY.extensions.houseBiographyModule, FALCHDYN_HOUSE_BIOGRAPHY);
+  assert.match(module.image, /Falchdyn-Hausbild\.png$/);
+  assert.match(module.house.crestImage, /Falchdyn\.png$/);
+  assert.match(module.house.abilities[0].icon, /Celtigerns-Echo\.png$/);
+  assert.match(module.house.biographyText, /Schreiber- und Journalistenfamilie/);
+  assert.match(module.house.biographyText, /kleinere Redaktionsstuben/);
+  assert.match(module.house.extraSections[0].text, /sonst überhört werden/);
+  assert.match(html, /Haus Falchdyn/);
+  assert.match(html, /Celtigerns Echo/);
+  assert.match(html, /Was gehört wird, geht nicht verloren/);
 });
 
 test('gliedert Haus Argall als kleines Bürgerhaus aus Llysfaen mit Draig-Gegenakte ein', async () => {
@@ -8937,8 +9126,8 @@ test('Haus Maerllys bleibt bis zu Nias Großvater begrenzt und lässt die junge 
     });
   }
 
-  assert.equal(family.persons.length, 14);
-  assert.equal(family.partnerships.length, 5);
+  assert.equal(family.persons.length, 15);
+  assert.equal(family.partnerships.length, 6);
   assert.equal(family.parentages.length, 8);
   assert.equal(family.cadetBranches.length, 1);
   assert.equal(family.extensions.blankFamily, false);

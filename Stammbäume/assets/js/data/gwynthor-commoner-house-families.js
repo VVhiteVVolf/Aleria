@@ -3,6 +3,7 @@ import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profi
 import { HOUSE_AELMOR_FAMILY } from './house-aelmor-family.js';
 import { HOUSE_BRAGLAS_FAMILY } from './house-braglas-family.js';
 import { HOUSE_DRAENMELYN_FAMILY } from './house-draenmelyn-family.js';
+import { HOUSE_FALCHDYN_FAMILY } from './house-falchdyn-family.js';
 import { HOUSE_MAERLLYS_FAMILY } from './house-maerllys-family.js';
 import { HOUSE_PENDRWN_FAMILY } from './house-pendrwn-family.js';
 import { HOUSE_SWYLL_FAMILY } from './house-swyll-family.js';
@@ -19,13 +20,15 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'maerllys', title: 'Maerllys', file: 'Maerllys.png' }),
   Object.freeze({ slug: 'braglas', title: 'Braglas', file: 'Braglas.png' }),
   Object.freeze({ slug: 'tonnarth', title: 'Tonnarth', file: 'Tonnarth.png' }),
-  Object.freeze({ slug: 'ysgrif', title: 'Ysgrif', file: 'Ysgrif.png' })
+  Object.freeze({ slug: 'ysgrif', title: 'Ysgrif', file: 'Ysgrif.png' }),
+  Object.freeze({ slug: 'falchdyn', title: 'Falchdyn', file: 'Falchdyn.png' })
 ]);
 
 const DEVELOPED_FAMILIES = Object.freeze({
   aelmor: HOUSE_AELMOR_FAMILY,
   braglas: HOUSE_BRAGLAS_FAMILY,
   draenmelyn: HOUSE_DRAENMELYN_FAMILY,
+  falchdyn: HOUSE_FALCHDYN_FAMILY,
   maerllys: HOUSE_MAERLLYS_FAMILY,
   pendrwn: HOUSE_PENDRWN_FAMILY,
   swyll: HOUSE_SWYLL_FAMILY,

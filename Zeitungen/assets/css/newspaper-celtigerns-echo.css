@@ -1,0 +1,49 @@
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] {
+  --news-ink: #30251b;
+  --news-ink-soft: #68523d;
+  --news-red: #984b3e;
+  --news-red-dark: #643027;
+  --news-gold: #ad7838;
+  --news-gold-light: #f0cf83;
+  --news-paper: #efd8a5;
+  --news-paper-light: #fff3d4;
+  --news-paper-deep: #d9b978;
+  --news-shadow: rgba(45, 27, 13, 0.4);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-sheet {
+  background:
+    radial-gradient(circle at 12% 7%, rgba(255, 255, 255, 0.62), transparent 25%),
+    repeating-linear-gradient(0deg, transparent 0 29px, rgba(133, 84, 42, 0.025) 30px 31px),
+    linear-gradient(135deg, #fff5d9, #efd9a7 60%, #d9b876);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-archive-navigation,
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-article-card,
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-author-card {
+  border-color: rgba(133, 77, 43, 0.52);
+  background-color: rgba(255, 246, 219, 0.78);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-author-visual {
+  color: #fff0c7;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 221, 150, 0.25), transparent 38%),
+    linear-gradient(145deg, #955040, #5d3028 62%, #38231c);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-article-ribbon,
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-article-card[data-article-type] .newspaper-article-ribbon {
+  background: linear-gradient(90deg, #754033, #aa6650);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-type-card {
+  border-top-color: #a66048;
+  background: rgba(255, 247, 223, 0.7);
+}
+
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-button,
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-archive-direction:not(.is-disabled):hover,
+.newspaper-page[data-newspaper-theme="celtigerns-echo"] .newspaper-archive-direction:not(.is-disabled):focus-visible {
+  background: linear-gradient(#a35b45, #6a3429);
+}
