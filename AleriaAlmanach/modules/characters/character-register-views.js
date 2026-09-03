@@ -1,5 +1,6 @@
 const CHARACTER_REGISTER_VIEW_OPTIONS = [
-  { value: 'collections', label: 'Sammlungen' },
+  { value: 'families', label: 'Stammbäume' },
+  { value: 'collections', label: 'Eigene Gruppen' },
   { value: 'relevance', label: 'Relevanz' },
   { value: 'status', label: 'Status' },
   { value: 'location', label: 'Ort' },
@@ -19,8 +20,9 @@ const CHARACTER_REGISTER_FIXED_BUCKET_ORDER = {
   status: ['Aktiv', 'Inaktiv', 'Verschollen', 'Tot', 'Unklar', 'Ohne Status']
 };
 
-let _characterRegisterViewMode = 'collections';
+let _characterRegisterViewMode = 'families';
 let _characterRegisterSortMode = 'name-asc';
+let _characterRegisterSearch = '';
 
 function getCharacterRegisterViewMode() {
   return _characterRegisterViewMode;
@@ -32,7 +34,7 @@ function isCharacterRegisterFacetView(mode = _characterRegisterViewMode) {
 
 function setCharacterRegisterViewMode(mode, options = {}) {
   const isKnownMode = CHARACTER_REGISTER_VIEW_OPTIONS.some(option => option.value === mode);
-  _characterRegisterViewMode = isKnownMode ? mode : 'collections';
+  _characterRegisterViewMode = isKnownMode ? mode : 'families';
   if (options.render !== false && typeof renderCharGrid === 'function') renderCharGrid();
 }
 
@@ -102,8 +104,101 @@ function getCharacterRegisterFacetLabel(char, mode = _characterRegisterViewMode)
   return '';
 }
 
+function getCharacterRegisterSearchText(char) {
+  if (typeof buildCharacterSearchText === 'function') return buildCharacterSearchText(char);
+  return [
+    char?.name,
+    char?.title,
+    char?.fraktion,
+    char?.faction,
+    char?.role,
+    char?.currentLocation,
+    char?.genealogy?.houseName,
+    ...(char?.aliases || [])
+  ].join(' ').toLocaleLowerCase('de');
+}
+
+function hasCharacterRegisterSearch() {
+  return !!_characterRegisterSearch.trim();
+}
+
+function filterCharacterRegisterEntries(chars) {
+  const needle = _characterRegisterSearch.trim().toLocaleLowerCase('de');
+  if (!needle) return Array.isArray(chars) ? chars : [];
+  return (Array.isArray(chars) ? chars : [])
+    .filter(char => getCharacterRegisterSearchText(char).includes(needle));
+}
+
+function getCharacterRegisterManualGroupLabel(char) {
+  if (typeof getCharacterAssignedTab !== 'function') return 'Unsortiert';
+  return getCharacterAssignedTab(char?.id) || 'Unsortiert';
+}
+
+function compareCharacterRegisterManualGroups(first, second) {
+  const firstGroup = getCharacterRegisterManualGroupLabel(first);
+  const secondGroup = getCharacterRegisterManualGroupLabel(second);
+  if (firstGroup === secondGroup) return 0;
+  if (firstGroup === 'Unsortiert') return 1;
+  if (secondGroup === 'Unsortiert') return -1;
+  return firstGroup.localeCompare(secondGroup, 'de', { sensitivity: 'base', numeric: true });
+}
+
+function getCharacterRegisterFamilyMemberships(char) {
+  const resolver = typeof window !== 'undefined'
+    ? window.AleriaCharacterGenealogy?.getFamilyMemberships
+    : null;
+  if (typeof resolver === 'function') return resolver(char);
+  return (char?.genealogy?.sources || [])
+    .filter(source => source?.familyId)
+    .map(source => ({
+      familyId: String(source.familyId),
+      familyTitle: String(source.familyId),
+      sortPath: String(source.familyId)
+    }));
+}
+
+function buildCharacterRegisterFamilyBuckets(chars) {
+  const byFamily = new Map();
+  const withoutTree = [];
+
+  (Array.isArray(chars) ? chars : []).forEach(char => {
+    const memberships = getCharacterRegisterFamilyMemberships(char);
+    if (!memberships.length) {
+      withoutTree.push(char);
+      return;
+    }
+    memberships.forEach(membership => {
+      const key = membership.familyId || membership.familyTitle;
+      if (!byFamily.has(key)) {
+        byFamily.set(key, {
+          key,
+          label: membership.familyTitle || membership.familyId,
+          emblem: membership.emblem || '',
+          sortPath: membership.sortPath || membership.familyTitle || membership.familyId,
+          chars: []
+        });
+      }
+      const bucket = byFamily.get(key);
+      if (!bucket.chars.some(item => String(item?.id || '') === String(char?.id || ''))) {
+        bucket.chars.push(char);
+      }
+    });
+  });
+
+  const buckets = Array.from(byFamily.values()).sort((first, second) =>
+    first.sortPath.localeCompare(second.sortPath, 'de', { sensitivity: 'base', numeric: true })
+  );
+  buckets.forEach(bucket => bucket.chars.sort(compareCharacterRegisterManualGroups));
+  if (withoutTree.length) {
+    withoutTree.sort(compareCharacterRegisterManualGroups);
+    buckets.push({ key: 'without-family-tree', label: 'Ohne Stammbaum', emblem: '', sortPath: '\uffff', chars: withoutTree });
+  }
+  return buckets;
+}
+
 function buildCharacterRegisterFacetBuckets(chars, mode = _characterRegisterViewMode) {
   if (!isCharacterRegisterFacetView(mode)) return [];
+  if (mode === 'families') return buildCharacterRegisterFamilyBuckets(chars);
   const byKey = new Map();
   (Array.isArray(chars) ? chars : []).forEach(char => {
     const label = getCharacterRegisterFacetLabel(char, mode);
@@ -125,8 +220,27 @@ function buildCharacterRegisterFacetBuckets(chars, mode = _characterRegisterView
   });
 }
 
-function getCharacterRegisterFacetKey(label) {
-  return `facet:${_characterRegisterViewMode}:${String(label || '').toLocaleLowerCase('de')}`;
+function getCharacterRegisterFacetKey(label, bucket = null) {
+  const key = bucket?.key || String(label || '').toLocaleLowerCase('de');
+  return `facet:${_characterRegisterViewMode}:${key}`;
+}
+
+function getCharacterRegisterViewDescription() {
+  if (_characterRegisterViewMode === 'families') {
+    return 'Automatisch aus den Stammbäumen. Angeheiratete können in mehreren Häusern erscheinen, öffnen aber immer dasselbe Profil.';
+  }
+  if (_characterRegisterViewMode === 'collections') {
+    return 'Eigene Gruppen werden manuell gepflegt. Figuren ohne Gruppe landen gesammelt unter „Unsortiert“.';
+  }
+  return 'Diese Ansicht gruppiert dieselben Figuren nur vorübergehend nach ihrem Profil.';
+}
+
+function escapeCharacterRegisterMarkup(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 function renderCharacterRegisterViewToolbar(grid) {
@@ -137,7 +251,7 @@ function renderCharacterRegisterViewToolbar(grid) {
   toolbar.innerHTML = `
     <div class="char-register-view-copy">
       <span>Registeransicht</span>
-      <small>Sammlungen sind dauerhaft gepflegt. Die anderen Ansichten gruppieren dieselben Figuren nur für den Moment.</small>
+      <small>${getCharacterRegisterViewDescription()}</small>
     </div>
     <div class="char-register-view-options" role="group" aria-label="Charaktere gruppieren nach">
       ${CHARACTER_REGISTER_VIEW_OPTIONS.map(option => `
@@ -154,7 +268,17 @@ function renderCharacterRegisterViewToolbar(grid) {
         ${CHARACTER_REGISTER_SORT_OPTIONS.map(option => `
           <option value="${option.value}"${option.value === _characterRegisterSortMode ? ' selected' : ''}>${option.label}</option>`).join('')}
       </select>
-    </label>`;
+    </label>
+    <div class="char-register-find-row">
+      <label class="char-register-find-control">
+        <span>Figur finden</span>
+        <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias">
+      </label>
+      <div class="char-register-group-controls" aria-label="Gruppen ein- oder ausklappen">
+        <button type="button" data-character-grid-action="collapse-all-groups">Alle einklappen</button>
+        <button type="button" data-character-grid-action="expand-all-groups">Alle aufklappen</button>
+      </div>
+    </div>`;
   grid.appendChild(toolbar);
 }
 
@@ -163,7 +287,7 @@ function handleCharacterRegisterViewClick(event) {
   const grid = document.getElementById('char-grid');
   if (!trigger || !grid || !grid.contains(trigger) || trigger.disabled) return;
   event.preventDefault();
-  setCharacterRegisterViewMode(trigger.dataset.viewMode || 'collections');
+  setCharacterRegisterViewMode(trigger.dataset.viewMode || 'families');
 }
 
 function handleCharacterRegisterViewChange(event) {
@@ -173,7 +297,24 @@ function handleCharacterRegisterViewChange(event) {
   setCharacterRegisterSortMode(select.value || 'name-asc');
 }
 
+function handleCharacterRegisterSearch(event) {
+  const input = event.target?.closest?.('[data-character-register-action="search"]');
+  const grid = document.getElementById('char-grid');
+  if (!input || !grid || !grid.contains(input)) return;
+  _characterRegisterSearch = input.value || '';
+  if (typeof renderCharGrid !== 'function') return;
+  renderCharGrid();
+  const nextInput = document.querySelector('[data-character-register-action="search"]');
+  if (!nextInput) return;
+  nextInput.focus({ preventScroll: true });
+  nextInput.setSelectionRange(_characterRegisterSearch.length, _characterRegisterSearch.length);
+}
+
 if (typeof document !== 'undefined') {
   document.addEventListener('click', handleCharacterRegisterViewClick);
   document.addEventListener('change', handleCharacterRegisterViewChange);
+  document.addEventListener('input', handleCharacterRegisterSearch);
+  document.addEventListener('aleria:character-genealogy-ready', () => {
+    if (typeof renderCharGrid === 'function') renderCharGrid();
+  });
 }

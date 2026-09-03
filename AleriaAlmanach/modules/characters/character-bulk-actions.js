@@ -34,7 +34,7 @@ function getBulkMainGroupOptions(selected = '') {
   return ['Alle', ..._charTabs.filter(tab => tab !== 'Alle' && tab !== CHARACTER_ARCHIVE_TAB)]
     .map(tab => {
       const value = tab === 'Alle' ? '' : tab;
-      const label = tab === 'Alle' ? 'Keine Gruppe' : tab;
+      const label = tab === 'Alle' ? 'Unsortiert' : tab;
       return `<option value="${escapeHtml(value)}"${selected === value ? ' selected' : ''}>${escapeHtml(label)}</option>`;
     })
     .join('');

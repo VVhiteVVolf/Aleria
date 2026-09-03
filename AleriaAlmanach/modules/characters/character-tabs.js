@@ -320,6 +320,9 @@ function selectCharacterTab(tab) {
   if (tab !== CHARACTER_ARCHIVE_TAB && !_charTabs.includes(tab)) return;
   _activeCharTab = tab;
   _activeCharSubtab = 'Alle';
+  if (tab !== 'Alle' && typeof setCharacterRegisterViewMode === 'function') {
+    setCharacterRegisterViewMode('collections', { render: false });
+  }
   renderCharSubtabs();
   renderCharGrid();
 }
@@ -614,6 +617,10 @@ function handleCharacterSubtabClick(event) {
 
   if (action === 'select') {
     selectCharacterTab(tab);
+    return;
+  }
+  if (action === 'select-unsorted') {
+    if (typeof showUnsortedCharacters === 'function') showUnsortedCharacters();
     return;
   }
   if (action === 'select-subtab') {

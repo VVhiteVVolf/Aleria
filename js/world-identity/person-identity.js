@@ -90,6 +90,19 @@ function hasSourceLink(character, candidate) {
   ));
 }
 
+function sourceKey(familyId, personId) {
+  const family = cleanText(familyId);
+  const person = cleanText(personId);
+  return family && person ? `${family}::${person}` : '';
+}
+
+function appendIndexEntry(index, key, character) {
+  if (!key) return;
+  const entries = index.get(key) || [];
+  entries.push(character);
+  index.set(key, entries);
+}
+
 function rankCharacterMatch(candidate, character) {
   const characterId = cleanText(character?.id);
   const worldPersonId = getCharacterWorldPersonId(character);
@@ -150,6 +163,36 @@ export function findBestCharacterMatch(candidate, characters = []) {
     .map(character => rankCharacterMatch(candidate, character))
     .filter(Boolean)
     .sort((first, second) => second.score - first.score)[0] || null;
+}
+
+// Importdialoge vergleichen viele Stammbaum-Personen mit demselben Charakterbestand.
+// Der Index bewahrt die bestehende Trefferlogik, vermeidet aber einen Vollscan pro Person.
+export function createCharacterMatchResolver(characters = []) {
+  const records = Array.isArray(characters) ? characters.filter(Boolean) : [];
+  const byWorldPersonId = new Map();
+  const bySource = new Map();
+  const byName = new Map();
+
+  records.forEach(character => {
+    appendIndexEntry(byWorldPersonId, getCharacterWorldPersonId(character), character);
+    (character?.genealogy?.sources || []).forEach(source => {
+      appendIndexEntry(bySource, sourceKey(source?.familyId, source?.personId), character);
+    });
+    new Set(characterNameKeys(character)).forEach(name => appendIndexEntry(byName, name, character));
+  });
+
+  return candidate => {
+    const worldPersonId = cleanText(candidate?.worldPersonId);
+    const worldMatches = worldPersonId ? byWorldPersonId.get(worldPersonId) : null;
+    if (worldMatches?.length) return rankCharacterMatch(candidate, worldMatches[0]);
+
+    const linkedBySource = bySource.get(sourceKey(candidate?.familyId, candidate?.personId));
+    if (linkedBySource?.length) return rankCharacterMatch(candidate, linkedBySource[0]);
+
+    const candidateName = normalizePersonName(candidate?.displayName);
+    if (candidateName.split(' ').filter(Boolean).length < 2) return null;
+    return findBestCharacterMatch(candidate, byName.get(candidateName) || []);
+  };
 }
 
 export const CHARACTER_IDENTITY_MATCH = Object.freeze({

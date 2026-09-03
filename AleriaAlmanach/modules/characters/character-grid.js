@@ -19,11 +19,24 @@ function toggleCharacterOrganizeMode() {
   renderCharGrid();
 }
 
+let _largeCharacterRegisterCollapseInitialized = false;
+
 function toggleCharGroupCollapse(groupKey) {
   const key = String(groupKey || '');
   if (!key) return;
   if (_collapsedCharGroups.has(key)) _collapsedCharGroups.delete(key);
   else _collapsedCharGroups.add(key);
+  renderCharGrid();
+}
+
+function setAllVisibleCharacterGroupsCollapsed(collapsed) {
+  document.querySelectorAll('#char-grid [data-group-key]').forEach(trigger => {
+    const key = String(trigger.dataset.groupKey || '');
+    if (!key) return;
+    if (collapsed) _collapsedCharGroups.add(key);
+    else _collapsedCharGroups.delete(key);
+  });
+  _largeCharacterRegisterCollapseInitialized = true;
   renderCharGrid();
 }
 
@@ -77,11 +90,11 @@ function getCharsForActiveTab() {
 }
 
 function getCharacterGroupLabel(char) {
-  return getCharacterAssignedTab(char?.id) || 'Keine Gruppe';
+  return getCharacterAssignedTab(char?.id) || 'Unsortiert';
 }
 
 function getCharacterGroupKey(label) {
-  return `group:${String(label || 'Keine Gruppe').toLowerCase()}`;
+  return `group:${String(label || 'Unsortiert').toLowerCase()}`;
 }
 
 function shouldRenderCharacterSubgroupBuckets() {
@@ -104,7 +117,7 @@ function buildCharacterGroupBuckets(chars) {
     .filter(tab => tab && tab !== 'Alle' && tab !== CHARACTER_ARCHIVE_TAB);
   const byLabel = new Map();
   orderedLabels.forEach(label => byLabel.set(label, []));
-  byLabel.set('Keine Gruppe', []);
+  byLabel.set('Unsortiert', []);
 
   chars.forEach(char => {
     const label = getCharacterGroupLabel(char);
@@ -143,12 +156,12 @@ function createCharacterCard(c, options = {}) {
   const playerOwnerLabel = getCharacterPlayerOwnerLabel(playerOwner);
   const assignedTab = getCharacterAssignedTab(c.id);
   const assignedSubtab = getCharacterAssignedSubtab(c.id, assignedTab);
-  const groupLabel = assignedTab || 'Keine Gruppe';
+  const groupLabel = assignedTab || 'Unsortiert';
   const showGroupSelect = !!options.organizeMode;
   const showBulkSelect = showGroupSelect && typeof getSelectedCharacterIds === 'function';
   const bulkSelected = showBulkSelect && getSelectedCharacterIds().includes(String(c.id || ''));
   const groupOptions = ['Alle', ..._charTabs.filter(tab => tab !== 'Alle')]
-    .map(tab => `<option value="${escapeHtml(tab)}"${(assignedTab || 'Alle') === tab ? ' selected' : ''}>${escapeHtml(tab === 'Alle' ? 'Keine Gruppe' : tab)}</option>`)
+    .map(tab => `<option value="${escapeHtml(tab)}"${(assignedTab || 'Alle') === tab ? ' selected' : ''}>${escapeHtml(tab === 'Alle' ? 'Unsortiert' : tab)}</option>`)
     .join('');
   const subgroupOptions = assignedTab && assignedTab !== CHARACTER_ARCHIVE_TAB
     ? getCharacterSubtabs(assignedTab)
@@ -218,16 +231,18 @@ function createCharacterCard(c, options = {}) {
 function createCharacterGroupSection(group, options = {}) {
   const section = document.createElement('section');
   const getGroupKey = options.getGroupKey || getCharacterGroupKey;
-  const groupKey = getGroupKey(group.label);
-  const emptyLabel = options.emptyLabel || 'Keine Gruppe';
+  const groupKey = getGroupKey(group.label, group);
+  const emptyLabel = options.emptyLabel || 'Unsortiert';
+  const emblemSrc = typeof sanitizeImageSrc === 'function' ? sanitizeImageSrc(group.emblem) : '';
   const sectionModifier = options.sectionModifier ? ` ${options.sectionModifier}` : '';
-  const collapsed = !_archiveSearchNeedle && !_charOrganizeMode && _collapsedCharGroups.has(groupKey);
-  section.className = 'char-group-section' + sectionModifier + (collapsed ? ' collapsed' : '');
+  const registerSearchActive = typeof hasCharacterRegisterSearch === 'function' && hasCharacterRegisterSearch();
+  const collapsed = !_archiveSearchNeedle && !registerSearchActive && !_charOrganizeMode && _collapsedCharGroups.has(groupKey);
+  section.className = 'char-group-section' + sectionModifier + (emblemSrc ? ' has-emblem' : '') + (collapsed ? ' collapsed' : '');
   if (options.datasetName) section.dataset[options.datasetName] = group.label;
   else section.dataset.charGroup = group.label;
   section.innerHTML = `
     <button class="char-group-section-head" type="button">
-      <span class="char-group-section-title">${escapeHtml(group.label)}</span>
+      <span class="char-group-section-title">${emblemSrc ? `<img class="char-group-section-emblem" src="${emblemSrc}" alt="" loading="lazy" decoding="async">` : ''}${escapeHtml(group.label)}</span>
       <span class="char-group-section-count">${group.chars.length} ${group.chars.length === 1 ? 'Charakter' : 'Charaktere'}</span>
       <span class="char-group-section-caret">${collapsed ? '▸' : '▾'}</span>
     </button>
@@ -264,6 +279,17 @@ function appendCharacterEmptyHint(grid, text) {
   grid.appendChild(hint);
 }
 
+function getCharacterGridFilteredEntries() {
+  const archiveFiltered = getCharsForActiveTab()
+    .filter(char => matchesArchiveSearch(buildCharacterSearchText(char)));
+  const registerFiltered = typeof filterCharacterRegisterEntries === 'function'
+    ? filterCharacterRegisterEntries(archiveFiltered)
+    : archiveFiltered;
+  return typeof filterCharactersForDashboard === 'function'
+    ? filterCharactersForDashboard(registerFiltered, _activeCharTab)
+    : registerFiltered;
+}
+
 function renderCharGrid() {
   const grid = document.getElementById('char-grid');
   if (!grid) return;
@@ -277,7 +303,7 @@ function renderCharGrid() {
   const actions = document.createElement('div');
   actions.className = 'char-archive-actions';
   actions.innerHTML = `
-    <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${_charOrganizeMode ? 'Ansicht' : 'Organisieren'}</button>
+    <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${_charOrganizeMode ? 'Ordnen beenden' : 'Mehrere einordnen'}</button>
     <button type="button" data-character-grid-action="export-archive">Charakterarchiv exportieren</button>
     <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>
     <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>`;
@@ -307,7 +333,10 @@ function renderCharGrid() {
     grid.appendChild(toolbar);
   }
 
-  const unfilteredChars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  const archiveFilteredChars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  const unfilteredChars = typeof filterCharacterRegisterEntries === 'function'
+    ? filterCharacterRegisterEntries(archiveFilteredChars)
+    : archiveFilteredChars;
   if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, unfilteredChars);
   const filteredChars = typeof filterCharactersForDashboard === 'function'
     ? filterCharactersForDashboard(unfilteredChars, _activeCharTab)
@@ -318,6 +347,15 @@ function renderCharGrid() {
   if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
   if (facetView && typeof buildCharacterRegisterFacetBuckets === 'function') {
     const buckets = buildCharacterRegisterFacetBuckets(chars);
+    const isLargeFamilyView = typeof getCharacterRegisterViewMode === 'function'
+      && getCharacterRegisterViewMode() === 'families'
+      && chars.length >= 120
+      && !_archiveSearchNeedle
+      && !(typeof hasCharacterRegisterSearch === 'function' && hasCharacterRegisterSearch());
+    if (isLargeFamilyView && !_largeCharacterRegisterCollapseInitialized) {
+      buckets.forEach(group => _collapsedCharGroups.add(getCharacterRegisterFacetKey(group.label, group)));
+      _largeCharacterRegisterCollapseInitialized = true;
+    }
     buckets.forEach(group => {
       grid.appendChild(createCharacterGroupSection(group, {
         sectionModifier: 'facet',
@@ -330,7 +368,7 @@ function renderCharGrid() {
     const groups = buildCharacterGroupBuckets(chars);
     groups.forEach(group => {
       grid.appendChild(createCharacterGroupSection(group, {
-        emptyLabel: 'Keine Gruppe',
+        emptyLabel: 'Unsortiert',
         onDrop: (charId, label) => assignCharToTab(charId, label)
       }));
     });
@@ -439,7 +477,7 @@ function handleCharacterGridActionClick(event) {
     return;
   }
   if (action === 'bulk-select-visible') {
-    selectVisibleCharactersForBulk(getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c))));
+    selectVisibleCharactersForBulk(getCharacterGridFilteredEntries());
     return;
   }
   if (action === 'bulk-clear-selection') {
@@ -452,6 +490,14 @@ function handleCharacterGridActionClick(event) {
   }
   if (action === 'bulk-archive') {
     setSelectedCharactersArchived(_activeCharTab !== CHARACTER_ARCHIVE_TAB);
+    return;
+  }
+  if (action === 'collapse-all-groups') {
+    setAllVisibleCharacterGroupsCollapsed(true);
+    return;
+  }
+  if (action === 'expand-all-groups') {
+    setAllVisibleCharacterGroupsCollapsed(false);
     return;
   }
   if (action === 'export-archive') {

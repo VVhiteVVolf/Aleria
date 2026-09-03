@@ -28,7 +28,7 @@ function identitySlug(value, fallback) {
 
 export { buildFamilyPersonDisplayName };
 
-function createWorldPersonId(familyId, person) {
+export function createWorldPersonId(familyId, person) {
   return cleanText(person?.worldPersonId)
     || cleanText(person?.extensions?.identity?.worldPersonId)
     || `person--${identitySlug(familyId, 'family-tree')}--${identitySlug(person?.id, 'person')}`;

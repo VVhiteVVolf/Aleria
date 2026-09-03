@@ -24,6 +24,20 @@ function createViewContext() {
     },
     getCharacterStatusLabel(value) {
       return { active: 'Aktiv', inactive: 'Inaktiv', missing: 'Verschollen', dead: 'Tot', unknown: 'Unklar' }[value] || '';
+    },
+    getCharacterAssignedTab(charId) {
+      return charId === 'shared' ? 'Diplomatie' : '';
+    },
+    window: {
+      AleriaCharacterGenealogy: {
+        getFamilyMemberships(char) {
+          if (char.id !== 'shared') return [];
+          return [
+            { familyId: 'haus-a', familyTitle: 'Haus A', sortPath: 'Nord > Haus A', emblem: 'a.png' },
+            { familyId: 'haus-b', familyTitle: 'Haus B', sortPath: 'Süd > Haus B', emblem: 'b.png' }
+          ];
+        }
+      }
     }
   });
   vm.runInContext(viewSource, context);
@@ -97,6 +111,28 @@ test('dynamic character facets merge labels case-insensitively and keep fallback
     Array.from(vm.runInContext("buildCharacterRegisterFacetBuckets(chars, 'location').map(bucket => bucket.label)", context)),
     ['Aleria', 'Ohne aktuellen Ort']
   );
+});
+
+test('family view shows one character in multiple trees while keeping one profile id', () => {
+  const context = createViewContext();
+  context.chars = [
+    { id: 'shared', name: 'Angeheiratete Figur' },
+    { id: 'unlinked', name: 'Freie Figur' }
+  ];
+
+  const buckets = vm.runInContext(
+    "buildCharacterRegisterFamilyBuckets(chars).map(bucket => ({ label: bucket.label, emblem: bucket.emblem, ids: bucket.chars.map(char => char.id) }))",
+    context
+  );
+  assert.deepEqual(Array.from(buckets, bucket => ({
+    label: bucket.label,
+    emblem: bucket.emblem,
+    ids: Array.from(bucket.ids)
+  })), [
+    { label: 'Haus A', emblem: 'a.png', ids: ['shared'] },
+    { label: 'Haus B', emblem: 'b.png', ids: ['shared'] },
+    { label: 'Ohne Stammbaum', emblem: '', ids: ['unlinked'] }
+  ]);
 });
 
 test('characters and creatures are primary registers instead of crowded theme tabs', () => {

@@ -3,7 +3,7 @@ let _characterDashboardFilter = '';
 const CHARACTER_DASHBOARD_FILTER_LABELS = {
   'missing-portrait': 'Kein Portrait',
   'missing-bio': 'Keine Beschreibung',
-  'missing-group': 'Keine Gruppe',
+  'missing-group': 'Unsortiert',
   important: 'Wichtige aktive Figuren',
   inactive: 'Tot / verschollen',
   plot: 'Plot-Knoten',
@@ -64,13 +64,24 @@ function filterCharactersForDashboard(chars, activeTab) {
   });
 }
 
+function showUnsortedCharacters() {
+  _activeCharTab = 'Alle';
+  _activeCharSubtab = 'Alle';
+  _characterDashboardFilter = 'missing-group';
+  if (typeof setCharacterRegisterViewMode === 'function') {
+    setCharacterRegisterViewMode('collections', { render: false });
+  }
+  renderCharSubtabs();
+  renderCharGrid();
+}
+
 function buildCharacterDashboardSummary(chars) {
   const visible = chars.filter(char => !char.archived);
   return {
     total: visible.length,
     missingPortrait: visible.filter(char => !sanitizeImageSrc(char.portrait)),
     missingBio: visible.filter(char => !characterHasDescription(char)),
-    missingGroup: visible.filter(char => !characterHasGroup(char)),
+    unsorted: visible.filter(char => !characterHasGroup(char)),
     important: visible.filter(isCharacterImportant),
     inactive: visible.filter(isCharacterInactiveOrGone),
     plot: visible.filter(isCharacterPlotNode),
@@ -83,7 +94,7 @@ function buildCharacterDashboardSummary(chars) {
 function buildCharacterDashboardGroups(chars) {
   const byGroup = new Map();
   chars.forEach(char => {
-    const group = getCharacterAssignedTab(char.id) || 'Keine Gruppe';
+    const group = getCharacterAssignedTab(char.id) || 'Unsortiert';
     byGroup.set(group, (byGroup.get(group) || 0) + 1);
   });
   return Array.from(byGroup.entries())
@@ -107,7 +118,7 @@ function renderCharacterDashboardMiniList(chars, emptyText) {
     <button class="char-dashboard-character" type="button"
       data-character-grid-action="open-character" data-char-id="${escapeHtml(char.id || '')}">
       <span class="char-dashboard-character-name">${escapeHtml(char.name || 'Unbenannt')}</span>
-      <span class="char-dashboard-character-meta">${escapeHtml(getCharacterAssignedTab(char.id) || getCharacterStatusLabel(char.status) || 'Keine Gruppe')}</span>
+      <span class="char-dashboard-character-meta">${escapeHtml(getCharacterAssignedTab(char.id) || getCharacterStatusLabel(char.status) || 'Unsortiert')}</span>
     </button>`).join('');
 }
 
@@ -115,7 +126,7 @@ function renderCharacterDashboardGroups(groups) {
   if (!groups.length) return '<div class="char-dashboard-empty">Noch keine Gruppen belegt.</div>';
   return groups.map(group => `
     <button class="char-dashboard-group" type="button"
-      data-character-dashboard-action="select-group" data-group="${escapeHtml(group.label === 'Keine Gruppe' ? '' : group.label)}">
+      data-character-dashboard-action="select-group" data-group="${escapeHtml(group.label === 'Unsortiert' ? '' : group.label)}">
       <span>${escapeHtml(group.label)}</span>
       <strong>${group.count}</strong>
     </button>`).join('');
@@ -141,7 +152,7 @@ function renderCharacterDashboard(grid, chars) {
     <div class="char-dashboard-metrics">
       ${renderCharacterDashboardMetric('Kein Portrait', summary.missingPortrait.length, 'missing-portrait')}
       ${renderCharacterDashboardMetric('Keine Beschreibung', summary.missingBio.length, 'missing-bio')}
-      ${renderCharacterDashboardMetric('Keine Gruppe', summary.missingGroup.length, 'missing-group')}
+      ${renderCharacterDashboardMetric('Unsortiert', summary.unsorted.length, 'missing-group')}
       ${renderCharacterDashboardMetric('Wichtig aktiv', summary.important.length, 'important')}
       ${renderCharacterDashboardMetric('Tot / verschollen', summary.inactive.length, 'inactive')}
       ${renderCharacterDashboardMetric('Plot-Knoten', summary.plot.length, 'plot')}

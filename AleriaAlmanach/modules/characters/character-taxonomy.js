@@ -184,6 +184,15 @@ function createCharacterTaxonomyNavigator() {
   const tools = document.createElement('div');
   tools.className = 'char-taxonomy-tools';
   tools.appendChild(createCharacterTabButton('Alle'));
+
+  const unsortedCount = getVisibleCharacterRecords()
+    .filter(char => !getCharacterAssignedTab(char.id)).length;
+  const unsorted = document.createElement('button');
+  unsorted.className = 'char-subtab-btn';
+  unsorted.type = 'button';
+  unsorted.dataset.charTabAction = 'select-unsorted';
+  unsorted.innerHTML = `<span>Unsortiert (${unsortedCount})</span>`;
+  tools.appendChild(unsorted);
   tools.appendChild(createCharacterArchiveTabButton());
 
   const addBtn = document.createElement('button');
@@ -192,6 +201,14 @@ function createCharacterTaxonomyNavigator() {
   addBtn.dataset.charTabAction = 'add';
   tools.appendChild(addBtn);
   shell.appendChild(tools);
+
+  const drawer = document.createElement('details');
+  drawer.className = 'char-taxonomy-drawer';
+  drawer.open = _charOrganizeMode || (_activeCharTab !== 'Alle' && _activeCharTab !== CHARACTER_ARCHIVE_TAB);
+  const summary = document.createElement('summary');
+  const groupCount = _charTabs.filter(tab => tab && tab !== 'Alle').length;
+  summary.innerHTML = `<span>Eigene Gruppen</span><strong>${groupCount}</strong><small>manuell gepflegt</small>`;
+  drawer.appendChild(summary);
 
   const tree = document.createElement('div');
   tree.className = 'char-taxonomy-tree';
@@ -204,7 +221,8 @@ function createCharacterTaxonomyNavigator() {
     empty.textContent = 'Noch keine Gruppen angelegt.';
     tree.appendChild(empty);
   }
-  shell.appendChild(tree);
+  drawer.appendChild(tree);
+  shell.appendChild(drawer);
 
   return shell;
 }
