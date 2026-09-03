@@ -2,7 +2,7 @@ import {
   loadRequestedNewspaper,
   findAuthor,
   findArticleType
-} from "./newspaper-data-loader.mjs?v=20260903b";
+} from "./newspaper-data-loader.mjs?v=20260904b";
 import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs?v=20260903a";
 import { formatPublicationDate } from "./newspaper-aleria-date.mjs?v=20260903a";
 import {
@@ -23,6 +23,7 @@ async function start() {
   try {
     const { entry, issueEntry, newspaper } = await loadRequestedNewspaper();
     root.dataset.newspaperTheme = entry.themeId || "default";
+    document.body.dataset.newspaperTheme = entry.themeId || "default";
     document.title = `${newspaper.name} – ${newspaper.edition} | Aleria`;
     root.replaceChildren(renderIssue(entry, issueEntry, newspaper));
   } catch (error) {
@@ -107,6 +108,7 @@ function renderMasthead(newspaper) {
   return element("header", { className: "newspaper-masthead" }, [
     renderEditionMark(newspaper),
     element("div", { className: "newspaper-masthead-center" }, [
+      renderMastheadLogo(newspaper),
       element("p", { className: "newspaper-kicker", text: newspaper.tagline }),
       element("h1", { text: newspaper.name }),
       element("p", { className: "newspaper-subtitle", text: newspaper.subtitle })
@@ -117,6 +119,18 @@ function renderMasthead(newspaper) {
       fact("Artikel", newspaper.articles.length)
     ])
   ]);
+}
+
+function renderMastheadLogo(newspaper) {
+  if (!newspaper.showLogoInMasthead || !newspaper.logo) return null;
+  return element("img", {
+    className: "newspaper-masthead-logo",
+    attributes: {
+      src: newspaper.logo,
+      alt: `Gildensymbol von ${newspaper.name}`,
+      decoding: "async"
+    }
+  });
 }
 
 function renderEditionMark(newspaper) {
@@ -144,7 +158,10 @@ function renderEditionSummary(newspaper) {
       fact("Region", newspaper.region),
       fact("Druckort", newspaper.printLocation),
       fact("Sprache", newspaper.language),
-      fact("Erscheinungsdatum", publicationDate)
+      fact("Erscheinungsdatum", publicationDate),
+      newspaper.publicationSchedule?.label
+        ? fact("Erscheinungsweise", newspaper.publicationSchedule.label)
+        : null
     ])
   ]);
 }
@@ -218,15 +235,35 @@ function renderTypeLegend(articleTypes) {
 }
 
 function renderAuthors(newspaper) {
+  if (newspaper.editorialSections?.length) {
+    const authorsById = new Map(newspaper.authors.map((author) => [author.id, author]));
+    return element("div", { className: "newspaper-editorial-sections" }, newspaper.editorialSections.map((section) =>
+      renderAuthorSection(section, section.authorIds.map((authorId) => authorsById.get(authorId)).filter(Boolean))
+    ));
+  }
+
+  return renderAuthorSection({
+    id: "redaktion",
+    kicker: "Tinte, Gerücht und Wahrheit",
+    title: `Die Redaktion zu ${newspaper.edition}`,
+    description: ""
+  }, newspaper.authors);
+}
+
+function renderAuthorSection(section, authors) {
   return element("section", {
     className: "newspaper-authors newspaper-ornament-section",
-    attributes: { "aria-labelledby": "authors-title" }
+    dataset: { editorialSection: section.id },
+    attributes: { "aria-labelledby": `authors-${section.id}-title` }
   }, [
     element("div", { className: "newspaper-section-heading" }, [
-      element("p", { className: "newspaper-kicker", text: "Tinte, Gerücht und Wahrheit" }),
-      element("h2", { id: "authors-title", text: `Die Redaktion zu ${newspaper.edition}` })
+      element("p", { className: "newspaper-kicker", text: section.kicker || "Die Redaktion" }),
+      element("h2", { id: `authors-${section.id}-title`, text: section.title || "Die Redaktion" })
     ]),
-    element("div", { className: "newspaper-author-grid" }, newspaper.authors.map(renderAuthorCard))
+    section.description
+      ? element("p", { className: "newspaper-editorial-description", text: section.description })
+      : null,
+    element("div", { className: "newspaper-author-grid" }, authors.map(renderAuthorCard))
   ]);
 }
 

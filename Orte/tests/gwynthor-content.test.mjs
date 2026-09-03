@@ -49,6 +49,10 @@ test("Gwynthor besitzt vollständige, strukturierte Ortsinhalte", async () => {
   assert.match(content, /Cochllamwyr/);
   assert.match(content, /400 und 600/);
   assert.match(content, /Celtigerns Echo/);
+  assert.match(content, /Kronenspiegel/);
+  assert.match(content, /Mathragon/);
+  assert.match(content, /Flüsterfächer/);
+  assert.match(content, /Samt & Sünde/);
   const commonerHouses = data.houses.find(group => group.title === "Bürgerliche Häuser")?.items || [];
   const falchdyn = commonerHouses.find(house => house.familyId === "haus-falchdyn");
   assert.ok(falchdyn, "Haus Falchdyn fehlt bei den Gwynthorer Bürgerhäusern");
@@ -99,6 +103,7 @@ test("Großstadtseite und Vorlage laden das gekapselte Inhaltsmodul", async () =
   assert.match(moduleSource, /aleria:orte:data-ready/);
   assert.match(moduleSource, /toggle-place-personalities/);
   assert.match(contentStyles, /data-orte-content="military"/);
+  assert.match(contentStyles, /data-orte-content="newspaper"/);
   assert.match(contentStyles, /max-height:\s*23rem/);
   assert.match(contentStyles, /overflow-y:\s*auto/);
 });

@@ -70,25 +70,24 @@ test("Ausgaben- und Artikellinks bewahren den gewählten Archivstand", () => {
   );
 });
 
-test("Jeder vorbereitete Ort besitzt Schwarzboten und Celtigerns Echo mit eindeutigem Standardblatt", () => {
+test("Jede vorbereitete Großstadt besitzt ihre vorgeschriebenen Blätter mit eindeutigem Standardblatt", () => {
   const entries = getNewspaperEntries();
-  assert.equal(entries.length, 8);
-  const placeIds = new Set(entries.map((entry) => entry.placeId));
-  for (const placeId of placeIds) {
+  assert.equal(entries.length, 14);
+  for (const placeId of ["gwynthor", "abergwint", "castellbryn", "rhosmere"]) {
     const placeEntries = getNewspaperEntriesForPlace(placeId);
     assert.equal(placeEntries.filter((entry) => entry.isDefaultForPlace).length, 1);
     assert.equal(new Set(placeEntries.map((entry) => entry.id)).size, placeEntries.length);
-  }
-  for (const placeId of ["gwynthor", "abergwint", "castellbryn", "rhosmere"]) {
-    const placeEntries = getNewspaperEntriesForPlace(placeId);
-    assert.equal(placeEntries.length, 2);
+    assert.equal(placeEntries.length, placeId === "gwynthor" ? 4 : 3);
     assert.equal(findDefaultNewspaperEntryForPlace(placeId)?.titleId, "schwarzbote");
     assert.deepEqual(
       new Set(placeEntries.map((entry) => entry.titleId)),
-      new Set(["schwarzbote", "celtigerns-echo"])
+      new Set(placeId === "gwynthor"
+        ? ["schwarzbote", "celtigerns-echo", "kronenspiegel", "fluesterfaecher"]
+        : ["schwarzbote", "celtigerns-echo", "kronenspiegel"])
     );
     placeEntries.forEach((entry) => assert.equal(entry.issues[0].id, "1740-03-18"));
   }
+  assert.equal(getNewspaperEntriesForPlace("mathragon").length, 1);
 });
 
 function issue(id, day, month) {

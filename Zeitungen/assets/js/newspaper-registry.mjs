@@ -1,3 +1,5 @@
+import { getNewspaperDistributionPolicy } from "./newspaper-distribution-policy.mjs?v=20260904a";
+
 const CURRENT_ISSUE_ID = "1740-03-18";
 const CURRENT_PUBLICATION_DATE = Object.freeze({ day: 18, month: 3, year: 1740 });
 
@@ -25,6 +27,18 @@ const entries = Object.freeze([
     themeId: "celtigerns-echo",
     issues: [issueEntry("/Zeitungen/data/celtigerns-echo-gwynthor/edition.mjs?v=20260903a")]
   }),
+  kronenspiegelEntry("gwynthor"),
+  publicationEntry({
+    id: "fluesterfaecher-gwynthor",
+    aliases: Object.freeze(["fluesterfaecher", "flusterfacher"]),
+    titleId: "fluesterfaecher",
+    placeId: "gwynthor",
+    name: "Der Flüsterfächer",
+    edition: "Gwynthor",
+    cover: "/Zeitungen/data/fluesterfaecher/assets/fluesterfaecher-gildenemblem.png",
+    themeId: "fluesterfaecher",
+    issues: [issueEntry("/Zeitungen/data/fluesterfaecher-gwynthor/edition.mjs?v=20260904a")]
+  }),
   publicationEntry({
     id: "schwarzbote-abergwint",
     aliases: Object.freeze(["abergwint"]),
@@ -48,6 +62,7 @@ const entries = Object.freeze([
     themeId: "celtigerns-echo",
     issues: [issueEntry("/Zeitungen/data/celtigerns-echo-abergwint/edition.mjs?v=20260903a")]
   }),
+  kronenspiegelEntry("abergwint"),
   publicationEntry({
     id: "schwarzbote-castellbryn",
     aliases: Object.freeze(["castellbryn"]),
@@ -71,6 +86,7 @@ const entries = Object.freeze([
     themeId: "celtigerns-echo",
     issues: [issueEntry("/Zeitungen/data/celtigerns-echo-castellbryn/edition.mjs?v=20260903a")]
   }),
+  kronenspiegelEntry("castellbryn"),
   publicationEntry({
     id: "schwarzbote-rhosmere",
     aliases: Object.freeze(["rhosmere"]),
@@ -93,7 +109,9 @@ const entries = Object.freeze([
     cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
     themeId: "celtigerns-echo",
     issues: [issueEntry("/Zeitungen/data/celtigerns-echo-rhosmere/edition.mjs?v=20260903a")]
-  })
+  }),
+  kronenspiegelEntry("rhosmere"),
+  kronenspiegelEntry("mathragon", ["kronenspiegel"])
 ]);
 
 export function findNewspaperEntry(requestedId) {
@@ -121,11 +139,27 @@ export function findDefaultNewspaperEntryForPlace(placeId) {
 
 function publicationEntry(value) {
   const issues = Object.freeze((value.issues || []).map((issue) => Object.freeze({ ...issue })));
+  const distribution = getNewspaperDistributionPolicy(value.titleId);
   return Object.freeze({
     ...value,
     aliases: Object.freeze([...(value.aliases || [])]),
+    distribution,
     issues,
     dataModule: issues[0]?.dataModule || ""
+  });
+}
+
+function kronenspiegelEntry(placeId, aliases = []) {
+  return publicationEntry({
+    id: `kronenspiegel-${placeId}`,
+    aliases: Object.freeze([...aliases]),
+    titleId: "kronenspiegel",
+    placeId,
+    name: "Der Kronenspiegel",
+    edition: "Gesamtausgabe Cenyr",
+    cover: "/Zeitungen/data/kronenspiegel/assets/kronenspiegel-gildensymbol.png",
+    themeId: "kronenspiegel",
+    issues: [issueEntry(`/Zeitungen/data/kronenspiegel-${placeId}/edition.mjs?v=20260904a`)]
   });
 }
 

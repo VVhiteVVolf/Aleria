@@ -25,7 +25,10 @@
   line-height: 1.5;
 }
 
-.grossstadt-template [data-orte-content="military"].orte-place-prose {
+.grossstadt-template :is(
+  [data-orte-content="military"],
+  [data-orte-content="newspaper"]
+).orte-place-prose {
   max-height: 23rem;
   padding-right: 0.65rem;
   overflow-y: auto;
@@ -33,15 +36,24 @@
   scrollbar-width: thin;
 }
 
-.grossstadt-template [data-orte-content="military"].orte-place-prose::-webkit-scrollbar {
+.grossstadt-template :is(
+  [data-orte-content="military"],
+  [data-orte-content="newspaper"]
+).orte-place-prose::-webkit-scrollbar {
   width: 0.55rem;
 }
 
-.grossstadt-template [data-orte-content="military"].orte-place-prose::-webkit-scrollbar-track {
+.grossstadt-template :is(
+  [data-orte-content="military"],
+  [data-orte-content="newspaper"]
+).orte-place-prose::-webkit-scrollbar-track {
   background: rgba(126, 87, 31, 0.12);
 }
 
-.grossstadt-template [data-orte-content="military"].orte-place-prose::-webkit-scrollbar-thumb {
+.grossstadt-template :is(
+  [data-orte-content="military"],
+  [data-orte-content="newspaper"]
+).orte-place-prose::-webkit-scrollbar-thumb {
   border: 1px solid rgba(72, 42, 12, 0.42);
   border-radius: 999px;
   background: linear-gradient(180deg, #a97b32, #654216);

@@ -102,14 +102,16 @@ test("Abergwint, Castellbryn und Rhosmere besitzen getrennte, unbesetzte Echo-Re
   });
 });
 
-test("Jede große Stadt bietet Celtigerns Echo als zweite Alternative zum Schwarzboten", () => {
+test("Jede große Stadt bietet Celtigerns Echo neben Schwarzboten und Kronenspiegel", () => {
   for (const placeId of ["gwynthor", "abergwint", "castellbryn", "rhosmere"]) {
     const entries = getNewspaperEntriesForPlace(placeId);
-    assert.equal(entries.length, 2, placeId);
+    assert.equal(entries.length, placeId === "gwynthor" ? 4 : 3, placeId);
     assert.equal(entries[0].titleId, "schwarzbote", placeId);
     assert.equal(entries[0].isDefaultForPlace, true, placeId);
     assert.equal(entries[1].titleId, "celtigerns-echo", placeId);
     assert.notEqual(entries[1].isDefaultForPlace, true, placeId);
+    assert.equal(entries[2].titleId, "kronenspiegel", placeId);
+    if (placeId === "gwynthor") assert.equal(entries[3].titleId, "fluesterfaecher");
   }
 });
 
@@ -124,12 +126,12 @@ test("Celtigerns Echo besitzt ein gekapseltes freundlicheres Zeitungsthema", asy
     readFile(resolve(workspaceRoot, "Orte/assets/css/orte-place-press.css"), "utf8")
   ]);
   assert.match(issuePage, /newspaper-celtigerns-echo\.css/);
-  assert.match(issuePage, /issue-page\.mjs\?v=20260903b/);
+  assert.match(issuePage, /issue-page\.mjs\?v=20260904b/);
   assert.match(articlePage, /newspaper-celtigerns-echo\.css/);
-  assert.match(articlePage, /article-page\.mjs\?v=20260903b/);
-  assert.match(issueModule, /newspaper-data-loader\.mjs\?v=20260903b/);
-  assert.match(articleModule, /newspaper-data-loader\.mjs\?v=20260903b/);
-  assert.match(dataLoader, /newspaper-registry\.mjs\?v=20260903b/);
+  assert.match(articlePage, /article-page\.mjs\?v=20260904b/);
+  assert.match(issueModule, /newspaper-data-loader\.mjs\?v=20260904b/);
+  assert.match(articleModule, /newspaper-data-loader\.mjs\?v=20260904b/);
+  assert.match(dataLoader, /newspaper-registry\.mjs\?v=20260904c/);
   assert.match(themeStyles, /data-newspaper-theme="celtigerns-echo"/);
   assert.match(themeStyles, /#fff5d9/);
   assert.match(placeStyles, /data-newspaper-theme="celtigerns-echo"/);

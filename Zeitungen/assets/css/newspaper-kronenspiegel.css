@@ -1,0 +1,88 @@
+body[data-newspaper-theme="kronenspiegel"] {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 50%, transparent 50%) 0 0 / 52px 52px,
+    linear-gradient(#1b2738, #0b111a);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] {
+  --news-ink: #172233;
+  --news-ink-soft: #526176;
+  --news-red: #315d91;
+  --news-red-dark: #17385e;
+  --news-gold: #8192a7;
+  --news-gold-light: #d8e4f0;
+  --news-paper: #e7ebef;
+  --news-paper-light: #f8fafb;
+  --news-paper-deep: #c7d0da;
+  --news-shadow: rgba(5, 14, 26, 0.52);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-sheet {
+  border-color: #65778c;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.7), transparent 30%),
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(45, 73, 105, 0.018) 32px 33px),
+    linear-gradient(145deg, #fbfcfd, #e7ebef 68%, #cbd3dc);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 0 0 9px rgba(24, 44, 68, 0.3),
+    0 28px 70px var(--news-shadow);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-sheet::before,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-sheet::after {
+  border-color: rgba(49, 93, 145, 0.34);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-masthead-logo {
+  filter: drop-shadow(0 5px 7px rgba(14, 32, 53, 0.2));
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-edition-mark {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, 2.2vw, 30px);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-edition-ink-stamp {
+  position: static;
+  width: clamp(120px, 10vw, 144px);
+  flex: 0 0 auto;
+  transform: rotate(-4deg);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-archive-navigation,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-article-card,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-author-card,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-type-card {
+  border-color: rgba(51, 81, 116, 0.46);
+  background-color: rgba(249, 251, 252, 0.88);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-article-ribbon,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-article-card[data-article-type] .newspaper-article-ribbon {
+  background: linear-gradient(90deg, #17385e, #426f9f);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-author-visual {
+  color: #eef5fb;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(157, 188, 220, 0.22), transparent 36%),
+    linear-gradient(145deg, #315d91, #17385e 62%, #0d223b);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-authors[data-editorial-section^="standort-"] {
+  margin-top: 10px;
+  padding-top: clamp(34px, 5vw, 58px);
+  border-top: 3px double rgba(49, 93, 145, 0.5);
+}
+
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-button,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-archive-direction:not(.is-disabled):hover,
+.newspaper-page[data-newspaper-theme="kronenspiegel"] .newspaper-archive-direction:not(.is-disabled):focus-visible {
+  border-color: #17385e;
+  color: #f4f8fb;
+  background: linear-gradient(#426f9f, #17385e);
+}

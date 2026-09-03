@@ -5,6 +5,7 @@ import { HOUSE_DIENYDDIWR_FAMILY } from './house-dienyddiwr-family.js';
 import { HOUSE_DYNGWN_FAMILY } from './house-dyngwn-family.js';
 import { HOUSE_GRAEL_FAMILY } from './house-grael-family.js';
 import { HOUSE_MARWOLAETH_FAMILY } from './house-marwolaeth-family.js';
+import { HOUSE_PENGAIR_FAMILY } from './house-pengair-family.js';
 import { HOUSE_PENDERYN_FAMILY } from './house-penderyn-family.js';
 import {
   VORTIGERNS_RUH_HOUSE_EMBLEMS,
@@ -19,6 +20,7 @@ export const VORTIGERNS_RUH_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'dienyddiwr', title: 'Dienyddiwr' }),
   Object.freeze({ slug: 'dyngwn', title: 'Dyngwn' }),
   Object.freeze({ slug: 'marwolaeth', title: 'Marwolaeth' }),
+  Object.freeze({ slug: 'pengair', title: 'Pengair' }),
   Object.freeze({ slug: 'morwyn', title: 'Morwyn' }),
   Object.freeze({ slug: 'rhavaen', title: 'Rhavaen' }),
   Object.freeze({ slug: 'iwrell', title: 'Iwrell' }),
@@ -63,6 +65,7 @@ const IMPLEMENTED_VORTIGERNS_RUH_FAMILIES = Object.freeze({
   dyngwn: HOUSE_DYNGWN_FAMILY,
   grael: HOUSE_GRAEL_FAMILY,
   marwolaeth: HOUSE_MARWOLAETH_FAMILY,
+  pengair: HOUSE_PENGAIR_FAMILY,
   penderyn: HOUSE_PENDERYN_FAMILY
 });
 

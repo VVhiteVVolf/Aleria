@@ -3,7 +3,7 @@ import {
   findArticle,
   findAuthor,
   findArticleType
-} from "./newspaper-data-loader.mjs?v=20260903b";
+} from "./newspaper-data-loader.mjs?v=20260904b";
 import { element, imageWithFallback, renderError } from "./newspaper-dom.mjs?v=20260903a";
 import { formatPublicationDate } from "./newspaper-aleria-date.mjs?v=20260903a";
 import { buildIssueHref } from "./newspaper-archive.mjs?v=20260903a";
@@ -19,6 +19,7 @@ async function start() {
   try {
     const { entry, newspaper, params } = await loadRequestedNewspaper();
     root.dataset.newspaperTheme = entry.themeId || "default";
+    document.body.dataset.newspaperTheme = entry.themeId || "default";
     const articleId = params.get("artikel") || params.get("article") || "";
     const article = findArticle(newspaper, articleId);
     if (!article) {

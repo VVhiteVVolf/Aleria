@@ -1,0 +1,122 @@
+body[data-newspaper-theme="fluesterfaecher"] {
+  background:
+    radial-gradient(circle at 50% 0, rgba(226, 88, 154, 0.2), transparent 38%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 12px),
+    linear-gradient(145deg, #3b102b, #160912 68%, #080407);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] {
+  --news-ink: #321524;
+  --news-ink-soft: #765064;
+  --news-red: #c72f79;
+  --news-red-dark: #741743;
+  --news-gold: #bd9450;
+  --news-gold-light: #efd7a7;
+  --news-paper: #f4dce7;
+  --news-paper-light: #fff8f5;
+  --news-paper-deep: #dcaec5;
+  --news-shadow: rgba(37, 4, 24, 0.6);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-sheet {
+  border-color: #9e6a82;
+  background:
+    radial-gradient(circle at 12px 12px, rgba(199, 47, 121, 0.075) 0 2px, transparent 2.5px) 0 0 / 24px 24px,
+    linear-gradient(118deg, rgba(255, 255, 255, 0.78), transparent 34%),
+    linear-gradient(145deg, #fffaf7, #f4e1e9 68%, #dfb7ca);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 0 0 9px rgba(108, 25, 65, 0.36),
+    0 28px 74px var(--news-shadow);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-sheet::before,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-sheet::after {
+  border-color: rgba(189, 148, 80, 0.68);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-masthead {
+  border-color: #4f1835;
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-masthead-logo {
+  width: clamp(96px, 11vw, 142px);
+  filter: drop-shadow(0 8px 10px rgba(64, 9, 40, 0.3));
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-masthead h1 {
+  color: #43142f;
+  letter-spacing: -0.045em;
+  text-shadow: 0 1px #fff, 0 3px 0 rgba(189, 148, 80, 0.22);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-edition-mark {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-edition-stamp {
+  border-color: #c72f79;
+  color: #741743;
+  background: rgba(255, 248, 250, 0.72);
+  box-shadow: 0 0 0 4px rgba(189, 148, 80, 0.15);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-edition-ink-stamp {
+  position: static;
+  width: clamp(132px, 12vw, 172px);
+  flex: 0 0 auto;
+  opacity: 0.86;
+  transform: rotate(-3deg);
+  mix-blend-mode: multiply;
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-kicker {
+  color: #9a275e;
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-archive-navigation,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-article-card,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-author-card,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-type-card {
+  border-color: rgba(126, 45, 84, 0.46);
+  background-color: rgba(255, 250, 248, 0.86);
+  box-shadow: 0 8px 20px rgba(80, 16, 49, 0.08);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-article-ribbon,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-article-card[data-article-type] .newspaper-article-ribbon {
+  color: #fff8ee;
+  background: linear-gradient(90deg, #741743, #d54287 58%, #8b2353);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-author-visual {
+  color: #fff3f8;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(240, 183, 211, 0.28), transparent 34%),
+    linear-gradient(145deg, #ad2c69, #641438 64%, #2f0b20);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-editorial-description {
+  padding: 14px 20px;
+  border-top: 1px solid rgba(189, 148, 80, 0.54);
+  border-bottom: 1px solid rgba(189, 148, 80, 0.54);
+  font-style: italic;
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-button,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-archive-direction:not(.is-disabled):hover,
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-archive-direction:not(.is-disabled):focus-visible {
+  border-color: #641438;
+  color: #fff8ef;
+  background: linear-gradient(#d54287, #741743);
+}
+
+.newspaper-page[data-newspaper-theme="fluesterfaecher"] .newspaper-colophon-wax-seal {
+  width: 104px;
+  transform: rotate(7deg);
+  filter: drop-shadow(0 6px 7px rgba(67, 10, 41, 0.34));
+}

@@ -85,6 +85,12 @@
   justify-items: center;
 }
 
+.newspaper-masthead-logo {
+  width: clamp(72px, 9vw, 118px);
+  height: auto;
+  margin-bottom: 12px;
+}
+
 .newspaper-edition-mark {
   position: relative;
   width: min(100%, 240px);
@@ -210,7 +216,7 @@
 
 .newspaper-edition-ledger {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   border: 2px solid var(--news-ink);
   border-width: 2px 0;
 }
@@ -394,6 +400,19 @@
 .newspaper-author-grid {
   display: grid;
   gap: 22px;
+}
+
+.newspaper-editorial-sections {
+  display: grid;
+}
+
+.newspaper-editorial-description {
+  width: min(900px, 100%);
+  margin: -4px auto 28px;
+  color: var(--news-ink-soft);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-align: center;
 }
 
 .newspaper-author-card {

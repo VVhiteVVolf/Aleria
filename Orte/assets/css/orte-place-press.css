@@ -1,6 +1,6 @@
 .orte-press-switcher {
   display: grid;
-  width: min(100%, 420px);
+  width: min(calc(100% - 20px), 480px);
   gap: 10px;
   justify-items: stretch;
   margin: 8px auto 16px;
@@ -180,4 +180,52 @@
 
 .orte-press-switcher[data-newspaper-theme="celtigerns-echo"] .orte-press-current-issue > span {
   color: #804335;
+}
+
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] {
+  border-color: #45688e;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.7), transparent 34%),
+    rgba(220, 229, 237, 0.94);
+}
+
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] .orte-press-title,
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] .orte-press-arrow,
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] .orte-press-open {
+  border-color: #17385e;
+  color: #f2f7fb;
+  background: linear-gradient(#426f9f, #17385e);
+}
+
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] .orte-press-cover {
+  border-color: #667f9a;
+  background: linear-gradient(145deg, #f8fafc, #d5dde6);
+}
+
+.orte-press-switcher[data-newspaper-theme="kronenspiegel"] .orte-press-current-issue > span {
+  color: #315d91;
+}
+
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] {
+  border-color: #b6658d;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.72), transparent 32%),
+    linear-gradient(145deg, rgba(250, 226, 238, 0.96), rgba(224, 174, 199, 0.94));
+}
+
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] .orte-press-title,
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] .orte-press-arrow,
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] .orte-press-open {
+  border-color: #65183e;
+  color: #fff6ec;
+  background: linear-gradient(#d8498c, #761b49);
+}
+
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] .orte-press-cover {
+  border-color: #b88650;
+  background: linear-gradient(145deg, #fff8f4, #efcfdf);
+}
+
+.orte-press-switcher[data-newspaper-theme="fluesterfaecher"] .orte-press-current-issue > span {
+  color: #a42b66;
 }

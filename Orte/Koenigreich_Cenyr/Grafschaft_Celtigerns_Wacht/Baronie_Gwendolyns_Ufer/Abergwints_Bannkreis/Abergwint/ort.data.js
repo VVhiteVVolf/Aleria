@@ -167,7 +167,8 @@
       newspaper: section(
         paragraph("Die Abergwinter Ausgabe des Schwarzboten entsteht unter der Leitung von Luca Acria. Claudia Acria führt die erste vorbereitete Ausgabe mit ihrer Skandalchronik „Salzwasser – Statt Samt und Seide!“ an."),
         paragraph("Zur Redaktion gehören außerdem Tywill Brân für Kunstkritik, Geschichte und Politik, Angharad Corryn für Satire und Gesellschaft, Elenwyn Meddal für Chronik und gemeine Berichterstattung sowie Cadwell Gywir für Politik und aktuelle Meldungen."),
-        paragraph("Celtigerns Echo unterhält auch in Abergwint eine eigene Redaktionsstube. Sie ist als örtliche Alternative zum Schwarzboten bereits eingerichtet, hat aber noch keine namentlich besetzten Stellen; ihre künftige Besetzung wird unabhängig von der Gwynthorer Hauptredaktion geführt.")
+        paragraph("Celtigerns Echo unterhält auch in Abergwint eine eigene Redaktionsstube. Sie ist als örtliche Alternative zum Schwarzboten bereits eingerichtet, hat aber noch keine namentlich besetzten Stellen; ihre künftige Besetzung wird unabhängig von der Gwynthorer Hauptredaktion geführt."),
+        paragraph("Daneben sammelt Abergwints Standort des Kronenspiegels große Nachrichten von Küste, Flotte und Seehandel für die Hauptredaktion in Mathragon. Das Haus druckt keine eigene Abergwinter Fassung, sondern dieselbe cenyrweite Ausgabe wie alle anderen Standorte.")
       )
     }
   });

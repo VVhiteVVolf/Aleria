@@ -1499,6 +1499,7 @@ import {
   HOUSE_DYNGWN_PORTRAITS
 } from '../assets/js/data/house-dyngwn-portraits.js';
 import { HOUSE_MARWOLAETH_FAMILY } from '../assets/js/data/house-marwolaeth-family.js';
+import { HOUSE_PENGAIR_FAMILY } from '../assets/js/data/house-pengair-family.js';
 import {
   HOUSE_MARWOLAETH_LOCAL_PORTRAITS,
   HOUSE_MARWOLAETH_PORTRAITS
@@ -28869,6 +28870,7 @@ test('gliedert Vortigerns Ruh in Uthers Aufstieg, Tanwens Flamme und das antike 
     ['dienyddiwr', { rankId: 'knight-prince', path: mathragonPath }],
     ['dyngwn', { rankId: 'knight-prince', path: mathragonPath }],
     ['marwolaeth', { rankId: 'knight-prince', path: mathragonPath }],
+    ['pengair', { rankId: 'knight', path: mathragonPath }],
     ['morwyn', { rankId: 'knight', path: mathragonPath }],
     ['rhavaen', { rankId: 'knight', path: mathragonPath }],
     ['iwrell', { rankId: 'knight', path: mathragonPath }],
@@ -28918,8 +28920,8 @@ test('gliedert Vortigerns Ruh in Uthers Aufstieg, Tanwens Flamme und das antike 
 });
 
 test('registriert alle abhängigen Häuser Vortigerns Ruhs genau einmal mit passenden Rahmen', () => {
-  assert.equal(VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES.length, 15);
-  assert.equal(VORTIGERNS_RUH_DEPENDENT_HOUSE_DEFINITIONS.length, 15);
+  assert.equal(VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES.length, 16);
+  assert.equal(VORTIGERNS_RUH_DEPENDENT_HOUSE_DEFINITIONS.length, 16);
   const ids = VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES.map(family => family.document.id);
   assert.equal(new Set(ids).size, ids.length);
   assert.equal(ids.includes('haus-pendrag'), false, 'Pendrag darf nicht als zweite Akte auftreten');
@@ -28932,6 +28934,33 @@ test('registriert alle abhängigen Häuser Vortigerns Ruhs genau einmal mit pass
     assert.equal(family.document.emblem, VORTIGERNS_RUH_HOUSE_EMBLEMS[family.document.id.replace(/^haus-/, '')]);
     assert.equal(FAMILY_REGISTRY.filter(record => record.id === family.document.id).length, 1);
   });
+});
+
+test('bereitet Haus Pengair als Mathragoner Ritterhaus mit Gründerpaar und serieller Quellenlücke vor', async () => {
+  const family = assertValidFamily(HOUSE_PENGAIR_FAMILY).family;
+  assert.equal(family.document.id, 'haus-pengair');
+  assert.equal(family.document.title, 'Haus Pengair');
+  assert.equal(family.document.motto, 'Hart, aber fair.');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.deepEqual(
+    createFolderPathFromHouseProfile(family.document.houseProfile),
+    ['Cenyr', 'Vortigerns Ruh', 'Tanwens Flamme', 'Mathragon']
+  );
+  assert.equal(family.persons.length, 2);
+  assert.ok(family.persons.every(person => person.name === '???'));
+  assert.equal(family.partnerships.length, 1);
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.timeJumps[0].parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.deepEqual(family.timeJumps[0].childIds, []);
+  assert.equal(family.lineage.crestFrame, 'silver');
+  assert.match(family.document.emblem, /haus-pengair\.png$/);
+  assert.doesNotMatch(family.document.emblem, /kronenspiegel/i);
+  assert.equal(FAMILY_REGISTRY.filter(record => record.id === family.document.id).length, 1);
+
+  const emblem = await readFile(new URL(`../${family.document.emblem}`, import.meta.url));
+  assert.deepEqual([...emblem.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  const sources = JSON.parse(await readFile(new URL('../assets/images/houses/Vortigerns Ruh/house-sources.json', import.meta.url), 'utf8'));
+  assert.equal(sources['house:pengair'], 'https://i.imgur.com/uPwj6UE.png');
 });
 
 test('bildet Haus Ceirwyn vollständig mit drei fortgeführten Gegenwartszweigen ab', () => {

@@ -25,7 +25,9 @@ export function createPublication(value) {
     ...value,
     imprints: Object.freeze({ ...(value.imprints || {}) }),
     location: Object.freeze({ ...(value.location || {}) }),
+    publicationSchedule: freezePublicationSchedule(value.publicationSchedule),
     authors: Object.freeze([...(value.authors || [])]),
+    editorialSections: Object.freeze((value.editorialSections || []).map(freezeEditorialSection)),
     articleTypes: Object.freeze([...(value.articleTypes || STANDARD_ARTICLE_TYPES)])
   });
 }
@@ -46,4 +48,19 @@ export function createIssue(publication, value) {
 
 function articleType(id, label, description) {
   return Object.freeze({ id, label, description });
+}
+
+function freezeEditorialSection(section) {
+  return Object.freeze({
+    ...section,
+    authorIds: Object.freeze([...(section?.authorIds || [])])
+  });
+}
+
+function freezePublicationSchedule(schedule) {
+  if (!schedule) return Object.freeze({ days: Object.freeze([]), label: "" });
+  return Object.freeze({
+    ...schedule,
+    days: Object.freeze([...(schedule.days || [])])
+  });
 }

@@ -1,4 +1,4 @@
-import { findNewspaperEntry } from "./newspaper-registry.mjs?v=20260903b";
+import { findNewspaperEntry } from "./newspaper-registry.mjs?v=20260904c";
 import { findIssueEntry } from "./newspaper-archive.mjs?v=20260903a";
 import {
   isValidPublicationDate,
@@ -72,6 +72,18 @@ function assertNewspaperData(newspaper, entry, issueEntry) {
 
   const authorIds = new Set(newspaper.authors.map((author) => author.id));
   const typeIds = new Set(newspaper.articleTypes.map((type) => type.id));
+  const sectionIds = new Set();
+  newspaper.editorialSections?.forEach((section) => {
+    if (!section.id || sectionIds.has(section.id)) {
+      throw new NewspaperLoadError("Die Redaktionssektionen sind nicht eindeutig.", "invalid-editorial-section");
+    }
+    sectionIds.add(section.id);
+    section.authorIds.forEach((authorId) => {
+      if (!authorIds.has(authorId)) {
+        throw new NewspaperLoadError("Eine Redaktionssektion verweist auf eine unbekannte Person.", "invalid-editorial-reference");
+      }
+    });
+  });
   newspaper.articles.forEach((article) => {
     if (!article.id || !article.title || !article.bodyPath) {
       throw new NewspaperLoadError("Ein Artikel ist unvollständig verzeichnet.", "invalid-article");
