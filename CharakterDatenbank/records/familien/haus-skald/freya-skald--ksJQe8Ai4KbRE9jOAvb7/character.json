@@ -6,16 +6,36 @@
   "identity": {
     "name": "Freya Skald",
     "aliases": [],
-    "worldPersonId": ""
+    "worldPersonId": "person--haus-skald--freya-skald"
   },
   "classification": {
     "primary": {
-      "kind": "unassigned",
-      "id": "unassigned",
-      "label": "Unzugeordnet"
+      "kind": "family",
+      "id": "haus-skald",
+      "label": "Clan Skald"
     },
-    "familyStatus": "pending",
-    "families": [],
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-skald",
+        "familyTitle": "Clan Skald",
+        "personId": "freya-skald",
+        "worldPersonId": "person--haus-skald--freya-skald",
+        "houseId": "house-skald",
+        "houseName": "Clan Skald",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Skaldenheim",
+          "Klangheim"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=freya-skald",
+        "fingerprint": "{\"name\":\"Freya Skald\",\"title\":\"\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-skald\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-skald/freya-skald.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ragnar-skald\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-skald--ragnar-skald\",\"name\":\"Ragnar Skald\"},{\"personId\":\"lagertha-eisenjungfer\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eisenjungfer--lagertha-eisenjungfer\",\"name\":\"Lagertha Eisenjungfer\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
     "familyAlternatives": [],
     "groups": [],
     "places": [],
@@ -41,18 +61,25 @@
         }
       ]
     },
-    "familyTree": [],
+    "familyTree": [
+      {
+        "familyId": "haus-skald",
+        "personId": "freya-skald",
+        "worldPersonId": "person--haus-skald--freya-skald",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=freya-skald"
+      }
+    ],
     "profile": ""
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
     "sourceUpdatedAt": "2026-08-07T03:00:00.000Z",
     "sourceDocumentIds": [
       "ksJQe8Ai4KbRE9jOAvb7"
     ],
-    "contentHash": "0f128a7f18d52200bdf5271e514f74781c1f2ac5c1277c5c7d7c244aa2bc05a0"
+    "contentHash": "41702f7fcf34f24bfcdf2feaa5e8eb10f43788328a75391cc5c718110d30286a"
   },
   "local": {
     "notes": "",
@@ -2318,7 +2345,7 @@
     "role": "",
     "status": "",
     "relevance": "",
-    "taxonomyPath": "",
+    "taxonomyPath": "Aldrimar > Roriksheim > Skaldenheim > Klangheim",
     "currentLocation": "",
     "origin": "",
     "plotNode": "",
@@ -4535,22 +4562,50 @@
       "notes": ""
     },
     "identity": {
-      "worldPersonId": ""
+      "worldPersonId": "person--haus-skald--freya-skald"
     },
     "genealogy": {
-      "worldPersonId": "",
+      "worldPersonId": "person--haus-skald--freya-skald",
       "sex": "female",
-      "status": "",
+      "status": "alive",
       "birth": "1720",
       "death": "",
-      "houseId": "",
-      "houseName": "",
-      "familyRole": "",
-      "portraitPlaceholder": "",
+      "houseId": "house-skald",
+      "houseName": "Clan Skald",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
       "tags": [],
-      "sources": [],
+      "sources": [
+        {
+          "familyId": "haus-skald",
+          "personId": "freya-skald",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=freya-skald",
+          "fingerprint": "{\"name\":\"Freya Skald\",\"title\":\"\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-skald\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-skald/freya-skald.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ragnar-skald\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-skald--ragnar-skald\",\"name\":\"Ragnar Skald\"},{\"personId\":\"lagertha-eisenjungfer\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eisenjungfer--lagertha-eisenjungfer\",\"name\":\"Lagertha Eisenjungfer\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
       "relationships": {
-        "parents": [],
+        "parents": [
+          {
+            "personId": "ragnar-skald",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-skald--ragnar-skald",
+            "name": "Ragnar Skald"
+          },
+          {
+            "personId": "lagertha-eisenjungfer",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-eisenjungfer--lagertha-eisenjungfer",
+            "name": "Lagertha Eisenjungfer"
+          }
+        ],
         "partners": [],
         "children": []
       }

@@ -11,11 +11,30 @@
   "classification": {
     "primary": {
       "kind": "family",
-      "id": "haus-gafyr",
-      "label": "Haus Gafyr"
+      "id": "haus-crafanc",
+      "label": "Haus Crafanc O'Talgarth"
     },
     "familyStatus": "linked",
     "families": [
+      {
+        "familyId": "haus-crafanc",
+        "familyTitle": "Haus Crafanc O'Talgarth",
+        "personId": "gwenna-crafanc",
+        "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+        "houseId": "house-crafanc",
+        "houseName": "Haus Crafanc O'Talgarth",
+        "familyRole": "ward-away",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Klaueninsel",
+          "Sturmklaue",
+          "Talgarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view&person=gwenna-crafanc",
+        "fingerprint": "{\"name\":\"Gwenna Crafanc\",\"title\":\"Weggegebenes Mündel bei Haus Gafyr\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-crafanc\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Fortgegebenes Mündel\"],\"relationships\":{\"parents\":[{\"personId\":\"olwen-arth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--olwen-arth\",\"name\":\"Olwen Arth\"},{\"personId\":\"melwas-crafanc\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-crafanc--melwas-crafanc\",\"name\":\"Melwas Crafanc\"}],\"partners\":[],\"children\":[]}}",
+        "score": 170
+      },
       {
         "familyId": "haus-gafyr",
         "familyTitle": "Haus Gafyr",
@@ -71,6 +90,12 @@
     },
     "familyTree": [
       {
+        "familyId": "haus-crafanc",
+        "personId": "gwenna-crafanc",
+        "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view&person=gwenna-crafanc"
+      },
+      {
         "familyId": "haus-gafyr",
         "personId": "gwenna-crafanc",
         "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
@@ -82,12 +107,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "aow8nHQLECqQ8yZIUdI0"
     ],
-    "contentHash": "88a90a4533e8ba37cd5c474c72b87639d8690c8e8e917bd379de9139b763baef"
+    "contentHash": "60faf19fac4bec2547e5daffbd5033352e6b094cd2cfc4d499aea184abb064c6"
   },
   "local": {
     "notes": "",
@@ -1112,18 +1137,30 @@
       "birth": "1716",
       "death": "",
       "houseId": "house-crafanc",
-      "houseName": "Haus Crafanc",
-      "familyRole": "ward",
+      "houseName": "Haus Crafanc O'Talgarth",
+      "familyRole": "ward-away",
       "portraitPlaceholder": "auto",
-      "tags": [],
+      "tags": [
+        "Fortgegebenes Mündel"
+      ],
       "sources": [
+        {
+          "familyId": "haus-crafanc",
+          "personId": "gwenna-crafanc",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view&person=gwenna-crafanc",
+          "fingerprint": "{\"name\":\"Gwenna Crafanc\",\"title\":\"Weggegebenes Mündel bei Haus Gafyr\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-crafanc\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Fortgegebenes Mündel\"],\"relationships\":{\"parents\":[{\"personId\":\"olwen-arth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--olwen-arth\",\"name\":\"Olwen Arth\"},{\"personId\":\"melwas-crafanc\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-crafanc--melwas-crafanc\",\"name\":\"Melwas Crafanc\"}],\"partners\":[],\"children\":[]}}"
+        },
         {
           "familyId": "haus-gafyr",
           "personId": "gwenna-crafanc",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-08T12:00:00.000Z",
-          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gwenna-crafanc",
           "fingerprint": "{\"name\":\"Gwenna Crafanc\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-crafanc\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"egon-gafyr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"}],\"partners\":[],\"children\":[]}}"
         }
@@ -1131,18 +1168,26 @@
       "relationships": {
         "parents": [
           {
-            "personId": "egon-gafyr",
-            "type": "foster",
-            "legitimacy": "unknown",
+            "personId": "olwen-arth",
+            "type": "biological",
+            "legitimacy": "legitimate",
             "certainty": "confirmed",
-            "worldPersonId": "person--haus-gafyr--egon-gafyr",
-            "name": "Egon Gafyr"
+            "worldPersonId": "person--haus-arth--olwen-arth",
+            "name": "Olwen Arth"
+          },
+          {
+            "personId": "melwas-crafanc",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-crafanc--melwas-crafanc",
+            "name": "Melwas Crafanc"
           }
         ],
         "partners": [],
         "children": []
       }
     },
-    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+    "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth"
   }
 }

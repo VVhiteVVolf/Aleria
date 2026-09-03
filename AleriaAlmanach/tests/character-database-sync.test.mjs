@@ -21,10 +21,10 @@ test('lokale Charakterdatenbank enthält jede exportierte Figur als eigene Akte'
   const snapshot = await readJson('generated', 'characters.snapshot.json');
   const report = await readJson('generated', 'sync-report.json');
   assert.equal(registry.schema, 'aleria.character-registry');
-  assert.equal(registry.count, 175);
+  assert.equal(registry.count, 176);
   assert.equal(snapshot.characters.length, registry.count);
-  assert.equal(report.summary.sourceDocuments, 186);
-  assert.equal(registry.records.reduce((sum, entry) => sum + entry.firestoreDocumentIds.length, 0), 186);
+  assert.equal(report.summary.sourceDocuments, 190);
+  assert.equal(registry.records.reduce((sum, entry) => sum + entry.firestoreDocumentIds.length, 0), 190);
 
   await Promise.all(registry.records.map(async entry => {
     const record = await readJson(...entry.path.split('/'));
@@ -44,7 +44,7 @@ test('gleichnamige Online-Dokumente werden ohne Alterskonflikt als eine Person g
   assert.equal(meurig.length, 1);
   assert.equal(gwendolyn.length, 1);
   assert.equal(meurig[0].firestoreDocumentIds.length, 3);
-  assert.equal(gwendolyn[0].firestoreDocumentIds.length, 3);
+  assert.equal(gwendolyn[0].firestoreDocumentIds.length, 6);
   assert.equal(report.summary.mergedSameNameGroups, 9);
   assert.equal(report.summary.familyAmbiguous, 0);
 });
@@ -64,6 +64,21 @@ test('Gawain Draig ist mit Firestore und seiner Weltperson im Haus Draig verbund
   assert.equal(gawain.genealogy.houseName, 'Haus Draig');
   assert.ok(gawain.genealogy.relationships.parents.length >= 2);
   assert.equal(gawain.localRecord.classification.familyStatus, 'linked');
+});
+
+test('Gildas Gafyr ist als neue Weltperson samt Charakterbogen im Haus Gafyr registriert', async () => {
+  const registry = await readJson('registry.json');
+  const snapshot = await readJson('generated', 'characters.snapshot.json');
+  const entry = registry.records.find(item => item.name === 'Gildas Gafyr');
+  const gildas = snapshot.characters.find(item => item.id === entry?.firestoreDocumentId);
+
+  assert.ok(entry);
+  assert.equal(entry.firestoreDocumentId, 'gildas-gafyr');
+  assert.equal(entry.worldPersonId, 'person--haus-gafyr--gildas-gafyr');
+  assert.deepEqual(entry.primary, { kind: 'family', id: 'haus-gafyr', label: 'Haus Gafyr' });
+  assert.equal(gildas.combatProfile.progression.level, 6);
+  assert.equal(gildas.biography.biography.footer, 'Personenakte · Gildas Gafyr');
+  assert.ok(gildas.genealogy.relationships.parents.length >= 2);
 });
 
 test('Figuren ohne eindeutigen Stammbaum werden nach Gruppe statt per Namensraten abgelegt', async () => {

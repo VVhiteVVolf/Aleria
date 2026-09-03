@@ -6,17 +6,36 @@
   "identity": {
     "name": "Solja Brathfengr",
     "aliases": [],
-    "worldPersonId": ""
+    "worldPersonId": "person--haus-brathfengr--solja-brathfengr"
   },
   "classification": {
     "primary": {
-      "kind": "place",
-      "id": "klangheim",
-      "label": "Klangheim",
-      "source": "archive-tab"
+      "kind": "family",
+      "id": "haus-brathfengr",
+      "label": "Clan Brathfengr"
     },
-    "familyStatus": "pending",
-    "families": [],
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-brathfengr",
+        "familyTitle": "Clan Brathfengr",
+        "personId": "solja-brathfengr",
+        "worldPersonId": "person--haus-brathfengr--solja-brathfengr",
+        "houseId": "house-brathfengr",
+        "houseName": "Clan Brathfengr",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Skaldenheim",
+          "Klangheim"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-brathfengr&mode=view&person=solja-brathfengr",
+        "fingerprint": "{\"name\":\"Solja Brathfengr\",\"title\":\"\",\"birth\":\"1714\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-brathfengr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-brathfengr/solja-brathfengr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gunhild-varulv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-varulv--gunhild-varulv\",\"name\":\"Gunhild Varulv\"},{\"personId\":\"vorna-brathfengr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-brathfengr--vorna-brathfengr\",\"name\":\"Vorna Brathfengr\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
     "familyAlternatives": [],
     "groups": [],
     "places": [
@@ -50,18 +69,25 @@
         }
       ]
     },
-    "familyTree": [],
+    "familyTree": [
+      {
+        "familyId": "haus-brathfengr",
+        "personId": "solja-brathfengr",
+        "worldPersonId": "person--haus-brathfengr--solja-brathfengr",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-brathfengr&mode=view&person=solja-brathfengr"
+      }
+    ],
     "profile": ""
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "2Ys1zQX27FclPMTPkU5L"
     ],
-    "contentHash": "c7372b2f424032db39135d142b8e5bd12e6c32ffe6b7e38fae8cd928f25a4949"
+    "contentHash": "bef547e726dd3d42e9007f1258f38fce512d0d0434a23075c746433d81546dd6"
   },
   "local": {
     "notes": "",
@@ -1045,25 +1071,54 @@
     "name": "Solja Brathfengr",
     "bio": "Solja Brathfengr ist eine Tochter des Brathfengr Clans und eine Skaldin.",
     "identity": {
-      "worldPersonId": ""
+      "worldPersonId": "person--haus-brathfengr--solja-brathfengr"
     },
     "genealogy": {
-      "worldPersonId": "",
-      "sex": "",
-      "status": "",
-      "birth": "",
+      "worldPersonId": "person--haus-brathfengr--solja-brathfengr",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1714",
       "death": "",
-      "houseId": "",
-      "houseName": "",
-      "familyRole": "",
-      "portraitPlaceholder": "",
+      "houseId": "house-brathfengr",
+      "houseName": "Clan Brathfengr",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
       "tags": [],
-      "sources": [],
+      "sources": [
+        {
+          "familyId": "haus-brathfengr",
+          "personId": "solja-brathfengr",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-brathfengr&mode=view&person=solja-brathfengr",
+          "fingerprint": "{\"name\":\"Solja Brathfengr\",\"title\":\"\",\"birth\":\"1714\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-brathfengr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-brathfengr/solja-brathfengr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gunhild-varulv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-varulv--gunhild-varulv\",\"name\":\"Gunhild Varulv\"},{\"personId\":\"vorna-brathfengr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-brathfengr--vorna-brathfengr\",\"name\":\"Vorna Brathfengr\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
       "relationships": {
-        "parents": [],
+        "parents": [
+          {
+            "personId": "gunhild-varulv",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-varulv--gunhild-varulv",
+            "name": "Gunhild Varulv"
+          },
+          {
+            "personId": "vorna-brathfengr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-brathfengr--vorna-brathfengr",
+            "name": "Vorna Brathfengr"
+          }
+        ],
         "partners": [],
         "children": []
       }
-    }
+    },
+    "taxonomyPath": "Aldrimar > Roriksheim > Skaldenheim > Klangheim"
   }
 }

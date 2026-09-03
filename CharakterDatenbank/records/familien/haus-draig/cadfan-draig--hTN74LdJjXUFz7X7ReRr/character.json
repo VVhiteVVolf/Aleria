@@ -34,6 +34,23 @@
         "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig",
         "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"},{\"personId\":\"alaw-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaw-grawn\",\"name\":\"Alaw Grawn\"}],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[{\"personId\":\"einion-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--einion-draig\",\"name\":\"Einion Draig\"},{\"personId\":\"carys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--carys-draig\",\"name\":\"Carys Draig\"}]}}",
         "score": 195
+      },
+      {
+        "familyId": "haus-fiachrach",
+        "familyTitle": "Clan Uí Fiachrach",
+        "personId": "cadfan-draig",
+        "worldPersonId": "person--haus-draig--cadfan-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=cadfan-draig",
+        "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[]}}",
+        "score": 150
       }
     ],
     "familyAlternatives": [],
@@ -77,6 +94,12 @@
         "personId": "cadfan-draig",
         "worldPersonId": "person--haus-draig--cadfan-draig",
         "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig"
+      },
+      {
+        "familyId": "haus-fiachrach",
+        "personId": "cadfan-draig",
+        "worldPersonId": "person--haus-draig--cadfan-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=cadfan-draig"
       }
     ],
     "profile": ""
@@ -84,12 +107,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
     "sourceUpdatedAt": "2026-07-26T10:56:37.748Z",
     "sourceDocumentIds": [
       "hTN74LdJjXUFz7X7ReRr"
     ],
-    "contentHash": "65e17ed406e758650055a14e13bedc1c1e6f9d078e5193f6a21ee6cf6a0b603f"
+    "contentHash": "d644c7434463e11eb9e30fc6ace6a0b0b94ed5c0e60d5c7d03c32c6421bc8423"
   },
   "local": {
     "notes": "",
@@ -1435,10 +1458,20 @@
           "personId": "cadfan-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-08T12:00:00.000Z",
-          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig",
           "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"},{\"personId\":\"alaw-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaw-grawn\",\"name\":\"Alaw Grawn\"}],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[{\"personId\":\"einion-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--einion-draig\",\"name\":\"Einion Draig\"},{\"personId\":\"carys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--carys-draig\",\"name\":\"Carys Draig\"}]}}"
+        },
+        {
+          "familyId": "haus-fiachrach",
+          "personId": "cadfan-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=cadfan-draig",
+          "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[]}}"
         }
       ],
       "relationships": {

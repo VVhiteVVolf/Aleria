@@ -2,18 +2,18 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-  "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+  "sourceExportedAt": "2026-09-03T19:30:00.000Z",
   "summary": {
-    "sourceDocuments": 186,
-    "total": 175,
+    "sourceDocuments": 190,
+    "total": 176,
     "mergedSameNameGroups": 9,
-    "familyLinked": 93,
+    "familyLinked": 99,
     "familyAmbiguous": 0,
-    "familyPending": 82,
-    "primaryFamily": 93,
+    "familyPending": 77,
+    "primaryFamily": 99,
     "primaryGroup": 26,
-    "primaryPlace": 25,
-    "primaryUnassigned": 31,
+    "primaryPlace": 22,
+    "primaryUnassigned": 29,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -582,42 +582,6 @@
       "familyAlternatives": []
     },
     {
-      "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
-      "name": "Asta Brathfengr",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "klangheim",
-        "label": "Klangheim",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--azkLuGRYThWXgFtJdpu6",
-      "name": "Gunhild Varulv",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "klangheim",
-        "label": "Klangheim",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--2Ys1zQX27FclPMTPkU5L",
-      "name": "Solja Brathfengr",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "klangheim",
-        "label": "Klangheim",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
       "recordId": "character--w9fadKUpbAYPMqUWEodN",
       "name": "Yvain Neidr O'Llanvane",
       "status": "pending",
@@ -786,28 +750,6 @@
     {
       "recordId": "character--j4fZKrXkARcP9oDAUSeb",
       "name": "Emrys Porthan",
-      "status": "pending",
-      "primary": {
-        "kind": "unassigned",
-        "id": "unassigned",
-        "label": "Unzugeordnet"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--FKiXsSWVoV74rTgmpPip",
-      "name": "Fenrir Varulv",
-      "status": "pending",
-      "primary": {
-        "kind": "unassigned",
-        "id": "unassigned",
-        "label": "Unzugeordnet"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--ksJQe8Ai4KbRE9jOAvb7",
-      "name": "Freya Skald",
       "status": "pending",
       "primary": {
         "kind": "unassigned",
@@ -1028,7 +970,10 @@
       "canonicalDocumentId": "15ml9RhSvJPXof7z4qY3",
       "documentIds": [
         "15ml9RhSvJPXof7z4qY3",
+        "15ml9RhSvJPXof7z4qY3",
         "uiKiMFXC6OEWOdDenbiM",
+        "uiKiMFXC6OEWOdDenbiM",
+        "XWJ6XXwvpESHR3zAXkJx",
         "XWJ6XXwvpESHR3zAXkJx"
       ],
       "ages": []

@@ -14,6 +14,7 @@ const outputFile = path.join(almanachRoot, 'data', 'spell-attack-library.json');
 
 const CHARACTERS = [
   { file: 'gawain-draig.json', classId: 'teulu', className: 'Teulu (Ritter)' },
+  { file: 'gildas-gafyr.json', classId: 'teulu', className: 'Teulu (Ritter)' },
   { file: 'fenrir-varulv.json', classId: 'skjaldr', className: 'Skjaldr (Schildbeißer)' },
   { file: 'freya-skald.json', classId: 'skalde', className: 'Skalde/Skaldin' },
   { file: 'guinevere-neidr.json', classId: 'helwyr', className: 'Helwyr (Bogenschütze)' },

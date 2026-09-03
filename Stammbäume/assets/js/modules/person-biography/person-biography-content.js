@@ -41,7 +41,10 @@ export function sanitizeBiographyRichText(value, documentRef = globalThis.docume
 
   const template = documentRef.createElement('template');
   template.innerHTML = String(value || '');
-  const allowedTags = new Set(['BR', 'STRONG', 'EM', 'B', 'I', 'U', 'A', 'SPAN']);
+  // Absatzcontainer aus eingefügtem Word-/Rich-Text-Inhalt bleiben erhalten. Ihre
+  // Attribute werden unten ebenso vollständig entfernt wie bei den anderen erlaubten
+  // Elementen; dadurch gehen weder Absatzgrenzen noch verschachtelte Hervorhebungen verloren.
+  const allowedTags = new Set(['BR', 'P', 'DIV', 'STRONG', 'EM', 'B', 'I', 'U', 'A', 'SPAN']);
   Array.from(template.content.querySelectorAll('*')).forEach(element => {
     if (!allowedTags.has(element.tagName)) {
       element.replaceWith(documentRef.createTextNode(element.textContent || ''));

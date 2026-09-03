@@ -11,11 +11,28 @@
   "classification": {
     "primary": {
       "kind": "family",
-      "id": "haus-draig",
-      "label": "Haus Draig"
+      "id": "haus-fiachrach",
+      "label": "Clan Uí Fiachrach"
     },
     "familyStatus": "linked",
     "families": [
+      {
+        "familyId": "haus-fiachrach",
+        "familyTitle": "Clan Uí Fiachrach",
+        "personId": "wynonna-fiachrach",
+        "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
+        "houseId": "house-fiachrach",
+        "houseName": "Clan Uí Fiachrach",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=wynonna-fiachrach",
+        "fingerprint": "{\"name\":\"Wynonna Fiachrach\",\"title\":\"Wegverheiratet an Haus Draig\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"grada-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--grada-fiachrach\",\"name\":\"Gráda Fiachrach\"},{\"personId\":\"roisin-cumhail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cumhail--roisin-cumhail\",\"name\":\"Roisin Cumhail\"}],\"partners\":[{\"personId\":\"cadfan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cadfan-draig\",\"name\":\"Cadfan Draig\"}],\"children\":[]}}",
+        "score": 185
+      },
       {
         "familyId": "haus-draig",
         "familyTitle": "Haus Draig",
@@ -73,6 +90,12 @@
     },
     "familyTree": [
       {
+        "familyId": "haus-fiachrach",
+        "personId": "wynonna-fiachrach",
+        "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=wynonna-fiachrach"
+      },
+      {
         "familyId": "haus-draig",
         "personId": "wynonna-fiachrach",
         "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
@@ -84,12 +107,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-08-08T12:00:00.000Z",
+    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "wBW8kfX7wCLLM12kPoW2"
     ],
-    "contentHash": "b939e0c0194d43d7de07cefd060cf53a502b17c2817166d194f703dd3824f404"
+    "contentHash": "3c5a79f27a28319a780f68bc00583ed0d7cf320f3a203990cbd238f612301fc5"
   },
   "local": {
     "notes": "",
@@ -1058,24 +1081,53 @@
       "birth": "1700",
       "death": "",
       "houseId": "house-fiachrach",
-      "houseName": "Haus Fiachrach",
-      "familyRole": "married",
+      "houseName": "Clan Uí Fiachrach",
+      "familyRole": "core",
       "portraitPlaceholder": "auto",
-      "tags": [],
+      "tags": [
+        "Wegverheiratet"
+      ],
       "sources": [
+        {
+          "familyId": "haus-fiachrach",
+          "personId": "wynonna-fiachrach",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=wynonna-fiachrach",
+          "fingerprint": "{\"name\":\"Wynonna Fiachrach\",\"title\":\"Wegverheiratet an Haus Draig\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"grada-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--grada-fiachrach\",\"name\":\"Gráda Fiachrach\"},{\"personId\":\"roisin-cumhail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cumhail--roisin-cumhail\",\"name\":\"Roisin Cumhail\"}],\"partners\":[{\"personId\":\"cadfan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cadfan-draig\",\"name\":\"Cadfan Draig\"}],\"children\":[]}}"
+        },
         {
           "familyId": "haus-draig",
           "personId": "wynonna-fiachrach",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-08-08T12:00:00.000Z",
-          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
+          "importedAt": "2026-09-03T19:30:00.000Z",
+          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=wynonna-fiachrach",
           "fingerprint": "{\"name\":\"Wynonna Fiachrach\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadfan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cadfan-draig\",\"name\":\"Cadfan Draig\"}],\"children\":[{\"personId\":\"einion-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--einion-draig\",\"name\":\"Einion Draig\"},{\"personId\":\"carys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--carys-draig\",\"name\":\"Carys Draig\"}]}}"
         }
       ],
       "relationships": {
-        "parents": [],
+        "parents": [
+          {
+            "personId": "grada-fiachrach",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-fiachrach--grada-fiachrach",
+            "name": "Gráda Fiachrach"
+          },
+          {
+            "personId": "roisin-cumhail",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-cumhail--roisin-cumhail",
+            "name": "Roisin Cumhail"
+          }
+        ],
         "partners": [
           {
             "personId": "cadfan-draig",
@@ -1086,26 +1138,9 @@
             "name": "Cadfan Draig"
           }
         ],
-        "children": [
-          {
-            "personId": "einion-draig",
-            "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-draig--einion-draig",
-            "name": "Einion Draig"
-          },
-          {
-            "personId": "carys-draig",
-            "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-draig--carys-draig",
-            "name": "Carys Draig"
-          }
-        ]
+        "children": []
       }
     },
-    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+    "taxonomyPath": "Leitheach > Tir na Sleagh"
   }
 }

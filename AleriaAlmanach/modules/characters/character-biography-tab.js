@@ -394,7 +394,7 @@ function openCurrentCharacterBiographyImportFilePicker() {
       _characterBiographyDraft = {
         schema: 'aleria.biography-module',
         schemaVersion: 1,
-        stats: Array.isArray(module.stats) ? module.stats : [],
+        stats: normalizeCharacterBiographyStats(module.stats),
         quote: String(module.quote || ''),
         quoteBy: String(module.quoteBy || ''),
         biography: sanitizeBiographyData(module.biography || {})
