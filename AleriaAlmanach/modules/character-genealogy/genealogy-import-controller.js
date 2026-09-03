@@ -4,7 +4,7 @@ import {
   loadGenealogyFamily,
   loadPublishedGenealogyFamily,
   refreshGenealogyRegistry
-} from './genealogy-source-repository.js';
+} from './genealogy-source-repository.js?v=20260903-genealogy-portrait-sync-v1';
 import {
   createCharacterMatchResolver,
   findBestCharacterMatch,
@@ -38,6 +38,8 @@ const state = {
   loading: false,
   syncing: false,
   batchSaving: false,
+  publishedFamilyLoads: new Map(),
+  pendingPublishedFamilyIds: new Set(),
   error: '',
   loadToken: 0
 };
@@ -285,12 +287,12 @@ function characterHasCandidateSource(character, candidate) {
 
 function actionMarkup(candidate, match) {
   if (match?.kind === 'linked') {
-    const attachSource = characterHasCandidateSource(match.character, candidate)
-      ? ''
-      : `<button type="button" class="genealogy-import-secondary" data-character-genealogy-action="attach-source" data-character-id="${escapeMarkup(match.characterId)}">Diese Stammbaumakte ergänzen</button>`;
+    const syncLabel = characterHasCandidateSource(match.character, candidate)
+      ? 'Stammbaumdaten aktualisieren'
+      : 'Diese Stammbaumakte ergänzen';
     return `
       <button type="button" class="genealogy-import-primary" data-character-genealogy-action="open-linked" data-character-id="${escapeMarkup(match.characterId)}">Almanachprofil öffnen</button>
-      ${attachSource}`;
+      <button type="button" class="genealogy-import-secondary" data-character-genealogy-action="attach-source" data-character-id="${escapeMarkup(match.characterId)}">${syncLabel}</button>`;
   }
   if (match) {
     const primaryLabel = match.kind === 'probable'
@@ -391,19 +393,61 @@ function applyLoadedFamily(loaded) {
   rebuildCandidates();
 }
 
-function refreshPublishedFamily(record, token) {
+function loadPublishedFamilyOnce(record) {
+  const familyId = String(record?.id || '').trim();
+  if (!familyId) return Promise.resolve(null);
+  if (state.publishedFamilyLoads.has(familyId)) return state.publishedFamilyLoads.get(familyId);
+
+  state.pendingPublishedFamilyIds.add(familyId);
   state.syncing = true;
   renderStatus();
-  void loadPublishedGenealogyFamily(record)
-    .then(published => {
-      if (token !== state.loadToken) return;
-      if (published) applyLoadedFamily(published);
-    })
+  const request = loadPublishedGenealogyFamily(record)
     .finally(() => {
-      if (token !== state.loadToken) return;
-      state.syncing = false;
-      render();
+      state.pendingPublishedFamilyIds.delete(familyId);
+      state.syncing = state.pendingPublishedFamilyIds.size > 0;
+      renderStatus();
     });
+  state.publishedFamilyLoads.set(familyId, request);
+  return request;
+}
+
+async function loadAndApplyPublishedFamily(record, token = state.loadToken) {
+  const published = await loadPublishedFamilyOnce(record);
+  if (token === state.loadToken && published) applyLoadedFamily(published);
+  return published;
+}
+
+function refreshPublishedFamily(record, token) {
+  void loadAndApplyPublishedFamily(record, token).finally(() => {
+    if (token === state.loadToken) render();
+  });
+}
+
+function findCurrentVersionOfCandidate(candidate) {
+  const familyCandidates = state.candidatesByFamily.get(candidate?.familyId) || [];
+  return familyCandidates.find(item => (
+    item.personId === candidate.personId
+    || (candidate.worldPersonId && item.worldPersonId === candidate.worldPersonId)
+  )) || candidate;
+}
+
+async function resolvePublishedCandidate(candidate) {
+  if (!candidate) return null;
+  const record = state.families.find(item => item.id === candidate.familyId);
+  if (!record) return candidate;
+  await loadAndApplyPublishedFamily(record);
+  return findCurrentVersionOfCandidate(candidate);
+}
+
+function refreshSelectedCandidateFamily() {
+  const candidate = currentCandidate();
+  if (!candidate || candidate.source === 'firebase' || candidate.source === 'github') return;
+  const token = state.loadToken;
+  const record = state.families.find(item => item.id === candidate.familyId);
+  if (!record) return;
+  void loadAndApplyPublishedFamily(record, token).finally(() => {
+    if (token === state.loadToken) render();
+  });
 }
 
 function selectFamily(familyId) {
@@ -412,7 +456,7 @@ function selectFamily(familyId) {
   state.selectedCandidateKeys = new Set();
   state.selectedCandidateKey = '';
   state.resultLimit = RESULT_PAGE_SIZE;
-  state.syncing = false;
+  state.syncing = state.pendingPublishedFamilyIds.size > 0;
 
   if (!familyId) {
     state.activeFamily = null;
@@ -503,6 +547,7 @@ async function openImportDialog() {
   await initializeProjectCandidates();
   state.loading = false;
   selectFamily('');
+  refreshSelectedCandidateFamily();
   void refreshGenealogyRegistry(state.families).then(merged => {
     if (!merged) return;
     state.families = merged;
@@ -524,9 +569,14 @@ function closeImportDialog() {
 }
 
 function publishSavedCharacter(id, data) {
+  const savedId = String(id || '');
+  const previousRecord = state.characterSnapshot.find(
+    character => String(character?.id || '') === savedId
+  );
+  const savedRecord = { ...(previousRecord || {}), id, ...data };
   state.characterSnapshot = state.characterSnapshot
-    .filter(character => String(character?.id || '') !== String(id || ''));
-  state.characterSnapshot.push({ id, ...data });
+    .filter(character => String(character?.id || '') !== savedId);
+  state.characterSnapshot.push(savedRecord);
   rebuildCharacterMatchResolver();
   document.dispatchEvent(new CustomEvent('aleria:character-saved', {
     detail: { record: { id, ...data }, source: 'genealogy-import' }
@@ -537,13 +587,14 @@ async function persistCandidate(candidate, { existing = null, forceSeparate = fa
   if (!candidate) return null;
   if (!window._fb?.saveCharacter) throw new Error('Die Firebase-Verbindung für Charaktere ist noch nicht bereit.');
 
-  const currentMatch = matchFor(candidate);
+  const publishedCandidate = await resolvePublishedCandidate(candidate);
+  const currentMatch = matchFor(publishedCandidate);
   if (!existing && !forceSeparate && currentMatch) return null;
-  const importedData = buildImportedCharacter(candidate, existing);
+  const importedData = buildImportedCharacter(publishedCandidate, existing);
   const data = existing
-    ? window.AleriaCharacterSaveGuard.selectCharacterGenealogyWrite(importedData)
+    ? window.AleriaCharacterSaveGuard.selectCharacterGenealogyWrite(importedData, existing)
     : importedData;
-  const targetId = existing?.id || candidate.worldPersonId;
+  const targetId = existing?.id || publishedCandidate.worldPersonId;
   const savedId = await window._fb.saveCharacter(targetId, data, {
     createWithId: !existing
   });
@@ -606,6 +657,7 @@ async function handleAction(trigger) {
   if (action === 'select-person') {
     state.selectedCandidateKey = trigger.dataset.candidateKey || '';
     render();
+    refreshSelectedCandidateFamily();
     return;
   }
   if (action === 'select-visible') {
@@ -667,6 +719,7 @@ document.addEventListener('input', event => {
   renderPersonList();
   renderPreview();
   renderStatus();
+  refreshSelectedCandidateFamily();
 });
 
 document.addEventListener('change', event => {

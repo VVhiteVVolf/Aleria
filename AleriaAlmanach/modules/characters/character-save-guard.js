@@ -73,10 +73,16 @@ export function selectCharacterArchiveStatusWrite(source = {}) {
   };
 }
 
-export function selectCharacterGenealogyWrite(source = {}) {
+export function selectCharacterGenealogyWrite(source = {}, current = {}) {
+  const incomingPortrait = String(source?.portrait || '').trim();
+  const currentPortrait = String(current?.portrait || '').trim();
   return {
     ...(Object.prototype.hasOwnProperty.call(source, 'identity') ? { identity: source.identity } : {}),
     ...(Object.prototype.hasOwnProperty.call(source, 'genealogy') ? { genealogy: source.genealogy } : {}),
+    // Eine Stammbaum-Verknüpfung darf ein fehlendes Portrait ergänzen, aber niemals ein
+    // bereits im Almanach gepflegtes Bild überschreiben. Die übrige Bildbibliothek bleibt
+    // weiterhin vollständig außerhalb dieses gezielten Schreibvorgangs.
+    ...(!currentPortrait && incomingPortrait ? { portrait: incomingPortrait } : {}),
     ...(Object.prototype.hasOwnProperty.call(source, 'updatedAt') ? { updatedAt: source.updatedAt } : {})
   };
 }

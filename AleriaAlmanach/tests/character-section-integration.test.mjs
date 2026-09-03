@@ -43,6 +43,7 @@ test('ein externer Teilbereichs-Patch löscht lokal weder Inventar noch Charakte
   context.__setCharacters([{
     id: 'gawain',
     name: 'Gawain Draig',
+    portrait: '',
     inventory: { revision: 12, items: [{ id: 'sword' }] },
     combatProfile: { revision: 13, weapons: [{ id: 'sword' }] },
     imageSets: [{ id: 'standard', emotes: [] }]
@@ -52,6 +53,7 @@ test('ein externer Teilbereichs-Patch löscht lokal weder Inventar noch Charakte
     detail: {
       record: {
         id: 'gawain',
+        portrait: 'https://i.imgur.com/DpqoWhn.png',
         identity: { worldPersonId: 'person-gawain' },
         genealogy: { houseName: 'Draig' }
       }
@@ -60,6 +62,7 @@ test('ein externer Teilbereichs-Patch löscht lokal weder Inventar noch Charakte
 
   const [saved] = context.__getCharacters();
   assert.equal(saved.name, 'Gawain Draig');
+  assert.equal(saved.portrait, 'https://i.imgur.com/DpqoWhn.png');
   assert.equal(saved.inventory.revision, 12);
   assert.equal(saved.combatProfile.revision, 13);
   assert.equal(saved.identity.worldPersonId, 'person-gawain');

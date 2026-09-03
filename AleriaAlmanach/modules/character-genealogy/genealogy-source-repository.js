@@ -4,6 +4,32 @@ import {
 } from '../../../Stammbäume/assets/js/data/families.registry.js';
 
 const FIREBASE_READY_TIMEOUT_MS = 3500;
+const PUBLISHED_FAMILY_ROOT_URL = new URL(
+  /* @vite-ignore */
+  '../../../Stammb%C3%A4ume/assets/data/published-families/',
+  import.meta.url
+);
+
+async function loadCheckedInPublishedFamily(familyId) {
+  if (typeof globalThis.fetch !== 'function') return null;
+  try {
+    const response = await globalThis.fetch(
+      new URL(`${encodeURIComponent(familyId)}.json`, PUBLISHED_FAMILY_ROOT_URL),
+      { cache: 'no-store' }
+    );
+    if (!response.ok) return null;
+    const envelope = await response.json();
+    if (envelope?.family?.document?.id !== familyId) return null;
+    return {
+      family: envelope.family,
+      releaseId: envelope.revision ? `github-r${envelope.revision}` : '',
+      publishedAt: String(envelope.updatedAt || ''),
+      source: 'github'
+    };
+  } catch {
+    return null;
+  }
+}
 
 function waitForFirebaseGateway() {
   if (window._fbReady) return Promise.resolve(window._fb || null);
@@ -84,19 +110,25 @@ export function loadGenealogyFamily(registryRecord) {
 export async function loadPublishedGenealogyFamily(registryRecord) {
   if (!registryRecord?.id) return null;
   const gateway = await waitForFirebaseGateway();
-  if (!gateway?.loadPublishedFamily) return null;
-  try {
-    const published = await gateway.loadPublishedFamily(registryRecord.id);
-    if (published?.family) {
-      return {
-        ...registryRecord,
-        ...published,
-        folderPath: registryRecord.folderPath || [],
-        source: 'firebase'
-      };
+  if (gateway?.loadPublishedFamily) {
+    try {
+      const published = await gateway.loadPublishedFamily(registryRecord.id);
+      if (published?.family) {
+        return {
+          ...registryRecord,
+          ...published,
+          folderPath: registryRecord.folderPath || [],
+          source: 'firebase'
+        };
+      }
+    } catch (error) {
+      console.info(`Veröffentlichter Stammbaum ${registryRecord.id} ist derzeit nicht über Firebase erreichbar.`, error);
     }
-  } catch (error) {
-    console.info(`Veröffentlichter Stammbaum ${registryRecord.id} ist derzeit nicht erreichbar.`, error);
   }
-  return null;
+  const checkedIn = await loadCheckedInPublishedFamily(registryRecord.id);
+  return checkedIn ? {
+    ...registryRecord,
+    ...checkedIn,
+    folderPath: registryRecord.folderPath || []
+  } : null;
 }

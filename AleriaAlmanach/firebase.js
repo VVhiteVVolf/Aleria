@@ -10,7 +10,7 @@
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20260809-biography-stats-firestore-fix-v1";
+      from "./modules/characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",

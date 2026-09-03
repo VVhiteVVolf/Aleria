@@ -144,6 +144,20 @@ test('Archiv- und Genealogieaktionen besitzen ebenfalls harte Feldgrenzen', () =
   });
 });
 
+test('eine Stammbaum-Verknüpfung ergänzt nur ein fehlendes Portrait', () => {
+  const source = {
+    identity: { worldPersonId: 'person--haus-swyll--gareth-swyll' },
+    genealogy: { houseName: 'Haus Swyll' },
+    portrait: 'https://i.imgur.com/DpqoWhn.png',
+    imageSets: [{ id: 'standard', portrait: null }],
+    updatedAt: '2026-09-03T20:00:00.000Z'
+  };
+
+  assert.equal(selectCharacterGenealogyWrite(source, { portrait: '' }).portrait, source.portrait);
+  assert.equal('imageSets' in selectCharacterGenealogyWrite(source, { portrait: '' }), false);
+  assert.equal('portrait' in selectCharacterGenealogyWrite(source, { portrait: 'manuell.png' }), false);
+});
+
 test('ein normaler Profilspeichervorgang bleibt ein gezielter Merge', () => {
   const prepared = prepareCharacterDocumentWrite(
     { name: 'Fenrir', ownerUid: 'owner', legacyField: 'bleibt bestehen' },
