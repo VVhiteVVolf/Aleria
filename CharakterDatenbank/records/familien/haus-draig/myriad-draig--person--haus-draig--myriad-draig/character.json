@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--myriad-draig",
+  "slug": "myriad-draig",
+  "identity": {
+    "name": "Myriad Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--myriad-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "myriad-draig",
+        "worldPersonId": "person--haus-draig--myriad-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=myriad-draig",
+        "fingerprint": "{\"name\":\"Myriad Draig\",\"title\":\"\",\"birth\":\"1500\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/myriad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"myrddin-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myrddin-draig\",\"name\":\"Myrddin Draig\"},{\"personId\":\"afallith-lilith-tanwyn\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tanwyn--afallith-lilith-tanwyn\",\"name\":\"Afallith „Lilith“ Tanwyn\"}],\"partners\":[],\"children\":[]}}",
+        "score": 260
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--myriad-draig",
+      "documentIds": [
+        "person--haus-draig--myriad-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--myriad-draig",
+          "createdAt": "2026-09-03T23:41:36.861Z",
+          "updatedAt": "2026-09-03T23:41:36.861Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "myriad-draig",
+        "worldPersonId": "person--haus-draig--myriad-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=myriad-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:36.861Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--myriad-draig"
+    ],
+    "contentHash": "8d45795a2ca1c131e2cb2e894a31b21aceb8b47e462ac38b662e3640de743d33"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:36.861Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1500",
+          "death": "",
+          "familyRole": "bastard",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Myrddin Draig",
+                "personId": "myrddin-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--myrddin-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Afallith „Lilith“ Tanwyn",
+                "personId": "afallith-lilith-tanwyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "unknown",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Myriad Draig\",\"title\":\"\",\"birth\":\"1500\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/myriad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"myrddin-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myrddin-draig\",\"name\":\"Myrddin Draig\"},{\"personId\":\"afallith-lilith-tanwyn\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tanwyn--afallith-lilith-tanwyn\",\"name\":\"Afallith „Lilith“ Tanwyn\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:41:36.861Z",
+              "lastSyncedAt": "2026-09-03T23:41:36.861Z",
+              "personId": "myriad-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=myriad-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--myriad-draig"
+        },
+        "id": "person--haus-draig--myriad-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--myriad-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Myriad Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/myriad-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:41:36.861Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:36.861Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1500",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Myrddin Draig",
+            "personId": "myrddin-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--myrddin-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Afallith „Lilith“ Tanwyn",
+            "personId": "afallith-lilith-tanwyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "unknown",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Myriad Draig\",\"title\":\"\",\"birth\":\"1500\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/myriad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"myrddin-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myrddin-draig\",\"name\":\"Myrddin Draig\"},{\"personId\":\"afallith-lilith-tanwyn\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tanwyn--afallith-lilith-tanwyn\",\"name\":\"Afallith „Lilith“ Tanwyn\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:41:36.861Z",
+          "lastSyncedAt": "2026-09-03T23:41:36.861Z",
+          "personId": "myriad-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=myriad-draig"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--myriad-draig"
+    },
+    "id": "person--haus-draig--myriad-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--myriad-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Myriad Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/myriad-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:41:36.861Z"
+  }
+}

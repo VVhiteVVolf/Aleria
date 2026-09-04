@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--gethin-1722-draig",
+  "slug": "gethin-draig",
+  "identity": {
+    "name": "Gethin Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--gethin-1722-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "gethin-1722-draig",
+        "worldPersonId": "person--haus-draig--gethin-1722-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gethin-1722-draig",
+        "fingerprint": "{\"name\":\"Gethin Draig\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--gethin-1722-draig",
+      "documentIds": [
+        "person--haus-draig--gethin-1722-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--gethin-1722-draig",
+          "createdAt": "2026-09-03T23:43:01.414Z",
+          "updatedAt": "2026-09-03T23:43:01.414Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "gethin-1722-draig",
+        "worldPersonId": "person--haus-draig--gethin-1722-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gethin-1722-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:43:01.414Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--gethin-1722-draig"
+    ],
+    "contentHash": "7a604ca927fd3b6d46d6a84daaa5c80b6b3f1eefc9088dfbe5f434e087edfc97"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:43:01.414Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1722",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Steffan Draig",
+                "personId": "steffan-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--steffan-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Branwen Gwefrydd",
+                "personId": "branwen-gwefrydd",
+                "type": "biological",
+                "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Gethin Draig\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:43:01.414Z",
+              "lastSyncedAt": "2026-09-03T23:43:01.414Z",
+              "personId": "gethin-1722-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gethin-1722-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--gethin-1722-draig"
+        },
+        "id": "person--haus-draig--gethin-1722-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--gethin-1722-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Gethin Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:43:01.414Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:43:01.414Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1722",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Steffan Draig",
+            "personId": "steffan-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--steffan-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Branwen Gwefrydd",
+            "personId": "branwen-gwefrydd",
+            "type": "biological",
+            "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Gethin Draig\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:43:01.414Z",
+          "lastSyncedAt": "2026-09-03T23:43:01.414Z",
+          "personId": "gethin-1722-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gethin-1722-draig"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--gethin-1722-draig"
+    },
+    "id": "person--haus-draig--gethin-1722-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--gethin-1722-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Gethin Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:43:01.414Z"
+  }
+}

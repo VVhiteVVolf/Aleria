@@ -1,0 +1,325 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-argall--shylene-argall",
+  "slug": "shylene-argall",
+  "identity": {
+    "name": "Shylene Argall",
+    "aliases": [],
+    "worldPersonId": "person--haus-argall--shylene-argall"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-argall",
+      "label": "Haus Argall"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-argall",
+        "familyTitle": "Haus Argall",
+        "personId": "shylene-argall",
+        "worldPersonId": "person--haus-argall--shylene-argall",
+        "houseId": "house-argall",
+        "houseName": "Haus Argall",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Llysfaen"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=shylene-argall",
+        "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"Tochter Brinthan und Eris Argalls · Affäre Owain Draigs\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"30 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"brinthan-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--brinthan-argall\",\"name\":\"Brinthan Argall\"},{\"personId\":\"eris-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eris-argall\",\"name\":\"Eris Argall\"}],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "shylene-argall",
+        "worldPersonId": "person--haus-argall--shylene-argall",
+        "houseId": "house-argall",
+        "houseName": "Haus Argall",
+        "familyRole": "affair",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=shylene-argall",
+        "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-argall--shylene-argall",
+      "documentIds": [
+        "person--haus-argall--shylene-argall"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-argall--shylene-argall",
+          "createdAt": "2026-09-03T23:42:19.933Z",
+          "updatedAt": "2026-09-03T23:42:19.933Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-argall",
+        "personId": "shylene-argall",
+        "worldPersonId": "person--haus-argall--shylene-argall",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=shylene-argall"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "shylene-argall",
+        "worldPersonId": "person--haus-argall--shylene-argall",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=shylene-argall"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:42:19.933Z",
+    "sourceDocumentIds": [
+      "person--haus-argall--shylene-argall"
+    ],
+    "contentHash": "a31a788153f33986755ff6c79de187f3d8ac9c468ed17eb9a48e6c05ac3a7f64"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:42:19.933Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Argall",
+        "genealogy": {
+          "birth": "1710",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-argall",
+          "houseName": "Haus Argall",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Iolo Argall",
+                "personId": "iolo-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--iolo-draig"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Brinthan Argall",
+                "personId": "brinthan-argall",
+                "type": "biological",
+                "worldPersonId": "person--haus-argall--brinthan-argall"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Eris Argall",
+                "personId": "eris-argall",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--eris-argall"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Owain Draig",
+                "personId": "owain-draig",
+                "status": "secret",
+                "type": "affair",
+                "worldPersonId": "person--haus-draig--owain-draig"
+              }
+            ]
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-argall",
+              "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"Tochter Brinthan und Eris Argalls · Affäre Owain Draigs\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"30 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"brinthan-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--brinthan-argall\",\"name\":\"Brinthan Argall\"},{\"personId\":\"eris-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eris-argall\",\"name\":\"Eris Argall\"}],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+              "importedAt": "2026-09-03T23:42:19.933Z",
+              "lastSyncedAt": "2026-09-03T23:42:19.933Z",
+              "personId": "shylene-argall",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=shylene-argall"
+            }
+          ],
+          "status": "alive",
+          "tags": [
+            "30 Jahre"
+          ],
+          "worldPersonId": "person--haus-argall--shylene-argall"
+        },
+        "id": "person--haus-argall--shylene-argall",
+        "identity": {
+          "worldPersonId": "person--haus-argall--shylene-argall"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Shylene Argall",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-argall/shylene-argall.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+        "title": "Tochter Brinthan und Eris Argalls · Affäre Owain Draigs",
+        "updatedAt": "2026-09-03T23:42:19.933Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:42:19.933Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Argall",
+    "genealogy": {
+      "birth": "1710",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-argall",
+      "houseName": "Haus Argall",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Iolo Argall",
+            "personId": "iolo-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--iolo-draig"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Brinthan Argall",
+            "personId": "brinthan-argall",
+            "type": "biological",
+            "worldPersonId": "person--haus-argall--brinthan-argall"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Eris Argall",
+            "personId": "eris-argall",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--eris-argall"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Owain Draig",
+            "personId": "owain-draig",
+            "status": "secret",
+            "type": "affair",
+            "worldPersonId": "person--haus-draig--owain-draig"
+          }
+        ]
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-argall",
+          "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"Tochter Brinthan und Eris Argalls · Affäre Owain Draigs\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"30 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"brinthan-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--brinthan-argall\",\"name\":\"Brinthan Argall\"},{\"personId\":\"eris-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eris-argall\",\"name\":\"Eris Argall\"}],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+          "importedAt": "2026-09-03T23:42:19.933Z",
+          "lastSyncedAt": "2026-09-03T23:42:19.933Z",
+          "personId": "shylene-argall",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=shylene-argall"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "shylene-argall",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=shylene-argall",
+          "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "30 Jahre"
+      ],
+      "worldPersonId": "person--haus-argall--shylene-argall"
+    },
+    "id": "person--haus-argall--shylene-argall",
+    "identity": {
+      "worldPersonId": "person--haus-argall--shylene-argall"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Shylene Argall",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-argall/shylene-argall.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+    "title": "Tochter Brinthan und Eris Argalls · Affäre Owain Draigs",
+    "updatedAt": "2026-09-03T23:42:19.933Z"
+  }
+}

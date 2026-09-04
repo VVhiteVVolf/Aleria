@@ -64,7 +64,7 @@
         {
           "documentId": "JjVTIr5E7a0IHKB7q1fF",
           "createdAt": "2026-07-10T11:41:57.023Z",
-          "updatedAt": "2026-07-10T11:41:57.916Z"
+          "updatedAt": "2026-08-03T23:30:37.162Z"
         }
       ]
     },
@@ -80,13 +80,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "2026-07-10T11:41:57.916Z",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-03T23:30:37.162Z",
     "sourceDocumentIds": [
       "JjVTIr5E7a0IHKB7q1fF"
     ],
-    "contentHash": "fa26a9786ff950fda750ec4a698a7e52f11e26b7ab30c1cc4794bcc7f1ad5624"
+    "contentHash": "86c916de00cf7a49adb94c7904cc0bc10327e03a18f25cec755a26d04f773a55"
   },
   "local": {
     "notes": "",
@@ -153,7 +153,9 @@
               "ownerCharacterId": "",
               "icon": "*",
               "itemStorageMode": "character",
-              "description": "Beschreibe Material, Zustand und besondere Merkmale."
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "combatDefinition": null,
+              "equipped": false
             },
             {
               "ownerCharacterId": "",
@@ -202,7 +204,9 @@
               "tags": "",
               "type": "Rüstung",
               "imageFormat": "square",
-              "infoRows": []
+              "infoRows": [],
+              "combatDefinition": null,
+              "equipped": false
             },
             {
               "id": "item-mr475o6r-2-5dxv",
@@ -251,7 +255,9 @@
               "itemDbKey": "",
               "name": "Reiseausrüstung",
               "infoRows": [],
-              "itemStorageMode": "character"
+              "itemStorageMode": "character",
+              "combatDefinition": null,
+              "equipped": false
             },
             {
               "name": "Heil- oder Verbrauchsgut",
@@ -300,7 +306,9 @@
               "imageFormat": "square",
               "itemStorageMode": "character",
               "icon": "*",
-              "id": "item-mr475o6r-3-g7m0"
+              "id": "item-mr475o6r-3-g7m0",
+              "combatDefinition": null,
+              "equipped": false
             },
             {
               "tags": "",
@@ -349,7 +357,9 @@
               "category": "documents",
               "ownerCharacterName": "",
               "imagePosition": "center",
-              "originItemDbKey": ""
+              "originItemDbKey": "",
+              "combatDefinition": null,
+              "equipped": false
             },
             {
               "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
@@ -398,7 +408,9 @@
                 }
               ],
               "id": "item-mr475o6r-5-2rgj",
-              "originItemDbKey": ""
+              "originItemDbKey": "",
+              "combatDefinition": null,
+              "equipped": false
             }
           ],
           "title": "Charakter-Inventar",
@@ -635,7 +647,7 @@
         "plotNode": "",
         "name": "Gideon Weinlaub",
         "taxonomyPath": "",
-        "updatedAt": "2026-07-10T11:41:57.916Z",
+        "updatedAt": "2026-08-03T23:30:37.162Z",
         "profileLink": "",
         "bio": "Gideon Weinlaub ist ein junger Ritter aus Weisenfluh und der einstige Erstgeborene des Hauses Weinlaub, eines wohlhabenden Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner Stiefmutter, Zweifel an Gideons Charakter und seiner Eignung als Erbe zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon aus dem Haus verbannte. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als fahrender Ritter durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, dem er aus freiem Willen seine Treue schenken und unter dessen Banner er sich durch Taten statt durch Geburt einen neuen Namen machen kann.",
         "emotes": [
@@ -674,12 +686,376 @@
           {
             "img": "https://i.imgur.com/WZxn2VO.png",
             "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Dx8bIep.png",
+            "label": "Dx8bIep"
+          },
+          {
+            "img": "https://i.imgur.com/ACSJtzT.png",
+            "label": "ACSJtzT"
+          },
+          {
+            "img": "https://i.imgur.com/B7pRBvt.png",
+            "label": "B7pRBvt"
+          },
+          {
+            "img": "https://i.imgur.com/rXSMVwO.png",
+            "label": "rXSMVwO"
+          },
+          {
+            "img": "https://i.imgur.com/ZkpoLWV.png",
+            "label": "ZkpoLWV"
+          },
+          {
+            "img": "https://i.imgur.com/u6tO3ZF.png",
+            "label": "u6tO3ZF"
+          },
+          {
+            "img": "https://i.imgur.com/xdg5stP.png",
+            "label": "xdg5stP"
+          },
+          {
+            "img": "https://i.imgur.com/MJctHmF.png",
+            "label": "MJctHmF"
+          },
+          {
+            "img": "https://i.imgur.com/heoJLQK.png",
+            "label": "heoJLQK"
           }
         ],
         "title": "Ritter, Weisenfluh",
         "origin": "",
         "archived": false,
-        "playerOwner": ""
+        "playerOwner": "",
+        "combatProfile": {
+          "abilities": [],
+          "armorClass": {
+            "base": 10,
+            "dexterityCap": 2,
+            "dexterityMode": "full",
+            "magicModifier": 0,
+            "otherModifier": 0,
+            "override": null,
+            "shieldBonus": 0
+          },
+          "armorItems": [],
+          "attributes": [
+            {
+              "key": "strength",
+              "label": "Kraft",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "KRF"
+            },
+            {
+              "key": "dexterity",
+              "label": "Geschick",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "GES"
+            },
+            {
+              "key": "constitution",
+              "label": "Konstitution",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "KON"
+            },
+            {
+              "key": "intelligence",
+              "label": "Intelligenz",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "INT"
+            },
+            {
+              "key": "wisdom",
+              "label": "Weisheit",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "WEI"
+            },
+            {
+              "key": "charisma",
+              "label": "Charisma",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "CHA"
+            }
+          ],
+          "combat": {
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "initiativeBonus": 0,
+            "movement": 9,
+            "passivePerceptionBonus": 0
+          },
+          "conditions": [],
+          "hitPoints": {
+            "averagePerLevelOverride": null,
+            "current": null,
+            "hitDie": 8,
+            "maximumOverride": null,
+            "temporary": 0
+          },
+          "identity": {
+            "ancestry": "",
+            "archetype": "",
+            "background": ""
+          },
+          "magic": {
+            "castingAttribute": "intelligence",
+            "enabled": false,
+            "manaResourceId": "",
+            "notes": "",
+            "spellAttackOverride": null,
+            "spells": [],
+            "spellSaveDcOverride": null
+          },
+          "notes": "",
+          "progression": {
+            "experience": 0,
+            "level": 1,
+            "nextLevelExperience": null,
+            "proficiencyBonusOverride": null,
+            "specialLevels": 0
+          },
+          "quirks": [],
+          "resources": [
+            {
+              "current": 0,
+              "id": "inspiration",
+              "maximum": 1,
+              "name": "Inspiration",
+              "notes": "",
+              "recovery": "manual"
+            },
+            {
+              "current": 0,
+              "id": "mana-focus",
+              "maximum": 0,
+              "name": "Mana / Fokus",
+              "notes": "",
+              "recovery": "long-rest"
+            },
+            {
+              "current": 0,
+              "id": "fate-points",
+              "maximum": 0,
+              "name": "Schicksalspunkte",
+              "notes": "",
+              "recovery": "manual"
+            }
+          ],
+          "savingThrows": [
+            {
+              "attributeKey": "strength",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "constitution",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            }
+          ],
+          "schemaVersion": 3,
+          "skills": [
+            {
+              "attributeKey": "strength",
+              "bonus": 0,
+              "id": "default-skill-1",
+              "name": "Athletik",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-2",
+              "name": "Akrobatik",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-3",
+              "name": "Fingerfertigkeit",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-4",
+              "name": "Heimlichkeit",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-5",
+              "name": "Arkane Kunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-6",
+              "name": "Geschichte",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-7",
+              "name": "Nachforschungen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-8",
+              "name": "Naturkunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-9",
+              "name": "Religion",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-10",
+              "name": "Heilkunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-11",
+              "name": "Mit Tieren umgehen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-12",
+              "name": "Motiv erkennen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-13",
+              "name": "Überleben",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-14",
+              "name": "Wahrnehmung",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-15",
+              "name": "Auftreten",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-16",
+              "name": "Einschüchtern",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-17",
+              "name": "Täuschen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-18",
+              "name": "Überreden",
+              "notes": "",
+              "proficiency": "none"
+            }
+          ],
+          "weapons": []
+        },
+        "genealogy": {
+          "birth": "",
+          "death": "",
+          "familyRole": "",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "",
+          "relationships": {
+            "children": [],
+            "parents": [],
+            "partners": []
+          },
+          "sex": "unknown",
+          "sources": [],
+          "status": "",
+          "tags": [],
+          "worldPersonId": ""
+        },
+        "identity": {
+          "worldPersonId": ""
+        }
       }
     ]
   },
@@ -740,7 +1116,9 @@
           "ownerCharacterId": "",
           "icon": "*",
           "itemStorageMode": "character",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale."
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "combatDefinition": null,
+          "equipped": false
         },
         {
           "ownerCharacterId": "",
@@ -789,7 +1167,9 @@
           "tags": "",
           "type": "Rüstung",
           "imageFormat": "square",
-          "infoRows": []
+          "infoRows": [],
+          "combatDefinition": null,
+          "equipped": false
         },
         {
           "id": "item-mr475o6r-2-5dxv",
@@ -838,7 +1218,9 @@
           "itemDbKey": "",
           "name": "Reiseausrüstung",
           "infoRows": [],
-          "itemStorageMode": "character"
+          "itemStorageMode": "character",
+          "combatDefinition": null,
+          "equipped": false
         },
         {
           "name": "Heil- oder Verbrauchsgut",
@@ -887,7 +1269,9 @@
           "imageFormat": "square",
           "itemStorageMode": "character",
           "icon": "*",
-          "id": "item-mr475o6r-3-g7m0"
+          "id": "item-mr475o6r-3-g7m0",
+          "combatDefinition": null,
+          "equipped": false
         },
         {
           "tags": "",
@@ -936,7 +1320,9 @@
           "category": "documents",
           "ownerCharacterName": "",
           "imagePosition": "center",
-          "originItemDbKey": ""
+          "originItemDbKey": "",
+          "combatDefinition": null,
+          "equipped": false
         },
         {
           "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
@@ -985,7 +1371,9 @@
             }
           ],
           "id": "item-mr475o6r-5-2rgj",
-          "originItemDbKey": ""
+          "originItemDbKey": "",
+          "combatDefinition": null,
+          "equipped": false
         }
       ],
       "title": "Charakter-Inventar",
@@ -1222,7 +1610,7 @@
     "plotNode": "",
     "name": "Gideon Weinlaub",
     "taxonomyPath": "Weisenfluh > Region Ewigensee > Ewigensee",
-    "updatedAt": "2026-07-10T11:41:57.916Z",
+    "updatedAt": "2026-08-03T23:30:37.162Z",
     "profileLink": "",
     "bio": "Gideon Weinlaub ist ein junger Ritter aus Weisenfluh und der einstige Erstgeborene des Hauses Weinlaub, eines wohlhabenden Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner Stiefmutter, Zweifel an Gideons Charakter und seiner Eignung als Erbe zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon aus dem Haus verbannte. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als fahrender Ritter durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, dem er aus freiem Willen seine Treue schenken und unter dessen Banner er sich durch Taten statt durch Geburt einen neuen Namen machen kann.",
     "emotes": [
@@ -1261,43 +1649,362 @@
       {
         "img": "https://i.imgur.com/WZxn2VO.png",
         "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Dx8bIep.png",
+        "label": "Dx8bIep"
+      },
+      {
+        "img": "https://i.imgur.com/ACSJtzT.png",
+        "label": "ACSJtzT"
+      },
+      {
+        "img": "https://i.imgur.com/B7pRBvt.png",
+        "label": "B7pRBvt"
+      },
+      {
+        "img": "https://i.imgur.com/rXSMVwO.png",
+        "label": "rXSMVwO"
+      },
+      {
+        "img": "https://i.imgur.com/ZkpoLWV.png",
+        "label": "ZkpoLWV"
+      },
+      {
+        "img": "https://i.imgur.com/u6tO3ZF.png",
+        "label": "u6tO3ZF"
+      },
+      {
+        "img": "https://i.imgur.com/xdg5stP.png",
+        "label": "xdg5stP"
+      },
+      {
+        "img": "https://i.imgur.com/MJctHmF.png",
+        "label": "MJctHmF"
+      },
+      {
+        "img": "https://i.imgur.com/heoJLQK.png",
+        "label": "heoJLQK"
       }
     ],
     "title": "Ritter, Weisenfluh",
     "origin": "",
     "archived": false,
     "playerOwner": "",
-    "identity": {
-      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub"
-    },
-    "genealogy": {
-      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub",
-      "sex": "male",
-      "status": "alive",
-      "birth": "1711",
-      "death": "",
-      "houseId": "house-weinlaub",
-      "houseName": "Haus Weinlaub",
-      "familyRole": "core",
-      "portraitPlaceholder": "auto",
-      "tags": [
-        "Enterbt",
-        "Verstoßen",
-        "Fahrender Ritter",
-        "Im Exil"
-      ],
-      "sources": [
+    "combatProfile": {
+      "abilities": [],
+      "armorClass": {
+        "base": 10,
+        "dexterityCap": 2,
+        "dexterityMode": "full",
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "shieldBonus": 0
+      },
+      "armorItems": [],
+      "attributes": [
         {
-          "familyId": "haus-weinlaub",
-          "personId": "gideon-weinlaub",
-          "releaseId": "",
-          "publishedAt": "",
-          "importedAt": "2026-09-03T19:30:00.000Z",
-          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view&person=gideon-weinlaub",
-          "fingerprint": "{\"name\":\"Gideon Weinlaub\",\"title\":\"Enterbter Erstgeborener · seit 1728 fahrender Ritter\",\"birth\":\"1711\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-weinlaub\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-weinlaub/gideon-weinlaub.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Enterbt\",\"Verstoßen\",\"Fahrender Ritter\",\"Im Exil\"],\"relationships\":{\"parents\":[{\"personId\":\"josiah-weinlaub\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-weinlaub--josiah-weinlaub\",\"name\":\"Josiah Weinlaub\"},{\"personId\":\"rahel-weinlaub-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--rahel-weinlaub-spouse\",\"name\":\"Rahel\"}],\"partners\":[],\"children\":[]}}"
+          "key": "strength",
+          "label": "Kraft",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "KRF"
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "GES"
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "KON"
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "INT"
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "WEI"
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "CHA"
         }
       ],
+      "combat": {
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "initiativeBonus": 0,
+        "movement": 9,
+        "passivePerceptionBonus": 0
+      },
+      "conditions": [],
+      "hitPoints": {
+        "averagePerLevelOverride": null,
+        "current": null,
+        "hitDie": 8,
+        "maximumOverride": null,
+        "temporary": 0
+      },
+      "identity": {
+        "ancestry": "",
+        "archetype": "",
+        "background": ""
+      },
+      "magic": {
+        "castingAttribute": "intelligence",
+        "enabled": false,
+        "manaResourceId": "",
+        "notes": "",
+        "spellAttackOverride": null,
+        "spells": [],
+        "spellSaveDcOverride": null
+      },
+      "notes": "",
+      "progression": {
+        "experience": 0,
+        "level": 1,
+        "nextLevelExperience": null,
+        "proficiencyBonusOverride": null,
+        "specialLevels": 0
+      },
+      "quirks": [],
+      "resources": [
+        {
+          "current": 0,
+          "id": "inspiration",
+          "maximum": 1,
+          "name": "Inspiration",
+          "notes": "",
+          "recovery": "manual"
+        },
+        {
+          "current": 0,
+          "id": "mana-focus",
+          "maximum": 0,
+          "name": "Mana / Fokus",
+          "notes": "",
+          "recovery": "long-rest"
+        },
+        {
+          "current": 0,
+          "id": "fate-points",
+          "maximum": 0,
+          "name": "Schicksalspunkte",
+          "notes": "",
+          "recovery": "manual"
+        }
+      ],
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        }
+      ],
+      "schemaVersion": 3,
+      "skills": [
+        {
+          "attributeKey": "strength",
+          "bonus": 0,
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-9",
+          "name": "Religion",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "notes": "",
+          "proficiency": "none"
+        }
+      ],
+      "weapons": []
+    },
+    "genealogy": {
+      "birth": "1711",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-weinlaub",
+      "houseName": "Haus Weinlaub",
+      "portraitPlaceholder": "auto",
       "relationships": {
         "parents": [
           {
@@ -1319,7 +2026,31 @@
         ],
         "partners": [],
         "children": []
-      }
+      },
+      "sex": "unknown",
+      "sources": [
+        {
+          "familyId": "haus-weinlaub",
+          "personId": "gideon-weinlaub",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view&person=gideon-weinlaub",
+          "fingerprint": "{\"name\":\"Gideon Weinlaub\",\"title\":\"Enterbter Erstgeborener · seit 1728 fahrender Ritter\",\"birth\":\"1711\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-weinlaub\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-weinlaub/gideon-weinlaub.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Enterbt\",\"Verstoßen\",\"Fahrender Ritter\",\"Im Exil\"],\"relationships\":{\"parents\":[{\"personId\":\"josiah-weinlaub\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-weinlaub--josiah-weinlaub\",\"name\":\"Josiah Weinlaub\"},{\"personId\":\"rahel-weinlaub-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--rahel-weinlaub-spouse\",\"name\":\"Rahel\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "Enterbt",
+        "Verstoßen",
+        "Fahrender Ritter",
+        "Im Exil"
+      ],
+      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub"
+    },
+    "identity": {
+      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub"
     }
   }
 }

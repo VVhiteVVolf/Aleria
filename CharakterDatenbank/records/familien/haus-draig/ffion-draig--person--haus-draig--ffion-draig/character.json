@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--ffion-draig",
+  "slug": "ffion-draig",
+  "identity": {
+    "name": "Ffion Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--ffion-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "ffion-draig",
+        "worldPersonId": "person--haus-draig--ffion-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=ffion-draig",
+        "fingerprint": "{\"name\":\"Ffion Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/ffion-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lancelot-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--lancelot-draig\",\"name\":\"Lancelot Draig\"},{\"personId\":\"gwyneth-neidr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--gwyneth-neidr\",\"name\":\"Gwyneth Neidr\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--ffion-draig",
+      "documentIds": [
+        "person--haus-draig--ffion-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--ffion-draig",
+          "createdAt": "2026-09-03T23:41:37.818Z",
+          "updatedAt": "2026-09-03T23:41:37.818Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "ffion-draig",
+        "worldPersonId": "person--haus-draig--ffion-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=ffion-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:37.818Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--ffion-draig"
+    ],
+    "contentHash": "faa65739105c104ccc4214e31bc08e96e180ee22f7a626c465055b9455ad476e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:37.818Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "????",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Lancelot Draig",
+                "personId": "lancelot-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--lancelot-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gwyneth Neidr",
+                "personId": "gwyneth-neidr",
+                "type": "biological",
+                "worldPersonId": "person--haus-neidr--gwyneth-neidr"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Ffion Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/ffion-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lancelot-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--lancelot-draig\",\"name\":\"Lancelot Draig\"},{\"personId\":\"gwyneth-neidr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--gwyneth-neidr\",\"name\":\"Gwyneth Neidr\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:41:37.818Z",
+              "lastSyncedAt": "2026-09-03T23:41:37.818Z",
+              "personId": "ffion-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=ffion-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--ffion-draig"
+        },
+        "id": "person--haus-draig--ffion-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--ffion-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Ffion Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/ffion-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:41:37.818Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:37.818Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "????",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Lancelot Draig",
+            "personId": "lancelot-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--lancelot-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gwyneth Neidr",
+            "personId": "gwyneth-neidr",
+            "type": "biological",
+            "worldPersonId": "person--haus-neidr--gwyneth-neidr"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Ffion Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/ffion-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lancelot-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--lancelot-draig\",\"name\":\"Lancelot Draig\"},{\"personId\":\"gwyneth-neidr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--gwyneth-neidr\",\"name\":\"Gwyneth Neidr\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:41:37.818Z",
+          "lastSyncedAt": "2026-09-03T23:41:37.818Z",
+          "personId": "ffion-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=ffion-draig"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--ffion-draig"
+    },
+    "id": "person--haus-draig--ffion-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--ffion-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Ffion Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/ffion-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:41:37.818Z"
+  }
+}

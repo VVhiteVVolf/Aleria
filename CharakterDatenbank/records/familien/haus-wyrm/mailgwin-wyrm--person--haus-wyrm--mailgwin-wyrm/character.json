@@ -1,0 +1,337 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-wyrm--mailgwin-wyrm",
+  "slug": "mailgwin-wyrm",
+  "identity": {
+    "name": "Mailgwin Wyrm",
+    "aliases": [],
+    "worldPersonId": "person--haus-wyrm--mailgwin-wyrm"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-wyrm",
+      "label": "Haus Wyrm"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-wyrm",
+        "familyTitle": "Haus Wyrm",
+        "personId": "mailgwin-wyrm",
+        "worldPersonId": "person--haus-wyrm--mailgwin-wyrm",
+        "houseId": "house-wyrm",
+        "houseName": "Haus Wyrm",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mailgwin-wyrm",
+        "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwlyddyn-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--gwlyddyn-wyrm\",\"name\":\"Gwlyddyn Wyrm\"},{\"personId\":\"mairead-eirce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eirce--mairead-eirce\",\"name\":\"Mairead Eirce\"}],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[{\"personId\":\"shan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"},{\"personId\":\"aelwyd-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--aelwyd-wyrm\",\"name\":\"Aelwyd Wyrm\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "mailgwin-wyrm",
+        "worldPersonId": "person--haus-wyrm--mailgwin-wyrm",
+        "houseId": "house-wyrm",
+        "houseName": "Haus Wyrm",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=mailgwin-wyrm",
+        "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-wyrm--mailgwin-wyrm",
+      "documentIds": [
+        "person--haus-wyrm--mailgwin-wyrm"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-wyrm--mailgwin-wyrm",
+          "createdAt": "2026-09-03T23:41:57.663Z",
+          "updatedAt": "2026-09-03T23:41:57.663Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-wyrm",
+        "personId": "mailgwin-wyrm",
+        "worldPersonId": "person--haus-wyrm--mailgwin-wyrm",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mailgwin-wyrm"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "mailgwin-wyrm",
+        "worldPersonId": "person--haus-wyrm--mailgwin-wyrm",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=mailgwin-wyrm"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:57.663Z",
+    "sourceDocumentIds": [
+      "person--haus-wyrm--mailgwin-wyrm"
+    ],
+    "contentHash": "d401a6d1f95aaf1065b2a5d15fe1e758260d04ffaa7821266cef22f36df72697"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:57.663Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Wyrm",
+        "genealogy": {
+          "birth": "1669",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-wyrm",
+          "houseName": "Haus Wyrm",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Shan Wyrm",
+                "personId": "shan-wyrm",
+                "type": "biological",
+                "worldPersonId": "person--haus-wyrm--shan-wyrm"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Aelwyd Wyrm",
+                "personId": "aelwyd-wyrm",
+                "type": "biological",
+                "worldPersonId": "person--haus-wyrm--aelwyd-wyrm"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gwlyddyn Wyrm",
+                "personId": "gwlyddyn-wyrm",
+                "type": "biological",
+                "worldPersonId": "person--haus-wyrm--gwlyddyn-wyrm"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Mairead Eirce",
+                "personId": "mairead-eirce",
+                "type": "biological",
+                "worldPersonId": "person--haus-eirce--mairead-eirce"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Ceridwen Draig",
+                "personId": "ceridwen-draig",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--haus-draig--ceridwen-draig"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-wyrm",
+              "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwlyddyn-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--gwlyddyn-wyrm\",\"name\":\"Gwlyddyn Wyrm\"},{\"personId\":\"mairead-eirce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eirce--mairead-eirce\",\"name\":\"Mairead Eirce\"}],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[{\"personId\":\"shan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"},{\"personId\":\"aelwyd-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--aelwyd-wyrm\",\"name\":\"Aelwyd Wyrm\"}]}}",
+              "importedAt": "2026-09-03T23:41:57.663Z",
+              "lastSyncedAt": "2026-09-03T23:41:57.663Z",
+              "personId": "mailgwin-wyrm",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mailgwin-wyrm"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-wyrm--mailgwin-wyrm"
+        },
+        "id": "person--haus-wyrm--mailgwin-wyrm",
+        "identity": {
+          "worldPersonId": "person--haus-wyrm--mailgwin-wyrm"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Mailgwin Wyrm",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:41:57.663Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:57.663Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Wyrm",
+    "genealogy": {
+      "birth": "1669",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-wyrm",
+      "houseName": "Haus Wyrm",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Shan Wyrm",
+            "personId": "shan-wyrm",
+            "type": "biological",
+            "worldPersonId": "person--haus-wyrm--shan-wyrm"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Aelwyd Wyrm",
+            "personId": "aelwyd-wyrm",
+            "type": "biological",
+            "worldPersonId": "person--haus-wyrm--aelwyd-wyrm"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gwlyddyn Wyrm",
+            "personId": "gwlyddyn-wyrm",
+            "type": "biological",
+            "worldPersonId": "person--haus-wyrm--gwlyddyn-wyrm"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Mairead Eirce",
+            "personId": "mairead-eirce",
+            "type": "biological",
+            "worldPersonId": "person--haus-eirce--mairead-eirce"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Ceridwen Draig",
+            "personId": "ceridwen-draig",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--haus-draig--ceridwen-draig"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-wyrm",
+          "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwlyddyn-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--gwlyddyn-wyrm\",\"name\":\"Gwlyddyn Wyrm\"},{\"personId\":\"mairead-eirce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eirce--mairead-eirce\",\"name\":\"Mairead Eirce\"}],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[{\"personId\":\"shan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"},{\"personId\":\"aelwyd-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--aelwyd-wyrm\",\"name\":\"Aelwyd Wyrm\"}]}}",
+          "importedAt": "2026-09-03T23:41:57.663Z",
+          "lastSyncedAt": "2026-09-03T23:41:57.663Z",
+          "personId": "mailgwin-wyrm",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mailgwin-wyrm"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "mailgwin-wyrm",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=mailgwin-wyrm",
+          "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-wyrm--mailgwin-wyrm"
+    },
+    "id": "person--haus-wyrm--mailgwin-wyrm",
+    "identity": {
+      "worldPersonId": "person--haus-wyrm--mailgwin-wyrm"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Mailgwin Wyrm",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:41:57.663Z"
+  }
+}

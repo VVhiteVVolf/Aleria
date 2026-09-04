@@ -45,8 +45,8 @@
       "documents": [
         {
           "documentId": "2UgcQTdEEpSJDTNKxx0U",
-          "createdAt": "",
-          "updatedAt": ""
+          "createdAt": "2026-08-07T03:30:53.000Z",
+          "updatedAt": "2026-08-07T03:30:53.000Z"
         }
       ]
     },
@@ -55,13 +55,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-07T03:30:53.000Z",
     "sourceDocumentIds": [
       "2UgcQTdEEpSJDTNKxx0U"
     ],
-    "contentHash": "fcb9de8bcd91a34051e82b21ffcac87f5fc1f9796aaba20e77785a8d0170c4fe"
+    "contentHash": "df9f8a271244c865b003faf9638d73db52b673d74e3fd9fd7f385517e470e13a"
   },
   "local": {
     "notes": "",
@@ -192,7 +192,17 @@
               "description": "Beschreibe Material, Zustand und besondere Merkmale.",
               "type": "Waffe",
               "tags": "",
-              "id": "item-mqu1vat1-0-w8ef"
+              "id": "item-mqu1vat1-0-w8ef",
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             },
             {
               "category": "armor",
@@ -234,7 +244,17 @@
               "imageFit": "contain",
               "infoRows": [],
               "name": "Rüstung / Schutz",
-              "imageFormat": "square"
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             },
             {
               "name": "Reiseausrüstung",
@@ -276,7 +296,17 @@
               "image": "",
               "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
               "quantity": "1",
-              "icon": "*"
+              "icon": "*",
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             },
             {
               "infoRows": [],
@@ -318,7 +348,17 @@
                   "label": "Handhabung",
                   "value": 5
                 }
-              ]
+              ],
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             },
             {
               "icon": "*",
@@ -360,7 +400,17 @@
                 }
               ],
               "name": "Dokumente / Urkunden",
-              "imagePosition": "center"
+              "imagePosition": "center",
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             },
             {
               "weight": "Noch festlegen",
@@ -402,7 +452,17 @@
               "quantity": "1",
               "tags": "",
               "type": "Sonstiges",
-              "category": "other"
+              "category": "other",
+              "acquiredAt": "",
+              "combatDefinition": null,
+              "equipmentLink": null,
+              "equipped": false,
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": ""
             }
           ],
           "equipmentQuiz": {
@@ -514,9 +574,12 @@
           ],
           "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
           "title": "Charakter-Inventar",
-          "carryValue": "Noch festlegen"
+          "carryValue": "Noch festlegen",
+          "characterId": "2UgcQTdEEpSJDTNKxx0U",
+          "revision": 1786073453177,
+          "showInfoTable": false
         },
-        "archived": true,
+        "archived": false,
         "emotes": [
           {
             "img": "https://i.imgur.com/EsrUze0.png",
@@ -534,7 +597,846 @@
         "title": "Bandit/ Traethgwen",
         "bio": "Rhodri war der stellvertretende Anführer der Schar, die den Hof überfiel, und gab schließlich den Befehl zur Aufgabe, nachdem sein Hauptmann im Zweikampf gegen Sir Rhys Draig gefallen war. Er stammt aus Traethgwen in der Herrschaft von Rhonwens Tränen und diente einst als Krieger der Illysywen, ehe deren Untergang ihn heimatlos machte. Seitdem zog er von Krieg zu Raub, von See zu Land, bis er bei den Zitteraalen landete – ein Mann, der gelernt hat, sich überall durchzusetzen, und der Gewalt nicht nur kennt, sondern beherrscht.",
         "portrait": "https://i.imgur.com/E0k0wWS.png",
-        "fraktion": "Schwarze Zitteraale"
+        "fraktion": "Schwarze Zitteraale",
+        "activeImageSetId": "standard",
+        "combatProfile": {
+          "abilities": [],
+          "armorClass": {
+            "base": 10,
+            "dexterityCap": 2,
+            "dexterityMode": "full",
+            "magicModifier": 0,
+            "otherModifier": 0,
+            "override": null,
+            "overrideMode": "total",
+            "shieldBonus": 0
+          },
+          "armorItems": [],
+          "attributes": [
+            {
+              "key": "strength",
+              "label": "Kraft",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "KRF"
+            },
+            {
+              "key": "dexterity",
+              "label": "Geschick",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "GES"
+            },
+            {
+              "key": "constitution",
+              "label": "Konstitution",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "KON"
+            },
+            {
+              "key": "intelligence",
+              "label": "Intelligenz",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "INT"
+            },
+            {
+              "key": "wisdom",
+              "label": "Weisheit",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "WEI"
+            },
+            {
+              "key": "charisma",
+              "label": "Charisma",
+              "modifierOverride": null,
+              "score": 10,
+              "shortLabel": "CHA"
+            }
+          ],
+          "aura": {
+            "activeForm": {
+              "active": false,
+              "aiInstructions": "",
+              "allyMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "description": "",
+              "duration": "",
+              "enabled": false,
+              "enemyMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "name": "Aktive Form",
+              "radius": "",
+              "requirements": "",
+              "selfMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "target": "Selbst und gewählte Ziele",
+              "trigger": ""
+            },
+            "domain": "",
+            "enabled": false,
+            "focusBypassCost": 1,
+            "focusResourceId": "aura-focus",
+            "latentPresence": {
+              "active": true,
+              "aiInstructions": "",
+              "allyMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "description": "",
+              "duration": "",
+              "enabled": true,
+              "enemyMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "name": "Latente Präsenz",
+              "radius": "",
+              "requirements": "",
+              "selfMechanics": {
+                "armorClass": 0,
+                "attack": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "initiative": 0,
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0
+              },
+              "target": "Umgebung, Verbündete und Gegner",
+              "trigger": ""
+            },
+            "name": "Aura",
+            "notes": ""
+          },
+          "cheats": {
+            "automaticCritical": false,
+            "enabled": false
+          },
+          "combat": {
+            "attackBonus": 0,
+            "canActAtZeroHitPoints": false,
+            "damageBonus": 0,
+            "initiativeBonus": 0,
+            "movement": 9,
+            "passivePerceptionBonus": 0
+          },
+          "conditions": [],
+          "damageAffinities": [],
+          "hitPoints": {
+            "averagePerLevelOverride": null,
+            "current": null,
+            "hitDie": 8,
+            "maximumOverride": null,
+            "temporary": 0
+          },
+          "identity": {
+            "ancestry": "",
+            "archetype": "",
+            "background": ""
+          },
+          "magic": {
+            "bypassResourceId": "",
+            "casterTier": "full",
+            "castingAttribute": "intelligence",
+            "enabled": false,
+            "focusEnabled": false,
+            "focusResourceId": "focus",
+            "manaResourceId": "mana-focus",
+            "notes": "",
+            "slotResourceIds": [
+              "spell-slot-1",
+              "spell-slot-2",
+              "spell-slot-3",
+              "spell-slot-4",
+              "spell-slot-5",
+              "spell-slot-6",
+              "spell-slot-7",
+              "spell-slot-8",
+              "spell-slot-9",
+              "spell-slot-10"
+            ],
+            "spellAttackOverride": null,
+            "spells": [],
+            "spellSaveDcOverride": null
+          },
+          "notes": "",
+          "proficiencies": {
+            "armor": [],
+            "languages": [],
+            "notes": "",
+            "tools": [],
+            "weapons": []
+          },
+          "progression": {
+            "experience": 0,
+            "experienceReward": null,
+            "level": 1,
+            "nextLevelExperience": null,
+            "proficiencyBonusOverride": null,
+            "specialLevels": 0
+          },
+          "quirks": [],
+          "resources": [
+            {
+              "category": "",
+              "current": 0,
+              "icon": "",
+              "id": "inspiration",
+              "maximum": 1,
+              "name": "Inspiration",
+              "notes": "",
+              "recovery": "manual",
+              "scope": "persistent"
+            },
+            {
+              "category": "magic",
+              "current": 0,
+              "icon": "",
+              "id": "mana-focus",
+              "maximum": 0,
+              "name": "Mana",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "focus",
+              "current": 0,
+              "icon": "",
+              "id": "focus",
+              "maximum": 0,
+              "name": "Fokus",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "celestial",
+              "current": 0,
+              "icon": "",
+              "id": "celestial-points",
+              "maximum": 0,
+              "name": "Celestiale Punkte",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "infernal",
+              "current": 0,
+              "icon": "",
+              "id": "infernal-points",
+              "maximum": 0,
+              "name": "Infernale Punkte",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "pact",
+              "current": 0,
+              "icon": "",
+              "id": "pact-points",
+              "maximum": 0,
+              "name": "Paktpunkte",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "action",
+              "current": 1,
+              "icon": "./public/assets/combat-profile-icons/action.png",
+              "id": "action",
+              "maximum": 1,
+              "name": "Aktion",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "recovery": "scene",
+              "scope": "comment"
+            },
+            {
+              "category": "action",
+              "current": 1,
+              "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+              "id": "bonus-action",
+              "maximum": 1,
+              "name": "Bonusaktion",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "recovery": "scene",
+              "scope": "comment"
+            },
+            {
+              "category": "action",
+              "current": 1,
+              "icon": "./public/assets/combat-profile-icons/reaction.png",
+              "id": "reaction",
+              "maximum": 1,
+              "name": "Reaktion",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "recovery": "scene",
+              "scope": "comment"
+            },
+            {
+              "category": "action",
+              "current": 2,
+              "icon": "./public/assets/combat-profile-icons/special-action.png",
+              "id": "special-action",
+              "maximum": 2,
+              "name": "Besondere Aktion",
+              "notes": "",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "action",
+              "current": 0,
+              "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+              "id": "aura-focus",
+              "maximum": 0,
+              "name": "Aura-Fokuspunkt",
+              "notes": "",
+              "paymentRole": "universal-substitute",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-1",
+              "maximum": 0,
+              "name": "Zauberplatz I",
+              "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 1
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-2",
+              "maximum": 0,
+              "name": "Zauberplatz II",
+              "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 2
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-3",
+              "maximum": 0,
+              "name": "Zauberplatz III",
+              "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 3
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-4",
+              "maximum": 0,
+              "name": "Zauberplatz IV",
+              "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 4
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-5",
+              "maximum": 0,
+              "name": "Zauberplatz V",
+              "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 5
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-6",
+              "maximum": 0,
+              "name": "Zauberplatz VI",
+              "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 6
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-7",
+              "maximum": 0,
+              "name": "Zauberplatz VII",
+              "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 7
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-8",
+              "maximum": 0,
+              "name": "Zauberplatz VIII",
+              "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 8
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-9",
+              "maximum": 0,
+              "name": "Zauberplatz IX",
+              "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 9
+            },
+            {
+              "category": "spell-slot",
+              "current": 0,
+              "icon": "",
+              "id": "spell-slot-10",
+              "maximum": 0,
+              "name": "Zauberplatz X",
+              "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "spellLevel": 10
+            }
+          ],
+          "revision": 1786073453177,
+          "savingThrows": [
+            {
+              "attributeKey": "strength",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "constitution",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "expertise": false,
+              "proficient": false
+            }
+          ],
+          "schemaVersion": 9,
+          "skills": [
+            {
+              "attributeKey": "strength",
+              "bonus": 0,
+              "id": "default-skill-1",
+              "name": "Athletik",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-2",
+              "name": "Akrobatik",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-3",
+              "name": "Fingerfertigkeit",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "dexterity",
+              "bonus": 0,
+              "id": "default-skill-4",
+              "name": "Heimlichkeit",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-5",
+              "name": "Arkane Kunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-6",
+              "name": "Geschichte",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-7",
+              "name": "Nachforschungen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-8",
+              "name": "Naturkunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "intelligence",
+              "bonus": 0,
+              "id": "default-skill-9",
+              "name": "Religion",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-10",
+              "name": "Heilkunde",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-11",
+              "name": "Mit Tieren umgehen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-12",
+              "name": "Motiv erkennen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-13",
+              "name": "Überleben",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "wisdom",
+              "bonus": 0,
+              "id": "default-skill-14",
+              "name": "Wahrnehmung",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-15",
+              "name": "Auftreten",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-16",
+              "name": "Einschüchtern",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-17",
+              "name": "Täuschen",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-18",
+              "name": "Überreden",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "charisma",
+              "bonus": 0,
+              "id": "default-skill-19",
+              "name": "Flirten",
+              "notes": "",
+              "proficiency": "none"
+            },
+            {
+              "attributeKey": "constitution",
+              "bonus": 0,
+              "id": "default-skill-20",
+              "name": "Körperbeherrschung",
+              "notes": "",
+              "proficiency": "none"
+            }
+          ],
+          "techniques": [],
+          "templateSelections": {
+            "ancestryId": "",
+            "appliedAt": "",
+            "attributeMethod": "",
+            "backgroundId": "",
+            "classId": "",
+            "schemaVersion": 1
+          },
+          "weapons": [
+            {
+              "activationType": "action",
+              "aiInstructions": "",
+              "ammunition": null,
+              "attackAttribute": "strength",
+              "attackBonus": 0,
+              "auraBypass": {
+                "allowed": true,
+                "cost": 1,
+                "resourceId": ""
+              },
+              "costs": [
+                {
+                  "amount": 1,
+                  "id": "activation-action",
+                  "name": "Aktion",
+                  "resourceId": "action",
+                  "scope": "comment"
+                }
+              ],
+              "damageBonus": 0,
+              "damageFormula": "1d4",
+              "damageType": "Wucht",
+              "effects": [],
+              "equipped": true,
+              "id": "default-unarmed-melee",
+              "inventoryItemId": "",
+              "name": "Nahkampf",
+              "notes": "Grundlegender waffenloser Nahkampfangriff.",
+              "proficient": true,
+              "properties": "Schlicht · simpel · immer verfügbar",
+              "range": "Nahkampf",
+              "requirements": "",
+              "training": "simple",
+              "versatileDamageFormula": "",
+              "weaponType": "unarmed"
+            }
+          ]
+        },
+        "createdAt": "2026-08-07T03:30:53.000Z",
+        "currentLocation": "",
+        "genealogy": {
+          "birth": "",
+          "death": "",
+          "familyRole": "",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "",
+          "relationships": {
+            "children": [],
+            "parents": [],
+            "partners": []
+          },
+          "sex": "unknown",
+          "sources": [],
+          "status": "",
+          "tags": [],
+          "worldPersonId": ""
+        },
+        "identity": {
+          "worldPersonId": ""
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-08-07T03:30:53.000Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/EsrUze0.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/0Tv9oBv.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/jjVcJg7.png",
+                "label": ""
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/E0k0wWS.png",
+            "updatedAt": "2026-08-07T03:30:53.000Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "localRecord": {
+          "classification": {
+            "families": [],
+            "familyStatus": "pending",
+            "groups": [
+              {
+                "id": "schwarze-zitteraale",
+                "label": "Schwarze Zitteraale",
+                "source": "archive-tab"
+              }
+            ],
+            "places": [],
+            "primary": {
+              "id": "schwarze-zitteraale",
+              "kind": "group",
+              "label": "Schwarze Zitteraale",
+              "source": "archive-tab"
+            }
+          },
+          "contentHash": "fcb9de8bcd91a34051e82b21ffcac87f5fc1f9796aaba20e77785a8d0170c4fe",
+          "firestoreDocumentIds": [
+            "2UgcQTdEEpSJDTNKxx0U"
+          ],
+          "path": "records/gruppen/schwarze-zitteraale/rhodri--2UgcQTdEEpSJDTNKxx0U/character.json",
+          "recordId": "character--2UgcQTdEEpSJDTNKxx0U",
+          "schemaVersion": 1
+        },
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "",
+        "taxonomyPath": "",
+        "updatedAt": "2026-08-07T03:30:53.000Z"
       }
     ]
   },
@@ -659,7 +1561,17 @@
           "description": "Beschreibe Material, Zustand und besondere Merkmale.",
           "type": "Waffe",
           "tags": "",
-          "id": "item-mqu1vat1-0-w8ef"
+          "id": "item-mqu1vat1-0-w8ef",
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         },
         {
           "category": "armor",
@@ -701,7 +1613,17 @@
           "imageFit": "contain",
           "infoRows": [],
           "name": "Rüstung / Schutz",
-          "imageFormat": "square"
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         },
         {
           "name": "Reiseausrüstung",
@@ -743,7 +1665,17 @@
           "image": "",
           "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
           "quantity": "1",
-          "icon": "*"
+          "icon": "*",
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         },
         {
           "infoRows": [],
@@ -785,7 +1717,17 @@
               "label": "Handhabung",
               "value": 5
             }
-          ]
+          ],
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         },
         {
           "icon": "*",
@@ -827,7 +1769,17 @@
             }
           ],
           "name": "Dokumente / Urkunden",
-          "imagePosition": "center"
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         },
         {
           "weight": "Noch festlegen",
@@ -869,7 +1821,17 @@
           "quantity": "1",
           "tags": "",
           "type": "Sonstiges",
-          "category": "other"
+          "category": "other",
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "equipped": false,
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": ""
         }
       ],
       "equipmentQuiz": {
@@ -981,9 +1943,12 @@
       ],
       "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
       "title": "Charakter-Inventar",
-      "carryValue": "Noch festlegen"
+      "carryValue": "Noch festlegen",
+      "characterId": "2UgcQTdEEpSJDTNKxx0U",
+      "revision": 1786073453177,
+      "showInfoTable": false
     },
-    "archived": true,
+    "archived": false,
     "emotes": [
       {
         "img": "https://i.imgur.com/EsrUze0.png",
@@ -1002,26 +1967,844 @@
     "bio": "Rhodri war der stellvertretende Anführer der Schar, die den Hof überfiel, und gab schließlich den Befehl zur Aufgabe, nachdem sein Hauptmann im Zweikampf gegen Sir Rhys Draig gefallen war. Er stammt aus Traethgwen in der Herrschaft von Rhonwens Tränen und diente einst als Krieger der Illysywen, ehe deren Untergang ihn heimatlos machte. Seitdem zog er von Krieg zu Raub, von See zu Land, bis er bei den Zitteraalen landete – ein Mann, der gelernt hat, sich überall durchzusetzen, und der Gewalt nicht nur kennt, sondern beherrscht.",
     "portrait": "https://i.imgur.com/E0k0wWS.png",
     "fraktion": "Schwarze Zitteraale",
+    "activeImageSetId": "standard",
+    "combatProfile": {
+      "abilities": [],
+      "armorClass": {
+        "base": 10,
+        "dexterityCap": 2,
+        "dexterityMode": "full",
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total",
+        "shieldBonus": 0
+      },
+      "armorItems": [],
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "KRF"
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "GES"
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "KON"
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "INT"
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "WEI"
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "modifierOverride": null,
+          "score": 10,
+          "shortLabel": "CHA"
+        }
+      ],
+      "aura": {
+        "activeForm": {
+          "active": false,
+          "aiInstructions": "",
+          "allyMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "description": "",
+          "duration": "",
+          "enabled": false,
+          "enemyMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "name": "Aktive Form",
+          "radius": "",
+          "requirements": "",
+          "selfMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "target": "Selbst und gewählte Ziele",
+          "trigger": ""
+        },
+        "domain": "",
+        "enabled": false,
+        "focusBypassCost": 1,
+        "focusResourceId": "aura-focus",
+        "latentPresence": {
+          "active": true,
+          "aiInstructions": "",
+          "allyMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "description": "",
+          "duration": "",
+          "enabled": true,
+          "enemyMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "name": "Latente Präsenz",
+          "radius": "",
+          "requirements": "",
+          "selfMechanics": {
+            "armorClass": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0
+          },
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": ""
+        },
+        "name": "Aura",
+        "notes": ""
+      },
+      "cheats": {
+        "automaticCritical": false,
+        "enabled": false
+      },
+      "combat": {
+        "attackBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "damageBonus": 0,
+        "initiativeBonus": 0,
+        "movement": 9,
+        "passivePerceptionBonus": 0
+      },
+      "conditions": [],
+      "damageAffinities": [],
+      "hitPoints": {
+        "averagePerLevelOverride": null,
+        "current": null,
+        "hitDie": 8,
+        "maximumOverride": null,
+        "temporary": 0
+      },
+      "identity": {
+        "ancestry": "",
+        "archetype": "",
+        "background": ""
+      },
+      "magic": {
+        "bypassResourceId": "",
+        "casterTier": "full",
+        "castingAttribute": "intelligence",
+        "enabled": false,
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "manaResourceId": "mana-focus",
+        "notes": "",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "spellAttackOverride": null,
+        "spells": [],
+        "spellSaveDcOverride": null
+      },
+      "notes": "",
+      "proficiencies": {
+        "armor": [],
+        "languages": [],
+        "notes": "",
+        "tools": [],
+        "weapons": []
+      },
+      "progression": {
+        "experience": 0,
+        "experienceReward": null,
+        "level": 1,
+        "nextLevelExperience": null,
+        "proficiencyBonusOverride": null,
+        "specialLevels": 0
+      },
+      "quirks": [],
+      "resources": [
+        {
+          "category": "",
+          "current": 0,
+          "icon": "",
+          "id": "inspiration",
+          "maximum": 1,
+          "name": "Inspiration",
+          "notes": "",
+          "recovery": "manual",
+          "scope": "persistent"
+        },
+        {
+          "category": "magic",
+          "current": 0,
+          "icon": "",
+          "id": "mana-focus",
+          "maximum": 0,
+          "name": "Mana",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "focus",
+          "current": 0,
+          "icon": "",
+          "id": "focus",
+          "maximum": 0,
+          "name": "Fokus",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "celestial",
+          "current": 0,
+          "icon": "",
+          "id": "celestial-points",
+          "maximum": 0,
+          "name": "Celestiale Punkte",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "infernal",
+          "current": 0,
+          "icon": "",
+          "id": "infernal-points",
+          "maximum": 0,
+          "name": "Infernale Punkte",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "pact",
+          "current": 0,
+          "icon": "",
+          "id": "pact-points",
+          "maximum": 0,
+          "name": "Paktpunkte",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "action",
+          "current": 1,
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "id": "action",
+          "maximum": 1,
+          "name": "Aktion",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "recovery": "scene",
+          "scope": "comment"
+        },
+        {
+          "category": "action",
+          "current": 1,
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "id": "bonus-action",
+          "maximum": 1,
+          "name": "Bonusaktion",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "recovery": "scene",
+          "scope": "comment"
+        },
+        {
+          "category": "action",
+          "current": 1,
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "id": "reaction",
+          "maximum": 1,
+          "name": "Reaktion",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "recovery": "scene",
+          "scope": "comment"
+        },
+        {
+          "category": "action",
+          "current": 2,
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "id": "special-action",
+          "maximum": 2,
+          "name": "Besondere Aktion",
+          "notes": "",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "action",
+          "current": 0,
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "id": "aura-focus",
+          "maximum": 0,
+          "name": "Aura-Fokuspunkt",
+          "notes": "",
+          "paymentRole": "universal-substitute",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-1",
+          "maximum": 0,
+          "name": "Zauberplatz I",
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 1
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-2",
+          "maximum": 0,
+          "name": "Zauberplatz II",
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 2
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-3",
+          "maximum": 0,
+          "name": "Zauberplatz III",
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 3
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-4",
+          "maximum": 0,
+          "name": "Zauberplatz IV",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 4
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-5",
+          "maximum": 0,
+          "name": "Zauberplatz V",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 5
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-6",
+          "maximum": 0,
+          "name": "Zauberplatz VI",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 6
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-7",
+          "maximum": 0,
+          "name": "Zauberplatz VII",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 7
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-8",
+          "maximum": 0,
+          "name": "Zauberplatz VIII",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 8
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-9",
+          "maximum": 0,
+          "name": "Zauberplatz IX",
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 9
+        },
+        {
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "id": "spell-slot-10",
+          "maximum": 0,
+          "name": "Zauberplatz X",
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "spellLevel": 10
+        }
+      ],
+      "revision": 1786073453177,
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        }
+      ],
+      "schemaVersion": 9,
+      "skills": [
+        {
+          "attributeKey": "strength",
+          "bonus": 0,
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-9",
+          "name": "Religion",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-19",
+          "name": "Flirten",
+          "notes": "",
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "id": "default-skill-20",
+          "name": "Körperbeherrschung",
+          "notes": "",
+          "proficiency": "none"
+        }
+      ],
+      "techniques": [],
+      "templateSelections": {
+        "ancestryId": "",
+        "appliedAt": "",
+        "attributeMethod": "",
+        "backgroundId": "",
+        "classId": "",
+        "schemaVersion": 1
+      },
+      "weapons": [
+        {
+          "activationType": "action",
+          "aiInstructions": "",
+          "ammunition": null,
+          "attackAttribute": "strength",
+          "attackBonus": 0,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": ""
+          },
+          "costs": [
+            {
+              "amount": 1,
+              "id": "activation-action",
+              "name": "Aktion",
+              "resourceId": "action",
+              "scope": "comment"
+            }
+          ],
+          "damageBonus": 0,
+          "damageFormula": "1d4",
+          "damageType": "Wucht",
+          "effects": [],
+          "equipped": true,
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "proficient": true,
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "range": "Nahkampf",
+          "requirements": "",
+          "training": "simple",
+          "versatileDamageFormula": "",
+          "weaponType": "unarmed"
+        }
+      ]
+    },
+    "createdAt": "2026-08-07T03:30:53.000Z",
+    "currentLocation": "",
+    "genealogy": {
+      "birth": "",
+      "death": "",
+      "familyRole": "",
+      "houseId": "",
+      "houseName": "",
+      "portraitPlaceholder": "",
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "sex": "unknown",
+      "sources": [],
+      "status": "",
+      "tags": [],
+      "worldPersonId": ""
+    },
     "identity": {
       "worldPersonId": ""
     },
-    "genealogy": {
-      "worldPersonId": "",
-      "sex": "",
-      "status": "",
-      "birth": "",
-      "death": "",
-      "houseId": "",
-      "houseName": "",
-      "familyRole": "",
-      "portraitPlaceholder": "",
-      "tags": [],
-      "sources": [],
-      "relationships": {
-        "parents": [],
-        "partners": [],
-        "children": []
+    "imageSets": [
+      {
+        "createdAt": "2026-08-07T03:30:53.000Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/EsrUze0.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/0Tv9oBv.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jjVcJg7.png",
+            "label": ""
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/E0k0wWS.png",
+        "updatedAt": "2026-08-07T03:30:53.000Z"
       }
-    }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "localRecord": {
+      "classification": {
+        "families": [],
+        "familyStatus": "pending",
+        "groups": [
+          {
+            "id": "schwarze-zitteraale",
+            "label": "Schwarze Zitteraale",
+            "source": "archive-tab"
+          }
+        ],
+        "places": [],
+        "primary": {
+          "id": "schwarze-zitteraale",
+          "kind": "group",
+          "label": "Schwarze Zitteraale",
+          "source": "archive-tab"
+        }
+      },
+      "contentHash": "fcb9de8bcd91a34051e82b21ffcac87f5fc1f9796aaba20e77785a8d0170c4fe",
+      "firestoreDocumentIds": [
+        "2UgcQTdEEpSJDTNKxx0U"
+      ],
+      "path": "records/gruppen/schwarze-zitteraale/rhodri--2UgcQTdEEpSJDTNKxx0U/character.json",
+      "recordId": "character--2UgcQTdEEpSJDTNKxx0U",
+      "schemaVersion": 1
+    },
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "",
+    "taxonomyPath": "",
+    "updatedAt": "2026-08-07T03:30:53.000Z"
   }
 }

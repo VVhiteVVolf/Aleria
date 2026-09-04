@@ -1,0 +1,287 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--iolo-draig",
+  "slug": "iolo-argall",
+  "identity": {
+    "name": "Iolo Argall",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--iolo-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-argall",
+      "label": "Haus Argall"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-argall",
+        "familyTitle": "Haus Argall",
+        "personId": "iolo-draig",
+        "worldPersonId": "person--haus-draig--iolo-draig",
+        "houseId": "house-argall",
+        "houseName": "Haus Argall",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Llysfaen"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
+        "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"Unehelicher Sohn Shylene Argalls und Owain Draigs\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"5 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}",
+        "score": 260
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "iolo-draig",
+        "worldPersonId": "person--haus-draig--iolo-draig",
+        "houseId": "house-argall",
+        "houseName": "Haus Argall",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=iolo-draig",
+        "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/iolo-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--iolo-draig",
+      "documentIds": [
+        "person--haus-draig--iolo-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--iolo-draig",
+          "createdAt": "2026-09-03T23:43:00.993Z",
+          "updatedAt": "2026-09-03T23:43:00.993Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-argall",
+        "personId": "iolo-draig",
+        "worldPersonId": "person--haus-draig--iolo-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "iolo-draig",
+        "worldPersonId": "person--haus-draig--iolo-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=iolo-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:43:00.993Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--iolo-draig"
+    ],
+    "contentHash": "d9757b62a749055c698db47712332ff3bd45fa5aade8e1c2991d7b53eed5d926"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:43:00.993Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Argall",
+        "genealogy": {
+          "birth": "1735",
+          "death": "",
+          "familyRole": "bastard",
+          "houseId": "house-argall",
+          "houseName": "Haus Argall",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Owain Draig",
+                "personId": "owain-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--owain-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Shylene Argall",
+                "personId": "shylene-argall",
+                "type": "biological",
+                "worldPersonId": "person--haus-argall--shylene-argall"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/iolo-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:43:00.993Z",
+              "lastSyncedAt": "2026-09-03T23:43:00.993Z",
+              "personId": "iolo-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=iolo-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--iolo-draig"
+        },
+        "id": "person--haus-draig--iolo-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--iolo-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Iolo Argall",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/iolo-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:43:00.993Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:43:00.993Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Argall",
+    "genealogy": {
+      "birth": "1735",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-argall",
+      "houseName": "Haus Argall",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Owain Draig",
+            "personId": "owain-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--owain-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Shylene Argall",
+            "personId": "shylene-argall",
+            "type": "biological",
+            "worldPersonId": "person--haus-argall--shylene-argall"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/iolo-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:43:00.993Z",
+          "lastSyncedAt": "2026-09-03T23:43:00.993Z",
+          "personId": "iolo-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=iolo-draig"
+        },
+        {
+          "familyId": "haus-argall",
+          "personId": "iolo-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
+          "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"Unehelicher Sohn Shylene Argalls und Owain Draigs\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"5 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "5 Jahre"
+      ],
+      "worldPersonId": "person--haus-draig--iolo-draig"
+    },
+    "id": "person--haus-draig--iolo-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--iolo-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Iolo Argall",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/iolo-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:43:00.993Z"
+  }
+}

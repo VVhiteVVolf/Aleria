@@ -1,0 +1,560 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-wyrm--gais-wyrm",
+  "slug": "gais-wyrm",
+  "identity": {
+    "name": "Gais Wyrm",
+    "aliases": [],
+    "worldPersonId": "person--haus-wyrm--gais-wyrm"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-wyrm",
+      "label": "Haus Wyrm"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-wyrm",
+        "familyTitle": "Haus Wyrm",
+        "personId": "gais-wyrm",
+        "worldPersonId": "person--haus-wyrm--gais-wyrm",
+        "houseId": "house-wyrm",
+        "houseName": "Haus Wyrm",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=gais-wyrm",
+        "fingerprint": "{\"name\":\"Gais Wyrm\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"padrig-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"},{\"personId\":\"sorcha-cein\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cein--sorcha-cein\",\"name\":\"Sorcha Céin\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-wyrm--gais-wyrm",
+      "documentIds": [
+        "person--haus-wyrm--gais-wyrm"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-wyrm--gais-wyrm",
+          "createdAt": "2026-09-02T17:33:12.788Z",
+          "updatedAt": "2026-09-03T17:37:09.536Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-wyrm",
+        "personId": "gais-wyrm",
+        "worldPersonId": "person--haus-wyrm--gais-wyrm",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=gais-wyrm"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T17:37:09.536Z",
+    "sourceDocumentIds": [
+      "person--haus-wyrm--gais-wyrm"
+    ],
+    "contentHash": "a1071c7b7730b5f6d061aed5c37b2656c73a2eba814ed0aeb3bdd8d6ddb15269"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "standard",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-02T17:33:12.788Z",
+        "currentLocation": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/aX5bnal.png",
+            "label": "aX5bnal"
+          },
+          {
+            "img": "https://i.imgur.com/A6jkKyD.png",
+            "label": "A6jkKyD"
+          },
+          {
+            "img": "https://i.imgur.com/E2wNDXQ.png",
+            "label": "E2wNDXQ"
+          },
+          {
+            "img": "https://i.imgur.com/FmbQz7J.png",
+            "label": "FmbQz7J"
+          },
+          {
+            "img": "https://i.imgur.com/tigfNWA.png",
+            "label": "tigfNWA"
+          },
+          {
+            "img": "https://i.imgur.com/r9KKYTt.png",
+            "label": "r9KKYTt"
+          },
+          {
+            "img": "https://i.imgur.com/iWWPQ5G.png",
+            "label": "iWWPQ5G"
+          },
+          {
+            "img": "https://i.imgur.com/UxpjSP1.png",
+            "label": "UxpjSP1"
+          },
+          {
+            "img": "https://i.imgur.com/XOtiRew.png",
+            "label": "XOtiRew"
+          },
+          {
+            "img": "https://i.imgur.com/VTGsgq6.png",
+            "label": "VTGsgq6"
+          },
+          {
+            "img": "https://i.imgur.com/p0NSMsQ.png",
+            "label": "p0NSMsQ"
+          },
+          {
+            "img": "https://i.imgur.com/87urMuA.png",
+            "label": "87urMuA"
+          },
+          {
+            "img": "https://i.imgur.com/JpkYr8e.png",
+            "label": "JpkYr8e"
+          },
+          {
+            "img": "https://i.imgur.com/GhcNWLE.png",
+            "label": "GhcNWLE"
+          },
+          {
+            "img": "https://i.imgur.com/POMOCo1.png",
+            "label": "POMOCo1"
+          },
+          {
+            "img": "https://i.imgur.com/wssWSmo.png",
+            "label": "wssWSmo"
+          },
+          {
+            "img": "https://i.imgur.com/oBPfAhS.png",
+            "label": "oBPfAhS"
+          },
+          {
+            "img": "https://i.imgur.com/4AG5M1j.png",
+            "label": "4AG5M1j"
+          }
+        ],
+        "emotesOverride": true,
+        "fraktion": "Haus Wyrm",
+        "genealogy": {
+          "birth": "1721",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-wyrm",
+          "houseName": "Haus Wyrm",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Padrig Wyrm",
+                "personId": "padrig-wyrm",
+                "type": "biological",
+                "worldPersonId": "person--haus-wyrm--padrig-wyrm"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Sorcha Céin",
+                "personId": "sorcha-cein",
+                "type": "biological",
+                "worldPersonId": "person--haus-cein--sorcha-cein"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-wyrm",
+              "fingerprint": "{\"name\":\"Gais Wyrm\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"padrig-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"},{\"personId\":\"sorcha-cein\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cein--sorcha-cein\",\"name\":\"Sorcha Céin\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-02T17:33:12.788Z",
+              "lastSyncedAt": "2026-09-02T17:33:12.788Z",
+              "personId": "gais-wyrm",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=gais-wyrm"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-wyrm--gais-wyrm"
+        },
+        "id": "person--haus-wyrm--gais-wyrm",
+        "identity": {
+          "worldPersonId": "person--haus-wyrm--gais-wyrm"
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-09-03T17:36:10.973Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/aX5bnal.png",
+                "label": "aX5bnal"
+              },
+              {
+                "img": "https://i.imgur.com/A6jkKyD.png",
+                "label": "A6jkKyD"
+              },
+              {
+                "img": "https://i.imgur.com/E2wNDXQ.png",
+                "label": "E2wNDXQ"
+              },
+              {
+                "img": "https://i.imgur.com/FmbQz7J.png",
+                "label": "FmbQz7J"
+              },
+              {
+                "img": "https://i.imgur.com/tigfNWA.png",
+                "label": "tigfNWA"
+              },
+              {
+                "img": "https://i.imgur.com/r9KKYTt.png",
+                "label": "r9KKYTt"
+              },
+              {
+                "img": "https://i.imgur.com/iWWPQ5G.png",
+                "label": "iWWPQ5G"
+              },
+              {
+                "img": "https://i.imgur.com/UxpjSP1.png",
+                "label": "UxpjSP1"
+              },
+              {
+                "img": "https://i.imgur.com/XOtiRew.png",
+                "label": "XOtiRew"
+              },
+              {
+                "img": "https://i.imgur.com/VTGsgq6.png",
+                "label": "VTGsgq6"
+              },
+              {
+                "img": "https://i.imgur.com/p0NSMsQ.png",
+                "label": "p0NSMsQ"
+              },
+              {
+                "img": "https://i.imgur.com/87urMuA.png",
+                "label": "87urMuA"
+              },
+              {
+                "img": "https://i.imgur.com/JpkYr8e.png",
+                "label": "JpkYr8e"
+              },
+              {
+                "img": "https://i.imgur.com/GhcNWLE.png",
+                "label": "GhcNWLE"
+              },
+              {
+                "img": "https://i.imgur.com/POMOCo1.png",
+                "label": "POMOCo1"
+              },
+              {
+                "img": "https://i.imgur.com/wssWSmo.png",
+                "label": "wssWSmo"
+              },
+              {
+                "img": "https://i.imgur.com/oBPfAhS.png",
+                "label": "oBPfAhS"
+              },
+              {
+                "img": "https://i.imgur.com/4AG5M1j.png",
+                "label": "4AG5M1j"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg",
+            "updatedAt": "2026-09-03T17:36:10.973Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "inventory": null,
+        "name": "Gais Wyrm",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T17:37:09.536Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "standard",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-02T17:33:12.788Z",
+    "currentLocation": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/aX5bnal.png",
+        "label": "aX5bnal"
+      },
+      {
+        "img": "https://i.imgur.com/A6jkKyD.png",
+        "label": "A6jkKyD"
+      },
+      {
+        "img": "https://i.imgur.com/E2wNDXQ.png",
+        "label": "E2wNDXQ"
+      },
+      {
+        "img": "https://i.imgur.com/FmbQz7J.png",
+        "label": "FmbQz7J"
+      },
+      {
+        "img": "https://i.imgur.com/tigfNWA.png",
+        "label": "tigfNWA"
+      },
+      {
+        "img": "https://i.imgur.com/r9KKYTt.png",
+        "label": "r9KKYTt"
+      },
+      {
+        "img": "https://i.imgur.com/iWWPQ5G.png",
+        "label": "iWWPQ5G"
+      },
+      {
+        "img": "https://i.imgur.com/UxpjSP1.png",
+        "label": "UxpjSP1"
+      },
+      {
+        "img": "https://i.imgur.com/XOtiRew.png",
+        "label": "XOtiRew"
+      },
+      {
+        "img": "https://i.imgur.com/VTGsgq6.png",
+        "label": "VTGsgq6"
+      },
+      {
+        "img": "https://i.imgur.com/p0NSMsQ.png",
+        "label": "p0NSMsQ"
+      },
+      {
+        "img": "https://i.imgur.com/87urMuA.png",
+        "label": "87urMuA"
+      },
+      {
+        "img": "https://i.imgur.com/JpkYr8e.png",
+        "label": "JpkYr8e"
+      },
+      {
+        "img": "https://i.imgur.com/GhcNWLE.png",
+        "label": "GhcNWLE"
+      },
+      {
+        "img": "https://i.imgur.com/POMOCo1.png",
+        "label": "POMOCo1"
+      },
+      {
+        "img": "https://i.imgur.com/wssWSmo.png",
+        "label": "wssWSmo"
+      },
+      {
+        "img": "https://i.imgur.com/oBPfAhS.png",
+        "label": "oBPfAhS"
+      },
+      {
+        "img": "https://i.imgur.com/4AG5M1j.png",
+        "label": "4AG5M1j"
+      }
+    ],
+    "emotesOverride": true,
+    "fraktion": "Haus Wyrm",
+    "genealogy": {
+      "birth": "1721",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-wyrm",
+      "houseName": "Haus Wyrm",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Padrig Wyrm",
+            "personId": "padrig-wyrm",
+            "type": "biological",
+            "worldPersonId": "person--haus-wyrm--padrig-wyrm"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Sorcha Céin",
+            "personId": "sorcha-cein",
+            "type": "biological",
+            "worldPersonId": "person--haus-cein--sorcha-cein"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-wyrm",
+          "fingerprint": "{\"name\":\"Gais Wyrm\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"padrig-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"},{\"personId\":\"sorcha-cein\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cein--sorcha-cein\",\"name\":\"Sorcha Céin\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-02T17:33:12.788Z",
+          "lastSyncedAt": "2026-09-02T17:33:12.788Z",
+          "personId": "gais-wyrm",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=gais-wyrm"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-wyrm--gais-wyrm"
+    },
+    "id": "person--haus-wyrm--gais-wyrm",
+    "identity": {
+      "worldPersonId": "person--haus-wyrm--gais-wyrm"
+    },
+    "imageSets": [
+      {
+        "createdAt": "2026-09-03T17:36:10.973Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/aX5bnal.png",
+            "label": "aX5bnal"
+          },
+          {
+            "img": "https://i.imgur.com/A6jkKyD.png",
+            "label": "A6jkKyD"
+          },
+          {
+            "img": "https://i.imgur.com/E2wNDXQ.png",
+            "label": "E2wNDXQ"
+          },
+          {
+            "img": "https://i.imgur.com/FmbQz7J.png",
+            "label": "FmbQz7J"
+          },
+          {
+            "img": "https://i.imgur.com/tigfNWA.png",
+            "label": "tigfNWA"
+          },
+          {
+            "img": "https://i.imgur.com/r9KKYTt.png",
+            "label": "r9KKYTt"
+          },
+          {
+            "img": "https://i.imgur.com/iWWPQ5G.png",
+            "label": "iWWPQ5G"
+          },
+          {
+            "img": "https://i.imgur.com/UxpjSP1.png",
+            "label": "UxpjSP1"
+          },
+          {
+            "img": "https://i.imgur.com/XOtiRew.png",
+            "label": "XOtiRew"
+          },
+          {
+            "img": "https://i.imgur.com/VTGsgq6.png",
+            "label": "VTGsgq6"
+          },
+          {
+            "img": "https://i.imgur.com/p0NSMsQ.png",
+            "label": "p0NSMsQ"
+          },
+          {
+            "img": "https://i.imgur.com/87urMuA.png",
+            "label": "87urMuA"
+          },
+          {
+            "img": "https://i.imgur.com/JpkYr8e.png",
+            "label": "JpkYr8e"
+          },
+          {
+            "img": "https://i.imgur.com/GhcNWLE.png",
+            "label": "GhcNWLE"
+          },
+          {
+            "img": "https://i.imgur.com/POMOCo1.png",
+            "label": "POMOCo1"
+          },
+          {
+            "img": "https://i.imgur.com/wssWSmo.png",
+            "label": "wssWSmo"
+          },
+          {
+            "img": "https://i.imgur.com/oBPfAhS.png",
+            "label": "oBPfAhS"
+          },
+          {
+            "img": "https://i.imgur.com/4AG5M1j.png",
+            "label": "4AG5M1j"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg",
+        "updatedAt": "2026-09-03T17:36:10.973Z"
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "inventory": null,
+    "name": "Gais Wyrm",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T17:37:09.536Z"
+  }
+}

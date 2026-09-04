@@ -1,0 +1,612 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-sgrechiwr--cadogan-sgrechiwr",
+  "slug": "cadogan-sgrechiwr",
+  "identity": {
+    "name": "Cadogan Sgrechiwr",
+    "aliases": [],
+    "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-sgrechiwr",
+      "label": "Haus Sgrechiwr"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-sgrechiwr",
+        "familyTitle": "Haus Sgrechiwr",
+        "personId": "cadogan-sgrechiwr",
+        "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+        "houseId": "house-sgrechiwr",
+        "houseName": "Haus Sgrechiwr",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Lynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr",
+        "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "documentIds": [
+        "person--haus-sgrechiwr--cadogan-sgrechiwr"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "createdAt": "2026-09-02T20:37:58.808Z",
+          "updatedAt": "2026-09-03T18:13:26.221Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-sgrechiwr",
+        "personId": "cadogan-sgrechiwr",
+        "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T18:13:26.221Z",
+    "sourceDocumentIds": [
+      "person--haus-sgrechiwr--cadogan-sgrechiwr"
+    ],
+    "contentHash": "9111d98dd559293aa7ec0d0e54560ea850f7ae895f18d3080d39d3d49717c602"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "standard",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-02T20:37:58.808Z",
+        "currentLocation": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/iekJzVo.png",
+            "label": "iekJzVo"
+          },
+          {
+            "img": "https://i.imgur.com/M0tl4FQ.png",
+            "label": "M0tl4FQ"
+          },
+          {
+            "img": "https://i.imgur.com/PGUiK3y.png",
+            "label": "PGUiK3y"
+          },
+          {
+            "img": "https://i.imgur.com/hAT8RLp.png",
+            "label": "hAT8RLp"
+          },
+          {
+            "img": "https://i.imgur.com/f4HNUle.png",
+            "label": "f4HNUle"
+          },
+          {
+            "img": "https://i.imgur.com/mUZoWE8.png",
+            "label": "mUZoWE8"
+          },
+          {
+            "img": "https://i.imgur.com/sNB9yV1.png",
+            "label": "sNB9yV1"
+          },
+          {
+            "img": "https://i.imgur.com/iuXtDLu.png",
+            "label": "iuXtDLu"
+          },
+          {
+            "img": "https://i.imgur.com/7Xh6kmX.png",
+            "label": "7Xh6kmX"
+          },
+          {
+            "img": "https://i.imgur.com/A2k29ND.png",
+            "label": "A2k29ND"
+          },
+          {
+            "img": "https://i.imgur.com/wOOhJl5.png",
+            "label": "wOOhJl5"
+          },
+          {
+            "img": "https://i.imgur.com/U3AjUBG.png",
+            "label": "U3AjUBG"
+          },
+          {
+            "img": "https://i.imgur.com/KMNuRBY.png",
+            "label": "KMNuRBY"
+          },
+          {
+            "img": "https://i.imgur.com/rErTs5v.png",
+            "label": "rErTs5v"
+          },
+          {
+            "img": "https://i.imgur.com/HYM4632.png",
+            "label": "HYM4632"
+          },
+          {
+            "img": "https://i.imgur.com/mjYFXtf.png",
+            "label": "mjYFXtf"
+          },
+          {
+            "img": "https://i.imgur.com/f1xKC20.png",
+            "label": "f1xKC20"
+          },
+          {
+            "img": "https://i.imgur.com/ZAUxrWS.png",
+            "label": "ZAUxrWS"
+          }
+        ],
+        "emotesOverride": true,
+        "fraktion": "Haus Sgrechiwr",
+        "genealogy": {
+          "birth": "1690",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-sgrechiwr",
+          "houseName": "Haus Sgrechiwr",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Eluned Sgrechiwr",
+                "personId": "eluned-sgrechiwr",
+                "type": "biological",
+                "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Meinwen Sgrechiwr",
+                "personId": "meinwen-sgrechiwr",
+                "type": "biological",
+                "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gareth Sgrechiwr",
+                "personId": "gareth-sgrechiwr",
+                "type": "biological",
+                "worldPersonId": "person--haus-sgrechiwr--gareth-sgrechiwr"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Unbekannte Ehefrau",
+                "personId": "unknown-gareth-spouse",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--unknown-gareth-spouse"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Unbekannte Ehefrau",
+                "personId": "unknown-cadogan-spouse",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-sgrechiwr",
+              "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}",
+              "importedAt": "2026-09-02T20:37:58.808Z",
+              "lastSyncedAt": "2026-09-02T20:37:58.808Z",
+              "personId": "cadogan-sgrechiwr",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+        },
+        "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+        "identity": {
+          "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-09-03T18:12:35.771Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/iekJzVo.png",
+                "label": "iekJzVo"
+              },
+              {
+                "img": "https://i.imgur.com/M0tl4FQ.png",
+                "label": "M0tl4FQ"
+              },
+              {
+                "img": "https://i.imgur.com/PGUiK3y.png",
+                "label": "PGUiK3y"
+              },
+              {
+                "img": "https://i.imgur.com/hAT8RLp.png",
+                "label": "hAT8RLp"
+              },
+              {
+                "img": "https://i.imgur.com/f4HNUle.png",
+                "label": "f4HNUle"
+              },
+              {
+                "img": "https://i.imgur.com/mUZoWE8.png",
+                "label": "mUZoWE8"
+              },
+              {
+                "img": "https://i.imgur.com/sNB9yV1.png",
+                "label": "sNB9yV1"
+              },
+              {
+                "img": "https://i.imgur.com/iuXtDLu.png",
+                "label": "iuXtDLu"
+              },
+              {
+                "img": "https://i.imgur.com/7Xh6kmX.png",
+                "label": "7Xh6kmX"
+              },
+              {
+                "img": "https://i.imgur.com/A2k29ND.png",
+                "label": "A2k29ND"
+              },
+              {
+                "img": "https://i.imgur.com/wOOhJl5.png",
+                "label": "wOOhJl5"
+              },
+              {
+                "img": "https://i.imgur.com/U3AjUBG.png",
+                "label": "U3AjUBG"
+              },
+              {
+                "img": "https://i.imgur.com/KMNuRBY.png",
+                "label": "KMNuRBY"
+              },
+              {
+                "img": "https://i.imgur.com/rErTs5v.png",
+                "label": "rErTs5v"
+              },
+              {
+                "img": "https://i.imgur.com/HYM4632.png",
+                "label": "HYM4632"
+              },
+              {
+                "img": "https://i.imgur.com/mjYFXtf.png",
+                "label": "mjYFXtf"
+              },
+              {
+                "img": "https://i.imgur.com/f1xKC20.png",
+                "label": "f1xKC20"
+              },
+              {
+                "img": "https://i.imgur.com/ZAUxrWS.png",
+                "label": "ZAUxrWS"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+            "updatedAt": "2026-09-03T18:12:35.771Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "inventory": null,
+        "name": "Cadogan Sgrechiwr",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Lynthor",
+        "title": "Vorgesehener Erbe des Hauses Sgrechiwr",
+        "updatedAt": "2026-09-03T18:13:26.221Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "standard",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-02T20:37:58.808Z",
+    "currentLocation": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/iekJzVo.png",
+        "label": "iekJzVo"
+      },
+      {
+        "img": "https://i.imgur.com/M0tl4FQ.png",
+        "label": "M0tl4FQ"
+      },
+      {
+        "img": "https://i.imgur.com/PGUiK3y.png",
+        "label": "PGUiK3y"
+      },
+      {
+        "img": "https://i.imgur.com/hAT8RLp.png",
+        "label": "hAT8RLp"
+      },
+      {
+        "img": "https://i.imgur.com/f4HNUle.png",
+        "label": "f4HNUle"
+      },
+      {
+        "img": "https://i.imgur.com/mUZoWE8.png",
+        "label": "mUZoWE8"
+      },
+      {
+        "img": "https://i.imgur.com/sNB9yV1.png",
+        "label": "sNB9yV1"
+      },
+      {
+        "img": "https://i.imgur.com/iuXtDLu.png",
+        "label": "iuXtDLu"
+      },
+      {
+        "img": "https://i.imgur.com/7Xh6kmX.png",
+        "label": "7Xh6kmX"
+      },
+      {
+        "img": "https://i.imgur.com/A2k29ND.png",
+        "label": "A2k29ND"
+      },
+      {
+        "img": "https://i.imgur.com/wOOhJl5.png",
+        "label": "wOOhJl5"
+      },
+      {
+        "img": "https://i.imgur.com/U3AjUBG.png",
+        "label": "U3AjUBG"
+      },
+      {
+        "img": "https://i.imgur.com/KMNuRBY.png",
+        "label": "KMNuRBY"
+      },
+      {
+        "img": "https://i.imgur.com/rErTs5v.png",
+        "label": "rErTs5v"
+      },
+      {
+        "img": "https://i.imgur.com/HYM4632.png",
+        "label": "HYM4632"
+      },
+      {
+        "img": "https://i.imgur.com/mjYFXtf.png",
+        "label": "mjYFXtf"
+      },
+      {
+        "img": "https://i.imgur.com/f1xKC20.png",
+        "label": "f1xKC20"
+      },
+      {
+        "img": "https://i.imgur.com/ZAUxrWS.png",
+        "label": "ZAUxrWS"
+      }
+    ],
+    "emotesOverride": true,
+    "fraktion": "Haus Sgrechiwr",
+    "genealogy": {
+      "birth": "1690",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-sgrechiwr",
+      "houseName": "Haus Sgrechiwr",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Eluned Sgrechiwr",
+            "personId": "eluned-sgrechiwr",
+            "type": "biological",
+            "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Meinwen Sgrechiwr",
+            "personId": "meinwen-sgrechiwr",
+            "type": "biological",
+            "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gareth Sgrechiwr",
+            "personId": "gareth-sgrechiwr",
+            "type": "biological",
+            "worldPersonId": "person--haus-sgrechiwr--gareth-sgrechiwr"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Unbekannte Ehefrau",
+            "personId": "unknown-gareth-spouse",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--unknown-gareth-spouse"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Unbekannte Ehefrau",
+            "personId": "unknown-cadogan-spouse",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-sgrechiwr",
+          "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}",
+          "importedAt": "2026-09-02T20:37:58.808Z",
+          "lastSyncedAt": "2026-09-02T20:37:58.808Z",
+          "personId": "cadogan-sgrechiwr",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+    },
+    "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+    "identity": {
+      "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+    },
+    "imageSets": [
+      {
+        "createdAt": "2026-09-03T18:12:35.771Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/iekJzVo.png",
+            "label": "iekJzVo"
+          },
+          {
+            "img": "https://i.imgur.com/M0tl4FQ.png",
+            "label": "M0tl4FQ"
+          },
+          {
+            "img": "https://i.imgur.com/PGUiK3y.png",
+            "label": "PGUiK3y"
+          },
+          {
+            "img": "https://i.imgur.com/hAT8RLp.png",
+            "label": "hAT8RLp"
+          },
+          {
+            "img": "https://i.imgur.com/f4HNUle.png",
+            "label": "f4HNUle"
+          },
+          {
+            "img": "https://i.imgur.com/mUZoWE8.png",
+            "label": "mUZoWE8"
+          },
+          {
+            "img": "https://i.imgur.com/sNB9yV1.png",
+            "label": "sNB9yV1"
+          },
+          {
+            "img": "https://i.imgur.com/iuXtDLu.png",
+            "label": "iuXtDLu"
+          },
+          {
+            "img": "https://i.imgur.com/7Xh6kmX.png",
+            "label": "7Xh6kmX"
+          },
+          {
+            "img": "https://i.imgur.com/A2k29ND.png",
+            "label": "A2k29ND"
+          },
+          {
+            "img": "https://i.imgur.com/wOOhJl5.png",
+            "label": "wOOhJl5"
+          },
+          {
+            "img": "https://i.imgur.com/U3AjUBG.png",
+            "label": "U3AjUBG"
+          },
+          {
+            "img": "https://i.imgur.com/KMNuRBY.png",
+            "label": "KMNuRBY"
+          },
+          {
+            "img": "https://i.imgur.com/rErTs5v.png",
+            "label": "rErTs5v"
+          },
+          {
+            "img": "https://i.imgur.com/HYM4632.png",
+            "label": "HYM4632"
+          },
+          {
+            "img": "https://i.imgur.com/mjYFXtf.png",
+            "label": "mjYFXtf"
+          },
+          {
+            "img": "https://i.imgur.com/f1xKC20.png",
+            "label": "f1xKC20"
+          },
+          {
+            "img": "https://i.imgur.com/ZAUxrWS.png",
+            "label": "ZAUxrWS"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+        "updatedAt": "2026-09-03T18:12:35.771Z"
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "inventory": null,
+    "name": "Cadogan Sgrechiwr",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Lynthor",
+    "title": "Vorgesehener Erbe des Hauses Sgrechiwr",
+    "updatedAt": "2026-09-03T18:13:26.221Z"
+  }
+}

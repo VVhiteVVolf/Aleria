@@ -51,13 +51,25 @@
       "collection": "characters",
       "documentId": "gildas-gafyr",
       "documentIds": [
-        "gildas-gafyr"
+        "gildas-gafyr",
+        "gildas-gafyr",
+        "person--haus-gafyr--gildas-gafyr"
       ],
       "documents": [
         {
           "documentId": "gildas-gafyr",
           "createdAt": "2026-09-03T19:30:00.000Z",
           "updatedAt": "2026-09-03T19:30:00.000Z"
+        },
+        {
+          "documentId": "gildas-gafyr",
+          "createdAt": "2026-09-03T19:30:00.000Z",
+          "updatedAt": "2026-09-03T19:30:00.000Z"
+        },
+        {
+          "documentId": "person--haus-gafyr--gildas-gafyr",
+          "createdAt": "2026-08-08T03:52:02.274Z",
+          "updatedAt": "2026-09-03T17:20:13.099Z"
         }
       ]
     },
@@ -73,13 +85,15 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
     "sourceUpdatedAt": "2026-09-03T19:30:00.000Z",
     "sourceDocumentIds": [
-      "gildas-gafyr"
+      "gildas-gafyr",
+      "gildas-gafyr",
+      "person--haus-gafyr--gildas-gafyr"
     ],
-    "contentHash": "0938d85c8baeac5ee4084edf5c747cac51c646290684a4ce778e741c9469dafc"
+    "contentHash": "8e7054c80868616563203ad94da131f9675abc357eb987d63f80f2bb41e42232"
   },
   "local": {
     "notes": "",
@@ -2679,6 +2693,3146 @@
             "footer": "Personenakte · Gildas Gafyr"
           }
         }
+      },
+      {
+        "id": "gildas-gafyr",
+        "name": "Gildas Gafyr",
+        "title": "Ritter des Hauses Gafyr, Gwynthor",
+        "fraktion": "Haus Gafyr, Celtigerns Wacht",
+        "role": "Junger Pflichtritter · Schutzkämpfer",
+        "status": "Frisch zum Ritter geschlagen",
+        "relevance": "Aufstrebender Teulu und charakterliches Gegenbild zu Gawain Draig",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor",
+        "origin": "Celtigerns Wacht",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "patrick",
+        "bio": "Gildas Gafyr ist ein achtzehnjähriger, frisch geschlagener Ritter aus einem Seitenzweig des Hauses Gafyr. Was ihm an außergewöhnlichem Naturtalent fehlt, gleicht er durch Disziplin, Vorbereitung und ein beinahe strenges Pflichtverständnis aus.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-09-03T19:30:00.000Z",
+        "updatedAt": "2026-09-03T19:30:00.000Z",
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+            "emotes": [],
+            "createdAt": "2026-09-03T19:30:00.000Z",
+            "updatedAt": "2026-09-03T19:30:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+        "emotes": [],
+        "emotesOverride": true,
+        "imageSetsOverride": true,
+        "inventory": {
+          "characterId": "gildas-gafyr",
+          "title": "Charakter-Inventar",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+          "portraitFormat": "portrait",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "name": "Gildas Gafyr",
+          "role": "Ritter des Hauses Gafyr · Teulu",
+          "level": "Stufe 6",
+          "status": "Gesund",
+          "hitpoints": "52 / 52 TP",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "moneyNotice": "",
+          "showInfoTable": true,
+          "carryLabel": "Traglast",
+          "carryValue": "ca. 110 kg",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "infoRows": [
+            {
+              "label": "Klasse",
+              "value": "Teulu"
+            },
+            {
+              "label": "Kampfstil",
+              "value": "Drachentanz · Form I"
+            },
+            {
+              "label": "Stand",
+              "value": "Ritter"
+            }
+          ],
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 8
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 6
+            },
+            {
+              "label": "Wei",
+              "value": 7
+            },
+            {
+              "label": "Cha",
+              "value": 7
+            }
+          ],
+          "items": [
+            {
+              "id": "gildas-gafyr-duty-sword-item",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "weapon",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Pflichtschwur · Gafyr-Ritterschwert",
+              "type": "Ritterschwert",
+              "description": "Ein ausgewogenes Ritterschwert des Hauses Gafyr. Gildas hält Klinge, Griff und Scheide peinlich genau in Ordnung.",
+              "weight": "1,5 kg",
+              "quantity": "1",
+              "tags": "Schwert, Gafyr, vielseitig, Drachentanz, ritterlich",
+              "equipped": true,
+              "combatDefinition": {
+                "kind": "weapon",
+                "weaponType": "sword",
+                "training": "martial",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "1d10",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "damageType": "Hieb",
+                "rangeType": "melee",
+                "range": "Nahkampf",
+                "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+                "notes": "Sorgfältig gepflegte Hauswaffe eines Gafyr-Ritters.",
+                "requirements": "",
+                "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+              },
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "gildas-gafyr-duty-sword"
+              },
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "gildas-gafyr-watch-armor-item",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "armor",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Wachtpanzer · Gafyr-Rüstung",
+              "type": "Plattenrüstung mit Wappenrock und Helm",
+              "description": "Zweckmäßige Gafyr-Plattenrüstung, für die beweglichen Grundlinien des Drachentanzes angepasst.",
+              "weight": "24 kg",
+              "quantity": "1",
+              "tags": "Rüstung, Platte, Gafyr, Wappenrock, Helm",
+              "equipped": true,
+              "combatDefinition": {
+                "kind": "armor",
+                "armorKind": "armor",
+                "damageFormula": "",
+                "baseArmorClass": 16,
+                "armorClassBonus": 0,
+                "dexterityMode": "full",
+                "dexterityCap": 2,
+                "dexterityUnlockLevel": 6,
+                "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+                "notes": "Ab Stufe 6 wird der Geschicklichkeitsmodifikator berücksichtigt."
+              },
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "armor",
+                "combatEntryId": "gildas-gafyr-watch-armor"
+              },
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "gildas-gafyr-dagger-item",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "weapon",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Gafyr-Seitendolch",
+              "type": "Dolch",
+              "description": "Robuste Seitenwaffe für enge Räume und den Notfall.",
+              "weight": "0,5 kg",
+              "quantity": "1",
+              "tags": "Dolch, Gafyr, leicht, Finesse",
+              "equipped": false,
+              "combatDefinition": {
+                "kind": "weapon",
+                "weaponType": "dagger",
+                "training": "simple",
+                "damageFormula": "1d4",
+                "versatileDamageFormula": "",
+                "attackAttribute": "dexterity",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "damageType": "Stich",
+                "rangeType": "melee",
+                "range": "Nahkampf",
+                "properties": "Finesse · leicht · Wurfwaffe",
+                "notes": "Schlichte Seitenwaffe ohne Zierde.",
+                "requirements": "",
+                "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick."
+              },
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "gildas-gafyr-dagger"
+              },
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "gildas-gafyr-maintenance-kit",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "equipment",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Pflegeset für Klinge und Rüstung",
+              "type": "Werkzeug",
+              "description": "Wetzstein, Öl, Lappen, Ersatzriemen und kleine Werkzeuge; nach jeder Übung gewissenhaft benutzt.",
+              "weight": "2 kg",
+              "quantity": "1",
+              "tags": "Werkzeug, Wartung, Vorbereitung",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "gildas-gafyr-training-ledger",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "documents",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Übungsheft und Pflichtkalender",
+              "type": "Notizbuch",
+              "description": "Enthält Trainingsfolgen, beobachtete Fehler, Termine und offene Pflichten in einer auffallend ordentlichen Hand.",
+              "weight": "0,4 kg",
+              "quantity": "1",
+              "tags": "Dokument, Training, Planung, Pflicht",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "gildas-gafyr-field-kit",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "gildas-gafyr",
+              "ownerCharacterName": "Gildas Gafyr",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "equipment",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Schlichtes Feldzeug",
+              "type": "Reiseausrüstung",
+              "description": "Wasser, haltbarer Proviant, Verbandstoff, Seil und eine kleine Laterne. Nichts Glänzendes, aber alles kontrolliert.",
+              "weight": "8 kg",
+              "quantity": "1",
+              "tags": "Reise, Versorgung, Verband, Seil",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": []
+            }
+          ],
+          "companions": [],
+          "equipmentQuiz": {
+            "open": false,
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "status": "",
+            "updatedAt": ""
+          }
+        },
+        "combatProfile": {
+          "schemaVersion": 10,
+          "revision": 0,
+          "identity": {
+            "ancestry": "Cenyr",
+            "archetype": "Teulu",
+            "background": "Ritter"
+          },
+          "templateSelections": {
+            "schemaVersion": 1,
+            "ancestryId": "cenyr",
+            "backgroundId": "ritter",
+            "classId": "teulu",
+            "attributeMethod": "free",
+            "appliedAt": "2026-09-03T19:30:00.000Z"
+          },
+          "proficiencies": {
+            "armor": [
+              "medium",
+              "heavy"
+            ],
+            "weapons": [
+              "simple",
+              "martial",
+              "sword"
+            ],
+            "tools": [
+              "Heraldik und höfische Etikette",
+              "Pflege von Waffen und Rüstungen"
+            ],
+            "languages": [],
+            "notes": "Die praktische Ausbildung und wiederholte Grundübungen stehen vor Prunk oder Turnierkunst."
+          },
+          "progression": {
+            "level": 6,
+            "specialLevels": 0,
+            "experience": 0,
+            "nextLevelExperience": null,
+            "experienceReward": null,
+            "proficiencyBonusOverride": null
+          },
+          "attributes": [
+            {
+              "key": "strength",
+              "label": "Kraft",
+              "shortLabel": "KRF",
+              "score": 16,
+              "modifierOverride": null
+            },
+            {
+              "key": "dexterity",
+              "label": "Geschick",
+              "shortLabel": "GES",
+              "score": 17,
+              "modifierOverride": null
+            },
+            {
+              "key": "constitution",
+              "label": "Konstitution",
+              "shortLabel": "KON",
+              "score": 14,
+              "modifierOverride": null
+            },
+            {
+              "key": "intelligence",
+              "label": "Intelligenz",
+              "shortLabel": "INT",
+              "score": 12,
+              "modifierOverride": null
+            },
+            {
+              "key": "wisdom",
+              "label": "Weisheit",
+              "shortLabel": "WEI",
+              "score": 14,
+              "modifierOverride": null
+            },
+            {
+              "key": "charisma",
+              "label": "Charisma",
+              "shortLabel": "CHA",
+              "score": 15,
+              "modifierOverride": null
+            }
+          ],
+          "hitPoints": {
+            "current": 52,
+            "temporary": 0,
+            "hitDie": 10,
+            "averagePerLevelOverride": null,
+            "maximumOverride": null
+          },
+          "armorClass": {
+            "base": 10,
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "shieldBonus": 0,
+            "magicModifier": 0,
+            "otherModifier": 0,
+            "override": null,
+            "overrideMode": "total"
+          },
+          "combat": {
+            "movement": 9,
+            "initiativeBonus": 0,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "passivePerceptionBonus": 0,
+            "canActAtZeroHitPoints": false
+          },
+          "savingThrows": [
+            {
+              "attributeKey": "strength",
+              "proficient": true,
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "attributeKey": "dexterity",
+              "proficient": false,
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "attributeKey": "constitution",
+              "proficient": true,
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "attributeKey": "intelligence",
+              "proficient": false,
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "attributeKey": "wisdom",
+              "proficient": false,
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "attributeKey": "charisma",
+              "proficient": false,
+              "expertise": false,
+              "bonus": 0
+            }
+          ],
+          "skills": [
+            {
+              "id": "default-skill-1",
+              "name": "Athletik",
+              "attributeKey": "strength",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-2",
+              "name": "Akrobatik",
+              "attributeKey": "dexterity",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-3",
+              "name": "Fingerfertigkeit",
+              "attributeKey": "dexterity",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-4",
+              "name": "Heimlichkeit",
+              "attributeKey": "dexterity",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-5",
+              "name": "Arkane Kunde",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-6",
+              "name": "Geschichte",
+              "attributeKey": "intelligence",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-7",
+              "name": "Nachforschungen",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-8",
+              "name": "Naturkunde",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-9",
+              "name": "Religion",
+              "attributeKey": "intelligence",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-10",
+              "name": "Heilkunde",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-11",
+              "name": "Mit Tieren umgehen",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-12",
+              "name": "Motiv erkennen",
+              "attributeKey": "wisdom",
+              "proficiency": "expertise",
+              "bonus": 0,
+              "notes": "Besonders ausgeprägt durch Disziplin und Menschenbeobachtung"
+            },
+            {
+              "id": "default-skill-13",
+              "name": "Überleben",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-14",
+              "name": "Wahrnehmung",
+              "attributeKey": "wisdom",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-15",
+              "name": "Auftreten",
+              "attributeKey": "charisma",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-16",
+              "name": "Einschüchtern",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-17",
+              "name": "Täuschen",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-18",
+              "name": "Überreden",
+              "attributeKey": "charisma",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung"
+            },
+            {
+              "id": "default-skill-19",
+              "name": "Flirten",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-20",
+              "name": "Körperbeherrschung",
+              "attributeKey": "constitution",
+              "proficiency": "expertise",
+              "bonus": 0,
+              "notes": "Besonders ausgeprägt durch Disziplin und Menschenbeobachtung"
+            }
+          ],
+          "weapons": [
+            {
+              "id": "default-unarmed-melee",
+              "inventoryItemId": "",
+              "name": "Nahkampf",
+              "weaponType": "unarmed",
+              "training": "simple",
+              "damageFormula": "1d4",
+              "versatileDamageFormula": "",
+              "damageType": "Wucht",
+              "attackAttribute": "strength",
+              "proficient": true,
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "range": "Nahkampf",
+              "properties": "Schlicht · simpel · immer verfügbar",
+              "notes": "Grundlegender waffenloser Nahkampfangriff.",
+              "requirements": "",
+              "aiInstructions": "",
+              "effects": [],
+              "ammunition": null,
+              "activationType": "action",
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
+              "equipped": false
+            },
+            {
+              "id": "gildas-gafyr-duty-sword",
+              "inventoryItemId": "gildas-gafyr-duty-sword-item",
+              "name": "Pflichtschwur · Gafyr-Ritterschwert",
+              "weaponType": "sword",
+              "training": "martial",
+              "damageFormula": "1d8",
+              "versatileDamageFormula": "1d10",
+              "damageType": "Hieb",
+              "attackAttribute": "strength",
+              "proficient": true,
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "range": "Nahkampf",
+              "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+              "notes": "Gildas’ sorgfältig gepflegte Hauswaffe und Fokus des Drachentanzes.",
+              "requirements": "",
+              "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+              "effects": [],
+              "ammunition": null,
+              "activationType": "action",
+              "costs": [
+                {
+                  "id": "gildas-gafyr-duty-sword-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "equipped": true
+            },
+            {
+              "id": "gildas-gafyr-dagger",
+              "inventoryItemId": "gildas-gafyr-dagger-item",
+              "name": "Gafyr-Seitendolch",
+              "weaponType": "dagger",
+              "training": "simple",
+              "damageFormula": "1d4",
+              "versatileDamageFormula": "",
+              "damageType": "Stich",
+              "attackAttribute": "dexterity",
+              "proficient": true,
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "range": "Nahkampf",
+              "properties": "Finesse · leicht · Wurfwaffe",
+              "notes": "Schlichte Seitenwaffe für den Notfall.",
+              "requirements": "",
+              "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+              "effects": [],
+              "ammunition": null,
+              "activationType": "action",
+              "costs": [
+                {
+                  "id": "gildas-gafyr-dagger-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "equipped": false
+            }
+          ],
+          "armorItems": [
+            {
+              "id": "gildas-gafyr-watch-armor",
+              "inventoryItemId": "gildas-gafyr-watch-armor-item",
+              "name": "Wachtpanzer · Gafyr-Rüstung",
+              "kind": "armor",
+              "baseArmorClass": 16,
+              "armorClassBonus": 0,
+              "dexterityMode": "full",
+              "dexterityCap": 2,
+              "dexterityUnlockLevel": 6,
+              "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+              "notes": "Die Bewegungsfreiheit für den Drachentanz wird ab Stufe 6 voll genutzt.",
+              "equipped": true
+            }
+          ],
+          "resources": [
+            {
+              "id": "inspiration",
+              "name": "Inspiration",
+              "current": 0,
+              "maximum": 1,
+              "recovery": "manual",
+              "scope": "persistent",
+              "category": "",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "mana-focus",
+              "name": "Mana",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "magic",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "celestial-points",
+              "name": "Celestiale Punkte",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "celestial",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "infernal-points",
+              "name": "Infernale Punkte",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "infernal",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "action",
+              "name": "Aktion",
+              "current": 1,
+              "maximum": 1,
+              "recovery": "scene",
+              "scope": "comment",
+              "category": "action",
+              "icon": "./public/assets/combat-profile-icons/action.png",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+            },
+            {
+              "id": "bonus-action",
+              "name": "Bonusaktion",
+              "current": 1,
+              "maximum": 1,
+              "recovery": "scene",
+              "scope": "comment",
+              "category": "action",
+              "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+            },
+            {
+              "id": "reaction",
+              "name": "Reaktion",
+              "current": 2,
+              "maximum": 2,
+              "recovery": "scene",
+              "scope": "comment",
+              "category": "action",
+              "icon": "./public/assets/combat-profile-icons/reaction.png",
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+            },
+            {
+              "id": "special-action",
+              "name": "Besondere Aktion",
+              "current": 2,
+              "maximum": 2,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "action",
+              "icon": "./public/assets/combat-profile-icons/special-action.png",
+              "notes": ""
+            },
+            {
+              "id": "aura-focus",
+              "name": "Aura-Fokuspunkt",
+              "current": 1,
+              "maximum": 1,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "action",
+              "paymentRole": "universal-substitute",
+              "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+              "notes": ""
+            },
+            {
+              "id": "spell-slot-1",
+              "name": "Zauberplatz I",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 1,
+              "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-2",
+              "name": "Zauberplatz II",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 2,
+              "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-3",
+              "name": "Zauberplatz III",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 3,
+              "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-4",
+              "name": "Zauberplatz IV",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 4,
+              "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-5",
+              "name": "Zauberplatz V",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 5,
+              "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-6",
+              "name": "Zauberplatz VI",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 6,
+              "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-7",
+              "name": "Zauberplatz VII",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 7,
+              "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-8",
+              "name": "Zauberplatz VIII",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 8,
+              "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-9",
+              "name": "Zauberplatz IX",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 9,
+              "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "spell-slot-10",
+              "name": "Zauberplatz X",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "category": "spell-slot",
+              "icon": "",
+              "spellLevel": 10,
+              "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "focus",
+              "name": "Fokus",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "focus",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "pact-points",
+              "name": "Paktpunkte",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "pact",
+              "icon": "",
+              "notes": ""
+            }
+          ],
+          "techniques": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+              "name": "Erster Hieb des Jungdrachens",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 1,
+              "category": "technique",
+              "description": "Der grundlegende, schnelle Schwerthieb der ersten Drachentanz-Form.",
+              "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 1W10 Hiebschaden.",
+              "activationType": "bonus-action",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "1d10",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "Nahkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+              "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+              "effects": [],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-01-erster-hieb-bonus-action",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+              "name": "Biss des Jungdrachens",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 2,
+              "category": "technique",
+              "description": "Der Anwender verdichtet den einfachen Hieb zu einem kurzen, präzisen Vorstoß.",
+              "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 1W10 plus 1W6 Hiebschaden.",
+              "activationType": "action",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "1d10+1d6",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "Nahkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+              "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+              "effects": [],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-reaction",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+              "name": "Gekreuzte Klauen",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 3,
+              "category": "technique",
+              "description": "Zwei fließend verbundene Schnittlinien treffen wie die gekreuzten Klauen eines jungen Drachen.",
+              "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 2W8 Hiebschaden.",
+              "activationType": "reaction",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "2d8",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "Nahkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+              "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+              "effects": [],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen-reaction",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+              "name": "Schweifkreis des Jungdrachens",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 4,
+              "category": "technique",
+              "description": "Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.",
+              "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils 2W8 Hiebschaden.",
+              "activationType": "action",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "2d8",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "3 Meter Umkreis",
+              "target": "Mehrere ausgewählte Gegner im Umkreis",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Flächenschaden",
+              "aiInstructions": "Reiner Flächenschaden. Denselben Schadenswurf auf alle ausgewählten Ziele anwenden; Schaden nicht doppelt addieren.",
+              "effects": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-area-damage",
+                  "type": "damage",
+                  "target": "selected",
+                  "amount": 0,
+                  "formula": "2d8",
+                  "damageType": "Hieb",
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": "Trifft alle ausgewählten Gegner im Umkreis von 3 Metern."
+                }
+              ],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-bonus-action",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-reaction",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+              "name": "Stürmende Drachenspur",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 5,
+              "category": "technique",
+              "description": "Ein schneller Antritt bündelt den Schwung des Anwenders in einem einzigen durchgezogenen Schnitt.",
+              "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 2W10 plus 1W6 Hiebschaden.",
+              "activationType": "special-action",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "2d10+1d6",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "Nahkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+              "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+              "effects": [],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-special-action",
+                  "resourceId": "special-action",
+                  "name": "Besondere Aktion",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
+              "name": "Sechsfacher Lehrhieb",
+              "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+              "minimumLevel": 6,
+              "category": "technique",
+              "description": "Der Anwender führt die sechs Grundlinien der Form in einem makellosen Lehrstück zusammen.",
+              "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 3W10 Hiebschaden.",
+              "activationType": "special-action",
+              "weaponTypes": [
+                "sword"
+              ],
+              "compatibleWeaponIds": [
+                "gildas-gafyr-duty-sword"
+              ],
+              "damageFormula": "3d10",
+              "damageType": "Hieb",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "rollMode": "normal",
+              "range": "Nahkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+              "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+              "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+              "effects": [],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-bonus-action",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-special-action",
+                  "resourceId": "special-action",
+                  "name": "Besondere Aktion",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache"
+            }
+          ],
+          "quirks": [
+            {
+              "id": "starter-ancestry-cenyr-trait-1",
+              "name": "Cenyri Kultur",
+              "type": "trait",
+              "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+              "appliesWhen": "Dauerhafte kulturelle Prägung",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Volk · Cenyr",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "starter-ancestry-cenyr-trait-2",
+              "name": "Höfische und religiöse Prägung",
+              "type": "trait",
+              "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+              "appliesWhen": "Dauerhafte kulturelle Prägung",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Volk · Cenyr",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "starter-background-ritter-trait-1",
+              "name": "Ritterliche Herkunft und Standespflicht",
+              "type": "trait",
+              "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+              "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Hintergrund · Ritter",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "gildas-puenktlich-heisst-zu-frueh",
+              "name": "Pünktlich heißt zu früh",
+              "type": "quirk",
+              "description": "Gildas erscheint fast immer vor der vereinbarten Zeit und nutzt die Minuten, um Ort, Ausrüstung und Aufgabe zu prüfen.",
+              "appliesWhen": "Zu Beginn eines Kampfes oder einer vorbereiteten Aufgabe",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Marotte · Vorbereitung · Pünktlichkeit",
+              "limitations": "Der Bonus entfällt erzählerisch, wenn Gildas überrascht oder ohne jede Vorbereitung in die Lage gezwungen wird.",
+              "aiInstructions": "Stelle die Vorbereitung als ruhige Routine dar, nicht als übernatürliche Vorahnung.",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 1,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "gildas-erarbeitete-standfestigkeit",
+              "name": "Erarbeitete Standfestigkeit",
+              "type": "trait",
+              "description": "Gildas besitzt kein herausragendes Naturtalent; tausendfach wiederholte Abläufe und hoher Eigenanspruch machen ihn jedoch schwer aus der Fassung zu bringen.",
+              "appliesWhen": "Bei Rettungswürfen gegen Druck, Schmerz, Ablenkung oder Kontrollverlust",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Passiv · Disziplin · Beharrlichkeit",
+              "limitations": "Der pauschale Bonus ist bereits in der Kampfauflösung hinterlegt und darf nicht erneut addiert werden.",
+              "aiInstructions": "Beschreibe Erfolg als eingeübte Standfestigkeit statt als angeborene Brillanz.",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 1,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "gildas-pflicht-vor-bequemlichkeit",
+              "name": "Pflicht vor Bequemlichkeit",
+              "type": "ideal",
+              "description": "Eine angenommene Verantwortung gilt für Gildas erst dann als beendet, wenn die Aufgabe wirklich erfüllt und niemand zurückgelassen wurde.",
+              "appliesWhen": "Wenn eine Pflicht unbequem, gefährlich oder undankbar wird",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Ideal · Pflicht · Rittertum",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "gildas-brauen-des-zweifels",
+              "name": "Brauen des Zweifels",
+              "type": "quirk",
+              "description": "Bei schlechten Ausreden zieht Gildas unwillkürlich die Brauen zusammen. Seine Skepsis ist dadurch meist sichtbar, bevor er ein Wort sagt.",
+              "appliesWhen": "Bei Ausreden, Ausflüchten oder offensichtlicher Nachlässigkeit",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Marotte · Mimik · Skepsis",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "gildas-trockener-humor",
+              "name": "Trockener Humor",
+              "type": "quirk",
+              "description": "Offensichtliche Scherze lassen ihn oft nur blinzeln; eine leise, trockene Bemerkung kann ihm dagegen ein ehrliches Lachen entlocken.",
+              "appliesWhen": "In ruhigen sozialen Szenen",
+              "trigger": "",
+              "target": "self",
+              "duration": "",
+              "stacking": "normal",
+              "tags": "Marotte · Humor · Ernst",
+              "limitations": "",
+              "aiInstructions": "",
+              "priority": 0,
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            }
+          ],
+          "conditions": [
+            {
+              "id": "gildas-vorschnelles-urteil",
+              "name": "Vorschnelles Urteil",
+              "duration": "Dauerhaft",
+              "source": "Junger Ritterstolz",
+              "description": "Gildas beobachtet scharf, glaubt aber bisweilen zu früh, einen Menschen bereits verstanden zu haben. Besonders Verwöhntheit und missbrauchte Privilegien machen ihn unnachsichtig.",
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": []
+            }
+          ],
+          "damageAffinities": [],
+          "abilities": [
+            {
+              "id": "gildas-gewissenhafte-vorbereitung",
+              "name": "Gewissenhafte Vorbereitung",
+              "description": "Gildas geht Abläufe, Ausrüstung und mögliche Fehlerquellen vor einer Aufgabe durch. Sein erster passender Angriffs- oder Fertigkeitswurf einer Szene erhält +1.",
+              "usesCurrent": 0,
+              "usesMaximum": 0,
+              "recovery": "none",
+              "recoveryDayKey": "",
+              "rollFormula": "",
+              "damageType": "physisch",
+              "activationType": "passive",
+              "delivery": "ability",
+              "resolutionType": "",
+              "saveAttribute": "dexterity",
+              "halfDamageOnSave": false,
+              "combatUsable": false,
+              "target": "Selbst",
+              "range": "Selbst",
+              "duration": "Erster passender Wurf der Szene",
+              "requirements": "Gildas darf nicht vollkommen unvorbereitet oder überrascht sein.",
+              "tags": "Passiv · Vorbereitung · Disziplin",
+              "aiInstructions": "Der Bonus wird durch die Triggerregel automatisch eingerechnet und darf nicht doppelt addiert werden.",
+              "effects": [],
+              "concentration": false,
+              "channelComments": 0,
+              "costs": [],
+              "auraBypass": {
+                "allowed": false,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [
+                {
+                  "id": "gildas-gewissenhafte-vorbereitung-first-roll",
+                  "name": "Vorbereiteter erster Schritt",
+                  "enabled": true,
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "scene",
+                  "condition": "always",
+                  "actionScope": "global",
+                  "consumeReaction": false,
+                  "costs": [],
+                  "actionKinds": [
+                    "weapon",
+                    "technique",
+                    "skill"
+                  ],
+                  "skillIds": [],
+                  "requiredTargetTags": [],
+                  "radiusMeters": null,
+                  "priority": 0,
+                  "authority": "passive",
+                  "description": "Einmal je Szene +1 auf den ersten passenden Angriffs- oder Fertigkeitswurf.",
+                  "effects": {
+                    "attackModifier": 1,
+                    "defenseModifier": 0,
+                    "savingThrowModifier": 0,
+                    "spellSaveDcModifier": 0,
+                    "skillModifier": 1,
+                    "damageModifier": 0,
+                    "damageReduction": 0,
+                    "rollMode": "normal",
+                    "outcome": "none"
+                  },
+                  "resultEffects": []
+                }
+              ],
+              "inventoryUseTrigger": {
+                "enabled": false,
+                "itemTags": [],
+                "restoreResources": [],
+                "requireActualRecovery": true
+              }
+            },
+            {
+              "id": "gildas-schutzpflicht",
+              "name": "Schutzpflicht",
+              "description": "Wird ein naher Verbündeter getroffen, tritt Gildas mit Schildarm, Schulter oder Klinge in die Angriffslinie und reduziert den Schaden um 3.",
+              "usesCurrent": 0,
+              "usesMaximum": 0,
+              "recovery": "none",
+              "recoveryDayKey": "",
+              "rollFormula": "",
+              "damageType": "physisch",
+              "activationType": "passive",
+              "delivery": "ability",
+              "resolutionType": "",
+              "saveAttribute": "dexterity",
+              "halfDamageOnSave": false,
+              "combatUsable": false,
+              "target": "Ein Verbündeter",
+              "range": "2 Meter",
+              "duration": "Sofort",
+              "requirements": "Gildas muss reagieren können und sich höchstens 2 Meter vom Ziel entfernt befinden.",
+              "tags": "Reaktion · Schutz · Ritterpflicht",
+              "aiInstructions": "Nur nach ausdrücklicher Auswahl der Reaktion anwenden; die Reaktion wird automatisch verbraucht.",
+              "effects": [],
+              "concentration": false,
+              "channelComments": 0,
+              "costs": [],
+              "auraBypass": {
+                "allowed": false,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [
+                {
+                  "id": "gildas-schutzpflicht-reaction",
+                  "name": "In die Angriffslinie treten",
+                  "enabled": true,
+                  "phase": "pre-damage",
+                  "recipient": "target",
+                  "sourceRelation": "ally",
+                  "activation": "reaction",
+                  "frequency": "comment",
+                  "condition": "always",
+                  "actionScope": "global",
+                  "consumeReaction": true,
+                  "costs": [],
+                  "actionKinds": [],
+                  "skillIds": [],
+                  "requiredTargetTags": [],
+                  "radiusMeters": 2,
+                  "priority": 0,
+                  "authority": "reaction",
+                  "description": "Reduziert eingehenden Schaden eines nahen Verbündeten um 3.",
+                  "effects": {
+                    "attackModifier": 0,
+                    "defenseModifier": 0,
+                    "savingThrowModifier": 0,
+                    "spellSaveDcModifier": 0,
+                    "skillModifier": 0,
+                    "damageModifier": 0,
+                    "damageReduction": 3,
+                    "rollMode": "normal",
+                    "outcome": "none"
+                  },
+                  "resultEffects": []
+                }
+              ],
+              "inventoryUseTrigger": {
+                "enabled": false,
+                "itemTags": [],
+                "restoreResources": [],
+                "requireActualRecovery": true
+              }
+            }
+          ],
+          "magic": {
+            "enabled": false,
+            "casterTier": "full",
+            "bypassResourceId": "",
+            "focusEnabled": false,
+            "focusResourceId": "focus",
+            "castingAttribute": "intelligence",
+            "spellAttackOverride": null,
+            "spellSaveDcOverride": null,
+            "manaResourceId": "mana-focus",
+            "slotResourceIds": [
+              "spell-slot-1",
+              "spell-slot-2",
+              "spell-slot-3",
+              "spell-slot-4",
+              "spell-slot-5",
+              "spell-slot-6",
+              "spell-slot-7",
+              "spell-slot-8",
+              "spell-slot-9",
+              "spell-slot-10"
+            ],
+            "notes": "",
+            "spells": []
+          },
+          "aura": {
+            "enabled": false,
+            "name": "Aura",
+            "domain": "",
+            "focusResourceId": "aura-focus",
+            "focusBypassCost": 1,
+            "notes": "",
+            "activeForm": {
+              "enabled": false,
+              "active": false,
+              "name": "Aktive Form",
+              "description": "",
+              "radius": "",
+              "target": "Selbst und gewählte Ziele",
+              "trigger": "",
+              "duration": "",
+              "requirements": "",
+              "aiInstructions": "",
+              "selfMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "allyMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "enemyMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            },
+            "latentPresence": {
+              "enabled": true,
+              "active": true,
+              "name": "Latente Präsenz",
+              "description": "",
+              "radius": "",
+              "target": "Umgebung, Verbündete und Gegner",
+              "trigger": "",
+              "duration": "",
+              "requirements": "",
+              "aiInstructions": "",
+              "selfMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "allyMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "enemyMechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "cheats": {
+            "enabled": false,
+            "automaticCritical": false
+          },
+          "notes": "EINSATZDOKTRIN · Gildas kämpft als verlässlicher Front- und Schutzritter. Er hält die Linie, beobachtet den Raum und setzt Drachentanz-Techniken planvoll statt prahlerisch ein.\n\nAUFTAKT · Wenn Vorbereitung möglich war, nutzt er Gewissenhafte Vorbereitung für den ersten wichtigen Wurf. Erster Hieb des Jungdrachens kostet nur die Bonusaktion und lässt sich mit einem normalen Schwerthieb der Aktion verbinden.\n\nEINZELZIEL · Biss des Jungdrachens ist der verlässliche Druckangriff. Gekreuzte Klauen bleibt die sparsame Reaktionsoption, solange Schutzpflicht nicht dringender ist.\n\nMEHRERE GEGNER · Schweifkreis nur bei freiem Raum und mindestens zwei lohnenden Zielen; er bindet Aktion, Bonusaktion und Reaktion zugleich.\n\nDURCHBRUCH · Stürmende Drachenspur gegen ein wichtiges Ziel. Sechsfacher Lehrhieb ist der Abschluss gegen einen gefährlichen Gegner und kostet Aktion, Bonusaktion sowie Besondere Aktion.\n\nPRIORITÄT · Gildas bewahrt seine Reaktion, wenn ein gefährdeter Verbündeter in 2 Metern Schutz braucht. Schutzpflicht geht für ihn vor zusätzlichem Schaden."
+        },
+        "identity": {
+          "worldPersonId": "person--haus-gafyr--gildas-gafyr"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gafyr--gildas-gafyr",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1722",
+          "death": "",
+          "houseId": "house-gafyr",
+          "houseName": "Haus Gafyr",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        },
+        "biography": {
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Gildas Gafyr"
+            ],
+            [
+              "Haus",
+              "Haus Gafyr"
+            ],
+            [
+              "Titel / Anrede",
+              "Sir"
+            ],
+            [
+              "Geboren",
+              "1722"
+            ],
+            [
+              "Geburtsort",
+              "Gwynthor"
+            ],
+            [
+              "Gestorben",
+              "Lebend"
+            ],
+            [
+              "Alter im Jahr 1740",
+              "18 Jahre"
+            ],
+            [
+              "Geschlecht",
+              "Männlich"
+            ],
+            [
+              "Familienstand",
+              "ledig"
+            ],
+            [
+              "Rang / Stand",
+              "Ritter"
+            ],
+            [
+              "Tätigkeit",
+              ""
+            ],
+            [
+              "Wohnsitz",
+              "Gwynthor"
+            ]
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Gildas Gafyr ist ein achtzehnjähriger Ritter aus dem alten Rittergeschlecht Gafyr und gehört zu einem Seitenzweig jenes Hauses, das seit Generationen zu den treuesten Gefolgsleuten der Draigs zählt. Er ist der Enkel eines Vetters von Sir Duncan Gafyr und damit zwar mit dem Ritterfürst verwandt, gehört jedoch nicht dessen unmittelbarer Familie an.<br><br>Sein Vater Kelyddon Gafyr dient als Kämmerer der ritterlichen Herrschaft des Hauses Gafyr. Sein Großvater Hywell Gafyr bekleidet dort das Amt des Justiziars. Seine Mutter Izolda, geborene Arwydd, entstammt ebenfalls einem Rittergeschlecht Celtigerns Wacht.<br><br>Gildas wuchs dadurch in einer Familie auf, in der Rittertum niemals nur mit Waffen, Turnieren und Ruhm verbunden wurde. Sein Vater verwaltete Vorräte, Einkünfte und Ausgaben seines Hauses. Sein Großvater schlichtete Streitigkeiten, bereitete Urteile vor und wachte über Recht und Ordnung. Schon als Junge erlebte Gildas Männer, die hohe Ämter bekleideten und dennoch einen erheblichen Teil ihres Lebens mit Arbeiten verbrachten, die wenig heldenhaft erschienen.<br><br><p><span style=\"font-size: 0.82rem;\">Für ihn entstand daraus früh ein einfaches\nVerständnis von Adel:</span></p>\n\n<p data-start=\"1205\" data-end=\"1283\"><strong data-start=\"1205\" data-end=\"1283\">Ein\nhöherer Rang bedeutet nicht weniger Pflichten. Er bedeutet mehr davon.</strong><o:p></o:p></p><p data-start=\"1205\" data-end=\"1283\"><span style=\"font-size: 0.82rem;\">Während andere Jungen von großen Schlachten\nund ruhmreichen Abenteuern träumten, faszinierte Gildas vor allem die\nVorstellung des Ritters selbst. Ein Mann, dem andere vertrauen konnten. Der\nsein Wort hielt, Schwächere beschützte, seinem Herrn diente und bereit war,\nVerantwortung zu übernehmen, wenn andere sie lieber von sich schoben.</span></p>Zwei Männer prägten dieses Bild für ihn besonders: Sir Duncan Gafyr und Sir Egon Gafyr.<br><br>Gildas bewundert Sir Duncan seit seiner Kindheit. Nicht allein wegen dessen Fähigkeiten mit der Waffe, sondern wegen seiner Disziplin. Duncan muss niemandem erklären, dass er ein Ritter ist. Er zeigt es durch sein Verhalten, seine Pflichterfüllung und die Selbstverständlichkeit, mit der er Verantwortung übernimmt. Für Gildas&nbsp;<span style=\"font-size: 0.82rem;\">verkörpert der Waffenmeister beinahe alles, was einen vollkommenen Ritter&nbsp;</span><span style=\"font-size: 0.82rem;\">ausmacht: Können ohne Prahlerei, Härte ohne Grausamkeit und Autorität, die&nbsp;</span><span style=\"font-size: 0.82rem;\">nicht erst durch einen Titel geschaffen werden muss.</span><div><br>Sir Egon verkörpert für ihn eine andere Seite&nbsp;<span style=\"font-size: 0.82rem;\">desselben Ideals. Der Marschall Celtigerns Wacht ist für Gildas der Beweis,&nbsp;</span><span style=\"font-size: 0.82rem;\">dass Rittertum nicht beim Kämpfen endet. Egon führt Männer, kümmert sich um die<span style=\"font-weight: normal;\">&nbsp;</span></span><span style=\"font-size: 0.82rem;\">Sicherheit der Grafschaft, übernimmt Verantwortung für Untergebene und besitzt&nbsp;</span><span style=\"font-size: 0.82rem;\">trotz seines Ranges eine Bodenständigkeit, die Gildas ausgesprochen schätzt.</span></div><div><br>Wenn Gildas darüber nachdenkt, was für ein Ritter er eines Tages sein möchte, denkt er häufig an diese beiden Männer.<br><br>Von Duncan möchte er die Disziplin und Meisterschaft besitzen. Von Egon die Führungsstärke und Menschlichkeit.<br><br>Entsprechend ernst nahm Gildas seine eigene Ausbildung. Er war niemals der talentierteste junge Kämpfer seines Hauses und besitzt weder außergewöhnliche Körperkraft noch eine besondere Begabung, die ihn von anderen Rittern deutlich abhebt. Was ihm an natürlichem Talent fehlt, versucht er durch Disziplin auszugleichen. Übungen wiederholt er, bis er sie beherrscht. Fehler ärgern ihn vor allem dann, wenn er weiß, dass er sie durch bessere Vorbereitung hätte verhindern können.<br><br>Seinen Ritterschlag betrachtete Gildas deshalb niemals als selbstverständliches Recht seiner Geburt.<br><br>Für ihn war er etwas, das verdient werden musste.<br><br>Als er schließlich selbst zum Ritter geschlagen wurde, gehörte dieser Augenblick zu den stolzesten seines bisherigen<span style=\"font-weight: normal;\">&nbsp;</span>Lebens. Nicht weil er sich seitdem für bedeutender hält als andere, sondern<span style=\"font-weight: normal;\">&nbsp;&nbsp;</span>weil er darin die Bestätigung sieht, dass seine bisherigen Lehrer ihn für&nbsp;würdig hielten, den Stand zu tragen, dem er seit seiner Kindheit nacheiferte.<br><br>Gerade deshalb besitzt Gildas wenig Verständnis für junge Adlige, die Ritterwürde vor allem als Titel betrachten.<br><br>Kaum jemand verkörpert dieses Problem für ihn stärker als Gawain Draig.</div>",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Pflichtbewusst",
+                "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
+                "icon": "✦"
+              },
+              {
+                "title": "Diszipliniert",
+                "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
+                "icon": "✦"
+              },
+              {
+                "title": "Ritterstolz",
+                "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
+                "icon": "✦"
+              },
+              {
+                "title": "Streng mit sich selbst",
+                "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
+                "icon": "✦"
+              },
+              {
+                "title": "Urteilend",
+                "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
+                "icon": "✦"
+              },
+              {
+                "title": "Unnachsichtig gegenüber Verwöhntheit",
+                "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
+                "icon": "✦"
+              },
+              {
+                "title": "Verlässlich",
+                "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
+                "icon": "✦"
+              },
+              {
+                "title": "Ernst",
+                "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
+                "icon": "✦"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Hintergrund",
+            "historyText": "Gildas befindet sich an einem interessanten Punkt seines Lebens. Seine Ausbildung ist abgeschlossen und der Ritterschlag erfolgt, doch eigentlich beginnt erst jetzt jener Teil, von dem seine Lehrer ihm immer erzählt haben.<br><br>Er muss beweisen, was für ein Ritter er tatsächlich sein wird.<br><br>Dabei besitzt er eine sehr klare Vorstellung davon, welchen Ansprüchen ein Ritter gerecht werden sollte. Noch fehlt ihm jedoch die Lebenserfahrung seines Großvaters Hywell oder seiner Vorbilder Duncan und Egon, um zu erkennen, dass Menschen diesen Ansprüchen auf sehr unterschiedliche Weise gerecht werden können.<br><br>Gerade seine Bewunderung für Sir Duncan und Sir Egon könnte deshalb irgendwann dazu führen, dass Gildas sein eigenes Ritterbild hinterfragen muss.",
+            "worksTitle": "Bekannte Werke",
+            "works": [],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "•\tSir Duncan Gafyr und Sir Egon Gafyr sind Gildas' große ritterliche Vorbilder. Er bewundert sie vor allem für deren Disziplin, Können und Pflichtbewusstsein, Führungsstärke, Verantwortungsgefühl und Bodenständigkeit.",
+              "•\tLob von Duncan oder Egon bedeutet Gildas erheblich mehr als die Anerkennung irgendeines hochrangigen Adeligen.",
+              "•\tGildas betrachtet seinen eigenen Ritterschlag als eine der größten Auszeichnungen seines bisherigen Lebens.",
+              "•\tDass Sir Duncan Gawain dennoch als Ritter anerkennt, bringt Gildas in einen gewissen inneren Konflikt: Er zweifelt an Gawain, möchte aber nicht an Duncan zweifeln.",
+              "•\tEr ist fast immer zu früh bei Übungen und empfindet „pünktlich“ insgeheim bereits als ein wenig verspätet.",
+              "•\tHat die unangenehme Angewohnheit, bei Ausreden kurz die Brauen zusammenzuziehen, wodurch jeder sofort erkennt, dass er kein Wort glaubt.",
+              "•\tBesitzt durchaus Humor, lacht aber wesentlich häufiger über trockene Bemerkungen als über offensichtliche Scherze.",
+              "•\tWürde niemals behaupten, dass eine Arbeit „unter seiner Würde“ sei. Dieser Satz dürfte einer der schnellsten Wege sein, ihn gegen sich aufzubringen.",
+              "•\tVersucht sich bei wichtigen Entscheidungen manchmal vorzustellen, was Sir Duncan oder Sir Egon an seiner Stelle tun würden."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [],
+            "connectionsTitle": "Verbindungen",
+            "connections": [],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "Personenakte · Gildas Gafyr"
+          }
+        }
+      },
+      {
+        "activeImageSetId": "standard",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": {
+          "biography": {
+            "abilities": [
+              {
+                "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
+                "icon": "✦",
+                "title": "Pflichtbewusst"
+              },
+              {
+                "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
+                "icon": "✦",
+                "title": "Diszipliniert"
+              },
+              {
+                "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
+                "icon": "✦",
+                "title": "Ritterstolz"
+              },
+              {
+                "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
+                "icon": "✦",
+                "title": "Streng mit sich selbst"
+              },
+              {
+                "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
+                "icon": "✦",
+                "title": "Urteilend"
+              },
+              {
+                "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
+                "icon": "✦",
+                "title": "Unnachsichtig gegenüber Verwöhntheit"
+              },
+              {
+                "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
+                "icon": "✦",
+                "title": "Verlässlich"
+              },
+              {
+                "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
+                "icon": "✦",
+                "title": "Ernst"
+              }
+            ],
+            "abilitiesTitle": "Persönlichkeit",
+            "biographyText": "Gildas Gafyr ist ein achtzehnjähriger Ritter aus dem alten Rittergeschlecht Gafyr und gehört zu einem Seitenzweig jenes Hauses, das seit Generationen zu den treuesten Gefolgsleuten der Draigs zählt. Er ist der Enkel eines Vetters von Sir Duncan Gafyr und damit zwar mit dem Ritterfürst verwandt, gehört jedoch nicht dessen unmittelbarer Familie an.<br><br>Sein Vater Kelyddon Gafyr dient als Kämmerer der ritterlichen Herrschaft des Hauses Gafyr. Sein Großvater Hywell Gafyr bekleidet dort das Amt des Justiziars. Seine Mutter Izolda, geborene Arwydd, entstammt ebenfalls einem Rittergeschlecht Celtigerns Wacht.<br><br>Gildas wuchs dadurch in einer Familie auf, in der Rittertum niemals nur mit Waffen, Turnieren und Ruhm verbunden wurde. Sein Vater verwaltete Vorräte, Einkünfte und Ausgaben seines Hauses. Sein Großvater schlichtete Streitigkeiten, bereitete Urteile vor und wachte über Recht und Ordnung. Schon als Junge erlebte Gildas Männer, die hohe Ämter bekleideten und dennoch einen erheblichen Teil ihres Lebens mit Arbeiten verbrachten, die wenig heldenhaft erschienen.<br><br><p><span style=\"font-size: 0.82rem;\">Für ihn entstand daraus früh ein einfaches\nVerständnis von Adel:</span></p>\n\n<p data-start=\"1205\" data-end=\"1283\"><strong data-start=\"1205\" data-end=\"1283\">Ein\nhöherer Rang bedeutet nicht weniger Pflichten. Er bedeutet mehr davon.</strong><o:p></o:p></p><p data-start=\"1205\" data-end=\"1283\"><span style=\"font-size: 0.82rem;\">Während andere Jungen von großen Schlachten\nund ruhmreichen Abenteuern träumten, faszinierte Gildas vor allem die\nVorstellung des Ritters selbst. Ein Mann, dem andere vertrauen konnten. Der\nsein Wort hielt, Schwächere beschützte, seinem Herrn diente und bereit war,\nVerantwortung zu übernehmen, wenn andere sie lieber von sich schoben.</span></p>Zwei Männer prägten dieses Bild für ihn besonders: Sir Duncan Gafyr und Sir Egon Gafyr.<br><br>Gildas bewundert Sir Duncan seit seiner Kindheit. Nicht allein wegen dessen Fähigkeiten mit der Waffe, sondern wegen seiner Disziplin. Duncan muss niemandem erklären, dass er ein Ritter ist. Er zeigt es durch sein Verhalten, seine Pflichterfüllung und die Selbstverständlichkeit, mit der er Verantwortung übernimmt. Für Gildas&nbsp;<span style=\"font-size: 0.82rem;\">verkörpert der Waffenmeister beinahe alles, was einen vollkommenen Ritter&nbsp;</span><span style=\"font-size: 0.82rem;\">ausmacht: Können ohne Prahlerei, Härte ohne Grausamkeit und Autorität, die&nbsp;</span><span style=\"font-size: 0.82rem;\">nicht erst durch einen Titel geschaffen werden muss.</span><div><br>Sir Egon verkörpert für ihn eine andere Seite&nbsp;<span style=\"font-size: 0.82rem;\">desselben Ideals. Der Marschall Celtigerns Wacht ist für Gildas der Beweis,&nbsp;</span><span style=\"font-size: 0.82rem;\">dass Rittertum nicht beim Kämpfen endet. Egon führt Männer, kümmert sich um die<span style=\"font-weight: normal;\">&nbsp;</span></span><span style=\"font-size: 0.82rem;\">Sicherheit der Grafschaft, übernimmt Verantwortung für Untergebene und besitzt&nbsp;</span><span style=\"font-size: 0.82rem;\">trotz seines Ranges eine Bodenständigkeit, die Gildas ausgesprochen schätzt.</span></div><div><br>Wenn Gildas darüber nachdenkt, was für ein Ritter er eines Tages sein möchte, denkt er häufig an diese beiden Männer.<br><br>Von Duncan möchte er die Disziplin und Meisterschaft besitzen. Von Egon die Führungsstärke und Menschlichkeit.<br><br>Entsprechend ernst nahm Gildas seine eigene Ausbildung. Er war niemals der talentierteste junge Kämpfer seines Hauses und besitzt weder außergewöhnliche Körperkraft noch eine besondere Begabung, die ihn von anderen Rittern deutlich abhebt. Was ihm an natürlichem Talent fehlt, versucht er durch Disziplin auszugleichen. Übungen wiederholt er, bis er sie beherrscht. Fehler ärgern ihn vor allem dann, wenn er weiß, dass er sie durch bessere Vorbereitung hätte verhindern können.<br><br>Seinen Ritterschlag betrachtete Gildas deshalb niemals als selbstverständliches Recht seiner Geburt.<br><br>Für ihn war er etwas, das verdient werden musste.<br><br>Als er schließlich selbst zum Ritter geschlagen wurde, gehörte dieser Augenblick zu den stolzesten seines bisherigen<span style=\"font-weight: normal;\">&nbsp;</span>Lebens. Nicht weil er sich seitdem für bedeutender hält als andere, sondern<span style=\"font-weight: normal;\">&nbsp;&nbsp;</span>weil er darin die Bestätigung sieht, dass seine bisherigen Lehrer ihn für&nbsp;würdig hielten, den Stand zu tragen, dem er seit seiner Kindheit nacheiferte.<br><br>Gerade deshalb besitzt Gildas wenig Verständnis für junge Adlige, die Ritterwürde vor allem als Titel betrachten.<br><br>Kaum jemand verkörpert dieses Problem für ihn stärker als Gawain Draig.</div>",
+            "biographyTitle": "Biografie",
+            "connectionPortraitHeight": 68,
+            "connections": [],
+            "connectionsTitle": "Verbindungen",
+            "connectionTextOffset": 0,
+            "documents": [],
+            "documentsTitle": "Eigentum & Besitz",
+            "extraSections": [],
+            "footer": "Personenakte · Gildas",
+            "historyText": "Gildas befindet sich an einem interessanten Punkt seines Lebens. Seine Ausbildung ist abgeschlossen und der Ritterschlag erfolgt, doch eigentlich beginnt erst jetzt jener Teil, von dem seine Lehrer ihm immer erzählt haben.<br><br>Er muss beweisen, was für ein Ritter er tatsächlich sein wird.<br><br>Dabei besitzt er eine sehr klare Vorstellung davon, welchen Ansprüchen ein Ritter gerecht werden sollte. Noch fehlt ihm jedoch die Lebenserfahrung seines Großvaters Hywell oder seiner Vorbilder Duncan und Egon, um zu erkennen, dass Menschen diesen Ansprüchen auf sehr unterschiedliche Weise gerecht werden können.<br><br>Gerade seine Bewunderung für Sir Duncan und Sir Egon könnte deshalb irgendwann dazu führen, dass Gildas sein eigenes Ritterbild hinterfragen muss.",
+            "historyTitle": "Hintergrund",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "quotes": [],
+            "quotesTitle": "Zitate",
+            "sideWidth": 100,
+            "trivia": [
+              "•\tSir Duncan Gafyr und Sir Egon Gafyr sind Gildas' große ritterliche Vorbilder. Er bewundert sie vor allem für deren Disziplin, Können und Pflichtbewusstsein, Führungsstärke, Verantwortungsgefühl und Bodenständigkeit.",
+              "•\tLob von Duncan oder Egon bedeutet Gildas erheblich mehr als die Anerkennung irgendeines hochrangigen Adeligen.",
+              "•\tGildas betrachtet seinen eigenen Ritterschlag als eine der größten Auszeichnungen seines bisherigen Lebens.",
+              "•\tDass Sir Duncan Gawain dennoch als Ritter anerkennt, bringt Gildas in einen gewissen inneren Konflikt: Er zweifelt an Gawain, möchte aber nicht an Duncan zweifeln.",
+              "•\tEr ist fast immer zu früh bei Übungen und empfindet „pünktlich“ insgeheim bereits als ein wenig verspätet.",
+              "•\tHat die unangenehme Angewohnheit, bei Ausreden kurz die Brauen zusammenzuziehen, wodurch jeder sofort erkennt, dass er kein Wort glaubt.",
+              "•\tBesitzt durchaus Humor, lacht aber wesentlich häufiger über trockene Bemerkungen als über offensichtliche Scherze.",
+              "•\tWürde niemals behaupten, dass eine Arbeit „unter seiner Würde“ sei. Dieser Satz dürfte einer der schnellsten Wege sein, ihn gegen sich aufzubringen.",
+              "•\tVersucht sich bei wichtigen Entscheidungen manchmal vorzustellen, was Sir Duncan oder Sir Egon an seiner Stelle tun würden."
+            ],
+            "triviaTitle": "Trivia",
+            "works": [],
+            "worksTitle": "Bekannte Werke"
+          },
+          "quote": "",
+          "quoteBy": "",
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Gildas"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Gafyr"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Sir"
+            },
+            {
+              "label": "Geboren",
+              "value": "1722"
+            },
+            {
+              "label": "Geburtsort",
+              "value": "Gwynthor"
+            },
+            {
+              "label": "Gestorben",
+              "value": "Lebend"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "18 Jahre"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Männlich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "ledig"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": "Ritter"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": ""
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            }
+          ]
+        },
+        "createdAt": "2026-08-08T03:52:02.274Z",
+        "currentLocation": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/09Jw3Np.png",
+            "label": "09Jw3Np"
+          },
+          {
+            "img": "https://i.imgur.com/jL0iEsW.png",
+            "label": "jL0iEsW"
+          },
+          {
+            "img": "https://i.imgur.com/wTRCaFd.png",
+            "label": "wTRCaFd"
+          },
+          {
+            "img": "https://i.imgur.com/84M3tVt.png",
+            "label": "84M3tVt"
+          },
+          {
+            "img": "https://i.imgur.com/ogi3SoQ.png",
+            "label": "ogi3SoQ"
+          },
+          {
+            "img": "https://i.imgur.com/wYRPB4i.png",
+            "label": "wYRPB4i"
+          },
+          {
+            "img": "https://i.imgur.com/6SD6k4k.png",
+            "label": "6SD6k4k"
+          },
+          {
+            "img": "https://i.imgur.com/NYz2N8p.png",
+            "label": "NYz2N8p"
+          },
+          {
+            "img": "https://i.imgur.com/3DNho9p.png",
+            "label": "3DNho9p"
+          },
+          {
+            "img": "https://i.imgur.com/JTfrGpq.png",
+            "label": "JTfrGpq"
+          },
+          {
+            "img": "https://i.imgur.com/0KOQiWc.png",
+            "label": "0KOQiWc"
+          },
+          {
+            "img": "https://i.imgur.com/xDbAfVK.png",
+            "label": "xDbAfVK"
+          },
+          {
+            "img": "https://i.imgur.com/z2fpm8o.png",
+            "label": "z2fpm8o"
+          },
+          {
+            "img": "https://i.imgur.com/XQWsMiG.png",
+            "label": "XQWsMiG"
+          },
+          {
+            "img": "https://i.imgur.com/PWwEU0j.png",
+            "label": "PWwEU0j"
+          },
+          {
+            "img": "https://i.imgur.com/Vyp7iOi.png",
+            "label": "Vyp7iOi"
+          },
+          {
+            "img": "https://i.imgur.com/hz0tWaL.png",
+            "label": "hz0tWaL"
+          },
+          {
+            "img": "https://i.imgur.com/epGquCQ.png",
+            "label": "epGquCQ"
+          },
+          {
+            "img": "https://i.imgur.com/irSZdTp.png",
+            "label": "irSZdTp"
+          },
+          {
+            "img": "https://i.imgur.com/aobwrZG.png",
+            "label": "aobwrZG"
+          },
+          {
+            "img": "https://i.imgur.com/vdlknOF.png",
+            "label": "vdlknOF"
+          },
+          {
+            "img": "https://i.imgur.com/6EsomVZ.png",
+            "label": "6EsomVZ"
+          },
+          {
+            "img": "https://i.imgur.com/PB08rzI.png",
+            "label": "PB08rzI"
+          },
+          {
+            "img": "https://i.imgur.com/jDyEItp.png",
+            "label": "jDyEItp"
+          },
+          {
+            "img": "https://i.imgur.com/REmgYTz.png",
+            "label": "REmgYTz"
+          },
+          {
+            "img": "https://i.imgur.com/Qmp7Fde.png",
+            "label": "Qmp7Fde"
+          },
+          {
+            "img": "https://i.imgur.com/TuVQyAL.png",
+            "label": "TuVQyAL"
+          },
+          {
+            "img": "https://i.imgur.com/NIQJxSg.png",
+            "label": "NIQJxSg"
+          },
+          {
+            "img": "https://i.imgur.com/OjIsAw7.png",
+            "label": "OjIsAw7"
+          },
+          {
+            "img": "https://i.imgur.com/jrcBWFI.png",
+            "label": "jrcBWFI"
+          },
+          {
+            "img": "https://i.imgur.com/nkFfwNF.png",
+            "label": "nkFfwNF"
+          },
+          {
+            "img": "https://i.imgur.com/6jWAh4v.png",
+            "label": "6jWAh4v"
+          },
+          {
+            "img": "https://i.imgur.com/5e1KczA.png",
+            "label": "5e1KczA"
+          },
+          {
+            "img": "https://i.imgur.com/x6NEqjb.png",
+            "label": "x6NEqjb"
+          }
+        ],
+        "emotesOverride": true,
+        "fraktion": "Haus Gafyr",
+        "genealogy": {
+          "birth": "1722",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-gafyr",
+          "houseName": "Haus Gafyr",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Kelyddon Gafyr",
+                "personId": "kelyddon-gafyr",
+                "type": "biological",
+                "worldPersonId": "person--haus-gafyr--kelyddon-gafyr"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Izolda Arwydd",
+                "personId": "izolda-arwydd",
+                "type": "biological",
+                "worldPersonId": "person--haus-arwydd--izolda-arwydd"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-gafyr",
+              "fingerprint": "{\"name\":\"Gildas Gafyr\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kelyddon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--kelyddon-gafyr\",\"name\":\"Kelyddon Gafyr\"},{\"personId\":\"izolda-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--izolda-arwydd\",\"name\":\"Izolda Arwydd\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-08-08T03:52:02.274Z",
+              "lastSyncedAt": "2026-08-08T03:52:02.274Z",
+              "personId": "gildas-gafyr",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gildas-gafyr"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-gafyr--gildas-gafyr"
+        },
+        "id": "person--haus-gafyr--gildas-gafyr",
+        "identity": {
+          "worldPersonId": "person--haus-gafyr--gildas-gafyr"
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-08-08T03:52:09.244Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/09Jw3Np.png",
+                "label": "09Jw3Np"
+              },
+              {
+                "img": "https://i.imgur.com/jL0iEsW.png",
+                "label": "jL0iEsW"
+              },
+              {
+                "img": "https://i.imgur.com/wTRCaFd.png",
+                "label": "wTRCaFd"
+              },
+              {
+                "img": "https://i.imgur.com/84M3tVt.png",
+                "label": "84M3tVt"
+              },
+              {
+                "img": "https://i.imgur.com/ogi3SoQ.png",
+                "label": "ogi3SoQ"
+              },
+              {
+                "img": "https://i.imgur.com/wYRPB4i.png",
+                "label": "wYRPB4i"
+              },
+              {
+                "img": "https://i.imgur.com/6SD6k4k.png",
+                "label": "6SD6k4k"
+              },
+              {
+                "img": "https://i.imgur.com/NYz2N8p.png",
+                "label": "NYz2N8p"
+              },
+              {
+                "img": "https://i.imgur.com/3DNho9p.png",
+                "label": "3DNho9p"
+              },
+              {
+                "img": "https://i.imgur.com/JTfrGpq.png",
+                "label": "JTfrGpq"
+              },
+              {
+                "img": "https://i.imgur.com/0KOQiWc.png",
+                "label": "0KOQiWc"
+              },
+              {
+                "img": "https://i.imgur.com/xDbAfVK.png",
+                "label": "xDbAfVK"
+              },
+              {
+                "img": "https://i.imgur.com/z2fpm8o.png",
+                "label": "z2fpm8o"
+              },
+              {
+                "img": "https://i.imgur.com/XQWsMiG.png",
+                "label": "XQWsMiG"
+              },
+              {
+                "img": "https://i.imgur.com/PWwEU0j.png",
+                "label": "PWwEU0j"
+              },
+              {
+                "img": "https://i.imgur.com/Vyp7iOi.png",
+                "label": "Vyp7iOi"
+              },
+              {
+                "img": "https://i.imgur.com/hz0tWaL.png",
+                "label": "hz0tWaL"
+              },
+              {
+                "img": "https://i.imgur.com/epGquCQ.png",
+                "label": "epGquCQ"
+              },
+              {
+                "img": "https://i.imgur.com/irSZdTp.png",
+                "label": "irSZdTp"
+              },
+              {
+                "img": "https://i.imgur.com/aobwrZG.png",
+                "label": "aobwrZG"
+              },
+              {
+                "img": "https://i.imgur.com/vdlknOF.png",
+                "label": "vdlknOF"
+              },
+              {
+                "img": "https://i.imgur.com/6EsomVZ.png",
+                "label": "6EsomVZ"
+              },
+              {
+                "img": "https://i.imgur.com/PB08rzI.png",
+                "label": "PB08rzI"
+              },
+              {
+                "img": "https://i.imgur.com/jDyEItp.png",
+                "label": "jDyEItp"
+              },
+              {
+                "img": "https://i.imgur.com/REmgYTz.png",
+                "label": "REmgYTz"
+              },
+              {
+                "img": "https://i.imgur.com/Qmp7Fde.png",
+                "label": "Qmp7Fde"
+              },
+              {
+                "img": "https://i.imgur.com/TuVQyAL.png",
+                "label": "TuVQyAL"
+              },
+              {
+                "img": "https://i.imgur.com/NIQJxSg.png",
+                "label": "NIQJxSg"
+              },
+              {
+                "img": "https://i.imgur.com/OjIsAw7.png",
+                "label": "OjIsAw7"
+              },
+              {
+                "img": "https://i.imgur.com/jrcBWFI.png",
+                "label": "jrcBWFI"
+              },
+              {
+                "img": "https://i.imgur.com/nkFfwNF.png",
+                "label": "nkFfwNF"
+              },
+              {
+                "img": "https://i.imgur.com/6jWAh4v.png",
+                "label": "6jWAh4v"
+              },
+              {
+                "img": "https://i.imgur.com/5e1KczA.png",
+                "label": "5e1KczA"
+              },
+              {
+                "img": "https://i.imgur.com/x6NEqjb.png",
+                "label": "x6NEqjb"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+            "updatedAt": "2026-08-08T03:52:09.244Z"
+          },
+          {
+            "createdAt": "2026-09-03T17:17:39.852Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/zx1qemN.png",
+                "label": "zx1qemN"
+              },
+              {
+                "img": "https://i.imgur.com/jleeYUH.png",
+                "label": "jleeYUH"
+              },
+              {
+                "img": "https://i.imgur.com/0Aldfc6.png",
+                "label": "0Aldfc6"
+              },
+              {
+                "img": "https://i.imgur.com/xDp5g08.png",
+                "label": "xDp5g08"
+              },
+              {
+                "img": "https://i.imgur.com/23cUM95.png",
+                "label": "23cUM95"
+              },
+              {
+                "img": "https://i.imgur.com/TlcfFSj.png",
+                "label": "TlcfFSj"
+              },
+              {
+                "img": "https://i.imgur.com/iPAvAgT.png",
+                "label": "iPAvAgT"
+              },
+              {
+                "img": "https://i.imgur.com/Aj0Je9E.png",
+                "label": "Aj0Je9E"
+              },
+              {
+                "img": "https://i.imgur.com/yuyP3Sz.png",
+                "label": "yuyP3Sz"
+              },
+              {
+                "img": "https://i.imgur.com/XWOTiBS.png",
+                "label": "XWOTiBS"
+              },
+              {
+                "img": "https://i.imgur.com/cJhu1Dx.png",
+                "label": "cJhu1Dx"
+              }
+            ],
+            "id": "kampf-set",
+            "name": "Kampf - Set",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+            "updatedAt": "2026-09-03T17:17:44.106Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "inventory": null,
+        "name": "Gildas Gafyr",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T17:20:13.099Z"
       }
     ]
   },
@@ -2699,7 +5853,7 @@
     "bio": "Gildas Gafyr ist ein achtzehnjähriger, frisch geschlagener Ritter aus einem Seitenzweig des Hauses Gafyr. Was ihm an außergewöhnlichem Naturtalent fehlt, gleicht er durch Disziplin, Vorbereitung und ein beinahe strenges Pflichtverständnis aus.",
     "aliases": [],
     "archived": false,
-    "createdAt": "2026-09-03T19:30:00.000Z",
+    "createdAt": "2026-08-08T03:52:02.274Z",
     "updatedAt": "2026-09-03T19:30:00.000Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
@@ -2710,11 +5864,346 @@
         "emotes": [],
         "createdAt": "2026-09-03T19:30:00.000Z",
         "updatedAt": "2026-09-03T19:30:00.000Z"
+      },
+      {
+        "createdAt": "2026-08-08T03:52:09.244Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/09Jw3Np.png",
+            "label": "09Jw3Np"
+          },
+          {
+            "img": "https://i.imgur.com/jL0iEsW.png",
+            "label": "jL0iEsW"
+          },
+          {
+            "img": "https://i.imgur.com/wTRCaFd.png",
+            "label": "wTRCaFd"
+          },
+          {
+            "img": "https://i.imgur.com/84M3tVt.png",
+            "label": "84M3tVt"
+          },
+          {
+            "img": "https://i.imgur.com/ogi3SoQ.png",
+            "label": "ogi3SoQ"
+          },
+          {
+            "img": "https://i.imgur.com/wYRPB4i.png",
+            "label": "wYRPB4i"
+          },
+          {
+            "img": "https://i.imgur.com/6SD6k4k.png",
+            "label": "6SD6k4k"
+          },
+          {
+            "img": "https://i.imgur.com/NYz2N8p.png",
+            "label": "NYz2N8p"
+          },
+          {
+            "img": "https://i.imgur.com/3DNho9p.png",
+            "label": "3DNho9p"
+          },
+          {
+            "img": "https://i.imgur.com/JTfrGpq.png",
+            "label": "JTfrGpq"
+          },
+          {
+            "img": "https://i.imgur.com/0KOQiWc.png",
+            "label": "0KOQiWc"
+          },
+          {
+            "img": "https://i.imgur.com/xDbAfVK.png",
+            "label": "xDbAfVK"
+          },
+          {
+            "img": "https://i.imgur.com/z2fpm8o.png",
+            "label": "z2fpm8o"
+          },
+          {
+            "img": "https://i.imgur.com/XQWsMiG.png",
+            "label": "XQWsMiG"
+          },
+          {
+            "img": "https://i.imgur.com/PWwEU0j.png",
+            "label": "PWwEU0j"
+          },
+          {
+            "img": "https://i.imgur.com/Vyp7iOi.png",
+            "label": "Vyp7iOi"
+          },
+          {
+            "img": "https://i.imgur.com/hz0tWaL.png",
+            "label": "hz0tWaL"
+          },
+          {
+            "img": "https://i.imgur.com/epGquCQ.png",
+            "label": "epGquCQ"
+          },
+          {
+            "img": "https://i.imgur.com/irSZdTp.png",
+            "label": "irSZdTp"
+          },
+          {
+            "img": "https://i.imgur.com/aobwrZG.png",
+            "label": "aobwrZG"
+          },
+          {
+            "img": "https://i.imgur.com/vdlknOF.png",
+            "label": "vdlknOF"
+          },
+          {
+            "img": "https://i.imgur.com/6EsomVZ.png",
+            "label": "6EsomVZ"
+          },
+          {
+            "img": "https://i.imgur.com/PB08rzI.png",
+            "label": "PB08rzI"
+          },
+          {
+            "img": "https://i.imgur.com/jDyEItp.png",
+            "label": "jDyEItp"
+          },
+          {
+            "img": "https://i.imgur.com/REmgYTz.png",
+            "label": "REmgYTz"
+          },
+          {
+            "img": "https://i.imgur.com/Qmp7Fde.png",
+            "label": "Qmp7Fde"
+          },
+          {
+            "img": "https://i.imgur.com/TuVQyAL.png",
+            "label": "TuVQyAL"
+          },
+          {
+            "img": "https://i.imgur.com/NIQJxSg.png",
+            "label": "NIQJxSg"
+          },
+          {
+            "img": "https://i.imgur.com/OjIsAw7.png",
+            "label": "OjIsAw7"
+          },
+          {
+            "img": "https://i.imgur.com/jrcBWFI.png",
+            "label": "jrcBWFI"
+          },
+          {
+            "img": "https://i.imgur.com/nkFfwNF.png",
+            "label": "nkFfwNF"
+          },
+          {
+            "img": "https://i.imgur.com/6jWAh4v.png",
+            "label": "6jWAh4v"
+          },
+          {
+            "img": "https://i.imgur.com/5e1KczA.png",
+            "label": "5e1KczA"
+          },
+          {
+            "img": "https://i.imgur.com/x6NEqjb.png",
+            "label": "x6NEqjb"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+        "updatedAt": "2026-08-08T03:52:09.244Z"
+      },
+      {
+        "createdAt": "2026-09-03T17:17:39.852Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/zx1qemN.png",
+            "label": "zx1qemN"
+          },
+          {
+            "img": "https://i.imgur.com/jleeYUH.png",
+            "label": "jleeYUH"
+          },
+          {
+            "img": "https://i.imgur.com/0Aldfc6.png",
+            "label": "0Aldfc6"
+          },
+          {
+            "img": "https://i.imgur.com/xDp5g08.png",
+            "label": "xDp5g08"
+          },
+          {
+            "img": "https://i.imgur.com/23cUM95.png",
+            "label": "23cUM95"
+          },
+          {
+            "img": "https://i.imgur.com/TlcfFSj.png",
+            "label": "TlcfFSj"
+          },
+          {
+            "img": "https://i.imgur.com/iPAvAgT.png",
+            "label": "iPAvAgT"
+          },
+          {
+            "img": "https://i.imgur.com/Aj0Je9E.png",
+            "label": "Aj0Je9E"
+          },
+          {
+            "img": "https://i.imgur.com/yuyP3Sz.png",
+            "label": "yuyP3Sz"
+          },
+          {
+            "img": "https://i.imgur.com/XWOTiBS.png",
+            "label": "XWOTiBS"
+          },
+          {
+            "img": "https://i.imgur.com/cJhu1Dx.png",
+            "label": "cJhu1Dx"
+          }
+        ],
+        "id": "kampf-set",
+        "name": "Kampf - Set",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+        "updatedAt": "2026-09-03T17:17:44.106Z"
       }
     ],
     "activeImageSetId": "standard",
     "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
-    "emotes": [],
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/09Jw3Np.png",
+        "label": "09Jw3Np"
+      },
+      {
+        "img": "https://i.imgur.com/jL0iEsW.png",
+        "label": "jL0iEsW"
+      },
+      {
+        "img": "https://i.imgur.com/wTRCaFd.png",
+        "label": "wTRCaFd"
+      },
+      {
+        "img": "https://i.imgur.com/84M3tVt.png",
+        "label": "84M3tVt"
+      },
+      {
+        "img": "https://i.imgur.com/ogi3SoQ.png",
+        "label": "ogi3SoQ"
+      },
+      {
+        "img": "https://i.imgur.com/wYRPB4i.png",
+        "label": "wYRPB4i"
+      },
+      {
+        "img": "https://i.imgur.com/6SD6k4k.png",
+        "label": "6SD6k4k"
+      },
+      {
+        "img": "https://i.imgur.com/NYz2N8p.png",
+        "label": "NYz2N8p"
+      },
+      {
+        "img": "https://i.imgur.com/3DNho9p.png",
+        "label": "3DNho9p"
+      },
+      {
+        "img": "https://i.imgur.com/JTfrGpq.png",
+        "label": "JTfrGpq"
+      },
+      {
+        "img": "https://i.imgur.com/0KOQiWc.png",
+        "label": "0KOQiWc"
+      },
+      {
+        "img": "https://i.imgur.com/xDbAfVK.png",
+        "label": "xDbAfVK"
+      },
+      {
+        "img": "https://i.imgur.com/z2fpm8o.png",
+        "label": "z2fpm8o"
+      },
+      {
+        "img": "https://i.imgur.com/XQWsMiG.png",
+        "label": "XQWsMiG"
+      },
+      {
+        "img": "https://i.imgur.com/PWwEU0j.png",
+        "label": "PWwEU0j"
+      },
+      {
+        "img": "https://i.imgur.com/Vyp7iOi.png",
+        "label": "Vyp7iOi"
+      },
+      {
+        "img": "https://i.imgur.com/hz0tWaL.png",
+        "label": "hz0tWaL"
+      },
+      {
+        "img": "https://i.imgur.com/epGquCQ.png",
+        "label": "epGquCQ"
+      },
+      {
+        "img": "https://i.imgur.com/irSZdTp.png",
+        "label": "irSZdTp"
+      },
+      {
+        "img": "https://i.imgur.com/aobwrZG.png",
+        "label": "aobwrZG"
+      },
+      {
+        "img": "https://i.imgur.com/vdlknOF.png",
+        "label": "vdlknOF"
+      },
+      {
+        "img": "https://i.imgur.com/6EsomVZ.png",
+        "label": "6EsomVZ"
+      },
+      {
+        "img": "https://i.imgur.com/PB08rzI.png",
+        "label": "PB08rzI"
+      },
+      {
+        "img": "https://i.imgur.com/jDyEItp.png",
+        "label": "jDyEItp"
+      },
+      {
+        "img": "https://i.imgur.com/REmgYTz.png",
+        "label": "REmgYTz"
+      },
+      {
+        "img": "https://i.imgur.com/Qmp7Fde.png",
+        "label": "Qmp7Fde"
+      },
+      {
+        "img": "https://i.imgur.com/TuVQyAL.png",
+        "label": "TuVQyAL"
+      },
+      {
+        "img": "https://i.imgur.com/NIQJxSg.png",
+        "label": "NIQJxSg"
+      },
+      {
+        "img": "https://i.imgur.com/OjIsAw7.png",
+        "label": "OjIsAw7"
+      },
+      {
+        "img": "https://i.imgur.com/jrcBWFI.png",
+        "label": "jrcBWFI"
+      },
+      {
+        "img": "https://i.imgur.com/nkFfwNF.png",
+        "label": "nkFfwNF"
+      },
+      {
+        "img": "https://i.imgur.com/6jWAh4v.png",
+        "label": "6jWAh4v"
+      },
+      {
+        "img": "https://i.imgur.com/5e1KczA.png",
+        "label": "5e1KczA"
+      },
+      {
+        "img": "https://i.imgur.com/x6NEqjb.png",
+        "label": "x6NEqjb"
+      }
+    ],
     "emotesOverride": true,
     "imageSetsOverride": true,
     "inventory": {
@@ -3037,15 +6526,6 @@
         "open": false,
         "step": 0,
         "answers": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
           ""
         ],
         "resultText": "",
@@ -5134,32 +8614,32 @@
       "sources": [
         {
           "familyId": "haus-gafyr",
+          "fingerprint": "{\"name\":\"Gildas Gafyr\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kelyddon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--kelyddon-gafyr\",\"name\":\"Kelyddon Gafyr\"},{\"personId\":\"izolda-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--izolda-arwydd\",\"name\":\"Izolda Arwydd\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-08-08T03:52:02.274Z",
+          "lastSyncedAt": "2026-08-08T03:52:02.274Z",
           "personId": "gildas-gafyr",
-          "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-03T19:30:00.000Z",
-          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gildas-gafyr",
-          "fingerprint": "{\"name\":\"Gildas Gafyr\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kelyddon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--kelyddon-gafyr\",\"name\":\"Kelyddon Gafyr\"},{\"personId\":\"izolda-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--izolda-arwydd\",\"name\":\"Izolda Arwydd\"}],\"partners\":[],\"children\":[]}}"
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gildas-gafyr"
         }
       ],
       "relationships": {
         "parents": [
           {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Kelyddon Gafyr",
             "personId": "kelyddon-gafyr",
             "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-gafyr--kelyddon-gafyr",
-            "name": "Kelyddon Gafyr"
+            "worldPersonId": "person--haus-gafyr--kelyddon-gafyr"
           },
           {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Izolda Arwydd",
             "personId": "izolda-arwydd",
             "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-arwydd--izolda-arwydd",
-            "name": "Izolda Arwydd"
+            "worldPersonId": "person--haus-arwydd--izolda-arwydd"
           }
         ],
         "partners": [],
@@ -5215,15 +8695,60 @@
         [
           "Wohnsitz",
           "Gwynthor"
-        ]
+        ],
+        {
+          "label": "Vollständiger Name",
+          "value": "Gildas"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Gafyr"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Sir"
+        },
+        {
+          "label": "Geboren",
+          "value": "1722"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "18 Jahre"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Ritter"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": ""
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        }
       ],
       "quote": "",
       "quoteBy": "",
       "biography": {
         "portraitStages": [
-          "",
-          "",
-          "",
           ""
         ],
         "sideWidth": 100,
@@ -5272,6 +8797,46 @@
             "title": "Ernst",
             "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
             "icon": "✦"
+          },
+          {
+            "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
+            "icon": "✦",
+            "title": "Pflichtbewusst"
+          },
+          {
+            "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
+            "icon": "✦",
+            "title": "Diszipliniert"
+          },
+          {
+            "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
+            "icon": "✦",
+            "title": "Ritterstolz"
+          },
+          {
+            "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
+            "icon": "✦",
+            "title": "Streng mit sich selbst"
+          },
+          {
+            "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
+            "icon": "✦",
+            "title": "Urteilend"
+          },
+          {
+            "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
+            "icon": "✦",
+            "title": "Unnachsichtig gegenüber Verwöhntheit"
+          },
+          {
+            "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
+            "icon": "✦",
+            "title": "Verlässlich"
+          },
+          {
+            "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
+            "icon": "✦",
+            "title": "Ernst"
           }
         ],
         "extraSections": [],
@@ -5298,7 +8863,9 @@
         "documentsTitle": "Eigentum & Besitz",
         "documents": [],
         "footer": "Personenakte · Gildas Gafyr"
-      }
+      },
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1
     }
   }
 }

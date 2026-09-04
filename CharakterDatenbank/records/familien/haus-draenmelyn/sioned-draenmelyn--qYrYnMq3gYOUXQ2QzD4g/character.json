@@ -33,7 +33,7 @@
         ],
         "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn",
         "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
-        "score": 185
+        "score": 265
       }
     ],
     "familyAlternatives": [],
@@ -59,7 +59,7 @@
         {
           "documentId": "qYrYnMq3gYOUXQ2QzD4g",
           "createdAt": "2026-07-27T12:59:07.277Z",
-          "updatedAt": "2026-07-27T13:03:54.285Z"
+          "updatedAt": "2026-09-02T20:19:29.894Z"
         }
       ]
     },
@@ -75,13 +75,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "2026-07-27T13:03:54.285Z",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-02T20:19:29.894Z",
     "sourceDocumentIds": [
       "qYrYnMq3gYOUXQ2QzD4g"
     ],
-    "contentHash": "fecda02cb6f0d74aea2ec3d434e1c0ab2ebafa4ae2f7039ab2a247189d52500f"
+    "contentHash": "c11d5d3cd4bbbe1ad45fc2587faf2475489751ba2dca3fa9bd2459359410765f"
   },
   "local": {
     "notes": "",
@@ -93,7 +93,7 @@
     "firestoreExports": [
       {
         "id": "qYrYnMq3gYOUXQ2QzD4g",
-        "bio": "",
+        "bio": "Tegwens Zofe",
         "name": "Sioned Draenmelyn",
         "taxonomyPath": "",
         "role": "",
@@ -585,21 +585,49 @@
         "archived": false,
         "genealogy": {
           "sex": "unknown",
-          "familyRole": "",
-          "worldPersonId": "",
+          "familyRole": "core",
+          "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn",
           "death": "",
-          "houseId": "",
-          "portraitPlaceholder": "",
+          "houseId": "house-draenmelyn",
+          "portraitPlaceholder": "auto",
           "relationships": {
-            "parents": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Afan Draenmelyn",
+                "personId": "afan-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Elen",
+                "personId": "elen-spouse-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+              }
+            ],
             "partners": [],
             "children": []
           },
-          "birth": "",
-          "sources": [],
+          "birth": "1720",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-08-08T12:00:00.000Z",
+              "lastSyncedAt": "2026-08-08T12:00:00.000Z",
+              "personId": "sioned-draenmelyn",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn"
+            }
+          ],
           "tags": [],
-          "status": "",
-          "houseName": ""
+          "status": "alive",
+          "houseName": "Haus Draenmelyn"
         },
         "emotesOverride": true,
         "status": "",
@@ -610,7 +638,7 @@
         "playerOwner": "",
         "origin": "",
         "identity": {
-          "worldPersonId": ""
+          "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
         },
         "plotNode": "",
         "emotes": [
@@ -654,13 +682,53 @@
         "aliases": [],
         "profileLink": "",
         "title": "Zofe, Gwynthor",
-        "updatedAt": "2026-07-27T13:03:54.285Z"
+        "updatedAt": "2026-09-02T20:19:29.894Z",
+        "localRecord": {
+          "classification": {
+            "families": [
+              {
+                "familyId": "haus-draenmelyn",
+                "familyRole": "core",
+                "familyTitle": "Haus Draenmelyn",
+                "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+                "folderPath": [
+                  "Cenyr",
+                  "Celtigerns Wacht",
+                  "Llamreis Ankunft",
+                  "Gwynthor"
+                ],
+                "houseId": "house-draenmelyn",
+                "houseName": "Haus Draenmelyn",
+                "personId": "sioned-draenmelyn",
+                "score": 185,
+                "source": "project",
+                "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn",
+                "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+              }
+            ],
+            "familyStatus": "linked",
+            "groups": [],
+            "places": [],
+            "primary": {
+              "id": "haus-draenmelyn",
+              "kind": "family",
+              "label": "Haus Draenmelyn"
+            }
+          },
+          "contentHash": "b3e06ea93d5f74ec9c649b0c2fb8109494546ce5512782722c7969d163329589",
+          "firestoreDocumentIds": [
+            "qYrYnMq3gYOUXQ2QzD4g"
+          ],
+          "path": "records/familien/haus-draenmelyn/sioned-draenmelyn--qYrYnMq3gYOUXQ2QzD4g/character.json",
+          "recordId": "character--qYrYnMq3gYOUXQ2QzD4g",
+          "schemaVersion": 1
+        }
       }
     ]
   },
   "character": {
     "id": "qYrYnMq3gYOUXQ2QzD4g",
-    "bio": "",
+    "bio": "Tegwens Zofe",
     "name": "Sioned Draenmelyn",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "role": "",
@@ -1160,20 +1228,20 @@
       "relationships": {
         "parents": [
           {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Afan Draenmelyn",
             "personId": "afan-draenmelyn",
             "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn",
-            "name": "Afan Draenmelyn"
+            "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
           },
           {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Elen",
             "personId": "elen-spouse-draenmelyn",
             "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--family-tree--elen-spouse-draenmelyn",
-            "name": "Elen"
+            "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
           }
         ],
         "partners": [],
@@ -1183,13 +1251,13 @@
       "sources": [
         {
           "familyId": "haus-draenmelyn",
+          "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-08-08T12:00:00.000Z",
+          "lastSyncedAt": "2026-08-08T12:00:00.000Z",
           "personId": "sioned-draenmelyn",
-          "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-03T19:30:00.000Z",
-          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn",
-          "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}"
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn"
         }
       ],
       "tags": [],
@@ -1249,6 +1317,46 @@
     "aliases": [],
     "profileLink": "",
     "title": "Zofe, Gwynthor",
-    "updatedAt": "2026-07-27T13:03:54.285Z"
+    "updatedAt": "2026-09-02T20:19:29.894Z",
+    "localRecord": {
+      "classification": {
+        "families": [
+          {
+            "familyId": "haus-draenmelyn",
+            "familyRole": "core",
+            "familyTitle": "Haus Draenmelyn",
+            "fingerprint": "{\"name\":\"Sioned Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+            "folderPath": [
+              "Cenyr",
+              "Celtigerns Wacht",
+              "Llamreis Ankunft",
+              "Gwynthor"
+            ],
+            "houseId": "house-draenmelyn",
+            "houseName": "Haus Draenmelyn",
+            "personId": "sioned-draenmelyn",
+            "score": 185,
+            "source": "project",
+            "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=sioned-draenmelyn",
+            "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+          }
+        ],
+        "familyStatus": "linked",
+        "groups": [],
+        "places": [],
+        "primary": {
+          "id": "haus-draenmelyn",
+          "kind": "family",
+          "label": "Haus Draenmelyn"
+        }
+      },
+      "contentHash": "b3e06ea93d5f74ec9c649b0c2fb8109494546ce5512782722c7969d163329589",
+      "firestoreDocumentIds": [
+        "qYrYnMq3gYOUXQ2QzD4g"
+      ],
+      "path": "records/familien/haus-draenmelyn/sioned-draenmelyn--qYrYnMq3gYOUXQ2QzD4g/character.json",
+      "recordId": "character--qYrYnMq3gYOUXQ2QzD4g",
+      "schemaVersion": 1
+    }
   }
 }

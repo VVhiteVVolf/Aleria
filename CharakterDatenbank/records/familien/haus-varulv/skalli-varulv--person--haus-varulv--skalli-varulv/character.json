@@ -1,0 +1,309 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-varulv--skalli-varulv",
+  "slug": "skalli-varulv",
+  "identity": {
+    "name": "Skalli Varulv",
+    "aliases": [],
+    "worldPersonId": "person--haus-varulv--skalli-varulv"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-varulv",
+      "label": "Clan Varulv"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-varulv",
+        "familyTitle": "Clan Varulv",
+        "personId": "skalli-varulv",
+        "worldPersonId": "person--haus-varulv--skalli-varulv",
+        "houseId": "house-varulv",
+        "houseName": "Clan Varulv",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Rorikstal",
+          "Rorikshall"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=skalli-varulv",
+        "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\",\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"sleipnir-varulv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-varulv--sleipnir-varulv\",\"name\":\"Sleipnir Varulv\"},{\"personId\":\"svantje-skaal\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-skaal--svantje-skaal\",\"name\":\"Svantje Skaal\"}],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "skalli-varulv",
+        "worldPersonId": "person--haus-varulv--skalli-varulv",
+        "houseId": "house-varulv",
+        "houseName": "Haus Varulv",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=skalli-varulv",
+        "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}",
+        "score": 220
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-varulv--skalli-varulv",
+      "documentIds": [
+        "person--haus-varulv--skalli-varulv"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-varulv--skalli-varulv",
+          "createdAt": "2026-09-03T23:44:07.313Z",
+          "updatedAt": "2026-09-03T23:44:07.313Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-varulv",
+        "personId": "skalli-varulv",
+        "worldPersonId": "person--haus-varulv--skalli-varulv",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=skalli-varulv"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "skalli-varulv",
+        "worldPersonId": "person--haus-varulv--skalli-varulv",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=skalli-varulv"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:44:07.313Z",
+    "sourceDocumentIds": [
+      "person--haus-varulv--skalli-varulv"
+    ],
+    "contentHash": "6c439bc8859e3ab79f7f487e0e2b19e7e47c986fc7f6d73e7953568f1dbd8299"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:44:07.313Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Clan Varulv",
+        "genealogy": {
+          "birth": "1716",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-varulv",
+          "houseName": "Clan Varulv",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Sleipnir Varulv",
+                "personId": "sleipnir-varulv",
+                "type": "biological",
+                "worldPersonId": "person--haus-varulv--sleipnir-varulv"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Svantje Skaal",
+                "personId": "svantje-skaal",
+                "type": "biological",
+                "worldPersonId": "person--haus-skaal--svantje-skaal"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Anaraut Draig",
+                "personId": "anaraut-draig",
+                "status": "active",
+                "type": "engagement",
+                "worldPersonId": "person--haus-draig--anaraut-draig"
+              }
+            ]
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-varulv",
+              "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\",\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"sleipnir-varulv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-varulv--sleipnir-varulv\",\"name\":\"Sleipnir Varulv\"},{\"personId\":\"svantje-skaal\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-skaal--svantje-skaal\",\"name\":\"Svantje Skaal\"}],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:44:07.313Z",
+              "lastSyncedAt": "2026-09-03T23:44:07.313Z",
+              "personId": "skalli-varulv",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=skalli-varulv"
+            }
+          ],
+          "status": "alive",
+          "tags": [
+            "Wegverlobt",
+            "Wegverheiratet"
+          ],
+          "worldPersonId": "person--haus-varulv--skalli-varulv"
+        },
+        "id": "person--haus-varulv--skalli-varulv",
+        "identity": {
+          "worldPersonId": "person--haus-varulv--skalli-varulv"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Skalli Varulv",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Aldrimar > Roriksheim > Rorikstal > Rorikshall",
+        "title": "Wegverlobt an Haus Draig",
+        "updatedAt": "2026-09-03T23:44:07.313Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:44:07.313Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Clan Varulv",
+    "genealogy": {
+      "birth": "1716",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-varulv",
+      "houseName": "Clan Varulv",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Sleipnir Varulv",
+            "personId": "sleipnir-varulv",
+            "type": "biological",
+            "worldPersonId": "person--haus-varulv--sleipnir-varulv"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Svantje Skaal",
+            "personId": "svantje-skaal",
+            "type": "biological",
+            "worldPersonId": "person--haus-skaal--svantje-skaal"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Anaraut Draig",
+            "personId": "anaraut-draig",
+            "status": "active",
+            "type": "engagement",
+            "worldPersonId": "person--haus-draig--anaraut-draig"
+          }
+        ]
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-varulv",
+          "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\",\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"sleipnir-varulv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-varulv--sleipnir-varulv\",\"name\":\"Sleipnir Varulv\"},{\"personId\":\"svantje-skaal\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-skaal--svantje-skaal\",\"name\":\"Svantje Skaal\"}],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:44:07.313Z",
+          "lastSyncedAt": "2026-09-03T23:44:07.313Z",
+          "personId": "skalli-varulv",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=skalli-varulv"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "skalli-varulv",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=skalli-varulv",
+          "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "Wegverlobt",
+        "Wegverheiratet"
+      ],
+      "worldPersonId": "person--haus-varulv--skalli-varulv"
+    },
+    "id": "person--haus-varulv--skalli-varulv",
+    "identity": {
+      "worldPersonId": "person--haus-varulv--skalli-varulv"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Skalli Varulv",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Aldrimar > Roriksheim > Rorikstal > Rorikshall",
+    "title": "Wegverlobt an Haus Draig",
+    "updatedAt": "2026-09-03T23:44:07.313Z"
+  }
+}

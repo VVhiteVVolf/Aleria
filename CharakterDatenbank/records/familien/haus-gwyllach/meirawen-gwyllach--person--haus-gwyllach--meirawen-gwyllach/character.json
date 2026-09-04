@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gwyllach--meirawen-gwyllach",
+  "slug": "meirawen-gwyllach",
+  "identity": {
+    "name": "Meirawen Gwyllach",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwyllach",
+      "label": "Haus Gwyllach"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwyllach",
+        "familyTitle": "Haus Gwyllach",
+        "personId": "meirawen-gwyllach",
+        "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach",
+        "houseId": "house-gwyllach",
+        "houseName": "Haus Gwyllach",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach",
+        "fingerprint": "{\"name\":\"Meirawen Gwyllach\",\"title\":\"\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyllach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"efael-gwyllach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyllach--efael-gwyllach\",\"name\":\"Efael Gwyllach\"},{\"personId\":\"unknown-efael-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-efael-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gwyllach--meirawen-gwyllach",
+      "documentIds": [
+        "person--haus-gwyllach--meirawen-gwyllach"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gwyllach--meirawen-gwyllach",
+          "createdAt": "2026-09-02T20:38:59.612Z",
+          "updatedAt": "2026-09-02T20:38:59.612Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwyllach",
+        "personId": "meirawen-gwyllach",
+        "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-02T20:38:59.612Z",
+    "sourceDocumentIds": [
+      "person--haus-gwyllach--meirawen-gwyllach"
+    ],
+    "contentHash": "914ad4faaf0041d835abee3656d9f41eafdc4990318739830acbe8c7ef38d8cc"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-02T20:38:59.612Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Gwyllach",
+        "genealogy": {
+          "birth": "1705",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-gwyllach",
+          "houseName": "Haus Gwyllach",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Efael Gwyllach",
+                "personId": "efael-gwyllach",
+                "type": "biological",
+                "worldPersonId": "person--haus-gwyllach--efael-gwyllach"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Unbekannte Ehefrau",
+                "personId": "unknown-efael-spouse",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--unknown-efael-spouse"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-gwyllach",
+              "fingerprint": "{\"name\":\"Meirawen Gwyllach\",\"title\":\"\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyllach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"efael-gwyllach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyllach--efael-gwyllach\",\"name\":\"Efael Gwyllach\"},{\"personId\":\"unknown-efael-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-efael-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-02T20:38:59.612Z",
+              "lastSyncedAt": "2026-09-02T20:38:59.612Z",
+              "personId": "meirawen-gwyllach",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+        },
+        "id": "person--haus-gwyllach--meirawen-gwyllach",
+        "identity": {
+          "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Meirawen Gwyllach",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-02T20:38:59.612Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-02T20:38:59.612Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Gwyllach",
+    "genealogy": {
+      "birth": "1705",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-gwyllach",
+      "houseName": "Haus Gwyllach",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Efael Gwyllach",
+            "personId": "efael-gwyllach",
+            "type": "biological",
+            "worldPersonId": "person--haus-gwyllach--efael-gwyllach"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Unbekannte Ehefrau",
+            "personId": "unknown-efael-spouse",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--unknown-efael-spouse"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-gwyllach",
+          "fingerprint": "{\"name\":\"Meirawen Gwyllach\",\"title\":\"\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyllach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"efael-gwyllach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyllach--efael-gwyllach\",\"name\":\"Efael Gwyllach\"},{\"personId\":\"unknown-efael-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-efael-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-02T20:38:59.612Z",
+          "lastSyncedAt": "2026-09-02T20:38:59.612Z",
+          "personId": "meirawen-gwyllach",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+    },
+    "id": "person--haus-gwyllach--meirawen-gwyllach",
+    "identity": {
+      "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Meirawen Gwyllach",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-02T20:38:59.612Z"
+  }
+}

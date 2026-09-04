@@ -1,0 +1,1005 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--glendower-o-cenyr",
+  "slug": "glendower-o-cenyr",
+  "identity": {
+    "name": "Glendower O'Cenyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "glendower-o-cenyr",
+      "documentIds": [
+        "glendower-o-cenyr"
+      ],
+      "documents": [
+        {
+          "documentId": "glendower-o-cenyr",
+          "createdAt": "2026-09-04T00:44:57.519Z",
+          "updatedAt": "2026-09-04T01:34:35.943Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-04T01:34:35.943Z",
+    "sourceDocumentIds": [
+      "glendower-o-cenyr"
+    ],
+    "contentHash": "64a8acc2de5a643ef0cfe4f589c199d10c4d347cdf9d067404c53a6e46f87833"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "standard",
+        "aliases": [],
+        "archived": false,
+        "bio": "Glendower O'Cenyr ist ein siebenundzwanzigjähriger Paladin und geläuterter Bußritter im Stab des Patriarchen. Der ehemalige Bootsjunge kennt die Kreaturen der Küste wie kaum ein anderer und dient Nimue und Maelona mit stiller, beinahe strenger Hingabe.",
+        "biography": {
+          "biography": {
+            "abilities": [
+              {
+                "detail": "Glendower leugnet seine Tat nicht und sucht keine Entschuldigung. Aus der angenommenen Schuld ist ein ernsthafter Wille entstanden, weiteres Leid zu verhindern.",
+                "icon": "../IconOrdner/Traits Icon/Conscientious.png",
+                "title": "Geläutert"
+              },
+              {
+                "detail": "Jahre an gefährlichen Küsten haben ihn aufmerksam und schwer zu überraschen gemacht. Er schützt andere ruhig und ohne den Wunsch nach Ruhm.",
+                "icon": "../IconOrdner/Traits Icon/Defensive_leader.png",
+                "title": "Wachsam"
+              },
+              {
+                "detail": "Er hält sich weder durch Weihe noch Buße für besser als andere und begegnet selbst Verurteilten ohne selbstgerechte Überlegenheit.",
+                "icon": "../IconOrdner/Traits Icon/Humble.png",
+                "title": "Demütig"
+              },
+              {
+                "detail": "Glendowers Stimme und Gesicht bleiben meist monoton. Nähe entsteht langsam, und viele halten seine Ruhe fälschlich für Kälte.",
+                "icon": "../IconOrdner/Traits Icon/Brooding.png",
+                "title": "Verschlossen"
+              },
+              {
+                "detail": "Weil er sich selbst für einen großen Heuchler hält, zögert er oft, Fehlverhalten klar zu benennen – selbst wenn sein Urteil gebraucht würde.",
+                "icon": "../IconOrdner/Traits Icon/Paranoid.png",
+                "title": "Misstrauisch gegen das eigene Urteil"
+              },
+              {
+                "detail": "Gegenüber Bordellen und ihren Besuchern endet seine sonstige Milde. Dort kann seine Abscheu kalt, pauschal und unerbittlich werden.",
+                "icon": "../IconOrdner/Traits Icon/Wroth.png",
+                "title": "Unversöhnlich"
+              }
+            ],
+            "abilitiesTitle": "Charakter",
+            "biographyText": "Glendowers Mutter <strong>Eithne</strong> war eine Fischersmagd an der Ostküste von Gwynthors Bannkreis. Nachdem sie beim Baden von einem Unbekannten überfallen und geschändet worden war, wurde sie schwanger. Ihr Ehemann, der Fischer <strong>Arian Twyllod</strong>, hielt das Kind zunächst für sein eigenes. Erst nach Glendowers Geburt erzählte Eithne ihm, was geschehen war. Arian verließ sie im Zorn und geriet später selbst auf kriminelle Wege; seine Familie verstieß Eithne und zweifelte zum Teil sogar ihre Schilderung an. Da Glendowers leiblicher Vater unbekannt blieb, trägt er den Beinamen <strong>O'Cenyr</strong>.<br><br>Eithne lebte in den folgenden Jahren von kirchlicher Hilfe, Almosen und wechselnder Arbeit. Als Glendower fünf Jahre alt war, ließ sie ihn bei einer Kirche in Gwynthor zurück. Der Junge wartete lange und still vor der großen Kathedrale auf ihre Rückkehr. Dort wurde Patriarch <strong>Gwalchgwyn Saethwyr</strong> auf ihn aufmerksam. Als deutlich wurde, dass niemand mehr kommen würde, ließ der Patriarch Glendower in das Waisenheim von Gwynthor bringen.<br><br>Mit dreizehn verließ Glendower das Heim und heuerte als Bootsjunge auf einem Schiff an. Das Meer, die harte Arbeit und die rauen Männer an Bord wurden für einige Jahre sein Leben. Als die Mannschaft ihn später zum ersten Mal in ein Bordell drängte, erkannte er in der Frau, zu der man ihn geschickt hatte, seine Mutter – an einem Leberfleck an ihrem Oberschenkel, noch ehe es zum Vollzug kam. Der Schock schlug in blinde Wut um. Glendower erdrosselte Eithne; bei ihrer Gegenwehr kratzte sie ihm ein Auge aus. Als er begriff, was er getan hatte, floh er.",
+            "biographyTitle": "Biografie",
+            "connectionPortraitHeight": 68,
+            "connections": [
+              {
+                "detail": "",
+                "title": "Urteil & Buße",
+                "type": "heading"
+              },
+              {
+                "detail": "Patriarch · nahm ihn als Bußgänger auf und führte ihn zur Weihe",
+                "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                "imageFormat": "portrait",
+                "name": "Gwalchgwyn Saethwyr",
+                "type": "connection"
+              },
+              {
+                "detail": "Einer der Richter in Gwynthor",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Sir Meurig Draig",
+                "type": "connection"
+              },
+              {
+                "detail": "Einer der Richter in Gwynthor",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Odyar Draig",
+                "type": "connection"
+              },
+              {
+                "detail": "",
+                "title": "Heerschau",
+                "type": "heading"
+              },
+              {
+                "detail": "Als möglicher Paladin für dessen Gefolge vorgestellt",
+                "image": "https://i.imgur.com/RNqIIO0.png",
+                "imageFormat": "portrait",
+                "name": "Idwal Draig",
+                "type": "connection"
+              }
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connectionTextOffset": 0,
+            "documents": [],
+            "documentsTitle": "Zeichen & Besitz",
+            "extraSections": [
+              {
+                "mode": "text",
+                "position": "afterIntro",
+                "text": "Bei <strong>Nimue</strong>, der Dame der See, und <strong>Maelona</strong>, der Göttin der Barmherzigkeit und Liebe, fand Glendower Halt. Er hat seine Schuld weder vergessen noch verdrängt, aber er hat aufgehört, sie als Vorwand für Selbstzerstörung zu benutzen. Seit einigen Jahren gilt er als geläutert und lebt nicht mehr als der Junge, der floh, sondern als der Mann, der Verantwortung übernommen hat. Mit Nimue spricht und denkt er häufig, als stünde sie unmittelbar neben ihm – besonders, wenn Wasser in Hörweite ist.",
+                "title": "Buße & Glaube"
+              }
+            ],
+            "footer": "Personenakte · Glendower O'Cenyr",
+            "historyText": "Glendower wurde gefasst und in Gwynthor vor <strong>Sir Meurig Draig</strong>, <strong>Odyar Draig</strong> und Patriarch <strong>Gwalchgwyn Saethwyr</strong> gerichtet. Gwalchgwyn erkannte in dem siebzehnjährigen Angeklagten den Jungen wieder, der zwölf Jahre zuvor vor der Kathedrale auf seine Mutter gewartet hatte. Nachdem die Richter seine Geschichte gehört hatten, bat der Patriarch darum, ihn als Bußgänger in den eigenen Dienst zu nehmen.<br><br>Zehn Jahre lang diente Glendower im engeren Kreis des Patriarchen. Ein wesentlicher Teil seiner Buße bestand darin, die Küsten Gwynthors gegen Sirenen, räuberische Meereswesen und andere Gefahren zu verteidigen. Aus dem Bootsjungen wurde zunächst ein Küstenwächter, dann ein kirchlich gesalbter Ritter und schließlich einer der Paladine im Stab des Patriarchen. Sein Ritterstand stammt aus der Kirche, nicht aus dem Adel.<br><br>Als Gwalchgwyn um einen Kleriker oder Paladin für Idwals Truppe gebeten wurde, kam auch Glendower in Betracht. Er ist kein angenehmer Gesellschafter und kein strahlender Held. Dafür kennt er Schuld, Versuchung und die lange Arbeit, die zwischen einem Verbrechen und einem veränderten Leben liegt.",
+            "historyTitle": "Urteil und zehn Jahre Buße",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "quotes": [
+              "„Das ist eine Sirene. Eine Meerjungfrau hätte uns längst bemerkt.“",
+              "„Reue ist kein Gefühl. Sie ist Arbeit.“",
+              "„Ich habe nicht gesagt, dass ich Euch verurteile.“"
+            ],
+            "quotesTitle": "Typische Worte",
+            "sideWidth": 100,
+            "trivia": [
+              "Spricht mit Nimue, als befände sie sich direkt neben ihm. Am Meer wendet er beim Antworten manchmal den Kopf zu einer leeren Stelle.",
+              "Setzt sich in Schankräumen nach Möglichkeit so, dass eine Wand seine blinde Seite deckt und er Tür und Fenster im Blick behalten kann.",
+              "Isst am liebsten Fisch mit Kräutern und Gemüse. Schwein und Rind nimmt er nur, wenn es nichts anderes gibt, und ohne sichtbare Freude.",
+              "Erdbeeren sind seine liebste Speise. Ein gut gefülltes Schälchen ist eine der wenigen verlässlichen Möglichkeiten, ihm ein fast unmerkliches Lächeln zu entlocken.",
+              "Knüpft beim Nachdenken alte Seemannsknoten in ein kurzes Stück Tau und löst sie anschließend wieder.",
+              "Meidet Bordelle selbst dann, wenn der Umweg beträchtlich ist. Männern, die offen mit einem Besuch prahlen, begegnet er für lange Zeit nur noch mit eisiger Förmlichkeit.",
+              "Redet durchaus, aber fast nur, wenn etwas von Bedeutung zu sagen ist. Seine monotone Stimme macht selbst Warnungen und seltene Scherze schwer voneinander unterscheidbar.",
+              "Ihn lachen zu sehen ist selten; ein kurzes, raues Ausatmen gilt bei engen Vertrauten bereits als großer Erfolg."
+            ],
+            "triviaTitle": "Marotten & Eigenheiten",
+            "works": [
+              "Kirchliche Weihe · Spricht Schutzsegen, Banngebete und Gebete um Heilung und Barmherzigkeit.",
+              "Kampf · Erfahrener Kämpfer in schwerer Rüstung; bevorzugt Streitkolben und eine kontrollierte, kraftvolle Nahkampfführung.",
+              "Küstenverteidigung · Hat jahrelang Dörfer, Häfen und Fahrwasser im Bannkreis Gwynthors gegen Wesen des Meeres geschützt.",
+              "Meereskreaturen · Kennt Verhalten, Spuren und Schwächen vieler Küsten- und Tiefseewesen.",
+              "Sirenenkunde · Kann Sirenen zuverlässig von Meerjungfrauen unterscheiden und weiß, wie unterschiedlich beide angesprochen oder bekämpft werden müssen.",
+              "Seemannschaft · Beherrscht Knoten, Decksarbeit, Gezeitenbeobachtung und die Grundabläufe auf kleineren Schiffen.",
+              "Kampf mit einem Auge · Gleicht das eingeschränkte Sichtfeld durch bedachte Stellung, kurze Drehungen und konsequente Sicherung seiner blinden Seite aus."
+            ],
+            "worksTitle": "Können & Fachgebiete"
+          },
+          "quote": "Ich richte nicht über Euch. Ich weiß nur, wohin manche Türen führen.",
+          "quoteBy": "— Glendower O'Cenyr",
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Glendower O'Cenyr"
+            },
+            {
+              "label": "Beiname",
+              "value": "O'Cenyr · leiblicher Vater unbekannt"
+            },
+            {
+              "label": "Geboren",
+              "value": "1713"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "27 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Ostküste von Gwynthors Bannkreis"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Männlich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Ledig"
+            },
+            {
+              "label": "Mutter",
+              "value": "Eithne · Fischersmagd"
+            },
+            {
+              "label": "Sozialer Vater",
+              "value": "Arian Twyllod · Fischer"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": "Paladin · gesalbter Ritter der Kirche"
+            },
+            {
+              "label": "Amt",
+              "value": "Bußritter im Stab des Patriarchen"
+            },
+            {
+              "label": "Gottheiten",
+              "value": "Nimue, die Dame der See · Maelona, die Mutter"
+            },
+            {
+              "label": "Wirkungsort",
+              "value": "Gwynthor und die Küsten seines Bannkreises"
+            }
+          ]
+        },
+        "createdAt": "2026-09-04T00:44:57.519Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/e87v30F.png",
+            "label": "e87v30F"
+          },
+          {
+            "img": "https://i.imgur.com/ZTA1BDY.png",
+            "label": "ZTA1BDY"
+          },
+          {
+            "img": "https://i.imgur.com/zX5WXgy.png",
+            "label": "zX5WXgy"
+          },
+          {
+            "img": "https://i.imgur.com/a5kBQU0.png",
+            "label": "a5kBQU0"
+          },
+          {
+            "img": "https://i.imgur.com/N2E8Xh6.png",
+            "label": "N2E8Xh6"
+          },
+          {
+            "img": "https://i.imgur.com/qlauwRK.png",
+            "label": "qlauwRK"
+          },
+          {
+            "img": "https://i.imgur.com/DJTf4Zn.png",
+            "label": "DJTf4Zn"
+          },
+          {
+            "img": "https://i.imgur.com/YE3vW3x.png",
+            "label": "YE3vW3x"
+          },
+          {
+            "img": "https://i.imgur.com/zO8HlWp.png",
+            "label": "zO8HlWp"
+          },
+          {
+            "img": "https://i.imgur.com/KhGZXj9.png",
+            "label": "KhGZXj9"
+          },
+          {
+            "img": "https://i.imgur.com/5FgXNQP.png",
+            "label": "5FgXNQP"
+          },
+          {
+            "img": "https://i.imgur.com/M3aaxx9.png",
+            "label": "M3aaxx9"
+          },
+          {
+            "img": "https://i.imgur.com/18nzvuE.png",
+            "label": "18nzvuE"
+          },
+          {
+            "img": "https://i.imgur.com/gbB7dTr.png",
+            "label": "gbB7dTr"
+          },
+          {
+            "img": "https://i.imgur.com/tjYdEUi.png",
+            "label": "tjYdEUi"
+          },
+          {
+            "img": "https://i.imgur.com/8yJAhs6.png",
+            "label": "8yJAhs6"
+          },
+          {
+            "img": "https://i.imgur.com/I3nvzzB.png",
+            "label": "I3nvzzB"
+          },
+          {
+            "img": "https://i.imgur.com/fFgpCex.png",
+            "label": "fFgpCex"
+          },
+          {
+            "img": "https://i.imgur.com/BQc95Jm.png",
+            "label": "BQc95Jm"
+          },
+          {
+            "img": "https://i.imgur.com/cQF3jkO.png",
+            "label": "cQF3jkO"
+          },
+          {
+            "img": "https://i.imgur.com/F5J1yci.png",
+            "label": "F5J1yci"
+          },
+          {
+            "img": "https://i.imgur.com/7jbL1is.png",
+            "label": "7jbL1is"
+          },
+          {
+            "img": "https://i.imgur.com/v14rvGj.png",
+            "label": "v14rvGj"
+          },
+          {
+            "img": "https://i.imgur.com/5G0Ke2y.png",
+            "label": "5G0Ke2y"
+          },
+          {
+            "img": "https://i.imgur.com/kVFgYYc.png",
+            "label": "kVFgYYc"
+          },
+          {
+            "img": "https://i.imgur.com/KvxH76a.png",
+            "label": "KvxH76a"
+          },
+          {
+            "img": "https://i.imgur.com/d1mVTjX.png",
+            "label": "d1mVTjX"
+          }
+        ],
+        "emotesOverride": true,
+        "fraktion": "Patriarchat von Gwynthor",
+        "genealogy": {
+          "birth": "1713",
+          "death": "",
+          "familyRole": "",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [],
+          "status": "alive",
+          "tags": [
+            "O'Cenyr",
+            "Waise",
+            "Paladin",
+            "Bußgänger",
+            "Kirchenritter"
+          ],
+          "worldPersonId": ""
+        },
+        "id": "glendower-o-cenyr",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-09-04T00:44:57.519Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/e87v30F.png",
+                "label": "e87v30F"
+              },
+              {
+                "img": "https://i.imgur.com/ZTA1BDY.png",
+                "label": "ZTA1BDY"
+              },
+              {
+                "img": "https://i.imgur.com/zX5WXgy.png",
+                "label": "zX5WXgy"
+              },
+              {
+                "img": "https://i.imgur.com/a5kBQU0.png",
+                "label": "a5kBQU0"
+              },
+              {
+                "img": "https://i.imgur.com/N2E8Xh6.png",
+                "label": "N2E8Xh6"
+              },
+              {
+                "img": "https://i.imgur.com/qlauwRK.png",
+                "label": "qlauwRK"
+              },
+              {
+                "img": "https://i.imgur.com/DJTf4Zn.png",
+                "label": "DJTf4Zn"
+              },
+              {
+                "img": "https://i.imgur.com/YE3vW3x.png",
+                "label": "YE3vW3x"
+              },
+              {
+                "img": "https://i.imgur.com/zO8HlWp.png",
+                "label": "zO8HlWp"
+              },
+              {
+                "img": "https://i.imgur.com/KhGZXj9.png",
+                "label": "KhGZXj9"
+              },
+              {
+                "img": "https://i.imgur.com/5FgXNQP.png",
+                "label": "5FgXNQP"
+              },
+              {
+                "img": "https://i.imgur.com/M3aaxx9.png",
+                "label": "M3aaxx9"
+              },
+              {
+                "img": "https://i.imgur.com/18nzvuE.png",
+                "label": "18nzvuE"
+              },
+              {
+                "img": "https://i.imgur.com/gbB7dTr.png",
+                "label": "gbB7dTr"
+              },
+              {
+                "img": "https://i.imgur.com/tjYdEUi.png",
+                "label": "tjYdEUi"
+              },
+              {
+                "img": "https://i.imgur.com/8yJAhs6.png",
+                "label": "8yJAhs6"
+              },
+              {
+                "img": "https://i.imgur.com/I3nvzzB.png",
+                "label": "I3nvzzB"
+              },
+              {
+                "img": "https://i.imgur.com/fFgpCex.png",
+                "label": "fFgpCex"
+              },
+              {
+                "img": "https://i.imgur.com/BQc95Jm.png",
+                "label": "BQc95Jm"
+              },
+              {
+                "img": "https://i.imgur.com/cQF3jkO.png",
+                "label": "cQF3jkO"
+              },
+              {
+                "img": "https://i.imgur.com/F5J1yci.png",
+                "label": "F5J1yci"
+              },
+              {
+                "img": "https://i.imgur.com/7jbL1is.png",
+                "label": "7jbL1is"
+              },
+              {
+                "img": "https://i.imgur.com/v14rvGj.png",
+                "label": "v14rvGj"
+              },
+              {
+                "img": "https://i.imgur.com/5G0Ke2y.png",
+                "label": "5G0Ke2y"
+              },
+              {
+                "img": "https://i.imgur.com/kVFgYYc.png",
+                "label": "kVFgYYc"
+              },
+              {
+                "img": "https://i.imgur.com/KvxH76a.png",
+                "label": "KvxH76a"
+              },
+              {
+                "img": "https://i.imgur.com/d1mVTjX.png",
+                "label": "d1mVTjX"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/vSRYHg1.png",
+            "updatedAt": "2026-09-04T00:44:57.519Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "inventory": null,
+        "name": "Glendower O'Cenyr",
+        "origin": "Ostküste von Gwynthors Bannkreis",
+        "playerOwner": "",
+        "plotNode": "Anarauts Heerschau",
+        "portrait": "https://i.imgur.com/vSRYHg1.png",
+        "profileLink": "",
+        "relevance": "supporting",
+        "role": "Kirchlich gesalbter Ritter · Paladin und Küstenwächter",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Paladin und Bußritter im Stab des Patriarchen",
+        "updatedAt": "2026-09-04T01:34:35.943Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "standard",
+    "aliases": [],
+    "archived": false,
+    "bio": "Glendower O'Cenyr ist ein siebenundzwanzigjähriger Paladin und geläuterter Bußritter im Stab des Patriarchen. Der ehemalige Bootsjunge kennt die Kreaturen der Küste wie kaum ein anderer und dient Nimue und Maelona mit stiller, beinahe strenger Hingabe.",
+    "biography": {
+      "biography": {
+        "abilities": [
+          {
+            "detail": "Glendower leugnet seine Tat nicht und sucht keine Entschuldigung. Aus der angenommenen Schuld ist ein ernsthafter Wille entstanden, weiteres Leid zu verhindern.",
+            "icon": "../IconOrdner/Traits Icon/Conscientious.png",
+            "title": "Geläutert"
+          },
+          {
+            "detail": "Jahre an gefährlichen Küsten haben ihn aufmerksam und schwer zu überraschen gemacht. Er schützt andere ruhig und ohne den Wunsch nach Ruhm.",
+            "icon": "../IconOrdner/Traits Icon/Defensive_leader.png",
+            "title": "Wachsam"
+          },
+          {
+            "detail": "Er hält sich weder durch Weihe noch Buße für besser als andere und begegnet selbst Verurteilten ohne selbstgerechte Überlegenheit.",
+            "icon": "../IconOrdner/Traits Icon/Humble.png",
+            "title": "Demütig"
+          },
+          {
+            "detail": "Glendowers Stimme und Gesicht bleiben meist monoton. Nähe entsteht langsam, und viele halten seine Ruhe fälschlich für Kälte.",
+            "icon": "../IconOrdner/Traits Icon/Brooding.png",
+            "title": "Verschlossen"
+          },
+          {
+            "detail": "Weil er sich selbst für einen großen Heuchler hält, zögert er oft, Fehlverhalten klar zu benennen – selbst wenn sein Urteil gebraucht würde.",
+            "icon": "../IconOrdner/Traits Icon/Paranoid.png",
+            "title": "Misstrauisch gegen das eigene Urteil"
+          },
+          {
+            "detail": "Gegenüber Bordellen und ihren Besuchern endet seine sonstige Milde. Dort kann seine Abscheu kalt, pauschal und unerbittlich werden.",
+            "icon": "../IconOrdner/Traits Icon/Wroth.png",
+            "title": "Unversöhnlich"
+          }
+        ],
+        "abilitiesTitle": "Charakter",
+        "biographyText": "Glendowers Mutter <strong>Eithne</strong> war eine Fischersmagd an der Ostküste von Gwynthors Bannkreis. Nachdem sie beim Baden von einem Unbekannten überfallen und geschändet worden war, wurde sie schwanger. Ihr Ehemann, der Fischer <strong>Arian Twyllod</strong>, hielt das Kind zunächst für sein eigenes. Erst nach Glendowers Geburt erzählte Eithne ihm, was geschehen war. Arian verließ sie im Zorn und geriet später selbst auf kriminelle Wege; seine Familie verstieß Eithne und zweifelte zum Teil sogar ihre Schilderung an. Da Glendowers leiblicher Vater unbekannt blieb, trägt er den Beinamen <strong>O'Cenyr</strong>.<br><br>Eithne lebte in den folgenden Jahren von kirchlicher Hilfe, Almosen und wechselnder Arbeit. Als Glendower fünf Jahre alt war, ließ sie ihn bei einer Kirche in Gwynthor zurück. Der Junge wartete lange und still vor der großen Kathedrale auf ihre Rückkehr. Dort wurde Patriarch <strong>Gwalchgwyn Saethwyr</strong> auf ihn aufmerksam. Als deutlich wurde, dass niemand mehr kommen würde, ließ der Patriarch Glendower in das Waisenheim von Gwynthor bringen.<br><br>Mit dreizehn verließ Glendower das Heim und heuerte als Bootsjunge auf einem Schiff an. Das Meer, die harte Arbeit und die rauen Männer an Bord wurden für einige Jahre sein Leben. Als die Mannschaft ihn später zum ersten Mal in ein Bordell drängte, erkannte er in der Frau, zu der man ihn geschickt hatte, seine Mutter – an einem Leberfleck an ihrem Oberschenkel, noch ehe es zum Vollzug kam. Der Schock schlug in blinde Wut um. Glendower erdrosselte Eithne; bei ihrer Gegenwehr kratzte sie ihm ein Auge aus. Als er begriff, was er getan hatte, floh er.",
+        "biographyTitle": "Biografie",
+        "connectionPortraitHeight": 68,
+        "connections": [
+          {
+            "detail": "",
+            "title": "Urteil & Buße",
+            "type": "heading"
+          },
+          {
+            "detail": "Patriarch · nahm ihn als Bußgänger auf und führte ihn zur Weihe",
+            "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+            "imageFormat": "portrait",
+            "name": "Gwalchgwyn Saethwyr",
+            "type": "connection"
+          },
+          {
+            "detail": "Einer der Richter in Gwynthor",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Sir Meurig Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "Einer der Richter in Gwynthor",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Odyar Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "",
+            "title": "Heerschau",
+            "type": "heading"
+          },
+          {
+            "detail": "Als möglicher Paladin für dessen Gefolge vorgestellt",
+            "image": "https://i.imgur.com/RNqIIO0.png",
+            "imageFormat": "portrait",
+            "name": "Idwal Draig",
+            "type": "connection"
+          }
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connectionTextOffset": 0,
+        "documents": [],
+        "documentsTitle": "Zeichen & Besitz",
+        "extraSections": [
+          {
+            "mode": "text",
+            "position": "afterIntro",
+            "text": "Bei <strong>Nimue</strong>, der Dame der See, und <strong>Maelona</strong>, der Göttin der Barmherzigkeit und Liebe, fand Glendower Halt. Er hat seine Schuld weder vergessen noch verdrängt, aber er hat aufgehört, sie als Vorwand für Selbstzerstörung zu benutzen. Seit einigen Jahren gilt er als geläutert und lebt nicht mehr als der Junge, der floh, sondern als der Mann, der Verantwortung übernommen hat. Mit Nimue spricht und denkt er häufig, als stünde sie unmittelbar neben ihm – besonders, wenn Wasser in Hörweite ist.",
+            "title": "Buße & Glaube"
+          }
+        ],
+        "footer": "Personenakte · Glendower O'Cenyr",
+        "historyText": "Glendower wurde gefasst und in Gwynthor vor <strong>Sir Meurig Draig</strong>, <strong>Odyar Draig</strong> und Patriarch <strong>Gwalchgwyn Saethwyr</strong> gerichtet. Gwalchgwyn erkannte in dem siebzehnjährigen Angeklagten den Jungen wieder, der zwölf Jahre zuvor vor der Kathedrale auf seine Mutter gewartet hatte. Nachdem die Richter seine Geschichte gehört hatten, bat der Patriarch darum, ihn als Bußgänger in den eigenen Dienst zu nehmen.<br><br>Zehn Jahre lang diente Glendower im engeren Kreis des Patriarchen. Ein wesentlicher Teil seiner Buße bestand darin, die Küsten Gwynthors gegen Sirenen, räuberische Meereswesen und andere Gefahren zu verteidigen. Aus dem Bootsjungen wurde zunächst ein Küstenwächter, dann ein kirchlich gesalbter Ritter und schließlich einer der Paladine im Stab des Patriarchen. Sein Ritterstand stammt aus der Kirche, nicht aus dem Adel.<br><br>Als Gwalchgwyn um einen Kleriker oder Paladin für Idwals Truppe gebeten wurde, kam auch Glendower in Betracht. Er ist kein angenehmer Gesellschafter und kein strahlender Held. Dafür kennt er Schuld, Versuchung und die lange Arbeit, die zwischen einem Verbrechen und einem veränderten Leben liegt.",
+        "historyTitle": "Urteil und zehn Jahre Buße",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [
+          "„Das ist eine Sirene. Eine Meerjungfrau hätte uns längst bemerkt.“",
+          "„Reue ist kein Gefühl. Sie ist Arbeit.“",
+          "„Ich habe nicht gesagt, dass ich Euch verurteile.“"
+        ],
+        "quotesTitle": "Typische Worte",
+        "sideWidth": 100,
+        "trivia": [
+          "Spricht mit Nimue, als befände sie sich direkt neben ihm. Am Meer wendet er beim Antworten manchmal den Kopf zu einer leeren Stelle.",
+          "Setzt sich in Schankräumen nach Möglichkeit so, dass eine Wand seine blinde Seite deckt und er Tür und Fenster im Blick behalten kann.",
+          "Isst am liebsten Fisch mit Kräutern und Gemüse. Schwein und Rind nimmt er nur, wenn es nichts anderes gibt, und ohne sichtbare Freude.",
+          "Erdbeeren sind seine liebste Speise. Ein gut gefülltes Schälchen ist eine der wenigen verlässlichen Möglichkeiten, ihm ein fast unmerkliches Lächeln zu entlocken.",
+          "Knüpft beim Nachdenken alte Seemannsknoten in ein kurzes Stück Tau und löst sie anschließend wieder.",
+          "Meidet Bordelle selbst dann, wenn der Umweg beträchtlich ist. Männern, die offen mit einem Besuch prahlen, begegnet er für lange Zeit nur noch mit eisiger Förmlichkeit.",
+          "Redet durchaus, aber fast nur, wenn etwas von Bedeutung zu sagen ist. Seine monotone Stimme macht selbst Warnungen und seltene Scherze schwer voneinander unterscheidbar.",
+          "Ihn lachen zu sehen ist selten; ein kurzes, raues Ausatmen gilt bei engen Vertrauten bereits als großer Erfolg."
+        ],
+        "triviaTitle": "Marotten & Eigenheiten",
+        "works": [
+          "Kirchliche Weihe · Spricht Schutzsegen, Banngebete und Gebete um Heilung und Barmherzigkeit.",
+          "Kampf · Erfahrener Kämpfer in schwerer Rüstung; bevorzugt Streitkolben und eine kontrollierte, kraftvolle Nahkampfführung.",
+          "Küstenverteidigung · Hat jahrelang Dörfer, Häfen und Fahrwasser im Bannkreis Gwynthors gegen Wesen des Meeres geschützt.",
+          "Meereskreaturen · Kennt Verhalten, Spuren und Schwächen vieler Küsten- und Tiefseewesen.",
+          "Sirenenkunde · Kann Sirenen zuverlässig von Meerjungfrauen unterscheiden und weiß, wie unterschiedlich beide angesprochen oder bekämpft werden müssen.",
+          "Seemannschaft · Beherrscht Knoten, Decksarbeit, Gezeitenbeobachtung und die Grundabläufe auf kleineren Schiffen.",
+          "Kampf mit einem Auge · Gleicht das eingeschränkte Sichtfeld durch bedachte Stellung, kurze Drehungen und konsequente Sicherung seiner blinden Seite aus."
+        ],
+        "worksTitle": "Können & Fachgebiete"
+      },
+      "quote": "Ich richte nicht über Euch. Ich weiß nur, wohin manche Türen führen.",
+      "quoteBy": "— Glendower O'Cenyr",
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Glendower O'Cenyr"
+        },
+        {
+          "label": "Beiname",
+          "value": "O'Cenyr · leiblicher Vater unbekannt"
+        },
+        {
+          "label": "Geboren",
+          "value": "1713"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "27 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Ostküste von Gwynthors Bannkreis"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Ledig"
+        },
+        {
+          "label": "Mutter",
+          "value": "Eithne · Fischersmagd"
+        },
+        {
+          "label": "Sozialer Vater",
+          "value": "Arian Twyllod · Fischer"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Paladin · gesalbter Ritter der Kirche"
+        },
+        {
+          "label": "Amt",
+          "value": "Bußritter im Stab des Patriarchen"
+        },
+        {
+          "label": "Gottheiten",
+          "value": "Nimue, die Dame der See · Maelona, die Mutter"
+        },
+        {
+          "label": "Wirkungsort",
+          "value": "Gwynthor und die Küsten seines Bannkreises"
+        }
+      ]
+    },
+    "createdAt": "2026-09-04T00:44:57.519Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/e87v30F.png",
+        "label": "e87v30F"
+      },
+      {
+        "img": "https://i.imgur.com/ZTA1BDY.png",
+        "label": "ZTA1BDY"
+      },
+      {
+        "img": "https://i.imgur.com/zX5WXgy.png",
+        "label": "zX5WXgy"
+      },
+      {
+        "img": "https://i.imgur.com/a5kBQU0.png",
+        "label": "a5kBQU0"
+      },
+      {
+        "img": "https://i.imgur.com/N2E8Xh6.png",
+        "label": "N2E8Xh6"
+      },
+      {
+        "img": "https://i.imgur.com/qlauwRK.png",
+        "label": "qlauwRK"
+      },
+      {
+        "img": "https://i.imgur.com/DJTf4Zn.png",
+        "label": "DJTf4Zn"
+      },
+      {
+        "img": "https://i.imgur.com/YE3vW3x.png",
+        "label": "YE3vW3x"
+      },
+      {
+        "img": "https://i.imgur.com/zO8HlWp.png",
+        "label": "zO8HlWp"
+      },
+      {
+        "img": "https://i.imgur.com/KhGZXj9.png",
+        "label": "KhGZXj9"
+      },
+      {
+        "img": "https://i.imgur.com/5FgXNQP.png",
+        "label": "5FgXNQP"
+      },
+      {
+        "img": "https://i.imgur.com/M3aaxx9.png",
+        "label": "M3aaxx9"
+      },
+      {
+        "img": "https://i.imgur.com/18nzvuE.png",
+        "label": "18nzvuE"
+      },
+      {
+        "img": "https://i.imgur.com/gbB7dTr.png",
+        "label": "gbB7dTr"
+      },
+      {
+        "img": "https://i.imgur.com/tjYdEUi.png",
+        "label": "tjYdEUi"
+      },
+      {
+        "img": "https://i.imgur.com/8yJAhs6.png",
+        "label": "8yJAhs6"
+      },
+      {
+        "img": "https://i.imgur.com/I3nvzzB.png",
+        "label": "I3nvzzB"
+      },
+      {
+        "img": "https://i.imgur.com/fFgpCex.png",
+        "label": "fFgpCex"
+      },
+      {
+        "img": "https://i.imgur.com/BQc95Jm.png",
+        "label": "BQc95Jm"
+      },
+      {
+        "img": "https://i.imgur.com/cQF3jkO.png",
+        "label": "cQF3jkO"
+      },
+      {
+        "img": "https://i.imgur.com/F5J1yci.png",
+        "label": "F5J1yci"
+      },
+      {
+        "img": "https://i.imgur.com/7jbL1is.png",
+        "label": "7jbL1is"
+      },
+      {
+        "img": "https://i.imgur.com/v14rvGj.png",
+        "label": "v14rvGj"
+      },
+      {
+        "img": "https://i.imgur.com/5G0Ke2y.png",
+        "label": "5G0Ke2y"
+      },
+      {
+        "img": "https://i.imgur.com/kVFgYYc.png",
+        "label": "kVFgYYc"
+      },
+      {
+        "img": "https://i.imgur.com/KvxH76a.png",
+        "label": "KvxH76a"
+      },
+      {
+        "img": "https://i.imgur.com/d1mVTjX.png",
+        "label": "d1mVTjX"
+      }
+    ],
+    "emotesOverride": true,
+    "fraktion": "Patriarchat von Gwynthor",
+    "genealogy": {
+      "birth": "1713",
+      "death": "",
+      "familyRole": "",
+      "houseId": "",
+      "houseName": "",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [],
+      "status": "alive",
+      "tags": [
+        "O'Cenyr",
+        "Waise",
+        "Paladin",
+        "Bußgänger",
+        "Kirchenritter"
+      ],
+      "worldPersonId": ""
+    },
+    "id": "glendower-o-cenyr",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "imageSets": [
+      {
+        "createdAt": "2026-09-04T00:44:57.519Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/e87v30F.png",
+            "label": "e87v30F"
+          },
+          {
+            "img": "https://i.imgur.com/ZTA1BDY.png",
+            "label": "ZTA1BDY"
+          },
+          {
+            "img": "https://i.imgur.com/zX5WXgy.png",
+            "label": "zX5WXgy"
+          },
+          {
+            "img": "https://i.imgur.com/a5kBQU0.png",
+            "label": "a5kBQU0"
+          },
+          {
+            "img": "https://i.imgur.com/N2E8Xh6.png",
+            "label": "N2E8Xh6"
+          },
+          {
+            "img": "https://i.imgur.com/qlauwRK.png",
+            "label": "qlauwRK"
+          },
+          {
+            "img": "https://i.imgur.com/DJTf4Zn.png",
+            "label": "DJTf4Zn"
+          },
+          {
+            "img": "https://i.imgur.com/YE3vW3x.png",
+            "label": "YE3vW3x"
+          },
+          {
+            "img": "https://i.imgur.com/zO8HlWp.png",
+            "label": "zO8HlWp"
+          },
+          {
+            "img": "https://i.imgur.com/KhGZXj9.png",
+            "label": "KhGZXj9"
+          },
+          {
+            "img": "https://i.imgur.com/5FgXNQP.png",
+            "label": "5FgXNQP"
+          },
+          {
+            "img": "https://i.imgur.com/M3aaxx9.png",
+            "label": "M3aaxx9"
+          },
+          {
+            "img": "https://i.imgur.com/18nzvuE.png",
+            "label": "18nzvuE"
+          },
+          {
+            "img": "https://i.imgur.com/gbB7dTr.png",
+            "label": "gbB7dTr"
+          },
+          {
+            "img": "https://i.imgur.com/tjYdEUi.png",
+            "label": "tjYdEUi"
+          },
+          {
+            "img": "https://i.imgur.com/8yJAhs6.png",
+            "label": "8yJAhs6"
+          },
+          {
+            "img": "https://i.imgur.com/I3nvzzB.png",
+            "label": "I3nvzzB"
+          },
+          {
+            "img": "https://i.imgur.com/fFgpCex.png",
+            "label": "fFgpCex"
+          },
+          {
+            "img": "https://i.imgur.com/BQc95Jm.png",
+            "label": "BQc95Jm"
+          },
+          {
+            "img": "https://i.imgur.com/cQF3jkO.png",
+            "label": "cQF3jkO"
+          },
+          {
+            "img": "https://i.imgur.com/F5J1yci.png",
+            "label": "F5J1yci"
+          },
+          {
+            "img": "https://i.imgur.com/7jbL1is.png",
+            "label": "7jbL1is"
+          },
+          {
+            "img": "https://i.imgur.com/v14rvGj.png",
+            "label": "v14rvGj"
+          },
+          {
+            "img": "https://i.imgur.com/5G0Ke2y.png",
+            "label": "5G0Ke2y"
+          },
+          {
+            "img": "https://i.imgur.com/kVFgYYc.png",
+            "label": "kVFgYYc"
+          },
+          {
+            "img": "https://i.imgur.com/KvxH76a.png",
+            "label": "KvxH76a"
+          },
+          {
+            "img": "https://i.imgur.com/d1mVTjX.png",
+            "label": "d1mVTjX"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/vSRYHg1.png",
+        "updatedAt": "2026-09-04T00:44:57.519Z"
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "inventory": null,
+    "name": "Glendower O'Cenyr",
+    "origin": "Ostküste von Gwynthors Bannkreis",
+    "playerOwner": "",
+    "plotNode": "Anarauts Heerschau",
+    "portrait": "https://i.imgur.com/vSRYHg1.png",
+    "profileLink": "",
+    "relevance": "supporting",
+    "role": "Kirchlich gesalbter Ritter · Paladin und Küstenwächter",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Paladin und Bußritter im Stab des Patriarchen",
+    "updatedAt": "2026-09-04T01:34:35.943Z"
+  }
+}

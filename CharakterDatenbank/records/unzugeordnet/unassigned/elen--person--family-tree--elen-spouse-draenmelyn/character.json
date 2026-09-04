@@ -1,0 +1,257 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--family-tree--elen-spouse-draenmelyn",
+  "slug": "elen",
+  "identity": {
+    "name": "Elen",
+    "aliases": [],
+    "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--family-tree--elen-spouse-draenmelyn",
+      "documentIds": [
+        "person--family-tree--elen-spouse-draenmelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--family-tree--elen-spouse-draenmelyn",
+          "createdAt": "2026-09-03T23:48:45.517Z",
+          "updatedAt": "2026-09-03T23:48:45.517Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:48:45.517Z",
+    "sourceDocumentIds": [
+      "person--family-tree--elen-spouse-draenmelyn"
+    ],
+    "contentHash": "8ff21445825c9252256e3419c30770137ed9512b08e37304735645da89e1ddea"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:48:45.517Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "",
+        "genealogy": {
+          "birth": "1697",
+          "death": "",
+          "familyRole": "married",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Sioned Draenmelyn",
+                "personId": "sioned-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Taliesin Draenmelyn",
+                "personId": "taliesin-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gethin Draenmelyn",
+                "personId": "gethin-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+              }
+            ],
+            "parents": [],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Afan Draenmelyn",
+                "personId": "afan-draenmelyn",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+              }
+            ]
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "fingerprint": "{\"name\":\"Elen\",\"title\":\"Bedienstete im Draig-Haushalt\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"}],\"children\":[{\"personId\":\"sioned-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--sioned-draenmelyn\",\"name\":\"Sioned Draenmelyn\"},{\"personId\":\"taliesin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--taliesin-draenmelyn\",\"name\":\"Taliesin Draenmelyn\"},{\"personId\":\"gethin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--gethin-draenmelyn\",\"name\":\"Gethin Draenmelyn\"}]}}",
+              "importedAt": "2026-09-03T23:48:45.517Z",
+              "lastSyncedAt": "2026-09-03T23:48:45.517Z",
+              "personId": "elen-spouse-draenmelyn",
+              "publishedAt": "2026-09-02T21:26:08.587Z",
+              "releaseId": "github-r1",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=elen-spouse-draenmelyn"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+        },
+        "id": "person--family-tree--elen-spouse-draenmelyn",
+        "identity": {
+          "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Elen",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": null,
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Bedienstete im Draig-Haushalt",
+        "updatedAt": "2026-09-03T23:48:45.517Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:48:45.517Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "",
+    "genealogy": {
+      "birth": "1697",
+      "death": "",
+      "familyRole": "married",
+      "houseId": "",
+      "houseName": "",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Sioned Draenmelyn",
+            "personId": "sioned-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Taliesin Draenmelyn",
+            "personId": "taliesin-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gethin Draenmelyn",
+            "personId": "gethin-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+          }
+        ],
+        "parents": [],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Afan Draenmelyn",
+            "personId": "afan-draenmelyn",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+          }
+        ]
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-draenmelyn",
+          "fingerprint": "{\"name\":\"Elen\",\"title\":\"Bedienstete im Draig-Haushalt\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"}],\"children\":[{\"personId\":\"sioned-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--sioned-draenmelyn\",\"name\":\"Sioned Draenmelyn\"},{\"personId\":\"taliesin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--taliesin-draenmelyn\",\"name\":\"Taliesin Draenmelyn\"},{\"personId\":\"gethin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--gethin-draenmelyn\",\"name\":\"Gethin Draenmelyn\"}]}}",
+          "importedAt": "2026-09-03T23:48:45.517Z",
+          "lastSyncedAt": "2026-09-03T23:48:45.517Z",
+          "personId": "elen-spouse-draenmelyn",
+          "publishedAt": "2026-09-02T21:26:08.587Z",
+          "releaseId": "github-r1",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=elen-spouse-draenmelyn"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+    },
+    "id": "person--family-tree--elen-spouse-draenmelyn",
+    "identity": {
+      "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Elen",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": null,
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Bedienstete im Draig-Haushalt",
+    "updatedAt": "2026-09-03T23:48:45.517Z"
+  }
+}

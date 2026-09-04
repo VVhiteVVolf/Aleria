@@ -85,7 +85,7 @@
         {
           "documentId": "tmfBA2zPTc88EMMGkyyA",
           "createdAt": "2026-08-02T18:07:53.712Z",
-          "updatedAt": "2026-08-02T18:08:01.968Z"
+          "updatedAt": "2026-08-08T16:06:25.802Z"
         },
         {
           "documentId": "tmfBA2zPTc88EMMGkyyA",
@@ -112,14 +112,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "2026-08-08T12:00:00.000Z",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-08T16:06:25.802Z",
     "sourceDocumentIds": [
       "tmfBA2zPTc88EMMGkyyA",
       "tmfBA2zPTc88EMMGkyyA"
     ],
-    "contentHash": "9827ff6d1f523990281ea8d89c51ea5d6bd08e8fa73053890cab50d7414cf8b2"
+    "contentHash": "db005fbb606b02bb775f9ffd329c9ca44f86703ec6d0973b1b8cd237d8d739f2"
   },
   "local": {
     "notes": "",
@@ -131,8 +131,177 @@
     "firestoreExports": [
       {
         "id": "tmfBA2zPTc88EMMGkyyA",
-        "emotesOverride": true,
+        "name": "Duncan Gafyr",
+        "title": "Ritterfürst des Hauses Gafyr & Waffenmeister des Hauses Draig, Gwynthor",
+        "fraktion": "Haus Gafyr, Celtigerns Wacht",
+        "role": "Ankerfigur · Mentor · Schwertmeister",
+        "status": "",
         "relevance": "",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor",
+        "origin": "Celtigerns Wacht",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "patrick",
+        "bio": "Duncan Gafyr war Marschall der Grafschaft von Celtigerns Wacht. Heute dient der Ritterfürst im Ruhestand als Waffenmeister des Hauses Draig und als Mentor zahlreicher Ritter. Seine Beherrschung aller sieben Formen des Drachentanzes macht ihn zum lebenden Maßstab, an dem sich die kommende Heldengeneration messen lassen muss.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-08-02T18:07:53.712Z",
+        "updatedAt": "2026-08-08T16:06:25.802Z",
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/zdChj0a.png",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/Zr0bV82.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/qpmHoax.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/4Pe5Gyp.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/UBJcx8D.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/CZp6sVq.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/ZxY28Bl.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/2L84vcy.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/8GdpVn7.png",
+                "label": ""
+              },
+              {
+                "img": "https://i.imgur.com/m9rgJLA.png",
+                "label": "m9rgJLA"
+              },
+              {
+                "img": "https://i.imgur.com/CQqsZBc.png",
+                "label": "CQqsZBc"
+              },
+              {
+                "img": "https://i.imgur.com/myOWMVj.png",
+                "label": "myOWMVj"
+              },
+              {
+                "img": "https://i.imgur.com/QxUSt2e.png",
+                "label": "QxUSt2e"
+              },
+              {
+                "img": "https://i.imgur.com/Yj1Sk4a.png",
+                "label": "Yj1Sk4a"
+              },
+              {
+                "img": "https://i.imgur.com/9Wm9eZJ.png",
+                "label": "9Wm9eZJ"
+              },
+              {
+                "img": "https://i.imgur.com/r0F3pRu.png",
+                "label": "r0F3pRu"
+              },
+              {
+                "img": "https://i.imgur.com/6ehTfR0.png",
+                "label": "6ehTfR0"
+              },
+              {
+                "img": "https://i.imgur.com/YoXoe39.png",
+                "label": "YoXoe39"
+              },
+              {
+                "img": "https://i.imgur.com/LwP4yk0.png",
+                "label": "LwP4yk0"
+              },
+              {
+                "img": "https://i.imgur.com/ICpHn7Y.png",
+                "label": "ICpHn7Y"
+              },
+              {
+                "img": "https://i.imgur.com/V9AxIZb.png",
+                "label": "V9AxIZb"
+              },
+              {
+                "img": "https://i.imgur.com/57SyYoc.png",
+                "label": "57SyYoc"
+              },
+              {
+                "img": "https://i.imgur.com/8Q0lRu9.png",
+                "label": "8Q0lRu9"
+              },
+              {
+                "img": "https://i.imgur.com/sVQrJAr.png",
+                "label": "sVQrJAr"
+              },
+              {
+                "img": "https://i.imgur.com/utPbOGR.png",
+                "label": "utPbOGR"
+              },
+              {
+                "img": "https://i.imgur.com/NdRvX8e.png",
+                "label": "NdRvX8e"
+              },
+              {
+                "img": "https://i.imgur.com/9HgKxmN.png",
+                "label": "9HgKxmN"
+              },
+              {
+                "img": "https://i.imgur.com/yPfQTWl.png",
+                "label": "yPfQTWl"
+              },
+              {
+                "img": "https://i.imgur.com/SnzLJRk.png",
+                "label": "SnzLJRk"
+              },
+              {
+                "img": "https://i.imgur.com/b1LUwUd.png",
+                "label": "b1LUwUd"
+              },
+              {
+                "img": "https://i.imgur.com/HuilBeX.png",
+                "label": "HuilBeX"
+              },
+              {
+                "img": "https://i.imgur.com/djlwQiX.png",
+                "label": "djlwQiX"
+              },
+              {
+                "img": "https://i.imgur.com/FAqKP25.png",
+                "label": "FAqKP25"
+              },
+              {
+                "img": "https://i.imgur.com/6n1dwv2.png",
+                "label": "6n1dwv2"
+              },
+              {
+                "img": "https://i.imgur.com/RhX5BWa.png",
+                "label": "RhX5BWa"
+              },
+              {
+                "img": "https://i.imgur.com/GivAb6x.png",
+                "label": "GivAb6x"
+              }
+            ],
+            "createdAt": "2026-08-07T02:21:12.936Z",
+            "updatedAt": "2026-08-08T16:06:25.802Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "https://i.imgur.com/zdChj0a.png",
         "emotes": [
           {
             "img": "https://i.imgur.com/Zr0bV82.png",
@@ -147,20 +316,20 @@
             "label": ""
           },
           {
-            "label": "",
-            "img": "https://i.imgur.com/UBJcx8D.png"
+            "img": "https://i.imgur.com/UBJcx8D.png",
+            "label": ""
           },
           {
-            "label": "",
-            "img": "https://i.imgur.com/CZp6sVq.png"
+            "img": "https://i.imgur.com/CZp6sVq.png",
+            "label": ""
           },
           {
-            "label": "",
-            "img": "https://i.imgur.com/ZxY28Bl.png"
+            "img": "https://i.imgur.com/ZxY28Bl.png",
+            "label": ""
           },
           {
-            "label": "",
-            "img": "https://i.imgur.com/2L84vcy.png"
+            "img": "https://i.imgur.com/2L84vcy.png",
+            "label": ""
           },
           {
             "img": "https://i.imgur.com/8GdpVn7.png",
@@ -179,8 +348,8 @@
             "label": "myOWMVj"
           },
           {
-            "label": "QxUSt2e",
-            "img": "https://i.imgur.com/QxUSt2e.png"
+            "img": "https://i.imgur.com/QxUSt2e.png",
+            "label": "QxUSt2e"
           },
           {
             "img": "https://i.imgur.com/Yj1Sk4a.png",
@@ -191,12 +360,12 @@
             "label": "9Wm9eZJ"
           },
           {
-            "label": "r0F3pRu",
-            "img": "https://i.imgur.com/r0F3pRu.png"
+            "img": "https://i.imgur.com/r0F3pRu.png",
+            "label": "r0F3pRu"
           },
           {
-            "label": "6ehTfR0",
-            "img": "https://i.imgur.com/6ehTfR0.png"
+            "img": "https://i.imgur.com/6ehTfR0.png",
+            "label": "6ehTfR0"
           },
           {
             "img": "https://i.imgur.com/YoXoe39.png",
@@ -215,8 +384,8 @@
             "label": "V9AxIZb"
           },
           {
-            "label": "57SyYoc",
-            "img": "https://i.imgur.com/57SyYoc.png"
+            "img": "https://i.imgur.com/57SyYoc.png",
+            "label": "57SyYoc"
           },
           {
             "img": "https://i.imgur.com/8Q0lRu9.png",
@@ -231,16 +400,16 @@
             "label": "utPbOGR"
           },
           {
-            "label": "NdRvX8e",
-            "img": "https://i.imgur.com/NdRvX8e.png"
+            "img": "https://i.imgur.com/NdRvX8e.png",
+            "label": "NdRvX8e"
           },
           {
             "img": "https://i.imgur.com/9HgKxmN.png",
             "label": "9HgKxmN"
           },
           {
-            "label": "yPfQTWl",
-            "img": "https://i.imgur.com/yPfQTWl.png"
+            "img": "https://i.imgur.com/yPfQTWl.png",
+            "label": "yPfQTWl"
           },
           {
             "img": "https://i.imgur.com/SnzLJRk.png",
@@ -251,43 +420,62 @@
             "label": "b1LUwUd"
           },
           {
-            "label": "HuilBeX",
-            "img": "https://i.imgur.com/HuilBeX.png"
+            "img": "https://i.imgur.com/HuilBeX.png",
+            "label": "HuilBeX"
           },
           {
-            "label": "djlwQiX",
-            "img": "https://i.imgur.com/djlwQiX.png"
+            "img": "https://i.imgur.com/djlwQiX.png",
+            "label": "djlwQiX"
           },
           {
-            "label": "FAqKP25",
-            "img": "https://i.imgur.com/FAqKP25.png"
+            "img": "https://i.imgur.com/FAqKP25.png",
+            "label": "FAqKP25"
           },
           {
             "img": "https://i.imgur.com/6n1dwv2.png",
             "label": "6n1dwv2"
           },
           {
-            "label": "RhX5BWa",
-            "img": "https://i.imgur.com/RhX5BWa.png"
+            "img": "https://i.imgur.com/RhX5BWa.png",
+            "label": "RhX5BWa"
           },
           {
-            "label": "GivAb6x",
-            "img": "https://i.imgur.com/GivAb6x.png"
+            "img": "https://i.imgur.com/GivAb6x.png",
+            "label": "GivAb6x"
           }
         ],
+        "emotesOverride": true,
+        "imageSetsOverride": true,
         "inventory": {
-          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
-          "carryValue": "Noch festlegen",
-          "status": "Gesund",
-          "showInfoTable": false,
           "characterId": "tmfBA2zPTc88EMMGkyyA",
-          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "title": "Charakter-Inventar",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
           "portrait": "https://i.imgur.com/zdChj0a.png",
+          "portraitFormat": "portrait",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "name": "Duncan Gafyr",
+          "role": "Ritterfürst des Hauses Gafyr & Waffenmeister des Hauses Draig, Gwynthor",
+          "level": "Haus Gafyr, Celtigerns Wacht",
+          "status": "Gesund",
+          "hitpoints": "TP / Zustand",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "moneyNotice": "",
+          "showInfoTable": false,
+          "carryLabel": "Traglast",
+          "carryValue": "Noch festlegen",
           "categories": [
             {
+              "id": "weapon",
               "label": "Waffen",
-              "icon": "https://i.imgur.com/YaUQREQ.png",
-              "id": "weapon"
+              "icon": "https://i.imgur.com/YaUQREQ.png"
             },
             {
               "id": "armor",
@@ -296,8 +484,8 @@
             },
             {
               "id": "equipment",
-              "icon": "https://i.imgur.com/yMj2CQf.png",
-              "label": "Ausrüstung"
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
             },
             {
               "id": "potions",
@@ -306,8 +494,8 @@
             },
             {
               "id": "documents",
-              "icon": "https://i.imgur.com/urdalGm.png",
-              "label": "Dokumente"
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
             },
             {
               "id": "other",
@@ -315,319 +503,7 @@
               "icon": "https://i.imgur.com/lgeevvn.png"
             }
           ],
-          "portraitFit": "cover",
           "infoRows": [],
-          "name": "Duncan Gafyr",
-          "moneyNotice": "",
-          "items": [
-            {
-              "imageFormat": "square",
-              "combatDefinition": null,
-              "equipped": false,
-              "type": "Waffe",
-              "attributes": [
-                {
-                  "value": 5,
-                  "label": "Schaden"
-                },
-                {
-                  "value": 3,
-                  "label": "Schutz"
-                },
-                {
-                  "label": "Wert",
-                  "value": 4
-                },
-                {
-                  "value": 2,
-                  "label": "Seltenheit"
-                },
-                {
-                  "value": 6,
-                  "label": "Zuverlaessigkeit"
-                },
-                {
-                  "value": 5,
-                  "label": "Handhabung"
-                }
-              ],
-              "tags": "",
-              "category": "weapon",
-              "name": "Hauptwaffe",
-              "individualizedAt": "",
-              "itemStorageMode": "character",
-              "id": "item-mqu1vat1-0-w8ef",
-              "quantity": "1",
-              "imageFit": "contain",
-              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-              "icon": "*",
-              "acquiredAt": "",
-              "originItemDbKey": "",
-              "image": "",
-              "infoRows": [],
-              "imagePosition": "center",
-              "ownerCharacterName": "",
-              "weight": "Noch festlegen",
-              "itemDbKey": "",
-              "ownerCharacterId": ""
-            },
-            {
-              "equipped": false,
-              "individualizedAt": "",
-              "image": "",
-              "attributes": [
-                {
-                  "label": "Schaden",
-                  "value": 5
-                },
-                {
-                  "value": 3,
-                  "label": "Schutz"
-                },
-                {
-                  "label": "Wert",
-                  "value": 4
-                },
-                {
-                  "label": "Seltenheit",
-                  "value": 2
-                },
-                {
-                  "value": 6,
-                  "label": "Zuverlaessigkeit"
-                },
-                {
-                  "value": 5,
-                  "label": "Handhabung"
-                }
-              ],
-              "ownerCharacterName": "",
-              "itemDbKey": "",
-              "imagePosition": "center",
-              "combatDefinition": null,
-              "quantity": "1",
-              "description": "Rüstung, Kleidung oder magischer Schutz.",
-              "itemStorageMode": "character",
-              "icon": "*",
-              "category": "armor",
-              "acquiredAt": "",
-              "originItemDbKey": "",
-              "infoRows": [],
-              "id": "item-mqu1vat1-1-exvo",
-              "imageFit": "contain",
-              "ownerCharacterId": "",
-              "name": "Rüstung / Schutz",
-              "tags": "",
-              "weight": "Noch festlegen",
-              "type": "Rüstung",
-              "imageFormat": "square"
-            },
-            {
-              "type": "Ausrüstung",
-              "imageFit": "contain",
-              "tags": "",
-              "attributes": [
-                {
-                  "label": "Schaden",
-                  "value": 5
-                },
-                {
-                  "label": "Schutz",
-                  "value": 3
-                },
-                {
-                  "label": "Wert",
-                  "value": 4
-                },
-                {
-                  "label": "Seltenheit",
-                  "value": 2
-                },
-                {
-                  "value": 6,
-                  "label": "Zuverlaessigkeit"
-                },
-                {
-                  "value": 5,
-                  "label": "Handhabung"
-                }
-              ],
-              "imagePosition": "center",
-              "infoRows": [],
-              "individualizedAt": "",
-              "itemStorageMode": "character",
-              "id": "item-mqu1vat1-2-0fx2",
-              "imageFormat": "square",
-              "name": "Reiseausrüstung",
-              "ownerCharacterName": "",
-              "weight": "Noch festlegen",
-              "combatDefinition": null,
-              "icon": "*",
-              "ownerCharacterId": "",
-              "equipped": false,
-              "acquiredAt": "",
-              "category": "equipment",
-              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-              "image": "",
-              "quantity": "1",
-              "originItemDbKey": "",
-              "itemDbKey": ""
-            },
-            {
-              "equipped": false,
-              "ownerCharacterName": "",
-              "imageFormat": "square",
-              "quantity": "1",
-              "ownerCharacterId": "",
-              "acquiredAt": "",
-              "icon": "*",
-              "category": "potions",
-              "originItemDbKey": "",
-              "weight": "Noch festlegen",
-              "name": "Heil- oder Verbrauchsgut",
-              "infoRows": [],
-              "itemDbKey": "",
-              "imageFit": "contain",
-              "imagePosition": "center",
-              "combatDefinition": null,
-              "itemStorageMode": "character",
-              "attributes": [
-                {
-                  "label": "Schaden",
-                  "value": 5
-                },
-                {
-                  "value": 3,
-                  "label": "Schutz"
-                },
-                {
-                  "value": 4,
-                  "label": "Wert"
-                },
-                {
-                  "label": "Seltenheit",
-                  "value": 2
-                },
-                {
-                  "label": "Zuverlaessigkeit",
-                  "value": 6
-                },
-                {
-                  "value": 5,
-                  "label": "Handhabung"
-                }
-              ],
-              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-              "image": "",
-              "id": "item-mqu1vat1-3-2lgm",
-              "type": "Trinktur",
-              "individualizedAt": "",
-              "tags": ""
-            },
-            {
-              "itemStorageMode": "character",
-              "name": "Dokumente / Urkunden",
-              "combatDefinition": null,
-              "attributes": [
-                {
-                  "label": "Schaden",
-                  "value": 5
-                },
-                {
-                  "label": "Schutz",
-                  "value": 3
-                },
-                {
-                  "value": 4,
-                  "label": "Wert"
-                },
-                {
-                  "value": 2,
-                  "label": "Seltenheit"
-                },
-                {
-                  "value": 6,
-                  "label": "Zuverlaessigkeit"
-                },
-                {
-                  "label": "Handhabung",
-                  "value": 5
-                }
-              ],
-              "imageFit": "contain",
-              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-              "individualizedAt": "",
-              "id": "item-mqu1vat1-4-ajrj",
-              "type": "Dokument",
-              "tags": "",
-              "infoRows": [],
-              "imagePosition": "center",
-              "ownerCharacterName": "",
-              "category": "documents",
-              "quantity": "1",
-              "acquiredAt": "",
-              "imageFormat": "square",
-              "image": "",
-              "originItemDbKey": "",
-              "weight": "Noch festlegen",
-              "equipped": false,
-              "icon": "*",
-              "itemDbKey": "",
-              "ownerCharacterId": ""
-            },
-            {
-              "ownerCharacterName": "",
-              "infoRows": [],
-              "tags": "",
-              "itemStorageMode": "character",
-              "type": "Sonstiges",
-              "weight": "Noch festlegen",
-              "imageFit": "contain",
-              "individualizedAt": "",
-              "name": "Persönlicher Gegenstand",
-              "imagePosition": "center",
-              "acquiredAt": "",
-              "combatDefinition": null,
-              "imageFormat": "square",
-              "id": "item-mqu1vat1-5-5kao",
-              "equipped": false,
-              "ownerCharacterId": "",
-              "icon": "*",
-              "itemDbKey": "",
-              "quantity": "1",
-              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-              "attributes": [
-                {
-                  "value": 5,
-                  "label": "Schaden"
-                },
-                {
-                  "value": 3,
-                  "label": "Schutz"
-                },
-                {
-                  "value": 4,
-                  "label": "Wert"
-                },
-                {
-                  "value": 2,
-                  "label": "Seltenheit"
-                },
-                {
-                  "value": 6,
-                  "label": "Zuverlaessigkeit"
-                },
-                {
-                  "value": 5,
-                  "label": "Handhabung"
-                }
-              ],
-              "category": "other",
-              "image": "",
-              "originItemDbKey": ""
-            }
-          ],
-          "role": "Ritterfürst des Hauses Gafyr & Waffenmeister des Hauses Draig, Gwynthor",
           "attributes": [
             {
               "label": "StA",
@@ -650,29 +526,337 @@
               "value": 6
             },
             {
-              "value": 5,
-              "label": "Cha"
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "items": [
+            {
+              "id": "item-mqu1vat1-0-w8ef",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "weapon",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Hauptwaffe",
+              "type": "Waffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-1-exvo",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "armor",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "equipment",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Reiseausrüstung",
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-3-2lgm",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "potions",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Heil- oder Verbrauchsgut",
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "documents",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Dokumente / Urkunden",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "category": "other",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "equipped": false,
+              "combatDefinition": null,
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
             }
           ],
           "companions": [
             {
-              "description": "",
-              "status": "Gesund",
-              "statusColor": "#5c7f20",
-              "role": "Begleiter",
-              "species": "Tier oder Begleiter",
-              "name": "Reittier / Gefährte",
-              "imagePosition": "top",
-              "imageFormat": "landscape",
-              "infoRows": [],
-              "summary": "Kurzbeschreibung des Gefährten.",
               "id": "companion-mqu1vat2-0-zz2n",
               "image": "",
+              "imageFormat": "landscape",
               "imageFit": "cover",
+              "imagePosition": "top",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "role": "Begleiter",
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "description": "",
+              "infoRows": [],
               "attributes": [
                 {
-                  "value": 6,
-                  "label": "Schnelligkeit"
+                  "label": "Schnelligkeit",
+                  "value": 6
                 },
                 {
                   "label": "Ausdauer",
@@ -687,8 +871,8 @@
                   "value": 6
                 },
                 {
-                  "value": 4,
-                  "label": "Sozialverhalten"
+                  "label": "Sozialverhalten",
+                  "value": 4
                 },
                 {
                   "label": "Robustheit",
@@ -697,39 +881,39 @@
               ]
             },
             {
-              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "image": "",
               "imageFormat": "landscape",
               "imageFit": "cover",
-              "status": "Noch festlegen",
-              "infoRows": [],
-              "role": "Gefährte",
               "imagePosition": "top",
-              "summary": "Besonderheit, Nutzen oder Bindung.",
-              "image": "",
-              "id": "companion-mqu1vat2-1-5e7l",
+              "name": "Treuer Begleiter",
               "species": "Tier / Person",
-              "description": "",
+              "role": "Gefährte",
+              "status": "Noch festlegen",
               "statusColor": "#5c7f20",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "description": "",
+              "infoRows": [],
               "attributes": [
                 {
-                  "value": 6,
-                  "label": "Schnelligkeit"
+                  "label": "Schnelligkeit",
+                  "value": 6
                 },
                 {
                   "label": "Ausdauer",
                   "value": 7
                 },
                 {
-                  "value": 5,
-                  "label": "Staerke"
+                  "label": "Staerke",
+                  "value": 5
                 },
                 {
                   "label": "Agilitaet",
                   "value": 6
                 },
                 {
-                  "value": 4,
-                  "label": "Sozialverhalten"
+                  "label": "Sozialverhalten",
+                  "value": 4
                 },
                 {
                   "label": "Robustheit",
@@ -738,20 +922,9 @@
               ]
             }
           ],
-          "title": "Charakter-Inventar",
-          "portraitPosition": "top",
-          "healthColor": "#5c7f20",
-          "carryLabel": "Traglast",
-          "moneyState": {
-            "totalCopper": 0,
-            "copper": 0,
-            "gold": 0,
-            "silver": 0
-          },
           "equipmentQuiz": {
+            "open": false,
             "step": 0,
-            "updatedAt": "",
-            "status": "",
             "answers": [
               "",
               "",
@@ -764,357 +937,467 @@
               "",
               ""
             ],
-            "open": false,
-            "resultText": ""
-          },
-          "hitpoints": "TP / Zustand",
-          "portraitFormat": "portrait",
-          "level": "Haus Gafyr, Celtigerns Wacht"
+            "resultText": "",
+            "status": "",
+            "updatedAt": ""
+          }
         },
-        "aliases": [],
-        "createdAt": "2026-08-02T18:07:53.712Z",
-        "origin": "",
-        "genealogy": {
-          "relationships": {
-            "partners": [],
-            "children": [],
-            "parents": []
-          },
-          "status": "",
-          "worldPersonId": "",
-          "familyRole": "",
-          "sex": "unknown",
-          "sources": [],
-          "death": "",
-          "tags": [],
-          "portraitPlaceholder": "",
-          "houseName": "",
-          "houseId": "",
-          "birth": ""
-        },
-        "bio": "",
-        "name": "Duncan Gafyr",
-        "role": "",
-        "archived": false,
-        "title": "Ritterfürst des Hauses Gafyr & Waffenmeister des Hauses Draig, Gwynthor",
-        "updatedAt": "2026-08-02T18:08:01.968Z",
-        "playerOwner": "patrick",
-        "taxonomyPath": "",
-        "fraktion": "Haus Gafyr, Celtigerns Wacht",
-        "portrait": "https://i.imgur.com/zdChj0a.png",
-        "status": "",
-        "currentLocation": "",
-        "profileLink": "",
         "combatProfile": {
-          "armorItems": [],
-          "abilities": [],
-          "conditions": [],
-          "skills": [
-            {
-              "notes": "",
-              "proficiency": "none",
-              "name": "Athletik",
-              "attributeKey": "strength",
-              "id": "default-skill-1",
-              "bonus": 0
-            },
-            {
-              "bonus": 0,
-              "proficiency": "none",
-              "id": "default-skill-2",
-              "name": "Akrobatik",
-              "notes": "",
-              "attributeKey": "dexterity"
-            },
-            {
-              "attributeKey": "dexterity",
-              "id": "default-skill-3",
-              "notes": "",
-              "name": "Fingerfertigkeit",
-              "proficiency": "none",
-              "bonus": 0
-            },
-            {
-              "proficiency": "none",
-              "notes": "",
-              "attributeKey": "dexterity",
-              "name": "Heimlichkeit",
-              "bonus": 0,
-              "id": "default-skill-4"
-            },
-            {
-              "bonus": 0,
-              "attributeKey": "intelligence",
-              "id": "default-skill-5",
-              "name": "Arkane Kunde",
-              "proficiency": "none",
-              "notes": ""
-            },
-            {
-              "bonus": 0,
-              "proficiency": "none",
-              "name": "Geschichte",
-              "notes": "",
-              "attributeKey": "intelligence",
-              "id": "default-skill-6"
-            },
-            {
-              "notes": "",
-              "name": "Nachforschungen",
-              "id": "default-skill-7",
-              "attributeKey": "intelligence",
-              "proficiency": "none",
-              "bonus": 0
-            },
-            {
-              "id": "default-skill-8",
-              "notes": "",
-              "attributeKey": "intelligence",
-              "proficiency": "none",
-              "name": "Naturkunde",
-              "bonus": 0
-            },
-            {
-              "notes": "",
-              "name": "Religion",
-              "id": "default-skill-9",
-              "bonus": 0,
-              "proficiency": "none",
-              "attributeKey": "intelligence"
-            },
-            {
-              "bonus": 0,
-              "id": "default-skill-10",
-              "name": "Heilkunde",
-              "notes": "",
-              "attributeKey": "wisdom",
-              "proficiency": "none"
-            },
-            {
-              "notes": "",
-              "name": "Mit Tieren umgehen",
-              "proficiency": "none",
-              "bonus": 0,
-              "attributeKey": "wisdom",
-              "id": "default-skill-11"
-            },
-            {
-              "name": "Motiv erkennen",
-              "bonus": 0,
-              "attributeKey": "wisdom",
-              "proficiency": "none",
-              "id": "default-skill-12",
-              "notes": ""
-            },
-            {
-              "notes": "",
-              "id": "default-skill-13",
-              "proficiency": "none",
-              "name": "Überleben",
-              "attributeKey": "wisdom",
-              "bonus": 0
-            },
-            {
-              "attributeKey": "wisdom",
-              "notes": "",
-              "name": "Wahrnehmung",
-              "id": "default-skill-14",
-              "bonus": 0,
-              "proficiency": "none"
-            },
-            {
-              "attributeKey": "charisma",
-              "bonus": 0,
-              "proficiency": "none",
-              "id": "default-skill-15",
-              "name": "Auftreten",
-              "notes": ""
-            },
-            {
-              "proficiency": "none",
-              "bonus": 0,
-              "id": "default-skill-16",
-              "attributeKey": "charisma",
-              "name": "Einschüchtern",
-              "notes": ""
-            },
-            {
-              "bonus": 0,
-              "name": "Täuschen",
-              "proficiency": "none",
-              "id": "default-skill-17",
-              "notes": "",
-              "attributeKey": "charisma"
-            },
-            {
-              "notes": "",
-              "name": "Überreden",
-              "id": "default-skill-18",
-              "proficiency": "none",
-              "bonus": 0,
-              "attributeKey": "charisma"
-            }
-          ],
-          "magic": {
-            "castingAttribute": "intelligence",
-            "spellSaveDcOverride": null,
-            "notes": "",
-            "enabled": false,
-            "spellAttackOverride": null,
-            "spells": [],
-            "manaResourceId": ""
+          "schemaVersion": 3,
+          "identity": {
+            "ancestry": "",
+            "archetype": "",
+            "background": ""
           },
-          "armorClass": {
-            "shieldBonus": 0,
-            "override": null,
-            "dexterityMode": "full",
-            "otherModifier": 0,
-            "magicModifier": 0,
-            "base": 10,
-            "dexterityCap": 2
-          },
-          "notes": "",
-          "combat": {
-            "movement": 9,
-            "attackBonus": 0,
-            "passivePerceptionBonus": 0,
-            "initiativeBonus": 0,
-            "damageBonus": 0
-          },
-          "hitPoints": {
-            "hitDie": 8,
-            "current": null,
-            "maximumOverride": null,
-            "temporary": 0,
-            "averagePerLevelOverride": null
-          },
-          "quirks": [],
-          "weapons": [],
           "progression": {
-            "nextLevelExperience": null,
             "level": 1,
-            "proficiencyBonusOverride": null,
             "specialLevels": 0,
-            "experience": 0
+            "experience": 0,
+            "nextLevelExperience": null,
+            "proficiencyBonusOverride": null
           },
-          "resources": [
-            {
-              "notes": "",
-              "recovery": "manual",
-              "maximum": 1,
-              "name": "Inspiration",
-              "current": 0,
-              "id": "inspiration"
-            },
-            {
-              "notes": "",
-              "maximum": 0,
-              "name": "Mana / Fokus",
-              "current": 0,
-              "recovery": "long-rest",
-              "id": "mana-focus"
-            },
-            {
-              "current": 0,
-              "maximum": 0,
-              "recovery": "manual",
-              "id": "fate-points",
-              "notes": "",
-              "name": "Schicksalspunkte"
-            }
-          ],
           "attributes": [
             {
+              "key": "strength",
+              "label": "Kraft",
               "shortLabel": "KRF",
               "score": 10,
-              "label": "Kraft",
-              "key": "strength",
               "modifierOverride": null
             },
             {
-              "label": "Geschick",
-              "score": 10,
               "key": "dexterity",
+              "label": "Geschick",
               "shortLabel": "GES",
+              "score": 10,
               "modifierOverride": null
             },
             {
-              "shortLabel": "KON",
               "key": "constitution",
               "label": "Konstitution",
+              "shortLabel": "KON",
               "score": 10,
               "modifierOverride": null
             },
             {
-              "shortLabel": "INT",
               "key": "intelligence",
               "label": "Intelligenz",
-              "modifierOverride": null,
-              "score": 10
+              "shortLabel": "INT",
+              "score": 10,
+              "modifierOverride": null
             },
             {
-              "score": 10,
+              "key": "wisdom",
               "label": "Weisheit",
               "shortLabel": "WEI",
-              "modifierOverride": null,
-              "key": "wisdom"
+              "score": 10,
+              "modifierOverride": null
             },
             {
-              "score": 10,
-              "shortLabel": "CHA",
               "key": "charisma",
               "label": "Charisma",
+              "shortLabel": "CHA",
+              "score": 10,
               "modifierOverride": null
             }
           ],
-          "identity": {
-            "archetype": "",
-            "ancestry": "",
-            "background": ""
+          "hitPoints": {
+            "current": null,
+            "temporary": 0,
+            "hitDie": 8,
+            "averagePerLevelOverride": null,
+            "maximumOverride": null
+          },
+          "armorClass": {
+            "base": 10,
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "shieldBonus": 0,
+            "magicModifier": 0,
+            "otherModifier": 0,
+            "override": null
+          },
+          "combat": {
+            "movement": 9,
+            "initiativeBonus": 0,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "passivePerceptionBonus": 0
           },
           "savingThrows": [
             {
-              "bonus": 0,
-              "expertise": false,
+              "attributeKey": "strength",
               "proficient": false,
-              "attributeKey": "strength"
+              "expertise": false,
+              "bonus": 0
             },
             {
-              "expertise": false,
               "attributeKey": "dexterity",
               "proficient": false,
+              "expertise": false,
               "bonus": 0
             },
             {
               "attributeKey": "constitution",
               "proficient": false,
-              "bonus": 0,
-              "expertise": false
+              "expertise": false,
+              "bonus": 0
             },
             {
               "attributeKey": "intelligence",
+              "proficient": false,
               "expertise": false,
-              "bonus": 0,
-              "proficient": false
+              "bonus": 0
             },
             {
-              "expertise": false,
+              "attributeKey": "wisdom",
               "proficient": false,
-              "bonus": 0,
-              "attributeKey": "wisdom"
+              "expertise": false,
+              "bonus": 0
             },
             {
-              "proficient": false,
-              "bonus": 0,
               "attributeKey": "charisma",
-              "expertise": false
+              "proficient": false,
+              "expertise": false,
+              "bonus": 0
             }
           ],
-          "schemaVersion": 3
+          "skills": [
+            {
+              "id": "default-skill-1",
+              "name": "Athletik",
+              "attributeKey": "strength",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-2",
+              "name": "Akrobatik",
+              "attributeKey": "dexterity",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-3",
+              "name": "Fingerfertigkeit",
+              "attributeKey": "dexterity",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-4",
+              "name": "Heimlichkeit",
+              "attributeKey": "dexterity",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-5",
+              "name": "Arkane Kunde",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-6",
+              "name": "Geschichte",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-7",
+              "name": "Nachforschungen",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-8",
+              "name": "Naturkunde",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-9",
+              "name": "Religion",
+              "attributeKey": "intelligence",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-10",
+              "name": "Heilkunde",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-11",
+              "name": "Mit Tieren umgehen",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-12",
+              "name": "Motiv erkennen",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-13",
+              "name": "Überleben",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-14",
+              "name": "Wahrnehmung",
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-15",
+              "name": "Auftreten",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-16",
+              "name": "Einschüchtern",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-17",
+              "name": "Täuschen",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            },
+            {
+              "id": "default-skill-18",
+              "name": "Überreden",
+              "attributeKey": "charisma",
+              "proficiency": "none",
+              "bonus": 0,
+              "notes": ""
+            }
+          ],
+          "weapons": [],
+          "armorItems": [],
+          "resources": [
+            {
+              "id": "inspiration",
+              "name": "Inspiration",
+              "current": 0,
+              "maximum": 1,
+              "recovery": "manual",
+              "notes": ""
+            },
+            {
+              "id": "mana-focus",
+              "name": "Mana / Fokus",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "long-rest",
+              "notes": ""
+            },
+            {
+              "id": "fate-points",
+              "name": "Schicksalspunkte",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "manual",
+              "notes": ""
+            }
+          ],
+          "quirks": [],
+          "conditions": [],
+          "abilities": [],
+          "magic": {
+            "enabled": false,
+            "castingAttribute": "intelligence",
+            "spellAttackOverride": null,
+            "spellSaveDcOverride": null,
+            "manaResourceId": "",
+            "notes": "",
+            "spells": []
+          },
+          "notes": ""
         },
-        "plotNode": "",
+        "localRecord": {
+          "recordId": "character--tmfBA2zPTc88EMMGkyyA",
+          "path": "records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
+          "schemaVersion": 1,
+          "contentHash": "a9426c99201d76238de28d8070708cf9a86825169a7f7a1e759a1c48425509c7",
+          "firestoreDocumentIds": [
+            "tmfBA2zPTc88EMMGkyyA"
+          ],
+          "classification": {
+            "primary": {
+              "kind": "family",
+              "id": "haus-gafyr",
+              "label": "Haus Gafyr"
+            },
+            "familyStatus": "linked",
+            "families": [
+              {
+                "familyId": "haus-gafyr",
+                "familyTitle": "Haus Gafyr",
+                "personId": "duncan-gafyr",
+                "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+                "houseId": "house-gafyr",
+                "houseName": "Haus Gafyr",
+                "familyRole": "core",
+                "source": "project",
+                "folderPath": [
+                  "Cenyr",
+                  "Celtigerns Wacht",
+                  "Llamreis Ankunft",
+                  "Gwynthor"
+                ],
+                "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=duncan-gafyr",
+                "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--gerwyn-gafyr\",\"name\":\"Gerwyn Gafyr\"},{\"personId\":\"siobhan-gallchobhair\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gallchobhair--siobhan-gallchobhair\",\"name\":\"Siobhan Gallchobhair\"}],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[{\"personId\":\"egon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"},{\"personId\":\"aerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--aerwyn-gafyr\",\"name\":\"Aerwyn Gafyr\"}]}}",
+                "score": 195
+              },
+              {
+                "familyId": "haus-gwialen",
+                "familyTitle": "Haus Gwialen O'Tredegar",
+                "personId": "duncan-gafyr",
+                "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+                "houseId": "house-gafyr",
+                "houseName": "Haus Gafyr",
+                "familyRole": "married",
+                "source": "project",
+                "folderPath": [
+                  "Cenyr",
+                  "Graue Weite",
+                  "Schimmerküste",
+                  "Tredegar"
+                ],
+                "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=duncan-gafyr",
+                "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[]}}",
+                "score": 150
+              }
+            ],
+            "groups": [],
+            "places": [
+              {
+                "id": "gwynthor",
+                "label": "Gwynthor",
+                "source": "archive-tab"
+              }
+            ]
+          }
+        },
         "identity": {
-          "worldPersonId": ""
+          "worldPersonId": "person--haus-gafyr--duncan-gafyr"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+          "sex": "unknown",
+          "status": "alive",
+          "birth": "1670",
+          "death": "",
+          "houseId": "house-gafyr",
+          "houseName": "Haus Gafyr",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-gafyr",
+              "personId": "duncan-gafyr",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-08-03T18:28:54.436Z",
+              "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=duncan-gafyr",
+              "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--gerwyn-gafyr\",\"name\":\"Gerwyn Gafyr\"},{\"personId\":\"siobhan-gallchobhair\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gallchobhair--siobhan-gallchobhair\",\"name\":\"Siobhan Gallchobhair\"}],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[{\"personId\":\"egon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"},{\"personId\":\"aerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--aerwyn-gafyr\",\"name\":\"Aerwyn Gafyr\"}]}}"
+            },
+            {
+              "familyId": "haus-gwialen",
+              "personId": "duncan-gafyr",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-08-03T18:28:54.436Z",
+              "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=duncan-gafyr",
+              "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gerwyn-gafyr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gafyr--gerwyn-gafyr",
+                "name": "Gerwyn Gafyr"
+              },
+              {
+                "personId": "siobhan-gallchobhair",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gallchobhair--siobhan-gallchobhair",
+                "name": "Siobhan Gallchobhair"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "morfudd-gwialen",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+                "name": "Morfudd Gwialen"
+              }
+            ],
+            "children": [
+              {
+                "personId": "egon-gafyr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gafyr--egon-gafyr",
+                "name": "Egon Gafyr"
+              },
+              {
+                "personId": "aerwyn-gafyr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gafyr--aerwyn-gafyr",
+                "name": "Aerwyn Gafyr"
+              }
+            ]
+          }
         }
       },
       {
@@ -4013,7 +4296,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-08-02T18:07:53.712Z",
-    "updatedAt": "2026-08-08T12:00:00.000Z",
+    "updatedAt": "2026-08-08T16:06:25.802Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -4164,6 +4447,155 @@
         ],
         "createdAt": "2026-08-07T02:21:12.936Z",
         "updatedAt": "2026-08-07T02:21:12.936Z"
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/zdChj0a.png",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/Zr0bV82.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/qpmHoax.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/4Pe5Gyp.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/UBJcx8D.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/CZp6sVq.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/ZxY28Bl.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/2L84vcy.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/8GdpVn7.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/m9rgJLA.png",
+            "label": "m9rgJLA"
+          },
+          {
+            "img": "https://i.imgur.com/CQqsZBc.png",
+            "label": "CQqsZBc"
+          },
+          {
+            "img": "https://i.imgur.com/myOWMVj.png",
+            "label": "myOWMVj"
+          },
+          {
+            "img": "https://i.imgur.com/QxUSt2e.png",
+            "label": "QxUSt2e"
+          },
+          {
+            "img": "https://i.imgur.com/Yj1Sk4a.png",
+            "label": "Yj1Sk4a"
+          },
+          {
+            "img": "https://i.imgur.com/9Wm9eZJ.png",
+            "label": "9Wm9eZJ"
+          },
+          {
+            "img": "https://i.imgur.com/r0F3pRu.png",
+            "label": "r0F3pRu"
+          },
+          {
+            "img": "https://i.imgur.com/6ehTfR0.png",
+            "label": "6ehTfR0"
+          },
+          {
+            "img": "https://i.imgur.com/YoXoe39.png",
+            "label": "YoXoe39"
+          },
+          {
+            "img": "https://i.imgur.com/LwP4yk0.png",
+            "label": "LwP4yk0"
+          },
+          {
+            "img": "https://i.imgur.com/ICpHn7Y.png",
+            "label": "ICpHn7Y"
+          },
+          {
+            "img": "https://i.imgur.com/V9AxIZb.png",
+            "label": "V9AxIZb"
+          },
+          {
+            "img": "https://i.imgur.com/57SyYoc.png",
+            "label": "57SyYoc"
+          },
+          {
+            "img": "https://i.imgur.com/8Q0lRu9.png",
+            "label": "8Q0lRu9"
+          },
+          {
+            "img": "https://i.imgur.com/sVQrJAr.png",
+            "label": "sVQrJAr"
+          },
+          {
+            "img": "https://i.imgur.com/utPbOGR.png",
+            "label": "utPbOGR"
+          },
+          {
+            "img": "https://i.imgur.com/NdRvX8e.png",
+            "label": "NdRvX8e"
+          },
+          {
+            "img": "https://i.imgur.com/9HgKxmN.png",
+            "label": "9HgKxmN"
+          },
+          {
+            "img": "https://i.imgur.com/yPfQTWl.png",
+            "label": "yPfQTWl"
+          },
+          {
+            "img": "https://i.imgur.com/SnzLJRk.png",
+            "label": "SnzLJRk"
+          },
+          {
+            "img": "https://i.imgur.com/b1LUwUd.png",
+            "label": "b1LUwUd"
+          },
+          {
+            "img": "https://i.imgur.com/HuilBeX.png",
+            "label": "HuilBeX"
+          },
+          {
+            "img": "https://i.imgur.com/djlwQiX.png",
+            "label": "djlwQiX"
+          },
+          {
+            "img": "https://i.imgur.com/FAqKP25.png",
+            "label": "FAqKP25"
+          },
+          {
+            "img": "https://i.imgur.com/6n1dwv2.png",
+            "label": "6n1dwv2"
+          },
+          {
+            "img": "https://i.imgur.com/RhX5BWa.png",
+            "label": "RhX5BWa"
+          },
+          {
+            "img": "https://i.imgur.com/GivAb6x.png",
+            "label": "GivAb6x"
+          }
+        ],
+        "createdAt": "2026-08-07T02:21:12.936Z",
+        "updatedAt": "2026-08-08T16:06:25.802Z"
       }
     ],
     "activeImageSetId": "standard",
@@ -4308,66 +4740,6 @@
       {
         "img": "https://i.imgur.com/GivAb6x.png",
         "label": "GivAb6x"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/UBJcx8D.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/CZp6sVq.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/ZxY28Bl.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/2L84vcy.png"
-      },
-      {
-        "label": "QxUSt2e",
-        "img": "https://i.imgur.com/QxUSt2e.png"
-      },
-      {
-        "label": "r0F3pRu",
-        "img": "https://i.imgur.com/r0F3pRu.png"
-      },
-      {
-        "label": "6ehTfR0",
-        "img": "https://i.imgur.com/6ehTfR0.png"
-      },
-      {
-        "label": "57SyYoc",
-        "img": "https://i.imgur.com/57SyYoc.png"
-      },
-      {
-        "label": "NdRvX8e",
-        "img": "https://i.imgur.com/NdRvX8e.png"
-      },
-      {
-        "label": "yPfQTWl",
-        "img": "https://i.imgur.com/yPfQTWl.png"
-      },
-      {
-        "label": "HuilBeX",
-        "img": "https://i.imgur.com/HuilBeX.png"
-      },
-      {
-        "label": "djlwQiX",
-        "img": "https://i.imgur.com/djlwQiX.png"
-      },
-      {
-        "label": "FAqKP25",
-        "img": "https://i.imgur.com/FAqKP25.png"
-      },
-      {
-        "label": "RhX5BWa",
-        "img": "https://i.imgur.com/RhX5BWa.png"
-      },
-      {
-        "label": "GivAb6x",
-        "img": "https://i.imgur.com/GivAb6x.png"
       }
     ],
     "emotesOverride": true,
@@ -4427,21 +4799,6 @@
           "id": "other",
           "label": "Sonstiges",
           "icon": "https://i.imgur.com/lgeevvn.png"
-        },
-        {
-          "label": "Waffen",
-          "icon": "https://i.imgur.com/YaUQREQ.png",
-          "id": "weapon"
-        },
-        {
-          "id": "equipment",
-          "icon": "https://i.imgur.com/yMj2CQf.png",
-          "label": "Ausrüstung"
-        },
-        {
-          "id": "documents",
-          "icon": "https://i.imgur.com/urdalGm.png",
-          "label": "Dokumente"
         }
       ],
       "infoRows": [],
@@ -4469,10 +4826,6 @@
         {
           "label": "Cha",
           "value": 5
-        },
-        {
-          "value": 5,
-          "label": "Cha"
         }
       ],
       "items": [
@@ -4789,111 +5142,29 @@
           ]
         },
         {
-          "imageFormat": "square",
-          "combatDefinition": null,
-          "equipped": false,
-          "type": "Waffe",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "value": 3,
-              "label": "Schutz"
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "tags": "",
-          "category": "weapon",
-          "name": "Hauptwaffe",
-          "individualizedAt": "",
-          "itemStorageMode": "character",
           "id": "item-mqu1vat1-0-w8ef",
-          "quantity": "1",
-          "imageFit": "contain",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "icon": "*",
-          "acquiredAt": "",
+          "itemDbKey": "",
           "originItemDbKey": "",
-          "image": "",
-          "infoRows": [],
-          "imagePosition": "center",
-          "ownerCharacterName": "",
-          "weight": "Noch festlegen",
-          "itemDbKey": "",
-          "ownerCharacterId": ""
-        },
-        {
-          "equipped": false,
-          "individualizedAt": "",
-          "image": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "value": 3,
-              "label": "Schutz"
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "ownerCharacterName": "",
-          "itemDbKey": "",
-          "imagePosition": "center",
-          "combatDefinition": null,
-          "quantity": "1",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
           "itemStorageMode": "character",
-          "icon": "*",
-          "category": "armor",
-          "acquiredAt": "",
-          "originItemDbKey": "",
-          "infoRows": [],
-          "id": "item-mqu1vat1-1-exvo",
-          "imageFit": "contain",
           "ownerCharacterId": "",
-          "name": "Rüstung / Schutz",
-          "tags": "",
-          "weight": "Noch festlegen",
-          "type": "Rüstung",
-          "imageFormat": "square"
-        },
-        {
-          "type": "Ausrüstung",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
           "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
           "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "infoRows": [],
           "attributes": [
             {
               "label": "Schaden",
@@ -4906,71 +5177,6 @@
             {
               "label": "Wert",
               "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imagePosition": "center",
-          "infoRows": [],
-          "individualizedAt": "",
-          "itemStorageMode": "character",
-          "id": "item-mqu1vat1-2-0fx2",
-          "imageFormat": "square",
-          "name": "Reiseausrüstung",
-          "ownerCharacterName": "",
-          "weight": "Noch festlegen",
-          "combatDefinition": null,
-          "icon": "*",
-          "ownerCharacterId": "",
-          "equipped": false,
-          "acquiredAt": "",
-          "category": "equipment",
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "image": "",
-          "quantity": "1",
-          "originItemDbKey": "",
-          "itemDbKey": ""
-        },
-        {
-          "equipped": false,
-          "ownerCharacterName": "",
-          "imageFormat": "square",
-          "quantity": "1",
-          "ownerCharacterId": "",
-          "acquiredAt": "",
-          "icon": "*",
-          "category": "potions",
-          "originItemDbKey": "",
-          "weight": "Noch festlegen",
-          "name": "Heil- oder Verbrauchsgut",
-          "infoRows": [],
-          "itemDbKey": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "combatDefinition": null,
-          "itemStorageMode": "character",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "value": 3,
-              "label": "Schutz"
-            },
-            {
-              "value": 4,
-              "label": "Wert"
             },
             {
               "label": "Seltenheit",
@@ -4981,21 +5187,35 @@
               "value": 6
             },
             {
-              "value": 5,
-              "label": "Handhabung"
+              "label": "Handhabung",
+              "value": 5
             }
-          ],
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "image": "",
-          "id": "item-mqu1vat1-3-2lgm",
-          "type": "Trinktur",
-          "individualizedAt": "",
-          "tags": ""
+          ]
         },
         {
+          "id": "item-mqu1vat1-1-exvo",
+          "itemDbKey": "",
+          "originItemDbKey": "",
           "itemStorageMode": "character",
-          "name": "Dokumente / Urkunden",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
           "combatDefinition": null,
+          "infoRows": [],
           "attributes": [
             {
               "label": "Schaden",
@@ -5006,93 +5226,226 @@
               "value": 3
             },
             {
-              "value": 4,
-              "label": "Wert"
+              "label": "Wert",
+              "value": 4
             },
             {
-              "value": 2,
-              "label": "Seltenheit"
+              "label": "Seltenheit",
+              "value": 2
             },
             {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
+              "label": "Zuverlaessigkeit",
+              "value": 6
             },
             {
               "label": "Handhabung",
               "value": 5
             }
-          ],
-          "imageFit": "contain",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "individualizedAt": "",
-          "id": "item-mqu1vat1-4-ajrj",
-          "type": "Dokument",
-          "tags": "",
-          "infoRows": [],
-          "imagePosition": "center",
-          "ownerCharacterName": "",
-          "category": "documents",
-          "quantity": "1",
-          "acquiredAt": "",
-          "imageFormat": "square",
-          "image": "",
-          "originItemDbKey": "",
-          "weight": "Noch festlegen",
-          "equipped": false,
-          "icon": "*",
-          "itemDbKey": "",
-          "ownerCharacterId": ""
+          ]
         },
         {
-          "ownerCharacterName": "",
-          "infoRows": [],
-          "tags": "",
-          "itemStorageMode": "character",
-          "type": "Sonstiges",
-          "weight": "Noch festlegen",
-          "imageFit": "contain",
-          "individualizedAt": "",
-          "name": "Persönlicher Gegenstand",
-          "imagePosition": "center",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "imageFormat": "square",
-          "id": "item-mqu1vat1-5-5kao",
-          "equipped": false,
-          "ownerCharacterId": "",
-          "icon": "*",
+          "id": "item-mqu1vat1-2-0fx2",
           "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
           "quantity": "1",
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "infoRows": [],
           "attributes": [
             {
-              "value": 5,
-              "label": "Schaden"
+              "label": "Schaden",
+              "value": 5
             },
             {
-              "value": 3,
-              "label": "Schutz"
+              "label": "Schutz",
+              "value": 3
             },
             {
-              "value": 4,
-              "label": "Wert"
+              "label": "Wert",
+              "value": 4
             },
             {
-              "value": 2,
-              "label": "Seltenheit"
+              "label": "Seltenheit",
+              "value": 2
             },
             {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
+              "label": "Zuverlaessigkeit",
+              "value": 6
             },
             {
-              "value": 5,
-              "label": "Handhabung"
+              "label": "Handhabung",
+              "value": 5
             }
-          ],
-          "category": "other",
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "potions",
+          "icon": "*",
           "image": "",
-          "originItemDbKey": ""
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "other",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
         }
       ],
       "companions": [
@@ -5171,88 +5524,6 @@
             {
               "label": "Sozialverhalten",
               "value": 4
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "description": "",
-          "status": "Gesund",
-          "statusColor": "#5c7f20",
-          "role": "Begleiter",
-          "species": "Tier oder Begleiter",
-          "name": "Reittier / Gefährte",
-          "imagePosition": "top",
-          "imageFormat": "landscape",
-          "infoRows": [],
-          "summary": "Kurzbeschreibung des Gefährten.",
-          "id": "companion-mqu1vat2-0-zz2n",
-          "image": "",
-          "imageFit": "cover",
-          "attributes": [
-            {
-              "value": 6,
-              "label": "Schnelligkeit"
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "value": 4,
-              "label": "Sozialverhalten"
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "name": "Treuer Begleiter",
-          "imageFormat": "landscape",
-          "imageFit": "cover",
-          "status": "Noch festlegen",
-          "infoRows": [],
-          "role": "Gefährte",
-          "imagePosition": "top",
-          "summary": "Besonderheit, Nutzen oder Bindung.",
-          "image": "",
-          "id": "companion-mqu1vat2-1-5e7l",
-          "species": "Tier / Person",
-          "description": "",
-          "statusColor": "#5c7f20",
-          "attributes": [
-            {
-              "value": 6,
-              "label": "Schnelligkeit"
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "value": 5,
-              "label": "Staerke"
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "value": 4,
-              "label": "Sozialverhalten"
             },
             {
               "label": "Robustheit",
@@ -5357,45 +5628,45 @@
           "modifierOverride": null
         },
         {
+          "key": "strength",
+          "label": "Kraft",
           "shortLabel": "KRF",
           "score": 10,
-          "label": "Kraft",
-          "key": "strength",
           "modifierOverride": null
         },
         {
-          "label": "Geschick",
-          "score": 10,
           "key": "dexterity",
+          "label": "Geschick",
           "shortLabel": "GES",
+          "score": 10,
           "modifierOverride": null
         },
         {
-          "shortLabel": "KON",
           "key": "constitution",
           "label": "Konstitution",
+          "shortLabel": "KON",
           "score": 10,
           "modifierOverride": null
         },
         {
-          "shortLabel": "INT",
           "key": "intelligence",
           "label": "Intelligenz",
-          "modifierOverride": null,
-          "score": 10
+          "shortLabel": "INT",
+          "score": 10,
+          "modifierOverride": null
         },
         {
-          "score": 10,
+          "key": "wisdom",
           "label": "Weisheit",
           "shortLabel": "WEI",
-          "modifierOverride": null,
-          "key": "wisdom"
+          "score": 10,
+          "modifierOverride": null
         },
         {
-          "score": 10,
-          "shortLabel": "CHA",
           "key": "charisma",
           "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
           "modifierOverride": null
         }
       ],
@@ -5462,40 +5733,16 @@
           "bonus": 0
         },
         {
-          "bonus": 0,
-          "expertise": false,
+          "attributeKey": "strength",
           "proficient": false,
-          "attributeKey": "strength"
-        },
-        {
           "expertise": false,
-          "attributeKey": "dexterity",
-          "proficient": false,
           "bonus": 0
         },
         {
           "attributeKey": "constitution",
           "proficient": false,
-          "bonus": 0,
-          "expertise": false
-        },
-        {
-          "attributeKey": "intelligence",
           "expertise": false,
-          "bonus": 0,
-          "proficient": false
-        },
-        {
-          "expertise": false,
-          "proficient": false,
-          "bonus": 0,
-          "attributeKey": "wisdom"
-        },
-        {
-          "proficient": false,
-          "bonus": 0,
-          "attributeKey": "charisma",
-          "expertise": false
+          "bonus": 0
         }
       ],
       "skills": [
@@ -5660,148 +5907,76 @@
           "notes": "Jahrzehnte disziplinierten Drachentanz-Trainings."
         },
         {
-          "notes": "",
-          "proficiency": "none",
+          "id": "default-skill-1",
           "name": "Athletik",
           "attributeKey": "strength",
-          "id": "default-skill-1",
-          "bonus": 0
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
         },
         {
-          "bonus": 0,
-          "proficiency": "none",
           "id": "default-skill-2",
           "name": "Akrobatik",
-          "notes": "",
-          "attributeKey": "dexterity"
-        },
-        {
           "attributeKey": "dexterity",
-          "id": "default-skill-3",
-          "notes": "",
-          "name": "Fingerfertigkeit",
           "proficiency": "none",
-          "bonus": 0
-        },
-        {
-          "proficiency": "none",
-          "notes": "",
-          "attributeKey": "dexterity",
-          "name": "Heimlichkeit",
           "bonus": 0,
-          "id": "default-skill-4"
-        },
-        {
-          "bonus": 0,
-          "attributeKey": "intelligence",
-          "id": "default-skill-5",
-          "name": "Arkane Kunde",
-          "proficiency": "none",
           "notes": ""
         },
         {
-          "bonus": 0,
-          "proficiency": "none",
+          "id": "default-skill-6",
           "name": "Geschichte",
-          "notes": "",
-          "attributeKey": "intelligence",
-          "id": "default-skill-6"
-        },
-        {
-          "notes": "",
-          "name": "Nachforschungen",
-          "id": "default-skill-7",
           "attributeKey": "intelligence",
           "proficiency": "none",
-          "bonus": 0
-        },
-        {
-          "id": "default-skill-8",
-          "notes": "",
-          "attributeKey": "intelligence",
-          "proficiency": "none",
-          "name": "Naturkunde",
-          "bonus": 0
-        },
-        {
-          "notes": "",
-          "name": "Religion",
-          "id": "default-skill-9",
           "bonus": 0,
-          "proficiency": "none",
-          "attributeKey": "intelligence"
-        },
-        {
-          "bonus": 0,
-          "id": "default-skill-10",
-          "name": "Heilkunde",
-          "notes": "",
-          "attributeKey": "wisdom",
-          "proficiency": "none"
-        },
-        {
-          "notes": "",
-          "name": "Mit Tieren umgehen",
-          "proficiency": "none",
-          "bonus": 0,
-          "attributeKey": "wisdom",
-          "id": "default-skill-11"
-        },
-        {
-          "name": "Motiv erkennen",
-          "bonus": 0,
-          "attributeKey": "wisdom",
-          "proficiency": "none",
-          "id": "default-skill-12",
           "notes": ""
         },
         {
-          "notes": "",
-          "id": "default-skill-13",
+          "id": "default-skill-9",
+          "name": "Religion",
+          "attributeKey": "intelligence",
           "proficiency": "none",
-          "name": "Überleben",
-          "attributeKey": "wisdom",
-          "bonus": 0
+          "bonus": 0,
+          "notes": ""
         },
         {
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
           "attributeKey": "wisdom",
-          "notes": "",
-          "name": "Wahrnehmung",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
           "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
           "bonus": 0,
-          "proficiency": "none"
+          "notes": ""
         },
         {
-          "attributeKey": "charisma",
-          "bonus": 0,
-          "proficiency": "none",
           "id": "default-skill-15",
           "name": "Auftreten",
-          "notes": ""
-        },
-        {
-          "proficiency": "none",
-          "bonus": 0,
-          "id": "default-skill-16",
           "attributeKey": "charisma",
-          "name": "Einschüchtern",
+          "proficiency": "none",
+          "bonus": 0,
           "notes": ""
         },
         {
-          "bonus": 0,
-          "name": "Täuschen",
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "attributeKey": "charisma",
           "proficiency": "none",
-          "id": "default-skill-17",
-          "notes": "",
-          "attributeKey": "charisma"
+          "bonus": 0,
+          "notes": ""
         },
         {
-          "notes": "",
-          "name": "Überreden",
           "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
           "proficiency": "none",
           "bonus": 0,
-          "attributeKey": "charisma"
+          "notes": ""
         }
       ],
       "weapons": [
@@ -6140,28 +6315,28 @@
           "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
         },
         {
-          "notes": "",
-          "recovery": "manual",
-          "maximum": 1,
+          "id": "inspiration",
           "name": "Inspiration",
           "current": 0,
-          "id": "inspiration"
+          "maximum": 1,
+          "recovery": "manual",
+          "notes": ""
         },
         {
-          "notes": "",
-          "maximum": 0,
+          "id": "mana-focus",
           "name": "Mana / Fokus",
           "current": 0,
+          "maximum": 0,
           "recovery": "long-rest",
-          "id": "mana-focus"
+          "notes": ""
         },
         {
+          "id": "fate-points",
+          "name": "Schicksalspunkte",
           "current": 0,
           "maximum": 0,
           "recovery": "manual",
-          "id": "fate-points",
-          "notes": "",
-          "name": "Schicksalspunkte"
+          "notes": ""
         }
       ],
       "techniques": [

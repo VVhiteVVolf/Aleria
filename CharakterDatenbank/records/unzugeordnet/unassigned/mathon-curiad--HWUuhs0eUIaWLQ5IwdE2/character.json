@@ -2,9 +2,9 @@
   "schema": "aleria.character-record",
   "schemaVersion": 1,
   "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
-  "slug": "namenloser-draig-waffenknecht-i",
+  "slug": "mathon-curiad",
   "identity": {
-    "name": "Namenloser Draig Waffenknecht I.",
+    "name": "Mathon Curiad",
     "aliases": [],
     "worldPersonId": ""
   },
@@ -39,7 +39,7 @@
         {
           "documentId": "HWUuhs0eUIaWLQ5IwdE2",
           "createdAt": "",
-          "updatedAt": ""
+          "updatedAt": "2026-08-09T10:08:55.036Z"
         }
       ]
     },
@@ -48,13 +48,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-09T10:08:55.036Z",
     "sourceDocumentIds": [
       "HWUuhs0eUIaWLQ5IwdE2"
     ],
-    "contentHash": "227fd71b0547756266f0ecc5b66128cf9d8bc4fb7c0f788b863c052ddda2b45e"
+    "contentHash": "b2f1e5a13cf646bf73d72d74c5908ac63cc176d21d0dc8a8b5b9b836db0d2bae"
   },
   "local": {
     "notes": "",
@@ -67,7 +67,7 @@
       {
         "id": "HWUuhs0eUIaWLQ5IwdE2",
         "playerOwner": "",
-        "name": "Namenloser Draig Waffenknecht I.",
+        "name": "Mathon Curiad",
         "bio": "",
         "title": "Waffenknecht, Gwynthor",
         "inventory": {
@@ -515,15 +515,87 @@
         "profileLink": "",
         "emotesOverride": true,
         "aliases": [],
-        "emotes": [],
-        "archived": false
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/gZ2rI4I.png",
+            "label": "gZ2rI4I"
+          }
+        ],
+        "archived": false,
+        "activeImageSetId": "standard",
+        "currentLocation": "",
+        "genealogy": {
+          "birth": "",
+          "death": "",
+          "familyRole": "",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "",
+          "relationships": {
+            "children": [],
+            "parents": [],
+            "partners": []
+          },
+          "sex": "unknown",
+          "sources": [],
+          "status": "",
+          "tags": [],
+          "worldPersonId": ""
+        },
+        "identity": {
+          "worldPersonId": ""
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-08-09T10:08:16.394Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/gZ2rI4I.png",
+                "label": "gZ2rI4I"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/gZ2rI4I.png",
+            "updatedAt": "2026-08-09T10:08:16.394Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "localRecord": {
+          "classification": {
+            "families": [],
+            "familyStatus": "pending",
+            "groups": [],
+            "places": [],
+            "primary": {
+              "id": "unassigned",
+              "kind": "unassigned",
+              "label": "Unzugeordnet"
+            }
+          },
+          "contentHash": "227fd71b0547756266f0ecc5b66128cf9d8bc4fb7c0f788b863c052ddda2b45e",
+          "firestoreDocumentIds": [
+            "HWUuhs0eUIaWLQ5IwdE2"
+          ],
+          "path": "records/unzugeordnet/unassigned/namenloser-draig-waffenknecht-i--HWUuhs0eUIaWLQ5IwdE2/character.json",
+          "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
+          "schemaVersion": 1
+        },
+        "origin": "",
+        "plotNode": "",
+        "relevance": "",
+        "role": "",
+        "status": "",
+        "taxonomyPath": "",
+        "updatedAt": "2026-08-09T10:08:55.036Z"
       }
     ]
   },
   "character": {
     "id": "HWUuhs0eUIaWLQ5IwdE2",
     "playerOwner": "",
-    "name": "Namenloser Draig Waffenknecht I.",
+    "name": "Mathon Curiad",
     "bio": "",
     "title": "Waffenknecht, Gwynthor",
     "inventory": {
@@ -971,28 +1043,79 @@
     "profileLink": "",
     "emotesOverride": true,
     "aliases": [],
-    "emotes": [],
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/gZ2rI4I.png",
+        "label": "gZ2rI4I"
+      }
+    ],
     "archived": false,
+    "activeImageSetId": "standard",
+    "currentLocation": "",
+    "genealogy": {
+      "birth": "",
+      "death": "",
+      "familyRole": "",
+      "houseId": "",
+      "houseName": "",
+      "portraitPlaceholder": "",
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "sex": "unknown",
+      "sources": [],
+      "status": "",
+      "tags": [],
+      "worldPersonId": ""
+    },
     "identity": {
       "worldPersonId": ""
     },
-    "genealogy": {
-      "worldPersonId": "",
-      "sex": "",
-      "status": "",
-      "birth": "",
-      "death": "",
-      "houseId": "",
-      "houseName": "",
-      "familyRole": "",
-      "portraitPlaceholder": "",
-      "tags": [],
-      "sources": [],
-      "relationships": {
-        "parents": [],
-        "partners": [],
-        "children": []
+    "imageSets": [
+      {
+        "createdAt": "2026-08-09T10:08:16.394Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/gZ2rI4I.png",
+            "label": "gZ2rI4I"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/gZ2rI4I.png",
+        "updatedAt": "2026-08-09T10:08:16.394Z"
       }
-    }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "localRecord": {
+      "classification": {
+        "families": [],
+        "familyStatus": "pending",
+        "groups": [],
+        "places": [],
+        "primary": {
+          "id": "unassigned",
+          "kind": "unassigned",
+          "label": "Unzugeordnet"
+        }
+      },
+      "contentHash": "227fd71b0547756266f0ecc5b66128cf9d8bc4fb7c0f788b863c052ddda2b45e",
+      "firestoreDocumentIds": [
+        "HWUuhs0eUIaWLQ5IwdE2"
+      ],
+      "path": "records/unzugeordnet/unassigned/namenloser-draig-waffenknecht-i--HWUuhs0eUIaWLQ5IwdE2/character.json",
+      "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
+      "schemaVersion": 1
+    },
+    "origin": "",
+    "plotNode": "",
+    "relevance": "",
+    "role": "",
+    "status": "",
+    "taxonomyPath": "",
+    "updatedAt": "2026-08-09T10:08:55.036Z"
   }
 }

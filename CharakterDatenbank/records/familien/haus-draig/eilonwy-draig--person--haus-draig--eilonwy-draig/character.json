@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--eilonwy-draig",
+  "slug": "eilonwy-draig",
+  "identity": {
+    "name": "Eilonwy Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--eilonwy-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "eilonwy-draig",
+        "worldPersonId": "person--haus-draig--eilonwy-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=eilonwy-draig",
+        "fingerprint": "{\"name\":\"Eilonwy Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trayvon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"},{\"personId\":\"rihanna-ceirwynn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--rihanna-ceirwynn\",\"name\":\"Rihanna Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--eilonwy-draig",
+      "documentIds": [
+        "person--haus-draig--eilonwy-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--eilonwy-draig",
+          "createdAt": "2026-09-03T23:41:59.126Z",
+          "updatedAt": "2026-09-03T23:41:59.126Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "eilonwy-draig",
+        "worldPersonId": "person--haus-draig--eilonwy-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=eilonwy-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:59.126Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--eilonwy-draig"
+    ],
+    "contentHash": "be09b20a907104466dadf9cfb38105a1d3a4527af0a81292e607c27202166a7b"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:59.126Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1695",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Trayvon Draig",
+                "personId": "trayvon-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--trayvon-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rihanna Ceirwyn",
+                "personId": "rihanna-ceirwynn",
+                "type": "biological",
+                "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Eilonwy Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trayvon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"},{\"personId\":\"rihanna-ceirwynn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--rihanna-ceirwynn\",\"name\":\"Rihanna Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:41:59.126Z",
+              "lastSyncedAt": "2026-09-03T23:41:59.126Z",
+              "personId": "eilonwy-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=eilonwy-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--eilonwy-draig"
+        },
+        "id": "person--haus-draig--eilonwy-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--eilonwy-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Eilonwy Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:41:59.126Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:59.126Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1695",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Trayvon Draig",
+            "personId": "trayvon-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--trayvon-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rihanna Ceirwyn",
+            "personId": "rihanna-ceirwynn",
+            "type": "biological",
+            "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Eilonwy Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trayvon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"},{\"personId\":\"rihanna-ceirwynn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--rihanna-ceirwynn\",\"name\":\"Rihanna Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:41:59.126Z",
+          "lastSyncedAt": "2026-09-03T23:41:59.126Z",
+          "personId": "eilonwy-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=eilonwy-draig"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--eilonwy-draig"
+    },
+    "id": "person--haus-draig--eilonwy-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--eilonwy-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Eilonwy Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:41:59.126Z"
+  }
+}

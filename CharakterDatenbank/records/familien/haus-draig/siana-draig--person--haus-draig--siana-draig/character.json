@@ -1,0 +1,285 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--siana-draig",
+  "slug": "siana-draig",
+  "identity": {
+    "name": "Siana Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--siana-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=siana-draig",
+        "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"}],\"partners\":[],\"children\":[]}}",
+        "score": 260
+      },
+      {
+        "familyId": "haus-arth",
+        "familyTitle": "Haus Arth O'Talgarth",
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Klaueninsel",
+          "Sturmklaue",
+          "Talgarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=siana-draig",
+        "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--siana-draig",
+      "documentIds": [
+        "person--haus-draig--siana-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--siana-draig",
+          "createdAt": "2026-09-03T23:43:00.549Z",
+          "updatedAt": "2026-09-03T23:43:00.549Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=siana-draig"
+      },
+      {
+        "familyId": "haus-arth",
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=siana-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:43:00.549Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--siana-draig"
+    ],
+    "contentHash": "05b0745d610078ac81652bc3db2d216a25db1842cd038e6cdb116f980bfbc92a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:43:00.549Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1725",
+          "death": "",
+          "familyRole": "bastard",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Owain Draig",
+                "personId": "owain-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--owain-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Sylvia O'Cenyr",
+                "personId": "sylvia-cenyr",
+                "type": "biological",
+                "worldPersonId": "person--haus-cenyr--sylvia-cenyr"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:43:00.549Z",
+              "lastSyncedAt": "2026-09-03T23:43:00.549Z",
+              "personId": "siana-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=siana-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--siana-draig"
+        },
+        "id": "person--haus-draig--siana-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--siana-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Siana Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:43:00.549Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:43:00.549Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1725",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Owain Draig",
+            "personId": "owain-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--owain-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Sylvia O'Cenyr",
+            "personId": "sylvia-cenyr",
+            "type": "biological",
+            "worldPersonId": "person--haus-cenyr--sylvia-cenyr"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:43:00.549Z",
+          "lastSyncedAt": "2026-09-03T23:43:00.549Z",
+          "personId": "siana-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=siana-draig"
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "siana-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=siana-draig",
+          "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--siana-draig"
+    },
+    "id": "person--haus-draig--siana-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--siana-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Siana Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:43:00.549Z"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draenmelyn--gethin-draenmelyn",
+  "slug": "gethin-draenmelyn",
+  "identity": {
+    "name": "Gethin Draenmelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draenmelyn",
+      "label": "Haus Draenmelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draenmelyn",
+        "familyTitle": "Haus Draenmelyn",
+        "personId": "gethin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn",
+        "houseId": "house-draenmelyn",
+        "houseName": "Haus Draenmelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gethin-draenmelyn",
+        "fingerprint": "{\"name\":\"Gethin Draenmelyn\",\"title\":\"Junger Bediensteter des Hauses Draig\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draenmelyn--gethin-draenmelyn",
+      "documentIds": [
+        "person--haus-draenmelyn--gethin-draenmelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draenmelyn--gethin-draenmelyn",
+          "createdAt": "2026-09-03T23:48:47.043Z",
+          "updatedAt": "2026-09-03T23:48:47.043Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draenmelyn",
+        "personId": "gethin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gethin-draenmelyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:48:47.043Z",
+    "sourceDocumentIds": [
+      "person--haus-draenmelyn--gethin-draenmelyn"
+    ],
+    "contentHash": "33098b11ebcc2b01ae58a930356937f9859750ad40e6abdd55c46a75b0a53cee"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:48:47.043Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draenmelyn",
+        "genealogy": {
+          "birth": "1725",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draenmelyn",
+          "houseName": "Haus Draenmelyn",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Afan Draenmelyn",
+                "personId": "afan-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Elen",
+                "personId": "elen-spouse-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "fingerprint": "{\"name\":\"Gethin Draenmelyn\",\"title\":\"Junger Bediensteter des Hauses Draig\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/IEHF8TV.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:48:47.043Z",
+              "lastSyncedAt": "2026-09-03T23:48:47.043Z",
+              "personId": "gethin-draenmelyn",
+              "publishedAt": "2026-09-02T21:26:08.587Z",
+              "releaseId": "github-r1",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gethin-draenmelyn"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+        },
+        "id": "person--haus-draenmelyn--gethin-draenmelyn",
+        "identity": {
+          "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Gethin Draenmelyn",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "https://i.imgur.com/IEHF8TV.png",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Junger Bediensteter des Hauses Draig",
+        "updatedAt": "2026-09-03T23:48:47.043Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:48:47.043Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draenmelyn",
+    "genealogy": {
+      "birth": "1725",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draenmelyn",
+      "houseName": "Haus Draenmelyn",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Afan Draenmelyn",
+            "personId": "afan-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Elen",
+            "personId": "elen-spouse-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draenmelyn",
+          "fingerprint": "{\"name\":\"Gethin Draenmelyn\",\"title\":\"Junger Bediensteter des Hauses Draig\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/IEHF8TV.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:48:47.043Z",
+          "lastSyncedAt": "2026-09-03T23:48:47.043Z",
+          "personId": "gethin-draenmelyn",
+          "publishedAt": "2026-09-02T21:26:08.587Z",
+          "releaseId": "github-r1",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gethin-draenmelyn"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+    },
+    "id": "person--haus-draenmelyn--gethin-draenmelyn",
+    "identity": {
+      "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Gethin Draenmelyn",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "https://i.imgur.com/IEHF8TV.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Junger Bediensteter des Hauses Draig",
+    "updatedAt": "2026-09-03T23:48:47.043Z"
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-laidir--padraigin-laidir",
+  "slug": "padraigin-laidir",
+  "identity": {
+    "name": "Pádraigin Laidir",
+    "aliases": [],
+    "worldPersonId": "person--haus-laidir--padraigin-laidir"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-laidir",
+      "label": "Ruin’Laidir"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-laidir",
+        "familyTitle": "Ruin’Laidir",
+        "personId": "padraigin-laidir",
+        "worldPersonId": "person--haus-laidir--padraigin-laidir",
+        "houseId": "house-laidir",
+        "houseName": "Ruin’Laidir",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Lehensherrschaft der Ruin’Laidir",
+          "Claisean"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-laidir&mode=view&person=padraigin-laidir",
+        "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trianach-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--trianach-laidir\",\"name\":\"Trianach Laidir\"},{\"personId\":\"sinead-choinnich\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-choinnich--sinead-choinnich\",\"name\":\"Sinead Choinnich\"}],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[{\"personId\":\"nogh-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--nogh-laidir\",\"name\":\"Nógh Laidir\"},{\"personId\":\"onora-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--onora-laidir\",\"name\":\"Onóra Laidir\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-dal-t-saor",
+        "familyTitle": "Dal T’Saor",
+        "personId": "padraigin-laidir",
+        "worldPersonId": "person--haus-laidir--padraigin-laidir",
+        "houseId": "house-laidir",
+        "houseName": "Ruin’Laidir",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Sruthlann"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=padraigin-laidir",
+        "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-laidir--padraigin-laidir",
+      "documentIds": [
+        "person--haus-laidir--padraigin-laidir"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-laidir--padraigin-laidir",
+          "createdAt": "2026-09-03T23:47:19.270Z",
+          "updatedAt": "2026-09-03T23:47:19.270Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-laidir",
+        "personId": "padraigin-laidir",
+        "worldPersonId": "person--haus-laidir--padraigin-laidir",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-laidir&mode=view&person=padraigin-laidir"
+      },
+      {
+        "familyId": "haus-dal-t-saor",
+        "personId": "padraigin-laidir",
+        "worldPersonId": "person--haus-laidir--padraigin-laidir",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=padraigin-laidir"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:47:19.270Z",
+    "sourceDocumentIds": [
+      "person--haus-laidir--padraigin-laidir"
+    ],
+    "contentHash": "e9bad76f213dc10434fec59943457146d683da8279987a928187ae6c3aaaae4e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:47:19.270Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Ruin’Laidir",
+        "genealogy": {
+          "birth": "1694",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-laidir",
+          "houseName": "Ruin’Laidir",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Nógh Laidir",
+                "personId": "nogh-laidir",
+                "type": "biological",
+                "worldPersonId": "person--haus-laidir--nogh-laidir"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Onóra Laidir",
+                "personId": "onora-laidir",
+                "type": "biological",
+                "worldPersonId": "person--haus-laidir--onora-laidir"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Trianach Laidir",
+                "personId": "trianach-laidir",
+                "type": "biological",
+                "worldPersonId": "person--haus-laidir--trianach-laidir"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Sinead Choinnich",
+                "personId": "sinead-choinnich",
+                "type": "biological",
+                "worldPersonId": "person--haus-choinnich--sinead-choinnich"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Junaid T’Saoir",
+                "personId": "junaid-tsaoir",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--haus-dal-t-saor--junaid-tsaoir"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-laidir",
+              "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trianach-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--trianach-laidir\",\"name\":\"Trianach Laidir\"},{\"personId\":\"sinead-choinnich\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-choinnich--sinead-choinnich\",\"name\":\"Sinead Choinnich\"}],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[{\"personId\":\"nogh-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--nogh-laidir\",\"name\":\"Nógh Laidir\"},{\"personId\":\"onora-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--onora-laidir\",\"name\":\"Onóra Laidir\"}]}}",
+              "importedAt": "2026-09-03T23:47:19.270Z",
+              "lastSyncedAt": "2026-09-03T23:47:19.270Z",
+              "personId": "padraigin-laidir",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-laidir&mode=view&person=padraigin-laidir"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-laidir--padraigin-laidir"
+        },
+        "id": "person--haus-laidir--padraigin-laidir",
+        "identity": {
+          "worldPersonId": "person--haus-laidir--padraigin-laidir"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Pádraigin Laidir",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Leitheach > Tir an Comhchuibhis > Lehensherrschaft der Ruin’Laidir > Claisean",
+        "title": "",
+        "updatedAt": "2026-09-03T23:47:19.270Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:47:19.270Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Ruin’Laidir",
+    "genealogy": {
+      "birth": "1694",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-laidir",
+      "houseName": "Ruin’Laidir",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Nógh Laidir",
+            "personId": "nogh-laidir",
+            "type": "biological",
+            "worldPersonId": "person--haus-laidir--nogh-laidir"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Onóra Laidir",
+            "personId": "onora-laidir",
+            "type": "biological",
+            "worldPersonId": "person--haus-laidir--onora-laidir"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Trianach Laidir",
+            "personId": "trianach-laidir",
+            "type": "biological",
+            "worldPersonId": "person--haus-laidir--trianach-laidir"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Sinead Choinnich",
+            "personId": "sinead-choinnich",
+            "type": "biological",
+            "worldPersonId": "person--haus-choinnich--sinead-choinnich"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Junaid T’Saoir",
+            "personId": "junaid-tsaoir",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--haus-dal-t-saor--junaid-tsaoir"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-laidir",
+          "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"trianach-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--trianach-laidir\",\"name\":\"Trianach Laidir\"},{\"personId\":\"sinead-choinnich\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-choinnich--sinead-choinnich\",\"name\":\"Sinead Choinnich\"}],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[{\"personId\":\"nogh-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--nogh-laidir\",\"name\":\"Nógh Laidir\"},{\"personId\":\"onora-laidir\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-laidir--onora-laidir\",\"name\":\"Onóra Laidir\"}]}}",
+          "importedAt": "2026-09-03T23:47:19.270Z",
+          "lastSyncedAt": "2026-09-03T23:47:19.270Z",
+          "personId": "padraigin-laidir",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-laidir&mode=view&person=padraigin-laidir"
+        },
+        {
+          "familyId": "haus-dal-t-saor",
+          "personId": "padraigin-laidir",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=padraigin-laidir",
+          "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-laidir--padraigin-laidir"
+    },
+    "id": "person--haus-laidir--padraigin-laidir",
+    "identity": {
+      "worldPersonId": "person--haus-laidir--padraigin-laidir"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Pádraigin Laidir",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Leitheach > Tir an Comhchuibhis > Lehensherrschaft der Ruin’Laidir > Claisean",
+    "title": "",
+    "updatedAt": "2026-09-03T23:47:19.270Z"
+  }
+}

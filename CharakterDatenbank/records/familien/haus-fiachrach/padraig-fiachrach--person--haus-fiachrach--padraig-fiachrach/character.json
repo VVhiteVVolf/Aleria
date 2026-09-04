@@ -1,0 +1,248 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-fiachrach--padraig-fiachrach",
+  "slug": "padraig-fiachrach",
+  "identity": {
+    "name": "Pádraig Fiachrach",
+    "aliases": [],
+    "worldPersonId": "person--haus-fiachrach--padraig-fiachrach"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-fiachrach",
+      "label": "Clan Uí Fiachrach"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-fiachrach",
+        "familyTitle": "Clan Uí Fiachrach",
+        "personId": "padraig-fiachrach",
+        "worldPersonId": "person--haus-fiachrach--padraig-fiachrach",
+        "houseId": "house-fiachrach",
+        "houseName": "Clan Uí Fiachrach",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=padraig-fiachrach",
+        "fingerprint": "{\"name\":\"Pádraig Fiachrach\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ui-fiachrach/padraig-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gormflaith-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--gormflaith-fiachrach\",\"name\":\"Gormflaith Fiachrach\"},{\"personId\":\"tomos-unknown-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tomos-unknown-fiachrach\",\"name\":\"Tomos\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-fiachrach--padraig-fiachrach",
+      "documentIds": [
+        "person--haus-fiachrach--padraig-fiachrach"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-fiachrach--padraig-fiachrach",
+          "createdAt": "2026-09-03T23:45:53.549Z",
+          "updatedAt": "2026-09-03T23:45:53.549Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-fiachrach",
+        "personId": "padraig-fiachrach",
+        "worldPersonId": "person--haus-fiachrach--padraig-fiachrach",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=padraig-fiachrach"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:45:53.549Z",
+    "sourceDocumentIds": [
+      "person--haus-fiachrach--padraig-fiachrach"
+    ],
+    "contentHash": "4edbf7e117c11f450f59c56903155ef4099e5f731987984a508611751080049e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:45:53.549Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Clan Uí Fiachrach",
+        "genealogy": {
+          "birth": "1698",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-fiachrach",
+          "houseName": "Clan Uí Fiachrach",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gormflaith Fiachrach",
+                "personId": "gormflaith-fiachrach",
+                "type": "biological",
+                "worldPersonId": "person--haus-fiachrach--gormflaith-fiachrach"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Tomos",
+                "personId": "tomos-unknown-fiachrach",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--tomos-unknown-fiachrach"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-fiachrach",
+              "fingerprint": "{\"name\":\"Pádraig Fiachrach\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ui-fiachrach/padraig-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gormflaith-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--gormflaith-fiachrach\",\"name\":\"Gormflaith Fiachrach\"},{\"personId\":\"tomos-unknown-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tomos-unknown-fiachrach\",\"name\":\"Tomos\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:45:53.549Z",
+              "lastSyncedAt": "2026-09-03T23:45:53.549Z",
+              "personId": "padraig-fiachrach",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=padraig-fiachrach"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-fiachrach--padraig-fiachrach"
+        },
+        "id": "person--haus-fiachrach--padraig-fiachrach",
+        "identity": {
+          "worldPersonId": "person--haus-fiachrach--padraig-fiachrach"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Pádraig Fiachrach",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-ui-fiachrach/padraig-fiachrach.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Leitheach > Tir na Sleagh",
+        "title": "",
+        "updatedAt": "2026-09-03T23:45:53.549Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:45:53.549Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Clan Uí Fiachrach",
+    "genealogy": {
+      "birth": "1698",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-fiachrach",
+      "houseName": "Clan Uí Fiachrach",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gormflaith Fiachrach",
+            "personId": "gormflaith-fiachrach",
+            "type": "biological",
+            "worldPersonId": "person--haus-fiachrach--gormflaith-fiachrach"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Tomos",
+            "personId": "tomos-unknown-fiachrach",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--tomos-unknown-fiachrach"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-fiachrach",
+          "fingerprint": "{\"name\":\"Pádraig Fiachrach\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-fiachrach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ui-fiachrach/padraig-fiachrach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gormflaith-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--gormflaith-fiachrach\",\"name\":\"Gormflaith Fiachrach\"},{\"personId\":\"tomos-unknown-fiachrach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tomos-unknown-fiachrach\",\"name\":\"Tomos\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:45:53.549Z",
+          "lastSyncedAt": "2026-09-03T23:45:53.549Z",
+          "personId": "padraig-fiachrach",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view&person=padraig-fiachrach"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-fiachrach--padraig-fiachrach"
+    },
+    "id": "person--haus-fiachrach--padraig-fiachrach",
+    "identity": {
+      "worldPersonId": "person--haus-fiachrach--padraig-fiachrach"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Pádraig Fiachrach",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-ui-fiachrach/padraig-fiachrach.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Leitheach > Tir na Sleagh",
+    "title": "",
+    "updatedAt": "2026-09-03T23:45:53.549Z"
+  }
+}

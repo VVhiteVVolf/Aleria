@@ -1,0 +1,318 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draenmelyn--afan-draenmelyn",
+  "slug": "afan-draenmelyn",
+  "identity": {
+    "name": "Afan Draenmelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draenmelyn",
+      "label": "Haus Draenmelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draenmelyn",
+        "familyTitle": "Haus Draenmelyn",
+        "personId": "afan-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn",
+        "houseId": "house-draenmelyn",
+        "houseName": "Haus Draenmelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=afan-draenmelyn",
+        "fingerprint": "{\"name\":\"Afan Draenmelyn\",\"title\":\"Hausdiener der Draigs\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"children\":[{\"personId\":\"sioned-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--sioned-draenmelyn\",\"name\":\"Sioned Draenmelyn\"},{\"personId\":\"taliesin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--taliesin-draenmelyn\",\"name\":\"Taliesin Draenmelyn\"},{\"personId\":\"gethin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--gethin-draenmelyn\",\"name\":\"Gethin Draenmelyn\"}]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draenmelyn--afan-draenmelyn",
+      "documentIds": [
+        "person--haus-draenmelyn--afan-draenmelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draenmelyn--afan-draenmelyn",
+          "createdAt": "2026-09-03T23:48:45.051Z",
+          "updatedAt": "2026-09-03T23:48:45.051Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draenmelyn",
+        "personId": "afan-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=afan-draenmelyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:48:45.051Z",
+    "sourceDocumentIds": [
+      "person--haus-draenmelyn--afan-draenmelyn"
+    ],
+    "contentHash": "9a6b28ec34e1d0cd6c634ebf877db71f7695f30ae135317213461f28b704b604"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:48:45.051Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draenmelyn",
+        "genealogy": {
+          "birth": "1694",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draenmelyn",
+          "houseName": "Haus Draenmelyn",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Sioned Draenmelyn",
+                "personId": "sioned-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Taliesin Draenmelyn",
+                "personId": "taliesin-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gethin Draenmelyn",
+                "personId": "gethin-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Ifor Draenmelyn",
+                "personId": "ifor-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Nest",
+                "personId": "nest-spouse-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--nest-spouse-draenmelyn"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Elen",
+                "personId": "elen-spouse-draenmelyn",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "fingerprint": "{\"name\":\"Afan Draenmelyn\",\"title\":\"Hausdiener der Draigs\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/yu4DXTn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"children\":[{\"personId\":\"sioned-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--sioned-draenmelyn\",\"name\":\"Sioned Draenmelyn\"},{\"personId\":\"taliesin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--taliesin-draenmelyn\",\"name\":\"Taliesin Draenmelyn\"},{\"personId\":\"gethin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--gethin-draenmelyn\",\"name\":\"Gethin Draenmelyn\"}]}}",
+              "importedAt": "2026-09-03T23:48:45.051Z",
+              "lastSyncedAt": "2026-09-03T23:48:45.051Z",
+              "personId": "afan-draenmelyn",
+              "publishedAt": "2026-09-02T21:26:08.587Z",
+              "releaseId": "github-r1",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=afan-draenmelyn"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+        },
+        "id": "person--haus-draenmelyn--afan-draenmelyn",
+        "identity": {
+          "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Afan Draenmelyn",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "https://i.imgur.com/yu4DXTn.png",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Hausdiener der Draigs",
+        "updatedAt": "2026-09-03T23:48:45.051Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:48:45.051Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draenmelyn",
+    "genealogy": {
+      "birth": "1694",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draenmelyn",
+      "houseName": "Haus Draenmelyn",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Sioned Draenmelyn",
+            "personId": "sioned-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--sioned-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Taliesin Draenmelyn",
+            "personId": "taliesin-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gethin Draenmelyn",
+            "personId": "gethin-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--gethin-draenmelyn"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Ifor Draenmelyn",
+            "personId": "ifor-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Nest",
+            "personId": "nest-spouse-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--nest-spouse-draenmelyn"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Elen",
+            "personId": "elen-spouse-draenmelyn",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--family-tree--elen-spouse-draenmelyn"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draenmelyn",
+          "fingerprint": "{\"name\":\"Afan Draenmelyn\",\"title\":\"Hausdiener der Draigs\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/yu4DXTn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"children\":[{\"personId\":\"sioned-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--sioned-draenmelyn\",\"name\":\"Sioned Draenmelyn\"},{\"personId\":\"taliesin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--taliesin-draenmelyn\",\"name\":\"Taliesin Draenmelyn\"},{\"personId\":\"gethin-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--gethin-draenmelyn\",\"name\":\"Gethin Draenmelyn\"}]}}",
+          "importedAt": "2026-09-03T23:48:45.051Z",
+          "lastSyncedAt": "2026-09-03T23:48:45.051Z",
+          "personId": "afan-draenmelyn",
+          "publishedAt": "2026-09-02T21:26:08.587Z",
+          "releaseId": "github-r1",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=afan-draenmelyn"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+    },
+    "id": "person--haus-draenmelyn--afan-draenmelyn",
+    "identity": {
+      "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Afan Draenmelyn",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "https://i.imgur.com/yu4DXTn.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Hausdiener der Draigs",
+    "updatedAt": "2026-09-03T23:48:45.051Z"
+  }
+}

@@ -1,0 +1,977 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--jenna-o-cenyr",
+  "slug": "jenna-o-cenyr",
+  "identity": {
+    "name": "Jenna O'Cenyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "jenna-o-cenyr",
+      "documentIds": [
+        "jenna-o-cenyr"
+      ],
+      "documents": [
+        {
+          "documentId": "jenna-o-cenyr",
+          "createdAt": "2026-09-04T00:44:57.519Z",
+          "updatedAt": "2026-09-04T01:35:49.381Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-04T01:35:49.381Z",
+    "sourceDocumentIds": [
+      "jenna-o-cenyr"
+    ],
+    "contentHash": "00e731fa1c2ae239ba7ddc00f4ffd67383434226b50194f8214f53a422db453a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "standard",
+        "aliases": [],
+        "archived": false,
+        "bio": "Jenna O'Cenyr ist eine neunundzwanzigjährige Paladina Maelonas und Kirchritterin der Abendschilde. Die in einem ländlichen Kloster aufgewachsene Waise verbindet Heilkunst, Segnungen und geschichtliches Wissen mit einer bodenständigen Fürsorge für das einfache Volk.",
+        "biography": {
+          "biography": {
+            "abilities": [
+              {
+                "detail": "Jenna trennt einen Menschen von seinem schlimmsten Fehler und sucht zuerst nach dem Weg, auf dem geholfen werden kann.",
+                "icon": "../IconOrdner/Traits Icon/Charitable.png",
+                "title": "Barmherzig"
+              },
+              {
+                "detail": "Sie bemerkt Hunger, Erschöpfung und kleine Verletzungen oft früher als die Betroffenen selbst und kümmert sich ohne Ansehen des Standes.",
+                "icon": "../IconOrdner/Traits Icon/Kind.png",
+                "title": "Fürsorglich"
+              },
+              {
+                "detail": "Ihre Sanftmut endet dort, wo Wehrlose bedroht werden. Dann bleibt sie ruhig, klar und erstaunlich schwer zurückzudrängen.",
+                "icon": "../IconOrdner/Traits Icon/Brave.png",
+                "title": "Standhaft"
+              },
+              {
+                "detail": "Jenna behandelt die eigenen Grenzen wie eine lästige Nebensache. Sie bleibt zu lange wach, trägt zu viel und bittet erst um Hilfe, wenn es kaum anders geht.",
+                "icon": "../IconOrdner/Traits Icon/Stressed.png",
+                "title": "Selbstaufopfernd"
+              },
+              {
+                "detail": "Aus echter Sorge entscheidet sie bisweilen ungefragt, was für andere gut sei – besonders bei Kranken, Verwundeten und jüngeren Gefährten.",
+                "icon": "../IconOrdner/Traits Icon/Arbitrary.png",
+                "title": "Bevormundend"
+              },
+              {
+                "detail": "Sie hält lange an der Möglichkeit von Reue fest. Dadurch schenkt sie Menschen bisweilen noch Vertrauen, nachdem Vorsicht vernünftiger wäre.",
+                "icon": "../IconOrdner/Traits Icon/Trusting.png",
+                "title": "Zu nachsichtig"
+              }
+            ],
+            "abilitiesTitle": "Charakter",
+            "biographyText": "Über Jennas Eltern ist nichts bekannt. Ihre frühesten verlässlichen Erinnerungen gehören einem ländlichen Waisenheim und Kloster nahe Gwynthor: dem Läuten der Gebetsglocke, dem Geruch von Kräutern und nasser Erde und den immer gleichen Händen, die Brot, Verbände und Arbeit unter viel zu vielen Kindern verteilten. Wie andere Waisen und vermutlich unehelich Geborene erhielt sie den Beinamen <strong>O'Cenyr</strong>. Sie lernte früh, dass Herkunft darüber entscheidet, wie Menschen angesehen werden – aber nicht darüber, was sie einander schulden.<br><br>Im Kloster begegnete Jenna Maelona nicht zuerst in großen Predigten, sondern in alltäglicher Barmherzigkeit. Sie half in Küche und Garten, saß an Krankenlagern und begleitete die Schwestern zu abgelegenen Höfen. Dort entstand ihr Glaube an die Mutter als Göttin der Liebe und des Erbarmens: Wer Trost spenden kann, soll nicht an einem Titel, einer schmutzigen Schürze oder einem leeren Geldbeutel vorbeisehen.<br><br>Als junge Frau trat Jenna in den <strong>Orden der Lilie</strong> ein. Bei den in Cenyr einflussreichen <strong>Abendschilden</strong> wurde sie zur Kirchritterin ausgebildet. Sie erwies sich nicht als überragende Duellantin, wohl aber als verlässliche Kämpferin, die unter Druck die Linie hält, Verwundete erreicht und ihren Schild eher vor einen anderen als vor sich selbst stellt. Ihre eigentliche Stärke blieb die Verbindung aus praktischem Heilen, göttlichem Segen und der Fähigkeit, auch Menschen zuzuhören, die vor einer hohen Geistlichen kaum zu sprechen wagen würden.",
+            "biographyTitle": "Biografie",
+            "connectionPortraitHeight": 68,
+            "connections": [
+              {
+                "detail": "",
+                "title": "Orden & Kirche",
+                "type": "heading"
+              },
+              {
+                "detail": "Leiterin der Abendschilde in Tân Maelfa · Fürsprecherin",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Eilonwy Draig",
+                "type": "connection"
+              },
+              {
+                "detail": "Patriarch · Dienstherr und geistliche Autorität",
+                "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                "imageFormat": "portrait",
+                "name": "Gwalchgwyn Saethwyr",
+                "type": "connection"
+              },
+              {
+                "detail": "",
+                "title": "Heerschau",
+                "type": "heading"
+              },
+              {
+                "detail": "Als Paladina für sein künftiges Gefolge vorgeschlagen",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/anaraut-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Anaraut Draig",
+                "type": "connection"
+              }
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connectionTextOffset": 0,
+            "documents": [],
+            "documentsTitle": "Zeichen & Besitz",
+            "extraSections": [
+              {
+                "mode": "text",
+                "position": "afterIntro",
+                "text": "Jenna hat Maelona den <strong>Eid der Jungfrau</strong> geschworen. Bis zum Ende ihres dreißigsten Lebensjahres darf sie weder heiraten noch sich einem Mann hingeben; sie ist diesem Gelübde ohne Bruch treu geblieben. Für Jenna ist der Eid keine Geringschätzung von Liebe oder Ehe, sondern eine zeitlich begrenzte, ungeteilte Hingabe an den Dienst der Mutter. Mit Ablauf des dreißigsten Lebensjahres gilt er als erfüllt, und sie dürfte frei heiraten. Ob sie das tatsächlich tun möchte, hat sie bislang nicht entschieden.",
+                "title": "Glaube & Eid"
+              }
+            ],
+            "footer": "Personenakte · Jenna O'Cenyr",
+            "historyText": "Jennas Tugendhaftigkeit und ihre beharrliche Fürsorge für das einfache Volk fielen <strong>Eilonwy Draig</strong> auf, der Leiterin der Abendschilde in <strong>Tân Maelfa</strong>. Auf Eilonwys Empfehlung gelangte Jenna in das nähere Gefolge des Patriarchen <strong>Gwalchgwyn Saethwyr</strong>.<br><br>Als der Patriarch gebeten wurde, Anaraut Draigs neuer Truppe einen Kleriker oder Paladin zur Seite zu stellen, kam Jenna in die engere Wahl. Sie bringt keine überragende Turnierkunst mit, wohl aber genau jene Mischung, die auf einem langen Feldzug selten genug ist: eine belastbare Heilerin, eine gebildete Geistliche und eine Ritterin, die das Wohlergehen der einfachen Leute auch dann im Blick behält, wenn Heerführer bereits über größere Ziele sprechen.",
+            "historyTitle": "Weg in Anarauts Gefolge",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "quotes": [
+              "„Setzt Euch. Das war keine Bitte.“",
+              "„Die Mutter verlangt nicht, dass wir blind vergeben. Nur, dass wir den Menschen noch sehen.“"
+            ],
+            "quotesTitle": "Typische Worte",
+            "sideWidth": 100,
+            "trivia": [
+              "Führt im Gebetbuch lose Zettel mit den Namen von Menschen, für die sie beten will. Erhörte Bitten werden nicht gestrichen, sondern mit einer kleinen Lilie markiert.",
+              "Trägt fast immer getrocknete Apfelstücke oder Honigbonbons bei sich, offiziell gegen Schwächeanfälle – tatsächlich vor allem für Kinder und erschöpfte Wachen.",
+              "Flickt beim Zuhören Gewänder, Gurte oder Handschuhe. Manchmal bemerkt der Besitzer erst später, dass Jenna etwas an sich genommen und ausgebessert hat.",
+              "Prüft bei Reisegefährten ungefragt Verbände, Wasservorräte und Mantelschließen. Ein entschiedenes „Mir fehlt nichts“ betrachtet sie nur als Beginn der Untersuchung.",
+              "Isst selbst erst, wenn sie überzeugt ist, dass alle anderen etwas bekommen haben – eine Gewohnheit, wegen der man sie regelmäßig an den eigenen Teller erinnern muss.",
+              "Auf höfische Komplimente reagiert sie mit einem kurzen Erröten und einer sachlichen Gegenfrage. Flirt erkennt sie durchaus; sie lässt ihm nur selten Raum."
+            ],
+            "triviaTitle": "Marotten & Eigenheiten",
+            "works": [
+              "Heilung · Versorgt Wunden und Krankheiten mit klösterlicher Heilkunde und der Gnade Maelonas.",
+              "Segnungen · Spricht Schutz-, Trost- und Reiseseegen und stärkt Mut und Zuversicht ihrer Gefährten.",
+              "Ritterlicher Kampf · Solide ausgebildet mit Schwert, Schild und schwerer Rüstung; zuverlässig, aber den besten Rittern in Anarauts Gefolge nicht überlegen.",
+              "Religion · Kennt Liturgie, Orden, Heiligenüberlieferungen und die Lehren der verbreiteten Gottheiten sehr gut.",
+              "Geschichte · Ist besonders in Kirchengeschichte, Pilgerwegen und der Geschichte Cenyrs bewandert.",
+              "Seelsorge · Gewinnt durch geduldiges Zuhören rasch das Vertrauen von Bauern, Kindern, Kranken und Ausgestoßenen."
+            ],
+            "worksTitle": "Können & Fachgebiete"
+          },
+          "quote": "Barmherzigkeit heißt nicht, den Schild zu senken. Sie heißt, zu wissen, für wen man ihn hebt.",
+          "quoteBy": "— Jenna O'Cenyr",
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Jenna O'Cenyr"
+            },
+            {
+              "label": "Beiname",
+              "value": "O'Cenyr · Eltern und Herkunft unbekannt"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Schwester Jenna · Kirchritterin"
+            },
+            {
+              "label": "Geboren",
+              "value": "1711"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "29 Jahre"
+            },
+            {
+              "label": "Aufgewachsen",
+              "value": "Ländliches Waisenheim und Kloster nahe Gwynthor"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Weiblich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Unverheiratet · Eid der Jungfrau"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": "Paladina · kirchlich gesalbte Ritterin"
+            },
+            {
+              "label": "Gottheit",
+              "value": "Maelona, die Mutter"
+            },
+            {
+              "label": "Orden",
+              "value": "Orden der Lilie · Abendschilde"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Heilerin, Seelsorgerin und Kirchritterin"
+            },
+            {
+              "label": "Wirkungsort",
+              "value": "Tân Maelfa, Gwynthor und das Gefolge des Patriarchen"
+            }
+          ]
+        },
+        "createdAt": "2026-09-04T00:44:57.519Z",
+        "currentLocation": "Tân Maelfa / Gwynthor",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/r9vt9og.png",
+            "label": "r9vt9og"
+          },
+          {
+            "img": "https://i.imgur.com/0pbmTLq.png",
+            "label": "0pbmTLq"
+          },
+          {
+            "img": "https://i.imgur.com/mYym78m.png",
+            "label": "mYym78m"
+          },
+          {
+            "img": "https://i.imgur.com/j6vuGPQ.png",
+            "label": "j6vuGPQ"
+          },
+          {
+            "img": "https://i.imgur.com/xXlSUav.png",
+            "label": "xXlSUav"
+          },
+          {
+            "img": "https://i.imgur.com/ovkXuPp.png",
+            "label": "ovkXuPp"
+          },
+          {
+            "img": "https://i.imgur.com/koJ2CHm.png",
+            "label": "koJ2CHm"
+          },
+          {
+            "img": "https://i.imgur.com/cGsZFoE.png",
+            "label": "cGsZFoE"
+          },
+          {
+            "img": "https://i.imgur.com/euCLU1t.png",
+            "label": "euCLU1t"
+          },
+          {
+            "img": "https://i.imgur.com/TreMjC4.png",
+            "label": "TreMjC4"
+          },
+          {
+            "img": "https://i.imgur.com/1BjXJPH.png",
+            "label": "1BjXJPH"
+          },
+          {
+            "img": "https://i.imgur.com/NzSPk8E.png",
+            "label": "NzSPk8E"
+          },
+          {
+            "img": "https://i.imgur.com/ftny9UA.png",
+            "label": "ftny9UA"
+          },
+          {
+            "img": "https://i.imgur.com/tgOU697.png",
+            "label": "tgOU697"
+          },
+          {
+            "img": "https://i.imgur.com/72YWPCx.png",
+            "label": "72YWPCx"
+          },
+          {
+            "img": "https://i.imgur.com/2wsM8Vj.png",
+            "label": "2wsM8Vj"
+          },
+          {
+            "img": "https://i.imgur.com/sq4naq4.png",
+            "label": "sq4naq4"
+          },
+          {
+            "img": "https://i.imgur.com/rzAhu7X.png",
+            "label": "rzAhu7X"
+          },
+          {
+            "img": "https://i.imgur.com/XGtWJBp.png",
+            "label": "XGtWJBp"
+          },
+          {
+            "img": "https://i.imgur.com/q9ilele.png",
+            "label": "q9ilele"
+          },
+          {
+            "img": "https://i.imgur.com/hS3HpDY.png",
+            "label": "hS3HpDY"
+          },
+          {
+            "img": "https://i.imgur.com/JjOt6hs.png",
+            "label": "JjOt6hs"
+          },
+          {
+            "img": "https://i.imgur.com/fVHiuGu.png",
+            "label": "fVHiuGu"
+          },
+          {
+            "img": "https://i.imgur.com/CUfsvYS.png",
+            "label": "CUfsvYS"
+          },
+          {
+            "img": "https://i.imgur.com/vz8dkgz.png",
+            "label": "vz8dkgz"
+          },
+          {
+            "img": "https://i.imgur.com/BCm0qUT.png",
+            "label": "BCm0qUT"
+          },
+          {
+            "img": "https://i.imgur.com/TDRKQjR.png",
+            "label": "TDRKQjR"
+          }
+        ],
+        "emotesOverride": true,
+        "fraktion": "Celtigerns Wacht",
+        "genealogy": {
+          "birth": "1711",
+          "death": "",
+          "familyRole": "",
+          "houseId": "",
+          "houseName": "",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [],
+          "status": "alive",
+          "tags": [
+            "Waise",
+            "O'Cenyr",
+            "Orden der Lilie",
+            "Abendschilde"
+          ],
+          "worldPersonId": ""
+        },
+        "id": "jenna-o-cenyr",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "imageSets": [
+          {
+            "createdAt": "2026-09-04T00:44:57.519Z",
+            "emotes": [
+              {
+                "img": "https://i.imgur.com/r9vt9og.png",
+                "label": "r9vt9og"
+              },
+              {
+                "img": "https://i.imgur.com/0pbmTLq.png",
+                "label": "0pbmTLq"
+              },
+              {
+                "img": "https://i.imgur.com/mYym78m.png",
+                "label": "mYym78m"
+              },
+              {
+                "img": "https://i.imgur.com/j6vuGPQ.png",
+                "label": "j6vuGPQ"
+              },
+              {
+                "img": "https://i.imgur.com/xXlSUav.png",
+                "label": "xXlSUav"
+              },
+              {
+                "img": "https://i.imgur.com/ovkXuPp.png",
+                "label": "ovkXuPp"
+              },
+              {
+                "img": "https://i.imgur.com/koJ2CHm.png",
+                "label": "koJ2CHm"
+              },
+              {
+                "img": "https://i.imgur.com/cGsZFoE.png",
+                "label": "cGsZFoE"
+              },
+              {
+                "img": "https://i.imgur.com/euCLU1t.png",
+                "label": "euCLU1t"
+              },
+              {
+                "img": "https://i.imgur.com/TreMjC4.png",
+                "label": "TreMjC4"
+              },
+              {
+                "img": "https://i.imgur.com/1BjXJPH.png",
+                "label": "1BjXJPH"
+              },
+              {
+                "img": "https://i.imgur.com/NzSPk8E.png",
+                "label": "NzSPk8E"
+              },
+              {
+                "img": "https://i.imgur.com/ftny9UA.png",
+                "label": "ftny9UA"
+              },
+              {
+                "img": "https://i.imgur.com/tgOU697.png",
+                "label": "tgOU697"
+              },
+              {
+                "img": "https://i.imgur.com/72YWPCx.png",
+                "label": "72YWPCx"
+              },
+              {
+                "img": "https://i.imgur.com/2wsM8Vj.png",
+                "label": "2wsM8Vj"
+              },
+              {
+                "img": "https://i.imgur.com/sq4naq4.png",
+                "label": "sq4naq4"
+              },
+              {
+                "img": "https://i.imgur.com/rzAhu7X.png",
+                "label": "rzAhu7X"
+              },
+              {
+                "img": "https://i.imgur.com/XGtWJBp.png",
+                "label": "XGtWJBp"
+              },
+              {
+                "img": "https://i.imgur.com/q9ilele.png",
+                "label": "q9ilele"
+              },
+              {
+                "img": "https://i.imgur.com/hS3HpDY.png",
+                "label": "hS3HpDY"
+              },
+              {
+                "img": "https://i.imgur.com/JjOt6hs.png",
+                "label": "JjOt6hs"
+              },
+              {
+                "img": "https://i.imgur.com/fVHiuGu.png",
+                "label": "fVHiuGu"
+              },
+              {
+                "img": "https://i.imgur.com/CUfsvYS.png",
+                "label": "CUfsvYS"
+              },
+              {
+                "img": "https://i.imgur.com/vz8dkgz.png",
+                "label": "vz8dkgz"
+              },
+              {
+                "img": "https://i.imgur.com/BCm0qUT.png",
+                "label": "BCm0qUT"
+              },
+              {
+                "img": "https://i.imgur.com/TDRKQjR.png",
+                "label": "TDRKQjR"
+              }
+            ],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/D26NAlc.png",
+            "updatedAt": "2026-09-04T00:44:57.519Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true,
+        "inventory": null,
+        "name": "Jenna O'Cenyr",
+        "origin": "Ländliches Kloster nahe Gwynthor",
+        "playerOwner": "",
+        "plotNode": "Anarauts Heerschau",
+        "portrait": "https://i.imgur.com/D26NAlc.png",
+        "profileLink": "",
+        "relevance": "supporting",
+        "role": "Paladin Maelonas · Heilerin und Kirchritterin",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor > Tân Maelfa",
+        "title": "Paladin Maelonas · Ritterin",
+        "updatedAt": "2026-09-04T01:35:49.381Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "standard",
+    "aliases": [],
+    "archived": false,
+    "bio": "Jenna O'Cenyr ist eine neunundzwanzigjährige Paladina Maelonas und Kirchritterin der Abendschilde. Die in einem ländlichen Kloster aufgewachsene Waise verbindet Heilkunst, Segnungen und geschichtliches Wissen mit einer bodenständigen Fürsorge für das einfache Volk.",
+    "biography": {
+      "biography": {
+        "abilities": [
+          {
+            "detail": "Jenna trennt einen Menschen von seinem schlimmsten Fehler und sucht zuerst nach dem Weg, auf dem geholfen werden kann.",
+            "icon": "../IconOrdner/Traits Icon/Charitable.png",
+            "title": "Barmherzig"
+          },
+          {
+            "detail": "Sie bemerkt Hunger, Erschöpfung und kleine Verletzungen oft früher als die Betroffenen selbst und kümmert sich ohne Ansehen des Standes.",
+            "icon": "../IconOrdner/Traits Icon/Kind.png",
+            "title": "Fürsorglich"
+          },
+          {
+            "detail": "Ihre Sanftmut endet dort, wo Wehrlose bedroht werden. Dann bleibt sie ruhig, klar und erstaunlich schwer zurückzudrängen.",
+            "icon": "../IconOrdner/Traits Icon/Brave.png",
+            "title": "Standhaft"
+          },
+          {
+            "detail": "Jenna behandelt die eigenen Grenzen wie eine lästige Nebensache. Sie bleibt zu lange wach, trägt zu viel und bittet erst um Hilfe, wenn es kaum anders geht.",
+            "icon": "../IconOrdner/Traits Icon/Stressed.png",
+            "title": "Selbstaufopfernd"
+          },
+          {
+            "detail": "Aus echter Sorge entscheidet sie bisweilen ungefragt, was für andere gut sei – besonders bei Kranken, Verwundeten und jüngeren Gefährten.",
+            "icon": "../IconOrdner/Traits Icon/Arbitrary.png",
+            "title": "Bevormundend"
+          },
+          {
+            "detail": "Sie hält lange an der Möglichkeit von Reue fest. Dadurch schenkt sie Menschen bisweilen noch Vertrauen, nachdem Vorsicht vernünftiger wäre.",
+            "icon": "../IconOrdner/Traits Icon/Trusting.png",
+            "title": "Zu nachsichtig"
+          }
+        ],
+        "abilitiesTitle": "Charakter",
+        "biographyText": "Über Jennas Eltern ist nichts bekannt. Ihre frühesten verlässlichen Erinnerungen gehören einem ländlichen Waisenheim und Kloster nahe Gwynthor: dem Läuten der Gebetsglocke, dem Geruch von Kräutern und nasser Erde und den immer gleichen Händen, die Brot, Verbände und Arbeit unter viel zu vielen Kindern verteilten. Wie andere Waisen und vermutlich unehelich Geborene erhielt sie den Beinamen <strong>O'Cenyr</strong>. Sie lernte früh, dass Herkunft darüber entscheidet, wie Menschen angesehen werden – aber nicht darüber, was sie einander schulden.<br><br>Im Kloster begegnete Jenna Maelona nicht zuerst in großen Predigten, sondern in alltäglicher Barmherzigkeit. Sie half in Küche und Garten, saß an Krankenlagern und begleitete die Schwestern zu abgelegenen Höfen. Dort entstand ihr Glaube an die Mutter als Göttin der Liebe und des Erbarmens: Wer Trost spenden kann, soll nicht an einem Titel, einer schmutzigen Schürze oder einem leeren Geldbeutel vorbeisehen.<br><br>Als junge Frau trat Jenna in den <strong>Orden der Lilie</strong> ein. Bei den in Cenyr einflussreichen <strong>Abendschilden</strong> wurde sie zur Kirchritterin ausgebildet. Sie erwies sich nicht als überragende Duellantin, wohl aber als verlässliche Kämpferin, die unter Druck die Linie hält, Verwundete erreicht und ihren Schild eher vor einen anderen als vor sich selbst stellt. Ihre eigentliche Stärke blieb die Verbindung aus praktischem Heilen, göttlichem Segen und der Fähigkeit, auch Menschen zuzuhören, die vor einer hohen Geistlichen kaum zu sprechen wagen würden.",
+        "biographyTitle": "Biografie",
+        "connectionPortraitHeight": 68,
+        "connections": [
+          {
+            "detail": "",
+            "title": "Orden & Kirche",
+            "type": "heading"
+          },
+          {
+            "detail": "Leiterin der Abendschilde in Tân Maelfa · Fürsprecherin",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/eilonwy-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Eilonwy Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "Patriarch · Dienstherr und geistliche Autorität",
+            "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+            "imageFormat": "portrait",
+            "name": "Gwalchgwyn Saethwyr",
+            "type": "connection"
+          },
+          {
+            "detail": "",
+            "title": "Heerschau",
+            "type": "heading"
+          },
+          {
+            "detail": "Als Paladina für sein künftiges Gefolge vorgeschlagen",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/anaraut-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Anaraut Draig",
+            "type": "connection"
+          }
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connectionTextOffset": 0,
+        "documents": [],
+        "documentsTitle": "Zeichen & Besitz",
+        "extraSections": [
+          {
+            "mode": "text",
+            "position": "afterIntro",
+            "text": "Jenna hat Maelona den <strong>Eid der Jungfrau</strong> geschworen. Bis zum Ende ihres dreißigsten Lebensjahres darf sie weder heiraten noch sich einem Mann hingeben; sie ist diesem Gelübde ohne Bruch treu geblieben. Für Jenna ist der Eid keine Geringschätzung von Liebe oder Ehe, sondern eine zeitlich begrenzte, ungeteilte Hingabe an den Dienst der Mutter. Mit Ablauf des dreißigsten Lebensjahres gilt er als erfüllt, und sie dürfte frei heiraten. Ob sie das tatsächlich tun möchte, hat sie bislang nicht entschieden.",
+            "title": "Glaube & Eid"
+          }
+        ],
+        "footer": "Personenakte · Jenna O'Cenyr",
+        "historyText": "Jennas Tugendhaftigkeit und ihre beharrliche Fürsorge für das einfache Volk fielen <strong>Eilonwy Draig</strong> auf, der Leiterin der Abendschilde in <strong>Tân Maelfa</strong>. Auf Eilonwys Empfehlung gelangte Jenna in das nähere Gefolge des Patriarchen <strong>Gwalchgwyn Saethwyr</strong>.<br><br>Als der Patriarch gebeten wurde, Anaraut Draigs neuer Truppe einen Kleriker oder Paladin zur Seite zu stellen, kam Jenna in die engere Wahl. Sie bringt keine überragende Turnierkunst mit, wohl aber genau jene Mischung, die auf einem langen Feldzug selten genug ist: eine belastbare Heilerin, eine gebildete Geistliche und eine Ritterin, die das Wohlergehen der einfachen Leute auch dann im Blick behält, wenn Heerführer bereits über größere Ziele sprechen.",
+        "historyTitle": "Weg in Anarauts Gefolge",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [
+          "„Setzt Euch. Das war keine Bitte.“",
+          "„Die Mutter verlangt nicht, dass wir blind vergeben. Nur, dass wir den Menschen noch sehen.“"
+        ],
+        "quotesTitle": "Typische Worte",
+        "sideWidth": 100,
+        "trivia": [
+          "Führt im Gebetbuch lose Zettel mit den Namen von Menschen, für die sie beten will. Erhörte Bitten werden nicht gestrichen, sondern mit einer kleinen Lilie markiert.",
+          "Trägt fast immer getrocknete Apfelstücke oder Honigbonbons bei sich, offiziell gegen Schwächeanfälle – tatsächlich vor allem für Kinder und erschöpfte Wachen.",
+          "Flickt beim Zuhören Gewänder, Gurte oder Handschuhe. Manchmal bemerkt der Besitzer erst später, dass Jenna etwas an sich genommen und ausgebessert hat.",
+          "Prüft bei Reisegefährten ungefragt Verbände, Wasservorräte und Mantelschließen. Ein entschiedenes „Mir fehlt nichts“ betrachtet sie nur als Beginn der Untersuchung.",
+          "Isst selbst erst, wenn sie überzeugt ist, dass alle anderen etwas bekommen haben – eine Gewohnheit, wegen der man sie regelmäßig an den eigenen Teller erinnern muss.",
+          "Auf höfische Komplimente reagiert sie mit einem kurzen Erröten und einer sachlichen Gegenfrage. Flirt erkennt sie durchaus; sie lässt ihm nur selten Raum."
+        ],
+        "triviaTitle": "Marotten & Eigenheiten",
+        "works": [
+          "Heilung · Versorgt Wunden und Krankheiten mit klösterlicher Heilkunde und der Gnade Maelonas.",
+          "Segnungen · Spricht Schutz-, Trost- und Reiseseegen und stärkt Mut und Zuversicht ihrer Gefährten.",
+          "Ritterlicher Kampf · Solide ausgebildet mit Schwert, Schild und schwerer Rüstung; zuverlässig, aber den besten Rittern in Anarauts Gefolge nicht überlegen.",
+          "Religion · Kennt Liturgie, Orden, Heiligenüberlieferungen und die Lehren der verbreiteten Gottheiten sehr gut.",
+          "Geschichte · Ist besonders in Kirchengeschichte, Pilgerwegen und der Geschichte Cenyrs bewandert.",
+          "Seelsorge · Gewinnt durch geduldiges Zuhören rasch das Vertrauen von Bauern, Kindern, Kranken und Ausgestoßenen."
+        ],
+        "worksTitle": "Können & Fachgebiete"
+      },
+      "quote": "Barmherzigkeit heißt nicht, den Schild zu senken. Sie heißt, zu wissen, für wen man ihn hebt.",
+      "quoteBy": "— Jenna O'Cenyr",
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Jenna O'Cenyr"
+        },
+        {
+          "label": "Beiname",
+          "value": "O'Cenyr · Eltern und Herkunft unbekannt"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Schwester Jenna · Kirchritterin"
+        },
+        {
+          "label": "Geboren",
+          "value": "1711"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "29 Jahre"
+        },
+        {
+          "label": "Aufgewachsen",
+          "value": "Ländliches Waisenheim und Kloster nahe Gwynthor"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Weiblich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Unverheiratet · Eid der Jungfrau"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Paladina · kirchlich gesalbte Ritterin"
+        },
+        {
+          "label": "Gottheit",
+          "value": "Maelona, die Mutter"
+        },
+        {
+          "label": "Orden",
+          "value": "Orden der Lilie · Abendschilde"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Heilerin, Seelsorgerin und Kirchritterin"
+        },
+        {
+          "label": "Wirkungsort",
+          "value": "Tân Maelfa, Gwynthor und das Gefolge des Patriarchen"
+        }
+      ]
+    },
+    "createdAt": "2026-09-04T00:44:57.519Z",
+    "currentLocation": "Tân Maelfa / Gwynthor",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/r9vt9og.png",
+        "label": "r9vt9og"
+      },
+      {
+        "img": "https://i.imgur.com/0pbmTLq.png",
+        "label": "0pbmTLq"
+      },
+      {
+        "img": "https://i.imgur.com/mYym78m.png",
+        "label": "mYym78m"
+      },
+      {
+        "img": "https://i.imgur.com/j6vuGPQ.png",
+        "label": "j6vuGPQ"
+      },
+      {
+        "img": "https://i.imgur.com/xXlSUav.png",
+        "label": "xXlSUav"
+      },
+      {
+        "img": "https://i.imgur.com/ovkXuPp.png",
+        "label": "ovkXuPp"
+      },
+      {
+        "img": "https://i.imgur.com/koJ2CHm.png",
+        "label": "koJ2CHm"
+      },
+      {
+        "img": "https://i.imgur.com/cGsZFoE.png",
+        "label": "cGsZFoE"
+      },
+      {
+        "img": "https://i.imgur.com/euCLU1t.png",
+        "label": "euCLU1t"
+      },
+      {
+        "img": "https://i.imgur.com/TreMjC4.png",
+        "label": "TreMjC4"
+      },
+      {
+        "img": "https://i.imgur.com/1BjXJPH.png",
+        "label": "1BjXJPH"
+      },
+      {
+        "img": "https://i.imgur.com/NzSPk8E.png",
+        "label": "NzSPk8E"
+      },
+      {
+        "img": "https://i.imgur.com/ftny9UA.png",
+        "label": "ftny9UA"
+      },
+      {
+        "img": "https://i.imgur.com/tgOU697.png",
+        "label": "tgOU697"
+      },
+      {
+        "img": "https://i.imgur.com/72YWPCx.png",
+        "label": "72YWPCx"
+      },
+      {
+        "img": "https://i.imgur.com/2wsM8Vj.png",
+        "label": "2wsM8Vj"
+      },
+      {
+        "img": "https://i.imgur.com/sq4naq4.png",
+        "label": "sq4naq4"
+      },
+      {
+        "img": "https://i.imgur.com/rzAhu7X.png",
+        "label": "rzAhu7X"
+      },
+      {
+        "img": "https://i.imgur.com/XGtWJBp.png",
+        "label": "XGtWJBp"
+      },
+      {
+        "img": "https://i.imgur.com/q9ilele.png",
+        "label": "q9ilele"
+      },
+      {
+        "img": "https://i.imgur.com/hS3HpDY.png",
+        "label": "hS3HpDY"
+      },
+      {
+        "img": "https://i.imgur.com/JjOt6hs.png",
+        "label": "JjOt6hs"
+      },
+      {
+        "img": "https://i.imgur.com/fVHiuGu.png",
+        "label": "fVHiuGu"
+      },
+      {
+        "img": "https://i.imgur.com/CUfsvYS.png",
+        "label": "CUfsvYS"
+      },
+      {
+        "img": "https://i.imgur.com/vz8dkgz.png",
+        "label": "vz8dkgz"
+      },
+      {
+        "img": "https://i.imgur.com/BCm0qUT.png",
+        "label": "BCm0qUT"
+      },
+      {
+        "img": "https://i.imgur.com/TDRKQjR.png",
+        "label": "TDRKQjR"
+      }
+    ],
+    "emotesOverride": true,
+    "fraktion": "Celtigerns Wacht",
+    "genealogy": {
+      "birth": "1711",
+      "death": "",
+      "familyRole": "",
+      "houseId": "",
+      "houseName": "",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [],
+      "status": "alive",
+      "tags": [
+        "Waise",
+        "O'Cenyr",
+        "Orden der Lilie",
+        "Abendschilde"
+      ],
+      "worldPersonId": ""
+    },
+    "id": "jenna-o-cenyr",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "imageSets": [
+      {
+        "createdAt": "2026-09-04T00:44:57.519Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/r9vt9og.png",
+            "label": "r9vt9og"
+          },
+          {
+            "img": "https://i.imgur.com/0pbmTLq.png",
+            "label": "0pbmTLq"
+          },
+          {
+            "img": "https://i.imgur.com/mYym78m.png",
+            "label": "mYym78m"
+          },
+          {
+            "img": "https://i.imgur.com/j6vuGPQ.png",
+            "label": "j6vuGPQ"
+          },
+          {
+            "img": "https://i.imgur.com/xXlSUav.png",
+            "label": "xXlSUav"
+          },
+          {
+            "img": "https://i.imgur.com/ovkXuPp.png",
+            "label": "ovkXuPp"
+          },
+          {
+            "img": "https://i.imgur.com/koJ2CHm.png",
+            "label": "koJ2CHm"
+          },
+          {
+            "img": "https://i.imgur.com/cGsZFoE.png",
+            "label": "cGsZFoE"
+          },
+          {
+            "img": "https://i.imgur.com/euCLU1t.png",
+            "label": "euCLU1t"
+          },
+          {
+            "img": "https://i.imgur.com/TreMjC4.png",
+            "label": "TreMjC4"
+          },
+          {
+            "img": "https://i.imgur.com/1BjXJPH.png",
+            "label": "1BjXJPH"
+          },
+          {
+            "img": "https://i.imgur.com/NzSPk8E.png",
+            "label": "NzSPk8E"
+          },
+          {
+            "img": "https://i.imgur.com/ftny9UA.png",
+            "label": "ftny9UA"
+          },
+          {
+            "img": "https://i.imgur.com/tgOU697.png",
+            "label": "tgOU697"
+          },
+          {
+            "img": "https://i.imgur.com/72YWPCx.png",
+            "label": "72YWPCx"
+          },
+          {
+            "img": "https://i.imgur.com/2wsM8Vj.png",
+            "label": "2wsM8Vj"
+          },
+          {
+            "img": "https://i.imgur.com/sq4naq4.png",
+            "label": "sq4naq4"
+          },
+          {
+            "img": "https://i.imgur.com/rzAhu7X.png",
+            "label": "rzAhu7X"
+          },
+          {
+            "img": "https://i.imgur.com/XGtWJBp.png",
+            "label": "XGtWJBp"
+          },
+          {
+            "img": "https://i.imgur.com/q9ilele.png",
+            "label": "q9ilele"
+          },
+          {
+            "img": "https://i.imgur.com/hS3HpDY.png",
+            "label": "hS3HpDY"
+          },
+          {
+            "img": "https://i.imgur.com/JjOt6hs.png",
+            "label": "JjOt6hs"
+          },
+          {
+            "img": "https://i.imgur.com/fVHiuGu.png",
+            "label": "fVHiuGu"
+          },
+          {
+            "img": "https://i.imgur.com/CUfsvYS.png",
+            "label": "CUfsvYS"
+          },
+          {
+            "img": "https://i.imgur.com/vz8dkgz.png",
+            "label": "vz8dkgz"
+          },
+          {
+            "img": "https://i.imgur.com/BCm0qUT.png",
+            "label": "BCm0qUT"
+          },
+          {
+            "img": "https://i.imgur.com/TDRKQjR.png",
+            "label": "TDRKQjR"
+          }
+        ],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/D26NAlc.png",
+        "updatedAt": "2026-09-04T00:44:57.519Z"
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "inventory": null,
+    "name": "Jenna O'Cenyr",
+    "origin": "Ländliches Kloster nahe Gwynthor",
+    "playerOwner": "",
+    "plotNode": "Anarauts Heerschau",
+    "portrait": "https://i.imgur.com/D26NAlc.png",
+    "profileLink": "",
+    "relevance": "supporting",
+    "role": "Paladin Maelonas · Heilerin und Kirchritterin",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor > Tân Maelfa",
+    "title": "Paladin Maelonas · Ritterin",
+    "updatedAt": "2026-09-04T01:35:49.381Z"
+  }
+}

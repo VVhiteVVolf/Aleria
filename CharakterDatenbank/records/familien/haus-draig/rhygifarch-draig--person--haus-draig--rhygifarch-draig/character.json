@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--rhygifarch-draig",
+  "slug": "rhygifarch-draig",
+  "identity": {
+    "name": "Rhygifarch Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--rhygifarch-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "rhygifarch-draig",
+        "worldPersonId": "person--haus-draig--rhygifarch-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhygifarch-draig",
+        "fingerprint": "{\"name\":\"Rhygifarch Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rhygifarch-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"nesta\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"}],\"partners\":[],\"children\":[]}}",
+        "score": 180
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--rhygifarch-draig",
+      "documentIds": [
+        "person--haus-draig--rhygifarch-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--rhygifarch-draig",
+          "createdAt": "2026-09-03T23:42:59.685Z",
+          "updatedAt": "2026-09-03T23:42:59.685Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "rhygifarch-draig",
+        "worldPersonId": "person--haus-draig--rhygifarch-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhygifarch-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:42:59.685Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--rhygifarch-draig"
+    ],
+    "contentHash": "8a8ed96f262cafb7491669eda0a17fb79acd3ad3ca3ef9b9e6579d30da1e29ec"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:42:59.685Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "????",
+          "death": "",
+          "familyRole": "bastard",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Owain Draig",
+                "personId": "owain-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--owain-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Nesta",
+                "personId": "nesta",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--nesta"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Rhygifarch Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rhygifarch-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"nesta\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:42:59.685Z",
+              "lastSyncedAt": "2026-09-03T23:42:59.685Z",
+              "personId": "rhygifarch-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhygifarch-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--rhygifarch-draig"
+        },
+        "id": "person--haus-draig--rhygifarch-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--rhygifarch-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Rhygifarch Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/rhygifarch-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:42:59.685Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:42:59.685Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "????",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Owain Draig",
+            "personId": "owain-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--owain-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Nesta",
+            "personId": "nesta",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--nesta"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Rhygifarch Draig\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rhygifarch-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"nesta\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:42:59.685Z",
+          "lastSyncedAt": "2026-09-03T23:42:59.685Z",
+          "personId": "rhygifarch-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhygifarch-draig"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--rhygifarch-draig"
+    },
+    "id": "person--haus-draig--rhygifarch-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--rhygifarch-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Rhygifarch Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/rhygifarch-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:42:59.685Z"
+  }
+}

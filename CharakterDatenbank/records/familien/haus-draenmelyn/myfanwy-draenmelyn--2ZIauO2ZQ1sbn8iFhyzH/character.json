@@ -33,7 +33,7 @@
         ],
         "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn",
         "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
-        "score": 185
+        "score": 275
       }
     ],
     "familyAlternatives": [],
@@ -65,7 +65,7 @@
         {
           "documentId": "2ZIauO2ZQ1sbn8iFhyzH",
           "createdAt": "",
-          "updatedAt": ""
+          "updatedAt": "2026-09-04T01:52:08.014Z"
         }
       ]
     },
@@ -81,13 +81,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-04T01:52:08.014Z",
     "sourceDocumentIds": [
       "2ZIauO2ZQ1sbn8iFhyzH"
     ],
-    "contentHash": "28581f992c2d93bd8e3c7630117c193b68abdc2499b9754a9551a27dc0da8021"
+    "contentHash": "dcd29dc0d126a0c3c46f5cd3d04d28cd05871274bed61d1bf9eeb15ed7119d36"
   },
   "local": {
     "notes": "",
@@ -103,7 +103,7 @@
         "archived": false,
         "name": "Myfanwy Draenmelyn",
         "aliases": [],
-        "title": "Zofe, Gwynthor",
+        "title": "Persönliche Zofe Oweta Draigs · Gwynthor",
         "emotes": [
           {
             "img": "https://i.imgur.com/GBuXVrq.png",
@@ -584,9 +584,256 @@
         },
         "profileLink": "",
         "portrait": "https://i.imgur.com/03YDRX5.png",
-        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "fraktion": "Haus Draig · Haus Draenmelyn",
         "emotesOverride": true,
-        "bio": "Myfanwy Draenmelyn ist die Cousine des Kammerdieners Taliesin Draenmelyn und dient als persönliche Zofe der Ritterin Oweta Draig. Wie viele Angehörige ihrer Familie wurde sie schon früh für den Dienst am Hof ausgebildet und zeichnet sich durch ihre gute Erziehung, ihr höfliches Auftreten und ihre außergewöhnliche Aufmerksamkeit aus. Während ihr Cousin dazu neigt, jede Unannehmlichkeit mit dramatischer Besorgnis zu begleiten, begegnet Myfanwy den Herausforderungen des Hoflebens mit bemerkenswerter Ruhe und Gelassenheit.\n\nSie gilt als scharfsinnig und beobachtet ihre Umgebung mit wachem Blick, wodurch ihr nur selten wichtige Details entgehen. Viele unterschätzen die stille junge Dame zunächst, doch jene, die regelmäßig mit ihr zu tun haben, wissen ihre hohe Auffassungsgabe und ihre Zuverlässigkeit zu schätzen. Besonders Oweta vertraut auf ihr Urteilsvermögen, da Myfanwy oft bemerkt, was anderen verborgen bleibt, und dabei stets die nötige Diskretion wahrt."
+        "bio": "Myfanwy Draenmelyn ist die siebzehnjährige Cousine des Kammerdieners Taliesin Draenmelyn und persönliche Zofe der Ritterin Oweta Draig. Hinter ihrem höflichen, bemerkenswert gelassenen Auftreten stehen ein scharfer Blick, ein ausgezeichnetes Gedächtnis und jene Diskretion, der Oweta auch heikle Beobachtungen anvertraut.",
+        "biography": {
+          "biography": {
+            "abilities": [
+              {
+                "detail": "Myfanwy erfasst Zusammenhänge schnell und erkennt kleine Unstimmigkeiten, bevor andere überhaupt bemerken, dass etwas nicht stimmt.",
+                "icon": "../IconOrdner/Traits Icon/Shrewd.png",
+                "title": "Scharfsinnig"
+              },
+              {
+                "detail": "Was ihr im persönlichen Dienst anvertraut oder von ihr beobachtet wird, behandelt sie nicht als Ware für den nächsten Hofklatsch.",
+                "icon": "../IconOrdner/Traits Icon/Conscientious.png",
+                "title": "Diskret"
+              },
+              {
+                "detail": "Auch unter Zeitdruck bleibt sie höflich und handlungsfähig. Ihre Ruhe hilft ihr, Aufgaben zu ordnen, während andere noch über das Problem sprechen.",
+                "icon": "../IconOrdner/Traits Icon/Patient.png",
+                "title": "Gelassen"
+              },
+              {
+                "detail": "Myfanwy schützt nicht nur fremde Geheimnisse, sondern auch die eigenen Gefühle und Bedürfnisse. Selbst Nahestehende erfahren oft erst spät, wenn sie etwas belastet.",
+                "icon": "../IconOrdner/Traits Icon/Shy.png",
+                "title": "Verschlossen"
+              },
+              {
+                "detail": "Wer zu viele kleine Widersprüche zeigt, verliert ihr Vertrauen rasch. Mitunter sucht sie hinter einer Unachtsamkeit bereits eine Absicht, obwohl es tatsächlich nur eine Unachtsamkeit war.",
+                "icon": "../IconOrdner/Traits Icon/Paranoid.png",
+                "title": "Misstrauisch"
+              },
+              {
+                "detail": "Je unübersichtlicher eine Lage wird, desto stärker versucht Myfanwy, Abläufe, Gegenstände und Menschen still zu ordnen. Unerwartete Planänderungen akzeptiert sie höflich – aber selten gern.",
+                "icon": "../IconOrdner/Traits Icon/Organizer.png",
+                "title": "Kontrollbedürftig"
+              }
+            ],
+            "abilitiesTitle": "Charakter",
+            "biographyText": "Myfanwy Draenmelyn wurde 1723 als Tochter von <strong>Meurig Draenmelyn</strong> und <strong>Catrin</strong> geboren. Beide Eltern dienen im Haushalt der Draigs. Wie viele Angehörige des bürgerlichen Hauses Draenmelyn wuchs Myfanwy daher in einer Umgebung auf, in der gute Erziehung nicht bloß als Zierde, sondern als Handwerk verstanden wird. Haltung, Sprache, Verschwiegenheit und ein sicheres Gespür für Rang und Anlass wurden ihr ebenso früh vermittelt wie Nähen, Wäschepflege und die Führung kleiner Haushaltslisten.<br><br>Schon während ihrer Ausbildung fiel auf, dass Myfanwy selten zweimal auf dasselbe hingewiesen werden musste. Sie beobachtet Menschen und Räume mit wachem Blick, merkt sich beiläufig geäußerte Vorlieben und erkennt kleine Abweichungen zuverlässig: einen Gegenstand, der nicht an seinem Platz liegt, eine ungewohnte Anrede, einen fehlenden Schlüssel oder die kaum sichtbare Anspannung hinter höflichen Worten. Dabei besitzt sie nicht Taliesins Hang, jede Unannehmlichkeit in ein persönliches Drama zu verwandeln. Wo ihr Vetter die Hände über dem Kopf zusammenschlägt, wird Myfanwy meist nur etwas stiller.<br><br>Heute dient sie als persönliche Zofe der gleichaltrigen Ritterin <strong>Oweta Draig</strong>. Ihre Aufgaben reichen weit über Kleider, Haar und Schmuck hinaus. Sie bereitet Reisegepäck und Unterkleidung für die Rüstung vor, führt Owetas persönliche Listen, nimmt Nachrichten entgegen und sorgt dafür, dass ihre Herrin bemerkt, was an einem geschäftigen Hof leicht übersehen wird. Viele unterschätzen Myfanwy zunächst als stille junge Bedienstete. Wer regelmäßig mit ihr zu tun hat, weiß dagegen, dass hinter ihrem höflichen Auftreten ein ungewöhnlich schneller und sehr wachsamer Verstand arbeitet.",
+            "biographyTitle": "Biografie",
+            "connectionPortraitHeight": 68,
+            "connections": [
+              {
+                "detail": "",
+                "title": "Dienst",
+                "type": "heading"
+              },
+              {
+                "detail": "Herrin · vertraut auf Myfanwys Beobachtung und Urteil",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Oweta Draig",
+                "type": "connection"
+              },
+              {
+                "detail": "",
+                "title": "Familie",
+                "type": "heading"
+              },
+              {
+                "detail": "Vetter · Kammerdiener Gawain Draigs",
+                "image": "../Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png",
+                "imageFormat": "portrait",
+                "name": "Taliesin Draenmelyn",
+                "type": "connection"
+              },
+              {
+                "detail": "Vater · Hausdiener der Draigs",
+                "image": "",
+                "imageFormat": "portrait",
+                "name": "Meurig Draenmelyn",
+                "type": "connection"
+              },
+              {
+                "detail": "Mutter · Bedienstete im Draig-Haushalt",
+                "image": "",
+                "imageFormat": "portrait",
+                "name": "Catrin",
+                "type": "connection"
+              }
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connectionTextOffset": 0,
+            "documents": [],
+            "documentsTitle": "Persönliche Gegenstände",
+            "extraSections": [
+              {
+                "mode": "text",
+                "position": "afterIntro",
+                "text": "Myfanwy versteht Verschwiegenheit nicht als blindes Schweigen. Belanglose Peinlichkeiten und persönliche Schwächen ihrer Herrin schützt sie ohne Zögern; eine echte Gefahr würde sie Oweta dagegen stets melden. Kritik trägt sie niemals vor Publikum vor. Wenn sie widersprechen muss, wartet sie auf einen unbeobachteten Augenblick und formuliert ihre Warnung so ruhig, dass erst der Inhalt erkennen lässt, wie ernst sie es meint.",
+                "title": "Dienstverständnis"
+              }
+            ],
+            "footer": "Personenakte · Myfanwy Draenmelyn",
+            "historyText": "Dass Myfanwy und Oweta beide siebzehn Jahre alt sind, verändert die Rangordnung zwischen ihnen nicht, hat aber ein besonderes Verständnis geschaffen. Myfanwy kennt viele der Erwartungen, die an eine junge Frau am Hof gestellt werden, während Oweta zusätzlich die Pflichten und Gefahren einer Ritterin trägt. Sie behandelt ihre Herrin daher weder wie ein Kind noch wie eine unfehlbare Heldin.<br><br>Oweta vertraut besonders auf Myfanwys Urteilsvermögen. Die Zofe weiß, wann eine Beobachtung nur verwahrt werden sollte und wann sie ausgesprochen werden muss. Häufig reicht ein kurzer Hinweis, damit Oweta einen Gast, eine Nachricht oder eine scheinbar zufällige Begegnung ein zweites Mal betrachtet. Myfanwys Einfluss ist dadurch größer, als ihre Stellung vermuten lässt – gerade weil sie ihn niemals offen vorführt.<br><br>Ihre größte Aufgabe wird auf Dauer nicht darin bestehen, noch aufmerksamer zu werden. Sie wird lernen müssen, dass nicht jedes Problem durch bessere Vorbereitung beherrscht werden kann und dass Vertrauen gelegentlich bedeutet, eine Unsicherheit stehenzulassen.",
+            "historyTitle": "Im Dienst Oweta Draigs",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "quotes": [
+              "„Natürlich, Taliesin.“",
+              "„Die Tür stand offen. Vorher war sie geschlossen.“",
+              "„Ich habe es nicht weitererzählt. Das bedeutet nicht, dass ich es übersehen habe.“"
+            ],
+            "quotesTitle": "Typische Worte",
+            "sideWidth": 100,
+            "trivia": [
+              "Ordnet Haarnadeln, Bänder und Verschlüsse stets nach Größe und geplanter Verwendung. Sie erkennt sofort, wenn jemand ihre Ordnung verändert hat.",
+              "Betritt einen Raum kaum jemals, ohne unwillkürlich Fenster, Türen, brennende Kerzen und offenliegende Schriftstücke zu registrieren.",
+              "Streicht über ihre linke Manschette, wenn sie einen Gedanken bewusst für sich behält. Taliesin und Oweta kennen dieses kleine verräterische Zeichen.",
+              "Bereitet sich häufig Tee zu und trinkt ihn erst, wenn er längst kalt geworden ist. Sie behauptet inzwischen, ihn genau so zu mögen.",
+              "Bewegt sich so leise, dass sie andere Bedienstete regelmäßig erschreckt. Ihre jedes Mal vollkommen ernst gemeinte Entschuldigung hat daran nichts geändert.",
+              "Auf Taliesins dramatische Beschwerden antwortet sie gern mit einem ruhigen „Natürlich, Taliesin“. Selbst ihr Vetter weiß nie sicher, ob sie ihm zustimmt oder ihn gerade verspottet.",
+              "Führt ein kleines, unscheinbares Heft über Termine, Maße, bevorzugte Speisen und andere praktische Einzelheiten. Hofgerüchte schreibt sie bewusst nicht hinein.",
+              "Mag kandierte Veilchen, verwahrt sie aber in ihrer Nähschatulle, weil Taliesin sonst behaupten würde, Zucker zwischen Garnrollen sei ein Angriff auf jede vernünftige Ordnung."
+            ],
+            "triviaTitle": "Marotten & Eigenheiten",
+            "works": [
+              "Hofetikette · Kennt Anreden, Rangfolgen, Tischsitten und die Erwartungen formeller wie privater Anlässe.",
+              "Aufmerksamkeit · Bemerkt Veränderungen in Räumen, Kleidung, Verhalten und Abläufen mit außergewöhnlicher Zuverlässigkeit.",
+              "Menschenkenntnis · Liest Tonfall, Haltung und kleine Widersprüche gut, ohne daraus sofort ein öffentliches Urteil zu machen.",
+              "Persönlicher Dienst · Beherrscht Haar- und Kleiderpflege, Reisevorbereitung sowie den Umgang mit Schmuck, persönlichen Gegenständen und Rüstungsunterkleidung.",
+              "Nähen & Ausbessern · Repariert Säume, Verschlüsse, Bänder und kleinere Schäden sauber und nahezu unsichtbar.",
+              "Korrespondenz & Listen · Liest und schreibt sicher, führt Bestände und Termine und kann Nachrichten zuverlässig entgegennehmen und überbringen.",
+              "Grundversorgung · Kann kleinere Verletzungen säubern und verbinden und erkennt früh, wenn Erschöpfung oder Krankheit den Alltag ihrer Herrin beeinträchtigen."
+            ],
+            "worksTitle": "Können & Fachgebiete"
+          },
+          "quote": "Es ist vermutlich nichts, Herrin. Deshalb habe ich es mir gemerkt.",
+          "quoteBy": "— Myfanwy Draenmelyn",
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Myfanwy Draenmelyn"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Draenmelyn"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Jungfer Myfanwy · persönliche Zofe"
+            },
+            {
+              "label": "Geboren",
+              "value": "1723"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "17 Jahre"
+            },
+            {
+              "label": "Geburtsort",
+              "value": "Gwynthor"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Weiblich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Ledig"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": "Bürgerliche Hofbedienstete"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Persönliche Zofe der Ritterin Oweta Draig"
+            },
+            {
+              "label": "Vater",
+              "value": "Meurig Draenmelyn · Hausdiener der Draigs"
+            },
+            {
+              "label": "Mutter",
+              "value": "Catrin · Bedienstete im Draig-Haushalt"
+            },
+            {
+              "label": "Geschwister",
+              "value": "Owain Draenmelyn · Eleri Draenmelyn"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Hof des Hauses Draig, Gwynthor"
+            }
+          ]
+        },
+        "currentLocation": "Hof des Hauses Draig, Gwynthor",
+        "genealogy": {
+          "birth": "1723",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draenmelyn",
+          "houseName": "Haus Draenmelyn",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Meurig Draenmelyn",
+                "personId": "meurig-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--meurig-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Catrin",
+                "personId": "catrin-spouse-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--catrin-spouse-draenmelyn"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T19:30:00.000Z",
+              "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+              "personId": "myfanwy-draenmelyn",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn"
+            }
+          ],
+          "status": "alive",
+          "tags": [
+            "17 Jahre"
+          ],
+          "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+        },
+        "identity": {
+          "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+        },
+        "origin": "Gwynthor",
+        "relevance": "supporting",
+        "role": "Persönliche Zofe · Hofbedienstete",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "updatedAt": "2026-09-04T01:52:08.014Z"
       }
     ]
   },
@@ -596,7 +843,7 @@
     "archived": false,
     "name": "Myfanwy Draenmelyn",
     "aliases": [],
-    "title": "Zofe, Gwynthor",
+    "title": "Persönliche Zofe Oweta Draigs · Gwynthor",
     "emotes": [
       {
         "img": "https://i.imgur.com/GBuXVrq.png",
@@ -1077,60 +1324,255 @@
     },
     "profileLink": "",
     "portrait": "https://i.imgur.com/03YDRX5.png",
-    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "fraktion": "Haus Draig · Haus Draenmelyn",
     "emotesOverride": true,
-    "bio": "Myfanwy Draenmelyn ist die Cousine des Kammerdieners Taliesin Draenmelyn und dient als persönliche Zofe der Ritterin Oweta Draig. Wie viele Angehörige ihrer Familie wurde sie schon früh für den Dienst am Hof ausgebildet und zeichnet sich durch ihre gute Erziehung, ihr höfliches Auftreten und ihre außergewöhnliche Aufmerksamkeit aus. Während ihr Cousin dazu neigt, jede Unannehmlichkeit mit dramatischer Besorgnis zu begleiten, begegnet Myfanwy den Herausforderungen des Hoflebens mit bemerkenswerter Ruhe und Gelassenheit.\n\nSie gilt als scharfsinnig und beobachtet ihre Umgebung mit wachem Blick, wodurch ihr nur selten wichtige Details entgehen. Viele unterschätzen die stille junge Dame zunächst, doch jene, die regelmäßig mit ihr zu tun haben, wissen ihre hohe Auffassungsgabe und ihre Zuverlässigkeit zu schätzen. Besonders Oweta vertraut auf ihr Urteilsvermögen, da Myfanwy oft bemerkt, was anderen verborgen bleibt, und dabei stets die nötige Diskretion wahrt.",
-    "identity": {
-      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+    "bio": "Myfanwy Draenmelyn ist die siebzehnjährige Cousine des Kammerdieners Taliesin Draenmelyn und persönliche Zofe der Ritterin Oweta Draig. Hinter ihrem höflichen, bemerkenswert gelassenen Auftreten stehen ein scharfer Blick, ein ausgezeichnetes Gedächtnis und jene Diskretion, der Oweta auch heikle Beobachtungen anvertraut.",
+    "biography": {
+      "biography": {
+        "abilities": [
+          {
+            "detail": "Myfanwy erfasst Zusammenhänge schnell und erkennt kleine Unstimmigkeiten, bevor andere überhaupt bemerken, dass etwas nicht stimmt.",
+            "icon": "../IconOrdner/Traits Icon/Shrewd.png",
+            "title": "Scharfsinnig"
+          },
+          {
+            "detail": "Was ihr im persönlichen Dienst anvertraut oder von ihr beobachtet wird, behandelt sie nicht als Ware für den nächsten Hofklatsch.",
+            "icon": "../IconOrdner/Traits Icon/Conscientious.png",
+            "title": "Diskret"
+          },
+          {
+            "detail": "Auch unter Zeitdruck bleibt sie höflich und handlungsfähig. Ihre Ruhe hilft ihr, Aufgaben zu ordnen, während andere noch über das Problem sprechen.",
+            "icon": "../IconOrdner/Traits Icon/Patient.png",
+            "title": "Gelassen"
+          },
+          {
+            "detail": "Myfanwy schützt nicht nur fremde Geheimnisse, sondern auch die eigenen Gefühle und Bedürfnisse. Selbst Nahestehende erfahren oft erst spät, wenn sie etwas belastet.",
+            "icon": "../IconOrdner/Traits Icon/Shy.png",
+            "title": "Verschlossen"
+          },
+          {
+            "detail": "Wer zu viele kleine Widersprüche zeigt, verliert ihr Vertrauen rasch. Mitunter sucht sie hinter einer Unachtsamkeit bereits eine Absicht, obwohl es tatsächlich nur eine Unachtsamkeit war.",
+            "icon": "../IconOrdner/Traits Icon/Paranoid.png",
+            "title": "Misstrauisch"
+          },
+          {
+            "detail": "Je unübersichtlicher eine Lage wird, desto stärker versucht Myfanwy, Abläufe, Gegenstände und Menschen still zu ordnen. Unerwartete Planänderungen akzeptiert sie höflich – aber selten gern.",
+            "icon": "../IconOrdner/Traits Icon/Organizer.png",
+            "title": "Kontrollbedürftig"
+          }
+        ],
+        "abilitiesTitle": "Charakter",
+        "biographyText": "Myfanwy Draenmelyn wurde 1723 als Tochter von <strong>Meurig Draenmelyn</strong> und <strong>Catrin</strong> geboren. Beide Eltern dienen im Haushalt der Draigs. Wie viele Angehörige des bürgerlichen Hauses Draenmelyn wuchs Myfanwy daher in einer Umgebung auf, in der gute Erziehung nicht bloß als Zierde, sondern als Handwerk verstanden wird. Haltung, Sprache, Verschwiegenheit und ein sicheres Gespür für Rang und Anlass wurden ihr ebenso früh vermittelt wie Nähen, Wäschepflege und die Führung kleiner Haushaltslisten.<br><br>Schon während ihrer Ausbildung fiel auf, dass Myfanwy selten zweimal auf dasselbe hingewiesen werden musste. Sie beobachtet Menschen und Räume mit wachem Blick, merkt sich beiläufig geäußerte Vorlieben und erkennt kleine Abweichungen zuverlässig: einen Gegenstand, der nicht an seinem Platz liegt, eine ungewohnte Anrede, einen fehlenden Schlüssel oder die kaum sichtbare Anspannung hinter höflichen Worten. Dabei besitzt sie nicht Taliesins Hang, jede Unannehmlichkeit in ein persönliches Drama zu verwandeln. Wo ihr Vetter die Hände über dem Kopf zusammenschlägt, wird Myfanwy meist nur etwas stiller.<br><br>Heute dient sie als persönliche Zofe der gleichaltrigen Ritterin <strong>Oweta Draig</strong>. Ihre Aufgaben reichen weit über Kleider, Haar und Schmuck hinaus. Sie bereitet Reisegepäck und Unterkleidung für die Rüstung vor, führt Owetas persönliche Listen, nimmt Nachrichten entgegen und sorgt dafür, dass ihre Herrin bemerkt, was an einem geschäftigen Hof leicht übersehen wird. Viele unterschätzen Myfanwy zunächst als stille junge Bedienstete. Wer regelmäßig mit ihr zu tun hat, weiß dagegen, dass hinter ihrem höflichen Auftreten ein ungewöhnlich schneller und sehr wachsamer Verstand arbeitet.",
+        "biographyTitle": "Biografie",
+        "connectionPortraitHeight": 68,
+        "connections": [
+          {
+            "detail": "",
+            "title": "Dienst",
+            "type": "heading"
+          },
+          {
+            "detail": "Herrin · vertraut auf Myfanwys Beobachtung und Urteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Oweta Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "",
+            "title": "Familie",
+            "type": "heading"
+          },
+          {
+            "detail": "Vetter · Kammerdiener Gawain Draigs",
+            "image": "../Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png",
+            "imageFormat": "portrait",
+            "name": "Taliesin Draenmelyn",
+            "type": "connection"
+          },
+          {
+            "detail": "Vater · Hausdiener der Draigs",
+            "image": "",
+            "imageFormat": "portrait",
+            "name": "Meurig Draenmelyn",
+            "type": "connection"
+          },
+          {
+            "detail": "Mutter · Bedienstete im Draig-Haushalt",
+            "image": "",
+            "imageFormat": "portrait",
+            "name": "Catrin",
+            "type": "connection"
+          }
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connectionTextOffset": 0,
+        "documents": [],
+        "documentsTitle": "Persönliche Gegenstände",
+        "extraSections": [
+          {
+            "mode": "text",
+            "position": "afterIntro",
+            "text": "Myfanwy versteht Verschwiegenheit nicht als blindes Schweigen. Belanglose Peinlichkeiten und persönliche Schwächen ihrer Herrin schützt sie ohne Zögern; eine echte Gefahr würde sie Oweta dagegen stets melden. Kritik trägt sie niemals vor Publikum vor. Wenn sie widersprechen muss, wartet sie auf einen unbeobachteten Augenblick und formuliert ihre Warnung so ruhig, dass erst der Inhalt erkennen lässt, wie ernst sie es meint.",
+            "title": "Dienstverständnis"
+          }
+        ],
+        "footer": "Personenakte · Myfanwy Draenmelyn",
+        "historyText": "Dass Myfanwy und Oweta beide siebzehn Jahre alt sind, verändert die Rangordnung zwischen ihnen nicht, hat aber ein besonderes Verständnis geschaffen. Myfanwy kennt viele der Erwartungen, die an eine junge Frau am Hof gestellt werden, während Oweta zusätzlich die Pflichten und Gefahren einer Ritterin trägt. Sie behandelt ihre Herrin daher weder wie ein Kind noch wie eine unfehlbare Heldin.<br><br>Oweta vertraut besonders auf Myfanwys Urteilsvermögen. Die Zofe weiß, wann eine Beobachtung nur verwahrt werden sollte und wann sie ausgesprochen werden muss. Häufig reicht ein kurzer Hinweis, damit Oweta einen Gast, eine Nachricht oder eine scheinbar zufällige Begegnung ein zweites Mal betrachtet. Myfanwys Einfluss ist dadurch größer, als ihre Stellung vermuten lässt – gerade weil sie ihn niemals offen vorführt.<br><br>Ihre größte Aufgabe wird auf Dauer nicht darin bestehen, noch aufmerksamer zu werden. Sie wird lernen müssen, dass nicht jedes Problem durch bessere Vorbereitung beherrscht werden kann und dass Vertrauen gelegentlich bedeutet, eine Unsicherheit stehenzulassen.",
+        "historyTitle": "Im Dienst Oweta Draigs",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [
+          "„Natürlich, Taliesin.“",
+          "„Die Tür stand offen. Vorher war sie geschlossen.“",
+          "„Ich habe es nicht weitererzählt. Das bedeutet nicht, dass ich es übersehen habe.“"
+        ],
+        "quotesTitle": "Typische Worte",
+        "sideWidth": 100,
+        "trivia": [
+          "Ordnet Haarnadeln, Bänder und Verschlüsse stets nach Größe und geplanter Verwendung. Sie erkennt sofort, wenn jemand ihre Ordnung verändert hat.",
+          "Betritt einen Raum kaum jemals, ohne unwillkürlich Fenster, Türen, brennende Kerzen und offenliegende Schriftstücke zu registrieren.",
+          "Streicht über ihre linke Manschette, wenn sie einen Gedanken bewusst für sich behält. Taliesin und Oweta kennen dieses kleine verräterische Zeichen.",
+          "Bereitet sich häufig Tee zu und trinkt ihn erst, wenn er längst kalt geworden ist. Sie behauptet inzwischen, ihn genau so zu mögen.",
+          "Bewegt sich so leise, dass sie andere Bedienstete regelmäßig erschreckt. Ihre jedes Mal vollkommen ernst gemeinte Entschuldigung hat daran nichts geändert.",
+          "Auf Taliesins dramatische Beschwerden antwortet sie gern mit einem ruhigen „Natürlich, Taliesin“. Selbst ihr Vetter weiß nie sicher, ob sie ihm zustimmt oder ihn gerade verspottet.",
+          "Führt ein kleines, unscheinbares Heft über Termine, Maße, bevorzugte Speisen und andere praktische Einzelheiten. Hofgerüchte schreibt sie bewusst nicht hinein.",
+          "Mag kandierte Veilchen, verwahrt sie aber in ihrer Nähschatulle, weil Taliesin sonst behaupten würde, Zucker zwischen Garnrollen sei ein Angriff auf jede vernünftige Ordnung."
+        ],
+        "triviaTitle": "Marotten & Eigenheiten",
+        "works": [
+          "Hofetikette · Kennt Anreden, Rangfolgen, Tischsitten und die Erwartungen formeller wie privater Anlässe.",
+          "Aufmerksamkeit · Bemerkt Veränderungen in Räumen, Kleidung, Verhalten und Abläufen mit außergewöhnlicher Zuverlässigkeit.",
+          "Menschenkenntnis · Liest Tonfall, Haltung und kleine Widersprüche gut, ohne daraus sofort ein öffentliches Urteil zu machen.",
+          "Persönlicher Dienst · Beherrscht Haar- und Kleiderpflege, Reisevorbereitung sowie den Umgang mit Schmuck, persönlichen Gegenständen und Rüstungsunterkleidung.",
+          "Nähen & Ausbessern · Repariert Säume, Verschlüsse, Bänder und kleinere Schäden sauber und nahezu unsichtbar.",
+          "Korrespondenz & Listen · Liest und schreibt sicher, führt Bestände und Termine und kann Nachrichten zuverlässig entgegennehmen und überbringen.",
+          "Grundversorgung · Kann kleinere Verletzungen säubern und verbinden und erkennt früh, wenn Erschöpfung oder Krankheit den Alltag ihrer Herrin beeinträchtigen."
+        ],
+        "worksTitle": "Können & Fachgebiete"
+      },
+      "quote": "Es ist vermutlich nichts, Herrin. Deshalb habe ich es mir gemerkt.",
+      "quoteBy": "— Myfanwy Draenmelyn",
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Myfanwy Draenmelyn"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Draenmelyn"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Jungfer Myfanwy · persönliche Zofe"
+        },
+        {
+          "label": "Geboren",
+          "value": "1723"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "17 Jahre"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Weiblich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Bürgerliche Hofbedienstete"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Persönliche Zofe der Ritterin Oweta Draig"
+        },
+        {
+          "label": "Vater",
+          "value": "Meurig Draenmelyn · Hausdiener der Draigs"
+        },
+        {
+          "label": "Mutter",
+          "value": "Catrin · Bedienstete im Draig-Haushalt"
+        },
+        {
+          "label": "Geschwister",
+          "value": "Owain Draenmelyn · Eleri Draenmelyn"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Hof des Hauses Draig, Gwynthor"
+        }
+      ]
     },
+    "currentLocation": "Hof des Hauses Draig, Gwynthor",
     "genealogy": {
-      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn",
-      "sex": "female",
-      "status": "alive",
       "birth": "1723",
       "death": "",
+      "familyRole": "core",
       "houseId": "house-draenmelyn",
       "houseName": "Haus Draenmelyn",
-      "familyRole": "core",
       "portraitPlaceholder": "auto",
-      "tags": [
-        "17 Jahre"
-      ],
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Meurig Draenmelyn",
+            "personId": "meurig-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--meurig-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Catrin",
+            "personId": "catrin-spouse-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--catrin-spouse-draenmelyn"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
       "sources": [
         {
           "familyId": "haus-draenmelyn",
-          "personId": "myfanwy-draenmelyn",
-          "releaseId": "",
-          "publishedAt": "",
+          "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
           "importedAt": "2026-09-03T19:30:00.000Z",
           "lastSyncedAt": "2026-09-03T19:30:00.000Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn",
-          "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+          "personId": "myfanwy-draenmelyn",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn"
         }
       ],
-      "relationships": {
-        "parents": [
-          {
-            "personId": "meurig-draenmelyn",
-            "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-draenmelyn--meurig-draenmelyn",
-            "name": "Meurig Draenmelyn"
-          },
-          {
-            "personId": "catrin-spouse-draenmelyn",
-            "type": "biological",
-            "legitimacy": "legitimate",
-            "certainty": "confirmed",
-            "worldPersonId": "person--family-tree--catrin-spouse-draenmelyn",
-            "name": "Catrin"
-          }
-        ],
-        "partners": [],
-        "children": []
-      }
+      "status": "alive",
+      "tags": [
+        "17 Jahre"
+      ],
+      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
     },
-    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+    "identity": {
+      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+    },
+    "origin": "Gwynthor",
+    "relevance": "supporting",
+    "role": "Persönliche Zofe · Hofbedienstete",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "updatedAt": "2026-09-04T01:52:08.014Z"
   }
 }

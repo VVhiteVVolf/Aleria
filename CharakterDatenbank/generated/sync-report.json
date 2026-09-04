@@ -1,19 +1,19 @@
 {
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
-  "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-  "sourceExportedAt": "2026-09-03T19:30:00.000Z",
+  "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+  "sourceExportedAt": "2026-09-04T01:59:49.901Z",
   "summary": {
-    "sourceDocuments": 190,
-    "total": 176,
-    "mergedSameNameGroups": 9,
-    "familyLinked": 99,
+    "sourceDocuments": 245,
+    "total": 226,
+    "mergedSameNameGroups": 12,
+    "familyLinked": 144,
     "familyAmbiguous": 0,
-    "familyPending": 77,
-    "primaryFamily": 99,
+    "familyPending": 82,
+    "primaryFamily": 144,
     "primaryGroup": 26,
     "primaryPlace": 22,
-    "primaryUnassigned": 29,
+    "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -616,6 +616,17 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--person--family-tree--catrin-spouse-draenmelyn",
+      "name": "Catrin",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--h52Rej5uKSevVFqc1CGk",
       "name": "Chefkoch Draig",
       "status": "pending",
@@ -748,6 +759,17 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--person--family-tree--elen-spouse-draenmelyn",
+      "name": "Elen",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--j4fZKrXkARcP9oDAUSeb",
       "name": "Emrys Porthan",
       "status": "pending",
@@ -781,8 +803,41 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--glendower-o-cenyr",
+      "name": "Glendower O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--jenna-o-cenyr",
+      "name": "Jenna O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--Xm1MNKjNq699jTPGoej5",
       "name": "Männlicher Draig Waffenknecht",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
+      "name": "Mathon Curiad",
       "status": "pending",
       "primary": {
         "kind": "unassigned",
@@ -814,17 +869,6 @@
       "familyAlternatives": []
     },
     {
-      "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
-      "name": "Namenloser Draig Waffenknecht I.",
-      "status": "pending",
-      "primary": {
-        "kind": "unassigned",
-        "id": "unassigned",
-        "label": "Unzugeordnet"
-      },
-      "familyAlternatives": []
-    },
-    {
       "recordId": "character--ExQDi0xrpkmXAXUL1Ukh",
       "name": "Namenloser Draig Waffenknecht II.",
       "status": "pending",
@@ -838,6 +882,17 @@
     {
       "recordId": "character--XVeiNvgFfsmtomLuIjcA",
       "name": "Namenloser Draig Waffenknecht III.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--family-tree--nest-spouse-draenmelyn",
+      "name": "Nest",
       "status": "pending",
       "primary": {
         "kind": "unassigned",
@@ -935,6 +990,28 @@
       ]
     },
     {
+      "name": "Fenrir Varulv",
+      "canonicalDocumentId": "FKiXsSWVoV74rTgmpPip",
+      "documentIds": [
+        "FKiXsSWVoV74rTgmpPip",
+        "FKiXsSWVoV74rTgmpPip"
+      ],
+      "ages": [
+        "Geburtsjahr 1718"
+      ]
+    },
+    {
+      "name": "Freya Skald",
+      "canonicalDocumentId": "ksJQe8Ai4KbRE9jOAvb7",
+      "documentIds": [
+        "ksJQe8Ai4KbRE9jOAvb7",
+        "ksJQe8Ai4KbRE9jOAvb7"
+      ],
+      "ages": [
+        "Geburtsjahr 1720"
+      ]
+    },
+    {
       "name": "Gawain Draig",
       "canonicalDocumentId": "q1QtSIug74FzzwUAqWrs",
       "documentIds": [
@@ -955,6 +1032,18 @@
       "ages": []
     },
     {
+      "name": "Gildas Gafyr",
+      "canonicalDocumentId": "gildas-gafyr",
+      "documentIds": [
+        "gildas-gafyr",
+        "gildas-gafyr",
+        "person--haus-gafyr--gildas-gafyr"
+      ],
+      "ages": [
+        "Geburtsjahr 1722"
+      ]
+    },
+    {
       "name": "Guinevere Neidr",
       "canonicalDocumentId": "person--haus-neidr--guinevere-neidr",
       "documentIds": [
@@ -966,17 +1055,20 @@
       ]
     },
     {
-      "name": "Gwendolyn Draig (geb. Aderyn)",
+      "name": "Gwendolyn Draig",
       "canonicalDocumentId": "15ml9RhSvJPXof7z4qY3",
       "documentIds": [
         "15ml9RhSvJPXof7z4qY3",
         "15ml9RhSvJPXof7z4qY3",
+        "3tQG5Y1HQiumAE7GY6Nn",
         "uiKiMFXC6OEWOdDenbiM",
         "uiKiMFXC6OEWOdDenbiM",
         "XWJ6XXwvpESHR3zAXkJx",
         "XWJ6XXwvpESHR3zAXkJx"
       ],
-      "ages": []
+      "ages": [
+        "Geburtsjahr 1695"
+      ]
     },
     {
       "name": "Kane Draig",

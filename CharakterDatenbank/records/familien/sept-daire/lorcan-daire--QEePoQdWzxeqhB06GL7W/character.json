@@ -57,7 +57,7 @@
         {
           "documentId": "QEePoQdWzxeqhB06GL7W",
           "createdAt": "2026-07-10T11:25:38.406Z",
-          "updatedAt": "2026-07-10T11:34:10.849Z"
+          "updatedAt": "2026-08-21T18:18:41.595Z"
         }
       ]
     },
@@ -73,13 +73,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
-    "sourceExportedAt": "2026-09-03T19:30:00.000Z",
-    "sourceUpdatedAt": "2026-07-10T11:34:10.849Z",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-21T18:18:41.595Z",
     "sourceDocumentIds": [
       "QEePoQdWzxeqhB06GL7W"
     ],
-    "contentHash": "618f813bb14fdbdad4d127512f3eeabf5146e9f4d71305a1ecbda1f3d6d2e693"
+    "contentHash": "3f6b2b861a3561ba272940d7fcfd015631316442edbe67101f5da69e579d5b25"
   },
   "local": {
     "notes": "",
@@ -624,91 +624,31 @@
         "status": "",
         "archived": false,
         "title": "Tiarna, Ceitheach",
-        "updatedAt": "2026-07-10T11:34:10.849Z",
+        "updatedAt": "2026-08-21T18:18:41.595Z",
         "taxonomyPath": "",
         "emotesOverride": true,
         "fraktion": "Sept der Daire, Ceitheach",
-        "portrait": "https://i.imgur.com/WD4goAN.png",
+        "portrait": "https://i.imgur.com/B4xz68y.png",
         "bio": "",
         "role": "",
         "plotNode": "",
-        "emotes": [
-          {
-            "img": "https://i.imgur.com/60JTNqr.png",
-            "label": ""
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/sfS7V5t.png"
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/p4xVOtY.png"
-          },
-          {
-            "img": "https://i.imgur.com/xIu3Clk.png",
-            "label": ""
-          },
-          {
-            "img": "https://i.imgur.com/o6DbY46.png",
-            "label": ""
-          },
-          {
-            "img": "https://i.imgur.com/jHYEtzG.png",
-            "label": ""
-          },
-          {
-            "img": "https://i.imgur.com/nrjahC9.png",
-            "label": ""
-          },
-          {
-            "img": "https://i.imgur.com/M0J6lMj.png",
-            "label": ""
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/YVHIKqg.png"
-          },
-          {
-            "img": "https://i.imgur.com/8x6jWOZ.png",
-            "label": ""
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/cYdndG8.png"
-          },
-          {
-            "img": "https://i.imgur.com/yToRDfU.png",
-            "label": ""
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/ZeHhDzT.png"
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/dbOsgCs.png"
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/F4DhOdA.png"
-          },
-          {
-            "label": "",
-            "img": "https://i.imgur.com/toBkxgW.png"
-          },
-          {
-            "img": "https://i.imgur.com/SlMuMnH.png",
-            "label": ""
-          },
-          {
-            "img": "https://i.imgur.com/Zf3fYMR.png",
-            "label": ""
-          }
-        ],
+        "emotes": [],
         "name": "Lorcán Daire",
         "currentLocation": "",
-        "origin": ""
+        "origin": "",
+        "activeImageSetId": "standard",
+        "imageSets": [
+          {
+            "createdAt": "2026-08-21T18:18:02.855Z",
+            "emotes": [],
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://i.imgur.com/B4xz68y.png",
+            "updatedAt": "2026-08-21T18:18:12.624Z"
+          }
+        ],
+        "imageSetSchemaVersion": 1,
+        "imageSetsOverride": true
       }
     ]
   },
@@ -1247,91 +1187,31 @@
     "status": "",
     "archived": false,
     "title": "Tiarna, Ceitheach",
-    "updatedAt": "2026-07-10T11:34:10.849Z",
+    "updatedAt": "2026-08-21T18:18:41.595Z",
     "taxonomyPath": "Ceitheach > Tir na Dorcha > Tír na Droma > Tulachinis",
     "emotesOverride": true,
     "fraktion": "Sept der Daire, Ceitheach",
-    "portrait": "https://i.imgur.com/WD4goAN.png",
+    "portrait": "https://i.imgur.com/B4xz68y.png",
     "bio": "",
     "role": "",
     "plotNode": "",
-    "emotes": [
-      {
-        "img": "https://i.imgur.com/60JTNqr.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/sfS7V5t.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/p4xVOtY.png"
-      },
-      {
-        "img": "https://i.imgur.com/xIu3Clk.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/o6DbY46.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/jHYEtzG.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/nrjahC9.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/M0J6lMj.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/YVHIKqg.png"
-      },
-      {
-        "img": "https://i.imgur.com/8x6jWOZ.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/cYdndG8.png"
-      },
-      {
-        "img": "https://i.imgur.com/yToRDfU.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/ZeHhDzT.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/dbOsgCs.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/F4DhOdA.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/toBkxgW.png"
-      },
-      {
-        "img": "https://i.imgur.com/SlMuMnH.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/Zf3fYMR.png",
-        "label": ""
-      }
-    ],
+    "emotes": [],
     "name": "Lorcán Daire",
     "currentLocation": "",
     "origin": "",
+    "activeImageSetId": "standard",
+    "imageSets": [
+      {
+        "createdAt": "2026-08-21T18:18:02.855Z",
+        "emotes": [],
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/B4xz68y.png",
+        "updatedAt": "2026-08-21T18:18:12.624Z"
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
     "identity": {
       "worldPersonId": "person--sept-daire--lorcan-daire"
     },
@@ -1357,8 +1237,8 @@
           "personId": "lorcan-daire",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-03T19:30:00.000Z",
-          "lastSyncedAt": "2026-09-03T19:30:00.000Z",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
           "url": "../Stammbäume/Stammbaum.html?family=sept-daire&mode=view&person=lorcan-daire",
           "fingerprint": "{\"name\":\"Lorcán Daire\",\"title\":\"Tiarna-Krieger im Exil · Letzter Daire\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-daire\",\"portrait\":\"../Stammbäume/assets/images/portraits/sept-daire/lorcan-daire.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Tiarna-Krieger\",\"Letzter Daire\",\"Im Exil\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"ciaran-daire\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-daire--ciaran-daire\",\"name\":\"Ciarán Daire\"},{\"personId\":\"aoife-ciaran-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--aoife-ciaran-spouse\",\"name\":\"Aoife\"}],\"partners\":[],\"children\":[]}}"
         }

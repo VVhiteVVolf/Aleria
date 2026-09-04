@@ -1,0 +1,256 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-beryn--ifor-beryn",
+  "slug": "ifor-beryn",
+  "identity": {
+    "name": "Ifor Beryn",
+    "aliases": [],
+    "worldPersonId": "person--haus-beryn--ifor-beryn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-beryn",
+      "label": "Haus Beryn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-beryn",
+        "familyTitle": "Haus Beryn",
+        "personId": "ifor-beryn",
+        "worldPersonId": "person--haus-beryn--ifor-beryn",
+        "houseId": "house-beryn",
+        "houseName": "Haus Beryn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Klaueninsel",
+          "Sturmklaue",
+          "Talgarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn",
+        "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-beryn--ifor-beryn",
+      "documentIds": [
+        "person--haus-beryn--ifor-beryn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-beryn--ifor-beryn",
+          "createdAt": "2026-08-09T07:53:46.396Z",
+          "updatedAt": "2026-08-09T07:53:46.396Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-beryn",
+        "personId": "ifor-beryn",
+        "worldPersonId": "person--haus-beryn--ifor-beryn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-08-09T07:53:46.396Z",
+    "sourceDocumentIds": [
+      "person--haus-beryn--ifor-beryn"
+    ],
+    "contentHash": "f26bcd198ecb54bf1ec732196463624ad64c7478e756238b3d462ea9f843375f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-08-09T07:53:46.396Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Beryn",
+        "genealogy": {
+          "birth": "1712",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-beryn",
+          "houseName": "Haus Beryn",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhodri Beryn",
+                "personId": "rhodri-beryn",
+                "type": "biological",
+                "worldPersonId": "person--haus-beryn--rhodri-beryn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Angharad",
+                "personId": "angharad-rhodri-spouse",
+                "type": "biological",
+                "worldPersonId": "person--family-tree--angharad-rhodri-spouse"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-beryn",
+              "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-08-09T07:53:46.396Z",
+              "lastSyncedAt": "2026-08-09T07:53:46.396Z",
+              "personId": "ifor-beryn",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn"
+            }
+          ],
+          "status": "alive",
+          "tags": [
+            "Dritter Sohn",
+            "Unverheiratet"
+          ],
+          "worldPersonId": "person--haus-beryn--ifor-beryn"
+        },
+        "id": "person--haus-beryn--ifor-beryn",
+        "identity": {
+          "worldPersonId": "person--haus-beryn--ifor-beryn"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Ifor Beryn",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
+        "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
+        "updatedAt": "2026-08-09T07:53:46.396Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-08-09T07:53:46.396Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Beryn",
+    "genealogy": {
+      "birth": "1712",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-beryn",
+      "houseName": "Haus Beryn",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhodri Beryn",
+            "personId": "rhodri-beryn",
+            "type": "biological",
+            "worldPersonId": "person--haus-beryn--rhodri-beryn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Angharad",
+            "personId": "angharad-rhodri-spouse",
+            "type": "biological",
+            "worldPersonId": "person--family-tree--angharad-rhodri-spouse"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-beryn",
+          "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-08-09T07:53:46.396Z",
+          "lastSyncedAt": "2026-08-09T07:53:46.396Z",
+          "personId": "ifor-beryn",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "Dritter Sohn",
+        "Unverheiratet"
+      ],
+      "worldPersonId": "person--haus-beryn--ifor-beryn"
+    },
+    "id": "person--haus-beryn--ifor-beryn",
+    "identity": {
+      "worldPersonId": "person--haus-beryn--ifor-beryn"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Ifor Beryn",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
+    "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
+    "updatedAt": "2026-08-09T07:53:46.396Z"
+  }
+}

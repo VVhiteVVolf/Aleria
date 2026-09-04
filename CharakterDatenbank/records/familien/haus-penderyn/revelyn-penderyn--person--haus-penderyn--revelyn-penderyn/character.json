@@ -1,0 +1,307 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-penderyn--revelyn-penderyn",
+  "slug": "revelyn-penderyn",
+  "identity": {
+    "name": "Revelyn Penderyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-penderyn--revelyn-penderyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-penderyn",
+      "label": "Haus Penderyn O'Mathragon"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-penderyn",
+        "familyTitle": "Haus Penderyn O'Mathragon",
+        "personId": "revelyn-penderyn",
+        "worldPersonId": "person--haus-penderyn--revelyn-penderyn",
+        "houseId": "house-penderyn",
+        "houseName": "Haus Penderyn O'Mathragon",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Vortigerns Ruh",
+          "Tanwens Flamme",
+          "Mathragon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view&person=revelyn-penderyn",
+        "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\"],\"relationships\":{\"parents\":[{\"personId\":\"aneurin-penderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penderyn--aneurin-penderyn\",\"name\":\"Aneurin Penderyn\"},{\"personId\":\"meinir-sgwarnog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgwarnog--meinir-sgwarnog\",\"name\":\"Meinir Sgwarnog\"}],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "revelyn-penderyn",
+        "worldPersonId": "person--haus-penderyn--revelyn-penderyn",
+        "houseId": "house-penderyn",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=revelyn-penderyn",
+        "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}",
+        "score": 220
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-penderyn--revelyn-penderyn",
+      "documentIds": [
+        "person--haus-penderyn--revelyn-penderyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-penderyn--revelyn-penderyn",
+          "createdAt": "2026-09-03T23:44:54.531Z",
+          "updatedAt": "2026-09-03T23:44:54.531Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-penderyn",
+        "personId": "revelyn-penderyn",
+        "worldPersonId": "person--haus-penderyn--revelyn-penderyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view&person=revelyn-penderyn"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "revelyn-penderyn",
+        "worldPersonId": "person--haus-penderyn--revelyn-penderyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=revelyn-penderyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:44:54.531Z",
+    "sourceDocumentIds": [
+      "person--haus-penderyn--revelyn-penderyn"
+    ],
+    "contentHash": "39709d22a7674dfc68d9f9108ea7f86b9f4edb3a95cf335103bb2ed0cbb2c416"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:44:54.531Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Penderyn O'Mathragon",
+        "genealogy": {
+          "birth": "1718",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-penderyn",
+          "houseName": "Haus Penderyn O'Mathragon",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Aneurin Penderyn",
+                "personId": "aneurin-penderyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-penderyn--aneurin-penderyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Meinir Sgwarnog",
+                "personId": "meinir-sgwarnog",
+                "type": "biological",
+                "worldPersonId": "person--haus-sgwarnog--meinir-sgwarnog"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Tudwal Draig",
+                "personId": "tudwal-draig",
+                "status": "active",
+                "type": "engagement",
+                "worldPersonId": "person--haus-draig--tudwal-draig"
+              }
+            ]
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-penderyn",
+              "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\"],\"relationships\":{\"parents\":[{\"personId\":\"aneurin-penderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penderyn--aneurin-penderyn\",\"name\":\"Aneurin Penderyn\"},{\"personId\":\"meinir-sgwarnog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgwarnog--meinir-sgwarnog\",\"name\":\"Meinir Sgwarnog\"}],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:44:54.531Z",
+              "lastSyncedAt": "2026-09-03T23:44:54.531Z",
+              "personId": "revelyn-penderyn",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view&person=revelyn-penderyn"
+            }
+          ],
+          "status": "alive",
+          "tags": [
+            "Wegverlobt"
+          ],
+          "worldPersonId": "person--haus-penderyn--revelyn-penderyn"
+        },
+        "id": "person--haus-penderyn--revelyn-penderyn",
+        "identity": {
+          "worldPersonId": "person--haus-penderyn--revelyn-penderyn"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Revelyn Penderyn",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Vortigerns Ruh > Tanwens Flamme > Mathragon",
+        "title": "Wegverlobt an Haus Draig",
+        "updatedAt": "2026-09-03T23:44:54.531Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:44:54.531Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Penderyn O'Mathragon",
+    "genealogy": {
+      "birth": "1718",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-penderyn",
+      "houseName": "Haus Penderyn O'Mathragon",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Aneurin Penderyn",
+            "personId": "aneurin-penderyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-penderyn--aneurin-penderyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Meinir Sgwarnog",
+            "personId": "meinir-sgwarnog",
+            "type": "biological",
+            "worldPersonId": "person--haus-sgwarnog--meinir-sgwarnog"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Tudwal Draig",
+            "personId": "tudwal-draig",
+            "status": "active",
+            "type": "engagement",
+            "worldPersonId": "person--haus-draig--tudwal-draig"
+          }
+        ]
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-penderyn",
+          "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"Wegverlobt an Haus Draig\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverlobt\"],\"relationships\":{\"parents\":[{\"personId\":\"aneurin-penderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penderyn--aneurin-penderyn\",\"name\":\"Aneurin Penderyn\"},{\"personId\":\"meinir-sgwarnog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgwarnog--meinir-sgwarnog\",\"name\":\"Meinir Sgwarnog\"}],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:44:54.531Z",
+          "lastSyncedAt": "2026-09-03T23:44:54.531Z",
+          "personId": "revelyn-penderyn",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view&person=revelyn-penderyn"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "revelyn-penderyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=revelyn-penderyn",
+          "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "Wegverlobt"
+      ],
+      "worldPersonId": "person--haus-penderyn--revelyn-penderyn"
+    },
+    "id": "person--haus-penderyn--revelyn-penderyn",
+    "identity": {
+      "worldPersonId": "person--haus-penderyn--revelyn-penderyn"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Revelyn Penderyn",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Vortigerns Ruh > Tanwens Flamme > Mathragon",
+    "title": "Wegverlobt an Haus Draig",
+    "updatedAt": "2026-09-03T23:44:54.531Z"
+  }
+}

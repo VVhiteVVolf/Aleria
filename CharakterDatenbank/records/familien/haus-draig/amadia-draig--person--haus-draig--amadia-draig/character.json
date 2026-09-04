@@ -1,0 +1,285 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--amadia-draig",
+  "slug": "amadia-draig",
+  "identity": {
+    "name": "Amadia Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--amadia-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "amadia-draig",
+        "worldPersonId": "person--haus-draig--amadia-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=amadia-draig",
+        "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"}],\"partners\":[],\"children\":[]}}",
+        "score": 260
+      },
+      {
+        "familyId": "haus-arth",
+        "familyTitle": "Haus Arth O'Talgarth",
+        "personId": "amadia-draig",
+        "worldPersonId": "person--haus-draig--amadia-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Klaueninsel",
+          "Sturmklaue",
+          "Talgarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=amadia-draig",
+        "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--amadia-draig",
+      "documentIds": [
+        "person--haus-draig--amadia-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--amadia-draig",
+          "createdAt": "2026-09-03T23:42:59.212Z",
+          "updatedAt": "2026-09-03T23:42:59.212Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "amadia-draig",
+        "worldPersonId": "person--haus-draig--amadia-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=amadia-draig"
+      },
+      {
+        "familyId": "haus-arth",
+        "personId": "amadia-draig",
+        "worldPersonId": "person--haus-draig--amadia-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=amadia-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:42:59.212Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--amadia-draig"
+    ],
+    "contentHash": "dc2bd1b792a68c9549d2493e4898b31f8902fdf9839b30553ca0d1f9cc9d39fe"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:42:59.212Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1718",
+          "death": "",
+          "familyRole": "bastard",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Owain Draig",
+                "personId": "owain-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--owain-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Esyllt Arth",
+                "personId": "esyllt-arth",
+                "type": "biological",
+                "worldPersonId": "person--haus-arth--esyllt-arth"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "female",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:42:59.212Z",
+              "lastSyncedAt": "2026-09-03T23:42:59.212Z",
+              "personId": "amadia-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=amadia-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--amadia-draig"
+        },
+        "id": "person--haus-draig--amadia-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--amadia-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Amadia Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:42:59.212Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:42:59.212Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1718",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Owain Draig",
+            "personId": "owain-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--owain-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Esyllt Arth",
+            "personId": "esyllt-arth",
+            "type": "biological",
+            "worldPersonId": "person--haus-arth--esyllt-arth"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "female",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:42:59.212Z",
+          "lastSyncedAt": "2026-09-03T23:42:59.212Z",
+          "personId": "amadia-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=amadia-draig"
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "amadia-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=amadia-draig",
+          "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--amadia-draig"
+    },
+    "id": "person--haus-draig--amadia-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--amadia-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Amadia Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:42:59.212Z"
+  }
+}

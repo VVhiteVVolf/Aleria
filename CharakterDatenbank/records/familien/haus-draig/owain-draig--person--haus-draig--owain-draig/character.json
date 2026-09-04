@@ -1,0 +1,519 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--owain-draig",
+  "slug": "owain-draig",
+  "identity": {
+    "name": "Owain Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--owain-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=owain-draig",
+        "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"esyllt-arth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"nesta\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"},{\"personId\":\"matilda\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--matilda\",\"name\":\"Matilda\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"shylene-argall\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"children\":[{\"personId\":\"amadia-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--amadia-draig\",\"name\":\"Amadia Draig\"},{\"personId\":\"rhygifarch-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhygifarch-draig\",\"name\":\"Rhygifarch Draig\"},{\"personId\":\"rollo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rollo-draig\",\"name\":\"Rollo Draig\"},{\"personId\":\"siana-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--siana-draig\",\"name\":\"Siana Draig\"},{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-argall",
+        "familyTitle": "Haus Argall",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "affair",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Llysfaen"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
+        "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"Geheime Affäre Shylene Argalls\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"shylene-argall\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+        "score": 230
+      },
+      {
+        "familyId": "haus-pendrag",
+        "familyTitle": "Haus Pendrag",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Vortigerns Ruh",
+          "Tanwens Flamme",
+          "Mathragon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view&person=owain-draig",
+        "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"ygraine-pendrag\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--ygraine-pendrag\",\"name\":\"Ygraine Pendrag\"}],\"children\":[{\"personId\":\"ector-1716-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--ector-1716-pendrag\",\"name\":\"Ector Pendrag\"},{\"personId\":\"melwas-1716-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--melwas-1716-pendrag\",\"name\":\"Melwas Pendrag\"}]}}",
+        "score": 230
+      },
+      {
+        "familyId": "haus-arth",
+        "familyTitle": "Haus Arth O'Talgarth",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "affair",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Klaueninsel",
+          "Sturmklaue",
+          "Talgarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=owain-draig",
+        "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"esyllt-arth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"}],\"children\":[{\"personId\":\"amadia-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--amadia-draig\",\"name\":\"Amadia Draig\"},{\"personId\":\"siana-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--siana-draig\",\"name\":\"Siana Draig\"}]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--owain-draig",
+      "documentIds": [
+        "person--haus-draig--owain-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--owain-draig",
+          "createdAt": "2026-09-03T23:41:58.185Z",
+          "updatedAt": "2026-09-03T23:41:58.185Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=owain-draig"
+      },
+      {
+        "familyId": "haus-argall",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig"
+      },
+      {
+        "familyId": "haus-pendrag",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view&person=owain-draig"
+      },
+      {
+        "familyId": "haus-arth",
+        "personId": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=owain-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:58.185Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--owain-draig"
+    ],
+    "contentHash": "83a23ccb8ead7e2c32b005be28237900f90d860e3316b23e1e7bf141ea65aec3"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:58.185Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1694",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Amadia Draig",
+                "personId": "amadia-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--amadia-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Rhygifarch Draig",
+                "personId": "rhygifarch-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--rhygifarch-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Rollo Draig",
+                "personId": "rollo-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--rollo-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Siana Draig",
+                "personId": "siana-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--siana-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "illegitimate",
+                "name": "Iolo Argall",
+                "personId": "iolo-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--iolo-draig"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhodri Draig",
+                "personId": "rhodri-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--rhodri-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Angharad Pendrag",
+                "personId": "angharad-pendrag",
+                "type": "biological",
+                "worldPersonId": "person--haus-pendrag--angharad-pendrag"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Esyllt Arth",
+                "personId": "esyllt-arth",
+                "status": "ended",
+                "type": "affair",
+                "worldPersonId": "person--haus-arth--esyllt-arth"
+              },
+              {
+                "certainty": "confirmed",
+                "name": "Nesta",
+                "personId": "nesta",
+                "status": "ended",
+                "type": "affair",
+                "worldPersonId": "person--family-tree--nesta"
+              },
+              {
+                "certainty": "confirmed",
+                "name": "Matilda",
+                "personId": "matilda",
+                "status": "ended",
+                "type": "affair",
+                "worldPersonId": "person--family-tree--matilda"
+              },
+              {
+                "certainty": "confirmed",
+                "name": "Sylvia O'Cenyr",
+                "personId": "sylvia-cenyr",
+                "status": "ended",
+                "type": "affair",
+                "worldPersonId": "person--haus-cenyr--sylvia-cenyr"
+              },
+              {
+                "certainty": "confirmed",
+                "name": "Shylene Argall",
+                "personId": "shylene-argall",
+                "status": "secret",
+                "type": "affair",
+                "worldPersonId": "person--haus-argall--shylene-argall"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"esyllt-arth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"nesta\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"},{\"personId\":\"matilda\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--matilda\",\"name\":\"Matilda\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"shylene-argall\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"children\":[{\"personId\":\"amadia-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--amadia-draig\",\"name\":\"Amadia Draig\"},{\"personId\":\"rhygifarch-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhygifarch-draig\",\"name\":\"Rhygifarch Draig\"},{\"personId\":\"rollo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rollo-draig\",\"name\":\"Rollo Draig\"},{\"personId\":\"siana-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--siana-draig\",\"name\":\"Siana Draig\"},{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+              "importedAt": "2026-09-03T23:41:58.185Z",
+              "lastSyncedAt": "2026-09-03T23:41:58.185Z",
+              "personId": "owain-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=owain-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--owain-draig"
+        },
+        "id": "person--haus-draig--owain-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--owain-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Owain Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T23:41:58.185Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:58.185Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1694",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Amadia Draig",
+            "personId": "amadia-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--amadia-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Rhygifarch Draig",
+            "personId": "rhygifarch-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--rhygifarch-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Rollo Draig",
+            "personId": "rollo-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--rollo-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Siana Draig",
+            "personId": "siana-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--siana-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "illegitimate",
+            "name": "Iolo Argall",
+            "personId": "iolo-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--iolo-draig"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhodri Draig",
+            "personId": "rhodri-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--rhodri-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Angharad Pendrag",
+            "personId": "angharad-pendrag",
+            "type": "biological",
+            "worldPersonId": "person--haus-pendrag--angharad-pendrag"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Esyllt Arth",
+            "personId": "esyllt-arth",
+            "status": "ended",
+            "type": "affair",
+            "worldPersonId": "person--haus-arth--esyllt-arth"
+          },
+          {
+            "certainty": "confirmed",
+            "name": "Nesta",
+            "personId": "nesta",
+            "status": "ended",
+            "type": "affair",
+            "worldPersonId": "person--family-tree--nesta"
+          },
+          {
+            "certainty": "confirmed",
+            "name": "Matilda",
+            "personId": "matilda",
+            "status": "ended",
+            "type": "affair",
+            "worldPersonId": "person--family-tree--matilda"
+          },
+          {
+            "certainty": "confirmed",
+            "name": "Sylvia O'Cenyr",
+            "personId": "sylvia-cenyr",
+            "status": "ended",
+            "type": "affair",
+            "worldPersonId": "person--haus-cenyr--sylvia-cenyr"
+          },
+          {
+            "certainty": "confirmed",
+            "name": "Shylene Argall",
+            "personId": "shylene-argall",
+            "status": "secret",
+            "type": "affair",
+            "worldPersonId": "person--haus-argall--shylene-argall"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"esyllt-arth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"nesta\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nesta\",\"name\":\"Nesta\"},{\"personId\":\"matilda\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--matilda\",\"name\":\"Matilda\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"shylene-argall\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"children\":[{\"personId\":\"amadia-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--amadia-draig\",\"name\":\"Amadia Draig\"},{\"personId\":\"rhygifarch-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhygifarch-draig\",\"name\":\"Rhygifarch Draig\"},{\"personId\":\"rollo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rollo-draig\",\"name\":\"Rollo Draig\"},{\"personId\":\"siana-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--siana-draig\",\"name\":\"Siana Draig\"},{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}",
+          "importedAt": "2026-09-03T23:41:58.185Z",
+          "lastSyncedAt": "2026-09-03T23:41:58.185Z",
+          "personId": "owain-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=owain-draig"
+        },
+        {
+          "familyId": "haus-argall",
+          "personId": "owain-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
+          "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"Geheime Affäre Shylene Argalls\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"shylene-argall\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}"
+        },
+        {
+          "familyId": "haus-pendrag",
+          "personId": "owain-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view&person=owain-draig",
+          "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"ygraine-pendrag\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--ygraine-pendrag\",\"name\":\"Ygraine Pendrag\"}],\"children\":[{\"personId\":\"ector-1716-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--ector-1716-pendrag\",\"name\":\"Ector Pendrag\"},{\"personId\":\"melwas-1716-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--melwas-1716-pendrag\",\"name\":\"Melwas Pendrag\"}]}}"
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "owain-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=owain-draig",
+          "fingerprint": "{\"name\":\"Owain Draig\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"esyllt-arth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"sylvia-cenyr\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"}],\"children\":[{\"personId\":\"amadia-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--amadia-draig\",\"name\":\"Amadia Draig\"},{\"personId\":\"siana-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--siana-draig\",\"name\":\"Siana Draig\"}]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--owain-draig"
+    },
+    "id": "person--haus-draig--owain-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--owain-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Owain Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T23:41:58.185Z"
+  }
+}

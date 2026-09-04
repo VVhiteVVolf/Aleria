@@ -1,0 +1,468 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-draig--galahad-draig",
+  "slug": "galahad-draig",
+  "identity": {
+    "name": "Galahad Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--galahad-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig",
+        "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"Graf von Celtigerns Wacht\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"anaraut-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"},{\"personId\":\"idwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--idwal-draig\",\"name\":\"Idwal Draig\"},{\"personId\":\"tudwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"},{\"personId\":\"neithon-1718-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--neithon-1718-draig\",\"name\":\"Neithon Draig\"},{\"personId\":\"isobel-1719-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--isobel-1719-draig\",\"name\":\"Isobel Draig\"},{\"personId\":\"rhiannon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiannon-draig\",\"name\":\"Rhiannon Draig\"},{\"personId\":\"gawain-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gawain-draig\",\"name\":\"Gawain Draig\"},{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-neidr",
+        "familyTitle": "Haus Neidr",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Silberinsel",
+          "Silberbucht",
+          "Llanvane"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=galahad-draig",
+        "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}",
+        "score": 230
+      },
+      {
+        "familyId": "haus-aderyn",
+        "familyTitle": "Haus Aderyn O'Penbryn",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Tal der Milane",
+          "Yvains Klamm",
+          "Penbryn"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=galahad-draig",
+        "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-draig--galahad-draig",
+      "documentIds": [
+        "person--haus-draig--galahad-draig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-draig--galahad-draig",
+          "createdAt": "2026-09-03T23:41:58.678Z",
+          "updatedAt": "2026-09-03T23:41:58.678Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig"
+      },
+      {
+        "familyId": "haus-neidr",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=galahad-draig"
+      },
+      {
+        "familyId": "haus-aderyn",
+        "personId": "galahad-draig",
+        "worldPersonId": "person--haus-draig--galahad-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=galahad-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:41:58.678Z",
+    "sourceDocumentIds": [
+      "person--haus-draig--galahad-draig"
+    ],
+    "contentHash": "589e022f22bdc4d74f2255b1994a058aa7a7ea2feec6c5acbaba850087b6d93f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:41:58.678Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Draig",
+        "genealogy": {
+          "birth": "1695",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Anaraut Draig",
+                "personId": "anaraut-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--anaraut-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Idwal Draig",
+                "personId": "idwal-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--idwal-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Tudwal Draig",
+                "personId": "tudwal-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--tudwal-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Neithon Draig",
+                "personId": "neithon-1718-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--neithon-1718-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Isobel Draig",
+                "personId": "isobel-1719-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--isobel-1719-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhiannon Draig",
+                "personId": "rhiannon-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--rhiannon-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gawain Draig",
+                "personId": "gawain-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--gawain-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "unknown",
+                "name": "Guinevere Neidr",
+                "personId": "guinevere-neidr",
+                "type": "foster",
+                "worldPersonId": "person--haus-neidr--guinevere-neidr"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhodri Draig",
+                "personId": "rhodri-draig",
+                "type": "biological",
+                "worldPersonId": "person--haus-draig--rhodri-draig"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Angharad Pendrag",
+                "personId": "angharad-pendrag",
+                "type": "biological",
+                "worldPersonId": "person--haus-pendrag--angharad-pendrag"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Gwendolyn Aderyn",
+                "personId": "gwendolyn-aderyn",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"Graf von Celtigerns Wacht\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"anaraut-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"},{\"personId\":\"idwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--idwal-draig\",\"name\":\"Idwal Draig\"},{\"personId\":\"tudwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"},{\"personId\":\"neithon-1718-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--neithon-1718-draig\",\"name\":\"Neithon Draig\"},{\"personId\":\"isobel-1719-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--isobel-1719-draig\",\"name\":\"Isobel Draig\"},{\"personId\":\"rhiannon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiannon-draig\",\"name\":\"Rhiannon Draig\"},{\"personId\":\"gawain-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gawain-draig\",\"name\":\"Gawain Draig\"},{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}",
+              "importedAt": "2026-09-03T23:41:58.678Z",
+              "lastSyncedAt": "2026-09-03T23:41:58.678Z",
+              "personId": "galahad-draig",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-draig--galahad-draig"
+        },
+        "id": "person--haus-draig--galahad-draig",
+        "identity": {
+          "worldPersonId": "person--haus-draig--galahad-draig"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Galahad Draig",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Graf von Celtigerns Wacht",
+        "updatedAt": "2026-09-03T23:41:58.678Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:41:58.678Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Draig",
+    "genealogy": {
+      "birth": "1695",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Anaraut Draig",
+            "personId": "anaraut-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--anaraut-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Idwal Draig",
+            "personId": "idwal-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--idwal-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Tudwal Draig",
+            "personId": "tudwal-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--tudwal-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Neithon Draig",
+            "personId": "neithon-1718-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--neithon-1718-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Isobel Draig",
+            "personId": "isobel-1719-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--isobel-1719-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhiannon Draig",
+            "personId": "rhiannon-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--rhiannon-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gawain Draig",
+            "personId": "gawain-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--gawain-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "unknown",
+            "name": "Guinevere Neidr",
+            "personId": "guinevere-neidr",
+            "type": "foster",
+            "worldPersonId": "person--haus-neidr--guinevere-neidr"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhodri Draig",
+            "personId": "rhodri-draig",
+            "type": "biological",
+            "worldPersonId": "person--haus-draig--rhodri-draig"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Angharad Pendrag",
+            "personId": "angharad-pendrag",
+            "type": "biological",
+            "worldPersonId": "person--haus-pendrag--angharad-pendrag"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Gwendolyn Aderyn",
+            "personId": "gwendolyn-aderyn",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"Graf von Celtigerns Wacht\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhodri-draig\",\"name\":\"Rhodri Draig\"},{\"personId\":\"angharad-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--angharad-pendrag\",\"name\":\"Angharad Pendrag\"}],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"anaraut-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"},{\"personId\":\"idwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--idwal-draig\",\"name\":\"Idwal Draig\"},{\"personId\":\"tudwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"},{\"personId\":\"neithon-1718-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--neithon-1718-draig\",\"name\":\"Neithon Draig\"},{\"personId\":\"isobel-1719-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--isobel-1719-draig\",\"name\":\"Isobel Draig\"},{\"personId\":\"rhiannon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiannon-draig\",\"name\":\"Rhiannon Draig\"},{\"personId\":\"gawain-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gawain-draig\",\"name\":\"Gawain Draig\"},{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}",
+          "importedAt": "2026-09-03T23:41:58.678Z",
+          "lastSyncedAt": "2026-09-03T23:41:58.678Z",
+          "personId": "galahad-draig",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig"
+        },
+        {
+          "familyId": "haus-neidr",
+          "personId": "galahad-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=galahad-draig",
+          "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}"
+        },
+        {
+          "familyId": "haus-aderyn",
+          "personId": "galahad-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=galahad-draig",
+          "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-draig--galahad-draig"
+    },
+    "id": "person--haus-draig--galahad-draig",
+    "identity": {
+      "worldPersonId": "person--haus-draig--galahad-draig"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Galahad Draig",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Graf von Celtigerns Wacht",
+    "updatedAt": "2026-09-03T23:41:58.678Z"
+  }
+}

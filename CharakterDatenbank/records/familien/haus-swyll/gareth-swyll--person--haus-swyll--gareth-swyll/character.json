@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-swyll--gareth-swyll",
+  "slug": "gareth-swyll",
+  "identity": {
+    "name": "Gareth Swyll",
+    "aliases": [],
+    "worldPersonId": "person--haus-swyll--gareth-swyll"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-swyll",
+      "label": "Haus Swyll"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-swyll",
+        "familyTitle": "Haus Swyll",
+        "personId": "gareth-swyll",
+        "worldPersonId": "person--haus-swyll--gareth-swyll",
+        "houseId": "house-swyll",
+        "houseName": "Haus Swyll",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll",
+        "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-swyll--gareth-swyll",
+      "documentIds": [
+        "person--haus-swyll--gareth-swyll"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-swyll--gareth-swyll",
+          "createdAt": "2026-09-03T17:48:57.673Z",
+          "updatedAt": "2026-09-03T17:48:57.673Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-swyll",
+        "personId": "gareth-swyll",
+        "worldPersonId": "person--haus-swyll--gareth-swyll",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T17:48:57.673Z",
+    "sourceDocumentIds": [
+      "person--haus-swyll--gareth-swyll"
+    ],
+    "contentHash": "1431bdf6ccfc5ac671b37a31bf9440aae8ba95a17009aa1dbfca1664e69d8735"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T17:48:57.673Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Swyll",
+        "genealogy": {
+          "birth": "1720",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-swyll",
+          "houseName": "Haus Swyll",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhiannon Draenmelyn",
+                "personId": "rhiannon-draenmelyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Iestyn Swyll",
+                "personId": "iestyn-swyll",
+                "type": "biological",
+                "worldPersonId": "person--haus-swyll--iestyn-swyll"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-swyll",
+              "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T17:48:57.673Z",
+              "lastSyncedAt": "2026-09-03T17:48:57.673Z",
+              "personId": "gareth-swyll",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-swyll--gareth-swyll"
+        },
+        "id": "person--haus-swyll--gareth-swyll",
+        "identity": {
+          "worldPersonId": "person--haus-swyll--gareth-swyll"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Gareth Swyll",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": null,
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Älterer Bruder Meredith Swylls",
+        "updatedAt": "2026-09-03T17:48:57.673Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T17:48:57.673Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Swyll",
+    "genealogy": {
+      "birth": "1720",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-swyll",
+      "houseName": "Haus Swyll",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhiannon Draenmelyn",
+            "personId": "rhiannon-draenmelyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Iestyn Swyll",
+            "personId": "iestyn-swyll",
+            "type": "biological",
+            "worldPersonId": "person--haus-swyll--iestyn-swyll"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-swyll",
+          "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T17:48:57.673Z",
+          "lastSyncedAt": "2026-09-03T17:48:57.673Z",
+          "personId": "gareth-swyll",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-swyll--gareth-swyll"
+    },
+    "id": "person--haus-swyll--gareth-swyll",
+    "identity": {
+      "worldPersonId": "person--haus-swyll--gareth-swyll"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Gareth Swyll",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": null,
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Älterer Bruder Meredith Swylls",
+    "updatedAt": "2026-09-03T17:48:57.673Z"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-saethwyr--nudd-saethwyr",
+  "slug": "nudd-saethwyr",
+  "identity": {
+    "name": "Nudd Saethwyr",
+    "aliases": [],
+    "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-saethwyr",
+      "label": "Haus Saethwyr"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-saethwyr",
+        "familyTitle": "Haus Saethwyr",
+        "personId": "nudd-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--nudd-saethwyr",
+        "houseId": "house-saethwyr",
+        "houseName": "Haus Saethwyr",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=nudd-saethwyr",
+        "fingerprint": "{\"name\":\"Nudd Saethwyr\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-saethwyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"anwyll-saethwyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-saethwyr--anwyll-saethwyr\",\"name\":\"Anwyll Saethwyr\"},{\"personId\":\"maelys-ceirwyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--maelys-ceirwyn\",\"name\":\"Maelys Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-saethwyr--nudd-saethwyr",
+      "documentIds": [
+        "person--haus-saethwyr--nudd-saethwyr"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-saethwyr--nudd-saethwyr",
+          "createdAt": "2026-09-03T17:37:29.197Z",
+          "updatedAt": "2026-09-03T17:37:29.197Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-saethwyr",
+        "personId": "nudd-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--nudd-saethwyr",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=nudd-saethwyr"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T17:37:29.197Z",
+    "sourceDocumentIds": [
+      "person--haus-saethwyr--nudd-saethwyr"
+    ],
+    "contentHash": "5307c5dc6ea029dd8bd309369a4acb8a8a68655e685eda1efcf0f8b011252c60"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T17:37:29.197Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Saethwyr",
+        "genealogy": {
+          "birth": "1721",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-saethwyr",
+          "houseName": "Haus Saethwyr",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Anwyll Saethwyr",
+                "personId": "anwyll-saethwyr",
+                "type": "biological",
+                "worldPersonId": "person--haus-saethwyr--anwyll-saethwyr"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Maelys Ceirwyn",
+                "personId": "maelys-ceirwyn",
+                "type": "biological",
+                "worldPersonId": "person--haus-ceirwyn--maelys-ceirwyn"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-saethwyr",
+              "fingerprint": "{\"name\":\"Nudd Saethwyr\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-saethwyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"anwyll-saethwyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-saethwyr--anwyll-saethwyr\",\"name\":\"Anwyll Saethwyr\"},{\"personId\":\"maelys-ceirwyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--maelys-ceirwyn\",\"name\":\"Maelys Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T17:37:29.197Z",
+              "lastSyncedAt": "2026-09-03T17:37:29.197Z",
+              "personId": "nudd-saethwyr",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=nudd-saethwyr"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
+        },
+        "id": "person--haus-saethwyr--nudd-saethwyr",
+        "identity": {
+          "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Nudd Saethwyr",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-09-03T17:37:29.197Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T17:37:29.197Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Saethwyr",
+    "genealogy": {
+      "birth": "1721",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-saethwyr",
+      "houseName": "Haus Saethwyr",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Anwyll Saethwyr",
+            "personId": "anwyll-saethwyr",
+            "type": "biological",
+            "worldPersonId": "person--haus-saethwyr--anwyll-saethwyr"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Maelys Ceirwyn",
+            "personId": "maelys-ceirwyn",
+            "type": "biological",
+            "worldPersonId": "person--haus-ceirwyn--maelys-ceirwyn"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-saethwyr",
+          "fingerprint": "{\"name\":\"Nudd Saethwyr\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-saethwyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"anwyll-saethwyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-saethwyr--anwyll-saethwyr\",\"name\":\"Anwyll Saethwyr\"},{\"personId\":\"maelys-ceirwyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--maelys-ceirwyn\",\"name\":\"Maelys Ceirwyn\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T17:37:29.197Z",
+          "lastSyncedAt": "2026-09-03T17:37:29.197Z",
+          "personId": "nudd-saethwyr",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=nudd-saethwyr"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
+    },
+    "id": "person--haus-saethwyr--nudd-saethwyr",
+    "identity": {
+      "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Nudd Saethwyr",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-09-03T17:37:29.197Z"
+  }
+}

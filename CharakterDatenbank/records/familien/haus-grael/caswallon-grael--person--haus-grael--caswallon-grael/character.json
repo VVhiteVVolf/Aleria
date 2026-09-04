@@ -1,0 +1,353 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-grael--caswallon-grael",
+  "slug": "caswallon-grael",
+  "identity": {
+    "name": "Caswallon Grael",
+    "aliases": [],
+    "worldPersonId": "person--haus-grael--caswallon-grael"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-grael",
+      "label": "Haus Grael O'Mathragon"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-grael",
+        "familyTitle": "Haus Grael O'Mathragon",
+        "personId": "caswallon-grael",
+        "worldPersonId": "person--haus-grael--caswallon-grael",
+        "houseId": "house-grael",
+        "houseName": "Haus Grael O'Mathragon",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Vortigerns Ruh",
+          "Tanwens Flamme",
+          "Mathragon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=caswallon-grael",
+        "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"Erster Erbe des Hauses Grael\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-1673-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--rhiannon-1673-pendrag\",\"name\":\"Rhiannon Pendrag\"},{\"personId\":\"trahayarn-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--trahayarn-grael\",\"name\":\"Trahayarn Grael\"}],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[{\"personId\":\"gwalchmei-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--gwalchmei-grael\",\"name\":\"Gwalchmei Grael\"},{\"personId\":\"tylwyth-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--tylwyth-grael\",\"name\":\"Tylwyth Grael\"},{\"personId\":\"medrawd-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--medrawd-grael\",\"name\":\"Medrawd Grael\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "caswallon-grael",
+        "worldPersonId": "person--haus-grael--caswallon-grael",
+        "houseId": "house-grael",
+        "houseName": "Haus Grael",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=caswallon-grael",
+        "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-grael--caswallon-grael",
+      "documentIds": [
+        "person--haus-grael--caswallon-grael"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-grael--caswallon-grael",
+          "createdAt": "2026-09-03T23:42:58.734Z",
+          "updatedAt": "2026-09-03T23:42:58.734Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-grael",
+        "personId": "caswallon-grael",
+        "worldPersonId": "person--haus-grael--caswallon-grael",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=caswallon-grael"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "caswallon-grael",
+        "worldPersonId": "person--haus-grael--caswallon-grael",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=caswallon-grael"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:42:58.734Z",
+    "sourceDocumentIds": [
+      "person--haus-grael--caswallon-grael"
+    ],
+    "contentHash": "a4964bf30da0cd9643949d34e9e4cb7b8107894842054a43d38fa44ad5e34094"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:42:58.734Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Grael O'Mathragon",
+        "genealogy": {
+          "birth": "1694",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-grael",
+          "houseName": "Haus Grael O'Mathragon",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Gwalchmei Grael",
+                "personId": "gwalchmei-grael",
+                "type": "biological",
+                "worldPersonId": "person--haus-grael--gwalchmei-grael"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Tylwyth Grael",
+                "personId": "tylwyth-grael",
+                "type": "biological",
+                "worldPersonId": "person--haus-grael--tylwyth-grael"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Medrawd Grael",
+                "personId": "medrawd-grael",
+                "type": "biological",
+                "worldPersonId": "person--haus-grael--medrawd-grael"
+              }
+            ],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Rhiannon Pendrag",
+                "personId": "rhiannon-1673-pendrag",
+                "type": "biological",
+                "worldPersonId": "person--haus-pendrag--rhiannon-1673-pendrag"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Trahayarn Grael",
+                "personId": "trahayarn-grael",
+                "type": "biological",
+                "worldPersonId": "person--haus-grael--trahayarn-grael"
+              }
+            ],
+            "partners": [
+              {
+                "certainty": "confirmed",
+                "name": "Dwynwen Draig",
+                "personId": "dwynwen-draig",
+                "status": "active",
+                "type": "marriage",
+                "worldPersonId": "person--haus-draig--dwynwen-draig"
+              }
+            ]
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-grael",
+              "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"Erster Erbe des Hauses Grael\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-1673-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--rhiannon-1673-pendrag\",\"name\":\"Rhiannon Pendrag\"},{\"personId\":\"trahayarn-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--trahayarn-grael\",\"name\":\"Trahayarn Grael\"}],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[{\"personId\":\"gwalchmei-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--gwalchmei-grael\",\"name\":\"Gwalchmei Grael\"},{\"personId\":\"tylwyth-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--tylwyth-grael\",\"name\":\"Tylwyth Grael\"},{\"personId\":\"medrawd-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--medrawd-grael\",\"name\":\"Medrawd Grael\"}]}}",
+              "importedAt": "2026-09-03T23:42:58.734Z",
+              "lastSyncedAt": "2026-09-03T23:42:58.734Z",
+              "personId": "caswallon-grael",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=caswallon-grael"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-grael--caswallon-grael"
+        },
+        "id": "person--haus-grael--caswallon-grael",
+        "identity": {
+          "worldPersonId": "person--haus-grael--caswallon-grael"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Caswallon Grael",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Vortigerns Ruh > Tanwens Flamme > Mathragon",
+        "title": "Erster Erbe des Hauses Grael",
+        "updatedAt": "2026-09-03T23:42:58.734Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:42:58.734Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Grael O'Mathragon",
+    "genealogy": {
+      "birth": "1694",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-grael",
+      "houseName": "Haus Grael O'Mathragon",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Gwalchmei Grael",
+            "personId": "gwalchmei-grael",
+            "type": "biological",
+            "worldPersonId": "person--haus-grael--gwalchmei-grael"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Tylwyth Grael",
+            "personId": "tylwyth-grael",
+            "type": "biological",
+            "worldPersonId": "person--haus-grael--tylwyth-grael"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Medrawd Grael",
+            "personId": "medrawd-grael",
+            "type": "biological",
+            "worldPersonId": "person--haus-grael--medrawd-grael"
+          }
+        ],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Rhiannon Pendrag",
+            "personId": "rhiannon-1673-pendrag",
+            "type": "biological",
+            "worldPersonId": "person--haus-pendrag--rhiannon-1673-pendrag"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Trahayarn Grael",
+            "personId": "trahayarn-grael",
+            "type": "biological",
+            "worldPersonId": "person--haus-grael--trahayarn-grael"
+          }
+        ],
+        "partners": [
+          {
+            "certainty": "confirmed",
+            "name": "Dwynwen Draig",
+            "personId": "dwynwen-draig",
+            "status": "active",
+            "type": "marriage",
+            "worldPersonId": "person--haus-draig--dwynwen-draig"
+          }
+        ]
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-grael",
+          "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"Erster Erbe des Hauses Grael\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-1673-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--rhiannon-1673-pendrag\",\"name\":\"Rhiannon Pendrag\"},{\"personId\":\"trahayarn-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--trahayarn-grael\",\"name\":\"Trahayarn Grael\"}],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[{\"personId\":\"gwalchmei-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--gwalchmei-grael\",\"name\":\"Gwalchmei Grael\"},{\"personId\":\"tylwyth-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--tylwyth-grael\",\"name\":\"Tylwyth Grael\"},{\"personId\":\"medrawd-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--medrawd-grael\",\"name\":\"Medrawd Grael\"}]}}",
+          "importedAt": "2026-09-03T23:42:58.734Z",
+          "lastSyncedAt": "2026-09-03T23:42:58.734Z",
+          "personId": "caswallon-grael",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=caswallon-grael"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "caswallon-grael",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-04T01:59:49.901Z",
+          "lastSyncedAt": "2026-09-04T01:59:49.901Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=caswallon-grael",
+          "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-grael--caswallon-grael"
+    },
+    "id": "person--haus-grael--caswallon-grael",
+    "identity": {
+      "worldPersonId": "person--haus-grael--caswallon-grael"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Caswallon Grael",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Vortigerns Ruh > Tanwens Flamme > Mathragon",
+    "title": "Erster Erbe des Hauses Grael",
+    "updatedAt": "2026-09-03T23:42:58.734Z"
+  }
+}

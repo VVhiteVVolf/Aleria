@@ -1,0 +1,249 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-cruthin--padraig-cruthin",
+  "slug": "padraig-cruthin",
+  "identity": {
+    "name": "Pádraig Cruthin",
+    "aliases": [],
+    "worldPersonId": "person--haus-cruthin--padraig-cruthin"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-dal-cruthin",
+      "label": "Clan Dál’Cruthin"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-dal-cruthin",
+        "familyTitle": "Clan Dál’Cruthin",
+        "personId": "padraig-cruthin",
+        "worldPersonId": "person--haus-cruthin--padraig-cruthin",
+        "houseId": "house-cruthin",
+        "houseName": "Clan Dál’Cruthin",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Lochansail"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view&person=padraig-cruthin",
+        "fingerprint": "{\"name\":\"Pádraig Cruthin\",\"title\":\"\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-cruthin\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dal-cruthin/padraig-cruthin.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"koibhne-cruthin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cruthin--koibhne-cruthin\",\"name\":\"Koibhne Cruthin\"},{\"personId\":\"zolaith-gortach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gortach--zolaith-gortach\",\"name\":\"Zólaith Gortach\"}],\"partners\":[],\"children\":[]}}",
+        "score": 245
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-cruthin--padraig-cruthin",
+      "documentIds": [
+        "person--haus-cruthin--padraig-cruthin"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-cruthin--padraig-cruthin",
+          "createdAt": "2026-09-03T23:46:35.825Z",
+          "updatedAt": "2026-09-03T23:46:35.825Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-dal-cruthin",
+        "personId": "padraig-cruthin",
+        "worldPersonId": "person--haus-cruthin--padraig-cruthin",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view&person=padraig-cruthin"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+    "sourceUpdatedAt": "2026-09-03T23:46:35.825Z",
+    "sourceDocumentIds": [
+      "person--haus-cruthin--padraig-cruthin"
+    ],
+    "contentHash": "82491ca412976245475bc9d181f569eba9997b25323811504dc4915bcaa91864"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "aliases": [],
+        "archived": false,
+        "bio": "",
+        "biography": null,
+        "createdAt": "2026-09-03T23:46:35.825Z",
+        "currentLocation": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Clan Dál’Cruthin",
+        "genealogy": {
+          "birth": "1727",
+          "death": "",
+          "familyRole": "core",
+          "houseId": "house-cruthin",
+          "houseName": "Clan Dál’Cruthin",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "children": [],
+            "parents": [
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Koibhne Cruthin",
+                "personId": "koibhne-cruthin",
+                "type": "biological",
+                "worldPersonId": "person--haus-cruthin--koibhne-cruthin"
+              },
+              {
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Zólaith Gortach",
+                "personId": "zolaith-gortach",
+                "type": "biological",
+                "worldPersonId": "person--haus-gortach--zolaith-gortach"
+              }
+            ],
+            "partners": []
+          },
+          "sex": "male",
+          "sources": [
+            {
+              "familyId": "haus-dal-cruthin",
+              "fingerprint": "{\"name\":\"Pádraig Cruthin\",\"title\":\"\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-cruthin\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dal-cruthin/padraig-cruthin.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"koibhne-cruthin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cruthin--koibhne-cruthin\",\"name\":\"Koibhne Cruthin\"},{\"personId\":\"zolaith-gortach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gortach--zolaith-gortach\",\"name\":\"Zólaith Gortach\"}],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-09-03T23:46:35.825Z",
+              "lastSyncedAt": "2026-09-03T23:46:35.825Z",
+              "personId": "padraig-cruthin",
+              "publishedAt": "",
+              "releaseId": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view&person=padraig-cruthin"
+            }
+          ],
+          "status": "alive",
+          "tags": [],
+          "worldPersonId": "person--haus-cruthin--padraig-cruthin"
+        },
+        "id": "person--haus-cruthin--padraig-cruthin",
+        "identity": {
+          "worldPersonId": "person--haus-cruthin--padraig-cruthin"
+        },
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "inventory": null,
+        "name": "Pádraig Cruthin",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-dal-cruthin/padraig-cruthin.png",
+        "profileLink": "",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Leitheach > Tir na Gortanna > Lochansail",
+        "title": "",
+        "updatedAt": "2026-09-03T23:46:35.825Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "biography": null,
+    "createdAt": "2026-09-03T23:46:35.825Z",
+    "currentLocation": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Clan Dál’Cruthin",
+    "genealogy": {
+      "birth": "1727",
+      "death": "",
+      "familyRole": "core",
+      "houseId": "house-cruthin",
+      "houseName": "Clan Dál’Cruthin",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Koibhne Cruthin",
+            "personId": "koibhne-cruthin",
+            "type": "biological",
+            "worldPersonId": "person--haus-cruthin--koibhne-cruthin"
+          },
+          {
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Zólaith Gortach",
+            "personId": "zolaith-gortach",
+            "type": "biological",
+            "worldPersonId": "person--haus-gortach--zolaith-gortach"
+          }
+        ],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-dal-cruthin",
+          "fingerprint": "{\"name\":\"Pádraig Cruthin\",\"title\":\"\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-cruthin\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dal-cruthin/padraig-cruthin.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"koibhne-cruthin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cruthin--koibhne-cruthin\",\"name\":\"Koibhne Cruthin\"},{\"personId\":\"zolaith-gortach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gortach--zolaith-gortach\",\"name\":\"Zólaith Gortach\"}],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-03T23:46:35.825Z",
+          "lastSyncedAt": "2026-09-03T23:46:35.825Z",
+          "personId": "padraig-cruthin",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view&person=padraig-cruthin"
+        }
+      ],
+      "status": "alive",
+      "tags": [],
+      "worldPersonId": "person--haus-cruthin--padraig-cruthin"
+    },
+    "id": "person--haus-cruthin--padraig-cruthin",
+    "identity": {
+      "worldPersonId": "person--haus-cruthin--padraig-cruthin"
+    },
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Pádraig Cruthin",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-dal-cruthin/padraig-cruthin.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Leitheach > Tir na Gortanna > Lochansail",
+    "title": "",
+    "updatedAt": "2026-09-03T23:46:35.825Z"
+  }
+}
