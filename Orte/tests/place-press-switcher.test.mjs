@@ -16,7 +16,7 @@ test("Großstadtseite und Vorlage binden den modularen Pressewechsler ein", asyn
   for (const html of [page, template]) {
     assert.match(html, /orte-place-press\.css/);
     assert.match(html, /orte-place-press\.mjs\?v=fluesterfaecher-20260904a/);
-    assert.match(html, /celtigerns-wacht-places\.js\?v=fluesterfaecher-20260904a/);
+    assert.match(html, /celtigerns-wacht-places\.js\?v=celtigerns-cities-20260904c/);
     assert.match(html, /data-orte-press-switcher/);
     assert.match(html, /data-orte-press-fallback/);
   }

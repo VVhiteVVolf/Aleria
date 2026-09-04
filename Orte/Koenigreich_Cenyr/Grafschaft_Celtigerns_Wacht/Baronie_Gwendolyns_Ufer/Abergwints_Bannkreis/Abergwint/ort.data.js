@@ -37,7 +37,7 @@
     },
     features: {
       districts: true,
-      noticeBoard: false,
+      noticeBoard: true,
       personalitiesCollapsed: true
     },
     presentation: {

@@ -1,0 +1,36 @@
+.grossstadt-template .orte-notice-board-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 250px;
+  padding: 28px;
+  border: 1px dashed rgba(77, 45, 14, 0.58);
+  border-radius: 6px;
+  background:
+    linear-gradient(rgba(247, 231, 190, 0.72), rgba(239, 216, 165, 0.72)),
+    repeating-linear-gradient(90deg, transparent 0 30px, rgba(91, 55, 19, 0.04) 30px 31px);
+  color: #4d2d0e;
+  text-align: center;
+}
+
+.grossstadt-template .orte-notice-board-placeholder__icon {
+  margin-bottom: 8px;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.grossstadt-template .orte-notice-board-placeholder__title,
+.grossstadt-template .orte-notice-board-placeholder__description {
+  display: block;
+}
+
+.grossstadt-template .orte-notice-board-placeholder__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.grossstadt-template .orte-notice-board-placeholder__description {
+  max-width: 34rem;
+  margin-top: 6px;
+  font-size: 0.98rem;
+}

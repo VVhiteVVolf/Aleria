@@ -38,7 +38,7 @@ test("Abergwints Ortsseite verbindet alle vorbereiteten Medien", () => {
   assert.ok(data);
   assert.equal(data.meta.id, "abergwint");
   assert.equal(data.features.districts, true);
-  assert.equal(data.features.noticeBoard, false);
+  assert.equal(data.features.noticeBoard, true);
   assert.equal(data.regionMap.mapId, "cenyr-celtigerns-wacht-gwendolyns-ufer-abergwint-bannkreis");
 
   const media = data.presentation.images;

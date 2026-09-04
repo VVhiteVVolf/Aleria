@@ -4,9 +4,9 @@
   const countyRoot = "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht";
   const blankDataPath = "data/celtigerns-wacht-place.data.js";
   const llamreisMappedDataPath = "data/llamreis-mapped-place.data.js?v=llamreis-maps-20260902a";
-  const abergwintDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Gwendolyns_Ufer/Abergwints_Bannkreis/Abergwint/ort.data.js?v=abergwint-content-20260904a";
-  const castellbrynDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Herrschaft_Rhonwens_Traenen/Castellbryns_Bannkreis/Castellbryn/ort.data.js?v=castellbryn-preparation-20260902a";
-  const rhosmereDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Arthus_Streben/Rhosmeres_Bannkreis/Rhosmere/ort.data.js?v=rhosmere-preparation-20260902a";
+  const abergwintDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Gwendolyns_Ufer/Abergwints_Bannkreis/Abergwint/ort.data.js?v=abergwint-board-placeholder-20260904a";
+  const castellbrynDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Herrschaft_Rhonwens_Traenen/Castellbryns_Bannkreis/Castellbryn/ort.data.js?v=castellbryn-content-20260904a";
+  const rhosmereDataPath = "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Arthus_Streben/Rhosmeres_Bannkreis/Rhosmere/ort.data.js?v=rhosmere-content-20260904a";
 
   const domainHeraldryByName = Object.freeze({
     "celtigerns-wacht": heraldryPath("regions", "celtigerns-wacht"),
@@ -340,7 +340,10 @@
         parentLabel: entry.domain.name,
         ...(overrides.navigation || {})
       }),
-      features: Object.freeze({ ...(overrides.features || {}) }),
+      features: Object.freeze({
+        militaryView: true,
+        ...(overrides.features || {})
+      }),
       presentation: Object.freeze({
         motto: "...",
         heraldry: entry.images["icon-png"],

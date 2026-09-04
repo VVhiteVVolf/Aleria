@@ -1,0 +1,72 @@
+.orte-military-entry {
+  position: relative;
+  width: min(100%, 480px);
+  margin: 0 auto 0.38rem;
+  isolation: isolate;
+}
+
+.orte-military-entry > .orte-image-slot {
+  width: 100%;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.orte-military-entry__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  border: 2px solid transparent;
+  color: #fff3d2;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 2px #160d05;
+  background: linear-gradient(180deg, transparent 45%, rgba(27, 16, 7, 0.88));
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.orte-military-entry__link span,
+.orte-military-entry__link strong {
+  display: block;
+  padding: 0.08rem 0.45rem;
+  background: rgba(51, 31, 12, 0.82);
+}
+
+.orte-military-entry__link span {
+  color: #e6c575;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.orte-military-entry__link strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+.orte-military-entry:has(.orte-military-entry__link:hover) > .orte-image-slot,
+.orte-military-entry:has(.orte-military-entry__link:focus-visible) > .orte-image-slot {
+  filter: brightness(1.08) saturate(1.08);
+  transform: scale(1.012);
+}
+
+.orte-military-entry__link:hover,
+.orte-military-entry__link:focus-visible {
+  border-color: #d2a63c;
+  outline: none;
+}
+
+.orte-military-entry.is-disabled .orte-military-entry__link {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orte-military-entry > .orte-image-slot,
+  .orte-military-entry__link {
+    transition: none;
+  }
+}

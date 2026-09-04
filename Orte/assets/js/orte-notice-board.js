@@ -15,7 +15,10 @@
 
   function configureNoticeBoard(data) {
     const config = data?.noticeBoardMap;
-    if (!config?.mapId || !config?.embedHref) return;
+    if (!config?.mapId || !config?.embedHref) {
+      renderPlaceholder(data);
+      return;
+    }
     const embedUrl = new URL(config.embedHref, window.location.href);
     embedUrl.searchParams.set("ui", "single-board-20260902b");
     const versionedConfig = {
@@ -30,5 +33,28 @@
       frameTitlePrefix: "Anzeigetafel",
       variant: "notice-board",
     });
+  }
+
+  function renderPlaceholder(data) {
+    const placeName = String(data?.name || "diesem Ort");
+    const placeholder = document.createElement("div");
+    placeholder.className = "orte-notice-board-placeholder";
+    placeholder.setAttribute("role", "note");
+
+    const icon = document.createElement("span");
+    icon.className = "orte-notice-board-placeholder__icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = "📜";
+
+    const title = document.createElement("strong");
+    title.className = "orte-notice-board-placeholder__title";
+    title.textContent = "Anzeigetafel in Vorbereitung";
+
+    const description = document.createElement("span");
+    description.className = "orte-notice-board-placeholder__description";
+    description.textContent = `Für ${placeName} ist noch keine eigene Anzeigetafel eingerichtet.`;
+
+    placeholder.append(icon, title, description);
+    container.replaceChildren(placeholder);
   }
 })();

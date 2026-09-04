@@ -35,7 +35,7 @@ test("Rhosmeres Ortsseite verbindet Bannkreis, Bezirke, Wache und Hengste", () =
   assert.equal(data.meta.id, "rhosmere");
   assert.equal(data.parentage.liege, "Haus Gwefrydd");
   assert.equal(data.features.districts, true);
-  assert.equal(data.features.noticeBoard, false);
+  assert.equal(data.features.noticeBoard, true);
   assert.equal(data.regionMap.mapId, "cenyr-celtigerns-wacht-arthus-streben-rhosmere-bannkreis");
 
   const media = data.presentation.images;
@@ -52,6 +52,33 @@ test("Rhosmeres Ortsseite verbindet Bannkreis, Bezirke, Wache und Hengste", () =
   assert.match(media["karten-bild-png"].href, /rhosmere-bannkreis$/);
   assert.equal(media["karten-bild-png"].href, media["stadtsektionen-png"].href);
   assert.match(media["zeitung-png"].href, /schwarzbote-rhosmere$/);
+});
+
+test("Rhosmere besitzt vollständige Ortskapitel und sieben Stadtbezirke", () => {
+  const data = loadRhosmere();
+  const requiredSections = [
+    "introduction", "background", "location", "administration", "conflicts",
+    "history", "population", "newspaper", "region", "culture", "districts",
+    "builtEnvironment", "military", "economy", "trivia"
+  ];
+
+  requiredSections.forEach((sectionId) => {
+    assert.ok(data.sections[sectionId]?.length, sectionId);
+  });
+
+  const content = JSON.stringify(data.sections);
+  assert.match(content, /Móinloch/);
+  assert.match(content, /Rhoslyn/);
+  assert.match(content, /Sir Tallwch/);
+  assert.match(content, /Rhosmeres Rösser/);
+  assert.match(content, /500 Tallchwyr/);
+  assert.match(content, /78 Prozent/);
+  assert.match(content, /11 Prozent/);
+  assert.match(content, /10 Prozent/);
+
+  const districtList = data.sections.districts.find((block) => block.type === "list");
+  assert.equal(districtList.items.length, 7);
+  assert.equal(data.structure.ortswache, "500 Tallchwyr");
 });
 
 test("Rhosmeres Häusertabelle übernimmt alle Häuser aus Arthus Streben", () => {

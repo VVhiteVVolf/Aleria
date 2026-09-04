@@ -35,7 +35,7 @@ test("Castellbryns Ortsseite bindet Bannkreis und Schildkröten-Wappenstützer e
   assert.equal(data.meta.id, "castellbryn");
   assert.equal(data.parentage.liege, "Haus Arwydd");
   assert.equal(data.features.districts, true);
-  assert.equal(data.features.noticeBoard, false);
+  assert.equal(data.features.noticeBoard, true);
   assert.equal(data.regionMap.mapId, "cenyr-celtigerns-wacht-rhonwens-traenen-castellbryn-bannkreis");
 
   const media = data.presentation.images;
@@ -71,6 +71,38 @@ test("Castellbryns bekannte Grunddaten bleiben auf gesicherte Herrschaftsdaten b
   houses.forEach((house) => assertLocalMedia(house.emblem));
   assert.equal(data.merchants.length, 0);
   assert.equal(data.regionMap.pois.length, 0);
+});
+
+test("Castellbryn besitzt vollständige Ortskapitel, fünf Bezirke und die Schuppenwacht", () => {
+  const data = loadCastellbryn();
+  const requiredSections = [
+    "introduction", "background", "location", "administration", "conflicts",
+    "history", "population", "newspaper", "region", "culture", "districts",
+    "builtEnvironment", "military", "economy", "trivia"
+  ];
+
+  requiredSections.forEach((sectionId) => {
+    assert.ok(data.sections[sectionId]?.length, sectionId);
+  });
+
+  const content = JSON.stringify(data.sections);
+  assert.match(content, /Arwel der Schwarze Aal/);
+  assert.match(content, /Mydral/);
+  assert.match(content, /Haus Illysywen/);
+  assert.match(content, /300 Mann/);
+  assert.match(content, /200 Mann/);
+  assert.match(content, /Graf Galahad Draig/);
+
+  const districtList = data.sections.districts.find((block) => block.type === "list");
+  assert.deepEqual(Array.from(districtList.items), [
+    "Castellbryner Herrenviertel",
+    "Westhafen",
+    "Altstadt",
+    "Innenstadt",
+    "Nordviertel"
+  ]);
+  assert.equal(data.structure.einwohnerzahl, "etwa 8.000 bis 11.000");
+  assert.equal(data.structure.ortswache, "etwa 200 Mann der Schuppenwacht");
 });
 
 function assertLocalMedia(publicPath) {
