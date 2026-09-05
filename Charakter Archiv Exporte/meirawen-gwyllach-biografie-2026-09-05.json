@@ -1,0 +1,381 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-05T04:52:04.569Z",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Biografie-Erstellung am 05.09.2026. Grundlage: Benutzerkontext zu Haus Gwyllach, Fuhrmannsgilde, Ausbildung und geplantem Dienst bei Anaraut. Persönlichkeit, Zwillingsritual und Zitate sind neu ausgearbeitet. Beide Jahrgang 1716 (24 Jahre im Jahr 1740). Onkel/Nichten wird bis zur Klärung des abweichenden Stammbaums als familiäre Anrede verwendet; keine Abstammungsänderung. Eigentümerkennungen gehören nicht in den portablen Figurenexport. Nachkorrektur: zwölf bestehende CK2-Persönlichkeitsicons zugeordnet; wertende Präfixe und die Einteilung in Stärken/Schwächen entfernt.",
+  "character": {
+    "id": "person--haus-gwyllach--meirawen-gwyllach",
+    "title": "",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Meirawen Gwyllach"
+        },
+        {
+          "label": "Geboren",
+          "value": "1716"
+        },
+        {
+          "label": "Alter",
+          "value": "24 Jahre · Stand 1740"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor, Celtigerns Wacht"
+        },
+        {
+          "label": "Haus / Stand",
+          "value": "Haus Gwyllach · bürgerlich"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Agentin im Spionagenetzwerk von Celtigerns Wacht"
+        },
+        {
+          "label": "Zwillingsschwester",
+          "value": "Morwella Gwyllach"
+        }
+      ],
+      "quote": "Ein gutes Gespräch darf ruhig auch mir Freude machen.",
+      "quoteBy": "Meirawen Gwyllach",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 78,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Meirawen Gwyllach",
+        "biographyText": "<p>Meirawen Gwyllach begegnet anderen mit einer Offenheit, die im Haus ihrer Herkunft zunächst überraschen mag. Sie findet leicht Anschluss, lacht gern und hat echtes Vergnügen an fremden Lebensgeschichten. Ihre Geselligkeit ist nicht bloß eine Rolle für den Dienst. Gerade deshalb trifft es sie, wenn eine Bekanntschaft für ihr Haus nützlich wird und sie entscheiden muss, was sie davon weitergeben darf.</p><p>Mit 24 Jahren steht sie seit einigen Jahren im aktiven Dienst des Spionagenetzwerks von Celtigerns Wacht. Sie versteht es, sich in eine Gesellschaft einzufügen, ohne jedes Gespräch an sich zu reißen. Schwieriger fällt ihr die Zurückhaltung gegenüber den Menschen, deren Urteil ihr etwas bedeutet: Vor Morwella und Meister Rhovan möchte sie zeigen, dass hinter ihrem leichten Ton eine fähige, eigenständige Agentin steckt.</p>",
+        "historyTitle": "Ein bürgerliches Haus im Schatten",
+        "historyText": "<p>Die Gwyllach stammen aus Gwynthor. Obwohl sich das Haus in der Vergangenheit mehrfach für den Ritterstand qualifiziert hat, begnügt es sich bewusst mit seinem bürgerlichen Rang. Öffentliche Ehren würden Aufmerksamkeit auf Aufgaben lenken, die seit Langem im Verborgenen liegen: Für gewöhnlich stellen die Gwyllach den Schatten des Hauses Draig für Celtigerns Wacht. Zugleich kontrollieren sie dort die größte Fuhrmannsgilde, die ihnen eine feste Stellung im bürgerlichen Leben verschafft.</p><p>Meirawen und Morwella wurden von klein auf in Heimlichkeit und Spionage unterwiesen: unauffällig bleiben, richtig zuhören, auf Einzelheiten achten und Informationen gewinnen. Zur Ausbildung gehört eine eigene, auf überraschende und unübersichtliche Auseinandersetzungen ausgerichtete Kampfweise, die weder zur gewöhnlichen ritterlichen Schulung noch zu jener der Helwyr gehört. Diese besondere Lehre ersetzt weder Erfahrung noch die Grenzen der eigenen Kräfte.</p>",
+        "worksTitle": "Dienst & Ausblick",
+        "works": [
+          "Meister Rhovan Gwyllach, Oberhaupt des Hauses und derzeitiger Schatten Celtigerns Wachts, hält viel von beiden Schwestern. In ihrem vertrauten Umgang nennen sie ihn Onkel; er behandelt sie als seine Nichten.",
+          "Rhovan ist gewillt, die Zwillinge Prinz Anaraut Draig zur Seite zu stellen, damit sie weitere Erfahrung sammeln. Dieser Dienst ist vorgesehen. Meirawen reizt daran die Aussicht auf neue Menschen und die Gelegenheit, sich außerhalb des gewohnten Umfelds zu bewähren."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Meirawen & Morwella",
+            "text": "<p>Mit Morwella teilt Meirawen eine Vertrautheit aus gemeinsamer Kindheit und Ausbildung. Oft genügt ein Blick, weil beide die Gewohnheiten der anderen kennen; Gedanken lesen können sie nicht. Meirawen eröffnet gern ein Gespräch, während Morwella sich Zeit für ihr Urteil lässt. Beide können ihre Aufgaben auch ohne die Schwester erfüllen.</p><p>Meirawen spricht zuweilen für beide und bemerkt erst spät, dass sie Morwella damit eine Entscheidung abnimmt. Umgekehrt empfindet sie deren erneutes Prüfen gemeinsamer Pläne schnell als Misstrauen. Versöhnung beginnt häufig bei ihrem kleinen gemeinsamen Brauch: Abseits des Dienstes nennen sie beim Essen je einen eigenen Fehler und etwas, worüber sie lachen mussten. Meirawen hofft, Morwella damit aus dem Grübeln zu holen. Gerät ihre Schwester in Gefahr, fällt es ihr allerdings schwer, deren eigenen Entschluss zu respektieren.</p>"
+          }
+        ],
+        "triviaTitle": "Im persönlichen Umgang",
+        "trivia": [
+          "Sie fragt nach einer beiläufig erwähnten Sorge auch Tage später noch einmal; nicht jede gemerkte Einzelheit ist für einen Bericht bestimmt.",
+          "Vor vertrauten Menschen redet sie schneller, wenn sie sich für einen Fehler schämt.",
+          "Am meisten ärgert sie, wenn jemand ihr und Morwella dieselbe Meinung unterstellt. Dabei tut sie es selbst bisweilen."
+        ],
+        "quotesTitle": "In eigenen Worten",
+        "quotes": [
+          "„Morwella braucht länger für ihr Urteil. Das heißt nicht, dass sie keines hat.“"
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Morwella Gwyllach",
+            "detail": "Zwillingsschwester, engste Vertraute und eigenständige Gefährtin im Dienst.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gwyllach/morwella-gwyllach.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Meister Rhovan Gwyllach",
+            "detail": "Hausoberhaupt und Vorgesetzter; im vertrauten Familienkreis ihr Onkel. Seine Anerkennung bedeutet ihr viel.",
+            "image": "https://i.imgur.com/q1kdaUC.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Prinz Anaraut Draig",
+            "detail": "Rhovan möchte sie und Morwella künftig in seinen Dienst stellen.",
+            "image": "https://i.imgur.com/BuQJtjk.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus & Gilde",
+        "documents": [
+          {
+            "icon": "https://i.imgur.com/IxkbV60.png",
+            "title": "Fuhrmannsgilde in Celtigerns Wacht",
+            "text": "Die größte Fuhrmannsgilde Celtigerns Wachts wird vom Haus Gwyllach kontrolliert. Das abgebildete Wappen gehört zur Gilde.",
+            "link": "https://i.imgur.com/IxkbV60.png"
+          }
+        ],
+        "footer": "Personenakte · Meirawen Gwyllach · Stand 1740",
+        "abilities": [
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Gregarious.png",
+            "title": "Kontaktfreudig",
+            "detail": "Sie geht ohne Standesdünkel auf Menschen zu und nimmt deren Alltag ernst. Selbst in fremder Gesellschaft findet sie Anschluss, ohne andere absichtlich kleinzumachen."
+          },
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Quick.png",
+            "title": "Einfallsreich",
+            "detail": "Wenn ein Vorhaben ins Stocken gerät, findet sie rasch eine neue Herangehensweise. Ein misslungener erster Versuch nimmt ihr selten den Mut zum zweiten."
+          },
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Kind.png",
+            "title": "Warmherzig",
+            "detail": "Sie merkt sich persönliche Sorgen und hilft auch dann, wenn daraus kein Vorteil entsteht. Menschen, die ihr vertraut haben, lassen sich für sie nicht einfach auf ihren Nutzen reduzieren."
+          },
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Ambitious.png",
+            "title": "Geltungsbedürftig",
+            "detail": "Sie sucht die Anerkennung ihrer Vertrauten. Bleibt Lob aus, schmückt sie mitunter den eigenen Anteil an einem Erfolg aus oder übernimmt mehr, als ihr guttut."
+          },
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Fussy.png",
+            "title": "Ungeduldig",
+            "detail": "Langes Abwarten macht sie reizbar. Sie drängt Entscheidungen voran, obwohl andere noch Bedenken haben, und erklärt deren Zögern zu schnell zur Ängstlichkeit."
+          },
+          {
+            "icon": "../IconOrdner/Traits%20Icon/Proud.png",
+            "title": "Selbstüberschätzend",
+            "detail": "Ein guter erster Eindruck wiegt für sie oft schwerer als ein späterer Widerspruch. Hat sie jemanden für sich gewonnen geglaubt, fällt es ihr schwer, die eigene Menschenkenntnis infrage zu stellen."
+          }
+        ],
+        "abilitiesTitle": "Persönlichkeit"
+      }
+    },
+    "archived": false,
+    "profileLink": "",
+    "fraktion": "Haus Gwyllach",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg",
+    "role": "",
+    "status": "active",
+    "currentLocation": "",
+    "origin": "",
+    "relevance": "",
+    "bio": "Meirawen Gwyllach ist eine 24-jährige Agentin aus dem bürgerlichen Haus Gwyllach in Gwynthor und Morwellas Zwillingsschwester. Kontaktfreudig, einfallsreich und warmherzig, gewinnt sie leicht Zugang zu Menschen; ihr Geltungsbedürfnis, ihre Ungeduld und ihre Selbstüberschätzung machen ihr dabei zu schaffen. Seit einigen Jahren dient sie dem Spionagenetzwerk von Celtigerns Wacht. Meister Rhovan, den die Zwillinge ihren Onkel nennen, möchte beide in den Dienst von Prinz Anaraut Draig stellen.",
+    "imageSetsOverride": true,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg",
+        "createdAt": "2026-09-05T03:50:07.323Z",
+        "id": "standard",
+        "name": "Standard",
+        "updatedAt": "2026-09-05T03:50:07.323Z",
+        "emotes": [
+          {
+            "label": "eO0FmGA",
+            "img": "https://i.imgur.com/eO0FmGA.png"
+          },
+          {
+            "img": "https://i.imgur.com/M1Wh2hS.png",
+            "label": "M1Wh2hS"
+          },
+          {
+            "label": "Lbg0HXl",
+            "img": "https://i.imgur.com/Lbg0HXl.png"
+          },
+          {
+            "img": "https://i.imgur.com/RfjB8NI.png",
+            "label": "RfjB8NI"
+          },
+          {
+            "img": "https://i.imgur.com/CrjHFKa.png",
+            "label": "CrjHFKa"
+          },
+          {
+            "img": "https://i.imgur.com/z0u4JN4.png",
+            "label": "z0u4JN4"
+          },
+          {
+            "img": "https://i.imgur.com/VChUMRO.png",
+            "label": "VChUMRO"
+          },
+          {
+            "label": "mbTsCfJ",
+            "img": "https://i.imgur.com/mbTsCfJ.png"
+          },
+          {
+            "label": "xdnihYw",
+            "img": "https://i.imgur.com/xdnihYw.png"
+          },
+          {
+            "img": "https://i.imgur.com/OWdB2lb.png",
+            "label": "OWdB2lb"
+          },
+          {
+            "label": "Zgu3QeX",
+            "img": "https://i.imgur.com/Zgu3QeX.png"
+          },
+          {
+            "img": "https://i.imgur.com/ywiYnBl.png",
+            "label": "ywiYnBl"
+          },
+          {
+            "img": "https://i.imgur.com/euAoNGD.png",
+            "label": "euAoNGD"
+          },
+          {
+            "img": "https://i.imgur.com/HwSL6Vw.png",
+            "label": "HwSL6Vw"
+          },
+          {
+            "img": "https://i.imgur.com/99e2UUx.png",
+            "label": "99e2UUx"
+          },
+          {
+            "img": "https://i.imgur.com/xecdqgv.png",
+            "label": "xecdqgv"
+          },
+          {
+            "label": "urVW3qh",
+            "img": "https://i.imgur.com/urVW3qh.png"
+          },
+          {
+            "label": "PeAMhhB",
+            "img": "https://i.imgur.com/PeAMhhB.png"
+          }
+        ]
+      }
+    ],
+    "plotNode": "",
+    "playerOwner": "",
+    "emotesOverride": true,
+    "activeImageSetId": "standard",
+    "inventory": null,
+    "aliases": [],
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/eO0FmGA.png",
+        "label": "eO0FmGA"
+      },
+      {
+        "label": "M1Wh2hS",
+        "img": "https://i.imgur.com/M1Wh2hS.png"
+      },
+      {
+        "label": "Lbg0HXl",
+        "img": "https://i.imgur.com/Lbg0HXl.png"
+      },
+      {
+        "img": "https://i.imgur.com/RfjB8NI.png",
+        "label": "RfjB8NI"
+      },
+      {
+        "img": "https://i.imgur.com/CrjHFKa.png",
+        "label": "CrjHFKa"
+      },
+      {
+        "img": "https://i.imgur.com/z0u4JN4.png",
+        "label": "z0u4JN4"
+      },
+      {
+        "img": "https://i.imgur.com/VChUMRO.png",
+        "label": "VChUMRO"
+      },
+      {
+        "label": "mbTsCfJ",
+        "img": "https://i.imgur.com/mbTsCfJ.png"
+      },
+      {
+        "label": "xdnihYw",
+        "img": "https://i.imgur.com/xdnihYw.png"
+      },
+      {
+        "label": "OWdB2lb",
+        "img": "https://i.imgur.com/OWdB2lb.png"
+      },
+      {
+        "img": "https://i.imgur.com/Zgu3QeX.png",
+        "label": "Zgu3QeX"
+      },
+      {
+        "img": "https://i.imgur.com/ywiYnBl.png",
+        "label": "ywiYnBl"
+      },
+      {
+        "img": "https://i.imgur.com/euAoNGD.png",
+        "label": "euAoNGD"
+      },
+      {
+        "label": "HwSL6Vw",
+        "img": "https://i.imgur.com/HwSL6Vw.png"
+      },
+      {
+        "label": "99e2UUx",
+        "img": "https://i.imgur.com/99e2UUx.png"
+      },
+      {
+        "label": "xecdqgv",
+        "img": "https://i.imgur.com/xecdqgv.png"
+      },
+      {
+        "label": "urVW3qh",
+        "img": "https://i.imgur.com/urVW3qh.png"
+      },
+      {
+        "img": "https://i.imgur.com/PeAMhhB.png",
+        "label": "PeAMhhB"
+      }
+    ],
+    "updatedAt": "2026-09-05T04:51:08.882Z",
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach",
+      "sex": "female",
+      "status": "alive",
+      "death": "",
+      "houseId": "house-gwyllach",
+      "houseName": "Haus Gwyllach",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "sources": [
+        {
+          "familyId": "haus-gwyllach",
+          "personId": "meirawen-gwyllach",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-02T20:38:59.612Z",
+          "lastSyncedAt": "2026-09-02T20:38:59.612Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach",
+          "fingerprint": "{\"name\":\"Meirawen Gwyllach\",\"title\":\"\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyllach\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"efael-gwyllach\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyllach--efael-gwyllach\",\"name\":\"Efael Gwyllach\"},{\"personId\":\"unknown-efael-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-efael-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "efael-gwyllach",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyllach--efael-gwyllach",
+            "name": "Efael Gwyllach"
+          },
+          {
+            "personId": "unknown-efael-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-efael-spouse",
+            "name": "Unbekannte Ehefrau"
+          }
+        ],
+        "partners": [],
+        "children": []
+      },
+      "birth": "1716",
+      "tags": [
+        "Zwillinge"
+      ]
+    },
+    "createdAt": "2026-09-02T20:38:59.612Z",
+    "identity": {
+      "worldPersonId": "person--haus-gwyllach--meirawen-gwyllach"
+    },
+    "name": "Meirawen Gwyllach",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

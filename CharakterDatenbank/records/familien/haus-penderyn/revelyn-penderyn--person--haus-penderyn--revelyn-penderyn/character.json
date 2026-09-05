@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T03:09:12.000Z",
+    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
     "sourceUpdatedAt": "2026-09-03T23:44:54.531Z",
     "sourceDocumentIds": [
       "person--haus-penderyn--revelyn-penderyn"
     ],
-    "contentHash": "025b0c06d1347f0316351894fce8f7dc48e6070f5b9a35e33264938dc593525b"
+    "contentHash": "e35bf7ed721ad39551f4b46055132b3ac3ceb2fb82369490387c6cff13d10a2a"
   },
   "local": {
     "notes": "",
@@ -271,8 +271,8 @@
           "personId": "revelyn-penderyn",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T03:09:12.000Z",
-          "lastSyncedAt": "2026-09-05T03:09:12.000Z",
+          "importedAt": "2026-09-05T04:52:04.569Z",
+          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=revelyn-penderyn",
           "fingerprint": "{\"name\":\"Revelyn Penderyn\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-penderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tudwal-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"}],\"children\":[]}}"
         }

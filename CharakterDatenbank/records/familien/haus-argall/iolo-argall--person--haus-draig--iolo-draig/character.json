@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T03:09:12.000Z",
+    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
     "sourceUpdatedAt": "2026-09-03T23:43:00.993Z",
     "sourceDocumentIds": [
       "person--haus-draig--iolo-draig"
     ],
-    "contentHash": "bf7ccce8ff58f3bfbba0a7e19e3ab2a7c3dddd245ce75e949fdcd84acdd94c17"
+    "contentHash": "563e8fa3afd48f8cdfb652b0bc9e6b867aedadfcbb37e7ea2bba0af74c59f977"
   },
   "local": {
     "notes": "",
@@ -251,8 +251,8 @@
           "personId": "iolo-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T03:09:12.000Z",
-          "lastSyncedAt": "2026-09-05T03:09:12.000Z",
+          "importedAt": "2026-09-05T04:52:04.569Z",
+          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
           "fingerprint": "{\"name\":\"Iolo Argall\",\"title\":\"Unehelicher Sohn Shylene Argalls und Owain Draigs\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"5 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"},{\"personId\":\"shylene-argall\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--shylene-argall\",\"name\":\"Shylene Argall\"}],\"partners\":[],\"children\":[]}}"
         }

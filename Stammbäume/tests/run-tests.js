@@ -6641,6 +6641,68 @@ test('bildet das bürgerliche Haus Gwyllach mit wechselnder Kopfschaft und vier 
   assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
 });
 
+test('führt Meirawen und Morwella als junge Zwillinge mit stimmiger Elterngeneration', () => {
+  const family = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
+  const byId = new Map(family.persons.map(person => [person.id, person]));
+  const sisters = ['meirawen-gwyllach', 'morwella-gwyllach'].map(id => byId.get(id));
+  assert.deepEqual(sisters.map(person => person.birth), ['1716', '1716']);
+  assert.ok(sisters.every(person => 1740 - Number(person.birth) === 24 && person.tags.includes('Zwillinge')));
+  const father = byId.get('efael-gwyllach');
+  const mother = byId.get('unknown-efael-spouse');
+  assert.equal(1740 - Number(father.birth), 48);
+  assert.equal(mother.birth, '1694');
+  assert.equal(mother.status, 'unknown');
+  assert.equal(mother.name, 'Unbekannte Ehefrau');
+  assert.equal(byId.get('rhydderch-gwyllach').birth, '1653');
+  assert.equal(Number(father.birth) - Number(byId.get('rhydderch-gwyllach').birth), 39);
+  sisters.forEach(sister => {
+    assert.equal(Number(sister.birth) - Number(father.birth), 24);
+    assert.equal(Number(sister.birth) - Number(mother.birth), 22);
+    const origin = family.parentages.find(parentage => parentage.childId === sister.id);
+    assert.deepEqual(origin.parentIds, [father.id, mother.id]);
+    assert.equal(origin.partnershipId, 'marriage-efael-spouse');
+  });
+});
+
+test('aktualisiert Gwyllachs alte Altersangaben ohne Verlust eigener Ergänzungen oder Identitäten', () => {
+  const current = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
+  const previous = structuredClone(current);
+  previous.extensions.sourceRevision = 1;
+  previous.extensions.sourceNote = 'Frühere geschätzte Lebensdaten.';
+  previous.document.motto = 'Eigene Ergänzung';
+  const oldYears = new Map([
+    ['efael-gwyllach', '1679'], ['unknown-efael-spouse', '????'],
+    ['meirawen-gwyllach', '1705'], ['morwella-gwyllach', '1707']
+  ]);
+  previous.persons.filter(person => oldYears.has(person.id)).forEach(person => {
+    person.birth = oldYears.get(person.id);
+    person.title = '';
+    person.tags = [];
+    person.notes = '';
+    delete person.extensions.registryManagedFields;
+    person.extensions.personalNote = 'Behalten';
+  });
+  const upgraded = resolveRegisteredFamilyUpgrade(current, previous);
+  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.document.motto, 'Eigene Ergänzung');
+  assert.equal(upgraded.extensions.sourceNote, current.extensions.sourceNote);
+  for (const expected of current.persons.filter(person => oldYears.has(person.id))) {
+    const actual = upgraded.persons.find(person => person.id === expected.id);
+    assert.equal(actual.birth, expected.birth);
+    assert.equal(actual.worldPersonId, expected.worldPersonId);
+    assert.equal(actual.portrait, expected.portrait);
+    assert.equal(actual.notes, expected.notes);
+    assert.equal(actual.extensions.personalNote, 'Behalten');
+    if (expected.tags.includes('Zwillinge')) {
+      assert.deepEqual(actual.tags, expected.tags);
+      assert.equal(actual.title, 'Zwillingsschwester');
+    }
+  }
+  assert.deepEqual(upgraded.parentages, current.parentages);
+  assert.deepEqual(upgraded.partnerships, current.partnerships);
+  assertValidFamily(upgraded);
+});
+
 test('liefert für Haus Gwyllach alle 19 belegten Portraits lokal aus', async () => {
   const family = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
   const picturedPeople = family.persons.filter(person => person.portrait);
