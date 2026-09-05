@@ -2,12 +2,14 @@ import { splitEncounterExperience } from './combat-progression.js?v=20260807-mag
 import {
   applyCombatEncounterAuraApplicationsToStateMap,
   normalizeCombatEncounterAuraApplication
-} from './combat-encounter-aura.js?v=20260808-duncan-v1';
+} from './combat-encounter-aura.js?v=20260905-encounter-v2';
+import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary, getEncounterResolutionGroups } from './combat-encounter-summary.js';
+import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
-export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 1;
+export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 2;
 const OPERATIONS = new Set(['start', 'add', 'remove', 'end']);
-const STATUSES = new Set(['active', 'defeated', 'fled', 'left']);
+const STATUSES = new Set(['active', 'defeated', 'surrendered', 'fled', 'left']);
 
 function text(value, maximum = 240) {
   return String(value || '').trim().slice(0, maximum);
@@ -33,6 +35,7 @@ export function normalizeEncounterParticipant(value = {}, index = 0) {
     partyName: text(source.partyName || source.partyId || 'Neutral', 140),
     status: STATUSES.has(status) ? status : 'active',
     experienceValue: integer(source.experienceValue),
+    entrySnapshot: normalizeEncounterSnapshot(source.entrySnapshot),
     eligibleForExperience: source.eligibleForExperience !== false,
     persistence: source.persistence && typeof source.persistence === 'object' ? { ...source.persistence } : {}
   };
@@ -51,6 +54,11 @@ export function normalizeCombatEncounterEvent(value = {}) {
     operation: OPERATIONS.has(operation) ? operation : 'add',
     title: text(source.title || 'Kampfankündigung', 180),
     body: text(source.body, 4000),
+    combatType: Object.hasOwn(ENCOUNTER_TYPE_LABELS, source.combatType) ? source.combatType : 'combat',
+    outcome: Object.hasOwn(ENCOUNTER_OUTCOME_LABELS, source.outcome) ? source.outcome : (source.winningPartyId ? 'victory' : ''),
+    endReason: Object.hasOwn(ENCOUNTER_REASON_LABELS, source.endReason) ? source.endReason : '',
+    expectedRevision: text(source.expectedRevision, 240),
+    summary: normalizeCombatEncounterSummary(source.summary),
     participants,
     auraApplications: (Array.isArray(source.auraApplications) ? source.auraApplications : [])
       .slice(0, 500)
@@ -77,12 +85,22 @@ export function isCombatEncounterComment(comment = {}) {
 }
 
 function getCommentCombatResolutions(comment = {}) {
-  const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  const nested = segments.flatMap(segment => Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
-    ? segment.combatResolutions
-    : [segment?.combatResolution]);
-  if (nested.some(Boolean)) return nested.filter(Boolean);
-  return comment.combatResolution ? [comment.combatResolution] : [];
+  return getEncounterResolutionGroups(comment).flat();
+}
+
+// Existing membership and reward values are owned by the original encounter,
+// never by a status form. Normalized missing fields must not zero those values.
+export function mergeEncounterParticipantUpdates(previousParticipants = [], event = {}) {
+  const merged = new Map(previousParticipants.map(participant => [participant.actorId, participant]));
+  for (const participant of event.participants || []) {
+    const previous = merged.get(participant.actorId);
+    const status = event.operation === 'remove' && participant.status === 'active' ? 'left' : participant.status;
+    merged.set(participant.actorId, previous ? {
+      ...previous, status,
+      ...(event.operation === 'add' ? { partyId: participant.partyId, partyName: participant.partyName } : {})
+    } : { ...participant, status });
+  }
+  return merged;
 }
 
 function applyCombatResolutionToEncounters(encounters, resolution = {}) {
@@ -116,6 +134,7 @@ export function deriveCombatEncounterState(comments = []) {
           startedBy: '',
           participants: new Map(),
           winningPartyId: '',
+          combatType: event.combatType, awardExperience: event.awardExperience, revision: '',
           events: []
         };
         if (event.operation === 'start') {
@@ -123,24 +142,26 @@ export function deriveCombatEncounterState(comments = []) {
           current.title = event.title;
           current.startedBy = text(comment.createdBy, 180);
           current.participants = new Map();
+          current.combatType = event.combatType;
+          current.awardExperience = event.awardExperience;
         }
-        event.participants.forEach(participant => {
-          const previous = current.participants.get(participant.actorId) || {};
-          current.participants.set(participant.actorId, {
-            ...previous,
-            ...participant,
-            status: event.operation === 'remove' && participant.status === 'active' ? 'left' : participant.status
-          });
-        });
+        current.participants = mergeEncounterParticipantUpdates([...current.participants.values()], event);
         if (event.operation === 'end') {
           current.active = false;
           current.winningPartyId = event.winningPartyId;
+          current.outcome = event.outcome;
         }
+        current.revision = String(comment.id || current.revision);
         current.events.push({ commentId: String(comment.id || ''), operation: event.operation });
         encounters.set(event.encounterId, current);
       }
     }
     getCommentCombatResolutions(comment).forEach(resolution => applyCombatResolutionToEncounters(encounters, resolution));
+    // Conservatively invalidate an open preview after any further mechanical
+    // contribution in the scene, including rests and resource use.
+    if (!isCombatEncounterComment(comment) && !comment.importedHistoricalMechanics && (comment.serverValidatedMechanics || comment.serverCommitted || getCommentCombatResolutions(comment).length)) {
+      encounters.forEach(encounter => { if (encounter.active) encounter.revision = String(comment.id || encounter.revision); });
+    }
   });
   return encounters;
 }
@@ -168,8 +189,9 @@ export function buildEncounterExperienceAwards(encounter = {}, winningPartyId = 
   const participants = encounter.participants instanceof Map
     ? [...encounter.participants.values()]
     : (Array.isArray(encounter.participants) ? encounter.participants : []);
+  if (!winningPartyId || !participants.some(participant => participant.partyId === winningPartyId)) return { totalExperience: 0, awards: [] };
   const defeatedExperience = participants
-    .filter(participant => participant.partyId !== winningPartyId && ['defeated', 'fled'].includes(participant.status))
+    .filter(participant => participant.partyId !== winningPartyId && ['defeated', 'surrendered', 'fled'].includes(participant.status))
     .reduce((sum, participant) => sum + integer(participant.experienceValue), 0);
   const recipients = participants
     .filter(participant => participant.partyId === winningPartyId && participant.eligibleForExperience !== false)
@@ -180,23 +202,41 @@ export function buildEncounterExperienceAwards(encounter = {}, winningPartyId = 
 export function applyCombatEncounterCommentToStateMap(states, comment = {}) {
   if (!(states instanceof Map) || !isCombatEncounterComment(comment)) return states;
   const event = normalizeCombatEncounterEvent(comment.combatEncounter || comment);
+  if (['start', 'add'].includes(event.operation)) {
+    event.participants.forEach(participant => {
+      const previous = states.get(participant.actorId);
+      const snapshot = participant.entrySnapshot;
+      const initial = snapshot && (event.operation === 'start' || !previous) ? {
+        ...(snapshot.current == null ? {} : { current: snapshot.current }),
+        ...(snapshot.maximum == null ? {} : { maximum: snapshot.maximum }),
+        ...(snapshot.temporary == null ? {} : { temporary: snapshot.temporary }),
+        ...(snapshot.resources.length ? { resources: snapshot.resources } : {})
+      } : {};
+      states.set(participant.actorId, { ...previous, ...initial,
+        encounterIds: [...new Set([...(previous?.encounterIds || []), event.encounterId])], encounterStatus: participant.status });
+    });
+  }
+  const participantIds = new Set(event.participants.map(participant => participant.actorId));
+  if (event.operation === 'end') states.forEach((state, actorId) => {
+    if (state.encounterIds?.includes(event.encounterId) || state.encounterAuraTemporaryHitPoints?.encounterId === event.encounterId
+      || state.temporaryConditions?.some(condition => condition.durationModel?.encounterId === event.encounterId)) participantIds.add(actorId);
+  });
   if (['start', 'add', 'remove', 'end'].includes(event.operation)) {
     applyCombatEncounterAuraApplicationsToStateMap(states, event);
   }
   if (!['remove', 'end'].includes(event.operation)) return states;
-  const participantIds = event.operation === 'end'
-    ? new Set([...states.keys()].map(String))
-    : new Set(event.participants.map(participant => participant.actorId));
   participantIds.forEach(actorId => {
     const previous = states.get(actorId);
     if (!previous) return;
     const temporaryConditions = (Array.isArray(previous.temporaryConditions) ? previous.temporaryConditions : [])
-      .filter(condition => !['combat', 'concentration', 'channeling'].includes(String(condition?.durationModel?.kind || '')));
+      .filter(condition => (condition.durationModel?.encounterId && condition.durationModel.encounterId !== event.encounterId)
+        || !['combat', 'concentration', 'channeling'].includes(String(condition?.durationModel?.kind || '')));
     states.set(actorId, {
       ...previous,
       temporaryConditions,
       concentration: null,
       channeling: null,
+      encounterIds: (previous.encounterIds || []).filter(id => id !== event.encounterId),
       encounterStatus: event.operation === 'end'
         ? 'ended'
         : (event.participants.find(participant => participant.actorId === actorId)?.status || 'left')

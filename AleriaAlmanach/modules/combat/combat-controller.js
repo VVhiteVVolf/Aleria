@@ -20,7 +20,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260808-duncan-v1';
+} from './combat-state-model.js?v=20260905-encounter-v2';
 import {
   canUseAuraPayment,
   canUseManaSubstitutePayment,
@@ -39,30 +39,12 @@ import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
 } from './combat-trigger-rules.js?v=20260808-duncan-v1';
-import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260808-duncan-v1';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260905-encounter-v2';
+import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
 let latestComposerContext = null;
-function getCombatSegmentMode(segment = {}) {
-  const explicit = String(segment.mechanicMode || '').trim();
-  if (explicit === 'combat' || explicit === 'magic') return explicit;
-  if (segment.combatResolution || segment.combatAction || segment.storedCombatResolution || segment.storedCombatAction) {
-    return ['spell', 'prayer', 'song'].includes(String(segment.commentKind || segment.kind || '')) ? 'magic' : 'combat';
-  }
-  return 'normal';
-}
-
-function isCombatSegment(segment = {}) {
-  return ['combat', 'magic'].includes(getCombatSegmentMode(segment));
-}
-
-function getEffectiveCombatSegmentKind(segment = {}) {
-  if (getCombatSegmentMode(segment) === 'combat') return 'combataction';
-  const kind = String(segment.commentKind || segment.kind || '');
-  return ['spell', 'prayer', 'song'].includes(kind) ? kind : 'spell';
-}
-
 function getCharacters() {
   if (typeof globalThis.getAvailableCommentCharacters !== 'function') return [];
   try {
@@ -656,6 +638,7 @@ async function handleSubmission(submission = {}) {
   const combatSegments = segments.filter(isCombatSegment);
   if (!combatSegments.length) return { handled: false, published: false };
   const cachedComments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
+  const encounterId = getActiveCombatEncounter(cachedComments)?.encounterId || '';
   const characters = applyEncounterParties(
     mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []),
     cachedComments
@@ -701,6 +684,7 @@ async function handleSubmission(submission = {}) {
         mechanicMode: getCombatSegmentMode(storedSegment),
         combatAction: {
           schemaVersion: 4,
+          encounterId,
           actionType: 'attack',
           presentationKind: storedSegment.commentKind || storedSegment.kind,
           actorId: combatResolution.actorId,

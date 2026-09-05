@@ -37,6 +37,7 @@ import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
 import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js';
+import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
@@ -333,6 +334,12 @@ export const FAMILY_REGISTRY = Object.freeze([
     family,
     type: 'commoner'
   })),
+  familyRecord({
+    id: 'haus-bradrhith',
+    title: 'Haus Bradrhith',
+    family: HOUSE_BRADRHITH_FAMILY,
+    type: 'commoner'
+  }),
   ...LLYSFAEN_COMMONER_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,

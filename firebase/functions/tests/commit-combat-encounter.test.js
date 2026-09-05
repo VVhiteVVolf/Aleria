@@ -3,6 +3,19 @@ import test from 'node:test';
 
 import { combatEncounterCommitInternals } from '../src/mechanics/commit-combat-encounter.js';
 
+test('Kampfabschluss kann nicht vor die ausgewertete Historie zurückdatiert werden', () => {
+  const order = combatEncounterCommitInternals.nextEncounterOrderKey([{ orderKey: 100 }, { createdAtClient: 120 }], 5, 200);
+  assert.equal(order, 121);
+  assert.equal(combatEncounterCommitInternals.nextEncounterOrderKey([{ orderKey: 100 }], 150, 200), 150);
+});
+
+test('veralteter und doppelter Abschluss werden serverseitig abgewiesen', () => {
+  const active = { active: true, revision: 'new-action', participants: new Map() };
+  assert.throws(() => combatEncounterCommitInternals.validateOperation({ operation: 'end', outcome: 'draw', expectedRevision: 'old-action' }, active), /verändert/);
+  assert.throws(() => combatEncounterCommitInternals.validateOperation({ operation: 'end', outcome: 'draw' }, { ...active, active: false }), /nicht mehr aktiv/);
+  assert.doesNotThrow(() => combatEncounterCommitInternals.validateOperation({ operation: 'end', outcome: 'draw', expectedRevision: 'new-action' }, active));
+});
+
 function fakeDatabase() {
   return {
     collection(collectionId) {

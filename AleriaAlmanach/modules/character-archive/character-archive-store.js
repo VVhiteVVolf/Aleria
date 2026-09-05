@@ -1,12 +1,14 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260810-fire-spell-arsenal-v1';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260905-archive-order-v2';
 import {
   cloneArchiveValue,
+  CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION,
   extractCharacterArchiveEntries,
   extractItemRegisterArchiveEntries,
   makeCharacterArchiveKey,
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260810-character-archive-register-v1';
+} from './character-archive-model.js?v=20260905-archive-order-v2';
+import { classifyCharacterArchiveEntries } from './character-archive-classification.js';
 
 const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';
 
@@ -102,7 +104,9 @@ export async function ensureCharacterArchiveLoaded() {
 }
 
 export function getCharacterArchiveEntries() {
-  return mergeCharacterArchiveEntries(state.builtin, state.live, state.register, state.remote).map(entry => cloneArchiveValue(entry));
+  return mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([
+    ...state.builtin, ...state.live, ...state.register, ...state.remote
+  ])).map(entry => cloneArchiveValue(entry));
 }
 
 export function setCharacterArchiveLiveRecords(characters = [], creatures = []) {
@@ -144,6 +148,7 @@ export async function saveCharacterArchiveEntry(entry = {}) {
   const now = new Date().toISOString();
   const normalized = normalizeCharacterArchiveEntry({
     ...entry,
+    iconAssignmentVersion: CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION,
     builtin: false,
     createdAt: entry.createdAt || now,
     updatedAt: now

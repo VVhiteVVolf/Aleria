@@ -1,289 +1,248 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260808-duncan-v1';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
-import {
-  deriveCombatEncounterState,
-  getActiveCombatEncounter,
-  normalizeCombatEncounterEvent
-} from '../combat/combat-encounter-model.js?v=20260808-duncan-v1';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260808-duncan-v1';
-import {
-  ensureCombatEncounterDialog,
-  filterEncounterCandidates,
-  renderCombatEncounterComment,
-  renderEncounterCandidates,
-  renderOperationButtons,
-  setEncounterEndControls,
-  setEncounterStatus,
-  setEncounterSubmitting,
-  updateEncounterCount
-} from './combat-encounter-ui.js?v=20260808-duncan-v1';
+import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260905-encounter-v2';
+import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js';
+import { buildCombatEncounterSummary } from '../combat/combat-encounter-summary.js';
+import { suggestEncounterOutcome } from '../combat/combat-encounter-outcome.js';
+import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js';
+import { renderActiveEncounterPanel } from './combat-encounter-panel.js';
+import { ensureCombatEncounterDialog, filterEncounterCandidates, renderCombatEncounterComment, renderEncounterCandidates,
+  renderOperationButtons, setEncounterEndControls, setEncounterStatus, setEncounterSubmitting, updateEncounterCount,
+  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260905-encounter-v2';
 
-const resolver = new CombatProfileResolver();
-let activeThreadId = '';
-let activeEncounter = null;
-let activeOperation = 'start';
-let activeCandidates = [];
+// This dialog owns its draft; changing tabs never rewrites encounter history.
+let dialog = null;
+const root = () => document.getElementById('combat-encounter-overlay');
+const field = name => root()?.querySelector(`[data-combat-encounter-field="${name}"]`);
+const comments = () => globalThis.getCachedCommentsForThread?.(dialog?.threadId) || [];
+const participants = () => readEncounterParticipants(root(), dialog.candidates, dialog.operation);
 
-function clone(value) {
-  if (!value || typeof value !== 'object') return value;
-  if (typeof structuredClone === 'function') return structuredClone(value);
-  return JSON.parse(JSON.stringify(value));
-}
-
-function searchText(...values) {
-  return values.join(' ').toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-}
-
-function availableActors() {
-  try {
-    return typeof globalThis.getAvailableCommentCharacters === 'function' ? globalThis.getAvailableCommentCharacters() : [];
-  } catch {
-    return [];
+function loadCandidates() {
+  const history = comments();
+  const sceneIds = collectSceneActorIds(history, globalThis.getCurrentCommentCastIds?.() || [], globalThis.AleriaCommentSceneCast?.getActors?.() || []);
+  const data = buildEncounterCandidates(globalThis.getAvailableCommentCharacters?.() || [], history, dialog.encounter, dialog.operation, sceneIds);
+  Object.assign(dialog, data);
+  const draft = dialog.drafts.get(dialog.operation);
+  for (const candidate of dialog.candidates) {
+    const saved = draft?.get(candidate.actorId);
+    if (saved) Object.assign(candidate, Object.fromEntries(Object.entries(saved).filter(([, value]) => value !== undefined)));
   }
 }
 
-function cachedComments() {
-  return globalThis.getCachedCommentsForThread?.(activeThreadId) || [];
-}
-
-function actorPersistence(actor, profile) {
-  if (profile?.persistence) return clone(profile.persistence);
-  if (actor?.sourceCreatureId || actor?.sceneActorSourceId) return { kind: 'scene-creature', sourceCreatureId: actor.sourceCreatureId || actor.sceneActorSourceId };
-  return { kind: actor?.entityType === 'creature' ? 'creature' : 'character', recordId: actor?.id || '' };
-}
-
-function candidateFromActor(actor) {
-  const profile = resolver.resolve(actor);
-  return {
-    actor: clone(actor),
-    actorId: String(actor.id || profile.characterId || ''),
-    sourceId: String(actor.sourceCreatureId || actor.sceneActorSourceId || ''),
-    name: String(actor.name || profile.name || 'Unbekannte Figur'),
-    title: String(actor.title || ''),
-    portrait: String(actor.portrait || profile.portrait || ''),
-    level: getEffectiveCombatLevel(profile),
-    entityType: actor.entityType === 'creature' ? 'creature' : 'character',
-    currentHitPoints: Number(profile.currentHitPoints) || 0,
-    maximumHitPoints: Number(profile.maximumHitPoints) || 0,
-    conditionNames: [], concentrationName: '', channelingName: '',
-    partyId: '', partyName: '', status: 'active', selected: false,
-    persistence: actorPersistence(actor, profile),
-    searchText: searchText(actor.name, actor.title, actor.entityType)
-  };
-}
-
-function currentParticipants() {
-  return activeEncounter?.participants instanceof Map ? [...activeEncounter.participants.values()] : [];
-}
-
-function candidatesForOperation(operation) {
-  const actors = availableActors().map(candidateFromActor).filter(candidate => candidate.actorId);
-  const actorById = new Map(actors.map(candidate => [candidate.actorId, candidate]));
-  const participants = currentParticipants();
-  if (operation === 'start') return actors;
-  if (operation === 'add') {
-    const activeIds = new Set(participants.filter(participant => participant.status === 'active').map(participant => participant.actorId));
-    return actors.filter(candidate => !activeIds.has(candidate.actorId));
-  }
-  const sceneStates = deriveCombatStateFromComments(cachedComments());
-  return participants.map(participant => {
-    const candidate = actorById.get(participant.actorId) || {};
-    const runtime = sceneStates.get(String(participant.actorId)) || {};
-    return {
-      ...candidate,
-      ...participant,
-      currentHitPoints: Number.isFinite(Number(runtime.current)) ? Number(runtime.current) : candidate.currentHitPoints,
-      maximumHitPoints: Number.isFinite(Number(runtime.maximum)) ? Number(runtime.maximum) : candidate.maximumHitPoints,
-      conditionNames: (Array.isArray(runtime.temporaryConditions) ? runtime.temporaryConditions : [])
-        .filter(condition => condition?.active !== false)
-        .map(condition => String(condition?.name || 'Zustand')),
-      concentrationName: String(runtime.concentration?.actionName || ''),
-      channelingName: String(runtime.channeling?.actionName || ''),
-      searchText: searchText(participant.name, participant.partyName, participant.status),
-      selected: operation === 'end'
-    };
-  });
-}
-
-function parties() {
-  return [...new Map(currentParticipants().filter(participant => participant.partyId).map(participant => [participant.partyId, {
-    id: participant.partyId,
-    name: participant.partyName || participant.partyId
-  }])).values()];
-}
-
-function renderDialog() {
-  activeCandidates = candidatesForOperation(activeOperation);
-  renderOperationButtons(!!activeEncounter, activeOperation);
-  renderEncounterCandidates(activeCandidates, activeOperation);
-  setEncounterEndControls(activeOperation === 'end', parties(), parties()[0]?.id || '');
-  updateEncounterCount();
-}
-
-function openDialog() {
-  const thread = globalThis.getCurrentCommentThread?.();
-  if (!thread || thread.kind !== 'session') {
-    globalThis.showAppStatus?.('Die Kampfliste ist nur in interaktiven Szenen verfügbar.', 'error');
-    return;
-  }
-  activeThreadId = String(globalThis.getCurrentCommentThreadId?.() || '');
-  if (!activeThreadId) return;
-  activeEncounter = getActiveCombatEncounter(cachedComments());
-  activeOperation = activeEncounter ? 'add' : 'start';
-  ensureCombatEncounterDialog();
-  const title = document.querySelector('[data-combat-encounter-field="title"]');
-  const body = document.querySelector('[data-combat-encounter-field="body"]');
-  const search = document.querySelector('[data-combat-encounter-field="search"]');
-  if (title) title.value = activeEncounter?.title || 'Kampfankündigung';
-  if (body) body.value = '';
-  if (search) search.value = '';
-  renderDialog();
-  setEncounterStatus(activeEncounter ? `${activeEncounter.participants.size} Kämpfer sind in der aktuellen Kampfliste.` : 'Wähle Kämpfer und trage für jede Figur ihre Partei ein.');
-  globalThis.activateDialog?.('combat-encounter-overlay', { initialFocus: '[data-combat-encounter-action="operation"], input, button' });
-}
-
-function closeDialog() {
-  globalThis.deactivateDialog?.('combat-encounter-overlay');
-  activeThreadId = '';
-  activeEncounter = null;
-  activeCandidates = [];
-}
-
-function selectedParticipants() {
-  return [...document.querySelectorAll('[data-combat-encounter-candidate]')].flatMap(row => {
-    const checkbox = row.querySelector('[data-combat-encounter-field="participant"]');
-    if (!checkbox?.checked && activeOperation !== 'end') return [];
-    const candidate = activeCandidates.find(item => item.actorId === row.dataset.actorId);
-    if (!candidate) return [];
-    const partyName = String(row.querySelector('[data-combat-encounter-field="party"]')?.value || candidate.partyName || candidate.partyId || 'Neutral').trim();
-    const status = String(row.querySelector('[data-combat-encounter-field="status"]')?.value || candidate.status || 'active');
-    return [{
-      actorId: candidate.actorId,
-      sourceId: candidate.sourceId || '',
-      name: candidate.name,
-      portrait: candidate.portrait,
-      level: candidate.level || 1,
-      partyId: partyName.toLocaleLowerCase('de').replace(/[^a-z0-9äöüß]+/g, '-').replace(/^-|-$/g, '') || 'neutral',
-      partyName,
-      status,
-      persistence: candidate.persistence,
-      eligibleForExperience: candidate.entityType !== 'creature'
-    }];
-  });
+function applyFilter() {
+  filterEncounterCandidates(field('search').value, ['start', 'add'].includes(dialog.operation) ? field('scope').value : 'all');
 }
 
 function buildEvent() {
-  const encounterId = activeEncounter?.encounterId || globalThis.crypto?.randomUUID?.() || `encounter-${Date.now().toString(36)}`;
+  const ending = dialog.operation === 'end';
   return normalizeCombatEncounterEvent({
-    encounterId,
-    operation: activeOperation,
-    title: document.querySelector('[data-combat-encounter-field="title"]')?.value || 'Kampfankündigung',
-    body: document.querySelector('[data-combat-encounter-field="body"]')?.value || '',
-    participants: selectedParticipants(),
-    winningPartyId: activeOperation === 'end' ? document.querySelector('[data-combat-encounter-field="winning-party"]')?.value : '',
-    awardExperience: document.querySelector('[data-combat-encounter-field="award-experience"]')?.checked !== false
+    encounterId: dialog.encounter?.encounterId || dialog.newId, operation: dialog.operation,
+    title: field('title').value, body: field('body').value,
+    combatType: dialog.encounter?.combatType || field('combat-type').value,
+    expectedRevision: dialog.encounter?.revision || '', participants: participants(),
+    outcome: ending ? field('outcome').value : '', endReason: ending ? field('end-reason').value : '',
+    winningPartyId: ending && field('outcome').value === 'victory' ? field('winning-party').value : '',
+    awardExperience: ending ? field('outcome').value === 'victory' && field('award-experience').checked : field('combat-type').value !== 'training'
   });
 }
 
-async function materializeSelectedBuiltins() {
-  const rows = [...document.querySelectorAll('[data-combat-encounter-candidate]')];
-  const pending = rows
-    .map(row => {
-      const checkbox = row.querySelector('[data-combat-encounter-field="participant"]');
-      if (!checkbox?.checked && activeOperation !== 'end') return null;
-      return activeCandidates.find(item => item.actorId === row.dataset.actorId) || null;
-    })
-    .filter(candidate => candidate?.persistence?.kind === 'scene-actor' && candidate.actorId);
-  for (const candidate of pending) {
-    try {
-      await globalThis.AleriaCreatures?.materializeBuiltin?.(candidate.actorId);
-      candidate.persistence = { kind: 'creature', recordId: candidate.actorId };
-    } catch (error) {
-      console.error('materialize builtin creature failed:', error);
-    }
+function updatePreview() {
+  if (!dialog) return;
+  updateEncounterCount();
+  setEncounterMode(dialog.operation, field('outcome').value);
+  if (dialog.operation !== 'end') return;
+  const event = buildEvent();
+  event.participants = [...prepareEncounterParticipants(event, dialog.encounter, dialog.profiles, dialog.states).values()];
+  event.summary = dialog.summary;
+  const plan = event.awardExperience ? buildEncounterExperienceAwards({ participants: event.participants.map(participant => ({
+    ...participant, eligibleForExperience: participant.eligibleForExperience !== false && participant.persistence?.kind === 'character'
+  })) }, event.winningPartyId) : { totalExperience: 0, awards: [] };
+  event.experience = { total: plan.totalExperience, awards: plan.awards };
+  setEncounterPreview(event);
+}
+
+function initializeOutcome() {
+  const roster = [...(dialog.encounter?.participants.values() || [])];
+  const suggestion = suggestEncounterOutcome(roster);
+  field('outcome').value = suggestion?.outcome || '';
+  field('winning-party').value = suggestion?.winningPartyId || '';
+  field('end-reason').value = suggestion?.endReason || 'agreement';
+  field('award-experience').checked = dialog.encounter?.awardExperience !== false && dialog.encounter?.combatType !== 'training';
+  dialog.summary = dialog.encounter ? buildCombatEncounterSummary({
+    encounterId: dialog.encounter.encounterId, participants: roster, comments: comments(), states: dialog.states, profiles: dialog.profiles
+  }) : null;
+  setEncounterStatus(suggestion ? 'Der Kampfstand legt einen Sieger nahe. Prüfe den Vorschlag vor dem Abschluss.' : 'Wähle den Ausgang des Kampfes. Es wird keine Siegerseite vorgegeben.');
+}
+
+function renderDialog({ initial = false } = {}) {
+  loadCandidates();
+  renderOperationButtons(!!dialog.encounter, dialog.operation);
+  renderEncounterCandidates(dialog.candidates, dialog.operation);
+  if (initial) {
+    const sides = [...new Map([...(dialog.encounter?.participants.values() || [])].filter(participant => participant.partyId !== 'neutral')
+      .map(participant => [participant.partyId, { id: participant.partyId, name: participant.partyName }])).values()];
+    setEncounterEndControls(false, sides);
+    field('scope').value = dialog.candidates.some(candidate => candidate.inScene) ? 'scene' : 'all';
+    initializeOutcome();
+  }
+  applyFilter();
+  updatePreview();
+}
+
+function openDialog(operation, trigger) {
+  if (dialog?.submitting) return;
+  const thread = globalThis.getCurrentCommentThread?.();
+  const threadId = String(globalThis.getCurrentCommentThreadId?.() || '');
+  if (thread?.kind !== 'session' || !threadId || (trigger?.dataset.threadId && trigger.dataset.threadId !== threadId)) {
+    globalThis.showAppStatus?.('Öffne zuerst die zugehörige interaktive Szene.', 'error'); return;
+  }
+  const encounter = getActiveCombatEncounter(globalThis.getCachedCommentsForThread?.(threadId) || []);
+  if (trigger?.dataset.encounterId && trigger.dataset.encounterId !== encounter?.encounterId) {
+    globalThis.showAppStatus?.('Dieser Kampf ist bereits beendet. Lade den aktuellen Szenenstand.', 'error'); return;
+  }
+  ensureCombatEncounterDialog();
+  dialog = { threadId, encounter, operation: encounter ? (['add', 'remove', 'end'].includes(operation) ? operation : 'end') : 'start',
+    newId: globalThis.crypto.randomUUID(), candidates: [], drafts: new Map(), submitting: false, stale: false };
+  field('title').value = encounter?.title || 'Kampfankündigung';
+  field('body').value = '';
+  field('search').value = '';
+  field('combat-type').value = encounter?.combatType || 'combat';
+  root().querySelector('[data-combat-encounter-action="refresh"]').hidden = true;
+  renderDialog({ initial: true });
+  setEncounterSubmitting(false);
+  if (!encounter) setEncounterStatus('Bei der Auswahl erhält jede Figur zunächst eine eigene Seite. Passe die Namen für gemeinsame Parteien an.');
+  globalThis.activateDialog?.('combat-encounter-overlay', { initialFocus: encounter ? '[data-combat-encounter-field="outcome"]' : '[data-combat-encounter-field="title"]' });
+}
+
+function closeDialog() {
+  if (dialog?.submitting) return;
+  globalThis.deactivateDialog?.('combat-encounter-overlay');
+  dialog = null;
+}
+
+function markStale() {
+  if (!dialog) return;
+  dialog.stale = true;
+  setEncounterStatus('Der Kampf wurde inzwischen verändert. Lade den aktuellen Stand und prüfe das Fazit erneut; dein Erzählertext bleibt erhalten.', 'error');
+  root().querySelector('[data-combat-encounter-action="refresh"]').hidden = false;
+  root().querySelector('[data-combat-encounter-action="submit"]').disabled = true;
+}
+
+async function refreshEncounter() {
+  if (!dialog || dialog.submitting) return;
+  try {
+    await globalThis.loadCommentsIntoPage?.(dialog.threadId, true, { page: 'last' });
+  } catch (error) {
+    setEncounterStatus(error?.message || 'Der aktuelle Kampfstand konnte nicht geladen werden.', 'error'); return;
+  }
+  if (!dialog) return;
+  const current = getActiveCombatEncounter(comments());
+  if (!current || current.encounterId !== dialog.encounter?.encounterId) {
+    setEncounterStatus(current ? 'In dieser Szene läuft inzwischen ein anderer Kampf. Schließe diese Ansicht und öffne den laufenden Kampf.'
+      : 'Dieser Kampf wurde bereits beendet. Schließe diese Ansicht.', 'error'); return;
+  }
+  dialog.encounter = current;
+  dialog.drafts.clear();
+  dialog.stale = false;
+  root().querySelector('[data-combat-encounter-action="refresh"]').hidden = true;
+  renderDialog({ initial: true });
+  setEncounterSubmitting(false);
+}
+
+async function materializeSelectedBuiltins(event) {
+  for (const participant of event.participants.filter(participant => participant.persistence?.kind === 'scene-actor')) {
+    if (!globalThis.AleriaCreatures?.materializeBuiltin) throw new Error('Die Kreatur kann noch nicht gespeichert werden.');
+    await globalThis.AleriaCreatures.materializeBuiltin(participant.actorId);
+    dialog.candidates.find(candidate => candidate.actorId === participant.actorId).persistence = { kind: 'creature', recordId: participant.actorId };
+    participant.persistence = { kind: 'creature', recordId: participant.actorId };
   }
 }
 
 async function submitEvent() {
+  if (!dialog || dialog.submitting || dialog.stale) return;
+  const current = getActiveCombatEncounter(comments());
+  if (dialog.encounter && (current?.encounterId !== dialog.encounter.encounterId || current?.revision !== dialog.encounter.revision)) { markStale(); return; }
+  const event = buildEvent();
+  const error = getEncounterValidationError(event, current);
+  if (error) { setEncounterStatus(error, 'error'); return; }
+  dialog.submitting = true;
   setEncounterSubmitting(true);
   try {
-    await materializeSelectedBuiltins();
-    const event = buildEvent();
-    if (!event.participants.length && event.operation !== 'end') {
-      setEncounterStatus('Wähle mindestens eine Figur aus.', 'error');
-      return;
-    }
+    await materializeSelectedBuiltins(event);
     const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
     if (!backend?.addCombatEncounter) throw new Error('Der Online-Speicher unterstützt die Kampfliste noch nicht.');
     const labels = { start: 'Der Kampf beginnt.', add: 'Weitere Kämpfer treten bei.', remove: 'Kämpfer scheiden aus.', end: 'Der Kampf ist beendet.' };
-    const result = await backend.addCombatEncounter(activeThreadId, [labels[event.operation], event.body].filter(Boolean).join('\n\n'), '7777', {
-      commentMode: 'combat-encounter',
-      commentKind: 'combat-encounter-event',
-      combatEncounter: event,
-      orderKey: globalThis.getNextCommentOrderKey?.(activeThreadId, null) ?? Date.now()
+    const threadId = dialog.threadId;
+    const result = await backend.addCombatEncounter(threadId, [labels[event.operation], event.body].filter(Boolean).join('\n\n'), '7777', {
+      commentMode: 'combat-encounter', commentKind: 'combat-encounter-event', combatEncounter: event,
+      orderKey: globalThis.getNextCommentOrderKey?.(threadId, null) ?? Date.now()
     });
     if (result?.profileUpdates?.length) document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', { detail: { updates: result.profileUpdates } }));
-    const threadId = activeThreadId;
+    dialog.submitting = false;
     closeDialog();
     await globalThis.loadCommentsIntoPage?.(threadId, true, { page: 'last' });
-    globalThis.showAppStatus?.('Die Kampfliste wurde verbindlich aktualisiert.', 'success');
+    globalThis.showAppStatus?.(event.operation === 'end' ? 'Kampf abgeschlossen und Fazit veröffentlicht.' : 'Die Kampfliste wurde aktualisiert.', 'success');
   } catch (error) {
     console.error('combat encounter submit failed:', error);
     setEncounterStatus(error?.message || 'Die Kampfliste konnte nicht gespeichert werden.', 'error');
   } finally {
-    setEncounterSubmitting(false);
+    if (dialog) { dialog.submitting = false; setEncounterSubmitting(false); if (dialog.stale) markStale(); }
   }
 }
 
 async function cheatResetSelected() {
-  const participants = selectedParticipants()
-    .map(participant => participant.persistence)
-    .filter(persistence => persistence?.kind === 'character' || persistence?.kind === 'creature')
-    .map(persistence => ({ kind: persistence.kind, recordId: persistence.recordId }));
-  if (!participants.length) {
-    setEncounterStatus('Wähle mindestens eine gespeicherte Figur aus, bevor du zurücksetzt.', 'error');
-    return;
-  }
-  const confirmed = confirm(
-    `${participants.length} Figur(en) auf ihren aktuellen Charakterbogen-Vollzustand zurücksetzen?\n\nTrefferpunkte, Ressourcen und Fähigkeiten werden auf maximal gesetzt, alle Kampfsperren gelöst. Das ist ein Cheat-Werkzeug und wird nicht als Beitrag erzählt.`
-  );
-  if (!confirmed) return;
+  if (!dialog || dialog.submitting) return;
+  const records = participants().map(participant => participant.persistence).filter(persistence => ['character', 'creature'].includes(persistence?.kind));
+  if (!records.length) { setEncounterStatus('Wähle mindestens eine gespeicherte Figur aus.', 'error'); return; }
+  if (!confirm(`${records.length} Figur(en) vollständig zurücksetzen? Trefferpunkte und Ressourcen werden aufgefüllt und Kampfsperren gelöst. Dieses Testwerkzeug erzeugt keinen Erzählbeitrag.`)) return;
   try {
     const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
     if (!backend?.resetCombatParticipants) throw new Error('Zurücksetzen benötigt eine Online-Verbindung.');
-    const result = await backend.resetCombatParticipants(participants);
-    setEncounterStatus(`${result?.reset?.length || 0} Figur(en) zurückgesetzt.`, 'success');
-    renderDialog();
-  } catch (error) {
-    console.error('cheat reset failed:', error);
-    setEncounterStatus(error?.message || 'Zurücksetzen fehlgeschlagen.', 'error');
-  }
+    const result = await backend.resetCombatParticipants(records);
+    setEncounterStatus(`${result?.reset?.length || 0} Figur(en) zurückgesetzt. Schließe und öffne die Ansicht erneut, um die neuen Profilwerte zu laden.`, 'success');
+  } catch (error) { setEncounterStatus(error?.message || 'Zurücksetzen fehlgeschlagen.', 'error'); }
 }
 
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-combat-encounter-action]');
-  if (!trigger) return;
+  if (!trigger || dialog?.submitting) return;
   const action = trigger.dataset.combatEncounterAction;
-  if (action === 'open') openDialog();
+  if (action === 'open') openDialog(trigger.dataset.operation, trigger);
   if (action === 'close') closeDialog();
   if (action === 'cheat-reset') void cheatResetSelected();
-  if (action === 'operation') {
-    activeOperation = trigger.dataset.operation || activeOperation;
+  if (action === 'refresh') void refreshEncounter();
+  if (action === 'operation' && dialog) {
+    dialog.drafts.set(dialog.operation, captureEncounterCandidateDraft(root()));
+    dialog.operation = trigger.dataset.operation;
     renderDialog();
   }
   if (action === 'submit') void submitEvent();
 });
 
 document.addEventListener('input', event => {
-  if (event.target?.matches?.('[data-combat-encounter-field="search"]')) filterEncounterCandidates(event.target.value);
-});
-document.addEventListener('change', event => {
-  if (event.target?.closest?.('#combat-encounter-overlay')) updateEncounterCount();
+  if (!dialog || dialog.submitting || !event.target?.closest?.('#combat-encounter-overlay')) return;
+  if (event.target.matches('[data-combat-encounter-field="search"]')) applyFilter();
 });
 
-globalThis.AleriaCombatEncounter = Object.freeze({
-  open: openDialog,
-  isComment: comment => !!comment?.combatEncounter,
-  renderComment: renderCombatEncounterComment,
-  deriveState: deriveCombatEncounterState
+document.addEventListener('change', event => {
+  if (!dialog || dialog.submitting || !event.target?.closest?.('#combat-encounter-overlay')) return;
+  const target = event.target;
+  if (target.matches('[data-combat-encounter-field="scope"]')) applyFilter();
+  if (target.matches('[data-combat-encounter-field="participant"]') && target.checked) {
+    const row = target.closest('[data-combat-encounter-candidate]');
+    const party = row.querySelector('[data-combat-encounter-field="party"]');
+    if (party && !party.value.trim()) party.value = dialog.candidates.find(candidate => candidate.actorId === row.dataset.actorId)?.name || '';
+  }
+  if (target.matches('[data-combat-encounter-field="outcome"]')) {
+    if (target.value === 'draw') field('end-reason').value = 'agreement';
+    if (target.value === 'aborted') field('end-reason').value = 'interruption';
+  }
+  updatePreview();
 });
+
+document.addEventListener('aleria:comments-updated', event => {
+  if (!dialog || dialog.submitting || event.detail?.threadId !== dialog.threadId) return;
+  const current = getActiveCombatEncounter(event.detail.comments || comments());
+  if (dialog.encounter ? current?.encounterId !== dialog.encounter.encounterId || current?.revision !== dialog.encounter.revision : !!current) markStale();
+});
+
+globalThis.AleriaCombatEncounter = Object.freeze({ open: openDialog, isComment: comment => !!comment?.combatEncounter,
+  renderComment: renderCombatEncounterComment, deriveState: deriveCombatEncounterState, renderActivePanel: renderActiveEncounterPanel });

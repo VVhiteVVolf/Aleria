@@ -3,6 +3,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { findLaterMechanicalDependency } from './mechanical-comment-dependencies.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -119,10 +120,12 @@ export const commitUndoMechanicalComment = onCall({
       );
     }
 
+    const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
+    const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+      .filter(isTrustedMechanicalComment);
+    const dependent = findLaterMechanicalDependency(history, commentId);
+    if (!force && dependent) fail('failed-precondition', `Eine neuere Handlung hängt von diesem Kampfstand ab: ${describeComment(dependent)}. Nimm zuerst den neueren Beitrag zurück.`);
     if (comment.commentKind === 'combat-encounter-event') {
-      const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
-      const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
-        .filter(isTrustedMechanicalComment);
       const encounterId = clean(comment.combatEncounter?.encounterId, 240);
       const encounterState = deriveCombatEncounterState(history).get(encounterId);
       const events = encounterState?.events || [];

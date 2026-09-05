@@ -25,7 +25,7 @@ import {
   getResolutionIconSource,
   getRollIconSource
 } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
-import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260810-zauberkarten-icons-v1';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260905-archive-order-v2';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -169,7 +169,7 @@ function renderEntryIcon(kind, item, className = '') {
   const presentation = getCharacterSheetEntryIconPresentation(kind, item);
   const fallbackSource = getSafeImageSource(presentation.fallbackSource);
   const source = getSafeImageSource(presentation.source, fallbackSource);
-  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}" src="${escapeMarkup(source)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
+  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"${source ? '' : ' hidden'}><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}"${source ? ` src="${escapeMarkup(source)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
 }
 
 function renderPropertyIcon(source) {
@@ -179,6 +179,7 @@ function renderPropertyIcon(source) {
 function activateEntryIconFallbacks(root) {
   root?.querySelectorAll?.('[data-combat-entry-icon]').forEach(image => {
     const useFallback = () => {
+      if (!image.getAttribute('src')) return;
       const fallback = String(image.dataset.fallbackSrc || '').trim();
       if (fallback && image.src !== new URL(fallback, document.baseURI).href) {
         image.src = fallback;
@@ -187,8 +188,9 @@ function activateEntryIconFallbacks(root) {
       }
       image.closest('.cp-entry-icon-frame, .cp-card-property-icon')?.classList.add('is-missing');
     };
-    if (image.complete && image.naturalWidth === 0) useFallback();
-    else image.addEventListener('error', useFallback);
+    image.addEventListener('load', () => image.closest('.cp-entry-icon-frame, .cp-card-property-icon')?.classList.remove('is-missing'));
+    image.addEventListener('error', useFallback);
+    if (image.getAttribute('src') && image.complete && image.naturalWidth === 0) useFallback();
   });
 }
 
@@ -201,7 +203,14 @@ function refreshArchiveLinkedEntryIcons(root = document.getElementById('cp-comba
     if (!presentation.linked) return;
     const fallbackSource = getSafeImageSource(presentation.fallbackSource);
     const source = getSafeImageSource(presentation.source, fallbackSource);
+    image.hidden = !source;
+    const frame = image.closest('.cp-entry-icon-frame');
+    if (frame) {
+      frame.hidden = !source;
+      if (source) frame.classList.remove('is-missing');
+    }
     if (source) image.src = source;
+    else image.removeAttribute('src');
     if (fallbackSource && fallbackSource !== source) image.dataset.fallbackSrc = fallbackSource;
     else image.removeAttribute('data-fallback-src');
   });
@@ -797,7 +806,7 @@ function renderSpellCard(spell) {
     <div class="cp-spell-card-body">
       <section class="cp-spell-card-hero">
         <div><p><strong>${escapeMarkup(spell.name || 'Dieser Zauber')}</strong> ist ${escapeMarkup(getSpellLevelLabel(spell.level).toLowerCase())}${spell.damageType ? ` und wirkt mit ${escapeMarkup(spell.damageType)}.` : '.'}</p><h5>Beschreibung</h5><p>${escapeMarkup(spell.description || 'Noch keine Wirkung beschrieben.')}</p></div>
-        <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}" src="${escapeMarkup(iconSource)}" data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
+        <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}"${iconSource ? ` src="${escapeMarkup(iconSource)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
       </section>
       <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
         ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', `${getActivationLabel(spell.activationType)} · ${costLabel}`)}

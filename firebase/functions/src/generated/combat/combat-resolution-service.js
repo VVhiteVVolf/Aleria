@@ -24,6 +24,7 @@ import {
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
 import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260808-duncan-v1';
+import { resolveCombatWard } from './combat-ward-resolution.js';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
@@ -31,7 +32,7 @@ import {
   sanitizeCombatRuleEffects
 } from './combat-trigger-rules.js?v=20260808-duncan-v1';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-4';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-5';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -487,52 +488,13 @@ export class CombatResolutionService {
       ? target.temporaryConditions.map(condition => ({ ...condition }))
       : [];
     let appliedTemporaryCondition = null;
-    // Abwehrladungen (Schild, Spiegelbilder, …): lenkt einen bereits feststehenden Treffer ab,
-    // bevor überhaupt Schaden gewürfelt wird. Ein kritischer Treffer kann die Ladungen stattdessen
-    // zerbrechen, statt selbst abgelenkt zu werden.
-    const preWardTargetConditions = existingTemporaryConditions.map(normalizeRuntimeCondition);
-    let wardResolution = null;
-    if (!savingThrowMode && attack.hit) {
-      const wardIndex = preWardTargetConditions.findIndex(condition => condition.active !== false && condition.ward?.enabled && condition.ward.charges > 0);
-      if (wardIndex >= 0) {
-        const wardCondition = preWardTargetConditions[wardIndex];
-        if (attack.criticalSuccess && wardCondition.ward.breaksOnCriticalHit) {
-          wardResolution = {
-            conditionId: wardCondition.id, conditionName: wardCondition.name,
-            deflected: false, shattered: true,
-            chargesBefore: wardCondition.ward.charges, chargesAfter: 0, roll: null
-          };
-          preWardTargetConditions.splice(wardIndex, 1);
-        } else {
-          const deflectChance = wardCondition.ward.deflectChance;
-          let deflected = deflectChance >= 100;
-          let deflectionRoll = null;
-          let threshold = null;
-          if (!deflected && deflectChance > 0 && typeof this.dice.rollWardDeflection === 'function') {
-            // Eigener W20-Kanal statt Missbrauch der Schadenswürfel-Formel (die nur W4-W12
-            // zulässt und mit dem primären Schadenswurf um denselben Würfelbeleg konkurrieren
-            // würde) - deflectChance wird dafür linear auf einen 1-20-Schwellenwert abgebildet.
-            threshold = Math.max(1, Math.min(20, Math.round(deflectChance / 100 * 20)));
-            deflectionRoll = await this.dice.rollWardDeflection({
-              threshold, actorName: actor.name, targetName: target.name, container: options.container
-            });
-            deflected = Number(deflectionRoll.natural) <= threshold;
-          }
-          const chargesAfter = Math.max(0, wardCondition.ward.charges - (deflected ? 1 : 0));
-          wardResolution = {
-            conditionId: wardCondition.id, conditionName: wardCondition.name,
-            deflected, shattered: false,
-            chargesBefore: wardCondition.ward.charges, chargesAfter,
-            roll: deflectionRoll ? { natural: Number(deflectionRoll.natural), threshold, rollId: deflectionRoll.id || '' } : null
-          };
-          if (deflected) {
-            attack = { ...attack, hit: false, criticalSuccess: false };
-            if (chargesAfter <= 0) preWardTargetConditions.splice(wardIndex, 1);
-            else preWardTargetConditions[wardIndex] = { ...wardCondition, ward: { ...wardCondition.ward, charges: chargesAfter } };
-          }
-        }
-      }
-    }
+    const primaryWard = await resolveCombatWard({
+      attack, conditions: existingTemporaryConditions, dice: this.dice,
+      actor, target, container: options.container, enabled: !savingThrowMode
+    });
+    attack = primaryWard.attack;
+    let preWardTargetConditions = primaryWard.conditions;
+    const wardResolution = primaryWard.wardResolution;
     const primaryDamageEffect = effectiveEffects.find(effect => effect.type === 'damage' && effectApplies(effect, attack, savingThrowMode, actor.actionHalfDamageOnSave)) || null;
 
     if (primaryDamageEffect && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
@@ -629,7 +591,9 @@ export class CombatResolutionService {
       const followPreEffects = mergeCombatRuleEffects(followPreApplications);
       const followRollMode = mergeRollModes(profileRollMode, auraRollMode, followPreEffects.rollMode);
       const followAttackModifier = Number(actor.attackModifier || 0) + Number(followUp.attackBonus || 0)
-        + Number(targetAuraOnActor.attack || 0) + followPreEffects.attackModifier;
+        + Number(targetAuraOnActor.attack || 0)
+        + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
+        + followPreEffects.attackModifier;
       let followDefense = Number(target.totalDefense) + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier;
       const followAttackRoll = await this.dice.rollAttack({
         modifier: followAttackModifier,
@@ -660,12 +624,19 @@ export class CombatResolutionService {
       ].forEach(([phase, conflicts]) => {
         if (Array.isArray(conflicts) && conflicts.length) followRuleConflicts.push({ phase, applications: conflicts });
       });
+      const followWard = await resolveCombatWard({
+        attack: followAttack, conditions: preWardTargetConditions, dice: this.dice,
+        actor, target, container: options.container
+      });
+      followAttack = followWard.attack;
+      preWardTargetConditions = followWard.conditions;
       let followDamage = null;
       if (followAttack.hit) {
         const followBonusDamageFormulas = followUp.damageFormula ? getBonusDamageFormulas(actor) : [];
         followDamage = await this.dice.rollDamage({
           damageFormula: [followUp.damageFormula, ...followBonusDamageFormulas].filter(Boolean).join('+'),
           bonus: Number(actor.damageModifier || 0) + Number(followUp.damageBonus || 0)
+            + Number(targetAuraOnActor.damage || 0)
             + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
           actorName: actor.name,
@@ -678,11 +649,12 @@ export class CombatResolutionService {
       followUpAttacks.push({
         sameTarget: followUp.sameTarget !== false,
         triggerFurtherEffects: followUp.triggerFurtherEffects === true,
+        wardResolution: followWard.wardResolution,
         attack: {
           naturalRoll: Number(followAttackRoll.natural),
           diceResults: Array.isArray(followAttackRoll.dice) ? followAttackRoll.dice.slice() : [],
-          modifier: followAttackModifier,
-          total: Number(followAttackRoll.total),
+          modifier: followAttackModifier + followPostEffects.attackModifier,
+          total: Number(followAttackRoll.total) + followPostEffects.attackModifier,
           targetDefense: followDefense,
           hit: followAttack.hit,
           criticalSuccess: followAttack.criticalSuccess,

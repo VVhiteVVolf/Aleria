@@ -182,6 +182,73 @@ test('Schweif des Drachen wuerfelt den Folgeangriff getrennt und fuehrt den Scha
   assert.equal(result.targetSnapshot.hitPointsAfter, 45);
 });
 
+test('Klauen-Abzug bleibt beim Anzeigen jedes Abschnitts des betroffenen Beitrags aktiv', async () => {
+  const actor = resolveCombatProfile(await loadGawain(), { actionId: 'technique:gawain-dragon-claw', segmentKind: 'combataction' });
+  const target = trainingTarget();
+  const resolution = await new CombatResolutionService(new TechniqueDiceAdapter({ saves: [2] }))
+    .resolveAttack({ actor, target });
+  const comments = [
+    { id: 'claw', commentSegments: [{ combatResolution: resolution }] },
+    { id: 'reply', commentSegments: [
+      { characterId: target.characterId, kind: 'speech', text: 'Meine Deckung hält.' },
+      { characterId: target.characterId, kind: 'combataction', text: 'Ich setze nach.' }
+    ] }
+  ];
+  for (const segmentIndex of [0, 1]) {
+    const states = deriveCombatStateFromComments(comments, { commentId: 'reply', segmentIndex });
+    const profile = overlayCombatHitPointState(target, states.get(target.characterId));
+    assert.equal(profile.attackModifier, target.attackModifier - 2);
+  }
+  assert.equal(deriveCombatStateFromComments(comments).get(target.characterId).temporaryConditions.length, 0);
+});
+
+test('Schweif des Drachen weist nachträgliche Trefferboni auch im Würfelbeleg aus', async () => {
+  const actor = resolveCombatProfile(await loadGawain(), { actionId: 'technique:gawain-dragon-tail', segmentKind: 'combataction' });
+  const target = trainingTarget();
+  actor.abilities.push({ id: 'audit-aim', name: 'Korrigierte Linie', active: true, triggerRules: [{
+    id: 'audit-post-roll', enabled: true, phase: 'post-roll', recipient: 'actor', sourceRelation: 'self',
+    activation: 'passive', frequency: 'always', effects: { attackModifier: 2 }
+  }] });
+  const result = await new CombatResolutionService(new TechniqueDiceAdapter({ attacks: [15, 13] })).resolveAttack({ actor, target });
+  const followUp = result.followUpAttacks[0];
+  assert.equal(followUp.attack.modifier, actor.attackModifier + 2);
+  assert.equal(followUp.attack.total, 13 + actor.attackModifier + 2);
+});
+
+test('Schweif-Folgeangriff prüft verbleibende Abwehrladungen nach dem ersten Treffer', async () => {
+  const actor = resolveCombatProfile(await loadGawain(), { actionId: 'technique:gawain-dragon-tail', segmentKind: 'combataction' });
+  const target = { ...trainingTarget(), temporaryConditions: [{
+    id: 'mirror', name: 'Spiegelbild', active: true,
+    ward: { enabled: true, charges: 1, deflectChance: 50, breaksOnCriticalHit: false }
+  }] };
+  const dice = new TechniqueDiceAdapter({ attacks: [15, 15], damages: [8, 6] });
+  const wards = [20, 1];
+  dice.rollWardDeflection = async () => ({ natural: wards.shift(), id: `ward-${wards.length}` });
+  const result = await new CombatResolutionService(dice).resolveAttack({ actor, target });
+  assert.equal(result.attack.hit, true);
+  assert.equal(result.followUpAttacks[0].attack.hit, false);
+  assert.equal(result.followUpAttacks[0].wardResolution.chargesAfter, 0);
+  assert.equal(result.targetSnapshot.hitPointsAfter, 52);
+  assert.equal(result.targetConditionSnapshot.after.length, 0);
+  assert.equal(wards.length, 0);
+});
+
+test('Schweif-Folgeangriff übernimmt den Schadensabzug einer gegnerischen Aura', async () => {
+  const actor = resolveCombatProfile(await loadGawain(), { actionId: 'technique:gawain-dragon-tail', segmentKind: 'combataction' });
+  const target = trainingTarget();
+  target.aura = { enabled: true, latentPresence: {
+    enabled: true, active: true, target: 'Gegner', radius: '3 Meter', enemyMechanics: { damage: -2 }
+  } };
+  const dice = new TechniqueDiceAdapter();
+  const bonuses = [];
+  const rollDamage = dice.rollDamage.bind(dice);
+  dice.rollDamage = request => { bonuses.push(request.bonus); return rollDamage(request); };
+  await new CombatResolutionService(dice).resolveAttack({ actor, target }, { relationship: 'enemy', distanceMeters: 1 });
+  assert.equal(bonuses.length, 2);
+  assert.equal(bonuses[0], actor.damageModifier - 2);
+  assert.equal(bonuses[1], actor.damageModifier + actor.selectedAction.followUpAttack.damageBonus - 2);
+});
+
 test('Drachentanz-Nutzungen folgen kurzer Rast und echtem Tageswechsel', async () => {
   const gawain = await loadGawain();
   const resolved = resolveCombatProfile(gawain);

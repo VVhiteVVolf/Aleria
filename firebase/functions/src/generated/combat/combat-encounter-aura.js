@@ -202,6 +202,9 @@ export function applyCombatEncounterAuraApplicationsToStateMap(states, event = {
     }
   });
   states.forEach((state, actorId) => {
+    const ownsAura = state.encounterAuraTemporaryHitPoints?.encounterId === encounterId
+      || state.temporaryConditions?.some(condition => isEncounterAuraCondition(condition, encounterId));
+    if (!ownsAura && !applications.some(application => application.targetActorId === String(actorId))) return;
     const conditions = (Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : [])
       .filter(condition => !isEncounterAuraCondition(condition, encounterId));
     const targetApplications = applications.filter(application => application.targetActorId === String(actorId));

@@ -1,14 +1,15 @@
-export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 1;
+export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
+export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
 
 export const CHARACTER_ARCHIVE_KINDS = Object.freeze([
   { id: 'spell', label: 'Zauber', singular: 'Zauber', group: 'Magie', collection: 'magic.spells', editorKind: 'spell', symbol: '✦' },
   { id: 'trait', label: 'Traits & Marotten', singular: 'Trait', group: 'Persönlichkeit', collection: 'quirks', editorKind: 'quirk', symbol: '◆' },
   { id: 'ability', label: 'Fähigkeiten', singular: 'Fähigkeit', group: 'Können', collection: 'abilities', editorKind: 'ability', symbol: '★' },
-  { id: 'technique', label: 'Techniken & Attacken', singular: 'Technik', group: 'Kampf', collection: 'techniques', editorKind: 'technique', symbol: '⚔' },
-  { id: 'attack', label: 'Waffen & Angriffe', singular: 'Angriff', group: 'Kampf', collection: 'weapons', editorKind: 'weapon', symbol: '†' },
+  { id: 'technique', label: 'Kampftechniken, Formen & Attacken', singular: 'Attacke / Technik', group: 'Kampf', collection: 'techniques', editorKind: 'technique', symbol: '⚔' },
+  { id: 'attack', label: 'Waffen', singular: 'Waffe', group: 'Kampf', collection: 'weapons', editorKind: 'weapon', symbol: '†' },
   { id: 'condition', label: 'Zustände & Effekte', singular: 'Zustand', group: 'Regeln', collection: 'conditions', symbol: '◈' },
   { id: 'skill', label: 'Fertigkeiten', singular: 'Fertigkeit', group: 'Können', collection: 'skills', symbol: '◇' },
-  { id: 'combat-style', label: 'Kampfformen', singular: 'Kampfform', group: 'Kampf', symbol: '♜' },
+  { id: 'combat-style', label: 'Kampftechnik / Form', singular: 'Kampftechnik / Form', group: 'Kampf', navigationKind: 'technique', symbol: '♜' },
   { id: 'class', label: 'Klassen', singular: 'Klasse', group: 'Herkunft', symbol: '♛' },
   { id: 'ancestry', label: 'Völker', singular: 'Volk', group: 'Herkunft', symbol: '♟' },
   { id: 'background', label: 'Herkünfte', singular: 'Herkunft', group: 'Herkunft', symbol: '⌂' },
@@ -102,7 +103,10 @@ export function normalizeCharacterArchiveEntry(value = {}) {
   const data = value.data && typeof value.data === 'object' ? cloneArchiveValue(value.data, {}) : {};
   const name = String(value.name || data.name || data.label || '').trim();
   const id = String(value.id || '').trim() || makeCharacterArchiveId(kind, name);
-  const iconOverride = String(value.iconOverride || '').trim();
+  const iconAssignmentVersion = Number(value.iconAssignmentVersion) === CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION ? CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION : 0;
+  const resetSpellIcon = kind === 'spell' && !iconAssignmentVersion;
+  if (resetSpellIcon) delete data.icon;
+  const iconOverride = resetSpellIcon ? '' : String(value.iconOverride || '').trim();
   const dataIcon = String(data.icon || '').trim();
   const updatedAt = String(value.updatedAt || '').trim();
   return {
@@ -112,8 +116,9 @@ export function normalizeCharacterArchiveEntry(value = {}) {
     kind,
     name,
     description: getDescription(data, value.description),
-    icon: iconOverride || String(value.icon || dataIcon).trim(),
+    icon: resetSpellIcon ? '' : iconOverride || String(value.icon || dataIcon).trim(),
     iconOverride,
+    iconAssignmentVersion,
     tags: normalizeTags(value.tags?.length ? value.tags : data.tags),
     sources: normalizeSources(value.sources),
     data,
@@ -134,16 +139,24 @@ function mergeArchiveEntry(current, incoming) {
     && !entry.iconOverride;
   const combinesBuiltinAndLiveProjection = (left.builtin && isLiveProfileProjection(right))
     || (right.builtin && isLiveProfileProjection(left));
-  const preferred = remoteOrEdited ? right : left;
+  const newerLeftEdit = left.updatedAt && right.updatedAt && left.updatedAt > right.updatedAt;
+  const preferred = remoteOrEdited && !newerLeftEdit ? right : left;
   const secondary = preferred === right ? left : right;
+  const iconOwner = preferred.iconAssignmentVersion ? preferred : secondary.iconAssignmentVersion ? secondary : null;
+  const data = Object.keys(preferred.data || {}).length ? { ...preferred.data } : { ...secondary.data };
+  if (iconOwner) {
+    if (iconOwner.icon) data.icon = iconOwner.icon;
+    else delete data.icon;
+  }
   return normalizeCharacterArchiveEntry({
     ...secondary,
     ...preferred,
     id: preferred.id || secondary.id,
     description: preferred.description || secondary.description,
-    icon: preferred.icon || secondary.icon,
-    iconOverride: preferred.iconOverride || secondary.iconOverride,
-    data: Object.keys(preferred.data || {}).length ? preferred.data : secondary.data,
+    icon: iconOwner ? iconOwner.icon : preferred.icon || secondary.icon,
+    iconOverride: iconOwner ? iconOwner.iconOverride : preferred.iconOverride || secondary.iconOverride,
+    iconAssignmentVersion: iconOwner?.iconAssignmentVersion || 0,
+    data,
     tags: [...(left.tags || []), ...(right.tags || [])],
     sources: [...(left.sources || []), ...(right.sources || [])],
     builtin: combinesBuiltinAndLiveProjection || (left.builtin && right.builtin),
@@ -217,13 +230,6 @@ export function extractCharacterArchiveEntries(record = {}, sourceKind = '') {
     identityEntry('origin', record.origin, source)
   ].filter(Boolean).forEach(entry => entries.push(entry));
 
-  const combatForms = new Map();
-  (Array.isArray(profile.techniques) ? profile.techniques : []).forEach(technique => {
-    const name = String(technique.trainingForm || '').trim();
-    if (name) combatForms.set(normalizeArchiveSearchText(name), name);
-  });
-  combatForms.forEach(name => entries.push(identityEntry('combat-style', name, source)));
-
   return mergeCharacterArchiveEntries(entries);
 }
 
@@ -290,6 +296,7 @@ export function getCharacterArchiveEntrySearchText(entry = {}) {
     entry.data?.damageType,
     entry.data?.trainingForm,
     entry.data?.group,
-    entry.data?.subtitle
+    entry.data?.subtitle,
+    ...Object.values(entry.data?.archivePlacement || {})
   ].join(' '));
 }

@@ -1,219 +1,101 @@
-import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260810-character-archive-register-v1';
-
-const GROUP_TYPE_ORDER = Object.freeze({
-  'combat-form': 0,
-  class: 1,
-  special: 2,
-  general: 3
-});
-
-function uniqueStrings(values) {
-  return [...new Set(values.map(value => String(value || '').trim()).filter(Boolean))];
-}
+import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260905-archive-order-v2';
+import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js';
+import { isArchiveWeapon, getArchiveWeaponRelation } from './character-archive-weapon-groups.js';
 
 function hasDamageEffect(value) {
   if (Array.isArray(value)) return value.some(hasDamageEffect);
   if (!value || typeof value !== 'object') return false;
-  if (String(value.type || '').toLocaleLowerCase('de').includes('damage')) return true;
+  if (String(value.type || '').toLowerCase().includes('damage')) return true;
   return Object.values(value).some(hasDamageEffect);
 }
 
 export function isCharacterArchiveCombatAbility(entry = {}) {
-  if (entry.kind !== 'ability') return false;
   const data = entry.data || {};
-  return data.combatUsable === true
+  return entry.kind === 'ability' && (data.combatUsable === true
     || Boolean(String(data.damageFormula || data.rollFormula || '').trim())
-    || String(data.delivery || '').toLocaleLowerCase('de') === 'attack'
-    || hasDamageEffect(data.effects)
-    || hasDamageEffect(data.mechanics);
+    || data.delivery === 'attack' || hasDamageEffect(data.effects) || hasDamageEffect(data.mechanics));
 }
 
 export function matchesCharacterArchiveKind(entry = {}, kind = '') {
   if (kind === 'all' || !kind) return true;
-  if (kind === 'technique') return entry.kind === 'technique' || isCharacterArchiveCombatAbility(entry);
+  if (kind === 'technique') return !getArchiveWeaponRelation(entry) && (entry.kind === 'technique' || entry.kind === 'combat-style'
+    || isCharacterArchiveCombatAbility(entry) || (entry.kind === 'attack' && !isArchiveWeapon(entry)));
+  if (kind === 'attack') return isArchiveWeapon(entry) || Boolean(getArchiveWeaponRelation(entry));
   return entry.kind === kind;
 }
 
-function getParentLookup(entries, kind) {
-  const byId = new Map();
-  const byName = new Map();
-  entries.filter(entry => entry.kind === kind).forEach(entry => {
-    const ids = uniqueStrings([
-      entry.id,
-      entry.data?.id,
-      ...(entry.sources || []).map(source => source.id)
-    ]);
-    ids.forEach(id => byId.set(normalizeArchiveSearchText(id), entry));
-    byName.set(normalizeArchiveSearchText(entry.name), entry);
-  });
-  return { byId, byName };
+function lookup(entries, kind, reference) {
+  if (!reference) return null;
+  const key = normalizeArchiveSearchText(reference);
+  return entries.find(entry => entry.kind === kind && [entry.id, entry.data?.id, entry.name]
+    .some(value => normalizeArchiveSearchText(value) === key)) || null;
 }
 
-function findParent(lookup, ids = [], names = []) {
-  for (const id of uniqueStrings(ids)) {
-    const parent = lookup.byId.get(normalizeArchiveSearchText(id));
-    if (parent) return parent;
-  }
-  for (const name of uniqueStrings(names)) {
-    const parent = lookup.byName.get(normalizeArchiveSearchText(name));
-    if (parent) return parent;
-  }
-  return null;
+function styleOwners(style, entries, explicitClass = '') {
+  if (explicitClass) return [{ name: lookup(entries, 'class', explicitClass)?.name || explicitClass, entry: lookup(entries, 'class', explicitClass) }];
+  return entries.filter(entry => entry.kind === 'class' && entry.data?.combatStyleGrants?.some(grant => grant.styleId === style.data?.id))
+    .map(entry => ({ name: entry.name, entry }));
 }
 
-function humanizeReference(value) {
-  const text = String(value || '').trim();
-  if (!text) return '';
-  return text
-    .replace(/^builtin--[^-]+--/, '')
-    .replace(/[-_]+/g, ' ')
-    .replace(/\b\p{L}/gu, letter => letter.toLocaleUpperCase('de'));
+function stylePaths(groups, style, entries, explicitClass = '') {
+  const owners = styleOwners(style, entries, explicitClass);
+  const branches = owners.length ? owners.map(owner => ensureArchiveGroup(groups, 'class', owner.name, owner.entry).children) : [groups];
+  return branches.map(branch => ensureArchiveGroup(branch, 'style', style.name, style));
 }
 
-function getCombatFormRelation(entry, lookup) {
+function canonicalPaths(groups, entry, entries) {
   const data = entry.data || {};
-  const formSources = (entry.sources || []).filter(source => source.kind === 'combat-style');
-  const ids = uniqueStrings([
-    data.combatStyleFormId,
-    data.combatStyleId,
-    ...formSources.map(source => source.id)
-  ]);
-  const names = uniqueStrings([
-    data.trainingForm,
-    data.combatFormName,
-    ...formSources.map(source => source.name)
-  ]);
-  if (!ids.length && !names.length) return null;
-  const parentEntry = findParent(lookup, ids, names);
-  const name = String(data.trainingForm || parentEntry?.name || names[0] || humanizeReference(ids[0])).trim();
-  if (!name) return null;
-  return {
-    id: normalizeArchiveSearchText(parentEntry?.data?.id || ids[0] || name),
-    name,
-    parentEntry
-  };
+  const placement = data.archivePlacement || {};
+  if (placement.personName || placement.weaponName) return [];
+  const isDefinition = entry.kind === 'combat-style';
+  const form = isDefinition && (data.parentStyleId || placement.styleId) ? entry : lookup(entries, 'combat-style', placement.formId || data.combatStyleFormId);
+  const styleId = form?.data?.parentStyleId || form?.data?.archivePlacement?.styleId || placement.styleId || data.combatStyleId;
+  const style = isDefinition && !form ? entry : lookup(entries, 'combat-style', styleId);
+  if (!style) return [];
+  const styles = stylePaths(groups, style, entries, placement.className || style.data?.archivePlacement?.className);
+  return form ? styles.map(group => ensureArchiveGroup(group.children, 'form', form.name, form)) : styles;
 }
 
-function getClassRelations(entry, lookup) {
+function personalPaths(groups, entry) {
   const data = entry.data || {};
-  const classSources = (entry.sources || []).filter(source => source.kind === 'class' || source.kind === 'character-library');
-  const ids = uniqueStrings([
-    data.sourceClassId,
-    data.classId,
-    ...classSources.map(source => source.id)
-  ]);
-  const names = uniqueStrings([
-    data.sourceClassName,
-    data.className,
-    ...(entry.sources || []).filter(source => source.kind === 'class').map(source => source.name)
-  ]);
-  const relations = [];
-  ids.forEach(id => {
-    const parentEntry = findParent(lookup, [id], []);
-    relations.push({
-      id: normalizeArchiveSearchText(parentEntry?.data?.id || id),
-      name: parentEntry?.name || humanizeReference(id),
-      parentEntry
-    });
+  if (data.archivePlacement?.className || data.archivePlacement?.styleId || data.archivePlacement?.formId) return [];
+  const explicitName = data.archivePlacement?.personName || data.sourceCharacter;
+  const sources = (entry.sources || []).filter(source => source.kind === 'character' || source.kind === 'creature');
+  if (!sources.length && explicitName) sources.push({ kind: 'character', name: explicitName });
+  if (data.archivePlacement?.personName) sources.splice(0, sources.length, { kind: 'character', name: data.archivePlacement.personName });
+  return sources.filter(source => source.name).map(source => {
+    const root = ensureArchiveGroup(groups, source.kind === 'creature' ? 'creature' : 'persons', source.kind === 'creature' ? 'Kreaturen' : 'Personen');
+    const person = ensureArchiveGroup(root.children, 'person', source.name);
+    return ensureArchiveGroup(person.children, 'attacks', 'Attacken');
   });
-  names.forEach(name => {
-    const parentEntry = findParent(lookup, [], [name]);
-    relations.push({
-      id: normalizeArchiveSearchText(parentEntry?.data?.id || name),
-      name: parentEntry?.name || name,
-      parentEntry
-    });
-  });
-  const unique = new Map();
-  relations.filter(relation => relation.id && relation.name).forEach(relation => unique.set(relation.id, relation));
-  return [...unique.values()];
-}
-
-function hasPersonalSource(entry) {
-  const sources = entry.sources || [];
-  return entry.builtin !== true
-    || Boolean(entry.data?.sourceCharacter)
-    || sources.some(source => source.kind === 'character' || source.kind === 'creature');
-}
-
-function getEntryKey(entry) {
-  return String(entry.key || entry.id || `${entry.kind}:${entry.name}`);
-}
-
-function createGroup(type, relation = {}) {
-  relation = relation || {};
-  const presets = {
-    special: {
-      name: 'Besondere & einzigartige Attacken',
-      description: 'Charaktereigene, kreaturenspezifische und andere besondere Attacken ohne feste Kampfform.',
-      symbol: '✦'
-    },
-    general: {
-      name: 'Allgemeine Attacken',
-      description: 'Gemeinsame Angriffe und Techniken ohne feste Kampfform oder Klassenzuordnung.',
-      symbol: '⚔'
-    }
-  };
-  const preset = presets[type] || {};
-  const name = relation.name || preset.name || 'Attacken';
-  const parentEntry = relation.parentEntry || null;
-  return {
-    id: `${type}--${relation.id || normalizeArchiveSearchText(name)}`,
-    type,
-    typeLabel: type === 'combat-form' ? 'Kampfform' : (type === 'class' ? 'Klasse' : 'Sammlung'),
-    name,
-    description: parentEntry?.description || preset.description || '',
-    symbol: type === 'combat-form' ? '♜' : (type === 'class' ? '♛' : preset.symbol),
-    parentEntry,
-    entryMap: new Map()
-  };
-}
-
-function addToGroup(groups, type, relation, entry) {
-  const id = `${type}--${relation?.id || type}`;
-  if (!groups.has(id)) groups.set(id, createGroup(type, relation));
-  groups.get(id).entryMap.set(getEntryKey(entry), entry);
 }
 
 export function getCharacterArchiveAttackGroups(entries = [], allEntries = entries) {
-  const visible = Array.isArray(entries) ? entries : [];
-  const parents = Array.isArray(allEntries) ? allEntries : [];
-  const combatForms = getParentLookup(parents, 'combat-style');
-  const classes = getParentLookup(parents, 'class');
-  const groups = new Map();
-
-  visible.forEach(entry => {
-    const formRelation = getCombatFormRelation(entry, combatForms);
-    if (formRelation) {
-      addToGroup(groups, 'combat-form', formRelation, entry);
+  const groups = [];
+  entries.forEach(entry => {
+    // Equipment requirements are not weapon-owned attacks; only explicit assignments are.
+    if (getArchiveWeaponRelation(entry)) return;
+    const paths = canonicalPaths(groups, entry, allEntries);
+    if (paths.length) {
+      if (entry.kind !== 'combat-style') paths.forEach(group => addArchiveGroupEntry(group, entry));
       return;
     }
-
-    if (isCharacterArchiveCombatAbility(entry)) {
-      addToGroup(groups, 'special', null, entry);
+    // Profile trainingForm strings record training, not additional canonical forms.
+    if (entry.kind === 'combat-style' && entry.archivedFromProfile) return;
+    const personal = personalPaths(groups, entry);
+    if (personal.length) {
+      personal.forEach(group => addArchiveGroupEntry(group, entry));
       return;
     }
-
-    const classRelations = getClassRelations(entry, classes);
-    if (classRelations.length) {
-      classRelations.forEach(relation => addToGroup(groups, 'class', relation, entry));
+    const placement = entry.data?.archivePlacement || {};
+    if (placement.className) {
+      const owner = lookup(allEntries, 'class', placement.className);
+      const classGroup = ensureArchiveGroup(groups, 'class', owner?.name || placement.className, owner);
+      const style = ensureArchiveGroup(classGroup.children, 'style', placement.styleName || 'Kampftechnik noch zuordnen');
+      addArchiveGroupEntry(ensureArchiveGroup(style.children, 'form', entry.data?.trainingForm || 'Form noch zuordnen'), entry);
       return;
     }
-
-    addToGroup(groups, hasPersonalSource(entry) ? 'special' : 'general', null, entry);
+    addArchiveGroupEntry(ensureArchiveGroup(groups, 'general', 'Weitere Techniken & Attacken'), entry);
   });
-
-  return [...groups.values()]
-    .map(group => ({ ...group, entries: [...group.entryMap.values()], entryMap: undefined }))
-    .sort((left, right) => (
-      GROUP_TYPE_ORDER[left.type] - GROUP_TYPE_ORDER[right.type]
-      || left.name.localeCompare(right.name, 'de', { sensitivity: 'base', numeric: true })
-    ));
+  return sortArchiveGroups(groups);
 }
-
-export const characterArchiveAttackGroupInternals = Object.freeze({
-  getCombatFormRelation,
-  getClassRelations,
-  hasPersonalSource,
-  humanizeReference
-});

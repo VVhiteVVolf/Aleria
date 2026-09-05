@@ -1,16 +1,12 @@
-import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260808-duncan-v1';
+import { normalizeCombatEncounterEvent, getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260905-encounter-v2';
 import { collectClaimedLootActorIds } from '../loot/loot-model.js?v=20260807-loot-v1';
+import { ENCOUNTER_STATUS_LABELS, ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from '../combat/combat-encounter-outcome.js';
+import { renderEncounterSummary, escapeEncounterMarkup as escapeMarkup } from './combat-encounter-summary-ui.js';
+import { renderEncounterActions } from './combat-encounter-panel.js';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 
-function escapeMarkup(value) {
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
+const options = labels => Object.entries(labels).map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
 
 export function ensureCombatEncounterDialog() {
   let overlay = document.getElementById('combat-encounter-overlay');
@@ -33,15 +29,22 @@ export function ensureCombatEncounterDialog() {
         <nav data-combat-encounter-operations></nav>
         <div class="combat-encounter-fields">
           <label><span>Titel</span><input data-combat-encounter-field="title" maxlength="180" value="Kampfankündigung"></label>
-          <label class="wide"><span>Erzählerischer Hinweis</span><textarea data-combat-encounter-field="body" rows="2" placeholder="Wo und warum beginnt oder endet der Kampf?"></textarea></label>
+          <label data-combat-encounter-type><span>Kampfart</span><select data-combat-encounter-field="combat-type">${options(ENCOUNTER_TYPE_LABELS)}</select></label>
+          <label class="wide"><span>Erzählertext · optional</span><textarea data-combat-encounter-field="body" maxlength="4000" rows="2" placeholder="Beschreibe den Beginn oder den Ausgang des Kampfes …"></textarea></label>
+          <label data-combat-encounter-end hidden><span>Ergebnis</span><select data-combat-encounter-field="outcome"><option value="">Ergebnis wählen …</option>${options(ENCOUNTER_OUTCOME_LABELS)}</select></label>
+          <label data-combat-encounter-end hidden><span>Grund des Abschlusses</span><select data-combat-encounter-field="end-reason">${options(ENCOUNTER_REASON_LABELS)}</select></label>
           <label data-combat-encounter-winning hidden><span>Siegreiche Partei</span><select data-combat-encounter-field="winning-party"></select></label>
-          <label data-combat-encounter-award hidden class="combat-encounter-check"><input type="checkbox" data-combat-encounter-field="award-experience" checked> EP automatisch und gleichmäßig vergeben</label>
+          <label data-combat-encounter-award hidden class="combat-encounter-check"><input type="checkbox" data-combat-encounter-field="award-experience" checked> Sieg-EP gleichmäßig an die berechtigten Figuren der Siegerseite vergeben</label>
         </div>
-        <div class="combat-encounter-list-head"><input type="search" data-combat-encounter-field="search" placeholder="Figur oder Kreatur suchen …"><span data-combat-encounter-count>0 ausgewählt</span></div>
+        <p data-combat-encounter-hint></p>
+        <div class="combat-encounter-list-head"><input type="search" data-combat-encounter-field="search" aria-label="Figur oder Kreatur suchen" placeholder="Figur oder Kreatur suchen …"><label data-combat-encounter-scope><select data-combat-encounter-field="scope" aria-label="Figuren anzeigen"><option value="scene">Figuren der Szene</option><option value="all">Gesamtes Register</option></select></label><span data-combat-encounter-count>0 ausgewählt</span></div>
         <div class="combat-encounter-list" data-combat-encounter-list></div>
-        <p class="combat-encounter-status" data-combat-encounter-status></p>
+        <div data-combat-encounter-preview hidden></div>
+        <p class="combat-encounter-status" data-combat-encounter-status role="status"></p>
+        <button type="button" data-combat-encounter-action="refresh" hidden>Aktuellen Kampfstand laden</button>
+        <details class="combat-encounter-tools"><summary>Testwerkzeuge</summary><button type="button" class="combat-encounter-cheat" data-combat-encounter-action="cheat-reset">Ausgewählte Figuren vollständig zurücksetzen</button></details>
       </div>
-      <footer><button type="button" class="combat-encounter-cheat" data-combat-encounter-action="cheat-reset" title="Setzt Trefferpunkte, Ressourcen und Fähigkeiten der ausgewählten Figuren auf ihren aktuellen Charakterbogen-Vollzustand zurück und löst alle Kampfsperren">🔧 Ausgewählte zurücksetzen</button><span class="combat-encounter-footer-spacer"></span><button type="button" data-combat-encounter-action="close">Abbrechen</button><button type="button" class="primary" data-combat-encounter-action="submit">Eintragen</button></footer>
+      <footer><button type="button" data-combat-encounter-action="close">Abbrechen</button><button type="button" class="primary" data-combat-encounter-action="submit">Kampf eröffnen</button></footer>
     </div>`;
   document.body.appendChild(overlay);
   return overlay;
@@ -51,7 +54,7 @@ export function renderOperationButtons(active, operation) {
   const host = document.querySelector('[data-combat-encounter-operations]');
   if (!host) return;
   const operations = active
-    ? [['add', 'Kämpfer hinzufügen'], ['remove', 'Kämpfer entfernen'], ['end', 'Kampf beenden']]
+    ? [['add', 'Kämpfer hinzufügen'], ['remove', 'Kämpfer entfernen'], ['end', 'Kampf abschließen']]
     : [['start', 'Kampf beginnen']];
   host.innerHTML = operations.map(([id, label]) => `<button type="button" data-combat-encounter-action="operation" data-operation="${id}" class="${operation === id ? 'active' : ''}" aria-pressed="${operation === id}">${label}</button>`).join('');
 }
@@ -65,8 +68,8 @@ export function renderEncounterCandidates(candidates = [], operation = 'start') 
   }
   host.innerHTML = candidates.map(candidate => {
     const statusControl = ['remove', 'end'].includes(operation)
-      ? `<select data-combat-encounter-field="status" aria-label="Kampfstatus"><option value="active"${candidate.status === 'active' ? ' selected' : ''}>Aktiv</option><option value="defeated"${candidate.status === 'defeated' ? ' selected' : ''}>Besiegt</option><option value="fled"${candidate.status === 'fled' ? ' selected' : ''}>Geflohen</option><option value="left"${candidate.status === 'left' ? ' selected' : ''}>Ausgeschieden</option></select>`
-      : `<input data-combat-encounter-field="party" value="${escapeMarkup(candidate.partyName || candidate.partyId || '')}" placeholder="Partei, z. B. Draig">`;
+      ? `<select data-combat-encounter-field="status" aria-label="Kampfstatus von ${escapeMarkup(candidate.name)}">${Object.entries(ENCOUNTER_STATUS_LABELS).map(([value, label]) => `<option value="${value}"${candidate.status === value ? ' selected' : ''}>${label}</option>`).join('')}</select>`
+      : `<input data-combat-encounter-field="party" aria-label="Seite von ${escapeMarkup(candidate.name)}" value="${escapeMarkup(candidate.partyName || candidate.partyId || '')}" placeholder="Seite, z. B. Draig">`;
     const checked = operation === 'end' || candidate.selected;
     const runtimeDetails = [
       Number(candidate.maximumHitPoints) > 0 ? `TP ${Number(candidate.currentHitPoints) || 0}/${Number(candidate.maximumHitPoints)}` : '',
@@ -74,12 +77,12 @@ export function renderEncounterCandidates(candidates = [], operation = 'start') 
       candidate.concentrationName ? `Konzentration: ${candidate.concentrationName}` : '',
       candidate.channelingName ? `Kanalisierung: ${candidate.channelingName}` : ''
     ].filter(Boolean).join(' · ');
-    return `<label class="combat-encounter-person" data-combat-encounter-candidate data-actor-id="${escapeMarkup(candidate.actorId)}" data-search="${escapeMarkup(candidate.searchText || '')}">
-      <input type="checkbox" data-combat-encounter-field="participant"${checked ? ' checked' : ''}${operation === 'end' ? ' hidden' : ''}>
+    return `<div class="combat-encounter-person" data-combat-encounter-candidate data-actor-id="${escapeMarkup(candidate.actorId)}" data-in-scene="${candidate.inScene === true}" data-search="${escapeMarkup(candidate.searchText || '')}">
+      <input type="checkbox" data-combat-encounter-field="participant" aria-label="${escapeMarkup(candidate.name)} auswählen"${checked ? ' checked' : ''}${operation === 'end' ? ' hidden' : ''}>
       <span class="combat-encounter-portrait">${candidate.portrait ? `<img src="${escapeMarkup(candidate.portrait)}" alt="">` : escapeMarkup((candidate.name || '?').slice(0, 1))}</span>
       <span class="combat-encounter-copy"><strong>${escapeMarkup(candidate.name)}</strong><small>${escapeMarkup(candidate.title || (candidate.entityType === 'creature' ? 'Kreatur' : 'Charakter'))}</small>${runtimeDetails ? `<small class="combat-encounter-runtime">${escapeMarkup(runtimeDetails)}</small>` : ''}</span>
       <span class="combat-encounter-control">${statusControl}</span>
-    </label>`;
+    </div>`;
   }).join('');
 }
 
@@ -89,13 +92,14 @@ export function setEncounterEndControls(visible, parties = [], selected = '') {
   if (winning) winning.hidden = !visible;
   if (award) award.hidden = !visible;
   const select = document.querySelector('[data-combat-encounter-field="winning-party"]');
-  if (select) select.innerHTML = parties.map(party => `<option value="${escapeMarkup(party.id)}"${party.id === selected ? ' selected' : ''}>${escapeMarkup(party.name)}</option>`).join('');
+  if (select) select.innerHTML = '<option value="">Siegerseite wählen …</option>' + parties.map(party => `<option value="${escapeMarkup(party.id)}"${party.id === selected ? ' selected' : ''}>${escapeMarkup(party.name)}</option>`).join('');
 }
 
-export function filterEncounterCandidates(query = '') {
-  const needle = String(query || '').trim().toLocaleLowerCase('de');
+export function filterEncounterCandidates(query = '', scope = 'all') {
+  const needle = String(query || '').trim().toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   document.querySelectorAll('[data-combat-encounter-candidate]').forEach(row => {
-    row.hidden = !!needle && !String(row.dataset.search || '').includes(needle);
+    row.hidden = needle ? !String(row.dataset.search || '').includes(needle)
+      : scope === 'scene' && row.dataset.inScene !== 'true' && !row.querySelector('input:checked');
   });
 }
 
@@ -103,6 +107,31 @@ export function updateEncounterCount() {
   const count = document.querySelectorAll('[data-combat-encounter-field="participant"]:checked').length;
   const output = document.querySelector('[data-combat-encounter-count]');
   if (output) output.textContent = `${count} ausgewählt`;
+}
+
+export function setEncounterMode(operation, outcome = '') {
+  const root = ensureCombatEncounterDialog();
+  root.dataset.operation = operation;
+  root.querySelectorAll('[data-combat-encounter-end]').forEach(element => { element.hidden = operation !== 'end'; });
+  root.querySelector('[data-combat-encounter-type]').hidden = operation !== 'start';
+  root.querySelector('[data-combat-encounter-winning]').hidden = operation !== 'end' || outcome !== 'victory';
+  root.querySelector('[data-combat-encounter-award]').hidden = operation !== 'end' || outcome !== 'victory';
+  root.querySelector('[data-combat-encounter-preview]').hidden = operation !== 'end';
+  root.querySelector('[data-combat-encounter-scope]').hidden = !['start', 'add'].includes(operation);
+  const labels = { start: 'Kampf eröffnen', add: 'Kämpfer hinzufügen', remove: 'Ausscheiden eintragen', end: 'Fazit veröffentlichen & Kampf abschließen' };
+  const button = root.querySelector('[data-combat-encounter-action="submit"]');
+  button.dataset.idleLabel = labels[operation];
+  button.textContent = labels[operation];
+  root.querySelector('#combat-encounter-dialog-title').textContent = operation === 'end' ? 'Kampf abschließen' : operation === 'start' ? 'Kampf eröffnen' : 'Beteiligte verwalten';
+  root.querySelector('[data-combat-encounter-hint]').textContent = operation === 'start'
+    ? 'Wähle die Beteiligten. Gleiche Seitennamen bilden eine Partei. Die Suche durchsucht immer das gesamte Register.'
+    : operation === 'end' ? 'Prüfe die Kampfstände und bestätige den Ausgang. Das Fazit erscheint als eigener Abschluss unter derselben Kampfankündigung.'
+      : 'Änderungen gelten für die ausgewählten Figuren im laufenden Kampf.';
+}
+
+export function setEncounterPreview(event) {
+  const host = document.querySelector('[data-combat-encounter-preview]');
+  if (host) host.innerHTML = renderEncounterSummary(event, { preview: true });
 }
 
 export function setEncounterStatus(message = '', type = 'info') {
@@ -116,10 +145,10 @@ export function setEncounterSubmitting(submitting) {
   const button = document.querySelector('[data-combat-encounter-action="submit"]');
   if (!button) return;
   button.disabled = !!submitting;
-  button.textContent = submitting ? 'Wird gespeichert …' : 'Eintragen';
+  button.textContent = submitting ? 'Wird gespeichert …' : button.dataset.idleLabel || 'Eintragen';
 }
 
-const STATUS_LABELS = { active: 'aktiv', defeated: 'besiegt', fled: 'geflohen', left: 'ausgeschieden' };
+const STATUS_LABELS = ENCOUNTER_STATUS_LABELS;
 
 function renderRosterRow(participant) {
   const initial = escapeMarkup((participant.name || '?').slice(0, 1));
@@ -189,10 +218,12 @@ export function renderCombatEncounterComment(comment = {}, index = 0) {
   return `${divider}<section class="combat-encounter-event" data-operation="${event.operation}">
     <header><img src="${COMBAT_ENCOUNTER_ICON_URL}" alt=""><span>${labels[event.operation]}</span><strong>${escapeMarkup(event.title)}</strong>${comment.id ? `<button type="button" class="combat-encounter-event-edit" data-action="edit-combat-encounter-text" data-comment-id="${escapeMarkup(comment.id)}" data-entry-id="${escapeMarkup(comment.entryId || '')}" data-title="${escapeMarkup(event.title)}" data-body="${escapeMarkup(event.body)}" title="Titel/Text bearbeiten" aria-label="Titel/Text bearbeiten">✎</button><button type="button" class="combat-encounter-event-delete" data-action="undo-mechanical-comment" data-comment-id="${escapeMarkup(comment.id)}" title="Löschen und zurücksetzen" aria-label="Löschen und zurücksetzen">×</button>` : ''}</header>
     ${event.body ? `<p>${escapeMarkup(event.body)}</p>` : ''}
+    ${event.operation === 'end' ? renderEncounterSummary(event) : ''}
     ${renderRoster(event.participants)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}
-    ${event.operation === 'end' && !awards ? '<small>Kampfzustände und Konzentrationen wurden beendet. Es wurden keine EP vergeben.</small>' : ''}
+    ${event.operation === 'end' && !awards ? '<small>Es wurden keine EP vergeben.</small>' : ''}
     ${renderLootRow(event, comment)}
+    ${event.operation === 'start' && getActiveCombatEncounter(globalThis.getCachedCommentsForThread?.(comment.entryId) || [])?.encounterId === event.encounterId ? renderEncounterActions(event, comment.entryId) : ''}
   </section>`;
 }
 

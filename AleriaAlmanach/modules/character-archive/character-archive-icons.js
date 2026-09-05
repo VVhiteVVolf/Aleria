@@ -1,5 +1,7 @@
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260810-character-archive-icons-v2';
 import { getCombatEntryIconPresentation } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
+import { normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
+import { getArchiveTraitIconSource } from './character-archive-trait-icons.js';
 
 const PLACEHOLDER_ICON = new URL('../../../IconOrdner/ReiterIcons/Platzhalter.png', import.meta.url).href;
 const COMBAT_ICON_KIND_BY_ARCHIVE_KIND = Object.freeze({
@@ -25,9 +27,17 @@ function normalizeEntryName(value) {
 }
 
 export function getCharacterArchiveEntryIconPresentation(entry = {}) {
+  if (entry.kind === 'spell') {
+    const normalized = normalizeCharacterArchiveEntry(entry);
+    return { source: normalized.icon, fallbackSource: '', custom: Boolean(normalized.icon) };
+  }
   const kind = String(entry.kind || '').trim();
   const data = entry.data && typeof entry.data === 'object' ? entry.data : {};
   const explicitSource = String(entry.iconOverride || entry.icon || data.icon || '').trim();
+  if (kind === 'trait') {
+    const matched = getArchiveTraitIconSource(entry);
+    if (matched) return { source: entry.iconOverride || matched, fallbackSource: matched, custom: Boolean(entry.iconOverride) };
+  }
 
   if (kind === 'class') {
     const classSource = getClassPageIconSource(data.id || data.name || entry.name || entry.id);
@@ -48,7 +58,9 @@ export function getCharacterArchiveEntryIconPresentation(entry = {}) {
 }
 
 export function getCharacterSheetEntryIconPresentation(combatKind, item = {}, archiveEntries = null) {
-  const fallback = getCombatEntryIconPresentation(combatKind, item);
+  const fallback = combatKind === 'spell'
+    ? { source: '', fallbackSource: '', custom: false }
+    : getCombatEntryIconPresentation(combatKind, item);
   const archiveKind = ARCHIVE_KIND_BY_COMBAT_ICON_KIND[String(combatKind || '')];
   const name = normalizeEntryName(item.name);
   if (!archiveKind || !name) return { ...fallback, linked: false };

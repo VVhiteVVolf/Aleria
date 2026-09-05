@@ -608,6 +608,8 @@ function sanitizeTechnique(value = {}, index = 0) {
     id: normalizeId(source.id, `technique-${index + 1}`),
     name: normalizeText(source.name, 140),
     trainingForm: normalizeText(source.trainingForm, 140),
+    ...(normalizeText(source.combatStyleId, 120) ? { combatStyleId: normalizeText(source.combatStyleId, 120) } : {}),
+    ...(normalizeText(source.combatStyleFormId, 120) ? { combatStyleFormId: normalizeText(source.combatStyleFormId, 120) } : {}),
     minimumLevel: normalizeNumber(source.minimumLevel, 1, 1, 30),
     category: ['technique', 'form', 'reaction', 'bonus', 'special'].includes(normalizeText(source.category, 30))
       ? normalizeText(source.category, 30)

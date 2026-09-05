@@ -8,7 +8,8 @@
   },
   "scripts": {
     "sync:mechanics": "node scripts/sync-almanach-mechanics.mjs",
-    "test": "npm run sync:mechanics && node --test tests/*.test.js"
+    "test": "npm run sync:mechanics && node --test tests/*.test.js",
+    "test:combat-integration": "npm run sync:mechanics && node --test tests/integration/combat-checkup.integration.mjs"
   },
   "dependencies": {
     "firebase-admin": "13.10.0",

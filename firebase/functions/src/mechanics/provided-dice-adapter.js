@@ -128,7 +128,12 @@ export class ProvidedDiceAdapter {
   // von rollDamage() (nur W4-W12, Formelvalidierung) und von den anderen W20-Kanälen (die
   // jeweils an eine eigene Spielmechanik mit eigenem Index gebunden sind).
   async rollWardDeflection() {
-    const source = this.submitted.wardResolution?.roll || {};
+    // Bind the ward to the hit being resolved. Skipped wards must not shift
+    // another attack's die into this position or fill in a missing receipt.
+    const hit = this.attackIndex > 1
+      ? this.submitted.followUpAttacks?.[this.attackIndex - 2]
+      : this.submitted;
+    const source = hit?.wardResolution?.roll || {};
     const dice = validateDieResults([source.natural], 1, 20, 'Ablenkungswurf');
     return {
       id: String(source.rollId || ''),

@@ -172,7 +172,7 @@ export const DRACHENTANZ_COMBAT_STYLE = Object.freeze({
   name: 'Drachentanz',
   culture: 'Cenyr',
   weaponFocus: ['sword'],
-  description: 'Cenyri-Schwertkampfstil aus sieben Formen. Klassen erhalten Formen über combatStyleGrants; Techniken werden anhand ihrer Mindeststufe automatisch freigeschaltet.',
+  description: 'Cenyri-Schwertkampfstil aus sieben Formen. Klassen erlernen einzelne Formen; deren Techniken werden je nach Ausbildungsstufe freigeschaltet.',
   progression: {
     teulu: 'Teulu erlernen die sechs Techniken der Jungdrachenform auf den Stufen 1 bis 6 und erhalten ab Stufe 7 Zugang zur Schwertdrachenform.',
     specialLevels: 'Die Freigaben der Formen III bis VII bleiben bewusst offen, bis ihre Techniken und Stufenbänder ausgearbeitet sind.'

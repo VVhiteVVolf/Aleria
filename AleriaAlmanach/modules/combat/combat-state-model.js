@@ -8,7 +8,7 @@ import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260808-duncan-v1';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260905-encounter-v2';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -327,12 +327,14 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
     }
+    // A historical segment stops before the rest of its contribution. Its
+    // clocks and end-of-comment rest/encounter effects have not happened yet.
+    if (isStopComment) break;
     // All contribution kinds advance clocks. Conditions remain active for the
     // complete contribution and expire only after its final segment.
     advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
     applySceneRestCommentToStateMap(states, comment);
     applyCombatEncounterCommentToStateMap(states, comment);
-    if (isStopComment) break;
   }
   return states;
 }

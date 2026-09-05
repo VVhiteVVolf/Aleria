@@ -15,6 +15,8 @@
     "sync:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs",
     "check:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs --check",
     "check:character-archive": "node ./scripts/check-character-archive.mjs",
+    "sync:archive-pages": "node ./scripts/sync-character-archive-pages.mjs",
+    "check:archive-pages": "node ./scripts/sync-character-archive-pages.mjs --check",
     "copy:dice-assets": "node scripts/copy-dice-assets.mjs",
     "build:dice-vendor": "node scripts/build-dice-vendor.mjs",
     "postinstall": "npm run prepare:dice-runtime"

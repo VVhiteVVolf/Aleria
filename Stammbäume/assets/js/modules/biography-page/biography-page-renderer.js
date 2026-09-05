@@ -96,17 +96,17 @@ export function renderBiographyPage({
       ${heading(data.biographyTitle)}
       <div class="biography-copy">${sanitizeBiographyRichText(data.biographyText, documentRef)}</div>
       ${extraSections(data.extraSections, 'afterIntro', documentRef)}
-      ${heading(data.abilitiesTitle)}${abilities}
-      ${heading(data.historyTitle)}
+      ${abilities ? heading(data.abilitiesTitle) : ''}${abilities}
+      ${data.historyText ? heading(data.historyTitle) : ''}
       <div class="biography-copy">${sanitizeBiographyRichText(data.historyText, documentRef)}</div>
-      ${heading(data.worksTitle)}${lines(data.works, 'compact', documentRef)}
+      ${data.works.length ? heading(data.worksTitle) : ''}${lines(data.works, 'compact', documentRef)}
       ${extraSections(data.extraSections, 'afterWorks', documentRef)}
     </main>
     <aside class="biography-right">
-      ${heading(data.triviaTitle)}${lines(data.trivia, '', documentRef)}
-      ${heading(data.quotesTitle)}${lines(data.quotes, 'quotes', documentRef)}
-      ${heading(data.connectionsTitle)}${connections(data.connections)}
-      ${heading(data.documentsTitle)}${documents(data.documents)}
+      ${data.trivia.length ? heading(data.triviaTitle) : ''}${lines(data.trivia, '', documentRef)}
+      ${data.quotes.length ? heading(data.quotesTitle) : ''}${lines(data.quotes, 'quotes', documentRef)}
+      ${data.connections.length ? heading(data.connectionsTitle) : ''}${connections(data.connections)}
+      ${data.documents.length ? heading(data.documentsTitle) : ''}${documents(data.documents)}
     </aside>
     ${data.footer ? `<div class="biography-footer">${escapeHtml(data.footer)}</div>` : ''}
   </div>`;

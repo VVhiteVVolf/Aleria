@@ -128,6 +128,10 @@ function gwynthorCommonerProfile() {
 }
 
 export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
+  bradrhith: profile('commoner', [...GWYNTHOR_COMMONER_PATH, 'Bradrhith Hof'], {
+    liegeHouseId: 'haus-awenydd',
+    liegeHouseName: 'Haus Awenydd'
+  }),
   draenmelyn: gwynthorCommonerProfile(),
   pendrwn: gwynthorCommonerProfile(),
   swyll: gwynthorCommonerProfile(),

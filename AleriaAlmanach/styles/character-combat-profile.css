@@ -1468,6 +1468,7 @@
 }
 
 .cp-spell-card > summary { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+.cp-spell-card > summary:has(> .cp-entry-icon-frame[hidden]) { grid-template-columns: minmax(0, 1fr) auto auto; }
 .cp-entry-card > summary::-webkit-details-marker,
 .cp-condition-card > summary::-webkit-details-marker,
 .cp-spell-card > summary::-webkit-details-marker { display: none; }
@@ -1632,6 +1633,9 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
 }
 
 .cp-spell-card-hero > div > p:first-child { margin-bottom: 14px; color: #d3c8b6; }
+.cp-entry-icon-frame[hidden],
+.cp-spell-card-art[hidden] { display: none; }
+.cp-spell-card-hero:has(> .cp-spell-card-art[hidden]) { grid-template-columns: minmax(0, 1fr); }
 .cp-spell-card-art {
   width: min(140px, 100%);
   max-height: 140px;
@@ -1731,6 +1735,7 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
   .cp-condition-card > summary,
   .cp-spell-card > summary { grid-template-columns: auto minmax(0, 1fr) auto; }
   .cp-spell-ready-state { display: none; }
+  .cp-spell-card > summary:has(> .cp-entry-icon-frame[hidden]) { grid-template-columns: minmax(0, 1fr) auto; }
   .cp-spell-card-hero { grid-template-columns: 1fr; }
   .cp-spell-card-art { width: 92px; grid-row: 1; }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Verschachteltes Familienregister des Aleria Almanachs">
+  <meta name="description" content="Familien und Häuser Alerias nach Gebieten und Rang entdecken">
   <meta name="aleria-firebase-enabled" content="true">
   <title>Aleria · Familienregister</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,19 +31,20 @@
       <label class="registry-search">
         <span aria-hidden="true">⌕</span>
         <span class="sr-only">Familien suchen</span>
-        <input type="search" id="registry-search" placeholder="Familie oder Ordner suchen …" autocomplete="off">
+        <input type="search" id="registry-search" placeholder="Haus, Gebiet oder Rang suchen …" autocomplete="off" aria-controls="registry-content">
       </label>
       <p><strong id="registry-count">0</strong> Familienakten</p>
     </section>
 
-    <section class="registry-content" aria-labelledby="registry-tree-title">
-      <div class="registry-intro">
-        <p class="eyebrow">Ordnerstruktur</p>
-        <h2 id="registry-tree-title">Länder, Regionen & Häuser</h2>
-      </div>
-      <div class="registry-tree" id="registry-tree"></div>
-      <div class="registry-empty" id="registry-empty" hidden>Keine passende Familie gefunden.</div>
-    </section>
+    <div class="registry-browser">
+      <details class="registry-sidebar" open>
+        <summary>Gebietsauswahl <span>Länder & Orte</span></summary>
+        <p class="registry-navigation-hint">Die Anzahl umfasst auch die Unterorte.</p>
+        <nav data-role="registry-navigation" aria-label="Gebiete auswählen"></nav>
+      </details>
+      <section class="registry-content" id="registry-content" data-role="registry-content" aria-labelledby="registry-location-title"></section>
+    </div>
+    <p class="sr-only" data-role="registry-status" role="status" aria-live="polite"></p>
   </main>
 
   <script type="module" src="assets/js/registry-app.js"></script>

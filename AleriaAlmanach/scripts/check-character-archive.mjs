@@ -38,13 +38,13 @@ const source = {
 
 const extracted = extractCharacterArchiveEntries(source);
 const extractedKinds = new Set(extracted.map(entry => entry.kind));
-for (const expected of ['spell', 'trait', 'ability', 'technique', 'attack', 'condition', 'skill', 'combat-style', 'class', 'ancestry', 'background', 'origin']) {
+for (const expected of ['spell', 'trait', 'ability', 'technique', 'attack', 'condition', 'skill', 'class', 'ancestry', 'background', 'origin']) {
   assert(extractedKinds.has(expected), `Archivbereich fehlt: ${expected}`);
 }
 const extractedTechnique = extracted.find(entry => entry.kind === 'technique');
 const attackGroups = getCharacterArchiveAttackGroups([extractedTechnique], extracted);
-assert.equal(attackGroups[0].type, 'combat-form', 'Eine Attacke mit trainingForm muss unter ihrer Kampfform stehen.');
-assert.equal(attackGroups[0].name, 'Drachentanz');
+assert.equal(attackGroups[0].type, 'persons', 'Persönliche Ausbildungsangaben dürfen keine neuen kanonischen Formen erzeugen.');
+assert.equal(attackGroups[0].children[0].name, 'Testfigur');
 
 const liveSpell = extracted.find(entry => entry.kind === 'spell');
 const builtinSpell = normalizeCharacterArchiveEntry({
@@ -61,6 +61,7 @@ const editedSpell = normalizeCharacterArchiveEntry({
   ...liveSpell,
   id: 'spell--licht',
   iconOverride: '../IconOrdner/Magie/Kerzenlicht.PNG',
+  iconAssignmentVersion: 1,
   updatedAt: '2026-08-09T00:00:00.000Z',
   builtin: false
 });
@@ -80,12 +81,12 @@ assert.equal(archiveConditionIcon.fallbackSource, sheetConditionIcon.fallbackSou
 
 const customSpellIcon = '../IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Light.png';
 const sheetCustomSpellIcon = getCombatEntryIconPresentation('spell', { ...liveSpell.data, icon: customSpellIcon });
-const archiveCustomSpellIcon = getCharacterArchiveEntryIconPresentation({ ...liveSpell, iconOverride: customSpellIcon, icon: customSpellIcon });
+const archiveCustomSpellIcon = getCharacterArchiveEntryIconPresentation({ ...liveSpell, iconAssignmentVersion: 1, iconOverride: customSpellIcon, icon: customSpellIcon });
 assert.equal(archiveCustomSpellIcon.source, sheetCustomSpellIcon.source, 'Manuelle Archivicons müssen unverändert im Charakterbogen ankommen.');
 const linkedCustomSpellIcon = getCharacterSheetEntryIconPresentation(
   'spell',
   { ...liveSpell.data, icon: '' },
-  [{ ...liveSpell, iconOverride: customSpellIcon, icon: customSpellIcon }]
+  [{ ...liveSpell, iconAssignmentVersion: 1, iconOverride: customSpellIcon, icon: customSpellIcon }]
 );
 assert.equal(linkedCustomSpellIcon.source, customSpellIcon, 'Der Charakterbogen muss das aktuelle Icon des verknüpften Archiveintrags verwenden.');
 assert.equal(linkedCustomSpellIcon.linked, true);
@@ -123,7 +124,7 @@ const [html, sidebar, rules, css, classPage, itemDbNormalizer] = await Promise.a
 assert.match(html, /character-archive-ui\.js/);
 assert.match(html, /character-archive\.css/);
 assert.match(sidebar, /Charakterbogen Archiv/);
-assert.match(sidebar, /Platzhalter\.png/);
+assert.match(sidebar, /Charakterbogen Archiv\.png/);
 assert.match(rules, /character_archive_entries/);
 assert.match(css, /\.character-archive-grid/);
 assert.match(css, /\.character-archive-attack-group/);

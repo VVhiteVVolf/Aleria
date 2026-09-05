@@ -8,7 +8,10 @@ import { resolveCombatProfile } from '../generated/combat/combat-profile-resolve
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
 import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
-import { getActiveCombatPartyMap } from '../generated/combat/combat-encounter-model.js';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
+import { getEncounterActionValidationError } from '../generated/combat/combat-encounter-lifecycle.js';
+import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
+import { getEffectiveCombatSegmentKind } from '../generated/combat/combat-segment-model.js';
 import {
   applyInventoryUseAbilityEffects,
   applyInventoryUseToInventory,
@@ -215,6 +218,11 @@ export const commitCombatComment = onCall({
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
+    const encounter = getActiveCombatEncounter(trustedHistory);
+    for (const { segment, submitted } of entries) {
+      const error = getEncounterActionValidationError({ ...segment.combatAction, actorId: submitted.actorId }, encounter);
+      if (error) fail('failed-precondition', error);
+    }
     const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
     const sceneActorTeams = collectSceneActorTeams(trustedHistory, metadata.commentSegments);
     const sceneDay = getTrustedSceneDay(allHistory);
@@ -320,7 +328,7 @@ export const commitCombatComment = onCall({
       const paymentMode = String(segment.combatAction?.paymentMode || 'standard');
       const actorBase = resolveCombatProfile(makeCharacter(actorRecord, actorPersistence, submitted.actorId), {
         actionId: String(segment.combatAction?.profileActionId || submitted.profileActionId || ''),
-        segmentKind: String(segment.commentKind || segment.kind || ''),
+        segmentKind: getEffectiveCombatSegmentKind(segment),
         paymentMode,
         weaponGrip: String(segment.combatAction?.weaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed',
         castLevel: Math.max(0, Math.min(10, Number(segment.combatAction?.castLevel) || 0))
@@ -596,7 +604,7 @@ export const commitCombatComment = onCall({
       serverValidatedMechanics: true,
       createdBy: request.auth.uid,
       createdByRole: String(request.auth.token?.aleriaRole || 'player'),
-      orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : nowClient,
+      orderKey: nextMechanicalCommentOrderKey(allHistory, metadata.orderKey, nowClient),
       createdAtClient: nowClient,
       activityAtClient: nowClient,
       activityAt: FieldValue.serverTimestamp(),

@@ -8,8 +8,10 @@ import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=2026
 import {
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260810-character-archive-register-v1';
+} from './character-archive-model.js?v=20260905-archive-order-v2';
 import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
+import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js';
+import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js';
 
 const SPELL_ATTACK_LIBRARY_URL = new URL('../../data/spell-attack-library.json', import.meta.url);
 
@@ -80,7 +82,12 @@ function buildTemplateEntries() {
       builtin: true
     })));
   });
-  return entries;
+  ARCHIVE_PAGE_CLASSES.forEach(page => entries.push(normalizeCharacterArchiveEntry({
+    id: `class-page--${page.id}`, kind: 'class', name: page.name, description: page.description,
+    icon: page.icon, data: { ...page, pageOrder: page.order }, tags: page.cultures,
+    sources: [{ kind: 'system', id: page.sourcePage, name: 'Klassenseite' }], builtin: true
+  })));
+  return classifyCharacterArchiveEntries(entries);
 }
 
 function buildFireSpellArsenalEntries() {
@@ -180,7 +187,8 @@ export function loadBuiltinCharacterArchiveEntries() {
       buildTemplateEntries(),
       buildCombatStyleEntries(),
       buildFireSpellArsenalEntries(),
-      libraryEntries
+      libraryEntries,
+      ARCHIVE_PAGE_MOUNTS.map(createArchiveMountEntry)
     ));
   }
   return catalogPromise;

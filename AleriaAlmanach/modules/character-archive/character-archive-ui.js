@@ -1,9 +1,13 @@
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260809-character-archive-v1';
-import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260810-zauberkarten-icons-v1';
+import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-archive-order-v2';
+import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js';
+import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js';
+import { countArchiveGroupEntries } from './character-archive-group-tree.js';
+import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
 import {
   getCharacterArchiveAttackGroups,
   matchesCharacterArchiveKind
-} from './character-archive-attack-groups.js?v=20260810-character-archive-register-v1';
+} from './character-archive-attack-groups.js?v=20260905-archive-order-v2';
 import {
   CHARACTER_ARCHIVE_KINDS,
   cloneArchiveValue,
@@ -12,14 +16,14 @@ import {
   getCharacterArchiveKind,
   normalizeArchiveSearchText,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260810-character-archive-register-v1';
+} from './character-archive-model.js?v=20260905-archive-order-v2';
 import {
   archiveCharacterRecord,
   ensureCharacterArchiveLoaded,
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260810-fire-spell-arsenal-v1';
+} from './character-archive-store.js?v=20260905-archive-order-v2';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },
@@ -105,10 +109,10 @@ function getEntryMeta(entry) {
   if (entry.kind === 'spell') return [Number(data.level) ? `Grad ${data.level}` : 'Zaubertrick', data.school, data.damageType].filter(Boolean);
   if (entry.kind === 'technique') return [data.trainingForm, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
   if (entry.kind === 'attack') return [data.weaponType, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
-  if (entry.kind === 'class') return [data.group, data.subtitle].filter(Boolean);
+  if (entry.kind === 'class') return [data.baseClass ? 'Standardklasse' : (data.cultures || []).join(' · '), data.subtitle].filter(Boolean);
   if (entry.kind === 'condition') return [data.duration, data.source].filter(Boolean);
   if (entry.kind === 'ability') return [data.activationType, data.recovery].filter(Boolean);
-  if (entry.kind.startsWith('register-')) return [data.type, [data.price, data.currency].filter(Boolean).join(' ')].filter(Boolean);
+  if (entry.kind.startsWith('register-')) return [data.type, data.origin, [data.price, data.currency].filter(Boolean).join(' ')].filter(Boolean);
   return [data.group, data.subtitle, data.appliesWhen].filter(Boolean);
 }
 
@@ -131,8 +135,8 @@ function renderEntryCard(entry) {
   return `<article class="character-archive-card" data-entry-kind="${escapeHtml(entry.kind)}">
     <div class="character-archive-card-topline"><span>${escapeHtml(kind.group)}</span><span>${escapeHtml(kind.label)}</span></div>
     <div class="character-archive-card-main">
-      <span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async"><i>${escapeHtml(kind.symbol)}</i></span>
-      <div><h3>${escapeHtml(entry.name)}</h3><p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
+      ${image.source ? `<span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async"><i>${escapeHtml(kind.symbol)}</i></span>` : ''}
+      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3><p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
     </div>
     ${meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     ${renderSourceBadges(entry)}
@@ -148,34 +152,43 @@ function renderAttackGroupIcon(group) {
   return `<span class="character-archive-attack-group-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async"><i>${escapeHtml(group.symbol)}</i></span>`;
 }
 
-function renderAttackGroup(group) {
-  const amountLabel = group.entries.length === 1 ? 'Eintrag' : 'Einträge';
-  const openByDefault = group.type === 'combat-form' || group.type === 'special';
+function renderAttackGroup(group, depth = 0) {
+  const count = countArchiveGroupEntries(group);
+  const amountLabel = count === 1 ? 'Eintrag' : 'Einträge';
+  const openByDefault = depth === 0 || Boolean(state.search);
   return `<details class="character-archive-attack-group" data-attack-group-type="${escapeHtml(group.type)}"${openByDefault ? ' open' : ''}>
     <summary>
       ${renderAttackGroupIcon(group)}
       <span class="character-archive-attack-group-title"><small>${escapeHtml(group.typeLabel)}</small><strong>${escapeHtml(group.name)}</strong><em>${escapeHtml(group.description)}</em></span>
-      <span class="character-archive-attack-group-count"><strong>${group.entries.length}</strong><small>${amountLabel}</small></span>
+      <span class="character-archive-attack-group-count"><strong>${count}</strong><small>${amountLabel}</small></span>
       <i class="character-archive-attack-group-disclosure" aria-hidden="true"></i>
     </summary>
-    <div class="character-archive-grid">${group.entries.map(renderEntryCard).join('')}</div>
+    ${group.parentEntry && ['style', 'form'].includes(group.type) ? `<div class="character-archive-group-actions"><button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(group.parentEntry.id)}">${escapeHtml(group.typeLabel)} bearbeiten</button></div>` : ''}
+    ${group.entries.length ? `<div class="character-archive-grid">${group.entries.map(renderEntryCard).join('')}</div>` : ''}
+    ${group.children.length ? `<div class="character-archive-group-children">${group.children.map(child => renderAttackGroup(child, depth + 1)).join('')}</div>` : ''}
+    ${!count && !group.children.length ? '<p class="character-archive-group-empty">Noch keine Attacken hinterlegt.</p>' : ''}
   </details>`;
 }
 
 function renderVisibleEntries(visible, allEntries) {
   const selectedKind = state.picker?.kind || state.kind;
-  if (selectedKind !== 'technique' && selectedKind !== 'attack') {
+  // Sheet pickers must retain the exact underlying collection (including natural
+  // attacks), regardless of the archive's navigation hierarchy.
+  if (state.picker) return `<div class="character-archive-grid">${visible.map(renderEntryCard).join('')}</div>`;
+  const builders = { technique: getCharacterArchiveAttackGroups, attack: getCharacterArchiveWeaponGroups,
+    class: getCharacterArchiveClassGroups, 'register-pferde': getCharacterArchiveHorseGroups };
+  if (!builders[selectedKind]) {
     return `<div class="character-archive-grid">${visible.map(renderEntryCard).join('')}</div>`;
   }
-  const groups = getCharacterArchiveAttackGroups(visible, allEntries);
-  return `<div class="character-archive-attack-groups">${groups.map(renderAttackGroup).join('')}</div>`;
+  const groups = builders[selectedKind](visible, allEntries);
+  return `<div class="character-archive-attack-groups">${groups.map(group => renderAttackGroup(group)).join('')}</div>`;
 }
 
 function renderKindNavigation(entries) {
   const counts = new Map(CHARACTER_ARCHIVE_KINDS.map(kind => [kind.id, entries.filter(entry => matchesCharacterArchiveKind(entry, kind.id)).length]));
   return `<nav class="character-archive-kinds" aria-label="Archivkategorien">
     <button type="button" class="${state.kind === 'all' ? 'active' : ''}" data-character-archive-action="set-kind" data-kind="all"><span>Gesamtarchiv</span><strong>${entries.length}</strong></button>
-    ${CHARACTER_ARCHIVE_KINDS.map(kind => `<button type="button" class="${state.kind === kind.id ? 'active' : ''}" data-character-archive-action="set-kind" data-kind="${kind.id}"><i>${kind.symbol}</i><span>${escapeHtml(kind.label)}</span><strong>${counts.get(kind.id) || 0}</strong></button>`).join('')}
+    ${CHARACTER_ARCHIVE_KINDS.filter(kind => !kind.navigationKind).map(kind => `<button type="button" class="${state.kind === kind.id ? 'active' : ''}" data-character-archive-action="set-kind" data-kind="${kind.id}"><i>${kind.symbol}</i><span>${escapeHtml(kind.label)}</span><strong>${counts.get(kind.id) || 0}</strong></button>`).join('')}
   </nav>`;
 }
 
@@ -183,7 +196,7 @@ function renderStats(entries) {
   const sourceCount = new Set(entries.flatMap(entry => (entry.sources || []).map(source => `${source.kind}:${source.id || source.name}`))).size;
   return `<div class="character-archive-stats">
     <div><span>Geordnete Einträge</span><strong>${entries.length}</strong></div>
-    <div><span>Archivbereiche</span><strong>${CHARACTER_ARCHIVE_KINDS.filter(kind => entries.some(entry => entry.kind === kind.id)).length}</strong></div>
+    <div><span>Archivbereiche</span><strong>${CHARACTER_ARCHIVE_KINDS.filter(kind => !kind.navigationKind && entries.some(entry => matchesCharacterArchiveKind(entry, kind.id))).length}</strong></div>
     <div><span>Belegte Quellen</span><strong>${sourceCount}</strong></div>
     <div><span>Eigene Anpassungen</span><strong>${entries.filter(entry => !entry.builtin).length}</strong></div>
   </div>`;
@@ -278,6 +291,20 @@ function ensureEditorOverlay() {
   return overlay;
 }
 
+function renderPlacementFields(entry, kind) {
+  const visible = ['technique', 'ability', 'combat-style'].includes(kind);
+  const entries = getCharacterArchiveEntries();
+  const placement = entry?.data?.archivePlacement || {};
+  return `<fieldset class="character-archive-placement"${visible ? '' : ' hidden'}><legend>Zuordnung</legend><p>Entweder Klasse, Kampftechnik und Form wählen oder eine eigene Attacke einer Person bzw. Waffe zuordnen. Leere Felder behalten die Zuordnung aus der Quelle bei.</p>${ARCHIVE_PLACEMENT_FIELDS.map(field => {
+    const options = getArchivePlacementChoices(field, entries).filter(item => item.id !== entry?.id);
+    const value = placement[field.key] || '';
+    const control = field.style || field.form
+      ? `<select name="placement-${field.key}"><option value="">Aus Quelle übernehmen</option>${options.map(item => `<option value="${escapeHtml(item.data?.id || item.id)}"${value === (item.data?.id || item.id) ? ' selected' : ''}>${escapeHtml(item.name)}</option>`).join('')}</select>`
+      : `<input name="placement-${field.key}" value="${escapeHtml(value)}" list="archive-placement-${field.key}" maxlength="160"><datalist id="archive-placement-${field.key}">${options.map(item => `<option value="${escapeHtml(item.name)}"></option>`).join('')}</datalist>`;
+    return `<label><span>${escapeHtml(field.label)}</span>${control}</label>`;
+  }).join('')}</fieldset>`;
+}
+
 function openEntryEditor(entry = null) {
   const overlay = ensureEditorOverlay();
   const current = entry ? normalizeCharacterArchiveEntry(entry) : null;
@@ -290,7 +317,8 @@ function openEntryEditor(entry = null) {
       <label><span>Name</span><input name="name" value="${escapeHtml(current?.name || '')}" maxlength="160" required></label>
       <label class="wide"><span>Beschreibung / Wirkung</span><textarea name="description" rows="5" maxlength="4000">${escapeHtml(current?.description || '')}</textarea></label>
       <label class="wide"><span>Schlagworte</span><input name="tags" value="${escapeHtml((current?.tags || []).join(', '))}" placeholder="z. B. Feuer, Drachentanz, Cenyr"></label>
-      <label class="wide"><span>Icon-Pfad oder Bild-URL</span><div class="character-archive-icon-field"><span class="character-archive-icon-preview">${current?.icon ? `<img src="${escapeHtml(safeImageSource(current.icon))}" alt="">` : '✦'}</span><input name="icon" value="${escapeHtml(current?.icon || '')}" placeholder="Leer = automatische Auswahl"><button type="button" data-character-archive-action="pick-icon">Icon wählen</button></div></label>
+      <label class="wide"><span>Icon-Pfad oder Bild-URL</span><div class="character-archive-icon-field"><span class="character-archive-icon-preview">${current?.icon ? `<img src="${escapeHtml(safeImageSource(current.icon))}" alt="">` : ''}</span><input name="icon" value="${escapeHtml(current?.icon || '')}" placeholder="${selectedKind === 'spell' ? 'Leer = kein Icon' : 'Leer = automatische Auswahl'}"><button type="button" data-character-archive-action="pick-icon">Icon wählen</button></div></label>
+      ${renderPlacementFields(current, selectedKind)}
       <p class="character-archive-editor-hint">Das Icon kann jederzeit ersetzt werden. Archiv und Charakterbögen verwenden für gleichnamige Kampf- und Regeleinträge dieselbe aktuelle Bildzuordnung.</p>
     </div>
     <footer><span data-character-archive-editor-status></span><div>${current && getCharacterArchiveKind(current.kind).editorKind ? '<button type="button" data-character-archive-action="edit-entry-rules-from-editor">Regeldetails</button>' : ''}<button type="button" data-character-archive-action="close-editor">Abbrechen</button><button type="submit" class="character-archive-primary">Im Archiv speichern</button></div></footer>
@@ -322,6 +350,12 @@ async function saveEditorForm(form) {
   if (icon) data.icon = icon;
   else delete data.icon;
   const status = form.querySelector('[data-character-archive-editor-status]');
+  try {
+    if (form.querySelector('.character-archive-placement:not([hidden])')) data.archivePlacement = readArchivePlacement(formData, getCharacterArchiveEntries(), current || { kind });
+  } catch (error) {
+    if (status) status.textContent = error.message;
+    return;
+  }
   if (status) status.textContent = 'Wird gespeichert …';
   try {
     await saveCharacterArchiveEntry({ ...(current || {}), kind, name, description, iconOverride: icon, icon, tags, data });
@@ -430,6 +464,13 @@ function handleInput(event) {
 }
 
 function handleChange(event) {
+  const editor = event.target?.closest?.('[data-character-archive-editor-form]');
+  if (editor && event.target.name === 'kind') {
+    const kind = event.target.value;
+    editor.querySelector('[name="icon"]').placeholder = kind === 'spell' ? 'Leer = kein Icon' : 'Leer = automatische Auswahl';
+    editor.querySelector('.character-archive-placement').hidden = !['technique', 'ability', 'combat-style'].includes(kind);
+    return;
+  }
   if (!event.target?.closest?.('#character-archive-overlay')) return;
   const field = event.target.dataset.characterArchiveField;
   if (field === 'source') state.source = event.target.value || 'all';

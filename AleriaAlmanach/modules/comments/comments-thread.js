@@ -317,6 +317,7 @@ function renderCommentsToScroll(scroll, comments) {
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);
   }
   syncCommentJumpTools(scroll, sortedComments);
+  globalThis.AleriaCombatEncounter?.renderActivePanel?.(scroll, threadId, sortedComments);
   if (typeof refreshSessionStatusFromComments === 'function') {
     refreshSessionStatusFromComments(threadId, sortedComments);
   }

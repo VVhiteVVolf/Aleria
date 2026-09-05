@@ -4,16 +4,20 @@ import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import {
   buildEncounterExperienceAwards,
   deriveCombatEncounterState,
+  mergeEncounterParticipantUpdates,
   normalizeCombatEncounterEvent
 } from '../generated/combat/combat-encounter-model.js';
 import { buildCombatEncounterAuraApplications } from '../generated/combat/combat-encounter-aura.js';
 import {
   applyExperienceAward,
-  getDefeatExperienceReward,
   getOrdinaryLevelForExperience
 } from '../generated/combat/combat-progression.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
-import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { isTrustedMechanicalComment, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
+import { getEncounterValidationError, prepareEncounterParticipants } from '../generated/combat/combat-encounter-lifecycle.js';
+import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import { buildCombatEncounterSummary } from '../generated/combat/combat-encounter-summary.js';
+import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 
@@ -117,15 +121,8 @@ async function assertNoConflictingEncounter(transaction, database, participants,
 }
 
 function validateOperation(event, current) {
-  if (event.operation === 'start') {
-    if (current?.active) fail('already-exists', 'Dieser Kampf läuft bereits.');
-    if (!event.participants.length) fail('invalid-argument', 'Zum Kampfbeginn wird mindestens eine Figur benötigt.');
-    return;
-  }
-  if (!current?.active) fail('failed-precondition', 'Dieser Kampf ist nicht aktiv.');
-  if (event.operation === 'add' && !event.participants.length) fail('invalid-argument', 'Wähle mindestens einen neuen Kämpfer.');
-  if (event.operation === 'remove' && !event.participants.length) fail('invalid-argument', 'Wähle mindestens einen ausscheidenden Kämpfer.');
-  if (event.operation === 'end' && !event.winningPartyId) fail('invalid-argument', 'Zum Kampfende muss die siegreiche Partei feststehen.');
+  const error = getEncounterValidationError(event, current);
+  if (error) fail('failed-precondition', error);
 }
 
 export const commitCombatEncounter = onCall({
@@ -149,22 +146,18 @@ export const commitCombatEncounter = onCall({
   let committedEvent = requested;
 
   await database.runTransaction(async transaction => {
+    profileUpdates = [];
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
-    const history = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })))
-      .filter(isTrustedMechanicalComment);
+    const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
+    const history = allHistory.filter(isTrustedSceneContributionComment);
     const current = getCurrentEncounter(history, requested.encounterId);
+    if (requested.operation === 'start' && [...deriveCombatEncounterState(history).values()].some(encounter => encounter.active)) {
+      fail('failed-precondition', 'In dieser Szene läuft bereits ein Kampf. Lade den aktuellen Stand.');
+    }
     validateOperation(requested, current);
 
     const currentParticipants = current?.participants instanceof Map ? [...current.participants.values()] : [];
-    const mergedParticipants = new Map(currentParticipants.map(participant => [participant.actorId, participant]));
-    requested.participants.forEach(participant => {
-      const previous = mergedParticipants.get(participant.actorId) || {};
-      mergedParticipants.set(participant.actorId, {
-        ...previous,
-        ...participant,
-        status: requested.operation === 'remove' && participant.status === 'active' ? 'left' : participant.status
-      });
-    });
+    let mergedParticipants = mergeEncounterParticipantUpdates(currentParticipants, requested);
     const participantsToLoad = requested.operation === 'start'
       ? requested.participants
       : [...mergedParticipants.values()];
@@ -194,18 +187,18 @@ export const commitCombatEncounter = onCall({
       })];
     }));
 
-    if (requested.operation === 'start' || requested.operation === 'add') {
-      requested.participants = requested.participants.map(participant => {
-        const profile = resolvedProfiles.get(participant.actorId);
-        return {
-          ...participant,
-          experienceValue: getDefeatExperienceReward(profile.progression?.level, profile.progression?.experienceReward)
-        };
-      });
-      requested.participants.forEach(participant => {
-        const previous = mergedParticipants.get(participant.actorId) || {};
-        mergedParticipants.set(participant.actorId, { ...previous, ...participant });
-      });
+    const sceneStates = deriveCombatStateFromComments(history);
+    mergedParticipants = prepareEncounterParticipants(requested, current, resolvedProfiles, sceneStates);
+    requested.combatType = current?.combatType || requested.combatType;
+    requested.participants = requested.operation === 'end'
+      ? [...mergedParticipants.values()]
+      : requested.participants.map(participant => mergedParticipants.get(participant.actorId));
+    requested.summary = requested.operation === 'end' ? buildCombatEncounterSummary({
+      encounterId: requested.encounterId, participants: requested.participants, comments: history, states: sceneStates, profiles: resolvedProfiles
+    }) : null;
+    if (requested.operation === 'end' && requested.outcome !== 'victory') {
+      requested.winningPartyId = '';
+      requested.awardExperience = false;
     }
 
     const enteringActorIds = requested.operation === 'start' || requested.operation === 'add'
@@ -247,10 +240,11 @@ export const commitCombatEncounter = onCall({
     let experience = { total: 0, awards: [] };
     const mechanicalUndo = {};
     if (requested.operation === 'end') {
-      const endingParticipants = new Map([...mergedParticipants.entries()]);
-      requested.participants.forEach(participant => endingParticipants.set(participant.actorId, participant));
+      const endingParticipants = mergedParticipants;
       const awardPlan = requested.awardExperience
-        ? buildEncounterExperienceAwards({ participants: endingParticipants }, requested.winningPartyId)
+        ? buildEncounterExperienceAwards({ participants: [...endingParticipants.values()].map(participant => ({
+          ...participant, eligibleForExperience: participant.eligibleForExperience !== false && participant.persistence?.kind === 'character'
+        })) }, requested.winningPartyId)
         : { totalExperience: 0, awards: [] };
       const awards = [];
       for (const award of awardPlan.awards) {
@@ -321,7 +315,7 @@ export const commitCombatEncounter = onCall({
       mechanicalAudit: true,
       createdBy: request.auth.uid,
       createdByRole: String(request.auth.token?.aleriaRole || 'player'),
-      orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : now,
+      orderKey: nextMechanicalCommentOrderKey(allHistory, metadata.orderKey, now),
       createdAtClient: now,
       activityAtClient: now,
       activityAt: FieldValue.serverTimestamp(),
@@ -338,6 +332,7 @@ export const combatEncounterCommitInternals = Object.freeze({
   recordKey,
   getCurrentEncounter,
   validateOperation,
+  nextEncounterOrderKey: nextMechanicalCommentOrderKey,
   combatProfileLockRef,
   updateCombatProfileLocks,
   getDescriptorsNoLongerActive,

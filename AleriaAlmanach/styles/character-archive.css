@@ -116,6 +116,7 @@ body.character-archive-open { overflow: hidden; }
 
 .character-archive-head-actions button,
 .character-archive-card-actions button,
+.character-archive-group-actions button,
 .character-archive-editor button {
   min-height: 2.35rem;
   padding: 0.58rem 0.82rem;
@@ -131,6 +132,7 @@ body.character-archive-open { overflow: hidden; }
 
 .character-archive-head-actions button:hover,
 .character-archive-card-actions button:hover,
+.character-archive-group-actions button:hover,
 .character-archive-editor button:hover {
   border-color: var(--ca-gold-bright);
   color: #fff1cd;
@@ -196,6 +198,13 @@ body.character-archive-open { overflow: hidden; }
 }
 
 .character-archive-layout > main { min-width: 0; padding: 1rem; }
+.character-archive-group-children { display: grid; gap: 0.65rem; padding: 0 0.7rem 0.7rem; }
+.character-archive-group-actions { padding: 0 1rem 0.7rem; }
+.character-archive-group-empty { padding: 0 1rem 1rem; color: #a68d62; }
+.character-archive-card-main:not(:has(.character-archive-card-icon)) { grid-template-columns: minmax(0, 1fr); }
+.character-archive-placement { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; border: 1px solid #775621; }
+.character-archive-placement p { grid-column: 1 / -1; color: #b3a48c; font-size: 0.85rem; }
+.character-archive-placement[hidden] { display: none; }
 .character-archive-layout:not(:has(> aside)) { grid-template-columns: 1fr; }
 
 .character-archive-kinds { display: grid; gap: 0.28rem; }

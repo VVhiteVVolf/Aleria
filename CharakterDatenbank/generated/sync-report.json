@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-04T01:59:49.901Z",
+  "sourceExportedAt": "2026-09-05T03:09:12.000Z",
   "summary": {
-    "sourceDocuments": 245,
+    "sourceDocuments": 246,
     "total": 226,
-    "mergedSameNameGroups": 12,
-    "familyLinked": 144,
+    "mergedSameNameGroups": 13,
+    "familyLinked": 147,
     "familyAmbiguous": 0,
-    "familyPending": 82,
-    "primaryFamily": 144,
+    "familyPending": 79,
+    "primaryFamily": 147,
     "primaryGroup": 26,
-    "primaryPlace": 22,
+    "primaryPlace": 19,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -325,42 +325,6 @@
         "kind": "group",
         "id": "zum-roten-drachen",
         "label": "Zum Roten Drachen",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--nLIylooQSlgWjUsA1fpI",
-      "name": "Arianwen Bradrhith",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "bradrhith-hof",
-        "label": "Bradrhith Hof",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--go0D7CiweVxWK1CqVgZz",
-      "name": "Gruffudd Gwregysdu",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "bradrhith-hof",
-        "label": "Bradrhith Hof",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--WjNUoPlIiFgdUHJQkJhU",
-      "name": "Llyr Dewrdd",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "bradrhith-hof",
-        "label": "Bradrhith Hof",
         "source": "archive-tab"
       },
       "familyAlternatives": []
@@ -1080,6 +1044,15 @@
       "ages": [
         "Geburtsjahr 1721"
       ]
+    },
+    {
+      "name": "Llyr Dewrdd",
+      "canonicalDocumentId": "WjNUoPlIiFgdUHJQkJhU",
+      "documentIds": [
+        "WjNUoPlIiFgdUHJQkJhU",
+        "WjNUoPlIiFgdUHJQkJhU"
+      ],
+      "ages": []
     },
     {
       "name": "Meurig Draig",

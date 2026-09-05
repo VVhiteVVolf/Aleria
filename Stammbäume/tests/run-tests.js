@@ -7231,6 +7231,7 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
 test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hierarchie', async () => {
   const storage = createMemoryStorage();
   const expected = new Map([
+    ['haus-bradrhith', { rankId: 'commoner', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor', 'Bradrhith Hof'] }],
     ['haus-arwydd', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn'] }],
     ['haus-draig', { rankId: 'county', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-gafyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
