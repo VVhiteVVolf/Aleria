@@ -1,0 +1,3746 @@
+[
+  {
+    "scenario": "magier-und-ritter",
+    "title": "Rhiannon + Gawain gegen Gildas + Plünderer",
+    "seed": 13,
+    "rounds": 6,
+    "winner": "Gafyr",
+    "actions": 34,
+    "firstDefeatRound": 3,
+    "maximumNormalDamage": 13,
+    "maximumCriticalDamage": 23,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Rhiannon Draig",
+        "level": 6,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 20
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 1,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 26,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 42
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 13
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Magierrüstung",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 42
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Gildas Gafyr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 33
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 3
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 23,
+        "critical": true,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 33
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 3,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 23
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Stürmende Drachenspur",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 23
+      },
+      {
+        "round": 4,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 4,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 13,
+        "critical": false,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 5,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 5,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 5,
+        "actor": "Gildas Gafyr",
+        "action": "Sechsfacher Lehrhieb",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 5,
+        "actor": "Gildas Gafyr",
+        "action": "Gekreuzte Klauen",
+        "target": "Rhiannon Draig",
+        "damage": 13,
+        "critical": true,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 6,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 6,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 6,
+        "actor": "Gildas Gafyr",
+        "action": "Sechsfacher Lehrhieb",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 6,
+        "actor": "Gildas Gafyr",
+        "action": "Gekreuzte Klauen",
+        "target": "Rhiannon Draig",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "magier-und-ritter",
+    "title": "Rhiannon + Gawain gegen Gildas + Plünderer",
+    "seed": 71,
+    "rounds": 4,
+    "winner": "Gafyr",
+    "actions": 25,
+    "firstDefeatRound": 3,
+    "maximumNormalDamage": 15,
+    "maximumCriticalDamage": 21,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Rhiannon Draig",
+        "level": 6,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 20
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 45,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 1,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 17,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Magierrüstung",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Gildas Gafyr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 45
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 45
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 21,
+        "critical": true,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 45
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Sechsfacher Lehrhieb",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Gekreuzte Klauen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 45
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 19,
+        "critical": true,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 12,
+        "critical": true,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "magier-und-ritter",
+    "title": "Rhiannon + Gawain gegen Gildas + Plünderer",
+    "seed": 2026,
+    "rounds": 6,
+    "winner": "Draig",
+    "actions": 39,
+    "firstDefeatRound": 4,
+    "maximumNormalDamage": 15,
+    "maximumCriticalDamage": 0,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 8,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Rhiannon Draig",
+        "level": 6,
+        "team": "Draig",
+        "hitPoints": 20,
+        "maximumHitPoints": 20
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 27,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Magierrüstung",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 1,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 14,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Gildas Gafyr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 44
+      },
+      {
+        "round": 2,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 44
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 3,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 3,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Gildas Gafyr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 37
+      },
+      {
+        "round": 3,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 28
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 2
+      },
+      {
+        "round": 4,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 4,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Gildas Gafyr",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 4,
+        "actor": "Rhiannon Draig",
+        "action": "Hundert Klingen Sturm",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 8
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 5,
+        "actor": "Gawain Draig",
+        "action": "Stürmende Drachenspur",
+        "target": "Gildas Gafyr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 16
+      },
+      {
+        "round": 5,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 5,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 5,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 8
+      },
+      {
+        "round": 5,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 6,
+        "actor": "Gawain Draig",
+        "action": "Stürmende Drachenspur",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 6,
+        "actor": "Rhiannon Draig",
+        "action": "Schild",
+        "target": "Rhiannon Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 6,
+        "actor": "Rhiannon Draig",
+        "action": "Blitzfunken",
+        "target": "Gildas Gafyr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "fernkampf-und-begleiter",
+    "title": "Guinevere + Gawain + Tanor gegen Gildas + Schütze + Plünderer",
+    "seed": 13,
+    "rounds": 4,
+    "winner": "Gafyr",
+    "actions": 34,
+    "firstDefeatRound": 2,
+    "maximumNormalDamage": 15,
+    "maximumCriticalDamage": 17,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Guinevere Neidr",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 29
+      },
+      {
+        "name": "Tanor",
+        "level": 1,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 16
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 5,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 24,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 23,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 37
+      },
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 1,
+        "actor": "Tanor",
+        "action": "Tritt",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 13,
+        "critical": false,
+        "hitPointsAfter": 3
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 2,
+        "actor": "Tanor",
+        "action": "Tritt",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 22
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 17,
+        "critical": true,
+        "hitPointsAfter": 4
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 7
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Guinevere Neidr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "fernkampf-und-begleiter",
+    "title": "Guinevere + Gawain + Tanor gegen Gildas + Schütze + Plünderer",
+    "seed": 71,
+    "rounds": 4,
+    "winner": "Draig",
+    "actions": 34,
+    "firstDefeatRound": 2,
+    "maximumNormalDamage": 15,
+    "maximumCriticalDamage": 22,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 5,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Guinevere Neidr",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 29,
+        "maximumHitPoints": 29
+      },
+      {
+        "name": "Tanor",
+        "level": 1,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 16
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 24,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Tanor",
+        "action": "Tritt",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 14,
+        "critical": false,
+        "hitPointsAfter": 38
+      },
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 38
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 38
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 12,
+        "critical": false,
+        "hitPointsAfter": 12
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 31
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 2,
+        "actor": "Tanor",
+        "action": "Tritt",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 38
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 38
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 31
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 12,
+        "critical": true,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 23
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 6
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 22,
+        "critical": true,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 16,
+        "critical": true,
+        "hitPointsAfter": 7
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 6
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 8
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 10,
+        "critical": true,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "fernkampf-und-begleiter",
+    "title": "Guinevere + Gawain + Tanor gegen Gildas + Schütze + Plünderer",
+    "seed": 2026,
+    "rounds": 4,
+    "winner": "Gafyr",
+    "actions": 34,
+    "firstDefeatRound": 2,
+    "maximumNormalDamage": 15,
+    "maximumCriticalDamage": 0,
+    "participants": [
+      {
+        "name": "Gawain Draig",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 39
+      },
+      {
+        "name": "Guinevere Neidr",
+        "level": 5,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 29
+      },
+      {
+        "name": "Tanor",
+        "level": 1,
+        "team": "Draig",
+        "hitPoints": 0,
+        "maximumHitPoints": 16
+      },
+      {
+        "name": "Gildas Gafyr",
+        "level": 6,
+        "team": "Gafyr",
+        "hitPoints": 26,
+        "maximumHitPoints": 52
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gafyr",
+        "hitPoints": 5,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 22,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 21
+      },
+      {
+        "round": 1,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 14,
+        "critical": false,
+        "hitPointsAfter": 2
+      },
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 52
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 1,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 1,
+        "actor": "Tanor",
+        "action": "Tritt",
+        "target": "Gildas Gafyr",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 48
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 31
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 13
+      },
+      {
+        "round": 2,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Tanor",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 48
+      },
+      {
+        "round": 2,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 40
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 40
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 2,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 27
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Gawain Draig",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 22
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 3,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 4
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 40
+      },
+      {
+        "round": 3,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 14,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Gawain Draig",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Gawain Draig",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 6
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Gawain Draig",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 4,
+        "actor": "Gildas Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Guinevere Neidr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 4
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Nagel des Jungdrachens",
+        "target": "Gildas Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 4,
+        "actor": "Guinevere Neidr",
+        "action": "Federblick",
+        "target": "Gildas Gafyr",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 26
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Guinevere Neidr",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "berserker-und-skalde",
+    "title": "Fenrir + Freya gegen Raubritter + zwei Plünderer",
+    "seed": 13,
+    "rounds": 8,
+    "winner": "Gegner",
+    "actions": 37,
+    "firstDefeatRound": 5,
+    "maximumNormalDamage": 20,
+    "maximumCriticalDamage": 10,
+    "participants": [
+      {
+        "name": "Fenrir Varulv",
+        "level": 6,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 65
+      },
+      {
+        "name": "Freya Skald",
+        "level": 5,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 33
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 24,
+        "maximumHitPoints": 24
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 24,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 35,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Berserkergang",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 16,
+        "critical": false,
+        "hitPointsAfter": 51
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 51
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 51
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 11,
+        "critical": false,
+        "hitPointsAfter": 64
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 61
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 61
+      },
+      {
+        "round": 2,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 51
+      },
+      {
+        "round": 2,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 46
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 51
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 44
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": true,
+        "hitPointsAfter": 34
+      },
+      {
+        "round": 3,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 20,
+        "critical": false,
+        "hitPointsAfter": 26
+      },
+      {
+        "round": 3,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 26
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 28
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 28
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 25
+      },
+      {
+        "round": 4,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 26
+      },
+      {
+        "round": 4,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 16
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 8
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 4
+      },
+      {
+        "round": 5,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 5,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 4
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": true,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 20
+      },
+      {
+        "round": 6,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 3
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Freya Skald",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 7,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 7,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 7,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 8,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "berserker-und-skalde",
+    "title": "Fenrir + Freya gegen Raubritter + zwei Plünderer",
+    "seed": 71,
+    "rounds": 6,
+    "winner": "Gegner",
+    "actions": 32,
+    "firstDefeatRound": 5,
+    "maximumNormalDamage": 16,
+    "maximumCriticalDamage": 18,
+    "participants": [
+      {
+        "name": "Fenrir Varulv",
+        "level": 6,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 65
+      },
+      {
+        "name": "Freya Skald",
+        "level": 5,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 33
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 12,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 15,
+        "maximumHitPoints": 24
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 16,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 30,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 62
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 15
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 16
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 62
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 58
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Berserkergang",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 58
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 16,
+        "critical": false,
+        "hitPointsAfter": 46
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 58
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 58
+      },
+      {
+        "round": 2,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 46
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 12,
+        "critical": true,
+        "hitPointsAfter": 46
+      },
+      {
+        "round": 2,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 36
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 43
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 43
+      },
+      {
+        "round": 3,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 36
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 39
+      },
+      {
+        "round": 3,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 26
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 12,
+        "critical": true,
+        "hitPointsAfter": 27
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 17
+      },
+      {
+        "round": 4,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 4,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 7
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 9,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 5,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Freya Skald",
+        "damage": 18,
+        "critical": true,
+        "hitPointsAfter": 6
+      },
+      {
+        "round": 6,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 12
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 6
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "berserker-und-skalde",
+    "title": "Fenrir + Freya gegen Raubritter + zwei Plünderer",
+    "seed": 2026,
+    "rounds": 8,
+    "winner": "Gegner",
+    "actions": 35,
+    "firstDefeatRound": 5,
+    "maximumNormalDamage": 19,
+    "maximumCriticalDamage": 12,
+    "participants": [
+      {
+        "name": "Fenrir Varulv",
+        "level": 6,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 65
+      },
+      {
+        "name": "Freya Skald",
+        "level": 5,
+        "team": "Nord",
+        "hitPoints": 0,
+        "maximumHitPoints": 33
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 11,
+        "maximumHitPoints": 24
+      },
+      {
+        "name": "Schwarzer Zitteraal Plünderer",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 12,
+        "maximumHitPoints": 24
+      }
+    ],
+    "recordedActionCount": 33,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 59
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Arkaner Schrei",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 12,
+        "critical": false,
+        "hitPointsAfter": 12
+      },
+      {
+        "round": 1,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 54
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Berserkergang",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 44
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 65
+      },
+      {
+        "round": 2,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 44
+      },
+      {
+        "round": 2,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 15,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 11,
+        "critical": true,
+        "hitPointsAfter": 58
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 50
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 42
+      },
+      {
+        "round": 3,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 29
+      },
+      {
+        "round": 3,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 10,
+        "critical": false,
+        "hitPointsAfter": 32
+      },
+      {
+        "round": 3,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 24
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 17
+      },
+      {
+        "round": 4,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 6,
+        "critical": false,
+        "hitPointsAfter": 13
+      },
+      {
+        "round": 4,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 12,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 17
+      },
+      {
+        "round": 4,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 9
+      },
+      {
+        "round": 5,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 1
+      },
+      {
+        "round": 5,
+        "actor": "Fenrir Varulv",
+        "action": "Zerschmetternder Hieb",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 19,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 5,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 7,
+        "critical": false,
+        "hitPointsAfter": 2
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Fenrir Varulv",
+        "damage": 3,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 6,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 5,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 6,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 23
+      },
+      {
+        "round": 7,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 4,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 7,
+        "actor": "Freya Skald",
+        "action": "Laute",
+        "target": "Schwarzer Zitteraal Plünderer",
+        "damage": 8,
+        "critical": false,
+        "hitPointsAfter": 11
+      },
+      {
+        "round": 7,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 9,
+        "critical": true,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 8,
+        "actor": "Schwarzer Zitteraal Plünderer",
+        "action": "Handbeil",
+        "target": "Freya Skald",
+        "damage": 12,
+        "critical": true,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "meister-gegen-gruppe",
+    "title": "Duncan (20) gegen zwei Raubritter + zwei Schützen",
+    "seed": 13,
+    "rounds": 3,
+    "winner": "Gafyr",
+    "actions": 14,
+    "firstDefeatRound": 1,
+    "maximumNormalDamage": 40,
+    "maximumCriticalDamage": 8,
+    "participants": [
+      {
+        "name": "Duncan Gafyr",
+        "level": 20,
+        "team": "Gafyr",
+        "hitPoints": 196,
+        "maximumHitPoints": 204
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      }
+    ],
+    "recordedActionCount": 8,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 26,
+        "critical": false,
+        "hitPointsAfter": 41
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 27,
+        "critical": false,
+        "hitPointsAfter": 40
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 28,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 36,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 41
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 18,
+        "critical": false,
+        "hitPointsAfter": 22
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 27,
+        "critical": false,
+        "hitPointsAfter": 14
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 22
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 26,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 22
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 8,
+        "critical": true,
+        "hitPointsAfter": 196
+      },
+      {
+        "round": 3,
+        "actor": "Duncan Gafyr",
+        "action": "Vollendeter Waffenmeister",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 40,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "meister-gegen-gruppe",
+    "title": "Duncan (20) gegen zwei Raubritter + zwei Schützen",
+    "seed": 71,
+    "rounds": 2,
+    "winner": "Gafyr",
+    "actions": 13,
+    "firstDefeatRound": 1,
+    "maximumNormalDamage": 38,
+    "maximumCriticalDamage": 8,
+    "participants": [
+      {
+        "name": "Duncan Gafyr",
+        "level": 20,
+        "team": "Gafyr",
+        "hitPoints": 196,
+        "maximumHitPoints": 204
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      }
+    ],
+    "recordedActionCount": 8,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 33,
+        "critical": false,
+        "hitPointsAfter": 34
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 21,
+        "critical": false,
+        "hitPointsAfter": 46
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 34,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 38,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 22,
+        "critical": false,
+        "hitPointsAfter": 12
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 27,
+        "critical": false,
+        "hitPointsAfter": 19
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 8,
+        "critical": true,
+        "hitPointsAfter": 196
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 23,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 28,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  },
+  {
+    "scenario": "meister-gegen-gruppe",
+    "title": "Duncan (20) gegen zwei Raubritter + zwei Schützen",
+    "seed": 2026,
+    "rounds": 3,
+    "winner": "Gafyr",
+    "actions": 17,
+    "firstDefeatRound": 1,
+    "maximumNormalDamage": 36,
+    "maximumCriticalDamage": 7,
+    "participants": [
+      {
+        "name": "Duncan Gafyr",
+        "level": 20,
+        "team": "Gafyr",
+        "hitPoints": 197,
+        "maximumHitPoints": 204
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Raubritter",
+        "level": 7,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 67
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      },
+      {
+        "name": "Schwarzer Zitteraal Schütze",
+        "level": 3,
+        "team": "Gegner",
+        "hitPoints": 0,
+        "maximumHitPoints": 21
+      }
+    ],
+    "recordedActionCount": 10,
+    "trace": [
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Schütze",
+        "action": "Geschwärzter Langbogen",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 67
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 32,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 29,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Schütze",
+        "damage": 21,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 67
+      },
+      {
+        "round": 1,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 204
+      },
+      {
+        "round": 1,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 7,
+        "critical": true,
+        "hitPointsAfter": 197
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 31,
+        "critical": false,
+        "hitPointsAfter": 36
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 35
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 31,
+        "critical": false,
+        "hitPointsAfter": 5
+      },
+      {
+        "round": 2,
+        "actor": "Duncan Gafyr",
+        "action": "Schweifkreis des Jungdrachens",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 25,
+        "critical": false,
+        "hitPointsAfter": 10
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 197
+      },
+      {
+        "round": 2,
+        "actor": "Schwarzer Zitteraal Raubritter",
+        "action": "Schwarzer Morgenstern",
+        "target": "Duncan Gafyr",
+        "damage": 0,
+        "critical": false,
+        "hitPointsAfter": 197
+      },
+      {
+        "round": 3,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 36,
+        "critical": false,
+        "hitPointsAfter": 0
+      },
+      {
+        "round": 3,
+        "actor": "Duncan Gafyr",
+        "action": "Erdbebenpranke",
+        "target": "Schwarzer Zitteraal Raubritter",
+        "damage": 30,
+        "critical": false,
+        "hitPointsAfter": 0
+      }
+    ]
+  }
+]

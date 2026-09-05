@@ -10,14 +10,17 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260808-combat-cards-v1';
+} from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260905-party-combat-v1';
 import {
+  applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260808-drachentanz-v1';
+} from '../combat/combat-level-up-model.js?v=20260905-party-combat-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
+import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
+import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 import {
   getActivationIconSource,
   getDurationIconSource,
@@ -25,7 +28,7 @@ import {
   getResolutionIconSource,
   getRollIconSource
 } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
-import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260905-archive-order-v2';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260905-cenyr-v2';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -33,11 +36,13 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260808-drachentanz-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260905-party-combat-v1';
+import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260905-party-combat-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-release-check-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
-} from '../character-equipment/character-equipment-sync.js?v=20260808-character-storage-audit-v1';
+} from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -220,6 +225,7 @@ function renderIdentityAndProgression(profile) {
   const portrait = String(activeCharacter?.portrait || '').trim();
   const portraitSource = typeof globalThis.sanitizeImageSrc === 'function' ? globalThis.sanitizeImageSrc(portrait) : portrait;
   const characterName = activeCharacter?.name || 'Unbenannte Figur';
+  const classSummary = getCenyrCharacterClassSummary(profile);
   return `
     <header class="cp-sheet-titlebar">
       <div>
@@ -246,9 +252,10 @@ function renderIdentityAndProgression(profile) {
         <label><span>Volk / Herkunft</span><input data-combat-path="identity.ancestry" value="${escapeMarkup(profile.identity.ancestry)}" maxlength="100" placeholder="z. B. Halbelf"></label>
         <label><span>Klasse / Archetyp</span><input data-combat-path="identity.archetype" value="${escapeMarkup(profile.identity.archetype)}" maxlength="120" placeholder="z. B. Waldläufer"></label>
         <label><span>Hintergrund</span><input data-combat-path="identity.background" value="${escapeMarkup(profile.identity.background)}" maxlength="120" placeholder="z. B. Volksheld"></label>
+        ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · Cenyr · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount}/${classSummary.earnedTechniqueSlots} Attackenslots mit Techniken belegt${classSummary.spentTechniqueSlotCount ? ` · ${classSummary.spentTechniqueSlotCount} für zusätzliche Wege verwendet` : ''}${classSummary.pendingTechniqueSlotCount ? ` · ${classSummary.pendingTechniqueSlotCount} Auswahl offen` : ''} · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
       </div>
       <div class="cp-sheet-progression">
-        <label><span>Stufe</span><input type="number" min="1" max="20" data-combat-path="progression.level" value="${profile.progression.level}"><small>Normal 1–20</small></label>
+        <label><span>Stufe</span><input type="number" min="1" max="20" data-combat-manual-level value="${profile.progression.level}"><small>Manueller Schnellabgleich 1–20</small></label>
         <label><span>Sonderstufen</span><input type="number" min="0" max="10" data-combat-path="progression.specialLevels" value="${profile.progression.specialLevels}"><small>Zusätzlich 0–10</small></label>
         <label><span>Erfahrung</span><input type="number" min="0" max="999999999" data-combat-path="progression.experience" value="${profile.progression.experience}"></label>
         <label><span>Nächste Stufe bei</span><input type="number" min="1" max="999999999" data-combat-path="progression.nextLevelExperience" value="${profile.progression.nextLevelExperience ?? ''}" placeholder="frei"></label>
@@ -269,6 +276,25 @@ function renderLevelUpChanges(preview) {
       <span><small>Kompetenz</small><strong>${displayModifier(preview.before.proficiencyBonus)} → ${displayModifier(preview.after.proficiencyBonus)}</strong></span>
     </div>
     <ul>${preview.changes.map(change => `<li><span>${escapeMarkup(change.label)}</span><strong>${escapeMarkup(change.before)} → ${escapeMarkup(change.after)}</strong></li>`).join('')}</ul>`;
+}
+
+function renderLevelUpTraining(preview) {
+  const plan = preview.plan;
+  const trainingGroups = preview.classTrainingChoiceGroups || [];
+  const techniqueGroups = preview.classTechniqueChoiceGroups || [];
+  if (!trainingGroups.length && !techniqueGroups.length) return '';
+  return `<section class="cp-level-up-section" data-level-up-role="training">
+    <div class="cp-level-up-section-head"><div><span>Cenyr-Ausbildung</span><h4>Formen, Pfade &amp; Attackenslots</h4></div><small>Der erste Expertenpfad ist frei; weitere Pfade belegen einen Attackenslot.</small></div>
+    <div class="cp-level-up-fields">
+      ${trainingGroups.map(group => `<label class="wide"><span>${escapeMarkup(group.label)}${group.required ? ' · erforderlich' : ' · optional'}</span><select data-level-up-path="classTrainingChoices.${escapeMarkup(group.kind)}"><option value="">${group.required ? 'Bitte wählen' : 'Keinen weiteren Weg wählen'}</option>${group.options.map(option => `<option value="${escapeMarkup(option.id)}"${selected(plan.classTrainingChoices[group.kind], option.id)}>${escapeMarkup(option.name)}</option>`).join('')}</select></label>`).join('')}
+      ${techniqueGroups.map(group => `<label class="wide"><span>${escapeMarkup(group.label)} · erforderlich</span><select data-level-up-technique="${escapeMarkup(group.slotId)}"><option value="">Attacke wählen</option>${group.options.map(option => {
+        const weaponNote = option.compatibleWeaponNames.length
+          ? ` · ${option.compatibleWeaponNames.join('/')}`
+          : ' · passende Waffe im Bogen ergänzen';
+        return `<option value="${escapeMarkup(option.id)}"${selected(plan.cenyrTechniqueChoices[group.slotId], option.id)}>${escapeMarkup(`${option.name} · ab Stufe ${option.minimumLevel}${weaponNote}`)}</option>`;
+      }).join('')}</select></label>`).join('')}
+    </div>
+  </section>`;
 }
 
 function renderLevelUpDialog(profile) {
@@ -309,10 +335,13 @@ function renderLevelUpDialog(profile) {
           <div class="cp-level-up-attributes">${profile.attributes.map(attribute => `<label><span>${escapeMarkup(attribute.label)} <b>${attribute.score}</b></span><input type="number" min="0" max="${attributePointAllowance}" data-level-up-attribute="${attribute.key}" value="${plan.attributeIncreases[attribute.key]}"${attributePointAllowance ? '' : ' disabled'}><small>+ Punkte</small></label>`).join('')}</div>
         </section>
 
+        ${renderLevelUpActionPools(preview)}
         ${profile.resources.length ? `<section class="cp-level-up-section">
           <div class="cp-level-up-section-head"><div><span>Kernressourcen</span><h4>Vorräte steigern</h4></div><small>Aktuell und Maximum können getrennt wachsen.</small></div>
-          <div class="cp-level-up-resources">${profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds)).map(resource => `<div><strong>${escapeMarkup(resource.name)}</strong><small>${resource.current} / ${resource.maximum}</small><label>Aktuell +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="current" value="${plan.resourceIncreases[resource.id]?.current ?? 0}"></label><label>Maximum +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="maximum" value="${plan.resourceIncreases[resource.id]?.maximum ?? 0}"></label></div>`).join('')}</div>
+          <div class="cp-level-up-resources">${profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds) && !["action", "bonus-action", "reaction", "special-action", "aura-focus"].includes(resource.id)).map(resource => `<div><strong>${escapeMarkup(resource.name)}</strong><small>${resource.current} / ${resource.maximum}</small><label>Aktuell +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="current" value="${plan.resourceIncreases[resource.id]?.current ?? 0}"></label><label>Maximum +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="maximum" value="${plan.resourceIncreases[resource.id]?.maximum ?? 0}"></label></div>`).join('')}</div>
         </section>` : ''}
+
+        ${renderLevelUpTraining(preview)}
 
         <section class="cp-level-up-section">
           <div class="cp-level-up-section-head"><div><span>Optional</span><h4>Neue Freischaltungen</h4></div><small>Leere Namen werden ignoriert.</small></div>
@@ -430,6 +459,7 @@ function renderRules(profile) {
           <label><span>Angriff global</span><input type="number" min="-99" max="99" data-combat-path="combat.attackBonus" value="${profile.combat.attackBonus}"></label>
           <label><span>Schaden global</span><input type="number" min="-99" max="99" data-combat-path="combat.damageBonus" value="${profile.combat.damageBonus}"></label>
           <label><span>Passive Wahrnehmung extra</span><input type="number" min="-99" max="99" data-combat-path="combat.passivePerceptionBonus" value="${profile.combat.passivePerceptionBonus}"></label>
+          <label class="check wide"><input type="checkbox" data-combat-path="combat.mounted"${checked(profile.combat.mounted)}> Beritten: Die Figur kämpft aktuell aus dem Sattel</label>
           <label class="check wide"><input type="checkbox" data-combat-path="combat.canActAtZeroHitPoints"${checked(profile.combat.canActAtZeroHitPoints)}> Sonderregel: Die Figur kann bei 0 TP handeln</label>
         </div>
       </article>
@@ -487,7 +517,7 @@ function renderResourceRows(resources = []) {
   return resources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
       <div class="cp-sheet-resource-identity">${renderResourceIcon(resource)}<input class="name" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="name" value="${escapeMarkup(resource.name)}" maxlength="100" aria-label="Ressource"></div>
       <label><span>Aktuell</span><input type="number" min="-9999" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}"></label>
-      <label><span>Maximum</span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}"></label>
+      <label><span>Maximum</span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}"${["action", "bonus-action", "reaction", "special-action", "aura-focus"].includes(resource.id) ? ' readonly aria-readonly="true" title="Maximum aus Stufe und Poolwahl"' : ''}></label>
       <select data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="recovery" aria-label="Erholung"><option value="manual"${selected(resource.recovery, 'manual')}>Manuell</option><option value="short-rest"${selected(resource.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(resource.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(resource.recovery, 'scene')}>Kommentar / Szene</option><option value="day"${selected(resource.recovery, 'day')}>Tag</option><option value="none"${selected(resource.recovery, 'none')}>Keine</option></select>
       <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" aria-label="Ressource entfernen">×</button>
       <input class="cp-sheet-resource-notes" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="notes" value="${escapeMarkup(resource.notes)}" maxlength="500" placeholder="Regeln, Grenzen oder Besonderheiten dieser Ressource"><small>${resource.scope === 'comment' ? 'Wird pro Gesamtkommentar aufgefüllt.' : (resource.recovery === 'day' ? 'Bleibt erhalten und wird erst am nächsten Aleria-Tag aufgefüllt.' : 'Bleibt zwischen Kommentaren erhalten.')}</small>
@@ -503,6 +533,7 @@ function renderResources(profile) {
     <div class="cp-sheet-section-head"><div><span>Verbrauch, Bezahlung &amp; Erholung</span><h4>Aktionsökonomie &amp; Kernressourcen</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="resources">+ Ressource</button></div>
     <div class="cp-sheet-resource-group"><div class="cp-sheet-subhead"><div><strong>Aktionsökonomie</strong><small>Aktion, Bonusaktion und Reaktion gelten pro Gesamtkommentar; Aura kann ein vollständiges Kostenpaket ersetzen.</small></div></div><div class="cp-sheet-resource-list">${renderResourceRows(actionResources)}</div></div>
     <div class="cp-sheet-resource-group"><div class="cp-sheet-subhead"><div><strong>Kernressourcen</strong><small>Persistente Vorräte werden nur nach ihrer eingetragenen Erholungsregel aufgefüllt.</small></div></div><div class="cp-sheet-resource-list">${renderResourceRows(persistentResources)}</div></div>
+    ${renderActionPoolProgression(profile)}
     ${renderSavingThrows(profile)}
   </article>`;
 }
@@ -672,8 +703,10 @@ function renderDetailCards(profile, collection, title, kicker, kind, addLabel, i
       const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon);
       const stateClass = item.active && compatible ? 'active' : 'inactive';
       const compatibilityNote = compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar.`;
+      const damage = kind === 'technique' ? describeTechniqueDamage(item, profile) : '';
+      const damageRoll = kind === 'technique' && compatible ? resolveTechniqueDamageFormula(item, activeWeapon || {}, profile).toUpperCase().replace(/D/g, 'W') : '';
       return `<article class="cp-sheet-detail-card ${stateClass}" data-compatible="${compatible}">
-        <div><span>${escapeMarkup([meta || (item.active ? 'Aktiv' : 'Inaktiv'), compatibilityNote].filter(Boolean).join(' · '))}</span><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</p></div>
+        <div><span>${escapeMarkup([meta || (item.active ? 'Aktiv' : 'Inaktiv'), compatibilityNote].filter(Boolean).join(' · '))}</span><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</p>${damage ? `<p><b>Schadenswürfel${damageRoll ? `: ${escapeMarkup(damageRoll)}` : ''}</b><br><small>${escapeMarkup(damage)} · Feste Waffen- und Klassenboni kommen hinzu.</small></p>` : ''}</div>
         <div class="cp-sheet-detail-actions"><button type="button" data-combat-action="edit-detail-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-entry-kind="${kind}">Bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}">×</button></div>
       </article>`;
     }).join('') || `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
@@ -772,29 +805,28 @@ function renderCheats(profile) {
 
 function renderSpellSlotProfile(profile) {
   const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
-  return `<section class="cp-sheet-spell-slots" aria-label="Zauberplätze nach Grad">
-    <div class="cp-sheet-subhead"><div><strong>Zauberplätze I–X</strong><small>Eigenständige Magieressourcen · Auffüllung durch lange Rast</small></div></div>
+  const manaName = profile.resources.find(resource => resource.id === profile.magic.manaResourceId)?.name || 'Mana';
+  return `<section class="cp-sheet-spell-slots" aria-label="Freigeschaltete Zaubergrade">
+    <div class="cp-sheet-subhead"><div><strong>Zaubergrade I–X</strong><small>Freischaltung durch die Charakterstufe · Anwendungen kosten ${escapeMarkup(manaName)}</small></div></div>
     <div class="cp-sheet-spell-slot-grid"><div class="cp-sheet-cantrip-slot" data-spell-slot-level="0">
       <span class="cp-sheet-resource-icon-frame" aria-hidden="true"><span class="cp-sheet-resource-icon-fallback">∞</span></span>
-      <span>Zaubertricks</span><strong>Unerschöpflich</strong>
-    </div>${slots.map(resource => `<label data-spell-slot-level="${getSpellSlotLevel(resource) || ''}">
+      <span>Zaubertricks</span><strong>1 ${escapeMarkup(manaName)} je Anwendung</strong>
+    </div>${slots.map(resource => `<article class="cp-sheet-spell-grade" data-spell-slot-level="${getSpellSlotLevel(resource) || ''}">
       ${renderResourceIcon(resource)}
       <span>${escapeMarkup(getSpellLevelLabel(getSpellSlotLevel(resource)))}</span>
-      <span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}" aria-label="${escapeMarkup(resource.name)} aktuell"><i>/</i><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}" aria-label="${escapeMarkup(resource.name)} maximum"></span>
-    </label>`).join('')}</div>
+      <strong>${resource.maximum > 0 ? 'Freigeschaltet' : 'Noch gesperrt'}</strong>
+    </article>`).join('')}</div>
   </section>`;
 }
 
-function renderSpellCard(spell) {
+function renderSpellCard(spell, manaName) {
   const icon = getCharacterSheetEntryIconPresentation('spell', spell);
   const fallbackSource = getSafeImageSource(icon.fallbackSource);
   const iconSource = getSafeImageSource(icon.source, fallbackSource);
   const rollFormula = String(spell.rollFormula || '').toUpperCase().replace(/D/g, 'W');
   const presentationLabel = ({ spell: 'Zauberformel', prayer: 'Gebet', song: 'Gesang' })[spell.presentationKind] || 'Zauberformel';
   const damageLabel = [rollFormula, spell.damageType].filter(Boolean).join(' · ');
-  const costLabel = Number(spell.level) === 0
-    ? 'Kein Mana · kein Zauberplatz'
-    : `${spell.manaCost} Mana · ${spell.slotCost || 1} ${getSpellLevelLabel(spell.level)}`;
+  const costLabel = `${spell.manaCost} ${manaName} · ${getSpellLevelLabel(spell.level)}`;
   const upcast = spell.upcast || {};
   const upcastParts = [
     upcast.formulaPerLevel ? `${String(upcast.formulaPerLevel).toUpperCase().replace(/D/g, 'W')} je Grad` : '',
@@ -815,7 +847,7 @@ function renderSpellCard(spell) {
         ${renderCardProperty(getRangeIconSource(), 'Reichweite', spell.range || 'Zauberreichweite')}
         ${renderCardProperty(getDurationIconSource(spell), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
       </div></section>
-      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5><p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann mit einem höheren Zauberplatz gewirkt werden.')}</p></section>` : ''}
+      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5><p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann auf einem höheren freigeschalteten Grad gewirkt werden.')}</p></section>` : ''}
       <details class="cp-spell-technical"><summary>Technische Details</summary><div><p><strong>Voraussetzungen:</strong> ${escapeMarkup(spell.requirements || 'Keine besonderen Voraussetzungen.')}</p><p><strong>Schlagworte:</strong> ${escapeMarkup(spell.tags || 'Keine Schlagworte.')}</p>${spell.aiInstructions ? `<p><strong>AleriaGPT:</strong> ${escapeMarkup(spell.aiInstructions)}</p>` : ''}</div></details>
       <div class="cp-spell-card-actions"><label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> vorbereitet</label><button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Zauber bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" aria-label="${escapeMarkup(spell.name || 'Zauber')} entfernen">×</button></div>
     </div>
@@ -824,6 +856,7 @@ function renderSpellCard(spell) {
 
 function renderMagic(profile) {
   const magic = profile.magic;
+  const manaName = profile.resources.find(resource => resource.id === magic.manaResourceId)?.name || 'Mana';
   return `<article class="cp-sheet-card cp-sheet-magic">
     <div class="cp-sheet-section-head"><div><span>Mana, Zauberwerte &amp; Repertoire</span><h4>Magie</h4></div><label class="cp-sheet-toggle"><input type="checkbox" data-combat-path="magic.enabled"${checked(magic.enabled)}> Magie aktiv</label></div>
     <div class="cp-sheet-fields compact">
@@ -835,7 +868,7 @@ function renderMagic(profile) {
     </div>
     ${renderSpellSlotProfile(profile)}
     <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Ein Zauber öffnet seine vollständige Karte mit Wirkung, Kosten und Regeln.</small></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="magic.spells" data-combat-entry-kind="spell">+ Zauber</button></div>
-    <div class="cp-sheet-spell-list">${magic.spells.map(renderSpellCard).join('') || '<p class="cp-sheet-empty">Noch keine Zauber eingetragen.</p>'}</div>
+    <div class="cp-sheet-spell-list">${magic.spells.map(spell => renderSpellCard(spell, manaName)).join('') || '<p class="cp-sheet-empty">Noch keine Zauber eingetragen.</p>'}</div>
   </article>`;
 }
 
@@ -895,8 +928,13 @@ function updateLevelUpPlan(target) {
   const attributeKey = target.dataset.levelUpAttribute;
   const resourceId = target.dataset.levelUpResource;
   const resourceProperty = target.dataset.levelUpResourceProperty;
+  const techniqueSlotId = target.dataset.levelUpTechnique;
   if (path) setAtPath(levelUpState.plan, path, inputValue(target));
   else if (attributeKey) levelUpState.plan.attributeIncreases[attributeKey] = inputValue(target);
+  else if (techniqueSlotId) {
+    if (!levelUpState.plan.cenyrTechniqueChoices) levelUpState.plan.cenyrTechniqueChoices = {};
+    levelUpState.plan.cenyrTechniqueChoices[techniqueSlotId] = inputValue(target);
+  }
   else if (resourceId && resourceProperty) {
     if (!levelUpState.plan.resourceIncreases[resourceId]) levelUpState.plan.resourceIncreases[resourceId] = {};
     levelUpState.plan.resourceIncreases[resourceId][resourceProperty] = inputValue(target);
@@ -911,6 +949,10 @@ function refreshLevelUpPreview() {
   levelUpState.plan = preview.plan;
   const output = document.querySelector('[data-level-up-role="preview"]');
   if (output) output.innerHTML = renderLevelUpChanges(preview);
+  const training = document.querySelector('[data-level-up-role="training"]');
+  if (training) training.outerHTML = renderLevelUpTraining(preview);
+  const pools = document.querySelector('[data-level-up-role="action-pools"]');
+  if (pools) pools.outerHTML = renderLevelUpActionPools(preview);
   const applyButton = document.querySelector('[data-combat-action="apply-level-up"]');
   if (applyButton) applyButton.disabled = !preview.ready;
 }
@@ -928,6 +970,17 @@ function applyLevelUp() {
   renderSheet();
 }
 
+function updateManualLevel(target) {
+  if (target.dataset.combatManualLevel === undefined) return false;
+  const result = applyManualCharacterLevel(draftProfile, inputValue(target));
+  draftProfile = result.profile;
+  const added = result.addedTechniques.length;
+  const pending = result.pendingTechniqueSlots.length;
+  levelUpNotice = `Stufe ${result.targetLevel} wurde mit Klassenformen, Ressourcen und ${added ? `${added} ergänzten Attacken` : 'den vorhandenen Attacken'} abgeglichen${pending ? `; ${pending} Attackenauswahl bleibt offen` : ''}. Bitte „Figur speichern“ verwenden, um den Entwurf dauerhaft zu sichern.`;
+  renderSheet();
+  return true;
+}
+
 function findCollectionItem(collectionPath, itemId) {
   const collection = getAtPath(draftProfile, collectionPath);
   if (!Array.isArray(collection)) return null;
@@ -935,6 +988,13 @@ function findCollectionItem(collectionPath, itemId) {
 }
 
 function updateDraftField(target) {
+  if (target.dataset.combatPoolChoice) {
+    const level = Number(target.dataset.combatPoolChoice);
+    draftProfile.progression.actionPoolChoices = [...draftProfile.progression.actionPoolChoices.filter(choice => choice.level !== level), { level, resourceId: target.value }];
+    draftProfile = sanitizeCharacterCombatProfile(draftProfile);
+    renderSheet();
+    return true;
+  }
   const directPath = target.dataset.combatPath;
   if (directPath) {
     setAtPath(draftProfile, directPath, inputValue(target));
@@ -1150,7 +1210,7 @@ function equipWeapon(itemId) {
 
 function init(character = {}) {
   activeCharacter = character;
-  draftProfile = sanitizeCharacterCombatProfile(character.combatProfile);
+  draftProfile = sanitizeCharacterCombatProfile(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
   synchronizeDraftFromInventory(character.inventory || {});
   synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: true });
   levelUpState = null;
@@ -1170,7 +1230,7 @@ function prepareImported(character = {}) {
     : structuredClone(character.inventory || {});
   const result = synchronizeEquipmentFromCombat({
     inventory,
-    combatProfile: sanitizeCharacterCombatProfile(character.combatProfile || {}),
+    combatProfile: sanitizeCharacterCombatProfile(getAutofilledCenyrCombatProfile(character.combatProfile || {})),
     characterId: character.id || '',
     characterName: character.name || '',
     now: new Date().toISOString()
@@ -1201,6 +1261,7 @@ document.addEventListener('change', event => {
   const target = event.target;
   if (!target?.closest?.('#cp-tab-combat')) return;
   if (updateLevelUpPlan(target)) return;
+  if (updateManualLevel(target)) return;
   if (target.dataset.combatAction === 'equip-weapon') return;
   if (updateDraftField(target)) {
     if (['weapons', 'armorItems'].includes(target.dataset.combatCollection)) synchronizeDraftFromCombat();

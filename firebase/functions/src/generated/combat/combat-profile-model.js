@@ -1,19 +1,21 @@
+import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import {
   ensureCombatActionResources,
   getDefaultActivationCosts,
   normalizeCombatResourceCosts
-} from './combat-action-economy.js?v=20260808-duncan-v1';
+} from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { normalizeActionPoolChoices, fillActionPoolChoices, COMBAT_RESOURCE_RULES_VERSION } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 import {
   ensureSpellSlotResources,
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260808-duncan-v1';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260905-party-combat-v1';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260808-duncan-v1';
+} from './combat-effect-model.js?v=20260905-party-combat-v1';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -24,11 +26,11 @@ import {
   getHighestUnlockedSpellGrade,
   getPactPointsMaximum,
   getSpellManaCost
-} from './combat-resource-progression.js?v=20260808-duncan-v1';
+} from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 
 const PACT_POINTS_RESOURCE_ID = 'pact-points';
 
-export const COMBAT_PROFILE_SCHEMA_VERSION = 10;
+export const COMBAT_PROFILE_SCHEMA_VERSION = 11;
 
 export const COMBAT_ATTRIBUTE_DEFINITIONS = Object.freeze([
   { key: 'strength', label: 'Kraft', shortLabel: 'KRF' },
@@ -224,12 +226,12 @@ function inferWeaponType(source = {}) {
   const explicit = normalizeText(source.weaponType || source.type, 30);
   if (WEAPON_TYPES.has(explicit)) return explicit;
   const text = `${source.name || ''} ${source.properties || ''}`.toLocaleLowerCase('de');
-  if (/langschwert|kurzschwert|schwert|säbel|degen|klinge/.test(text)) return 'sword';
+  if (/langschwert|kurzschwert|schwert|säbel|degen|rapier|klinge/.test(text)) return 'sword';
   if (/dolch|messer/.test(text)) return 'dagger';
   if (/axt|beil/.test(text)) return 'axe';
   if (/hammer|keule|morgenstern|streitkolben/.test(text)) return 'mace';
-  if (/speer|lanze/.test(text)) return 'spear';
-  if (/hellebarde|glefe|stangenwaffe/.test(text)) return 'polearm';
+  if (/speer|lanze|dreizack/.test(text)) return 'spear';
+  if (/hellebarde|partisane|glefe|stangenwaffe/.test(text)) return 'polearm';
   if (/armbrust/.test(text)) return 'crossbow';
   if (/bogen/.test(text)) return 'bow';
   if (/pistole|muskete|gewehr/.test(text)) return 'firearm';
@@ -249,6 +251,8 @@ function sanitizeWeapon(value = {}, index = 0) {
     id: normalizeId(source.id, `weapon-${index + 1}`),
     inventoryItemId: normalizeText(source.inventoryItemId, 120),
     name: normalizeText(source.name, 120),
+    image: normalizeText(source.image || source.icon, 1000),
+    weaponProfileId: normalizeText(source.weaponProfileId, 80).toLowerCase(),
     weaponType: WEAPON_TYPES.has(weaponType) ? weaponType : (source.rangeType === 'ranged' ? 'bow' : 'unarmed'),
     training: WEAPON_TRAINING.has(training) ? training : 'simple',
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
@@ -302,6 +306,7 @@ function sanitizeArmor(value = {}, index = 0) {
     id: normalizeId(source.id, `armor-${index + 1}`),
     inventoryItemId: normalizeText(source.inventoryItemId, 120),
     name: normalizeText(source.name, 120),
+    image: normalizeText(source.image || source.icon, 1000),
     kind: ['armor', 'shield', 'ward'].includes(kind) ? kind : 'armor',
     baseArmorClass: normalizeOptionalNumber(source.baseArmorClass, 0, 99),
     armorClassBonus: normalizeNumber(source.armorClassBonus ?? source.defenseBonus, 0, -99, 99),
@@ -588,12 +593,80 @@ function sanitizeTechniqueFollowUp(value = {}) {
     damageType: normalizeText(source.damageType, 80),
     attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
     damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
+    inheritDamageModifier: normalizeBoolean(source.inheritDamageModifier, true),
+    inheritBonusDamage: normalizeBoolean(source.inheritBonusDamage, true),
     // Wie oft dieser Folgeangriff separat gewürfelt wird (z.B. 2 für insgesamt drei Angriffe
     // in einer Handlung: Hauptangriff + zwei Folgeangriffe, jeder für sich Treffer/Fehlschlag).
     repeatCount: normalizeNumber(source.repeatCount, 1, 1, 5),
     triggerReactions: normalizeBoolean(source.triggerReactions, true),
     repeatPerAttackRules: normalizeBoolean(source.repeatPerAttackRules, true),
     triggerFurtherEffects: normalizeBoolean(source.triggerFurtherEffects, false)
+  };
+}
+
+function sanitizeTechniqueDamageModel(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  return {
+    mode: source.mode === 'weapon-dice' ? 'weapon-dice' : 'fixed',
+    weaponDiceMultiplier: normalizeNumber(source.weaponDiceMultiplier, 1, 1, 8),
+    bonusFormula: normalizeCombatDamageFormula(source.bonusFormula),
+    bonusWeaponDice: normalizeNumber(source.bonusWeaponDice, 0, 0, 3),
+    bonusWeaponDieCap: [4, 6, 8, 10, 12].includes(Number(source.bonusWeaponDieCap)) ? Number(source.bonusWeaponDieCap) : 12,
+    scalingSteps: sanitizeList(source.scalingSteps, step => ({
+      level: normalizeNumber(step?.level, 1, 1, 20),
+      formula: normalizeCombatDamageFormula(step?.formula)
+    }), 6).filter(step => step.formula)
+  };
+}
+
+function sanitizeCenyrTechniqueTraining(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  const classWeaponProfiles = Object.fromEntries(Object.entries(source.classWeaponProfiles || {})
+    .slice(0, 20)
+    .map(([classId, profileIds]) => [
+      normalizeText(classId, 80).toLowerCase(),
+      sanitizeList(profileIds, item => normalizeText(item, 80).toLowerCase(), 20).filter(Boolean)
+    ])
+    .filter(([classId, profileIds]) => classId && profileIds.length));
+  return {
+    branchId: normalizeText(source.branchId, 120),
+    weaponRuleSetId: normalizeText(source.weaponRuleSetId, 120),
+    uchelwyrCompatible: normalizeBoolean(source.uchelwyrCompatible),
+    requiresMounted: normalizeBoolean(source.requiresMounted),
+    allowedClassIds: sanitizeList(source.allowedClassIds, item => normalizeText(item, 80).toLowerCase(), 20).filter(Boolean),
+    classWeaponProfiles,
+    slotBands: sanitizeList(source.slotBands, item => normalizeText(item, 80), 20).filter(Boolean),
+    designNotes: normalizeText(source.designNotes, 1000),
+    assignedSlotId: normalizeText(source.assignedSlotId, 120),
+    selectedAtLevel: normalizeOptionalNumber(source.selectedAtLevel, 1, 20),
+    sourceStatus: ['confirmed', 'draft'].includes(normalizeText(source.sourceStatus, 30))
+      ? normalizeText(source.sourceStatus, 30)
+      : ''
+  };
+}
+
+function sanitizeClassTraining(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  const selections = sanitizeList(source.selections, (selection = {}) => ({
+    kind: ['path', 'branch'].includes(normalizeText(selection.kind, 20)) ? normalizeText(selection.kind, 20) : '',
+    selectionId: normalizeText(selection.selectionId, 120),
+    selectedAtLevel: normalizeNumber(selection.selectedAtLevel, 1, 1, 20),
+    spentTechniqueSlotId: normalizeText(selection.spentTechniqueSlotId, 120)
+  }), 40).filter(selection => selection.kind && selection.selectionId);
+  const techniqueSelections = sanitizeList(source.techniqueSelections, (selection = {}) => ({
+    slotId: normalizeText(selection.slotId, 120),
+    techniqueId: normalizeText(selection.techniqueId, 180),
+    selectedAtLevel: normalizeNumber(selection.selectedAtLevel, 1, 1, 20)
+  }), 40).filter(selection => selection.slotId && selection.techniqueId);
+  return {
+    schemaVersion: 2,
+    curriculumId: normalizeText(source.curriculumId, 120),
+    selections: selections.filter((selection, index) => selections.findIndex(candidate => (
+      candidate.kind === selection.kind && candidate.selectionId === selection.selectionId
+    )) === index),
+    techniqueSelections: techniqueSelections.filter((selection, index) => techniqueSelections.findIndex(candidate => (
+      candidate.slotId === selection.slotId || candidate.techniqueId === selection.techniqueId
+    )) === index)
   };
 }
 
@@ -604,9 +677,12 @@ function sanitizeTechnique(value = {}, index = 0) {
   const weaponTypes = (Array.isArray(source.weaponTypes) ? source.weaponTypes : String(source.weaponTypes || '').split(','))
     .map(item => normalizeText(item, 30))
     .filter(item => WEAPON_TYPES.has(item));
+  const effects = normalizeCombatEffects(source.effects);
+  const inferredMaximumTargets = effects.some(effect => ['selected', 'allies', 'enemies', 'all'].includes(effect.target)) ? 20 : 1;
   return {
     id: normalizeId(source.id, `technique-${index + 1}`),
     name: normalizeText(source.name, 140),
+    status: ['confirmed', 'draft', 'deprecated'].includes(normalizeText(source.status, 30)) ? normalizeText(source.status, 30) : 'confirmed',
     trainingForm: normalizeText(source.trainingForm, 140),
     ...(normalizeText(source.combatStyleId, 120) ? { combatStyleId: normalizeText(source.combatStyleId, 120) } : {}),
     ...(normalizeText(source.combatStyleFormId, 120) ? { combatStyleFormId: normalizeText(source.combatStyleFormId, 120) } : {}),
@@ -620,17 +696,22 @@ function sanitizeTechnique(value = {}, index = 0) {
     weaponTypes: [...new Set(weaponTypes)].slice(0, 20),
     compatibleWeaponIds: sanitizeList(source.compatibleWeaponIds, item => normalizeText(item, 120), 40).filter(Boolean),
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
+    damageModel: sanitizeTechniqueDamageModel(source.damageModel),
     damageType: normalizeText(source.damageType, 80),
     attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
     damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
+    targetDefenseModifier: normalizeNumber(source.targetDefenseModifier, 0, -99, 99),
     rollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
+    criticalThreshold: normalizeNumber(source.criticalThreshold, 20, 2, 20),
+    maximumTargets: normalizeNumber(source.maximumTargets, inferredMaximumTargets, 1, 20),
     range: normalizeText(source.range, 160),
     target: normalizeText(source.target, 160),
     duration: normalizeText(source.duration, 160),
     requirements: normalizeText(source.requirements, 1200),
     tags: normalizeText(source.tags, 500),
     aiInstructions: normalizeText(source.aiInstructions, 1600),
-    effects: normalizeCombatEffects(source.effects),
+    mechanicNotes: sanitizeList(source.mechanicNotes, item => normalizeText(item, 600), 8).filter(Boolean),
+    effects,
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
       allowed: normalizeBoolean(source.auraBypass?.allowed, true),
@@ -641,7 +722,8 @@ function sanitizeTechnique(value = {}, index = 0) {
     mechanics: sanitizeMechanicalModifiers(source.mechanics),
     triggerRules: sanitizeCombatTriggerRules(source.triggerRules || (source.triggerRule ? [source.triggerRule] : [])),
     secondarySave: sanitizeTechniqueSecondarySave(source.secondarySave),
-    followUpAttack: sanitizeTechniqueFollowUp(source.followUpAttack)
+    followUpAttack: sanitizeTechniqueFollowUp(source.followUpAttack),
+    cenyrTraining: sanitizeCenyrTechniqueTraining(source.cenyrTraining)
   };
 }
 
@@ -700,7 +782,7 @@ function getLegacyArmor(source) {
 }
 
 export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
-  const source = value && typeof value === 'object' ? value : {};
+  const source = reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {});
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
   const sourceSaves = new Map((Array.isArray(source.savingThrows) ? source.savingThrows : [])
@@ -726,10 +808,13 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
   const configuredSlotResourceIds = sanitizeList(magic.slotResourceIds, item => normalizeText(item, 120), 20).filter(Boolean);
   const normalizedNormalLevel = normalizeNumber(progression.level ?? source.level, 1, 1, 20);
   const normalizedSpecialLevels = normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10);
+  const actionPoolChoices = Array.isArray(progression.actionPoolChoices)
+    ? normalizeActionPoolChoices(progression.actionPoolChoices, normalizedNormalLevel)
+    : fillActionPoolChoices([], normalizedNormalLevel);
   const resourceSources = ensureSpellSlotResources(
     ensureCombatActionResources(
       ensureDefaultCoreResources(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES),
-      { level: normalizedNormalLevel, specialLevels: normalizedSpecialLevels }
+      { level: normalizedNormalLevel, specialLevels: normalizedSpecialLevels, actionPoolChoices }
     ),
     {
       enabled: magicEnabled,
@@ -739,7 +824,12 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     }
   );
   const sanitizedResources = sanitizeList(resourceSources, sanitizeResource, 100);
-  applyLevelDerivedResourceCeiling(sanitizedResources, 'aura-focus', getAuraFocusMaximum(normalizedNormalLevel, normalizedSpecialLevels));
+  const auraFocus = sanitizedResources.find(resource => resource.id === 'aura-focus');
+  if (auraFocus) {
+    const spent = Math.max(0, auraFocus.maximum - auraFocus.current);
+    auraFocus.maximum = getAuraFocusMaximum(normalizedNormalLevel, normalizedSpecialLevels);
+    auraFocus.current = Math.max(0, auraFocus.maximum - spent);
+  }
   if (magicEnabled) {
     // Paktpunkte (Hexer) replace Mana entirely rather than growing like a full/half caster
     // pool - they deliberately follow the smaller Celestial/Infernal-style curve for now.
@@ -751,8 +841,11 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     // slot resources stay as a simple "is this grade unlocked yet" flag (maximum >= 1),
     // which is also what the composer UI already checks to enable higher spell grades.
     const highestUnlockedGrade = getHighestUnlockedSpellGrade(normalizedCasterTier, normalizedNormalLevel);
-    for (let grade = 1; grade <= highestUnlockedGrade; grade += 1) {
-      applyLevelDerivedResourceCeiling(sanitizedResources, `spell-slot-${grade}`, 1);
+    for (let grade = 1; grade <= 10; grade += 1) {
+      const resource = sanitizedResources.find(entry => entry.id === `spell-slot-${grade}`);
+      if (!resource) continue;
+      resource.maximum = grade <= highestUnlockedGrade ? 1 : 0;
+      resource.current = Math.min(resource.current, resource.maximum);
     }
   }
   if (normalizedBypassResourceId) {
@@ -796,6 +889,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     progression: {
       level: normalizedNormalLevel,
       specialLevels: normalizedSpecialLevels,
+      resourceRulesVersion: COMBAT_RESOURCE_RULES_VERSION,
+      actionPoolChoices,
       experience: normalizeNumber(progression.experience ?? source.experience, 0, 0, 999999999),
       nextLevelExperience: normalizeOptionalNumber(progression.nextLevelExperience, 1, 999999999),
       experienceReward: normalizeOptionalNumber(progression.experienceReward, 0, 999999999),
@@ -826,7 +921,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       attackBonus: normalizeNumber(combat.attackBonus ?? source.baseAttackBonus, 0, -99, 99),
       damageBonus: normalizeNumber(combat.damageBonus ?? source.baseDamageBonus, 0, -99, 99),
       passivePerceptionBonus: normalizeNumber(combat.passivePerceptionBonus, 0, -99, 99),
-      canActAtZeroHitPoints: normalizeBoolean(combat.canActAtZeroHitPoints)
+      canActAtZeroHitPoints: normalizeBoolean(combat.canActAtZeroHitPoints),
+      mounted: normalizeBoolean(combat.mounted)
     },
     savingThrows: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>
       sanitizeSavingThrow(sourceSaves.get(definition.key), definition)),
@@ -837,6 +933,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     armorItems: sanitizeList(getLegacyArmor(source), sanitizeArmor),
     resources: sanitizedResources,
     techniques: sanitizeList(source.techniques, sanitizeTechnique),
+    classTraining: sanitizeClassTraining(source.classTraining),
     quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
     damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity, 100),
@@ -1156,6 +1253,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
           id: `inventory-weapon-${index + 1}`,
           inventoryItemId: item.id,
           name: item.name,
+          image: item.image || item.icon,
           damageFormula: combat.damageFormula,
           versatileDamageFormula: combat.versatileDamageFormula,
           weaponType: combat.weaponType,
@@ -1176,6 +1274,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
         id: `inventory-armor-${index + 1}`,
         inventoryItemId: item.id,
         name: item.name,
+        image: item.image || item.icon,
         kind: combat.kind,
           baseArmorClass: combat.baseArmorClass,
           armorClassBonus: combat.armorClassBonus ?? combat.defenseBonus ?? readNamedAttribute(item, /schutz|verteidigung|r[uü]stung/i),
@@ -1193,6 +1292,21 @@ export function resolveCharacterCombatProfile(character = {}) {
   const profile = sanitizeCharacterCombatProfile(character.combatProfile, {
     ensureRequiredSkills: character.entityType !== 'creature',
     ensureSpellSlots: character.entityType !== 'creature'
+  });
+  const inventoryById = new Map(getInventoryItems(character)
+    .map(item => [String(item?.id || ''), item])
+    .filter(([id]) => id));
+  profile.weapons = profile.weapons.map(weapon => {
+    const item = inventoryById.get(String(weapon.inventoryItemId || ''));
+    return item && !weapon.image
+      ? { ...weapon, image: normalizeText(item.image || item.icon, 1000) }
+      : weapon;
+  });
+  profile.armorItems = profile.armorItems.map(armor => {
+    const item = inventoryById.get(String(armor.inventoryItemId || ''));
+    return item && !armor.image
+      ? { ...armor, image: normalizeText(item.image || item.icon, 1000) }
+      : armor;
   });
   const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || sanitizeWeapon({});
   const equippedArmor = profile.armorItems.filter(item => item.equipped);

@@ -2,6 +2,8 @@ import { defineConfig } from 'vite';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { UNIVERSAL_CLASS_IDS } from '../Klassenordner/modules/pages/universal-class-registry.js';
+import { CENYR_CLASS_IDS } from './modules/classes/cenyr/cenyr-class-ids.js';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -53,7 +55,16 @@ export default defineConfig({
     outDir: buildRoot,
     emptyOutDir: true,
     rollupOptions: {
-      input: resolve(almanachRoot, 'AleriaAlmanach.html')
+      input: {
+        almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
+        classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
+        ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [
+          `class-${id}`, resolve(workspaceRoot, 'Klassenordner/Basisklassen', id, 'index.html')
+        ])),
+        ...Object.fromEntries(CENYR_CLASS_IDS.map(id => [
+          `class-cenyr-${id}`, resolve(workspaceRoot, 'Klassenordner/Cenyr', id, 'index.html')
+        ]))
+      }
     }
   }
 });

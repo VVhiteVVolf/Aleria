@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "id": "helwyr",
+  "cultureId": "cenyr",
+  "name": "Helwyr",
+  "title": "Der Helwyr",
+  "subtitle": "Fernkämpfender Ritter",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/HjxiJxW.png",
+  "illustration": "https://i.imgur.com/T9aGXYm.png",
+  "artwork": {
+    "source": "https://i.imgur.com/T9aGXYm.png",
+    "width": 500,
+    "height": 333,
+    "caption": "Helwyr · Cenyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/Dc68fBo.png",
+    "width": 267,
+    "height": 400,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Cenyr"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Waldläufer, (<em>Eidgeschworener)</em>"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Taktik",
+      "html": "Distanzkampf, gezielte Ausschaltung, Gelände- und Positionskontrolle"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Auftreten",
+      "html": "Grenzregionen, Wälder, Belagerungen, Heer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Fernunterstützung, Offiziersausschaltung, Aufklärung, Sicherung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Vollständige ritterliche Salbung nach cenyrischem Ritus"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Ritterlicher Eid nach den Neun Tugenden"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell, meist gering bis moderat"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Durchaus vorhanden, besonders im Pflichtverständnis"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Häufig jene der Tugenden Standhaftigkeit, Pflicht oder Gerechtigkeit"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Langbogen, Jagdbogen; Kurzschwert oder Dolch als Sekundärwaffe"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Leichte bis mittlere Rüstung (Kette, Brigantine, Schuppe)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Drachentanz (Helwyr-Formen mit Schwerpunkt Distanz &amp; Timing)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Berühmter Vertreter",
+      "html": "Gareth Aderyn, Mordred Grawn, Gwendolyn Aderyn,"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Gründer",
+      "html": "Keine einzelne Person; entwickelte sich aus dem ursprünglichen Adelstitel"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Bevorzugtes Reittier",
+      "html": "Der Rhyfel, Ceffyl (Pferderasse)"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Begleiter",
+      "html": "Jagdhunde, Greifvögel"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Helwyr</em></strong> ist ein Ritter, der gelernt hat, dass Krieg nicht immer im Abstand einer Armlänge entschieden wird. Sein Name bedeutet im alten Avallornischen schlicht <strong>Jäger</strong> – und genau das war er einst. In den frühen Tagen Cenyrs trugen Bauern und Waffenknechte den Bogen. Sie standen hinter der Linie, spannten die Sehne und ließen los. Ihr Pfeil kannte kein Duell, kein Wortwechsel, keinen letzten Blick. Das galt lange als notwendig – aber nicht als ritterlich.</p> <p>Der Helwyr ist kein romantischer Held des Nahkampfes. Er sucht nicht den Applaus des Turniers. Er wählt Stellung, misst Wind und Entfernung, wartet auf den richtigen Moment. Sein Pfeil ist kein Ausbruch von Zorn – sondern eine Entscheidung. Ein Helwyr kämpft nicht, um gesehen zu werden. Er kämpft, um den Kampf zu beenden, bevor er unnötig viele Leben kostet.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Jahrhunderten Cenyrs war der <strong>Bogen</strong> keine Waffe des Adels. Er gehörte den Jägern, den Grenzbauern, den Waffenknechten. Während Teulu und Cantref als sichtbare Verkörperung ritterlicher Tugend galten, standen die Fernkämpfer hinter ihnen – notwendig, aber nicht gefeiert. Der Gedanke, aus der Distanz zu töten, ohne dem Gegner in die Augen zu sehen, widersprach lange dem Ideal des persönlichen Maßes.</p> <p>Doch die Realität der Kriege ließ sich nicht ignorieren. Belagerungen, Waldgefechte und weite Grenzkonflikte zeigten, dass Reichweite und Geduld ebenso kriegsentscheidend sein konnten wie Klinge oder Lanze. Besonders in den rauen Grenzregionen Estrylls begannen einzelne Ritter, den Bogen ernsthaft zu studieren – nicht als Nebenwaffe, sondern als Hauptinstrument. Sie lernten, Wind zu lesen, Gelände zu nutzen, Bewegungen vorauszusehen.</p> <p>Mit der Zeit wandelte sich das Bild. Was einst als Werkzeug der Gemeinen galt, wurde zu einer Disziplin der Präzision. Die Bezeichnung <strong>Helwyr</strong>, ursprünglich für Jäger und einfache Schützen gebraucht, wurde bewusst übernommen und erhoben. Nicht als Bruch mit dem Rittertum – sondern als Erweiterung. Der Helwyr entstand aus der Einsicht, dass Ehre nicht nur im Nahkampf liegt, sondern auch in der Verantwortung, einen Krieg mit möglichst wenigen Opfern zu führen.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Helwyr</em></strong> ist in erster Linie ein <strong>Fernkämpfer</strong>. Seine Ausbildung konzentriert sich auf den <strong>Langbogen</strong>, teils auch auf kürzere Jagdbögen oder schwere Kriegsbögen, je nach Region und Haus. Anders als der Teulu oder Cantref arbeitet der Helwyr nicht mit unmittelbarer Konfrontation, sondern mit <strong>Distanz, Geduld und Berechnung</strong>. Er lernt, Wind, Gelände und Bewegung zu lesen, Entfernungen einzuschätzen und in Sekunden zu entscheiden, wann ein Schuss sinnvoll – und wann er überflüssig ist.</p> <p>Der Helwyr ist kein ungeschickter Ritter im Nahkampf. Auch er beherrscht die Grundformen des <strong>Drachentanzes</strong> und führt ein Kurzschwert oder Messer als Sekundärwaffe. Doch sein Kern bleibt der Bogen. Seine größte Fähigkeit ist nicht Kraft, sondern <strong>Timing und Zielwahl</strong>. Er sucht keine breite Zerstörung, sondern gezielte Wirkung – Offiziere, Bannerträger, Engstellen, entscheidende Momente.</p> <p>Ein Helwyr denkt in <strong>Wirkungsketten</strong>. Er schießt nicht, um zu treffen. Er schießt, um eine Situation zu verändern.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li><p>Hohe <strong>Reichweite</strong> und Gefechtskontrolle aus sicherer Distanz</p> </li> <li><p>Präzise Zielwahl gegen Schlüsselpersonen oder Engstellen</p> </li> <li><p>Effektiv in unübersichtlichem Gelände (Wald, Hügel, Belagerung)</p> </li> <li><p>Geringeres eigenes Risiko im Vergleich zum Nahkämpfer</p> </li> </ul> <p><strong>Schwächen</strong></p> <ul> <li><p>Im direkten Nahkampf weniger spezialisiert als Teulu oder Cantref</p> </li> <li><p>Abhängig von Position, Sicht und Nachschub</p> </li> <li><p>Wetter- und Geländeeinflüsse können Effektivität stark mindern</p> </li> <li><p>Moralisch umstrittene Kampfform im klassischen ritterlichen Ideal</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "drachentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines <strong><em>Helwyr</em></strong> ist zweckmäßig – nicht prunkvoll. Auch er ist ein Ritter Cenyrs, gesalbt und eidverpflichtet, doch seine Rüstung ist oft leichter gehalten als die eines Teulu oder Uchelwyr. Beweglichkeit und Ausdauer sind für ihn wichtiger als massiver Stahl. Viele tragen verstärkte <strong>Kettenhemden</strong>, Brigantinen oder flexible Schuppenpanzer, die Schutz bieten, ohne den Zug des Bogens zu behindern.</p> <p>Sein Herzstück ist der <strong>Langbogen</strong> – häufig aus Esche oder Ulme gefertigt, bei wohlhabenderen Häusern aus sorgfältig ausgewähltem Komposit. Dazu trägt er einen Köcher mit ausgewählten Pfeilen: schwere Durchschlagspfeile für gepanzerte Gegner, leichtere Jagdpfeile für Reichweite oder präzise Schüsse. Anders als der gemeine Schütze führt der Helwyr seine Pfeile nicht wahllos – er wählt sie mit Bedacht.</p> <p>Als Nebenwaffe trägt er meist ein <strong>Kurzschwert, Dolch oder Seax</strong>, seltener ein vollwertiges Langschwert. Ein kleiner Rundschild ist möglich, aber nicht typisch. Sein Wappenrock entspricht seinem Haus oder seinem Rittervater, doch oft schlichter gehalten – dunklere Stoffe, weniger flatternde Elemente, um im Gelände nicht aufzufallen.</p> <p>Ein Helwyr kleidet sich nicht, um gesehen zu werden. Er rüstet sich, um zu wirken.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Helwyr</em></strong> ist anerkannt – aber selten bewundert. Er trägt denselben Eid, dieselbe Salbung, denselben Stand wie jeder andere Ritter Cenyrs. Und doch ist das Bild, das man von ihm hat, ein anderes. Wenn ein Uchelwyr in glänzender Rüstung in eine Stadt reitet, raunen die Menschen. Wenn ein Teulu im Hof auftritt, spricht man von Ehre. Kommt jedoch ein Helwyr, denkt man eher: <em>„Ah. Ein Waldläufer.“</em></p> <p>Das ist kein Spott – aber eine Verschiebung im Ideal. Der Helwyr steht nicht für Glanz oder Donner. Er steht für Geduld, Distanz und Zweckmäßigkeit. Viele sehen in ihm eher den Grenzgänger, den Kundschafter, den stillen Jäger. Besonders in Städten oder an Höfen wird er weniger mit ritterlicher Pracht assoziiert, sondern mit Wäldern, Hügeln und Grenzregionen.</p> <p>Unter Kennern jedoch genießt der Helwyr Respekt. Militärführer wissen, dass seine Kunst oft entscheidet, bevor die Schwerter sich kreuzen. Ein Helwyr wird vielleicht nicht besungen wie ein Turniersieger – aber wenn er auf einem Feld steht, weiß jeder erfahrene Ritter, dass er ernst zu nehmen ist.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Helwyr</em></strong> ist trotz aller Eigenheiten ein vollwertiger Ritter – und damit selbstverständlich Reiter. Auch er besitzt ein Pferd, sei es ein solider <strong><em>Rhyfel</em></strong> oder, wenn es Stand und Mittel erlauben, ein <strong><em>Ceffyl</em></strong>. Für den Helwyr steht dabei weniger Zuchtlinie oder Prestige im Vordergrund, sondern Zweckmäßigkeit: Das Tier soll ihn zuverlässig von Ort zu Ort tragen, ruhig stehen, wenn der Bogen gespannt wird, und Ausdauer besitzen für lange Märsche entlang von Grenzen und Wäldern.</p> <p>Weitaus prägender sind jedoch andere Gefährten. Häufig sieht man einen Helwyr mit einem <strong>Falken</strong> auf dem Arm – nicht nur zur Jagd, sondern als Ausdruck von Weitblick und Geduld. Der Falke spiegelt seine Kampfweise: beobachten, warten, dann präzise zuschlagen. Ebenso verbreitet ist der <strong>Jagdhund</strong>, treu, aufmerksam und leise führbar. In rauen Grenzregionen ist ein Hund oft wertvoller als jede Zierde am Sattel.</p> <p>So bleibt der Helwyr, trotz Ritterstand, kulturell näher am Jäger als am Turnierfeld. Sein Gefährte ist weniger Statussymbol – mehr Werkzeug und Partner.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "ff7b35da1b015405c00a98fb8fd0faea9c148099bff5a173f5d808df1ecb3a85"
+  }
+}

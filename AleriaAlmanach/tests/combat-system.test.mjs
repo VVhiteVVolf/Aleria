@@ -27,10 +27,15 @@ import {
 } from '../modules/combat/combat-level-up-model.js';
 import {
   resolveCombatProfile,
+  resolveCombatTargetProfile,
   validateCombatActorProfile,
   validateCombatTargetProfile
 } from '../modules/combat/combat-profile-resolver.js';
 import { CombatResolutionService } from '../modules/combat/combat-resolution-service.js';
+import {
+  getReservedEquipmentSwitchWeaponId,
+  withEquippedCombatWeapon
+} from '../modules/combat/combat-equipment-state.js';
 import { combatNarrationInternals, narrateCombatResolution } from '../modules/combat/combat-narration-service.js';
 import { combatUiInternals } from '../modules/combat/ui/combat-ui.js';
 import {
@@ -158,7 +163,7 @@ class FakeSkillDiceAdapter {
   }
 }
 
-test('migriert das alte Kampfprofil verlustarm in Schema zehn', () => {
+test('migriert das alte Kampfprofil verlustarm in Schema elf', () => {
   const profile = sanitizeCharacterCombatProfile({
     defense: 13,
     maximumHitPoints: 22,
@@ -168,7 +173,7 @@ test('migriert das alte Kampfprofil verlustarm in Schema zehn', () => {
     weapon: { name: 'Speer', damageFormula: '1W6 + 1' },
     armor: { name: 'Lederrüstung', defenseBonus: 2 }
   });
-  assert.equal(profile.schemaVersion, 10);
+  assert.equal(profile.schemaVersion, 11);
   assert.equal(profile.armorClass.base, 13);
   assert.equal(profile.hitPoints.maximumOverride, 22);
   assert.equal(profile.combat.attackBonus, 4);
@@ -275,13 +280,13 @@ test('vergibt Attributspunkte nur auf 4, 8, 12, 16 und 20 sowie vier Punkte je S
   assert.equal(balanced.profile.attributes.find(attribute => attribute.key === 'dexterity').score, 11);
 });
 
-test('der erste Aura-Fokuspunkt wird ab normaler Stufe sechs freigeschaltet', () => {
-  const before = sanitizeCharacterCombatProfile({ progression: { level: 5 } });
+test('der erste Aura-Fokuspunkt wird ab normaler Stufe acht freigeschaltet', () => {
+  const before = sanitizeCharacterCombatProfile({ progression: { level: 7 } });
   assert.deepEqual(
     [before.resources.find(resource => resource.id === 'aura-focus').current, before.resources.find(resource => resource.id === 'aura-focus').maximum],
     [0, 0]
   );
-  const after = sanitizeCharacterCombatProfile({ progression: { level: 6 }, resources: before.resources });
+  const after = sanitizeCharacterCombatProfile({ progression: { level: 8 }, resources: before.resources });
   assert.deepEqual(
     [after.resources.find(resource => resource.id === 'aura-focus').current, after.resources.find(resource => resource.id === 'aura-focus').maximum],
     [1, 1]
@@ -372,6 +377,20 @@ test('stellt einen simplen Nahkampf bereit und verlangt keinen Kampfmodus oder I
   assert.equal(validateCombatTargetProfile(resolveCombatProfile(character('blank', { armorClass: { override: 0 } }))).ready, true);
 });
 
+test('die leichte Zielprojektion behält Verteidigung und Trefferpunkte des vollständigen Profils', () => {
+  const source = character('target', {
+    hitPoints: { current: 17, maximumOverride: 24, temporary: 3 },
+    armorClass: { base: 13, shieldBonus: 2 }
+  });
+  const full = resolveCombatProfile(source);
+  const target = resolveCombatTargetProfile(source);
+  assert.equal(target.characterId, full.characterId);
+  assert.equal(target.totalDefense, full.totalDefense);
+  assert.equal(target.currentHitPoints, full.currentHitPoints);
+  assert.equal(target.maximumHitPoints, full.maximumHitPoints);
+  assert.equal(target.temporaryHitPoints, full.temporaryHitPoints);
+});
+
 test('normale Waffen dürfen ihre Aktions- und Zusatzkosten frei definieren', () => {
   const actor = resolveCombatProfile(character('actor', {
     weapons: [{
@@ -401,6 +420,8 @@ test('wählt Waffe oder vorbereiteten Zauber ausdrücklich aus dem Profil', () =
   const spell = resolveCombatProfile(source, { actionId: 'spell:ember' });
   assert.equal(dagger.weapon.name, 'Dolch');
   assert.equal(dagger.profileActionKind, 'weapon');
+  assert.equal(dagger.selectedAction.compatible, false);
+  assert.match(dagger.selectedAction.disabledReason, /Bonusaktion/);
   assert.equal(spell.weapon.name, 'Glutlanze');
   assert.equal(spell.weapon.damageFormula, '2d6');
   assert.equal(spell.profileActionKind, 'spell');
@@ -409,6 +430,67 @@ test('wählt Waffe oder vorbereiteten Zauber ausdrücklich aus dem Profil', () =
     'weapon', 'weapon', 'weapon', 'spell',
     'equipment-switch', 'equipment-switch', 'equipment-switch'
   ]);
+});
+
+test('aktive Waffen begrenzen Grundangriffe und passen waffenabhängige Techniken nach einem Wechsel an', () => {
+  const source = character('actor', {
+    weapons: [
+      { id: 'sword', name: 'Langschwert', weaponType: 'sword', damageFormula: '1W8', equipped: true },
+      { id: 'dagger', name: 'Dolch', weaponType: 'dagger', damageFormula: '1W4', equipped: false }
+    ],
+    techniques: [{
+      id: 'dagger-dance', name: 'Tanzende Spitze', active: true, minimumLevel: 1,
+      weaponTypes: ['dagger'], damageFormula: '1W4', activationType: 'action'
+    }]
+  });
+  const before = resolveCombatProfile(source, { actionId: 'technique:dagger-dance', segmentKind: 'combataction' });
+  assert.equal(before.weapons.find(weapon => weapon.id === 'sword').equipped, true);
+  assert.equal(before.selectedAction.compatible, false);
+  assert.equal(before.actions.find(action => action.id === 'weapon:dagger').compatible, false);
+
+  const switchedCharacter = withEquippedCombatWeapon(source, 'dagger');
+  const after = resolveCombatProfile(switchedCharacter, { actionId: 'technique:dagger-dance', segmentKind: 'combataction' });
+  assert.equal(after.weapons.find(weapon => weapon.id === 'dagger').equipped, true);
+  assert.equal(after.selectedAction.compatible, true);
+  assert.equal(after.weapon.weaponType, 'dagger');
+  assert.equal(after.actions.find(action => action.id === 'weapon:sword').compatible, false);
+});
+
+test('Kreaturen behalten mehrere natürliche Angriffe ohne Ausrüstungswechsel', () => {
+  const source = {
+    ...character('creature', {
+      weapons: [
+        { id: 'bite', name: 'Biss', weaponType: 'natural', damageFormula: '1W8', equipped: true },
+        { id: 'claw', name: 'Klaue', weaponType: 'natural', damageFormula: '1W6', equipped: false }
+      ]
+    }),
+    entityType: 'creature'
+  };
+  const resolved = resolveCombatProfile(source, { actionId: 'weapon:claw', segmentKind: 'combataction' });
+  assert.equal(resolved.selectedAction.compatible, true);
+  assert.equal(resolved.actions.find(action => action.id === 'weapon:bite').compatible, true);
+  assert.equal(resolved.actions.find(action => action.id === 'weapon:claw').compatible, true);
+  assert.equal(resolved.actions.some(action => action.kind === 'equipment-switch'), false);
+  assert.equal(combatUiInternals.renderWeaponLoadout(resolved), '');
+});
+
+test('ein bestätigter Waffenwechsel wird als Zustand für folgende Kampfabschnitte vorgemerkt', () => {
+  const actor = resolveCombatProfile(character('actor', {
+    weapons: [
+      { id: 'sword', name: 'Langschwert', damageFormula: '1W8', equipped: true, image: 'https://example.com/sword.png' },
+      { id: 'dagger', name: 'Dolch', damageFormula: '1W4', equipped: false }
+    ]
+  }), { actionId: 'equip:dagger', segmentKind: 'combataction' });
+  assert.equal(getReservedEquipmentSwitchWeaponId(actor, false), '');
+  assert.equal(getReservedEquipmentSwitchWeaponId(actor, true), 'dagger');
+
+  const markup = combatUiInternals.renderWeaponLoadout(actor);
+  assert.match(markup, /data-state="active"[^>]*data-weapon-id="sword"/);
+  assert.match(markup, /data-state="pending"[^>]*data-weapon-id="dagger"/);
+  assert.match(markup, /data-weapon-id="dagger"[^>]*data-combat-action-id="weapon:sword"/);
+  assert.doesNotMatch(markup, /data-state="pending"[^>]*disabled/);
+  assert.match(markup, /Wechsel aufheben/);
+  assert.match(markup, /src="https:\/\/example\.com\/sword\.png"/);
 });
 
 test('ordnet Gebete als eigene magische Blase und Auswertung zu', () => {
@@ -456,6 +538,7 @@ test('wertet Gleichstand, natürliche Eins und natürliche Zwanzig korrekt aus',
   assert.equal(evaluateAttackRoll({ natural: 10, total: 14 }, 14).hit, true);
   assert.equal(evaluateAttackRoll({ natural: 1, total: 99 }, 14).hit, false);
   assert.equal(evaluateAttackRoll({ natural: 20, total: 5 }, 99).hit, true);
+  assert.equal(evaluateAttackRoll({ natural: 19, total: 5 }, 99, 19).criticalSuccess, true);
 });
 
 test('erzeugt Treffer und Schaden aus den vollständig abgeleiteten Charakterprofilen', async () => {
@@ -662,7 +745,7 @@ test('Techniken werden nur mit einer passenden aktiven Waffenart freigeschaltet'
 
 test('Aura-Fokus ersetzt reguläre Aktions-, Mana- und Slotkosten vollständig', () => {
   const profile = sanitizeCharacterCombatProfile({
-    progression: { level: 6 },
+    progression: { level: 12 },
     resources: [{ id: 'mana', name: 'Mana', current: 9, maximum: 9 }],
     aura: { enabled: true, focusResourceId: 'aura-focus', focusBypassCost: 2 }
   });
@@ -673,7 +756,7 @@ test('Aura-Fokus ersetzt reguläre Aktions-, Mana- und Slotkosten vollständig',
 
 test('Aura-Fokus ersetzt die Aktion, aber nicht die begrenzte Nutzung einer Technik', () => {
   const profile = sanitizeCharacterCombatProfile({
-    progression: { level: 6 },
+    progression: { level: 8 },
     resources: [{
       id: 'technique-uses', name: 'Techniknutzungen', current: 2, maximum: 2,
       category: 'technique-use', scope: 'persistent', recovery: 'day'
@@ -797,7 +880,7 @@ test('ein Zauber mit Slotkosten ist ohne konkrete Zauberplatz-Ressource gesperrt
   assert.ok(validation.missingFields.includes('incompatibleAction'));
 });
 
-test('ein Zauber mit gültigem Slot zieht den Zauberplatz in seine Kosten ein', () => {
+test('ein freigeschalteter Zaubergrad begrenzt keine Anwendungen zusätzlich zum Mana', () => {
   const actor = resolveCombatProfile(character('actor', {
     resources: [{
       id: 'slot-1', name: 'Zauberplatz I', current: 1, maximum: 1,
@@ -815,7 +898,8 @@ test('ein Zauber mit gültigem Slot zieht den Zauberplatz in seine Kosten ein', 
   }), { actionId: 'spell:flame', segmentKind: 'spell' });
   assert.equal(actor.selectedAction.compatible, true);
   assert.equal(validateCombatActorProfile(actor).ready, true);
-  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'slot-1')?.amount, 1);
+  assert.equal(actor.resourceCosts.some(cost => cost.resourceId === 'slot-1'), false);
+  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus')?.amount, 2);
 });
 
 test('Zaubertricks kosten 1 Mana und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
@@ -880,12 +964,12 @@ test('Mana, Aura-Fokus und Zaubergrad-Freischaltung wachsen automatisch mit der 
   assert.equal(noMagic.resources.find(resource => resource.id === 'aura-focus').maximum, 4, 'Aura-Fokus wächst unabhängig von Magie');
 });
 
-test('höher gestufte Charaktere behalten manuell erhöhte Ressourcenwerte statt sie abzusenken', () => {
+test('ein veraltetes Aura-Maximum wird an die geltende Stufe angepasst', () => {
   const profile = sanitizeCharacterCombatProfile({
     progression: { level: 1 },
     resources: [{ id: 'aura-focus', name: 'Aura-Fokuspunkt', current: 9, maximum: 9 }]
   });
-  assert.equal(profile.resources.find(resource => resource.id === 'aura-focus').maximum, 9, 'ein manuell höher gesetztes Maximum wird nie automatisch gesenkt');
+  assert.equal(profile.resources.find(resource => resource.id === 'aura-focus').maximum, 0, 'vor Stufe 8 gibt es keine Aura-Zahlung');
 });
 
 test('Kleriker- und hexerartige Figuren dürfen Celestiale/Infernale Punkte statt Mana ausgeben', () => {

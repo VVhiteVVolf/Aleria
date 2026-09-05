@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "kampfer",
+  "name": "Kämpfer",
+  "title": "Der Krieger",
+  "aliases": [
+    "Krieger"
+  ],
+  "subtitle": "Meister des Nahkampfs",
+  "theme": "steel",
+  "icon": "https://i.imgur.com/blpHr0S.png",
+  "illustration": "https://i.imgur.com/AxLj4Xc.png",
+  "facts": [
+    {
+      "label": "Name",
+      "html": "<strong>Krieger, Soldat, Kriegsmeister, Veteran, Kriegsheld</strong>"
+    },
+    {
+      "label": "Rolle",
+      "html": "<strong>Frontkämpfer, Verteidiger, Taktiker, Duellant, Armeeführer</strong>"
+    },
+    {
+      "label": "Fähigkeiten",
+      "html": "<strong>Waffenmeisterschaft, Unerschütterliche Verteidigung, Taktisches Gespür, Kampfrausch, Nahkampfüberlegenheit</strong>"
+    },
+    {
+      "label": "Stärken",
+      "html": "<strong>Physisch stark, widerstandsfähig, meisterhafter Nahkämpfer, vielseitig im Kampf, guter Anführer</strong>"
+    },
+    {
+      "label": "Schwächen",
+      "html": "<strong>Begrenzte Fernkampffähigkeiten, abhängig von Ausrüstung, anfällig für Magie, hoher Erschöpfungsgrad</strong>"
+    },
+    {
+      "label": "Magisches Potenzial",
+      "html": "<strong>Eher gering, selten Kampfmagier als Hybridklasse oder ähnliches</strong>"
+    },
+    {
+      "label": "Religiöses Potenzial",
+      "html": "<strong>Individuell bedingt</strong>"
+    },
+    {
+      "label": "Bekannte Unterklassen",
+      "html": "<strong>Ritter, Tiarna, Legionär, Saburai, etc. etc.</strong>"
+    },
+    {
+      "label": "Ausrüstung",
+      "html": "<strong>Schwerter, Äxte, Speere, Kriegshämmer, Stabwaffen, Schilde, Plattenrüstung, Kettenhemd, Lederkleidung</strong>"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Krieger</strong> ist die <strong>urtümlichste aller Klassen</strong> – ein <strong>Meister des bewaffneten Nahkampfs</strong>, dessen Können mit <strong>Klinge</strong>, <strong>Axt</strong> oder <strong>Speer</strong> in allen Kulturen <strong>Alerias</strong> Respekt gebietet. Ob als <strong>schwer gerüsteter Ritter</strong>, als <strong>ehrbarer Tiarna der Alben</strong> oder als <strong>barbarischer Schildträger</strong> – der Krieger <strong>hält die Linie</strong>, wo andere weichen. Mit <strong>eiserner Disziplin</strong> und <strong>unerschütterlichem Mut</strong> stellt er sich dem Feind im <strong>direkten Gefecht</strong>. Sein <strong>Körper</strong> ist seine <strong>Waffe</strong>, seine <strong>Rüstung</strong> sein <strong>Schild</strong> – und sein <strong>Wille</strong> ungebrochen.</p> <blockquote><p><em>\"Ein Schwert ohne Disziplin ist nichts weiter als ein Werkzeug des Chaos, Junge. Du kannst zuschlagen, du kannst töten, aber ohne Verstand bist du nur ein Schlächter, kein Krieger.\"</em></p> <p><em>\"Siehst du diesen Stahl? Er ist hart, unnachgiebig – doch allein ist er nichts. Ohne einen Arm, der ihn führt, und einen Geist, der ihn lenkt, bleibt er ein Stück Metall. So ist es auch mit dir. Ohne Disziplin bist du nur ein Mann mit einer Waffe, aber mit ihr wirst du zum Schwert selbst.\"</em></p> <p><em>\"Glaubst du, wir Teulu-Ritter sind stark, weil wir bloß kämpfen können? Nein. Wir sind stark, weil wir <strong>wissen</strong>, wann wir kämpfen, wie wir kämpfen – und vor allem, wann wir es nicht tun.\"</em></p> <p><em>\"Disziplin ist das Band, das Männer zu einer Armee macht und einen Krieger von einem Schläger unterscheidet. Ein wilder Hund beißt, wenn er will – ein ausgebildeter Krieger trifft, wenn er muss.\"</em></p> <p><em>\"Du willst Ruhm? Willst Ehre? Dann lerne, dich selbst zu meistern, bevor du den Feind zu besiegen suchst. Denn der schwerste Kampf ist nicht gegen den Feind, sondern gegen dein eigenes ungestümes Herz.\"</em></p> </blockquote> <p><em> - Sir Morgen</em></p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der <strong>Krieger</strong> ist so alt wie die Zivilisation selbst. Schon in den ersten Tagen der Menschheit, als Stämme um Jagdgebiete kämpften und Städte ihre Mauern errichteten, wurden jene verehrt, die mit Waffe und Körper Schutz boten und Schlachten führten. Während Magier ihre Runen lernten und Priester ihre Gebete murmelten, wurde der Krieger aus Blut, Stahl und Disziplin geformt.</p> <p>Von den <strong>ersten Stammeskriegern</strong>, die mit Keulen und Speeren die Wildnis verteidigten, über die <strong>disziplinierten Legionen der Reiche</strong>, bis hin zu den <strong>berüchtigten Schwertmeistern der Klane</strong> – der Krieger hat sich an jede Epoche angepasst. Seine Entwicklung ist eng mit der Geschichte Alerias verflochten.</p> <ul> <li>In den <strong>Reichen des Westens </strong>wurden Krieger zu <strong>glorreichen Rittern</strong> erhoben, geschützt von Segnungen und auf Schlachtrössern reitend.</li> <li>In den <strong>kalten Nordlanden</strong> entstanden die <strong>Hirdmänner</strong>, furchtlose Kämpfer, die ohne Rücksicht auf Verletzungen stürmten.</li> <li>In den <strong>Steppen </strong>perfektionierten leichte Krieger den <strong>Speerkampf und die berittene Kriegsführung</strong>, um mit hitzigen, schnellen Angriffen ihre Feinde zu überrennen.</li> <li>In den <strong>Königreichen der Mitte</strong> standen disziplinierte <strong>Schwertmeister und Schildträger</strong>, die mit taktischer Perfektion ihre Feinde niederrangen.</li> </ul> <p>Doch nicht jeder Krieger gehört einer Armee an. <strong>Söldner</strong>, <strong>Gladiatoren</strong> und <strong>Wanderkrieger</strong> existieren jenseits der großen Heere und kämpfen für Ruhm, Ehre oder reines Überleben. Manche werden Helden, andere zu bloßen Namen in der langen Geschichte des Krieges.</p>"
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "written",
+      "html": "<p>Der <strong>Krieger</strong> ist der <strong>Inbegriff des Kampfes</strong>, geformt durch Disziplin, jahrelanges Training und unermüdliche Hingabe an die Kunst des Krieges. Er verlässt sich nicht auf Magie oder göttliche Segnungen, sondern auf <strong>seine Waffen, seine Rüstung und seine unerschütterliche Entschlossenheit</strong>. Wo andere sich auf Tricks, Zauber oder List verlassen, steht der Krieger mit bloßer Kraft und Technik seinen Feinden gegenüber.</p> <p>Die Welt Alerias hat eine Vielzahl von Kriegertraditionen hervorgebracht:</p> <ul> <li><strong>Teulu-Ritter</strong> – Elitekrieger eines kriegerischen Adelsstandes, die von Kindheit an im Kampf ausgebildet wurden. Sie kämpfen nicht nur mit Schwert und Lanze, sondern auch mit schierer Willenskraft und dem unbeugsamen Glauben an ihre Pflicht. Ein einzelner Teulu-Ritter kann es mit einer ganzen Gruppe gewöhnlicher Soldaten aufnehmen.</li> <li><strong>Saburai, die Schwertmeister des fernen Ostens</strong> – Diese edlen Krieger perfektionieren ihre Schwertkunst ein Leben lang. Sie glauben, dass <strong>Technik, Geist und Körper eine Einheit bilden müssen</strong>, um wahre Meisterschaft zu erreichen. Ihr Stil ist präzise, tödlich und voller Eleganz – mit einer einzigen Bewegung können sie einen Gegner entwaffnen oder töten.</li> <li><strong>Legionäre der großen Reiche</strong> – Disziplinierte Krieger, die mit Schild und Formation den Feind niederkämpfen. Ein einzelner Legionär mag kein überragender Kämpfer sein, aber in einer Linie mit seinen Brüdern ist er fast unaufhaltsam.</li> <li><strong>Söldner und Wanderkrieger</strong> – Kämpfer ohne Heimat, die sich für Gold oder Ruhm verdingen. Sie sind oft unorthodox, pragmatisch und auf Überleben trainiert, anstatt Ehre oder Traditionen zu folgen.</li> </ul> <p>Ob als <strong>Ritter</strong>, <strong>Schwertmeister</strong> oder <strong>Legionär</strong> – der Krieger ist das <strong>Herz jeder Armee und die Säule des Krieges</strong>.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Krieger</strong> ist ein <strong>Meister des physischen Kampfes</strong>. Seine Kraft liegt nicht in Zaubern oder göttlicher Intervention, sondern in <strong>seinem Körper, seinem Verstand und seinem unerschütterlichen Willen</strong>.</p> <h4><strong>Kernfähigkeiten</strong></h4> <blockquote><p>🔹 <strong>Waffenmeisterschaft</strong> – Der Krieger kann mit fast jeder Waffe kämpfen, sei es ein Zweihandschwert, eine Lanze, eine Axt oder ein Kriegshammer. Seine Erfahrung ermöglicht es ihm, Waffen effizient einzusetzen und sich an verschiedene Kampfstile anzupassen.</p> <p>🔹 <strong>Unerschütterliche Verteidigung</strong> – Mit oder ohne Schild kann ein Krieger immense Mengen an Schaden einstecken. Seine Kampferfahrung und Rüstung erlauben ihm, selbst dort zu überleben, wo andere fallen.</p> <p>🔹 <strong>Taktisches Gespür</strong> – Ein erfahrener Krieger <strong>liest das Schlachtfeld</strong> wie ein Buch. Er erkennt Schwächen in Formationen, nutzt Gelände zu seinem Vorteil und weiß, wann ein Angriff oder Rückzug sinnvoll ist.</p> <p>🔹 <strong>Tatendrang (Adrenalinschub)</strong> – In Extremsituationen kann ein Krieger seinen Körper zu Höchstleistungen zwingen. Durch pure Willenskraft ignoriert er Schmerzen, Müdigkeit oder Wunden und kämpft weiter, wenn andere längst zusammengebrochen wären.</p> <p>🔹 <strong>Widerstandskraft</strong> – Der Krieger hat eine eiserne Konstitution. Gifte, Krankheiten oder Hunger treffen ihn weit weniger als andere Klassen. Sein Körper ist ein Werkzeug, das durch jahrelange Härte abgehärtet wurde.</p> </blockquote>"
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "written",
+      "html": "<p>Die Klasse des Kriegers ist vielseitig und in viele Unterarten gegliedert, die sich durch Ausbildung, Kampfstil und Kultur unterscheiden. Während einige sich auf schwere Rüstung und disziplinierte Schlachtformationen verlassen, perfektionieren andere ihre Kunst in Arenen oder als wandernde Schwertmeister. Trotz dieser Unterschiede bleibt der Krieger ein Meister der Waffen und des direkten Kampfes.</p> <p>Der <strong>Teulu-Ritter</strong> ist ein Elitekrieger des Adels, dessen Ausbildung in jungen Jahren beginnt. Er kämpft mit Langschwert und Schild und ist bekannt für seine eiserne Disziplin und Loyalität. Im Gegensatz dazu setzt der <strong>Gladiator</strong> auf Geschicklichkeit und Show – er ist ein Duellkämpfer, der das Publikum ebenso beeindruckt wie seine Gegner.</p> <p>Die <strong>Legionäre des Kaiserreichs</strong> kämpfen in perfekt koordinierten Einheiten. Ihre Stärke liegt in der Formation, die sie fast unüberwindbar macht. Der <strong>Landsknecht</strong> hingegen ist ein Söldnerkrieger, der sich für Gold verdingt und mit großen Waffen wie der Hellebarde oder dem Zweihänder kämpft. Er ist pragmatisch, kampferfahren und bereit, für den höchsten Bieter zu kämpfen.</p> <p>Exotischer ist der <strong>Saburai</strong>, ein Schwertmeister aus den fernen Ländern. Er perfektioniert den Kampf mit der Klinge bis zur tödlichen Eleganz, wobei Technik und Geist eine untrennbare Einheit bilden. Seine Angriffe sind präzise und mit nur einem Hieb kann er einen Feind besiegen, bevor dieser überhaupt reagieren kann.</p> <p>Darüber hinaus gibt es Krieger, die Elemente anderer Klassen in sich tragen. Der <strong>Kampfmagier</strong> vereint Waffenbeherrschung mit arkane Kräften, während der <strong>Blutkrieger</strong> dunkle Rituale nutzt, um seine körperlichen Grenzen zu überschreiten. Diese hybriden Krieger zeigen, dass sich die Kampfkunst weiterentwickelt und dass wahre Meister des Krieges nicht nur durch rohe Gewalt, sondern auch durch Anpassung überleben.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h4><strong>✔ Stärken:</strong></h4> <blockquote><p>✅ <strong>Unvergleichliche Waffenbeherrschung</strong> – Der Krieger ist ein Meister im Umgang mit nahezu jeder Waffe, sei es Schwert, Axt, Speer oder Hellebarde. Seine Kampferfahrung macht ihn in Nahkämpfen unübertroffen.</p> <p>✅ <strong>Hohe Widerstandskraft</strong> – Dank harter Ausbildung, eiserner Disziplin und oft auch schwerer Rüstung kann ein Krieger Schläge und Wunden überstehen, die andere töten würden. Selbst ohne Rüstung hält er mehr aus als viele andere Klassen.</p> <p>✅ <strong>Taktisches Gespür</strong> – Ein erfahrener Krieger erkennt auf dem Schlachtfeld Gelegenheiten, Schwachstellen und Gefahren, die weniger geübten Kämpfern entgehen. Er kann seine Position optimieren und das Gelände nutzen.</p> <p>✅ <strong>Kampftraining gegen verschiedene Feinde</strong> – Während ein Magier gegen einen schnellen Attentäter oder einen schwer gepanzerten Ritter oft wehrlos ist, kann sich der Krieger auf jede Art von Gegner einstellen und seine Strategie anpassen.</p> <p>✅ <strong>Vielseitigkeit in Kampfstilen</strong> – Der Krieger kann sich auf defensive Schildtechniken, offensive Zweihandwaffen oder sogar beidhändige Kampfformen spezialisieren, was ihn auf viele Situationen vorbereitet.</p> </blockquote> <h4><strong>✖ Schwächen:</strong></h4> <blockquote><p>❌ <strong>Begrenzte Fernkampffähigkeiten</strong> – Während einige Krieger mit Wurfwaffen umgehen können, sind sie Magiern oder spezialisierten Bogenschützen im Fernkampf oft unterlegen.</p> <p>❌ <strong>Abhängigkeit von Ausrüstung</strong> – Im Gegensatz zu Magiern oder Asketen ist ein Krieger stark auf seine Waffen und Rüstungen angewiesen. Ohne sie ist er verwundbar und kann seine volle Stärke nicht entfalten.</p> <p>❌ <strong>Hoher Erschöpfungsgrad</strong> – Schwere Rüstungen und lange Kämpfe fordern ihren Tribut. Ein Krieger kann zwar lange durchhalten, doch irgendwann wird selbst er langsamer und anfälliger.</p> <p>❌ <strong>Weniger Schutz gegen Magie</strong> – Ohne spezielle Gegenmaßnahmen ist der Krieger anfällig für arkane Angriffe. Magische Feuerbälle, Flüche oder Illusionen können ihm schwer zu schaffen machen.</p> <p>❌ <strong>Kampffokus erfordert Disziplin</strong> – Ein untrainierter oder unerfahrener Krieger ist leicht überrumpelbar. Seine Stärke liegt in Technik und Erfahrung – wer diese nicht besitzt, wird gegen listige oder magische Gegner schnell überfordert.</p> </blockquote> <p>Trotz dieser Schwächen bleibt der Krieger ein unerschütterlicher Kämpfer, dessen Macht mit jeder erlebten Schlacht wächst. Wer ihm auf offenem Feld gegenübersteht, sollte gut überlegen, ob er wirklich den Kampf sucht.</p>"
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "a91d1727dbec1b2e4acfccd097255284f6d2f9f506d19ed11ab996b172aac911"
+  }
+}

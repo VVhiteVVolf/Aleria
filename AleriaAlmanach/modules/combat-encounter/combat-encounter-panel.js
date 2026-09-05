@@ -1,4 +1,4 @@
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260905-encounter-v2';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260905-party-combat-v1';
 import { ENCOUNTER_STATUS_LABELS } from '../combat/combat-encounter-outcome.js';
 import { escapeEncounterMarkup as escape } from './combat-encounter-summary-ui.js';
 

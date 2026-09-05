@@ -21,9 +21,9 @@ import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile
 
 const actionResourceIds = ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'];
 
-test('ein leerer Charakterbogen besitzt die vollständige Schema-10-Grundlage', () => {
+test('ein leerer Charakterbogen besitzt die vollständige Schema-11-Grundlage', () => {
   const profile = sanitizeCharacterCombatProfile({});
-  assert.equal(profile.schemaVersion, 10);
+  assert.equal(profile.schemaVersion, 11);
   assert.equal(profile.progression.level, 1);
   assert.equal(profile.skills.length, 20);
   assert.deepEqual(
@@ -56,7 +56,7 @@ test('der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und 
     'ritter', 'huskarl', 'bauer', 'gelehrter', 'kultist', 'soeldner', 'klerus', 'handwerker', 'gassenkind', 'musikerin'
   ]);
   assert.deepEqual(CHARACTER_CLASS_TEMPLATES.map(template => template.id), [
-    'teulu', 'cantref', 'helwyr', 'uchelwyr', 'arthwyr', 'barddwyr',
+    'cenyr-milwr', 'teulu', 'cantref', 'helwyr', 'uchelwyr', 'arthwyr', 'barddwyr',
     'morwyr', 'rhyfelwyr', 'ceidwynr', 'rhiddwyrr', 'derwyn',
     'kern', 'cateran', 'mormaer', 'serf', 'airig', 'currach', 'ceolaire-piobaire', 'riada', 'silvaner', 'galloghlaigh', 'fathach',
     'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde',

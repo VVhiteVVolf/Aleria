@@ -1862,7 +1862,7 @@
                 "type": "damage",
                 "target": "target",
                 "on": "hit",
-                "formula": "2d4+2",
+                "formula": "1d4+1",
                 "damageType": "Arkan"
               }
             ],
@@ -1991,7 +1991,7 @@
                 "type": "damage",
                 "target": "target",
                 "on": "hit",
-                "formula": "2d6",
+                "formula": "1d8",
                 "damageType": "Wind"
               }
             ],
@@ -2030,7 +2030,7 @@
                 "type": "damage",
                 "target": "target",
                 "on": "hit",
-                "formula": "2d6",
+                "formula": "1d6",
                 "damageType": "Wind"
               }
             ],
@@ -2260,7 +2260,7 @@
                 "type": "damage",
                 "target": "target",
                 "on": "hit",
-                "formula": "3d6",
+                "formula": "2d6",
                 "damageType": "Wind"
               }
             ],
@@ -2299,7 +2299,7 @@
                 "type": "damage",
                 "target": "selected",
                 "on": "hit",
-                "formula": "3d6",
+                "formula": "2d4",
                 "damageType": "Wind"
               }
             ],
@@ -2398,7 +2398,7 @@
                 "type": "damage",
                 "target": "selected",
                 "on": "hit",
-                "formula": "6d6",
+                "formula": "3d4",
                 "damageType": "Wind"
               }
             ],
@@ -2437,7 +2437,7 @@
                 "type": "damage",
                 "target": "target",
                 "on": "hit",
-                "formula": "4d8",
+                "formula": "3d6",
                 "damageType": "Wind"
               }
             ],

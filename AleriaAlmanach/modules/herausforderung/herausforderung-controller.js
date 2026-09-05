@@ -12,7 +12,7 @@ import {
   renderHerausforderungComment,
   setHerausforderungStatus,
   setHerausforderungSubmitting
-} from './herausforderung-ui.js?v=20260808-duncan-v1';
+} from './herausforderung-ui.js?v=20260905-party-combat-v1';
 
 let activeThreadId = '';
 let draftApproaches = [];

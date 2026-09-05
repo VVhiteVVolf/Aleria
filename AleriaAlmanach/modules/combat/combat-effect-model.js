@@ -1,4 +1,4 @@
-import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260808-duncan-v1';
+import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260905-party-combat-v1';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
@@ -56,6 +56,7 @@ export function normalizeCombatEffect(value = {}, index = 0) {
     amount: number(source.amount, 0, 0),
     formula: text(source.formula || source.amountFormula || source.damageFormula, 80),
     damageType: text(source.damageType || 'physisch', 100),
+    inheritWeaponDamageType: boolean(source.inheritWeaponDamageType),
     magical: boolean(source.magical),
     on: ['always', 'hit', 'miss', 'save-success', 'save-failure'].includes(text(source.on, 30)) ? text(source.on, 30) : 'hit',
     resourceId: text(source.resourceId, 160),

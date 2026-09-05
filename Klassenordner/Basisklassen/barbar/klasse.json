@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "barbar",
+  "name": "Barbar",
+  "title": "Der Barbar",
+  "aliases": [],
+  "subtitle": "Ungebändigte Wildheit",
+  "theme": "ember",
+  "icon": "https://i.imgur.com/D7mPI7G.png",
+  "illustration": "https://i.imgur.com/R4Wo42g.png",
+  "facts": [],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Barbar</strong> ist ein <strong>Krieger der Wildnis</strong>, geboren im <strong>Donner des Sturms</strong>, gehärtet durch <strong>Blut, Kälte und Leid</strong>. Er kennt weder Drill noch Disziplin, aber dafür die <strong>Sprache der Jagd</strong>, den <strong>Tanz des Kampfes</strong> und die <strong>Wut</strong>, die selbst Götter erzittern lässt. Seine Kraft kommt nicht aus Technik, sondern aus <strong>Instinkt</strong> – sein Körper ist seine <strong>Waffe</strong>, sein <strong>Zorn</strong> sein Schild. In den entlegenen Landen Alerias gelten Barbaren als <strong>Kinder der alten Mächte</strong>, ungeschliffen, aber nicht minder ehrwürdig. Wenn ein Barbar in Raserei fällt, ist kein Gebet mehr laut genug, um das zu stoppen, was kommt.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "artefakte",
+      "title": "Artefakte",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "dbbc623e05eef9a8f648ca560322992f13f7ef86c977cfd52782dc85c935b439"
+  }
+}

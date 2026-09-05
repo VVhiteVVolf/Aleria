@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 import {
   buildCharacterDatabase,
-  CHARACTER_DATABASE_SCHEMA_VERSION
+  CHARACTER_DATABASE_SCHEMA_VERSION,
+  markCharacterDatabaseOverlay
 } from '../lib/character-database-model.mjs';
 import {
   buildFamilyPersonViewUrl,
@@ -59,7 +60,7 @@ async function readCharacterExportOverlays(sourcePath) {
       overlays.push({
         path,
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
-        character: exported.character
+        character: markCharacterDatabaseOverlay(exported.character)
       });
     } catch {
       // Other JSON documents in the export directory are not character overlays.

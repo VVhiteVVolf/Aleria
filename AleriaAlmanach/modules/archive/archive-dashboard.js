@@ -67,7 +67,8 @@ function getArchiveDashboardEntryExcerpt(entry) {
 function getArchiveDashboardDailyDiscovery(sections = [], date = new Date()) {
   const candidates = getArchiveDashboardEntries(sections)
     .map(item => ({ ...item, excerpt: getArchiveDashboardEntryExcerpt(item.entry) }))
-    .filter(item => item.entry?.id && item.entry?.title && item.excerpt)
+    .filter(item => item.entry?.id && item.entry?.title && item.excerpt
+      && !(item.entry.pages || []).some(page => page?.sessionPage))
     .sort((left, right) => String(left.entry.id).localeCompare(String(right.entry.id), 'de'));
   if (!candidates.length) return null;
 

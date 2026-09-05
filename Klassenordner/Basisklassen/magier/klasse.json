@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "magier",
+  "name": "Magier",
+  "title": "Der Magier",
+  "aliases": [
+    "Zauberer"
+  ],
+  "subtitle": "Meister der arkanen Künste",
+  "theme": "arcane",
+  "icon": "https://i.imgur.com/n5A2PlT.png",
+  "illustration": "https://i.imgur.com/VlKYkhF.png",
+  "facts": [
+    {
+      "label": "Name",
+      "html": "<strong>Magier, Zauberer, Arkanist, Gelehrter der Künste, Runenwirker</strong>"
+    },
+    {
+      "label": "Rolle",
+      "html": "<strong>Zerstörer, Manipulator, Beschwörer, Gelehrter, Kriegsmagier</strong>"
+    },
+    {
+      "label": "Fähigkeiten",
+      "html": "<strong>Elementarkontrolle, Teleportation, Illusionen, Nekromantie etc.</strong>"
+    },
+    {
+      "label": "Stärken",
+      "html": "<strong>Hohe Vielseitigkeit, gewaltige Zerstörungskraft, taktische Kontrolle des Kampfes, uraltes Wissen</strong>"
+    },
+    {
+      "label": "Schwächen",
+      "html": "<strong>Körperlich schwach, hohe Abhängigkeit von Vorbereitung und Konzentration, begrenzte Spezialisierung, hohe Erschöpfung durch mächtige Zauber</strong>"
+    },
+    {
+      "label": "Magisches Potenzial",
+      "html": "<strong>Vorrausgesetzt</strong>"
+    },
+    {
+      "label": "Religiöses Potenzial",
+      "html": "<strong>Individuell bedingt</strong>"
+    },
+    {
+      "label": "Bekannte Unterklassen",
+      "html": "<strong>Nekromant, Pyromant, Oneiromant, Runenmagier, Chronomant, Illusionist, Thaumaturg, Beschwörer</strong>"
+    },
+    {
+      "label": "Ausrüstung",
+      "html": "<strong>Zauberbücher, Runensteine, Stäbe, Roben, magische Foki, arkane Siegel</strong>"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Magier</strong> ist ein <strong>Kundiger der arkanen Künste</strong>, ein <strong>Weber von Zaubern</strong>, der aus reiner <strong>magischer Essenz</strong> Realität formt. Durch <strong>jahrzehntelanges Studium</strong>, geheimnisvolle <strong>Rituale</strong> und uralte <strong>Runenformeln</strong> kanalisiert er Kräfte, die über das Begreifen der meisten Sterblichen hinausgehen. Ob <strong>Feuerbälle</strong>, <strong>Illusionen</strong>, <strong>Teleportationen</strong> oder <strong>Schutzzauber</strong> – der Magier ist wandelndes Wissen in fleischlicher Hülle. Doch große Macht hat ihren Preis: Viele verlieren sich in ihrer <strong>Suche nach Erkenntnis</strong> – oder werden selbst zu dem, was sie einst bekämpften.</p> <blockquote><p><strong>Halfdan der Schwarze: </strong><em>\"</em><em>Verdammt nochmal, Junge</em><em>! Wie oft muss ich es dir noch sagen? Du <em>bist</em> der Donner, nicht irgendein feiger Funke, der verglüht, sobald der Wind weht!\"</em></p> <p><strong>Merlin: </strong><em>\"Aber Meister, ich spüre ihn! Ich sehe das Knistern in meinen Händen, aber er entlädt sich nicht—\"</em></p> <p><strong>Halfdan der Schwarze: </strong><em>\"Weil du zögerst! Der Blitz wartet nicht, er <em>fragt nicht</em>! Er schlägt ein, weil die Welt ihn <em>zwingt</em>! Und du stehst hier und <em>bettelst</em> um seine Gunst wie ein hungernder Bettler? Armselig!\"</em></p> <p><strong>Merlin</strong><strong>: </strong><em>\"Ich versuche es, aber—\"</em></p> <p><strong>Halfdan der Schwarze:</strong><strong> </strong><em>\"Versuchen?! <em>Versuchen?!</em> Versuchen tun Bauern, wenn sie Steine aus dem Feld räumen! Du bist kein Bauer, Junge, du bist ein verdammter Zauberer! Also <em>befiehl</em> dem Donner zu kommen, oder ich lasse dich den nächsten Blitz mit bloßen Händen fangen!\"</em></p> <p><strong>Merlin</strong><strong>: </strong><em>\"Aber—\"</em></p> <p><strong>Halfdan der Schwarze:</strong><strong> </strong><em>\"Kein <em>Aber</em>! Hörst du das Grollen? Das ist keine Frage, das ist eine <em>Antwort</em>! Also brüll zurück!\"</em></p> </blockquote>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Kunst der Magie war einst ausschließlich das Reich der <strong>Druiden</strong>, den ersten Zauberwirkern Alerias. Ihre Magie war kein Werkzeug, sondern ein <strong>natürlicher Fluss</strong>, der sich mit ihrem Geist verband. Sie wirkten Zauber nicht durch Formeln oder Gesten, sondern durch <strong>Einklang mit der Welt</strong> – sie waren Teil der Erde, des Wassers, des Windes und des Feuers.</p> <p>Doch nicht alle waren bereit, sich dieser Harmonie zu unterwerfen. Manche suchten <strong>einen anderen Weg</strong>, einen, der Magie nicht als spirituelle Verbindung, sondern als <strong>eine Kraft verstand, die geformt, gelenkt und studiert werden konnte</strong>. Diese ersten <strong>Abweichler</strong> der druidischen Tradition begannen, Magie zu analysieren, sie in Regeln zu fassen und Formeln zu entwickeln. Sie wollten nicht nur Teil der Welt sein – sie wollten sie beherrschen.</p> <p>So entstanden die ersten <strong>Magier und Zauberer</strong>. Sie sammelten Wissen, forschten in versteckten Winkeln der Welt und begannen, ihre Erkenntnisse zu systematisieren. Um ihre Macht zu bewahren und weiterzugeben, schlossen sie sich in <strong>Orden, Logen und Akademien</strong> zusammen. Dort entwickelten sie neue Schulen der Magie, trennten sich von alten druidischen Lehren und erfanden Rituale, Runen und Zauberbücher, um ihre Kraft zu perfektionieren.</p> <p>Während die <strong>Druiden weiterhin mit der Natur verschmolzen</strong>, erschufen die Magier ihre eigene Magie – eine, die auf <strong>Wissen, Disziplin und Struktur</strong> basierte. So wuchsen die Unterschiede, und während die einen sich als <strong>Hüter des Alten</strong> sahen, betrachteten die anderen sich als <strong>Pioniere des Neuen</strong>.</p> <p>Heute existieren unzählige Strömungen von Magiern und Zauberern, jede mit ihren eigenen Methoden und Philosophien – aber alle entstammen letztlich einem einzigen Erbe: <strong>Dem Bruch mit der Urmagie der Druiden.</strong></p>"
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "written",
+      "html": "<p>Der <strong>Magier</strong> ist ein <strong>Gelehrter der arkanen Künste</strong>, der Magie nicht nur spürt, sondern sie studiert, formt und in präzisen Formeln entfesselt. Anders als Druiden, die Magie instinktiv wirken, nutzt der Magier <strong>Runen, Rituale und arkane Muster</strong>, um die Kräfte der Welt nach seinem Willen zu lenken.</p> <p>Seine Macht basiert auf <strong>Wissen, Disziplin und Kontrolle</strong>. Jeder Zauber ist das Ergebnis jahrelanger Studien, jeder Formelspruch eine feingeschliffene Technik. Magier sind oft Mitglieder von <strong>Orden, Logen oder Akademien</strong>, die ihr Wissen weitergeben und strukturieren, um das Chaos roher Magie zu zähmen.</p> <p>Doch Magie ist nicht ohne Preis. Während ein Krieger auf seine Kraft und ein Alchemist auf seine Substanzen vertraut, ist der Magier <strong>von Konzentration und geistiger Energie abhängig</strong>. Seine Stärke liegt in seinen Zaubern – ohne Vorbereitung oder ausreichende magische Kraft ist er verletzlich.</p> <p>Ob als <strong>weise Gelehrte, machtvolle Erzmagier oder skrupellose Paktträger</strong>, Magier sind die <strong>Architekten der Magie</strong>, die mit ihrem Wissen die Realität formen – oder zerreißen.</p> <p>Der Unterschied zwischen <strong>Magier</strong> und <strong>Zauberer</strong> ist <strong>gesellschaftlicher Natur</strong>: Während <strong>Magier</strong> ihre Ausbildung in einem <strong>anerkannten arkanen Orden</strong> oder einer <strong>Gilde</strong> erhalten haben, gelten <strong>Zauberer</strong> als <strong>autodidaktisch</strong>, <strong>eigensinnig</strong> oder schlicht <strong>außerhalb des Systems</strong> stehend. \"Altmodische\" oder stolze Zauberer <strong>lehnen die Bezeichnung „Magier“</strong> oft vehement ab, während umgekehrt viele Magier <strong>beleidigt reagieren</strong>, wenn man sie auf das Niveau eines „schlichten Zauberers“ herabstuft. Für sie ist der Titel <strong>Magier</strong> ein Zeichen von <strong>elitärem Wissen</strong> und <strong>akademischer Disziplin</strong>.</p> <p>Ein sogenannter <strong>Blutträger</strong> wiederum ist eine Person, die über <strong>angeborene magische Fähigkeiten</strong> oder eine <strong>natürliche Affinität zur Magie</strong> verfügt. Ihre Kräfte fließen durch ihr <strong>Blut</strong>, nicht durch Studium oder Ritual. Sowohl Magier als auch Zauberer betrachten <strong>Blutträger</strong> mit einer Mischung aus <strong>Bewunderung</strong>, <strong>Neid</strong> und <strong>Kontrollbedürfnis</strong>, denn aus einem solchen Kind kann – mit der richtigen Anleitung – ein <strong>mächtiger Lehrling</strong> geformt werden… oder eine <strong>Gefahr</strong>.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Ein <strong>Magier</strong> ist kein bloßer Zauberwirker – er ist ein <strong>Gelehrter des Arkanen</strong>, der sich der endlosen Erforschung der Magie verschrieben hat. Die Welt der Magie ist riesig und vielschichtig, mit unzähligen Schulen, Disziplinen und Theorien. Es gibt <strong>kein Wesen, das die gesamte Magie Alerias in einem einzigen Leben meistern könnte</strong>, weshalb sich Magier oft <strong>Jahrzehnte oder gar Jahrhunderte dem Studium eines einzigen Zweigs</strong> widmen.</p>"
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "written",
+      "html": "<p>Die <strong>Magie ist zu groß, um von einem einzelnen Verstand gemeistert zu werden</strong>. Ein Magier kann nicht alle Schulen beherrschen – er muss sich spezialisieren, einen Pfad wählen und sein Leben der Perfektion einer einzigen Disziplin widmen. Jede dieser Spezialisierungen hat ihre eigenen Geheimnisse, Gefahren und Machtpotenziale.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h4><strong>✔ Stärken:</strong></h4> <blockquote><p>🔮 <strong>Unendliche Vielseitigkeit</strong> – Dank der zahlreichen magischen Schulen kann ein Magier Feuer entfesseln, Gedanken manipulieren, die Toten erheben oder Zeit selbst beeinflussen.</p> <p>📜 <strong>Wissen als Macht</strong> – Magier verstehen die tiefsten Geheimnisse des Universums und können durch ihr Studium Zauber und Rituale erlernen, die kein sterblicher Krieger je meistern könnte.</p> <p>⚡ <strong>Zerstörerische Kraft</strong> – Ein erfahrener Magier kann ganze Schlachtfelder mit einer einzigen Geste verändern, sei es durch Flammenstürme, Bannzauber oder Dimensionsportale.</p> <p>🌀 <strong>Taktische Kontrolle</strong> – Ob durch Illusionen, Teleportation oder Gedankenzauber – Magier können den Kampf manipulieren, ohne sich direkt in Gefahr zu begeben.</p> <p>🔗 <strong>Mystisches Wissen</strong> – Magier verstehen uralte Runen, verborgene Schriften und verlorene Zauberformeln, die die Realität selbst beeinflussen können.</p> </blockquote> <h4><strong>✖ Schwächen:</strong></h4> <blockquote><p>❌ <strong>Körperlich schwach</strong> – Ohne Magie sind Magier verwundbar, kaum widerstandsfähiger als ein gewöhnlicher Gelehrter.</p> <p>❌ <strong>Abhängigkeit von Vorbereitung</strong> – Viele Zauber erfordern Zeit, Konzentration oder Rituale – spontane Kämpfe können einen Magier überrumpeln.</p> <p>❌ <strong>Begrenzte Spezialisierung</strong> – Magie ist so komplex, dass ein Magier nur eine oder wenige Disziplinen meistern kann – ein Pyromant ist gegen mentale Manipulation hilflos, ein Illusionist kaum gegen rohe Gewalt.</p> <p>❌ <strong>Hoher Energieverbrauch</strong> – Mächtige Zauber erfordern immense Mengen an magischer Kraft, die den Magier schnell erschöpfen können.</p> <p>❌ <strong>Gefährliches Wissen</strong> – Je tiefer ein Magier in die Geheimnisse der Magie eintaucht, desto höher das Risiko, dass ihn seine eigene Macht verschlingt oder Wahnsinn ihn ergreift.</p> </blockquote> <p>Magier sind die <strong>Architekten der Realität</strong>, aber ihre Macht ist nicht ohne Preis – eine einzige Fehleinschätzung kann ihre eigene Existenz auslöschen.</p>"
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "21f773268a8b6db814569d0760c024140dbb1649c446060e0632d4bb394fafab"
+  }
+}

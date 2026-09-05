@@ -1,4 +1,4 @@
-import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260810-character-archive-icons-v2';
+import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import { getCombatEntryIconPresentation } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
 import { normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
 import { getArchiveTraitIconSource } from './character-archive-trait-icons.js';

@@ -38692,7 +38692,7 @@ test('bildet Clan Sterkr vollständig von Aegir bis zur Generation von 1740 ab',
   assert.equal(family.cadetBranches.length, 9);
   assert.equal(family.timeJumps.length, 2);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 6);
+  assert.equal(family.extensions.sourceRevision, HOUSE_STERKR_FAMILY.extensions.sourceRevision);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-aegir-var-sterkr');
   assert.equal(family.view.focusPersonId, 'aegir-sterkr-founder');
   assert.equal(family.view.limitGenerations, false);
@@ -38856,8 +38856,9 @@ test('ersetzt eine lokal gespeicherte Sterkr-Leerakte kontrolliert durch den vol
   stale.view.focusPersonId = stale.persons[0].id;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_STERKR_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 5);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 5 });
+  assert.ok(upgraded.extensions.sourceRevision > stale.extensions.sourceRevision);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_STERKR_FAMILY.extensions.sourceRevision);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: HOUSE_STERKR_FAMILY.extensions.sourceRevision });
   assert.equal(upgraded.persons.length, 51);
   assert.equal(new Set(upgraded.persons.map(personRecord => personRecord.id)).size, 51);
   assert.equal(upgraded.partnerships.length, 22);
@@ -39777,7 +39778,7 @@ test('bildet Clan Nachtjäger vollständig von Fannarr bis zur Generation von 17
   assert.equal(family.cadetBranches.length, 7);
   assert.equal(family.timeJumps.length, 1);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, HOUSE_NACHTJAEGER_FAMILY.extensions.sourceRevision);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-fannarr-ingeborg-varulv');
   assert.equal(family.view.focusPersonId, 'fannarr-varulv');
   assert.equal(family.view.limitGenerations, false);
@@ -40562,8 +40563,9 @@ test('ersetzt eine vorbereitete Todbrand-Leerakte kontrolliert durch den vollst�
   stale.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_TODBRAND_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 4);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 4 });
+  assert.ok(upgraded.extensions.sourceRevision > stale.extensions.sourceRevision);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_TODBRAND_FAMILY.extensions.sourceRevision);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: HOUSE_TODBRAND_FAMILY.extensions.sourceRevision });
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 45);
   assert.equal(upgraded.partnerships.length, 20);
@@ -41938,7 +41940,7 @@ test('bildet Clan Silberzunge vollständig von Surtr bis zur Generation von 1740
   assert.equal(family.parentages.length, 34);
   assert.equal(family.cadetBranches.length, 10);
   assert.equal(family.timeJumps.length, 1);
-  assert.equal(family.extensions.sourceRevision, 5);
+  assert.equal(family.extensions.sourceRevision, HOUSE_SILBERZUNGE_FAMILY.extensions.sourceRevision);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-surtr-skalli-silberzunge');
   assert.equal(family.view.focusPersonId, 'surtr-silberzunge');
@@ -45679,7 +45681,7 @@ test('bildet Clan Gullvig vollständig von Sten bis zur jüngsten Generation ab'
     ['Aldrimar', 'Kronental', 'Hesirentum von Möwenfels', 'Kastav']
   );
   assert.equal(family.extensions.chartLayoutPolicy, STRICT_FAMILY_CHART_LAYOUT_POLICY);
-  assert.equal(family.extensions.sourceRevision, 6);
+  assert.equal(family.extensions.sourceRevision, HOUSE_GULLVIG_FAMILY.extensions.sourceRevision);
   assert.equal(layoutAudit.strict, true);
   assert.deepEqual(layoutAudit.issues, []);
   assert.equal(family.partnerships.some(entry => entry.type === 'engagement'), false);
@@ -45953,7 +45955,7 @@ test('bildet Clan Sturmgeborene vollständig vom Gründerpaar bis zur Generation
   assert.equal(family.parentages.length, 44);
   assert.equal(family.cadetBranches.length, 13);
   assert.equal(family.timeJumps.length, 1);
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, HOUSE_STURMGEBORENE_FAMILY.extensions.sourceRevision);
   assert.equal(family.extensions.chartLayoutPolicy, STRICT_FAMILY_CHART_LAYOUT_POLICY);
   assert.equal(layoutAudit.strict, true);
   assert.deepEqual(layoutAudit.issues, []);

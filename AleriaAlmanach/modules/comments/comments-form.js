@@ -1,5 +1,22 @@
 ﻿// Comment form dialog lifecycle.
+let _commentFormInitialRenderToken = 0;
+
+function scheduleCommentFormInitialRender(token) {
+  const scheduleFrame = typeof requestAnimationFrame === 'function'
+    ? requestAnimationFrame
+    : callback => setTimeout(callback, 0);
+  scheduleFrame(() => setTimeout(() => {
+    if (token !== _commentFormInitialRenderToken || !isCommentFormOpen()) return;
+    renderCharPickerInForm();
+    renderCommentSegmentList();
+    setCommentFormCounter();
+    updateCommentFormPreview();
+    document.querySelector('#cf-segment-list textarea, #cf-editor, #cf-text')?.focus?.({ preventScroll: true });
+  }, 0));
+}
+
 function openCommentForm() {
+  const initialRenderToken = ++_commentFormInitialRenderToken;
   const thread = getCurrentCommentThread();
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _commentInsertAfterId = null;
@@ -27,7 +44,7 @@ function openCommentForm() {
   document.getElementById('cf-manual-toggle').textContent = '+ Manuell eingeben';
   document.getElementById('cf-selected-name').textContent = '';
   document.getElementById('cf-char-search').value = '';
-  setCommentPlayerFilter('');
+  setCommentPlayerFilter('', { render: false, persist: false });
   showCommentDraftNote('');
   document.getElementById('cf-emote-section').style.display = 'none';
   document.getElementById('cf-emote-picker').innerHTML = '';
@@ -40,20 +57,20 @@ function openCommentForm() {
     document.getElementById('cf-editor').dataset.placeholder = thread?.formPlaceholder || 'Schreibe aus der Sicht deines Charakters...';
   }
   // Reset mode to charakter
-  setCommentMode('charakter');
-  setCommentKind('speech');
-  // Re-render picker with latest characters
-  renderCharPickerInForm();
+  setCommentMode('charakter', { render: false, persist: false });
+  setCommentKind('speech', { render: false, persist: false });
   if (typeof refreshCurrentModuleCommenterHighlights === 'function') {
     refreshCurrentModuleCommenterHighlights();
   }
-  restoreCommentDraft();
-  renderCommentSegmentList();
+  restoreCommentDraft({ render: false });
+  document.getElementById('cf-char-picker')?.replaceChildren();
+  document.getElementById('cf-segment-list')?.replaceChildren();
+  document.getElementById('cf-preview')?.replaceChildren();
   setCommentFormCounter();
-  updateCommentFormPreview();
-  activateDialog('comment-form-overlay', { initialFocus: '#cf-segment-list textarea, #cf-editor, #cf-text' });
+  activateDialog('comment-form-overlay', { initialFocus: '#cf-char-search' });
   if (typeof initCommentPreviewSplitter === 'function') initCommentPreviewSplitter();
   if (typeof applyCommentPreviewLayout === 'function') applyCommentPreviewLayout();
+  scheduleCommentFormInitialRender(initialRenderToken);
 }
 
 function openCommentFormAfter(commentId) {
@@ -66,6 +83,7 @@ function openCommentFormAfter(commentId) {
 }
 
 function closeCommentForm() {
+  _commentFormInitialRenderToken += 1;
   deactivateDialog('comment-form-overlay');
   _commentInsertAfterId = null;
 }

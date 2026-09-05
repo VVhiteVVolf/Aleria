@@ -1,13 +1,14 @@
-import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js';
-import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260810-character-archive-icons-v2';
+import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260905-barde-icon-v1';
+import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
+import { getCenyrClassDefinition } from '../classes/cenyr/cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const mountByName = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const genericHumanNames = new Set(['mensch', 'menschen', 'human']);
 
 export function getArchiveClassDefinition(entry = {}) {
-  const pageName = getClassPageIcon(entry.data?.id || entry.name)?.pageName;
+  const pageName = (getClassPageIcon(entry.data?.id) || getClassPageIcon(entry.name))?.pageName;
   return classByName.get(normalizeArchiveSearchText(pageName || entry.name)) || null;
 }
 
@@ -30,9 +31,11 @@ export function classifyCharacterArchiveEntries(entries = []) {
     if (entry.kind === 'class') {
       const page = getArchiveClassDefinition(entry);
       if (!page) return entry.sources?.length && entry.sources.every(source => source.kind === 'creature') ? [] : [entry];
+      const cenyrProfile = page.cultures.includes('Cenyr') ? getCenyrClassDefinition(page.id) : null;
       return [normalizeCharacterArchiveEntry({ ...entry, name: page.name,
         icon: entry.iconOverride || page.icon,
-        data: { ...entry.data, baseClass: page.baseClass, cultures: page.cultures, pageOrder: page.order }
+        data: { ...entry.data, baseClass: page.baseClass, cultures: page.cultures, pageOrder: page.order,
+          pageLinks: page.pageLinks, ...(cenyrProfile ? { cultureClassProfiles: [cenyrProfile] } : {}) }
       })];
     }
     const name = normalizeArchiveSearchText(entry.name);

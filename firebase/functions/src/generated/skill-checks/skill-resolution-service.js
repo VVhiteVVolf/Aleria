@@ -5,14 +5,14 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260808-duncan-v1';
-import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
+} from './skill-check-model.js?v=20260905-party-combat-v1';
+import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects
-} from '../combat/combat-trigger-rules.js?v=20260808-duncan-v1';
-import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260808-duncan-v1';
+} from '../combat/combat-trigger-rules.js?v=20260905-party-combat-v1';
+import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260905-party-combat-v1';
 
 export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-2';
 

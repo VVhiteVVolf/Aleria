@@ -1,0 +1,128 @@
+.combat-payment-card {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--composer-line, #c9ad87);
+  color: var(--composer-ink, #49331f);
+}
+
+.combat-payment-selection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+}
+
+.combat-payment-costs,
+.combat-payment-reserves { display: grid; gap: 0.4rem; min-width: 0; }
+
+.combat-payment-heading {
+  color: var(--composer-accent, #7f3136);
+  font: 700 0.62rem/1.3 "Cinzel", Georgia, serif;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.combat-payment-cost-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.combat-payment-cost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.55rem 0.28rem 0.35rem;
+  border: 1px solid var(--composer-line, #c9ad87);
+  border-radius: 4px;
+  background: rgba(255, 252, 238, 0.78);
+  font: 600 0.86rem/1.3 "EB Garamond", Georgia, serif;
+}
+
+.combat-payment-icon {
+  position: relative;
+  display: grid;
+  flex: 0 0 1.4rem;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #587052;
+}
+
+.combat-payment-icon b { font-size: 1rem; line-height: 1; }
+.combat-payment-icon img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.combat-payment-free { font: italic 0.85rem/1.4 "EB Garamond", Georgia, serif; }
+.combat-payment-confirmation { display: grid; gap: 0.25rem; justify-items: end; }
+
+.combat-payment-confirm {
+  min-height: 2.55rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--composer-accent, #7f3136);
+  border-radius: 4px;
+  color: #fff9e8;
+  background: var(--composer-accent, #7f3136);
+  font: 700 0.86rem/1.2 "EB Garamond", Georgia, serif;
+  cursor: pointer;
+}
+
+.combat-payment-confirm:hover:not(:disabled) { filter: brightness(1.12); }
+.combat-payment-confirm:disabled { opacity: 0.5; cursor: not-allowed; }
+.combat-payment-confirm[data-combat-controller-action="release-payment"] { color: #365b3c; border-color: #729470; background: #f2f4e6; }
+.combat-payment-confirm:focus-visible,
+.combat-payment-mode:focus-visible { outline: 2px solid var(--composer-accent, #7f3136); outline-offset: 3px; }
+.combat-payment-status { color: #456b43; font: 600 0.76rem/1.3 "EB Garamond", Georgia, serif; }
+.combat-payment-card[data-state="missing"] .combat-payment-status { color: #993638; }
+.combat-payment-card[data-state="cheat"] .combat-payment-status { color: var(--composer-accent, #7f3136); }
+
+.combat-payment-modes { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem; }
+.combat-payment-mode-label { margin-right: 0.2rem; font: italic 0.76rem/1.4 "EB Garamond", Georgia, serif; }
+
+.combat-payment-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2rem;
+  padding: 0.26rem 0.5rem;
+  border: 1px solid var(--composer-line, #c9ad87);
+  border-radius: 3px;
+  background: rgba(255, 252, 238, 0.48);
+  color: var(--composer-ink, #49331f);
+  font: 600 0.78rem/1.3 "EB Garamond", Georgia, serif;
+  cursor: pointer;
+}
+
+.combat-payment-mode[aria-pressed="true"] { border-color: #b48739; background: #f4e8c7; box-shadow: inset 0 -2px #b48739; }
+.combat-payment-mode:disabled { opacity: 0.5; cursor: not-allowed; }
+.combat-payment-mode small { font-size: 0.7rem; font-weight: 400; }
+
+.combat-payment-reserves { padding-top: 0.55rem; border-top: 1px solid color-mix(in srgb, var(--composer-line, #c9ad87) 60%, transparent); }
+.combat-payment-reserve-group { display: flex; flex-wrap: wrap; gap: 0.3rem 0.7rem; }
+
+.combat-payment-resource {
+  display: inline-flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.24rem 0;
+  font: 500 0.79rem/1.3 "EB Garamond", Georgia, serif;
+}
+
+.combat-payment-resource-name { overflow-wrap: anywhere; }
+.combat-payment-resource-count { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.05rem; margin-left: 0.15rem; white-space: nowrap; }
+.combat-payment-resource-count small { font-size: 0.72rem; }
+.combat-payment-resource-reserved { margin-left: 0.2rem; color: #476c43; font-size: 0.7rem; }
+.combat-payment-resource[data-state="unavailable"] { opacity: 0.48; }
+.combat-payment-resource[data-state="reserved"] .combat-payment-resource-name { color: #365b3c; }
+
+@media (max-width: 560px) {
+  .combat-payment-confirmation { width: 100%; justify-items: stretch; }
+  .combat-payment-status { text-align: center; }
+  .combat-payment-reserve-group { gap: 0.2rem 0.65rem; }
+  .combat-payment-mode { min-height: 2.4rem; }
+}
+
+@container (max-width: 620px) {
+  .combat-payment-confirmation { width: 100%; justify-items: stretch; }
+  .combat-payment-status { text-align: center; }
+}

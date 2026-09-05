@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "id": "arthwyr",
+  "cultureId": "cenyr",
+  "name": "Arthwyr",
+  "title": "Der Arthwyr",
+  "subtitle": "Ritter der Arth",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/xGZMBX2.png",
+  "illustration": "https://i.imgur.com/5XGk6UL.png",
+  "artwork": {
+    "source": "https://i.imgur.com/5XGk6UL.png",
+    "width": 500,
+    "height": 750,
+    "caption": "Arthwyr · Cenyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/D4KmaOA.png",
+    "width": 450,
+    "height": 450,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Haus Arth O’Guwan und seine Kadettenhäuser (u. a. Pawen, Crafanc)"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Krieger, Barbar, (<em>Eidgeschworener)</em>"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Taktik",
+      "html": "Adel des Hauses Arth und verbundener Linien"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Auftreten",
+      "html": "Grenzregionen, Wälder, Belagerungen, Heer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Vorhut, Entergefechte, Engstellen-Durchbruch, Schockeinsatz"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Vollständige ritterliche Salbung nach cenyrischem Ritus"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Ritterlicher Eid nach den Neun Tugenden"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell, meist gering bis moderat"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Durchaus vorhanden, besonders im Pflichtverständnis"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Häufig jene der Tugenden Standhaftigkeit, Pflicht oder Gerechtigkeit"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Breitschwert, schwere Hiebwaffen; Schild; Enterwerkzeuge"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Verstärkte, teils schwere Platten- oder Mischrüstung"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Drachentanz (Aus der Teulu Form hervorgehende Variante)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Berühmter Vertreter",
+      "html": "Parzifal Arth"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Gründer",
+      "html": "Als Einheit etabliert durch Parzifal Arth"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Bevorzugtes Reittier",
+      "html": "Der Rhyfel, Ceffyl (Pferderasse), meist aber zu Schiff"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Begleiter",
+      "html": "Jagdhunde, Greifvögel"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Arthwyr</em></strong> ist kein gewöhnlicher Ritter. Er ist ein <strong>Stürmer</strong>, ein <strong>Vorhutler</strong>, ein Mann, der nicht wartet, bis die Linie sich formt – sondern sie bricht. Diese Art von Krieger ging aus dem <strong>Haus Arth O’Guwan</strong> hervor, aus einer Linie, deren Stärke mit der sogenannten <strong>Saat des Bären</strong> verbunden ist. Was bei anderen Rittern Disziplin und Technik erfordert, ist bei einem Arthwyr von Natur aus angelegt: rohe Kraft, zäher Stand, explosive Wucht.</p> <p>Zwar kämpften Mitglieder des Hauses Arth seit jeher wie andere Ritter Cenyrs – als Teulu, Cantref oder Uchelwyr –, doch es war insbesondere <strong>Parzifal Arth</strong>, Tafelritter und Kriegsmann zur See, der diese besondere Kampfweise als eigenständige Einheit formte. Aus Erfahrungen in Boardinggefechten, Sturmangriffen und chaotischen Nahkämpfen auf schwankenden Decks entwickelte sich ein Stil, der nicht auf Eleganz, sondern auf <strong>Durchbruch</strong> ausgelegt war. Der sogenannte <em>Tanz der Bärenklaue</em> ist kein Tanz im höfischen Sinne – er ist ein Zupacken, ein Reißen, ein Niederwerfen.</p> <p>Heute zählen viele Angehörige des Hauses Arth und seiner Kadettenhäuser – darunter Pawen und Crafanc – zu den Arthwyr. Sie sind keine ritterliche Gattung Cenyrs im allgemeinen Sinne, sondern eine <strong>hausgebundene Kriegstradition</strong>. Wo andere Ritter Maß halten, geht der Arthwyr voran. Laut, schwer, kompromisslos. Nicht um zu glänzen – sondern um das Tor aufzubrechen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Wurzeln der <strong>Arthwyr</strong> reichen zurück in die rauen Küstenjahre des Hauses <strong>Arth O’Guwan</strong>, als Seezüge, Sturmfahrten und Entergefechte zum Alltag gehörten. Während andere Ritterhäuser ihre Stärke auf Turnierfeldern oder in geordneten Linien suchten, kämpften die Arth auf schwankenden Decks, zwischen Tauwerk, Splitterholz und brennendem Pech. Hier zählten keine feinen Schritte des Drachentanzes – hier zählte, wer stehen blieb, wenn das Schiff krängte, und wer den Gegner mit bloßer Wucht von der Planke riss.</p> <p>Aus dieser Umgebung formte sich langsam eine eigene Art zu kämpfen. Mitglieder des Hauses, begünstigt durch die <strong>Saat des Bären</strong>, zeigten außergewöhnliche Kraft, Zähigkeit und Standfestigkeit. Wo andere zurückwichen, hielten sie. Wo andere sich lösten, griffen sie zu. Der Kampf wurde direkter, körperlicher, kompromissloser.</p> <p>Es war jedoch <strong>Parzifal Arth</strong>, der diese rohe Kriegserfahrung in eine erkennbare Einheit überführte. Als Tafelritter verband er die ritterliche Lehre Cenyrs mit der brachialen Realität der See. Er systematisierte, was zuvor Instinkt gewesen war, und lehrte es gezielt seinen Kindern und Getreuen. So entstand der <strong>Tanz der Bärenklaue</strong> – eine Form, die auf kurzer Distanz entscheidet, die packt, bricht und niederwirft.</p> <p>Von da an sprach man von den <strong>Arthwyr</strong> – nicht als allgemeine Ritterklasse, sondern als Ausdruck einer besonderen, hausgebundenen Tradition. Sie sind das Ergebnis von Blut, Meer und Erfahrung. Kein Zufall, kein Titel – sondern eine gewachsene Kriegsform, die aus Sturm und Salz geboren wurde.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Ein <strong><em>Arthwyr</em></strong> ist kein Fechter. Er ist eine <strong>Wucht</strong>. Seine Fähigkeiten gründen sich auf drei Säulen: die <strong>Saat des Bären</strong>, die <strong>maritime Kriegserfahrung</strong> des Hauses Arth und den <strong>Tanz der Bärenklaue</strong>.</p> <p>Im Kern zeichnet sich der Arthwyr durch außergewöhnliche <strong>Körperkraft</strong>, hohe <strong>Schmerzresistenz</strong> und enorme <strong>Standfestigkeit</strong> aus. Wo andere Ritter mit Technik arbeiten, arbeitet er mit <strong>Masse und Hebel</strong>. Er ist darauf geschult, Gegner zu packen, aus dem Gleichgewicht zu reißen, niederzudrücken oder schlicht durch sie hindurchzugehen. Seine Bewegungen sind weniger filigran als die eines Teulu – dafür explosiv und kompromisslos.</p> <p>Der <strong>Tanz der Bärenklaue</strong> ist kein eleganter Stil, sondern ein Kampfsystem für enge Räume, chaotische Gefechte und Sturmangriffe. Er nutzt kurze Distanz, Grifftechniken, Schilddruck, Schulterstoß und das Gewicht der Rüstung. Besonders im Boardingkampf oder beim Durchbrechen von Engstellen entfaltet der Arthwyr seine volle Stärke. Er ist ausgebildet, unter widrigsten Bedingungen – Nässe, schwankender Boden, Gedränge – kampffähig zu bleiben.</p> <p>Obwohl er Schwert und Schild führt, liegt sein eigentlicher Vorteil im <strong>Durchbruch</strong>. Ein Arthwyr wird nicht geschickt, um zu halten – sondern um eine Bresche zu schlagen. Seine größte Fähigkeit ist nicht Präzision, sondern <strong>Druck</strong>. Wenn er ansetzt, geschieht es mit Absicht. Und wenn er trifft, bleibt selten etwas stehen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li><p> Enorme <strong>Körperkraft</strong> und physische Durchsetzungsfähigkeit</p> </li> <li><p> Überragend im <strong>Nahkampf auf kürzester Distanz</strong></p> </li> <li><p> Hervorragend im <strong>Sturmangriff</strong> und bei Durchbruchoperationen</p> </li> <li><p> Hohe <strong>Standfestigkeit</strong> selbst unter widrigen Bedingungen (Enge, Nässe, Chaos)</p> </li> <li><p> Effektiv in Boardinggefechten und urbanen Engstellen</p> </li> </ul> <p><strong>Schwächen</strong></p> <ul> <li><p>Weniger beweglich und elegant als Teulu oder Uchelwyr</p> </li> <li><p>Geringe Effektivität auf Distanz (keine Spezialisierung im Fernkampf)</p> </li> <li><p>Hoher Kraftaufwand – längere Gefechte können zehren</p> </li> <li><p>Weniger geeignet für taktisches Feingefühl oder Formationsdisziplin</p> </li> <li><p>Abhängig von Nahdistanz – verliert Vorteil gegen Reichweitenkämpfer</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "drachentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines <strong><em>Arthwyr</em></strong> ist auf <strong>Stoß, Gewicht und Nähe</strong> ausgelegt. Wo andere Ritter ihre Rüstung auf Balance oder Eleganz abstimmen, trägt der Arthwyr Stahl wie eine zweite Haut. Seine Panzerung ist oft schwerer, mit verstärkten Schultern, Brustplatten und Armschienen – nicht um schön auszusehen, sondern um im Gedränge zu bestehen. Kratzer und Dellen sind keine Makel, sondern Zeichen geführter Gefechte.</p> <p>Seine Bewaffnung variiert, doch typisch sind <strong>Kurzschwert, Breitschwert oder schwere Hiebwaffen</strong>, die in enger Distanz effektiv bleiben. Ein stabiler <strong>Schild</strong> ist häufig Teil seiner Ausrüstung, nicht nur zur Abwehr, sondern als Werkzeug zum Drücken, Stoßen und Brechen von Linien. Im maritimen Kontext finden sich zudem Enterhaken, Kurzäxte oder Seile – Werkzeuge, die in Boardingkämpfen ebenso nützlich wie tödlich sind.</p> <p>Prunk spielt eine untergeordnete Rolle. Zwar tragen Arthwyr das Wappen ihres Hauses oder Kadettenhauses, doch ihre Ausstattung ist auf Funktion reduziert. Leder, verstärkte Gürtel, sichere Verschlüsse – alles muss halten, wenn Holz splittert und Metall auf Metall trifft. Ein Arthwyr rüstet sich nicht für den Applaus des Hofes. Er rüstet sich für den Moment, in dem er als Erster durch die Tür geht.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Auf den <strong>Klaueninseln</strong> genießen die <strong><em>Arthwyr</em></strong> hohes Ansehen. Dort kennt man die See, den Sturm und das Gedränge eines Enterkampfes. Man weiß, was es bedeutet, wenn einer vorangeht, während andere noch Luft holen. In den Häfen und Küstensiedlungen gelten die Arthwyr als <strong>Schutzwall aus Fleisch und Stahl</strong> – laut, direkt, zuverlässig. Ihr Ruf ist nicht höfisch, sondern praktisch: Wenn ein Tor fällt oder ein Schiff geentert wird, sind es oft die Arthwyr, die zuerst an Deck stehen.</p> <p>Jenseits der Inseln jedoch begegnet man ihnen mit gemischteren Blicken. In den großen Städten oder an den Höfen des Binnenlandes sind sie weniger bekannt. Ihre Kampfweise wirkt rau, beinahe ungehobelt im Vergleich zu den eleganten Formen des Teulu oder der stolzen Präsenz eines Uchelwyr. Nicht wenige reagieren mit einem gewissen Stirnrunzeln – weniger aus Ablehnung, mehr aus Unsicherheit: <em>„Daran müssen wir uns erst gewöhnen.“</em></p> <p>Denn der Arthwyr verkörpert eine Art von Ritterlichkeit, die nicht auf Glanz, sondern auf Wirkung setzt. Er ist kein Symbol höfischer Vollendung, sondern ein Produkt von Sturm, Salz und Druck. Wer ihn kennt, schätzt ihn. Wer ihn nicht kennt, beobachtet erst einmal – und wartet ab, was geschieht, wenn er vorangeht.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährt",
+      "status": "written",
+      "html": "<p>Der treueste Gefährte eines <strong><em>Arthwyr</em></strong> ist kein Tier – es ist ein <strong>Schiff</strong>. Wo andere Ritter ihr Pferd rühmen, spricht ein Arthwyr vom Rumpf, vom Kiel und vom Wind. Sein eigentliches Reittier ist das cenyrische <strong>Drachenschiff</strong>, ein seegängiges Kriegsfahrzeug, das Elemente früher Karacken mit der schlanken Aggressivität nordischer Langschiffe verbindet.</p> <p>Der Bug trägt oft einen geschnitzten Drachenkopf, nicht zur Zierde allein, sondern als Zeichen von Haus und Anspruch. Der Rumpf ist höher als bei einfachen Langbooten, breiter im Bauch, um Männer, Waffen und Proviant für längere Fahrten aufzunehmen. Ein einzelner, kräftiger Mast trägt ein rechteckiges Segel, verstärkt mit Lederstreifen gegen Sturm und Salz. Unter Deck lagern Tauwerk, Enterhaken, Schilde und Ersatzruder – denn ein Arthwyr denkt stets an das Brechen, nicht nur an die Fahrt.</p> <p>Seitlich ziehen sich Schilde entlang der Reling, bereit, im Gefecht sofort gegriffen zu werden. Das Deck ist nicht großzügig – es ist eng, rau, gemacht für Nähe. Genau dort entfaltet der Arthwyr seine Kunst. Wenn das Schiff auf feindlichen Kiel trifft und Enterbrücken schlagen, wird aus Holz eine Rampe und aus dem Rumpf eine Waffe. Das Drachenschiff ist mehr als Transport – es ist eine schwimmende Vorhut.</p> <p>Und wie ein Pferd seinen Ritter trägt, trägt das Schiff seine Krieger. Es ächzt im Sturm, es knarrt im Gefecht, aber es hält. Für einen Arthwyr ist es nicht bloß Gefährt – es ist Heimat, Bollwerk und Sturmspitze zugleich.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "0a8f6ed36f6300321c557d4423e504e4bd21bd9652340b6f6bd58be4932b8d53"
+  }
+}

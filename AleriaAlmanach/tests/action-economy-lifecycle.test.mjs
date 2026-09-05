@@ -41,13 +41,13 @@ test('Stufen- und Sonderstufenwerte bestimmen die festen Aktionsressourcen', () 
   );
 
   assert.deepEqual(economy(level16), {
-    action: 2, 'bonus-action': 2, reaction: 3, 'special-action': 3
+    action: 2, 'bonus-action': 1, reaction: 2, 'special-action': 5
   });
   assert.deepEqual(economy(level20), {
-    action: 3, 'bonus-action': 2, reaction: 3, 'special-action': 4
+    action: 2, 'bonus-action': 2, reaction: 2, 'special-action': 6
   });
   assert.deepEqual(economy(rank30), {
-    action: 4, 'bonus-action': 3, reaction: 4, 'special-action': 5
+    action: 2, 'bonus-action': 2, reaction: 2, 'special-action': 6
   });
 });
 

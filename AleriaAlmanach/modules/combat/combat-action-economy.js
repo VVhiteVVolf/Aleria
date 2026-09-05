@@ -1,7 +1,7 @@
 // Shared action-economy rules for character sheets, creature sheets and scene comments.
 // Comment-scoped resources reset for every complete comment; persistent resources do not.
 
-import { getCombatActionEconomy } from './combat-resource-progression.js?v=20260808-duncan-v1';
+import { getCombatActionEconomy } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 
 export const COMBAT_ACTION_RESOURCE_DEFINITIONS = Object.freeze([
   { id: 'action', name: 'Aktion', current: 1, maximum: 1, scope: 'comment', category: 'action', recovery: 'scene', icon: './public/assets/combat-profile-icons/action.png' },
@@ -63,7 +63,7 @@ export function getDefaultActivationCosts(activationType = 'action') {
 
 export function ensureCombatActionResources(resources = [], progression = {}) {
   const result = (Array.isArray(resources) ? resources : []).map(resource => ({ ...resource }));
-  const actionMaximums = getCombatActionEconomy(progression.level, progression.specialLevels);
+  const actionMaximums = getCombatActionEconomy(progression.level, progression.specialLevels, progression.actionPoolChoices);
   COMBAT_ACTION_RESOURCE_DEFINITIONS.forEach(definition => {
     const targetMaximum = actionMaximums[definition.id] ?? definition.maximum;
     const existing = result.find(resource => resource.id === definition.id)
@@ -86,9 +86,7 @@ export function ensureCombatActionResources(resources = [], progression = {}) {
         existing.current = targetMaximum;
       } else if (definition.id === 'special-action') {
         existing.maximum = targetMaximum;
-        existing.current = previousMaximum < targetMaximum
-          ? Math.min(targetMaximum, previousCurrent + (targetMaximum - previousMaximum))
-          : Math.min(previousCurrent, targetMaximum);
+        existing.current = Math.max(0, targetMaximum - Math.max(0, previousMaximum - previousCurrent));
       } else {
         if (existing.maximum == null) existing.maximum = definition.maximum;
         if (existing.current == null) existing.current = definition.current;

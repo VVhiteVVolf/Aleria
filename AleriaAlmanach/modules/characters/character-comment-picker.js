@@ -7,7 +7,7 @@ let _commentCharacterMediaSavePending = false;
 function renderCharPickerInForm() {
   const picker = document.getElementById('cf-char-picker');
   if (!picker) return;
-  picker.innerHTML = '';
+  const fragment = document.createDocumentFragment();
   const creatureMode = typeof _commentMode !== 'undefined' && _commentMode === 'creature';
   const characters = getAvailableCommentCharacters().filter(char => creatureMode
     ? char.entityType === 'creature'
@@ -65,7 +65,7 @@ function renderCharPickerInForm() {
       <div class="cf-char-option-name">${safeName}</div>
       ${playerOwnerLabel ? `<div class="cf-char-player-badge">${escapeHtml(playerOwnerLabel)}</div>` : ''}
       ${hasCommented ? '<div class="cf-char-commented-badge">aktiv</div>' : ''}`;
-    picker.appendChild(opt);
+    fragment.appendChild(opt);
   };
 
   grouped.forEach(group => {
@@ -73,10 +73,11 @@ function renderCharPickerInForm() {
       const label = document.createElement('div');
       label.className = 'cf-char-picker-group' + (group.kind ? ` ${group.kind}` : '');
       label.textContent = group.label;
-      picker.appendChild(label);
+      fragment.appendChild(label);
     }
     group.chars.forEach(addCharacterOption);
   });
+  picker.replaceChildren(fragment);
   applyCommentCharacterFilter();
 }
 
@@ -183,10 +184,12 @@ function selectCharForComment(id, options = {}) {
   document.getElementById('cf-selected-name').textContent = c ? `Als ${c.name} kommentieren` : '';
 
   renderCommentCharacterImagePicker(c);
-  if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
-  window.AleriaCommentSceneCast?.render?.();
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false) {
+    if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
+    window.AleriaCommentSceneCast?.render?.();
+    updateCommentFormPreview();
+  }
+  if (options.persist !== false) persistCommentDraft();
 }
 
 function buildCommentCharacterSaveData(char, emotes, portraitFallback = null, imageSetId = _selectedImageSetId) {
@@ -381,7 +384,7 @@ async function removeEmoteFromSelectedCommentCharacter(idx, event) {
   }
 }
 
-function selectEmote(idx) {
+function selectEmote(idx, options = {}) {
   _selectedEmoteIdx = idx;
   document.querySelectorAll('.cf-emote-option').forEach(el => {
     el.classList.toggle('selected', parseInt(el.dataset.emoteIdx) === idx);
@@ -389,13 +392,13 @@ function selectEmote(idx) {
   if (Array.isArray(_commentSegments) && _commentSegments.length && _commentSegments[0].kind !== 'action') {
     _commentSegments[0].emoteIndex = idx;
     _commentSegments[0].imageSetId = _selectedImageSetId;
-    if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
+    if (options.render !== false && typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
   }
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false) updateCommentFormPreview();
+  if (options.persist !== false) persistCommentDraft();
 }
 
-function toggleManualMode() {
+function toggleManualMode(options = {}) {
   if (_commentMode === 'creature') return;
   _manualMode = !_manualMode;
   _selectedCharId = null;
@@ -409,7 +412,9 @@ function toggleManualMode() {
     : '+ Manuell eingeben';
   document.getElementById('cf-emote-section').style.display = 'none';
   document.getElementById('cf-emote-picker').innerHTML = '';
-  if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false) {
+    if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
+    updateCommentFormPreview();
+  }
+  if (options.persist !== false) persistCommentDraft();
 }

@@ -2,12 +2,14 @@ import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getMaximumHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260808-duncan-v1';
+} from './combat-profile-model.js?v=20260905-party-combat-v1';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
-} from './character-creation-templates.js?v=20260808-drachentanz-v1';
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260808-drachentanz-v1';
+} from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
+import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260905-party-combat-v1';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([
   { id: 'standard-array', label: 'Standard-Array', description: '15, 14, 13, 12, 10 und 8 frei verteilen.' },
@@ -389,6 +391,8 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
     profile.hitPoints.current = getMaximumHitPoints(profile);
   }
 
+  profile = applyCenyrClassLevelProgression(profile, profile.progression.level).profile;
+  profile = reconcileCenyrTrainingForLevel(profile, profile.progression.level, { autoFill: true }).profile;
   return { ok: true, errors: [], profile: sanitizeCharacterCombatProfile(profile) };
 }
 

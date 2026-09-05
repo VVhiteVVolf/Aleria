@@ -269,6 +269,7 @@ function sanitizeCharacterInventoryItems(items = []) {
       weight: String(item?.weight || '').trim(),
       quantity: String(item?.quantity || '1').trim(),
       tags: String(item?.tags || '').trim(),
+      value: sanitizeCharacterInventoryMoney(item?.value),
       equipped: item?.equipped === true,
       combatDefinition: sanitizeCharacterInventoryCombatDefinition(item?.combatDefinition || item?.combat),
       equipmentLink: sanitizeCharacterInventoryEquipmentLink(item?.equipmentLink),

@@ -124,7 +124,7 @@ function cleanupOldCommentDrafts(maxAgeDays = 30) {
   return removed;
 }
 
-function restoreCommentDraft() {
+function restoreCommentDraft(options = {}) {
   try {
     const key = getCommentDraftKey();
     if (!key) return false;
@@ -177,7 +177,7 @@ function restoreCommentDraft() {
     } else {
       _commentSegments = [makeCommentSegment(draft.commentKind || 'speech', String(draft.text || ''), Number.isInteger(draft.selectedEmoteIdx) ? draft.selectedEmoteIdx : null)];
     }
-    setCommentKind(draft.commentKind || 'speech');
+    setCommentKind(draft.commentKind || 'speech', { render: false, persist: false });
     document.getElementById('cf-name').value = String(draft.name || '');
     document.getElementById('cf-title').value = String(draft.title || '');
     document.getElementById('cf-char-search').value = '';
@@ -195,28 +195,32 @@ function restoreCommentDraft() {
 
     window.AleriaCommentSceneCast?.restoreCreate?.(draft.sceneActors || []);
     if (draft.mode === 'narrator') {
-      setCommentMode('narrator');
+      setCommentMode('narrator', { render: false, persist: false });
     } else {
       const restoredActor = draft.selectedCharId ? getAvailableCommentCharacterById(draft.selectedCharId) : null;
       const restoredMode = draft.mode === 'creature' || restoredActor?.entityType === 'creature' ? 'creature' : 'charakter';
-      setCommentMode(restoredMode);
+      setCommentMode(restoredMode, { render: false, persist: false });
       if (restoredActor && commentActorMatchesComposerMode(restoredActor, restoredMode)) {
         selectCharForComment(draft.selectedCharId, {
           imageSetId: draft.selectedImageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID,
-          preserveSegmentImageSets: true
+          preserveSegmentImageSets: true,
+          render: false,
+          persist: false
         });
         if (!hasSegmentDraft && Number.isInteger(draft.selectedEmoteIdx) && draft.selectedEmoteIdx >= 0) {
-          selectEmote(draft.selectedEmoteIdx);
+          selectEmote(draft.selectedEmoteIdx, { render: false, persist: false });
         }
       } else if (draft.manualMode) {
-        if (!_manualMode) toggleManualMode();
+        if (!_manualMode) toggleManualMode({ render: false, persist: false });
       }
     }
 
-    applyCommentCharacterFilter();
-    renderCommentSegmentList();
-    setCommentFormCounter();
-    updateCommentFormPreview();
+    if (options.render !== false) {
+      applyCommentCharacterFilter();
+      renderCommentSegmentList();
+      setCommentFormCounter();
+      updateCommentFormPreview();
+    }
     showCommentDraftNote('Entwurf wiederhergestellt');
     return true;
   } catch (e) {

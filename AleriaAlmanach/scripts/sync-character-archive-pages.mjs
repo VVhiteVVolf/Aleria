@@ -21,15 +21,19 @@ function collectClasses(html, culture = '') {
     const name = text(match[1].match(/class="class-name">([^<]+)/)?.[1]);
     if (!name || name === 'Unterklasse') continue;
     const existing = classes.get(name);
+    const href = attr(match[0], 'href');
+    const pageLinks = /^(?:Basisklassen|Cenyr)\/[a-z-]+\/index\.html$/.test(href)
+      ? [{ culture, path: `Klassenordner/${href}` }] : [];
     if (existing) {
       if (culture && !existing.cultures.includes(culture)) existing.cultures.push(culture);
+      existing.pageLinks.push(...pageLinks);
       continue;
     }
     classes.set(name, {
       id: slug(name), name, baseClass: !culture, cultures: culture ? [culture] : [],
       order: classes.size, description: attr(match[0], 'data-tooltip'),
       icon: attr(match[1].match(/<img\b[^>]*>/)?.[0] || '', 'src'),
-      sourcePage: 'Klassenordner/Klassenseite.html'
+      sourcePage: 'Klassenordner/Klassenseite.html', pageLinks
     });
   }
 }

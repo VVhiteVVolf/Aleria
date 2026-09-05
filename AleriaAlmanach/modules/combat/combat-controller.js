@@ -1,16 +1,18 @@
-import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260802-dice-audio-v2';
+import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
+import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260905-resource-balance-v2';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260808-duncan-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260808-duncan-v1';
+} from './combat-profile-resolver.js?v=20260906-release-check-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-release-check-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
   getResolutionActorChannelingState,
   getResolutionActorConcentrationState,
   getResolutionActorConditionState,
+  getResolutionActorEquippedWeaponState,
   getResolutionActorHitPointState,
   getResolutionActorInventoryState,
   getResolutionActorResourceState,
@@ -20,31 +22,79 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260905-encounter-v2';
+} from './combat-state-model.js?v=20260905-party-combat-v1';
+import {
+  getReservedEquipmentSwitchWeaponId,
+  withEquippedCombatWeapon
+} from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import {
   canUseAuraPayment,
   canUseManaSubstitutePayment,
   getActionPaymentCosts,
   recoverDailyCombatResources,
   resetCommentScopedResources
-} from './combat-action-economy.js?v=20260808-duncan-v1';
+} from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260808-duncan-v1';
+} from './ui/combat-ui.js?v=20260905-party-combat-v1';
+import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260905-resource-balance-v2';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260808-duncan-v1';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260905-encounter-v2';
+} from './combat-trigger-rules.js?v=20260905-party-combat-v1';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260905-party-combat-v1';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
+const resolvedCombatProfileCache = new WeakMap();
+const resolvedCombatTargetCache = new WeakMap();
 let latestComposerContext = null;
+
+function getProfileCacheOwner(character = {}) {
+  return character;
+}
+
+function getProfileOptionCacheKey(options = {}) {
+  return [
+    options.actionId || '',
+    options.segmentKind || '',
+    options.paymentMode || 'standard',
+    options.weaponGrip || 'one-handed',
+    options.castLevel || 0
+  ].join('|');
+}
+
+function resolveCachedCombatProfile(character, options = {}) {
+  const owner = getProfileCacheOwner(character);
+  if (!owner || typeof owner !== 'object') return profileResolver.resolve(character, options);
+  let entries = resolvedCombatProfileCache.get(owner);
+  if (!entries) {
+    entries = new Map();
+    resolvedCombatProfileCache.set(owner, entries);
+  }
+  const key = getProfileOptionCacheKey(options);
+  if (!entries.has(key)) entries.set(key, profileResolver.resolve(character, options));
+  return entries.get(key);
+}
+
+function resolveCachedCombatTarget(character) {
+  const owner = getProfileCacheOwner(character);
+  if (!owner || typeof owner !== 'object') return profileResolver.resolveTarget(character);
+  if (!resolvedCombatTargetCache.has(owner)) {
+    resolvedCombatTargetCache.set(owner, profileResolver.resolveTarget(character));
+  }
+  return resolvedCombatTargetCache.get(owner);
+}
+
+function hasStoredCombatRules(character = {}) {
+  const profile = character.combatProfile;
+  return !!profile && typeof profile === 'object' && Object.keys(profile).length > 0;
+}
 function getCharacters() {
   if (typeof globalThis.getAvailableCommentCharacters !== 'function') return [];
   try {
@@ -117,7 +167,7 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
   if (!actorCharacter || !targetCharacter) return [];
   const selections = Array.isArray(segment?.combatRuleSelections) ? segment.combatRuleSelections : [];
   const actionKind = String(actor?.profileActionKind || 'weapon');
-  return characters.flatMap(character => {
+  return characters.filter(hasStoredCombatRules).flatMap(character => {
     const source = resolveActorProfile(character, {
       actorId: character.id,
       storedStates,
@@ -197,19 +247,8 @@ function resolveActorProfile(character, options = {}) {
   // Ein späterer "Ausrüstung wechseln"-Kommentar bestimmt, welche Waffe/welches Instrument
   // ab jetzt als aktiv gilt - muss vor der Profilauflösung angewendet werden, weil aktiveWeapon
   // und Technik-Kompatibilität bereits innerhalb von profileResolver.resolve entschieden werden.
-  const effectiveCharacter = state?.equippedWeaponId && Array.isArray(character?.combatProfile?.weapons)
-    ? {
-        ...character,
-        combatProfile: {
-          ...character.combatProfile,
-          weapons: character.combatProfile.weapons.map(weapon => ({
-            ...weapon,
-            equipped: weapon.id === state.equippedWeaponId
-          }))
-        }
-      }
-    : character;
-  const profile = profileResolver.resolve(effectiveCharacter, {
+  const effectiveCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId);
+  const profile = resolveCachedCombatProfile(effectiveCharacter, {
     actionId: options.actionId,
     segmentKind: options.segmentKind,
     paymentMode: options.paymentMode,
@@ -228,7 +267,14 @@ function resolveActorProfile(character, options = {}) {
   return overlayCombatHitPointState(profile, effectiveState);
 }
 
+function resolveTargetPickerProfile(character, options = {}) {
+  const actorId = String(options.actorId || character?.id || '');
+  const state = options.storedStates?.get(actorId) || null;
+  return overlayCombatHitPointState(resolveCachedCombatTarget(character), state);
+}
+
 function actionAllowsSelfTarget(actor) {
+  if (actor?.selectedAction?.kind === 'equipment-switch') return true;
   const effects = Array.isArray(actor?.selectedAction?.effects) ? actor.selectedAction.effects : [];
   return effects.length > 0 && !effects.some(effect => ['damage', 'debuff'].includes(String(effect?.type || '')));
 }
@@ -263,6 +309,11 @@ function mountComposers(context = {}) {
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
   const composerStates = new Map();
   const composerResourceResets = new Set();
+  const targetCharacters = characters;
+  const targetProfiles = new Map(targetCharacters.map(character => [
+    String(character.id || ''),
+    resolveTargetPickerProfile(character, { actorId: character.id, storedStates })
+  ]));
 
   segments.forEach(segment => {
     if (!isCombatSegment(segment)) return;
@@ -309,20 +360,22 @@ function mountComposers(context = {}) {
     }
     if (actor && paymentConfirmed && payment?.sufficient && abilityReservation.sufficient) {
       const previous = composerStates.get(actorId) || storedStates.get(actorId) || {};
+      const equippedWeaponId = getReservedEquipmentSwitchWeaponId(actor, paymentConfirmed);
       composerStates.set(actorId, {
         ...previous,
         resources: payment.after,
-        ...(abilityReservation.changed ? { abilities: abilityReservation.abilities } : {})
+        ...(abilityReservation.changed ? { abilities: abilityReservation.abilities } : {}),
+        ...(equippedWeaponId ? { equippedWeaponId } : {})
       });
     }
-    const targets = characters
+    if (actor?.selectedAction?.kind === 'equipment-switch') {
+      segment.combatTargetId = actorId;
+      segment.combatTargetIds = [actorId];
+    }
+    const targets = prioritizeCombatTargets(targetCharacters
       .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
-      .filter(character => !activeEncounterPartyMap.size || activeEncounterPartyMap.has(String(character.id || '')))
-      .map(character => resolveActorProfile(character, {
-        actorId: character.id,
-        storedStates,
-        recoveryDayKey
-      }));
+      .map(character => targetProfiles.get(String(character.id || '')))
+      .filter(Boolean), activeEncounterPartyMap);
     const targetCharacter = characters.find(character => String(character.id || '') === String(segment.combatTargetId || '')) || null;
     const ruleOptions = buildCombatRuleOptions({
       characters,
@@ -354,14 +407,25 @@ function mountComposers(context = {}) {
 function updateSegmentSetting(segmentId, field, value) {
   const segment = latestComposerContext?.segments?.find(item => String(item.id || '') === String(segmentId || ''));
   if (!segment) return;
-  if (field === 'targetId') segment.combatTargetId = String(value || '');
+  if (field === 'targetId') {
+    segment.combatTargetId = String(value || '');
+    segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
+  }
   if (field === 'targetIds') {
     segment.combatTargetIds = [...new Set((Array.isArray(value) ? value : []).map(String).filter(Boolean))];
     segment.combatTargetId = segment.combatTargetIds[0] || '';
   }
   if (field === 'actionId') {
+    const previousActionId = String(segment.combatActionId || '');
     segment.combatActionId = String(value || '');
-    segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
+    const actorId = String(segment.actorId || latestComposerContext?.selectedCharacterId || '');
+    if (segment.combatActionId.startsWith('equip:')) {
+      segment.combatTargetId = actorId;
+      segment.combatTargetIds = actorId ? [actorId] : [];
+    } else {
+      if (previousActionId.startsWith('equip:') && String(segment.combatTargetId || '') === actorId) segment.combatTargetId = '';
+      segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
+    }
     segment.combatWeaponGrip = 'one-handed';
     segment.combatCastLevel = 0;
     segment.combatPaymentConfirmed = false;
@@ -378,7 +442,7 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatPaymentConfirmed = false;
   }
   globalThis.persistCommentDraft?.();
-  if (field === 'actionId' || field === 'paymentMode' || field === 'weaponGrip') mountComposers(latestComposerContext || {});
+  if (['actionId', 'paymentMode', 'weaponGrip', 'castLevel', 'targetId', 'targetIds'].includes(field)) mountComposers(latestComposerContext || {});
 }
 
 function setSegmentPaymentConfirmation(segmentId, confirmed) {
@@ -453,6 +517,7 @@ function buildNarrationFacts(resolution) {
     ruleAbilitySnapshots: resolution.ruleAbilitySnapshots || [],
     secondarySaves: resolution.secondarySaves || [],
     followUpAttacks: resolution.followUpAttacks || [],
+    mechanicNotes: resolution.mechanicNotes || [],
     targetConditionSnapshot: resolution.targetConditionSnapshot || null,
     targetResourceSnapshot: resolution.targetResourceSnapshot || null,
     effectResults: resolution.effectResults || [],
@@ -501,12 +566,17 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     castLevel: segment.combatCastLevel,
     recoveryDayKey: stateContext.recoveryDayKey
   });
+  const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
+  const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || (broadTargetEffect ? 20 : 1));
+  if (Math.max(1, Number(resolutionOptions.targetCount) || 1) > maximumTargets) {
+    throw new Error(`${actor.selectedAction?.name || 'Diese Technik'} erlaubt höchstens ${maximumTargets} Ziele.`);
+  }
   if (!segment.combatPaymentConfirmed && !actor.cheats?.enabled) {
     const effectiveKind = getEffectiveCombatSegmentKind(segment);
     const actionLabel = effectiveKind === 'spell' ? 'Zauberformel' : (effectiveKind === 'prayer' ? 'Gebetsaktion' : (effectiveKind === 'song' ? 'Gesangsaktion' : 'Kampfhandlung'));
     throw new Error(`${actor.name} muss die Kosten dieser ${actionLabel} zuerst reservieren.`);
   }
-  const actorValidation = profileResolver.validateActor(actor);
+  const actorValidation = profileResolver.validateActor(actor, { startedAction: resolutionOptions.startedAction });
   if (!actorValidation.ready) {
     throw new Error(getCombatActorValidationMessage(actor, actorValidation));
   }
@@ -538,6 +608,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     ruleSources,
     rulePeriods: stateContext.rulePeriods,
     usedRuleFrequencyKeys: stateContext.usedRuleFrequencyKeys,
+    startedAction: resolutionOptions.startedAction,
     skipResourceCosts: resolutionOptions.primary === false,
     skipAmmunition: resolutionOptions.primary === false,
     skipSelfEffects: resolutionOptions.primary === false,
@@ -584,9 +655,10 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
   const nextActorInventory = getResolutionActorInventoryState(resolution);
   const nextActorHitPoints = getResolutionActorHitPointState(resolution);
   const nextActorConditions = getResolutionActorConditionState(resolution);
+  const nextActorEquippedWeaponId = getResolutionActorEquippedWeaponState(resolution);
   const nextActorChanneling = getResolutionActorChannelingState(resolution);
   const nextActorConcentration = getResolutionActorConcentrationState(resolution);
-  if (nextActorResources || nextActorInventory || nextActorHitPoints || nextActorConditions
+  if (nextActorResources || nextActorInventory || nextActorHitPoints || nextActorConditions || nextActorEquippedWeaponId
     || (resolution.actionType !== 'channeling' && abilityUse.changed)
     || nextActorChanneling !== undefined || nextActorConcentration !== undefined) {
     const previous = stateContext.workingStates?.get(actorId) || stateContext.storedStates?.get(actorId) || {};
@@ -596,6 +668,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
       ...(nextActorInventory ? { inventory: nextActorInventory } : {}),
       ...(nextActorHitPoints || {}),
       ...(nextActorConditions ? { temporaryConditions: nextActorConditions } : {}),
+      ...(nextActorEquippedWeaponId ? { equippedWeaponId: nextActorEquippedWeaponId } : {}),
       ...(resolution.actionType !== 'channeling' && abilityUse.changed ? { abilities: abilityUse.abilities } : {}),
       ...(nextActorChanneling !== undefined ? { channeling: nextActorChanneling } : {}),
       ...(nextActorConcentration !== undefined ? { concentration: nextActorConcentration } : {})
@@ -625,7 +698,7 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
       total,
       fallbackActorId,
       stateContext,
-      { targetId: targetIds[targetIndex], targetIndex, targetCount: targetIds.length, primary: targetIndex === 0 }
+      { targetId: targetIds[targetIndex], targetIndex, targetCount: targetIds.length, primary: targetIndex === 0, startedAction: resolutions[0] }
     );
     resolutions.push(resolution);
     if (resolution.actionType === 'channeling') break;
@@ -743,6 +816,7 @@ document.addEventListener('click', event => {
   const composer = trigger.closest('[data-combat-composer]');
   const segmentId = composer?.dataset.combatSegmentId || '';
   if (trigger.dataset.combatControllerAction === 'choose-payment') chooseSegmentPayment(segmentId, trigger.dataset.paymentMode);
+  if (trigger.dataset.combatControllerAction === 'select-weapon') updateSegmentSetting(segmentId, 'actionId', trigger.dataset.combatActionId);
   if (trigger.dataset.combatControllerAction === 'confirm-payment') setSegmentPaymentConfirmation(segmentId, true);
   if (trigger.dataset.combatControllerAction === 'release-payment') setSegmentPaymentConfirmation(segmentId, false);
 });
@@ -750,19 +824,14 @@ document.addEventListener('click', event => {
 document.addEventListener('input', event => {
   const search = event.target?.closest?.('[data-combat-target-search]');
   if (!search) return;
-  const select = search.closest('[data-combat-composer]')?.querySelector?.('[data-combat-input="targetId"], [data-combat-input="targetIds"]');
-  if (!select) return;
-  const query = String(search.value || '').trim().toLocaleLowerCase('de');
-  [...select.options].forEach((option, index) => {
-    option.hidden = index > 0 && !!query && !option.textContent.toLocaleLowerCase('de').includes(query);
-  });
+  filterCombatTargets(search.closest('[data-combat-composer]'), search.value);
 });
 
 globalThis.AleriaCombat = Object.freeze({
   getProfile(characterId, options = {}) {
     const character = getCharacterById(characterId);
     if (!character) return null;
-    const profile = profileResolver.resolve(character);
+    const profile = resolveCachedCombatProfile(character);
     const actorId = String(options.actorId || characterId || '');
     const state = getStoredCombatStates(options.threadId || '', options).get(actorId) || null;
     return overlayCombatHitPointState(profile, state);

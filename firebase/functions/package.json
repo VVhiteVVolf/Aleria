@@ -9,7 +9,8 @@
   "scripts": {
     "sync:mechanics": "node scripts/sync-almanach-mechanics.mjs",
     "test": "npm run sync:mechanics && node --test tests/*.test.js",
-    "test:combat-integration": "npm run sync:mechanics && node --test tests/integration/combat-checkup.integration.mjs"
+    "test:combat-integration": "npm run sync:mechanics && node --test --test-concurrency=1 tests/integration/combat-checkup.integration.mjs tests/integration/combat-party.integration.mjs",
+    "test:combat-simulation": "npm run sync:mechanics && node --test tests/integration/combat-party-simulation.integration.mjs"
   },
   "dependencies": {
     "firebase-admin": "13.10.0",

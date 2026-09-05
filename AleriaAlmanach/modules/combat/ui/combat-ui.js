@@ -1,11 +1,15 @@
-import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-import { COMBAT_ACTION_RESOURCE_DEFINITIONS } from '../combat-action-economy.js?v=20260808-duncan-v1';
+import { getSpellLevelLabel, getSpellSlotLevel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 import {
-  getSpellLevelLabel,
-  getSpellSlotLevel,
-  isSpellSlotResource as isConfiguredSpellSlotResource
-} from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-
+  aggregateCosts, buildPaymentResourceCards, classifyPaymentResourceCards,
+  isMagicSegmentKind, isSpellSlotResource, renderPaymentPanel
+} from './combat-payment-ui.js?v=20260905-resource-balance-v2';
+import {
+  activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
+  renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
+} from './combat-action-card.js?v=20260905-party-combat-v1';
+import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260905-resource-balance-v2';
+import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260905-party-combat-v1';
+import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260905-resource-balance-v2';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -13,240 +17,6 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
-}
-
-const ACTION_RESOURCE_IDS = Object.freeze(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
-const MAGIC_RESOURCE_PATTERN = /mana|fokus|zauber.?platz|spell.?slot|magie/i;
-const MAGIC_SEGMENT_KINDS = new Set(['spell', 'prayer', 'song']);
-
-function isMagicSegmentKind(value = '') {
-  return MAGIC_SEGMENT_KINDS.has(String(value || ''));
-}
-
-function isSpellSlotResource(resource = {}, actor = {}) {
-  const configuredSlotIds = Array.isArray(actor.magic?.slotResourceIds)
-    ? actor.magic.slotResourceIds.map(String)
-    : [];
-  return isConfiguredSpellSlotResource(resource, configuredSlotIds);
-}
-
-function isManaResource(resource = {}) {
-  const resourceText = `${resource.id || ''} ${resource.name || ''}`.toLocaleLowerCase('de');
-  if (String(resource.id || '') === 'aura-focus') return false;
-  return String(resource.id || '') === 'mana-focus'
-    || /mana/.test(resourceText)
-    || (/fokus/.test(resourceText) && resource.category === 'magic');
-}
-
-function aggregateCosts(costs = []) {
-  const result = new Map();
-  (Array.isArray(costs) ? costs : []).forEach(cost => {
-    const resourceId = String(cost?.resourceId || '');
-    if (!resourceId) return;
-    const previous = result.get(resourceId) || { ...cost, amount: 0 };
-    previous.amount += Math.max(0, Number(cost.amount) || 0);
-    result.set(resourceId, previous);
-  });
-  return result;
-}
-
-function buildPaymentResourceCards({ actor = {}, paymentOptions = [], paymentMode = 'standard', paymentConfirmed = false, segmentKind = 'combataction' } = {}) {
-  const resources = Array.isArray(actor.resources) ? actor.resources : [];
-  const resourcesById = new Map(resources.map(resource => [String(resource?.id || ''), { ...resource, configured: true }]));
-  COMBAT_ACTION_RESOURCE_DEFINITIONS.forEach(definition => {
-    if (!resourcesById.has(definition.id)) resourcesById.set(definition.id, {
-      ...definition,
-      current: 0,
-      maximum: 0,
-      configured: false
-    });
-  });
-  const options = new Map((Array.isArray(paymentOptions) ? paymentOptions : []).map(option => [option.mode, {
-    ...option,
-    costsByResource: aggregateCosts(option.costs)
-  }]));
-  const visibleIds = [...COMBAT_ACTION_RESOURCE_DEFINITIONS.map(resource => resource.id)];
-  options.forEach(option => option.costsByResource.forEach((_cost, resourceId) => visibleIds.push(resourceId)));
-
-  const magic = isMagicSegmentKind(segmentKind);
-  if (magic) {
-    // Zauberplätze werden hier bewusst nicht mehr als eigene Kostenkarten angezeigt - sie
-    // zeigen nur noch (über den Grad-Auswahl-Dropdown der Handlung) welcher Zaubergrad
-    // freigeschaltet ist, verbrauchen aber selbst nichts mehr. Nur echte Ressourcenpools
-    // (Mana, Fokus, Celestiale/Infernale/Paktpunkte) tauchen hier auf.
-    resources.filter(resource => ['magic', 'aura', 'celestial', 'infernal', 'focus', 'pact'].includes(resource?.category)
-      || MAGIC_RESOURCE_PATTERN.test(`${resource?.id || ''} ${resource?.name || ''}`))
-      .filter(resource => !isSpellSlotResource(resource, actor))
-      .forEach(resource => visibleIds.push(String(resource.id || '')));
-  }
-
-  return [...new Set(visibleIds)].map(resourceId => {
-    const standardOption = options.get('standard');
-    const auraOption = options.get('aura');
-    const substituteOption = options.get('mana-substitute');
-    const standardCost = standardOption?.costsByResource.get(resourceId) || null;
-    const auraCost = auraOption?.costsByResource.get(resourceId) || null;
-    const substituteCost = substituteOption?.costsByResource.get(resourceId) || null;
-    const mode = standardCost ? 'standard' : (auraCost ? 'aura' : (substituteCost ? 'mana-substitute' : ''));
-    const option = mode ? options.get(mode) : null;
-    const resource = resourcesById.get(resourceId) || {
-      id: resourceId,
-      name: standardCost?.name || auraCost?.name || substituteCost?.name || 'Ressource',
-      current: 0,
-      maximum: 0,
-      configured: false
-    };
-    const cost = standardCost || auraCost || substituteCost;
-    const sufficient = option?.payment?.sufficient !== false;
-    return {
-      resource,
-      mode,
-      cost: Number(cost?.amount) || 0,
-      required: !!cost,
-      sufficient,
-      selected: mode === paymentMode,
-      confirmed: !!cost && mode === paymentMode && paymentConfirmed,
-      missingName: option?.payment?.missing?.name || '',
-      actionable: !!cost && sufficient && !actor.cheats?.enabled
-    };
-  });
-}
-
-function classifyPaymentResourceCards(cards = [], actor = {}, magic = false) {
-  const groups = {
-    actions: [],
-    mana: [],
-    spellSlots: [],
-    otherResources: []
-  };
-  (Array.isArray(cards) ? cards : []).forEach(card => {
-    const resourceId = String(card?.resource?.id || '');
-    if (ACTION_RESOURCE_IDS.includes(resourceId)) groups.actions.push(card);
-    else if (magic && isSpellSlotResource(card.resource, actor)) groups.spellSlots.push(card);
-    else if (magic && isManaResource(card.resource)) groups.mana.push(card);
-    else groups.otherResources.push(card);
-  });
-  groups.spellSlots.sort((first, second) => (getSpellSlotLevel(first.resource) ?? 999) - (getSpellSlotLevel(second.resource) ?? 999));
-  return groups;
-}
-
-function renderResourcePips(current, maximum) {
-  if (maximum <= 0) return '';
-  if (maximum > 12) return `<span class="combat-resource-card-pips combat-resource-card-pips--count">${escapeHtml(current)} von ${escapeHtml(maximum)} verfügbar</span>`;
-  return `<span class="combat-resource-card-pips" aria-label="${escapeHtml(current)} von ${escapeHtml(maximum)} verfügbar">${Array.from({ length: maximum }, (_entry, index) => (
-    `<i class="${index < current ? 'filled' : ''}" aria-hidden="true"></i>`
-  )).join('')}</span>`;
-}
-
-function renderPaymentResourceCard(card = {}, { variant = 'standard' } = {}) {
-  const { resource = {} } = card;
-  const icon = getCombatResourceIconPresentation(resource);
-  const current = Math.max(0, Number(resource.current) || 0);
-  const maximum = Math.max(0, Number(resource.maximum) || 0);
-  const unavailable = resource.configured === false || maximum <= 0;
-  const classes = [
-    'combat-resource-card',
-    card.required ? 'required' : 'unused',
-    card.selected ? 'selected' : '',
-    card.confirmed ? 'confirmed' : '',
-    !card.sufficient && card.required ? 'insufficient' : '',
-    unavailable ? 'unavailable' : '',
-    `combat-resource-card--${variant}`
-  ].filter(Boolean).join(' ');
-  const stateText = card.confirmed
-    ? `Reserviert · ${current} → ${Math.max(0, current - card.cost)}`
-    : (card.required
-      ? (card.sufficient ? `Kosten −${card.cost} · anklicken` : `Nicht genug ${card.missingName || resource.name || 'Ressourcen'}`)
-      : (unavailable ? 'Im Kampfbogen nicht verfügbar' : 'Für diese Aktion nicht benötigt'));
-  const buttonAttributes = card.actionable
-    ? ` data-combat-controller-action="choose-payment" data-payment-mode="${escapeHtml(card.mode)}" aria-pressed="${card.confirmed}"`
-    : ' disabled aria-disabled="true"';
-  const pips = ['slot', 'pool'].includes(variant) ? renderResourcePips(current, maximum) : '';
-  const displayName = variant === 'slot' && getSpellSlotLevel(resource)
-    ? getSpellLevelLabel(getSpellSlotLevel(resource))
-    : (resource.name || 'Ressource');
-  return `<button type="button" class="${classes}" data-resource-id="${escapeHtml(resource.id)}"${buttonAttributes} title="${escapeHtml(stateText)}">
-    <span class="combat-resource-card-icon" aria-hidden="true"><b>${escapeHtml(icon.fallback)}</b>${icon.source ? `<img src="${escapeHtml(icon.source)}" alt="">` : ''}</span>
-    <span class="combat-resource-card-name">${escapeHtml(displayName)}</span>
-    <span class="combat-resource-card-value"><b>${escapeHtml(current)}</b><small>/ ${escapeHtml(maximum)}</small></span>
-    ${pips}
-    <span class="combat-resource-card-state">${escapeHtml(stateText)}</span>
-  </button>`;
-}
-
-function renderResourceGroup({ title, kicker = '', cards = [], variant = 'standard', className = '' } = {}) {
-  if (!cards.length) return '';
-  return `<section class="combat-resource-group ${className}">
-    <div class="combat-resource-group-heading"><span>${escapeHtml(title)}</span>${kicker ? `<small>${escapeHtml(kicker)}</small>` : ''}</div>
-    <div class="combat-resource-grid">${cards.map(card => renderPaymentResourceCard(card, { variant })).join('')}</div>
-  </section>`;
-}
-
-function renderCostSummary(cards = [], cheatEnabled = false) {
-  const selectedCosts = cards.filter(card => card.required && card.selected);
-  const content = cheatEnabled
-    ? '<p>Alle Kosten aufgehoben</p>'
-    : (selectedCosts.length
-      ? selectedCosts.map(card => {
-        const icon = getCombatResourceIconPresentation(card.resource);
-        return `<div class="combat-cost-summary-item">
-          <span aria-hidden="true"><b>${escapeHtml(icon.fallback)}</b>${icon.source ? `<img src="${escapeHtml(icon.source)}" alt="">` : ''}</span>
-          <strong>${escapeHtml(card.resource.name || 'Ressource')}</strong><em>−${escapeHtml(card.cost)}</em>
-        </div>`;
-      }).join('')
-      : '<p>Keine Kosten für diese Handlung</p>');
-  return `<aside class="combat-cost-summary">
-    <div class="combat-resource-group-heading"><span>Gewählte Kosten</span></div>
-    ${content}
-  </aside>`;
-}
-
-function signedNumber(value) {
-  const number = Number(value) || 0;
-  return number >= 0 ? `+${number}` : String(number);
-}
-
-function getMagicDisplayStats(actor = {}) {
-  const resolutionMode = String(actor.actionResolutionMode || 'spell-attack');
-  const spellLevel = Number(actor.selectedAction?.spellLevel);
-  const cantrip = actor.selectedAction?.isCantrip === true || spellLevel === 0;
-  return {
-    saveDc: Number(actor.actionSpellSaveDc ?? actor.spellSaveDc) || 0,
-    spellAttack: Number(actor.spellAttackModifier ?? actor.attackModifier) || 0,
-    resolutionLabel: resolutionMode === 'saving-throw'
-      ? 'Rettungswurf gegen Zauber-SG'
-      : (resolutionMode === 'automatic' ? 'Automatische Wirkung' : 'Zauber-Trefferwurf'),
-    spellLevelLabel: Number.isFinite(spellLevel) ? getSpellLevelLabel(spellLevel) : '',
-    cantrip
-  };
-}
-
-function getCombatDisplayStats(actor = {}) {
-  const formula = String(actor.weapon?.damageFormula || '').toUpperCase().replace(/D/g, 'W');
-  const damageModifier = Number(actor.damageModifier) || 0;
-  return {
-    attack: signedNumber(actor.attackModifier),
-    damage: `${formula || '—'}${damageModifier ? ` ${signedNumber(damageModifier)}` : ''}`,
-    activation: activationLabel(actor.selectedAction?.activationType)
-  };
-}
-
-function optionLabel(profile = {}) {
-  const defense = profile.totalDefense != null && Number.isFinite(Number(profile.totalDefense)) ? `VTD ${profile.totalDefense}` : 'Verteidigung fehlt';
-  const hitPoints = profile.currentHitPoints != null && profile.maximumHitPoints != null
-    ? ` · ${profile.currentHitPoints}/${profile.maximumHitPoints} TP`
-    : '';
-  return `${profile.name} · ${defense}${hitPoints}`;
-}
-
-function activationLabel(value = '') {
-  return ({
-    action: 'Aktion',
-    'bonus-action': 'Bonusaktion',
-    reaction: 'Reaktion',
-    'special-action': 'Besondere Aktion',
-    passive: 'Passiv'
-  })[String(value || '')] || 'Aktion';
 }
 
 function renderRuleOption(option = {}) {
@@ -262,78 +32,14 @@ function renderRuleOption(option = {}) {
   </label>`;
 }
 
-function renderMetricCard({ icon, label, value, note = '', tone = '' } = {}) {
-  return `<article class="combat-composer-metric${tone ? ` combat-composer-metric--${escapeHtml(tone)}` : ''}">
-    <span class="combat-composer-metric-icon" aria-hidden="true">${escapeHtml(icon)}</span>
-    <span>${escapeHtml(label)}</span>
-    <strong>${escapeHtml(value)}</strong>
-    ${note ? `<small>${escapeHtml(note)}</small>` : ''}
-  </article>`;
-}
-
-function renderCombatValueStrip(actor = {}) {
-  const stats = getCombatDisplayStats(actor);
-  return `<section class="combat-composer-values combat-composer-values--martial" aria-label="Kampfwerte">
-    <div class="combat-resource-group-heading"><span>Kampfwerte</span><small>aus dem aktiven Profil</small></div>
-    <div class="combat-composer-metrics">
-      ${renderMetricCard({ icon: '⚔', label: 'Treffermodifikator', value: stats.attack, tone: 'attack' })}
-      ${renderMetricCard({ icon: '✦', label: 'Schaden', value: stats.damage, note: actor.weapon?.damageType || '', tone: 'damage' })}
-      ${renderMetricCard({ icon: '⌛', label: 'Aktionsart', value: stats.activation, tone: 'action' })}
-    </div>
-  </section>`;
-}
-
-function renderMagicValueStrip(actor = {}) {
-  const stats = getMagicDisplayStats(actor);
-  return `<section class="combat-composer-values combat-composer-values--magic" aria-label="Zauberwerte">
-    <div class="combat-resource-group-heading"><span>Zauberwerte</span><small>aus Attribut, Kompetenz und Profilregeln</small></div>
-    <div class="combat-composer-metrics">
-      ${renderMetricCard({ icon: '✷', label: 'Zauber-SG', value: stats.saveDc, note: 'Schwierigkeit für Rettungswürfe', tone: 'save' })}
-      ${renderMetricCard({ icon: '✧', label: 'Zauber-Treffer', value: signedNumber(stats.spellAttack), note: 'Modifikator des Zauberangriffs', tone: 'spell-attack' })}
-      ${renderMetricCard({ icon: '◈', label: 'Auflösung', value: stats.resolutionLabel, note: stats.cantrip ? 'Zaubertrick · kein Mana oder Zauberplatz' : stats.spellLevelLabel, tone: 'resolution' })}
-    </div>
-  </section>`;
-}
-
-function renderPaymentPanel({ actor = {}, cards = [], groups = {}, magic = false, paymentState = 'ready', paymentStatus = '' } = {}) {
-  const actionGroup = renderResourceGroup({
-    title: 'Aktionsökonomie',
-    kicker: 'Aura-Fokus ersetzt das gesamte reguläre Kostenpaket',
-    cards: groups.actions,
-    variant: 'action',
-    className: 'combat-resource-group--actions'
-  });
-  const additionalGroups = magic
-    ? `<div class="combat-magic-resource-row">
-        ${renderResourceGroup({ title: 'Mana', kicker: 'magische Energie', cards: groups.mana, variant: 'pool', className: 'combat-resource-group--mana' })}
-        ${renderResourceGroup({ title: 'Weitere magische Reserven', kicker: 'fokus · celestial · infernal · pakt', cards: groups.otherResources, variant: 'pool', className: 'combat-resource-group--arcane' })}
-      </div>`
-    : renderResourceGroup({
-      title: 'Weitere Kampfressourcen',
-      kicker: 'nur falls die gewählte Handlung sie nutzt',
-      cards: groups.otherResources,
-      variant: 'pool',
-      className: 'combat-resource-group--martial-extra'
-    });
-  return `<div class="combat-payment combat-payment--${magic ? 'magic' : 'martial'}" data-state="${escapeHtml(paymentState)}">
-    <div class="combat-payment-head">
-      <span>${magic ? 'Zauberkosten & Ressourcen' : 'Aktionsökonomie & Kosten'}</span>
-      <strong>${escapeHtml(paymentStatus)}</strong>
-    </div>
-    <div class="combat-payment-layout">
-      <div class="combat-payment-main">${actionGroup}${additionalGroups}</div>
-      ${renderCostSummary(cards, actor.cheats?.enabled === true)}
-    </div>
-    <p>${actor.cheats?.enabled
-      ? 'Alle Kosten entfallen; die Werte bleiben zur Übersicht sichtbar.'
-      : 'Die gewählte Handlung bestimmt das vollständige Kostenpaket. Ein Klick auf eine markierte Ressource reserviert immer das ganze Paket; die Regeln selbst bleiben unverändert.'}</p>
-  </div>`;
-}
-
 export function mountCombatComposer({ card, segment, actor, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
-  card?.querySelector('[data-combat-composer]')?.remove();
   if (!card) return;
+  const previousComposer = card.querySelector('[data-combat-composer]');
+  const viewState = captureComposerViewState(previousComposer);
+  previousComposer?.remove();
   const composer = document.createElement('section');
+  bindWeaponImageFallback(composer);
+  bindTargetPortraitFallback(composer);
   composer.className = 'combat-composer';
   composer.dataset.combatComposer = '';
   composer.dataset.combatSegmentId = String(segment?.id || '');
@@ -356,87 +62,98 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
     ? 'two-handed'
     : 'one-handed';
-  const supportsMultipleTargets = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
-  const targetOptions = targets.map(target => {
-    const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
-    return `<option value="${escapeHtml(target.characterId)}"${selectedTargetIds.has(String(target.characterId)) ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(optionLabel(target))}</option>`;
-  }).join('');
-  const actionOptions = (actor.actions || []).map(action => (
-    `<option value="${escapeHtml(action.id)}"${action.id === selectedActionId ? ' selected' : ''}${action.compatible === false ? ' disabled' : ''}>${escapeHtml(activationLabel(action.activationType))} · ${escapeHtml(action.kindLabel)} · ${escapeHtml(action.name)}${action.spellLevelLabel ? ` · ${escapeHtml(action.spellLevelLabel)}` : ''}${action.formula ? ` · ${escapeHtml(action.formula.toUpperCase().replace(/D/g, 'W'))}` : ''}${action.compatible === false ? ` · ${action.kind === 'equipment-switch' ? 'bereits aktiv' : 'nicht mit aktiver Waffe möglich'}` : ''}</option>`
-  )).join('');
+  const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || 1);
+  const supportsMultipleTargets = maximumTargets > 1
+    || (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
+  const targetOptions = renderTargetOptions(targets, selectedTargetIds);
+  const actionOptions = renderActionOptions(actor, selectedActionId);
+  const equipmentSwitch = actor.selectedAction?.kind === 'equipment-switch';
+  const composerHint = equipmentSwitch
+    ? 'Wechsel beim Eintragen'
+    : 'Auswertung beim Eintragen';
   const spellAction = actor.selectedAction?.spellLevel != null ? actor.selectedAction : null;
   const selectedCastLevel = spellAction?.isCantrip ? 0 : Math.max(Number(spellAction?.spellLevel) || 1, Number(segment?.combatCastLevel) || Number(spellAction?.castLevel) || 1);
   const maximumCastLevel = spellAction ? Math.max(Number(spellAction.spellLevel) || 0, Math.min(10, Number(spellAction.upcast?.maximumLevel) || 10)) : 0;
   const castLevelOptions = spellAction ? Array.from({ length: maximumCastLevel - Number(spellAction.spellLevel) + 1 }, (_entry, index) => {
     const level = Number(spellAction.spellLevel) + index;
     const slot = actor.resources?.find(resource => getSpellSlotLevel(resource) === level);
-    const disabled = level > 0 && (!slot || Number(slot.current) < 1);
-    return `<option value="${level}"${level === selectedCastLevel ? ' selected' : ''}${disabled ? ' disabled' : ''}>${escapeHtml(getSpellLevelLabel(level))}${level > Number(spellAction.spellLevel) ? ' · höherstufig' : ''}${slot ? ` · ${escapeHtml(slot.current)}/${escapeHtml(slot.maximum)}` : ''}</option>`;
+    const disabled = level > 0 && (!slot || Number(slot.maximum) < 1);
+    return `<option value="${level}"${level === selectedCastLevel ? ' selected' : ''}${disabled ? ' disabled' : ''}>${escapeHtml(getSpellLevelLabel(level))}${level > Number(spellAction.spellLevel) ? ' · höherstufig' : ''}${disabled ? ' · nicht freigeschaltet' : ''}</option>`;
   }).join('') : '';
-  const paymentState = actor.cheats?.enabled ? 'cheat' : (paymentConfirmed && payment?.sufficient ? 'confirmed' : (payment?.sufficient ? 'ready' : 'missing'));
   const composerLabel = segmentKind === 'spell' ? 'Zauberhandlung' : (segmentKind === 'prayer' ? 'Gebetshandlung' : (segmentKind === 'song' ? 'Gesangshandlung' : 'Kampfhandlung'));
-  const actionFieldLabel = segmentKind === 'spell' ? 'Aktiver Zauber' : (segmentKind === 'prayer' ? 'Aktives Gebet' : (segmentKind === 'song' ? 'Aktiver Gesang' : 'Aktiver Angriff'));
+  const actionFieldLabel = equipmentSwitch ? 'Waffenwechsel' : (segmentKind === 'spell' ? 'Zauber' : (segmentKind === 'prayer' ? 'Gebet' : (segmentKind === 'song' ? 'Gesang' : 'Angriff')));
   const composerIcon = magic ? 'magic-action.png' : 'combat-action.png';
   const resourceCards = buildPaymentResourceCards({ actor, paymentOptions, paymentMode, paymentConfirmed, segmentKind });
   const resourceGroups = classifyPaymentResourceCards(resourceCards, actor, magic);
-  const paymentStatus = actor.cheats?.enabled
-    ? 'Spielleiter-Cheat · keine Kosten'
-    : (paymentConfirmed ? 'Kosten reserviert' : (payment?.sufficient ? 'Markierte Ressource anklicken' : `Nicht genug ${payment?.missing?.name || 'Ressourcen'}`));
   const paymentPanel = renderPaymentPanel({
     actor,
     cards: resourceCards,
     groups: resourceGroups,
     magic,
-    paymentState,
-    paymentStatus
+    paymentOptions,
+    paymentMode,
+    paymentConfirmed,
+    actorReady,
+    payment
   });
+  const targetField = equipmentSwitch
+    ? `<div class="combat-composer-field-static"><span>Wirkung</span><strong>Eigene Ausrüstung</strong><small>Der Wechsel gilt für alle folgenden Kampfhandlungen.</small></div>`
+    : `<label class="combat-target-field">${supportsMultipleTargets ? 'Ziele' : 'Ziel'}
+        <input type="search" data-combat-target-search placeholder="Ziel suchen …" autocomplete="off" aria-label="Ziele durchsuchen">
+        <select data-combat-input="${supportsMultipleTargets ? 'targetIds' : 'targetId'}" aria-label="${supportsMultipleTargets ? 'Ziele wählen' : 'Ziel wählen'}"${supportsMultipleTargets ? ' multiple size="4"' : ''}>
+          <option value="">Ziel wählen</option>
+          ${targetOptions}
+        </select>
+        ${renderSelectedTargetPortraits(targets, selectedTargetIds)}
+        ${supportsMultipleTargets ? `<small>Bis zu ${escapeHtml(maximumTargets > 1 ? maximumTargets : 20)} Ziele; jeder Angriff wird einzeln ausgewertet, Kosten und Munition fallen einmal an.</small>` : ''}
+      </label>`;
 
   composer.innerHTML = `
     <div class="combat-composer-title">
       <div class="combat-composer-heading"><span aria-hidden="true"><img src="./public/assets/combat-profile-icons/${composerIcon}" alt=""></span><b>${composerLabel}</b></div>
-      <strong>Ressource anklicken · würfelt beim Eintragen</strong>
+      <div class="combat-composer-profile"><strong>${escapeHtml(actor.name)}</strong><small>${composerHint}</small></div>
     </div>
+    ${magic ? '' : renderWeaponLoadout(actor)}
     <div class="combat-composer-fields combat-composer-fields--${magic ? 'magic' : 'martial'}">
-      <label>${actionFieldLabel}
-        <select data-combat-input="actionId">
+      <div class="combat-action-field"><span class="combat-field-caption">${actionFieldLabel}</span>
+        <select data-combat-input="actionId" aria-label="${actionFieldLabel}">
           ${actionOptions || '<option value="">Waffe, Zauber oder Angriff fehlt</option>'}
         </select>
-      </label>
-      <label class="combat-target-field">${supportsMultipleTargets ? 'Ziele' : 'Ziel'}
-        <input type="search" data-combat-target-search placeholder="Ziel suchen …" autocomplete="off">
-        <select data-combat-input="${supportsMultipleTargets ? 'targetIds' : 'targetId'}"${supportsMultipleTargets ? ' multiple size="4"' : ''}>
-          <option value="">Ziel wählen</option>
-          ${targetOptions}
-        </select>
-        ${supportsMultipleTargets ? '<small>Mehrere Ziele dürfen gemeinsam gewählt werden; Kosten und Munition fallen nur einmal an.</small>' : ''}
-      </label>
+        ${renderActionPicker(actor, selectedActionId)}
+        ${renderActionMetadata(actor)}
+      </div>
+      ${targetField}
+    </div>
+    <div class="combat-action-resolution">
+      ${magic ? renderMagicValueStrip(actor) : renderCombatValueStrip(actor)}
+      <div class="combat-action-controls">
       ${magic && spellAction ? `<label>Wirkungsgrad<select data-combat-input="castLevel">${castLevelOptions}</select></label>` : ''}
-      <label>Wurf
+      ${equipmentSwitch ? '' : `<label>Wurf
         <select data-combat-input="rollMode">
           <option value="normal"${rollMode === 'normal' ? ' selected' : ''}>Normal</option>
           <option value="advantage"${rollMode === 'advantage' ? ' selected' : ''}>Vorteil</option>
           <option value="disadvantage"${rollMode === 'disadvantage' ? ' selected' : ''}>Nachteil</option>
         </select>
-      </label>
-      ${!magic && actor.supportsVersatileGrip ? `<label>Führung
+      </label>`}
+      ${!magic && !equipmentSwitch && actor.supportsVersatileGrip ? `<label>Führung
         <select data-combat-input="weaponGrip">
           <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>
           <option value="two-handed"${weaponGrip === 'two-handed' ? ' selected' : ''}>Zweihändig · ${escapeHtml(actor.selectedAction?.weapon?.versatileDamageFormula || '')}</option>
         </select>
       </label>` : ''}
+      </div>
     </div>
-    ${magic ? renderMagicValueStrip(actor) : renderCombatValueStrip(actor)}
+    ${actorReady ? '' : `<p class="combat-composer-warning" role="status">${escapeHtml(actorProblem || actor.selectedAction?.disabledReason || 'Ergänze auf dem Charakter- oder Kreaturenbogen einen passenden Angriff mit Schadenswurf.')}</p>`}
     ${paymentPanel}
+    ${renderActionDetails(actor)}
     ${ruleOptions.length ? `<div class="combat-rule-selection">
-      <div class="combat-payment-head"><span>Reaktionen & Eingriffe</span><strong>optional \u00b7 servergepr\u00fcft</strong></div>
+      <div class="combat-rule-heading"><span>Reaktionen & Eingriffe</span><small>Optional</small></div>
       <p>Aktiviere nur Regeln, deren Besitzer du steuern darfst. Die Entfernung wird gegen den Regelradius gepr\u00fcft.</p>
       <div class="combat-rule-options">${ruleOptions.map(renderRuleOption).join('')}</div>
-    </div>` : ''}
-    <div class="combat-composer-equipment" data-state="${actorReady ? 'ready' : 'missing'}">
-      <span>Profilquelle</span><strong>${escapeHtml(actor.name)}</strong>
-      ${actorReady ? '' : `<small>${escapeHtml(actorProblem || actor.selectedAction?.disabledReason || 'Ergänze auf dem Charakter- oder Kreaturenbogen einen passenden Angriff mit Schadenswurf.')}</small>`}
-    </div>`;
+    </div>` : ''}`;
   card.appendChild(composer);
+  bindActionPicker(composer);
+  restoreComposerViewState(composer, viewState);
 }
 
 export function ensureCombatResolutionDialog() {
@@ -661,6 +378,8 @@ export function renderCombatEvaluation(source = {}) {
   const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
     ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
     : '';
+  const mechanicNotes = (Array.isArray(resolution.mechanicNotes) ? resolution.mechanicNotes : [])
+    .map(note => `<span><b>Waffenregel:</b> ${escapeHtml(note)}</span>`).join('');
   const effectResults = (Array.isArray(resolution.effectResults) ? resolution.effectResults : []).map(renderEffectResult).filter(Boolean).join('');
   const ruleConflicts = (Array.isArray(resolution.ruleConflicts) ? resolution.ruleConflicts : []).map(conflict => `<span class="combat-rule-conflict"><b>Regelkonflikt:</b> ${escapeHtml((conflict.applications || []).map(item => item.ruleName).join(' ↔ ') || conflict.message || 'gleichrangige Regeln')} · Entscheidung durch Beteiligte oder Erzähler</span>`).join('');
   const defeatNotice = resolution.defeat?.occurred
@@ -695,6 +414,7 @@ export function renderCombatEvaluation(source = {}) {
           ${secondarySaves}
           ${followUpAttacks}
           ${appliedCondition}
+          ${mechanicNotes}
           ${effectResults}
           ${ruleConflicts}
           ${defeatNotice}
@@ -718,6 +438,7 @@ export const combatUiInternals = Object.freeze({
   classifyPaymentResourceCards,
   getCombatDisplayStats,
   getMagicDisplayStats,
+  renderWeaponLoadout,
   isMagicSegmentKind,
   isSpellSlotResource
 });

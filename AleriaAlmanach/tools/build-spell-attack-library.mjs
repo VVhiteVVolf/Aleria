@@ -11,6 +11,7 @@ const almanachRoot = path.resolve(scriptDir, '..');
 const projectRoot = path.resolve(almanachRoot, '..');
 const exportsDir = path.join(projectRoot, 'Charakter Archiv Exporte');
 const outputFile = path.join(almanachRoot, 'data', 'spell-attack-library.json');
+const checkOnly = process.argv.includes('--check');
 
 const CHARACTERS = [
   { file: 'gawain-draig.json', classId: 'teulu', className: 'Teulu (Ritter)' },
@@ -59,10 +60,12 @@ for (const { file, classId, className } of CHARACTERS) {
   });
 }
 
+const previousOutput = checkOnly ? await readFile(outputFile, 'utf8') : '';
+const previousLibrary = previousOutput ? JSON.parse(previousOutput) : {};
 const library = {
   schemaVersion: 1,
   type: 'aleria-spell-attack-library',
-  generatedAt: new Date().toISOString(),
+  generatedAt: checkOnly ? previousLibrary.generatedAt : new Date().toISOString(),
   notes: 'Sammlung aller Zauber, Techniken und besonderen Fähigkeiten, die bislang für Spielercharaktere gebaut wurden - als Fundus für künftige Charaktere derselben Klasse/Waffe/Zauberschule. Direkt aus den Charakter-Archiv-Exporten zusammengestellt; jede Kopie trägt sourceCharacter/sourceClassId zur Herkunft. Änderungen hier wirken sich NICHT auf die lebenden Charaktere aus (keine Referenz, reine Ablage). Zum Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs (CHARACTERS-Liste im Skript um neue Charaktere ergänzen).',
   byClass,
   bySpellSchool,
@@ -71,5 +74,10 @@ const library = {
   allTechniques
 };
 
-await writeFile(outputFile, JSON.stringify(library, null, 2) + '\n', 'utf8');
-console.log(`Bibliothek aktualisiert: ${allSpells.length} Zauber, ${allTechniques.length} Techniken/Fähigkeiten (${outputFile})`);
+const nextOutput = `${JSON.stringify(library, null, 2)}\n`;
+if (checkOnly) {
+  if (previousOutput !== nextOutput) throw new Error('Die Zauber- und Attackenbibliothek ist nicht mit den Charakterbögen abgeglichen.');
+} else {
+  await writeFile(outputFile, nextOutput, 'utf8');
+}
+console.log(`Bibliothek ${checkOnly ? 'geprüft' : 'aktualisiert'}: ${allSpells.length} Zauber, ${allTechniques.length} Techniken/Fähigkeiten (${outputFile})`);

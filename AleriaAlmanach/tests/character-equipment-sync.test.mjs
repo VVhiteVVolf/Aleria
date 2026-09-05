@@ -21,7 +21,8 @@ test('direkt im Kampfbogen angelegte Waffen erzeugen genau einen stabil verknuep
     combatProfile: baseProfile({
       weapons: [{
         id: 'draig-sword', name: 'Draig Ritterschwert', damageFormula: '1d8',
-        versatileDamageFormula: '1d10', weaponType: 'sword', training: 'martial', equipped: true
+        versatileDamageFormula: '1d10', weaponType: 'sword', training: 'martial', equipped: true,
+        image: 'https://i.imgur.com/38Na5EY.png'
       }]
     }),
     characterId: 'gawain-draig',
@@ -32,6 +33,7 @@ test('direkt im Kampfbogen angelegte Waffen erzeugen genau einen stabil verknuep
   assert.equal(first.combatProfile.weapons[0].inventoryItemId, first.inventory.items[0].id);
   assert.equal(first.inventory.items[0].equipmentLink.combatEntryId, 'draig-sword');
   assert.equal(first.inventory.items[0].combatDefinition.versatileDamageFormula, '1d10');
+  assert.equal(first.inventory.items[0].image, 'https://i.imgur.com/38Na5EY.png');
 
   const second = synchronizeEquipmentFromCombat({
     inventory: first.inventory,
@@ -55,10 +57,12 @@ test('Inventar- und Kampfbogenaenderungen werden in beide Richtungen uebernommen
   assert.equal(fromCombat.inventory.items[0].combatDefinition.damageFormula, '1d6');
 
   fromCombat.inventory.items[0].name = 'Draig Parierdolch';
+  fromCombat.inventory.items[0].image = 'https://i.imgur.com/caR593j.png';
   fromCombat.inventory.items[0].combatDefinition.damageFormula = '1d4+1';
   const fromInventory = synchronizeEquipmentFromInventory(fromCombat);
   assert.equal(fromInventory.combatProfile.weapons[0].name, 'Draig Parierdolch');
   assert.equal(fromInventory.combatProfile.weapons[0].damageFormula, '1d4+1');
+  assert.equal(fromInventory.combatProfile.weapons[0].image, 'https://i.imgur.com/caR593j.png');
 
   const removedFromInventory = synchronizeEquipmentFromInventory({
     inventory: { ...fromInventory.inventory, items: [] },

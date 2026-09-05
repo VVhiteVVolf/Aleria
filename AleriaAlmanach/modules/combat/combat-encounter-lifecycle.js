@@ -1,4 +1,4 @@
-import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js';
+import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260905-party-combat-v1';
 import { captureEncounterSnapshot } from './combat-encounter-summary.js';
 import { getDefeatExperienceReward } from './combat-progression.js';
 

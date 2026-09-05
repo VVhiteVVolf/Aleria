@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 
 export const CHARACTER_DATABASE_SCHEMA_VERSION = 1;
+const CHARACTER_OVERLAY_MARKER = '__aleriaCharacterOverlay';
 
 const GROUP_TABS = new Map([
   ['zum roten drachen', 'Zum Roten Drachen'],
@@ -341,6 +342,16 @@ function sourcePriority(character) {
   return meaningfulSize(character) * 1_000_000 + Math.floor(updatedAt / 1000);
 }
 
+export function markCharacterDatabaseOverlay(character = {}) {
+  Object.defineProperty(character, CHARACTER_OVERLAY_MARKER, {
+    value: true,
+    enumerable: false,
+    configurable: false,
+    writable: false
+  });
+  return character;
+}
+
 function mergeArrayValues(primary, fallback) {
   return uniqueBy(
     [...(Array.isArray(primary) ? primary : []), ...(Array.isArray(fallback) ? fallback : [])],
@@ -348,13 +359,15 @@ function mergeArrayValues(primary, fallback) {
   ).map(item => structuredClone(item));
 }
 
-function fillMissingValues(primary, fallback) {
+function fillMissingValues(primary, fallback, path = '') {
   if (primary === undefined || primary === null || primary === '') return structuredClone(fallback);
+  if (path === 'combatProfile') return structuredClone(primary);
   if (Array.isArray(primary) || Array.isArray(fallback)) return mergeArrayValues(primary, fallback);
   if (typeof primary === 'object' && typeof fallback === 'object' && primary && fallback) {
     const merged = structuredClone(primary);
     Object.entries(fallback).forEach(([key, value]) => {
-      merged[key] = Object.hasOwn(merged, key) ? fillMissingValues(merged[key], value) : structuredClone(value);
+      const childPath = path ? `${path}.${key}` : key;
+      merged[key] = Object.hasOwn(merged, key) ? fillMissingValues(merged[key], value, childPath) : structuredClone(value);
     });
     return merged;
   }
@@ -382,6 +395,10 @@ function groupArchiveCharacters(characters = []) {
       (current, fallback) => fillMissingValues(current, fallback),
       structuredClone(sortedByPriority[0])
     );
+    const combatOverlay = sourceCharacters
+      .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile)
+      .sort((first, second) => sourcePriority(second) - sourcePriority(first))[0];
+    if (combatOverlay) merged.combatProfile = structuredClone(combatOverlay.combatProfile);
     merged.id = canonicalDocumentId;
     merged.aliases = uniqueBy([
       ...(Array.isArray(merged.aliases) ? merged.aliases : []),

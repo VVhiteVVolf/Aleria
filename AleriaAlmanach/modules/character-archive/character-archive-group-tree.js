@@ -21,7 +21,8 @@ export function addArchiveGroupEntry(group, entry) {
 export function sortArchiveGroups(groups) {
   const rank = { class: 0, style: 1, persons: 2, creature: 3, general: 4 };
   groups.sort((a, b) => (rank[a.type] ?? 0) - (rank[b.type] ?? 0)
-    || (a.parentEntry?.data?.number || 0) - (b.parentEntry?.data?.number || 0)
+    || (a.parentEntry?.data?.sequence ?? a.parentEntry?.data?.number ?? 0)
+      - (b.parentEntry?.data?.sequence ?? b.parentEntry?.data?.number ?? 0)
     || a.name.localeCompare(b.name, 'de', { numeric: true, sensitivity: 'base' }));
   groups.forEach(group => sortArchiveGroups(group.children));
   return groups;

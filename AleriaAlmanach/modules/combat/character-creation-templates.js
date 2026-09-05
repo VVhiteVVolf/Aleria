@@ -1,5 +1,6 @@
 // Versionierte Ausgangspakete für den Stufe-1-Assistenten.
 // Die Vorlagen enthalten nur strukturierte Startdaten; individuelle Regeln bleiben im Charakterbogen editierbar.
+import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 
@@ -7,6 +8,7 @@ const weapon = (id, name, weaponType, damageFormula, damageType, attackAttribute
   id: `starter-${id}`,
   name,
   weaponType,
+  weaponProfileId: extras.weaponProfileId || '',
   training: 'martial',
   damageFormula,
   damageType,
@@ -165,17 +167,20 @@ export const CHARACTER_BACKGROUND_TEMPLATES = Object.freeze([
 
 export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
   {
+    id: 'cenyr-milwr', group: 'Cenyr-Klassen', label: 'Milwr', subtitle: 'Cenyr · Waffenknecht und Miliz',
+    rulesStatus: 'partial',
+    description: 'Milwr im Dienst Cenyrs. Die Drachentanz-Ausbildung ist angelegt; Klassenwerte und konkrete Startausrüstung bleiben offen.',
+    // No guessed hit die, equipment statistics, saving throws or resource bonuses.
+    weapons: [], armorItems: []
+  },
+  {
     id: 'teulu', group: 'Ritterkasten', label: 'Teulu', subtitle: 'Schwertkämpfer',
     description: 'Schwertkämpfer in mittlerer und schwerer Rüstung.',
     hitDie: 10,
     savingThrowProficiencies: ['strength', 'constitution'],
     proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'sword'] },
-    weapons: [weapon('teulu-longsword', 'Langschwert', 'sword', '1d8', 'Hieb')],
+    weapons: [weapon('teulu-longsword', 'Langschwert', 'sword', '1d8', 'Hieb', 'strength', { weaponProfileId: 'sword' })],
     armorItems: [armor('teulu-chainmail', 'Kettenhemd', 'heavy', 16, 'none')],
-    combatStyleGrants: [
-      { styleId: 'drachentanz', formId: 'drachentanz-form-i-jungdrache', minimumLevel: 1 },
-      { styleId: 'drachentanz', formId: 'drachentanz-form-ii-schwertdrache', minimumLevel: 7 }
-    ]
   },
   {
     id: 'cantref', group: 'Ritterkasten', label: 'Cantref', subtitle: 'Speerkämpfer',
@@ -183,7 +188,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     hitDie: 10,
     savingThrowProficiencies: ['strength', 'constitution'],
     proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'spear', 'polearm'] },
-    weapons: [weapon('cantref-spear', 'Speer', 'spear', '1d6', 'Stich', 'strength', { properties: 'Vielseitig · Startausrüstung der gewählten Klasse' })],
+    weapons: [weapon('cantref-spear', 'Speer', 'spear', '1d6', 'Stich', 'strength', { weaponProfileId: 'spear', properties: 'Vielseitig · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('cantref-chainmail', 'Kettenhemd', 'heavy', 16, 'none')]
   },
   {
@@ -193,8 +198,8 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     savingThrowProficiencies: ['dexterity', 'wisdom'],
     proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'bow', 'sword'] },
     weapons: [
-      weapon('helwyr-longbow', 'Langbogen', 'bow', '1d8', 'Stich', 'dexterity', { range: 'Fernkampf', properties: 'Zweihändig · Munition · Startausrüstung der gewählten Klasse' }),
-      weapon('helwyr-shortsword', 'Kurzschwert', 'sword', '1d6', 'Hieb', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })
+      weapon('helwyr-longbow', 'Langbogen', 'bow', '1d8', 'Stich', 'dexterity', { weaponProfileId: 'longbow', range: 'Fernkampf', properties: 'Zweihändig · Munition · Startausrüstung der gewählten Klasse' }),
+      weapon('helwyr-shortsword', 'Kurzschwert', 'sword', '1d6', 'Hieb', 'dexterity', { weaponProfileId: 'sword', properties: 'Finesse · Startausrüstung der gewählten Klasse' })
     ],
     armorItems: [armor('helwyr-leather', 'Lederrüstung', 'light', 11, 'full')]
   },
@@ -205,8 +210,8 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     savingThrowProficiencies: ['strength', 'constitution'],
     proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'spear', 'sword'], tools: ['Reittiere'] },
     weapons: [
-      weapon('uchelwyr-lance', 'Lanze', 'spear', '1d12', 'Stich', 'strength', { properties: 'Beritten · Reichweite · Startausrüstung der gewählten Klasse' }),
-      weapon('uchelwyr-longsword', 'Langschwert', 'sword', '1d8', 'Hieb')
+      weapon('uchelwyr-lance', 'Lanze', 'spear', '1d12', 'Stich', 'strength', { weaponProfileId: 'lance', properties: 'Beritten · Reichweite · Startausrüstung der gewählten Klasse' }),
+      weapon('uchelwyr-longsword', 'Langschwert', 'sword', '1d8', 'Hieb', 'strength', { weaponProfileId: 'sword' })
     ],
     armorItems: [armor('uchelwyr-chainmail', 'Kettenhemd', 'heavy', 16, 'none')]
   },
@@ -216,7 +221,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     hitDie: 12,
     savingThrowProficiencies: ['strength', 'constitution'],
     proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'martial', 'all'] },
-    weapons: [weapon('arthwyr-greataxe', 'Großaxt', 'axe', '1d12', 'Hieb', 'strength', { properties: 'Schwer · Zweihändig · Startausrüstung der gewählten Klasse' })],
+    weapons: [weapon('arthwyr-greatsword', 'Großschwert', 'sword', '2d6', 'Hieb', 'strength', { weaponProfileId: 'greatsword', properties: 'Schwer · Zweihändig · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('arthwyr-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)]
   },
   {
@@ -225,9 +230,9 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     hitDie: 8,
     savingThrowProficiencies: ['dexterity', 'charisma'],
     proficiencies: { armor: ['light'], weapons: ['simple', 'rapier', 'sword'], tools: ['Musikinstrument'] },
-    weapons: [weapon('barddwyr-rapier', 'Rapier', 'sword', '1d8', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
+    weapons: [weapon('barddwyr-rapier', 'Rapier', 'sword', '1d8', 'Stich', 'dexterity', { weaponProfileId: 'rapier', properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('barddwyr-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
-    magic: { enabled: true, casterTier: 'full', castingAttribute: 'charisma', notes: 'Barddwyr wirken ihre Magie durch Stimme, Vortrag und Instrument.' }
+    magic: { enabled: false, casterTier: 'full', castingAttribute: 'charisma', notes: 'Barddwyr beginnen ihre Grundzauber, Verstärkungen und Rituale auf Stufe 6.' }
   },
   {
     id: 'morwyr', group: 'Vennyr-Klassen', label: 'Morwyr', subtitle: 'Seekrieger',
@@ -533,7 +538,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     }
   },
   {
-    id: 'hexer', group: 'Universelle Klassen', label: 'Hexer', subtitle: 'Bündnisträger einer fremden Macht',
+    id: 'hexer', group: 'Universelle Klassen', label: 'Paktträger', subtitle: 'Bündnisträger einer fremden Macht',
     description: 'Bündnisträger, der seine Magie von einem übernatürlichen Gönner statt eigenem Studium oder Glauben bezieht.',
     hitDie: 8,
     savingThrowProficiencies: ['wisdom', 'charisma'],
@@ -563,7 +568,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
       notes: 'Fokus speist waffenlose Kampfkunsttechniken, strukturell getrennt von Mana. Eigene Techniken werden dem Charakterbogen später ergänzt.'
     }
   }
-]);
+].map(withCenyrClassTraining));
 
 export const CHARACTER_CREATION_TEMPLATES = Object.freeze({
   ancestry: CHARACTER_ANCESTRY_TEMPLATES,

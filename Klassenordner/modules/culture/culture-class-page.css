@@ -1,0 +1,92 @@
+.cenyr-class-page { --class-accent: #735727; --class-deep: #393527; --class-tint: #ecddb4; }
+.cenyr-class-page .class-book-page { border-top: 5px solid #927131; }
+.cenyr-class-page .class-emblem { border-radius: 8px 8px 48% 48%; background: linear-gradient(150deg, #e9d6a5, #f8efdc); }
+.cenyr-cover-path { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; padding: 15px 0 20px; font-size: 13px; color: #705c38; }
+.cenyr-cover-path > span::after { content: '›'; padding-left: 14px; color: #aa8847; }
+.cenyr-cover-path a { text-underline-offset: 4px; }
+.cenyr-class-page .class-cover-kind { max-width: 650px; line-height: 1.8; }
+.cenyr-class-page .class-facts { margin-bottom: 28px; }
+.cenyr-training { padding: clamp(18px, 3vw, 34px); margin-block: 15px 48px; border: 1px solid #b59860; background: linear-gradient(125deg, #efe1bf, #f5ead5 60%, #e7d6b1); box-shadow: inset 0 0 0 5px #f9f0dc; }
+.cenyr-training-intro { display: flex; align-items: start; gap: 24px; }
+.cenyr-training-intro h3 { font-size: 24px; margin: 8px 0 14px; font-weight: normal; }
+.cenyr-training-intro p { max-width: 740px; font-size: 15px; line-height: 1.7; }
+.cenyr-training-intro .eyebrow { font-size: 10px; color: #735727; }
+.cenyr-plan-status { flex: 0 0 auto; padding: 6px 10px; border: 1px dashed #95763a; color: #725527; font-size: 12px; white-space: nowrap; }
+.cenyr-training-phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 20px 0 12px; }
+.cenyr-training-phases article, .cenyr-training-profile article { border: 1px solid #c7ad78; padding: 14px; background: rgba(255, 249, 235, .62); }
+.cenyr-training-phases span, .cenyr-training-profile span { display: block; color: #80632f; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; }
+.cenyr-training-phases strong, .cenyr-training-profile strong { display: block; margin-top: 7px; color: #4e412c; font-size: 14px; line-height: 1.5; }
+.cenyr-training-phases small, .cenyr-training-profile small { display: block; margin-top: 6px; color: #776342; line-height: 1.5; }
+.cenyr-training-profile { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 22px; }
+.cenyr-training-branches, .cenyr-weapon-variants { margin: 24px 0; }
+.cenyr-training-branches > h3, .cenyr-weapon-variants > h3 { margin: 0 0 10px; color: #5b4727; }
+.cenyr-training-branches > div, .cenyr-weapon-variants > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.cenyr-training-branches article, .cenyr-weapon-variants article { border: 1px solid #c7ad78; padding: 14px; background: rgba(255, 249, 235, .62); }
+.cenyr-training-branches span { color: #80632f; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; }
+.cenyr-training-branches strong, .cenyr-weapon-variants strong { display: block; margin-top: 5px; color: #4e412c; font-weight: normal; }
+.cenyr-training-branches small, .cenyr-training-branches b { display: block; margin-top: 7px; color: #776342; font-size: 12px; line-height: 1.55; }
+.cenyr-training-branches b { color: #6e511f; }
+.cenyr-weapon-variants article p, .cenyr-weapon-variants > p { margin: 7px 0 0; color: #776342; font-size: 13px; line-height: 1.6; }
+.cenyr-level-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; align-items: center; margin-block: 22px 14px; padding: 16px 18px; background: #393527; color: #f4e5c1; }
+.cenyr-level-toolbar label { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+.cenyr-level-toolbar select { font: inherit; background: #fbf1da; color: #393527; padding: 8px 30px 8px 12px; border: 1px solid #bf9a54; min-height: 40px; }
+.cenyr-level-toolbar p { margin: 0; font-size: 14px; }
+.cenyr-training-note { color: #685536; font-size: 13px; line-height: 1.7; }
+.cenyr-level-table { margin: 22px 0 32px; border: 1px solid #b9a077; background: #fbf3e2; }
+.cenyr-level-table > summary { padding: 16px; font-size: 14px; color: #665027; }
+.cenyr-level-table > summary span { float: right; letter-spacing: 2px; font-size: 12px; }
+.cenyr-table-scroll { max-width: 100%; overflow-x: auto; }
+.cenyr-table-scroll table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+.cenyr-table-scroll caption { text-align: left; padding: 12px 16px; color: #756041; font-size: 12px; }
+.cenyr-table-scroll th, .cenyr-table-scroll td { border-top: 1px solid #d7c8a8; padding: 11px 14px; line-height: 1.55; }
+.cenyr-table-scroll thead { background: #e5d4ae; color: #594629; }
+.cenyr-table-scroll tbody th { color: #80622f; }
+.cenyr-table-scroll tr[aria-current] { background: #ead8a9; box-shadow: inset 3px 0 #89672a; }
+.cenyr-combat-style > h3 { margin-block: 7px 12px; font-size: 30px; font-weight: normal; }
+.cenyr-combat-style > p { font-size: 14px; color: #6e5a3a; line-height: 1.7; }
+.cenyr-forms { margin-top: 20px; }
+.cenyr-form { margin-block: 10px; border: 1px solid #bea779; background: #f7edda; }
+.cenyr-form[data-access="blocked"] { opacity: .72; background: #eee5d6; }
+.cenyr-form > summary { display: flex; gap: 14px; align-items: center; padding: 16px; cursor: pointer; list-style: none; }
+.cenyr-form > summary::after { content: '+'; margin-left: auto; font-size: 24px; color: #8a6a31; }
+.cenyr-form[open] > summary::after { content: '−'; }
+.cenyr-form[open] > summary { background: #e9d8b4; border-bottom: 1px solid #bea779; }
+.cenyr-form-number { width: 36px; height: 42px; flex: 0 0 36px; display: grid; place-items: center; border: 1px solid #a78951; border-radius: 0 0 45% 45%; color: #775824; font-size: 21px; }
+.cenyr-form strong { display: block; font-size: 17px; font-weight: normal; }
+.cenyr-form small { display: block; margin-top: 5px; color: #786244; font-size: 12px; }
+.cenyr-form-count { margin-left: auto; font-size: 12px; white-space: nowrap; color: #786244; }
+.cenyr-attacks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 16px; }
+.cenyr-attack { border: 1px solid #ccb88d; padding: 16px; background: #faf4e7; }
+.cenyr-attack[data-available="true"] { border-color: #8a773e; box-shadow: inset 3px 0 #8a773e; background: #f9f1dd; }
+.cenyr-attack-heading { display: flex; gap: 12px; align-items: start; justify-content: space-between; }
+.cenyr-attack-heading h4 { font-size: 17px; line-height: 1.4; color: #594629; }
+.cenyr-attack-heading > span { flex-shrink: 0; color: #82663a; font-size: 11px; padding-top: 4px; }
+.cenyr-attack p { font-size: 13px; line-height: 1.7; margin-top: 12px; }
+.cenyr-attack dl { display: grid; gap: 10px; font-size: 12px; margin: 14px 0; border-block: 1px solid #ddd0b4; padding-block: 12px; }
+.cenyr-attack dt { text-transform: uppercase; letter-spacing: 1px; font-size: 10px; color: #7a6136; }
+.cenyr-attack dd { margin: 5px 0 0; line-height: 1.6; }
+.cenyr-attack-effect { color: #534532; }
+.cenyr-attack-modifiers { border-left: 2px solid #9a793c; padding-left: 10px; color: #6d5124; font-size: 12px !important; font-weight: bold; }
+.cenyr-attack[data-status="draft"] .cenyr-attack-heading > span { border: 1px solid #c7ad78; padding: 3px 6px; background: #efe1c2; }
+.cenyr-form-empty { padding: 8px 20px 20px; font-size: 14px; color: #776044; }
+.cenyr-form-note { margin: 0; padding: 12px 20px 0; color: #674f27; font-size: 13px; line-height: 1.6; }
+.cenyr-pending-training { border-top: 1px solid #bda478; margin-top: 26px; padding-top: 24px; }
+.cenyr-pending-training h3 { font-size: 22px; font-weight: normal; }
+.cenyr-pending-training ul { padding-left: 20px; font-size: 14px; line-height: 2; }
+.cenyr-pending-training span, .cenyr-pending-training p { color: #76613e; font-size: 13px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .cenyr-training-intro { flex-direction: column; gap: 8px; }
+  .cenyr-training-phases, .cenyr-training-profile { grid-template-columns: 1fr; }
+  .cenyr-attacks { grid-template-columns: 1fr; padding: 10px; }
+  .cenyr-form > summary { gap: 10px; padding: 12px; }
+  .cenyr-form-count { display: none; }
+  .cenyr-training { padding: 18px 12px; }
+  .cenyr-training .class-chapter-heading { gap: 8px; }
+  .cenyr-training .class-chapter-heading h2 { font-size: 23px; }
+  .cenyr-table-scroll th, .cenyr-table-scroll td { padding: 9px 8px; }
+}
+@media print {
+  .cenyr-training { background: white; box-shadow: none; }
+  .cenyr-level-toolbar { display: none; }
+  .cenyr-attack { break-inside: avoid; }
+}

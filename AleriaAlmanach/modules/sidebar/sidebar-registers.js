@@ -17,7 +17,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'ereignisse', label: 'Ereignisse', icon: 'Ereignisse.png' },
   { key: 'gilden', label: 'Gilden', icon: 'Gilden.png' },
   { key: 'kalender', label: 'Kalender', icon: 'Kalender.png' },
-  { key: 'klassen', label: 'Klassen', icon: 'Klassen.png' },
+  { key: 'klassen', label: 'Klassen', note: 'Basisklassen und kulturelle Pfade', icon: 'Klassen.png', href: '../Klassenordner/Klassenseite.html' },
   { key: 'kontinente', label: 'Kontinente', note: 'Weltkarte und Reiche', icon: 'Kontinente.png', href: '../Kontinente/index.html' },
   { key: 'kulte', label: 'Kulte', icon: 'Kulte.png' },
   { key: 'markt', label: 'Markt', note: 'Items und Güter', icon: 'Markt.png', action: 'open-item-database' },

@@ -37,7 +37,7 @@ function isCommentCharacterAllowedForActivePlayer(char) {
   return !owner || owner === activePlayer;
 }
 
-function setCommentPlayerFilter(player) {
+function setCommentPlayerFilter(player, options = {}) {
   _commentPlayerFilter = normalizeCommentPlayerOwner(player);
   document.querySelectorAll('[data-comment-player-filter]').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.commentPlayerFilter === _commentPlayerFilter);
@@ -59,19 +59,19 @@ function setCommentPlayerFilter(player) {
       document.getElementById('cf-emote-picker').innerHTML = '';
     }
   }
-  if (typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false && typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
+  if (options.render !== false) updateCommentFormPreview();
+  if (options.persist !== false) persistCommentDraft();
 }
 
-function setCommentKind(kind) {
+function setCommentKind(kind, options = {}) {
   _commentKind = normalizeCommentKind(kind);
   if (_commentKind === 'narrator') _commentKind = 'speech';
   document.querySelectorAll('[data-comment-kind]').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.commentKind === _commentKind);
   });
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false) updateCommentFormPreview();
+  if (options.persist !== false) persistCommentDraft();
 }
 
 function normalizeImageUrlForStorage(value) {
@@ -180,7 +180,7 @@ function updateCommentActorModeCopy(mode) {
   if (manualToggle) manualToggle.hidden = creatureMode;
 }
 
-function setCommentMode(mode) {
+function setCommentMode(mode, options = {}) {
   mode = normalizeCommentComposerMode(mode);
   _commentMode = mode;
   document.getElementById('cf-mode-char')?.classList.toggle('active', mode === 'charakter');
@@ -215,11 +215,13 @@ function setCommentMode(mode) {
     charSection.dataset.actorMode = mode;
     narratorHint.style.display = 'none';
     updateCommentActorModeCopy(mode);
-    if (typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
+    if (options.render !== false && typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
   }
-  window.AleriaCommentSceneCast?.render?.();
-  renderCommentSegmentActions(false);
-  renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
+  if (options.render !== false) {
+    window.AleriaCommentSceneCast?.render?.();
+    renderCommentSegmentActions(false);
+    renderCommentSegmentList();
+    updateCommentFormPreview();
+  }
+  if (options.persist !== false) persistCommentDraft();
 }

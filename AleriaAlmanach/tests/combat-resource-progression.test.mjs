@@ -11,25 +11,26 @@ import {
   getSpellManaCost,
   SPELL_GRADE_MANA_COST
 } from '../modules/combat/combat-resource-progression.js';
+import { fillActionPoolChoices } from '../modules/combat/combat-action-progression.js';
 
-test('Aktionsökonomie wächst über die festgelegten Stufen bis Rang 30', () => {
+test('Aktionsökonomie wächst durch gewählte Pools und bleibt auf 2/2/2 sowie 6 begrenzt', () => {
   assert.deepEqual(getCombatActionEconomy(1), {
     action: 1, 'bonus-action': 1, reaction: 1, 'special-action': 2
   });
   assert.deepEqual(getCombatActionEconomy(6), {
-    action: 1, 'bonus-action': 1, reaction: 2, 'special-action': 2
+    action: 1, 'bonus-action': 1, reaction: 1, 'special-action': 2
   });
-  assert.deepEqual(getCombatActionEconomy(11), {
-    action: 1, 'bonus-action': 2, reaction: 2, 'special-action': 3
+  assert.deepEqual(getCombatActionEconomy(11, 0, fillActionPoolChoices([], 11)), {
+    action: 2, 'bonus-action': 1, reaction: 1, 'special-action': 4
   });
-  assert.deepEqual(getCombatActionEconomy(16), {
-    action: 2, 'bonus-action': 2, reaction: 3, 'special-action': 3
+  assert.deepEqual(getCombatActionEconomy(16, 0, fillActionPoolChoices([], 16)), {
+    action: 2, 'bonus-action': 1, reaction: 2, 'special-action': 5
   });
-  assert.deepEqual(getCombatActionEconomy(20), {
-    action: 3, 'bonus-action': 2, reaction: 3, 'special-action': 4
+  assert.deepEqual(getCombatActionEconomy(20, 0, fillActionPoolChoices([], 20)), {
+    action: 2, 'bonus-action': 2, reaction: 2, 'special-action': 6
   });
-  assert.deepEqual(getCombatActionEconomy(20, 10), {
-    action: 4, 'bonus-action': 3, reaction: 4, 'special-action': 5
+  assert.deepEqual(getCombatActionEconomy(20, 10, fillActionPoolChoices([], 20)), {
+    action: 2, 'bonus-action': 2, reaction: 2, 'special-action': 6
   });
 });
 
@@ -72,14 +73,17 @@ test('Mana-Pool wächst je Stufe (D&Ds Spielpunkte-Tabelle plus Zaubertrick-Pols
   assert.equal(getCasterManaMaximum('unknown-tier', 1), getCasterManaMaximum('full', 1), 'unbekannte Caster-Stufe fällt auf Vollcaster zurück');
 });
 
-test('Aura-Fokuspunkte: erster Punkt bei Stufe 6, danach alle vier Stufen einer bis vier bei Stufe 18, Sonderränge geben je einen extra', () => {
+test('Aura-Fokuspunkte: erster Punkt bei Stufe 8, danach alle vier Stufen einer bis vier bei Stufe 20, Sonderränge geben je einen extra', () => {
   assert.equal(getAuraFocusMaximum(1), 0);
   assert.equal(getAuraFocusMaximum(5), 0);
-  assert.equal(getAuraFocusMaximum(6), 1);
+  assert.equal(getAuraFocusMaximum(6), 0);
+  assert.equal(getAuraFocusMaximum(7), 0);
+  assert.equal(getAuraFocusMaximum(8), 1);
   assert.equal(getAuraFocusMaximum(9), 1);
-  assert.equal(getAuraFocusMaximum(10), 2);
-  assert.equal(getAuraFocusMaximum(14), 3);
-  assert.equal(getAuraFocusMaximum(18), 4);
+  assert.equal(getAuraFocusMaximum(10), 1);
+  assert.equal(getAuraFocusMaximum(12), 2);
+  assert.equal(getAuraFocusMaximum(16), 3);
+  assert.equal(getAuraFocusMaximum(19), 3);
   assert.equal(getAuraFocusMaximum(20), 4);
   assert.equal(getAuraFocusMaximum(20, 10), 14, 'Rang 30 gewährt zehn Bonuspunkte obendrauf');
 });

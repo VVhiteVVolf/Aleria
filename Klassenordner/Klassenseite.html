@@ -1,497 +1,262 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Klassenübersicht</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/klassen.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Die Klassen Alerias: fünfzehn Universalklassen mit eigenen Profilen sowie die kulturellen Pfade der Reiche.">
+  <title>Klassen · Aleria</title>
+  <link rel="stylesheet" href="assets/css/klassen.css?v=20260905-1">
+  <link rel="stylesheet" href="modules/catalog/class-catalog.css?v=20260905-1">
+  <link rel="stylesheet" href="modules/sheets/class-sheet.css?v=20260905-2">
+  <script type="module" src="assets/js/klassen.js?v=20260905-cenyr-attacks-v1"></script>
 </head>
-<body class="sidebars-active">
-
-  <!-- LEFT SIDEBAR - Stats & Navigation -->
-  <aside class="sidebar-left" id="sidebarLeft">
-    <button class="sidebar-toggle-left" id="sidebarToggleLeft" title="Sidebar ein/ausklappen">
-      <span id="toggleIconLeft">◀</span>
-    </button>
-    <div class="sidebar-content">
-      
-      <!-- Statistics Section -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-section-title">📊 Statistik</h3>
-        <div class="stat-grid">
-          <div class="stat-card">
-            <div class="stat-number" id="totalClasses">0</div>
-            <div class="stat-label">Klassen</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" id="totalLands">0</div>
-            <div class="stat-label">Länder</div>
-          </div>
+<body class="classes-page" data-class-page id="top">
+  <a class="skip-link" href="#catalog">Zum Klassenregister</a>
+  <header class="site-header">
+    <a class="almanach-link" href="../AleriaAlmanach/AleriaAlmanach.html"><span aria-hidden="true">←</span> Zum Almanach</a>
+    <span class="site-brand">Aleria <span aria-hidden="true">/</span> Klassenregister</span>
+    <a class="header-index-link" href="#catalog">Register erkunden <span aria-hidden="true">↓</span></a>
+  </header>
+  <div class="page-layout">
+    <aside class="catalog-sidebar" aria-label="Klassenverzeichnis">
+      <a class="sidebar-title" href="#top"><img src="../IconOrdner/ReiterIcons/Klassen.png" alt="" width="54" height="54"><span>Alerias<br>Klassen</span></a>
+      <p class="eyebrow">Das Verzeichnis</p>
+      <nav aria-label="Klassen nach Herkunft"><ul class="group-nav" data-role="group-nav"></ul></nav>
+      <div class="sidebar-note"><span class="eyebrow">Die Grundlagen</span><p><strong>15</strong><br>Universalklassen</p><p>Eigene Geschichten, Traditionen und Fähigkeiten.</p></div>
+    </aside>
+    <main class="catalog-main">
+      <header class="catalog-hero">
+        <div><p class="eyebrow">Codex der Berufe &amp; Pfade</p><h1>Die Klassen Alerias</h1><p class="hero-copy">Viele Herkünfte. Eigene Traditionen. Entdecke die Klassen und die Wege, die sie durch Aleria führen.</p></div>
+        <div class="hero-seal" aria-label="Fünfzehn Universalklassen"><span>Die Grundlagen</span><strong>15</strong><span>Universalklassen</span></div>
+      </header>
+      <div class="catalog-tools" data-role="catalog-tools" hidden>
+        <div class="filter-row">
+          <div class="search-field"><label for="classSearch">Klasse suchen</label><input type="search" id="classSearch" data-role="search" placeholder="Name, Herkunft oder Beschreibung …" autocomplete="off" aria-controls="catalog"></div>
+          <div class="group-field"><label for="classGroup">Herkunft</label><select id="classGroup" data-role="group-filter" aria-controls="catalog"><option value="all">Alle Herkünfte</option></select></div>
+          <button type="button" class="button button-quiet" data-action="reset-filters">Zurücksetzen</button>
         </div>
+        <div class="catalog-toolbar"><p data-role="result-count" role="status" aria-live="polite" aria-atomic="true"></p><div class="random-tools"><label class="militia-option"><input type="checkbox" data-role="exclude-militia" checked> Ohne Milizen würfeln</label><button type="button" class="button" data-action="random-class" title="Eine Klasse aus den aktuellen Suchtreffern würfeln">Klasse auswürfeln</button></div></div>
+        <p class="random-feedback" data-role="random-feedback" role="status" hidden></p>
       </div>
-      
-      <!-- Navigation Section -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-section-title">🗺️ Navigation</h3>
-        <ul class="nav-land-list" id="navLandList">
-          <!-- Will be populated by JavaScript -->
-        </ul>
-      </div>
-      
-    </div>
-  </aside>
-  
-  <!-- RIGHT SIDEBAR - Dynamic Lore -->
-  <aside class="sidebar-right" id="sidebarRight">
-    <button class="sidebar-toggle-right" id="sidebarToggleRight" title="Lore ein/ausklappen">
-      <span id="toggleIconRight">▶</span>
-    </button>
-    <div class="lore-container active" id="loreContainer">
-      <div class="lore-header">
-        <div class="lore-wappen" id="loreWappen">
-          <img src="https://i.imgur.com/00DWDQW.png" alt="Wappen" id="loreWappenImg">
-        </div>
-        <h2 class="lore-land-name" id="loreLandName">Willkommen</h2>
-        <p class="lore-land-subtitle" id="loreLandSubtitle">Wähle ein Land aus der Navigation</p>
-      </div>
-      
-      <div class="lore-section">
-        <h4 class="lore-section-title">⚔ Kriegertum & Ehre</h4>
-        <div class="lore-text lore-placeholder" id="loreWarriorhood">
-          <em>Hier wird beschrieben, wie Kriegertum in diesem Land definiert wird...</em>
-        </div>
-      </div>
-      
-      <div class="lore-section">
-        <h4 class="lore-section-title">👑 Gesellschaftsordnung</h4>
-        <div class="lore-text lore-placeholder" id="loreSociety">
-          <em>Informationen über Adel, Gemeinvolk und soziale Strukturen...</em>
-        </div>
-      </div>
-      
-      <div class="lore-section">
-        <h4 class="lore-section-title">📜 Hierarchie & Ränge</h4>
-        <ul class="lore-hierarchy lore-placeholder" id="loreHierarchy">
-          <li><span class="lore-rank">König/Fürst:</span> <em>Platzhalter...</em></li>
-          <li><span class="lore-rank">Hochadel:</span> <em>Platzhalter...</em></li>
-          <li><span class="lore-rank">Ritter:</span> <em>Platzhalter...</em></li>
-          <li><span class="lore-rank">Krieger:</span> <em>Platzhalter...</em></li>
-          <li><span class="lore-rank">Gemeinvolk:</span> <em>Platzhalter...</em></li>
-        </ul>
-      </div>
-    </div>
-  </aside>
-
-  <nav class="sticky-nav" id="stickyNav">
-    <span class="nav-logo">⚔ Klassen</span>
-    <div class="nav-divider"></div>
-    <a class="nav-link" href="#basis">Basisklassen</a>
-    <a class="nav-link" href="#laender">Länderpfade</a>
-    <a class="nav-link" href="#cenyr">Cenyr</a>
-    <a class="nav-link" href="#vennyr">Vennyr</a>
-    <a class="nav-link" href="#alben">Alben</a>
-    <a class="nav-link" href="#aldrimar">Aldrimar</a>
-    <a class="nav-link" href="#nordmaenner">Nordmänner</a>
-    <a class="nav-link" href="#goldmund">Goldmund & Aldingen</a>
-    <a class="nav-link" href="#blutstadt">Blutstadt</a>
-    <a class="nav-link" href="#moinneach">Móinneach</a>
-    <a class="nav-link" href="#weisenfluh">Weisenfluh</a>
-    <a class="nav-link" href="#aeldrunmar">Aeldrunmar & Talyndor</a>
-    <div class="nav-divider"></div>
-    <a class="nav-link" href="#zukuenftig">Zukünftig</a>
-    <a class="nav-link" href="#gilden">Gilden</a>
-    <a class="nav-link" href="#orden">Orden</a>
-  </nav>
-
-  <a class="back-to-top" id="backToTop" href="#top" aria-label="Nach oben">↑</a>
-
-  <div class="rpg-master-container" id="top">
-    <span class="corner corner--tl">❧</span>
-    <span class="corner corner--tr">❧</span>
-    <span class="corner corner--bl">❧</span>
-    <span class="corner corner--br">❧</span>
-
-    <h1 class="main-title">Klassenübersicht</h1>
-    <p class="title-sub">Codex der Berufe &amp; Pfade</p>
-    <div class="rune-divider">
-      <div class="rune-divider__line"></div>
-      <div class="rune-divider__center">⚜ ✦ ⚜</div>
-      <div class="rune-divider__line"></div>
-    </div>
-
-    <div class="search-wrapper">
-      <input class="search-input" type="text" id="classSearch"
-        placeholder="Klasse suchen… z.B. Magier, Skalde, Berserkir" autocomplete="off" />
-      <span class="search-icon">🔍</span>
-    </div>
-    <div class="feature-buttons">
-      <button class="random-class-btn" id="randomClassBtn">
-        <span>🎲</span> Zufällige Klasse
-      </button>
-      <button class="sound-toggle-btn" id="soundToggleBtn" title="Sound-Effekte an/aus">
-        <span id="soundIcon">🔇</span>
-      </button>
-    </div>
-    <div class="no-results" id="noResults">– Keine Klassen gefunden –</div>
-    
-    <!-- Random Class Modal -->
-    <div class="random-modal" id="randomModal">
-      <div class="random-modal-content">
-        <h3 class="random-modal-title">⚔ Zufällige Klasse würfeln ⚔</h3>
-        <p style="text-align: center; margin-bottom: 15px; font-family: 'Crimson Text', serif; font-size: 14px; color: var(--muted);">Wähle die Länder aus (Milizen ausgeschlossen):</p>
-        <div class="land-checkboxes" id="landCheckboxes"></div>
-        <div class="random-modal-buttons">
-          <button class="modal-btn cancel" id="cancelRandomBtn">Abbrechen</button>
-          <button class="modal-btn" id="rollRandomBtn">🎲 Würfeln!</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Epic Reveal Overlay -->
-    <div class="reveal-overlay" id="revealOverlay">
-      <div class="reveal-card-container">
-        <div class="reveal-card" id="revealCard">
-          <div class="reveal-card-back">
-            🎲
-          </div>
-          <div class="reveal-card-front" id="revealCardFront">
-            <div class="reveal-sparkles" id="revealSparkles"></div>
-            <!-- Content will be injected here -->
-          </div>
-        </div>
-        <button class="reveal-close-btn" id="revealCloseBtn" title="Schließen">✕</button>
-      </div>
-    </div>
-
+      <noscript><p class="notice">Die Universalklassen lassen sich direkt öffnen und lesen. Suche und Herkunftsfilter benötigen JavaScript.</p></noscript>
+      <p class="catalog-caption">Wähle eine Klasse, um ihr Profil zu öffnen.</p>
+      <div class="empty-state" data-role="no-results" hidden><h2>Keine Klasse gefunden</h2><p>Versuche einen anderen Begriff oder eine andere Herkunft.</p><button type="button" class="button" data-action="reset-filters">Alle Klassen anzeigen</button></div>
+      <div id="catalog" data-role="catalog">
     <!-- BASISKLASSEN -->
-    <div class="section-divider" id="basis">
-      <div class="section-divider__line"></div>
-      <div class="section-divider__badge">⚔ Die Basis-Klassen ⚔</div>
-      <div class="section-divider__line"></div>
-    </div>
-
-    <div class="class-grid class-grid--three">
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1956" data-tooltip="Meister des Nahkampfs" data-name="kämpfer">
-        <img src="https://i.imgur.com/blpHr0S.png" alt="Kämpfer" loading="lazy" /><span class="class-name">Kämpfer</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1968" data-tooltip="Herr zu Pferde" data-name="reiter">
-        <img src="https://i.imgur.com/x2dFvAg.png" alt="Reiter" loading="lazy" /><span class="class-name">Reiter</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1967" data-tooltip="Meister der Substanzen" data-name="alchemist">
-        <img src="https://i.imgur.com/xeD43vb.png" alt="Alchemist" loading="lazy" /><span class="class-name">Alchemist</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1966" data-tooltip="Meister der arkanen Künste" data-name="magier">
-        <img src="https://i.imgur.com/n5A2PlT.png" alt="Magier" loading="lazy" /><span class="class-name">Magier</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1965" data-tooltip="Pfad der inneren Stärke" data-name="mönch">
-        <img src="https://i.imgur.com/zCXtHAy.png" alt="Mönch" loading="lazy" /><span class="class-name">Mönch</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1964" data-tooltip="Hüter der Natur" data-name="druide">
-        <img src="https://i.imgur.com/Xy9tSn6.png" alt="Druide" loading="lazy" /><span class="class-name">Druide</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1963" data-tooltip="Dieb aus dem Schatten" data-name="schurke">
-        <img src="https://i.imgur.com/XE3TOXy.png" alt="Schurke" loading="lazy" /><span class="class-name">Schurke</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1962" data-tooltip="Gesang und Schwert" data-name="barde">
-        <img src="https://i.imgur.com/JEBhRaS.png" alt="Barde" loading="lazy" /><span class="class-name">Barde</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1961" data-tooltip="Pakt mit dunklen Mächten" data-name="hexenmeister">
-        <img src="https://i.imgur.com/5Dkv7Ri.png" alt="Hexenmeister" loading="lazy" /><span class="class-name">Hexenmeister</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1958" data-tooltip="Diener der Götter" data-name="kleriker">
-        <img src="https://i.imgur.com/05uOAbw.png" alt="Kleriker" loading="lazy" /><span class="class-name">Kleriker</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1959" data-tooltip="Heiliger Krieger" data-name="paladin">
-        <img src="https://i.imgur.com/mWd46UL.png" alt="Paladin" loading="lazy" /><span class="class-name">Paladin</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1957" data-tooltip="Ungebändigte Wildheit" data-name="barbar">
-        <img src="https://i.imgur.com/D7mPI7G.png" alt="Barbar" loading="lazy" /><span class="class-name">Barbar</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1960" data-tooltip="Späher & Jäger der Wildnis" data-name="waldläufer">
-        <img src="https://i.imgur.com/X9DByEV.png" alt="Waldläufer" loading="lazy" /><span class="class-name">Waldläufer</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1969" data-tooltip="Herr der Meere" data-name="seefahrer">
-        <img src="https://i.imgur.com/accNyX6.png" alt="Seefahrer" loading="lazy" /><span class="class-name">Seefahrer</span>
-      </a>
-      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2450" data-tooltip="Stimme der Geister" data-name="schamane">
-        <img src="https://i.imgur.com/UyMKN0J.png" alt="Schamane" loading="lazy" /><span class="class-name">Schamane</span>
-      </a>
-    </div>
+    <section class="class-section" id="basis" data-class-group>
+      <div class="land-header"><div class="land-info"><p class="eyebrow">Die Grundlagen</p><h2>Universalklassen</h2><p>Fünfzehn Wege des Kampfes, des Handwerks und der Magie.</p></div></div>
+      <div class="class-grid">
+        <a class="class-card" href="Basisklassen/kampfer/index.html" id="klasse-basis-kampfer" data-class-id="kampfer" data-entry-id="basis-kampfer" data-tooltip="Meister des Nahkampfs" data-name="Kämpfer Krieger"><img src="https://i.imgur.com/blpHr0S.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Kämpfer</span><span class="class-flavor">Meister des Nahkampfs</span></a>
+        <a class="class-card" href="Basisklassen/reiter/index.html" id="klasse-basis-reiter" data-class-id="reiter" data-entry-id="basis-reiter" data-tooltip="Herr zu Pferde" data-name="Reiter"><img src="https://i.imgur.com/x2dFvAg.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Reiter</span><span class="class-flavor">Herr zu Pferde</span></a>
+        <a class="class-card" href="Basisklassen/alchemist/index.html" id="klasse-basis-alchemist" data-class-id="alchemist" data-entry-id="basis-alchemist" data-tooltip="Meister der Substanzen" data-name="Alchemist"><img src="https://i.imgur.com/xeD43vb.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Alchemist</span><span class="class-flavor">Meister der Substanzen</span></a>
+        <a class="class-card" href="Basisklassen/magier/index.html" id="klasse-basis-magier" data-class-id="magier" data-entry-id="basis-magier" data-tooltip="Meister der arkanen Künste" data-name="Magier Zauberer"><img src="https://i.imgur.com/n5A2PlT.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Magier</span><span class="class-flavor">Meister der arkanen Künste</span></a>
+        <a class="class-card" href="Basisklassen/asket/index.html" id="klasse-basis-asket" data-class-id="asket" data-entry-id="basis-asket" data-tooltip="Pfad der inneren Stärke" data-name="Asket Mönch monch"><img src="https://i.imgur.com/zCXtHAy.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Asket</span><span class="class-flavor">Pfad der inneren Stärke</span></a>
+        <a class="class-card" href="Basisklassen/druide/index.html" id="klasse-basis-druide" data-class-id="druide" data-entry-id="basis-druide" data-tooltip="Hüter der Natur" data-name="Druide"><img src="https://i.imgur.com/Xy9tSn6.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Druide</span><span class="class-flavor">Hüter der Natur</span></a>
+        <a class="class-card" href="Basisklassen/schurke/index.html" id="klasse-basis-schurke" data-class-id="schurke" data-entry-id="basis-schurke" data-tooltip="Dieb aus dem Schatten" data-name="Schurke"><img src="https://i.imgur.com/XE3TOXy.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Schurke</span><span class="class-flavor">Dieb aus dem Schatten</span></a>
+        <a class="class-card" href="Basisklassen/barde/index.html" id="klasse-basis-barde" data-class-id="barde" data-entry-id="basis-barde" data-tooltip="Gesang und Schwert" data-name="Barde"><img src="https://i.imgur.com/JEBhRaS.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Barde</span><span class="class-flavor">Gesang und Schwert</span></a>
+        <a class="class-card" href="Basisklassen/pakttrager/index.html" id="klasse-basis-pakttrager" data-class-id="pakttrager" data-entry-id="basis-pakttrager" data-tooltip="Pakt mit dunklen Mächten" data-name="Paktträger Hexenmeister Hexer"><img src="https://i.imgur.com/5Dkv7Ri.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Paktträger</span><span class="class-flavor">Pakt mit dunklen Mächten</span></a>
+        <a class="class-card" href="Basisklassen/kleriker/index.html" id="klasse-basis-kleriker" data-class-id="kleriker" data-entry-id="basis-kleriker" data-tooltip="Diener der Götter" data-name="Kleriker"><img src="https://i.imgur.com/05uOAbw.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Kleriker</span><span class="class-flavor">Diener der Götter</span></a>
+        <a class="class-card" href="Basisklassen/eidgeschworener/index.html" id="klasse-basis-eidgeschworener" data-class-id="eidgeschworener" data-entry-id="basis-eidgeschworener" data-tooltip="Heiliger Krieger" data-name="Eidgeschworener Paladin"><img src="https://i.imgur.com/mWd46UL.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Eidgeschworener</span><span class="class-flavor">Heiliger Krieger</span></a>
+        <a class="class-card" href="Basisklassen/barbar/index.html" id="klasse-basis-barbar" data-class-id="barbar" data-entry-id="basis-barbar" data-tooltip="Ungebändigte Wildheit" data-name="Barbar"><img src="https://i.imgur.com/D7mPI7G.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Barbar</span><span class="class-flavor">Ungebändigte Wildheit</span></a>
+        <a class="class-card" href="Basisklassen/waldlaufer/index.html" id="klasse-basis-waldlaufer" data-class-id="waldlaufer" data-entry-id="basis-waldlaufer" data-tooltip="Späher &amp; Jäger der Wildnis" data-name="Waldläufer Schütze"><img src="https://i.imgur.com/X9DByEV.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Waldläufer</span><span class="class-flavor">Späher &amp; Jäger der Wildnis</span></a>
+        <a class="class-card" href="Basisklassen/seefahrer/index.html" id="klasse-basis-seefahrer" data-class-id="seefahrer" data-entry-id="basis-seefahrer" data-tooltip="Herr der Meere" data-name="Seefahrer"><img src="https://i.imgur.com/accNyX6.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Seefahrer</span><span class="class-flavor">Herr der Meere</span></a>
+        <a class="class-card" href="Basisklassen/schamane/index.html" id="klasse-basis-schamane" data-class-id="schamane" data-entry-id="basis-schamane" data-tooltip="Stimme der Geister" data-name="Schamane"><img src="https://i.imgur.com/UyMKN0J.png" alt="" width="90" height="92" loading="lazy"><span class="class-name">Schamane</span><span class="class-flavor">Stimme der Geister</span></a>
+      </div>
+    </section>
 
     <!-- LÄNDERPFADE -->
-    <div class="section-divider" id="laender">
-      <div class="section-divider__line"></div>
-      <div class="section-divider__badge">🛡 Länderspezifische Pfade 🛡</div>
-      <div class="section-divider__line"></div>
-    </div>
+    <div id="laender" aria-hidden="true"></div>
+
 
     <!-- CENYR -->
-    <section class="land-section section-cenyr" id="cenyr">
-      <img class="land-watermark" src="https://i.imgur.com/00DWDQW.png" alt="" aria-hidden="true" />
+    <section class="land-section section-cenyr" id="cenyr" data-class-group>
       <div class="land-header header-cenyr">
         <img class="land-banner" src="https://i.imgur.com/00DWDQW.png" alt="Cenyr" loading="lazy" />
         <div class="land-info"><h2>Cenyr</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card rarity-common" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1035" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/zj8Kobl.png" alt="Milwr" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1030" data-tooltip="Klassischer Ritter Cenyrs" data-name="teulu"><img src="https://i.imgur.com/ocBxSrC.png" alt="Teulu" loading="lazy" /><span class="class-name">Teulu</span><span class="class-flavor">Klassischer Ritter Cenyrs</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1031" data-tooltip="Speerkämpfer Ritter" data-name="cantref"><img src="https://i.imgur.com/10LmjQR.png" alt="Cantref" loading="lazy" /><span class="class-name">Cantref</span><span class="class-flavor">Speerkämpfer Ritter</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1034" data-tooltip="Ritter zu Pferd" data-name="uchelwyr"><img src="https://i.imgur.com/J1dBp5C.png" alt="Uchelwyr" loading="lazy" /><span class="class-name">Uchelwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1032" data-tooltip="Fernkämpfender Ritter" data-name="helwyr"><img src="https://i.imgur.com/HjxiJxW.png" alt="Helwyr" loading="lazy" /><span class="class-name">Helwyr</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
-        <a class="class-card rarity-special" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1417" data-tooltip="Ritter der Arth" data-name="arthwyr"><img src="https://i.imgur.com/xGZMBX2.png" alt="Arthwyr" loading="lazy" /><span class="class-name">Arthwyr</span><span class="class-flavor">Ritter der Arth</span></a>
-        <a class="class-card rarity-special" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1591" data-tooltip="Barde & Ritter" data-name="barddwyr"><img src="https://i.imgur.com/HvWlZul.png" alt="Barddwyr" loading="lazy" /><span class="class-name">Barddwyr</span><span class="class-flavor">Barde &amp; Ritter</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card rarity-common" href="Cenyr/milwr/index.html" id="klasse-cenyr-milwr" data-class-id="milwr" data-entry-id="cenyr-milwr" data-militia="true" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/zj8Kobl.png" alt="" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
+        <a class="class-card rarity-elite" href="Cenyr/teulu/index.html" id="klasse-cenyr-teulu" data-class-id="teulu" data-entry-id="cenyr-teulu" data-tooltip="Klassischer Ritter Cenyrs" data-name="teulu"><img src="https://i.imgur.com/ocBxSrC.png" alt="" loading="lazy" /><span class="class-name">Teulu</span><span class="class-flavor">Klassischer Ritter Cenyrs</span></a>
+        <a class="class-card rarity-elite" href="Cenyr/cantref/index.html" id="klasse-cenyr-cantref" data-class-id="cantref" data-entry-id="cenyr-cantref" data-tooltip="Speerkämpfer Ritter" data-name="cantref"><img src="https://i.imgur.com/10LmjQR.png" alt="" loading="lazy" /><span class="class-name">Cantref</span><span class="class-flavor">Speerkämpfer Ritter</span></a>
+        <a class="class-card rarity-elite" href="Cenyr/uchelwyr/index.html" id="klasse-cenyr-uchelwyr" data-class-id="uchelwyr" data-entry-id="cenyr-uchelwyr" data-tooltip="Ritter zu Pferd" data-name="uchelwyr"><img src="https://i.imgur.com/J1dBp5C.png" alt="" loading="lazy" /><span class="class-name">Uchelwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
+        <a class="class-card rarity-elite" href="Cenyr/helwyr/index.html" id="klasse-cenyr-helwyr" data-class-id="helwyr" data-entry-id="cenyr-helwyr" data-tooltip="Fernkämpfender Ritter" data-name="helwyr"><img src="https://i.imgur.com/HjxiJxW.png" alt="" loading="lazy" /><span class="class-name">Helwyr</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
+        <a class="class-card rarity-special" href="Cenyr/arthwyr/index.html" id="klasse-cenyr-arthwyr" data-class-id="arthwyr" data-entry-id="cenyr-arthwyr" data-tooltip="Ritter der Arth" data-name="arthwyr"><img src="https://i.imgur.com/xGZMBX2.png" alt="" loading="lazy" /><span class="class-name">Arthwyr</span><span class="class-flavor">Ritter der Arth</span></a>
+        <a class="class-card rarity-special" href="Cenyr/barddwyr/index.html" id="klasse-cenyr-barddwyr" data-class-id="barddwyr" data-entry-id="cenyr-barddwyr" data-tooltip="Barde & Ritter" data-name="barddwyr"><img src="https://i.imgur.com/HvWlZul.png" alt="" loading="lazy" /><span class="class-name">Barddwyr</span><span class="class-flavor">Barde &amp; Ritter</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- VENNYR -->
-    <section class="land-section section-vennyr" id="vennyr">
-      <img class="land-watermark" src="https://i.imgur.com/T8e0EqY.png" alt="" aria-hidden="true" />
+    <section class="land-section section-vennyr" id="vennyr" data-class-group>
       <div class="land-header header-vennyr">
         <img class="land-banner" src="https://i.imgur.com/T8e0EqY.png" alt="Vennyr" loading="lazy" />
         <div class="land-info"><h2>Vennyr</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card rarity-common" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1035" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/2wdIWQ2.png" alt="Milwr" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1036" data-tooltip="Ritter zur See" data-name="morwyr"><img src="https://i.imgur.com/FzoXhtJ.png" alt="Morwyr" loading="lazy" /><span class="class-name">Morwyr</span><span class="class-flavor">Ritter zur See</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1037" data-tooltip="Klassischer Vennyrischer Ritter" data-name="rhyfelwyr"><img src="https://i.imgur.com/Jh8DGNz.png" alt="Rhyfelwyr" loading="lazy" /><span class="class-name">Rhyfelwyr</span><span class="class-flavor">Klassischer Vennyrischer Ritter</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1681" data-tooltip="Fernkämpfender Ritter" data-name="ceidwyn"><img src="https://i.imgur.com/k7eQ3Kt.png" alt="Ceidwyn" loading="lazy" /><span class="class-name">Ceidwyn</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
-        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1683" data-tooltip="Ritter zu Pferd" data-name="rhiddwyr"><img src="https://i.imgur.com/UnjMmYp.png" alt="Rhiddwyr" loading="lazy" /><span class="class-name">Rhiddwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
-        <a class="class-card rarity-holy" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1033" data-tooltip="Glaubenskrieger der Nimue" data-name="derwyn"><img src="https://i.imgur.com/oaYwMOs.png" alt="Derwyn" loading="lazy" /><span class="class-name">Derwyn</span><span class="class-flavor">Glaubenskrieger der Nimue</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card rarity-common" href="#klasse-vennyr-milwr" id="klasse-vennyr-milwr" data-class-id="milwr" data-entry-id="vennyr-milwr" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/2wdIWQ2.png" alt="" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
+        <a class="class-card rarity-elite" href="#klasse-vennyr-morwyr" id="klasse-vennyr-morwyr" data-class-id="morwyr" data-entry-id="vennyr-morwyr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter zur See" data-name="morwyr"><img src="https://i.imgur.com/FzoXhtJ.png" alt="" loading="lazy" /><span class="class-name">Morwyr</span><span class="class-flavor">Ritter zur See</span></a>
+        <a class="class-card rarity-elite" href="#klasse-vennyr-rhyfelwyr" id="klasse-vennyr-rhyfelwyr" data-class-id="rhyfelwyr" data-entry-id="vennyr-rhyfelwyr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Klassischer Vennyrischer Ritter" data-name="rhyfelwyr"><img src="https://i.imgur.com/Jh8DGNz.png" alt="" loading="lazy" /><span class="class-name">Rhyfelwyr</span><span class="class-flavor">Klassischer Vennyrischer Ritter</span></a>
+        <a class="class-card rarity-elite" href="#klasse-vennyr-ceidwyn" id="klasse-vennyr-ceidwyn" data-class-id="ceidwyn" data-entry-id="vennyr-ceidwyn" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fernkämpfender Ritter" data-name="ceidwyn"><img src="https://i.imgur.com/k7eQ3Kt.png" alt="" loading="lazy" /><span class="class-name">Ceidwyn</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
+        <a class="class-card rarity-elite" href="#klasse-vennyr-rhiddwyr" id="klasse-vennyr-rhiddwyr" data-class-id="rhiddwyr" data-entry-id="vennyr-rhiddwyr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter zu Pferd" data-name="rhiddwyr"><img src="https://i.imgur.com/UnjMmYp.png" alt="" loading="lazy" /><span class="class-name">Rhiddwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
+        <a class="class-card rarity-holy" href="#klasse-vennyr-derwyn" id="klasse-vennyr-derwyn" data-class-id="derwyn" data-entry-id="vennyr-derwyn" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Glaubenskrieger der Nimue" data-name="derwyn"><img src="https://i.imgur.com/oaYwMOs.png" alt="" loading="lazy" /><span class="class-name">Derwyn</span><span class="class-flavor">Glaubenskrieger der Nimue</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- ALBEN -->
-    <section class="land-section section-alben" id="alben">
-      <img class="land-watermark" src="https://i.imgur.com/WRnLB3t.png" alt="" aria-hidden="true" />
+    <section class="land-section section-alben" id="alben" data-class-group>
       <div class="land-header header-alben">
         <img class="land-banner" src="https://i.imgur.com/WRnLB3t.png" alt="Alben" loading="lazy" />
         <div class="land-info"><h2>Alben</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1039" data-tooltip="Leichtes Fußvolk" data-name="kern"><img src="https://i.imgur.com/E92CDhq.png" alt="Kern" loading="lazy" /><span class="class-name">Kern</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1040" data-tooltip="Schwertkämpfer" data-name="cateran"><img src="https://i.imgur.com/ZZSDo2z.png" alt="Cateran" loading="lazy" /><span class="class-name">Cateran</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1046" data-tooltip="Reiter der Alben" data-name="mormaer"><img src="https://i.imgur.com/vCXWd55.png" alt="Mormaer" loading="lazy" /><span class="class-name">Mormaer</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1045" data-tooltip="Waldläufer der Alben" data-name="serf"><img src="https://i.imgur.com/qwsuhcH.png" alt="Serf" loading="lazy" /><span class="class-name">Serf</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1041" data-tooltip="Speerkrieger der Alben" data-name="airig"><img src="https://i.imgur.com/oxk3dMj.png" alt="Airig" loading="lazy" /><span class="class-name">Airig</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1773" data-tooltip="Krieger zur See" data-name="currach"><img src="https://i.imgur.com/raG2iIO.png" alt="Currach" loading="lazy" /><span class="class-name">Currach</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1147" data-tooltip="Dudelsackpfeifer & Kampfbarden" data-name="piobaire"><img src="https://i.imgur.com/JmtKs6F.png" alt="Piobaire" loading="lazy" /><span class="class-name">Ceólaire & Piobaire</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1772" data-tooltip="Freischärler der Alben" data-name="riada"><img src="https://i.imgur.com/BmaklcS.png" alt="Riada" loading="lazy" /><span class="class-name">Riada</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1878" data-tooltip="Waldläufer, Pionier & Entdecker" data-name="silvaner" data-wappen="https://i.imgur.com/CByvGxO.png"><img src="https://i.imgur.com/McVUKVQ.png" alt="Silvaner" loading="lazy" /><span class="class-name">Silvaner</span><span class="class-flavor">Waldläufer, Pionier &amp; Entdecker</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1047" data-tooltip="Krieger der der Gallochbhair" data-name="galloghlaigh" data-wappen="https://i.imgur.com/CxhdyTH.png"><img src="https://i.imgur.com/T387Q5y.png" alt="Galloghlaigh" loading="lazy" /><span class="class-name">Galloghlaigh</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1048" data-tooltip="Riesengeschlecht" data-name="fathach" data-wappen="https://i.imgur.com/onWDymh.png"><img src="https://i.imgur.com/NAEUMM1.png" alt="Fathach" loading="lazy" /><span class="class-name">Fathach</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-alben-kern" id="klasse-alben-kern" data-class-id="kern" data-entry-id="alben-kern" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Leichtes Fußvolk" data-name="kern"><img src="https://i.imgur.com/E92CDhq.png" alt="" loading="lazy" /><span class="class-name">Kern</span><span class="class-flavor">Leichtes Fußvolk</span></a>
+        <a class="class-card" href="#klasse-alben-cateran" id="klasse-alben-cateran" data-class-id="cateran" data-entry-id="alben-cateran" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Schwertkämpfer" data-name="cateran"><img src="https://i.imgur.com/ZZSDo2z.png" alt="" loading="lazy" /><span class="class-name">Cateran</span><span class="class-flavor">Schwertkämpfer</span></a>
+        <a class="class-card" href="#klasse-alben-mormaer" id="klasse-alben-mormaer" data-class-id="mormaer" data-entry-id="alben-mormaer" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Reiter der Alben" data-name="mormaer"><img src="https://i.imgur.com/vCXWd55.png" alt="" loading="lazy" /><span class="class-name">Mormaer</span><span class="class-flavor">Reiter der Alben</span></a>
+        <a class="class-card" href="#klasse-alben-serf" id="klasse-alben-serf" data-class-id="serf" data-entry-id="alben-serf" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Waldläufer der Alben" data-name="serf"><img src="https://i.imgur.com/qwsuhcH.png" alt="" loading="lazy" /><span class="class-name">Serf</span><span class="class-flavor">Waldläufer der Alben</span></a>
+        <a class="class-card" href="#klasse-alben-airig" id="klasse-alben-airig" data-class-id="airig" data-entry-id="alben-airig" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Speerkrieger der Alben" data-name="airig"><img src="https://i.imgur.com/oxk3dMj.png" alt="" loading="lazy" /><span class="class-name">Airig</span><span class="class-flavor">Speerkrieger der Alben</span></a>
+        <a class="class-card" href="#klasse-alben-currach" id="klasse-alben-currach" data-class-id="currach" data-entry-id="alben-currach" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Krieger zur See" data-name="currach"><img src="https://i.imgur.com/raG2iIO.png" alt="" loading="lazy" /><span class="class-name">Currach</span><span class="class-flavor">Krieger zur See</span></a>
+        <a class="class-card" href="#klasse-alben-ceolaire-piobaire" id="klasse-alben-ceolaire-piobaire" data-class-id="ceolaire-piobaire" data-entry-id="alben-ceolaire-piobaire" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Dudelsackpfeifer & Kampfbarden" data-name="piobaire"><img src="https://i.imgur.com/JmtKs6F.png" alt="" loading="lazy" /><span class="class-name">Ceólaire & Piobaire</span><span class="class-flavor">Dudelsackpfeifer &amp; Kampfbarden</span></a>
+        <a class="class-card" href="#klasse-alben-riada" id="klasse-alben-riada" data-class-id="riada" data-entry-id="alben-riada" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Freischärler der Alben" data-name="riada"><img src="https://i.imgur.com/BmaklcS.png" alt="" loading="lazy" /><span class="class-name">Riada</span><span class="class-flavor">Freischärler der Alben</span></a>
+        <a class="class-card" href="#klasse-alben-silvaner" id="klasse-alben-silvaner" data-class-id="silvaner" data-entry-id="alben-silvaner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Waldläufer, Pionier & Entdecker" data-name="silvaner" data-wappen="https://i.imgur.com/CByvGxO.png"><img src="https://i.imgur.com/McVUKVQ.png" alt="" loading="lazy" /><span class="class-name">Silvaner</span><span class="class-flavor">Waldläufer, Pionier &amp; Entdecker</span></a>
+        <a class="class-card" href="#klasse-alben-galloghlaigh" id="klasse-alben-galloghlaigh" data-class-id="galloghlaigh" data-entry-id="alben-galloghlaigh" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Krieger der der Gallochbhair" data-name="galloghlaigh" data-wappen="https://i.imgur.com/CxhdyTH.png"><img src="https://i.imgur.com/T387Q5y.png" alt="" loading="lazy" /><span class="class-name">Galloghlaigh</span><span class="class-flavor">Krieger der der Gallochbhair</span></a>
+        <a class="class-card" href="#klasse-alben-fathach" id="klasse-alben-fathach" data-class-id="fathach" data-entry-id="alben-fathach" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Riesengeschlecht" data-name="fathach" data-wappen="https://i.imgur.com/onWDymh.png"><img src="https://i.imgur.com/NAEUMM1.png" alt="" loading="lazy" /><span class="class-name">Fathach</span><span class="class-flavor">Riesengeschlecht</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- ALDRIMAR -->
-    <section class="land-section section-aldrimar" id="aldrimar">
-      <img class="land-watermark" src="https://i.imgur.com/OnNslhr.png" alt="" aria-hidden="true" />
+    <section class="land-section section-aldrimar" id="aldrimar" data-class-group>
       <div class="land-header header-aldrimar">
         <img class="land-banner" src="https://i.imgur.com/OnNslhr.png" alt="Aldrimar" loading="lazy" />
         <div class="land-info"><h2>Aldrimar</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1049" data-tooltip="Fußvolk & Miliz Aldrimars" data-name="hird maid"><img src="https://i.imgur.com/DXELbM2.png" alt="Hird/Maid" loading="lazy" /><span class="class-name">Hird/Maid</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2893" data-tooltip="Axtkämpfender Huskarl" data-name="skjoldr"><img src="https://i.imgur.com/rlVtCrn.png" alt="Skjoldr" loading="lazy" /><span class="class-name">Skjoldr</span><span class="class-flavor">Axtkämpfender Huskarl</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1051" data-tooltip="Berittener Huskarl" data-name="thegnar"><img src="https://i.imgur.com/Z081bE6.png" alt="Thegnar" loading="lazy" /><span class="class-name">Thegnar</span><span class="class-flavor">Berittener Huskarl</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1203" data-tooltip="Huskarl zur See" data-name="skeidr"><img src="https://i.imgur.com/RMS1Joo.png" alt="Skeidr" loading="lazy" /><span class="class-name">Skeidr</span><span class="class-flavor">Huskarl zur See</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1050" data-tooltip="Schildbeißer Huskarl" data-name="skjaldr"><img src="https://i.imgur.com/TjnJlHf.png" alt="Skjaldr" loading="lazy" /><span class="class-name">Skjaldr</span><span class="class-flavor">Schildbeißer Huskarl</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1052" data-tooltip="Fernkämpfender Huskarl" data-name="skytte"><img src="https://i.imgur.com/kUMAEYt.png" alt="Skytte" loading="lazy" /><span class="class-name">Skytte</span><span class="class-flavor">Fernkämpfender Huskarl</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1053" data-tooltip="Skalde und Huskarl" data-name="skalde"><img src="https://i.imgur.com/wAuI5MD.png" alt="Skalde" loading="lazy" /><span class="class-name">Skalde</span><span class="class-flavor">Skalde und Huskarl</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-aldrimar-hird-maid" id="klasse-aldrimar-hird-maid" data-class-id="hird-maid" data-entry-id="aldrimar-hird-maid" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fußvolk & Miliz Aldrimars" data-name="hird maid"><img src="https://i.imgur.com/DXELbM2.png" alt="" loading="lazy" /><span class="class-name">Hird/Maid</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
+        <a class="class-card" href="#klasse-aldrimar-skjoldr" id="klasse-aldrimar-skjoldr" data-class-id="skjoldr" data-entry-id="aldrimar-skjoldr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Axtkämpfender Huskarl" data-name="skjoldr"><img src="https://i.imgur.com/rlVtCrn.png" alt="" loading="lazy" /><span class="class-name">Skjoldr</span><span class="class-flavor">Axtkämpfender Huskarl</span></a>
+        <a class="class-card" href="#klasse-aldrimar-thegnar" id="klasse-aldrimar-thegnar" data-class-id="thegnar" data-entry-id="aldrimar-thegnar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Berittener Huskarl" data-name="thegnar"><img src="https://i.imgur.com/Z081bE6.png" alt="" loading="lazy" /><span class="class-name">Thegnar</span><span class="class-flavor">Berittener Huskarl</span></a>
+        <a class="class-card" href="#klasse-aldrimar-skeidr" id="klasse-aldrimar-skeidr" data-class-id="skeidr" data-entry-id="aldrimar-skeidr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Huskarl zur See" data-name="skeidr"><img src="https://i.imgur.com/RMS1Joo.png" alt="" loading="lazy" /><span class="class-name">Skeidr</span><span class="class-flavor">Huskarl zur See</span></a>
+        <a class="class-card" href="#klasse-aldrimar-skjaldr" id="klasse-aldrimar-skjaldr" data-class-id="skjaldr" data-entry-id="aldrimar-skjaldr" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Schildbeißer Huskarl" data-name="skjaldr"><img src="https://i.imgur.com/TjnJlHf.png" alt="" loading="lazy" /><span class="class-name">Skjaldr</span><span class="class-flavor">Schildbeißer Huskarl</span></a>
+        <a class="class-card" href="#klasse-aldrimar-skytte" id="klasse-aldrimar-skytte" data-class-id="skytte" data-entry-id="aldrimar-skytte" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fernkämpfender Huskarl" data-name="skytte"><img src="https://i.imgur.com/kUMAEYt.png" alt="" loading="lazy" /><span class="class-name">Skytte</span><span class="class-flavor">Fernkämpfender Huskarl</span></a>
+        <a class="class-card" href="#klasse-aldrimar-skalde" id="klasse-aldrimar-skalde" data-class-id="skalde" data-entry-id="aldrimar-skalde" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Skalde und Huskarl" data-name="skalde"><img src="https://i.imgur.com/wAuI5MD.png" alt="" loading="lazy" /><span class="class-name">Skalde</span><span class="class-flavor">Skalde und Huskarl</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- NORDMÄNNER -->
-    <section class="land-section section-nord" id="nordmaenner">
-      <img class="land-watermark" src="https://i.imgur.com/2KOkdu5.png" alt="" aria-hidden="true" />
+    <section class="land-section section-nord" id="nordmaenner" data-class-group>
       <div class="land-header header-nord">
         <img class="land-banner" src="https://i.imgur.com/2KOkdu5.png" alt="Nordmänner" loading="lazy" />
         <div class="land-info"><h2>Nordmänner</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1054" data-tooltip="Fußvolk des Nordens" data-name="hird kona"><img src="https://i.imgur.com/kiyvovh.png" alt="Hird/Kona" loading="lazy" /><span class="class-name">Hird/Kona</span><span class="class-flavor">Fußvolk des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2890" data-tooltip="Speerkämpfer des Nordens" data-name="stjorn"><img src="https://i.imgur.com/YmjS2bm.png" alt="Stjorn" loading="lazy" /><span class="class-name">Stjorn</span><span class="class-flavor">Speerkämpfer des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2891" data-tooltip="Infanterist des Nordens" data-name="ravnar"><img src="https://i.imgur.com/MHnDy0V.png" alt="Ravnar" loading="lazy" /><span class="class-name">Ravnar</span><span class="class-flavor">Infanterist des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1058" data-tooltip="Hautwechsler & Tierkrieger" data-name="ulfhednar"><img src="https://i.imgur.com/LOjpDQS.png" alt="Ulfhednar" loading="lazy" /><span class="class-name">Ulfhednar</span><span class="class-flavor">Hautwechsler</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1055" data-tooltip="Berserker des Nordens" data-name="berserkir"><img src="https://i.imgur.com/D7sqCbe.png" alt="Berserkir" loading="lazy" /><span class="class-name">Berserkir</span><span class="class-flavor">Berserker des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1056" data-tooltip="Seemann des Nordens" data-name="veigir"><img src="https://i.imgur.com/26xBwIU.png" alt="Veigir" loading="lazy" /><span class="class-name">Veigir</span><span class="class-flavor">Seemann des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1264" data-tooltip="Skalde des Nordens" data-name="tungur"><img src="https://i.imgur.com/Afgf6m7.png" alt="Tungur" loading="lazy" /><span class="class-name">Tungur</span><span class="class-flavor">Skalde des Nordens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2892" data-tooltip="Reiter des Nordens" data-name="hestgar"><img src="https://i.imgur.com/tN9JEZA.png" alt="Hestgar" loading="lazy" /><span class="class-name">Hestgar</span><span class="class-flavor">Reiter des Nordens</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-nordmaenner-hird-kona" id="klasse-nordmaenner-hird-kona" data-class-id="hird-kona" data-entry-id="nordmaenner-hird-kona" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fußvolk des Nordens" data-name="hird kona"><img src="https://i.imgur.com/kiyvovh.png" alt="" loading="lazy" /><span class="class-name">Hird/Kona</span><span class="class-flavor">Fußvolk des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-stjorn" id="klasse-nordmaenner-stjorn" data-class-id="stjorn" data-entry-id="nordmaenner-stjorn" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Speerkämpfer des Nordens" data-name="stjorn"><img src="https://i.imgur.com/YmjS2bm.png" alt="" loading="lazy" /><span class="class-name">Stjorn</span><span class="class-flavor">Speerkämpfer des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-ravnar" id="klasse-nordmaenner-ravnar" data-class-id="ravnar" data-entry-id="nordmaenner-ravnar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Infanterist des Nordens" data-name="ravnar"><img src="https://i.imgur.com/MHnDy0V.png" alt="" loading="lazy" /><span class="class-name">Ravnar</span><span class="class-flavor">Infanterist des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-ulfhednar" id="klasse-nordmaenner-ulfhednar" data-class-id="ulfhednar" data-entry-id="nordmaenner-ulfhednar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Hautwechsler & Tierkrieger" data-name="ulfhednar"><img src="https://i.imgur.com/LOjpDQS.png" alt="" loading="lazy" /><span class="class-name">Ulfhednar</span><span class="class-flavor">Hautwechsler</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-berserkir" id="klasse-nordmaenner-berserkir" data-class-id="berserkir" data-entry-id="nordmaenner-berserkir" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Berserker des Nordens" data-name="berserkir"><img src="https://i.imgur.com/D7sqCbe.png" alt="" loading="lazy" /><span class="class-name">Berserkir</span><span class="class-flavor">Berserker des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-veigir" id="klasse-nordmaenner-veigir" data-class-id="veigir" data-entry-id="nordmaenner-veigir" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Seemann des Nordens" data-name="veigir"><img src="https://i.imgur.com/26xBwIU.png" alt="" loading="lazy" /><span class="class-name">Veigir</span><span class="class-flavor">Seemann des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-tungur" id="klasse-nordmaenner-tungur" data-class-id="tungur" data-entry-id="nordmaenner-tungur" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Skalde des Nordens" data-name="tungur"><img src="https://i.imgur.com/Afgf6m7.png" alt="" loading="lazy" /><span class="class-name">Tungur</span><span class="class-flavor">Skalde des Nordens</span></a>
+        <a class="class-card" href="#klasse-nordmaenner-hestgar" id="klasse-nordmaenner-hestgar" data-class-id="hestgar" data-entry-id="nordmaenner-hestgar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Reiter des Nordens" data-name="hestgar"><img src="https://i.imgur.com/tN9JEZA.png" alt="" loading="lazy" /><span class="class-name">Hestgar</span><span class="class-flavor">Reiter des Nordens</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- GOLDMUND & ALDINGEN -->
-    <section class="land-section section-goldmund" id="goldmund">
-      <img class="land-watermark" src="https://i.imgur.com/tTjs23K.png" alt="" aria-hidden="true" />
+    <section class="land-section section-goldmund" id="goldmund" data-class-group>
       <div class="land-header header-goldmund">
         <img class="land-banner" src="https://i.imgur.com/tTjs23K.png" alt="Goldmund & Aldingen" loading="lazy" />
         <div class="land-info"><h2>Goldmund &amp; Aldingen</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Gold & Aldknecht" data-name="aldknecht" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/WYGSPpU.png" alt="Gold & Aldknecht" loading="lazy" /><span class="class-name">Gold &amp; Aldknecht</span><span class="class-flavor">Fußvolk</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schockkavallerist Aldingens & Goldmunds" data-name="husar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/rwQoRC2.png" alt="Husar" loading="lazy" /><span class="class-name">Husar</span><span class="class-flavor">Schockkavallerist</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Infanterist Aldingens & Goldmunds" data-name="aldmar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/HlhliDQ.png" alt="Aldmar" loading="lazy" /><span class="class-name">Aldmar</span><span class="class-flavor">Infanterist</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Grenzer Aldingens & Goldmunds" data-name="eldner" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/yy0BAJB.png" alt="Eldner" loading="lazy" /><span class="class-name">Eldner</span><span class="class-flavor">Grenzer</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Fechtmeister & Barde" data-name="schirmer" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/d77KKNs.png" alt="Schirmer" loading="lazy" /><span class="class-name">Schirmer</span><span class="class-flavor">Fechtmeister &amp; Barde</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Aldinger Schwertmeister" data-name="flamberger" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/4g4xFJZ.png" alt="Flamberger" loading="lazy" /><span class="class-name">Flamberger</span><span class="class-flavor">Aldinger Schwertmeister</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Havner Aldingens" data-name="havner" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/ynFlx0y.png" alt="Havner" loading="lazy" /><span class="class-name">Havner</span><span class="class-flavor">Havner Aldingens</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Goldritter Goldmunds" data-name="güldner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/9q7AX4t.png" alt="Güldner" loading="lazy" /><span class="class-name">Güldner</span><span class="class-flavor">Goldritter Goldmunds</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Goldener Ritter Goldmunds" data-name="oraner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/uB9Aa6L.png" alt="Oraner" loading="lazy" /><span class="class-name">Oraner</span><span class="class-flavor">Goldener Ritter Goldmunds</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-goldmund-gold-aldknecht" id="klasse-goldmund-gold-aldknecht" data-class-id="gold-aldknecht" data-entry-id="goldmund-gold-aldknecht" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Gold & Aldknecht" data-name="aldknecht" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/WYGSPpU.png" alt="" loading="lazy" /><span class="class-name">Gold &amp; Aldknecht</span><span class="class-flavor">Fußvolk</span></a>
+        <a class="class-card" href="#klasse-goldmund-husar" id="klasse-goldmund-husar" data-class-id="husar" data-entry-id="goldmund-husar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Schockkavallerist Aldingens & Goldmunds" data-name="husar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/rwQoRC2.png" alt="" loading="lazy" /><span class="class-name">Husar</span><span class="class-flavor">Schockkavallerist</span></a>
+        <a class="class-card" href="#klasse-goldmund-aldmar" id="klasse-goldmund-aldmar" data-class-id="aldmar" data-entry-id="goldmund-aldmar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Infanterist Aldingens & Goldmunds" data-name="aldmar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/HlhliDQ.png" alt="" loading="lazy" /><span class="class-name">Aldmar</span><span class="class-flavor">Infanterist</span></a>
+        <a class="class-card" href="#klasse-goldmund-eldner" id="klasse-goldmund-eldner" data-class-id="eldner" data-entry-id="goldmund-eldner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Grenzer Aldingens & Goldmunds" data-name="eldner" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/yy0BAJB.png" alt="" loading="lazy" /><span class="class-name">Eldner</span><span class="class-flavor">Grenzer</span></a>
+        <a class="class-card" href="#klasse-goldmund-schirmer" id="klasse-goldmund-schirmer" data-class-id="schirmer" data-entry-id="goldmund-schirmer" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fechtmeister & Barde" data-name="schirmer" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/d77KKNs.png" alt="" loading="lazy" /><span class="class-name">Schirmer</span><span class="class-flavor">Fechtmeister &amp; Barde</span></a>
+        <a class="class-card" href="#klasse-goldmund-flamberger" id="klasse-goldmund-flamberger" data-class-id="flamberger" data-entry-id="goldmund-flamberger" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Aldinger Schwertmeister" data-name="flamberger" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/4g4xFJZ.png" alt="" loading="lazy" /><span class="class-name">Flamberger</span><span class="class-flavor">Aldinger Schwertmeister</span></a>
+        <a class="class-card" href="#klasse-goldmund-havner" id="klasse-goldmund-havner" data-class-id="havner" data-entry-id="goldmund-havner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Havner Aldingens" data-name="havner" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/ynFlx0y.png" alt="" loading="lazy" /><span class="class-name">Havner</span><span class="class-flavor">Havner Aldingens</span></a>
+        <a class="class-card" href="#klasse-goldmund-guldner" id="klasse-goldmund-guldner" data-class-id="guldner" data-entry-id="goldmund-guldner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Goldritter Goldmunds" data-name="güldner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/9q7AX4t.png" alt="" loading="lazy" /><span class="class-name">Güldner</span><span class="class-flavor">Goldritter Goldmunds</span></a>
+        <a class="class-card" href="#klasse-goldmund-oraner" id="klasse-goldmund-oraner" data-class-id="oraner" data-entry-id="goldmund-oraner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Goldener Ritter Goldmunds" data-name="oraner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/uB9Aa6L.png" alt="" loading="lazy" /><span class="class-name">Oraner</span><span class="class-flavor">Goldener Ritter Goldmunds</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- BLUTSTADT -->
-    <section class="land-section section-blutstadt" id="blutstadt">
-      <img class="land-watermark" src="https://i.imgur.com/A8um0JC.png" alt="" aria-hidden="true" />
+    <section class="land-section section-blutstadt" id="blutstadt" data-class-group>
       <div class="land-header header-blutstadt">
         <img class="land-banner" src="https://i.imgur.com/A8um0JC.png" alt="Blutstadt" loading="lazy" />
         <div class="land-info"><h2>Blutstadt</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Gardist der Blutstadt" data-name="gardist" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/6vjWPt4.png" alt="Gardist" loading="lazy" /><span class="class-name">Gardist</span><span class="class-flavor">Gardist der Blutstadt</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter der Blutstadt" data-name="blutritter" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/wci55D2.png" alt="Ritter" loading="lazy" /><span class="class-name">Ritter</span><span class="class-flavor">Ritter der Blutstadt</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-blutstadt-gardist" id="klasse-blutstadt-gardist" data-class-id="gardist" data-entry-id="blutstadt-gardist" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Gardist der Blutstadt" data-name="gardist" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/6vjWPt4.png" alt="" loading="lazy" /><span class="class-name">Gardist</span><span class="class-flavor">Gardist der Blutstadt</span></a>
+        <a class="class-card" href="#klasse-blutstadt-ritter" id="klasse-blutstadt-ritter" data-class-id="ritter" data-entry-id="blutstadt-ritter" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter der Blutstadt" data-name="blutritter" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/wci55D2.png" alt="" loading="lazy" /><span class="class-name">Ritter</span><span class="class-flavor">Ritter der Blutstadt</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- MÓINNEACH - Die Schwarzmarschen -->
-    <section class="land-section section-moinneach" id="moinneach">
-      <img class="land-watermark" src="https://i.imgur.com/4I3r6n7.png" alt="" aria-hidden="true" />
+    <section class="land-section section-moinneach" id="moinneach" data-class-group>
       <div class="land-header header-moinneach">
         <img class="land-banner" src="https://i.imgur.com/4I3r6n7.png" alt="Móinneach" loading="lazy" />
         <div class="land-info"><h2>Móinneach – Die Schwarzmarschen</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Miliz der Schwarzmarschen" data-name="slógar" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/wgmxBe6.png" alt="Slógar" loading="lazy" /><span class="class-name">Slógar</span><span class="class-flavor">Miliz der Schwarzmarschen</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Krieger der Schwarzmarschen" data-name="rathaire" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/J2suRuv.png" alt="Rathaire" loading="lazy" /><span class="class-name">Rathaire</span><span class="class-flavor">Krieger der Schwarzmarschen</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Grenzer der Schwarzmarschen" data-name="coillan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/lLEDXlj.png" alt="Coillan" loading="lazy" /><span class="class-name">Coillan</span><span class="class-flavor">Grenzer der Schwarzmarschen</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Echsenreiter der Schwarzmarschen" data-name="drúan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/l4OtuHd.png" alt="Drúan" loading="lazy" /><span class="class-name">Drúan</span><span class="class-flavor">Echsenreiter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Bestientöter der Schwarzmarschen" data-name="mordán" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/kzb5WTu.png" alt="Mordán" loading="lazy" /><span class="class-name">Mordán</span><span class="class-flavor">Bestientöter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Alchemist der Schwarzmarschen" data-name="cernach" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/m72MzP4.png" alt="Cernach" loading="lazy" /><span class="class-name">Cernach</span><span class="class-flavor">Alchemist</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-moinneach-slogar" id="klasse-moinneach-slogar" data-class-id="slogar" data-entry-id="moinneach-slogar" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Miliz der Schwarzmarschen" data-name="slógar" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/wgmxBe6.png" alt="" loading="lazy" /><span class="class-name">Slógar</span><span class="class-flavor">Miliz der Schwarzmarschen</span></a>
+        <a class="class-card" href="#klasse-moinneach-rathaire" id="klasse-moinneach-rathaire" data-class-id="rathaire" data-entry-id="moinneach-rathaire" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Krieger der Schwarzmarschen" data-name="rathaire" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/J2suRuv.png" alt="" loading="lazy" /><span class="class-name">Rathaire</span><span class="class-flavor">Krieger der Schwarzmarschen</span></a>
+        <a class="class-card" href="#klasse-moinneach-coillan" id="klasse-moinneach-coillan" data-class-id="coillan" data-entry-id="moinneach-coillan" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Grenzer der Schwarzmarschen" data-name="coillan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/lLEDXlj.png" alt="" loading="lazy" /><span class="class-name">Coillan</span><span class="class-flavor">Grenzer der Schwarzmarschen</span></a>
+        <a class="class-card" href="#klasse-moinneach-druan" id="klasse-moinneach-druan" data-class-id="druan" data-entry-id="moinneach-druan" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Echsenreiter der Schwarzmarschen" data-name="drúan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/l4OtuHd.png" alt="" loading="lazy" /><span class="class-name">Drúan</span><span class="class-flavor">Echsenreiter</span></a>
+        <a class="class-card" href="#klasse-moinneach-mordan" id="klasse-moinneach-mordan" data-class-id="mordan" data-entry-id="moinneach-mordan" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Bestientöter der Schwarzmarschen" data-name="mordán" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/kzb5WTu.png" alt="" loading="lazy" /><span class="class-name">Mordán</span><span class="class-flavor">Bestientöter</span></a>
+        <a class="class-card" href="#klasse-moinneach-cernach" id="klasse-moinneach-cernach" data-class-id="cernach" data-entry-id="moinneach-cernach" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Alchemist der Schwarzmarschen" data-name="cernach" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/m72MzP4.png" alt="" loading="lazy" /><span class="class-name">Cernach</span><span class="class-flavor">Alchemist</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- WEISENFLUH -->
-    <section class="land-section section-weisenfluh" id="weisenfluh">
-      <img class="land-watermark" src="https://i.imgur.com/Fk0d1kf.png" alt="" aria-hidden="true" />
+    <section class="land-section section-weisenfluh" id="weisenfluh" data-class-group>
       <div class="land-header header-weisenfluh">
         <img class="land-banner" src="https://i.imgur.com/Fk0d1kf.png" alt="Weisenfluh" loading="lazy" />
         <div class="land-info"><h2>Weisenfluh</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Fußvolk & Miliz Weisenfluhs" data-name="landsknecht" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/KT4sryu.png" alt="Landsknecht" loading="lazy" /><span class="class-name">Landsknecht</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter von Weisenfluh" data-name="landsprotektor" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/CDzMPrL.png" alt="Landsprotektor" loading="lazy" /><span class="class-name">Landsprotektor</span><span class="class-flavor">Ritter von Weisenfluh</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Berittener Ritter Weisenfluhs" data-name="kürassier" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/ZHX2bny.png" alt="Kürassier" loading="lazy" /><span class="class-name">Kürassier</span><span class="class-flavor">Berittener Ritter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Narr, Ritter & Barde" data-name="harlekin" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/eOKihDK.png" alt="Harlekin" loading="lazy" /><span class="class-name">Harlekin</span><span class="class-flavor">Narr, Ritter &amp; Barde</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter zur See Weisenfluhs" data-name="landsmariner" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/coKMJ4o.png" alt="Landsmariner" loading="lazy" /><span class="class-name">Landsmariner</span><span class="class-flavor">Ritter zur See</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter Waldläufer & Schütze" data-name="landsjäger" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/BXUzhek.png" alt="Landsjäger" loading="lazy" /><span class="class-name">Landsjäger</span><span class="class-flavor">Ritter Waldläufer &amp; Schütze</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-weisenfluh-landsknecht" id="klasse-weisenfluh-landsknecht" data-class-id="landsknecht" data-entry-id="weisenfluh-landsknecht" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Fußvolk & Miliz Weisenfluhs" data-name="landsknecht" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/KT4sryu.png" alt="" loading="lazy" /><span class="class-name">Landsknecht</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
+        <a class="class-card" href="#klasse-weisenfluh-landsprotektor" id="klasse-weisenfluh-landsprotektor" data-class-id="landsprotektor" data-entry-id="weisenfluh-landsprotektor" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter von Weisenfluh" data-name="landsprotektor" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/CDzMPrL.png" alt="" loading="lazy" /><span class="class-name">Landsprotektor</span><span class="class-flavor">Ritter von Weisenfluh</span></a>
+        <a class="class-card" href="#klasse-weisenfluh-kurassier" id="klasse-weisenfluh-kurassier" data-class-id="kurassier" data-entry-id="weisenfluh-kurassier" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Berittener Ritter Weisenfluhs" data-name="kürassier" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/ZHX2bny.png" alt="" loading="lazy" /><span class="class-name">Kürassier</span><span class="class-flavor">Berittener Ritter</span></a>
+        <a class="class-card" href="#klasse-weisenfluh-harlekin" id="klasse-weisenfluh-harlekin" data-class-id="harlekin" data-entry-id="weisenfluh-harlekin" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Narr, Ritter & Barde" data-name="harlekin" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/eOKihDK.png" alt="" loading="lazy" /><span class="class-name">Harlekin</span><span class="class-flavor">Narr, Ritter &amp; Barde</span></a>
+        <a class="class-card" href="#klasse-weisenfluh-landsmariner" id="klasse-weisenfluh-landsmariner" data-class-id="landsmariner" data-entry-id="weisenfluh-landsmariner" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter zur See Weisenfluhs" data-name="landsmariner" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/coKMJ4o.png" alt="" loading="lazy" /><span class="class-name">Landsmariner</span><span class="class-flavor">Ritter zur See</span></a>
+        <a class="class-card" href="#klasse-weisenfluh-landsjager" id="klasse-weisenfluh-landsjager" data-class-id="landsjager" data-entry-id="weisenfluh-landsjager" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter Waldläufer & Schütze" data-name="landsjäger" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/BXUzhek.png" alt="" loading="lazy" /><span class="class-name">Landsjäger</span><span class="class-flavor">Ritter Waldläufer &amp; Schütze</span></a>
+
       </div>
     </section>
 
-    <div class="mini-rune">· · ✦ · ·</div>
-
     <!-- AELDRUNMAR & TALYNDOR -->
-    <section class="land-section section-aeldrunmar" id="aeldrunmar">
-      <img class="land-watermark" src="https://i.imgur.com/MJhCj7S.png" alt="" aria-hidden="true" />
+    <section class="land-section section-aeldrunmar" id="aeldrunmar" data-class-group>
       <div class="land-header header-aeldrunmar">
         <img class="land-banner" src="https://i.imgur.com/MJhCj7S.png" alt="Aeldrunmar & Talyndor" loading="lazy" />
         <div class="land-info"><h2>Aeldrunmar &amp; Talyndor</h2></div>
       </div>
       <div class="class-grid">
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Miliz Aeldrunmars & Talyndors" data-name="fyrd" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/UFDHJJ1.png" alt="Fyrd" loading="lazy" /><span class="class-name">Fyrd</span><span class="class-flavor">Miliz</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schwertkämpfer Ritter" data-name="isen" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/pdAjG6t.png" alt="Isen" loading="lazy" /><span class="class-name">Isen</span><span class="class-flavor">Schwertkämpfer Ritter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Lanzenritter" data-name="wigar" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xxhC0DE.png" alt="Wigar" loading="lazy" /><span class="class-name">Wigar</span><span class="class-flavor">Lanzenritter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Berittener Ritter" data-name="hyld" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/A8dTu8r.png" alt="Hyld" loading="lazy" /><span class="class-name">Hyld</span><span class="class-flavor">Berittener Ritter</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Waldläufer & Schütze" data-name="scoet" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/7JXDvLR.png" alt="Scoet" loading="lazy" /><span class="class-name">Scoet</span><span class="class-flavor">Waldläufer &amp; Schütze</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter zur See Aeldrunmars" data-name="særinc" data-wappen="https://i.imgur.com/qgxo2h7.png"><img src="https://i.imgur.com/5263xR7.png" alt="Særinc" loading="lazy" /><span class="class-name">Særinc</span><span class="class-flavor">Ritter zur See (Aeldrunmar)</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter & Troubadour" data-name="gliwere" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xBIoUEr.png" alt="Gliwere" loading="lazy" /><span class="class-name">Gliwere</span><span class="class-flavor">Ritter &amp; Troubadour</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Lanzierer Talyndors" data-name="miles" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/Z9OH3mu.png" alt="Miles" loading="lazy" /><span class="class-name">Miles</span><span class="class-flavor">Lanzierer (Talyndor)</span></a>
-        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schwerer Ritter mit Morgenstern" data-name="ceorl" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/XVBDnZP.png" alt="Ceorl" loading="lazy" /><span class="class-name">Ceorl</span><span class="class-flavor">Schwerer Ritter (Talyndor)</span></a>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+        <a class="class-card" href="#klasse-aeldrunmar-fyrd" id="klasse-aeldrunmar-fyrd" data-class-id="fyrd" data-entry-id="aeldrunmar-fyrd" data-militia="true" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Miliz Aeldrunmars & Talyndors" data-name="fyrd" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/UFDHJJ1.png" alt="" loading="lazy" /><span class="class-name">Fyrd</span><span class="class-flavor">Miliz</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-isen" id="klasse-aeldrunmar-isen" data-class-id="isen" data-entry-id="aeldrunmar-isen" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Schwertkämpfer Ritter" data-name="isen" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/pdAjG6t.png" alt="" loading="lazy" /><span class="class-name">Isen</span><span class="class-flavor">Schwertkämpfer Ritter</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-wigar" id="klasse-aeldrunmar-wigar" data-class-id="wigar" data-entry-id="aeldrunmar-wigar" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Lanzenritter" data-name="wigar" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xxhC0DE.png" alt="" loading="lazy" /><span class="class-name">Wigar</span><span class="class-flavor">Lanzenritter</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-hyld" id="klasse-aeldrunmar-hyld" data-class-id="hyld" data-entry-id="aeldrunmar-hyld" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Berittener Ritter" data-name="hyld" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/A8dTu8r.png" alt="" loading="lazy" /><span class="class-name">Hyld</span><span class="class-flavor">Berittener Ritter</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-scoet" id="klasse-aeldrunmar-scoet" data-class-id="scoet" data-entry-id="aeldrunmar-scoet" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Waldläufer & Schütze" data-name="scoet" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/7JXDvLR.png" alt="" loading="lazy" /><span class="class-name">Scoet</span><span class="class-flavor">Waldläufer &amp; Schütze</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-s-rinc" id="klasse-aeldrunmar-s-rinc" data-class-id="s-rinc" data-entry-id="aeldrunmar-s-rinc" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter zur See Aeldrunmars" data-name="særinc" data-wappen="https://i.imgur.com/qgxo2h7.png"><img src="https://i.imgur.com/5263xR7.png" alt="" loading="lazy" /><span class="class-name">Særinc</span><span class="class-flavor">Ritter zur See (Aeldrunmar)</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-gliwere" id="klasse-aeldrunmar-gliwere" data-class-id="gliwere" data-entry-id="aeldrunmar-gliwere" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Ritter & Troubadour" data-name="gliwere" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xBIoUEr.png" alt="" loading="lazy" /><span class="class-name">Gliwere</span><span class="class-flavor">Ritter &amp; Troubadour</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-miles" id="klasse-aeldrunmar-miles" data-class-id="miles" data-entry-id="aeldrunmar-miles" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Lanzierer Talyndors" data-name="miles" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/Z9OH3mu.png" alt="" loading="lazy" /><span class="class-name">Miles</span><span class="class-flavor">Lanzierer (Talyndor)</span></a>
+        <a class="class-card" href="#klasse-aeldrunmar-ceorl" id="klasse-aeldrunmar-ceorl" data-class-id="ceorl" data-entry-id="aeldrunmar-ceorl" data-action="open-class" aria-haspopup="dialog" aria-controls="class-sheet-dialog" data-tooltip="Schwerer Ritter mit Morgenstern" data-name="ceorl" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/XVBDnZP.png" alt="" loading="lazy" /><span class="class-name">Ceorl</span><span class="class-flavor">Schwerer Ritter (Talyndor)</span></a>
+
       </div>
     </section>
 
-    <!-- ZUKÜNFTIG -->
-    <div class="section-divider" id="zukuenftig">
-      <div class="section-divider__line"></div>
-      <div class="section-divider__badge">⋯ Zukünftige Völker &amp; Pfade ⋯</div>
-      <div class="section-divider__line"></div>
-    </div>
-    <section class="land-section">
-      <div class="land-header" style="background: linear-gradient(120deg, #3a2e1a 0%, #221a0e 100%);">
-        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" />
-        <div class="land-info"><h2>Unbekannte Fraktionen</h2></div>
       </div>
-      <div class="class-grid">
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Volk ??</span><span class="class-flavor">Wird noch enthüllt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Pfad ??</span><span class="class-flavor">Verschlüsselt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
-      </div>
-    </section>
-
-    <!-- GILDEN -->
-    <div class="section-divider" id="gilden">
-      <div class="section-divider__line"></div>
-      <div class="section-divider__badge">⚖ Gilden &amp; Organisationen ⚖</div>
-      <div class="section-divider__line"></div>
-    </div>
-    <section class="land-section">
-      <div class="land-header header-gilden">
-        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilden" loading="lazy" />
-        <div class="land-info"><h2>Gilden &amp; Organisationen</h2></div>
-      </div>
-      <div class="class-grid">
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Unbekannt" loading="lazy" /><span class="class-name">Unbekannt</span><span class="class-flavor">Wird noch enthüllt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilde" loading="lazy" /><span class="class-name">Gilde ??</span><span class="class-flavor">Verschlüsselt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilde" loading="lazy" /><span class="class-name">Neue Gilde</span><span class="class-flavor">Platzhalter…</span></div>
-      </div>
-    </section>
-
-    <!-- ORDEN -->
-    <div class="section-divider" id="orden">
-      <div class="section-divider__line"></div>
-      <div class="section-divider__badge">✝ Orden &amp; Bünde ✝</div>
-      <div class="section-divider__line"></div>
-    </div>
-    <section class="land-section">
-      <div class="land-header header-orden">
-        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" />
-        <div class="land-info"><h2>Orden &amp; Bünde</h2></div>
-      </div>
-      <div class="class-grid">
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Orden ??</span><span class="class-flavor">Wird noch enthüllt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Orden ??</span><span class="class-flavor">Verschlüsselt…</span></div>
-        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Neuer Orden</span><span class="class-flavor">Platzhalter…</span></div>
-      </div>
-    </section>
-
+      <aside class="planned-groups" data-role="planned-groups"><p class="eyebrow">Das Register wächst</p><h2>Weitere Wege folgen</h2><p id="zukuenftig">Neue Völker und Pfade, <span id="gilden">Gilden</span> sowie <span id="orden">Orden und Bünde</span> werden ergänzt, sobald ihre Klassen ausgearbeitet sind.</p></aside>
+      <footer class="catalog-footer"><span>Aleria · Codex der Klassen</span><a href="#top">Zurück nach oben ↑</a></footer>
+    </main>
   </div>
-
-  <script src="assets/js/klassen.js"></script>
+  <dialog id="class-sheet-dialog" class="class-sheet" data-role="class-sheet" aria-labelledby="sheet-title" aria-describedby="sheet-description">
+    <div class="sheet-toolbar"><span class="eyebrow">Klassenprofil</span><button type="button" class="button button-quiet" data-action="close-sheet" autofocus>Schließen <span aria-hidden="true">×</span></button></div>
+    <div data-role="sheet-content"></div>
+  </dialog>
 </body>
 </html>

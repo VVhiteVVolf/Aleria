@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemist",
+  "name": "Alchemist",
+  "title": "Der Alchemist",
+  "aliases": [],
+  "subtitle": "Meister der Substanzen",
+  "theme": "ember",
+  "icon": "https://i.imgur.com/xeD43vb.png",
+  "illustration": "https://i.imgur.com/2ZoJ8yN.png",
+  "facts": [
+    {
+      "label": "Name",
+      "html": "<strong>Alchemist, Trankmischer, Giftmeister, Naffatun, Kräuterkundiger</strong>"
+    },
+    {
+      "label": "Rolle",
+      "html": "<strong>Unterstützer, Saboteur, Zerstörer, Heiler, Wissenschaftler</strong>"
+    },
+    {
+      "label": "Fähigkeiten",
+      "html": "<strong>Trankmischerei, Gifte, Explosiva, Toxine, Alchemistische Umwandlung, Elementarkontrolle</strong>"
+    },
+    {
+      "label": "Stärken",
+      "html": "<strong>Hohe Vielseitigkeit, stark in Vorbereitung, Gift- und Feuerangriffe, keine Magieabhängigkeit</strong>"
+    },
+    {
+      "label": "Schwächen",
+      "html": "<strong>Schwach im Nahkampf, abhängig von Vorräten, instabile Mixturen können gefährlich sein</strong>"
+    },
+    {
+      "label": "Magisches Potenzial",
+      "html": "<strong>Gering bis mittel, oft rein wissenschaftlich, aber manche nutzen arkane Elemente</strong>"
+    },
+    {
+      "label": "Religiöses Potenzial",
+      "html": "<strong>Individuell bedingt</strong>"
+    },
+    {
+      "label": "Bekannte Unterklassen",
+      "html": "<strong>Naffatun, eher viele Kombinationen als reine Alchemisten,</strong>"
+    },
+    {
+      "label": "Ausrüstung",
+      "html": "<strong>Trankfläschchen, Giftampullen, Pulverbomben, alchemistische Werkzeuge, Ledergewand oder leichte Rüstung</strong>"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Alchemist</strong> ist ein <strong>Meister der Umwandlung</strong>, ein <strong>Gelehrter</strong> und <strong>Tüftler</strong>, der die Grenzen von <strong>Magie</strong>, <strong>Naturwissenschaft</strong> und <strong>Mystik</strong> verschwimmen lässt. Er erschafft <strong>Tränke</strong>, <strong>Gifte</strong>, <strong>Explosivstoffe</strong> oder <strong>wundersame Elixiere</strong>, die Leben retten oder in Asche verwandeln können. Viele halten ihn für einen <strong>Wahnsinnigen mit einem Kessel</strong>, doch in Wahrheit ist er ein <strong>Wandler der Wirklichkeit</strong>, dessen Labor einem Ort zwischen <strong>Wissenschaft</strong> und <strong>Wunder</strong> gleicht. Inmitten von Kräuterdämpfen, Kristallen und Formeln wirkt der Alchemist als <strong>unscheinbarer Architekt des Schicksals</strong>.</p> <blockquote><p><em>\"Die <strong>Sonne Shirazads</strong> ist das Meisterwerk der alchemistischen Kriegsführung – eine Komposition aus <strong>Vitriolem Sublimatum</strong>, <strong>Salpeterium Purissimum</strong> und <strong>Gummi Ignis</strong>, stabilisiert durch <strong>Aetherisches Phlogiston</strong>. Bei Zündung entfacht sie eine Druckwelle von bis zu 4500 m/s, gefolgt von einer anhaltenden Nachverbrennung, die jegliche Materie verzehrt.\"</em></p> <p><em>\"Die präzise Modulation des Phlogiston-Katalysators erlaubt eine gezielte Anpassung der Explosionscharakteristik – von sofortiger Druckvernichtung bis hin zu langanhaltender Flächenverödung. Dabei hinterlässt sie persistente Oxidationsrückstände, die selbst nach Stunden noch kontaminieren.\"</em></p> <p><em>\"Unsachgemäße Handhabung birgt die Gefahr unkontrollierter Kettenreaktionen, weshalb nur die fähigsten Alchemisten sich dieser Kunst widmen sollten. Die Sonne brennt für alle – und verschont niemanden.\"</em></p> </blockquote> <p><strong> - Die Kunst der Transmutation – Band IV: Kriegstechniken der Naffatun</strong></p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der <strong>Alchemist</strong> hat seine Wurzeln in der uralten Kunst der <strong>Druiden und Heiler</strong>, die schon früh erkannten, dass Pflanzen, Metalle und Mineralien mehr waren als bloße Bestandteile der Natur. Während die Druiden ihre Kenntnisse bewahrten und nur im Einklang mit der Erde arbeiteten, begannen die Menschen unter ihnen, die Grenzen dieses Wissens zu erweitern – und damit entdeckten die Menschen die <strong>Alchemie</strong>.</p> <p>Ursprünglich waren Alchemisten nicht mehr als <strong>Kräuterkundige und Trankmischer</strong>, die Elixiere zur Heilung, Stärkung oder Reinigung erschufen. Doch mit der Zeit begannen manche von ihnen, sich nicht nur mit der <strong>Schöpfung</strong>, sondern auch mit der <strong>Umwandlung und Zerstörung</strong> zu befassen. Sie entdeckten Substanzen, die Feuer entfachten, Säuren, die Metall zersetzen konnten, und Gase, die Feinde lähmten oder töteten.</p> <p>Diese Entwicklung brachte eine <strong>Spaltung zwischen Alchemisten und Druiden</strong>. Jene, die ihre Kunst weiterhin in Harmonie mit der Natur ausübten, wurden von den Druiden respektiert und sogar als Verbündete betrachtet. Doch jene, die das <strong>Gleichgewicht störten</strong>, indem sie <strong>Explosives, Toxine und instabile Tränke</strong> entwickelten, wurden mit Misstrauen und Ablehnung betrachtet.</p> <p>Während manche Alchemisten sich der <strong>Wissenschaft des Lebens</strong> widmeten, um <strong>Krankheiten zu heilen oder Lebenselixiere zu erschaffen</strong>, suchten andere nach Wegen, die <strong>Elemente selbst zu beherrschen</strong> – sei es durch brennendes Feueröl, zerstörerische Säuren oder Gifte, die Feinde aus dem Schatten heraus vernichteten. Die Alchemie wurde somit eine <strong>Brücke zwischen Heilung und Zerstörung</strong>, zwischen Wissen und Wahnsinn, zwischen Natur und Manipulation.</p> <p>Heute gibt es Alchemisten in vielen Formen: Als <strong>Wissenschaftler</strong>, die das Verborgene der Welt entschlüsseln wollen, als <strong>Kriegsmeister</strong>, die mit Sprengstoffen und toxischen Waffen kämpfen, oder als <strong>Geheime Wissenshüter</strong>, die nach dem ewigen Leben suchen. Was auch immer ihre Absichten sein mögen – ihre Kunst bleibt eine der faszinierendsten und gefährlichsten der bekannten Welt.</p>"
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "written",
+      "html": "<p>Der <strong>Alchemist</strong> ist weder ein reiner Magier noch ein gewöhnlicher Handwerker – er ist ein <strong>Manipulator der Elemente, ein Wissenschaftler des Unbekannten und ein Meister der Umwandlung</strong>. Wo andere sich auf Stahl oder arkane Kräfte verlassen, nutzt der Alchemist <strong>Tränke, Gifte, Säuren und explosive Substanzen</strong>, um seine Feinde zu besiegen oder seine Verbündeten zu stärken.</p> <p>Sein Wissen entspringt alten druidischen Lehren, doch während Druiden der Natur vertrauen, sucht der Alchemist nach Wegen, sie zu <strong>formen, zu verändern oder gar zu überlisten</strong>. Er kann Tränke erschaffen, die Wunden heilen, Muskeln stärken oder Sinne schärfen – aber ebenso kann er <strong>Säuren mischen, die Rüstungen auflösen, Feuer, das nicht gelöscht werden kann, oder Rauch, der Gegner erblinden lässt</strong>.</p> <p>Alchemisten sind jedoch nicht nur Forscher oder Giftmischer. Manche ziehen als <strong>Söldner oder Saboteure</strong> in den Krieg, andere leben als <strong>Heiler oder Gelehrte</strong> in Städten und Fürstenhöfen. Wieder andere experimentieren mit <strong>homunkulischen Schöpfungen, Golems oder künstlichem Leben</strong>, um die Geheimnisse der Existenz selbst zu entschlüsseln.</p> <p>Ob als <strong>brillanter Wissenschaftler oder gefährlicher Chemiker des Krieges</strong> – der Alchemist ist eine Klasse, die mit Köpfchen, Experimentierfreude und einer <strong>großen Portion Vorsicht</strong> gespielt werden muss. Denn das Wissen, das er besitzt, kann ebenso viel zerstören, wie es erschafft.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Alchemist</strong> ist ein Meister der <strong>Umwandlung, Manipulation und chemischen Reaktionen</strong>. Seine Kraft liegt nicht in roher Gewalt oder direkter Magie, sondern in der <strong>Vorbereitung und klugen Anwendung von Substanzen</strong>, die seine Feinde überraschen oder überwältigen.</p> <h4><strong>Kernfähigkeiten:</strong></h4> <blockquote><p>🧪 <strong>Trankmischerei</strong> – Kann heilende, stärkende oder schützende Tränke herstellen, die Verbündeten oder sich selbst Vorteile verschaffen.</p> <p>🔥 <strong>Alchemistische Sprengstoffe</strong> – Nutzt explosive Mixturen wie Feueröl, Schwarzpulver oder Säureflaschen, um Feinde zu verbrennen, zu schwächen oder ihre Rüstungen zu zersetzen.</p> <p>☠ <strong>Gifte &amp; Gase</strong> – Braut Toxine, die Feinde schwächen, lähmen oder langsam töten. Gase können ganze Gruppen kampfunfähig machen oder Chaos in feindlichen Reihen stiften.</p> <p>🔬 <strong>Elementare Umwandlung</strong> – Kann Stoffe verändern, etwa Wasser in Säure, Stein in Sand oder brennbare Flüssigkeiten in tödliche Dämpfe.</p> <p>🛠 <strong>Alchemistische Konstrukte</strong> – Fortgeschrittene Alchemisten erschaffen mechanische Helfer, Golem-artige Kreaturen oder leblose Waffen, die für sie kämpfen.</p> <p>💡 <strong>Experimentelle Verbesserungen</strong> – Entwickelt Tränke, die den eigenen Körper über Grenzen hinaus stärken, Reflexe beschleunigen oder sogar kurzzeitig übermenschliche Kräfte verleihen.</p> </blockquote>"
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "written",
+      "html": "<p>Der <strong>Alchemist</strong> ist eine Klasse mit zahlreichen Spezialisierungen, da seine Kunst sich auf viele verschiedene Bereiche erstreckt. Während einige sich der <strong>Heilkunst und Kräuterkunde</strong> verschreiben, tauchen andere tief in die <strong>Wissenschaft der Zerstörung</strong> ein. Viele Alchemisten kombinieren ihre Fähigkeiten mit anderen Klassen, wodurch einzigartige Hybridformen entstehen.</p> <p>Die <strong>Naffatun</strong> sind die bekanntesten Vertreter der zerstörerischen Alchemie. Sie gelten als <strong>Meister der chemischen Kriegsführung</strong>, spezialisiert auf <strong>Säuren, Sprengstoffe und toxische Gase</strong>. Wo sie erscheinen, folgen Flammen, ätzende Wolken und unaufhaltsame Brände, die Feinde in Panik versetzen. Neben diesen zerstörerischen Künsten befassen sich manche Naffatun auch mit <strong>berauschenden Drogen</strong> und <strong>mentalen Stimulanzien</strong>, sei es zur eigenen Kampfkraftsteigerung oder zur Manipulation anderer. Ihr Wissen über Chemie ist tiefgehend, und in den falschen Händen kann ihre Kunst verheerender sein als jede Waffe.</p> <p>Eine ganz andere Form des Alchemisten findet sich in der <strong>Kombination mit Waldläufern</strong> oder Spähern. Diese <strong>Kräuterkundigen Späher</strong> nutzen alchemistische Tränke, um sich besser an ihre Umgebung anzupassen – sei es durch Tarnsalben, Gifte für ihre Pfeile oder Stärkungsmittel für lange Jagden. Ein besonderes Beispiel ist der <strong>Serf der Alben</strong>, ein alchemistisch geschulter Waldläufer, der natürliche Essenzen mit arkanem Wissen verbindet, um tödliche Tinkturen oder heilende Elixiere zu erschaffen.</p> <p>Neben diesen spezialisierten Formen gibt es noch viele weitere Mischformen, etwa <strong>den alchemistischen Schwertkämpfer</strong>, der seine Waffen mit giftigen Tinkturen tränkt, oder den <strong>alchemistischen Golemmeister</strong>, der Konstrukte aus Metall und magisch veränderten Substanzen erschafft.</p> <p>Der Alchemist bleibt eine Klasse, die stets <strong>zwischen Wissen und Wahnsinn, Heilung und Zerstörung</strong> balanciert. Seine größte Stärke ist seine Vielseitigkeit – doch in den falschen Händen kann er ebenso gefährlich für sich selbst wie für andere sein.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h4><strong>✔ Stärken:</strong></h4> <blockquote><p>🧪 <strong>Vielseitigkeit</strong> – Kann Tränke, Gifte, Explosiva oder heilende Substanzen erschaffen, was ihn anpassungsfähig in vielen Situationen macht.</p> <p>🔥 <strong>Hohe Zerstörungskraft</strong> – Alchemisten mit Fokus auf Sprengstoffe und Säuren können ganze Gruppen von Feinden destabilisieren oder Rüstungen und Mauern durchbrechen.</p> <p>☠ <strong>Toxische Kriegsführung</strong> – Kann Gegner über Zeit hinweg schwächen, vergiften oder mit Gasen in Panik versetzen.</p> <p>⚙ <strong>Kombinierbarkeit mit anderen Klassen</strong> – Funktioniert hervorragend als Unterstützung für Krieger, Waldläufer oder Magier, sei es mit Giften, Tränken oder Mechanismen.</p> <p>🔬 <strong>Wissenschaftliche Herangehensweise</strong> – Benötigt keine Magie, sondern verlässt sich auf <strong>logisches Wissen und Vorbereitung</strong>, wodurch er schwerer zu kontern ist als reine Magier.</p> </blockquote> <h4><strong>✖ Schwächen:</strong></h4> <blockquote><p>❌ <strong>Abhängig von Vorbereitung</strong> – Alchemisten sind nur so stark, wie ihr Vorrat an Tränken und Chemikalien es zulässt. Werden sie überrascht oder gehen ihnen die Mittel aus, sind sie verwundbar.</p> <p>❌ <strong>Körperlich schwach</strong> – Die meisten Alchemisten sind nicht für direkten Nahkampf geeignet und halten wenig aus, wenn sie getroffen werden.</p> <p>❌ <strong>Instabile Mixturen</strong> – Ein falsches Experiment, eine schlecht gemischte Substanz oder ein gebrochener Flakon kann den Alchemisten genauso gefährden wie seinen Feind.</p> <p>❌ <strong>Feuer und Gift sind nicht universell einsetzbar</strong> – In engen Räumen oder bei ungünstigem Wind können Giftgase oder Explosionen sich gegen ihn selbst richten.</p> <p>❌ <strong>Misstrauen aus anderen Kreisen</strong> – Manche Alchemisten, vor allem die Naffatun, werden von Druiden, Priestern oder traditionellen Kriegern mit Argwohn betrachtet, da ihre Kunst oft mit Gefahren und Zerstörung verbunden ist.</p> </blockquote> <p>Der Alchemist ist eine Klasse, die <strong>genaue Planung und strategische Nutzung seiner Ressourcen erfordert</strong>. In den richtigen Händen kann er ein <strong>Gamechanger auf dem Schlachtfeld</strong> sein – in den falschen ein wandelndes Pulverfass.</p>"
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "7387a2e5a9566e28360d6ae29cde55ccb90f5c3461c825b76cdbcf50b2382af1"
+  }
+}

@@ -1,4 +1,5 @@
 const CLASS_PAGE_ICONS = Object.freeze({
+  'cenyr-milwr': { pageName: 'Milwr', source: 'https://i.imgur.com/zj8Kobl.png' },
   teulu: { pageName: 'Teulu', source: 'https://i.imgur.com/ocBxSrC.png' },
   cantref: { pageName: 'Cantref', source: 'https://i.imgur.com/10LmjQR.png' },
   helwyr: { pageName: 'Helwyr', source: 'https://i.imgur.com/HjxiJxW.png' },
@@ -30,11 +31,16 @@ const CLASS_PAGE_ICONS = Object.freeze({
   skalde: { pageName: 'Skalde', source: 'https://i.imgur.com/wAuI5MD.png' },
   magier: { pageName: 'Magier', source: 'https://i.imgur.com/n5A2PlT.png' },
   kleriker: { pageName: 'Kleriker', source: 'https://i.imgur.com/05uOAbw.png' },
-  hexer: { pageName: 'Hexenmeister', source: 'https://i.imgur.com/5Dkv7Ri.png' },
-  asket: { pageName: 'Mönch', source: 'https://i.imgur.com/zCXtHAy.png' }
+  hexer: { pageName: 'Paktträger', source: 'https://i.imgur.com/5Dkv7Ri.png' },
+  asket: { pageName: 'Asket', source: 'https://i.imgur.com/zCXtHAy.png' }
 });
 
 const CLASS_PAGE_ICON_ALIASES = Object.freeze({
+  pakttrager: CLASS_PAGE_ICONS.hexer,
+  hexenmeister: CLASS_PAGE_ICONS.hexer,
+  monch: CLASS_PAGE_ICONS.asket,
+  paladin: { pageName: 'Eidgeschworener', source: 'https://i.imgur.com/mWd46UL.png' },
+  eidgeschworener: { pageName: 'Eidgeschworener', source: 'https://i.imgur.com/mWd46UL.png' },
   lehensritter: CLASS_PAGE_ICONS.teulu,
   plunderer: CLASS_PAGE_ICONS.cateran,
   raubritter: CLASS_PAGE_ICONS.teulu,

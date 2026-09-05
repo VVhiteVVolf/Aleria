@@ -36,9 +36,12 @@ test('Gildas beherrscht auf Stufe 6 alle sechs Techniken des Tanzes des Jungdrac
   assert.deepEqual(combatProfile.techniques.map(technique => technique.minimumLevel), [1, 2, 3, 4, 5, 6]);
   assert.equal(combatProfile.techniques.every(technique => technique.combatStyleId === 'drachentanz'), true);
   assert.equal(combatProfile.techniques.every(technique => (
-    technique.compatibleWeaponIds.length === 1
-      && technique.compatibleWeaponIds[0] === 'gildas-gafyr-duty-sword'
+    technique.cenyrTraining.classWeaponProfiles.teulu.length === 1
+      && technique.cenyrTraining.classWeaponProfiles.teulu[0] === 'sword'
   )), true);
+  assert.deepEqual(combatProfile.classTraining.techniqueSelections.map(selection => selection.slotId), [
+    'foundation-01', 'foundation-02', 'foundation-03', 'foundation-04', 'foundation-05', 'foundation-06'
+  ]);
   assert.equal(combatProfile.techniques.at(-1).name, 'Sechsfacher Lehrhieb');
 });
 

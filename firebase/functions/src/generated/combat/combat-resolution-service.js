@@ -1,36 +1,36 @@
-import { buildAttackNotation, buildDamageNotation, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
+import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import {
   getAuraTargetMechanics,
   getBonusDamageFormulas,
   getSavingThrowTotal,
   resolveAttackRollMode,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260808-duncan-v1';
+} from './combat-profile-model.js?v=20260905-party-combat-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260808-duncan-v1';
+} from './combat-profile-resolver.js?v=20260906-release-check-v1';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260808-duncan-v1';
+} from './combat-state-model.js?v=20260905-party-combat-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
   normalizeCombatEffect,
   normalizeCombatEffects
-} from './combat-effect-model.js?v=20260808-duncan-v1';
+} from './combat-effect-model.js?v=20260905-party-combat-v1';
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260808-duncan-v1';
+import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260905-party-combat-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260808-duncan-v1';
+} from './combat-trigger-rules.js?v=20260905-party-combat-v1';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-5';
 
@@ -287,7 +287,7 @@ export class CombatResolutionService {
   }
 
   async resolveAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
-    const actorCheck = validateCombatActorProfile(actor);
+    const actorCheck = validateCombatActorProfile(actor, { startedAction: options.startedAction });
     if (!actorCheck.ready) throw new Error(getCombatActorValidationMessage(actor, actorCheck));
     const targetCheck = validateCombatTargetProfile(target);
     if (!targetCheck.ready) throw new Error('Für das Ziel fehlt die Verteidigung in den Kampfdaten.');
@@ -329,7 +329,7 @@ export class CombatResolutionService {
     }
     if (actor.selectedAction?.kind === 'equipment-switch') {
       const targetWeaponId = String(actor.selectedAction.equipmentSwitchTargetId || '');
-      const beforeWeaponId = String((Array.isArray(actor.weapons) ? actor.weapons : []).find(item => item.equipped)?.id || '');
+      const beforeWeaponId = String(actor.activeWeaponId || (Array.isArray(actor.weapons) ? actor.weapons : []).find(item => item.equipped)?.id || '');
       return {
         schemaVersion: 4,
         rulesVersion: COMBAT_EVALUATION_RULES_VERSION,
@@ -392,7 +392,8 @@ export class CombatResolutionService {
         + preRollEffects.attackModifier;
     const targetDefense = savingThrowMode
       ? Number(actor.actionSpellSaveDc || actor.spellSaveDc || 10) + Number(targetAuraOnActor.spellSaveDc || 0) + preRollEffects.spellSaveDcModifier
-      : Number(target.totalDefense) + Number(actorAuraOnTarget.armorClass || 0) + preRollEffects.defenseModifier;
+      : Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
+        + Number(actorAuraOnTarget.armorClass || 0) + preRollEffects.defenseModifier;
     const attackNotation = buildAttackNotation(attackModifier, safeRollMode);
 
     options.onPhase?.({ phase: savingThrowMode ? 'saving-throw' : 'attack', notation: attackNotation, actor, target, weapon });
@@ -412,7 +413,7 @@ export class CombatResolutionService {
     });
     const evaluatedRoll = savingThrowMode
       ? evaluateSavingThrowRoll(attackRoll, targetDefense)
-      : evaluateAttackRoll(attackRoll, targetDefense);
+      : evaluateAttackRoll(attackRoll, targetDefense, actor.selectedAction?.criticalThreshold);
     const cheatEnabled = actor.cheats?.enabled === true;
     let attack = savingThrowMode ? {
       ...evaluatedRoll,
@@ -440,7 +441,7 @@ export class CombatResolutionService {
       const reevaluated = (savingThrowMode ? evaluateSavingThrowRoll : evaluateAttackRoll)({
         ...attackRoll,
         total: Number(attackRoll.total) + postAttackModifier
-      }, targetDefense + postDefenseModifier);
+      }, targetDefense + postDefenseModifier, actor.selectedAction?.criticalThreshold);
       attack = savingThrowMode ? {
         ...attack,
         ...reevaluated,
@@ -502,7 +503,7 @@ export class CombatResolutionService {
       // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
       const bonusDamageFormulas = (attack.hit && baseEffectFormula) ? getBonusDamageFormulas(actor) : [];
-      const effectFormula = [baseEffectFormula, ...bonusDamageFormulas].filter(Boolean).join('+');
+      const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
       const damageNotation = effectFormula ? buildDamageNotation(effectFormula, damageBonus, attack.criticalSuccess) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
@@ -602,11 +603,11 @@ export class CombatResolutionService {
         targetName: target.name,
         container: options.container
       });
-      let followAttack = evaluateAttackRoll(followAttackRoll, followDefense);
+      let followAttack = evaluateAttackRoll(followAttackRoll, followDefense, actor.selectedAction?.criticalThreshold);
       const followPostApplications = collectFollowRules('post-roll', followAttack);
       const followPostEffects = mergeCombatRuleEffects(followPostApplications);
       if (followPostEffects.attackModifier || followPostEffects.defenseModifier) {
-        followAttack = evaluateAttackRoll({ ...followAttackRoll, total: Number(followAttackRoll.total) + followPostEffects.attackModifier }, followDefense + followPostEffects.defenseModifier);
+        followAttack = evaluateAttackRoll({ ...followAttackRoll, total: Number(followAttackRoll.total) + followPostEffects.attackModifier }, followDefense + followPostEffects.defenseModifier, actor.selectedAction?.criticalThreshold);
       }
       followAttack = applyOutcome(followAttack, followPostEffects.outcome, false);
       followDefense += followPostEffects.defenseModifier;
@@ -632,10 +633,10 @@ export class CombatResolutionService {
       preWardTargetConditions = followWard.conditions;
       let followDamage = null;
       if (followAttack.hit) {
-        const followBonusDamageFormulas = followUp.damageFormula ? getBonusDamageFormulas(actor) : [];
+        const followBonusDamageFormulas = followUp.damageFormula && followUp.inheritBonusDamage !== false ? getBonusDamageFormulas(actor) : [];
         followDamage = await this.dice.rollDamage({
-          damageFormula: [followUp.damageFormula, ...followBonusDamageFormulas].filter(Boolean).join('+'),
-          bonus: Number(actor.damageModifier || 0) + Number(followUp.damageBonus || 0)
+          damageFormula: combineDamageFormulas([followUp.damageFormula, ...followBonusDamageFormulas]),
+          bonus: (followUp.inheritDamageModifier === false ? 0 : Number(actor.damageModifier || 0)) + Number(followUp.damageBonus || 0)
             + Number(targetAuraOnActor.damage || 0)
             + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
@@ -723,7 +724,7 @@ export class CombatResolutionService {
           consumedPrimaryDamage = true;
         }
         const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
-          damageType: effect.damageType || weapon.damageType,
+          damageType: effect.inheritWeaponDamageType ? weapon.damageType : (effect.damageType || weapon.damageType),
           magical: effect.magical
         });
         if (appliesToActor) actorHitPoints = applied.after;
@@ -949,6 +950,7 @@ export class CombatResolutionService {
       targetPersistence: target.persistence || null,
       weapon: { ...weapon },
       weaponGrip: actor.weaponGrip || 'one-handed',
+      mechanicNotes: Array.isArray(actor.selectedAction?.mechanicNotes) ? actor.selectedAction.mechanicNotes.slice(0, 8) : [],
       secondarySaves,
       followUpAttacks,
       wardResolution,

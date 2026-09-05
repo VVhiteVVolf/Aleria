@@ -5,7 +5,7 @@ import {
   getSceneDiceRolledValue,
   normalizeSceneDiceNarrationMode
 } from './scene-dice-narration-policy.js?v=20260802-dice-default-simple-v1';
-import { formatCombatProfileAiContext } from '../combat/combat-profile-context.js?v=20260808-duncan-v1';
+import { formatCombatProfileAiContext } from '../combat/combat-profile-context.js?v=20260905-party-combat-v1';
 
 function cleanNarrationField(value, maxLength = 14000) {
   return String(value || '').trim().slice(0, maxLength);

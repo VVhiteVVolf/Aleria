@@ -951,9 +951,19 @@
           "ammunition": null,
           "activationType": "action",
           "costs": [
-            { "id": "fenrir-greataxe-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-greataxe-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "equipped": true
         },
         {
@@ -978,9 +988,19 @@
           "ammunition": null,
           "activationType": "action",
           "costs": [
-            { "id": "fenrir-handaxe-pair-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-handaxe-pair-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "equipped": false
         },
         {
@@ -1005,9 +1025,19 @@
           "ammunition": null,
           "activationType": "action",
           "costs": [
-            { "id": "fenrir-throwing-axe-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-throwing-axe-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "equipped": false
         },
         {
@@ -1032,9 +1062,19 @@
           "ammunition": null,
           "activationType": "bonus-action",
           "costs": [
-            { "id": "fenrir-roundshield-bash-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-roundshield-bash-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "equipped": false
         }
       ],
@@ -1300,8 +1340,12 @@
           "description": "Ein wuchtiger Überkopfhieb, der Rüstung und Knochen gleichermaßen bricht.",
           "effect": "Bei einem Treffer verursacht die Großaxt 1W12 normalen Waffenschaden und zusätzlich 1W4 Wucht durch die schiere Wucht des Hiebs.",
           "activationType": "action",
-          "weaponTypes": ["axe"],
-          "compatibleWeaponIds": ["fenrir-greataxe"],
+          "weaponTypes": [
+            "axe"
+          ],
+          "compatibleWeaponIds": [
+            "fenrir-greataxe"
+          ],
           "damageFormula": "1d12+1d4",
           "damageType": "Hieb + Wucht",
           "attackBonus": 0,
@@ -1314,14 +1358,28 @@
           "tags": "Berserkerweg · Großaxt · Wucht",
           "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
           "costs": [
-            { "id": "fenrir-crushing-blow-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-crushing-blow-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
           "mechanics": {},
           "triggerRules": [],
-          "secondarySave": { "enabled": false },
-          "followUpAttack": { "enabled": false }
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          }
         },
         {
           "id": "fenrir-shield-bash",
@@ -1332,8 +1390,12 @@
           "description": "Der Rundschild kracht mit voller Wucht ins Ziel.",
           "effect": "Bei einem Treffer 1W4 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
           "activationType": "bonus-action",
-          "weaponTypes": ["shield"],
-          "compatibleWeaponIds": ["fenrir-roundshield-bash"],
+          "weaponTypes": [
+            "shield"
+          ],
+          "compatibleWeaponIds": [
+            "fenrir-roundshield-bash"
+          ],
           "damageFormula": "1d4",
           "damageType": "Wucht",
           "attackBonus": 0,
@@ -1346,9 +1408,19 @@
           "tags": "Berserkerweg · Schild · Kontrolle",
           "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
           "costs": [
-            { "id": "fenrir-shield-bash-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-shield-bash-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
           "mechanics": {},
           "triggerRules": [],
@@ -1363,10 +1435,14 @@
               "name": "Vom Schildstoß taumelnd",
               "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
               "description": "Der wuchtige Schildstoß bringt das Ziel aus dem Gleichgewicht.",
-              "mechanics": { "attack": -2 }
+              "mechanics": {
+                "attack": -2
+              }
             }
           },
-          "followUpAttack": { "enabled": false }
+          "followUpAttack": {
+            "enabled": false
+          }
         },
         {
           "id": "fenrir-twin-axe-flurry",
@@ -1374,11 +1450,15 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 4,
           "category": "technique",
-          "description": "Beide Äxte wirbeln im selben Atemzug - drei Hiebe, kaum zu unterscheiden.",
-          "effect": "Fenrir führt mit seinem Axtpaar drei getrennte Angriffe in einer einzigen Handlung: einen Hauptangriff und zwei weitere Hiebe, jeder für sich mit eigenem Trefferwurf und eigenem 1W6-Schaden.",
+          "description": "Zwei getrennte Hiebe: ein Hauptangriff und bei dessen Treffer ein kurzer Folgeangriff mit der zweiten Axt.",
+          "effect": "Hauptangriff: 1W6 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
           "activationType": "action",
-          "weaponTypes": ["axe"],
-          "compatibleWeaponIds": ["fenrir-handaxe-pair"],
+          "weaponTypes": [
+            "axe"
+          ],
+          "compatibleWeaponIds": [
+            "fenrir-handaxe-pair"
+          ],
           "damageFormula": "1d6",
           "damageType": "Hieb",
           "attackBonus": 0,
@@ -1389,26 +1469,40 @@
           "duration": "Sofort",
           "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
           "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
-          "aiInstructions": "Drei vollständig getrennte Angriffswürfe (Haupt- und zwei Folgeangriffe), jeder kann eigenständig treffen oder verfehlen. Nur die serverseitig bestätigten Treffer und deren Einzelschaden erzählen, nichts zusammenfassen oder erfinden.",
+          "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
           "costs": [
-            { "id": "fenrir-twin-axe-flurry-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-twin-axe-flurry-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
           "mechanics": {},
           "triggerRules": [],
-          "secondarySave": { "enabled": false },
+          "secondarySave": {
+            "enabled": false
+          },
           "followUpAttack": {
             "enabled": true,
             "sameTarget": true,
-            "damageFormula": "1d6",
+            "damageFormula": "1d4",
             "damageType": "Hieb",
             "attackBonus": 0,
             "damageBonus": 0,
-            "repeatCount": 2,
+            "repeatCount": 1,
             "triggerReactions": true,
-            "repeatPerAttackRules": true,
-            "triggerFurtherEffects": false
+            "repeatPerAttackRules": false,
+            "triggerFurtherEffects": false,
+            "inheritDamageModifier": false,
+            "inheritBonusDamage": false
           }
         },
         {
@@ -1420,8 +1514,12 @@
           "description": "Die Wurfaxt dreht sich schwirrend durch die Luft, ehe sie mit voller Wucht einschlägt.",
           "effect": "Ein gezielter, kraftvoller Wurf: +1 auf den Angriffswurf, bei einem Treffer 1W6 normaler Wurfaxtschaden und zusätzlich 1W4 durch den Schwung des Wurfs.",
           "activationType": "action",
-          "weaponTypes": ["axe"],
-          "compatibleWeaponIds": ["fenrir-throwing-axe"],
+          "weaponTypes": [
+            "axe"
+          ],
+          "compatibleWeaponIds": [
+            "fenrir-throwing-axe"
+          ],
           "damageFormula": "1d6+1d4",
           "damageType": "Hieb",
           "attackBonus": 1,
@@ -1434,14 +1532,28 @@
           "tags": "Berserkerweg · Wurfaxt · Distanz",
           "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
           "costs": [
-            { "id": "fenrir-spinning-throw-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-spinning-throw-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
           "mechanics": {},
           "triggerRules": [],
-          "secondarySave": { "enabled": false },
-          "followUpAttack": { "enabled": false }
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          }
         }
       ],
       "quirks": [
@@ -1529,16 +1641,32 @@
           "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
           "requirements": "Einmal pro Tag.",
           "tags": "Berserker · Rage · Skjaldr",
-          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W6 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
+          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
           "costs": [
-            { "id": "fenrir-berserkergang-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+            {
+              "id": "fenrir-berserkergang-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
           "mechanics": {},
           "triggerRules": [],
           "effects": [
-            { "id": "fenrir-berserkergang-temp-hp", "type": "temporary-hit-points", "target": "self", "amount": 10, "on": "always" },
+            {
+              "id": "fenrir-berserkergang-temp-hp",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "amount": 10,
+              "on": "always"
+            },
             {
               "id": "fenrir-berserkergang-condition",
               "type": "apply-condition",
@@ -1550,7 +1678,9 @@
                 "tags": "Berserker · Rage",
                 "source": "Berserkermodus des Skjaldr",
                 "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
-                "durationModel": { "kind": "combat" },
+                "durationModel": {
+                  "kind": "combat"
+                },
                 "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
                 "mechanics": {
                   "attack": 5,
@@ -1565,14 +1695,26 @@
                   "maximumHitPoints": 0,
                   "passivePerception": 0,
                   "attackRollMode": "normal",
-                  "bonusDamageFormula": "1d6",
-                  "savingThrowAdvantageAttributes": ["strength"],
-                  "savingThrowDisadvantageAttributes": ["wisdom", "intelligence", "charisma", "constitution"]
+                  "bonusDamageFormula": "1d4",
+                  "savingThrowAdvantageAttributes": [
+                    "strength"
+                  ],
+                  "savingThrowDisadvantageAttributes": [
+                    "wisdom",
+                    "intelligence",
+                    "charisma",
+                    "constitution"
+                  ]
                 }
               }
             }
           ],
-          "inventoryUseTrigger": { "enabled": false, "itemTags": [], "restoreResources": [], "requireActualRecovery": true }
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
         }
       ],
       "magic": {

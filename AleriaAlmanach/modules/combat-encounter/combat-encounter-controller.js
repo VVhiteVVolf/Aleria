@@ -1,12 +1,12 @@
-import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260905-encounter-v2';
-import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js';
+import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260905-party-combat-v1';
+import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js?v=20260905-party-combat-v1';
 import { buildCombatEncounterSummary } from '../combat/combat-encounter-summary.js';
 import { suggestEncounterOutcome } from '../combat/combat-encounter-outcome.js';
-import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js';
-import { renderActiveEncounterPanel } from './combat-encounter-panel.js';
+import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js?v=20260906-release-check-v1';
+import { renderActiveEncounterPanel } from './combat-encounter-panel.js?v=20260905-party-combat-v1';
 import { ensureCombatEncounterDialog, filterEncounterCandidates, renderCombatEncounterComment, renderEncounterCandidates,
   renderOperationButtons, setEncounterEndControls, setEncounterStatus, setEncounterSubmitting, updateEncounterCount,
-  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260905-encounter-v2';
+  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260905-party-combat-v1';
 
 // This dialog owns its draft; changing tabs never rewrites encounter history.
 let dialog = null;

@@ -16,6 +16,61 @@ function hasObjectData(value) {
   return !!value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length > 0;
 }
 
+function classTrainingSchemaVersion(profile = {}) {
+  return Math.max(0, Number(profile?.classTraining?.schemaVersion) || 0);
+}
+
+function mergeRuntimeCollectionState(localEntries, onlineEntries, runtimeFields) {
+  if (!Array.isArray(localEntries)) return localEntries;
+  const onlineById = new Map(
+    (Array.isArray(onlineEntries) ? onlineEntries : [])
+      .filter(entry => text(entry?.id))
+      .map(entry => [text(entry.id), entry])
+  );
+  return localEntries.map(entry => {
+    const onlineEntry = onlineById.get(text(entry?.id));
+    if (!onlineEntry) return entry;
+    const merged = { ...entry };
+    runtimeFields.forEach(field => {
+      if (Object.prototype.hasOwnProperty.call(onlineEntry, field)) merged[field] = clone(onlineEntry[field], onlineEntry[field]);
+    });
+    return merged;
+  });
+}
+
+function preserveOnlineCombatState(localProfile, onlineProfile) {
+  const merged = clone(localProfile, {});
+  if (!hasObjectData(onlineProfile)) return merged;
+
+  const onlineHitPoints = hasObjectData(onlineProfile.hitPoints) ? onlineProfile.hitPoints : {};
+  if (hasObjectData(merged.hitPoints)) {
+    merged.hitPoints = { ...merged.hitPoints };
+    ['current', 'temporary'].forEach(field => {
+      if (Object.prototype.hasOwnProperty.call(onlineHitPoints, field)) merged.hitPoints[field] = onlineHitPoints[field];
+    });
+  }
+
+  merged.resources = mergeRuntimeCollectionState(
+    merged.resources,
+    onlineProfile.resources,
+    ['current', 'recoveryDayKey']
+  );
+  merged.abilities = mergeRuntimeCollectionState(
+    merged.abilities,
+    onlineProfile.abilities,
+    ['usesCurrent', 'recoveryDayKey']
+  );
+  merged.revision = Math.max(0, Number(merged.revision) || 0, Number(onlineProfile.revision) || 0);
+  return merged;
+}
+
+function mergeRuntimeCombatProfile(onlineProfile, localProfile) {
+  const onlineVersion = classTrainingSchemaVersion(onlineProfile);
+  const localVersion = classTrainingSchemaVersion(localProfile);
+  if (localVersion > onlineVersion) return preserveOnlineCombatState(localProfile, onlineProfile);
+  return hasObjectData(onlineProfile) ? onlineProfile : clone(localProfile, onlineProfile);
+}
+
 function normalizedName(value) {
   return text(value)
     .replace(/\(\s*geb(?:oren)?\.?\s+[^)]+\)/ig, ' ')
@@ -137,9 +192,7 @@ export function mergeOnlineAndLocalCharacter(onlineCharacter, localCharacter) {
   if (!merged.genealogy.worldPersonId) merged.genealogy.worldPersonId = merged.identity.worldPersonId;
   merged.localRecord = clone(local.localRecord, clone(online.localRecord, null));
   merged.inventory = hasObjectData(online.inventory) ? online.inventory : clone(local.inventory, online.inventory);
-  merged.combatProfile = hasObjectData(online.combatProfile)
-    ? online.combatProfile
-    : clone(local.combatProfile, online.combatProfile);
+  merged.combatProfile = mergeRuntimeCombatProfile(online.combatProfile, local.combatProfile);
   return merged;
 }
 

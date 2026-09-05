@@ -8,20 +8,9 @@
 // can be imported from there without a circular dependency; callers pass plain level numbers.
 
 export const CASTER_TIERS = Object.freeze(['full', 'half']);
+export { getCombatActionEconomy } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 export const MANA_BYPASS_RESOURCE_IDS = Object.freeze(['celestial-points', 'infernal-points']);
 
-// Die Aktionsökonomie wächst in klaren Ausbildungsstufen. Stufe 16, Stufe 20 und
-// Gesamtrang 30 sind feste Designanker; die beiden früheren Schwellen verteilen
-// Reaktionen, Bonus- und Besondere Aktionen, bevor zusätzliche Hauptaktionen
-// freigeschaltet werden.
-export const COMBAT_ACTION_ECONOMY_LADDER = Object.freeze([
-  { effectiveLevel: 30, action: 4, bonusAction: 3, reaction: 4, specialAction: 5 },
-  { effectiveLevel: 20, action: 3, bonusAction: 2, reaction: 3, specialAction: 4 },
-  { effectiveLevel: 16, action: 2, bonusAction: 2, reaction: 3, specialAction: 3 },
-  { effectiveLevel: 11, action: 1, bonusAction: 2, reaction: 2, specialAction: 3 },
-  { effectiveLevel: 6, action: 1, bonusAction: 1, reaction: 2, specialAction: 2 },
-  { effectiveLevel: 1, action: 1, bonusAction: 1, reaction: 1, specialAction: 2 }
-]);
 
 // Index 0 = Zaubertrick (cantrip), index N = Grad N. Zaubertricks kosten immer 1 Mana - das ist
 // ein echter, wiederkehrender Verbrauch (kein Freebie wie in D&D), also müssen die Manapools
@@ -87,13 +76,13 @@ const CASTER_MANA_BY_LEVEL = Object.freeze({
 const SPECIAL_RANK_MANA_BONUS = Object.freeze({ full: 18, half: 10 });
 
 // Aura-Fokuspunkte: an extremely powerful universal-bypass currency, so it stays rare even
-// at high level. First point at level 6, then one more every four levels, capping at 4
+// at high level. First point at level 8, then one more every four levels, capping at 4
 // across the ordinary levels 1-20.
 const AURA_FOCUS_ORDINARY_LADDER = Object.freeze([
-  { level: 18, points: 4 },
-  { level: 14, points: 3 },
-  { level: 10, points: 2 },
-  { level: 6, points: 1 }
+  { level: 20, points: 4 },
+  { level: 16, points: 3 },
+  { level: 12, points: 2 },
+  { level: 8, points: 1 }
 ]);
 
 // Sonderränge grant Aura-Fokuspunkte much faster than ordinary levels - "aber mehr!" - one
@@ -144,17 +133,6 @@ export function getAuraFocusMaximum(level = 1, specialLevels = 0) {
   return ordinary + boundedSpecialLevels(specialLevels) * AURA_FOCUS_PER_SPECIAL_RANK;
 }
 
-export function getCombatActionEconomy(level = 1, specialLevels = 0) {
-  const effectiveLevel = Math.min(30, boundedLevel(level) + boundedSpecialLevels(specialLevels));
-  const rung = COMBAT_ACTION_ECONOMY_LADDER.find(entry => effectiveLevel >= entry.effectiveLevel)
-    || COMBAT_ACTION_ECONOMY_LADDER[COMBAT_ACTION_ECONOMY_LADDER.length - 1];
-  return Object.freeze({
-    action: rung.action,
-    'bonus-action': rung.bonusAction,
-    reaction: rung.reaction,
-    'special-action': rung.specialAction
-  });
-}
 
 // Celestiale/Infernale Punkte: a smaller supplementary pool a Kleriker/Hexer can spend
 // instead of mana. Same simple curve for both, since they are thematic opposites, not a
@@ -191,7 +169,6 @@ export const combatResourceProgressionInternals = Object.freeze({
   SPECIAL_RANK_MANA_BONUS,
   AURA_FOCUS_ORDINARY_LADDER,
   AURA_FOCUS_PER_SPECIAL_RANK,
-  COMBAT_ACTION_ECONOMY_LADDER,
   boundedLevel,
   boundedSpecialLevels,
   resolveCasterTier

@@ -1,13 +1,15 @@
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260809-character-archive-v1';
-import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-archive-order-v2';
-import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js';
-import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js';
-import { countArchiveGroupEntries } from './character-archive-group-tree.js';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260905-party-combat-v1';
+import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
+import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
+import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
+import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
+import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260905-cenyr-character-training-v1';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
+import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 import {
   getCharacterArchiveAttackGroups,
   matchesCharacterArchiveKind
-} from './character-archive-attack-groups.js?v=20260905-archive-order-v2';
+} from './character-archive-attack-groups.js?v=20260905-cenyr-character-training-v1';
 import {
   CHARACTER_ARCHIVE_KINDS,
   cloneArchiveValue,
@@ -23,7 +25,7 @@ import {
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260905-archive-order-v2';
+} from './character-archive-store.js?v=20260905-damage-balance-v1';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },
@@ -107,7 +109,7 @@ function getVisibleEntries() {
 function getEntryMeta(entry) {
   const data = entry.data || {};
   if (entry.kind === 'spell') return [Number(data.level) ? `Grad ${data.level}` : 'Zaubertrick', data.school, data.damageType].filter(Boolean);
-  if (entry.kind === 'technique') return [data.trainingForm, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
+  if (entry.kind === 'technique') return [data.trainingForm, describeTechniqueDamage(data), data.damageType].filter(Boolean);
   if (entry.kind === 'attack') return [data.weaponType, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
   if (entry.kind === 'class') return [data.baseClass ? 'Standardklasse' : (data.cultures || []).join(' · '), data.subtitle].filter(Boolean);
   if (entry.kind === 'condition') return [data.duration, data.source].filter(Boolean);
@@ -140,7 +142,7 @@ function renderEntryCard(entry) {
     </div>
     ${meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     ${renderSourceBadges(entry)}
-    <div class="character-archive-card-actions">${pickerButton}${rulesButton}</div>
+    <div class="character-archive-card-actions">${pickerButton}${rulesButton}${getCharacterArchiveClassLinks(entry).map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>
   </article>`;
 }
 

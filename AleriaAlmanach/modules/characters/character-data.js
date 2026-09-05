@@ -1,5 +1,16 @@
 let _currentModuleCommenterEntryId = '';
 let _currentModuleCommenterNames = new Set();
+let _characterRecordReadCache = null;
+
+function getHiddenBuiltinCharacterCacheKey() {
+  return [..._hiddenBuiltinCharacterIds].map(String).sort().join('|');
+}
+
+function isCharacterRecordReadCacheCurrent(cache) {
+  if (!cache || cache.source !== _characters || cache.sourceEntries.length !== _characters.length) return false;
+  if (cache.hiddenBuiltinKey !== getHiddenBuiltinCharacterCacheKey()) return false;
+  return cache.sourceEntries.every((entry, index) => entry === _characters[index]);
+}
 
 function cloneCharacterStructuredValue(value, fallback) {
   if (!value || typeof value !== 'object') return fallback;
@@ -282,6 +293,9 @@ function getCharacterById(id) {
 }
 
 function getAllCharacterRecords() {
+  if (isCharacterRecordReadCacheCurrent(_characterRecordReadCache)) {
+    return [..._characterRecordReadCache.records];
+  }
   const combined = new Map();
   const addCombined = char => {
     if (!char) return;
@@ -305,9 +319,16 @@ function getAllCharacterRecords() {
     addCombined(char);
   });
 
-  return Array.from(combined.values()).sort((a, b) =>
+  const records = Array.from(combined.values()).sort((a, b) =>
     (a.name || '').localeCompare(b.name || '', 'de', { sensitivity: 'base' })
   );
+  _characterRecordReadCache = {
+    source: _characters,
+    sourceEntries: [..._characters],
+    hiddenBuiltinKey: getHiddenBuiltinCharacterCacheKey(),
+    records
+  };
+  return [...records];
 }
 
 function getVisibleCharacterRecords() {
@@ -380,7 +401,7 @@ async function refreshCurrentModuleCommenterHighlights() {
 function getAvailableCommentCharacters() {
   const castIds = getCurrentCommentCastIds();
   const allCharacters = getVisibleCharacterRecords();
-  const byId = new Map(allCharacters.map(char => [String(char.id || '').trim(), cloneCharacterRecord(char)]));
+  const byId = new Map(allCharacters.map(char => [String(char.id || '').trim(), char]));
 
   if (castIds.length) {
     const prioritized = [];

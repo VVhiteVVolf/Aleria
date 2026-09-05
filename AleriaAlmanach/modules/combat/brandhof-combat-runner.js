@@ -1,8 +1,8 @@
-import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260810-companion-horses-v1';
-import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260808-duncan-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260808-duncan-v1';
-import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260808-duncan-v1';
-import { parseDamageFormula } from './rules/combat-mvp-rules.js';
+import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260905-party-combat-v1';
+import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260906-release-check-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-release-check-v1';
+import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260905-party-combat-v1';
+import { parseDamageFormula } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 
 const TEAM_EEL = 'Schwarzer Zitteraal';
 const TEAM_DRAIG = 'Draig';

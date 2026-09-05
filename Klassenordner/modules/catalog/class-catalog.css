@@ -1,0 +1,79 @@
+.catalog-tools { margin-top: 24px; }
+.filter-row { display: flex; align-items: end; gap: 12px; }
+.search-field { flex: 1; min-width: 0; }
+.group-field { flex: 0 1 230px; min-width: 0; }
+.filter-row label { display: block; font-size: 12px; margin-bottom: 6px; color: var(--muted); }
+.filter-row input, .filter-row select { width: 100%; min-height: 44px; padding: 9px 12px; border: 1px solid var(--border); border-radius: 3px; background: var(--paper-light); color: var(--ink); font-size: 14px; }
+.catalog-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 16px 0 20px; }
+.catalog-toolbar p { margin: 0; font-size: 13px; color: var(--muted); }
+.random-tools { display: flex; align-items: center; gap: 16px; }
+.militia-option { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; }
+.militia-option input { accent-color: var(--green); }
+.random-feedback { padding: 12px 16px; background: var(--paper-dark); font-size: 14px; }
+.catalog-caption { color: var(--muted); font-size: 14px; padding: 12px 0; border-top: 1px solid var(--border); }
+.empty-state { text-align: center; padding: 50px 20px; border: 1px dashed var(--border); }
+.empty-state p { margin: 18px 0; }
+.class-section, .land-section { margin-top: 28px; scroll-margin-top: 20px; }
+.land-section { padding-top: 26px; border-top: 1px solid var(--border); }
+.land-header { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.land-info { flex: 1; min-width: 0; }
+.land-info p { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+.land-info .eyebrow { font-size: 10px; margin: 0 0 8px; }
+.land-banner { width: 48px; height: 60px; object-fit: contain; }
+.section-count { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.class-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 14px; }
+.class-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 215px;
+  padding: 18px 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: linear-gradient(160deg, var(--paper-light), #efe4d0);
+  box-shadow: 0 2px 3px #48331608;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+.class-card::after { content: '→'; position: absolute; top: 8px; right: 10px; font: 13px Georgia, serif; color: var(--gold); }
+.class-card:hover { border-color: var(--gold); box-shadow: 0 4px 14px #4833161a; }
+.class-card img { width: 90px; height: 92px; object-fit: contain; margin-bottom: 12px; }
+.class-name { font-size: 17px; line-height: 1.25; color: var(--green); }
+.class-flavor { font-size: 12px; line-height: 1.5; color: var(--muted); margin-top: 7px; }
+.class-lore { margin: 18px 0 30px; font-size: 14px; color: var(--muted); }
+.class-lore summary { padding: 10px 0; text-underline-offset: 3px; }
+.class-lore summary:hover { color: var(--green); }
+.class-lore[open] summary { margin-bottom: 12px; }
+.lore-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px; background: #e9deca80; border: 1px solid var(--border); }
+.lore-columns > :last-child { grid-column: 1 / -1; }
+.lore-columns h3 { margin-top: 0; font-size: 18px; color: var(--green); }
+.lore-columns dl { margin: 0; display: grid; grid-template-columns: minmax(150px, 1fr) 3fr; gap: 10px 24px; }
+.lore-columns dt { font-weight: bold; }
+.lore-columns dd { margin: 0; }
+.planned-groups { margin-top: 40px; padding: 25px 28px; border: 1px dashed var(--border); }
+.planned-groups h2 { font-size: 23px; margin-bottom: 12px; }
+.planned-groups > p:last-child { font-size: 15px; color: var(--muted); margin-bottom: 0; }
+@media (max-width: 1050px) {
+  .class-grid { grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); }
+  .filter-row { flex-wrap: wrap; }
+  .search-field { flex-basis: 100%; }
+  .group-field { flex: 1; }
+}
+@media (max-width: 520px) {
+  .class-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .class-card { padding: 16px 8px; min-height: 210px; }
+  .class-name { font-size: 16px; overflow-wrap: anywhere; }
+  .class-card img { width: 76px; height: 84px; }
+  .random-tools { justify-content: space-between; flex-wrap: wrap; width: 100%; gap: 10px; }
+  .lore-columns { grid-template-columns: 1fr; padding: 16px; }
+  .lore-columns dl { display: block; }
+  .lore-columns dd { margin-bottom: 14px; }
+  .land-header { gap: 10px; }
+  .land-info h2 { font-size: 24px; }
+  .section-count { font-size: 11px; }
+  .planned-groups { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .class-card { transition: none; } }
+@media print { .class-card { break-inside: avoid; } }

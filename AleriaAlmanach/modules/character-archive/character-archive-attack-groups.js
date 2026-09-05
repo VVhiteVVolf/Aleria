@@ -1,6 +1,6 @@
 import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js';
-import { isArchiveWeapon, getArchiveWeaponRelation } from './character-archive-weapon-groups.js';
+import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
+import { isArchiveWeapon, getArchiveWeaponRelation } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
 
 function hasDamageEffect(value) {
   if (Array.isArray(value)) return value.some(hasDamageEffect);
@@ -31,14 +31,20 @@ function lookup(entries, kind, reference) {
     .some(value => normalizeArchiveSearchText(value) === key)) || null;
 }
 
-function styleOwners(style, entries, explicitClass = '') {
+function styleOwners(style, entries, explicitClass = '', allowedClassIds = []) {
   if (explicitClass) return [{ name: lookup(entries, 'class', explicitClass)?.name || explicitClass, entry: lookup(entries, 'class', explicitClass) }];
-  return entries.filter(entry => entry.kind === 'class' && entry.data?.combatStyleGrants?.some(grant => grant.styleId === style.data?.id))
-    .map(entry => ({ name: entry.name, entry }));
+  const allowedClasses = new Set(Array.isArray(allowedClassIds) ? allowedClassIds : []);
+  return entries.filter(entry => entry.kind === 'class').flatMap(entry => {
+    const cultural = entry.data?.cultureClassProfiles;
+    if (cultural?.length) return cultural.filter(profile => profile.combatStyleGrants.some(grant => grant.styleId === style.data?.id)
+        && (!allowedClasses.size || allowedClasses.has(profile.classId)))
+      .map(profile => ({ name: entry.data.cultures?.length > 1 ? `${entry.name} · ${profile.culture}` : entry.name, entry }));
+    return entry.data?.combatStyleGrants?.some(grant => grant.styleId === style.data?.id) ? [{ name: entry.name, entry }] : [];
+  });
 }
 
-function stylePaths(groups, style, entries, explicitClass = '') {
-  const owners = styleOwners(style, entries, explicitClass);
+function stylePaths(groups, style, entries, explicitClass = '', allowedClassIds = []) {
+  const owners = styleOwners(style, entries, explicitClass, allowedClassIds);
   const branches = owners.length ? owners.map(owner => ensureArchiveGroup(groups, 'class', owner.name, owner.entry).children) : [groups];
   return branches.map(branch => ensureArchiveGroup(branch, 'style', style.name, style));
 }
@@ -52,7 +58,8 @@ function canonicalPaths(groups, entry, entries) {
   const styleId = form?.data?.parentStyleId || form?.data?.archivePlacement?.styleId || placement.styleId || data.combatStyleId;
   const style = isDefinition && !form ? entry : lookup(entries, 'combat-style', styleId);
   if (!style) return [];
-  const styles = stylePaths(groups, style, entries, placement.className || style.data?.archivePlacement?.className);
+  const styles = stylePaths(groups, style, entries, placement.className || style.data?.archivePlacement?.className,
+    isDefinition ? [] : data.cenyrTraining?.allowedClassIds);
   return form ? styles.map(group => ensureArchiveGroup(group.children, 'form', form.name, form)) : styles;
 }
 

@@ -8,7 +8,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 0,
     "description": "Meister des Nahkampfs",
     "icon": "https://i.imgur.com/blpHr0S.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/kampfer/index.html"
+      }
+    ]
   },
   {
     "id": "reiter",
@@ -18,7 +24,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 1,
     "description": "Herr zu Pferde",
     "icon": "https://i.imgur.com/x2dFvAg.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/reiter/index.html"
+      }
+    ]
   },
   {
     "id": "alchemist",
@@ -28,7 +40,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 2,
     "description": "Meister der Substanzen",
     "icon": "https://i.imgur.com/xeD43vb.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/alchemist/index.html"
+      }
+    ]
   },
   {
     "id": "magier",
@@ -38,17 +56,29 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 3,
     "description": "Meister der arkanen Künste",
     "icon": "https://i.imgur.com/n5A2PlT.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/magier/index.html"
+      }
+    ]
   },
   {
-    "id": "monch",
-    "name": "Mönch",
+    "id": "asket",
+    "name": "Asket",
     "baseClass": true,
     "cultures": [],
     "order": 4,
     "description": "Pfad der inneren Stärke",
     "icon": "https://i.imgur.com/zCXtHAy.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/asket/index.html"
+      }
+    ]
   },
   {
     "id": "druide",
@@ -58,7 +88,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 5,
     "description": "Hüter der Natur",
     "icon": "https://i.imgur.com/Xy9tSn6.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/druide/index.html"
+      }
+    ]
   },
   {
     "id": "schurke",
@@ -68,7 +104,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 6,
     "description": "Dieb aus dem Schatten",
     "icon": "https://i.imgur.com/XE3TOXy.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/schurke/index.html"
+      }
+    ]
   },
   {
     "id": "barde",
@@ -78,17 +120,29 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 7,
     "description": "Gesang und Schwert",
     "icon": "https://i.imgur.com/JEBhRaS.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/barde/index.html"
+      }
+    ]
   },
   {
-    "id": "hexenmeister",
-    "name": "Hexenmeister",
+    "id": "pakttrager",
+    "name": "Paktträger",
     "baseClass": true,
     "cultures": [],
     "order": 8,
     "description": "Pakt mit dunklen Mächten",
     "icon": "https://i.imgur.com/5Dkv7Ri.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/pakttrager/index.html"
+      }
+    ]
   },
   {
     "id": "kleriker",
@@ -98,17 +152,29 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 9,
     "description": "Diener der Götter",
     "icon": "https://i.imgur.com/05uOAbw.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/kleriker/index.html"
+      }
+    ]
   },
   {
-    "id": "paladin",
-    "name": "Paladin",
+    "id": "eidgeschworener",
+    "name": "Eidgeschworener",
     "baseClass": true,
     "cultures": [],
     "order": 10,
     "description": "Heiliger Krieger",
     "icon": "https://i.imgur.com/mWd46UL.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/eidgeschworener/index.html"
+      }
+    ]
   },
   {
     "id": "barbar",
@@ -118,7 +184,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 11,
     "description": "Ungebändigte Wildheit",
     "icon": "https://i.imgur.com/D7mPI7G.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/barbar/index.html"
+      }
+    ]
   },
   {
     "id": "waldlaufer",
@@ -128,7 +200,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 12,
     "description": "Späher & Jäger der Wildnis",
     "icon": "https://i.imgur.com/X9DByEV.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/waldlaufer/index.html"
+      }
+    ]
   },
   {
     "id": "seefahrer",
@@ -138,7 +216,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 13,
     "description": "Herr der Meere",
     "icon": "https://i.imgur.com/accNyX6.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/seefahrer/index.html"
+      }
+    ]
   },
   {
     "id": "schamane",
@@ -148,7 +232,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 14,
     "description": "Stimme der Geister",
     "icon": "https://i.imgur.com/UyMKN0J.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "",
+        "path": "Klassenordner/Basisklassen/schamane/index.html"
+      }
+    ]
   },
   {
     "id": "milwr",
@@ -161,7 +251,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 15,
     "description": "Waffenknecht & Miliz",
     "icon": "https://i.imgur.com/zj8Kobl.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/milwr/index.html"
+      }
+    ]
   },
   {
     "id": "teulu",
@@ -173,7 +269,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 16,
     "description": "Klassischer Ritter Cenyrs",
     "icon": "https://i.imgur.com/ocBxSrC.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/teulu/index.html"
+      }
+    ]
   },
   {
     "id": "cantref",
@@ -185,7 +287,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 17,
     "description": "Speerkämpfer Ritter",
     "icon": "https://i.imgur.com/10LmjQR.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/cantref/index.html"
+      }
+    ]
   },
   {
     "id": "uchelwyr",
@@ -197,7 +305,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 18,
     "description": "Ritter zu Pferd",
     "icon": "https://i.imgur.com/J1dBp5C.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/uchelwyr/index.html"
+      }
+    ]
   },
   {
     "id": "helwyr",
@@ -209,7 +323,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 19,
     "description": "Fernkämpfender Ritter",
     "icon": "https://i.imgur.com/HjxiJxW.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/helwyr/index.html"
+      }
+    ]
   },
   {
     "id": "arthwyr",
@@ -221,7 +341,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 20,
     "description": "Ritter der Arth",
     "icon": "https://i.imgur.com/xGZMBX2.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/arthwyr/index.html"
+      }
+    ]
   },
   {
     "id": "barddwyr",
@@ -233,7 +359,13 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 21,
     "description": "Barde & Ritter",
     "icon": "https://i.imgur.com/HvWlZul.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Cenyr/barddwyr/index.html"
+      }
+    ]
   },
   {
     "id": "morwyr",
@@ -245,7 +377,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 22,
     "description": "Ritter zur See",
     "icon": "https://i.imgur.com/FzoXhtJ.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "rhyfelwyr",
@@ -257,7 +390,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 23,
     "description": "Klassischer Vennyrischer Ritter",
     "icon": "https://i.imgur.com/Jh8DGNz.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ceidwyn",
@@ -269,7 +403,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 24,
     "description": "Fernkämpfender Ritter",
     "icon": "https://i.imgur.com/k7eQ3Kt.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "rhiddwyr",
@@ -281,7 +416,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 25,
     "description": "Ritter zu Pferd",
     "icon": "https://i.imgur.com/UnjMmYp.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "derwyn",
@@ -293,7 +429,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 26,
     "description": "Glaubenskrieger der Nimue",
     "icon": "https://i.imgur.com/oaYwMOs.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "kern",
@@ -305,7 +442,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 27,
     "description": "Leichtes Fußvolk",
     "icon": "https://i.imgur.com/E92CDhq.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "cateran",
@@ -317,7 +455,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 28,
     "description": "Schwertkämpfer",
     "icon": "https://i.imgur.com/ZZSDo2z.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "mormaer",
@@ -329,7 +468,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 29,
     "description": "Reiter der Alben",
     "icon": "https://i.imgur.com/vCXWd55.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "serf",
@@ -341,7 +481,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 30,
     "description": "Waldläufer der Alben",
     "icon": "https://i.imgur.com/qwsuhcH.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "airig",
@@ -353,7 +494,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 31,
     "description": "Speerkrieger der Alben",
     "icon": "https://i.imgur.com/oxk3dMj.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "currach",
@@ -365,7 +507,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 32,
     "description": "Krieger zur See",
     "icon": "https://i.imgur.com/raG2iIO.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ceolaire-piobaire",
@@ -377,7 +520,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 33,
     "description": "Dudelsackpfeifer & Kampfbarden",
     "icon": "https://i.imgur.com/JmtKs6F.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "riada",
@@ -389,7 +533,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 34,
     "description": "Freischärler der Alben",
     "icon": "https://i.imgur.com/BmaklcS.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "silvaner",
@@ -401,7 +546,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 35,
     "description": "Waldläufer, Pionier & Entdecker",
     "icon": "https://i.imgur.com/McVUKVQ.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "galloghlaigh",
@@ -413,7 +559,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 36,
     "description": "Krieger der der Gallochbhair",
     "icon": "https://i.imgur.com/T387Q5y.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "fathach",
@@ -425,7 +572,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 37,
     "description": "Riesengeschlecht",
     "icon": "https://i.imgur.com/NAEUMM1.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "hird-maid",
@@ -437,7 +585,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 38,
     "description": "Fußvolk & Miliz Aldrimars",
     "icon": "https://i.imgur.com/DXELbM2.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "skjoldr",
@@ -449,7 +598,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 39,
     "description": "Axtkämpfender Huskarl",
     "icon": "https://i.imgur.com/rlVtCrn.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "thegnar",
@@ -461,7 +611,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 40,
     "description": "Berittener Huskarl",
     "icon": "https://i.imgur.com/Z081bE6.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "skeidr",
@@ -473,7 +624,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 41,
     "description": "Huskarl zur See",
     "icon": "https://i.imgur.com/RMS1Joo.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "skjaldr",
@@ -485,7 +637,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 42,
     "description": "Schildbeißer Huskarl",
     "icon": "https://i.imgur.com/TjnJlHf.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "skytte",
@@ -497,7 +650,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 43,
     "description": "Fernkämpfender Huskarl",
     "icon": "https://i.imgur.com/kUMAEYt.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "skalde",
@@ -509,7 +663,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 44,
     "description": "Skalde und Huskarl",
     "icon": "https://i.imgur.com/wAuI5MD.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "hird-kona",
@@ -521,7 +676,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 45,
     "description": "Fußvolk des Nordens",
     "icon": "https://i.imgur.com/kiyvovh.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "stjorn",
@@ -533,7 +689,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 46,
     "description": "Speerkämpfer des Nordens",
     "icon": "https://i.imgur.com/YmjS2bm.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ravnar",
@@ -545,7 +702,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 47,
     "description": "Infanterist des Nordens",
     "icon": "https://i.imgur.com/MHnDy0V.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ulfhednar",
@@ -557,7 +715,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 48,
     "description": "Hautwechsler & Tierkrieger",
     "icon": "https://i.imgur.com/LOjpDQS.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "berserkir",
@@ -569,7 +728,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 49,
     "description": "Berserker des Nordens",
     "icon": "https://i.imgur.com/D7sqCbe.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "veigir",
@@ -581,7 +741,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 50,
     "description": "Seemann des Nordens",
     "icon": "https://i.imgur.com/26xBwIU.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "tungur",
@@ -593,7 +754,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 51,
     "description": "Skalde des Nordens",
     "icon": "https://i.imgur.com/Afgf6m7.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "hestgar",
@@ -605,7 +767,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 52,
     "description": "Reiter des Nordens",
     "icon": "https://i.imgur.com/tN9JEZA.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "gold-aldknecht",
@@ -617,7 +780,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 53,
     "description": "Gold & Aldknecht",
     "icon": "https://i.imgur.com/WYGSPpU.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "husar",
@@ -629,7 +793,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 54,
     "description": "Schockkavallerist Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/rwQoRC2.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "aldmar",
@@ -641,7 +806,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 55,
     "description": "Infanterist Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/HlhliDQ.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "eldner",
@@ -653,7 +819,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 56,
     "description": "Grenzer Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/yy0BAJB.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "schirmer",
@@ -665,7 +832,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 57,
     "description": "Fechtmeister & Barde",
     "icon": "https://i.imgur.com/d77KKNs.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "flamberger",
@@ -677,7 +845,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 58,
     "description": "Aldinger Schwertmeister",
     "icon": "https://i.imgur.com/4g4xFJZ.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "havner",
@@ -689,7 +858,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 59,
     "description": "Havner Aldingens",
     "icon": "https://i.imgur.com/ynFlx0y.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "guldner",
@@ -701,7 +871,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 60,
     "description": "Goldritter Goldmunds",
     "icon": "https://i.imgur.com/9q7AX4t.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "oraner",
@@ -713,7 +884,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 61,
     "description": "Goldener Ritter Goldmunds",
     "icon": "https://i.imgur.com/uB9Aa6L.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "gardist",
@@ -725,7 +897,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 62,
     "description": "Gardist der Blutstadt",
     "icon": "https://i.imgur.com/6vjWPt4.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ritter",
@@ -737,7 +910,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 63,
     "description": "Ritter der Blutstadt",
     "icon": "https://i.imgur.com/wci55D2.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "slogar",
@@ -749,7 +923,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 64,
     "description": "Miliz der Schwarzmarschen",
     "icon": "https://i.imgur.com/wgmxBe6.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "rathaire",
@@ -761,7 +936,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 65,
     "description": "Krieger der Schwarzmarschen",
     "icon": "https://i.imgur.com/J2suRuv.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "coillan",
@@ -773,7 +949,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 66,
     "description": "Grenzer der Schwarzmarschen",
     "icon": "https://i.imgur.com/lLEDXlj.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "druan",
@@ -785,7 +962,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 67,
     "description": "Echsenreiter der Schwarzmarschen",
     "icon": "https://i.imgur.com/l4OtuHd.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "mordan",
@@ -797,7 +975,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 68,
     "description": "Bestientöter der Schwarzmarschen",
     "icon": "https://i.imgur.com/kzb5WTu.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "cernach",
@@ -809,7 +988,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 69,
     "description": "Alchemist der Schwarzmarschen",
     "icon": "https://i.imgur.com/m72MzP4.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "landsknecht",
@@ -821,7 +1001,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 70,
     "description": "Fußvolk & Miliz Weisenfluhs",
     "icon": "https://i.imgur.com/KT4sryu.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "landsprotektor",
@@ -833,7 +1014,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 71,
     "description": "Ritter von Weisenfluh",
     "icon": "https://i.imgur.com/CDzMPrL.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "kurassier",
@@ -845,7 +1027,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 72,
     "description": "Berittener Ritter Weisenfluhs",
     "icon": "https://i.imgur.com/ZHX2bny.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "harlekin",
@@ -857,7 +1040,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 73,
     "description": "Narr, Ritter & Barde",
     "icon": "https://i.imgur.com/eOKihDK.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "landsmariner",
@@ -869,7 +1053,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 74,
     "description": "Ritter zur See Weisenfluhs",
     "icon": "https://i.imgur.com/coKMJ4o.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "landsjager",
@@ -881,7 +1066,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 75,
     "description": "Ritter Waldläufer & Schütze",
     "icon": "https://i.imgur.com/BXUzhek.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "fyrd",
@@ -893,7 +1079,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 76,
     "description": "Miliz Aeldrunmars & Talyndors",
     "icon": "https://i.imgur.com/UFDHJJ1.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "isen",
@@ -905,7 +1092,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 77,
     "description": "Schwertkämpfer Ritter",
     "icon": "https://i.imgur.com/pdAjG6t.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "wigar",
@@ -917,7 +1105,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 78,
     "description": "Lanzenritter",
     "icon": "https://i.imgur.com/xxhC0DE.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "hyld",
@@ -929,7 +1118,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 79,
     "description": "Berittener Ritter",
     "icon": "https://i.imgur.com/A8dTu8r.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "scoet",
@@ -941,7 +1131,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 80,
     "description": "Waldläufer & Schütze",
     "icon": "https://i.imgur.com/7JXDvLR.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "s-rinc",
@@ -953,7 +1144,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 81,
     "description": "Ritter zur See Aeldrunmars",
     "icon": "https://i.imgur.com/5263xR7.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "gliwere",
@@ -965,7 +1157,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 82,
     "description": "Ritter & Troubadour",
     "icon": "https://i.imgur.com/xBIoUEr.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "miles",
@@ -977,7 +1170,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 83,
     "description": "Lanzierer Talyndors",
     "icon": "https://i.imgur.com/Z9OH3mu.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   },
   {
     "id": "ceorl",
@@ -989,7 +1183,8 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "order": 84,
     "description": "Schwerer Ritter mit Morgenstern",
     "icon": "https://i.imgur.com/XVBDnZP.png",
-    "sourcePage": "Klassenordner/Klassenseite.html"
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": []
   }
 ]);
 

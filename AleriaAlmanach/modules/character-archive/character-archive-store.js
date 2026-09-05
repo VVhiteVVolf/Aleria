@@ -1,4 +1,4 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260905-archive-order-v2';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260905-damage-balance-v1';
 import {
   cloneArchiveValue,
   CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION,
@@ -8,7 +8,7 @@ import {
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { classifyCharacterArchiveEntries } from './character-archive-classification.js';
+import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
 
 const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';
 

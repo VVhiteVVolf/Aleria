@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "asket",
+  "name": "Asket",
+  "title": "Der Asket",
+  "aliases": [
+    "Mönch",
+    "monch"
+  ],
+  "subtitle": "Pfad der inneren Stärke",
+  "theme": "sand",
+  "icon": "https://i.imgur.com/zCXtHAy.png",
+  "illustration": "https://i.imgur.com/eKFNhNw.png",
+  "facts": [
+    {
+      "label": "Name",
+      "html": "<strong>Asket, Faustkämpfer,</strong>"
+    },
+    {
+      "label": "Rolle",
+      "html": "<strong>Nahkampfspezialist, Ausweichkämpfer, spiritueller Krieger</strong>"
+    },
+    {
+      "label": "Fähigkeiten",
+      "html": "<strong>Unbewaffneter Kampf, Chi-Kontrolle, extreme Reflexe, Schmerzresistenz, Beweglichkeit</strong>"
+    },
+    {
+      "label": "Stärken",
+      "html": "<strong>Hohe Geschwindigkeit, perfektes Körpertraining, unabhängig von Ausrüstung, meisterhafter Nahkämpfer</strong>"
+    },
+    {
+      "label": "Schwächen",
+      "html": "<strong>Keine Rüstung, anfällig für Fernkampf und Magie, wenig rohe Durchschlagskraft, stark von Disziplin und Fokus abhängig</strong>"
+    },
+    {
+      "label": "Magisches Potenzial",
+      "html": "<strong>Individuell</strong>"
+    },
+    {
+      "label": "Religiöses Potenzial",
+      "html": "<strong>Individuell</strong>"
+    },
+    {
+      "label": "Ausrüstung",
+      "html": "<strong>Leichte Gewänder, Handwickel, Stabwaffen, Meditationsamulette</strong>"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Asket </strong>ist kein betender Klosterdiener, sondern ein <strong>Krieger des Geistes und Körpers</strong>, der sich auf <strong>waffenlosen Kampf</strong>, <strong>Körperbeherrschung</strong> und <strong>spirituelle Harmonie</strong> spezialisiert hat. Er verbindet <strong>innere Ruhe</strong> mit <strong>explosiver Kraft</strong> und nutzt seine Fäuste, Tritte und Bewegungen wie ein Instrument göttlicher oder kosmischer Ordnung. Seine Kraft entspringt nicht der Rüstung, sondern der <strong>Disziplin</strong>, dem <strong>Atemfluss</strong> und der <strong>Verbindung zu seiner inneren Quelle</strong> – sei es Chi, Mana oder der Wille der Elemente. Ein Asket ist ein <strong>lebender Kontrast</strong>: sanft wie Wasser, hart wie Stahl – und tödlich, wenn die Balance gestört wird.</p> <blockquote><p><em>\"Du bist starr, Junge. Du kämpfst wie ein Baum, der glaubt, er könne den Sturm mit seiner Härte überstehen. Doch der Wind bricht den Baum – und lässt das Gras unberührt. Sei nicht wie der Baum. Sei wie das Wasser.\"</em></p> <p><em>\"Wasser kämpft nicht gegen den Stein, es umfließt ihn. Wasser erzwingt nichts, und doch findet es seinen Weg. Es kann weich sein, doch es kann auch Felsen zermahlen. Kannst du das? Kannst du dich anpassen, statt dich zu widersetzen?\"</em></p> <p><em>\"Ein Schwert kann zerbrechen. Eine Rüstung kann durchbohrt werden. Doch versuche, Wasser zu schneiden – du wirst ins Leere schlagen. Und wenn dein Feind ins Leere schlägt, hast du bereits gewonnen.\"</em></p> </blockquote> <p> <strong>- Ein Weiser Mentor zu seinem Schüler</strong></p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Asket, wie er als <strong>Krieger</strong> verstanden wird, darf nicht mit dem klassischen <strong>Klostermönch der Neun Göttlichen</strong> verwechselt werden. Während der eine ein <strong>geistlicher Diener</strong> ist, der in Isolation betet und die Wege der Götter studiert, ist der andere ein <strong>spiritueller Kämpfer</strong>, der seinen <strong>Körper, Geist und Willen</strong> zu einer einzigen, unaufhaltsamen Waffe formt.</p> <p>Asketen dieser Art sind im <strong>zentralen Aleria</strong> nur selten anzutreffen. Es gibt vereinzelt <strong>Orden oder Bruderschaften</strong>, die sich ähnlichen Prinzipien verschrieben haben, doch ihre Präsenz ist marginal im Vergleich zu den disziplinierten und weit verbreiteten Asketenschulen des <strong>fernen Ostens</strong>. Dort sind Asketen nicht nur Krieger, sondern auch <strong>Hüter alter Lehren</strong>, die Körper und Geist in vollkommene Harmonie bringen.</p> <p>Durch jahrzehntelange Schulung lernen Asketen, ihre <strong>Kampffertigkeiten mit innerer Kontrolle</strong> zu vereinen. Ohne schwere Rüstung und oft sogar ohne Waffen können sie sich mit den besten Kriegern messen, indem sie <strong>Schnelligkeit, Präzision und Willensstärke</strong> als ihre größten Waffen nutzen. Während der Krieger auf Muskelkraft und Stahl vertraut, setzt der Asket auf <strong>Fluss, Fokus und Perfektion in jeder Bewegung</strong>.</p> <p>Seine Lehren und Kampfstile sind so unterschiedlich wie die Schulen, aus denen er kommt – doch egal, ob wandernder Kämpfer, asketischer Meister oder Beschützer eines heiligen Tempels, der wahre Asket bleibt <strong>ein Krieger, der die Grenzen des Körpers überwindet und aus reiner Disziplin eine Kunst macht</strong>.</p>"
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "written",
+      "html": "<p>Der <strong>Asket</strong> ist ein <strong>spiritueller Krieger</strong>, der seinen Körper und Geist zu einer einzigen, disziplinierten Waffe formt. Anders als klassische Krieger, die auf Rüstung und Waffen setzen, perfektioniert der Asket die <strong>Kampfkunst des Körpers</strong> – jede Bewegung ist präzise, jeder Schlag gezielt. Durch jahrelanges Training lernt er, <strong>seine Reflexe, seine Geschwindigkeit und seine innere Energie zu kontrollieren</strong>, um Feinde zu überwinden, ohne dabei auf äußere Hilfsmittel angewiesen zu sein.</p> <p>Asketen kommen oft aus fernen Ländern, wo ihre Lehren tief verwurzelt sind. Sie leben in <strong>Bruderschaften, Tempeln oder abgeschiedenen Klöstern</strong>, wo sie ihre Fähigkeiten verfeinern und an die nächste Generation weitergeben. Doch nicht alle Asketen folgen der selben Disziplin – einige suchen innere Erleuchtung durch Kampf, andere schärfen ihre Sinne, um ihren Körper an die Grenzen des Möglichen zu treiben.</p> <p>Egal ob als wandernder Kämpfer, als Beschützer eines heiligen Ortes oder als Disziplinierter Meister einer uralten Kunst – der Asket ist ein Krieger, der durch <strong>Training, Kontrolle und Willenskraft</strong> über sich selbst hinauswächst.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Asket</strong> ist kein gewöhnlicher Nahkämpfer. Wo andere auf rohes Krafttraining setzen, schult er seinen <strong>Geist und Körper</strong>, um <strong>übermenschliche Geschicklichkeit und Kontrolle</strong> zu erreichen.</p> <blockquote><p>🌀 <strong>Unbewaffnete Kampfkunst</strong> – Der Asket ist ein Meister des Nahkampfes, selbst ohne Waffen kann er mit bloßen Händen Knochen brechen oder Druckpunkte treffen, um Feinde kampfunfähig zu machen.</p> <p>⚡ <strong>Übermenschliche Reflexe</strong> – Durch jahrelange Schulung kann ein Asket Angriffe vorhersehen und ausweichen, bevor sie ihn überhaupt treffen.</p> <p>☯ <strong>Innere Energie &amp; Chi-Kontrolle</strong> – Manche Asketen lernen, ihre innere Kraft zu lenken, um ihre Schläge zu verstärken oder selbst Wunden zu heilen.</p> <p>🐉 <strong>Perfektion des Körpers</strong> – Ein disziplinierter Asket kann extrem lange ohne Nahrung oder Schlaf auskommen, Schmerzen ignorieren oder selbst Vergiftungen widerstehen.</p> <p>🌪 <strong>Bewegungskunst</strong> – Asketen beherrschen Techniken, die es ihnen erlauben, sich schneller zu bewegen als normale Krieger, Wände zu erklimmen oder akrobatische Manöver in Kämpfen zu nutzen.</p> </blockquote> <p>Während der Asket nicht die rohe Kraft eines Kriegers besitzt, macht ihn seine <strong>Schnelligkeit, Kontrolle und Technik</strong> zu einem tödlichen Gegner, gegen den selbst gepanzerte Feinde kaum eine Chance haben.</p>"
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "written",
+      "html": "<p>Asketen sind keine einheitliche Disziplin, sondern eine Sammlung verschiedener Kampfkünste und spiritueller Pfade. Jede Schule, jeder Tempel und jede Philosophie bringt <strong>unterschiedliche Kampfstile und Techniken</strong> hervor. Während einige Asketen auf <strong>reine Körperbeherrschung</strong> setzen, nutzen andere ihre <strong>innere Energie</strong> oder kombinieren ihre Fähigkeiten mit <strong>spirituellen oder magischen Lehren</strong>.</p> <p>Der <strong>Asketische Krieger</strong> ist der klassische Vertreter dieser Disziplin. Er lebt nach einem strengen Kodex, meidet Luxus und widmet sein Leben der <strong>Perfektion seines Körpers</strong>. Er ist ein Meister des waffenlosen Kampfes, nutzt jedoch seine übermenschliche Kontrolle über Reflexe, Bewegungen und Druckpunkte, um Feinde zu besiegen.</p> <p>Der <strong>Wandernde Faustkämpfer</strong> verlässt Klöster und Tempel, um die Welt zu bereisen und seine Techniken im realen Kampf zu perfektionieren. Er glaubt, dass nur durch Erfahrung wahre Stärke entsteht, und nimmt es mit Kriegern, Bestien und sogar Magiern auf, um sein Wissen stetig zu erweitern.</p> <p>Der <strong>Schattenasket</strong> verbindet die Disziplin eines Asketen mit den lautlosen Bewegungen eines Assassinen. Er ist darauf spezialisiert, sich in den Schatten zu bewegen, den Wind zu seinem Vorteil zu nutzen und mit präzisen, tödlichen Schlägen Feinde auszuschalten, bevor sie überhaupt wissen, dass er da ist.</p> <p>Neben diesen klassischen Formen gibt es Asketen, die mit <strong>anderen Klassen verschmelzen</strong>. Manche Asketen <strong>meistern den Kampf mit Stabwaffen oder Klingen</strong>, während andere sich mit Magie verbinden, um ihre Techniken mit arkane Kräften zu verstärken. Es gibt sogar Legenden über <strong>Asketen, die die Kraft der Elemente kanalisieren</strong>, um Feuer, Wasser oder Blitz in ihre Schläge einfließen zu lassen.</p> <p>Egal welche Disziplin ein Asket verfolgt – sein größtes Ziel ist <strong>nicht bloße Kraft, sondern die vollkommene Harmonie zwischen Körper, Geist und Bewegung</strong>.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h4><strong>✔ Stärken:</strong></h4> <blockquote><p>⚡ <strong>Übermenschliche Geschwindigkeit und Reflexe</strong> – Ein Asket bewegt sich schneller als die meisten Krieger, kann Angriffen ausweichen und blitzschnell zuschlagen.</p> <p>🥋 <strong>Meister des waffenlosen Kampfes</strong> – Selbst ohne Waffen ist ein Asket eine tödliche Bedrohung. Seine Faust ist so präzise und kraftvoll wie eine Klinge.</p> <p>🌀 <strong>Unabhängigkeit von Ausrüstung</strong> – Während andere Krieger auf Rüstungen und Waffen angewiesen sind, schöpft der Asket seine Kraft aus Training und Disziplin.</p> <p>☯ <strong>Körperliche Perfektion</strong> – Kann Schmerzen ignorieren, Hunger und Erschöpfung widerstehen oder durch Meditation seine Wunden schneller heilen.</p> <p>🏹 <strong>Beweglichkeit und Akrobatik</strong> – Klettert Wände hoch, weicht mühelos aus und nutzt das Gelände zu seinem Vorteil.</p> </blockquote> <h4><strong>✖ Schwächen:</strong></h4> <blockquote><p>❌ <strong>Geringe Verteidigung</strong> – Ohne Rüstung oder Schilde ist ein Asket verwundbarer gegenüber direkten Treffern als andere Nahkämpfer.</p> <p>❌ <strong>Begrenzte Fernkampffähigkeiten</strong> – Obwohl schnell, kann er von Bogenschützen oder Magiern auf Distanz gehalten werden.</p> <p>❌ <strong>Kein massiver Schaden in einem Schlag</strong> – Im Gegensatz zu einem Krieger mit Großschwert oder Axt basiert die Kampfkraft des Asketen auf <strong>Schnelligkeit und Präzision</strong>, nicht auf roher Gewalt.</p> <p>❌ <strong>Mentale und körperliche Disziplin erforderlich</strong> – Ein unkonzentrierter oder ungeschulter Asket verliert schnell seinen Vorteil und kann in einem unfairen Kampf übermannt werden.</p> <p>❌ <strong>Magieanfälligkeit</strong> – Ohne magische Fähigkeiten oder Schutzmechanismen kann er gegen mächtige Zauberwirker Schwierigkeiten haben.</p> </blockquote> <p>Ein Asket <strong>gewinnt durch Technik, Kontrolle und Geschwindigkeit</strong>, doch seine größte Schwäche ist seine <strong>Verletzlichkeit</strong>, wenn er überwältigt oder in eine Situation ohne Fluchtmöglichkeit gezwungen wird.</p>"
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "959b3ceabb2fd3e623e4d1cdd5bb79c58e68a40c00fdeee20771a98151a9ec13"
+  }
+}

@@ -1,0 +1,197 @@
+.combat-composer { container-type: inline-size; }
+
+.combat-composer-profile { display: grid; gap: 0.15rem; text-align: right; }
+.combat-composer-profile small { color: #77654f; font: italic 0.72rem/1.3 "EB Garamond", Georgia, serif; }
+
+.combat-field-caption,
+.combat-composer-fields label,
+.combat-action-controls label {
+  display: block;
+  color: var(--composer-accent);
+  font: 700 0.65rem/1.3 "Cinzel", Georgia, serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.combat-field-caption { margin-bottom: 0.35rem; }
+.combat-field-caption small { color: #77654f; font: 400 0.76rem/1.3 "EB Garamond", Georgia, serif; letter-spacing: 0; text-transform: none; }
+
+.combat-weapon-loadout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.15rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.combat-weapon-active,
+.combat-weapon-alternatives { min-width: 0; }
+.combat-weapon-slots { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+
+.combat-weapon-slot {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.45rem;
+  max-width: 100%;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--composer-line);
+  border-radius: 4px;
+  background: rgba(255, 252, 241, 0.65);
+  color: var(--composer-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.combat-weapon-slot:hover { border-color: var(--composer-accent); background-color: #fff8e3; }
+.combat-weapon-slot:focus-visible { outline: 2px solid var(--composer-accent); outline-offset: 3px; }
+.combat-weapon-slot[data-state="active"] {
+  grid-template-columns: 3.35rem minmax(0, 1fr);
+  width: 100%;
+  min-height: 4.4rem;
+  border-color: #64845a;
+  box-shadow: inset 3px 0 #497349;
+  background: linear-gradient(115deg, #edf0db, #fff9e6);
+}
+
+.combat-weapon-slot[data-state="pending"] { border-color: #b48332; background: #f7e9c5; box-shadow: inset 3px 0 #b48332; }
+.combat-weapon-slot-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--composer-line);
+  border-radius: 3px;
+  color: var(--composer-accent);
+  background: #f8eed6;
+  font: 700 1.45rem/1 Georgia, serif;
+}
+
+.combat-weapon-slot[data-state="active"] .combat-weapon-slot-icon { width: 3.35rem; height: 3.35rem; border-color: #96a27d; color: #497349; }
+.combat-weapon-slot-icon img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; border-radius: inherit; background: #f8eed6; }
+.combat-weapon-slot-copy { display: grid; gap: 0.18rem; min-width: 0; }
+.combat-weapon-slot-copy strong { overflow-wrap: anywhere; font: 700 0.9rem/1.2 "EB Garamond", Georgia, serif; }
+.combat-weapon-slot[data-state="active"] strong { font-size: 1rem; }
+.combat-weapon-slot-copy small { color: #766047; font: 400 0.7rem/1.3 "EB Garamond", Georgia, serif; }
+.combat-weapon-slot[data-state="active"] small { color: #45673c; }
+.combat-weapon-slot[data-state="pending"] small { color: #85591d; }
+
+.combat-composer-fields { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0.85rem 1.15rem; }
+.combat-composer-fields label { min-width: 0; }
+.combat-action-field { min-width: 0; }
+.combat-action-field select[hidden] { display: none; }
+.combat-composer-fields select,
+.combat-action-controls select,
+.combat-composer-fields input[type="search"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0.35rem 0 0;
+  min-height: 2.6rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--composer-line);
+  border-radius: 3px;
+  background: #fffbf0;
+  color: var(--composer-ink);
+  font: 500 0.9rem/1.3 "EB Garamond", Georgia, serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.combat-composer-fields select:focus-visible,
+.combat-action-controls select:focus-visible,
+.combat-composer-fields input:focus-visible { outline: 2px solid var(--composer-accent); outline-offset: 2px; }
+.combat-composer-fields optgroup { color: var(--composer-accent); font-weight: 700; }
+.combat-composer-fields option { color: var(--composer-ink); font-weight: 400; }
+.combat-composer-fields option:disabled { color: #86796a; }
+.combat-composer-fields input[type="search"] { min-height: 1.85rem; padding-block: 0.24rem; border-bottom: 0; border-radius: 3px 3px 0 0; font-size: 0.8rem; background: rgba(255, 252, 241, 0.65); }
+.combat-target-field input + select { margin-top: 0; border-radius: 0 0 3px 3px; }
+.combat-target-field > small { display: block; margin-top: 0.35rem; color: #77654f; font: 400 0.75rem/1.35 "EB Garamond", Georgia, serif; letter-spacing: 0; text-transform: none; }
+
+.combat-action-meta { display: flex; flex-wrap: wrap; gap: 0.1rem 0.6rem; margin-top: 0.4rem; color: #766047; font: 400 0.78rem/1.4 "EB Garamond", Georgia, serif; letter-spacing: 0; text-transform: none; }
+.combat-action-meta span + span::before { content: "·"; margin-right: 0.6rem; color: #a2865e; }
+.combat-composer-field-static { display: grid; gap: 0.4rem; align-content: start; color: var(--composer-ink); }
+.combat-composer-field-static > span { color: var(--composer-accent); font: 700 0.65rem/1.3 "Cinzel", Georgia, serif; text-transform: uppercase; }
+.combat-composer-field-static strong { font: 600 0.94rem/1.3 "EB Garamond", Georgia, serif; }
+.combat-composer-field-static small { font: 400 0.8rem/1.35 "EB Garamond", Georgia, serif; color: #77654f; }
+
+.combat-action-resolution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+  margin-top: 0.8rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--composer-line);
+  border-radius: 4px;
+  background: var(--composer-panel);
+}
+
+.combat-action-values { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; }
+.combat-action-value { display: grid; align-content: center; gap: 0.15rem; min-width: 3.5rem; }
+.combat-action-value > span { color: var(--composer-accent); font: 700 0.62rem/1.3 "Cinzel", Georgia, serif; text-transform: uppercase; letter-spacing: 0.04em; }
+.combat-action-value strong { color: var(--composer-ink); font: 700 1.12rem/1.15 "EB Garamond", Georgia, serif; }
+.combat-action-value small { color: #77654f; font: italic 0.72rem/1.25 "EB Garamond", Georgia, serif; }
+.combat-action-values--magic .combat-action-value:last-child strong { font-size: 0.92rem; }
+.combat-action-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; min-width: 0; }
+.combat-action-controls label { min-width: 8rem; flex: 1; }
+.combat-action-controls select { min-height: 2.25rem; padding-block: 0.35rem; margin-top: 0.2rem; }
+.combat-action-notice { margin: 0; color: #77654f; font: italic 0.88rem/1.4 "EB Garamond", Georgia, serif; }
+
+.combat-action-details { margin-top: 0.75rem; border-top: 1px solid var(--composer-line); color: var(--composer-ink); }
+.combat-action-details summary { width: fit-content; padding: 0.6rem 0 0.15rem; color: var(--composer-accent); font: 600 0.84rem/1.3 "EB Garamond", Georgia, serif; cursor: pointer; }
+.combat-action-details summary:focus-visible { outline: 2px solid var(--composer-accent); outline-offset: 3px; }
+.combat-action-details dl { display: grid; gap: 0.6rem; margin: 0.7rem 0 0.15rem; }
+.combat-action-details dl > div { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 0.5rem; }
+.combat-action-details dt { color: var(--composer-accent); font: 600 0.8rem/1.45 "EB Garamond", Georgia, serif; }
+.combat-action-details dd { margin: 0; white-space: pre-line; overflow-wrap: anywhere; font: 400 0.87rem/1.45 "EB Garamond", Georgia, serif; }
+.combat-composer-warning { margin-top: 0.7rem; }
+.combat-action-picker { position: relative; color: var(--composer-ink); font: 500 0.9rem/1.3 "EB Garamond", Georgia, serif; }
+.combat-action-picker > summary { display: flex; align-items: center; gap: 0.5rem; min-height: 2.6rem; padding: 0.5rem 0.6rem; box-sizing: border-box; border: 1px solid var(--composer-line); border-radius: 3px; background: #fffbf0; cursor: pointer; list-style: none; }
+.combat-action-picker > summary::-webkit-details-marker { display: none; }
+.combat-action-picker > summary > span:first-child { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.combat-action-picker-panel { position: absolute; inset: 100% 0 auto; z-index: 15; padding: 0.5rem; background: #fffbf0; border: 1px solid var(--composer-line); border-radius: 3px; box-shadow: 0 6px 20px #49372035; }
+.combat-action-picker-options { max-height: 19rem; overflow-y: auto; overscroll-behavior: contain; margin-top: 0.5rem; }
+.combat-action-picker-group { padding: 0.6rem 0.35rem 0.25rem; color: var(--composer-accent); font: 700 0.73rem/1.4 "Cinzel", Georgia, serif; }
+.combat-action-picker-options button { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; width: 100%; padding: 0.5rem 0.4rem; border: 1px solid transparent; border-radius: 3px; background: transparent; color: var(--composer-ink); text-align: left; font: inherit; cursor: pointer; }
+.combat-action-picker-options button > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.combat-action-picker-options button small { display: block; color: #82715c; font-size: 0.72rem; }
+.combat-action-picker-options button[aria-selected="true"] { background: #eee5ca; border-color: #bca579; }
+.combat-action-picker-options button:hover:not(:disabled) { background: #f2ead3; }
+.combat-action-picker-options button:disabled { opacity: 0.55; cursor: default; }
+.combat-action-picker summary:focus-visible, .combat-action-picker-options button:focus-visible { outline: 2px solid var(--composer-accent); outline-offset: -2px; }
+.combat-action-picker [hidden] { display: none; }
+.combat-action-picker-hint { display: block; padding: 0.5rem 0.2rem 0; color: #77654f; font-size: 0.72rem; }
+.combat-mini-costs { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.2rem 0.35rem; max-width: 9rem; flex: 0 0 auto; color: #59452f; font: 600 0.75rem/1 "EB Garamond", Georgia, serif; }
+.combat-mini-cost { display: inline-flex; align-items: center; gap: 0.1rem; }
+.combat-mini-cost-icon { position: relative; display: inline-grid; place-items: center; width: 1.1rem; height: 1.1rem; }
+.combat-mini-cost-icon img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fffbf0; }
+.combat-selected-targets { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+.combat-target-chip { display: inline-flex; align-items: center; gap: 0.4rem; max-width: 100%; padding: 0.2rem 0.5rem 0.2rem 0.2rem; border: 1px solid var(--composer-line); border-radius: 3px; background: #f5ecd7; color: var(--composer-ink); font: 600 0.85rem/1.3 "EB Garamond", Georgia, serif; letter-spacing: 0; text-transform: none; }
+.combat-target-chip > span:last-child { overflow-wrap: anywhere; min-width: 0; }
+.combat-target-portrait { position: relative; display: grid; place-items: center; flex: 0 0 1.8rem; width: 1.8rem; height: 1.8rem; border-radius: 2px; background: #dfd0ad; }
+.combat-target-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.combat-rule-heading { display: flex; justify-content: space-between; gap: 0.5rem; color: var(--composer-accent); font: 600 0.75rem/1.3 "Cinzel", Georgia, serif; }
+.combat-rule-heading small { font: italic 0.75rem/1.3 "EB Garamond", Georgia, serif; }
+
+@container (max-width: 620px) {
+  .combat-weapon-loadout { grid-template-columns: 1fr; gap: 0.75rem; }
+  .combat-composer-fields { grid-template-columns: 1fr; }
+  .combat-weapon-alternatives .combat-weapon-slot { grid-template-columns: 1fr; justify-items: center; text-align: center; width: 7rem; }
+  .combat-weapon-alternatives .combat-weapon-slot-copy small { display: none; }
+  .combat-weapon-alternatives .combat-weapon-slot[data-state="pending"] small { display: block; }
+  .combat-action-controls { width: 100%; }
+  .combat-action-resolution { align-items: stretch; }
+  .combat-action-details dl > div { grid-template-columns: 1fr; gap: 0.1rem; }
+  .combat-rule-options { grid-template-columns: 1fr; }
+}
+
+@container (max-width: 380px) {
+  .combat-composer-title { align-items: flex-start; flex-direction: column; gap: 0.4rem; }
+  .combat-composer-profile { text-align: left; }
+  .combat-composer-profile strong { text-align: left; }
+}

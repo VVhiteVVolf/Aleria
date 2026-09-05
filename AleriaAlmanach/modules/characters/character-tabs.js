@@ -38,7 +38,7 @@ function dispatchCharactersChanged() {
 
 function loadLocalCharacterDatabaseState() {
   if (!_localCharacterDatabaseRequest) {
-    _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs')
+    _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs?v=20260905-cenyr-runtime-autofill-v1')
       .then(async repository => ({ repository, database: await repository.loadLocalCharacterDatabase() }))
       .catch(error => {
         console.info('Lokale Charakterdatenbank konnte nicht initialisiert werden.', error);

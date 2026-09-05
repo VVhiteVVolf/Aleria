@@ -1,5 +1,5 @@
 import { normalizeHerausforderungEvent } from './herausforderung-model.js?v=20260805-herausforderung-v2';
-import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260808-duncan-v1';
+import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260905-party-combat-v1';
 
 export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
 

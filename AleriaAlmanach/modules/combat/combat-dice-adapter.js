@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { buildAttackNotation, buildDamageNotation } from './rules/combat-mvp-rules.js';
+import { buildAttackNotation, buildDamageNotation } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 
 export class CombatDiceAdapter {
   constructor(service = sceneDiceService) {

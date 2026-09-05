@@ -2,13 +2,14 @@
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
-import { resetCommentScopedResources } from './combat-action-economy.js?v=20260808-duncan-v1';
+import { resetCommentScopedResources } from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { reconcileClassDamageCondition } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260804-referee-v2';
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260905-encounter-v2';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260905-party-combat-v1';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -348,8 +349,11 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
         const stored = storedResources.find(item => item.id === resource.id);
         return stored ? {
           ...resource,
-          current: stored.current,
-          maximum: stored.maximum,
+          current: ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'].includes(resource.id)
+            ? Math.max(0, resource.maximum - Math.max(0, stored.maximum - stored.current))
+            : stored.current,
+          maximum: ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'].includes(resource.id)
+            ? resource.maximum : stored.maximum,
           ...(stored.recoveryDayKey ? { recoveryDayKey: String(stored.recoveryDayKey) } : {})
         } : resource;
       })
@@ -367,7 +371,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       })
     : profile.abilities;
   const temporaryConditions = Array.isArray(state.temporaryConditions)
-    ? state.temporaryConditions.map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
+    ? state.temporaryConditions.map(reconcileClassDamageCondition).map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
     : [];
   const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
     const mechanics = condition?.mechanics || {};

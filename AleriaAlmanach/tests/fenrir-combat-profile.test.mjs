@@ -84,21 +84,20 @@ test('Fenrirs Rüstungsklasse und Aura-Fokus ergeben sich korrekt aus Schuppenpa
   // Basis 14 (Schuppenpanzer) + 1 (GES-Mod, capped 2) + 2 (Schildbonus) = 17
   assert.equal(resolved.totalDefense, 17);
   const auraFocus = resolved.resources.find(resource => resource.id === 'aura-focus');
-  assert.equal(auraFocus.maximum, 1, 'Aura-Fokus wächst ab Stufe 6 automatisch');
+  assert.equal(auraFocus.maximum, 0, 'Aura-Fokus beginnt erst ab Stufe 8');
 });
 
-test('Doppelhieb der Zwillingsäxte würfelt drei getrennte Angriffe in einer Handlung', async () => {
+test('Doppelhieb der Zwillingsäxte würfelt zwei getrennte Angriffe in einer Handlung', async () => {
   const fenrir = await loadFenrir();
   const actor = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-twin-axe-flurry', segmentKind: 'combataction' });
   const target = trainingTarget();
-  const result = await new CombatResolutionService(new TechniqueDiceAdapter({ attacks: [15, 16, 17], damages: [4, 5, 6] }))
+  const result = await new CombatResolutionService(new TechniqueDiceAdapter({ attacks: [15, 16], damages: [4, 5] }))
     .resolveAttack({ actor, target });
   assert.equal(result.attack.hit, true);
-  assert.equal(result.followUpAttacks.length, 2, 'zwei Folgeangriffe zusätzlich zum Hauptangriff ergeben drei Angriffe insgesamt');
+  assert.equal(result.followUpAttacks.length, 1, 'ein Folgeangriff zusätzlich zum Hauptangriff');
   assert.equal(result.followUpAttacks[0].attack.hit, true);
-  assert.equal(result.followUpAttacks[1].attack.hit, true);
   assert.equal(result.damage.primaryTotal, 4);
-  assert.equal(result.damage.total, 4 + 5 + 6);
+  assert.equal(result.damage.total, 4 + 5);
 });
 
 test('Zerschmetternder Hieb und Kreiselwurf rechnen ihre Zusatzwürfel und Boni korrekt ein', async () => {
@@ -140,7 +139,7 @@ test('Berserkergang gewährt 10 temporäre Trefferpunkte und den Rage-Zustand mi
   assert.equal(appliedCondition.durationModel.kind, 'combat');
 });
 
-test('Während des Berserkergangs wird der Rage-Bonuswürfel automatisch an jeden Treffer angehängt', async () => {
+test('Während des Berserkergangs erhält der Hauptangriff einen Rage-Bonuswürfel', async () => {
   const fenrir = ragingFenrirActive(await loadFenrir());
   const actor = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
   const calm = resolveCombatProfile(await loadFenrir(), { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
@@ -157,8 +156,8 @@ test('Während des Berserkergangs wird der Rage-Bonuswürfel automatisch an jede
   };
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target });
   assert.equal(result.attack.hit, true);
-  // Zerschmetternder Hieb (1w12+1w4) plus Rage-Bonuswürfel (1w6) werden in einem Wurf zusammengeführt.
-  assert.equal(capturedFormula, '1d12+1d4+1d6');
+  // Zerschmetternder Hieb (1w12+1w4) plus Rage-Bonuswürfel (1w4) werden in einem Wurf zusammengeführt.
+  assert.equal(capturedFormula, '1d12+2d4');
   assert.equal(result.damage.total, 21);
 });
 

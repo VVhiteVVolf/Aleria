@@ -76,7 +76,7 @@ test('Selbstheilung verändert den Akteur und nicht das ausgewählte Gegenüber'
   assert.equal(result.effectResults[0].recipient, 'actor');
 });
 
-test('höherstufiges Wirken wählt den passenden Slot und skaliert den Schadenswurf', () => {
+test('höherstufiges Wirken berechnet Mana nach Grad und skaliert den Schadenswurf', () => {
   const caster = character('mage', {
     resources: [
       { id: 'action', name: 'Aktion', current: 1, maximum: 1, scope: 'comment' },
@@ -95,8 +95,9 @@ test('höherstufiges Wirken wählt den passenden Slot und skaliert den Schadensw
   });
   const resolved = resolveCombatProfile(caster, { actionId: 'spell:flame', segmentKind: 'spell', castLevel: 2 });
   assert.equal(resolved.selectedAction.castLevel, 2);
-  assert.equal(resolved.weapon.damageFormula, '1d8+1d8');
-  assert.ok(resolved.resourceCosts.some(cost => cost.resourceId === 'spell-slot-2' && cost.amount === 1));
+  assert.equal(resolved.weapon.damageFormula, '2d8');
+  assert.ok(resolved.resourceCosts.some(cost => cost.resourceId === 'mana-focus' && cost.amount === 3));
+  assert.ok(!resolved.resourceCosts.some(cost => cost.resourceId === 'spell-slot-2'));
   assert.ok(!resolved.resourceCosts.some(cost => cost.resourceId === 'spell-slot-1'));
 });
 

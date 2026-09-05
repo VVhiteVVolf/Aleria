@@ -86,7 +86,7 @@
       "FKiXsSWVoV74rTgmpPip",
       "FKiXsSWVoV74rTgmpPip"
     ],
-    "contentHash": "91a9279248cde2dce269b24fdd954c356c9f0025912bee17f733b29e59def33a"
+    "contentHash": "ed42491e66cf343f44e57d39693a690b367b9361c7b863c43a0743040a022d68"
   },
   "local": {
     "notes": "",
@@ -4528,8 +4528,8 @@
               "trainingForm": "Berserkerweg · Ausbildungsform",
               "minimumLevel": 4,
               "category": "technique",
-              "description": "Beide Äxte wirbeln im selben Atemzug - drei Hiebe, kaum zu unterscheiden.",
-              "effect": "Fenrir führt mit seinem Axtpaar drei getrennte Angriffe in einer einzigen Handlung: einen Hauptangriff und zwei weitere Hiebe, jeder für sich mit eigenem Trefferwurf und eigenem 1W6-Schaden.",
+              "description": "Zwei getrennte Hiebe: ein Hauptangriff und bei dessen Treffer ein kurzer Folgeangriff mit der zweiten Axt.",
+              "effect": "Hauptangriff: 1W6 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
               "activationType": "action",
               "weaponTypes": [
                 "axe"
@@ -4547,7 +4547,7 @@
               "duration": "Sofort",
               "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
               "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
-              "aiInstructions": "Drei vollständig getrennte Angriffswürfe (Haupt- und zwei Folgeangriffe), jeder kann eigenständig treffen oder verfehlen. Nur die serverseitig bestätigten Treffer und deren Einzelschaden erzählen, nichts zusammenfassen oder erfinden.",
+              "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
               "costs": [
                 {
                   "id": "fenrir-twin-axe-flurry-action",
@@ -4571,14 +4571,16 @@
               "followUpAttack": {
                 "enabled": true,
                 "sameTarget": true,
-                "damageFormula": "1d6",
+                "damageFormula": "1d4",
                 "damageType": "Hieb",
                 "attackBonus": 0,
                 "damageBonus": 0,
-                "repeatCount": 2,
+                "repeatCount": 1,
                 "triggerReactions": true,
-                "repeatPerAttackRules": true,
-                "triggerFurtherEffects": false
+                "repeatPerAttackRules": false,
+                "triggerFurtherEffects": false,
+                "inheritDamageModifier": false,
+                "inheritBonusDamage": false
               }
             },
             {
@@ -4717,7 +4719,7 @@
               "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
               "requirements": "Einmal pro Tag.",
               "tags": "Berserker · Rage · Skjaldr",
-              "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W6 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
+              "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
               "costs": [
                 {
                   "id": "fenrir-berserkergang-bonus-action",
@@ -4771,7 +4773,7 @@
                       "maximumHitPoints": 0,
                       "passivePerception": 0,
                       "attackRollMode": "normal",
-                      "bonusDamageFormula": "1d6",
+                      "bonusDamageFormula": "1d4",
                       "savingThrowAdvantageAttributes": [
                         "strength"
                       ],
@@ -6361,7 +6363,7 @@
       "revision": 1786237318810
     },
     "combatProfile": {
-      "schemaVersion": 10,
+      "schemaVersion": 9,
       "identity": {
         "ancestry": "Aldrimarer",
         "archetype": "Skjaldr",
@@ -6711,154 +6713,6 @@
         },
         {
           "id": "fenrir-greataxe",
-          "inventoryItemId": "equipment-weapon-fenrir-greataxe",
-          "name": "Großaxt",
-          "weaponType": "axe",
-          "training": "martial",
-          "damageFormula": "1d12",
-          "versatileDamageFormula": "",
-          "damageType": "Hieb",
-          "attackAttribute": "strength",
-          "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "range": "Nahkampf",
-          "properties": "Schwer · Zweihändig",
-          "notes": "Fenrirs schwerste Waffe, für den brachialen Alleinangriff.",
-          "requirements": "",
-          "aiInstructions": "",
-          "effects": [],
-          "ammunition": null,
-          "activationType": "action",
-          "costs": [
-            {
-              "id": "fenrir-greataxe-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "equipped": true
-        },
-        {
-          "id": "fenrir-handaxe-pair",
-          "inventoryItemId": "equipment-weapon-fenrir-handaxe-pair",
-          "name": "Einhandäxte (Paar)",
-          "weaponType": "axe",
-          "training": "martial",
-          "damageFormula": "1d6",
-          "versatileDamageFormula": "",
-          "damageType": "Hieb",
-          "attackAttribute": "strength",
-          "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "range": "Nahkampf",
-          "properties": "Ein aufeinander abgestimmtes Paar · wird gemeinsam beidhändig geführt",
-          "notes": "Grundlage für den Doppelhieb der Zwillingsäxte.",
-          "requirements": "",
-          "aiInstructions": "",
-          "effects": [],
-          "ammunition": null,
-          "activationType": "action",
-          "costs": [
-            {
-              "id": "fenrir-handaxe-pair-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "equipped": false
-        },
-        {
-          "id": "fenrir-throwing-axe",
-          "inventoryItemId": "equipment-weapon-fenrir-throwing-axe",
-          "name": "Wurfaxt",
-          "weaponType": "axe",
-          "training": "martial",
-          "damageFormula": "1d6",
-          "versatileDamageFormula": "",
-          "damageType": "Hieb",
-          "attackAttribute": "strength",
-          "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "range": "Nahkampf oder Wurf (9m)",
-          "properties": "Wurfwaffe · 3 Stück mitgeführt, Munition manuell nachhalten",
-          "notes": "Drei Wurfäxte im Gürtel, nachschleifen für den Kreiselwurf.",
-          "requirements": "",
-          "aiInstructions": "",
-          "effects": [],
-          "ammunition": null,
-          "activationType": "action",
-          "costs": [
-            {
-              "id": "fenrir-throwing-axe-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "equipped": false
-        },
-        {
-          "id": "fenrir-roundshield-bash",
-          "inventoryItemId": "equipment-weapon-fenrir-roundshield-bash",
-          "name": "Huskarl-Rundschild (Schildstoß)",
-          "weaponType": "shield",
-          "training": "martial",
-          "damageFormula": "1d4",
-          "versatileDamageFormula": "",
-          "damageType": "Wucht",
-          "attackAttribute": "strength",
-          "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "range": "Nahkampf",
-          "properties": "Offensiver Einsatz des Rundschilds · Rüstungsbonus siehe Rüstungsteil",
-          "notes": "Derselbe Rundschild wie im Rüstungsteil, hier für den Schildstoß als Waffe erfasst.",
-          "requirements": "",
-          "aiInstructions": "",
-          "effects": [],
-          "ammunition": null,
-          "activationType": "bonus-action",
-          "costs": [
-            {
-              "id": "fenrir-roundshield-bash-bonus-action",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "equipped": false
-        },
-        {
-          "id": "fenrir-greataxe",
           "inventoryItemId": "",
           "name": "Großaxt",
           "weaponType": "axe",
@@ -7009,34 +6863,6 @@
       "armorItems": [
         {
           "id": "fenrir-scale-mail",
-          "inventoryItemId": "equipment-armor-fenrir-scale-mail",
-          "name": "Schuppenpanzer",
-          "kind": "armor",
-          "baseArmorClass": 14,
-          "armorClassBonus": 0,
-          "dexterityMode": "capped",
-          "dexterityCap": 2,
-          "dexterityUnlockLevel": 0,
-          "properties": "Schuppenpanzer der Skjaldr-Ausbildung",
-          "notes": "",
-          "equipped": true
-        },
-        {
-          "id": "fenrir-roundshield",
-          "inventoryItemId": "equipment-armor-fenrir-roundshield",
-          "name": "Huskarl-Rundschild",
-          "kind": "shield",
-          "baseArmorClass": null,
-          "armorClassBonus": 2,
-          "dexterityMode": "full",
-          "dexterityCap": 2,
-          "dexterityUnlockLevel": 0,
-          "properties": "Rundschild der Huskarl-Ausbildung · +2 Rüstungsklasse",
-          "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil und Technik).",
-          "equipped": true
-        },
-        {
-          "id": "fenrir-scale-mail",
           "inventoryItemId": "",
           "name": "Schuppenpanzer",
           "kind": "armor",
@@ -7078,7 +6904,7 @@
         },
         {
           "id": "mana-focus",
-          "name": "Mana",
+          "name": "Mana / Fokus",
           "current": 0,
           "maximum": 0,
           "recovery": "day",
@@ -7134,8 +6960,8 @@
         {
           "id": "reaction",
           "name": "Reaktion",
-          "current": 2,
-          "maximum": 2,
+          "current": 1,
+          "maximum": 1,
           "recovery": "scene",
           "scope": "comment",
           "category": "action",
@@ -7156,8 +6982,8 @@
         {
           "id": "aura-focus",
           "name": "Aura-Fokuspunkt",
-          "current": 1,
-          "maximum": 1,
+          "current": 0,
+          "maximum": 0,
           "recovery": "day",
           "scope": "persistent",
           "category": "action",
@@ -7284,485 +7110,9 @@
           "icon": "",
           "spellLevel": 10,
           "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
-        },
-        {
-          "category": "focus",
-          "current": 0,
-          "icon": "",
-          "id": "focus",
-          "maximum": 0,
-          "name": "Fokus",
-          "notes": "",
-          "recovery": "day",
-          "scope": "persistent"
-        },
-        {
-          "category": "pact",
-          "current": 0,
-          "icon": "",
-          "id": "pact-points",
-          "maximum": 0,
-          "name": "Paktpunkte",
-          "notes": "",
-          "recovery": "day",
-          "scope": "persistent"
-        },
-        {
-          "id": "mana-focus",
-          "name": "Mana / Fokus",
-          "current": 0,
-          "maximum": 0,
-          "recovery": "day",
-          "scope": "persistent",
-          "category": "magic",
-          "icon": "",
-          "notes": ""
-        },
-        {
-          "id": "reaction",
-          "name": "Reaktion",
-          "current": 1,
-          "maximum": 1,
-          "recovery": "scene",
-          "scope": "comment",
-          "category": "action",
-          "icon": "./public/assets/combat-profile-icons/reaction.png",
-          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
-        },
-        {
-          "id": "aura-focus",
-          "name": "Aura-Fokuspunkt",
-          "current": 0,
-          "maximum": 0,
-          "recovery": "day",
-          "scope": "persistent",
-          "category": "action",
-          "paymentRole": "universal-substitute",
-          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
-          "notes": ""
         }
       ],
       "techniques": [
-        {
-          "id": "fenrir-crushing-blow",
-          "name": "Zerschmetternder Hieb",
-          "trainingForm": "Berserkerweg · Ausbildungsform",
-          "minimumLevel": 2,
-          "category": "technique",
-          "description": "Ein wuchtiger Überkopfhieb, der Rüstung und Knochen gleichermaßen bricht.",
-          "effect": "Bei einem Treffer verursacht die Großaxt 1W12 normalen Waffenschaden und zusätzlich 1W4 Wucht durch die schiere Wucht des Hiebs.",
-          "activationType": "action",
-          "weaponTypes": [
-            "axe"
-          ],
-          "compatibleWeaponIds": [
-            "fenrir-greataxe"
-          ],
-          "damageFormula": "1d12+1d4",
-          "damageType": "Hieb + Wucht",
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Die Großaxt muss aktiv geführt werden.",
-          "tags": "Berserkerweg · Großaxt · Wucht",
-          "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
-          "costs": [
-            {
-              "id": "fenrir-crushing-blow-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {
-            "armorClass": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0
-          },
-          "triggerRules": [],
-          "secondarySave": {
-            "enabled": false,
-            "addProficiency": true,
-            "attributeKey": "constitution",
-            "dcAttributeKey": "strength",
-            "dcBase": 8,
-            "failureCondition": {
-              "description": "",
-              "duration": "",
-              "id": "technique-save-condition",
-              "mechanics": {
-                "armorClass": 0,
-                "attack": 0,
-                "attackRollMode": "normal",
-                "bonusDamageFormula": "",
-                "combatStartTemporaryHitPoints": 0,
-                "damage": 0,
-                "initiative": 0,
-                "maximumHitPoints": 0,
-                "movement": 0,
-                "passivePerception": 0,
-                "savingThrow": 0,
-                "savingThrowAdvantageAttributes": [],
-                "savingThrowDisadvantageAttributes": [],
-                "skill": 0,
-                "spellAttack": 0,
-                "spellSaveDc": 0
-              },
-              "name": ""
-            }
-          },
-          "followUpAttack": {
-            "enabled": false,
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "damageFormula": "",
-            "damageType": "",
-            "repeatCount": 1,
-            "repeatPerAttackRules": true,
-            "sameTarget": true,
-            "triggerFurtherEffects": false,
-            "triggerReactions": true
-          },
-          "effects": []
-        },
-        {
-          "id": "fenrir-shield-bash",
-          "name": "Schildstoß",
-          "trainingForm": "Berserkerweg · Ausbildungsform",
-          "minimumLevel": 3,
-          "category": "technique",
-          "description": "Der Rundschild kracht mit voller Wucht ins Ziel.",
-          "effect": "Bei einem Treffer 1W4 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
-          "activationType": "bonus-action",
-          "weaponTypes": [
-            "shield"
-          ],
-          "compatibleWeaponIds": [
-            "fenrir-roundshield-bash"
-          ],
-          "damageFormula": "1d4",
-          "damageType": "Wucht",
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Der Huskarl-Rundschild muss ausgerüstet sein.",
-          "tags": "Berserkerweg · Schild · Kontrolle",
-          "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
-          "costs": [
-            {
-              "id": "fenrir-shield-bash-bonus-action",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {
-            "armorClass": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0
-          },
-          "triggerRules": [],
-          "secondarySave": {
-            "enabled": true,
-            "attributeKey": "strength",
-            "dcBase": 8,
-            "dcAttributeKey": "strength",
-            "addProficiency": true,
-            "failureCondition": {
-              "id": "fenrir-shield-bash-staggered",
-              "name": "Vom Schildstoß taumelnd",
-              "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
-              "description": "Der wuchtige Schildstoß bringt das Ziel aus dem Gleichgewicht.",
-              "mechanics": {
-                "attack": -2,
-                "armorClass": 0,
-                "attackRollMode": "normal",
-                "bonusDamageFormula": "",
-                "combatStartTemporaryHitPoints": 0,
-                "damage": 0,
-                "initiative": 0,
-                "maximumHitPoints": 0,
-                "movement": 0,
-                "passivePerception": 0,
-                "savingThrow": 0,
-                "savingThrowAdvantageAttributes": [],
-                "savingThrowDisadvantageAttributes": [],
-                "skill": 0,
-                "spellAttack": 0,
-                "spellSaveDc": 0
-              }
-            }
-          },
-          "followUpAttack": {
-            "enabled": false,
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "damageFormula": "",
-            "damageType": "",
-            "repeatCount": 1,
-            "repeatPerAttackRules": true,
-            "sameTarget": true,
-            "triggerFurtherEffects": false,
-            "triggerReactions": true
-          },
-          "effects": []
-        },
-        {
-          "id": "fenrir-twin-axe-flurry",
-          "name": "Doppelhieb der Zwillingsäxte",
-          "trainingForm": "Berserkerweg · Ausbildungsform",
-          "minimumLevel": 4,
-          "category": "technique",
-          "description": "Beide Äxte wirbeln im selben Atemzug - drei Hiebe, kaum zu unterscheiden.",
-          "effect": "Fenrir führt mit seinem Axtpaar drei getrennte Angriffe in einer einzigen Handlung: einen Hauptangriff und zwei weitere Hiebe, jeder für sich mit eigenem Trefferwurf und eigenem 1W6-Schaden.",
-          "activationType": "action",
-          "weaponTypes": [
-            "axe"
-          ],
-          "compatibleWeaponIds": [
-            "fenrir-handaxe-pair"
-          ],
-          "damageFormula": "1d6",
-          "damageType": "Hieb",
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
-          "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
-          "aiInstructions": "Drei vollständig getrennte Angriffswürfe (Haupt- und zwei Folgeangriffe), jeder kann eigenständig treffen oder verfehlen. Nur die serverseitig bestätigten Treffer und deren Einzelschaden erzählen, nichts zusammenfassen oder erfinden.",
-          "costs": [
-            {
-              "id": "fenrir-twin-axe-flurry-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {
-            "armorClass": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0
-          },
-          "triggerRules": [],
-          "secondarySave": {
-            "enabled": false,
-            "addProficiency": true,
-            "attributeKey": "constitution",
-            "dcAttributeKey": "strength",
-            "dcBase": 8,
-            "failureCondition": {
-              "description": "",
-              "duration": "",
-              "id": "technique-save-condition",
-              "mechanics": {
-                "armorClass": 0,
-                "attack": 0,
-                "attackRollMode": "normal",
-                "bonusDamageFormula": "",
-                "combatStartTemporaryHitPoints": 0,
-                "damage": 0,
-                "initiative": 0,
-                "maximumHitPoints": 0,
-                "movement": 0,
-                "passivePerception": 0,
-                "savingThrow": 0,
-                "savingThrowAdvantageAttributes": [],
-                "savingThrowDisadvantageAttributes": [],
-                "skill": 0,
-                "spellAttack": 0,
-                "spellSaveDc": 0
-              },
-              "name": ""
-            }
-          },
-          "followUpAttack": {
-            "enabled": true,
-            "sameTarget": true,
-            "damageFormula": "1d6",
-            "damageType": "Hieb",
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "repeatCount": 2,
-            "triggerReactions": true,
-            "repeatPerAttackRules": true,
-            "triggerFurtherEffects": false
-          },
-          "effects": []
-        },
-        {
-          "id": "fenrir-spinning-throw",
-          "name": "Kreiselwurf",
-          "trainingForm": "Berserkerweg · Ausbildungsform",
-          "minimumLevel": 6,
-          "category": "technique",
-          "description": "Die Wurfaxt dreht sich schwirrend durch die Luft, ehe sie mit voller Wucht einschlägt.",
-          "effect": "Ein gezielter, kraftvoller Wurf: +1 auf den Angriffswurf, bei einem Treffer 1W6 normaler Wurfaxtschaden und zusätzlich 1W4 durch den Schwung des Wurfs.",
-          "activationType": "action",
-          "weaponTypes": [
-            "axe"
-          ],
-          "compatibleWeaponIds": [
-            "fenrir-throwing-axe"
-          ],
-          "damageFormula": "1d6+1d4",
-          "damageType": "Hieb",
-          "attackBonus": 1,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Fernkampf (9m)",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Verbraucht eine mitgeführte Wurfaxt.",
-          "tags": "Berserkerweg · Wurfaxt · Distanz",
-          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
-          "costs": [
-            {
-              "id": "fenrir-spinning-throw-action",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {
-            "armorClass": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0
-          },
-          "triggerRules": [],
-          "secondarySave": {
-            "enabled": false,
-            "addProficiency": true,
-            "attributeKey": "constitution",
-            "dcAttributeKey": "strength",
-            "dcBase": 8,
-            "failureCondition": {
-              "description": "",
-              "duration": "",
-              "id": "technique-save-condition",
-              "mechanics": {
-                "armorClass": 0,
-                "attack": 0,
-                "attackRollMode": "normal",
-                "bonusDamageFormula": "",
-                "combatStartTemporaryHitPoints": 0,
-                "damage": 0,
-                "initiative": 0,
-                "maximumHitPoints": 0,
-                "movement": 0,
-                "passivePerception": 0,
-                "savingThrow": 0,
-                "savingThrowAdvantageAttributes": [],
-                "savingThrowDisadvantageAttributes": [],
-                "skill": 0,
-                "spellAttack": 0,
-                "spellSaveDc": 0
-              },
-              "name": ""
-            }
-          },
-          "followUpAttack": {
-            "enabled": false,
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "damageFormula": "",
-            "damageType": "",
-            "repeatCount": 1,
-            "repeatPerAttackRules": true,
-            "sameTarget": true,
-            "triggerFurtherEffects": false,
-            "triggerReactions": true
-          },
-          "effects": []
-        },
         {
           "id": "fenrir-crushing-blow",
           "name": "Zerschmetternder Hieb",
@@ -7882,8 +7232,8 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 4,
           "category": "technique",
-          "description": "Beide Äxte wirbeln im selben Atemzug - drei Hiebe, kaum zu unterscheiden.",
-          "effect": "Fenrir führt mit seinem Axtpaar drei getrennte Angriffe in einer einzigen Handlung: einen Hauptangriff und zwei weitere Hiebe, jeder für sich mit eigenem Trefferwurf und eigenem 1W6-Schaden.",
+          "description": "Zwei getrennte Hiebe: ein Hauptangriff und bei dessen Treffer ein kurzer Folgeangriff mit der zweiten Axt.",
+          "effect": "Hauptangriff: 1W6 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
           "activationType": "action",
           "weaponTypes": [
             "axe"
@@ -7901,7 +7251,7 @@
           "duration": "Sofort",
           "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
           "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
-          "aiInstructions": "Drei vollständig getrennte Angriffswürfe (Haupt- und zwei Folgeangriffe), jeder kann eigenständig treffen oder verfehlen. Nur die serverseitig bestätigten Treffer und deren Einzelschaden erzählen, nichts zusammenfassen oder erfinden.",
+          "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
           "costs": [
             {
               "id": "fenrir-twin-axe-flurry-action",
@@ -7925,14 +7275,16 @@
           "followUpAttack": {
             "enabled": true,
             "sameTarget": true,
-            "damageFormula": "1d6",
+            "damageFormula": "1d4",
             "damageType": "Hieb",
             "attackBonus": 0,
             "damageBonus": 0,
-            "repeatCount": 2,
+            "repeatCount": 1,
             "triggerReactions": true,
-            "repeatPerAttackRules": true,
-            "triggerFurtherEffects": false
+            "repeatPerAttackRules": false,
+            "triggerFurtherEffects": false,
+            "inheritDamageModifier": false,
+            "inheritBonusDamage": false
           }
         },
         {
@@ -7987,76 +7339,6 @@
         }
       ],
       "quirks": [
-        {
-          "id": "starter-ancestry-aldrimarer-trait-1",
-          "name": "Aldrimarische Widerstandskraft",
-          "type": "trait",
-          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "trigger": "",
-          "target": "self",
-          "duration": "",
-          "stacking": "normal",
-          "tags": "Volk · Aldrimarer",
-          "limitations": "",
-          "aiInstructions": "",
-          "priority": 0,
-          "active": true,
-          "mechanics": {
-            "attack": 0,
-            "damage": 0,
-            "armorClass": 0,
-            "initiative": 0,
-            "skill": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
-          },
-          "triggerRules": []
-        },
-        {
-          "id": "starter-background-ritter-trait-1",
-          "name": "Ritterliche Herkunft und Standespflicht",
-          "type": "trait",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "trigger": "",
-          "target": "self",
-          "duration": "",
-          "stacking": "normal",
-          "tags": "Hintergrund · Ritter",
-          "limitations": "",
-          "aiInstructions": "",
-          "priority": 0,
-          "active": true,
-          "mechanics": {
-            "attack": 0,
-            "damage": 0,
-            "armorClass": 0,
-            "initiative": 0,
-            "skill": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
-          },
-          "triggerRules": []
-        },
         {
           "id": "starter-ancestry-aldrimarer-trait-1",
           "name": "Aldrimarische Widerstandskraft",
@@ -8141,167 +7423,7 @@
           "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
           "requirements": "Einmal pro Tag.",
           "tags": "Berserker · Rage · Skjaldr",
-          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W6 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
-          "costs": [
-            {
-              "id": "fenrir-berserkergang-bonus-action",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {
-            "armorClass": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0
-          },
-          "triggerRules": [],
-          "effects": [
-            {
-              "id": "fenrir-berserkergang-temp-hp",
-              "type": "temporary-hit-points",
-              "target": "self",
-              "amount": 10,
-              "on": "always",
-              "channelComments": 0,
-              "concentration": false,
-              "condition": null,
-              "conditionId": "",
-              "conditionTags": "",
-              "damageType": "physisch",
-              "formula": "",
-              "magical": false,
-              "movementKind": "move",
-              "movementMeters": 0,
-              "nonlethal": false,
-              "notes": "",
-              "resourceId": "",
-              "summon": null
-            },
-            {
-              "id": "fenrir-berserkergang-condition",
-              "type": "apply-condition",
-              "target": "self",
-              "on": "always",
-              "condition": {
-                "id": "fenrir-berserkergang-state",
-                "name": "Berserkergang",
-                "tags": "Berserker · Rage",
-                "source": "Berserkermodus des Skjaldr",
-                "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
-                "durationModel": {
-                  "kind": "combat",
-                  "channelOwnerId": "",
-                  "concentrationOwnerId": "",
-                  "encounterId": "",
-                  "expiresOnDayChange": false,
-                  "expiresOnRest": "",
-                  "label": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-                  "remainingActorComments": 0,
-                  "remainingSceneComments": 0
-                },
-                "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-                "mechanics": {
-                  "attack": 5,
-                  "damage": 0,
-                  "armorClass": -5,
-                  "initiative": 0,
-                  "skill": 0,
-                  "savingThrow": 0,
-                  "spellAttack": 0,
-                  "spellSaveDc": 0,
-                  "movement": 0,
-                  "maximumHitPoints": 0,
-                  "passivePerception": 0,
-                  "attackRollMode": "normal",
-                  "bonusDamageFormula": "1d6",
-                  "savingThrowAdvantageAttributes": [
-                    "strength"
-                  ],
-                  "savingThrowDisadvantageAttributes": [
-                    "wisdom",
-                    "intelligence",
-                    "charisma",
-                    "constitution"
-                  ]
-                },
-                "active": true,
-                "remainingActorComments": 0,
-                "remainingSceneComments": 0,
-                "ward": {
-                  "breaksOnCriticalHit": false,
-                  "charges": 0,
-                  "deflectChance": 100,
-                  "enabled": false
-                }
-              },
-              "amount": 0,
-              "channelComments": 0,
-              "concentration": false,
-              "conditionId": "",
-              "conditionTags": "",
-              "damageType": "physisch",
-              "formula": "",
-              "magical": false,
-              "movementKind": "move",
-              "movementMeters": 0,
-              "nonlethal": false,
-              "notes": "",
-              "resourceId": "",
-              "summon": null
-            }
-          ],
-          "inventoryUseTrigger": {
-            "enabled": false,
-            "itemTags": [],
-            "restoreResources": [],
-            "requireActualRecovery": true
-          },
-          "channelComments": 0,
-          "concentration": false,
-          "halfDamageOnSave": false,
-          "resolutionType": "",
-          "saveAttribute": "dexterity"
-        },
-        {
-          "id": "fenrir-berserkergang",
-          "name": "Berserkergang",
-          "description": "Der Skjaldr verfällt in blinde Kampfeswut. Angriffe treffen leichter und richten mehr Schaden an, doch die eigene Deckung fällt.",
-          "usesCurrent": 1,
-          "usesMaximum": 1,
-          "recovery": "day",
-          "recoveryDayKey": "",
-          "rollFormula": "",
-          "damageType": "physisch",
-          "activationType": "bonus-action",
-          "delivery": "ability",
-          "combatUsable": true,
-          "target": "Selbst",
-          "range": "Selbst",
-          "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-          "requirements": "Einmal pro Tag.",
-          "tags": "Berserker · Rage · Skjaldr",
-          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W6 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
+          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
           "costs": [
             {
               "id": "fenrir-berserkergang-bonus-action",
@@ -8355,7 +7477,7 @@
                   "maximumHitPoints": 0,
                   "passivePerception": 0,
                   "attackRollMode": "normal",
-                  "bonusDamageFormula": "1d6",
+                  "bonusDamageFormula": "1d4",
                   "savingThrowAdvantageAttributes": [
                     "strength"
                   ],
@@ -8396,11 +7518,7 @@
           "spell-slot-10"
         ],
         "notes": "",
-        "spells": [],
-        "bypassResourceId": "",
-        "casterTier": "full",
-        "focusEnabled": false,
-        "focusResourceId": "focus"
+        "spells": []
       },
       "aura": {
         "enabled": false,
@@ -8432,11 +7550,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           },
           "allyMechanics": {
             "attack": 0,
@@ -8450,11 +7564,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           },
           "enemyMechanics": {
             "attack": 0,
@@ -8468,11 +7578,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           }
         },
         "latentPresence": {
@@ -8498,11 +7604,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           },
           "allyMechanics": {
             "attack": 0,
@@ -8516,11 +7618,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           },
           "enemyMechanics": {
             "attack": 0,
@@ -8534,11 +7632,7 @@
             "movement": 0,
             "maximumHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
+            "attackRollMode": "normal"
           }
         }
       },
@@ -8546,8 +7640,7 @@
         "enabled": false,
         "automaticCritical": false
       },
-      "notes": "",
-      "revision": 1786226671182
+      "notes": ""
     },
     "identity": {
       "worldPersonId": "person--haus-varulv--fenrir-varulv"

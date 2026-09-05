@@ -127,3 +127,43 @@ test('Onlinewerte gewinnen, lokale Identität und Datenbankverweis bleiben erhal
   assert.equal(merged.localRecord.recordId, 'character--gawain');
   assert.deepEqual(mergeCharacterDatabases([online], [local]), [merged]);
 });
+
+test('eine neuere lokale Klassenausbildung ersetzt ein noch nicht migriertes Online-Kampfprofil', () => {
+  const online = {
+    id: 'gawain',
+    name: 'Gawain Draig',
+    combatProfile: {
+      templateSelections: { classId: 'teulu' },
+      progression: { level: 5 },
+      revision: 25,
+      hitPoints: { current: 7, maximum: 30, temporary: 3 },
+      resources: [{ id: 'aura-focus', current: 1, maximum: 3, recoveryDayKey: '1727-04-12' }],
+      abilities: [{ id: 'dragon-ward', usesCurrent: 0, usesMaximum: 1, recoveryDayKey: '1727-04-12' }],
+      techniques: [{ id: 'legacy-bite', name: 'Biss des Drachen' }]
+    }
+  };
+  const local = {
+    id: 'gawain',
+    name: 'Gawain Draig',
+    combatProfile: {
+      templateSelections: { classId: 'teulu' },
+      progression: { level: 5 },
+      revision: 20,
+      hitPoints: { current: 30, maximum: 30, temporary: 0 },
+      resources: [{ id: 'aura-focus', current: 3, maximum: 3, recoveryDayKey: '' }],
+      abilities: [{ id: 'dragon-ward', usesCurrent: 1, usesMaximum: 1, recoveryDayKey: '' }],
+      classTraining: { schemaVersion: 2, curriculumId: 'cenyr-teulu', selections: [], techniqueSelections: [] },
+      techniques: [{ id: 'combat-style-drachentanz-jungdrache-01-erster-hieb', name: 'Erster Hieb des Jungdrachens' }]
+    }
+  };
+
+  const merged = mergeOnlineAndLocalCharacter(online, local);
+  assert.equal(merged.combatProfile.classTraining.schemaVersion, 2);
+  assert.deepEqual(merged.combatProfile.techniques.map(technique => technique.name), ['Erster Hieb des Jungdrachens']);
+  assert.deepEqual(merged.combatProfile.hitPoints, { current: 7, maximum: 30, temporary: 3 });
+  assert.equal(merged.combatProfile.resources[0].current, 1);
+  assert.equal(merged.combatProfile.resources[0].recoveryDayKey, '1727-04-12');
+  assert.equal(merged.combatProfile.abilities[0].usesCurrent, 0);
+  assert.equal(merged.combatProfile.abilities[0].recoveryDayKey, '1727-04-12');
+  assert.equal(merged.combatProfile.revision, 25);
+});

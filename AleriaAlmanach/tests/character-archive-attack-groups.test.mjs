@@ -19,27 +19,41 @@ const snapshot = JSON.parse(await readFile(new URL('../../CharakterDatenbank/gen
 const live = snapshot.characters.flatMap(record => extractCharacterArchiveEntries(record));
 const entries = mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([...catalog, ...live]));
 const groupNames = groups => groups.flatMap(group => [group.name, ...groupNames(group.children)]);
+const groupEntries = group => [
+  ...(group?.entries || []),
+  ...(group?.children || []).flatMap(groupEntries)
+];
 
-test('canonical Drachentanz has class, style, seven ordered forms and attacks; Gawain has his own branch', () => {
+test('canonical Drachentanz keeps every Cenyr attack under class, style and form', () => {
   const groups = getCharacterArchiveAttackGroups(entries.filter(entry => matchesCharacterArchiveKind(entry, 'technique')), entries);
   const teulu = groups.find(group => group.name === 'Teulu');
   assert(teulu);
   const style = teulu.children.find(group => group.name === 'Drachentanz');
-  assert.equal(style.children.length, 7);
-  assert.deepEqual(style.children.map(group => group.parentEntry.data.number), [1, 2, 3, 4, 5, 6, 7]);
+  assert.equal(style.children.length, 10);
+  assert.deepEqual(style.children.map(group => group.parentEntry.data.number), [1, 2, 3, 4, 5, 6, 7, null, null, null]);
   assert.equal(style.children[0].entries.length, 6);
-  assert.equal(style.children[6].entries.length, 0, 'Empty canonical forms remain visible');
-  const gawain = groups.find(group => group.name === 'Personen').children.find(group => group.name === 'Gawain Draig');
-  assert(gawain?.children.find(group => group.name === 'Attacken').entries.some(entry => entry.name === 'Biss des Drachen'));
+  assert.equal(style.children[9].entries.length, 0, 'Empty canonical paths remain visible');
+  const people = groups.find(group => group.name === 'Personen');
+  const gawain = people?.children.find(group => group.name === 'Gawain Draig');
+  assert.equal(groupEntries(gawain).some(entry => String(entry.data?.id || '').startsWith('gawain-dragon-')), false);
+  assert.equal(style.children[0].entries.some(entry => entry.name === 'Biss des Jungdrachens'), true);
   assert(!groupNames(groups).includes('Drachentanz · Ausbildungsform'));
 });
 
 test('filtered attack retains its canonical parents even when those are not visible search results', () => {
-  const attack = catalog.find(entry => entry.kind === 'technique' && entry.data.combatStyleFormId);
+  const attack = catalog.find(entry => entry.kind === 'technique' && entry.data.combatStyleFormId
+    && entry.data.cenyrTraining?.allowedClassIds?.length > 1);
   const groups = getCharacterArchiveAttackGroups([attack], catalog);
-  assert.equal(groups[0].name, 'Teulu');
-  assert.equal(groups[0].children[0].name, 'Drachentanz');
-  assert.equal(groups[0].children[0].children[0].entries[0].name, attack.name);
+  const expectedOwners = attack.data.cenyrTraining.allowedClassIds
+    .map(classId => catalog.find(entry => entry.kind === 'class' && entry.data?.cultureClassProfiles?.some(profile => profile.classId === classId))?.name)
+    .filter(Boolean)
+    .sort();
+  assert.deepEqual(groups.map(group => group.name).sort(), expectedOwners);
+  for (const group of groups) {
+    assert.equal(group.children[0].name, 'Drachentanz');
+    assert.equal(group.children[0].children[0].entries[0].name, attack.name);
+    assert.equal(group.children[0].children[0].entries[0].id, attack.id, 'Shared attacks keep one canonical ID');
+  }
 });
 
 test('new archive styles and forms can be selected and resolve through the same hierarchy', () => {
@@ -92,9 +106,10 @@ test('all base classes precede cultural classes; aliases merge and shared Milwr 
   const groups = getCharacterArchiveClassGroups(classes);
   assert.equal(groups[0].name, 'Standardklassen');
   assert.equal(groups[0].entries.length, 15);
-  assert(groups[0].entries.some(entry => entry.name === 'Mönch'));
-  assert(groups[0].entries.some(entry => entry.name === 'Hexenmeister'));
-  assert.equal(classes.filter(entry => ['Hexer', 'Asket'].includes(entry.name)).length, 0);
+  assert(groups[0].entries.some(entry => entry.name === 'Asket'));
+  assert(groups[0].entries.some(entry => entry.name === 'Paktträger'));
+  assert(groups[0].entries.some(entry => entry.name === 'Eidgeschworener'));
+  assert.equal(classes.filter(entry => ['Mönch', 'Hexer', 'Hexenmeister', 'Paladin'].includes(entry.name)).length, 0);
   for (const culture of ['Cenyr', 'Vennyr']) assert(groups.find(group => group.name === culture).entries.some(entry => entry.name === 'Milwr'));
   assert(groups.find(group => group.name === 'Aldrimar').entries.some(entry => entry.name === 'Skjaldr'));
 });

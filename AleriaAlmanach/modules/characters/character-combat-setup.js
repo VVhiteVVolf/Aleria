@@ -1,3 +1,4 @@
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
 import {
   CHARACTER_CREATION_METHODS,
   CHARACTER_CREATION_STEPS,
@@ -11,14 +12,14 @@ import {
   rollAttributeSet,
   setCreationAttributeMethod,
   validateCharacterCreationDraft
-} from '../combat/character-creation-model.js?v=20260808-drachentanz-v1';
+} from '../combat/character-creation-model.js?v=20260905-party-combat-v1';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
-} from '../combat/character-creation-templates.js?v=20260808-drachentanz-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260808-duncan-v1';
+} from '../combat/character-creation-templates.js?v=20260905-cenyr-character-training-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
 
 let activeSetup = null;
 
@@ -167,13 +168,14 @@ function renderSkillsStep(draft, profile) {
 function renderEquipmentStep(draft) {
   const classTemplate = getCharacterCreationTemplate('class', draft.selections.classId);
   if (!classTemplate) return `<section class="cp-setup-step"><header><span>Schritt 4</span><h3>Kampfausbildung</h3></header><div class="cp-setup-empty">Wähle im ersten Schritt eine Klasse oder überspringe diesen Abschnitt.</div></section>`;
+  const startingTechniques = getCombatStyleTechniquesForGrants(classTemplate.combatStyleGrants, 1);
   return `<section class="cp-setup-step">
     <header><span>Schritt 4</span><h3>${escapeHtml(classTemplate.label)} · Kampfausbildung</h3><p>${escapeHtml(classTemplate.description)}</p></header>
     <div class="cp-setup-package-grid">
-      <article><span>Trefferwürfel</span><strong>W${classTemplate.hitDie}</strong><small>Bestimmt die Trefferpunkte auf Stufe 1.</small></article>
-      <article><span>Rettungswürfe</span><strong>${escapeHtml((classTemplate.savingThrowProficiencies || []).map(key => COMBAT_ATTRIBUTE_DEFINITIONS.find(attribute => attribute.key === key)?.label || key).join(', '))}</strong></article>
-      <article><span>Rüstungen</span><strong>${escapeHtml((classTemplate.proficiencies?.armor || []).join(', ') || 'Keine')}</strong></article>
-      <article><span>Waffenausbildung</span><strong>${escapeHtml((classTemplate.proficiencies?.weapons || []).join(', ') || 'Keine')}</strong></article>
+      <article><span>Trefferwürfel</span><strong>${classTemplate.hitDie ? `W${classTemplate.hitDie}` : 'Noch offen'}</strong><small>${classTemplate.hitDie ? 'Bestimmt die Trefferpunkte auf Stufe 1.' : 'Der vorhandene Bogenwert bleibt bestehen.'}</small></article>
+      <article><span>Rettungswürfe</span><strong>${escapeHtml((classTemplate.savingThrowProficiencies || []).map(key => COMBAT_ATTRIBUTE_DEFINITIONS.find(attribute => attribute.key === key)?.label || key).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
+      <article><span>Rüstungen</span><strong>${escapeHtml((classTemplate.proficiencies?.armor || []).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
+      <article><span>Waffenausbildung</span><strong>${escapeHtml((classTemplate.proficiencies?.weapons || []).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
     </div>
     <div class="cp-setup-loadout">
       <h4>Startausrüstung</h4>
@@ -181,6 +183,7 @@ function renderEquipmentStep(draft) {
       ${(classTemplate.armorItems || []).map(item => `<span>⬟ <strong>${escapeHtml(item.name)}</strong><small>Grund-RK ${item.baseArmorClass}</small></span>`).join('')}
       ${classTemplate.magic?.enabled ? `<span>✦ <strong>Magiebegabt</strong><small>${escapeHtml(classTemplate.magic.notes)}</small></span>` : ''}
     </div>
+    ${startingTechniques.length ? `<div class="cp-setup-loadout"><h4>Ausbildung · Stufe 1</h4>${startingTechniques.map(technique => `<span>✦ <strong>${escapeHtml(technique.name)}</strong><small>${escapeHtml(technique.trainingForm)} · ${escapeHtml(technique.requirements)}</small></span>`).join('')}</div>` : ''}
     <label class="cp-setup-check"><input type="checkbox" data-creation-field="replaceStartingEquipment"${checked(draft.replaceStartingEquipment)}> Frühere Vorlagen-Ausrüstung ersetzen; selbst angelegte Gegenstände bleiben erhalten.</label>
   </section>`;
 }

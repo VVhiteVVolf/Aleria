@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "pakttrager",
+  "name": "Paktträger",
+  "title": "Der Paktträger",
+  "aliases": [
+    "Hexenmeister",
+    "Hexer"
+  ],
+  "subtitle": "Pakt mit dunklen Mächten",
+  "theme": "shadow",
+  "icon": "https://i.imgur.com/5Dkv7Ri.png",
+  "illustration": "https://i.imgur.com/Pwasph2.png",
+  "facts": [
+    {
+      "label": "Name",
+      "html": "<strong>Paktträger, Paktgebundener, Fluchträger, Gebundener, Arkane Diener</strong>"
+    },
+    {
+      "label": "Rolle",
+      "html": "<strong>Zauberwirker, Manipulator, Dunkler Gelehrter, Fluchträger, Beschwörer</strong>"
+    },
+    {
+      "label": "Fähigkeiten",
+      "html": "<strong>Paktgebundene Magie, Flüche, Dunkles Wissen, Instinktive Zauber, Übernatürliche Präsenz</strong>"
+    },
+    {
+      "label": "Stärken",
+      "html": "<strong>Hohe Macht ohne Studium, spontane Zauber, unkonventionelle Magie, oft widerstandsfähiger als Magier</strong>"
+    },
+    {
+      "label": "Schwächen",
+      "html": "<strong>Gebunden an eine fremde Macht, keine volle Kontrolle über Magie, oft gesellschaftlich geächtet, hoher Preis für seine Kraft</strong>"
+    },
+    {
+      "label": "Magisches Potenzial",
+      "html": "<strong>Irrelevant</strong>"
+    },
+    {
+      "label": "Religiöses Potenzial",
+      "html": "<strong>Irrelevant</strong>"
+    },
+    {
+      "label": "Ausrüstung",
+      "html": "<strong>Arkane Siegel, zeremonielle Dolche, magische Talismane, Bücher mit verbotenen Lehren, oft in Roben oder ritueller Kleidung</strong>"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Paktträger</strong> ist kein Schüler der Magie – er ist ihr <strong>Gefäß</strong>. Seine Macht stammt nicht aus Studium oder Blutlinie, sondern aus einem <strong>Pakt</strong>, einem <strong>Bündnis</strong> oder gar einem <strong>Fluch</strong>, der ihn an eine höhere (oder tiefere) Macht bindet. Dämonenfürsten, alte Götter, Gefallene oder fremdartige Entitäten – sie flüstern ihm Wissen zu, das kein Sterblicher je begreifen sollte. Der Paktträger kanalisiert <strong>verborgene Mächte</strong>, die ihn zugleich <strong>erheben</strong> und <strong>verzehren</strong> können. Viele betrachten ihn mit <strong>Argwohn</strong>, manche mit <strong>Ehrfurcht</strong> – doch niemand nennt ihn leichtfertig einen Freund.</p> <blockquote><p><em>\"Ich rufe dich aus der Schwärze jenseits der Schleier. Ich öffne meine Seele für das Wissen, das verborgen liegt. Mein Wille ist der Preis, mein Körper dein Gefäß, mein Geist dein Zeuge.\"</em></p> <p><em>\"Durch Blut, durch Wort, durch Atem gebe ich mich hin. Keine Ketten halten mich, keine Gesetze binden mich – nur der Pakt, der hier und jetzt geschlossen wird.\"</em></p> <p><em>\"So nehme ich an, was mir angeboten wird. So gebe ich, was gefordert wird. So sei es besiegelt.\"</em></p> <p><br/> <em>\"So sei es gesprochen. So sei es gegeben. So sei es genommen.\"</em></p> </blockquote>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Paktträger ist keine <strong>produktive Schöpfung</strong> der Menschheit – er ist das Ergebnis eines <strong>Pakts, eines Verlangens, eines Rufes in die Dunkelheit</strong>. Seine Existenz ist eine Folge des menschlichen Strebens nach Wissen und Macht, die jenseits des Erlaubten liegt.</p> <p>Ursprünglich waren es <strong>Schamanen</strong>, die als erste den Kontakt mit anderen Mächten suchten. Sie beteten zu den Göttern, lauschten den Stimmen der Ahnen, suchten Führung in den Schatten zwischen dieser Welt und der nächsten. Doch nicht alle Antworten kamen aus wohlwollenden Quellen. Einige Wesenheiten, <strong>älter als das Licht</strong>, <strong>tiefer als die Welt</strong>, antworteten mit Flüstern, mit Versprechungen, mit einem Tauschgeschäft: <strong>Macht gegen einen Preis</strong>.</p> <p>So entstanden die ersten Paktträger – nicht aus Disziplin oder Gelehrsamkeit wie Magier, nicht aus Blutlinien oder innerer Kraft wie Magiebegabte, sondern aus <strong>einem einfachen, aber folgenschweren Handel</strong>. Ein Mann, eine Frau, ein verzweifeltes Wesen, das die Welt nach Macht durchsuchte, <strong>und eine Entität, die bereit war zu geben</strong>. Sei es durch einen Dämonenpakt, ein geflüstertes Geheimnis von einem vergessenen Gott oder den Kuss einer uralten Hexenkönigin – <strong>ein Paktträger ist immer gebunden</strong>.</p> <p>Und diese Bindung ist sowohl sein Geschenk als auch sein Fluch. Denn ein Paktträger mag übermächtige Kräfte besitzen, Zauber wirken, die die Realität selbst brechen – aber <strong>nichts ist je umsonst</strong>.</p>"
+    },
+    {
+      "id": "klassenbeschreibung",
+      "title": "Klassenbeschreibung",
+      "status": "written",
+      "html": "<p>Der <strong>Paktträger</strong> ist kein Gelehrter der Magie und kein natürlicher Magiebegabter – er ist ein <strong>Werkzeug einer höheren Macht</strong>, ein Gefäß, durch das fremdartige Kräfte wirken. Seine Magie ist nicht das Ergebnis von Studium oder Disziplin, sondern <strong>ein Geschenk, ein Fluch oder eine Bürde</strong>.</p> <p>Ob durch einen Pakt mit einem Dämonenfürsten, das Flüstern eines alten Gottes oder den Einfluss einer unbekannten Entität – <strong>die Quelle seiner Kraft liegt außerhalb von ihm selbst</strong>. Er muss nicht verstehen, wie Magie funktioniert – sie <strong>fließt einfach durch ihn</strong>, oft in unkontrollierbarer oder unvorhersehbarer Weise.</p> <p>Doch Macht ohne Kontrolle ist gefährlich. Wo Magier die Regeln der Zauberei erforschen und sich Wissen aneignen, ist der Paktträger <strong>ständig in Gefahr, von seiner eigenen Macht übermannt oder von seiner Quelle verschlungen zu werden</strong>. Manche verlieren ihren Verstand, andere ihre Menschlichkeit. Doch alle Paktträger wissen: <strong>Irgendwann wird der Preis fällig.</strong></p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Paktträger besitzt keine universelle Magieschule – <strong>seine Kräfte sind so unterschiedlich wie die Wesen, mit denen er sich eingelassen hat</strong>.</p> <blockquote><p>🩸 <strong>Paktgebundene Magie</strong> – Seine Zauber kommen nicht aus eigener Kraft, sondern direkt von seiner Patron-Entität.</p> <p>🔮 <strong>Mächtige, aber unkontrollierbare Zauber</strong> – Oft verfügt er über Magie, die spontaner oder instinktiver ist als die präzise geformten Sprüche eines Magiers.</p> <p>🕷 <strong>Dunkles Wissen &amp; Flüsternde Geheimnisse</strong> – Seine Verbindung erlaubt es ihm, verbotene Erkenntnisse zu empfangen, die normalen Sterblichen verborgen bleiben.</p> <p>⚡ <strong>Ungewöhnliche Magieformen</strong> – Während Magier sich spezialisieren, erhalten Paktträger Kräfte, die nicht den klassischen Elementen folgen – etwa <strong>Schattenmagie, Seelenzauber oder chaotische Energieströme</strong>.</p> <p>💀 <strong>Furcht &amp; Präsenz</strong> – Die bloße Aura eines Paktträgers kann Feinde einschüchtern oder beeinflussen, denn viele spüren die fremdartige Macht, die durch ihn wirkt.</p> </blockquote> <p>Ein Paktträger ist weder ein gelehrter Zauberwirker noch ein disziplinierter Kämpfer – <strong>er ist ein Wesen zwischen den Welten, ein Mittler zwischen sterblicher Existenz und unvorstellbaren Mächten</strong>.</p>"
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "status": "written",
+      "html": "<p>Kein Paktträger gleicht dem anderen. Während ein Magier sich nach Disziplin und Wissen formt, ist der Paktträger das Ergebnis <strong>seines Pakts, seiner Quelle und seines Willens</strong>. Manche Paktträger sind bloße <strong>Werkzeuge fremder Mächte</strong>, während andere versuchen, ihre neue Kraft zu kontrollieren oder sogar zu überlisten.</p> <p>Die <strong>Art des Pakts bestimmt alles</strong> – ein Paktträger, der seine Macht von einem <strong>Dämonenfürsten</strong> erhält, wirkt andere Zauber als einer, der von einem <strong>vergessenen Gott</strong> erwählt wurde. Manche Paktträger dienen <strong>Schatten, Abgründen oder gefallenen Engeln</strong>, andere sind Spielbälle <strong>chaotischer Entitäten, uralter Drachengeister oder namenloser Wesen, die zwischen den Realitäten hausen</strong>.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h4><strong>✔ Stärken:</strong></h4> <blockquote><p>🔮 <strong>Macht ohne Studium</strong> – Während Magier Jahrzehnte mit Forschung verbringen, erhält der Paktträger seine Kräfte sofort – er muss sie nur annehmen.</p> <p>🕷 <strong>Unkonventionelle Magie</strong> – Seine Zauber entziehen sich klassischen Mustern: Schatten, Blut, Flüche und fremdartige Energien machen ihn unberechenbar.</p> <p>⚡ <strong>Spontane Zauber</strong> – Seine Magie ist instinktiv. Er muss keine langen Formeln sprechen oder komplizierte Rituale vollführen – seine Macht reagiert oft auf seinen bloßen Willen.</p> <p>💀 <strong>Dunkles Wissen</strong> – Seine Verbindung erlaubt es ihm, verbotene Geheimnisse zu erfahren und Wissen zu besitzen, das anderen verborgen bleibt.</p> <p>🩸 <strong>Übernatürliche Widerstandskraft</strong> – Manche Paktträger erhalten durch ihren Pakt verstärkte Regeneration, Immunitäten oder Schutz vor normalen Waffen.</p> </blockquote> <h4><strong>✖ Schwächen:</strong></h4> <blockquote><p>❌ <strong>Gebunden an eine höhere Macht</strong> – Jede Macht, die gibt, nimmt auch. Sein Pakt kann ihn jederzeit fordern oder ihn in eine Situation bringen, aus der es kein Entrinnen gibt.</p> <p>❌ <strong>Keine vollständige Kontrolle</strong> – Die Kräfte, die er erhält, können sich eigenständig entfalten, plötzliche Nebenwirkungen haben oder ihn in gefährliche Situationen bringen.</p> <p>❌ <strong>Nicht so vielseitig wie ein Magier</strong> – Er kann keine Magie nach Belieben studieren oder neue Disziplinen meistern – sein Repertoire ist von seinem Pakt begrenzt.</p> <p>❌ <strong>Gefürchtet und gejagt</strong> – Viele Paktträger sind gesellschaftlich ausgestoßen oder Zielscheibe von Kirchen, Jägern oder jenen, die ihre Quelle fürchten.</p> <p>❌ <strong>Hoher Preis für seine Kraft</strong> – Ob körperlich, seelisch oder geistig – ein Paktträger zahlt immer für seine Macht. Vielleicht mit seinem Verstand, vielleicht mit seiner Seele – oder mit seinem Leben.</p> </blockquote> <p>Ein Paktträger <strong>trägt mehr Macht, als er je verdienen könnte</strong> – doch ob er sie wirklich kontrolliert oder nur eine Marionette ist, entscheidet sich erst, wenn sein Meister seinen Preis einfordert.</p>"
+    },
+    {
+      "id": "verschiedenes",
+      "title": "Verschiedenes",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "6f3a7c1436197f85944ffdfbfb0470550e288b0a3c248549f81513d6e52f80c2"
+  }
+}

@@ -1,5 +1,6 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260808-duncan-v1';
-import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260808-duncan-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260905-party-combat-v1';
+import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
+import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -288,7 +289,8 @@ function renderTechnique(item) {
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Ausbildungsform</span><input data-entry-field="trainingForm" value="${escapeHtml(item.trainingForm)}" placeholder="z. B. Drachentanz"></label>
     <label><span>Freigabe ab Stufe</span><input type="number" min="1" max="30" data-entry-field="minimumLevel" value="${escapeHtml(item.minimumLevel ?? 1)}"></label>
-    <label><span>Schadenswurf</span><input data-entry-field="damageFormula" value="${escapeHtml(String(item.damageFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="Leer = aktive Waffe"></label>
+    <label><span>Schadenswurf</span><input data-entry-field="damageFormula" value="${escapeHtml(String(item.damageFormula || '').toUpperCase().replace(/D/g, 'W'))}"${item.damageModel?.mode === 'weapon-dice' ? ' readonly placeholder="Aus der geführten Waffe berechnet"' : ' placeholder="Leer = aktive Waffe"'}></label>
+    ${item.damageModel?.mode === 'weapon-dice' || item.damageModel?.scalingSteps?.length ? `<p class="wide">${escapeHtml(describeTechniqueDamage(item))}${item.damageModel.scalingSteps?.length ? `<br>Ausbildungsbonus: ${item.damageModel.scalingSteps.map(step => `ab Stufe ${step.level} +${escapeHtml(step.formula.toUpperCase().replace(/D/g, 'W'))}`).join(' · ')}. Es gilt nur der höchste erreichte Bonus.` : ''}</p>` : ''}
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}" placeholder="Leer = aktive Waffe"></label>
     <label><span>Angriffsbonus</span><input type="number" min="-99" max="99" data-entry-field="attackBonus" value="${escapeHtml(item.attackBonus ?? 0)}"></label>
     <label><span>Schadensbonus</span><input type="number" min="-99" max="99" data-entry-field="damageBonus" value="${escapeHtml(item.damageBonus ?? 0)}"></label>
@@ -324,6 +326,8 @@ function renderTechnique(item) {
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.sameTarget"${checked(followUp.sameTarget !== false)}> Gleiches Ziel</label>
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.triggerReactions"${checked(followUp.triggerReactions !== false)}> Darf Reaktionen auslösen</label>
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.repeatPerAttackRules"${checked(followUp.repeatPerAttackRules !== false)}> „Pro Angriff“-Regeln erneut prüfen</label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.inheritDamageModifier"${checked(followUp.inheritDamageModifier !== false)}> Eigene feste Schadensboni beim Folgeangriff erneut addieren</label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.inheritBonusDamage"${checked(followUp.inheritBonusDamage !== false)}> Zusätzliche Schadenswürfel beim Folgeangriff erneut addieren</label>
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.triggerFurtherEffects"${checked(followUp.triggerFurtherEffects)}> Darf weitere Fähigkeiten auslösen</label>
   </div></fieldset>${renderCosts(item)}${renderEffects(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }

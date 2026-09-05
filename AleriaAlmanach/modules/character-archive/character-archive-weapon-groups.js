@@ -1,5 +1,5 @@
 import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js';
+import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
 
 export function isArchiveWeapon(entry = {}) {
   if (entry.kind !== 'attack') return false;

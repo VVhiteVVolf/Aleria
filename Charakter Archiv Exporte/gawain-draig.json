@@ -430,17 +430,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "weapon",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/38Na5EY.png",
+          "image": "https://i.imgur.com/38Na5EY.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
           "name": "Drachenzahn · Draig-Ritterschwert",
           "type": "Ritterschwert",
-          "description": "Vielseitiges Ritterschwert des Hauses Draig. Einhändig 1W8, zweihändig 1W10.",
+          "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
           "weight": "1,5 kg",
           "quantity": "1",
-          "tags": "Schwert, Draig, vielseitig, ritterlich",
+          "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
           "equipped": true,
           "combatDefinition": {
             "kind": "weapon",
@@ -456,7 +456,7 @@
             "rangeType": "melee",
             "range": "Nahkampf",
             "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-            "notes": "Hauswaffe der Draigs.",
+            "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
             "requirements": "",
             "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
           },
@@ -465,7 +465,23 @@
             "kind": "weapon",
             "combatEntryId": "gawain-draig-knightly-sword"
           },
-          "infoRows": [],
+          "infoRows": [
+            {
+              "icon": "◈",
+              "label": "Wert",
+              "value": "5 Goldtaler"
+            },
+            {
+              "icon": "⚔",
+              "label": "Schaden",
+              "value": "1W8 · vielseitig 1W10"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Aktiv geführt"
+            }
+          ],
           "attributes": [
             {
               "label": "Schaden",
@@ -491,7 +507,13 @@
               "label": "Handhabung",
               "value": 5
             }
-          ]
+          ],
+          "value": {
+            "gold": 5,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 5000
+          }
         },
         {
           "id": "item-mqu1vat1-1-exvo",
@@ -503,17 +525,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "armor",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/7siJPXG.png",
+          "image": "https://i.imgur.com/7siJPXG.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Silberschuppe · Draig-Rüstung",
-          "type": "Plattenrüstung mit Wappenrock und Helm",
-          "description": "Draig-Plattenrüstung mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 wird Gawains Geschicklichkeitsmodifikator berücksichtigt.",
+          "name": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
+          "type": "Draig-Jungritter-Plattenrüstung",
+          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.",
           "weight": "25 kg",
           "quantity": "1",
-          "tags": "Rüstung, Platte, Draig, Wappenrock, Helm",
+          "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
           "equipped": true,
           "combatDefinition": {
             "kind": "armor",
@@ -524,7 +546,7 @@
             "dexterityMode": "full",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 6,
-            "properties": "Plattenrüstung · Wappenrock · geschlossener Helm",
+            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
             "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6."
           },
           "equipmentLink": {
@@ -532,7 +554,23 @@
             "kind": "armor",
             "combatEntryId": "gawain-draig-armor"
           },
-          "infoRows": [],
+          "infoRows": [
+            {
+              "icon": "⬙",
+              "label": "Rüstungsklasse",
+              "value": "Basis-RK 16"
+            },
+            {
+              "icon": "✦",
+              "label": "Ausführung",
+              "value": "Draig-Jungritter"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Angelegt"
+            }
+          ],
           "attributes": [
             {
               "label": "Schaden",
@@ -570,17 +608,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "weapon",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/caR593j.png",
+          "image": "https://i.imgur.com/caR593j.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Draig Dolch",
+          "name": "Draig-Dolch",
           "type": "Dolch",
-          "description": "Kompakter Draig-Dolch als Seitenwaffe.",
+          "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
           "weight": "0,5 kg",
           "quantity": "1",
-          "tags": "Dolch, Draig, leicht, Finesse",
+          "tags": "Dolch, Draig, leicht, Finesse, Wurfwaffe",
           "equipped": false,
           "combatDefinition": {
             "kind": "weapon",
@@ -605,7 +643,61 @@
             "kind": "weapon",
             "combatEntryId": "gawain-draig-dagger"
           },
-          "infoRows": [],
+          "infoRows": [
+            {
+              "icon": "†",
+              "label": "Schaden",
+              "value": "1W4 Stich"
+            },
+            {
+              "icon": "◇",
+              "label": "Führung",
+              "value": "Finesse · leicht"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Seitenwaffe"
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "gawain-draig-draig-knight-signet-item",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "ownerCharacterName": "Gawain Draig",
+          "acquiredAt": "2026-09-05T00:00:00.000Z",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "https://i.imgur.com/mwP2vjq.png",
+          "image": "https://i.imgur.com/mwP2vjq.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Draig-Rittersiegelring",
+          "type": "Siegelring",
+          "description": "Siegelring eines Draig-Ritters. Offen getragen verleiht er +1 auf Überzeugen.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "Draig, Rittersiegel, Ring, Schmuck, Überzeugen",
+          "equipped": true,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [
+            {
+              "icon": "✦",
+              "label": "Effekt",
+              "value": "+1 auf Überzeugen"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Angelegt"
+            }
+          ],
           "attributes": []
         },
         {
@@ -867,7 +959,8 @@
       }
     },
     "combatProfile": {
-      "schemaVersion": 8,
+      "schemaVersion": 11,
+      "revision": 0,
       "identity": {
         "ancestry": "Cenyr",
         "archetype": "Teulu",
@@ -900,8 +993,11 @@
       "progression": {
         "level": 5,
         "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
         "experience": 0,
         "nextLevelExperience": null,
+        "experienceReward": null,
         "proficiencyBonusOverride": null
       },
       "attributes": [
@@ -962,7 +1058,8 @@
         "shieldBonus": 0,
         "magicModifier": 0,
         "otherModifier": 0,
-        "override": null
+        "override": null,
+        "overrideMode": "total"
       },
       "combat": {
         "movement": 9,
@@ -970,7 +1067,8 @@
         "attackBonus": 0,
         "damageBonus": 0,
         "passivePerceptionBonus": 0,
-        "canActAtZeroHitPoints": false
+        "canActAtZeroHitPoints": false,
+        "mounted": false
       },
       "savingThrows": [
         {
@@ -1177,9 +1275,12 @@
           "id": "default-unarmed-melee",
           "inventoryItemId": "",
           "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "unarmed",
           "training": "simple",
           "damageFormula": "1d4",
+          "versatileDamageFormula": "",
           "damageType": "Wucht",
           "attackAttribute": "strength",
           "proficient": true,
@@ -1190,6 +1291,8 @@
           "notes": "Grundlegender waffenloser Nahkampfangriff.",
           "requirements": "",
           "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
           "activationType": "action",
           "costs": [
             {
@@ -1211,6 +1314,8 @@
           "id": "gawain-draig-knightly-sword",
           "inventoryItemId": "item-mqu1vat1-0-w8ef",
           "name": "Drachenzahn · Draig-Ritterschwert",
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "weaponProfileId": "",
           "weaponType": "sword",
           "training": "martial",
           "damageFormula": "1d8",
@@ -1222,9 +1327,11 @@
           "damageBonus": 0,
           "range": "Nahkampf",
           "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-          "notes": "Drachenzahn, Gawains vielseitig geführtes Ritterschwert aus der Ausbildung des Drachentanzes.",
+          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
           "requirements": "",
           "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+          "effects": [],
+          "ammunition": null,
           "activationType": "action",
           "costs": [
             {
@@ -1245,7 +1352,9 @@
         {
           "id": "gawain-draig-dagger",
           "inventoryItemId": "gawain-draig-dagger-item",
-          "name": "Draig Dolch",
+          "name": "Draig-Dolch",
+          "image": "https://i.imgur.com/caR593j.png",
+          "weaponProfileId": "",
           "weaponType": "dagger",
           "training": "simple",
           "damageFormula": "1d4",
@@ -1260,6 +1369,8 @@
           "notes": "Seitenwaffe des Hauses Draig.",
           "requirements": "",
           "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+          "effects": [],
+          "ammunition": null,
           "activationType": "action",
           "costs": [
             {
@@ -1282,14 +1393,15 @@
         {
           "id": "gawain-draig-armor",
           "inventoryItemId": "item-mqu1vat1-1-exvo",
-          "name": "Silberschuppe · Draig-Rüstung",
+          "name": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
+          "image": "https://i.imgur.com/7siJPXG.png",
           "kind": "armor",
           "baseArmorClass": 16,
           "armorClassBonus": 0,
           "dexterityMode": "full",
           "dexterityCap": 2,
           "dexterityUnlockLevel": 6,
-          "properties": "Plattenrüstung · Wappenrock · geschlossener Helm",
+          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
           "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
           "equipped": true
         }
@@ -1308,7 +1420,7 @@
         },
         {
           "id": "mana-focus",
-          "name": "Mana / Fokus",
+          "name": "Mana",
           "current": 0,
           "maximum": 0,
           "recovery": "day",
@@ -1547,197 +1659,912 @@
           "category": "technique-use",
           "icon": "",
           "notes": "Eine Nutzung; wird durch eine kurze oder lange Rast aufgefüllt."
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
         }
       ],
       "techniques": [
         {
-          "id": "gawain-dragon-bite",
-          "name": "Biss des Drachen",
-          "trainingForm": "Drachentanz · Ausbildungsform",
-          "minimumLevel": 2,
+          "id": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+          "name": "Erster Hieb des Jungdrachens",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 1,
           "category": "technique",
-          "description": "Der erste Biss prüft die Beute.",
-          "effect": "Bei einem Treffer verursacht Drachenzahn 1W10 normalen Waffenschaden und zusätzlich 1W4 Stichschaden.",
-          "activationType": "action",
-          "weaponTypes": ["sword"],
-          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
-          "damageFormula": "1d10+1d4",
-          "damageType": "Hieb + Stich",
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Drachenzahn muss aktiv geführt werden.",
-          "tags": "Drachentanz · Ritterschwert · Ausbildungsform",
-          "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits den normalen 1W10-Waffenschaden und den zusätzlichen 1W4-Stichschaden; nichts doppelt addieren.",
-          "costs": [
-            { "id": "gawain-dragon-bite-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          "description": "Der grundlegende, schnelle Schwerthieb der ersten Drachentanz-Form.",
+          "effect": "Ein kurzer Ergänzungshieb verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "activationType": "bonus-action",
+          "weaponTypes": [
+            "sword"
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
-          "active": true,
-          "mechanics": {},
-          "triggerRules": [],
-          "secondarySave": { "enabled": false },
-          "followUpAttack": { "enabled": false }
-        },
-        {
-          "id": "gawain-dragon-claw",
-          "name": "Klaue des Drachen",
-          "trainingForm": "Drachentanz · Ausbildungsform",
-          "minimumLevel": 3,
-          "category": "technique",
-          "description": "Eine Klaue sucht nicht den Tod, sondern die Schwäche.",
-          "effect": "Nach einem Treffer folgt ein Konstitutionsrettungswurf gegen SG 8 + Kompetenzbonus + Kraftmodifikator. Bei Fehlschlag erhält das Ziel bis zum Ende seines nächsten Kommentars −2 auf Angriffswürfe.",
-          "activationType": "action",
-          "weaponTypes": ["sword"],
-          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
-          "damageFormula": "1d10",
+          "compatibleWeaponIds": [],
+          "damageFormula": "1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
-          "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
-          "requirements": "Drachenzahn muss aktiv geführt werden; zwei Nutzungen je Tag.",
-          "tags": "Drachentanz · Ritterschwert · Schwächung",
-          "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
+          "duration": "Sofort",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
-            { "id": "gawain-dragon-claw-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-dragon-claw-reaction", "resourceId": "reaction", "name": "Reaktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-dragon-claw-use", "resourceId": "gawain-technique-claw-uses", "name": "Klaue des Drachen · Nutzung", "amount": 1, "scope": "persistent" }
+            {
+              "id": "combat-style-drachentanz-jungdrache-01-erster-hieb-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "secondarySave": {
-            "enabled": true,
+            "enabled": false,
             "attributeKey": "constitution",
             "dcBase": 8,
             "dcAttributeKey": "strength",
             "addProficiency": true,
             "failureCondition": {
-              "id": "gawain-dragon-claw-weakened",
-              "name": "Von der Drachenklaue geschwächt",
-              "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
-              "description": "Die gefundene Schwachstelle verursacht −2 auf Angriffswürfe.",
-              "mechanics": { "attack": -2 }
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
             }
           },
-          "followUpAttack": { "enabled": false }
-        },
-        {
-          "id": "gawain-silver-scale-dance",
-          "name": "Tanz der Silbernen Schuppe",
-          "trainingForm": "Drachentanz · Ausbildungsform",
-          "minimumLevel": 4,
-          "category": "technique",
-          "description": "Die Klinge gleitet am Stahl entlang, bis sie die kleinste Öffnung findet.",
-          "effect": "+2 auf den Angriffswurf; bei einem Treffer 1W10 normaler Waffenschaden und zusätzlich 1W6 Schnittschaden.",
-          "activationType": "action",
-          "weaponTypes": ["sword"],
-          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
-          "damageFormula": "1d10+1d6",
-          "damageType": "Hieb + Schnitt",
-          "attackBonus": 2,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Ein Gegner",
-          "duration": "Sofort",
-          "requirements": "Drachenzahn muss aktiv geführt werden; eine Nutzung pro kurzer Rast.",
-          "tags": "Drachentanz · Ritterschwert · Präzision",
-          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +2 bereits. Der Gesamtschaden enthält 1W10 und zusätzlich 1W6; nicht doppelt addieren.",
-          "costs": [
-            { "id": "gawain-silver-scale-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-silver-scale-use", "resourceId": "gawain-technique-silver-scale-uses", "name": "Tanz der Silbernen Schuppe · Nutzung", "amount": 1, "scope": "persistent" }
-          ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
-          "active": true,
-          "mechanics": {},
-          "triggerRules": [],
-          "secondarySave": { "enabled": false },
-          "followUpAttack": { "enabled": false }
-        },
-        {
-          "id": "gawain-dragon-tail",
-          "name": "Schweif des Drachen",
-          "trainingForm": "Drachentanz · Ausbildungsform",
-          "minimumLevel": 4,
-          "category": "technique",
-          "description": "Der letzte Schlag ist oft der unerwartetste.",
-          "effect": "Nach dem erfolgreichen Haupttreffer wird sofort ein zweiter Angriff gegen dasselbe Ziel gewürfelt. Er verursacht bei einem Treffer 1W4 + Kraftmodifikator und löst keine weiteren Fähigkeiten aus.",
-          "activationType": "action",
-          "weaponTypes": ["sword"],
-          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
-          "damageFormula": "1d10",
-          "damageType": "Hieb",
-          "attackBonus": 0,
-          "damageBonus": 0,
-          "rollMode": "normal",
-          "range": "Nahkampf",
-          "target": "Derselbe Gegner für Haupt- und Folgeangriff",
-          "duration": "Sofort",
-          "requirements": "Drachenzahn muss aktiv geführt werden; eine Nutzung pro kurzer Rast.",
-          "tags": "Drachentanz · Ritterschwert · Folgeangriff",
-          "aiInstructions": "Haupt- und Folgeangriff werden getrennt gewürfelt. Der Folgeangriff darf keine weiteren Fähigkeiten auslösen. Nur serverbestätigte Treffer und den zusammengeführten Gesamtschaden erzählen.",
-          "costs": [
-            { "id": "gawain-dragon-tail-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-dragon-tail-reaction", "resourceId": "reaction", "name": "Reaktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-dragon-tail-use", "resourceId": "gawain-technique-tail-uses", "name": "Schweif des Drachen · Nutzung", "amount": 1, "scope": "persistent" }
-          ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
-          "active": true,
-          "mechanics": {},
-          "triggerRules": [],
-          "secondarySave": { "enabled": false },
           "followUpAttack": {
-            "enabled": true,
+            "enabled": false,
             "sameTarget": true,
-            "damageFormula": "1d4",
-            "damageType": "Hieb",
+            "damageFormula": "",
+            "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-01",
+            "selectedAtLevel": 1,
+            "sourceStatus": "confirmed"
           }
         },
         {
-          "id": "gawain-dragon-whirl",
-          "name": "Wirbelschritt des Drachen",
-          "trainingForm": "Drachentanz · Ausbildungsform",
-          "minimumLevel": 5,
+          "id": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+          "name": "Biss des Jungdrachens",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 2,
           "category": "technique",
-          "description": "Ein Pirouettenschritt trägt Drachenzahn im vollen Schwung mit, immer wieder neu.",
-          "effect": "Ein Pirouettenangriff: bei einem Treffer verursacht Drachenzahn 1W10 normalen Waffenschaden und zusätzlich 1W4 Schnittschaden. Der Drehschwung erleichtert das Treffen um +1 auf den Angriffswurf. Kostet Bonusaktion und einen Punkt Besondere Aktion gemeinsam und kann so oft wiederholt werden, wie Besondere Aktion reicht.",
-          "activationType": "bonus-action",
-          "weaponTypes": ["sword"],
-          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
-          "damageFormula": "1d10+1d4",
-          "damageType": "Hieb + Schnitt",
-          "attackBonus": 1,
+          "description": "Der Anwender verdichtet den einfachen Hieb zu einem kurzen, präzisen Vorstoß.",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "activationType": "action",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "Hieb",
+          "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Drachenzahn muss aktiv geführt werden. Verbraucht Bonusaktion und einen Punkt Besondere Aktion gemeinsam; keine eigene Nutzungsbegrenzung über die Besondere Aktion (2 pro Tag) hinaus.",
-          "tags": "Drachentanz · Ritterschwert · Pirouette",
-          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der bestätigte Gesamtschaden enthält bereits den normalen 1W10-Waffenschaden und den zusätzlichen 1W4-Schnittschaden; nichts doppelt addieren. Diese Technik kostet keine normale Aktion und kann daher zusätzlich zu einem regulären Waffenangriff im selben Kommentar eingesetzt werden, solange Bonusaktion und Besondere Aktion verfügbar sind.",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
-            { "id": "gawain-dragon-whirl-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" },
-            { "id": "gawain-dragon-whirl-special-action", "resourceId": "special-action", "name": "Besondere Aktion", "amount": 1, "scope": "persistent" }
+            {
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
           ],
-          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
-          "secondarySave": { "enabled": false },
-          "followUpAttack": { "enabled": false }
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-02",
+            "selectedAtLevel": 2,
+            "sourceStatus": "confirmed"
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "name": "Gekreuzte Klauen",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 3,
+          "category": "technique",
+          "description": "Zwei fließend verbundene Schnittlinien treffen wie die gekreuzten Klauen eines jungen Drachen.",
+          "effect": "Die kurze Antwort aus der Deckung verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "activationType": "reaction",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
+          "effects": [],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-03",
+            "selectedAtLevel": 3,
+            "sourceStatus": "confirmed"
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+          "name": "Schweifkreis des Jungdrachens",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.",
+          "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden.",
+          "activationType": "action",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 20,
+          "range": "3 Meter Umkreis",
+          "target": "Mehrere ausgewählte Gegner im Umkreis",
+          "duration": "Sofort",
+          "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung.",
+          "tags": "Drachentanz · Form I · Jungdrache · Flächenschaden",
+          "aiInstructions": "Reiner Flächenschaden. Denselben Schadenswurf auf alle ausgewählten Ziele anwenden; Schaden nicht doppelt addieren.",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-area-damage",
+              "type": "damage",
+              "target": "selected",
+              "amount": 0,
+              "formula": "",
+              "damageType": "Hieb",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Trifft alle ausgewählten Gegner im Umkreis von 3 Metern."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-04",
+            "selectedAtLevel": 4,
+            "sourceStatus": "confirmed"
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+          "name": "Stürmende Drachenspur",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 5,
+          "category": "technique",
+          "description": "Ein schneller Antritt bündelt den Schwung des Anwenders in einem einzigen durchgezogenen Schnitt.",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "activationType": "action",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 6,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
+          "effects": [],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-05",
+            "selectedAtLevel": 5,
+            "sourceStatus": "confirmed"
+          }
         }
       ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "cenyr-teulu",
+        "selections": [],
+        "techniqueSelections": [
+          {
+            "slotId": "foundation-01",
+            "techniqueId": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+            "selectedAtLevel": 1
+          },
+          {
+            "slotId": "foundation-02",
+            "techniqueId": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+            "selectedAtLevel": 2
+          },
+          {
+            "slotId": "foundation-03",
+            "techniqueId": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+            "selectedAtLevel": 3
+          },
+          {
+            "slotId": "foundation-04",
+            "techniqueId": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+            "selectedAtLevel": 4
+          },
+          {
+            "slotId": "foundation-05",
+            "techniqueId": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+            "selectedAtLevel": 5
+          }
+        ]
+      },
       "quirks": [
         {
           "id": "starter-ancestry-cenyr-trait-1",
@@ -1765,8 +2592,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         },
@@ -1796,8 +2627,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         },
@@ -1827,8 +2662,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         }
@@ -1852,8 +2691,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -1869,11 +2712,21 @@
               "actionScope": "global",
               "consumeReaction": false,
               "costs": [],
-              "actionKinds": ["weapon", "technique", "ability", "spell", "prayer", "song"],
+              "actionKinds": [
+                "weapon",
+                "technique",
+                "ability",
+                "spell",
+                "prayer",
+                "song"
+              ],
               "skillIds": [],
-              "requiredTargetTags": ["stinkend"],
+              "requiredTargetTags": [
+                "stinkend"
+              ],
               "radiusMeters": null,
               "priority": -10,
+              "authority": "passive",
               "description": "Nur wenn das aktuelle Ziel den Trait oder Tag Stinkend trägt.",
               "effects": {
                 "attackModifier": -2,
@@ -1885,11 +2738,13 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         }
       ],
+      "damageAffinities": [],
       "abilities": [
         {
           "id": "gawain-liebt-duefte",
@@ -1903,6 +2758,9 @@
           "damageType": "physisch",
           "activationType": "passive",
           "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
           "combatUsable": false,
           "target": "Selbst",
           "range": "Selbst",
@@ -1910,6 +2768,9 @@
           "requirements": "Ein benutzter Inventargegenstand muss als Duft oder Parfüm erkennbar sein. Bei voller Besonderer Aktion wird die Tagesnutzung nicht verbraucht.",
           "tags": "Duft · Parfüm · Regeneration",
           "aiInstructions": "Erzähle den angenehmen Duft immersiv. Die Regeneration gilt nur, wenn der serverseitige Inventarnutzungseffekt protokolliert wurde.",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
           "costs": [],
           "auraBypass": {
             "allowed": false,
@@ -1917,11 +2778,32 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "inventoryUseTrigger": {
             "enabled": true,
-            "itemTags": ["Duft", "Parfüm", "Parfum"],
+            "itemTags": [
+              "duft",
+              "parfüm",
+              "parfum"
+            ],
             "restoreResources": [
               {
                 "id": "gawain-liebt-duefte-special-action",
@@ -1944,6 +2826,9 @@
           "damageType": "physisch",
           "activationType": "passive",
           "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
           "combatUsable": false,
           "target": "Selbst",
           "range": "Selbst",
@@ -1951,6 +2836,9 @@
           "requirements": "Gilt nur für die ausdrücklich hinterlegten Fertigkeiten.",
           "tags": "Persönlichkeit · soziale Unsicherheit",
           "aiInstructions": "Berücksichtige den Nachteil nur bei Flirten, Überreden, Täuschen, Auftreten, Überleben, Motiv erkennen und Religion.",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
           "costs": [],
           "auraBypass": {
             "allowed": false,
@@ -1958,7 +2846,24 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [
             {
               "id": "gawain-muttersoehnchen-skill-disadvantage",
@@ -1973,11 +2878,22 @@
               "actionScope": "global",
               "consumeReaction": false,
               "costs": [],
-              "actionKinds": ["skill"],
-              "skillIds": ["seduction", "persuasion", "deception", "performance", "survival", "insight", "religion"],
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "seduction",
+                "persuasion",
+                "deception",
+                "performance",
+                "survival",
+                "insight",
+                "religion"
+              ],
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "Gawain würfelt die festgelegten Fertigkeitsversuche mit Nachteil.",
               "effects": {
                 "attackModifier": 0,
@@ -1989,7 +2905,104 @@
                 "damageReduction": 0,
                 "rollMode": "disadvantage",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
+            }
+          ],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "gawain-draig-draig-knight-signet",
+          "name": "Draig-Rittersiegelring",
+          "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Solange der Ring getragen wird",
+          "requirements": "Draig-Rittersiegelring angelegt",
+          "tags": "Ausrüstung · Draig · Rittersiegel · Sozial",
+          "aiInstructions": "Berücksichtige den Bonus ausschließlich bei Überzeugen-Proben.",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [
+            {
+              "id": "gawain-draig-draig-knight-signet-persuasion",
+              "name": "Autorität des Draig-Siegels",
+              "enabled": true,
+              "phase": "pre-roll",
+              "recipient": "actor",
+              "sourceRelation": "self",
+              "activation": "passive",
+              "frequency": "always",
+              "condition": "always",
+              "actionScope": "global",
+              "consumeReaction": false,
+              "costs": [],
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "persuasion"
+              ],
+              "requiredTargetTags": [],
+              "radiusMeters": null,
+              "priority": 0,
+              "authority": "passive",
+              "description": "+1 auf Überzeugen, solange der Draig-Rittersiegelring getragen wird.",
+              "effects": {
+                "attackModifier": 0,
+                "defenseModifier": 0,
+                "savingThrowModifier": 0,
+                "spellSaveDcModifier": 0,
+                "skillModifier": 1,
+                "damageModifier": 0,
+                "damageReduction": 0,
+                "rollMode": "normal",
+                "outcome": "none"
+              },
+              "resultEffects": []
             }
           ],
           "inventoryUseTrigger": {
@@ -2002,6 +3015,10 @@
       ],
       "magic": {
         "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
         "castingAttribute": "intelligence",
         "spellAttackOverride": null,
         "spellSaveDcOverride": null,
@@ -2050,8 +3067,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -2064,8 +3085,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -2078,8 +3103,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         },
         "latentPresence": {
@@ -2104,8 +3133,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -2118,8 +3151,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -2132,8 +3169,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         }
       },

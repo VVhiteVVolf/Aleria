@@ -145,17 +145,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "weapon",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/38Na5EY.png",
+          "image": "https://i.imgur.com/38Na5EY.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Pflichtschwur · Gafyr-Ritterschwert",
+          "name": "Pflichtschwur · Draig-Ritterschwert",
           "type": "Ritterschwert",
-          "description": "Ein ausgewogenes Ritterschwert des Hauses Gafyr. Gildas hält Klinge, Griff und Scheide peinlich genau in Ordnung.",
+          "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
           "weight": "1,5 kg",
           "quantity": "1",
-          "tags": "Schwert, Gafyr, vielseitig, Drachentanz, ritterlich",
+          "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
           "equipped": true,
           "combatDefinition": {
             "kind": "weapon",
@@ -171,7 +171,7 @@
             "rangeType": "melee",
             "range": "Nahkampf",
             "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-            "notes": "Sorgfältig gepflegte Hauswaffe eines Gafyr-Ritters.",
+            "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
             "requirements": "",
             "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
           },
@@ -180,8 +180,30 @@
             "kind": "weapon",
             "combatEntryId": "gildas-gafyr-duty-sword"
           },
-          "infoRows": [],
-          "attributes": []
+          "infoRows": [
+            {
+              "icon": "◈",
+              "label": "Wert",
+              "value": "5 Goldtaler"
+            },
+            {
+              "icon": "⚔",
+              "label": "Schaden",
+              "value": "1W8 · vielseitig 1W10"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Aktiv geführt"
+            }
+          ],
+          "attributes": [],
+          "value": {
+            "gold": 5,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 5000
+          }
         },
         {
           "id": "gildas-gafyr-watch-armor-item",
@@ -193,17 +215,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "armor",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/7siJPXG.png",
+          "image": "https://i.imgur.com/7siJPXG.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Wachtpanzer · Gafyr-Rüstung",
-          "type": "Plattenrüstung mit Wappenrock und Helm",
-          "description": "Zweckmäßige Gafyr-Plattenrüstung, für die beweglichen Grundlinien des Drachentanzes angepasst.",
+          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "type": "Draig-Jungritter-Plattenrüstung",
+          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.",
           "weight": "24 kg",
           "quantity": "1",
-          "tags": "Rüstung, Platte, Gafyr, Wappenrock, Helm",
+          "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
           "equipped": true,
           "combatDefinition": {
             "kind": "armor",
@@ -214,15 +236,31 @@
             "dexterityMode": "full",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 6,
-            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
-            "notes": "Ab Stufe 6 wird der Geschicklichkeitsmodifikator berücksichtigt."
+            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+            "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6."
           },
           "equipmentLink": {
             "schemaVersion": 1,
             "kind": "armor",
             "combatEntryId": "gildas-gafyr-watch-armor"
           },
-          "infoRows": [],
+          "infoRows": [
+            {
+              "icon": "⬙",
+              "label": "Rüstungsklasse",
+              "value": "Basis-RK 16"
+            },
+            {
+              "icon": "✦",
+              "label": "Ausführung",
+              "value": "Draig-Jungritter"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Angelegt"
+            }
+          ],
           "attributes": []
         },
         {
@@ -235,17 +273,17 @@
           "acquiredAt": "",
           "individualizedAt": "",
           "category": "weapon",
-          "icon": "*",
-          "image": "",
+          "icon": "https://i.imgur.com/caR593j.png",
+          "image": "https://i.imgur.com/caR593j.png",
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Gafyr-Seitendolch",
+          "name": "Draig-Dolch",
           "type": "Dolch",
-          "description": "Robuste Seitenwaffe für enge Räume und den Notfall.",
+          "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
           "weight": "0,5 kg",
           "quantity": "1",
-          "tags": "Dolch, Gafyr, leicht, Finesse",
+          "tags": "Dolch, Draig, leicht, Finesse, Wurfwaffe",
           "equipped": false,
           "combatDefinition": {
             "kind": "weapon",
@@ -261,7 +299,7 @@
             "rangeType": "melee",
             "range": "Nahkampf",
             "properties": "Finesse · leicht · Wurfwaffe",
-            "notes": "Schlichte Seitenwaffe ohne Zierde.",
+            "notes": "Seitenwaffe des Hauses Draig.",
             "requirements": "",
             "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick."
           },
@@ -270,7 +308,61 @@
             "kind": "weapon",
             "combatEntryId": "gildas-gafyr-dagger"
           },
-          "infoRows": [],
+          "infoRows": [
+            {
+              "icon": "†",
+              "label": "Schaden",
+              "value": "1W4 Stich"
+            },
+            {
+              "icon": "◇",
+              "label": "Führung",
+              "value": "Finesse · leicht"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Seitenwaffe"
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "gildas-gafyr-draig-knight-signet-item",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "gildas-gafyr",
+          "ownerCharacterName": "Gildas Gafyr",
+          "acquiredAt": "2026-09-05T00:00:00.000Z",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "https://i.imgur.com/mwP2vjq.png",
+          "image": "https://i.imgur.com/mwP2vjq.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Draig-Rittersiegelring",
+          "type": "Siegelring",
+          "description": "Siegelring eines Draig-Ritters. Offen getragen verleiht er +1 auf Überzeugen.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "Draig, Rittersiegel, Ring, Schmuck, Überzeugen",
+          "equipped": true,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [
+            {
+              "icon": "✦",
+              "label": "Effekt",
+              "value": "+1 auf Überzeugen"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Angelegt"
+            }
+          ],
           "attributes": []
         },
         {
@@ -374,7 +466,7 @@
       }
     },
     "combatProfile": {
-      "schemaVersion": 10,
+      "schemaVersion": 11,
       "revision": 0,
       "identity": {
         "ancestry": "Cenyr",
@@ -409,6 +501,8 @@
       "progression": {
         "level": 6,
         "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
         "experience": 0,
         "nextLevelExperience": null,
         "experienceReward": null,
@@ -481,7 +575,8 @@
         "attackBonus": 0,
         "damageBonus": 0,
         "passivePerceptionBonus": 0,
-        "canActAtZeroHitPoints": false
+        "canActAtZeroHitPoints": false,
+        "mounted": false
       },
       "savingThrows": [
         {
@@ -688,6 +783,8 @@
           "id": "default-unarmed-melee",
           "inventoryItemId": "",
           "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "unarmed",
           "training": "simple",
           "damageFormula": "1d4",
@@ -724,7 +821,9 @@
         {
           "id": "gildas-gafyr-duty-sword",
           "inventoryItemId": "gildas-gafyr-duty-sword-item",
-          "name": "Pflichtschwur · Gafyr-Ritterschwert",
+          "name": "Pflichtschwur · Draig-Ritterschwert",
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "weaponProfileId": "",
           "weaponType": "sword",
           "training": "martial",
           "damageFormula": "1d8",
@@ -736,7 +835,7 @@
           "damageBonus": 0,
           "range": "Nahkampf",
           "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-          "notes": "Gildas’ sorgfältig gepflegte Hauswaffe und Fokus des Drachentanzes.",
+          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
           "requirements": "",
           "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
           "effects": [],
@@ -761,7 +860,9 @@
         {
           "id": "gildas-gafyr-dagger",
           "inventoryItemId": "gildas-gafyr-dagger-item",
-          "name": "Gafyr-Seitendolch",
+          "name": "Draig-Dolch",
+          "image": "https://i.imgur.com/caR593j.png",
+          "weaponProfileId": "",
           "weaponType": "dagger",
           "training": "simple",
           "damageFormula": "1d4",
@@ -773,7 +874,7 @@
           "damageBonus": 0,
           "range": "Nahkampf",
           "properties": "Finesse · leicht · Wurfwaffe",
-          "notes": "Schlichte Seitenwaffe für den Notfall.",
+          "notes": "Seitenwaffe des Hauses Draig.",
           "requirements": "",
           "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
           "effects": [],
@@ -800,15 +901,16 @@
         {
           "id": "gildas-gafyr-watch-armor",
           "inventoryItemId": "gildas-gafyr-watch-armor-item",
-          "name": "Wachtpanzer · Gafyr-Rüstung",
+          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "image": "https://i.imgur.com/7siJPXG.png",
           "kind": "armor",
           "baseArmorClass": 16,
           "armorClassBonus": 0,
           "dexterityMode": "full",
           "dexterityCap": 2,
           "dexterityUnlockLevel": 6,
-          "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
-          "notes": "Die Bewegungsfreiheit für den Drachentanz wird ab Stufe 6 voll genutzt.",
+          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+          "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
           "equipped": true
         }
       ],
@@ -882,8 +984,8 @@
         {
           "id": "reaction",
           "name": "Reaktion",
-          "current": 2,
-          "maximum": 2,
+          "current": 1,
+          "maximum": 1,
           "recovery": "scene",
           "scope": "comment",
           "category": "action",
@@ -904,8 +1006,8 @@
         {
           "id": "aura-focus",
           "name": "Aura-Fokuspunkt",
-          "current": 1,
-          "maximum": 1,
+          "current": 0,
+          "maximum": 0,
           "recovery": "day",
           "scope": "persistent",
           "category": "action",
@@ -1060,29 +1162,59 @@
         {
           "id": "combat-style-drachentanz-jungdrache-01-erster-hieb",
           "name": "Erster Hieb des Jungdrachens",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 1,
           "category": "technique",
           "description": "Der grundlegende, schnelle Schwerthieb der ersten Drachentanz-Form.",
-          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 1W10 Hiebschaden.",
+          "effect": "Ein kurzer Ergänzungshieb verursacht bei einem Treffer den aktuellen Technikschaden.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "1d10",
+          "compatibleWeaponIds": [],
+          "damageFormula": "1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe.",
           "tags": "Drachentanz · Form I · Jungdrache · Schaden",
           "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
@@ -1156,40 +1288,91 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-01",
+            "selectedAtLevel": 1,
+            "sourceStatus": "confirmed"
+          }
         },
         {
           "id": "combat-style-drachentanz-jungdrache-02-drachenbiss",
           "name": "Biss des Jungdrachens",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 2,
           "category": "technique",
           "description": "Der Anwender verdichtet den einfachen Hieb zu einem kurzen, präzisen Vorstoß.",
-          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 1W10 plus 1W6 Hiebschaden.",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
           "activationType": "action",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "1d10+1d6",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe.",
           "tags": "Drachentanz · Form I · Jungdrache · Schaden",
           "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
@@ -1270,40 +1453,91 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-02",
+            "selectedAtLevel": 2,
+            "sourceStatus": "confirmed"
+          }
         },
         {
           "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
           "name": "Gekreuzte Klauen",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 3,
           "category": "technique",
           "description": "Zwei fließend verbundene Schnittlinien treffen wie die gekreuzten Klauen eines jungen Drachen.",
-          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 2W8 Hiebschaden.",
+          "effect": "Die kurze Antwort aus der Deckung verursacht bei einem Treffer den aktuellen Technikschaden.",
           "activationType": "reaction",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "2d8",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe.",
           "tags": "Drachentanz · Form I · Jungdrache · Schaden",
           "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
@@ -1377,48 +1611,100 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-03",
+            "selectedAtLevel": 3,
+            "sourceStatus": "confirmed"
+          }
         },
         {
           "id": "combat-style-drachentanz-jungdrache-04-schweifkreis",
           "name": "Schweifkreis des Jungdrachens",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 4,
           "category": "technique",
           "description": "Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.",
-          "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils 2W8 Hiebschaden.",
+          "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden.",
           "activationType": "action",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "2d8",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 20,
           "range": "3 Meter Umkreis",
           "target": "Mehrere ausgewählte Gegner im Umkreis",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung.",
           "tags": "Drachentanz · Form I · Jungdrache · Flächenschaden",
           "aiInstructions": "Reiner Flächenschaden. Denselben Schadenswurf auf alle ausgewählten Ziele anwenden; Schaden nicht doppelt addieren.",
+          "mechanicNotes": [],
           "effects": [
             {
               "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-area-damage",
               "type": "damage",
               "target": "selected",
               "amount": 0,
-              "formula": "2d8",
+              "formula": "",
               "damageType": "Hieb",
+              "inheritWeaponDamageType": true,
               "magical": false,
               "on": "hit",
               "resourceId": "",
@@ -1520,40 +1806,91 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-04",
+            "selectedAtLevel": 4,
+            "sourceStatus": "confirmed"
+          }
         },
         {
           "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
           "name": "Stürmende Drachenspur",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 5,
           "category": "technique",
           "description": "Ein schneller Antritt bündelt den Schwung des Anwenders in einem einzigen durchgezogenen Schnitt.",
-          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 2W10 plus 1W6 Hiebschaden.",
-          "activationType": "special-action",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "activationType": "action",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "2d10+1d6",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 6,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe.",
           "tags": "Drachentanz · Form I · Jungdrache · Schaden",
           "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
@@ -1564,11 +1901,18 @@
               "scope": "comment"
             },
             {
-              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-special-action",
-              "resourceId": "special-action",
-              "name": "Besondere Aktion",
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
-              "scope": "persistent"
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
             }
           ],
           "auraBypass": {
@@ -1634,40 +1978,91 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-05",
+            "selectedAtLevel": 5,
+            "sourceStatus": "confirmed"
+          }
         },
         {
           "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
           "name": "Sechsfacher Lehrhieb",
+          "status": "confirmed",
           "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 6,
           "category": "technique",
           "description": "Der Anwender führt die sechs Grundlinien der Form in einem makellosen Lehrstück zusammen.",
-          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe 3W10 Hiebschaden.",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
           "activationType": "special-action",
           "weaponTypes": [
             "sword"
           ],
-          "compatibleWeaponIds": [
-            "gildas-gafyr-duty-sword"
-          ],
-          "damageFormula": "3d10",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 8,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
-          "requirements": "Eine geführte Schwertwaffe. Pflichtschwur muss aktiv geführt werden.",
+          "requirements": "Eine geführte Schwertwaffe.",
           "tags": "Drachentanz · Form I · Jungdrache · Schaden",
           "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
@@ -1755,15 +2150,73 @@
             "damageType": "",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": true,
             "triggerFurtherEffects": false
           },
-          "combatStyleId": "drachentanz",
-          "combatStyleFormId": "drachentanz-form-i-jungdrache"
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-06",
+            "selectedAtLevel": 6,
+            "sourceStatus": "confirmed"
+          }
         }
       ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "cenyr-teulu",
+        "selections": [],
+        "techniqueSelections": [
+          {
+            "slotId": "foundation-01",
+            "techniqueId": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+            "selectedAtLevel": 1
+          },
+          {
+            "slotId": "foundation-02",
+            "techniqueId": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+            "selectedAtLevel": 2
+          },
+          {
+            "slotId": "foundation-03",
+            "techniqueId": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+            "selectedAtLevel": 3
+          },
+          {
+            "slotId": "foundation-04",
+            "techniqueId": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+            "selectedAtLevel": 4
+          },
+          {
+            "slotId": "foundation-05",
+            "techniqueId": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+            "selectedAtLevel": 5
+          },
+          {
+            "slotId": "foundation-06",
+            "techniqueId": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
+            "selectedAtLevel": 6
+          }
+        ]
+      },
       "quirks": [
         {
           "id": "starter-ancestry-cenyr-trait-1",
@@ -2252,6 +2705,102 @@
                 "skillModifier": 0,
                 "damageModifier": 0,
                 "damageReduction": 3,
+                "rollMode": "normal",
+                "outcome": "none"
+              },
+              "resultEffects": []
+            }
+          ],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "gildas-gafyr-draig-knight-signet",
+          "name": "Draig-Rittersiegelring",
+          "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Solange der Ring getragen wird",
+          "requirements": "Draig-Rittersiegelring angelegt",
+          "tags": "Ausrüstung · Draig · Rittersiegel · Sozial",
+          "aiInstructions": "Berücksichtige den Bonus ausschließlich bei Überzeugen-Proben.",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [
+            {
+              "id": "gildas-gafyr-draig-knight-signet-persuasion",
+              "name": "Autorität des Draig-Siegels",
+              "enabled": true,
+              "phase": "pre-roll",
+              "recipient": "actor",
+              "sourceRelation": "self",
+              "activation": "passive",
+              "frequency": "always",
+              "condition": "always",
+              "actionScope": "global",
+              "consumeReaction": false,
+              "costs": [],
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "persuasion"
+              ],
+              "requiredTargetTags": [],
+              "radiusMeters": null,
+              "priority": 0,
+              "authority": "passive",
+              "description": "+1 auf Überzeugen, solange der Draig-Rittersiegelring getragen wird.",
+              "effects": {
+                "attackModifier": 0,
+                "defenseModifier": 0,
+                "savingThrowModifier": 0,
+                "spellSaveDcModifier": 0,
+                "skillModifier": 1,
+                "damageModifier": 0,
+                "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
               },

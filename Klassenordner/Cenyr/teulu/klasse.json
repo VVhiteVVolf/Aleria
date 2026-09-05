@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "id": "teulu",
+  "cultureId": "cenyr",
+  "name": "Teulu",
+  "title": "Der Teulu",
+  "subtitle": "Klassischer Ritter Cenyrs",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/ocBxSrC.png",
+  "illustration": "https://i.imgur.com/A8d3CML.png",
+  "artwork": {
+    "source": "https://i.imgur.com/A8d3CML.png",
+    "width": 500,
+    "height": 750,
+    "caption": "Teulu · Cenyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/9S3yzXz.png",
+    "width": 333,
+    "height": 500,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Cenyr"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kämpfer, (<em>Eidgeschworener)</em>"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Taktik",
+      "html": "Direkte Konfrontation, Duell, flexible Nahkampfführung"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Ritterstand (feudaler Adel, vererbbar oder erhoben)"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Auftreten",
+      "html": "Höfe, Burgen, Schlachtfelder, Turniere"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Hausgarde, Offiziersdienst, Bannerträger, militärische Führung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Verpflichtend im Rahmen der Schwertleite"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Ritterlicher Eid vor Zeugen und Gewässer, im Namen der Neun Göttlichen"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell; nicht Kern der Ausbildung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Möglich, jedoch nicht primär geistliche Gattung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell; abhängig von Haus oder persönlicher Neigung"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Schwert (Langschwert, Anderthalbhänder, Zweihänder)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Plattenpanzer, Lamellar, Schuppenpanzer oder Brigantine je nach Haus"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Drachentanz (Schwertformen der Teulu)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Berühmter Vertreter",
+      "html": "Tristan Pendrag, Morgan Dyngwn"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Gründer",
+      "html": "Unklar"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Bevorzugtes Reittier",
+      "html": "Der Rhyfel (Pferderasse)"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Bevorzugte Begleiter",
+      "html": "Der Trywydd (Hunderasse)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Teulu</strong> ist mehr als ein schwertführender Ritter – er ist die <em>lebendige Erinnerung</em> an den Ursprung des cenyrischen Rittertums. Sein Name entstammt der alten avallornischen Bezeichnung für <em>Familie</em>, für Angehörige, für jene, die Seite an Seite stehen, nicht aus Zwang, sondern aus <strong>Zugehörigkeit</strong>. Als die Avallornier ihre Heimat verließen und nach Estryll kamen, waren es diese eng verbundenen <strong>Schwertträger</strong>, die wie Brüder für Haus, Banner und Ideal kämpften. Aus dieser frühen Hausbruderschaft entwickelte sich in Cenyr eine eigene Kampfausrichtung innerhalb des Ritterstandes: der im <strong>Schwert</strong> ausgebildete Ritter, der die älteste und symbolträchtigste Disziplin verkörpert.</p> <p>Doch ein <strong>Teulu</strong> definiert sich nicht allein über seine Klinge. Er trägt das <strong>Schwert</strong>, weil es das Zeichen persönlicher <strong>Verantwortung</strong> ist – die Waffe des <em>Eides</em>, des <em>Duells</em>, der unmittelbaren <strong>Entscheidung</strong>. Während andere Rittergattungen sich durch Formation oder besondere Waffen unterscheiden, steht der Teulu im Zentrum des <strong>Ideals</strong>. Er soll handeln, wie die <strong>Neun Göttlichen</strong> handeln würden: mit <strong>Mut</strong>, <strong>Gnade</strong>, <strong>Gerechtigkeit</strong> und <strong>Demut</strong> zugleich. Er ist nicht <em>perfekt</em> – kein Ritter ist es –, doch in seinem beständigen Streben, nach jedem Fall wieder aufzustehen, spiegelt sich der <strong>Kern Cenyrs</strong> selbst. Ohne Männer wie ihn wäre das Königreich vielleicht noch bewaffnet – doch es wäre ohne <strong>Seele</strong>.</p> <blockquote><h3>Vom Becher und vom Durst</h3> <p>Der Morgen liegt noch kühl über der Straße. Arthen lehnt an der Schenke, ein Stück hartes Brot in der Hand, Krümel am Wappenrock. Hinter ihm schnaubt der Rhyfel, frisch gestriegelt, die Mähne ordentlich gelegt. Hufschläge lassen ihn aufblicken. Ein Ritter auf einem edlen Erlenglanz reitet vorüber, Silber im ersten Licht, begleitet von Pagen in feinem Leder. Der Ritter wirft einem Bettler beiläufig ein Kupferstück zu, ohne den Blick zu senken. Arthen sieht ihm nach, bis der Staub sich wieder legt.</p> <p><strong>Rhodri:</strong> <em>„Hast du das Tier versorgt?“</em></p> <p><strong>Arthen</strong> <em>(noch halb im Staunen):</em> <em>„Ja, Herr. Wasser frisch. Hufe geprüft.“</em></p> <p><strong>Rhodri:</strong> <em>„Gut.“</em></p> <p>Rhodri tritt aus dem Schatten der Taverne, legt dem Rhyfel ruhig die Hand an den Hals und prüft den Gurt. Er setzt nicht auf. Stattdessen löst er den Zügel und nickt Arthen zu.</p> <p><strong>Rhodri:</strong> <em>„Komm. Wir gehen ein Stück.“</em></p> <p>Sie verlassen die Schenke zu Fuß, der Ritter neben dem Pferd, der Knappe an seiner Seite. Der Bettler sitzt noch immer am Straßenrand und kaut auf dem Brot, das Arthen ihm widerwillig gegeben hat.</p> <p><strong>Arthen:</strong> <em>„Wenn ich einmal Ritter bin… will ich so sein wie er.“</em></p> <p><strong>Rhodri</strong> <em>(hebt eine Augenbraue):</em> <em>„So wie er.“</em></p> <p><strong>Arthen:</strong> <em>„Alle haben ihn angesehen. Selbst der Bettler.“</em></p> <p>Rhodri geht ein paar Schritte schweigend weiter. Das Pferd trottet ruhig neben ihm her. Dann spricht er, ohne aufzusehen.</p> <p><strong>Rhodri:</strong> <em>„Ich kannte einmal einen Wirt am Trident. Er besaß zwei Becher.“</em></p> <p><strong>Rhodri:</strong> <em>„Der eine war aus Silber. Blank, schwer, mit eingravierten Mustern. Er stellte ihn immer nach vorne auf den Tisch.“</em></p> <p><strong>Rhodri:</strong> <em>„Der andere war aus Ton. Rau, unscheinbar. Ein feiner Riss zog sich über seinen Rand.“</em></p> <p><strong>Arthen:</strong> <em>„Und welcher war besser?“</em></p> <p><strong>Rhodri</strong> <em>(bleibt stehen, sieht ihn ruhig an):</em> <em>„Das ist nicht die Frage.“</em></p> <p><strong>Rhodri:</strong> <em>„Der Silberbecher war leer. Der aus Ton war mit frischem Wasser gefüllt.“</em></p> <p><strong>Rhodri:</strong> <em>„Als ein Mann hereinkam, dessen Kehle brannte vor Durst, griff er nicht nach Silber. Er griff nach dem, was ihn wieder auf die Beine brachte.“</em></p> <p><strong>Arthen</strong> <em>(leiser):</em> <em>„Also war der Tonbecher besser.“</em></p> <p><strong>Rhodri</strong> <em>(schüttelt langsam den Kopf):</em> <em>„Weder Silber noch Ton waren es. Es war das Wasser.“</em></p> <p><strong>Rhodri:</strong> <em>„Du kannst deinen Harnisch polieren, bis die Sonne dich blendet. Aber wenn in dir nichts ist, das anderen Leben gibt, bist du nur ein leerer Becher.“</em></p> <p><strong>Rhodri:</strong> <em>„Es geht nicht darum, wie du aussiehst. Es geht darum, welche Frucht du bringst.“</em></p> </blockquote>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der <strong>Teulu</strong> gilt als die <em>ursprünglichste</em> Ausprägung des cenyrischen Rittertums – nicht als höhere, nicht als edlere, sondern als jene Form, die zuerst bestand. Noch bevor Cenyr seine feudalen Strukturen ausformte, bevor Titel wie Cantref, Helwyr oder Arthwyr unterschieden wurden, stand der <strong>Teulu</strong> bereits mit gezogener Klinge an der Seite seines Herrn. In den Tagen Avallorns bezeichnete man so jene engsten Gefolgsleute, die wie eine <strong>Familie</strong> für Haus und Banner einstanden. Es war kein militärischer Rang, sondern ein Band aus <strong>Treue</strong>, <strong>Nähe</strong> und gemeinsam getragenem Schicksal.</p> <p>Als die Avallornier nach Estryll kamen und das spätere Cenyr begründeten, blieb diese älteste Form bestehen. Erst mit der Verschmelzung ritterlicher Ideale und feudaler Ordnung entstanden weitere Spezialisierungen, neue Waffendisziplinen, differenzierte Ausbildungswege. Doch der <strong>Teulu</strong> blieb das Fundament – die Gestalt, aus der sich alles Weitere entwickelte. Er ist nicht über den anderen Gattungen, doch er ist ihr Ursprung: der erste Ritter, wie man ihn kannte, lange bevor man begann, ihn in Kategorien zu teilen.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Ein <strong>Teulu</strong> ist in erster Linie ein schwertkämpfender Ritter. Seine Ausbildung konzentriert sich auf das <strong>Schwert</strong> als Hauptwaffe – nicht ergänzend, nicht beiläufig, sondern im Zentrum seiner gesamten Schulung. Bereits als Knappe wird er in Haltung, Schrittfolge, Distanzgefühl und kontrollierter Klingenführung unterwiesen. Die Schwertlehre ist für ihn nicht nur Technik, sondern Disziplin.</p> <p>Der Teulu lernt den Kampf im <strong>Duell</strong>, in der engen Konfrontation, im unmittelbaren Aufeinandertreffen zweier Willen. Seine Stärke liegt in sauberer Führung, präziser Kontrolle und der Fähigkeit, unter Druck klare Entscheidungen zu treffen. Anders als spezialisierte Formationskämpfer oder Fernwaffenritter ist der Teulu auf die direkte Auseinandersetzung vorbereitet – auf jene Momente, in denen Mut, Haltung und Klinge zugleich gefordert sind.</p> <p>Seine Fähigkeiten beruhen nicht auf roher Gewalt, sondern auf <strong>Technik</strong>, <strong>Timing</strong> und innerer <strong>Standfestigkeit</strong>.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li><p> <strong>Überlegen im Duell</strong> – starke Leistung im direkten Eins-gegen-Eins, besonders gegen andere Klingenwaffen</p> </li> <li><p> <strong>Hohe Anpassungsfähigkeit</strong> – das Schwert erlaubt schnelle Wechsel zwischen Hieb, Stich und Parade</p> </li> <li><p> <strong>Präzise Verteidigung</strong> – gute Kontrolle von Distanz und Klingenbindung</p> </li> <li><p> <strong>Effektiv auf engem Raum</strong> – besonders stark in Burghöfen, Gängen oder unübersichtlichem Gelände</p> </li> </ul> <p><strong>Schwächen</strong></p> <ul> <li><p> <strong>Begrenzte Reichweite</strong> – unterlegen gegen Speer, Lanze oder Stangenwaffen auf Distanz</p> </li> <li><p> <strong>Formationsabhängigkeit</strong> – weniger effektiv gegen geschlossene Schildwälle oder Massenangriffe</p> </li> <li><p> <strong>Keine Fernkampffähigkeit</strong> – verwundbar gegen Bogenschützen oder Armbrustschützen</p> </li> <li><p> <strong>Hoher Ausbildungsaufwand</strong> – ohne intensive Schulung verliert das Schwert schnell an Effektivität</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "drachentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines <strong>Teulu</strong> ist untrennbar mit seinem <strong>Rittervater</strong> verbunden – jenem Herrn, der ihn zum Ritter schlug und in dessen Namen er zunächst steht. Von diesem Verhältnis hängt mehr ab als nur Sold oder Lehen; es bestimmt Wappen, Farben und äußeres Erscheinungsbild. Entstammt der Teulu dem Blut seines Rittervaters, trägt er dessen <strong>Wappen</strong> ohne Abstrich. Ist er ein Mündel aus anderem Hause, so kann er den Wappenrock seiner eigenen Linie führen, während er dennoch im Dienst eines fremden Herrn steht. War er einst ein Bauer oder niederer Herkunft, trägt er zunächst das Zeichen seines Lehnsherren – bis er sich durch Verdienste ein eigenes Banner und ein eigenes Wappen verdient.</p> <p>Was die Bewaffnung betrifft, ist die Sache klar: Ein Teulu ist ein <strong>Schwertkämpfer</strong>. Das Schwert bildet das Herz seiner Ausrüstung – Langschwert, Anderthalbhänder oder Zweihänder, je nach Schule und persönlicher Ausprägung des Drachentanzes. Dolch oder Kurzschwert dienen als Beiwaffe, doch die Klinge bleibt sein primäres Werkzeug der Entscheidung.</p> <p>Die Rüstung variiert stark nach Haus, Reichtum und Tradition. Manche Geschlechter bevorzugen geschlossene <strong>Plattenpanzer</strong>, die Glanz und Stand repräsentieren. Andere setzen auf <strong>Lamellar-</strong> oder <strong>Schuppenpanzerung</strong>, beweglicher und regional geprägt. Weniger wohlhabende Ritter greifen auf Brigantinen oder verstärkte Kettenhemden zurück. Einige Häuser legen Wert auf schlichte Zweckmäßigkeit, andere auf sichtbaren Prunk, auf polierten Stahl und reich verzierte Wappenröcke. So spiegelt die Rüstung eines Teulu nicht nur seine Funktion wider, sondern auch Herkunft, Anspruch und Stellung innerhalb der vielschichtigen Ordnung Cenyrs.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Ein <strong>Teulu</strong> steht in Cenyr nicht bloß als bewaffneter Adeliger da, sondern als sichtbarer Maßstab dessen, was ein Ritter sein soll. Er verkörpert nach außen das Ideal der <strong>Neun Tugenden</strong> – und wird genau daran gemessen. Sein Auftreten, sein Wort, selbst seine Haltung im Alltag unterliegen dem prüfenden Blick von Hof, Volk und Kirche. Ein Teulu trägt nicht nur Stahl, sondern <strong>Erwartung</strong>.</p> <p>In den Hallen des Adels genießt er Ansehen, denn er ist Träger einer alten Tradition. Im Volk ruft er Bewunderung hervor – oder Misstrauen, wenn er dem Ideal nicht gerecht wird. Denn in Cenyr gilt: Ein Ritter, der sich nicht ritterlich verhält, fällt auf. Dieser soziale Druck wirkt formend. Er zwingt zur Disziplin, zur Selbstkontrolle, zur bewussten Darstellung von Würde. Manche wachsen daran, andere verbergen ihre Schwächen hinter glänzendem Stahl.</p> <p>So bewegt sich der Teulu stets zwischen Anspruch und Wirklichkeit. Er ist nicht automatisch edel, nur weil er zum Ritter geschlagen wurde – doch er steht unter dem ständigen Anspruch, es zu sein. Und genau in diesem Spannungsfeld entsteht sein kultureller Rang: nicht allein durch Geburt oder Lehen, sondern durch die fortwährende Bewährung im Licht eines Ideals, das größer ist als er selbst.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Ein jeder Ritter Cenyrs – ob <strong>Teulu</strong>, <strong>Helwyr</strong> oder einer anderen Gattung zugehörig – besitzt ein <strong>Pferd</strong>. Reitkunst gehört zur Grundausbildung, und selbst wenn ein Teulu primär als Fußritter geschult wird, ist er fähig, vom Sattel aus zu kämpfen. Das Pferd ist kein Luxus, sondern selbstverständlicher Bestandteil ritterlicher Existenz – für Reise, Schlacht und Repräsentation gleichermaßen.</p> <p>Die meisten Teulu begnügen sich mit einem <strong>Rhyfel-Pferd</strong>, einer warmblütigen, robusten und kräftigen Gattung, die Ausdauer und Verlässlichkeit vereint. Diese Tiere sind stark genug für Gefechte, zugleich jedoch vielseitig einsetzbar im Alltag eines Ritters. Für die meisten Teulu genügt dies vollkommen. Ein <strong>Uchelwyr</strong> hingegen, der höheren Standesanspruch und größere Mittel besitzt, setzt häufig auf den edleren <strong>Ceffyl</strong>, eine imposantere und gezielt für den Krieg gezüchtete Linie.</p> <p>Neben ihren Pferden halten manche Teulu auch <strong>Hunde</strong> als treue Begleiter. Ob als Wachhunde, Jagdgefährten oder schlicht als Zeichen persönlicher Bindung – diese Tiere spiegeln das wider, was der Name Teulu einst bedeutete: Zugehörigkeit, Nähe und Treue.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "written",
+      "html": "<ul> <li><p>Das Wort <strong>Teulu</strong> bedeutete ursprünglich schlicht <em>Familie</em>.</p> </li> <li><p>Jeder Cenyrische Ritter beherrscht die Grundformen des <strong>Drachentanzes</strong>.</p> </li> <li><p>Viele Teulu tragen zunächst das <strong>Wappen</strong> ihres Rittervaters.</p> </li> <li><p>Ein Teulu ohne Schwert gilt als unvollständig ausgerüstet.</p> </li> <li><p>Die meisten reiten ein <strong>Rhyfel-Pferd</strong> statt eines Ceffyl.</p> </li> <li><p>In Turnieren gelten Teulu als besonders stark im <strong>Duell</strong>.</p> </li> <li><p>Es existieren <strong><em>mehr als neun</em></strong> unterschiedliche <em><strong>Schwertformen </strong></em>innerhalb der Teulu-Tradition.</p> </li> <li><p>Einige Teulu halten <strong>Hunde</strong> als ständige Begleiter.</p> </li> </ul>"
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "871cfa0110ba88ef2d472bba6a3821bf77ea60094b9dccf4273a1ae8c6921844"
+  }
+}

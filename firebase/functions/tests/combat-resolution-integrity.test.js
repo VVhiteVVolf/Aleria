@@ -5,6 +5,22 @@ import { resolveCombatProfile, validateCombatActorProfile } from '../src/generat
 import { CombatResolutionService } from '../src/generated/combat/combat-resolution-service.js';
 import { ProvidedDiceAdapter } from '../src/mechanics/provided-dice-adapter.js';
 import { getEffectiveCombatSegmentKind } from '../src/generated/combat/combat-segment-model.js';
+import { withEquippedCombatWeapon } from '../src/generated/combat/combat-equipment-state.js';
+
+test('server resolves weapon-bound attacks from the weapon selected by scene state', () => {
+  const source = character('actor', {
+    weapons: [
+      { id: 'sword', name: 'Schwert', weaponType: 'sword', damageFormula: '1W8', equipped: true },
+      { id: 'bow', name: 'Langbogen', weaponType: 'bow', damageFormula: '1W8', attackAttribute: 'dexterity', equipped: false }
+    ],
+    techniques: [{ id: 'arrow', name: 'Drachenpfeil', active: true, minimumLevel: 1, weaponTypes: ['bow'], damageFormula: '1W8' }]
+  });
+  const before = resolveCombatProfile(source, { actionId: 'technique:arrow', segmentKind: 'combataction' });
+  const after = resolveCombatProfile(withEquippedCombatWeapon(source, 'bow'), { actionId: 'technique:arrow', segmentKind: 'combataction' });
+  assert.equal(before.selectedAction.compatible, false);
+  assert.equal(after.selectedAction.compatible, true);
+  assert.equal(after.weapon.weaponType, 'bow');
+});
 
 function character(id, combatProfile = {}) {
   return {
@@ -72,6 +88,28 @@ test('combat in speech and action bubbles keeps its technique and costs on the s
   }
   assert.equal(getEffectiveCombatSegmentKind({ commentKind: 'action', combatResolution: {} }), 'combataction');
   assert.equal(getEffectiveCombatSegmentKind({ commentKind: 'prayer', mechanicMode: 'magic' }), 'prayer');
+});
+
+test('server mechanics materialize Cenyr class attacks for an unmigrated Teulu profile', () => {
+  const source = character('gawain', {
+    templateSelections: { classId: 'teulu' },
+    identity: { ancestry: 'Cenyr', archetype: 'Teulu', background: 'Ritter' },
+    progression: { level: 5 },
+    techniques: [{
+      id: 'legacy-dragon-bite', name: 'Biss des Drachen', active: true,
+      trainingForm: 'Drachentanz', weaponTypes: ['sword'], damageFormula: '1d10+1d4'
+    }]
+  });
+  const profile = resolveCombatProfile(source, { segmentKind: 'combataction' });
+  const names = profile.actions.filter(action => action.kind === 'technique').map(action => action.name);
+  assert.deepEqual(names, [
+    'Erster Hieb des Jungdrachens',
+    'Biss des Jungdrachens',
+    'Gekreuzte Klauen',
+    'Schweifkreis des Jungdrachens',
+    'Stürmende Drachenspur'
+  ]);
+  assert.equal(names.includes('Biss des Drachen'), false);
 });
 
 test('server mechanics reject spells whose configured slot resource does not exist', () => {

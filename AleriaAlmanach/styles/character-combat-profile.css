@@ -1688,7 +1688,7 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
   grid-template-columns: repeat(5, minmax(110px, 1fr));
   gap: 0.45rem;
 }
-.cp-sheet-spell-slot-grid > label {
+.cp-sheet-spell-grade {
   display: grid;
   grid-template-columns: 32px minmax(0, 1fr);
   align-items: center;
@@ -1698,22 +1698,18 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
   border: 1px solid rgba(92, 125, 185, 0.32);
   background: rgba(20, 27, 43, 0.48);
 }
-.cp-sheet-spell-slot-grid > label > span:nth-child(2) {
+.cp-sheet-spell-grade > span:nth-child(2) {
   overflow: hidden;
   color: #aebfe0;
   font: 600 0.68rem/1.2 "Cinzel", serif;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.cp-sheet-spell-slot-grid > label > span:last-child {
+.cp-sheet-spell-grade > strong {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 0.25rem;
+  color: #aebfe0;
+  font-size: 0.7rem;
 }
-.cp-sheet-spell-slot-grid i { color: #7186ae; font-style: normal; }
-.cp-sheet-spell-slot-grid input { min-width: 0; text-align: center; }
 .cp-sheet-spell-list > div { grid-template-columns: repeat(5, minmax(105px, 1fr)); }
 .cp-sheet-spell-list > div > textarea { grid-column: 1 / -1; }
 

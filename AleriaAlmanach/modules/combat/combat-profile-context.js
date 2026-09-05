@@ -6,9 +6,9 @@ import {
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260808-duncan-v1';
+} from './combat-profile-model.js?v=20260905-party-combat-v1';
 import { getOrderedSpellSlotResources, getSpellLevelLabel } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { getSpellManaCost } from './combat-resource-progression.js?v=20260808-duncan-v1';
+import { getSpellManaCost } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 
 const ACTION_ECONOMY_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
 
@@ -26,6 +26,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       name: String(character.name || 'Unbekannte Figur'),
       identity: profile.identity,
       templateSelections: profile.templateSelections,
+      classTraining: profile.classTraining,
       progression: {
         ...profile.progression,
         effectiveLevel: resolved.effectiveLevel,
@@ -34,7 +35,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
           normalAttributeIncreaseLevels: [4, 8, 12, 16, 20],
           normalAttributePoints: 2,
           specialAttributePointsPerLevel: 4,
-          firstAuraFocusPointLevel: 6
+          firstAuraFocusPointLevel: 8
         }
       }
     },
