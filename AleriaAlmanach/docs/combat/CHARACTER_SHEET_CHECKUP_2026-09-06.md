@@ -28,7 +28,7 @@
 
 ## Prüfungen
 
-696 automatisierte Prüfungen: 534 Frontend-, 90 Server-, 60 Integrationstests einschließlich 12 vollständiger Gruppenkampfsimulationen, 12 Firestore-Regeltests. Geänderte LP-Erwartungen wurden explizit aktualisiert; Schadens- und Ressourcenprüfungen bleiben bestehen.
+697 automatisierte Prüfungen: 535 Frontend-, 90 Server-, 60 Integrationstests einschließlich 12 vollständiger Gruppenkampfsimulationen, 12 Firestore-Regeltests. Geänderte LP-Erwartungen wurden explizit aktualisiert; Schadens- und Ressourcenprüfungen bleiben bestehen.
 
 Browser: alle fünf Tabs, Stufe 5 → 6 mit 49 → 58 LP, Aufstiegsdialog, standardmäßig geschlossener Kampfstand, Auf-/Zuklappen, Desktop und 390px Mobilbreite ohne horizontalen Überlauf oder JavaScript-Fehler. Im lokalen Firestore: temporärer RK-Buff hebt Szenen-RK auf 18, Grundwert bleibt 16; Aktualisierung erhält den geöffneten Statusbereich und den Bogenentwurf, Reset und Kampfsperre funktionieren.
 
@@ -43,3 +43,5 @@ Ziel der bestehenden Website ist Firebase `aleriaprojekt` und Netlify `dieweltvo
 Freitext-Sonderwirkungen, Folgeschaden und die in den vorherigen Checkups genannten Grenzen werden dadurch nicht zu automatischen Regeln.
 
 Live durchgeführt: 18 Firebase-Funktionen erfolgreich veröffentlicht, Firestore-Regeln aktualisiert, 20 Kampfprofile atomar abgeglichen. Anschließender lesender Kontrolllauf: keine gesperrten Figuren und keine ausstehenden Migrationen; neue LP und Trainingsstufen bestätigt.
+
+Der zusätzliche Live-Abgleich prüft die Speicherkennungen: Gildas' lokaler Archivschlüssel `gildas-gafyr` darf den vorhandenen Online-Datensatz `person--haus-gafyr--gildas-gafyr` nicht ersetzen. Beim Zusammenführen wird nur eine tatsächlich vorhandene Online-Kennung gewählt; alte Archivverweise werden als Aliase aufgelöst und der Editor speichert die aufgelöste Kennung.

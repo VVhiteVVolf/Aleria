@@ -244,7 +244,9 @@ export function mergeCharacterDatabases(onlineCharacters = [], localCharacters =
 
   const consumedLocalRecords = new Set();
   const merged = groups.map(group => {
-    const canonicalId = text(group.local?.id);
+    // A local archive alias must never become a nonexistent Firestore document.
+    // Prefer the canonical ID only if that document actually exists online.
+    const canonicalId = group.online.some(record => text(record.id) === text(group.local?.id)) ? text(group.local?.id) : '';
     const online = combineOnlineVariants(group.online, canonicalId);
     if (!group.local) return online;
     consumedLocalRecords.add(text(group.local.localRecord?.recordId) || text(group.local.id));

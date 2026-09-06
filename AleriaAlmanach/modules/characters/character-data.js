@@ -281,6 +281,8 @@ function getCharacterById(id) {
   const safeId = String(id || '').trim();
   const saved = _characters.find(char => String(char.id || '').trim() === safeId);
   if (saved) return saved;
+  const archivedAlias = _characters.find(char => char.localRecord?.firestoreDocumentIds?.includes(safeId));
+  if (archivedAlias) return archivedAlias;
 
   const library = getBuiltinLibraryCharacters().find(char => String(char.id || '').trim() === safeId);
   if (library) return library;

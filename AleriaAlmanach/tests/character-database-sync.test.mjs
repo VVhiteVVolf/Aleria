@@ -12,6 +12,15 @@ import {
 const testDirectory = dirname(fileURLToPath(import.meta.url));
 const databaseRoot = resolve(testDirectory, '..', '..', 'CharakterDatenbank');
 
+test('Archivkennung ohne Online-Dokument wird nicht als Speicheradresse erfunden', () => {
+  const local = { id: 'gildas-gafyr', name: 'Gildas Gafyr', identity: { worldPersonId: 'person--gildas' },
+    localRecord: { recordId: 'gildas', firestoreDocumentIds: ['gildas-gafyr', 'person--gildas'] } };
+  const online = { id: 'person--gildas', name: 'Gildas Gafyr', identity: { worldPersonId: 'person--gildas' } };
+  assert.equal(mergeCharacterDatabases([online], [local])[0].id, 'person--gildas');
+  const canonical = { ...online, id: 'gildas-gafyr' };
+  assert.equal(mergeCharacterDatabases([online, canonical], [local])[0].id, 'gildas-gafyr');
+});
+
 test('Lokale Vitalität wird beim Einmischen alter Online-LP genau einmal berücksichtigt', () => {
   const local = { id: 'gawain', combatProfile: { classTraining: { schemaVersion: 2 },
     hitPoints: { current: 49, temporary: 0, vitality: { version: 1, legacyIncrease: 10 } } } };

@@ -52,10 +52,10 @@ function populateCharacterProfileForm(c = {}) {
 }
 
 function openCharProfile(id) {
-  _editingChar = id;
   _pendingCharacterImport = null;
   const c = id ? (getCharacterById(id) || {}) : {};
-  const isBuiltin = isBuiltinCharacterId(id);
+  _editingChar = c.id || id;
+  const isBuiltin = isBuiltinCharacterId(_editingChar);
   populateCharacterProfileForm(c);
   document.getElementById('cp-delete-btn').style.display = id ? 'inline-block' : 'none';
   document.getElementById('cp-delete-btn').textContent = isBuiltin ? 'Ausblenden' : 'Löschen';
