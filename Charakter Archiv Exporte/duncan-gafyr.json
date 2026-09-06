@@ -922,7 +922,12 @@
         }
       ],
       "hitPoints": {
-        "current": 204,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 51,
+          "overrideAnchor": null
+        },
+        "current": 255,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

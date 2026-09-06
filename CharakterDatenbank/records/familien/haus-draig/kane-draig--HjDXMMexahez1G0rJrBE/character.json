@@ -96,7 +96,7 @@
       "HjDXMMexahez1G0rJrBE",
       "HjDXMMexahez1G0rJrBE"
     ],
-    "contentHash": "e88dbaf1712c8c59604c0f3680b6608f8c56a972a5774506e8cd432e3662c1b7"
+    "contentHash": "f977f0797965fbc198da750b2044054a9aba946f27ab07e7eae40db2f5ebf96a"
   },
   "local": {
     "notes": "",
@@ -1390,7 +1390,12 @@
             }
           ],
           "hitPoints": {
-            "current": 39,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 10,
+              "overrideAnchor": null
+            },
+            "current": 49,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -4206,7 +4211,12 @@
         }
       ],
       "hitPoints": {
-        "current": 39,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 10,
+          "overrideAnchor": null
+        },
+        "current": 49,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

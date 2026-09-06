@@ -4,6 +4,7 @@ import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources, resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
+import { reconcileConcentrationConditions } from '../generated/combat/combat-condition-lifecycle.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
@@ -459,6 +460,7 @@ export const commitCombatComment = onCall({
         ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
       });
 
+      reconcileConcentrationConditions(workingStates);
       const ruleAbilitySnapshots = [];
       (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : [])
         .filter(application => application.consumesAbilityUse)

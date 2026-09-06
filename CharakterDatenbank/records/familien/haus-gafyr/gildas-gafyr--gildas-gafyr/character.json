@@ -93,7 +93,7 @@
       "gildas-gafyr",
       "person--haus-gafyr--gildas-gafyr"
     ],
-    "contentHash": "70f45de578f2e4dcc070b71f66828d38b28b3181724bf12c3cf6fad6f8547f1c"
+    "contentHash": "95d0052ab4046e11589750518fb8207e8daa0934ae0f105798b7625e3bb19682"
   },
   "local": {
     "notes": "",
@@ -2741,7 +2741,7 @@
           "role": "Ritter des Hauses Gafyr · Teulu",
           "level": "Stufe 6",
           "status": "Gesund",
-          "hitpoints": "52 / 52 TP",
+          "hitpoints": "65 / 65 LP",
           "healthColor": "#5c7f20",
           "money": "0 Gold, 0 Silber, 0 Kupfer",
           "moneyState": {
@@ -3245,7 +3245,12 @@
             }
           ],
           "hitPoints": {
-            "current": 52,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 13,
+              "overrideAnchor": null
+            },
+            "current": 65,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -6767,7 +6772,7 @@
       "role": "Ritter des Hauses Gafyr · Teulu",
       "level": "Stufe 6",
       "status": "Gesund",
-      "hitpoints": "52 / 52 TP",
+      "hitpoints": "65 / 65 LP",
       "healthColor": "#5c7f20",
       "money": "0 Gold, 0 Silber, 0 Kupfer",
       "moneyState": {
@@ -7400,7 +7405,12 @@
         }
       ],
       "hitPoints": {
-        "current": 52,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 13,
+          "overrideAnchor": null
+        },
+        "current": 65,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

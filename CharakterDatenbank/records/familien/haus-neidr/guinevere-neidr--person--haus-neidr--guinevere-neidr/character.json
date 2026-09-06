@@ -111,7 +111,7 @@
       "person--haus-neidr--guinevere-neidr",
       "person--haus-neidr--guinevere-neidr"
     ],
-    "contentHash": "d2d57492c840fae52234487954c0219f096383e041e8c69ec284f24060be66f9"
+    "contentHash": "ab3bad1ff71cec6c6a2269cafc65a3026a39149bc766a7908faf72d1444b66f1"
   },
   "local": {
     "notes": "",
@@ -5315,7 +5315,12 @@
             }
           ],
           "hitPoints": {
-            "current": 29,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 8,
+              "overrideAnchor": null
+            },
+            "current": 37,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -9253,7 +9258,12 @@
         }
       ],
       "hitPoints": {
-        "current": 29,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 8,
+          "overrideAnchor": null
+        },
+        "current": 37,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

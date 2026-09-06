@@ -14,6 +14,16 @@ test('unabhängige Figuren verhindern keine Rücknahme', () => {
   assert.equal(findLaterMechanicalDependency([{ id: 'a', characterId: 'gildas' }, { id: 'b', characterId: 'observer' }], 'a'), null);
 });
 
+test('bereits beendete Konzentration koppelt spätere unabhängige Änderungen nicht dauerhaft', () => {
+  const cast = { id: 'cast', commentSegments: [{ combatResolution: { actorId: 'caster', targetId: 'ally',
+    actorConcentrationSnapshot: { after: { instanceId: 'one', tracksConditions: true } },
+    targetConditionSnapshot: { after: [{ id: 'buff', concentrationOwnerId: 'caster', concentrationInstanceId: 'one' }] }
+  } }] };
+  const end = { id: 'end', commentSegments: [{ combatResolution: { actorId: 'enemy', targetId: 'caster', targetConcentrationSnapshot: { after: null } } }] };
+  assert.equal(findLaterMechanicalDependency([cast, end, { id: 'new', characterId: 'caster' }, { id: 'other', characterId: 'ally' }], 'new'), null);
+  assert.equal(findLaterMechanicalDependency([cast, end, { id: 'other', characterId: 'ally' }], 'end')?.id, 'other');
+});
+
 test('die Reihenfolge folgt dem bei Wiederholung aktualisierten Transaktionsstand', () => {
   const first = nextMechanicalCommentOrderKey([{ orderKey: 100 }], 99, 110);
   const retried = nextMechanicalCommentOrderKey([{ orderKey: 100 }, { orderKey: first }], 99, 110);

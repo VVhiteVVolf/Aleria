@@ -4829,7 +4829,8 @@
         "revision": 1786237318420
       },
       "combatProfile": {
-        "schemaVersion": 9,
+        "schemaVersion": 11,
+        "revision": 0,
         "identity": {
           "ancestry": "Aldrimarer",
           "archetype": "Skaldin",
@@ -4860,6 +4861,8 @@
         "progression": {
           "level": 5,
           "specialLevels": 0,
+          "resourceRulesVersion": 2,
+          "actionPoolChoices": [],
           "experience": 0,
           "nextLevelExperience": null,
           "experienceReward": null,
@@ -4910,7 +4913,12 @@
           }
         ],
         "hitPoints": {
-          "current": 33,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 9,
+            "overrideAnchor": null
+          },
+          "current": 42,
           "temporary": 0,
           "hitDie": 8,
           "averagePerLevelOverride": null,
@@ -4932,7 +4940,8 @@
           "attackBonus": 0,
           "damageBonus": 0,
           "passivePerceptionBonus": 0,
-          "canActAtZeroHitPoints": false
+          "canActAtZeroHitPoints": false,
+          "mounted": false
         },
         "savingThrows": [
           {
@@ -5139,6 +5148,8 @@
             "id": "default-unarmed-melee",
             "inventoryItemId": "",
             "name": "Nahkampf",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "unarmed",
             "training": "simple",
             "damageFormula": "1d4",
@@ -5176,6 +5187,8 @@
             "id": "freya-lute",
             "inventoryItemId": "",
             "name": "Laute",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "arcane",
             "training": "simple",
             "damageFormula": "1d4",
@@ -5213,6 +5226,8 @@
             "id": "freya-sword",
             "inventoryItemId": "",
             "name": "Schwert",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "sword",
             "training": "martial",
             "damageFormula": "1d8",
@@ -5250,6 +5265,8 @@
             "id": "freya-shield-bash",
             "inventoryItemId": "",
             "name": "Schild (Schildstoß)",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "shield",
             "training": "martial",
             "damageFormula": "1d4",
@@ -5289,6 +5306,7 @@
             "id": "freya-padded-armor",
             "inventoryItemId": "",
             "name": "Wattierter Waffenrock",
+            "image": "",
             "kind": "armor",
             "baseArmorClass": 11,
             "armorClassBonus": 0,
@@ -5303,6 +5321,7 @@
             "id": "freya-shield",
             "inventoryItemId": "",
             "name": "Schild",
+            "image": "",
             "kind": "shield",
             "baseArmorClass": null,
             "armorClassBonus": 2,
@@ -5328,9 +5347,9 @@
           },
           {
             "id": "mana-focus",
-            "name": "Mana / Fokus",
-            "current": 20,
-            "maximum": 0,
+            "name": "Mana",
+            "current": 39,
+            "maximum": 39,
             "recovery": "day",
             "scope": "persistent",
             "category": "magic",
@@ -5419,7 +5438,7 @@
             "id": "spell-slot-1",
             "name": "Zauberplatz I",
             "current": 0,
-            "maximum": 0,
+            "maximum": 1,
             "recovery": "long-rest",
             "scope": "persistent",
             "category": "spell-slot",
@@ -5431,7 +5450,7 @@
             "id": "spell-slot-2",
             "name": "Zauberplatz II",
             "current": 0,
-            "maximum": 0,
+            "maximum": 1,
             "recovery": "long-rest",
             "scope": "persistent",
             "category": "spell-slot",
@@ -5443,7 +5462,7 @@
             "id": "spell-slot-3",
             "name": "Zauberplatz III",
             "current": 0,
-            "maximum": 0,
+            "maximum": 1,
             "recovery": "long-rest",
             "scope": "persistent",
             "category": "spell-slot",
@@ -5534,9 +5553,37 @@
             "icon": "",
             "spellLevel": 10,
             "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "focus",
+            "name": "Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "focus",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "pact-points",
+            "name": "Paktpunkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "pact",
+            "icon": "",
+            "notes": ""
           }
         ],
         "techniques": [],
+        "classTraining": {
+          "schemaVersion": 2,
+          "curriculumId": "",
+          "selections": [],
+          "techniqueSelections": []
+        },
         "quirks": [
           {
             "id": "starter-ancestry-aldrimarer-trait-1",
@@ -5564,8 +5611,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -5595,8 +5646,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -5626,8 +5681,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -5654,6 +5713,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
                 "effects": {
                   "attackModifier": 0,
@@ -5665,7 +5725,8 @@
                   "damageReduction": 0,
                   "rollMode": "normal",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           },
@@ -5695,8 +5756,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -5722,6 +5787,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "-3 bei niederträchtigen Fertigkeiten.",
                 "effects": {
                   "attackModifier": 0,
@@ -5733,7 +5799,8 @@
                   "damageReduction": 0,
                   "rollMode": "normal",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           },
@@ -5763,8 +5830,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -5789,6 +5860,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "Vorteil bei Auftreten.",
                 "effects": {
                   "attackModifier": 0,
@@ -5800,7 +5872,8 @@
                   "damageReduction": 0,
                   "rollMode": "advantage",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           },
@@ -5830,8 +5903,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -5856,6 +5933,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "+2 auf Auftreten.",
                 "effects": {
                   "attackModifier": 0,
@@ -5867,7 +5945,8 @@
                   "damageReduction": 0,
                   "rollMode": "normal",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               },
               {
                 "id": "freya-exzentrisch-wildnis-malus",
@@ -5892,6 +5971,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "-4 auf Überleben und Einschüchtern.",
                 "effects": {
                   "attackModifier": 0,
@@ -5903,7 +5983,8 @@
                   "damageReduction": 0,
                   "rollMode": "normal",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           },
@@ -5933,8 +6014,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -5959,6 +6044,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "+4 auf Flirten.",
                 "effects": {
                   "attackModifier": 0,
@@ -5970,7 +6056,8 @@
                   "damageReduction": 0,
                   "rollMode": "normal",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           }
@@ -5990,16 +6077,64 @@
             "damageType": "Wucht",
             "activationType": "special-action",
             "delivery": "song",
-            "combatUsable": true,
             "resolutionType": "saving-throw",
             "saveAttribute": "constitution",
             "halfDamageOnSave": false,
+            "combatUsable": true,
             "target": "Mehrere ausgewählte Gegner vor ihr",
             "range": "9 Meter, kegelförmig vor ihr",
             "duration": "Sofort",
             "requirements": "Einmal am Tag, bis zur Rast. Verbraucht ihre Besondere Aktion und praktisch ihr gesamtes Mana - danach kann Freya an diesem Tag nicht mehr zaubern, bis sie rastet.",
             "tags": "Skaldin · Schockwelle · Selbstschaden",
             "aiInstructions": "Jeder ausgewählte Gegner würfelt einzeln einen Konstitution-Rettungswurf gegen Freyas Zauber-SG; bei Fehlschlag 3W6 Wucht, bei Erfolg kein Schaden. Freya selbst erleidet danach immer 1W6 Schaden, unabhängig vom Ausgang der gegnerischen Rettungswürfe. Bekannte Einschränkung: Wird diese Handlung technisch einmal pro ausgewähltem Ziel aufgelöst statt einmal für die ganze Gruppe, würfelt der eigene Schaden pro Auflösung erneut - dann nur den ersten Wurf werten, den Rest als DM manuell ignorieren. Der Mana-Kosten-Wert unten entspricht Freyas vollem Manapool auf Stufe 5 (39, nach der überarbeiteten Manapool-Tabelle) und muss bei künftigen Stufenaufstiegen manuell auf ihr dann aktuelles Maximum angehoben werden, damit der Schrei sie weiterhin vollständig erschöpft.",
+            "effects": [
+              {
+                "id": "freya-arkaner-schrei-aoe",
+                "type": "damage",
+                "target": "selected",
+                "amount": 0,
+                "formula": "3d6",
+                "damageType": "Wucht",
+                "inheritWeaponDamageType": false,
+                "magical": false,
+                "on": "hit",
+                "resourceId": "",
+                "condition": null,
+                "conditionId": "",
+                "conditionTags": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "summon": null,
+                "concentration": false,
+                "channelComments": 0,
+                "nonlethal": false,
+                "notes": ""
+              },
+              {
+                "id": "freya-arkaner-schrei-selbstschaden",
+                "type": "damage",
+                "target": "self",
+                "amount": 0,
+                "formula": "1d6",
+                "damageType": "Wucht",
+                "inheritWeaponDamageType": false,
+                "magical": false,
+                "on": "always",
+                "resourceId": "",
+                "condition": null,
+                "conditionId": "",
+                "conditionTags": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "summon": null,
+                "concentration": false,
+                "channelComments": 0,
+                "nonlethal": false,
+                "notes": ""
+              }
+            ],
+            "concentration": false,
+            "channelComments": 0,
             "costs": [
               {
                 "id": "freya-arkaner-schrei-special-action",
@@ -6022,28 +6157,25 @@
               "cost": 1
             },
             "active": true,
-            "mechanics": {},
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "triggerRules": [],
-            "effects": [
-              {
-                "id": "freya-arkaner-schrei-aoe",
-                "type": "damage",
-                "target": "selected",
-                "formula": "3d6",
-                "damageType": "Wucht",
-                "on": "hit"
-              },
-              {
-                "id": "freya-arkaner-schrei-selbstschaden",
-                "type": "damage",
-                "target": "self",
-                "formula": "1d6",
-                "damageType": "Wucht",
-                "on": "always"
-              }
-            ],
-            "concentration": false,
-            "channelComments": 0,
             "inventoryUseTrigger": {
               "enabled": false,
               "itemTags": [],
@@ -6079,7 +6211,10 @@
             {
               "id": "freya-spottvers",
               "name": "Spottvers",
+              "school": "",
+              "icon": "",
               "level": 0,
+              "manaCost": 1,
               "slotResourceId": "",
               "slotCost": 0,
               "presentationKind": "song",
@@ -6098,8 +6233,13 @@
                   "id": "freya-spottvers-malus",
                   "type": "apply-condition",
                   "target": "target",
-                  "on": "save-failure",
+                  "amount": 0,
                   "formula": "1d4",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "save-failure",
+                  "resourceId": "",
                   "condition": {
                     "id": "freya-spottvers-verspottet",
                     "name": "Verspottet",
@@ -6108,7 +6248,14 @@
                     "description": "Ein Malus auf den nächsten Angriffswurf, durch Freyas Spott ausgelöst.",
                     "durationModel": {
                       "kind": "actor-comments",
-                      "remainingActorComments": 1
+                      "remainingActorComments": 1,
+                      "remainingSceneComments": 0,
+                      "expiresOnRest": "",
+                      "expiresOnDayChange": false,
+                      "encounterId": "",
+                      "concentrationOwnerId": "",
+                      "channelOwnerId": "",
+                      "label": "Bis zum Ende des nächsten Gesamtkommentars des Ziels"
                     },
                     "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
                     "mechanics": {
@@ -6124,8 +6271,26 @@
                       "maximumHitPoints": 0,
                       "passivePerception": 0,
                       "attackRollMode": "normal"
+                    },
+                    "active": true,
+                    "remainingActorComments": 1,
+                    "remainingSceneComments": 0,
+                    "ward": {
+                      "enabled": false,
+                      "charges": 0,
+                      "deflectChance": 100,
+                      "breaksOnCriticalHit": false
                     }
-                  }
+                  },
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -6136,6 +6301,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-spottvers-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Ein spöttischer Vers, begleitet von einem schneidenden Lautenakkord.",
               "prepared": true
@@ -6143,7 +6329,10 @@
             {
               "id": "freya-magische-hand",
               "name": "Magische Hand",
+              "school": "",
+              "icon": "",
               "level": 0,
+              "manaCost": 1,
               "slotResourceId": "",
               "slotCost": 0,
               "presentationKind": "song",
@@ -6151,7 +6340,7 @@
               "resolutionType": "automatic",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Kurz, solange die Melodie andauert",
               "requirements": "",
@@ -6166,6 +6355,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-magische-hand-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Ein kaum sichtbarer Luftzug folgt den Klängen der Laute und bewegt kleine Gegenstände.",
               "prepared": true
@@ -6173,7 +6383,10 @@
             {
               "id": "freya-kleine-illusion",
               "name": "Kleine Illusion",
+              "school": "",
+              "icon": "",
               "level": 0,
+              "manaCost": 1,
               "slotResourceId": "",
               "slotCost": 0,
               "presentationKind": "song",
@@ -6181,7 +6394,7 @@
               "resolutionType": "automatic",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Kurz, solange die Melodie andauert",
               "requirements": "",
@@ -6196,6 +6409,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-kleine-illusion-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Mit wenigen gezupften Saiten erschafft die Skaldin Geräusche oder kleine Trugbilder, als würden Erinnerungen oder Geister vergangener Zeiten Gestalt annehmen.",
               "prepared": true
@@ -6203,7 +6437,10 @@
             {
               "id": "freya-licht",
               "name": "Licht",
+              "school": "",
+              "icon": "",
               "level": 0,
+              "manaCost": 1,
               "slotResourceId": "",
               "slotCost": 0,
               "presentationKind": "song",
@@ -6211,7 +6448,7 @@
               "resolutionType": "automatic",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "Berührung",
               "duration": "Bis zur nächsten langen Rast oder bewusster Auflösung",
               "requirements": "",
@@ -6226,6 +6463,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-licht-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Eine ruhige Melodie lässt eine Waffe, Brosche oder den Kopf der Laute in warmem Licht erstrahlen, als würde das Lied selbst die Dunkelheit vertreiben.",
               "prepared": true
@@ -6233,7 +6491,10 @@
             {
               "id": "freya-charm-person",
               "name": "Person bezaubern",
+              "school": "",
+              "icon": "",
               "level": 1,
+              "manaCost": 2,
               "slotResourceId": "spell-slot-1",
               "slotCost": 1,
               "presentationKind": "song",
@@ -6241,7 +6502,7 @@
               "resolutionType": "saving-throw",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Mehrere Szenen, bis aufgehoben oder durch Feindseligkeit gebrochen",
               "requirements": "",
@@ -6256,6 +6517,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-charm-person-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Ein warmes, einschmeichelndes Lied, das Zuneigung und Vertrauen weckt.",
               "prepared": true
@@ -6263,7 +6545,10 @@
             {
               "id": "freya-calm-person",
               "name": "Person beruhigen",
+              "school": "",
+              "icon": "",
               "level": 1,
+              "manaCost": 2,
               "slotResourceId": "spell-slot-1",
               "slotCost": 1,
               "presentationKind": "song",
@@ -6271,7 +6556,7 @@
               "resolutionType": "saving-throw",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Mehrere Runden, bis das Ziel angegriffen wird oder Schaden nimmt",
               "requirements": "",
@@ -6286,6 +6571,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-calm-person-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Eine sanfte, gleichmäßige Melodie, die Wogen glättet und Zorn verebben lässt.",
               "prepared": true
@@ -6293,7 +6599,10 @@
             {
               "id": "freya-enrage-person",
               "name": "Person wütend machen",
+              "school": "",
+              "icon": "",
               "level": 2,
+              "manaCost": 3,
               "slotResourceId": "spell-slot-2",
               "slotCost": 1,
               "presentationKind": "song",
@@ -6301,7 +6610,7 @@
               "resolutionType": "saving-throw",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Mehrere Runden, bis der Zorn narrativ abklingt",
               "requirements": "",
@@ -6316,6 +6625,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-enrage-person-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Ein aufpeitschender, dissonanter Ton, der Wut und Reizbarkeit schürt.",
               "prepared": true
@@ -6323,7 +6653,10 @@
             {
               "id": "freya-silence",
               "name": "Stille",
+              "school": "",
+              "icon": "",
               "level": 3,
+              "manaCost": 5,
               "slotResourceId": "spell-slot-3",
               "slotCost": 1,
               "presentationKind": "song",
@@ -6331,7 +6664,7 @@
               "resolutionType": "automatic",
               "saveAttribute": "wisdom",
               "halfDamageOnSave": false,
-              "damageType": "",
+              "damageType": "Magie",
               "range": "9 Meter",
               "duration": "Mehrere Runden, bis bewusst aufgelöst",
               "requirements": "",
@@ -6345,6 +6678,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "freya-silence-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 5,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Freya lässt die Laute für einen Moment verstummen - und mit ihr jeden Klang in der Umgebung.",
@@ -6381,8 +6735,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -6395,8 +6753,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -6409,8 +6771,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           },
           "latentPresence": {
@@ -6435,8 +6801,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -6449,8 +6819,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -6463,8 +6837,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           }
         },
@@ -6527,7 +6905,7 @@
         "recordId": "character--ksJQe8Ai4KbRE9jOAvb7",
         "path": "records/familien/haus-skald/freya-skald--ksJQe8Ai4KbRE9jOAvb7/character.json",
         "schemaVersion": 1,
-        "contentHash": "f4f7fb41027ccf68ec7462ea8dcadea8b47f174725ddba77a0a333c380692121",
+        "contentHash": "b63794261f9c4b06550bd37c541a9cb54238b793a05e834c8a45d1beaae3fb3c",
         "firestoreDocumentIds": [
           "ksJQe8Ai4KbRE9jOAvb7",
           "ksJQe8Ai4KbRE9jOAvb7"
@@ -9294,7 +9672,8 @@
         "revision": 1786237318810
       },
       "combatProfile": {
-        "schemaVersion": 9,
+        "schemaVersion": 11,
+        "revision": 0,
         "identity": {
           "ancestry": "Aldrimarer",
           "archetype": "Skjaldr",
@@ -9330,6 +9709,8 @@
         "progression": {
           "level": 6,
           "specialLevels": 0,
+          "resourceRulesVersion": 2,
+          "actionPoolChoices": [],
           "experience": 0,
           "nextLevelExperience": null,
           "experienceReward": null,
@@ -9380,7 +9761,12 @@
           }
         ],
         "hitPoints": {
-          "current": 65,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 17,
+            "overrideAnchor": null
+          },
+          "current": 82,
           "temporary": 0,
           "hitDie": 12,
           "averagePerLevelOverride": null,
@@ -9402,7 +9788,8 @@
           "attackBonus": 0,
           "damageBonus": 0,
           "passivePerceptionBonus": 0,
-          "canActAtZeroHitPoints": false
+          "canActAtZeroHitPoints": false,
+          "mounted": false
         },
         "savingThrows": [
           {
@@ -9609,6 +9996,8 @@
             "id": "default-unarmed-melee",
             "inventoryItemId": "",
             "name": "Nahkampf",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "unarmed",
             "training": "simple",
             "damageFormula": "1d4",
@@ -9646,6 +10035,8 @@
             "id": "fenrir-greataxe",
             "inventoryItemId": "",
             "name": "Großaxt",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "axe",
             "training": "martial",
             "damageFormula": "1d12",
@@ -9683,6 +10074,8 @@
             "id": "fenrir-handaxe-pair",
             "inventoryItemId": "",
             "name": "Einhandäxte (Paar)",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "axe",
             "training": "martial",
             "damageFormula": "1d6",
@@ -9720,6 +10113,8 @@
             "id": "fenrir-throwing-axe",
             "inventoryItemId": "",
             "name": "Wurfaxt",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "axe",
             "training": "martial",
             "damageFormula": "1d6",
@@ -9757,6 +10152,8 @@
             "id": "fenrir-roundshield-bash",
             "inventoryItemId": "",
             "name": "Huskarl-Rundschild (Schildstoß)",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "shield",
             "training": "martial",
             "damageFormula": "1d4",
@@ -9796,6 +10193,7 @@
             "id": "fenrir-scale-mail",
             "inventoryItemId": "",
             "name": "Schuppenpanzer",
+            "image": "",
             "kind": "armor",
             "baseArmorClass": 14,
             "armorClassBonus": 0,
@@ -9810,6 +10208,7 @@
             "id": "fenrir-roundshield",
             "inventoryItemId": "",
             "name": "Huskarl-Rundschild",
+            "image": "",
             "kind": "shield",
             "baseArmorClass": null,
             "armorClassBonus": 2,
@@ -9835,7 +10234,7 @@
           },
           {
             "id": "mana-focus",
-            "name": "Mana / Fokus",
+            "name": "Mana",
             "current": 0,
             "maximum": 0,
             "recovery": "day",
@@ -10041,12 +10440,35 @@
             "icon": "",
             "spellLevel": 10,
             "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "focus",
+            "name": "Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "focus",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "pact-points",
+            "name": "Paktpunkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "pact",
+            "icon": "",
+            "notes": ""
           }
         ],
         "techniques": [
           {
             "id": "fenrir-crushing-blow",
             "name": "Zerschmetternder Hieb",
+            "status": "confirmed",
             "trainingForm": "Berserkerweg · Ausbildungsform",
             "minimumLevel": 2,
             "category": "technique",
@@ -10060,16 +10482,29 @@
               "fenrir-greataxe"
             ],
             "damageFormula": "1d12+1d4",
+            "damageModel": {
+              "mode": "fixed",
+              "weaponDiceMultiplier": 1,
+              "bonusFormula": "",
+              "bonusWeaponDice": 0,
+              "bonusWeaponDieCap": 12,
+              "scalingSteps": []
+            },
             "damageType": "Hieb + Wucht",
             "attackBonus": 0,
             "damageBonus": 0,
+            "targetDefenseModifier": 0,
             "rollMode": "normal",
+            "criticalThreshold": 20,
+            "maximumTargets": 1,
             "range": "Nahkampf",
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Die Großaxt muss aktiv geführt werden.",
             "tags": "Berserkerweg · Großaxt · Wucht",
             "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
+            "mechanicNotes": [],
+            "effects": [],
             "costs": [
               {
                 "id": "fenrir-crushing-blow-action",
@@ -10085,18 +10520,88 @@
               "cost": 1
             },
             "active": true,
-            "mechanics": {},
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "triggerRules": [],
             "secondarySave": {
-              "enabled": false
+              "enabled": false,
+              "attributeKey": "constitution",
+              "dcBase": 8,
+              "dcAttributeKey": "strength",
+              "addProficiency": true,
+              "failureCondition": {
+                "id": "technique-save-condition",
+                "name": "",
+                "duration": "",
+                "description": "",
+                "mechanics": {
+                  "attack": 0,
+                  "damage": 0,
+                  "armorClass": 0,
+                  "initiative": 0,
+                  "skill": 0,
+                  "savingThrow": 0,
+                  "spellAttack": 0,
+                  "spellSaveDc": 0,
+                  "movement": 0,
+                  "maximumHitPoints": 0,
+                  "combatStartTemporaryHitPoints": 0,
+                  "passivePerception": 0,
+                  "attackRollMode": "normal",
+                  "bonusDamageFormula": "",
+                  "savingThrowAdvantageAttributes": [],
+                  "savingThrowDisadvantageAttributes": []
+                }
+              }
             },
             "followUpAttack": {
-              "enabled": false
+              "enabled": false,
+              "sameTarget": true,
+              "damageFormula": "",
+              "damageType": "",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "inheritDamageModifier": true,
+              "inheritBonusDamage": true,
+              "repeatCount": 1,
+              "triggerReactions": true,
+              "repeatPerAttackRules": true,
+              "triggerFurtherEffects": false
+            },
+            "cenyrTraining": {
+              "branchId": "",
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
+              "requiresMounted": false,
+              "allowedClassIds": [],
+              "classWeaponProfiles": {},
+              "slotBands": [],
+              "designNotes": "",
+              "assignedSlotId": "",
+              "selectedAtLevel": null,
+              "sourceStatus": ""
             }
           },
           {
             "id": "fenrir-shield-bash",
             "name": "Schildstoß",
+            "status": "confirmed",
             "trainingForm": "Berserkerweg · Ausbildungsform",
             "minimumLevel": 3,
             "category": "technique",
@@ -10110,16 +10615,29 @@
               "fenrir-roundshield-bash"
             ],
             "damageFormula": "1d4",
+            "damageModel": {
+              "mode": "fixed",
+              "weaponDiceMultiplier": 1,
+              "bonusFormula": "",
+              "bonusWeaponDice": 0,
+              "bonusWeaponDieCap": 12,
+              "scalingSteps": []
+            },
             "damageType": "Wucht",
             "attackBonus": 0,
             "damageBonus": 0,
+            "targetDefenseModifier": 0,
             "rollMode": "normal",
+            "criticalThreshold": 20,
+            "maximumTargets": 1,
             "range": "Nahkampf",
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Der Huskarl-Rundschild muss ausgerüstet sein.",
             "tags": "Berserkerweg · Schild · Kontrolle",
             "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
+            "mechanicNotes": [],
+            "effects": [],
             "costs": [
               {
                 "id": "fenrir-shield-bash-bonus-action",
@@ -10135,7 +10653,24 @@
               "cost": 1
             },
             "active": true,
-            "mechanics": {},
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "triggerRules": [],
             "secondarySave": {
               "enabled": true,
@@ -10149,17 +10684,57 @@
                 "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
                 "description": "Der wuchtige Schildstoß bringt das Ziel aus dem Gleichgewicht.",
                 "mechanics": {
-                  "attack": -2
+                  "attack": -2,
+                  "damage": 0,
+                  "armorClass": 0,
+                  "initiative": 0,
+                  "skill": 0,
+                  "savingThrow": 0,
+                  "spellAttack": 0,
+                  "spellSaveDc": 0,
+                  "movement": 0,
+                  "maximumHitPoints": 0,
+                  "combatStartTemporaryHitPoints": 0,
+                  "passivePerception": 0,
+                  "attackRollMode": "normal",
+                  "bonusDamageFormula": "",
+                  "savingThrowAdvantageAttributes": [],
+                  "savingThrowDisadvantageAttributes": []
                 }
               }
             },
             "followUpAttack": {
-              "enabled": false
+              "enabled": false,
+              "sameTarget": true,
+              "damageFormula": "",
+              "damageType": "",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "inheritDamageModifier": true,
+              "inheritBonusDamage": true,
+              "repeatCount": 1,
+              "triggerReactions": true,
+              "repeatPerAttackRules": true,
+              "triggerFurtherEffects": false
+            },
+            "cenyrTraining": {
+              "branchId": "",
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
+              "requiresMounted": false,
+              "allowedClassIds": [],
+              "classWeaponProfiles": {},
+              "slotBands": [],
+              "designNotes": "",
+              "assignedSlotId": "",
+              "selectedAtLevel": null,
+              "sourceStatus": ""
             }
           },
           {
             "id": "fenrir-twin-axe-flurry",
             "name": "Doppelhieb der Zwillingsäxte",
+            "status": "confirmed",
             "trainingForm": "Berserkerweg · Ausbildungsform",
             "minimumLevel": 4,
             "category": "technique",
@@ -10173,16 +10748,29 @@
               "fenrir-handaxe-pair"
             ],
             "damageFormula": "1d6",
+            "damageModel": {
+              "mode": "fixed",
+              "weaponDiceMultiplier": 1,
+              "bonusFormula": "",
+              "bonusWeaponDice": 0,
+              "bonusWeaponDieCap": 12,
+              "scalingSteps": []
+            },
             "damageType": "Hieb",
             "attackBonus": 0,
             "damageBonus": 0,
+            "targetDefenseModifier": 0,
             "rollMode": "normal",
+            "criticalThreshold": 20,
+            "maximumTargets": 1,
             "range": "Nahkampf",
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
             "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
             "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
+            "mechanicNotes": [],
+            "effects": [],
             "costs": [
               {
                 "id": "fenrir-twin-axe-flurry-action",
@@ -10198,10 +10786,55 @@
               "cost": 1
             },
             "active": true,
-            "mechanics": {},
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "triggerRules": [],
             "secondarySave": {
-              "enabled": false
+              "enabled": false,
+              "attributeKey": "constitution",
+              "dcBase": 8,
+              "dcAttributeKey": "strength",
+              "addProficiency": true,
+              "failureCondition": {
+                "id": "technique-save-condition",
+                "name": "",
+                "duration": "",
+                "description": "",
+                "mechanics": {
+                  "attack": 0,
+                  "damage": 0,
+                  "armorClass": 0,
+                  "initiative": 0,
+                  "skill": 0,
+                  "savingThrow": 0,
+                  "spellAttack": 0,
+                  "spellSaveDc": 0,
+                  "movement": 0,
+                  "maximumHitPoints": 0,
+                  "combatStartTemporaryHitPoints": 0,
+                  "passivePerception": 0,
+                  "attackRollMode": "normal",
+                  "bonusDamageFormula": "",
+                  "savingThrowAdvantageAttributes": [],
+                  "savingThrowDisadvantageAttributes": []
+                }
+              }
             },
             "followUpAttack": {
               "enabled": true,
@@ -10210,17 +10843,31 @@
               "damageType": "Hieb",
               "attackBonus": 0,
               "damageBonus": 0,
+              "inheritDamageModifier": false,
+              "inheritBonusDamage": false,
               "repeatCount": 1,
               "triggerReactions": true,
               "repeatPerAttackRules": false,
-              "triggerFurtherEffects": false,
-              "inheritDamageModifier": false,
-              "inheritBonusDamage": false
+              "triggerFurtherEffects": false
+            },
+            "cenyrTraining": {
+              "branchId": "",
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
+              "requiresMounted": false,
+              "allowedClassIds": [],
+              "classWeaponProfiles": {},
+              "slotBands": [],
+              "designNotes": "",
+              "assignedSlotId": "",
+              "selectedAtLevel": null,
+              "sourceStatus": ""
             }
           },
           {
             "id": "fenrir-spinning-throw",
             "name": "Kreiselwurf",
+            "status": "confirmed",
             "trainingForm": "Berserkerweg · Ausbildungsform",
             "minimumLevel": 6,
             "category": "technique",
@@ -10234,16 +10881,29 @@
               "fenrir-throwing-axe"
             ],
             "damageFormula": "1d6+1d4",
+            "damageModel": {
+              "mode": "fixed",
+              "weaponDiceMultiplier": 1,
+              "bonusFormula": "",
+              "bonusWeaponDice": 0,
+              "bonusWeaponDieCap": 12,
+              "scalingSteps": []
+            },
             "damageType": "Hieb",
             "attackBonus": 1,
             "damageBonus": 0,
+            "targetDefenseModifier": 0,
             "rollMode": "normal",
+            "criticalThreshold": 20,
+            "maximumTargets": 1,
             "range": "Fernkampf (9m)",
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Verbraucht eine mitgeführte Wurfaxt.",
             "tags": "Berserkerweg · Wurfaxt · Distanz",
             "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
+            "mechanicNotes": [],
+            "effects": [],
             "costs": [
               {
                 "id": "fenrir-spinning-throw-action",
@@ -10259,16 +10919,91 @@
               "cost": 1
             },
             "active": true,
-            "mechanics": {},
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "triggerRules": [],
             "secondarySave": {
-              "enabled": false
+              "enabled": false,
+              "attributeKey": "constitution",
+              "dcBase": 8,
+              "dcAttributeKey": "strength",
+              "addProficiency": true,
+              "failureCondition": {
+                "id": "technique-save-condition",
+                "name": "",
+                "duration": "",
+                "description": "",
+                "mechanics": {
+                  "attack": 0,
+                  "damage": 0,
+                  "armorClass": 0,
+                  "initiative": 0,
+                  "skill": 0,
+                  "savingThrow": 0,
+                  "spellAttack": 0,
+                  "spellSaveDc": 0,
+                  "movement": 0,
+                  "maximumHitPoints": 0,
+                  "combatStartTemporaryHitPoints": 0,
+                  "passivePerception": 0,
+                  "attackRollMode": "normal",
+                  "bonusDamageFormula": "",
+                  "savingThrowAdvantageAttributes": [],
+                  "savingThrowDisadvantageAttributes": []
+                }
+              }
             },
             "followUpAttack": {
-              "enabled": false
+              "enabled": false,
+              "sameTarget": true,
+              "damageFormula": "",
+              "damageType": "",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "inheritDamageModifier": true,
+              "inheritBonusDamage": true,
+              "repeatCount": 1,
+              "triggerReactions": true,
+              "repeatPerAttackRules": true,
+              "triggerFurtherEffects": false
+            },
+            "cenyrTraining": {
+              "branchId": "",
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
+              "requiresMounted": false,
+              "allowedClassIds": [],
+              "classWeaponProfiles": {},
+              "slotBands": [],
+              "designNotes": "",
+              "assignedSlotId": "",
+              "selectedAtLevel": null,
+              "sourceStatus": ""
             }
           }
         ],
+        "classTraining": {
+          "schemaVersion": 2,
+          "curriculumId": "",
+          "selections": [],
+          "techniqueSelections": []
+        },
         "quirks": [
           {
             "id": "starter-ancestry-aldrimarer-trait-1",
@@ -10296,8 +11031,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -10327,8 +11066,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           }
@@ -10348,6 +11091,9 @@
             "damageType": "physisch",
             "activationType": "bonus-action",
             "delivery": "ability",
+            "resolutionType": "",
+            "saveAttribute": "dexterity",
+            "halfDamageOnSave": false,
             "combatUsable": true,
             "target": "Selbst",
             "range": "Selbst",
@@ -10355,36 +11101,40 @@
             "requirements": "Einmal pro Tag.",
             "tags": "Berserker · Rage · Skjaldr",
             "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
-            "costs": [
-              {
-                "id": "fenrir-berserkergang-bonus-action",
-                "resourceId": "bonus-action",
-                "name": "Bonusaktion",
-                "amount": 1,
-                "scope": "comment"
-              }
-            ],
-            "auraBypass": {
-              "allowed": true,
-              "resourceId": "aura-focus",
-              "cost": 1
-            },
-            "active": true,
-            "mechanics": {},
-            "triggerRules": [],
             "effects": [
               {
                 "id": "fenrir-berserkergang-temp-hp",
                 "type": "temporary-hit-points",
                 "target": "self",
                 "amount": 10,
-                "on": "always"
+                "formula": "",
+                "damageType": "physisch",
+                "inheritWeaponDamageType": false,
+                "magical": false,
+                "on": "always",
+                "resourceId": "",
+                "condition": null,
+                "conditionId": "",
+                "conditionTags": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "summon": null,
+                "concentration": false,
+                "channelComments": 0,
+                "nonlethal": false,
+                "notes": ""
               },
               {
                 "id": "fenrir-berserkergang-condition",
                 "type": "apply-condition",
                 "target": "self",
+                "amount": 0,
+                "formula": "",
+                "damageType": "physisch",
+                "inheritWeaponDamageType": false,
+                "magical": false,
                 "on": "always",
+                "resourceId": "",
                 "condition": {
                   "id": "fenrir-berserkergang-state",
                   "name": "Berserkergang",
@@ -10392,7 +11142,15 @@
                   "source": "Berserkermodus des Skjaldr",
                   "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
                   "durationModel": {
-                    "kind": "combat"
+                    "kind": "combat",
+                    "remainingActorComments": 0,
+                    "remainingSceneComments": 0,
+                    "expiresOnRest": "",
+                    "expiresOnDayChange": false,
+                    "encounterId": "",
+                    "concentrationOwnerId": "",
+                    "channelOwnerId": "",
+                    "label": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende"
                   },
                   "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
                   "mechanics": {
@@ -10418,10 +11176,64 @@
                       "charisma",
                       "constitution"
                     ]
+                  },
+                  "active": true,
+                  "remainingActorComments": 0,
+                  "remainingSceneComments": 0,
+                  "ward": {
+                    "enabled": false,
+                    "charges": 0,
+                    "deflectChance": 100,
+                    "breaksOnCriticalHit": false
                   }
-                }
+                },
+                "conditionId": "",
+                "conditionTags": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "summon": null,
+                "concentration": false,
+                "channelComments": 0,
+                "nonlethal": false,
+                "notes": ""
               }
             ],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "fenrir-berserkergang-bonus-action",
+                "resourceId": "bonus-action",
+                "name": "Bonusaktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "aura-focus",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "triggerRules": [],
             "inventoryUseTrigger": {
               "enabled": false,
               "itemTags": [],
@@ -10432,6 +11244,10 @@
         ],
         "magic": {
           "enabled": false,
+          "casterTier": "full",
+          "bypassResourceId": "",
+          "focusEnabled": false,
+          "focusResourceId": "focus",
           "castingAttribute": "intelligence",
           "spellAttackOverride": null,
           "spellSaveDcOverride": null,
@@ -10480,8 +11296,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -10494,8 +11314,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -10508,8 +11332,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           },
           "latentPresence": {
@@ -10534,8 +11362,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -10548,8 +11380,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -10562,8 +11398,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           }
         },
@@ -10626,7 +11466,7 @@
         "recordId": "character--FKiXsSWVoV74rTgmpPip",
         "path": "records/familien/haus-varulv/fenrir-varulv--FKiXsSWVoV74rTgmpPip/character.json",
         "schemaVersion": 1,
-        "contentHash": "ed42491e66cf343f44e57d39693a690b367b9361c7b863c43a0743040a022d68",
+        "contentHash": "59de7ce35719662f9e6019bd070ef1666ef5dee340f517f2ad5531539aef7550",
         "firestoreDocumentIds": [
           "FKiXsSWVoV74rTgmpPip",
           "FKiXsSWVoV74rTgmpPip"
@@ -23883,231 +24723,620 @@
       "title": "Pferdemeister/ Gwynthor",
       "activeImageSetId": "standard",
       "combatProfile": {
-        "abilities": [],
-        "armorClass": {
-          "base": 10,
-          "dexterityCap": 2,
-          "dexterityMode": "full",
-          "magicModifier": 0,
-          "otherModifier": 0,
-          "override": null,
-          "overrideMode": "total",
-          "shieldBonus": 0
-        },
-        "armorItems": [],
-        "attributes": [
-          {
-            "key": "strength",
-            "label": "Kraft",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "KRF"
-          },
-          {
-            "key": "dexterity",
-            "label": "Geschick",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "GES"
-          },
-          {
-            "key": "constitution",
-            "label": "Konstitution",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "KON"
-          },
-          {
-            "key": "intelligence",
-            "label": "Intelligenz",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "INT"
-          },
-          {
-            "key": "wisdom",
-            "label": "Weisheit",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "WEI"
-          },
-          {
-            "key": "charisma",
-            "label": "Charisma",
-            "modifierOverride": null,
-            "score": 10,
-            "shortLabel": "CHA"
-          }
-        ],
-        "aura": {
-          "activeForm": {
-            "active": false,
-            "aiInstructions": "",
-            "allyMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "description": "",
-            "duration": "",
-            "enabled": false,
-            "enemyMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "name": "Aktive Form",
-            "radius": "",
-            "requirements": "",
-            "selfMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "target": "Selbst und gewählte Ziele",
-            "trigger": ""
-          },
-          "domain": "",
-          "enabled": false,
-          "focusBypassCost": 1,
-          "focusResourceId": "aura-focus",
-          "latentPresence": {
-            "active": true,
-            "aiInstructions": "",
-            "allyMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "description": "",
-            "duration": "",
-            "enabled": true,
-            "enemyMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "name": "Latente Präsenz",
-            "radius": "",
-            "requirements": "",
-            "selfMechanics": {
-              "armorClass": 0,
-              "attack": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "",
-              "damage": 0,
-              "initiative": 0,
-              "maximumHitPoints": 0,
-              "movement": 0,
-              "passivePerception": 0,
-              "savingThrow": 0,
-              "savingThrowAdvantageAttributes": [],
-              "savingThrowDisadvantageAttributes": [],
-              "skill": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0
-            },
-            "target": "Umgebung, Verbündete und Gegner",
-            "trigger": ""
-          },
-          "name": "Aura",
-          "notes": ""
-        },
-        "cheats": {
-          "automaticCritical": false,
-          "enabled": false
-        },
-        "combat": {
-          "attackBonus": 0,
-          "canActAtZeroHitPoints": false,
-          "damageBonus": 0,
-          "initiativeBonus": 0,
-          "movement": 9,
-          "passivePerceptionBonus": 0
-        },
-        "conditions": [],
-        "damageAffinities": [],
-        "hitPoints": {
-          "averagePerLevelOverride": null,
-          "current": null,
-          "hitDie": 8,
-          "maximumOverride": null,
-          "temporary": 0
-        },
+        "schemaVersion": 11,
+        "revision": 1786073358239,
         "identity": {
           "ancestry": "",
           "archetype": "",
           "background": ""
         },
+        "templateSelections": {
+          "schemaVersion": 1,
+          "ancestryId": "",
+          "backgroundId": "",
+          "classId": "",
+          "attributeMethod": "",
+          "appliedAt": ""
+        },
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "languages": [],
+          "notes": ""
+        },
+        "progression": {
+          "level": 1,
+          "specialLevels": 0,
+          "resourceRulesVersion": 2,
+          "actionPoolChoices": [],
+          "experience": 0,
+          "nextLevelExperience": null,
+          "experienceReward": null,
+          "proficiencyBonusOverride": null
+        },
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 10,
+            "modifierOverride": null
+          }
+        ],
+        "hitPoints": {
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 2,
+            "overrideAnchor": null
+          },
+          "current": null,
+          "temporary": 0,
+          "hitDie": 8,
+          "averagePerLevelOverride": null,
+          "maximumOverride": null
+        },
+        "armorClass": {
+          "base": 10,
+          "dexterityMode": "full",
+          "dexterityCap": 2,
+          "shieldBonus": 0,
+          "magicModifier": 0,
+          "otherModifier": 0,
+          "override": null,
+          "overrideMode": "total"
+        },
+        "combat": {
+          "movement": 9,
+          "initiativeBonus": 0,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "passivePerceptionBonus": 0,
+          "canActAtZeroHitPoints": false,
+          "mounted": false
+        },
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ],
+        "skills": [
+          {
+            "id": "default-skill-1",
+            "name": "Athletik",
+            "attributeKey": "strength",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-2",
+            "name": "Akrobatik",
+            "attributeKey": "dexterity",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-3",
+            "name": "Fingerfertigkeit",
+            "attributeKey": "dexterity",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-4",
+            "name": "Heimlichkeit",
+            "attributeKey": "dexterity",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-5",
+            "name": "Arkane Kunde",
+            "attributeKey": "intelligence",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-6",
+            "name": "Geschichte",
+            "attributeKey": "intelligence",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-7",
+            "name": "Nachforschungen",
+            "attributeKey": "intelligence",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-8",
+            "name": "Naturkunde",
+            "attributeKey": "intelligence",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-9",
+            "name": "Religion",
+            "attributeKey": "intelligence",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-10",
+            "name": "Heilkunde",
+            "attributeKey": "wisdom",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-11",
+            "name": "Mit Tieren umgehen",
+            "attributeKey": "wisdom",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-12",
+            "name": "Motiv erkennen",
+            "attributeKey": "wisdom",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-13",
+            "name": "Überleben",
+            "attributeKey": "wisdom",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-14",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-15",
+            "name": "Auftreten",
+            "attributeKey": "charisma",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-16",
+            "name": "Einschüchtern",
+            "attributeKey": "charisma",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-17",
+            "name": "Täuschen",
+            "attributeKey": "charisma",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-18",
+            "name": "Überreden",
+            "attributeKey": "charisma",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-19",
+            "name": "Flirten",
+            "attributeKey": "charisma",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          },
+          {
+            "id": "default-skill-20",
+            "name": "Körperbeherrschung",
+            "attributeKey": "constitution",
+            "proficiency": "none",
+            "bonus": 0,
+            "notes": ""
+          }
+        ],
+        "weapons": [
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "image": "",
+            "weaponProfileId": "",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          }
+        ],
+        "armorItems": [],
+        "resources": [
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "focus",
+            "name": "Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "focus",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "pact-points",
+            "name": "Paktpunkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "pact",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "notes": ""
+          },
+          {
+            "id": "spell-slot-1",
+            "name": "Zauberplatz I",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 1,
+            "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-2",
+            "name": "Zauberplatz II",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 2,
+            "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-3",
+            "name": "Zauberplatz III",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 3,
+            "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-4",
+            "name": "Zauberplatz IV",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 4,
+            "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-5",
+            "name": "Zauberplatz V",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 5,
+            "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-6",
+            "name": "Zauberplatz VI",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 6,
+            "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-7",
+            "name": "Zauberplatz VII",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 7,
+            "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-8",
+            "name": "Zauberplatz VIII",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 8,
+            "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-9",
+            "name": "Zauberplatz IX",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 9,
+            "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          },
+          {
+            "id": "spell-slot-10",
+            "name": "Zauberplatz X",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "long-rest",
+            "scope": "persistent",
+            "category": "spell-slot",
+            "icon": "",
+            "spellLevel": 10,
+            "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+          }
+        ],
+        "techniques": [],
+        "classTraining": {
+          "schemaVersion": 2,
+          "curriculumId": "",
+          "selections": [],
+          "techniqueSelections": []
+        },
+        "quirks": [],
+        "conditions": [],
+        "damageAffinities": [],
+        "abilities": [],
         "magic": {
-          "bypassResourceId": "",
-          "casterTier": "full",
-          "castingAttribute": "intelligence",
           "enabled": false,
+          "casterTier": "full",
+          "bypassResourceId": "",
           "focusEnabled": false,
           "focusResourceId": "focus",
+          "castingAttribute": "intelligence",
+          "spellAttackOverride": null,
+          "spellSaveDcOverride": null,
           "manaResourceId": "mana-focus",
-          "notes": "",
           "slotResourceIds": [
             "spell-slot-1",
             "spell-slot-2",
@@ -24120,521 +25349,154 @@
             "spell-slot-9",
             "spell-slot-10"
           ],
-          "spellAttackOverride": null,
-          "spells": [],
-          "spellSaveDcOverride": null
-        },
-        "notes": "",
-        "proficiencies": {
-          "armor": [],
-          "languages": [],
           "notes": "",
-          "tools": [],
-          "weapons": []
+          "spells": []
         },
-        "progression": {
-          "experience": 0,
-          "experienceReward": null,
-          "level": 1,
-          "nextLevelExperience": null,
-          "proficiencyBonusOverride": null,
-          "specialLevels": 0
-        },
-        "quirks": [],
-        "resources": [
-          {
-            "category": "",
-            "current": 0,
-            "icon": "",
-            "id": "inspiration",
-            "maximum": 1,
-            "name": "Inspiration",
-            "notes": "",
-            "recovery": "manual",
-            "scope": "persistent"
-          },
-          {
-            "category": "magic",
-            "current": 0,
-            "icon": "",
-            "id": "mana-focus",
-            "maximum": 0,
-            "name": "Mana",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "focus",
-            "current": 0,
-            "icon": "",
-            "id": "focus",
-            "maximum": 0,
-            "name": "Fokus",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "celestial",
-            "current": 0,
-            "icon": "",
-            "id": "celestial-points",
-            "maximum": 0,
-            "name": "Celestiale Punkte",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "infernal",
-            "current": 0,
-            "icon": "",
-            "id": "infernal-points",
-            "maximum": 0,
-            "name": "Infernale Punkte",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "pact",
-            "current": 0,
-            "icon": "",
-            "id": "pact-points",
-            "maximum": 0,
-            "name": "Paktpunkte",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "action",
-            "current": 1,
-            "icon": "./public/assets/combat-profile-icons/action.png",
-            "id": "action",
-            "maximum": 1,
-            "name": "Aktion",
-            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
-            "recovery": "scene",
-            "scope": "comment"
-          },
-          {
-            "category": "action",
-            "current": 1,
-            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
-            "id": "bonus-action",
-            "maximum": 1,
-            "name": "Bonusaktion",
-            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
-            "recovery": "scene",
-            "scope": "comment"
-          },
-          {
-            "category": "action",
-            "current": 1,
-            "icon": "./public/assets/combat-profile-icons/reaction.png",
-            "id": "reaction",
-            "maximum": 1,
-            "name": "Reaktion",
-            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
-            "recovery": "scene",
-            "scope": "comment"
-          },
-          {
-            "category": "action",
-            "current": 2,
-            "icon": "./public/assets/combat-profile-icons/special-action.png",
-            "id": "special-action",
-            "maximum": 2,
-            "name": "Besondere Aktion",
-            "notes": "",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "action",
-            "current": 0,
-            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
-            "id": "aura-focus",
-            "maximum": 0,
-            "name": "Aura-Fokuspunkt",
-            "notes": "",
-            "paymentRole": "universal-substitute",
-            "recovery": "day",
-            "scope": "persistent"
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-1",
-            "maximum": 0,
-            "name": "Zauberplatz I",
-            "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 1
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-2",
-            "maximum": 0,
-            "name": "Zauberplatz II",
-            "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 2
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-3",
-            "maximum": 0,
-            "name": "Zauberplatz III",
-            "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 3
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-4",
-            "maximum": 0,
-            "name": "Zauberplatz IV",
-            "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 4
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-5",
-            "maximum": 0,
-            "name": "Zauberplatz V",
-            "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 5
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-6",
-            "maximum": 0,
-            "name": "Zauberplatz VI",
-            "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 6
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-7",
-            "maximum": 0,
-            "name": "Zauberplatz VII",
-            "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 7
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-8",
-            "maximum": 0,
-            "name": "Zauberplatz VIII",
-            "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 8
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-9",
-            "maximum": 0,
-            "name": "Zauberplatz IX",
-            "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 9
-          },
-          {
-            "category": "spell-slot",
-            "current": 0,
-            "icon": "",
-            "id": "spell-slot-10",
-            "maximum": 0,
-            "name": "Zauberplatz X",
-            "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
-            "recovery": "long-rest",
-            "scope": "persistent",
-            "spellLevel": 10
-          }
-        ],
-        "revision": 1786073358239,
-        "savingThrows": [
-          {
-            "attributeKey": "strength",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          },
-          {
-            "attributeKey": "dexterity",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          },
-          {
-            "attributeKey": "constitution",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "expertise": false,
-            "proficient": false
-          }
-        ],
-        "schemaVersion": 9,
-        "skills": [
-          {
-            "attributeKey": "strength",
-            "bonus": 0,
-            "id": "default-skill-1",
-            "name": "Athletik",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "dexterity",
-            "bonus": 0,
-            "id": "default-skill-2",
-            "name": "Akrobatik",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "dexterity",
-            "bonus": 0,
-            "id": "default-skill-3",
-            "name": "Fingerfertigkeit",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "dexterity",
-            "bonus": 0,
-            "id": "default-skill-4",
-            "name": "Heimlichkeit",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "id": "default-skill-5",
-            "name": "Arkane Kunde",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "id": "default-skill-6",
-            "name": "Geschichte",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "id": "default-skill-7",
-            "name": "Nachforschungen",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "id": "default-skill-8",
-            "name": "Naturkunde",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "intelligence",
-            "bonus": 0,
-            "id": "default-skill-9",
-            "name": "Religion",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "id": "default-skill-10",
-            "name": "Heilkunde",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "id": "default-skill-11",
-            "name": "Mit Tieren umgehen",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "id": "default-skill-12",
-            "name": "Motiv erkennen",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "id": "default-skill-13",
-            "name": "Überleben",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "wisdom",
-            "bonus": 0,
-            "id": "default-skill-14",
-            "name": "Wahrnehmung",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "id": "default-skill-15",
-            "name": "Auftreten",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "id": "default-skill-16",
-            "name": "Einschüchtern",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "id": "default-skill-17",
-            "name": "Täuschen",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "id": "default-skill-18",
-            "name": "Überreden",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "charisma",
-            "bonus": 0,
-            "id": "default-skill-19",
-            "name": "Flirten",
-            "notes": "",
-            "proficiency": "none"
-          },
-          {
-            "attributeKey": "constitution",
-            "bonus": 0,
-            "id": "default-skill-20",
-            "name": "Körperbeherrschung",
-            "notes": "",
-            "proficiency": "none"
-          }
-        ],
-        "techniques": [],
-        "templateSelections": {
-          "ancestryId": "",
-          "appliedAt": "",
-          "attributeMethod": "",
-          "backgroundId": "",
-          "classId": "",
-          "schemaVersion": 1
-        },
-        "weapons": [
-          {
-            "activationType": "action",
-            "aiInstructions": "",
-            "ammunition": null,
-            "attackAttribute": "strength",
-            "attackBonus": 0,
-            "auraBypass": {
-              "allowed": true,
-              "cost": 1,
-              "resourceId": ""
-            },
-            "costs": [
-              {
-                "amount": 1,
-                "id": "activation-action",
-                "name": "Aktion",
-                "resourceId": "action",
-                "scope": "comment"
-              }
-            ],
-            "damageBonus": 0,
-            "damageFormula": "1d4",
-            "damageType": "Wucht",
-            "effects": [],
-            "equipped": true,
-            "id": "default-unarmed-melee",
-            "inventoryItemId": "",
-            "name": "Nahkampf",
-            "notes": "Grundlegender waffenloser Nahkampfangriff.",
-            "proficient": true,
-            "properties": "Schlicht · simpel · immer verfügbar",
-            "range": "Nahkampf",
+        "aura": {
+          "enabled": false,
+          "name": "Aura",
+          "domain": "",
+          "focusResourceId": "aura-focus",
+          "focusBypassCost": 1,
+          "notes": "",
+          "activeForm": {
+            "enabled": false,
+            "active": false,
+            "name": "Aktive Form",
+            "description": "",
+            "radius": "",
+            "target": "Selbst und gewählte Ziele",
+            "trigger": "",
+            "duration": "",
             "requirements": "",
-            "training": "simple",
-            "versatileDamageFormula": "",
-            "weaponType": "unarmed"
+            "aiInstructions": "",
+            "selfMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "allyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "enemyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            }
+          },
+          "latentPresence": {
+            "enabled": true,
+            "active": true,
+            "name": "Latente Präsenz",
+            "description": "",
+            "radius": "",
+            "target": "Umgebung, Verbündete und Gegner",
+            "trigger": "",
+            "duration": "",
+            "requirements": "",
+            "aiInstructions": "",
+            "selfMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "allyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "enemyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            }
           }
-        ]
+        },
+        "cheats": {
+          "enabled": false,
+          "automaticCritical": false
+        },
+        "notes": ""
       },
       "createdAt": "2026-08-07T03:29:18.086Z",
       "currentLocation": "",
@@ -24739,7 +25601,7 @@
         "recordId": "character--WjNUoPlIiFgdUHJQkJhU",
         "path": "records/familien/haus-bradrhith/llyr-dewrdd--WjNUoPlIiFgdUHJQkJhU/character.json",
         "schemaVersion": 1,
-        "contentHash": "4c7e7de3ae428e4c6c450f3eb55210264299b6b1b4ad193d9ac1e16753bb0339",
+        "contentHash": "e75e8979120310b582d719b0486e007a7b37e5a869b02b3f72c11c5a5ba6b551",
         "firestoreDocumentIds": [
           "WjNUoPlIiFgdUHJQkJhU",
           "WjNUoPlIiFgdUHJQkJhU"
@@ -40068,7 +40930,12 @@
           }
         ],
         "hitPoints": {
-          "current": 39,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 10,
+            "overrideAnchor": null
+          },
+          "current": 49,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -42211,7 +43078,7 @@
         "recordId": "character--q1QtSIug74FzzwUAqWrs",
         "path": "records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
         "schemaVersion": 1,
-        "contentHash": "6caf51121f66b70738ffa585b2e5cc4170313e4648f31d00c689300cb28568cf",
+        "contentHash": "a787a9f59cb94df6941c1eee98843bd4e0611e001d04d6fd3f54da7f348570de",
         "firestoreDocumentIds": [
           "q1QtSIug74FzzwUAqWrs",
           "q1QtSIug74FzzwUAqWrs"
@@ -45642,7 +46509,12 @@
           }
         ],
         "hitPoints": {
-          "current": 39,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 10,
+            "overrideAnchor": null
+          },
+          "current": 49,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -47359,7 +48231,7 @@
         "recordId": "character--HjDXMMexahez1G0rJrBE",
         "path": "records/familien/haus-draig/kane-draig--HjDXMMexahez1G0rJrBE/character.json",
         "schemaVersion": 1,
-        "contentHash": "e88dbaf1712c8c59604c0f3680b6608f8c56a972a5774506e8cd432e3662c1b7",
+        "contentHash": "f977f0797965fbc198da750b2044054a9aba946f27ab07e7eae40db2f5ebf96a",
         "firestoreDocumentIds": [
           "HjDXMMexahez1G0rJrBE",
           "HjDXMMexahez1G0rJrBE"
@@ -54035,7 +54907,7 @@
             }
           ],
           "createdAt": "2026-08-06T22:57:04.259Z",
-          "updatedAt": "2026-08-08T16:06:09.715Z"
+          "updatedAt": "2026-08-06T22:57:04.259Z"
         },
         {
           "id": "standard",
@@ -54176,7 +55048,7 @@
             }
           ],
           "createdAt": "2026-08-06T22:57:04.259Z",
-          "updatedAt": "2026-08-06T22:57:04.259Z"
+          "updatedAt": "2026-08-08T16:06:09.715Z"
         }
       ],
       "activeImageSetId": "standard",
@@ -54811,7 +55683,8 @@
         }
       },
       "combatProfile": {
-        "schemaVersion": 9,
+        "schemaVersion": 11,
+        "revision": 0,
         "identity": {
           "ancestry": "Cenyr",
           "archetype": "Magier",
@@ -54840,6 +55713,8 @@
         "progression": {
           "level": 6,
           "specialLevels": 0,
+          "resourceRulesVersion": 2,
+          "actionPoolChoices": [],
           "experience": 0,
           "nextLevelExperience": null,
           "experienceReward": null,
@@ -54890,7 +55765,12 @@
           }
         ],
         "hitPoints": {
-          "current": 20,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 5,
+            "overrideAnchor": null
+          },
+          "current": 25,
           "temporary": 0,
           "hitDie": 6,
           "averagePerLevelOverride": null,
@@ -54912,7 +55792,8 @@
           "attackBonus": 0,
           "damageBonus": 0,
           "passivePerceptionBonus": 0,
-          "canActAtZeroHitPoints": false
+          "canActAtZeroHitPoints": false,
+          "mounted": false
         },
         "savingThrows": [
           {
@@ -55119,6 +56000,8 @@
             "id": "default-unarmed-melee",
             "inventoryItemId": "",
             "name": "Nahkampf",
+            "image": "",
+            "weaponProfileId": "",
             "weaponType": "unarmed",
             "training": "simple",
             "damageFormula": "1d4",
@@ -55169,8 +56052,8 @@
           {
             "id": "mana-focus",
             "name": "Mana",
-            "current": 34,
-            "maximum": 34,
+            "current": 45,
+            "maximum": 45,
             "recovery": "day",
             "scope": "persistent",
             "category": "magic",
@@ -55268,8 +56151,8 @@
           {
             "id": "aura-focus",
             "name": "Aura-Fokuspunkt",
-            "current": 1,
-            "maximum": 1,
+            "current": 0,
+            "maximum": 0,
             "recovery": "day",
             "scope": "persistent",
             "category": "action",
@@ -55399,6 +56282,12 @@
           }
         ],
         "techniques": [],
+        "classTraining": {
+          "schemaVersion": 2,
+          "curriculumId": "",
+          "selections": [],
+          "techniqueSelections": []
+        },
         "quirks": [
           {
             "id": "starter-ancestry-cenyr-trait-1",
@@ -55426,8 +56315,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -55457,8 +56350,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -55488,8 +56385,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": []
           },
@@ -55519,8 +56420,12 @@
               "spellSaveDc": 1,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "triggerRules": [
               {
@@ -55545,6 +56450,7 @@
                 "requiredTargetTags": [],
                 "radiusMeters": null,
                 "priority": 0,
+                "authority": "passive",
                 "description": "Vorteil bei Arkaner Kunde.",
                 "effects": {
                   "attackModifier": 0,
@@ -55556,7 +56462,8 @@
                   "damageReduction": 0,
                   "rollMode": "advantage",
                   "outcome": "none"
-                }
+                },
+                "resultEffects": []
               }
             ]
           }
@@ -55594,6 +56501,9 @@
               "school": "mysticism",
               "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/telekinesis_mysticism.png",
               "level": 0,
+              "manaCost": 1,
+              "slotResourceId": "",
+              "slotCost": 0,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55614,6 +56524,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-magierhand-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Eine unsichtbare, geisterhafte Hand bewegt kleine Gegenstände auf Distanz, öffnet Türen oder betätigt Hebel.",
               "prepared": true
@@ -55624,6 +56555,9 @@
               "school": "illusion",
               "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/light_eye_illusion.png",
               "level": 0,
+              "manaCost": 1,
+              "slotResourceId": "",
+              "slotCost": 0,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55644,6 +56578,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-licht-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon lässt einen berührten Gegenstand mit warmem, magischem Licht leuchten.",
               "prepared": true
@@ -55654,6 +56609,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/fire_damage.png",
               "level": 0,
+              "manaCost": 1,
+              "slotResourceId": "",
+              "slotCost": 0,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55674,6 +56632,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-taschenspielerei-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Kleine magische Spielereien: etwas reinigen oder beschmutzen, erwärmen oder abkühlen, eine kleine Flamme entzünden oder löschen.",
               "prepared": true
@@ -55684,6 +56663,9 @@
               "school": "mysticism",
               "icon": "",
               "level": 0,
+              "manaCost": 1,
+              "slotResourceId": "",
+              "slotCost": 0,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55704,6 +56686,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-telepathische-botschaft-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon flüstert einer Person auf kurze Distanz eine kurze Botschaft zu, ohne dass Umstehende etwas hören.",
               "prepared": true
@@ -55714,6 +56717,9 @@
               "school": "illusion",
               "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/chameleon_illusion.png",
               "level": 0,
+              "manaCost": 1,
+              "slotResourceId": "",
+              "slotCost": 0,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55734,6 +56740,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-kleine-illusion-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Erschafft ein kleines, unbewegliches Trugbild oder eine Geräuschillusion.",
               "prepared": true
@@ -55744,6 +56771,9 @@
               "school": "alteration",
               "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/lightning_shield_alteration.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55760,8 +56790,23 @@
                   "id": "rhiannon-magierruestung-temp-hp",
                   "type": "temporary-hit-points",
                   "target": "self",
+                  "amount": 0,
+                  "formula": "1d10",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
                   "on": "always",
-                  "formula": "1d10"
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -55771,6 +56816,27 @@
                 "formulaPerLevel": "1d10",
                 "amountPerLevel": 0,
                 "maximumLevel": 5
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-magierruestung-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Ein schimmernder Kraftmantel legt sich um Rhiannon und gewährt ihr temporäre Trefferpunkte (1W10, je Zaubergrad höher +1W10).",
@@ -55782,6 +56848,9 @@
               "school": "alteration",
               "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/shield_alteration.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "reaction",
               "resolutionType": "automatic",
@@ -55798,7 +56867,13 @@
                   "id": "rhiannon-schild-ward",
                   "type": "apply-condition",
                   "target": "self",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
                   "on": "always",
+                  "resourceId": "",
                   "condition": {
                     "id": "rhiannon-schild-zustand",
                     "name": "Schild",
@@ -55806,7 +56881,15 @@
                     "source": "Schild",
                     "description": "Eine unsichtbare Kraftwand lenkt den nächsten Treffer gegen Rhiannon ab.",
                     "durationModel": {
-                      "kind": "combat"
+                      "kind": "combat",
+                      "remainingActorComments": 0,
+                      "remainingSceneComments": 0,
+                      "expiresOnRest": "",
+                      "expiresOnDayChange": false,
+                      "encounterId": "",
+                      "concentrationOwnerId": "",
+                      "channelOwnerId": "",
+                      "label": "Bis verbraucht oder Kampfende"
                     },
                     "duration": "Bis verbraucht oder Kampfende",
                     "mechanics": {
@@ -55828,8 +56911,20 @@
                       "charges": 1,
                       "deflectChance": 100,
                       "breaksOnCriticalHit": true
-                    }
-                  }
+                    },
+                    "active": true,
+                    "remainingActorComments": 0,
+                    "remainingSceneComments": 0
+                  },
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -55839,6 +56934,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-reaction",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-schild-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine durchsichtige Kraftwand erscheint vor Rhiannon und wehrt den nächsten Angriff vollständig ab. Muss nach dem Verbrauch erneut gewirkt werden. Zerbricht bei einem kritischen Treffer.",
@@ -55850,6 +56966,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/disintegrate_damage.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55866,9 +56985,23 @@
                   "id": "rhiannon-magisches-geschoss-damage",
                   "type": "damage",
                   "target": "target",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "1d4+1",
-                  "damageType": "Arkan"
+                  "damageType": "Arkan",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -55878,6 +57011,27 @@
                 "formulaPerLevel": "1d4",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-magisches-geschoss-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Ein roher Strahl reinen magischen Kraft schießt aus Rhiannons Fingern und trifft unweigerlich sein Ziel.",
@@ -55889,6 +57043,9 @@
               "school": "alteration",
               "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/feather_alteration.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55909,6 +57066,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-federfall-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Verlangsamt den Fall einer berührten Kreatur oder eines Gegenstands, sodass kein Sturzschaden entsteht.",
               "prepared": true
@@ -55919,6 +57097,9 @@
               "school": "alteration",
               "icon": "",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55939,6 +57120,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-identifizieren-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon erkennt die magischen Eigenschaften eines Gegenstands oder Zaubers.",
               "prepared": true
@@ -55949,6 +57151,9 @@
               "school": "mysticism",
               "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/detect_life_mysticism.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -55969,6 +57174,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-magie-entdecken-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon spürt die Anwesenheit von Magie in ihrer Umgebung auf.",
               "prepared": true
@@ -55979,6 +57205,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/frost_damage.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "spell-attack",
@@ -55995,9 +57224,23 @@
                   "id": "rhiannon-windklinge-damage",
                   "type": "damage",
                   "target": "target",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "1d8",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56007,6 +57250,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-windklinge-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine scharfe, unsichtbare Klinge aus geballter Luft schneidet in das Ziel.",
@@ -56018,6 +57282,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/attribute_damage.png",
               "level": 1,
+              "manaCost": 2,
+              "slotResourceId": "spell-slot-1",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "saving-throw",
@@ -56034,9 +57301,23 @@
                   "id": "rhiannon-druckstoss-damage",
                   "type": "damage",
                   "target": "target",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "1d6",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56046,6 +57327,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-druckstoss-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 2,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine unsichtbare Druckwelle stößt das Ziel zurück und lässt es taumeln.",
@@ -56057,6 +57359,9 @@
               "school": "alteration",
               "icon": "",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -56077,6 +57382,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-nebelschritt-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon beschleunigt ihren Körper mit einem magischen Schub und springt fast augenblicklich von einem Ort zu einem anderen in Sichtweite.",
               "prepared": true
@@ -56087,6 +57413,9 @@
               "school": "illusion",
               "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/invisibility_illusion.png",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -56103,7 +57432,13 @@
                   "id": "rhiannon-spiegelbilder-ward",
                   "type": "apply-condition",
                   "target": "self",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
                   "on": "always",
+                  "resourceId": "",
                   "condition": {
                     "id": "rhiannon-spiegelbilder-zustand",
                     "name": "Spiegelbilder",
@@ -56111,7 +57446,15 @@
                     "source": "Spiegelbilder",
                     "description": "Zwei illusionäre Duplikate umschwirren Rhiannon und verwirren angreifende Gegner.",
                     "durationModel": {
-                      "kind": "combat"
+                      "kind": "combat",
+                      "remainingActorComments": 0,
+                      "remainingSceneComments": 0,
+                      "expiresOnRest": "",
+                      "expiresOnDayChange": false,
+                      "encounterId": "",
+                      "concentrationOwnerId": "",
+                      "channelOwnerId": "",
+                      "label": "Bis verbraucht oder Kampfende"
                     },
                     "duration": "Bis verbraucht oder Kampfende",
                     "mechanics": {
@@ -56133,8 +57476,20 @@
                       "charges": 2,
                       "deflectChance": 67,
                       "breaksOnCriticalHit": false
-                    }
-                  }
+                    },
+                    "active": true,
+                    "remainingActorComments": 0,
+                    "remainingSceneComments": 0
+                  },
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56144,6 +57499,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-spiegelbilder-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Drei täuschend echte Duplikate Rhiannons erscheinen um sie herum. Gegner können nicht sicher sagen, welches Bild die echte Zauberin ist (33 % Trefferchance je Angriff, 2 Ladungen).",
@@ -56155,6 +57531,9 @@
               "school": "illusion",
               "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/paralyze_illusion.png",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "saving-throw",
@@ -56171,7 +57550,13 @@
                   "id": "rhiannon-person-festhalten-condition",
                   "type": "apply-condition",
                   "target": "target",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
                   "on": "hit",
+                  "resourceId": "",
                   "condition": {
                     "id": "rhiannon-festgehalten",
                     "name": "Festgehalten",
@@ -56180,7 +57565,14 @@
                     "description": "Die Kreatur ist wie erstarrt und kann sich nicht bewegen. Ob sie auch keine Aktionen mehr ausführen kann, ist frei zu erzählen.",
                     "durationModel": {
                       "kind": "actor-comments",
-                      "remainingActorComments": 2
+                      "remainingActorComments": 2,
+                      "remainingSceneComments": 0,
+                      "expiresOnRest": "",
+                      "expiresOnDayChange": false,
+                      "encounterId": "",
+                      "concentrationOwnerId": "",
+                      "channelOwnerId": "",
+                      "label": "Bis zu 2 eigene Gesamtkommentare"
                     },
                     "duration": "Bis zu 2 eigene Gesamtkommentare",
                     "mechanics": {
@@ -56196,8 +57588,26 @@
                       "maximumHitPoints": 0,
                       "passivePerception": 0,
                       "attackRollMode": "normal"
+                    },
+                    "active": true,
+                    "remainingActorComments": 2,
+                    "remainingSceneComments": 0,
+                    "ward": {
+                      "enabled": false,
+                      "charges": 0,
+                      "deflectChance": 100,
+                      "breaksOnCriticalHit": false
                     }
-                  }
+                  },
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": true,
@@ -56207,6 +57617,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-person-festhalten-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine Kreatur erstarrt vollständig und kann sich weder bewegen noch handeln, solange der Zauber anhält.",
@@ -56218,6 +57649,9 @@
               "school": "mysticism",
               "icon": "",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -56238,6 +57672,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-gedanken-wahrnehmen-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon liest die oberflächlichen Gedanken einer nahen Kreatur.",
               "prepared": true
@@ -56248,6 +57703,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/poison_damage.png",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "spell-attack",
@@ -56264,9 +57722,23 @@
                   "id": "rhiannon-sichelwind-damage",
                   "type": "damage",
                   "target": "target",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "2d6",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56276,6 +57748,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-sichelwind-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine sichelförmige Windklinge schneidet mit voller Wucht durch das Ziel.",
@@ -56287,6 +57780,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/fire_damage.png",
               "level": 2,
+              "manaCost": 3,
+              "slotResourceId": "spell-slot-2",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "saving-throw",
@@ -56303,9 +57799,23 @@
                   "id": "rhiannon-berstende-boe-damage",
                   "type": "damage",
                   "target": "selected",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "2d4",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56315,6 +57825,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-berstende-boe-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 3,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Eine explosionsartige Windböe reißt an allen ausgewählten Gegnern in der Nähe.",
@@ -56326,6 +57857,9 @@
               "school": "mysticism",
               "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/reflect_mysticism.png",
               "level": 3,
+              "manaCost": 5,
+              "slotResourceId": "spell-slot-3",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "reaction",
               "resolutionType": "automatic",
@@ -56346,6 +57880,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-reaction",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-gegenzauber-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 5,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon unterbricht einen bereits gewirkten gegnerischen Zauber gleicher oder niedrigerer Stufe, als wäre er nie gewirkt worden.",
               "prepared": true
@@ -56356,6 +57911,9 @@
               "school": "mysticism",
               "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/dispel_mysticism.png",
               "level": 3,
+              "manaCost": 5,
+              "slotResourceId": "spell-slot-3",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "automatic",
@@ -56376,6 +57934,27 @@
                 "amountPerLevel": 0,
                 "maximumLevel": 10
               },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-magie-bannen-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 5,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
               "rollFormula": "",
               "description": "Rhiannon löst eine bestehende magische Wirkung auf.",
               "prepared": true
@@ -56386,6 +57965,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/sun_damage.png",
               "level": 3,
+              "manaCost": 5,
+              "slotResourceId": "spell-slot-3",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "saving-throw",
@@ -56402,9 +57984,23 @@
                   "id": "rhiannon-hundert-klingen-sturm-damage",
                   "type": "damage",
                   "target": "selected",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "3d4",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": true,
@@ -56414,6 +58010,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-hundert-klingen-sturm-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 5,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Hunderte messerscharfe Windklingen fegen durch das Schlachtfeld und zerschneiden alles in Reichweite.",
@@ -56425,6 +58042,9 @@
               "school": "destruction",
               "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/shock_damage.png",
               "level": 3,
+              "manaCost": 5,
+              "slotResourceId": "spell-slot-3",
+              "slotCost": 1,
               "presentationKind": "spell",
               "activationType": "action",
               "resolutionType": "spell-attack",
@@ -56441,9 +58061,23 @@
                   "id": "rhiannon-blitzfunken-damage",
                   "type": "damage",
                   "target": "target",
-                  "on": "hit",
+                  "amount": 0,
                   "formula": "3d6",
-                  "damageType": "Wind"
+                  "damageType": "Wind",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
                 }
               ],
               "concentration": false,
@@ -56453,6 +58087,27 @@
                 "formulaPerLevel": "",
                 "amountPerLevel": 0,
                 "maximumLevel": 10
+              },
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "rhiannon-blitzfunken-mana-cost",
+                  "resourceId": "mana-focus",
+                  "name": "Mana",
+                  "amount": 5,
+                  "scope": "persistent"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
               },
               "rollFormula": "",
               "description": "Ein gebündelter Strahl greller Blitzfunken schießt punktgenau auf ein einzelnes Ziel.",
@@ -56489,8 +58144,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -56503,8 +58162,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -56517,8 +58180,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           },
           "latentPresence": {
@@ -56543,8 +58210,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "allyMechanics": {
               "attack": 0,
@@ -56557,8 +58228,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             },
             "enemyMechanics": {
               "attack": 0,
@@ -56571,8 +58246,12 @@
               "spellSaveDc": 0,
               "movement": 0,
               "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
               "passivePerception": 0,
-              "attackRollMode": "normal"
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
             }
           }
         },
@@ -56586,7 +58265,7 @@
         "recordId": "character--y7MBxDiAaesbWHBtmw5Q",
         "path": "records/familien/haus-draig/rhiannon-draig--y7MBxDiAaesbWHBtmw5Q/character.json",
         "schemaVersion": 1,
-        "contentHash": "55ccba47f39242506dd51bcab7daa62cf5e90f363add4502726dd4a9d9119b2e",
+        "contentHash": "fa653ef6e6f9f734c0923a8625c941b33c50df9e36d0fcc4102e971fdf02b8a7",
         "firestoreDocumentIds": [
           "y7MBxDiAaesbWHBtmw5Q",
           "y7MBxDiAaesbWHBtmw5Q"
@@ -65219,7 +66898,12 @@
           }
         ],
         "hitPoints": {
-          "current": 204,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 51,
+            "overrideAnchor": null
+          },
+          "current": 255,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -69723,7 +71407,7 @@
         "recordId": "character--tmfBA2zPTc88EMMGkyyA",
         "path": "records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
         "schemaVersion": 1,
-        "contentHash": "2a8fadeb7bf01e2cb3acd3884afd41b31526c3dacfb7f5a9f612facd51ba9b5e",
+        "contentHash": "01ad3e253aba4c2f29adf9fa885f37210c89de9e2311970de4314607d02198ff",
         "firestoreDocumentIds": [
           "tmfBA2zPTc88EMMGkyyA",
           "tmfBA2zPTc88EMMGkyyA"
@@ -70253,7 +71937,7 @@
         "role": "Ritter des Hauses Gafyr · Teulu",
         "level": "Stufe 6",
         "status": "Gesund",
-        "hitpoints": "52 / 52 TP",
+        "hitpoints": "65 / 65 LP",
         "healthColor": "#5c7f20",
         "money": "0 Gold, 0 Silber, 0 Kupfer",
         "moneyState": {
@@ -70886,7 +72570,12 @@
           }
         ],
         "hitPoints": {
-          "current": 52,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 13,
+            "overrideAnchor": null
+          },
+          "current": 65,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -73593,7 +75282,7 @@
         "recordId": "character--gildas-gafyr",
         "path": "records/familien/haus-gafyr/gildas-gafyr--gildas-gafyr/character.json",
         "schemaVersion": 1,
-        "contentHash": "70f45de578f2e4dcc070b71f66828d38b28b3181724bf12c3cf6fad6f8547f1c",
+        "contentHash": "95d0052ab4046e11589750518fb8207e8daa0934ae0f105798b7625e3bb19682",
         "firestoreDocumentIds": [
           "gildas-gafyr",
           "gildas-gafyr",
@@ -88078,7 +89767,12 @@
           }
         ],
         "hitPoints": {
-          "current": 29,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 8,
+            "overrideAnchor": null
+          },
+          "current": 37,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -89818,7 +91512,7 @@
         "recordId": "character--person--haus-neidr--guinevere-neidr",
         "path": "records/familien/haus-neidr/guinevere-neidr--person--haus-neidr--guinevere-neidr/character.json",
         "schemaVersion": 1,
-        "contentHash": "d2d57492c840fae52234487954c0219f096383e041e8c69ec284f24060be66f9",
+        "contentHash": "ab3bad1ff71cec6c6a2269cafc65a3026a39149bc766a7908faf72d1444b66f1",
         "firestoreDocumentIds": [
           "person--haus-neidr--guinevere-neidr",
           "person--haus-neidr--guinevere-neidr"
@@ -128851,7 +130545,12 @@
           }
         ],
         "hitPoints": {
-          "current": 49,
+          "vitality": {
+            "version": 1,
+            "legacyIncrease": 13,
+            "overrideAnchor": null
+          },
+          "current": 62,
           "temporary": 0,
           "hitDie": 10,
           "averagePerLevelOverride": null,
@@ -130568,7 +132267,7 @@
         "recordId": "character--6atOllMA637Z2VNAZAxf",
         "path": "records/orte/gwynthor/gethin--6atOllMA637Z2VNAZAxf/character.json",
         "schemaVersion": 1,
-        "contentHash": "d9a90fc6cbd1b3fa5c67f5491ea0e5eb22f64e92f2790df4f941cbd695807188",
+        "contentHash": "da58d432e70d6fad87f6c34d1c098711a39a0a689b838686301385a8148c9390",
         "firestoreDocumentIds": [
           "6atOllMA637Z2VNAZAxf",
           "6atOllMA637Z2VNAZAxf"

@@ -33,6 +33,7 @@
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
     const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
     const commitResetCombatParticipantsCallable = httpsCallable(functions, 'commitResetCombatParticipants', { timeout: 30000 });
+    const commitCombatStatusCallable = httpsCallable(functions, 'commitCombatStatus', { timeout: 30000 });
     const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
@@ -627,6 +628,11 @@
       async resetCombatParticipants(participants) {
         await requireFirebaseUser();
         const result = await commitResetCombatParticipantsCallable({ participants });
+        return result.data;
+      },
+      async changeCombatStatus(change) {
+        await requireFirebaseUser();
+        const result = await commitCombatStatusCallable(cloneSerializableValue(change));
         return result.data;
       },
       async getCreatureLootTable(recordId) {

@@ -1,5 +1,5 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260905-cenyr-runtime-autofill-v1';
-import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260905-party-combat-v1';
+import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260906-character-vitality-v1';
 
 const autofillCache = new WeakMap();
 

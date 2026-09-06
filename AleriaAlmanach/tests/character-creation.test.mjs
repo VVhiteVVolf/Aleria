@@ -169,7 +169,7 @@ test('Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung', () => {
   });
   assert.equal(result.profile.progression.level, 1);
   assert.equal(result.profile.hitPoints.hitDie, 10);
-  assert.equal(result.profile.hitPoints.current, 10);
+  assert.equal(result.profile.hitPoints.current, 13);
   assert.equal(result.profile.weapons.find(weapon => weapon.equipped).name, 'Langschwert');
   assert.ok(result.profile.proficiencies.armor.includes('heavy'));
   assert.ok(result.profile.skills.find(skill => skill.name === 'Auftreten').proficiency === 'trained');

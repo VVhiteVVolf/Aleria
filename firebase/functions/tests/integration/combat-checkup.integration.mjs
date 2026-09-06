@@ -8,7 +8,7 @@ after(() => database.terminate());
 
 test('echte Speichertransaktion: Eröffnung sperrt beide Profile und verhindert Doppelstart', async () => {
   const started = await startFight();
-  assert.equal(started.combatEncounter.participants[1].entrySnapshot.current, 39);
+  assert.equal(started.combatEncounter.participants[1].entrySnapshot.current, 49);
   const lock = await database.doc(`combat_profile_locks/characters/records/${ids[0]}`).get();
   assert.deepEqual(lock.data().activeEncounterKeys, [`${threadId}:${started.combatEncounter.encounterId}`]);
   await assert.rejects(startFight(), /bereits ein Kampf/);
@@ -101,7 +101,7 @@ test('zwei Hauptaktionen in einem Beitrag werden atomar abgelehnt', async () => 
   const payload = structuredClone(first.payload);
   payload.metadata.commentSegments.push(structuredClone(first.segment));
   await assert.rejects(commitAction(payload), /Aktion|Ressource|genug|verfügbar/);
-  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 39);
+  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 49);
   assert.equal((await history()).length, 1);
 });
 
@@ -111,7 +111,7 @@ test('ausgeschiedene Figuren können nicht mit einem alten Entwurf weiterkämpfe
   const current = await active();
   await encounter({ encounterId: current.encounterId, operation: 'remove', participants: [{ actorId: ids[0], status: 'fled' }] });
   await assert.rejects(commitAction(action.payload), /nicht aktiv/);
-  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 39);
+  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 49);
 });
 
 test('auch ein Abschluss ohne EP schützt seine zugrundeliegenden Kampfhandlungen vor Rücknahme', async () => {
@@ -122,7 +122,7 @@ test('auch ein Abschluss ohne EP schützt seine zugrundeliegenden Kampfhandlunge
   await assert.rejects(undo(action.id), /neuere Handlung/);
   await undo(ended.id);
   await undo(action.id);
-  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 39);
+  assert.equal((await record(ids[1])).combatProfile.hitPoints.current, 49);
 });
 
 test('vollständiges Duell bis null TP: Speicher und Replay stimmen nach jedem Beitrag überein', async () => {

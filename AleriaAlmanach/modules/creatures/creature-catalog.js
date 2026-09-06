@@ -1,4 +1,4 @@
-import { sanitizeCreature } from './creature-model.js?v=20260905-party-combat-v1';
+import { sanitizeCreature } from './creature-model.js?v=20260906-character-vitality-v1';
 
 export const CREATURE_LEVEL_GUIDELINES = Object.freeze([
   { label: 'Bauer', minimum: 1, maximum: 1 },

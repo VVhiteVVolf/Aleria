@@ -1,0 +1,71 @@
+/* Temporary scene status editor and shared compact effect presentation. */
+.comment-combat-profile-context,
+.comment-combat-profile-section-head,
+.comment-combat-profile-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.72rem; color: #d2b780; }
+.comment-combat-profile-panel { display: flex; flex-direction: column; gap: 0.6rem; overflow: auto; scrollbar-width: thin; scrollbar-color: #94723d #251b16; overscroll-behavior: contain; }
+.comment-combat-profile-panel > * { flex-shrink: 0; }
+.comment-combat-profile-panel button { border: 1px solid #94723d; border-radius: 4px; padding: 0.3rem 0.45rem; color: #f3ddb0; background: #3a291b; font: inherit; cursor: pointer; }
+.comment-combat-profile-panel button:disabled { opacity: 0.55; cursor: not-allowed; }
+.comment-combat-profile-panel button:focus-visible,
+.combat-status-dialog :is(button, input, textarea, select):focus-visible { outline: 2px solid #e1b666; outline-offset: 2px; }
+.comment-combat-profile-vitals > span:first-child { flex: 3; }
+.comment-combat-profile-vitals meter { width: 100%; height: 0.6rem; accent-color: #6d914e; }
+.comment-combat-profile-vitals em { font: 0.7rem serif; color: #9dd7e8; }
+.comment-combat-profile-weapon img,
+.comment-combat-profile-resources img { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; }
+.comment-combat-profile-weapon > span { flex: 1; white-space: normal; }
+.comment-combat-profile-weapon > .combat-status-icon-fallback { flex: 0 0 22px; text-align: center; }
+.comment-combat-profile-weapon small { display: block; color: #c3a375; font-size: 0.65rem; }
+.comment-combat-profile-resources { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.3rem; }
+.comment-combat-profile-resources li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 0.3rem; padding: 0.35rem; border: 1px solid #695034; border-radius: 4px; }
+.comment-combat-profile-resources li span { white-space: normal; flex: 1; overflow: visible; text-overflow: clip; }
+.comment-combat-profile-resources-wide { grid-template-columns: 1fr; margin-top: 0.3rem; }
+.comment-combat-profile-resources .is-depleted { color: #c29587; background: #422320; }
+.comment-combat-profile-section { border-top: 1px solid #695034; padding-top: 0.55rem; }
+.comment-combat-profile-section h4 { margin: 0 0 0.4rem; color: #eed3a0; font: 600 0.78rem 'Cinzel', serif; }
+.comment-combat-profile-section h4 span { font-weight: normal; color: #c3a375; }
+.comment-combat-profile-note { font-size: 0.68rem; color: #c6ad88; line-height: 1.35; margin: 0.4rem 0; }
+.comment-combat-profile-focus { margin: 0.4rem 0; color: #bfb5ec; font-size: 0.78rem; }
+.comment-combat-profile-section details { font-size: 0.74rem; }
+.comment-combat-profile-section summary { cursor: pointer; }
+.comment-combat-profile-footer { border-top: 1px solid #695034; padding-top: 0.5rem; margin-top: auto; }
+.comment-combat-conditions { margin: 0.4rem 0 0; padding: 0; display: grid; gap: 0.4rem; list-style: none; }
+.comment-combat-condition { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.45rem; border: 1px solid #695034; border-left: 3px solid #ad985b; border-radius: 4px; background: #2e241f; color: #ead4a8; font-size: 0.78rem; }
+.comment-combat-condition[data-status-kind='buff'] { border-left-color: #88a36d; }
+.comment-combat-condition[data-status-kind='debuff'] { border-left-color: #c67d75; }
+.comment-combat-condition > div { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.comment-combat-condition strong { display: block; color: #f2dfb9; }
+.comment-combat-condition small { display: block; color: #c9b99a; font-size: 0.7rem; line-height: 1.4; }
+.comment-combat-condition p { margin: 0.3rem 0; white-space: pre-wrap; }
+.comment-combat-condition summary { cursor: pointer; color: #d9bd88; margin-top: 0.3rem; }
+.comment-combat-condition-icon { flex: 0 0 32px; width: 32px; height: 32px; display: grid; place-items: center; }
+.comment-combat-condition-icon img { width: 100%; height: 100%; object-fit: contain; }
+.comment-combat-status-audit { margin: 0.7rem auto; padding: 0.65rem 1rem; max-width: 720px; border: 1px solid #b89a68; border-left: 3px solid #8b6e35; background: #f2e6cc; color: #543d26; font-size: 0.85rem; }
+.comment-combat-status-audit p { margin: 0.2rem 0; }
+.combat-status-dialog { box-sizing: border-box; width: min(600px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); padding: 1.2rem; border: 1px solid #b58c49; border-radius: 12px; background: linear-gradient(140deg, #3b2a20, #201917); color: #ead4a8; box-shadow: 0 12px 50px #0009; font: 1rem/1.4 'EB Garamond', Georgia, serif; scrollbar-width: thin; }
+.combat-status-dialog::backdrop { background: #160e0bcc; }
+.combat-status-dialog form { display: grid; gap: 0.8rem; }
+.combat-status-dialog header,
+.combat-status-dialog footer { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+.combat-status-dialog h3 { margin: 0.2rem 0; font: 600 1.05rem 'Cinzel', serif; }
+.combat-status-dialog label { display: grid; gap: 0.25rem; min-width: 0; }
+.combat-status-dialog :is(input, select, textarea) { box-sizing: border-box; width: 100%; min-width: 0; padding: 0.55rem; background: #f5ecd8; color: #38291e; border: 1px solid #ad8b56; border-radius: 4px; font: inherit; }
+.combat-status-dialog button { padding: 0.45rem 0.65rem; color: #eed9ac; background: #473020; border: 1px solid #ab8851; border-radius: 4px; font: inherit; cursor: pointer; }
+.combat-status-dialog button[type='submit'] { color: #2a2118; background: #d4b477; }
+.combat-status-dialog button:disabled { opacity: 0.55; cursor: wait; }
+.combat-status-dialog p { margin: 0; }
+.combat-status-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+.combat-status-dialog [hidden] { display: none; }
+.combat-status-modifiers { border: 1px solid #7d613e; border-radius: 4px; padding: 0.65rem; }
+.combat-status-modifiers summary { cursor: pointer; }
+.combat-status-modifiers p { margin: 0.5rem 0; font-size: 0.85rem; }
+.combat-status-dialog [data-status-message] { color: #f0bf8f; font-size: 0.88rem; }
+@media (max-width: 480px) {
+  .combat-status-dialog { padding: 0.85rem; }
+  .combat-status-dialog footer { flex-wrap: wrap; }
+}
+@media (max-width: 760px) {
+  .comment-entry:has(> .comment-combat-profile-shell.is-profile-open) { flex-wrap: wrap; }
+  .comment-entry:has(> .comment-combat-profile-shell.is-profile-open) > .comment-content { flex-basis: 100%; }
+  .comment-entry-fused > .comment-combat-profile-shell.is-profile-open { margin-inline: 0; }
+}

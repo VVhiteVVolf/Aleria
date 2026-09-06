@@ -17,7 +17,7 @@ test('Gildas ist als robuster Stufe-6-Teulu mit biografisch passenden Attributen
   const attributes = Object.fromEntries(profile.attributes.map(attribute => [attribute.key, attribute.score]));
 
   assert.equal(profile.progression.level, 6);
-  assert.equal(profile.maximumHitPoints, 52);
+  assert.equal(profile.maximumHitPoints, 65);
   assert.equal(profile.armorClassTotal, 19);
   assert.equal(profile.weapon.id, 'gildas-gafyr-duty-sword');
   assert.deepEqual(attributes, {

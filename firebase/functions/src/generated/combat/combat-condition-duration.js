@@ -131,7 +131,7 @@ export function advanceTemporaryConditionsForComment(states, comment = {}, optio
   states.forEach((state, actorId) => {
     const conditions = Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : [];
     if (!conditions.length) return;
-    const eligibleIds = eligibleByActor?.get(String(actorId));
+    const eligibleIds = eligibleByActor ? (eligibleByActor.get(String(actorId)) || new Set()) : null;
     const advanced = conditions
       .map(condition => {
         const normalized = normalizeRuntimeCondition(condition);

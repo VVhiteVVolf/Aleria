@@ -31,6 +31,7 @@ function containsPersistentMechanics(metadata = {}) {
     || metadata.restTransaction
     || metadata.sceneRest
     || metadata.combatEncounter
+    || metadata.combatStatus
     || metadata.encounterTransaction
     || metadata.sceneInventoryTransfer
     || metadata.serverValidatedMechanics

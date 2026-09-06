@@ -1,6 +1,6 @@
 .comment-combat-profile-shell {
   --comment-combat-profile-size: 158px;
-  --comment-combat-profile-open-size: 242px;
+  --comment-combat-profile-open-size: 310px;
   position: relative;
   width: var(--comment-combat-profile-size);
   height: var(--comment-combat-profile-size);
@@ -9,7 +9,7 @@
 
 .comment-combat-profile-shell.is-profile-open {
   width: var(--comment-combat-profile-open-size);
-  height: var(--comment-combat-profile-open-size);
+  height: min(570px, 78dvh);
   flex-basis: var(--comment-combat-profile-open-size);
 }
 
@@ -173,7 +173,7 @@
 
 .comment-combat-profile-vitals small,
 .comment-combat-profile-stats small {
-  color: #a88e61;
+  color: #d2b780;
   font: 600 0.55rem/1.1 "Cinzel", serif;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -219,8 +219,8 @@
 
 .comment-combat-profile-resources li {
   gap: 0.25rem;
-  color: #aa956d;
-  font-size: 0.64rem;
+  color: #e5d0a5;
+  font-size: 0.74rem;
   line-height: 1.2;
 }
 
@@ -239,7 +239,7 @@
 .comment-combat-profile-empty {
   margin: 0;
   color: #8f8066;
-  font-size: 0.64rem;
+  font-size: 0.74rem;
   font-style: italic;
   text-align: center;
 }
@@ -270,7 +270,7 @@
 
   .comment-combat-profile-shell.is-profile-open,
   .session-page .comment-combat-profile-shell.is-profile-open {
-    --comment-combat-profile-open-size: min(220px, 62vw);
+    --comment-combat-profile-open-size: min(310px, calc(100vw - 64px));
   }
 
   .comment-entry-fused.left > .comment-combat-profile-shell {

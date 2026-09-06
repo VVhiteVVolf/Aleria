@@ -48,6 +48,11 @@ function preserveOnlineCombatState(localProfile, onlineProfile) {
     ['current', 'temporary'].forEach(field => {
       if (Object.prototype.hasOwnProperty.call(onlineHitPoints, field)) merged.hitPoints[field] = onlineHitPoints[field];
     });
+    // Local rule overlays can arrive before the live migration. Keep legacy
+    // wounds, adding only the recorded one-time HP increase; never heal 0 HP.
+    if (merged.hitPoints.vitality?.version === 1 && !onlineHitPoints.vitality && Number(onlineHitPoints.current) > 0) {
+      merged.hitPoints.current = Number(onlineHitPoints.current) + Math.max(0, Number(merged.hitPoints.vitality.legacyIncrease) || 0);
+    }
   }
 
   merged.resources = mergeRuntimeCollectionState(

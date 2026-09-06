@@ -10,20 +10,20 @@
 }
 
 .cp-setup-dialog {
-  --setup-gold: #d1aa61;
-  --setup-bright: #f1d79b;
-  --setup-muted: #a99b83;
+  --setup-gold: #76501e;
+  --setup-bright: #733336;
+  --setup-muted: #66513b;
   display: grid;
   width: min(1320px, 100%);
   max-height: min(94dvh, 1040px);
   grid-template-rows: auto auto minmax(0, 1fr) auto;
   overflow: hidden;
   border: 1px solid rgba(209, 170, 97, 0.7);
-  color: #e7ddc9;
+  color: #59422b;
   background:
     radial-gradient(circle at 16% 0, rgba(137, 87, 31, 0.23), transparent 34rem),
-    linear-gradient(145deg, #211c15, #0b0e0e 72%);
-  box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.35), 0 30px 100px rgba(0, 0, 0, 0.78);
+    linear-gradient(145deg, rgba(255, 248, 229, 1), rgba(255, 248, 229, 1) 72%);
+  box-shadow: inset 0 0 0 4px rgba(82, 55, 27, 0.16), 0 30px 100px rgba(82, 55, 27, 0.16);
 }
 
 .cp-setup-head,
@@ -33,7 +33,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 14px 18px;
-  background: rgba(4, 6, 6, 0.58);
+  background: rgba(255, 248, 229, 0.58);
 }
 
 .cp-setup-head {
@@ -71,7 +71,7 @@
   padding: 0;
   border: 1px solid rgba(209, 170, 97, 0.38);
   color: var(--setup-bright);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(255, 248, 229, 0.45);
   font-size: 22px;
 }
 
@@ -80,7 +80,7 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
   padding: 0 18px;
   border-bottom: 1px solid rgba(209, 170, 97, 0.2);
-  background: rgba(16, 15, 12, 0.82);
+  background: rgba(255, 248, 229, 0.82);
 }
 
 .cp-setup-progress button {
@@ -161,7 +161,7 @@
 .cp-setup-empty {
   padding: 13px;
   border: 1px solid rgba(209, 170, 97, 0.25);
-  background: rgba(4, 7, 7, 0.38);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-template-selectors label > span {
@@ -177,8 +177,8 @@
 .cp-setup-dialog input,
 .cp-setup-dialog button {
   border: 1px solid rgba(209, 170, 97, 0.32);
-  color: #e8dec9;
-  background: #111412;
+  color: #59422b;
+  background: rgba(255, 248, 229, 1);
 }
 
 .cp-setup-dialog select,
@@ -219,7 +219,7 @@
 }
 
 .cp-setup-template-preview small {
-  color: #c0b398;
+  color: #59422b;
 }
 
 .cp-setup-methods {
@@ -253,7 +253,7 @@
 
 .cp-setup-methods button.is-active {
   border-color: var(--setup-gold);
-  background: linear-gradient(145deg, rgba(117, 75, 26, 0.45), rgba(14, 17, 15, 0.96));
+  background: linear-gradient(145deg, rgba(255, 248, 229, 0.45), rgba(255, 248, 229, 0.96));
   box-shadow: inset 0 -3px var(--setup-gold);
 }
 
@@ -264,11 +264,11 @@
   margin-bottom: 12px;
   padding: 10px 13px;
   border-left: 3px solid #668a59;
-  background: rgba(50, 76, 42, 0.24);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-budget strong {
-  color: #bcd8a7;
+  color: #365d32;
   font: 700 18px "Cinzel", serif;
 }
 
@@ -279,7 +279,7 @@
 
 .cp-setup-budget.is-invalid {
   border-color: #a74d4d;
-  background: rgba(103, 28, 28, 0.28);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-attribute-grid {
@@ -294,7 +294,7 @@
   min-height: 170px;
   padding: 12px;
   border: 1px solid rgba(209, 170, 97, 0.28);
-  background: linear-gradient(160deg, rgba(40, 32, 23, 0.72), rgba(4, 7, 7, 0.72));
+  background: linear-gradient(160deg, rgba(255, 248, 229, 0.72), rgba(255, 248, 229, 0.72));
   text-align: center;
 }
 
@@ -326,7 +326,7 @@
 }
 
 .cp-setup-attribute > div:last-child i {
-  color: #8db37d;
+  color: #365d32;
   font-style: normal;
 }
 
@@ -366,7 +366,7 @@
   display: grid;
   place-items: center;
   border: 1px solid rgba(209, 170, 97, 0.22);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-rolls b {
@@ -392,7 +392,7 @@
   gap: 8px;
   padding: 9px;
   border: 1px solid rgba(209, 170, 97, 0.17);
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-skill-grid article > span,
@@ -417,12 +417,12 @@
 
 .cp-setup-skill-grid article.is-trained {
   border-color: rgba(109, 153, 88, 0.65);
-  background: rgba(45, 78, 39, 0.25);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-skill-grid article.is-trained > span,
 .cp-setup-skill-grid article.is-trained > b {
-  color: #a8cd92;
+  color: #365d32;
 }
 
 .cp-setup-package-grid {
@@ -460,7 +460,7 @@
   gap: 3px 8px;
   padding: 10px;
   border: 1px solid rgba(209, 170, 97, 0.18);
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-loadout > span small {
@@ -474,7 +474,7 @@
   margin-top: 14px;
   padding: 11px;
   border: 1px solid rgba(209, 170, 97, 0.24);
-  background: rgba(77, 55, 24, 0.18);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-check input {
@@ -495,7 +495,7 @@
   align-items: center;
   padding: 10px;
   border: 1px solid rgba(209, 170, 97, 0.21);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-setup-resource-grid article > span {
@@ -536,8 +536,8 @@
   gap: 5px;
   padding: 8px;
   border: 1px solid rgba(91, 126, 164, 0.35);
-  color: #aebdd0;
-  background: rgba(28, 47, 70, 0.22);
+  color: #3c527a;
+  background: rgba(255, 248, 229, 0.45);
   font-size: 11px;
 }
 
@@ -549,8 +549,8 @@
   margin-bottom: 12px;
   padding: 10px 13px;
   border-left: 3px solid #b34d4d;
-  background: rgba(101, 25, 25, 0.27);
-  color: #e7b7b0;
+  background: rgba(255, 248, 229, 0.45);
+  color: #59422b;
 }
 
 .cp-setup-errors p {
@@ -581,8 +581,8 @@
 
 .cp-setup-footer button.is-primary {
   border-color: #d2aa61;
-  color: #fff1c8;
-  background: linear-gradient(#7c4e15, #49300d);
+  color: #59422b;
+  background: linear-gradient(rgba(255, 248, 229, 1), rgba(255, 248, 229, 1));
 }
 
 .cp-setup-dialog button:disabled {
@@ -599,7 +599,7 @@
 .cp-sheet-proficiency-grid article {
   padding: 10px;
   border: 1px solid rgba(195, 154, 87, 0.2);
-  background: rgba(5, 7, 7, 0.3);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-sheet-proficiency-grid span,
@@ -627,12 +627,12 @@
   gap: 6px;
   padding: 7px;
   border: 1px solid rgba(88, 127, 164, 0.45);
-  background: rgba(26, 45, 67, 0.23);
+  background: rgba(255, 248, 229, 0.45);
 }
 
 .cp-sheet-cantrip-slot > strong {
   grid-column: 1 / -1;
-  color: #abc4de;
+  color: #3c527a;
   font: 600 0.58rem "Cinzel", serif;
   text-align: center;
 }

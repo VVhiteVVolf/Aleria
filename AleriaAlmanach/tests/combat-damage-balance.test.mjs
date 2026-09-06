@@ -86,7 +86,7 @@ test('Barddwyr, Milwr und Arthwyr behalten ihre unterschiedlichen Ausbildungsabs
 test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff selbst bei maximalem Krit nicht sofort ausschalten', async () => {
   const gildas = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
-  assert.equal(target.currentHitPoints, 39);
+  assert.equal(target.currentHitPoints, 49);
   const actor = resolveCombatProfile(gildas, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
   assert.equal(actor.weapon.damageFormula, '2d8');
   assert.equal(actor.damageModifier, 5);
@@ -97,7 +97,7 @@ test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff se
   }
 });
 
-test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normalen Maximalwürfen noch 5 TP', async () => {
+test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normalen Maximalwürfen noch 15 TP', async () => {
   const character = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
   const first = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
@@ -109,7 +109,7 @@ test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normal
   const result = await resolver.resolveAttack({ actor: first, target });
   const follow = await resolver.resolveAttack({ actor: response, target: { ...target, currentHitPoints: result.targetSnapshot.hitPointsAfter } });
   assert.equal(result.damage.total + follow.damage.total, 34);
-  assert.equal(follow.targetSnapshot.hitPointsAfter, 5);
+  assert.equal(follow.targetSnapshot.hitPointsAfter, 15);
 });
 
 test('zweihändige Waffenführung und manuelle Stufenwechsel berechnen die Technik neu ohne gespeicherte Zusatzwürfel zu stapeln', async () => {

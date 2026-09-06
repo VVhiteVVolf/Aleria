@@ -2,6 +2,9 @@ import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   COMBAT_WEAPON_TYPE_OPTIONS,
   getAttributeModifier,
+  getHitPointProgression,
+  upgradeCharacterHitPoints,
+  setCharacterHitPointMaximum,
   getCharacterCombatInventoryOptions,
   getSavingThrowTotal,
   getSkillTotal,
@@ -10,14 +13,14 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260905-party-combat-v1';
+} from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-character-vitality-v1';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260905-party-combat-v1';
+} from '../combat/combat-level-up-model.js?v=20260906-character-vitality-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -36,13 +39,15 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260905-party-combat-v1';
-import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260905-party-combat-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-release-check-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260906-character-vitality-v1';
+import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260906-character-vitality-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-character-vitality-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
+
+import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260906-character-vitality-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -325,7 +330,7 @@ function renderLevelUpDialog(profile) {
             <label><span>Erfahrung nach Aufstieg</span><input type="number" min="0" max="999999999" data-level-up-path="experience" value="${plan.experience}"></label>
             <label><span>Nächste Stufe bei</span><input type="number" min="1" max="999999999" data-level-up-path="nextLevelExperience" value="${plan.nextLevelExperience ?? ''}" placeholder="frei"></label>
             <label><span>TP-Regel</span><select data-level-up-path="hitPointMode"><option value="recommended"${selected(plan.hitPointMode, 'recommended')}>Empfohlene Ableitung</option><option value="manual"${selected(plan.hitPointMode, 'manual')}>Manueller Zuwachs</option><option value="unchanged"${selected(plan.hitPointMode, 'unchanged')}>Maximum beibehalten</option></select></label>
-            <label><span>Manueller TP-Zuwachs</span><input type="number" min="0" max="9999" data-level-up-path="manualHitPointGain" value="${plan.manualHitPointGain}"><small>Nur bei manueller Regel</small></label>
+            <label><span>Gewürfelter Zuwachs + KON</span><input type="number" min="0" max="9999" data-level-up-path="manualHitPointGain" value="${plan.manualHitPointGain}"><small>Ohne Vitalität eingeben; der Zuschlag wird zusätzlich berechnet.</small></label>
             <label class="cp-level-up-check"><input type="checkbox" data-level-up-path="restoreGainedHitPoints"${checked(plan.restoreGainedHitPoints)}> Aktuelle TP um den tatsächlichen Maximalzuwachs erhöhen</label>
           </div>
         </section>
@@ -440,9 +445,10 @@ function renderRules(profile) {
         <div class="cp-sheet-fields compact">
           <label><span>Trefferwürfel</span><select data-combat-path="hitPoints.hitDie"><option value="6"${selected(profile.hitPoints.hitDie, 6)}>W6</option><option value="8"${selected(profile.hitPoints.hitDie, 8)}>W8</option><option value="10"${selected(profile.hitPoints.hitDie, 10)}>W10</option><option value="12"${selected(profile.hitPoints.hitDie, 12)}>W12</option></select></label>
           <label><span>TP je Folgestufe</span><input type="number" min="1" max="999" data-combat-path="hitPoints.averagePerLevelOverride" value="${profile.hitPoints.averagePerLevelOverride ?? ''}" placeholder="Würfelmittel"></label>
-          <label><span>Maximum überschreiben</span><input type="number" min="1" max="9999" data-combat-path="hitPoints.maximumOverride" value="${profile.hitPoints.maximumOverride ?? ''}" placeholder="automatisch"></label>
+          <label><span>Eigenes Maximum inkl. Vitalität</span><input type="number" min="1" max="9999" data-combat-path="hitPoints.maximumOverride" value="${profile.hitPoints.maximumOverride == null ? '' : getHitPointProgression(profile).maximum}" placeholder="automatisch"></label>
         </div>
-        <p class="cp-sheet-formula">Stufe 1: voller Trefferwürfel + KON. Weitere Stufen: Würfelmittel + KON, mindestens 1 TP je Stufe.</p>
+        <p class="cp-sheet-formula">Stufe 1: voller Trefferwürfel + KON. Stufe 2–30: Würfelwurf oder Würfelmittel + KON (mindestens 1), jeweils mit Vitalitätszuschlag von insgesamt ungefähr 25 %. KON-Änderungen wirken rückwirkend.</p>
+        <p class="cp-sheet-vitality-breakdown" data-combat-derived="hit-point-breakdown"></p>
       </article>
       <article class="cp-sheet-card">
         <div class="cp-sheet-section-head"><div><span>Rüstung + Geschick + Effekte</span><h4>Rüstungsklasse</h4></div></div>
@@ -885,6 +891,7 @@ function renderSheet() {
   if (!root) return;
   const profile = sanitizeCharacterCombatProfile(draftProfile);
   root.innerHTML = `<div class="cp-combat-profile">
+    <details class="cp-combat-status"><summary>Aktueller Kampfstand <small>LP, Ressourcen &amp; Zustände</small></summary><section data-character-combat-status aria-label="Aktueller Kampfstand"></section></details>
     ${renderIdentityAndProgression(profile)}
     ${renderAttributeRadar(profile)}
     ${renderDerivedStats(profile)}
@@ -897,7 +904,7 @@ function renderSheet() {
     ${renderArmor(profile)}
     ${renderDamageAffinities(profile)}
     ${renderAura(profile)}
-    <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Zustände & Effekte', 'Dauerhafte und temporäre Einflüsse', 'Zustand')}</section>
+    <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Dauerhafte Zustände & Effekte', 'Grundwerte des Bogens · temporäre Effekte oben im Kampfstand verwalten', 'Zustand')}</section>
     ${renderAbilities(profile)}
     ${renderMagic(profile)}
     ${renderCheats(profile)}
@@ -905,6 +912,7 @@ function renderSheet() {
     ${renderLevelUpDialog(profile)}
   </div>`;
   activateResourceIconFallbacks(root);
+  mountCharacterCombatStatus(activeCharacter);
   activateEntryIconFallbacks(root);
   updateDerivedView();
 }
@@ -972,6 +980,8 @@ function applyLevelUp() {
 
 function updateManualLevel(target) {
   if (target.dataset.combatManualLevel === undefined) return false;
+  // Replacing a focused number field can emit another native change on blur.
+  if (Number(inputValue(target)) === draftProfile.progression.level) return true;
   const result = applyManualCharacterLevel(draftProfile, inputValue(target));
   draftProfile = result.profile;
   const added = result.addedTechniques.length;
@@ -997,7 +1007,8 @@ function updateDraftField(target) {
   }
   const directPath = target.dataset.combatPath;
   if (directPath) {
-    setAtPath(draftProfile, directPath, inputValue(target));
+    if (directPath === 'hitPoints.maximumOverride') setCharacterHitPointMaximum(draftProfile, inputValue(target));
+    else setAtPath(draftProfile, directPath, inputValue(target));
     if (directPath === 'magic.enabled') {
       draftProfile = sanitizeCharacterCombatProfile(draftProfile);
       renderSheet();
@@ -1056,6 +1067,8 @@ function updateDerivedView() {
   setDerived('effective-level', resolved.effectiveLevel);
   setDerived('proficiency', displayModifier(resolved.proficiencyBonus));
   setDerived('maximum-hit-points', resolved.maximumHitPoints);
+  const hp = getHitPointProgression(draftProfile);
+  setDerived('hit-point-breakdown', `${hp.base} Basis-LP + ${hp.vitality} Vitalität${hp.mechanicalBonus ? ` + ${hp.mechanicalBonus} aus Effekten` : ''} = ${hp.maximum} LP. Nächster Aufstieg: Trefferwürfel + KON und Vitalität; das Maximum wächst auch bei manueller Stufenwahl.`);
   setDerived('armor-class', resolved.totalDefense);
   setDerived('initiative', displayModifier(resolved.initiative));
   setDerived('passive-perception', resolved.passivePerception);
@@ -1210,7 +1223,8 @@ function equipWeapon(itemId) {
 
 function init(character = {}) {
   activeCharacter = character;
-  draftProfile = sanitizeCharacterCombatProfile(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
+    draftProfile = upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
+    activeCharacter = { ...character, combatProfile: structuredClone(draftProfile) };
   synchronizeDraftFromInventory(character.inventory || {});
   synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: true });
   levelUpState = null;
@@ -1230,7 +1244,7 @@ function prepareImported(character = {}) {
     : structuredClone(character.inventory || {});
   const result = synchronizeEquipmentFromCombat({
     inventory,
-    combatProfile: sanitizeCharacterCombatProfile(getAutofilledCenyrCombatProfile(character.combatProfile || {})),
+    combatProfile: upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {})),
     characterId: character.id || '',
     characterName: character.name || '',
     now: new Date().toISOString()

@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import {
   ensureCombatActionResources,
   getDefaultActivationCosts,
@@ -11,11 +12,11 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260905-party-combat-v1';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260905-party-combat-v1';
+} from './combat-effect-model.js?v=20260906-character-vitality-v1';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -899,6 +900,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     attributes: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>
       sanitizeAttribute(sourceAttributes.get(definition.key), definition)),
     hitPoints: {
+      ...(normalizeHitPointVitality(hitPoints.vitality) ? { vitality: normalizeHitPointVitality(hitPoints.vitality) } : {}),
       current: normalizeOptionalNumber(hitPoints.current ?? source.currentHitPoints, 0, 9999),
       temporary: normalizeNumber(hitPoints.temporary, 0, 0, 9999),
       hitDie: [6, 8, 10, 12].includes(Number(hitPoints.hitDie)) ? Number(hitPoints.hitDie) : 8,
@@ -1062,15 +1064,44 @@ function sumMechanicalModifier(profile, key) {
     .reduce((total, mechanics) => total + (Number(mechanics?.[key]) || 0), 0);
 }
 
-export function getMaximumHitPoints(profile = {}) {
+export function getHitPointProgression(profile = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
-  if (normalized.hitPoints.maximumOverride != null) return normalized.hitPoints.maximumOverride;
   const constitutionModifier = getAttributeModifier(getAttribute(normalized, 'constitution'));
-  const level = getEffectiveCombatLevel(normalized);
-  const firstLevel = Math.max(1, normalized.hitPoints.hitDie + constitutionModifier);
-  const average = normalized.hitPoints.averagePerLevelOverride ?? (Math.floor(normalized.hitPoints.hitDie / 2) + 1);
-  return Math.max(1, firstLevel + Math.max(0, level - 1) * Math.max(1, average + constitutionModifier)
-    + sumMechanicalModifier(normalized, 'maximumHitPoints'));
+  const standard = getStandardHitPointProgression({ ...normalized.hitPoints,
+    level: getEffectiveCombatLevel(normalized), constitutionModifier });
+  return { ...resolveHitPointProgression(normalized.hitPoints, standard, sumMechanicalModifier(normalized, 'maximumHitPoints')), standard };
+}
+
+export function getMaximumHitPoints(profile = {}) {
+  return getHitPointProgression(profile).maximum;
+}
+
+export function setCharacterHitPointMaximum(profile, maximum, vitalityBonus = getHitPointProgression(profile).vitality) {
+  const standard = getHitPointProgression(profile).standard;
+  profile.hitPoints.maximumOverride = maximum == null ? null : Math.max(1, Math.min(9999, Math.trunc(maximum)));
+  if (profile.hitPoints.vitality) profile.hitPoints.vitality.overrideAnchor = maximum == null ? null
+    : { base: standard.base, bonus: standard.bonus, vitality: vitalityBonus };
+}
+
+export function upgradeCharacterHitPoints(profile = {}) {
+  const normalized = sanitizeCharacterCombatProfile(profile);
+  if (normalized.hitPoints.vitality) return normalized;
+  const before = getHitPointProgression(normalized);
+  normalized.hitPoints.vitality = { version: HIT_POINT_VITALITY_VERSION, overrideAnchor: null };
+  if (normalized.hitPoints.maximumOverride != null) {
+    const bonus = Math.ceil(before.maximum / 4);
+    setCharacterHitPointMaximum(normalized, before.maximum + bonus, bonus);
+  }
+  normalized.hitPoints.current = preserveHitPointDeficit(normalized.hitPoints.current, before.maximum, getMaximumHitPoints(normalized));
+  normalized.hitPoints.vitality.legacyIncrease = getMaximumHitPoints(normalized) - before.maximum;
+  return normalized;
+}
+
+export function restoreCharacterHitPointSnapshot(currentProfile, beforeHitPoints, beforeProgression = currentProfile.progression) {
+  if (currentProfile.hitPoints?.vitality && !beforeHitPoints?.vitality) {
+    return upgradeCharacterHitPoints({ ...currentProfile, progression: beforeProgression, hitPoints: beforeHitPoints }).hitPoints;
+  }
+  return beforeHitPoints;
 }
 
 function getAppliedDexterityModifier(modifier, mode, cap) {

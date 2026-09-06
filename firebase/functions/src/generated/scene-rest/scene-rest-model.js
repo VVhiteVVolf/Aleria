@@ -4,7 +4,7 @@
 import {
   expireConditionsForRest,
   normalizeRuntimeCondition
-} from '../combat/combat-condition-duration.js?v=20260807-rhiannon-v1';
+} from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const SCENE_REST_EVENT_KIND = 'scene-rest-event';
 export const SCENE_REST_SCHEMA_VERSION = 1;
@@ -141,7 +141,8 @@ export function buildSceneRestParticipant(profile = {}, restType = 'short', opti
   const beforeAbilities = (Array.isArray(profile.abilities) ? profile.abilities : []).map(cloneAbility);
   const afterAbilities = recoverSceneRestAbilities(beforeAbilities, restType, options.recoveryDayKey, recoveryOptions);
   const beforeConditions = (Array.isArray(profile.temporaryConditions) ? profile.temporaryConditions : []).map(normalizeRuntimeCondition);
-  const afterConditions = expireConditionsForRest(beforeConditions, restType, recoveryOptions.dayChanged);
+  // Initial daily resource recovery is not itself a change of scene day.
+  const afterConditions = expireConditionsForRest(beforeConditions, restType, options.conditionsDayChanged ?? recoveryOptions.dayChanged);
   const resourceChanges = afterResources.flatMap(after => {
     const before = beforeResources.find(resource => resource.id === after.id);
     if (!before || before.current === after.current) return [];

@@ -6,6 +6,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
+  'combat-status/combat-status-catalog.js',
+  'combat-status/combat-status-model.js',
   'classes/class-damage-revisions.js',
   'combat-styles/drachentanz/drachentanz-damage-progression.js',
   'classes/cenyr/cenyr-class-registry.js',
@@ -36,6 +38,7 @@ const files = [
   'combat/combat-action-progression.js',
   'combat/combat-ability-uses.js',
   'combat/combat-condition-duration.js',
+  'combat/combat-condition-lifecycle.js',
   'combat/combat-encounter-aura.js',
   'combat/combat-effect-model.js',
   'combat/combat-encounter-model.js',
@@ -49,6 +52,7 @@ const files = [
   'combat/combat-ammunition.js',
   'combat/combat-profile-context.js',
   'combat/combat-profile-model.js',
+  'combat/combat-hit-point-progression.js',
   'combat/combat-profile-resolver.js',
   'combat/combat-resource-progression.js',
   'combat/combat-spell-slots.js',

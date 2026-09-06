@@ -70,7 +70,7 @@
       "6atOllMA637Z2VNAZAxf",
       "6atOllMA637Z2VNAZAxf"
     ],
-    "contentHash": "d9a90fc6cbd1b3fa5c67f5491ea0e5eb22f64e92f2790df4f941cbd695807188"
+    "contentHash": "da58d432e70d6fad87f6c34d1c098711a39a0a689b838686301385a8148c9390"
   },
   "local": {
     "notes": "",
@@ -2282,7 +2282,12 @@
             }
           ],
           "hitPoints": {
-            "current": 49,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 13,
+              "overrideAnchor": null
+            },
+            "current": 62,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -4804,7 +4809,12 @@
         }
       ],
       "hitPoints": {
-        "current": 49,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 13,
+          "overrideAnchor": null
+        },
+        "current": 62,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

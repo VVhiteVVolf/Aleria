@@ -49,7 +49,7 @@ async function loadCharacters({ forceLocal = false } = {}) {
 }
 
 function loadLocalRepository() {
-  if (!localRepositoryPromise) localRepositoryPromise = import("./character-database-client.mjs");
+  if (!localRepositoryPromise) localRepositoryPromise = import("./character-database-client.mjs?v=20260906-character-vitality-v1");
   return localRepositoryPromise;
 }
 

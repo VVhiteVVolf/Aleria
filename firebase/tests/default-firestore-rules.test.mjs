@@ -27,7 +27,7 @@ before(async () => {
     firestore: {
       rules: await readFile(new URL('../firestore.rules', import.meta.url), 'utf8'),
       host: '127.0.0.1',
-      port: 8080
+      port: Number(process.env.FIRESTORE_RULES_TEST_PORT || 8080)
     }
   });
 });
@@ -83,6 +83,19 @@ test('mechanische Kommentare können nur serverseitig entstehen und nie verände
   });
   await assertFails(updateDoc(doc(owner, 'comments/mechanical'), { text: 'Umschreiben' }));
   await assertFails(deleteDoc(doc(moderator, 'comments/mechanical')));
+});
+
+test('temporäre Zustände können nicht als normaler Kommentar eingeschleust oder direkt überschrieben werden', async () => {
+  const player = environment.authenticatedContext('owner').firestore();
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'comments/ordinary'), comment('owner'));
+    await setDoc(doc(context.firestore(), 'comments/status'), comment('owner', {
+      combatStatus: { actorId: 'gawain', operation: 'add', after: { temporaryConditions: [] } }, serverValidatedMechanics: true
+    }));
+  });
+  await assertFails(updateDoc(doc(player, 'comments/ordinary'), { combatStatus: { actorId: 'gawain', operation: 'reset', after: { current: 999 } } }));
+  await assertFails(updateDoc(doc(player, 'comments/status'), { text: 'Umschreiben' }));
+  await assertFails(deleteDoc(doc(player, 'comments/status')));
 });
 
 test('reine Zeit- und Würfelbelege dürfen entstehen, bleiben danach aber unveränderlich', async () => {

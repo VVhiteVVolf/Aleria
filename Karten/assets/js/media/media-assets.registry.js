@@ -2033,6 +2033,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "252e7ab014a9d1",
+    "name": "Bradrhith",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Bradrhith.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "037f628b1e84f5",
     "name": "Braglas",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Braglas.png",
@@ -2041,9 +2049,33 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "110f34e94ed8a0",
+    "name": "Celtigerns Echo",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Celtigerns-Echo.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "bc18c4694acc07",
     "name": "Draenmelyn",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Draenmelyn.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a6ecd7e766dc55",
+    "name": "Falchdyn",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Falchdyn.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c87d00acdf6b01",
+    "name": "Falchdyn Hausbild",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Falchdyn-Hausbild.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"
@@ -2828,6 +2860,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "9b5e353c304b96",
     "name": "haus penderyn",
     "url": "/Stammbäume/assets/images/houses/Vortigerns%20Ruh/Tanwens%20Flamme/haus-penderyn.png",
+    "kind": "crest",
+    "group": "Vortigerns Ruh / Tanwens Flamme",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "9478249c3073b7",
+    "name": "haus pengair",
+    "url": "/Stammbäume/assets/images/houses/Vortigerns%20Ruh/Tanwens%20Flamme/haus-pengair.png",
     "kind": "crest",
     "group": "Vortigerns Ruh / Tanwens Flamme",
     "source": "Hauswappen"

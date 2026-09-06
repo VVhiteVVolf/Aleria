@@ -86,7 +86,7 @@
       "ksJQe8Ai4KbRE9jOAvb7",
       "ksJQe8Ai4KbRE9jOAvb7"
     ],
-    "contentHash": "f4f7fb41027ccf68ec7462ea8dcadea8b47f174725ddba77a0a333c380692121"
+    "contentHash": "b63794261f9c4b06550bd37c541a9cb54238b793a05e834c8a45d1beaae3fb3c"
   },
   "local": {
     "notes": "",
@@ -3987,7 +3987,8 @@
           }
         },
         "combatProfile": {
-          "schemaVersion": 9,
+          "schemaVersion": 11,
+          "revision": 0,
           "identity": {
             "ancestry": "Aldrimarer",
             "archetype": "Skaldin",
@@ -4018,6 +4019,8 @@
           "progression": {
             "level": 5,
             "specialLevels": 0,
+            "resourceRulesVersion": 2,
+            "actionPoolChoices": [],
             "experience": 0,
             "nextLevelExperience": null,
             "experienceReward": null,
@@ -4068,7 +4071,12 @@
             }
           ],
           "hitPoints": {
-            "current": 33,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 9,
+              "overrideAnchor": null
+            },
+            "current": 42,
             "temporary": 0,
             "hitDie": 8,
             "averagePerLevelOverride": null,
@@ -4090,7 +4098,8 @@
             "attackBonus": 0,
             "damageBonus": 0,
             "passivePerceptionBonus": 0,
-            "canActAtZeroHitPoints": false
+            "canActAtZeroHitPoints": false,
+            "mounted": false
           },
           "savingThrows": [
             {
@@ -4297,6 +4306,8 @@
               "id": "default-unarmed-melee",
               "inventoryItemId": "",
               "name": "Nahkampf",
+              "image": "",
+              "weaponProfileId": "",
               "weaponType": "unarmed",
               "training": "simple",
               "damageFormula": "1d4",
@@ -4334,6 +4345,8 @@
               "id": "freya-lute",
               "inventoryItemId": "",
               "name": "Laute",
+              "image": "",
+              "weaponProfileId": "",
               "weaponType": "arcane",
               "training": "simple",
               "damageFormula": "1d4",
@@ -4371,6 +4384,8 @@
               "id": "freya-sword",
               "inventoryItemId": "",
               "name": "Schwert",
+              "image": "",
+              "weaponProfileId": "",
               "weaponType": "sword",
               "training": "martial",
               "damageFormula": "1d8",
@@ -4408,6 +4423,8 @@
               "id": "freya-shield-bash",
               "inventoryItemId": "",
               "name": "Schild (Schildstoß)",
+              "image": "",
+              "weaponProfileId": "",
               "weaponType": "shield",
               "training": "martial",
               "damageFormula": "1d4",
@@ -4447,6 +4464,7 @@
               "id": "freya-padded-armor",
               "inventoryItemId": "",
               "name": "Wattierter Waffenrock",
+              "image": "",
               "kind": "armor",
               "baseArmorClass": 11,
               "armorClassBonus": 0,
@@ -4461,6 +4479,7 @@
               "id": "freya-shield",
               "inventoryItemId": "",
               "name": "Schild",
+              "image": "",
               "kind": "shield",
               "baseArmorClass": null,
               "armorClassBonus": 2,
@@ -4486,9 +4505,9 @@
             },
             {
               "id": "mana-focus",
-              "name": "Mana / Fokus",
-              "current": 20,
-              "maximum": 0,
+              "name": "Mana",
+              "current": 39,
+              "maximum": 39,
               "recovery": "day",
               "scope": "persistent",
               "category": "magic",
@@ -4577,7 +4596,7 @@
               "id": "spell-slot-1",
               "name": "Zauberplatz I",
               "current": 0,
-              "maximum": 0,
+              "maximum": 1,
               "recovery": "long-rest",
               "scope": "persistent",
               "category": "spell-slot",
@@ -4589,7 +4608,7 @@
               "id": "spell-slot-2",
               "name": "Zauberplatz II",
               "current": 0,
-              "maximum": 0,
+              "maximum": 1,
               "recovery": "long-rest",
               "scope": "persistent",
               "category": "spell-slot",
@@ -4601,7 +4620,7 @@
               "id": "spell-slot-3",
               "name": "Zauberplatz III",
               "current": 0,
-              "maximum": 0,
+              "maximum": 1,
               "recovery": "long-rest",
               "scope": "persistent",
               "category": "spell-slot",
@@ -4692,9 +4711,37 @@
               "icon": "",
               "spellLevel": 10,
               "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+            },
+            {
+              "id": "focus",
+              "name": "Fokus",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "focus",
+              "icon": "",
+              "notes": ""
+            },
+            {
+              "id": "pact-points",
+              "name": "Paktpunkte",
+              "current": 0,
+              "maximum": 0,
+              "recovery": "day",
+              "scope": "persistent",
+              "category": "pact",
+              "icon": "",
+              "notes": ""
             }
           ],
           "techniques": [],
+          "classTraining": {
+            "schemaVersion": 2,
+            "curriculumId": "",
+            "selections": [],
+            "techniqueSelections": []
+          },
           "quirks": [
             {
               "id": "starter-ancestry-aldrimarer-trait-1",
@@ -4722,8 +4769,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": []
             },
@@ -4753,8 +4804,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": []
             },
@@ -4784,8 +4839,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": [
                 {
@@ -4812,6 +4871,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
                   "effects": {
                     "attackModifier": 0,
@@ -4823,7 +4883,8 @@
                     "damageReduction": 0,
                     "rollMode": "normal",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 }
               ]
             },
@@ -4853,8 +4914,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": [
                 {
@@ -4880,6 +4945,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "-3 bei niederträchtigen Fertigkeiten.",
                   "effects": {
                     "attackModifier": 0,
@@ -4891,7 +4957,8 @@
                     "damageReduction": 0,
                     "rollMode": "normal",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 }
               ]
             },
@@ -4921,8 +4988,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": [
                 {
@@ -4947,6 +5018,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "Vorteil bei Auftreten.",
                   "effects": {
                     "attackModifier": 0,
@@ -4958,7 +5030,8 @@
                     "damageReduction": 0,
                     "rollMode": "advantage",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 }
               ]
             },
@@ -4988,8 +5061,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": [
                 {
@@ -5014,6 +5091,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "+2 auf Auftreten.",
                   "effects": {
                     "attackModifier": 0,
@@ -5025,7 +5103,8 @@
                     "damageReduction": 0,
                     "rollMode": "normal",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 },
                 {
                   "id": "freya-exzentrisch-wildnis-malus",
@@ -5050,6 +5129,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "-4 auf Überleben und Einschüchtern.",
                   "effects": {
                     "attackModifier": 0,
@@ -5061,7 +5141,8 @@
                     "damageReduction": 0,
                     "rollMode": "normal",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 }
               ]
             },
@@ -5091,8 +5172,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "triggerRules": [
                 {
@@ -5117,6 +5202,7 @@
                   "requiredTargetTags": [],
                   "radiusMeters": null,
                   "priority": 0,
+                  "authority": "passive",
                   "description": "+4 auf Flirten.",
                   "effects": {
                     "attackModifier": 0,
@@ -5128,7 +5214,8 @@
                     "damageReduction": 0,
                     "rollMode": "normal",
                     "outcome": "none"
-                  }
+                  },
+                  "resultEffects": []
                 }
               ]
             }
@@ -5148,16 +5235,64 @@
               "damageType": "Wucht",
               "activationType": "special-action",
               "delivery": "song",
-              "combatUsable": true,
               "resolutionType": "saving-throw",
               "saveAttribute": "constitution",
               "halfDamageOnSave": false,
+              "combatUsable": true,
               "target": "Mehrere ausgewählte Gegner vor ihr",
               "range": "9 Meter, kegelförmig vor ihr",
               "duration": "Sofort",
               "requirements": "Einmal am Tag, bis zur Rast. Verbraucht ihre Besondere Aktion und praktisch ihr gesamtes Mana - danach kann Freya an diesem Tag nicht mehr zaubern, bis sie rastet.",
               "tags": "Skaldin · Schockwelle · Selbstschaden",
               "aiInstructions": "Jeder ausgewählte Gegner würfelt einzeln einen Konstitution-Rettungswurf gegen Freyas Zauber-SG; bei Fehlschlag 3W6 Wucht, bei Erfolg kein Schaden. Freya selbst erleidet danach immer 1W6 Schaden, unabhängig vom Ausgang der gegnerischen Rettungswürfe. Bekannte Einschränkung: Wird diese Handlung technisch einmal pro ausgewähltem Ziel aufgelöst statt einmal für die ganze Gruppe, würfelt der eigene Schaden pro Auflösung erneut - dann nur den ersten Wurf werten, den Rest als DM manuell ignorieren. Der Mana-Kosten-Wert unten entspricht Freyas vollem Manapool auf Stufe 5 (39, nach der überarbeiteten Manapool-Tabelle) und muss bei künftigen Stufenaufstiegen manuell auf ihr dann aktuelles Maximum angehoben werden, damit der Schrei sie weiterhin vollständig erschöpft.",
+              "effects": [
+                {
+                  "id": "freya-arkaner-schrei-aoe",
+                  "type": "damage",
+                  "target": "selected",
+                  "amount": 0,
+                  "formula": "3d6",
+                  "damageType": "Wucht",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
+                },
+                {
+                  "id": "freya-arkaner-schrei-selbstschaden",
+                  "type": "damage",
+                  "target": "self",
+                  "amount": 0,
+                  "formula": "1d6",
+                  "damageType": "Wucht",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "always",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": ""
+                }
+              ],
+              "concentration": false,
+              "channelComments": 0,
               "costs": [
                 {
                   "id": "freya-arkaner-schrei-special-action",
@@ -5180,28 +5315,25 @@
                 "cost": 1
               },
               "active": true,
-              "mechanics": {},
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
               "triggerRules": [],
-              "effects": [
-                {
-                  "id": "freya-arkaner-schrei-aoe",
-                  "type": "damage",
-                  "target": "selected",
-                  "formula": "3d6",
-                  "damageType": "Wucht",
-                  "on": "hit"
-                },
-                {
-                  "id": "freya-arkaner-schrei-selbstschaden",
-                  "type": "damage",
-                  "target": "self",
-                  "formula": "1d6",
-                  "damageType": "Wucht",
-                  "on": "always"
-                }
-              ],
-              "concentration": false,
-              "channelComments": 0,
               "inventoryUseTrigger": {
                 "enabled": false,
                 "itemTags": [],
@@ -5237,7 +5369,10 @@
               {
                 "id": "freya-spottvers",
                 "name": "Spottvers",
+                "school": "",
+                "icon": "",
                 "level": 0,
+                "manaCost": 1,
                 "slotResourceId": "",
                 "slotCost": 0,
                 "presentationKind": "song",
@@ -5256,8 +5391,13 @@
                     "id": "freya-spottvers-malus",
                     "type": "apply-condition",
                     "target": "target",
-                    "on": "save-failure",
+                    "amount": 0,
                     "formula": "1d4",
+                    "damageType": "physisch",
+                    "inheritWeaponDamageType": false,
+                    "magical": false,
+                    "on": "save-failure",
+                    "resourceId": "",
                     "condition": {
                       "id": "freya-spottvers-verspottet",
                       "name": "Verspottet",
@@ -5266,7 +5406,14 @@
                       "description": "Ein Malus auf den nächsten Angriffswurf, durch Freyas Spott ausgelöst.",
                       "durationModel": {
                         "kind": "actor-comments",
-                        "remainingActorComments": 1
+                        "remainingActorComments": 1,
+                        "remainingSceneComments": 0,
+                        "expiresOnRest": "",
+                        "expiresOnDayChange": false,
+                        "encounterId": "",
+                        "concentrationOwnerId": "",
+                        "channelOwnerId": "",
+                        "label": "Bis zum Ende des nächsten Gesamtkommentars des Ziels"
                       },
                       "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
                       "mechanics": {
@@ -5282,8 +5429,26 @@
                         "maximumHitPoints": 0,
                         "passivePerception": 0,
                         "attackRollMode": "normal"
+                      },
+                      "active": true,
+                      "remainingActorComments": 1,
+                      "remainingSceneComments": 0,
+                      "ward": {
+                        "enabled": false,
+                        "charges": 0,
+                        "deflectChance": 100,
+                        "breaksOnCriticalHit": false
                       }
-                    }
+                    },
+                    "conditionId": "",
+                    "conditionTags": "",
+                    "movementMeters": 0,
+                    "movementKind": "move",
+                    "summon": null,
+                    "concentration": false,
+                    "channelComments": 0,
+                    "nonlethal": false,
+                    "notes": ""
                   }
                 ],
                 "concentration": false,
@@ -5294,6 +5459,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-spottvers-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 1,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Ein spöttischer Vers, begleitet von einem schneidenden Lautenakkord.",
                 "prepared": true
@@ -5301,7 +5487,10 @@
               {
                 "id": "freya-magische-hand",
                 "name": "Magische Hand",
+                "school": "",
+                "icon": "",
                 "level": 0,
+                "manaCost": 1,
                 "slotResourceId": "",
                 "slotCost": 0,
                 "presentationKind": "song",
@@ -5309,7 +5498,7 @@
                 "resolutionType": "automatic",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Kurz, solange die Melodie andauert",
                 "requirements": "",
@@ -5324,6 +5513,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-magische-hand-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 1,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Ein kaum sichtbarer Luftzug folgt den Klängen der Laute und bewegt kleine Gegenstände.",
                 "prepared": true
@@ -5331,7 +5541,10 @@
               {
                 "id": "freya-kleine-illusion",
                 "name": "Kleine Illusion",
+                "school": "",
+                "icon": "",
                 "level": 0,
+                "manaCost": 1,
                 "slotResourceId": "",
                 "slotCost": 0,
                 "presentationKind": "song",
@@ -5339,7 +5552,7 @@
                 "resolutionType": "automatic",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Kurz, solange die Melodie andauert",
                 "requirements": "",
@@ -5354,6 +5567,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-kleine-illusion-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 1,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Mit wenigen gezupften Saiten erschafft die Skaldin Geräusche oder kleine Trugbilder, als würden Erinnerungen oder Geister vergangener Zeiten Gestalt annehmen.",
                 "prepared": true
@@ -5361,7 +5595,10 @@
               {
                 "id": "freya-licht",
                 "name": "Licht",
+                "school": "",
+                "icon": "",
                 "level": 0,
+                "manaCost": 1,
                 "slotResourceId": "",
                 "slotCost": 0,
                 "presentationKind": "song",
@@ -5369,7 +5606,7 @@
                 "resolutionType": "automatic",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "Berührung",
                 "duration": "Bis zur nächsten langen Rast oder bewusster Auflösung",
                 "requirements": "",
@@ -5384,6 +5621,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-licht-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 1,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Eine ruhige Melodie lässt eine Waffe, Brosche oder den Kopf der Laute in warmem Licht erstrahlen, als würde das Lied selbst die Dunkelheit vertreiben.",
                 "prepared": true
@@ -5391,7 +5649,10 @@
               {
                 "id": "freya-charm-person",
                 "name": "Person bezaubern",
+                "school": "",
+                "icon": "",
                 "level": 1,
+                "manaCost": 2,
                 "slotResourceId": "spell-slot-1",
                 "slotCost": 1,
                 "presentationKind": "song",
@@ -5399,7 +5660,7 @@
                 "resolutionType": "saving-throw",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Mehrere Szenen, bis aufgehoben oder durch Feindseligkeit gebrochen",
                 "requirements": "",
@@ -5414,6 +5675,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-charm-person-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 2,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Ein warmes, einschmeichelndes Lied, das Zuneigung und Vertrauen weckt.",
                 "prepared": true
@@ -5421,7 +5703,10 @@
               {
                 "id": "freya-calm-person",
                 "name": "Person beruhigen",
+                "school": "",
+                "icon": "",
                 "level": 1,
+                "manaCost": 2,
                 "slotResourceId": "spell-slot-1",
                 "slotCost": 1,
                 "presentationKind": "song",
@@ -5429,7 +5714,7 @@
                 "resolutionType": "saving-throw",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Mehrere Runden, bis das Ziel angegriffen wird oder Schaden nimmt",
                 "requirements": "",
@@ -5444,6 +5729,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-calm-person-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 2,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Eine sanfte, gleichmäßige Melodie, die Wogen glättet und Zorn verebben lässt.",
                 "prepared": true
@@ -5451,7 +5757,10 @@
               {
                 "id": "freya-enrage-person",
                 "name": "Person wütend machen",
+                "school": "",
+                "icon": "",
                 "level": 2,
+                "manaCost": 3,
                 "slotResourceId": "spell-slot-2",
                 "slotCost": 1,
                 "presentationKind": "song",
@@ -5459,7 +5768,7 @@
                 "resolutionType": "saving-throw",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Mehrere Runden, bis der Zorn narrativ abklingt",
                 "requirements": "",
@@ -5474,6 +5783,27 @@
                   "amountPerLevel": 0,
                   "maximumLevel": 10
                 },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-enrage-person-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 3,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
+                },
                 "rollFormula": "",
                 "description": "Ein aufpeitschender, dissonanter Ton, der Wut und Reizbarkeit schürt.",
                 "prepared": true
@@ -5481,7 +5811,10 @@
               {
                 "id": "freya-silence",
                 "name": "Stille",
+                "school": "",
+                "icon": "",
                 "level": 3,
+                "manaCost": 5,
                 "slotResourceId": "spell-slot-3",
                 "slotCost": 1,
                 "presentationKind": "song",
@@ -5489,7 +5822,7 @@
                 "resolutionType": "automatic",
                 "saveAttribute": "wisdom",
                 "halfDamageOnSave": false,
-                "damageType": "",
+                "damageType": "Magie",
                 "range": "9 Meter",
                 "duration": "Mehrere Runden, bis bewusst aufgelöst",
                 "requirements": "",
@@ -5503,6 +5836,27 @@
                   "formulaPerLevel": "",
                   "amountPerLevel": 0,
                   "maximumLevel": 10
+                },
+                "costs": [
+                  {
+                    "id": "activation-action",
+                    "resourceId": "action",
+                    "name": "Aktion",
+                    "amount": 1,
+                    "scope": "comment"
+                  },
+                  {
+                    "id": "freya-silence-mana-cost",
+                    "resourceId": "mana-focus",
+                    "name": "Mana",
+                    "amount": 5,
+                    "scope": "persistent"
+                  }
+                ],
+                "auraBypass": {
+                  "allowed": true,
+                  "resourceId": "",
+                  "cost": 1
                 },
                 "rollFormula": "",
                 "description": "Freya lässt die Laute für einen Moment verstummen - und mit ihr jeden Klang in der Umgebung.",
@@ -5539,8 +5893,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "allyMechanics": {
                 "attack": 0,
@@ -5553,8 +5911,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "enemyMechanics": {
                 "attack": 0,
@@ -5567,8 +5929,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               }
             },
             "latentPresence": {
@@ -5593,8 +5959,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "allyMechanics": {
                 "attack": 0,
@@ -5607,8 +5977,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               },
               "enemyMechanics": {
                 "attack": 0,
@@ -5621,8 +5995,12 @@
                 "spellSaveDc": 0,
                 "movement": 0,
                 "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
                 "passivePerception": 0,
-                "attackRollMode": "normal"
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               }
             }
           },
@@ -6990,7 +7368,8 @@
       "revision": 1786237318420
     },
     "combatProfile": {
-      "schemaVersion": 9,
+      "schemaVersion": 11,
+      "revision": 0,
       "identity": {
         "ancestry": "Aldrimarer",
         "archetype": "Skaldin",
@@ -7021,6 +7400,8 @@
       "progression": {
         "level": 5,
         "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
         "experience": 0,
         "nextLevelExperience": null,
         "experienceReward": null,
@@ -7071,7 +7452,12 @@
         }
       ],
       "hitPoints": {
-        "current": 33,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 9,
+          "overrideAnchor": null
+        },
+        "current": 42,
         "temporary": 0,
         "hitDie": 8,
         "averagePerLevelOverride": null,
@@ -7093,7 +7479,8 @@
         "attackBonus": 0,
         "damageBonus": 0,
         "passivePerceptionBonus": 0,
-        "canActAtZeroHitPoints": false
+        "canActAtZeroHitPoints": false,
+        "mounted": false
       },
       "savingThrows": [
         {
@@ -7300,6 +7687,8 @@
           "id": "default-unarmed-melee",
           "inventoryItemId": "",
           "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "unarmed",
           "training": "simple",
           "damageFormula": "1d4",
@@ -7337,6 +7726,8 @@
           "id": "freya-lute",
           "inventoryItemId": "",
           "name": "Laute",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "arcane",
           "training": "simple",
           "damageFormula": "1d4",
@@ -7374,6 +7765,8 @@
           "id": "freya-sword",
           "inventoryItemId": "",
           "name": "Schwert",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "sword",
           "training": "martial",
           "damageFormula": "1d8",
@@ -7411,6 +7804,8 @@
           "id": "freya-shield-bash",
           "inventoryItemId": "",
           "name": "Schild (Schildstoß)",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "shield",
           "training": "martial",
           "damageFormula": "1d4",
@@ -7450,6 +7845,7 @@
           "id": "freya-padded-armor",
           "inventoryItemId": "",
           "name": "Wattierter Waffenrock",
+          "image": "",
           "kind": "armor",
           "baseArmorClass": 11,
           "armorClassBonus": 0,
@@ -7464,6 +7860,7 @@
           "id": "freya-shield",
           "inventoryItemId": "",
           "name": "Schild",
+          "image": "",
           "kind": "shield",
           "baseArmorClass": null,
           "armorClassBonus": 2,
@@ -7489,9 +7886,9 @@
         },
         {
           "id": "mana-focus",
-          "name": "Mana / Fokus",
-          "current": 20,
-          "maximum": 0,
+          "name": "Mana",
+          "current": 39,
+          "maximum": 39,
           "recovery": "day",
           "scope": "persistent",
           "category": "magic",
@@ -7580,7 +7977,7 @@
           "id": "spell-slot-1",
           "name": "Zauberplatz I",
           "current": 0,
-          "maximum": 0,
+          "maximum": 1,
           "recovery": "long-rest",
           "scope": "persistent",
           "category": "spell-slot",
@@ -7592,7 +7989,7 @@
           "id": "spell-slot-2",
           "name": "Zauberplatz II",
           "current": 0,
-          "maximum": 0,
+          "maximum": 1,
           "recovery": "long-rest",
           "scope": "persistent",
           "category": "spell-slot",
@@ -7604,7 +8001,7 @@
           "id": "spell-slot-3",
           "name": "Zauberplatz III",
           "current": 0,
-          "maximum": 0,
+          "maximum": 1,
           "recovery": "long-rest",
           "scope": "persistent",
           "category": "spell-slot",
@@ -7695,9 +8092,37 @@
           "icon": "",
           "spellLevel": 10,
           "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
         }
       ],
       "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
       "quirks": [
         {
           "id": "starter-ancestry-aldrimarer-trait-1",
@@ -7725,8 +8150,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         },
@@ -7756,8 +8185,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         },
@@ -7787,8 +8220,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -7815,6 +8252,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
               "effects": {
                 "attackModifier": 0,
@@ -7826,7 +8264,8 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         },
@@ -7856,8 +8295,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -7883,6 +8326,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "-3 bei niederträchtigen Fertigkeiten.",
               "effects": {
                 "attackModifier": 0,
@@ -7894,7 +8338,8 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         },
@@ -7924,8 +8369,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -7950,6 +8399,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "Vorteil bei Auftreten.",
               "effects": {
                 "attackModifier": 0,
@@ -7961,7 +8411,8 @@
                 "damageReduction": 0,
                 "rollMode": "advantage",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         },
@@ -7991,8 +8442,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -8017,6 +8472,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "+2 auf Auftreten.",
               "effects": {
                 "attackModifier": 0,
@@ -8028,7 +8484,8 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             },
             {
               "id": "freya-exzentrisch-wildnis-malus",
@@ -8053,6 +8510,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "-4 auf Überleben und Einschüchtern.",
               "effects": {
                 "attackModifier": 0,
@@ -8064,7 +8522,8 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         },
@@ -8094,8 +8553,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": [
             {
@@ -8120,6 +8583,7 @@
               "requiredTargetTags": [],
               "radiusMeters": null,
               "priority": 0,
+              "authority": "passive",
               "description": "+4 auf Flirten.",
               "effects": {
                 "attackModifier": 0,
@@ -8131,7 +8595,8 @@
                 "damageReduction": 0,
                 "rollMode": "normal",
                 "outcome": "none"
-              }
+              },
+              "resultEffects": []
             }
           ]
         }
@@ -8151,16 +8616,64 @@
           "damageType": "Wucht",
           "activationType": "special-action",
           "delivery": "song",
-          "combatUsable": true,
           "resolutionType": "saving-throw",
           "saveAttribute": "constitution",
           "halfDamageOnSave": false,
+          "combatUsable": true,
           "target": "Mehrere ausgewählte Gegner vor ihr",
           "range": "9 Meter, kegelförmig vor ihr",
           "duration": "Sofort",
           "requirements": "Einmal am Tag, bis zur Rast. Verbraucht ihre Besondere Aktion und praktisch ihr gesamtes Mana - danach kann Freya an diesem Tag nicht mehr zaubern, bis sie rastet.",
           "tags": "Skaldin · Schockwelle · Selbstschaden",
           "aiInstructions": "Jeder ausgewählte Gegner würfelt einzeln einen Konstitution-Rettungswurf gegen Freyas Zauber-SG; bei Fehlschlag 3W6 Wucht, bei Erfolg kein Schaden. Freya selbst erleidet danach immer 1W6 Schaden, unabhängig vom Ausgang der gegnerischen Rettungswürfe. Bekannte Einschränkung: Wird diese Handlung technisch einmal pro ausgewähltem Ziel aufgelöst statt einmal für die ganze Gruppe, würfelt der eigene Schaden pro Auflösung erneut - dann nur den ersten Wurf werten, den Rest als DM manuell ignorieren. Der Mana-Kosten-Wert unten entspricht Freyas vollem Manapool auf Stufe 5 (39, nach der überarbeiteten Manapool-Tabelle) und muss bei künftigen Stufenaufstiegen manuell auf ihr dann aktuelles Maximum angehoben werden, damit der Schrei sie weiterhin vollständig erschöpft.",
+          "effects": [
+            {
+              "id": "freya-arkaner-schrei-aoe",
+              "type": "damage",
+              "target": "selected",
+              "amount": 0,
+              "formula": "3d6",
+              "damageType": "Wucht",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            },
+            {
+              "id": "freya-arkaner-schrei-selbstschaden",
+              "type": "damage",
+              "target": "self",
+              "amount": 0,
+              "formula": "1d6",
+              "damageType": "Wucht",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
           "costs": [
             {
               "id": "freya-arkaner-schrei-special-action",
@@ -8183,28 +8696,25 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
-          "effects": [
-            {
-              "id": "freya-arkaner-schrei-aoe",
-              "type": "damage",
-              "target": "selected",
-              "formula": "3d6",
-              "damageType": "Wucht",
-              "on": "hit"
-            },
-            {
-              "id": "freya-arkaner-schrei-selbstschaden",
-              "type": "damage",
-              "target": "self",
-              "formula": "1d6",
-              "damageType": "Wucht",
-              "on": "always"
-            }
-          ],
-          "concentration": false,
-          "channelComments": 0,
           "inventoryUseTrigger": {
             "enabled": false,
             "itemTags": [],
@@ -8240,7 +8750,10 @@
           {
             "id": "freya-spottvers",
             "name": "Spottvers",
+            "school": "",
+            "icon": "",
             "level": 0,
+            "manaCost": 1,
             "slotResourceId": "",
             "slotCost": 0,
             "presentationKind": "song",
@@ -8259,8 +8772,13 @@
                 "id": "freya-spottvers-malus",
                 "type": "apply-condition",
                 "target": "target",
-                "on": "save-failure",
+                "amount": 0,
                 "formula": "1d4",
+                "damageType": "physisch",
+                "inheritWeaponDamageType": false,
+                "magical": false,
+                "on": "save-failure",
+                "resourceId": "",
                 "condition": {
                   "id": "freya-spottvers-verspottet",
                   "name": "Verspottet",
@@ -8269,7 +8787,14 @@
                   "description": "Ein Malus auf den nächsten Angriffswurf, durch Freyas Spott ausgelöst.",
                   "durationModel": {
                     "kind": "actor-comments",
-                    "remainingActorComments": 1
+                    "remainingActorComments": 1,
+                    "remainingSceneComments": 0,
+                    "expiresOnRest": "",
+                    "expiresOnDayChange": false,
+                    "encounterId": "",
+                    "concentrationOwnerId": "",
+                    "channelOwnerId": "",
+                    "label": "Bis zum Ende des nächsten Gesamtkommentars des Ziels"
                   },
                   "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
                   "mechanics": {
@@ -8285,8 +8810,26 @@
                     "maximumHitPoints": 0,
                     "passivePerception": 0,
                     "attackRollMode": "normal"
+                  },
+                  "active": true,
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "ward": {
+                    "enabled": false,
+                    "charges": 0,
+                    "deflectChance": 100,
+                    "breaksOnCriticalHit": false
                   }
-                }
+                },
+                "conditionId": "",
+                "conditionTags": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "summon": null,
+                "concentration": false,
+                "channelComments": 0,
+                "nonlethal": false,
+                "notes": ""
               }
             ],
             "concentration": false,
@@ -8297,6 +8840,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-spottvers-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 1,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Ein spöttischer Vers, begleitet von einem schneidenden Lautenakkord.",
             "prepared": true
@@ -8304,7 +8868,10 @@
           {
             "id": "freya-magische-hand",
             "name": "Magische Hand",
+            "school": "",
+            "icon": "",
             "level": 0,
+            "manaCost": 1,
             "slotResourceId": "",
             "slotCost": 0,
             "presentationKind": "song",
@@ -8312,7 +8879,7 @@
             "resolutionType": "automatic",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Kurz, solange die Melodie andauert",
             "requirements": "",
@@ -8327,6 +8894,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-magische-hand-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 1,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Ein kaum sichtbarer Luftzug folgt den Klängen der Laute und bewegt kleine Gegenstände.",
             "prepared": true
@@ -8334,7 +8922,10 @@
           {
             "id": "freya-kleine-illusion",
             "name": "Kleine Illusion",
+            "school": "",
+            "icon": "",
             "level": 0,
+            "manaCost": 1,
             "slotResourceId": "",
             "slotCost": 0,
             "presentationKind": "song",
@@ -8342,7 +8933,7 @@
             "resolutionType": "automatic",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Kurz, solange die Melodie andauert",
             "requirements": "",
@@ -8357,6 +8948,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-kleine-illusion-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 1,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Mit wenigen gezupften Saiten erschafft die Skaldin Geräusche oder kleine Trugbilder, als würden Erinnerungen oder Geister vergangener Zeiten Gestalt annehmen.",
             "prepared": true
@@ -8364,7 +8976,10 @@
           {
             "id": "freya-licht",
             "name": "Licht",
+            "school": "",
+            "icon": "",
             "level": 0,
+            "manaCost": 1,
             "slotResourceId": "",
             "slotCost": 0,
             "presentationKind": "song",
@@ -8372,7 +8987,7 @@
             "resolutionType": "automatic",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "Berührung",
             "duration": "Bis zur nächsten langen Rast oder bewusster Auflösung",
             "requirements": "",
@@ -8387,6 +9002,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-licht-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 1,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Eine ruhige Melodie lässt eine Waffe, Brosche oder den Kopf der Laute in warmem Licht erstrahlen, als würde das Lied selbst die Dunkelheit vertreiben.",
             "prepared": true
@@ -8394,7 +9030,10 @@
           {
             "id": "freya-charm-person",
             "name": "Person bezaubern",
+            "school": "",
+            "icon": "",
             "level": 1,
+            "manaCost": 2,
             "slotResourceId": "spell-slot-1",
             "slotCost": 1,
             "presentationKind": "song",
@@ -8402,7 +9041,7 @@
             "resolutionType": "saving-throw",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Mehrere Szenen, bis aufgehoben oder durch Feindseligkeit gebrochen",
             "requirements": "",
@@ -8417,6 +9056,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-charm-person-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 2,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Ein warmes, einschmeichelndes Lied, das Zuneigung und Vertrauen weckt.",
             "prepared": true
@@ -8424,7 +9084,10 @@
           {
             "id": "freya-calm-person",
             "name": "Person beruhigen",
+            "school": "",
+            "icon": "",
             "level": 1,
+            "manaCost": 2,
             "slotResourceId": "spell-slot-1",
             "slotCost": 1,
             "presentationKind": "song",
@@ -8432,7 +9095,7 @@
             "resolutionType": "saving-throw",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Mehrere Runden, bis das Ziel angegriffen wird oder Schaden nimmt",
             "requirements": "",
@@ -8447,6 +9110,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-calm-person-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 2,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Eine sanfte, gleichmäßige Melodie, die Wogen glättet und Zorn verebben lässt.",
             "prepared": true
@@ -8454,7 +9138,10 @@
           {
             "id": "freya-enrage-person",
             "name": "Person wütend machen",
+            "school": "",
+            "icon": "",
             "level": 2,
+            "manaCost": 3,
             "slotResourceId": "spell-slot-2",
             "slotCost": 1,
             "presentationKind": "song",
@@ -8462,7 +9149,7 @@
             "resolutionType": "saving-throw",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Mehrere Runden, bis der Zorn narrativ abklingt",
             "requirements": "",
@@ -8477,6 +9164,27 @@
               "amountPerLevel": 0,
               "maximumLevel": 10
             },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-enrage-person-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 3,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
             "rollFormula": "",
             "description": "Ein aufpeitschender, dissonanter Ton, der Wut und Reizbarkeit schürt.",
             "prepared": true
@@ -8484,7 +9192,10 @@
           {
             "id": "freya-silence",
             "name": "Stille",
+            "school": "",
+            "icon": "",
             "level": 3,
+            "manaCost": 5,
             "slotResourceId": "spell-slot-3",
             "slotCost": 1,
             "presentationKind": "song",
@@ -8492,7 +9203,7 @@
             "resolutionType": "automatic",
             "saveAttribute": "wisdom",
             "halfDamageOnSave": false,
-            "damageType": "",
+            "damageType": "Magie",
             "range": "9 Meter",
             "duration": "Mehrere Runden, bis bewusst aufgelöst",
             "requirements": "",
@@ -8506,6 +9217,27 @@
               "formulaPerLevel": "",
               "amountPerLevel": 0,
               "maximumLevel": 10
+            },
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "id": "freya-silence-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 5,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
             },
             "rollFormula": "",
             "description": "Freya lässt die Laute für einen Moment verstummen - und mit ihr jeden Klang in der Umgebung.",
@@ -8542,8 +9274,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -8556,8 +9292,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -8570,8 +9310,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         },
         "latentPresence": {
@@ -8596,8 +9340,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -8610,8 +9358,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -8624,8 +9376,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         }
       },

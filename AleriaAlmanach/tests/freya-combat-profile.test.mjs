@@ -57,7 +57,7 @@ test('Freya ist Stufe 5 Skaldin mit Musikerin-Hintergrund, Laute, Schwert und Sc
   assert.equal(freya.combatProfile.templateSelections.classId, 'skalde');
   assert.equal(freya.combatProfile.templateSelections.backgroundId, 'musikerin');
   const resolved = resolveCombatProfile(freya);
-  assert.equal(resolved.maximumHitPoints, 33);
+  assert.equal(resolved.maximumHitPoints, 42);
   assert.equal(resolved.resources.find(resource => resource.id === 'mana-focus').maximum, 39);
   const weaponNames = freya.combatProfile.weapons.map(weapon => weapon.name);
   assert.ok(weaponNames.includes('Laute'));

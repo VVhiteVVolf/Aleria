@@ -12,14 +12,14 @@ import {
   rollAttributeSet,
   setCreationAttributeMethod,
   validateCharacterCreationDraft
-} from '../combat/character-creation-model.js?v=20260905-party-combat-v1';
+} from '../combat/character-creation-model.js?v=20260906-character-vitality-v1';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
 } from '../combat/character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
 
 let activeSetup = null;
 

@@ -119,7 +119,7 @@
       "tmfBA2zPTc88EMMGkyyA",
       "tmfBA2zPTc88EMMGkyyA"
     ],
-    "contentHash": "2a8fadeb7bf01e2cb3acd3884afd41b31526c3dacfb7f5a9f612facd51ba9b5e"
+    "contentHash": "01ad3e253aba4c2f29adf9fa885f37210c89de9e2311970de4314607d02198ff"
   },
   "local": {
     "notes": "",
@@ -2320,7 +2320,12 @@
             }
           ],
           "hitPoints": {
-            "current": 204,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 51,
+              "overrideAnchor": null
+            },
+            "current": 255,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -8339,7 +8344,12 @@
         }
       ],
       "hitPoints": {
-        "current": 204,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 51,
+          "overrideAnchor": null
+        },
+        "current": 255,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

@@ -1,6 +1,6 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-release-check-v1';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260905-party-combat-v1';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260905-party-combat-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
+import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260906-character-vitality-v1';
 import { captureEncounterSnapshot } from '../combat/combat-encounter-summary.js';
 
 const resolver = new CombatProfileResolver();

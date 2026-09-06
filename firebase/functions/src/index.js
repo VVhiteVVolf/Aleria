@@ -9,6 +9,7 @@ import { commitSceneRest } from './mechanics/commit-scene-rest.js';
 import { commitCombatEncounter } from './mechanics/commit-combat-encounter.js';
 import { commitUndoMechanicalComment } from './mechanics/commit-undo-mechanical-comment.js';
 import { commitResetCombatParticipants } from './mechanics/commit-reset-combat-participants.js';
+export { commitCombatStatus } from './mechanics/commit-combat-status.js';
 import { commitEditCombatEncounterText } from './mechanics/commit-edit-combat-encounter-text.js';
 import { commitHerausforderung } from './mechanics/commit-herausforderung.js';
 import { commitLootClaim } from './mechanics/commit-loot-claim.js';

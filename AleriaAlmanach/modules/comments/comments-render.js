@@ -197,6 +197,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (c.combatStatus && window.AleriaCommentCombatMiniProfile?.renderStatusComment) {
+    return window.AleriaCommentCombatMiniProfile.renderStatusComment(c);
+  }
   if (window.AleriaCombatEncounter?.isComment?.(c)) {
     return window.AleriaCombatEncounter.renderComment(c, idx);
   }

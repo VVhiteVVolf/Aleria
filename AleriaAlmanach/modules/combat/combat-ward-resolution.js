@@ -1,4 +1,4 @@
-import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
+import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 // Each weapon hit, including a follow-up, checks the remaining ward charges.
 // Return fresh conditions so previews never mutate a character's stored state.

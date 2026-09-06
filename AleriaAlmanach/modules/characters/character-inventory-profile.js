@@ -64,9 +64,13 @@ function getCharacterInventoryProfileSource(char = {}) {
 }
 
 function renderCharacterInventoryProfileView(target, data) {
+  const profile = window.AleriaCombat?.getProfile?.(_editingChar || data.characterId);
+  const hitpoints = profile ? `${profile.currentHitPoints}/${profile.maximumHitPoints} LP${profile.temporaryHitPoints ? ` +${profile.temporaryHitPoints} temporär` : ''}` : data.hitpoints;
+  const viewData = { ...data, hitpoints, infoRows: (data.infoRows || []).map(row =>
+    profile && /^(?:TP|LP|Lebenspunkte|Trefferpunkte)(?:\s*\/\s*Zustand)?$/i.test(row.label || '') ? { ...row, value: hitpoints } : row) };
   target.innerHTML = `
     <div class="cp-inventory-view">
-      ${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: data, characterInventoryReadOnly: true, hideNav: true }, {}, 0, 1)}
+      ${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: viewData, characterInventoryReadOnly: true, hideNav: true }, {}, 0, 1)}
     </div>`;
 }
 

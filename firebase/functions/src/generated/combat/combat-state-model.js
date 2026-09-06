@@ -3,13 +3,16 @@
 // replaying stored combat resolutions into the current scene state.
 
 import { resetCommentScopedResources } from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { reconcileClassDamageCondition } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
-import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260804-referee-v2';
+import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260906-character-vitality-v1';
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
-} from './combat-condition-duration.js?v=20260807-rhiannon-v1';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260905-party-combat-v1';
+} from './combat-condition-duration.js?v=20260906-character-vitality-v1';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260906-character-vitality-v1';
+import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-character-vitality-v1';
+import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -229,9 +232,17 @@ function getStoredResolutions(comment = {}) {
 
 export function deriveCombatStateFromComments(comments = [], position = {}) {
   const states = new Map();
+  let sceneDay = 1;
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    // Administrative status changes are not a turn: no resource recovery or duration tick.
+    if (comment.combatStatus) {
+      if (stopCommentId && String(comment.id || '') === stopCommentId) break;
+      applyCombatStatusCommentToStateMap(states, comment);
+      reconcileConcentrationConditions(states, { pruneEmpty: true });
+      continue;
+    }
     states.forEach((state, actorId) => {
       if (Array.isArray(state.resources)) {
         states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
@@ -249,7 +260,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           const resolutions = Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
             ? segment.combatResolutions
             : [segment?.combatResolution];
-          return resolutions
+          return resolutions.concat(segment?.skillResolution || [])
             .filter(Boolean)
             .map(resolution => ({ index, resolution }));
         })
@@ -327,6 +338,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         const previous = states.get(sourceId) || {};
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
+      reconcileConcentrationConditions(states);
     }
     // A historical segment stops before the rest of its contribution. Its
     // clocks and end-of-comment rest/encounter effects have not happened yet.
@@ -336,6 +348,14 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
     applySceneRestCommentToStateMap(states, comment);
     applyCombatEncounterCommentToStateMap(states, comment);
+    const nextDay = Number(comment.sceneTimeEvent?.anchorDay) || sceneDay;
+    if (nextDay > sceneDay) {
+      states.forEach((state, actorId) => states.set(actorId, { ...state,
+        temporaryConditions: (state.temporaryConditions || []).filter(condition => !normalizeRuntimeCondition(condition).durationModel.expiresOnDayChange)
+      }));
+      sceneDay = nextDay;
+    }
+    reconcileConcentrationConditions(states, { pruneEmpty: true });
   }
   return states;
 }
@@ -343,6 +363,12 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
 export function overlayCombatHitPointState(profile = {}, state = null) {
   if (!state) return profile;
   const normalized = normalizeCombatHitPointState(state, profile);
+  // Stored posts retain their historical maximum. Live sheets use today's rules,
+  // preserving wounds and zero HP instead of reintroducing the pre-migration cap.
+  if (profile.hitPoints?.vitality && normalized.maximum !== profile.maximumHitPoints) {
+    normalized.current = preserveHitPointDeficit(normalized.current, normalized.maximum, profile.maximumHitPoints);
+    normalized.maximum = profile.maximumHitPoints;
+  }
   const storedResources = Array.isArray(state.resources) ? normalizeCombatResources(state.resources) : null;
   const resources = storedResources
     ? normalizeCombatResources(profile.resources).map(resource => {
@@ -375,7 +401,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     : [];
   const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
     const mechanics = condition?.mechanics || {};
-    ['attack', 'damage', 'armorClass', 'savingThrow', 'skill', 'spellAttack', 'spellSaveDc', 'passivePerception'].forEach(key => {
+    ['attack', 'damage', 'armorClass', 'savingThrow', 'skill', 'spellAttack', 'spellSaveDc', 'passivePerception', 'movement', 'initiative'].forEach(key => {
       result[key] = (Number(result[key]) || 0) + (Number(mechanics[key]) || 0);
     });
     return result;
@@ -389,7 +415,13 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       ...(profile.aiSnapshot.derivedCombatValues || {}),
       currentHitPoints: normalized.current,
       maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
-      temporaryHitPoints: normalized.temporary
+      temporaryHitPoints: normalized.temporary,
+      armorClass: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
+      initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
+      movementMeters: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
+      spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
+      spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
+      passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0)
     },
     hitPointRules: profile.aiSnapshot.hitPointRules ? {
       ...profile.aiSnapshot.hitPointRules,
@@ -405,6 +437,9 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     } : profile.aiSnapshot.magic,
     specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
     temporaryConditions,
+    conditionsAndEffects: [...(profile.aiSnapshot.conditionsAndEffects || []), ...temporaryConditions],
+    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) })),
+    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) })),
     concentration: state.concentration || null,
     channeling: state.channeling || null
   } : profile.aiSnapshot;
@@ -422,12 +457,16 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     inventory: state.inventory && typeof state.inventory === 'object'
       ? JSON.parse(JSON.stringify(state.inventory))
       : profile.inventory,
-    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0),
+    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0)
+      + (['spell', 'song', 'prayer'].includes(profile.profileActionKind) ? Number(temporaryMechanics.spellAttack || 0) : 0),
+    actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
+    movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
+    initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
     damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0),
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
     spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
     spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
-    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0),
+    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0),
     aiSnapshot,
     hitPoints: profile.hitPoints ? {
       ...profile.hitPoints,

@@ -1,15 +1,16 @@
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getMaximumHitPoints,
+  upgradeCharacterHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260905-party-combat-v1';
+} from './combat-profile-model.js?v=20260906-character-vitality-v1';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
 } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
 import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
-import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260905-party-combat-v1';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-character-vitality-v1';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([
   { id: 'standard-array', label: 'Standard-Array', description: '15, 14, 13, 12, 10 und 8 frei verteilen.' },
@@ -387,7 +388,9 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
     profile.resources = resetLevelOneResources(profile.resources);
     profile.hitPoints.current = null;
     profile.hitPoints.temporary = 0;
-    profile = sanitizeCharacterCombatProfile(profile);
+    profile.hitPoints.maximumOverride = null;
+    profile = upgradeCharacterHitPoints(profile);
+    profile.hitPoints.vitality.overrideAnchor = null;
     profile.hitPoints.current = getMaximumHitPoints(profile);
   }
 

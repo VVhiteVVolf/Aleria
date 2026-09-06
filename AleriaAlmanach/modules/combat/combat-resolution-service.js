@@ -5,32 +5,33 @@ import {
   getSavingThrowTotal,
   resolveAttackRollMode,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260905-party-combat-v1';
+} from './combat-profile-model.js?v=20260906-character-vitality-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260906-release-check-v1';
+} from './combat-profile-resolver.js?v=20260906-character-vitality-v1';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260905-party-combat-v1';
+} from './combat-state-model.js?v=20260906-character-vitality-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
   normalizeCombatEffect,
   normalizeCombatEffects
-} from './combat-effect-model.js?v=20260905-party-combat-v1';
-import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
+} from './combat-effect-model.js?v=20260906-character-vitality-v1';
+import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260905-party-combat-v1';
-import { resolveCombatWard } from './combat-ward-resolution.js';
+import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260906-character-vitality-v1';
+import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
+import { refreshRuntimeCondition, getConditionConcentrationOwnerId } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260905-party-combat-v1';
+} from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-5';
 
@@ -215,11 +216,14 @@ function updateResource(resources = [], resourceId = '', amount = 0, restore = f
   return { before, after, changed };
 }
 
-function buildChannelingResolution(actor, target, description, rollMode, requiredComments) {
+function buildChannelingResolution(actor, target, description, rollMode, requiredComments, commentKey = '') {
   const actionId = String(actor.profileActionId || '');
   const before = actor.channeling && String(actor.channeling.actionId || '') === actionId
     ? { ...actor.channeling }
     : null;
+  if (commentKey && before?.lastProgressCommentKey === commentKey) {
+    throw new Error('Die Kanalisierung kann pro Gesamtbeitrag nur einmal fortschreiten. Setze sie im nächsten Beitrag fort.');
+  }
   const progress = Math.min(requiredComments, Math.max(0, Number(before?.progress) || 0) + 1);
   if (progress >= requiredComments) return null;
   const after = {
@@ -227,6 +231,7 @@ function buildChannelingResolution(actor, target, description, rollMode, require
     actionName: actor.selectedAction?.name || actor.weapon?.name || 'Handlung',
     progress,
     requiredComments,
+    lastProgressCommentKey: commentKey,
     startedByActorId: actor.characterId
   };
   return {
@@ -304,13 +309,17 @@ export class CombatResolutionService {
     const effectiveEffects = options.skipSelfEffects
       ? actionEffects.filter(effect => effect.target !== 'self')
       : actionEffects;
+    const sustainsConcentration = actor.selectedAction?.concentration
+      || effectiveEffects.some(effect => effect.concentration || effect.condition?.durationModel?.kind === 'concentration');
+    const concentrationInstanceId = sustainsConcentration
+      ? (options.skipSelfEffects ? actor.concentration?.instanceId : createResolutionId()) : '';
     if (actor.characterId === target.characterId && hasHostileEffects(effectiveEffects)) {
       throw new Error('Diese schädliche Handlung kann nicht gegen die handelnde Figur selbst gerichtet werden.');
     }
 
     const requiredChannelComments = options.skipChanneling ? 0 : Math.max(0, Math.trunc(Number(actor.selectedAction?.channelComments) || 0));
     if (requiredChannelComments > 0) {
-      const channelingResolution = buildChannelingResolution(actor, target, description, rollMode, requiredChannelComments);
+      const channelingResolution = buildChannelingResolution(actor, target, description, rollMode, requiredChannelComments, String(options.rulePeriods?.comment || ''));
       if (channelingResolution) return channelingResolution;
     }
 
@@ -492,6 +501,8 @@ export class CombatResolutionService {
     const primaryWard = await resolveCombatWard({
       attack, conditions: existingTemporaryConditions, dice: this.dice,
       actor, target, container: options.container, enabled: !savingThrowMode
+        && actor.characterId !== target.characterId
+        && hasHostileEffects(effectiveEffects.filter(effect => effect.target !== 'self'))
     });
     attack = primaryWard.attack;
     let preWardTargetConditions = primaryWard.conditions;
@@ -564,6 +575,8 @@ export class CombatResolutionService {
         appliedTemporaryCondition = {
           ...secondarySave.failureCondition,
           id: `${secondarySave.failureCondition.id || 'technique-condition'}-${createResolutionId()}`,
+          sourceConditionId: secondarySave.failureCondition.id || actor.profileActionId,
+          sourceActorId: actor.characterId,
           source: actor.selectedAction?.name || actor.weapon?.name || 'Technik',
           active: true,
           durationModel: { kind: 'actor-comments', remainingActorComments: 1 },
@@ -757,13 +770,15 @@ export class CombatResolutionService {
           ...effect.condition,
           mechanics: rolledMechanics,
           id: `${effect.condition.id || effect.id}-${createResolutionId()}`,
+          sourceConditionId: effect.condition.id || effect.id,
+          sourceActorId: actor.characterId,
           source: actor.selectedAction?.name || actor.weapon?.name || actor.name,
           active: true,
-          ...(effect.condition?.durationModel?.kind === 'concentration'
-            ? { concentrationOwnerId: actor.characterId }
+          ...(sustainsConcentration
+            ? { concentrationOwnerId: actor.characterId, concentrationInstanceId }
             : {})
         });
-        recipientConditions.push(condition);
+        recipientConditions = refreshRuntimeCondition(recipientConditions, condition);
         if (appliesToActor) actorConditions = recipientConditions;
         else targetConditions = recipientConditions;
         effectResults.push({ effect, condition, roll, applied: true, recipient });
@@ -773,7 +788,7 @@ export class CombatResolutionService {
         const before = recipientConditions;
         const tags = new Set(String(effect.conditionTags || '').toLocaleLowerCase('de').split(/[,;·]/).map(value => value.trim()).filter(Boolean));
         recipientConditions = recipientConditions.filter(condition => {
-          if (effect.conditionId && String(condition.id) === effect.conditionId) return false;
+          if (effect.conditionId && [String(condition.id), String(condition.sourceConditionId || '')].includes(effect.conditionId)) return false;
           if (!tags.size) return true;
           const conditionTags = new Set(String(condition.tags || '').toLocaleLowerCase('de').split(/[,;·]/).map(value => value.trim()).filter(Boolean));
           return ![...tags].some(tag => conditionTags.has(tag));
@@ -812,7 +827,7 @@ export class CombatResolutionService {
       targetHitPoints = applied.after;
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
     });
-    if (appliedTemporaryCondition) targetConditions.push(normalizeRuntimeCondition(appliedTemporaryCondition));
+    if (appliedTemporaryCondition) targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));
     const damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
     const totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
     const rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming || result.amount || 0), 0);
@@ -851,7 +866,7 @@ export class CombatResolutionService {
         const modifier = getSavingThrowTotal(target, 'constitution') + Number(concentrationEffects.savingThrowModifier || 0);
         const savingThrowRoll = await this.dice.rollSavingThrow({
           modifier,
-          rollMode: concentrationEffects.rollMode || 'normal',
+          rollMode: resolveSavingThrowRollMode(target, 'constitution', concentrationEffects.rollMode || 'normal'),
           actorName: target.name,
           targetName: actor.name,
           container: options.container
@@ -876,8 +891,9 @@ export class CombatResolutionService {
       };
       if (!concentrationRetained) {
         targetConditions = targetConditions.filter(condition =>
-          condition?.durationModel?.kind !== 'concentration'
-          || (condition.concentrationOwnerId && String(condition.concentrationOwnerId) !== String(target.characterId)));
+          getConditionConcentrationOwnerId(condition)
+            ? getConditionConcentrationOwnerId(condition) !== String(target.characterId)
+            : condition?.durationModel?.kind !== 'concentration');
       }
     }
     const latePhases = [
@@ -997,12 +1013,14 @@ export class CombatResolutionService {
       actorChannelingSnapshot: (actor.channeling || requiredChannelComments > 0)
         ? { before: actor.channeling || null, after: null, reason: requiredChannelComments > 0 ? 'completed' : 'interrupted' }
         : null,
-      actorConcentrationSnapshot: actor.selectedAction?.concentration && !options.skipSelfEffects ? {
+      actorConcentrationSnapshot: sustainsConcentration && !options.skipSelfEffects ? {
         before: actor.concentration || null,
         after: {
           actionId: actor.profileActionId || '',
           actionName: actor.selectedAction?.name || actor.weapon?.name || 'Wirkung',
           ownerActorId: actor.characterId,
+          instanceId: concentrationInstanceId,
+          tracksConditions: effectiveEffects.some(effect => effect.condition && ['apply-condition', 'buff', 'debuff'].includes(effect.type)),
           startedAtResolution: true
         },
         reason: actor.concentration ? 'replaced' : 'started'

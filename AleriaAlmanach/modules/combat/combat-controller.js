@@ -4,8 +4,8 @@ import { narrateCombatResolution } from './combat-narration-service.js?v=2026080
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260906-release-check-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-release-check-v1';
+} from './combat-profile-resolver.js?v=20260906-character-vitality-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-character-vitality-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -22,7 +22,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260905-party-combat-v1';
+} from './combat-state-model.js?v=20260906-character-vitality-v1';
 import {
   getReservedEquipmentSwitchWeaponId,
   withEquippedCombatWeapon
@@ -45,8 +45,8 @@ import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=202609
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260905-party-combat-v1';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260905-party-combat-v1';
+} from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260906-character-vitality-v1';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 
 const profileResolver = new CombatProfileResolver();
@@ -831,10 +831,11 @@ globalThis.AleriaCombat = Object.freeze({
   getProfile(characterId, options = {}) {
     const character = getCharacterById(characterId);
     if (!character) return null;
-    const profile = resolveCachedCombatProfile(character);
     const actorId = String(options.actorId || characterId || '');
-    const state = getStoredCombatStates(options.threadId || '', options).get(actorId) || null;
-    return overlayCombatHitPointState(profile, state);
+    return resolveActorProfile(character, {
+      actorId, storedStates: getStoredCombatStates(options.threadId || '', options),
+      recoveryDayKey: options.threadId && !options.timelineCommentId ? getCombatRecoveryDayKey(options.threadId) : ''
+    });
   },
   mountComposer(list, context = {}) {
     mountComposers({

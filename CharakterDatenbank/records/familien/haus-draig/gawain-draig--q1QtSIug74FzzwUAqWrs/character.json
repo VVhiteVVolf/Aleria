@@ -121,7 +121,7 @@
       "q1QtSIug74FzzwUAqWrs",
       "q1QtSIug74FzzwUAqWrs"
     ],
-    "contentHash": "6caf51121f66b70738ffa585b2e5cc4170313e4648f31d00c689300cb28568cf"
+    "contentHash": "a787a9f59cb94df6941c1eee98843bd4e0611e001d04d6fd3f54da7f348570de"
   },
   "local": {
     "notes": "",
@@ -4182,7 +4182,12 @@
             }
           ],
           "hitPoints": {
-            "current": 39,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 10,
+              "overrideAnchor": null
+            },
+            "current": 49,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -8174,7 +8179,12 @@
         }
       ],
       "hitPoints": {
-        "current": 39,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 10,
+          "overrideAnchor": null
+        },
+        "current": 49,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

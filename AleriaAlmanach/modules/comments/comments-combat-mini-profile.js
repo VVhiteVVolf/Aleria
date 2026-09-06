@@ -1,161 +1,122 @@
-// Compact combat profile attached to portraits in the comment reader.
-// The feature owns its markup, local open state and delegated interactions.
-(function initCommentCombatMiniProfile(global) {
-  const ROOT_SELECTOR = '[data-comment-combat-profile]';
-  const TOGGLE_SELECTOR = '[data-action="toggle-comment-combat-profile"]';
-  let activeRoot = null;
+﻿import { renderMiniCombatProfile, escapeCombatMarkup as e } from './comments-combat-mini-profile-view.js?v=20260906-character-vitality-v1';
+import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260906-character-vitality-v1';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-character-vitality-v1';
 
-  function escapeMarkup(value) {
-    return String(value ?? '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
+const ROOT_SELECTOR = '[data-comment-combat-profile]';
+let activeRoot = null;
+let refreshQueued = false;
+const safeId = value => String(value || 'figur').replace(/[^a-zA-Z0-9_-]+/g, '-').slice(0, 90);
 
-  function safeDomId(value) {
-    return String(value || 'figur').replace(/[^a-zA-Z0-9_-]+/g, '-').slice(0, 90) || 'figur';
-  }
+function context(root) {
+  return { characterId: root.dataset.combatCharacterId || '', actorId: root.dataset.combatActorId || '', threadId: root.dataset.combatThreadId || '' };
+}
 
-  function formatModifier(value) {
-    const modifier = Number(value) || 0;
-    return modifier >= 0 ? `+${modifier}` : String(modifier);
-  }
+function renderPortrait(options = {}) {
+  const characterId = String(options.characterId || '').trim();
+  if (!characterId || options.secret) return String(options.portraitMarkup || '');
+  const displayName = String(options.displayName || 'Figur');
+  const panelId = `comment-combat-profile-${safeId(options.commentId)}-${Number(options.renderIndex) || 0}-${Number(options.partIndex) || 0}`;
+  return `<div class="comment-combat-profile-shell" data-comment-combat-profile data-combat-character-id="${e(characterId)}" data-combat-actor-id="${e(options.actorId || characterId)}" data-combat-thread-id="${e(options.threadId || '')}" data-combat-timeline-comment-id="${e(options.timelineCommentId || options.commentId || '')}"${Number.isInteger(options.timelineSegmentIndex) ? ` data-combat-timeline-segment-index="${options.timelineSegmentIndex}"` : ''} data-combat-display-name="${e(displayName)}">
+    <div class="comment-combat-profile-portrait">${String(options.portraitMarkup || '')}</div>
+    <section class="comment-combat-profile-panel" id="${e(panelId)}" data-comment-combat-profile-panel aria-label="Kampfdaten von ${e(displayName)}" hidden></section>
+    <button type="button" class="comment-combat-profile-toggle" data-action="toggle-comment-combat-profile" aria-controls="${e(panelId)}" aria-expanded="false" title="Kampfdaten anzeigen"><span class="comment-combat-profile-sr">Kampfdaten von ${e(displayName)} anzeigen</span></button></div>`;
+}
 
-  function getVisibleResources(profile) {
-    return (Array.isArray(profile?.resources) ? profile.resources : [])
-      .filter(resource => String(resource?.name || '').trim()
-        && (Number(resource?.maximum) > 0 || Number(resource?.current) !== 0))
-      .slice(0, 2);
-  }
+function closeProfile(root = activeRoot) {
+  if (!root) return;
+  root.classList.remove('is-profile-open');
+  const panel = root.querySelector('[data-comment-combat-profile-panel]');
+  const toggle = root.querySelector('[data-action="toggle-comment-combat-profile"]');
+  if (panel) panel.hidden = true;
+  toggle?.setAttribute('aria-expanded', 'false');
+  if (toggle) toggle.title = 'Kampfdaten anzeigen';
+  if (root === activeRoot) activeRoot = null;
+}
 
-  function renderResource(resource) {
-    const maximum = Math.max(0, Number(resource.maximum) || 0);
-    const current = Number(resource.current) || 0;
-    const value = maximum > 0 ? `${current}/${maximum}` : String(current);
-    return `<li><span>${escapeMarkup(resource.name)}</span><b>${escapeMarkup(value)}</b></li>`;
-  }
+function updateProfile() {
+  const root = activeRoot;
+  if (!root) return;
+  const options = context(root);
+  const profile = globalThis.AleriaCombat?.getProfile?.(options.characterId, options);
+  const panel = root.querySelector('[data-comment-combat-profile-panel]');
+  const history = globalThis.getCachedCommentsForThread?.(options.threadId) || [];
+  panel.innerHTML = profile ? renderMiniCombatProfile(profile, root.dataset.combatDisplayName, {
+    encounter: getActiveCombatEncounter(history),
+    canManage: !!options.threadId && globalThis.getCurrentCommentThread?.()?.kind === 'session'
+  }) : '<p class="comment-combat-profile-empty">Kampfprofil noch nicht verfügbar. Öffne die Anzeige erneut, sobald die Figur geladen ist.</p>';
+}
 
-  function renderPanel(profile, displayName) {
-    const level = Number(profile?.effectiveLevel) || 1;
-    const maximumHitPoints = Number(profile?.maximumHitPoints) || 0;
-    const currentHitPoints = profile?.currentHitPoints == null
-      ? maximumHitPoints
-      : Math.max(0, Number(profile.currentHitPoints) || 0);
-    const temporaryHitPoints = Math.max(0, Number(profile?.temporaryHitPoints) || 0);
-    const hitPointText = `${currentHitPoints}/${maximumHitPoints}${temporaryHitPoints ? ` +${temporaryHitPoints}` : ''}`;
-    const weaponName = String(profile?.weapon?.name || 'Kein aktiver Angriff').trim();
-    const damageFormula = String(profile?.weapon?.damageFormula || '').trim();
-    const resources = getVisibleResources(profile);
+function openProfile(root) {
+  if (activeRoot && activeRoot !== root) closeProfile();
+  activeRoot = root;
+  updateProfile();
+  root.querySelector('[data-comment-combat-profile-panel]').hidden = false;
+  root.classList.add('is-profile-open');
+  const toggle = root.querySelector('[data-action="toggle-comment-combat-profile"]');
+  toggle.setAttribute('aria-expanded', 'true');
+  toggle.title = 'Zum Porträt zurückkehren';
+}
 
-    return `
-      <div class="comment-combat-profile-head">
-        <strong>${escapeMarkup(displayName || profile?.name || 'Kampfprofil')}</strong>
-        <span>Stufe ${escapeMarkup(level)}</span>
-      </div>
-      <div class="comment-combat-profile-vitals">
-        <span><small>TP</small><b>${escapeMarkup(hitPointText)}</b></span>
-        <span><small>RK</small><b>${escapeMarkup(profile?.totalDefense ?? 10)}</b></span>
-      </div>
-      <div class="comment-combat-profile-stats">
-        <span><small>Angriff</small><b>${escapeMarkup(formatModifier(profile?.attackModifier))}</b></span>
-        <span><small>Initiative</small><b>${escapeMarkup(formatModifier(profile?.initiative))}</b></span>
-        <span><small>Bewegung</small><b>${escapeMarkup(profile?.combat?.movement ?? 0)} m</b></span>
-      </div>
-      <div class="comment-combat-profile-weapon" title="${escapeMarkup(weaponName)}">
-        <span>${escapeMarkup(weaponName)}</span>${damageFormula ? `<b>${escapeMarkup(damageFormula)}</b>` : ''}
-      </div>
-      ${resources.length
-        ? `<ul class="comment-combat-profile-resources">${resources.map(renderResource).join('')}</ul>`
-        : '<p class="comment-combat-profile-empty">Keine aktive Ressource</p>'}`;
-  }
-
-  function renderPortrait(options = {}) {
-    const characterId = String(options.characterId || '').trim();
-    if (!characterId || options.secret) return String(options.portraitMarkup || '');
-    const displayName = String(options.displayName || 'Figur');
-    const actorId = String(options.actorId || characterId).trim();
-    const threadId = String(options.threadId || '').trim();
-    const timelineCommentId = String(options.timelineCommentId || options.commentId || '').trim();
-    const timelineSegmentIndex = Number.isInteger(options.timelineSegmentIndex) ? options.timelineSegmentIndex : null;
-    const panelId = `comment-combat-profile-${safeDomId(options.commentId)}-${Number(options.renderIndex) || 0}-${Number(options.partIndex) || 0}`;
-    return `
-      <div class="comment-combat-profile-shell" data-comment-combat-profile data-combat-character-id="${escapeMarkup(characterId)}" data-combat-actor-id="${escapeMarkup(actorId)}" data-combat-thread-id="${escapeMarkup(threadId)}" data-combat-timeline-comment-id="${escapeMarkup(timelineCommentId)}"${timelineSegmentIndex == null ? '' : ` data-combat-timeline-segment-index="${timelineSegmentIndex}"`} data-combat-display-name="${escapeMarkup(displayName)}">
-        <div class="comment-combat-profile-portrait">${String(options.portraitMarkup || '')}</div>
-        <section class="comment-combat-profile-panel" id="${escapeMarkup(panelId)}" data-comment-combat-profile-panel aria-label="Kampfdaten von ${escapeMarkup(displayName)}" hidden></section>
-        <button type="button" class="comment-combat-profile-toggle" data-action="toggle-comment-combat-profile" aria-controls="${escapeMarkup(panelId)}" aria-expanded="false" title="Kampfdaten anzeigen">
-          <span aria-hidden="true"></span><span class="comment-combat-profile-sr">Kampfdaten von ${escapeMarkup(displayName)} anzeigen</span>
-        </button>
-      </div>`;
-  }
-
-  function closeProfile(root = activeRoot) {
-    if (!root) return;
-    root.classList.remove('is-profile-open');
-    const panel = root.querySelector('[data-comment-combat-profile-panel]');
-    const toggle = root.querySelector(TOGGLE_SELECTOR);
-    if (panel) panel.hidden = true;
-    if (toggle) {
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.title = 'Kampfdaten anzeigen';
-    }
-    if (activeRoot === root) activeRoot = null;
-  }
-
-  function openProfile(root) {
-    if (!root) return;
-    if (activeRoot && activeRoot !== root) closeProfile(activeRoot);
-    const panel = root.querySelector('[data-comment-combat-profile-panel]');
-    const toggle = root.querySelector(TOGGLE_SELECTOR);
-    const profile = global.AleriaCombat?.getProfile?.(root.dataset.combatCharacterId || '', {
-      actorId: root.dataset.combatActorId || root.dataset.combatCharacterId || '',
-      threadId: root.dataset.combatThreadId || '',
-      timelineCommentId: root.dataset.combatTimelineCommentId || '',
-      timelineSegmentIndex: root.dataset.combatTimelineSegmentIndex == null
-        ? null
-        : Number(root.dataset.combatTimelineSegmentIndex)
-    });
-    if (!panel || !toggle || !profile) return;
-
-    panel.innerHTML = renderPanel(profile, root.dataset.combatDisplayName || profile.name);
-    panel.hidden = false;
-    root.classList.add('is-profile-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.title = 'Zum Portr\u00e4t zur\u00fcckkehren';
-    activeRoot = root;
-  }
-
-  function toggleProfile(trigger) {
-    const root = trigger?.closest?.(ROOT_SELECTOR);
-    if (!root) return;
-    if (root.classList.contains('is-profile-open')) closeProfile(root);
-    else openProfile(root);
-  }
-
-  document.addEventListener('click', event => {
-    const trigger = event.target?.closest?.(TOGGLE_SELECTOR);
-    if (trigger) {
-      event.preventDefault();
-      toggleProfile(trigger);
+function scheduleRefresh() {
+  if (!activeRoot || refreshQueued) return;
+  refreshQueued = true;
+  requestAnimationFrame(() => {
+    refreshQueued = false;
+    if (!activeRoot) return;
+    if (!activeRoot.isConnected) {
+      const panelId = activeRoot.querySelector('[data-comment-combat-profile-panel]')?.id;
+      const replacement = document.getElementById(panelId)?.closest(ROOT_SELECTOR);
+      activeRoot = null;
+      if (replacement) openProfile(replacement);
       return;
     }
-    if (activeRoot && !activeRoot.contains(event.target)) closeProfile(activeRoot);
+    const panel = activeRoot.querySelector('[data-comment-combat-profile-panel]');
+    const scroll = panel.scrollTop;
+    const opened = [...panel.querySelectorAll('details')].map(details => details.open);
+    updateProfile();
+    panel.querySelectorAll('details').forEach((details, index) => { details.open = opened[index] || false; });
+    panel.scrollTop = scroll;
   });
+}
 
-  document.addEventListener('keydown', event => {
-    if (event.key !== 'Escape' || !activeRoot) return;
-    const toggle = activeRoot.querySelector(TOGGLE_SELECTOR);
-    closeProfile(activeRoot);
-    toggle?.focus?.();
-  });
+document.addEventListener('click', event => {
+  const trigger = event.target?.closest?.('[data-action]');
+  const root = trigger?.closest(ROOT_SELECTOR);
+  const action = trigger?.dataset.action;
+  if (root && action === 'toggle-comment-combat-profile') {
+    event.preventDefault();
+    if (root === activeRoot) closeProfile(); else openProfile(root);
+    return;
+  }
+  const operations = { 'add-comment-combat-condition': 'add', 'remove-comment-combat-condition': 'remove', 'reset-comment-combat-profile': 'reset' };
+  if (root && operations[action]) {
+    openCombatStatusDialog(context(root), { operation: operations[action], conditionId: trigger.dataset.conditionId, trigger }); return;
+  }
+  if (activeRoot && !activeRoot.contains(event.target) && !event.target.closest('.combat-status-dialog')) closeProfile();
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !activeRoot || document.querySelector('.combat-status-dialog[open]')) return;
+  const toggle = activeRoot.querySelector('[data-action="toggle-comment-combat-profile"]');
+  closeProfile(); toggle?.focus();
+});
+document.addEventListener('aleria:comment-tools-visibility-changed', event => { if (event.detail?.visible === false) closeProfile(); });
+document.addEventListener('aleria:comments-updated', event => {
+  if (activeRoot && event.detail?.threadId === activeRoot.dataset.combatThreadId) scheduleRefresh();
+});
+document.addEventListener('aleria:combat-profile-committed', scheduleRefresh);
+document.addEventListener('aleria:characters-changed', scheduleRefresh);
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (!image?.matches?.('img[data-combat-image-fallback]') || !image.closest(`${ROOT_SELECTOR}, .combat-status-dialog`)) return;
+  const fallback = document.createElement('span');
+  fallback.className = 'combat-status-icon-fallback';
+  fallback.setAttribute('aria-hidden', 'true');
+  fallback.textContent = image.dataset.combatImageFallback || '✦';
+  image.replaceWith(fallback);
+}, true);
 
-  document.addEventListener('aleria:comment-tools-visibility-changed', event => {
-    if (event.detail?.visible === false) closeProfile();
-  });
-
-  global.AleriaCommentCombatMiniProfile = Object.freeze({
-    close: closeProfile,
-    renderPortrait
-  });
-})(window);
+globalThis.AleriaCommentCombatMiniProfile = Object.freeze({ close: closeProfile, renderPortrait,
+  renderStatusComment(comment) {
+    return `<div class="comment-combat-status-audit" data-comment-id="${e(comment.id)}"><strong>Zustandsverwaltung</strong><p>${e(comment.text)}</p></div>`;
+  }
+});

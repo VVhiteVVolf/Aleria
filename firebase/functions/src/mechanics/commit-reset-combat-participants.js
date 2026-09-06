@@ -41,10 +41,16 @@ export const commitResetCombatParticipants = onCall({
   const reset = [];
 
   await database.runTransaction(async transaction => {
+    reset.length = 0;
     const refs = descriptors.map(descriptor => database
       .collection(descriptor.kind === 'creature' ? 'creatures' : 'characters')
       .doc(descriptor.recordId));
     const snapshots = await Promise.all(refs.map(ref => transaction.get(ref)));
+    const locks = await Promise.all(descriptors.map(descriptor => transaction.get(database.collection('combat_profile_locks')
+      .doc(descriptor.kind === 'creature' ? 'creatures' : 'characters').collection('records').doc(descriptor.recordId))));
+    if (locks.some(snapshot => snapshot.data()?.activeEncounterKeys?.length)) {
+      fail('failed-precondition', 'Zurücksetzen ist während einer angekündigten oder laufenden Kampfphase gesperrt.');
+    }
 
     descriptors.forEach((descriptor, index) => {
       const snapshot = snapshots[index];
@@ -67,14 +73,6 @@ export const commitResetCombatParticipants = onCall({
         'combatProfile.lastMechanicalCommentId': FieldValue.delete(),
         updatedAt: FieldValue.serverTimestamp()
       }, ['combatProfile']));
-      transaction.set(
-        database.collection('combat_profile_locks')
-          .doc(descriptor.kind === 'creature' ? 'creatures' : 'characters')
-          .collection('records')
-          .doc(descriptor.recordId),
-        { activeEncounterKeys: [], updatedAt: FieldValue.serverTimestamp() },
-        { merge: true }
-      );
       reset.push({ kind: descriptor.kind, recordId: descriptor.recordId, name: record.name || '' });
     });
   });

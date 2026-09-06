@@ -1,7 +1,8 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { restoreCharacterHitPointSnapshot } from '../generated/combat/combat-profile-model.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
-import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { findLaterMechanicalDependency } from './mechanical-comment-dependencies.js';
 
@@ -62,7 +63,9 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
     if (!snapshots[index].exists || skipRevert.has(index)) return;
     const ref = refs[index];
     const values = { updatedAt: FieldValue.serverTimestamp() };
-    if (entry.before?.hitPoints !== undefined) values['combatProfile.hitPoints'] = entry.before.hitPoints;
+    if (entry.before?.hitPoints !== undefined) values['combatProfile.hitPoints'] = entry.kind === 'character'
+      ? restoreCharacterHitPointSnapshot(snapshots[index].data()?.combatProfile || {}, entry.before.hitPoints, entry.before.progression)
+      : entry.before.hitPoints;
     if (entry.before?.resources !== undefined) values['combatProfile.resources'] = entry.before.resources;
     if (entry.before?.abilities !== undefined) values['combatProfile.abilities'] = entry.before.abilities;
     if (entry.before?.progression !== undefined) values['combatProfile.progression'] = entry.before.progression;
@@ -122,7 +125,7 @@ export const commitUndoMechanicalComment = onCall({
 
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
-      .filter(isTrustedMechanicalComment);
+      .filter(isTrustedSceneContributionComment);
     const dependent = findLaterMechanicalDependency(history, commentId);
     if (!force && dependent) fail('failed-precondition', `Eine neuere Handlung hängt von diesem Kampfstand ab: ${describeComment(dependent)}. Nimm zuerst den neueren Beitrag zurück.`);
     if (comment.commentKind === 'combat-encounter-event') {

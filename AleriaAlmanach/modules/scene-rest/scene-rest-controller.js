@@ -1,11 +1,11 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-release-check-v1';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260905-party-combat-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260906-character-vitality-v1';
 import {
   buildSceneRestParticipant,
   getSceneRestType,
   isSceneRestComment,
   normalizeSceneRest
-} from './scene-rest-model.js?v=20260804-referee-v2';
+} from './scene-rest-model.js?v=20260906-character-vitality-v1';
 import {
   ensureSceneRestDialog,
   filterSceneRestCandidates,
@@ -17,7 +17,7 @@ import {
   setSceneRestSubmitting,
   setSceneRestType,
   updateSceneRestSelectionCount
-} from './scene-rest-ui.js?v=20260806-undo-btn-v1';
+} from './scene-rest-ui.js?v=20260906-character-vitality-v1';
 
 const profileResolver = new CombatProfileResolver();
 let activeCandidates = [];

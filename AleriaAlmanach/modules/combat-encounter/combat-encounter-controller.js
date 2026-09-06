@@ -1,12 +1,13 @@
-import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260905-party-combat-v1';
-import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js?v=20260905-party-combat-v1';
+import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260906-character-vitality-v1';
+import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js?v=20260906-character-vitality-v1';
 import { buildCombatEncounterSummary } from '../combat/combat-encounter-summary.js';
 import { suggestEncounterOutcome } from '../combat/combat-encounter-outcome.js';
-import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js?v=20260906-release-check-v1';
-import { renderActiveEncounterPanel } from './combat-encounter-panel.js?v=20260905-party-combat-v1';
+import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js?v=20260906-character-vitality-v1';
+import { renderActiveEncounterPanel } from './combat-encounter-panel.js?v=20260906-character-vitality-v1';
+import { commitSceneCombatStatus } from '../combat-status/combat-status-controller.js?v=20260906-character-vitality-v1';
 import { ensureCombatEncounterDialog, filterEncounterCandidates, renderCombatEncounterComment, renderEncounterCandidates,
   renderOperationButtons, setEncounterEndControls, setEncounterStatus, setEncounterSubmitting, updateEncounterCount,
-  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260905-party-combat-v1';
+  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260906-character-vitality-v1';
 
 // This dialog owns its draft; changing tabs never rewrites encounter history.
 let dialog = null;
@@ -190,15 +191,18 @@ async function submitEvent() {
 
 async function cheatResetSelected() {
   if (!dialog || dialog.submitting) return;
+  if (getActiveCombatEncounter(comments())) { setEncounterStatus('Zurücksetzen ist während einer Kampfphase gesperrt.', 'error'); return; }
   const records = participants().map(participant => participant.persistence).filter(persistence => ['character', 'creature'].includes(persistence?.kind));
   if (!records.length) { setEncounterStatus('Wähle mindestens eine gespeicherte Figur aus.', 'error'); return; }
-  if (!confirm(`${records.length} Figur(en) vollständig zurücksetzen? Trefferpunkte und Ressourcen werden aufgefüllt und Kampfsperren gelöst. Dieses Testwerkzeug erzeugt keinen Erzählbeitrag.`)) return;
+  if (!confirm(`${records.length} Figur(en) vollständig zurücksetzen? Trefferpunkte, Ressourcen und begrenzte Fähigkeiten werden aufgefüllt; temporäre Effekte entfernt. Dies wird im Szenenverlauf festgehalten.`)) return;
   try {
-    const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
-    if (!backend?.resetCombatParticipants) throw new Error('Zurücksetzen benötigt eine Online-Verbindung.');
-    const result = await backend.resetCombatParticipants(records);
-    setEncounterStatus(`${result?.reset?.length || 0} Figur(en) zurückgesetzt. Schließe und öffne die Ansicht erneut, um die neuen Profilwerte zu laden.`, 'success');
+    dialog.submitting = true;
+    for (const record of records) await commitSceneCombatStatus({ threadId: dialog.threadId, actorId: record.recordId,
+      characterId: record.recordId, kind: record.kind, expectedLastCommentId: comments().at(-1)?.id || '' }, { operation: 'reset' });
+    renderDialog();
+    setEncounterStatus(`${records.length} Figur(en) zurückgesetzt.`, 'success');
   } catch (error) { setEncounterStatus(error?.message || 'Zurücksetzen fehlgeschlagen.', 'error'); }
+  finally { if (dialog) dialog.submitting = false; }
 }
 
 document.addEventListener('click', event => {

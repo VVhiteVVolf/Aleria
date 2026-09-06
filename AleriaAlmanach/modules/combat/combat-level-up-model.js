@@ -3,9 +3,12 @@ import {
   getAttributeModifier,
   getEffectiveCombatLevel,
   getMaximumHitPoints,
+  getHitPointProgression,
+  setCharacterHitPointMaximum,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260905-party-combat-v1';
+} from './combat-profile-model.js?v=20260906-character-vitality-v1';
+import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
 import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
@@ -18,7 +21,7 @@ import {
   getCenyrTechniqueChoiceGroups,
   reconcileCenyrTrainingForLevel,
   selectCenyrTechniqueForSlot
-} from '../classes/cenyr/cenyr-technique-selection.js?v=20260905-party-combat-v1';
+} from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-character-vitality-v1';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
@@ -260,7 +263,21 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   });
 
   const suggestedGain = getSuggestedHitPointGain(nextProfile);
-  if (plan.hitPointMode === 'manual') {
+  if (beforeProfile.hitPoints.vitality) {
+    const beforeHp = getHitPointProgression(beforeProfile);
+    const nextHp = getHitPointProgression(nextProfile);
+    // Retroactive CON changes apply to attained levels as well as the new roll.
+    const beforeWithNewAttributes = { ...nextProfile, progression: beforeProfile.progression };
+    const retroactiveBase = getHitPointProgression(beforeWithNewAttributes).standard.base - beforeHp.standard.base;
+    const vitalityGain = nextHp.standard.bonus - beforeHp.standard.bonus;
+    const nextVitality = Math.max(0, beforeHp.vitality + vitalityGain);
+    if (plan.hitPointMode === 'manual') {
+      setCharacterHitPointMaximum(nextProfile, beforeMaximumHitPoints + retroactiveBase + plan.manualHitPointGain + vitalityGain, nextVitality);
+    } else if (plan.hitPointMode === 'unchanged') {
+      setCharacterHitPointMaximum(nextProfile, beforeMaximumHitPoints, beforeHp.vitality);
+    }
+    // Recommended progression is derived, including anchored rolled/override totals.
+  } else if (plan.hitPointMode === 'manual') {
     nextProfile.hitPoints.maximumOverride = Math.min(9999, beforeMaximumHitPoints + plan.manualHitPointGain);
   } else if (plan.hitPointMode === 'unchanged') {
     nextProfile.hitPoints.maximumOverride = beforeMaximumHitPoints;
@@ -272,10 +289,9 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
 
   const interimProfile = sanitizeCharacterCombatProfile(nextProfile);
   const afterMaximumHitPoints = getMaximumHitPoints(interimProfile);
-  const hitPointDelta = afterMaximumHitPoints - beforeMaximumHitPoints;
   if (interimProfile.hitPoints.current != null) {
     interimProfile.hitPoints.current = plan.restoreGainedHitPoints
-      ? Math.max(0, Math.min(afterMaximumHitPoints, interimProfile.hitPoints.current + Math.max(0, hitPointDelta)))
+      ? preserveHitPointDeficit(interimProfile.hitPoints.current, beforeMaximumHitPoints, afterMaximumHitPoints)
       : Math.max(0, Math.min(afterMaximumHitPoints, interimProfile.hitPoints.current));
   }
 
@@ -418,7 +434,7 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
       specialLevels: nextProgression.specialLevels,
       maximumHitPoints: getMaximumHitPoints(finalProfile),
       proficiencyBonus: afterProficiency,
-      suggestedHitPointGain: suggestedGain
+      suggestedHitPointGain: suggestedGain + (finalProfile.hitPoints.vitality ? getHitPointProgression(finalProfile).standard.vitalityGain : 0)
     }
   };
 }
@@ -446,7 +462,9 @@ export function applyManualCharacterLevel(profile = {}, targetLevelValue = 1) {
   const normalized = sanitizeCharacterCombatProfile(reconciled.profile);
   const maximumHitPoints = getMaximumHitPoints(normalized);
   if (normalized.hitPoints.current != null) {
-    normalized.hitPoints.current = Math.min(normalized.hitPoints.current, maximumHitPoints);
+    normalized.hitPoints.current = normalized.hitPoints.vitality
+      ? preserveHitPointDeficit(normalized.hitPoints.current, getMaximumHitPoints(beforeProfile), maximumHitPoints)
+      : Math.min(normalized.hitPoints.current, maximumHitPoints);
   }
   return {
     profile: normalized,

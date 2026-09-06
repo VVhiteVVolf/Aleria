@@ -1,0 +1,22 @@
+.cp-combat-status { padding: 18px; border: 1px solid #a57d46; border-left: 4px solid #862f35; border-radius: 8px; background: #f8f0d9; color: #493723; }
+.cp-combat-status > h3 { margin: 0 0 12px; color: #862f35; font-size: 17px; }
+.cp-combat-status .comment-combat-profile-head { position: static; height: auto; min-height: 0; padding: 0 0 10px; background: none; box-shadow: none; color: #493723; }
+.cp-combat-status .comment-combat-profile-head strong { color: #493723; font-size: 17px; }
+.cp-combat-status .comment-combat-profile-head > span { color: #66513b; }
+.cp-combat-status :is(.comment-combat-profile-vitals, .comment-combat-profile-stats, .comment-combat-profile-resources) :is(b, span, small) { color: #493723; }
+.cp-combat-status :is(.comment-combat-profile-vitals, .comment-combat-profile-stats, .comment-combat-profile-resources) b { font-size: 16px; }
+.cp-combat-status .comment-combat-profile-resources li { font-size: 14px; }
+.cp-combat-status .comment-combat-profile-weapon b { color: #733336; }
+.cp-combat-status .comment-combat-profile-weapon small { color: #66513b; }
+.cp-combat-status :is(.comment-combat-profile-vitals, .comment-combat-profile-stats) small { font-size: 11px; }
+.cp-combat-status .comment-combat-profile-resources { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.cp-combat-status .comment-combat-profile-vitals { grid-template-columns: 2fr 1fr; }
+.cp-combat-status .comment-combat-profile-context, .cp-combat-status .comment-combat-profile-note, .cp-combat-status .comment-combat-profile-empty, .cp-combat-status-note { color: #715c40; }
+.cp-combat-status .comment-combat-profile-stats, .cp-combat-status .comment-combat-profile-vitals > span, .cp-combat-status .comment-combat-profile-resources li { background: #fffaf0; border-color: #cdb488; }
+.cp-combat-status .comment-combat-profile-section h4, .cp-combat-status .comment-combat-profile-weapon, .cp-combat-status .comment-combat-profile-section-head { color: #493723; }
+.cp-combat-status-note { margin: 12px 0 0; font-size: 12px; line-height: 1.5; }
+.cp-combat-status > summary { cursor: pointer; font: 600 16px/1.5 "Cinzel", Georgia, serif; color: #63302b; padding: 10px 12px; margin: -8px; background: linear-gradient(100deg, #ddc290, #efe1bf); border-radius: 3px; }
+.cp-combat-status > summary small { display: inline-block; margin-left: 12px; font: 13px/1.5 Georgia, serif; color: #604a31; }
+.cp-combat-status[open] > summary { margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #b89a66; }
+.cp-sheet-vitality-breakdown { padding: 10px; border-left: 3px solid #9e7432; background: #f5ecd6; }
+@media (max-width: 600px) { .cp-combat-status { padding: 12px; } .cp-combat-status .comment-combat-profile-resources { grid-template-columns: 1fr; } }

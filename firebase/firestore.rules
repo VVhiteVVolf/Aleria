@@ -21,6 +21,7 @@ service cloud.firestore {
       return (data.keys().hasAny(['mechanicalAudit']) && data.mechanicalAudit == true)
         || (data.keys().hasAny(['combatTransaction']) && data.combatTransaction != null)
         || (data.keys().hasAny(['restTransaction']) && data.restTransaction != null)
+        || (data.keys().hasAny(['combatStatus']) && data.combatStatus != null)
         || (data.keys().hasAny(['inventoryTransaction']) && data.inventoryTransaction != null)
         || (data.keys().hasAny(['sceneInventoryTransfer']) && data.sceneInventoryTransfer != null)
         || (data.keys().hasAny(['sceneRest']) && data.sceneRest != null)

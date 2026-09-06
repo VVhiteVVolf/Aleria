@@ -17,7 +17,7 @@ test('Duncan bleibt ein vollständig ausgebauter Stufe-20-Teulu', async () => {
   const resources = new Map(profile.resources.map(resource => [resource.id, resource.maximum]));
   assert.equal(profile.progression.level, 20);
   assert.equal(profile.progression.specialLevels, 0);
-  assert.equal(profile.maximumHitPoints, 204);
+  assert.equal(profile.maximumHitPoints, 255);
   assert.deepEqual(['action', 'bonus-action', 'reaction', 'special-action'].map(id => resources.get(id)), [2, 2, 2, 6]);
   assert.equal(resources.get('aura-focus'), 4);
   assert.equal(profile.weapon.id, 'duncan-gafyr-master-sword');

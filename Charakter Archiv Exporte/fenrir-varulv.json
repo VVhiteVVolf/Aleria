@@ -581,7 +581,8 @@
       }
     },
     "combatProfile": {
-      "schemaVersion": 9,
+      "schemaVersion": 11,
+      "revision": 0,
       "identity": {
         "ancestry": "Aldrimarer",
         "archetype": "Skjaldr",
@@ -617,6 +618,8 @@
       "progression": {
         "level": 6,
         "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
         "experience": 0,
         "nextLevelExperience": null,
         "experienceReward": null,
@@ -667,7 +670,12 @@
         }
       ],
       "hitPoints": {
-        "current": 65,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 17,
+          "overrideAnchor": null
+        },
+        "current": 82,
         "temporary": 0,
         "hitDie": 12,
         "averagePerLevelOverride": null,
@@ -689,7 +697,8 @@
         "attackBonus": 0,
         "damageBonus": 0,
         "passivePerceptionBonus": 0,
-        "canActAtZeroHitPoints": false
+        "canActAtZeroHitPoints": false,
+        "mounted": false
       },
       "savingThrows": [
         {
@@ -896,6 +905,8 @@
           "id": "default-unarmed-melee",
           "inventoryItemId": "",
           "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "unarmed",
           "training": "simple",
           "damageFormula": "1d4",
@@ -933,6 +944,8 @@
           "id": "fenrir-greataxe",
           "inventoryItemId": "",
           "name": "Großaxt",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "axe",
           "training": "martial",
           "damageFormula": "1d12",
@@ -970,6 +983,8 @@
           "id": "fenrir-handaxe-pair",
           "inventoryItemId": "",
           "name": "Einhandäxte (Paar)",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "axe",
           "training": "martial",
           "damageFormula": "1d6",
@@ -1007,6 +1022,8 @@
           "id": "fenrir-throwing-axe",
           "inventoryItemId": "",
           "name": "Wurfaxt",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "axe",
           "training": "martial",
           "damageFormula": "1d6",
@@ -1044,6 +1061,8 @@
           "id": "fenrir-roundshield-bash",
           "inventoryItemId": "",
           "name": "Huskarl-Rundschild (Schildstoß)",
+          "image": "",
+          "weaponProfileId": "",
           "weaponType": "shield",
           "training": "martial",
           "damageFormula": "1d4",
@@ -1083,6 +1102,7 @@
           "id": "fenrir-scale-mail",
           "inventoryItemId": "",
           "name": "Schuppenpanzer",
+          "image": "",
           "kind": "armor",
           "baseArmorClass": 14,
           "armorClassBonus": 0,
@@ -1097,6 +1117,7 @@
           "id": "fenrir-roundshield",
           "inventoryItemId": "",
           "name": "Huskarl-Rundschild",
+          "image": "",
           "kind": "shield",
           "baseArmorClass": null,
           "armorClassBonus": 2,
@@ -1122,7 +1143,7 @@
         },
         {
           "id": "mana-focus",
-          "name": "Mana / Fokus",
+          "name": "Mana",
           "current": 0,
           "maximum": 0,
           "recovery": "day",
@@ -1328,12 +1349,35 @@
           "icon": "",
           "spellLevel": 10,
           "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
         }
       ],
       "techniques": [
         {
           "id": "fenrir-crushing-blow",
           "name": "Zerschmetternder Hieb",
+          "status": "confirmed",
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 2,
           "category": "technique",
@@ -1347,16 +1391,29 @@
             "fenrir-greataxe"
           ],
           "damageFormula": "1d12+1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
           "damageType": "Hieb + Wucht",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
           "requirements": "Die Großaxt muss aktiv geführt werden.",
           "tags": "Berserkerweg · Großaxt · Wucht",
           "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
             {
               "id": "fenrir-crushing-blow-action",
@@ -1372,18 +1429,88 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "secondarySave": {
-            "enabled": false
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
           },
           "followUpAttack": {
-            "enabled": false
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
           }
         },
         {
           "id": "fenrir-shield-bash",
           "name": "Schildstoß",
+          "status": "confirmed",
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 3,
           "category": "technique",
@@ -1397,16 +1524,29 @@
             "fenrir-roundshield-bash"
           ],
           "damageFormula": "1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
           "damageType": "Wucht",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
           "requirements": "Der Huskarl-Rundschild muss ausgerüstet sein.",
           "tags": "Berserkerweg · Schild · Kontrolle",
           "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
             {
               "id": "fenrir-shield-bash-bonus-action",
@@ -1422,7 +1562,24 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "secondarySave": {
             "enabled": true,
@@ -1436,17 +1593,57 @@
               "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
               "description": "Der wuchtige Schildstoß bringt das Ziel aus dem Gleichgewicht.",
               "mechanics": {
-                "attack": -2
+                "attack": -2,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
               }
             }
           },
           "followUpAttack": {
-            "enabled": false
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
           }
         },
         {
           "id": "fenrir-twin-axe-flurry",
           "name": "Doppelhieb der Zwillingsäxte",
+          "status": "confirmed",
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 4,
           "category": "technique",
@@ -1460,16 +1657,29 @@
             "fenrir-handaxe-pair"
           ],
           "damageFormula": "1d6",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
           "damageType": "Hieb",
           "attackBonus": 0,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Nahkampf",
           "target": "Ein Gegner",
           "duration": "Sofort",
           "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
           "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
           "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
             {
               "id": "fenrir-twin-axe-flurry-action",
@@ -1485,10 +1695,55 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "secondarySave": {
-            "enabled": false
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
           },
           "followUpAttack": {
             "enabled": true,
@@ -1497,17 +1752,31 @@
             "damageType": "Hieb",
             "attackBonus": 0,
             "damageBonus": 0,
+            "inheritDamageModifier": false,
+            "inheritBonusDamage": false,
             "repeatCount": 1,
             "triggerReactions": true,
             "repeatPerAttackRules": false,
-            "triggerFurtherEffects": false,
-            "inheritDamageModifier": false,
-            "inheritBonusDamage": false
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
           }
         },
         {
           "id": "fenrir-spinning-throw",
           "name": "Kreiselwurf",
+          "status": "confirmed",
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 6,
           "category": "technique",
@@ -1521,16 +1790,29 @@
             "fenrir-throwing-axe"
           ],
           "damageFormula": "1d6+1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
           "damageType": "Hieb",
           "attackBonus": 1,
           "damageBonus": 0,
+          "targetDefenseModifier": 0,
           "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
           "range": "Fernkampf (9m)",
           "target": "Ein Gegner",
           "duration": "Sofort",
           "requirements": "Verbraucht eine mitgeführte Wurfaxt.",
           "tags": "Berserkerweg · Wurfaxt · Distanz",
           "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
+          "mechanicNotes": [],
+          "effects": [],
           "costs": [
             {
               "id": "fenrir-spinning-throw-action",
@@ -1546,16 +1828,91 @@
             "cost": 1
           },
           "active": true,
-          "mechanics": {},
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
           "triggerRules": [],
           "secondarySave": {
-            "enabled": false
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
           },
           "followUpAttack": {
-            "enabled": false
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
           }
         }
       ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
       "quirks": [
         {
           "id": "starter-ancestry-aldrimarer-trait-1",
@@ -1583,8 +1940,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         },
@@ -1614,8 +1975,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "triggerRules": []
         }
@@ -1635,6 +2000,9 @@
           "damageType": "physisch",
           "activationType": "bonus-action",
           "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
           "combatUsable": true,
           "target": "Selbst",
           "range": "Selbst",
@@ -1642,36 +2010,40 @@
           "requirements": "Einmal pro Tag.",
           "tags": "Berserker · Rage · Skjaldr",
           "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
-          "costs": [
-            {
-              "id": "fenrir-berserkergang-bonus-action",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "active": true,
-          "mechanics": {},
-          "triggerRules": [],
           "effects": [
             {
               "id": "fenrir-berserkergang-temp-hp",
               "type": "temporary-hit-points",
               "target": "self",
               "amount": 10,
-              "on": "always"
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
             },
             {
               "id": "fenrir-berserkergang-condition",
               "type": "apply-condition",
               "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
               "on": "always",
+              "resourceId": "",
               "condition": {
                 "id": "fenrir-berserkergang-state",
                 "name": "Berserkergang",
@@ -1679,7 +2051,15 @@
                 "source": "Berserkermodus des Skjaldr",
                 "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
                 "durationModel": {
-                  "kind": "combat"
+                  "kind": "combat",
+                  "remainingActorComments": 0,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende"
                 },
                 "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
                 "mechanics": {
@@ -1705,10 +2085,64 @@
                     "charisma",
                     "constitution"
                   ]
+                },
+                "active": true,
+                "remainingActorComments": 0,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
                 }
-              }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
             }
           ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "fenrir-berserkergang-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
           "inventoryUseTrigger": {
             "enabled": false,
             "itemTags": [],
@@ -1719,6 +2153,10 @@
       ],
       "magic": {
         "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
         "castingAttribute": "intelligence",
         "spellAttackOverride": null,
         "spellSaveDcOverride": null,
@@ -1767,8 +2205,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -1781,8 +2223,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -1795,8 +2241,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         },
         "latentPresence": {
@@ -1821,8 +2271,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "allyMechanics": {
             "attack": 0,
@@ -1835,8 +2289,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           },
           "enemyMechanics": {
             "attack": 0,
@@ -1849,8 +2307,12 @@
             "spellSaveDc": 0,
             "movement": 0,
             "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
             "passivePerception": 0,
-            "attackRollMode": "normal"
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
           }
         }
       },

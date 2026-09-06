@@ -1,4 +1,4 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260905-party-combat-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260906-character-vitality-v1';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
 import {

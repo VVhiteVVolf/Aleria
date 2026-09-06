@@ -5,6 +5,7 @@
 (function initCommentTransactionPolicy(global) {
   const TRANSACTION_LABELS = Object.freeze({
     combat: 'Kampfauswertung',
+    status: 'Zustandsänderung',
     inventory: 'Inventarvorgang',
     rest: 'Rast',
     skill: 'Fertigkeitsauswertung',
@@ -28,6 +29,7 @@
   function getCommentTransactionKinds(comment = {}) {
     const kinds = new Set();
     const segments = getSegments(comment);
+    if (isObject(comment.combatStatus)) kinds.add('status');
     if (
       isObject(comment.combatTransaction)
       || hasResolutionId(comment.combatResolution, 'resolutionId')

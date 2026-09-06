@@ -1,4 +1,4 @@
-import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260905-party-combat-v1';
+import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
 import {
   DRACHENTANZ_FORM_IDS as FORM_IDS
 } from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260905-cenyr-character-training-v1';

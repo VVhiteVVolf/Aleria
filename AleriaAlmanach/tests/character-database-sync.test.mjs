@@ -12,6 +12,18 @@ import {
 const testDirectory = dirname(fileURLToPath(import.meta.url));
 const databaseRoot = resolve(testDirectory, '..', '..', 'CharakterDatenbank');
 
+test('Lokale Vitalität wird beim Einmischen alter Online-LP genau einmal berücksichtigt', () => {
+  const local = { id: 'gawain', combatProfile: { classTraining: { schemaVersion: 2 },
+    hitPoints: { current: 49, temporary: 0, vitality: { version: 1, legacyIncrease: 10 } } } };
+  const online = { id: 'gawain', combatProfile: { hitPoints: { current: 30, temporary: 4 } } };
+  const first = mergeOnlineAndLocalCharacter(online, local);
+  assert.equal(first.combatProfile.hitPoints.current, 40);
+  assert.equal(first.combatProfile.hitPoints.temporary, 4);
+  assert.equal(mergeOnlineAndLocalCharacter(first, local).combatProfile.hitPoints.current, 40);
+  online.combatProfile.hitPoints.current = 0;
+  assert.equal(mergeOnlineAndLocalCharacter(online, local).combatProfile.hitPoints.current, 0);
+});
+
 async function readJson(...parts) {
   return JSON.parse(await readFile(resolve(databaseRoot, ...parts), 'utf8'));
 }

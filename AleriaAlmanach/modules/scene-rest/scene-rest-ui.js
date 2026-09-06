@@ -1,4 +1,4 @@
-import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260804-referee-v2';
+import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260906-character-vitality-v1';
 
 export const SCENE_REST_ICON_URL = '../IconOrdner/Buttom Icons/Rasten.png';
 

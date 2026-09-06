@@ -49,7 +49,7 @@
       "role": "Ritter des Hauses Gafyr · Teulu",
       "level": "Stufe 6",
       "status": "Gesund",
-      "hitpoints": "52 / 52 TP",
+      "hitpoints": "65 / 65 LP",
       "healthColor": "#5c7f20",
       "money": "0 Gold, 0 Silber, 0 Kupfer",
       "moneyState": {
@@ -553,7 +553,12 @@
         }
       ],
       "hitPoints": {
-        "current": 52,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 13,
+          "overrideAnchor": null
+        },
+        "current": 65,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,

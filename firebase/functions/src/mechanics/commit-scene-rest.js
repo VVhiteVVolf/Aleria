@@ -133,6 +133,7 @@ export const commitSceneRest = onCall({
         portrait: String(participant.portrait || record.portrait || ''),
         persistence: participant.persistence,
         recoveryDayKey,
+        conditionsDayChanged: timelineDayChanged,
         dayChanged: participantDayChanged
       });
     });

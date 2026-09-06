@@ -58,7 +58,7 @@ test('Rhiannons Selbstschutz: temporäre TP, Schild, gegnerischer Treffer und Ab
   await undo(armor.id);
   const restored = await party.assertConsistent();
   assert.equal(restored.profiles.get('rhiannon').temporaryHitPoints, 0);
-  assert.equal(restored.profiles.get('rhiannon').currentHitPoints, 20);
+  assert.equal(restored.profiles.get('rhiannon').currentHitPoints, 25);
 });
 
 test('Fenrirs Berserkergang und Doppelhieb werden mit echten Würfelbelegen serverseitig identisch ausgewertet', async () => {

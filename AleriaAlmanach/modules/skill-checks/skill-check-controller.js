@@ -1,5 +1,6 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-release-check-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
+import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260906-character-vitality-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -15,10 +16,10 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260905-party-combat-v1';
+} from './skill-check-model.js?v=20260906-character-vitality-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService } from './skill-resolution-service.js?v=20260905-party-combat-v1';
-import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260905-party-combat-v1';
+import { SkillResolutionService } from './skill-resolution-service.js?v=20260906-character-vitality-v1';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260906-character-vitality-v1';
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({
@@ -83,11 +84,11 @@ function relationshipBetweenActors(first = {}, second = {}) {
   return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
 }
 
-function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallenge, actors = []) {
+function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallenge, actors = [], resolver = profileResolver) {
   const targetActor = targetChallenge
     ? actors.find(candidate => [targetChallenge.authorId, targetChallenge.authorKey].includes(String(candidate?.id || ''))) || null
     : null;
-  const targetProfile = targetActor ? profileResolver.resolve(targetActor) : null;
+  const targetProfile = targetActor ? resolver.resolve(targetActor) : null;
   const sources = [{
     actorId: actorProfile.characterId,
     actorName: actorProfile.name,
@@ -126,7 +127,7 @@ function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallen
     }
     const supportActor = actors.find(candidate => String(candidate?.id || '') === selection.actorId);
     if (!supportActor) return;
-    const supportProfile = profileResolver.resolve(supportActor);
+    const supportProfile = resolver.resolve(supportActor);
     source = {
       actorId: supportProfile.characterId,
       actorName: supportProfile.name,
@@ -513,8 +514,8 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   if (!allowed.some(skill => skill.id === settings.skillId)) throw new Error('Wähle für jeden Fertigkeitsversuch eine zur Blase passende Fertigkeit.');
   const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
-  const profile = profileResolver.resolve(actor);
-  const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors);
+  const profile = resolutionContext.profileResolver.resolve(actor);
+  const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors, resolutionContext.profileResolver);
   const stage = document.querySelector('[data-skill-dice-stage]');
   if (stage) stage.innerHTML = '';
   const definition = getSkillDefinition(settings.skillId);
@@ -535,6 +536,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
     usedRuleFrequencyKeys: resolutionContext.usedRuleFrequencyKeys
   });
   resolutionContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
+  resolutionContext.profileResolver.appendResolution(resolution);
   return { ...resolution, actorProfileSnapshot: profile.aiSnapshot || null, originalAttempt: String(segment.text || '') };
 }
 
@@ -575,6 +577,7 @@ async function handleSubmission(submission = {}) {
   };
   const resolutionContext = {
     rulePeriods,
+    profileResolver: createSceneSkillProfileResolver(comments, { commentId: rulePeriods.comment, recoveryDayKey: rulePeriods.day }),
     usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(comments, rulePeriods)
   };
   if (skillSegments.length) openResolutionDialog();

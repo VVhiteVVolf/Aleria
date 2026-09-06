@@ -3,7 +3,7 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js?v=20260905-party-combat-v1';
+} from './scene-dice-narration-core.js?v=20260906-character-vitality-v1';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,
