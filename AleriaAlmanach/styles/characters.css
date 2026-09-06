@@ -1039,7 +1039,8 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 0.45rem;
-    min-width: min(34rem, 100%);
+    min-width: 0;
+    align-items: flex-start;
   }
 
   .cp-inventory-toolbar > div:first-child {
@@ -1077,8 +1078,26 @@
     min-height: 100%;
     width: 100%;
   }
-  .cp-inventory-view .ci-layout {
-    grid-template-columns: minmax(245px, 0.78fr) minmax(0, 2.25fr) minmax(235px, 0.72fr);
+  .cp-inventory-template-tools {
+    border: 1px solid var(--parchment-deeper);
+    background: var(--parchment);
+    padding: 0.45rem 0.65rem;
+    color: var(--ink);
+    font-size: 0.75rem;
+  }
+  .cp-inventory-template-tools > summary {
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+  }
+  .cp-inventory-template-tools > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.6rem;
+  }
+  .cp-inventory-template-tools > summary:focus-visible {
+    outline: 2px solid var(--red-wax);
+    outline-offset: 3px;
   }
 
   @media (max-width: 900px) {

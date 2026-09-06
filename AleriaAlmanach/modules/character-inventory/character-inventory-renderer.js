@@ -191,9 +191,9 @@ function buildCharacterInventoryCategories(data, activeCategory = '') {
     counts[item.category] = (counts[item.category] || 0) + 1;
   });
   return `
-    <div class="ci-tabs" role="tablist">
+    <div class="ci-tabs" role="group" aria-label="Inventarkategorien">
       ${data.categories.map(category => `
-        <button type="button" class="${category.id === activeCategory ? 'active' : ''}" data-ci-action="filter-items" data-ci-category="${escapeHtml(category.id)}" aria-selected="${category.id === activeCategory ? 'true' : 'false'}">
+        <button type="button" class="${category.id === activeCategory ? 'active' : ''}" data-ci-action="filter-items" data-ci-category="${escapeHtml(category.id)}" aria-pressed="${category.id === activeCategory ? 'true' : 'false'}">
           ${buildCharacterInventoryCategoryIcon(category)}${escapeHtml(category.label)}<em class="ci-tab-count">${counts[category.id] || 0}</em>
         </button>`).join('')}
     </div>`;
@@ -322,10 +322,10 @@ function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
                 fit: item.imageFit || 'contain',
                 position: item.imagePosition || 'center'
               })}<strong>${escapeHtml(item.name)}</strong></span>
-              <span>${escapeHtml(item.type)}</span>
-              <span>${escapeHtml(item.description)}</span>
-              <span>${escapeHtml(item.weight)}</span>
-              <span>${escapeHtml(item.quantity)}</span>
+              <span class="ci-item-type" data-label="Typ">${escapeHtml(item.type || '—')}</span>
+              <span class="ci-item-description" data-label="Beschreibung">${escapeHtml(item.description || '—')}</span>
+              <span class="ci-item-weight" data-label="Gewicht">${escapeHtml(item.weight || '—')}</span>
+              <span class="ci-item-quantity" data-label="Anzahl">${escapeHtml(item.quantity)}</span>
             </button>`).join('')}
         </div>
         <div class="ci-item-empty" data-ci-empty${data.items.some(item => item.category === activeCategory) ? ' hidden' : ''}>Keine Gegenstände in dieser Kategorie.</div>
@@ -338,25 +338,25 @@ function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
 function buildCharacterInventoryCompanions(data) {
   return `
     <aside class="ci-companions">
-      <h3>Gefährten</h3>
+      <h3>Gefährten <span class="ci-section-count">${data.companions.length}</span></h3>
       <div class="ci-companion-list">
         ${data.companions.map(companion => `
-          <button class="ci-companion-card" type="button" data-ci-action="show-companion" data-ci-companion-id="${escapeHtml(companion.id)}">
-            <div>
+          <button class="ci-companion-card" type="button" data-ci-action="show-companion" data-ci-companion-id="${escapeHtml(companion.id)}" aria-label="${escapeHtml(companion.name)} – Gefährtenprofil öffnen">
+            ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-companion-image', getInitialChar(companion.name), {
+              format: 'portrait', fit: 'contain', position: 'center'
+            })}
+            <div class="ci-companion-heading">
               <strong>${escapeHtml(companion.name)}</strong>
               <span>${escapeHtml(companion.species || companion.role)}</span>
             </div>
-            ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-companion-image', getInitialChar(companion.name), {
-              format: companion.imageFormat || 'landscape',
-              fit: companion.imageFit || 'cover',
-              position: companion.imagePosition || 'top'
-            })}
             <dl>
               <dt>Status</dt><dd style="--ci-status:${escapeHtml(companion.statusColor)}">${escapeHtml(companion.status)}</dd>
-              <dt>Rolle</dt><dd>${escapeHtml(companion.role)}</dd>
-              <dt>Besonderheit</dt><dd>${escapeHtml(companion.summary)}</dd>
+              ${companion.role ? `<dt>Rolle</dt><dd>${escapeHtml(companion.role)}</dd>` : ''}
             </dl>
+            ${companion.summary ? `<p class="ci-companion-summary">${escapeHtml(companion.summary)}</p>` : ''}
+            <small class="ci-companion-link">Profil ansehen <span aria-hidden="true">↗</span></small>
           </button>`).join('')}
+        ${data.companions.length ? '' : '<p class="ci-companion-empty">Noch keine Gefährten eingetragen.</p>'}
       </div>
     </aside>`;
 }
@@ -518,10 +518,8 @@ function buildCharacterInventoryCompanionModal(companion, options = {}) {
       <button class="ci-modal-close" type="button" data-ci-action="close-profile">x</button>
       ${actions}
       <div class="ci-profile-media">
-        ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-profile-image', getInitialChar(companion.name), {
-          format: companion.imageFormat || 'portrait',
-          fit: companion.imageFit || 'cover',
-          position: companion.imagePosition || 'top'
+        ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-profile-image ci-companion-portrait', getInitialChar(companion.name), {
+          format: 'portrait', fit: 'contain', position: 'center'
         })}
         <p>${characterInventoryText(companion.summary)}</p>
       </div>
@@ -743,6 +741,8 @@ function addCharacterInventoryPageItem(page, item) {
   data.items.push(safeItem);
   const merged = mergeCharacterInventoryDataWithItemDb(data);
   page.dataset.ciData = JSON.stringify(merged);
+  const itemCount = page.querySelector('[data-ci-item-count]');
+  if (itemCount) itemCount.textContent = String(merged.items.length);
   const active = safeItem.category || page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || merged.categories[0]?.id || '';
   const center = page.querySelector('.ci-center');
   if (center) center.outerHTML = buildCharacterInventoryItems(merged, active, { readOnly: page.dataset.ciReadonly === 'true' });
@@ -1011,7 +1011,7 @@ document.addEventListener('click', async event => {
     page.querySelectorAll('[data-ci-action="filter-items"]').forEach(button => {
       const active = button === trigger;
       button.classList.toggle('active', active);
-      button.setAttribute('aria-selected', active ? 'true' : 'false');
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     let anyVisible = false;
     page.querySelectorAll('.ci-item-row').forEach(row => {
@@ -1035,6 +1035,7 @@ document.addEventListener('click', async event => {
       overlay.innerHTML = companion ? buildCharacterInventoryCompanionModal(companion, { readOnly: pageReadOnly }) : '';
     }
     overlay.classList.toggle('active', !!overlay.innerHTML);
+    if (overlay.innerHTML && !overlay.open) overlay.showModal();
     return;
   }
   if (action === 'edit-item') {
@@ -1175,11 +1176,23 @@ document.addEventListener('click', async event => {
     event.preventDefault();
     const overlay = page.querySelector('.ci-profile-overlay');
     if (overlay) {
+      overlay.close();
       overlay.classList.remove('active');
       overlay.innerHTML = '';
     }
   }
 });
+
+// Keep keyboard navigation inside the native detail dialog. In particular,
+// Escape must not also close the surrounding archive or comment editor.
+document.addEventListener('keydown', event => {
+  if (event.target?.closest?.('.ci-profile-overlay[open]')) event.stopPropagation();
+}, true);
+
+document.addEventListener('close', event => {
+  if (!event.target?.matches?.('dialog.ci-profile-overlay')) return;
+  event.target.classList.remove('active');
+}, true);
 
 document.addEventListener('input', event => {
   const moneyField = event.target?.closest?.('[data-ci-money-field]');
@@ -1235,12 +1248,16 @@ function buildCharacterInventoryPage(page, entry, pageIndex, total) {
           <h2>${escapeHtml(data.title)}</h2>
           <p>${escapeHtml(data.subtitle)}</p>
         </div>
+        <div class="ci-overview" aria-label="Inventarübersicht">
+          <span><strong data-ci-item-count>${data.items.length}</strong> Einträge</span>
+          <span><strong>${data.companions.length}</strong> Gefährten</span>
+        </div>
       </header>
       <div class="ci-layout">
         ${buildCharacterInventoryLeft(data)}
         ${buildCharacterInventoryItems(data, activeCategory, { readOnly })}
         ${buildCharacterInventoryCompanions(data)}
       </div>
-      <div class="ci-profile-overlay" aria-live="polite"></div>
+      <dialog class="ci-profile-overlay" aria-label="Inventarprofil"></dialog>
     </div>`;
 }
