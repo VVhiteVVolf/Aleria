@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-06T04:08:21.815Z",
+    "sourceExportedAt": "2026-09-06T04:36:36.261Z",
     "sourceUpdatedAt": "2026-09-03T17:54:50.847Z",
     "sourceDocumentIds": [
       "person--haus-wylan--neala-wylan"
     ],
-    "contentHash": "54fd52ad4ef1e8dfe605a19757a9abcb5ce1f4db4f257b56d8d220ca7148831d"
+    "contentHash": "98bdcd45d67dcdc5db0a8cc1d45049570ec624b059d8d0637b76379228889f4b"
   },
   "local": {
     "notes": "",
@@ -449,8 +449,8 @@
           "personId": "neala-wylan",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-06T04:08:21.815Z",
-          "lastSyncedAt": "2026-09-06T04:08:21.815Z",
+          "importedAt": "2026-09-06T04:36:36.261Z",
+          "lastSyncedAt": "2026-09-06T04:36:36.261Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=neala-wylan",
           "fingerprint": "{\"name\":\"Neala Wylan\",\"title\":\"\",\"birth\":\"1693\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-wylan\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/neala-wylan.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyne-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--mervyne-wylan\",\"name\":\"Mervyne Wylan\"},{\"personId\":\"arawn-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--arawn-wylan\",\"name\":\"Arawn Wylan\"}],\"partners\":[{\"personId\":\"shan-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"}],\"children\":[]}}"
         }

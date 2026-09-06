@@ -43198,7 +43198,7 @@ test('ordnet den ausgestorbenen Clan Hjerte als Norrnaigh-Ursprung in Krähenmoo
     culture: 'Norrnaigh',
     successorFamilyIds: ['haus-kummerherz', 'haus-schattenherz', 'haus-feuerherz', 'haus-kaltherz']
   });
-  assert.equal(KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES.length, 24);
+  assert.equal(KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES.length, 25);
   assert.ok(KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES.includes(HOUSE_HJERTE_FAMILY));
   assert.deepEqual(
     createFolderPathFromHouseProfile(KRAEHENMOOR_HOUSE_PROFILES.hjerte),

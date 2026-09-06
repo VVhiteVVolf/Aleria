@@ -1,0 +1,236 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T04:36:36.261Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Biografie nach Benutzervorgaben vom 06.09.2026: Sindre, 24, verstoßener Schwarzstolz-Bastard aus Eldvik; Brandnarbe und Augenklappe nach Angriff des Halbbruders mit Herdglut; Schiffbruch, Wochen auf einem Felsen, Überleben mit Regenwasser und geretteten Vorräten, Rettung als einziger Überlebender durch Idwals Mannschaft und Aufnahme als Bootsmann. Drei positive und drei negative CK2-Eigenschaften, sieben Marotten und Zitate sind im autorisierten Rahmen ergänzt. Das Clanwappen https://i.imgur.com/9Qyz0kB.png und das vorhandene Porträt https://i.imgur.com/LxDm2IG.png liegen unverändert lokal. Die familiären offenen Punkte sind im Clan Schwarzstolz vorgemerkt; keine Namen oder Abstammungskanten zu unbenannten Angehörigen erfunden. Eigentümerkennungen sind aus dem portablen Export entfernt.",
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [],
+    "archived": false,
+    "bio": "Sindre Brandstolz ist der 24-jährige Bootsmann der Tiefenwyrm und ein verstoßener Bastard des Clans Schwarzstolz aus Eldvik. Nach einem Schiffbruch überlebte er wochenlang auf einem kargen Felsen von Regenwasser und geretteten Vorräten. Idwals Mannschaft fand ihn als einzigen Überlebenden, völlig abgemagert, und nahm ihn auf. Heute führt er die Matrosen und hält das Schiff in Ordnung. Seine Brandnarbe und die Augenklappe stammen von einer Prügelei mit seinem Halbbruder, der sein Gesicht in die Herdglut drückte. Sindre ist pflichtbewusst, hilfsbereit und tapfer, aber auch misstrauisch, starrköpfig und jähzornig.",
+    "biography": {
+      "biography": {
+        "abilities": [
+          {
+            "detail": "Sindre sieht die Arbeit, bevor jemand danach ruft: eine lose Befestigung, verschlissenes Tauwerk oder einen Mann, der seine Wache zu sorglos nimmt. Er führt die Matrosen durch den Alltag und bleibt auch bei den unbeliebten Aufgaben dabei. Auf ein gegebenes Wort von ihm kann sich die Mannschaft verlassen.",
+            "icon": "../IconOrdner/Traits%20Icon/Diligent.png",
+            "title": "Pflichtbewusst"
+          },
+          {
+            "detail": "Er hilft lieber mit den Händen als mit tröstenden Reden. Ein unerfahrener Matrose bekommt eine zweite Erklärung, ein erschöpfter Kamerad eine helfende Schulter. Gerade bei denen, die sonst niemand haben will, schaut Sindre genauer hin und lässt sie nicht ohne Weiteres allein.",
+            "icon": "../IconOrdner/Traits%20Icon/Kind.png",
+            "title": "Hilfsbereit"
+          },
+          {
+            "detail": "Gefahr hält ihn nicht davon ab, für seine Kameraden einzustehen. Auf schwankendem Deck behält er die Hände an der Arbeit, auch wenn ihm selbst zum Fürchten zumute ist. Seine Dankbarkeit gegenüber Idwal und der Mannschaft zeigt sich besonders dann, wenn Zurückbleiben unbequem oder riskant wird.",
+            "icon": "../IconOrdner/Traits%20Icon/Brave.png",
+            "title": "Tapfer"
+          },
+          {
+            "detail": "Großen Versprechen und plötzlich freundlichen Fremden traut er wenig. Er sucht hinter einem Angebot rasch nach dem Preis und liest in unbedachten Bemerkungen zuweilen eine Abweisung, die gar nicht beabsichtigt war. Um Hilfe bittet er oft erst, wenn es allein wirklich nicht mehr geht.",
+            "icon": "../IconOrdner/Traits%20Icon/Paranoid.png",
+            "title": "Misstrauisch"
+          },
+          {
+            "detail": "Hat Sindre entschieden, wie eine Arbeit gemacht werden muss, lässt er sich nur schwer davon abbringen. Er kontrolliert manches lieber noch einmal selbst, statt Verantwortung abzugeben, und hört einen gut gemeinten Hinweis gelegentlich wie einen Angriff auf seine Tauglichkeit als Bootsmann.",
+            "icon": "../IconOrdner/Traits%20Icon/Stubborn.png",
+            "title": "Starrköpfig"
+          },
+          {
+            "detail": "Spott über seine Mutter, seine Herkunft oder seine Narben kann seine Geduld in einem Augenblick aufbrauchen. Seine Antwort fällt dann härter und lauter aus, als der Anlass verlangt. Auch ein harmloser Streit bekommt dadurch manchmal eine Schärfe, die er später nur ungern eingesteht.",
+            "icon": "../IconOrdner/Traits%20Icon/Wroth.png",
+            "title": "Jähzornig"
+          }
+        ],
+        "abilitiesTitle": "Persönlichkeit",
+        "biographyText": "<p>Wenn Idwal Draig und seine Gefährten an Land ihren Abenteuern nachgehen, bleibt auf der <em>Tiefenwyrm</em> genug zu tun. <strong>Sindre Brandstolz</strong> verteilt die Arbeit, hält die Matrosen an und sorgt dafür, dass aus einem Schiff voller zurückgelassener Seeleute keine schwimmende Unordnung wird. Mit seinen 24 Jahren ist er ein junger Bootsmann, doch seine Hände kennen Tauwerk, Decksplanken und die kleinen Versäumnisse, aus denen auf See große Schwierigkeiten werden können.</p><p>Brandnarben zeichnen sein Gesicht, über einem Auge trägt er eine Klappe. Sindre erzählt Fremden selten von beidem. Lieber spricht er darüber, was vor dem nächsten Auslaufen noch erledigt werden muss. Seine Zugehörigkeit zur Mannschaft ist ihm ernst: Diese Leute haben ihn lebend von einem kargen Felsen geholt, auf dem alle anderen seiner früheren Besatzung gestorben waren. Dass er heute einen festen Platz an Bord hat, nimmt er nicht als Selbstverständlichkeit hin.</p>",
+        "biographyTitle": "Sindre Brandstolz",
+        "connectionPortraitHeight": 78,
+        "connectionTextOffset": 0,
+        "connections": [
+          {
+            "detail": "Sein Geburtsclan aus Eldvik. Sindre kehrte ihm den Rücken, nachdem er und seine Mutter dort nicht mehr erwünscht waren.",
+            "image": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+            "imageFormat": "square",
+            "name": "Clan Schwarzstolz",
+            "type": "connection"
+          },
+          {
+            "detail": "Sie und Sindre waren im Clan nicht mehr erwünscht. Die Zurückweisung beider führte zu Sindres Bruch mit Schwarzstolz.",
+            "image": "",
+            "imageFormat": "portrait",
+            "name": "Seine Mutter",
+            "type": "connection"
+          },
+          {
+            "detail": "Drückte Sindres Gesicht bei einer eskalierten Prügelei in die Glut des Herdfeuers. Seitdem trägt Sindre die Brandnarbe und die Augenklappe.",
+            "image": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+            "imageFormat": "square",
+            "name": "Sein Schwarzstolz-Halbbruder",
+            "type": "connection"
+          },
+          {
+            "detail": "Sein Kapitän. Idwals Mannschaft rettete Sindre vom Felsen; Idwal nahm ihn als Bootsmann auf.",
+            "image": "https://i.imgur.com/RNqIIO0.png",
+            "imageFormat": "portrait",
+            "name": "Idwal Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "Seine Retter und die Menschen, mit denen er nun zur See fährt. Für ihre Matrosen trägt er als Bootsmann Verantwortung.",
+            "image": "",
+            "imageFormat": "square",
+            "name": "Mannschaft der Tiefenwyrm",
+            "type": "connection"
+          }
+        ],
+        "connectionsTitle": "Herkunft & Gefährten",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-schwarzstolz&mode=view&person=sindre-brandstolz",
+            "text": "Sindres Geburtsclan aus Eldvik im Hesirentum von Schwarzfjord, Krähenmoor, Aldrimar.",
+            "title": "Clan Schwarzstolz"
+          }
+        ],
+        "documentsTitle": "Clan & Herkunft",
+        "extraSections": [
+          {
+            "mode": "text",
+            "position": "afterWorks",
+            "text": "<p>Sindre führt die Decksmannschaft und hält den Betrieb aufrecht, während andere sich mit dem aufregenderen Teil einer Reise beschäftigen. Er teilt Arbeiten ein, achtet auf die Wachen und behält die Dinge im Blick, an die man erst denkt, wenn sie fehlen. Dabei kann er lästig gründlich werden. Für ihn ist ein schlecht verstauter Vorrat oder eine nachlässig erledigte Aufgabe selten eine Kleinigkeit.</p><p>Trotzdem freut er sich jedes Mal, wenn er selbst mit an Land darf. Dann prüft er noch einmal, wer an Bord das Kommando übernimmt, und steht anschließend oft früher am Beiboot, als er zugeben würde. Ein Hafen, ein frisches Fischgericht und ein paar Stunden unter den anderen sind ihm willkommen. Lange hält es ihn jedoch selten fern vom Wasser: Sindre ist eine Seeratte durch und durch.</p>",
+            "title": "Ein Platz an Bord"
+          }
+        ],
+        "footer": "Personenakte · Sindre Brandstolz · Bootsmann der Tiefenwyrm",
+        "historyText": "<p>Sindre stammt als <strong>Bastard des Clans Schwarzstolz</strong> aus <strong>Eldvik im Hesirentum von Schwarzfjord</strong>. Der Clan bot ihm und seiner Mutter schließlich keinen Platz mehr. Als man beide nicht mehr dort haben wollte, kehrte Sindre seiner Herkunft den Rücken. Von da an heuerte er bei wechselnden Mannschaften an und suchte seinen Lebensunterhalt auf See.</p><p>Schon in jüngeren Jahren war ein Streit mit einem Schwarzstolz-Halbbruder in eine Prügelei ausgeartet. Der Halbbruder drückte Sindres Gesicht in die Glut des Herdfeuers. Die Brandnarbe blieb; seit diesem Vorfall trägt Sindre auch die Augenklappe. Über den Bruder spricht er mit knappen Worten, und wer daraus eine unterhaltsame Geschichte machen möchte, verliert rasch jede Aussicht auf ein freundliches Gespräch.</p>",
+        "historyTitle": "Der Bastard aus Eldvik",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [
+          "„Den Knoten noch einmal. Lieber du fluchst jetzt als wir alle beim nächsten Wind.“",
+          "„Wasser kippt man nicht weg, nur weil gerade genug davon da ist.“",
+          "„Ja, ich komm mit an Land. Ich muss nur noch kurz nach dem Schiff sehen.“"
+        ],
+        "quotesTitle": "In eigenen Worten",
+        "sideWidth": 100,
+        "trivia": [
+          "Bei seinen Runden über Deck prüft er fast nebenbei einen Knoten oder eine Befestigung mit der Hand. Manchmal läuft er ein paar Schritte zurück, weil er etwas nur angesehen, aber noch nicht angefasst hat.",
+          "Verschüttetes Trinkwasser ärgert ihn unverhältnismäßig. Beim ersten Regen nach trockenen Tagen wandert sein Blick fast automatisch zu den Gefäßen, in denen sich etwas auffangen ließe.",
+          "Angebrochene Vorräte räumt er ordentlich zusammen und zählt lieber einmal zu viel nach. Wer noch brauchbares Essen wegwerfen will, muss ihm dafür gewöhnlich eine gute Erklärung liefern.",
+          "Am liebsten isst er Fisch. Bei Fleisch will er dagegen noch Blut sehen; wird es ganz durchgebraten serviert, kaut er demonstrativ lange und erkundigt sich trocken, ob man damit auch Lecks abdichten könne.",
+          "Am Herd sucht er sich einen Platz, von dem aus er den Raum überblicken kann. Kommt ihm jemand überraschend nahe ans Gesicht, weicht er zurück, bevor er darüber nachdenkt.",
+          "Vor einem Landgang zählt er alle anfallenden Aufgaben so gewissenhaft auf, als wolle er lieber an Bord bleiben. Sobald seine Ablösung steht, hat er seine eigenen Sachen allerdings auffallend schnell beisammen.",
+          "Seinen Dank zeigt er durch Arbeit. Nach einem guten Wort von Idwal wird er eher am nächsten Morgen eine unangenehme Aufgabe schon erledigt haben, als noch einmal darüber zu sprechen."
+        ],
+        "triviaTitle": "Marotten & Eigenarten",
+        "works": [
+          "Die Mannschaft, bei der Sindre damals angeheuert hatte, geriet auf offenem Meer in einen Sturm. Ihr Schiff lief auf ein Riff. Die Überlebenden retteten sich mit den Vorräten, die sie noch bergen konnten, auf einen kargen Felsen und warteten auf Hilfe.",
+          "Aus Tagen wurden Wochen. Sindre hielt sich mit Regenwasser und den geretteten Vorräten am Leben. Als Idwals Mannschaft den Felsen schließlich fand, waren sämtliche Vorräte aufgezehrt und Sindre der einzige noch lebende Schiffbrüchige. Haut und Knochen war er, als man ihn an Bord holte.",
+          "Sindre verdankt Idwal und dessen Leuten sein Leben. Idwal nahm ihn als Bootsmann in seine Mannschaft auf. Seitdem sorgt Sindre dafür, dass die Matrosen ihre Arbeit kennen und Schiff, Takelage und Ausrüstung in Ordnung bleiben."
+        ],
+        "worksTitle": "Der Felsen im Meer"
+      },
+      "quote": "Geht ihr euren Abenteuern nach. Ich sorg dafür, dass ihr noch ein Schiff habt, wenn ihr zurückkommt.",
+      "quoteBy": "Sindre Brandstolz",
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Sindre Brandstolz"
+        },
+        {
+          "label": "Alter",
+          "value": "24 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Eldvik · Hesirentum von Schwarzfjord"
+        },
+        {
+          "label": "Geburtsclan",
+          "value": "Schwarzstolz"
+        },
+        {
+          "label": "Stellung im Clan",
+          "value": "Bastard · verstoßen"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Bootsmann der Tiefenwyrm"
+        },
+        {
+          "label": "Aufenthalt",
+          "value": "An Bord der Tiefenwyrm"
+        },
+        {
+          "label": "Kennzeichen",
+          "value": "Brandnarbe im Gesicht · Augenklappe"
+        }
+      ]
+    },
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+    "genealogy": {
+      "birth": "",
+      "death": "",
+      "familyRole": "bastard",
+      "houseId": "house-schwarzstolz",
+      "houseName": "Clan Schwarzstolz",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "sex": "male",
+      "sources": [
+        {
+          "familyId": "haus-schwarzstolz",
+          "fingerprint": "{\"name\":\"Sindre Brandstolz\",\"title\":\"Bootsmann der Tiefenwyrm\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-schwarzstolz\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-schwarzstolz/sindre-brandstolz.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Verstoßen\",\"Seefahrer\"],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-09-06T04:36:36.261Z",
+          "lastSyncedAt": "2026-09-06T04:36:36.261Z",
+          "personId": "sindre-brandstolz",
+          "publishedAt": "",
+          "releaseId": "",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-schwarzstolz&mode=view&person=sindre-brandstolz"
+        }
+      ],
+      "status": "alive",
+      "tags": [
+        "Verstoßen",
+        "Seefahrer"
+      ],
+      "worldPersonId": "person--haus-schwarzstolz--sindre-brandstolz"
+    },
+    "id": "tiefenwyrm--sindre-brandstolz",
+    "identity": {
+      "worldPersonId": "person--haus-schwarzstolz--sindre-brandstolz"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Sindre Brandstolz",
+    "origin": "Eldvik, Hesirentum von Schwarzfjord",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-schwarzstolz/sindre-brandstolz.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "Bootsmann",
+    "status": "active",
+    "taxonomyPath": "",
+    "title": "Bootsmann der Tiefenwyrm",
+    "updatedAt": "2026-09-06T04:36:36.261Z"
+  }
+}

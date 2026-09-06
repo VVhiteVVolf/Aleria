@@ -61,6 +61,7 @@ export const KLAUENINSEL_HOUSE_EMBLEMS = Object.freeze({
   eirth: 'assets/images/houses/Klaueninsel/haus-eirth.png',
   selwyn: 'assets/images/houses/Klaueninsel/haus-selwyn.png',
   beryn: 'assets/images/houses/Klaueninsel/haus-beryn.png',
+  dyger: 'assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png',
   'ard-follmhar': 'assets/images/houses/Klaueninsel/haus-ard-follmhar.png'
 });
 
@@ -123,6 +124,7 @@ export const KLAUENINSEL_HOUSE_PROFILES = Object.freeze({
   selwyn: cenyrProfile('knight-prince', CAER_EBIRTH_PATH),
   unigol: cenyrProfile('knight-prince', CAER_MARWOR_PATH),
   beryn: cenyrProfile('knight', TALGARTH_PATH),
+  dyger: cenyrProfile('knight', TALGARTH_PATH),
   'ard-follmhar': cenyrProfile('unknown', ARD_DUNRATH_PATH, {
     liegeHouseId: '',
     liegeHouseName: '',

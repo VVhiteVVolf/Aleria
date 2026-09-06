@@ -82,12 +82,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-06T04:08:21.815Z",
+    "sourceExportedAt": "2026-09-06T04:36:36.261Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "xuov0RNOnSx050zgte73"
     ],
-    "contentHash": "bed0bd571d1d4448b562b3167a56cc09309e37c728a29d0182d648237be2d031"
+    "contentHash": "4a433b100d75a9f2fdc0583894d0afeaa225fcbcb3f88846a2893ef3c87ddd5b"
   },
   "local": {
     "notes": "",
@@ -1172,8 +1172,8 @@
           "personId": "padrig-wyrm",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-06T04:08:21.815Z",
-          "lastSyncedAt": "2026-09-06T04:08:21.815Z",
+          "importedAt": "2026-09-06T04:36:36.261Z",
+          "lastSyncedAt": "2026-09-06T04:36:36.261Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=padrig-wyrm",
           "fingerprint": "{\"name\":\"Padrig Wyrm\",\"title\":\"\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/padrig-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"eiddon-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--eiddon-wyrm\",\"name\":\"Eiddon Wyrm\"},{\"personId\":\"iseult-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--iseult-arwydd\",\"name\":\"Iseult Arwydd\"}],\"partners\":[{\"personId\":\"sorcha-cein\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cein--sorcha-cein\",\"name\":\"Sorcha Céin\"}],\"children\":[{\"personId\":\"gais-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--gais-wyrm\",\"name\":\"Gais Wyrm\"},{\"personId\":\"eilir-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--eilir-wyrm\",\"name\":\"Eilir Wyrm\"},{\"personId\":\"tudor-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--tudor-wyrm\",\"name\":\"Tudor Wyrm\"}]}}"
         }

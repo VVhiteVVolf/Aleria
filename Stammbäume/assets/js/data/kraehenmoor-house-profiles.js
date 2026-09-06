@@ -32,6 +32,11 @@ const NEBELWACHT_PATH = Object.freeze([
   'Hesirentum von Schwarzfjord',
   'Nebelwacht'
 ]);
+const ELDVIK_PATH = Object.freeze([
+  ...KRAEHENMOOR_ROOT,
+  'Hesirentum von Schwarzfjord',
+  'Eldvik'
+]);
 const EXTINCT_ROOT = Object.freeze([...KRAEHENMOOR_ROOT, 'Ausgestorbene Clans']);
 
 export const KRAEHENMOOR_EXTINCT_CLAN_GROUPS = Object.freeze({
@@ -61,6 +66,7 @@ export const KRAEHENMOOR_HOUSE_EMBLEMS = Object.freeze({
   feuerherz: `${HOUSE_ROOT}/clan-feuerherz.png`,
   vragi: `${HOUSE_ROOT}/clan-vragi.png`,
   schwarzblut: `${HOUSE_ROOT}/clan-schwarzblut.png`,
+  schwarzstolz: `${HOUSE_ROOT}/clan-schwarzstolz.png`,
   goldglanz: `${HOUSE_ROOT}/clan-goldglanz.png`,
   goldschwur: `${HOUSE_ROOT}/clan-goldschwur.png`,
   goldhand: `${HOUSE_ROOT}/clan-goldhand.png`,
@@ -184,6 +190,11 @@ export const KRAEHENMOOR_HOUSE_PROFILES = Object.freeze({
     seatEmblem: KRAEHENMOOR_REGION_EMBLEMS.rabenhain
   }),
   schwarzblut: kraehenmoorProfile('hesire', NEBELWACHT_PATH, {
+    baronyEmblem: KRAEHENMOOR_REGION_EMBLEMS.schwarzfjord
+  }),
+  schwarzstolz: kraehenmoorProfile('unknown', ELDVIK_PATH, {
+    liegeHouseId: '',
+    liegeHouseName: '',
     baronyEmblem: KRAEHENMOOR_REGION_EMBLEMS.schwarzfjord
   }),
   goldglanz: kraehenmoorProfile('hesire', SILBERQUELL_PATH, {

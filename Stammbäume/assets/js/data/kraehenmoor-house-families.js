@@ -10,6 +10,7 @@ import { HOUSE_GOLDGLANZ_FAMILY } from './house-goldglanz-family.js';
 import { HOUSE_KALTHERZ_FAMILY } from './house-kaltherz-family.js';
 import { HOUSE_SCHATTENHERZ_FAMILY } from './house-schattenherz-family.js';
 import { HOUSE_SCHWARZBLUT_FAMILY } from './house-schwarzblut-family.js';
+import { HOUSE_SCHWARZSTOLZ_FAMILY } from './house-schwarzstolz-family.js';
 import { HOUSE_SILBERBLUT_FAMILY } from './house-silberblut-family.js';
 import { HOUSE_VRAGI_FAMILY } from './house-vragi-family.js';
 import {
@@ -172,6 +173,7 @@ function extinctClanFamily(definition) {
 }
 
 export const KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
+  HOUSE_SCHWARZSTOLZ_FAMILY,
   ...KRAEHENMOOR_ACTIVE_CLAN_DEFINITIONS.map(activeClanFamily),
   ...KRAEHENMOOR_HUSKARL_CLAN_DEFINITIONS.map(huskarlClanFamily),
   ...KRAEHENMOOR_CIVIL_CLAN_DEFINITIONS.map(civilClanFamily),

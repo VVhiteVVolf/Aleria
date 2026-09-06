@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/registry-browser.test.js tests/house-bradrhith.test.js && node tests/run-tests.js"
+    "test": "node --test tests/registry-browser.test.js tests/house-bradrhith.test.js tests/crew-family-records.test.js && node tests/run-tests.js"
   }
 }
