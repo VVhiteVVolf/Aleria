@@ -1,0 +1,241 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T03:18:40.327Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Übernahme von Idwals Schiffsmannschaft am 06.09.2026. Rolle: Wachmeister. Biografiequelle: Stammbäume/assets/data/published-families/haus-aelmor.json. Bestehende Kampf-, Inventar- und Bilddaten wurden beim Online-Import nicht verändert. Eigentümerkennungen sind aus diesem portablen Export entfernt.",
+  "character": {
+    "id": "person--haus-aelmor--rhodri-aelmor",
+    "activeImageSetId": "",
+    "genealogy": {
+      "worldPersonId": "person--haus-aelmor--rhodri-aelmor",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1720",
+      "death": "",
+      "houseId": "house-aelmor",
+      "houseName": "Haus Aelmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "20 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-aelmor",
+          "personId": "rhodri-aelmor",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-aelmor&mode=view&person=rhodri-aelmor",
+          "fingerprint": "{\"name\":\"Rhodri Aelmor\",\"title\":\"Jüngerer Sohn Goronwy Aelmors\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-aelmor\",\"portrait\":\"https://i.imgur.com/RE5WMSF.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"20 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"goronwy-aelmor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aelmor--goronwy-aelmor\",\"name\":\"Goronwy Aelmor\"},{\"personId\":\"catrin-spouse-aelmor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-aelmor\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "goronwy-aelmor",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aelmor--goronwy-aelmor",
+            "name": "Goronwy Aelmor"
+          },
+          {
+            "personId": "catrin-spouse-aelmor",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--catrin-spouse-aelmor",
+            "name": "Catrin"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "emotesOverride": false,
+    "bio": "Rhodri entstammt dem bürgerlichen Haus Aelmor aus Gwynthor, bekannten Seeleuten, die dem Haus Draig seit jeher fähige Waffenknechte stellten. Obwohl ein bürgerliches Haus, war bereits sein Großvater Ritter im Dienste Rhodris und kämpfte einst oben in Vennyr. Rhodri selbst diente ihm als Knappe und wuchs so mit dem Handwerk der Waffen auf.\n\nNach seinem Ritterschlag - den sein Großvater auf Empfehlung von Graf Galahad Draig erwirkte - trat Rhodri in die Dienste des Prinzen Idwal Draig.",
+    "portrait": "https://i.imgur.com/RE5WMSF.png",
+    "role": "Wachmeister",
+    "relevance": "",
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "imageSets": [],
+    "emotes": [],
+    "profileLink": "",
+    "playerOwner": "",
+    "imageSetSchemaVersion": 0,
+    "title": "Wachmeister der Tiefenwyrm",
+    "imageSetsOverride": false,
+    "aliases": [],
+    "origin": "",
+    "name": "Rhodri Aelmor",
+    "archived": false,
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "identity": {
+      "worldPersonId": "person--haus-aelmor--rhodri-aelmor"
+    },
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "inventory": null,
+    "status": "active",
+    "plotNode": "",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhodri Aelmor"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Aelmor"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Jüngerer Sohn Goronwy Aelmors"
+        },
+        {
+          "label": "Geboren",
+          "value": "1720"
+        },
+        {
+          "label": "Geburtsort",
+          "value": ""
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "20 Jahre"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Ritter, bürgerlicher Herkunft"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Wachmeister der Tiefenwyrm"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "An Bord der Tiefenwyrm"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Biografie",
+        "biographyText": "Rhodri entstammt dem bürgerlichen Haus Aelmor aus Gwynthor, bekannten Seeleuten, die dem Haus Draig seit jeher fähige Waffenknechte stellten. Obwohl ein bürgerliches Haus, war bereits sein Großvater Ritter im Dienste Rhodris und kämpfte einst oben in Vennyr. Rhodri selbst diente ihm als Knappe und wuchs so mit dem Handwerk der Waffen auf.<br><br>Nach seinem Ritterschlag - den sein Großvater auf Empfehlung von <strong>Graf Galahad Draig</strong> erwirkte - trat Rhodri in die Dienste des Prinzen <strong>Idwal Draig</strong>.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Ausdauernd",
+            "detail": "Stunden im Training oder auf Wache können ihn nicht erschöpfen; er hält durch, wo andere längst aufgeben.",
+            "icon": "../IconOrdner/Traits Icon/Tough_soldier.png"
+          },
+          {
+            "title": "Stolz",
+            "detail": "Als Enkel des ersten Ritters der Aelmor lässt er niemanden vergessen, wofür seine Familie steht - manchmal mehr, als es die Situation verlangt.",
+            "icon": "../IconOrdner/Traits Icon/Proud.png"
+          },
+          {
+            "title": "Ehrgeizig",
+            "detail": "Er will sich seinen Rang nicht nur durch Herkunft, sondern durch eigene Leistung verdienen und immer wieder aufs Neue beweisen.",
+            "icon": "../IconOrdner/Traits Icon/Ambitious.png"
+          },
+          {
+            "title": "Jähzornig",
+            "detail": "Geduld ist nicht seine Stärke; bei Nachlässigkeit im Training kann seine Stimme schnell laut werden.",
+            "icon": "../IconOrdner/Traits Icon/Wroth.png"
+          },
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Ein gegebener Befehl wird ausgeführt, ganz gleich wie unbequem er ist.",
+            "icon": "../IconOrdner/Traits Icon/Diligent.png"
+          },
+          {
+            "title": "Kräftig",
+            "detail": "Jahre des Waffentrainings haben ihn zu einem der kräftigsten Männer an Bord gemacht.",
+            "icon": "../IconOrdner/Traits Icon/Brawny.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Hintergrund",
+        "historyText": "Heute dient Rhodri als <strong>Wachmeister</strong> an Bord der <em>Tiefenwyrm</em>. Er führt die Bordwachen und sorgt für Sicherheit, Ordnung und die Verteidigung des Schiffes. Daneben leitet er die Waffenknechte an, überwacht deren Ausbildung im Kampf und weiß auch dem einen oder anderen Ritter noch etwas beizubringen.",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Sein Ritterschlag geht auf eine persönliche Empfehlung Graf Galahad Draigs zurück, die sein Großvater für ihn erwirkte."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Vertrauenspersonen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Idwal Draig",
+            "detail": "Kapitän & Prinz, dem er dient",
+            "image": "https://i.imgur.com/ENTDAnR.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Gönner",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Graf Galahad Draig",
+            "detail": "Schlug ihn auf bitte seines Großvaters zum Ritter",
+            "image": "https://i.imgur.com/pMBIs7H.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Verbindungen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Mannschaft der Tiefenwyrm",
+            "detail": "Wachmeister",
+            "image": "https://i.imgur.com/UvZ5sUf.png",
+            "imageFormat": "square"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Personenakte · Rhodri Aelmor"
+      }
+    },
+    "fraktion": "Haus Aelmor"
+  }
+}

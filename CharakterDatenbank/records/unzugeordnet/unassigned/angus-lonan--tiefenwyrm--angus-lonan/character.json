@@ -1,0 +1,149 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--tiefenwyrm--angus-lonan",
+  "slug": "angus-lonan",
+  "identity": {
+    "name": "Angus Lònan",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "tiefenwyrm--angus-lonan",
+      "documentIds": [
+        "tiefenwyrm--angus-lonan"
+      ],
+      "documents": [
+        {
+          "documentId": "tiefenwyrm--angus-lonan",
+          "createdAt": "2026-09-06T03:18:40.327Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
+    "sourceDocumentIds": [
+      "tiefenwyrm--angus-lonan"
+    ],
+    "contentHash": "dc26faf52f7dae9dc1e8b35a5ae85c22384fb8c99adfa36c3ae3c453a291221a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "tiefenwyrm--angus-lonan",
+        "title": "Proviantmeister der Tiefenwyrm",
+        "imageSetsOverride": false,
+        "imageSetSchemaVersion": 0,
+        "emotesOverride": false,
+        "role": "Proviantmeister",
+        "biography": null,
+        "portrait": "https://i.imgur.com/UifKxKa.png",
+        "inventory": null,
+        "archived": false,
+        "profileLink": "",
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "origin": "",
+        "createdAt": "2026-09-06T03:18:40.327Z",
+        "imageSets": [],
+        "plotNode": "",
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "playerOwner": "",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "bio": "Verwaltet Lebensmittel, Trinkwasser und Verbrauchsgüter und überwacht deren Ausgabe.",
+        "aliases": [],
+        "relevance": "",
+        "status": "active",
+        "name": "Angus Lònan",
+        "activeImageSetId": "",
+        "emotes": [],
+        "taxonomyPath": "",
+        "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig"
+      }
+    ]
+  },
+  "character": {
+    "id": "tiefenwyrm--angus-lonan",
+    "title": "Proviantmeister der Tiefenwyrm",
+    "imageSetsOverride": false,
+    "imageSetSchemaVersion": 0,
+    "emotesOverride": false,
+    "role": "Proviantmeister",
+    "biography": null,
+    "portrait": "https://i.imgur.com/UifKxKa.png",
+    "inventory": null,
+    "archived": false,
+    "profileLink": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "origin": "",
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "imageSets": [],
+    "plotNode": "",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "playerOwner": "",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "bio": "Verwaltet Lebensmittel, Trinkwasser und Verbrauchsgüter und überwacht deren Ausgabe.",
+    "aliases": [],
+    "relevance": "",
+    "status": "active",
+    "name": "Angus Lònan",
+    "activeImageSetId": "",
+    "emotes": [],
+    "taxonomyPath": "",
+    "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

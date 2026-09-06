@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 
 export const CHARACTER_DATABASE_SCHEMA_VERSION = 1;
 const CHARACTER_OVERLAY_MARKER = '__aleriaCharacterOverlay';
+const CHARACTER_SNAPSHOT_MARKER = '__aleriaCharacterSnapshot';
 
 const GROUP_TABS = new Map([
   ['zum roten drachen', 'Zum Roten Drachen'],
@@ -342,9 +343,15 @@ function sourcePriority(character) {
   return meaningfulSize(character) * 1_000_000 + Math.floor(updatedAt / 1000);
 }
 
-export function markCharacterDatabaseOverlay(character = {}) {
+export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFields = false } = {}) {
   Object.defineProperty(character, CHARACTER_OVERLAY_MARKER, {
     value: true,
+    enumerable: false,
+    configurable: false,
+    writable: false
+  });
+  Object.defineProperty(character, CHARACTER_SNAPSHOT_MARKER, {
+    value: replaceExportedFields === true,
     enumerable: false,
     configurable: false,
     writable: false
@@ -399,6 +406,12 @@ function groupArchiveCharacters(characters = []) {
       .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile)
       .sort((first, second) => sourcePriority(second) - sourcePriority(first))[0];
     if (combatOverlay) merged.combatProfile = structuredClone(combatOverlay.combatProfile);
+    // Verified exports own their supplied fields, including empty lists and nulls.
+    // Merging their nested arrays would resurrect removed items or duplicate companions.
+    const snapshotOverlays = sourceCharacters
+      .filter(character => character?.[CHARACTER_SNAPSHOT_MARKER] === true)
+      .sort((first, second) => (Date.parse(text(first.updatedAt)) || 0) - (Date.parse(text(second.updatedAt)) || 0));
+    snapshotOverlays.forEach(character => Object.assign(merged, structuredClone(character)));
     merged.id = canonicalDocumentId;
     merged.aliases = uniqueBy([
       ...(Array.isArray(merged.aliases) ? merged.aliases : []),

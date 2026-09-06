@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
     "sourceUpdatedAt": "2026-07-18T19:39:59.319Z",
     "sourceDocumentIds": [
       "person--haus-arwydd--iseult-arwydd"
     ],
-    "contentHash": "cd3da5881f2a56fac84805e3bca0abb90af75abc2789a33958f4ca6d376b3b88"
+    "contentHash": "c6eb99fd25cda3e7b7dad83736566eecc2f3a79899834e0fd3a3dc482622c26f"
   },
   "local": {
     "notes": "",
@@ -1422,8 +1422,8 @@
           "personId": "iseult-arwydd",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T04:52:04.569Z",
-          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=iseult-arwydd",
           "fingerprint": "{\"name\":\"Iseult Arwydd\",\"title\":\"\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-arwydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/iseult-arwydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eiddon-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--eiddon-wyrm\",\"name\":\"Eiddon Wyrm\"}],\"children\":[{\"personId\":\"bronwyn-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--bronwyn-wyrm\",\"name\":\"Bronwyn Wyrm\"},{\"personId\":\"padrig-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"},{\"personId\":\"meriel-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--meriel-wyrm\",\"name\":\"Meriel Wyrm\"}]}}"
         }

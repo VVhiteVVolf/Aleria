@@ -1,0 +1,149 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--tiefenwyrm--murdo-marlon",
+  "slug": "murdo-marlon",
+  "identity": {
+    "name": "Murdo Marlòn",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "tiefenwyrm--murdo-marlon",
+      "documentIds": [
+        "tiefenwyrm--murdo-marlon"
+      ],
+      "documents": [
+        {
+          "documentId": "tiefenwyrm--murdo-marlon",
+          "createdAt": "2026-09-06T03:18:40.327Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
+    "sourceDocumentIds": [
+      "tiefenwyrm--murdo-marlon"
+    ],
+    "contentHash": "140fc9414413c6837a13bdc75e7a8934458f9596bb4150eb38d8bdfb13598c07"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "tiefenwyrm--murdo-marlon",
+        "playerOwner": "",
+        "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "profileLink": "",
+        "status": "active",
+        "relevance": "",
+        "role": "Schiffskoch",
+        "archived": false,
+        "aliases": [],
+        "name": "Murdo Marlòn",
+        "biography": null,
+        "plotNode": "",
+        "title": "Schiffskoch der Tiefenwyrm",
+        "taxonomyPath": "",
+        "bio": "Bereitet die Mahlzeiten zu und sorgt dafür, dass die Besatzung auch auf langen Fahrten ausreichend versorgt wird.",
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "emotesOverride": false,
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "activeImageSetId": "",
+        "portrait": "https://i.imgur.com/sCA9xaB.png",
+        "imageSetsOverride": false,
+        "createdAt": "2026-09-06T03:18:40.327Z",
+        "emotes": [],
+        "origin": "",
+        "inventory": null
+      }
+    ]
+  },
+  "character": {
+    "id": "tiefenwyrm--murdo-marlon",
+    "playerOwner": "",
+    "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "profileLink": "",
+    "status": "active",
+    "relevance": "",
+    "role": "Schiffskoch",
+    "archived": false,
+    "aliases": [],
+    "name": "Murdo Marlòn",
+    "biography": null,
+    "plotNode": "",
+    "title": "Schiffskoch der Tiefenwyrm",
+    "taxonomyPath": "",
+    "bio": "Bereitet die Mahlzeiten zu und sorgt dafür, dass die Besatzung auch auf langen Fahrten ausreichend versorgt wird.",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "emotesOverride": false,
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "activeImageSetId": "",
+    "portrait": "https://i.imgur.com/sCA9xaB.png",
+    "imageSetsOverride": false,
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "emotes": [],
+    "origin": "",
+    "inventory": null,
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

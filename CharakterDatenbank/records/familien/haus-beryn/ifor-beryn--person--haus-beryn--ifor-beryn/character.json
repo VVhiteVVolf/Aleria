@@ -51,6 +51,7 @@
       "collection": "characters",
       "documentId": "person--haus-beryn--ifor-beryn",
       "documentIds": [
+        "person--haus-beryn--ifor-beryn",
         "person--haus-beryn--ifor-beryn"
       ],
       "documents": [
@@ -58,6 +59,11 @@
           "documentId": "person--haus-beryn--ifor-beryn",
           "createdAt": "2026-08-09T07:53:46.396Z",
           "updatedAt": "2026-08-09T07:53:46.396Z"
+        },
+        {
+          "documentId": "person--haus-beryn--ifor-beryn",
+          "createdAt": "2026-08-09T07:53:46.396Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
         }
       ]
     },
@@ -74,12 +80,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
-    "sourceUpdatedAt": "2026-08-09T07:53:46.396Z",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
     "sourceDocumentIds": [
+      "person--haus-beryn--ifor-beryn",
       "person--haus-beryn--ifor-beryn"
     ],
-    "contentHash": "f26bcd198ecb54bf1ec732196463624ad64c7478e756238b3d462ea9f843375f"
+    "contentHash": "b3052e29831b2a978dc4afda1b148dc6c282786b007110b24126a92e41dc3f49"
   },
   "local": {
     "notes": "",
@@ -169,88 +176,449 @@
         "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
         "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
         "updatedAt": "2026-08-09T07:53:46.396Z"
+      },
+      {
+        "id": "person--haus-beryn--ifor-beryn",
+        "emotesOverride": false,
+        "archived": false,
+        "emotes": [],
+        "imageSetSchemaVersion": 0,
+        "plotNode": "",
+        "inventory": null,
+        "genealogy": {
+          "worldPersonId": "person--haus-beryn--ifor-beryn",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1712",
+          "death": "",
+          "houseId": "house-beryn",
+          "houseName": "Haus Beryn",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "Dritter Sohn",
+            "Unverheiratet"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-beryn",
+              "personId": "ifor-beryn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-08-09T07:53:46.396Z",
+              "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn",
+              "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "rhodri-beryn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-beryn--rhodri-beryn",
+                "name": "Rhodri Beryn"
+              },
+              {
+                "personId": "angharad-rhodri-spouse",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--angharad-rhodri-spouse",
+                "name": "Angharad"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
+        "name": "Ifor Beryn",
+        "status": "active",
+        "origin": "",
+        "fraktion": "Haus Beryn",
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "imageSets": [],
+        "identity": {
+          "worldPersonId": "person--haus-beryn--ifor-beryn"
+        },
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "role": "Steuermann",
+        "playerOwner": "",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Voller Name",
+              "value": "Ifor Beryn"
+            },
+            {
+              "label": "Titel",
+              "value": "Ritter"
+            },
+            {
+              "label": "Alter",
+              "value": "28"
+            },
+            {
+              "label": "Geburtsjahr",
+              "value": "1712"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Klauen Inseln - Talgarth"
+            },
+            {
+              "label": "Eltern",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Klasse",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Spezialisierung",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Lehensherr",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Zugehörigkeit",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Status",
+              "value": "Aktiv"
+            }
+          ],
+          "quote": "„Ein Leitsat.“",
+          "quoteBy": "— Name",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Sir Ifor Beryn stammt aus dem kleinen Rittergeschlecht Beryn<br>von den Klaueninseln, das dem Hause Arth seit Generationen treu dient. Die<br>Beryn besitzen weder großen Reichtum noch ausgedehnte Ländereien, genießen<br>jedoch als erfahrene Seeritter einen guten Ruf. Seit Generationen dienen<br>Angehörige des Hauses auf den Schiffen der Grafen von Arth und verbinden das<br>klassische Ritterhandwerk mit den Anforderungen des Seekrieges.<br><br>Ifor wuchs entsprechend sowohl mit Schwert und Rüstung als auch mit Segeln,<br>Tauen und dem Steuer eines Schiffes auf. Er ist ein fähiger Kämpfer zu Land,<br>fühlt sich jedoch auf einem schwankenden Deck ebenso selbstverständlich zu<br>Hause.",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Besonnen",
+                "detail": "Ifor lässt sich nur schwer aus der Ruhe bringen und denkt lieber einen Augenblick länger nach, bevor er handelt.",
+                "icon": "../IconOrdner/Traits Icon/Patient.png"
+              },
+              {
+                "title": "Mürrisch",
+                "detail": "Er ist notorisch griesgrämig, brummig und schnell genervt.",
+                "icon": "../IconOrdner/Traits Icon/Brooding.png"
+              },
+              {
+                "title": "Direkt",
+                "detail": "Er spricht offen aus, wenn er eine Entscheidung für falsch hält – auch gegenüber einem Prinzen.",
+                "icon": "../IconOrdner/Traits Icon/Honest.png"
+              },
+              {
+                "title": "Loyal",
+                "detail": "Seine Treue gilt traditionell Haus Arth, inzwischen jedoch ebenso den Männern, mit denen er selbst zur See fährt.",
+                "icon": "../IconOrdner/Traits Icon/Conscientious.png"
+              },
+              {
+                "title": "Pragmatisch",
+                "detail": "Pragmatisch Für romantische Vorstellungen vom Leben auf See hat Ifor wenig übrig. Ein Schiff muss schwimmen, eine Mannschaft funktionieren und am Ende möglichst jeder wieder nach Hause kommen.",
+                "icon": "../IconOrdner/Traits Icon/Administrator.png"
+              },
+              {
+                "title": "Standfest",
+                "detail": "Standfest Ifor widerspricht seinem Kapitän, wenn er es für notwendig hält. Ist eine Entscheidung jedoch gefallen, führt er sie ebenso entschlossen aus.",
+                "icon": "../IconOrdner/Traits Icon/Unyielding_leader.png"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Hintergrund",
+            "historyText": "Während Idwals Knappenzeit bei Sir Parzifal Arth lernte Ifor den jungen Draig kennen. Als Idwal später ein eigenes Schiff und Kommando erhielt, stellte Parzifal ihm bewusst den bereits erfahreneren Ritter zur Seite.<br><br>Seitdem dient Ifor als Steuermann auf Idwals Schiff. Er gehört zu den Männern, auf deren Urteil Idwal sich verlassen kann – auch wenn dieser ausgesprochen häufig behauptet, Ifor gehe ihm auf die Nerven.",
+            "worksTitle": "Sonstiges",
+            "works": [
+              "Er steuert das Schiff mit ruhiger Hand, selbst im Sturm.",
+              "Ifor ist erfahren im Steuern von Schiffen und im Kampf auf See.",
+              "Er kennt die Gewässer von Celtigerns Wacht, der Klaueninseln und des nördlichen Cenyrs aus-gezeichnet.",
+              "Trevor hält ihn für unverzichtbar.  Idwal möchte ihn gelegentlich hinauswerfen."
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Ifor ist für gewöhnlich derjenige, der gemeinsame Trinkgelage beendet, sobald Idwal und Trevor endgültig jedes vernünftige Maß verloren haben. Nicht selten besteht sein letzter Dienst des Abends darin, einen oder beide in ihre Kajüten beziehungsweise Betten zu schlei-fen.",
+              "Er behauptet, Idwal und Trevor würden nach solchen Abenden „müffeln“. Auf Nachfrage wei-gert er sich, näher auszuführen, wonach.",
+              "Dass Ifor selbst durchaus trinkt, ändert nichts daran, dass er erstaunlicherweise fast immer derje-nige ist, der am Ende noch stehen kann.",
+              "Idwal  betrachtet diese Eigenschaft vermutlich als weiteren Beweis dafür, dass mit Ifor irgendetwas nicht stimmt."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Hört mit der Scheisse auf!.“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Haus Beryn",
+                "detail": "Mitglied des Hauses",
+                "image": "https://dieweltvonaleria.netlify.app/stammb%C3%A4ume/assets/images/houses/Klaueninsel/haus-beryn.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "heading",
+                "title": "Neue Gruppe",
+                "detail": ""
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "Disziplin ist unser Schild. Wissen ist unsere Waffe."
+          }
+        },
+        "relevance": "",
+        "bio": "Sir Ifor Beryn stammt aus dem kleinen Rittergeschlecht Beryn\nvon den Klaueninseln, das dem Hause Arth seit Generationen treu dient. Die\nBeryn besitzen weder großen Reichtum noch ausgedehnte Ländereien, genießen\njedoch als erfahrene Seeritter einen guten Ruf. Seit Generationen dienen\nAngehörige des Hauses auf den Schiffen der Grafen von Arth und verbinden das\nklassische Ritterhandwerk mit den Anforderungen des Seekrieges.\n\nIfor wuchs entsprechend sowohl mit Schwert und Rüstung als auch mit Segeln,\nTauen und dem Steuer eines Schiffes auf. Er ist ein fähiger Kämpfer zu Land,\nfühlt sich jedoch auf einem schwankenden Deck ebenso selbstverständlich zu\nHause.",
+        "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
+        "imageSetsOverride": false,
+        "profileLink": "",
+        "aliases": [],
+        "createdAt": "2026-08-09T07:53:46.396Z",
+        "activeImageSetId": ""
       }
     ]
   },
   "character": {
-    "activeImageSetId": "",
-    "aliases": [],
-    "archived": false,
-    "bio": "",
-    "biography": null,
-    "createdAt": "2026-08-09T07:53:46.396Z",
-    "currentLocation": "",
-    "emotes": [],
+    "id": "person--haus-beryn--ifor-beryn",
     "emotesOverride": false,
-    "fraktion": "Haus Beryn",
+    "archived": false,
+    "emotes": [],
+    "imageSetSchemaVersion": 0,
+    "plotNode": "",
+    "inventory": null,
     "genealogy": {
+      "worldPersonId": "person--haus-beryn--ifor-beryn",
+      "sex": "male",
+      "status": "alive",
       "birth": "1712",
       "death": "",
-      "familyRole": "core",
       "houseId": "house-beryn",
       "houseName": "Haus Beryn",
+      "familyRole": "core",
       "portraitPlaceholder": "auto",
-      "relationships": {
-        "children": [],
-        "parents": [
-          {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Rhodri Beryn",
-            "personId": "rhodri-beryn",
-            "type": "biological",
-            "worldPersonId": "person--haus-beryn--rhodri-beryn"
-          },
-          {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Angharad",
-            "personId": "angharad-rhodri-spouse",
-            "type": "biological",
-            "worldPersonId": "person--family-tree--angharad-rhodri-spouse"
-          }
-        ],
-        "partners": []
-      },
-      "sex": "male",
-      "sources": [
-        {
-          "familyId": "haus-beryn",
-          "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}",
-          "importedAt": "2026-08-09T07:53:46.396Z",
-          "lastSyncedAt": "2026-08-09T07:53:46.396Z",
-          "personId": "ifor-beryn",
-          "publishedAt": "",
-          "releaseId": "",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn"
-        }
-      ],
-      "status": "alive",
       "tags": [
         "Dritter Sohn",
         "Unverheiratet"
       ],
-      "worldPersonId": "person--haus-beryn--ifor-beryn"
+      "sources": [
+        {
+          "familyId": "haus-beryn",
+          "personId": "ifor-beryn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-09T07:53:46.396Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-beryn&mode=view&person=ifor-beryn",
+          "fingerprint": "{\"name\":\"Ifor Beryn\",\"title\":\"Dritter Sohn der Hauptlinie · 28 Jahre\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-beryn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Dritter Sohn\",\"Unverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"rhodri-beryn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-beryn--rhodri-beryn\",\"name\":\"Rhodri Beryn\"},{\"personId\":\"angharad-rhodri-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--angharad-rhodri-spouse\",\"name\":\"Angharad\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "rhodri-beryn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-beryn--rhodri-beryn",
+            "name": "Rhodri Beryn"
+          },
+          {
+            "personId": "angharad-rhodri-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--angharad-rhodri-spouse",
+            "name": "Angharad"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
     },
-    "id": "person--haus-beryn--ifor-beryn",
+    "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
+    "name": "Ifor Beryn",
+    "status": "active",
+    "origin": "",
+    "fraktion": "Haus Beryn",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "imageSets": [],
     "identity": {
       "worldPersonId": "person--haus-beryn--ifor-beryn"
     },
-    "imageSets": [],
-    "imageSetSchemaVersion": 0,
-    "imageSetsOverride": false,
-    "inventory": null,
-    "name": "Ifor Beryn",
-    "origin": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "role": "Steuermann",
     "playerOwner": "",
-    "plotNode": "",
-    "portrait": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
-    "profileLink": "",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Voller Name",
+          "value": "Ifor Beryn"
+        },
+        {
+          "label": "Titel",
+          "value": "Ritter"
+        },
+        {
+          "label": "Alter",
+          "value": "28"
+        },
+        {
+          "label": "Geburtsjahr",
+          "value": "1712"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Klauen Inseln - Talgarth"
+        },
+        {
+          "label": "Eltern",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Klasse",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Spezialisierung",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Lehensherr",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Zugehörigkeit",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Status",
+          "value": "Aktiv"
+        }
+      ],
+      "quote": "„Ein Leitsat.“",
+      "quoteBy": "— Name",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Biografie",
+        "biographyText": "Sir Ifor Beryn stammt aus dem kleinen Rittergeschlecht Beryn<br>von den Klaueninseln, das dem Hause Arth seit Generationen treu dient. Die<br>Beryn besitzen weder großen Reichtum noch ausgedehnte Ländereien, genießen<br>jedoch als erfahrene Seeritter einen guten Ruf. Seit Generationen dienen<br>Angehörige des Hauses auf den Schiffen der Grafen von Arth und verbinden das<br>klassische Ritterhandwerk mit den Anforderungen des Seekrieges.<br><br>Ifor wuchs entsprechend sowohl mit Schwert und Rüstung als auch mit Segeln,<br>Tauen und dem Steuer eines Schiffes auf. Er ist ein fähiger Kämpfer zu Land,<br>fühlt sich jedoch auf einem schwankenden Deck ebenso selbstverständlich zu<br>Hause.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Besonnen",
+            "detail": "Ifor lässt sich nur schwer aus der Ruhe bringen und denkt lieber einen Augenblick länger nach, bevor er handelt.",
+            "icon": "../IconOrdner/Traits Icon/Patient.png"
+          },
+          {
+            "title": "Mürrisch",
+            "detail": "Er ist notorisch griesgrämig, brummig und schnell genervt.",
+            "icon": "../IconOrdner/Traits Icon/Brooding.png"
+          },
+          {
+            "title": "Direkt",
+            "detail": "Er spricht offen aus, wenn er eine Entscheidung für falsch hält – auch gegenüber einem Prinzen.",
+            "icon": "../IconOrdner/Traits Icon/Honest.png"
+          },
+          {
+            "title": "Loyal",
+            "detail": "Seine Treue gilt traditionell Haus Arth, inzwischen jedoch ebenso den Männern, mit denen er selbst zur See fährt.",
+            "icon": "../IconOrdner/Traits Icon/Conscientious.png"
+          },
+          {
+            "title": "Pragmatisch",
+            "detail": "Pragmatisch Für romantische Vorstellungen vom Leben auf See hat Ifor wenig übrig. Ein Schiff muss schwimmen, eine Mannschaft funktionieren und am Ende möglichst jeder wieder nach Hause kommen.",
+            "icon": "../IconOrdner/Traits Icon/Administrator.png"
+          },
+          {
+            "title": "Standfest",
+            "detail": "Standfest Ifor widerspricht seinem Kapitän, wenn er es für notwendig hält. Ist eine Entscheidung jedoch gefallen, führt er sie ebenso entschlossen aus.",
+            "icon": "../IconOrdner/Traits Icon/Unyielding_leader.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Hintergrund",
+        "historyText": "Während Idwals Knappenzeit bei Sir Parzifal Arth lernte Ifor den jungen Draig kennen. Als Idwal später ein eigenes Schiff und Kommando erhielt, stellte Parzifal ihm bewusst den bereits erfahreneren Ritter zur Seite.<br><br>Seitdem dient Ifor als Steuermann auf Idwals Schiff. Er gehört zu den Männern, auf deren Urteil Idwal sich verlassen kann – auch wenn dieser ausgesprochen häufig behauptet, Ifor gehe ihm auf die Nerven.",
+        "worksTitle": "Sonstiges",
+        "works": [
+          "Er steuert das Schiff mit ruhiger Hand, selbst im Sturm.",
+          "Ifor ist erfahren im Steuern von Schiffen und im Kampf auf See.",
+          "Er kennt die Gewässer von Celtigerns Wacht, der Klaueninseln und des nördlichen Cenyrs aus-gezeichnet.",
+          "Trevor hält ihn für unverzichtbar.  Idwal möchte ihn gelegentlich hinauswerfen."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Ifor ist für gewöhnlich derjenige, der gemeinsame Trinkgelage beendet, sobald Idwal und Trevor endgültig jedes vernünftige Maß verloren haben. Nicht selten besteht sein letzter Dienst des Abends darin, einen oder beide in ihre Kajüten beziehungsweise Betten zu schlei-fen.",
+          "Er behauptet, Idwal und Trevor würden nach solchen Abenden „müffeln“. Auf Nachfrage wei-gert er sich, näher auszuführen, wonach.",
+          "Dass Ifor selbst durchaus trinkt, ändert nichts daran, dass er erstaunlicherweise fast immer derje-nige ist, der am Ende noch stehen kann.",
+          "Idwal  betrachtet diese Eigenschaft vermutlich als weiteren Beweis dafür, dass mit Ifor irgendetwas nicht stimmt."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [
+          "„Hört mit der Scheisse auf!.“"
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Haus Beryn",
+            "detail": "Mitglied des Hauses",
+            "image": "https://dieweltvonaleria.netlify.app/stammb%C3%A4ume/assets/images/houses/Klaueninsel/haus-beryn.png",
+            "imageFormat": "square"
+          },
+          {
+            "type": "heading",
+            "title": "Neue Gruppe",
+            "detail": ""
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Disziplin ist unser Schild. Wissen ist unsere Waffe."
+      }
+    },
     "relevance": "",
-    "role": "",
-    "status": "active",
-    "taxonomyPath": "Cenyr > Klaueninsel > Sturmklaue > Talgarth",
+    "bio": "Sir Ifor Beryn stammt aus dem kleinen Rittergeschlecht Beryn\nvon den Klaueninseln, das dem Hause Arth seit Generationen treu dient. Die\nBeryn besitzen weder großen Reichtum noch ausgedehnte Ländereien, genießen\njedoch als erfahrene Seeritter einen guten Ruf. Seit Generationen dienen\nAngehörige des Hauses auf den Schiffen der Grafen von Arth und verbinden das\nklassische Ritterhandwerk mit den Anforderungen des Seekrieges.\n\nIfor wuchs entsprechend sowohl mit Schwert und Rüstung als auch mit Segeln,\nTauen und dem Steuer eines Schiffes auf. Er ist ein fähiger Kämpfer zu Land,\nfühlt sich jedoch auf einem schwankenden Deck ebenso selbstverständlich zu\nHause.",
     "title": "Dritter Sohn der Hauptlinie · 28 Jahre",
-    "updatedAt": "2026-08-09T07:53:46.396Z"
+    "portrait": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
+    "imageSetsOverride": false,
+    "profileLink": "",
+    "aliases": [],
+    "createdAt": "2026-08-09T07:53:46.396Z",
+    "activeImageSetId": ""
   }
 }

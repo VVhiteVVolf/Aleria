@@ -1,0 +1,149 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--tiefenwyrm--rhy-dyger",
+  "slug": "rhy-dyger",
+  "identity": {
+    "name": "Rhy Dyger",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "tiefenwyrm--rhy-dyger",
+      "documentIds": [
+        "tiefenwyrm--rhy-dyger"
+      ],
+      "documents": [
+        {
+          "documentId": "tiefenwyrm--rhy-dyger",
+          "createdAt": "2026-09-06T03:18:40.327Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
+    "sourceDocumentIds": [
+      "tiefenwyrm--rhy-dyger"
+    ],
+    "contentHash": "eb56a00ddfe9aba3a4a1e10cdaf06f0ef6f52f334a88adb5c64879af5392a386"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "tiefenwyrm--rhy-dyger",
+        "profileLink": "",
+        "imageSetSchemaVersion": 0,
+        "identity": {
+          "worldPersonId": ""
+        },
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "bio": "Sorgt mit Satire, Musik, Lyrik und Schabernak für mehr Stimmung unter der Mannschaft.",
+        "archived": false,
+        "role": "Schiffsbarde",
+        "taxonomyPath": "",
+        "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+        "portrait": "https://i.imgur.com/wg0hMp9.png",
+        "emotesOverride": false,
+        "plotNode": "",
+        "biography": null,
+        "imageSets": [],
+        "name": "Rhy Dyger",
+        "aliases": [],
+        "createdAt": "2026-09-06T03:18:40.327Z",
+        "inventory": null,
+        "origin": "",
+        "title": "Schiffsbarde der Tiefenwyrm",
+        "status": "active",
+        "imageSetsOverride": false,
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "playerOwner": "",
+        "activeImageSetId": "",
+        "relevance": "",
+        "emotes": []
+      }
+    ]
+  },
+  "character": {
+    "id": "tiefenwyrm--rhy-dyger",
+    "profileLink": "",
+    "imageSetSchemaVersion": 0,
+    "identity": {
+      "worldPersonId": ""
+    },
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "bio": "Sorgt mit Satire, Musik, Lyrik und Schabernak für mehr Stimmung unter der Mannschaft.",
+    "archived": false,
+    "role": "Schiffsbarde",
+    "taxonomyPath": "",
+    "fraktion": "Mannschaft der Tiefenwyrm · Haus Draig",
+    "portrait": "https://i.imgur.com/wg0hMp9.png",
+    "emotesOverride": false,
+    "plotNode": "",
+    "biography": null,
+    "imageSets": [],
+    "name": "Rhy Dyger",
+    "aliases": [],
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "inventory": null,
+    "origin": "",
+    "title": "Schiffsbarde der Tiefenwyrm",
+    "status": "active",
+    "imageSetsOverride": false,
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "playerOwner": "",
+    "activeImageSetId": "",
+    "relevance": "",
+    "emotes": [],
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

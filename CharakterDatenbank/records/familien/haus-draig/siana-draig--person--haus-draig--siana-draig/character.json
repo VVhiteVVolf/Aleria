@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
     "sourceUpdatedAt": "2026-09-03T23:43:00.549Z",
     "sourceDocumentIds": [
       "person--haus-draig--siana-draig"
     ],
-    "contentHash": "174310e9558d9fa232de8afe6e40004f4361429eeb8edca8a6a4e87405a9da07"
+    "contentHash": "492d7c0296523f3fd11d9bb32e26b90122500a3fb047d29c1654adeed1c33586"
   },
   "local": {
     "notes": "",
@@ -251,8 +251,8 @@
           "personId": "siana-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T04:52:04.569Z",
-          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=siana-draig",
           "fingerprint": "{\"name\":\"Siana Draig\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/siana-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"sylvia-cenyr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cenyr--sylvia-cenyr\",\"name\":\"Sylvia O'Cenyr\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}"
         }

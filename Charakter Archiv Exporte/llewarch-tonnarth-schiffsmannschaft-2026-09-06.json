@@ -1,0 +1,799 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T03:18:40.327Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Übernahme von Idwals Schiffsmannschaft am 06.09.2026. Rolle: Quartiermeister. Biografiequelle: Stammbäume/assets/data/published-families/haus-tonnarth.json. Bestehende Kampf-, Inventar- und Bilddaten wurden beim Online-Import nicht verändert. Eigentümerkennungen sind aus diesem portablen Export entfernt.",
+  "character": {
+    "id": "Wrp54tDjahx8Re77rweq",
+    "origin": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "playerOwner": "",
+    "genealogy": {
+      "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1715",
+      "death": "",
+      "houseId": "house-tonnarth",
+      "houseName": "Haus Tonnarth",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "25 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tonnarth",
+          "personId": "llewarch-tonnarth",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=llewarch-tonnarth",
+          "fingerprint": "{\"name\":\"Llewarch Tonnarth\",\"title\":\"Angehöriger des Hauses Tonnarth\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-tonnarth/llewarch-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"25 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadell-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--cadell-tonnarth\",\"name\":\"Cadell Tonnarth\"},{\"personId\":\"ceridwen-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--ceridwen-spouse-tonnarth\",\"name\":\"Ceridwen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cadell-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--cadell-tonnarth",
+            "name": "Cadell Tonnarth"
+          },
+          {
+            "personId": "ceridwen-spouse-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--ceridwen-spouse-tonnarth",
+            "name": "Ceridwen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "name": "Llewarch Tonnarth",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/vAFUcWu.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/UnqlrtN.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OOUAhnF.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PjlhhqM.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/JzIASWx.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/q3bsEFL.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Rxz7Eov.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2ppRl9A.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/5XG0PTq.png"
+      }
+    ],
+    "taxonomyPath": "",
+    "fraktion": "Haus Awduryn, Celtigerns Wacht",
+    "archived": false,
+    "title": "Kammerdiener Idwals, Gwynthor",
+    "status": "",
+    "identity": {
+      "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth"
+    },
+    "createdAt": "2026-07-27T02:51:11.860Z",
+    "bio": "Llewarch diente ursprünglich als Kammerdiener im Hause Draig. Da Idwal Draig jedoch kaum daheim auf der Burg war, stand Llewarch zunächst im Dienst anderer Herrschaften, ehe Idwal ihn schließlich mit an Deck der Tiefenwyrm holte.\n\nBevor er zum Quartiermeister wurde, war er ein blasser, dürrer Kammerdiener. Die harte Zeit an Deck hat ihn seither mehr als gestählert und abgehärtet - so sehr, dass ihn selbst seine eigene Familie, allen voran seine Eltern, kaum wiedererkannten.",
+    "plotNode": "",
+    "portrait": "https://i.imgur.com/YXLDnVs.png",
+    "aliases": [],
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Llewarch Tonnarth"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Tonnarth"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Angehöriger des Hauses Tonnarth"
+        },
+        {
+          "label": "Geboren",
+          "value": "1715"
+        },
+        {
+          "label": "Geburtsort",
+          "value": ""
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "25 Jahre"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Quartiermeister der Tiefenwyrm"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "An Bord der Tiefenwyrm"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Biografie",
+        "biographyText": "Llewarch diente ursprünglich als Kammerdiener im Hause Draig. Da <strong>Idwal Draig</strong> jedoch kaum daheim auf der Burg war, stand Llewarch zunächst im Dienst anderer Herrschaften, ehe Idwal ihn schließlich mit an Deck der <em>Tiefenwyrm</em> holte.<br><br>Bevor er zum Quartiermeister wurde, war er ein blasser, dürrer Kammerdiener. Die harte Zeit an Deck hat ihn seither mehr als gestählert und abgehärtet - so sehr, dass ihn selbst seine eigene Familie, allen voran seine Eltern, kaum wiedererkannten.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Zäh",
+            "detail": "Was ihn früher als dürren Kammerdiener beinahe umgeworfen hätte, steckt er heute mit stoischer Gelassenheit weg.",
+            "icon": "../IconOrdner/Traits Icon/Sturdy.png"
+          },
+          {
+            "title": "Trunkenbold",
+            "detail": "An Land oder unter Deck ist er dafür berüchtigt, jeden an Bord unter den Tisch zu saufen.",
+            "icon": "../IconOrdner/Traits Icon/Drunkard.png"
+          },
+          {
+            "title": "Kräftig",
+            "detail": "Aus dem blassen Kammerdiener von einst ist durch harte Deckarbeit ein kräftiger Seemann geworden.",
+            "icon": "../IconOrdner/Traits Icon/Strong.png"
+          },
+          {
+            "title": "Rüpelhaft",
+            "detail": "Höfische Manieren hat er auf See weitgehend abgelegt; sein Ton ist derb und unverblümt geworden.",
+            "icon": "../IconOrdner/Traits Icon/Rowdy.png"
+          },
+          {
+            "title": "Genügsam",
+            "detail": "Er braucht wenig, um zufrieden zu sein - eine warme Mahlzeit, ein trockenes Lager und Gesellschaft reichen ihm.",
+            "icon": "../IconOrdner/Traits Icon/Content.png"
+          },
+          {
+            "title": "Gesellig",
+            "detail": "Ob beim Kartenspiel, beim Trinken oder bei derben Geschichten - Llewarch findet überall an Bord Gesellschaft.",
+            "icon": "../IconOrdner/Traits Icon/Gregarious.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Hintergrund",
+        "historyText": "Heute ist Llewarch als <strong>Quartiermeister</strong> der <em>Tiefenwyrm</em> ein zäher Seemann. Er verwaltet Vorräte, Ausrüstung und Lagerbestände und stellt die Versorgung der Besatzung sicher.",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Wurde nach seiner ersten Zeit an Deck von der eigenen Familie kaum wiedererkannt.",
+          "Gilt an Bord der Tiefenwyrm als unangefochtener Trinkchampion."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Familie",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Caradog Tonnarth",
+            "detail": "Vetter & Schreiber",
+            "image": "https://i.imgur.com/LK3q0UI.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Vertrauenspersonen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Idwal Draig",
+            "detail": "Kapitän & einstiger Dienstherr",
+            "image": "https://i.imgur.com/ENTDAnR.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Verbindungen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Mannschaft der Tiefenwyrm",
+            "detail": "Quartiermeister",
+            "image": "https://i.imgur.com/UvZ5sUf.png",
+            "imageFormat": "square"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Personenakte · Llewarch Tonnarth"
+      }
+    },
+    "emotesOverride": true,
+    "inventory": {
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "TP / Zustand"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Rolle",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Fraktion",
+          "icon": "*"
+        },
+        {
+          "label": "Aufenthalt",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Notiz",
+          "icon": "*"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "showInfoTable": false,
+      "portraitFit": "cover",
+      "portraitFormat": "portrait",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "companions": [
+        {
+          "id": "companion-ms2mmx2p-0-20zy",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imagePosition": "top",
+          "species": "Tier oder Begleiter",
+          "imageFormat": "landscape",
+          "statusColor": "#5c7f20",
+          "description": "",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "imageFit": "cover"
+        },
+        {
+          "statusColor": "#5c7f20",
+          "species": "Tier / Person",
+          "imageFormat": "landscape",
+          "description": "",
+          "name": "Treuer Begleiter",
+          "id": "companion-ms2mmx2p-1-2nvx",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFit": "cover",
+          "image": ""
+        }
+      ],
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyNotice": "",
+      "role": "Rolle",
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "status": "Gesund",
+      "healthColor": "#5c7f20",
+      "portraitPosition": "top",
+      "level": "Stufe",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "id": "item-ms2mmx2p-0-qlcf",
+          "itemStorageMode": "character",
+          "name": "Hauptwaffe",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "individualizedAt": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "image": "",
+          "type": "Waffe",
+          "tags": "",
+          "category": "weapon",
+          "itemDbKey": "",
+          "weight": "Noch festlegen"
+        },
+        {
+          "individualizedAt": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "category": "armor",
+          "type": "Rüstung",
+          "image": "",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "id": "item-ms2mmx2p-1-betj",
+          "imagePosition": "center"
+        },
+        {
+          "id": "item-ms2mmx2p-2-hhum",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "name": "Reiseausrüstung",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "tags": "",
+          "category": "equipment",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "image": "",
+          "type": "Ausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "originItemDbKey": "",
+          "quantity": "1",
+          "individualizedAt": "",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "imageFit": "contain"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "individualizedAt": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "category": "potions",
+          "tags": "",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "image": "",
+          "type": "Trinktur",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-ms2mmx2p-3-6y4z",
+          "name": "Heil- oder Verbrauchsgut",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "imagePosition": "center"
+        },
+        {
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "id": "item-ms2mmx2p-4-opxk",
+          "imageFit": "contain",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "quantity": "1",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Dokument",
+          "image": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "tags": "",
+          "category": "documents"
+        },
+        {
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-ms2mmx2p-5-mshx",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "name": "Persönlicher Gegenstand",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "infoRows": [],
+          "quantity": "1",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "imageFit": "contain",
+          "category": "other",
+          "tags": "",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "image": "",
+          "type": "Sonstiges"
+        }
+      ],
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "updatedAt": "",
+        "step": 0,
+        "status": ""
+      },
+      "carryValue": "Noch festlegen",
+      "carryLabel": "Traglast",
+      "name": "Name des Charakters",
+      "portrait": "https://i.imgur.com/YXLDnVs.png",
+      "characterId": "Wrp54tDjahx8Re77rweq"
+    },
+    "role": "Quartiermeister",
+    "relevance": "",
+    "profileLink": ""
+  }
+}

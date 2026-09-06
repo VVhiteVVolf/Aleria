@@ -1,0 +1,604 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T03:18:40.327Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Übernahme von Idwals Schiffsmannschaft am 06.09.2026. Rolle: Knappe zur See. Keine ausgearbeitete Biografie vorhanden; vorhandene Kurzbeschreibung und belegte Bordaufgabe bleiben erhalten. Bestehende Kampf-, Inventar- und Bilddaten wurden beim Online-Import nicht verändert. Eigentümerkennungen sind aus diesem portablen Export entfernt.",
+  "character": {
+    "id": "UGyqVN0iIIHlrLeQaMT6",
+    "aliases": [],
+    "bio": "Talon Trydar ist der Knappe von Sir Idwal Draig.",
+    "fraktion": "Haus Trydar, Celtigerns Wacht, Gwendolyns Ufer",
+    "identity": {
+      "worldPersonId": "person--haus-trydar--talon-trydar"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-trydar--talon-trydar",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1725",
+      "death": "",
+      "houseId": "house-trydar",
+      "houseName": "Haus Trydar",
+      "familyRole": "ward-away",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Fortgegebenes Mündel"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-trydar",
+          "personId": "talon-trydar",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-trydar&mode=view&person=talon-trydar",
+          "fingerprint": "{\"name\":\"Talon Trydar\",\"title\":\"Knappe von Prinz Idwal Draig · Mündel bei Haus Draig\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-trydar\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-trydar/talon-trydar.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Fortgegebenes Mündel\"],\"relationships\":{\"parents\":[{\"personId\":\"rheon-trydar\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trydar--rheon-trydar\",\"name\":\"Rheon Trydar\"},{\"personId\":\"unknown-spouse-rheon-trydar\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-rheon-trydar\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "rheon-trydar",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-trydar--rheon-trydar",
+            "name": "Rheon Trydar"
+          },
+          {
+            "personId": "unknown-spouse-rheon-trydar",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-spouse-rheon-trydar",
+            "name": "???"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "profileLink": "",
+    "emotesOverride": true,
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/wcgN8Tu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/iVQKl03.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/RojCwE3.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/kNgfwGd.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/sTVuTn8.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/zuShLKD.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/vxtHpB4.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/CC6z4pI.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/83uyV62.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/dM4tQ9d.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/xzYGQFb.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/ORptKyp.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/H6UmEIO.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/BQ79lJc.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TJBgiYR.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/SdlSEp8.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TdVLNzz.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/BL2idRl.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/QSh3G3K.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/M4VOK8V.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/g2O3giu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/5oBER3G.png",
+        "label": ""
+      }
+    ],
+    "inventory": {
+      "carryLabel": "Traglast",
+      "role": "Knappe, Abergwint",
+      "level": "Haus Trydar, Celtigerns Wacht, Gwendolyns Ufer",
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "open": false,
+        "status": "",
+        "updatedAt": ""
+      },
+      "portraitFit": "cover",
+      "portrait": "https://i.imgur.com/pRAdLZx.png",
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Talon Trydar",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "infoRows": [],
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "category": "other",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "status": "Gesund"
+    },
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "title": "Knappe, Abergwint",
+    "name": "Talon Trydar",
+    "playerOwner": "patrick",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "portrait": "https://i.imgur.com/pRAdLZx.png",
+    "archived": false,
+    "role": "Knappe zur See"
+  }
+}

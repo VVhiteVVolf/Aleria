@@ -2,18 +2,18 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-05T04:52:04.569Z",
+  "sourceExportedAt": "2026-09-06T03:18:40.327Z",
   "summary": {
-    "sourceDocuments": 248,
-    "total": 226,
-    "mergedSameNameGroups": 15,
-    "familyLinked": 147,
+    "sourceDocuments": 263,
+    "total": 234,
+    "mergedSameNameGroups": 22,
+    "familyLinked": 151,
     "familyAmbiguous": 0,
-    "familyPending": 79,
-    "primaryFamily": 147,
+    "familyPending": 83,
+    "primaryFamily": 151,
     "primaryGroup": 26,
     "primaryPlace": 19,
-    "primaryUnassigned": 34,
+    "primaryUnassigned": 38,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -558,6 +558,17 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--tiefenwyrm--angus-lonan",
+      "name": "Angus Lònan",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--Hx23IAHjVHeuFUJGZPAj",
       "name": "Bryn Rhydderch",
       "status": "pending",
@@ -811,6 +822,17 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--tiefenwyrm--murdo-marlon",
+      "name": "Murdo Marlòn",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--5jF7PqbF6uxh154TQyug",
       "name": "Namenlose Zofe",
       "status": "pending",
@@ -877,6 +899,28 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--tiefenwyrm--rhy-dyger",
+      "name": "Rhy Dyger",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--tiefenwyrm--sindre-brandstolz",
+      "name": "Sindre Brandstolz",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--6yWirueXidKYc9ALlSd8",
       "name": "Stallknecht I.",
       "status": "pending",
@@ -933,6 +977,28 @@
     }
   ],
   "mergedSameNameGroups": [
+    {
+      "name": "Cederic Chwedonol",
+      "canonicalDocumentId": "03d4RFlsrtZmobcmryW5",
+      "documentIds": [
+        "03d4RFlsrtZmobcmryW5",
+        "03d4RFlsrtZmobcmryW5"
+      ],
+      "ages": [
+        "Geburtsjahr 1717"
+      ]
+    },
+    {
+      "name": "Cenric Scandyn",
+      "canonicalDocumentId": "Dud4fyF7ds8veV555aq3",
+      "documentIds": [
+        "Dud4fyF7ds8veV555aq3",
+        "Dud4fyF7ds8veV555aq3"
+      ],
+      "ages": [
+        "Geburtsjahr 1717"
+      ]
+    },
     {
       "name": "Dehlia Gelyn",
       "canonicalDocumentId": "fBCCU7G0r163GXUBqgYg",
@@ -1035,6 +1101,28 @@
       ]
     },
     {
+      "name": "Idwal Draig",
+      "canonicalDocumentId": "kJss0DGF1RLuVrrVCBQT",
+      "documentIds": [
+        "kJss0DGF1RLuVrrVCBQT",
+        "kJss0DGF1RLuVrrVCBQT"
+      ],
+      "ages": [
+        "Geburtsjahr 1716"
+      ]
+    },
+    {
+      "name": "Ifor Beryn",
+      "canonicalDocumentId": "person--haus-beryn--ifor-beryn",
+      "documentIds": [
+        "person--haus-beryn--ifor-beryn",
+        "person--haus-beryn--ifor-beryn"
+      ],
+      "ages": [
+        "Geburtsjahr 1712"
+      ]
+    },
+    {
       "name": "Kane Draig",
       "canonicalDocumentId": "HjDXMMexahez1G0rJrBE",
       "documentIds": [
@@ -1043,6 +1131,17 @@
       ],
       "ages": [
         "Geburtsjahr 1721"
+      ]
+    },
+    {
+      "name": "Llewarch Tonnarth",
+      "canonicalDocumentId": "Wrp54tDjahx8Re77rweq",
+      "documentIds": [
+        "Wrp54tDjahx8Re77rweq",
+        "Wrp54tDjahx8Re77rweq"
+      ],
+      "ages": [
+        "Geburtsjahr 1715"
       ]
     },
     {
@@ -1095,6 +1194,28 @@
       ],
       "ages": [
         "Geburtsjahr 1721"
+      ]
+    },
+    {
+      "name": "Talon Trydar",
+      "canonicalDocumentId": "UGyqVN0iIIHlrLeQaMT6",
+      "documentIds": [
+        "UGyqVN0iIIHlrLeQaMT6",
+        "UGyqVN0iIIHlrLeQaMT6"
+      ],
+      "ages": [
+        "Geburtsjahr 1725"
+      ]
+    },
+    {
+      "name": "Trevor Gwyvern",
+      "canonicalDocumentId": "0Sku8euk5jhlWebdsskI",
+      "documentIds": [
+        "0Sku8euk5jhlWebdsskI",
+        "0Sku8euk5jhlWebdsskI"
+      ],
+      "ages": [
+        "Geburtsjahr 1719"
       ]
     }
   ],

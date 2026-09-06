@@ -1,0 +1,85 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T03:18:40.327Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Übernahme von Idwals Schiffsmannschaft am 06.09.2026. Rolle: Ritter zur See. Keine ausgearbeitete Biografie vorhanden; vorhandene Kurzbeschreibung und belegte Bordaufgabe bleiben erhalten. Bestehende Kampf-, Inventar- und Bilddaten wurden beim Online-Import nicht verändert. Eigentümerkennungen sind aus diesem portablen Export entfernt.",
+  "character": {
+    "id": "person--haus-gwyntog--afan-gwyntog",
+    "identity": {
+      "worldPersonId": "person--haus-gwyntog--afan-gwyntog"
+    },
+    "emotesOverride": false,
+    "playerOwner": "",
+    "imageSetSchemaVersion": 0,
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+    "inventory": null,
+    "plotNode": "",
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "aliases": [],
+    "name": "Afan Gwyntog",
+    "bio": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.",
+    "profileLink": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "biography": null,
+    "origin": "",
+    "portrait": "https://i.imgur.com/eaOTyw6.png",
+    "emotes": [],
+    "imageSets": [],
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "status": "active",
+    "fraktion": "Haus Gwyntog",
+    "activeImageSetId": "",
+    "title": "Ritter zur See der Tiefenwyrm",
+    "archived": false,
+    "role": "Ritter zur See",
+    "relevance": "",
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyntog--afan-gwyntog",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-gwyntog",
+      "houseName": "Haus Gwyntog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwyntog",
+          "personId": "afan-gwyntog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view&person=afan-gwyntog",
+          "fingerprint": "{\"name\":\"Afan Gwyntog\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyntog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyntog/afan-gwyntog.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyntog--adda-gwyntog\",\"name\":\"Adda Gwyntog\"},{\"personId\":\"unknown-spouse-adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-adda-gwyntog\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "adda-gwyntog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyntog--adda-gwyntog",
+            "name": "Adda Gwyntog"
+          },
+          {
+            "personId": "unknown-spouse-adda-gwyntog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-spouse-adda-gwyntog",
+            "name": "???"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSetsOverride": false
+  }
+}

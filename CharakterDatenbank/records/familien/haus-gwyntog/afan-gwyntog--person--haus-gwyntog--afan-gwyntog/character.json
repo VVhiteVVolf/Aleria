@@ -1,0 +1,250 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gwyntog--afan-gwyntog",
+  "slug": "afan-gwyntog",
+  "identity": {
+    "name": "Afan Gwyntog",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwyntog--afan-gwyntog"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwyntog",
+      "label": "Haus Gwyntog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwyntog",
+        "familyTitle": "Haus Gwyntog",
+        "personId": "afan-gwyntog",
+        "worldPersonId": "person--haus-gwyntog--afan-gwyntog",
+        "houseId": "house-gwyntog",
+        "houseName": "Haus Gwyntog",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Gwendolyns Ufer",
+          "Abergwint"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view&person=afan-gwyntog",
+        "fingerprint": "{\"name\":\"Afan Gwyntog\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyntog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyntog/afan-gwyntog.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyntog--adda-gwyntog\",\"name\":\"Adda Gwyntog\"},{\"personId\":\"unknown-spouse-adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-adda-gwyntog\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gwyntog--afan-gwyntog",
+      "documentIds": [
+        "person--haus-gwyntog--afan-gwyntog"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gwyntog--afan-gwyntog",
+          "createdAt": "2026-09-06T03:18:40.327Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwyntog",
+        "personId": "afan-gwyntog",
+        "worldPersonId": "person--haus-gwyntog--afan-gwyntog",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view&person=afan-gwyntog"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
+    "sourceDocumentIds": [
+      "person--haus-gwyntog--afan-gwyntog"
+    ],
+    "contentHash": "339c0d9c419be53321d8a08990213dc5e7cfca38c372d74a9058a3c3da4219b9"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-gwyntog--afan-gwyntog",
+        "identity": {
+          "worldPersonId": "person--haus-gwyntog--afan-gwyntog"
+        },
+        "emotesOverride": false,
+        "playerOwner": "",
+        "imageSetSchemaVersion": 0,
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+        "inventory": null,
+        "plotNode": "",
+        "createdAt": "2026-09-06T03:18:40.327Z",
+        "aliases": [],
+        "name": "Afan Gwyntog",
+        "bio": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.",
+        "profileLink": "",
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "biography": null,
+        "origin": "",
+        "portrait": "https://i.imgur.com/eaOTyw6.png",
+        "emotes": [],
+        "imageSets": [],
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "status": "active",
+        "fraktion": "Haus Gwyntog",
+        "activeImageSetId": "",
+        "title": "Ritter zur See der Tiefenwyrm",
+        "archived": false,
+        "role": "Ritter zur See",
+        "relevance": "",
+        "genealogy": {
+          "worldPersonId": "person--haus-gwyntog--afan-gwyntog",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1722",
+          "death": "",
+          "houseId": "house-gwyntog",
+          "houseName": "Haus Gwyntog",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-gwyntog",
+              "personId": "afan-gwyntog",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-06T03:18:40.327Z",
+              "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view&person=afan-gwyntog",
+              "fingerprint": "{\"name\":\"Afan Gwyntog\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyntog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyntog/afan-gwyntog.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyntog--adda-gwyntog\",\"name\":\"Adda Gwyntog\"},{\"personId\":\"unknown-spouse-adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-adda-gwyntog\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "adda-gwyntog",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwyntog--adda-gwyntog",
+                "name": "Adda Gwyntog"
+              },
+              {
+                "personId": "unknown-spouse-adda-gwyntog",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unknown-spouse-adda-gwyntog",
+                "name": "???"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "imageSetsOverride": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-gwyntog--afan-gwyntog",
+    "identity": {
+      "worldPersonId": "person--haus-gwyntog--afan-gwyntog"
+    },
+    "emotesOverride": false,
+    "playerOwner": "",
+    "imageSetSchemaVersion": 0,
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+    "inventory": null,
+    "plotNode": "",
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "aliases": [],
+    "name": "Afan Gwyntog",
+    "bio": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen.",
+    "profileLink": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "biography": null,
+    "origin": "",
+    "portrait": "https://i.imgur.com/eaOTyw6.png",
+    "emotes": [],
+    "imageSets": [],
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "status": "active",
+    "fraktion": "Haus Gwyntog",
+    "activeImageSetId": "",
+    "title": "Ritter zur See der Tiefenwyrm",
+    "archived": false,
+    "role": "Ritter zur See",
+    "relevance": "",
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyntog--afan-gwyntog",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-gwyntog",
+      "houseName": "Haus Gwyntog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwyntog",
+          "personId": "afan-gwyntog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view&person=afan-gwyntog",
+          "fingerprint": "{\"name\":\"Afan Gwyntog\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyntog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyntog/afan-gwyntog.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyntog--adda-gwyntog\",\"name\":\"Adda Gwyntog\"},{\"personId\":\"unknown-spouse-adda-gwyntog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-spouse-adda-gwyntog\",\"name\":\"???\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "adda-gwyntog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyntog--adda-gwyntog",
+            "name": "Adda Gwyntog"
+          },
+          {
+            "personId": "unknown-spouse-adda-gwyntog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-spouse-adda-gwyntog",
+            "name": "???"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSetsOverride": false
+  }
+}

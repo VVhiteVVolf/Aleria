@@ -33,7 +33,7 @@
         ],
         "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig",
         "fingerprint": "{\"name\":\"Idwal Draig\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"galahad-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"},{\"personId\":\"gwendolyn-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"partners\":[{\"personId\":\"unknown-idwal-betrothed\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-idwal-betrothed\",\"name\":\"Unbekannte Verlobte\"}],\"children\":[]}}",
-        "score": 195
+        "score": 275
       }
     ],
     "familyAlternatives": [],
@@ -61,6 +61,7 @@
       "collection": "characters",
       "documentId": "kJss0DGF1RLuVrrVCBQT",
       "documentIds": [
+        "kJss0DGF1RLuVrrVCBQT",
         "kJss0DGF1RLuVrrVCBQT"
       ],
       "documents": [
@@ -68,6 +69,11 @@
           "documentId": "kJss0DGF1RLuVrrVCBQT",
           "createdAt": "2026-07-26T11:33:41.849Z",
           "updatedAt": "2026-07-26T11:33:41.849Z"
+        },
+        {
+          "documentId": "kJss0DGF1RLuVrrVCBQT",
+          "createdAt": "2026-07-26T11:33:41.849Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
         }
       ]
     },
@@ -84,12 +90,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
-    "sourceUpdatedAt": "2026-07-26T11:33:41.849Z",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
     "sourceDocumentIds": [
+      "kJss0DGF1RLuVrrVCBQT",
       "kJss0DGF1RLuVrrVCBQT"
     ],
-    "contentHash": "131416e2dcafdd00a99a27f0dbaf91317368bc513223425dfa6c7485e4a10a0a"
+    "contentHash": "1abb0dea9464c7b046cf2f3ae2f2e8710a4b6338841d65ed15eacac11da3965c"
   },
   "local": {
     "notes": "",
@@ -787,508 +794,1246 @@
         "identity": {
           "worldPersonId": ""
         }
+      },
+      {
+        "id": "kJss0DGF1RLuVrrVCBQT",
+        "aliases": [],
+        "role": "Schiffskapitän",
+        "status": "",
+        "playerOwner": "erdi",
+        "emotesOverride": true,
+        "archived": false,
+        "createdAt": "2026-07-26T11:33:41.849Z",
+        "origin": "",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Idwal Draig"
+            },
+            {
+              "label": "Titel",
+              "value": "Ritter zur See"
+            },
+            {
+              "label": "Klasse",
+              "value": "Cantref"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Draig"
+            },
+            {
+              "label": "Geburt",
+              "value": "1716"
+            },
+            {
+              "label": "Alter",
+              "value": "24"
+            },
+            {
+              "label": "Rolle",
+              "value": "Schiffskapitän"
+            },
+            {
+              "label": "Status",
+              "value": "Wert"
+            }
+          ],
+          "quote": "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“",
+          "quoteBy": "— Idwal Draig",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein <b>Vormund </b>Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.<br><br><!--StartFragment-->Zwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter <strong>Trevor Gwyvern</strong>, <strong>Cederic Chwedonol</strong> und <strong>Llewarch Tonnarth</strong>, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Impulsiv",
+                "detail": "Idwal entscheidet oft aus dem Bauch heraus und handelt lieber sofort, als lange über alle Möglichkeiten nachzudenken.",
+                "icon": "../IconOrdner/Traits Icon/Wroth.png"
+              },
+              {
+                "title": "Bodenständig",
+                "detail": "Er hält wenig von höfischem Gehabe und begegnet einfachen Matrosen mit demselben Respekt wie Rittern, sofern sie ihre Pflicht erfüllen.",
+                "icon": "../IconOrdner/Traits Icon/Humble.png"
+              },
+              {
+                "title": "Schroff",
+                "detail": "Freundliche Worte sind selten seine Stärke; Kritik äußert er direkt, unverblümt und ohne Rücksicht auf verletzten Stolz.",
+                "icon": "../IconOrdner/Traits Icon/Wounded.png"
+              },
+              {
+                "title": "Pflichtbewusst",
+                "detail": "Ein gegebener Befehl oder ein geschworener Eid wiegt für ihn schwerer als persönliche Wünsche oder Bequemlichkeit.",
+                "icon": "../IconOrdner/Traits Icon/Diligent.png"
+              },
+              {
+                "title": "Unerschrocken",
+                "detail": "Gefahr schreckt ihn nicht ab. Er ist oft der Erste, der ein feindliches Schiff entert oder sich einem Sturm entgegenstellt.",
+                "icon": "../IconOrdner/Traits Icon/Brave.png"
+              },
+              {
+                "title": "Einfach gestrickt",
+                "detail": "Komplizierte Zusammenhänge, Intrigen oder philosophische Gedankenspiele interessieren ihn wenig. Er sucht stets nach der einfachsten Lösung.",
+                "icon": "../IconOrdner/Traits Icon/Conscientious.png"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": "Heute dient Sir Idwal als <strong>Kapitän zur See</strong> unter dem Seemarschall des Hauses Draig. Er befehligt die <strong>schwere Kriegskogge <em>Tiefenwyrm</em></strong> und führt eine sechzig Mann starke Besatzung. Das Schiff soll einst <strong>Cahir dem Schwarzen</strong>, seinem Urgroßvater und einem der bedeutendsten Seefahrer des Hauses Draig, gehört haben. Obwohl die <em>Tiefenwyrm</em> nicht zu den größten Kriegsschiffen Cenyrs zählt, gilt sie als außergewöhnlich schnelle, wendige und seetüchtige Kriegskogge. Sie ist ideal für Küstenpatrouillen, Geleitschutz, Aufklärungsfahrten und das rasche Abfangen feindlicher Schiffe in den Gewässern Celtigerns Wacht. Idwal genießt den Ruf eines besonnenen, pflichtbewussten Kapitäns, der seine Mannschaft stets vor sich selbst stellt und auf See ebenso viel Wert auf Disziplin wie auf Kameradschaft legt.",
+            "worksTitle": "Bekannte Werke",
+            "works": [
+              "Nahm als junger Kapitän an der Seeschlacht um Rhonwens Tränen teil und kämpfte gemeinsam mit der Flotte des Hauses Draig gegen eine Piratenflotte.",
+              "Brachte im Laufe seiner Dienstzeit mehrere kleinere Piraten- und Schmugglerbanden zur Strecke und eskortierte zahlreiche Handelsschiffe sicher entlang der Küste.",
+              "Gilt trotz seines jungen Alters als fähiger und verlässlicher Kapitän, dessen disziplinierte Mannschaft und erfolgreiche Patrouillen ihm einen guten Ruf innerhalb der cenyrischen Küstenflotte eingebracht haben."
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Versteht Metaphern und feine Ironie oft erst, wenn sie ihm jemand erklärt."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Vertrauenspersonen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Trevor Gwyvern",
+                "detail": "Erster Maat",
+                "image": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cederic Chwedonol",
+                "detail": "Zweiter Maat",
+                "image": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Llewarch Tonnarth",
+                "detail": "Quartiermeister & Kammerdiener",
+                "image": "https://i.imgur.com/YXLDnVs.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Talon Trydar",
+                "detail": "Knappe",
+                "image": "https://i.imgur.com/pRAdLZx.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Verbindungen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Mannschaft der Tiefenwyrm",
+                "detail": "Schiffskapitän",
+                "image": "https://i.imgur.com/UvZ5sUf.png",
+                "imageFormat": "square"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "..."
+          }
+        },
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ivM7V3M.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/L5EcljG.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Y5yIwHI.png"
+          },
+          {
+            "img": "https://i.imgur.com/Mv760tb.png",
+            "label": "Avatar"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/9OuVyQx.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Tpsi47E.png"
+          },
+          {
+            "img": "https://i.imgur.com/uEUyscH.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ekIgOpV.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/u9vMaCe.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/vNYCNaY.png"
+          },
+          {
+            "img": "https://i.imgur.com/YtLDiSz.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/sNp3fN6.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Ot9uNPy.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/dkLwic1.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/abUlVim.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/zclLxsG.png"
+          },
+          {
+            "img": "https://i.imgur.com/oFjeTLS.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/VIPOTYv.png"
+          },
+          {
+            "img": "https://i.imgur.com/PTkQ0W8.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/hf3DkVc.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Zn37T8e.png"
+          },
+          {
+            "img": "https://i.imgur.com/cBO85RW.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/wSbhQ7t.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/sSenuhD.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/iYsdnJd.png"
+          },
+          {
+            "img": "https://i.imgur.com/F2PHNNB.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/zuEDUuI.png"
+          },
+          {
+            "img": "https://i.imgur.com/dsaMDSG.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gAXJxpk.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Ta1qwqM.png"
+          },
+          {
+            "img": "https://i.imgur.com/gwleLzA.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/uqHVMId.png"
+          },
+          {
+            "img": "https://i.imgur.com/6Y8mNcd.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/h5E12p2.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/vL767Vk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/V3lNcaG.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/5dNk8kx.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/VLJ3A85.png"
+          },
+          {
+            "img": "https://i.imgur.com/KcER30d.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/iiO4vLq.png",
+            "label": ""
+          }
+        ],
+        "name": "Idwal Draig",
+        "title": "Prinz & Ritterkapitän zur See, Gwynthor",
+        "portrait": "https://i.imgur.com/RNqIIO0.png",
+        "identity": {
+          "worldPersonId": "person--haus-draig--idwal-draig"
+        },
+        "plotNode": "",
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "genealogy": {
+          "worldPersonId": "person--haus-draig--idwal-draig",
+          "sex": "unknown",
+          "status": "alive",
+          "birth": "1716",
+          "death": "",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-draig",
+              "personId": "idwal-draig",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-06T03:18:40.327Z",
+              "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig",
+              "fingerprint": "{\"name\":\"Idwal Draig\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"galahad-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"},{\"personId\":\"gwendolyn-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"partners\":[{\"personId\":\"unknown-idwal-betrothed\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-idwal-betrothed\",\"name\":\"Unbekannte Verlobte\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "galahad-draig",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-draig--galahad-draig",
+                "name": "Galahad Draig"
+              },
+              {
+                "personId": "gwendolyn-aderyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+                "name": "Gwendolyn Aderyn"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "unknown-idwal-betrothed",
+                "type": "engagement",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unknown-idwal-betrothed",
+                "name": "Unbekannte Verlobte"
+              }
+            ],
+            "children": []
+          }
+        },
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "relevance": "",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "role": "Adjutant des Seemarschalls, Gwynthor",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "equipmentQuiz": {
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "open": false,
+            "status": "",
+            "updatedAt": ""
+          },
+          "portraitFit": "cover",
+          "portrait": "https://i.imgur.com/RNqIIO0.png",
+          "portraitPosition": "top",
+          "title": "Charakter-Inventar",
+          "moneyNotice": "",
+          "hitpoints": "TP / Zustand",
+          "carryValue": "Noch festlegen",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "name": "Idwal Draig",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "moneyState": {
+            "gold": 0,
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "infoRows": [],
+          "status": "Gesund",
+          "companions": [
+            {
+              "id": "companion-mqu1vat2-0-zz2n",
+              "image": "https://i.imgur.com/HN7olKF.png",
+              "imageFormat": "portrait",
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "name": "Distry",
+              "species": "Rabe",
+              "role": "Haustier",
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "summary": "",
+              "description": "Distry ist der ebenso freche wie ungewöhnlich kluge Rabe des Piraten Idwal und weicht seinem Herrn kaum jemals von der Seite. Mit schiefgelegtem Kopf, funkelnden Augen und einem geradezu spöttischen Krächzen beobachtet er jede Unterhaltung aufmerksam. Wer Idwals Missfallen auf sich zieht, muss jederzeit damit rechnen, von Distry unvermittelt in Ohr, Finger oder Hinterkopf gepickt zu werden, als hätte der Vogel jedes beleidigte Wort persönlich genommen. Besonders eifersüchtig reagiert er auf Menschen, die Idwal zu viel Aufmerksamkeit schenken oder ihm zu nahe kommen, sodass selbst Verbündete gelegentlich Opfer seiner kleinen Angriffe werden. Trotz seines respektlosen Wesens ist Distry seinem Herrn bedingungslos ergeben und scheint dessen Stimmung oft zu erkennen, noch bevor Idwal selbst ein Wort sagt.",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 8
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 8
+                },
+                {
+                  "label": "Staerke",
+                  "value": 2
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 7
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 3
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "id": "companion-mqu1vat2-1-5e7l",
+              "image": "https://i.imgur.com/ilnbcSh.png",
+              "imageFormat": "portrait",
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "name": "Drecksack",
+              "species": "Equo Pferd",
+              "role": "Reittier",
+              "status": "Immer breit!",
+              "statusColor": "#5c7f20",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "description": "Drecksack ist ein mächtiger schwarzer Equo-Hengst und Idwals bevorzugtes Reittier, auch wenn sein Herr ihn nur selten sattelt, da er die meiste Zeit auf seinem eigenen Schiff verbringt. Wann immer Idwal jedoch an Land kämpft, wartet Drecksack bereits ungeduldig auf ihn, als wolle er nichts lieber, als durch die Reihen der Gefallenen zu pflügen und auf den Leichen seiner Feinde herumzutrampeln. Anders als die meisten Equos, die mit eiserner Disziplin für den Krieg erzogen werden, blieb Drecksack aufgrund der seltenen Anwesenheit seines Reiters vergleichsweise unzureichend geführt. Aus dieser Vernachlässigung entwickelte sich ein aufbrausendes, dominantes Wesen, das er vor allem an anderen Pferden auslässt. Mehrfach geriet der Hengst außer Kontrolle, deckte Stuten gegen den Willen ihrer Besitzer und sorgte so für unerwünschte Fohlen oder schwere Verletzungen, die einzelne Tiere dauerhaft unfruchtbar machten. Da Idwal nur selten auf der Burg weilt und der Stallmeister mit zahllosen anderen Aufgaben ausgelastet ist, gilt Drecksack gemeinsam mit Tanor, dem arroganten Rhyfel des Prinzen Gawain, als das größte Ärgernis der Stallungen von Burg Draig.",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 7
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 6
+                },
+                {
+                  "label": "Staerke",
+                  "value": 8
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 3
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "showInfoTable": false,
+          "characterId": "kJss0DGF1RLuVrrVCBQT",
+          "items": [
+            {
+              "tags": "",
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "category": "weapon",
+              "ownerCharacterName": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFormat": "square",
+              "icon": "*",
+              "imagePosition": "center",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "itemDbKey": "",
+              "image": "",
+              "type": "Waffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "itemStorageMode": "character",
+              "infoRows": [],
+              "individualizedAt": "",
+              "originItemDbKey": ""
+            },
+            {
+              "tags": "",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-1-exvo",
+              "category": "armor",
+              "quantity": "1",
+              "imageFormat": "square",
+              "icon": "*",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "itemDbKey": "",
+              "image": "",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "individualizedAt": ""
+            },
+            {
+              "acquiredAt": "",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "category": "equipment",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterName": "",
+              "id": "item-mqu1vat1-2-0fx2",
+              "imageFit": "contain",
+              "icon": "*",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "itemDbKey": "",
+              "image": "",
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "itemStorageMode": "character",
+              "infoRows": [],
+              "individualizedAt": "",
+              "originItemDbKey": ""
+            },
+            {
+              "individualizedAt": "",
+              "infoRows": [],
+              "originItemDbKey": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "itemStorageMode": "character",
+              "image": "",
+              "type": "Trinktur",
+              "name": "Heil- oder Verbrauchsgut",
+              "itemDbKey": "",
+              "icon": "*",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "quantity": "1",
+              "category": "potions",
+              "ownerCharacterName": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-3-2lgm",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "tags": "",
+              "acquiredAt": ""
+            },
+            {
+              "icon": "*",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "quantity": "1",
+              "category": "documents",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-4-ajrj",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "acquiredAt": "",
+              "tags": "",
+              "infoRows": [],
+              "individualizedAt": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "itemDbKey": ""
+            },
+            {
+              "quantity": "1",
+              "imageFormat": "square",
+              "icon": "*",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "id": "item-mqu1vat1-5-5kao",
+              "imageFit": "contain",
+              "category": "other",
+              "ownerCharacterId": "",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "acquiredAt": "",
+              "originItemDbKey": "",
+              "individualizedAt": "",
+              "infoRows": [],
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "itemStorageMode": "character",
+              "image": "",
+              "type": "Sonstiges",
+              "name": "Persönlicher Gegenstand",
+              "itemDbKey": ""
+            }
+          ]
+        },
+        "taxonomyPath": "",
+        "profileLink": "",
+        "bio": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein Vormund Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.\n\nZwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter Trevor Gwyvern, Cederic Chwedonol und Llewarch Tonnarth, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+        "currentLocation": "An Bord der Tiefenwyrm"
       }
     ]
   },
   "character": {
     "id": "kJss0DGF1RLuVrrVCBQT",
     "aliases": [],
-    "relevance": "",
-    "title": "Prinz & Ritterkapitän zur See, Gwynthor",
+    "role": "Schiffskapitän",
+    "status": "",
+    "playerOwner": "erdi",
+    "emotesOverride": true,
+    "archived": false,
     "createdAt": "2026-07-26T11:33:41.849Z",
-    "inventory": {
-      "level": "Haus Draig, Celtigerns Wacht",
-      "moneyNotice": "",
-      "showInfoTable": false,
-      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
-      "hitpoints": "TP / Zustand",
-      "carryValue": "Noch festlegen",
-      "role": "Adjutant des Seemarschalls, Gwynthor",
-      "healthColor": "#5c7f20",
-      "name": "Idwal Draig",
-      "title": "Charakter-Inventar",
-      "categories": [
+    "origin": "",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
         {
-          "icon": "https://i.imgur.com/YaUQREQ.png",
-          "label": "Waffen",
-          "id": "weapon"
+          "label": "Vollständiger Name",
+          "value": "Idwal Draig"
         },
         {
-          "icon": "https://i.imgur.com/5qZtUiY.png",
-          "label": "Rüstung",
-          "id": "armor"
+          "label": "Titel",
+          "value": "Ritter zur See"
         },
         {
-          "label": "Ausrüstung",
-          "icon": "https://i.imgur.com/yMj2CQf.png",
-          "id": "equipment"
+          "label": "Klasse",
+          "value": "Cantref"
         },
         {
-          "id": "potions",
-          "label": "Trinkturen",
-          "icon": "https://i.imgur.com/gwujEaL.png"
+          "label": "Haus",
+          "value": "Haus Draig"
         },
         {
-          "id": "documents",
-          "label": "Dokumente",
-          "icon": "https://i.imgur.com/urdalGm.png"
+          "label": "Geburt",
+          "value": "1716"
         },
         {
-          "label": "Sonstiges",
-          "icon": "https://i.imgur.com/lgeevvn.png",
-          "id": "other"
+          "label": "Alter",
+          "value": "24"
+        },
+        {
+          "label": "Rolle",
+          "value": "Schiffskapitän"
+        },
+        {
+          "label": "Status",
+          "value": "Wert"
         }
       ],
-      "portrait": "https://i.imgur.com/RNqIIO0.png",
-      "items": [
-        {
-          "itemDbKey": "",
-          "weight": "Noch festlegen",
-          "acquiredAt": "",
-          "ownerCharacterId": "",
-          "id": "item-mqu1vat1-0-w8ef",
-          "infoRows": [],
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "icon": "*",
-          "imageFit": "contain",
-          "originItemDbKey": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "name": "Hauptwaffe",
-          "individualizedAt": "",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "itemStorageMode": "character",
-          "category": "weapon",
-          "imageFormat": "square",
-          "image": "",
-          "imagePosition": "center",
-          "tags": "",
-          "type": "Waffe"
-        },
-        {
-          "itemDbKey": "",
-          "id": "item-mqu1vat1-1-exvo",
-          "imagePosition": "center",
-          "originItemDbKey": "",
-          "name": "Rüstung / Schutz",
-          "ownerCharacterName": "",
-          "tags": "",
-          "quantity": "1",
-          "acquiredAt": "",
-          "image": "",
-          "type": "Rüstung",
-          "individualizedAt": "",
-          "category": "armor",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "infoRows": [],
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "value": 3,
-              "label": "Schutz"
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "weight": "Noch festlegen",
-          "itemStorageMode": "character",
-          "imageFormat": "square",
-          "ownerCharacterId": ""
-        },
-        {
-          "imagePosition": "center",
-          "icon": "*",
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "weight": "Noch festlegen",
-          "originItemDbKey": "",
-          "quantity": "1",
-          "acquiredAt": "",
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "id": "item-mqu1vat1-2-0fx2",
-          "image": "",
-          "category": "equipment",
-          "infoRows": [],
-          "ownerCharacterId": "",
-          "itemStorageMode": "character",
-          "type": "Ausrüstung",
-          "imageFit": "contain",
-          "tags": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "name": "Reiseausrüstung",
-          "ownerCharacterName": "",
-          "imageFormat": "square"
-        },
-        {
-          "image": "",
-          "imagePosition": "center",
-          "itemDbKey": "",
-          "individualizedAt": "",
-          "id": "item-mqu1vat1-3-2lgm",
-          "originItemDbKey": "",
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "ownerCharacterName": "",
-          "acquiredAt": "",
-          "infoRows": [],
-          "icon": "*",
-          "name": "Heil- oder Verbrauchsgut",
-          "itemStorageMode": "character",
-          "weight": "Noch festlegen",
-          "ownerCharacterId": "",
-          "category": "potions",
-          "quantity": "1",
-          "imageFormat": "square",
-          "type": "Trinktur",
-          "tags": "",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "infoRows": [],
-          "imagePosition": "center",
-          "ownerCharacterId": "",
-          "type": "Dokument",
-          "tags": "",
-          "imageFit": "contain",
-          "itemDbKey": "",
-          "weight": "Noch festlegen",
-          "acquiredAt": "",
-          "name": "Dokumente / Urkunden",
-          "itemStorageMode": "character",
-          "imageFormat": "square",
-          "ownerCharacterName": "",
-          "image": "",
-          "originItemDbKey": "",
-          "icon": "*",
-          "individualizedAt": "",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "id": "item-mqu1vat1-4-ajrj",
-          "quantity": "1",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "category": "documents"
-        },
-        {
-          "originItemDbKey": "",
-          "image": "",
-          "infoRows": [],
-          "icon": "*",
-          "ownerCharacterId": "",
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "itemDbKey": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "acquiredAt": "",
-          "quantity": "1",
-          "category": "other",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "tags": "",
-          "imageFormat": "square",
-          "type": "Sonstiges",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "itemStorageMode": "character",
-          "ownerCharacterName": "",
-          "individualizedAt": ""
-        }
-      ],
-      "infoRows": [],
-      "portraitFormat": "portrait",
-      "money": "0 Gold, 0 Silber, 0 Kupfer",
-      "attributes": [
-        {
-          "value": 8,
-          "label": "StA"
-        },
-        {
-          "value": 6,
-          "label": "Ges"
-        },
-        {
-          "label": "Kon",
-          "value": 7
-        },
-        {
-          "value": 5,
-          "label": "Int"
-        },
-        {
-          "label": "Wei",
-          "value": 6
-        },
-        {
-          "label": "Cha",
-          "value": 5
-        }
-      ],
-      "companions": [
-        {
-          "image": "https://i.imgur.com/HN7olKF.png",
-          "statusColor": "#5c7f20",
-          "summary": "",
-          "description": "Distry ist der ebenso freche wie ungewöhnlich kluge Rabe des Piraten Idwal und weicht seinem Herrn kaum jemals von der Seite. Mit schiefgelegtem Kopf, funkelnden Augen und einem geradezu spöttischen Krächzen beobachtet er jede Unterhaltung aufmerksam. Wer Idwals Missfallen auf sich zieht, muss jederzeit damit rechnen, von Distry unvermittelt in Ohr, Finger oder Hinterkopf gepickt zu werden, als hätte der Vogel jedes beleidigte Wort persönlich genommen. Besonders eifersüchtig reagiert er auf Menschen, die Idwal zu viel Aufmerksamkeit schenken oder ihm zu nahe kommen, sodass selbst Verbündete gelegentlich Opfer seiner kleinen Angriffe werden. Trotz seines respektlosen Wesens ist Distry seinem Herrn bedingungslos ergeben und scheint dessen Stimmung oft zu erkennen, noch bevor Idwal selbst ein Wort sagt.",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 8
-            },
-            {
-              "value": 8,
-              "label": "Ausdauer"
-            },
-            {
-              "label": "Staerke",
-              "value": 2
-            },
-            {
-              "label": "Agilitaet",
-              "value": 7
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 3
-            },
-            {
-              "value": 1,
-              "label": "Robustheit"
-            }
-          ],
-          "imageFit": "cover",
-          "role": "Haustier",
-          "id": "companion-mqu1vat2-0-zz2n",
-          "species": "Rabe",
-          "imagePosition": "top",
-          "name": "Distry",
-          "infoRows": [],
-          "status": "Gesund",
-          "imageFormat": "portrait"
-        },
-        {
-          "infoRows": [],
-          "imageFit": "cover",
-          "imagePosition": "top",
-          "statusColor": "#5c7f20",
-          "species": "Equo Pferd",
-          "description": "Drecksack ist ein mächtiger schwarzer Equo-Hengst und Idwals bevorzugtes Reittier, auch wenn sein Herr ihn nur selten sattelt, da er die meiste Zeit auf seinem eigenen Schiff verbringt. Wann immer Idwal jedoch an Land kämpft, wartet Drecksack bereits ungeduldig auf ihn, als wolle er nichts lieber, als durch die Reihen der Gefallenen zu pflügen und auf den Leichen seiner Feinde herumzutrampeln. Anders als die meisten Equos, die mit eiserner Disziplin für den Krieg erzogen werden, blieb Drecksack aufgrund der seltenen Anwesenheit seines Reiters vergleichsweise unzureichend geführt. Aus dieser Vernachlässigung entwickelte sich ein aufbrausendes, dominantes Wesen, das er vor allem an anderen Pferden auslässt. Mehrfach geriet der Hengst außer Kontrolle, deckte Stuten gegen den Willen ihrer Besitzer und sorgte so für unerwünschte Fohlen oder schwere Verletzungen, die einzelne Tiere dauerhaft unfruchtbar machten. Da Idwal nur selten auf der Burg weilt und der Stallmeister mit zahllosen anderen Aufgaben ausgelastet ist, gilt Drecksack gemeinsam mit Tanor, dem arroganten Rhyfel des Prinzen Gawain, als das größte Ärgernis der Stallungen von Burg Draig.",
-          "id": "companion-mqu1vat2-1-5e7l",
-          "attributes": [
-            {
-              "value": 7,
-              "label": "Schnelligkeit"
-            },
-            {
-              "value": 6,
-              "label": "Ausdauer"
-            },
-            {
-              "value": 8,
-              "label": "Staerke"
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 3
-            },
-            {
-              "value": 8,
-              "label": "Robustheit"
-            }
-          ],
-          "summary": "Besonderheit, Nutzen oder Bindung.",
-          "status": "Immer breit!",
-          "name": "Drecksack",
-          "role": "Reittier",
-          "imageFormat": "portrait",
-          "image": "https://i.imgur.com/ilnbcSh.png"
-        }
-      ],
-      "characterId": "kJss0DGF1RLuVrrVCBQT",
-      "portraitPosition": "top",
-      "moneyState": {
-        "totalCopper": 0,
-        "copper": 0,
-        "silver": 0,
-        "gold": 0
-      },
-      "carryLabel": "Traglast",
-      "status": "Gesund",
-      "equipmentQuiz": {
-        "answers": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+      "quote": "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“",
+      "quoteBy": "— Idwal Draig",
+      "biography": {
+        "portraitStages": [
           "",
           "",
           "",
           ""
         ],
-        "step": 0,
-        "resultText": "",
-        "updatedAt": "",
-        "status": "",
-        "open": false
-      },
-      "portraitFit": "cover"
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Biografie",
+        "biographyText": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein <b>Vormund </b>Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.<br><br><!--StartFragment-->Zwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter <strong>Trevor Gwyvern</strong>, <strong>Cederic Chwedonol</strong> und <strong>Llewarch Tonnarth</strong>, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Impulsiv",
+            "detail": "Idwal entscheidet oft aus dem Bauch heraus und handelt lieber sofort, als lange über alle Möglichkeiten nachzudenken.",
+            "icon": "../IconOrdner/Traits Icon/Wroth.png"
+          },
+          {
+            "title": "Bodenständig",
+            "detail": "Er hält wenig von höfischem Gehabe und begegnet einfachen Matrosen mit demselben Respekt wie Rittern, sofern sie ihre Pflicht erfüllen.",
+            "icon": "../IconOrdner/Traits Icon/Humble.png"
+          },
+          {
+            "title": "Schroff",
+            "detail": "Freundliche Worte sind selten seine Stärke; Kritik äußert er direkt, unverblümt und ohne Rücksicht auf verletzten Stolz.",
+            "icon": "../IconOrdner/Traits Icon/Wounded.png"
+          },
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Ein gegebener Befehl oder ein geschworener Eid wiegt für ihn schwerer als persönliche Wünsche oder Bequemlichkeit.",
+            "icon": "../IconOrdner/Traits Icon/Diligent.png"
+          },
+          {
+            "title": "Unerschrocken",
+            "detail": "Gefahr schreckt ihn nicht ab. Er ist oft der Erste, der ein feindliches Schiff entert oder sich einem Sturm entgegenstellt.",
+            "icon": "../IconOrdner/Traits Icon/Brave.png"
+          },
+          {
+            "title": "Einfach gestrickt",
+            "detail": "Komplizierte Zusammenhänge, Intrigen oder philosophische Gedankenspiele interessieren ihn wenig. Er sucht stets nach der einfachsten Lösung.",
+            "icon": "../IconOrdner/Traits Icon/Conscientious.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Geschichte",
+        "historyText": "Heute dient Sir Idwal als <strong>Kapitän zur See</strong> unter dem Seemarschall des Hauses Draig. Er befehligt die <strong>schwere Kriegskogge <em>Tiefenwyrm</em></strong> und führt eine sechzig Mann starke Besatzung. Das Schiff soll einst <strong>Cahir dem Schwarzen</strong>, seinem Urgroßvater und einem der bedeutendsten Seefahrer des Hauses Draig, gehört haben. Obwohl die <em>Tiefenwyrm</em> nicht zu den größten Kriegsschiffen Cenyrs zählt, gilt sie als außergewöhnlich schnelle, wendige und seetüchtige Kriegskogge. Sie ist ideal für Küstenpatrouillen, Geleitschutz, Aufklärungsfahrten und das rasche Abfangen feindlicher Schiffe in den Gewässern Celtigerns Wacht. Idwal genießt den Ruf eines besonnenen, pflichtbewussten Kapitäns, der seine Mannschaft stets vor sich selbst stellt und auf See ebenso viel Wert auf Disziplin wie auf Kameradschaft legt.",
+        "worksTitle": "Bekannte Werke",
+        "works": [
+          "Nahm als junger Kapitän an der Seeschlacht um Rhonwens Tränen teil und kämpfte gemeinsam mit der Flotte des Hauses Draig gegen eine Piratenflotte.",
+          "Brachte im Laufe seiner Dienstzeit mehrere kleinere Piraten- und Schmugglerbanden zur Strecke und eskortierte zahlreiche Handelsschiffe sicher entlang der Küste.",
+          "Gilt trotz seines jungen Alters als fähiger und verlässlicher Kapitän, dessen disziplinierte Mannschaft und erfolgreiche Patrouillen ihm einen guten Ruf innerhalb der cenyrischen Küstenflotte eingebracht haben."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Versteht Metaphern und feine Ironie oft erst, wenn sie ihm jemand erklärt."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [
+          "„Warum brennt das? ... Nein, ehrlich. Warum brennt das?“"
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Vertrauenspersonen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Trevor Gwyvern",
+            "detail": "Erster Maat",
+            "image": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cederic Chwedonol",
+            "detail": "Zweiter Maat",
+            "image": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Llewarch Tonnarth",
+            "detail": "Quartiermeister & Kammerdiener",
+            "image": "https://i.imgur.com/YXLDnVs.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Talon Trydar",
+            "detail": "Knappe",
+            "image": "https://i.imgur.com/pRAdLZx.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Verbindungen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Mannschaft der Tiefenwyrm",
+            "detail": "Schiffskapitän",
+            "image": "https://i.imgur.com/UvZ5sUf.png",
+            "imageFormat": "square"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "..."
+      }
     },
-    "playerOwner": "erdi",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ivM7V3M.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/L5EcljG.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Y5yIwHI.png"
+      },
+      {
+        "img": "https://i.imgur.com/Mv760tb.png",
+        "label": "Avatar"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/9OuVyQx.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Tpsi47E.png"
+      },
+      {
+        "img": "https://i.imgur.com/uEUyscH.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ekIgOpV.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/u9vMaCe.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/vNYCNaY.png"
+      },
+      {
+        "img": "https://i.imgur.com/YtLDiSz.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/sNp3fN6.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Ot9uNPy.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/dkLwic1.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/abUlVim.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/zclLxsG.png"
+      },
+      {
+        "img": "https://i.imgur.com/oFjeTLS.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/VIPOTYv.png"
+      },
+      {
+        "img": "https://i.imgur.com/PTkQ0W8.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/hf3DkVc.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Zn37T8e.png"
+      },
+      {
+        "img": "https://i.imgur.com/cBO85RW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/wSbhQ7t.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/sSenuhD.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/iYsdnJd.png"
+      },
+      {
+        "img": "https://i.imgur.com/F2PHNNB.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/zuEDUuI.png"
+      },
+      {
+        "img": "https://i.imgur.com/dsaMDSG.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gAXJxpk.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Ta1qwqM.png"
+      },
+      {
+        "img": "https://i.imgur.com/gwleLzA.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/uqHVMId.png"
+      },
+      {
+        "img": "https://i.imgur.com/6Y8mNcd.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/h5E12p2.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/vL767Vk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/V3lNcaG.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/5dNk8kx.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/VLJ3A85.png"
+      },
+      {
+        "img": "https://i.imgur.com/KcER30d.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/iiO4vLq.png",
+        "label": ""
+      }
+    ],
+    "name": "Idwal Draig",
+    "title": "Prinz & Ritterkapitän zur See, Gwynthor",
+    "portrait": "https://i.imgur.com/RNqIIO0.png",
+    "identity": {
+      "worldPersonId": "person--haus-draig--idwal-draig"
+    },
+    "plotNode": "",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
     "genealogy": {
-      "portraitPlaceholder": "auto",
-      "tags": [],
       "worldPersonId": "person--haus-draig--idwal-draig",
-      "familyRole": "core",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1716",
       "death": "",
       "houseId": "house-draig",
-      "sex": "unknown",
+      "houseName": "Haus Draig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "idwal-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig",
+          "fingerprint": "{\"name\":\"Idwal Draig\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"galahad-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"},{\"personId\":\"gwendolyn-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"partners\":[{\"personId\":\"unknown-idwal-betrothed\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-idwal-betrothed\",\"name\":\"Unbekannte Verlobte\"}],\"children\":[]}}"
+        }
+      ],
       "relationships": {
         "parents": [
           {
@@ -1319,201 +2064,497 @@
           }
         ],
         "children": []
+      }
+    },
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "relevance": "",
+    "inventory": {
+      "carryLabel": "Traglast",
+      "role": "Adjutant des Seemarschalls, Gwynthor",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "open": false,
+        "status": "",
+        "updatedAt": ""
       },
-      "houseName": "Haus Draig",
-      "status": "alive",
-      "birth": "1716",
-      "sources": [
+      "portraitFit": "cover",
+      "portrait": "https://i.imgur.com/RNqIIO0.png",
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Idwal Draig",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "attributes": [
         {
-          "familyId": "haus-draig",
-          "personId": "idwal-draig",
-          "releaseId": "",
-          "publishedAt": "",
-          "importedAt": "2026-09-05T04:52:04.569Z",
-          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig",
-          "fingerprint": "{\"name\":\"Idwal Draig\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"galahad-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"},{\"personId\":\"gwendolyn-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"partners\":[{\"personId\":\"unknown-idwal-betrothed\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-idwal-betrothed\",\"name\":\"Unbekannte Verlobte\"}],\"children\":[]}}"
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "infoRows": [],
+      "status": "Gesund",
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "https://i.imgur.com/HN7olKF.png",
+          "imageFormat": "portrait",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Distry",
+          "species": "Rabe",
+          "role": "Haustier",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "",
+          "description": "Distry ist der ebenso freche wie ungewöhnlich kluge Rabe des Piraten Idwal und weicht seinem Herrn kaum jemals von der Seite. Mit schiefgelegtem Kopf, funkelnden Augen und einem geradezu spöttischen Krächzen beobachtet er jede Unterhaltung aufmerksam. Wer Idwals Missfallen auf sich zieht, muss jederzeit damit rechnen, von Distry unvermittelt in Ohr, Finger oder Hinterkopf gepickt zu werden, als hätte der Vogel jedes beleidigte Wort persönlich genommen. Besonders eifersüchtig reagiert er auf Menschen, die Idwal zu viel Aufmerksamkeit schenken oder ihm zu nahe kommen, sodass selbst Verbündete gelegentlich Opfer seiner kleinen Angriffe werden. Trotz seines respektlosen Wesens ist Distry seinem Herrn bedingungslos ergeben und scheint dessen Stimmung oft zu erkennen, noch bevor Idwal selbst ein Wort sagt.",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 8
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "label": "Staerke",
+              "value": 2
+            },
+            {
+              "label": "Agilitaet",
+              "value": 7
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "label": "Robustheit",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "https://i.imgur.com/ilnbcSh.png",
+          "imageFormat": "portrait",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Drecksack",
+          "species": "Equo Pferd",
+          "role": "Reittier",
+          "status": "Immer breit!",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "Drecksack ist ein mächtiger schwarzer Equo-Hengst und Idwals bevorzugtes Reittier, auch wenn sein Herr ihn nur selten sattelt, da er die meiste Zeit auf seinem eigenen Schiff verbringt. Wann immer Idwal jedoch an Land kämpft, wartet Drecksack bereits ungeduldig auf ihn, als wolle er nichts lieber, als durch die Reihen der Gefallenen zu pflügen und auf den Leichen seiner Feinde herumzutrampeln. Anders als die meisten Equos, die mit eiserner Disziplin für den Krieg erzogen werden, blieb Drecksack aufgrund der seltenen Anwesenheit seines Reiters vergleichsweise unzureichend geführt. Aus dieser Vernachlässigung entwickelte sich ein aufbrausendes, dominantes Wesen, das er vor allem an anderen Pferden auslässt. Mehrfach geriet der Hengst außer Kontrolle, deckte Stuten gegen den Willen ihrer Besitzer und sorgte so für unerwünschte Fohlen oder schwere Verletzungen, die einzelne Tiere dauerhaft unfruchtbar machten. Da Idwal nur selten auf der Burg weilt und der Stallmeister mit zahllosen anderen Aufgaben ausgelastet ist, gilt Drecksack gemeinsam mit Tanor, dem arroganten Rhyfel des Prinzen Gawain, als das größte Ärgernis der Stallungen von Burg Draig.",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 7
+            },
+            {
+              "label": "Ausdauer",
+              "value": 6
+            },
+            {
+              "label": "Staerke",
+              "value": 8
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ]
+        }
+      ],
+      "showInfoTable": false,
+      "characterId": "kJss0DGF1RLuVrrVCBQT",
+      "items": [
+        {
+          "tags": "",
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "category": "weapon",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFormat": "square",
+          "icon": "*",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "itemDbKey": "",
+          "image": "",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "individualizedAt": "",
+          "originItemDbKey": ""
+        },
+        {
+          "tags": "",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "quantity": "1",
+          "imageFormat": "square",
+          "icon": "*",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "itemDbKey": "",
+          "image": "",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "individualizedAt": ""
+        },
+        {
+          "acquiredAt": "",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "category": "equipment",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imageFit": "contain",
+          "icon": "*",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "itemDbKey": "",
+          "image": "",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "individualizedAt": "",
+          "originItemDbKey": ""
+        },
+        {
+          "individualizedAt": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "itemStorageMode": "character",
+          "image": "",
+          "type": "Trinktur",
+          "name": "Heil- oder Verbrauchsgut",
+          "itemDbKey": "",
+          "icon": "*",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "quantity": "1",
+          "category": "potions",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "tags": "",
+          "acquiredAt": ""
+        },
+        {
+          "icon": "*",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "quantity": "1",
+          "category": "documents",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "tags": "",
+          "infoRows": [],
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "type": "Dokument",
+          "name": "Dokumente / Urkunden",
+          "itemDbKey": ""
+        },
+        {
+          "quantity": "1",
+          "imageFormat": "square",
+          "icon": "*",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-5-5kao",
+          "imageFit": "contain",
+          "category": "other",
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "infoRows": [],
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "itemStorageMode": "character",
+          "image": "",
+          "type": "Sonstiges",
+          "name": "Persönlicher Gegenstand",
+          "itemDbKey": ""
         }
       ]
     },
-    "emotes": [
-      {
-        "img": "https://i.imgur.com/ivM7V3M.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/L5EcljG.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/Y5yIwHI.png"
-      },
-      {
-        "img": "https://i.imgur.com/Mv760tb.png",
-        "label": "Avatar"
-      },
-      {
-        "label": "Avatar",
-        "img": "https://i.imgur.com/9OuVyQx.png"
-      },
-      {
-        "img": "https://i.imgur.com/Tpsi47E.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/uEUyscH.png"
-      },
-      {
-        "img": "https://i.imgur.com/ekIgOpV.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/u9vMaCe.png"
-      },
-      {
-        "img": "https://i.imgur.com/vNYCNaY.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/YtLDiSz.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/sNp3fN6.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/Ot9uNPy.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/dkLwic1.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/abUlVim.png"
-      },
-      {
-        "img": "https://i.imgur.com/zclLxsG.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/oFjeTLS.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/VIPOTYv.png"
-      },
-      {
-        "img": "https://i.imgur.com/PTkQ0W8.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/hf3DkVc.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/Zn37T8e.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/cBO85RW.png"
-      },
-      {
-        "img": "https://i.imgur.com/wSbhQ7t.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/sSenuhD.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/iYsdnJd.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/F2PHNNB.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/zuEDUuI.png"
-      },
-      {
-        "img": "https://i.imgur.com/dsaMDSG.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/gAXJxpk.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/Ta1qwqM.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/gwleLzA.png"
-      },
-      {
-        "img": "https://i.imgur.com/uqHVMId.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/6Y8mNcd.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/h5E12p2.png"
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/vL767Vk.png"
-      },
-      {
-        "img": "https://i.imgur.com/V3lNcaG.png",
-        "label": ""
-      },
-      {
-        "label": "",
-        "img": "https://i.imgur.com/5dNk8kx.png"
-      },
-      {
-        "img": "https://i.imgur.com/VLJ3A85.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/KcER30d.png",
-        "label": ""
-      },
-      {
-        "img": "https://i.imgur.com/iiO4vLq.png",
-        "label": ""
-      }
-    ],
-    "currentLocation": "",
-    "profileLink": "",
-    "origin": "",
-    "archived": false,
-    "updatedAt": "2026-07-26T11:33:41.849Z",
-    "bio": "",
-    "fraktion": "Haus Draig, Celtigerns Wacht",
-    "portrait": "https://i.imgur.com/RNqIIO0.png",
-    "name": "Idwal Draig",
-    "role": "",
-    "plotNode": "",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-    "status": "",
-    "emotesOverride": true,
-    "identity": {
-      "worldPersonId": "person--haus-draig--idwal-draig"
-    }
+    "profileLink": "",
+    "bio": "Sir Idwal Draig ist der zweitälteste Spross von Galahad Draig und Gwendolyn Draig, geborene Aderyn. Im Alter von acht Jahren wurde er als Mündel an das eigene Kadettenhaus Gwyvern in der Baronie Gwendolyns Ufer gegeben, wo ihn sein Vormund Sir Mervyn Gwyvern aufzog. Dort wuchs Idwal gemeinsam mit den Kindern des Hauses auf, erlernte das Ritterhandwerk und entwickelte früh seine Leidenschaft für die Seefahrt. Mit achtzehn Jahren kehrte er nach Gwynthor zurück.\n\nZwei Jahre später erhielt Idwal das Kommando über seine erste eigene Kriegskogge und begann, eine loyale Besatzung um sich zu scharen. Viele seiner engsten Gefährten stammen noch aus seiner Zeit bei den Gwyverns, darunter Trevor Gwyvern, Cederic Chwedonol und Llewarch Tonnarth, mit denen ihn bis heute eine tiefe Freundschaft verbindet.",
+    "currentLocation": "An Bord der Tiefenwyrm"
   }
 }

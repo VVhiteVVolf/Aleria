@@ -60,7 +60,9 @@ async function readCharacterExportOverlays(sourcePath) {
       overlays.push({
         path,
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
-        character: markCharacterDatabaseOverlay(exported.character)
+        character: markCharacterDatabaseOverlay(exported.character, {
+          replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields'
+        })
       });
     } catch {
       // Other JSON documents in the export directory are not character overlays.

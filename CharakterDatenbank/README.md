@@ -51,6 +51,8 @@ node CharakterDatenbank/scripts/sync-character-archive.mjs --check
 
 Der Sync entfernt ausschließlich veraltete `character.json`-Dateien, die eindeutig das Schema `aleria.character-record` tragen und nicht mehr im neu erzeugten Register vorkommen. Fremde Dateien werden nicht angerührt. `generated/sync-report.json` listet offene Stammbaumzuordnungen, Mehrdeutigkeiten und mehrere Firestore-Datensätze derselben Weltperson.
 
+Einzelfigurenexporte (`type: "aleria-character"`) im Exportverzeichnis ergänzen den vollständigen Archivexport. Für bestätigte Online-Stände kann der Export zusätzlich `mergeStrategy: "replace-exported-fields"` angeben: Seine gelieferten Profilfelder werden vollständig übernommen, einschließlich leerer Listen und `null`. Dadurch werden etwa entfernte Inventargegenstände, alte Biografieeinträge oder Begleiter nicht aus älteren Exporten erneut eingemischt. Nicht gelieferte Felder bleiben erhalten. Mehrere solche Exporte werden nach `character.updatedAt` angewendet, der neueste zuletzt. Ohne diese ausdrückliche Strategie gilt weiterhin die bisherige ergänzende Zusammenführung.
+
 ## Konfliktregel
 
 - Online gewinnt bei bearbeitbaren Profil- und Kampfwerten.

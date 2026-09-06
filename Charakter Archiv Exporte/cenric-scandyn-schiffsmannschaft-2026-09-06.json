@@ -1,0 +1,682 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T03:18:40.327Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Bestätigter Online-Stand nach der autorisierten Übernahme von Idwals Schiffsmannschaft am 06.09.2026. Rolle: Ausguck auf dem Krähennest. Keine ausgearbeitete Biografie vorhanden; vorhandene Kurzbeschreibung und belegte Bordaufgabe bleiben erhalten. Bestehende Kampf-, Inventar- und Bilddaten wurden beim Online-Import nicht verändert. Eigentümerkennungen sind aus diesem portablen Export entfernt.",
+  "character": {
+    "id": "Dud4fyF7ds8veV555aq3",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "portrait": "https://i.imgur.com/0uRopVw.png",
+    "profileLink": "",
+    "archived": false,
+    "title": "Ritter, Trenmorath",
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "name": "Name des Charakters",
+      "role": "Rolle",
+      "level": "Stufe",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "moneyNotice": "",
+      "showInfoTable": false,
+      "carryLabel": "Traglast",
+      "carryValue": "Noch festlegen",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Geld",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "items": [
+        {
+          "id": "item-mrdfyi4g-0-avgd",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mrdfyi4g-1-h396",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mrdfyi4g-2-4slt",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mrdfyi4g-3-znwm",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mrdfyi4g-4-xrfx",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mrdfyi4g-5-xvcq",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "other",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "companions": [
+        {
+          "id": "companion-mrdfyi4g-0-dju0",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mrdfyi4g-1-nlam",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "status": "",
+        "updatedAt": ""
+      },
+      "portrait": "https://i.imgur.com/0uRopVw.png",
+      "characterId": "Dud4fyF7ds8veV555aq3"
+    },
+    "status": "",
+    "name": "Cenric Scandyn",
+    "role": "Ausguck auf dem Krähennest",
+    "relevance": "",
+    "playerOwner": "patrick",
+    "genealogy": {
+      "worldPersonId": "person--haus-scandyn--cenric-scandyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "houseId": "house-scandyn",
+      "houseName": "Haus Scandyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Særinc",
+        "Ritter zur See",
+        "Entbehrlicher Zweig",
+        "Im Dienst des Hauses Draig"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-scandyn",
+          "personId": "cenric-scandyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-scandyn&mode=view&person=cenric-scandyn",
+          "fingerprint": "{\"name\":\"Cenric Scandyn\",\"title\":\"Særinc · fahrender Ritter zur See\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-scandyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-scandyn/cenric-scandyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Særinc\",\"Ritter zur See\",\"Entbehrlicher Zweig\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"eadric-scandyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-scandyn--eadric-scandyn\",\"name\":\"Eadric Scandyn\"},{\"personId\":\"mairwen-scandyn-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mairwen-scandyn-spouse\",\"name\":\"Mairwen Scandyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "eadric-scandyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-scandyn--eadric-scandyn",
+            "name": "Eadric Scandyn"
+          },
+          {
+            "personId": "mairwen-scandyn-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--mairwen-scandyn-spouse",
+            "name": "Mairwen Scandyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "bio": "Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht",
+    "emotesOverride": true,
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "plotNode": "",
+    "createdAt": "2026-07-09T11:47:43.880Z",
+    "aliases": [],
+    "fraktion": "Haus Scandyn, Aeldrunmar",
+    "identity": {
+      "worldPersonId": "person--haus-scandyn--cenric-scandyn"
+    },
+    "origin": "",
+    "taxonomyPath": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/dC8tmEZ.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/n1v7qTB.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Nz1EuZG.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/O9Xb9Cl.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/z3zPr35.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/L8sUw9i.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/49oQUwr.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/NusXyeE.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/F6ZQ4sI.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/AnClXKv.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/sk8tj3o.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/IBj6ryN.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/ADZii3L.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/n4rJu3t.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/3y80rqG.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/d4Cg0kW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/QrcFw1M.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/LORGccf.png",
+        "label": ""
+      }
+    ]
+  }
+}

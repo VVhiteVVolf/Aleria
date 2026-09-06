@@ -109,12 +109,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-05T04:52:04.569Z",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
     "sourceUpdatedAt": "2026-08-16T18:12:41.927Z",
     "sourceDocumentIds": [
       "ujMjNxdOs1pnR2jGNus4"
     ],
-    "contentHash": "1bb76c02e625d022443a6539b4cc4063bc426232dfc4e354e7821e66545114a2"
+    "contentHash": "b923dc2663654f48186780a68d753256f64f1d625fa96cd84509ae018e7a99e0"
   },
   "local": {
     "notes": "",
@@ -1636,8 +1636,8 @@
           "personId": "myrddin-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T04:52:04.569Z",
-          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=myrddin-draig",
           "fingerprint": "{\"name\":\"Myrddin Draig\",\"title\":\"\",\"birth\":\"1119\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"marared-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--marared-draig\",\"name\":\"Marared Draig\"},{\"personId\":\"cerridwyn-pendrag\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pendrag--cerridwyn-pendrag\",\"name\":\"Cerridwyn Pendrag\"}],\"partners\":[{\"personId\":\"bethwyn-nimue-grael\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--bethwyn-nimue-grael\",\"name\":\"Bethwyn „Nimue“ Grael\"},{\"personId\":\"afallith-lilith-tanwyn\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tanwyn--afallith-lilith-tanwyn\",\"name\":\"Afallith „Lilith“ Tanwyn\"}],\"children\":[{\"personId\":\"lancelot-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--lancelot-draig\",\"name\":\"Lancelot Draig\"},{\"personId\":\"myriad-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myriad-draig\",\"name\":\"Myriad Draig\"}]}}"
         },
@@ -1646,8 +1646,8 @@
           "personId": "myrddin-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-05T04:52:04.569Z",
-          "lastSyncedAt": "2026-09-05T04:52:04.569Z",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=myrddin-draig",
           "fingerprint": "{\"name\":\"Myrddin Draig\",\"title\":\"\",\"birth\":\"1119\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"bethwyn-nimue-grael\",\"type\":\"marriage\",\"status\":\"widowed\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--bethwyn-nimue-grael\",\"name\":\"Bethwyn „Nimue“ Grael\"}],\"children\":[]}}"
         }

@@ -1,0 +1,534 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-ysgrif--cadell-ysgrif",
+  "slug": "cadell-ysgrif",
+  "identity": {
+    "name": "Cadell Ysgrif",
+    "aliases": [],
+    "worldPersonId": "person--haus-ysgrif--cadell-ysgrif"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-ysgrif",
+      "label": "Haus Ysgrif"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-ysgrif",
+        "familyTitle": "Haus Ysgrif",
+        "personId": "cadell-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--cadell-ysgrif",
+        "houseId": "house-ysgrif",
+        "houseName": "Haus Ysgrif",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=cadell-ysgrif",
+        "fingerprint": "{\"name\":\"Cadell Ysgrif\",\"title\":\"Vetter Floyds\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bryn-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--bryn-ysgrif\",\"name\":\"Bryn Ysgrif\"},{\"personId\":\"elen-spouse-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-ysgrif\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-ysgrif--cadell-ysgrif",
+      "documentIds": [
+        "person--haus-ysgrif--cadell-ysgrif"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-ysgrif--cadell-ysgrif",
+          "createdAt": "2026-09-06T03:18:40.327Z",
+          "updatedAt": "2026-09-06T03:18:40.327Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-ysgrif",
+        "personId": "cadell-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--cadell-ysgrif",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=cadell-ysgrif"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceUpdatedAt": "2026-09-06T03:18:40.327Z",
+    "sourceDocumentIds": [
+      "person--haus-ysgrif--cadell-ysgrif"
+    ],
+    "contentHash": "522197d8bb0bc5ebfcc0554a25784fcdb9990f7ce741be83b30da5af04a513ac"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-ysgrif--cadell-ysgrif",
+        "playerOwner": "",
+        "activeImageSetId": "",
+        "imageSetSchemaVersion": 0,
+        "imageSetsOverride": false,
+        "emotes": [],
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Cadell Ysgrif"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Ysgrif"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Vetter Floyds"
+            },
+            {
+              "label": "Geboren",
+              "value": "1718"
+            },
+            {
+              "label": "Geburtsort",
+              "value": ""
+            },
+            {
+              "label": "Gestorben",
+              "value": "Lebend"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "22 Jahre"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Männlich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Ledig"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schiffsmeier der Tiefenwyrm"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "An Bord der Tiefenwyrm"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Cadell entstammt dem Bürgerhaus Ysgrif, einem angesehenen Schreiberhaus, das seit jeher eng mit den Häusern Balchder und Caerlaen verbunden ist. Als Junge wurde er als Mündel nach Abergwint zu Merlyn gegeben; man munkelte früh, er solle eines Tages Ysee Caerlaen heiraten. Aus dieser Verbindung wurde jedoch nichts.<br><br>Stattdessen freundete er sich mit <strong>Idwal Draig</strong> an, der zur selben Zeit ebenfalls als Mündel beim Hause Gwyvern in Abergwint aufwuchs. Obwohl Cadell mit Idwal nur wenige Gemeinsamkeiten teilt, blieb dieser für ihn stets der Prinz aus Gwynthor, aus dem sie beide stammen - eine gemeinsame Herkunft, die die beiden früh miteinander verband.",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Akribisch",
+                "detail": "Cadell führt jede Zahl, jeden Posten und jede Ausgabe mit peinlicher Genauigkeit, sodass ihm kaum ein Fehler entgeht.",
+                "icon": "../IconOrdner/Traits Icon/Organizer.png"
+              },
+              {
+                "title": "Scharfsinnig",
+                "detail": "Ein wacher Geist, der Zusammenhänge schnell durchschaut und sich nur schwer täuschen lässt.",
+                "icon": "../IconOrdner/Traits Icon/Shrewd.png"
+              },
+              {
+                "title": "Pragmatisch",
+                "detail": "Er denkt in Lösungen statt in Idealen und wählt stets den Weg, der tatsächlich funktioniert.",
+                "icon": "../IconOrdner/Traits Icon/Administrator.png"
+              },
+              {
+                "title": "Ernst",
+                "detail": "Zu den ernsteren Gestalten der Mannschaft gehörend, lächelt er selten und nimmt seine Pflichten mit größtem Nachdruck.",
+                "icon": "../IconOrdner/Traits Icon/Brooding.png"
+              },
+              {
+                "title": "Unbeugsam",
+                "detail": "Wo andere nachgeben, bleibt Cadell hart - ein klares Nein gehört ebenso zu seinem Amt wie die Schiffskasse selbst.",
+                "icon": "../IconOrdner/Traits Icon/Stubborn.png"
+              },
+              {
+                "title": "Bücherwurm",
+                "detail": "Zahlen, Bücher und Aufzeichnungen sind ihm oft lieber als Gesellschaft, weshalb ihn die Mannschaft gerne so nennt.",
+                "icon": "../IconOrdner/Traits Icon/Scholar.png"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Hintergrund",
+            "historyText": "Als Idwal seine eigene Mannschaft formte, dachte er sofort an Cadell als seinen <strong>Schiffsmeier</strong>. Heute kümmert sich Cadell an Bord der <em>Tiefenwyrm</em> um alles Finanzielle: Er führt die Schiffskasse, sorgt dafür, dass jedes Besatzungsmitglied pünktlich seinen Sold erhält, und wacht darüber, dass Geld und wertvolle Güter des Schiffes ordentlich verwaltet werden.<br><br>Als einer der ernsteren Köpfe an Bord scheut er sich nicht, auch einmal ein klares Nein auszusprechen, wenn es die Ordnung der Kasse verlangt.",
+            "worksTitle": "Bekannte Werke",
+            "works": [],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Wird von der übrigen Mannschaft liebevoll-spöttisch als Bücherwurm bezeichnet."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Vertrauenspersonen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Idwal Draig",
+                "detail": "Kapitän & Freund aus Kindertagen",
+                "image": "https://i.imgur.com/ENTDAnR.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Verbindungen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Mannschaft der Tiefenwyrm",
+                "detail": "Schiffsmeier",
+                "image": "https://i.imgur.com/UvZ5sUf.png",
+                "imageFormat": "square"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "Personenakte · Cadell Ysgrif"
+          }
+        },
+        "inventory": null,
+        "emotesOverride": false,
+        "identity": {
+          "worldPersonId": "person--haus-ysgrif--cadell-ysgrif"
+        },
+        "plotNode": "",
+        "title": "Schiffsmeier der Tiefenwyrm",
+        "status": "active",
+        "role": "Schiffsmeier",
+        "updatedAt": "2026-09-06T03:18:40.327Z",
+        "fraktion": "Haus Ysgrif",
+        "genealogy": {
+          "worldPersonId": "person--haus-ysgrif--cadell-ysgrif",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1718",
+          "death": "",
+          "houseId": "house-ysgrif",
+          "houseName": "Haus Ysgrif",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-ysgrif",
+              "personId": "cadell-ysgrif",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-06T03:18:40.327Z",
+              "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=cadell-ysgrif",
+              "fingerprint": "{\"name\":\"Cadell Ysgrif\",\"title\":\"Vetter Floyds\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"https://i.imgur.com/SaDQCjc.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bryn-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--bryn-ysgrif\",\"name\":\"Bryn Ysgrif\"},{\"personId\":\"elen-spouse-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-ysgrif\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "bryn-ysgrif",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-ysgrif--bryn-ysgrif",
+                "name": "Bryn Ysgrif"
+              },
+              {
+                "personId": "elen-spouse-ysgrif",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--elen-spouse-ysgrif",
+                "name": "Elen"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "origin": "",
+        "name": "Cadell Ysgrif",
+        "relevance": "",
+        "aliases": [],
+        "imageSets": [],
+        "createdAt": "2026-09-06T03:18:40.327Z",
+        "portrait": "https://i.imgur.com/SaDQCjc.png",
+        "archived": false,
+        "bio": "Cadell entstammt dem Bürgerhaus Ysgrif, einem angesehenen Schreiberhaus, das seit jeher eng mit den Häusern Balchder und Caerlaen verbunden ist. Als Junge wurde er als Mündel nach Abergwint zu Merlyn gegeben; man munkelte früh, er solle eines Tages Ysee Caerlaen heiraten. Aus dieser Verbindung wurde jedoch nichts.\n\nStattdessen freundete er sich mit Idwal Draig an, der zur selben Zeit ebenfalls als Mündel beim Hause Gwyvern in Abergwint aufwuchs. Obwohl Cadell mit Idwal nur wenige Gemeinsamkeiten teilt, blieb dieser für ihn stets der Prinz aus Gwynthor, aus dem sie beide stammen - eine gemeinsame Herkunft, die die beiden früh miteinander verband.",
+        "currentLocation": "An Bord der Tiefenwyrm",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "profileLink": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-ysgrif--cadell-ysgrif",
+    "playerOwner": "",
+    "activeImageSetId": "",
+    "imageSetSchemaVersion": 0,
+    "imageSetsOverride": false,
+    "emotes": [],
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Cadell Ysgrif"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Ysgrif"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Vetter Floyds"
+        },
+        {
+          "label": "Geboren",
+          "value": "1718"
+        },
+        {
+          "label": "Geburtsort",
+          "value": ""
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "22 Jahre"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schiffsmeier der Tiefenwyrm"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "An Bord der Tiefenwyrm"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Biografie",
+        "biographyText": "Cadell entstammt dem Bürgerhaus Ysgrif, einem angesehenen Schreiberhaus, das seit jeher eng mit den Häusern Balchder und Caerlaen verbunden ist. Als Junge wurde er als Mündel nach Abergwint zu Merlyn gegeben; man munkelte früh, er solle eines Tages Ysee Caerlaen heiraten. Aus dieser Verbindung wurde jedoch nichts.<br><br>Stattdessen freundete er sich mit <strong>Idwal Draig</strong> an, der zur selben Zeit ebenfalls als Mündel beim Hause Gwyvern in Abergwint aufwuchs. Obwohl Cadell mit Idwal nur wenige Gemeinsamkeiten teilt, blieb dieser für ihn stets der Prinz aus Gwynthor, aus dem sie beide stammen - eine gemeinsame Herkunft, die die beiden früh miteinander verband.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Akribisch",
+            "detail": "Cadell führt jede Zahl, jeden Posten und jede Ausgabe mit peinlicher Genauigkeit, sodass ihm kaum ein Fehler entgeht.",
+            "icon": "../IconOrdner/Traits Icon/Organizer.png"
+          },
+          {
+            "title": "Scharfsinnig",
+            "detail": "Ein wacher Geist, der Zusammenhänge schnell durchschaut und sich nur schwer täuschen lässt.",
+            "icon": "../IconOrdner/Traits Icon/Shrewd.png"
+          },
+          {
+            "title": "Pragmatisch",
+            "detail": "Er denkt in Lösungen statt in Idealen und wählt stets den Weg, der tatsächlich funktioniert.",
+            "icon": "../IconOrdner/Traits Icon/Administrator.png"
+          },
+          {
+            "title": "Ernst",
+            "detail": "Zu den ernsteren Gestalten der Mannschaft gehörend, lächelt er selten und nimmt seine Pflichten mit größtem Nachdruck.",
+            "icon": "../IconOrdner/Traits Icon/Brooding.png"
+          },
+          {
+            "title": "Unbeugsam",
+            "detail": "Wo andere nachgeben, bleibt Cadell hart - ein klares Nein gehört ebenso zu seinem Amt wie die Schiffskasse selbst.",
+            "icon": "../IconOrdner/Traits Icon/Stubborn.png"
+          },
+          {
+            "title": "Bücherwurm",
+            "detail": "Zahlen, Bücher und Aufzeichnungen sind ihm oft lieber als Gesellschaft, weshalb ihn die Mannschaft gerne so nennt.",
+            "icon": "../IconOrdner/Traits Icon/Scholar.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Hintergrund",
+        "historyText": "Als Idwal seine eigene Mannschaft formte, dachte er sofort an Cadell als seinen <strong>Schiffsmeier</strong>. Heute kümmert sich Cadell an Bord der <em>Tiefenwyrm</em> um alles Finanzielle: Er führt die Schiffskasse, sorgt dafür, dass jedes Besatzungsmitglied pünktlich seinen Sold erhält, und wacht darüber, dass Geld und wertvolle Güter des Schiffes ordentlich verwaltet werden.<br><br>Als einer der ernsteren Köpfe an Bord scheut er sich nicht, auch einmal ein klares Nein auszusprechen, wenn es die Ordnung der Kasse verlangt.",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Wird von der übrigen Mannschaft liebevoll-spöttisch als Bücherwurm bezeichnet."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Vertrauenspersonen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Idwal Draig",
+            "detail": "Kapitän & Freund aus Kindertagen",
+            "image": "https://i.imgur.com/ENTDAnR.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Verbindungen",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Mannschaft der Tiefenwyrm",
+            "detail": "Schiffsmeier",
+            "image": "https://i.imgur.com/UvZ5sUf.png",
+            "imageFormat": "square"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Personenakte · Cadell Ysgrif"
+      }
+    },
+    "inventory": null,
+    "emotesOverride": false,
+    "identity": {
+      "worldPersonId": "person--haus-ysgrif--cadell-ysgrif"
+    },
+    "plotNode": "",
+    "title": "Schiffsmeier der Tiefenwyrm",
+    "status": "active",
+    "role": "Schiffsmeier",
+    "updatedAt": "2026-09-06T03:18:40.327Z",
+    "fraktion": "Haus Ysgrif",
+    "genealogy": {
+      "worldPersonId": "person--haus-ysgrif--cadell-ysgrif",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1718",
+      "death": "",
+      "houseId": "house-ysgrif",
+      "houseName": "Haus Ysgrif",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-ysgrif",
+          "personId": "cadell-ysgrif",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=cadell-ysgrif",
+          "fingerprint": "{\"name\":\"Cadell Ysgrif\",\"title\":\"Vetter Floyds\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"https://i.imgur.com/SaDQCjc.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bryn-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--bryn-ysgrif\",\"name\":\"Bryn Ysgrif\"},{\"personId\":\"elen-spouse-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-ysgrif\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "bryn-ysgrif",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ysgrif--bryn-ysgrif",
+            "name": "Bryn Ysgrif"
+          },
+          {
+            "personId": "elen-spouse-ysgrif",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--elen-spouse-ysgrif",
+            "name": "Elen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "origin": "",
+    "name": "Cadell Ysgrif",
+    "relevance": "",
+    "aliases": [],
+    "imageSets": [],
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "portrait": "https://i.imgur.com/SaDQCjc.png",
+    "archived": false,
+    "bio": "Cadell entstammt dem Bürgerhaus Ysgrif, einem angesehenen Schreiberhaus, das seit jeher eng mit den Häusern Balchder und Caerlaen verbunden ist. Als Junge wurde er als Mündel nach Abergwint zu Merlyn gegeben; man munkelte früh, er solle eines Tages Ysee Caerlaen heiraten. Aus dieser Verbindung wurde jedoch nichts.\n\nStattdessen freundete er sich mit Idwal Draig an, der zur selben Zeit ebenfalls als Mündel beim Hause Gwyvern in Abergwint aufwuchs. Obwohl Cadell mit Idwal nur wenige Gemeinsamkeiten teilt, blieb dieser für ihn stets der Prinz aus Gwynthor, aus dem sie beide stammen - eine gemeinsame Herkunft, die die beiden früh miteinander verband.",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "profileLink": ""
+  }
+}
