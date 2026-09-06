@@ -36,6 +36,9 @@ const CLASS_PAGE_ICONS = Object.freeze({
 });
 
 const CLASS_PAGE_ICON_ALIASES = Object.freeze({
+  ceidwyn: CLASS_PAGE_ICONS.ceidwynr,
+  rhiddwyr: CLASS_PAGE_ICONS.rhiddwyrr,
+  'vennyr-milwr': { pageName: 'Milwr', source: 'https://i.imgur.com/2wdIWQ2.png' },
   pakttrager: CLASS_PAGE_ICONS.hexer,
   hexenmeister: CLASS_PAGE_ICONS.hexer,
   monch: CLASS_PAGE_ICONS.asket,

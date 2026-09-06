@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "id": "hird-maid",
+  "cultureId": "aldrimar",
+  "name": "Hird/Maid",
+  "title": "Hirdmann & Schildmaid",
+  "subtitle": "Fußvolk & Miliz Aldrimars",
+  "aliases": [
+    "Hirdmann",
+    "Schildmaid",
+    "Kona"
+  ],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/DXELbM2.png",
+  "illustration": "https://i.imgur.com/ghYznPG.png",
+  "artwork": {
+    "source": "https://i.imgur.com/ghYznPG.png",
+    "width": 687,
+    "height": 1024,
+    "caption": "Hirdmann & Schildmaid · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/uF665HD.png",
+    "width": 452,
+    "height": 552,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Miliz und freie Clanskrieger"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Taktik",
+      "html": "Formationskampf, Frontschweine"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Nicht Adelig, Bürgerliche Clans, Sippen"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Auftreten",
+      "html": "Bodenständig, rau, selbstbewusst, clanloyal"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Schutz von Hof und Sippe"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Keine"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Schwert, Axt, Rundschild"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Leder, Fell, Pelz, Stahl, Eisen, Kettenhemd, Schuppenpanzer"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Geschlossener Schildwall, Vorstoß im Verband, druckbasierter Nahkampf"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Gründer",
+      "html": "Kein einzelner Gründer – entstanden aus der frühen Clanverteidigung der Norrnaigh"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Wehrpflicht",
+      "html": "Jeder freie Clan muss waffenfähige Hirds und Kona stellen"
+    },
+    {
+      "group": "Sonstige Daten",
+      "label": "Sozialer Status",
+      "html": "Wehrhaftigkeit gilt als Zeichen von Ehre und gesellschaftlichem Wert"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Hird</strong> und die <strong>Kona</strong> bilden das Fundament der nordischen Kriegerkultur. Das Wort <em>Hird</em> entstammt einem alten nordischen Begriff für <strong>Haushalt</strong> oder <strong>Gefolgschaft</strong>, während <em>Kona</em> als Bezeichnung für <strong>Frau</strong>, <strong>Maid</strong> oder <strong>Magd</strong> gebraucht wird. In der Kriegsgesellschaft des Nordens sind diese Begriffe jedoch weit mehr als soziale Rollen – sie stehen für die große Masse jener, die das <strong>Schwert führen</strong>, wenn es nötig wird.</p> <p>Der Hirdmann und die Schildmaid sind keine Adligen, keine Eliten, sondern <strong>Clansleute</strong>, die aus ihren Familien heraus zu Kriegern heranwachsen. Ihre Ausbildung beginnt nicht in einer Halle unter Bannern, sondern im Alltag: beim <strong>Holzfällen</strong>, <strong>Jagen</strong>, <strong>Fischen</strong>, <strong>Wachdienst</strong> und in der Verteidigung des eigenen Hofes. Wer im Norden lebt, lernt früh, dass Schwäche nicht verziehen wird. Das Land selbst prüft dich – und alles, was darin lauert.</p> <p>Das Leben im Norden ist härter als in den zentralen Reichen Lothirs oder Aldervans. Dort schützen Ritter und Tiarna die Ländereien. Im Norden schützt man sich selbst. <strong>Wölfe</strong>, <strong>Bären</strong>, <strong>Banditen</strong>, <strong>Trolle</strong>, <strong>Untote</strong>, <strong>Geister</strong>, <strong>Riesen</strong>, <strong>Warge</strong> und zahllose andere Gefahren zwingen jede Familie zur Wehrhaftigkeit. Jeder Hof gleicht einem kleinen Bollwerk, jeder Clan einem eigenen Mikrokönigreich. Schmiede, Fischer und Handwerker führen ebenso eine Waffe wie die Krieger – denn wenn der Feind vor der Tür steht, gibt es keine Trennung zwischen Stand und Pflicht.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Das <strong>Kriegertum der Nordmänner</strong> wurzelt in der alten Kultur der <em>Norrnaigh</em>, jenem nördlichen Urvolk, das sich einst vom albischen Stamm löste und im rauen Norden <strong>Yrmandralls</strong> eine eigene Identität formte. Abgeschnitten durch <em>Eis</em>, <em>Gebirge</em> und endlose Winter veränderten sich nicht nur ihre Körper, sondern auch ihre <strong>Sprache</strong>, ihre <strong>Schrift</strong> und ihr <strong>Denken</strong>. Die einst naturverbundene Weltsicht wich einem härteren Verständnis von <strong>Überleben</strong>, <strong>Stärke</strong> und <strong>Selbstbehauptung</strong>. Ihr Pantheon vermischte sich mit Götzen des Frostes und der Tiefe, und ihre Tugenden verschoben sich von Harmonie zu <strong>Ehre</strong>, von Einklang zu <strong>Macht</strong>.</p> <p>Mit der Not des Winters kam der Wandel. Kurze Sommer und karge Ernten zwangen sie, neue Wege zu suchen – oder sich zu nehmen, was sie brauchten. So begann die Epoche der <strong>Seefahrer</strong>, in der Clans der Norrnaigh gen Süden zogen. Manche gründeten neue Reiche wie <strong>Aldrimar</strong>, andere brannten albische Lande wie <em>Glaenneach</em> oder <em>Muirneach</em> nieder. In dieser Zeit formte sich das Bild des Nordmannes als <strong>Plünderer</strong>, doch ebenso als <strong>Entdecker</strong>, <strong>Siedler</strong> und <strong>Eroberer</strong>.</p> <p>Das Fundament dieser Kriegerkultur bilden die <strong>Hirds</strong> – auch <em>Hirdmänner</em> und <em>Schildmaiden (Kona)</em> genannt. Sie sind keine Adligen, sondern Clansleute, die durch <strong>Schwur</strong>, <strong>Ausbildung</strong> und <strong>Tapferkeit</strong> zu Kriegern werden. Ihre Pflicht ist es, den Clan zu schützen, Nachwuchs auszubilden und im Ruf ihres Stammes zu stehen. Über ihnen stehen die <strong>Einhejaren</strong> und <strong>Walküren</strong> – in Aldrimar <em>Huskarle</em> genannt – die Kriegerelite und der niedere Adel. Sie unterscheiden sich nach <strong>Gattung</strong>, <strong>Waffenführung</strong> und <strong>Zweck</strong>: <em>Veigir</em> als Schiffsleute und Fernkämpfer, <em>Stjorn</em> und <em>Ravnar</em> als Frontkämpfer, während seltene Gestalten wie <em>Ulfhednar</em> oder <em>Tungur</em> eine halb magische, kultische Rolle einnehmen.</p> <p>Über allem steht ein Geflecht aus alten Stammesstrukturen und jungem Feudalwesen. <strong>Hesire</strong>, <strong>Thane</strong>, <strong>Jarle</strong> und schließlich die <strong>Reiks</strong> herrschen über Ländereien und Clans, doch alle bleiben dem <strong>Hochkönig von Yrmandrall</strong> verpflichtet. Es ist kein reines Feudalsystem wie in Cenyr, sondern ein Übergang – ein Bund aus <strong>Blut</strong>, <strong>Schwur</strong> und <strong>Land</strong>, in dem noch immer das Wort des Clans ebenso schwer wiegt wie das Siegel eines Fürsten.</p> <p>Als die Welt noch jung war und die Norrnaigh sich im Norden Yrmandralls niederließen, existierten keine gefestigten Reiche. Es gab nur <strong>Sippen</strong>, <strong>Höfe</strong> und das ungezähmte Land. Jeder Clan musste selbst dafür sorgen, dass sein Dorf verteidigt werden konnte. Aus dieser Not heraus entstand der Hird – zunächst als erweiterter Haushalt eines Häuptlings, später als organisierte Gefolgschaft. Doch anders als im Süden war der Hird nie ausschließlich ein Stand der Elite. Er war die bewaffnete Gemeinschaft des Clans.</p> <p>Mit der Zeit entwickelte sich daraus eine klare Struktur: Die Mehrheit blieb Hird oder Kona – freie Krieger, die ihrem Clan dienten. Aus ihren Reihen stiegen die späteren Einhejaren und Huskarle auf. Doch selbst als sich Adelstitel und feudale Elemente formten, blieb der Kern unverändert: Der Norden vertraut nicht auf eine kleine Kriegerkaste, sondern auf eine <strong>wehrhafte Bevölkerung</strong>.</p> <p>So erklärt sich auch der Unterschied zu den südlichen Reichen. Während dort die Kriegsführung professionalisiert und formalisiert wurde, blieb sie im Norden ein Bestandteil des Alltags. Der Hirdmann und die Kona sind nicht nur Soldaten – sie sind Bauern, Jäger, Eltern und Handwerker. Doch wenn die Hörner ertönen, stehen sie Schulter an Schulter im Schildwall. Nicht aus ritterlicher Pflicht, sondern aus <strong>Blut</strong>, <strong>Clanloyalität</strong> und dem Willen zu überleben.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Die <strong>Hird</strong> und die <strong>Kona</strong> kämpfen im Kern mit <strong>Schild</strong> und der <strong>Waffe ihrer Wahl</strong> – Axt, Speer oder Schwert. Ihre Stärke liegt nicht in kunstvoller Fechtkunst, sondern in der sicheren Beherrschung der <strong>Grundtechniken</strong>: Standfestigkeit, Schildarbeit, Stoßbewegung und das Halten der Linie. Jeder von ihnen lernt früh, wie man einen Schildwall bildet, wie man Druck aufbaut und wie man im Verband kämpft, ohne die Formation zu brechen.</p> <p>Kommt es zum Krieg, rufen <strong>Jarle</strong> und <strong>Thane</strong> zur <strong>Heerschau</strong>. Jede Familie, jeder Clan ist verpflichtet, waffenfähige Hirds und Kona zu stellen. Diese werden nach Herkunftsort in den <strong>Heerbann</strong> eingegliedert, wodurch Nachbarschaften und Verwandtschaftsgruppen gemeinsam kämpfen – was den Zusammenhalt stärkt. Angeführt werden sie meist von <strong>Huskarlen</strong>, die Erfahrung, Disziplin und taktische Führung einbringen.</p> <p>Im Gefecht stehen Hird und Kona in geschlossener <strong>Schildformation</strong>. Ihre Fähigkeiten liegen im <strong>Halten von Positionen</strong>, im gemeinsamen Vorrücken und im Durchbrechen schwächerer Linien. Sie sind geübt im Abwehren von Angriffen aus unübersichtlichem Gelände, im schnellen Sammeln bei Alarm und im Verteidigen von Höfen oder Dörfern.</p> <p>Was ihnen an formalisiertem Kriegerkodex fehlt, ersetzen sie durch <strong>Erfahrung</strong>, <strong>Familienloyalität</strong> und eine instinktive Anpassungsfähigkeit an die Gefahren des Nordens. Sie sind keine Turnierkämpfer – sie sind Überlebende, die gelernt haben, gemeinsam zu stehen oder gemeinsam zu fallen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Hoher <strong>Zusammenhalt</strong> durch Clan- und Familienbindung</p> </li> <li><p> Sehr stark im <strong>Schildwall</strong> und im Kampf im Verband</p> </li> <li><p> Anpassungsfähig an <strong>raues Gelände</strong>, Kälte und widrige Bedingungen</p> </li> <li><p> Frühzeitige <strong>Grundausbildung</strong> im Umgang mit Waffen</p> </li> <li><p> Hohe <strong>Moral</strong> bei Verteidigung von Heimat und Sippe</p> </li> <li><p> Gewohnt an reale Bedrohungen – kaum Einschüchterung durch Monster oder Chaos</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Weniger ausgeprägte, formalisierte <strong>Fechtkunst</strong> im Einzelduell</p> </li> <li><p> Abhängig von <strong>Formation</strong> – isoliert weniger effektiv</p> </li> <li><p> Kaum standardisierte Ausrüstung, Qualität variiert je nach Clan</p> </li> <li><p> Begrenzte taktische Vielfalt ohne Führung durch Huskarle</p> </li> <li><p> Geringe schwere Kavallerie oder spezialisierte Elite außerhalb der höheren Ränge</p> </li> <li><p> Emotionale Bindung an Clan kann zu <strong>unüberlegten Vergeltungsaktionen</strong> führen</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "<p>Alle Untergruppen der <strong>Huskarle</strong> beziehungsweise <strong>Einhejaren</strong> werden in einem gemeinsamen, überlieferten <strong>Grundstil</strong> unterwiesen. Dieser Stil ist kein Sammelsurium individueller Techniken, sondern ein einheitliches Fundament aus <strong>Stand</strong>, <strong>Schrittfolge</strong>, <strong>Schildarbeit</strong> und <strong>Druck im Nahkampf</strong>. Unabhängig davon, ob ein Krieger später als <em>Stjorn</em>, <em>Ravnar</em>, <em>Veigir</em> oder in einer selteneren Form dient – seine Ausbildung beginnt mit derselben Lehre: <strong>Halten</strong>, <strong>Vorrücken</strong>, <strong>Brechen</strong>. Erst danach verzweigt sich die Technik in spezialisierte Unterformen, angepasst an Waffengattung, Rolle und taktischen Zweck.</p> <p>Im Unterschied zu den Rittern Cenyrs besitzen die Nordmänner kein ausgearbeitetes, verschriftlichtes System einer hochformalen <strong>Schwertkunst</strong>, wie es dort als nahezu akademische Disziplin gepflegt wird. Es existieren keine kodifizierten Fechtbücher, keine ritterlichen Duellregeln, keine formalisierten Schulen mit klar abgegrenzten Lehrlinien. Doch daraus zu schließen, sie hätten keinen Kampfstil, wäre falsch. Ihre Kampfweise ist <strong>überliefert</strong>, <strong>erprobt</strong> und durch Generationen des Krieges geschärft.</p> <p>Die nordmännische Technik ist weniger von Eleganz als von <strong>Zweckmäßigkeit</strong> geprägt. Sie bevorzugt <strong>Druck</strong>, <strong>Körpernähe</strong>, <strong>Wucht</strong> und das rasche Erzwingen von Vorteilen. Der Schild wird nicht nur zum Blocken genutzt, sondern aktiv zum <strong>Stoßen</strong>, <strong>Drängen</strong> und <strong>Brechen von Linien</strong>. Waffen werden nicht in kunstvollen Kombinationen geführt, sondern in klaren, effizienten Bewegungen, die auf <strong>Verletzung</strong>, <strong>Raumgewinn</strong> und <strong>Überlegenheit im Verband</strong> zielen.</p> <p>Was ihnen an formalem Regelwerk fehlt, ersetzen sie durch <strong>Erfahrung</strong>, <strong>Kameradschaft im Gefecht</strong> und eine kompromisslose Orientierung am Ergebnis. Ihr Stil ist brachialer, weniger ritualisiert – aber nicht weniger effektiv. Er ist kein höfisches Kunsthandwerk, sondern eine <strong>Kriegstechnik</strong>, geboren aus Frost, Stahl und der Notwendigkeit zu siegen.</p>"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong>Ausstattung</strong> eines Hird oder einer Kona ist nicht einheitlich geregelt, sondern stark von <strong>Clan</strong>, <strong>Herkunft</strong> und <strong>Wohlstand</strong> abhängig. Anders als in zentralen Reichen existiert keine normierte Bewaffnung, die von einer Krone oder einem Orden vorgegeben wird. Jeder bringt mit, was er besitzt, was der Clan stellen kann oder was in der Familie weitervererbt wurde.</p> <p>In städtischen Gebieten werden nur selten Hirds oder Kona gestellt; dort übernehmen oft andere Strukturen die Sicherheit. Auf dem Land hingegen ist es Pflicht. Clans, die abgelegen in Fjorden, Wäldern oder Hochländern leben, müssen ihren Hof und ihr Vieh selbst schützen. Entsprechend besitzen sie meist robuste <strong>Rundschilde</strong>, einfache <strong>Helme</strong>, <strong>Leder- oder Kettenrüstungen</strong> sowie Waffen, die im Alltag ebenso dienen wie im Krieg – Axt, Speer oder Kurzschwert.</p> <p>Kein Hird gleicht dem anderen. Manche tragen ein altes, kunstvoll verziertes Schwert aus Familienbesitz, andere nur eine gut geschärfte Holzfällaxt. Die Qualität der Rüstung schwankt ebenso wie der Zustand der Schilde. Entscheidend ist nicht die Gleichförmigkeit, sondern die <strong>Verlässlichkeit im Verband</strong>. Wenn der Heerbann gerufen wird, tritt jeder mit seiner eigenen Ausrüstung an – doch im Schildwall zählt nicht das Einzelstück, sondern die geschlossene Front.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong>Hird</strong> und die <strong>Kona</strong> genießen im Norden einen hohen gesellschaftlichen Rang. Sie gelten als das <strong>Fundament der Kultur</strong>, als jene, die mit Schild und Stahl sichern, was die Clans aufgebaut haben. Besonders in <strong>Fjordheim</strong> und anderen Reiktümern misst man den Wert eines Clans nicht nur an Vieh, Land oder Silber – sondern daran, wie viele <strong>waffenfähige Hirds und Kona</strong> er stellen kann. Wehrhaftigkeit ist kein Zusatz, sondern ein Maßstab für <strong>Ehre</strong> und <strong>Ansehen</strong>.</p> <p>Thralls und Leibeigene hingegen dürfen keine Hirds stellen. Sie sind nicht Teil des wehrhaften Verbandes, sondern dienen in Arbeit und Dienstbarkeit. Sie bestellen Felder, hüten Vieh, tragen Lasten – doch sie stehen nicht im Schildwall. Dieser Unterschied ist sichtbar und gesellschaftlich verankert. Ein Clan, der keine Hirds oder Kona aufbringen kann, gilt als schwach oder verarmt, und auf ihn wird mit Geringschätzung geblickt.</p> <p>Ausnahmen bilden wohlhabende Städter, deren Einfluss nicht aus der Waffe, sondern aus <strong>Handwerk</strong>, <strong>Handel</strong> oder <strong>Schmiedekunst</strong> erwächst. Auch sie können Ansehen genießen – doch es ist ein anderes, zivileres Prestige. In den rauen Regionen des Nordens bleibt klar: Wer keinen Schild tragen kann oder will, steht nicht im Zentrum der Macht. Der wahre Kern der nordischen Gesellschaft ist und bleibt der <strong>wehrhafte Clan</strong>.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Die Wahl der <strong>Gefährten</strong> unterscheidet sich von Clan zu Clan und oft auch von Individuum zu Individuum. Es existiert keine einheitliche Vorschrift, welches Tier oder Begleitwesen einem Hird oder einer Kona zur Seite stehen muss. Vielmehr spiegeln Gefährten die <strong>Lebensräume</strong>, <strong>Traditionen</strong> und <strong>Ressourcen</strong> des jeweiligen Clans wider.</p> <p>Sumpfclans schwören häufig auf robuste <strong>Hunde</strong>, die bei Jagd, Wachdienst und im Gefecht verlässlich sind. Waldclans hingegen halten mitunter gezähmte <strong>Wölfe</strong>, deren Präsenz nicht nur praktisch, sondern auch symbolisch für Wildheit und Zusammenhalt steht. In den Bergen begleiten <strong>Falken</strong> oder andere Greifvögel ihre Herren, dienen als Kundschafter oder Statuszeichen. Auf den offenen Weiden wiederum tragen kräftige <strong>Pferde</strong> die Hirds in den Kampf und machen sie zu schnellen Reitern.</p> <p>Diese Gefährten sind mehr als bloße Nutztiere. Sie sind Ausdruck der <strong>Identität des Clans</strong> und oft Teil von Erziehung und Alltag. Ein Hird aus den Moorlanden wird anders kämpfen als einer aus dem Hochgebirge – nicht nur wegen seiner Waffe, sondern wegen des Gefährten, mit dem er aufgewachsen ist.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "1e29fb22c82e40c56e3e43bc54796e4a3c1ef8c40c17d00d9d353bf20c0f312a",
+    "editorialCorrections": [
+      {
+        "field": "facts.Klassentyp",
+        "original": "Kämpfer",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

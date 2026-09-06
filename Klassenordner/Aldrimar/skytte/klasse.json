@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "skytte",
+  "cultureId": "aldrimar",
+  "name": "Skytte",
+  "title": "Der Skytte",
+  "subtitle": "Fernkämpfender Huskarl",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/kUMAEYt.png",
+  "illustration": "https://i.imgur.com/gFY6bzy.png",
+  "artwork": {
+    "source": "https://i.imgur.com/gFY6bzy.png",
+    "width": 859,
+    "height": 554,
+    "caption": "Der Skytte · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/eooEQac.png",
+    "width": 408,
+    "height": 612,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Waldläufer, Schütze und Grenzwächter"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Bogen, Speer; Schwert oder Axt im Nahkampf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Skytte</strong> ist der Waldläufer und Bogenschütze Aldrimars. Sein Name bedeutet schlicht <strong>„Schütze“</strong>, doch seine Rolle geht weit über das bloße Führen eines Bogens hinaus. Er ist Kundschafter, Jäger, Fährtenleser und Grenzwächter zugleich.</p> <p>Der Skytte kämpft bevorzugt mit <strong>Bogen</strong> und <strong>Speer</strong>, führt jedoch ebenso <strong>Schwert</strong> oder <strong>Axt</strong> für den Nahkampf. Er bewegt sich lautlos durch Wälder und Ebenen, kennt die Zeichen von Wild, Wetter und Menschen. Häufig wird er von <strong>Hunden oder Wölfen</strong> begleitet, die ihm bei Jagd und Spurensuche helfen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Ursprung des Skytte liegt im <strong>Veigir</strong>. Als sich die Norrnaigh zunehmend vom Meer entfernten und tiefer ins Landesinnere Glaenneachs und Aldrimars vordrangen, verlor ein Teil der maritimen Krieger seinen ursprünglichen Zweck. Nicht alle Veigir wurden Skeidr oder blieben an der Küste.</p> <p>Viele dieser erfahrenen Seemänner, die bereits über Kenntnisse in Navigation, Orientierung und Jagd verfügten, passten sich dem neuen Terrain an. Die Fähigkeiten, Sterne zu lesen und</p> <p>Küsten zu deuten, wandelten sich in die Kunst, <strong>Wald und Wildnis zu verstehen</strong>. Die nautische Orientierung wurde zur Landkunde, das Wissen um Vorräte zur Kräuterkunde.</p> <p>Mit der Zeit löste sich diese Gattung vom Begriff des Veigir. Man nannte sie fortan <strong>Skytten</strong> – Schützen, die das Land ebenso beherrschten wie ihre Vorgänger einst das Meer.</p> <p>So entstand aus dem Seefahrer der Waldläufer, aus dem Küstenkrieger der Grenzwächter. Der Skytte ist damit ein Produkt des Wandels Aldrimars – ein Beweis dafür, dass sich Kriegerkultur nicht nur durch Schlachten, sondern auch durch Geographie formt.</p>",
+      "sharedIntro": "aldrimar-geschichte"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Skytte</strong> ist ein Meister des <strong>Fernkampfes</strong> und der <strong>Wildniskunde</strong>. Seine Hauptwaffe ist der <strong>Bogen</strong> – meist ein kräftiger Langbogen oder ein robuster Jagdbogen –, mit dem er sowohl auf große Distanz als auch aus dem Hinterhalt präzise töten kann. Er versteht es, erhöhte Positionen zu nutzen, Deckung einzusetzen und Bewegungen des Feindes vorauszuahnen.</p> <p>Neben dem Bogen führt der Skytte häufig einen <strong>Speer</strong> für mittlere Distanz sowie <strong>Schwert oder Axt</strong> für den Nahkampf. Zwar ist er kein Frontbrecher, doch er ist durchaus fähig, sich im direkten Gefecht zu behaupten.</p> <p>Seine eigentliche Stärke liegt jedoch im <strong>Lesen der Natur</strong>. Der Skytte erkennt Spuren im Unterholz, deutet gebrochene Zweige, kennt Tierpfade und versteht das Verhalten von Wild und Raubtieren. Er ist kundig in <strong>Kräutern</strong>, weiß um heilende wie giftige Pflanzen und kann in feindlichem Terrain überleben, wo andere Krieger scheitern würden.</p> <p>Als Kundschafter agiert er vor der Hauptstreitmacht, markiert sichere Wege, meldet Bewegungen des Feindes und bereitet Hinterhalte vor.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Hohe <strong>Treffsicherheit</strong> auf Distanz</p> </li> <li><p> Exzellente <strong>Gelände- und Naturkenntnis</strong></p> </li> <li><p> Effektiv in Hinterhalten und Aufklärung</p> </li> <li><p> Selbstständig und ausdauernd in der Wildnis</p> </li> <li><p> Unterstützt durch Hunde oder Wölfe bei Jagd und Spurensuche</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Im offenen Feld weniger stark als schwere Huskarle</p> </li> <li><p> Leichtere Rüstung macht ihn verwundbarer</p> </li> <li><p> Abhängig von Deckung und Gelände für maximale Effektivität</p> </li> <li><p> Im dichten Nahkampf gegen schwer gepanzerte Gegner unterlegen</p> </li> <li><p> Fernkampf verliert Wirkung bei schlechtem Wetter oder auf engem Raum</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "huskarl-waffenlehre"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong>Ausstattung</strong> des Skytte ist auf <strong>Beweglichkeit</strong>, <strong>Geräuschlosigkeit</strong> und <strong>Selbstständigkeit</strong> ausgelegt. Er trägt meist leichte bis mittlere Rüstung – verstärktes <strong>Leder</strong>, gelegentlich ein kurzes <strong>Kettenhemd</strong>, jedoch selten schwere Panzerung. Gewicht ist in Wald und Wildnis ein Nachteil.</p> <p>Seine Hauptwaffe ist ein kräftiger <strong>Langbogen</strong> oder Jagdbogen, ergänzt durch einen Köcher mit unterschiedlichen Pfeilarten – breite Jagdspitzen, schmale Durchdringer oder schwere Kriegsspitzen. Ein <strong>Speer</strong> dient als vielseitige Zwischenwaffe: zum Stoßen, Werfen oder Abstützen im Gelände. Für den Nahkampf führt er meist ein <strong>Schwert</strong>, eine <strong>Axt</strong> oder ein Sax.</p> <p>Zur Ausrüstung gehören außerdem <strong>Reisemantel</strong>, wetterfeste Kleidung, Jagdmesser, Seile, Fallenmaterial und kleine Beutel für Kräuter oder getrocknete Vorräte. Viele Skytten tragen einfache Tarnfarben in Grün-, Braun- oder Grautönen, angepasst an Wald und Ebenen.</p> <p>Im Gegensatz zu den stärker repräsentativen Huskarlen ist die Ausrüstung des Skytte funktional und unauffällig. Alles dient einem Zweck – Überleben, Beobachtung, gezielter Schlag.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong>Skytte</strong> genießt in Aldrimar einen bodenständigen, aber festen Respekt. Besonders in <strong>ländlichen Clans</strong>, deren Territorien von Wald, Hügeln oder Gebirge geprägt sind, gelten Skytten als unverzichtbar. Sie sichern Jagdgründe, überwachen Grenzpfade und warnen frühzeitig vor Eindringlingen. In solchen Regionen ist ein guter Skytte mehr wert als ein schwer gerüsteter Frontkämpfer.</p> <p>Auch an der <strong>Küste</strong> sind sie häufig anzutreffen. Dort agieren sie neben den <strong>Skeidr</strong> auf Schiffen oder sichern Landezonen und Küstenstreifen. Ihre Fähigkeit, aus erhöhter Position zu schießen oder Gelände rasch zu lesen, ergänzt die maritime Kriegführung.</p> <p>Im höfischen Umfeld stehen sie nicht im Mittelpunkt ritterlicher Ideale – sie sind keine Turnierhelden und keine Bannerträger großer Schlachten. Doch jeder Jarl weiß, dass ohne Skytten Wege unsicher, Wälder blind und Küsten verwundbar wären.</p> <p>Sie verkörpern die stille Wachsamkeit Aldrimars – weniger gefeiert, aber strategisch unverzichtbar.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der <strong>Skytte</strong> ist einer der wenigen Huskarle, bei denen tierische Gefährten eine echte Rolle spielen. Am häufigsten führen sie <strong>Hunde</strong> oder halbwilde <strong>Wölfe</strong>, die bei der Jagd, beim Aufspüren von Fährten oder beim Stellen von Flüchtigen helfen. Diese Tiere sind auf Gehorsam und Ausdauer trainiert und begleiten den Skytte oft über Jahre hinweg.</p> <p>In bergigen oder waldreichen Regionen halten manche Skytten zudem <strong>Greifvögel</strong> – Falken oder große Jagdvögel –, die beim Auskundschaften von Gelände oder bei der Jagd auf kleineres Wild eingesetzt werden. Ein geschulter Vogel kann aus der Höhe Bewegungen erkennen, lange bevor ein Mensch sie wahrnimmt.</p> <p>Für längere Strecken oder schnelle Verlegungen nutzen Skytten gelegentlich <strong>schnelle, leichtere Pferde</strong>. Diese sind nicht für den schweren Ansturm gedacht wie bei Thegnar, sondern für rasche Positionswechsel und Nachrichtenübermittlung.</p> <p>Der Skytte sieht seine Tiere nicht als Statussymbol, sondern als Erweiterung seiner eigenen Sinne. Wo andere Huskarle Stahl und Schild vertrauen, vertraut er auf Augen, Nase und Instinkt – seine eigenen und die seiner Gefährten.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "6e36b5b81601384583ae0269c8f85a87ece9e5a5b5d2a044e7105467de04376d",
+    "editorialCorrections": [
+      {
+        "field": "facts.Waffengattung",
+        "original": "Speer, Sax, Axt, Rundschild",
+        "reason": "An die klassenspezifischen Abschnitte und den vorhandenen Charakteraufbau angepasst."
+      },
+      {
+        "field": "facts.Klassentyp",
+        "original": "Kämpfer,",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

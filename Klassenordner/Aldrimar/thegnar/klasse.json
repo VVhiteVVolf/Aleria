@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "thegnar",
+  "cultureId": "aldrimar",
+  "name": "Thegnar",
+  "title": "Der Thegnar",
+  "subtitle": "Berittener Huskarl",
+  "aliases": [
+    "Thegn"
+  ],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/Z081bE6.png",
+  "illustration": "https://i.imgur.com/x4HdUr2.png",
+  "artwork": {
+    "source": "https://i.imgur.com/x4HdUr2.png",
+    "width": 1024,
+    "height": 572,
+    "caption": "Der Thegnar · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/uF665HD.png",
+    "width": 452,
+    "height": 552,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Lanze, Axt, Streitkolben, Keule oder Schwert"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Berittener Huskarl"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Thegnar</strong>, meist kurz <strong>Thegn</strong> genannt, ist der berittene Huskarl Aldrimars. Sein Name leitet sich vom <strong>Thanen</strong> ab und verweist auf seine ursprüngliche Rolle als Teil der „Garde des Thanen“. In einer Zeit, in der die Norrnaigh kaum organisierte Reiterei kannten, waren es vor allem <strong>Adlige</strong> – Thane und Hesire –, die Pferde besaßen und sich beritten fortbewegten. Aus ihren persönlichen Leibgarden entwickelte sich später eine eigenständige Gattung: der Thegnar.</p> <p>In Aldrimar sind die Thegn die klar definierte <strong>Kavallerie</strong> des Reiches. Sie reiten auf schweren, robusten <strong>Hest-Rössern</strong>, sind vergleichsweise leicht gerüstet und werden für Patrouillen, Vorstöße und schnelle Reaktionen eingesetzt. Anders als der Skjoldr, der zwar reiten kann, sich aber nicht als Kavallerist versteht, ist der Thegn bewusst für den <strong>Sattel</strong> ausgebildet.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Zeiten der Norrnaigh war Reiterei selten und meist dem Adel vorbehalten. Ein <strong>Thane</strong>, der mehrere Lehen oder weite Gebiete kontrollierte, benötigte Beweglichkeit auf dem Schlachtfeld. Er führte häufig eine kleine berittene Leibgarde mit sich, um rasch von einem Abschnitt der Front zum anderen zu gelangen. Diese Gefolgsleute waren keine Kavalleristen im klassischen Sinne, sondern bewaffnete Adlige oder deren engste Krieger.</p> <p>Mit der kulturellen und politischen Entwicklung Aldrimars verfestigte sich diese Praxis. Aus der persönlichen Garde der Thanen entstand eine strukturierte Einheit innerhalb der Huskarle: die <strong>Thegnar</strong>. Sie wurden nicht mehr nur als Begleiter eines einzelnen Adligen verstanden, sondern als eigenständige militärische Formation.</p> <p>Ihre Bedeutung zeigte sich besonders im <strong>Bürgerkrieg der Prätendenten</strong>, als das Jarltum <strong>Roriksheim</strong> die Thegnar in zwei entscheidenden Schlachten einsetzte. Durch gezielte Vorstöße, Flankenmanöver und schnelle Patrouillen gelang es ihnen, den Ausschlag zugunsten ihres Anspruchs zu geben. Seitdem gelten sie als unverzichtbarer Bestandteil der aldirmarischen Kriegsführung.</p> <p>Heute patrouillieren Thegnar die weiten Ebenen Aldrimars, sichern Handelswege und greifen rasch ein, wenn Banditen oder Plünderer auftreten. Ein Huskarl, der Thegn wird, entscheidet sich für ein Leben in Bewegung – fern der Hallen, oft wochenlang unterwegs. Es ist ein Pfad, der Disziplin, Ausdauer und Selbstständigkeit verlangt – und nicht jeder ist dafür geschaffen.</p>",
+      "sharedIntro": "aldrimar-geschichte"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Thegn</strong> ist ein ausgebildeter <strong>Kavallerist</strong>, dessen Stärke in Mobilität, Reaktionsgeschwindigkeit und taktischer Flexibilität liegt. Er beherrscht den Kampf vom <strong>Sattel</strong> ebenso wie das rasche Absitzen und Weiterkämpfen zu Fuß. Seine bevorzugten Waffen sind <strong>Lanze</strong>, <strong>Axt</strong>, <strong>Streitkolben</strong>, <strong>Keule</strong> oder <strong>Schwert</strong> – stets angepasst an Aufgabe und Gelände.</p> <p>Im Gegensatz zu schweren Ritterorden setzt der Thegn weniger auf reine Wucht als auf <strong>Bewegung</strong>. Er führt Vorstöße, sichert Flanken, verfolgt fliehende Gegner oder durchbricht schwächere Linien. Seine Ausbildung umfasst Geländekunde, Orientierung und lange Märsche. Ein Thegn muss wissen, wie man Pferd und Mann über Tage hinweg einsatzbereit hält.</p> <p>Einige Thegn entwickeln sich weiter zu Unterformen wie dem <strong>Svaldr</strong>, der skaldische Elemente mit Reiterei verbindet, oder dem <strong>Ridendr</strong>, einem fernkämpfenden Reiter, der Elemente des Skyttenstils integriert. Diese Spezialisierungen sind noch nicht vollständig institutionalisiert, zeigen jedoch die wachsende Vielfalt innerhalb der Gattung.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Hohe <strong>Mobilität</strong> und schnelle Reaktionsfähigkeit</p> </li> <li><p> Effektiv bei Patrouillen, Flankenmanövern und Verfolgungen</p> </li> <li><p> Vielseitige Waffenführung vom Sattel aus</p> </li> <li><p> Gut geeignet für offene Ebenen und weite Landstriche</p> </li> <li><p> Kann sowohl beritten als auch abgesessen kämpfen</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Leichtere Rüstung im Vergleich zu Skjoldr oder südlichen Rittern</p> </li> <li><p> Abhängig von geeignetem Gelände für maximale Wirkung</p> </li> <li><p> Schwerfällige Hest-Rösser sind weniger wendig als südliche Pferde</p> </li> <li><p> Längere Einsätze fordern Pferd und Reiter stark</p> </li> <li><p> In engen, bewaldeten oder gebirgigen Regionen eingeschränkt</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "huskarl-waffenlehre"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong>Ausstattung</strong> des Thegn ist auf <strong>Beweglichkeit</strong>, <strong>Reichweite</strong> und <strong>Ausdauer</strong> ausgelegt. Im Gegensatz zum schwer gerüsteten Skjoldr trägt er meist ein leichteres <strong>Kettenhemd</strong> oder verstärktes Leder, um im Sattel nicht an Beweglichkeit zu verlieren. Helm und Armschienen sind üblich, doch schwere Plattenelemente sind selten – Gewicht ist im Dauereinsatz ein Nachteil.</p> <p>Sein Pferd ist in der Regel ein kräftiges <strong>Hest-Ross</strong>, robust gebaut und an lange Märsche gewöhnt. Es ist nicht so schnell oder wendig wie südliche Schlachtrösser, dafür jedoch ausdauernd und widerstandsfähig. Sattel, Zaumzeug und Gepäck sind funktional gehalten, da der Thegn oft über Wochen patrouilliert.</p> <p>Zur Bewaffnung gehören meist eine <strong>Lanze</strong> für den ersten Anritt sowie eine <strong>Axt</strong>, ein <strong>Schwert</strong>, eine <strong>Keule</strong> oder ein <strong>Streitkolben</strong> für den Nahkampf. Manche führen zusätzlich einen Dolch oder Sax. Ein Schild kann mitgeführt werden, wird jedoch vom Sattel aus nicht immer genutzt.</p> <p>Da Thegn häufig auf Patrouille sind, tragen sie zusätzlich <strong>Reiseausrüstung</strong>: Proviant, Reparaturwerkzeug für Pferd und Ausrüstung sowie wetterfeste Kleidung. Ihre Ausrüstung ist weniger repräsentativ als die eines Hofritters – sie ist für lange Wege und schnelle Gefechte geschaffen, nicht für Turnierplätze.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong>Thegn</strong> nimmt innerhalb der Huskarle Aldrimars eine ambivalente Stellung ein. Er ist kein gefeierter Frontheld wie der Skjoldr, kein ehrfurchtgebietender Mystiker wie ein Svaldr – und doch ist er unverzichtbar. Sein Dienst ist pragmatisch, oft unsichtbar, selten besungen.</p> <p>In den Hallen genießt er nicht denselben Ruhm wie jene, die im offenen Feld Schlachten entscheiden. Viele betrachten die Reiterei noch immer als ein Werkzeug – notwendig, aber nicht heroisch. Der Thegn verbringt Wochen auf Patrouille, jagt Banditen, sichert Grenzen, begleitet Boten und reagiert auf Gefahren, bevor sie zur großen Bedrohung werden. Das ist Pflicht, nicht Glanz.</p> <p>Gerade deshalb wird er häufig unterschätzt. Doch jeder Jarl weiß: Ohne Thegnar bleiben Wege ungesichert, Ebenen unüberwacht und Feinde unentdeckt. Sie sind das wachsame Auge Aldrimars – weniger verehrt, aber strategisch unverzichtbar.</p> <p>Ein Thegn trägt keinen Ruhm wie eine Trophäe. Er trägt Verantwortung – und das oft fernab der Hallen, in Wind, Staub und endlosen Weiten.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der wichtigste Gefährte eines <strong>Thegn</strong> ist sein <strong>Pferd</strong>. Über Generationen hinweg bevorzugten die Thegnar die einheimischen <strong>Hest-Rösser</strong> – robuste, klimafeste Tiere, die mit Wind, Regen und kargen Ebenen Aldrimars vertraut sind. Sie sind nicht die schnellsten oder elegantesten Pferde, doch sie sind zäh, ausdauernd und verlässlich. Für lange Patrouillen und unwegsames Gelände gelten sie bis heute als erste Wahl.</p> <p>Mit der Zeit und durch Handel sowie Züchtergilden hat Aldrimar Zugang zu zahlreichen hochwertigen Rassen erhalten. Manche Thegn reiten inzwischen edlere oder schnellere Tiere – etwa den <strong>Ceffyl</strong> aus südlicher Zucht. Diese eignen sich besonders für schnelle Vorstöße oder repräsentative Auftritte.</p> <p>Und dennoch bleibt das <strong>Hest</strong> das bevorzugte Ross. Selbst ein wohlhabender Thegn, der ein ausländisches Schlachtpferd führt, hält meist mindestens ein Hest in Reserve. Es gilt als klug, auf ein Tier zurückgreifen zu können, das Klima, Boden und Strapazen Aldrimars gewohnt ist.</p> <p>Andere tierische Gefährten spielen bei Thegnar kaum eine Rolle. Ihr Leben ist auf das Pferd ausgerichtet – es ist Transportmittel, Kampfpartner und Lebensversicherung zugleich.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "written",
+      "html": "<ul> <li>Der Begriff <strong>Thegn</strong> leitet sich vom Titel <strong>Thane</strong> ab und bedeutete ursprünglich sinngemäß „Gefolgsmann“ oder „Diener eines Herren“. In Aldrimar wandelte sich der Begriff zur Bezeichnung einer eigenen berittenen Gattung – aus der persönlichen <strong>Garde des Thanen</strong> wurde der eigenständige <strong>Thegnar</strong>.</li> </ul>"
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "da5d952356a6454889b35318c0f4e0a68ccb9b0e7935faf6f378e1ba88796017",
+    "editorialCorrections": [
+      {
+        "field": "facts.Waffengattung",
+        "original": "Speer, Sax, Axt, Rundschild",
+        "reason": "An die klassenspezifischen Abschnitte und den vorhandenen Charakteraufbau angepasst."
+      },
+      {
+        "field": "facts.Klassentyp",
+        "original": "",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

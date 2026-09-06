@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "capturedFor": "Skalden-Grundausbildung 1–5",
+  "source": "Charakter Archiv Exporte/freya-skald.json",
+  "sourceProfileHash": "a3cc8fdf95d96c3c37783eac6d4fda25bb5b62bac7b94a5c5d93ee4c0befea64",
+  "referenceLevel": 5,
+  "manaExample": 39,
+  "castingAttribute": "charisma",
+  "weapons": [
+    {
+      "name": "Laute",
+      "damageFormula": "1d4",
+      "weaponType": "arcane"
+    },
+    {
+      "name": "Schwert",
+      "damageFormula": "1d8",
+      "weaponType": "sword"
+    },
+    {
+      "name": "Schild (Schildstoß)",
+      "damageFormula": "1d4",
+      "weaponType": "shield"
+    }
+  ],
+  "repertoire": [
+    {
+      "sourceId": "freya-spottvers",
+      "name": "Spottvers",
+      "minimumLevel": 1,
+      "spellLevel": 0,
+      "description": "Ein spöttischer Vers, begleitet von einem schneidenden Lautenakkord.",
+      "effect": "Der Malus wird einmalig als 1W4 gewürfelt und als fester Abzug auf den nächsten Angriffswurf des Ziels eingebacken, nicht erneut würfeln. Wirkt nur bei misslungenem Willenskraft-Rettungswurf (Weisheit) gegen Freyas Zauber-SG. Vereinfachung: Das Ziel würfelt aktuell sofort beim Wirken, nicht nachträglich reagierend als eigene Handlung - eine echte spätere Reaktionsmöglichkeit ist noch nicht gebaut.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "Stimmreichweite",
+      "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
+      "resolutionType": "saving-throw",
+      "saveAttribute": "wisdom",
+      "automation": "structured",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-magische-hand",
+      "name": "Magische Hand",
+      "minimumLevel": 1,
+      "spellLevel": 0,
+      "description": "Ein kaum sichtbarer Luftzug folgt den Klängen der Laute und bewegt kleine Gegenstände.",
+      "effect": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Türen öffnen, Gegenstände bewegen, Hebel ziehen, Waffen oder Beutel heranholen - nichts, was Kampf entscheidet.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Kurz, solange die Melodie andauert",
+      "resolutionType": "automatic",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-kleine-illusion",
+      "name": "Kleine Illusion",
+      "minimumLevel": 2,
+      "spellLevel": 0,
+      "description": "Mit wenigen gezupften Saiten erschafft die Skaldin Geräusche oder kleine Trugbilder, als würden Erinnerungen oder Geister vergangener Zeiten Gestalt annehmen.",
+      "effect": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Ablenkung, Täuschung, Lockrufe, Deckung durch kleine Trugbilder oder Geräusche.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Kurz, solange die Melodie andauert",
+      "resolutionType": "automatic",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-licht",
+      "name": "Licht",
+      "minimumLevel": 2,
+      "spellLevel": 0,
+      "description": "Eine ruhige Melodie lässt eine Waffe, Brosche oder den Kopf der Laute in warmem Licht erstrahlen, als würde das Lied selbst die Dunkelheit vertreiben.",
+      "effect": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Beleuchtung, Signalgebung, Erkundung.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "Berührung",
+      "duration": "Bis zur nächsten langen Rast oder bewusster Auflösung",
+      "resolutionType": "automatic",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-charm-person",
+      "name": "Person bezaubern",
+      "minimumLevel": 3,
+      "spellLevel": 1,
+      "description": "Ein warmes, einschmeichelndes Lied, das Zuneigung und Vertrauen weckt.",
+      "effect": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG betrachtet das Ziel Freya vorerst als freundlich gesinnt und ist ihr wohlgesonnen; offen feindseliges Verhalten Freyas oder ihrer Verbündeten bricht den Effekt sofort.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 2,
+          "scope": "persistent"
+        },
+        {
+          "resourceId": "spell-slot-1",
+          "name": "Zauberplatz Grad 1",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Mehrere Szenen, bis aufgehoben oder durch Feindseligkeit gebrochen",
+      "resolutionType": "saving-throw",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-calm-person",
+      "name": "Person beruhigen",
+      "minimumLevel": 3,
+      "spellLevel": 1,
+      "description": "Eine sanfte, gleichmäßige Melodie, die Wogen glättet und Zorn verebben lässt.",
+      "effect": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG wird das Ziel deutlich ruhiger, kann nicht aggressiv handeln oder sich freiwillig in Gefahr begeben; Schaden oder direkte Bedrohung beendet den Effekt sofort.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 2,
+          "scope": "persistent"
+        },
+        {
+          "resourceId": "spell-slot-1",
+          "name": "Zauberplatz Grad 1",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Mehrere Runden, bis das Ziel angegriffen wird oder Schaden nimmt",
+      "resolutionType": "saving-throw",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-enrage-person",
+      "name": "Person wütend machen",
+      "minimumLevel": 4,
+      "spellLevel": 2,
+      "description": "Ein aufpeitschender, dissonanter Ton, der Wut und Reizbarkeit schürt.",
+      "effect": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG gerät das Ziel in blinde Wut und greift bevorzugt den ihm nächststehenden Gegner an, auch entgegen eigener Taktik.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 3,
+          "scope": "persistent"
+        },
+        {
+          "resourceId": "spell-slot-2",
+          "name": "Zauberplatz Grad 2",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Mehrere Runden, bis der Zorn narrativ abklingt",
+      "resolutionType": "saving-throw",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-silence",
+      "name": "Stille",
+      "minimumLevel": 5,
+      "spellLevel": 3,
+      "description": "Freya lässt die Laute für einen Moment verstummen - und mit ihr jeden Klang in der Umgebung.",
+      "effect": "Freitext-Auflösung: erschafft eine Zone völliger Stille an einem gewählten Punkt in Reichweite; darin ist weder Sprache noch Gesang noch stimmbasierte Magie möglich. Kein Rettungswurf, wirkt automatisch auf den Bereich, nicht auf eine Person.",
+      "costs": [
+        {
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 5,
+          "scope": "persistent"
+        },
+        {
+          "resourceId": "spell-slot-3",
+          "name": "Zauberplatz Grad 3",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter",
+      "duration": "Mehrere Runden, bis bewusst aufgelöst",
+      "resolutionType": "automatic",
+      "saveAttribute": "wisdom",
+      "automation": "narrative",
+      "status": "reference",
+      "active": false
+    },
+    {
+      "sourceId": "freya-arkaner-schrei",
+      "name": "Arkaner Schrei",
+      "minimumLevel": 5,
+      "description": "Ein durchdringender, magisch verstärkter Schrei, der als Schockwelle nach vorne rast.",
+      "effect": "Jeder ausgewählte Gegner würfelt einzeln einen Konstitution-Rettungswurf gegen Freyas Zauber-SG; bei Fehlschlag 3W6 Wucht, bei Erfolg kein Schaden. Freya selbst erleidet danach immer 1W6 Schaden, unabhängig vom Ausgang der gegnerischen Rettungswürfe. Bekannte Einschränkung: Wird diese Handlung technisch einmal pro ausgewähltem Ziel aufgelöst statt einmal für die ganze Gruppe, würfelt der eigene Schaden pro Auflösung erneut - dann nur den ersten Wurf werten, den Rest als DM manuell ignorieren. Der Mana-Kosten-Wert unten entspricht Freyas vollem Manapool auf Stufe 5 (39, nach der überarbeiteten Manapool-Tabelle) und muss bei künftigen Stufenaufstiegen manuell auf ihr dann aktuelles Maximum angehoben werden, damit der Schrei sie weiterhin vollständig erschöpft.",
+      "costs": [
+        {
+          "resourceId": "special-action",
+          "name": "Besondere Aktion",
+          "amount": 1,
+          "scope": "persistent"
+        },
+        {
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 39,
+          "scope": "persistent"
+        }
+      ],
+      "range": "9 Meter, kegelförmig vor ihr",
+      "duration": "Sofort; Erschöpfung gemäß Figurenbogen",
+      "damage": [
+        {
+          "target": "selected",
+          "formula": "3d6",
+          "on": "hit"
+        },
+        {
+          "target": "self",
+          "formula": "1d6",
+          "on": "always"
+        }
+      ],
+      "uses": {
+        "maximum": 1,
+        "recovery": "none"
+      },
+      "automation": "structured",
+      "status": "reference",
+      "active": false
+    }
+  ]
+}

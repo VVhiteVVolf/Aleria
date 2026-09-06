@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "id": "rhyfelwyr",
+  "cultureId": "vennyr",
+  "name": "Rhyfelwyr",
+  "title": "Der Rhyfelwyr",
+  "subtitle": "Klassischer Vennyrischer Ritter",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/Jh8DGNz.png",
+  "illustration": "https://i.imgur.com/gSFGpuI.png",
+  "artwork": {
+    "source": "https://i.imgur.com/gSFGpuI.png",
+    "width": 683,
+    "height": 1024,
+    "caption": "Rhyfelwyr · Vennyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/jse13jK.png",
+    "width": 500,
+    "height": 500,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Vennyr (historisch); heute in Herrschaft Fjordheims"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel; vereinzelt Erhebung verdienter Waffenknechte"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Rituelle Weihe nach avallornischem Ritus, ergänzt durch regionale Symbolik (Wasser, Stein, Banner)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehnseid gegenüber Krone oder Penron sowie Schwur auf Ehre, Land und Glaube"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Klassentyp",
+      "html": "Schwerer Ritter und Linienkämpfer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Taktik",
+      "html": "Durchbruch, Standfestigkeit und kontrollierte Wucht"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Waffengattung",
+      "html": "Großaxt, Kriegshammer, Morgenstern, Streitkolben; auch Schwert und Flegel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstungsgattung",
+      "html": "Schwere Kette oder verstärkte Platte"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Sirenentanz · eigene vennyriische Weiterentwicklung des Drachentanzes"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Wenn der Nebel über den Fjorden hängt und das Horn zum Sammeln ruft, treten sie vor – schwer gepanzert, schweigend, mit Waffen, die mehr zerschmettern als schneiden. Wo andere Ritter Haltung wahren, sucht der <strong><em>Rhyfelwyr</em></strong> den Aufprall. Er ist kein Duellant des Hofes, sondern die geballte Wucht der Linie. Wenn der Schildwall wankt, wenn Berserker mit brüllender Raserei aufbrechen, dann sind es die Rhyfelwyr, die stehen bleiben – und zurückschlagen.</p> <p>Ein Rhyfelwyr ist ein brachialerer Teulu. Er kämpft nicht nur mit dem Schwert, sondern bevorzugt Waffen, die Rüstung und Knochen zugleich brechen: Morgenstern, Großaxt, Kriegshammer, Streitkolben. Diese Vielfalt ist kein Zufall, sondern Notwendigkeit. Die nordischen Berserker wirkten wie Kryptonit gegen feine Duellanten – also musste sich der Rhyfelwyr anpassen. Sein Kampfstil ist weniger elegant, dafür unerbittlich. Er durchbricht, zertrümmert, hält stand. Wo andere Ritter die Form wahren, wahrt er die Linie.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die <strong><em>Rhyfelwyr</em></strong> entstanden aus dem alten <strong><em>Teulu</em></strong>, als die Avallornier nach ihren Siegen um Oseneach weiter nach Norden zogen, um das Fürstentum Muirneach von der Tyrannei der Nordmänner zu befreien. In diesen Feldzügen zeigte sich schnell, dass die feine, duellorientierte Kampfweise der cenyrischen Teulu gegen nordische Berserker nur begrenzt bestand hatte. Die wilden, ungestümen Angriffe der Feinde verlangten nach einer neuen Form von Ritter – schwerer, kompromissloser, durchbrechender.</p> <p>Mit der Gründung Vennyrs begann ein langsamer, aber spürbarer Wandel. Aus dem höfischen Bannerkrieger wurde ein Grenzbrecher, dessen Aufgabe es war, Schildwälle zu halten und feindliche Linien zu zerschlagen. Der Name <strong><em>Rhyfelwyr</em></strong> – „sehr-Krieger“ oder „Überkrieger“ – war dabei keine bloße Zier, sondern Ausdruck eines neuen Selbstverständnisses. Sie verstanden sich nicht als elegante Fechter, sondern als das Bollwerk des Reiches.</p> <p>Über Generationen hinweg festigte sich diese Entwicklung. Während die Teulu Cenyrs ihre Rolle als repräsentative Ritter bewahrten, wurden die Rhyfelwyr zu einer eigenständigen vennyriischen Ausprägung des Rittertums. Ihre Bewaffnung erweiterte sich um Axt, Morgenstern und Kriegshammer, ihre Rüstung wurde massiver, ihr Auftreten härter. So trennten sich nicht die Ideale – wohl aber die Ausführung. Der Rhyfelwyr blieb Ritter im Kodex, doch wurde er zum Krieger im Wesen.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong><em>Rhyfelwyr</em></strong> ist ein Meister des schweren Nahkampfes und der Linienbrechung. Seine Ausbildung im <strong><em>Sirenentanz</em></strong> ist auf Wucht, Standfestigkeit und kontrollierte Gewalt ausgelegt. Er beherrscht den Einsatz von Großaxt, Kriegshammer, Morgenstern und Streitkolben ebenso sicher wie das klassische Ritterschwert, doch seine wahre Stärke liegt im Zerschlagen gegnerischer Formationen. Schildwall halten, Engpässe verteidigen, Belagerungstore stürmen – hier entfaltet er sein volles Potential.</p> <p>Darüber hinaus ist der Rhyfelwyr besonders widerstandsfähig gegen psychologischen Druck. Die jahrelangen Kämpfe gegen Berserker und fanatische Nordkrieger lehrten ihn, Raserei nicht zu fürchten, sondern auszunutzen. Er versteht es, gegnerische Überdehnung zu erkennen und mit brutaler Präzision zu bestrafen. Seine Präsenz auf dem Schlachtfeld wirkt stabilisierend auf Verbündete und einschüchternd auf Feinde.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li> Überragende Durchschlagskraft gegen Rüstung und Schild</li> <li> Hohe Standfestigkeit im Schildwall und in engen Gefechten</li> <li> Psychische Widerstandsfähigkeit gegen Raserei und Schockangriffe</li> <li> Dominanz in Frontalgefechten und Belagerungssituationen</li> </ul> <p><strong>Schwächen</strong></p> <ul> <li> Geringere Beweglichkeit durch schwere Rüstung und Waffen</li> <li> Unterlegen in langen Verfolgungen oder schnellen Flankenmanövern</li> <li> Weniger geeignet für feine Duelle gegen technisch versierte Fechter</li> <li> Hoher Kraftverbrauch bei längeren Gefechten</li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "sirenentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung des <strong><em>Rhyfelwyr</em></strong> ist auf rohe Durchsetzungskraft und Standfestigkeit ausgelegt. Seine Rüstung besteht meist aus schwerer Kette oder verstärkter Platte, häufig ergänzt durch breite Schulterstücke und verstärkte Armschienen, um die Wucht seiner eigenen Hiebe abzufedern. Helmformen sind geschlossen oder halbgeschlossen, mit reduziertem Zierrat – Funktion vor Repräsentation.</p> <p>Als Hauptwaffe führt er selten nur ein Schwert. Großaxt, Kriegshammer, Morgenstern oder schwerer Streitkolben sind typische Kennzeichen seiner Gattung. Viele tragen zusätzlich ein kurzes Seitenmesser oder Dolch für den Nahbereich im Gedränge. Ein breiter Schild kommt je nach Einsatz zum Einsatz, wird jedoch im offenen Feld oft zugunsten beidhändiger Waffen abgelegt.</p> <p>Typisch für vennyriische Herkunft sind eingravierte Runen, Meeressymbole oder Clanmarkierungen an Waffen und Rüstungsteilen. Diese dienen weniger magischer Verstärkung als vielmehr als Zeichen von Herkunft, Schwur und persönlicher Ehre. Die Ausrüstung des Rhyfelwyr ist kein Schmuck – sie ist Werkzeug.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Zu Zeiten des stehenden <strong><em>Königreichs Vennyr</em></strong> galten die <strong><em>Rhyfelwyr</em></strong> als das Nonplusultra ritterlicher Wehrhaftigkeit. Sie waren unerlässlich für die Verteidigung der Küsten und Hochländer, das Rückgrat jeder Bannerarmee und das sichtbare Symbol vennyriischer Standhaftigkeit. Wo ein Rhyfelwyr stand, stand die Linie – und mit ihr das Reich. Ihr Ruf war nicht höfisch, sondern ehrfürchtig; man sah in ihnen die Verkörperung von Pflicht, Härte und unbeugsamer Treue.</p> <p>Mit dem Fall Vennyrs verlor die Gattung jedoch ihren institutionellen Mittelpunkt. Heute existieren Rhyfelwyr nur noch in den überlebenden <strong>Rittergeschlechtern</strong>, die nach Cenyr flohen oder dort Zuflucht fanden. Sie tragen ihre Tradition weiter, doch nicht mehr als tragende Säule eines eigenen Reiches, sondern als bewahrtes Erbe einer untergegangenen Ordnung.</p> <p>In Cenyr genießen sie Respekt, aber auch eine gewisse Fremdheit. Ihre rauere Ausprägung des Rittertums wirkt neben der cenyrischen Hofkultur kantiger und kompromissloser. Dennoch gilt: Wer sich Rhyfelwyr nennt, trägt nicht nur einen Titel, sondern das Gewicht eines gefallenen Königreichs.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Vennyr war nie für ausgeprägte <strong>Reiterkultur</strong> bekannt. Auch die <strong><em>Rhyfelwyr</em></strong> ritten – meist robuste Kaltblutrosse – doch in erster Linie zur Fortbewegung zwischen Burgen, Küstenwachen und Sammelpunkten. Der berittene Frontalangriff gehörte nicht zu ihrem Kern. Für aktive <strong>Kavalleriegefechte</strong> waren in Vennyr primär die <strong>Rhiddwyr</strong> zuständig, deren leichtere Ausrüstung und höhere Beweglichkeit besser zur Rolle der Stoß- und Flankenreiter passte.</p> <p>Der wahre „Gefährte“ des Rhyfelwyr war daher seltener das Pferd als vielmehr der <strong>Schildwall</strong> und das <strong>Deck eines Kriegsschiffes</strong>. Man fand ihn häufiger an der Reling eines Morwyr-Schiffes, bereit zum Entern, als an der Spitze eines Reiterkeils. Seine Bindung galt der Linie, der Formation und der Standhaftigkeit – nicht dem Sturmritt.</p> <p>So reitet der Rhyfelwyr, wenn es nötig ist. Doch kämpfen tut er dort, wo Holz knarrt, Schilde krachen und Stahl auf engstem Raum aufeinanderschlägt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "6d659d68aa420fd724b065422a5eb6458f013326dd8120ce52b2c21a6f999b31"
+  }
+}

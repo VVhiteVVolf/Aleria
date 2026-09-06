@@ -323,7 +323,7 @@ test('archive links and character summaries preserve cultural identity without m
   const plainMilwr = { id: 'milwr', label: 'Milwr' };
   assert.deepEqual(withCenyrClassTraining(plainMilwr), plainMilwr);
   assert.equal(getCenyrClassDefinition('milwr', 'vennyr'), null);
-  assert.equal(getCultureClassPageHref('vennyr', 'milwr'), '');
+  assert.equal(getCultureClassPageHref('vennyr', 'milwr'), 'Vennyr/milwr/index.html');
   assert.equal(getCultureClassPageHref('cenyr', 'milwr'), 'Cenyr/milwr/index.html');
   assert.equal(getCharacterCreationTemplate('class', 'cenyr-milwr').hitDie, undefined);
   assert.equal(getCenyrCharacterClassSummary({ identity: { archetype: 'Milwr', ancestry: 'Vennyr' } }), null);

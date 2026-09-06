@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "skeidr",
+  "cultureId": "aldrimar",
+  "name": "Skeidr",
+  "title": "Der Skeidr",
+  "subtitle": "Huskarl zur See",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/RMS1Joo.png",
+  "illustration": "https://i.imgur.com/kjUhKT3.png",
+  "artwork": {
+    "source": "https://i.imgur.com/kjUhKT3.png",
+    "width": 687,
+    "height": 1024,
+    "caption": "Der Skeidr · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/ESRCM6b.png",
+    "width": 612,
+    "height": 408,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Seekrieger und Huskarl"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Axt, Hammer, Streitkolben; Wurfspeer als vorhandene Startoption"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Skeidr</strong> ist der Seekrieger und Huskarl zur See in <strong>Aldrimar</strong>. Er ist die aldrimarische Weiterentwicklung des nordischen <strong>Veigir</strong>, jedoch verfeinert und angepasst an die maritimen Gegebenheiten Glaenneachs. Während der Veigir aus der Not des Nordens entstand, ist der Skeidr das Produkt einer Küstenkultur, die sich sowohl auf norrnaighische Schiffstradition als auch auf die eleganten <strong>Currach-Boote</strong> der Alben stützt.</p> <p>Der Skeidr ist kein bloßer Seemann mit Waffe – er ist ein ausgebildeter <strong>Krieger zur See</strong>, spezialisiert auf Gefechte auf Deck, Entermanöver und Küstenangriffe.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Als die Norrnaigh sich in Glaenneach niederließen und Aldrimar entstand, traf ihre robuste Schiffstradition auf die leichten, wendigen <strong>Currachs</strong> der Alben. Die Verbindung dieser beiden nautischen Welten führte zu einer neuen maritimen Ausrichtung.</p> <p>Aus den ursprünglichen Veigir entwickelten sich in Aldrimar spezialisierte Huskarle, die stärker organisiert und militärisch eingebunden waren. Diese neue Gattung wurde als <strong>Skeidr</strong> bekannt – Krieger, die nicht nur Schiffe bedienen, sondern sie gezielt für militärische Operationen einsetzen.</p> <p>Mit dem Wachstum aldrimarischer Küstenstädte und Handelsrouten gewann die maritime Kriegsführung an Bedeutung. Skeidr wurden zu unverzichtbaren Einheiten für Küstenverteidigung, Flottenoperationen und schnelle Seevorstöße.</p>",
+      "sharedIntro": "aldrimar-geschichte"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Skeidr vereint <strong>Seemannskunst</strong> mit <strong>Nahkampfkraft</strong>. Er ist vertraut mit Navigation, Strömungen, Segeltechnik und Reparatur von Schiffen. Anders als einfache Matrosen ist er zugleich vollwertiger Huskarl.</p> <p>Im Kampf nutzt er bevorzugt <strong>Axt</strong>, <strong>Hammer</strong> oder <strong>Streitkolben</strong> – Waffen, die auf engem Deck effektiv sind und Rüstungen sowie Holz gleichermaßen beschädigen können. Er ist geübt im <strong>Entern</strong>, im Halten schmaler Stege und im schnellen Übergang vom Schiff an Land.</p> <p>Seine Stärke liegt in der Kombination aus nautischem Wissen und militärischer Disziplin. Er weiß, wann man ankert, wann man rammt und wann man den Sprung ins feindliche Deck wagt. Der Skeidr ist Aldrimars Antwort auf die rohe Wildheit des Veigir – strukturierter, eingebunden in ein Reich, doch noch immer geprägt vom Salz des Meeres.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Hohe <strong>nautische Kompetenz</strong> – Navigation, Strömungs- und Segelkenntnis</p> </li> <li><p> Effektiv im <strong>Entern und Deckkampf</strong></p> </li> <li><p> Waffenwahl ideal für engen Raum (Axt, Hammer, Streitkolben)</p> </li> <li><p> Disziplinierter als nordische Veigir</p> </li> <li><p> Flexibel beim Übergang von See- zu Landgefechten</p> </li> <li><p> Hohe Standfestigkeit auf schwankendem Untergrund</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Im offenen Feld weniger effektiv als Skjoldr oder Thegn</p> </li> <li><p> Schwerere Waffen können bei längeren Gefechten ermüden</p> </li> <li><p> Abhängig von Schiff und Küstenumgebung für maximale Wirkung</p> </li> <li><p> Weniger spezialisiert im Fernkampf</p> </li> <li><p> Auf festem, weitläufigem Terrain taktisch eingeschränkt</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "huskarl-waffenlehre"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong>Ausstattung</strong> des Skeidr ist auf <strong>Deckkampf</strong>, <strong>Salzluft</strong> und <strong>enge Räume</strong> abgestimmt. Er trägt meist ein verkürztes <strong>Kettenhemd</strong> oder verstärktes Leder, das Beweglichkeit erlaubt und gleichzeitig ausreichend Schutz bietet. Zu schwere Rüstungen gelten auf See als riskant – ein Sturz über Bord kann tödlich enden, wenn Metall den Körper nach unten zieht.</p> <p>Seine bevorzugten Waffen sind <strong>Axt</strong>, <strong>Hammer</strong> oder <strong>Streitkolben</strong>, da diese nicht nur Gegner, sondern auch Holz, Schilde oder Schiffsteile beschädigen können. Eine kürzere Seitenwaffe – etwa ein Sax oder Kurzschwert – gehört ebenfalls zur Standardausrüstung. Ein <strong>Schild</strong> wird oft geführt, jedoch kompakter als bei Landkriegern, um auf engem Raum manövrierfähig zu bleiben.</p> <p>Neben der Bewaffnung führt der Skeidr häufig nautisches Zubehör mit sich: Seile, Haken, Werkzeuge zur schnellen Reparatur oder zum Entern fremder Schiffe. Kleidung und Mantel sind salz- und windresistent, oft aus dichter Wolle oder behandeltem Leder gefertigt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong>Skeidr</strong> genießt in Aldrimar hohes Ansehen – insbesondere in Küstenregionen und Hafenstädten. Er gilt als Garant für <strong>Sicherheit auf See</strong>, als Schutz der Handelswege und als Verteidiger gegen Piraterie oder feindliche Flotten.</p> <p>Im Landesinneren wird seine Rolle zwar respektiert, aber weniger romantisiert als die des Skjoldr oder Thegn. Der Skeidr lebt oft fern der Hallen, auf Schiffen oder in Küstenforts. Sein Ruhm ist salzig und rau, weniger von Turnieren geprägt, mehr von Stürmen und Enterkämpfen.</p> <p>Dennoch weiß jeder Jarl: Ohne Skeidr ist Aldrimar verwundbar. Sie sind die maritime Faust des Reiches – weniger sichtbar als die Frontkämpfer, aber strategisch unverzichtbar.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährt",
+      "status": "written",
+      "html": "<p>Der wahre Gefährte eines <strong>Skeidr</strong> ist kein Tier, sondern sein <strong>Schiff</strong>. Wo ein Thegn sein Pferd kennt und ein Skjoldr seine Rüstung, dort kennt der Skeidr jedes Brett, jede Planke, jede Naht seines Kriegsschiffes.</p> <p>Das klassische <strong>Kriegsschiff Aldrimars</strong> ging aus den alten Langschiffen der Nordmänner hervor, wurde jedoch über Generationen hinweg durch albische Einflüsse verändert. Die schlanke, stromlinienförmige <strong>Rumpfform</strong> der nordischen Drachenboote blieb erhalten – ideal für Geschwindigkeit, Küstenfahrten und flache Gewässer. Doch hinzu kamen höhere Aufbauten, stabilere Deckkonstruktionen und komplexere Takelage, inspiriert von <strong>Galeonen</strong> und <strong>Karacken</strong> der albenländischen Seefahrer.</p> <p>So entstanden Schiffe mit:</p> <ul> <li><p>erhöhter <strong>Bug- und Heckplattform</strong> für Bogenschützen</p> </li> <li><p>verstärktem Mittelrumpf für längere Hochseefahrten</p> </li> <li><p>kombinierter <strong>Ruder- und Segelantrieb</strong>, je nach Windlage</p> </li> <li><p>stabileren Masten und mehreren Segeln für bessere Manövrierbarkeit</p> </li> </ul> <p>Diese Schiffe sind weder reine Langschiffe noch vollwertige Galeonen – sie sind eine Hybridform. Schnell genug für Überfälle, robust genug für offene See, groß genug für Entertruppen.</p> <p>Der Skeidr behandelt sein Schiff wie ein lebendes Wesen. Er schläft auf seinem Deck, kennt sein Knarren im Sturm und weiß, wann das Holz unter Spannung steht. Für ihn ist das Schiff nicht Transportmittel, sondern <strong>Heimat, Waffe und Schutz zugleich</strong>.</p> <p>Wenn man einen Skeidr nach seinem Gefährten fragt, wird er nicht auf einen Hund oder Falken zeigen – sondern auf den Rumpf unter seinen Füßen.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "bae436768241bc73b21cdcb4a5c9ed333779581391625a19a1693deb06d08fbd",
+    "editorialCorrections": [
+      {
+        "field": "facts.Waffengattung",
+        "original": "Speer, Sax, Axt, Rundschild",
+        "reason": "An die klassenspezifischen Abschnitte und den vorhandenen Charakteraufbau angepasst."
+      },
+      {
+        "field": "facts.Klassentyp",
+        "original": "Kämpfer,",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

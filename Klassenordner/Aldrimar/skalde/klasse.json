@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "skalde",
+  "cultureId": "aldrimar",
+  "name": "Skalde",
+  "title": "Der Skalde",
+  "subtitle": "Skalde und Huskarl",
+  "aliases": [
+    "Skaldin"
+  ],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/wAuI5MD.png",
+  "illustration": "https://i.imgur.com/sMV41Kz.png",
+  "artwork": {
+    "source": "https://i.imgur.com/sMV41Kz.png",
+    "width": 445,
+    "height": 590,
+    "caption": "Der Skalde · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/eooEQac.png",
+    "width": 408,
+    "height": 612,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kampfbarde und unterstützender Zauberwirker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Instrument, Schwert oder Sax; Laute und Schild nach Freyas Vorbild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Skalde</strong> ist die verfeinerte Form dessen, was einst der rohe <strong>Tungur</strong> war. Er ist Barde, Troubadour, Gelehrter und zugleich Träger einer kontrollierten, strukturierten Form von <strong>magischer Unterstützung</strong>. Anders als die brachiale Lautmagie der frühen Zeit wirkt die Kraft des Skalde gezielt, formgebunden und diszipliniert.</p> <p>Er steht nicht im Zentrum des Aufpralls wie ein Skjoldr, noch bricht er Linien wie ein Skjaldr. Seine Macht liegt in <strong>Wort, Lied und Bannformel</strong>. Er stärkt Verbündete, beruhigt Gemüter, schärft Sinne oder schwächt Gegner durch gezielte Verse. Er ist kein vollwertiger Magier im akademischen Sinne – eher eine Art <strong>Magier-lite</strong>, dessen Kraft aus Tradition, Rhythmus und geistiger Disziplin erwächst.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Skalde entwickelte sich aus den frühen <strong>Tungur</strong>, deren Magie roh und instabil war. Mit der zunehmenden Verfeinerung der aldrimarischen Kultur und dem stärkeren Einfluss albischer Gelehrsamkeit begann man, diese archaische Stimmkraft zu ordnen und in strukturierte Lehrformen zu überführen.</p> <p>Aus dem ungebändigten Kriegsschrei wurde das kontrollierte <strong>Versmaß</strong>. Aus dem eruptiven Laut entstand der gezielte <strong>Zaubergesang</strong>. Während die Tungur noch an der Grenze zwischen Krieger und Mystiker standen, formte sich der Skalde als bewusster <strong>Kulturträger</strong> – dichterisch, musikalisch, gelehrt.</p> <p>Er übernahm Elemente albischer Bardentraditionen, verband sie jedoch mit nordischem Erbe. So entstand eine Schule, die weniger zerstörerisch, dafür nachhaltiger und vielseitiger war. In Aldrimar wurde der Skalde zu einem festen Bestandteil höfischer Kultur wie auch militärischer Unterstützung.</p> <p>Heute gilt er als Stimme der Halle und Begleiter des Heeres – nicht als wilder Magier, sondern als disziplinierter Wirker von Wort und Klang.</p>",
+      "sharedIntro": "aldrimar-geschichte"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Skalde</strong> wirkt durch <strong>Lied, Versmaß und Instrument</strong>. Seine Magie ist unterstützend und gezielt – weniger brachial als die des Tungur, dafür kontrollierter und vielseitiger. Er kann den <strong>Kampfgeist</strong> heben, Schmerzen dämpfen, Müdigkeit verzögern oder die Aufmerksamkeit seiner Verbündeten schärfen.</p> <p>Seine Verse wirken wie strukturierte Formeln: Rhythmus und Reim sind kein Schmuck, sondern Träger der Kraft. Ein gut gesetzter Schlachtruf kann eine wankende Linie stabilisieren; ein gedämpftes Lied kann Angst bannen oder Wut ordnen.</p> <p>Einige Skalde beherrschen auch subtilere Effekte – das <strong>Verwirren der Sinne</strong>, das Stören gegnerischer Konzentration oder das Brechen von Mut durch gezielte Spottverse. Ihre Macht ist selten explosiv, aber nachhaltig.</p> <p>Im Gefecht stehen sie meist hinter oder zwischen den Linien, bewaffnet mit Schwert oder Dolch, jedoch nicht als Primärkämpfer. Ihre größte Waffe bleibt die <strong>Stimme</strong> – geschult, diszipliniert und durch Atemtechnik kontrolliert.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Unterstützende <strong>Magie für Moral, Ausdauer und Fokus</strong></p> </li> <li><p> Gute Kontrolle über ihre Kräfte</p> </li> <li><p> Kulturelle Autorität und hohe Bildung</p> </li> <li><p> Psychologische Wirkung auf Freund und Feind</p> </li> <li><p> Flexibel zwischen Halle und Schlachtfeld einsetzbar</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Begrenzte offensive Schlagkraft</p> </li> <li><p> Körperlich weniger widerstandsfähig als Front-Huskarle</p> </li> <li><p> Abhängig von Stimme und Konzentration</p> </li> <li><p> Bei Stimmverletzungen stark eingeschränkt</p> </li> <li><p> In chaotischen, lauten Gefechten schwieriger wirksam</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "huskarl-waffenlehre"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Der Skalde trägt meist leichte bis mittlere Rüstung – verstärktes Leder oder ein kurzes Kettenhemd –, um Beweglichkeit und Atemfreiheit zu gewährleisten.</p> <p>Er führt häufig ein <strong>Schwert</strong> oder Sax zur Selbstverteidigung. Hinzu kommen <strong>Instrumente</strong> wie Leier, Harfe, Trommel oder Horn. Diese sind nicht zwingend für seine Magie notwendig, verstärken jedoch Wirkung und Reichweite seiner Verse.</p> <p>Neben Waffen trägt er Schriftrollen, Notizen oder kleine Bücher mit <strong>Eddas</strong>, genealogischen Aufzeichnungen und Liedern. Anders als viele Huskarle ist seine Ausrüstung nicht nur auf Krieg, sondern auch auf <strong>Lehre und Überlieferung</strong> ausgelegt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Skalde genießt in Aldrimar hohes Ansehen. Er ist mehr als Unterhaltung – er ist <strong>Chronist, Lehrer und moralische Stimme</strong>. In Hallen wird er geehrt, bei Festen geschätzt und in Kriegszeiten respektiert.</p> <p>Er steht zwischen Adel und Kriegern, wird gehört, auch wenn er nicht befiehlt. In einer zunehmend strukturierten, feudalen Gesellschaft ist er Bindeglied zwischen Tradition und Wandel.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Skalde ist selten an ein bestimmtes Tier gebunden. Manche führen einen <strong>Raben</strong> als Symbol der Weisheit, andere reisen mit einem Hund. Häufig jedoch ziehen sie allein – begleitet von Instrument und Manuskript.</p> <p>Sein eigentlicher Gefährte ist das <strong>Wort</strong>, das er bewahrt und weiterträgt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "430b0ef14bee023f769a10bcd61c11050f5074497e3a8e9683ea7f71bd93bbc8",
+    "editorialCorrections": [
+      {
+        "field": "facts.Waffengattung",
+        "original": "Speer, Sax, Axt, Rundschild",
+        "reason": "An die klassenspezifischen Abschnitte und den vorhandenen Charakteraufbau angepasst."
+      },
+      {
+        "field": "facts.Klassentyp",
+        "original": "Kämpfer,",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

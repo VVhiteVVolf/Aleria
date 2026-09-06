@@ -1,0 +1,23 @@
+.culture-training-tools { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; padding: 14px 0 2px; }
+.culture-training-tools[hidden] { display: none; }
+.culture-training-tools label { display: grid; gap: 8px; color: #3f5041; font-size: 13px; max-width: 100%; }
+.culture-training-tools select { max-width: 100%; min-height: 42px; padding: 8px; font: inherit; color: #302b22; background: #fff8e8; border: 1px solid #a39468; }
+.culture-training-tools .culture-training-toggle { display: flex; align-items: center; min-height: 42px; }
+.culture-training-toggle input { width: 18px; height: 18px; accent-color: #315b58; }
+.culture-resource-summary { color: #304d49; background: #e5dfc4; border-left: 3px solid #557566; padding: 12px 15px; font-size: 13px; line-height: 1.7; }
+.culture-path-features { margin: 14px 16px; padding: 16px; border: 1px solid #a7ac8b; background: #ebe8d1; color: #374535; }
+.culture-path-features h4 { margin: 0 0 12px; }
+.culture-path-features ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.culture-path-features li { border-top: 2px solid #8a9978; padding-top: 8px; }
+.culture-path-features strong { font-size: 14px; font-weight: bold; }
+.culture-path-features p { font-size: 13px; line-height: 1.6; margin: 8px 0 0; }
+.culture-path-features [data-available="false"] { color: #656653; }
+@media (max-width: 760px) {
+  .culture-path-features ul { grid-template-columns: 1fr; }
+  .culture-training-tools { display: grid; }
+  .culture-training-tools select { width: 100%; }
+}
+@media print {
+  .culture-training-tools, .culture-resource-summary { display: none; }
+  .culture-path-features { break-inside: avoid; }
+}

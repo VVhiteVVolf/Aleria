@@ -1,0 +1,18 @@
+/* Vennyr: sea-green ink, dark leather headings and readable pale parchment. */
+[data-culture="vennyr"] { --class-accent: #315b58; --class-accent-dark: #244541; }
+[data-culture="vennyr"] .class-cover { background: linear-gradient(125deg, #d1b477, #f1e2ba 65%, #e3d2a9); border-bottom: 3px double #66776a; }
+[data-culture="vennyr"] .class-cover h1 { color: #284d49; }
+[data-culture="vennyr"] .class-cover-top { border-bottom: 1px solid #b39a64; }
+[data-culture="vennyr"] .cenyr-cover-path { background: #304d49; color: #fff1cc; }
+[data-culture="vennyr"] .cenyr-cover-path a { color: #fff1cc; }
+[data-culture="vennyr"] .cenyr-training { background: linear-gradient(135deg, #ede0bf, #faf3e0 60%, #dfdcc3); border-color: #a49b71; }
+[data-culture="vennyr"] .cenyr-level-toolbar { background: #304d49; color: #fff3d2; }
+[data-culture="vennyr"] .cenyr-form[open] > summary { background: #d2cfad; }
+[data-culture="vennyr"] .cenyr-form-number { color: #294d49; border-color: #6b8172; }
+[data-culture="vennyr"] .cenyr-attack[data-available="true"] { border-color: #698474; box-shadow: inset 3px 0 #557566; background: #fbf5e4; }
+[data-culture="vennyr"] .cenyr-attack-heading { flex-wrap: wrap; }
+[data-culture="vennyr"] .cenyr-attack-heading h4 { color: #294d49; margin: 0; }
+[data-culture="vennyr"] .cenyr-attack[hidden] { display: none; }
+@media (max-width: 760px) {
+  [data-culture="vennyr"] .cenyr-form strong { overflow-wrap: anywhere; }
+}

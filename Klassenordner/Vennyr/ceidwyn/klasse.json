@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "ceidwyn",
+  "cultureId": "vennyr",
+  "name": "Ceidwyn",
+  "title": "Der Ceidwyn",
+  "subtitle": "Fernkämpfender Ritter",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/k7eQ3Kt.png",
+  "illustration": "https://i.imgur.com/wPbJh6J.jpeg",
+  "artwork": {
+    "source": "https://i.imgur.com/wPbJh6J.jpeg",
+    "width": 983,
+    "height": 466,
+    "caption": "Ceidwyn · Vennyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/pLUJcZc.png",
+    "width": 500,
+    "height": 500,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Vennyr (historisch); heute in Herrschaft Fjordheims"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel; vereinzelt Erhebung verdienter Waffenknechte"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Rituelle Weihe nach avallornischem Ritus, ergänzt durch regionale Symbolik (Wasser, Stein, Banner)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehnseid gegenüber Krone oder Penron sowie Schwur auf Ehre, Land und Glaube"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Klassentyp",
+      "html": "Fern- und Nahkämpfer der Flotte"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Taktik",
+      "html": "Schüsse, Relingverteidigung und beweglicher Nahkampf"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Waffengattung",
+      "html": "Kurzbogen oder Armbrust; Säbel und Dreizack"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstungsgattung",
+      "html": "Gehärtetes Leder, Brigantine oder leichte Schuppenpanzerung"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Begleiter",
+      "html": "Raben, Krähen und Seevögel aus der Falknereitradition"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Sirenentanz · eigene vennyriische Weiterentwicklung des Drachentanzes"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Wenn die Schlacht noch nicht begonnen hat, sieht man sie bereits – ruhig an der Reling, den Blick auf das feindliche Segel gerichtet, den Wind prüfend. Der <strong><em>Ceidwyn</em></strong> ist kein reiner Bogenschütze, sondern der wachsame Arm der Flotte. Er ist Auge, Hand und Klinge zugleich – ein Kämpfer, der das Meer ebenso gut kennt wie den Bogen in seiner Hand.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die <strong><em>Ceidwyn</em></strong> entstanden im Norden Vennyrs aus der Notwendigkeit einer veränderten Kriegsführung. Als sich die Kämpfe zunehmend auf das Meer verlagerten und das raue Klima der nördlichen Küsten neue Anforderungen stellte, verlor der traditionelle <strong>Helwyr</strong>-Langbogenschütze an Bedeutung. Der sperrige Langbogen erwies sich auf schwankendem Deck als unpraktisch. Aus dieser taktischen Lücke entwickelte sich der Ceidwyn – eine neue ritterliche Ausprägung, angepasst an Wind, Gischt und beengte Verhältnisse.</p> <p>Geprägt von Einflüssen der <strong>Morwyr</strong>, der <strong>Cantref</strong> und den alten Helwyr, wurde der Ceidwyn zu einem hybriden Krieger. Er kombinierte präzisen Fernkampf mit maritimer Vielseitigkeit und handwerklichem Können. Anders als der landgebundene Jäger ist er Seesoldat, Taucher, Handwerker und gelegentlich auch klerikal geschulter Diener Nimues oder anderer verehrter Mächte.</p> <p>Mit dem Aufstieg der vennyriischen Flotte festigte sich seine Rolle als unverzichtbarer Bestandteil des Seekrieges. Er war nicht nur Schütze, sondern Bediener von Ballisten, Katapulten und Skorpionen, Verteidiger der Reling und Begleiter monatelanger Überfahrten. Der Ceidwyn wurde so zur flexiblen Antwort Vennyrs auf die Herausforderungen des maritimen Krieges – weniger spezialisiert als andere Gattungen, dafür unentbehrlich auf See.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong><em>Ceidwyn</em></strong> ist der vielseitigste Seekämpfer Vennyrs. Er beherrscht den <strong>Kurzbogen</strong> oder die <strong>Armbrust</strong> auf schwankendem Deck mit bemerkenswerter Präzision und kann selbst bei starkem Wind oder bewegter See gezielt schießen. Unterschiedliche Pfeilarten – von Feuer- und Signalpfeilen bis hin zu spezialisierten Geschossen – erlauben ihm, flexibel auf jede Gefechtssituation zu reagieren.</p> <p>Im Nahkampf wechselt er fließend zum <strong>Säbel</strong> oder <strong>Dreizack</strong>. Letzterer eignet sich nicht nur zum Stoßen und Entwaffnen, sondern auch zum Heranziehen, Festhalten oder Über-Bord-Stoßen von Gegnern. Der Ceidwyn ist darauf trainiert, in engen Deckpassagen zu kämpfen, sich zwischen Masten und Tauwerk zu bewegen und selbst bei chaotischen Entergefechten die Kontrolle zu behalten.</p> <p>Darüber hinaus ist er geübt im Umgang mit <strong>Belagerungsgeräten</strong> wie Ballisten, Katapulten oder Skorpionen an Bord von Kriegsschiffen. Seine Ausbildung umfasst außerdem Seemannschaft, Tauchen, kleinere Reparaturen sowie grundlegende klerikale Segensrituale. Viele Ceidwyn führen zudem einen <strong>Greifvogel</strong> – häufig Raben oder Seevögel – als Kundschafter und Beobachter.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li> Hohe Vielseitigkeit in Fern- und Nahkampf</li> <li> Effektiv auf See und in Küstennähe</li> <li> Geübt im Umgang mit Belagerungsgeräten</li> <li> Überragender Kundschafter auf dem Wasser</li> <li> Zusätzliche klerikale Unterstützungsmöglichkeiten</li> </ul> <p><strong>Schwächen</strong></p> <ul> <li> Keine extreme Spezialisierung in einer einzelnen Disziplin</li> <li> Geringere Reichweite als klassische Helwyr-Langbogenschützen</li> <li> Weniger effektiv als spezialisierte Nahkämpfer im offenen Duell</li> <li> Auf dem Festland eingeschränkte Späh- und Jagdfähigkeiten</li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "sirenentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung des <strong><em>Ceidwyn</em></strong> ist auf Beweglichkeit, Wetterresistenz und Vielseitigkeit ausgelegt. Er trägt bevorzugt gehärtetes <strong>Leder</strong>, verstärkte <strong>Brigantine</strong> oder leichte Schuppenpanzerung mit nur begrenztem Einsatz von Stahl. Schwere Platte wäre auf See hinderlich und gefährlich. Die Rüstung schützt vor Splittern, Pfeilen und Klingen, ohne die Beweglichkeit auf engem Deck einzuschränken.</p> <p>Unter der Panzerung trägt er wetterfeste Kleidung – wasserabweisende Jacken, gefütterte Wämser und robuste, rutschfeste Stiefel. Handschuhe sind fester Bestandteil seiner Ausrüstung, um Seile, Bogen und Waffen sicher führen zu können. Gürtel und Bandoliers tragen unterschiedliche Pfeilköpfe, Bolzen oder Wurfgeräte.</p> <p>Als Fernwaffe bevorzugt der Ceidwyn den <strong>Kurzbogen</strong>, der auf engem Raum leichter zu führen ist. Manche nutzen stattdessen die <strong>Armbrust</strong>, besonders wenn sie den Schwerpunkt stärker auf Nahkampf legen. Im Nahkampf führt er einen <strong>Säbel</strong> für schnelle Bewegungen sowie einen <strong>Dreizack</strong>, der sowohl als Waffe als auch als Werkzeug dient. Ergänzt wird seine Ausrüstung durch Enterhaken, Seile, Reparaturwerkzeuge und oft einen geschulten <strong>Raben oder Seevogel</strong> als Gefährten.</p> <p>Seine Ausstattung ist weniger auf ritterlichen Prunk ausgelegt, sondern auf Funktionalität im maritimen Umfeld – salzfest, praktisch und kampfbereit.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong><em>Ceidwyn</em></strong> genoss im alten Vennyr hohes, wenn auch anderes Ansehen als Rhyfelwyr oder Morwyr. Er war kein Symbol brachialer Macht, sondern ein Zeichen von Anpassungsfähigkeit und kluger Kriegsführung. In einer Flotte, die Wochen oder Monate auf See verbrachte, war er unverzichtbar – als Schütze, Beobachter, Handwerker und geistiger Stabilisator der Mannschaft. Sein Ruf gründete weniger auf heroischen Einzelduellen als auf Verlässlichkeit und Vielseitigkeit.</p> <p>Innerhalb der ritterlichen Ordnung stand er zwischen den klar definierten Gattungen: nicht so spezialisiert wie der Helwyr des Festlands, nicht so martialisch wie der Rhyfelwyr, nicht so rein seetaktisch wie der Morwyr. Doch genau diese Mischung machte ihn für die vennyriische Kriegsführung so wertvoll. Er verkörperte die pragmatische Seite des Rittertums – weniger prunkvoll, dafür anpassungsfähig und funktional.</p> <p>Nach dem Fall Vennyrs überlebte die Tradition der Ceidwyn in wenigen Häusern und maritimen Linien. In Cenyr betrachtet man sie mit Respekt, jedoch auch mit gewisser Skepsis, da ihre hybride Rolle schwer in die klareren Strukturen des cenyrischen Heeres passt. Dennoch bleibt der Ceidwyn ein Sinnbild jener vennyriischen Eigenart: flexibel, seetüchtig und niemals nur auf eine Aufgabe reduziert.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der natürliche Gefährte des <strong><em>Ceidwyn</em></strong> ist nicht das Pferd, sondern der <strong>Greifvogel</strong>. Viele führen <strong>Raben</strong>, <strong>Krähen</strong> oder robuste <strong>Seevögel</strong>, aus einer alten Falknereitradition heraus, die noch auf die Helwyr zurückgeht. Diese Vögel dienen nicht nur als Gesellschaft auf langen Überfahrten, sondern als <strong>Beobachter</strong>, <strong>Kundschafter</strong> und Omenbringer. Ihr scharfes Auge über See verschafft dem Ceidwyn taktische Vorteile, lange bevor ein Feind das Deck erreicht.</p> <p>Auf dem Schiff selbst ist seine engste Bindung jedoch die <strong>Besatzung</strong>. Anders als schwer gepanzerte Ritter ist der Ceidwyn Teil eines funktionierenden Systems – er arbeitet mit Steuermann, Ballistenmeister und Entertrupp Hand in Hand. Vertrauen und Koordination sind auf See überlebenswichtig, weshalb der Ceidwyn selten als isolierter Einzelkämpfer auftritt.</p> <p>Pferde nutzt er nur zur Fortbewegung an Land, niemals als primäres Kampfmittel. Sein wahres Umfeld bleibt das Meer, das Deck unter den Füßen und der Wind über ihm – begleitet vom Flügelschlag eines schwarzen Vogels, der die Wellen überblickt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "f5129986a2438c14879dfc6642f76a1e92d23fd02dab2c632d0b0b42ac57f541"
+  }
+}

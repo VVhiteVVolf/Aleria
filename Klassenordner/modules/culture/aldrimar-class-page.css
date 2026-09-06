@@ -1,0 +1,39 @@
+/* Aldrimar: slate, copper and warm parchment. */
+[data-culture="aldrimar"] { --class-accent: #47535b; --class-accent-dark: #2e3b43; }
+[data-culture="aldrimar"] .class-cover { background: linear-gradient(125deg, #c6ad7f, #eee0bb 65%, #d7d4c2); border-bottom: 3px double #6c797d; }
+[data-culture="aldrimar"] .class-cover h1 { color: #344650; }
+[data-culture="aldrimar"] .cenyr-cover-path,
+[data-culture="aldrimar"] .cenyr-level-toolbar { background: #344650; color: #fff1cf; }
+[data-culture="aldrimar"] .cenyr-cover-path a { color: #fff1cf; }
+[data-culture="aldrimar"] .cenyr-training { background: linear-gradient(135deg, #e8ddc3, #faf2de 65%, #dadbd0); border-color: #ac9b78; }
+[data-culture="aldrimar"] .cenyr-form[open] > summary { background: #cbd0c4; }
+[data-culture="aldrimar"] .cenyr-form-number { color: #344650; border-color: #788386; }
+[data-culture="aldrimar"] .cenyr-attack[data-available="true"] { border-color: #81908e; box-shadow: inset 3px 0 #5e737b; background: #fbf4df; }
+[data-culture="aldrimar"] .cenyr-attack-heading { flex-wrap: wrap; }
+[data-culture="aldrimar"] .cenyr-attack-heading h4 { color: #344650; margin: 0; }
+[data-culture="aldrimar"] .cenyr-attack[hidden] { display: none; }
+.aldrimar-special-training { margin: 24px 0; padding: 22px; border: 1px solid #aa936d; border-top: 4px solid #7e5235; background: #f6eacf; color: #3d352b; }
+.aldrimar-special-training h3 { color: #59402d; }
+.aldrimar-special-training p { line-height: 1.75; }
+.aldrimar-special-training small { line-height: 1.6; display: block; color: #655846; }
+.aldrimar-special-training table { width: 100%; min-width: 700px; border-collapse: collapse; font-size: 14px; }
+.aldrimar-special-training th, .aldrimar-special-training td { padding: 12px; border: 1px solid #c2b497; text-align: left; }
+.aldrimar-special-training thead { background: #4a5357; color: #fff1cf; }
+.aldrimar-special-training [aria-current="step"] { background: #ddd0aa; box-shadow: inset 3px 0 #7e5235; }
+[data-training-berserker] { padding: 14px; border-left: 3px solid #7e5235; background: #e5d6b6; font-weight: bold; }
+.aldrimar-repertoire { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.aldrimar-repertoire-disclosure > summary { cursor: pointer; padding: 15px; margin: 16px 0; background: #d9cfb5; color: #463d31; font-weight: bold; }
+.aldrimar-repertoire article { padding: 18px; border: 1px solid #c3b08a; background: #fcf5e3; }
+.aldrimar-repertoire-title { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.aldrimar-repertoire-title h4 { margin: 0; color: #59402d; }
+.aldrimar-repertoire-title span { font-size: 12px; color: #645943; }
+.aldrimar-repertoire [data-available="true"] { border-left: 3px solid #536b73; }
+.aldrimar-repertoire dl { margin: 12px 0; }
+.aldrimar-repertoire dt { font-size: 11px; text-transform: uppercase; color: #725d3e; }
+.aldrimar-repertoire dd { margin: 4px 0 12px; font-size: 14px; }
+@media (max-width: 760px) {
+  .aldrimar-special-training { padding: 14px; }
+  .aldrimar-repertoire { grid-template-columns: 1fr; }
+  [data-culture="aldrimar"] .cenyr-form strong { overflow-wrap: anywhere; }
+}
+@media print { .aldrimar-repertoire article { break-inside: avoid; } }

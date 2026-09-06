@@ -256,6 +256,10 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
       {
         "culture": "Cenyr",
         "path": "Klassenordner/Cenyr/milwr/index.html"
+      },
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/milwr/index.html"
       }
     ]
   },
@@ -368,17 +372,45 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     ]
   },
   {
+    "id": "derwyn",
+    "name": "Derwyn",
+    "baseClass": false,
+    "cultures": [
+      "Cenyr",
+      "Vennyr"
+    ],
+    "order": 22,
+    "description": "Geistliche Nimues in Cenyr und Vennyr",
+    "icon": "https://i.imgur.com/oaYwMOs.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Cenyr",
+        "path": "Klassenordner/Vennyr/derwyn/index.html"
+      },
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/derwyn/index.html"
+      }
+    ]
+  },
+  {
     "id": "morwyr",
     "name": "Morwyr",
     "baseClass": false,
     "cultures": [
       "Vennyr"
     ],
-    "order": 22,
+    "order": 23,
     "description": "Ritter zur See",
     "icon": "https://i.imgur.com/FzoXhtJ.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/morwyr/index.html"
+      }
+    ]
   },
   {
     "id": "rhyfelwyr",
@@ -387,11 +419,16 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Vennyr"
     ],
-    "order": 23,
+    "order": 24,
     "description": "Klassischer Vennyrischer Ritter",
     "icon": "https://i.imgur.com/Jh8DGNz.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/rhyfelwyr/index.html"
+      }
+    ]
   },
   {
     "id": "ceidwyn",
@@ -400,11 +437,16 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Vennyr"
     ],
-    "order": 24,
+    "order": 25,
     "description": "Fernkämpfender Ritter",
     "icon": "https://i.imgur.com/k7eQ3Kt.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/ceidwyn/index.html"
+      }
+    ]
   },
   {
     "id": "rhiddwyr",
@@ -413,24 +455,16 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Vennyr"
     ],
-    "order": 25,
+    "order": 26,
     "description": "Ritter zu Pferd",
     "icon": "https://i.imgur.com/UnjMmYp.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
-  },
-  {
-    "id": "derwyn",
-    "name": "Derwyn",
-    "baseClass": false,
-    "cultures": [
-      "Vennyr"
-    ],
-    "order": 26,
-    "description": "Glaubenskrieger der Nimue",
-    "icon": "https://i.imgur.com/oaYwMOs.png",
-    "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Vennyr",
+        "path": "Klassenordner/Vennyr/rhiddwyr/index.html"
+      }
+    ]
   },
   {
     "id": "kern",
@@ -586,7 +620,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Fußvolk & Miliz Aldrimars",
     "icon": "https://i.imgur.com/DXELbM2.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/hird-maid/index.html"
+      }
+    ]
   },
   {
     "id": "skjoldr",
@@ -599,7 +638,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Axtkämpfender Huskarl",
     "icon": "https://i.imgur.com/rlVtCrn.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/skjoldr/index.html"
+      }
+    ]
   },
   {
     "id": "thegnar",
@@ -612,7 +656,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Berittener Huskarl",
     "icon": "https://i.imgur.com/Z081bE6.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/thegnar/index.html"
+      }
+    ]
   },
   {
     "id": "skeidr",
@@ -625,7 +674,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Huskarl zur See",
     "icon": "https://i.imgur.com/RMS1Joo.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/skeidr/index.html"
+      }
+    ]
   },
   {
     "id": "skjaldr",
@@ -638,7 +692,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Schildbeißer Huskarl",
     "icon": "https://i.imgur.com/TjnJlHf.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/skjaldr/index.html"
+      }
+    ]
   },
   {
     "id": "skytte",
@@ -651,7 +710,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Fernkämpfender Huskarl",
     "icon": "https://i.imgur.com/kUMAEYt.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/skytte/index.html"
+      }
+    ]
   },
   {
     "id": "skalde",
@@ -664,7 +728,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Skalde und Huskarl",
     "icon": "https://i.imgur.com/wAuI5MD.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Aldrimar",
+        "path": "Klassenordner/Aldrimar/skalde/index.html"
+      }
+    ]
   },
   {
     "id": "hird-kona",

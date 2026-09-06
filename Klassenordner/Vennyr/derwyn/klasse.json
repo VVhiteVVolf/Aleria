@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "derwyn",
+  "cultureId": "vennyr",
+  "name": "Derwyn",
+  "title": "Der Derwyn",
+  "subtitle": "Geistliche Nimues in Cenyr und Vennyr",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/oaYwMOs.png",
+  "illustration": "https://i.imgur.com/f98j4OT.png",
+  "artwork": {
+    "source": "https://i.imgur.com/f98j4OT.png",
+    "width": 683,
+    "height": 1024,
+    "caption": "Derwyn · Cenyr und Vennyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/D4KmaOA.png",
+    "width": 500,
+    "height": 500,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Geistliche Nimues in Cenyr und Vennyr; keine Beschränkung auf ein einzelnes Haus"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kleriker, Kämpfer, (<em>Eidgeschworener)</em>"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Taktik",
+      "html": "Unterstützend, kontrollierend, situativ zerstörend (Wassermagie)"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel, Priesterliche Elite"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Auftreten",
+      "html": "Tempel, Küstenheiligtümer, Flottenverbände, Hof als geistliche Berater"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Seelsorge, Heilung, Segnung, Flottenunterstützung, sakrale Rituale"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Geistliche Weihe im Namen Nimues"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Gelöbnis an Nimue (Eidgeschworene zusätzlich mit bindendem Eid)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Hoch (göttlich kanalisiert)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Sehr hoch"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Nimue, Göttin des Meeres und des Wassers"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Dreizack, Streitkolben, Saphirstab"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Robe mit Schutz, Kette oder Platte (bei ritterlicher Ausprägung)"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Fließende avallornische Waffentradition; hier als Waffenwege des Sirenentanzes ausgearbeitet"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Berühmter Vertreter",
+      "html": "Yvain Neidr"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Gründer",
+      "html": "Mythische Ursprünge in Avallorn (Druidenlehren)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Die <strong><em>Derwyn</em></strong> sind in erster Linie <strong>Diener Nimues</strong>, nicht Diener des Stahls. Wo andere Ritter ihre Kraft aus Disziplin oder Tradition schöpfen, entspringt die Macht der Derwyn der <strong>Gnade der Göttin des Meeres und des Wassers</strong>. Sie sind Kleriker – Mittler zwischen Mensch und Göttin, zwischen Sturm und Stille, zwischen Schuld und Reinigung.</p> <p>Doch nicht jeder Derwyn trägt eine Rüstung, und nicht jeder führt eine Klinge. <strong>Alle Derwyn sind Kleriker</strong>, aber nur manche sind zugleich Ritter. Wenn ein Derwyn zusätzlich den Weg eines Teulu, Cantref oder Uchelwyr beschreitet, verbindet er <strong>Glauben und Kampf</strong>. Manche nennen solche Männer und Frauen vorschnell Eidgeschworene – doch das ist ungenau.</p> <p>Ein <strong>Eidgeschworener</strong> ist mehr als ein kämpfender Kleriker. Er ist ein Ritter, der ein <strong>festes, bindendes Gelübde</strong> geschworen hat, aus dem er besonderen Segen schöpft. Seine Kraft steigt oder fällt mit seiner Treue zum Eid. Der gewöhnliche Derwyn hingegen vertieft seine Beziehung zu Nimue durch Hingabe, Studium und Andacht. Seine Macht wächst wie eine Flut – stetig, ruhig, unausweichlich.</p> <p>So stehen die Derwyn im Herzen Cenyrs als geistliche Säule: Priester, Heiler, Seelsorger – und manchmal auch Ritter im Namen der Göttin, wenn das Meer selbst zur Waffe werden muss.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Das cenyrische Rittertum entstand nicht aus dem Bedürfnis nach Reiterei oder militärischer Überlegenheit, sondern aus einem <strong>moralischen Anspruch</strong>. Als die Avallornier ihre verschleierte Heimat verließen und nach Estryll gelangten, brachten sie mehr mit als Schwerter und Banner – sie brachten eine Vorstellung davon, wie ein Mensch sein sollte. Auf dem Glauben an die <strong>Göttlichen</strong>, Verkörperungen der neun absoluten Tugenden, gründete sich eine Idee: Der Ritter sollte nicht nur kämpfen, sondern im Augenblick größter Entscheidung handeln, wie es die Göttlichen selbst täten.</p> <p>In den frühen Tagen war Ritterlichkeit kein Titel, sondern ein <strong>Gelöbnis</strong>. Ein Ritter stellte sein eigenes Wohl hinter das Gemeinwohl, seinen Stolz hinter die <strong>Gerechtigkeit</strong>, seine Furcht hinter den <strong>Mut</strong>. Mit der Gründung Cenyrs und der Verbindung mit dem albenländischen Feudalsystem wurde dieses Ideal institutionalisiert. Die <strong>Schwertleite</strong>, die <strong>Salbung</strong>, der ritterliche Eid – all dies formte aus einem moralischen Streben eine gesellschaftliche Ordnung. Rittertum wurde zum Fundament des Staates, zum sichtbaren Maßstab dessen, was Cenyr sein wollte.</p> <p>Doch das Ideal war stets höher als der Mensch. Je größer das Reich wurde, desto mehr Ritter wurden gebraucht, und mit der Zeit verdünnte sich die Reinheit des Anspruchs. Rittertum konnte vererbt, verdient – und schließlich sogar erkauft werden. Und dennoch blieb der Maßstab bestehen. In Cenyr genügt es nicht, ein Schwert zu tragen; man wird am <strong>Verhalten</strong> gemessen. Ein Ritter, der nicht ritterlich handelt, fällt auf. Dieser soziale Druck bewahrt das Ideal selbst dann, wenn einzelne daran scheitern.</p> <p>So steht das cenyrische Rittertum bis heute zwischen Anspruch und Wirklichkeit: ein unvollkommenes menschliches Streben nach einem vollkommenen Bild – und gerade darin liegt seine Seele.</p> <p>Die Ursprünge der <strong><em>Derwyn</em></strong> verlieren sich im Nebel von <strong>Avallorn</strong>. Lange bevor Cenyr gegründet wurde, lange bevor Ritter in geordneten Reihen standen, gab es bereits jene, die am Wasser knieten und lauschten. Man sagt, die <strong>Druiden Avallorns</strong> hätten den ersten Derwyn gezeigt, wie man die <strong>Stimme Nimues</strong> im Rauschen der Brandung erkennt – wie man im Nebel Zeichen liest und im stillen See Antworten findet.</p> <p>Ob diese Lehren offen weitergegeben oder nur wenigen Auserwählten anvertraut wurden, weiß niemand mehr. Manche Chroniken sprechen von verborgenen Zirkeln an heiligen Quellen, andere von Wanderern, die das Meer als Tempel betrachteten. Sicher ist nur: Die Derwyn waren bereits da, als die Flotte der Avallornier aufbrach. Sie kamen mit – als Priester, als Bewahrer, als jene, die den Zorn der See zu deuten wussten.</p> <p>In Cenyr angekommen, fand der alte Glaube neuen Boden. Während das Rittertum wuchs und sich ordnete, blieben die Derwyn ein <strong>uralter Strom</strong> unter allem – unsichtbar, aber tragend. Ihre Geschichte ist weniger in Schlachten festgehalten als in <strong>Ritualen, Gesängen und Küstenheiligtümern</strong>. Und bis heute glaubt man, dass Nimue jene zuerst erhört, die nicht mit erhobener Stimme rufen, sondern mit gesenktem Haupt am Wasser warten.</p>"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Die Kraft der <strong><em>Derwyn</em></strong> entspringt nicht dem eigenen Willen, sondern der <strong>Nähe zu Nimue</strong>. Ihre Magie ist <strong>Wassermagie</strong> – wandelbar, fließend, reinigend und zerstörend zugleich. Sie vermögen Wasser zu lenken, Wunden zu kühlen, Nebel zu rufen oder die See selbst gegen ihre Feinde aufzubringen. Sturm, Strömung und Flut sind keine bloßen Naturgewalten für sie, sondern Ausdruck göttlicher Gegenwart.</p> <p>Viele Derwyn führen einen <strong>Zauberstab</strong> oder einen mit Runen versehenen Fokus, durch den sie die Gnade ihrer Göttin kanalisieren. Andere – insbesondere jene mit ritterlicher Ausbildung – greifen zum <strong>Dreizack</strong>. Diese Waffe ist nicht nur Symbol der See, sondern auch praktisches Werkzeug im Kampf: stoßend, reißend, kontrollierend. Der Dreizack erlaubt es, Gegner auf Abstand zu halten und zugleich die eigene Magie in die Spitze zu leiten.</p> <p>Je nach Ausrichtung unterscheidet sich die Ausprägung ihrer Kräfte. Ein rein geistlicher Derwyn vertieft seine Beziehung zu Nimue stetig und wirkt fast wie ein Gelehrter der göttlichen Strömungen. Ein ritterlicher Derwyn hingegen verbindet <strong>Kampfdisziplin mit Segen</strong> – doch nur wer ein festes Gelübde schwört, wird zum wahren Eidgeschworener und schöpft Kraft unmittelbar aus diesem Eid.</p> <p>So ist der Derwyn weder bloßer Magier noch gewöhnlicher Priester. Er ist <strong>Mittler der Flut</strong> – und wenn Nimue es will, wird selbst ein Tropfen zu einer Welle.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li><p> <strong>Göttliche Wassermagie</strong> – vielseitig in <em>Heilung</em>, <em>Schutz</em> und kontrollierter <em>Zerstörung</em>.</p> </li> <li><p> <strong>Hohe geistliche Standfestigkeit</strong> – starke <em>Willenskraft</em> und tiefe <em>Bindung</em> an Nimue.</p> </li> <li><p> <strong>Unterstützende Präsenz</strong> – kann Verbündete reinigen, stärken oder vor magischem Einfluss bewahren.</p> </li> <li><p> <strong>Symbolische Autorität</strong> – genießt Respekt durch religiöse Stellung und sakrale Rolle.</p> </li> </ul> <p><strong>Schwächen</strong></p> <ul> <li><p> <strong>Weniger physische Durchschlagskraft</strong> – ohne ritterliche Zusatzausbildung kein Frontkämpfer.</p> </li> <li><p> <strong>Umgebungsabhängig</strong> – in Nähe von <em>Wasser</em> oder <em>Feuchtigkeit</em> stärker, in trockenen Extremen eingeschränkt.</p> </li> <li><p> <strong>Gelübdebindung (bei Eidgeschworenen)</strong> – Bruch des Eides kann Macht mindern oder entziehen.</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "<p>Wie jeder Ritter Cenyrs werden auch jene Derwyn, die den ritterlichen Weg beschreiten, im <strong><em>Drachentanz</em></strong> unterwiesen. Doch ihre Ausprägung dieser uralten avallornischen Kunst unterscheidet sich spürbar. Während andere Gattungen das Fundament aus <em>Haltung</em>, <em>Schrittarbeit</em> und <em>Klingenführung</em> streng diszipliniert formen, lernen die Derwyn eine <strong>fließendere Variante</strong> – eine Bewegung, die dem <strong>Wasser selbst</strong> nachempfunden ist.</p> <p>Ihr Stil ist zugleich <strong>brechend und strömend</strong>. Er kennt das ruhige Kreisen wie eine tidegeprägte See, aber auch das plötzliche Umschlagen einer Welle gegen Fels. Bewegungen wirken weich, beinahe tänzerisch – und doch können sie im nächsten Moment <strong>zerschmetternd</strong> sein. Distanz wird nicht nur kontrolliert, sondern umspült; Druck wird nicht frontal beantwortet, sondern umgeleitet und zurückgeführt.</p> <p>Wo der Teulu schneidet und der Cantref stößt, lässt der Derwyn den Gegner oft ins Leere laufen, um ihn im nächsten Atemzug mit präziser Härte zu treffen. Besonders im Umgang mit dem <strong>Dreizack</strong> oder einer segensdurchwirkten Klinge entfaltet sich diese besondere Form des Drachentanzes: <strong>voller Grazie</strong>, doch niemals schwach – eine Kampfkunst, die zeigt, dass Sanftmut und Gewalt keine Gegensätze sein müssen, sondern zwei Zustände derselben Flut.</p>"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong><em>Ausstattung</em></strong> eines Derwyn richtet sich nach seiner Berufung. Da <strong>alle Derwyn Kleriker</strong> sind, aber nicht alle Ritter, variiert ihr äußeres Erscheinungsbild deutlich.</p> <p>Ein rein geistlicher Derwyn trägt meist eine Kombination aus <strong>Roben und leichter Schutzkleidung</strong> – verstärkter Gambeson, Leder oder feine Kettenelemente unter sakralen Gewändern. Seine Kleidung ist oft in <strong>Blau-, Grün- oder Meertönen</strong> gehalten, mit Symbolen Nimues bestickt. Der Schutz ist ausreichend, doch die Beweglichkeit und Würde eines Priesters bleiben gewahrt.</p> <p>Ein ritterlicher Derwyn hingegen tritt in <strong>vollwertiger Rüstung</strong> auf – Kettenpanzer oder Platte, oftmals mit eingeprägten Wellenmustern oder maritimen Motiven. Über dem Stahl liegt nicht selten ein mit dem Zeichen Nimues versehener Überwurf oder Mantel, der seine geistliche Zugehörigkeit sichtbar macht.</p> <p>Zu den bevorzugten Waffen zählen der <strong><em>Dreizack</em></strong>, als Symbol und Werkzeug der See, sowie der <strong><em>Streitkolben</em></strong>, der als ehrliche, sakrale Waffe gilt – zerschmetternd, ohne zu schänden. Viele Derwyn führen zudem einen <strong><em>Saphirstab</em></strong>, der als Fokus ihrer göttlichen Magie dient. Dieser Stab ist nicht bloß ein Zeichen ihres Standes, sondern ein kanalisiertes Instrument, durch das sie Nimues Gnade wirken lassen.</p> <p>So vereint die Ausstattung des Derwyn <strong>Stahl und Sakralität</strong>. Ob in Rüstung oder Robe – man erkennt ihn an der ruhigen Gewissheit, mit der er seine Waffen trägt: nicht aus Zorn, sondern aus Dienst.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Die <strong><em>Derwyn</em></strong> stehen in Cenyr auf einem außergewöhnlich hohen Rang. Als <strong>Jünger Nimues</strong> gelten sie als spirituelle Elite – nicht nur als Priester, sondern als <strong>geistliche Führer</strong> des Volkes. Ihre Worte haben Gewicht, ihre Segnungen Bedeutung, ihre Urteile oft moralische Tragweite.</p> <p>Unter Rittern sind sie vergleichsweise selten, doch gerade das verstärkt ihren Ruf. Ein ritterlicher Derwyn trägt nicht nur Stahl, sondern auch <strong>sakrale Verantwortung</strong>. Er repräsentiert nicht allein sein Haus oder seinen Lehnsherrn, sondern die Göttin selbst. Dieses Bewusstsein verleiht ihm Autorität – und Last zugleich.</p> <p>In Tempeln, an Küstenheiligtümern oder am Hofe genießen die Derwyn großes Vertrauen. Man sucht sie bei Gewissensfragen, bei Schwüren, bei Übergängen zwischen Leben und Tod. Ihre Nähe zur Göttin macht sie zu Vermittlern zwischen Reich und Meer – und wer ihre Gunst verspielt, verspielt mehr als nur Ansehen.</p> <p>So sind die Derwyn hoch geehrt – doch mit dieser Ehre geht stets die Erwartung einher, der Flut würdig zu bleiben.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährt",
+      "status": "written",
+      "html": "<p>Tritt ein <strong><em>Derwyn</em></strong> in kämpferischer Ordnung auf, so findet man ihn meist dort, wo seine Gabe am wirksamsten ist: <strong>auf See</strong>. Viele ritterliche Derwyn sind den Flotten Cenyrs zugeteilt und auf Schiffen stationiert, wo sie Sturm bannen, Wellen lenken oder verwundete Matrosen versorgen. Es ist nicht nur Tradition, sondern Zweckmäßigkeit – denn wo sollte ein Wassermagier sinnvoller dienen als auf dem Meer selbst?</p> <p>In rein priesterlicher Ordnung hingegen erscheinen die Derwyn in <strong>Tempeln, Küstenheiligtümern und Kirchen Nimues</strong>. Dort sind ihre Gefährten nicht Tiere oder Waffen, sondern Rituale, Reliquien und das stetige Rauschen des Wassers.</p> <p>Persönliche Gefährten sind individuell bedingt. Manche Derwyn halten <strong>Hunde</strong>, insbesondere Küsten- oder Wachhunde, andere besitzen selbstverständlich <strong>Pferde</strong>, wenn sie ritterlichen Stand führen. Doch es gibt kein typisches Tier, das sie auszeichnet. Ihr wahrer Gefährte ist die <strong>See</strong> – und der Glaube, der sie trägt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "magie-vormerkung",
+      "title": "Wassermagie & Wiederherstellung",
+      "status": "written",
+      "html": "<p>Für die spätere Ausarbeitung sind <strong>Wassermagie</strong> und <strong>Wiederherstellungsmagie</strong> nach dem gewünschten Vorbild aus Morrowind und The Elder Scrolls vorgemerkt: Heilung, Reinigung, Stärkung und Schutz. Ihr Zusammenspiel mit Stab, Dreizack und Streitkolben wird separat entwickelt.</p><p>Der vorliegende Ausbildungsplan enthält ausschließlich <strong>physische Waffenpfade</strong>. Er vergibt noch keine Zauber, Heilungen oder Wasserschäden. Die geistliche Rolle aus der Überlieferung bleibt davon unberührt.</p>"
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "0edb5fc1d76627996f5fc5b3a2b46b918d8f0c9cbc45696a87fb6d21f65b9f85",
+    "editorialCorrections": [
+      {
+        "field": "facts.Zugehörigkeit",
+        "original": "Haus Arth O’Guwan und seine Kadettenhäuser (u. a. Pawen, Crafanc)",
+        "reason": "Vom Nutzer ausdrücklich als gemeinsame Klasse Cenyrs und Vennyrs festgelegt; nicht auf Haus Arth beschränkt."
+      }
+    ]
+  },
+  "cultures": [
+    "Cenyr",
+    "Vennyr"
+  ]
+}

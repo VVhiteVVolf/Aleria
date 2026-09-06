@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "rhiddwyr",
+  "cultureId": "vennyr",
+  "name": "Rhiddwyr",
+  "title": "Der Rhiddwyr",
+  "subtitle": "Ritter zu Pferd",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/UnjMmYp.png",
+  "illustration": "https://i.imgur.com/zQaDc1Y.png",
+  "artwork": {
+    "source": "https://i.imgur.com/zQaDc1Y.png",
+    "width": 1536,
+    "height": 1024,
+    "caption": "Rhiddwyr · Vennyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/c781gXS.png",
+    "width": 408,
+    "height": 612,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Vennyr (historisch); heute in Herrschaft Fjordheims"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel; vereinzelt Erhebung verdienter Waffenknechte"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Rituelle Weihe nach avallornischem Ritus, ergänzt durch regionale Symbolik (Wasser, Stein, Banner)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehnseid gegenüber Krone oder Penron sowie Schwur auf Ehre, Land und Glaube"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Klassentyp",
+      "html": "Fahrender Ritter und beweglicher Reiter"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Taktik",
+      "html": "Küstenpatrouille, Flanke und rasche Hilfe"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Waffengattung",
+      "html": "Flegel, Rabenschnabel, Reiteraxt, Streitkolben; Glefe, Reiterspieß und Armbrust"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstungsgattung",
+      "html": "Mittlere Kette oder Brigantine mit einzelnen Plattenelementen"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bevorzugtes Reittier",
+      "html": "Trittsicheres, ausdauerndes Ross für Hügel und Küstenpfade"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Sirenentanz · eigene vennyriische Weiterentwicklung des Drachentanzes"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Wenn Staub über den Hügelpfaden liegt und fern am Horizont Rauch aufsteigt, ist es oft ein einzelner Reiter, der zuerst erscheint. Der <strong><em>Rhiddwyr</em></strong> ist kein Bannerbrecher und kein Deckkämpfer – er ist der fahrende Ritter der Höhen und Küsten, ein Grenzläufer zwischen Adel und Volk. Wo andere Gattungen in Formation kämpfen, reitet er allein oder in kleiner Schar, stets bereit, dort einzugreifen, wo Ordnung bröckelt.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der <strong><em>Rhiddwyr</em></strong> entwickelte sich aus dem cenyrischen <strong>Uchelwyr</strong>, musste sich jedoch den rauen Gegebenheiten Brechinauccs – des alten Vennyr – anpassen. Die Gebirge, Hügelzüge und Ziegenpfade machten klassische schwere Kavallerie nahezu unbrauchbar. Große Reiterformationen konnten sich weder entfalten noch effektiv manövrieren. Zudem verlagerte sich ein Großteil der Kriegsführung auf das Meer, wodurch berittene Einheiten an strategischer Bedeutung verloren.</p> <p>Stattdessen entstand eine neue Ausprägung: der flexible, eigenständig operierende Reiter. Der Rhiddwyr wurde nicht als Teil massiver Kavallerieeinheiten konzipiert, sondern als Individuum – ein opportunistischer Kämpfer, der in kleinen Gruppen oder allein agieren konnte. Er patrouillierte Küstenlinien, schützte Siedlungen vor Piratenlandungen und jagte Marodeure im Hinterland. Im Krieg wurde er primär defensiv eingesetzt, als schnelle Reaktionskraft und bewegliche Küstenwache.</p> <p>Mit der Zeit entwickelte sich um den Rhiddwyr eine beinahe legendäre Aura. Seine Reisen, Abenteuer und Duelle mit Banditen oder Kreaturen machten ihn zu einer Art Volksheld. So verband sich seine Rolle als Ritter mit Elementen von Lyrik, Musik und Erzählkunst – nicht jeder Rhiddwyr ist ein Barde, doch viele sind es im Herzen.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong><em>Rhiddwyr</em></strong> ist ein flexibler Reiter und Grenzläufer, ausgebildet für unebenes Gelände, Hügelpfade und schnelle Reaktionsgefechte. Seine Variante des <strong><em>Sirenentanzes</em></strong> ist bewegungsorientiert, weniger auf Formationskampf ausgelegt und stärker auf Einzelduelle sowie improvisierte Gefechte angepasst.</p> <p>Im Nahkampf bevorzugt er <strong>stumpfe Waffen</strong> wie Flegel, Rabenschnabel (Kriegshammer), Reiteraxt oder Streitkolben – besonders wirksam gegen gepanzerte Gegner oder rasende Berserker. Für den Ansturm nutzt er eine <strong>Glefe oder einen Reiterspieß</strong>, während die <strong>Armbrust</strong> ihm erlaubt, fliehende Feinde zu stellen oder aus sicherer Distanz Druck aufzubauen.</p> <p>Darüber hinaus ist der Rhiddwyr oft sozial begabt, wortgewandt und musikalisch versiert. Viele tragen Instrumente oder zumindest Feder und Tinte bei sich, um ihre Taten festzuhalten. Seine Rolle als fahrender Ritter verlangt Anpassungsfähigkeit, Ortskenntnis und die Fähigkeit, ohne feste Formation zu bestehen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li> Schnell einsetzbar und mobil in schwierigem Gelände</li> <li> Flexible Kampfform für Nah- und Distanzgefechte</li> <li> Effektiv bei defensiven Schockangriffen und Küstenpatrouillen</li> <li> Hohe Eigenständigkeit und Anpassungsfähigkeit</li> <li> Potenzial für bardenhafte Ausstrahlung und Volksnähe</li> </ul> <p><strong>Schwächen</strong></p> <ul> <li> Unterlegen im direkten Frontalgefecht gegen schwere Ritter</li> <li> Keine Spezialisierung auf extreme Nah- oder Fernkampfformen</li> <li> Begrenzte Wirkung in großen, geschlossenen Schlachtformationen</li> <li> Vergleichsweise geringe Anzahl und damit strategisch seltene Präsenz</li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "sirenentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung des <strong><em>Rhiddwyr</em></strong> ist ein Mittelweg zwischen schwerem Ritter und leichtem Grenzläufer. Er trägt eine <strong>mittlere Rüstung</strong>, meist verstärkte Kette oder Brigantine mit partiellen Plattenelementen – robust genug für den Kampf, aber leicht genug für lange Ritte durch Hügel und Küstenpfade. Helm und Schulterschutz sind funktional gehalten, weniger repräsentativ als bei einem Teulu oder Uchelwyr.</p> <p>Im Nahkampf bevorzugt der Rhiddwyr <strong>stumpfe Waffen</strong> wie Flegel, Rabenschnabel (Kriegshammer), Reiteraxt oder Streitkolben – ideal gegen gepanzerte Gegner oder rasche Schockangriffe. Für den Ansturm führt er häufig eine <strong>Glefe oder einen Reiterspieß</strong>, während die <strong>Armbrust</strong> als verlässliche Distanzwaffe dient, um fliehende Feinde zu stellen oder vor dem Nahkontakt Druck aufzubauen.</p> <p>Neben seinen Waffen trägt er Reiseausrüstung: wetterfester Umhang, Satteltaschen mit Proviant, Seil und Werkzeug. Viele Rhiddwyr führen zudem ein <strong>Instrument</strong> – Laute, Flöte oder Trommel – oder zumindest Feder und Tinte bei sich, um ihre Taten festzuhalten. Seine Ausstattung ist nicht auf Hofglanz ausgelegt, sondern auf Bewegung, Selbstständigkeit und das Leben als fahrender Ritter zwischen Küste und Hochland.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der <strong><em>Rhiddwyr</em></strong> nahm im alten Vennyr eine besondere, beinahe romantisierte Stellung ein. Er war weniger Teil der großen Bannerheere und mehr ein sichtbarer Hüter des Landes selbst – unterwegs zwischen Küsten, Hügeln und abgelegenen Dörfern. Während Rhyfelwyr die Front hielten und Morwyr die See dominierten, verkörperte der Rhiddwyr den fahrenden Ritter, der unmittelbar beim Volk präsent war. Sein Ruf gründete sich nicht auf große Schlachten, sondern auf gerettete Siedlungen, besiegte Marodeure und persönliche Taten.</p> <p>Im Adel galt er als notwendiger Kompromiss einer Region, in der klassische Kavallerie nie voll zur Entfaltung kam. Er war kein Paradeoffizier, sondern ein praktischer Grenzläufer – respektiert, aber nicht so prestigeträchtig wie die schwereren oder maritimen Gattungen. Dennoch genoss er unter der einfachen Bevölkerung hohes Ansehen, da er sichtbar Schutz bot und schnell eingreifen konnte.</p> <p>Nach dem Fall Vennyrs überlebte die Tradition der Rhiddwyr nur in wenigen Linien. In Cenyr werden sie mit gewissem Interesse betrachtet, da ihre Rolle zwischen Ritter, Grenzläufer und Volksheld schwer in das strengere Feudalsystem einzuordnen ist. Ihr kultureller Status ist heute kleiner als einst, doch ihr Bild als fahrender Hüter des Landes lebt in Liedern und Erzählungen weiter.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der wichtigste Gefährte des <strong><em>Rhiddwyr</em></strong> ist sein <strong>Ross</strong>. Anders als die schweren Uchelwyr benötigt er kein massiges Schlachtpferd, sondern ein trittsicheres, ausdauerndes Tier – angepasst an Hügelpfade, Geröll und Küstenstreifen. Diese Pferde sind wendig, robust und an karges Gelände gewöhnt. Zwischen Rhiddwyr und Ross besteht meist eine enge, beinahe partnerschaftliche Bindung, da sie lange Strecken allein oder in kleiner Schar zurücklegen.</p> <p>Neben dem Pferd finden sich bei manchen Rhiddwyr auch <strong>Hunde</strong> – vor allem robuste Küsten- oder Jagdhunde, die bei der Verfolgung von Marodeuren oder beim Aufspüren von Spuren helfen. Anders als der Ceidwyn mit seinem Greifvogel ist der Rhiddwyr stärker landgebunden und nutzt tierische Gefährten entsprechend pragmatisch.</p> <p>Sein zweiter „Gefährte“ ist jedoch oft symbolischer Natur: das <strong>Instrument</strong> oder die <strong>Schriftrolle</strong> in seiner Satteltasche. Da viele Rhiddwyr als fahrende Ritter auftreten, begleiten sie ihre Reisen mit Musik, Dichtung oder Chroniken. So trägt er nicht nur Waffen, sondern auch Geschichten mit sich – und hinterlässt sie, wo immer er reitet.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "16f8b2609b684ec882537bd695a9257f18bf5a29a0538068f7512172c1ccfe95"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "skjoldr",
+  "cultureId": "aldrimar",
+  "name": "Skjoldr",
+  "title": "Der Skjoldr",
+  "subtitle": "Axtkämpfender Huskarl",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/rlVtCrn.png",
+  "illustration": "https://i.imgur.com/R6WsuDZ.png",
+  "artwork": {
+    "source": "https://i.imgur.com/R6WsuDZ.png",
+    "width": 1024,
+    "height": 1024,
+    "caption": "Der Skjoldr · Aldrimar"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/uF665HD.png",
+    "width": 452,
+    "height": 552,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Vielseitiger Frontkämpfer und Huskarl"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Schwert, Axt, Streitkolben; Schild, Langschwert oder zwei Waffen nach Spezialisierung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Begriff <strong>Skjoldr</strong> leitet sich vom Wort <em>Skjold</em> – <strong>Schild</strong> – ab und bedeutet wörtlich „Schildträger“. In Aldrimar ist der Skjoldr die gängigste Form des <strong>Huskarls</strong> und bildet das direkte Pendant zum <strong>Teulu</strong> der Ritter Cenyrs. Er ist der archetypische Frontkämpfer des Reiches – schwer gerüstet, standhaft und auf den unmittelbaren Zusammenstoß ausgelegt.</p> <p>Der Skjoldr trägt in der Regel <strong>Axt</strong>, <strong>Streitkolben</strong> oder <strong>Schwert</strong>, ohne feste Vorgabe. Ebenso ist die Schildführung nicht zwingend vorgeschrieben. Manche kämpfen klassisch mit <strong>Schild und Klinge</strong>, andere mit <strong>Langschwert</strong> oder sogar beidhändig. Wie beim Teulu entscheidet die Spezialisierung und persönliche Neigung über die konkrete Bewaffnung.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der <strong>Skjoldr</strong> ist mit hoher Wahrscheinlichkeit aus dem alten <strong>Stjorn</strong> der Nordlinge hervorgegangen. Als sich die Norrnaigh in <strong>Glaenneach</strong> niederließen und sich allmählich zur Kultur Aldrimars wandelten, blieb die Grundform des schwer bewaffneten Frontkämpfers erhalten. Doch während der Stjorn vor allem als Lenker im Verband galt, entwickelte sich der Skjoldr zu einem eigenständig ausgebildeten \"<strong><em>Ritterkrieger</em>\"</strong>.</p> <p>Die langen Konflikte und späteren Grenzbeziehungen zu Reichen wie <strong>Cenyr</strong> führten dazu, dass aldrimarische Huskarle begannen, die Kampftechniken der <strong>Teulu</strong> und <strong>Tiarna</strong> zu studieren. Man beobachtete ihre Schwertführung, ihre Lanzenarbeit, ihre strukturierte Ausbildung – und übernahm, was als nützlich erkannt wurde. Doch anstatt eine bloße Kopie zu schaffen, formte Aldrimar daraus eine eigene Schule.</p> <p>So entstand ein Kampfstil, der nordische Standhaftigkeit mit zunehmender <strong>fachmännischer Technik</strong> verband. Der Skjoldr behielt den robusten Schildgebrauch und die Härte seiner Herkunft, integrierte jedoch sauberere Hiebfolgen, Distanzkontrolle und disziplinierte Bewegungslehre.</p> <p>Im Laufe der Zeit wurde der Skjoldr zur dominierenden Form des Huskarls. Er verkörpert den Übergang Aldrimars – vom stammesgeprägten Kriegerbund hin zu einem stärker feudalen, ritterlich organisierten Reich. In ihm lebt der Stjorn weiter, doch veredelt durch die Erkenntnis, dass Technik ebenso mächtig sein kann wie rohe Kraft.</p>",
+      "sharedIntro": "aldrimar-geschichte"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong>Skjoldr</strong> ist der technisch geschulte Frontkämpfer Aldrimars. Seine Ausbildung verbindet nordische Robustheit mit zunehmend <strong>strukturierter Waffenlehre</strong>. Er beherrscht den Kampf mit <strong>Schwert</strong>, <strong>Axt</strong> oder <strong>Streitkolben</strong> ebenso sicher wie die koordinierte <strong>Schildarbeit</strong> – doch anders als der einfache Hird nutzt er Schild und Klinge bewusst in Kombination mit Schrittfolgen, Winkelarbeit und kontrollierten Kontern.</p> <p>Viele Skjoldr werden zunächst im klassischen <strong>Schild-und-Waffe-Stil</strong> unterrichtet, lernen jedoch auch den Kampf ohne Schild, etwa mit <strong>Langschwert</strong> oder beidhändiger Führung. Distanzkontrolle, saubere Hiebe, gezielte Schwachstellenangriffe und das Halten der Linie gehören zu ihrem Kernrepertoire.</p> <p>Im Gefecht stehen sie an der Spitze oder im Zentrum der Formation. Sie sind geschult darin, Druck aufzubauen, gegnerische Schläge zu binden und kontrolliert Raum zu gewinnen. Ihre Technik ist nicht so kunstvoll wie die der südlichen Turnierritter, doch deutlich ausgearbeiteter als die rohe Kampfweise der Nordlinge.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p> <strong>Stärken</strong></p> <ul> <li><p> Gute Kombination aus <strong>Technik und Härte</strong></p> </li> <li><p> Flexibel in der Waffenwahl</p> </li> <li><p> Stark im Halten und Durchbrechen der Front</p> </li> <li><p> Fähig im Einzelduell wie im Verband</p> </li> <li><p> Hohe Disziplin und strukturierte Ausbildung</p> </li> </ul> <p> <strong>Schwächen</strong></p> <ul> <li><p> Weniger spezialisiert als extreme Unterformen (z. B. Reiterei oder Magie)</p> </li> <li><p> Nicht ganz auf dem technischen Niveau südlicher Spitzenritter</p> </li> <li><p> Schwer gerüstet, daher weniger beweglich als leichte Truppen</p> </li> <li><p> Stark auf Fronteinsatz ausgerichtet, weniger für Fernkampf geeignet</p> </li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "huskarl-waffenlehre"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die <strong>Ausstattung</strong> des Skjoldr spiegelt seinen Status als schwerer Frontkämpfer wider. Er trägt in der Regel ein vollwertiges <strong>Kettenhemd</strong>, teils ergänzt durch verstärkte Leder- oder Plattenelemente an Schultern, Unterarmen und Schienbeinen. Ein solider <strong>Helm</strong> mit Nasal oder geschlossenem Gesichtsschutz ist üblich, da der Skjoldr häufig im direkten Aufeinandertreffen der Linien steht.</p> <p>Sein namensgebender <strong>Schild</strong> ist meist stabiler und besser verarbeitet als der einfache Rundschild nordischer Hirds. In Aldrimar finden sich sowohl traditionelle Rundschilde als auch längliche, stärker verstärkte Varianten. Doch nicht jeder Skjoldr führt zwingend einen Schild – einige bevorzugen das <strong>Langschwert</strong> oder schwere Waffen beidhändig, je nach Schule und persönlicher Spezialisierung.</p> <p>Zur Bewaffnung zählen <strong>Schwert</strong>, <strong>Axt</strong> oder <strong>Streitkolben</strong>, wobei die Wahl oft vom Lehnsherrn, der regionalen Tradition oder der eigenen Kampfschule beeinflusst wird. Viele Skjoldr tragen zudem ein <strong>Kurzschwert oder Dolch</strong> als Reservewaffe.</p> <p>Im Gegensatz zu den Nordlingen ist die Ausrüstung eines Skjoldr meist einheitlicher und qualitativ hochwertiger, da Aldrimar über stärkere handwerkliche Strukturen verfügt. Dennoch bleibt sie funktional – robust genug für Feldzüge, schwer genug für die Front und klar auf <strong>Standfestigkeit und Kontrolle</strong> ausgelegt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Skjoldr macht schätzungsweise <strong>siebzig Prozent aller Huskarle Aldrimars</strong> aus. Er ist das Rückgrat der aldirmarischen Kriegerelite – der Mann, der die Linie hält, der den Sturm einleitet oder ihn abfängt. In vielen Heerschauen ist er das Bild, das man sieht, wenn man von einem Huskarl spricht.</p> <p>Nahezu jeder Huskarl wird zunächst im Stil des Skjoldr ausgebildet. Erst später spezialisieren sich einzelne auf Lanzenkampf, Reiterei oder andere Unterformen. Der Skjoldr ist damit nicht nur eine Klasse, sondern die <strong>Grundform des aldirmarischen Ritterkriegers</strong>.</p> <p>Seine Aufgabe ist klar: Standhalten, Druck ausüben, die Front dominieren. In seiner Disziplin verbinden sich nordische Härte und zunehmende ritterliche Struktur. Er ist kein wilder Berserker, aber auch kein Turnierfechter – sondern ein schwerer, technisch geschulter Krieger, der das Zentrum jeder Schlacht bildet.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der <strong>Skjoldr</strong> ist im Regelfall kein Krieger, der sich über tierische Gefährten definiert. Anders als Ravnar oder Veigir führt er selten Raben, Hunde oder andere Begleiter mit sich. Seine Identität ist stärker an <strong>Stand</strong>, <strong>Rüstung</strong> und <strong>Waffenführung</strong> gebunden als an symbolische Tiere.</p> <p>Durch den Einfluss cenyrischer Ritterkultur hat sich jedoch etwas verändert: Viele Skjoldr sind <strong>beritten unterwegs</strong>. Sie besitzen Pferde, können vom Sattel aus kämpfen und haben Erfahrung mit Lanzen- oder Schwertführung zu Pferd. Dennoch sehen sie sich nicht als eigentliche Kavalleristen. Das Pferd ist für sie Mittel zum Zweck – Mobilität, Status, strategischer Vorteil –, nicht Kern ihrer kriegerischen Identität.</p> <p>Im Ernstfall steigen sie ab und kämpfen zu Fuß, wo sie ihre wahre Stärke sehen. Der Skjoldr mag reiten können, doch er versteht sich primär als <strong>Frontkämpfer am Boden</strong> – nicht als Ritter der reinen Reiterei.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "006a4911bbc5956d399b42e1c357a750f89362dd0a9a65091716af700165ea8d",
+    "editorialCorrections": [
+      {
+        "field": "facts.Waffengattung",
+        "original": "Speer, Sax, Axt, Rundschild",
+        "reason": "An die klassenspezifischen Abschnitte und den vorhandenen Charakteraufbau angepasst."
+      },
+      {
+        "field": "facts.Klassentyp",
+        "original": "Kämpfer,",
+        "reason": "Generische Tabellenangabe nach der klassenspezifischen Beschreibung präzisiert."
+      }
+    ]
+  }
+}

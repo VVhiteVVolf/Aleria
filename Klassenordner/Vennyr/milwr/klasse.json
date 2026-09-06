@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "milwr",
+  "cultureId": "vennyr",
+  "cultures": [
+    "Cenyr",
+    "Vennyr"
+  ],
+  "name": "Milwr",
+  "title": "Der Milwr",
+  "subtitle": "Waffenknecht und Küstenwache",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/2wdIWQ2.png",
+  "illustration": "https://i.imgur.com/aF7LyM2.png",
+  "artwork": {
+    "source": "https://i.imgur.com/aF7LyM2.png",
+    "width": 500,
+    "height": 750,
+    "caption": "Milwr · gemeinsame Klasse"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Heere, Milizen und Wachen Cenyrs und Vennyrs"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Infanterie und Waffenknecht; kein Ritterstand erforderlich"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Axt, Streitkolben oder Schwert"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Rüstungsgattung",
+      "html": "Leder oder Kette, einfacher Helm und Schild nach Aufgabe"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Vennyr: junge Welle und Küstenwache; Cenyr: Jungdrache und Drachling"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der <strong>Milwr</strong> trägt den alltäglichen Waffendienst: Wache halten, eine Linie schließen und den Kameraden neben sich schützen. Die Klasse gehört zu <strong>Cenyr und Vennyr</strong>. Ihre vennyriische Ausbildung folgt der jungen Welle und führt anschließend in die vereinfachte Küstenwache.</p>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "<p>Die Küstenwache überträgt die Grundlagen des Sirenentanzes auf eine kurze, praktische Ausbildung. Feste Schritte, knappe Stöße und gegenseitige Deckung zählen mehr als höfische Duellkunst. Speer, Axt, Kolben und Schwert bleiben verwendbar; die geführte Waffe bestimmt ihren Grundschaden.</p><p>Auf Stufe 6 beginnt der <strong>Tanz der Küstenwache</strong>. Seine letzte Waffenlektion liegt auf Stufe 15. Die Entwicklung von Stufe 16 bis 20 bleibt offen, während die allgemeinen Ressourcenregeln weitergelten. Die drei ritterlichen Expertenpfade werden dadurch nicht freigeschaltet.</p>"
+    },
+    {
+      "id": "dienst-und-ausruestung",
+      "title": "Dienst & Ausrüstung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung folgt dem Dienst, dem verfügbaren Sold und der Mannschaft. Eine einfache Rüstung, ein brauchbarer Helm und eine verlässlich geführte Waffe bilden die Grundlage. Schutz entsteht durch Disziplin und Zusammenarbeit, nicht durch einen automatisch verliehenen Ritterrang.</p>"
+    },
+    {
+      "id": "gemeinsame-klasse",
+      "title": "Eine Klasse, zwei Ausbildungen",
+      "status": "written",
+      "html": "<p>Die bestehenden cenyrischen Milwr behalten ihre Jungdrachen- und Drachling-Ausbildung. Der vennyriische Plan ist eine kulturelle Alternative derselben Klasse. Beide Wege gleichzeitig zu lesen oder beide Herkünfte zu besitzen verdoppelt weder Attackenbudget noch Ressourcen.</p>"
+    }
+  ],
+  "source": {
+    "kind": "adapted-existing-class-and-user-direction",
+    "reference": "Klassenordner/Cenyr/milwr/klasse.json"
+  }
+}

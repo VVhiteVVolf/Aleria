@@ -22,7 +22,7 @@ function collectClasses(html, culture = '') {
     if (!name || name === 'Unterklasse') continue;
     const existing = classes.get(name);
     const href = attr(match[0], 'href');
-    const pageLinks = /^(?:Basisklassen|Cenyr)\/[a-z-]+\/index\.html$/.test(href)
+    const pageLinks = /^(?:Basisklassen|Cenyr|Vennyr|Aldrimar)\/[a-z-]+\/index\.html$/.test(href)
       ? [{ culture, path: `Klassenordner/${href}` }] : [];
     if (existing) {
       if (culture && !existing.cultures.includes(culture)) existing.cultures.push(culture);

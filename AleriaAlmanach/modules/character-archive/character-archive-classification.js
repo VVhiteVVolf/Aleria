@@ -1,7 +1,7 @@
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260905-barde-icon-v1';
 import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { getCenyrClassDefinition } from '../classes/cenyr/cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const mountByName = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
@@ -31,11 +31,11 @@ export function classifyCharacterArchiveEntries(entries = []) {
     if (entry.kind === 'class') {
       const page = getArchiveClassDefinition(entry);
       if (!page) return entry.sources?.length && entry.sources.every(source => source.kind === 'creature') ? [] : [entry];
-      const cenyrProfile = page.cultures.includes('Cenyr') ? getCenyrClassDefinition(page.id) : null;
+      const cultureClassProfiles = getCultureClassDefinitions(page.id, page.cultures);
       return [normalizeCharacterArchiveEntry({ ...entry, name: page.name,
         icon: entry.iconOverride || page.icon,
         data: { ...entry.data, baseClass: page.baseClass, cultures: page.cultures, pageOrder: page.order,
-          pageLinks: page.pageLinks, ...(cenyrProfile ? { cultureClassProfiles: [cenyrProfile] } : {}) }
+          pageLinks: page.pageLinks, ...(cultureClassProfiles.length ? { cultureClassProfiles } : {}) }
       })];
     }
     const name = normalizeArchiveSearchText(entry.name);

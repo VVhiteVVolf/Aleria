@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "morwyr",
+  "cultureId": "vennyr",
+  "name": "Morwyr",
+  "title": "Der Morwyr",
+  "subtitle": "Ritter zur See",
+  "aliases": [],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/FzoXhtJ.png",
+  "illustration": "https://i.imgur.com/l64foSt.png",
+  "artwork": {
+    "source": "https://i.imgur.com/l64foSt.png",
+    "width": 683,
+    "height": 1024,
+    "caption": "Morwyr · Vennyr"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/pLUJcZc.png",
+    "width": 500,
+    "height": 500,
+    "caption": "Gefährt und Begleiter"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Königreich Vennyr (historisch); heute in Herrschaft Fjordheims"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Niederer bis hoher Adel; vereinzelt Erhebung verdienter Waffenknechte"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Salbung",
+      "html": "Rituelle Weihe nach avallornischem Ritus, ergänzt durch regionale Symbolik (Wasser, Stein, Banner)"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehnseid gegenüber Krone oder Penron sowie Schwur auf Ehre, Land und Glaube"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Klassentyp",
+      "html": "Seekrieger und Ritter"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Taktik",
+      "html": "Enterkampf, Balance und Distanzkontrolle"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Waffengattung",
+      "html": "Partisane, Enteraxt, Harpunenspeer mit Leine"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstungsgattung",
+      "html": "Gehärtetes Leder, Brigantine oder leichter Schuppenpanzer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Patrone",
+      "html": "Häufig Nimue"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Begleiter",
+      "html": "Schiffsmannschaft; vereinzelt Schiffshunde oder ausgebildete Seehunde"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Kampfstil",
+      "html": "Sirenentanz · eigene vennyriische Weiterentwicklung des Drachentanzes"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Wenn das Meer schwarz wird und die Wellen gegen den Bug schlagen, stehen sie vorn am Deck – ruhig, breitbeinig, den Blick auf das feindliche Schiff gerichtet. Der <strong><em>Morwyr</em></strong> ist der Ritter des Wassers, der Hüter der Küsten und der erste, der den Feind begrüßt, wenn er aus dem Nebel tritt. Wo andere Banner auf Mauern wehen, weht seines im Wind über Masten und Rahen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die <strong><em>Morwyr</em></strong> sind die am weitesten verbreitete ritterliche Gattung Vennyrs. Ihre Wurzeln reichen zurück zu den frühen avallornischen Seeleuten, die sich den Nordmännern auf offener See stellen mussten. In diesen ersten Küstenkriegen lernten sie schnell, dass höfische Kampfkunst allein nicht genügte. Sie übernahmen Einflüsse der albischen Seekrieger, insbesondere der Kriegerkaste der sogenannten <strong>Currach</strong>, deren Erfahrung im Küsten- und Enterkampf prägend wurde.</p> <p>Aus dieser Vermischung entstand eine eigene Form des Rittertums: der Ritter auf See. Während sich andere Gattungen stärker auf Landgefechte spezialisierten, wurde der Morwyr zur maritimen Speerspitze Vennyrs. Mit dem Aufstieg der vennyriischen Flotte wuchs auch ihre Bedeutung – sie waren nicht nur Kämpfer, sondern Verkörperung der Seemacht des Reiches. Solange Vennyr stand, standen auch seine Morwyr zwischen Land und Meer wie eine schwimmende Bastion.</p>",
+      "sharedIntro": "rittertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der <strong><em>Morwyr</em></strong> ist ein spezialisierter Seekrieger, ausgebildet für Kampf auf schwankendem Untergrund, engem Raum und unter widrigsten Bedingungen. Seine Variante des <strong><em>Sirenentanzes</em></strong> ist fließender, kreisender und auf Balance ausgelegt – jeder Schritt berücksichtigt das Rollen des Decks und den Wind.</p> <p>Seine bevorzugte Hauptwaffe ist die <strong>Partisane</strong>, mit der er Gegner auf Distanz hält, zu Boden reißt oder vom Deck stößt. Die <strong>Enteraxt</strong> dient im Nahbereich, wenn das Gefecht eng wird. Besonders gefürchtet ist sein <strong>Wurfspeer in Harpunenform</strong>, versehen mit Kette oder Seil. Vor dem Entern wird er auf das gegnerische Schiff geworfen, um Feinde heranzuziehen oder ins Meer zu schleudern – wo schwere Rüstung schnell zum Todesurteil wird.</p> <p>Morwyr sind athletisch, schwimmfähig und hervorragend seetüchtig. Ihre Rüstung besteht meist aus Leder, Brigantine oder leichter Schuppenpanzerung, um Beweglichkeit und Wasserresistenz zu gewährleisten. Sie kennen Strömungen, Windrichtungen, Gezeiten und Schiffsmanöver – ihr Schlachtfeld ist nicht der Acker, sondern die Welle.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<p><strong>Stärken</strong></p> <ul> <li> Überlegenheit im <strong>Enterkampf</strong> und auf engem Raum</li> <li> Hohe Balance und Beweglichkeit auf instabilem Untergrund</li> <li> Effektive Distanzkontrolle durch Partisane und Harpunenwurf</li> <li> Gute Schwimmfähigkeit und Anpassung an maritime Bedingungen</li> </ul> <p><strong>Schwächen</strong></p> <ul> <li> Unterlegen im schweren Frontalgefecht gegen stark gepanzerte Ritter</li> <li> Geringerer Schutz durch leichtere Rüstung</li> <li> Eingeschränkte Effektivität auf offenem, trockenem Schlachtfeld</li> <li> Abhängigkeit von Schiff, Küste oder feuchtem Terrain für maximale Stärke</li> </ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "sirenentanz"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung des <strong><em>Morwyr</em></strong> ist konsequent auf den Seekrieg ausgerichtet. Schwere Plattenrüstung wäre auf einem nassen Deck oder im Wasser ein Todesurteil, daher tragen Morwyr bevorzugt gehärtetes <strong>Leder</strong>, <strong>Brigantine</strong> oder leichten <strong>Schuppenpanzer</strong>, oft mit verstärkten Schulter- und Unterarmschienen. Die Materialien sind salzresistent, beweglich und erlauben schnelles Reagieren auf engem Raum. Helme sind meist offen oder halbgeschlossen, um Sichtfeld und Atmung bei Anstrengung nicht einzuschränken.</p> <p>Seine Hauptwaffe ist die <strong>Partisane</strong>, ideal, um Gegner auf Distanz zu halten, zu haken oder vom Deck zu stoßen. Ergänzt wird sie durch die kompakte <strong>Enteraxt</strong>, die in dichtem Gedränge effektiv ist und zugleich als Werkzeug beim Entern dient. Der charakteristische <strong>Harpunenspeer</strong> mit Seil oder Kette gehört fast immer zur Ausrüstung – ein Instrument, das Feinde vor dem Entern schwächt oder ins Meer reißt.</p> <p>Typisch sind zudem Seilrollen, Enterhaken, Handschuhe mit verstärktem Griff und rutschfeste Stiefel. Viele Morwyr tragen persönliche Amulette oder eingravierte Meeressymbole zu Ehren Nimues. Ihre Ausrüstung ist kein höfisches Prunkstück, sondern ein funktionales Arsenal für Wind, Salz und Blut.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Zu Zeiten des stehenden <strong><em>Königreichs Vennyr</em></strong> genossen die <strong><em>Morwyr</em></strong> höchsten Respekt. Sie waren nicht nur Ritter, sondern das lebendige Symbol der vennyriischen Seemacht. Solange die Flotte die Küsten schützte und die Handelsrouten dominierte, standen die Morwyr im Zentrum von Verteidigung, Ruhm und Identität. Ihr Banner wehte über den Masten – und mit ihm der Stolz des Reiches.</p> <p>Nach dem Fall Vennyrs überlebte die Gattung vor allem in den verbliebenen <strong>Ritterhäusern vennyriischer Herkunft</strong>. Dort bewahrten sie ihre Tradition, auch wenn sie keine eigene Flotte mehr führten. In Cenyr jedoch begann man mit der Zeit, ihre Fähigkeiten zu schätzen und schrittweise in das dortige Heer zu integrieren.</p> <p>Vor ihrer Eingliederung füllten in Cenyr vor allem <strong>Cantref</strong> und <strong>Helwyr</strong> die Rolle der Seekrieger. Doch mit dem Erscheinen der Morwyr gewann das cenyrische Heer eine kampferprobte, eigenständige maritime Tradition hinzu – rauer, erfahrener und stärker vom echten Seekrieg geprägt.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der wichtigste Gefährte des <strong><em>Morwyr</em></strong> ist nicht das Pferd, sondern das <strong><em>Schiff</em></strong>. Die Mannschaft ersetzt den Hof, das Deck den Turnierplatz. Zwischen Kapitän, Steuermann und Entertrupp besteht ein enger, beinahe brüderlicher Bund – Vertrauen ist auf See überlebensnotwendig. Ein Morwyr kämpft selten allein; seine Stärke liegt im koordinierten Vorgehen mit seiner Crew.</p> <p>An Land nutzt er zwar Pferde zur Fortbewegung, doch im Gegensatz zu anderen Rittergattungen pflegt er keine ausgeprägte Reitertradition. Stattdessen zählen Seile, Enterhaken, Masten und Planken zu seinem vertrauten Umfeld. Selbst sein Kampfstil ist auf die Nähe zu Kameraden und das Arbeiten in geschlossenen Gruppen ausgelegt.</p> <p>Manche Morwyr führen zudem maritime Begleiter mit sich – ausgebildete Seehunde zur Wachsamkeit in Häfen oder robuste Schiffshunde als Warn- und Kampftiere. Doch sein wahrer Gefährte bleibt das Meer selbst, dessen Launen er kennt und dessen Rhythmus seinen Kampf bestimmt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "479a39074997b0fa70d297d3f8b4cea6e3fa60c117e55332d7cce401133c1ec8"
+  }
+}
