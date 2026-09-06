@@ -105,9 +105,9 @@ test('Doppelhieb der Zwillingsäxte würfelt zwei getrennte Angriffe in einer Ha
 test('Zerschmetternder Hieb und Kreiselwurf rechnen ihre Zusatzwürfel und Boni korrekt ein', async () => {
   const fenrir = await loadFenrir();
   const crush = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
-  assert.equal(crush.weapon.damageFormula, '1d12+1d4');
+  assert.equal(crush.weapon.damageFormula, '1d12+1d6');
   const throwTechnique = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-spinning-throw', segmentKind: 'combataction' });
-  assert.equal(throwTechnique.weapon.damageFormula, '1d6+1d4');
+  assert.equal(throwTechnique.weapon.damageFormula, '2d6+1');
   assert.equal(throwTechnique.attackModifier, crush.attackModifier + 1);
 });
 
@@ -158,8 +158,8 @@ test('Während des Berserkergangs erhält der Hauptangriff einen Rage-Bonuswürf
   };
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target });
   assert.equal(result.attack.hit, true);
-  // Zerschmetternder Hieb (1w12+1w4) plus Rage-Bonuswürfel (1w4) werden in einem Wurf zusammengeführt.
-  assert.equal(capturedFormula, '1d12+2d4');
+  // Zerschmetternder Hieb (1w12+1w6) plus Rage-Bonuswürfel (1w4) werden in einem Wurf zusammengeführt.
+  assert.equal(capturedFormula, '1d12+1d6+1d4');
   assert.equal(result.damage.total, 21);
 });
 

@@ -170,6 +170,7 @@ export function renderPaymentPanel({ actor = {}, cards = [], groups, magic = fal
       </div>
     </div>
     ${cheatEnabled ? '' : renderPaymentModes({ paymentOptions, paymentMode, paymentConfirmed, actorReady })}
+    ${actor.selectedAction?.auraDamageBonus ? `<p class="combat-payment-status">Aura-Verstärkung: +${escapeHtml(actor.selectedAction.auraDamageBonus.toUpperCase().replace('D', 'W'))} · bereits im angezeigten Schaden enthalten.</p>` : ''}
     <div class="combat-payment-reserves"><span class="combat-payment-heading">Verfügbare Ressourcen</span>
       ${renderResourceGroup({ title: 'Aktion, Bonusaktion, Reaktion, besondere Aktion und Aura', cards: resourceGroups.actions || [] })}
       ${renderResourceGroup({ title: magic ? 'Magische Ressourcen' : 'Weitere Kampfressourcen', cards: otherCards })}

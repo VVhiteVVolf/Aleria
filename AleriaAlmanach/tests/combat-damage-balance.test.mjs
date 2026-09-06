@@ -15,6 +15,7 @@ import { CHARACTER_CLASS_TEMPLATES } from '../modules/combat/character-creation-
 const attacks = getCombatStyle('drachentanz').forms.flatMap(form => form.techniques);
 const load = async slug => JSON.parse(await readFile(new URL(`../../Charakter%20Archiv%20Exporte/${slug}.json`, import.meta.url), 'utf8')).character;
 const totals = formula => {
+  if (!formula) return { maximum: 0, average: 0 };
   const parsed = parseDamageFormula(formula);
   return (parsed.terms || [parsed]).reduce((total, term) => ({
     maximum: total.maximum + term.diceCount * term.sides,
@@ -29,11 +30,11 @@ class MaximumDice {
   async rollSavingThrow({ modifier }) { return { natural: 1, total: 1 + modifier, keptDice: [1] }; }
 }
 
-test('alle 208 Klassenattacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
-  assert.equal(attacks.length, 208);
+test('alle 212 Klassenattacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
+  assert.equal(attacks.length, 212);
   for (const attack of attacks) for (const formula of ['1d4', '1d6', '1d8', '1d10', '1d12', '2d6']) {
     const stats = totals(resolveTechniqueDamageFormula(attack, { damageFormula: formula }, { progression: { level: attack.minimumLevel } }));
-    const ceiling = attack.minimumLevel <= 6 ? 20 : (attack.minimumLevel <= 8 ? 22 : (attack.minimumLevel < 13 ? 24 : (attack.minimumLevel < 17 ? 28 : 42)));
+    const ceiling = attack.minimumLevel <= 6 ? 22 : (attack.minimumLevel <= 8 ? 26 : (attack.minimumLevel < 13 ? 34 : (attack.minimumLevel < 17 ? 38 : 53)));
     assert.ok(stats.maximum <= ceiling, `${attack.name} mit ${formula}: ${stats.maximum} > ${ceiling}`);
     let last = stats.average;
     for (let level = attack.minimumLevel + 1; level <= 20; level++) {
@@ -48,9 +49,9 @@ test('alte Grundformen erhalten genau einen wachsenden Bonus; zusätzliche Pfadw
   const attack = attacks.find(attack => attack.name === 'Sechsfacher Lehrhieb');
   const weapon = { damageFormula: '1d8' };
   assert.deepEqual([6, 7, 8, 9, 12, 13, 16, 17, 20].map(level => resolveTechniqueDamageFormula(attack, weapon, { progression: { level } })),
-    ['2d8', '2d8+1d4', '2d8+1d4', '2d8+1d6', '2d8+1d6', '3d8', '3d8', '2d8+1d10', '2d8+1d10']);
+    ['2d8+2', '2d8+1d4+2', '2d8+1d4+2', '2d8+1d6+2', '2d8+1d6+2', '3d8+2', '3d8+2', '2d8+1d10+2', '2d8+1d10+2']);
   const manyPaths = { progression: { level: 16 }, classTraining: { selections: attacks.slice(0, 5).map((entry, index) => ({ kind: 'path', selectionId: entry.id, selectedAtLevel: 9 + index })) } };
-  assert.equal(resolveTechniqueDamageFormula(attack, weapon, manyPaths), '3d8');
+  assert.equal(resolveTechniqueDamageFormula(attack, weapon, manyPaths), '3d8+2');
   assert.equal(getTechniqueDamageScaling(attack, { progression: { level: 1 } }), null);
 });
 
@@ -88,16 +89,16 @@ test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff se
   const target = resolveCombatProfile(await load('gawain-draig'));
   assert.equal(target.currentHitPoints, 49);
   const actor = resolveCombatProfile(gildas, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
-  assert.equal(actor.weapon.damageFormula, '2d8');
+  assert.equal(actor.weapon.damageFormula, '2d8+2');
   assert.equal(actor.damageModifier, 5);
   for (const critical of [false, true]) {
     const result = await new CombatResolutionService(new MaximumDice(critical)).resolveAttack({ actor, target });
-    assert.equal(result.damage.total, critical ? 37 : 21);
+    assert.equal(result.damage.total, critical ? 39 : 23);
     assert.ok(result.targetSnapshot.hitPointsAfter > 0);
   }
 });
 
-test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normalen Maximalwürfen noch 15 TP', async () => {
+test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normalen Maximalwürfen noch 12 TP', async () => {
   const character = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
   const first = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
@@ -108,20 +109,20 @@ test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normal
   const resolver = new CombatResolutionService(new MaximumDice());
   const result = await resolver.resolveAttack({ actor: first, target });
   const follow = await resolver.resolveAttack({ actor: response, target: { ...target, currentHitPoints: result.targetSnapshot.hitPointsAfter } });
-  assert.equal(result.damage.total + follow.damage.total, 34);
-  assert.equal(follow.targetSnapshot.hitPointsAfter, 15);
+  assert.equal(result.damage.total + follow.damage.total, 37);
+  assert.equal(follow.targetSnapshot.hitPointsAfter, 12);
 });
 
 test('zweihändige Waffenführung und manuelle Stufenwechsel berechnen die Technik neu ohne gespeicherte Zusatzwürfel zu stapeln', async () => {
   const character = await load('gildas-gafyr');
   const actionId = 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb';
-  assert.equal(resolveCombatProfile(character, { actionId, weaponGrip: 'two-handed' }).weapon.damageFormula, '1d10+1d8');
+  assert.equal(resolveCombatProfile(character, { actionId, weaponGrip: 'two-handed' }).weapon.damageFormula, '1d10+1d8+2');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 16).profile;
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+2');
   character.combatProfile = sanitizeCharacterCombatProfile(character.combatProfile);
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+2');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 6).profile;
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '2d8');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '2d8+2');
 });
 
 test('Flächenschaden verwendet ebenfalls die aktuelle Waffen- und Ausbildungsformel', async () => {
@@ -142,7 +143,7 @@ test('Fenrirs Doppelhieb addiert Attribut und Berserkerwürfel nur beim Hauptang
   const dice = new MaximumDice();
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: resolveCombatProfile(await load('gawain-draig')) });
   assert.equal(result.followUpAttacks.length, 1);
-  assert.equal(dice.damageCalls[0].damageFormula, '1d6+1d4');
+  assert.equal(dice.damageCalls[0].damageFormula, '1d6+1d4+1');
   assert.equal(dice.damageCalls[1].damageFormula, '1d4');
   assert.equal(dice.damageCalls[1].bonus, 0);
 });

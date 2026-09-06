@@ -111,7 +111,7 @@
       "person--haus-neidr--guinevere-neidr",
       "person--haus-neidr--guinevere-neidr"
     ],
-    "contentHash": "313b71718c10fa89da5a195e393ca4c877f0522e7ec5e18276300780fa314e85"
+    "contentHash": "c2192d20e941c1b0d68747de014a3f2db7d0e920eb9230ce35c9b8637be6d22b"
   },
   "local": {
     "notes": "",
@@ -6030,13 +6030,13 @@
                 "bow"
               ],
               "compatibleWeaponIds": [],
-              "damageFormula": "1d4",
+              "damageFormula": "1d6",
               "damageModel": {
                 "mode": "fixed",
                 "weaponDiceMultiplier": 1,
                 "bonusFormula": "",
                 "bonusWeaponDice": 0,
-                "bonusWeaponDieCap": 4,
+                "bonusWeaponDieCap": 6,
                 "scalingSteps": [
                   {
                     "level": 7,
@@ -6211,13 +6211,13 @@
                 "sword"
               ],
               "compatibleWeaponIds": [],
-              "damageFormula": "1d4",
+              "damageFormula": "1d6",
               "damageModel": {
                 "mode": "fixed",
                 "weaponDiceMultiplier": 1,
                 "bonusFormula": "",
                 "bonusWeaponDice": 0,
-                "bonusWeaponDieCap": 4,
+                "bonusWeaponDieCap": 6,
                 "scalingSteps": [
                   {
                     "level": 7,
@@ -6420,8 +6420,9 @@
                 "mode": "weapon-dice",
                 "weaponDiceMultiplier": 1,
                 "bonusFormula": "",
+                "bonusModifier": 1,
                 "bonusWeaponDice": 1,
-                "bonusWeaponDieCap": 6,
+                "bonusWeaponDieCap": 8,
                 "scalingSteps": [
                   {
                     "level": 7,
@@ -6594,6 +6595,245 @@
                 "selectedAtLevel": 5,
                 "sourceStatus": "draft"
               }
+            },
+            {
+              "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug",
+              "name": "Kreisflug",
+              "status": "confirmed",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "combatStyleId": "drachentanz",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "minimumLevel": 4,
+              "category": "technique",
+              "description": "Der Helwyr umrundet die gegnerische Linie und schießt aus einem neuen Winkel.",
+              "effect": "Verursacht Technikschaden und gibt bis zum nächsten Beitrag +1 Rüstungsklasse.",
+              "activationType": "action",
+              "weaponTypes": [
+                "bow"
+              ],
+              "compatibleWeaponIds": [],
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "bonusWeaponDice": 1,
+                "bonusWeaponDieCap": 8,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "damageType": "",
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "targetDefenseModifier": 0,
+              "rollMode": "normal",
+              "criticalThreshold": 20,
+              "maximumTargets": 1,
+              "range": "Fernkampf",
+              "target": "Ein Gegner",
+              "duration": "Sofort",
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform · Kurzbogen",
+              "aiInstructions": "Verursacht Technikschaden und gibt bis zum nächsten Beitrag +1 Rüstungsklasse. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "mechanicNotes": [],
+              "effects": [
+                {
+                  "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-weapon-damage",
+                  "type": "damage",
+                  "target": "target",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": true,
+                  "magical": false,
+                  "on": "hit",
+                  "resourceId": "",
+                  "condition": null,
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+                },
+                {
+                  "id": "helwyr-kreisflug-condition",
+                  "type": "buff",
+                  "target": "self",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "inheritWeaponDamageType": false,
+                  "magical": false,
+                  "on": "always",
+                  "resourceId": "",
+                  "condition": {
+                    "id": "helwyr-kreisflug-condition",
+                    "name": "Bewegte Deckung",
+                    "description": "Der Stellungswechsel erschwert Gegenangriffe.",
+                    "duration": "1 eigener Beitrag",
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1,
+                      "remainingSceneComments": 0,
+                      "expiresOnRest": "",
+                      "expiresOnDayChange": false,
+                      "encounterId": "",
+                      "concentrationOwnerId": "",
+                      "channelOwnerId": "",
+                      "label": "1 eigener Beitrag"
+                    },
+                    "tags": "Drachentanz",
+                    "mechanics": {
+                      "armorClass": 1
+                    },
+                    "active": true,
+                    "remainingActorComments": 1,
+                    "remainingSceneComments": 0,
+                    "ward": {
+                      "enabled": false,
+                      "charges": 0,
+                      "deflectChance": 100,
+                      "breaksOnCriticalHit": false
+                    }
+                  },
+                  "conditionId": "",
+                  "conditionTags": "",
+                  "movementMeters": 0,
+                  "movementKind": "move",
+                  "summon": null,
+                  "concentration": false,
+                  "channelComments": 0,
+                  "nonlethal": false,
+                  "notes": "Der Stellungswechsel erschwert Gegenangriffe."
+                }
+              ],
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-action-1",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-bonus-action-2",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "active": true,
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              },
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false,
+                "attributeKey": "constitution",
+                "dcBase": 8,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "technique-save-condition",
+                  "name": "",
+                  "duration": "",
+                  "description": "",
+                  "mechanics": {
+                    "attack": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "initiative": 0,
+                    "skill": 0,
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "spellSaveDc": 0,
+                    "movement": 0,
+                    "maximumHitPoints": 0,
+                    "combatStartTemporaryHitPoints": 0,
+                    "passivePerception": 0,
+                    "attackRollMode": "normal",
+                    "bonusDamageFormula": "",
+                    "savingThrowAdvantageAttributes": [],
+                    "savingThrowDisadvantageAttributes": []
+                  }
+                }
+              },
+              "followUpAttack": {
+                "enabled": false,
+                "sameTarget": true,
+                "damageFormula": "",
+                "damageType": "",
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "inheritDamageModifier": true,
+                "inheritBonusDamage": true,
+                "repeatCount": 1,
+                "triggerReactions": true,
+                "repeatPerAttackRules": true,
+                "triggerFurtherEffects": false
+              },
+              "cenyrTraining": {
+                "branchId": "helwyr-shortbow",
+                "weaponRuleSetId": "",
+                "uchelwyrCompatible": false,
+                "requiresMounted": false,
+                "allowedClassIds": [
+                  "helwyr"
+                ],
+                "classWeaponProfiles": {
+                  "helwyr": [
+                    "shortbow"
+                  ]
+                },
+                "slotBands": [
+                  "foundation"
+                ],
+                "designNotes": "",
+                "assignedSlotId": "foundation-04",
+                "selectedAtLevel": 4,
+                "sourceStatus": "draft"
+              }
             }
           ],
           "classTraining": {
@@ -6615,6 +6855,11 @@
                 "slotId": "foundation-03",
                 "techniqueId": "combat-style-drachentanz-helwyr-jungdrache-schattenpaar",
                 "selectedAtLevel": 5
+              },
+              {
+                "slotId": "foundation-04",
+                "techniqueId": "combat-style-drachentanz-helwyr-jungdrache-kreisflug",
+                "selectedAtLevel": 4
               }
             ]
           },
@@ -10004,13 +10249,13 @@
             "bow"
           ],
           "compatibleWeaponIds": [],
-          "damageFormula": "1d4",
+          "damageFormula": "1d6",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
             "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 4,
+            "bonusWeaponDieCap": 6,
             "scalingSteps": [
               {
                 "level": 7,
@@ -10185,13 +10430,13 @@
             "sword"
           ],
           "compatibleWeaponIds": [],
-          "damageFormula": "1d4",
+          "damageFormula": "1d6",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
             "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 4,
+            "bonusWeaponDieCap": 6,
             "scalingSteps": [
               {
                 "level": 7,
@@ -10394,8 +10639,9 @@
             "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "bonusModifier": 1,
             "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 6,
+            "bonusWeaponDieCap": 8,
             "scalingSteps": [
               {
                 "level": 7,
@@ -10568,6 +10814,245 @@
             "selectedAtLevel": 5,
             "sourceStatus": "draft"
           }
+        },
+        {
+          "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug",
+          "name": "Kreisflug",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Der Helwyr umrundet die gegnerische Linie und schießt aus einem neuen Winkel.",
+          "effect": "Verursacht Technikschaden und gibt bis zum nächsten Beitrag +1 Rüstungsklasse.",
+          "activationType": "action",
+          "weaponTypes": [
+            "bow"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 8,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Fernkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform · Kurzbogen",
+          "aiInstructions": "Verursacht Technikschaden und gibt bis zum nächsten Beitrag +1 Rüstungsklasse. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "helwyr-kreisflug-condition",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": {
+                "id": "helwyr-kreisflug-condition",
+                "name": "Bewegte Deckung",
+                "description": "Der Stellungswechsel erschwert Gegenangriffe.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "1 eigener Beitrag"
+                },
+                "tags": "Drachentanz",
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Der Stellungswechsel erschwert Gegenangriffe."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-helwyr-jungdrache-kreisflug-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "helwyr-shortbow",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "helwyr"
+            ],
+            "classWeaponProfiles": {
+              "helwyr": [
+                "shortbow"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "",
+            "assignedSlotId": "foundation-04",
+            "selectedAtLevel": 4,
+            "sourceStatus": "draft"
+          }
         }
       ],
       "classTraining": {
@@ -10589,6 +11074,11 @@
             "slotId": "foundation-03",
             "techniqueId": "combat-style-drachentanz-helwyr-jungdrache-schattenpaar",
             "selectedAtLevel": 5
+          },
+          {
+            "slotId": "foundation-04",
+            "techniqueId": "combat-style-drachentanz-helwyr-jungdrache-kreisflug",
+            "selectedAtLevel": 4
           }
         ]
       },

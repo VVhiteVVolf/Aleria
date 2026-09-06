@@ -97,14 +97,14 @@ test('Sirenentanz uses bounded weapon dice, one replacement scaling die and no a
     assert.equal(attack.damageModel.weaponDiceMultiplier, 1);
     assert.equal(attack.maximumTargets, 1);
     assert.equal(attack.followUpAttack.enabled, false);
-    if (attack.minimumLevel <= 6) assert(damageBounds(attack, 6).maximum <= 20, attack.name);
-    if (attack.costs.length === 1 && attack.costs[0].resourceId === 'bonus-action') assert.equal(attack.damageFormula, '1d4');
+    if (attack.minimumLevel <= 6) assert(damageBounds(attack, attack.minimumLevel).maximum <= 20, attack.name);
+    if (attack.costs.length === 1 && attack.costs[0].resourceId === 'bonus-action') assert.equal(attack.damageFormula, '1d6');
     for (let level = attack.minimumLevel; level < 20; level++) assert(damageBounds(attack, level + 1).mean >= damageBounds(attack, level).mean, attack.name);
   }
   const first = getVennyrClassProgression('morwyr').attackCatalog.find(attack => attack.minimumLevel === 2);
   assert.equal(getTechniqueDamageScaling(first, { progression: { level: 7 } }).formula, '1d4');
   assert.equal(getTechniqueDamageScaling(first, { progression: { level: 17 } }).formula, '1d10');
-  assert.equal(resolveTechniqueDamageFormula(first, { damageFormula: '1d10' }, { progression: { level: 17 } }), '2d10+1d4');
+  assert.equal(resolveTechniqueDamageFormula(first, { damageFormula: '1d10' }, { progression: { level: 17 } }), '2d10+1d6');
   for (const attack of attacks.filter(attack => !attack.effects.some(effect => effect.type === 'damage'))) {
     assert.equal(attack.damageFormula, '');
     assert.deepEqual(attack.damageModel.scalingSteps, []);
@@ -123,7 +123,7 @@ test('resources and short-lived conditions match the existing combat contract', 
     assert.equal(attack.auraBypass.cost, 1);
     assert.equal(attack.auraBypass.allowed, true);
     if (attack.minimumLevel < 8) assert(!attack.costs.some(cost => cost.resourceId === 'aura-focus'));
-    if (attack.costs.some(cost => cost.resourceId === 'special-action')) assert(attack.costs.length >= 3);
+    if (attack.costs.some(cost => cost.resourceId === 'special-action')) assert(attack.costs.length >= 2);
     if (attack.costs.length === 1 && attack.costs[0].resourceId === 'reaction') assert(!attack.effects.some(effect => effect.type === 'damage'));
     for (const effect of attack.effects.filter(effect => effect.condition)) {
       assert.equal(effect.condition.durationModel.kind, 'actor-comments');

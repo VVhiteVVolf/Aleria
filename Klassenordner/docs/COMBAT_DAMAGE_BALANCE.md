@@ -1,5 +1,7 @@
 # Schadensbalance der bestehenden Klassen
 
+> **Historischer Stand vom 5. September 2026.** Die Zahlen unten dokumentieren die damalige Anpassung. Die aktuelle, maßvolle Anhebung vom 6. September mit 503 Kampftechniken, erweiterten Teulu-Grundtechniken und Aura-Zusatzwürfel steht im [aktuellen Balancebericht](../../AleriaAlmanach/docs/combat/TECHNIQUE_BALANCE_2026-09-06.md). Der [vollständige Vorher-/Nachher-Vergleich](../../AleriaAlmanach/docs/combat/technique-balance/CATALOG.md) enthält die aktuellen Werte aller drei Technikregister.
+
 Stand: 5. September 2026. Die Waffen bleiben die Grundlage. Techniken erhöhen ihren Schaden maßvoll; Wirkung, Reichweite, Bewegung und Kontrolle unterscheiden die Angriffe weiterhin. Es gibt kein neues Limit für Kampfabschnitte.
 
 ## Umfang der Prüfung

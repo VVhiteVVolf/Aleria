@@ -24,10 +24,11 @@ export function describeTechniqueDamage(technique = {}, profile = {}) {
     ? `${model.weaponDiceMultiplier || 1}× Waffenwürfel${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
     : technique.damageFormula || 'Kein direkter Schaden';
   const scaling = getTechniqueDamageScaling(technique, profile);
-  return `${base}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
+  return `${base}${model.bonusModifier ? ` + ${model.bonusModifier} Technikbonus` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
 }
 
 export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profile = {}) {
+  if (technique.effects?.length && !technique.effects.some(effect => effect.type === 'damage') && !technique.damageFormula) return '';
   const model = technique.damageModel || {};
   const scaling = getFormulaParts(getTechniqueDamageScaling(technique, profile)?.formula);
   if (model.mode !== 'weapon-dice') {
@@ -47,7 +48,7 @@ export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profi
     ...base.terms.map(term => ({ ...term, diceCount: term.diceCount * multiplier })),
     ...(extraDice ? [{ diceCount: extraDice, sides: extraSides }] : []),
     ...bonus.terms, ...scaling.terms
-  ], base.fixedModifier + bonus.fixedModifier + scaling.fixedModifier);
+  ], base.fixedModifier + bonus.fixedModifier + scaling.fixedModifier + (Number(model.bonusModifier) || 0));
 }
 
 export const combatTechniqueDamageInternals = Object.freeze({ formatFormula, getFormulaParts });

@@ -351,7 +351,11 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   });
 
   const classTechniqueChoiceGroups = cenyrDefinition
-    ? getCenyrTechniqueChoiceGroups(selectedTrainingProfile, nextProgression.level)
+    ? getCenyrTechniqueChoiceGroups(selectedTrainingProfile, nextProgression.level).map(group => ({
+      ...group,
+      options: group.options.filter(option => !Object.entries(plan.cenyrTechniqueChoices)
+        .some(([slotId, techniqueId]) => slotId !== group.slotId && techniqueId === option.id))
+    }))
     : [];
   classTechniqueChoiceGroups.forEach(group => {
     const techniqueId = plan.cenyrTechniqueChoices[group.slotId];

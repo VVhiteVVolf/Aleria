@@ -1390,7 +1390,7 @@
           "compatibleWeaponIds": [
             "fenrir-greataxe"
           ],
-          "damageFormula": "1d12+1d4",
+          "damageFormula": "1d12+1d6",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
@@ -1515,7 +1515,7 @@
           "minimumLevel": 3,
           "category": "technique",
           "description": "Der Rundschild kracht mit voller Wucht ins Ziel.",
-          "effect": "Bei einem Treffer 1W4 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
+          "effect": "Bei einem Treffer 1W6 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
           "activationType": "bonus-action",
           "weaponTypes": [
             "shield"
@@ -1523,7 +1523,7 @@
           "compatibleWeaponIds": [
             "fenrir-roundshield-bash"
           ],
-          "damageFormula": "1d4",
+          "damageFormula": "1d6",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
@@ -1648,7 +1648,7 @@
           "minimumLevel": 4,
           "category": "technique",
           "description": "Zwei getrennte Hiebe: ein Hauptangriff und bei dessen Treffer ein kurzer Folgeangriff mit der zweiten Axt.",
-          "effect": "Hauptangriff: 1W6 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
+          "effect": "Hauptangriff: 1W6 +1 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
           "activationType": "action",
           "weaponTypes": [
             "axe"
@@ -1656,7 +1656,7 @@
           "compatibleWeaponIds": [
             "fenrir-handaxe-pair"
           ],
-          "damageFormula": "1d6",
+          "damageFormula": "1d6+1",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
@@ -1782,14 +1782,14 @@
           "category": "technique",
           "description": "Die Wurfaxt dreht sich schwirrend durch die Luft, ehe sie mit voller Wucht einschlägt.",
           "effect": "Ein gezielter, kraftvoller Wurf: +1 auf den Angriffswurf, bei einem Treffer 1W6 normaler Wurfaxtschaden und zusätzlich 1W4 durch den Schwung des Wurfs.",
-          "activationType": "action",
+          "activationType": "reaction",
           "weaponTypes": [
             "axe"
           ],
           "compatibleWeaponIds": [
             "fenrir-throwing-axe"
           ],
-          "damageFormula": "1d6+1d4",
+          "damageFormula": "2d6+1",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
@@ -1815,11 +1815,18 @@
           "effects": [],
           "costs": [
             {
-              "id": "fenrir-spinning-throw-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "fenrir-throw-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
+            },
+            {
+              "id": "fenrir-throw-special",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
             }
           ],
           "auraBypass": {

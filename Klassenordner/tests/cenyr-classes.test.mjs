@@ -29,7 +29,7 @@ const definitions = getCenyrClassDefinitions();
 const root = new URL('../', import.meta.url);
 const culture = JSON.parse(await readFile(new URL('Cenyr/kultur.json', root), 'utf8'));
 const sourcePassages = { milwr: 'Fundament des cenyrischen Heeres', teulu: 'Vom Becher und vom Durst', cantref: 'Hundertschaft des Landes', uchelwyr: 'Ritter des hohen Sattels', helwyr: 'Offiziere, Bannerträger, Engstellen', arthwyr: 'Tanz der Bärenklaue', barddwyr: 'Haus Ceirwyn O’Calon' };
-const trainingPassages = { milwr: '9 Slots bis Stufe 20', teulu: '20 Slots bis Stufe 20', cantref: 'Hellebarde', uchelwyr: 'Mindestens 2 berittene Optionen', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
+const trainingPassages = { milwr: '9 Slots bis Stufe 20', teulu: '24 Slots bis Stufe 20', cantref: 'Hellebarde', uchelwyr: 'Mindestens 2 berittene Optionen', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
 
 test('seven cultural pages preserve supplied lore, artwork proportions and local navigation', async () => {
   for (const definition of definitions) {
@@ -60,13 +60,13 @@ test('class curricula separate foundation, duelist form and selectable paths wit
   assert.equal(canonical.forms.at(-3).shortName, 'Tanz des Drachlings');
   assert.equal(canonical.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(canonical.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
-  const expectedBudgets = { milwr: 9, teulu: 20, cantref: 14, uchelwyr: 16, helwyr: 10, arthwyr: 14, barddwyr: 8 };
-  const expectedCatalogSizes = { milwr: 9, teulu: 70, cantref: 70, uchelwyr: 89, helwyr: 48, arthwyr: 71, barddwyr: 36 };
+  const expectedBudgets = { milwr: 9, teulu: 24, cantref: 14, uchelwyr: 16, helwyr: 12, arthwyr: 14, barddwyr: 8 };
+  const expectedCatalogSizes = { milwr: 9, teulu: 74, cantref: 70, uchelwyr: 89, helwyr: 48, arthwyr: 71, barddwyr: 36 };
   for (const definition of definitions) {
     const plan = getCenyrClassProgression(definition.id, 20);
     assert.equal(plan.levels.length, 20);
     assert(plan.availableAttacks.every(attack => attack.minimumLevel <= 6));
-    assert.equal(plan.availableAttacks.length, definition.classId === 'teulu' ? 6 : 0);
+    assert.equal(plan.availableAttacks.length, definition.classId === 'teulu' ? 10 : 0);
     assert(plan.pendingFeatures.every(feature => feature.minimumLevel === null));
     assert.equal(plan.levels[5].level, 6);
     assert.equal(plan.techniqueBudget.total, expectedBudgets[definition.classId]);
@@ -86,12 +86,12 @@ test('class curricula separate foundation, duelist form and selectable paths wit
   assert.deepEqual(getCenyrClassProgression('barddwyr', 9).pathOptions.filter(path => path.blocked).map(path => path.shortName), [
     'Tanz des brüllenden Drachens', 'Tanz des zornigen Drachens'
   ]);
-  assert.equal(getCenyrClassProgression('teulu', 6).availableAttacks.length, 6);
+  assert.equal(getCenyrClassProgression('teulu', 6).availableAttacks.length, 10);
 });
 
-test('all 208 attack designs are complete, level-valid and safely kept in draft', () => {
+test('all 212 attack designs are complete, level-valid and safely kept in draft', () => {
   const techniques = getCombatStyle('drachentanz').forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 208);
+  assert.equal(techniques.length, 212);
   assert.equal(new Set(techniques.map(technique => technique.id)).size, techniques.length);
   for (const technique of techniques) {
     assert(technique.name && technique.description && technique.effect && technique.requirements, technique.id);
@@ -100,7 +100,7 @@ test('all 208 attack designs are complete, level-valid and safely kept in draft'
     if (technique.status === 'draft') {
       const light = technique.costs.length === 1 && technique.costs[0].resourceId === 'bonus-action';
       assert.equal(technique.damageModel.mode, light ? 'fixed' : 'weapon-dice', technique.id);
-      if (light) assert.equal(technique.damageFormula, '1d4', technique.id);
+      if (light) assert.equal(technique.damageFormula, '1d6', technique.id);
       assert(technique.cenyrTraining.allowedClassIds.length > 0, technique.id);
     }
     const economy = getCombatActionEconomy(technique.minimumLevel);
@@ -173,9 +173,13 @@ test('each Cenyr template follows its curriculum through actual creation and eve
         plan.classTrainingChoices[group.kind] = group.options[0].id;
       });
       preview = previewCharacterLevelUp(profile, plan);
+      const choicesThisLevel = new Set();
       preview.classTechniqueChoiceGroups.forEach(group => {
         assert(group.options.length > 0, `${definition.id}: keine Attacke für ${group.slotId} auf Stufe ${level + 1}`);
-        plan.cenyrTechniqueChoices[group.slotId] = group.options[0].id;
+        const option = group.options.find(option => !choicesThisLevel.has(option.id));
+        assert(option, `${definition.id}: eigener Technikvorschlag für ${group.slotId}`);
+        plan.cenyrTechniqueChoices[group.slotId] = option.id;
+        choicesThisLevel.add(option.id);
       });
       preview = previewCharacterLevelUp(profile, plan);
       assert(preview.ready, preview.errors.join(', '));
@@ -221,7 +225,7 @@ test('unplanned attacks fail closed and repeated grants preserve individual char
   assert.equal(addMissingCombatStyleTechniques([], [{ styleId: 'drachentanz', formId: draft.combatStyleFormId, minimumLevel: 7 }], 20).added.length, 0);
   const existing = [{ ...attack, damageFormula: '1d4', name: 'Meine Variante' }];
   const updated = addMissingCombatStyleTechniques(existing, [grant, grant], 20);
-  assert.equal(updated.techniques.length, 6);
+  assert.equal(updated.techniques.length, 10);
   assert.equal(updated.techniques[0].damageFormula, '1d4');
   assert.deepEqual(existing, [{ ...attack, damageFormula: '1d4', name: 'Meine Variante' }]);
   assert.equal(addMissingCombatStyleTechniques(updated.techniques, [grant], 20).added.length, 0);
@@ -307,7 +311,7 @@ test('Waffenwürfel und Cenyr-Waffenprofile werden erst bei der Kampfhandlung au
   assert.deepEqual(sanitized.techniques[0].cenyrTraining.allowedClassIds, ['cantref', 'uchelwyr']);
   assert.equal(sanitized.techniques[0].effects[0].inheritWeaponDamageType, true);
   const resolved = resolveCombatProfile({ id: 'cantref-test', name: 'Cantref', combatProfile: sanitized }, { actionId: `technique:${haken.id}` });
-  assert.equal(resolved.selectedAction.formula, '1d12+1d4');
+  assert.equal(resolved.selectedAction.formula, '1d12+1d8');
   assert.equal(resolved.selectedAction.targetDefenseModifier, -1);
 });
 

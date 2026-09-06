@@ -203,7 +203,11 @@ function preferredBarddwyrBranch(profile = {}) {
     : 'barddwyr-sword';
 }
 
-function recommendedTechnique(profile, definition, candidates) {
+function recommendedTechnique(profile, definition, candidates, slot) {
+  if (definition.classId === 'teulu' && /^foundation-0[1-6]$/.test(slot?.id || '')) {
+    const core = candidates.find(technique => technique.id.startsWith(`combat-style-drachentanz-jungdrache-${slot.id.slice(-2)}-`));
+    if (core) return core;
+  }
   if (definition.classId !== 'helwyr') return candidates[0];
   const knownBranches = new Set((profile.techniques || []).map(technique => technique.cenyrTraining?.branchId).filter(Boolean));
   if (!knownBranches.size) return candidates[0];
@@ -260,7 +264,7 @@ export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = 
       const group = getCenyrTechniqueChoiceGroups(next, level, { allEarned: true })
         .find(choice => choice.options.length > 0);
       if (!group) break;
-      const candidate = recommendedTechnique(next, definition, group.options);
+      const candidate = recommendedTechnique(next, definition, group.options, group.slot);
       const selected = selectCenyrTechniqueForSlot(next, {
         slotId: group.slotId,
         techniqueId: candidate.id,

@@ -31,7 +31,7 @@ test('canonical Drachentanz keeps every Cenyr attack under class, style and form
   const style = teulu.children.find(group => group.name === 'Drachentanz');
   assert.equal(style.children.length, 10);
   assert.deepEqual(style.children.map(group => group.parentEntry.data.number), [1, 2, 3, 4, 5, 6, 7, null, null, null]);
-  assert.equal(style.children[0].entries.length, 6);
+  assert.equal(style.children[0].entries.length, 10);
   assert.equal(style.children[9].entries.length, 0, 'Empty canonical paths remain visible');
   const people = groups.find(group => group.name === 'Personen');
   const gawain = people?.children.find(group => group.name === 'Gawain Draig');

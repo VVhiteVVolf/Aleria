@@ -1,5 +1,6 @@
 import { DRACHENTANZ_FORM_IDS as FORM_IDS } from './drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
 import { createDrachentanzDamageProfile } from './drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
+import { TEULU_FOUNDATION_ADDITIONS } from './techniques/teulu-foundation-techniques.js';
 import { CLASS_FOUNDATION_TECHNIQUES } from './techniques/foundation-techniques.js?v=20260905-damage-balance-v1';
 import { DUELIST_TECHNIQUES } from './techniques/duelist-techniques.js?v=20260905-damage-balance-v1';
 import { ABWARTENDER_TECHNIQUES } from './techniques/abwartender-techniques.js?v=20260905-damage-balance-v1';
@@ -12,7 +13,7 @@ import { DRACHLING_TECHNIQUES } from './techniques/milwr-techniques.js?v=2026090
 import { BARDDWYR_STANDARD_PATH_TECHNIQUES, KREISCHENDER_TECHNIQUES, TRAELLERNDER_TECHNIQUES } from './techniques/barddwyr-techniques.js?v=20260905-damage-balance-v1';
 import { HELWYR_EXPERT_TECHNIQUES } from './techniques/helwyr-expert-techniques.js?v=20260905-damage-balance-v1';
 
-export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 6;
+export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 7;
 
 const FORM_I_NAME = 'Drachentanz Form I · Tanz des Jungdrachens';
 
@@ -135,7 +136,7 @@ const JUNGDRACHE_TECHNIQUES = [
     description: 'Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.',
     effect: 'Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden.',
     activationType: 'action',
-    costResources: ['action', 'bonus-action', 'reaction'],
+    costResources: ['action', 'special-action'],
     range: '3 Meter Umkreis',
     target: 'Mehrere ausgewählte Gegner im Umkreis',
     requirements: 'Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung.',
@@ -166,7 +167,7 @@ const JUNGDRACHE_TECHNIQUES = [
     minimumLevel: 6,
     description: 'Der Anwender führt die sechs Grundlinien der Form in einem makellosen Lehrstück zusammen.',
     effect: 'Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.',
-    activationType: 'special-action',
+    activationType: 'action',
     costResources: ['action', 'bonus-action', 'special-action']
   })
 ];
@@ -239,7 +240,7 @@ export const DRACHENTANZ_COMBAT_STYLE = Object.freeze({
       minimumLevel: 1,
       unlockRule: 'Teulu schalten auf jeder Stufe von 1 bis 6 genau eine weitere Technik frei.',
       techniqueLevelBand: { minimum: 1, maximum: 6 },
-      techniques: [...JUNGDRACHE_TECHNIQUES, ...techniquesForForm(FORM_IDS.jungdrache)]
+      techniques: [...JUNGDRACHE_TECHNIQUES, ...TEULU_FOUNDATION_ADDITIONS, ...techniquesForForm(FORM_IDS.jungdrache)]
     },
     plannedForm(2, 'ii-schwertdrache', 'Tanz des Schwertdrachens', 'duelist', 7, 8,
       'Ritterliche Duellantenform mit eigenen Klassenfolgen und einem gemeinsamen Duellantenpool.'),

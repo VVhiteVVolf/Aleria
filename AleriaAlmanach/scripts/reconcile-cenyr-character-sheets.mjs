@@ -32,6 +32,10 @@ const DUNCAN_TECHNIQUES = Object.freeze([
   ['foundation-04', 'combat-style-drachentanz-jungdrache-04-schweifkreis', 4],
   ['foundation-05', 'combat-style-drachentanz-jungdrache-05-stuermende-spur', 5],
   ['foundation-06', 'combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb', 6],
+  ['foundation-07', 'combat-style-drachentanz-jungdrache-schuppenschnitt', 2],
+  ['foundation-08', 'combat-style-drachentanz-jungdrache-geschlossene-schuppe', 3],
+  ['foundation-09', 'combat-style-drachentanz-jungdrache-fluegelschritt', 4],
+  ['foundation-10', 'combat-style-drachentanz-jungdrache-ruhiger-drachenatem', 6],
   ['duelist-01', 'combat-style-drachentanz-schwertdrache-kreisende-einladung', 7],
   ['duelist-02', 'combat-style-drachentanz-schwertdrache-spiegelparade', 8],
   ['expert-01', 'combat-style-drachentanz-vierfacher-empfang', 9],
@@ -105,10 +109,9 @@ function reconcileStandardCharacter(character) {
     ]);
     profile.weapons = profile.weapons.filter(weapon => classWeapons.has(weapon.id));
   }
-  resetClassAttacks(profile);
   character.combatProfile = reconcileCenyrTrainingForLevel(profile, profile.progression.level, {
     autoFill: true,
-    preserveExisting: false,
+    preserveExisting: true,
     replaceClassTechniques: true
   }).profile;
 }

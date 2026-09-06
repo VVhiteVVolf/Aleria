@@ -107,7 +107,7 @@ test('server mechanics materialize Cenyr class attacks for an unmigrated Teulu p
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
     'Schweifkreis des Jungdrachens',
-    'Stürmende Drachenspur'
+    'Stürmende Drachenspur', 'Schuppenschnitt', 'Geschlossene Schuppe', 'Flügelschritt des Jungdrachens'
   ]);
   assert.equal(names.includes('Biss des Drachen'), false);
 });

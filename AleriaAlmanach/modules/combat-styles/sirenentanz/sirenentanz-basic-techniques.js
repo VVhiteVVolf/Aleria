@@ -7,7 +7,7 @@ const entry = (slug, name, level, weapon, cost, description, effect, options = {
 });
 const specs = {
   morwyr: [
-    entry('kurzer-wellenstoss', 'Kurzer Wellenstoß', 1, 'polearm', 'light', 'Die Partisane stößt aus ruhigem Stand nur eine Handbreit vor.', 'Schwacher Bonusangriff: 1W4 statt Waffenwürfeln; feste Boni einmal.'),
+    entry('kurzer-wellenstoss', 'Kurzer Wellenstoß', 1, 'polearm', 'light', 'Die Partisane stößt aus ruhigem Stand nur eine Handbreit vor.', 'Schwacher Bonusangriff: 1W6 statt Waffenwürfeln; feste Boni einmal.'),
     entry('plankenspalter', 'Plankenspalter', 2, 'axe', 'strike', 'Ein kurzer Enteraxthieb nutzt die Lücke zwischen Tauwerk und Reling.', 'Ein regulärer Treffer mit Enteraxt und begrenztem Technikbonus.'),
     entry('leinenwurf', 'Leinenwurf', 3, 'harpoon', 'pressure', 'Der Speer wird geworfen, während die freie Leine kontrolliert ausläuft.', 'Technikschaden; nach Treffer KRF-Rettungswurf gegen 8 + KRF-Modifikator + Kompetenz. Bei Misserfolg bis 2 m heranziehen.', { requirement: 'Intakte, befestigte Leine und freier Zugweg.', manual: 'Leine, Rettungswurf und Zugweg prüfen; kein automatisches Überbordwerfen.' }),
     entry('relingwacht', 'Relingwacht', 4, 'polearm', 'guard', 'Schaft und Körper schließen die schmale Passage.', 'Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1 }),
@@ -19,7 +19,7 @@ const specs = {
     entry('flutwurf', 'Flutwurf', 8, 'harpoon', 'pressure', 'Der Wurf trifft aus tiefem Stand gegen die gegnerische Waffenlinie.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 })
   ],
   rhyfelwyr: [
-    entry('kurzer-anschlag', 'Kurzer Anschlag', 1, 'heavyOrSword', 'light', 'Ein knapper Schlag mit verkürztem Griff prüft die Deckung.', 'Schwacher Bonusangriff: 1W4 statt Waffenwürfeln.'),
+    entry('kurzer-anschlag', 'Kurzer Anschlag', 1, 'heavyOrSword', 'light', 'Ein knapper Schlag mit verkürztem Griff prüft die Deckung.', 'Schwacher Bonusangriff: 1W6 statt Waffenwürfeln.'),
     entry('felsenschlag', 'Felsenschlag', 2, 'heavy', 'strike', 'Die Waffe trifft mit dem Gewicht des Körpers hinter dem Griff.', 'Ein Treffer mit Waffenwürfeln und begrenztem Technikbonus.'),
     entry('geschlossene-kante', 'Geschlossene Kante', 3, 'heavyOrSword', 'guard', 'Die Waffe bleibt quer vor der offenen Flanke.', 'Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1 }),
     entry('schildbrecheransatz', 'Schildbrecheransatz', 4, 'heavy', 'pressure', 'Der Schlag drückt gegen den Rand der gegnerischen Deckung.', 'Technikschaden; Zielverteidigung für diesen Angriff −1. Kein Schild wird zerstört.', { defenseModifier: -1 }),
@@ -29,7 +29,7 @@ const specs = {
     entry('eisenatem', 'Eisenatem', 8, 'heavy', 'preparation', 'Der Kämpfer setzt den Stand neu und hält die schwere Waffe dicht.', 'Kein Schaden; +1 RK und +1 Angriff bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1, aim: true })
   ],
   ceidwyn: [
-    entry('gischtpfeil', 'Gischtpfeil', 1, 'shortbow', 'light', 'Ein kurzer Pfeilflug stört den ersten Schritt des Gegners.', 'Schwacher Bonusangriff mit 1W4; ein Pfeil wird benötigt.'),
+    entry('gischtpfeil', 'Gischtpfeil', 1, 'shortbow', 'light', 'Ein kurzer Pfeilflug stört den ersten Schritt des Gegners.', 'Schwacher Bonusangriff mit 1W6; ein Pfeil wird benötigt.'),
     entry('relingbolzen', 'Relingbolzen', 2, 'crossbow', 'strike', 'Die Armbrust wird ruhig an der Deckung vorbeigeführt.', 'Regulärer Technikschuss; geladene Armbrust und ein Bolzen erforderlich.'),
     entry('saebel-der-gasse', 'Säbel der Gasse', 3, 'sabre', 'strike', 'Die Klinge zieht einen engen Bogen durch die Deckpassage.', 'Regulärer Nahkampftreffer mit Säbelwürfeln; kein Fernkampfbonus.'),
     entry('dreizackwacht', 'Dreizackwacht', 4, 'trident', 'pressure', 'Die drei Spitzen halten den Gegner aus der eigenen Linie.', 'Nahkampfschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 }),
@@ -41,7 +41,7 @@ const specs = {
     entry('flutbolzen', 'Flutbolzen', 8, 'crossbow', 'pressure', 'Die Armbrust wird aus ruhigem Stand an die gegnerische Deckung geführt.', 'Technikschaden; −1 Zielverteidigung nur für diesen Schuss.', { defenseModifier: -1 })
   ],
   rhiddwyr: [
-    entry('kurzer-weghieb', 'Kurzer Weghieb', 1, 'rider', 'light', 'Ein kurzer Schlag hält den Gegner vom Sattel oder Stand fern.', 'Schwacher Bonusangriff mit 1W4; auch zu Fuß möglich.'),
+    entry('kurzer-weghieb', 'Kurzer Weghieb', 1, 'rider', 'light', 'Ein kurzer Schlag hält den Gegner vom Sattel oder Stand fern.', 'Schwacher Bonusangriff mit 1W6; auch zu Fuß möglich.'),
     entry('hueter-des-pfads', 'Hüter des Pfads', 2, 'rider', 'strike', 'Der Ritter setzt einen festen Schlag aus eigener Deckung.', 'Regulärer Nahkampftreffer; auch abgesessen nutzbar.'),
     entry('kuestenbolzen', 'Küstenbolzen', 3, 'crossbow', 'strike', 'Ein Bolzen hält einen Gegner auf Abstand, bevor der Nahkampf beginnt.', 'Regulärer Armbrustschuss; Nachladen und Munition bleiben erforderlich.'),
     entry('streifender-anritt', 'Streifender Anritt', 4, 'riderPolearm', 'flowing', 'Der Reiter führt die Spitze seitlich an der gegnerischen Linie vorbei.', 'Ein Techniktreffer aus dem Sattel. Anlauf mindestens 3 m; kein kostenloser Rossangriff.', { mounted: true }),
@@ -54,7 +54,7 @@ const specs = {
     entry('bolzen-des-reisenden', 'Bolzen des Reisenden', 8, 'crossbow', 'pressure', 'Ein sorgfältiger Bolzen bedrängt den Gegner aus sicherem Stand.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 })
   ],
   derwyn: [
-    entry('leiser-stab', 'Leiser Stab', 1, 'staff', 'light', 'Der Stab tippt mit kurzem Griff gegen die gegnerische Linie.', 'Schwacher physischer Bonusangriff mit 1W4; keine Magie.'),
+    entry('leiser-stab', 'Leiser Stab', 1, 'staff', 'light', 'Der Stab tippt mit kurzem Griff gegen die gegnerische Linie.', 'Schwacher physischer Bonusangriff mit 1W6; keine Magie.'),
     entry('erste-spitze', 'Erste Spitze', 2, 'trident', 'strike', 'Der Dreizack wird geradlinig und ohne übergroße Bewegung geführt.', 'Regulärer physischer Techniktreffer mit Dreizackwürfeln.'),
     entry('hueterhieb', 'Hüterhieb', 3, 'mace', 'strike', 'Der Kolben trifft aus einer eng gehaltenen Schutzstellung.', 'Regulärer physischer Techniktreffer mit Streitkolbenwürfeln.'),
     entry('stab-der-schwelle', 'Stab der Schwelle', 4, 'staff', 'guard', 'Der Schaft sperrt den unmittelbaren Zugang.', 'Kein Schaden; +1 RK für einen eigenen Beitrag durch Waffendeckung.', { noDamage: true, guard: 1 }),
@@ -66,7 +66,7 @@ const specs = {
     entry('kehrende-zinken', 'Kehrende Zinken', 7, 'trident', 'strike', 'Die Spitzen folgen dem Zurücknehmen des Schafts in eine neue Stoßlinie.', 'Ein regulärer physischer Techniktreffer mit Aufbau-Technikbonus.')
   ],
   milwr: [
-    entry('kurzer-wachstoss', 'Kurzer Wachstoß', 1, 'militia', 'light', 'Ein kurzer Stoß hält den unmittelbaren Abstand.', 'Schwacher Bonusangriff mit 1W4.'),
+    entry('kurzer-wachstoss', 'Kurzer Wachstoß', 1, 'militia', 'light', 'Ein kurzer Stoß hält den unmittelbaren Abstand.', 'Schwacher Bonusangriff mit 1W6.'),
     entry('plankenschritt', 'Plankenschritt', 2, 'militia', 'strike', 'Die Wache schlägt mit festem Schritt aus ihrer Linie.', 'Regulärer Techniktreffer mit der geführten Nahwaffe.'),
     entry('gedeckter-stand', 'Gedeckter Stand', 3, 'militia', 'guard', 'Der Milwr schließt die Lücke zwischen Waffe und Körper.', 'Kein Schaden; +1 RK für einen eigenen Beitrag.', { noDamage: true, guard: 1 }),
     entry('schulterdruck', 'Schulterdruck', 4, 'militia', 'pressure', 'Waffe und Schulter drücken die gegnerische Linie fort.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 }),

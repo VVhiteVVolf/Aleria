@@ -27,7 +27,7 @@ test('Gawains Waffen und Rüstung bleiben mit dem Inventar verknüpft', async ()
   assert.equal(armor.dexterityUnlockLevel, 12);
 });
 
-test('Gawain verwendet auf Stufe 5 ausschließlich die fünf Teulu-Jungdrachen-Attacken', async () => {
+test('Gawain verwendet auf Stufe 5 acht Teulu-Jungdrachen-Techniken', async () => {
   const gawain = await loadGawain();
   const profile = gawain.combatProfile;
   assert.equal(profile.progression.level, 5);
@@ -37,13 +37,13 @@ test('Gawain verwendet auf Stufe 5 ausschließlich die fünf Teulu-Jungdrachen-A
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
     'Schweifkreis des Jungdrachens',
-    'Stürmende Drachenspur'
+    'Stürmende Drachenspur', 'Schuppenschnitt', 'Geschlossene Schuppe', 'Flügelschritt des Jungdrachens'
   ]);
   assert.equal(profile.techniques.every(technique => technique.combatStyleId === 'drachentanz'), true);
   assert.equal(profile.techniques.every(technique => technique.combatStyleFormId === 'drachentanz-form-i-jungdrache'), true);
   assert.equal(profile.techniques.some(technique => String(technique.id).startsWith('gawain-')), false);
   assert.deepEqual(profile.classTraining.techniqueSelections.map(selection => selection.slotId), [
-    'foundation-01', 'foundation-02', 'foundation-03', 'foundation-04', 'foundation-05'
+    'foundation-01', 'foundation-02', 'foundation-03', 'foundation-04', 'foundation-05', 'foundation-07', 'foundation-08', 'foundation-09'
   ]);
 });
 
@@ -56,7 +56,7 @@ test('Gawains Teulu-Attacken werden mit Drachenzahn und ihrer Klassenökonomie a
   assert.equal(bite.selectedAction.name, 'Biss des Jungdrachens');
   assert.equal(bite.weapon.inventoryItemId, 'item-mqu1vat1-0-w8ef');
   assert.equal(bite.weapon.weaponType, 'sword');
-  assert.equal(bite.selectedAction.formula, '1d8+1d4');
+  assert.equal(bite.selectedAction.formula, '2d8');
   assert.deepEqual(bite.resourceCosts.map(cost => [cost.resourceId, cost.amount]), [
     ['action', 1], ['reaction', 1]
   ]);
@@ -101,8 +101,8 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
     'Schweifkreis des Jungdrachens',
-    'Stürmende Drachenspur'
+    'Stürmende Drachenspur', 'Schuppenschnitt', 'Geschlossene Schuppe', 'Flügelschritt des Jungdrachens'
   ]);
   assert.equal(techniqueNames.includes('Biss des Drachen'), false);
-  assert.equal(resolved.classTraining.techniqueSelections.length, 5);
+  assert.equal(resolved.classTraining.techniqueSelections.length, 8);
 });

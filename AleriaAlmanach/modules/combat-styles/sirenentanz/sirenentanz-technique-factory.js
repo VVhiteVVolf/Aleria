@@ -8,6 +8,9 @@ export const SIRENENTANZ_COSTS = Object.freeze({
   light: ['bonus-action'], strike: ['action'], guard: ['reaction'],
   pressure: ['action', 'reaction'], flowing: ['action', 'bonus-action'],
   preparation: ['reaction', 'bonus-action'], committed: ['action', 'bonus-action', 'reaction'],
+  specialStrike: ['action', 'special-action'], specialGuard: ['reaction', 'special-action'],
+  specialFlow: ['bonus-action', 'special-action'], specialWeave: ['reaction', 'bonus-action', 'special-action'],
+  allIn: ['action', 'reaction', 'bonus-action', 'special-action'],
   finisher: ['action', 'reaction', 'special-action'],
   master: ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']
 });

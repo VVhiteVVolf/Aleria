@@ -623,6 +623,7 @@ function sanitizeTechniqueDamageModel(value = {}) {
     mode: source.mode === 'weapon-dice' ? 'weapon-dice' : 'fixed',
     weaponDiceMultiplier: normalizeNumber(source.weaponDiceMultiplier, 1, 1, 8),
     bonusFormula: normalizeCombatDamageFormula(source.bonusFormula),
+    ...(source.bonusModifier != null ? { bonusModifier: normalizeNumber(source.bonusModifier, 0, -20, 20) } : {}),
     bonusWeaponDice: normalizeNumber(source.bonusWeaponDice, 0, 0, 3),
     bonusWeaponDieCap: [4, 6, 8, 10, 12].includes(Number(source.bonusWeaponDieCap)) ? Number(source.bonusWeaponDieCap) : 12,
     scalingSteps: sanitizeList(source.scalingSteps, step => ({

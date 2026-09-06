@@ -34,17 +34,18 @@ test('Duncan beherrscht Grundform, Duellantenform und alle f체nf Expertenpfade �
   assert.equal(combatProfile.abilities.some(ability => ability.id.startsWith('duncan-drachentanz-form-')), false);
 });
 
-test('Duncans zwanzig Slots ergeben wegen vier zus채tzlicher Pfade sechzehn Klassenattacken', async () => {
+test('Duncans 24 Slots ergeben wegen vier zus채tzlicher Pfade zwanzig Klassentechniken', async () => {
   const { combatProfile } = await loadDuncan();
-  assert.equal(combatProfile.classTraining.techniqueSelections.length, 16);
-  assert.equal(combatProfile.techniques.length, 16);
-  assert.deepEqual(combatProfile.techniques.slice(0, 8).map(technique => technique.name), [
+  assert.equal(combatProfile.classTraining.techniqueSelections.length, 20);
+  assert.equal(combatProfile.techniques.length, 20);
+  assert.deepEqual(combatProfile.techniques.slice(0, 12).map(technique => technique.name), [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
     'Schweifkreis des Jungdrachens',
     'St체rmende Drachenspur',
     'Sechsfacher Lehrhieb',
+    'Schuppenschnitt', 'Geschlossene Schuppe', 'Fl체gelschritt des Jungdrachens', 'Ruhiger Drachenatem',
     'Kreisende Einladung',
     'Spiegelparade'
   ]);
@@ -54,7 +55,7 @@ test('Duncans zwanzig Slots ergeben wegen vier zus채tzlicher Pfade sechzehn Klas
 
 test('Duncans Expertenrepertoire deckt jeden gew채hlten Pfad mit regul채ren Katalogattacken ab', async () => {
   const { combatProfile } = await loadDuncan();
-  const expertForms = new Set(combatProfile.techniques.slice(8).map(technique => technique.combatStyleFormId));
+  const expertForms = new Set(combatProfile.techniques.filter(technique => technique.minimumLevel >= 9).map(technique => technique.combatStyleFormId));
   assert.equal(expertForms.size, 5);
   assert.ok(combatProfile.techniques.some(technique => technique.name === 'Vollendeter Waffenmeister'));
   assert.match(combatProfile.notes, /acht Expertentechniken/);

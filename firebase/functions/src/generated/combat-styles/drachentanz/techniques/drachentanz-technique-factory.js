@@ -111,7 +111,7 @@ export function createDrachentanzTechnique(spec) {
     status: spec.status || 'draft',
     description: spec.description,
     effect: spec.effect,
-    activationType: spec.activationType || 'action',
+    activationType: ['action', 'reaction', 'bonus-action'].find(id => costs.some(cost => cost.resourceId === id)) || spec.activationType || 'action',
     weaponTypes: spec.weaponTypes || DEFAULT_WEAPON_TYPES,
     compatibleWeaponIds: [],
     ...createDrachentanzDamageProfile(spec, costs),

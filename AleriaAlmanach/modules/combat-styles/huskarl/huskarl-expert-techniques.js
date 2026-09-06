@@ -28,16 +28,16 @@ const lessons = {
   wall: [
     { cost: 'bind', guard: 1, effect: 'Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.' },
     { cost: 'prepare', noDamage: true, guard: 2, effect: 'Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke.' },
-    { cost: 'bind', penalty: true, effect: 'Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.' },
-    { cost: 'committed', guard: 1, effect: 'Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag.' },
+    { cost: 'specialGuard', penalty: true, effect: 'Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.' },
+    { cost: 'specialWeave', guard: 1, effect: 'Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag.' },
     { cost: 'prepare', noDamage: true, guard: 2, effect: 'Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden.' },
     { cost: 'master', guard: 2, effect: 'Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität.' }
   ],
   advance: [
     { cost: 'advance', effect: 'Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung.' },
     { cost: 'bind', penalty: true, effect: 'Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.' },
-    { cost: 'advance', effect: 'Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke.' },
-    { cost: 'committed', effect: 'Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets.' },
+    { cost: 'specialStrike', effect: 'Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke.' },
+    { cost: 'specialFlow', effect: 'Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets.' },
     { cost: 'finisher', penalty: true, effect: 'Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.' },
     { cost: 'master', effect: 'Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung.' }
   ]

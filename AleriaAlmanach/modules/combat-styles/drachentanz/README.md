@@ -8,7 +8,7 @@ Die Klassenregeln, Waffenvarianten, Lernbudgets und Pfadzugänge liegen getrennt
 
 | Form oder Pfad | Attacken im Gesamtpool | Ausbildung |
 | --- | ---: | --- |
-| Tanz des Jungdrachens | 50 | Stufe 1–6 |
+| Tanz des Jungdrachens | 54 | Stufe 1–6 |
 | Tanz des Schwertdrachens | 24 | Stufe 7–8 |
 | Tanz des abwartenden Drachens | 24 | Stufe 9–20 |
 | Tanz des fliegenden Drachens | 24 | Stufe 9–20 |
@@ -19,11 +19,12 @@ Die Klassenregeln, Waffenvarianten, Lernbudgets und Pfadzugänge liegen getrennt
 | Tanz des trällernden Drachens | 4 | Barddwyr, Stufe 7–8 |
 | Tanz des kreischenden Drachens | 12 | Barddwyr, Stufe 9–20 |
 
-Das Register enthält 208 Attacken. Die sechs historischen Jungdrachen-Attacken sind als `confirmed` markiert und bilden die bestätigte Teulu-Schwertfolge. Alle 202 neu geplanten Attacken tragen im Katalog `draft`. Ein Charakter erhält eine Attacke erst durch eine ausdrückliche Slotwahl; danach ist seine gespeicherte Kopie nutzbar und merkt sich den ursprünglichen Katalogstatus als `sourceStatus`.
+Das Register enthält 212 Techniken. Die sechs historischen Jungdrachen-Attacken und vier ergänzende Teulu-Techniken sind als `confirmed` markiert. Die übrigen 202 geplanten Attacken tragen im Katalog `draft`. Ein Charakter erhält eine Technik über einen verfügbaren Ausbildungsslot; die automatische Klassenwahl belegt fehlende Slots, der geführte Aufstieg erlaubt eigene Entscheidungen. Danach ist die gespeicherte Kopie nutzbar und merkt sich den ursprünglichen Katalogstatus als `sourceStatus`.
 
 ## Technikmodule
 
 - `foundation-techniques.js` enthält die klasseneigenen Grundfolgen.
+- `teulu-foundation-techniques.js` ergänzt Schuppenschnitt, Geschlossene Schuppe, Flügelschritt und Ruhigen Drachenatem. Teulu haben auf Stufe 6 zehn Grundtechniken; die ursprünglichen sechs Slot-IDs bleiben erhalten.
 - `duelist-techniques.js` enthält die Duellantenfolgen auf Stufe 7–8.
 - Die fünf Dateien `abwartender-`, `fliegender-`, `bruellender-`, `ausgeglichener-` und `zorniger-techniques.js` enthalten je zwölf gemeinsame Ritterattacken.
 - `uchelwyr-mounted-techniques.js` ergänzt genau zwei Reiteroptionen für jede allgemeine Form und jeden allgemeinen Pfad.
@@ -42,14 +43,14 @@ Waffenabhängige Attacken speichern `damageModel.mode: "weapon-dice"`. Die Kampf
 
 Die meisten Attacken verwenden ausschließlich erneuerbare Kombinationen aus Aktion, Bonusaktion und Reaktion. Einfache Ergänzungshiebe und kurze Antworten sind schwächer als vollständige Angriffsfolgen. Starke Abschlüsse und Meisterattacken verlangen zusätzlich Besondere Aktionen; ausgewählte Expertenattacken benötigen Aura. Jede Attacke ist auf ihrer Mindeststufe unabhängig von der gewählten Poolsteigerung bezahlbar.
 
-Aktion, Bonusaktion und Reaktion beginnen bei 1 und erneuern sich pro vollständigem Beitrag. Auf Stufe 10, 15 und 20 wird jeweils ein anderer Pool auf 2 erhöht. Besondere Aktionen wachsen auf 2 / 3 / 4 / 5 / 6 bei Stufe 1 / 8 / 10 / 15 / 20 und erneuern sich täglich. Aura-Ausbildung beginnt auf Stufe 6, der erste ausgebbare Fokuspunkt auf Stufe 8; weitere Punkte folgen auf 12, 16 und 20. Aura kann weiterhin das gesamte reguläre Kostenpaket ersetzen (begrenzte Techniknutzungen bleiben erhalten).
+Aktion, Bonusaktion und Reaktion beginnen bei 1 und erneuern sich pro vollständigem Beitrag. Auf Stufe 10, 15 und 20 wird jeweils ein anderer Pool auf 2 erhöht. Besondere Aktionen wachsen auf 2 / 3 / 4 / 5 / 6 bei Stufe 1 / 8 / 10 / 15 / 20 und erneuern sich täglich. Aura-Ausbildung beginnt auf Stufe 6, der erste ausgebbare Fokuspunkt auf Stufe 8; weitere Punkte folgen auf 12, 16 und 20. Aura kann weiterhin das gesamte reguläre Kostenpaket ersetzen (begrenzte Techniknutzungen bleiben erhalten). Bei einem regulären Schadensangriff kommt dabei einmal der größte einzelne Angriffswürfel hinzu. Bereits mit Aura bepreiste Elite-Techniken erhalten diesen Ersatzbonus nicht nochmals.
 
 `combat-action-progression.js` verwaltet die Poolwahlen, `combat-resource-progression.js` die Aura-Staffel. Manuell hochgestufte oder ältere Bögen erhalten fehlende Poolwahlen automatisch; der geführte Aufstieg verlangt eine Wahl. Gespeicherte Kampfstände übernehmen die geltenden Maxima und behalten bereits verbrauchte Punkte bei. Cenyr-Techniken werden zur Laufzeit aus dem gemeinsamen Katalog aktualisiert, damit alte Kopien keine überholten Kosten verwenden.
 
 ## Schadensbalance und ältere Formen
 
-`drachentanz-damage-progression.js` legt das gemeinsame Schadensbudget anhand der Freigabestufe und des Kostenpakets fest. Eine reguläre Technik verwendet einmal die Waffenwürfel und begrenzte einzelne Zusatzwürfel. Ein Großschwert mit 2W6 erhält pro Zusatzwürfel nur ein weiteres W6. Reine Bonusangriffe beginnen mit 1W4. Flächenattacken tauschen einen Teil ihres Schadens pro Ziel gegen Reichweite ein.
+`drachentanz-damage-progression.js` legt das gemeinsame Schadensbudget für Drachentanz, Sirenentanz und Huskarl anhand der Freigabestufe und des Kostenpakets fest. Aktion, Reaktion und Bonusaktion haben eigene Budgets; Kombinationen mit einer Besonderen Aktion reichen vom vielseitigen Nebenangriff bis zur vollständigen Meisterfolge. Eine reguläre Technik verwendet einmal die Waffenwürfel und begrenzte einzelne Zusatzwürfel. Ein Großschwert mit 2W6 erhält pro Zusatzwürfel nur ein weiteres W6. Reine Bonusangriffe beginnen mit 1W6. Flächenattacken tauschen einen Teil ihres Schadens pro Ziel gegen mehrere Ziele ein. `damageModel.bonusModifier` enthält gegebenenfalls einen kleinen festen Technikbonus, der bei kritischen Treffern nicht verdoppelt wird. Reine Schutz- und Hilfstechniken erhalten keinen Waffenwurf.
 
 `damageModel.scalingSteps` enthält den Ausbildungsbonus älterer Attacken. `combat-technique-damage.js` wählt ausschließlich den höchsten erreichten Eintrag; weder mehrere Pfade noch erneutes Speichern vervielfachen ihn. Waffenwechsel, ein- oder zweihändige Führung und manuelle Stufenänderungen berechnen die Formel neu. Die Schritte 7/9 bilden den Form- und Pfadwechsel ab, 13/17 die vertiefte Experten- und Meisterausbildung. Milwr verwendet stattdessen 6/10/15.
 
-Die [Schadensübersicht](../../../../Klassenordner/docs/COMBAT_DAMAGE_BALANCE.md) dokumentiert die Staffel, sämtliche geprüften Klassenvorlagen und die weiteren ausgearbeiteten Charakterangriffe. Der generierte Attackenkatalog zeigt für alle 208 Attacken den Vergleich bei Freigabe und auf Stufe 20.
+Die [Schadensübersicht](../../../../Klassenordner/docs/COMBAT_DAMAGE_BALANCE.md) verlinkt den aktuellen Balancebericht. Der generierte Cenyr-Attackenkatalog zeigt für alle 212 Techniken den Vergleich bei Freigabe und auf Stufe 20; der stilübergreifende Prüfbericht vergleicht alle 503 Einträge mit ihrem vorherigen Stand.

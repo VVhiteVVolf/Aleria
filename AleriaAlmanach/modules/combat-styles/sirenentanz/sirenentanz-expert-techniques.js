@@ -9,19 +9,19 @@ const lessons = {
     { level: 10, cost: 'strike', effect: 'Ein kontrollierter Techniktreffer mit der angegebenen Waffe.' },
     { level: 11, cost: 'pressure', penalty: 1, effect: 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.' },
     { level: 12, cost: 'flowing', guard: 1, effect: 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag.' },
-    { level: 13, cost: 'committed', defenseModifier: -1, exposed: true, effect: 'Kräftiger Techniktreffer gegen −1 Zielverteidigung; anschließend eigene RK −1 für einen Beitrag.' },
+    { level: 13, cost: 'specialStrike', defenseModifier: -1, exposed: true, effect: 'Kräftiger Techniktreffer gegen −1 Zielverteidigung; anschließend eigene RK −1 für einen Beitrag.' },
     { level: 15, cost: 'pressure', penalty: 2, effect: 'Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag.' },
     { level: 17, cost: 'finisher', attackBonus: -1, defenseModifier: -1, effect: 'Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion.' },
     { level: 20, cost: 'master', attackBonus: -1, exposed: true, effect: 'Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt.' }
   ],
   current: [
     { level: 9, cost: 'flowing', guard: 1, effect: 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag.' },
-    { level: 10, cost: 'light', effect: 'Kurzer Bonusangriff mit 1W4. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf.' },
+    { level: 10, cost: 'light', effect: 'Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf.' },
     { level: 11, cost: 'preparation', noDamage: true, aim: true, effect: 'Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags.' },
-    { level: 12, cost: 'flowing', effect: 'Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung.', manual: 'Freien Weg und verbleibende Bewegung prüfen. Kein kostenloses Lösen aus Bindungen.' },
+    { level: 12, cost: 'specialFlow', effect: 'Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung.', manual: 'Freien Weg und verbleibende Bewegung prüfen. Kein kostenloses Lösen aus Bindungen.' },
     { level: 13, cost: 'pressure', penalty: 1, effect: 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.' },
     { level: 15, cost: 'flowing', guard: 1, effect: 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag.' },
-    { level: 17, cost: 'committed', attackBonus: 1, effect: 'Gebündelter Techniktreffer mit +1 Angriff; kostet Aktion, Bonusaktion und Reaktion.' },
+    { level: 17, cost: 'specialWeave', attackBonus: 1, effect: 'Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion.' },
     { level: 20, cost: 'master', guard: 2, attackBonus: 1, effect: 'Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand.' }
   ],
   depths: [
@@ -29,7 +29,7 @@ const lessons = {
     { level: 10, cost: 'pressure', penalty: 1, effect: 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.' },
     { level: 11, cost: 'preparation', noDamage: true, guard: 1, aim: true, effect: 'Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag.' },
     { level: 12, cost: 'strike', effect: 'Ein regulärer Techniktreffer aus ruhigem Stand; kein automatischer Gegenangriff.' },
-    { level: 13, cost: 'pressure', penalty: 2, effect: 'Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag.' },
+    { level: 13, cost: 'specialGuard', penalty: 2, effect: 'Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag.' },
     { level: 15, cost: 'preparation', noDamage: true, guard: 2, effect: 'Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert.' },
     { level: 17, cost: 'finisher', guard: 2, effect: 'Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion.' },
     { level: 20, cost: 'master', guard: 2, penalty: 1, effect: 'Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag.' }

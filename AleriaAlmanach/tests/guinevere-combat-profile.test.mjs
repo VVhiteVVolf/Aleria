@@ -28,18 +28,19 @@ test('Guinevere ist eine Stufe-5-Helwyr mit ihrem regulären Klassenarsenal', as
   assert.equal(profile.weapons.some(weapon => /fire|signal|crippling/.test(weapon.id)), false);
 });
 
-test('Guineveres drei Attackenslots decken Bogen, Schwert und Doppelklinge des Jungdrachens ab', async () => {
+test('Guineveres vier Attackenslots decken Bogen, Schwert und Doppelklinge des Jungdrachens ab', async () => {
   const { combatProfile } = await loadGuinevere();
-  assert.deepEqual(combatProfile.techniques.map(technique => technique.name), [
+  assert.equal(combatProfile.techniques.length, 4);
+  assert.deepEqual(combatProfile.techniques.slice(0, 3).map(technique => technique.name), [
     'Federblick',
     'Waldwacht',
     'Schattenpaar'
   ]);
   assert.deepEqual(combatProfile.classTraining.techniqueSelections.map(selection => selection.slotId), [
-    'foundation-01', 'foundation-02', 'foundation-03'
+    'foundation-01', 'foundation-02', 'foundation-03', 'foundation-04'
   ]);
   assert.equal(combatProfile.techniques.every(technique => technique.combatStyleId === 'drachentanz'), true);
-  assert.deepEqual(combatProfile.techniques.map(technique => technique.cenyrTraining.branchId), ['helwyr-longbow', 'helwyr-classic-sword', 'helwyr-dual-blades']);
+  assert.deepEqual(combatProfile.techniques.slice(0, 3).map(technique => technique.cenyrTraining.branchId), ['helwyr-longbow', 'helwyr-classic-sword', 'helwyr-dual-blades']);
 });
 
 test('Federblick verbindet den Helwyr-Fernkampfbonus mit dem Angriff der Form', async () => {
@@ -52,7 +53,7 @@ test('Federblick verbindet den Helwyr-Fernkampfbonus mit dem Angriff der Form', 
   });
   assert.equal(federblick.weapon.weaponType, 'bow');
   assert.equal(federblick.weapon.ammunition.inventoryItemId, 'guinevere-arrows-standard');
-  assert.equal(federblick.selectedAction.formula, '1d4');
+  assert.equal(federblick.selectedAction.formula, '1d6');
   assert.equal(federblick.attackModifier, base.attackModifier + 1);
 });
 

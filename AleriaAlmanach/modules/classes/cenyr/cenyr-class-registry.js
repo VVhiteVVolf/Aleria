@@ -14,7 +14,11 @@ const ATTACK_IDS = Object.freeze([
   'combat-style-drachentanz-jungdrache-03-gekreuzte-klauen',
   'combat-style-drachentanz-jungdrache-04-schweifkreis',
   'combat-style-drachentanz-jungdrache-05-stuermende-spur',
-  'combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb'
+  'combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb',
+  'combat-style-drachentanz-jungdrache-schuppenschnitt',
+  'combat-style-drachentanz-jungdrache-geschlossene-schuppe',
+  'combat-style-drachentanz-jungdrache-fluegelschritt',
+  'combat-style-drachentanz-jungdrache-ruhiger-drachenatem'
 ]);
 
 const COMMON_PHASES = Object.freeze([
@@ -120,12 +124,13 @@ const DEFINITIONS = [
   curriculum({
     classId: 'teulu', name: 'Teulu', focus: 'Schwertkunst und Duell', trainingFocus: 'Tiefste Ausbildung und größter Technikpool',
     formAccess: knightAccess(), pathSelection: KNIGHT_PATH_SELECTION,
-    techniqueBudget: techniqueBudget(20, { foundation: [1, 2, 3, 4, 5, 6], duelist: [7, 8], expert: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] }),
+    // Append slots: saved foundation-01 through -06 retain their original levels.
+    techniqueBudget: techniqueBudget(24, { foundation: [1, 2, 3, 4, 5, 6, 2, 3, 4, 6], duelist: [7, 8], expert: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] }),
     trainingBranches: [branch('teulu-sword', 'Schwertfolge der Teulu', 1, { status: 'confirmed', formIds: [FORM_IDS.jungdrache, FORM_IDS.schwertdrache, ...EXPERT_PATH_IDS], weaponProfileIds: ['sword'] })],
-    techniquePool: { rank: 1, totalSlots: 20, description: 'Zwanzig Attackenslots: sechs Grund-, zwei Duellanten- und zwölf Expertenattacken.' },
+    techniquePool: { rank: 1, totalSlots: 24, description: '24 Technikslots: zehn Grundtechniken einschließlich zweier Vorbereitungsfähigkeiten, zwei Duellanten- und zwölf Expertenattacken.' },
     weaponTraining: { primary: ['sword'], secondary: [], note: 'Vollständige Schwertausbildung.' },
     classFeatures: [feature('teulu-sword-damage', 'Meisterschaft der Klinge', 6, '+2 Schaden mit Drachentanz-Angriffen, wenn ein Schwert geführt wird.', { damageBonus: 2, styleId: 'drachentanz', weaponTypes: ['sword'] })],
-    combatStyleGrants: [jungdracheGrant([1, 2, 3, 4, 5, 6])],
+    combatStyleGrants: [jungdracheGrant([1, 2, 3, 4, 5, 6, 2, 3, 4, 6])],
     pending: ['Feinbalance der Duellanten- und Expertenattacken', 'Auswahlregeln für die zwölf Experten-Slots']
   }),
   curriculum({
@@ -159,14 +164,14 @@ const DEFINITIONS = [
   curriculum({
     classId: 'helwyr', name: 'Helwyr', focus: 'Bogen, Gelände und Zielwahl', trainingFocus: 'Halber Drachentanz-Pool mit eigenem Fernkampfpfad',
     formAccess: knightAccess(), pathSelection: KNIGHT_PATH_SELECTION,
-    techniqueBudget: techniqueBudget(10, { foundation: [1, 3, 5], duelist: [7], expert: [9, 11, 13, 16, 18, 20] }),
+    techniqueBudget: techniqueBudget(12, { foundation: [1, 3, 5, 4, 6], duelist: [7], expert: [9, 11, 13, 16, 18, 20] }),
     trainingBranches: [
       branch('helwyr-longbow', 'Langbogenfolge', 1, { weaponProfileIds: ['longbow'], note: 'Reichweite, Durchschlagskraft und gezielte Spezialschüsse.' }),
       branch('helwyr-shortbow', 'Kurzbogenfolge', 1, { weaponProfileIds: ['shortbow'], note: 'Beweglichkeit, Stellungswechsel und geringere Aktionskosten.' }),
       branch('helwyr-dual-blades', 'Beidhändige Klingenfolge', 1, { weaponProfileIds: ['dual-swords', 'dual-daggers'], note: 'Schadenswürfel richten sich nach Schwertern oder Dolchen.' }),
       branch('helwyr-classic-sword', 'Klassische Schwertfolge', 1, { weaponProfileIds: ['sword'], note: 'Kleiner gemeinsamer Ritterpool.' })
     ],
-    techniquePool: { ratioToTeulu: 0.5, totalSlots: 10, description: 'Zehn Attackenslots und damit genau halb so viele wie der Teulu.' },
+    techniquePool: { ratioToTeulu: 0.5, totalSlots: 12, description: 'Zwölf Technikslots und damit genau halb so viele wie der Teulu. Fünf Grundtechniken halten Fern- und Nahkampf verfügbar.' },
     weaponTraining: { primary: ['Langbogen', 'Kurzbogen'], secondary: ['Beidhändige Schwerter oder Dolche', 'Schwert'], note: 'Alle vier Zweige teilen sich dasselbe Budget; die Waffe bestimmt Schadenswürfel und zulässige Attacken.' },
     classFeatures: [feature('helwyr-ranged-accuracy', 'Auge des Helwyr', 1, '+2 auf Trefferwürfe mit Fernkampfangriffen.', { attackBonus: 2, range: 'ranged' })],
     combatStyleGrants: [jungdracheGrant()],

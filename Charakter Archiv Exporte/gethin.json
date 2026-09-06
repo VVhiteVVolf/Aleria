@@ -1288,13 +1288,13 @@
             "sword"
           ],
           "compatibleWeaponIds": [],
-          "damageFormula": "1d4",
+          "damageFormula": "1d6",
           "damageModel": {
             "mode": "fixed",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
             "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 4,
+            "bonusWeaponDieCap": 6,
             "scalingSteps": [
               {
                 "level": 7,
@@ -1452,7 +1452,7 @@
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
             "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 4,
+            "bonusWeaponDieCap": 8,
             "scalingSteps": [
               {
                 "level": 7,
@@ -1616,6 +1616,7 @@
             "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "bonusModifier": 1,
             "bonusWeaponDice": 0,
             "bonusWeaponDieCap": 4,
             "scalingSteps": [
@@ -1774,8 +1775,9 @@
             "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "bonusModifier": 1,
             "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 4,
+            "bonusWeaponDieCap": 6,
             "scalingSteps": [
               {
                 "level": 7,
@@ -1842,18 +1844,11 @@
               "scope": "comment"
             },
             {
-              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-bonus-action",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-special-action",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
               "amount": 1,
-              "scope": "comment"
-            },
-            {
-              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-reaction",
-              "resourceId": "reaction",
-              "name": "Reaktion",
-              "amount": 1,
-              "scope": "comment"
+              "scope": "persistent"
             }
           ],
           "auraBypass": {
@@ -1969,8 +1964,9 @@
             "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "bonusModifier": 1,
             "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 6,
+            "bonusWeaponDieCap": 8,
             "scalingSteps": [
               {
                 "level": 7,
@@ -2119,6 +2115,642 @@
             "selectedAtLevel": 5,
             "sourceStatus": "confirmed"
           }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-schuppenschnitt",
+          "name": "Schuppenschnitt",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 2,
+          "category": "technique",
+          "description": "Ein sauberer Diagonalhieb aus festem Stand, ohne die ganze Folge vorwegzunehmen.",
+          "effect": "Ein kräftiger Einzelhieb mit Technikschaden. Bonusaktion und Reaktion bleiben verfügbar.",
+          "activationType": "action",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 6,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Waffenreichweite",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "aiInstructions": "Ein kräftiger Einzelhieb mit Technikschaden. Bonusaktion und Reaktion bleiben verfügbar. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-schuppenschnitt-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-schuppenschnitt-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "",
+            "assignedSlotId": "foundation-07",
+            "selectedAtLevel": 2,
+            "sourceStatus": "confirmed"
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-geschlossene-schuppe",
+          "name": "Geschlossene Schuppe",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 3,
+          "category": "technique",
+          "description": "Der Teulu nimmt die Klinge eng vor den Körper und schließt seine offene Seite.",
+          "effect": "Kein Schaden. +2 RK bis zum Ende des nächsten eigenen Kampfposts. Erneutes Anwenden erneuert nur die Dauer.",
+          "activationType": "reaction",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Waffenreichweite",
+          "target": "Selbst",
+          "duration": "Sofort",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "aiInstructions": "Kein Schaden. +2 RK bis zum Ende des nächsten eigenen Kampfposts. Erneutes Anwenden erneuert nur die Dauer. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "teulu-geschlossene-schuppe-condition",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": {
+                "id": "teulu-geschlossene-schuppe-condition",
+                "name": "Geschlossene Schuppe",
+                "description": "Die enge Klingenhaltung gewährt +2 RK bis zum Ende des nächsten eigenen Kampfposts.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "1 eigener Beitrag"
+                },
+                "tags": "Drachentanz",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Die enge Klingenhaltung gewährt +2 RK bis zum Ende des nächsten eigenen Kampfposts."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-geschlossene-schuppe-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "",
+            "assignedSlotId": "foundation-08",
+            "selectedAtLevel": 3,
+            "sourceStatus": "confirmed"
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-fluegelschritt",
+          "name": "Flügelschritt des Jungdrachens",
+          "status": "confirmed",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Ein kurzer Schnitt begleitet den seitlichen Schritt in eine gedeckte Waffenlinie.",
+          "effect": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts.",
+          "activationType": "bonus-action",
+          "weaponTypes": [
+            "sword"
+          ],
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusModifier": 1,
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 6,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Waffenreichweite",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "aiInstructions": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-fluegelschritt-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "teulu-fluegelschritt-move-movement",
+              "type": "move",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 2,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Freier Weg und verbleibende Bewegung erforderlich."
+            },
+            {
+              "id": "teulu-fluegelschritt-condition",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": {
+                "id": "teulu-fluegelschritt-condition",
+                "name": "Gedeckter Flügel",
+                "description": "Der gedeckte Seitenschritt gewährt vorübergehend +1 RK.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "1 eigener Beitrag"
+                },
+                "tags": "Drachentanz",
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Der gedeckte Seitenschritt gewährt vorübergehend +1 RK."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-fluegelschritt-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-fluegelschritt-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "teulu-sword",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "designNotes": "",
+            "assignedSlotId": "foundation-09",
+            "selectedAtLevel": 4,
+            "sourceStatus": "confirmed"
+          }
         }
       ],
       "classTraining": {
@@ -2150,6 +2782,21 @@
             "slotId": "foundation-05",
             "techniqueId": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
             "selectedAtLevel": 5
+          },
+          {
+            "slotId": "foundation-07",
+            "techniqueId": "combat-style-drachentanz-jungdrache-schuppenschnitt",
+            "selectedAtLevel": 2
+          },
+          {
+            "slotId": "foundation-08",
+            "techniqueId": "combat-style-drachentanz-jungdrache-geschlossene-schuppe",
+            "selectedAtLevel": 3
+          },
+          {
+            "slotId": "foundation-09",
+            "techniqueId": "combat-style-drachentanz-jungdrache-fluegelschritt",
+            "selectedAtLevel": 4
           }
         ]
       },

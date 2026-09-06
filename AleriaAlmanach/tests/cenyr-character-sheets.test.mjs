@@ -14,12 +14,12 @@ import {
 const exportRoot = new URL('../../Charakter%20Archiv%20Exporte/', import.meta.url);
 const snapshotUrl = new URL('../../CharakterDatenbank/generated/characters.snapshot.json', import.meta.url);
 const expectations = Object.freeze([
-  { file: 'gawain-draig.json', name: 'Gawain Draig', classId: 'teulu', level: 5, techniques: 5, paths: 0 },
-  { file: 'duncan-gafyr.json', name: 'Duncan Gafyr', classId: 'teulu', level: 20, techniques: 16, paths: 5 },
-  { file: 'gildas-gafyr.json', name: 'Gildas Gafyr', classId: 'teulu', level: 6, techniques: 6, paths: 0 },
-  { file: 'guinevere-neidr.json', name: 'Guinevere Neidr', classId: 'helwyr', level: 5, techniques: 3, paths: 0 },
-  { file: 'gethin.json', name: 'Gethin', classId: 'teulu', level: 5, techniques: 5, paths: 0 },
-  { file: 'kane-draig.json', name: 'Kane Draig', classId: 'teulu', level: 5, techniques: 5, paths: 0 }
+  { file: 'gawain-draig.json', name: 'Gawain Draig', classId: 'teulu', level: 5, techniques: 8, paths: 0 },
+  { file: 'duncan-gafyr.json', name: 'Duncan Gafyr', classId: 'teulu', level: 20, techniques: 20, paths: 5 },
+  { file: 'gildas-gafyr.json', name: 'Gildas Gafyr', classId: 'teulu', level: 6, techniques: 10, paths: 0 },
+  { file: 'guinevere-neidr.json', name: 'Guinevere Neidr', classId: 'helwyr', level: 5, techniques: 4, paths: 0 },
+  { file: 'gethin.json', name: 'Gethin', classId: 'teulu', level: 5, techniques: 8, paths: 0 },
+  { file: 'kane-draig.json', name: 'Kane Draig', classId: 'teulu', level: 5, techniques: 8, paths: 0 }
 ]);
 
 async function loadCharacter(file) {

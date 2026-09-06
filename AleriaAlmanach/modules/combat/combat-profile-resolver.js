@@ -24,6 +24,7 @@ import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-p
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
+import { empowerAuraAttack } from './combat-aura-attack.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -136,7 +137,8 @@ function buildCombatProfileActions(character, profile) {
         activationType: technique.activationType,
         costs: normalizeCombatResourceCosts(technique.costs),
         auraBypass: technique.auraBypass,
-        resolutionMode: 'weapon-attack',
+        resolutionMode: !formula && technique.effects?.length && technique.effects.every(effect => effect.target === 'self' && effect.type !== 'damage')
+          ? 'automatic' : 'weapon-attack',
         forcedRollMode: technique.rollMode,
         secondarySave: technique.secondarySave?.enabled ? { ...technique.secondarySave, dc: secondarySaveDc } : null,
         followUpAttack: technique.followUpAttack?.enabled ? { ...technique.followUpAttack } : null,
@@ -377,6 +379,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
         formula: resolvedWeapon?.damageFormula || selectedAction.formula
       }
     : null;
+  const empowered = empowerAuraAttack(resolvedSelectedAction, resolvedWeapon, options.paymentMode, profile);
   return {
     ...profile,
     characterId: String(effectiveCharacter.id || ''),
@@ -385,7 +388,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
     inventory: effectiveCharacter.inventory && typeof effectiveCharacter.inventory === 'object'
       ? JSON.parse(JSON.stringify(effectiveCharacter.inventory))
       : { items: [] },
-    weapon: { ...(resolvedWeapon || {}) },
+    weapon: { ...(empowered.weapon || {}) },
     activeWeaponId: String(getActiveCombatWeapon(profile.weapons)?.id || ''),
     weaponLoadout: getCombatWeaponLoadout(profile),
     armor: { ...profile.armor },
@@ -395,7 +398,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
     profileActionKind: selectedAction?.kind || 'weapon',
     resourceCosts: getActionPaymentCosts(selectedAction || {}, options.paymentMode || 'standard', profile),
     actionCosts: normalizeCombatResourceCosts(selectedAction?.costs),
-    selectedAction: resolvedSelectedAction,
+    selectedAction: empowered.action,
     weaponGrip,
     supportsVersatileGrip,
     paymentMode: options.paymentMode || 'standard',

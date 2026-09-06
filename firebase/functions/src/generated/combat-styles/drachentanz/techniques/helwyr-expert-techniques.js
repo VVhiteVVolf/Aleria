@@ -5,7 +5,7 @@ const LEVEL_RULES = Object.freeze({
   9: { costs: ['action', 'bonus-action'] },
   11: { costs: ['action', 'reaction'] },
   13: { costs: ['action', 'aura-focus'] },
-  16: { costs: ['action', 'bonus-action', 'reaction'] },
+  16: { costs: ['bonus-action', 'special-action'] },
   18: { costs: ['action', 'bonus-action', 'reaction'] },
   20: { costs: ['action', 'bonus-action', 'reaction', { resourceId: 'special-action', amount: 2 }, { resourceId: 'aura-focus', amount: 2 }] }
 });

@@ -35,11 +35,11 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Hofhieb | Speer, Schwert oder Axt | 1 Bonusaktion | 1W4 | 1W4+1W8 | Ein schwacher, kurzer Hieb ohne zusätzliche Wirkung. Speer, Schwert oder Axt |
+| 1 | Kurzer Hofhieb | Speer, Schwert oder Axt | 1 Bonusaktion | 1W6 | 1W6+1W8 | Ein schwacher, kurzer Hieb ohne zusätzliche Wirkung. Speer, Schwert oder Axt |
 | 2 | Schild an Schild | Einhandwaffe und Schild | 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
-| 3 | Stoß aus der Reihe | Speer | 1 Aktion | 1W10+1W4 | 1W10+1W4+1W8 | Ein gerader Speerstoß auf Waffenreichweite. Speer |
-| 4 | Waffe binden | Speer, Schwert oder Axt | 1 Aktion + 1 Reaktion | 1W10+1W4 | 1W10+1W4+1W8 | Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag. Speer, Schwert oder Axt |
-| 5 | Hieb des Aufgebots | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 1W10+1W4+1W8 | Ein entschlossener Einzelhieb; kein kostenloser Folgeangriff. Speer, Schwert oder Axt |
+| 3 | Stoß aus der Reihe | Speer | 1 Aktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein gerader Speerstoß auf Waffenreichweite. Speer |
+| 4 | Waffe binden | Speer, Schwert oder Axt | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+2W8 | Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag. Speer, Schwert oder Axt |
+| 5 | Hieb des Aufgebots | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+2W8 | Ein entschlossener Einzelhieb; kein kostenloser Folgeangriff. Speer, Schwert oder Axt |
 
 ### Hirdwacht · 6–15
 
@@ -49,11 +49,11 @@ Praktische Fortsetzung für Hirdmänner und Schildmaiden: Höfe sichern, Lücken
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
 | 6 | Hofwacht | Einhandwaffe und Schild | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslos +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
-| 8 | Lücke schließen | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+2W6 | Ein Hieb und danach bis 1 m Eigenbewegung innerhalb des Bewegungsbudgets. Speer, Schwert oder Axt |
-| 10 | Speer des Aufgebots | Speer | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W4 | Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag. Speer |
+| 8 | Lücke schließen | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+1W8+1W6+1 | Ein Hieb und danach bis 1 m Eigenbewegung innerhalb des Bewegungsbudgets. Speer, Schwert oder Axt |
+| 10 | Speer des Aufgebots | Speer | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W4+1 | Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag. Speer |
 | 12 | Gemeinsame Deckung | Einhandwaffe und Schild | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslos +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Einhandwaffe und Schild Schild aktiv geführt. |
-| 14 | Fester Gegenstoß | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff aus sicherem Stand. Speer, Schwert oder Axt |
-| 15 | Letztes Hoftor | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8 | Ein abschließender Hieb, danach +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
+| 14 | Fester Gegenstoß | Speer, Schwert oder Axt | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Ein kräftiger Einzelangriff aus sicherem Stand. Speer, Schwert oder Axt |
+| 15 | Letztes Hoftor | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1 | 3W10+1 | Ein abschließender Hieb, danach +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
 
 ## Skjoldr
 
@@ -73,12 +73,12 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Kantenhieb | Schwert, Axt oder Streitkolben | 1 Bonusaktion | 1W4 | 1W4+1W10 | Kurzer Einzelhieb; kein zweiter Angriff aus der Nebenhand. Schwert, Axt oder Streitkolben |
+| 1 | Kurzer Kantenhieb | Schwert, Axt oder Streitkolben | 1 Bonusaktion | 1W6 | 1W6+1W10 | Kurzer Einzelhieb; kein zweiter Angriff aus der Nebenhand. Schwert, Axt oder Streitkolben |
 | 2 | Hut des Schildträgers | Einhandwaffe und Schild | 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslos +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
-| 3 | Langer Eisenhieb | Langschwert oder lange Streitaxt | 1 Aktion | 1W10+1W4 | 2W10+1W4 | Ein sauber geführter Zweihandhieb. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 4 | Gekreuzte Eisen | Zwei Äxte oder zwei Klingen | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10+1W4 | Ein gemeinsam geführtes Manöver beider Waffen. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 5 | Schildkante öffnen | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | Ein Einhandhieb aus dem Schutz des Schildes. Einhandwaffe und Schild Schild aktiv geführt. |
-| 6 | Fester Linienhieb | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | Ein kräftiger Schlag in die gegnerische Deckung; keine automatische Schildzerstörung. Schwert, Axt oder Streitkolben |
+| 3 | Langer Eisenhieb | Langschwert oder lange Streitaxt | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein sauber geführter Zweihandhieb. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 4 | Gekreuzte Eisen | Zwei Äxte oder zwei Klingen | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Ein gemeinsam geführtes Manöver beider Waffen. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 5 | Schildkante öffnen | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein Einhandhieb aus dem Schutz des Schildes. Einhandwaffe und Schild Schild aktiv geführt. |
+| 6 | Fester Linienhieb | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Ein kräftiger Schlag in die gegnerische Deckung; keine automatische Schildzerstörung. Schwert, Axt oder Streitkolben |
 
 ### Schritt des Huskarls · 7–8
 
@@ -87,8 +87,8 @@ Zwei verbindende Lektionen für die Haupt- und Nebenwaffen der Klasse.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Schritt hinter den Schild | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein Hieb; bei Treffer +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
-| 8 | Lange Wende | Langschwert oder lange Streitaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein langer Einzelhieb mit Richtungswechsel; keine Flächenattacke. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 7 | Schritt hinter den Schild | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein Hieb; bei Treffer +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
+| 8 | Lange Wende | Langschwert oder lange Streitaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein langer Einzelhieb mit Richtungswechsel; keine Flächenattacke. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
 
 ### Pfad des Schildwalls · 9–20
 
@@ -100,12 +100,12 @@ Schutz, Bindung und Zusammenhalt. Der Pfad umfasst auch Abwehr ohne Schild; ausd
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Schildkante des Huskarls | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Einhandwaffe und Schild Schild aktiv geführt. |
+| 9 | Schildkante des Huskarls | Einhandwaffe und Schild | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Einhandwaffe und Schild Schild aktiv geführt. |
 | 11 | Eiserne Hut | Schwert, Axt oder Streitkolben | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke. Schwert, Axt oder Streitkolben |
-| 13 | Gekreuzte Wacht | Zwei Äxte oder zwei Klingen | 1 Aktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 15 | Lange Bindung | Langschwert oder lange Streitaxt | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 13 | Gekreuzte Wacht | Zwei Äxte oder zwei Klingen | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 15 | Lange Bindung | Langschwert oder lange Streitaxt | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
 | 17 | Tor aus Eisen | Einhandwaffe und Schild | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden. Einhandwaffe und Schild Schild aktiv geführt. |
-| 20 | Ungebrochene Mitte | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Schwert, Axt oder Streitkolben |
+| 20 | Ungebrochene Mitte | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Schwert, Axt oder Streitkolben |
 
 ### Pfad des Vorstoßes · 9–20
 
@@ -117,12 +117,12 @@ Druck, Flankenwechsel und kurze Durchbrüche. Kein Treffer zerstört ohne gesond
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Hieb der Vorhut | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Schwert, Axt oder Streitkolben |
-| 11 | Schneidender Schritt | Langschwert oder lange Streitaxt | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 13 | Zwillingskeil | Zwei Äxte oder zwei Klingen | 1 Aktion + 1 Bonusaktion | 1W10+2W6 | 1W10+2W6+1W4 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 15 | Kante des Durchbruchs | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Einhandwaffe und Schild Schild aktiv geführt. |
-| 17 | Eisenpforte | Langschwert oder lange Streitaxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8 | 1W10+3W8 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 20 | Bannerstoß | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Schwert, Axt oder Streitkolben |
+| 9 | Hieb der Vorhut | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Schwert, Axt oder Streitkolben |
+| 11 | Schneidender Schritt | Langschwert oder lange Streitaxt | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 13 | Zwillingskeil | Zwei Äxte oder zwei Klingen | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Zwei Äxte oder zwei Klingen Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 15 | Kante des Durchbruchs | Einhandwaffe und Schild | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Einhandwaffe und Schild Schild aktiv geführt. |
+| 17 | Eisenpforte | Langschwert oder lange Streitaxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Langschwert oder lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 20 | Bannerstoß | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Schwert, Axt oder Streitkolben |
 
 ## Thegnar
 
@@ -142,12 +142,12 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Sattelhieb | Axt, Schwert, Streitkolben oder Keule | 1 Bonusaktion | 1W4 | 1W4+1W10 | Ein leichter Hieb vom Ross aus. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 1 | Kurzer Sattelhieb | Axt, Schwert, Streitkolben oder Keule | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein leichter Hieb vom Ross aus. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
 | 2 | Abgesessene Hut | Axt, Schwert, Streitkolben oder Keule | 1 Reaktion | Kein Schaden | Kein Schaden | Auch zu Fuß nutzbar: schadenslos +1 RK für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
-| 3 | Erster Lanzenanritt | Lanze oder Reiterspieß | 1 Aktion | 1W10+1W4 | 2W10+1W4 | Ein Lanzenstoß nach freiem Anritt. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 4 | Hieb des Wegwächters | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10+1W4 | Eigenständiger Nahkampfangriff, auch zu Fuß. KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
-| 5 | Wende am Zügel | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | Ein seitlicher Sattelhieb; Wendebewegung bleibt im Bewegungsbudget. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 6 | Stoß des Hest-Reiters | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | Ein geführter Lanzenstoß ohne zusätzliche Rossattacke. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 3 | Erster Lanzenanritt | Lanze oder Reiterspieß | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein Lanzenstoß nach freiem Anritt. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 4 | Hieb des Wegwächters | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Eigenständiger Nahkampfangriff, auch zu Fuß. KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
+| 5 | Wende am Zügel | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein seitlicher Sattelhieb; Wendebewegung bleibt im Bewegungsbudget. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 6 | Stoß des Hest-Reiters | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Ein geführter Lanzenstoß ohne zusätzliche Rossattacke. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
 
 ### Schritt des Huskarls · 7–8
 
@@ -156,8 +156,8 @@ Zwei verbindende Lektionen für die Haupt- und Nebenwaffen der Klasse.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Sattel und Boden | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein einzelner Hieb, im Sattel oder abgesessen; bei Treffer +1 RK für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
-| 8 | Lanze im Vorbeireiten | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein Lanzenangriff nach Anritt, kein weiterer Hieb auf ein zweites Ziel. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 7 | Sattel und Boden | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein einzelner Hieb, im Sattel oder abgesessen; bei Treffer +1 RK für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
+| 8 | Lanze im Vorbeireiten | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein Lanzenangriff nach Anritt, kein weiterer Hieb auf ein zweites Ziel. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
 
 ### Pfad des Schildwalls · 9–20
 
@@ -169,12 +169,12 @@ Schutz, Bindung und Zusammenhalt. Der Pfad umfasst auch Abwehr ohne Schild; ausd
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Lanze des Weges | Lanze oder Reiterspieß | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 9 | Lanze des Weges | Lanze oder Reiterspieß | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
 | 11 | Abgesessene Wache | Axt, Schwert, Streitkolben oder Keule | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke. Axt, Schwert, Streitkolben oder Keule |
-| 13 | Hieb an der Flanke | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 15 | Hut des Hest-Reiters | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
+| 13 | Hieb an der Flanke | Axt, Schwert, Streitkolben oder Keule | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 15 | Hut des Hest-Reiters | Axt, Schwert, Streitkolben oder Keule | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
 | 17 | Lanzenriegel | Lanze oder Reiterspieß | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 20 | Wacht des Thanen | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Axt, Schwert, Streitkolben oder Keule |
+| 20 | Wacht des Thanen | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Axt, Schwert, Streitkolben oder Keule |
 
 ### Pfad des Vorstoßes · 9–20
 
@@ -186,12 +186,12 @@ Druck, Flankenwechsel und kurze Durchbrüche. Kein Treffer zerstört ohne gesond
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Anritt der Vorhut | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 11 | Wegbrecherhieb | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
-| 13 | Wende des Hest-Rosses | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Bonusaktion | 1W10+2W6 | 1W10+2W6+1W4 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 15 | Lanze des Patrouillenführers | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
-| 17 | Abgesessener Durchbruch | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8 | 1W10+3W8 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
-| 20 | Keil des Thanen | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 9 | Anritt der Vorhut | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 11 | Wegbrecherhieb | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
+| 13 | Wende des Hest-Rosses | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Axt, Schwert, Streitkolben oder Keule Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 15 | Lanze des Patrouillenführers | Lanze oder Reiterspieß | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
+| 17 | Abgesessener Durchbruch | Axt, Schwert, Streitkolben oder Keule | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Axt, Schwert, Streitkolben oder Keule |
+| 20 | Keil des Thanen | Lanze oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Lanze oder Reiterspieß Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen. |
 
 ## Skeidr
 
@@ -211,12 +211,12 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Deckhieb | Enteraxt, Hammer oder Streitkolben | 1 Bonusaktion | 1W4 | 1W4+1W10 | Ein leichter Hieb auf engem Deck. Enteraxt, Hammer oder Streitkolben |
+| 1 | Kurzer Deckhieb | Enteraxt, Hammer oder Streitkolben | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein leichter Hieb auf engem Deck. Enteraxt, Hammer oder Streitkolben |
 | 2 | Hut an der Reling | Enteraxt, Hammer oder Streitkolben | 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslos +1 RK für einen eigenen Beitrag; auch an Land nutzbar. Enteraxt, Hammer oder Streitkolben |
-| 3 | Wurf zum Auftakt | Wurfspeer oder Wurfaxt | 1 Aktion | 1W10+1W4 | 2W10+1W4 | Ein Wurf mit einsatzbereiter Waffe. Rückholen ist eine gesonderte Handlung. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 4 | Haken am Waffenarm | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Kein automatisches Entwaffnen. Enteraxt, Hammer oder Streitkolben |
-| 5 | Sax am Niedergang | Schwert, Axt oder Sax | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | Ein kurzer Einzelhieb in enger Distanz. Schwert, Axt oder Sax |
-| 6 | Schlag der Enterwache | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | Ein kräftiger Einzelhieb; Objektbeschädigung gesondert beurteilen. Enteraxt, Hammer oder Streitkolben |
+| 3 | Wurf zum Auftakt | Wurfspeer oder Wurfaxt | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein Wurf mit einsatzbereiter Waffe. Rückholen ist eine gesonderte Handlung. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 4 | Haken am Waffenarm | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Kein automatisches Entwaffnen. Enteraxt, Hammer oder Streitkolben |
+| 5 | Sax am Niedergang | Schwert, Axt oder Sax | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein kurzer Einzelhieb in enger Distanz. Schwert, Axt oder Sax |
+| 6 | Schlag der Enterwache | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Ein kräftiger Einzelhieb; Objektbeschädigung gesondert beurteilen. Enteraxt, Hammer oder Streitkolben |
 
 ### Schritt des Huskarls · 7–8
 
@@ -225,8 +225,8 @@ Zwei verbindende Lektionen für die Haupt- und Nebenwaffen der Klasse.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Ruhiger Deckschritt | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein Hieb und bei Treffer +1 RK für einen eigenen Beitrag. Enteraxt, Hammer oder Streitkolben |
-| 8 | Wurf über den Steg | Wurfspeer oder Wurfaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein gezielter Wurf; Hindernisse und Deckung bleiben wirksam. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 7 | Ruhiger Deckschritt | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein Hieb und bei Treffer +1 RK für einen eigenen Beitrag. Enteraxt, Hammer oder Streitkolben |
+| 8 | Wurf über den Steg | Wurfspeer oder Wurfaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein gezielter Wurf; Hindernisse und Deckung bleiben wirksam. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 
 ### Pfad des Schildwalls · 9–20
 
@@ -238,12 +238,12 @@ Schutz, Bindung und Zusammenhalt. Der Pfad umfasst auch Abwehr ohne Schild; ausd
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Relinghieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Enteraxt, Hammer oder Streitkolben |
+| 9 | Relinghieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Enteraxt, Hammer oder Streitkolben |
 | 11 | Stand des Seefahrers | Enteraxt, Hammer oder Streitkolben | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke. Enteraxt, Hammer oder Streitkolben |
-| 13 | Wurf der Küstenwache | Wurfspeer oder Wurfaxt | 1 Aktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 15 | Sax der Enterwacht | Schwert, Axt oder Sax | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Schwert, Axt oder Sax |
+| 13 | Wurf der Küstenwache | Wurfspeer oder Wurfaxt | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 15 | Sax der Enterwacht | Schwert, Axt oder Sax | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Schwert, Axt oder Sax |
 | 17 | Hut am Mast | Enteraxt, Hammer oder Streitkolben | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden. Enteraxt, Hammer oder Streitkolben |
-| 20 | Letzte Reling | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Enteraxt, Hammer oder Streitkolben |
+| 20 | Letzte Reling | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Enteraxt, Hammer oder Streitkolben |
 
 ### Pfad des Vorstoßes · 9–20
 
@@ -255,12 +255,12 @@ Druck, Flankenwechsel und kurze Durchbrüche. Kein Treffer zerstört ohne gesond
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Erster Enterhieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Enteraxt, Hammer oder Streitkolben |
-| 11 | Wurf zur Landung | Wurfspeer oder Wurfaxt | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 13 | Sax im Gedränge | Schwert, Axt oder Sax | 1 Aktion + 1 Bonusaktion | 1W10+2W6 | 1W10+2W6+1W4 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Schwert, Axt oder Sax |
-| 15 | Hammer des Vorschiffs | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Enteraxt, Hammer oder Streitkolben |
-| 17 | Kielbrecherhieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8 | 1W10+3W8 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Enteraxt, Hammer oder Streitkolben |
-| 20 | Banner auf fremdem Deck | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Enteraxt, Hammer oder Streitkolben |
+| 9 | Erster Enterhieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Enteraxt, Hammer oder Streitkolben |
+| 11 | Wurf zur Landung | Wurfspeer oder Wurfaxt | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Wurfspeer oder Wurfaxt Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 13 | Sax im Gedränge | Schwert, Axt oder Sax | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Schwert, Axt oder Sax |
+| 15 | Hammer des Vorschiffs | Enteraxt, Hammer oder Streitkolben | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Enteraxt, Hammer oder Streitkolben |
+| 17 | Kielbrecherhieb | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Enteraxt, Hammer oder Streitkolben |
+| 20 | Banner auf fremdem Deck | Enteraxt, Hammer oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Enteraxt, Hammer oder Streitkolben |
 
 ## Skjaldr
 
@@ -283,12 +283,12 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Axthieb | Schwert, Axt oder Streitkolben | 1 Bonusaktion | 1W4 | 1W4+1W10 | Ein leichter Einzelhieb, noch ohne Berserkergang. Schwert, Axt oder Streitkolben |
+| 1 | Kurzer Axthieb | Schwert, Axt oder Streitkolben | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein leichter Einzelhieb, noch ohne Berserkergang. Schwert, Axt oder Streitkolben |
 | 2 | Gebändigter Stand | Schwert, Axt oder Streitkolben | 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +1 RK für einen eigenen Beitrag. Schwert, Axt oder Streitkolben |
-| 3 | Langer Spalthieb | Lange Streitaxt | 1 Aktion | 1W10+1W4 | 2W10+1W4 | Ein kontrollierter Hieb mit der langen Streitaxt. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 4 | Doppelter Axtgriff | Zwei Äxte | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10+1W4 | Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 5 | Haken hinter den Schild | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6. Einhandwaffe und Schild Schild aktiv geführt. |
-| 6 | Hieb des Schildbeißers | Lange Streitaxt | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 3 | Langer Spalthieb | Lange Streitaxt | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein kontrollierter Hieb mit der langen Streitaxt. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 4 | Doppelter Axtgriff | Zwei Äxte | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 5 | Haken hinter den Schild | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6. Einhandwaffe und Schild Schild aktiv geführt. |
+| 6 | Hieb des Schildbeißers | Lange Streitaxt | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
 
 ### Schritt des Huskarls · 7–8
 
@@ -297,8 +297,8 @@ Zwei verbindende Lektionen für die Haupt- und Nebenwaffen der Klasse.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Gekreuzte Axtwende | Zwei Äxte | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 8 | Gerichteter Spaltstoß | Lange Streitaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein schwerer, kontrollierter Einzelhieb; keine automatische Schildzerstörung. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 7 | Gekreuzte Axtwende | Zwei Äxte | 1 Aktion + 1 Reaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 8 | Gerichteter Spaltstoß | Lange Streitaxt | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein schwerer, kontrollierter Einzelhieb; keine automatische Schildzerstörung. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
 
 ### Pfad des Schildwalls · 9–20
 
@@ -310,12 +310,12 @@ Schutz, Bindung und Zusammenhalt. Der Pfad umfasst auch Abwehr ohne Schild; ausd
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Axtbindung des Schildbeißers | Zwei Äxte | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 9 | Axtbindung des Schildbeißers | Zwei Äxte | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
 | 11 | Gezügelte Hut | Schwert, Axt oder Streitkolben | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke. Schwert, Axt oder Streitkolben |
-| 13 | Lange Gegenkante | Lange Streitaxt | 1 Aktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 15 | Schild und Zorn | Einhandwaffe und Schild | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
+| 13 | Lange Gegenkante | Lange Streitaxt | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 15 | Schild und Zorn | Einhandwaffe und Schild | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Einhandwaffe und Schild Schild aktiv geführt. |
 | 17 | Gekreuztes Bollwerk | Zwei Äxte | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 20 | Wacht des gebändigten Feuers | Lange Streitaxt | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 20 | Wacht des gebändigten Feuers | Lange Streitaxt | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
 
 ### Pfad des Vorstoßes · 9–20
 
@@ -327,12 +327,12 @@ Druck, Flankenwechsel und kurze Durchbrüche. Kein Treffer zerstört ohne gesond
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Biss in die Linie | Zwei Äxte | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 11 | Gerichteter Axtschritt | Lange Streitaxt | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 13 | Zwei Äxte, ein Ziel | Zwei Äxte | 1 Aktion + 1 Bonusaktion | 1W10+2W6 | 1W10+2W6+1W4 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
-| 15 | Hieb des eisernen Willens | Schwert, Axt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Schwert, Axt oder Streitkolben |
-| 17 | Spaltkeil | Lange Streitaxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8 | 1W10+3W8 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
-| 20 | Herr der Bresche | Zwei Äxte | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 9 | Biss in die Linie | Zwei Äxte | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 11 | Gerichteter Axtschritt | Lange Streitaxt | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 13 | Zwei Äxte, ein Ziel | Zwei Äxte | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
+| 15 | Hieb des eisernen Willens | Schwert, Axt oder Streitkolben | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Schwert, Axt oder Streitkolben |
+| 17 | Spaltkeil | Lange Streitaxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild. |
+| 20 | Herr der Bresche | Zwei Äxte | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert. |
 
 ## Skytte
 
@@ -352,12 +352,12 @@ Stand, einfache Waffenschläge, Abwehr und kurze Bindungen. Schildtechniken ben�
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Erster Jagdpfeil | Langbogen, Jagdbogen oder Kurzbogen | 1 Bonusaktion | 1W4 | 1W4+1W10 | Ein leichter Schuss auf ein einzelnes Ziel. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 1 | Erster Jagdpfeil | Langbogen, Jagdbogen oder Kurzbogen | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein leichter Schuss auf ein einzelnes Ziel. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 | 2 | Ruhiger Atem | Langbogen, Jagdbogen oder Kurzbogen | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 3 | Speer am Wildpfad | Speer | 1 Aktion | 1W10+1W4 | 2W10+1W4 | Ein sicherer Speerstoß im Nahkampf. Speer |
-| 4 | Sax im Unterholz | Schwert, Axt oder Sax | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10+1W4 | Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Schwert, Axt oder Sax |
-| 5 | Schuss durch die Lichtung | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 6 | Grenzwächterschuss | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | Ein kräftiger, einzelner Bogenschuss. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 3 | Speer am Wildpfad | Speer | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein sicherer Speerstoß im Nahkampf. Speer |
+| 4 | Sax im Unterholz | Schwert, Axt oder Sax | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Schwert, Axt oder Sax |
+| 5 | Schuss durch die Lichtung | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 6 | Grenzwächterschuss | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Ein kräftiger, einzelner Bogenschuss. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 
 ### Schritt des Huskarls · 7–8
 
@@ -366,8 +366,8 @@ Zwei verbindende Lektionen für die Haupt- und Nebenwaffen der Klasse.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Abstand mit dem Speer | Speer | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W6+1W8 | Nahkampftreffer; danach +1 RK für einen eigenen Beitrag. Speer |
-| 8 | Pfeil der Fährte | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W6+1W8 | Ein genauer Einzelpfeil auf ein sichtbares Ziel. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 7 | Abstand mit dem Speer | Speer | 1 Aktion + 1 Reaktion | 1W10+1W8+1 | 1W10+2W8+1 | Nahkampftreffer; danach +1 RK für einen eigenen Beitrag. Speer |
+| 8 | Pfeil der Fährte | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein genauer Einzelpfeil auf ein sichtbares Ziel. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 
 ### Pfad des Schildwalls · 9–20
 
@@ -379,12 +379,12 @@ Schutz, Bindung und Zusammenhalt. Der Pfad umfasst auch Abwehr ohne Schild; ausd
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Pfeil der Wacht | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 9 | Pfeil der Wacht | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Ein Treffer gewährt +1 RK für einen eigenen Beitrag; ersetzt schwächere Deckung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 | 11 | Hut des Waldläufers | Speer | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Abwehr: +2 RK für einen eigenen Beitrag. Keine automatische Gegenattacke. Speer |
-| 13 | Sax gegen den Ansturm | Schwert, Axt oder Sax | 1 Aktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1W4 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Schwert, Axt oder Sax |
-| 15 | Speer der Grenze | Speer | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Speer |
+| 13 | Sax gegen den Ansturm | Schwert, Axt oder Sax | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Schwert, Axt oder Sax |
+| 15 | Speer der Grenze | Speer | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein kräftiger Einzelangriff; bei Treffer +1 RK für einen eigenen Beitrag. Speer |
 | 17 | Deckung der Lichtung | Langbogen, Jagdbogen oder Kurzbogen | 1 Bonusaktion + 1 Reaktion | Kein Schaden | Kein Schaden | Schadenslose Deckung: +2 RK für einen eigenen Beitrag. Mit Tragender Front darf stattdessen ein Verbündeter in 2 m geschützt werden. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 20 | Pfeil der letzten Wacht | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 20 | Pfeil der letzten Wacht | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein teurer Meisterangriff, bei Treffer +2 RK für einen eigenen Beitrag; keine Schadensimmunität. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 
 ### Pfad des Vorstoßes · 9–20
 
@@ -396,12 +396,12 @@ Druck, Flankenwechsel und kurze Durchbrüche. Kein Treffer zerstört ohne gesond
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Pfeil der Vorhut | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 1W10+1W8+1W6 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 11 | Speer aus dem Unterholz | Speer | 1 Aktion + 1 Reaktion | 1W10+1W8 | 1W10+1W8+1W6 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Speer |
-| 13 | Hieb des Fährtenlesers | Schwert, Axt oder Sax | 1 Aktion + 1 Bonusaktion | 1W10+2W6 | 1W10+2W6+1W4 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Schwert, Axt oder Sax |
-| 15 | Grenzjägerschuss | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
-| 17 | Stoß des Wildpfads | Speer | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8 | 1W10+3W8 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Speer |
-| 20 | Pfeil des offenen Weges | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10 | 4W10 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 9 | Pfeil der Vorhut | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Ein Einzelangriff mit bis 1 m Eigenbewegung nach Treffer; innerhalb der vorhandenen Bewegung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 11 | Speer aus dem Unterholz | Speer | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Speer |
+| 13 | Hieb des Fährtenlesers | Schwert, Axt oder Sax | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Ein wuchtiger Einzelangriff auf eine bewusst gewählte Öffnung. Keine Zusatzattacke. Schwert, Axt oder Sax |
+| 15 | Grenzjägerschuss | Langbogen, Jagdbogen oder Kurzbogen | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1W4 | Ein kurzer, kräftiger Angriff, danach bis 2 m Eigenbewegung innerhalb des Bewegungsbudgets. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
+| 17 | Stoß des Wildpfads | Speer | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein seltener Abschluss. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag. Speer |
+| 20 | Pfeil des offenen Weges | Langbogen, Jagdbogen oder Kurzbogen | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein einzelner Meisterangriff mit vollem Kostenpaket. Schildbruch und Verdrängung bleiben gesonderte, situative Auswertung. Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten. |
 
 ## Skalde
 

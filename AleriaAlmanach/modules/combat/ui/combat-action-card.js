@@ -26,8 +26,8 @@ export function getCombatDisplayStats(actor = {}) {
   const formula = (bonusDice.length ? combineDamageFormulas([base, ...bonusDice]) : base).toUpperCase().replace(/D/g, 'W');
   const modifier = Number(actor.damageModifier) || 0;
   return {
-    attack: signedNumber(actor.attackModifier),
-    damage: `${formula || '—'}${modifier ? ` ${signedNumber(modifier)}` : ''}`,
+    attack: actor.actionResolutionMode === 'automatic' ? 'Automatisch' : signedNumber(actor.attackModifier),
+    damage: formula ? `${formula}${modifier ? ` ${signedNumber(modifier)}` : ''}` : '—',
     activation: activationLabel(actor.selectedAction?.activationType)
   };
 }
@@ -127,7 +127,7 @@ export function renderCombatValueStrip(actor = {}) {
     return '<p class="combat-action-notice">Kein Angriffswurf. Die Waffe wird beim Eintragen gewechselt.</p>';
   }
   const stats = getCombatDisplayStats(actor);
-  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, actor.weapon?.damageType || '')}${renderDamageAverage(actor)}</div>`;
+  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, actor.weapon?.damageFormula ? actor.weapon.damageType || '' : '')}${renderDamageAverage(actor)}</div>`;
 }
 
 function renderDamageAverage(actor) {
