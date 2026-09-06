@@ -18,7 +18,7 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '' }
   if (['actor-comments', 'scene-comments'].includes(kind) && (!Number.isInteger(amount) || amount < 1 || amount > 999)) {
     throw new Error('Die Dauer muss zwischen 1 und 999 Beiträgen liegen.');
   }
-  const mechanics = {};
+  const mechanics = preset?.mechanics?.blocksActions ? { blocksActions: true } : {};
   for (const [key] of STATUS_MODIFIERS) {
     const modifier = Number(value.mechanics?.[key] || 0);
     if (!Number.isInteger(modifier) || Math.abs(modifier) > 30) throw new Error('Boni und Mali müssen ganze Zahlen zwischen −30 und +30 sein.');

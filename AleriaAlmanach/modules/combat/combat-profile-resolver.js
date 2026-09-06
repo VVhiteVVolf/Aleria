@@ -22,7 +22,8 @@ import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-techniq
 import { getTechniqueDamageScaling, resolveTechniqueDamageFormula } from './combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
-import { getCombatWeaponLoadout, getCombatTechniqueWeapon } from './combat-weapon-loadout.js';
+import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
+import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -48,8 +49,8 @@ function buildCombatProfileActions(character, profile) {
   const manaResource = profile.resources.find(resource => resource.id === profile.magic?.manaResourceId)
     || profile.resources.find(resource => /mana|fokus/i.test(resource.name || ''))
     || null;
-  const weaponKind = character.entityType === 'creature' ? 'Angriff' : 'Waffe';
-  const usesWeaponLoadout = character.entityType !== 'creature';
+  const usesWeaponLoadout = usesCharacterWeaponLoadout(character);
+  const weaponKind = usesWeaponLoadout ? 'Waffe' : 'Angriff';
   const loadout = getCombatWeaponLoadout(profile);
   const activeWeapon = getCombatTechniqueWeapon(loadout);
   const resourceCost = (resourceId, name, amount) => {
@@ -279,7 +280,7 @@ function buildCombatProfileActions(character, profile) {
       disabledReason: weapon.id === activeWeapon?.id ? 'Bereits aktiv ausgerüstet.' : '',
       default: false
     }));
-  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions, ...equipmentSwitchActions];
+  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions, ...equipmentSwitchActions, COMBAT_WAIT_ACTION];
 }
 
 function resolveCombatPersistence(character = {}) {
@@ -441,6 +442,7 @@ export function getCombatActorProblems(profile = {}) {
   if (profile.equipmentPreparation?.error) problems.push('equipmentPreparation');
   if (!profile.characterId) problems.push('characterId');
   if (Number(profile.currentHitPoints) <= 0 && profile.combat?.canActAtZeroHitPoints !== true) problems.push('incapacitated');
+  if (profile.profileActionId !== COMBAT_WAIT_ACTION.id && hasActionBlockingCondition(profile)) problems.push('conditionBlocksActions');
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
   if (profile.selectedAction?.kind === 'equipment-switch') return problems;
   if (!String(profile.weapon?.name || '').trim()) problems.push('weaponName');
@@ -477,6 +479,7 @@ export function validateCombatActorProfile(profile = {}, { startedAction = null 
 export function getCombatActorValidationMessage(profile = {}, validation = validateCombatActorProfile(profile)) {
   if (validation.ready) return '';
   if (validation.missingFields.includes('equipmentPreparation')) return profile.equipmentPreparation.error;
+  if (validation.missingFields.includes('conditionBlocksActions')) return `${profile.name || 'Die Figur'} ist betäubt und muss diesen Zug aussetzen.`;
   if (validation.missingFields.includes('incapacitated')) {
     return `${profile.name || 'Die handelnde Figur'} ist bei 0 Trefferpunkten handlungsunfähig.`;
   }

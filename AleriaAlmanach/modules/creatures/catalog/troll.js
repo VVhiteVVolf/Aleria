@@ -1,0 +1,57 @@
+const cost = (resourceId, amount = 1) => ({ resourceId, amount,
+  scope: resourceId === 'special-action' ? 'persistent' : 'comment' });
+
+export const TROLL_CREATURE_SOURCE = Object.freeze({
+  id: 'catalog-troll', name: 'Landtroll', type: 'Troll', species: 'Landtroll',
+  habitat: 'Felsige Schluchten, Höhlen und verlassene Gebirgspfade', size: 'Groß',
+  level: 12, challengeRating: 12, portrait: 'https://i.imgur.com/o0C6Bp3.png',
+  portraitCaption: 'Ein ausgewachsener Troll mit schwerer Keule.',
+  combatProfile: {
+    progression: { level: 12, actionPoolChoices: [{ level: 10, resourceId: 'action' }] },
+    attributes: [{ key: 'strength', score: 22 }, { key: 'dexterity', score: 8 },
+      { key: 'constitution', score: 20 }, { key: 'intelligence', score: 6 },
+      { key: 'wisdom', score: 10 }, { key: 'charisma', score: 6 }],
+    hitPoints: { current: 140, maximumOverride: 140, temporary: 0, hitDie: 12 },
+    armorClass: { override: 14, dexterityMode: 'none' },
+    combat: { movement: 9, attackBonus: -2 },
+    savingThrows: [{ attributeKey: 'constitution', proficient: true }, { attributeKey: 'strength', proficient: true }],
+    weapons: [{ id: 'troll-club', name: 'Landtroll-Keule', weaponType: 'mace',
+      damageFormula: '1d10', damageType: 'Wucht', attackAttribute: 'strength', proficient: true,
+      equipped: true, properties: 'Schwere Keule', costs: [cost('action')], auraBypass: { allowed: false } },
+      { id: 'troll-boulder', name: 'Brockenwurf', weaponType: 'natural', rangeType: 'ranged', range: 'Wurf · nach Szenenkontext',
+        damageFormula: '1d4', damageType: 'Wucht', attackAttribute: 'strength', proficient: true,
+        attackBonus: -2, damageBonus: -4, activationType: 'bonus-action', equipped: false,
+        costs: [cost('bonus-action')], auraBypass: { allowed: false },
+        notes: 'Ein hastig geworfener Stein gegen ein einzelnes Ziel. Benötigt einen greifbaren Brocken.' }],
+    techniques: [{ id: 'troll-sweeping-club', name: 'Zerschmetternder Keulenbogen',
+      active: true, minimumLevel: 1, weaponTypes: ['mace'], compatibleWeaponIds: ['troll-club'],
+      damageFormula: '2d6', damageType: 'Wucht', activationType: 'special-action',
+      maximumTargets: 4, costs: [cost('action', 2), cost('bonus-action'), cost('special-action')],
+      auraBypass: { allowed: false },
+      description: 'Ein weiter Keulenschlag gegen bis zu vier im Szenenkontext erreichbare Gegner. Jedes gewählte Ziel erhält einen eigenen Treffer- und gegebenenfalls KON-Rettungswurf. Keine automatische Erfassung aller Beteiligten.',
+      secondarySave: { enabled: true, attributeKey: 'constitution', dcBase: 8, dcAttributeKey: 'strength', addProficiency: false,
+        failureCondition: { id: 'troll-stunned', name: 'Betäubt', duration: 'Ein eigener Kampfpost',
+          description: 'Der Keulenschlag raubt der Figur die Orientierung. Diesen Kampfzug aussetzen.', mechanics: { blocksActions: true } } }
+    }, { id: 'troll-crushing-grip', name: 'Knochenbrecher', active: true, minimumLevel: 1,
+      weaponTypes: ['mace'], compatibleWeaponIds: ['troll-club'], damageFormula: '2d8', damageType: 'Wucht',
+      activationType: 'action', costs: [cost('action'), cost('reaction')], auraBypass: { allowed: false },
+      description: 'Der Troll legt sein ganzes Gewicht in einen gezielten Hieb gegen einen Gegner. Wer so weit ausholt, verzichtet auf seine Abwehrreaktion.'
+    }],
+    resources: [{ id: 'trollblood-turn', name: 'Trollblut · Zugbeginn', current: 1, maximum: 1,
+      recovery: 'scene', scope: 'comment', category: 'turn-effect',
+      notes: 'Automatisch einmal zu Beginn des eigenen mechanischen Kampfposts, auch beim Abwarten. Keine zusätzliche Heilung pro Abschnitt oder Ziel.' }],
+    abilities: [{ id: 'troll-hide-guard', name: 'Deckung hinter dem Unterarm', active: true, combatUsable: true,
+      activationType: 'reaction', delivery: 'ability', resolutionType: 'automatic',
+      costs: [cost('reaction')], auraBypass: { allowed: false }, target: 'Selbst',
+      description: 'Der Troll schützt Kopf und Kehle mit seinem vernarbten Unterarm. +2 RK bis zum Ende seines nächsten eigenen Kampfposts; nicht stapelbar.',
+      effects: [{ type: 'buff', target: 'self', on: 'always', condition: { id: 'troll-hide-guard', name: 'Unterarmdeckung',
+        description: '+2 RK. Erneutes Einnehmen erneuert nur die Dauer.', mechanics: { armorClass: 2 },
+        durationModel: { kind: 'actor-comments', remainingActorComments: 1 } } }]
+    }, { id: 'trollblood', name: 'Trollblut', active: true, combatUsable: false, activationType: 'passive',
+      regeneration: { resourceId: 'trollblood-turn', constitutionMultiplier: 2, blockedByBurning: true, burningArmorPenalty: 2 },
+      description: 'Zu Beginn des eigenen Kampfposts: 1W12 + 10 LP regenerieren, höchstens bis zum Maximum. Bei 0 LP keine Wiederbelebung. Brennend oder Verbrannt unterdrückt die Heilung und senkt die RK um 2. Tatsächlicher Feuerschaden erneuert Verbrannt bis zum Ende des nächsten eigenen Posts; kein zusätzlicher automatischer Feuerschaden.' }],
+    magic: { enabled: false, spells: [] }
+  },
+  notes: 'Gruppengegner. Bedrängt zunächst die Nahkämpfer; Fernkämpfer nur in den Keulenbogen aufnehmen, wenn sie laut Szene ebenfalls in seinem Weg stehen. Bei fehlender Angriffsgelegenheit „Abwarten / Zug aussetzen“ wählen: Trollblut und Zustandsdauer werden dabei abgewickelt.',
+  loot: { currency: '', notes: 'Beute nach Schauplatz festlegen.', items: [] }
+});

@@ -14,6 +14,7 @@ import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import { getEffectiveCombatAttribute, getAttributeModifier } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { getBurningArmorPenalty } from './combat-creature-traits.js';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -416,6 +417,8 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     return result;
   }, {});
   const strengthBefore = getAttributeModifier(getEffectiveCombatAttribute(profile, 'strength'));
+  temporaryMechanics.armorClass = Number(temporaryMechanics.armorClass || 0)
+    - getBurningArmorPenalty({ ...profile, temporaryConditions }) + getBurningArmorPenalty(profile);
   const strengthAfter = getEffectiveCombatAttribute({ ...profile,
     conditions: [...(profile.conditions || []), ...temporaryConditions] }, 'strength');
   const strengthDelta = getAttributeModifier(strengthAfter) - strengthBefore;

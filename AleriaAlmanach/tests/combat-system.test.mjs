@@ -428,7 +428,7 @@ test('wählt Waffe oder vorbereiteten Zauber ausdrücklich aus dem Profil', () =
   assert.equal(spell.attackModifier, 5);
   assert.deepEqual(spell.actions.map(action => action.kind), [
     'weapon', 'weapon', 'weapon', 'spell',
-    'equipment-switch', 'equipment-switch', 'equipment-switch'
+    'equipment-switch', 'equipment-switch', 'equipment-switch', 'wait'
   ]);
 });
 

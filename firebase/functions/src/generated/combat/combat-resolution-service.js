@@ -43,6 +43,7 @@ import {
 
 import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-8';
 
@@ -289,7 +290,10 @@ export class CombatResolutionService {
   }
 
   async resolveAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
-    const resolution = await this.resolvePreparedAttack({ actor, target, description, rollMode }, options);
+    const prepared = await prepareCombatTurnStart(actor, this.dice, options);
+    const resolved = await this.resolvePreparedAttack({ actor: prepared.actor,
+      target: actor.characterId === target.characterId ? prepared.actor : target, description, rollMode }, options);
+    const resolution = attachCombatTurnStart(resolved, actor, prepared.turnStart);
     return options.skipResourceCosts ? resolution : attachCombatEquipmentPreparation(resolution, actor);
   }
 

@@ -64,13 +64,6 @@ function createCreatureCombatDefaults() {
   };
 }
 
-function applyCreatureLevel(profile, level) {
-  const effectiveLevel = normalizeNumber(level, 1, 1, 30);
-  profile.progression.level = Math.min(20, effectiveLevel);
-  profile.progression.specialLevels = Math.max(0, effectiveLevel - 20);
-  return profile;
-}
-
 export function createCreatureDraft(overrides = {}) {
   return sanitizeCreature({
     name: 'Neue Kreatur',
@@ -96,8 +89,9 @@ export function sanitizeCreature(value = {}) {
   const combatSource = source.combatProfile && typeof source.combatProfile === 'object'
     ? source.combatProfile
     : createCreatureCombatDefaults();
-  const combatProfile = applyCreatureLevel(sanitizeCharacterCombatProfile({
+  const combatProfile = sanitizeCharacterCombatProfile({
     ...combatSource,
+    progression: { ...combatSource.progression, level: Math.min(20, level), specialLevels: Math.max(0, level - 20) },
     skills: Array.isArray(combatSource.skills) ? combatSource.skills : [],
     resources: Array.isArray(combatSource.resources) ? combatSource.resources : [],
     notes: source.notes || combatSource.notes,
@@ -111,7 +105,7 @@ export function sanitizeCreature(value = {}) {
     ensureSpellSlots: Boolean(combatSource.magic?.enabled
       || combatSource.magic?.spells?.length
       || combatSource.magic?.slotResourceIds?.length)
-  }), level);
+  });
   const loot = source.loot && typeof source.loot === 'object' ? source.loot : {};
   const result = {
     schemaVersion: CREATURE_SCHEMA_VERSION,

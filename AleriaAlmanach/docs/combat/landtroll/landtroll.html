@@ -1,0 +1,99 @@
+<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Landtroll · Aleria Bestiarium</title><style>body{margin:0;padding:clamp(8px,2vw,24px);background:#ddc89d}main{max-width:1300px;margin:auto}.creature-dossier {
+  --dossier-ink: #36271c;
+  --dossier-muted: #6e5135;
+  --dossier-line: #c8aa75;
+  margin-bottom: 1rem;
+  border: 1px solid var(--dossier-line);
+  background: linear-gradient(115deg, #f9efd5, #eee0bb);
+  color: var(--dossier-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  box-shadow: 0 5px 18px #291b1526;
+}
+.creature-dossier-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem 1.5rem; background: linear-gradient(110deg, #634327, #8a653c); color: #fff5db; border-bottom: 3px solid #b18a4c; }
+.creature-dossier-heading h2 { margin: .3rem 0; color: inherit; font: 700 clamp(1.6rem, 3vw, 2.6rem) Georgia, serif; }
+.creature-dossier-heading p { margin: .25rem 0 0; font-size: .85rem; }
+.creature-dossier-heading small { letter-spacing: .13em; text-transform: uppercase; }
+.creature-dossier-heading > strong { flex: 0 0 auto; padding: .8rem; border: 1px solid #e1cda1; font-size: 1.25rem; }
+.creature-dossier-body { display: grid; grid-template-columns: minmax(160px, .7fr) minmax(0, 2fr); gap: 1.3rem; padding: 1.25rem; }
+.creature-dossier-body:not(:has(> figure)) { grid-template-columns: 1fr; }
+.creature-dossier-body figure { margin: 0; min-width: 0; }
+.creature-dossier-body figure img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: contain; background: #493d2d; border: 1px solid #ac895a; box-sizing: border-box; }
+.creature-dossier-body figcaption { margin-top: .5rem; font-size: .8rem; color: var(--dossier-muted); line-height: 1.5; }
+.creature-dossier-content { min-width: 0; }
+.creature-dossier-vitals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; }
+.creature-dossier-vitals > span { display: grid; gap: .4rem; padding: .7rem; border: 1px solid var(--dossier-line); background: #fff9e9; }
+.creature-dossier-vitals small { font-size: .7rem; color: var(--dossier-muted); }
+.creature-dossier-vitals b { font-size: 1.25rem; color: #813537; }
+.creature-dossier-attributes, .creature-dossier-resources { display: flex; flex-wrap: wrap; gap: .5rem; margin: .7rem 0; }
+.creature-dossier-attributes span { font-size: .8rem; padding: .35rem .5rem; border-bottom: 1px solid var(--dossier-line); }
+.creature-dossier-resources span { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem; border: 1px solid var(--dossier-line); font-size: .8rem; background: #fbf3df; }
+.creature-dossier-resources img { width: 18px; height: 18px; object-fit: contain; }
+.creature-dossier-source { color: var(--dossier-muted); font-size: .75rem; line-height: 1.5; }
+.creature-dossier h3 { margin: 1rem 0 .55rem; color: #80383a; font-size: 1rem; }
+.creature-dossier-attacks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.creature-dossier-attacks section { padding: .8rem; border: 1px solid var(--dossier-line); background: #fff8e6; }
+.creature-dossier-attacks section > div { display: flex; justify-content: space-between; gap: .6rem; }
+.creature-dossier-attacks section > div b { flex-shrink: 0; font-size: .8rem; color: #813537; }
+.creature-dossier-attacks p, .creature-dossier-trait p, .creature-dossier-notes p { margin: .5rem 0; line-height: 1.6; font-size: .88rem; }
+.creature-dossier-attacks small { color: var(--dossier-muted); line-height: 1.5; }
+.creature-dossier-trait { margin-top: .9rem; padding: .25rem .9rem .6rem; border-left: 3px solid #805237; background: #e6d4ac; }
+.creature-dossier-notes summary, .creature-sheet-editor > summary { padding: .8rem; margin: .9rem 0; color: #fff4da; background: #6b4a2e; cursor: pointer; }
+.creature-sheet-editor > .creature-sheet-section, .creature-sheet-editor > .creature-sheet-primary, .creature-sheet-editor > .creature-sheet-columns { margin-bottom: .75rem; }
+.creature-dossier :focus-visible, .creature-sheet-editor > summary:focus-visible { outline: 3px solid #a64b40; outline-offset: 3px; }
+@media (max-width: 800px) {
+  .creature-dossier-body { grid-template-columns: 1fr; padding: .8rem; }
+  .creature-dossier-body figure { width: min(100%, 240px); margin-inline: auto; }
+  .creature-dossier-heading { padding: 1rem; }
+  .creature-dossier-vitals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-dossier-attacks { grid-template-columns: 1fr; }
+}
+@media print {
+  .creature-sheet-editor { display: none; }
+  .creature-dossier { break-inside: avoid; box-shadow: none; }
+}
+</style><main><article class="creature-dossier" aria-label="Kreaturkarte Landtroll">
+    <header class="creature-dossier-heading"><div><small>Bestiarium · Groß · Stufe 12</small><h2>Landtroll</h2><p>Felsige Schluchten, Höhlen und verlassene Gebirgspfade</p></div><strong>RK 14</strong></header>
+    <div class="creature-dossier-body">
+      <figure><img src="https://i.imgur.com/o0C6Bp3.png" alt="Landtroll" decoding="async"><figcaption>Ein ausgewachsener Troll mit schwerer Keule.</figcaption></figure>
+      <div class="creature-dossier-content">
+        <div class="creature-dossier-vitals"><span><small>Lebenspunkte</small><b>140 / 140</b></span><span><small>Temporäre LP</small><b>0</b></span><span><small>Trefferwürfel</small><b>W12</b></span><span><small>Bewegung</small><b>9 m</b></span></div>
+        <div class="creature-dossier-attributes"><span>KRF <b>22</b> (+6)</span><span>GES <b>8</b> (-1)</span><span>KON <b>20</b> (+5)</span><span>INT <b>6</b> (-2)</span><span>WEI <b>10</b> (+0)</span><span>CHA <b>6</b> (-2)</span></div>
+        <div class="creature-dossier-resources" aria-label="Gespeicherte Ressourcen"><span title="Automatisch einmal zu Beginn des eigenen mechanischen Kampfposts, auch beim Abwarten. Keine zusätzliche Heilung pro Abschnitt oder Ziel.">✦ Trollblut · Zugbeginn <b>1/1</b></span><span title="manual">✦ Inspiration <b>0/1</b></span><span title="Wird für jeden neuen Gesamtkommentar aufgefüllt."><img src="../../../public/assets/combat-profile-icons/action.png" alt=""> Aktion <b>2/2</b></span><span title="Wird für jeden neuen Gesamtkommentar aufgefüllt."><img src="../../../public/assets/combat-profile-icons/bonus-action.png" alt=""> Bonusaktion <b>1/1</b></span><span title="Wird für jeden neuen Gesamtkommentar aufgefüllt."><img src="../../../public/assets/combat-profile-icons/reaction.png" alt=""> Reaktion <b>1/1</b></span><span title="day"><img src="../../../public/assets/combat-profile-icons/special-action.png" alt=""> Besondere Aktion <b>4/4</b></span><span title="day"><img src="../../../public/assets/combat-profile-icons/aura-focus.png" alt=""> Aura-Fokuspunkt <b>2/2</b></span></div>
+        <p class="creature-dossier-source">Gespeicherter Kreaturbogen. Im Kampf werden LP, Ressourcen und Zustände je Instanz in der Szene geführt.</p>
+        <h3>Angriffe &amp; Fähigkeiten</h3>
+        <div class="creature-dossier-attacks"><section><div><strong>Landtroll-Keule</strong><b>+8 Treffer</b></div>
+    <p>1W10 +6</p>
+    <small>1 Aktion</small>
+
+
+  </section><section><div><strong>Brockenwurf</strong><b>+6 Treffer</b></div>
+    <p>1W4 +2</p>
+    <small>1 Bonusaktion</small>
+
+    <details><summary>Wirkung</summary><p>Ein hastig geworfener Stein gegen ein einzelnes Ziel. Benötigt einen greifbaren Brocken.</p></details>
+  </section><section><div><strong>Nahkampf</strong><b>+8 Treffer</b></div>
+    <p>1W4 +6</p>
+    <small>1 Aktion</small>
+
+    <details><summary>Wirkung</summary><p>Grundlegender waffenloser Nahkampfangriff.</p></details>
+  </section><section><div><strong>Zerschmetternder Keulenbogen</strong><b>+8 Treffer</b></div>
+    <p>2W6 +6 · bis zu 4 gewählte Ziele</p>
+    <small>2 Aktion + 1 Bonusaktion + 1 Besondere Aktion</small>
+    <p>KON-Rettung SG 14 · bei Misslingen: Betäubt</p>
+    <details><summary>Wirkung</summary><p>Ein weiter Keulenschlag gegen bis zu vier im Szenenkontext erreichbare Gegner. Jedes gewählte Ziel erhält einen eigenen Treffer- und gegebenenfalls KON-Rettungswurf. Keine automatische Erfassung aller Beteiligten.</p></details>
+  </section><section><div><strong>Knochenbrecher</strong><b>+8 Treffer</b></div>
+    <p>2W8 +6</p>
+    <small>1 Aktion + 1 Reaktion</small>
+
+    <details><summary>Wirkung</summary><p>Der Troll legt sein ganzes Gewicht in einen gezielten Hieb gegen einen Gegner. Wer so weit ausholt, verzichtet auf seine Abwehrreaktion.</p></details>
+  </section><section><div><strong>Deckung hinter dem Unterarm</strong><b>Automatisch</b></div>
+    <p>Effekt</p>
+    <small>1 Reaktion</small>
+
+    <details><summary>Wirkung</summary><p>Der Troll schützt Kopf und Kehle mit seinem vernarbten Unterarm. +2 RK bis zum Ende seines nächsten eigenen Kampfposts; nicht stapelbar.</p></details>
+  </section></div>
+        <section class="creature-dossier-trait"><h3>Trollblut</h3><p>Zu Beginn des eigenen Kampfposts: 1W12 + 10 LP regenerieren, höchstens bis zum Maximum. Bei 0 LP keine Wiederbelebung. Brennend oder Verbrannt unterdrückt die Heilung und senkt die RK um 2. Tatsächlicher Feuerschaden erneuert Verbrannt bis zum Ende des nächsten eigenen Posts; kein zusätzlicher automatischer Feuerschaden.</p></section>
+        <details class="creature-dossier-notes"><summary>Zustände &amp; Taktik</summary><p>Keine Zustände im gespeicherten Bogen.</p><p>Gruppengegner. Bedrängt zunächst die Nahkämpfer; Fernkämpfer nur in den Keulenbogen aufnehmen, wenn sie laut Szene ebenfalls in seinem Weg stehen. Bei fehlender Angriffsgelegenheit „Abwarten / Zug aussetzen“ wählen: Trollblut und Zustandsdauer werden dabei abgewickelt.</p></details>
+      </div>
+    </div>
+  </article></main></html>

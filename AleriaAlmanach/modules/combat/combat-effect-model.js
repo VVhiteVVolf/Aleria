@@ -1,5 +1,6 @@
 import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260906-effect-rolls-v1';
 import { applyBerserkSurvival } from './combat-berserk-state.js';
+import { applyRegenerationFireExposure } from './combat-creature-traits.js';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
@@ -111,7 +112,8 @@ export function applyTypedCombatDamage(state = {}, amount = 0, profile = {}, opt
     : (damageResponse.response === 'vulnerable' ? Math.max(0, Number(amount) || 0) * 2
       : (damageResponse.response === 'immune' ? 0 : Math.max(0, Number(amount) || 0)));
   const applied = applyBerserkSurvival(applyCombatDamage(state, adjusted), options.conditions || profile.temporaryConditions || []);
-  return { ...applied, rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
+  return { ...applied, conditions: applyRegenerationFireExposure(applied.conditions, profile, options.damageType, adjusted),
+    rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
 }
 
 export function applyCombatHealing(state = {}, amount = 0) {

@@ -8,7 +8,7 @@ import {
   isSpellSlotResource
 } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 
-const state = { kind: '', item: null, resources: [], weapons: [], inventoryItems: [], onSave: null };
+const state = { kind: '', item: null, resources: [], weapons: [], inventoryItems: [], theme: '', onSave: null };
 const COMMENT_ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
 
 function clone(value) {
@@ -245,6 +245,19 @@ function renderQuirk(item) {
   </div>${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
+function renderRegeneration(item) {
+  if (!item.regeneration) return '';
+  const rule = item.regeneration;
+  return `<fieldset class="combat-entry-editor-mechanics"><legend>Automatische Regeneration</legend>
+    <p>Zu Beginn des eigenen Kampfposts: ein Trefferwürfel des Bogens plus Konstitutionsbonus. Die Zugressource verhindert mehrfache Heilung durch mehrere Abschnitte.</p>
+    <div class="combat-entry-editor-grid">
+      <label><span>Zugressource</span><select data-entry-field="regeneration.resourceId">${state.resources.filter(resource => resource.scope === 'comment').map(resource => `<option value="${escapeHtml(resource.id)}"${selected(rule.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
+      <label><span>Konstitutionsbonus ×</span><input type="number" min="0" max="4" data-entry-field="regeneration.constitutionMultiplier" value="${rule.constitutionMultiplier}"></label>
+      <label class="check"><input type="checkbox" data-entry-field="regeneration.blockedByBurning"${checked(rule.blockedByBurning)}> Brennend / Verbrannt unterdrückt Heilung</label>
+      <label><span>RK-Abzug bei Feuerzustand</span><input type="number" min="0" max="10" data-entry-field="regeneration.burningArmorPenalty" value="${rule.burningArmorPenalty}"></label>
+    </div></fieldset>`;
+}
+
 function renderAbility(item) {
   const inventoryTrigger = item.inventoryUseTrigger || {};
   const restoredResource = inventoryTrigger.restoreResources?.[0] || {};
@@ -398,6 +411,7 @@ function ensureOverlay() {
 function render() {
   const overlay = ensureOverlay();
   const item = state.item || {};
+  overlay.dataset.entryTheme = state.theme;
   const content = state.kind === 'quirk'
     ? renderQuirk(item)
     : (state.kind === 'ability'
@@ -407,7 +421,7 @@ function render() {
     <header><div><span>Kampfprofil · Detailwerkstatt</span><h2 id="combat-entry-editor-title">${kindTitle()}</h2></div><button type="button" data-entry-action="close" aria-label="Schließen">×</button></header>
     <div class="combat-entry-editor-body">
       <div class="combat-entry-editor-name-row"><label><span>Name</span><input data-entry-field="name" value="${escapeHtml(item.name)}" maxlength="140" autofocus></label><label class="check"><input type="checkbox" data-entry-field="active"${checked(item.active !== false)}> Aktiv</label></div>
-      ${content}
+      ${renderRegeneration(item)}${content}
       <p class="combat-entry-editor-error" data-entry-role="error" hidden></p>
     </div>
     <footer><button type="button" data-entry-action="close">Abbrechen</button><button type="button" class="primary" data-entry-action="save">Übernehmen</button></footer>
@@ -576,9 +590,10 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && document.getElementById('combat-entry-editor-overlay')?.classList.contains('active')) close();
 });
 
-export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], inventoryItems = [], onSave } = {}) {
+export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], inventoryItems = [], theme = '', onSave } = {}) {
   if (!['quirk', 'ability', 'technique', 'weapon', 'spell'].includes(kind)) throw new Error('Unbekannter Kampfprofil-Editor.');
   state.kind = kind;
+  state.theme = theme === 'parchment' ? theme : '';
   state.item = clone(item || {});
   state.resources = clone(resources || []);
   state.weapons = clone(weapons || []);

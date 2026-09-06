@@ -12,7 +12,7 @@ export const COMBAT_STATUS_PRESETS = Object.freeze([
   { id: 'blinded', name: 'Geblendet', kind: 'condition', icon: 'Blinded_Condition_Icon.webp', description: 'Die Sicht ist beeinträchtigt. Einschränkungen nach Quelle berücksichtigen.' },
   { id: 'prone', name: 'Liegend', kind: 'condition', icon: 'Prone_Condition_Icon.webp', description: 'Die Figur liegt am Boden. Aufstehen und Reichweiten berücksichtigen.' },
   { id: 'restrained', name: 'Festgesetzt', kind: 'condition', icon: 'Restrained_Condition_Icon.webp', description: 'Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.' },
-  { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur ist betäubt. Handlungseinschränkungen nach Quelle berücksichtigen.' },
+  { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.', mechanics: { blocksActions: true } },
   { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft. Aufweckbedingungen nach Quelle berücksichtigen.' },
   { id: 'wet', name: 'Nass', kind: 'condition', icon: 'Wet_Condition_Icon.webp', description: 'Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.' }
 ]);

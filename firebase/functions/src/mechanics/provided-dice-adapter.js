@@ -35,6 +35,7 @@ export class ProvidedDiceAdapter {
       seenRolls.add(key);
       damageSources.push(source);
     };
+    rememberDamage(submittedResolution.turnStart?.roll);
     rememberDamage(submittedResolution.damage);
     (Array.isArray(submittedResolution.followUpAttacks) ? submittedResolution.followUpAttacks : []).forEach(followUp => rememberDamage(followUp?.damage));
     (Array.isArray(submittedResolution.effectResults) ? submittedResolution.effectResults : []).forEach(result => rememberDamage(result?.roll));

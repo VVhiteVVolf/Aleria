@@ -411,6 +411,7 @@ export function renderCombatEvaluation(source = {}) {
           ${appliedCondition}
           ${mechanicNotes}
           ${effectResults}
+          ${resolution.turnStart ? `<span><b>${escapeHtml(resolution.turnStart.name)} · Zugbeginn:</b> ${resolution.turnStart.suppressed ? 'durch Feuer unterdrückt' : `+${Number(resolution.turnStart.restored) || 0} LP${resolution.turnStart.roll?.notation ? ` (${escapeHtml(resolution.turnStart.roll.notation)})` : ''}`}</span>` : ''}
           ${ruleConflicts}
           ${defeatNotice}
           ${ruleLedger}

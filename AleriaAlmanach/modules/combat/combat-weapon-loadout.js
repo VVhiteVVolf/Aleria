@@ -62,3 +62,6 @@ export function getActorsWithCombatPosts(comments = []) {
   }
   return actors;
 }
+export function usesCharacterWeaponLoadout(character = {}) {
+  return character.entityType !== 'creature' && !character.sourceCreatureId;
+}

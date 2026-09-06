@@ -1,0 +1,1071 @@
+{
+  "type": "aleria-creature",
+  "version": 3,
+  "creature": {
+    "schemaVersion": 3,
+    "entityType": "creature",
+    "name": "Landtroll",
+    "type": "Troll",
+    "species": "Landtroll",
+    "habitat": "Felsige Schluchten, Höhlen und verlassene Gebirgspfade",
+    "challengeRating": 12,
+    "size": "Groß",
+    "level": 12,
+    "portrait": "https://i.imgur.com/o0C6Bp3.png",
+    "portraitCaption": "Ein ausgewachsener Troll mit schwerer Keule.",
+    "avatars": [],
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Landtroll",
+        "archetype": "Troll",
+        "background": "Felsige Schluchten, Höhlen und verlassene Gebirgspfade"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 12,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [
+          {
+            "level": 10,
+            "resourceId": "action"
+          }
+        ],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 22,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 8,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 20,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 6,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 6,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 140,
+        "temporary": 0,
+        "hitDie": 12,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 140
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "none",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": 14,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": -2,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [],
+      "weapons": [
+        {
+          "id": "troll-club",
+          "inventoryItemId": "",
+          "name": "Landtroll-Keule",
+          "image": "",
+          "weaponProfileId": "",
+          "weaponType": "mace",
+          "training": "simple",
+          "damageFormula": "1d10",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schwere Keule",
+          "notes": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "cost-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "troll-boulder",
+          "inventoryItemId": "",
+          "name": "Brockenwurf",
+          "image": "",
+          "weaponProfileId": "",
+          "weaponType": "natural",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": -2,
+          "damageBonus": -4,
+          "range": "Wurf · nach Szenenkontext",
+          "properties": "",
+          "notes": "Ein hastig geworfener Stein gegen ein einzelnes Ziel. Benötigt einen greifbaren Brocken.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "id": "cost-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "trollblood-turn",
+          "name": "Trollblut · Zugbeginn",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "turn-effect",
+          "icon": "",
+          "notes": "Automatisch einmal zu Beginn des eigenen mechanischen Kampfposts, auch beim Abwarten. Keine zusätzliche Heilung pro Abschnitt oder Ziel."
+        },
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 4,
+          "maximum": 4,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [
+        {
+          "id": "troll-sweeping-club",
+          "name": "Zerschmetternder Keulenbogen",
+          "status": "confirmed",
+          "trainingForm": "",
+          "minimumLevel": 1,
+          "category": "technique",
+          "description": "Ein weiter Keulenschlag gegen bis zu vier im Szenenkontext erreichbare Gegner. Jedes gewählte Ziel erhält einen eigenen Treffer- und gegebenenfalls KON-Rettungswurf. Keine automatische Erfassung aller Beteiligten.",
+          "effect": "",
+          "activationType": "special-action",
+          "weaponTypes": [
+            "mace"
+          ],
+          "compatibleWeaponIds": [
+            "troll-club"
+          ],
+          "damageFormula": "2d6",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "Wucht",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 4,
+          "range": "",
+          "target": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "mechanicNotes": [],
+          "effects": [],
+          "costs": [
+            {
+              "id": "cost-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 2,
+              "scope": "comment"
+            },
+            {
+              "id": "cost-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "cost-3",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "troll-stunned",
+              "name": "Betäubt",
+              "duration": "Ein eigener Kampfpost",
+              "description": "Der Keulenschlag raubt der Figur die Orientierung. Diesen Kampfzug aussetzen.",
+              "mechanics": {
+                "attack": 0,
+                "blocksActions": true,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
+          }
+        },
+        {
+          "id": "troll-crushing-grip",
+          "name": "Knochenbrecher",
+          "status": "confirmed",
+          "trainingForm": "",
+          "minimumLevel": 1,
+          "category": "technique",
+          "description": "Der Troll legt sein ganzes Gewicht in einen gezielten Hieb gegen einen Gegner. Wer so weit ausholt, verzichtet auf seine Abwehrreaktion.",
+          "effect": "",
+          "activationType": "action",
+          "weaponTypes": [
+            "mace"
+          ],
+          "compatibleWeaponIds": [
+            "troll-club"
+          ],
+          "damageFormula": "2d8",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "Wucht",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "",
+          "target": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "mechanicNotes": [],
+          "effects": [],
+          "costs": [
+            {
+              "id": "cost-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "cost-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
+          }
+        }
+      ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "troll-hide-guard",
+          "name": "Deckung hinter dem Unterarm",
+          "description": "Der Troll schützt Kopf und Kehle mit seinem vernarbten Unterarm. +2 RK bis zum Ende seines nächsten eigenen Kampfposts; nicht stapelbar.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "reaction",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "effect-1",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": {
+                "id": "troll-hide-guard",
+                "name": "Unterarmdeckung",
+                "description": "+2 RK. Erneutes Einnehmen erneuert nur die Dauer.",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "cost-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "trollblood",
+          "regeneration": {
+            "resourceId": "trollblood-turn",
+            "constitutionMultiplier": 2,
+            "blockedByBurning": true,
+            "burningArmorPenalty": 2
+          },
+          "name": "Trollblut",
+          "description": "Zu Beginn des eigenen Kampfposts: 1W12 + 10 LP regenerieren, höchstens bis zum Maximum. Bei 0 LP keine Wiederbelebung. Brennend oder Verbrannt unterdrückt die Heilung und senkt die RK um 2. Tatsächlicher Feuerschaden erneuert Verbrannt bis zum Ende des nächsten eigenen Posts; kein zusätzlicher automatischer Feuerschaden.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Gruppengegner. Bedrängt zunächst die Nahkämpfer; Fernkämpfer nur in den Keulenbogen aufnehmen, wenn sie laut Szene ebenfalls in seinem Weg stehen. Bei fehlender Angriffsgelegenheit „Abwarten / Zug aussetzen“ wählen: Trollblut und Zustandsdauer werden dabei abgewickelt."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "Beute nach Schauplatz festlegen.",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Gruppengegner. Bedrängt zunächst die Nahkämpfer; Fernkämpfer nur in den Keulenbogen aufnehmen, wenn sie laut Szene ebenfalls in seinem Weg stehen. Bei fehlender Angriffsgelegenheit „Abwarten / Zug aussetzen“ wählen: Trollblut und Zustandsdauer werden dabei abgewickelt.",
+    "id": "catalog-troll"
+  }
+}

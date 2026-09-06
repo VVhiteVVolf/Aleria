@@ -1,0 +1,19 @@
+/* Explicit opt-in skin for the shared attack/ability editor. */
+[data-entry-theme="parchment"] .combat-entry-editor-dialog { color: #3d2c1d; border-color: #a8844f; border-radius: 5px; background: linear-gradient(130deg, #f8eed4, #ecddbb); }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog > header { background: linear-gradient(100deg, #634429, #89643b); }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog > footer { background: #dec69b; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog header span { color: #ebd7ad; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog h2 { color: #fff5dc; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog label { color: #684826; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog :is(input, select, textarea) { color: #35261b; background: #fffaeb; border-color: #b89860; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog button { color: #513720; background: linear-gradient(#fff7e3, #e5cfa5); border-color: #a78653; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog button:hover { color: #732f32; border-color: #80393a; }
+[data-entry-theme="parchment"] .combat-entry-editor-dialog button.primary { color: #fff5df; background: #80393a; }
+[data-entry-theme="parchment"] .combat-entry-editor-body { scrollbar-color: #927046 #f0e1be; }
+[data-entry-theme="parchment"] .combat-entry-editor-body :is(legend, small, p) { color: #64462b; }
+[data-entry-theme="parchment"] :is(.combat-entry-editor-mechanics, .combat-entry-editor-rules, .combat-entry-editor-costs, .combat-entry-editor-weapons) { border-color: #b99b69; background: #f6e8c9; }
+[data-entry-theme="parchment"] .combat-entry-editor-rule { border-color: #b99b69; background: #fff4dd; }
+[data-entry-theme="parchment"] .combat-entry-editor-rule > header { color: #773538; }
+[data-entry-theme="parchment"] .combat-entry-editor-spell-rule { color: #3e526b; background: #e0e4df; }
+[data-entry-theme="parchment"] .combat-entry-editor-error { color: #8a2429; background: #f5d8c8; }
+[data-entry-theme="parchment"] :focus-visible { outline: 2px solid #8b3537; outline-offset: 2px; }

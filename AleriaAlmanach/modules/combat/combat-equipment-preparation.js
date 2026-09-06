@@ -1,8 +1,11 @@
 import { applyCombatResourceCosts } from './combat-state-model.js';
-import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout } from './combat-weapon-loadout.js';
+import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { withEquippedCombatWeapon } from './combat-equipment-state.js';
 
 export function prepareCombatEquipment(character, requested, { free = false } = {}) {
+  // A creature's named attacks are validated against its authoritative sheet.
+  // They are not the character inventory's left/right hand loadout.
+  if (!usesCharacterWeaponLoadout(character)) return { character, preparation: null };
   const loadout = normalizeCombatLoadout(requested);
   if (!loadout) return { character, preparation: null };
   const profile = character.combatProfile || {};

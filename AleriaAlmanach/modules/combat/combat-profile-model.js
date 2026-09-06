@@ -1,6 +1,7 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
@@ -152,6 +153,7 @@ function sanitizeMechanicalModifiers(value = {}) {
   const rollMode = normalizeText(source.attackRollMode || source.rollMode, 20);
   return {
     attack: normalizeNumber(source.attack, 0, -99, 99),
+    ...(source.blocksActions === true ? { blocksActions: true } : {}),
     ...(Number(source.strength) ? { strength: normalizeNumber(source.strength, 0, -30, 30) } : {}),
     damage: normalizeNumber(source.damage, 0, -99, 99),
     ...(source.damageScope === 'all-effects' ? { damageScope: 'all-effects' } : {}),
@@ -480,6 +482,7 @@ function sanitizeAbility(value = {}, index = 0) {
   const resolutionType = normalizeText(source.resolutionType, 30);
   return {
     id: normalizeId(source.id, `ability-${index + 1}`),
+    ...(sanitizeRegeneration(source.regeneration) ? { regeneration: sanitizeRegeneration(source.regeneration) } : {}),
     name: normalizeText(source.name, 120),
     description: normalizeText(source.description, 1600),
     usesCurrent: normalizeNumber(source.usesCurrent, 0, 0, 999),
@@ -1131,7 +1134,7 @@ function getAppliedDexterityModifier(modifier, mode, cap) {
 export function getArmorClass(profile = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
   if (normalized.armorClass.override != null && normalized.armorClass.overrideMode === 'total') {
-    return normalized.armorClass.override;
+    return normalized.armorClass.override - getBurningArmorPenalty(normalized);
   }
   const dualWield = getCombatWeaponLoadout(normalized).dualWield;
   const equipped = normalized.armorItems.filter(item => item.equipped && (!dualWield || item.kind !== 'shield'));
@@ -1154,7 +1157,8 @@ export function getArmorClass(profile = {}) {
     + (dualWield ? 0 : normalized.armorClass.shieldBonus)
     + normalized.armorClass.magicModifier
     + normalized.armorClass.otherModifier
-    + sumMechanicalModifier(normalized, 'armorClass');
+    + sumMechanicalModifier(normalized, 'armorClass')
+    - getBurningArmorPenalty(normalized);
 }
 
 export function getSavingThrowTotal(profile = {}, attributeKey) {

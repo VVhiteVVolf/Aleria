@@ -13,6 +13,7 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-effect-rolls-v1';
+import { renderCreatureDossier } from './creature-dossier.js';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -254,7 +255,8 @@ function renderCreatureCard(creature) {
         <span class="creature-card-body">
           <strong>${escapeHtml(creature.name)}</strong>
           <small>${escapeHtml([creature.type, creature.species].filter(Boolean).join(' · ') || 'Kreatur')}</small>
-          <span class="creature-card-stats"><b>TP ${hp}</b><b>RK ${ac}</b><b>Stufe ${creature.level}</b></span>
+          <span class="creature-card-stats"><b>LP ${profile.hitPoints.current ?? hp}/${hp}</b><b>RK ${ac}</b><b>Stufe ${creature.level}</b></span>
+          <small>${escapeHtml(profile.abilities.filter(ability => ability.active).map(ability => ability.name).slice(0, 3).join(' · '))}</small>
         </span>
       </button>
       <div class="creature-card-actions">
@@ -316,7 +318,10 @@ function renderSheet() {
   const armorClass = getArmorClass(profile);
   const proficiency = getProficiencyBonus(profile);
   const passivePerception = getPassivePerception(profile);
+  const editorOpen = root.querySelector('.creature-sheet-editor')?.open === true;
   root.innerHTML = `
+    ${renderCreatureDossier(creature)}
+    <details class="creature-sheet-editor"${editorOpen ? ' open' : ''}><summary>Bogen bearbeiten · Werte, Angriffe, Ressourcen &amp; Zustände</summary>
     <section class="creature-sheet-section creature-identity-section">
       <div class="creature-section-title"><span>1</span> Kopfleiste / Identität</div>
       <div class="creature-identity-grid">
@@ -345,6 +350,8 @@ function renderSheet() {
           <div class="creature-derived-grid">
             <label><span>TP aktuell</span><input type="number" min="0" max="9999" data-combat-field="hp-current" value="${escapeHtml(profile.hitPoints.current ?? maximumHp)}"><b>♥ ${escapeHtml(profile.hitPoints.current ?? maximumHp)} / ${maximumHp}</b></label>
             <label><span>TP maximal</span><input type="number" min="1" max="9999" data-combat-field="hp-maximum" value="${maximumHp}"><b>${maximumHp}</b></label>
+            <label><span>Temporäre LP</span><input type="number" min="0" max="9999" data-creature-profile-path="hitPoints.temporary" value="${profile.hitPoints.temporary || 0}"><b>${profile.hitPoints.temporary || 0}</b></label>
+            <label><span>Trefferwürfel</span><select data-creature-profile-path="hitPoints.hitDie">${[4, 6, 8, 10, 12, 20].map(die => `<option value="${die}"${profile.hitPoints.hitDie === die ? ' selected' : ''}>W${die}</option>`).join('')}</select></label>
             <label><span>Rüstungsklasse</span><input type="number" min="0" max="999" data-combat-field="armor-class" value="${armorClass}"><b>◈ ${armorClass}</b></label>
             <label><span>Bewegung (m)</span><input type="number" min="0" max="999" data-combat-field="movement" value="${profile.combat.movement}"><b>${profile.combat.movement} m</b></label>
             <label><span>Kompetenzbonus</span><input type="number" min="-20" max="30" data-combat-field="proficiency" value="${proficiency}"><b>+${proficiency}</b></label>
@@ -387,7 +394,7 @@ function renderSheet() {
       <div class="creature-section-title"><span>9</span> Spielleitungsnotizen</div>
       <textarea class="creature-textarea" rows="4" data-creature-field="notes" placeholder="Taktik, Verhalten, Geheimnisse und besondere Regeln …">${escapeHtml(creature.notes)}</textarea>
     </section>
-    ${renderAvatars(creature)}`;
+    ${renderAvatars(creature)}</details>`;
   root.querySelectorAll('.creature-resource-icon').forEach(image => {
     const markFailed = () => image.closest('.creature-resource-icon-frame')?.classList.add('is-missing');
     if (image.complete && image.naturalWidth === 0) markFailed();
@@ -577,7 +584,8 @@ function collectDraftFromForm() {
   profile.hitPoints.maximumOverride = readNumber(document.querySelector('[data-combat-field="hp-maximum"]'), 10);
   profile.armorClass.override = readNumber(document.querySelector('[data-combat-field="armor-class"]'), 10);
   profile.combat.movement = readNumber(document.querySelector('[data-combat-field="movement"]'), 9);
-  profile.progression.proficiencyBonusOverride = readNumber(document.querySelector('[data-combat-field="proficiency"]'), 2);
+  const enteredProficiency = readNumber(document.querySelector('[data-combat-field="proficiency"]'), getProficiencyBonus(profile));
+  if (enteredProficiency !== getProficiencyBonus(profile)) profile.progression.proficiencyBonusOverride = enteredProficiency;
   profile.combat.passivePerceptionBonus = readNumber(document.querySelector('[data-combat-field="passive-perception"]'), 0);
   document.querySelectorAll('[data-attribute-key]').forEach(element => {
     const attribute = profile.attributes.find(item => item.key === element.dataset.attributeKey);
@@ -604,8 +612,8 @@ function collectDraftFromForm() {
     damageType: row.querySelector('[data-attack-field="damageType"]')?.value || '',
     range: row.querySelector('[data-attack-field="range"]')?.value || '',
     notes: row.querySelector('[data-attack-field="notes"]')?.value || '',
-    equipped: index === 0,
-    proficient: true
+    equipped: profile.weapons[index]?.equipped ?? index === 0,
+    proficient: profile.weapons[index]?.proficient ?? true
   }));
   const abilityRows = Array.from(document.querySelectorAll('[data-ability-index]'));
   if (abilityRows.length) profile.abilities = abilityRows.map((row, index) => ({
@@ -927,6 +935,7 @@ function openCreatureDetailEditor(trigger) {
   openCombatEntryEditor({
     kind,
     item,
+    theme: 'parchment',
     resources: state.draft.combatProfile.resources,
     weapons: state.draft.combatProfile.weapons,
     onSave: updated => {
