@@ -81,8 +81,10 @@ test('Fenrir ist Stufe 6 Skjaldr mit Huskarl-Hintergrund und vollständiger Axta
 test('Fenrirs Rüstungsklasse und Aura-Fokus ergeben sich korrekt aus Schuppenpanzer, Schild und Stufe 6', async () => {
   const fenrir = await loadFenrir();
   const resolved = resolveCombatProfile(fenrir);
-  // Basis 14 (Schuppenpanzer) + 1 (GES-Mod, capped 2) + 2 (Schildbonus) = 17
-  assert.equal(resolved.totalDefense, 17);
+  // Basis 14 + 2 Schild; Rüstungsroutine zählt GES erst ab Stufe 12.
+  assert.equal(resolved.totalDefense, 16);
+  fenrir.combatProfile.progression.level = 12;
+  assert.equal(resolveCombatProfile(fenrir).totalDefense, 17);
   const auraFocus = resolved.resources.find(resource => resource.id === 'aura-focus');
   assert.equal(auraFocus.maximum, 0, 'Aura-Fokus beginnt erst ab Stufe 8');
 });

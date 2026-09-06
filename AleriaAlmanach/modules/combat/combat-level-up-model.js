@@ -3,12 +3,14 @@ import {
   getAttributeModifier,
   getEffectiveCombatLevel,
   getMaximumHitPoints,
+  getArmorClass,
   getHitPointProgression,
   setCharacterHitPointMaximum,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
 } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
+import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
 import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
@@ -389,6 +391,11 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   applyOptionalAdditions(classProgression.profile, plan, beforeLevel + 1, changes);
   const finalProfile = sanitizeCharacterCombatProfile(classProgression.profile);
   const afterProficiency = getProficiencyBonus(finalProfile);
+  const armorRoutine = getArmorRoutine(finalProfile);
+  if (armorRoutine?.unlocked && !getArmorRoutine(beforeProfile)?.unlocked) {
+    changes.push({ key: 'class-feature-armor-routine', label: 'Neues Klassenmerkmal', before: '—', after: armorRoutine.name });
+  }
+  appendChange(changes, 'armor-class', 'Rüstungsklasse', getArmorClass(beforeProfile), getArmorClass(finalProfile));
 
   ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'].forEach(resourceId => {
     const beforeResource = beforeProfile.resources.find(resource => resource.id === resourceId);

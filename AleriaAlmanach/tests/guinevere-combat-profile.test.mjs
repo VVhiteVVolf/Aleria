@@ -56,9 +56,11 @@ test('Federblick verbindet den Helwyr-Fernkampfbonus mit dem Angriff der Form', 
   assert.equal(federblick.attackModifier, base.attackModifier + 1);
 });
 
-test('Guineveres Rüstungsklasse ergibt sich aus Lederrüstung und Geschicklichkeit', async () => {
-  const resolved = resolveCombatProfile(await loadGuinevere());
-  assert.equal(resolved.totalDefense, 15);
+test('Guineveres Lederrüstung erhält den Geschicklichkeitsbonus erst durch Rüstungsroutine', async () => {
+  const character = await loadGuinevere();
+  assert.equal(resolveCombatProfile(character).totalDefense, 11);
+  character.combatProfile.progression.level = 12;
+  assert.equal(resolveCombatProfile(character).totalDefense, 15);
 });
 
 test('Scharfsinnig gibt +1 auf intelligenzbasierte Fertigkeiten und Vorteil bei Nachforschungen', async () => {

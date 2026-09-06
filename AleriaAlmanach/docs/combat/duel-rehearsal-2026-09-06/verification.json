@@ -1,0 +1,911 @@
+{
+  "recordedAt": "2026-09-06T12:06:59.809Z",
+  "baselineCommit": "8ce934648769f1deba9d676c8b07ed113e08dd66",
+  "rulesVersion": "combat-evaluation-7",
+  "simulations": {
+    "before": 1100,
+    "after": 1100
+  },
+  "serverDuels": {
+    "before": [
+      {
+        "scenario": "weapons",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 10,
+        "posts": 20,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 12,
+        "posts": 23,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 14,
+        "posts": 28,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 18,
+        "posts": 35,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 1398450561,
+        "winner": "gildas",
+        "rounds": 24,
+        "posts": 47,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 1855569896,
+        "winner": "gawain",
+        "rounds": 11,
+        "posts": 22,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2834552913,
+        "winner": "gawain",
+        "rounds": 16,
+        "posts": 31,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 1546377086,
+        "winner": "gawain",
+        "rounds": 20,
+        "posts": 40,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 110274734,
+        "winner": "gawain",
+        "rounds": 14,
+        "posts": 28,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 2,
+        "posts": 4,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 6,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 12,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 2,
+        "posts": 3,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 1215602827,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2834552913,
+        "winner": "gawain",
+        "rounds": 7,
+        "posts": 13,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 7,
+        "posts": 14,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 5,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 806744461,
+        "winner": "gildas",
+        "rounds": 10,
+        "posts": 20,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 12,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 17,
+        "source": "smoke-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 8,
+        "posts": 16,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 8,
+        "posts": 15,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1180681618,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 5,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 3883378348,
+        "winner": "gildas",
+        "rounds": 13,
+        "posts": 26,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 2334270680,
+        "winner": "gawain",
+        "rounds": 8,
+        "posts": 15,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 6,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 6,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 12,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 602315278,
+        "winner": "gildas",
+        "rounds": 2,
+        "posts": 3,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 898168328,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 545812620,
+        "winner": "gawain",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2390773338,
+        "winner": "gawain",
+        "rounds": 6,
+        "posts": 12,
+        "source": "verification-transactions",
+        "matched": true
+      }
+    ],
+    "after": [
+      {
+        "scenario": "weapons",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 13,
+        "posts": 26,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2665044939,
+        "winner": "gawain",
+        "rounds": 12,
+        "posts": 24,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 14,
+        "posts": 28,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 13,
+        "posts": 25,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 419467544,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 2081580528,
+        "winner": "gildas",
+        "rounds": 21,
+        "posts": 41,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 4066226082,
+        "winner": "gawain",
+        "rounds": 17,
+        "posts": 34,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "weapons",
+        "seed": 3439598773,
+        "winner": "gawain",
+        "rounds": 11,
+        "posts": 21,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 6,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 2,
+        "posts": 3,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2081580528,
+        "winner": "gawain",
+        "rounds": 7,
+        "posts": 14,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 545812620,
+        "winner": "gawain",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 1946993763,
+        "winner": "gawain",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "techniques",
+        "seed": 2630123730,
+        "winner": "gawain",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 10609178,
+        "winner": "gawain",
+        "rounds": 5,
+        "posts": 9,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 1024513404,
+        "winner": "gawain",
+        "rounds": 7,
+        "posts": 13,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 8,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 5,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2025077870,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "modifiers",
+        "seed": 2425694547,
+        "winner": "gawain",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 12,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 9,
+        "posts": 17,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1024513404,
+        "winner": "gawain",
+        "rounds": 10,
+        "posts": 19,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 3678949165,
+        "winner": "draw",
+        "rounds": 8,
+        "posts": 16,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 8,
+        "posts": 15,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 328043677,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 5,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 145195943,
+        "winner": "gildas",
+        "rounds": 12,
+        "posts": 23,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 3826875690,
+        "winner": "gawain",
+        "rounds": 9,
+        "posts": 18,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 306462228,
+        "winner": "gawain",
+        "rounds": 8,
+        "posts": 16,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 10609178,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 10,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2665044939,
+        "winner": "gildas",
+        "rounds": 5,
+        "posts": 9,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 1024513404,
+        "winner": "gildas",
+        "rounds": 3,
+        "posts": 6,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 3678949165,
+        "winner": "gildas",
+        "rounds": 6,
+        "posts": 12,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2038417630,
+        "winner": "gildas",
+        "rounds": 4,
+        "posts": 7,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 602315278,
+        "winner": "gildas",
+        "rounds": 2,
+        "posts": 3,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2812971464,
+        "winner": "gawain",
+        "rounds": 11,
+        "posts": 22,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 545812620,
+        "winner": "gawain",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "forms",
+        "seed": 2334270680,
+        "winner": "gawain",
+        "rounds": 6,
+        "posts": 11,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 3848457139,
+        "winner": "draw",
+        "rounds": 10,
+        "posts": 19,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1581298295,
+        "winner": "draw",
+        "rounds": 9,
+        "posts": 17,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1877151345,
+        "winner": "draw",
+        "rounds": 8,
+        "posts": 16,
+        "source": "verification-transactions",
+        "matched": true
+      },
+      {
+        "scenario": "control",
+        "seed": 1454953219,
+        "winner": "draw",
+        "rounds": 8,
+        "posts": 16,
+        "source": "verification-transactions",
+        "matched": true
+      }
+    ],
+    "beforeCount": 43,
+    "afterCount": 49,
+    "distinctRandomTrials": false,
+    "allComparisonsMatched": true,
+    "allFivePostFixDoubleKnockoutsVerified": true
+  },
+  "checks": {
+    "frontend": {
+      "passed": 552,
+      "failed": 0,
+      "logSha256": "914abdc4f5410afa0b141489c07b07466e772c1fd7676aede2918bbeef877366"
+    },
+    "backend": {
+      "passed": 90,
+      "failed": 0,
+      "logSha256": "866c4927b5983c3543f2672d5073592266d4805adf39f4dbbadbae412d06b4ff"
+    },
+    "integration": {
+      "passed": 53,
+      "failed": 0,
+      "logSha256": "37377e90a04033fb95494ca63cfb9cabcaed7eb8c155826c277051d5bcd81877"
+    },
+    "classes": {
+      "passed": 21,
+      "failed": 0,
+      "logSha256": "a5d79e79938ade584ebc1104e3e79e3e7e7adc1386991d4591b63ea90568e53f"
+    },
+    "finalArmorIntegration": {
+      "passed": 1,
+      "failed": 0,
+      "logSha256": "18c8f3725cb2fa399a0091a78500b011b8e2d9b656937e9c832b24754123ad1e"
+    }
+  },
+  "browser": {
+    "errors": [],
+    "checks": [
+      "collapsed default",
+      "two actors",
+      "no free roll selector",
+      "Gawain social disadvantage",
+      "grant advantage through dialog",
+      "automatic attack advantage",
+      "cancel social disadvantage",
+      "draft retained",
+      "decrement after post",
+      "expire after second post",
+      "mobile",
+      "Gildas 58 LP / RK 16",
+      "Rüstungsroutine sichtbar",
+      "Bogen: Stufe 11 -> 12 -> 11 -> 6",
+      "Kein doppelter Rüstungsbonus",
+      "Kampfstand standardmäßig geschlossen"
+    ]
+  },
+  "build": {
+    "exitCode": 0,
+    "logSha256": "2a2c4441c873ad825f9dd78c695e1e1376c5db0f719b827232798206f2a72fe1"
+  },
+  "conditionLimitations": "Stun-Aussetzen und periodischer Blutungsschaden wurden von der temporären Testleitung ausdrücklich ausgelöst.",
+  "cleanup": {
+    "project": "demo-aleria-combat-checkup",
+    "host": "127.0.0.1:8180",
+    "productionCombatDataWritten": false,
+    "completedAt": "2026-09-06T12:08:26.558Z",
+    "temporaryDirectoryRemoved": true,
+    "emulatorStopped": true,
+    "port8180Closed": true,
+    "temporaryAbilitiesRemoved": true
+  }
+}

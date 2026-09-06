@@ -429,7 +429,7 @@ function renderDerivedStats(profile) {
   return `
     <section class="cp-sheet-derived" aria-label="Abgeleitete Kampfwerte">
       <article><span>TP aktuell</span><strong><input type="number" min="0" max="9999" data-combat-path="hitPoints.current" value="${profile.hitPoints.current ?? ''}" placeholder="—"> <i>/</i> <b data-combat-derived="maximum-hit-points">—</b></strong><small>Temporär <input type="number" min="0" max="9999" data-combat-path="hitPoints.temporary" value="${profile.hitPoints.temporary}"></small></article>
-      <article><span>Rüstungsklasse</span><strong data-combat-derived="armor-class">10</strong><small>Rüstung + Geschick + Effekte</small></article>
+      <article><span>Rüstungsklasse</span><strong data-combat-derived="armor-class">10</strong><small data-combat-derived="armor-routine-short">Rüstung + Geschick + Effekte</small></article>
       <article><span>Initiative</span><strong data-combat-derived="initiative">+0</strong><small>Geschick + Modifikatoren</small></article>
       <article><span>Bewegung</span><strong><input type="number" min="0" max="999" data-combat-path="combat.movement" value="${profile.combat.movement}"> m</strong><small>Pro Runde</small></article>
       <article><span>Kompetenz</span><strong data-combat-derived="proficiency">+2</strong><small>Stufe 1–30</small></article>
@@ -452,6 +452,7 @@ function renderRules(profile) {
       </article>
       <article class="cp-sheet-card">
         <div class="cp-sheet-section-head"><div><span>Rüstung + Geschick + Effekte</span><h4>Rüstungsklasse</h4></div></div>
+        <p class="cp-sheet-formula" data-combat-derived="armor-routine"></p>
         <div class="cp-sheet-fields compact">
           <label><span>Grund-RK</span><input type="number" min="0" max="99" data-combat-path="armorClass.base" value="${profile.armorClass.base}"></label>
           <label><span>Geschick</span><select data-combat-path="armorClass.dexterityMode"><option value="full"${selected(profile.armorClass.dexterityMode, 'full')}>Voll</option><option value="capped"${selected(profile.armorClass.dexterityMode, 'capped')}>Begrenzt</option><option value="none"${selected(profile.armorClass.dexterityMode, 'none')}>Nicht</option></select></label>
@@ -1070,6 +1071,10 @@ function updateDerivedView() {
   const hp = getHitPointProgression(draftProfile);
   setDerived('hit-point-breakdown', `${hp.base} Basis-LP + ${hp.vitality} Vitalität${hp.mechanicalBonus ? ` + ${hp.mechanicalBonus} aus Effekten` : ''} = ${hp.maximum} LP. Nächster Aufstieg: Trefferwürfel + KON und Vitalität; das Maximum wächst auch bei manueller Stufenwahl.`);
   setDerived('armor-class', resolved.totalDefense);
+  setDerived('armor-routine-short', resolved.armorRoutine
+    ? `Rüstungsroutine · ${resolved.armorRoutine.unlocked ? 'aktiv' : 'ab Stufe 12'}` : 'Rüstung + Geschick + Effekte');
+  setDerived('armor-routine', resolved.armorRoutine
+    ? `${resolved.armorRoutine.name} · ${resolved.armorRoutine.unlocked ? 'freigeschaltet' : 'noch nicht freigeschaltet'}. ${resolved.armorRoutine.description}` : 'Die angelegte Rüstung bestimmt den Geschicklichkeitsanteil.');
   setDerived('initiative', displayModifier(resolved.initiative));
   setDerived('passive-perception', resolved.passivePerception);
   setDerived('spell-attack', displayModifier(resolved.spellAttackModifier));

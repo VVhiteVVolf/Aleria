@@ -153,7 +153,7 @@ function reconcileDraigKnightEquipment(character, definition) {
     category: 'armor',
     type: 'Draig-Jungritter-Plattenrüstung',
     image: IMAGES.armor,
-    description: 'Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.',
+    description: 'Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.',
     tags: 'Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm',
     infoRows: itemRows(
       ['⬙', 'Rüstungsklasse', 'Basis-RK 16'],
@@ -162,9 +162,9 @@ function reconcileDraigKnightEquipment(character, definition) {
     ),
     combatDefinition: {
       kind: 'armor', armorKind: 'armor', damageFormula: '', baseArmorClass: 16,
-      armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, dexterityUnlockLevel: 6,
+      armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, dexterityUnlockLevel: 12,
       properties: 'Plattenrüstung · Draig-Wappenrock · geschlossener Helm',
-      notes: 'Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.'
+      notes: 'Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.'
     }
   });
 

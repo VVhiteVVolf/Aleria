@@ -1,0 +1,5901 @@
+[
+  {
+    "id": "q1QtSIug74FzzwUAqWrs",
+    "name": "Gawain Draig",
+    "portrait": "https://i.imgur.com/BceZTJo.jpeg",
+    "combatProfile": {
+      "identity": {
+        "background": "Ritter",
+        "ancestry": "Cenyr",
+        "archetype": "Teulu"
+      },
+      "revision": 1788656614653,
+      "quirks": [
+        {
+          "active": true,
+          "mechanics": {
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "armorClass": 0,
+            "damage": 0,
+            "initiative": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": []
+          },
+          "target": "self",
+          "type": "trait",
+          "name": "Cenyri Kultur",
+          "limitations": "",
+          "duration": "",
+          "triggerRules": [],
+          "aiInstructions": "",
+          "stacking": "normal",
+          "priority": 0,
+          "id": "starter-ancestry-cenyr-trait-1",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "trigger": "",
+          "tags": "Volk · Cenyr",
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung."
+        },
+        {
+          "tags": "Volk · Cenyr",
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "triggerRules": [],
+          "duration": "",
+          "limitations": "",
+          "active": true,
+          "type": "trait",
+          "stacking": "normal",
+          "priority": 0,
+          "trigger": "",
+          "id": "starter-ancestry-cenyr-trait-2",
+          "target": "self",
+          "mechanics": {
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "passivePerception": 0,
+            "attack": 0,
+            "movement": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": []
+          },
+          "aiInstructions": "",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "target": "self",
+          "aiInstructions": "",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "active": true,
+          "id": "starter-background-ritter-trait-1",
+          "priority": 0,
+          "stacking": "normal",
+          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+          "tags": "Hintergrund · Ritter",
+          "name": "Ritterliche Herkunft und Standespflicht",
+          "mechanics": {
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "damage": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrow": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "movement": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0
+          },
+          "triggerRules": [],
+          "duration": "",
+          "trigger": "",
+          "type": "trait",
+          "limitations": ""
+        }
+      ],
+      "damageAffinities": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "selections": [],
+        "curriculumId": "cenyr-teulu",
+        "techniqueSelections": [
+          {
+            "slotId": "foundation-01",
+            "selectedAtLevel": 1,
+            "techniqueId": "combat-style-drachentanz-jungdrache-01-erster-hieb"
+          },
+          {
+            "slotId": "foundation-02",
+            "selectedAtLevel": 2,
+            "techniqueId": "combat-style-drachentanz-jungdrache-02-drachenbiss"
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+            "selectedAtLevel": 3,
+            "slotId": "foundation-03"
+          },
+          {
+            "selectedAtLevel": 4,
+            "techniqueId": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+            "slotId": "foundation-04"
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+            "slotId": "foundation-05",
+            "selectedAtLevel": 5
+          }
+        ]
+      },
+      "hitPoints": {
+        "current": 49,
+        "vitality": {
+          "overrideAnchor": null,
+          "legacyIncrease": 10,
+          "version": 1
+        },
+        "temporary": 0,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null,
+        "hitDie": 10
+      },
+      "conditions": [
+        {
+          "mechanics": {
+            "damage": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "maximumHitPoints": 0,
+            "spellAttack": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "initiative": 0,
+            "passivePerception": 0,
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "source": "Persönliche Empfindlichkeit",
+          "active": true,
+          "description": "Gawain erhält −2 auf Angriffswürfe gegen Gegner mit dem Trait oder Tag „Stinkend“.",
+          "name": "Kann strenge Gerüche nicht leiden",
+          "triggerRules": [
+            {
+              "phase": "pre-roll",
+              "radiusMeters": null,
+              "skillIds": [],
+              "name": "Abscheu vor stinkenden Gegnern",
+              "priority": -10,
+              "frequency": "always",
+              "consumeReaction": false,
+              "actionKinds": [
+                "weapon",
+                "technique",
+                "ability",
+                "spell",
+                "prayer",
+                "song"
+              ],
+              "id": "gawain-strenge-gerueche-stinkend",
+              "resultEffects": [],
+              "enabled": true,
+              "actionScope": "global",
+              "effects": {
+                "damageReduction": 0,
+                "outcome": "none",
+                "savingThrowModifier": 0,
+                "rollMode": "normal",
+                "spellSaveDcModifier": 0,
+                "defenseModifier": 0,
+                "skillModifier": 0,
+                "attackModifier": -2,
+                "damageModifier": 0
+              },
+              "costs": [],
+              "sourceRelation": "self",
+              "recipient": "actor",
+              "requiredTargetTags": [
+                "stinkend"
+              ],
+              "condition": "always",
+              "description": "Nur wenn das aktuelle Ziel den Trait oder Tag Stinkend trägt.",
+              "authority": "passive",
+              "activation": "passive"
+            }
+          ],
+          "id": "gawain-strenge-gerueche",
+          "duration": "Dauerhaft"
+        }
+      ],
+      "armorItems": [
+        {
+          "equipped": true,
+          "id": "gawain-draig-armor",
+          "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+          "armorClassBonus": 0,
+          "name": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
+          "baseArmorClass": 16,
+          "kind": "armor",
+          "dexterityMode": "full",
+          "dexterityCap": 2,
+          "inventoryItemId": "item-mqu1vat1-1-exvo",
+          "dexterityUnlockLevel": 12,
+          "image": "https://i.imgur.com/7siJPXG.png",
+          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm"
+        }
+      ],
+      "magic": {
+        "manaResourceId": "mana-focus",
+        "spells": [],
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "notes": "",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "spellSaveDcOverride": null,
+        "spellAttackOverride": null,
+        "enabled": false,
+        "castingAttribute": "intelligence",
+        "casterTier": "full"
+      },
+      "proficiencies": {
+        "notes": "",
+        "weapons": [
+          "simple",
+          "martial",
+          "sword"
+        ],
+        "armor": [
+          "medium",
+          "heavy"
+        ],
+        "tools": [
+          "Heraldik und höfische Etikette"
+        ],
+        "languages": []
+      },
+      "combat": {
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "passivePerceptionBonus": 0,
+        "mounted": false,
+        "initiativeBonus": 0,
+        "movement": 9
+      },
+      "schemaVersion": 11,
+      "weapons": [
+        {
+          "inventoryItemId": "",
+          "versatileDamageFormula": "",
+          "range": "Nahkampf",
+          "auraBypass": {
+            "resourceId": "",
+            "cost": 1,
+            "allowed": true
+          },
+          "effects": [],
+          "training": "simple",
+          "damageBonus": 0,
+          "weaponType": "unarmed",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "equipped": false,
+          "id": "default-unarmed-melee",
+          "image": "",
+          "aiInstructions": "",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "activationType": "action",
+          "requirements": "",
+          "weaponProfileId": "",
+          "damageFormula": "1d4",
+          "name": "Nahkampf",
+          "attackBonus": 0,
+          "costs": [
+            {
+              "name": "Aktion",
+              "id": "activation-action",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "action"
+            }
+          ],
+          "ammunition": null,
+          "notes": "Grundlegender waffenloser Nahkampfangriff."
+        },
+        {
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "training": "martial",
+          "inventoryItemId": "item-mqu1vat1-0-w8ef",
+          "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+          "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+          "activationType": "action",
+          "damageBonus": 0,
+          "damageFormula": "1d8",
+          "effects": [],
+          "ammunition": null,
+          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+          "attackAttribute": "strength",
+          "costs": [
+            {
+              "name": "Aktion",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "action",
+              "id": "gawain-draig-knightly-sword-action"
+            }
+          ],
+          "id": "gawain-draig-knightly-sword",
+          "weaponType": "sword",
+          "equipped": true,
+          "damageType": "Hieb",
+          "name": "Drachenzahn · Draig-Ritterschwert",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "requirements": "",
+          "range": "Nahkampf",
+          "proficient": true,
+          "weaponProfileId": "",
+          "versatileDamageFormula": "1d10",
+          "attackBonus": 0
+        },
+        {
+          "effects": [],
+          "activationType": "action",
+          "proficient": true,
+          "damageFormula": "1d4",
+          "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+          "image": "https://i.imgur.com/caR593j.png",
+          "attackAttribute": "dexterity",
+          "damageType": "Stich",
+          "weaponType": "dagger",
+          "costs": [
+            {
+              "resourceId": "action",
+              "id": "gawain-draig-dagger-action",
+              "name": "Aktion",
+              "scope": "comment",
+              "amount": 1
+            }
+          ],
+          "notes": "Seitenwaffe des Hauses Draig.",
+          "attackBonus": 0,
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "requirements": "",
+          "inventoryItemId": "gawain-draig-dagger-item",
+          "training": "simple",
+          "range": "Nahkampf",
+          "ammunition": null,
+          "versatileDamageFormula": "",
+          "damageBonus": 0,
+          "weaponProfileId": "",
+          "properties": "Finesse · leicht · Wurfwaffe",
+          "id": "gawain-draig-dagger",
+          "equipped": false,
+          "name": "Draig-Dolch"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Inspiration",
+          "current": 0,
+          "scope": "persistent",
+          "notes": "",
+          "maximum": 1,
+          "id": "inspiration",
+          "icon": "",
+          "category": "",
+          "recovery": "manual"
+        },
+        {
+          "category": "magic",
+          "name": "Mana",
+          "recovery": "day",
+          "current": 0,
+          "scope": "persistent",
+          "notes": "",
+          "maximum": 0,
+          "icon": "",
+          "id": "mana-focus"
+        },
+        {
+          "icon": "",
+          "id": "celestial-points",
+          "current": 0,
+          "notes": "",
+          "scope": "persistent",
+          "recovery": "day",
+          "maximum": 0,
+          "category": "celestial",
+          "name": "Celestiale Punkte"
+        },
+        {
+          "maximum": 0,
+          "name": "Infernale Punkte",
+          "scope": "persistent",
+          "notes": "",
+          "icon": "",
+          "current": 0,
+          "id": "infernal-points",
+          "recovery": "day",
+          "category": "infernal"
+        },
+        {
+          "name": "Aktion",
+          "recovery": "scene",
+          "category": "action",
+          "maximum": 1,
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "current": 1,
+          "scope": "comment",
+          "id": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "recovery": "scene",
+          "scope": "comment",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "current": 1,
+          "maximum": 1,
+          "name": "Bonusaktion",
+          "id": "bonus-action"
+        },
+        {
+          "name": "Reaktion",
+          "current": 1,
+          "recovery": "scene",
+          "id": "reaction",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "category": "action",
+          "maximum": 1,
+          "scope": "comment",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "name": "Besondere Aktion",
+          "maximum": 2,
+          "recovery": "day",
+          "category": "action",
+          "scope": "persistent",
+          "notes": "",
+          "id": "special-action",
+          "current": 2,
+          "icon": "./public/assets/combat-profile-icons/special-action.png"
+        },
+        {
+          "name": "Aura-Fokuspunkt",
+          "paymentRole": "universal-substitute",
+          "maximum": 0,
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "id": "aura-focus",
+          "current": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "notes": "",
+          "category": "action"
+        },
+        {
+          "icon": "",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "id": "spell-slot-1",
+          "current": 0,
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "scope": "persistent",
+          "name": "Zauberplatz I",
+          "maximum": 0
+        },
+        {
+          "name": "Zauberplatz II",
+          "current": 0,
+          "id": "spell-slot-2",
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "maximum": 0,
+          "icon": "",
+          "spellLevel": 2
+        },
+        {
+          "maximum": 0,
+          "scope": "persistent",
+          "spellLevel": 3,
+          "icon": "",
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz III",
+          "current": 0,
+          "category": "spell-slot",
+          "id": "spell-slot-3",
+          "recovery": "long-rest"
+        },
+        {
+          "icon": "",
+          "id": "spell-slot-4",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "scope": "persistent",
+          "current": 0,
+          "recovery": "long-rest",
+          "name": "Zauberplatz IV",
+          "category": "spell-slot",
+          "spellLevel": 4,
+          "maximum": 0
+        },
+        {
+          "name": "Zauberplatz V",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "maximum": 0,
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-5",
+          "icon": "",
+          "spellLevel": 5,
+          "current": 0
+        },
+        {
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "current": 0,
+          "scope": "persistent",
+          "name": "Zauberplatz VI",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "icon": "",
+          "id": "spell-slot-6",
+          "spellLevel": 6
+        },
+        {
+          "name": "Zauberplatz VII",
+          "maximum": 0,
+          "recovery": "long-rest",
+          "icon": "",
+          "category": "spell-slot",
+          "spellLevel": 7,
+          "id": "spell-slot-7",
+          "current": 0,
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "maximum": 0,
+          "name": "Zauberplatz VIII",
+          "id": "spell-slot-8",
+          "category": "spell-slot",
+          "spellLevel": 8,
+          "current": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "icon": ""
+        },
+        {
+          "icon": "",
+          "current": 0,
+          "id": "spell-slot-9",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz IX",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "maximum": 0,
+          "id": "spell-slot-10",
+          "name": "Zauberplatz X",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "spellLevel": 10,
+          "scope": "persistent",
+          "icon": "",
+          "current": 0
+        },
+        {
+          "name": "Klaue des Drachen · Nutzungen",
+          "maximum": 2,
+          "id": "gawain-technique-claw-uses",
+          "scope": "persistent",
+          "category": "technique-use",
+          "notes": "Zwei Nutzungen je Tag; wird beim Tageswechsel aufgefüllt.",
+          "current": 2,
+          "icon": "",
+          "recovery": "day"
+        },
+        {
+          "name": "Tanz der Silbernen Schuppe · Nutzungen",
+          "current": 1,
+          "scope": "persistent",
+          "notes": "Eine Nutzung; wird durch eine kurze oder lange Rast aufgefüllt.",
+          "maximum": 1,
+          "id": "gawain-technique-silver-scale-uses",
+          "icon": "",
+          "category": "technique-use",
+          "recovery": "short-rest"
+        },
+        {
+          "current": 1,
+          "category": "technique-use",
+          "icon": "",
+          "recovery": "short-rest",
+          "scope": "persistent",
+          "notes": "Eine Nutzung; wird durch eine kurze oder lange Rast aufgefüllt.",
+          "maximum": 1,
+          "id": "gawain-technique-tail-uses",
+          "name": "Schweif des Drachen · Nutzungen"
+        },
+        {
+          "scope": "persistent",
+          "icon": "",
+          "notes": "",
+          "maximum": 0,
+          "name": "Fokus",
+          "recovery": "day",
+          "id": "focus",
+          "category": "focus",
+          "current": 0
+        },
+        {
+          "current": 0,
+          "scope": "persistent",
+          "category": "pact",
+          "name": "Paktpunkte",
+          "notes": "",
+          "recovery": "day",
+          "maximum": 0,
+          "id": "pact-points",
+          "icon": ""
+        }
+      ],
+      "skills": [
+        {
+          "notes": "",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "bonus": 0,
+          "id": "default-skill-1",
+          "proficiency": "none"
+        },
+        {
+          "id": "default-skill-2",
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Akrobatik",
+          "notes": ""
+        },
+        {
+          "id": "default-skill-3",
+          "bonus": 0,
+          "notes": "",
+          "name": "Fingerfertigkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none"
+        },
+        {
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-4",
+          "attributeKey": "dexterity",
+          "name": "Heimlichkeit",
+          "bonus": 0
+        },
+        {
+          "name": "Arkane Kunde",
+          "bonus": 0,
+          "id": "default-skill-5",
+          "proficiency": "none",
+          "attributeKey": "intelligence",
+          "notes": ""
+        },
+        {
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "id": "default-skill-6",
+          "proficiency": "trained",
+          "name": "Geschichte"
+        },
+        {
+          "id": "default-skill-7",
+          "notes": "",
+          "name": "Nachforschungen",
+          "proficiency": "none",
+          "bonus": 0,
+          "attributeKey": "intelligence"
+        },
+        {
+          "bonus": 0,
+          "name": "Naturkunde",
+          "id": "default-skill-8",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficiency": "trained",
+          "bonus": 0,
+          "id": "default-skill-9",
+          "name": "Religion",
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "attributeKey": "wisdom",
+          "notes": "",
+          "name": "Heilkunde",
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-10"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen"
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "bonus": 0
+        },
+        {
+          "notes": "",
+          "name": "Überleben",
+          "bonus": 0,
+          "proficiency": "none",
+          "attributeKey": "wisdom",
+          "id": "default-skill-13"
+        },
+        {
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "notes": ""
+        },
+        {
+          "bonus": 0,
+          "name": "Auftreten",
+          "proficiency": "trained",
+          "attributeKey": "charisma",
+          "id": "default-skill-15",
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "notes": "",
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "bonus": 0,
+          "proficiency": "none",
+          "attributeKey": "charisma"
+        },
+        {
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": "",
+          "id": "default-skill-17",
+          "name": "Täuschen"
+        },
+        {
+          "bonus": 0,
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
+          "proficiency": "trained",
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "notes": "",
+          "id": "default-skill-19",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "name": "Flirten",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-20",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": "",
+          "attributeKey": "constitution",
+          "name": "Körperbeherrschung"
+        }
+      ],
+      "savingThrows": [
+        {
+          "proficient": true,
+          "attributeKey": "strength",
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "expertise": false,
+          "proficient": false,
+          "attributeKey": "dexterity",
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": true
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "proficient": false,
+          "attributeKey": "wisdom",
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "proficient": false,
+          "expertise": false,
+          "attributeKey": "charisma",
+          "bonus": 0
+        }
+      ],
+      "armorClass": {
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "overrideMode": "total",
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "base": 10,
+        "override": null
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "",
+      "techniques": [
+        {
+          "status": "confirmed",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "id": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+          "name": "Erster Hieb des Jungdrachens",
+          "mechanicNotes": [],
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "mode": "fixed",
+            "bonusWeaponDieCap": 4,
+            "bonusFormula": ""
+          },
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-01-erster-hieb-bonus-action",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "minimumLevel": 1,
+          "targetDefenseModifier": 0,
+          "damageFormula": "1d4",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "description": "Der grundlegende, schnelle Schwerthieb der ersten Drachentanz-Form.",
+          "weaponTypes": [
+            "sword"
+          ],
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "activationType": "bonus-action",
+          "category": "technique",
+          "duration": "Sofort",
+          "damageBonus": 0,
+          "followUpAttack": {
+            "repeatCount": 1,
+            "enabled": false,
+            "inheritBonusDamage": true,
+            "attackBonus": 0,
+            "damageType": "",
+            "triggerFurtherEffects": false,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "repeatPerAttackRules": true,
+            "sameTarget": true,
+            "triggerReactions": true,
+            "damageFormula": ""
+          },
+          "triggerRules": [],
+          "range": "Nahkampf",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "cenyrTraining": {
+            "requiresMounted": false,
+            "weaponRuleSetId": "",
+            "selectedAtLevel": 1,
+            "slotBands": [
+              "foundation"
+            ],
+            "sourceStatus": "confirmed",
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "assignedSlotId": "foundation-01",
+            "uchelwyrCompatible": false,
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "branchId": "teulu-sword"
+          },
+          "secondarySave": {
+            "dcAttributeKey": "strength",
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "failureCondition": {
+              "mechanics": {
+                "spellSaveDc": 0,
+                "passivePerception": 0,
+                "movement": 0,
+                "attackRollMode": "normal",
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrow": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "initiative": 0,
+                "armorClass": 0,
+                "savingThrowAdvantageAttributes": [],
+                "skill": 0,
+                "damage": 0,
+                "bonusDamageFormula": "",
+                "attack": 0,
+                "maximumHitPoints": 0,
+                "spellAttack": 0
+              },
+              "id": "technique-save-condition",
+              "name": "",
+              "description": "",
+              "duration": ""
+            },
+            "addProficiency": true
+          },
+          "rollMode": "normal",
+          "target": "Ein Gegner",
+          "criticalThreshold": 20,
+          "active": true,
+          "attackBonus": 0,
+          "mechanics": {
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "attackRollMode": "normal",
+            "movement": 0,
+            "savingThrow": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "damage": 0,
+            "skill": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": []
+          },
+          "maximumTargets": 1,
+          "effects": [],
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "compatibleWeaponIds": [],
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "effect": "Ein kurzer Ergänzungshieb verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "damageType": "Hieb"
+        },
+        {
+          "duration": "Sofort",
+          "category": "technique",
+          "compatibleWeaponIds": [],
+          "id": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+          "attackBonus": 0,
+          "activationType": "action",
+          "criticalThreshold": 20,
+          "followUpAttack": {
+            "damageFormula": "",
+            "repeatCount": 1,
+            "sameTarget": true,
+            "attackBonus": 0,
+            "triggerFurtherEffects": false,
+            "enabled": false,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "triggerReactions": true,
+            "inheritBonusDamage": true,
+            "repeatPerAttackRules": true,
+            "damageType": ""
+          },
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "cenyrTraining": {
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "assignedSlotId": "foundation-02",
+            "requiresMounted": false,
+            "weaponRuleSetId": "",
+            "selectedAtLevel": 2,
+            "uchelwyrCompatible": false,
+            "sourceStatus": "confirmed",
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "teulu-sword",
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "allowedClassIds": [
+              "teulu"
+            ]
+          },
+          "secondarySave": {
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "enabled": false,
+            "attributeKey": "constitution",
+            "failureCondition": {
+              "mechanics": {
+                "spellAttack": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "passivePerception": 0,
+                "movement": 0,
+                "initiative": 0,
+                "armorClass": 0,
+                "savingThrow": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "bonusDamageFormula": "",
+                "skill": 0,
+                "attackRollMode": "normal",
+                "spellSaveDc": 0,
+                "attack": 0,
+                "damage": 0,
+                "maximumHitPoints": 0
+              },
+              "description": "",
+              "duration": "",
+              "id": "technique-save-condition",
+              "name": ""
+            }
+          },
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "combatStyleId": "drachentanz",
+          "triggerRules": [],
+          "requirements": "Eine geführte Schwertwaffe.",
+          "damageType": "Hieb",
+          "range": "Nahkampf",
+          "status": "confirmed",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "maximumTargets": 1,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "mechanicNotes": [],
+          "minimumLevel": 2,
+          "damageModel": {
+            "bonusFormula": "",
+            "weaponDiceMultiplier": 1,
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "mechanics": {
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "maximumHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attack": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "damage": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "armorClass": 0,
+            "skill": 0,
+            "passivePerception": 0,
+            "spellAttack": 0
+          },
+          "costs": [
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-action",
+              "resourceId": "action",
+              "name": "Aktion"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "scope": "comment",
+              "amount": 1
+            }
+          ],
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "targetDefenseModifier": 0,
+          "active": true,
+          "name": "Biss des Jungdrachens",
+          "target": "Ein Gegner",
+          "rollMode": "normal",
+          "damageBonus": 0,
+          "damageFormula": "",
+          "effects": [],
+          "description": "Der Anwender verdichtet den einfachen Hieb zu einem kurzen, präzisen Vorstoß.",
+          "weaponTypes": [
+            "sword"
+          ]
+        },
+        {
+          "damageBonus": 0,
+          "effect": "Die kurze Antwort aus der Deckung verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "damageType": "Hieb",
+          "combatStyleId": "drachentanz",
+          "rollMode": "normal",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "minimumLevel": 3,
+          "weaponTypes": [
+            "sword"
+          ],
+          "description": "Zwei fließend verbundene Schnittlinien treffen wie die gekreuzten Klauen eines jungen Drachen.",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "damageModel": {
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusWeaponDieCap": 4,
+            "weaponDiceMultiplier": 1
+          },
+          "active": true,
+          "effects": [],
+          "target": "Ein Gegner",
+          "activationType": "reaction",
+          "followUpAttack": {
+            "damageFormula": "",
+            "inheritBonusDamage": true,
+            "sameTarget": true,
+            "triggerReactions": true,
+            "triggerFurtherEffects": false,
+            "inheritDamageModifier": true,
+            "repeatCount": 1,
+            "enabled": false,
+            "damageType": "",
+            "repeatPerAttackRules": true,
+            "damageBonus": 0,
+            "attackBonus": 0
+          },
+          "cenyrTraining": {
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "selectedAtLevel": 3,
+            "branchId": "teulu-sword",
+            "uchelwyrCompatible": false,
+            "assignedSlotId": "foundation-03",
+            "sourceStatus": "confirmed",
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "teulu"
+            ]
+          },
+          "secondarySave": {
+            "addProficiency": true,
+            "failureCondition": {
+              "name": "",
+              "id": "technique-save-condition",
+              "mechanics": {
+                "spellAttack": 0,
+                "savingThrowAdvantageAttributes": [],
+                "bonusDamageFormula": "",
+                "combatStartTemporaryHitPoints": 0,
+                "movement": 0,
+                "damage": 0,
+                "initiative": 0,
+                "armorClass": 0,
+                "attack": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrow": 0,
+                "skill": 0,
+                "maximumHitPoints": 0,
+                "spellSaveDc": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal"
+              },
+              "duration": "",
+              "description": ""
+            },
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "enabled": false,
+            "attributeKey": "constitution"
+          },
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "costs": [
+            {
+              "name": "Reaktion",
+              "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen-reaction",
+              "resourceId": "reaction",
+              "scope": "comment",
+              "amount": 1
+            }
+          ],
+          "name": "Gekreuzte Klauen",
+          "damageFormula": "",
+          "range": "Nahkampf",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "criticalThreshold": 20,
+          "attackBonus": 0,
+          "compatibleWeaponIds": [],
+          "maximumTargets": 1,
+          "category": "technique",
+          "duration": "Sofort",
+          "mechanicNotes": [],
+          "requirements": "Eine geführte Schwertwaffe.",
+          "triggerRules": [],
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "targetDefenseModifier": 0,
+          "mechanics": {
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "damage": 0,
+            "savingThrow": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "movement": 0
+          },
+          "status": "confirmed"
+        },
+        {
+          "activationType": "action",
+          "followUpAttack": {
+            "damageType": "",
+            "repeatCount": 1,
+            "triggerFurtherEffects": false,
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "damageFormula": "",
+            "triggerReactions": true,
+            "sameTarget": true,
+            "repeatPerAttackRules": true,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "enabled": false
+          },
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 4,
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": ""
+          },
+          "id": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+          "secondarySave": {
+            "enabled": false,
+            "dcAttributeKey": "strength",
+            "failureCondition": {
+              "mechanics": {
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "maximumHitPoints": 0,
+                "attack": 0,
+                "spellAttack": 0,
+                "damage": 0,
+                "movement": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "initiative": 0,
+                "savingThrow": 0,
+                "armorClass": 0,
+                "spellSaveDc": 0,
+                "skill": 0
+              },
+              "name": "",
+              "duration": "",
+              "description": "",
+              "id": "technique-save-condition"
+            },
+            "dcBase": 8,
+            "attributeKey": "constitution",
+            "addProficiency": true
+          },
+          "cenyrTraining": {
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "slotBands": [
+              "foundation"
+            ],
+            "assignedSlotId": "foundation-04",
+            "requiresMounted": false,
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "selectedAtLevel": 4,
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "sourceStatus": "confirmed",
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "branchId": "teulu-sword"
+          },
+          "aiInstructions": "Reiner Flächenschaden. Denselben Schadenswurf auf alle ausgewählten Ziele anwenden; Schaden nicht doppelt addieren.",
+          "tags": "Drachentanz · Form I · Jungdrache · Flächenschaden",
+          "criticalThreshold": 20,
+          "duration": "Sofort",
+          "category": "technique",
+          "damageBonus": 0,
+          "range": "3 Meter Umkreis",
+          "name": "Schweifkreis des Jungdrachens",
+          "minimumLevel": 4,
+          "weaponTypes": [
+            "sword"
+          ],
+          "combatStyleId": "drachentanz",
+          "status": "confirmed",
+          "description": "Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.",
+          "compatibleWeaponIds": [],
+          "attackBonus": 0,
+          "effects": [
+            {
+              "magical": false,
+              "amount": 0,
+              "channelComments": 0,
+              "target": "selected",
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "nonlethal": false,
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-area-damage",
+              "type": "damage",
+              "formula": "",
+              "notes": "Trifft alle ausgewählten Gegner im Umkreis von 3 Metern.",
+              "summon": null,
+              "resourceId": "",
+              "movementMeters": 0,
+              "concentration": false,
+              "damageType": "Hieb",
+              "movementKind": "move",
+              "condition": null,
+              "conditionTags": "",
+              "conditionId": ""
+            }
+          ],
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "damageType": "Hieb",
+          "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden.",
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-action",
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action",
+              "scope": "comment"
+            },
+            {
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-bonus-action",
+              "name": "Bonusaktion"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-reaction",
+              "resourceId": "reaction",
+              "scope": "comment",
+              "name": "Reaktion",
+              "amount": 1
+            }
+          ],
+          "triggerRules": [],
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "maximumTargets": 20,
+          "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung.",
+          "mechanicNotes": [],
+          "target": "Mehrere ausgewählte Gegner im Umkreis",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "damageFormula": "",
+          "active": true,
+          "mechanics": {
+            "savingThrow": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "skill": 0,
+            "maximumHitPoints": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0
+          },
+          "rollMode": "normal",
+          "targetDefenseModifier": 0
+        },
+        {
+          "mechanics": {
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "spellSaveDc": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "movement": 0,
+            "skill": 0,
+            "initiative": 0,
+            "armorClass": 0
+          },
+          "name": "Stürmende Drachenspur",
+          "duration": "Sofort",
+          "category": "technique",
+          "mechanicNotes": [],
+          "criticalThreshold": 20,
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "compatibleWeaponIds": [],
+          "costs": [
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-action",
+              "name": "Aktion",
+              "resourceId": "action"
+            },
+            {
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-bonus-action",
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "bonus-action"
+            },
+            {
+              "amount": 1,
+              "scope": "comment",
+              "name": "Reaktion",
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-reaction",
+              "resourceId": "reaction"
+            }
+          ],
+          "status": "confirmed",
+          "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+          "requirements": "Eine geführte Schwertwaffe.",
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "attackBonus": 0,
+          "damageFormula": "",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "activationType": "action",
+          "followUpAttack": {
+            "repeatPerAttackRules": true,
+            "enabled": false,
+            "triggerFurtherEffects": false,
+            "triggerReactions": true,
+            "sameTarget": true,
+            "repeatCount": 1,
+            "inheritBonusDamage": true,
+            "damageFormula": "",
+            "inheritDamageModifier": true,
+            "attackBonus": 0,
+            "damageType": "",
+            "damageBonus": 0
+          },
+          "secondarySave": {
+            "dcBase": 8,
+            "attributeKey": "constitution",
+            "addProficiency": true,
+            "failureCondition": {
+              "duration": "",
+              "mechanics": {
+                "bonusDamageFormula": "",
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "combatStartTemporaryHitPoints": 0,
+                "movement": 0,
+                "spellAttack": 0,
+                "maximumHitPoints": 0,
+                "savingThrowAdvantageAttributes": [],
+                "attack": 0,
+                "damage": 0,
+                "skill": 0,
+                "spellSaveDc": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrow": 0,
+                "initiative": 0,
+                "armorClass": 0
+              },
+              "description": "",
+              "id": "technique-save-condition",
+              "name": ""
+            },
+            "dcAttributeKey": "strength",
+            "enabled": false
+          },
+          "cenyrTraining": {
+            "sourceStatus": "confirmed",
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "branchId": "teulu-sword",
+            "selectedAtLevel": 5,
+            "assignedSlotId": "foundation-05",
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "uchelwyrCompatible": false
+          },
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "active": true,
+          "minimumLevel": 5,
+          "target": "Ein Gegner",
+          "damageBonus": 0,
+          "effects": [],
+          "description": "Ein schneller Antritt bündelt den Schwung des Anwenders in einem einzigen durchgezogenen Schnitt.",
+          "weaponTypes": [
+            "sword"
+          ],
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "maximumTargets": 1,
+          "damageModel": {
+            "bonusWeaponDieCap": 6,
+            "mode": "weapon-dice",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": "",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 1
+          },
+          "range": "Nahkampf",
+          "rollMode": "normal",
+          "damageType": "Hieb",
+          "combatStyleId": "drachentanz"
+        }
+      ],
+      "aura": {
+        "name": "Aura",
+        "activeForm": {
+          "selfMechanics": {
+            "spellAttack": 0,
+            "damage": 0,
+            "attack": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellSaveDc": 0
+          },
+          "duration": "",
+          "trigger": "",
+          "radius": "",
+          "requirements": "",
+          "enabled": false,
+          "aiInstructions": "",
+          "allyMechanics": {
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "movement": 0,
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "damage": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "initiative": 0
+          },
+          "description": "",
+          "enemyMechanics": {
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "skill": 0,
+            "attack": 0,
+            "damage": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0
+          },
+          "target": "Selbst und gewählte Ziele",
+          "active": false,
+          "name": "Aktive Form"
+        },
+        "focusBypassCost": 1,
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "latentPresence": {
+          "requirements": "",
+          "enemyMechanics": {
+            "bonusDamageFormula": "",
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "attack": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "spellAttack": 0,
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": []
+          },
+          "name": "Latente Präsenz",
+          "description": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "skill": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "movement": 0
+          },
+          "allyMechanics": {
+            "savingThrow": 0,
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "attack": 0,
+            "damage": 0
+          },
+          "trigger": "",
+          "radius": "",
+          "enabled": true,
+          "duration": "",
+          "active": true,
+          "target": "Umgebung, Verbündete und Gegner"
+        },
+        "notes": "",
+        "enabled": false
+      },
+      "templateSelections": {
+        "classId": "teulu",
+        "appliedAt": "2026-08-03T18:26:10.936Z",
+        "schemaVersion": 1,
+        "attributeMethod": "point-buy",
+        "backgroundId": "ritter",
+        "ancestryId": "cenyr"
+      },
+      "attributes": [
+        {
+          "modifierOverride": null,
+          "shortLabel": "KRF",
+          "score": 15,
+          "key": "strength",
+          "label": "Kraft"
+        },
+        {
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 16,
+          "modifierOverride": null,
+          "key": "dexterity"
+        },
+        {
+          "shortLabel": "KON",
+          "modifierOverride": null,
+          "score": 12,
+          "key": "constitution",
+          "label": "Konstitution"
+        },
+        {
+          "label": "Intelligenz",
+          "key": "intelligence",
+          "shortLabel": "INT",
+          "score": 9,
+          "modifierOverride": null
+        },
+        {
+          "score": 8,
+          "label": "Weisheit",
+          "key": "wisdom",
+          "shortLabel": "WEI",
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "shortLabel": "CHA",
+          "score": 16,
+          "label": "Charisma",
+          "modifierOverride": null
+        }
+      ],
+      "progression": {
+        "level": 5,
+        "nextLevelExperience": null,
+        "experience": 0,
+        "proficiencyBonusOverride": null,
+        "experienceReward": null,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "specialLevels": 0
+      },
+      "abilities": [
+        {
+          "rollFormula": "",
+          "recovery": "day",
+          "duration": "Sofort",
+          "inventoryUseTrigger": {
+            "requireActualRecovery": true,
+            "restoreResources": [
+              {
+                "resourceId": "special-action",
+                "amount": 1,
+                "id": "gawain-liebt-duefte-special-action"
+              }
+            ],
+            "enabled": true,
+            "itemTags": [
+              "duft",
+              "parfüm",
+              "parfum"
+            ]
+          },
+          "saveAttribute": "dexterity",
+          "effects": [],
+          "recoveryDayKey": "",
+          "costs": [],
+          "id": "gawain-liebt-duefte",
+          "resolutionType": "",
+          "usesMaximum": 1,
+          "halfDamageOnSave": false,
+          "usesCurrent": 1,
+          "concentration": false,
+          "range": "Selbst",
+          "tags": "Duft · Parfüm · Regeneration",
+          "delivery": "ability",
+          "aiInstructions": "Erzähle den angenehmen Duft immersiv. Die Regeneration gilt nur, wenn der serverseitige Inventarnutzungseffekt protokolliert wurde.",
+          "description": "Beim Benutzen eines Dufts oder Parfüms regeneriert Gawain einen Punkt Besondere Aktion.",
+          "channelComments": 0,
+          "activationType": "passive",
+          "target": "Selbst",
+          "active": true,
+          "requirements": "Ein benutzter Inventargegenstand muss als Duft oder Parfüm erkennbar sein. Bei voller Besonderer Aktion wird die Tagesnutzung nicht verbraucht.",
+          "triggerRules": [],
+          "combatUsable": false,
+          "damageType": "physisch",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": false
+          },
+          "name": "Liebt Düfte",
+          "mechanics": {
+            "passivePerception": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "movement": 0,
+            "attack": 0,
+            "spellAttack": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "skill": 0
+          }
+        },
+        {
+          "costs": [],
+          "mechanics": {
+            "attackRollMode": "normal",
+            "movement": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0
+          },
+          "description": "Gawains starke Prägung durch seine Mutter macht ihn in bestimmten sozialen, weltlichen und religiösen Situationen unsicher.",
+          "effects": [],
+          "delivery": "ability",
+          "channelComments": 0,
+          "inventoryUseTrigger": {
+            "requireActualRecovery": true,
+            "restoreResources": [],
+            "enabled": false,
+            "itemTags": []
+          },
+          "resolutionType": "",
+          "recoveryDayKey": "",
+          "target": "Selbst",
+          "name": "Muttersöhnchen",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": false,
+            "cost": 1
+          },
+          "active": true,
+          "damageType": "physisch",
+          "concentration": false,
+          "activationType": "passive",
+          "halfDamageOnSave": false,
+          "triggerRules": [
+            {
+              "authority": "passive",
+              "phase": "pre-roll",
+              "id": "gawain-muttersoehnchen-skill-disadvantage",
+              "actionScope": "global",
+              "resultEffects": [],
+              "costs": [],
+              "requiredTargetTags": [],
+              "condition": "always",
+              "actionKinds": [
+                "skill"
+              ],
+              "recipient": "actor",
+              "skillIds": [
+                "seduction",
+                "persuasion",
+                "deception",
+                "performance",
+                "survival",
+                "insight",
+                "religion"
+              ],
+              "priority": 0,
+              "enabled": true,
+              "activation": "passive",
+              "effects": {
+                "savingThrowModifier": 0,
+                "damageReduction": 0,
+                "spellSaveDcModifier": 0,
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "rollMode": "disadvantage",
+                "defenseModifier": 0,
+                "skillModifier": 0,
+                "outcome": "none"
+              },
+              "sourceRelation": "self",
+              "consumeReaction": false,
+              "frequency": "always",
+              "name": "Unsicherheit durch mütterliche Prägung",
+              "radiusMeters": null,
+              "description": "Gawain würfelt die festgelegten Fertigkeitsversuche mit Nachteil."
+            }
+          ],
+          "aiInstructions": "Berücksichtige den Nachteil nur bei Flirten, Überreden, Täuschen, Auftreten, Überleben, Motiv erkennen und Religion.",
+          "rollFormula": "",
+          "requirements": "Gilt nur für die ausdrücklich hinterlegten Fertigkeiten.",
+          "combatUsable": false,
+          "usesCurrent": 0,
+          "id": "gawain-muttersoehnchen",
+          "duration": "Dauerhaft",
+          "range": "Selbst",
+          "recovery": "none",
+          "usesMaximum": 0,
+          "tags": "Persönlichkeit · soziale Unsicherheit",
+          "saveAttribute": "dexterity"
+        },
+        {
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "duration": "Solange der Ring getragen wird",
+          "usesMaximum": 0,
+          "mechanics": {
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "spellAttack": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "damage": 0,
+            "spellSaveDc": 0,
+            "attack": 0,
+            "savingThrow": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0
+          },
+          "requirements": "Draig-Rittersiegelring angelegt",
+          "resolutionType": "",
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "triggerRules": [
+            {
+              "description": "+1 auf Überzeugen, solange der Draig-Rittersiegelring getragen wird.",
+              "resultEffects": [],
+              "id": "gawain-draig-draig-knight-signet-persuasion",
+              "recipient": "actor",
+              "activation": "passive",
+              "condition": "always",
+              "name": "Autorität des Draig-Siegels",
+              "requiredTargetTags": [],
+              "radiusMeters": null,
+              "authority": "passive",
+              "enabled": true,
+              "effects": {
+                "rollMode": "normal",
+                "defenseModifier": 0,
+                "skillModifier": 1,
+                "outcome": "none",
+                "damageReduction": 0,
+                "damageModifier": 0,
+                "attackModifier": 0,
+                "spellSaveDcModifier": 0,
+                "savingThrowModifier": 0
+              },
+              "phase": "pre-roll",
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "persuasion"
+              ],
+              "frequency": "always",
+              "priority": 0,
+              "actionScope": "global",
+              "sourceRelation": "self",
+              "costs": [],
+              "consumeReaction": false
+            }
+          ],
+          "usesCurrent": 0,
+          "damageType": "physisch",
+          "channelComments": 0,
+          "rollFormula": "",
+          "active": true,
+          "id": "gawain-draig-draig-knight-signet",
+          "target": "Selbst",
+          "combatUsable": false,
+          "range": "Selbst",
+          "delivery": "ability",
+          "tags": "Ausrüstung · Draig · Rittersiegel · Sozial",
+          "inventoryUseTrigger": {
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true,
+            "enabled": false
+          },
+          "concentration": false,
+          "costs": [],
+          "effects": [],
+          "activationType": "passive",
+          "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+          "aiInstructions": "Berücksichtige den Bonus ausschließlich bei Überzeugen-Proben.",
+          "name": "Draig-Rittersiegelring",
+          "halfDamageOnSave": false,
+          "saveAttribute": "dexterity"
+        }
+      ]
+    },
+    "inventory": {
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "items": [
+        {
+          "combatDefinition": {
+            "damageBonus": 0,
+            "damageType": "Hieb",
+            "kind": "weapon",
+            "training": "martial",
+            "weaponType": "sword",
+            "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+            "versatileDamageFormula": "1d10",
+            "notes": "Hauswaffe der Draigs.",
+            "damageFormula": "1d8",
+            "attackBonus": 0,
+            "range": "Nahkampf",
+            "requirements": "",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+          },
+          "originItemDbKey": "",
+          "equipped": true,
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "description": "Hauswaffe der Draigs.",
+          "itemDbKey": "",
+          "type": "Ritterschwert",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "ownerCharacterName": "Gawain Draig",
+          "imagePosition": "center",
+          "tags": "Vielseitig · 1W10 bei zweihändiger Führung",
+          "individualizedAt": "",
+          "weight": "1,5 kg",
+          "acquiredAt": "",
+          "image": "",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "icon": "*",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "gawain-draig-knightly-sword"
+          },
+          "category": "weapon",
+          "id": "item-mqu1vat1-0-w8ef",
+          "name": "Drachenzahn · Draig-Ritterschwert",
+          "quantity": "1"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "Plattenrüstung · Wappenrock · geschlossener Helm",
+          "ownerCharacterName": "Gawain Draig",
+          "quantity": "1",
+          "name": "Silberschuppe · Draig-Rüstung",
+          "category": "armor",
+          "image": "",
+          "combatDefinition": {
+            "baseArmorClass": 16,
+            "armorKind": "armor",
+            "dexterityMode": "full",
+            "kind": "armor",
+            "armorClassBonus": 0,
+            "dexterityCap": 2,
+            "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+            "properties": "Plattenrüstung · Wappenrock · geschlossener Helm",
+            "dexterityUnlockLevel": 12
+          },
+          "icon": "*",
+          "itemDbKey": "",
+          "description": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "equipped": true,
+          "originItemDbKey": "",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "gawain-draig-armor",
+            "kind": "armor"
+          },
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "type": "Plattenrüstung mit Wappenrock und Helm",
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [],
+          "individualizedAt": "",
+          "weight": "25 kg"
+        },
+        {
+          "name": "Draig Dolch",
+          "acquiredAt": "",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "category": "weapon",
+          "itemStorageMode": "character",
+          "tags": "Finesse · leicht · Wurfwaffe",
+          "combatDefinition": {
+            "damageBonus": 0,
+            "proficient": true,
+            "damageFormula": "1d4",
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+            "versatileDamageFormula": "",
+            "training": "simple",
+            "requirements": "",
+            "notes": "Seitenwaffe des Hauses Draig.",
+            "kind": "weapon",
+            "damageType": "Stich",
+            "weaponType": "dagger",
+            "properties": "Finesse · leicht · Wurfwaffe",
+            "attackBonus": 0,
+            "range": "Nahkampf",
+            "attackAttribute": "dexterity"
+          },
+          "infoRows": [],
+          "ownerCharacterName": "Gawain Draig",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "description": "Seitenwaffe des Hauses Draig.",
+          "imageFormat": "square",
+          "weight": "0,5 kg",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "type": "Dolch",
+          "equipped": false,
+          "imageFit": "contain",
+          "id": "gawain-draig-dagger-item",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "gawain-draig-dagger",
+            "schemaVersion": 1
+          },
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "individualizedAt": ""
+        },
+        {
+          "category": "equipment",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemStorageMode": "character",
+          "image": "",
+          "individualizedAt": "",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFormat": "square",
+          "type": "Ausrüstung",
+          "equipmentLink": null,
+          "id": "item-mqu1vat1-2-0fx2",
+          "infoRows": [],
+          "itemDbKey": "",
+          "combatDefinition": null,
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "equipped": false,
+          "imageFit": "contain",
+          "ownerCharacterName": "",
+          "imagePosition": "center"
+        },
+        {
+          "individualizedAt": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFormat": "square",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "icon": "*",
+          "itemStorageMode": "character",
+          "image": "",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "equipped": false,
+          "imageFit": "contain",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "itemDbKey": "",
+          "category": "potions",
+          "combatDefinition": null,
+          "acquiredAt": "",
+          "type": "Trinktur",
+          "imagePosition": "center",
+          "equipmentLink": null,
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-3-2lgm"
+        },
+        {
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "type": "Dokument",
+          "category": "documents",
+          "combatDefinition": null,
+          "quantity": "1",
+          "image": "",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "icon": "*",
+          "equipped": false,
+          "imageFit": "contain",
+          "equipmentLink": null,
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "id": "item-mqu1vat1-4-ajrj",
+          "tags": ""
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": "",
+        "step": 0,
+        "status": "",
+        "open": false
+      },
+      "infoRows": [],
+      "revision": 1786237318053,
+      "portraitFit": "cover",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "carryLabel": "Traglast",
+      "companions": [
+        {
+          "status": "Prächtig, aber launisch",
+          "role": "Reittier",
+          "statusColor": "#c2883e",
+          "imagePosition": "top",
+          "summary": "Eitler, prachtvoller Rhyfelhengst – liebt rote Äpfel, hasst Schlamm und Regen.",
+          "imageFit": "cover",
+          "description": "Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick\" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 7
+            },
+            {
+              "label": "Ausdauer",
+              "value": 6
+            },
+            {
+              "label": "Staerke",
+              "value": 7
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Tanor",
+          "species": "Rhyfel-Hengst",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "infoRows": [
+            {
+              "label": "Art",
+              "value": "Rhyfel-Hengst"
+            },
+            {
+              "label": "Besitzer",
+              "value": "Gawain Draig"
+            },
+            {
+              "label": "Rolle",
+              "value": "Reittier"
+            },
+            {
+              "label": "Kreaturbogen",
+              "value": "Tanor · Kreaturenregister"
+            }
+          ],
+          "image": "https://i.imgur.com/YcL98jJ.png"
+        },
+        {
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "role": "Gefährte",
+          "description": "",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "infoRows": [],
+          "name": "Treuer Begleiter",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "species": "Tier / Person",
+          "image": "",
+          "status": "Noch festlegen"
+        }
+      ],
+      "showInfoTable": false,
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "role": "Mundschenk des Grafen, Gwynthor",
+      "status": "Gesund",
+      "portraitFormat": "portrait",
+      "name": "Gawain Draig",
+      "moneyNotice": "",
+      "characterId": "q1QtSIug74FzzwUAqWrs",
+      "moneyState": {
+        "gold": 0,
+        "totalCopper": 0,
+        "silver": 0,
+        "copper": 0
+      },
+      "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+    }
+  },
+  {
+    "id": "person--haus-gafyr--gildas-gafyr",
+    "name": "Gildas Gafyr",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+    "combatProfile": {
+      "classTraining": {
+        "curriculumId": "cenyr-teulu",
+        "techniqueSelections": [
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+            "selectedAtLevel": 1,
+            "slotId": "foundation-01"
+          },
+          {
+            "selectedAtLevel": 2,
+            "techniqueId": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+            "slotId": "foundation-02"
+          },
+          {
+            "slotId": "foundation-03",
+            "selectedAtLevel": 3,
+            "techniqueId": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen"
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+            "slotId": "foundation-04",
+            "selectedAtLevel": 4
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+            "slotId": "foundation-05",
+            "selectedAtLevel": 5
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
+            "slotId": "foundation-06",
+            "selectedAtLevel": 6
+          }
+        ],
+        "schemaVersion": 2,
+        "selections": []
+      },
+      "progression": {
+        "specialLevels": 0,
+        "actionPoolChoices": [],
+        "experienceReward": null,
+        "nextLevelExperience": null,
+        "experience": 0,
+        "resourceRulesVersion": 2,
+        "level": 6,
+        "proficiencyBonusOverride": null
+      },
+      "hitPoints": {
+        "vitality": {
+          "overrideAnchor": null,
+          "version": 1,
+          "legacyIncrease": 13
+        },
+        "temporary": 0,
+        "current": 58,
+        "hitDie": 10,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null
+      },
+      "cheats": {
+        "automaticCritical": false,
+        "enabled": false
+      },
+      "magic": {
+        "spells": [],
+        "spellSaveDcOverride": null,
+        "spellAttackOverride": null,
+        "casterTier": "full",
+        "notes": "",
+        "castingAttribute": "intelligence",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "bypassResourceId": "",
+        "focusResourceId": "focus",
+        "focusEnabled": false,
+        "manaResourceId": "mana-focus",
+        "enabled": false
+      },
+      "savingThrows": [
+        {
+          "expertise": false,
+          "attributeKey": "strength",
+          "proficient": true,
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "proficient": false,
+          "expertise": false,
+          "attributeKey": "dexterity"
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "constitution",
+          "expertise": false,
+          "proficient": true
+        },
+        {
+          "proficient": false,
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "expertise": false
+        },
+        {
+          "proficient": false,
+          "bonus": 0,
+          "expertise": false,
+          "attributeKey": "wisdom"
+        },
+        {
+          "attributeKey": "charisma",
+          "expertise": false,
+          "proficient": false,
+          "bonus": 0
+        }
+      ],
+      "armorItems": [
+        {
+          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+          "baseArmorClass": 16,
+          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "armorClassBonus": 0,
+          "dexterityMode": "full",
+          "image": "https://i.imgur.com/7siJPXG.png",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 12,
+          "kind": "armor",
+          "inventoryItemId": "gildas-gafyr-watch-armor-item",
+          "equipped": true,
+          "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+          "id": "gildas-gafyr-watch-armor"
+        }
+      ],
+      "damageAffinities": [],
+      "resources": [
+        {
+          "scope": "persistent",
+          "current": 0,
+          "notes": "",
+          "icon": "",
+          "category": "",
+          "recovery": "manual",
+          "id": "inspiration",
+          "name": "Inspiration",
+          "maximum": 1
+        },
+        {
+          "icon": "",
+          "current": 0,
+          "notes": "",
+          "id": "mana-focus",
+          "scope": "persistent",
+          "category": "magic",
+          "maximum": 0,
+          "recovery": "day",
+          "name": "Mana"
+        },
+        {
+          "recovery": "day",
+          "icon": "",
+          "id": "celestial-points",
+          "category": "celestial",
+          "notes": "",
+          "scope": "persistent",
+          "current": 0,
+          "name": "Celestiale Punkte",
+          "maximum": 0
+        },
+        {
+          "current": 0,
+          "icon": "",
+          "id": "infernal-points",
+          "notes": "",
+          "name": "Infernale Punkte",
+          "maximum": 0,
+          "scope": "persistent",
+          "recovery": "day",
+          "category": "infernal"
+        },
+        {
+          "name": "Aktion",
+          "maximum": 1,
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "recovery": "scene",
+          "current": 1,
+          "scope": "comment",
+          "category": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "id": "action"
+        },
+        {
+          "category": "action",
+          "recovery": "scene",
+          "current": 1,
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "scope": "comment",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "maximum": 1
+        },
+        {
+          "name": "Reaktion",
+          "current": 1,
+          "id": "reaction",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "recovery": "scene",
+          "maximum": 1,
+          "scope": "comment",
+          "category": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "recovery": "day",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "category": "action",
+          "maximum": 2,
+          "scope": "persistent",
+          "notes": "",
+          "current": 2,
+          "id": "special-action",
+          "name": "Besondere Aktion"
+        },
+        {
+          "maximum": 0,
+          "name": "Aura-Fokuspunkt",
+          "id": "aura-focus",
+          "category": "action",
+          "recovery": "day",
+          "notes": "",
+          "scope": "persistent",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "current": 0
+        },
+        {
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "name": "Zauberplatz I",
+          "current": 0,
+          "id": "spell-slot-1",
+          "icon": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "spellLevel": 2,
+          "icon": "",
+          "current": 0,
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz II",
+          "id": "spell-slot-2"
+        },
+        {
+          "scope": "persistent",
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "recovery": "long-rest",
+          "icon": "",
+          "maximum": 0,
+          "spellLevel": 3,
+          "name": "Zauberplatz III",
+          "id": "spell-slot-3"
+        },
+        {
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "category": "spell-slot",
+          "icon": "",
+          "maximum": 0,
+          "id": "spell-slot-4",
+          "spellLevel": 4,
+          "name": "Zauberplatz IV"
+        },
+        {
+          "icon": "",
+          "recovery": "long-rest",
+          "spellLevel": 5,
+          "category": "spell-slot",
+          "maximum": 0,
+          "name": "Zauberplatz V",
+          "id": "spell-slot-5",
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0
+        },
+        {
+          "current": 0,
+          "name": "Zauberplatz VI",
+          "id": "spell-slot-6",
+          "icon": "",
+          "category": "spell-slot",
+          "maximum": 0,
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "spellLevel": 6,
+          "scope": "persistent"
+        },
+        {
+          "icon": "",
+          "current": 0,
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "spellLevel": 7,
+          "name": "Zauberplatz VII",
+          "scope": "persistent",
+          "id": "spell-slot-7",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0
+        },
+        {
+          "recovery": "long-rest",
+          "maximum": 0,
+          "category": "spell-slot",
+          "icon": "",
+          "scope": "persistent",
+          "id": "spell-slot-8",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "spellLevel": 8,
+          "current": 0,
+          "name": "Zauberplatz VIII"
+        },
+        {
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "id": "spell-slot-9",
+          "icon": "",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "current": 0,
+          "recovery": "long-rest",
+          "name": "Zauberplatz X",
+          "spellLevel": 10,
+          "category": "spell-slot",
+          "id": "spell-slot-10",
+          "icon": "",
+          "maximum": 0,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "scope": "persistent"
+        },
+        {
+          "maximum": 0,
+          "icon": "",
+          "current": 0,
+          "scope": "persistent",
+          "notes": "",
+          "id": "focus",
+          "category": "focus",
+          "name": "Fokus",
+          "recovery": "day"
+        },
+        {
+          "icon": "",
+          "id": "pact-points",
+          "maximum": 0,
+          "notes": "",
+          "scope": "persistent",
+          "current": 0,
+          "recovery": "day",
+          "category": "pact",
+          "name": "Paktpunkte"
+        }
+      ],
+      "skills": [
+        {
+          "bonus": 0,
+          "name": "Athletik",
+          "proficiency": "trained",
+          "id": "default-skill-1",
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "attributeKey": "strength"
+        },
+        {
+          "name": "Akrobatik",
+          "id": "default-skill-2",
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "bonus": 0,
+          "attributeKey": "dexterity",
+          "proficiency": "trained"
+        },
+        {
+          "notes": "",
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "bonus": 0,
+          "proficiency": "none",
+          "attributeKey": "dexterity"
+        },
+        {
+          "bonus": 0,
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "id": "default-skill-4",
+          "notes": ""
+        },
+        {
+          "id": "default-skill-5",
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "notes": "",
+          "proficiency": "none",
+          "name": "Arkane Kunde"
+        },
+        {
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "proficiency": "trained",
+          "name": "Geschichte",
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "id": "default-skill-6"
+        },
+        {
+          "bonus": 0,
+          "notes": "",
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence",
+          "proficiency": "none"
+        },
+        {
+          "id": "default-skill-8",
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "name": "Naturkunde",
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "bonus": 0,
+          "id": "default-skill-9",
+          "attributeKey": "intelligence",
+          "name": "Religion",
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "proficiency": "trained"
+        },
+        {
+          "proficiency": "none",
+          "bonus": 0,
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "id": "default-skill-10",
+          "notes": ""
+        },
+        {
+          "id": "default-skill-11",
+          "notes": "",
+          "name": "Mit Tieren umgehen",
+          "proficiency": "none",
+          "bonus": 0,
+          "attributeKey": "wisdom"
+        },
+        {
+          "attributeKey": "wisdom",
+          "notes": "Besonders ausgeprägt durch Disziplin und Menschenbeobachtung",
+          "proficiency": "expertise",
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "name": "Überleben",
+          "proficiency": "none",
+          "id": "default-skill-13",
+          "notes": "",
+          "attributeKey": "wisdom"
+        },
+        {
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "bonus": 0
+        },
+        {
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "id": "default-skill-15",
+          "attributeKey": "charisma",
+          "proficiency": "trained",
+          "bonus": 0,
+          "name": "Auftreten"
+        },
+        {
+          "id": "default-skill-16",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Einschüchtern",
+          "notes": "",
+          "attributeKey": "charisma"
+        },
+        {
+          "attributeKey": "charisma",
+          "name": "Täuschen",
+          "notes": "",
+          "id": "default-skill-17",
+          "bonus": 0,
+          "proficiency": "none"
+        },
+        {
+          "id": "default-skill-18",
+          "notes": "Geübt durch Herkunft, Ritterstand oder Teulu-Ausbildung",
+          "attributeKey": "charisma",
+          "proficiency": "trained",
+          "name": "Überreden",
+          "bonus": 0
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "name": "Flirten",
+          "id": "default-skill-19",
+          "notes": ""
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "proficiency": "expertise",
+          "name": "Körperbeherrschung",
+          "notes": "Besonders ausgeprägt durch Disziplin und Menschenbeobachtung",
+          "id": "default-skill-20"
+        }
+      ],
+      "aura": {
+        "latentPresence": {
+          "active": true,
+          "target": "Umgebung, Verbündete und Gegner",
+          "radius": "",
+          "enabled": true,
+          "description": "",
+          "requirements": "",
+          "trigger": "",
+          "name": "Latente Präsenz",
+          "selfMechanics": {
+            "spellSaveDc": 0,
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "attack": 0,
+            "bonusDamageFormula": "",
+            "savingThrow": 0,
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "initiative": 0,
+            "passivePerception": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "spellAttack": 0,
+            "movement": 0,
+            "skill": 0
+          },
+          "enemyMechanics": {
+            "skill": 0,
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "spellAttack": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0
+          },
+          "duration": "",
+          "allyMechanics": {
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "attack": 0,
+            "damage": 0,
+            "initiative": 0,
+            "movement": 0,
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "spellAttack": 0
+          },
+          "aiInstructions": ""
+        },
+        "notes": "",
+        "domain": "",
+        "enabled": false,
+        "name": "Aura",
+        "activeForm": {
+          "radius": "",
+          "enemyMechanics": {
+            "damage": 0,
+            "attack": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "attackRollMode": "normal",
+            "armorClass": 0,
+            "initiative": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "passivePerception": 0
+          },
+          "aiInstructions": "",
+          "description": "",
+          "active": false,
+          "allyMechanics": {
+            "spellAttack": 0,
+            "movement": 0,
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "skill": 0,
+            "spellSaveDc": 0
+          },
+          "duration": "",
+          "target": "Selbst und gewählte Ziele",
+          "selfMechanics": {
+            "spellAttack": 0,
+            "attackRollMode": "normal",
+            "skill": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "movement": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": []
+          },
+          "trigger": "",
+          "requirements": "",
+          "enabled": false,
+          "name": "Aktive Form"
+        },
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1
+      },
+      "conditions": [
+        {
+          "id": "gildas-vorschnelles-urteil",
+          "description": "Gildas beobachtet scharf, glaubt aber bisweilen zu früh, einen Menschen bereits verstanden zu haben. Besonders Verwöhntheit und missbrauchte Privilegien machen ihn unnachsichtig.",
+          "triggerRules": [],
+          "name": "Vorschnelles Urteil",
+          "duration": "Dauerhaft",
+          "active": true,
+          "source": "Junger Ritterstolz",
+          "mechanics": {
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "attack": 0,
+            "bonusDamageFormula": "",
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "skill": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0
+          }
+        }
+      ],
+      "revision": 1788656614552,
+      "templateSelections": {
+        "classId": "teulu",
+        "backgroundId": "ritter",
+        "ancestryId": "cenyr",
+        "appliedAt": "2026-09-03T19:30:00.000Z",
+        "schemaVersion": 1,
+        "attributeMethod": "free"
+      },
+      "weapons": [
+        {
+          "training": "simple",
+          "id": "default-unarmed-melee",
+          "costs": [
+            {
+              "resourceId": "action",
+              "id": "activation-action",
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1
+            }
+          ],
+          "ammunition": null,
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "activationType": "action",
+          "weaponProfileId": "",
+          "aiInstructions": "",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "versatileDamageFormula": "",
+          "attackBonus": 0,
+          "image": "",
+          "name": "Nahkampf",
+          "damageFormula": "1d4",
+          "equipped": false,
+          "proficient": true,
+          "attackAttribute": "strength",
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "weaponType": "unarmed",
+          "damageType": "Wucht",
+          "effects": [],
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": ""
+          },
+          "requirements": "",
+          "inventoryItemId": ""
+        },
+        {
+          "costs": [
+            {
+              "amount": 1,
+              "id": "gildas-gafyr-duty-sword-action",
+              "name": "Aktion",
+              "scope": "comment",
+              "resourceId": "action"
+            }
+          ],
+          "ammunition": null,
+          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+          "attackAttribute": "strength",
+          "equipped": true,
+          "name": "Pflichtschwur · Draig-Ritterschwert",
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "requirements": "",
+          "attackBonus": 0,
+          "inventoryItemId": "gildas-gafyr-duty-sword-item",
+          "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+          "effects": [],
+          "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+          "proficient": true,
+          "damageFormula": "1d8",
+          "damageBonus": 0,
+          "weaponProfileId": "",
+          "activationType": "action",
+          "training": "martial",
+          "id": "gildas-gafyr-duty-sword",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "range": "Nahkampf",
+          "weaponType": "sword",
+          "versatileDamageFormula": "1d10",
+          "damageType": "Hieb"
+        },
+        {
+          "damageFormula": "1d4",
+          "training": "simple",
+          "weaponProfileId": "",
+          "properties": "Finesse · leicht · Wurfwaffe",
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "id": "gildas-gafyr-dagger",
+          "name": "Draig-Dolch",
+          "ammunition": null,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "costs": [
+            {
+              "id": "gildas-gafyr-dagger-action",
+              "amount": 1,
+              "name": "Aktion",
+              "scope": "comment",
+              "resourceId": "action"
+            }
+          ],
+          "damageType": "Stich",
+          "notes": "Seitenwaffe des Hauses Draig.",
+          "requirements": "",
+          "activationType": "action",
+          "weaponType": "dagger",
+          "equipped": false,
+          "effects": [],
+          "attackAttribute": "dexterity",
+          "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+          "versatileDamageFormula": "",
+          "inventoryItemId": "gildas-gafyr-dagger-item",
+          "proficient": true,
+          "image": "https://i.imgur.com/caR593j.png",
+          "attackBonus": 0
+        }
+      ],
+      "schemaVersion": 11,
+      "identity": {
+        "archetype": "Teulu",
+        "background": "Ritter",
+        "ancestry": "Cenyr"
+      },
+      "proficiencies": {
+        "notes": "Die praktische Ausbildung und wiederholte Grundübungen stehen vor Prunk oder Turnierkunst.",
+        "weapons": [
+          "simple",
+          "martial",
+          "sword"
+        ],
+        "tools": [
+          "Heraldik und höfische Etikette",
+          "Pflege von Waffen und Rüstungen"
+        ],
+        "languages": [],
+        "armor": [
+          "medium",
+          "heavy"
+        ]
+      },
+      "quirks": [
+        {
+          "stacking": "normal",
+          "priority": 0,
+          "id": "starter-ancestry-cenyr-trait-1",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "triggerRules": [],
+          "type": "trait",
+          "mechanics": {
+            "spellAttack": 0,
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "damage": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "initiative": 0,
+            "armorClass": 0,
+            "passivePerception": 0,
+            "spellSaveDc": 0
+          },
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "active": true,
+          "name": "Cenyri Kultur",
+          "aiInstructions": "",
+          "target": "self",
+          "trigger": "",
+          "tags": "Volk · Cenyr",
+          "limitations": "",
+          "duration": ""
+        },
+        {
+          "target": "self",
+          "name": "Höfische und religiöse Prägung",
+          "mechanics": {
+            "skill": 0,
+            "attack": 0,
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "armorClass": 0,
+            "attackRollMode": "normal",
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "movement": 0,
+            "spellAttack": 0,
+            "passivePerception": 0
+          },
+          "priority": 0,
+          "stacking": "normal",
+          "triggerRules": [],
+          "active": true,
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "trigger": "",
+          "type": "trait",
+          "aiInstructions": "",
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "id": "starter-ancestry-cenyr-trait-2",
+          "duration": "",
+          "tags": "Volk · Cenyr",
+          "limitations": ""
+        },
+        {
+          "triggerRules": [],
+          "target": "self",
+          "limitations": "",
+          "tags": "Hintergrund · Ritter",
+          "active": true,
+          "duration": "",
+          "mechanics": {
+            "damage": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "spellAttack": 0,
+            "movement": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "initiative": 0,
+            "savingThrow": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "spellSaveDc": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0
+          },
+          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+          "type": "trait",
+          "priority": 0,
+          "stacking": "normal",
+          "id": "starter-background-ritter-trait-1",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "name": "Ritterliche Herkunft und Standespflicht",
+          "aiInstructions": "",
+          "trigger": ""
+        },
+        {
+          "active": true,
+          "trigger": "",
+          "duration": "",
+          "tags": "Marotte · Vorbereitung · Pünktlichkeit",
+          "target": "self",
+          "limitations": "Der Bonus entfällt erzählerisch, wenn Gildas überrascht oder ohne jede Vorbereitung in die Lage gezwungen wird.",
+          "description": "Gildas erscheint fast immer vor der vereinbarten Zeit und nutzt die Minuten, um Ort, Ausrüstung und Aufgabe zu prüfen.",
+          "mechanics": {
+            "spellAttack": 0,
+            "movement": 0,
+            "initiative": 1,
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "skill": 0,
+            "attack": 0,
+            "damage": 0,
+            "bonusDamageFormula": "",
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0
+          },
+          "type": "quirk",
+          "id": "gildas-puenktlich-heisst-zu-frueh",
+          "triggerRules": [],
+          "name": "Pünktlich heißt zu früh",
+          "priority": 0,
+          "stacking": "normal",
+          "appliesWhen": "Zu Beginn eines Kampfes oder einer vorbereiteten Aufgabe",
+          "aiInstructions": "Stelle die Vorbereitung als ruhige Routine dar, nicht als übernatürliche Vorahnung."
+        },
+        {
+          "description": "Gildas besitzt kein herausragendes Naturtalent; tausendfach wiederholte Abläufe und hoher Eigenanspruch machen ihn jedoch schwer aus der Fassung zu bringen.",
+          "active": true,
+          "id": "gildas-erarbeitete-standfestigkeit",
+          "target": "self",
+          "name": "Erarbeitete Standfestigkeit",
+          "appliesWhen": "Bei Rettungswürfen gegen Druck, Schmerz, Ablenkung oder Kontrollverlust",
+          "type": "trait",
+          "aiInstructions": "Beschreibe Erfolg als eingeübte Standfestigkeit statt als angeborene Brillanz.",
+          "stacking": "normal",
+          "priority": 0,
+          "duration": "",
+          "limitations": "Der pauschale Bonus ist bereits in der Kampfauflösung hinterlegt und darf nicht erneut addiert werden.",
+          "tags": "Passiv · Disziplin · Beharrlichkeit",
+          "triggerRules": [],
+          "trigger": "",
+          "mechanics": {
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "movement": 0,
+            "skill": 0,
+            "savingThrow": 1,
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "attack": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "damage": 0
+          }
+        },
+        {
+          "type": "ideal",
+          "description": "Eine angenommene Verantwortung gilt für Gildas erst dann als beendet, wenn die Aufgabe wirklich erfüllt und niemand zurückgelassen wurde.",
+          "trigger": "",
+          "target": "self",
+          "active": true,
+          "stacking": "normal",
+          "priority": 0,
+          "name": "Pflicht vor Bequemlichkeit",
+          "aiInstructions": "",
+          "appliesWhen": "Wenn eine Pflicht unbequem, gefährlich oder undankbar wird",
+          "id": "gildas-pflicht-vor-bequemlichkeit",
+          "tags": "Ideal · Pflicht · Rittertum",
+          "duration": "",
+          "limitations": "",
+          "mechanics": {
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "armorClass": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "skill": 0,
+            "movement": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "triggerRules": []
+        },
+        {
+          "tags": "Marotte · Mimik · Skepsis",
+          "stacking": "normal",
+          "priority": 0,
+          "limitations": "",
+          "mechanics": {
+            "skill": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "movement": 0,
+            "initiative": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "attack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "bonusDamageFormula": ""
+          },
+          "active": true,
+          "appliesWhen": "Bei Ausreden, Ausflüchten oder offensichtlicher Nachlässigkeit",
+          "type": "quirk",
+          "target": "self",
+          "triggerRules": [],
+          "description": "Bei schlechten Ausreden zieht Gildas unwillkürlich die Brauen zusammen. Seine Skepsis ist dadurch meist sichtbar, bevor er ein Wort sagt.",
+          "duration": "",
+          "name": "Brauen des Zweifels",
+          "aiInstructions": "",
+          "trigger": "",
+          "id": "gildas-brauen-des-zweifels"
+        },
+        {
+          "target": "self",
+          "duration": "",
+          "triggerRules": [],
+          "id": "gildas-trockener-humor",
+          "aiInstructions": "",
+          "active": true,
+          "tags": "Marotte · Humor · Ernst",
+          "limitations": "",
+          "mechanics": {
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "combatStartTemporaryHitPoints": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "damage": 0
+          },
+          "appliesWhen": "In ruhigen sozialen Szenen",
+          "name": "Trockener Humor",
+          "type": "quirk",
+          "description": "Offensichtliche Scherze lassen ihn oft nur blinzeln; eine leise, trockene Bemerkung kann ihm dagegen ein ehrliches Lachen entlocken.",
+          "stacking": "normal",
+          "priority": 0,
+          "trigger": ""
+        }
+      ],
+      "attributes": [
+        {
+          "shortLabel": "KRF",
+          "modifierOverride": null,
+          "key": "strength",
+          "label": "Kraft",
+          "score": 16
+        },
+        {
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 17,
+          "key": "dexterity",
+          "modifierOverride": null
+        },
+        {
+          "shortLabel": "KON",
+          "score": 13,
+          "key": "constitution",
+          "modifierOverride": null,
+          "label": "Konstitution"
+        },
+        {
+          "shortLabel": "INT",
+          "score": 12,
+          "key": "intelligence",
+          "modifierOverride": null,
+          "label": "Intelligenz"
+        },
+        {
+          "shortLabel": "WEI",
+          "key": "wisdom",
+          "label": "Weisheit",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "shortLabel": "CHA",
+          "key": "charisma",
+          "label": "Charisma",
+          "score": 15,
+          "modifierOverride": null
+        }
+      ],
+      "abilities": [
+        {
+          "delivery": "ability",
+          "rollFormula": "",
+          "concentration": false,
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "requireActualRecovery": true,
+            "itemTags": [],
+            "restoreResources": []
+          },
+          "halfDamageOnSave": false,
+          "effects": [],
+          "id": "gildas-gewissenhafte-vorbereitung",
+          "mechanics": {
+            "spellAttack": 0,
+            "movement": 0,
+            "bonusDamageFormula": "",
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "initiative": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrow": 0,
+            "skill": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0
+          },
+          "range": "Selbst",
+          "saveAttribute": "dexterity",
+          "usesMaximum": 0,
+          "damageType": "physisch",
+          "channelComments": 0,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": false,
+            "cost": 1
+          },
+          "usesCurrent": 0,
+          "recoveryDayKey": "",
+          "resolutionType": "",
+          "description": "Gildas geht Abläufe, Ausrüstung und mögliche Fehlerquellen vor einer Aufgabe durch. Sein erster passender Angriffs- oder Fertigkeitswurf einer Szene erhält +1.",
+          "recovery": "none",
+          "costs": [],
+          "duration": "Erster passender Wurf der Szene",
+          "activationType": "passive",
+          "target": "Selbst",
+          "triggerRules": [
+            {
+              "skillIds": [],
+              "activation": "passive",
+              "priority": 0,
+              "recipient": "actor",
+              "condition": "always",
+              "authority": "passive",
+              "enabled": true,
+              "radiusMeters": null,
+              "effects": {
+                "rollMode": "normal",
+                "spellSaveDcModifier": 0,
+                "outcome": "none",
+                "savingThrowModifier": 0,
+                "defenseModifier": 0,
+                "damageModifier": 0,
+                "attackModifier": 1,
+                "skillModifier": 1,
+                "damageReduction": 0
+              },
+              "description": "Einmal je Szene +1 auf den ersten passenden Angriffs- oder Fertigkeitswurf.",
+              "phase": "pre-roll",
+              "id": "gildas-gewissenhafte-vorbereitung-first-roll",
+              "requiredTargetTags": [],
+              "frequency": "scene",
+              "name": "Vorbereiteter erster Schritt",
+              "actionScope": "global",
+              "resultEffects": [],
+              "consumeReaction": false,
+              "costs": [],
+              "actionKinds": [
+                "weapon",
+                "technique",
+                "skill"
+              ],
+              "sourceRelation": "self"
+            }
+          ],
+          "active": true,
+          "name": "Gewissenhafte Vorbereitung",
+          "requirements": "Gildas darf nicht vollkommen unvorbereitet oder überrascht sein.",
+          "aiInstructions": "Der Bonus wird durch die Triggerregel automatisch eingerechnet und darf nicht doppelt addiert werden.",
+          "tags": "Passiv · Vorbereitung · Disziplin",
+          "combatUsable": false
+        },
+        {
+          "halfDamageOnSave": false,
+          "rollFormula": "",
+          "name": "Schutzpflicht",
+          "mechanics": {
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "movement": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "skill": 0,
+            "damage": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "duration": "Sofort",
+          "usesMaximum": 0,
+          "active": true,
+          "recovery": "none",
+          "tags": "Reaktion · Schutz · Ritterpflicht",
+          "recoveryDayKey": "",
+          "target": "Ein Verbündeter",
+          "resolutionType": "",
+          "range": "2 Meter",
+          "usesCurrent": 0,
+          "id": "gildas-schutzpflicht",
+          "triggerRules": [
+            {
+              "consumeReaction": true,
+              "requiredTargetTags": [],
+              "actionScope": "global",
+              "actionKinds": [],
+              "authority": "reaction",
+              "phase": "pre-damage",
+              "resultEffects": [],
+              "name": "In die Angriffslinie treten",
+              "costs": [],
+              "id": "gildas-schutzpflicht-reaction",
+              "recipient": "target",
+              "radiusMeters": 2,
+              "condition": "always",
+              "enabled": true,
+              "effects": {
+                "damageReduction": 3,
+                "skillModifier": 0,
+                "rollMode": "normal",
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "defenseModifier": 0,
+                "savingThrowModifier": 0,
+                "spellSaveDcModifier": 0,
+                "outcome": "none"
+              },
+              "description": "Reduziert eingehenden Schaden eines nahen Verbündeten um 3.",
+              "activation": "reaction",
+              "sourceRelation": "ally",
+              "frequency": "comment",
+              "skillIds": [],
+              "priority": 0
+            }
+          ],
+          "activationType": "passive",
+          "requirements": "Gildas muss reagieren können und sich höchstens 2 Meter vom Ziel entfernt befinden.",
+          "description": "Wird ein naher Verbündeter getroffen, tritt Gildas mit Schildarm, Schulter oder Klinge in die Angriffslinie und reduziert den Schaden um 3.",
+          "aiInstructions": "Nur nach ausdrücklicher Auswahl der Reaktion anwenden; die Reaktion wird automatisch verbraucht.",
+          "costs": [],
+          "effects": [],
+          "inventoryUseTrigger": {
+            "itemTags": [],
+            "enabled": false,
+            "requireActualRecovery": true,
+            "restoreResources": []
+          },
+          "saveAttribute": "dexterity",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": false,
+            "cost": 1
+          },
+          "delivery": "ability",
+          "concentration": false,
+          "damageType": "physisch",
+          "combatUsable": false,
+          "channelComments": 0
+        },
+        {
+          "mechanics": {
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "skill": 0,
+            "maximumHitPoints": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "spellAttack": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": []
+          },
+          "id": "gildas-gafyr-draig-knight-signet",
+          "range": "Selbst",
+          "requirements": "Draig-Rittersiegelring angelegt",
+          "triggerRules": [
+            {
+              "enabled": true,
+              "frequency": "always",
+              "effects": {
+                "savingThrowModifier": 0,
+                "defenseModifier": 0,
+                "spellSaveDcModifier": 0,
+                "skillModifier": 1,
+                "outcome": "none",
+                "damageReduction": 0,
+                "rollMode": "normal",
+                "damageModifier": 0,
+                "attackModifier": 0
+              },
+              "phase": "pre-roll",
+              "priority": 0,
+              "id": "gildas-gafyr-draig-knight-signet-persuasion",
+              "resultEffects": [],
+              "skillIds": [
+                "persuasion"
+              ],
+              "consumeReaction": false,
+              "requiredTargetTags": [],
+              "costs": [],
+              "description": "+1 auf Überzeugen, solange der Draig-Rittersiegelring getragen wird.",
+              "recipient": "actor",
+              "activation": "passive",
+              "name": "Autorität des Draig-Siegels",
+              "condition": "always",
+              "sourceRelation": "self",
+              "actionScope": "global",
+              "authority": "passive",
+              "actionKinds": [
+                "skill"
+              ],
+              "radiusMeters": null
+            }
+          ],
+          "combatUsable": false,
+          "resolutionType": "",
+          "recoveryDayKey": "",
+          "damageType": "physisch",
+          "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+          "duration": "Solange der Ring getragen wird",
+          "recovery": "none",
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "aiInstructions": "Berücksichtige den Bonus ausschließlich bei Überzeugen-Proben.",
+          "active": true,
+          "saveAttribute": "dexterity",
+          "usesMaximum": 0,
+          "activationType": "passive",
+          "target": "Selbst",
+          "name": "Draig-Rittersiegelring",
+          "usesCurrent": 0,
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          },
+          "effects": [],
+          "rollFormula": "",
+          "tags": "Ausrüstung · Draig · Rittersiegel · Sozial",
+          "concentration": false,
+          "halfDamageOnSave": false,
+          "costs": [],
+          "delivery": "ability",
+          "channelComments": 0
+        }
+      ],
+      "notes": "EINSATZDOKTRIN · Gildas kämpft als verlässlicher Front- und Schutzritter. Er hält die Linie, beobachtet den Raum und setzt Drachentanz-Techniken planvoll statt prahlerisch ein.\n\nAUFTAKT · Wenn Vorbereitung möglich war, nutzt er Gewissenhafte Vorbereitung für den ersten wichtigen Wurf. Erster Hieb des Jungdrachens kostet nur die Bonusaktion und lässt sich mit einem normalen Schwerthieb der Aktion verbinden.\n\nEINZELZIEL · Biss des Jungdrachens ist der verlässliche Druckangriff. Gekreuzte Klauen bleibt die sparsame Reaktionsoption, solange Schutzpflicht nicht dringender ist.\n\nMEHRERE GEGNER · Schweifkreis nur bei freiem Raum und mindestens zwei lohnenden Zielen; er bindet Aktion, Bonusaktion und Reaktion zugleich.\n\nDURCHBRUCH · Stürmende Drachenspur gegen ein wichtiges Ziel. Sechsfacher Lehrhieb ist der Abschluss gegen einen gefährlichen Gegner und kostet Aktion, Bonusaktion sowie Besondere Aktion.\n\nPRIORITÄT · Gildas bewahrt seine Reaktion, wenn ein gefährdeter Verbündeter in 2 Metern Schutz braucht. Schutzpflicht geht für ihn vor zusätzlichem Schaden.",
+      "techniques": [
+        {
+          "damageType": "Hieb",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "mechanicNotes": [],
+          "attackBonus": 0,
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "mechanics": {
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attack": 0,
+            "bonusDamageFormula": "",
+            "attackRollMode": "normal",
+            "damage": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrow": 0,
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "target": "Ein Gegner",
+          "minimumLevel": 1,
+          "active": true,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "range": "Nahkampf",
+          "damageFormula": "1d4",
+          "compatibleWeaponIds": [],
+          "name": "Erster Hieb des Jungdrachens",
+          "effects": [],
+          "rollMode": "normal",
+          "effect": "Ein kurzer Ergänzungshieb verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "maximumTargets": 1,
+          "status": "confirmed",
+          "costs": [
+            {
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action",
+              "id": "combat-style-drachentanz-jungdrache-01-erster-hieb-bonus-action",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "criticalThreshold": 20,
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "mode": "fixed",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 4,
+            "bonusFormula": ""
+          },
+          "id": "combat-style-drachentanz-jungdrache-01-erster-hieb",
+          "duration": "Sofort",
+          "category": "technique",
+          "secondarySave": {
+            "addProficiency": true,
+            "enabled": false,
+            "failureCondition": {
+              "name": "",
+              "id": "technique-save-condition",
+              "description": "",
+              "mechanics": {
+                "spellAttack": 0,
+                "savingThrowAdvantageAttributes": [],
+                "movement": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "damage": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "attack": 0,
+                "savingThrow": 0,
+                "maximumHitPoints": 0,
+                "attackRollMode": "normal",
+                "skill": 0,
+                "bonusDamageFormula": "",
+                "armorClass": 0,
+                "passivePerception": 0,
+                "initiative": 0,
+                "spellSaveDc": 0
+              },
+              "duration": ""
+            },
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength"
+          },
+          "cenyrTraining": {
+            "selectedAtLevel": 1,
+            "sourceStatus": "confirmed",
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "teulu-sword",
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "assignedSlotId": "foundation-01",
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "uchelwyrCompatible": false
+          },
+          "combatStyleId": "drachentanz",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "weaponTypes": [
+            "sword"
+          ],
+          "targetDefenseModifier": 0,
+          "description": "Der grundlegende, schnelle Schwerthieb der ersten Drachentanz-Form.",
+          "followUpAttack": {
+            "inheritBonusDamage": true,
+            "sameTarget": true,
+            "inheritDamageModifier": true,
+            "triggerFurtherEffects": false,
+            "triggerReactions": true,
+            "repeatCount": 1,
+            "damageType": "",
+            "enabled": false,
+            "damageBonus": 0,
+            "damageFormula": "",
+            "attackBonus": 0,
+            "repeatPerAttackRules": true
+          },
+          "activationType": "bonus-action",
+          "damageBonus": 0,
+          "triggerRules": [],
+          "requirements": "Eine geführte Schwertwaffe."
+        },
+        {
+          "damageModel": {
+            "mode": "weapon-dice",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusWeaponDice": 1,
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 4,
+            "weaponDiceMultiplier": 1
+          },
+          "category": "technique",
+          "duration": "Sofort",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "name": "Biss des Jungdrachens",
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-action",
+              "scope": "comment",
+              "amount": 1,
+              "name": "Aktion",
+              "resourceId": "action"
+            },
+            {
+              "amount": 1,
+              "scope": "comment",
+              "id": "combat-style-drachentanz-jungdrache-02-drachenbiss-reaction",
+              "name": "Reaktion",
+              "resourceId": "reaction"
+            }
+          ],
+          "id": "combat-style-drachentanz-jungdrache-02-drachenbiss",
+          "followUpAttack": {
+            "damageFormula": "",
+            "damageType": "",
+            "inheritDamageModifier": true,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "repeatCount": 1,
+            "enabled": false,
+            "triggerFurtherEffects": false,
+            "inheritBonusDamage": true,
+            "sameTarget": true,
+            "attackBonus": 0,
+            "damageBonus": 0
+          },
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "activationType": "action",
+          "damageFormula": "",
+          "effects": [],
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "damageBonus": 0,
+          "mechanicNotes": [],
+          "minimumLevel": 2,
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "weaponTypes": [
+            "sword"
+          ],
+          "active": true,
+          "description": "Der Anwender verdichtet den einfachen Hieb zu einem kurzen, präzisen Vorstoß.",
+          "target": "Ein Gegner",
+          "damageType": "Hieb",
+          "maximumTargets": 1,
+          "attackBonus": 0,
+          "combatStyleId": "drachentanz",
+          "triggerRules": [],
+          "mechanics": {
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "spellAttack": 0,
+            "damage": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "skill": 0,
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": ""
+          },
+          "requirements": "Eine geführte Schwertwaffe.",
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "targetDefenseModifier": 0,
+          "status": "confirmed",
+          "rollMode": "normal",
+          "compatibleWeaponIds": [],
+          "secondarySave": {
+            "enabled": false,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "dcBase": 8,
+            "failureCondition": {
+              "duration": "",
+              "id": "technique-save-condition",
+              "name": "",
+              "description": "",
+              "mechanics": {
+                "armorClass": 0,
+                "initiative": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "spellSaveDc": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "savingThrowDisadvantageAttributes": [],
+                "maximumHitPoints": 0,
+                "savingThrow": 0,
+                "attack": 0,
+                "skill": 0,
+                "savingThrowAdvantageAttributes": [],
+                "damage": 0,
+                "bonusDamageFormula": "",
+                "movement": 0,
+                "spellAttack": 0
+              }
+            },
+            "attributeKey": "constitution"
+          },
+          "cenyrTraining": {
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "assignedSlotId": "foundation-02",
+            "sourceStatus": "confirmed",
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "branchId": "teulu-sword",
+            "uchelwyrCompatible": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "selectedAtLevel": 2,
+            "requiresMounted": false,
+            "weaponRuleSetId": ""
+          },
+          "range": "Nahkampf",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens"
+        },
+        {
+          "damageBonus": 0,
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "damageType": "Hieb",
+          "combatStyleId": "drachentanz",
+          "duration": "Sofort",
+          "category": "technique",
+          "range": "Nahkampf",
+          "weaponTypes": [
+            "sword"
+          ],
+          "description": "Zwei fließend verbundene Schnittlinien treffen wie die gekreuzten Klauen eines jungen Drachen.",
+          "status": "confirmed",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "damageModel": {
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 4,
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ]
+          },
+          "activationType": "reaction",
+          "followUpAttack": {
+            "inheritBonusDamage": true,
+            "enabled": false,
+            "inheritDamageModifier": true,
+            "damageFormula": "",
+            "triggerReactions": true,
+            "sameTarget": true,
+            "triggerFurtherEffects": false,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "repeatCount": 1,
+            "damageType": "",
+            "repeatPerAttackRules": true
+          },
+          "triggerRules": [],
+          "requirements": "Eine geführte Schwertwaffe.",
+          "secondarySave": {
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "enabled": false,
+            "failureCondition": {
+              "description": "",
+              "mechanics": {
+                "maximumHitPoints": 0,
+                "spellSaveDc": 0,
+                "attackRollMode": "normal",
+                "savingThrow": 0,
+                "bonusDamageFormula": "",
+                "initiative": 0,
+                "passivePerception": 0,
+                "armorClass": 0,
+                "movement": 0,
+                "spellAttack": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "savingThrowAdvantageAttributes": [],
+                "damage": 0,
+                "attack": 0
+              },
+              "name": "",
+              "id": "technique-save-condition",
+              "duration": ""
+            }
+          },
+          "cenyrTraining": {
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "teulu-sword",
+            "uchelwyrCompatible": false,
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "selectedAtLevel": 3,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "assignedSlotId": "foundation-03",
+            "sourceStatus": "confirmed",
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge."
+          },
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "targetDefenseModifier": 0,
+          "target": "Ein Gegner",
+          "criticalThreshold": 20,
+          "active": true,
+          "minimumLevel": 3,
+          "damageFormula": "",
+          "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "name": "Gekreuzte Klauen",
+          "attackBonus": 0,
+          "effects": [],
+          "maximumTargets": 1,
+          "rollMode": "normal",
+          "effect": "Die kurze Antwort aus der Deckung verursacht bei einem Treffer den aktuellen Technikschaden.",
+          "costs": [
+            {
+              "name": "Reaktion",
+              "id": "combat-style-drachentanz-jungdrache-03-gekreuzte-klauen-reaction",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "reaction"
+            }
+          ],
+          "mechanicNotes": [],
+          "mechanics": {
+            "savingThrowAdvantageAttributes": [],
+            "spellSaveDc": 0,
+            "attack": 0,
+            "savingThrow": 0,
+            "damage": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "spellAttack": 0,
+            "movement": 0
+          },
+          "compatibleWeaponIds": []
+        },
+        {
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Aktion",
+              "scope": "comment",
+              "resourceId": "action",
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-action"
+            },
+            {
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-bonus-action"
+            },
+            {
+              "scope": "comment",
+              "resourceId": "reaction",
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-reaction",
+              "amount": 1,
+              "name": "Reaktion"
+            }
+          ],
+          "mechanics": {
+            "spellAttack": 0,
+            "initiative": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "attack": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "mechanicNotes": [],
+          "weaponTypes": [
+            "sword"
+          ],
+          "description": "Eine vollständige Drehung zieht die Klinge durch alle nahen Feinde.",
+          "triggerRules": [],
+          "requirements": "Eine geführte Schwertwaffe und Bewegungsraum für eine Drehung.",
+          "damageModel": {
+            "bonusFormula": "",
+            "weaponDiceMultiplier": 1,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "mode": "weapon-dice",
+            "bonusWeaponDieCap": 4,
+            "bonusWeaponDice": 1
+          },
+          "status": "confirmed",
+          "compatibleWeaponIds": [],
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "damageFormula": "",
+          "criticalThreshold": 20,
+          "maximumTargets": 20,
+          "effects": [
+            {
+              "type": "damage",
+              "nonlethal": false,
+              "movementMeters": 0,
+              "conditionId": "",
+              "inheritWeaponDamageType": true,
+              "movementKind": "move",
+              "formula": "",
+              "target": "selected",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "amount": 0,
+              "on": "hit",
+              "damageType": "Hieb",
+              "notes": "Trifft alle ausgewählten Gegner im Umkreis von 3 Metern.",
+              "conditionTags": "",
+              "magical": false,
+              "id": "combat-style-drachentanz-jungdrache-04-schweifkreis-area-damage",
+              "resourceId": "",
+              "condition": null
+            }
+          ],
+          "targetDefenseModifier": 0,
+          "name": "Schweifkreis des Jungdrachens",
+          "effect": "Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden.",
+          "secondarySave": {
+            "dcAttributeKey": "strength",
+            "enabled": false,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "mechanics": {
+                "passivePerception": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "spellSaveDc": 0,
+                "skill": 0,
+                "savingThrowAdvantageAttributes": [],
+                "maximumHitPoints": 0,
+                "movement": 0,
+                "attack": 0,
+                "damage": 0,
+                "bonusDamageFormula": "",
+                "initiative": 0,
+                "armorClass": 0,
+                "attackRollMode": "normal",
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "savingThrowDisadvantageAttributes": []
+              },
+              "name": "",
+              "duration": "",
+              "description": ""
+            },
+            "addProficiency": true,
+            "attributeKey": "constitution",
+            "dcBase": 8
+          },
+          "cenyrTraining": {
+            "selectedAtLevel": 4,
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge.",
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "uchelwyrCompatible": false,
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "branchId": "teulu-sword",
+            "assignedSlotId": "foundation-04",
+            "sourceStatus": "confirmed",
+            "slotBands": [
+              "foundation"
+            ]
+          },
+          "combatStyleId": "drachentanz",
+          "aiInstructions": "Reiner Flächenschaden. Denselben Schadenswurf auf alle ausgewählten Ziele anwenden; Schaden nicht doppelt addieren.",
+          "range": "3 Meter Umkreis",
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "tags": "Drachentanz · Form I · Jungdrache · Flächenschaden",
+          "followUpAttack": {
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "repeatPerAttackRules": true,
+            "repeatCount": 1,
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "inheritBonusDamage": true,
+            "triggerFurtherEffects": false,
+            "triggerReactions": true,
+            "damageType": ""
+          },
+          "activationType": "action",
+          "category": "technique",
+          "duration": "Sofort",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "target": "Mehrere ausgewählte Gegner im Umkreis",
+          "minimumLevel": 4,
+          "id": "combat-style-drachentanz-jungdrache-04-schweifkreis",
+          "active": true
+        },
+        {
+          "compatibleWeaponIds": [],
+          "range": "Nahkampf",
+          "mechanics": {
+            "initiative": 0,
+            "armorClass": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0,
+            "savingThrow": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "damage": 0,
+            "bonusDamageFormula": ""
+          },
+          "maximumTargets": 1,
+          "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur",
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "rollMode": "normal",
+          "mechanicNotes": [],
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "name": "Stürmende Drachenspur",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "damageFormula": "",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "target": "Ein Gegner",
+          "active": true,
+          "requirements": "Eine geführte Schwertwaffe.",
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "damageBonus": 0,
+          "cenyrTraining": {
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "sourceStatus": "confirmed",
+            "slotBands": [
+              "foundation"
+            ],
+            "assignedSlotId": "foundation-05",
+            "branchId": "teulu-sword",
+            "uchelwyrCompatible": false,
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "selectedAtLevel": 5,
+            "requiresMounted": false,
+            "weaponRuleSetId": "",
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge."
+          },
+          "secondarySave": {
+            "addProficiency": true,
+            "attributeKey": "constitution",
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attackRollMode": "normal",
+                "savingThrowAdvantageAttributes": [],
+                "spellSaveDc": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "attack": 0,
+                "bonusDamageFormula": "",
+                "damage": 0,
+                "movement": 0,
+                "passivePerception": 0,
+                "spellAttack": 0,
+                "initiative": 0,
+                "armorClass": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "maximumHitPoints": 0
+              },
+              "name": ""
+            },
+            "dcBase": 8,
+            "enabled": false,
+            "dcAttributeKey": "strength"
+          },
+          "followUpAttack": {
+            "damageType": "",
+            "damageBonus": 0,
+            "repeatPerAttackRules": true,
+            "attackBonus": 0,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "inheritDamageModifier": true,
+            "enabled": false,
+            "damageFormula": "",
+            "sameTarget": true,
+            "triggerFurtherEffects": false,
+            "triggerReactions": true
+          },
+          "activationType": "action",
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "weaponTypes": [
+            "sword"
+          ],
+          "minimumLevel": 5,
+          "description": "Ein schneller Antritt bündelt den Schwung des Anwenders in einem einzigen durchgezogenen Schnitt.",
+          "status": "confirmed",
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "name": "Aktion",
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-action",
+              "resourceId": "action"
+            },
+            {
+              "name": "Bonusaktion",
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-bonus-action",
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-drachentanz-jungdrache-05-stuermende-spur-reaction",
+              "name": "Reaktion"
+            }
+          ],
+          "effects": [],
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusWeaponDice": 1,
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 6,
+            "mode": "weapon-dice",
+            "bonusFormula": ""
+          },
+          "criticalThreshold": 20,
+          "combatStyleId": "drachentanz",
+          "duration": "Sofort",
+          "category": "technique"
+        },
+        {
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Aktion",
+              "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-action"
+            },
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-bonus-action",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action"
+            },
+            {
+              "name": "Besondere Aktion",
+              "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb-special-action",
+              "resourceId": "special-action",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "requirements": "Eine geführte Schwertwaffe.",
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "cenyrTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "classWeaponProfiles": {
+              "teulu": [
+                "sword"
+              ]
+            },
+            "selectedAtLevel": 6,
+            "weaponRuleSetId": "",
+            "requiresMounted": false,
+            "uchelwyrCompatible": false,
+            "sourceStatus": "confirmed",
+            "branchId": "teulu-sword",
+            "allowedClassIds": [
+              "teulu"
+            ],
+            "assignedSlotId": "foundation-06",
+            "designNotes": "Bestätigte historische Teulu-Schwertfolge."
+          },
+          "secondarySave": {
+            "dcAttributeKey": "strength",
+            "attributeKey": "constitution",
+            "failureCondition": {
+              "mechanics": {
+                "spellAttack": 0,
+                "attack": 0,
+                "damage": 0,
+                "passivePerception": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "savingThrow": 0,
+                "maximumHitPoints": 0,
+                "bonusDamageFormula": "",
+                "initiative": 0,
+                "attackRollMode": "normal",
+                "armorClass": 0,
+                "spellSaveDc": 0,
+                "savingThrowAdvantageAttributes": [],
+                "movement": 0
+              },
+              "id": "technique-save-condition",
+              "description": "",
+              "name": "",
+              "duration": ""
+            },
+            "dcBase": 8,
+            "addProficiency": true,
+            "enabled": false
+          },
+          "trainingForm": "Drachentanz Form I · Tanz des Jungdrachens",
+          "combatStyleId": "drachentanz",
+          "status": "confirmed",
+          "maximumTargets": 1,
+          "category": "technique",
+          "duration": "Sofort",
+          "mechanicNotes": [],
+          "name": "Sechsfacher Lehrhieb",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "id": "combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
+          "rollMode": "normal",
+          "effect": "Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden.",
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusWeaponDieCap": 8,
+            "bonusFormula": "",
+            "bonusWeaponDice": 1,
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1
+          },
+          "mechanics": {
+            "damage": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "attack": 0,
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "spellAttack": 0
+          },
+          "activationType": "special-action",
+          "range": "Nahkampf",
+          "followUpAttack": {
+            "triggerFurtherEffects": false,
+            "triggerReactions": true,
+            "damageType": "",
+            "repeatPerAttackRules": true,
+            "damageFormula": "",
+            "enabled": false,
+            "damageBonus": 0,
+            "inheritBonusDamage": true,
+            "attackBonus": 0,
+            "sameTarget": true,
+            "inheritDamageModifier": true,
+            "repeatCount": 1
+          },
+          "description": "Der Anwender führt die sechs Grundlinien der Form in einem makellosen Lehrstück zusammen.",
+          "tags": "Drachentanz · Form I · Jungdrache · Schaden",
+          "weaponTypes": [
+            "sword"
+          ],
+          "aiInstructions": "Reiner Schadensangriff ohne zusätzlichen Zustand oder Nebeneffekt.",
+          "damageFormula": "",
+          "minimumLevel": 6,
+          "target": "Ein Gegner",
+          "effects": [],
+          "active": true,
+          "compatibleWeaponIds": [],
+          "damageBonus": 0
+        }
+      ],
+      "combat": {
+        "passivePerceptionBonus": 0,
+        "mounted": false,
+        "movement": 9,
+        "canActAtZeroHitPoints": false,
+        "attackBonus": 0,
+        "initiativeBonus": 0,
+        "damageBonus": 0
+      },
+      "armorClass": {
+        "overrideMode": "total",
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "dexterityCap": 2,
+        "base": 10,
+        "shieldBonus": 0,
+        "dexterityMode": "full"
+      }
+    },
+    "inventory": {
+      "role": "Ritter des Hauses Gafyr · Teulu",
+      "level": "Stufe 6",
+      "showInfoTable": true,
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "title": "Charakter-Inventar",
+      "items": [
+        {
+          "individualizedAt": "",
+          "weight": "1,5 kg",
+          "type": "Ritterschwert",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "ownerCharacterName": "Gildas Gafyr",
+          "imageFormat": "square",
+          "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
+          "ownerCharacterId": "gildas-gafyr",
+          "acquiredAt": "",
+          "quantity": "1",
+          "category": "weapon",
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "icon": "https://i.imgur.com/38Na5EY.png",
+          "combatDefinition": {
+            "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+            "kind": "weapon",
+            "versatileDamageFormula": "1d10",
+            "proficient": true,
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+            "damageFormula": "1d8",
+            "damageBonus": 0,
+            "rangeType": "melee",
+            "attackAttribute": "strength",
+            "range": "Nahkampf",
+            "training": "martial",
+            "damageType": "Hieb",
+            "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+            "requirements": "",
+            "weaponType": "sword",
+            "attackBonus": 0
+          },
+          "equipped": true,
+          "imageFit": "contain",
+          "id": "gildas-gafyr-duty-sword-item",
+          "name": "Pflichtschwur · Draig-Ritterschwert",
+          "attributes": [],
+          "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
+          "infoRows": [
+            {
+              "icon": "◈",
+              "label": "Wert",
+              "value": "5 Goldtaler"
+            },
+            {
+              "label": "Schaden",
+              "value": "1W8 · vielseitig 1W10",
+              "icon": "⚔"
+            },
+            {
+              "icon": "◆",
+              "value": "Aktiv geführt",
+              "label": "Status"
+            }
+          ],
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "gildas-gafyr-duty-sword"
+          },
+          "value": {
+            "silver": 0,
+            "copper": 0,
+            "gold": 5,
+            "totalCopper": 5000
+          }
+        },
+        {
+          "originItemDbKey": "",
+          "equipmentLink": {
+            "combatEntryId": "gildas-gafyr-watch-armor",
+            "schemaVersion": 1,
+            "kind": "armor"
+          },
+          "acquiredAt": "",
+          "weight": "24 kg",
+          "category": "armor",
+          "quantity": "1",
+          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.",
+          "imageFormat": "square",
+          "combatDefinition": {
+            "dexterityCap": 2,
+            "damageFormula": "",
+            "baseArmorClass": 16,
+            "dexterityMode": "full",
+            "armorClassBonus": 0,
+            "dexterityUnlockLevel": 12,
+            "armorKind": "armor",
+            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+            "kind": "armor",
+            "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6."
+          },
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "type": "Draig-Jungritter-Plattenrüstung",
+          "ownerCharacterId": "gildas-gafyr",
+          "ownerCharacterName": "Gildas Gafyr",
+          "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
+          "equipped": true,
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "image": "https://i.imgur.com/7siJPXG.png",
+          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "id": "gildas-gafyr-watch-armor-item",
+          "icon": "https://i.imgur.com/7siJPXG.png",
+          "itemDbKey": "",
+          "infoRows": [
+            {
+              "icon": "⬙",
+              "value": "Basis-RK 16",
+              "label": "Rüstungsklasse"
+            },
+            {
+              "value": "Draig-Jungritter",
+              "label": "Ausführung",
+              "icon": "✦"
+            },
+            {
+              "value": "Angelegt",
+              "label": "Status",
+              "icon": "◆"
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "category": "weapon",
+          "name": "Draig-Dolch",
+          "quantity": "1",
+          "combatDefinition": {
+            "notes": "Seitenwaffe des Hauses Draig.",
+            "damageType": "Stich",
+            "attackAttribute": "dexterity",
+            "kind": "weapon",
+            "properties": "Finesse · leicht · Wurfwaffe",
+            "weaponType": "dagger",
+            "damageBonus": 0,
+            "rangeType": "melee",
+            "requirements": "",
+            "proficient": true,
+            "versatileDamageFormula": "",
+            "training": "simple",
+            "attackBonus": 0,
+            "range": "Nahkampf",
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+            "damageFormula": "1d4"
+          },
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "icon": "https://i.imgur.com/caR593j.png",
+          "acquiredAt": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "gildas-gafyr-dagger"
+          },
+          "itemStorageMode": "character",
+          "tags": "Dolch, Draig, leicht, Finesse, Wurfwaffe",
+          "weight": "0,5 kg",
+          "id": "gildas-gafyr-dagger-item",
+          "type": "Dolch",
+          "infoRows": [
+            {
+              "value": "1W4 Stich",
+              "label": "Schaden",
+              "icon": "†"
+            },
+            {
+              "value": "Finesse · leicht",
+              "label": "Führung",
+              "icon": "◇"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Seitenwaffe"
+            }
+          ],
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "image": "https://i.imgur.com/caR593j.png",
+          "ownerCharacterName": "Gildas Gafyr",
+          "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
+          "imageFormat": "square",
+          "attributes": [],
+          "ownerCharacterId": "gildas-gafyr",
+          "equipped": false,
+          "imageFit": "contain"
+        },
+        {
+          "name": "Draig-Rittersiegelring",
+          "weight": "",
+          "originItemDbKey": "",
+          "equipmentLink": null,
+          "individualizedAt": "",
+          "equipped": true,
+          "imageFit": "contain",
+          "icon": "https://i.imgur.com/mwP2vjq.png",
+          "imageFormat": "square",
+          "description": "Siegelring eines Draig-Ritters. Offen getragen verleiht er +1 auf Überzeugen.",
+          "imagePosition": "center",
+          "acquiredAt": "2026-09-05T00:00:00.000Z",
+          "ownerCharacterId": "gildas-gafyr",
+          "tags": "Draig, Rittersiegel, Ring, Schmuck, Überzeugen",
+          "itemStorageMode": "character",
+          "infoRows": [
+            {
+              "label": "Effekt",
+              "icon": "✦",
+              "value": "+1 auf Überzeugen"
+            },
+            {
+              "label": "Status",
+              "icon": "◆",
+              "value": "Angelegt"
+            }
+          ],
+          "id": "gildas-gafyr-draig-knight-signet-item",
+          "ownerCharacterName": "Gildas Gafyr",
+          "attributes": [],
+          "image": "https://i.imgur.com/mwP2vjq.png",
+          "type": "Siegelring",
+          "combatDefinition": null,
+          "quantity": "1",
+          "itemDbKey": "",
+          "category": "equipment"
+        },
+        {
+          "combatDefinition": null,
+          "acquiredAt": "",
+          "icon": "*",
+          "type": "Werkzeug",
+          "infoRows": [],
+          "individualizedAt": "",
+          "name": "Pflegeset für Klinge und Rüstung",
+          "id": "gildas-gafyr-maintenance-kit",
+          "originItemDbKey": "",
+          "quantity": "1",
+          "weight": "2 kg",
+          "itemDbKey": "",
+          "category": "equipment",
+          "ownerCharacterName": "Gildas Gafyr",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "equipped": false,
+          "imageFit": "contain",
+          "ownerCharacterId": "gildas-gafyr",
+          "attributes": [],
+          "image": "",
+          "tags": "Werkzeug, Wartung, Vorbereitung",
+          "imageFormat": "square",
+          "description": "Wetzstein, Öl, Lappen, Ersatzriemen und kleine Werkzeuge; nach jeder Übung gewissenhaft benutzt."
+        },
+        {
+          "quantity": "1",
+          "imagePosition": "center",
+          "type": "Notizbuch",
+          "itemDbKey": "",
+          "category": "documents",
+          "icon": "*",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "gildas-gafyr",
+          "ownerCharacterName": "Gildas Gafyr",
+          "attributes": [],
+          "name": "Übungsheft und Pflichtkalender",
+          "infoRows": [],
+          "tags": "Dokument, Training, Planung, Pflicht",
+          "originItemDbKey": "",
+          "id": "gildas-gafyr-training-ledger",
+          "weight": "0,4 kg",
+          "image": "",
+          "description": "Enthält Trainingsfolgen, beobachtete Fehler, Termine und offene Pflichten in einer auffallend ordentlichen Hand.",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "equipped": false,
+          "combatDefinition": null
+        },
+        {
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "name": "Schlichtes Feldzeug",
+          "weight": "8 kg",
+          "id": "gildas-gafyr-field-kit",
+          "infoRows": [],
+          "icon": "*",
+          "quantity": "1",
+          "combatDefinition": null,
+          "attributes": [],
+          "category": "equipment",
+          "type": "Reiseausrüstung",
+          "individualizedAt": "",
+          "equipped": false,
+          "imageFit": "contain",
+          "ownerCharacterName": "Gildas Gafyr",
+          "originItemDbKey": "",
+          "image": "",
+          "description": "Wasser, haltbarer Proviant, Verbandstoff, Seil und eine kleine Laterne. Nichts Glänzendes, aber alles kontrolliert.",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "tags": "Reise, Versorgung, Verband, Seil",
+          "ownerCharacterId": "gildas-gafyr",
+          "acquiredAt": ""
+        },
+        {
+          "id": "gildas-gafyr-duty-sword-item",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "icon": "*",
+          "description": "Ein ausgewogenes Ritterschwert des Hauses Gafyr. Gildas hält Klinge, Griff und Scheide peinlich genau in Ordnung.",
+          "imageFormat": "square",
+          "ownerCharacterId": "gildas-gafyr",
+          "name": "Pflichtschwur · Gafyr-Ritterschwert",
+          "infoRows": [],
+          "tags": "Schwert, Gafyr, vielseitig, Drachentanz, ritterlich",
+          "weight": "1,5 kg",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "equipped": true,
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "type": "Ritterschwert",
+          "category": "weapon",
+          "ownerCharacterName": "Gildas Gafyr",
+          "attributes": [],
+          "image": "",
+          "combatDefinition": {
+            "training": "martial",
+            "kind": "weapon",
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+            "versatileDamageFormula": "1d10",
+            "notes": "Sorgfältig gepflegte Hauswaffe eines Gafyr-Ritters.",
+            "proficient": true,
+            "damageBonus": 0,
+            "requirements": "",
+            "attackAttribute": "strength",
+            "range": "Nahkampf",
+            "damageFormula": "1d8",
+            "rangeType": "melee",
+            "attackBonus": 0,
+            "damageType": "Hieb",
+            "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+            "weaponType": "sword"
+          },
+          "equipmentLink": {
+            "combatEntryId": "gildas-gafyr-duty-sword",
+            "schemaVersion": 1,
+            "kind": "weapon"
+          }
+        },
+        {
+          "weight": "24 kg",
+          "combatDefinition": {
+            "armorKind": "armor",
+            "dexterityUnlockLevel": 12,
+            "notes": "Ab Stufe 6 wird der Geschicklichkeitsmodifikator berücksichtigt.",
+            "armorClassBonus": 0,
+            "baseArmorClass": 16,
+            "kind": "armor",
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "damageFormula": "",
+            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm"
+          },
+          "originItemDbKey": "",
+          "ownerCharacterName": "Gildas Gafyr",
+          "acquiredAt": "",
+          "tags": "Rüstung, Platte, Gafyr, Wappenrock, Helm",
+          "infoRows": [],
+          "name": "Wachtpanzer · Gafyr-Rüstung",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "equipped": true,
+          "imageFit": "contain",
+          "quantity": "1",
+          "image": "",
+          "itemDbKey": "",
+          "category": "armor",
+          "individualizedAt": "",
+          "equipmentLink": {
+            "kind": "armor",
+            "combatEntryId": "gildas-gafyr-watch-armor",
+            "schemaVersion": 1
+          },
+          "id": "gildas-gafyr-watch-armor-item",
+          "imagePosition": "center",
+          "ownerCharacterId": "gildas-gafyr",
+          "imageFormat": "square",
+          "description": "Zweckmäßige Gafyr-Plattenrüstung, für die beweglichen Grundlinien des Drachentanzes angepasst.",
+          "type": "Plattenrüstung mit Wappenrock und Helm",
+          "attributes": []
+        },
+        {
+          "infoRows": [],
+          "imagePosition": "center",
+          "attributes": [],
+          "tags": "Dolch, Gafyr, leicht, Finesse",
+          "name": "Gafyr-Seitendolch",
+          "ownerCharacterName": "Gildas Gafyr",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "gildas-gafyr-dagger",
+            "kind": "weapon"
+          },
+          "equipped": false,
+          "imageFit": "contain",
+          "combatDefinition": {
+            "requirements": "",
+            "training": "simple",
+            "range": "Nahkampf",
+            "attackBonus": 0,
+            "attackAttribute": "dexterity",
+            "damageFormula": "1d4",
+            "rangeType": "melee",
+            "versatileDamageFormula": "",
+            "proficient": true,
+            "damageBonus": 0,
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+            "damageType": "Stich",
+            "properties": "Finesse · leicht · Wurfwaffe",
+            "weaponType": "dagger",
+            "kind": "weapon",
+            "notes": "Schlichte Seitenwaffe ohne Zierde."
+          },
+          "image": "",
+          "icon": "*",
+          "itemDbKey": "",
+          "description": "Robuste Seitenwaffe für enge Räume und den Notfall.",
+          "imageFormat": "square",
+          "category": "weapon",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "ownerCharacterId": "gildas-gafyr",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "id": "gildas-gafyr-dagger-item",
+          "weight": "0,5 kg",
+          "individualizedAt": "",
+          "type": "Dolch"
+        }
+      ],
+      "moneyNotice": "",
+      "moneyState": {
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0,
+        "copper": 0
+      },
+      "infoRows": [
+        {
+          "label": "Klasse",
+          "value": "Teulu"
+        },
+        {
+          "label": "Kampfstil",
+          "value": "Drachentanz · Form I"
+        },
+        {
+          "label": "Stand",
+          "value": "Ritter"
+        }
+      ],
+      "characterId": "gildas-gafyr",
+      "revision": 1788656614552,
+      "name": "Gildas Gafyr",
+      "portraitFormat": "portrait",
+      "portraitPosition": "top",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "ca. 110 kg",
+      "hitpoints": "65 / 65 LP",
+      "healthColor": "#5c7f20",
+      "carryLabel": "Traglast",
+      "companions": [],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 8
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 6
+        },
+        {
+          "label": "Wei",
+          "value": 7
+        },
+        {
+          "label": "Cha",
+          "value": 7
+        }
+      ],
+      "equipmentQuiz": {
+        "answers": [
+          ""
+        ],
+        "open": false,
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "status": ""
+      },
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+      "status": "Gesund",
+      "portraitFit": "cover"
+    }
+  }
+]

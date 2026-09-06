@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-09-06T11:59:32.047Z",
+  "project": "aleriaprojekt",
+  "unchangedFieldsVerified": true,
+  "characters": [
+    {
+      "name": "Gawain Draig",
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "constitution": 12,
+      "hp": 49,
+      "currentHp": 49,
+      "armorClass": 16,
+      "armorEntries": 1,
+      "inventoryEntries": 1,
+      "fieldPaths": [
+        "combatProfile.armorItems",
+        "inventory.items",
+        "inventory.hitpoints"
+      ]
+    },
+    {
+      "name": "Gildas Gafyr",
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "constitution": 13,
+      "hp": 58,
+      "currentHp": 58,
+      "armorClass": 16,
+      "armorEntries": 1,
+      "inventoryEntries": 2,
+      "fieldPaths": [
+        "combatProfile.armorItems",
+        "inventory.items",
+        "combatProfile.attributes",
+        "combatProfile.hitPoints.current",
+        "inventory.hitpoints"
+      ]
+    }
+  ]
+}

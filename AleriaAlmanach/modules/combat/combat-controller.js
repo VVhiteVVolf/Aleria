@@ -6,7 +6,7 @@ import {
   CombatProfileResolver,
   getCombatActorValidationMessage
 } from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
-import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260906-effect-rolls-v1';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260906-duel-rehearsal-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,

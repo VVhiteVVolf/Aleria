@@ -4,6 +4,7 @@ import {
   DRACHENTANZ_FORM_NAMES as CENYR_FORM_LABELS
 } from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
 import { CENYR_CLASS_IDS } from './cenyr-class-ids.js?v=20260905-cenyr-character-training-v1';
+import { ARMOR_ROUTINE } from '../armor-routine.js?v=20260906-armor-routine-v1';
 
 export { CENYR_FORM_LABELS };
 
@@ -48,7 +49,7 @@ function curriculum(config) {
     pathSelection: config.pathSelection, techniqueBudget: config.techniqueBudget,
     trainingBranches: config.trainingBranches || [], techniquePool: config.techniquePool,
     weaponTraining: config.weaponTraining, weaponVariants: config.weaponVariants || [],
-    classFeatures: config.classFeatures, combatStyleGrants: config.combatStyleGrants,
+    classFeatures: [...config.classFeatures, ARMOR_ROUTINE], combatStyleGrants: config.combatStyleGrants,
     pendingFeatures: config.pending.map(name => ({ name, minimumLevel: null, status: 'pending' }))
   };
 }

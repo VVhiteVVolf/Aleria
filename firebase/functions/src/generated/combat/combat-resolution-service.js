@@ -35,7 +35,7 @@ import {
   sanitizeCombatRuleEffects
 } from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-6';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-7';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -344,7 +344,9 @@ export class CombatResolutionService {
       || effectiveEffects.some(effect => effect.concentration || effect.condition?.durationModel?.kind === 'concentration');
     const concentrationInstanceId = sustainsConcentration
       ? (options.skipSelfEffects ? actor.concentration?.instanceId : createResolutionId()) : '';
-    if (actor.characterId === target.characterId && hasHostileEffects(effectiveEffects)) {
+    // A source may explicitly pay a health cost or inflict a self-directed
+    // penalty. Ordinary hostile target effects must still reject self-targets.
+    if (actor.characterId === target.characterId && hasHostileEffects(effectiveEffects.filter(effect => effect.target !== 'self'))) {
       throw new Error('Diese schädliche Handlung kann nicht gegen die handelnde Figur selbst gerichtet werden.');
     }
 

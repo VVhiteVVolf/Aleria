@@ -76,6 +76,22 @@ test('Selbstheilung verändert den Akteur und nicht das ausgewählte Gegenüber'
   assert.equal(result.effectResults[0].recipient, 'actor');
 });
 
+test('Expliziter Eigenschaden trifft die eigene Figur; normale Angriffe bleiben gegen sich selbst gesperrt', async () => {
+  const record = character('self-effect', { abilities: [{
+    id: 'self-cost', name: 'Expliziter Eigenschaden', active: true, combatUsable: true,
+    activationType: 'passive', resolutionType: 'automatic',
+    effects: [{ type: 'damage', target: 'self', amount: 2, on: 'always' }]
+  }] });
+  const actor = resolveCombatProfile(record, { actionId: 'ability:self-cost' });
+  const result = await new CombatResolutionService(new Dice()).resolveAttack({ actor, target: actor });
+  assert.equal(result.targetSnapshot.hitPointsAfter, actor.currentHitPoints - 2);
+  assert.equal(result.targetSnapshot.temporaryHitPointsAfter, 0);
+  const replay = deriveCombatStateFromComments([{ id: 'self-cost', combatResolution: result }]);
+  assert.equal(replay.get(actor.characterId).current, actor.currentHitPoints - 2);
+  const ordinary = resolveCombatProfile(record);
+  await assert.rejects(new CombatResolutionService(new Dice()).resolveAttack({ actor: ordinary, target: ordinary }), /selbst/);
+});
+
 test('höherstufiges Wirken berechnet Mana nach Grad und skaliert den Schadenswurf', () => {
   const caster = character('mage', {
     resources: [

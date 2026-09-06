@@ -24,7 +24,7 @@ test('Gawains Waffen und Rüstung bleiben mit dem Inventar verknüpft', async ()
   assert.equal(inventoryById.get(armor.inventoryItemId).equipmentLink.combatEntryId, armor.id);
   assert.equal(sword.damageFormula, '1d8');
   assert.equal(sword.versatileDamageFormula, '1d10');
-  assert.equal(armor.dexterityUnlockLevel, 6);
+  assert.equal(armor.dexterityUnlockLevel, 12);
 });
 
 test('Gawain verwendet auf Stufe 5 ausschließlich die fünf Teulu-Jungdrachen-Attacken', async () => {

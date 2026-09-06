@@ -9,6 +9,7 @@ const files = [
   'combat-status/combat-status-catalog.js',
   'combat-status/combat-status-model.js',
   'classes/class-damage-revisions.js',
+  'classes/armor-routine.js',
   'combat-styles/drachentanz/drachentanz-damage-progression.js',
   'classes/cenyr/cenyr-class-registry.js',
   'classes/cenyr/cenyr-class-ids.js',

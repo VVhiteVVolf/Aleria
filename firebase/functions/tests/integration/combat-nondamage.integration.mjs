@@ -42,6 +42,45 @@ async function endFight() {
   return encounter({ encounterId: fight.encounterId, operation: 'end', expectedRevision: fight.revision, outcome: 'draw', endReason: 'agreement', participants: [] });
 }
 
+test('Expliziter Eigenschaden wird einmal gespeichert und lässt sich samt Ressourcenkosten zurücknehmen', async () => {
+  const party = await createCombatParty(definitions);
+  const actor = await party.record('gawain');
+  await database.collection('characters').doc(actor.id).update({ 'combatProfile.abilities': [
+    ...actor.combatProfile.abilities, { id: 'test-health-cost', name: 'Eigener Lebenspunkteeinsatz', active: true,
+      combatUsable: true, activationType: 'reaction', resolutionType: 'automatic',
+      effects: [{ type: 'damage', target: 'self', on: 'always', amount: 2 }] }
+  ] });
+  const before = await profile(party, 'gawain');
+  const used = await cast(party, 'gawain', 'ability:test-health-cost');
+  const after = await profile(party, 'gawain');
+  assert.equal(after.currentHitPoints, before.currentHitPoints - 2);
+  assert.equal(resources(after).reaction, resources(before).reaction - 1);
+  await undo(used.id);
+  const restored = await profile(party, 'gawain');
+  assert.equal(restored.currentHitPoints, before.currentHitPoints);
+  assert.equal(resources(restored).reaction, resources(before).reaction);
+  const count = (await history()).length;
+  await assert.rejects(() => party.prepare({ actor: 'gawain', targets: ['gawain'] }), /selbst/);
+  assert.equal((await history()).length, count);
+  await party.assertConsistent();
+});
+
+test('Rüstungsroutine verwendet auf Server und Vorschau dieselbe Grenze 11/12, auch nach Rückstufung', async () => {
+  for (const level of [11, 12, 11]) {
+    const party = await createCombatParty(definitions);
+    const target = await party.record('gawain');
+    const armorItems = target.combatProfile.armorItems.map(item => ({ ...item, dexterityUnlockLevel: 6 }));
+    await database.collection('characters').doc(target.id).update({ 'combatProfile.progression.level': level,
+      'combatProfile.armorItems': armorItems });
+    const expected = level >= 12 ? 19 : 16;
+    assert.equal((await profile(party, 'gawain')).totalDefense, expected);
+    const prepared = await party.prepare({ actor: 'gildas', targets: ['gawain'], natural: 11 });
+    const saved = resolution(await party.commit(prepared));
+    assert.equal(saved.targetSnapshot.defense, expected);
+    await party.assertConsistent();
+  }
+});
+
 test('Schild schützt weiterhin nach eigener Magierrüstung; Buffs verbrauchen keine Abwehrladung', async () => {
   const party = await createCombatParty(definitions);
   await cast(party, 'rhiannon', 'spell:rhiannon-schild');

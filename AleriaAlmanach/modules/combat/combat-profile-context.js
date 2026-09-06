@@ -61,7 +61,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       spellSaveDc: resolved.spellSaveDc
     },
     hitPointRules: profile.hitPoints,
-    armorClassRules: profile.armorClass,
+    armorClassRules: { ...profile.armorClass, armorRoutine: resolved.armorRoutine },
     combatModifiers: profile.combat,
     savingThrows: profile.savingThrows.map(save => ({
       ...save,

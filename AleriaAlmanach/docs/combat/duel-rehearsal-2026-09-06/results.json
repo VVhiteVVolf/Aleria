@@ -1,0 +1,228 @@
+{
+  "scenarios": [
+    {
+      "scenario": "weapons",
+      "count": 250,
+      "gawain": 4,
+      "gildas": 246,
+      "draws": 0,
+      "averageRounds": 12.072,
+      "averagePosts": 23.648,
+      "min": {
+        "seed": 328043677,
+        "rounds": 6,
+        "posts": 11,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          37
+        ]
+      },
+      "max": {
+        "seed": 1398450561,
+        "rounds": 24,
+        "posts": 47,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          24
+        ]
+      },
+      "gawainWilson95": [
+        0.006239123654412256,
+        0.04041044048322319
+      ],
+      "specialCosts": 0,
+      "techniquesUsed": [],
+      "stunnedPosts": 0,
+      "bleedTicks": 0
+    },
+    {
+      "scenario": "techniques",
+      "count": 250,
+      "gawain": 1,
+      "gildas": 249,
+      "draws": 0,
+      "averageRounds": 4.148,
+      "averagePosts": 7.788,
+      "min": {
+        "seed": 328043677,
+        "rounds": 2,
+        "posts": 3,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          55
+        ]
+      },
+      "max": {
+        "seed": 1215602827,
+        "rounds": 9,
+        "posts": 18,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          9
+        ]
+      },
+      "gawainWilson95": [
+        0.0007064293567593388,
+        0.02230634711486706
+      ],
+      "specialCosts": 0,
+      "techniquesUsed": [
+        "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+        "technique:combat-style-drachentanz-jungdrache-01-erster-hieb"
+      ],
+      "stunnedPosts": 0,
+      "bleedTicks": 0
+    },
+    {
+      "scenario": "modifiers",
+      "count": 250,
+      "gawain": 0,
+      "gildas": 250,
+      "draws": 0,
+      "averageRounds": 5.452,
+      "averagePosts": 10.4,
+      "min": {
+        "seed": 328043677,
+        "rounds": 3,
+        "posts": 5,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          55
+        ]
+      },
+      "max": {
+        "seed": 806744461,
+        "rounds": 10,
+        "posts": 20,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          5
+        ]
+      },
+      "gawainWilson95": [
+        0,
+        0.015133847249623387
+      ],
+      "specialCosts": 0,
+      "techniquesUsed": [
+        "technique:combat-style-drachentanz-jungdrache-01-erster-hieb",
+        "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen"
+      ],
+      "stunnedPosts": 0,
+      "bleedTicks": 0
+    },
+    {
+      "scenario": "control",
+      "count": 250,
+      "gawain": 1,
+      "gildas": 249,
+      "draws": 0,
+      "averageRounds": 6.52,
+      "averagePosts": 12.524,
+      "min": {
+        "seed": 1180681618,
+        "rounds": 3,
+        "posts": 5,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          65
+        ]
+      },
+      "max": {
+        "seed": 3883378348,
+        "rounds": 13,
+        "posts": 26,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          18
+        ]
+      },
+      "gawainWilson95": [
+        0.0007064293567593388,
+        0.02230634711486706
+      ],
+      "specialCosts": 0,
+      "techniquesUsed": [
+        "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+        "technique:combat-style-drachentanz-jungdrache-01-erster-hieb"
+      ],
+      "stunnedPosts": 291,
+      "bleedTicks": 590
+    },
+    {
+      "scenario": "forms",
+      "count": 100,
+      "gawain": 2,
+      "gildas": 98,
+      "draws": 0,
+      "averageRounds": 4.86,
+      "averagePosts": 9.22,
+      "min": {
+        "seed": 602315278,
+        "rounds": 2,
+        "posts": 3,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          65
+        ]
+      },
+      "max": {
+        "seed": 898168328,
+        "rounds": 9,
+        "posts": 18,
+        "winner": "gildas",
+        "finalHp": [
+          0,
+          35
+        ]
+      },
+      "gawainWilson95": [
+        0.005501852234968185,
+        0.07001316294199365
+      ],
+      "specialCosts": 93,
+      "techniquesUsed": [
+        "technique:combat-style-drachentanz-jungdrache-05-stuermende-spur",
+        "technique:combat-style-drachentanz-jungdrache-04-schweifkreis",
+        "technique:combat-style-drachentanz-jungdrache-01-erster-hieb",
+        "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+        "technique:combat-style-drachentanz-jungdrache-02-drachenbiss",
+        "technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb"
+      ],
+      "stunnedPosts": 0,
+      "bleedTicks": 0
+    }
+  ],
+  "total": 1100,
+  "wins": {
+    "gawain": 8,
+    "gildas": 1092
+  },
+  "runtime": "Gemeinsamer Produktions-Regelkern; ausgewählte vollständige Duelle zusätzlich durch lokale Firebase-Transaktionen validiert.",
+  "limitations": "Betäubungsaussetzen und Blutungsauslösung sind explizite Regeln der temporären Testleitung, keine automatische Produktionsfunktion.",
+  "seed": "(0xA1E21A + index * 0x9E3779B1) >>> 0; Xorshift32; einmal Initiative, feste Reihenfolge; Gleichstand nach Seed-Parität",
+  "sourceProfiles": [
+    {
+      "name": "Gawain Draig",
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "sha256": "81643b7c73c71628aa1182c5ec55b055888c0a59884a3edc41f21d0e787f2fcd",
+      "level": 5
+    },
+    {
+      "name": "Gildas Gafyr",
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "sha256": "bf8ce5f7d58564e9f9669fbf75db59321146541d4067ddb5a61ad21d8acf24cc",
+      "level": 6
+    }
+  ],
+  "detailedDuels": 18
+}

@@ -1,6 +1,6 @@
 import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260906-effect-rolls-v1';
 import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-effect-rolls-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-duel-rehearsal-v1';
 import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260906-effect-rolls-v1';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 

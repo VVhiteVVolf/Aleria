@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import {
@@ -1123,8 +1124,7 @@ export function getArmorClass(profile = {}) {
   const base = normalized.armorClass.override != null
     ? normalized.armorClass.override
     : (bodyArmor?.baseArmorClass ?? normalized.armorClass.base);
-  const dexterityUnlocked = !bodyArmor?.dexterityUnlockLevel
-    || getEffectiveCombatLevel(normalized) >= bodyArmor.dexterityUnlockLevel;
+  const dexterityUnlocked = isArmorDexterityUnlocked(normalized, bodyArmor);
   const dexterityMode = dexterityUnlocked
     ? (bodyArmor?.dexterityMode ?? normalized.armorClass.dexterityMode)
     : 'none';
@@ -1357,6 +1357,7 @@ export function resolveCharacterCombatProfile(character = {}) {
     temporaryHitPoints: profile.hitPoints.temporary,
     totalDefense,
     armorClassTotal: totalDefense,
+    armorRoutine: getArmorRoutine(profile),
     initiative: dexterityModifier + profile.combat.initiativeBonus + sumMechanicalModifier(profile, 'initiative'),
     movement: Math.max(0, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
     passivePerception: getPassivePerception(profile),

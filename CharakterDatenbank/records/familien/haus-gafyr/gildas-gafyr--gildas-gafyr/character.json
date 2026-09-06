@@ -93,7 +93,7 @@
       "gildas-gafyr",
       "person--haus-gafyr--gildas-gafyr"
     ],
-    "contentHash": "95d0052ab4046e11589750518fb8207e8daa0934ae0f105798b7625e3bb19682"
+    "contentHash": "126cb86b34922993ff13002e399a587f48eca8ff60c3c359cf1e783c643d29c0"
   },
   "local": {
     "notes": "",
@@ -2741,7 +2741,7 @@
           "role": "Ritter des Hauses Gafyr · Teulu",
           "level": "Stufe 6",
           "status": "Gesund",
-          "hitpoints": "65 / 65 LP",
+          "hitpoints": "58 / 58 LP",
           "healthColor": "#5c7f20",
           "money": "0 Gold, 0 Silber, 0 Kupfer",
           "moneyState": {
@@ -2914,7 +2914,7 @@
               "imagePosition": "center",
               "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
               "type": "Draig-Jungritter-Plattenrüstung",
-              "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.",
+              "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.",
               "weight": "24 kg",
               "quantity": "1",
               "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
@@ -2927,9 +2927,9 @@
                 "armorClassBonus": 0,
                 "dexterityMode": "full",
                 "dexterityCap": 2,
-                "dexterityUnlockLevel": 6,
+                "dexterityUnlockLevel": 12,
                 "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-                "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6."
+                "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12."
               },
               "equipmentLink": {
                 "schemaVersion": 1,
@@ -3219,7 +3219,7 @@
               "key": "constitution",
               "label": "Konstitution",
               "shortLabel": "KON",
-              "score": 14,
+              "score": 13,
               "modifierOverride": null
             },
             {
@@ -3250,7 +3250,7 @@
               "legacyIncrease": 13,
               "overrideAnchor": null
             },
-            "current": 65,
+            "current": 58,
             "temporary": 0,
             "hitDie": 10,
             "averagePerLevelOverride": null,
@@ -3605,9 +3605,9 @@
               "armorClassBonus": 0,
               "dexterityMode": "full",
               "dexterityCap": 2,
-              "dexterityUnlockLevel": 6,
+              "dexterityUnlockLevel": 12,
               "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-              "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+              "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.",
               "equipped": true
             }
           ],
@@ -6772,7 +6772,7 @@
       "role": "Ritter des Hauses Gafyr · Teulu",
       "level": "Stufe 6",
       "status": "Gesund",
-      "hitpoints": "65 / 65 LP",
+      "hitpoints": "58 / 58 LP",
       "healthColor": "#5c7f20",
       "money": "0 Gold, 0 Silber, 0 Kupfer",
       "moneyState": {
@@ -6945,7 +6945,7 @@
           "imagePosition": "center",
           "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
           "type": "Draig-Jungritter-Plattenrüstung",
-          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 6 zählt der Geschicklichkeitsmodifikator.",
+          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.",
           "weight": "24 kg",
           "quantity": "1",
           "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
@@ -6958,9 +6958,9 @@
             "armorClassBonus": 0,
             "dexterityMode": "full",
             "dexterityCap": 2,
-            "dexterityUnlockLevel": 6,
+            "dexterityUnlockLevel": 12,
             "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-            "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6."
+            "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12."
           },
           "equipmentLink": {
             "schemaVersion": 1,
@@ -7379,7 +7379,7 @@
           "key": "constitution",
           "label": "Konstitution",
           "shortLabel": "KON",
-          "score": 14,
+          "score": 13,
           "modifierOverride": null
         },
         {
@@ -7410,7 +7410,7 @@
           "legacyIncrease": 13,
           "overrideAnchor": null
         },
-        "current": 65,
+        "current": 58,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,
@@ -7765,9 +7765,9 @@
           "armorClassBonus": 0,
           "dexterityMode": "full",
           "dexterityCap": 2,
-          "dexterityUnlockLevel": 6,
+          "dexterityUnlockLevel": 12,
           "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-          "notes": "Der Geschicklichkeitsmodifikator zählt erst ab Stufe 6.",
+          "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.",
           "equipped": true
         }
       ],
