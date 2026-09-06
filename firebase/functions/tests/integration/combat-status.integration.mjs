@@ -26,6 +26,46 @@ test('Zustände vor dem Kampf bleiben im Kampf wirksam und laufen ab', async () 
   assert.equal(state.temporaryConditions[0].durationModel.remainingActorComments, 1);
 });
 
+test('Vorteil wird vorab vergeben, serverseitig gewürfelt und endet nach zwei eigenen Posts', async () => {
+  await resetScene();
+  await change({ condition: { presetId: 'advantage', durationKind: 'actor-comments', durationAmount: 2 } });
+  await startFight();
+  for (let remaining = 2; remaining > 0; remaining--) {
+    const action = await prepareAction({ actorIndex: 1 });
+    const segment = action.payload.metadata.commentSegments[0];
+    assert.equal(segment.combatResolution.attack.rollMode, 'advantage');
+    assert.equal(segment.combatResolution.attack.diceResults.length, 2);
+    await commitAction(action.payload);
+    const state = deriveCombatStateFromComments(await history()).get(ids[1]);
+    assert.equal(state.temporaryConditions[0]?.durationModel.remainingActorComments || 0, remaining - 1);
+  }
+  const next = await prepareAction({ actorIndex: 1 });
+  assert.equal(next.payload.metadata.commentSegments[0].combatResolution.attack.rollMode, 'normal');
+});
+
+test('frei eingeschleuster Vorteil mit zwei Würfeln wird atomar abgelehnt', async () => {
+  await resetScene(); await startFight();
+  const action = await prepareAction({ actorIndex: 1 });
+  const before = await history();
+  const profileBefore = await record(ids[1]);
+  const segment = action.payload.metadata.commentSegments[0];
+  segment.combatAction.rollMode = 'advantage';
+  segment.combatResolution.attack.rollMode = 'advantage';
+  segment.combatResolution.attack.diceResults.push(3);
+  await assert.rejects(() => commitAction(action.payload), /1 gültige W20-Ergebnisse erwartet/);
+  assert.equal((await history()).length, before.length);
+  assert.deepEqual((await record(ids[1])).combatProfile, profileBefore.combatProfile);
+});
+
+test('Vorteil und Nachteil aus gespeicherten Effekten neutralisieren sich im Kampfserver', async () => {
+  await resetScene();
+  for (const presetId of ['advantage', 'disadvantage']) await change({ condition: { presetId, durationKind: 'permanent' } });
+  await startFight();
+  const action = await prepareAction({ actorIndex: 1 });
+  assert.equal(action.payload.metadata.commentSegments[0].combatResolution.attack.rollMode, 'normal');
+  await commitAction(action.payload);
+});
+
 test('Reset wird bei Kampfphase auf beiden Serverwegen abgelehnt; Sperren bleiben bestehen', async () => {
   await resetScene(); await startFight();
   await assert.rejects(() => change({ operation: 'reset' }), /Kampfphase/);

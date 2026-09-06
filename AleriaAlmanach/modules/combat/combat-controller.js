@@ -1,11 +1,12 @@
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
+import { mountCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260906-effect-rolls-v1';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260905-resource-balance-v2';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260906-character-vitality-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260906-character-vitality-v1';
+} from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260906-effect-rolls-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -22,7 +23,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260906-character-vitality-v1';
+} from './combat-state-model.js?v=20260906-effect-rolls-v1';
 import {
   getReservedEquipmentSwitchWeaponId,
   withEquippedCombatWeapon
@@ -40,13 +41,13 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260905-party-combat-v1';
+} from './ui/combat-ui.js?v=20260906-effect-rolls-v1';
 import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260905-resource-balance-v2';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260906-character-vitality-v1';
+} from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260906-effect-rolls-v1';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 
 const profileResolver = new CombatProfileResolver();
@@ -301,6 +302,10 @@ function closeResolutionDialog() {
 function mountComposers(context = {}) {
   latestComposerContext = context;
   const segments = Array.isArray(context.segments) ? context.segments : [];
+  mountCommentConditionTracker(context, actorId => {
+    const character = (context.sceneActors || []).find(actor => String(actor.id) === actorId) || getCharacterById(actorId);
+    return character ? resolveActorProfile(character, { actorId, storedStates: getStoredCombatStates(context.threadId || '') }) : null;
+  });
   if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
   const activeEncounterPartyMap = getActiveCombatPartyMap(cachedComments);
@@ -317,6 +322,7 @@ function mountComposers(context = {}) {
 
   segments.forEach(segment => {
     if (!isCombatSegment(segment)) return;
+    segment.combatRollMode = 'normal';
     const actorId = String(segment.actorId || context.selectedCharacterId || '');
     const actorCharacter = characters.find(character => String(character.id || '') === actorId) || null;
     const actor = actorCharacter ? resolveActorProfile(actorCharacter, {
@@ -387,10 +393,18 @@ function mountComposers(context = {}) {
       recoveryDayKey
     });
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
+    const previewTarget = targetCharacter ? resolveActorProfile(targetCharacter, { storedStates, recoveryDayKey }) : {};
+    const previewRules = actorCharacter && targetCharacter ? buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment, stateContext: { storedStates, recoveryDayKey } }) : undefined;
+    const rollPreview = actor ? getCombatRollContext(actor, previewTarget, {
+      relationship: targetCharacter ? getCombatRelationship(actorCharacter, targetCharacter) : 'enemy',
+      distanceMeters: Number(segment.combatDistanceMeters) || 0, ruleSources: previewRules,
+      usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(cachedComments)
+    }) : null;
     mountCombatComposer({
       card,
       segment: { ...segment, kind: getEffectiveCombatSegmentKind(segment) },
       actor,
+      rollModes: rollPreview ? [rollPreview.profileRollModes, rollPreview.auraRollMode, ...rollPreview.preRollApplications.map(application => application.effects?.rollMode)] : [],
       targets,
       ruleOptions,
       actorReady,
@@ -430,7 +444,7 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatCastLevel = 0;
     segment.combatPaymentConfirmed = false;
   }
-  if (field === 'rollMode') segment.combatRollMode = ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
+  if (field === 'rollMode') return; // Wurfarten kommen ausschließlich aus aktiven Regelquellen.
   if (field === 'weaponGrip') segment.combatWeaponGrip = String(value || '') === 'two-handed' ? 'two-handed' : 'one-handed';
   if (field === 'castLevel') {
     segment.combatCastLevel = Math.max(0, Math.min(10, Number(value) || 0));
@@ -825,6 +839,16 @@ document.addEventListener('input', event => {
   const search = event.target?.closest?.('[data-combat-target-search]');
   if (!search) return;
   filterCombatTargets(search.closest('[data-combat-composer]'), search.value);
+});
+
+let composerRefreshQueued = false;
+for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed']) document.addEventListener(name, () => {
+  if (composerRefreshQueued || !latestComposerContext?.list?.isConnected || latestComposerContext.list.closest('[aria-hidden="true"]')) return;
+  composerRefreshQueued = true;
+  requestAnimationFrame(() => {
+    composerRefreshQueued = false;
+    if (latestComposerContext?.list?.isConnected && !latestComposerContext.list.closest('[aria-hidden="true"]')) mountComposers(latestComposerContext);
+  });
 });
 
 globalThis.AleriaCombat = Object.freeze({

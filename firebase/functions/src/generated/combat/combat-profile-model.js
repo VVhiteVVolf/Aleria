@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import {
   ensureCombatActionResources,
@@ -12,11 +13,11 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260906-character-vitality-v1';
+} from './combat-effect-model.js?v=20260906-effect-rolls-v1';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -160,6 +161,7 @@ function sanitizeMechanicalModifiers(value = {}) {
     combatStartTemporaryHitPoints: normalizeNumber(source.combatStartTemporaryHitPoints, 0, 0, 9999),
     passivePerception: normalizeNumber(source.passivePerception, 0, -99, 99),
     attackRollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
+    ...(ROLL_MODES.has(source.skillRollMode) && source.skillRollMode !== 'normal' ? { skillRollMode: source.skillRollMode } : {}),
     // Ein zusätzlicher Würfel (z.B. "1w6"), der on-hit an den regulären Schaden angehängt wird,
     // solange diese Quelle aktiv ist - anders als `damage` (fester Bonus) ist das ein echter
     // Extrawurf mit eigener Varianz, z.B. für Rage-Schaden.
@@ -997,23 +999,22 @@ function collectActiveMechanicalSources(profile) {
     .map(entry => entry.mechanics);
 }
 
-const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'bonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
+const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
 
 function mergeMechanicalModifiers(sources = []) {
-  return sources.reduce((result, source) => {
+  const merged = sources.reduce((result, source) => {
     Object.keys(sanitizeMechanicalModifiers()).forEach(key => {
       if (NON_NUMERIC_MECHANICAL_KEYS.has(key)) return;
       result[key] = (Number(result[key]) || 0) + (Number(source?.[key]) || 0);
     });
-    const modes = [result.attackRollMode, source?.attackRollMode].filter(mode => mode && mode !== 'normal');
-    result.attackRollMode = modes.includes('advantage') && modes.includes('disadvantage')
-      ? 'normal'
-      : (modes[0] || 'normal');
     result.bonusDamageFormula = [result.bonusDamageFormula, source?.bonusDamageFormula].filter(Boolean).join('+');
     result.savingThrowAdvantageAttributes = [...new Set([...(result.savingThrowAdvantageAttributes || []), ...(source?.savingThrowAdvantageAttributes || [])])];
     result.savingThrowDisadvantageAttributes = [...new Set([...(result.savingThrowDisadvantageAttributes || []), ...(source?.savingThrowDisadvantageAttributes || [])])];
     return result;
   }, sanitizeMechanicalModifiers());
+  merged.attackRollMode = mergeRollModes(sources.map(source => source?.attackRollMode));
+  if (sources.some(source => source?.skillRollMode)) merged.skillRollMode = mergeRollModes(sources.map(source => source?.skillRollMode));
+  return merged;
 }
 
 export function getAuraOpponentMechanics(profile = {}) {
@@ -1179,28 +1180,29 @@ export function getPassivePerception(profile = {}) {
   return 10 + perceptionTotal + normalized.combat.passivePerceptionBonus + sumMechanicalModifier(normalized, 'passivePerception');
 }
 
-export function resolveAttackRollMode(profile = {}, requestedMode = 'normal') {
+export function getActiveRollModes(profile = {}, key = 'attackRollMode') {
   const normalized = sanitizeCharacterCombatProfile(profile);
-  const modes = [ROLL_MODES.has(requestedMode) ? requestedMode : 'normal']
-    .concat(collectActiveMechanicalSources(normalized).map(mechanics => mechanics.attackRollMode));
-  const hasAdvantage = modes.includes('advantage');
-  const hasDisadvantage = modes.includes('disadvantage');
-  if (hasAdvantage === hasDisadvantage) return 'normal';
-  return hasAdvantage ? 'advantage' : 'disadvantage';
+  return collectActiveMechanicalSources(normalized).map(mechanics => mechanics[key]).filter(mode => ROLL_MODES.has(mode) && mode !== 'normal');
+}
+
+export function resolveAttackRollMode(profile = {}, requestedMode = 'normal') {
+  return mergeRollModes(requestedMode, getActiveRollModes(profile));
 }
 
 // Anders als resolveAttackRollMode ist das je Attribut unterschiedlich (z.B. Vorteil bei
 // Stärke-Rettungswürfen, aber Nachteil bei Weisheit während desselben Zustands).
 export function resolveSavingThrowRollMode(profile = {}, attributeKey, requestedMode = 'normal') {
+  return mergeRollModes(requestedMode, getSavingThrowRollModes(profile, attributeKey));
+}
+
+export function getSavingThrowRollModes(profile = {}, attributeKey) {
   const normalized = sanitizeCharacterCombatProfile(profile);
   const key = getAttributeKey(attributeKey);
   const sources = collectActiveMechanicalSources(normalized);
-  const hasAdvantage = (ROLL_MODES.has(requestedMode) && requestedMode === 'advantage')
-    || sources.some(mechanics => (mechanics.savingThrowAdvantageAttributes || []).includes(key));
-  const hasDisadvantage = (ROLL_MODES.has(requestedMode) && requestedMode === 'disadvantage')
-    || sources.some(mechanics => (mechanics.savingThrowDisadvantageAttributes || []).includes(key));
-  if (hasAdvantage === hasDisadvantage) return 'normal';
-  return hasAdvantage ? 'advantage' : 'disadvantage';
+  return sources.flatMap(mechanics => [
+    (mechanics.savingThrowAdvantageAttributes || []).includes(key) ? 'advantage' : 'normal',
+    (mechanics.savingThrowDisadvantageAttributes || []).includes(key) ? 'disadvantage' : 'normal'
+  ]);
 }
 
 // Sammelt alle aktiven Bonus-Schadenswürfel-Formeln (z.B. Rage-Schaden), die zusätzlich zur

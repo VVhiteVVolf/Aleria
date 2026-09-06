@@ -1,5 +1,5 @@
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
-import { getAuraTargetMechanics } from './combat-profile-model.js?v=20260906-character-vitality-v1';
+import { getAuraTargetMechanics } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
 
 const NUMERIC_MECHANIC_KEYS = Object.freeze([
   'attack', 'damage', 'armorClass', 'initiative', 'skill', 'savingThrow',

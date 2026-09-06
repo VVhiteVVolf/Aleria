@@ -8,6 +8,8 @@ import {
   renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
 } from './combat-action-card.js?v=20260905-party-combat-v1';
 import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260905-resource-balance-v2';
+import { getActiveRollModes } from '../combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260905-party-combat-v1';
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260905-resource-balance-v2';
 function escapeHtml(value) {
@@ -32,7 +34,7 @@ function renderRuleOption(option = {}) {
   </label>`;
 }
 
-export function mountCombatComposer({ card, segment, actor, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
+export function mountCombatComposer({ card, segment, actor, rollModes = null, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
   if (!card) return;
   const previousComposer = card.querySelector('[data-combat-composer]');
   const viewState = captureComposerViewState(previousComposer);
@@ -58,7 +60,6 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   composer.classList.add(magic ? 'combat-composer--magic' : 'combat-composer--martial');
   composer.dataset.combatKind = magic ? 'magic' : 'martial';
   const paymentMode = actor.cheats?.enabled ? 'cheat' : (['aura', 'mana-substitute', 'cheat'].includes(segment?.combatPaymentMode) ? segment.combatPaymentMode : 'standard');
-  const rollMode = ['advantage', 'disadvantage'].includes(segment?.combatRollMode) ? segment.combatRollMode : 'normal';
   const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
     ? 'two-handed'
     : 'one-handed';
@@ -128,13 +129,7 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
       ${magic ? renderMagicValueStrip(actor) : renderCombatValueStrip(actor)}
       <div class="combat-action-controls">
       ${magic && spellAction ? `<label>Wirkungsgrad<select data-combat-input="castLevel">${castLevelOptions}</select></label>` : ''}
-      ${equipmentSwitch ? '' : `<label>Wurf
-        <select data-combat-input="rollMode">
-          <option value="normal"${rollMode === 'normal' ? ' selected' : ''}>Normal</option>
-          <option value="advantage"${rollMode === 'advantage' ? ' selected' : ''}>Vorteil</option>
-          <option value="disadvantage"${rollMode === 'disadvantage' ? ' selected' : ''}>Nachteil</option>
-        </select>
-      </label>`}
+      ${equipmentSwitch ? '' : renderAutomaticRollMode(rollModes || [...getActiveRollModes(actor), actor.forcedRollMode], { resolutionMode: actor.actionResolutionMode })}
       ${!magic && !equipmentSwitch && actor.supportsVersatileGrip ? `<label>Führung
         <select data-combat-input="weaponGrip">
           <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>

@@ -1,6 +1,8 @@
 // Local artwork and explicit Aleria effects; an icon never imports BG3 rules.
 const iconRoot = '../IconOrdner/Zauber Icons/Baldurs Gate/Condition Icons/';
 export const COMBAT_STATUS_PRESETS = Object.freeze([
+  { id: 'advantage', name: 'Vorteil', kind: 'buff', icon: 'Bless_Condition_Icon.webp', description: 'Vorteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Nachteil hebt ihn auf.', mechanics: { attackRollMode: 'advantage', skillRollMode: 'advantage' } },
+  { id: 'disadvantage', name: 'Nachteil', kind: 'debuff', icon: 'Bane_Condition_Icon.webp', description: 'Nachteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Vorteil hebt ihn auf.', mechanics: { attackRollMode: 'disadvantage', skillRollMode: 'disadvantage' } },
   { id: 'blessed', name: 'Gesegnet', kind: 'buff', icon: 'Bless_Condition_Icon.webp', description: 'Ein Segen begleitet die Figur. Trage die vereinbarten Boni unten ein.' },
   { id: 'protected', name: 'Geschützt', kind: 'buff', icon: 'Shielded_Condition_Icon.webp', description: 'Vorübergehender Schutz. Rüstungsbonus nach Quelle eintragen.' },
   { id: 'bane', name: 'Verflucht', kind: 'debuff', icon: 'Bane_Condition_Icon.webp', description: 'Ein Fluch beeinträchtigt die Figur. Mali nach Quelle eintragen.' },
@@ -18,6 +20,10 @@ export const COMBAT_STATUS_PRESETS = Object.freeze([
 export const STATUS_MODIFIERS = Object.freeze([
   ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'Rüstungsklasse'],
   ['savingThrow', 'Rettungswürfe'], ['skill', 'Fertigkeiten'], ['spellAttack', 'Zauberangriff'], ['spellSaveDc', 'Zauber-SG']
+]);
+
+export const STATUS_ROLL_MODES = Object.freeze([
+  ['attackRollMode', 'Angriffe'], ['skillRollMode', 'Fertigkeitsproben']
 ]);
 
 export function getStatusIcon(condition = {}) {

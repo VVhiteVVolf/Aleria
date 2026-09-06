@@ -1,5 +1,5 @@
 import { normalizeRuntimeCondition } from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
-import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS } from './combat-status-catalog.js';
+import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 
 export const STATUS_DURATIONS = Object.freeze([
   ['actor-comments', 'Eigene Beiträge'], ['scene-comments', 'Szenenbeiträge'],
@@ -24,6 +24,11 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '' }
     if (!Number.isInteger(modifier) || Math.abs(modifier) > 30) throw new Error('Boni und Mali müssen ganze Zahlen zwischen −30 und +30 sein.');
     if (modifier) mechanics[key] = modifier;
   }
+  for (const [key] of STATUS_ROLL_MODES) {
+    const mode = value.mechanics?.[key] ?? preset?.mechanics?.[key] ?? 'normal';
+    if (!['normal', 'advantage', 'disadvantage'].includes(mode)) throw new Error('Wähle eine gültige Wurfart.');
+    if (mode !== 'normal') mechanics[key] = mode;
+  }
   return normalizeRuntimeCondition({
     id: clean(id, 180), name, active: true, source: clean(value.source || 'Manuell vergeben'),
     presetId: preset?.id || '', statusKind: ['buff', 'debuff', 'condition'].includes(value.kind) ? value.kind : preset?.kind || 'condition',
@@ -39,6 +44,15 @@ export function formatStatusDuration(condition = {}) {
   if (duration.kind === 'concentration') return 'Konzentration';
   if (duration.kind === 'channeling') return 'Kanalisierung';
   return STATUS_DURATIONS.find(([key]) => key === duration.kind)?.[1] || condition.duration || 'Bis zum Entfernen';
+}
+
+export function getCombatConditionGroups(profile = {}) {
+  const temporaryIds = new Set((profile.temporaryConditions || []).map(condition => condition.id));
+  const conditions = (profile.conditions || profile.temporaryConditions || []).filter(condition => condition.active !== false);
+  return {
+    temporary: conditions.filter(condition => temporaryIds.has(condition.id)),
+    permanent: conditions.filter(condition => !temporaryIds.has(condition.id))
+  };
 }
 
 export function buildCombatStatusChange({ operation, profile, state = {}, condition, conditionId, resetState } = {}) {

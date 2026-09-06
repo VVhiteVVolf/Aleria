@@ -1,7 +1,7 @@
-import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS } from './combat-status-catalog.js';
-import { STATUS_DURATIONS, createManualCombatCondition } from './combat-status-model.js?v=20260906-character-vitality-v1';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-character-vitality-v1';
-import { escapeCombatMarkup as e, renderCombatCondition as renderMiniProfileCondition } from './combat-status-view.js?v=20260906-character-vitality-v1';
+import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
+import { STATUS_DURATIONS, createManualCombatCondition } from './combat-status-model.js?v=20260906-effect-rolls-v1';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-effect-rolls-v1';
+import { escapeCombatMarkup as e, renderCombatCondition as renderMiniProfileCondition } from './combat-status-view.js?v=20260906-effect-rolls-v1';
 
 let dialog = null;
 let draft = null;
@@ -25,6 +25,7 @@ function formMarkup() {
     <label data-status-amount>Anzahl<input type="number" name="durationAmount" min="1" max="999" value="1" required></label></div>
     <label>Quelle<input name="source" maxlength="160" placeholder="Zauber, Gegenstand oder Situation"></label>
     <label>Wirkung / Hinweise<textarea name="description" rows="3" maxlength="1600"></textarea></label>
+    <fieldset class="combat-status-roll-modes"><legend>Vorteil & Nachteil</legend><div class="combat-status-fields">${STATUS_ROLL_MODES.map(([key, label]) => `<label>${e(label)}<select name="${key}"><option value="normal">Keine Änderung</option><option value="advantage">Vorteil</option><option value="disadvantage">Nachteil</option></select></label>`).join('')}</div><p>Gilt automatisch, solange dieser Effekt aktiv ist. Vorteil und Nachteil heben sich gegenseitig auf.</p></fieldset>
     <details class="combat-status-modifiers"><summary>Boni & Mali automatisch einrechnen</summary><p>Nur eingetragene Zahlen werden automatisch verrechnet. Weitere Wirkungen wie Folgeschaden, Bewegung oder Handlungssperren werden als Hinweis verfolgt.</p><div class="combat-status-fields">${STATUS_MODIFIERS.map(([key, label]) => `<label>${e(label)}<input type="number" name="modifier-${key}" min="-30" max="30" value="0"></label>`).join('')}</div></details>`;
 }
 
@@ -48,6 +49,7 @@ function ensureDialog() {
         form.elements.name.value = preset.name; form.elements.kind.value = preset.kind;
         form.elements.description.value = preset.description;
       }
+      for (const [key] of STATUS_ROLL_MODES) form.elements[key].value = preset?.mechanics?.[key] || 'normal';
       dialog.querySelector('[data-status-preview]').innerHTML = preset
         ? `<ul class="comment-combat-conditions">${renderMiniProfileCondition({ ...preset, presetId: preset.id })}</ul>` : '';
     }
@@ -81,6 +83,7 @@ async function submit() {
     if (current.operation === 'add') {
       condition = Object.fromEntries(new FormData(form));
       condition.mechanics = Object.fromEntries(STATUS_MODIFIERS.map(([key]) => [key, form.elements[`modifier-${key}`].value]));
+      for (const [key] of STATUS_ROLL_MODES) condition.mechanics[key] = form.elements[key].value;
       createManualCombatCondition(condition, { id: 'preview' });
     }
     if (current.operation === 'reset' && getActiveCombatEncounter(comments(current.threadId))) throw new Error('Inzwischen steht eine Kampfphase an. Zurücksetzen ist gesperrt.');

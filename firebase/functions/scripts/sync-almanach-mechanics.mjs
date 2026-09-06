@@ -48,6 +48,7 @@ const files = [
   'combat/combat-equipment-state.js',
   'combat/combat-progression.js',
   'combat/combat-rule-consumption.js',
+  'combat/combat-roll-mode.js',
   'combat/combat-resolution-storage.js',
   'combat/combat-ammunition.js',
   'combat/combat-profile-context.js',

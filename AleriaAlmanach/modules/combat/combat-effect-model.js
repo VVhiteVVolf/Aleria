@@ -1,4 +1,4 @@
-import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260906-character-vitality-v1';
+import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260906-effect-rolls-v1';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([

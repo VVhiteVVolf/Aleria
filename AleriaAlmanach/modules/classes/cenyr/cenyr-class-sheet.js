@@ -1,7 +1,7 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
 import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260905-damage-balance-v1';
 import { getCenyrTrainingState } from './cenyr-class-training.js?v=20260905-cenyr-character-training-v1';
-import { getCenyrTechniqueChoiceGroups } from './cenyr-technique-selection.js?v=20260906-character-vitality-v1';
+import { getCenyrTechniqueChoiceGroups } from './cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
 
 export function getCenyrCharacterClassSummary(profile = {}) {
   // An explicit template wins; never reinterpret a different selected class from

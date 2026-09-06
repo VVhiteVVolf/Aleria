@@ -54,6 +54,8 @@
 .combat-status-dialog button[type='submit'] { color: #2a2118; background: #d4b477; }
 .combat-status-dialog button:disabled { opacity: 0.55; cursor: wait; }
 .combat-status-dialog p { margin: 0; }
+.combat-status-roll-modes { margin: 0; padding: 0.65rem; border: 1px solid #7d613e; border-radius: 4px; min-width: 0; }
+.combat-status-roll-modes p { margin-top: 0.5rem; font-size: 0.85rem; }
 .combat-status-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
 .combat-status-dialog [hidden] { display: none; }
 .combat-status-modifiers { border: 1px solid #7d613e; border-radius: 4px; padding: 0.65rem; }

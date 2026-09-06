@@ -7,7 +7,7 @@ import {
   setCharacterHitPointMaximum,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260906-character-vitality-v1';
+} from './combat-profile-model.js?v=20260906-effect-rolls-v1';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
 import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
@@ -21,7 +21,7 @@ import {
   getCenyrTechniqueChoiceGroups,
   reconcileCenyrTrainingForLevel,
   selectCenyrTechniqueForSlot
-} from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-character-vitality-v1';
+} from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);

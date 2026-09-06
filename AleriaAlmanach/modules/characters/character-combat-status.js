@@ -1,7 +1,7 @@
-import { renderMiniCombatProfile } from '../combat-status/combat-profile-summary-view.js?v=20260906-character-vitality-v1';
-import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260906-character-vitality-v1';
-import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-character-vitality-v1';
+import { renderMiniCombatProfile } from '../combat-status/combat-profile-summary-view.js?v=20260906-effect-rolls-v1';
+import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260906-effect-rolls-v1';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-effect-rolls-v1';
 
 let character = null;
 let queued = false;

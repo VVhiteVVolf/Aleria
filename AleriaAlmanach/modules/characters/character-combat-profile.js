@@ -13,14 +13,14 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-character-vitality-v1';
+} from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-effect-rolls-v1';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260906-character-vitality-v1';
+} from '../combat/combat-level-up-model.js?v=20260906-effect-rolls-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -39,15 +39,15 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260906-character-vitality-v1';
-import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260906-character-vitality-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-character-vitality-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260906-effect-rolls-v1';
+import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260906-effect-rolls-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
-import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260906-character-vitality-v1';
+import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260906-effect-rolls-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});

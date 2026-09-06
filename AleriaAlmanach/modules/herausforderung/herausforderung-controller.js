@@ -12,7 +12,7 @@ import {
   renderHerausforderungComment,
   setHerausforderungStatus,
   setHerausforderungSubmitting
-} from './herausforderung-ui.js?v=20260906-character-vitality-v1';
+} from './herausforderung-ui.js?v=20260906-effect-rolls-v1';
 
 let activeThreadId = '';
 let draftApproaches = [];

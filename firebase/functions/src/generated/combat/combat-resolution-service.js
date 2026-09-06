@@ -3,27 +3,29 @@ import {
   getAuraTargetMechanics,
   getBonusDamageFormulas,
   getSavingThrowTotal,
-  resolveAttackRollMode,
+  getActiveRollModes,
+  getSavingThrowRollModes,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260906-character-vitality-v1';
+} from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260906-character-vitality-v1';
+} from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260906-character-vitality-v1';
+} from './combat-state-model.js?v=20260906-effect-rolls-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
   normalizeCombatEffect,
   normalizeCombatEffects
-} from './combat-effect-model.js?v=20260906-character-vitality-v1';
+} from './combat-effect-model.js?v=20260906-effect-rolls-v1';
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260906-character-vitality-v1';
+import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260906-effect-rolls-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
 import { refreshRuntimeCondition, getConditionConcentrationOwnerId } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import {
@@ -31,20 +33,12 @@ import {
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260906-character-vitality-v1';
+} from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-5';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-6';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
-}
-
-function mergeRollModes(...values) {
-  const modes = values.map(normalizeRollMode);
-  const hasAdvantage = modes.includes('advantage');
-  const hasDisadvantage = modes.includes('disadvantage');
-  if (hasAdvantage === hasDisadvantage) return 'normal';
-  return hasAdvantage ? 'advantage' : 'disadvantage';
 }
 
 function createResolutionId() {
@@ -286,6 +280,43 @@ function buildChannelingResolution(actor, target, description, rollMode, require
   };
 }
 
+export function getCombatRollContext(actor, target = {}, options = {}) {
+  // Freie Wurfart-Vorgaben sind keine Regelquelle; die aufgelöste Technik darf eine vorgeben.
+  const requestedRollMode = normalizeRollMode(actor.forcedRollMode);
+  const relationship = options.relationship === 'ally' ? 'ally' : 'enemy';
+  const distanceMeters = Number.isFinite(Number(options.distanceMeters)) ? Number(options.distanceMeters) : null;
+  const auraContext = { relation: relationship, distanceMeters: options.distanceMeters };
+  const actorAuraOnTarget = getAuraTargetMechanics(actor, auraContext);
+  const targetAuraOnActor = getAuraTargetMechanics(target, auraContext);
+  const resolutionMode = actor.actionResolutionMode || 'weapon-attack';
+  const savingThrowMode = resolutionMode === 'saving-throw';
+  const automaticMode = resolutionMode === 'automatic';
+  const ruleSources = normalizeRuleSources(actor, target, relationship, distanceMeters, options.ruleSources);
+  const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
+    ? new Set(options.usedRuleFrequencyKeys)
+    : new Set(Array.isArray(options.usedRuleFrequencyKeys) ? options.usedRuleFrequencyKeys : []);
+  const rulePeriods = options.rulePeriods || {};
+  const actionKind = actor.profileActionKind || 'weapon';
+  const profileActionId = actor.profileActionId || '';
+  const ruleProfileState = { actorProfile: actor, targetProfile: target };
+  const preRollApplications = collectApplicableCombatRules({
+    phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
+    usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState
+  }).concat(buildSupportAuraApplications(ruleSources, actionKind));
+  markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
+  const preRollEffects = mergeCombatRuleEffects(preRollApplications);
+  const profileRollModes = [requestedRollMode, ...(savingThrowMode
+    ? getSavingThrowRollModes(target, actor.actionSaveAttribute)
+    : getActiveRollModes(actor))];
+  const profileRollMode = mergeRollModes(profileRollModes);
+  const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
+  const safeRollMode = mergeRollModes(profileRollModes, auraRollMode, preRollApplications.map(application => application.effects?.rollMode));
+  return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
+    resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
+    actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode };
+}
+
 export class CombatResolutionService {
   constructor(diceAdapter) {
     this.dice = diceAdapter;
@@ -319,13 +350,10 @@ export class CombatResolutionService {
 
     const requiredChannelComments = options.skipChanneling ? 0 : Math.max(0, Math.trunc(Number(actor.selectedAction?.channelComments) || 0));
     if (requiredChannelComments > 0) {
-      const channelingResolution = buildChannelingResolution(actor, target, description, rollMode, requiredChannelComments, String(options.rulePeriods?.comment || ''));
+      const channelingResolution = buildChannelingResolution(actor, target, description, 'normal', requiredChannelComments, String(options.rulePeriods?.comment || ''));
       if (channelingResolution) return channelingResolution;
     }
 
-    const requestedRollMode = actor.forcedRollMode && actor.forcedRollMode !== 'normal'
-      ? actor.forcedRollMode
-      : normalizeRollMode(rollMode);
     const weapon = actor.weapon;
     const ammunition = options.skipAmmunition
       ? { changed: false, before: actor.inventory || { items: [] }, after: actor.inventory || { items: [] }, use: null }
@@ -366,33 +394,10 @@ export class CombatResolutionService {
         ruleConflicts: []
       };
     }
-    const relationship = options.relationship === 'ally' ? 'ally' : 'enemy';
-    const distanceMeters = Number.isFinite(Number(options.distanceMeters)) ? Number(options.distanceMeters) : null;
-    const auraContext = { relation: relationship, distanceMeters: options.distanceMeters };
-    const actorAuraOnTarget = getAuraTargetMechanics(actor, auraContext);
-    const targetAuraOnActor = getAuraTargetMechanics(target, auraContext);
-    const resolutionMode = actor.actionResolutionMode || 'weapon-attack';
-    const savingThrowMode = resolutionMode === 'saving-throw';
-    const automaticMode = resolutionMode === 'automatic';
-    const ruleSources = normalizeRuleSources(actor, target, relationship, distanceMeters, options.ruleSources);
-    const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
-      ? new Set(options.usedRuleFrequencyKeys)
-      : new Set(Array.isArray(options.usedRuleFrequencyKeys) ? options.usedRuleFrequencyKeys : []);
-    const rulePeriods = options.rulePeriods || {};
-    const actionKind = actor.profileActionKind || 'weapon';
-    const profileActionId = actor.profileActionId || '';
-    const ruleProfileState = { actorProfile: actor, targetProfile: target };
-    const preRollApplications = collectApplicableCombatRules({
-      phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState
-    }).concat(buildSupportAuraApplications(ruleSources, actionKind));
-    markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
-    const preRollEffects = mergeCombatRuleEffects(preRollApplications);
-    const profileRollMode = savingThrowMode
-      ? resolveSavingThrowRollMode(target, actor.actionSaveAttribute, requestedRollMode)
-      : resolveAttackRollMode(actor, requestedRollMode);
-    const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
-    const safeRollMode = mergeRollModes(profileRollMode, auraRollMode, preRollEffects.rollMode);
+    const { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
+    resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
+    actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode } = getCombatRollContext(actor, target, options);
     const attackModifier = savingThrowMode
       ? getSavingThrowTotal(target, actor.actionSaveAttribute) + Number(actorAuraOnTarget.savingThrow || 0) + preRollEffects.savingThrowModifier
       : Number(actor.attackModifier || 0)
@@ -603,7 +608,7 @@ export class CombatResolutionService {
       };
       const followPreApplications = collectFollowRules('pre-roll');
       const followPreEffects = mergeCombatRuleEffects(followPreApplications);
-      const followRollMode = mergeRollModes(profileRollMode, auraRollMode, followPreEffects.rollMode);
+      const followRollMode = mergeRollModes(profileRollModes, auraRollMode, followPreApplications.map(application => application.effects?.rollMode));
       const followAttackModifier = Number(actor.attackModifier || 0) + Number(followUp.attackBonus || 0)
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)

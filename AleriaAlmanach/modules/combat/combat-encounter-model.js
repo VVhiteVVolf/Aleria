@@ -2,7 +2,7 @@ import { splitEncounterExperience } from './combat-progression.js?v=20260807-mag
 import {
   applyCombatEncounterAuraApplicationsToStateMap,
   normalizeCombatEncounterAuraApplication
-} from './combat-encounter-aura.js?v=20260906-character-vitality-v1';
+} from './combat-encounter-aura.js?v=20260906-effect-rolls-v1';
 import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary, getEncounterResolutionGroups } from './combat-encounter-summary.js';
 import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
 

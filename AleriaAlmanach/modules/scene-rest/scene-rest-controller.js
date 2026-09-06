@@ -1,5 +1,5 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260906-character-vitality-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260906-effect-rolls-v1';
 import {
   buildSceneRestParticipant,
   getSceneRestType,

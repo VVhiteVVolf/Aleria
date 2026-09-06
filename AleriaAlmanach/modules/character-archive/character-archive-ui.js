@@ -1,4 +1,4 @@
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-character-vitality-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-effect-rolls-v1';
 import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
 import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
 import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';

@@ -1,8 +1,8 @@
-import { normalizeCombatEncounterEvent, getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-character-vitality-v1';
+import { normalizeCombatEncounterEvent, getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-effect-rolls-v1';
 import { collectClaimedLootActorIds } from '../loot/loot-model.js?v=20260807-loot-v1';
 import { ENCOUNTER_STATUS_LABELS, ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from '../combat/combat-encounter-outcome.js';
 import { renderEncounterSummary, escapeEncounterMarkup as escapeMarkup } from './combat-encounter-summary-ui.js';
-import { renderEncounterActions } from './combat-encounter-panel.js?v=20260906-character-vitality-v1';
+import { renderEncounterActions } from './combat-encounter-panel.js?v=20260906-effect-rolls-v1';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 

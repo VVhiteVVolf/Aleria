@@ -5,27 +5,20 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260906-character-vitality-v1';
-import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
+} from './skill-check-model.js?v=20260906-effect-rolls-v1';
+import { getAuraTargetMechanics, getActiveRollModes } from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { mergeRollModes } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects
-} from '../combat/combat-trigger-rules.js?v=20260906-character-vitality-v1';
-import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260906-character-vitality-v1';
+} from '../combat/combat-trigger-rules.js?v=20260906-effect-rolls-v1';
+import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260906-effect-rolls-v1';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-2';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-3';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-}
-
-function mergeRollModes(...values) {
-  const modes = values.map(value => ['advantage', 'disadvantage'].includes(value) ? value : 'normal');
-  const advantage = modes.includes('advantage');
-  const disadvantage = modes.includes('disadvantage');
-  if (advantage === disadvantage) return 'normal';
-  return advantage ? 'advantage' : 'disadvantage';
 }
 
 function forceSkillOutcome(outcome, forced) {
@@ -47,7 +40,7 @@ function buildSkillAuraApplications(sources = []) {
       distanceMeters: source.distanceToActor
     });
     const skillModifier = Number(mechanics.skill || 0);
-    const rollMode = mechanics.attackRollMode || 'normal';
+    const rollMode = mechanics.skillRollMode || mechanics.attackRollMode || 'normal';
     if (!skillModifier && rollMode === 'normal') return [];
     return [{
       applicationKey: `${source.actorId}:aura:skill-actor`,
@@ -62,39 +55,46 @@ function buildSkillAuraApplications(sources = []) {
   });
 }
 
+export function getSkillRollContext({ actor, settings: sourceSettings } = {}, options = {}) {
+  const settings = normalizeSkillCheckSettings(sourceSettings);
+  const skill = resolveSkillModifier(options.actorProfile || actor, settings.skillId);
+  const sources = Array.isArray(options.ruleSources) && options.ruleSources.length
+    ? options.ruleSources
+    : [{
+        actorId: String(actor.id || ''), actorName: String(actor.name || ''), profile: skill.profile,
+        sourceRole: 'actor', relationToActor: 'self', relationToTarget: 'enemy',
+        distanceToActor: 0, distanceToTarget: null, selectedRuleIds: []
+      }];
+  const periods = options.rulePeriods || {};
+  const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
+    ? new Set(options.usedRuleFrequencyKeys)
+    : new Set(Array.isArray(options.usedRuleFrequencyKeys) ? options.usedRuleFrequencyKeys : []);
+  const skillRuleState = {
+    skillId: settings.skillId,
+    skillName: skill.definition.label,
+    actorProfile: skill.profile,
+    targetProfile: options.targetProfile || null
+  };
+  const preApplications = collectApplicableCombatRules({
+    phase: 'pre-roll', actionKind: 'skill', sources, periods,
+    usedFrequencyKeys: usedRuleFrequencyKeys, state: skillRuleState
+  }).concat(buildSkillAuraApplications(sources));
+  markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
+  const preEffects = mergeCombatRuleEffects(preApplications);
+  const profileRollModes = getActiveRollModes(skill.profile, 'skillRollMode');
+  const rollMode = mergeRollModes(profileRollModes, preApplications.map(application => application.effects?.rollMode));
+  return { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode };
+}
+
 export class SkillResolutionService {
   constructor(diceAdapter) {
     this.dice = diceAdapter;
   }
 
   async resolve({ actor, settings: sourceSettings, challenge = null, actorPersistence = null } = {}, options = {}) {
-    const settings = normalizeSkillCheckSettings(sourceSettings);
-    const skill = resolveSkillModifier(options.actorProfile || actor, settings.skillId);
+    const { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode }
+      = getSkillRollContext({ actor, settings: sourceSettings }, options);
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
-    const sources = Array.isArray(options.ruleSources) && options.ruleSources.length
-      ? options.ruleSources
-      : [{
-          actorId: String(actor.id || ''), actorName: String(actor.name || ''), profile: skill.profile,
-          sourceRole: 'actor', relationToActor: 'self', relationToTarget: 'enemy',
-          distanceToActor: 0, distanceToTarget: null, selectedRuleIds: []
-        }];
-    const periods = options.rulePeriods || {};
-    const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
-      ? new Set(options.usedRuleFrequencyKeys)
-      : new Set(Array.isArray(options.usedRuleFrequencyKeys) ? options.usedRuleFrequencyKeys : []);
-    const skillRuleState = {
-      skillId: settings.skillId,
-      skillName: skill.definition.label,
-      actorProfile: skill.profile,
-      targetProfile: options.targetProfile || null
-    };
-    const preApplications = collectApplicableCombatRules({
-      phase: 'pre-roll', actionKind: 'skill', sources, periods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: skillRuleState
-    }).concat(buildSkillAuraApplications(sources));
-    markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
-    const preEffects = mergeCombatRuleEffects(preApplications);
-    const rollMode = mergeRollModes(settings.rollMode, preEffects.rollMode);
     const baseModifier = skill.modifier + settings.customModifier + affinityModifier;
     const preModifier = baseModifier + preEffects.skillModifier;
     const difficulty = Number.isFinite(Number(options.opposedDifficulty))
@@ -127,7 +127,7 @@ export class SkillResolutionService {
     const calculatedOutcome = classifySkillCheck({ natural, total, difficulty });
     const outcome = forceSkillOutcome(calculatedOutcome, postEffects.outcome);
     const ruleApplications = [
-      ...ledger(preApplications, { modifier: baseModifier, rollMode: settings.rollMode }, { modifier: preModifier, rollMode }),
+      ...ledger(preApplications, { modifier: baseModifier, rollMode: mergeRollModes(profileRollModes) }, { modifier: preModifier, rollMode }),
       ...ledger(postApplications, { total: Number(roll.total), outcome: firstOutcome }, { total, outcome })
     ];
     const ruleResourceSnapshots = consumeCombatRuleResources(ruleApplications, sources, {

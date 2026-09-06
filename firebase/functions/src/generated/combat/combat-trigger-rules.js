@@ -1,5 +1,5 @@
 import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260905-resource-balance-v2';
-import { normalizeCombatEffects } from './combat-effect-model.js?v=20260906-character-vitality-v1';
+import { normalizeCombatEffects } from './combat-effect-model.js?v=20260906-effect-rolls-v1';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
   'pre-roll', 'post-roll', 'post-hit', 'pre-damage', 'on-damaged', 'post-damage',

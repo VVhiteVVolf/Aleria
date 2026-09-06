@@ -1,6 +1,6 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-character-vitality-v1';
-import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260906-character-vitality-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260906-effect-rolls-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -16,10 +16,11 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260906-character-vitality-v1';
+} from './skill-check-model.js?v=20260906-effect-rolls-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService } from './skill-resolution-service.js?v=20260906-character-vitality-v1';
-import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260906-character-vitality-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20260906-effect-rolls-v1';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260906-effect-rolls-v1';
+import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({
@@ -32,6 +33,15 @@ const skillResolutionService = new SkillResolutionService({
   }
 });
 let latestComposerContext = null;
+let composerRefreshQueued = false;
+for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed']) document.addEventListener(name, () => {
+  if (composerRefreshQueued || !latestComposerContext?.list?.isConnected || latestComposerContext.list.closest('[aria-hidden="true"]')) return;
+  composerRefreshQueued = true;
+  requestAnimationFrame(() => {
+    composerRefreshQueued = false;
+    if (latestComposerContext?.list?.isConnected && !latestComposerContext.list.closest('[aria-hidden="true"]')) mountComposers(latestComposerContext);
+  });
+});
 let revealedChallengeIds = new Set();
 
 function escapeHtml(value) {
@@ -234,7 +244,7 @@ function renderSkillSupportOptions(segment, actor, actors = []) {
   </fieldset>`;
 }
 
-function renderSkillComposer(segment, actor, challenges, actors = []) {
+function renderSkillComposer(segment, actor, challenges, actors = [], sceneResolver = profileResolver) {
   if (normalizeMechanicMode(segment?.mechanicMode, segment) !== 'skill') return '';
   const kindSkills = getSkillsForCommentKind(segment.kind);
   const settings = normalizeSkillCheckSettings({
@@ -247,7 +257,7 @@ function renderSkillComposer(segment, actor, challenges, actors = []) {
   segment.skillId = settings.skillId || kindSkills[0]?.id || '';
   segment.skillCustomModifier = settings.customModifier;
   segment.skillDifficulty = settings.difficulty;
-  segment.skillRollMode = settings.rollMode;
+  segment.skillRollMode = 'normal';
   segment.skillTargetChallengeId = settings.targetChallengeId;
   const actorKey = String(actor?.id || '');
   const availableChallenges = challenges.filter(challenge => !actorKey || challenge.authorKey !== actorKey);
@@ -266,8 +276,13 @@ function renderSkillComposer(segment, actor, challenges, actors = []) {
     settings.targetChallengeId = '';
   }
   let profileDetail = 'Charakterbogen fehlt';
+  let rollModes = [];
   if (actor && segment.skillId) {
-    const skill = resolveSkillModifier(actor, segment.skillId);
+    const actorProfile = sceneResolver.resolve(actor);
+    const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
+    const rollContext = getSkillRollContext({ actor, settings }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
+    const skill = rollContext.skill;
+    rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
     const sign = skill.modifier >= 0 ? '+' : '';
     profileDetail = `${sign}${skill.modifier} aus ${skill.source === 'character-sheet' ? 'Fertigkeit & Attribut' : 'Attribut (Fertigkeit noch leer)'}`;
   }
@@ -305,13 +320,7 @@ function renderSkillComposer(segment, actor, challenges, actors = []) {
           <input type="number" min="-99" max="99" value="${settings.customModifier}" data-skill-input="customModifier">
           <small>Optional, 0 lässt den Bogenwert unverändert</small>
         </label>
-        <label>Wurfart
-          <select data-skill-input="rollMode">
-            <option value="normal"${settings.rollMode === 'normal' ? ' selected' : ''}>Normal</option>
-            <option value="advantage"${settings.rollMode === 'advantage' ? ' selected' : ''}>Vorteil</option>
-            <option value="disadvantage"${settings.rollMode === 'disadvantage' ? ' selected' : ''}>Nachteil</option>
-          </select>
-        </label>
+        ${renderAutomaticRollMode(rollModes)}
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b><span>Bevorzugte Fertigkeiten: ${escapeHtml(target.preferredSkills.map(id => getSkillDefinition(id)?.label).filter(Boolean).join(', ') || 'keine')}</span></div>` : ''}
       ${renderSkillSupportOptions(segment, actor, actors)}
@@ -358,12 +367,13 @@ function mountComposers(context = {}) {
   const needsSkillComposer = segments.some(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
   const actors = needsSkillComposer ? mergeActors(context.sceneActors || []) : [];
   const challenges = needsSkillComposer ? getComposerChallenges(context.threadId || '') : [];
+  const sceneResolver = needsSkillComposer ? createSceneSkillProfileResolver(globalThis.getCachedCommentsForThread?.(context.threadId || '') || []) : profileResolver;
   segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     const host = card?.querySelector?.('[data-segment-mechanics-host]');
     if (!host) return;
     const actor = needsSkillComposer ? getActorForSegment(segment, context.selectedCharacterId, actors) : null;
-    host.innerHTML = `${renderModeControl(segment)}${renderSkillComposer(segment, actor, challenges, actors)}${renderChallengeComposer(segment)}`;
+    host.innerHTML = `${renderModeControl(segment)}${renderSkillComposer(segment, actor, challenges, actors, sceneResolver)}${renderChallengeComposer(segment)}`;
   });
 }
 
@@ -393,7 +403,7 @@ function updateSegmentField(segment, field, value) {
   if (field === 'targetChallengeId') segment.skillTargetChallengeId = String(value || '');
   if (field === 'difficulty') segment.skillDifficulty = clampNumber(value, 10, 1, 40);
   if (field === 'customModifier') segment.skillCustomModifier = clampNumber(value, 0, -99, 99);
-  if (field === 'rollMode') segment.skillRollMode = ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
+  if (field === 'rollMode') return;
   if (field === 'challengeEnabled') {
     segment.skillChallengeEnabled = !!value;
     if (segment.skillChallengeEnabled) {

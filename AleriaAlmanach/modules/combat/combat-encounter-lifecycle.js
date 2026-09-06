@@ -1,4 +1,4 @@
-import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260906-character-vitality-v1';
+import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260906-effect-rolls-v1';
 import { captureEncounterSnapshot } from './combat-encounter-summary.js';
 import { getDefeatExperienceReward } from './combat-progression.js';
 

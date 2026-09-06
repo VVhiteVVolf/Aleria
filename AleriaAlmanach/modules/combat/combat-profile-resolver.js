@@ -6,19 +6,19 @@ import {
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260906-character-vitality-v1';
+} from './combat-profile-model.js?v=20260906-effect-rolls-v1';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts
 } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { getSpellLevelLabel, getSpellSlotLevel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getSpellManaCost } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
-import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260906-character-vitality-v1';
+import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260906-effect-rolls-v1';
 import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import { getCenyrClassActionModifiers } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
 import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260905-cenyr-character-training-v1';
 import { getTechniqueDamageScaling, resolveTechniqueDamageFormula } from './combat-technique-damage.js?v=20260905-party-combat-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-character-vitality-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 
 let emptyCharacterTargetProfile = null;

@@ -1,7 +1,7 @@
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260906-character-vitality-v1';
+} from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
 
 export const CREATURE_SCHEMA_VERSION = 3;
 export const CREATURE_EXPORT_TYPE = 'aleria-creature';

@@ -1,6 +1,7 @@
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js';
-import { escapeCombatMarkup as e, formatCombatModifier as modifier, renderCombatIcon as image, renderCombatCondition as renderMiniProfileCondition } from '../combat-status/combat-status-view.js?v=20260906-character-vitality-v1';
-export { escapeCombatMarkup, safeCombatImage } from '../combat-status/combat-status-view.js?v=20260906-character-vitality-v1';
+import { getCombatConditionGroups } from './combat-status-model.js?v=20260906-effect-rolls-v1';
+import { escapeCombatMarkup as e, formatCombatModifier as modifier, renderCombatIcon as image, renderCombatCondition as renderMiniProfileCondition } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
+export { escapeCombatMarkup, safeCombatImage } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
 
 function renderResource(resource) {
   const icon = getCombatResourceIconPresentation(resource);
@@ -17,10 +18,7 @@ export function renderMiniCombatProfile(profile, displayName, options = {}) {
   const mainResourceIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus', 'inspiration', 'mana-focus', 'mana', 'focus', 'pact-points', 'celestial-points', 'infernal-points']);
   const mainResources = resources.filter(resource => mainResourceIds.has(resource.id));
   const otherResources = resources.filter(resource => !mainResourceIds.has(resource.id));
-  const temporaryIds = new Set((profile.temporaryConditions || []).map(condition => condition.id));
-  const conditions = (profile.conditions || []).filter(condition => condition.active !== false);
-  const temporaryConditions = conditions.filter(condition => temporaryIds.has(condition.id));
-  const permanentConditions = conditions.filter(condition => !temporaryIds.has(condition.id));
+  const { temporary: temporaryConditions, permanent: permanentConditions } = getCombatConditionGroups(profile);
   const abilities = (profile.abilities || []).filter(ability => ability.active !== false && ability.usesMaximum > 0);
   const canManage = options.canManage && !options.historical;
   const weapon = profile.weapon || {};
