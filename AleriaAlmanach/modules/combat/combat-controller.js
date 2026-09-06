@@ -40,6 +40,7 @@ import {
   resetCommentScopedResources
 } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
+import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
@@ -306,6 +307,15 @@ function closeResolutionDialog() {
   overlay.setAttribute('aria-hidden', 'true');
 }
 
+function previewConsumedItem(segment, characters, fallbackActorId, workingStates, storedStates) {
+  if (String(segment.kind || segment.commentKind) !== 'consume') return;
+  const actorId = String(segment.actorId || segment.sceneActorId || segment.inventoryUse?.actorId || fallbackActorId || '');
+  const character = characters.find(entry => String(entry.id) === actorId);
+  if (!character) return;
+  const state = workingStates.get(actorId) || storedStates.get(actorId) || {};
+  workingStates.set(actorId, previewZornkappeSegment(segment, character, state));
+}
+
 function mountComposers(context = {}) {
   latestComposerContext = context;
   const segments = Array.isArray(context.segments) ? context.segments : [];
@@ -331,6 +341,8 @@ function mountComposers(context = {}) {
   ]));
 
   segments.forEach(segment => {
+    try { previewConsumedItem(segment, characters, context.selectedCharacterId, composerStates, storedStates); }
+    catch { /* Invalid consumption is rejected explicitly during submission. */ }
     if (!isCombatSegment(segment)) return;
     segment.combatRollMode = 'normal';
     const actorId = String(segment.actorId || context.selectedCharacterId || '');
@@ -818,11 +830,13 @@ async function handleSubmission(submission = {}) {
   activateResolutionDialog();
   try {
     const resolutionGroups = [];
-    for (let index = 0; index < combatSegments.length; index += 1) {
+    for (const segment of segments) {
+      previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates);
+      if (!isCombatSegment(segment)) continue;
       resolutionGroups.push(await resolveCombatSegment(
-        combatSegments[index],
+        segment,
         characters,
-        index,
+        resolutionGroups.length,
         combatSegments.length,
         submission.characterId,
         stateContext

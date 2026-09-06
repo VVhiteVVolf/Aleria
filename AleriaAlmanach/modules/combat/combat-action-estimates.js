@@ -1,7 +1,7 @@
 import { getCombatRollContext } from './combat-resolution-service.js';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js';
 import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js';
-import { getBonusDamageFormulas } from './combat-profile-model.js';
+import { getBonusDamageFormulas, getUniversalDamageBonus } from './combat-profile-model.js';
 
 export function estimateCombatHitChance(actor, target, options = {}) {
   if (!actor || !target || actor.selectedAction?.compatible === false || actor.equipmentPreparation?.error
@@ -42,7 +42,7 @@ export function estimateCombatDamage(actor = {}) {
   const effects = actor.selectedAction?.effects || [];
   const primary = effects.find(effect => effect.type === 'damage' && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
   if (effects.length && !primary) return null;
-  if (primary?.amount > 0 && !primary.formula) return Number(primary.amount);
+  if (primary?.amount > 0 && !primary.formula) return Number(primary.amount) + getUniversalDamageBonus(actor);
   const formula = primary?.formula || actor.weapon?.damageFormula;
   if (!formula) return null;
   try { return averageDamageFormula(combineDamageFormulas([formula, ...getBonusDamageFormulas(actor)]), actor.damageModifier); }

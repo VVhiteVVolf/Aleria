@@ -1,5 +1,6 @@
 // Pure duration helpers shared by browser replay and trusted server validation.
 // A condition owns an explicit clock; prose in `duration` is presentation only.
+import { advanceBerserkForComment } from './combat-berserk-state.js';
 
 const DURATION_KINDS = new Set([
   'permanent', 'combat', 'actor-comments', 'scene-comments',
@@ -100,6 +101,7 @@ export function getCommentActorIds(comment = {}) {
 export function advanceConditionForComment(condition = {}, ownerId = '', contributingActorIds = new Set()) {
   const normalized = normalizeRuntimeCondition(condition);
   if (!normalized.active) return { condition: normalized, expired: true, reason: 'inactive' };
+  if (normalized.berserk) return advanceBerserkForComment(normalized, contributingActorIds.has(String(ownerId)));
   const duration = { ...normalized.durationModel };
   if (duration.kind === 'scene-comments' && duration.remainingSceneComments > 0) {
     duration.remainingSceneComments -= 1;

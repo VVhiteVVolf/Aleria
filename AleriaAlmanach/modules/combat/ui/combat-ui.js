@@ -277,7 +277,7 @@ function renderEffectResult(result = {}) {
   if (effect.type === 'damage' && result.applied) {
     const response = result.applied.damageResponse?.response;
     const responseLabel = { resistant: 'Resistenz', vulnerable: 'Verwundbarkeit', immune: 'Immunität' }[response] || '';
-    return `<span>${recipient}<b>${escapeHtml(result.applied.incoming ?? result.amount ?? 0)} ${escapeHtml(effect.damageType || 'Schaden')}</b>${responseLabel ? ` · ${responseLabel} (roh ${escapeHtml(result.applied.rawIncoming ?? result.amount ?? 0)})` : ''}</span>`;
+    return `<span>${recipient}<b>${escapeHtml(result.applied.incoming ?? result.amount ?? 0)} ${escapeHtml(effect.damageType || 'Schaden')}</b>${responseLabel ? ` · ${responseLabel} (roh ${escapeHtml(result.applied.rawIncoming ?? result.amount ?? 0)})` : ''}${result.applied.survival ? ' · Ungebrochener Berserker: 1 LP verbleibt; Rettung verbraucht' : ''}</span>`;
   }
   if (effect.type === 'healing' && result.applied) return `<span>${recipient}Heilung: <b>+${escapeHtml(result.applied.restored ?? 0)} TP</b> · ${escapeHtml(result.applied.before?.current ?? 0)} → ${escapeHtml(result.applied.after?.current ?? 0)}</span>`;
   if (effect.type === 'temporary-hit-points' && result.applied) return `<span>${recipient}Temporäre TP: <b>+${escapeHtml(result.applied.granted ?? 0)}</b> · ${escapeHtml(result.applied.before?.temporary ?? 0)} → ${escapeHtml(result.applied.after?.temporary ?? 0)}</span>`;

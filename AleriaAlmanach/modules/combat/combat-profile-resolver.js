@@ -1,5 +1,7 @@
 import {
   getAttributeModifier,
+  getEffectiveCombatAttribute,
+  getUniversalDamageBonus,
   getEffectiveCombatLevel,
   getProficiencyBonus,
   getWeaponAttackModifier,
@@ -98,7 +100,7 @@ function buildCombatProfileActions(character, profile) {
       const scaling = getTechniqueDamageScaling(technique, profile);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
         ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile) : '';
-      const saveAttribute = profile.attributes.find(attribute => attribute.key === technique.secondarySave?.dcAttributeKey);
+      const saveAttribute = getEffectiveCombatAttribute(profile, technique.secondarySave?.dcAttributeKey);
       const secondarySaveDc = technique.secondarySave?.enabled
         ? Number(technique.secondarySave.dcBase || 8)
           + (technique.secondarySave.addProficiency ? getProficiencyBonus(profile) : 0)
@@ -172,7 +174,7 @@ function buildCombatProfileActions(character, profile) {
           notes: [ability.description, ability.requirements].filter(Boolean).join('\n')
         },
         attackModifier: isSpell ? profile.spellAttackModifier : getWeaponAttackModifier(profile, activeWeapon || {}),
-        damageModifier: isSpell ? 0 : getWeaponDamageModifier(profile, activeWeapon || {}),
+        damageModifier: isSpell ? getUniversalDamageBonus(profile) : getWeaponDamageModifier(profile, activeWeapon || {}),
         activationType: ability.activationType,
         costs: normalizeCombatResourceCosts(ability.costs),
         auraBypass: ability.auraBypass,
@@ -224,7 +226,7 @@ function buildCombatProfileActions(character, profile) {
         equipped: false
       },
       attackModifier: profile.spellAttackModifier,
-      damageModifier: 0,
+      damageModifier: getUniversalDamageBonus(profile),
       activationType: spell.activationType,
       costs: normalizeCombatResourceCosts([...additionalCosts, manaCost].filter(Boolean)),
       auraBypass: spell.auraBypass,

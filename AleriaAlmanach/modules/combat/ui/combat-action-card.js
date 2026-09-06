@@ -1,5 +1,7 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 import { estimateCombatDamage } from '../combat-action-estimates.js';
+import { getBonusDamageFormulas } from '../combat-profile-model.js';
+import { combineDamageFormulas } from '../rules/combat-mvp-rules.js';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -19,7 +21,9 @@ export function activationLabel(value = '') {
 }
 
 export function getCombatDisplayStats(actor = {}) {
-  const formula = String(actor.weapon?.damageFormula || '').toUpperCase().replace(/D/g, 'W');
+  const base = String(actor.weapon?.damageFormula || '');
+  const bonusDice = base ? getBonusDamageFormulas(actor) : [];
+  const formula = (bonusDice.length ? combineDamageFormulas([base, ...bonusDice]) : base).toUpperCase().replace(/D/g, 'W');
   const modifier = Number(actor.damageModifier) || 0;
   return {
     attack: signedNumber(actor.attackModifier),

@@ -167,9 +167,11 @@ function renderUsage(segment = {}) {
   const abilityEffects = (Array.isArray(use.abilityEffects) ? use.abilityEffects : [])
     .map(effect => `<span>${escapeHtml(effect.abilityName)}: ${escapeHtml(effect.resourceName)} ${escapeHtml(effect.before)} → ${escapeHtml(effect.after)}</span>`)
     .join('');
+  const conditionEffects = (use.conditionSnapshot?.after || []).filter(condition => condition.sourceConditionId === 'zornkappe-rausch')
+    .map(condition => `<span>${escapeHtml(condition.name)}: ${escapeHtml(condition.description)} Bis Kampfende.</span>`).join('');
   return `<aside class="inventory-use-result" data-mode="${consumed ? 'consume' : 'use'}">
     ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span class="inventory-use-result-icon" aria-hidden="true">◆</span>'}
-    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}${abilityEffects}</div>
+    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}${abilityEffects}${conditionEffects}</div>
   </aside>`;
 }
 

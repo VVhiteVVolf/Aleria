@@ -13,6 +13,7 @@ import {
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260906-effect-rolls-v1';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
+import { getEffectiveCombatAttribute, getAttributeModifier } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -265,7 +266,10 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           const resolutions = Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
             ? segment.combatResolutions
             : [segment?.combatResolution];
-          return resolutions.concat(segment?.skillResolution || [])
+          const inventoryCondition = segment?.inventoryUse?.conditionSnapshot ? {
+            actorId: segment.inventoryUse.actorId, actorConditionSnapshot: segment.inventoryUse.conditionSnapshot
+          } : null;
+          return resolutions.concat(segment?.skillResolution || [], inventoryCondition || [])
             .filter(Boolean)
             .map(resolution => ({ index, resolution }));
         })
@@ -396,7 +400,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
         return stored ? {
           ...ability,
           usesCurrent: Number(stored.usesCurrent) || 0,
-          usesMaximum: Math.max(0, Number(stored.usesMaximum) || 0),
+          usesMaximum: ability.usesMaximum,
           ...(stored.recoveryDayKey ? { recoveryDayKey: String(stored.recoveryDayKey) } : {})
         } : ability;
       })
@@ -411,11 +415,19 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     });
     return result;
   }, {});
+  const strengthBefore = getAttributeModifier(getEffectiveCombatAttribute(profile, 'strength'));
+  const strengthAfter = getEffectiveCombatAttribute({ ...profile,
+    conditions: [...(profile.conditions || []), ...temporaryConditions] }, 'strength');
+  const strengthDelta = getAttributeModifier(strengthAfter) - strengthBefore;
+  const weaponStrengthDelta = ['weapon', 'technique'].includes(profile.profileActionKind || 'weapon')
+    && profile.weapon?.attackAttribute === 'strength' ? strengthDelta : 0;
   const normalizedResources = normalizeCombatResources(resources || []);
   const actionEconomyIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
   const spellSlotIds = new Set((profile.magic?.slotResourceIds || []).map(String));
   const aiSnapshot = profile.aiSnapshot ? {
     ...profile.aiSnapshot,
+    attributes: (profile.aiSnapshot.attributes || []).map(attribute => attribute.key === 'strength'
+      ? { ...attribute, score: strengthAfter.score, modifier: getAttributeModifier(strengthAfter) } : attribute),
     derivedCombatValues: {
       ...(profile.aiSnapshot.derivedCombatValues || {}),
       currentHitPoints: normalized.current,
@@ -443,8 +455,8 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
     temporaryConditions,
     conditionsAndEffects: [...(profile.aiSnapshot.conditionsAndEffects || []), ...temporaryConditions],
-    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) })),
-    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) })),
+    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) + (skill.attributeKey === 'strength' ? strengthDelta : 0) })),
+    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) + (save.attributeKey === 'strength' ? strengthDelta : 0) })),
     concentration: state.concentration || null,
     channeling: state.channeling || null
   } : profile.aiSnapshot;
@@ -458,16 +470,20 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
     temporaryConditions,
     concentration: state.concentration || null,
+    selectedAction: profile.selectedAction?.secondarySave?.dcAttributeKey === 'strength' ? {
+      ...profile.selectedAction, secondarySave: { ...profile.selectedAction.secondarySave,
+        dc: Number(profile.selectedAction.secondarySave.dc || 0) + strengthDelta }
+    } : profile.selectedAction,
     channeling: state.channeling || null,
     inventory: state.inventory && typeof state.inventory === 'object'
       ? JSON.parse(JSON.stringify(state.inventory))
       : profile.inventory,
-    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0)
+    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0) + weaponStrengthDelta
       + (['spell', 'song', 'prayer'].includes(profile.profileActionKind) ? Number(temporaryMechanics.spellAttack || 0) : 0),
     actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
     movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
     initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
-    damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0),
+    damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0) + weaponStrengthDelta,
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
     spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
     spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),

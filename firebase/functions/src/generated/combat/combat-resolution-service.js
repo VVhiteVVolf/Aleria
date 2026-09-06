@@ -3,6 +3,9 @@ import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evalua
 import {
   getAuraTargetMechanics,
   getBonusDamageFormulas,
+  getUniversalDamageBonus,
+  getEffectiveCombatAttribute,
+  getAttributeModifier,
   getSavingThrowTotal,
   getActiveRollModes,
   getSavingThrowRollModes,
@@ -25,6 +28,8 @@ import {
   normalizeCombatEffects
 } from './combat-effect-model.js?v=20260906-effect-rolls-v1';
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
+import { hasActiveBerserk, markBerserkActivity } from './combat-berserk-state.js';
+import { isSkjaldrBerserkAbility } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
 import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260906-effect-rolls-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
@@ -289,6 +294,9 @@ export class CombatResolutionService {
   }
 
   async resolvePreparedAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
+    if (isSkjaldrBerserkAbility(actor?.profileActionId) && hasActiveBerserk(actor.conditions || [])) {
+      throw new Error('Der Berserkergang ist bereits aktiv. Eine erneute Aktivierung ist erst nach seinem Ende möglich.');
+    }
     const actorCheck = validateCombatActorProfile(actor, { startedAction: options.startedAction });
     if (!actorCheck.ready) throw new Error(getCombatActorValidationMessage(actor, actorCheck));
     const targetCheck = validateCombatTargetProfile(target);
@@ -418,13 +426,14 @@ export class CombatResolutionService {
       const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
       // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
-      const bonusDamageFormulas = (attack.hit && baseEffectFormula) ? getBonusDamageFormulas(actor) : [];
+      const bonusDamageFormulas = (attack.hit && baseEffectFormula && primaryDamageEffect.target !== 'self') ? getBonusDamageFormulas(actor) : [];
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
-      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, damageBonus, attack.criticalSuccess) : '';
+      const primaryDamageBonus = primaryDamageEffect.target === 'self' ? 0 : damageBonus;
+      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, attack.criticalSuccess) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
         damageFormula: effectFormula,
-        bonus: damageBonus,
+        bonus: primaryDamageBonus,
         critical: attack.criticalSuccess,
         actorName: actor.name,
         targetName: target.name,
@@ -433,7 +442,7 @@ export class CombatResolutionService {
         notation: String(primaryDamageEffect.amount),
         keptDice: [],
         modifier: 0,
-        total: Number(primaryDamageEffect.amount),
+        total: Number(primaryDamageEffect.amount) + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor)),
         id: '',
         visualMode: 'automatic'
       };
@@ -554,7 +563,7 @@ export class CombatResolutionService {
         const followBonusDamageFormulas = followUp.damageFormula && followUp.inheritBonusDamage !== false ? getBonusDamageFormulas(actor) : [];
         followDamage = await this.dice.rollDamage({
           damageFormula: combineDamageFormulas([followUp.damageFormula, ...followBonusDamageFormulas]),
-          bonus: (followUp.inheritDamageModifier === false ? 0 : Number(actor.damageModifier || 0)) + Number(followUp.damageBonus || 0)
+          bonus: (followUp.inheritDamageModifier === false ? getUniversalDamageBonus(actor) : Number(actor.damageModifier || 0)) + Number(followUp.damageBonus || 0)
             + Number(targetAuraOnActor.damage || 0)
             + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
@@ -612,6 +621,8 @@ export class CombatResolutionService {
       ? actor.temporaryConditions.map(condition => ({ ...condition }))
       : [];
     let actorConditions = existingActorConditions.map(normalizeRuntimeCondition);
+    const isAttackAttempt = !automaticMode && (resolutionMode === 'weapon-attack' || resolutionMode === 'spell-attack');
+    if (isAttackAttempt) actorConditions = markBerserkActivity(actorConditions);
     const effectResults = [];
     let consumedPrimaryDamage = false;
     const applyEffectList = async effects => {
@@ -627,7 +638,7 @@ export class CombatResolutionService {
       if (effect.formula && !(effect.type === 'damage' && !consumedPrimaryDamage && damageRoll)) {
         roll = await this.dice.rollDamage({
           damageFormula: effect.formula,
-          bonus: 0,
+          bonus: effect.bonusAttribute ? getAttributeModifier(getEffectiveCombatAttribute(actor, effect.bonusAttribute)) : 0,
           critical: effect.type === 'damage' && attack.criticalSuccess,
           actorName: actor.name,
           targetName: target.name,
@@ -640,13 +651,13 @@ export class CombatResolutionService {
           amount = Number(damageRoll.total) || 0;
           roll = damageRoll;
           consumedPrimaryDamage = true;
-        }
+        } else if (effect.target !== 'self') amount = Math.max(0, amount + getUniversalDamageBonus(actor));
         const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
           damageType: effect.inheritWeaponDamageType ? weapon.damageType : (effect.damageType || weapon.damageType),
-          magical: effect.magical
+          magical: effect.magical, conditions: recipientConditions
         });
-        if (appliesToActor) actorHitPoints = applied.after;
-        else targetHitPoints = applied.after;
+        if (appliesToActor) { actorHitPoints = applied.after; actorConditions = applied.conditions; }
+        else { targetHitPoints = applied.after; targetConditions = applied.conditions; }
         effectResults.push({ effect, amount, roll, applied, recipient });
         continue;
       }
@@ -727,9 +738,10 @@ export class CombatResolutionService {
       });
       const applied = applyTypedCombatDamage(targetHitPoints, followUpResult.damage.total, target, {
         damageType: effect.damageType,
-        magical: effect.magical
+        magical: effect.magical, conditions: targetConditions
       });
       targetHitPoints = applied.after;
+      targetConditions = applied.conditions;
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
     });
     if (appliedTemporaryCondition) targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));

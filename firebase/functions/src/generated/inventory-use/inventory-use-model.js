@@ -1,3 +1,4 @@
+import { isZornkappe, applyZornkappeUse } from './zornkappe-effects.js';
 const INVENTORY_USE_MODES = new Set(['auto', 'consume', 'use']);
 const CONSUMABLE_CATEGORIES = new Set(['potions', 'consumable', 'consumables', 'food', 'ammunition']);
 const REUSABLE_CATEGORIES = new Set(['weapon', 'armor']);
@@ -25,6 +26,7 @@ export function getCharacterInventoryItems(character = {}) {
 }
 
 export function inferInventoryUseMode(item = {}) {
+  if (isZornkappe(item)) return 'consume';
   const explicit = cleanText(item.inventoryUseMode || item.useMode || item.usageMode).toLowerCase();
   if (['consume', 'consumable', 'verbrauch', 'verbrauchen'].includes(explicit)) return 'consume';
   if (['use', 'reusable', 'benutzen', 'wiederverwendbar'].includes(explicit)) return 'use';
@@ -87,6 +89,7 @@ export function normalizeInventoryUse(value = {}) {
     usageId: cleanText(source.usageId, 240),
     actorId: cleanText(source.actorId, 240),
     actorName: cleanText(source.actorName || 'Unbekannt', 160),
+    ...(source.conditionSnapshot && typeof source.conditionSnapshot === 'object' ? { conditionSnapshot: clone(source.conditionSnapshot) } : {}),
     item: normalizeItemSnapshot(source.item),
     requestedMode,
     mode,
@@ -125,6 +128,11 @@ function itemMatchesTrigger(item = {}, trigger = {}) {
 
 export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '') {
   const inventoryUse = normalizeInventoryUse(value);
+  delete inventoryUse.conditionSnapshot;
+  const conditionEffects = applyZornkappeUse(combatProfile.temporaryConditions || [], inventoryUse);
+  if (conditionEffects.changed) inventoryUse.conditionSnapshot = {
+    before: clone(combatProfile.temporaryConditions || []), after: conditionEffects.conditions
+  };
   const resources = clone(Array.isArray(combatProfile?.resources) ? combatProfile.resources : []);
   const abilities = clone(Array.isArray(combatProfile?.abilities) ? combatProfile.abilities : []);
   const dayKey = cleanText(recoveryDayKey, 160);
@@ -166,7 +174,8 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
   });
 
   return {
-    changed: effects.length > 0,
+    changed: effects.length > 0 || conditionEffects.changed,
+    conditions: conditionEffects.conditions,
     resources,
     abilities,
     inventoryUse: normalizeInventoryUse({ ...inventoryUse, abilityEffects: effects })

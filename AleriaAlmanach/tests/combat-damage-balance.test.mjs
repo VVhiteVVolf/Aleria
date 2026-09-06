@@ -165,6 +165,8 @@ test('ein gespeicherter alter Berserkerzustand übernimmt die neue Formel ohne D
   const character = await load('fenrir-varulv');
   const condition = character.combatProfile.abilities.find(ability => ability.id === 'fenrir-berserkergang').effects.find(effect => effect.type === 'apply-condition').condition;
   const stale = JSON.parse(JSON.stringify(condition).replaceAll('1d4', '1d6'));
+  delete stale.berserk;
+  stale.id = 'fenrir-berserkergang-state-legacy';
   const stored = { current: 31, temporaryConditions: [{ ...stale, active: true }] };
   const actor = overlayCombatHitPointState(resolveCombatProfile(character), stored);
   assert.ok(JSON.stringify(actor.temporaryConditions[0]).includes('1d4'));

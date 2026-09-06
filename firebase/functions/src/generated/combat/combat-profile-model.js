@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
@@ -151,7 +152,9 @@ function sanitizeMechanicalModifiers(value = {}) {
   const rollMode = normalizeText(source.attackRollMode || source.rollMode, 20);
   return {
     attack: normalizeNumber(source.attack, 0, -99, 99),
+    ...(Number(source.strength) ? { strength: normalizeNumber(source.strength, 0, -30, 30) } : {}),
     damage: normalizeNumber(source.damage, 0, -99, 99),
+    ...(source.damageScope === 'all-effects' ? { damageScope: 'all-effects' } : {}),
     armorClass: normalizeNumber(source.armorClass, 0, -99, 99),
     initiative: normalizeNumber(source.initiative, 0, -99, 99),
     skill: normalizeNumber(source.skill, 0, -99, 99),
@@ -168,6 +171,7 @@ function sanitizeMechanicalModifiers(value = {}) {
     // solange diese Quelle aktiv ist - anders als `damage` (fester Bonus) ist das ein echter
     // Extrawurf mit eigener Varianz, z.B. für Rage-Schaden.
     bonusDamageFormula: normalizeCombatDamageFormula(source.bonusDamageFormula),
+    ...(source.weaponBonusDamageFormula ? { weaponBonusDamageFormula: normalizeCombatDamageFormula(source.weaponBonusDamageFormula) } : {}),
     // Attributspezifischer Vor-/Nachteil auf Rettungswürfe, unabhängig vom pauschalen `savingThrow`-Bonus.
     savingThrowAdvantageAttributes: sanitizeAttributeKeyList(source.savingThrowAdvantageAttributes),
     savingThrowDisadvantageAttributes: sanitizeAttributeKeyList(source.savingThrowDisadvantageAttributes)
@@ -441,6 +445,7 @@ function sanitizeCondition(value = {}, index = 0) {
     source: normalizeText(source.source, 160),
     description: normalizeText(source.description, 1200),
     active: normalizeBoolean(source.active, true),
+    ...(source.berserk ? { berserk: { survivalCharges: normalizeNumber(source.berserk.survivalCharges, 0, 0, 1), activity: source.berserk.activity === true } } : {}),
     mechanics: sanitizeMechanicalModifiers(source.mechanics),
     triggerRules: sanitizeCombatTriggerRules(source.triggerRules || (source.triggerRule ? [source.triggerRule] : []))
   };
@@ -787,7 +792,7 @@ function getLegacyArmor(source) {
 }
 
 export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
-  const source = reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {});
+  const source = reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {}));
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
   const sourceSaves = new Map((Array.isArray(source.savingThrows) ? source.savingThrows : [])
@@ -985,8 +990,16 @@ export function getProficiencyBonus(profile = {}) {
 }
 
 function getAttribute(profile, key) {
-  return profile.attributes.find(attribute => attribute.key === key)
+  const attribute = profile.attributes.find(attribute => attribute.key === key)
     || sanitizeAttribute({}, COMBAT_ATTRIBUTE_DEFINITIONS[0]);
+  const bonus = key === 'strength' ? sumMechanicalModifier(profile, 'strength') : 0;
+  return { ...attribute, score: attribute.score + bonus,
+    modifierOverride: attribute.modifierOverride == null ? null : attribute.modifierOverride
+      + Math.floor((attribute.score + bonus - 10) / 2) - Math.floor((attribute.score - 10) / 2) };
+}
+
+export function getEffectiveCombatAttribute(profile = {}, key = 'strength') {
+  return getAttribute(sanitizeCharacterCombatProfile(profile), key);
 }
 
 function collectActiveMechanicalSources(profile) {
@@ -1002,15 +1015,16 @@ function collectActiveMechanicalSources(profile) {
     .map(entry => entry.mechanics);
 }
 
-const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
+const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'weaponBonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
 
 function mergeMechanicalModifiers(sources = []) {
   const merged = sources.reduce((result, source) => {
-    Object.keys(sanitizeMechanicalModifiers()).forEach(key => {
+    [...Object.keys(sanitizeMechanicalModifiers()), 'strength'].forEach(key => {
       if (NON_NUMERIC_MECHANICAL_KEYS.has(key)) return;
       result[key] = (Number(result[key]) || 0) + (Number(source?.[key]) || 0);
     });
     result.bonusDamageFormula = [result.bonusDamageFormula, source?.bonusDamageFormula].filter(Boolean).join('+');
+    result.weaponBonusDamageFormula = [result.weaponBonusDamageFormula, source?.weaponBonusDamageFormula].filter(Boolean).join('+');
     result.savingThrowAdvantageAttributes = [...new Set([...(result.savingThrowAdvantageAttributes || []), ...(source?.savingThrowAdvantageAttributes || [])])];
     result.savingThrowDisadvantageAttributes = [...new Set([...(result.savingThrowDisadvantageAttributes || []), ...(source?.savingThrowDisadvantageAttributes || [])])];
     return result;
@@ -1210,11 +1224,17 @@ export function getSavingThrowRollModes(profile = {}, attributeKey) {
 
 // Sammelt alle aktiven Bonus-Schadenswürfel-Formeln (z.B. Rage-Schaden), die zusätzlich zur
 // regulären Waffen-/Technikformel gewürfelt werden, sobald ein Treffer bestätigt ist.
-export function getBonusDamageFormulas(profile = {}) {
+export function getBonusDamageFormulas(profile = {}, { weaponAttack = !['spell', 'prayer', 'song', 'ability', 'consumable'].includes(profile.profileActionKind) } = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
   return collectActiveMechanicalSources(normalized)
-    .map(mechanics => mechanics.bonusDamageFormula)
+    .flatMap(mechanics => [mechanics.bonusDamageFormula, ...(weaponAttack ? [mechanics.weaponBonusDamageFormula] : [])])
     .filter(Boolean);
+}
+
+export function getUniversalDamageBonus(profile = {}) {
+  return collectActiveMechanicalSources(sanitizeCharacterCombatProfile(profile))
+    .filter(mechanics => mechanics.damageScope === 'all-effects')
+    .reduce((total, mechanics) => total + (Number(mechanics.damage) || 0), 0);
 }
 
 export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {

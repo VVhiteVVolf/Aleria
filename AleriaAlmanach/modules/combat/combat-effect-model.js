@@ -1,4 +1,5 @@
 import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260906-effect-rolls-v1';
+import { applyBerserkSurvival } from './combat-berserk-state.js';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
@@ -54,6 +55,7 @@ export function normalizeCombatEffect(value = {}, index = 0) {
     type: EFFECT_TYPES.has(type) ? type : 'damage',
     target: TARGETS.has(target) ? target : 'target',
     amount: number(source.amount, 0, 0),
+    ...(['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].includes(source.bonusAttribute) ? { bonusAttribute: source.bonusAttribute } : {}),
     formula: text(source.formula || source.amountFormula || source.damageFormula, 80),
     damageType: text(source.damageType || 'physisch', 100),
     inheritWeaponDamageType: boolean(source.inheritWeaponDamageType),
@@ -108,7 +110,8 @@ export function applyTypedCombatDamage(state = {}, amount = 0, profile = {}, opt
     ? Math.floor(Math.max(0, Number(amount) || 0) / 2)
     : (damageResponse.response === 'vulnerable' ? Math.max(0, Number(amount) || 0) * 2
       : (damageResponse.response === 'immune' ? 0 : Math.max(0, Number(amount) || 0)));
-  return { ...applyCombatDamage(state, adjusted), rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
+  const applied = applyBerserkSurvival(applyCombatDamage(state, adjusted), options.conditions || profile.temporaryConditions || []);
+  return { ...applied, rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
 }
 
 export function applyCombatHealing(state = {}, amount = 0) {

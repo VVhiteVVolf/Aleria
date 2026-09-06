@@ -7,8 +7,7 @@ const FORMULA_REVISIONS = Object.freeze({
   'rhiannon-sichelwind': ['3d6', '2d6'],
   'rhiannon-berstende-boe': ['3d6', '2d4'],
   'rhiannon-hundert-klingen-sturm': ['6d6', '3d4'],
-  'rhiannon-blitzfunken': ['4d8', '3d6'],
-  'fenrir-berserkergang': ['1d6', '1d4']
+  'rhiannon-blitzfunken': ['4d8', '3d6']
 });
 
 function replaceFormula(value, from, to) {
@@ -34,7 +33,7 @@ function reviseEntry(entry) {
 }
 
 export function reconcileClassDamageCondition(condition = {}) {
-  return String(condition.id || '').startsWith('fenrir-berserkergang-state')
+  return !condition.berserk && String(condition.id || '').startsWith('fenrir-berserkergang-state')
     ? replaceFormula(condition, '1d6', '1d4') : condition;
 }
 

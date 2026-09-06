@@ -137,7 +137,7 @@ window.ALCHEMY_DATA = {
       price: { min: 20, max: 20, unit: 'K' },
       image: 'https://i.imgur.com/NJInJ9x.png',
       tags: ['Raserei', 'Berserker', 'Grimnars Helm'],
-      desc: 'Die Zornkappe ist ein fleischig-roter Pilz, der Tränke der Raserei ermöglicht. Roh eingenommen löst sie eine abgeschwächte, kurzlebige Kampfeswut aus.',
+      desc: 'Die Zornkappe (Berserkerpilz, Grimnars Helm) ist ein fleischig-roter Pilz. Roh verzehrt gibt sie bis Kampfende +2 Schaden und −2 Rüstungsklasse. Zwei Pilze: +4 Schaden / −4 RK; drei: +8 Schaden / −8 RK. Höchstens drei pro Rausch. Kein Trefferbonus, Kraftbonus oder Schutz bei 0 LP. Im Kommentar über „Konsumieren“ verbrauchen.',
       stats: [1, 3, 4, 4, 4, 7]
     },
     {

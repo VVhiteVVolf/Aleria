@@ -70,10 +70,10 @@ test('berserk is absent below six and replaces its tier only at 6/8/10/15/20', (
   for (const [level, tier] of [[6, 6], [7, 6], [8, 8], [9, 8], [10, 10], [14, 10], [15, 15], [19, 15], [20, 20], [30, 20]]) {
     const mode = getSkjaldrBerserkProgression(level);
     assert.equal(mode.minimumLevel, tier);
-    assert.equal(mode.armorClass, -1);
-    assert.equal(mode.active, false);
-    assert(mode.damage <= 3 && mode.attack <= 2);
-    assert.equal(mode.durationModel.remainingActorComments, mode.comments);
+    assert.equal(mode.armorClass, [6, 8, 10, 15, 20].indexOf(tier) - 4);
+    assert.equal(mode.active, true);
+    assert(mode.strength <= 6 && mode.hitDice <= 3);
+    assert.equal(mode.durationModel.kind, 'combat');
   }
   assert.equal(getAldrimarClassProgression('skjoldr', 20).berserker, undefined);
 });
@@ -81,17 +81,16 @@ test('berserk is absent below six and replaces its tier only at 6/8/10/15/20', (
 test('berserk has bounded action costs, scoped bonuses, nonstacking HP and recovery conditions', () => {
   const mode = getSkjaldrBerserkProgression(20);
   assert.deepEqual(mode.activationCosts.map(cost => cost.resourceId), ['bonus-action', 'reaction']);
-  assert.deepEqual(mode.affectedAttacks, { range: 'melee', attribute: 'strength', includeFollowUp: false });
+  assert.deepEqual(mode.affectedAttacks, { kind: 'weapon', includeFollowUp: false });
   assert.equal(mode.auraBypass.cost, 1);
   assert.equal(mode.refreshWhileActive, false);
-  assert.equal(mode.temporaryHitPoints, 8);
+  assert.equal(mode.hitDice, 3);
   assert.equal(mode.temporaryHitPointRules.stacking, 'highest');
   assert.equal(mode.temporaryHitPointRules.repeatPerPost, false);
-  assert.equal(mode.aftereffect.blocksReactivation, true);
-  assert.equal(mode.aftereffect.durationModel.remainingActorComments, 1);
-  assert(mode.endOn.includes('unconscious') && mode.endOn.includes('encounter-ended'));
-  mode.aftereffect.mechanics.attack = -20;
-  assert.equal(getSkjaldrBerserkProgression(20).aftereffect.mechanics.attack, -1);
+  assert.equal(mode.survivalCharges, 1);
+  assert(mode.endOn.includes('inactive-actor-comment') && mode.endOn.includes('encounter-ended'));
+  mode.activationCosts[0].amount = 20;
+  assert.equal(getSkjaldrBerserkProgression(20).activationCosts[0].amount, 1);
 });
 
 test('Skytte retains damaging bow, spear and sidearm options across foundation and expert paths', () => {

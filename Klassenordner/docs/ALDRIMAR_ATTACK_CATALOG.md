@@ -269,12 +269,12 @@ Zwei aktive Äxte ermöglichen die Doppelaxtfolgen. Ein Technikwurf verdoppelt w
 ### Klassenmerkmale
 
 - **Stufe 1 · Gezähmte Wildheit:** Stufe 1–5 trainiert der Schildbeißer Waffentechnik und Selbstbeherrschung. Noch kein Berserkermodus oder Rasereibonus.
-- **Stufe 6 · Gezähmter Zorn:** Berserkergang: +1 Nahkampfschaden, +1 gegen Furcht, −1 RK. 0 temporäre LP beim Aktivieren; 2 eigene Beiträge, 1 Anwendungen täglich.
-- **Stufe 8 · Gebändigtes Feuer:** Berserkergang: +2 Nahkampfschaden, +1 gegen Furcht, −1 RK. 3 temporäre LP beim Aktivieren; 3 eigene Beiträge, 2 Anwendungen täglich.
-- **Stufe 10 · Wille des Schildbeißers:** Berserkergang: +2 Nahkampfschaden, +1 Nahkampfangriff, +2 gegen Furcht, −1 RK. 4 temporäre LP beim Aktivieren; 3 eigene Beiträge, 2 Anwendungen täglich.
+- **Stufe 6 · Entfesselter Zorn:** Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.
+- **Stufe 8 · Blut und Donner:** Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W6 Waffenschaden, -3 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 2 Anwendungen täglich.
+- **Stufe 10 · Wille des Schildbeißers:** Berserkergang: +4 Kraft (einschließlich Attributsmodifikator), +1W6 Waffenschaden, -2 RK. Beim Aktivieren 2W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 2 Anwendungen täglich.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
-- **Stufe 15 · Ungebrochener Ansturm:** Berserkergang: +3 Nahkampfschaden, +1 Nahkampfangriff, +2 gegen Furcht, −1 RK. 6 temporäre LP beim Aktivieren; 4 eigene Beiträge, 3 Anwendungen täglich.
-- **Stufe 20 · Herr der eigenen Raserei:** Berserkergang: +3 Nahkampfschaden, +2 Nahkampfangriff, +3 gegen Furcht, −1 RK. 8 temporäre LP beim Aktivieren; 4 eigene Beiträge, 3 Anwendungen täglich.
+- **Stufe 15 · Ungebrochene Raserei:** Berserkergang: +4 Kraft (einschließlich Attributsmodifikator), +1W8 Waffenschaden, -1 RK. Beim Aktivieren 2W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 3 Anwendungen täglich.
+- **Stufe 20 · Zorn des Nordens:** Berserkergang: +6 Kraft (einschließlich Attributsmodifikator), +1W10 Waffenschaden, 0 RK. Beim Aktivieren 3W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 3 Anwendungen täglich.
 
 ### Stand des Schildes · 1–6
 

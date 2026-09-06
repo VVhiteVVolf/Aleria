@@ -1,5 +1,6 @@
 import {
   getAttributeModifier,
+  getEffectiveCombatAttribute,
   getSavingThrowTotal,
   getSkillTotal,
   getWeaponAttackModifier,
@@ -43,8 +44,8 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       key: attribute.key,
       label: attribute.label,
       shortLabel: attribute.shortLabel,
-      score: attribute.score,
-      modifier: getAttributeModifier(attribute),
+      score: getEffectiveCombatAttribute(profile, attribute.key).score,
+      modifier: getAttributeModifier(getEffectiveCombatAttribute(profile, attribute.key)),
       modifierOverride: attribute.modifierOverride
     })),
     proficiencies: profile.proficiencies,

@@ -4,7 +4,7 @@
 
 Sieben überlieferte Seiten: Hirdmann/Schildmaid, Skjoldr, Thegnar, Skeidr, Skjaldr und Skytte mit Waffenplan bis 20; Skalde als Kampfbarde nach Freyas belegtem Stand auf Stufe 5. Alle Vorlagentexte und Illustrationen sind übernommen, gemeinsam wiederholte Kulturtexte zentral abgelegt. Platzhalterdialoge und Musterfiguren entfallen. Die generische Waffenliste der alten Faktenkästen wurde nach der jeweiligen Klassenbeschreibung korrigiert und die Korrektur dokumentiert.
 
-**Seiten und Ausbildungsentwürfe, keine automatische Figurenmigration.** Neue Attacken sind `draft`, `active: false`, `live: false`. Die Archive erhalten Seitenlinks und Klassendefinitionen. Vorhandene persönliche Techniken – auch ältere Berserkerfähigkeiten – behalten bis zum gesonderten Figurenabgleich ihren bisherigen Stand. Es wird kein fertiger Live-Berserkermodus behauptet.
+**Seiten und Ausbildungsentwürfe.** Waffenpfade bleiben Entwürfe. Der Skjaldr-Berserkergang ist inzwischen im gemeinsamen Browser-/Servermodell umgesetzt und wird bei passenden Figuren automatisch abgeglichen.
 
 Skjoldr und Skjaldr sind verschiedene Klassen: vielseitiger, technisch geschulter Frontkämpfer einerseits und kontrollierter Schildbeißer andererseits.
 
@@ -41,21 +41,23 @@ Reaktionen schützen; schadenswirksame Bindungen kosten zusätzlich eine Aktion.
 
 ## Skjaldr: Berserkergang
 
-Unter Stufe 6 gibt es **keinen Modus und keinen Rasereibonus** in diesem Klassenplan. Die Stufen ersetzen sich vollständig:
+Live-Regeln, ab Stufe 6; jede Zeile ersetzt die vorige vollständig.
 
-| Stufe | Name | Angriff | Schaden | Temporäre LP | Gegen Furcht | Eigene Beiträge | Anwendungen/Tag |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 6 | Gezähmter Zorn | 0 | +1 | 0 | +1 | 2 | 1 |
-| 8 | Gebändigtes Feuer | 0 | +2 | 3 | +1 | 3 | 2 |
-| 10 | Wille des Schildbeißers | +1 | +2 | 4 | +2 | 3 | 2 |
-| 15 | Ungebrochener Ansturm | +1 | +3 | 6 | +2 | 4 | 3 |
-| 20 | Herr der eigenen Raserei | +2 | +3 | 8 | +3 | 4 | 3 |
+| Stufe | Kraft | Waffenschaden zusätzlich | RK | Temporäre LP | Anwendungen/Tag |
+| --- | ---: | --- | ---: | --- | ---: |
+| 6 | +2 | 1W4 | −4 | 1W12 + KON | 1 |
+| 8 | +2 | 1W6 | −3 | 1W12 + KON | 2 |
+| 10 | +4 | 1W6 | −2 | 2W12 + KON | 2 |
+| 15 | +4 | 1W8 | −1 | 2W12 + KON | 3 |
+| 20 | +6 | 1W10 | 0 | 3W12 + KON | 3 |
 
-Aktivierung: **Bonusaktion + Reaktion**, außerdem eine tägliche Anwendung. Aura kann ab 8 beide Aktionskosten gemeinsam ersetzen; eine tägliche Anwendung wird weiterhin gebraucht. Die Aktivierung greift nicht an und verleiht keine zusätzlichen Aktionspools. Angriff/Schaden betreffen nur kraftbasierte Nahkampfangriffe und gelten einmal pro Technik, nicht erneut auf Folgeangriffe. Keine Schadensresistenz oder Furchtimmunität.
+Aktivierung: Bonusaktion + Reaktion; Aura darf ab Stufe 8 das ganze Paket ersetzen, niemals die tägliche Anwendung. Kein zusätzlicher Angriff. Kraft verändert den Attributswert und den Modifikator; es gibt keinen separaten Trefferbonus. Keine pauschalen Vor-/Nachteile auf Rettungswürfe.
 
-In allen Stufen **−1 RK**. Temporäre LP entstehen nur beim Aktivieren, werden nicht gestapelt und verfallen mit dem Modus. Ablauf, Bewusstlosigkeit, freiwilliger Abbruch und Kampfende beenden den Gang. Danach ein eigener Beitrag **Atemholen**: −1 Angriff und keine Reaktivierung. Der laufende Gang kann nicht durch erneute Aktivierung verlängert werden.
+Eine tödliche Schadensanwendung wird je Aktivierung einmal auf 1 verbleibenden LP abgefangen. Jede weitere Schadensanwendung kann die Figur regulär besiegen. Ladung und Kampfaktivität gehören zum temporären Zustand und werden in den Kampfergebnissen gespeichert.
 
-Diese bewusste Kombination aus begrenzter Dauer, festen statt zusätzlichen Würfelboni und Erholung hält den Modus von einer kostenlosen Mehrfachangriffsschleife fern. Die endgültige Kampferprobung und Zusammenführung mit vorhandenen Figurenfähigkeiten bleibt ein eigener Schritt.
+Der Modus endet bei Kampfende oder nach einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden seit dem vorherigen eigenen Beitrag. Auch Fehlangriffe und durch temporäre LP abgefangener Schaden zählen. Einzelabschnitte, fremde Beiträge und administrative Änderungen sind keine eigenen Runden. Der Aktivierungsbeitrag wird nicht als ganzer Ruhebeitrag gezählt. Erneute Aktivierung während des Modus ist gesperrt. Temporäre LP werden nur einmal angeboten (höherer Pool gewinnt) und bleiben anschließend bis Verbrauch oder regulärer Erholung erhalten; sie werden beim Ende der Raserei nicht nochmals vergeben.
+
+Zornkappe: bestehender Handelsregister-Eintrag, 20 Kupfer, Icon NJInJ9x. Über Konsumieren im Kommentar werden Bestand und Zustand geprüft. Ein/zwei/drei Pilze geben insgesamt +2/+4/+8 Schaden und −2/−4/−8 RK, ohne Trefferabzug. Maximum drei pro Rausch, bis Kampfende. Kein Kraftbonus, keine temporären LP und keine Rettung bei 0 LP. Stapelt als eigenständiger Zustand mit dem Klassenmodus. Eine spätere Einnahme beeinflusst nur nachfolgende Abschnitte.
 
 ## Skalde: Freyas Grundrepertoire
 

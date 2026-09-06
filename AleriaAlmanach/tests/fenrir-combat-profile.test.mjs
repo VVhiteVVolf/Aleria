@@ -128,16 +128,16 @@ test('Schildstoß legt bei misslungenem Rettungswurf einen echten temporären An
   assert.equal(result.targetConditionSnapshot.applied.mechanics.attack, -2);
 });
 
-test('Berserkergang gewährt 10 temporäre Trefferpunkte und den Rage-Zustand mit +5 Angriff/-5 Rüstungsklasse', async () => {
+test('Berserkergang würfelt temporäre LP und verleiht Kraft mit −4 Rüstungsklasse', async () => {
   const fenrir = await loadFenrir();
   const actor = resolveCombatProfile(fenrir, { actionId: 'ability:fenrir-berserkergang', segmentKind: 'combataction' });
   const dummy = trainingTarget();
   const result = await new CombatResolutionService(new TechniqueDiceAdapter({})).resolveAttack({ actor, target: dummy });
-  assert.equal(result.actorHitPointSnapshot.after.temporary, 10);
-  const appliedCondition = result.actorConditionSnapshot.after.find(condition => condition.id.startsWith('fenrir-berserkergang-state'));
+  assert.equal(result.actorHitPointSnapshot.after.temporary, 5, 'Testadapter liefert den vollständigen Würfelwert');
+  const appliedCondition = result.actorConditionSnapshot.after.find(condition => condition.id.startsWith('skjaldr-berserk-state'));
   assert.ok(appliedCondition, 'Berserkergang-Zustand wurde angewendet');
-  assert.equal(appliedCondition.mechanics.attack, 5);
-  assert.equal(appliedCondition.mechanics.armorClass, -5);
+  assert.equal(appliedCondition.mechanics.strength, 2);
+  assert.equal(appliedCondition.mechanics.armorClass, -4);
   assert.equal(appliedCondition.durationModel.kind, 'combat');
 });
 
@@ -145,8 +145,8 @@ test('Während des Berserkergangs erhält der Hauptangriff einen Rage-Bonuswürf
   const fenrir = ragingFenrirActive(await loadFenrir());
   const actor = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
   const calm = resolveCombatProfile(await loadFenrir(), { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
-  assert.equal(actor.attackModifier, calm.attackModifier + 5, 'Rage gibt +5 auf den Angriffswurf');
-  assert.equal(actor.totalDefense, calm.totalDefense - 5, 'Rage senkt die eigene Rüstungsklasse um 5');
+  assert.equal(actor.attackModifier, calm.attackModifier + 1, 'Kraft +2 erhöht den Modifikator um 1');
+  assert.equal(actor.totalDefense, calm.totalDefense - 4, 'Rage senkt die eigene Rüstungsklasse um 4');
 
   const target = trainingTarget();
   const dice = new TechniqueDiceAdapter({ attacks: [15], damages: [21] });
@@ -163,13 +163,13 @@ test('Während des Berserkergangs erhält der Hauptangriff einen Rage-Bonuswürf
   assert.equal(result.damage.total, 21);
 });
 
-test('Berserkergang gibt Vorteil bei Stärke- und Nachteil bei Weisheit-/Intelligenz-/Charisma-/Konstitution-Rettungswürfen', async () => {
+test('Berserkergang verändert keine pauschalen Vor-/Nachteile auf Rettungswürfe', async () => {
   const fenrir = ragingFenrirActive(await loadFenrir());
-  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'strength'), 'advantage');
-  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'wisdom'), 'disadvantage');
-  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'intelligence'), 'disadvantage');
-  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'charisma'), 'disadvantage');
-  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'constitution'), 'disadvantage');
+  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'strength'), 'normal');
+  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'wisdom'), 'normal');
+  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'intelligence'), 'normal');
+  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'charisma'), 'normal');
+  assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'constitution'), 'normal');
   assert.equal(resolveSavingThrowRollMode(fenrir.combatProfile, 'dexterity'), 'normal', 'Geschick ist von der Rage nicht betroffen');
 
   const calm = await loadFenrir();

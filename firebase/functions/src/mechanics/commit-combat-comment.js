@@ -284,7 +284,7 @@ export const commitCombatComment = onCall({
     enhancedSegments = validatedSkills.commentSegments;
     usedRuleFrequencyKeys = validatedSkills.usedRuleFrequencyKeys;
 
-    for (const entry of inventoryEntries) {
+    const resolveInventoryEntry = async entry => {
       const descriptor = inventoryDescriptor(entry);
       const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
       const record = records.get(recordKey);
@@ -310,7 +310,9 @@ export const commitCombatComment = onCall({
         workingStates.set(String(descriptor.actorId), {
           ...(actorState || {}),
           resources: triggered.resources,
-          abilities: triggered.abilities
+          abilities: triggered.abilities,
+          temporaryConditions: triggered.conditions,
+          inventory: applied.inventory
         });
       }
       if (descriptor.persistence.persistent && submittedUse.mode === 'consume') {
@@ -324,10 +326,14 @@ export const commitCombatComment = onCall({
         existing.abilities = triggered.abilities;
         persistentUpdates.set(recordKey, existing);
       }
-    }
+    };
 
     const startedAreaActions = new Map();
+    let nextInventoryEntry = 0;
     for (const { index, segment, submitted, targetIndex, targetCount, primary } of entries) {
+      while (nextInventoryEntry < inventoryEntries.length && inventoryEntries[nextInventoryEntry].index <= index) {
+        await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
+      }
       const actorPersistence = normalizePersistence(submitted.actorPersistence, submitted.actorId);
       const targetPersistence = normalizePersistence(submitted.targetPersistence, submitted.targetId);
       const actorRecordKey = `${actorPersistence.kind}:${actorPersistence.recordId}`;
@@ -533,12 +539,13 @@ export const commitCombatComment = onCall({
         const actorFinalResources = workingStates.get(String(submitted.actorId))?.resources || actorNextResources || actorBase.resources;
         existing.resources = getPersistentCombatResources(actorBase.resources, actorFinalResources);
         if (abilityUse.changed) existing.abilities = abilityUse.abilities;
-        if (actorNextInventory) existing.inventory = actorNextInventory;
+        if (actorNextInventory) { existing.inventory = actorNextInventory; workingInventories.set(actorRecordKey, actorNextInventory); }
         if (actorNextHitPoints) existing.hitPoints = actorNextHitPoints;
         persistentUpdates.set(actorRecordKey, existing);
       }
     }
 
+    while (nextInventoryEntry < inventoryEntries.length) await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
     const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };

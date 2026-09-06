@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "aleria-spell-attack-library",
-  "generatedAt": "2026-09-06T13:04:03.580Z",
+  "generatedAt": "2026-09-06T18:38:57.787Z",
   "notes": "Sammlung aller Zauber, Techniken und besonderen Fähigkeiten, die bislang für Spielercharaktere gebaut wurden - als Fundus für künftige Charaktere derselben Klasse/Waffe/Zauberschule. Direkt aus den Charakter-Archiv-Exporten zusammengestellt; jede Kopie trägt sourceCharacter/sourceClassId zur Herkunft. Änderungen hier wirken sich NICHT auf die lebenden Charaktere aus (keine Referenz, reine Ablage). Zum Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs (CHARACTERS-Liste im Skript um neue Charaktere ergänzen).",
   "byClass": {
     "teulu": {
@@ -3008,130 +3008,23 @@
         },
         {
           "id": "fenrir-berserkergang",
-          "name": "Berserkergang",
-          "description": "Der Skjaldr verfällt in blinde Kampfeswut. Angriffe treffen leichter und richten mehr Schaden an, doch die eigene Deckung fällt.",
-          "usesCurrent": 1,
-          "usesMaximum": 1,
-          "recovery": "day",
-          "recoveryDayKey": "",
-          "rollFormula": "",
-          "damageType": "physisch",
-          "activationType": "bonus-action",
-          "delivery": "ability",
-          "resolutionType": "",
-          "saveAttribute": "dexterity",
-          "halfDamageOnSave": false,
+          "name": "Berserkergang · Entfesselter Zorn",
+          "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+          "active": true,
           "combatUsable": true,
-          "target": "Selbst",
-          "range": "Selbst",
-          "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-          "requirements": "Einmal pro Tag.",
-          "tags": "Berserker · Rage · Skjaldr",
-          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
-          "effects": [
-            {
-              "id": "fenrir-berserkergang-temp-hp",
-              "type": "temporary-hit-points",
-              "target": "self",
-              "amount": 10,
-              "formula": "",
-              "damageType": "physisch",
-              "inheritWeaponDamageType": false,
-              "magical": false,
-              "on": "always",
-              "resourceId": "",
-              "condition": null,
-              "conditionId": "",
-              "conditionTags": "",
-              "movementMeters": 0,
-              "movementKind": "move",
-              "summon": null,
-              "concentration": false,
-              "channelComments": 0,
-              "nonlethal": false,
-              "notes": ""
-            },
-            {
-              "id": "fenrir-berserkergang-condition",
-              "type": "apply-condition",
-              "target": "self",
-              "amount": 0,
-              "formula": "",
-              "damageType": "physisch",
-              "inheritWeaponDamageType": false,
-              "magical": false,
-              "on": "always",
-              "resourceId": "",
-              "condition": {
-                "id": "fenrir-berserkergang-state",
-                "name": "Berserkergang",
-                "tags": "Berserker · Rage",
-                "source": "Berserkermodus des Skjaldr",
-                "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
-                "durationModel": {
-                  "kind": "combat",
-                  "remainingActorComments": 0,
-                  "remainingSceneComments": 0,
-                  "expiresOnRest": "",
-                  "expiresOnDayChange": false,
-                  "encounterId": "",
-                  "concentrationOwnerId": "",
-                  "channelOwnerId": "",
-                  "label": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende"
-                },
-                "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-                "mechanics": {
-                  "attack": 5,
-                  "damage": 0,
-                  "armorClass": -5,
-                  "initiative": 0,
-                  "skill": 0,
-                  "savingThrow": 0,
-                  "spellAttack": 0,
-                  "spellSaveDc": 0,
-                  "movement": 0,
-                  "maximumHitPoints": 0,
-                  "passivePerception": 0,
-                  "attackRollMode": "normal",
-                  "bonusDamageFormula": "1d4",
-                  "savingThrowAdvantageAttributes": [
-                    "strength"
-                  ],
-                  "savingThrowDisadvantageAttributes": [
-                    "wisdom",
-                    "intelligence",
-                    "charisma",
-                    "constitution"
-                  ]
-                },
-                "active": true,
-                "remainingActorComments": 0,
-                "remainingSceneComments": 0,
-                "ward": {
-                  "enabled": false,
-                  "charges": 0,
-                  "deflectChance": 100,
-                  "breaksOnCriticalHit": false
-                }
-              },
-              "conditionId": "",
-              "conditionTags": "",
-              "movementMeters": 0,
-              "movementKind": "move",
-              "summon": null,
-              "concentration": false,
-              "channelComments": 0,
-              "nonlethal": false,
-              "notes": ""
-            }
-          ],
-          "concentration": false,
-          "channelComments": 0,
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "activationType": "bonus-action",
           "costs": [
             {
-              "id": "fenrir-berserkergang-bonus-action",
               "resourceId": "bonus-action",
               "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             }
@@ -3139,34 +3032,54 @@
           "auraBypass": {
             "allowed": true,
             "resourceId": "aura-focus",
-            "cost": 1
+            "cost": 1,
+            "replaces": "activation-costs-only"
           },
-          "active": true,
-          "mechanics": {
-            "attack": 0,
-            "damage": 0,
-            "armorClass": 0,
-            "initiative": 0,
-            "skill": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": []
-          },
-          "triggerRules": [],
-          "inventoryUseTrigger": {
-            "enabled": false,
-            "itemTags": [],
-            "restoreResources": [],
-            "requireActualRecovery": true
-          },
+          "usesMaximum": 1,
+          "usesCurrent": 1,
+          "recovery": "day",
+          "recoveryDayKey": "",
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+          "requirements": "Ab Stufe 6. Keine erneute Aktivierung während des Berserkergangs.",
+          "tags": "Skjaldr, Berserkergang",
+          "effects": [
+            {
+              "id": "skjaldr-berserk-vitality",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "on": "always",
+              "formula": "1d12",
+              "bonusAttribute": "constitution"
+            },
+            {
+              "id": "skjaldr-berserk-mode",
+              "type": "apply-condition",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "skjaldr-berserk-state",
+                "name": "Berserkergang",
+                "active": true,
+                "icon": "../IconOrdner/Traits Icon/Berserker.png",
+                "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+                "durationModel": {
+                  "kind": "combat"
+                },
+                "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+                "mechanics": {
+                  "strength": 2,
+                  "weaponBonusDamageFormula": "1d4",
+                  "armorClass": -4
+                },
+                "berserk": {
+                  "survivalCharges": 1,
+                  "activity": false
+                }
+              }
+            }
+          ],
           "sourceCharacter": "Fenrir Varulv",
           "sourceClassId": "skjaldr"
         }
@@ -16664,130 +16577,23 @@
     },
     {
       "id": "fenrir-berserkergang",
-      "name": "Berserkergang",
-      "description": "Der Skjaldr verfällt in blinde Kampfeswut. Angriffe treffen leichter und richten mehr Schaden an, doch die eigene Deckung fällt.",
-      "usesCurrent": 1,
-      "usesMaximum": 1,
-      "recovery": "day",
-      "recoveryDayKey": "",
-      "rollFormula": "",
-      "damageType": "physisch",
-      "activationType": "bonus-action",
-      "delivery": "ability",
-      "resolutionType": "",
-      "saveAttribute": "dexterity",
-      "halfDamageOnSave": false,
+      "name": "Berserkergang · Entfesselter Zorn",
+      "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+      "active": true,
       "combatUsable": true,
-      "target": "Selbst",
-      "range": "Selbst",
-      "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-      "requirements": "Einmal pro Tag.",
-      "tags": "Berserker · Rage · Skjaldr",
-      "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W4 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
-      "effects": [
-        {
-          "id": "fenrir-berserkergang-temp-hp",
-          "type": "temporary-hit-points",
-          "target": "self",
-          "amount": 10,
-          "formula": "",
-          "damageType": "physisch",
-          "inheritWeaponDamageType": false,
-          "magical": false,
-          "on": "always",
-          "resourceId": "",
-          "condition": null,
-          "conditionId": "",
-          "conditionTags": "",
-          "movementMeters": 0,
-          "movementKind": "move",
-          "summon": null,
-          "concentration": false,
-          "channelComments": 0,
-          "nonlethal": false,
-          "notes": ""
-        },
-        {
-          "id": "fenrir-berserkergang-condition",
-          "type": "apply-condition",
-          "target": "self",
-          "amount": 0,
-          "formula": "",
-          "damageType": "physisch",
-          "inheritWeaponDamageType": false,
-          "magical": false,
-          "on": "always",
-          "resourceId": "",
-          "condition": {
-            "id": "fenrir-berserkergang-state",
-            "name": "Berserkergang",
-            "tags": "Berserker · Rage",
-            "source": "Berserkermodus des Skjaldr",
-            "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
-            "durationModel": {
-              "kind": "combat",
-              "remainingActorComments": 0,
-              "remainingSceneComments": 0,
-              "expiresOnRest": "",
-              "expiresOnDayChange": false,
-              "encounterId": "",
-              "concentrationOwnerId": "",
-              "channelOwnerId": "",
-              "label": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende"
-            },
-            "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
-            "mechanics": {
-              "attack": 5,
-              "damage": 0,
-              "armorClass": -5,
-              "initiative": 0,
-              "skill": 0,
-              "savingThrow": 0,
-              "spellAttack": 0,
-              "spellSaveDc": 0,
-              "movement": 0,
-              "maximumHitPoints": 0,
-              "passivePerception": 0,
-              "attackRollMode": "normal",
-              "bonusDamageFormula": "1d4",
-              "savingThrowAdvantageAttributes": [
-                "strength"
-              ],
-              "savingThrowDisadvantageAttributes": [
-                "wisdom",
-                "intelligence",
-                "charisma",
-                "constitution"
-              ]
-            },
-            "active": true,
-            "remainingActorComments": 0,
-            "remainingSceneComments": 0,
-            "ward": {
-              "enabled": false,
-              "charges": 0,
-              "deflectChance": 100,
-              "breaksOnCriticalHit": false
-            }
-          },
-          "conditionId": "",
-          "conditionTags": "",
-          "movementMeters": 0,
-          "movementKind": "move",
-          "summon": null,
-          "concentration": false,
-          "channelComments": 0,
-          "nonlethal": false,
-          "notes": ""
-        }
-      ],
-      "concentration": false,
-      "channelComments": 0,
+      "delivery": "ability",
+      "resolutionType": "automatic",
+      "activationType": "bonus-action",
       "costs": [
         {
-          "id": "fenrir-berserkergang-bonus-action",
           "resourceId": "bonus-action",
           "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         }
@@ -16795,34 +16601,54 @@
       "auraBypass": {
         "allowed": true,
         "resourceId": "aura-focus",
-        "cost": 1
+        "cost": 1,
+        "replaces": "activation-costs-only"
       },
-      "active": true,
-      "mechanics": {
-        "attack": 0,
-        "damage": 0,
-        "armorClass": 0,
-        "initiative": 0,
-        "skill": 0,
-        "savingThrow": 0,
-        "spellAttack": 0,
-        "spellSaveDc": 0,
-        "movement": 0,
-        "maximumHitPoints": 0,
-        "combatStartTemporaryHitPoints": 0,
-        "passivePerception": 0,
-        "attackRollMode": "normal",
-        "bonusDamageFormula": "",
-        "savingThrowAdvantageAttributes": [],
-        "savingThrowDisadvantageAttributes": []
-      },
-      "triggerRules": [],
-      "inventoryUseTrigger": {
-        "enabled": false,
-        "itemTags": [],
-        "restoreResources": [],
-        "requireActualRecovery": true
-      },
+      "usesMaximum": 1,
+      "usesCurrent": 1,
+      "recovery": "day",
+      "recoveryDayKey": "",
+      "target": "Selbst",
+      "range": "Selbst",
+      "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+      "requirements": "Ab Stufe 6. Keine erneute Aktivierung während des Berserkergangs.",
+      "tags": "Skjaldr, Berserkergang",
+      "effects": [
+        {
+          "id": "skjaldr-berserk-vitality",
+          "type": "temporary-hit-points",
+          "target": "self",
+          "on": "always",
+          "formula": "1d12",
+          "bonusAttribute": "constitution"
+        },
+        {
+          "id": "skjaldr-berserk-mode",
+          "type": "apply-condition",
+          "target": "self",
+          "on": "always",
+          "condition": {
+            "id": "skjaldr-berserk-state",
+            "name": "Berserkergang",
+            "active": true,
+            "icon": "../IconOrdner/Traits Icon/Berserker.png",
+            "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+            "durationModel": {
+              "kind": "combat"
+            },
+            "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+            "mechanics": {
+              "strength": 2,
+              "weaponBonusDamageFormula": "1d4",
+              "armorClass": -4
+            },
+            "berserk": {
+              "survivalCharges": 1,
+              "activity": false
+            }
+          }
+        }
+      ],
       "sourceCharacter": "Fenrir Varulv",
       "sourceClassId": "skjaldr"
     },
