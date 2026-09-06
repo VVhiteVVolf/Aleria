@@ -46,8 +46,6 @@ function openCommentForm() {
   document.getElementById('cf-char-search').value = '';
   setCommentPlayerFilter('', { render: false, persist: false });
   showCommentDraftNote('');
-  document.getElementById('cf-emote-section').style.display = 'none';
-  document.getElementById('cf-emote-picker').innerHTML = '';
   document.getElementById('cf-submit').disabled = false;
   document.getElementById('cf-submit').textContent = 'Eintragen';
   if (typeof resetCommentAssistant === 'function') resetCommentAssistant();

@@ -56,11 +56,6 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'set-comment-kind',
   'toggle-manual-mode',
   'select-comment-character',
-  'select-comment-image-set',
-  'select-comment-emote',
-  'insert-comment-emote-break',
-  'remove-comment-emote',
-  'add-comment-emote',
   'set-edit-mode',
   'set-edit-comment-kind',
   'toggle-edit-manual-mode',
@@ -68,9 +63,6 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'add-showcase-info-row',
   'remove-showcase-info-row',
   'select-edit-character',
-  'select-edit-image-set',
-  'select-edit-emote',
-  'insert-edit-comment-emote-break',
   'set-comment-turn',
   'toggle-comment-tools',
   'toggle-comment-quick-tools',
@@ -340,26 +332,6 @@ function handleCommentFormActionClick(event) {
     selectCharForComment(trigger.dataset.id || '');
     return;
   }
-  if (action === 'select-comment-image-set') {
-    selectCommentImageSet(trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-    return;
-  }
-  if (action === 'select-comment-emote') {
-    selectEmote(Number(trigger.dataset.emoteIdx) || 0);
-    return;
-  }
-  if (action === 'insert-comment-emote-break') {
-    insertCommentEmoteBreak(Number(trigger.dataset.emoteIdx) || 0, event);
-    return;
-  }
-  if (action === 'remove-comment-emote') {
-    removeEmoteFromSelectedCommentCharacter(Number(trigger.dataset.emoteIdx) || 0, event);
-    return;
-  }
-  if (action === 'add-comment-emote') {
-    addEmoteToSelectedCommentCharacter();
-    return;
-  }
   if (action === 'set-edit-mode') {
     setEditMode(trigger.dataset.mode || 'charakter');
     return;
@@ -386,18 +358,6 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'select-edit-character') {
     selectEditChar(trigger.dataset.id || '');
-    return;
-  }
-  if (action === 'select-edit-image-set') {
-    selectEditImageSet(trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-    return;
-  }
-  if (action === 'select-edit-emote') {
-    selectEditEmote(Number(trigger.dataset.editEmoteIdx) || 0);
-    return;
-  }
-  if (action === 'insert-edit-comment-emote-break') {
-    insertEditCommentEmoteBreak(Number(trigger.dataset.editEmoteIdx) || 0, event);
     return;
   }
   if (action === 'set-comment-turn') {

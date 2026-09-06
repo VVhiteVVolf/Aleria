@@ -44,8 +44,6 @@ function setEditMode(mode) {
     _editSelectedEmoteIdx = null;
     _editSelectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
     document.getElementById('ec-selected-name').textContent = '';
-    document.getElementById('ec-emote-section').style.display = 'none';
-    document.getElementById('ec-emote-picker').innerHTML = '';
   }
   if (mode !== 'charakter' && _editManualMode) {
     _editManualMode = false;

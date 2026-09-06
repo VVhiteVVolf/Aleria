@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260830-dashboard-activity-v2">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-  <link rel="stylesheet" href="./styles/comments.css?v=20260816-segment-avatar-sets-v1">
+  <link rel="stylesheet" href="./styles/comments.css?v=20260906-segment-avatars-v1">
   <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260803-character-image-sets-v1">
-<link rel="stylesheet" href="./styles/comment-composer.css?v=20260803-composer-costs-v1">
+<link rel="stylesheet" href="./styles/comment-composer.css?v=20260906-segment-avatars-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260906-character-vitality-v1">
 <link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260906-character-vitality-v1">
@@ -260,7 +260,7 @@
   <script src="./modules/characters/character-register-views.js?v=20260903-character-register-v2" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260903-character-register-v2" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260903-character-register-v2" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20260905-comment-composer-perf-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/characters/character-profile-events.js?v=20260809-character-biography-tab-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
@@ -300,9 +300,9 @@
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-page.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20260807-save-guard-v1" defer></script>
-  <script src="./modules/comments/comments-form-state.js?v=20260905-comment-composer-perf-v1" defer></script>
+  <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
-  <script src="./modules/comments/comments-form.js?v=20260905-comment-composer-perf-v1" defer></script>
+  <script src="./modules/comments/comments-form.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-segment-base.js?v=20260816-segment-avatar-selection-v2" defer></script>
   <script src="./modules/comments/comments-segments.js?v=20260816-segment-avatar-selection-v2" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260804-preview-debounce-v1" defer></script>
@@ -334,16 +334,16 @@
   <script src="./modules/comments/comments-fazit-edit-submit.js?v=20260821-fazit-workbench-v3" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
-  <script src="./modules/comments/comments-edit-state.js?v=20260803-character-image-sets-v1" defer></script>
+  <script src="./modules/comments/comments-edit-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-edit-segments.js?v=20260816-segment-avatar-selection-v2" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260804-preview-debounce-v1" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20260804-referee-v2" defer></script>
-  <script src="./modules/comments/comments-edit-character-picker.js?v=20260816-segment-avatar-sets-v1" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20260906-segment-avatars-v1" defer></script>
+  <script src="./modules/comments/comments-edit-character-picker.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260804-referee-v2" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
-  <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-action-events.js?v=20260821-fazit-workbench-v3" defer></script>
+  <script src="./modules/comments/comments-markup.js?v=20260906-segment-avatars-v1" defer></script>
+  <script src="./modules/comments/comments-action-events.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260804-referee-v2" defer></script>
@@ -487,7 +487,7 @@
       <div class="comment-compose-section-head">
         <div>
           <div class="comment-compose-section-kicker">Beitragsstimme</div>
-          <h2 id="cf-actor-heading">Charakter &amp; Ausdruck</h2>
+          <h2 id="cf-actor-heading">Charakter wählen</h2>
         </div>
         <span class="comment-compose-section-hint">Vorgabe für neue Abschnitte</span>
       </div>
@@ -515,11 +515,6 @@
           <button class="cf-char-manual-toggle" id="cf-manual-toggle" type="button" data-action="toggle-manual-mode">+ Manuell eingeben</button>
         </div>
         <div id="cf-creature-scene-cast" class="comment-scene-cast" hidden></div>
-      </div>
-      <!-- Emote picker -->
-      <div id="cf-emote-section" style="display:none">
-        <label>Ausdruck wählen</label>
-        <div class="cf-emote-picker" id="cf-emote-picker"></div>
       </div>
     </section>
 
@@ -1001,10 +996,6 @@
             <input class="char-field-input" type="url" id="ec-portrait-url" placeholder="Portrait-URL" data-action="set-edit-portrait-url">
             <img id="ec-portrait-preview" class="comment-portrait-preview" alt="Portrait Vorschau">
           </div>
-        </div>
-        <div id="ec-emote-section" style="display:none;margin-top:0.9rem;">
-          <label style="font-family:'Cinzel',serif;font-size:0.58rem;color:var(--gold);letter-spacing:0.12em;">Ausdruck wählen</label>
-          <div class="cf-emote-picker" id="ec-emote-picker"></div>
         </div>
       </div>
 

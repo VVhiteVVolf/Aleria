@@ -321,26 +321,3 @@ function insertMarkupAtTextarea(textareaId, markup) {
   ta.focus();
   ta.dispatchEvent(new Event('input', { bubbles: true }));
 }
-
-function insertCommentEmoteBreak(idx, event) {
-  event?.stopPropagation?.();
-  const marker = Math.max(0, Number(idx) || 0);
-  _commentSegments.push(makeCommentSegment('speech', '', marker, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
-    imageSetId: _selectedImageSetId
-  }));
-  renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
-  setTimeout(() => document.querySelector('#cf-segment-list .comment-segment-card:last-child textarea')?.focus?.(), 0);
-}
-
-function insertEditCommentEmoteBreak(idx, event) {
-  event?.stopPropagation?.();
-  const marker = Math.max(0, Number(idx) || 0);
-  _editCommentSegments.push(makeCommentSegment('speech', '', marker, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
-    imageSetId: _editSelectedImageSetId
-  }));
-  renderEditCommentSegmentList();
-  updateEditFormPreview();
-  setTimeout(() => document.querySelector('#ec-segment-list .comment-segment-card:last-child textarea')?.focus?.(), 0);
-}

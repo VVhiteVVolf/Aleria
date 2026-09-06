@@ -2,7 +2,6 @@
 let _manualMode = false;
 let _selectedEmoteIdx = null;
 let _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
-let _commentCharacterMediaSavePending = false;
 
 function renderCharPickerInForm() {
   const picker = document.getElementById('cf-char-picker');
@@ -86,62 +85,6 @@ function getSelectedCommentCharacterPresentation(character) {
   return applyCharacterImageSetPresentation(character, _selectedImageSetId);
 }
 
-function renderCommentCharacterImagePicker(character) {
-  const emoteSection = document.getElementById('cf-emote-section');
-  const emotePicker = document.getElementById('cf-emote-picker');
-  if (!emoteSection || !emotePicker) return;
-  const isCreature = character?.entityType === 'creature';
-  const imageSets = isCreature ? [] : normalizeCharacterImageSets(character || {});
-  if (!isCreature && !imageSets.some(set => set.id === _selectedImageSetId)) {
-    _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
-  }
-  const presentation = isCreature ? character : getSelectedCommentCharacterPresentation(character);
-  const emotes = Array.isArray(presentation?.emotes) ? presentation.emotes : [];
-  if (!character || (isCreature && !emotes.length)) {
-    emoteSection.style.display = 'none';
-    emotePicker.innerHTML = '';
-    return;
-  }
-  const addDisabled = emotes.length >= MAX_EMOTES;
-  const setPicker = isCreature ? '' : `
-    <div class="cf-image-set-picker" aria-label="Bilder-&-Emotes-Set wählen">
-      <div class="cf-image-set-label">Set</div>
-      ${imageSets.map(set => `
-        <button type="button" class="cf-image-set-option${set.id === _selectedImageSetId ? ' selected' : ''}"
-          data-action="select-comment-image-set" data-image-set-id="${escapeHtml(set.id)}">
-          <span>${escapeHtml(set.name)}</span><small>${set.emotes.length}</small>
-        </button>`).join('')}
-    </div>`;
-  emotePicker.innerHTML = setPicker + emotes.map((emote, index) => `
-    <div class="cf-emote-option" data-action="select-comment-emote" data-emote-idx="${index}">
-      ${isCreature ? '' : `<button class="cf-emote-remove-btn" type="button" title="Avatar löschen" aria-label="Avatar löschen" data-action="remove-comment-emote" data-emote-idx="${index}">x</button>`}
-      <img src="${sanitizeImageSrc(emote.img)}" alt="${escapeHtml(emote.label || 'Emote ' + (index + 1))}" loading="lazy" decoding="async">
-      <div class="cf-emote-option-label">${escapeHtml(emote.label || '')}</div>
-      <button class="cf-emote-break-btn" type="button" data-action="insert-comment-emote-break" data-emote-idx="${index}">Als Abschnitt</button>
-    </div>`).join('') + (isCreature ? '' : `
-    <div class="cf-emote-add-card">
-      <div class="cf-emote-add-title">Avatar zu „${escapeHtml(presentation.imageSetName || 'Standard')}“</div>
-      <div class="cf-emote-add-help">Quadratisches 1:1-Bild als URL einfügen.</div>
-      <input class="cf-emote-add-input" id="cf-emote-add-label" type="text" placeholder="Label, z.B. skeptisch" maxlength="20"${addDisabled ? ' disabled' : ''}>
-      <input class="cf-emote-add-input" id="cf-emote-add-url" type="url" placeholder="https://i.imgur.com/..."${addDisabled ? ' disabled' : ''}>
-      <button class="cf-emote-add-btn" type="button" data-action="add-comment-emote"${addDisabled ? ' disabled' : ''}>Hinzufügen</button>
-      <div class="cf-emote-add-status" id="cf-emote-add-status">${addDisabled ? `Maximal ${MAX_EMOTES} Avatare pro Set.` : ''}</div>
-    </div>`);
-  emoteSection.style.display = 'block';
-}
-
-function selectCommentImageSet(setId) {
-  const character = _selectedCharId ? getAvailableCommentCharacterById(_selectedCharId) : null;
-  if (!character || character.entityType === 'creature') return;
-  if (!normalizeCharacterImageSets(character).some(set => set.id === setId)) return;
-  _selectedImageSetId = setId;
-  _selectedEmoteIdx = null;
-  renderCommentCharacterImagePicker(character);
-  renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
-}
-
 function selectCharForComment(id, options = {}) {
   const c = getAvailableCommentCharacterById(id);
   if (!c || (typeof commentActorMatchesComposerMode === 'function' && !commentActorMatchesComposerMode(c, _commentMode))) {
@@ -183,7 +126,6 @@ function selectCharForComment(id, options = {}) {
   document.getElementById('cf-manual-fields').style.display = 'none';
   document.getElementById('cf-selected-name').textContent = c ? `Als ${c.name} kommentieren` : '';
 
-  renderCommentCharacterImagePicker(c);
   if (options.render !== false) {
     if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
     window.AleriaCommentSceneCast?.render?.();
@@ -192,203 +134,8 @@ function selectCharForComment(id, options = {}) {
   if (options.persist !== false) persistCommentDraft();
 }
 
-function buildCommentCharacterSaveData(char, emotes, portraitFallback = null, imageSetId = _selectedImageSetId) {
-  const now = new Date().toISOString();
-  const imageSets = normalizeCharacterImageSets(char);
-  const selectedSet = imageSets.find(set => set.id === imageSetId) || imageSets[0];
-  selectedSet.emotes = normalizeCharacterImageSetEmotes(emotes);
-  if (!selectedSet.portrait && portraitFallback) selectedSet.portrait = normalizeImageUrlForStorage(portraitFallback) || null;
-  selectedSet.updatedAt = now;
-  const storedSets = buildCharacterImageSetStorage(imageSets);
-  const standardSet = storedSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || storedSets[0];
-  return {
-    name: char.name || 'Unbenannt',
-    title: char.title || '',
-    fraktion: char.fraktion || char.faction || '',
-    role: char.role || '',
-    status: getCharacterStatusValue(char.status),
-    relevance: getCharacterRelevanceValue(char.relevance),
-    taxonomyPath: char.taxonomyPath || '',
-    currentLocation: char.currentLocation || '',
-    origin: char.origin || '',
-    plotNode: char.plotNode || '',
-    profileLink: char.profileLink || '',
-    playerOwner: normalizeCharacterPlayerOwner(char.playerOwner || char.playedBy || char.player),
-    bio: char.bio || '',
-    biography: char.biography && typeof char.biography === 'object' ? char.biography : null,
-    aliases: Array.isArray(char.aliases) ? char.aliases : [],
-    archived: !!char.archived,
-    createdAt: char.createdAt || now,
-    updatedAt: now,
-    portrait: standardSet?.portrait || null,
-    emotes: (standardSet?.emotes || []).map(emote => ({ ...emote })),
-    emotesOverride: true,
-    imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,
-    imageSets: storedSets,
-    activeImageSetId: imageSets.some(set => set.id === char.activeImageSetId)
-      ? char.activeImageSetId
-      : CHARACTER_IMAGE_SET_DEFAULT_ID,
-    imageSetsOverride: true,
-    // inventory/combatProfile werden hier bewusst NICHT mitgeschickt: Diese Aktion aendert nur
-    // Bilder & Emotes (siehe Speichersystem-Checkup). Ein fehlendes Feld im Merge-Write laesst
-    // den jeweils aktuellen Serverstand unangetastet, statt ihn aus dem moeglicherweise
-    // veralteten Zwischenspeicher zurueckzuschreiben.
-    identity: normalizeCharacterIdentityRecord(char.identity),
-    genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
-  };
-}
-
-async function saveCommentCharacterFromPicker(char, data) {
-  const sourceId = char.id;
-  const isBuiltin = isBuiltinCharacterId(sourceId);
-  const saveTargetId = isBuiltin ? null : sourceId;
-  // Bei einer bereits gespeicherten Figur gehört diese Aktion ausschließlich der
-  // Avatarsektion. Die vollständigen Profildaten in `data` werden nur benötigt, wenn ein
-  // integrierter Kommentator erstmalig als eigener Charakter angelegt werden muss.
-  const outgoingData = saveTargetId
-    ? (window.AleriaCharacterSaveGuard?.selectCharacterImageLibraryWrite?.(data)
-      || { ...buildCharacterImageLibraryStorage(data), updatedAt: data.updatedAt })
-    : data;
-  const savedId = await window._fb.saveCharacter(saveTargetId, outgoingData);
-
-  if (saveTargetId) {
-    const idx = _characters.findIndex(item => item.id === saveTargetId);
-    if (idx >= 0) _characters[idx] = { ..._characters[idx], ...outgoingData, id: saveTargetId };
-    else _characters.push({ ...char, id: saveTargetId, ...outgoingData });
-    return saveTargetId;
-  }
-
-  if (isBuiltin && sourceId) {
-    replaceCharacterIdInTabs(sourceId, savedId);
-    saveCharTabs();
-  }
-  _characters.push({ ...char, id: savedId, ...data });
-  return savedId;
-}
-
-async function addEmoteToSelectedCommentCharacter() {
-  const status = document.getElementById('cf-emote-add-status');
-  const labelInput = document.getElementById('cf-emote-add-label');
-  const urlInput = document.getElementById('cf-emote-add-url');
-  const char = _selectedCharId
-    ? (getAvailableCommentCharacterById(_selectedCharId) || getCharacterById(_selectedCharId))
-    : null;
-  if (!char) return;
-  if (_commentCharacterMediaSavePending) {
-    if (status) status.textContent = 'Eine Avataränderung wird bereits gespeichert.';
-    return;
-  }
-  if (char.entityType === 'creature') {
-    if (status) status.textContent = 'Kreaturen verwenden ihr Portrait aus dem Kreaturenbogen.';
-    return;
-  }
-
-  const label = String(labelInput?.value || '').trim() || 'Avatar';
-  const img = normalizeImageUrlForStorage(urlInput?.value || '');
-  if (!img) {
-    if (status) status.textContent = 'Bitte eine gültige http(s)-Bild-URL einfügen.';
-    return;
-  }
-
-  const presentation = getSelectedCommentCharacterPresentation(char);
-  const emotes = Array.isArray(presentation?.emotes) ? presentation.emotes.slice() : [];
-  if (emotes.length >= MAX_EMOTES) {
-    if (status) status.textContent = `Maximal ${MAX_EMOTES} Avatare pro Figur.`;
-    return;
-  }
-
-  if (status) status.textContent = 'Bild wird geprüft...';
-  const selectedImageSetId = _selectedImageSetId;
-
-  _commentCharacterMediaSavePending = true;
-  try {
-    await new Promise((resolve, reject) => {
-      const test = new Image();
-      test.addEventListener('load', resolve, { once: true });
-      test.addEventListener('error', reject, { once: true });
-      test.src = img;
-    });
-
-    const data = buildCommentCharacterSaveData(char, [...emotes, { img, label }], img, _selectedImageSetId);
-
-    if (status) status.textContent = 'Wird gespeichert...';
-    _selectedCharId = await saveCommentCharacterFromPicker(char, data);
-
-    const savedPresentation = getCharacterImageSetPresentation(data, selectedImageSetId);
-    const newEmoteIndex = savedPresentation.emotes.length - 1;
-    _selectedEmoteIdx = newEmoteIndex;
-    renderCharPickerInForm();
-    selectCharForComment(_selectedCharId, { imageSetId: selectedImageSetId });
-    selectEmote(newEmoteIndex);
-    renderCharGrid();
-    const freshStatus = document.getElementById('cf-emote-add-status');
-    if (freshStatus) freshStatus.textContent = 'Gespeichert.';
-  } catch (error) {
-    const message = error?.code
-      ? getFriendlyErrorMessage(error, 'Avatar konnte nicht gespeichert werden.')
-      : 'Bild konnte nicht geladen werden. Bitte prüfe die URL.';
-    if (status) status.textContent = message;
-    if (error?.code) showAppStatus(message, 'error');
-  } finally {
-    _commentCharacterMediaSavePending = false;
-  }
-}
-
-async function removeEmoteFromSelectedCommentCharacter(idx, event) {
-  event?.preventDefault();
-  event?.stopPropagation();
-
-  const char = _selectedCharId
-    ? (getAvailableCommentCharacterById(_selectedCharId) || getCharacterById(_selectedCharId))
-    : null;
-  if (!char) return;
-  if (char.entityType === 'creature') return;
-
-  const status = document.getElementById('cf-emote-add-status');
-  if (_commentCharacterMediaSavePending) {
-    if (status) status.textContent = 'Eine Avataränderung wird bereits gespeichert.';
-    return;
-  }
-
-  const presentation = getSelectedCommentCharacterPresentation(char);
-  const emotes = Array.isArray(presentation?.emotes) ? presentation.emotes.slice() : [];
-  if (!emotes[idx]) return;
-  const label = emotes[idx].label ? ` "${emotes[idx].label}"` : '';
-  if (!confirm(`Avatar${label} wirklich löschen?`)) return;
-
-  if (status) status.textContent = 'Avatar wird gelöscht...';
-  const selectedImageSetId = _selectedImageSetId;
-
-  _commentCharacterMediaSavePending = true;
-  try {
-    const nextEmotes = emotes.filter((_, index) => index !== idx);
-    const data = buildCommentCharacterSaveData(char, nextEmotes, null, _selectedImageSetId);
-    _selectedCharId = await saveCommentCharacterFromPicker(char, data);
-    const nextSelectedEmoteIdx = _selectedEmoteIdx === idx
-      ? null
-      : (_selectedEmoteIdx !== null && _selectedEmoteIdx > idx ? _selectedEmoteIdx - 1 : _selectedEmoteIdx);
-
-    renderCharPickerInForm();
-    selectCharForComment(_selectedCharId, { imageSetId: selectedImageSetId });
-    const savedPresentation = getCharacterImageSetPresentation(data, selectedImageSetId);
-    if (nextSelectedEmoteIdx !== null && savedPresentation.emotes[nextSelectedEmoteIdx]) selectEmote(nextSelectedEmoteIdx);
-    renderCharGrid();
-    const freshStatus = document.getElementById('cf-emote-add-status');
-    if (freshStatus) freshStatus.textContent = 'Avatar gelöscht.';
-  } catch (error) {
-    const message = getFriendlyErrorMessage(error, 'Avatar konnte nicht gelöscht werden.');
-    if (status) status.textContent = message;
-    showAppStatus(message, 'error');
-  } finally {
-    _commentCharacterMediaSavePending = false;
-  }
-}
-
 function selectEmote(idx, options = {}) {
   _selectedEmoteIdx = idx;
-  document.querySelectorAll('.cf-emote-option').forEach(el => {
-    el.classList.toggle('selected', parseInt(el.dataset.emoteIdx) === idx);
-  });
   if (Array.isArray(_commentSegments) && _commentSegments.length && _commentSegments[0].kind !== 'action') {
     _commentSegments[0].emoteIndex = idx;
     _commentSegments[0].imageSetId = _selectedImageSetId;
@@ -410,8 +157,6 @@ function toggleManualMode(options = {}) {
   document.getElementById('cf-manual-toggle').textContent = _manualMode
     ? '<- Charakter auswählen'
     : '+ Manuell eingeben';
-  document.getElementById('cf-emote-section').style.display = 'none';
-  document.getElementById('cf-emote-picker').innerHTML = '';
   if (options.render !== false) {
     if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
     updateCommentFormPreview();

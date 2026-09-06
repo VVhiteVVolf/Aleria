@@ -55,8 +55,6 @@ function setCommentPlayerFilter(player, options = {}) {
       _selectedEmoteIdx = null;
       _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
       document.getElementById('cf-selected-name').textContent = '';
-      document.getElementById('cf-emote-section').style.display = 'none';
-      document.getElementById('cf-emote-picker').innerHTML = '';
     }
   }
   if (options.render !== false && typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
@@ -170,7 +168,7 @@ function updateCommentActorModeCopy(mode) {
   const empty = document.getElementById('cf-char-search-empty');
   const playerFilter = document.getElementById('cf-player-filter');
   const manualToggle = document.getElementById('cf-manual-toggle');
-  if (heading) heading.textContent = creatureMode ? 'Kreatur & Ausdruck' : 'Charakter & Ausdruck';
+  if (heading) heading.textContent = creatureMode ? 'Kreatur wählen' : 'Charakter wählen';
   if (label) label.textContent = creatureMode ? 'Kreatur wählen' : 'Charakter wählen';
   if (search) search.placeholder = creatureMode ? 'Kreatur suchen...' : 'Figur suchen...';
   if (empty) empty.textContent = creatureMode
@@ -194,8 +192,6 @@ function setCommentMode(mode, options = {}) {
     _selectedEmoteIdx = null;
     _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
     document.getElementById('cf-selected-name').textContent = '';
-    document.getElementById('cf-emote-section').style.display = 'none';
-    document.getElementById('cf-emote-picker').innerHTML = '';
   }
   if (mode !== 'charakter' && _manualMode) {
     _manualMode = false;
@@ -208,7 +204,6 @@ function setCommentMode(mode, options = {}) {
     coerceCommentSegmentsForMode(false);
     _selectedCharId = null;
     _manualMode = false;
-    document.getElementById('cf-emote-section').style.display = 'none';
     document.getElementById('cf-selected-name').textContent = '';
   } else {
     charSection.style.display = 'block';

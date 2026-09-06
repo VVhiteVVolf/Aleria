@@ -345,6 +345,7 @@
 }
 
 #comment-form-overlay .comment-segment-avatar-row {
+  --comment-segment-avatar-size: 62.1px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr));
   gap: 0.42rem;
@@ -361,12 +362,6 @@
 #comment-form-overlay .comment-segment-avatar {
   width: 100%;
   min-width: 0;
-}
-
-#comment-form-overlay .comment-segment-avatar img,
-#comment-form-overlay .comment-segment-avatar-initial {
-  width: 54px;
-  height: 54px;
 }
 
 #comment-form-overlay .comment-segment-format-toolbar {

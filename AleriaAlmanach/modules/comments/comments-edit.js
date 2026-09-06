@@ -29,8 +29,6 @@ function openEditComment(commentId) {
   document.getElementById('ec-portrait-url').value = '';
   document.getElementById('ec-manual-fields').style.display = 'none';
   document.getElementById('ec-manual-toggle').textContent = '+ Manuell';
-  document.getElementById('ec-emote-section').style.display = 'none';
-  document.getElementById('ec-emote-picker').innerHTML = '';
   document.getElementById('ec-portrait-preview').removeAttribute('src');
   document.getElementById('ec-portrait-preview').style.display = 'none';
   setRichEditorContent('ec-text', '');
