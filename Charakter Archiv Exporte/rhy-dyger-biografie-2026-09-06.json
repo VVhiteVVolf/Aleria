@@ -1,0 +1,206 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-06T04:08:21.815Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Biografie nach Benutzervorgaben vom 06.09.2026: Haus Dyger als Musikanten-, Seefahrer- und niederritterliches Geschlecht aus den Klaueninseln Talgarths, direkte Vasallen des Hauses Arth; einfache Musikantenschule ohne Barddwyr-Ausbildung. Rhy ist 27, Morwyr, Sohn Tudurs und seit Idwals Ritterschlag mit Ifor dessen Mannschaft zugeteilt. Parzifal prägte den Rufnamen Rüdiger. Persönlichkeit, Marotten und Zitate sind im autorisierten Rahmen neu ausgearbeitet: drei positive und drei negative Eigenschaften mit bestehenden CK2-Icons. Das Benutzerwappen https://i.imgur.com/blrRhTG.png und das bisherige Porträt https://i.imgur.com/wg0hMp9.png liegen unverändert als lokale Projektdateien vor; der Porträtverweis wurde wegen fehlerhafter externer Einbettung darauf umgestellt. Keine neuen Kampfwerte, Zaubermechaniken oder genealogischen Personen angelegt. Bestehende Inventar-, Kampf- und übrige Bildbibliotheksdaten bleiben erhalten; Eigentümerkennungen sind aus dem portablen Export entfernt.",
+  "character": {
+    "activeImageSetId": "",
+    "aliases": [
+      "Rüdiger"
+    ],
+    "archived": false,
+    "bio": "Sir Rhy Dyger, an Bord Rüdiger genannt, ist der 27-jährige Schiffsmusikant der Tiefenwyrm und ein Morwyr aus den Klaueninseln Talgarths. Sein Vater Tudur dient als Schiffsmusikant bei Lord Parzifal Arth. Parzifal gab Rhy gemeinsam mit Ifor Beryn in Idwals neu gegründete Mannschaft und prägte dabei seinen Rufnamen. Rhy ist ein begnadeter Sänger und Saitenspieler; seine wenigen magischen Kunststücke bleiben amateurhaft. Gesellig, herzensgut und tapfer hält er seine Kameraden bei Laune, gerät aber durch seine Trunksucht, seinen Jähzorn und sein Bedürfnis nach Beifall immer wieder in Schwierigkeiten.",
+    "biography": {
+      "biography": {
+        "abilities": [
+          {
+            "detail": "Rhy findet selbst zwischen Seekranken, missmutigen Wachen und fremden Hafenarbeitern jemanden zum Reden. Er zieht stille Kameraden in die Runde und merkt sich, wer bei welchem Lied endlich mitgesungen hat.",
+            "icon": "../IconOrdner/Traits%20Icon/Gregarious.png",
+            "title": "Gesellig"
+          },
+          {
+            "detail": "Hinter dem lauten Mundwerk steckt ein weiches Herz. Wer krank in der Hängematte liegt oder Heimweh hat, bekommt Gesellschaft, einen albernen Reim und nötigenfalls Rhys letzten guten Bissen. Für einen Kameraden singt er auch dann weiter, wenn längst niemand mehr Beifall spendet.",
+            "icon": "../IconOrdner/Traits%20Icon/Kind.png",
+            "title": "Herzensgut"
+          },
+          {
+            "detail": "Wenn es ernst wird, bleibt der Ritter bei seinen Leuten. Angst überspielt er mit einem viel zu lauten Lied, doch hinter dem Getöse steht echter Mut: Einen Kameraden allein am gefährlichen Ende des Decks lässt er nicht zurück.",
+            "icon": "../IconOrdner/Traits%20Icon/Brave.png",
+            "title": "Tapfer"
+          },
+          {
+            "detail": "Rhy verwechselt eine gut benetzte Kehle regelmäßig mit einem guten Grund für den nächsten Becher. Er trinkt über sein Maß hinaus und nimmt dafür einen schweren Kopf, versäumte Ruhe und den Ärger seiner Kameraden in Kauf. Die Rechnung folgt oft erst am Morgen.",
+            "icon": "../IconOrdner/Traits%20Icon/Drunkard.png",
+            "title": "Trunksüchtig"
+          },
+          {
+            "detail": "Über einen schlechten Scherz kann er lange lachen; eine verächtliche Bemerkung über seine Familie oder sein Können trifft ihn dagegen sofort. Dann wird aus dem fröhlichen Wortwechsel rasch eine laute Herausforderung, gelegentlich auch eine handfeste Tavernenschlägerei.",
+            "icon": "../IconOrdner/Traits%20Icon/Wroth.png",
+            "title": "Jähzornig"
+          },
+          {
+            "detail": "Rhy möchte gehört werden, am liebsten noch vom nächsten Kai aus. Bleibt der Beifall aus, hängt er eine Strophe an, schmückt eine Geschichte aus oder macht aus einem harmlosen Vergleich einen Wettstreit. Sachliche Kritik hört er dabei schlechter als jeden schiefen Ton.",
+            "icon": "../IconOrdner/Traits%20Icon/Proud.png",
+            "title": "Geltungsbedürftig"
+          }
+        ],
+        "abilitiesTitle": "Persönlichkeit",
+        "biographyText": "<p>Wer auf der <em>Tiefenwyrm</em> nach Rhy Dyger sucht, folgt gewöhnlich dem Lärm. Irgendwo schlägt eine Hand den Takt gegen die Reling, eine Saite schnarrt, und über allem liegt seine Stimme: kräftig, fröhlich und fest davon überzeugt, dass noch Platz für einen zweiten Refrain ist. Rhy ist der Schiffsmusikant Idwal Draigs, ein Ritter aus Talgarth und unter der Besatzung fast ausschließlich als <strong>Rüdiger</strong> bekannt.</p><p>Mit seinen 27 Jahren gehört er zusammen mit Ifor Beryn bereits zu den älteren Männern dieser jungen Mannschaft. Viel Altersweisheit ist daraus bislang nicht erwachsen. Rhy lässt sich für einen unsinnigen Wettstreit ebenso leicht begeistern wie die Jungspunde, lacht zuerst über den gröbsten Witz und ist gern der Letzte, der eine gesellige Runde verlassen will. Zugleich fällt ihm auf, wenn einer der anderen seit Tagen nicht mehr gelacht hat. Dann setzt er sich dazu – manchmal mit einem Lied, manchmal bloß mit einer Geschichte, deren würdeloseste Rolle er großzügig selbst übernimmt.</p>",
+        "biographyTitle": "Rhy Dyger, genannt Rüdiger",
+        "connectionPortraitHeight": 78,
+        "connectionTextOffset": 0,
+        "connections": [
+          {
+            "detail": "Sein Vater; Schiffsmusikant auf dem Schiff Lord Parzifal Arths.",
+            "image": "../Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+            "imageFormat": "square",
+            "name": "Tudur Dyger",
+            "type": "connection"
+          },
+          {
+            "detail": "Graf, Idwals Mentor und Urheber des Rufnamens „Rüdiger“. Gab Rhy zusammen mit Ifor in Idwals neue Mannschaft.",
+            "image": "",
+            "imageFormat": "portrait",
+            "name": "Lord Parzifal Arth",
+            "type": "connection"
+          },
+          {
+            "detail": "Sein Kapitän auf der Tiefenwyrm. Rhy gehört zu den Männern, die Parzifal ihm zur Gründung seiner eigenen Besatzung mitgab.",
+            "image": "https://i.imgur.com/RNqIIO0.png",
+            "imageFormat": "portrait",
+            "name": "Idwal Draig",
+            "type": "connection"
+          },
+          {
+            "detail": "Mit ihm von Parzifal entsandt. Ifor soll auf Idwal aufpassen; Rhy hält unterdessen die Mannschaft bei Laune.",
+            "image": "../Stammbäume/assets/images/portraits/haus-beryn/ifor-beryn.png",
+            "imageFormat": "portrait",
+            "name": "Ifor Beryn",
+            "type": "connection"
+          }
+        ],
+        "connectionsTitle": "Familie & Gefährten",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+            "link": "../Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+            "text": "Musikanten, Seefahrer und niederes Rittergeschlecht der Klaueninseln in Talgarth. Direkte Rittervasallen des Hauses Arth; Betreiber einer einfachen Musikantenschule in Talgarth.",
+            "title": "Haus Dyger"
+          }
+        ],
+        "documentsTitle": "Haus & Herkunft",
+        "extraSections": [
+          {
+            "mode": "text",
+            "position": "afterWorks",
+            "text": "<p>Rhy ist ein <strong>Morwyr</strong>: ein Ritter zur See mit ausgeprägten bardischen Neigungen. Seinen Platz auf der Tiefenwyrm verdient er mit Gesang, Saitenspiel und dem Gespür dafür, welches Lied die Mannschaft gerade braucht. Er kann einen derben Refrain so führen, dass selbst die Unwilligen irgendwann einsetzen, und findet zu einem missglückten Handgriff oft schneller einen Reim als der Betroffene eine Ausrede.</p><p>Ein ausgebildeter Zauberbarde ist er nicht. Einige kleine magische Kunststücke hat er sich dennoch abgeschaut und mühsam angeeignet. Was davon gelingt, reicht für eine überraschte Kinderschar oder einen unterhaltsamen Abend im Hafen; vieles bleibt unzuverlässig und amateurhaft. Misslingt ihm ein Trick, rettet er den Auftritt lieber mit schnellen Fingern und einem frechen Spruch. Mit seiner Stimme und einem Saiteninstrument ist er erheblich sicherer als mit jeder Zauberformel.</p>",
+            "title": "Ein Morwyr mit Musik im Kopf"
+          }
+        ],
+        "footer": "Personenakte · Sir Rhy „Rüdiger“ Dyger · Tiefenwyrm",
+        "historyText": "<p>Die <strong>Dyger</strong> sind ein niederes Rittergeschlecht aus den <strong>Klaueninseln Talgarths</strong> und direkte Rittervasallen des Hauses Arth. Seefahrt und Musik gehören bei ihnen ebenso zum Familienhandwerk wie der Dienst mit der Waffe. Ihr Ruf reicht allerdings selten bis in die vornehmen Säle der angesehenen Bardenhäuser. Häuser wie die <strong>Ceirwyn</strong> tun die Dyger als Säufer und Tavernenschläger ab; ganz ohne eigene Mithilfe sind diese zu ihrem Ansehen nicht gekommen.</p><p>In Talgarth unterhalten die Dyger eine bescheidene Musikantenschule. Dort lernen ihre Angehörigen und die Männer ihres Gefolges, kräftig in die Saiten zu greifen, eine volle Stube mit der Stimme zu erreichen und einen gemeinsamen Takt zu halten. Trockene Kehlen gelten dabei rasch als vermeidbares Hindernis. Eine berühmte Akademie ist die Schule nicht, doch wer dort etwas gelernt hat, kann eine müde Runde zum Mitsingen bringen. <strong>Barddwyr bildet das Haus nicht aus</strong>; die gelehrte Verbindung von Bardenkunst und Magie überlässt es anderen.</p><p>Rhys Vater <strong>Tudur Dyger</strong> dient als Schiffsmusikant auf dem Schiff des Grafen <strong>Lord Parzifal Arth</strong>, Idwal Draigs Mentor. In diesem Umfeld wurden für Rhy ritterlicher Dienst, das Leben zur See und die Musik früh zu eng verbundenen Dingen. Eine gute Stimme war nützlich; auf schwankenden Planken bestehen und seinen Kameraden beistehen zu können ebenso.</p>",
+        "historyTitle": "Haus Dyger – Saiten, Salz und volle Becher",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [
+          "„Ifor passt auf den Kapitän auf. Ich passe auf, dass ihr mir hier nicht alle vor Langeweile sterbt.“",
+          "„Für einen Ceirwyn war das sehr ordentlich. Jetzt spielen wir es so, dass die hinteren Tische auch was davon haben.“",
+          "„Das war kein misslungener Zauber. Die Münze hat sich bloß geweigert.“"
+        ],
+        "quotesTitle": "In eigenen Worten",
+        "sideWidth": 100,
+        "trivia": [
+          "Rhys Hände halten selten still. Er trommelt auf Bechern, Fässern und den eigenen Knien; zum Stimmen sucht er summend seinen Ton, auch mitten im Gespräch. Erst ein sehr deutlicher Blick bringt ihn darauf, dass andere gerade Ruhe brauchen.",
+          "Er macht aus kleinen Missgeschicken sofort Spottverse und trägt sie noch Tage später vor. Merkt er, dass jemand ernsthaft beschämt ist, dichtet er sich selbst in die nächste Strophe und gibt die lächerlichere Figur ab.",
+          "Nennt ihn jemand förmlich „Sir Rhy“, richtet er sich unwillkürlich auf und fragt, was er diesmal angestellt habe. Auf „Rüdiger!“ antwortet er dagegen gelegentlich schon singend.",
+          "Vor dem ersten Lied hebt er seinen Becher „auf die trockenen Kehlen“. Gelegentlich entdeckt er während desselben Abends mehrere vermeintlich erste Lieder.",
+          "Ein gerissenes Stück Saite bewahrt er auf und knotet es an den Instrumentenriemen: als Erinnerung daran, welcher Auftritt besonders wild gewesen sei. Die Sammlung ist ihm lieber als ein ordentlich aufgeräumter Riemen.",
+          "Bei Kindern kündigt er seine kleinen Zaubertricks mit großem Ernst an und nennt jedes Misslingen eine noch schwierigere Variante. Lachen sie darüber, ist er ebenso zufrieden wie nach einem gelungenen Kunststück.",
+          "Hört er einen feinen Barden die Dyger geringschätzen, lächelt er zunächst auffallend höflich. Seine nächste Bitte um ein gemeinsames Lied ist dann fast immer eine Herausforderung."
+        ],
+        "triviaTitle": "Marotten & Eigenarten",
+        "works": [
+          "Als Idwal zum Ritter geschlagen worden war und seine eigene Schiffsmannschaft aufstellen sollte, gab Parzifal ihm zwei Männer mit. Ifor Beryn sollte auf den jungen Ritter aufpassen. Rhy sollte dafür sorgen, dass unter dessen Leuten noch gelacht und gesungen wurde, selbst wenn die halbe Mannschaft krank, erschöpft oder bis auf die Knochen missmutig war.",
+          "Parzifal zog Rhys Vor- und Nachnamen kurzerhand zu „Rüdiger“ zusammen. Irgendwo im östlichen Mathringen, hieß es, sei das ohnehin ein beliebter Name. Der Spottname blieb haften. An Bord ruft inzwischen fast jeder nach Rüdiger, und Rhy hört darauf mit derselben Selbstverständlichkeit wie auf den Beginn eines Trinkliedes."
+        ],
+        "worksTitle": "Parzifals zwei Männer"
+      },
+      "quote": "Wenn ihr noch fluchen könnt, könnt ihr auch den Refrain.",
+      "quoteBy": "Rüdiger, gewöhnlich viel zu laut",
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Sir Rhy Dyger"
+        },
+        {
+          "label": "Rufname",
+          "value": "Rüdiger"
+        },
+        {
+          "label": "Alter",
+          "value": "27 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Klaueninseln, Talgarth"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Dyger · niederritterlich"
+        },
+        {
+          "label": "Klasse",
+          "value": "Morwyr"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schiffsmusikant der Tiefenwyrm"
+        },
+        {
+          "label": "Vater",
+          "value": "Tudur Dyger"
+        },
+        {
+          "label": "Lehnsherr des Hauses",
+          "value": "Haus Arth"
+        },
+        {
+          "label": "Aufenthalt",
+          "value": "An Bord der Tiefenwyrm"
+        }
+      ]
+    },
+    "createdAt": "2026-09-06T03:18:40.327Z",
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Dyger · Mannschaft der Tiefenwyrm · Haus Draig",
+    "id": "tiefenwyrm--rhy-dyger",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "inventory": null,
+    "name": "Rhy Dyger",
+    "origin": "Klaueninseln, Talgarth",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-dyger/rhy-dyger.png",
+    "profileLink": "",
+    "relevance": "",
+    "role": "Schiffsbarde · Morwyr",
+    "status": "active",
+    "taxonomyPath": "",
+    "title": "Sir · Morwyr und Schiffsmusikant der Tiefenwyrm",
+    "updatedAt": "2026-09-06T04:08:21.815Z"
+  }
+}

@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+  "sourceExportedAt": "2026-09-06T04:08:21.815Z",
   "summary": {
-    "sourceDocuments": 263,
+    "sourceDocuments": 264,
     "total": 234,
-    "mergedSameNameGroups": 22,
+    "mergedSameNameGroups": 23,
     "familyLinked": 151,
     "familyAmbiguous": 0,
     "familyPending": 83,
@@ -1217,6 +1217,15 @@
       "ages": [
         "Geburtsjahr 1719"
       ]
+    },
+    {
+      "name": "Rhy Dyger",
+      "canonicalDocumentId": "tiefenwyrm--rhy-dyger",
+      "documentIds": [
+        "tiefenwyrm--rhy-dyger",
+        "tiefenwyrm--rhy-dyger"
+      ],
+      "ages": []
     }
   ],
   "duplicateWorldPersonIds": []

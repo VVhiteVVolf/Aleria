@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-06T03:18:40.327Z",
+    "sourceExportedAt": "2026-09-06T04:08:21.815Z",
     "sourceUpdatedAt": "2026-09-03T23:42:58.734Z",
     "sourceDocumentIds": [
       "person--haus-grael--caswallon-grael"
     ],
-    "contentHash": "20972a911eb982a39067f65fc09bb1e7a8fbd4221b37943389364822a72ed6b7"
+    "contentHash": "07c5ff0632a9227478e0a88753a3cb7538847119db85269e87112e5538539164"
   },
   "local": {
     "notes": "",
@@ -319,8 +319,8 @@
           "personId": "caswallon-grael",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-06T03:18:40.327Z",
-          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "importedAt": "2026-09-06T04:08:21.815Z",
+          "lastSyncedAt": "2026-09-06T04:08:21.815Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=caswallon-grael",
           "fingerprint": "{\"name\":\"Caswallon Grael\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-grael\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/caswallon-grael.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"dwynwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--dwynwen-draig\",\"name\":\"Dwynwen Draig\"}],\"children\":[]}}"
         }
