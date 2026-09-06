@@ -7,16 +7,18 @@ export function getActiveCombatWeapon(weapons = []) {
   return available.find(weapon => weapon?.equipped) || available[0] || null;
 }
 
-export function withEquippedCombatWeapon(character = {}, weaponId = '') {
+export function withEquippedCombatWeapon(character = {}, weaponId = '', offHandWeaponId) {
   const requestedId = text(weaponId);
   const weapons = character?.combatProfile?.weapons;
   if (!requestedId || !Array.isArray(weapons) || !weapons.some(weapon => text(weapon?.id) === requestedId)) return character;
   const activeWeapon = getActiveCombatWeapon(weapons);
-  if (text(activeWeapon?.id) === requestedId && activeWeapon?.equipped) return character;
+  if (text(activeWeapon?.id) === requestedId && activeWeapon?.equipped
+      && (offHandWeaponId === undefined || character.combatProfile.combat?.offHandWeaponId === offHandWeaponId)) return character;
   return {
     ...character,
     combatProfile: {
       ...character.combatProfile,
+      ...(offHandWeaponId !== undefined ? { combat: { ...character.combatProfile.combat, offHandWeaponId: text(offHandWeaponId) } } : {}),
       weapons: weapons.map(weapon => ({
         ...weapon,
         equipped: text(weapon?.id) === requestedId

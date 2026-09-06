@@ -1,3 +1,5 @@
+import { formatCombatChance } from '../combat-action-estimates.js';
+
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 }
@@ -10,7 +12,8 @@ export function prioritizeCombatTargets(targets = [], participantIds = new Set()
 export function optionLabel(target = {}) {
   const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
   const hp = target.currentHitPoints != null && target.maximumHitPoints != null ? ` · ${target.currentHitPoints}/${target.maximumHitPoints} TP` : '';
-  return `${target.name} · ${ready ? `VTD ${target.totalDefense}` : 'Verteidigung fehlt'}${hp}`;
+  const chance = formatCombatChance(target.hitChance);
+  return `${target.name}${chance ? ` · ${chance}` : ''} · ${ready ? `VTD ${target.totalDefense}` : 'Verteidigung fehlt'}${hp}`;
 }
 
 export function renderTargetOptions(targets = [], selectedIds = new Set()) {
@@ -33,7 +36,8 @@ export function renderSelectedTargetPortraits(targets = [], selectedIds = new Se
   return `<span class="combat-selected-targets" aria-label="Gewählte Ziele">${selected.map(target => {
     const portrait = String(target.portrait || '').trim();
     const safe = /^(?:https?:\/\/|data:image\/|\.\.?\/|\/[^/])/i.test(portrait);
-    return `<span class="combat-target-chip"><span class="combat-target-portrait" aria-hidden="true"><b>${escapeHtml(String(target.name || '?').slice(0, 1))}</b>${safe ? `<img src="${escapeHtml(portrait)}" alt="" data-combat-target-image decoding="async">` : ''}</span><span>${escapeHtml(target.name)}</span></span>`;
+    const chance = formatCombatChance(target.hitChance);
+    return `<span class="combat-target-chip"><span class="combat-target-portrait" aria-hidden="true"><b>${escapeHtml(String(target.name || '?').slice(0, 1))}</b>${safe ? `<img src="${escapeHtml(portrait)}" alt="" data-combat-target-image decoding="async">` : ''}</span><span>${escapeHtml(target.name)}${chance ? `<small class="combat-hit-chance" title="Erfolg des Wurfs mit aktiven Effekten und ausgewählten Eingriffen; vor nachgelagerten Schutzwirkungen.">${escapeHtml(chance)}</small>` : ''}</span></span>`;
   }).join('')}</span>`;
 }
 

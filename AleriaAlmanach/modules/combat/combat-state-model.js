@@ -189,6 +189,11 @@ export function getResolutionActorInventoryState(resolution = {}) {
   return inventory && typeof inventory === 'object' ? JSON.parse(JSON.stringify(inventory)) : null;
 }
 
+export function getResolutionActorLoadoutState(resolution = {}) {
+  const snapshot = resolution.actorEquippedWeaponSnapshot;
+  return snapshot?.after ? { equippedWeaponId: String(snapshot.after), offHandWeaponId: snapshot.offHandAfter } : {};
+}
+
 export function getResolutionActorEquippedWeaponState(resolution = {}) {
   const weaponId = resolution?.actorEquippedWeaponSnapshot?.after;
   return weaponId ? String(weaponId) : null;
@@ -288,7 +293,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           ...(actorInventory ? { inventory: actorInventory } : {}),
           ...(actorHitPoints || {}),
           ...(actorConditions ? { temporaryConditions: actorConditions } : {}),
-          ...(actorEquippedWeaponId ? { equippedWeaponId: actorEquippedWeaponId } : {})
+          ...getResolutionActorLoadoutState(resolution)
         });
       }
       const targetResources = getResolutionTargetResourceState(resolution);

@@ -203,6 +203,18 @@ function preferredBarddwyrBranch(profile = {}) {
     : 'barddwyr-sword';
 }
 
+function recommendedTechnique(profile, definition, candidates) {
+  if (definition.classId !== 'helwyr') return candidates[0];
+  const knownBranches = new Set((profile.techniques || []).map(technique => technique.cenyrTraining?.branchId).filter(Boolean));
+  if (!knownBranches.size) return candidates[0];
+  // A Helwyr's smaller pool must still cover their carried melee weapons. The
+  // first slot follows the main weapon; later slots close gaps before specializing.
+  const priority = ['helwyr-classic-sword', 'helwyr-dual-blades', 'helwyr-longbow', 'helwyr-shortbow'];
+  return candidates.filter(technique => technique.weaponCompatible
+      && priority.includes(technique.cenyrTraining?.branchId) && !knownBranches.has(technique.cenyrTraining.branchId))
+    .sort((a, b) => priority.indexOf(a.cenyrTraining.branchId) - priority.indexOf(b.cenyrTraining.branchId))[0] || candidates[0];
+}
+
 function pruneTrainingForLevel(profile, definition, level) {
   const next = ensureCenyrTrainingState(profile);
   const earnedSlots = new Set(getCenyrTechniqueSlots(definition, level).map(slot => slot.id));
@@ -248,7 +260,7 @@ export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = 
       const group = getCenyrTechniqueChoiceGroups(next, level, { allEarned: true })
         .find(choice => choice.options.length > 0);
       if (!group) break;
-      const candidate = group.options[0];
+      const candidate = recommendedTechnique(next, definition, group.options);
       const selected = selectCenyrTechniqueForSlot(next, {
         slotId: group.slotId,
         techniqueId: candidate.id,

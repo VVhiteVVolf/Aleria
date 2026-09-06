@@ -52,25 +52,19 @@ test('die Waffenleiste zeigt die aktive Waffe zuerst und erhält vollständige, 
   assert.match(weaponButton(markup, 'sword'), /Drachenzahn &lt;Draig&gt; &amp; &quot;Erbe&quot;/);
   assert.match(weaponButton(markup, 'sword'), /aria-pressed="true"/);
   assert.match(weaponButton(markup, 'sword'), /src="https:\/\/i\.imgur\.com\/38Na5EY\.png"/);
-  assert.match(weaponButton(markup, 'dagger'), /data-combat-action-id="equip:dagger"/);
+  assert.match(weaponButton(markup, 'dagger'), /data-combat-controller-action="select-weapon"/);
   assert.doesNotMatch(markup, /javascript:|<Draig>/);
 });
 
-test('ein vorgemerkter Waffenwechsel lässt sich am Zielslot und an der aktiven Waffe aufheben', () => {
+test('ein vorbereiteter Wechsel zeigt die neue Waffe sofort und bietet eine ausdr?ckliche R?cknahme', () => {
   const actor = weaponActor();
-  actor.selectedAction = actor.actions.find(action => action.id === 'equip:dagger');
-  const markup = renderWeaponLoadout(actor);
-
-  for (const id of ['sword', 'dagger']) {
-    const button = weaponButton(markup, id);
-    assert.ok(button, `Waffenslot ${id} fehlt`);
-    assert.match(button, /data-combat-controller-action="select-weapon"/);
-    assert.match(button, /data-combat-action-id="weapon:sword"/);
-    assert.doesNotMatch(button.match(/^<button[^>]*>/)[0], /\sdisabled(?:[\s=>])/);
-  }
-  assert.match(weaponButton(markup, 'dagger'), /data-state="pending"/);
-  assert.match(markup, /Wechsel aufheben/);
-  assert.match(weaponButton(markup, 'unarmed'), /data-combat-action-id="equip:unarmed"/);
+  actor.weapons = actor.weapons.map(weapon => ({ ...weapon, equipped: weapon.id === 'dagger' }));
+  actor.equipmentPreparation = { free: false };
+  const markup = renderWeaponLoadout(actor, { requestedLoadout: { rightWeaponId: 'dagger', leftWeaponId: '' } });
+  assert.match(weaponButton(markup, 'dagger'), /data-state="active"/);
+  assert.match(markup, /data-combat-controller-action="cancel-equipment"/);
+  assert.match(markup, /1 Bonusaktion im Entwurf verbraucht/);
+  assert.match(weaponButton(markup, 'sword'), /data-combat-controller-action="select-weapon"/);
 });
 
 test('mehrere natürliche Angriffe erhalten keine irreführende Waffenwechsel-Leiste', () => {

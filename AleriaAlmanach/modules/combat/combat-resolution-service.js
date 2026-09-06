@@ -1,3 +1,4 @@
+import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import {
   getAuraTargetMechanics,
@@ -35,7 +36,10 @@ import {
   sanitizeCombatRuleEffects
 } from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-7';
+import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js';
+import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-8';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -43,19 +47,6 @@ function normalizeRollMode(value) {
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `combat-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-}
-
-function evaluateSavingThrowRoll(roll, targetDefense) {
-  const naturalRoll = Number(roll?.natural);
-  const total = Number(roll?.total);
-  if (!Number.isFinite(naturalRoll) || !Number.isFinite(total)) {
-    throw new Error('Der Rettungswurf enth\u00e4lt kein g\u00fcltiges W20-Ergebnis.');
-  }
-  return {
-    criticalFailure: false,
-    criticalSuccess: false,
-    hit: total >= Number(targetDefense)
-  };
 }
 
 function buildDefaultRuleSources(actor, target, relationship) {
@@ -93,37 +84,6 @@ function normalizeRuleSources(actor, target, relationship, distanceMeters, suppl
     else if (source?.profile && actorId) sources.push({ passiveRulesAllowed: false, ...source });
   });
   return sources;
-}
-
-function applyOutcome(attack, outcome, savingThrowMode) {
-  const next = { ...attack };
-  if (outcome === 'force-critical-hit') {
-    next.hit = true;
-    next.criticalSuccess = !savingThrowMode;
-    next.criticalFailure = false;
-  }
-  if (outcome === 'force-hit') {
-    next.hit = true;
-    next.criticalFailure = false;
-  }
-  if (outcome === 'force-miss') {
-    next.hit = false;
-    next.criticalSuccess = false;
-  }
-  if (outcome === 'force-save-success') {
-    next.hit = false;
-    next.criticalSuccess = false;
-    next.saveSucceeded = true;
-  }
-  if (outcome === 'force-save-failure') {
-    next.hit = true;
-    next.criticalFailure = false;
-    next.saveSucceeded = false;
-  }
-  if (savingThrowMode && !['force-save-success', 'force-save-failure'].includes(outcome)) {
-    next.saveSucceeded = !next.hit;
-  }
-  return next;
 }
 
 function createRuleLedger(applications = [], phaseBefore = {}, phaseAfter = {}) {
@@ -299,9 +259,10 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   const actionKind = actor.profileActionKind || 'weapon';
   const profileActionId = actor.profileActionId || '';
   const ruleProfileState = { actorProfile: actor, targetProfile: target };
+  const ruleCache = new WeakMap();
   const preRollApplications = collectApplicableCombatRules({
     phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-    usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState
+    usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState, ruleCache
   }).concat(buildSupportAuraApplications(ruleSources, actionKind));
   markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
   const preRollEffects = mergeCombatRuleEffects(preRollApplications);
@@ -314,7 +275,7 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
-    profileRollModes, profileRollMode, auraRollMode, safeRollMode };
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache };
 }
 
 export class CombatResolutionService {
@@ -323,6 +284,11 @@ export class CombatResolutionService {
   }
 
   async resolveAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
+    const resolution = await this.resolvePreparedAttack({ actor, target, description, rollMode }, options);
+    return options.skipResourceCosts ? resolution : attachCombatEquipmentPreparation(resolution, actor);
+  }
+
+  async resolvePreparedAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
     const actorCheck = validateCombatActorProfile(actor, { startedAction: options.startedAction });
     if (!actorCheck.ready) throw new Error(getCombatActorValidationMessage(actor, actorCheck));
     const targetCheck = validateCombatTargetProfile(target);
@@ -390,26 +356,20 @@ export class CombatResolutionService {
         secondarySaves: [],
         followUpAttacks: [],
         actorResourceSnapshot: { before: actor.resources || [], after: resourceCheck.applied.after },
-        actorEquippedWeaponSnapshot: { before: beforeWeaponId, after: targetWeaponId },
+        actorEquippedWeaponSnapshot: { before: beforeWeaponId, after: targetWeaponId,
+          offHandBefore: getCombatWeaponLoadout(actor).leftWeaponId,
+          offHandAfter: getCombatWeaponLoadout({ weapons: actor.weapons.map(item => ({ ...item, equipped: item.id === targetWeaponId })) }).leftWeaponId },
         effectResults: [],
         ruleApplications: [],
         ruleConflicts: []
       };
     }
+    const rollContext = getCombatRollContext(actor, target, options);
     const { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
-    profileRollModes, profileRollMode, auraRollMode, safeRollMode } = getCombatRollContext(actor, target, options);
-    const attackModifier = savingThrowMode
-      ? getSavingThrowTotal(target, actor.actionSaveAttribute) + Number(actorAuraOnTarget.savingThrow || 0) + preRollEffects.savingThrowModifier
-      : Number(actor.attackModifier || 0)
-        + Number(targetAuraOnActor.attack || 0)
-        + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
-        + preRollEffects.attackModifier;
-    const targetDefense = savingThrowMode
-      ? Number(actor.actionSpellSaveDc || actor.spellSaveDc || 10) + Number(targetAuraOnActor.spellSaveDc || 0) + preRollEffects.spellSaveDcModifier
-      : Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
-        + Number(actorAuraOnTarget.armorClass || 0) + preRollEffects.defenseModifier;
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode } = rollContext;
+    const { attackModifier, targetDefense } = getCombatAttackNumbers(actor, target, rollContext);
     const attackNotation = buildAttackNotation(attackModifier, safeRollMode);
 
     options.onPhase?.({ phase: savingThrowMode ? 'saving-throw' : 'attack', notation: attackNotation, actor, target, weapon });
@@ -427,73 +387,11 @@ export class CombatResolutionService {
       targetName: savingThrowMode ? actor.name : target.name,
       container: options.container
     });
-    const evaluatedRoll = savingThrowMode
-      ? evaluateSavingThrowRoll(attackRoll, targetDefense)
-      : evaluateAttackRoll(attackRoll, targetDefense, actor.selectedAction?.criticalThreshold);
-    const cheatEnabled = actor.cheats?.enabled === true;
-    let attack = savingThrowMode ? {
-      ...evaluatedRoll,
-      hit: cheatEnabled ? true : !evaluatedRoll.hit,
-      criticalSuccess: false,
-      criticalFailure: false,
-      saveSucceeded: cheatEnabled ? false : evaluatedRoll.hit
-    } : {
-      ...evaluatedRoll,
-      hit: automaticMode || cheatEnabled ? true : evaluatedRoll.hit,
-      criticalSuccess: cheatEnabled ? !!actor.cheats?.automaticCritical : (automaticMode ? false : evaluatedRoll.criticalSuccess),
-      criticalFailure: cheatEnabled || automaticMode ? false : evaluatedRoll.criticalFailure,
-      saveSucceeded: null
-    };
-    const baseAttackState = { ...attack };
-    const postRollApplications = collectApplicableCombatRules({
-      phase: 'post-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
-    });
-    markCombatRuleApplications(postRollApplications, usedRuleFrequencyKeys);
-    const postRollEffects = mergeCombatRuleEffects(postRollApplications);
-    const postAttackModifier = savingThrowMode ? postRollEffects.savingThrowModifier : postRollEffects.attackModifier;
-    const postDefenseModifier = savingThrowMode ? postRollEffects.spellSaveDcModifier : postRollEffects.defenseModifier;
-    if (!cheatEnabled && !automaticMode && (postAttackModifier || postDefenseModifier)) {
-      const reevaluated = (savingThrowMode ? evaluateSavingThrowRoll : evaluateAttackRoll)({
-        ...attackRoll,
-        total: Number(attackRoll.total) + postAttackModifier
-      }, targetDefense + postDefenseModifier, actor.selectedAction?.criticalThreshold);
-      attack = savingThrowMode ? {
-        ...attack,
-        ...reevaluated,
-        hit: !reevaluated.hit,
-        criticalSuccess: false,
-        criticalFailure: false,
-        saveSucceeded: reevaluated.hit
-      } : { ...attack, ...reevaluated };
-    }
-    if (!cheatEnabled && !automaticMode) attack = applyOutcome(attack, postRollEffects.outcome, savingThrowMode);
-    const postRollAttackState = { ...attack };
-    const postHitApplications = collectApplicableCombatRules({
-      phase: 'post-hit', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
-    });
-    markCombatRuleApplications(postHitApplications, usedRuleFrequencyKeys);
-    const postHitEffects = mergeCombatRuleEffects(postHitApplications);
-    if (!cheatEnabled && !automaticMode) attack = applyOutcome(attack, postHitEffects.outcome, savingThrowMode);
-    const postHitAttackState = { ...attack };
-    const preDamageApplications = collectApplicableCombatRules({
-      phase: 'pre-damage', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
-    });
-    markCombatRuleApplications(preDamageApplications, usedRuleFrequencyKeys);
-    const preDamageEffects = mergeCombatRuleEffects(preDamageApplications);
-    if (!cheatEnabled && !automaticMode) attack = applyOutcome(attack, preDamageEffects.outcome, savingThrowMode);
-    if (cheatEnabled || automaticMode) {
-      attack = {
-        ...attack,
-        hit: true,
-        criticalSuccess: savingThrowMode ? false : (cheatEnabled ? !!actor.cheats?.automaticCritical : false),
-        criticalFailure: false,
-        saveSucceeded: savingThrowMode ? false : null
-      };
-    }
-    const preDamageAttackState = { ...attack };
+    const evaluated = evaluateCombatAttackRoll(actor, target, attackRoll, rollContext, { attackModifier, targetDefense });
+    let { attack } = evaluated;
+    const { cheatEnabled, baseAttackState, postRollAttackState, postHitAttackState, preDamageAttackState,
+      postRollApplications, postHitApplications, preDamageApplications, postRollEffects, postHitEffects, preDamageEffects,
+      postAttackModifier, postDefenseModifier } = evaluated;
     let allRuleApplications = [preRollApplications, postRollApplications, postHitApplications, preDamageApplications].flat();
     const followRuleConflicts = [];
     const damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
@@ -775,7 +673,7 @@ export class CombatResolutionService {
           : effect.condition.mechanics;
         const condition = normalizeRuntimeCondition({
           ...effect.condition,
-          mechanics: rolledMechanics,
+          ...(rolledMechanics ? { mechanics: rolledMechanics } : {}),
           id: `${effect.condition.id || effect.id}-${createResolutionId()}`,
           sourceConditionId: effect.condition.id || effect.id,
           sourceActorId: actor.characterId,

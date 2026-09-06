@@ -74,6 +74,7 @@ async function submitEditComment() {
       && String(storedAction.actorId || '') === actorId
       && String(storedAction.targetId || '') === String(segment.combatTargetId || '')
       && JSON.stringify(storedAction.targetIds || [storedAction.targetId].filter(Boolean)) === JSON.stringify(segment.combatTargetIds || [segment.combatTargetId].filter(Boolean))
+      && JSON.stringify(storedAction.loadout || null) === JSON.stringify(segment.combatLoadout || null)
       && String(storedAction.profileActionId || '') === String(segment.combatActionId || '')
       && Number(storedAction.castLevel || 0) === Number(segment.combatCastLevel || 0)
       && String(storedAction.paymentMode || 'standard') === String(segment.combatPaymentMode || 'standard');

@@ -272,12 +272,15 @@ export function collectApplicableCombatRules({
   state = {},
   sources = [],
   periods = {},
-  usedFrequencyKeys = new Set()
+  usedFrequencyKeys = new Set(),
+  ruleCache = null
 } = {}) {
   const context = { periods, usedFrequencyKeys };
   const applications = [];
   sources.forEach(source => {
-    collectCombatTriggerRules(source.profile).forEach(rule => {
+    const rules = ruleCache?.get(source.profile) || collectCombatTriggerRules(source.profile);
+    if (ruleCache && source.profile) ruleCache.set(source.profile, rules);
+    rules.forEach(rule => {
       if (rule.phase !== phase || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
       if (!relationAllows(rule, source) || !distanceAllows(rule, source) || !conditionAllows(rule, state)) return;
       if (rule.activation === 'reaction' && !selectedRule(source, rule)) return;

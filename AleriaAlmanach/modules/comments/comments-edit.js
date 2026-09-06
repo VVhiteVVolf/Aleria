@@ -103,6 +103,7 @@ async function verifyEditCode() {
           storedSkillChallenge: segment.skillChallenge || null,
           targetId: segment.combatTargetId || segment.combatAction?.targetId,
           targetIds: segment.combatTargetIds || segment.combatAction?.targetIds || [segment.combatTargetId || segment.combatAction?.targetId].filter(Boolean),
+          loadout: segment.combatAction?.loadout || segment.combatLoadout || null,
           actionId: segment.combatActionId || segment.combatAction?.profileActionId,
           castLevel: segment.combatAction?.castLevel ?? segment.combatCastLevel ?? 0,
           rollMode: segment.combatRollMode || segment.combatAction?.rollMode,

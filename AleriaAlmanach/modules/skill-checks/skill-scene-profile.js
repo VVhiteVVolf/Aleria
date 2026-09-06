@@ -14,7 +14,7 @@ export function createSceneSkillProfileResolver(comments = [], { commentId = 'sk
   return {
     resolve(actor) {
       const state = states.get(String(actor.id));
-      const profile = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(actor, state?.equippedWeaponId)), state);
+      const profile = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(actor, state?.equippedWeaponId, state?.offHandWeaponId)), state);
       return { ...profile, resources: recoverDailyCombatResources(profile.resources, recoveryDayKey) };
     },
     appendResolution(resolution) {

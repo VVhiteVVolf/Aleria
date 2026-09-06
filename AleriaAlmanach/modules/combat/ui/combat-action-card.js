@@ -1,26 +1,12 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
+import { estimateCombatDamage } from '../combat-action-estimates.js';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-const WEAPON_GLYPHS = Object.freeze({
-  unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟',
-  polearm: 'Ψ', bow: '➳', crossbow: '⌖', firearm: '✹', staff: '⌇', shield: '⬙',
-  improvised: '?', natural: '◢', arcane: '✧', other: '•'
-});
-
-function weaponImage(value) {
-  const source = String(value || '').trim();
-  return /^(?:https?:\/\/|data:image\/|\.\.?\/)/i.test(source) ? escapeHtml(source) : '';
-}
-
-export function bindWeaponImageFallback(composer) {
-  composer.addEventListener('error', event => {
-    if (event.target.matches?.('[data-combat-weapon-image]')) event.target.remove();
-  }, true);
-}
+export { renderWeaponLoadout, bindWeaponImageFallback } from './combat-weapon-loadout-view.js';
 
 function signedNumber(value) {
   const number = Number(value) || 0;
@@ -84,6 +70,7 @@ export function getActionGroups(actor = {}) {
   const groups = new Map();
   const sourceIndexes = new Map();
   (actor.actions || []).forEach(action => {
+    if (action.kind === 'equipment-switch' && actor.selectedAction?.kind !== 'equipment-switch') return;
     const { group, label } = describeAction(actor, action, sourceIndexes);
     if (!groups.has(group)) groups.set(group, []);
     groups.get(group).push({ action, label });
@@ -106,35 +93,6 @@ export function renderActionMetadata(actor = {}) {
   if (!actor.selectedAction) return '';
   const { group, minimumLevel } = getActionPresentation(actor);
   return `<small class="combat-action-meta"><span>${escapeHtml(group)}</span>${minimumLevel ? `<span>ab Stufe ${minimumLevel}</span>` : ''}<span>${escapeHtml(activationLabel(actor.selectedAction?.activationType))}</span></small>`;
-}
-
-function renderWeaponSlot(weapon, { activeWeaponId, pendingWeaponId, activeActionId }) {
-  const active = String(weapon.id || '') === activeWeaponId;
-  const pending = !active && String(weapon.id || '') === pendingWeaponId;
-  const state = active ? 'active' : (pending ? 'pending' : 'stowed');
-  const stateLabel = active ? (pendingWeaponId ? 'Aktiv · Wechsel aufheben' : 'Aktiv geführt')
-    : (pending ? 'Vorgemerkt · Wechsel aufheben' : 'Wechseln · 1 Bonusaktion');
-  const actionId = active || pending ? activeActionId : `equip:${weapon.id}`;
-  const image = weaponImage(weapon.image);
-  return `<button type="button" class="combat-weapon-slot" data-state="${state}" data-weapon-id="${escapeHtml(weapon.id)}" data-combat-controller-action="select-weapon" data-combat-action-id="${escapeHtml(actionId)}" aria-pressed="${active}" aria-label="${escapeHtml(`${weapon.name}: ${stateLabel}`)}" title="${escapeHtml(`${weapon.name} · ${stateLabel}`)}">
-    <span class="combat-weapon-slot-icon" aria-hidden="true"><span>${escapeHtml(WEAPON_GLYPHS[weapon.weaponType] || WEAPON_GLYPHS.other)}</span>${image ? `<img src="${image}" data-combat-weapon-image alt="" decoding="async">` : ''}</span>
-    <span class="combat-weapon-slot-copy"><strong>${escapeHtml(weapon.name)}</strong><small>${escapeHtml(stateLabel)}</small></span>
-  </button>`;
-}
-
-export function renderWeaponLoadout(actor = {}) {
-  const weapons = (Array.isArray(actor.weapons) ? actor.weapons : []).filter(weapon => weapon?.name);
-  if (!weapons.length || !(actor.actions || []).some(action => action.kind === 'equipment-switch')) return '';
-  const activeWeaponId = String(actor.activeWeaponId || weapons.find(weapon => weapon.equipped)?.id || weapons[0]?.id || '');
-  const pendingWeaponId = actor.selectedAction?.kind === 'equipment-switch' ? String(actor.selectedAction.equipmentSwitchTargetId || '') : '';
-  const activeActionId = actor.actions?.find(action => action.kind === 'weapon' && String(action.sourceId || '') === activeWeaponId)?.id
-    || actor.actions?.find(action => action.compatible && action.kind !== 'equipment-switch')?.id || '';
-  const context = { activeWeaponId, pendingWeaponId, activeActionId };
-  const active = weapons.find(weapon => String(weapon.id) === activeWeaponId);
-  return `<section class="combat-weapon-loadout" aria-label="Waffenführung">
-    <div class="combat-weapon-active"><span class="combat-field-caption">Geführte Waffe</span>${active ? renderWeaponSlot(active, context) : ''}</div>
-    <div class="combat-weapon-alternatives"><span class="combat-field-caption">Waffenwechsel <small>· 1 Bonusaktion</small></span><div class="combat-weapon-slots">${weapons.filter(weapon => weapon !== active).map(weapon => renderWeaponSlot(weapon, context)).join('')}</div></div>
-  </section>`;
 }
 
 export function renderActionDetails(actor = {}, { open = false } = {}) {
@@ -165,10 +123,15 @@ export function renderCombatValueStrip(actor = {}) {
     return '<p class="combat-action-notice">Kein Angriffswurf. Die Waffe wird beim Eintragen gewechselt.</p>';
   }
   const stats = getCombatDisplayStats(actor);
-  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, actor.weapon?.damageType || '')}</div>`;
+  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, actor.weapon?.damageType || '')}${renderDamageAverage(actor)}</div>`;
+}
+
+function renderDamageAverage(actor) {
+  const average = estimateCombatDamage(actor);
+  return average == null ? '' : `<div class="combat-damage-average" title="Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.">${renderValue('Ø Schaden', average.toLocaleString('de-DE', { maximumFractionDigits: 2 }), 'Normaler Haupttreffer · vor Abwehr')}</div>`;
 }
 
 export function renderMagicValueStrip(actor = {}) {
   const stats = getMagicDisplayStats(actor);
-  return `<div class="combat-action-values combat-action-values--magic" aria-label="Zauberwerte">${renderValue('Zauber-SG', stats.saveDc)}${renderValue('Zauber-Treffer', signedNumber(stats.spellAttack))}${renderValue('Auflösung', stats.resolutionLabel, stats.cantrip ? 'Zaubertrick' : stats.spellLevelLabel)}</div>`;
+  return `<div class="combat-action-values combat-action-values--magic" aria-label="Zauberwerte">${renderValue('Zauber-SG', stats.saveDc)}${renderValue('Zauber-Treffer', signedNumber(stats.spellAttack))}${renderValue('Auflösung', stats.resolutionLabel, stats.cantrip ? 'Zaubertrick' : stats.spellLevelLabel)}${renderDamageAverage(actor)}</div>`;
 }

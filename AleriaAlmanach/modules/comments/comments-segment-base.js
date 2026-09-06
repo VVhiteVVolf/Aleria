@@ -73,6 +73,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
       : 'normal',
+    combatLoadout: usesCombatResolution ? (combatSettings?.loadout || combatSettings?.combatLoadout || combatSettings?.storedCombatAction?.loadout || null) : null,
     combatWeaponGrip: usesCombatResolution && String(
       combatSettings?.weaponGrip
       || combatSettings?.combatWeaponGrip

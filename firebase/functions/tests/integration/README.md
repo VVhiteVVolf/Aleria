@@ -25,6 +25,8 @@ Die Integrationstests laufen bewusst separat vom normalen `npm test`. Sie prüfe
 
 Die beiden Befehle dürfen nicht gleichzeitig laufen, weil sie dieselbe wegwerfbare Demo-Datenbank verwenden. Innerhalb von `test:combat-integration` erzwingt `--test-concurrency=1` die getrennte Ausführung der Testdateien.
 
+`combat-loadout.integration.mjs` prüft zusätzlich kostenlose Startausrüstung, zwei aktive Waffen, kostenpflichtige Wechsel im selben Angriffsabschnitt, Rücknahme, manipulierte Ausrüstungsangaben und einmalige Kosten bei mehreren Zielen. Temporäre Fähigkeiten entstehen nur in der lokalen Testdatenbank.
+
 `combat-test-actions.mjs` verwendet dieselbe Auflösung und Regelhäufigkeit wie die Vorschau; `combat-test-context.mjs` verwendet dieselbe Komprimierung der Mechanikdaten wie der Client. `combat-party-context.mjs` verwaltet Gruppen und prüft nach jeder Speicherung Vorschau, Serverergebnis, Szenen-Replay und persistente TP. `combat-party-simulation.mjs` enthält Szenarien und die begrenzte automatische Zugstrategie.
 
 Mit `COMBAT_PARTY_REPORT=1` wird `combat-party-results.json` nach dem Simulationslauf erneuert. Darin stehen Würfelfolge, Runden, Sieger, Endzustände und die einzelnen Zielauswertungen. Die Einordnung des geprüften Standes steht im [Kampfprüfbericht](COMBAT_PARTY_REPORT.md).

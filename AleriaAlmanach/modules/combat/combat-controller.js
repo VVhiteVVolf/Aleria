@@ -1,3 +1,6 @@
+import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js';
+import { estimateCombatHitChance } from './combat-action-estimates.js';
+import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
 import { mountCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260906-effect-rolls-v1';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260905-resource-balance-v2';
@@ -14,6 +17,7 @@ import {
   getResolutionActorConcentrationState,
   getResolutionActorConditionState,
   getResolutionActorEquippedWeaponState,
+  getResolutionActorLoadoutState,
   getResolutionActorHitPointState,
   getResolutionActorInventoryState,
   getResolutionActorResourceState,
@@ -164,12 +168,12 @@ function relationMatchesRule(rule, relation) {
   return rule.sourceRelation === 'any' || rule.sourceRelation === relation;
 }
 
-function buildCombatRuleOptions({ characters, actorCharacter, actor, targetCharacter, segment, storedStates, recoveryDayKey } = {}) {
+function buildCombatRuleOptions({ characters, actorCharacter, actor, targetCharacter, segment, storedStates, recoveryDayKey, profileOverrides } = {}) {
   if (!actorCharacter || !targetCharacter) return [];
   const selections = Array.isArray(segment?.combatRuleSelections) ? segment.combatRuleSelections : [];
   const actionKind = String(actor?.profileActionKind || 'weapon');
   return characters.filter(hasStoredCombatRules).flatMap(character => {
-    const source = resolveActorProfile(character, {
+    const source = profileOverrides?.get(String(character.id)) || resolveActorProfile(character, {
       actorId: character.id,
       storedStates,
       recoveryDayKey
@@ -203,7 +207,7 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
   });
 }
 
-function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment, stateContext } = {}) {
+function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment, stateContext, profileOverrides } = {}) {
   const selections = Array.isArray(segment?.combatRuleSelections) ? segment.combatRuleSelections : [];
   const selectedByActor = new Map();
   selections.forEach(selection => {
@@ -216,7 +220,7 @@ function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, s
       || String(character.id) === String(actorCharacter.id)
       || String(character.id) === String(targetCharacter.id))
     .map(character => {
-      const source = resolveActorProfile(character, {
+      const source = profileOverrides?.get(String(character.id)) || resolveActorProfile(character, {
         actorId: character.id,
         storedStates: stateContext.storedStates,
         workingStates: stateContext.workingStates,
@@ -248,7 +252,9 @@ function resolveActorProfile(character, options = {}) {
   // Ein späterer "Ausrüstung wechseln"-Kommentar bestimmt, welche Waffe/welches Instrument
   // ab jetzt als aktiv gilt - muss vor der Profilauflösung angewendet werden, weil aktiveWeapon
   // und Technik-Kompatibilität bereits innerhalb von profileResolver.resolve entschieden werden.
-  const effectiveCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId);
+  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId);
+  const prepared = prepareCombatEquipment(equippedCharacter, options.loadout, { free: options.freeEquipment });
+  const effectiveCharacter = prepared.character;
   const profile = resolveCachedCombatProfile(effectiveCharacter, {
     actionId: options.actionId,
     segmentKind: options.segmentKind,
@@ -265,13 +271,14 @@ function resolveActorProfile(character, options = {}) {
   const effectiveState = state || shouldResetCommentResources || options.recoveryDayKey
     ? { ...(state || {}), resources: effectiveResources }
     : null;
-  return overlayCombatHitPointState(profile, effectiveState);
+  return reserveCombatEquipment(overlayCombatHitPointState(profile, effectiveState), prepared.preparation);
 }
 
 function resolveTargetPickerProfile(character, options = {}) {
   const actorId = String(options.actorId || character?.id || '');
-  const state = options.storedStates?.get(actorId) || null;
-  return overlayCombatHitPointState(resolveCachedCombatTarget(character), state);
+  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
+  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId);
+  return overlayCombatHitPointState(resolveCachedCombatTarget(equippedCharacter), state);
 }
 
 function actionAllowsSelfTarget(actor) {
@@ -313,6 +320,9 @@ function mountComposers(context = {}) {
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
   const composerStates = new Map();
+  const actorsWithPosts = getActorsWithCombatPosts(cachedComments);
+  const previewRulePeriods = { comment: `draft:${context.threadId || ''}`, scene: context.threadId || '', day: recoveryDayKey };
+  const previewFrequencyKeys = deriveCombatRuleFrequencyKeys(cachedComments, previewRulePeriods);
   const composerResourceResets = new Set();
   const targetCharacters = characters;
   const targetProfiles = new Map(targetCharacters.map(character => [
@@ -327,6 +337,8 @@ function mountComposers(context = {}) {
     const actorCharacter = characters.find(character => String(character.id || '') === actorId) || null;
     const actor = actorCharacter ? resolveActorProfile(actorCharacter, {
       actionId: segment.combatActionId,
+      loadout: segment.combatLoadout,
+      freeEquipment: !actorsWithPosts.has(actorId),
       actorId,
       storedStates,
       workingStates: composerStates,
@@ -338,6 +350,11 @@ function mountComposers(context = {}) {
       castLevel: segment.combatCastLevel,
       recoveryDayKey
     }) : null;
+    if (actor?.equipmentPreparation && !actor.equipmentPreparation.error) {
+      const previous = composerStates.get(actorId) || storedStates.get(actorId) || {};
+      composerStates.set(actorId, { ...previous, resources: actor.resources,
+        equippedWeaponId: actor.equipmentPreparation.after.rightWeaponId, offHandWeaponId: actor.equipmentPreparation.after.leftWeaponId });
+    }
     const actorValidation = actor ? profileResolver.validateActor(actor) : { ready: false, missingFields: [] };
     const abilityReservation = actor
       ? applyCombatAbilityUse(actor.abilities, actor.profileActionId, recoveryDayKey)
@@ -378,9 +395,25 @@ function mountComposers(context = {}) {
       segment.combatTargetId = actorId;
       segment.combatTargetIds = [actorId];
     }
+    const previewProfiles = new Map(targetProfiles);
+    for (const character of targetCharacters) {
+      if (composerStates.has(String(character.id))) previewProfiles.set(String(character.id), resolveTargetPickerProfile(character, {
+        storedStates, workingStates: composerStates
+      }));
+    }
+    if (actor) previewProfiles.set(actorId, actor);
     const targets = prioritizeCombatTargets(targetCharacters
       .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
-      .map(character => targetProfiles.get(String(character.id || '')))
+      .map(character => {
+        const target = previewProfiles.get(String(character.id || ''));
+        const sources = actor && target ? buildCombatRuleSources({ characters, actorCharacter, targetCharacter: character, segment,
+          stateContext: { storedStates, workingStates: composerStates, recoveryDayKey }, profileOverrides: previewProfiles }) : [];
+        return target ? { ...target, hitChance: estimateCombatHitChance(actor, target, {
+          relationship: actorCharacter ? getCombatRelationship(actorCharacter, character) : 'enemy',
+          distanceMeters: Number(segment.combatDistanceMeters) || 0, ruleSources: sources,
+          rulePeriods: previewRulePeriods, usedRuleFrequencyKeys: previewFrequencyKeys
+        }) } : null;
+      })
       .filter(Boolean), activeEncounterPartyMap);
     const targetCharacter = characters.find(character => String(character.id || '') === String(segment.combatTargetId || '')) || null;
     const ruleOptions = buildCombatRuleOptions({
@@ -390,20 +423,23 @@ function mountComposers(context = {}) {
       targetCharacter,
       segment,
       storedStates,
-      recoveryDayKey
+      recoveryDayKey,
+      profileOverrides: previewProfiles
     });
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
-    const previewTarget = targetCharacter ? resolveActorProfile(targetCharacter, { storedStates, recoveryDayKey }) : {};
-    const previewRules = actorCharacter && targetCharacter ? buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment, stateContext: { storedStates, recoveryDayKey } }) : undefined;
+    const previewTarget = targetCharacter ? previewProfiles.get(String(targetCharacter.id)) : {};
+    const previewRules = actorCharacter && targetCharacter ? buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment,
+      stateContext: { storedStates, workingStates: composerStates, recoveryDayKey }, profileOverrides: previewProfiles }) : undefined;
     const rollPreview = actor ? getCombatRollContext(actor, previewTarget, {
       relationship: targetCharacter ? getCombatRelationship(actorCharacter, targetCharacter) : 'enemy',
       distanceMeters: Number(segment.combatDistanceMeters) || 0, ruleSources: previewRules,
-      usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(cachedComments)
+      usedRuleFrequencyKeys: previewFrequencyKeys, rulePeriods: previewRulePeriods
     }) : null;
     mountCombatComposer({
       card,
       segment: { ...segment, kind: getEffectiveCombatSegmentKind(segment) },
       actor,
+      freeEquipment: !actorsWithPosts.has(actorId),
       rollModes: rollPreview ? [rollPreview.profileRollModes, rollPreview.auraRollMode, ...rollPreview.preRollApplications.map(application => application.effects?.rollMode)] : [],
       targets,
       ruleOptions,
@@ -416,6 +452,36 @@ function mountComposers(context = {}) {
       manaSubstitutePaymentAvailable
     });
   });
+}
+
+function updateEquipmentSelection(segmentId, field, value, composer) {
+  const segment = latestComposerContext?.segments?.find(item => String(item.id) === String(segmentId));
+  if (!segment) return;
+  const actorId = String(segment.actorId || latestComposerContext.selectedCharacterId || '');
+  const character = (latestComposerContext.sceneActors || []).find(item => String(item.id) === actorId) || getCharacterById(actorId);
+  if (!character) return;
+  const weapons = character.combatProfile?.weapons || [];
+  const view = composer.querySelector('[data-current-right]');
+  let rightWeaponId = view?.dataset.currentRight || '';
+  let leftWeaponId = view?.dataset.currentLeft || '';
+  if (field === 'right') {
+    rightWeaponId = value;
+    const right = weapons.find(weapon => weapon.id === rightWeaponId);
+    if (isPairedCombatWeapon(right || {})) leftWeaponId = rightWeaponId;
+    else if (!canUseCombatOffHand(right || {}) || rightWeaponId === leftWeaponId) leftWeaponId = '';
+  }
+  if (field === 'left') leftWeaponId = value;
+  if (field === 'dual') {
+    const right = weapons.find(weapon => weapon.id === rightWeaponId);
+    leftWeaponId = value ? (isPairedCombatWeapon(right || {}) ? rightWeaponId
+      : weapons.find(weapon => weapon.id !== rightWeaponId && canUseCombatOffHand(weapon))?.id || '') : '';
+  }
+  segment.combatLoadout = field === 'cancel' ? null : { rightWeaponId, leftWeaponId };
+  segment.combatActionId = '';
+  segment.combatWeaponGrip = 'one-handed';
+  segment.combatPaymentConfirmed = false;
+  globalThis.persistCommentDraft?.();
+  mountComposers(latestComposerContext);
 }
 
 function updateSegmentSetting(segmentId, field, value) {
@@ -456,7 +522,7 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatPaymentConfirmed = false;
   }
   globalThis.persistCommentDraft?.();
-  if (['actionId', 'paymentMode', 'weaponGrip', 'castLevel', 'targetId', 'targetIds'].includes(field)) mountComposers(latestComposerContext || {});
+  if (['actionId', 'paymentMode', 'weaponGrip', 'castLevel', 'targetId', 'targetIds', 'distanceMeters'].includes(field)) mountComposers(latestComposerContext || {});
 }
 
 function setSegmentPaymentConfirmation(segmentId, confirmed) {
@@ -569,6 +635,8 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
   if (!actorCharacter) throw new Error('Die handelnde Figur dieser Kampfbeschreibung ist nicht mehr verfügbar.');
   const actor = resolveActorProfile(actorCharacter, {
     actionId: segment.combatActionId,
+    loadout: resolutionOptions.primary === false ? null : segment.combatLoadout,
+    freeEquipment: !stateContext.actorsWithPosts?.has(actorId),
     actorId,
     storedStates: stateContext.storedStates,
     workingStates: stateContext.workingStates,
@@ -682,7 +750,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
       ...(nextActorInventory ? { inventory: nextActorInventory } : {}),
       ...(nextActorHitPoints || {}),
       ...(nextActorConditions ? { temporaryConditions: nextActorConditions } : {}),
-      ...(nextActorEquippedWeaponId ? { equippedWeaponId: nextActorEquippedWeaponId } : {}),
+      ...getResolutionActorLoadoutState(resolution),
       ...(resolution.actionType !== 'channeling' && abilityUse.changed ? { abilities: abilityUse.abilities } : {}),
       ...(nextActorChanneling !== undefined ? { channeling: nextActorChanneling } : {}),
       ...(nextActorConcentration !== undefined ? { concentration: nextActorConcentration } : {})
@@ -735,6 +803,7 @@ async function handleSubmission(submission = {}) {
     workingStates: new Map(),
     commentResourceResetActors: new Set(),
     recoveryDayKey: getCombatRecoveryDayKey(submission.threadId || ''),
+    actorsWithPosts: getActorsWithCombatPosts(globalThis.getCachedCommentsForThread?.(submission.threadId || submission.entryId || '') || []),
     rulePeriods: {
       comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
       scene: String(submission.threadId || ''),
@@ -780,6 +849,7 @@ async function handleSubmission(submission = {}) {
           profileActionId: combatResolution.profileActionId || storedSegment.combatActionId || '',
           profileActionKind: combatResolution.profileActionKind || '',
           rollMode: combatResolution.attack.rollMode,
+          loadout: normalizeCombatLoadout(storedSegment.combatLoadout),
           weaponGrip: combatResolution.weaponGrip || storedSegment.combatWeaponGrip || 'one-handed',
           castLevel: combatResolution.castLevel ?? storedSegment.combatCastLevel ?? 0,
           paymentMode: storedSegment.combatPaymentMode || 'standard',
@@ -810,6 +880,13 @@ async function handleSubmission(submission = {}) {
 }
 
 document.addEventListener('change', event => {
+  const loadoutField = event.target?.closest?.('[data-combat-loadout]');
+  if (loadoutField) {
+    const composer = loadoutField.closest('[data-combat-composer]');
+    updateEquipmentSelection(composer?.dataset.combatSegmentId, loadoutField.dataset.combatLoadout,
+      loadoutField.type === 'checkbox' ? loadoutField.checked : loadoutField.value, composer);
+    return;
+  }
   const ruleField = event.target?.closest?.('[data-combat-rule-toggle], [data-combat-rule-distance]');
   if (ruleField) {
     const composer = ruleField.closest('[data-combat-composer]');
@@ -830,7 +907,8 @@ document.addEventListener('click', event => {
   const composer = trigger.closest('[data-combat-composer]');
   const segmentId = composer?.dataset.combatSegmentId || '';
   if (trigger.dataset.combatControllerAction === 'choose-payment') chooseSegmentPayment(segmentId, trigger.dataset.paymentMode);
-  if (trigger.dataset.combatControllerAction === 'select-weapon') updateSegmentSetting(segmentId, 'actionId', trigger.dataset.combatActionId);
+  if (trigger.dataset.combatControllerAction === 'select-weapon') updateEquipmentSelection(segmentId, 'right', trigger.dataset.weaponId, composer);
+  if (trigger.dataset.combatControllerAction === 'cancel-equipment') updateEquipmentSelection(segmentId, 'cancel', '', composer);
   if (trigger.dataset.combatControllerAction === 'confirm-payment') setSegmentPaymentConfirmation(segmentId, true);
   if (trigger.dataset.combatControllerAction === 'release-payment') setSegmentPaymentConfirmation(segmentId, false);
 });

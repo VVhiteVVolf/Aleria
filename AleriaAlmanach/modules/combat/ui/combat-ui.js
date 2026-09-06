@@ -34,7 +34,7 @@ function renderRuleOption(option = {}) {
   </label>`;
 }
 
-export function mountCombatComposer({ card, segment, actor, rollModes = null, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
+export function mountCombatComposer({ card, segment, actor, freeEquipment = false, rollModes = null, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
   if (!card) return;
   const previousComposer = card.querySelector('[data-combat-composer]');
   const viewState = captureComposerViewState(previousComposer);
@@ -114,7 +114,7 @@ export function mountCombatComposer({ card, segment, actor, rollModes = null, ta
       <div class="combat-composer-heading"><span aria-hidden="true"><img src="./public/assets/combat-profile-icons/${composerIcon}" alt=""></span><b>${composerLabel}</b></div>
       <div class="combat-composer-profile"><strong>${escapeHtml(actor.name)}</strong><small>${composerHint}</small></div>
     </div>
-    ${magic ? '' : renderWeaponLoadout(actor)}
+    ${magic ? '' : renderWeaponLoadout(actor, { freeEquipment, requestedLoadout: segment.combatLoadout })}
     <div class="combat-composer-fields combat-composer-fields--${magic ? 'magic' : 'martial'}">
       <div class="combat-action-field"><span class="combat-field-caption">${actionFieldLabel}</span>
         <select data-combat-input="actionId" aria-label="${actionFieldLabel}">

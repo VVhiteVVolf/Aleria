@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
@@ -927,7 +928,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       damageBonus: normalizeNumber(combat.damageBonus ?? source.baseDamageBonus, 0, -99, 99),
       passivePerceptionBonus: normalizeNumber(combat.passivePerceptionBonus, 0, -99, 99),
       canActAtZeroHitPoints: normalizeBoolean(combat.canActAtZeroHitPoints),
-      mounted: normalizeBoolean(combat.mounted)
+      mounted: normalizeBoolean(combat.mounted),
+      ...(combat.offHandWeaponId != null ? { offHandWeaponId: String(combat.offHandWeaponId).trim().slice(0, 180) } : {})
     },
     savingThrows: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>
       sanitizeSavingThrow(sourceSaves.get(definition.key), definition)),
@@ -1117,7 +1119,8 @@ export function getArmorClass(profile = {}) {
   if (normalized.armorClass.override != null && normalized.armorClass.overrideMode === 'total') {
     return normalized.armorClass.override;
   }
-  const equipped = normalized.armorItems.filter(item => item.equipped);
+  const dualWield = getCombatWeaponLoadout(normalized).dualWield;
+  const equipped = normalized.armorItems.filter(item => item.equipped && (!dualWield || item.kind !== 'shield'));
   const bodyArmor = equipped
     .filter(item => item.kind === 'armor' && item.baseArmorClass != null)
     .sort((a, b) => b.baseArmorClass - a.baseArmorClass)[0] || null;
@@ -1134,7 +1137,7 @@ export function getArmorClass(profile = {}) {
   return base
     + getAppliedDexterityModifier(dexterityModifier, dexterityMode, dexterityCap)
     + equipmentBonus
-    + normalized.armorClass.shieldBonus
+    + (dualWield ? 0 : normalized.armorClass.shieldBonus)
     + normalized.armorClass.magicModifier
     + normalized.armorClass.otherModifier
     + sumMechanicalModifier(normalized, 'armorClass');

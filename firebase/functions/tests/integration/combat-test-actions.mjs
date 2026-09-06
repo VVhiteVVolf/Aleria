@@ -1,3 +1,5 @@
+import { prepareCombatEquipment, reserveCombatEquipment } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-preparation.js';
+import { getActorsWithCombatPosts } from '../../../../AleriaAlmanach/modules/combat/combat-weapon-loadout.js';
 import { randomUUID } from 'node:crypto';
 import { combatCommentInternals } from '../../src/mechanics/commit-combat-comment.js';
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
@@ -34,14 +36,14 @@ export class CheckupDice {
 
 export async function prepareTestAction({ entryId, actorRecord, targetRecords, comments, actionId = '', kind = 'speech', natural = 15,
   dice = new CheckupDice(natural), priorSegments = [], orderKey, paymentMode = 'standard', weaponGrip = 'one-handed', castLevel = 0,
-  distanceMeters = 1, text = 'Prüfangriff' }) {
+  distanceMeters = 1, loadout = null, text = 'Prüfangriff' }) {
   const selected = resolveCombatProfile(actorRecord, { actionId }).selectedAction;
   const segmentKind = selected?.segmentKinds?.[0] || 'combataction';
   const magic = ['spell', 'prayer', 'song'].includes(segmentKind);
   const bubbleKind = ['song', 'prayer'].includes(segmentKind) ? segmentKind : kind;
   const segment = { kind: bubbleKind, commentKind: bubbleKind, mechanicMode: magic ? 'magic' : 'combat', actorId: actorRecord.id, characterId: actorRecord.id,
     charName: actorRecord.name, sceneActorSourceId: actorRecord.sourceCreatureId || '', text, combatDistanceMeters: distanceMeters,
-    combatAction: { encounterId: getActiveCombatEncounter(comments)?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel } };
+    combatAction: { encounterId: getActiveCombatEncounter(comments)?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel, loadout } };
   const resolutions = [];
   const rulePeriods = { comment: 'pending', scene: entryId, day: `scene:${entryId}:day-1` };
   let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys([...comments, { commentSegments: priorSegments }]);
@@ -50,12 +52,14 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     const draft = { id: 'pending', commentSegments: [...priorSegments, partial] };
     const states = deriveCombatStateFromComments([...comments, draft], { commentId: 'pending', segmentIndex: priorSegments.length + 1 });
     const actorState = states.get(actorRecord.id);
-    const actorBase = resolveCombatProfile(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId), { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
+    const prepared = prepareCombatEquipment(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId, actorState?.offHandWeaponId), index === 0 ? loadout : null, { free: !getActorsWithCombatPosts(comments).has(String(actorRecord.id)) });
+    const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
     if (actionId && actorBase.profileActionId !== actionId) throw Error(`Die Testattacke ${actionId} ist nicht im Bogen von ${actorRecord.name} vorhanden.`);
-    const actor = overlayCombatHitPointState(actorBase, actorState);
+    let actor = overlayCombatHitPointState(actorBase, actorState);
     actor.resources = combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, `scene:${entryId}:day-1`);
+    actor = reserveCombatEquipment(actor, prepared.preparation);
     const targetState = states.get(targetRecord.id);
-    const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId)), targetState);
+    const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId, targetState?.offHandWeaponId)), targetState);
     const resolution = await new CombatResolutionService(dice).resolveAttack({ actor, target, description: text, rollMode: 'normal' }, {
       relationship: actorRecord.id === targetRecord.id ? 'self' : actorRecord.combatTeam && actorRecord.combatTeam === targetRecord.combatTeam ? 'ally' : 'enemy',
       distanceMeters, rulePeriods, usedRuleFrequencyKeys, startedAction: resolutions[0],

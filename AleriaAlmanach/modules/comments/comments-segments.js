@@ -85,6 +85,7 @@ function setCommentSegmentKind(id, kind) {
     segment.combatTargetId = '';
     segment.combatTargetIds = [];
     segment.combatActionId = '';
+    segment.combatLoadout = null;
     segment.combatCastLevel = 0;
     segment.combatRollMode = 'normal';
     segment.combatWeaponGrip = 'one-handed';
@@ -316,6 +317,7 @@ function buildCommentSegmentsForSave() {
         ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
           combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],
+          combatLoadout: segment.combatLoadout || null,
           combatActionId: String(segment.combatActionId || ''),
           combatCastLevel: Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',

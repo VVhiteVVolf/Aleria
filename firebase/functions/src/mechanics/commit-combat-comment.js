@@ -1,3 +1,5 @@
+import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
+import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
 import { randomUUID } from 'node:crypto';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
@@ -8,7 +10,7 @@ import { reconcileConcentrationConditions } from '../generated/combat/combat-con
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
-import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorEquippedWeaponState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
+import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorEquippedWeaponState, getResolutionActorLoadoutState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
 import { getActiveCombatPartyMap, getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 import { getEncounterActionValidationError } from '../generated/combat/combat-encounter-lifecycle.js';
@@ -137,7 +139,7 @@ function makeCharacter(record, persistence, actorId) {
 }
 
 function makeCharacterWithCombatState(record, persistence, actorId, state = null) {
-  return withEquippedCombatWeapon(makeCharacter(record, persistence, actorId), state?.equippedWeaponId);
+  return withEquippedCombatWeapon(makeCharacter(record, persistence, actorId), state?.equippedWeaponId, state?.offHandWeaponId);
 }
 
 function relationshipBetween(first = {}, second = {}) {
@@ -225,6 +227,7 @@ export const commitCombatComment = onCall({
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
     const encounter = getActiveCombatEncounter(trustedHistory);
+    const actorsWithPosts = getActorsWithCombatPosts(trustedHistory);
     for (const { segment, submitted } of entries) {
       const error = getEncounterActionValidationError({ ...segment.combatAction, actorId: submitted.actorId }, encounter);
       if (error) fail('failed-precondition', error);
@@ -335,7 +338,10 @@ export const commitCombatComment = onCall({
       const paymentMode = String(segment.combatAction?.paymentMode || 'standard');
       const actorState = workingStates.get(String(submitted.actorId));
       const targetState = workingStates.get(String(submitted.targetId));
-      const actorBase = resolveCombatProfile(makeCharacterWithCombatState(actorRecord, actorPersistence, submitted.actorId, actorState), {
+      const equippedCharacter = makeCharacterWithCombatState(actorRecord, actorPersistence, submitted.actorId, actorState);
+      const prepared = prepareCombatEquipment(equippedCharacter, primary ? segment.combatAction?.loadout : null, { free: !actorsWithPosts.has(String(submitted.actorId)) });
+      if (prepared.preparation?.error) fail('failed-precondition', prepared.preparation.error);
+      const actorBase = resolveCombatProfile(prepared.character, {
         actionId: String(segment.combatAction?.profileActionId || submitted.profileActionId || ''),
         segmentKind: getEffectiveCombatSegmentKind(segment),
         paymentMode,
@@ -344,10 +350,11 @@ export const commitCombatComment = onCall({
       });
       const targetBase = resolveCombatProfile(makeCharacterWithCombatState(targetRecord, targetPersistence, submitted.targetId, targetState));
       const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
-      const actor = applyStoredState(actorBase, {
+      const actor = reserveCombatEquipment(applyStoredState(actorBase, {
         ...(actorState || {}),
         resources: actorResources
-      });
+      }), prepared.preparation);
+      if (actor.equipmentPreparation?.error) fail('failed-precondition', actor.equipmentPreparation.error);
       const target = applyStoredState(targetBase, targetState);
       const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
       const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || (broadTargetEffect ? 20 : 1));
@@ -454,7 +461,7 @@ export const commitCombatComment = onCall({
         ...(actorNextInventory ? { inventory: actorNextInventory } : {}),
         ...(actorNextHitPoints || {}),
         ...(actorNextConditions ? { temporaryConditions: actorNextConditions } : {}),
-        ...(actorNextEquippedWeaponId ? { equippedWeaponId: actorNextEquippedWeaponId } : {}),
+        ...getResolutionActorLoadoutState(resolution),
         ...(abilityUse.changed ? { abilities: abilityUse.abilities } : {}),
         ...(actorChanneling !== undefined ? { channeling: actorChanneling } : {}),
         ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})

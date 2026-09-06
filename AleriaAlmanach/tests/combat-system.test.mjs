@@ -486,10 +486,10 @@ test('ein bestätigter Waffenwechsel wird als Zustand für folgende Kampfabschni
 
   const markup = combatUiInternals.renderWeaponLoadout(actor);
   assert.match(markup, /data-state="active"[^>]*data-weapon-id="sword"/);
-  assert.match(markup, /data-state="pending"[^>]*data-weapon-id="dagger"/);
-  assert.match(markup, /data-weapon-id="dagger"[^>]*data-combat-action-id="weapon:sword"/);
+  assert.match(markup, /data-state="stowed"[^>]*data-weapon-id="dagger"/);
+  assert.match(markup, /data-weapon-id="dagger"[^>]*data-combat-controller-action="select-weapon"/);
   assert.doesNotMatch(markup, /data-state="pending"[^>]*disabled/);
-  assert.match(markup, /Wechsel aufheben/);
+  assert.match(markup, /Waffenwechsel/);
   assert.match(markup, /src="https:\/\/example\.com\/sword\.png"/);
 });
 
@@ -1449,7 +1449,7 @@ test('Ausrüstung wechseln kostet eine Bonusaktion, würfelt nichts und markiert
   const result = await new CombatResolutionService({}).resolveAttack({ actor, target });
   assert.equal(result.actionType, 'equipment-switch');
   assert.equal(result.attack.hit, true);
-  assert.deepEqual(result.actorEquippedWeaponSnapshot, { before: 'sword', after: 'lute' });
+  assert.deepEqual(result.actorEquippedWeaponSnapshot, { before: 'sword', after: 'lute', offHandBefore: '', offHandAfter: '' });
 });
 
 test('Ein Ausrüstungswechsel-Kommentar bestimmt die aktive Waffe für spätere Kommentare in der Historie', () => {

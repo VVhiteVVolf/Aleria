@@ -28,18 +28,18 @@ test('Guinevere ist eine Stufe-5-Helwyr mit ihrem regulären Klassenarsenal', as
   assert.equal(profile.weapons.some(weapon => /fire|signal|crippling/.test(weapon.id)), false);
 });
 
-test('Guineveres drei Attackenslots verwenden die Langbogenfolge des Jungdrachens', async () => {
+test('Guineveres drei Attackenslots decken Bogen, Schwert und Doppelklinge des Jungdrachens ab', async () => {
   const { combatProfile } = await loadGuinevere();
   assert.deepEqual(combatProfile.techniques.map(technique => technique.name), [
     'Federblick',
-    'Nagel des Jungdrachens',
-    'Weite Schuppe'
+    'Waldwacht',
+    'Schattenpaar'
   ]);
   assert.deepEqual(combatProfile.classTraining.techniqueSelections.map(selection => selection.slotId), [
     'foundation-01', 'foundation-02', 'foundation-03'
   ]);
   assert.equal(combatProfile.techniques.every(technique => technique.combatStyleId === 'drachentanz'), true);
-  assert.equal(combatProfile.techniques.every(technique => technique.cenyrTraining.classWeaponProfiles.helwyr.includes('longbow')), true);
+  assert.deepEqual(combatProfile.techniques.map(technique => technique.cenyrTraining.branchId), ['helwyr-longbow', 'helwyr-classic-sword', 'helwyr-dual-blades']);
 });
 
 test('Federblick verbindet den Helwyr-Fernkampfbonus mit dem Angriff der Form', async () => {

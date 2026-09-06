@@ -20,6 +20,7 @@ import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-techniq
 import { getTechniqueDamageScaling, resolveTechniqueDamageFormula } from './combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
+import { getCombatWeaponLoadout, getCombatTechniqueWeapon } from './combat-weapon-loadout.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -47,7 +48,8 @@ function buildCombatProfileActions(character, profile) {
     || null;
   const weaponKind = character.entityType === 'creature' ? 'Angriff' : 'Waffe';
   const usesWeaponLoadout = character.entityType !== 'creature';
-  const activeWeapon = getActiveCombatWeapon(profile.weapons);
+  const loadout = getCombatWeaponLoadout(profile);
+  const activeWeapon = getCombatTechniqueWeapon(loadout);
   const resourceCost = (resourceId, name, amount) => {
     const resource = profile.resources.find(item => item.id === resourceId);
     return amount > 0 && resourceId ? {
@@ -63,7 +65,7 @@ function buildCombatProfileActions(character, profile) {
     .map(weapon => {
       const classModifiers = getCenyrClassActionModifiers(profile, { weapon });
       const equipped = weapon.id === activeWeapon?.id;
-      const available = !usesWeaponLoadout || equipped;
+      const available = !usesWeaponLoadout || equipped || weapon.id === loadout.leftWeaponId;
       return {
       id: `weapon:${weapon.id}`,
       sourceId: weapon.id,
@@ -351,6 +353,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
   const selectedAction = applySpellCastLevel(selectedActionBase, profile, options.castLevel);
   const requestedWeaponGrip = String(options.weaponGrip || '').trim().toLowerCase();
   const supportsVersatileGrip = ['weapon', 'technique'].includes(selectedAction?.kind)
+    && !getCombatWeaponLoadout(profile).dualWield
     && Boolean(String(selectedAction?.weapon?.versatileDamageFormula || '').trim());
   const weaponGrip = supportsVersatileGrip && requestedWeaponGrip === 'two-handed'
     ? 'two-handed'
@@ -381,6 +384,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
       : { items: [] },
     weapon: { ...(resolvedWeapon || {}) },
     activeWeaponId: String(getActiveCombatWeapon(profile.weapons)?.id || ''),
+    weaponLoadout: getCombatWeaponLoadout(profile),
     armor: { ...profile.armor },
     attackModifier: selectedAction?.attackModifier ?? profile.attackModifier,
     damageModifier: selectedAction?.damageModifier ?? profile.damageModifier,
@@ -425,12 +429,14 @@ export function resolveCombatTargetProfile(character = {}) {
     ...profile,
     characterId: String(effectiveCharacter.id || ''),
     name: String(effectiveCharacter.name || 'Unbekannt'),
-    portrait: combatPortrait(effectiveCharacter)
+    portrait: combatPortrait(effectiveCharacter),
+    persistence: resolveCombatPersistence(effectiveCharacter)
   };
 }
 
 export function getCombatActorProblems(profile = {}) {
   const problems = [];
+  if (profile.equipmentPreparation?.error) problems.push('equipmentPreparation');
   if (!profile.characterId) problems.push('characterId');
   if (Number(profile.currentHitPoints) <= 0 && profile.combat?.canActAtZeroHitPoints !== true) problems.push('incapacitated');
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
@@ -468,6 +474,7 @@ export function validateCombatActorProfile(profile = {}, { startedAction = null 
 
 export function getCombatActorValidationMessage(profile = {}, validation = validateCombatActorProfile(profile)) {
   if (validation.ready) return '';
+  if (validation.missingFields.includes('equipmentPreparation')) return profile.equipmentPreparation.error;
   if (validation.missingFields.includes('incapacitated')) {
     return `${profile.name || 'Die handelnde Figur'} ist bei 0 Trefferpunkten handlungsunfähig.`;
   }
