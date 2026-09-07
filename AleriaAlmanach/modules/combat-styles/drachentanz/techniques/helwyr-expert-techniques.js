@@ -84,15 +84,8 @@ const PATHS = Object.freeze([
     { level: 16, slug: 'mittlere-distanz', name: 'Meisterschaft der mittleren Distanz', branch: 'flexible', description: 'Der Helwyr hält das Ziel genau zwischen Angriff und Gegenwehr.', effect: 'Verursacht Technikschaden und senkt die Zielverteidigung um 1.', targetDefenseModifier: -1 },
     { level: 18, slug: 'jagdmeisterkreis', name: 'Jagdmeisterkreis', branch: 'flexible', description: 'Drei Gegner werden mit der jeweils passenden Linie unter Druck gesetzt.', effect: 'Trifft bis zu drei Gegner mit je Technikschaden und gewährt +2 Rüstungsklasse.', maximumTargets: 3, armorClass: 2, conditionName: 'Jagdmeisterkreis' },
     { level: 20, slug: 'vollendete-vierfalt', name: 'Vollendete Vierfalt', branch: 'flexible', description: 'Der Meister kann jede seiner vier Waffenfolgen ohne Verlust der Form vollenden.', effect: 'Verursacht Technikschaden, erhält +2 Angriff, gewährt +2 Rüstungsklasse und erlaubt 4 Meter Eigenbewegung.', attackBonus: 2, armorClass: 2, move: 4, conditionName: 'Vollendete Vierfalt' }
-  ] },
-  { formId: F.zorniger, slug: 'zorniger', entries: [
-    { level: 9, slug: 'hetzschuss', name: 'Hetzschuss', branch: 'shortbow', description: 'Pfeil folgt auf Pfeil, bevor der Schütze seinen Stand vollständig findet.', effect: 'Verursacht Technikschaden und erlaubt 3 Meter Eigenbewegung; anschließend −1 Rüstungsklasse.', move: 3, armorClass: -1, conditionName: 'Offene Hetzstellung' },
-    { level: 11, slug: 'zwillingszorn', name: 'Zwillingszorn', branch: 'dual', description: 'Beide Klingen schlagen ohne geordneten Wechsel auf das Ziel ein.', effect: 'Verursacht Technikschaden und erhält +1 Angriff; anschließend −1 Rüstungsklasse.', attackBonus: 1, armorClass: -1, conditionName: 'Offener Zwillingszorn' },
-    { level: 13, slug: 'roter-pfeil', name: 'Roter Pfeil', branch: 'longbow', description: 'Aura und Zorn werden in einen einzigen harten Schuss gelegt.', effect: 'Verursacht Technikschaden und senkt die Zielverteidigung um 1; anschließend −1 Rüstungsklasse.', targetDefenseModifier: -1, armorClass: -1, conditionName: 'Offene Zorneshaltung' },
-    { level: 16, slug: 'rasende-jagd', name: 'Rasende Jagd', branch: 'flexible', description: 'Der Helwyr jagt mehrere Ziele ohne festen Rhythmus durch das Feld.', effect: 'Trifft bis zu drei Gegner mit je Technikschaden; anschließend −2 Rüstungsklasse.', maximumTargets: 3, armorClass: -2, conditionName: 'Rasende Jagd' },
-    { level: 18, slug: 'schwarzer-federsturm', name: 'Schwarzer Federsturm', branch: 'shortbow', description: 'Ein dichter Pfeilsturm erzwingt Bewegung, bis die Deckung auseinanderfällt.', effect: 'Trifft bis zu vier Gegner mit je Technikschaden, senkt ihre Zielverteidigung um 1 und die eigene Rüstungsklasse um 2.', maximumTargets: 4, targetDefenseModifier: -1, armorClass: -2, conditionName: 'Ungedeckter Federsturm' },
-    { level: 20, slug: 'letzte-jagd-des-zorndrachen', name: 'Letzte Jagd des Zorndrachen', branch: 'flexible', description: 'Der Meister entlädt Pfeile und Klingen in einer letzten ungebändigten Jagd.', effect: 'Trifft bis zu vier Gegner mit je Technikschaden, erhält +2 Angriff und verliert 3 Rüstungsklasse.', maximumTargets: 4, attackBonus: 2, armorClass: -3, conditionName: 'Letzte offene Jagd' }
   ] }
 ]);
 
-export const HELWYR_EXPERT_TECHNIQUES = Object.freeze(PATHS.flatMap(path => path.entries.map(entry => helwyr(path.formId, path.slug, entry))));
+export const HELWYR_EXPERT_TECHNIQUES = Object.freeze(PATHS
+  .flatMap(path => path.entries.map(entry => helwyr(path.formId, path.slug, entry))));

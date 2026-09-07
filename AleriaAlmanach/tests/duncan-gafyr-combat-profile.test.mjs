@@ -23,7 +23,7 @@ test('Duncan bleibt ein vollständig ausgebauter Stufe-20-Teulu', async () => {
   assert.equal(profile.weapon.id, 'duncan-gafyr-master-sword');
 });
 
-test('Duncan beherrscht Grundform, Duellantenform und alle fünf Expertenpfade über das Klassenmodell', async () => {
+test('Duncan beherrscht Grundform, freie Vertiefung und fünf gewählte Expertenpfade über das Klassenmodell', async () => {
   const { combatProfile } = await loadDuncan();
   const paths = combatProfile.classTraining.selections.filter(selection => selection.kind === 'path');
   assert.equal(paths.length, 5);

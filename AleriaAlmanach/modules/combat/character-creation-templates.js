@@ -1,6 +1,6 @@
 // Versionierte Ausgangspakete für den Stufe-1-Assistenten.
 // Die Vorlagen enthalten nur strukturierte Startdaten; individuelle Regeln bleiben im Charakterbogen editierbar.
-import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 

@@ -82,6 +82,18 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Schlussreim des Duells | 8 | 1 Reaktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W8 | 1 | 1W10+2W8 |
 | Kreis um die Schranke | 7 | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 1W10+1W8+1 | 2 | 1W10+2W8+1 |
 | Königsanritt | 8 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 2W10 | 2W10+2 | 2 | 2W10+1W8+2 |
+| Eröffnung des Einen | 9 | 1 Aktion + 1 Reaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Gebundene Spitze | 10 | 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W6+1 | neu | 1W10+3W6+1 |
+| Antwort der Krone | 11 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Halbmondfinte | 12 | 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Abgezählter Atem | 13 | 1 Aktion + 1 Reaktion | — | 1W10+2W8 | neu | 1W10+2W8+1W4 |
+| Tiefe Bindung | 14 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Siebter Wechsel | 15 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Richtertritt | 16 | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Auraeid der Klinge | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Ungebrochener Blick | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 3W10+1 | neu | 3W10+1 |
+| Gnadenloses Maß | 19 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Letztes Urteil des Schwertdrachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | — | 4W10+4 | neu | 4W10+4 |
 | Rückschritt des Wächters | 9 | 1 Reaktion | 1W10+1W4 | 1W10+1W6 | 1 | 1W10+2W6 |
 | Stille Schuppe | 10 | 1 Reaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+2W6+1 | 1 | 1W10+3W6+1 |
 | Falsche Öffnung | 11 | 1 Bonusaktion + 1 Reaktion | 1W10+1W8 | 2W10 | 1 | 2W10+1W6 |
@@ -94,8 +106,6 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Unbewegtes Herz | 18 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+3W8+2 | 6.5 | 1W10+3W8+2 |
 | Letzte Öffnung | 19 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
 | Urteil des alten Drachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Rückzügelkonter | 9 | 1 Reaktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | 1 | 2W10+1W6 |
-| Unbewegter Reiter | 15 | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
 | Pausenparade | 9 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Stiller Vers | 13 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
 | Wortlose Antwort | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
@@ -118,8 +128,6 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Sturmkranz | 18 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W6 | 1W10+3W6+2 | 2 | 1W10+3W6+2 |
 | Grenzenloser Aufstieg | 19 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
 | Fallender Sternendrache | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Sprung über die Flanke | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Galoppierende Drachenspur | 15 | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8 | 0 | 1W10+2W8+1W4 |
 | Sprungvers | 9 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Tanzende Strophe | 13 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
 | Lied der hohen Klinge | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
@@ -143,8 +151,9 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Rüstungssenker | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 3W10+1 | 3 | 3W10+1 |
 | Brüllende Katastrophe | 19 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W6 | 1W10+3W8+3 | 6 | 1W10+3W8+3 |
 | Weltenbrecher | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Donnernder Lanzenstoß | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Hufschlag des Kolosses | 16 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1 | 1 | 1W10+2W6+1W4+1 |
+| Schildrachenmaul | 9 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Schuppenramme | 14 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | — | 3W10+1 | neu | 3W10+1W4+1 |
+| Donnerwall des Brülldrachen | 19 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
 | Panzerpfeil | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Brechender Doppelhieb | 11 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Donnersehne | 13 | 1 Aktion + 1 Aura-Fokuspunkt | 1W10+2W8 | 1W10+3W8+2 | 6.5 | 1W10+3W8+1W4+2 |
@@ -163,8 +172,6 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Schlachtfeldharmonie | 18 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W6 | 1W10+3W6+2 | 2 | 1W10+3W6+2 |
 | Neunfache Mitte | 19 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
 | Vollendeter Waffenmeister | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Wechselritt | 9 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Vier-Zügel-Kreis | 15 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1 | 1 | 1W10+2W6+1W4+1 |
 | Vers und Antwort | 9 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Harmonie der Mitte | 13 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
 | Vierstimmige Klinge | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
@@ -175,26 +182,56 @@ Referenzwaffe 1W10, ohne Attribut-, Klassen- oder Buffboni. Δ ist der durchschn
 | Meisterschaft der mittleren Distanz | 16 | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8 | 0 | 1W10+2W8+1W4 |
 | Jagdmeisterkreis | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W6 | 1W10+3W8+1 | 4 | 1W10+3W8+1 |
 | Vollendete Vierfalt | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Erster Zornausbruch | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Unruhige Klaue | 10 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Kampfschrei der Unruhe | 11 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Rasende Folge | 12 | 1 Aktion + 1 Besondere Aktion | 1W10+1W8 | 1W10+2W6 | 2.5 | 1W10+3W6 |
-| Aurafieber | 13 | 1 Aktion + 1 Aura-Fokuspunkt | 1W10+2W8 | 1W10+3W8+2 | 6.5 | 1W10+3W8+1W4+2 |
-| Beißender Grimm | 14 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
-| Zwei Herzschläge Zorn | 15 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
-| Sturm ohne Richtung | 16 | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+2W6 | 0 | 1W10+2W6+1W4 |
-| Rote Schuppe | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W8 | 4W10+3 | 6 | 4W10+3 |
-| Entfesselter Drache | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W8 | 3W10+1 | 3 | 3W10+1 |
-| Zornbrand | 19 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 1W10+3W6 | 1W10+3W8+3 | 6 | 1W10+3W8+3 |
-| Letzter Zorn des Drachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 4W10 | 4W10+4 | 4 | 4W10+4 |
-| Sporn des Zorns | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
+| Schattenanstieg | 9 | 1 Bonusaktion + 1 Reaktion | — | 2W10 | neu | 2W10+1W6 |
+| Klaue aus dem Nichts | 11 | 1 Aktion + 1 Reaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Stummer Absprung | 13 | 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Verdeckter Gelenkschnitt | 15 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Drachensturz aus schwarzem Himmel | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Gipfel ohne Schatten | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | — | 4W10+4 | neu | 4W10+4 |
+| Erste und zweite Klaue | 9 | 1 Aktion + 1 Bonusaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Gekreuzte Wacht | 10 | 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W6+1 | neu | 1W10+3W6+1 |
+| Scherenschritt | 11 | 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Wechselbiss | 12 | 1 Aktion + 1 Reaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Zweifacher Haken | 13 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Spiegelklauen | 14 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Kreislauf der vier Schneiden | 15 | 1 Aktion + 1 Bonusaktion + 1 Besondere Aktion | — | 3W10+1 | neu | 3W10+1W4+1 |
+| Stiller Klingenwechsel | 16 | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Aura zwischen den Klauen | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Doppelte Antwort | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 3W10+1 | neu | 3W10+1 |
+| Herzschlagpaar | 19 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Ein Drache, zwei Klingen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | — | 4W10+4 | neu | 4W10+4 |
+| Rückzügelkonter | 9 | 1 Reaktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | 1 | 2W10+1W6 |
+| Unbewegter Reiter | 15 | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8+1 | 1 | 1W10+2W8+1W4+1 |
+| Sprung über die Flanke | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
+| Galoppierende Drachenspur | 15 | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W8 | 1W10+2W8 | 0 | 1W10+2W8+1W4 |
+| Donnernder Lanzenstoß | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
+| Hufschlag des Kolosses | 16 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1 | 1 | 1W10+2W6+1W4+1 |
+| Wechselritt | 9 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
+| Vier-Zügel-Kreis | 15 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+2W6 | 1W10+2W6+1 | 1 | 1W10+2W6+1W4+1 |
+| Sporn des Windes | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
 | Rasender Jagdritt | 16 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+3W6 | 3.5 | 1W10+3W6+1W4 |
-| Hetzschuss | 9 | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Zwillingszorn | 11 | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1 | 2 | 2W10+1W6+1 |
-| Roter Pfeil | 13 | 1 Aktion + 1 Aura-Fokuspunkt | 1W10+2W8 | 1W10+3W8+2 | 6.5 | 1W10+3W8+1W4+2 |
-| Rasende Jagd | 16 | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+2W6 | 0 | 1W10+2W6+1W4 |
-| Schwarzer Federsturm | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W6 | 1W10+3W8+1 | 4 | 1W10+3W8+1 |
-| Letzte Jagd des Zorndrachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | 1W10+3W8 | 4W10+4 | 7 | 4W10+4 |
+| Geteilte Zügellinie | 12 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Krone des hohen Sattels | 19 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Erste Bahn der Lanze | 9 | 1 Aktion + 1 Reaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Rücklaufende Spitze | 11 | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Schafttor | 13 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Weite Nadel | 15 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Aura an der Spitze | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Durchgehender Anritt | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 3W10+1 | neu | 3W10+1 |
+| Königliche Schranke | 19 | 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Horizontstich des Lanzendrachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | — | 4W10+4 | neu | 4W10+4 |
+| Ruhige Sehne | 9 | 1 Aktion + 1 Reaktion | — | 2W10+1 | neu | 2W10+1W6+1 |
+| Flinker Nachschuss | 10 | 1 Bonusaktion + 1 Besondere Aktion | — | 1W10+2W6 | neu | 1W10+3W6 |
+| Sehnenantwort | 11 | 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W6+1 | neu | 1W10+3W6+1 |
+| Wandernder Halbmond | 12 | 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | — | 1W10+2W8 | neu | 1W10+2W8+1W6 |
+| Nadel im Wind | 13 | 1 Aktion + 1 Aura-Fokuspunkt | — | 1W10+3W8+2 | neu | 1W10+3W8+1W4+2 |
+| Doppelter Jagdschritt | 14 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1W4+1 |
+| Auge der Lichtung | 15 | 1 Aktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Rückwärtsfeder | 16 | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | — | 1W10+2W8+2 | neu | 1W10+2W8+1W4+2 |
+| Aura-Pfeil des fernen Auges | 17 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Fester Federkreis | 18 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | — | 1W10+2W8+1 | neu | 1W10+2W8+1 |
+| Schwarzer Horizont | 19 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | — | 4W10+3 | neu | 4W10+3 |
+| Letzte Feder des Bogendrachen | 20 | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 2 Besondere Aktion + 2 Aura-Fokuspunkt | — | 4W10+4 | neu | 4W10+4 |
 | Söldnerkeil | 6 | 1 Aktion + 1 Besondere Aktion | 1W10+1W8 | 1W10+1W8+1 | 1 | 1W10+1W8+1W6+1 |
 | Schildgassenhieb | 8 | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W8+1 | 2 | 1W10+1W8+1W6+1 |
 | Harter Wechsel | 10 | 1 Aktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+2W8+1 | 3 | 1W10+2W8+1W4+1 |

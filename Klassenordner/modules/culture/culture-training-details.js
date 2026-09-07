@@ -2,7 +2,7 @@ import { escapeClassHtml as escape } from '../pages/class-page-content.js';
 
 export function renderPathFeatures(form) {
   if (!form.features?.length) return '';
-  return `<section class="culture-path-features" aria-label="Pfadboni"><h4>Eigenschaften dieses Pfades</h4><ul>${form.features.map(feature => `<li data-training-feature-level="${feature.minimumLevel}"><strong>Stufe ${feature.minimumLevel} · ${escape(feature.name)}</strong><p>${escape(feature.description)}</p></li>`).join('')}</ul><p>Es gilt jeweils nur die höchste erlernte Stufe eines Merkmals. Die Wahl zusätzlicher Pfade erzeugt keine zusätzlichen Aktionen.</p></section>`;
+  return `<section class="culture-path-features" aria-label="Pfadboni"><h4>Dauerhafte Pfadeigenschaften</h4><ul>${form.features.map(feature => `<li data-training-feature-level="${feature.minimumLevel}"><strong>Stufe ${feature.minimumLevel} · ${escape(feature.name)}</strong><p>${escape(feature.description)}</p></li>`).join('')}</ul><p>Die Merkmale gelten dauerhaft, sobald der Pfad gewählt und die jeweilige Stufe erreicht wurde. Bei Steigerungen ersetzt der höhere Wert den niedrigeren; zusätzliche Pfade erzeugen keine zusätzlichen Handlungen.</p></section>`;
 }
 
 export function renderCultureTrainingTools(plan) {
@@ -19,7 +19,7 @@ export function trainingIntro(plan) {
     : 'Die Huskarl-Waffenlehre verbindet nordische Standfestigkeit mit bewusster Führung von Klinge, Axt, Schild und Speer. Diese Klassenfolgen, Boni und Expertenpfade sind ein Ausbildungsentwurf für die spätere Vergabe an Figuren.';
   return plan.cultureId === 'vennyr'
     ? 'Der Sirenentanz verbindet die Disziplin des Drachentanzes mit fließenden Richtungswechseln und kurzen, schweren Einschlägen. Die folgenden Waffenfolgen, Klassenmerkmale und Pfadboni bilden einen vollständigen Ausbildungsentwurf; sie sind noch keine automatisch erlernten Fähigkeiten bestehender Figuren.'
-    : 'Die Ausbildung trennt Grundform, Duellantenform und wählbare Expertenpfade. Der vollständige Attackenkatalog ist als prüfbarer Entwurf eingetragen; nur ausdrücklich bestätigte Attacken werden bereits an Charakterbögen vergeben.';
+    : 'Die Ausbildung trennt die Grundform auf Stufe 1–6, die freie Vertiefung auf Stufe 7–8 und wählbare Expertenpfade ab Stufe 9. Jeder Pfad besitzt ein dauerhaftes Thema mit gestaffelten Passivmerkmalen; zusätzliche Pfade teilen sich weiterhin das Attackenbudget.';
 }
 
 export function renderTrainingNextSteps(plan) {

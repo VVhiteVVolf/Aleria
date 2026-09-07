@@ -20,7 +20,7 @@ import {
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260906-effect-rolls-v1';
+} from '../combat/combat-level-up-model.js?v=20260908-cenyr-paths-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -39,9 +39,9 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260906-effect-rolls-v1';
-import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260906-effect-rolls-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260908-cenyr-paths-v1';
+import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260908-cenyr-paths-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260908-cenyr-paths-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory

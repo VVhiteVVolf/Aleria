@@ -1,4 +1,4 @@
-import { CENYR_FORM_LABELS, getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { getCenyrClassDefinitionForProfile, getCenyrFormLabel } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
 
 const SELECTION_KINDS = new Set(['path', 'branch']);
 
@@ -29,6 +29,9 @@ export function getCenyrTrainingState(profile = {}, definitionValue = null) {
     .filter(() => sameCurriculum)
     .filter(selection => SELECTION_KINDS.has(selection.kind))
     .filter(selection => selection.selectionId)
+    .filter(selection => selection.kind === 'path'
+      ? definition.pathSelection?.allowedFormIds?.includes(String(selection.selectionId))
+      : definition.trainingBranches.some(branch => branch.id === String(selection.selectionId)))
     .map(selection => ({
       kind: selection.kind,
       selectionId: String(selection.selectionId),
@@ -85,7 +88,11 @@ export function getCenyrLevelUpTrainingChoices(profile = {}, targetLevelValue = 
   if (definition.pathSelection?.multiplePathsAllowed && targetLevel >= definition.pathSelection.minimumLevel) {
     const options = (definition.pathSelection.allowedFormIds || [])
       .filter(formId => !selectedPaths.has(formId))
-      .map(formId => ({ id: formId, name: CENYR_FORM_LABELS[formId] || formId }));
+      .filter(formId => {
+        const requirement = definition.formAccess.find(entry => entry.formId === formId)?.requiredPathId;
+        return !requirement || selectedPaths.has(requirement);
+      })
+      .map(formId => ({ id: formId, name: getCenyrFormLabel(formId, definition.classId) }));
     if (options.length) groups.push({
       kind: 'path',
       label: selectedPaths.size ? 'Weiterer Expertenpfad' : 'Erster Expertenpfad',
@@ -102,7 +109,8 @@ function getSelectionRule(definition, kind, selectionId) {
     const access = definition.formAccess.find(entry => entry.formId === selectionId);
     const allowed = definition.pathSelection?.allowedFormIds || [];
     if (!access || access.status === 'blocked' || !allowed.includes(selectionId)) return null;
-    return { minimumLevel: Math.max(access.minimumLevel, definition.pathSelection.minimumLevel), band: 'expert' };
+    return { minimumLevel: Math.max(access.minimumLevel, definition.pathSelection.minimumLevel), band: 'expert',
+      requiredPathId: access.requiredPathId || '' };
   }
   const branch = definition.trainingBranches.find(entry => entry.id === selectionId);
   if (!branch) return null;
@@ -131,6 +139,11 @@ export function selectCenyrTrainingOption(profile = {}, selection = {}) {
   if (level < rule.minimumLevel) return { ok: false, errors: [`Diese Ausbildung beginnt erst auf Stufe ${rule.minimumLevel}.`], profile: clone(profile) };
 
   const next = ensureCenyrTrainingState(profile);
+  if (rule.requiredPathId && !next.classTraining.selections.some(entry => (
+    entry.kind === 'path' && entry.selectionId === rule.requiredPathId
+  ))) {
+    return { ok: false, errors: [`Diese Ausbildung setzt zuerst ${getCenyrFormLabel(rule.requiredPathId, definition.classId)} voraus.`], profile: clone(profile) };
+  }
   const existing = next.classTraining.selections.find(entry => entry.kind === kind && entry.selectionId === selectionId);
   if (existing) return { ok: true, errors: [], profile: next, selection: existing, spentSlot: null };
   const sameKindSelections = next.classTraining.selections.filter(entry => entry.kind === kind);

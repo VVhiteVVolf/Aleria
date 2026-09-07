@@ -1,4 +1,4 @@
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
 import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js';
 import {
   CHARACTER_CREATION_METHODS,

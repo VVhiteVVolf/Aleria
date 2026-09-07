@@ -30,8 +30,8 @@ class MaximumDice {
   async rollSavingThrow({ modifier }) { return { natural: 1, total: 1 + modifier, keptDice: [1] }; }
 }
 
-test('alle 212 Klassenattacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
-  assert.equal(attacks.length, 212);
+test('alle 249 Drachentanz-Attacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
+  assert.equal(attacks.length, 249);
   for (const attack of attacks) for (const formula of ['1d4', '1d6', '1d8', '1d10', '1d12', '2d6']) {
     const stats = totals(resolveTechniqueDamageFormula(attack, { damageFormula: formula }, { progression: { level: attack.minimumLevel } }));
     const ceiling = attack.minimumLevel <= 6 ? 22 : (attack.minimumLevel <= 8 ? 26 : (attack.minimumLevel < 13 ? 34 : (attack.minimumLevel < 17 ? 38 : 53)));

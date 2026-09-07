@@ -1,4 +1,4 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
 
 const WEAPON_PROFILE_ALIASES = Object.freeze([
   ['halberd', /hellebarde/],
@@ -57,6 +57,14 @@ function validateClassAndWeapon(definition, technique, weaponProfileId, weapon =
     : `Benötigt eine für diese Klassenfolge zugelassene Waffe (${allowedProfiles.join(', ')}).`;
 }
 
+function hasEquippedShield(profile = {}) {
+  const equippedArmorShield = (profile.armorItems || []).some(item => item?.equipped && item?.kind === 'shield');
+  if (equippedArmorShield) return true;
+  const offHandId = String(profile.combat?.offHandWeaponId || '');
+  return (profile.weapons || []).some(item => item?.weaponType === 'shield'
+    && (item?.equipped === true || String(item?.id || '') === offHandId));
+}
+
 // These modifiers are attached to the resolved action. Canonical techniques and
 // stored character attacks remain free of copied class/weapon bonuses.
 export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, weapon = {}) {
@@ -77,6 +85,19 @@ export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, w
     rules.disabledReason = 'Diese Technik kann nur beritten eingesetzt werden.';
   }
 
+
+  if (technique.cenyrTraining?.requiresDualWield && !/^dual-/.test(weaponProfileId)) {
+    rules.compatible = false;
+    rules.disabledReason = 'Diese Technik benötigt zwei gleichzeitig geführte Klingen.';
+    return rules;
+  }
+
+  if (technique.cenyrTraining?.requiresShield && !hasEquippedShield(profile)) {
+    rules.compatible = false;
+    rules.disabledReason = 'Diese Technik benötigt einen gleichzeitig geführten Schild.';
+    return rules;
+  }
+
   if (supportsCantrefPolearmRule(definition, technique, weaponProfileId)) {
     if (!['spear', 'polearm'].includes(String(weapon.weaponType || ''))) {
       rules.compatible = false;
@@ -95,8 +116,13 @@ export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, w
       rules.mechanicNotes.push('Dreizack: Bei einem Treffer darf der vorgesehene Entwaffnungsversuch ausgewertet werden.');
     }
     if (weaponProfileId === 'halberd') {
-      rules.maximumTargets = 4;
-      rules.mechanicNotes.push('Hellebarde: Bis zu vier Ziele; für jedes Ziel wird ein eigener Angriffswurf ausgeführt, die Kosten fallen einmal an.');
+      if (technique.cenyrTraining?.singleTargetOnly) {
+        rules.maximumTargets = 1;
+        rules.mechanicNotes.push('Hellebarde im Duellpfad: Die Technik bleibt auf genau ein Ziel begrenzt.');
+      } else {
+        rules.maximumTargets = 4;
+        rules.mechanicNotes.push('Hellebarde: Bis zu vier Ziele; für jedes Ziel wird ein eigener Angriffswurf ausgeführt, die Kosten fallen einmal an.');
+      }
     }
   }
 
@@ -109,5 +135,5 @@ export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, w
 }
 
 export const cenyrTechniqueWeaponRuleInternals = Object.freeze({
-  WEAPON_PROFILE_ALIASES, emptyRules, supportsCantrefPolearmRule, validateClassAndWeapon
+  WEAPON_PROFILE_ALIASES, emptyRules, supportsCantrefPolearmRule, validateClassAndWeapon, hasEquippedShield
 });

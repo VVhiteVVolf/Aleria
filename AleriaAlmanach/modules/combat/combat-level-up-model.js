@@ -12,13 +12,13 @@ import {
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
-import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
-import { getCenyrClassDefinitionForProfile } from '../classes/cenyr/cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
+import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260908-cenyr-paths-v1';
+import { getCenyrClassDefinitionForProfile } from '../classes/cenyr/cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
 import {
   getCenyrLevelUpTrainingChoices,
   selectCenyrTrainingOption
-} from '../classes/cenyr/cenyr-class-training.js?v=20260905-cenyr-character-training-v1';
+} from '../classes/cenyr/cenyr-class-training.js?v=20260908-cenyr-paths-v1';
 import {
   getCenyrTechniqueChoiceGroups,
   reconcileCenyrTrainingForLevel,

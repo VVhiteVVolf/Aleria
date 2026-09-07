@@ -17,10 +17,10 @@ import { getSpellLevelLabel, getSpellSlotLevel, isSpellSlotResource } from './co
 import { getSpellManaCost } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260906-effect-rolls-v1';
 import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
-import { getCenyrClassActionModifiers } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
-import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260905-cenyr-character-training-v1';
+import { getCenyrClassActionModifiers, getCenyrPathActionEffects } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260908-cenyr-paths-v1';
+import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260908-cenyr-paths-v1';
 import { getTechniqueDamageScaling, resolveTechniqueDamageFormula } from './combat-technique-damage.js?v=20260905-party-combat-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260906-effect-rolls-v1';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260908-cenyr-paths-v1';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
@@ -46,7 +46,7 @@ function withAutofilledCenyrProfile(character = {}) {
     : { ...character, combatProfile };
 }
 
-function buildCombatProfileActions(character, profile) {
+function buildCombatProfileActions(character, profile, options = {}) {
   const manaResource = profile.resources.find(resource => resource.id === profile.magic?.manaResourceId)
     || profile.resources.find(resource => /mana|fokus/i.test(resource.name || ''))
     || null;
@@ -108,7 +108,18 @@ function buildCombatProfileActions(character, profile) {
           + (technique.secondarySave.addProficiency ? getProficiencyBonus(profile) : 0)
           + getAttributeModifier(saveAttribute)
         : null;
-      const classModifiers = getCenyrClassActionModifiers(profile, { technique, weapon: activeWeapon });
+      const classModifiers = getCenyrClassActionModifiers(profile, {
+        technique,
+        weapon: activeWeapon,
+        hostileOpponentCount: options.hostileOpponentCount,
+        charge: options.charge === true
+      });
+      const pathAction = getCenyrPathActionEffects(profile, { technique, weapon: activeWeapon });
+      const techniqueEffects = (technique.effects || []).map(effect => (
+        pathAction.movementBonus && effect.type === 'move' && effect.target === 'self'
+          ? { ...effect, movementMeters: Number(effect.movementMeters || 0) + pathAction.movementBonus }
+          : effect
+      ));
       return {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
@@ -130,9 +141,10 @@ function buildCombatProfileActions(character, profile) {
         attackModifier: getWeaponAttackModifier(profile, activeWeapon || {}) + Number(technique.attackBonus || 0) + classModifiers.attackBonus + weaponRules.attackBonus,
         damageModifier: getWeaponDamageModifier(profile, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus,
         criticalThreshold: Math.min(Number(technique.criticalThreshold) || 20, classModifiers.criticalThreshold || 20, weaponRules.criticalThreshold || 20),
-        targetDefenseModifier: weaponRules.targetDefenseModifier,
+        targetDefenseModifier: weaponRules.targetDefenseModifier + Number(classModifiers.targetDefenseModifier || 0),
         maximumTargets: weaponRules.maximumTargets,
         mechanicNotes: [...new Set([...(technique.mechanicNotes || []), ...weaponRules.mechanicNotes,
+          ...classModifiers.sources.map(source => `Klassen- oder Pfadbonus: ${source.name}.`),
           ...(scaling ? [`Ausbildungsbonus ab Stufe ${scaling.level}: +${scaling.formula.toUpperCase().replace(/D/g, 'W')} (bereits im Schadenswurf enthalten).`] : [])])].slice(0, 8),
         activationType: technique.activationType,
         costs: normalizeCombatResourceCosts(technique.costs),
@@ -142,7 +154,7 @@ function buildCombatProfileActions(character, profile) {
         forcedRollMode: technique.rollMode,
         secondarySave: technique.secondarySave?.enabled ? { ...technique.secondarySave, dc: secondarySaveDc } : null,
         followUpAttack: technique.followUpAttack?.enabled ? { ...technique.followUpAttack } : null,
-        effects: technique.effects || [],
+        effects: [...techniqueEffects, ...pathAction.effects],
         segmentKinds: ['combataction'],
         compatible,
         disabledReason: compatible
@@ -349,7 +361,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
   const effectiveCharacter = withAutofilledCenyrProfile(character);
   const profile = resolveCharacterCombatProfile(effectiveCharacter);
   const segmentKind = String(options.segmentKind || '');
-  const allActions = buildCombatProfileActions(effectiveCharacter, profile);
+  const allActions = buildCombatProfileActions(effectiveCharacter, profile, options);
   const actions = segmentKind ? allActions.filter(action => action.segmentKinds.includes(segmentKind)) : allActions;
   const selectedActionBase = actions.find(action => action.id === String(options.actionId || ''))
     || actions.find(action => action.default)

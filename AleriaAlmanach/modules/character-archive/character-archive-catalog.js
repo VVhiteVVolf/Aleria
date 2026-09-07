@@ -3,7 +3,7 @@ import {
   CHARACTER_BACKGROUND_TEMPLATES,
   CHARACTER_CLASS_TEMPLATES
 } from '../combat/character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
+import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import {
   mergeCharacterArchiveEntries,

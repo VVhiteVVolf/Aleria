@@ -6,14 +6,17 @@ import {
   temporaryCondition
 } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
 
-const F = DRACHENTANZ_FORM_IDS.schwertdrache;
+// These stable technique IDs are the four established options for the level
+// 7–8 buffer. The former form ID is deliberately not reused: Schwertdrache is
+// now a selectable expert path beginning at level 9.
+const F = DRACHENTANZ_FORM_IDS.vertiefung;
 const CANTREF_UCHELWYR_WEAPONS = {
   cantref: ['spear', 'lance', 'partisan', 'trident', 'halberd'],
   uchelwyr: ['lance']
 };
 
 function duel(spec) {
-  return createDrachentanzTechnique({ formId: F, slotBands: ['duelist'], tier: 'Duellantenform', ...spec });
+  return createDrachentanzTechnique({ formId: F, slotBands: ['duelist'], tier: 'Freie Vertiefung', ...spec });
 }
 
 export const TEULU_DUELIST_TECHNIQUES = Object.freeze([

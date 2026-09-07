@@ -8,8 +8,8 @@ import { narrateCombatResolution } from './combat-narration-service.js?v=2026080
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
-import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260906-duel-rehearsal-v1';
+} from './combat-profile-resolver.js?v=20260908-cenyr-paths-v1';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260908-cenyr-paths-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -71,7 +71,8 @@ function getProfileOptionCacheKey(options = {}) {
     options.segmentKind || '',
     options.paymentMode || 'standard',
     options.weaponGrip || 'one-handed',
-    options.castLevel || 0
+    options.castLevel || 0,
+    options.hostileOpponentCount ?? ''
   ].join('|');
 }
 
@@ -147,6 +148,16 @@ function getCombatRelationship(first = {}, second = {}) {
   const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
   const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
   return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
+}
+
+function countActiveHostileOpponents(actor = {}, characters = [], partyMap = new Map()) {
+  if (!(partyMap instanceof Map) || !partyMap.size) return null;
+  const actorId = String(actor.id || '');
+  const actorParty = partyMap.get(actorId);
+  if (!actorParty) return null;
+  return new Set(characters
+    .map(character => String(character.id || ''))
+    .filter(id => id && id !== actorId && partyMap.has(id) && partyMap.get(id) !== actorParty)).size;
 }
 
 function getStoredCombatStates(threadId = '', position = {}) {
@@ -261,7 +272,8 @@ function resolveActorProfile(character, options = {}) {
     segmentKind: options.segmentKind,
     paymentMode: options.paymentMode,
     weaponGrip: options.weaponGrip,
-    castLevel: options.castLevel
+    castLevel: options.castLevel,
+    hostileOpponentCount: options.hostileOpponentCount
   });
   const resetActors = options.commentResourceResetActors;
   const shouldResetCommentResources = options.resetCommentResources && !resetActors?.has(actorId);
@@ -360,6 +372,7 @@ function mountComposers(context = {}) {
       paymentMode: segment.combatPaymentMode,
       weaponGrip: segment.combatWeaponGrip,
       castLevel: segment.combatCastLevel,
+      hostileOpponentCount: countActiveHostileOpponents(actorCharacter, characters, activeEncounterPartyMap),
       recoveryDayKey
     }) : null;
     if (actor?.equipmentPreparation && !actor.equipmentPreparation.error) {
@@ -658,6 +671,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     paymentMode: segment.combatPaymentMode,
     weaponGrip: segment.combatWeaponGrip,
     castLevel: segment.combatCastLevel,
+    hostileOpponentCount: countActiveHostileOpponents(actorCharacter, characters, stateContext.activeEncounterPartyMap),
     recoveryDayKey: stateContext.recoveryDayKey
   });
   const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
@@ -816,6 +830,7 @@ async function handleSubmission(submission = {}) {
     commentResourceResetActors: new Set(),
     recoveryDayKey: getCombatRecoveryDayKey(submission.threadId || ''),
     actorsWithPosts: getActorsWithCombatPosts(globalThis.getCachedCommentsForThread?.(submission.threadId || submission.entryId || '') || []),
+    activeEncounterPartyMap: getActiveCombatPartyMap(cachedComments),
     rulePeriods: {
       comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
       scene: String(submission.threadId || ''),

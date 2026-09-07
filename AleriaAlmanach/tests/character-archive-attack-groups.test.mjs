@@ -29,10 +29,11 @@ test('canonical Drachentanz keeps every Cenyr attack under class, style and form
   const teulu = groups.find(group => group.name === 'Teulu');
   assert(teulu);
   const style = teulu.children.find(group => group.name === 'Drachentanz');
-  assert.equal(style.children.length, 10);
-  assert.deepEqual(style.children.map(group => group.parentEntry.data.number), [1, 2, 3, 4, 5, 6, 7, null, null, null]);
+  assert.equal(style.children.length, 15);
+  assert.deepEqual(style.children.slice(0, 6).map(group => group.parentEntry.data.number), [1, null, 2, 3, 4, 5]);
+  assert.equal(style.children.filter(group => group.parentEntry.data.number === 6).length, 1);
   assert.equal(style.children[0].entries.length, 10);
-  assert.equal(style.children[9].entries.length, 0, 'Empty canonical paths remain visible');
+  assert.equal(style.children.find(group => group.parentEntry.data.id === 'drachentanz-pfad-bogendrache').entries.length, 0, 'Gesperrte kanonische Pfade bleiben sichtbar');
   const people = groups.find(group => group.name === 'Personen');
   const gawain = people?.children.find(group => group.name === 'Gawain Draig');
   assert.equal(groupEntries(gawain).some(entry => String(entry.data?.id || '').startsWith('gawain-dragon-')), false);

@@ -1,8 +1,8 @@
 import { escapeClassHtml as escape } from '../pages/class-page-content.js';
 import { renderContents, renderIllustration, renderFacts, renderSection, renderPending } from '../pages/class-page-sections.js';
-import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260905-party-combat-v1';
+import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260908-cenyr-paths-v1';
 
-const VERSION = '20260907-nordmaenner-v1';
+const VERSION = '20260908-cenyr-paths-v1';
 const FALLBACK = '../../../IconOrdner/ReiterIcons/Klassen.png';
 const CULTURE_FOLDERS = Object.freeze({
   cenyr: 'Cenyr',

@@ -43,7 +43,7 @@ const DUNCAN_TECHNIQUES = Object.freeze([
   ['expert-07', 'combat-style-drachentanz-himmelsschnitt', 15],
   ['expert-08', 'combat-style-drachentanz-erdbebenpranke', 16],
   ['expert-09', 'combat-style-drachentanz-meisterliche-gegenwaage', 17],
-  ['expert-10', 'combat-style-drachentanz-entfesselter-drache', 18],
+  ['expert-10', 'combat-style-drachentanz-schwertdrache-ungebrochener-blick', 18],
   ['expert-11', 'combat-style-drachentanz-letzte-oeffnung', 19],
   ['expert-12', 'combat-style-drachentanz-vollendeter-waffenmeister', 20]
 ]);
@@ -53,7 +53,7 @@ const DUNCAN_PATHS = Object.freeze([
   [FORM_IDS.abwartender, 10],
   [FORM_IDS.fliegender, 11],
   [FORM_IDS.bruellender, 12],
-  [FORM_IDS.zorniger, 13]
+  [FORM_IDS.schwertdrache, 13]
 ]);
 
 function json(value) {
@@ -93,7 +93,7 @@ function ensureTeuluSword(character) {
 function resetClassAttacks(profile) {
   profile.techniques = [];
   profile.classTraining = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     curriculumId: `cenyr-${profile.templateSelections.classId}`,
     selections: [],
     techniqueSelections: []
@@ -143,7 +143,7 @@ function reconcileDuncan(character) {
   profile.notes = [
     'ENDGAME-ANKERFIGUR · DUNCAN GAFYR',
     '',
-    'Kampfstil: Drachentanz. Duncan beherrscht die Grund- und Duellantenform sowie alle fünf Teulu-Expertenpfade. Vier seiner zwölf Expertenslots sind für die zusätzlichen Pfade gebunden; acht Expertentechniken bilden sein persönliches Meisterrepertoire.',
+    'Kampfstil: Drachentanz. Duncan beherrscht Grundform, freie Vertiefung und fünf Teulu-Expertenpfade. Vier seiner zwölf Expertenslots sind für die zusätzlichen Pfade gebunden; acht Expertentechniken bilden sein persönliches Meisterrepertoire.',
     '',
     'Seine ausgewählten Attacken betonen Waffenmeisterschaft, Gegenwehr, Beweglichkeit und kontrollierte Kraft. Persönliche Aura-Angriffe und doppelte Form-Fähigkeiten wurden zugunsten des gemeinsamen Klassenkatalogs entfernt.',
     '',

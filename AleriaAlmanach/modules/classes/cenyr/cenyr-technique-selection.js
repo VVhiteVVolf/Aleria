@@ -2,15 +2,15 @@ import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-mod
 import {
   DRACHENTANZ_FORM_IDS as FORM_IDS
 } from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260905-damage-balance-v1';
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
+import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260908-cenyr-paths-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
 import {
   ensureCenyrTrainingState,
   getCenyrTechniqueSlots,
   getCenyrTrainingState,
   selectCenyrTrainingOption
-} from './cenyr-class-training.js?v=20260905-cenyr-character-training-v1';
-import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260905-cenyr-character-training-v1';
+} from './cenyr-class-training.js?v=20260908-cenyr-paths-v1';
+import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260908-cenyr-paths-v1';
 
 const RECOMMENDED_EXPERT_PATHS = Object.freeze({
   teulu: FORM_IDS.ausgeglichener,
@@ -144,6 +144,7 @@ export function synchronizeCenyrSelectedTechniques(profile = {}, options = {}) {
   const catalog = new Map(progression.attackCatalog.map(technique => [technique.id, technique]));
   const selected = next.classTraining.techniqueSelections
     .filter(selection => catalog.has(selection.techniqueId));
+  next.classTraining.techniqueSelections = selected;
   const selectedIdsSet = new Set(selected.map(selection => selection.techniqueId));
   const existing = new Map((Array.isArray(next.techniques) ? next.techniques : []).map(technique => [technique.id, technique]));
   const canonicalIds = new Set(catalog.keys());

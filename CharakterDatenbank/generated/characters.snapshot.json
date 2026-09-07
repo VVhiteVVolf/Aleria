@@ -71679,9 +71679,9 @@
             "id": "combat-style-drachentanz-schwertdrache-kreisende-einladung",
             "name": "Kreisende Einladung",
             "status": "confirmed",
-            "trainingForm": "Drachentanz · Tanz des Schwertdrachens",
+            "trainingForm": "Drachentanz · Freie Vertiefung",
             "combatStyleId": "drachentanz",
-            "combatStyleFormId": "drachentanz-form-ii-schwertdrache",
+            "combatStyleFormId": "drachentanz-freie-vertiefung",
             "minimumLevel": 7,
             "category": "technique",
             "description": "Eine offene Kreisbewegung bietet dem Gegner scheinbar das Handgelenk und schließt sich im Augenblick seines Angriffs.",
@@ -71725,7 +71725,7 @@
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
-            "tags": "Drachentanz · Tanz des Schwertdrachens · Duellantenform",
+            "tags": "Drachentanz · Freie Vertiefung · Freie Vertiefung",
             "aiInstructions": "Reaktionsangriff mit Technikschaden und +1 Angriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
             "mechanicNotes": [],
             "effects": [
@@ -71857,9 +71857,9 @@
             "id": "combat-style-drachentanz-schwertdrache-spiegelparade",
             "name": "Spiegelparade",
             "status": "confirmed",
-            "trainingForm": "Drachentanz · Tanz des Schwertdrachens",
+            "trainingForm": "Drachentanz · Freie Vertiefung",
             "combatStyleId": "drachentanz",
-            "combatStyleFormId": "drachentanz-form-ii-schwertdrache",
+            "combatStyleFormId": "drachentanz-freie-vertiefung",
             "minimumLevel": 8,
             "category": "technique",
             "description": "Die Klinge nimmt den gegnerischen Winkel auf, leitet ihn fort und kehrt auf derselben Linie zurück.",
@@ -71902,7 +71902,7 @@
             "target": "Ein Gegner",
             "duration": "Sofort",
             "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
-            "tags": "Drachentanz · Tanz des Schwertdrachens · Duellantenform",
+            "tags": "Drachentanz · Freie Vertiefung · Freie Vertiefung",
             "aiInstructions": "Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 2. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
             "mechanicNotes": [],
             "effects": [
@@ -73218,16 +73218,16 @@
             }
           },
           {
-            "id": "combat-style-drachentanz-entfesselter-drache",
-            "name": "Entfesselter Drache",
+            "id": "combat-style-drachentanz-schwertdrache-ungebrochener-blick",
+            "name": "Ungebrochener Blick",
             "status": "confirmed",
-            "trainingForm": "Drachentanz · Tanz des zornigen Drachens",
+            "trainingForm": "Drachentanz · Tanz des Schwertdrachens",
             "combatStyleId": "drachentanz",
-            "combatStyleFormId": "drachentanz-form-vii-zorniger-drache",
+            "combatStyleFormId": "drachentanz-form-ii-schwertdrache",
             "minimumLevel": 18,
             "category": "technique",
-            "description": "Der Ritter gibt jede Vorsicht auf und jagt den Gegner mit einer verheerenden Schlagfolge.",
-            "effect": "Verursacht Technikschaden und erhält +2 Angriff; anschließend −3 Rüstungsklasse.",
+            "description": "Der Ritter verweigert jede Ablenkung und verfolgt nur Haltung, Blick und Klinge des Gegenübers.",
+            "effect": "Verursacht Technikschaden und gewährt bis zum nächsten eigenen Beitrag +2 Rüstungsklasse und +1 Angriff.",
             "activationType": "action",
             "weaponTypes": [
               "sword",
@@ -73248,22 +73248,22 @@
               "scalingSteps": []
             },
             "damageType": "",
-            "attackBonus": 2,
+            "attackBonus": 0,
             "damageBonus": 0,
             "targetDefenseModifier": 0,
             "rollMode": "normal",
             "criticalThreshold": 20,
             "maximumTargets": 1,
             "range": "Waffenreichweite",
-            "target": "Ein Gegner",
+            "target": "Ein Duellgegner",
             "duration": "Sofort",
-            "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
-            "tags": "Drachentanz · Tanz des zornigen Drachens · Meisterattacke",
-            "aiInstructions": "Verursacht Technikschaden und erhält +2 Angriff; anschließend −3 Rüstungsklasse. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+            "requirements": "Eine zum Klassenweg passende, geführte Waffe; niemals gegen mehrere Ziele zugleich.",
+            "tags": "Drachentanz · Tanz des Schwertdrachens · Meisterduell · Duell · Einzelziel",
+            "aiInstructions": "Verursacht Technikschaden und gewährt bis zum nächsten eigenen Beitrag +2 Rüstungsklasse und +1 Angriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
             "mechanicNotes": [],
             "effects": [
               {
-                "id": "combat-style-drachentanz-entfesselter-drache-weapon-damage",
+                "id": "combat-style-drachentanz-schwertdrache-ungebrochener-blick-weapon-damage",
                 "type": "damage",
                 "target": "target",
                 "amount": 0,
@@ -73285,7 +73285,7 @@
                 "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
               },
               {
-                "id": "zorniger-entfesselt-condition",
+                "id": "schwertdrache-blick-condition",
                 "type": "buff",
                 "target": "self",
                 "amount": 0,
@@ -73296,9 +73296,9 @@
                 "on": "always",
                 "resourceId": "",
                 "condition": {
-                  "id": "zorniger-entfesselt-condition",
-                  "name": "Offene Zorneshaltung",
-                  "description": "Der ungezügelte Angriff lässt die eigene Deckung offen.",
+                  "id": "schwertdrache-blick-condition",
+                  "name": "Ungebrochener Blick",
+                  "description": "Der Duellant hält die eine gegnerische Linie vollständig im Blick.",
                   "duration": "1 eigener Beitrag",
                   "durationModel": {
                     "kind": "actor-comments",
@@ -73313,7 +73313,8 @@
                   },
                   "tags": "Drachentanz",
                   "mechanics": {
-                    "armorClass": -3
+                    "armorClass": 2,
+                    "attack": 1
                   },
                   "active": true,
                   "remainingActorComments": 1,
@@ -73333,26 +73334,26 @@
                 "concentration": false,
                 "channelComments": 0,
                 "nonlethal": false,
-                "notes": "Der ungezügelte Angriff lässt die eigene Deckung offen."
+                "notes": "Der Duellant hält die eine gegnerische Linie vollständig im Blick."
               }
             ],
             "costs": [
               {
-                "id": "combat-style-drachentanz-entfesselter-drache-action-1",
+                "id": "combat-style-drachentanz-schwertdrache-ungebrochener-blick-action-1",
                 "resourceId": "action",
                 "name": "Aktion",
                 "amount": 1,
                 "scope": "comment"
               },
               {
-                "id": "combat-style-drachentanz-entfesselter-drache-bonus-action-2",
+                "id": "combat-style-drachentanz-schwertdrache-ungebrochener-blick-bonus-action-2",
                 "resourceId": "bonus-action",
                 "name": "Bonusaktion",
                 "amount": 1,
                 "scope": "comment"
               },
               {
-                "id": "combat-style-drachentanz-entfesselter-drache-reaction-3",
+                "id": "combat-style-drachentanz-schwertdrache-ungebrochener-blick-reaction-3",
                 "resourceId": "reaction",
                 "name": "Reaktion",
                 "amount": 1,
@@ -73432,13 +73433,15 @@
             "cenyrTraining": {
               "branchId": "",
               "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": false,
+              "uchelwyrCompatible": true,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
                 "cantref",
                 "uchelwyr",
-                "arthwyr"
+                "helwyr",
+                "arthwyr",
+                "barddwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
@@ -73452,6 +73455,10 @@
                   "halberd"
                 ],
                 "uchelwyr": [
+                  "lance",
+                  "sword"
+                ],
+                "helwyr": [
                   "sword"
                 ],
                 "arthwyr": [
@@ -73460,6 +73467,9 @@
                   "battleaxe",
                   "club",
                   "mace"
+                ],
+                "barddwyr": [
+                  "sword"
                 ]
               },
               "slotBands": [
@@ -74010,7 +74020,7 @@
             },
             {
               "kind": "path",
-              "selectionId": "drachentanz-form-vii-zorniger-drache",
+              "selectionId": "drachentanz-form-ii-schwertdrache",
               "selectedAtLevel": 13,
               "spentTechniqueSlotId": "expert-05"
             }
@@ -74103,7 +74113,7 @@
             },
             {
               "slotId": "expert-10",
-              "techniqueId": "combat-style-drachentanz-entfesselter-drache",
+              "techniqueId": "combat-style-drachentanz-schwertdrache-ungebrochener-blick",
               "selectedAtLevel": 18
             },
             {
@@ -74607,13 +74617,13 @@
           "enabled": false,
           "automaticCritical": false
         },
-        "notes": "ENDGAME-ANKERFIGUR · DUNCAN GAFYR\n\nKampfstil: Drachentanz. Duncan beherrscht die Grund- und Duellantenform sowie alle fünf Teulu-Expertenpfade. Vier seiner zwölf Expertenslots sind für die zusätzlichen Pfade gebunden; acht Expertentechniken bilden sein persönliches Meisterrepertoire.\n\nSeine ausgewählten Attacken betonen Waffenmeisterschaft, Gegenwehr, Beweglichkeit und kontrollierte Kraft. Persönliche Aura-Angriffe und doppelte Form-Fähigkeiten wurden zugunsten des gemeinsamen Klassenkatalogs entfernt.\n\nAktionsökonomie Stufe 20: 2 Aktionen / 2 Bonusaktionen / 2 Reaktionen / 6 Besondere Aktionen. Aura-Fokus: 4."
+        "notes": "ENDGAME-ANKERFIGUR · DUNCAN GAFYR\n\nKampfstil: Drachentanz. Duncan beherrscht Grundform, freie Vertiefung und fünf Teulu-Expertenpfade. Vier seiner zwölf Expertenslots sind für die zusätzlichen Pfade gebunden; acht Expertentechniken bilden sein persönliches Meisterrepertoire.\n\nSeine ausgewählten Attacken betonen Waffenmeisterschaft, Gegenwehr, Beweglichkeit und kontrollierte Kraft. Persönliche Aura-Angriffe und doppelte Form-Fähigkeiten wurden zugunsten des gemeinsamen Klassenkatalogs entfernt.\n\nAktionsökonomie Stufe 20: 2 Aktionen / 2 Bonusaktionen / 2 Reaktionen / 6 Besondere Aktionen. Aura-Fokus: 4."
       },
       "localRecord": {
         "recordId": "character--tmfBA2zPTc88EMMGkyyA",
         "path": "records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
         "schemaVersion": 1,
-        "contentHash": "5597d0e5e8292e5643f8639ec187b252623cea7443bb48ff679d996f15f90a58",
+        "contentHash": "fad1634f0326000bfa494c3df7ccaf7495ed74f5f277b590816f0729fbc4d7d8",
         "firestoreDocumentIds": [
           "tmfBA2zPTc88EMMGkyyA",
           "tmfBA2zPTc88EMMGkyyA"

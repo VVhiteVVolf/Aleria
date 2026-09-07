@@ -2,10 +2,16 @@ import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260905-ceny
 import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
 
 function mounted(formId, spec) {
+  const resolvedFormId = spec.slotBands?.includes('duelist')
+    ? F.vertiefung
+    : (spec.slotBands?.includes('expert') ? F.satteldrache : formId);
+  const resolvedSpec = spec.slug === 'sporn-des-zorns'
+    ? { ...spec, name: 'Sporn des Windes', description: 'Ein harter Sporn zwingt Ross und Reiter in eine kurze, gewaltsame Beschleunigung.' }
+    : spec;
   return createDrachentanzTechnique({
-    formId,
-    slug: `uchelwyr-beritten-${spec.slug}`,
-    tier: spec.minimumLevel >= 15 ? 'Berittene Meisteroption' : 'Berittene Formoption',
+    formId: resolvedFormId,
+    slug: `uchelwyr-beritten-${resolvedSpec.slug}`,
+    tier: resolvedSpec.minimumLevel >= 15 ? 'Berittene Meisteroption' : 'Berittene Formoption',
     allowedClassIds: ['uchelwyr'],
     classWeaponProfiles: { uchelwyr: ['sword', 'lance'] },
     weaponTypes: ['sword', 'spear'],
@@ -13,7 +19,8 @@ function mounted(formId, spec) {
     requiresMounted: true,
     weaponRuleSetId: 'cantref-polearm',
     uchelwyrCompatible: true,
-    ...spec
+    ...resolvedSpec,
+    formId: resolvedFormId
   });
 }
 
@@ -42,8 +49,14 @@ export const UCHELWYR_MOUNTED_TECHNIQUES = Object.freeze([
     description: 'Der Uchelwyr wechselt zwischen Angriff, Parade und neuem Winkel, ohne den Takt des Rosses zu verlieren.', effect: 'Verursacht Technikschaden; +1 Angriff und +1 Rüstungsklasse.', attackBonus: 1, effects: [temporaryCondition('uchelwyr-wechselritt', 'Wechselritt', 'Der wechselnde Winkel schützt die offene Seite.', { armorClass: 1 }, { target: 'self', on: 'always' })] }),
   mounted(F.ausgeglichener, { slug: 'vier-zuegel-kreis', name: 'Vier-Zügel-Kreis', minimumLevel: 15, slotBands: ['expert'], costs: ['action', 'bonus-action', 'reaction'], maximumTargets: 3, target: 'Bis zu drei Gegner',
     description: 'Vier gedachte Zügellinien führen Ross und Waffe durch einen geschlossenen Kampfkreis.', effect: 'Trifft bis zu drei Gegner mit je Technikschaden und gewährt +2 Rüstungsklasse.', effects: [temporaryCondition('uchelwyr-vier-zuegel', 'Vier-Zügel-Kreis', 'Der geschlossene Ritt hält die Flanken gedeckt.', { armorClass: 2 }, { target: 'self', on: 'always' })] }),
-  mounted(F.zorniger, { slug: 'sporn-des-zorns', name: 'Sporn des Zorns', minimumLevel: 9, slotBands: ['expert'], costs: ['action', 'bonus-action'], attackBonus: -1,
+  mounted(F.satteldrache, { slug: 'sporn-des-zorns', name: 'Sporn des Windes', minimumLevel: 9, slotBands: ['expert'], costs: ['action', 'bonus-action'], attackBonus: -1,
     description: 'Ein ungezügelter Anritt zwingt Ross und Reiter in eine kurze, gewaltsame Beschleunigung.', effect: 'Verursacht Technikschaden und erlaubt 5 Meter Eigenbewegung; anschließend −1 Rüstungsklasse.', effects: [movementEffect('uchelwyr-zornsporn', 5, 'move', 'self'), temporaryCondition('uchelwyr-zornsporn', 'Offener Anritt', 'Die wilde Beschleunigung öffnet die Deckung.', { armorClass: -1 }, { target: 'self', on: 'always' })] }),
-  mounted(F.zorniger, { slug: 'rasender-jagdritt', name: 'Rasender Jagdritt', minimumLevel: 16, slotBands: ['expert'], costs: ['action', 'bonus-action', 'reaction', 'special-action'], attackBonus: -1, maximumTargets: 3, target: 'Bis zu drei Gegner',
-    description: 'Der Uchelwyr jagt ohne sichere Wendelinie durch die feindliche Reihe.', effect: 'Trifft bis zu drei Gegner mit je Technikschaden und erlaubt 8 Meter Eigenbewegung; anschließend −2 Rüstungsklasse.', effects: [movementEffect('uchelwyr-jagdritt', 8, 'move', 'self'), temporaryCondition('uchelwyr-jagdritt', 'Rasender Jagdritt', 'Der wilde Durchbruch lässt Ross und Reiter offen.', { armorClass: -2 }, { target: 'self', on: 'always' })] })
+  mounted(F.satteldrache, { slug: 'rasender-jagdritt', name: 'Rasender Jagdritt', minimumLevel: 16, slotBands: ['expert'], costs: ['action', 'bonus-action', 'reaction', 'special-action'], attackBonus: -1, maximumTargets: 3, target: 'Bis zu drei Gegner',
+    description: 'Der Uchelwyr jagt ohne sichere Wendelinie durch die feindliche Reihe.', effect: 'Trifft bis zu drei Gegner mit je Technikschaden und erlaubt 8 Meter Eigenbewegung; anschließend −2 Rüstungsklasse.', effects: [movementEffect('uchelwyr-jagdritt', 8, 'move', 'self'), temporaryCondition('uchelwyr-jagdritt', 'Rasender Jagdritt', 'Der wilde Durchbruch lässt Ross und Reiter offen.', { armorClass: -2 }, { target: 'self', on: 'always' })] }),
+  mounted(F.satteldrache, { slug: 'geteilte-zuegellinie', name: 'Geteilte Zügellinie', minimumLevel: 12, slotBands: ['expert'], costs: ['action', 'special-action'],
+    description: 'Der Reiter führt Waffe und Zügel in getrennten Linien, ohne den Anritt zu unterbrechen.', effect: 'Verursacht Technikschaden, erhält +1 Angriff und gewährt bis zum nächsten eigenen Beitrag +1 Rüstungsklasse.', attackBonus: 1,
+    effects: [temporaryCondition('uchelwyr-zuegellinie', 'Geteilte Zügellinie', 'Zügelhand und Waffenhand halten zwei sichere Linien.', { armorClass: 1 }, { target: 'self', on: 'always' })] }),
+  mounted(F.satteldrache, { slug: 'krone-des-hohen-sattels', name: 'Krone des hohen Sattels', minimumLevel: 19, slotBands: ['expert'], costs: ['action', 'reaction', 'special-action', 'aura-focus'],
+    description: 'Ross, Reiter und Aura steigen in einen einzigen überlegenen Angriffswinkel.', effect: 'Verursacht Technikschaden, erhält +2 Angriff, behandelt die Zielverteidigung als 2 Punkte niedriger und erlaubt 6 Meter Eigenbewegung.', attackBonus: 2, targetDefenseModifier: -2,
+    effects: [movementEffect('uchelwyr-hoher-sattel', 6, 'move', 'self')] })
 ]);

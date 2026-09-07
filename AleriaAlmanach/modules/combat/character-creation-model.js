@@ -8,8 +8,8 @@ import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
 } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
-import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260905-cenyr-character-training-v1';
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
+import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260908-cenyr-paths-v1';
 import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([

@@ -1,4 +1,4 @@
-import { DRACHENTANZ_COMBAT_STYLE } from './drachentanz/drachentanz-registry.js?v=20260905-damage-balance-v1';
+import { DRACHENTANZ_COMBAT_STYLE } from './drachentanz/drachentanz-registry.js?v=20260908-cenyr-paths-v1';
 
 export const COMBAT_STYLE_REGISTRY_SCHEMA_VERSION = 1;
 

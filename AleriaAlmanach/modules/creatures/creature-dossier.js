@@ -1,4 +1,4 @@
-import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260908-cenyr-paths-v1';
 import { getAttributeModifier, getEffectiveCombatAttribute } from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 

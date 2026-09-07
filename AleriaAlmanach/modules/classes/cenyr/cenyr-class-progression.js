@@ -1,5 +1,5 @@
-import { getCenyrClassDefinition } from './cenyr-class-registry.js?v=20260905-cenyr-character-training-v1';
-import { getCombatStyle, getCombatStyleTechniquesForGrants, getCombatStyleTechniqueUnlockLevel } from '../../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
+import { getCenyrClassDefinition, getCenyrFormLabel } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+import { getCombatStyle, getCombatStyleTechniquesForGrants, getCombatStyleTechniqueUnlockLevel } from '../../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
 
 function techniqueBelongsToClass(technique = {}, classId = '') {
   const allowedClassIds = technique.cenyrTraining?.allowedClassIds || [];
@@ -25,19 +25,28 @@ export function getCenyrClassProgression(id, level = 1, options = {}) {
       const minimumLevel = formAccess?.minimumLevel ?? null;
       const pathAllowed = (definition.pathSelection.allowedFormIds || []).includes(form.id);
       const accessGranted = !['blocked', 'unavailable', 'eligibility-pending'].includes(formAccess?.status || 'unavailable');
+      const requiredPathId = formAccess?.requiredPathId || form.parentPathId || '';
+      const dependencySatisfied = !requiredPathId || selectedPathIds.has(requiredPathId);
       const isChoice = form.kind === 'path' && definition.pathSelection.multiplePathsAllowed
         && minimumLevel >= definition.pathSelection.minimumLevel && pathAllowed;
       const selected = isChoice && selectedPathIds.has(form.id);
-      return { ...form, minimumLevel, maximumTrainingLevel: formAccess?.maximumLevel ?? null,
-        accessStatus: formAccess?.status || 'unavailable', accessNote: formAccess?.note || '',
-        eligible: minimumLevel != null && selectedLevel >= minimumLevel && accessGranted,
-        selected, available: minimumLevel != null && selectedLevel >= minimumLevel && accessGranted && (!isChoice || selected),
+      const shortName = getCenyrFormLabel(form.id, definition.classId) || form.shortName;
+      const dependencyNote = requiredPathId && !dependencySatisfied
+        ? `Setzt zuerst ${getCenyrFormLabel(requiredPathId, definition.classId)} voraus.` : '';
+      return { ...form, shortName, name: `Drachentanz ${form.kind === 'path' ? 'Pfad' : 'Form'} · ${shortName}`,
+        minimumLevel, maximumTrainingLevel: formAccess?.maximumLevel ?? null,
+        accessStatus: formAccess?.status || 'unavailable', accessNote: [formAccess?.note || '', dependencyNote].filter(Boolean).join(' '),
+        requiredPathId, dependencySatisfied,
+        eligible: minimumLevel != null && selectedLevel >= minimumLevel && accessGranted && dependencySatisfied,
+        selected, available: minimumLevel != null && selectedLevel >= minimumLevel && accessGranted && dependencySatisfied && (!isChoice || selected),
         blocked: formAccess?.status === 'blocked',
         isChoice, initialTechniqueCount: formAccess?.initialTechniqueCount || 0,
         techniques: form.techniques.filter(technique => techniqueBelongsToClass(technique, definition.classId))
           .map(technique => {
             const grantedLevel = grant ? getCombatStyleTechniqueUnlockLevel(grant, technique) : null;
-            return { ...technique, minimumLevel: grantedLevel ?? technique.minimumLevel, grantedLevel, live: grantedLevel != null };
+            return { ...technique,
+              trainingForm: form.id === 'drachentanz-form-ii-schwertdrache' ? `Drachentanz · ${shortName}` : technique.trainingForm,
+              minimumLevel: grantedLevel ?? technique.minimumLevel, grantedLevel, live: grantedLevel != null };
           }) };
     }) };
   });

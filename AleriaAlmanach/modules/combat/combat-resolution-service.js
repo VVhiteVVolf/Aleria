@@ -16,7 +16,7 @@ import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260906-effect-rolls-v1';
+} from './combat-profile-resolver.js?v=20260908-cenyr-paths-v1';
 import {
   patchResolutionResourceState
 } from './combat-state-model.js?v=20260906-effect-rolls-v1';

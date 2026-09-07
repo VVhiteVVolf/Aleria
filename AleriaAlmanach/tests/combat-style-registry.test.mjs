@@ -20,24 +20,24 @@ const EXPECTED_COSTS = [
   ['action', 'bonus-action', 'special-action']
 ];
 
-test('das Kampfstilregister trennt Grundform, Duellantenform und Expertenpfade', () => {
+test('das Kampfstilregister trennt Grundform, freie Vertiefung und Expertenpfade', () => {
   const registry = getCombatStyleRegistry();
   const style = getCombatStyle('drachentanz');
   assert.equal(registry.styles.length, 1);
-  assert.equal(style.forms.length, 10);
-  assert.deepEqual(style.forms.map(form => form.number), [1, 2, 3, 4, 5, 6, 7, null, null, null]);
-  assert.deepEqual(style.forms.map(form => form.techniques.length), [54, 24, 24, 24, 21, 24, 20, 5, 4, 12]);
+  assert.equal(style.forms.length, 15);
+  assert.deepEqual(style.forms.map(form => form.number), [1, null, 2, 3, 4, 5, 6, null, null, null, null, null, null, null, null]);
+  assert.deepEqual(style.forms.map(form => form.techniques.length), [54, 24, 12, 22, 22, 22, 22, 6, 12, 12, 8, 12, 5, 4, 12]);
   assert.equal(style.forms[1].minimumLevel, 7);
   assert.equal(style.forms[1].techniqueLevelBand.maximum, 8);
-  assert.ok(style.forms.slice(2, 7).every(form => form.kind === 'path' && form.minimumLevel === 9 && form.techniqueLevelBand.maximum === 20));
+  assert.ok(style.forms.slice(2, 12).every(form => form.kind === 'path' && form.minimumLevel === 9 && form.techniqueLevelBand.maximum === 20));
   assert.equal(style.forms.at(-3).shortName, 'Tanz des Drachlings');
   assert.equal(style.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(style.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
   const techniques = style.forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 212);
-  assert.equal(new Set(techniques.map(technique => technique.id)).size, 212);
+  assert.equal(techniques.length, 249);
+  assert.equal(new Set(techniques.map(technique => technique.id)).size, 249);
   assert.equal(techniques.filter(technique => technique.status === 'confirmed').length, 10);
-  assert.equal(techniques.filter(technique => technique.status === 'draft').length, 202);
+  assert.equal(techniques.filter(technique => technique.status === 'draft').length, 239);
 });
 
 test('die Jungdrachenform erweitert den Kernlehrgang um vier ergänzende Techniken', () => {
@@ -78,7 +78,7 @@ test('Teulu beginnen mit einer Klassenattacke und wählen beim Stufenaufstieg de
   assert.ok(leveled.changes.some(change => change.label === 'Neue Drachentanz-Attacke' && change.after === 'Biss des Jungdrachens'));
 });
 
-test('Duncans Export nutzt zehn Grund-, zwei Duellanten- und acht Expertenattacken aus dem Register', async () => {
+test('Duncans Export nutzt zehn Grund-, zwei Vertiefungs- und acht Expertenattacken aus dem Register', async () => {
   const payload = JSON.parse(await fs.readFile(new URL('../../Charakter Archiv Exporte/duncan-gafyr.json', import.meta.url), 'utf8'));
   const techniques = payload.character.combatProfile.techniques;
   assert.equal(techniques.length, 20);
