@@ -1,0 +1,132 @@
+{
+  "id": "reptilien",
+  "title": "Reptilien",
+  "subtitle": "Schuppenträger der Wärme und stillen Wasser",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 07",
+  "lead": "Reptilien Alerias bewohnen sonnenwarme Felsen, Schilfgürtel, Ruinen und trockene Ebenen. Geduld und sparsamer Stoffwechsel lassen sie Orte nutzen, die anderen Tieren zu heiß oder zu karg sind.",
+  "pullQuote": "Was reglos in der Sonne liegt, ist deshalb noch lange nicht unaufmerksam.",
+  "icon": {
+    "src": "../../assets/icons/reptilien.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Reptilien"
+  },
+  "hero": {
+    "src": "../../assets/species-art/reptilien.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Großer grüner Druchtan, kupferfarbene Schlange und kleine Echse an einer sonnigen Lagune",
+    "caption": "Neue Bildtafel · Reptilien warmer Länder"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Reptilien"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Schuppenträger"
+    },
+    {
+      "label": "Größe",
+      "value": "Von fingerlangen Echsen bis zu großen Sumpfjägern"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Warme Felsen, Ruinen, Sümpfe und südliche Flüsse"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Insekten, Eier, Fisch, Kleintiere oder Pflanzen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Energiesparend, sonnenliebend und häufig territorial"
+    },
+    {
+      "label": "Stärken",
+      "value": "Tarnung, Geduld, geringer Nahrungsbedarf und kräftige Gebisse"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, rascher Temperatursturz und Verlust von Eiablageplätzen"
+    },
+    {
+      "label": "Spuren",
+      "value": "Schleifspuren, Häutungsreste, Gelege und feine Krallenabdrücke"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Reptilien regulieren ihre Körperwärme durch Sonne, Schatten und Wasser. Darum wirken sie oft träge, können im richtigen Augenblick jedoch überraschend schnell reagieren.",
+        "Viele kleine Arten leben unbemerkt in Mauern und Feldern und vertilgen Insekten oder Nagetiere. Große Arten beanspruchen Uferabschnitte und werden gefährlich, wenn Menschen ihre Brutplätze betreten."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Sonnenfelsen neben sicherer Deckung sind ideale Plätze. Ruinen bieten erwärmte Steine und Spalten, Sümpfe reichlich Beute, Wüsten dagegen Schutz in tiefen Bauen.",
+        "In kühlen Monaten ziehen sich die meisten Arten zurück. Südliche Tempel und beheizte Badehäuser beherbergen mitunter Populationen, die weit außerhalb ihres natürlichen Gebietes überleben."
+      ]
+    },
+    {
+      "id": "haeutung-und-brut",
+      "title": "Häutung & Brut",
+      "paragraphs": [
+        "Wachsende Reptilien streifen ihre alte Haut ab. Unversehrte Häutungsreste helfen Naturkundigen, Art und Größe zu bestimmen, ohne ein Tier zu fangen.",
+        "Die meisten legen Eier in warmen Sand, verrottendes Pflanzenmaterial oder geschützte Spalten. Einige bewachen ihr Gelege, andere verlassen es vollständig und vertrauen auf Tarnung und Wärme."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Zwei benannte Reptilien sind aus der alten Tafel erhalten.",
+    "groups": [
+      {
+        "id": "bekannte-reptilien",
+        "title": "Bekannte Reptilien",
+        "kicker": "Überlieferte Arten",
+        "description": "Beide Arten gelten als deutlich größer und auffälliger als gewöhnliche Echsen und Schlangen.",
+        "entries": [
+          {
+            "id": "druchtan",
+            "title": "Druchtan",
+            "region": "Sonnenfelsen & Flussruinen",
+            "description": "Eine große, grün geschuppte Echse mit kräftigen Vorderläufen. Druchtan beobachten lange reglos und verteidigen bevorzugte Sonnenplätze mit drohender Körperhaltung.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/reptilien/druchtan.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Überlieferte Bildtafel: Druchtan"
+            }
+          },
+          {
+            "id": "corrchuban",
+            "title": "Corrchuban",
+            "region": "Schilfsümpfe & warme Niederungen",
+            "description": "Eine lange, kupferfarbene Schlange, die hervorragend schwimmt und Beute über Erschütterungen im Boden oder Wasser wahrnimmt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/reptilien/corrchuban.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Corrchuban"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

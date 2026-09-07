@@ -1,0 +1,588 @@
+{
+  "id": "pferde",
+  "title": "Pferde",
+  "subtitle": "Rassen, Reitkunst und Zuchtlinien Alerias",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 01",
+  "lead": "Von den windfesten Ponys Yrmandralls bis zu den stolzen Hoflinien Lothirs: Pferde tragen Reisende, Heere und Geschichten über die Grenzen der Kontinente.",
+  "pullQuote": "Jede Pferdelinie trägt ein Stück ihrer Heimat im Schritt.",
+  "icon": {
+    "src": "../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Pferde"
+  },
+  "hero": {
+    "src": "../../assets/species-art/pferde.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Eine friedliche Pferdeherde auf einer blühenden Weide vor Fluss, Bergen und einer Burg",
+    "caption": "Vom Nutzer gewählte Bildtafel · Pferdeweiden Alerias"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Pferde"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Reit-, Zug- und Herdentiere"
+    },
+    {
+      "label": "Größe",
+      "value": "Vom kleinen Inselpony bis zum schweren Großross"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Alle bewohnten Kontinente Alerias"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Gräser, Kräuter, Heu und Getreide"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Sozial, wachsam und stark auf Herdenbindung geprägt"
+    },
+    {
+      "label": "Stärken",
+      "value": "Ausdauer, Geschwindigkeit, Zugkraft und Lernfähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Schreckhaftigkeit, empfindliche Läufe und anspruchsvolle Verdauung"
+    },
+    {
+      "label": "Bedeutung",
+      "value": "Reise, Handel, Landwirtschaft, Nachrichtenwesen und Krieg"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Pferde haben in Aleria seit jeher eine zentrale Rolle gespielt – als treue Gefährten, unermüdliche Arbeiter und schnelle Reisetiere. Sie verbinden Kulturen, tragen Händler über große Entfernungen und helfen Kriegern in der Schlacht. In jeder Region haben die Pferde einzigartige Eigenschaften entwickelt, die sie an ihre Umwelt anpassen.",
+        "Obwohl die meisten Pferde einfach gehaltene, robuste Tiere sind, gibt es einige besondere Rassen mit ungewöhnlichen Merkmalen, die den Charakter ihrer Herkunft widerspiegeln. Von der schlichten Eleganz der Steppenläufer bis hin zur schroffen Stärke der Gebirgsrosse – jedes Pferd erzählt eine Geschichte über die Region und die Menschen, die es züchten."
+      ]
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "paragraphs": [
+        "Die Reitkunst ist eine Errungenschaft, die der Menschheit nicht von Anbeginn gegeben war, sondern das Ergebnis eines langen Weges des Lernens und der Anpassung. Ursprünglich waren die frühen Menschen – die Alben – ein naturverbundenes Waldvolk, das in kleinen Zirkeln und Stämmen lebte. Ihre Lebensweise war eng mit den Wäldern verbunden, und ihre Fähigkeiten und Technologien waren zunächst auf das Überleben in dieser Umgebung ausgerichtet. Sie jagten, sammelten und nutzten die natürlichen Ressourcen der Wälder, ohne sich weit über diese Grenzen hinauszuwagen.",
+        "Mit dem Beginn der Eisenzeit kam jedoch ein Wandel. Unter der Anleitung der Druiden, die als geistige Führer und Hüter des Wissens dienten, begann der Mensch, seine Umwelt besser zu verstehen und neue Technologien zu entwickeln. Die Druiden spielten eine zentrale Rolle dabei, das Wissen über Metallverarbeitung, landwirtschaftliche Techniken und sogar spirituelle Weisheiten weiterzugeben, die die Menschen über die reine Existenz hinausheben sollten.",
+        "In dieser Zeit entdeckte der Mensch auch das Potenzial der Tiere in seiner Umgebung. Ursprünglich wurden Pferde wahrscheinlich nur als Beute betrachtet, doch mit der Entwicklung von Werkzeugen und der Beobachtung ihres Verhaltens erkannten die Menschen ihre Stärke, Schnelligkeit und Ausdauer. Zunächst wurden Pferde wahrscheinlich als Last- und Zugtiere genutzt, bevor der Mensch schließlich die Idee hatte, sie zu reiten.",
+        "Die Reitkunst wurde nicht nur eine praktische Fähigkeit, sondern auch ein Ausdruck von Macht und Weisheit. Krieger lernten, Pferde im Kampf zu nutzen, was ihre Mobilität und Schlagkraft erheblich erhöhte, während Händler und Reisende durch das Reiten große Distanzen schneller überwinden konnten. Die Verbindung zwischen Mensch und Pferd wurde zu einem Symbol für Fortschritt, Freiheit und Kontrolle über die Natur.",
+        "Von diesen bescheidenen Anfängen entwickelte sich die Reitkunst weiter und wurde zu einem entscheidenden Element der menschlichen Zivilisation. Sie war nicht nur ein Werkzeug für den Alltag, sondern auch ein kulturelles Erbe, das Generationen verband und die Lebensweise der Menschen grundlegend veränderte."
+      ]
+    },
+    {
+      "id": "zucht-und-haltung",
+      "title": "Zucht, Haltung & Verwendung",
+      "paragraphs": [
+        "Alerische Züchter wählen ihre Tiere selten allein nach Schönheit aus. Trittsicherheit, Futterbedarf, Nervenstärke und die Bindung an Menschen entscheiden darüber, ob eine Linie in ihrer Heimat bestehen kann. Darum unterscheiden sich selbst benachbarte Zuchten oft deutlich.",
+        "Urpferde gelten als alte, wenig veränderte Stammformen. Aus ihnen entwickelten sich durch Klima, Gelände und gezielte Auswahl die heutigen Landrassen. Kreuzungen sind möglich, werden aber in Gestütsbüchern sorgfältig vermerkt, da wertvolle Eigenschaften in späteren Generationen ebenso leicht verloren gehen wie gewonnen werden.",
+        "Ein gutes Pferd wird in Aleria als Partner behandelt. Sattel, Hufe und Futter werden der jeweiligen Rasse angepasst; wer eine nordische Linie wie ein südliches Wüstenpferd hält, schadet dem Tier und setzt auf langen Reisen auch sich selbst in Gefahr."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Rassen nach Kontinent und Land",
+    "intro": "Die alte Zuchttafel ordnet jede Linie zuerst ihrem Kontinent und anschließend ihrem Land oder Kulturraum zu. Die jeweilige Stammform ist als Urpferd hervorgehoben.",
+    "groups": [
+      {
+        "id": "estryll",
+        "title": "Kontinent Estryll",
+        "kicker": "Westliche Linien",
+        "description": "Estryills Pferde reichen von den Wald- und Kriegsrossen des Kernlandes bis zu kleinen, wetterfesten Ponys der Inseln und Sümpfe.",
+        "entries": [
+          {
+            "id": "ceffyl",
+            "title": "Ceffyl",
+            "region": "Avallorn",
+            "description": "Ein wendiges Wald- und Reisepferd mit sicherem Tritt, ruhigem Auge und großer Bindung an vertraute Reiter.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/ceffyl.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Ceffyl"
+            }
+          },
+          {
+            "id": "rhyfel",
+            "title": "Rhyfel",
+            "region": "Cenyr",
+            "description": "Eine mutige, ausdauernde Kriegslinie, die Lärm, enge Formationen und lange Märsche besser erträgt als die meisten Pferde.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/rhyfel.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Rhyfel"
+            }
+          },
+          {
+            "id": "hest",
+            "title": "Hest",
+            "region": "Aldrimar & Ceitheach",
+            "description": "Ein kräftiges, dicht behaartes Pferd für kalte Küsten, schwere Lasten und unwegsame Hochlandpfade.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/hest.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Hest"
+            }
+          },
+          {
+            "id": "curragh",
+            "title": "Curragh",
+            "region": "Zentrales Estryll",
+            "description": "Ein vielseitiges Alltagsross mit ausgeglichenem Temperament, geschätzt von Boten, Händlern und bäuerlichen Höfen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/curragh.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Curragh"
+            }
+          },
+          {
+            "id": "tirashan",
+            "title": "Tirashan",
+            "region": "Süd-Estryll",
+            "description": "Eine schlanke, hitzefeste Linie mit federndem Gang und bemerkenswerter Ausdauer auf trockenen Wegen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/tirashan.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Tirashan"
+            }
+          },
+          {
+            "id": "crafan-pony",
+            "title": "Crafan Pony",
+            "region": "Klaueninseln",
+            "description": "Ein kleines, furchtloses Inselpony, das selbst auf salznassen Klippen und schmalen Felswegen Halt findet.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/crafan-pony.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Crafan Pony"
+            }
+          },
+          {
+            "id": "skelmir-pony",
+            "title": "Skelmir Pony",
+            "region": "Fjordheim",
+            "description": "Ein stämmiges Nordpony mit dichter Mähne, genügsamem Wesen und großer Zugkraft für seine geringe Größe.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/skelmir-pony.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Skelmir Pony"
+            }
+          },
+          {
+            "id": "myrr-pony",
+            "title": "Myrr Pony",
+            "region": "Estrylls Sumpfland",
+            "description": "Eine leichte, breit auftretende Sumpflinie, die weichen Grund früh erkennt und sich sicher zwischen Moorinseln bewegt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/myrr-pony.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Myrr Pony"
+            }
+          }
+        ],
+        "ancestor": {
+          "id": "eiarach",
+          "title": "Eiarach",
+          "region": "Urpferd Estrylls",
+          "description": "Die alte, robuste Stammform Estrylls gilt als Ursprung vieler westlicher Reit-, Arbeits- und Ponylinien.",
+          "href": null,
+          "status": "Eigenes Dossier vorgemerkt",
+          "image": {
+            "src": "../../assets/species-entries/pferde/eiarach.webp",
+            "width": 408,
+            "height": 612,
+            "alt": "Überlieferte Bildtafel: Eiarach"
+          }
+        }
+      },
+      {
+        "id": "tirnara",
+        "title": "Kontinent Tirnara",
+        "kicker": "Südliche Linien",
+        "description": "Die Pferde Tirnaras wurden durch Hitze, offene Ebenen, Wüstenränder und die langen Straßen der Reiche geprägt.",
+        "entries": [
+          {
+            "id": "afol",
+            "title": "Afol",
+            "region": "Solestia & Imperium",
+            "description": "Ein elegantes, gelehriges Reitpferd mit raumgreifendem Schritt, das bei Gesandten und Offizieren beliebt ist.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/afol.webp",
+              "width": 374,
+              "height": 510,
+              "alt": "Überlieferte Bildtafel: Afol"
+            }
+          },
+          {
+            "id": "nebtu",
+            "title": "Nebtu",
+            "region": "Kemetara",
+            "description": "Eine trockene Hitze gewöhnte Linie, die mit wenig Wasser auskommt und auch auf steinigem Wüstenboden zuverlässig bleibt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/nebtu.webp",
+              "width": 408,
+              "height": 535,
+              "alt": "Überlieferte Bildtafel: Nebtu"
+            }
+          },
+          {
+            "id": "sarkal",
+            "title": "Sarkal",
+            "region": "Ishtaran",
+            "description": "Ein feingliedriges, wachsames Pferd mit schnellem Antritt und ausgeprägtem Orientierungssinn in der Steppe.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/sarkal.webp",
+              "width": 390,
+              "height": 549,
+              "alt": "Überlieferte Bildtafel: Sarkal"
+            }
+          },
+          {
+            "id": "xanthos",
+            "title": "Xanthos",
+            "region": "Galadorn, Klythesia & Phalantia",
+            "description": "Ein stolzes, muskulöses Reit- und Wagenpferd, bekannt für goldene Fellfarben und eindrucksvolle Haltung.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/xanthos.webp",
+              "width": 362,
+              "height": 539,
+              "alt": "Überlieferte Bildtafel: Xanthos"
+            }
+          },
+          {
+            "id": "shahzad",
+            "title": "Shahzad",
+            "region": "Shirazad",
+            "description": "Eine edle Wüstenlinie mit hoher Ausdauer, sensibler Mimik und enger, fast sprichwörtlicher Treue zu ihrem Menschen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/shahzad.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Shahzad"
+            }
+          }
+        ],
+        "ancestor": {
+          "id": "tanarhan",
+          "title": "Tanarhan",
+          "region": "Urpferd Tirnaras",
+          "description": "Das ausdauernde Urpferd der südlichen Ebenen gab den tirnarischen Linien Härte, Schnelligkeit und feine Sinne.",
+          "href": null,
+          "status": "Eigenes Dossier vorgemerkt",
+          "image": {
+            "src": "../../assets/species-entries/pferde/tanarhan.webp",
+            "width": 408,
+            "height": 612,
+            "alt": "Überlieferte Bildtafel: Tanarhan"
+          }
+        }
+      },
+      {
+        "id": "lothir",
+        "title": "Kontinent Lothir",
+        "kicker": "Fürstliche Linien",
+        "description": "In Lothir verbinden sich alte Hofzuchten mit den genügsamen Pferden der Moore, Flusstäler und Gebirgsländer.",
+        "entries": [
+          {
+            "id": "cuanach",
+            "title": "Cuanach",
+            "region": "Iatheach, Uathneach & Moinneach",
+            "description": "Ein wetterhartes Moor- und Hochlandpferd, das sumpfige Senken ebenso sicher durchquert wie windige Höhen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/cuanach.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Cuanach"
+            }
+          },
+          {
+            "id": "erlenglanz",
+            "title": "Erlenglanz",
+            "region": "Weisenfluh",
+            "description": "Eine helle Gebirgslinie mit kräftiger Hinterhand und sicherem, bedachtem Schritt auf Geröll und Schnee.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/erlenglanz.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Erlenglanz"
+            }
+          },
+          {
+            "id": "goldmaehne",
+            "title": "Goldmähne",
+            "region": "Lothir",
+            "description": "Ein repräsentatives Reitpferd mit leuchtender Mähne, ruhigem Stolz und harmonischen, weichen Gangarten.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/goldmaehne.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Goldmähne"
+            }
+          },
+          {
+            "id": "aurelianer",
+            "title": "Aurelianer",
+            "region": "Goldmund",
+            "description": "Ein ausdauerndes Straßen- und Kurierpferd, das für seine Aufmerksamkeit und seinen langen, gleichmäßigen Trab bekannt ist.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/aurelianer.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Aurelianer"
+            }
+          },
+          {
+            "id": "herzogschimmer",
+            "title": "Herzogschimmer",
+            "region": "Aldingen",
+            "description": "Eine schwere, elegante Hoflinie, die vor Prunkwagen ebenso überzeugt wie unter gepanzerten Reitern.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/herzogschimmer.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Herzogschimmer"
+            }
+          }
+        ],
+        "ancestor": {
+          "id": "fuerstenglanz",
+          "title": "Fürstenglanz",
+          "region": "Urpferd Lothirs",
+          "description": "Die hochgewachsene Stammform Lothirs begründete viele fürstliche Zuchten und gilt als Sinnbild würdevoller Gelassenheit.",
+          "href": null,
+          "status": "Eigenes Dossier vorgemerkt",
+          "image": {
+            "src": "../../assets/species-entries/pferde/fuerstenglanz.webp",
+            "width": 408,
+            "height": 612,
+            "alt": "Überlieferte Bildtafel: Fürstenglanz"
+          }
+        }
+      },
+      {
+        "id": "aldervan",
+        "title": "Kontinent Aldervan",
+        "kicker": "Mittelländische Linien",
+        "description": "Aldervans dichtes Wegenetz brachte spezialisierte Turnier-, Reise-, Zug- und Paradepferde hervor.",
+        "entries": [
+          {
+            "id": "cheval",
+            "title": "Cheval",
+            "region": "Brevanor",
+            "description": "Ein elegantes Turnier- und Jagdpferd mit kräftigem Sprung, feinem Gehorsam und lebhaftem Temperament.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/cheval.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Cheval"
+            }
+          },
+          {
+            "id": "cyning",
+            "title": "Cyning",
+            "region": "Kent",
+            "description": "Eine große, würdevolle Reitlinie, die in höfischen Gestüten auf Ruhe, Tragkraft und eindrucksvolle Bewegung gezogen wird.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/cyning.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Cyning"
+            }
+          },
+          {
+            "id": "brycing",
+            "title": "Brycing",
+            "region": "Kent",
+            "description": "Das kompaktere Gegenstück des Cyning: schnell im Antritt, wendig auf engem Grund und beliebt bei Boten und leichter Reiterei.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/brycing.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Brycing"
+            }
+          },
+          {
+            "id": "equo",
+            "title": "Equo",
+            "region": "Imperium Argentum",
+            "description": "Ein einheitlich gezüchtetes Dienstpferd mit berechenbarem Wesen, gutem Marschtempo und hoher Belastbarkeit.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/equo.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Equo"
+            }
+          },
+          {
+            "id": "sale",
+            "title": "Sale",
+            "region": "Mathringen",
+            "description": "Ein starkes Zug- und Ackerpferd, genügsam im Futter und geduldig bei schwerer Arbeit in hügeligem Land.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/sale.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Sale"
+            }
+          },
+          {
+            "id": "drake",
+            "title": "Drake",
+            "region": "Baldreska",
+            "description": "Eine robuste Küstenlinie, die Wind, Regen und Brandungsgeräusche gewohnt ist und Lasten über salzige Wege trägt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/drake.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Drake"
+            }
+          }
+        ],
+        "ancestor": {
+          "id": "aelvinger",
+          "title": "Ælvinger",
+          "region": "Urpferd Aldervans",
+          "description": "Das kräftige Ælvinger gilt als gemeinsame Wurzel der vielseitigen Zuchten Aldervans.",
+          "href": null,
+          "status": "Eigenes Dossier vorgemerkt",
+          "image": {
+            "src": "../../assets/species-entries/pferde/aelvinger.webp",
+            "width": 408,
+            "height": 612,
+            "alt": "Überlieferte Bildtafel: Ælvinger"
+          }
+        }
+      },
+      {
+        "id": "yrmandrall",
+        "title": "Kontinent Yrmandrall",
+        "kicker": "Nordische Linien",
+        "description": "Im Norden zählen Trittsicherheit, Winterhärte und ein ruhiges Wesen mehr als äußere Pracht.",
+        "entries": [
+          {
+            "id": "hross",
+            "title": "Hross",
+            "region": "Norden",
+            "description": "Ein breites, zähes Arbeitspferd mit dichtem Winterfell und großer Ausdauer vor Schlitten und Wagen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/hross.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Hross"
+            }
+          },
+          {
+            "id": "skuggr",
+            "title": "Skuggr",
+            "region": "Norden",
+            "description": "Eine dunkle, leise Reitlinie, die auch im Dämmerlicht sicher bleibt und auf kleinste Hilfen reagiert.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/skuggr.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Skuggr"
+            }
+          },
+          {
+            "id": "skaer",
+            "title": "Skaer",
+            "region": "Norden",
+            "description": "Ein helles, furchtloses Küsten- und Gebirgspferd, das Eiswind und schmale Felsenpfade gewohnt ist.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/pferde/skaer.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Skaer"
+            }
+          }
+        ],
+        "ancestor": {
+          "id": "skjon",
+          "title": "Skjon",
+          "region": "Urpferd Yrmandralls",
+          "description": "Das kleine, widerstandsfähige Skjon überdauerte die frühen Nordwinter und steht am Anfang aller bekannten yrmandrallischen Linien.",
+          "href": null,
+          "status": "Eigenes Dossier vorgemerkt",
+          "image": {
+            "src": "../../assets/species-entries/pferde/skjon.webp",
+            "width": 408,
+            "height": 612,
+            "alt": "Überlieferte Bildtafel: Skjon"
+          }
+        }
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

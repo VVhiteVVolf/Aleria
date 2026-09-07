@@ -19,16 +19,16 @@ export const BESTIARY_CHAPTERS = [
     id: 'tiere', kind: 'tiere', number: 'I', title: 'Tiere', subtitle: 'Von Huf, Schwinge & Schuppe',
     description: 'Die Tiere Alerias stammen aus natürlichen Ursprüngen – teils gezähmt, teils wild. Ein Verzeichnis der Geschöpfe, die Wälder, Weiden, Himmel und Gewässer mit uns teilen.',
     groups: [{ id: 'tiergruppen', title: 'Die natürlichen Arten', entries: [
-      entry('pferde', 'Pferde', 'Reit-, Zug- und Zuchtlinien Alerias. Hier finden später Herkunft, Temperament und Eignung ihren Platz.'),
-      entry('raubtiere', 'Raubtiere', 'Die Jäger der Wildnis: Einzelgänger und Rudel, ihre Lebensräume und die Spuren, die sie hinterlassen.'),
-      entry('flugwesen', 'Flugwesen', 'Geflügelte Bewohner der Lüfte, hohen Wälder und Klippen.'),
-      entry('wild', 'Wild', 'Scheue und wehrhafte Bewohner von Wald, Steppe und Gebirge.'),
-      entry('meerestiere', 'Meerestiere', 'Geschöpfe der Küsten und Tiefen, der Strömungen und verborgenen Wasserwelten.'),
-      entry('vieh', 'Vieh', 'Nutztiere, Herden und Hofbewohner: Haltung, regionale Arten und Zucht.'),
-      entry('reptilien', 'Reptilien', 'Schuppenträger aus warmen Felsen, Sümpfen und alten Ruinen.'),
-      entry('amphibien', 'Amphibien', 'Die kleinen Bewohner der Ufer, Moore und feuchten Waldgründe.'),
-      entry('ornithosaurier', 'Ornithosaurier', 'Uralte Fluglinien saurischer Herkunft und seltene Beobachtungen aus Aleria.'),
-      entry('insekten', 'Insekten', 'Schwärme, Panzerträger und kleine Jäger – eine Welt, die leicht übersehen wird.')
+      entry('pferde', 'Pferde', 'Reitkunst und 32 Rassenlinien, geordnet nach Kontinent, Land und jeweiligem Urpferd.', '', './tiere/pferde/index.html'),
+      entry('raubtiere', 'Raubtiere', 'Raubkatzen, Wölfe und Bären: Jagdweisen, Lebensräume und Spuren der großen Landjäger.', '', './tiere/raubtiere/index.html'),
+      entry('flugwesen', 'Flugwesen', 'Gefiederte Bewohner der Lüfte, hohen Wälder und Klippen samt ihren Wanderwegen.', '', './tiere/flugwesen/index.html'),
+      entry('wild', 'Wild', 'Scheue und wehrhafte Bewohner von Wald, Steppe und Gebirge, gegliedert nach Größe und Lebensweise.', '', './tiere/wild/index.html'),
+      entry('meerestiere', 'Meerestiere', 'Lebensgemeinschaften der Küsten, Riffe, offenen See und verborgenen Tiefen.', '', './tiere/meerestiere/index.html'),
+      entry('vieh', 'Vieh', 'Rinder, Herdentiere, Geflügel, Haustiere und Lastenträger des alerischen Alltags.', '', './tiere/vieh/index.html'),
+      entry('reptilien', 'Reptilien', 'Schuppenträger aus warmen Felsen, Sümpfen und alten Ruinen, darunter Druchtan und Corrchuban.', '', './tiere/reptilien/index.html'),
+      entry('amphibien', 'Amphibien', 'Frösche, Kröten und andere empfindsame Bewohner der Ufer, Moore und Quellwälder.', '', './tiere/amphibien/index.html'),
+      entry('ornithosaurier', 'Ornithosaurier', 'Uralte gefiederte Fluglinien saurischer Herkunft: Klippenschnapper und Aerdrith.', '', './tiere/ornithosaurier/index.html'),
+      entry('insekten', 'Insekten', 'Rieseninsekten, Spinnen und Skorpione – eine gepanzerte Welt zwischen Höhle, Sumpf und Wüste.', '', './tiere/insekten/index.html')
     ] }],
     specimenNote: 'Individuelle Tiere und seltene Zuchtlinien werden im folgenden Kapitel „Besondere Exemplare“ gesammelt.'
   },

@@ -1,0 +1,132 @@
+{
+  "id": "ornithosaurier",
+  "title": "Ornithosaurier",
+  "subtitle": "Uralte Schwingen zwischen Vogel und Saurier",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 09",
+  "lead": "Ornithosaurier sind seltene, gefiederte Flugtiere von uralter saurischer Herkunft. Ihre großen Silhouetten gehören zu den entlegensten Klippen und Hochländern Alerias.",
+  "pullQuote": "Ein Schatten über der Klippe kann eine Wolke sein – oder ein Flügel aus einer älteren Zeit.",
+  "icon": {
+    "src": "../../assets/icons/ornithosaurier.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Ornithosaurier"
+  },
+  "hero": {
+    "src": "../../assets/species-art/ornithosaurier.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Zwei gefiederte Ornithosaurier über hohen grünen Meeresklippen",
+    "caption": "Neue Bildtafel · Klippenschnapper und Aerdrith"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ornithosaurier"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Saurische Fluglinie"
+    },
+    {
+      "label": "Größe",
+      "value": "Große Spannweiten; vom kräftigen Klippenjäger bis zum weiten Segler"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Entlegene Küstenklippen, Tafelberge und Hochländer"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Fisch, Aas, Eier und mittelgroße Beutetiere"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Brutplatztreu, aufmerksam und gegenüber Nestern territorial"
+    },
+    {
+      "label": "Stärken",
+      "value": "Segelflug, scharfes Sehen, kräftige Schnäbel und große Reichweite"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Begrenzte Brutplätze, Bodenstart bei Windstille und langsame Vermehrung"
+    },
+    {
+      "label": "Spuren",
+      "value": "Große Federn, Kratzmulden, Schalenreste und weithin hörbare Rufe"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Ornithosaurier vereinen Merkmale großer Vögel mit einem älteren saurischen Körperbau. Federn bedecken Kopf, Hals und große Teile des Körpers, während Flügelknochen und Krallen ihre urtümliche Abstammung verraten.",
+        "Sie gelten trotz ihrer fremdartigen Gestalt als Teil der natürlichen Tierwelt. Verlässliche Beobachtungen sind selten, weil die Tiere abgelegene Brutplätze wählen und weite Strecken über Meer oder Gebirge zurücklegen."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Hohe Klippen liefern sichere Nester und kräftige Aufwinde. Im Binnenland nutzen manche Arten Tafelberge, Vulkankessel oder unzugängliche Felsnadeln.",
+        "Nistplätze werden über Generationen wiederverwendet. Schichten aus Zweigen, Knochen, Muscheln und Federn können Naturkundigen daher viel über frühere Nahrung und Wanderwege verraten."
+      ]
+    },
+    {
+      "id": "flug-und-brut",
+      "title": "Flug & Brut",
+      "paragraphs": [
+        "Die größten Arten starten bevorzugt gegen starken Wind oder lassen sich von erhöhten Felskanten tragen. In ruhiger Luft wirken sie schwerfällig, im Aufwind hingegen nahezu mühelos.",
+        "Gelege umfassen nur wenige Eier. Beide Elterntiere bewachen die Jungtiere lange, weshalb Störungen an Brutkolonien ganze regionale Bestände gefährden können."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Zwei benannte Ornithosaurier sind aus der alten Beobachtungstafel überliefert.",
+    "groups": [
+      {
+        "id": "bekannte-ornithosaurier",
+        "title": "Bekannte Ornithosaurier",
+        "kicker": "Überlieferte Arten",
+        "description": "Körperbau und Jagdweise unterscheiden sich deutlich.",
+        "entries": [
+          {
+            "id": "klippenschnapper",
+            "title": "Klippenschnapper",
+            "region": "Küstenklippen",
+            "description": "Ein kräftiger, hakenschnäbliger Jäger, der von Felskanten auf Fische und kleinere Küstentiere herabstößt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/ornithosaurier/klippenschnapper.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Klippenschnapper"
+            }
+          },
+          {
+            "id": "aerdrith",
+            "title": "Aerdrith",
+            "region": "Hochland & offene See",
+            "description": "Ein eleganter Langstreckensegler mit schmalen Flügeln, hellem Gefieder und einem weit tragenden, flötenden Ruf.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/ornithosaurier/aerdrith.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Aerdrith"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

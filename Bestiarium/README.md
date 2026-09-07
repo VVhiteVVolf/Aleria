@@ -10,6 +10,7 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/entry-preview`: gemeinsame Vorschau und die Entscheidung zwischen Vorschau-Button und vorhandenem Seitenlink.
 - `modules/book-shell`: gemeinsame Pergamentfarben, Typografie, Navigation und Fußzeile für Haupt- und Profilseiten.
 - `modules/creature-profile`: wiederverwendbare statische Profilvorlage, Profilregister und Anbindung der Vorschauen.
+- `modules/natural-species`: gemeinsame Naturkundevorlage für Tiergruppen, regionale Artenregister und spätere Einzeldossiers.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -46,6 +47,16 @@ Jede Seite verwendet ein neu erzeugtes Aquarell-Icon aus `assets/topic-icons/`. 
 
 Die Seiten werden mit `node Bestiarium/scripts/build-topic-articles.mjs` erzeugt. Mit `--check` wird geprüft, ob die eingecheckten HTML-Dateien zu Daten und Vorlage passen. Für eine weitere Themenseite werden ein Verzeichnis `themen/<id>/thema.json` und die zugehörige `id` in `modules/topic-article/topic-article-registry.mjs` ergänzt; die Themenwand erhält anschließend ihren relativen `href`.
 
+## Naturkundliche Tierseiten
+
+Alle zehn Tafeln im Kapitel „Tiere · Die natürlichen Arten“ führen auf eigene Seiten unter `tiere/`. Ihre redaktionellen Quellen heißen `art.json`; eine gemeinsame Vorlage rendert Einleitung, Hintergrund oder Lebensräume, Wissenswertes und das hierarchische Artenregister. Die Pferderassen bleiben zuerst nach Kontinent und anschließend nach Land oder Kulturraum geordnet. Jedes Urpferd wird innerhalb seines Kontinents gesondert hervorgehoben. Noch nicht angelegte Rassen- und Artendossiers öffnen eine Vorschau und können später über ihr `href` zu echten Unterseiten werden.
+
+Die neun neuen 2:3-Titelmotive wurden mit `image_gen` im festgelegten Anime-Stil erzeugt. Die Pferdeseite verwendet das vom Nutzer vorgegebene Motiv. Alle zehn Bilder werden lokal aus `assets/species-art/` ausgeliefert; Herkunft, Maße und vollständige Bild-Prompts stehen in `assets/species-art-sources.json`.
+
+Die 62 überlieferten Kreaturbilder aus den alten Tierseiten bleiben in den zugehörigen Arten- und Rassenkarten erhalten. Freigestellte Motive stehen vollständig auf ruhigen, einfarbigen Pergamentflächen: hochformatige Bilder in einem 2:3-Rahmen, quadratische und breite Bilder in einem 1:1-Rahmen. Die optimierten Dateien liegen unter `assets/species-entries/`; ihre Quellen sind in `assets/species-entry-sources.json` dokumentiert.
+
+Die Seiten werden mit `node Bestiarium/scripts/build-natural-species.mjs` erzeugt und mit `--check` auf Aktualität geprüft. Neue Tiergruppen benötigen ein Verzeichnis `tiere/<id>/art.json` sowie einen Eintrag in `modules/natural-species/natural-species-registry.mjs`; Build-Skript und Vite verwenden dieses gemeinsame Register.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -59,5 +70,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/creature-profiles.test.mjs`
 
 `node --test Bestiarium/tests/topic-articles.test.mjs`
+
+`node --test Bestiarium/tests/natural-species.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

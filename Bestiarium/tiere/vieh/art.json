@@ -1,0 +1,188 @@
+{
+  "id": "vieh",
+  "title": "Vieh",
+  "subtitle": "Herdentiere, Hofbewohner und Lastenträger",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 06",
+  "lead": "Vieh ernährt Dörfer, trägt Lasten und verwandelt karge Weiden in Wolle, Milch und Zugkraft. Regionale Haltung prägt den Alltag Alerias ebenso stark wie Ackerbau und Handel.",
+  "pullQuote": "Ein guter Hof zählt seinen Reichtum nicht nur in Münzen, sondern in gesunden Herden.",
+  "icon": {
+    "src": "../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../assets/species-art/vieh.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Rind, Esel, Schafe, Ziege, Schwein und Geflügel auf einem sonnigen alerischen Hof",
+    "caption": "Neue Bildtafel · Hof- und Herdentiere Alerias"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Vieh"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Nutz- und Haustiere"
+    },
+    {
+      "label": "Größe",
+      "value": "Vom Huhn bis zum schweren Zugrind"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Höfe, Weideland, Bergtäler und Handelswege"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Gras, Heu, Körner, Küchenreste und regionales Futter"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Herdentreu, sozial und durch Haltung stark geprägt"
+    },
+    {
+      "label": "Stärken",
+      "value": "Nahrungsversorgung, Zugkraft, Genügsamkeit und Vermehrung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Seuchen, Futtermangel, Raubtiere und schlechte Haltung"
+    },
+    {
+      "label": "Erzeugnisse",
+      "value": "Milch, Wolle, Eier, Leder, Dünger und Arbeitskraft"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Unter Vieh versteht man in Aleria die Tiere, die dauerhaft in menschlicher Obhut leben und Nahrung, Rohstoffe oder Arbeitskraft liefern. Ihre Haltung reicht von wenigen Hühnern am Stadtrand bis zu großen Wanderherden.",
+        "Jede Region bevorzugt Arten, die mit dem örtlichen Klima und Futter zurechtkommen. Hochlandrinder tragen dichtes Fell, Ziegen nutzen steile und magere Hänge, während Schweine in waldreichen Gegenden Eicheln und Wurzeln finden."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Weiden, Ställe und Tränkplätze bilden künstliche Lebensräume, deren Qualität unmittelbar über die Gesundheit der Tiere entscheidet. Schatten, trockene Liegeplätze und sauberes Wasser sind ebenso wichtig wie ausreichend Futter.",
+        "Wanderhirten folgen dem Wachstum der Gräser und entlasten so einzelne Flächen. Sesshafte Höfe wechseln Weiden, sammeln Wintervorräte und nutzen Mist, um die Fruchtbarkeit der Äcker zu erhalten."
+      ]
+    },
+    {
+      "id": "haltung-und-brauchtum",
+      "title": "Haltung & Brauchtum",
+      "paragraphs": [
+        "Hirtenzeichen, Glocken und Fellmarken unterscheiden Herden. Viele Dörfer feiern den ersten Austrieb im Frühjahr oder die sichere Heimkehr von den Sommerweiden mit kleinen Märkten und Segensriten.",
+        "Gute Tierhaltung gilt als handwerkliche Kunst. Kenntnisse über Geburt, Klauen, Futter und Krankheiten werden in Familien, Zünften und Klöstern weitergegeben."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die alte Tafel gliedert das Vieh in sechs praktische Gruppen des alerischen Alltags.",
+    "groups": [
+      {
+        "id": "hof-und-herde",
+        "title": "Hof- und Herdentiere",
+        "kicker": "Überlieferte Gruppen",
+        "description": "Von der großen Weide bis zum kleinen Hofplatz erfüllt jede Gruppe eine andere Aufgabe.",
+        "entries": [
+          {
+            "id": "rinder",
+            "title": "Rinder",
+            "region": "Weiden & Zughöfe",
+            "description": "Kräftige Herdentiere für Milch, Zugkraft und Leder; regionale Linien unterscheiden sich besonders in Fell, Hornform und Winterhärte.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/rinder.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Überlieferte Bildtafel: Rinder"
+            }
+          },
+          {
+            "id": "schafe-und-ziegen",
+            "title": "Schafe & Ziegen",
+            "region": "Heiden, Berge & Trockenland",
+            "description": "Genügsame Lieferanten von Wolle, Milch und Fleisch, die auch Flächen nutzen, auf denen kaum Ackerbau möglich ist.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/schafe-und-ziegen.webp",
+              "width": 554,
+              "height": 451,
+              "alt": "Überlieferte Bildtafel: Schafe & Ziegen"
+            }
+          },
+          {
+            "id": "schweine-und-wildschweine",
+            "title": "Schweine & Wildschweine",
+            "region": "Waldhöfe & Dörfer",
+            "description": "Intelligente Allesfresser; Hausschweine stammen vielerorts von regionalen Wildlinien ab und werden in lichten Wäldern gehütet.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/schweine-und-wildschweine.webp",
+              "width": 558,
+              "height": 447,
+              "alt": "Überlieferte Bildtafel: Schweine & Wildschweine"
+            }
+          },
+          {
+            "id": "huehner-und-gefluegel",
+            "title": "Hühner & Geflügel",
+            "region": "Höfe & Stadtgärten",
+            "description": "Kleine, wachsame Hofbewohner für Eier, Federn und Fleisch, deren Rufe den Tagesrhythmus vieler Siedlungen bestimmen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/huehner-und-gefluegel.webp",
+              "width": 456,
+              "height": 547,
+              "alt": "Überlieferte Bildtafel: Hühner & Geflügel"
+            }
+          },
+          {
+            "id": "haustiere",
+            "title": "Haustiere",
+            "region": "Haus, Hof & Speicher",
+            "description": "Katzen, kleine Hunde und andere Begleiter halten Vorräte frei von Schädlingen, bewachen Türen oder leisten Gesellschaft.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/haustiere.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Haustiere"
+            }
+          },
+          {
+            "id": "lasttiere",
+            "title": "Lasttiere",
+            "region": "Straßen, Minen & Gebirgspässe",
+            "description": "Esel, Maultiere und kräftige Ochsen tragen Waren dorthin, wo Wagen und Pferde nicht sicher vorankommen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/vieh/lasttiere.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Lasttiere"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

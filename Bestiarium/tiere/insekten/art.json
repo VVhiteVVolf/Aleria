@@ -1,0 +1,254 @@
+{
+  "id": "insekten",
+  "title": "Rieseninsekten & Spinnen",
+  "subtitle": "Panzer, Netze und lautlose Jagd",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 10",
+  "lead": "Neben zahllosen kleinen Gliedertieren kennt Aleria ungewöhnlich große Käfer, Spinnen und Skorpione. Viele sind wichtige Aas- und Schädlingsverwerter; andere verlangen selbst von bewaffneten Reisenden Vorsicht.",
+  "pullQuote": "Im Gras ist Größe eine Frage des Blickwinkels – und manchmal des Überlebens.",
+  "icon": {
+    "src": "../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Rieseninsekten & Spinnen"
+  },
+  "hero": {
+    "src": "../../assets/species-art/insekten.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Riesenkäfer, große Netzspinne und Skorpion auf einem sonnendurchfluteten Waldboden",
+    "caption": "Neue Bildtafel · Große Gliedertiere Alerias"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Rieseninsekten und Spinnen"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Große Gliedertiere"
+    },
+    {
+      "label": "Größe",
+      "value": "Von handgroßen Sammlern bis zu reittiergroßen Kolossen"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Höhlen, Sümpfe, Wälder, Gebirge und Wüsten"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Pflanzen, Pilze, Aas, Blut oder lebende Beute"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Einzeln, koloniebildend oder in saisonalen Schwärmen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Panzer, Netze, Gift, Tarnung und hohe Vermehrungsrate"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, Feuer, Austrocknung und empfindliche Gelenkhäute"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Chitin, Seide, Gifte, Farbstoffe und alchemistische Sekrete"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Die Bezeichnung Rieseninsekten umfasst im allgemeinen Sprachgebrauch auch Spinnen und Skorpione, obwohl Naturkundige sie getrennt betrachten. Gemeinsam ist ihnen ein gegliederter Körper, ein harter Außenpanzer und eine für ihre Verwandtschaft ungewöhnliche Größe.",
+        "Nicht jede große Art ist aggressiv. Viele ernähren sich von Totholz, Pilzen oder Aas und leisten damit unverzichtbare Arbeit im Kreislauf der Natur."
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "paragraphs": [
+        "Über ihre Größe streiten die Akademien. Reichhaltige Nahrung, warmes Klima und alte, sauerstoffreiche Höhlensysteme erklären manche Vorkommen; bei anderen Linien vermuten Forscher eine sehr frühe natürliche Anpassung an Alerias magische Landschaften.",
+        "Siedlungen nutzen feste Chitinplatten, Spinnenseide und gereinigte Gifte. Die Ernte ist gefährlich und wird meist von spezialisierten Sammlern betrieben, die Häutungsplätze aufsuchen, statt lebende Tiere zu töten."
+      ]
+    },
+    {
+      "id": "oekologie",
+      "title": "Ökologie & Begegnung",
+      "paragraphs": [
+        "Große Gliedertiere reagieren stark auf Erschütterungen, Gerüche und Licht. Langsame Schritte, geschlossene Vorräte und das Meiden frischer Netze verhindern viele Begegnungen.",
+        "Wo einzelne Arten ausgerottet werden, häufen sich oft Aas, Pilzbefall oder kleinere Schädlinge. Selbst gefürchtete Jäger besitzen daher einen festen Platz in ihrer Landschaft."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die vier Gruppen und alle benannten Arten der alten Tafel bleiben erhalten.",
+    "groups": [
+      {
+        "id": "rieseninsekten",
+        "title": "Rieseninsekten",
+        "kicker": "Panzerträger",
+        "description": "Große Käfer- und Sumpfformen mit sehr unterschiedlichen Ernährungsweisen.",
+        "entries": [
+          {
+            "id": "hoehlenkriecher",
+            "title": "Höhlenkriecher",
+            "region": "Feuchte Höhlen",
+            "description": "Ein schwer gepanzerter Pilz- und Aasfresser, der unterirdische Gänge von faulendem Material freihält.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/hoehlenkriecher.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Überlieferte Bildtafel: Höhlenkriecher"
+            }
+          },
+          {
+            "id": "svelg",
+            "title": "Svelg / Sumpfpfähler",
+            "region": "Sümpfe & Bruchwälder",
+            "description": "Ein langbeiniges Lauerinsekt, das reglos zwischen Schilf steht und Beute mit schnellen Vordergliedern ergreift.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/svelg.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Svelg / Sumpfpfähler"
+            }
+          }
+        ]
+      },
+      {
+        "id": "riesenspinnen",
+        "title": "Riesenspinnen",
+        "kicker": "Netzweber & Laufjäger",
+        "description": "Spinnen werden vor allem nach Jagdweise, Körperbau und verwendeter Seide unterschieden.",
+        "entries": [
+          {
+            "id": "garnspinnen",
+            "title": "Garnspinnen",
+            "region": "Alte Wälder",
+            "description": "Große Netzweber, deren feste, gleichmäßige Seide nach vorsichtiger Reinigung zu Garn verarbeitet wird.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/garnspinnen.webp",
+              "width": 438,
+              "height": 438,
+              "alt": "Überlieferte Bildtafel: Garnspinnen"
+            }
+          },
+          {
+            "id": "koloss-spinnen",
+            "title": "Koloss-Spinnen",
+            "region": "Höhlen & Ruinen",
+            "description": "Massige, langsame Spinnen mit großer Kraft und dicken Borsten, die tiefe Wohnhöhlen verteidigen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/koloss-spinnen.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Koloss-Spinnen"
+            }
+          },
+          {
+            "id": "raub-laufspinnen",
+            "title": "Raub- & Laufspinnen",
+            "region": "Steppe & offener Wald",
+            "description": "Schnelle Bodenjäger ohne Fangnetz, die Beute über Sicht und Erschütterungen verfolgen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/raub-laufspinnen.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Überlieferte Bildtafel: Raub- & Laufspinnen"
+            }
+          },
+          {
+            "id": "gratspinnen",
+            "title": "Gratspinnen",
+            "region": "Gebirgskämme",
+            "description": "Flache, windfeste Felsbewohner, die ihre Sicherungsfäden zwischen Spalten und scharfen Graten verspannen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/gratspinnen.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Gratspinnen"
+            }
+          },
+          {
+            "id": "panzerspinnen",
+            "title": "Panzerspinnen",
+            "region": "Trockene Ruinen",
+            "description": "Kurzbeinige Spinnen mit verdicktem Hinterleib, deren harte Platten sie gegen Bisse und Steinschlag schützen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/panzerspinnen.webp",
+              "width": 463,
+              "height": 539,
+              "alt": "Überlieferte Bildtafel: Panzerspinnen"
+            }
+          }
+        ]
+      },
+      {
+        "id": "riesenskorpione",
+        "title": "Riesenskorpione",
+        "kicker": "Wüstenjäger",
+        "description": "Nächtliche Panzerjäger trockener Länder.",
+        "entries": [
+          {
+            "id": "kumzehir",
+            "title": "Kumzehir / Dünenskorpion",
+            "region": "Heiße Dünenfelder",
+            "description": "Ein dunkler Riesenskorpion, der sich tagsüber tief eingräbt und nachts Erschütterungen über weite Sandflächen wahrnimmt.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/kumzehir.webp",
+              "width": 408,
+              "height": 461,
+              "alt": "Überlieferte Bildtafel: Kumzehir / Dünenskorpion"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sonstige",
+        "title": "Sonstige",
+        "kicker": "Schwer einzuordnende Arten",
+        "description": "Einzelne große Gliedertiere passen in keine der gebräuchlichen Gruppen.",
+        "entries": [
+          {
+            "id": "blutklammer",
+            "title": "Blutklammer",
+            "region": "Feuchte Wälder & Viehpfade",
+            "description": "Ein flacher, zäher Außenparasit, der Wärme und Atemluft verfolgt; kleine Exemplare werden von Vögeln und Amphibien gefressen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/insekten/blutklammer.webp",
+              "width": 522,
+              "height": 478,
+              "alt": "Überlieferte Bildtafel: Blutklammer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

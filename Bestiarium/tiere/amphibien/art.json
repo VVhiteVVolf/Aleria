@@ -1,0 +1,126 @@
+{
+  "id": "amphibien",
+  "title": "Amphibien",
+  "subtitle": "Stimmen der Moore, Quellen und Regenwälder",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 08",
+  "lead": "Frösche, Kröten und salamanderartige Tiere verbinden Wasser und Land. Ihre nächtlichen Chöre kündigen Regen an, ihre empfindliche Haut aber auch jede Krankheit eines Gewässers.",
+  "pullQuote": "Wenn die Kröten schweigen, horcht selbst der Sumpf.",
+  "icon": {
+    "src": "../../assets/icons/amphibien.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Amphibien"
+  },
+  "hero": {
+    "src": "../../assets/species-art/amphibien.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Große freundliche Moorkröte, Baumfrosch und Salamander an einem Seerosenteich",
+    "caption": "Neue Bildtafel · Amphibien im grünen Quellwald"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Amphibien"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Feuchtlandbewohner"
+    },
+    {
+      "label": "Größe",
+      "value": "Von daumengroßen Fröschen bis zu großen Moorkröten"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Teiche, Moore, Quellen, Regenwälder und feuchte Höhlen"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Insekten, Würmer, kleine Fische und andere Kleintiere"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Feuchtigkeitsgebunden, oft nachtaktiv und zur Laichzeit ruffreudig"
+    },
+    {
+      "label": "Stärken",
+      "value": "Sprungkraft, Tarnfarben, Regeneration und empfindliche Wahrnehmung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Trockenheit, verschmutztes Wasser und plötzliche Kälte"
+    },
+    {
+      "label": "Bedeutung",
+      "value": "Insektenjagd, Gewässeranzeiger und Bestandteil vieler Heiltraditionen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Amphibien beginnen ihr Leben meist im Wasser und wechseln später ganz oder teilweise an Land. Dieser doppelte Lebensweg macht sie zu Sinnbildern des Wandels, aber auch besonders abhängig von sauberen Gewässern.",
+        "Ihre Haut nimmt Feuchtigkeit und Stoffe aus der Umgebung auf. Naturkundige untersuchen deshalb zuerst Frösche und Salamander, wenn ein Teich plötzlich krank wirkt."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Flache, pflanzenreiche Laichgewässer ohne starke Strömung bieten den besten Nachwuchs. Erwachsene Tiere verstecken sich unter Wurzeln, Steinen, Laub oder in feuchten Erdhöhlen.",
+        "Einige Waldarten leben fast vollständig in Baumkronen, während Höhlenformen blass werden und sich stärker auf Geruch und Erschütterungen verlassen."
+      ]
+    },
+    {
+      "id": "jahreslauf",
+      "title": "Rufe & Jahreslauf",
+      "paragraphs": [
+        "Mit den ersten warmen Regenfällen beginnen die Paarungsrufe. Jede Art besitzt einen eigenen Rhythmus, sodass kundige Bewohner selbst im Dunkeln wissen, welche Tiere an einem Gewässer versammelt sind.",
+        "Während trockener oder kalter Zeiten verbergen sich Amphibien in Schlamm und frostfreien Spalten. Erst anhaltende Feuchtigkeit lockt sie wieder hervor."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die alte Sammlung unterscheidet zunächst die beiden vertrautesten Amphibiengruppen.",
+    "groups": [
+      {
+        "id": "froschlurche",
+        "title": "Froschlurche",
+        "kicker": "Überlieferte Gruppen",
+        "description": "Ihre Rufe und Wanderungen prägen die feuchten Nächte Alerias.",
+        "entries": [
+          {
+            "id": "kroeten",
+            "title": "Kröten",
+            "region": "Moore, Gärten & Waldteiche",
+            "description": "Gedrungene Bodenbewohner mit trockener wirkender Haut und großer Geduld. Viele wandern jedes Frühjahr zu demselben Laichgewässer zurück.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/amphibien/kroeten.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Kröten"
+            }
+          },
+          {
+            "id": "froesche",
+            "title": "Frösche",
+            "region": "Teiche, Bäche & Kronenwälder",
+            "description": "Sprungkräftige Jäger mit glatter Haut, langen Hinterbeinen und einer erstaunlichen Vielfalt an Farben und Rufen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

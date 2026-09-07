@@ -1,0 +1,174 @@
+{
+  "id": "wild",
+  "title": "Wildtiere",
+  "subtitle": "Scheue und wehrhafte Bewohner der freien Landschaft",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 04",
+  "lead": "Hirsche, Elche, Keiler und kleineres Wild beleben Wälder und Ebenen. Sie folgen alten Wechseln zwischen Wasser, Nahrung und geschützten Ruheplätzen.",
+  "pullQuote": "Der sichtbare Pfad gehört dem Wanderer; der unsichtbare Wechsel gehört dem Wild.",
+  "icon": {
+    "src": "../../assets/icons/wild.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Wildtiere"
+  },
+  "hero": {
+    "src": "../../assets/species-art/wild.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Stolzer Hirsch, Wildschwein, Hase und Rehe in einer sonnigen Waldlichtung",
+    "caption": "Neue Bildtafel · Wildtiere des grünen Landes"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Wildtiere"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Pflanzen- und Allesfresser"
+    },
+    {
+      "label": "Größe",
+      "value": "Vom Hasen bis zum Elch"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Wälder, Steppen, Moore und Gebirge"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Gräser, Blätter, Rinde, Früchte, Wurzeln und Kleintiere"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Meist scheu; einzeln, in Familien oder Herden"
+    },
+    {
+      "label": "Stärken",
+      "value": "Wachsamkeit, Fluchtvermögen und Anpassung an Jahreszeiten"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Tiefe Winter, Krankheiten und zerschnittene Wanderwege"
+    },
+    {
+      "label": "Bedeutung",
+      "value": "Nahrung, Leder, Geweih, Waldverjüngung und Saatverbreitung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Als Wildtiere gelten jene größeren Bewohner der Landschaft, die weder dauerhaft an menschliche Haltung gebunden sind noch vorwiegend von der Jagd auf andere Tiere leben. Ihre Vielfalt reicht von kleinen Feldbewohnern bis zu mächtigen Hirschen und Elchen.",
+        "Sie sind ein sichtbares Maß für die Ruhe eines Gebietes. Wo Wild offen äst, findet es Nahrung und sichere Rückzugsräume; wo nur alte Spuren bleiben, haben Jagddruck, Lärm oder Krankheit die Bestände verändert."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Waldsäume bieten den meisten Arten die günstigste Mischung aus Deckung und Nahrung. Moore schützen vor Verfolgung, offene Ebenen erlauben frühe Sicht auf Gefahren, und Gebirge bewahren eigene, trittsichere Linien.",
+        "Jahreszeitliche Wechsel verbinden Äsungsflächen, Salzlecken, Brunftplätze und Wintereinstände. Alte Straßen schneiden solche Wege bisweilen ab, weshalb Wildbrücken und stille Furten in gut verwalteten Ländern geschützt werden."
+      ]
+    },
+    {
+      "id": "jagd-und-hege",
+      "title": "Jagd & Hege",
+      "paragraphs": [
+        "Alerische Jagdrechte sind vielerorts an Schonzeiten und die Pflicht zur Hege gebunden. Wer nur nimmt und Winterfutter, Wasserstellen oder gesunde Altersstrukturen missachtet, gefährdet nicht allein die Tiere, sondern auch Wald und Acker.",
+        "Druiden, Förster und Jäger führen regionale Zeichenbücher. Sie vermerken Fährten, Abwurfstangen, Fraßbilder und ungewöhnliche Wanderungen, um Krankheiten oder Raubdruck früh zu erkennen."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die alte Sammlung gliedert das Wild nach Körpergröße, Lebensweise und besonders auffälligen Gruppen.",
+    "groups": [
+      {
+        "id": "wildgruppen",
+        "title": "Wildgruppen",
+        "kicker": "Überlieferte Ordnung",
+        "description": "Die Grenzen sind praktisch und können sich regional überschneiden.",
+        "entries": [
+          {
+            "id": "mittleres-wild",
+            "title": "Mittleres Wild",
+            "region": "Wälder & Feldränder",
+            "description": "Rehe, größere Hasenverwandte und ähnliche Arten, die Deckung und offene Äsung in kurzer Entfernung benötigen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/wild/mittleres-wild.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Mittleres Wild"
+            }
+          },
+          {
+            "id": "keiler",
+            "title": "Keiler",
+            "region": "Laubwälder & Sümpfe",
+            "description": "Wehrhafte männliche Wildschweine, deren Kraft, Hauern und Unberechenbarkeit selbst erfahrene Jäger respektieren.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/wild/keiler.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Keiler"
+            }
+          },
+          {
+            "id": "grosswild",
+            "title": "Großwild",
+            "region": "Gebirge & weite Wälder",
+            "description": "Die schwersten Huftiere und seltene große Pflanzenfresser, deren Wanderungen tiefe Wechsel in die Landschaft zeichnen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/wild/grosswild.webp",
+              "width": 404,
+              "height": 402,
+              "alt": "Überlieferte Bildtafel: Großwild"
+            }
+          },
+          {
+            "id": "kleinwild",
+            "title": "Kleinwild",
+            "region": "Felder, Hecken & Jungwald",
+            "description": "Kleine, vermehrungsfreudige Arten, die vielen Jägern Nahrung geben und stark auf Wetter und Deckung reagieren.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/wild/kleinwild.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Kleinwild"
+            }
+          },
+          {
+            "id": "hirsche-und-elche",
+            "title": "Hirsche & Elche",
+            "region": "Waldländer & nasse Niederungen",
+            "description": "Große Geweihträger, deren Brunft, Wanderungen und jährlicher Geweihwechsel zahlreiche Bräuche geprägt haben.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/wild/hirsche-und-elche.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Hirsche & Elche"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

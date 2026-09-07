@@ -1,0 +1,146 @@
+{
+  "id": "raubtiere",
+  "title": "Raubtiere",
+  "subtitle": "Jäger der Wälder, Gebirge und offenen Länder",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 02",
+  "lead": "Raubkatzen, Wölfe und Bären halten Alerias Wildnis im Gleichgewicht. Ihre Nähe verlangt Respekt, doch ihre Spuren erzählen kundigen Reisenden viel über den Zustand eines Landes.",
+  "pullQuote": "Wo der Wald still wird, hat meist schon jemand anderes die Fährte aufgenommen.",
+  "icon": {
+    "src": "../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Raubtiere"
+  },
+  "hero": {
+    "src": "../../assets/species-art/raubtiere.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Wolf, Luchs und Bär in einem friedlichen Waldtal bei Sonnenaufgang",
+    "caption": "Neue Bildtafel · Große Landjäger Alerias"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Raubtiere"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Landjäger"
+    },
+    {
+      "label": "Größe",
+      "value": "Vom kleinen Fuchsjäger bis zum mächtigen Braunbären"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Wälder, Gebirge, Tundren und Steppen"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Überwiegend Fleisch; einige Arten sind Allesfresser"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Je nach Art einzelgängerisch, paarweise oder im Rudel"
+    },
+    {
+      "label": "Stärken",
+      "value": "Scharfe Sinne, Tarnung, Geduld und kurze Kraftausbrüche"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Nahrungsmangel, Revierverlust und Konflikte mit Siedlungen"
+    },
+    {
+      "label": "Spuren",
+      "value": "Trittsiegel, Losung, Risse an Bäumen und Beutereste"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Unter Raubtieren fassen die Naturkundler Alerias jene warmblütigen Jäger zusammen, deren Körperbau und Sinne auf das Erbeuten anderer Tiere ausgerichtet sind. Nicht jedes Raubtier ist groß, und nicht jedes sucht die Nähe des Menschen; die meisten meiden offene Wege, solange ihre Reviere ungestört bleiben.",
+        "In gesunden Landschaften verhindern sie, dass einzelne Wildbestände überhandnehmen. Sie entfernen kranke und unachtsame Tiere, verteilen Aas an kleinere Arten und prägen mit ihren Wanderwegen ganze Waldgebiete."
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "paragraphs": [
+        "Die alten Jagdordnungen unterscheiden nicht nur nach Gestalt, sondern nach Jagdweise. Katzen lauern und überwältigen, Wölfe verfolgen und prüfen die Ausdauer ihrer Beute, Bären wechseln zwischen Pflanzenkost, Fisch und kräftiger Jagd.",
+        "An Grenzen zwischen Wildnis und Kulturland entstehen die meisten Konflikte. Erfahrene Hirten sichern Herden, entsorgen Schlachtabfälle und lesen Fährten frühzeitig, statt jedes Tier in der Nähe eines Dorfes zum Ungeheuer zu erklären."
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Verhalten",
+      "paragraphs": [
+        "Wer einem Raubtier begegnet, wahrt Abstand, versperrt keinen Fluchtweg und hält Nahrung außer Reichweite. Jungtiere sind niemals ein Zeichen dafür, dass die Umgebung sicher ist; meist befindet sich das Muttertier näher, als ein Reisender ahnt.",
+        "Druiden und Fährtenkundige achten auf die Sprache des Reviers: verstummte Vögel, frisch aufgewühlten Boden und Warnrufe der Beutetiere. Dieses Wissen schützt beide Seiten und bewahrt die natürliche Ordnung."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die alte Tafel nennt drei große Ordnungen der Landjäger. Ihre einzelnen regionalen Arten erhalten später eigene Dossiers.",
+    "groups": [
+      {
+        "id": "landjaeger",
+        "title": "Große Landjäger",
+        "kicker": "Überlieferte Ordnungen",
+        "description": "Drei sehr unterschiedliche Jagdweisen prägen die Wildnis.",
+        "entries": [
+          {
+            "id": "raubkatzen",
+            "title": "Raubkatzen",
+            "region": "Wälder, Felsen & Grasländer",
+            "description": "Lautlose Lauerjäger mit hervorragendem Nachtsehen, geschmeidiger Bewegung und meist einzelgängerischem Wesen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/raubtiere/raubkatzen.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Raubkatzen"
+            }
+          },
+          {
+            "id": "woelfe",
+            "title": "Wölfe",
+            "region": "Wälder, Tundren & Steppen",
+            "description": "Ausdauernde soziale Jäger, deren Rudel durch Körpersprache, Rufe und feste Bindungen zusammengehalten werden.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/raubtiere/woelfe.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Wölfe"
+            }
+          },
+          {
+            "id": "baeren",
+            "title": "Bären",
+            "region": "Wälder, Berge & Flusstäler",
+            "description": "Kräftige, anpassungsfähige Allesfresser, die Ruhe suchen, ihren Raum aber mit großer Entschlossenheit verteidigen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/raubtiere/baeren.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Bären"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

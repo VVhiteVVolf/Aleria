@@ -1,6 +1,6 @@
-import { BESTIARY_ENTRIES } from './modules/catalog/catalog-data.js?v=20260907-fairean-v1';
+import { BESTIARY_ENTRIES } from './modules/catalog/catalog-data.js?v=20260907-natural-species-v1';
 import { BESTIARY_TOPICS } from './modules/topic-board/topic-board-data.js?v=20260907-topic-articles-v1';
-import { mountCatalog } from './modules/catalog/catalog-ui.js?v=20260907-fairean-v1';
+import { mountCatalog } from './modules/catalog/catalog-ui.js?v=20260907-natural-species-v1';
 import { mountTopicBoard } from './modules/topic-board/topic-board-ui.js?v=20260907-topic-articles-v1';
 import { mountEntryPreview } from './modules/entry-preview/entry-preview-ui.js?v=20260907-luetten-v1';
 

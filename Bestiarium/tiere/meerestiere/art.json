@@ -1,0 +1,144 @@
+{
+  "id": "meerestiere",
+  "title": "Meerestiere",
+  "subtitle": "Leben zwischen Küste, Strömung und Tiefe",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 05",
+  "lead": "Unter der Oberfläche von Alerias Meeren liegen wandernde Schwärme, farbige Riffe und dunkle Tiefenreviere. Küstenvölker lesen ihre Bewegungen wie andere Menschen die Spuren des Waldes.",
+  "pullQuote": "Das Meer zeigt nur seine Wellen; sein größeres Leben bleibt darunter.",
+  "icon": {
+    "src": "../../assets/icons/meerestiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Meerestiere"
+  },
+  "hero": {
+    "src": "../../assets/species-art/meerestiere.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Delfin, farbenprächtiger Großfisch und Meeresschildkröte über einem sonnigen Riff",
+    "caption": "Neue Bildtafel · Leben in Alerias Meeren"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Meerestiere"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Meeresfauna"
+    },
+    {
+      "label": "Größe",
+      "value": "Von winzigen Rifftieren bis zu gewaltigen Wanderern"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Küsten, Riffe, offene See und Tiefsee"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Plankton, Pflanzen, Schalentiere, Fisch oder Aas"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Einzeln, in Schulen, Kolonien oder wandernden Familien"
+    },
+    {
+      "label": "Stärken",
+      "value": "Anpassung an Strömung, Druck und lange Wanderungen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Verschmutzte Buchten, übermäßiger Fang und gestörte Laichplätze"
+    },
+    {
+      "label": "Bedeutung",
+      "value": "Nahrung, Küstenkunde, Navigation und Gleichgewicht der Meere"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Meerestiere bewohnen den größten zusammenhängenden Lebensraum Alerias und bleiben dennoch schlechter erforscht als viele Arten an Land. Fischer kennen die oberflächennahen Schwärme, Taucher die Riffe, doch über die tieferen Zonen berichten meist nur Netze, Strandfunde und seltene Sichtungen.",
+        "Die Naturkunde trennt sie nach Lebensraum und Bewegungsweise. Manche Arten bleiben einem einzigen Riff treu, andere umrunden in langen Zügen halbe Kontinente."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Flache Küstengewässer sind reich an Licht, Pflanzen und Jungtieren. Riffe bieten Verstecke und feste Plätze, während die offene See ihre Bewohner zu ausdauernden Schwimmern macht. In der Tiefe ersetzen feine Sinne und Leuchtzeichen das Sonnenlicht.",
+        "Flussmündungen wechseln mit Gezeiten und Jahreszeiten zwischen Salz- und Süßwasser. Nur besonders anpassungsfähige Arten nutzen diese fruchtbaren, aber unsteten Gebiete dauerhaft."
+      ]
+    },
+    {
+      "id": "meer-und-mensch",
+      "title": "Meer & Mensch",
+      "paragraphs": [
+        "Küstengemeinschaften richten Fangzeiten nach Laichzügen aus und lassen geschützte Buchten unangetastet. Wo diese Regeln brechen, verschwinden zuerst die großen Tiere und später selbst die vertrauten Speisefische.",
+        "Delfine, wandernde Großfische und bestimmte Seevögel gelten Seeleuten als Wegweiser. Ihr plötzliches Meiden einer Route kann Stürme, fremde Strömungen oder eine größere Gefahr unter Wasser ankündigen."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Die alte Tafel enthielt noch keine benannten Arten. Das neue Register ordnet die Meeresfauna zunächst nach Lebensraum; regionale Namen können später darunter ergänzt werden.",
+    "groups": [
+      {
+        "id": "meerzonen",
+        "title": "Lebensgemeinschaften des Meeres",
+        "kicker": "Vorläufige naturkundliche Ordnung",
+        "description": "Jede Zone bringt eigene Körperformen, Farben und Wanderweisen hervor.",
+        "entries": [
+          {
+            "id": "kuestenbewohner",
+            "title": "Küstenbewohner",
+            "region": "Buchten, Tangwälder & Flussmündungen",
+            "description": "Anpassungsfähige Fische, Schalentiere und kleine Jäger, die Gezeiten, Brandung und wechselnden Salzgehalt ertragen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          },
+          {
+            "id": "riffbewohner",
+            "title": "Riffbewohner",
+            "region": "Warme Untiefen & Felsriffe",
+            "description": "Farbenreiche, ortstreue Arten, die zwischen Korallen, Spalten und Seegras Schutz und Nahrung finden.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          },
+          {
+            "id": "hochseetiere",
+            "title": "Hochseetiere",
+            "region": "Offene See",
+            "description": "Ausdauernde Schwarm- und Wandertiere mit stromlinienförmigen Körpern und feinem Sinn für Strömungen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          },
+          {
+            "id": "tiefenbewohner",
+            "title": "Tiefenbewohner",
+            "region": "Lichtlose Meeresgründe",
+            "description": "Langsame oder lauernde Arten, die Druck, Kälte und Dunkelheit mit empfindlichen Sinnen oder eigenem Leuchten meistern.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          },
+          {
+            "id": "meeressaeuger",
+            "title": "Meeressäuger",
+            "region": "Küsten & Wanderstraßen",
+            "description": "Luft atmende, soziale Schwimmer, die weite Wege zwischen Nahrungs- und Geburtsgebieten zurücklegen.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt"
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}

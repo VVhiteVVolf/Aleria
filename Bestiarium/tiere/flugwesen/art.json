@@ -1,0 +1,132 @@
+{
+  "id": "flugwesen",
+  "title": "Flugwesen",
+  "subtitle": "Gefiederte Bewohner von Himmel, Wald und Klippe",
+  "classification": "Tiere · Die natürlichen Arten",
+  "folio": "I / 03",
+  "lead": "Alerias Lüfte gehören zahllosen Vögeln: winzigen Blütensuchern, reisenden Schwärmen und mächtigen Jägern, deren Kreise am Himmel Wind und Wetter ankündigen.",
+  "pullQuote": "Ein aufsteigender Vogel liest den Wind wie ein Seefahrer die Strömung.",
+  "icon": {
+    "src": "../../assets/icons/flugwesen.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Flugwesen"
+  },
+  "hero": {
+    "src": "../../assets/species-art/flugwesen.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Roter Milan und heller Falke über blühenden Meeresklippen",
+    "caption": "Neue Bildtafel · Flugwesen über Alerias Küsten"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Flugwesen"
+    },
+    {
+      "label": "Typ",
+      "value": "Natürliche Tiere · Vögel"
+    },
+    {
+      "label": "Größe",
+      "value": "Von handkleinen Singvögeln bis zu großen Segelfliegern"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Nahezu alle Landschaften und Küsten"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Samen, Früchte, Insekten, Fisch oder Fleisch"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, paarweise oder in jahreszeitlichen Schwärmen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Flug, scharfes Sehen, Navigation und weite Wanderungen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Stürme, Verlust von Brutplätzen und lange Hungerperioden"
+    },
+    {
+      "label": "Bedeutung",
+      "value": "Botenzeichen, Wetterkunde, Jagd und Schädlingsregulierung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Flugwesen verbinden in Aleria Landschaften, die für Reisende durch Berge, Meer oder Wüste getrennt sind. Ihre Zugwege reichen über Grenzen und machen sie zu frühen Boten der Jahreszeiten.",
+        "Nicht alle Vögel leben ständig in der Luft. Viele verbringen den größten Teil des Tages am Boden, im Schilf oder in Baumkronen und nutzen den Flug vor allem zur Flucht, Jagd oder Wanderung."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Klippenbrüter suchen windoffene Felsbänder, Waldvögel dichte Kronen und Höhlen, während Wasservögel an Seen, Sümpfen und flachen Küsten rasten. Selbst Städte bieten Nischen, solange Dächer, Türme und Gärten Nahrung und Schutz gewähren.",
+        "Ihre Nester reagieren empfindlich auf Störung. Naturkundige markieren bekannte Brutwände in Karten und empfehlen Reisenden, während der Jungenzeit Abstand zu halten."
+      ]
+    },
+    {
+      "id": "wind-und-wanderung",
+      "title": "Wind & Wanderung",
+      "paragraphs": [
+        "Große Segler sparen Kraft, indem sie Aufwinde an Küsten und Berghängen nutzen. Kleinere Arten ziehen in dichten Schwärmen und orientieren sich an Sternen, Flussläufen und dem Stand der Sonne.",
+        "Verändert sich ein Zugweg plötzlich, gilt dies vielerorts als Hinweis auf frühe Kälte, Brände oder eine Störung in entfernten Lebensräumen."
+      ]
+    }
+  ],
+  "atlas": {
+    "title": "Besondere Exemplare",
+    "intro": "Zwei benannte Vogelarten sind aus der alten Sammlung überliefert.",
+    "groups": [
+      {
+        "id": "voegel",
+        "title": "Vögel",
+        "kicker": "Bekannte Arten",
+        "description": "Beobachtete Linien aus Wald und offenem Himmel.",
+        "entries": [
+          {
+            "id": "caoran",
+            "title": "Caoran",
+            "region": "Waldsäume & Hochland",
+            "description": "Ein kluger, ruffreudiger Vogel, der glänzende Samen und kleine Nüsse sammelt und versteckte Vorräte über Monate wiederfindet.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/flugwesen/caoran.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Überlieferte Bildtafel: Caoran"
+            }
+          },
+          {
+            "id": "rotmilan",
+            "title": "Rotmilan",
+            "region": "Offenes Land & Flusstäler",
+            "description": "Ein ausdauernder Segelflieger mit gegabeltem Schwanz, der Felder und Hänge in weiten, ruhigen Kreisen absucht.",
+            "href": null,
+            "status": "Eigenes Dossier vorgemerkt",
+            "image": {
+              "src": "../../assets/species-entries/flugwesen/rotmilan.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Überlieferte Bildtafel: Rotmilan"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "chapter": {
+    "id": "tiere",
+    "title": "Tiere"
+  }
+}
