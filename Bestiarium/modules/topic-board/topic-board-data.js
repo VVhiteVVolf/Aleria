@@ -1,16 +1,16 @@
-const topic = (id, title, description, note = '') => ({ id, title, description, note, href: null });
+const topic = (id, title, description, note = '', href = null) => ({ id, title, description, note, href });
 
 export const BESTIARY_TOPIC_GROUPS = [
   {
     id: 'sphaerenkunde', title: 'Infernale & celestiale Themen', number: '01', kind: 'Themenblatt',
     description: 'Über die Grenzen der bekannten Welt.',
     entries: [
-      topic('kalpa-morgath', 'Kalpa – Morgath', 'Ein Themenblatt zu Kalpa und Morgath.'),
-      topic('risse-manat', 'Risse – Manat', 'Ein Themenblatt zu Rissen und Manat.'),
-      topic('geweihte', 'Geweihte', 'Ein Themenblatt über Geweihte.'),
-      topic('gefallene', 'Gefallene', 'Ein Themenblatt über Gefallene.'),
-      topic('lichtalben', 'Lichtalben – Celestialer', 'Ein Themenblatt zur Verbindung der Lichtalben mit dem Celestialen.'),
-      topic('dunkelalben', 'Dunkelalben – Infernaler', 'Ein Themenblatt zur Verbindung der Dunkelalben mit dem Infernalen.')
+      topic('kalpa-morgath', 'Kalpa – Morgath', 'Morgath, Götterdämmerung und der kosmische Zyklus von Schöpfung und Untergang.', '', './themen/kalpa-morgath/index.html'),
+      topic('risse-manat', 'Risse – Manât', 'Der Große Spalt, Manât-Risse und die Fragmente verlorener göttlicher Essenz.', '', './themen/risse-manat/index.html'),
+      topic('geweihte', 'Geweihte', 'Göttliche Inkarnationen, ihre Mission, Entstehung und Wiedergeburt.', '', './themen/geweihte/index.html'),
+      topic('gefallene', 'Gefallene', 'Verbannte Inkarnationen zwischen göttlicher Herkunft, Sterblichkeit und Wiedergeburt.', '', './themen/gefallene/index.html'),
+      topic('lichtalben', 'Lichtalben – Celestiale', 'Diener der Göttlichen, ihre Tugenden, Fähigkeiten und weltlichen Einflüsse.', '', './themen/lichtalben/index.html'),
+      topic('dunkelalben', 'Dunkelalben – Infernale', 'Diener der Infernalen, geprägt von Verderbnis, Chaos und dunkler göttlicher Herkunft.', '', './themen/dunkelalben/index.html')
     ]
   },
   {

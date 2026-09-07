@@ -6,6 +6,7 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 
 - `modules/catalog`: die fünf Kapitel, 42 individuelle Bildtafeln, Suche, Filter und Darstellung der Wesen.
 - `modules/topic-board`: die 13 Themen- und Literaturverweise sowie ihre Darstellung als Themenwand.
+- `modules/topic-article`: gemeinsame statische Vorlage, Kapitelregister und Darstellung der ausgearbeiteten Themenseiten.
 - `modules/entry-preview`: gemeinsame Vorschau und die Entscheidung zwischen Vorschau-Button und vorhandenem Seitenlink.
 - `modules/book-shell`: gemeinsame Pergamentfarben, Typografie, Navigation und Fußzeile für Haupt- und Profilseiten.
 - `modules/creature-profile`: wiederverwendbare statische Profilvorlage, Profilregister und Anbindung der Vorschauen.
@@ -37,6 +38,14 @@ Galerie-Bildlinks tragen `data-bestiary-image-link`. Die Vite-Konfiguration beha
 
 Die frühere Bestiarium-Seite und ihre ausschließlich dort verwendeten Dateien wurden entfernt. Verzeichnisse und Portalseiten verweisen einheitlich auf `Bestiarium/index.html`; Animexx-Verlinkungen wurden nicht übernommen.
 
+## Wiederverwendbare Themenseiten
+
+Die sechs Einträge „Kalpa & Morgath“, „Risse & Manât“, „Geweihte“, „Gefallene“, „Celestiale“ und „Infernale“ in der Sphärenkunde führen auf ausgearbeitete lokale Seiten unter `themen/`. Ihre redaktionellen Quellen liegen jeweils als `thema.json` neben dem erzeugten `index.html`. Abschnitte, Unterkapitel, Merkpunkte und Fakten werden von einer gemeinsamen Vorlage dargestellt; Inhalte ohne überlieferten Text sind sichtbar als noch nicht ausgearbeitet gekennzeichnet.
+
+Jede Seite verwendet ein neu erzeugtes Aquarell-Icon aus `assets/topic-icons/`. Die verwendeten Bild-Prompts und Ausgabedaten stehen in `assets/topic-icon-prompts.json`. Bilder aus den alten Vorlagen wurden nicht übernommen. Das Feld `themeImage` bleibt zunächst `null`; die Vorlage zeigt dafür einen bewusst leeren, gerahmten Platz, bis ein Themenbild geliefert wird.
+
+Die Seiten werden mit `node Bestiarium/scripts/build-topic-articles.mjs` erzeugt. Mit `--check` wird geprüft, ob die eingecheckten HTML-Dateien zu Daten und Vorlage passen. Für eine weitere Themenseite werden ein Verzeichnis `themen/<id>/thema.json` und die zugehörige `id` in `modules/topic-article/topic-article-registry.mjs` ergänzt; die Themenwand erhält anschließend ihren relativen `href`.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -48,5 +57,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/catalog.test.mjs`
 
 `node --test Bestiarium/tests/creature-profiles.test.mjs`
+
+`node --test Bestiarium/tests/topic-articles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

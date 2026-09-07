@@ -1,4 +1,4 @@
-import { BESTIARY_TOPIC_GROUPS } from './topic-board-data.js?v=20260907-bestiarium-v1';
+import { BESTIARY_TOPIC_GROUPS } from './topic-board-data.js?v=20260907-topic-articles-v1';
 import { matchesEntry } from '../catalog/catalog-model.js?v=20260907-bestiarium-v1';
 import { createEntryLink } from '../entry-preview/entry-link.js?v=20260907-bestiarium-v1';
 

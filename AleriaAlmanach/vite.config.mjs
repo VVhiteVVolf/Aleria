@@ -9,6 +9,7 @@ import { ALDRIMAR_CLASS_IDS } from './modules/classes/aldrimar/aldrimar-class-re
 import { ALBEN_CLASS_IDS } from './modules/classes/alben/alben-class-registry.js';
 import { NORDMAENNER_CLASS_IDS } from './modules/classes/nordmaenner/nordmaenner-class-registry.js';
 import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/profile-registry.mjs';
+import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-article-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -74,6 +75,9 @@ export default defineConfig({
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),
         ...Object.fromEntries(CREATURE_PROFILE_IDS.map(id => [
           `bestiary-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen', id, 'index.html')
+        ])),
+        ...Object.fromEntries(TOPIC_ARTICLE_IDS.map(id => [
+          `bestiary-topic-${id}`, resolve(workspaceRoot, 'Bestiarium/themen', id, 'index.html')
         ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [
