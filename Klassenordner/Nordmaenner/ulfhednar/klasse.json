@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "ulfhednar",
+  "cultureId": "nordmaenner",
+  "name": "Ulfhednar",
+  "title": "Der Ulfhednar",
+  "subtitle": "Hautwechsler und Tierkrieger",
+  "aliases": [
+    "Ulfhednare"
+  ],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/LOjpDQS.png",
+  "illustration": "https://i.imgur.com/afimLLV.png",
+  "artwork": {
+    "source": "https://i.imgur.com/afimLLV.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Ulfhednar · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kämpfer, Kleriker, Barbar"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Ulfhednar ist mehr als nur eine wildere Variante des Berserkers. Er ist ein kriegerischer Kleriker im Dienst der nordischen Gottheit Skadia – und nur durch den Eintritt in ihren Kult kann man diesen Pfad beschreiten. Während der Berserker im Rausch das Tier im Inneren entfesselt, überschreitet der Ulfhednar eine weitere Grenze: Wenn sein Rausch den Höhepunkt erreicht, nimmt er die Gestalt eines Wolfes oder Bären an – als Werwolf oder Werbär.</p> <p>Er ist zugleich Priester und Krieger, gebunden an Rituale, Opfer und Lehren, die außerhalb des Kultes kaum verstanden werden. Seine Raserei ist nicht bloß emotional oder chemisch erzeugt, sondern spirituell gelenkt. Skadia ist nicht nur sein Schutz, sondern sein Ursprung.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Wurzeln der Ulfhednare reichen zurück in die Zeit der alten Norrnaigh-Druiden. Als die Norrnaigh begannen, sich vom albischen Pantheon zu entfernen, warnten die Druiden davor, die alten Götter zu vergessen. Doch eine große Hungersnot erschütterte die nördlichen Lande, und bald suchte man Schuldige. Die Druiden verloren an Einfluss – manche wurden vertrieben, andere verstummten oder verfielen selbst dunkleren Lehren.</p> <p>Ohne die Druiden verloren die Norrnaigh ihre klare Unterscheidung zwischen Gut und Böse. Es heißt, sie hörten das Flüstern Zatrachs und hielten es für die Stimme Skadias. In dieser religiösen Verwirrung entstanden neue, okkulte Auslegungen des Glaubens.</p> <p>Die ersten Ulfhednare waren Berserker, die diese neuen Lehren annahmen. Sie glaubten, Skadia verlange nicht nur Blut, sondern Verwandlung – eine Rückkehr zur ursprünglichen Wildheit. Durch Rituale, Opfer und geheime Initiationen entwickelten sie die Fähigkeit, ihre Raserei mit der Gottheit zu verbinden und in tierhafte Formen zu treten.</p> <p>Der heutige Skadia-Kult der Nordmänner unterscheidet sich deutlich vom südlichen, aldrimarischen Glauben, der sich der Alerischen Kirche angenähert hat. Im Norden blieb der Kult archaischer, roher – auch wenn viele der alten, offen okkulten Praktiken mit der Zeit abgeschwächt oder neu gedeutet wurden.</p> <p>In der Gesellschaft der Nordmänner werden Ulfhednare hoch verehrt. Sie gelten als Zeichen göttlicher Nähe, als lebendige Waffen Skadias. Doch in ihrem Schatten liegt stets ein Rest von Ehrfurcht – und ein Hauch jener alten, dunklen Lehren, aus denen sie einst hervorgingen.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Ulfhednar vereint die Raserei des Berserkers mit der geistlichen Bindung an Skadia. Seine zentrale Fähigkeit ist die kontrollierte oder rituell herbeigeführte Verwandlung in eine tierhafte Gestalt – meist Wolf oder Bär. Diese Transformation tritt ein, wenn sein berserkerischer Zustand den Höhepunkt erreicht und durch Gebete, Runen oder Opferhandlungen gelenkt wird.</p> <p>In menschlicher Form kämpft der Ulfhednar wie ein erfahrener Einhejar – mit Axt, Schwert oder schweren Schlagwaffen. Doch seine wahre Bedrohung entfaltet sich im Tierzustand. Als Werwolf ist er schnell, reißend und unnachgiebig. Als Werbär ist er nahezu unaufhaltsam, mit enormer Kraft, Widerstandsfähigkeit und schierer Präsenz auf dem Schlachtfeld.</p> <p>Neben der Verwandlung besitzt der Ulfhednar oft ein gewisses okkultes Gespür. Er erkennt Zeichen, liest Omen, deutet Träume und kann Rituale der Skadia vollziehen. Seine Raserei ist nicht blind, sondern von religiösem Ziel getragen. Er ist sowohl Frontbrecher als auch spiritueller Anführer für jene, die an die alte Wildheit glauben.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Fähigkeit zur tierhaften Transformation mit enormer Kampfkraft</li><li>Hohe Widerstandsfähigkeit im Rausch</li><li>Kombination aus Krieger und Kleriker</li><li>Starke psychologische Wirkung auf Feinde</li><li>Spirituelle Bindung an Skadia verleiht religiöse Autorität</li></ul> <h3>Schwächen</h3> <ul><li>Verwandlung oft an starken emotionalen oder rituellen Zustand gebunden</li><li>Gefahr des Kontrollverlustes bei unvollständiger Disziplin</li><li>Gesellschaftlich mit Ehrfurcht, aber auch mit Misstrauen betrachtet</li><li>Körperlich erschöpfend nach der Rückverwandlung</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Ulfhednar ist so ungewöhnlich wie sein Pfad. Seine bevorzugte Waffe ist häufig die Falx – eine gebogene, einschneidige Klinge, die mit reißender Bewegung geführt wird und sowohl im menschlichen als auch im halbtierischen Zustand effektiv bleibt. Daneben kommen Axt oder Sax vor, doch die Falx gilt als Sinnbild seines jagenden, schneidenden Stils.</p> <p>Vor der vollständigen Aufnahme in die Kreise der Ulfhednare muss ein Initiant eigenhändig einen Bären, Wolf oder sogar einen Warg erschlagen. Das Tier wird nicht nur getötet, sondern gehäutet – sein Fell wird zum Teil der eigenen Identität. Dieses Fell trägt der Ulfhednar als Umhang, Schulterpanzer oder nahezu vollständige Hülle. Es ist nicht bloß Rüstung, sondern Zeichen des überwundenen Tieres und der angenommenen Natur.</p> <p>Schwere Rüstungen sind bei Ulfhednaren unüblich. Bei einer vollständigen Verwandlung würden Metallplatten oder Kettenhemden reißen oder zerstört werden. Daher beschränken sie sich meist auf Fell, Leder und minimale Schutzkleidung. Einige besonders fanatische Ulfhednare töten sogar sogenannte Unholde – bestialischere, übernatürlich verzerrte Tierwesen – und tragen deren Häute als Trophäe und Schutzsymbol.</p> <p>Ihr Erscheinungsbild ist archaisch, roh und furchteinflößend. Wenig Metall, viel Fell, Runen und Opferzeichen – ihre Ausrüstung dient nicht dem höfischen Eindruck, sondern der Wildheit und der Bereitschaft, im nächsten Augenblick alles Menschliche hinter sich zu lassen.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Ulfhednar nimmt in der nordischen Gesellschaft eine besondere Stellung ein. Religiös betrachtet gilt er als einer der sichtbarsten Beweise für die Nähe zu Skadia. Seine Fähigkeit zur Verwandlung und seine Rolle als kriegerischer Kleriker machen ihn zu einer Figur von großer spiritueller Bedeutung. In religiösen Kreisen wird er respektiert, teilweise sogar ehrfürchtig behandelt.</p> <p>Gleichzeitig ist dieser Respekt stets von Furcht begleitet. Ein Ulfhednar überschreitet Grenzen – körperlich wie geistlich. Seine Nähe zu alten, okkulten Lehren und seine Fähigkeit, im Rausch Tiergestalt anzunehmen, erzeugen Distanz. Viele Nordmänner achten ihn, doch sie suchen nicht seine Nähe.</p> <p>Die meisten Ulfhednare leben ohnehin eher als Einzelgänger. Sie verweilen nicht dauerhaft in Dorfgemeinschaften, sondern ziehen zwischen Heiligtümern, Wäldern und Kriegsschauplätzen umher. Man hat selten viel mit ihnen zu tun – und genau das ist vielen auch recht.</p> <p>So stehen sie im gesellschaftlichen Gefüge zwischen Verehrung und Unbehagen: hoch angesehen als Werkzeuge Skadias, aber nie ganz Teil des gewöhnlichen Lebens.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Ulfhednar führt in der Regel keine tierischen Gefährten mit sich. Während andere Einhejaren Wölfe, Hunde oder Raben halten, sieht der Ulfhednar sich selbst als das Tier im Gefolge Skadias. Ein Wolf an seiner Seite wäre aus seiner Sicht überflüssig – oder gar eine Verzerrung dessen, was er verkörpert.</p> <p>Seine Bindung zur Tierwelt ist nicht extern, sondern innerlich. Er strebt nicht danach, ein Tier zu führen, sondern eines zu werden. In seinem Verständnis ist er Teil des Rudels der Göttin, nicht dessen Hirte.</p> <p>Zwar respektieren viele Ulfhednare Wölfe oder Bären als heilige Wesen Skadias, doch sie halten sie nicht wie Ravnar ihre Raben oder Veigir ihre Falken. Ein Ulfhednar braucht keinen tierischen Begleiter – er ist sein eigener Gefährte im Rausch.</p> <p>Diese Haltung verstärkt seinen Ruf als Einzelgänger. Wo andere Krieger ihre Macht durch Tiere symbolisieren, verkörpert der Ulfhednar sie unmittelbar.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "7dc04f2a41ba419f20c4f531cb549b1f4fe1b7da35d5074625f02cebc6100a8f"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/og7ATdM.png",
+    "width": 400,
+    "height": 400,
+    "caption": "Gefährten des Ulfhednar"
+  }
+}

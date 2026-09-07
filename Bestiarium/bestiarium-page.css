@@ -1,0 +1,68 @@
+.bestiary-cover { padding-top: 22px; }
+.cover-banner { border: 1px solid var(--line); padding: 5px; background: #c7b28b40; }
+.cover-banner img { display: block; width: 100%; height: auto; }
+.cover-copy { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; padding: 37px 40px 40px; }
+.cover-title > .eyebrow { color: var(--red); margin-bottom: 16px; font-size: 9px; }
+.cover-copy h1 { font-size: clamp(48px, 5vw, 69px); line-height: .98; font-weight: 400; letter-spacing: -.045em; }
+.cover-copy h1 span { display: block; font-size: 22px; font-style: italic; letter-spacing: .015em; margin-bottom: 8px; color: var(--muted); }
+.cover-copy h1 em { display: block; font-size: .48em; font-weight: 400; letter-spacing: -.025em; margin: 11px 0 0 3px; color: var(--red); }
+.cover-intro { max-width: 430px; font-size: 15px; line-height: 1.8; margin: 0 0 23px; color: #675844; }
+.cover-colophon { color: var(--muted); font-size: 10px; letter-spacing: .03em; font-style: italic; margin-top: 16px; line-height: 1.7; }
+.cover-colophon > span { margin: 0 7px; }
+.archivist-quote { display: flex; align-items: center; justify-content: center; gap: 38px; border-block: 3px double var(--line); padding: 25px 20px; text-align: center; }
+.archivist-quote blockquote { color: #68583f; font-style: italic; font-size: 16px; line-height: 1.65; }
+.archivist-quote cite { display: block; margin-top: 9px; font-size: 9px; font-style: normal; text-transform: uppercase; letter-spacing: .14em; }
+.quote-ornament { color: var(--red); font-size: 32px; }
+.quote-ornament:last-child { transform: rotate(180deg); }
+.book-layout { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 46px; padding: 56px 0 70px; }
+.chapter-register { border-right: 1px solid var(--line-soft); padding-right: 23px; }
+.register-sticky { position: sticky; top: 30px; }
+.chapter-register .eyebrow { padding: 0 10px 20px; font-size: 10px; }
+.chapter-register nav { display: flex; flex-direction: column; gap: 6px; }
+.chapter-register nav a { display: flex; align-items: baseline; gap: 13px; font-size: 13px; line-height: 1.6; padding: 10px 9px; text-decoration: none; transition: background .15s, color .15s; }
+.chapter-register nav a:hover { background: #d9c9a84d; color: var(--red); }
+.chapter-register nav a > span { flex: 0 0 18px; color: var(--red); font-size: 10px; }
+.chapter-register .register-divider { margin-top: 16px; padding-top: 23px; border-top: 1px solid var(--line-soft); }
+.register-note { margin: 36px 8px 0; color: var(--muted); }
+.register-note > span { color: var(--red); font-size: 26px; }
+.register-note p { font-style: italic; margin: 13px 0 10px; font-size: 15px; }
+.register-note small { font-size: 12px; line-height: 1.8; display: block; }
+.back-to-top { display: inline-block; margin: 27px 8px 0; font-size: 10px; text-decoration: none; color: var(--muted); }
+.book-content { min-width: 0; }
+.noscript-note { padding: 30px; border: 1px solid var(--line); }
+@media (max-width: 1050px) {
+  .cover-copy { padding-inline: 15px; gap: 35px; }
+  .book-layout { grid-template-columns: 170px minmax(0, 1fr); gap: 28px; }
+  .chapter-register { padding-right: 14px; }
+}
+@media (max-width: 780px) {
+  .cover-copy { padding: 30px 8px; gap: 25px; }
+  .cover-copy h1 { font-size: 49px; }
+  .cover-title > .eyebrow { font-size: 8px; }
+  .cover-intro { font-size: 14px; }
+  .archivist-quote { gap: 20px; }
+  .archivist-quote blockquote { font-size: 14px; }
+  .book-layout { display: block; padding-top: 25px; }
+  .chapter-register { border-right: 0; padding: 0; margin-bottom: 35px; }
+  .register-sticky { position: static; }
+  .chapter-register .eyebrow { padding: 0 0 12px; }
+  .chapter-register nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-block: 1px solid var(--line-soft); }
+  .chapter-register nav a { font-size: 11px; padding: 10px 4px; gap: 6px; }
+  .chapter-register .register-divider { border: 0; padding: 10px 4px; margin: 0; }
+  .register-note, .back-to-top { display: none; }
+}
+@media (max-width: 560px) {
+  .bestiary-cover { padding-top: 16px; }
+  .cover-banner { padding: 2px; }
+  .cover-copy { display: block; padding: 26px 6px; }
+  .cover-copy h1 { font-size: clamp(50px, 13.5vw, 69px); }
+  .cover-copy h1 span { font-size: 21px; }
+  .cover-title > .eyebrow { font-size: 8px; margin-bottom: 18px; }
+  .cover-intro { font-size: 15px; line-height: 1.75; margin-block: 23px; }
+  .cover-colophon { font-size: 10px; }
+  .archivist-quote { padding: 23px 8px; }
+  .quote-ornament { display: none; }
+  .archivist-quote blockquote { font-size: 14px; }
+  .chapter-register nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter-register nav a { font-size: 12px; }
+}

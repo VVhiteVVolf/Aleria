@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "mormaer",
+  "cultureId": "alben",
+  "name": "Mormaer",
+  "title": "Der Mormaer",
+  "subtitle": "Beweglicher Reiter des Tiarnatum",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/vCXWd55.png",
+  "illustration": "https://i.imgur.com/KaOQmz2.png",
+  "artwork": {
+    "source": "https://i.imgur.com/KaOQmz2.png",
+    "width": 500,
+    "height": 247,
+    "caption": "Mormaer · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Tiarna; häufig wohlhabender Adel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Leichte Kavallerie, Flankierer und Verfolger"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Wurfspeere, Lanze oder Schwert"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Leichte Ketten- oder Lederpanzerung"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Reitet bevorzugt Curragh- oder Tirashan-Pferde"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Mormaer ist der berittene Tiarna der neuen Zeit. Sein Name setzt sich aus Mór – groß – und Maer – Edler, Verwalter – zusammen. Ursprünglich war es kein ehrender Titel, sondern eine nüchterne Bezeichnung für jene wohlhabenden Adligen, die zwar Stand besaßen, jedoch nicht immer als vollwertige Krieger galten.</p> <p>Berittene Tiarna hatte es schon immer gegeben. In den frühen Jahrhunderten spielte es keine Rolle, ob ein Tiarna zu Fuß kämpfte, nackt in Raserei stürmte oder mit Speer und Bogen auftrat – er war schlicht ein Tiarna. Erst mit dem Aufkommen klarer Unterformen wie dem Cateran oder dem Serf begann man, die Art des Kampfes stärker zu benennen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den Jahren zunehmender Konflikte mit den Nordmännern zeigte sich, dass viele Adlige zwar wohlhabend waren, aber nicht notwendigerweise als kampferfahrene Tiarna galten. Sie ritten, weil sie es sich leisten konnten. In Schlachten blieben sie oft im Hintergrund oder nutzten ihre Pferde zur schnellen Flucht.</p> <p>Gerade deshalb war „Mormaer“ zunächst eine spöttische Bezeichnung. Hochmütige Tiarna sahen in ihnen mehr reitende Grundherren als ernsthafte Kämpfer. Sie waren groß im Stand, doch nicht immer groß im Gefecht.</p> <p>Die Realität der Kriege änderte diese Wahrnehmung. Beweglichkeit wurde entscheidend. Schnelle Flankenangriffe, rasches Umgruppieren und das Verfolgen zersprengter Gegner erwiesen sich als wertvolle Fähigkeiten. Die berittenen Adligen wurden nicht länger geduldet – sie wurden reformiert. Aus wohlhabenden Reitern wurden strukturierte Kavalleristen.</p> <p>Mit der Zeit kristallisierte sich heraus, dass die Alben keine schwere, frontal brechende Kavallerie benötigten wie manche ihrer Nachbarn. Stattdessen entwickelten die Mormaer einen eigenen Stil: agil, wendig und schnell. Sie ritten auf Curragh- oder Tirashan-Pferden, agil und ausdauernd, ideal für Schockangriffe und rasche Rückzüge.</p> <p>Viele Mormaer entstammen den Schulen des Serf oder des Airig. Sie führen Wurfspeere, Lanzen oder Schwerter, je nach Ausrichtung. Doch unabhängig von ihrer Waffe bleibt ihr Kern derselbe: Sie sind die bewegliche Klinge des Heeres – einst verspottet, heute unverzichtbar.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Mormaer beherrscht in erster Linie den Kampf aus der Bewegung. Seine Stärke liegt nicht im starren Halten einer Linie, sondern im Tempo. Er nutzt Geschwindigkeit, um Druckpunkte zu setzen, Flanken zu bedrohen und auseinanderbrechende Feinde zu verfolgen.</p> <p>Im Gefecht führt er häufig Wurfspeere, die im Anritt geschleudert werden, bevor es zum Nahkontakt kommt. Danach folgen Lanze oder Schwert, geführt aus dem Sattel mit kontrollierter Wucht. Anders als schwere Reiterei setzt der Mormaer nicht auf massiven Durchbruch, sondern auf gezielte Schockmomente – rasch hinein, rasch wieder heraus.</p> <p>Er ist geschult im koordinierten Reiten in kleineren Verbänden, im schnellen Richtungswechsel und im Nutzen von Gelände. Hügel, lichte Wälder oder offene Ebenen werden von ihm nicht gemieden, sondern taktisch genutzt. Viele Mormaer besitzen zudem solide Kenntnisse im Fußkampf, insbesondere wenn sie ursprünglich aus den Reihen der Airig oder Serf stammen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Hohe Mobilität und Geschwindigkeit</li><li>Effektiv in Flankenangriffen und Verfolgung</li><li>Flexible Kombination aus Wurf- und Nahkampf</li><li>Gute Anpassungsfähigkeit an wechselndes Gelände</li><li>Psychologischer Effekt durch schnelle Schockangriffe</li></ul> <h3>Schwächen</h3><ul><li>Keine schwere Durchbruchskraft wie gepanzerte Kavallerie</li><li>Abhängig vom Zustand und Schutz des Pferdes</li><li>Im abgesessenen Zustand nur bedingt überlegen</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines Mormaer ist auf Geschwindigkeit und Beweglichkeit abgestimmt. Im Mittelpunkt steht ein zuverlässiges Reitpferd, meist ein Curragh oder Tirashan, wendig, ausdauernd und an schnelle Richtungswechsel gewöhnt. Anders als schwere Schlachtrösser sind diese Tiere nicht für brachiale Durchbrüche gezüchtet, sondern für Tempo und Kontrolle.</p> <p>Als Bewaffnung führt der Mormaer häufig mehrere Wurfspeere, die im Anritt eingesetzt werden, bevor es zum direkten Zusammenstoß kommt. Ergänzend trägt er eine Lanze oder ein Schwert, je nach persönlicher Ausrichtung. Viele kombinieren diese mit einer leichten Seitenwaffe.</p> <p>Seine Rüstung ist leichter als die eines stark gepanzerten Tiarna. Bewegliche Ketten- oder Lederpanzerung ist üblich, ergänzt durch Helm und Armschutz. Schutz wird gewählt, ohne die Wendigkeit einzuschränken. Der Mormaer muss schnell sein – zu Pferd wie im Gefecht.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Mormaer hat einen bemerkenswerten Wandel durchlaufen. Einst als spöttische Bezeichnung für wohlhabende, aber kampfuntaugliche Adlige gedacht, wurde der Titel durch Leistung rehabilitiert. Heute gilt der Mormaer als unverzichtbarer Bestandteil der albischen Heere.</p> <p>Er steht für Anpassungsfähigkeit und Reformwillen innerhalb des Adels. Während konservative Tiarna anfangs skeptisch waren, erkannte man bald den strategischen Wert beweglicher Reiterei. In modernen Feldzügen gelten Mormaer als entscheidende Kraft bei schnellen Reaktionen, Grenzsicherung und Verfolgung.</p> <p>Innerhalb der Gesellschaft genießen sie Anerkennung, jedoch nicht aufgrund alter Titel, sondern wegen ihrer praktischen Wirksamkeit. Der Mormaer symbolisiert die Fähigkeit der Alben, aus Spott Stärke zu formen – und aus Wohlstand Wehrkraft zu machen.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Mormaer ist untrennbar mit seinem Pferd verbunden. Seit den frühen Tagen bevorzugten die albenstämmigen Reiter zwei eigene Zuchtlinien: das Curragh und das Tirashan.</p> <p>Das Curragh ist ein schlankes, wendiges Waldpferd. Es bewegt sich sicher auf unebenem Boden, reagiert schnell auf Zügel und Gewicht und ist für abrupte Richtungswechsel geschaffen. Bei Hengsten trägt es ein markantes Geweih, das ihm eine beinahe mythische Erscheinung verleiht. Es ist kein schweres Schlachtross, sondern ein Tier für Geschwindigkeit und präzise Bewegung.</p> <p>Das Tirashan ist enger verwandt, jedoch kräftiger gebaut. Es trägt kein Geweih, ist robuster im Körperbau und eignet sich besser für längere Märsche oder härtere Gefechte. Es verbindet Ausdauer mit Stabilität und wurde häufig von Mormaer gewählt, die näher am direkten Zusammenstoß operieren.</p> <p>Mit der Zeit öffneten sich die Alben auch fremden Zuchtlinien. Das Ceffyl der cenyrischen Ritter oder andere Kavalleriepferde erwiesen sich in manchen Aspekten als leistungsfähiger, insbesondere in strukturierten Feldschlachten. Dennoch schwören viele Mormaer bis heute auf Curragh und Tirashan.</p> <p>Nicht allein aus Tradition – sondern weil diese Tiere auf albischem Boden geboren, an seine Wälder und Hügel angepasst und über Generationen mit ihren Reitern gewachsen sind. Für einen Mormaer ist das Pferd kein austauschbares Werkzeug, sondern Teil seiner Identität.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "228d359a4e3e67be63ee50db37b8c02e78befd1c32c32d4f7774a3cedbac172a"
+  }
+}

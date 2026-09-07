@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "stjorn",
+  "cultureId": "nordmaenner",
+  "name": "Stjorn",
+  "title": "Der Stjorn",
+  "subtitle": "Speerkämpfer des Nordens",
+  "aliases": [],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/YmjS2bm.png",
+  "illustration": "https://i.imgur.com/lpgHryz.png",
+  "artwork": {
+    "source": "https://i.imgur.com/lpgHryz.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Stjorn · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kämpfer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Begriff Stjorn entstammt dem alten norrnaigh Wort für Steuern, Leiten oder das Ruder übernehmen. So wie ein Jarl die Stjorn über sein Reich ausübt, übernimmt der Stjorn die Führung im Gefecht. Er ist kein gewöhnlicher Krieger, sondern ein Einhejar – ein Huskarl von Rang, der in der Kunst der Stangenwaffe, insbesondere des Speers, unterwiesen wird.</p> <p>Der Stjorn steht nicht nur in der Front – er ordnet sie. Er bewegt Hirds, hält Linien zusammen, gibt Zeichen zum Vorrücken oder Zurückweichen. Wo andere schlagen, dort lenkt er. Sein Speer ist nicht nur Waffe, sondern Zeichen seiner Rolle: Reichweite, Übersicht, Führung.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Tagen der Norrnaigh, als Clans noch lose Verbände waren und Kriegszüge von improvisierten Heerbannen getragen wurden, bedurfte es erfahrener Krieger, die den Kampf koordinieren konnten. Diese Einhejaren übernahmen im Gefecht die Rolle des „Steuermannes“ – nicht auf See, sondern im Schlachtgetümmel. Sie gaben Richtung, hielten den Schildwall geschlossen und sorgten dafür, dass der Heerbann nicht im Chaos versank.</p> <p>Mit der Zeit erhielt diese Rolle einen eigenen Beinamen: Stjorn. Ursprünglich bezeichnete er die Fähigkeit zu führen und zu lenken, doch da viele dieser Einhejaren den Speer bevorzugten – eine Waffe, die Übersicht und Distanz im Gefecht gewährt – wurde der Name zunehmend mit dieser Waffengattung verbunden.</p> <p>Heute versteht man unter einem Stjorn jenen Einhejar, der den Speer oder eine andere Stangenwaffe führt und im Gefüge der nordischen Heere als taktischer Anführer innerhalb der Linie dient. Er ist Bindeglied zwischen Jarlen und Hird, zwischen Befehl und Ausführung – ein Krieger, der nicht nur kämpft, sondern das Gefecht lenkt.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Stjorn vereint die Rolle des Frontkämpfers mit jener des Lenkers im Gefecht. Seine Hauptwaffe ist der Speer oder eine andere Stangenwaffe, die ihm Reichweite, Übersicht und Kontrolle über den Raum verschafft. Er beherrscht nicht nur den Stoß, sondern auch das Abdrängen, Haken, Niederziehen und das gezielte Öffnen von Lücken in gegnerischen Linien.</p> <p>Als Einhejar ist er geschult darin, Heerscharen von Hirds zu ordnen. Er erkennt Schwachstellen, gibt Handzeichen, ruft Kommandos und sorgt dafür, dass der Schildwall nicht bricht. Seine Ausbildung umfasst das Bewegen von Formationen, das koordinierte Vorrücken sowie das rechtzeitige Zurücknehmen einzelner Glieder.</p> <p>Im Gegensatz zum einfachen Hird ist der Stjorn mit taktischem Denken vertraut. Er versteht Gelände, Timing und Druckaufbau. Seine Fähigkeit liegt nicht allein im Töten, sondern im Lenken des Gefechtsflusses. In kleineren Gefechten übernimmt er die Führung eines Heerbannes, in größeren steht er unter Jarlen oder Thanen als deren verlängerter Arm in der Front.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Hohe Reichweite und Kontrolle durch Speer oder Stangenwaffe</li><li>Fähigkeit, Formationen zu führen und zu stabilisieren</li><li>Gute Übersicht im Gefecht</li><li>Stark im Halten enger Engstellen oder im Vorstoß geschlossener Reihen</li><li>Kombination aus Kampfkraft und taktischem Verständnis</li></ul> <h3>Schwächen</h3> <ul><li>Weniger effektiv im engen Einzelduell gegen sehr mobile Gegner</li><li>Abhängig von Disziplin der unterstellten Hirds</li><li>Größere Waffe kann in unübersichtlichem Gelände hinderlich sein</li><li>Keine hochformalisierte Duelltechnik wie südliche Ritter</li><li>Zielscheibe für feindliche Fernkämpfer aufgrund seiner Führungsrolle</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Stjorn unterscheidet sich sichtbar von jener eines gewöhnlichen Hird. Als Einhejar trägt er in der Regel hochwertigere und besser gepflegte Ausrüstung, die sowohl seiner Stellung als auch seiner Aufgabe im Gefecht gerecht wird.</p> <p>Seine Hauptwaffe ist der Speer oder eine andere Stangenwaffe – oft länger, schwerer und stabiler gefertigt als jene der einfachen Krieger. Manche führen einen breiten Flügelspeer zum Halten der Linie, andere eine Hellebarden-ähnliche Stangenwaffe zum Niederziehen und Öffnen von Formationen. Der Rundschild bleibt jedoch fester Bestandteil seiner Ausrüstung, auch wenn er ihn situativ anders einsetzt als der einfache Hird.</p> <p>In Bezug auf Schutz trägt der Stjorn meist ein solides Kettenhemd, verstärkt durch Leder- oder Fellschichten, sowie einen gut gearbeiteten Helm, der ihn im Gefecht erkennbar macht. Oft zieren Runen, Clanzeichen oder Rangabzeichen seine Rüstung – weniger aus Eitelkeit als zur klaren Identifikation im Kampfgetümmel.</p> <p>Neben seiner Waffe führt er häufig ein Kurzschwert oder Sax als Seitenwaffe. Da er im Gefecht Kommandos gibt, sind auch Horn, Signalruf oder Handzeichen Teil seiner Praxis, wenn auch nicht zwingend Teil seiner physischen Ausrüstung. Insgesamt ist seine Ausstattung funktional, robust und auf Führung im Gefecht ausgelegt – nicht auf Prunk, sondern auf Kontrolle und Durchsetzungskraft.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Stjorn ist die gängigste Form der Einhejaren. Wer aus dem Hird aufsteigt, aber weder außergewöhnliche Raserei, besondere Magiebegabung noch herausragende Klingenmeisterschaft zeigt, wird meist zum Stjorn ausgebildet. Das bedeutet jedoch keineswegs, dass Stjorn geringgeschätzt wären – im Gegenteil. Sie bilden die tragende Mehrheit der kriegerischen Führungsschicht unterhalb der Jarle und Thanen.</p> <p>Die Speer- und Stangenwaffentechnik gilt im Norden als praktisch, zweckmäßig und rasch erlernbar. Selbst ein Bauer kann innerhalb weniger Wochen lernen, mit dem Speer zu stoßen, Abstand zu halten und im Verband zu kämpfen. Das macht diese Waffengattung zum idealen Werkzeug einer wehrhaften Gesellschaft. Ein Schwert hingegen verlangt oft jahrelange Übung, um wirklich verstanden und gemeistert zu werden – eine Investition, die nicht jeder leisten kann oder muss.</p> <p>Darum verkörpert der Stjorn weniger das Bild des außergewöhnlichen Einzelkämpfers, sondern das des verlässlichen Anführers im Gefüge. Er steht für Stabilität, Ordnung und Führung im Schildwall. In vielen Reiktümern gilt: Ohne Stjorn keine bewegliche Front, ohne bewegliche Front kein Sieg. So ist der Stjorn nicht die glänzendste, aber die tragendste Erscheinung unter den Einhejaren – ein Krieger, dessen Wert sich im Bestand der Linie zeigt, nicht im Glanz des Duells.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Anders als bei den Rittern Cenyrs – wie den Teulu oder den Tiarna – ist es für einen Stjorn keineswegs selbstverständlich, beritten zu kämpfen. Das Reiten ist im Norden keine universelle Standesfähigkeit, sondern eine Spezialisierung, die bestimmten Kasten oder Clans vorbehalten ist. Pferde existieren, doch sie sind Arbeits- oder Transporttiere, keine automatische Verlängerung des Kriegerstandes.</p> <p>Der Stjorn ist in erster Linie ein Kämpfer zu Fuß. Seine Rolle im Schildwall, seine Führung im Verband und seine Nutzung der Stangenwaffe sind auf festen Stand ausgelegt. Ein berittener Stjorn ist möglich, aber selten – und dann eher aus pragmatischen Gründen als aus kultureller Erwartung.</p> <p>Auch tierische Gefährten wie Hunde oder Wölfe sind für Stjorn untypisch. Solche Bindungen finden sich eher bei spezialisierten Clans oder einzelnen Kriegern mit entsprechender Herkunft. Der Stjorn steht für Ordnung, Struktur und Gefechtslenkung – nicht für persönliche Totemtiere oder symbolische Begleiter.</p> <p>Sein wahrer „Gefährte“ ist der Heerbann, den er führt. Seine Nähe gilt der Linie, nicht einem Tier. Seine Stärke liegt im Verband, nicht in individueller Exotik.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "978344d2caba080dbed46e3e7c812865ab0a19390dc5ba0f2d741811c18abc46"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/og7ATdM.png",
+    "width": 400,
+    "height": 400,
+    "caption": "Gefährten des Stjorn"
+  }
+}

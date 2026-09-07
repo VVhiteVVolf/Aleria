@@ -1,0 +1,132 @@
+.profile-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; padding-block: 24px 0; font-size: 11px; color: var(--muted); }
+.profile-breadcrumb a { text-decoration: none; }
+.profile-breadcrumb a:hover { color: var(--red); text-decoration: underline; }
+.profile-breadcrumb > span:last-child { color: var(--red); }
+.profile-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 75px; align-items: center; padding: 25px 40px 37px; }
+.profile-hero-copy > .eyebrow { color: var(--red); font-size: 9px; }
+.profile-hero-copy > .eyebrow span { margin: 0 7px; }
+.profile-hero h1 { font-size: clamp(80px, 8.5vw, 118px); font-weight: 400; letter-spacing: -.065em; line-height: 1; margin: 20px 0 12px; }
+.profile-hero h1 > span { display: block; }
+.profile-hero h1 .profile-title-tail { color: var(--red); font-size: .42em; font-style: italic; letter-spacing: -.025em; margin-top: 4px; }
+.profile-subtitle { color: var(--red); font-size: 28px; font-style: italic; letter-spacing: -.015em; }
+.profile-lead { font-size: 17px; line-height: 1.9; max-width: 470px; margin: 26px 0 22px; color: #665742; }
+.profile-habitats { display: flex; flex-wrap: wrap; gap: 8px; padding: 18px 0; margin-bottom: 20px; border-block: 1px solid var(--line-soft); }
+.profile-habitats span { font-size: 10px; color: var(--green); padding-right: 10px; }
+.profile-habitats span + span { border-left: 1px solid var(--line); padding-left: 17px; }
+.profile-gallery-shortcut { display: inline-block; font-size: 11px; margin: 18px 0 0 20px; text-underline-offset: 4px; color: var(--muted); }
+.profile-portrait { margin-left: 10px; padding: 9px; border: 1px solid var(--line); background: #faf2df55; box-shadow: 6px 8px 0 #7b644d0b; transform: rotate(1deg); }
+.profile-portrait img { display: block; width: 100%; height: auto; max-height: 615px; object-fit: contain; }
+.profile-portrait figcaption { display: flex; justify-content: space-between; gap: 15px; padding: 12px 6px 4px; font-size: 9px; color: var(--muted); font-style: italic; line-height: 1.6; }
+.profile-pullquote { display: flex; align-items: center; justify-content: center; gap: 26px; border-block: 3px double var(--line); padding: 24px 30px; text-align: center; }
+.profile-pullquote p { font-size: 20px; line-height: 1.65; font-style: italic; color: var(--green); }
+.profile-pullquote > span { color: var(--red); font-size: 28px; }
+.profile-pullquote > span:last-child { transform: rotate(180deg); }
+.profile-book { display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 34px; padding-block: 50px 65px; }
+.profile-register { border-right: 1px solid var(--line-soft); padding-right: 19px; }
+.profile-register > div { position: sticky; top: 28px; }
+.profile-register .eyebrow { font-size: 9px; padding: 0 6px 15px; }
+.profile-register nav { display: flex; flex-direction: column; gap: 3px; }
+.profile-register nav a { display: flex; align-items: baseline; gap: 10px; padding: 10px 6px; font-size: 12px; text-decoration: none; line-height: 1.6; }
+.profile-register nav a:hover { background: #d3c09b40; color: var(--red); }
+.profile-register nav span { flex: 0 0 17px; color: var(--red); font-size: 9px; }
+.profile-register .profile-register-extra { margin-top: 14px; padding-top: 18px; border-top: 1px solid var(--line-soft); }
+.profile-register-back { display: block; font-size: 11px; color: var(--muted); text-decoration: none; margin: 26px 6px 0; }
+.profile-content, .profile-narrative { min-width: 0; }
+.profile-reading { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 35px; align-items: start; }
+.profile-section { scroll-margin-top: 28px; }
+.profile-section + .profile-section { margin-top: 35px; padding-top: 29px; border-top: 1px solid var(--line-soft); }
+.profile-section-heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 23px; }
+.profile-section-heading > span { color: var(--red); font-size: 12px; }
+.profile-section-heading h2 { font-size: 29px; font-weight: 400; line-height: 1.2; letter-spacing: -.025em; }
+.profile-prose { color: #554a3b; font-size: 15px; line-height: 1.9; }
+.profile-prose p + p { margin-top: 17px; }
+.profile-narrative .profile-section:first-child .profile-prose > p:first-child::first-letter { float: left; font-size: 57px; line-height: .8; padding: 11px 7px 0 0; color: var(--red); }
+.profile-narrative-after { border-top: 3px double var(--line); margin-top: 40px; padding-top: 35px; }
+.profile-narrative-after .profile-section:first-child .profile-prose > p:first-child::first-letter { float: none; font-size: inherit; line-height: inherit; padding: 0; color: inherit; }
+.profile-facts { border: 1px solid var(--line); padding: 24px 22px 15px; background: #f9f0da55; box-shadow: inset 0 0 0 5px #cdbd9c24; }
+.profile-facts > .eyebrow { font-size: 8px; }
+.profile-facts h2 { font-size: 27px; font-weight: 400; margin-top: 10px; }
+.profile-facts dl { margin: 20px 0 0; }
+.profile-facts dl > div { border-top: 1px solid var(--line-soft); padding: 14px 0; }
+.profile-facts dt { text-transform: uppercase; letter-spacing: .12em; font-size: 9px; color: var(--red); margin-bottom: 7px; }
+.profile-facts dd { margin: 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.facts-ornament { display: block; text-align: center; font-size: 31px; color: var(--red); }
+.profile-lineages { border-top: 3px double var(--line); padding-top: 35px; margin-top: 40px; }
+.profile-lineages > .profile-prose { max-width: 850px; }
+.lineage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 25px; }
+.lineage-card { border: 1px solid var(--line); background: #f7efdd4d; padding: 20px 17px; min-width: 0; }
+.lineage-card > .eyebrow { font-size: 8px; letter-spacing: .09em; }
+.lineage-card h3 { font-size: 28px; font-weight: 400; margin: 11px 0 18px; }
+.lineage-image-link { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 0; border: 1px solid var(--line-soft); background: transparent; text-decoration: none; }
+.lineage-image-link img { display: block; width: 100%; height: auto; aspect-ratio: 3/4; object-fit: contain; mix-blend-mode: multiply; }
+.lineage-image-label { display: block; width: 100%; padding: 12px 5px; font-size: 10px; background: #ded0ad55; color: var(--red); border-top: 1px solid var(--line-soft); }
+.lineage-image-link:hover { border-color: var(--red); }
+.lineage-description { font-size: 12px; line-height: 1.85; color: var(--muted); margin-top: 20px; }
+.lineage-afterword { margin-top: 23px; font-style: italic; }
+.profile-trivia { border-left: 2px solid var(--line); padding: 20px 25px; background: #cbbb9726; margin-top: 45px; scroll-margin-top: 28px; }
+.profile-trivia h2 { font-size: 25px; font-weight: 400; margin: 10px 0 12px; }
+.profile-trivia > p:last-child { font-size: 13px; color: var(--muted); line-height: 1.85; }
+.profile-noscript { border: 1px solid var(--line); padding: 20px; margin-bottom: 30px; font-size: 13px; line-height: 1.8; }
+@media (max-width: 1200px) {
+  .profile-hero { gap: 40px; padding-inline: 15px; }
+  .profile-reading { grid-template-columns: minmax(0, 1fr) 235px; gap: 25px; }
+  .profile-facts { padding-inline: 17px; }
+  .profile-book { grid-template-columns: 155px minmax(0, 1fr); gap: 25px; }
+  .lineage-grid { gap: 14px; }
+  .lineage-card { padding-inline: 13px; }
+}
+@media (max-width: 1000px) {
+  .profile-book { display: block; padding-top: 27px; }
+  .profile-register { border-right: 0; padding: 0 0 30px; }
+  .profile-register > div { position: static; }
+  .profile-register nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-block: 1px solid var(--line-soft); }
+  .profile-register .profile-register-extra { border: 0; margin: 0; padding: 10px 6px; }
+  .profile-register-back { display: none; }
+  .profile-reading { grid-template-columns: minmax(0, 1fr) 260px; }
+  .profile-subtitle { font-size: 25px; }
+  .profile-lead { font-size: 15px; }
+  .profile-portrait { margin: 0; }
+  .profile-gallery-shortcut { margin-left: 0; display: block; }
+}
+@media (max-width: 700px) {
+  .profile-hero { gap: 23px; padding: 25px 5px; }
+  .profile-hero h1 { font-size: 70px; }
+  .profile-subtitle { font-size: 21px; }
+  .profile-hero-copy > .eyebrow { font-size: 8px; }
+  .profile-habitats { margin-bottom: 15px; padding: 14px 0; }
+  .profile-habitats span { font-size: 9px; }
+  .profile-habitats span + span { padding-left: 0; border-left: 0; }
+  .profile-portrait figcaption { flex-direction: column; gap: 3px; }
+  .profile-pullquote p { font-size: 18px; }
+  .profile-reading { display: flex; flex-direction: column; }
+  .profile-facts { order: -1; width: 100%; padding: 22px; }
+  .profile-facts dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 25px; }
+  .facts-ornament { display: none; }
+  .profile-narrative { margin-top: 5px; }
+  .lineage-grid { grid-template-columns: 1fr; gap: 20px; }
+  .lineage-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 20px; padding: 20px; }
+  .lineage-card > .eyebrow, .lineage-card h3 { grid-column: 1 / -1; }
+  .lineage-description { margin-top: 0; align-self: center; }
+}
+@media (max-width: 500px) {
+  .profile-breadcrumb { padding-top: 20px; font-size: 10px; }
+  .profile-hero { display: flex; flex-direction: column; gap: 30px; }
+  .profile-hero h1 { font-size: 89px; }
+  .profile-hero h1 .profile-title-tail { font-size: .5em; }
+  .profile-subtitle { font-size: 26px; }
+  .profile-lead { font-size: 16px; line-height: 1.85; }
+  .profile-gallery-shortcut { display: inline-block; margin-left: 17px; }
+  .profile-portrait { width: 90%; max-width: 360px; }
+  .profile-portrait img { max-height: 480px; }
+  .profile-portrait figcaption { flex-direction: row; }
+  .profile-pullquote { padding: 20px 10px; }
+  .profile-pullquote > span { display: none; }
+  .profile-register nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-register nav a { font-size: 11px; }
+  .profile-section-heading h2 { font-size: 28px; }
+  .profile-facts dl { display: block; }
+  .profile-prose { font-size: 15px; }
+  .lineage-card { display: block; }
+  .lineage-image-link { max-width: 260px; margin-inline: auto; }
+  .lineage-description { margin-top: 20px; font-size: 13px; }
+}

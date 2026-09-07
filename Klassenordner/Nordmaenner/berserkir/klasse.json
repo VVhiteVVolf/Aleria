@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "berserkir",
+  "cultureId": "nordmaenner",
+  "name": "Berserkir",
+  "title": "Der Berserker",
+  "subtitle": "Berserker des Nordens",
+  "aliases": [
+    "Berserker"
+  ],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/D7sqCbe.png",
+  "illustration": "https://i.imgur.com/vLqluRI.png",
+  "artwork": {
+    "source": "https://i.imgur.com/vLqluRI.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Berserkir · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kämpfer, Barbar"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Berserker ist die rohe Verkörperung nordischer Kriegsgewalt. Ein Einhejar, der nicht auf feine Technik oder ausgeklügelte Formationen setzt, sondern auf animalische Kraft, Zähigkeit und entfesselte Wildheit. Sein Name erklärt sich beinahe von selbst – der Krieger, der im „Bärenhemd“ oder im Rausch kämpft, jenseits von Furcht und Zurückhaltung.</p> <p>Wo Ravnar durch Technik siegen und Stjorn lenken, dort bricht der Berserker alles nieder, was vor ihm steht. Er ist kein Duellant und kein Stratege – er ist der Hammer im Gefüge des Heeres.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Berserker entstanden nicht zufällig, sondern im Zuge der religiösen Umwälzungen der Norrnaigh. Als sie den alten, naturverbundenen Pantheon der Alben hinter sich ließen und ihr Glaube sich veränderte, gewann ihr Kriegsgott an Bedeutung. Dieser forderte nicht nur Gebete, sondern Blut, Opfer und kompromisslose Hingabe. Mit dieser theologischen Verschiebung wandelte sich auch das Bild des idealen Kriegers.</p> <p>Einige Einhejaren begannen, sich bewusst in einen Kampfrausch zu versetzen – ein Zustand, in dem Schmerz verblasst, Furcht verstummt und nur noch das Ziel bleibt: Vernichtung. Auf dem Schlachtfeld galt ein Berserker nicht mehr als gewöhnlicher Mensch. Er wurde zum Tier, zum lebenden Werkzeug des Zorns seines Gottes.</p> <p>Erfahrene Berserker erreichen diesen Zustand durch jahrelange Übung, rituelle Vorbereitung und mentale Disziplin. Jüngere hingegen können den Rausch oft nicht willentlich herbeiführen. Manche greifen daher zu Alkohol oder zu sogenannten Berserkerpilzen, um einen ähnlichen Effekt zu erzwingen – eine Praxis, die nicht ungefährlich ist und gelegentlich tödlich endet.</p> <p>Historisch galten Berserker als ebenso gefürchtet wie bewundert. Ihre Rolle war es, Linien zu sprengen, Gegner einzuschüchtern und den Moment des Chaos zu erzwingen. Sie sind keine kontrollierten Waffen – sondern entfesselte Naturgewalt im Dienst des Nordens.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Berserker ist ein Meister der Entfesselung. Seine zentrale Fähigkeit ist das willentliche oder erzwungene Eintreten in einen Kampfrausch, in dem Schmerz, Angst und Zurückhaltung nahezu verschwinden. In diesem Zustand steigert sich seine Kraft, seine Ausdauer und seine Aggressivität erheblich.</p> <p>Er kämpft bevorzugt mit Axt, Zweihandaxt, Schwert oder schweren Schlagwaffen. Schildführung ist optional – viele verzichten bewusst darauf, um beide Hände frei für maximale Wucht zu haben. Seine Technik ist nicht fein, aber effektiv: rohe Schlagkraft, rücksichtsloses Vordringen und das gezielte Zerschlagen gegnerischer Linien.</p> <p>Berserker eignen sich besonders für den ersten Aufprall oder das Erzwingen eines Durchbruchs. Sie erzeugen Chaos, binden mehrere Gegner gleichzeitig und verbreiten psychologischen Schrecken. Ein entfesselter Berserker ist schwer zu stoppen – selbst schwere Verletzungen hindern ihn oft nicht sofort am Weiterkämpfen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Extreme Kraft und Durchschlagskraft im Nahkampf</li><li>Hohe Schmerzresistenz im Rauschzustand</li><li>Starke psychologische Wirkung auf Gegner</li><li>Effektiv beim Brechen von Linien und in chaotischen Gefechten</li><li>Furchtlos im Angesicht überlegener Feinde</li></ul> <h3>Schwächen</h3> <ul><li>Geringe taktische Kontrolle im Rausch</li><li>Verwundbar gegenüber Fernkämpfern</li><li>Neigung zur Selbstgefährdung</li><li>Abhängigkeit vom Rauschzustand für maximale Wirkung</li><li>Kann im Gefecht schwer koordiniert oder zurückgehalten werden</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Berserkers unterscheidet sich deutlich von jener anderer Einhejaren. Viele von ihnen kämpfen bewusst freizügiger, teils nur in Fell, Leder oder mit nacktem Oberkörper. Dies ist weniger Ausdruck von Torheit als Teil ihrer Selbstwahrnehmung: Sie wollen Bewegungsfreiheit, sie wollen den Schmerz spüren – oder zeigen, dass sie ihn nicht fürchten.</p> <p>Schwere Rüstung ist unter Berserkern selten. Manche tragen ein einfaches Lederwams oder Fellumhang, wenige ein leichtes Kettenhemd. Helm und Schild sind nicht ausgeschlossen, aber oft zweitrangig. Viele bevorzugen den Kampf mit Zweihandaxt, schwerem Schwert oder groben Schlagwaffen, die ihre rohe Kraft voll zur Geltung bringen.</p> <p>Einige Berserker schmücken sich mit Tierfellen, Knochen oder Symbolen ihres Kriegsgottes. Diese Elemente sind weniger Zierde als Teil ihrer rituellen Identität. Sie erscheinen wie halbgezähmte Tiere im Kampf – und genau dieses Bild ist beabsichtigt.</p> <p>Es gibt Ausnahmen: erfahrene Berserker, die gelernt haben, ihren Rausch mit Schutz zu kombinieren, tragen durchaus Rüstung. Doch im kulturellen Bild des Nordens bleibt der Berserker jener Krieger, der mit minimalem Schutz und maximaler Wucht in die Schlacht tritt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Berserker genießt im Norden einen beinahe mythischen Status. Er wird verehrt, weil er als lebendiger Beweis göttlicher Gunst gilt – als Krieger, der den Zorn des Kriegsgottes in sich trägt und auf dem Schlachtfeld entfesselt. Lieder erzählen von seinen Taten, Kinder wachsen mit Geschichten über seine Raserei auf, und selbst Jarle zollen ihm Respekt.</p> <p>Doch ebenso wie er verehrt wird, wird er auch gefürchtet. Ein Berserker ist keine berechenbare Waffe. Sein Rausch macht ihn unaufhaltsam – aber auch schwer zu kontrollieren. Im Gefecht ist er ein Segen, im Frieden eine Herausforderung. Manche Clans halten ihre Berserker bewusst auf Distanz vom Alltagsleben, nicht aus Geringschätzung, sondern aus Vorsicht.</p> <p>Trotzdem gilt: Ein Clan, der einen oder mehrere Berserker vorweisen kann, steigert sein Ansehen erheblich. Sie sind Symbole von Wildheit, Unbeugsamkeit und göttlichem Zorn. Man liebt sie für das, was sie im Krieg sind – und respektiert sie genug, um sie im Frieden nicht leichtfertig zu reizen.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Die Berserker sind trotz – oder gerade wegen – ihrer Wildheit stark mit der Natur verbunden. Viele von ihnen halten Wölfe oder zumindest wolfähnliche Hunde, mit denen sie aufgewachsen sind oder die sie selbst gezähmt haben. Der Wolf gilt als Spiegel ihres eigenen Wesens: loyal zum Rudel, gnadenlos im Angriff, unbeugsam im Überleben.</p> <p>Auch Krähen oder Raben finden sich häufig in ihrer Nähe. Sie gelten als Boten des Kriegsgottes und als Zeichen bevorstehenden Blutes. Manche Berserker deuten das Erscheinen eines Rabens vor der Schlacht als göttliches Omen. Andere ziehen die Vögel bewusst an, indem sie sie füttern oder in ihrer Nähe dulden.</p> <p>Im Gegensatz zu Ravnar oder Veigir nutzen Berserker ihre Tiere selten strategisch. Ihre Gefährten sind keine Werkzeuge – sie sind Ausdruck eines inneren Zustandes. Der Berserker sieht sich nicht als Herr der Natur, sondern als Teil von ihr. Im Rausch verschmilzt er symbolisch mit dem Tier, dessen Fell er trägt oder dessen Heulen er imitiert.</p> <p>So stehen Wolf und Rabe nicht nur an seiner Seite, sondern spiegeln das wider, was er im Kampf wird: ein Raubtier unter Menschen.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "125e3848207237dd6d92111123ae70f9e991f27fa8e28123c9fddffeca802bc1"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/og7ATdM.png",
+    "width": 400,
+    "height": 400,
+    "caption": "Gefährten des Berserkir"
+  }
+}

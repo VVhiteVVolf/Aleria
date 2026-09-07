@@ -1,7 +1,8 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 import { estimateCombatDamage } from '../combat-action-estimates.js';
 import { getBonusDamageFormulas } from '../combat-profile-model.js';
-import { combineDamageFormulas } from '../rules/combat-mvp-rules.js';
+import { combineDamageFormulas, buildDamageNotation } from '../rules/combat-mvp-rules.js';
+import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -23,11 +24,17 @@ export function activationLabel(value = '') {
 export function getCombatDisplayStats(actor = {}) {
   const base = String(actor.weapon?.damageFormula || '');
   const bonusDice = base ? getBonusDamageFormulas(actor) : [];
-  const formula = (bonusDice.length ? combineDamageFormulas([base, ...bonusDice]) : base).toUpperCase().replace(/D/g, 'W');
+  const formula = bonusDice.length ? combineDamageFormulas([base, ...bonusDice]) : base;
   const modifier = Number(actor.damageModifier) || 0;
+  let damage = formula ? `${formula}${modifier ? ` ${signedNumber(modifier)}` : ''}` : '—';
+  if (formula) {
+    try {
+      damage = buildDamageNotation(formula, modifier);
+    } catch { /* Invalid imported formulas remain visible for correction. */ }
+  }
   return {
     attack: actor.actionResolutionMode === 'automatic' ? 'Automatisch' : signedNumber(actor.attackModifier),
-    damage: formula ? `${formula}${modifier ? ` ${signedNumber(modifier)}` : ''}` : '—',
+    damage: damage.toUpperCase().replace(/D/g, 'W'),
     activation: activationLabel(actor.selectedAction?.activationType)
   };
 }
@@ -60,10 +67,11 @@ function describeAction(actor, action = {}, sourceIndexes = null) {
   const entries = Array.isArray(sources) ? sources : [];
   if (sourceIndexes && !sourceIndexes.has(sources)) sourceIndexes.set(sources, new Map(entries.map(entry => [String(entry.id), entry])));
   const entry = (sourceIndexes ? sourceIndexes.get(sources).get(sourceId) : entries.find(source => String(source.id) === sourceId)) || action;
+  const form = action.kind === 'equipment-switch' ? null : getCombatFormPresentation(entry);
   const group = action.kind === 'equipment-switch' ? 'Waffenwechsel'
-    : (entry.trainingForm || entry.combatStyleFormName || ({ weapon: 'Waffenangriffe', technique: 'Kampftechniken', ability: 'Fähigkeiten',
+    : (form?.label || ({ weapon: 'Waffenangriffe', technique: 'Kampftechniken', ability: 'Fähigkeiten',
       spell: 'Zauber', prayer: 'Gebete', song: 'Gesänge' })[action.kind] || action.kindLabel || 'Handlungen');
-  return { entry, group, label: String(action.name || entry.name || 'Handlung'), minimumLevel: Number(entry.minimumLevel) || 0 };
+  return { entry, group, groupKey: form?.key || `kind:${action.kind || 'action'}`, label: String(action.name || entry.name || 'Handlung'), minimumLevel: Number(entry.minimumLevel) || 0 };
 }
 
 export function getActionPresentation(actor = {}) {
@@ -75,15 +83,17 @@ export function getActionGroups(actor = {}) {
   const sourceIndexes = new Map();
   (actor.actions || []).forEach(action => {
     if (action.kind === 'equipment-switch' && actor.selectedAction?.kind !== 'equipment-switch') return;
-    const { group, label } = describeAction(actor, action, sourceIndexes);
-    if (!groups.has(group)) groups.set(group, []);
-    groups.get(group).push({ action, label });
+    const presentation = describeAction(actor, action, sourceIndexes);
+    if (!groups.has(presentation.groupKey)) groups.set(presentation.groupKey, []);
+    groups.get(presentation.groupKey).push({ action, ...presentation });
   });
+  groups.forEach(actions => actions.sort((a, b) => a.minimumLevel - b.minimumLevel));
   return groups;
 }
 
-export function renderActionOptions(actor = {}, selectedId = '') {
-  return [...getActionGroups(actor)].map(([group, actions]) => {
+export function renderActionOptions(actor = {}, selectedId = '', groups = getActionGroups(actor)) {
+  return [...groups.values()].map(actions => {
+    const group = actions[0].group;
     const options = actions.map(({ action, label }) => {
       const unavailable = action.compatible === false;
       const reason = unavailable ? action.disabledReason || 'Zurzeit nicht verfügbar' : '';

@@ -6,6 +6,7 @@ import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20
 import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260905-cenyr-character-training-v1';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
 import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
+import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js';
 import {
   getCharacterArchiveAttackGroups,
   matchesCharacterArchiveKind
@@ -109,7 +110,7 @@ function getVisibleEntries() {
 function getEntryMeta(entry) {
   const data = entry.data || {};
   if (entry.kind === 'spell') return [Number(data.level) ? `Grad ${data.level}` : 'Zaubertrick', data.school, data.damageType].filter(Boolean);
-  if (entry.kind === 'technique') return [data.trainingForm, describeTechniqueDamage(data), data.damageType].filter(Boolean);
+  if (entry.kind === 'technique') return [getCombatFormPresentation(data)?.label, describeTechniqueDamage(data), data.damageType].filter(Boolean);
   if (entry.kind === 'attack') return [data.weaponType, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
   if (entry.kind === 'class') return [data.baseClass ? 'Standardklasse' : (data.cultures || []).join(' · '), data.subtitle].filter(Boolean);
   if (entry.kind === 'condition') return [data.duration, data.source].filter(Boolean);

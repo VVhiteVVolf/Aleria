@@ -477,7 +477,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Leichtes Fußvolk",
     "icon": "https://i.imgur.com/E92CDhq.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/kern/index.html"
+      }
+    ]
   },
   {
     "id": "cateran",
@@ -490,7 +495,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Schwertkämpfer",
     "icon": "https://i.imgur.com/ZZSDo2z.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/cateran/index.html"
+      }
+    ]
   },
   {
     "id": "mormaer",
@@ -503,7 +513,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Reiter der Alben",
     "icon": "https://i.imgur.com/vCXWd55.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/mormaer/index.html"
+      }
+    ]
   },
   {
     "id": "serf",
@@ -516,7 +531,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Waldläufer der Alben",
     "icon": "https://i.imgur.com/qwsuhcH.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/serf/index.html"
+      }
+    ]
   },
   {
     "id": "airig",
@@ -529,7 +549,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Speerkrieger der Alben",
     "icon": "https://i.imgur.com/oxk3dMj.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/airig/index.html"
+      }
+    ]
   },
   {
     "id": "currach",
@@ -542,7 +567,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Krieger zur See",
     "icon": "https://i.imgur.com/raG2iIO.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/currach/index.html"
+      }
+    ]
   },
   {
     "id": "ceolaire-piobaire",
@@ -555,7 +585,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Dudelsackpfeifer & Kampfbarden",
     "icon": "https://i.imgur.com/JmtKs6F.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/ceolaire-piobaire/index.html"
+      }
+    ]
   },
   {
     "id": "riada",
@@ -568,7 +603,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Freischärler der Alben",
     "icon": "https://i.imgur.com/BmaklcS.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/riada/index.html"
+      }
+    ]
   },
   {
     "id": "silvaner",
@@ -581,7 +621,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Waldläufer, Pionier & Entdecker",
     "icon": "https://i.imgur.com/McVUKVQ.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/silvaner/index.html"
+      }
+    ]
   },
   {
     "id": "galloghlaigh",
@@ -591,10 +636,15 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
       "Alben"
     ],
     "order": 36,
-    "description": "Krieger der der Gallochbhair",
+    "description": "Krieger der Gallochbhair",
     "icon": "https://i.imgur.com/T387Q5y.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/galloghlaigh/index.html"
+      }
+    ]
   },
   {
     "id": "fathach",
@@ -607,7 +657,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Riesengeschlecht",
     "icon": "https://i.imgur.com/NAEUMM1.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Alben",
+        "path": "Klassenordner/Alben/fathach/index.html"
+      }
+    ]
   },
   {
     "id": "hird-maid",
@@ -746,7 +801,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Fußvolk des Nordens",
     "icon": "https://i.imgur.com/kiyvovh.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/hird-kona/index.html"
+      }
+    ]
   },
   {
     "id": "stjorn",
@@ -759,7 +819,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Speerkämpfer des Nordens",
     "icon": "https://i.imgur.com/YmjS2bm.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/stjorn/index.html"
+      }
+    ]
   },
   {
     "id": "ravnar",
@@ -772,7 +837,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Infanterist des Nordens",
     "icon": "https://i.imgur.com/MHnDy0V.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/ravnar/index.html"
+      }
+    ]
   },
   {
     "id": "ulfhednar",
@@ -785,7 +855,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Hautwechsler & Tierkrieger",
     "icon": "https://i.imgur.com/LOjpDQS.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/ulfhednar/index.html"
+      }
+    ]
   },
   {
     "id": "berserkir",
@@ -798,7 +873,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Berserker des Nordens",
     "icon": "https://i.imgur.com/D7sqCbe.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/berserkir/index.html"
+      }
+    ]
   },
   {
     "id": "veigir",
@@ -811,7 +891,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Seemann des Nordens",
     "icon": "https://i.imgur.com/26xBwIU.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/veigir/index.html"
+      }
+    ]
   },
   {
     "id": "tungur",
@@ -824,7 +909,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Skalde des Nordens",
     "icon": "https://i.imgur.com/Afgf6m7.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/tungur/index.html"
+      }
+    ]
   },
   {
     "id": "hestgar",
@@ -837,7 +927,12 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "description": "Reiter des Nordens",
     "icon": "https://i.imgur.com/tN9JEZA.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
-    "pageLinks": []
+    "pageLinks": [
+      {
+        "culture": "Nordmänner",
+        "path": "Klassenordner/Nordmaenner/hestgar/index.html"
+      }
+    ]
   },
   {
     "id": "gold-aldknecht",

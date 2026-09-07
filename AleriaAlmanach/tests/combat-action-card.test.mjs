@@ -5,6 +5,8 @@ import test from 'node:test';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import {
   getActionPresentation,
+  getActionGroups,
+  getCombatDisplayStats,
   renderActionDetails,
   renderActionOptions,
   renderCombatValueStrip,
@@ -82,6 +84,10 @@ test('Gawains Attacken werden aus ihren Quelldaten nach der erlernten Form grupp
   assert.equal(presentation.minimumLevel, 2);
 
   const options = renderActionOptions(actor, actor.selectedAction.id);
+  const foundation = [...getActionGroups(actor).values()].filter(group => group[0].group.includes('Tanz des Jungdrachens'));
+  assert.equal(foundation.length, 1, 'Historische und ergänzte Techniken gehören unter dieselbe Formüberschrift');
+  assert.equal(foundation[0].length, 8);
+  assert.deepEqual(foundation[0].map(row => row.minimumLevel), [1, 2, 2, 3, 3, 4, 4, 5]);
   assert.match(options, /<optgroup\b[^>]*label="[^"]*Tanz des Jungdrachens[^"]*"/);
   const biteOption = options.match(/<option\b[^>]*value="technique:combat-style-drachentanz-jungdrache-02-drachenbiss"[^>]*>[\s\S]*?<\/option>/)?.[0];
   assert.ok(biteOption);
@@ -184,6 +190,12 @@ test('kompakte Kampfwerte behalten die ausgewerteten Treffer- und Schadensmodifi
   assert.match(markup, />\s*\+5\s*</);
   assert.match(markup, /2W8\s*\+2/);
   assert.match(markup, /Hieb/);
+});
+
+test('feste Technik- und Attributboni werden lesbar zusammengefasst, ohne Würfel oder Schaden zu ändern', () => {
+  assert.equal(getCombatDisplayStats({ weapon: { damageFormula: '2d8+2' }, damageModifier: 5 }).damage, '2W8+7');
+  assert.equal(getCombatDisplayStats({ weapon: { damageFormula: '2d8+2' }, damageModifier: -4 }).damage, '2W8-2');
+  assert.equal(getCombatDisplayStats({ weapon: { damageFormula: '' }, damageModifier: 5 }).damage, '—');
 });
 
 test('Zauberwerte behalten Zauber-SG, Trefferbonus und Auflösungsart', () => {

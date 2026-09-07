@@ -4,6 +4,11 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { UNIVERSAL_CLASS_IDS } from '../Klassenordner/modules/pages/universal-class-registry.js';
 import { CENYR_CLASS_IDS } from './modules/classes/cenyr/cenyr-class-ids.js';
+import { VENNYR_CLASS_IDS } from './modules/classes/vennyr/vennyr-class-registry.js';
+import { ALDRIMAR_CLASS_IDS } from './modules/classes/aldrimar/aldrimar-class-registry.js';
+import { ALBEN_CLASS_IDS } from './modules/classes/alben/alben-class-registry.js';
+import { NORDMAENNER_CLASS_IDS } from './modules/classes/nordmaenner/nordmaenner-class-registry.js';
+import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/profile-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -50,6 +55,15 @@ export default defineConfig({
   root: workspaceRoot,
   publicDir: false,
   base: './',
+  html: {
+    additionalAssetSources: {
+      // Keep full-size gallery links aligned with Vite's processed image URLs.
+      a: {
+        srcAttributes: ['href'],
+        filter: ({ attributes }) => Object.hasOwn(attributes, 'data-bestiary-image-link')
+      }
+    }
+  },
   plugins: [preserveClassicAlmanachScripts()],
   build: {
     outDir: buildRoot,
@@ -57,12 +71,28 @@ export default defineConfig({
     rollupOptions: {
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
+        bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),
+        ...Object.fromEntries(CREATURE_PROFILE_IDS.map(id => [
+          `bestiary-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen', id, 'index.html')
+        ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [
           `class-${id}`, resolve(workspaceRoot, 'Klassenordner/Basisklassen', id, 'index.html')
         ])),
         ...Object.fromEntries(CENYR_CLASS_IDS.map(id => [
           `class-cenyr-${id}`, resolve(workspaceRoot, 'Klassenordner/Cenyr', id, 'index.html')
+        ])),
+        ...Object.fromEntries(VENNYR_CLASS_IDS.map(id => [
+          `class-vennyr-${id}`, resolve(workspaceRoot, 'Klassenordner/Vennyr', id, 'index.html')
+        ])),
+        ...Object.fromEntries(ALDRIMAR_CLASS_IDS.map(id => [
+          `class-aldrimar-${id}`, resolve(workspaceRoot, 'Klassenordner/Aldrimar', id, 'index.html')
+        ])),
+        ...Object.fromEntries(ALBEN_CLASS_IDS.map(id => [
+          `class-alben-${id}`, resolve(workspaceRoot, 'Klassenordner/Alben', id, 'index.html')
+        ])),
+        ...Object.fromEntries(NORDMAENNER_CLASS_IDS.map(id => [
+          `class-nordmaenner-${id}`, resolve(workspaceRoot, 'Klassenordner/Nordmaenner', id, 'index.html')
         ]))
       }
     }

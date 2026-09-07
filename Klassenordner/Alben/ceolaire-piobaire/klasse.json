@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "ceolaire-piobaire",
+  "cultureId": "alben",
+  "name": "Ceólaire & Piobaire",
+  "title": "Der Ceólaire & Piobaire",
+  "subtitle": "Kampfbarden des Tiarnatum",
+  "aliases": [
+    "Ceòlaire",
+    "Piobaire"
+  ],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/JmtKs6F.png",
+  "illustration": "https://i.imgur.com/1AMtGny.png",
+  "artwork": {
+    "source": "https://i.imgur.com/1AMtGny.png",
+    "width": 500,
+    "height": 436,
+    "caption": "Ceólaire & Piobaire · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Kampfbarden innerhalb der albischen Kriegerkultur"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Kämpfer, Verstärker und Störer arkaner Wirkung"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Schwert oder einhändige Seitenwaffe; Musikinstrument"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Leichtes Kettenwerk oder verstärktes Leder"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Ceòlaire wirkt offensiver, Piobaire subtiler und schützend"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Ceòlaire und der Piobaire sind die klingende Seele der Albischen Kriegerkultur. Wo andere Klassen mit Stahl oder Speer wirken, wirken sie mit Klang. Sie sind Barden – doch nicht jene harmlosen Hofmusiker, die Geschichten erzählen und Wein besingen. Sie sind Kampfbarden.</p> <p>Der Ceòlaire gilt als Begründer der bardischen Kriegertradition unter den Alben. Weniger im öffentlichen Ruhm als manch anderer Tiarna, aber grundlegend für alles, was folgte. Aus seiner Lehre entwickelten sich jene Schulen, die Musik nicht nur als Kunst, sondern als Waffe verstanden.</p> <p>Der Piobaire hingegen ist die feinere, subtilere Ausprägung. Er steht nicht im Vordergrund des Gefechts, sondern im Strom der Schlacht – verstärkend, lenkend, störend. Seine Kunst ist weniger sichtbar, aber oft entscheidend.</p> <p>Beide sind halb Magier, halb Barden – und vollständig Alben.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Ursprung der Ceòlaire und Piobaire liegt im Schatten der Druidenzeit. Es heißt, dass frühe Druiden lehrten, dass Klang nicht nur Emotion bewegt, sondern die Welt selbst berühren kann. Rhythmus beeinflusst Herzschlag, Ton verändert Stimmung, Melodie bindet Gemeinschaft.</p> <p>Einige Schüler dieser alten Lehren verbanden Musik mit der Idee des Tiarnatum. Sie trugen Instrumente in die Schlacht und stellten fest, dass ihre Klänge Mut stärkten, Furcht dämpften – und in manchen Fällen sogar gegnerische Zauber aus dem Gleichgewicht brachten.</p> <p>So entstand der Ceòlaire als erster Kampfbarde. Er kämpfte mit Waffe und Klang zugleich, führte Männer in den Sturm, während seine Musik die Reihen festigte.</p> <p>Später entwickelte sich daraus die Ausprägung des Piobaire. Während der Ceòlaire offensiv wirkte, konzentrierte sich der Piobaire auf Verstärkung und Störung. Seine Klänge schützten Verbündete, schwächten feindliche Magie und unterbrachen arkane Konzentration.</p> <p>Beide Linien blieben eng mit der druidischen Tradition verbunden, auch wenn sie nicht selbst Druiden sind. Ihre Kunst ist weniger naturgebunden und stärker kriegerisch ausgerichtet – doch der Ursprung im alten Wissen ist spürbar.</p> <p>Heute sind Ceòlaire und Piobaire feste Bestandteile albischer Heere. Nicht zahlreich, aber wirkungsvoll. Wenn ihre Instrumente erklingen, verändert sich das Gefecht. Und jeder Albe weiß: Wenn die Musik nicht verstummt, steht das Heer noch.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Ceòlaire wirkt offen und kraftvoll. Er verbindet Waffenführung mit rhythmischer Magie, die direkt in das Gefecht eingreift. Seine Klänge stärken Moral, steigern Ausdauer, schärfen Sinne und treiben Verbündete voran. Trommel, Laute oder Dudelsack sind nicht bloß Instrumente – sie sind Kanäle. Im Nahkampf ist der Ceòlaire kein bloßer Unterstützer, sondern ein vollwertiger Kämpfer, der zwischen Melodie und Hieb wechselt.</p> <p>Der Piobaire hingegen wirkt subtiler. Seine Kunst ist leiser, präziser und oft unsichtbar. Er moduliert den Klang so, dass er gegnerische Zauber destabilisiert, Konzentration stört oder magische Wirkungen abschwächt. Gleichzeitig verstärkt er Schutz, Disziplin und Koordination in den eigenen Reihen. Seine Musik fließt durch das Gefecht wie ein unsichtbares Netz.</p> <p>Beide sind in grundlegender Waffenkunst geschult, doch ihre wahre Stärke liegt in der Verbindung von Klang und arkaner Resonanz. Sie wirken nicht durch rohe Zauberformeln, sondern durch Rhythmus, Atem, Ton und uralte Muster.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Verstärkung von Moral und Ausdauer</li><li>Unterstützung und Koordination im Gefecht</li><li>Fähigkeit, gegnerische Magie zu stören (besonders Piobaire)</li><li>Kombination aus Kampf- und Magiefähigkeit</li><li>Psychologische Wirkung auf Freund und Feind</li></ul> <h3>Schwächen</h3><ul><li>Abhängig von Konzentration und Klang</li><li>Verwundbar bei Unterbrechung oder Stille</li><li>Begrenzte direkte Durchschlagskraft im Vergleich zu reinen Tiarna</li><li>Wirkung nimmt ab, wenn isoliert oder ohne Verbündete eingesetzt</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines Ceòlaire oder Piobaire verbindet Kriegerstand und Kunst. Neben einer standesgemäßen, jedoch beweglichen Rüstung – meist leichtes Kettenwerk oder verstärktes Leder – tragen sie stets ihr Instrument als zentrales Werkzeug. Dudelsack, Laute, Kriegsharfe oder Trommel sind keine Zierde, sondern Fokus ihrer magischen Wirkung.</p> <p>Viele führen ein Schwert oder eine einhändige Waffe als Seitenarm. Der Ceòlaire greift häufiger aktiv ins Gefecht ein, während der Piobaire defensiver ausgerichtet bleibt. Runen, eingearbeitete Symbole oder druidische Muster finden sich oft an Instrumenten und Waffen – nicht ornamental, sondern funktional im Sinne ihrer Resonanzmagie.</p> <p>Ihre Ausstattung ist nie überladen. Alles dient entweder dem Kampf oder dem Klang.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Ceòlaire und Piobaire stehen am kulturellen Höhepunkt der Albischen Gesellschaft. Musik ist für die Alben nicht bloße Unterhaltung – sie ist Gedächtnis, Identität und Bindeglied zwischen Generationen.</p> <p>Diese Barden sind die Erzähler der Geschichte, die Bewahrer von Schlachten, Königen, Verlusten und Hoffnungen. Ihre Lieder formen das kollektive Gedächtnis des Volkes. Ein Heer ohne Klang ist für viele Alben ein Heer ohne Seele.</p> <p>In Friedenszeiten sitzen sie an Fürstenhöfen oder in Clanhallen. In Kriegszeiten stehen sie zwischen den Reihen. Ihr Status ist hoch – nicht aus Furcht, sondern aus Respekt vor der Macht, Geschichte lebendig zu halten.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Ceòlaire und Piobaire führen selten martialische Tiere. Ihre Gefährten sind häufig Raben oder andere kluge Vögel, die als Boten und Beobachter dienen. Manche halten auch kleine, treue Hunde, die sie auf Reisen begleiten.</p> <p>Doch ihr wahrer Gefährte ist die Gemeinschaft selbst. Sie reisen oft mit Gefolge, Schülern oder jungen Lernenden, die die Lieder weitertragen.</p> <p>Wo ein Ceòlaire oder Piobaire auftritt, folgt ihm nicht nur Klang – sondern Erinnerung.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "6d082b8ab9e7906e05e21fda3303bdbfa61257f0cd156748a623fa61054cd719"
+  }
+}

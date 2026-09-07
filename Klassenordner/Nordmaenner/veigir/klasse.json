@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "veigir",
+  "cultureId": "nordmaenner",
+  "name": "Veigir",
+  "title": "Der Veigir",
+  "subtitle": "Seemann des Nordens",
+  "aliases": [],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/26xBwIU.png",
+  "illustration": "https://i.imgur.com/eJn6250.png",
+  "artwork": {
+    "source": "https://i.imgur.com/eJn6250.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Veigir · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Seemann, Waldläufer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Veigir ist für die Südländer die bekannteste Erscheinung unter den nordischen Einhejaren – denn mit ihm geraten sie am häufigsten aneinander. Wo Rauch über Küstenstädten aufsteigt oder Drachenboote im Morgennebel auftauchen, sind es meist Veigir, die an Bord stehen.</p> <p>Der Veigir ist der Einhejar zur See. Er ist kein bloßer Krieger mit Seebeinen, sondern ein nautisch ausgebildeter Spezialist. Er weiß, wie man ein Schiff zimmert, abdichtet, repariert und steuert. Er kennt die Strömungen, die Küstenlinien, die Untiefen und die Zeichen des Himmels. Im Gefecht kämpft er wie eine leichte Truppe – mit Axt, Schwert, Bogen und Wurfspeer – doch sein wahres Feld ist das Deck eines Schiffes.</p> <p>Ohne Veigir ist eine Kriegerschar aufgeschmissen. Eine Truppe ohne sie ist gestrandet, unfähig, Beute heimzubringen oder neue Küsten zu erreichen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Der Ursprung der Veigir liegt in den frühen Zeiten der Norrnaigh, als Yrmandrall noch nicht vom ewigen Frost beherrscht war. In einer alten Warmzeit lernten sie das Handwerk des Schiffbaus, lange bevor der Kontinent von Kälte und Eis überzogen wurde. Als die Eiszeit kam und die Ernten knapper wurden, blieb nur eine Option: hinauszufahren.</p> <p>Die Nordmänner konnten nur dann neue Länder erschließen, wenn sie das Meer beherrschten. So entstand der Veigir – nicht als Zufallsprodukt, sondern als bewusste Antwort auf die Not der Zeit. Er verband Handwerk, Navigation und Kriegsführung in einer Person.</p> <p>Ein Veigir zu werden ist schwieriger, als Ravnar oder Skjoldr zu werden. Ein Ravnar lernt den Sturm, ein Skjoldr den Schild – doch der Veigir muss mehr beherrschen: Seemannskunst, Navigation, das Lesen des Firmaments, den Einsatz von Sonnensteinen, das Zeichnen von Karten, das Einschätzen von Wetter und Wind. Er muss wissen, wie man ein Schiff am Leben hält – und damit auch seine Mannschaft.</p> <p>Im Kampf auf See stehen Veigir häufig im Heck oder entlang der Bordkante, beschießen den Feind, sichern das Steuer oder bereiten das Entern vor. Nach der Landung reparieren sie Schäden, organisieren Vorräte, erkunden Küsten und führen Plünderzüge an.</p> <p>Ein Veigir, der nur mit dem Bogen umgehen kann, ist kein Veigir – sondern lediglich ein Ravnar mit Seesalz im Bart.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Veigir vereint drei Disziplinen in einer Person: Seemann, Handwerker und Krieger. Seine erste und wichtigste Fähigkeit ist die Nautik. Er versteht den Aufbau eines Schiffes, weiß, wie man Planken ersetzt, Lecks abdichtet, Masten richtet und Segel flickt. Er kann ein Schiff steuern, Strömungen lesen, Untiefen erkennen und bei Nebel oder Nacht das Firmament deuten. Der Umgang mit Sonnensteinen, Sternbildern und selbstgefertigten Karten gehört ebenso zu seiner Ausbildung wie das Abschätzen von Wind und Wetter.</p> <p>Im Gefecht agiert der Veigir als leichte Truppe. Er kämpft mit Axt, Schwert, Bogen oder Wurfspeer. Auf See sichert er das Heck, deckt das Entern mit Pfeilen oder hält das Steuer unter Beschuss. Beim Landgang führt er schnelle Vorstöße, plündert Vorräte, erkundet Küstenlinien und organisiert Rückzüge. Seine Stärke liegt in Beweglichkeit, Koordination und der Fähigkeit, in chaotischen Situationen den Überblick zu bewahren.</p> <p>Ein Veigir ist nicht nur Kämpfer, sondern Garant für Bewegung und Heimkehr. Ohne ihn erreicht kein Heerbann sein Ziel – und kehrt auch nicht zurück.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Hohe Kompetenz in Schiffsbau, Navigation und Reparatur</li><li>Effektiv im Fernkampf auf engem Raum</li><li>Beweglich und flexibel bei Landungen und Rückzügen</li><li>Unverzichtbar für Expeditionen, Raubzüge und Küstenkriege</li><li>Gute Anpassung an wechselnde Umgebungen</li></ul> <h3>Schwächen</h3> <ul><li>Weniger spezialisiert im schweren Nahkampf als Ravnar oder Stjorn</li><li>Abhängig von Schiff und Küstennähe für maximale Wirkung</li><li>Leichtere Ausrüstung bietet geringeren Schutz</li><li>Bei reinem Feldgefecht oft nicht im Vorteil</li><li>Hoher Ausbildungsaufwand – Verlust eines erfahrenen Veigir wiegt schwer</li></ul> <p>Der Veigir mag im offenen Feld nicht der furchteinflößendste Krieger sein – doch auf See ist er das Rückgrat jeder nordischen Macht.</p>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Veigir ist auf Beweglichkeit, Seetauglichkeit und Vielseitigkeit ausgelegt. Im Gegensatz zu Ravnar oder Stjorn trägt er meist leichtere Rüstung – verstärktes Leder, gelegentlich ein kurzes Kettenhemd, dazu einen stabilen, aber nicht zu schweren Helm. Gewicht ist auf See ein Feind, ebenso wie Rost, daher wird Metall sparsam und funktional eingesetzt.</p> <p>Seine Hauptwaffen sind Axt oder Schwert für den Nahkampf sowie Bogen und Wurfspeere für Gefechte auf Distanz. Auf engem Deck ist eine schwere Lanze unpraktisch, weshalb der Veigir auf kompakte, flexible Waffen setzt. Ein Rundschild gehört ebenfalls zur Grundausstattung, wird jedoch oft leichter gefertigt, damit er auf dem Schiff nicht behindert.</p> <p>Unverzichtbar sind seine Werkzeuge: Beile, Seile, Nadeln, Pech, Holzkeile und Reparaturmaterial. Viele Veigir tragen stets ein kleines Set an Handwerksutensilien bei sich, um im Notfall sofort eingreifen zu können. Ebenso finden sich Navigationshilfen wie einfache Karten, Markierungen oder ein Sonnenstein in seinem Besitz.</p> <p>Seine Kleidung ist wetterfest – dicke Wollstoffe, Fellumhänge gegen Wind und Salzluft. Der Veigir trägt, was ihn am Leben hält – im Sturm, im Gefecht und auf der Reise über offenes Meer.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Veigir genießt im Norden einen außerordentlich hohen Status – nicht allein aus Ruhm, sondern aus Notwendigkeit. Ohne Veigir funktioniert kein Heerzug über See, keine Expedition in ferne Küstenlande, kein Raubzug jenseits der Fjorde. Sie sind das Bindeglied zwischen Land und Meer, zwischen Aufbruch und Heimkehr. Ein Heer ohne Veigir ist nicht nur eingeschränkt – es ist bewegungsunfähig.</p> <p>In vielen Reiktümern gelten Veigir als unverzichtbar für Macht und Einfluss. Jarle, die keine erfahrenen Veigir besitzen, können keine entfernten Ziele erreichen und keine Seewege sichern. Ihr Wissen über Navigation, Schiffsbau und Küstenkunde verleiht ihnen ein Prestige, das über bloße Kampfkraft hinausgeht.</p> <p>Doch nicht jeder Einhejar ist geeignet, diesen Weg zu gehen. Die Ausbildung ist anspruchsvoll, die Verantwortung groß. Wer das Meer nicht versteht, wer Wind und Sternbilder nicht lesen kann, wird niemals ein vollwertiger Veigir. Darum ist ihre Zahl begrenzt – und gerade deshalb sind sie so hoch geachtet.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Die Veigir pflegen häufig enge Bindungen zu Tieren, die ihren nautischen Lebensstil unterstützen. Besonders verbreitet sind Raben, Krähen und Falken. Diese Greifvögel sind von unschätzbarem Wert, wenn sich ein Schiff auf hoher See befindet und Land gesucht wird. Sie werden aufsteigen gelassen, um Küstenlinien auszumachen oder Hinweise auf nahegelegene Inseln zu liefern. Ein erfahrener Veigir versteht das Verhalten seines Vogels und kann daraus Rückschlüsse auf Entfernung und Richtung ziehen.</p> <p>Neben Vögeln führen viele Veigir auch Hunde oder gelegentlich Wölfe mit sich. Nach dem Anlegen an fremden Küsten unterstützen diese Tiere bei der Jagd, beim Aufspüren von Wild oder beim Sichern provisorischer Lager. In unbekanntem Terrain dienen sie zudem als frühe Warnsysteme gegen Gefahren.</p> <p>Ihre Gefährten sind nicht bloße Symbole, sondern funktionale Bestandteile ihrer Lebensweise. Ein Veigir ohne Tier mag dennoch fähig sein – doch jene mit treuen Begleitern gelten als besser vorbereitet, weiter sehend und im fremden Land weniger verloren.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "bfff10a281ae3c25118b379ba30b8400b79330c26ac6453c3c2eb3706d69547d"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/og7ATdM.png",
+    "width": 400,
+    "height": 400,
+    "caption": "Gefährten des Veigir"
+  }
+}

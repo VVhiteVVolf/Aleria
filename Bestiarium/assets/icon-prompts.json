@@ -1,0 +1,179 @@
+{
+  "mode": "Built-in image_gen",
+  "registerIcon": {
+    "id": "register-bestiarium",
+    "references": ["IconOrdner/ReiterIcons/Klassen.png", "IconOrdner/ReiterIcons/Kreaturen.png"],
+    "prompt": "Create a square sidebar icon matching the two provided Aleria Almanach register icons precisely in visual style: antique golden parchment, restrained brown sepia woodcut-like illustration, engraved double square border with the same flowing corner filigree, subtle fine paper texture. A proud small heraldic dragon with one raised wing perched on an open naturalist's bestiary book, dragon recognizable at 40 pixels, elegant strong simplified contours, warm ochre circle behind the dragon. Centered 75% occupancy with generous inner border margins. No text, letters, numbers, watermark or modern UI. Match the border density, palette, texture and line weight of the reference icons. This is the Bestiarium navigation icon, a sibling of the existing Klassen and Kreaturen icons."
+  },
+  "style": "Use case: stylized-concept. Asset type: a single square illustrated icon for Aleria, a classic old-school Dungeons & Dragons fantasy bestiary. Hand-painted natural-history watercolor miniature, delicate sepia ink contours, restrained ochre, moss green, desaturated teal and warm terracotta pigments, visible subtle pigment granulation. Elegant simple readable silhouette, thoughtful anatomy, small amount of fine detail, mature antique field-guide art, NOT cartoon or a black silhouette. Isolated subject centered, whole silhouette visible with generous 15% empty margin, occupying about 70% of the square. Plain very pale warm ivory background #f5efdf, no scene, no border, no lettering, no labels, no watermark, no drop shadow, no UI. All icons in this collection must share the same scale, restrained saturation, pen thickness, gentle watercolor rendering and ivory ground. ",
+  "subjects": [
+    {
+      "id": "pferde",
+      "subject": "Pferde: a noble chestnut horse head and neck in three-quarter profile, flowing dark brown mane. The old icon is a horse-head emblem; preserve that instantly readable motif."
+    },
+    {
+      "id": "raubtiere",
+      "subject": "Raubtiere: a grey wolf head in three-quarter profile, watchful amber eye, muted grey-brown fur."
+    },
+    {
+      "id": "flugwesen",
+      "subject": "Flugwesen: a peregrine falcon alighting, partially spread wings, umber and soft slate feather washes."
+    },
+    {
+      "id": "wild",
+      "subject": "Wild: a red deer stag head and shoulders, branching antlers, russet fur."
+    },
+    {
+      "id": "meerestiere",
+      "subject": "Meerestiere: a gracefully curling sea fish with opal teal scales and small flowing fins."
+    },
+    {
+      "id": "vieh",
+      "subject": "Vieh: a sturdy brown highland cow with curved horns, shaggy fringe, head and shoulders."
+    },
+    {
+      "id": "reptilien",
+      "subject": "Reptilien: a curled emerald-olive lizard with long slender tail, full body."
+    },
+    {
+      "id": "amphibien",
+      "subject": "Amphibien: a small moss green frog on a single ochre leaf, full body."
+    },
+    {
+      "id": "ornithosaurier",
+      "subject": "Ornithosaurier: a small ancient pterosaur in flight with long beak and leathery ochre wings."
+    },
+    {
+      "id": "insekten",
+      "subject": "Insekten: an ornate copper-green stag beetle seen from above, six legs and curved mandibles."
+    },
+    {
+      "id": "sturmbock",
+      "subject": "Sturmbock of Morgorn: a stout brown ram used as a mount, full body standing, enormous curled horns, leather saddle and tightly rolled travel blanket. Grounded sturdy pack-animal design."
+    },
+    {
+      "id": "mondlaeufer",
+      "subject": "Mondläufer of Lichthain: an elegant brown antlered stag mount, full body standing, a small leather saddle and travel bags. A tiny pale moon-shaped mark, understated fairytale naturalism."
+    },
+    {
+      "id": "geister",
+      "subject": "Geister: a floating gentle spectral figure in a ragged desaturated blue-grey shroud, empty hood and wisps of mist, readable full silhouette."
+    },
+    {
+      "id": "nekrophagen",
+      "subject": "Nekrophagen: a gaunt crouching ghoul, long arms, ash-olive skin, tattered brown cloth, full body, eerie rather than gory."
+    },
+    {
+      "id": "trolle",
+      "subject": "Trolle: a broad moss-covered stone-skinned troll with a large nose and small tusks, full body hunched stance."
+    },
+    {
+      "id": "riesen",
+      "subject": "Riesen: a towering bearded hill giant with an old walking club, rustic furs, ochre-brown palette, full body."
+    },
+    {
+      "id": "unbekanntes-waldwesen",
+      "subject": "Unbenanntes Waldwesen: a rearing horse-like creature made of wood, twisted roots and bark, long tapering head, a few small moss green leaves. Full body. Inspired by a wooden rearing horse silhouette."
+    },
+    {
+      "id": "fairean",
+      "subject": "Fairean: an elegant golden-brown deer, branchlike antlers, a luminous emerald green crystal or leaf embedded in its chest, full body standing."
+    },
+    {
+      "id": "luetten",
+      "subject": "Lütten: a pair of small earthy forest folk standing together, pointed ears, simple rough tunics, one carrying a staff and one a little bow. Full bodies, olive and ochre watercolor."
+    },
+    {
+      "id": "kobolde",
+      "subject": "Kobolde: a small mischievous sharp-eared goblin in a russet hood, crooked nose, little brass trinket, head and shoulders."
+    },
+    {
+      "id": "ogroiden",
+      "subject": "Ogroiden: a heavy ogre head and shoulders, jutting lower tusks, rough leather collar, olive-grey skin."
+    },
+    {
+      "id": "vampire",
+      "subject": "Vampire: an aristocratic pale vampire in a wine-red high collar, subtle pointed fangs, head and shoulders."
+    },
+    {
+      "id": "inferniiden",
+      "subject": "Inferniiden: a horned imp with ember-orange skin and small wings, crouching full body, restrained flame at tail tip."
+    },
+    {
+      "id": "aelvar",
+      "subject": "Aelvar: a mysterious angular pointed-eared dark elven face, graceful leafy crown, muted aubergine and olive palette, head and shoulders. Old emblem had sweeping pointed leaves and elegant curves."
+    },
+    {
+      "id": "unhold",
+      "subject": "Unhold: a horned heavy-browed fiend, ochre-brown hide, small curved tusks, powerful head and shoulders."
+    },
+    {
+      "id": "nautiloiden",
+      "subject": "Nautiloiden: a fantastical spiral nautilus shell with curling teal tentacles, the whole creature visible."
+    },
+    {
+      "id": "sylvaniiden",
+      "subject": "Sylvaniiden: an eerie living tree-spirit face within twisting bark and pointed leaves, two curling root tendrils, moss and ochre. Old emblem was a symmetric foliage face."
+    },
+    {
+      "id": "infestiden",
+      "subject": "Infestiden: a strange insectoid fiend, six thin legs, chitinous green-copper carapace and curved feelers, full body."
+    },
+    {
+      "id": "psioniden",
+      "subject": "Psioniden: an enigmatic squidlike head with elegant curling tentacles and a small pale violet third eye, muted dusty violet and teal. Old emblem was a curling tentacled head."
+    },
+    {
+      "id": "djinn",
+      "subject": "Djinn: a noble blue-grey spirit with a small turban, arms folded, lower body spiraling into an ochre brass lamp, full figure."
+    },
+    {
+      "id": "muhmen",
+      "subject": "Muhmen: an old forest crone in a patched olive hood, weathered kind-but-eerie face and twisted walking staff, head and shoulders."
+    },
+    {
+      "id": "gorgonnen",
+      "subject": "Gorgonnen: a solemn gorgon woman's face crowned with a few slender green snakes, stone-grey and antique gold."
+    },
+    {
+      "id": "drachen",
+      "subject": "Drachen: an elegant ancient green dragon, full body curled around its tail, small folded wings and sweeping horns, classic D&D field-guide creature."
+    },
+    {
+      "id": "nymphen",
+      "subject": "Nymphen: a graceful water nymph's head and shoulders, reed wreath, long flowing teal hair becoming ripples, modest."
+    },
+    {
+      "id": "nornen",
+      "subject": "Nornen: a hooded wise fate-weaver holding a small golden spindle and single winding thread, head and shoulders, warm grey and ochre."
+    },
+    {
+      "id": "feen",
+      "subject": "Feen: a tiny elegant woodland fairy in a leaf tunic with delicate moth wings, full figure floating, sage and faded amber."
+    },
+    {
+      "id": "schnitter",
+      "subject": "Schnitter: an austere hooded celestial reaper carrying a slender crescent scythe, ivory-grey robes, full figure, serene rather than gruesome."
+    },
+    {
+      "id": "aelthars-diener",
+      "subject": "Aelthars Diener: a majestic thunder griffin with eagle head, lion body and russet-slate feathered wings, small pale blue lightning curl, full body. Aelthar is lord of thunder."
+    },
+    {
+      "id": "nimues-diener",
+      "subject": "Nimues Diener: an elegant spectral midnight-blue wolf with pale silver fur at the chest and subtle teal spiral markings, full body. Nimue is lady of the lake."
+    },
+    {
+      "id": "thyraels-diener",
+      "subject": "Thyraels Diener: a fire salamander with four legs, curling long tail, charcoal scales edged in amber embers, tiny crest of orange flame, full body. Thyrael is lord of fire."
+    },
+    {
+      "id": "zephyrs-diener",
+      "subject": "Zephyrs Diener: an elegant white feline wind spirit with pale blue airy flowing tail and mane, slender curved wind ribbons, full body. Zephyr is lord of the winds."
+    },
+    {
+      "id": "rheas-diener",
+      "subject": "Rheas Diener: a noble mountain ram made from pale layered stone, tremendous spiral horns and a little moss, full body standing. Rhea is lady of the mountains."
+    }
+  ]
+}

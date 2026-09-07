@@ -23,20 +23,47 @@ function renderCosts(actor, action) {
   return `<span class="combat-mini-costs" aria-label="${escapeHtml(label)}" title="${escapeHtml(label)}">${costs.map(({ amount, icon }) => `<span class="combat-mini-cost"><span class="combat-mini-cost-icon" aria-hidden="true"><b>${escapeHtml(icon.fallback)}</b>${icon.source ? `<img src="${escapeHtml(icon.source)}" alt="" loading="lazy" data-combat-picker-image>` : ''}</span><span aria-hidden="true">${amount}</span></span>`).join('') || 'Kostenlos'}</span>`;
 }
 
-export function renderActionPicker(actor = {}, selectedId = '') {
-  const groups = getActionGroups(actor);
+export function renderActionPicker(actor = {}, selectedId = '', groups = getActionGroups(actor)) {
   const selected = [...groups.values()].flat().find(({ action }) => action.id === selectedId);
   return `<details class="combat-action-picker" data-combat-details="action-picker">
-    <summary aria-label="Angriff oder Handlung wählen"><span>${escapeHtml(selected?.label || 'Handlung wählen')}</span>${selected ? renderCosts(actor, selected.action) : ''}<b aria-hidden="true">⌄</b></summary>
+    <summary><span>${escapeHtml(selected?.label || 'Handlung wählen')}</span>${selected ? renderCosts(actor, selected.action) : ''}<b aria-hidden="true">⌄</b></summary>
     <div class="combat-action-picker-panel">
       <input type="search" data-combat-action-search placeholder="Angriff oder Form suchen …" aria-label="Angriffe und Formen durchsuchen" autocomplete="off">
       <div class="combat-action-picker-options" role="listbox" aria-label="Handlungen und reguläre Kosten">
-      ${[...groups].map(([group, actions]) => `<div role="group" aria-label="${escapeHtml(group)}" data-combat-action-group><div class="combat-action-picker-group" aria-hidden="true">${escapeHtml(group)}</div>${actions.map(({ action, label }) => `<button type="button" role="option" tabindex="-1" data-combat-action-option="${escapeHtml(action.id)}" data-search-text="${escapeHtml(`${group} ${label}`.toLocaleLowerCase('de'))}" aria-selected="${action.id === selectedId}"${action.compatible === false ? ' disabled' : ''}><span>${escapeHtml(label)}${action.compatible === false ? `<small>${escapeHtml(action.disabledReason || 'Zurzeit nicht verfügbar')}</small>` : ''}</span>${renderCosts(actor, action)}</button>`).join('')}</div>`).join('')}
+      ${[...groups.values()].map(actions => renderGroup(actor, actions, selectedId)).join('')}
       </div>
-      <small data-combat-action-empty hidden>Keine passende Handlung gefunden.</small>
+      <small data-combat-action-empty role="status" hidden>Keine passende Handlung gefunden.</small>
       <small class="combat-action-picker-hint">Reguläre Kosten · Aura-Fokus als Alternative unter „Kosten“.</small>
     </div>
   </details>`;
+}
+
+function renderGroup(actor, actions, selectedId) {
+  const group = actions[0].group;
+  return `<div role="group" aria-label="${escapeHtml(group)}" data-combat-action-group>
+    <div class="combat-action-picker-group" aria-hidden="true"><span>${escapeHtml(group)}</span><span class="combat-action-group-count" data-combat-group-count>${actions.length}</span></div>
+    ${actions.map(({ action, label, minimumLevel }) => `<button type="button" role="option" tabindex="-1" data-combat-action-option="${escapeHtml(action.id)}" data-search-text="${escapeHtml(`${group} ${label}`.toLocaleLowerCase('de'))}" aria-selected="${action.id === selectedId}"${action.compatible === false ? ' disabled' : ''}>
+      <span>${escapeHtml(label)}${minimumLevel ? `<small class="combat-action-level">Ab Stufe ${minimumLevel}</small>` : ''}${action.compatible === false ? `<small>${escapeHtml(action.disabledReason || 'Zurzeit nicht verfügbar')}</small>` : ''}</span>${renderCosts(actor, action)}
+    </button>`).join('')}
+  </div>`;
+}
+
+export function filterCombatActions(composer, value = '') {
+  const picker = composer?.querySelector('[data-combat-details="action-picker"]');
+  if (!picker) return;
+  const query = String(value).trim().toLocaleLowerCase('de');
+  const options = [...picker.querySelectorAll('[data-combat-action-option]')];
+  options.forEach(option => { option.hidden = !option.dataset.searchText.includes(query); });
+  picker.querySelectorAll('[data-combat-action-group]').forEach(group => {
+    const count = [...group.querySelectorAll('[data-combat-action-option]')].filter(option => !option.hidden).length;
+    group.hidden = count === 0;
+    const badge = group.querySelector('[data-combat-group-count]');
+    if (badge) badge.textContent = String(count);
+  });
+  picker.querySelector('[data-combat-action-empty]').hidden = options.some(option => !option.hidden);
+  const available = options.filter(option => !option.disabled && !option.hidden);
+  const tabStop = available.find(option => option.getAttribute('aria-selected') === 'true') || available[0];
+  options.forEach(option => { option.tabIndex = option === tabStop ? 0 : -1; });
 }
 
 export function bindActionPicker(composer) {
@@ -48,6 +75,7 @@ export function bindActionPicker(composer) {
   const search = picker.querySelector('[data-combat-action-search]');
   const options = [...picker.querySelectorAll('[data-combat-action-option]')];
   const available = () => options.filter(option => !option.disabled && !option.hidden);
+  filterCombatActions(composer, search.value);
   const close = () => { picker.open = false; summary.focus({ preventScroll: true }); };
   const choose = option => {
     if (!option || option.disabled || option.hidden) return;
@@ -61,12 +89,18 @@ export function bindActionPicker(composer) {
   });
   picker.addEventListener('input', event => {
     if (event.target !== search) return;
-    const query = search.value.trim().toLocaleLowerCase('de');
-    options.forEach(option => { option.hidden = !option.dataset.searchText.includes(query); });
-    picker.querySelectorAll('[data-combat-action-group]').forEach(group => {
-      group.hidden = ![...group.querySelectorAll('[data-combat-action-option]')].some(option => !option.hidden);
-    });
-    picker.querySelector('[data-combat-action-empty]').hidden = options.some(option => !option.hidden);
+    filterCombatActions(composer, search.value);
+    picker.querySelector('.combat-action-picker-options').scrollTop = 0;
+  });
+  picker.addEventListener('focusin', event => {
+    if (!event.target.matches?.('[data-combat-action-option]')) return;
+    options.forEach(option => { option.tabIndex = option === event.target ? 0 : -1; });
+  });
+  picker.addEventListener('toggle', () => {
+    if (picker.open && picker.ownerDocument.activeElement === summary) search.focus({ preventScroll: true });
+  });
+  composer.addEventListener('pointerdown', event => {
+    if (!picker.contains(event.target)) picker.open = false;
   });
   picker.addEventListener('keydown', event => {
     if (event.key === 'Escape' && picker.open) { event.preventDefault(); close(); return; }

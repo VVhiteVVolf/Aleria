@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "currach",
+  "cultureId": "alben",
+  "name": "Currach",
+  "title": "Der Currach",
+  "subtitle": "Tiarna der Küsten und Hochsee",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/raG2iIO.png",
+  "illustration": "https://i.imgur.com/p91X6hD.png",
+  "artwork": {
+    "source": "https://i.imgur.com/p91X6hD.png",
+    "width": 500,
+    "height": 344,
+    "caption": "Currach · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Tiarna; niederer Adel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Seekämpfer, Navigator und Enterkrieger"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Bogen, Enteraxt, kurzes Schwert, Keule oder Flegel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Verstärktes Leder oder bewegliches Kettenwerk"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Führt Sturmseil und Wurfhaken für Entermanöver"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Currach verdankt seinen Namen nicht einer Waffe, sondern dem Wasser. Das Wort setzt sich aus cur – gebogen, gewunden – und der verstärkenden Endung -rach zusammen. Ursprünglich bezeichnete es das gebogene Boot der Alben. Wer als Tiarna regelmäßig zur See fuhr, um Piraten, Räuber oder Küstenplünderer zu bekämpfen, wurde im Alltag schlicht „Currach“ genannt – halb im Scherz, halb aus Gewohnheit.</p> <p>„Bist du heute wieder ein Currach?“ bedeutete nichts anderes als: Du gehst wieder aufs Boot.</p> <p>Was als umgangssprachliche Bezeichnung begann, wurde mit der Zeit zu einer anerkannten Ausrichtung innerhalb des Tiarna-Standes. Heute bezeichnet der Currach jene Tiarna, die in Nautik, Seemannskunde und Seekampf geschult sind. Sie sind keine bloßen Matrosen in Rüstung, sondern spezialisierte Krieger, die gelernt haben, auf schwankenden Planken ebenso sicher zu kämpfen wie andere auf festem Boden.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Jahrhunderten war die See für die Alben vor allem Handels- und Reiseweg. Tiarna, die Schiffe begleiteten oder Küsten patrouillierten, taten dies ohne besondere Titel. Sie waren schlicht Tiarna – nur eben auf dem Wasser.</p> <p>Mit zunehmender Piraterie und den Überfällen der Nordmänner gewann der Seekampf jedoch an Bedeutung. Küstensiedlungen mussten geschützt, Handelsrouten gesichert und feindliche Schiffe abgewehrt werden. Nicht jeder Tiarna war für das Leben an Bord geeignet. Das Gleichgewicht auf schwankendem Deck, das Lesen von Wind und Strömung, das Koordinieren von Entermanövern – all dies erforderte besondere Schulung.</p> <p>So wurde aus der lockeren Bezeichnung „Currach“ eine feste Rolle. Diejenigen, die regelmäßig zur See fuhren und sich dort bewährten, entwickelten eine eigene Kampftradition. Sie verbanden die Grundschule des Tiarnatum mit den Anforderungen des Meeres.</p> <p>Der Currach ist damit kein Spottname wie einst der Cateran, sondern eine gewachsene Spezialisierung. Er steht für die Erkenntnis, dass die Küstenlinie ebenso verteidigt werden muss wie die Felder und Wälder im Inland.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Currach ist in der Seemannskunde ebenso geschult wie im Kampf. Er versteht Navigation, Windrichtung, Strömung und das Verhalten von Schiffen unter Segel. Auf engem Deck bewegt er sich sicher, selbst bei starkem Seegang.</p> <p>Kämpferisch ist er vielseitig. Er beherrscht den Bogen für Gefechte auf Distanz zwischen Schiffen, führt Axt, Keule, Schwert oder Flegel im Nahkampf und ist geübt darin, auf engem Raum effektiv zu agieren. Seine Bewegungen sind kompakt und kontrolliert, angepasst an die Enge eines Schiffes.</p> <p>Sein charakteristisches Werkzeug ist das Sturmseil, ein Wurfhaken, mit dem gegnerische Schiffe geentert werden. Der Currach weiß, wie man ein Schiff heranzieht, fixiert und die erste Welle des Enterkampfes anführt.</p> <p>Er ähnelt dem Serf in seiner Vielseitigkeit und Anpassungsfähigkeit, doch während der Serf den Wald liest, liest der Currach die See. Seine Stärke liegt nicht im offenen Feld, sondern dort, wo Holz knarrt, Tauwerk spannt – und das Meer unter den Füßen lebt.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Sicherer Kampf auf schwankendem Untergrund</li><li>Hohe Vielseitigkeit in Bewaffnung und Distanz</li><li>Effektiv im Enterkampf</li><li>Gute Koordination in engen Räumen</li><li>Erfahren in Navigation und Küstenoperationen</li></ul> <h3>Schwächen</h3><ul><li>Weniger effektiv in geschlossener Feldformation</li><li>Begrenzte Wirkung ohne Schiff oder Küstenumfeld</li><li>Abhängig von Wetter und Seebedingungen</li><li>In schwerer Rüstung auf See eingeschränkt</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines Currach ist auf Enge, Feuchtigkeit und plötzliche Bewegungen abgestimmt. Seine Rüstung ist leichter als die vieler Land-Tiarna – verstärktes Leder oder bewegliches Kettenwerk, das nicht zu schwer wird, falls er ins Wasser fällt. Metall wird bewusst reduziert, ohne Schutz zu vernachlässigen.</p> <p>Als Bewaffnung führt er häufig eine Enteraxt oder ein kurzes Schwert, geeignet für engen Raum. Viele tragen zusätzlich eine Keule oder einen Flegel, um gegnerische Schilde oder Helme auf engem Deck aufzubrechen. Für Distanzkämpfe zwischen Schiffen kommt der Bogen zum Einsatz.</p> <p>Charakteristisch ist das Sturmseil – ein Wurfhaken mit starkem Tau, der zum Heranziehen gegnerischer Schiffe dient. Der Currach ist geschult, diesen präzise zu werfen und als Erster über die Reling zu gehen.</p> <p>Alles an seiner Ausstattung ist zweckgebunden. Kein langes Banner, kein überflüssiger Zierrat – nur, was auf See Bestand hat.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Currach genießt in den Küstenfürstentümern hohes Ansehen. Er ist Hüter der Handelswege, Beschützer der Häfen und Schrecken der Piraten. Während er im Landesinneren weniger sichtbar ist, weiß jede Küstensiedlung, was es bedeutet, wenn ein Schiff mit Currach an Bord im Hafen liegt.</p> <p>Er steht für die maritime Seite der Albischen Wehrkraft. Nicht so glorreich wie der Tiarna im offenen Feld, nicht so mythisch wie der Airig – aber unverzichtbar für den Wohlstand und die Sicherheit der Küstenlande.</p> <p>Innerhalb des Tiarna-Standes gelten Currach als eigenständig, manchmal etwas rauer im Auftreten. Das Leben auf See formt Charaktere anders als das Leben auf Burgen oder in Wäldern. Doch ihr Dienst wird nicht infrage gestellt.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der wichtigste Gefährte eines Currach ist nicht Tier, sondern Schiff.</p> <p>Die Hochseeschiffe der Alben sind große, mehrdeckige Fahrzeuge – eine Mischung aus Galeone und Karacke, jedoch mit eigener Bauweise. Ihr Rumpf ist hochgezogen und robust, geeignet für lange Reisen und schwere See. Der Bug ist oft verstärkt, mit geschnitzten Figuren oder symbolischen Darstellungen alter Legenden.</p> <p>Mehrere Masten tragen breite Segel, angepasst an wechselnde Winde. Unter Deck finden sich Laderäume für Handel oder Versorgung, darüber das Kampfdeck für Entergefechte. Die Albenschiffe sind nicht nur Transportmittel, sondern schwimmende Festungen.</p> <p>Neben dem Schiff führen Currach gelegentlich Greifvögel oder robuste Bordhunde mit, die als Wachtiere dienen. Doch letztlich ist es das Schiff selbst – sein Holz, sein Tauwerk, seine Mannschaft –, das als wahrer Gefährte gilt.</p> <p>Ein Currach ohne Schiff ist ein Tiarna. Ein Currach mit Schiff ist eine Macht auf See.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "d7ff395603deba64ff7b0a9269be406aa3eee6f47c72055d15667f5e8f136a9b"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/UKHiCxy.png",
+    "width": 300,
+    "height": 300,
+    "caption": "Albisches Hochseeschiff"
+  }
+}

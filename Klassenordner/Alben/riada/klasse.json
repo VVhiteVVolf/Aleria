@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "riada",
+  "cultureId": "alben",
+  "name": "Riada",
+  "title": "Der Riada",
+  "subtitle": "Freischärler und königlicher Gefolgsmann",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/BmaklcS.png",
+  "illustration": "https://i.imgur.com/u04Yl4W.png",
+  "artwork": {
+    "source": "https://i.imgur.com/u04Yl4W.png",
+    "width": 500,
+    "height": 352,
+    "caption": "Riada · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Anerkannte Ausprägung des Tiarna-Standes"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Leicht gerüsteter Stoß- und Guerillakämpfer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Axt, Hammer, großes Schwert; teils Bogen oder Wurfspeer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Kilt, Leder und einzelne leichte Schutzteile"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Kämpft aus Verbundenheit mit der Idee eines geeinten Albentums"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Riada ist mehr als eine Kampfweise – er ist ein Bekenntnis. Das Wort leitet sich von Rí – König – und der zugehörigkeitsstiftenden Endung -ada ab. Wörtlich bedeutet es „des Königs“ oder „königlicher Gefolgsmann“. Doch in Wahrheit meint es etwas Tieferes: jemand, der dem Gedanken eines geeinten Albentums verpflichtet ist, selbst wenn kein König mehr lebt.</p> <p>Der Riada ist kein höfischer Krieger. Er ist kein klassisch ausgebildeter Tiarna und kein formell gebundener Kern. Er ist der Albe, der aufsteht, wenn seine Heimat bedroht wird – ohne auf Rang oder Stand zu warten.</p> <p>Heute verkörpert der Riada eine wilde, leicht gerüstete Form des Tiarna. Oft nur mit Kilt, Leder, Kriegsbemalung und einer schweren Waffe bewaffnet, stürzt er sich in den Kampf mit einer Entschlossenheit, die mehr aus Überzeugung als aus Befehl geboren wird.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Zur Zeit der großen Konflikte mit den Nordmännern reichten weder Tiarna noch Kerns aus, um alle Siedlungen zu schützen. Es waren einfache Bürger – Holzfäller, Jäger, Schmiede, Zimmerleute –, die beschlossen, ihre Heimat selbst zu verteidigen.</p> <p>Sie warteten nicht auf Ernennungen. Sie griffen zu dem, was sie hatten. Äxte, Hämmer, Jagdbögen, improvisierte Speere. Oft schlecht ausgerüstet, mit kaum mehr als Leder und Kilt, stellten sie sich den Invasoren entgegen.</p> <p>Diese Männer und Frauen wurden als Riada bezeichnet – nicht wegen eines Amtes, sondern wegen ihrer Haltung. Sie kämpften im Namen des Königs, selbst wenn es keinen mehr gab.</p> <p>Ihr Einsatz war entscheidend. In vielen Gefechten kippten sie das Gleichgewicht zugunsten der Alben. Fürsten begannen, diese Patrioten offiziell zu erheben. Aus Riada wurden Tiarna. Und jene, die aus diesen Reihen hervorgingen, trugen ihre Freischärler- und Guerillataktiken in den Adel hinein.</p> <p>Heute existiert der Riada als anerkannte Ausprägung des Tiarna-Standes – besonders verbreitet im nördlichen Insel-Fürstentum Faelaron.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Riada kämpft leicht und schnell. Seine Stärke liegt im Überraschungsmoment, im raschen Zuschlagen und im unkonventionellen Vorgehen. Er ist geübt im Einsatz schwerer Hiebwaffen – Äxte, Hämmer, große Schwerter – ebenso wie im Bogen- oder Wurfspeerkampf.</p> <p>Charakteristisch ist seine Bereitschaft, mit minimalem Schutz maximalen Druck aufzubauen. Viele Riada haben eine Form des Berserkergangs kultiviert – eine bewusst herbeigeführte Kampfesraserei, die Schmerz und Furcht verdrängt. Anders als nordische Berserker entspringt diese Raserei jedoch weniger religiösem Kult als patriotischer Inbrunst.</p> <p>Der Riada ist kein Formationskämpfer. Er operiert als Stoßtrupp, als Störer, als Brecher von Linien. Besonders in unwegsamem Gelände oder in chaotischen Gefechten entfaltet er seine größte Wirkung.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Hohe Aggressivität und Durchschlagskraft</li><li>Effektiv in unkonventionellen Gefechten</li><li>Furchtloser Einsatz, auch unter Druck</li><li>Schnell und beweglich durch leichte Ausrüstung</li><li>Stark in Stoß- und Überraschungsangriffen</li></ul> <h3>Schwächen</h3><ul><li>Geringer Rüstungsschutz</li><li>Weniger diszipliniert in geschlossener Formation</li><li>Anfällig gegen koordinierte, stark gepanzerte Gegner</li><li>Raserei kann Kontrolle und taktische Übersicht mindern</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines Riada ist bewusst reduziert. Er trägt meist nur das Nötigste: einen Kilt, verstärktes Leder, gelegentlich ein einfaches Kettenstück oder Armschutz. Helm und schwerer Brustpanzer sind selten – nicht aus Armut, sondern aus Prinzip. Beweglichkeit ist wichtiger als Schutz.</p> <p>Seine Waffen sind roh und wirkungsvoll. Große Äxte, Hämmer, breite Schwerter oder schwere Keulen sind verbreitet. Manche führen zusätzlich einen Bogen oder Wurfspeere, doch der Kern seiner Kampfweise bleibt der direkte, brutale Einschlag.</p> <p>Viele Riada tragen Kriegsbemalung albischer Art, Zeichen ihres Clans oder alte Symbole des Königtums. Diese sind nicht bloß Zierde, sondern Ausdruck ihrer Haltung: Kampf aus Überzeugung, nicht aus Pflicht.</p> <p>Seine Ausstattung wirkt rustikal, manchmal beinahe archaisch. Doch gerade diese Einfachheit erlaubt es ihm, schnell zuzuschlagen und ebenso rasch wieder zu verschwinden.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Riada trägt einen legendären Ruf. In den Liedern der Seefahrerzeit sind es die Riada, die mit bloßen Äxten gegen gepanzerte Feinde stürmten, die Dörfer retteten, wenn alle Strukturen versagten. Als aus ihren Reihen Tiarna erhoben wurden, galt dies als höchste Anerkennung des Volksmutes.</p> <p>Dieser Glanz haftet ihnen bis heute an. In Faelaron und anderen nördlichen Regionen werden Riada noch immer als Verkörperung albischen Patriotismus gefeiert.</p> <p>Doch die Wahrnehmung hat sich gewandelt. Was einst heroische Notwehr war, erscheint manchen heutigen Fürsten und kultivierten Tiarna als zu roh, zu ungeschliffen. Riada wirken mitunter rustikal, ungestüm – manchmal sogar den Nordmännern ähnlicher als den verfeinerten Adelshäusern des Südens.</p> <p>Sie werden verehrt, aber nicht immer ernst genommen. Bewundert, aber nicht immer vollständig akzeptiert.</p> <p>Der Riada steht damit zwischen Mythos und Realität: Volksheld der Vergangenheit – Freischärler der Gegenwart.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Riada führen selten edle Reittiere oder kunstvoll gezüchtete Begleiter. Am häufigsten findet man an ihrer Seite Hetzhunde – kräftige, ausdauernde Tiere, die im Gefecht ebenso furchtlos sind wie ihre Herren.</p> <p>Diese Hunde dienen nicht nur der Jagd, sondern auch dem Sturmangriff. Sie hetzen Gegner, reißen an Beinen und Armen, schaffen Chaos – genau das Umfeld, in dem der Riada seine größte Wirkung entfaltet.</p> <p>Wie sein eigener Stil sind auch seine Gefährten direkt, zweckgebunden und ohne Zier.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "82939a2e6ed661c27b728102998eb2de2edf3233d38b443b6daf2a026c0d59fc"
+  }
+}

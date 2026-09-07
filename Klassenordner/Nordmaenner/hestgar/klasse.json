@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "hestgar",
+  "cultureId": "nordmaenner",
+  "name": "Hestgar",
+  "title": "Der Hestgar",
+  "subtitle": "Reiter des Nordens",
+  "aliases": [],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/tN9JEZA.png",
+  "illustration": "https://i.imgur.com/geDHpby.png",
+  "artwork": {
+    "source": "https://i.imgur.com/geDHpby.png",
+    "width": 500,
+    "height": 273,
+    "caption": "Hestgar · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Reiter"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Name Hestgar leitet sich vom Wort Hest – Pferd – ab. Ebenso gut hätten die Norrnaigh diese Krieger einst Hrossgar nennen können, denn ihre ersten Reittiere waren die zotteligen, widerstandsfähigen Hross, eine in Yrmandrall heimische Rasse, die eher einem robusten Pony als einem edlen Schlachtross gleicht. Doch die Bezeichnung Hestgar setzte sich durch, weil sie an jene kräftigeren Hest-Rösser anknüpft, die später das Bild der nordischen Reiter prägten.</p> <p>Die Hestgar sind berittene Einhejaren – eine Spezialisierung, die nicht aus Tradition, sondern aus Notwendigkeit entstand. Anders als die südlichen Reiche waren die Norrnaigh nie ein Reitervolk. Ihre Stärke lag im Schildwall, im Sturm und im Gefecht zu Fuß. Pferde dienten vornehmlich als Transportmittel, nicht als Instrument des Schlachtfeldes.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Tagen ritten die Norrnaigh auf dem Hross, um Entfernungen zu überbrücken, wenn Flüsse und Seewege nicht nutzbar waren. Diese Tiere waren genügsam, zäh und ideal für das harsche Klima Yrmandralls – doch als Schlachtrosse taugten sie kaum. Sie waren zu klein, zu kurzbeinig, zu wenig für den direkten Zusammenstoß geeignet.</p> <p>Erst die langen Kriege gegen die Avallornier und später gegen die Reiche Cenyrs und anderer südlicher Mächte zwangen die Nordmänner, ihre Haltung zu überdenken. Sie sahen, wie effektiv gut organisierte Kavallerie sein konnte – sowohl im Durchbruch als auch im schnellen Flankenmanöver. Anstatt jedoch das Hross zu überfordern, begannen sie, kräftigere Hest-Rösser aus Nord-Estryll oder die berühmten Salen aus dem Norden Aldervans zu erwerben und zu züchten.</p> <p>Die ersten Einhejaren, die diese Tiere in die Schlacht führten, wurden bald Hestgar genannt – nicht nach dem alten Hross, sondern nach dem Hest, das sie rittlings in den Kampf trug. So entstand eine neue Gattung innerhalb der Einhejaren.</p> <p>Obwohl die Hestgar nie die Eleganz oder Perfektion südlicher Ritter erreichten, lernten sie schnell. Man mag sie im Vergleich zu klassischen Reitervölkern für grob oder ungeschliffen halten – doch wer sie unterschätzt, tut es nur einmal.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Die Hestgar kämpfen beritten mit Lanze, Axt, Schwert oder auch mit einer gebogenen Falx, die sich besonders zum Niederziehen gegnerischer Reiter oder zum Aufreißen von Schilden eignet. Ihre Ausbildung verbindet die nordische Nahkampfhärte mit grundlegender Reittechnik – nicht elegant, aber funktional und auf Wirkung ausgerichtet.</p> <p>Ihre Pferde sind groß, massiv und im Vergleich zu südlichen Rassen eher schwerfällig. Geschwindigkeit ist nicht ihre größte Stärke. Doch wenn die Hestgar in geschlossener Linie zum Ansturm übergehen, entsteht eine brachiale Wucht, die selbst disziplinierte Reihen erschüttert. Der Stoß ihrer Lanzen und das Gewicht ihrer Tiere machen es extrem schwer, sie im direkten Aufprall zu stoppen.</p> <p>Die Hestgar sind zudem geübt darin, aus dem Sattel in den Nahkampf überzugehen. Wird das Gefecht unübersichtlich oder das Gelände unpassierbar, kämpfen sie ohne Zögern zu Fuß weiter – ganz im Sinne ihrer Herkunft als Einhejaren.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Gewaltiger Ansturm mit hoher Durchschlagskraft</li><li>Schwere, widerstandsfähige Pferde – schwer zu Fall zu bringen</li><li>Vielseitige Bewaffnung (Lanze, Axt, Schwert, Falx)</li><li>Hohe Moral und Furchtwirkung beim Angriff</li><li>Fähig, auch nach dem Absitzen effektiv weiterzukämpfen</li></ul> <h3>Schwächen</h3> <ul><li>Vergleichsweise geringe Geschwindigkeit</li><li>Weniger wendig als südliche Kavallerie</li><li>Ausbildung nicht so formalisiert wie bei klassischen Ritterorden</li><li>Abhängig von geeignetem Gelände</li><li>In längeren Reitergefechten taktisch unterlegen gegenüber spezialisierten Kavallerievölkern</li></ul> <p>So ungeschliffen sie als Reitervolk erscheinen mögen – beim Ansturm einer geschlossenen Hestgar-Reiterei erzittert selbst der erfahrene Milwr. Und wer den Fehler begeht, sie als plump abzutun, wird selten eine zweite Gelegenheit zur Korrektur erhalten.</p>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Hestgar ist auf Wucht, Stabilität und Durchhaltevermögen ausgelegt – nicht auf Eleganz oder Turnierästhetik. Sein Pferd ist großrahmig, kräftig gebaut und meist mit einem schweren Ledersattel oder verstärktem Holzrahmen versehen. Aufwendige Plattenpanzerungen wie im Süden sind selten, doch einfache Brustleder, dicke Felllagen oder verstärkte Halsriemen schützen das Tier ausreichend gegen Hiebe und Pfeile.</p> <p>Der Hestgar selbst trägt in der Regel ein solides Kettenhemd, darüber Leder oder Fell, sowie einen stabilen Helm. Seine Ausrüstung ist funktional und robust, oft dunkel gehalten, mit Clanfarben oder Runenzeichen versehen. Schmuck ist zweitrangig – Haltbarkeit zählt.</p> <p>Zur Bewaffnung gehören eine Reiterlanze oder Stoßlanze für den Ansturm sowie eine Nahkampfwaffe wie Axt, Schwert oder Falx. Ein Rundschild kann am Sattel befestigt oder auf dem Rücken getragen werden, wird jedoch meist erst nach dem ersten Zusammenstoß aktiv eingesetzt. Manche Hestgar führen zusätzlich einen Dolch oder Sax für den Kampf im Gedränge.</p> <p>Ihre Ausrüstung ist weniger fein gearbeitet als jene südlicher Ritter, dafür jedoch auf harte Bedingungen, Kälte und lange Märsche ausgelegt. Sie tragen, was funktioniert – und was im Aufprall nicht bricht.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Hestgar nimmt im Gefüge der nordischen Einhejaren eine besondere, aber nicht übermäßig gefeierte Stellung ein. Kaum ein junger Adliger träumt davon, Hestgar zu werden. Viele treten diesen Weg aus Notwendigkeit an – weil ihre Region es verlangt, weil ihre Familie auf Reiterei setzt oder weil sie von Kindheit an dafür erzogen wurden.</p> <p>Der Kampf zu Pferd ist den Nordlingen kulturell fremder als der Kampf zu Fuß. Der wahre Krieger steht im Schildwall, spürt den Druck des Gegners und hört das Atmen seiner Brüder. Der Sattel schafft Distanz – und Distanz wird im Norden nicht immer mit Tugend gleichgesetzt. Deshalb genießen Hestgar Respekt, aber selten Verehrung.</p> <p>Sie werden von ihresgleichen nicht geringgeschätzt. Jeder weiß um die Wucht ihres Ansturms und den Mut, den es braucht, sich mit einem massiven Pferd in die feindliche Linie zu werfen. Doch in Liedern und Sagas stehen meist Ravnar oder Berserker im Vordergrund. Der Hestgar bleibt pragmatisch: notwendig, effektiv, aber kulturell nie ganz im Zentrum der nordischen Kriegeridentität.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Hestgar nimmt im Gefüge der nordischen Einhejaren eine besondere, aber nicht übermäßig gefeierte Stellung ein. Kaum ein junger Adliger träumt davon, Hestgar zu werden. Viele treten diesen Weg aus Notwendigkeit an – weil ihre Region es verlangt, weil ihre Familie auf Reiterei setzt oder weil sie von Kindheit an dafür erzogen wurden.</p> <p>Der Kampf zu Pferd ist den Nordlingen kulturell fremder als der Kampf zu Fuß. Der wahre Krieger steht im Schildwall, spürt den Druck des Gegners und hört das Atmen seiner Brüder. Der Sattel schafft Distanz – und Distanz wird im Norden nicht immer mit Tugend gleichgesetzt. Deshalb genießen Hestgar Respekt, aber selten Verehrung.</p> <p>Sie werden von ihresgleichen nicht geringgeschätzt. Jeder weiß um die Wucht ihres Ansturms und den Mut, den es braucht, sich mit einem massiven Pferd in die feindliche Linie zu werfen. Doch in Liedern und Sagas stehen meist Ravnar oder Berserker im Vordergrund. Der Hestgar bleibt pragmatisch: notwendig, effektiv, aber kulturell nie ganz im Zentrum der nordischen Kriegeridentität.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "035f9f1c5ba8301142a5aba5109b5c7786b1d35b8b7fa9365a0da9d53979dfaf"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/uF665HD.png",
+    "width": 246,
+    "height": 300,
+    "caption": "Gefährten des Hestgar"
+  }
+}

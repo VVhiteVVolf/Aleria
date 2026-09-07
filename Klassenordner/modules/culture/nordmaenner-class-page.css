@@ -1,0 +1,90 @@
+/* Nordmänner: kaltes Eisen, dunkles Holz und vom Feuer vergoldetes Pergament. */
+[data-culture="nordmaenner"] {
+  --class-accent: #47616a;
+  --class-accent-dark: #283d45;
+  --class-deep: #263238;
+  --class-tint: #c8c4a7;
+}
+
+[data-culture="nordmaenner"] .class-book-page {
+  border-top-color: #536b70;
+}
+
+[data-culture="nordmaenner"] .class-cover {
+  background:
+    linear-gradient(102deg, rgba(55, 77, 83, .2), transparent 34%),
+    linear-gradient(128deg, #b79b67, #eee0bd 60%, #c7c0aa);
+  border-bottom: 3px double #63787a;
+}
+
+[data-culture="nordmaenner"] .class-cover h1,
+[data-culture="nordmaenner"] .class-chapter-heading h2,
+[data-culture="nordmaenner"] .class-facts h2 {
+  color: #304a52;
+}
+
+[data-culture="nordmaenner"] .class-cover-top {
+  border-bottom-color: #927549;
+}
+
+[data-culture="nordmaenner"] .class-emblem {
+  background: linear-gradient(145deg, #eee0bb, #aaa993);
+  border-color: #52686d;
+  box-shadow: inset 0 0 0 4px rgba(255, 246, 216, .46), 0 7px 18px rgba(30, 42, 46, .22);
+}
+
+[data-culture="nordmaenner"] .cenyr-cover-path {
+  margin-inline: -2px;
+  padding-inline: 16px;
+  background: linear-gradient(90deg, #2c424a, #3d5052);
+  color: #f4e4bd;
+}
+
+[data-culture="nordmaenner"] .cenyr-cover-path a {
+  color: #ffe7ad;
+}
+
+[data-culture="nordmaenner"] .class-book-mark,
+[data-culture="nordmaenner"] .class-volume-nav a[aria-current="page"] {
+  border-color: #61777a;
+  background: #d1c39c;
+}
+
+[data-culture="nordmaenner"] .class-chapter-heading > span {
+  border-color: #657b7d;
+  color: #36555e;
+}
+
+[data-culture="nordmaenner"] .class-prose h3 {
+  margin: 30px 0 10px;
+  color: #3b555a;
+  font-size: 17px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+[data-culture="nordmaenner"] .class-prose li::marker {
+  color: #9a6832;
+}
+
+[data-culture="nordmaenner"] .class-facts {
+  border-top-color: #5e7476;
+  background: linear-gradient(145deg, rgba(205, 195, 158, .76), rgba(247, 237, 210, .88));
+}
+
+[data-culture="nordmaenner"] .class-portrait-frame {
+  background: #28383d;
+  border-color: #65777a;
+}
+
+[data-culture="nordmaenner"] .class-pending {
+  border-color: #8c7753;
+  background: #e9d9ae;
+}
+
+@media (max-width: 760px) {
+  [data-culture="nordmaenner"] .cenyr-cover-path {
+    margin-inline: 0;
+    padding-inline: 12px;
+  }
+}

@@ -1,5 +1,12 @@
 const ALMANACH_LEFT_REGISTER_ITEMS = [
   {
+    key: 'bestiarium',
+    label: 'Bestiarium',
+    note: 'Wesen, Bildtafeln und Überlieferungen',
+    icon: 'Bestiarium-register.webp',
+    href: '../Bestiarium/index.html'
+  },
+  {
     key: 'charaktere',
     label: 'Charaktere',
     note: 'Personenregister und Rollenprofile',

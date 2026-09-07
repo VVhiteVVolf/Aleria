@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "silvaner",
+  "cultureId": "alben",
+  "name": "Silvaner",
+  "title": "Der Silvaner",
+  "subtitle": "Waldläufer, Pionier und Entdecker",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/McVUKVQ.png",
+  "illustration": "https://i.imgur.com/kXtsJx3.png",
+  "artwork": {
+    "source": "https://i.imgur.com/kXtsJx3.png",
+    "width": 500,
+    "height": 247,
+    "caption": "Silvaner · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Aufgabenbereich",
+      "html": "Schutz von Land, Clan und Fürstentum; Wahrung von Recht und Ordnung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Silvaner ist kein bloßer Waldläufer. Er ist Grenzgänger zwischen Land und See, zwischen Wildnis und Zivilisation. Sein Name leitet sich von Silva – Wald – ab, doch sein Wirkungsfeld endet nicht an den Baumgrenzen.</p> <p>Er ist Entdecker, Pirscher, Küstenkundiger und Beobachter. Wo andere Tiarna marschieren, kartiert er. Wo Händler siedeln, sondiert er. Wo Stadtmauern enden, beginnt sein Revier.</p> <p>Die Silvaner sind die eigentliche Seele Dun Rothars – der einstigen Travoner. Sie verkörpern die alte Entdeckertradition Sylverants, angepasst an albische Tugend.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Als die Travoner aus Tirnara nach Leitheach kamen, wollten sie Handel – nicht Herrschaft. Doch um zu handeln, musste man das Land kennen. Und so zogen Männer und Frauen aus, die Wälder, Klippen und Küsten zu erkunden.</p> <p>Diese wurden später Silvaner genannt.</p> <p>Ursprünglich waren sie vielseitige Entdecker: Naturkundige, Küstenspäher, Kartografen und Jäger. Mit der Entwicklung Dun Rothars verlagerte sich ihr Schwerpunkt zunehmend zur See. Sie wurden nautisch geschult, lernten Strömungen lesen, Untiefen erkennen und sich in fremden Küstenregionen zurechtzufinden.</p> <p>Heute sind sie eine spezialisierte Entdeckerklasse – halb Waldläufer, halb Seefahrer – deren Stärke nicht im offenen Schlachtfeld liegt, sondern im Unbekannten.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Silvaner vereint Elemente von Serf und Currach, bleibt jedoch eigenständig durch seinen Entdeckercharakter.</p> <h3>Naturkunde &amp; Wildnisüberleben</h3> <p>Spurenlesen, Pflanzenkunde, Tierverhalten, Wetterdeutung. Er lebt nicht nur im Wald – er versteht ihn.</p> <h3>Nautik &amp; Navigation</h3> <p>Gezeiten, Küstenlinien, Sternennavigation, Strömungslesen. Er ist kein bloßer Matrose, sondern Küstenkundiger.</p> <h3>Klettern &amp; Erkundung</h3> <p>Gebirge, Klippen, Höhlensysteme – der Silvaner bewegt sich, wo andere umkehren.</p> <h3>Tauchen &amp; Küstenarbeit</h3> <p>Erkundung von Wracks, Unterwasserpassagen, felsigen Buchten.</p> <h3>Fernkampf &amp; Jagd</h3> <p>Bogen als Hauptwaffe. Speer als flexible Waffe für Jagd und Gefecht.</p> <h3>Fallen &amp; Handwerk</h3> <p>Schlingen, primitive Sperren, improvisierte Werkzeuge. Er baut, was er braucht.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Herausragende Natur- und Geländekenntnis (Wald, Küste, Gebirge)</li><li>Überdurchschnittliche Navigations- und Seekunde</li><li>Hohe Selbstständigkeit und Überlebensfähigkeit</li><li>Präziser Fernkämpfer mit dem Bogen</li><li>Anpassungsfähig in unbekannten oder feindlichen Regionen</li><li>Geschickt im Aufklären, Spähen und Kartieren</li></ul> <h3>Schwächen</h3> <ul><li>Kein ausdauernder Frontkämpfer im offenen Schlachtfeld</li><li>Leichte bis mittlere Rüstung – begrenzte Standfestigkeit</li><li>Weniger effektiv in enger Formation oder Stadtgefechten</li><li>Abhängig von Gelände und Vorbereitung</li><li>Geringere Wirkung in stark disziplinierten Heeresverbänden</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Leicht und funktional.</p> <ul><li>Wetterfeste Leder- oder Mischrüstung</li><li>Robustes Seilwerk, Kletterhaken</li><li>Wasserdichte Behältnisse</li><li>Jagdmesser, Werkzeug</li><li>Kompakter Bogen</li><li>Speer mit vielseitiger Spitze</li></ul> <p>Kein Prunk. Alles hat Zweck.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Silvaner nimmt unter den Alben eine besondere, beinahe eigenwillige Stellung ein. Er ist kein klassischer Tiarna der Schlachtreihen, kein reiner Seemann und kein bloßer Waldläufer – und genau das macht ihn für Dun Rothar unverzichtbar.</p> <p>In Travonna galten die Silvaner als Wegbereiter, als jene, die Neuland erschlossen, Küsten kartierten und Handelsrouten sicherten. Ohne sie gäbe es kein Dun Rothar in seiner heutigen Form.</p> <p>Unter den Alben genießen sie Respekt – jedoch einen anderen als die schwer gepanzerten Tiarna. Man sieht in ihnen weniger Helden der Balladen, sondern vielmehr die stillen Garanten von Sicherheit und Expansion.</p> <p>Sie gelten als klug, eigenständig und oft etwas distanziert vom höfischen Leben. Viele Silvaner verbringen mehr Zeit in der Wildnis oder auf See als in Hallen und Städten.</p> <p>Ihr Ansehen speist sich nicht aus Turniersiegen, sondern aus Karten, Entdeckungen und sicheren Heimkehrten.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Silvaner führt selten prunkvolle Tiere. Seine Gefährten sind praktisch gewählt und der Umgebung angepasst.</p> <p>Häufig sind es Jagdhunde, ausdauernd und gehorsam, die beim Pirschen und Spurenlesen helfen.</p> <p>An der Küste oder auf See begleiten ihn gelegentlich Seevögel – trainierte Boten oder einfache Wegweiser.</p> <p>Einige Silvaner halten kleine, robuste Klettertiere oder besonders zahme Wildtiere, doch stets mit Maß.</p> <p>Der wichtigste Gefährte des Silvaners bleibt jedoch das Terrain selbst – Wald, Fels und Küste sind ihm Verbündete, nicht Hindernisse.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "d716f72a343172d1ba8a8df6ada75d036f5d16fad3b1d570c86fe92add7e50a9"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/I8AoKAx.png",
+    "width": 250,
+    "height": 375,
+    "caption": "Gefährten des Silvaner"
+  }
+}

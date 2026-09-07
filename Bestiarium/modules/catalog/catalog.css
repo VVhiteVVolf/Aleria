@@ -1,0 +1,95 @@
+.catalog-intro > h2 { font-size: 29px; font-weight: 400; letter-spacing: -.025em; margin: 9px 0 11px; }
+.catalog-intro > p:last-child { color: var(--muted); font-size: 14px; line-height: 1.7; }
+.catalog-tools { padding-top: 24px; }
+.catalog-search { display: flex; align-items: center; gap: 15px; background: #fff9e747; border: 1px solid var(--line); padding: 0 16px; min-height: 49px; }
+.catalog-search:focus-within { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
+.catalog-search input { width: 100%; min-width: 0; border: 0; background: transparent; color: var(--ink); font-size: 13px; padding: 15px 0; }
+.catalog-search input:focus { outline: 0; }
+.catalog-search input::placeholder { color: var(--muted); opacity: 1; }
+.search-glyph { width: 12px; height: 12px; flex-shrink: 0; border: 1.5px solid var(--muted); border-radius: 50%; position: relative; }
+.search-glyph::after { content: ''; position: absolute; right: -5px; bottom: -3px; width: 6px; height: 1.5px; background: var(--muted); transform: rotate(45deg); }
+.search-shortcut { color: var(--line); font-size: 21px; }
+.catalog-filters { display: flex; flex-wrap: wrap; gap: 7px; margin: 15px 0; }
+.catalog-filters button { background: transparent; border: 1px solid var(--line-soft); padding: 8px 15px; font-size: 11px; min-height: 35px; transition: background .15s; }
+.catalog-filters button:hover { background: #d8c8a65c; }
+.catalog-filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper-light); border-color: var(--ink); }
+.catalog-results { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 28px; padding-bottom: 10px; border-bottom: 1px solid var(--line-soft); }
+.catalog-results p { font-size: 10px; color: var(--muted); letter-spacing: .035em; line-height: 1.6; }
+.text-button { border: 0; background: transparent; text-decoration: underline; text-underline-offset: 3px; font-size: 11px; color: var(--red); padding: 5px 0 5px 10px; flex-shrink: 0; }
+.bestiary-chapter { --chapter-ink: var(--green); padding-top: 44px; margin-top: 8px; scroll-margin-top: 25px; }
+.bestiary-chapter + .bestiary-chapter { border-top: 3px double var(--line); margin-top: 40px; }
+.chapter-kreaturen { --chapter-ink: #6b6451; }
+.chapter-infernale { --chapter-ink: #804936; }
+.chapter-celestiale { --chapter-ink: #586c6b; }
+.chapter-heading { display: flex; align-items: center; gap: 17px; }
+.chapter-number { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 54px; font-size: 27px; color: var(--chapter-ink); border: 1px solid var(--line); outline: 1px solid var(--line-soft); outline-offset: -5px; background: #f5ecd630; }
+.chapter-heading .eyebrow { color: var(--chapter-ink); font-size: 9px; letter-spacing: .13em; }
+.chapter-heading h2 { font-size: 35px; font-weight: 400; letter-spacing: -.035em; line-height: 1.25; margin-top: 3px; }
+.chapter-description { color: var(--muted); font-size: 14px; line-height: 1.8; margin: 18px 0 24px; max-width: 720px; }
+.creature-group + .creature-group { margin-top: 30px; }
+.creature-group h3 { display: flex; align-items: center; gap: 16px; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; font-weight: 400; color: var(--chapter-ink); margin-bottom: 16px; line-height: 1.6; }
+.creature-group h3::after { content: ''; flex: 1; height: 1px; background: var(--line-soft); }
+.group-description { color: var(--muted); font-size: 12px; font-style: italic; margin: -7px 0 17px; line-height: 1.7; }
+.creature-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 13px; row-gap: 17px; }
+.creature-card { display: flex; flex-direction: column; position: relative; align-items: center; min-width: 0; padding: 8px 5px 16px; background: #fbf4e52e; border: 1px solid #b6a17c55; text-decoration: none; text-align: center; transition: background .18s, border-color .18s, transform .18s; }
+.creature-card::before { content: ''; position: absolute; inset: 4px; border: 1px solid #b6a17c24; pointer-events: none; }
+.creature-card:hover { background: #fff9eaab; border-color: var(--chapter-ink); transform: translateY(-3px); }
+.creature-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 3px; }
+.creature-card-copy { display: block; max-width: 100%; padding: 0 3px; }
+.creature-card strong { display: block; font-weight: 400; font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
+.creature-card small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
+.creature-card-arrow { position: absolute; top: 8px; right: 9px; color: #897657; font-size: 12px; opacity: .6; }
+.creature-card:hover .creature-card-arrow { opacity: 1; }
+.creature-grid-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.creature-card-featured { flex-direction: row; text-align: left; padding: 17px 12px 17px 3px; min-height: 180px; }
+.creature-card-featured img { width: 49%; margin: 0; }
+.creature-card-featured .creature-card-copy { flex: 1; }
+.creature-card-featured strong { font-size: 23px; font-style: italic; }
+.creature-card-featured small { text-transform: uppercase; letter-spacing: .13em; font-size: 9px; margin-top: 9px; color: var(--red); }
+.creature-card-caption { display: block; margin-top: 15px; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.specimen-note { padding: 14px 17px 14px 31px; position: relative; border-left: 2px solid var(--line); background: #d6c4a021; color: var(--muted); font-size: 12px; line-height: 1.75; font-style: italic; margin-top: 23px; }
+.specimen-note::before { content: '✧'; position: absolute; left: 12px; color: var(--chapter-ink); }
+.specimen-note h3 { color: var(--chapter-ink); font-size: 17px; font-weight: 400; font-style: normal; margin-bottom: 7px; }
+.catalog-empty { text-align: center; padding: 45px 25px; }
+.catalog-empty > span { font-size: 40px; color: var(--red); }
+.catalog-empty h3 { font-weight: 400; font-size: 25px; margin: 18px 0; }
+.catalog-empty p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; }
+@media (max-width: 1100px) {
+  .creature-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .creature-grid-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-card-featured { flex-direction: column; text-align: center; }
+  .creature-card-featured img { width: 85%; max-width: 210px; }
+}
+@media (max-width: 780px) {
+  .creature-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .creature-grid-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-card-featured { flex-direction: row; text-align: left; }
+  .creature-card-featured img { width: 49%; }
+}
+@media (max-width: 560px) {
+  .catalog-intro > h2 { font-size: 27px; line-height: 1.25; }
+  .catalog-search { padding-inline: 13px; gap: 12px; }
+  .catalog-search input { font-size: 16px; }
+  .search-shortcut { display: none; }
+  .catalog-filters { gap: 6px; }
+  .catalog-filters button { padding: 8px 11px; min-height: 40px; }
+  .catalog-results { align-items: baseline; flex-wrap: wrap; }
+  .text-button { padding-left: 0; }
+  .chapter-heading { gap: 13px; }
+  .chapter-heading h2 { font-size: 29px; }
+  .chapter-heading .eyebrow { font-size: 8px; letter-spacing: .08em; }
+  .chapter-number { width: 43px; flex-basis: 43px; height: 51px; }
+  .chapter-description { font-size: 14px; }
+  .creature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .creature-card { padding: 5px 3px 13px; }
+  .creature-card strong { font-size: 13px; }
+  .creature-card-arrow { right: 7px; top: 5px; font-size: 10px; }
+  .creature-card small { font-size: 9px; }
+  .creature-grid-featured { grid-template-columns: 1fr; gap: 13px; }
+  .creature-card-featured { padding: 8px 20px 8px 4px; min-height: 175px; }
+  .creature-card-featured img { width: 49%; max-width: 180px; }
+  .creature-card-featured strong { font-size: 27px; }
+  .creature-card-featured small { font-size: 10px; }
+  .creature-group h3 { font-size: 10px; gap: 10px; }
+}
+@media (max-width: 350px) { .creature-grid:not(.creature-grid-featured) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

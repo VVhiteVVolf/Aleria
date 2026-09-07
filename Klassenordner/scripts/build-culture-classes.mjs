@@ -6,6 +6,8 @@ import { VENNYR_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/vennyr/ve
 import { getVennyrClassProgression } from '../../AleriaAlmanach/modules/classes/vennyr/vennyr-class-progression.js';
 import { ALDRIMAR_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-registry.js';
 import { getAldrimarClassProgression } from '../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js';
+import { ALBEN_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/alben/alben-class-registry.js';
+import { NORDMAENNER_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/nordmaenner/nordmaenner-class-registry.js';
 import { resolveCultureClassDocument } from '../modules/culture/culture-class-content.js';
 import { renderCultureClassPage } from '../modules/culture/culture-class-template.js';
 import { writeClassPageOutput } from './class-page-output.mjs';
@@ -15,7 +17,9 @@ const check = process.argv.includes('--check');
 const volumes = await Promise.all([
   { folder: 'Cenyr', ids: CENYR_CLASS_IDS, progression: getCenyrClassProgression },
   { folder: 'Vennyr', ids: VENNYR_CLASS_IDS, progression: getVennyrClassProgression },
-  { folder: 'Aldrimar', ids: ALDRIMAR_CLASS_IDS, progression: getAldrimarClassProgression }
+  { folder: 'Aldrimar', ids: ALDRIMAR_CLASS_IDS, progression: getAldrimarClassProgression },
+  { folder: 'Alben', ids: ALBEN_CLASS_IDS, progression: null },
+  { folder: 'Nordmaenner', ids: NORDMAENNER_CLASS_IDS, progression: null }
 ].map(async volume => {
   const culture = JSON.parse(await readFile(new URL(`${volume.folder}/kultur.json`, root), 'utf8'));
   const documents = await Promise.all(volume.ids.map(async id => resolveCultureClassDocument(
@@ -29,7 +33,7 @@ for (const volume of volumes) {
     : volume.documents;
   for (const document of volume.documents) {
     await writeClassPageOutput(root, `${volume.folder}/${document.id}/index.html`,
-      renderCultureClassPage(document, navigation, volume.culture, volume.progression(document.id)), check);
+      renderCultureClassPage(document, navigation, volume.culture, volume.progression?.(document.id) || null), check);
   }
 }
 let catalog = await readFile(new URL('Klassenseite.html', root), 'utf8');
@@ -42,4 +46,5 @@ for (const volume of volumes) {
   }
 }
 await writeClassPageOutput(root, 'Klassenseite.html', catalog, check);
-console.log(`${volumes.map(volume => `${volume.documents.length} ${volume.folder}-Klassen`).join(', ')} mit Ausbildung 1–20 ${check ? 'geprüft' : 'erstellt'}.`);
+const summary = volumes.map(volume => `${volume.documents.length} ${volume.folder}-Klassen${volume.progression ? ' mit Ausbildung' : ' als Inhaltsseiten'}`).join(', ');
+console.log(`${summary} ${check ? 'geprüft' : 'erstellt'}.`);

@@ -1,0 +1,31 @@
+.topic-board { border-top: 3px double var(--line); margin-top: 50px; padding-top: 40px; scroll-margin-top: 25px; }
+.topic-board-heading h2 { font-size: 37px; font-weight: 400; letter-spacing: -.03em; margin: 9px 0 17px; }
+.topic-board-heading > p:last-child { max-width: 680px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.board-hint { color: var(--muted); font-style: italic; font-size: 11px; margin: 16px 0 26px; line-height: 1.75; }
+.topic-board-papers { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 24px; padding: 25px 22px; background: #c9b59240; border: 1px solid #ac987266; box-shadow: inset 0 1px 12px #6e543810; }
+.topic-paper { background: #f4ead4; padding: 27px 23px 20px; position: relative; box-shadow: 2px 5px 8px #4a392320; border: 1px solid #c3ad84; }
+.topic-paper::before { content: ''; position: absolute; top: 8px; left: calc(50% - 3px); width: 6px; height: 6px; background: #7b5b36; border-radius: 50%; box-shadow: 1px 2px 2px #483b3066, inset 1px 1px 1px #dac69c; }
+.topic-paper-sphaerenkunde { transform: rotate(-.7deg); grid-row: span 2; }
+.topic-paper-feldnotizen { background: #e5e5d1; transform: rotate(.8deg); }
+.topic-paper-literatur { grid-column: 1 / -1; transform: rotate(.25deg); }
+.paper-folio { color: #7d694e; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; line-height: 1.6; }
+.topic-paper h3 { font-size: 24px; font-weight: 400; line-height: 1.2; margin: 13px 0 10px; }
+.paper-description { color: var(--muted); font-size: 12px; line-height: 1.7; margin-bottom: 15px; font-style: italic; }
+.topic-paper ul { list-style: none; padding: 0; margin: 0; }
+.topic-paper li { border-top: 1px solid #b6a27e77; }
+.topic-link { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; text-align: left; text-decoration: none; padding: 13px 0; width: 100%; min-height: 44px; border: 0; background: transparent; font-size: 13px; line-height: 1.55; }
+.topic-link:hover { color: var(--red); }
+.topic-link > span:last-child { color: #8f7856; font-size: 13px; }
+.topic-link small { display: block; font-size: 10px; color: var(--muted); margin-top: 4px; }
+.topic-paper-literatur ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.topic-paper-literatur h3 { font-size: 27px; }
+.board-empty { border: 1px solid var(--line-soft); padding: 25px; font-style: italic; color: var(--muted); line-height: 1.6; }
+.topic-board-papers[data-single-group="true"] { grid-template-columns: 1fr; }
+@media (max-width: 1000px) { .topic-board-papers { padding: 22px 17px; gap: 18px; } .topic-paper { padding-inline: 18px; } .topic-paper h3 { font-size: 21px; } }
+@media (max-width: 560px) {
+  .topic-board-heading h2 { font-size: 33px; }
+  .topic-board-papers { display: flex; flex-direction: column; padding: 23px 15px; gap: 22px; }
+  .topic-paper { width: 100%; }
+  .topic-paper-literatur ul { display: block; }
+  .topic-paper h3 { font-size: 25px; }
+}

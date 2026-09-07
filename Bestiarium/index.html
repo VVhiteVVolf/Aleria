@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee3c9">
+  <meta name="description" content="Das Bestiarium von Aleria: Tiere, Kreaturen, infernale und celestiale Wesen. Ein illustriertes Verzeichnis der Thalenorischen Akademie.">
+  <title>Das Bestiarium von Aleria · Thalenorische Akademie</title>
+  <link rel="icon" href="../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
+  <link rel="stylesheet" href="./modules/book-shell/book-shell.css?v=20260907-luetten-v1">
+  <link rel="stylesheet" href="./bestiarium-page.css?v=20260907-luetten-v1">
+  <link rel="stylesheet" href="./modules/catalog/catalog.css?v=20260907-bestiarium-v1">
+  <link rel="stylesheet" href="./modules/topic-board/topic-board.css?v=20260907-bestiarium-v1">
+  <link rel="stylesheet" href="./modules/entry-preview/entry-preview.css?v=20260907-bestiarium-v1">
+  <script type="module" src="./bestiarium-page.js?v=20260907-fairean-v1"></script>
+</head>
+<body>
+  <a class="skip-link" href="#verzeichnis">Zum Verzeichnis</a>
+  <div class="bestiary-page" data-bestiary>
+    <header class="masthead" id="anfang">
+      <a class="almanach-link" href="../AleriaAlmanach/AleriaAlmanach.html"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Almanach</a>
+      <span class="masthead-edition">Thalenorische Akademie <span aria-hidden="true">·</span> Naturkundliches Archiv</span>
+      <span class="masthead-mark" aria-hidden="true">A</span>
+    </header>
+    <main>
+      <section class="bestiary-cover" aria-labelledby="page-title">
+        <figure class="cover-banner">
+          <img src="./assets/banner.webp" alt="Bestiarium: Eine illustrierte Versammlung fantastischer Wesen vor den Bergen, Ruinen und Burgen Alerias" width="2172" height="724" fetchpriority="high">
+        </figure>
+        <div class="cover-copy">
+          <div class="cover-title"><p class="eyebrow">Thalenorische Akademie · Naturkundliche Sammlung</p><h1 id="page-title"><span>Das große</span>Bestiarium<em>von Aleria</em></h1></div>
+          <div class="cover-invitation"><p class="cover-intro">Von den Tieren unserer Wälder bis zu den Wesen jenseits der Sphären. Gesammelt, gezeichnet und bewahrt für jene, die genauer hinsehen.</p><a class="ink-button" href="#verzeichnis">Das Verzeichnis aufschlagen <span aria-hidden="true">↗</span></a><p class="cover-colophon">Fünf Kapitel <span aria-hidden="true">·</span> Eine Welt voller Begegnungen</p></div>
+        </div>
+      </section>
+      <div class="archivist-quote">
+        <span class="quote-ornament" aria-hidden="true">❧</span>
+        <blockquote>„Wer die Kreaturen dieser Welt versteht, begreift die Gesetze, nach denen sie atmet.“<cite>Chronist Rhalem von Durn</cite></blockquote>
+        <span class="quote-ornament" aria-hidden="true">❧</span>
+      </div>
+      <div class="book-layout">
+        <aside class="chapter-register" aria-label="Kapitelregister">
+          <div class="register-sticky">
+            <p class="eyebrow">In diesem Band</p>
+            <nav data-role="chapter-navigation" aria-label="Bestiarium-Kapitel">
+              <a href="#tiere"><span>I</span>Tiere</a>
+              <a href="#besondere"><span>II</span>Besondere Exemplare</a>
+              <a href="#kreaturen"><span>III</span>Kreaturen</a>
+              <a href="#infernale"><span>IV</span>Infernale Wesen</a>
+              <a href="#celestiale"><span>V</span>Celestiale Wesen</a>
+              <a href="#themenwand" class="register-divider"><span>VI</span>Themen & Literatur</a>
+            </nav>
+            <div class="register-note"><span aria-hidden="true">✧</span><p>Eine wachsende Sammlung</p><small>Die Tafeln sind angelegt. Ihre Geschichten werden nach und nach ergänzt.</small></div>
+            <a class="back-to-top" href="#anfang">Zur Titelseite ↑</a>
+          </div>
+        </aside>
+        <div class="book-content">
+          <section class="catalog" id="verzeichnis" data-role="catalog" aria-labelledby="catalog-title">
+            <header class="catalog-intro"><p class="eyebrow">Das illustrierte Verzeichnis</p><h2 id="catalog-title">Welche Spur führt Euch hierher?</h2><p>Durchstreift die Ordnungen oder sucht nach einem Namen.</p></header>
+            <div class="catalog-tools">
+              <label class="catalog-search"><span class="search-glyph" aria-hidden="true"></span><span class="sr-only">Wesen, Themen und Literatur durchsuchen</span><input type="search" data-role="search" placeholder="Wesen, Themen oder Schriften suchen …" autocomplete="off"><span class="search-shortcut" aria-hidden="true">⌕</span></label>
+              <div class="catalog-filters" data-role="filters" aria-label="Wesen nach Ordnung filtern"></div>
+              <div class="catalog-results"><p data-role="result-count" role="status" aria-live="polite"></p><button type="button" class="text-button" data-action="reset-catalog" hidden>Suche zurücksetzen ↺</button></div>
+            </div>
+            <div data-role="chapters"></div>
+            <div class="catalog-empty" data-role="empty" hidden><span aria-hidden="true">✧</span><h3>Diese Spur verliert sich noch im Archiv.</h3><p>Versucht einen anderen Namen oder eine andere Ordnung. Themen und Literatur findet Ihr weiter unten.</p><button class="ink-button" type="button" data-action="reset-catalog">Alle Wesen anzeigen</button></div>
+          </section>
+          <section class="topic-board" id="themenwand" data-role="topic-board" aria-labelledby="topics-title">
+            <header class="topic-board-heading"><p class="eyebrow">VI · Aus dem Studierzimmer</p><h2 id="topics-title">Die Themenwand</h2><p>Manches Wesen versteht man erst, wenn man die Geschichten um es herum kennt. Ein Platz für Forschung, Überlieferungen und weiterführende Schriften.</p></header>
+            <p class="board-hint">Die angehefteten Themen und Werke öffnen eine Vorschau. Ihre eigenen Seiten folgen.</p>
+            <div class="topic-board-papers" data-role="topic-groups"></div>
+            <p class="board-empty" data-role="topic-empty" hidden>Keine Themen oder Literaturtitel zu dieser Suche.</p>
+            <p class="sr-only" data-role="topic-count" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+      </div>
+      <noscript><p class="noscript-note">Bitte aktiviert JavaScript, um das illustrierte Verzeichnis und die Themenwand zu öffnen.</p></noscript>
+    </main>
+    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>Das Bestiarium von Aleria · Eine Sammlung im Werden</small></p><a href="../AleriaAlmanach/AleriaAlmanach.html">Zurück zum Almanach ↗</a></footer>
+    <dialog class="entry-preview" data-role="entry-preview" aria-labelledby="preview-title" aria-describedby="preview-description">
+      <button class="preview-close" type="button" data-action="close-preview" aria-label="Vorschau schließen">×</button>
+      <div class="preview-image" data-role="preview-art"></div>
+      <p class="eyebrow" data-role="preview-chapter"></p>
+      <h2 id="preview-title" data-role="preview-title"></h2>
+      <p class="preview-note" data-role="preview-note"></p>
+      <p id="preview-description" data-role="preview-description"></p>
+      <div class="preview-status"><span aria-hidden="true">✧</span><strong data-role="preview-status"></strong><p>Dieser Eintrag ist für die Sammlung vorgemerkt. Die ausführliche Seite wird später ergänzt.</p></div>
+      <button class="ink-button" type="button" data-action="close-preview" autofocus>Zurück zur Sammlung</button>
+    </dialog>
+  </div>
+</body>
+</html>

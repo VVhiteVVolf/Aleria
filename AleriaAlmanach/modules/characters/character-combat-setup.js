@@ -1,4 +1,5 @@
 import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260905-damage-balance-v1';
+import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js';
 import {
   CHARACTER_CREATION_METHODS,
   CHARACTER_CREATION_STEPS,
@@ -183,7 +184,7 @@ function renderEquipmentStep(draft) {
       ${(classTemplate.armorItems || []).map(item => `<span>⬟ <strong>${escapeHtml(item.name)}</strong><small>Grund-RK ${item.baseArmorClass}</small></span>`).join('')}
       ${classTemplate.magic?.enabled ? `<span>✦ <strong>Magiebegabt</strong><small>${escapeHtml(classTemplate.magic.notes)}</small></span>` : ''}
     </div>
-    ${startingTechniques.length ? `<div class="cp-setup-loadout"><h4>Ausbildung · Stufe 1</h4>${startingTechniques.map(technique => `<span>✦ <strong>${escapeHtml(technique.name)}</strong><small>${escapeHtml(technique.trainingForm)} · ${escapeHtml(technique.requirements)}</small></span>`).join('')}</div>` : ''}
+    ${startingTechniques.length ? `<div class="cp-setup-loadout"><h4>Ausbildung · Stufe 1</h4>${startingTechniques.map(technique => `<span>✦ <strong>${escapeHtml(technique.name)}</strong><small>${escapeHtml(getCombatFormPresentation(technique)?.label)} · ${escapeHtml(technique.requirements)}</small></span>`).join('')}</div>` : ''}
     <label class="cp-setup-check"><input type="checkbox" data-creation-field="replaceStartingEquipment"${checked(draft.replaceStartingEquipment)}> Frühere Vorlagen-Ausrüstung ersetzen; selbst angelegte Gegenstände bleiben erhalten.</label>
   </section>`;
 }

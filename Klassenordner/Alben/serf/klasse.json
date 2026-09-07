@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "serf",
+  "cultureId": "alben",
+  "name": "Serf",
+  "title": "Der Serf",
+  "subtitle": "Waldläufer und Fernkämpfer",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/qwsuhcH.png",
+  "illustration": "https://i.imgur.com/1KCcQ4z.png",
+  "artwork": {
+    "source": "https://i.imgur.com/1KCcQ4z.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Serf · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Tiarna; niederer Adel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Bogenschütze, Scharmützler und Kundschafter"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Bogen, Wurfspeer sowie kurze Seitenwaffe"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Verstärktes Leder oder bewegliches Kettenhemd"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Bewahrt die Lehren der alten seirbhíseach"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Serf trägt einen Namen, der in den alten Liedern so nie vorkam. Die frühen Alben nannten jene, aus deren Tradition er hervorging, seirbhíseach – Dienerschaft. Doch dieses Wort war nie herabwürdigend gemeint. Es bezeichnete jene, die dem Clan auf andere Weise dienten: als Bogenschützen, Scharmützler, Kundschafter und Jäger.</p> <p>Sie waren keine Kerns, denn sie standen nicht in der Linie. Und sie waren keine Tiarna, denn sie trugen keinen Adel. Sie bewegten sich zwischen Wald und Siedlung, zwischen Jagd und Krieg, stets im Dienst – selten im Mittelpunkt.</p> <p>Der heutige Serf ist ein Tiarna, der diesen Weg bewusst wählte. Ein adliger Krieger, der nicht primär im Schildwall oder im Duell glänzt, sondern in der Distanz, im Schatten der Bäume und im lautlosen Ansetzen eines Pfeils. Er ist kein Höfling und kein Bannerträger. Er ist der Blick im Unterholz und die Hand, die trifft, bevor der Gegner weiß, dass er gesehen wurde.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>In den frühen Jahrhunderten waren die seirbhíseach fester Bestandteil des Clanlebens. Sie jagten, sicherten Handelswege, beobachteten Grenzgebiete und begleiteten kleinere Gefolgschaften. Ihre Kunst war pragmatisch: der Bogen, der Wurfspeer, das Messer. Sie dienten dem Clan, nicht dem Stand.</p> <p>Als die Konflikte mit den Nordmännern eskalierten, wurde klar, dass nicht jede Schlacht im offenen Feld entschieden werden konnte. Die Alben brauchten Augen im Wald, schnelle Scharmützel, gezielte Störungen gegnerischer Nachschubwege. Die Dienste der seirbhíseach wurden unentbehrlich.</p> <p>Mit der zunehmenden Militarisierung der Gesellschaft begannen auch Tiarna, sich diese Kampfweise anzueignen. Einige erkannten, dass Ehre nicht nur im offenen Zweikampf lag, sondern auch im klugen Einsatz von Distanz und Gelände. Aus dieser Entwicklung entstand der Serf als Unterform des Tiarna.</p> <p>Er übernahm die Lehren der seirbhíseach, ohne deren ursprünglichen Stand zu besitzen. Der Name wurde verkürzt, aus dem alten Wort entstand die gemeine Bezeichnung „Serf“. Doch anders als sein Ursprung ist der heutige Serf kein Diener. Er ist ein Tiarna, der den Wald zu seinem Verbündeten machte – und der dem Feind aus der Ferne zeigt, dass nicht jeder Kampf mit erhobenem Schild beginnt.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Serf vereint die Grundschule des Tiarnatum mit der Kunst der Distanz. Anders als Airig oder Cateran sucht er nicht den ersten Zusammenprall, sondern den richtigen Moment. Seine Hauptwaffe ist der Bogen, geführt mit ruhiger Präzision und geschultem Auge. Er beherrscht das Schießen aus gedeckter Position ebenso wie aus erhöhter Stellung oder in Bewegung.</p> <p>Neben dem Bogen führt er häufig Wurfspeere oder leichte Wurfwaffen, um auf mittlere Distanz flexibel zu bleiben. In der Nähe verlässt er sich auf Kurzschwert oder Messer, doch seine Stärke liegt nicht im Duell, sondern im gezielten Ausschalten, im Schwächen, im Zermürben.</p> <p>Der Serf ist zudem geschult in Geländekunde, Spurenlesen und lautloser Bewegung. Er kennt Wind, Licht und Deckung. Als Kundschafter kann er Truppen führen, feindliche Bewegungen frühzeitig erkennen und gezielte Störungen einleiten. Jagdhunde unterstützen ihn bei Fährtenarbeit oder Absicherung.</p> <p>Im Heer ergänzt er die Linienkämpfer, indem er Gegner dezimiert, bevor diese aufschließen. Er ist kein Frontbrecher – er ist derjenige, der das Gefecht vorbereitet.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Hohe Präzision auf Distanz</li><li>Effektiv in unübersichtlichem Gelände</li><li>Gute Aufklärungs- und Spähfähigkeiten</li><li>Flexibel zwischen Bogen- und Wurfkampf</li><li>Kann Gegner schwächen, bevor die Linie aufeinandertrifft</li></ul> <h3>Schwächen</h3><ul><li>Unterlegen im schweren Nahkampf</li><li>Geringere Durchschlagskraft gegen stark gerüstete Gegner</li><li>Abhängig von Gelände und Deckung</li><li>Weniger wirksam in geschlossener Formation</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausrüstung eines Serf ist auf Beweglichkeit und Zweckmäßigkeit ausgelegt. Im Zentrum steht ein Lang- oder Recurvebogen, häufig aus sorgfältig ausgewähltem Holz gefertigt und individuell angepasst. Köcher und Ersatzsehnen gehören selbstverständlich dazu. Viele führen zusätzlich Wurfspeere oder leichte Wurfäxte, um auch auf mittlere Distanz handlungsfähig zu bleiben.</p> <p>Als Seitenwaffe trägt der Serf meist ein Kurzschwert, Jagdmesser oder Dolch, weniger für das Duell als für den Notfall. Seine Rüstung ist leichter als die anderer Tiarna – verstärkte Lederpanzerung oder ein bewegliches Kettenhemd sind üblich. Schutz wird nie auf Kosten der Beweglichkeit gewählt.</p> <p>Praktische Ausrüstung wie Tarnumhänge, wetterfeste Mäntel, robuste Stiefel und Jagdwerkzeug gehören selbstverständlich dazu. Jagdhunde sind keine Zierde, sondern Teil seines Arbeitsgeräts. Alles am Serf ist auf Reichweite, Geduld und Anpassungsfähigkeit abgestimmt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Serf genießt heute ein hohes Ansehen unter den Alben. In Zeiten zunehmender Grenzkonflikte und unsicherer Wege gelten sie als die wahren Grenzer des Landes. Sie sehen den Feind zuerst, sie sichern Pässe und Wälder, sie verhindern Überfälle, bevor sie beginnen.</p> <p>Während sie einst aus einer dienenden Schicht hervorgingen, stehen sie nun als vollwertige Tiarna im Adel. Ihr Ruhm speist sich nicht aus offenen Duellen oder prunkvollen Feldzügen, sondern aus stiller Wirksamkeit.</p> <p>Im Volk gelten sie als Schutzgeist der Wälder und Hügel. Unter den Tiarna werden sie respektiert, da ihre Fähigkeiten in einer zersplitterten Welt unverzichtbar geworden sind. Der Serf steht für Wachsamkeit – und für die Erkenntnis, dass nicht jeder Krieg im offenen Feld entschieden wird.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Serf ist selten allein. Als Grenzer und Waldläufer verlässt er sich auf Gefährten, die seine Sinne erweitern und seine Reichweite vergrößern. Am häufigsten sind Jagdhunde, ausdauernd, gehorsam und auf Fährte geschult. Sie sichern Lager, verfolgen Spuren und schlagen frühzeitig Alarm. Für viele Serf sind sie nicht nur Werkzeug, sondern vertraute Begleiter über Jahre hinweg.</p> <p>Einige führen zudem Greifvögel, besonders in offenen Hügel- oder Küstenregionen. Ein geschulter Falke oder Bussard erlaubt es, Bewegungen auf große Distanz zu erkennen oder kleinere Beute zu schlagen.</p> <p>Pferde besitzen Serf vor allem dann, wenn ihre Aufgabe weite Grenzräume umfasst. Diese Tiere sind wendig und belastbar, weniger Schlachtross als Reittier für schnelle Ortswechsel.</p> <p>Wie bei seiner gesamten Ausrichtung gilt: Der Gefährte des Serf dient der Wachsamkeit, der Jagd und der frühen Reaktion. Er ergänzt die Kunst der Distanz – nicht den Prunk des Standes.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "7a1fd111404b5786a994ec22b8d43ec3918c906988ab302275afb3e0222ba10e"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "tungur",
+  "cultureId": "nordmaenner",
+  "name": "Tungur",
+  "title": "Der Tungur",
+  "subtitle": "Skalde des Nordens",
+  "aliases": [],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/Afgf6m7.png",
+  "illustration": "https://i.imgur.com/3FA1PK8.png",
+  "artwork": {
+    "source": "https://i.imgur.com/3FA1PK8.png",
+    "width": 500,
+    "height": 745,
+    "caption": "Tungur · Nordmänner"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Nordische Völker"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Klassentyp",
+      "html": "Kämpfer"
+    },
+    {
+      "group": "Wissenswertes",
+      "label": "Stand",
+      "html": "Adelig"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Lehensschwur"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Magisches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Geistliches Potential",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Patrone",
+      "html": "Individuell bedingt"
+    },
+    {
+      "group": "Kämpferische Daten",
+      "label": "Waffengattung",
+      "html": "Speer, Sax, Axt, Rundschild"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Tungur ist der Skalde der Nordmänner – doch nicht im höfischen Sinn, wie man ihn in südlichen Reichen kennt. Er ist ein Huskarl, ein Krieger, und zugleich Träger einer rohen, archaischen Form von Magie. Diese Magie ist nicht verfeinert wie die Kunst späterer Skalden oder Barden. Sie ist unbearbeitet, instabil und gefährlich – wie Erz, das noch nicht geschmiedet wurde.</p> <p>Seine Kraft speist sich aus Stimme, Rhythmus und uralten Lauten. Zwar beherrscht er Gesang und instrumentale Begleitung, doch sein eigentliches Kennzeichen sind die sogenannten Schreie – brachiale, magisch aufgeladene Lautausbrüche, die Knochen erzittern lassen und Fleisch aufreißen können. Ein Tungur kann mit seiner Stimme Mut entfachen – oder einen Gegner buchstäblich zerreißen.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Tungur gelten als Vorreiter dessen, was später in verfeinerter Form als Skaldenkunst bekannt wurde. Ihr Ursprung liegt vermutlich noch in der Zeit, als die Norrnaigh eng mit der Kultur der Alben verbunden waren. Dort existierten bereits künstlerische Barden, die mit Gesang, Versmaß und musikalischer Begleitung arbeiteten – jedoch in einer harmonischeren, naturverbundeneren Tradition.</p> <p>Als sich die Norrnaigh zunehmend von den Alben entfremdeten, veränderte sich auch diese Kunst. Die Lieder wurden rauer, die Rhythmen härter, die Themen kriegerischer. Aus der eleganten Bardentradition entstand eine archaische, kraftbetonte Form – die ersten Tungur.</p> <p>Mit dem religiösen Wandel und der Abkehr von alten druidischen Strukturen verloren die Norrnaigh viel von ihrer geistlichen Führung. In dieser Lücke wuchsen die Tungur zu Bewahrern von Wissen, Mythen und Gesetz heran. Ihre Magie blieb roh und ungeschliffen, doch sie verband Wort, Klang und Willenskraft auf eine Weise, die einzigartig wurde.</p> <p>Spätere südliche Skalden perfektionierten diese Kunst, strukturierten sie, machten sie kontrollierbarer und eleganter. Doch der Tungur bleibt die ursprüngliche, ungefilterte Form – geboren aus einer Zeit des Übergangs, in der Kunst, Glaube und Krieg untrennbar miteinander verwoben waren.</p>",
+      "sharedIntro": "kriegertum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Tungur vereint drei Bereiche: Krieger, Gelehrter und magischer Lautsprecher der alten Macht. Seine Magie ist keine feingliedrige Hofkunst, sondern rohe, archaische Stimmkraft. Er nutzt Schreie, rhythmische Lautfolgen und uralte Versformen, um Energie freizusetzen. Diese kann Verbündete stärken, Angst vertreiben, Wunden temporär betäuben – oder Gegner mit schallender Gewalt treffen.</p> <p>Seine sogenannten Kriegsschreie sind keine bloßen Rufe, sondern magisch aufgeladene Druckwellen. Ein erfahrener Tungur kann einen Mann zu Boden werfen, Trommelfelle zerreißen oder Panzer erzittern lassen. Gleichzeitig beherrscht er traditionellere Formen wie Gesang und instrumentale Begleitung, wenn auch in rauerer, weniger kontrollierter Ausprägung als spätere Barden.</p> <p>Abseits des Schlachtfeldes liegt seine Stärke im Wissen. Er studiert Eddas, bewahrt Stammbäume, kennt alte Gesetze, Mythen und Rituale. In Versform hält er Geschichte lebendig und prägt das kulturelle Gedächtnis der Nordmänner.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3> <ul><li>Magische Stimmkraft mit offensiver und unterstützender Wirkung</li><li>Fähigkeit, Moral und Kampfgeist zu steigern</li><li>Umfassendes Wissen über Geschichte, Recht und Mythos</li><li>Psychologische Wirkung durch Präsenz und Stimme</li><li>Kombiniert geistige und kämpferische Ausbildung</li></ul> <h3>Schwächen</h3> <ul><li>Magie ist instabil und schwer präzise zu kontrollieren</li><li>Hohe körperliche Belastung durch Einsatz der Schreie</li><li>Weniger spezialisiert im reinen Nahkampf als Ravnar oder Berserker</li><li>Anfällig bei Stimmverlust oder Verletzungen im Halsbereich</li><li>Seine Macht kann bei Überreizung außer Kontrolle geraten</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundstil"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Der Tungur ist in seiner äußeren Erscheinung kaum von einem Stjorn oder Ravnar zu unterscheiden. Er trägt in der Regel ein solides Kettenhemd, verstärktes Leder oder Fell sowie einen Helm, der ihn im Gefecht schützt. Seine Bewaffnung umfasst meist Axt, Schwert oder Sax und einen Rundschild – denn trotz seiner Magie bleibt er ein Huskarl und steht im Schildwall.</p> <p>Neben der Kriegswaffe führt der Tungur jedoch stets ein oder mehrere Instrumente mit sich. Nordische Saiteninstrumente, Trommeln oder Hörner dienen ihm als Fokus seiner Kraft. Sie verstärken Rhythmus und Laut, sind aber nicht zwingend notwendig. Seine wahre Hauptwaffe bleibt seine Stimme.</p> <p>Da die Magie der Tungur roh, ungebändigt und körperlich fordernd ist, müssen sie ihre Stimme bewusst schulen und schonen. Ein zu häufiger oder unkontrollierter Einsatz kann die Stimmbänder schädigen oder gar zerreißen. Erfahrene Tungur trainieren Atemtechnik, Resonanz und Lautführung ebenso intensiv wie andere Einhejaren ihre Klinge.</p> <p>So trägt der Tungur zwar Stahl wie jeder andere Huskarl – doch seine gefährlichste Ausrüstung ist unsichtbar: ein disziplinierter Kehlkopf, gehärtete Lungen und eine Stimme, die zwischen Vers und Vernichtung wechseln kann.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Doch die Magie allein definiert ihn nicht. Der Tungur ist das Gedächtnis und das Gewissen der Nordmänner. Er studiert die Eddas, bewahrt alte Geschichten, hält Genealogien fest und trägt Wissen von Clan zu Clan. In einer Kultur, die oft als rau und barbarisch erscheint, zeigt der Tungur eine andere Seite: Gelehrsamkeit, Neugier und poetische Tiefe.</p> <p>Er lehrt, erinnert, mahnt. In den Hallen der Jarle spricht er über Ahnen, über alte Fehler, über Siege und Niederlagen. Seine Worte formen Identität. Er ist Chronist und Interpret zugleich.</p> <p>Und dennoch bleibt er Krieger. Im Gefecht steht er nicht hinter der Linie, sondern unter den Einhejaren. Seine Stimme kann den Schildwall stärken oder den Feind zerschmettern. Die Magie des Tungur ist roh – nicht präzise, nicht akademisch –, doch in ihrer Unmittelbarkeit liegt ihre Gefahr.</p> <p>So beweist der Tungur, dass die Nordmänner nicht nur aus Stahl und Wut bestehen. In ihnen lebt auch Wissen, Poesie und die Fähigkeit, mit einem einzigen Laut Krieg oder Hoffnung zu entfachen.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Tungur ist kein Krieger, dessen Identität an ein bestimmtes Tier gebunden ist. Anders als Ravnar oder Ulfhednare folgt er keiner festen tierischen Symbolik. Seine Gefährten sind so vielfältig wie seine Reisen und seine Studien.</p> <p>Manche Tungur führen einen Raben oder Falken, nicht aus religiöser Verpflichtung, sondern als Beobachter und Boten. Andere halten einen Hund, der sie auf Wanderungen begleitet und Lager bewacht. Wieder andere verzichten völlig auf tierische Begleiter – besonders jene, die viel zwischen Hallen, Heiligtümern und Jarlsitzen reisen.</p> <p>Da der Tungur häufig als Erzähler, Lehrer oder Chronist unterwegs ist, passt er sich seiner Umgebung an. Ein Gelehrter in der Halle braucht keinen Wolf an seiner Seite, ein reisender Skalde mag jedoch einen Hund oder Vogel schätzen.</p> <p>Seine wahre Begleitung ist ohnehin nicht tierischer Natur – es sind die Worte, die er trägt, und die Geschichten, die er bewahrt.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "ca7d8aabf269222b6f89f2e64eeb10006a52f4a34e18c3ca2c995ae313c680a2"
+  },
+  "companionArtwork": {
+    "source": "https://i.imgur.com/og7ATdM.png",
+    "width": 400,
+    "height": 400,
+    "caption": "Gefährten des Tungur"
+  }
+}

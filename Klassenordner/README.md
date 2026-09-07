@@ -2,7 +2,7 @@
 
 Der Almanach verlinkt über **Klassen** auf `Klassenseite.html`. Dort führen die fünfzehn Universalklassen auf eigene Seiten unter `Basisklassen/<id>/index.html`.
 
-Die sieben **Cenyr-Klassen** besitzen inzwischen eigene Kulturklassenbögen unter `Cenyr/<id>/index.html`: Hintergrund, Kulturzugehörigkeit und eine interaktive Ausbildungsvorschau für Stufe 1–20. Andere Kulturgruppen behalten ihre Kurzprofile. Der gemeinsame Build erzeugt beide Seitentypen und aktualisiert das Archiv. Aufbau, Freigaben und offene Regeln stehen in [docs/CENYR_CLASS_PROGRESSION.md](docs/CENYR_CLASS_PROGRESSION.md).
+Die sieben **Cenyr-**, sechs **Vennyr-** und sieben **Aldrimar-Klassen** besitzen Kulturklassenbögen mit Hintergrund, Kulturzugehörigkeit und Ausbildungsvorschau. Elf **Alben-Klassen** und acht **Nordmänner-Klassen** liegen als reine Inhaltsseiten ohne Stufensystem vor. Der gemeinsame Build erzeugt alle Seitentypen und aktualisiert ihre Verweise im Archiv. Aufbau, Freigaben und offene Regeln stehen in den Dokumenten unter `docs/`.
 
 ## Aufbau
 
@@ -13,6 +13,9 @@ Die sieben **Cenyr-Klassen** besitzen inzwischen eigene Kulturklassenbögen unte
 - `modules/pages/class-page-content.js` validiert das Inhaltsformat und das erlaubte Rich-Text-Markup beim Erzeugen.
 - `modules/pages/class-page.js` ergänzt ausschließlich Druckfunktion, Bildersatz und die Hervorhebung des aktuellen Kapitels. Es gibt keine Firebase-Verbindung.
 - `modules/pages/class-page.css` gestaltet die Klassen als Fantasy-Codex mit Pergament, Initialen, Zitatblöcken, Porträtrahmen und unterschiedlichen Klassenfarben.
+- `modules/culture/` enthält die gemeinsame Vorlage für Kulturklassen, ihre Ausbildungskomponenten und kulturspezifischen Farbschemata.
+- `Alben/<id>/klasse.json` enthält die individuellen albischen Lorekapitel; `Alben/kultur.json` verwaltet gemeinsam genutzte Texte des Tiarnatum.
+- `Nordmaenner/<id>/klasse.json` enthält die nordischen Klassenkapitel; `Nordmaenner/kultur.json` bündelt die gemeinsame Geschichte und den überlieferten Grundkampfstil.
 - `modules/catalog/`, `modules/lore/` und `modules/sheets/` besitzen weiterhin Suche, Kulturhintergründe und Kurzprofile des Registers.
 
 Die vorhandene Ordnerbezeichnung `Basisklassen` bleibt für die Universalklassen erhalten. Neue Klassen werden als eigene Inhaltsdatei ergänzt und in der Registry eingetragen; das Layout wird gemeinsam gepflegt.
@@ -27,7 +30,7 @@ npm run check:classes
 npm run test:classes
 ```
 
-`build:classes` erzeugt alle Seiten, die Universalklassenkarten und Cenyr-Verweise im Register und aktualisiert danach den Charakterarchiv-Snapshot. `check:classes` vergleicht die eingecheckten Ausgaben mit den Quelldaten. Der reguläre `npm run build` führt die Seitenerzeugung ebenfalls aus und nimmt alle 22 Klassenseiten in den Vite-Build auf.
+`build:classes` erzeugt alle Seiten und ihre Registerverweise und aktualisiert danach den Charakterarchiv-Snapshot. `check:classes` vergleicht die eingecheckten Ausgaben mit den Quelldaten. Der reguläre `npm run build` führt die Seitenerzeugung ebenfalls aus und nimmt alle 54 ausgearbeiteten Klassenseiten in den Vite-Build auf.
 
 Direkt vom Repository-Verzeichnis:
 
@@ -42,7 +45,7 @@ Für eine lokale Vorschau `python -m http.server 8765 --bind 127.0.0.1` im Repos
 
 ## Inhalt und Herkunft
 
-Alle fünfzehn Klassen basieren auf den gelieferten HTML-Vorlagen. Die doppelt gelieferte Krieger-Vorlage wurde nur einmal übernommen; der Druide verwendet die separat nachgereichte Vorlage. Der ursprüngliche Dateihash steht zur Nachvollziehbarkeit in `source.sha256`.
+Die fünfzehn Universalklassen, elf Alben-Klassen und acht Nordmänner-Klassen basieren auf den jeweils gelieferten HTML-Vorlagen. Die doppelt gelieferte Krieger-Vorlage wurde nur einmal übernommen; der Druide verwendet die separat nachgereichte Vorlage. Der ursprüngliche Dateihash steht zur Nachvollziehbarkeit in `source.sha256`.
 
 Einführung, Geschichte, Klassenbeschreibung, Fähigkeiten, Unterarten, Stärken/Schwächen bzw. Artefakte und Verschiedenes bleiben pro Klasse getrennte Kapitel. Ausgefüllte Steckbriefzeilen und die echten Zitate bleiben erhalten. Reine Punkt-Platzhalter und das leere Kopfzitat werden nicht als Inhalt ausgegeben. Fehlende Kapitel tragen `status: "pending"` mit leerem Inhalt und erscheinen gesammelt unter **Offene Kapitel**. Es werden keine fehlenden Informationen erfunden.
 
@@ -66,4 +69,4 @@ Die neuen Namen werden auch im Archiv zusammengeführt. Die vorhandene Kampfvorl
 
 ## Spätere Klassenbögen
 
-Es ist kein Levelsystem ausgearbeitet. Die geplante Entwicklung von Level 1 bis 20 und ihre Zuständigkeiten stehen ausschließlich in [docs/CLASS_PROGRESSION_PLAN.md](docs/CLASS_PROGRESSION_PLAN.md). Die frühere leere Levelauswahl wurde aus den Kurzprofilen entfernt.
+Für die Alben und Nordmänner ist noch kein Levelsystem ausgearbeitet. Ihre Registries kennzeichnen diesen Stand ausdrücklich als `progressionStatus: "not-authored"`; die Inhaltsseiten enthalten daher weder leere Stufenauswahl noch vorweggenommene Kampfwerte. Die allgemeine technische Trennung von Lore, Progression und automatischer Charaktervergabe ist in [docs/CLASS_PROGRESSION_PLAN.md](docs/CLASS_PROGRESSION_PLAN.md) beschrieben.

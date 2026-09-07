@@ -421,7 +421,8 @@ test('wählt Waffe oder vorbereiteten Zauber ausdrücklich aus dem Profil', () =
   assert.equal(dagger.weapon.name, 'Dolch');
   assert.equal(dagger.profileActionKind, 'weapon');
   assert.equal(dagger.selectedAction.compatible, false);
-  assert.match(dagger.selectedAction.disabledReason, /Bonusaktion/);
+  assert.match(dagger.selectedAction.disabledReason, /Dolch.*Waffenwahl/);
+  assert.doesNotMatch(dagger.selectedAction.disabledReason, /Bonusaktion/, 'Der Hinweis darf bei kostenloser Startausrüstung keine Kosten behaupten');
   assert.equal(spell.weapon.name, 'Glutlanze');
   assert.equal(spell.weapon.damageFormula, '2d6');
   assert.equal(spell.profileActionKind, 'spell');
@@ -1290,7 +1291,7 @@ test('Kampf- und Zauberfenster verwenden getrennte Werte und Ressourcenbereiche'
     selectedAction: { activationType: 'bonus-action' }
   }), {
     attack: '+6',
-    damage: '1W8 +3',
+    damage: '1W8+3',
     activation: 'Bonusaktion'
   });
   const orderedSlots = combatUiInternals.classifyPaymentResourceCards([

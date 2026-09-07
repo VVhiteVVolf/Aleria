@@ -88,7 +88,7 @@ function buildCombatProfileActions(character, profile) {
       resolutionMode: 'weapon-attack',
       segmentKinds: ['combataction'],
       compatible: available,
-      disabledReason: available ? '' : `Wechsle zuerst als Bonusaktion zu ${weapon.name}.`,
+      disabledReason: available ? '' : `Ziehe zuerst ${weapon.name} über die Waffenwahl.`,
       default: equipped
     }; });
   const techniqueActions = (profile.techniques || [])

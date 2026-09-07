@@ -5,7 +5,7 @@ import {
 } from './combat-payment-ui.js?v=20260905-resource-balance-v2';
 import {
   activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
-  renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
+  getActionGroups, renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
 } from './combat-action-card.js?v=20260905-party-combat-v1';
 import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260905-resource-balance-v2';
 import { getActiveRollModes } from '../combat-profile-model.js?v=20260906-effect-rolls-v1';
@@ -54,7 +54,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
 
   const selectedTargetId = String(segment?.combatTargetId || '');
   const selectedTargetIds = new Set((segment?.combatTargetIds || [selectedTargetId]).map(String).filter(Boolean));
-  const selectedActionId = String(segment?.combatActionId || actor.profileActionId || '');
+  const selectedActionId = String(actor.selectedAction?.id || actor.profileActionId || segment?.combatActionId || '');
   const segmentKind = String(segment?.kind || 'combataction');
   const magic = isMagicSegmentKind(segmentKind);
   composer.classList.add(magic ? 'combat-composer--magic' : 'combat-composer--martial');
@@ -67,7 +67,8 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
   const supportsMultipleTargets = maximumTargets > 1
     || (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
   const targetOptions = renderTargetOptions(targets, selectedTargetIds);
-  const actionOptions = renderActionOptions(actor, selectedActionId);
+  const actionGroups = getActionGroups(actor);
+  const actionOptions = renderActionOptions(actor, selectedActionId, actionGroups);
   const equipmentSwitch = actor.selectedAction?.kind === 'equipment-switch';
   const composerHint = equipmentSwitch
     ? 'Wechsel beim Eintragen'
@@ -120,7 +121,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
         <select data-combat-input="actionId" aria-label="${actionFieldLabel}">
           ${actionOptions || '<option value="">Waffe, Zauber oder Angriff fehlt</option>'}
         </select>
-        ${renderActionPicker(actor, selectedActionId)}
+        ${renderActionPicker(actor, selectedActionId, actionGroups)}
         ${renderActionMetadata(actor)}
       </div>
       ${targetField}
@@ -132,8 +133,8 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
       ${equipmentSwitch ? '' : renderAutomaticRollMode(rollModes || [...getActiveRollModes(actor), actor.forcedRollMode], { resolutionMode: actor.actionResolutionMode })}
       ${!magic && !equipmentSwitch && actor.supportsVersatileGrip ? `<label>Führung
         <select data-combat-input="weaponGrip">
-          <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>
-          <option value="two-handed"${weaponGrip === 'two-handed' ? ' selected' : ''}>Zweihändig · ${escapeHtml(actor.selectedAction?.weapon?.versatileDamageFormula || '')}</option>
+          <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.weaponLoadout?.right?.damageFormula || actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>
+          <option value="two-handed"${weaponGrip === 'two-handed' ? ' selected' : ''}>Zweihändig · ${escapeHtml(actor.weaponLoadout?.right?.versatileDamageFormula || actor.selectedAction?.weapon?.versatileDamageFormula || '')}</option>
         </select>
       </label>` : ''}
       </div>

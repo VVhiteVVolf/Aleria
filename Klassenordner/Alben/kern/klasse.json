@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "kern",
+  "cultureId": "alben",
+  "name": "Kern",
+  "title": "Der Kern",
+  "subtitle": "Waffenknecht und Linienkämpfer",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/E92CDhq.png",
+  "illustration": "https://i.imgur.com/wpyzIf8.png",
+  "artwork": {
+    "source": "https://i.imgur.com/wpyzIf8.png",
+    "width": 500,
+    "height": 416,
+    "caption": "Kern · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Freier bewaffneter Bürger; kein Tiarna"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Waffenknecht, Stadt- oder Dorfwache"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Je nach Auftrag; häufig Speer und Schild"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Clansrüstung, Leder oder Kettenrüstung"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Rückgrat der albischen Wehrordnung"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Der Kern bildet das Rückgrat der albischen Wehrordnung. Er ist Waffenknecht, Soldknecht, Stadt- oder Dorfwache – jener bewaffnete Bürger, der das Land hält, solange kein Tiarna selbst zur Stelle ist.</p> <p>Was häufig missverstanden wird: Ein Kern ist keine Vorstufe des Tiarna. Er steht nicht auf dem Weg zum Adel, sondern in einem eigenen Stand. Auch der Knappe eines Tiarna ist kein Kern – er ist ein angehender Tiarna und wird entsprechend ausgebildet. Der Kern hingegen dient als bewaffneter Arm des Clans, nicht als Träger des Tiarnatum.</p> <p>In alten Tagen war jeder Clan verpflichtet, seine eigenen Kerns zu stellen. Sie glichen den Hirds alter Völker – freie Männer, die Schild und Speer führten, wenn das Dorf sie rief. Solange die Tiarna das Land überwachten, genügten wenige. Zehn Kerns und zwei Tiarna reichten, um ein Dorf von fünfhundert Seelen zu sichern. Der Kern hielt Wache, der Tiarna entschied.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Mit der Epoche der Seefahrer änderte sich das Gleichgewicht. Als die Norrnaigh in großen Verbänden einfielen, genügte es nicht mehr, ein Dorf mit einem Dutzend Bewaffneter zu verteidigen. Während eine Siedlung standhielt, fiel die nächste. Städte konnten nicht länger auf vereinzelte Krieger vertrauen.</p> <p>Die Alben mussten umdenken. Aus der losen Clanpflicht entstand eine strukturierte Wehrordnung. Kerns wurden nicht mehr nur im Bedarfsfall gerufen, sondern systematisch ausgebildet, ausgerüstet und stationiert.</p> <p>Heute sind die Kerns keine rudimentären Bauernkrieger mehr. Sie sind zähe Waffenknechte in Clansrüstung, gedrillt in Formation und Schildwall, oftmals von Tiarna selbst geschult. Das alte Ideal des einzelnen Helden wich der Notwendigkeit organisierter Wehrkraft.</p> <p>Der Kern ist damit das, was die Realität aus der albischen Gesellschaft machte: nicht der Held der Lieder – sondern der Mann, der die Mauer hält, wenn die Lieder enden.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Kern ist kein Duellant und kein heroischer Einzelkämpfer – seine Stärke liegt in der Formation. Er ist geschult im Schildwall, in enger Linienführung und im koordinierten Vorgehen mit Speer, Schild und Seitenwaffe. Disziplin, Ausdauer und Standfestigkeit bilden das Fundament seiner Ausbildung.</p> <p>Er beherrscht einfache, aber effektive Techniken: Schildstoß, Speerdrücken, Formationswechsel, Wachablösung und geordneten Rückzug. In Städten ist er zusätzlich im Patrouillendienst, in der Sicherung von Toren und Mauern sowie im Festsetzen und Kontrollieren von Unruhestiftern geübt.</p> <p>Seine Fähigkeiten sind nicht auf Glanz ausgelegt, sondern auf Verlässlichkeit. Der Kern hält Position, sichert Gelände und bleibt stehen, wenn andere weichen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Hohe Disziplin im Verband</li><li>Standfest im Schildwall</li><li>Verlässlich in Verteidigungsaufgaben</li><li>Robust und ausdauernd</li><li>Klare Befehlsketten und Gehorsam</li></ul> <h3>Schwächen</h3><ul><li>Unterlegen im Einzelduell gegen ausgebildete Tiarna</li><li>Geringe individuelle Kampfkreativität</li><li>Stark abhängig von Formation und Führung</li><li>Weniger flexibel in offenem Gelände oder unstrukturierten Gefechten</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Kern richtet sich nicht nach einer festen Typisierung, sondern nach den Anforderungen seines Clans, seiner Siedlung oder seiner aktuellen Aufgabe. Es gibt keine offiziellen Unterbezeichnungen oder Rangvarianten innerhalb des Kern-Standes. Ein Kern bleibt ein Kern – unabhängig davon, welche Waffe er führt.</p> <p>Was er trägt, hängt davon ab, was erwartet wird. Grenzregionen stellen häufig Speer- und Schildträger. Städte benötigen Torwachen mit Hellebarden oder kurzen Schwertern. In waldreichen Gebieten finden sich Kern-Bogenschützen. In Zeiten erhöhter Bedrohung werden sie mit schwererer Clansrüstung ausgestattet, in ruhigen Gegenden genügt verstärkte Leder- oder Kettenrüstung.</p> <p>Ein Bogenschütze ist schlicht ein bogenschießender Kern. Ein Schwert- und Schildkämpfer ist ein Kern mit Schwert und Schild. Ein Speerträger bleibt ein Kern mit Speer.</p> <p>Die Variation liegt in der Bewaffnung – nicht im Stand. Der Kern ist funktional, nicht titelgebunden. Seine Identität bestimmt sich durch Pflicht und Zugehörigkeit, nicht durch eine eigene Unterklasse.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Kern bildet das Fundament jeder albischen Armee. In der heutigen Zeit stellen die Kerns rund neunzig Prozent der bewaffneten Streitkräfte – als Garnisonen, Stadtwachen, Grenzer oder Seeleute. Im Kriegsfall werden zusätzlich bewaffnete Bürger eingezogen, doch auch sie gelten dann als Kerns und unterstehen derselben Ordnung.</p> <p>Innerhalb der albischen Gesellschaft genießt der Kern Achtung. Er steht für Pflichtbewusstsein, Standhaftigkeit und Verlässlichkeit. Er ist der Mann auf der Mauer, der Wachposten am Tor, der Schild im Sturm. Sein Dienst wird respektiert – doch niemand verwechselt ihn mit einem Tiarna.</p> <p>Der Kern ist kein Adeliger und soll es auch nicht sein. Von ihm erwartet man Disziplin und Treue, nicht heroische Größe.</p> <p>Übertrifft ein Kern jedoch dauerhaft diese Erwartungen – zeigt außergewöhnliche Tapferkeit, Führungsstärke oder Charakterfestigkeit – kann er in den Stand des Tiarna erhoben werden. Dies ist selten, aber nicht ausgeschlossen. Der Aufstieg erfolgt nicht automatisch durch Dienstzeit, sondern durch bewiesene Würde.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Da der Kern häufig als Stadtwache, Grenzer oder Garnisonssoldat dient, sind praktische Begleiter verbreiteter als standesgebundene Tiere. Am häufigsten sind Hunde – Wachhunde, Spürhunde oder robuste Hütehunde, die Patrouillen begleiten, Fährten aufnehmen oder Alarm schlagen. Besonders an Grenzlinien und in ländlichen Gebieten gelten sie als unverzichtbar.</p> <p>Einige Kerns führen zudem Greifvögel, vor allem in waldreichen Regionen oder bei Küstenposten, wo frühe Sichtung von Bewegung entscheidend ist. Diese Praxis ist jedoch weniger verbreitet und meist regional geprägt.</p> <p>Pferde besitzen Kerns nur, wenn ihre Aufgabe es erfordert – etwa als Melder, Grenzreiter oder in weitläufigem Terrain. Sie sind Arbeitsmittel, keine Statussymbole.</p> <p>Der Kern wählt seine Gefährten nicht aus Repräsentation, sondern aus Zweckmäßigkeit. Was dient, bleibt. Was schmückt, gehört anderen Ständen.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "63607ff6144ea95648da7dd81ff37c5c5eba535c77d3088a9f2dd9db64b998b0"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "airig",
+  "cultureId": "alben",
+  "name": "Airig",
+  "title": "Der Airig",
+  "subtitle": "Speerkrieger des Tiarnatum",
+  "aliases": [],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/oxk3dMj.png",
+  "illustration": "https://i.imgur.com/jiA5GjF.jpeg",
+  "artwork": {
+    "source": "https://i.imgur.com/jiA5GjF.jpeg",
+    "width": 500,
+    "height": 359,
+    "caption": "Airig · Alben"
+  },
+  "facts": [
+    {
+      "group": "Wissenswertes",
+      "label": "Zugehörigkeit",
+      "html": "Albische Fürstentümer"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Stand",
+      "html": "Tiarna; niederer Adel"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rolle",
+      "html": "Speerkämpfer und Träger der Königsidee"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Bewaffnung",
+      "html": "Langspeer; Schwert oder Kurzschwert als Seitenwaffe"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Rüstung",
+      "html": "Bewegliches Kettenhemd oder verstärkte Plattenelemente"
+    },
+    {
+      "group": "Klassenprofil",
+      "label": "Besonderheit",
+      "html": "Verbunden mit der Legende des Gae Bolg"
+    },
+    {
+      "group": "Kulturelle Daten",
+      "label": "Vereidung",
+      "html": "Schwur auf Ehre, Clan, Fürsten und das alte Ideal des Tiarnatum"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "status": "written",
+      "html": "<p>Man erkennt einen Airig nicht an überladenem Prunk oder an lauter Prahlerei, sondern an der Art, wie er seinen Speer trägt. Während viele Tiarna das Schwert als Zeichen ihres Standes führen, hält der Airig den Speer mit einer anderen Haltung – nicht bloß als Waffe, sondern als Verpflichtung. Er ist ein vollwertiger Tiarna, gebunden an das Tiarnatum und dessen Ehrenkodex, doch seine Ausrichtung ist bewusst gewählt. Der Speer ist für ihn mehr als ein Mittel des Kampfes. Er ist Symbol, Erbe und Anspruch zugleich.</p> <p>Der Airig steht im selben Adel wie andere Tiarna, doch sein Weg ist enger gefasst. Er strebt nicht allein nach persönlicher Ehre oder nach Ruhm im Duell. Er misst sich an einer Legende, die über seinem Stand schwebt. In seinem Selbstverständnis verkörpert er die Hoffnung auf Einheit, auf Rückkehr eines verlorenen Königtums. Wer den Speer wählt, wählt nicht nur eine Waffengattung, sondern eine Idee.</p>"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "status": "written",
+      "html": "<p>Die Ursprünge des Airig liegen in der Zeit nach dem Erlöschen der königlichen Linie. Mit dem Tod des letzten Ri Tiarna zerfiel die Krone, und die Alben blieben in Fürstentümer geteilt zurück. Die alten Lieder erzählen, dass die Druiden in jener Stunde den Speer Gae Bolg schufen oder bewahrten, indem sie die Seele des gefallenen Königs in ihn banden. Aus seinem Blut, so heißt es, werde eines Tages ein Auserwählter hervorgehen, der den Speer ergreift und die Alben erneut vereint.</p> <p>Einige Tiarna begannen, sich bewusst dem Speer zuzuwenden. Nicht aus taktischer Notwendigkeit, sondern aus Überzeugung. Sie wollten bereit sein – falls die Prophezeiung je Wirklichkeit würde.</p> <p>So entstand der Airig als Strömung innerhalb des Tiarna-Standes. Er ist keine eigene Rangstufe und kein separater Adel, sondern ein Tiarna, der sich dem Speerkampf mit besonderer Hingabe verschreibt. Über Generationen hinweg wurde diese Ausrichtung verfeinert. Der Speer wurde zur Disziplin, zur Tradition und zum Prüfstein. Jeder Airig weiß, dass er vielleicht niemals den legendären Speer führen wird. Doch sollte der Tag kommen, an dem ein Albe ihn ergreifen darf, so soll es keiner sein, der dem Anspruch nicht gewachsen ist.</p>",
+      "sharedIntro": "tiarnatum"
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "status": "written",
+      "html": "<p>Der Airig ist Meister des Speerkampfes in all seinen Formen. Er beherrscht den langen Stoß ebenso wie das rasche Umgreifen zur Nahdistanz, führt den Speer im Einzelduell wie auch in der geschlossenen Linie. Seine Ausbildung vereint die Grundschule des Tiarnatum mit einer spezialisierten Lehre der Reichweite, Distanzkontrolle und präzisen Zielsetzung.</p> <p>Ein Airig kämpft nicht wild, sondern berechnend. Er nutzt die Länge seiner Waffe, um Gegner auf Abstand zu halten, Durchbrüche zu erzwingen oder gegnerische Formationen aufzubrechen. Gegen Reiter setzt er gezielte Abwehrtechniken ein, gegen schwer gerüstete Feinde sucht er Lücken, Gelenke und Schwachstellen.</p> <p>Viele Airig sind zudem im Kampf zu Fuß wie zu Pferd geübt. Der Speer dient ihnen sowohl als Stoßwaffe im Anritt als auch als präzise geführte Waffe im Standkampf. In der Linie übernehmen sie oft eine tragende Rolle, indem sie den ersten Kontakt suchen und die Dynamik des Gefechts bestimmen.</p>"
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "status": "written",
+      "html": "<h3>Stärken</h3><ul><li>Überlegene Reichweite im Nahkampf</li><li>Hohe Kontrolle über Distanz und Gefechtsrhythmus</li><li>Effektiv gegen Reiter und anstürmende Gegner</li><li>Präzise, technisch disziplinierte Kampfweise</li><li>Symbolische und moralische Strahlkraft innerhalb des Heeres</li></ul> <h3>Schwächen</h3><ul><li>Verwundbar bei sehr enger Distanz ohne Raum zum Führen der Waffe</li><li>Weniger flexibel bei Verlust des Speers</li><li>Stark auf Technik und Timing angewiesen</li><li>In chaotischem Gedränge gegenüber kürzeren Waffen im Nachteil</li></ul>"
+    },
+    {
+      "id": "kampfkunst",
+      "title": "Kampfstil & Kampfkunst",
+      "status": "written",
+      "html": "",
+      "sharedIntro": "grundschule"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Ausstattung",
+      "status": "written",
+      "html": "<p>Die Ausstattung eines Airig entspricht seinem Stand als Tiarna, ist jedoch klar auf den Speerkampf ausgerichtet. Im Zentrum steht stets ein hochwertiger, oft individuell gefertigter Langspeer. Dieser ist kein einfaches Massenprodukt, sondern sorgfältig ausbalanciert, mit verstärktem Schaft und oft mit Symbolik versehen, die auf die Legende des Gae Bolg anspielt. Manche tragen Gravuren, Runen oder clanbezogene Zeichen, doch niemals überladen – der Speer bleibt Waffe, nicht Schmuck.</p> <p>Als Nebenwaffe führt der Airig in der Regel ein Schwert oder ein Kurzschwert, seltener eine Axt. Diese dienen als Absicherung für den Nahkampf, falls der Speer verloren geht oder das Gefecht auf engste Distanz übergeht.</p> <p>Die Rüstung entspricht der eines Tiarna, jedoch mit besonderem Augenmerk auf Beweglichkeit. Kettenhemd oder verstärkte Plattenelemente sind üblich, ergänzt durch Arm- und Beinschutz, der schnelle Richtungswechsel nicht behindert. Ein Schild wird je nach Kampfstil geführt – einige Airig verzichten bewusst darauf, um beide Hände frei für den Speer zu haben, andere nutzen einen mittelschweren Rund- oder Langschild zur defensiven Absicherung.</p> <p>Insgesamt ist die Ausstattung eines Airig nicht prunkvoll, sondern zweckgebunden und standesgemäß. Alles an ihm ist auf Reichweite, Kontrolle und Disziplin ausgelegt – so wie es seine Rolle verlangt.</p>"
+    },
+    {
+      "id": "kultureller-status",
+      "title": "Kultureller Status",
+      "status": "written",
+      "html": "<p>Der Airig genießt innerhalb der albischen Gesellschaft einen besonderen, fast ehrfürchtigen Ruf. Er ist ein Tiarna wie jeder andere – doch seine bewusste Bindung an die Legende des Gae Bolg verleiht ihm eine zusätzliche symbolische Schwere.</p> <p>Wo ein gewöhnlicher Tiarna Land schützt und Recht wahrt, trägt der Airig darüber hinaus eine Idee mit sich: die Hoffnung auf Wiedervereinigung der Alben. Diese Verbindung zur Prophezeiung macht ihn in den Augen vieler zu mehr als nur einem Speerkämpfer. Er steht für Kontinuität, für das Andenken an den letzten König und für die Möglichkeit einer künftigen Krone.</p> <p>Innerhalb der Fürstentümer werden Airig respektiert, doch auch aufmerksam beobachtet. Ihre Nähe zur Königsidee kann politische Spannungen hervorrufen, besonders dort, wo Fürsten ihre eigene Stellung gefestigt sehen wollen. Dennoch wird ihre Existenz nicht offen infrage gestellt, da sie tief in der Tradition des Tiarnatum verankert ist.</p> <p>Unter dem einfachen Volk gelten Airig oft als würdige Träger alter Hoffnung. Unter den Tiarna selbst sind sie keine eigene Hierarchie, aber eine Strömung mit klarer Identität. Ein Airig beansprucht keine höhere Macht – doch jeder weiß, dass aus ihren Reihen eines Tages derjenige hervorgehen könnte, der mehr beansprucht als nur ein Fürstentum.</p>"
+    },
+    {
+      "id": "gefaehrten",
+      "title": "Gefährten",
+      "status": "written",
+      "html": "<p>Der Airig wählt seine Gefährten nicht aus Zierde, sondern aus Zweck und Symbolik. Am häufigsten findet man ihn mit einem Pferd, das ihm erlaubt, seinen Speer sowohl im Anritt als auch im raschen Stellungswechsel zu nutzen. Anders als schwere Reiter führt der Airig jedoch kein reines Schlachtross aus Prestige, sondern ein ausdauerndes, wendiges Tier, das Kontrolle und Geschwindigkeit gleichermaßen erlaubt.</p> <p>Manche Airig halten Hunde, besonders wenn sie Grenzgebiete sichern oder weite Landstriche patrouillieren. Diese Tiere dienen als Wach- und Fährtenbegleiter, nicht als Statussymbol.</p> <p>Greifvögel sind seltener, kommen jedoch vor – vor allem bei jenen Airig, die ihre Rolle stärker mit der Idee des Suchenden und Beobachtenden verbinden.</p> <p>Unabhängig vom Tier gilt: Der Gefährte eines Airig ergänzt seine Disziplin. Er dient dem Zweck, der Bewegung und der Wachsamkeit – niemals bloß der Repräsentation.</p>"
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "status": "pending",
+      "html": ""
+    },
+    {
+      "id": "historische-figuren",
+      "title": "Historische Figuren der Klasse",
+      "status": "pending",
+      "html": ""
+    }
+  ],
+  "source": {
+    "kind": "user-provided-legacy-html",
+    "sha256": "bc44533c8e2383a55dc2b2d7a974399904a62f7b2261c677c3fae993faba28af"
+  }
+}

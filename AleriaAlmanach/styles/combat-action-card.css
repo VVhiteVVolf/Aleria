@@ -165,15 +165,17 @@
 .combat-action-picker > summary { display: flex; align-items: center; gap: 0.5rem; min-height: 2.6rem; padding: 0.5rem 0.6rem; box-sizing: border-box; border: 1px solid var(--composer-line); border-radius: 3px; background: #fffbf0; cursor: pointer; list-style: none; }
 .combat-action-picker > summary::-webkit-details-marker { display: none; }
 .combat-action-picker > summary > span:first-child { flex: 1; min-width: 0; overflow-wrap: anywhere; }
-.combat-action-picker-panel { position: absolute; inset: 100% 0 auto; z-index: 15; padding: 0.5rem; background: #fffbf0; border: 1px solid var(--composer-line); border-radius: 3px; box-shadow: 0 6px 20px #49372035; }
-.combat-action-picker-options { max-height: 19rem; overflow-y: auto; overscroll-behavior: contain; margin-top: 0.5rem; }
-.combat-action-picker-group { padding: 0.6rem 0.35rem 0.25rem; color: var(--composer-accent); font: 700 0.73rem/1.4 "Cinzel", Georgia, serif; }
-.combat-action-picker-options button { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; width: 100%; padding: 0.5rem 0.4rem; border: 1px solid transparent; border-radius: 3px; background: transparent; color: var(--composer-ink); text-align: left; font: inherit; cursor: pointer; }
+.combat-action-picker-panel { position: absolute; inset: 100% 0 auto; z-index: 15; padding: 0.6rem; box-sizing: border-box; background: #fffbf0; border: 1px solid #b49a70; border-radius: 3px; box-shadow: 0 6px 20px #49372035; }
+.combat-action-picker-options { max-height: min(26rem, 48vh); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-padding-top: 3.5rem; margin-top: 0.5rem; }
+.combat-action-picker-group { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.5rem; border-block: 1px solid #c5ac7c; background: linear-gradient(100deg, #e2cf9f, #f4e8ca); color: #613f29; font: 700 0.75rem/1.4 "Cinzel", Georgia, serif; }
+.combat-action-group-count { flex: 0 0 auto; padding: 0.05rem 0.35rem; border: 1px solid #af9160; border-radius: 3px; background: #fffaea; font-variant-numeric: tabular-nums; }
+.combat-action-picker-options button { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; width: 100%; min-height: 2.75rem; padding: 0.5rem; border: 1px solid transparent; border-bottom-color: #e6d9bc; border-radius: 3px; background: transparent; color: var(--composer-ink); text-align: left; font: inherit; cursor: pointer; }
 .combat-action-picker-options button > span:first-child { min-width: 0; overflow-wrap: anywhere; }
-.combat-action-picker-options button small { display: block; color: #82715c; font-size: 0.72rem; }
+.combat-action-picker-options button small { display: block; color: #6d5c47; font-size: 0.75rem; }
 .combat-action-picker-options button[aria-selected="true"] { background: #eee5ca; border-color: #bca579; }
 .combat-action-picker-options button:hover:not(:disabled) { background: #f2ead3; }
-.combat-action-picker-options button:disabled { opacity: 0.55; cursor: default; }
+.combat-action-picker-options button:disabled { color: #756650; background: #f4efdf; cursor: default; }
+.combat-action-picker-options button:disabled .combat-mini-costs { opacity: 0.65; }
 .combat-action-picker summary:focus-visible, .combat-action-picker-options button:focus-visible { outline: 2px solid var(--composer-accent); outline-offset: -2px; }
 .combat-action-picker [hidden] { display: none; }
 .combat-action-picker-hint { display: block; padding: 0.5rem 0.2rem 0; color: #77654f; font-size: 0.72rem; }
@@ -192,6 +194,7 @@
 @container (max-width: 620px) {
   .combat-weapon-loadout { grid-template-columns: 1fr; gap: 0.75rem; }
   .combat-composer-fields { grid-template-columns: 1fr; }
+  .combat-action-picker-panel { position: relative; inset: auto; margin-top: 0.2rem; box-shadow: 0 3px 10px #49372020; }
   .combat-weapon-alternatives .combat-weapon-slot { grid-template-columns: 1fr; justify-items: center; text-align: center; width: 7rem; }
   .combat-weapon-alternatives .combat-weapon-slot-copy small { display: none; }
   .combat-weapon-alternatives .combat-weapon-slot[data-state="pending"] small { display: block; }
