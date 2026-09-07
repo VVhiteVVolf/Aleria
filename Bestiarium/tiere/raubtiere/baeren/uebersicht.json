@@ -1,0 +1,271 @@
+{
+  "id": "baeren",
+  "title": "Bären",
+  "subtitle": "Uralte Kraft zwischen Geduld und jäher Gewalt",
+  "classification": "Ursine Raubtiere der bekannten Welt",
+  "folio": "R-03",
+  "lead": "Die Bären Alerias reichen vom sanften Brannoc bis zu den kompromisslosen Jägern des Packeises. Bau, Lebensraum und Nähe zum Menschen unterscheiden ihre Linien stärker als bloße Fellfarbe.",
+  "quote": "Man erkennt die Stärke eines Bären selten an seinem Angriff – meist an allem, was ihm ausweicht.",
+  "quoteAttribution": "Randnotiz eines Akademiekundlers",
+  "icon": {
+    "src": "../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/predators/groups/baeren.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Bär am Rand einer alten Siedlung",
+    "caption": "Bären Alerias · Tafel des naturkundlichen Archivs"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bären zählen zu den mächtigsten und zugleich widersprüchlichsten Landtieren der bekannten Welt. Sie vereinen rohe Körperkraft mit Anpassungsfähigkeit, Geduld mit explosiver Gewalt. In nahezu allen großen Landmassen Estrylls und darüber hinaus treten sie als prägende Großtiere auf – nicht als bloße Jäger, sondern als ökologische Fixpunkte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo Bären leben, ordnet sich die Wildnis neu. Andere Raubtiere weichen aus, Wanderwege verändern sich, Siedlungen passen sich an. Kein anderes Landtier beeinflusst seine Umgebung so dauerhaft, ohne sie aktiv zu beherrschen."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die meisten bekannten Bärenarten lassen sich auf uralte Linien zurückführen, die bereits existierten, lange bevor die ersten Reiche entstanden. In vielen Kulturen gilt der Brannoc als Urrasse, von der sich im Laufe der Zeit unterschiedliche Linien abspalteten – angepasst an Klima, Nahrung und Nähe oder Distanz zum Menschen. Aus diesen frühen Formen entwickelten sich sowohl friedliche Koexistenzarten als auch aggressive, hochspezialisierte Apex-Räuber. Trotz aller Unterschiede teilen alle Bären eine gemeinsame Grundlage: enorme körperliche Belastbarkeit, ausgeprägte Sinne und ein instinktives Gespür für Territorium."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bären sind großgewachsene, massiv gebaute Säugetiere mit kräftigem Schultergürtel, breitem Brustkorb und starken Gliedmaßen. Ihr Gang wirkt oft schwerfällig, doch täuscht dieser Eindruck über ihre tatsächliche Geschwindigkeit und Kraft hinweg. Das Fell ist dicht und wetterfest, angepasst an regionale Bedingungen – von dunklen Waldtönen über erdige Farben bis hin zu hellem Eisfell. Kopf und Kiefer sind auf Vielseitigkeit ausgelegt: Bären sind weder reine Jäger noch reine Pflanzenfresser, sondern Opportunisten."
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Ordnungsversuch",
+    "title": "Drei Linien der Bärenkunde",
+    "intro": "Die Archive ordnen Bären nach Herkunft, Verhalten und Verhältnis zur Zivilisation. Die Gruppen bezeichnen beobachtete Linien und ersetzen keine genaue Artbestimmung.",
+    "columns": [
+      {
+        "kicker": "Albische Überlieferung",
+        "title": "Sanfte Stammlinie",
+        "points": [
+          "Der Brannoc gilt als alter Ausgangspunkt vieler estryllischer Linien",
+          "Außergewöhnlich hohe Toleranz gegenüber Menschen",
+          "Gewaltige Kraft bei überwiegend friedlichem Verhalten"
+        ]
+      },
+      {
+        "kicker": "Estryllische Vielfalt",
+        "title": "Wilde Landesformen",
+        "points": [
+          "Vom anpassungsfähigen Muine bis zum dominanten Grámh",
+          "Lebensraum prägt Jagd, Größe und Revierverhalten",
+          "Begegnungen verlangen immer Abstand und genaue Artkenntnis"
+        ]
+      },
+      {
+        "kicker": "Unvollständiges Archiv",
+        "title": "Bären Lothirs",
+        "points": [
+          "Drei Bildtafeln sind ohne überlieferten Artnamen erhalten",
+          "Herkunftsangaben nennen Bergland, Westen und Osten Lothirs",
+          "Dossiers folgen, sobald Texte und Benennungen gesichert sind"
+        ]
+      }
+    ]
+  },
+  "atlas": {
+    "title": "Register der bekannten Bären",
+    "intro": "Acht benannte Arten besitzen ein vollständiges Dossier. Drei erhaltene Bildtafeln aus Lothir bleiben als unbestimmte Arten verzeichnet.",
+    "groups": [
+      {
+        "id": "stammlinie",
+        "title": "Alte Stammlinie",
+        "kicker": "Südliche albische Fürstentümer",
+        "description": "Der Brannoc steht in den Überlieferungen am Anfang zahlreicher späterer Bärenlinien.",
+        "entries": [
+          {
+            "id": "brannoc",
+            "title": "Brannoc",
+            "region": "Südliches Estryll",
+            "description": "Ein sanfter Riesenbär, der in den albischen Fürstentümern beinahe als Nachbar gilt.",
+            "status": "Dossier verfügbar",
+            "href": "./brannoc/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/brannoc.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Brannoc"
+            }
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Bären Estrylls & des Nordens",
+        "kicker": "Benannte Arten",
+        "description": "Diese Bären besetzen Inseln, Wälder, Sümpfe, Gebirge und die Eisfelder am Rand der bekannten Welt.",
+        "entries": [
+          {
+            "id": "arth",
+            "title": "Arth",
+            "region": "Klaueninseln · Cenyr",
+            "description": "Einer der größten und gefährlichsten territorialen Bären der bekannten Welt.",
+            "status": "Dossier verfügbar",
+            "href": "./arth/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/arth.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Arth"
+            }
+          },
+          {
+            "id": "draugrbjorn",
+            "title": "Draugrbjorn",
+            "region": "Nördliche Sümpfe Estrylls",
+            "description": "Ausgezehrter Sumpfbär, dessen Zähigkeit seine geringere Masse ausgleicht.",
+            "status": "Dossier verfügbar",
+            "href": "./draugrbjorn/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/draugrbjorn.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Bildtafel: Draugrbjorn"
+            }
+          },
+          {
+            "id": "dubharr",
+            "title": "Dubharr",
+            "region": "Zentrales Estryll",
+            "description": "Anpassungsfähiger Schwarzbär der Waldlande und Randgebirge.",
+            "status": "Dossier verfügbar",
+            "href": "./dubharr/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/dubharr.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Dubharr"
+            }
+          },
+          {
+            "id": "gramh",
+            "title": "Grámh",
+            "region": "Aldrimar · Fjordheim",
+            "description": "Massiger Graubär des Nordens mit kompromisslosem Revierverhalten.",
+            "status": "Dossier verfügbar",
+            "href": "./gramh/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/gramh.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Grámh"
+            }
+          },
+          {
+            "id": "broan",
+            "title": "Broan",
+            "region": "Estryll",
+            "description": "Weit verbreiteter wilder Nachfahre des Brannoc.",
+            "status": "Dossier verfügbar",
+            "href": "./broan/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/broan.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Broan"
+            }
+          },
+          {
+            "id": "muine",
+            "title": "Muine",
+            "region": "Zentral-Estryll · Ceitheach",
+            "description": "Kragenbär, der nach dem Wachsen des Dunkelhains neue Räume erschloss.",
+            "status": "Dossier verfügbar",
+            "href": "./muine/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/muine.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Muine"
+            }
+          },
+          {
+            "id": "banmor-isbjorn",
+            "title": "Bànmòr / Ísbjörn",
+            "region": "Hoher Norden · Yrmandrall",
+            "description": "Geduldiger Eisbär der Gletscher, Küsten und wandernden Packeisfelder.",
+            "status": "Dossier verfügbar",
+            "href": "./banmor-isbjorn/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/banmor-isbjorn.webp",
+              "width": 408,
+              "height": 397,
+              "alt": "Bildtafel: Bànmòr / Ísbjörn"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Bären Lothirs",
+        "kicker": "Unbestimmte Bildtafeln",
+        "description": "Die alten Tafeln sind erhalten, doch Namen und ausführliche Feldberichte fehlen noch.",
+        "entries": [
+          {
+            "id": "lothir-moinneach",
+            "title": "Unbestimmte Bärenart I",
+            "region": "Moinneach · Lothir",
+            "description": "Eine überlieferte Berglandform, deren Name und Lebensweise noch nicht erschlossen sind.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/lothir-moinneach.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Unbestimmte Bärenart I"
+            }
+          },
+          {
+            "id": "lothir-west",
+            "title": "Unbestimmte Bärenart II",
+            "region": "Westliches Lothir",
+            "description": "Eine westlothirische Bildtafel ohne gesicherten Artnamen.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/lothir-west.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Unbestimmte Bärenart II"
+            }
+          },
+          {
+            "id": "lothir-ost",
+            "title": "Unbestimmte Bärenart III",
+            "region": "Östliches Lothir",
+            "description": "Eine ostlothirische Bildtafel, deren Dossier noch aussteht.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/baeren/lothir-ost.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Unbestimmte Bärenart III"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

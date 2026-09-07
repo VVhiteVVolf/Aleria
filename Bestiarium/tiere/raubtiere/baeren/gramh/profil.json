@@ -1,0 +1,194 @@
+{
+  "id": "gramh",
+  "name": "Grámh",
+  "classification": "Nordischer Graubär",
+  "continent": "Estryll",
+  "region": "Aldrimar · Fjordheim & Nord-Vennyr",
+  "folio": "R-B05",
+  "quote": "Wo der Grámh geht, schweigt der Wind. Nicht aus Ehrfurcht – aus Vorsicht.",
+  "quoteAttribution": "Nordische Redensart aus Fjordheim",
+  "summary": "Der Grámh ist der nordische Bär der Lande Aldrimar und der nördlich angrenzenden Regionen Vennyrs, die heute unter dem Namen Fjordheim bekannt sind. Er ist größer, massiger und brachialer als die meisten südlicheren Bärenarten und gilt als Inbegriff roher, frostgehärteter Gewalt. Kälte, Schnee und eisiger Wind beeinträchtigen ihn nicht – sie sind sein Element.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/gramh.webp",
+    "width": 1536,
+    "height": 1536,
+    "alt": "Überlieferte Bildtafel von Grámh",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Grámh"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Massiger nordischer Graubär"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Aldrimar, Fjordheim und nördliches Vennyr"
+    },
+    {
+      "label": "Lebensweise",
+      "value": "Einzelgängerisch und streng territorial"
+    },
+    {
+      "label": "Angriff",
+      "value": "Direkt, kurz und explosiv"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Dominant gegenüber fast allen Raubtieren"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      6,
+      10,
+      1,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Grámh ist der nordische Bär der Lande Aldrimar und der nördlich angrenzenden Regionen Vennyrs, die heute unter dem Namen Fjordheim bekannt sind. Er ist größer, massiger und brachialer als die meisten südlicheren Bärenarten und gilt als Inbegriff roher, frostgehärteter Gewalt. Kälte, Schnee und eisiger Wind beeinträchtigen ihn nicht – sie sind sein Element."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Grámh ist in den kalten Hochlanden des Nordens heimisch. Seine Verbreitung folgt Gebirgsketten, Fjorden und großen Flusssystemen, wo er sowohl Rückzugsorte als auch reichhaltige Nahrungsquellen findet. Diese Bärenlinie gilt als eine der ältesten Aldrimars und zeigt kaum Anpassungsbrüche – sie wurde nicht verformt, sondern gehärtet."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grámh-Bären sind gewaltige Tiere mit breitem Schädel, massivem Nacken und einer Schulterpartie, die selbst im Ruhezustand Bedrohung ausstrahlt. Ihr Fell ist dicht, grob und meist grau- bis erdfarben, ideal zur Tarnung in Schnee, Fels und Geröll. Narben sind häufig, besonders im Gesichts- und Schulterbereich, und werden als Zeichen von Dominanz betrachtet, nicht von Schwäche."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Revier eines Grámh umfasst oft ganze Gebirgstäler oder Flussläufe. Wege werden umgelegt, Lager verlegt und Jagdgebiete aufgegeben, sobald ein Grámh dort sesshaft wird. Er verdrängt andere Großraubtiere mühelos und duldet keine Konkurrenz. Wo ein Grámh lebt, passt sich die Landschaft an – nicht umgekehrt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Grámh ist aggressiv, direkt und kompromisslos. Er kennt keine langen Drohgebärden und keinen Rückzug, sobald er eine Entscheidung getroffen hat. Alles, was sich ihm in den Weg stellt, wird niedergeworfen oder zertrümmert. Seine Angriffe sind kurz, explosiv und von erschreckender Wucht."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Aldrimar werden Grámh-Bären gemieden und in Ruhe gelassen. Solange man ihr Territorium respektiert, bleiben Begegnungen selten. Doch der Grámh schreckt nicht davor zurück, Menschen zu jagen und zu fressen, wenn diese sich in seinem Gebiet aufhalten oder als leichte Beute erscheinen. Er unterscheidet nicht zwischen Tier und Mensch – nur zwischen lohnend und nicht lohnend."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Vollständig unempfindlich gegenüber Frost und Schneestürmen",
+            "Kann Flüsse und Fjordarme schwimmend überqueren",
+            "Frisst sowohl Hochgebirgswild als auch Fisch",
+            "Zeigt kaum Ermüdung bei kurzen, gewaltsamen Angriffen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enorme Körperkraft",
+            "Hohe Kälteresistenz",
+            "Dominanz gegenüber nahezu allen anderen Raubtieren"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Geduld",
+            "Kaum Tarnung außerhalb felsiger oder verschneiter Regionen",
+            "Hoher Nahrungsbedarf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Fjordheim gelten zertrümmerte Baumstämme als Warnzeichen eines Grámh-Reviers",
+            "Alte Grenzsteine wurden oft bewusst nahe Grámh-Gebieten errichtet"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

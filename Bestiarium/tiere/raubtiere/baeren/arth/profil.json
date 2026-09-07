@@ -1,0 +1,210 @@
+{
+  "id": "arth",
+  "name": "Arth",
+  "classification": "Bär der Klaueninseln",
+  "continent": "Estryll",
+  "region": "Klaueninseln · Cenyr",
+  "folio": "R-B02",
+  "quote": "Er tötet nicht aus Hunger. Er tötet, weil du dort warst, wo er es nicht duldete.",
+  "quoteAttribution": "Inselweisheit der Klaueninseln",
+  "summary": "Der Arth-Bär zählt zu den gefährlichsten Großraubtieren der Klaueninseln und gehört, neben dem Frostbären, zu den größten bekannten Bärenarten der Welt. Seine schiere Masse, gepaart mit erstaunlicher Ausdauer, macht ihn zu einer lebenden Naturgewalt.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/arth.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Arth",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Arth"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Sehr großer Inselbär"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Gebirge der Klaueninseln"
+    },
+    {
+      "label": "Lebensweise",
+      "value": "Einzelgängerisch und territorial"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Opportunistischer Allesfresser"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Äußerst gefährlich bei Revierverletzung"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      9,
+      1,
+      6,
+      10,
+      2,
+      9
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Arth-Bär zählt zu den gefährlichsten Großraubtieren der Klaueninseln und gehört, neben dem Frostbären, zu den größten bekannten Bärenarten der Welt. Seine schiere Masse, gepaart mit erstaunlicher Ausdauer, macht ihn zu einer lebenden Naturgewalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ursprünglich von nordischen Seefahrern als Berserkerbär bezeichnet, erhielt er seinen heutigen Namen durch das Haus Arth, das dieses Tier als Sinnbild roher Stärke und unbeugsamen Schutzes in sein Wappen aufnahm."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Arth-Bär ist auf die Klaueninseln beschränkt und bewohnt vor allem die gebirgigen Regionen der Inselketten. Seine Population konzentriert sich auf schwer zugängliche Höhenzüge, tiefe Schluchten und ausgedehnte Höhlensysteme, die ihm Schutz, Rückzug und Brutplätze bieten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Umbenennung der Art durch das Haus Arth markiert zugleich den Beginn eines unausgesprochenen Schutzabkommens zwischen Mensch und Tier."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arth-Bären sind gewaltige Tiere mit massigem Schultergürtel, breitem Brustkorb und ungewöhnlich kräftigen Vorderläufen. Ihr Fell ist dicht, grob und meist in warmen Braun- bis Rosttönen gehalten, was ihnen eine imposante Silhouette verleiht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aufgerichtet erreichen sie eine Höhe, die selbst erfahrene Krieger innehalten lässt. Krallen und Kiefer sind nicht übermäßig lang, wirken jedoch durch die schiere Körperkraft des Tieres tödlich effizient."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Revier eines einzelnen Arth-Bären kann ganze Gebirgstäler umfassen. Wege werden gemieden, Siedlungen bewusst an ihren Rändern errichtet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo ein Arth-Bär lebt, endet Expansion. Händler kennen die Zeichen – zerkratzte Felsen, aufgebrochene Baumstämme, zertrampelte Geröllfelder – und umgehen solche Gebiete weiträumig."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entgegen ihres Rufes sind Arth-Bären nicht von Natur aus aggressiv. Sie reagieren träge, solange man ihr Territorium respektiert und ihnen den Zugang zu Nahrung nicht versperrt. Wird jedoch Beute streitig gemacht oder ein Tier bedrängt, erfolgt der Angriff ohne Drohgebärde, ohne Warnung – kurz, brutal, endgültig."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Inselbewohner meiden Arth-Bären konsequent. Jagd auf diese Tiere gilt als Tabubruch. Durch ihre Verbindung zum Haus Arth werden sie als lebendige Wächter der Inseln betrachtet – nicht gezähmt, nicht kontrolliert, sondern geduldet und respektiert. Todesfälle sind selten, aber fast immer das Ergebnis menschlicher Überheblichkeit."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ziehen saisonal bis an Küstenflüsse, um Seelachse zu fangen",
+            "Plündern gelegentlich unbewachte Händlerlager",
+            "Kehren über Jahre hinweg zu denselben Höhlen zurück",
+            "Dulden keine Konkurrenz in unmittelbarer Nähe ihrer Beute"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enorme Körperkraft und Ausdauer",
+            "Hohe Schmerztoleranz",
+            "Einschüchternde Präsenz allein durch Größe"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Träge Reaktion auf schnelle, koordinierte Gegner",
+            "Meidet offenes Gelände ohne Rückzugsmöglichkeiten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Alte Insellegenden berichten von Arth-Bären, die ganze Höhlensysteme einstürzen ließen",
+            "Das Töten eines Arth-Bären für den Sport ist auf den Klaueninseln verboten und wird bestraft",
+            "Junge Arth-Bären werden von ihrer Mutter aggressiver verteidigt als jede Beute"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

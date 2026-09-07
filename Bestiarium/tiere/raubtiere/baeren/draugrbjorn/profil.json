@@ -1,0 +1,195 @@
+{
+  "id": "draugrbjorn",
+  "name": "Draugrbjorn",
+  "classification": "Sumpfbär des Nordens",
+  "continent": "Estryll",
+  "region": "Nördliche Sumpfregionen",
+  "folio": "R-B03",
+  "quote": "Er jagt nicht, weil er stark ist. Er jagt, weil er es sich nicht leisten kann, es nicht zu tun.",
+  "quoteAttribution": "Jägerweisheit aus Nord-Estryll",
+  "summary": "Der Draugrbjorn ist eine entstellte Abart der nordischen Bären Estrylls, entstanden durch Anpassung an die lebensfeindlichen Sumpfregionen des Nordens. Er zählt nicht zu den größten oder stärksten Bärenarten, wohl aber zu den unangenehmsten und unberechenbarsten. Wo andere Bären verenden oder abwandern, bleibt der Draugrbjorn – ausgehungert, zäh und dauerhaft an der Grenze zwischen Leben und Verfall.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/draugrbjorn.webp",
+    "width": 1024,
+    "height": 687,
+    "alt": "Überlieferte Bildtafel von Draugrbjorn",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Draugrbjorn"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Ausgezehrter Sumpfbär"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Lebensfeindliche Sümpfe Nord-Estrylls"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Schmaler und leichter als nördliche Großbären"
+    },
+    {
+      "label": "Widerstand",
+      "value": "Hohe Resistenz gegen Krankheit und Gift"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Unberechenbar und vom Hunger getrieben"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      8,
+      1,
+      6,
+      5,
+      2,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Draugrbjorn ist eine entstellte Abart der nordischen Bären Estrylls, entstanden durch Anpassung an die lebensfeindlichen Sumpfregionen des Nordens. Er zählt nicht zu den größten oder stärksten Bärenarten, wohl aber zu den unangenehmsten und unberechenbarsten. Wo andere Bären verenden oder abwandern, bleibt der Draugrbjorn – ausgehungert, zäh und dauerhaft an der Grenze zwischen Leben und Verfall."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ursprünglich entstammt der Draugrbjorn den heimischen nordischen Bärenrassen Estrylls. Durch Klimaveränderungen, Überjagung anderer Beutetiere und den Rückzug in sumpfige Randgebiete entwickelte sich diese Linie weiter. Isolation, Nahrungsmangel und feuchte, giftige Lebensräume formten über Generationen hinweg einen Bären, der weniger auf Kraft als auf Überleben um jeden Preis ausgelegt ist."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Draugrbjorn wirkt verkümmert und ausgemergelt. Rippen zeichnen sich oft unter dem zottigen, schmutzverfilzten Fell ab, die Gliedmaßen sind drahtig, die Schultern knochig. Sein Kopf erscheint zu groß für den Körper, die Schnauze schmal, die Augen matt und wachsam zugleich. Narben, kahle Fellstellen und Verfärbungen durch Schlamm und Fäulnis sind typisch."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Draugrbjorn-Reviere liegen tief in Mooren, Sümpfen und verfallenen Auen. Diese Gebiete gelten als verflucht oder tot – nicht zuletzt wegen der Bären, die dort alles verwerten, was stirbt. Kadaver verschwinden schnell, Pfade enden abrupt, und selbst Aasvögel meiden manche Regionen, in denen Draugrbjorn regelmäßig wildert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Draugrbjorn ist kein reiner Aasfresser aus Wahl, sondern aus Not. Frische Beute ist selten, Konkurrenz hoch. Findet er jedoch eine lohnende Nahrungsquelle, greift er ohne Zögern an – selbst dann, wenn seine Kräfte kaum ausreichen. Er verbrennt seine letzten Reserven in einem einzigen, verzweifelten Angriff, statt sich zurückzuziehen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Menschen meiden Draugrbjorn-Gebiete konsequent. Begegnungen enden selten gut, da der Bär kaum Drohverhalten zeigt. Er flieht nicht, er warnt nicht – er entscheidet nur, ob sich der Angriff lohnt. Gerade Reisende, Verwundete oder einzelne Händler werden zur bevorzugten Gelegenheit."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Kann stark verwesendes Fleisch ohne erkennbare Folgen verzehren",
+            "Verkürzter Winterschlaf, oft nur wenige Wochen",
+            "Extrem sparsamer Energiehaushalt",
+            "Folgt Gerüchen über ungewöhnlich große Distanzen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Widerstandskraft gegen Krankheiten und Gifte",
+            "Lange Hungerperioden überlebbar",
+            "Überraschend ausdauernd bei kurzer Eskalation"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringere Körperkraft als andere Großbären",
+            "Kaum Fettreserven",
+            "Längere Verfolgungsjagden meidet er"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In manchen Dörfern glaubt man, Draugrbjorn seien „halbtot geboren“",
+            "Ihr Name wird oft mit Untoten verwechselt, obwohl sie rein biologisch sind",
+            "Manche Moorleichen verschwanden spurlos – vermutlich durch Draugrbjorn"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

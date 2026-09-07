@@ -1,4 +1,6 @@
-const VERSION = '20260907-horse-profile-v1';
+import { renderProfileMetrics } from '../profile-metrics/profile-metrics-template.mjs';
+
+const VERSION = '20260907-horse-profile-v2';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const roman = number => {
   const values = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
@@ -27,38 +29,6 @@ function renderFacts(facts) {
   return `<aside class="horse-facts" aria-labelledby="facts-title"><p class="eyebrow">Zuchtbuchnotizen</p><h2 id="facts-title">Das Pferd im Überblick</h2><dl>${facts.map(fact => `<div><dt>${escape(fact.label)}</dt><dd>${escape(fact.value)}</dd></div>`).join('\n')}</dl><span aria-hidden="true">❧</span></aside>`;
 }
 
-function point(cx, cy, radius, index, total = 6) {
-  const angle = -Math.PI / 2 + index * (Math.PI * 2 / total);
-  return [cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius];
-}
-
-function pointsForRadius(radius) {
-  return Array.from({ length: 6 }, (_, index) => point(220, 160, radius, index).map(value => value.toFixed(1)).join(',')).join(' ');
-}
-
-function renderRadar(performance) {
-  if (!performance) {
-    return `<div class="horse-performance-missing"><span aria-hidden="true">◇</span><p><strong>Keine gesicherten Messwerte</strong>Für diese historische Linie führt der Rossmarkt bislang kein vollständiges Leistungsblatt.</p></div>`;
-  }
-
-  const plot = performance.values.map((value, index) => point(220, 160, value / 10 * 98, index).map(number => number.toFixed(1)).join(',')).join(' ');
-  const labelPositions = [
-    [220, 24, 'middle'], [358, 83, 'start'], [358, 246, 'start'],
-    [220, 310, 'middle'], [82, 246, 'end'], [82, 83, 'end']
-  ];
-  const description = performance.labels.map((label, index) => `${label} ${performance.values[index]} von 10`).join(', ');
-  return `<div class="horse-radar-wrap">
-    <svg class="horse-radar" viewBox="0 0 440 330" role="img" aria-labelledby="radar-title radar-description">
-      <title id="radar-title">Leistungsdiagramm für dieses Pferd</title><desc id="radar-description">${escape(description)}</desc>
-      <g class="horse-radar-grid">${[19.6, 39.2, 58.8, 78.4, 98].map(radius => `<polygon points="${pointsForRadius(radius)}"></polygon>`).join('')}${Array.from({ length: 6 }, (_, index) => { const [x, y] = point(220, 160, 98, index); return `<line x1="220" y1="160" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"></line>`; }).join('')}</g>
-      <polygon class="horse-radar-value" points="${plot}"></polygon>
-      <g class="horse-radar-points">${performance.values.map((value, index) => { const [x, y] = point(220, 160, value / 10 * 98, index); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"></circle>`; }).join('')}</g>
-      <g class="horse-radar-labels">${performance.labels.map((label, index) => { const [x, y, anchor] = labelPositions[index]; return `<text x="${x}" y="${y}" text-anchor="${anchor}">${escape(label)}</text>`; }).join('')}</g>
-    </svg>
-    <dl class="horse-score-list">${performance.labels.map((label, index) => `<div><dt>${escape(label)}</dt><dd><span style="--score:${performance.values[index]}"><i></i></span><strong>${performance.values[index]}<small>/10</small></strong></dd></div>`).join('\n')}</dl>
-  </div>`;
-}
-
 function renderMarket(record) {
   const market = record.market;
   return `<section class="horse-market" id="rossmarkt" aria-labelledby="rossmarkt-title">
@@ -75,7 +45,10 @@ function renderPerformance(record) {
   return `<section class="horse-performance" id="leistungsblatt" aria-labelledby="performance-title">
     <header class="horse-feature-heading"><span aria-hidden="true">II</span><div><p class="eyebrow">Sechs Merkmale · Skala 1–10</p><h2 id="performance-title">Leistungsblatt</h2></div></header>
     <p class="horse-performance-intro">Die Einschätzung folgt den Aufzeichnungen des Rossmarkts und macht die Stärken dieser Linie auf einen Blick vergleichbar.</p>
-    ${renderRadar(record.performance)}
+    ${renderProfileMetrics(record.performance, {
+      chartTitle: `Leistungsdiagramm für ${record.name}`,
+      emptyText: 'Für diese historische Linie führt der Rossmarkt bislang kein vollständiges Leistungsblatt.'
+    })}
   </section>`;
 }
 
@@ -94,6 +67,7 @@ export function renderHorseProfile(record, navigation = {}) {
   <title>${escape(record.name)} · Pferde Alerias</title><meta name="description" content="${escape(record.summary)}">
   <link rel="icon" href="../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
   <link rel="stylesheet" href="../../../modules/book-shell/book-shell.css?v=${VERSION}">
+  <link rel="stylesheet" href="../../../modules/profile-metrics/profile-metrics.css?v=${VERSION}">
   <link rel="stylesheet" href="../../../modules/horse-profile/horse-profile.css?v=${VERSION}">
 </head>
 <body>

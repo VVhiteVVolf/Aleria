@@ -1,0 +1,220 @@
+{
+  "id": "faerog",
+  "name": "Faerog",
+  "classification": "Cenyrischer Gebirgswolf",
+  "continent": "Estryll",
+  "region": "Südliches Cenyr · Celtigerns Wacht",
+  "folio": "R-W02",
+  "quote": "Man hört ihn nicht. Man sieht ihn nicht. Und wenn man ihn doch sieht, war er längst da.",
+  "quoteAttribution": "Jägerspruch aus Celtigerns Wacht",
+  "summary": "Der Faerog ist ein scheuer, hochintelligenter Gebirgswolf, der ausschließlich im südlichen Cenyr vorkommt. Anders als viele seiner Verwandten ist er weder Wächter noch Räuber der Grenzlande, sondern ein lautloser Bewohner abgelegener Höhenzüge. Er meidet den Menschen konsequent und greift nur in äußerster Not zur Verteidigung an.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/faerog.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel von Faerog",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Faerog"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Scheuer Gebirgswolf"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Celtigerns Wacht im südlichen Cenyr"
+    },
+    {
+      "label": "Rudel",
+      "value": "Einzeln oder 2–3 Tiere"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Nachtaktiv"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Vorwiegend kleines Wild"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Hohe Intelligenz und außergewöhnliche Unauffälligkeit"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      3,
+      5,
+      9,
+      4,
+      4,
+      7
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Faerog ist ein scheuer, hochintelligenter Gebirgswolf, der ausschließlich im südlichen Cenyr vorkommt. Anders als viele seiner Verwandten ist er weder Wächter noch Räuber der Grenzlande, sondern ein lautloser Bewohner abgelegener Höhenzüge. Er meidet den Menschen konsequent und greift nur in äußerster Not zur Verteidigung an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo andere Wölfe durch Präsenz wirken, zeichnet sich der Faerog durch Abwesenheit aus."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lebensraum des Faerog ist auf Celtigerns Wacht beschränkt – eine zerklüftete Grafschaft aus Gebirgen, tiefen Tälern und weiter Küstenlinie im südlichen Cenyr. Er bevorzugt steinige Höhenlagen, alpine Wälder, abgelegene Pässe und nächtliche Jagdreviere fern menschlicher Wege."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch diese Abgeschiedenheit hat der Faerog nur selten Kontakt mit Menschen und gilt selbst unter erfahrenen Jägern als seltene Sichtung."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Faerog ist kleiner und schlanker als die meisten bekannten Wolfsarten. Sein Körperbau ist auf Effizienz ausgelegt: schmale Schultern, lange Läufe, geringes Gewicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein auffälligstes Merkmal ist das silbern-weiße Fell, das ihn im Mondlicht beinahe mit dem Fels verschmelzen lässt. Die gelbgoldenen Augen leuchten deutlich in der Dunkelheit und sind oft das einzige Anzeichen seiner Anwesenheit. Narben sind selten – nicht, weil er ungefährlich ist, sondern weil er Kämpfe vermeidet."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Faerog leben meist allein oder in sehr kleinen Verbänden von zwei bis drei Tieren. Große Rudel sind untypisch und nur in besonders wildreichen Regionen belegt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Bindungen innerhalb dieser kleinen Gruppen sind stabil, aber zurückhaltend. Lautes Dominanzverhalten ist selten; Konflikte werden meist durch Distanz und Ausweichen gelöst."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Faerog ist ein reiner Nachtjäger. Seine Beute besteht überwiegend aus kleinem Wild, gelegentlich auch aus geschwächten größeren Tieren. Er jagt mit Geduld, Präzision und minimalem Kraftaufwand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl seine Beute klein ist, gilt er als äußerst effizient. Kaum ein Angriff ist überhastet, kaum ein Biss vergeudet. Seine Jagd ist still, schnell und oft bereits beendet, bevor andere Tiere reagieren."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Faerog ist stark menschenscheu. Er beobachtet aus der Distanz, zieht sich zurück und meidet Siedlungen konsequent. Angriffe auf Menschen sind praktisch unbekannt und treten nur bei direkter Bedrohung auf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch seinen abgeschiedenen Lebensraum bleibt der Kontakt zwischen Mensch und Faerog selten – was seinen Ruf als lautlosen Berggeist weiter verstärkt."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zähmungsversuche sind selten und schwierig, aber nicht unmöglich. Erfolg haben fast ausschließlich jene, die einen Faerog als Jungtier erhalten und ihn in enger Gemeinschaft mit Menschen und anderen Hunden aufziehen. Diese dienen als soziale Lehrer und mindern die extreme Scheu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selbst gezähmte Faerog bleiben zurückhaltend, wachsam und eigenständig. Sie sind keine Befehlsempfänger, sondern stille Begleiter."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Außergewöhnliche Intelligenz",
+            "Hervorragende Nachtjagd",
+            "Extreme Unauffälligkeit",
+            "Hohe Effizienz bei geringer Beute"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Körpergröße",
+            "Kaum aggressiv",
+            "Schwierige Zähmung",
+            "Starke Scheu gegenüber Menschen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Faerog-Welpen werden gelegentlich als prestigeträchtiges Geschenk an Prinzen oder Prinzessinnen übergeben.",
+            "Einen Faerog erfolgreich aufzuziehen gilt als Zeichen von Geduld, Disziplin und Status.",
+            "Viele Jäger glauben, dass ein Faerog, den man sieht, bewusst gesehen werden wollte."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "woelfe"
+  }
+}

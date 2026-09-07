@@ -12,6 +12,8 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/creature-profile`: wiederverwendbare statische Profilvorlage, Profilregister und Anbindung der Vorschauen.
 - `modules/natural-species`: gemeinsame Naturkundevorlage für Tiergruppen, regionale Artenregister und spätere Einzeldossiers.
 - `modules/horse-profile`: gemeinsame statische Vorlage für Pferdedossiers, Rossmarkt-Werte und Leistungsdiagramme.
+- `modules/profile-metrics`: gemeinsames, zugängliches Sechs-Achsen-Diagramm für Pferde- und Raubtierdossiers.
+- `modules/predator-profile`: Übersichten für Raubkatzen, Wölfe, Warge und Bären sowie die einzelnen Raubtierdossiers.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -64,6 +66,14 @@ Die 32 Pferde aus dem kontinental gegliederten Artenregister besitzen eigene Sei
 
 Alle Pferdebilder werden lokal als WebP aus `assets/horse-profiles/` geladen und ohne Beschnitt dargestellt. Quellen und Maße sind in `assets/horse-profile-sources.json` dokumentiert. Die Seiten entstehen mit `node Bestiarium/scripts/build-horse-profiles.mjs`; `--check` vergleicht die erzeugten Seiten mit Daten und Vorlage. Neue Pferdedossiers benötigen ein `profil.json` sowie einen Eintrag in `modules/horse-profile/horse-profile-registry.mjs`.
 
+## Raubtierdossiers
+
+Die Raubtierkunde besitzt eigene Übersichten für Raubkatzen, Wölfe und Warge sowie Bären unter `tiere/raubtiere/`. Sieben Wolf- und Wargarten und acht Bärenarten führen zu vollständigen Dossiers. Die drei Raubkatzen, der Gnoll und drei unbenannte Bären Lothirs bleiben sichtbar als vorgemerkte Einträge erhalten.
+
+Jedes vollständige Dossier zeigt sechs aus dem überlieferten Arttext abgeleitete Feldwerte: Gefahr, Zähmbarkeit, Intelligenz, Körperkraft, Sozialverhalten und Ausdauer. Die Seite kennzeichnet diese Einordnung als vergleichende Archivbewertung und nicht als exakte Messung. Die alten Kreaturenbilder und die drei vom Nutzer gelieferten Raubkatzenbilder werden lokal aus `assets/predators/` geladen; Herkunft und Maße stehen in `assets/predator-sources.json`.
+
+Die Seiten entstehen mit `node Bestiarium/scripts/build-predator-profiles.mjs`; `--check` prüft Übersichten und Einzeldossiers. Neue Dossiers benötigen ein `profil.json` und einen Eintrag in `modules/predator-profile/predator-registry.mjs`. Der jeweilige Übersichtseintrag erhält anschließend sein lokales `href`.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -81,5 +91,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/natural-species.test.mjs`
 
 `node --test Bestiarium/tests/horse-profiles.test.mjs`
+
+`node --test Bestiarium/tests/predator-profiles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

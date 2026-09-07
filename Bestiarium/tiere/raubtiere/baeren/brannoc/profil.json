@@ -1,0 +1,166 @@
+{
+  "id": "brannoc",
+  "name": "Brannoc",
+  "classification": "Sanfter Riesenbär",
+  "continent": "Estryll",
+  "region": "Südliche albische Fürstentümer",
+  "folio": "R-B01",
+  "quote": "Der Brannoc ist ein Wildtier, doch im Süden gilt er beinahe als Nachbar.",
+  "quoteAttribution": "Aufzeichnung aus den albischen Fürstentümern",
+  "summary": "Der Brannoc, auch bekannt als der sanfte Riesenbär, ist eine imposante, aber friedfertige Kreatur, die heute nur noch in den südlichen Albischen Fürstentümern Estrylls vorkommt. Einst weit verbreitet, wurde sein Bestand durch übermäßige Jagd in den frühen Norrnaigh-Zeiten drastisch reduziert, doch in Leitheach, Blaithneach, Dunfal und Aislerneach lebt er weiterhin in enger Koexistenz mit den Menschen.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/brannoc.webp",
+    "width": 737,
+    "height": 734,
+    "alt": "Überlieferte Bildtafel von Brannoc",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Brannoc"
+  },
+  "facts": [
+    {
+      "label": "Art",
+      "value": "Bär · Ursidae"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Raubtier · Carnivora"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Flüsse, Hügel und Wälder Süd-Estrylls"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Friedlich, verspielt und kontaktfreudig"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Tagaktiv; langer nächtlicher Schlaf"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Fisch, Honig und pflanzliche Kost"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      3,
+      9,
+      8,
+      10,
+      7,
+      6
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brannoc, auch bekannt als der sanfte Riesenbär, ist eine imposante, aber friedfertige Kreatur, die heute nur noch in den südlichen Albischen Fürstentümern Estrylls vorkommt. Einst weit verbreitet, wurde sein Bestand durch übermäßige Jagd in den frühen Norrnaigh-Zeiten drastisch reduziert, doch in Leitheach, Blaithneach, Dunfal und Aislerneach lebt er weiterhin in enger Koexistenz mit den Menschen."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brannoc ist ein gewaltiger Bär mit einem hellbraunen, fast blassen Fell, das ihn in den südlichen Ebenen und Wäldern gut tarnt. Sein dichtes, leicht gesprenkeltes Fell reicht von sandfarbenen bis zu cremeweißen Tönen, was ihm ein markantes und unverwechselbares Aussehen verleiht. Mit seiner massigen Statur übertrifft er die meisten anderen Bärenarten und erreicht eine Schulterhöhe, die selbst einen aufrechten Mann überragen kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz seiner imposanten Größe bewegt sich der Brannoc mit einer gemächlichen, fast tapsigen Art, die ihn harmloser erscheinen lässt, als er tatsächlich ist. Seine großen Tatzen und kräftigen Gliedmaßen verleihen ihm jedoch enorme Kraft, die er nur selten einsetzt. Seine Augen sind oft von einem sanften, beinahe neugierigen Blick geprägt, doch in ihnen spiegelt sich auch eine urwüchsige Intelligenz, die ihn von anderen Wildtieren unterscheidet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein weiteres auffälliges Merkmal des Brannoc ist seine tiefe, dröhnende Stimme, die von sanftem Brummen bis hin zu lautem, spielerischem Grunzen reicht. Seine Lautäußerungen sind vielfältig und oft Ausdruck von Freude, Hunger oder Neugier, was ihm in den albischen Dörfern den Ruf eines eigenwilligen, aber liebenswerten Wesens eingebracht hat."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brannoc bewohnt die südlichen Albischen Fürstentümer Estrylls, insbesondere die weitläufigen Wälder, hügeligen Graslandschaften und fischreichen Flussläufe von Leitheach, Blaithneach, Dunfal und Aislerneach. Er bevorzugt Gebiete, in denen er leicht Zugang zu seinen Hauptnahrungsquellen wie Lachsen, Honig und den Überresten menschlicher Siedlungen hat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Lebensraum erstreckt sich von ruhigen Flussufern, wo er beim Fischen beobachtet werden kann, bis hin zu lichten Wäldern und sanften Tälern, die ihm Schutz und Rückzugsorte bieten. In den dichten, raueren Bergwäldern ist er seltener anzutreffen, da er das offene Gelände bevorzugt, wo er sich leichter bewegen und Nahrung finden kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während der Brannoc sich in Dörfern durchaus blicken lässt und dort oft wie ein halbwildes, akzeptiertes Tier betrachtet wird, meidet er große Städte und laute Gebiete. Der Trubel und die Enge sind ihm unangenehm, und er zieht es vor, in ruhigen Regionen mit wenig menschlichem Einfluss zu leben – es sei denn, es gibt eine zuverlässige Quelle für Fisch und andere Leckerbissen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brannoc ist für sein verspieltes, lautes und oft tollpatschiges Verhalten bekannt, was ihn zu einer der ungewöhnlichsten Wildtierarten macht, die mit Menschen koexistieren. Er bewegt sich ohne Angst durch die ländlichen Gebiete der südlichen Albischen Fürstentümer und wird von den Einheimischen fast wie ein öffentliches Haustier betrachtet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz seiner gewaltigen Statur ist der Brannoc ein sanftmütiges Wesen, das sich meist mit gemütlichen Spaziergängen, dem Durchstöbern von Fischlagern oder dem Brummen nach Nahrung beschäftigt. Er liebt es, sich in Flüssen zu suhlen, Honig aus Bienenstöcken zu stehlen oder sich an den von Fischern bereitgestellten Überresten zu bedienen. Dabei kann er durchaus neugierig sein, tapst durch Dörfer und schnuppert an Fenstern oder Vorratskisten – eine Gewohnheit, die die Bewohner eher belustigt als verängstigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Wesen ist oft mit dem eines betrunkenen Aldrimarers verglichen worden – laut, ausgelassen und gelegentlich ungeschickt. Besonders junge Brannocs neigen dazu, mit Menschen zu ringen oder spielerisch zu schubsen, was manchmal zu ungewollten kleineren Verletzungen führen kann, aber nie böse gemeint ist. Dieser verspielte Charakter wird in der Kultur der Ard Trodach verehrt, die als Wappentier einen Mann, der mit einem Brannoc ringt, führen – eine Anspielung auf das tatsächliche Phänomen, dass junge Bären gerne mit Menschen raufen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl der Brannoc ungefährlich ist, kann er in seltenen Fällen doch zur Bedrohung werden. Er greift niemals grundlos an, doch wenn er oder sein Nachwuchs bedroht wird, kann er in einen wahren Berserker-Zustand geraten. Selbst dann kommt es aber kaum zu Todesfällen, da er Menschen nicht als Beute betrachtet, sondern eher als lästige Störung. Meist trifft es Wilderer, die sich an seinem Pelz oder seinen Klauen vergehen wollen – eine Dummheit, die oft ihr eigenes Ende bedeutet."
+        }
+      ]
+    },
+    {
+      "id": "brannoc-und-der-mensch",
+      "title": "Brannoc und der Mensch",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Beziehung zwischen dem Brannoc und den Menschen der südlichen Albischen Fürstentümer ist einzigartig und geprägt von Koexistenz, Respekt und einer fast spielerischen Vertrautheit. Während der Bär in anderen Teilen Estrylls nahezu ausgerottet wurde, genießt er in Leitheach, Blaithneach, Dunfal und Aislerneach einen besonderen Status – er wird fast wie ein wildes, aber akzeptiertes Haustier der Fürstentümer betrachtet."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den ländlichen Gebieten ist es völlig normal, dass ein Brannoc durch ein Dorf tapst, an Vorratskisten schnüffelt oder sich in der Nähe der Fischerboote niederlässt, in der Hoffnung auf Fischreste. Die Einheimischen haben sich längst an diese Besuche gewöhnt und stellen oft bewusst Überreste von Lachs oder Honig an bestimmten Plätzen bereit, um den Bären von anderen Lebensmitteln fernzuhalten. Obwohl er für seine neugierige und manchmal tollpatschige Art bekannt ist, reagieren die Menschen gelassen – Panik bricht nicht aus, wenn ein Brannoc durch die Straßen schlendert, denn die Bewohner wissen, dass er niemandem etwas antut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dennoch bleibt der Brannoc ein Wildtier, und wer seine Grenzen überschreitet, kann ihn verärgern. Besonders sein Nachwuchs ist tabu – wer sich an einem Jungtier vergreift oder es provoziert, muss damit rechnen, dass die sonst sanftmütige Kreatur in blinden Zorn verfällt. Doch selbst dann kommt es selten zu Todesfällen, da der Brannoc keinen Jagdinstinkt auf Menschen besitzt und Angriffe meist nur als Warnung oder Verteidigung erfolgen. Wilderer, die es auf seinen wertvollen Pelz oder seine Klauen abgesehen haben, sind meist die einzigen, die ernsthaft zu Schaden kommen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine besondere kulturelle Verbindung zum Brannoc haben die Ard Trodach, die in ihrem Wappen einen Mann, der mit einem Brannoc ringt, führen. Dieses Symbol geht auf eine reale Eigenheit des Bären zurück: Junge Brannocs ringen gerne mit Menschen, oft spielerisch und ohne echte Gefahr. Viele Bauern, Fischer oder selbst Tiarna erzählen Geschichten, wie sie sich einmal mit einem jungen Brannoc gemessen haben – ein Erlebnis, das als Zeichen von Stärke, Respekt und Glück gilt."
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "stammlinie"
+  }
+}

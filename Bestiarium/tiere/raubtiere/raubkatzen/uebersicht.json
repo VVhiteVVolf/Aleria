@@ -1,0 +1,143 @@
+{
+  "id": "raubkatzen",
+  "title": "Raubkatzen",
+  "subtitle": "Lautlose Jäger zwischen Wald, Fels und Schnee",
+  "classification": "Felide Raubtiere Estrylls",
+  "folio": "R-01",
+  "lead": "Die ersten drei Bildtafeln des neuen Katzenregisters zeigen, wie stark Landschaft und Klima die Raubkatzen Estrylls formen. Ihre Einzeldossiers sind vorgemerkt und werden mit den nächsten Quellen erschlossen.",
+  "quote": "Wo eine Raubkatze sichtbar wird, hat sie die Begegnung meist längst entschieden.",
+  "quoteAttribution": "Cenyrischer Fährtenleserspruch",
+  "icon": {
+    "src": "../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/raubtiere/raubkatzen.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Raubkatze auf einer naturkundlichen Bildtafel",
+    "caption": "Raubkatzen Estrylls · Tafel des naturkundlichen Archivs"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raubkatzen sind Einzeljäger von großer Geduld. Sie lesen Gelände, Wind und Deckung, sparen ihre Kraft über Stunden und entscheiden eine Jagd in wenigen Augenblicken. In den Archiven werden sie deshalb weniger nach Größe als nach Lebensraum, Jagdweise und Verhältnis zu Siedlungen unterschieden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die bekannten Formen Estrylls reichen von waldnahen Katzen Cenyrs über die großen Schneejäger des Nordens bis zu kleineren, äußerst wachsamen Luchsen. Trotz gemeinsamer Merkmale verlangt jede Art eine eigene Gefahreneinschätzung."
+        }
+      ]
+    },
+    {
+      "id": "beobachtung",
+      "title": "Spuren & Beobachtung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raubkatzen vermeiden unnötige Kämpfe. Frische Kratzspuren, verdeckte Risse und regelmäßig genutzte Aussichtspunkte sind daher verlässlichere Hinweise als direkte Sichtungen. Wer eine Katze überrascht, befindet sich meist bereits tief in ihrem Jagdraum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für künftige Dossiers werden Körperbau, bevorzugte Beute, Reviergröße, Aktivitätszeit und der Umgang mit Menschen getrennt erhoben. Bis diese Berichte vorliegen, bleiben die drei Arten als bestätigte Bild- und Herkunftsnachweise im Register."
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Vorläufige Bestimmung",
+    "title": "Die ersten drei Bildtafeln",
+    "intro": "Die Einordnung stützt sich vorerst auf Namen, Herkunft und sichtbare Merkmale der gelieferten Tafeln. Verhaltenswerte folgen erst mit den vollständigen Arttexten.",
+    "columns": [
+      {
+        "kicker": "Cenyr · Estryll",
+        "title": "Llewroth",
+        "points": [
+          "Große, langgliedrige Wald- und Felskatze",
+          "Einfarbig warmes Fell und langer Balanceschwanz",
+          "Eigenes Dossier vorgemerkt"
+        ]
+      },
+      {
+        "kicker": "Nördliches Estryll",
+        "title": "Säbelzahntiger",
+        "points": [
+          "Massiger Körperbau für Kälte und Schnee",
+          "Auffällige verlängerte Eckzähne",
+          "Eigenes Dossier vorgemerkt"
+        ]
+      },
+      {
+        "kicker": "Estryll",
+        "title": "Estryller Luchs",
+        "points": [
+          "Kompakte Katze mit Ohrpinseln und kurzem Schwanz",
+          "Für Deckung und unwegsame Wälder gebaut",
+          "Eigenes Dossier vorgemerkt"
+        ]
+      }
+    ]
+  },
+  "atlas": {
+    "title": "Vorgemerkte Raubkatzen",
+    "intro": "Diese drei Tafeln bilden den Anfang des Registers. Die Karten sind bereits vorbereitet; ihre ausführlichen Dossiers werden später verknüpft.",
+    "groups": [
+      {
+        "id": "estryll",
+        "title": "Raubkatzen Estrylls",
+        "kicker": "Erste gesicherte Tafeln",
+        "description": "Drei Arten aus den Wäldern, Gebirgen und Schneelanden Estrylls.",
+        "entries": [
+          {
+            "id": "llewroth",
+            "title": "Llewroth",
+            "region": "Cenyr · Estryll",
+            "description": "Eine große cenyrische Raubkatze mit langem Körper und aufmerksamem Blick.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/raubkatzen/llewroth.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Llewroth"
+            }
+          },
+          {
+            "id": "saebelzahntiger",
+            "title": "Säbelzahntiger",
+            "region": "Nördliches Estryll · Schneegebiete",
+            "description": "Ein massiger Schneejäger, dessen verlängerte Eckzähne seine Silhouette bestimmen.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/raubkatzen/saebelzahntiger.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Säbelzahntiger"
+            }
+          },
+          {
+            "id": "estryller-luchs",
+            "title": "Estryller Luchs",
+            "region": "Estryll",
+            "description": "Eine kompakte, wachsame Katze der bewaldeten und felsigen Regionen.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/raubkatzen/estryller-luchs.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Estryller Luchs"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

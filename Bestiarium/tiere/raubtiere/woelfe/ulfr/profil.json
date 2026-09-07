@@ -1,0 +1,212 @@
+{
+  "id": "ulfr",
+  "name": "Ulfr",
+  "classification": "Nördliche Wargsgattung",
+  "continent": "Estryll",
+  "region": "Nord-Estryll · Fjordheim & Faelorn",
+  "folio": "R-WA01",
+  "quote": "Wo der Ulfr heult, hört der Wald nicht zu – er schweigt.",
+  "quoteAttribution": "Warnspruch der Grenzmarken",
+  "summary": "Der Ulfr ist eine Wargsgattung, die heute vor allem im Norden Estrylls verbreitet ist. Alte Quellen und Überlieferungen deuten jedoch darauf hin, dass er einst im gesamten Kontinent heimisch war, ehe er von den Alben und anderen Völkern systematisch nach Norden verdrängt wurde. Anders als gewöhnliche Wölfe oder selbst aggressive Wolfsarten gilt der Ulfr nicht als Teil der natürlichen Ordnung, sondern als bewusste Abweichung von ihr.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/ulfr.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Ulfr",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Ulfr"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Planender nördlicher Warg"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Nord-Estryll, Fjordheim und Faelorn"
+    },
+    {
+      "label": "Verband",
+      "value": "Einzeln oder 2–5 Tiere"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Dämmerung & Nacht"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Feindselig und taktisch"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      9,
+      8,
+      3,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ulfr ist eine Wargsgattung, die heute vor allem im Norden Estrylls verbreitet ist. Alte Quellen und Überlieferungen deuten jedoch darauf hin, dass er einst im gesamten Kontinent heimisch war, ehe er von den Alben und anderen Völkern systematisch nach Norden verdrängt wurde. Anders als gewöhnliche Wölfe oder selbst aggressive Wolfsarten gilt der Ulfr nicht als Teil der natürlichen Ordnung, sondern als bewusste Abweichung von ihr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ulfr handeln nicht nur instinktiv. Sie zeigen Planung, Feindseligkeit und ein klares Verständnis von Revier, Macht und Vergeltung. Sie meiden den Menschen nicht – sie erkennen ihn."
+        }
+      ]
+    },
+    {
+      "id": "nordischer-mythos",
+      "title": "Nordischer Mythos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nach dem Glauben der Nordmänner ist Skadia, Göttin der Jagd, die große Mutter der Natur. Sie wurde von zwei heiligen Wölfen bewacht: Geri und Freki. Als der listenreiche Fjolnir Skadia begehrte, erschuf er aus Trug und Zauber die Wölfin Angreboda, um die Wächter vom Hain fortzulocken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geri widerstand der Täuschung, doch Freki verließ seinen Posten. Als Skadia den Verrat erkannte, verfluchte sie Freki und machte ihn zum Vater aller Ulfr. Geri hingegen erhob sie zum König aller Wölfe und schenkte seine Nachkommen dem Menschen als treue Gefährten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Nordmänner glauben, dass die Rassen der Lughar und Gramnir von Geri abstammen, während alle Warge – insbesondere die Ulfr – aus Frekis Linie hervorgingen."
+        }
+      ]
+    },
+    {
+      "id": "albischer-druidenmythos",
+      "title": "Albischer Druidenmythos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die albischen Druiden verorten den Ursprung der Ulfr in der Zeit des Falls, als die Harmonie zwischen Göttern, Mensch und Natur zerbrach. In dieser Epoche der Veränderung wurden sowohl Menschen als auch Tiere verzerrt; einige Stämme wurden zu Trollen, andere blieben unverändert – doch nichts blieb unberührt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Mittelpunkt steht Fáelad, der erste König aller Wölfe und spirituelles Medium der frühen Druiden. Ihn soll der Dämonengott Zatrach verführt haben, indem er ihm in Gestalt einer läufigen Wölfin erschien. Aus dieser Verbindung seien die ersten Warge hervorgegangen, darunter auch die Ulfr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Druiden deuten diesen Mythos nicht wörtlich, sondern als Sinnbild für eine gezielte Verderbnis des Wolfsgeistes."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ulfr leben selten in großen Rudeln. Typisch sind kleine, hochaggressive Verbände von zwei bis fünf Tieren oder dominante Einzelgänger. Die Hierarchie ist brutal und instabil: Führung wird nicht vererbt, sondern erkämpft. Rangkämpfe enden häufig tödlich, Schwäche wird sofort eliminiert. Loyalität existiert nur, solange sie nützt. Ein Ulfr folgt keinem Anführer aus Bindung, sondern aus Kalkül."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ulfr jagen gezielt und geplant. Sie beobachten, testen Grenzen und schlagen bevorzugt dort zu, wo Widerstand gering oder Überraschung maximal ist. Menschen werden nicht gemieden, sondern als Beute oder Rivalen eingeschätzt. Angriffe erfolgen häufig koordiniert: Ablenkung, Flankenangriff, schneller Rückzug. Ulfr töten nicht aus Hunger allein – Dominanz und Abschreckung sind Teil der Jagd."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Beziehung ist offen feindselig. Ulfr erkennen den Menschen als bewussten Gegner. Sie lernen aus Begegnungen, merken sich Waffen, Taktiken und Reaktionen. Ein Ulfr, der einmal vertrieben wurde, kehrt oft zurück – besser vorbereitet. In Grenzregionen gelten sie nicht als Tiere, sondern als Feinde der Ordnung."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zähmung ist unmöglich. Ulfr akzeptieren keine Führung, keine Bindung und keine Abhängigkeit. Selbst frühe Prägung führt bestenfalls zu kurzfristiger Duldung, meist zu Verrat. Jeder bekannte Versuch endete mit dem Tod des Halters oder der Flucht des Ulfr. In vielen Regionen gilt bereits der Versuch der Zähmung als Wahnsinn oder Frevel."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Intelligenz und Lernfähigkeit",
+            "Extreme Aggressivität und Furchtlosigkeit",
+            "Gezieltes, taktisches Vorgehen",
+            "Hohe Widerstandskraft und Zähigkeit"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Rudelbindung",
+            "Interne Rivalität",
+            "Keine langfristige Kooperation",
+            "Hoher Energiebedarf durch Konfliktverhalten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ulfr töten gelegentlich ohne die Beute zu fressen – als Reviermarkierung.",
+            "Ein Ulfr, der allein heult, gilt als Ankündigung, nicht als Ruf.",
+            "In manchen Regionen werden gefallene Ulfr verbrannt, aus Angst, sie könnten zurückkehren."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "warge"
+  }
+}

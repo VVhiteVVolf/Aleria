@@ -1,0 +1,195 @@
+{
+  "id": "broan",
+  "name": "Broan",
+  "classification": "Estryllischer Braunbär",
+  "continent": "Estryll",
+  "region": "Weite Teile Estrylls",
+  "folio": "R-B06",
+  "quote": "Er lächelt nicht wie der Brannoc. Und genau deshalb solltest du Abstand halten.",
+  "quoteAttribution": "Warnspruch estryllischer Jäger",
+  "summary": "Der Broan gilt als der erste und unmittelbarste Nachfahre des Brannoc und nimmt unter den Bären Estrylls eine besondere Stellung ein. Während alle bekannten Bärenarten in ferner Linie auf den Brannoc zurückgeführt werden, ist der Broan der älteste Abzweig, der sich früh von dessen sanftem Wesen löste. Er ist kein zahmer Riesenbär und kein Symbol friedlicher Koexistenz, sondern der Übergang: ein Bär zwischen Urkraft und Wildnis.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/broan.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel von Broan",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Broan"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Wilder Nachfahre des Brannoc"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Fast ganz Estryll, seltener im hohen Norden"
+    },
+    {
+      "label": "Revier",
+      "value": "Überschaubar und klar abgegrenzt"
+    },
+    {
+      "label": "Lebensweise",
+      "value": "Einzelgängerisch"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Scheu, bei Bedrohung kompromisslos"
+    },
+    {
+      "label": "Umgang",
+      "value": "Abstand halten; keine Annäherung"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      6,
+      2,
+      7,
+      7,
+      2,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Broan gilt als der erste und unmittelbarste Nachfahre des Brannoc und nimmt unter den Bären Estrylls eine besondere Stellung ein. Während alle bekannten Bärenarten in ferner Linie auf den Brannoc zurückgeführt werden, ist der Broan der älteste Abzweig, der sich früh von dessen sanftem Wesen löste. Er ist kein zahmer Riesenbär und kein Symbol friedlicher Koexistenz, sondern der Übergang: ein Bär zwischen Urkraft und Wildnis."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Broan entstand aus frühen Brannoc-Populationen, die sich weiter von menschlichen Siedlungen entfernten und stärker an natürliche Jagd angepasst wurden. Diese Linie entwickelte sich parallel zur Ausbreitung der albischen Kulturen und blieb stets näher an der Wildform des Ursprungs. Heute ist der Broan in fast ganz Estryll verbreitet. Lediglich im hohen Norden wird er seltener, wo Grámh und Frostbären dominieren."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Vergleich zum Brannoc ist der Broan kleiner, schlanker und kompakter gebaut. Sein Fell ist dichter und dunkler, meist in erdigen Braun- und Ockertönen gehalten, ohne die hellen, fast freundlichen Nuancen seines Urahnen. Die Gliedmaßen wirken kräftiger im Verhältnis zum Körper, der Kopf ist kantiger, der Blick wachsamer. Narben sind häufiger als beim Brannoc – Zeichen eines Lebens, das stärker von Jagd und Konkurrenz geprägt ist."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Broan beansprucht überschaubare, klar abgegrenzte Reviere, die er konsequent verteidigt. Er passt sich unterschiedlichsten Landschaften an: Wälder, Ebenen, Flusslandschaften und Randgebirge. Seine Präsenz formt keine kulturellen Symbole, doch sie beeinflusst Jagdpfade und Siedlungsgrenzen. Wo Broan leben, wird vorsichtiger gewirtschaftet."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Broan ist grundsätzlich passiv gegenüber Menschen, jedoch deutlich scheuer und vorsichtiger als der Brannoc. Er beobachtet aus der Distanz, meidet Nähe und zieht sich zurück, solange ihm kein Grund zum Eingreifen gegeben wird. Wird er provoziert oder sieht seinen Nachwuchs bedroht, reagiert er kompromisslos. Anders als der Brannoc warnt er kaum – er handelt."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Estryll wird der Broan respektiert, aber nicht geduldet wie der Brannoc. Experten warnen ausdrücklich davor, beide Arten zu verwechseln. Der Broan sucht keine Nähe, akzeptiert keine spielerischen Annäherungen und duldet keine Grenzüberschreitungen. Unfälle entstehen fast ausschließlich aus Unwissen oder falscher Einschätzung."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Stark ausgeprägter Jagdinstinkt",
+            "Hohe Vorsicht gegenüber unbekannten Gerüchen",
+            "Verteidigt Junge bis zum äußersten",
+            "Beobachtet Menschen oft über längere Zeit aus sicherer Distanz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Gute Anpassungsfähigkeit an verschiedene Lebensräume",
+            "Schnelle Reaktionsfähigkeit",
+            "Ausgeprägte Revierdisziplin"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringere Masse als Brannoc oder Grámh",
+            "Meidet offene Konfrontationen ohne klaren Vorteil",
+            "Weniger tolerant gegenüber Störungen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Alte Chroniken nennen den Broan „den ersten Abfall vom sanften Pfad“",
+            "Jäger sagen, man erkenne einen Broan daran, dass man ihn erst bemerkt, wenn er schon verschwunden ist",
+            "In manchen Regionen gilt er als Maßstab für echte Wildnis"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

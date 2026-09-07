@@ -1,0 +1,208 @@
+{
+  "id": "ruadhr",
+  "name": "Ruadhr",
+  "classification": "Verfluchte Wargsgattung",
+  "continent": "Estryll",
+  "region": "Südliche Albenlande · Dunkelhain",
+  "folio": "R-WA02",
+  "quote": "Die Alben sprechen ihren Namen nur leise – nicht aus Aberglauben, sondern aus Erfahrung.",
+  "quoteAttribution": "Überlieferung der südlichen Albenlande",
+  "summary": "Die Ruadhr sind eine seltene, aber besonders verfluchte Wargsgattung der südlichen Albenlande. Sie gelten nicht als Teil der natürlichen Ordnung, sondern als Auswuchs eines uralten Verrats, dessen Nachhall bis in die Gegenwart reicht. Wo andere Warge jagen, um zu überleben oder zu herrschen, jagen die Ruadhr aus Bosheit, Erinnerung und Fluch.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/ruadhr.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Ruadhr",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Ruadhr"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Großer einzelgängerischer Warg"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Südliche Albenlande und Dunkelhain"
+    },
+    {
+      "label": "Verband",
+      "value": "Überwiegend Einzelgänger"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Dämmerung & Nacht"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Grausam, intelligent und unberechenbar"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      9,
+      9,
+      1,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ruadhr sind eine seltene, aber besonders verfluchte Wargsgattung der südlichen Albenlande. Sie gelten nicht als Teil der natürlichen Ordnung, sondern als Auswuchs eines uralten Verrats, dessen Nachhall bis in die Gegenwart reicht. Wo andere Warge jagen, um zu überleben oder zu herrschen, jagen die Ruadhr aus Bosheit, Erinnerung und Fluch."
+        },
+        {
+          "type": "paragraph",
+          "text": "In ihnen verbinden sich Wolf, Dämon und Schuld zu einem Wesen, das nicht vergeht, sondern weitergegeben wird. Die Alben sprechen ihren Namen nur leise – nicht aus Aberglauben, sondern aus Erfahrung."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Während die Ulfr in den Norden Estrylls verdrängt wurden und dort in großer Zahl überdauerten, sind die Ruadhr in den südlichen Gefilden der Albenlande heimisch geblieben. Ihre Zahl ist deutlich geringer als die der Ulfr, doch gerade diese geringe Verbreitung macht sie nicht weniger gefährlich. Im Gegenteil: Die Ruadhr haben sich als so widerständig und hartnäckig erwiesen, dass sie trotz wiederholter Jagden und gezielter Ausrottungsversuche niemals vollständig verschwanden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit dem Anwachsen des Dunklen Hains an den Grenzen der Albenlande hat sich ihr Vorkommen in jüngerer Zeit drastisch erhöht. Wo der Wald dichter, älter und feindseliger wird, finden die Ruadhr ideale Bedingungen. In diesen Grenzregionen gelten sie heute als wiederkehrende Plage, die nicht kontrolliert, sondern höchstens zeitweise zurückgedrängt werden kann."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ruadhr-Warge gehören zu den schlimmsten bekannten Ausprägungen ihrer Art. Sie sind groß, massig und von einer Präsenz, die selbst erfahrene Jäger verunsichert. Nicht selten werden sie nicht mehr als bloße Warge wahrgenommen, sondern als Unholde – bestialische, dämonische Tierformen, wie sie Zatrach hervorzubringen vermag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entgegen dem Verhalten gewöhnlicher Wölfe oder selbst anderer Warge leben Ruadhr nicht in Rudeln. Paarungen finden statt, doch sie sind kurz, roh und zweckgebunden. Die Männchen verlassen die Weibchen unmittelbar nach dem Techtelmechtel und zeigen keinerlei Bindung an Nachwuchs oder Partner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Weibchen ziehen die Jungen allein auf – schnell und ohne Nachsicht. Schon im jungen Alter sind Ruadhr den meisten anderen Wölfen überlegen. Innerhalb kurzer Zeit sind sie fähig, als Einzelgänger zu überleben und zu jagen. Kooperation ist ihnen fremd; Konkurrenz ist der Normalzustand."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ruadhr jagen nicht aus Hunger allein. Sie gelten als niederträchtig, grausam und zerstörerisch. Sie töten aus Laune, aus Sport und aus Bosheit, verwüsten Höfe und Stätten, wenn sich die Gelegenheit bietet, und ziehen sich zurück, ohne die Beute zu nutzen. Aus diesem Verhalten heraus schreiben die Alben ihnen seit jeher dämonische Züge zu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Besonders gefürchtet ist ihre Vorliebe für Kinder. Alte Berichte und neuere Zeugnisse erzählen davon, dass Ruadhr sich bis in das Innere von Behausungen wagen, lautlos an Wachen und Tieren vorbeigehen und selbst vor Wiegen nicht Halt machen. Vieh, Vorräte und Kammern werden dabei oft bewusst gemieden – als wären sie bedeutungslos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viele Gelehrte und Druiden sehen darin ein Echo des ursprünglichen Fluchs: ein ewiges Wiederholen der ersten Schuld, des Verrats und des Verderbens. Die Ruadhr jagen nicht zufällig. Sie spielen ihren Urinstinkt immer wieder neu durch – Nacht für Nacht."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zwischen den Ruadhr und den Menschen der Albenlande besteht kein Konflikt, sondern Feindschaft. Die Ruadhr erkennen den Menschen nicht als Teil der Weltordnung, sondern als Ziel. Sie meiden ihn nicht, sie beobachten ihn. Siedlungen gelten ihnen nicht als fremdes Terrain, sondern als Jagdgebiet."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den Albenlanden Estrllys sind die Ruadhr kein Mythos, sondern ein geflüstertes Wissen. Eltern lehren ihre Kinder, nachts nicht ans Fenster zu treten. Türen werden verriegelt, Feuer nicht aus Ehrfurcht, sondern aus Angst entzündet. Ein Ruadhr, der gesehen wird, gilt nicht als Zufall, sondern als Warnung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jagd auf Ruadhr ist erlaubt, ja sogar geboten. Dennoch bleibt sie selten erfolgreich. Die Tiere lernen aus Begegnungen, erkennen Muster und meiden jene, die sie einmal gestellt haben. Ganze Dörfer berichten davon, dass ein einzelner Ruadhr über Jahre hinweg immer wiederkehrt, ohne je gefasst zu werden."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zähmung der Ruadhr gilt als unmöglich. Nicht schwierig, nicht riskant – unmöglich. Es existieren keine glaubwürdigen Berichte über eine dauerhafte Bindung zwischen Mensch und Ruadhr. Selbst Jungtiere zeigen früh ausgeprägte Aggression, Argwohn und Widerstand gegen jede Form von Führung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Versuche der Aufzucht endeten ausnahmslos mit Tod, Flucht oder Verrat. In druidischen Kreisen gilt bereits der Versuch der Zähmung als Torheit, in manchen Regionen sogar als Sakrileg. Ein Ruadhr kennt keine Loyalität – nur Zweck und Gelegenheit."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Ruadhr verfügen über enorme körperliche Kraft, hohe Zähigkeit und eine ausgeprägte, beinahe boshafte Intelligenz. Sie handeln geplant, lernen aus Fehlern und zeigen keinerlei natürliche Scheu vor Menschen. Ihre Einzelgängernatur macht sie schwer aufzuspüren, ihre Unabhängigkeit schützt sie vor dem Zerfall durch innere Konflikte."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre größte Stärke ist zugleich ihre Schwäche: fehlende Bindung. Ruadhr kooperieren nicht dauerhaft, verteidigen einander nicht und opfern sich niemals für ein größeres Ganzes. Verletzungen heilen langsam, da kein Rudel Schutz bietet. Zudem sind sie stark an dunkle, bewaldete Regionen gebunden und verlieren in offenem Gelände einen Teil ihres Vorteils."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In den Albenlanden heißt es, ein Ruadhr betrete ein Haus nur dann, wenn es dort bereits Schuld gebe.",
+            "Spuren eines Ruadhr enden oft abrupt, als wäre das Tier im Wald verschwunden.",
+            "Manche Druiden glauben, dass jeder Ruadhr einen Teil von Ruadhrs erstem Fluch in sich trägt – und dass sein Tod diesen niemals wirklich beendet."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "warge"
+  }
+}

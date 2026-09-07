@@ -1,0 +1,244 @@
+{
+  "id": "brychgi",
+  "name": "Brychgi",
+  "classification": "Aggressiver Großwolf",
+  "continent": "Estryll",
+  "region": "Mittel- & Nordcenyr",
+  "folio": "R-W03",
+  "quote": "Er jagt nicht im Schatten des Winters – er jagt im Lärm der Welt.",
+  "quoteAttribution": "Sprichwort aus Mittelcenyr",
+  "summary": "Der Brychgi ist die aggressivste und konfliktreichste Wolfsart Cenyrs. In den Ebenen und Wäldern Mittel- und Nordcenyrs beheimatet, gilt er als territorialer, unberechenbarer Jäger, der sich weder vor Menschen noch vor Vieh scheut. Anders als andere Wölfe ist der Brychgi kein stiller Teil des Gleichgewichts – er ist dessen ständige Belastungsprobe.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/brychgi.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Brychgi",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Brychgi"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Territorialer Großwolf"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Mittel- und Nordcenyr"
+    },
+    {
+      "label": "Rudel",
+      "value": "Häufig 8–14 Tiere"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Dämmerung & Nacht"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Wild, Vieh und erreichbare Beute"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nahezu unzähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      9,
+      1,
+      7,
+      7,
+      9,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brychgi ist die aggressivste und konfliktreichste Wolfsart Cenyrs. In den Ebenen und Wäldern Mittel- und Nordcenyrs beheimatet, gilt er als territorialer, unberechenbarer Jäger, der sich weder vor Menschen noch vor Vieh scheut. Anders als andere Wölfe ist der Brychgi kein stiller Teil des Gleichgewichts – er ist dessen ständige Belastungsprobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo der Brychgi lebt, endet die Vorstellung vom friedlichen Nebeneinander von Mensch und Wildnis."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ursprung des Brychgi ist nicht abschließend geklärt. Die gängigste Theorie besagt, dass isolierte Rudel des Gramnirs einst nach Cenyr gelangten und durch Gebirgszüge vom Rest ihrer Art abgeschnitten wurden."
+        },
+        {
+          "type": "paragraph",
+          "text": "In dieser neuen Umgebung trafen sie auf:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "gefährliche Beutetiere wie die Riesenkeiler",
+            "eine dichte, aktive menschliche Jägerkultur",
+            "anhaltende Konflikte zwischen Nordmännern und einheimischen Alben"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kombination aus Konkurrenz, Bedrohung und dauerhafter Revierstörung zwang die Wölfe zu einer aggressiveren, territorialeren Lebensweise. Der Brychgi ist somit kein Zufall – sondern das Ergebnis jahrzehntelangen Überlebens unter Druck."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brychgi ist ein kräftiger, muskulöser Wolf mit bräunlichem bis dunkelbraunem Fell, weshalb er häufig als Cenyrischer Braunwolf bezeichnet wird. Sein Fell ist dicht, grob und oft von Narben durchzogen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Statur ist gedrungen, mit starkem Nacken, breiter Brust und kräftigen Kiefern. Die Augen sind meist dunkelgelb oder bernsteinfarben und wirken ständig wachsam. Sein Auftreten ist weniger elegant als das anderer Wolfsarten – dafür roh und einschüchternd."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Brychgi leben in größeren Rudeln als andere Wölfe. Gruppen von 8–14 Tieren sind keine Seltenheit. Innerhalb des Rudels herrscht eine harte, instabile Hierarchie, die regelmäßig durch Rangkämpfe neu ausgefochten wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwäche wird nicht geduldet. Alte oder verletzte Tiere werden häufig zurückgelassen oder aktiv verdrängt. Das Rudel agiert geschlossen, aggressiv und kompromisslos gegenüber Eindringlingen."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brychgi ist ein opportunistischer Jäger. Er erlegt Wild, greift jedoch ohne Zögern auch Vieh an, wenn es sein Revier betrifft oder leicht erreichbar ist. Anders als Gramnir-Wölfe reißt er nicht nur aus Hunger, sondern auch zur territorialen Machtdemonstration."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Jagd setzt er auf Überzahl, Einschüchterung und brutale Koordination. Selbst bewaffnete Menschen werden nicht grundsätzlich gemieden, sondern als Risiko einkalkuliert."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Beziehung zwischen Mensch und Brychgi ist offen feindselig. In Mittel- und Nordcenyr konkurrieren Wolf und Mensch direkt um Wild, Land und Kontrolle. Der Brychgi sieht den Menschen nicht als Teil seines Umfelds, sondern als Rivalen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während andere Wolfsarten geduldet oder verehrt werden, gilt der Brychgi als Plage und Bedrohung – auch wenn offene Ausrottung selten gelingt."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zähmungen des Brychgi gelten als weitgehend gescheitert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Gründe sind eindeutig:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr besteht wenig Interesse an Wölfen – Hunde sind zuverlässiger und kontrollierbarer.",
+            "Jungtiere des Brychgi sind schwer zugänglich und streng bewacht.",
+            "Selbst sehr junge Exemplare zeigen ausgeprägte Sturheit, Dominanz und Widerstand gegen Führung."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Versuche, Brychgi aufzuziehen, enden häufig mit Ausbrüchen, Angriffen oder der vollständigen Verweigerung von Bindung."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Aggressivität",
+            "Große Rudelstärke",
+            "Ausgeprägter Territorialinstinkt",
+            "Furchtlos gegenüber Menschen"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kaum zähmbar",
+            "Hohe Verluste durch Konflikte",
+            "Ständige interne Rangkämpfe",
+            "Schlechte Integration in stabile Ökosysteme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr gelten abgenagte Schilde oder zerrissene Mäntel als typische Zeichen eines Brychgi-Angriffs.",
+            "Manche Jäger behaupten, Brychgi erkennen bewaffnete Gegner und wählen gezielt Schwächere aus.",
+            "Ein einzelner Brychgi gilt als beherrschbar – ein Rudel als Todesurteil."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "woelfe"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "id": "woelfe",
+  "title": "Wölfe & Warge",
+  "subtitle": "Rudeltiere, Grenzgänger und verdorbene Jäger",
+  "classification": "Canide Raubtiere Estrylls",
+  "folio": "R-02",
+  "lead": "Von den ausdauernden Wolfsrudeln der Wildnis bis zu den bewusst feindseligen Wargen verzeichnet dieses Archivblatt die bekannten hundeartigen Raubtiere Estrylls und ihre entscheidenden Unterschiede.",
+  "quote": "Der Wolf prüft die Grenze. Der Warg erinnert sich, wer sie gezogen hat.",
+  "quoteAttribution": "Lehrsatz des Feldarchivs",
+  "icon": {
+    "src": "../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/predators/groups/woelfe.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Wolf und Jungtier auf einer alten Bildtafel",
+    "caption": "Wölfe Estrylls · Tafel des naturkundlichen Archivs"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wölfe sind hochsoziale Raubtiere, die seit Anbeginn der Zivilisation an der Grenze zwischen Wildnis und Kultur existieren. Sie sind weder bloße Bestien noch instinktgetriebene Tiere, sondern komplexe Jäger mit ausgeprägter Intelligenz, Erinnerung und sozialem Verhalten. Ein Wolf lebt nicht allein – er lebt im Gefüge von Revier, Rudel und Ordnung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Kern sind Wölfe territoriale Ausdauerjäger, deren Stärke nicht in roher Kraft, sondern in Kooperation, Anpassungsfähigkeit und Wahrnehmung liegt. Sie lesen Spuren, reagieren auf Schwäche, merken sich Wege, Gerüche und Begegnungen. Ein Wolf vergisst nicht leicht – weder Beute noch Bedrohung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wölfe stehen zwischen den Welten:"
+        },
+        {
+          "type": "paragraph",
+          "text": "zu wild, um Teil der Zivilisation zu sein, zu intelligent, um bloßes Tier zu bleiben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gerade diese Grenzexistenz macht sie seit jeher zu Projektionsflächen für Furcht, Verehrung und Mythos. Wo Menschen siedeln, folgen Wölfe. Wo Menschen jagen, konkurrieren sie. Wo Menschen verschwinden, kehren sie zurück."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alle weiteren Formen – vom edlen Wächterwolf über aggressive Konfliktarten bis hin zu gezähmten Linien, Wargen oder Hunden – sind Abzweigungen dieser einen Grundnatur: dem Wolf als sozialem Jäger, Hüter seines Reviers und Spiegel menschlicher Ordnung."
+        }
+      ]
+    },
+    {
+      "id": "unterschiede-von-wolf-zu-warg",
+      "title": "Unterschiede von Wolf zu Warg",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Warg ist ein Wolf – aber keiner, der je Teil der natürlichen Ordnung war. Er gilt als Tier, das in uralter Zeit durch äußere Einflüsse verändert oder verflucht wurde und seither außerhalb des gewöhnlichen Gleichgewichts steht. Warge sind keine zufälligen Abweichungen, sondern das Ergebnis eines Bruchs, der bis in die frühesten Zeitalter zurückreicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druidische Überlieferungen berichten vom Ersten Zeitalter, der Epoche der Harmonie, in der Mensch und Tier in Einklang lebten. Mit dem sogenannten Fall zerbrach diese Ordnung. Infernal wirkende Einflüsse veränderten nicht nur den Menschen, sondern auch die Tiere. So wie aus manchen Menschengruppen entstellte Wesen ( Trolle ) hervorgingen, sollen auch einzelne Wolfsrudel von dieser Verderbnis erfasst worden sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein alter Mythos erzählt, der Dämonengott Zatrach habe sich dem König und ersten Wolf in Gestalt einer Wölfin genähert und ihn verführt. Aus dieser Verbindung seien die ersten Warge hervorgegangen – Wölfe von übersteigerter Klugheit, Grausamkeit und bewusster Feindseligkeit. Gelehrte halten diese Geschichte für sinnbildlich und sehen darin eher den Ausdruck einer tiefgreifenden Veränderung von Körper und Geist als eine wörtliche Begebenheit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unabhängig von der Deutung ist unstrittig, dass Warge anders handeln als gewöhnliche Wölfe. Sie jagen nicht allein aus Instinkt, sondern mit erkennbarem Willen. Sie erkennen den Menschen nicht als Teil der Umwelt, sondern als Feind oder Rivalen. Wo der Wolf reagiert, entscheidet der Warg – und genau darin liegt seine Gefahr."
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Bestimmungshilfe",
+    "title": "Wolf oder Warg?",
+    "intro": "Körpergröße allein genügt nicht zur Bestimmung. Verhalten, Jagdziel und die bewusste Reaktion auf Menschen liefern die verlässlichsten Hinweise.",
+    "columns": [
+      {
+        "kicker": "Natürliche Linie",
+        "title": "Wölfe",
+        "points": [
+          "Handeln aus Hunger, Revierdruck und Schutz des Rudels",
+          "Meiden Menschen meist, wenn ausreichend Beute vorhanden ist",
+          "Folgen lesbaren sozialen Regeln und können vereinzelt Bindungen eingehen",
+          "Bleiben Teil des natürlichen Gleichgewichts"
+        ]
+      },
+      {
+        "kicker": "Vom Fall gezeichnet",
+        "title": "Warge",
+        "points": [
+          "Planen Angriffe und wählen Menschen bewusst als Gegner",
+          "Zeigen anhaltende Feindseligkeit über unmittelbare Not hinaus",
+          "Sind nicht zähmbar und nur selten berechenbar",
+          "Gelten als widernatürlich veränderte oder verfluchte Wolfsformen"
+        ]
+      }
+    ]
+  },
+  "atlas": {
+    "title": "Register der Wölfe, Warge & Hyänen",
+    "intro": "Die Bildtafeln führen zu den bereits erschlossenen Dossiers. Der Gnoll bleibt bis zur Ausarbeitung als historischer Karteieintrag vorgemerkt.",
+    "groups": [
+      {
+        "id": "woelfe",
+        "title": "Wölfe",
+        "kicker": "Natürliche Rudeljäger",
+        "description": "Regionale Wolfsarten, deren Verhalten trotz großer Unterschiede Teil der natürlichen Ordnung bleibt.",
+        "entries": [
+          {
+            "id": "gramnir",
+            "title": "Gramnir",
+            "region": "Aldrimar · Fjordheim & Faelorn",
+            "description": "Robuster Nordwolf, geprägt von Kälte, Hunger und langen Wanderungen.",
+            "status": "Dossier verfügbar",
+            "href": "./gramnir/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/gramnir.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Gramnir"
+            }
+          },
+          {
+            "id": "faerog",
+            "title": "Faerog",
+            "region": "Südliches Cenyr · Celtigerns Wacht",
+            "description": "Scheuer Gebirgswolf mit hoher Intelligenz und nahezu lautloser Jagd.",
+            "status": "Dossier verfügbar",
+            "href": "./faerog/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/faerog.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Faerog"
+            }
+          },
+          {
+            "id": "brychgi",
+            "title": "Brychgi",
+            "region": "Mittel- & Nordcenyr",
+            "description": "Territorialer Großwolf, der Menschen und Vieh als unmittelbare Rivalen behandelt.",
+            "status": "Dossier verfügbar",
+            "href": "./brychgi/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/brychgi.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Brychgi"
+            }
+          },
+          {
+            "id": "lughar",
+            "title": "Lughar",
+            "region": "Südliche albische Fürstentümer",
+            "description": "Seltene, ruhige Großwolflinie aus den alten Bündnissen der Alben.",
+            "status": "Dossier verfügbar",
+            "href": "./lughar/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Lughar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "warge",
+        "title": "Warge",
+        "kicker": "Veränderte Wolfsformen",
+        "description": "Warge verbinden die Gestalt eines Wolfes mit bewusster Grausamkeit, Planung und tiefer Feindschaft gegen die Zivilisation.",
+        "entries": [
+          {
+            "id": "ulfr",
+            "title": "Ulfr",
+            "region": "Fjordheim · Aldrimar & Faelorn",
+            "description": "Taktischer Warg des Nordens, der Gelände und Schwächen seiner Beute ausnutzt.",
+            "status": "Dossier verfügbar",
+            "href": "./ulfr/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/ulfr.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Ulfr"
+            }
+          },
+          {
+            "id": "ruadhr",
+            "title": "Ruadhr",
+            "region": "Süd-Estryll · Dunkelhain",
+            "description": "Gewaltiger, einzelgängerischer Warg der südlichen Albenlande.",
+            "status": "Dossier verfügbar",
+            "href": "./ruadhr/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/ruadhr.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Bildtafel: Ruadhr"
+            }
+          },
+          {
+            "id": "rhewddann",
+            "title": "Rhewddann",
+            "region": "Cenyrische Gebirge",
+            "description": "Rudelbildender Höhlenwarg, gefürchtet für geplante Angriffe aus mehreren Richtungen.",
+            "status": "Dossier verfügbar",
+            "href": "./rhewddann/index.html",
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/rhewddann.webp",
+              "width": 408,
+              "height": 612,
+              "alt": "Bildtafel: Rhewddann"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hyaenen",
+        "title": "Hyänen",
+        "kicker": "Randgruppe des alten Registers",
+        "description": "Das historische Bestiarium führte die Gnolle neben Wölfen und Wargen. Ihre genaue Einordnung wird in einem späteren Dossier geprüft.",
+        "entries": [
+          {
+            "id": "gnoll",
+            "title": "Gnoll",
+            "region": "Estryll",
+            "description": "Eine weit verbreitete hyänenartige Kreatur, deren eigener Eintrag noch nicht erschlossen ist.",
+            "status": "Dossier vorgemerkt",
+            "href": null,
+            "image": {
+              "src": "../../../assets/predators/groups/woelfe/gnoll.webp",
+              "width": 500,
+              "height": 500,
+              "alt": "Bildtafel: Gnoll"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

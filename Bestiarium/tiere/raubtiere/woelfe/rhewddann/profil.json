@@ -1,0 +1,188 @@
+{
+  "id": "rhewddann",
+  "name": "Rhewddann",
+  "classification": "Cenyrische Wargsgattung",
+  "continent": "Estryll",
+  "region": "Gebirge Cenyrs",
+  "folio": "R-WA03",
+  "quote": "Siehst du einen Rhewddann, sind zwei weitere bereits hinter dir.",
+  "quoteAttribution": "Cenyrisches Jägerwort",
+  "summary": "Der Rhewddann ist eine seltene, aber gefürchtete Wargsgattung, die ausschließlich in den Gebirgen Cenyrs vorkommt. Anders als andere Warge gilt er weder als Grenzwesen noch als verdrängte Bestie, sondern als Auswuchs eines alten Frevels, dessen Ursprung in den Mythen der Crannath liegt und von den späteren Cenyri weitergetragen wurde. Seine Existenz ist untrennbar mit den Bergen verbunden, in denen er haust, lauert und überdauert.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/rhewddann.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Rhewddann",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Rhewddann"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Rudelbildender Gebirgswarg"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Gebirge Cenyrs"
+    },
+    {
+      "label": "Verband",
+      "value": "Mindestens 3, häufig 6 oder mehr"
+    },
+    {
+      "label": "Unterschlupf",
+      "value": "Höhlen und schwer zugängliche Pässe"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Gezielte, koordinierte Angriffe"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      8,
+      8,
+      9,
+      9
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhewddann ist eine seltene, aber gefürchtete Wargsgattung, die ausschließlich in den Gebirgen Cenyrs vorkommt. Anders als andere Warge gilt er weder als Grenzwesen noch als verdrängte Bestie, sondern als Auswuchs eines alten Frevels, dessen Ursprung in den Mythen der Crannath liegt und von den späteren Cenyri weitergetragen wurde. Seine Existenz ist untrennbar mit den Bergen verbunden, in denen er haust, lauert und überdauert."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rhewddann leben in Höhlen und abgelegenen Höhenzügen und steigen nur dann ins Tal hinab, wenn Hunger oder Gelegenheit sie dazu treiben. Sie sind aggressiv, zielgerichtet und werden von den Menschen nicht als „Wölfe“ geduldet, sondern als Bedrohung gejagt. Ihr Bestand ist gering, doch ihr Verschwinden ist trügerisch – denn trotz wiederholter Ausrottungen tauchen sie immer wieder auf, als ließe sich ihre Linie nicht endgültig tilgen."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rhewddann sind ausgeprägte Rudelwarge. Sie treten fast nie allein auf. Die kleinste bekannte Jagdformation besteht aus drei Tieren, größere Verbände von sechs oder mehr sind keine Seltenheit. Diese Dreiergruppen gelten als bevorzugte Einheit: schnell, koordiniert und tödlich effizient."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Rudel selbst können deutlich größer sein und leben verstreut in ausgedehnten Höhlensystemen und schwer zugänglichen Bergregionen. Wird ein Rhewddann aufgespürt, stößt man meist auf das gesamte Rudel. Aus diesem Grund enden viele Jagden entweder mit vollständiger Ausrottung – oder mit dem Tod der Jäger. Trotz hoher Verluste scheinen die Rudel sich immer wieder neu zu formieren."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rhewddann jagen geplant und koordiniert. Sie verlassen das Gebirge gezielt, steigen ins Tal ab, schlagen schnell zu und ziehen sich wieder zurück. Beute sind sowohl Vieh als auch Menschen; Kinder, Hirten und Reisende gelten als bevorzugte Ziele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Jagd erfolgt meist in gestaffelten Angriffen: Einschüchterung, Trennung, Überfall. Rhewddann töten effizient und ohne Zögern. Anders als gewöhnliche Wölfe reißen sie nicht wahllos, sondern nehmen genau das, was sie brauchen – oder was sie bestrafen wollen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zwischen Mensch und Rhewddann besteht keine Duldung, sondern ein offener Vernichtungszustand. In Cenyr werden sie nicht als Tiere betrachtet, sondern als verfluchte Warge, deren Existenz keinen Platz in der Ordnung hat. Jagd auf Rhewddann ist jederzeit erlaubt und wird aktiv gefördert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dennoch bleibt die Beziehung asymmetrisch: Der Mensch jagt den Rhewddann aus Angst, der Rhewddann jagt den Menschen aus Kalkül. Viele Dörfer berichten davon, dass Rhewddann gezielt zurückkehren, um Jagdgesellschaften anzugreifen, die zuvor ihre Spur aufgenommen haben."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zähmung der Rhewddann gilt als vollständig ausgeschlossen. Selbst Jungtiere zeigen früh ausgeprägte Aggression, Rudelbindung und Feindseligkeit gegenüber Menschen. Es existieren keine verlässlichen Berichte über erfolgreiche Aufzucht oder Kontrolle."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den Überlieferungen der Cenyri gilt bereits der Versuch der Zähmung als Wahnsinn. Ein Rhewddann akzeptiert keine Führung außerhalb seines Rudels und erkennt den Menschen ausschließlich als Beute oder Feind."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rhewddann verfügen über hohe körperliche Kraft, große Ausdauer und ausgeprägte Rudelkoordination. Ihre bevorzugte Dreierformation macht sie besonders gefährlich im offenen Gelände wie auch in engen Pässen. Sie sind zäh, lernfähig und zeigen kaum Furcht vor bewaffneten Gegnern."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre starke Bindung an das Gebirge schränkt ihr dauerhaftes Wirken ein. In offenem Flachland verlieren sie an Vorteil. Zudem führt ihre Rudelstruktur dazu, dass ein aufgespürtes Rudel vollständig ausgelöscht werden kann – auch wenn dies selten ohne hohe Verluste gelingt."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr heißt es: Siehst du einen Rhewddann, sind zwei weitere bereits hinter dir.",
+            "Manche Jäger glauben, dass die drei ersten Rhewddann noch immer leben und jedes neue Rudel aus ihrem Blut hervorgeht.",
+            "Spuren eines Rhewddann enden oft an Felsspalten oder Höhleneingängen, als hätten die Berge sie verschluckt."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "warge"
+  }
+}

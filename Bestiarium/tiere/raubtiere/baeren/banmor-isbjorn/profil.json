@@ -1,0 +1,198 @@
+{
+  "id": "banmor-isbjorn",
+  "name": "Bànmòr / Ísbjörn",
+  "classification": "Eisbär der hohen Breiten",
+  "continent": "Yrmandrall & Estryll",
+  "region": "Hoher Norden · Faelorn & Packeis",
+  "folio": "R-B08",
+  "quote": "Wo das Eis nicht mehr bricht, beginnt sein Revier.",
+  "quoteAttribution": "Nordmännische Weisheit",
+  "summary": "Der Bànmòr, von den Nordmännern Ísbjörn genannt, ist der Eisbär der hohen Breiten und zählt zu den stärksten und gefährlichsten Bärenarten der bekannten Welt. Er ist kein Sonderwesen, kein Mythos – sondern die kalte, kompromisslose Endform eines Raubtiers, das sich vollständig an Eis, Kälte und Hunger angepasst hat. Wo andere Bären scheitern, beginnt sein Lebensraum.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/banmor-isbjorn.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Bànmòr / Ísbjörn",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Bànmòr / Ísbjörn"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Eisbär der hohen Breiten"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Yrmandrall, Faelorn und nördliche Eisfelder"
+    },
+    {
+      "label": "Territorium",
+      "value": "Folgt Gletschern und wanderndem Packeis"
+    },
+    {
+      "label": "Jagd",
+      "value": "Geduldig, berechnend und ausdauernd"
+    },
+    {
+      "label": "Bedrohung",
+      "value": "Sieht Menschen als mögliche Beute"
+    },
+    {
+      "label": "Umgang",
+      "value": "Nicht zähmbar"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      8,
+      10,
+      1,
+      10
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bànmòr, von den Nordmännern Ísbjörn genannt, ist der Eisbär der hohen Breiten und zählt zu den stärksten und gefährlichsten Bärenarten der bekannten Welt. Er ist kein Sonderwesen, kein Mythos – sondern die kalte, kompromisslose Endform eines Raubtiers, das sich vollständig an Eis, Kälte und Hunger angepasst hat. Wo andere Bären scheitern, beginnt sein Lebensraum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Bànmòr tritt dort auf, wo Fjordheim endet und die Welt in Eis übergeht. Vereinzelte Populationen finden sich auf der nördlichen Inselgruppe Faelorn, doch seine eigentliche Domäne liegt weiter im Norden: auf Gletschern, Packeisfeldern und den endlosen Küsten des Kontinents Yrmandrall, der Heimat der Nordmänner. Jenseits dieser bekannten Gebiete existieren weitere, südlich unbekannte Unterformen, die sich noch stärker an extreme Bedingungen angepasst haben – darunter der gefürchtete Frostbär, von dem in südlichen Reichen meist nur Gerüchte existieren."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bànmòr tritt dort auf, wo Fjordheim endet und die Welt in Eis übergeht. Vereinzelte Populationen finden sich auf der nördlichen Inselgruppe Faelorn, doch seine eigentliche Domäne liegt weiter im Norden: auf Gletschern, Packeisfeldern und den endlosen Küsten des Kontinents Yrmandrall, der Heimat der Nordmänner. Jenseits dieser bekannten Gebiete existieren weitere, südlich unbekannte Unterformen, die sich noch stärker an extreme Bedingungen angepasst haben – darunter der gefürchtete Frostbär, von dem in südlichen Reichen meist nur Gerüchte existieren."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bànmòr ist ein gewaltiger, hochgewachsener Bär mit breitem Schädel, massivem Nacken und enormer Schulterkraft. Sein dichtes, helles Fell variiert von schmutzigem Weiß bis blassem Elfenbein und isoliert zuverlässig gegen selbst tödliche Kälte. Unter dem Fell verbirgt sich eine dicke Fettschicht, die ihn nicht nur vor dem Erfrieren schützt, sondern ihm auch erlaubt, lange Hungerperioden zu überstehen. Seine Augen wirken ruhig, fast leer – nicht aus Dummheit, sondern aus vollkommener Zweckmäßigkeit."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bànmòr beansprucht keine festen Reviere im klassischen Sinne. Sein Territorium folgt dem Eis: Gletscherzungen, gefrorene Küsten, wandernde Packeisfelder. Wo er auftaucht, verschwinden Robbenkolonien, Seevögel und kleinere Raubtiere. Selbst andere Großbären meiden seine Nähe. Für Menschen markieren seine Spuren das Ende jeder sicheren Route."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ísbjörn ist ein geduldiger, berechnender Jäger. Er wartet stundenlang reglos an Atemlöchern im Eis, verfolgt Beute über weite Strecken und gibt nicht auf, solange Energiegewinn möglich ist. Er zeigt kaum Drohverhalten. Angriffe erfolgen direkt, leise und tödlich. Alles, was sich in seinem Jagdbereich bewegt, wird als potenzielle Nahrung betrachtet – Tiere wie Menschen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Süden ist der Bànmòr eine Legende. Im Norden ist er Realität. Nordmänner meiden seine Gebiete oder ziehen bewaffnet und in Gruppen durch sie hindurch. Begegnungen enden selten gut. Der Ísbjörn unterscheidet nicht zwischen Jäger und Gejagtem, nur zwischen lohnend und nicht lohnend. Auf Yrmandrall gilt sein Auftreten als Warnzeichen: Das Eis wird dünn – nicht physisch, sondern existenziell."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hervorragender Schwimmer, selbst in eiskaltem Wasser",
+            "Kann tagelang reglos ausharren",
+            "Extrem hoher Fett- und Energiebedarf",
+            "Zeigt keine Scheu gegenüber Menschen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enorme Körperkraft",
+            "Perfekte Anpassung an extreme Kälte",
+            "Tödliche Jagdeffizienz"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stark an eisige Lebensräume gebunden",
+            "Kaum Beweglichkeit in wärmeren Regionen",
+            "Hoher Nahrungsbedarf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Auf Faelorn gelten gesichtete Bànmòr als schlechtes Omen für Seefahrer",
+            "Der Frostbär wird als größer, aggressiver und noch kälteresistenter beschrieben"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

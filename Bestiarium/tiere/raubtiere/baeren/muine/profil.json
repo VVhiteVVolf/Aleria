@@ -1,0 +1,207 @@
+{
+  "id": "muine",
+  "name": "Muine",
+  "classification": "Estryllischer Kragenbär",
+  "continent": "Estryll",
+  "region": "Zentral-Estryll · Ceitheach",
+  "folio": "R-B07",
+  "quote": "Man erkennt ihn am Kragen – und daran, dass er geblieben ist, als der Wald verrückt wurde.",
+  "quoteAttribution": "Alte Jägerrede aus Ceitheach",
+  "summary": "Der Muine ist der klassische Kragenbär Estrylls. Ursprünglich in Zentral-Estryll beheimatet, galt er lange als unauffälliger, weit verbreiteter Waldbär. Erst die Ausbreitung des Dunkelhains nach dem Großen Krieg zwang ihn zur Veränderung.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/muine.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel von Muine",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Muine"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Anpassungsfähiger Kragenbär"
+    },
+    {
+      "label": "Ursprung",
+      "value": "Alte Wald- und Flusslande Zentral-Estrylls"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Nach der Entstehung des Dunkelhains weit verstreut"
+    },
+    {
+      "label": "Revier",
+      "value": "Geteilte Rand- und Übergangszonen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Vorsichtig und konfliktmeidend"
+    },
+    {
+      "label": "Kennzeichen",
+      "value": "Heller halbmondförmiger Fellkragen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      4,
+      3,
+      8,
+      7,
+      4,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Muine ist der klassische Kragenbär Estrylls. Ursprünglich in Zentral-Estryll beheimatet, galt er lange als unauffälliger, weit verbreiteter Waldbär. Erst die Ausbreitung des Dunkelhains nach dem Großen Krieg zwang ihn zur Veränderung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Binnen weniger Jahrzehnte wurde sein angestammter Lebensraum unbewohnbar, und der Muine wich in alle Himmelsrichtungen aus. Heute ist er sowohl im Norden als auch im Süden Estrylls anzutreffen – ein Bär, der gelernt hat, Raum zu teilen, statt ihn zu beherrschen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Muine stammt aus den alten Wald- und Flusslandschaften Zentral-Estrylls, insbesondere aus den Gebieten, die einst vom Fürstentum Ceitheach kontrolliert wurden. Dort lebte er über Generationen hinweg in stabilen, reichhaltigen Habitaten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit dem Entstehen des Dunkelhains – eines verwunschenen Riesenforstes, der weite Landstriche verschlang – brach diese Ordnung zusammen. Der Muine überlebte nicht durch Anpassung an den Hain, sondern durch Abwanderung."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Muine ist ein mittelgroßer bis großer Bär mit kräftigem, ausgewogenem Körperbau. Sein markantestes Merkmal ist der helle, halbmondförmige Fellkragen an Brust und Hals, der sich deutlich vom dunkleren Rumpffell absetzt. Das Fell ist dicht, wetterfest und variiert von tiefem Braun bis fast Schwarz. Kopf und Schnauze wirken ruhiger als bei aggressiveren Arten, die Augen wachsam, aber nicht feindselig."
+        }
+      ]
+    },
+    {
+      "id": "territorium-einfluss",
+      "title": "Territorium & Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anders als viele andere Bären beansprucht der Muine keine großen, exklusiven Reviere. Durch seine erzwungene Wanderung hat er gelernt, sich Randgebiete zu teilen mit Dubharr, Broan oder sogar Gramh."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er lebt bevorzugt in Übergangszonen: Waldränder, Flussläufe, hügeliges Offenland. Wo Muine vorkommen, ist die Wildnis selten leer, aber auch selten eskalierend."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Muine ist vorsichtig, anpassungsfähig und konfliktmeidend. Er beobachtet, weicht aus und meidet offene Auseinandersetzungen. Sein Jagdverhalten ist klassisch: Wild, Fisch, Aas, Beeren. Er zeigt weder die Verspieltheit des Brannoc noch die kompromisslose Aggression des Grámh. Wird er jedoch bedrängt oder in die Enge getrieben, verteidigt er sich entschlossen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In den alten Landen Ceitheachs galt der Muine als gewöhnlicher Waldbär – respektiert, aber nicht gefürchtet. Diese Haltung hat sich gehalten. Er meidet Menschen, passt sich aber an ihre Nähe an. Begegnungen enden meist ereignislos, solange Abstand gewahrt bleibt. Verwechslungen mit friedlicheren Arten führen jedoch immer wieder zu Unfällen."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hohe Toleranz gegenüber wechselnden Lebensräumen",
+            "Lernt schnell neue Wander- und Nahrungsrouten",
+            "Teilt Territorien mit anderen Bärenarten",
+            "Vermeidet den Dunkelhain konsequent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Anpassungsfähig und intelligent",
+            "Gute Balance zwischen Vorsicht und Durchsetzungsvermögen",
+            "Breites Nahrungsspektrum"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringere Dominanz gegenüber größeren Arten",
+            "Kaum spezialisierte Verteidigungsstrategien",
+            "Verdrängt aus extremen Lebensräumen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In alten Karten Ceitheachs ist der Muine noch als häufigstes Großtier verzeichnet",
+            "Sein Kragen galt einst als Glückszeichen für Holzfäller",
+            "Man sagt, der Muine habe „den Krieg überlebt, ohne ihn zu führen“"
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "estryll"
+  }
+}

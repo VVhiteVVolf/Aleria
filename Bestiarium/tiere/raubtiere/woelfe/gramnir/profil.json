@@ -1,0 +1,219 @@
+{
+  "id": "gramnir",
+  "name": "Gramnir",
+  "classification": "Nordwolf",
+  "continent": "Estryll",
+  "region": "Nördliches Estryll & Fjordheim",
+  "folio": "R-W01",
+  "quote": "Er kommt nicht aus Hunger nach Blut – sondern weil der Winter keine Wahl lässt.",
+  "quoteAttribution": "Nordisches Sprichwort",
+  "summary": "Der Gramnir, auch als Nordwolf bekannt, ist die am weitesten verbreitete Wolfsart im nördlichen Estryll und den Grenzlanden Fjordheims. Er ist kein mythischer Wächter und kein edler Begleiter alter Bündnisse – sondern ein robuster, anpassungsfähiger Jäger, geformt durch Kälte, Nässe und lange Winter.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/gramnir.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel von Gramnir",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Gramnir"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Robuster Nordwolf"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Nördliches Estryll, Fjordheim"
+    },
+    {
+      "label": "Rudel",
+      "value": "Meist 4–8 Tiere"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Dämmerung & Nacht"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Kleines und mittleres Wild"
+    },
+    {
+      "label": "Umgang",
+      "value": "Als Jungtier zähmbar; kein Haustier"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      6,
+      7,
+      7,
+      6,
+      8,
+      9
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gramnir, auch als Nordwolf bekannt, ist die am weitesten verbreitete Wolfsart im nördlichen Estryll und den Grenzlanden Fjordheims. Er ist kein mythischer Wächter und kein edler Begleiter alter Bündnisse – sondern ein robuster, anpassungsfähiger Jäger, geformt durch Kälte, Nässe und lange Winter."
+        },
+        {
+          "type": "paragraph",
+          "text": "In seinem Wesen ist der Gramnir ein gewöhnlicher Wolf: territorial, vorsichtig und dem Überleben verpflichtet. Doch Hunger, harte Winter und schwindende Beute können ihn gefährlich machen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gramnir stammt aus den kühlen, feuchten Regionen des Nordens. Sein Verbreitungsgebiet umfasst die nördlichen Teile Estrylls, Aldrimar sowie Vennyr bzw Fjordheim. Besonders häufig findet man ihn in Nadelwäldern, Sumpfgebieten und auf der offenen Ebene, wo er weite Strecken zurücklegt, um Beute aufzuspüren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist hervorragend an Dauerregen, Schnee und lange Dunkelphasen angepasst."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gramnir ist ein mittelgroßer Wolf mit dichtem, wetterfestem Fell. Die Färbung reicht von graubraun bis dunkelaschig, oft mit helleren Partien an Brust und Fang. Sein Körperbau ist funktional und ausdauernd, nicht massiv, aber kräftig genug für lange Hetzjagden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Augen sind meist bernstein- bis hellbraun. Narben sind bei älteren Tieren häufig und gelten in Rudeln als Zeichen von Erfahrung."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gramnir jagen und leben überwiegend in Rudeln, deren Größe stark vom Beuteangebot abhängt. Typisch sind 4–8 Tiere, angeführt von einem erfahrenen Leitwolf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Rangordnung ist klar und durch Dominanzverhalten geregelt. Schwäche wird geduldet, solange das Tier seinen Platz kennt. Herausforderer werden brutal, aber effizient zurechtgewiesen."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bevorzugte Beute des Gramnir ist kleines und mittleres Wild. In Zeiten knapper Ressourcen kann er jedoch auch größere Tiere gemeinsam überwältigen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vieh wird nur dann gerissen, wenn der Wolf verzweifelt ist – meist nach harten Wintern oder Seuchen im Wildbestand. Der Gramnir jagt nicht aus Grausamkeit oder Gier, sondern aus Notwendigkeit."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Aldrimar und Fjordheim wird der Wolf verehrt – oft als Wappentier oder Totem. Entsprechend genießt der Gramnir eine gewisse Duldung. Die Jagd auf ihn ist in Aldrimar verboten, da bekannt ist, dass Viehrisse aus Hunger entstehen, nicht aus Aggression."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wilde Gramnir meiden den Menschen konsequent. Erst bei äußerster Not verlieren sie diese Scheu."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gramnir lässt sich zähmen, wenn er als Jungtier aufgezogen wird. Er eignet sich jedoch nicht als Haustier. Sein Wesen bleibt dominant, prüfend und fordernd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er akzeptiert ausschließlich starke, konsequente Führungspersonen. Schwäche wird erkannt und ausgenutzt. Deshalb wird er vor allem von erfahrenen Nordmännern und Aldrimarern als Gefährte gehalten – nicht als Spielgefährte, sondern als Arbeitstier und Wächter."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Ausdauer",
+            "Anpassungsfähigkeit",
+            "Effektive Rudeljagd",
+            "Gute Zähmbarkeit bei früher Prägung"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dominantes Verhalten",
+            "Gefährlich bei Hunger",
+            "Bindet sich nur an starke Führer",
+            "Kein zuverlässiger Begleiter für Ungeübte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Fjordheim gilt ein Gramnir, der sich einem Krieger anschließt, als Prüfung der Götter.",
+            "Ein einzelner Gramnir im Winter gilt als schlechtes Omen – ein Rudel als Schutz."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "woelfe"
+  }
+}

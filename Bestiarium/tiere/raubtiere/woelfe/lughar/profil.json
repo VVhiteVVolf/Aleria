@@ -1,0 +1,219 @@
+{
+  "id": "lughar",
+  "name": "Lughar",
+  "classification": "Edler Großwolf",
+  "continent": "Estryll",
+  "region": "Südliche albische Fürstentümer",
+  "folio": "R-W04",
+  "quote": "Wo er erscheint, spricht man nicht von Jagd, sondern von Präsenz.",
+  "quoteAttribution": "Albische Überlieferung",
+  "summary": "Der Lughar ist eine seltene und ehrwürdige Wolfsart aus den südlichen Albischen Fürstentümern Estrylls. Er gilt nicht als bloßes Raubtier, sondern als Sinnbild uralter Bündnisse zwischen Natur und Volk. In den Überlieferungen der Alben steht er für Treue, Würde und wachsame Ruhe – ein Wächter alter Pfade, dessen Nähe zum Menschen ebenso ungewöhnlich wie tief verwurzelt ist.",
+  "icon": {
+    "src": "../../../../assets/icons/raubtiere.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../../assets/predators/profiles/lughar.webp",
+    "width": 712,
+    "height": 740,
+    "alt": "Überlieferte Bildtafel von Lughar",
+    "caption": "Bildtafel aus dem Raubtierarchiv: Lughar"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Seltener albischer Großwolf"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Südliche albische Fürstentümer"
+    },
+    {
+      "label": "Revier",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Rudel",
+      "value": "Kleine, beständige Verbände"
+    },
+    {
+      "label": "Aktivität",
+      "value": "Dämmerung & Nacht"
+    },
+    {
+      "label": "Umgang",
+      "value": "Bindungsfähig bei respektvoller Aufzucht"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      3,
+      8,
+      9,
+      7,
+      8,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lughar ist eine seltene und ehrwürdige Wolfsart aus den südlichen Albischen Fürstentümern Estrylls. Er gilt nicht als bloßes Raubtier, sondern als Sinnbild uralter Bündnisse zwischen Natur und Volk. In den Überlieferungen der Alben steht er für Treue, Würde und wachsame Ruhe – ein Wächter alter Pfade, dessen Nähe zum Menschen ebenso ungewöhnlich wie tief verwurzelt ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anders als andere Wölfe sucht der Lughar weder Beute noch Konflikt aus Gier. Er beobachtet, urteilt und handelt mit Bedacht. Wo er erscheint, spricht man nicht von Jagd, sondern von Präsenz."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lughar ist in den südlichen Gefilden Estrylls beheimatet, insbesondere in den albischen Fürstentümern Leitheach, Blaithneach, Dunfal und Aislerneach. Sein Revier umfasst waldreiche Hügel, lichte Täler, alte Grenzpfade und die Übergangszonen zwischen Wildnis und menschlicher Siedlung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Nähe zu bewohnten Gebieten ist kein Zeichen von Verdrängung, sondern Ausdruck einer jahrhundertealten Koexistenz. Viele Lughar wurden über Generationen hinweg domestiziert, andere leben halbwild entlang vergessener Druidenwege. Vollständig wilde Exemplare sind selten, existieren jedoch noch in tiefen, unberührten Waldgebieten."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lughar ist größer und kräftiger als ein gewöhnlicher Wolf, ohne dabei schwerfällig zu wirken. Sein schwarzes Fell wird von silbernen Akzenten durchzogen, die je nach Lichteinfall in dunklen, beinahe bläulichen Tönen schimmern. Besonders auffällig ist seine ausgeprägte Nackenmähne, die an jene eines jungen Löwen erinnert und als Zeichen von Rang und innerer Stärke gilt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein breiter Brustkorb, lange, kraftvolle Läufe und wache, bernsteinfarbene Augen verleihen ihm eine Erscheinung, die gleichermaßen Würde und Wildheit ausstrahlt. Seine Bewegungen sind ruhig und kontrolliert, fast lautlos. Das Heulen des Lughar ist tief und voll – kein Drohruf, sondern ein Klang, der Respekt einfordert."
+        }
+      ]
+    },
+    {
+      "id": "rudelstruktur",
+      "title": "Rudelstruktur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lughar leben in kleinen, stabilen Rudeln oder in engen Mensch-Tier-Bindungen. Ihre Rudelstruktur ist weniger hierarchisch als bei anderen Wolfsarten und basiert stärker auf Erfahrung, Alter und gegenseitigem Vertrauen als auf Dominanzkämpfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In domestizierten Gemeinschaften tritt der menschliche Gefährte häufig als Teil des Rudels auf, nicht als Herr. Wilde Lughar zeigen ein ähnliches Sozialverhalten: ruhig, koordiniert und konfliktvermeidend. Alte oder verletzte Tiere werden nicht ausgestoßen, sondern weiterhin geschützt."
+        }
+      ]
+    },
+    {
+      "id": "jagdverhalten",
+      "title": "Jagdverhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lughar ist kein rastloser Jäger. Seine Jagd ist gezielt, selten und wohlüberlegt. Bevorzugt jagt er Wildtiere und meidet Vieh nahezu vollständig. In vielen Regionen gilt der Angriff eines Lughar auf Nutztiere als extrem seltenes Ereignis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er jagt meist allein oder in kleinen Gruppen, setzt auf Ausdauer und Präzision statt auf rohe Gewalt. Oft wird berichtet, dass ein Lughar Beute ziehen lässt, wenn sie zur Erhaltung des Gleichgewichts nicht notwendig erscheint."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Beziehung zwischen Lughar und Mensch ist einzigartig. In den albischen Fürstentümern gilt er nicht als Feind, sondern als Begleiter, Wächter und stiller Verbündeter. Serfs und Mormaer – waldkundige Reiter und Pfadläufer – halten Lughar als Jagdgefährten, Wächter oder spirituelle Tiere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Bindung ist keine Dressur, sondern ein gegenseitiges Anerkennen. Lughar folgen nicht aus Zwang, sondern aus Entscheidung. Auch wilde Exemplare zeigen eine auffällige Duldung des Menschen und begegnen ihm oft mit vorsichtiger Neugier statt mit Furcht."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung",
+      "title": "Zähmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lughar kann nicht im herkömmlichen Sinne gezähmt werden. Seine Bindung an den Menschen entsteht ausschließlich durch frühe Prägung, gegenseitigen Respekt und lange gemeinsame Zeit. Gewalt, Zwang oder Isolation führen unweigerlich zum Verlust des Vertrauens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alte Überlieferungen berichten, dass einst die Druiden selbst die ersten Lughar den Menschen anvertrauten – als Hüter der Herden und Wächter der Wege. Dieses Bündnis gilt bis heute als heilig."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Intelligenz und Wahrnehmung",
+            "Außergewöhnliche Loyalität",
+            "Ruhiges, konfliktvermeidendes Wesen",
+            "Tiefe Bindung zu vertrauten Menschen"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Aggressionsbereitschaft",
+            "Seltenheit und langsame Vermehrung",
+            "Bindet sich stark – Verlust des Gefährten kann ihn brechen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In albischen Legenden heißt es, wer vom Lughar akzeptiert wird, werde niemals im Wald allein sein.",
+            "Sein Heulen gilt als gutes Omen für Reisende.",
+            "Manche behaupten, aus dem Lughar sei der erste Hund hervorgegangen – doch die Alben widersprechen: Der Lughar sei kein Vorfahre, sondern ein Wächter einer vergessenen Ordnung."
+          ]
+        }
+      ]
+    }
+  ],
+  "group": {
+    "id": "woelfe",
+    "title": "Wölfe & Warge",
+    "subgroupId": "woelfe"
+  }
+}

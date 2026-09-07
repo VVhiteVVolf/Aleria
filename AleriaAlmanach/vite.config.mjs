@@ -12,6 +12,7 @@ import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/pro
 import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-article-registry.mjs';
 import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natural-species-registry.mjs';
 import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
+import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS } from '../Bestiarium/modules/predator-profile/predator-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -87,6 +88,13 @@ export default defineConfig({
         ...Object.fromEntries(HORSE_PROFILE_IDS.map(id => [
           `bestiary-horse-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/pferde', id, 'index.html')
         ])),
+        ...Object.fromEntries(PREDATOR_GROUPS.map(group => [
+          `bestiary-predator-${group.id}`, resolve(workspaceRoot, 'Bestiarium/tiere/raubtiere', group.id, 'index.html')
+        ])),
+        ...Object.fromEntries(PREDATOR_PROFILE_IDS.map(id => {
+          const group = PREDATOR_GROUPS.find(candidate => candidate.profileIds.includes(id));
+          return [`bestiary-predator-${group.id}-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/raubtiere', group.id, id, 'index.html')];
+        })),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [
           `class-${id}`, resolve(workspaceRoot, 'Klassenordner/Basisklassen', id, 'index.html')
