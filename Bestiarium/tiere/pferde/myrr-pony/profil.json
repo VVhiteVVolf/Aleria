@@ -1,0 +1,195 @@
+{
+  "id": "myrr-pony",
+  "name": "Myrr Pony",
+  "classification": "Pferderasse aus Estrylls Sumpfland",
+  "continent": "Estryll",
+  "region": "Estrylls Sumpfland",
+  "folio": "P-09",
+  "quote": "Wenn du ein Myrr brauchst, bist du schon arm genug.",
+  "quoteAttribution": "Aldrimarisches Sprichwort",
+  "summary": "Das Myrr-Pony ist ein typisches Produkt des aldremarischen Sumpflands: ungeliebt, unterschätzt und meist nur geduldet. Es ist kein Pony aus Tradition oder bewusster Zucht, sondern eines aus Notwendigkeit. Wo andere Pferde eingehen, bleibt das Myrr – oft widerwillig – am Leben.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/myrr-pony.webp",
+    "width": 1024,
+    "height": 506,
+    "alt": "Überlieferte Bildtafel des Myrr Pony",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Myrr Pony"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gewöhnlich",
+    "price": "100–200 Kupferstücke",
+    "tags": [
+      "Sumpf",
+      "Transport"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      2,
+      3,
+      2,
+      3,
+      5,
+      6
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Myrr-Pony ist ein typisches Produkt des aldremarischen Sumpflands: ungeliebt, unterschätzt und meist nur geduldet. Es ist kein Pony aus Tradition oder bewusster Zucht, sondern eines aus Notwendigkeit. Wo andere Pferde eingehen, bleibt das Myrr – oft widerwillig – am Leben."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sein Ursprung liegt in den Sümpfen Aldrimars , dem größten Feuchtgebiet Estrylls. Vermutlich stammen Myrr-Ponys von Hest- und Tirashan-Pferden ab, die sich im Sumpf festsetzten und diesen nie wieder verließen. Isolation, Nässe, knappe Nahrung und permanenter Stress durch Raubtiere führten über Generationen zur Verkleinerung – nicht zur Veredelung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Ergebnis war kein leistungsfähiges Pony, sondern ein angepasstes Überlebensprodukt ."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klein, gedrungen, mit breiten, flachen Hufen. Der Körper wirkt oft ungepflegt, das Fell stumpf, häufig von Algen, Schlamm oder Moos verfärbt. Die Beine sind kräftig, aber kurz; der Rücken niedrig, die Haltung leicht geduckt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alles an diesem Pony wirkt, als wolle es möglichst wenig auffallen."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schreckhaft, nervös und instinktgetrieben. Das Myrr-Pony reagiert stark auf Geräusche, Gerüche und plötzliche Bewegungen. Es sucht Sicherheit im Vertrauten – und das ist meist Schlamm, Wasser und Deckung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es ist kein mutiges Tier, sondern ein dauerhaft angespanntes ."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Außerhalb von Sümpfen praktisch wertlos. Innerhalb davon manchmal überlebenswichtig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Typische Einsätze:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Transport durch Moor und Morast",
+            "Versorgung abgelegener Sumpfhöfe",
+            "Reittier für arme Sumpfbewohner"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Für Krieg, Handel oder Prestige ist das Myrr-Pony völlig ungeeignet."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragend sumpfgängig",
+            "Trittsicher auf Morast",
+            "Geringe Ansprüche an Futterqualität",
+            "Kann Leben retten – situativ"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr schreckhaft",
+            "Pflegeintensiv durch permanentes Wälzen",
+            "Geringe Leistung",
+            "Kaum handelstauglich",
+            "Außerhalb des Sumpfes nutzlos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anstrengend und undankbar. Myrr-Ponys wälzen sich instinktiv in Schlamm, meiden trockene Untergründe und ziehen Regen und Pfützen aktiv an. Saubere Ställe oder gepflegte Weiden sind illusorisch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wer Ordnung liebt, hält kein Myrr-Pony."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Unter Ponyzüchtern gelten Myrr-Ponys als „Fehlbestand“.",
+            "Kinder aus dem Sumpf erkennen ein gutes Myrr am Geruch – nicht am Aussehen.",
+            "In Aldrimar sagt man: „Wenn du ein Myrr brauchst, bist du schon arm genug.“"
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

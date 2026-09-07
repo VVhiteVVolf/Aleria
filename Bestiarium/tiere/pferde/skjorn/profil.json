@@ -1,0 +1,135 @@
+{
+  "id": "skjorn",
+  "name": "Skjorn",
+  "classification": "Urpferd Yrmandralls",
+  "continent": "Yrmandrall",
+  "region": "Urpferd Yrmandralls",
+  "folio": "P-29",
+  "quote": "Wenn er je existierte, dann war er ein Schatten im Schnee.",
+  "quoteAttribution": "Norrnaigh-Spruch",
+  "summary": "Über den Skjorn weiß man praktisch nichts. Er gilt als eine frühe, uralte Nordlinie, die möglicherweise nur wenige Generationen lang als eigenständige Rasse existierte, bevor sie in späteren Zuchten aufging. In den Liedern der Nordmänner taucht er selten auf, eher als Andeutung denn als belegte Wirklichkeit.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/skjorn.webp",
+    "width": 1024,
+    "height": 506,
+    "alt": "Überlieferte Bildtafel des Skjorn",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Skjorn"
+  },
+  "facts": [
+    {
+      "label": "Abstammung",
+      "value": "vermutlich aus Hest-Linien"
+    },
+    {
+      "label": "Abkömmlinge",
+      "value": "Hross, Skuggr, Skaer"
+    },
+    {
+      "label": "Status",
+      "value": "Wahrscheinlich ausgestorben / aufgegangen"
+    }
+  ],
+  "market": {
+    "tier": "Nicht am Markt",
+    "price": "Keine Überlieferung",
+    "tags": [
+      "Historische Linie"
+    ]
+  },
+  "performance": null,
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Über den Skjorn weiß man praktisch nichts. Er gilt als eine frühe, uralte Nordlinie, die möglicherweise nur wenige Generationen lang als eigenständige Rasse existierte, bevor sie in späteren Zuchten aufging. In den Liedern der Nordmänner taucht er selten auf, eher als Andeutung denn als belegte Wirklichkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vermutlich war der Skjorn ein schweres, zähes Ross – roh, gedrungen und unbeeindruckt von Kälte. Ob es ihn in reiner Linie jemals „lange“ gab, ist fraglich."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die wahrscheinlichste Theorie ist schlicht: einst existierte eine Landbrücke nach Yrmandrall . Über sie wurden Hest-Tiere aus dem Norden Estrylls mitgeführt – kräftige, kaltblütige Hünen. Aus diesem Hest könnte sich auf Yrmandrall eine eigene Linie entwickelt haben, die später als Skjorn bezeichnet wurde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aus dem Skjorn sollen wiederum die bekannten yrmandrallischen Linien hervorgegangen sein: Hross , Skuggr und Skaer . Wie genau, weiß niemand. Wahrscheinlicher ist, dass der Name „Skjorn“ nachträglich als Sammelbegriff für eine frühe, unklare Stammform verwendet wurde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Skjorn-Linie selbst hat sich höchstwahrscheinlich in den Linien von Hross, Skuggr und Skaer verrannt, sodass die Rasse als eigenständige Form nicht mehr existiert. Den Norrnaigh war es vermutlich auch nie ein Anliegen, eine „reine“ Stammrasse zu bewahren – Zweck ging vor Tradition."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alle Beschreibungen sind spekulativ. Falls der Skjorn tatsächlich eine Stammform war, dürfte er dem frühen Hest geähnelt haben: gedrungen, kräftig, kurzbeinig, mit dichter Behaarung und großer Kältetoleranz. Mehr ist nicht zuverlässig überliefert."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vermutlich stoisch und zäh, wenig schreckhaft, mehr Arbeitstier als Prestige. Gesicherte Angaben fehlen."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wenn der Skjorn existierte, dann als praktisches Nordross: Transport, Marsch, frühe Reitnutzung. Eine eigene „Kavallerietradition“ ist nicht belegt."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wahrscheinlich genügsam und winterhart. Die Nordmänner hätten keine empfindliche Linie dauerhaft erhalten; alles Überflüssige wäre weggezüchtet oder ausgestorben."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Sagas benutzen „Skjorn“ als Sammelbegriff für „das erste Pferd im Schnee“.",
+            "In Zuchtbüchern taucht der Name nicht auf – nur in späteren Überlieferungen.",
+            "Die gängige These: Skjorn ist längst in Hross/Skuggr/Skaer aufgegangen."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "yrmandrall"
+}

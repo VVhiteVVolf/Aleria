@@ -1,0 +1,174 @@
+{
+  "id": "shahzad",
+  "name": "Shahzad",
+  "classification": "Pferderasse aus Shirazad",
+  "continent": "Tirnara",
+  "region": "Shirazad",
+  "folio": "P-15",
+  "quote": "Die Wüste verliert jedes Rennen gegen seine Geduld.",
+  "quoteAttribution": "Shirazadisches Sprichwort",
+  "summary": "Der Shahzad ist ein Fremdling in Tirnara – und genau darin liegt seine Stärke. Ursprünglich aus den heißen Wüsten Sundaras stammend, wurde er vom Volk der Shirazad mitgebracht und etablierte sich rasch als deren Nationalpferd . Er steht für Beweglichkeit , Freiheit und das Überleben dort, wo andere Rassen versagen.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/shahzad.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Shahzad",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Shahzad"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Außerordentlich",
+    "price": "4.000–25.000 Goldstücke",
+    "tags": [
+      "Wüste",
+      "Kundschaft",
+      "Transport"
+    ],
+    "age": "25–45 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      9,
+      4,
+      8,
+      3,
+      5
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Shahzad ist ein Fremdling in Tirnara – und genau darin liegt seine Stärke. Ursprünglich aus den heißen Wüsten Sundaras stammend, wurde er vom Volk der Shirazad mitgebracht und etablierte sich rasch als deren Nationalpferd . Er steht für Beweglichkeit , Freiheit und das Überleben dort, wo andere Rassen versagen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit der Ansiedlung der Shirazad in den südlichen Steppen und Wüsten Tirnaras fand der Shahzad eine neue Heimat. Dort wird er gezielt weitergezüchtet – nicht auf rohe Kraft oder Schlachtordnung, sondern auf Hitzeresistenz , Sparsamkeit und Ausdauer unter Extrembedingungen . Außerhalb dieser Regionen bleibt er selten und teuer."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Shahzad ist leicht , hochbeinig und elegant. Sein schlanker Brustkorb, die langen Sehnen und die feinen, harten Hufe sind ideal für Sand und Geröll. Die Muskulatur ist drahtig statt massiv – gebaut für lange Distanzen, nicht für den Aufprall im Nahkampf."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wachsam, intelligent und unabhängig. Der Shahzad bindet sich an erfahrene Reiter, reagiert sensibel auf Fehler und verzeiht wenig grobe Hand. In der Wüste zeigt er eine fast instinktive Orientierung und spart Kräfte, wo andere Pferde ausbrennen."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sein Element ist die Wüste :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "– Karawanen- und Fernreisen",
+            "– Späh- und Grenzdienste",
+            "– Schnelle Überfälle und Rückzüge",
+            "– Wüstenkrieger und Läufer"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Als klassisches Kavalleriepferd bleibt er eine Nische. In direkter Konfrontation – etwa gegen schwere Sipahi – ist er unterlegen. Doch wer ihm in Hitze und Sand folgt, verliert."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Extreme Hitze- und Dürretoleranz",
+            "Hohe Ausdauer bei minimaler Versorgung",
+            "Sicherer Tritt auf Sand",
+            "Schnelligkeit über lange Distanzen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Kraft im Nahkampf",
+            "Weniger geeignet für schwere Rüstung",
+            "Anspruchsvoll im Handling",
+            "Teuer in der Anschaffung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Shahzad ist Identitätsträger der Shirazad – weniger ein Kriegstier als ein Lebenspartner. In Tirnara schätzen ihn Karawanenführer und Grenzläufer; das Militär bevorzugt meist den Sarkal . Prestige besitzt der Shahzad dennoch – nicht durch Schlachten, sondern durch das Überleben des Unmöglichen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Trivia..."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

@@ -11,6 +11,7 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/book-shell`: gemeinsame Pergamentfarben, Typografie, Navigation und Fußzeile für Haupt- und Profilseiten.
 - `modules/creature-profile`: wiederverwendbare statische Profilvorlage, Profilregister und Anbindung der Vorschauen.
 - `modules/natural-species`: gemeinsame Naturkundevorlage für Tiergruppen, regionale Artenregister und spätere Einzeldossiers.
+- `modules/horse-profile`: gemeinsame statische Vorlage für Pferdedossiers, Rossmarkt-Werte und Leistungsdiagramme.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -49,13 +50,19 @@ Die Seiten werden mit `node Bestiarium/scripts/build-topic-articles.mjs` erzeugt
 
 ## Naturkundliche Tierseiten
 
-Alle zehn Tafeln im Kapitel „Tiere · Die natürlichen Arten“ führen auf eigene Seiten unter `tiere/`. Ihre redaktionellen Quellen heißen `art.json`; eine gemeinsame Vorlage rendert Einleitung, Hintergrund oder Lebensräume, Wissenswertes und das hierarchische Artenregister. Die Pferderassen bleiben zuerst nach Kontinent und anschließend nach Land oder Kulturraum geordnet. Jedes Urpferd wird innerhalb seines Kontinents gesondert hervorgehoben. Noch nicht angelegte Rassen- und Artendossiers öffnen eine Vorschau und können später über ihr `href` zu echten Unterseiten werden.
+Alle zehn Tafeln im Kapitel „Tiere · Die natürlichen Arten“ führen auf eigene Seiten unter `tiere/`. Ihre redaktionellen Quellen heißen `art.json`; eine gemeinsame Vorlage rendert Einleitung, Hintergrund oder Lebensräume, Wissenswertes und das hierarchische Artenregister. Die Pferderassen bleiben zuerst nach Kontinent und anschließend nach Land oder Kulturraum geordnet. Jedes Urpferd wird innerhalb seines Kontinents gesondert hervorgehoben. Alle 32 Pferdekarten sind mit ihren ausgearbeiteten Dossiers verknüpft; bei den übrigen Tiergruppen öffnen noch nicht angelegte Artendossiers weiterhin eine Vorschau.
 
 Die neun neuen 2:3-Titelmotive wurden mit `image_gen` im festgelegten Anime-Stil erzeugt. Die Pferdeseite verwendet das vom Nutzer vorgegebene Motiv. Alle zehn Bilder werden lokal aus `assets/species-art/` ausgeliefert; Herkunft, Maße und vollständige Bild-Prompts stehen in `assets/species-art-sources.json`.
 
 Die 62 überlieferten Kreaturbilder aus den alten Tierseiten bleiben in den zugehörigen Arten- und Rassenkarten erhalten. Freigestellte Motive stehen vollständig auf ruhigen, einfarbigen Pergamentflächen: hochformatige Bilder in einem 2:3-Rahmen, quadratische und breite Bilder in einem 1:1-Rahmen. Die optimierten Dateien liegen unter `assets/species-entries/`; ihre Quellen sind in `assets/species-entry-sources.json` dokumentiert.
 
 Die Seiten werden mit `node Bestiarium/scripts/build-natural-species.mjs` erzeugt und mit `--check` auf Aktualität geprüft. Neue Tiergruppen benötigen ein Verzeichnis `tiere/<id>/art.json` sowie einen Eintrag in `modules/natural-species/natural-species-registry.mjs`; Build-Skript und Vite verwenden dieses gemeinsame Register.
+
+## Pferdedossiers
+
+Die 32 Pferde aus dem kontinental gegliederten Artenregister besitzen eigene Seiten unter `tiere/pferde/<id>/`. Jedes `profil.json` enthält den Text und die Bildtafel aus der jeweiligen alten Vorlage sowie die passenden Marktdaten. Für 29 im Rossmarkt geführte Linien zeigt die Seite dessen sechs Werte als Radar und als lesbare Zahlenleiste. Bei Tanarhan, Ælvinger und Skjorn fehlt dort ein vollständiges Leistungsblatt; ihre Seiten kennzeichnen diesen Quellenstand ausdrücklich.
+
+Alle Pferdebilder werden lokal als WebP aus `assets/horse-profiles/` geladen und ohne Beschnitt dargestellt. Quellen und Maße sind in `assets/horse-profile-sources.json` dokumentiert. Die Seiten entstehen mit `node Bestiarium/scripts/build-horse-profiles.mjs`; `--check` vergleicht die erzeugten Seiten mit Daten und Vorlage. Neue Pferdedossiers benötigen ein `profil.json` sowie einen Eintrag in `modules/horse-profile/horse-profile-registry.mjs`.
 
 ## Bilder
 
@@ -72,5 +79,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/topic-articles.test.mjs`
 
 `node --test Bestiarium/tests/natural-species.test.mjs`
+
+`node --test Bestiarium/tests/horse-profiles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

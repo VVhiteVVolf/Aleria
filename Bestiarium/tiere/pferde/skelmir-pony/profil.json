@@ -1,0 +1,210 @@
+{
+  "id": "skelmir-pony",
+  "name": "Skelmir Pony",
+  "classification": "Pferderasse aus Fjordheim",
+  "continent": "Estryll",
+  "region": "Fjordheim",
+  "folio": "P-08",
+  "quote": "Klein genug für den Pfad, stark genug für die Last.",
+  "quoteAttribution": "Fjordheimer Fuhrmannsspruch",
+  "summary": "Das Skelmir-Pony ist die direkte nordische Abspaltung des Hest und stellt dessen kleinste, aber widerstandsfähigste Linie dar. Es ist kein Zufallsprodukt wie das Crafan, sondern das Ergebnis harter Umweltselektion: Kälte, Gebirge, Isolation und Mangel.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/skelmir-pony.webp",
+    "width": 1024,
+    "height": 506,
+    "alt": "Überlieferte Bildtafel des Skelmir Pony",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Skelmir Pony"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gewöhnlich",
+    "price": "100–300 Kupferstücke",
+    "tags": [
+      "Arbeit",
+      "Transport",
+      "Nord"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      3,
+      6,
+      4,
+      3,
+      6,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Skelmir-Pony ist die direkte nordische Abspaltung des Hest und stellt dessen kleinste, aber widerstandsfähigste Linie dar. Es ist kein Zufallsprodukt wie das Crafan, sondern das Ergebnis harter Umweltselektion: Kälte, Gebirge, Isolation und Mangel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Man kann es treffend als „Hest in Miniatur“ bezeichnen – ohne viel Eleganz, aber mit überraschender Substanz."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ursprünglich entstanden Skelmir-Ponys in den Gebirgsregionen von Fjordheim (ehemals Vennyr) , als sich Hest-Pferde durch natürliche Barrieren vom südlichen Bestand trennten. In noch härteren klimatischen Bedingungen als in Aldrimar verkümmerten Größe und Masse – nicht jedoch Kraft und Zähigkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Isolation war vollständig genug, um eine stabile Ponylinie hervorzubringen."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gedrungen, kompakt, starkknochig. Breite Brust, kurzer Hals, kräftige Beine. Dichtes Fell, oft zottig, mit typischer nordischer Farbpalette. Keine Eleganz, keine Feinheit – alles ist auf Funktion ausgelegt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für seine Größe ist der Skelmir überdurchschnittlich kräftig."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nahezu identisch mit dem Hest:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ruhig",
+            "stoisch",
+            "unerschrocken",
+            "wenig verspielt"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Skelmir reagiert kaum panisch, sondern steht Situationen aus. Er ist kein Fluchttier, sondern ein „Aushalter“ ."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skelmir ist kein Prestigepony , aber ein brauchbares Arbeitstier für arme Höfe, abgelegene Siedlungen und Gebirgshöfe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Typische Einsätze:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "leichte Feldarbeit",
+            "Ziehen kleiner Karren",
+            "Transport in gebirgigem Gelände",
+            "Reittier für Kinder oder kleine Erwachsene"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Kriegstier ungeeignet, als Alltagstier solide."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr robust",
+            "Kälteresistent",
+            "Anspruchslos in Haltung",
+            "Gute Kraft-Größe-Relation"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsam",
+            "Geringe Traglast",
+            "Kein Prestige",
+            "Für ernsthafte Reiterei limitiert"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skelmir-Ponys sind extrem pflegeleicht. Sie kommen mit rauem Futter aus, benötigen wenig Schutz und vertragen schlechte Bedingungen besser als fast jede andere Ponyart Estrylls."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ideal für Regionen, in denen alles andere eingeht ."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Wird oft als „Bauern-Hest“ verspottet.",
+            "In Fjordheim schwören Bauern auf den Skelmir, da er günstiger und pflegleichter ist als ein Hest.",
+            "Kinder lernen auf Skelmir-Ponys reiten, weil sie kaum durchgehen.",
+            "Nordmänner sind nicht bekannt für ihre Reiterei, sie bevorzugen Hest Pferde nutzen die Skelmir Ponys aber für niedere Arbeiten."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

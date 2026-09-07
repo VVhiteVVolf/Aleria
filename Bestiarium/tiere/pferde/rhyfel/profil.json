@@ -1,0 +1,199 @@
+{
+  "id": "rhyfel",
+  "name": "Rhyfel",
+  "classification": "Pferderasse aus Cenyr",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "P-03",
+  "quote": "Ein Rhyfel gewinnt keinen Blick – aber jeden langen Weg.",
+  "quoteAttribution": "Cenyrisches Reitersprichwort",
+  "summary": "Der Rhyfel gilt als das verlässlichste und vielseitigste Pferd der Königreiche Cenyr und Vennyr . Er verbindet die rohe Widerstandskraft des nordischen Hest mit der Eleganz und Reitqualität des avallornischen Ceffyl . Dadurch ist er gleichermaßen auf dem Schlachtfeld, im Alltag wie auch im repräsentativen Dienst geschätzt.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/rhyfel.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Rhyfel",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Rhyfel"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Mittelgroß bis groß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kräftig, tragfähig"
+    },
+    {
+      "label": "Temperament",
+      "value": "Ruhig, zuverlässig"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Hoch"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Krieg, Arbeit, Reise"
+    },
+    {
+      "label": "Stärken",
+      "value": "Ausdauer, Robustheit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Weniger elegant als Ceffyl"
+    }
+  ],
+  "market": {
+    "tier": "Gehoben",
+    "price": "800–4.000 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Arbeit"
+    ],
+    "age": "30–35 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      6,
+      7,
+      6,
+      6,
+      6,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel gilt als das verlässlichste und vielseitigste Pferd der Königreiche Cenyr und Vennyr . Er verbindet die rohe Widerstandskraft des nordischen Hest mit der Eleganz und Reitqualität des avallornischen Ceffyl . Dadurch ist er gleichermaßen auf dem Schlachtfeld, im Alltag wie auch im repräsentativen Dienst geschätzt."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel gilt als das verlässlichste und vielseitigste Pferd der Königreiche Cenyr und Vennyr . Er verbindet die rohe Widerstandskraft des nordischen Hest mit der Eleganz und Reitqualität des avallornischen Ceffyl . Dadurch ist er gleichermaßen auf dem Schlachtfeld, im Alltag wie auch im repräsentativen Dienst geschätzt."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel ist kräftig gebaut, mit breiter Brust, starken Läufen und einem tragfähigen Rücken. Gleichzeitig bewahrt er einen vergleichsweise eleganten Hals und ein ruhiges, ausdrucksstarkes Haupt. Sein Fell ist meist dicht und wetterfest, was ihn besonders für kühlere Regionen geeignet macht."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel ist kräftig gebaut, mit breiter Brust, starken Läufen und einem tragfähigen Rücken. Gleichzeitig bewahrt er einen vergleichsweise eleganten Hals und ein ruhiges, ausdrucksstarkes Haupt. Sein Fell ist meist dicht und wetterfest, was ihn besonders für kühlere Regionen geeignet macht."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Kriegs- und Kavalleriepferd",
+            "Reit- und Zugpferd für Adel und Militär",
+            "Schwerer Transport und Feldarbeit",
+            "Verlässliches Reisepferd"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel gilt als ideale Wahl für Ritter, die Zuverlässigkeit über Prestige stellen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Ausdauer",
+            "Große Belastbarkeit",
+            "Wetter- und kälteresistent",
+            "Vielseitig einsetzbar"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger schnell und edel als ein reiner Ceffyl",
+            "Weniger geeignet für feinste Turnierdisziplinen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhyfel ist genügsam und vergleichsweise pflegeleicht. Er benötigt regelmäßige Bewegung, solide Fütterung und einfache Stallbedingungen. Auch in militärischen Lagern oder auf langen Feldzügen bleibt er belastbar und zuverlässig."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Ritter wechseln im Alter vom Ceffyl bewusst auf einen Rhyfel.",
+            "In Cenyr gilt ein guter Rhyfel als „Pferd fürs Leben“.",
+            "Tiere aus den Linien von Rhosmeres Rössern erzielen deutlich höhere Preise."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

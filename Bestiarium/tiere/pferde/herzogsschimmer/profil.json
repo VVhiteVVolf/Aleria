@@ -1,0 +1,154 @@
+{
+  "id": "herzogsschimmer",
+  "name": "Herzogsschimmer",
+  "classification": "Adelslinie Aldingens",
+  "continent": "Lothir",
+  "region": "Aldingen",
+  "folio": "P-21",
+  "quote": "Nicht königlich – doch nahe genug, um es zu wissen.",
+  "quoteAttribution": "Sprichwort aus Aldingen",
+  "summary": "Der Herzogsschimmer entstand in Aldingen als ambitionierter Versuch, aus einer Linie des Fürstenglanz erneut rein königliche Rösser hervorzubringen. Dieses Vorhaben scheiterte – doch aus dem Fehlschlag ging eine neue, eigenständige Rasse hervor.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/herzogsschimmer.webp",
+    "width": 1024,
+    "height": 501,
+    "alt": "Überlieferte Bildtafel des Herzogsschimmer",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Herzogsschimmer"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Prestige",
+    "price": "5.000–35.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Prestige"
+    ],
+    "age": "30–45 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      7,
+      7,
+      7,
+      7,
+      6,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herzogsschimmer entstand in Aldingen als ambitionierter Versuch, aus einer Linie des Fürstenglanz erneut rein königliche Rösser hervorzubringen. Dieses Vorhaben scheiterte – doch aus dem Fehlschlag ging eine neue, eigenständige Rasse hervor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heute gilt der Herzogsschimmer als edles Schlachtross des Adels. Er teilt sich eine gewisse Attitüde mit dem Erlenglanz, ist jedoch robuster und militärisch brauchbarer. Für einfache Kavalleristen ist er ungeeignet – sein Wesen verlangt Pflege, Geduld und Hingabe."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gezüchtet in Aldingen , basierend auf einer abgeleiteten Linie des Fürstenglanz , sollte der Herzogsschimmer ursprünglich eine Wiederherstellung königlicher Reinheit darstellen. Zwar gelang es nicht, weitere Fürstenglänze hervorzubringen, doch stabilisierte sich eine neue Linie mit eigener Identität."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Linie entwickelte sich bewusst als adlige Kavallerierasse – unterhalb der königlichen Sphäre, aber über dem gewöhnlichen Militärross."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herzogsschimmer ist groß und athletisch, mit klar definierter Muskulatur und eleganter Linie. Er wirkt weniger überirdisch als das Fürstenglanz, aber imposanter als der Erlenglanz. Sein schwarzes Fell ist tief und glänzend, die Mähne und der Schweif ausnahmslos silbrig – zumindest bei reinen Linien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nicht vollblütige Tiere zeigen gelegentlich Abweichungen, was in adligen Kreisen als Makel gilt."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herzogsschimmer besitzt Stolz und Sensibilität. Er verlangt Aufmerksamkeit und respektvolle Führung. Grobe Behandlung oder militärische Härte führen schnell zu Widerstand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er eignet sich für disziplinierte Reiter mit Geduld – nicht für raue Feldkavalleristen."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Primär als Schlachtross des Adels genutzt. Geeignet für Turnier, repräsentative Feldzüge und ausgewählte Gefechte. Nicht als Massenkavallerie gedacht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Haltungskosten und Pflegeansprüche machen ihn zu einem Statussymbol – nur wohlhabende Häuser können sich diese Linie leisten."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoher Pflegeaufwand. Das Fell benötigt regelmäßige Reinigung und sorgfältige Pflege, um den silbrigen Glanz zu erhalten. Die Tiere reagieren empfindlich auf Vernachlässigung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erfahrene Stallmeister sind unerlässlich. Ohne angemessene Zuwendung verlieren Herzogsschimmer schnell an Leistungsfähigkeit und Temperament."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Herzogsschimmer wird niemals in brauner oder heller Farbe als rein anerkannt.",
+            "Die silberne Mähne gilt als Zeichen adliger Reinheit.",
+            "Einige Adelsfamilien führen ihn als Wappentier."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "lothir"
+}

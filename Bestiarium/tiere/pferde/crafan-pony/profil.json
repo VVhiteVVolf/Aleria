@@ -1,0 +1,194 @@
+{
+  "id": "crafan-pony",
+  "name": "Crafan Pony",
+  "classification": "Pferderasse aus Klaueninseln",
+  "continent": "Estryll",
+  "region": "Klaueninseln",
+  "folio": "P-07",
+  "quote": "Es überlebt. Mehr verlangt die Insel nicht.",
+  "quoteAttribution": "Spruch der Klaueninseln",
+  "summary": "Das Crafan-Pony ist keine bewusst gezüchtete Rasse, sondern das Resultat jahrhundertelanger Vernachlässigung, Isolation und ständiger Bedrohung. Es ist kein „niedliches“ Pony im klassischen Sinn, sondern ein Überbleibsel – gerade so lebensfähig, dass es nicht ausgestorben ist.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/crafan-pony.webp",
+    "width": 1024,
+    "height": 506,
+    "alt": "Überlieferte Bildtafel des Crafan Pony",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Crafan Pony"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gewöhnlich",
+    "price": "50–200 Kupferstücke",
+    "tags": [
+      "Arbeit"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      2,
+      4,
+      2,
+      3,
+      8,
+      5
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Crafan-Pony ist keine bewusst gezüchtete Rasse, sondern das Resultat jahrhundertelanger Vernachlässigung, Isolation und ständiger Bedrohung. Es ist kein „niedliches“ Pony im klassischen Sinn, sondern ein Überbleibsel – gerade so lebensfähig, dass es nicht ausgestorben ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Existenz ist weniger ein Triumph der Anpassung als ein Beweis dafür, wie wenig es braucht, um eine Pferdelinie am Leben zu halten."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Crafan-Pony entstand nicht durch gezielte Zucht, sondern durch Umstände. Vermutlich brachten die Crannath-Alben einst Tirashan-Pferde auf die Klaueninseln. Dort trafen diese auf knappe Nahrung, Isolation und völlige Bedeutungslosigkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spätere Besiedler – zuerst Nordmänner, dann Avallornier – ignorierten die Tiere weitgehend. Erst die Avallornier gaben ihnen einen Namen: Crafan . Vorher waren sie vermutlich einfach „da“."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klein, gedrungen, unscheinbar. Kurze Beine, breiter Rumpf, wenig Eleganz. Das Crafan-Pony zeigt typische Verkümmerungsmerkmale: geringe Schulterhöhe, schwache Muskulatur, dickes Fell ohne besondere Qualität."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es ist nicht deformiert – nur maximal durchschnittlich."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Faul, ängstlich, opportunistisch. Das Crafan-Pony flieht bei Unsicherheit, erstarrt bei Gefahr und zeigt kaum Eigeninitiative. Dieses Verhalten ist kein Charakterfehler, sondern Überlebensstrategie: Auf den Klaueninseln wurde alles gefressen, was schneller oder mutiger war."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mut ist ausgestorben. Vorsicht blieb."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Praktisch keiner."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kinderritt",
+            "leichte Lasten",
+            "Notlösung für sehr arme Haushalte"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Reitpony für Erwachsene ungeeignet. Für Arbeit zu ineffizient. Für Krieg vollkommen nutzlos."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Anspruchslos gegenüber Klima",
+            "Überlebensfähig bei schlechter Pflege",
+            "Geringe Anschaffungskosten"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Frisst im Verhältnis zu seinem Nutzen zu viel",
+            "Sehr langsam",
+            "Hohe Schreckhaftigkeit",
+            "Kaum trainierbar",
+            "Niedriger praktischer Wert"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Crafan-Ponys kommen mit minimaler Pflege aus, benötigen aber konstant Futter – paradoxerweise mehr, als ihr Nutzen rechtfertigt. Ohne Schutz sind sie leichte Beute für Raubtiere."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Regionen mit Trollen gelten sie als besonders gefährdet."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Trolle halten Crafan-Ponys gelegentlich wie Nutzvieh.",
+            "Auf den Klaueninseln gelten sie als „lebender Abfall vergangener Zeiten“.",
+            "Viele Händler verkaufen sie bewusst an unerfahrene Käufer.",
+            "In Estryll ist das Crafan-Pony der Running Gag unter Pferdezüchtern."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

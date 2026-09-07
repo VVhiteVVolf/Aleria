@@ -1,0 +1,166 @@
+{
+  "id": "sarkal",
+  "name": "Sarkal",
+  "classification": "Pferderasse aus Ishtaran",
+  "continent": "Tirnara",
+  "region": "Ishtaran",
+  "folio": "P-13",
+  "quote": "Eine Waffe mit Hufen.",
+  "quoteAttribution": "Spruch der Steppenläufer",
+  "summary": "Der Sarkal gilt als das schnellste Pferd Tirnaras und als Inbegriff militärischer Perfektion. Er ist kein Tier für den Alltag, kein Reittier für Händler oder Bauern – der Sarkal ist ein reines Kriegsinstrument , gezüchtet für Geschwindigkeit, Durchbruch und Verfolgung. Wo er erscheint, reitet der Adel oder das Heer.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/sarkal.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Sarkal",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Sarkal"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Außerordentlich",
+    "price": "5.000–35.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg"
+    ],
+    "age": "30–45 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      10,
+      9,
+      7,
+      9,
+      5,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sarkal gilt als das schnellste Pferd Tirnaras und als Inbegriff militärischer Perfektion. Er ist kein Tier für den Alltag, kein Reittier für Händler oder Bauern – der Sarkal ist ein reines Kriegsinstrument , gezüchtet für Geschwindigkeit, Durchbruch und Verfolgung. Wo er erscheint, reitet der Adel oder das Heer."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sarkal entstand aus der gezielten Kreuzung einheimischer tirnaranischer Linien mit einer bis heute unbekannten Fremdrasse , deren Ursprung außerhalb der bekannten Zuchttraditionen liegt. Systematisch veredelt wurde er durch die Gilde der Steppenläufer von Istharan , die ihn zu ihrem Nationalpferd erhoben. Die Zucht ist streng kontrolliert, Blutlinien werden bewacht wie militärische Geheimnisse."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sarkal ist hochgewachsen, sehnig und drahtig , mit langen Gliedmaßen und einer tiefen Brust für maximale Sauerstoffaufnahme. Seine Muskulatur ist nicht massig, sondern funktional und gespannt , ausgelegt auf Dauerlauf im Hochtempo. Der Hals ist lang, der Rücken straff, die Beine hart und trocken."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fokussiert, hitzig, ehrgeizig. Der Sarkal ist kein gutmütiges Pferd – er verlangt einen sicheren, erfahrenen Reiter. In der Schlacht reagiert er explosiv, bleibt aber erstaunlich kontrollierbar, solange klare Befehle gegeben werden. Zögerliche oder ungeübte Reiter werden schlicht abgeworfen."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Schwere und mittlere Kavallerie",
+            "Sipahi-Reiterei als Primärnutzer",
+            "Durchbruchsangriffe, Verfolgungsjagden, Flankenmanöver Zivil genutzt wird der Sarkal praktisch nie. Selbst im Adel gilt er weniger als Statussymbol denn als Waffe mit Hufen ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unübertroffene Höchstgeschwindigkeit",
+            "Hohe Ausdauer trotz Tempo",
+            "Kraftvoll genug für bewaffnete Reiter",
+            "Hervorragend für taktische Manöver"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Extrem teuer in Anschaffung und Unterhalt",
+            "Anspruchsvoll in Ausbildung",
+            "Für ungeübte Reiter gefährlich",
+            "Kaum geeignet für unwegsames Gelände oder Waldkampf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sarkale benötigen spezialisierte Stallungen , gezielte Fütterung und tägliches Training. Vernachlässigung führt schnell zu Leistungsabfall oder Aggression. Viele Tiere kennen nur Stall, Übungsfeld und Schlacht – Weidegang ist selten."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein voll ausgebildeter Sarkal wechselt fast nie den Besitzer.",
+            "In Istharan gilt es als Schande, einen Sarkal zu verkaufen, statt ihn an das Militär zu übergeben.",
+            "Manche Sipahi geben ihren Pferden eigene Ehrentitel – ein Zeichen absoluter Bindung."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

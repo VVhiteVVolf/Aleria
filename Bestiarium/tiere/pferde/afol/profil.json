@@ -1,0 +1,232 @@
+{
+  "id": "afol",
+  "name": "Afol",
+  "classification": "Pferderasse aus Solestia & Imperium",
+  "continent": "Tirnara",
+  "region": "Solestia & Imperium",
+  "folio": "P-11",
+  "quote": "Schnell genug für den Boten, geduldig genug für den Hof.",
+  "quoteAttribution": "Solestischer Händlerspruch",
+  "summary": "Der Afol ist das typische „Volks­pferd“ Tirnaras: kein Prunkross der Legionen, kein exklusives Gestüt-Geheimnis, sondern ein Tier, das man überall sieht – auf Feldwegen, in Olivenhainen, an Marktstraßen und vor einfachen Höfen. Sein schwarz-weiß geschecktes Fell und die graue Mähne machen ihn unverwechselbar, aber sein eigentlicher Ruf kommt von etwas anderem: Tempo . Der Afol ist schnell genug, um Boten, Händler und Reisende zuverlässig ans Ziel zu bringen – und zäh genug, um das auch bei Hitze und Staub nicht sofort zu bereuen.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/afol.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Afol",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Afol"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Schlank und elegant, dennoch solide Muskulatur"
+    },
+    {
+      "label": "Temperament",
+      "value": "Lebhaft, verspielt, neugierig; lernfähig, aber nicht immer geduldig"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Gut, auch für weniger erfahrene Reiter geeignet, solange klare Führung vorhanden ist"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Allzweckpferd der Zivilbevölkerung: Feldarbeit, Reisen, leichte Reiterei, Botengänge"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Geschwindigkeit, gute Ausdauer, vielseitig einsetzbar, pflegeleicht, vergleichsweise günstig"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kein spezialisiertes Kriegspferd, weniger standhaft im schweren Gefecht, temperamentvoll bei mangelnder Führung"
+    }
+  ],
+  "market": {
+    "tier": "Mittelklasse",
+    "price": "400–2.000 Kupferstücke",
+    "tags": [
+      "Arbeit",
+      "Transport",
+      "Kundschaft"
+    ],
+    "age": "25–30 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      5,
+      6,
+      4,
+      5,
+      7,
+      6
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Afol ist das typische „Volks­pferd“ Tirnaras: kein Prunkross der Legionen, kein exklusives Gestüt-Geheimnis, sondern ein Tier, das man überall sieht – auf Feldwegen, in Olivenhainen, an Marktstraßen und vor einfachen Höfen. Sein schwarz-weiß geschecktes Fell und die graue Mähne machen ihn unverwechselbar, aber sein eigentlicher Ruf kommt von etwas anderem: Tempo . Der Afol ist schnell genug, um Boten, Händler und Reisende zuverlässig ans Ziel zu bringen – und zäh genug, um das auch bei Hitze und Staub nicht sofort zu bereuen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist damit ein Pferd, das viele Aufgaben „gut genug“ erledigt und gerade deshalb in der Breite so beliebt ist."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine Wurzeln liegen in den fruchtbaren Regionen Solestias und den westlichen Gebieten, die unter dem Einfluss bzw. der Verwaltung des Imperium Argentum stehen. Dort wurden seit jeher Pferde gebraucht, die in warmem Klima nicht nur überleben, sondern arbeiten können: lange Wege zwischen Ortschaften, regelmäßige Transporte, täglicher Einsatz auf Feldern und in Dörfern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während das Imperium für den Krieg klar auf den Equo setzt, entwickelte sich der Afol in der Praxis als preisgünstigere, flexiblere Alternative . Er ist nicht „die zweite Wahl“ im Sinne von schlecht – eher die Wahl für Leute, die ein Pferd brauchen, das viel kann , ohne die Kosten eines militärischen oder hochgezüchteten Rassetiers zu tragen."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Afol wirkt elegant , aber nicht zerbrechlich. Er ist nicht so massiv wie ein reines Arbeitstier, jedoch auch nicht so fein, dass er beim Alltag sofort schlappmacht. Typisch sind:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "mittlerer, sportlicher Körperbau mit guter Beinlänge",
+            "sichtbare, alltagstaugliche Muskulatur (kein Turnier-Glanzkörper, eher „Bauernathlet“)",
+            "das markante Schwarz-Weiß-Scheckmuster und die graue Mähne , die ihm einen fast „gemalten“ Look geben In Bewegung zeigt er, wofür er gebaut ist: leichter, schneller Tritt , flüssige Übergänge, und ein Gangbild, das Reisen angenehm macht, statt nur Kraft zu drücken."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Afol ist verspielt – und das ist Fluch und Segen. Er ist wach, neugierig, reagiert schnell auf Reize, und genau das macht ihn im Alltag beliebt: Er wirkt nicht stumpf, sondern „anwesend“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gleichzeitig ist er kein Pferd, das man wie einen Sack Kartoffeln behandelt. Wer ihn ohne klare Führung reitet oder führt, bekommt gern ein Tier, das seinen eigenen Kopf testet : mal ein Ausweichschritt, mal ein unnötiger Satz, mal dieses „ich hab da was gesehen“-Theater."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gut ausgebildet und fair behandelt wird daraus aber ein sehr zuverlässiges Pferd – nur eben mit Charakter."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Afol ist das Allzweckpferd für das tägliche Leben. Er übernimmt vieles, was der Equo ebenfalls könnte – aber eben ohne dessen Preis und ohne den Anspruch, auf dem Schlachtfeld „erste Reihe“ zu stehen. Typische Einsätze:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reit- und Reisepferd für Händler, Boten, einfache Reiter",
+            "Hof- und Feldarbeit (ziehen, tragen, transportieren – in moderatem Rahmen)",
+            "leichte Aufgaben in Dörfern und Kleinstädten: Wagen, Lieferungen, Marktwege Wenn man ihn in militärischen Kontexten sieht, dann eher als Begleit- und Versorgungspferd oder für leichte Reiterei , nicht als Hauptross der schwereren Formationen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "hohe Geschwindigkeit (für seine Klasse beeindruckend)",
+            "gute Ausdauer in warmem Klima",
+            "vielseitig : Reisen, Arbeit, Alltag – alles drin",
+            "preislich erreichbar , deshalb weit verbreitet",
+            "robust genug , um nicht ständig Sonderbehandlung zu brauchen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "nicht für schwere Kriegsrolle optimiert (Standhaftigkeit im Chaos begrenzt)",
+            "temperamentvoll: bei schlechter Führung unruhig/verspielt bis nervig",
+            "im direkten Vergleich wirkt er neben einem Equo weniger „dominant“ und weniger „unerschütterlich“"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Afol ist grundsätzlich pflegeleicht , aber er dankt Routine. In warmen Regionen ist weniger das „Warmhalten“ das Problem, sondern eher Belastung und Erholung : regelmäßiges Wasser, Schattenphasen, nicht dauerhaft in der Hitze prügeln."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Fell ist optisch auffällig, aber praktisch: Staub und Schmutz sieht man schneller, was viele Halter nervt – dafür fällt auch schneller auf, wenn etwas nicht stimmt (Scheuerstellen, Dreckkrusten, kleine Verletzungen)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kurz: Der Afol will keine Luxuspflege, aber er will, dass man ihn nicht wie ein Werkzeug behandelt."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In vielen Gegenden gilt der Afol als „ Volksversion “ des Equo: Nicht so prestigeträchtig, aber im Alltag oft die vernünftigere Wahl.",
+            "Händler mögen ihn, weil er „ schnell genug “ ist, ohne die Anschaffung eines Prestige-Rosses zu ruinieren.",
+            "Sein verspieltes Temperament sorgt dafür, dass manche Leute ihn lieben („ der hat Leidenschaft “) und andere ihn hassen („ der macht doch nur Faxen “)."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

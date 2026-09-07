@@ -1,0 +1,172 @@
+{
+  "id": "xanathos",
+  "name": "Xanathos",
+  "classification": "Pferderasse aus Galadorn, Klythesia & Phalantia",
+  "continent": "Tirnara",
+  "region": "Galadorn, Klythesia & Phalantia",
+  "folio": "P-14",
+  "quote": "Was es nicht schnell bewegt, bewegt es dennoch.",
+  "quoteAttribution": "Phalantischer Fuhrmannsspruch",
+  "summary": "Der Xanathos ist das Arbeitspferd Tirnaras – kraftvoll, ausdauernd und von unvergleichlicher Zugstärke. Während andere Rassen durch Geschwindigkeit oder Eleganz glänzen, steht der Xanathos für rohe Muskelkraft und Verlässlichkeit . In den südwestlichen Regionen Tirnaras ist er allgegenwärtig und bildet dort das Rückgrat von Landwirtschaft, Handel und Transport.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/xanathos.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Xanathos",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Xanathos"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Mittelklasse",
+    "price": "500–4.000 Kupferstücke",
+    "tags": [
+      "Schwerlast",
+      "Transport"
+    ],
+    "age": "20–30 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      2,
+      7,
+      9,
+      2,
+      6,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Xanathos ist das Arbeitspferd Tirnaras – kraftvoll, ausdauernd und von unvergleichlicher Zugstärke. Während andere Rassen durch Geschwindigkeit oder Eleganz glänzen, steht der Xanathos für rohe Muskelkraft und Verlässlichkeit . In den südwestlichen Regionen Tirnaras ist er allgegenwärtig und bildet dort das Rückgrat von Landwirtschaft, Handel und Transport."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine Heimat liegt in den warmen, trockenen Landstrichen Galadorns , Klythesias und Phalantias . Über Generationen wurde der Xanathos gezielt auf Körpermasse , Knochenstärke und Zugleistung gezüchtet. Anders als viele Prestige-Rassen entstand er nicht für den Adel, sondern aus den Bedürfnissen der arbeitenden Bevölkerung – Felder, Wagenzüge, Steinbrüche."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Xanathos besitzt einen breiten Brustkorb , massive Schultern und extrem kräftige Hinterläufe. Sein Hals ist kurz und muskulös, der Kopf schwer, aber ruhig wirkend. Die Beine sind dickknochig, die Hufe groß und widerstandsfähig. Er wirkt weniger „pferdig“ als andere Rassen – eher wie ein lebendiges Zugtier, gebaut für Last statt Lauf."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trotz seiner enormen Kraft ist der Xanathos ruhig , geduldig und arbeitswillig . Er reagiert langsam, aber zuverlässig, lässt sich kaum aus der Ruhe bringen und zeigt selbst unter Stress selten Panik. Für unerfahrene Reiter ist er leichter zu handhaben als nervösere Rassen – solange man seine Trägheit respektiert."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sein Haupteinsatz liegt klar im Arbeitseinsatz :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ziehen schwerer Wagen",
+            "Pflügen trockener Böden",
+            "Transport von Stein, Erz und Handelswaren"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In Regionen mit geringer Auswahl wird er auch als Kavalleriepferd genutzt – nicht aus Idealismus, sondern aus Pragmatismus. Im Kampf ist er langsam, aber schwer aufzuhalten, besonders in Formationen einfacher Infanteriereiterei."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enorme Zug- und Tragkraft",
+            "Hohe Hitzetoleranz",
+            "Außergewöhnliche Ausdauer",
+            "Geringe Pflegeansprüche"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Geschwindigkeit",
+            "Kaum wendig",
+            "Für Elite-Kavallerie ungeeignet",
+            "Wenig Prestige im Vergleich zu Sarkal oder Shahzad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Xanathos ist kein Statussymbol – und genau das macht ihn unverzichtbar. Während Adel und Militär auf Sarkal oder Shahzad setzen, bleibt der Xanathos das Pferd der Bauern , Händler und Fuhrleute . Ohne ihn würde der Süden Tirnaras schlicht stillstehen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Trivia..."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

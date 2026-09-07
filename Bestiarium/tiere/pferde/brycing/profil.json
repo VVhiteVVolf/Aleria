@@ -1,0 +1,175 @@
+{
+  "id": "brycing",
+  "name": "Brycing",
+  "classification": "Pferderasse aus Kent",
+  "continent": "Aldervan",
+  "region": "Kent",
+  "folio": "P-25",
+  "quote": "Macht erkennt man am Reiter – Herrschaft an seinem Ross.",
+  "quoteAttribution": "Spruch aldorvanischer Hochzüchter",
+  "summary": "Der Brycing gilt in vielen Reichen als das vollendetste Pferd der bekannten Welt . Er ist das Ergebnis einer extrem anspruchsvollen Zuchtlinie und vereint die rohe Kraft des Cyning mit der kampferprobten Eleganz des Drake . Wo andere Rassen spezialisieren, dominiert der Brycing breitflächig .",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/brycing.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Überlieferte Bildtafel des Brycing",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Brycing"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Erstklassig",
+    "price": "10.000–100.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Prestige"
+    ],
+    "age": "60–75 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      10,
+      9,
+      9,
+      9,
+      9
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brycing gilt in vielen Reichen als das vollendetste Pferd der bekannten Welt . Er ist das Ergebnis einer extrem anspruchsvollen Zuchtlinie und vereint die rohe Kraft des Cyning mit der kampferprobten Eleganz des Drake . Wo andere Rassen spezialisieren, dominiert der Brycing breitflächig ."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Zucht des Brycing ist jung im Vergleich zu Urpferden, aber von beispielloser Präzision. Ziel war es, ein Pferd zu schaffen, das keine echten Schwächen besitzt: groß genug für schwere Rüstung, schnell genug für Durchbrüche, intelligent genug für komplexe Manöver. Diese Balance gelang nur wenigen Zuchtlinien – und machte den Brycing legendär."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brycing ist groß, kraftvoll und harmonisch proportioniert . Seine Muskulatur ist tief und belastbar, ohne plump zu wirken. Der Rücken trägt mühelos schwere Reiter, die Beine sind lang, schnell und außergewöhnlich widerstandsfähig. Er wirkt majestätisch, aber nicht überzogen – ein Kriegstier ohne Zierrat ."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Intelligent, aufmerksam und bemerkenswert lernfähig. Der Brycing erkennt Gefahr, reagiert präzise auf seinen Reiter und zeigt weder Panik noch Trägheit. Er ist mutig, aber nicht kopflos , aggressiv im Kampf, kontrolliert im Marsch. Seine Bindung an den Reiter ist stark, aber nicht hinderlich."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brycing ist eines der wenigen Pferde, die in nahezu jeder militärischen Rolle brillieren:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "schwere und mittlere Kavallerie",
+            "Durchbruchs- und Stoßtruppen",
+            "Offiziers- und Kommandantenreitpferd",
+            "Turnier- und Repräsentationsross"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist gleichermaßen auf Schlachtfeld, Turnierplatz und Feldzug einsetzbar."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Herausragende Gesamtleistung",
+            "Hohe Geschwindigkeit bei großer Masse",
+            "Außergewöhnliche Ausdauer",
+            "Sehr hohe Intelligenz",
+            "Lange Lebensspanne"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Extrem teuer in Anschaffung und Haltung",
+            "Komplexe Zucht, geringe Verfügbarkeit",
+            "Überqualifiziert für einfache Aufgaben"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brycing verlangt erstklassige Versorgung . Hochwertiges Futter, regelmäßiges Training und erfahrene Stallmeister sind Pflicht. Vernachlässigung zeigt sich zwar langsamer als bei empfindlichen Edelrassen – doch ein schlecht gehaltener Brycing ist verschwendetes Vermögen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Aldervan sagt man: „Ein Brycing entscheidet Schlachten, bevor sie beginnen.“",
+            "Manche Reiche führen Volkszählungen durch, in Aeldrunmar Zählt man auch die Rösser mit."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

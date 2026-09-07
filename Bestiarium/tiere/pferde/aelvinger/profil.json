@@ -1,0 +1,127 @@
+{
+  "id": "aelvinger",
+  "name": "Ælvinger",
+  "classification": "Urpferd Aldervans",
+  "continent": "Aldervan",
+  "region": "Urpferd Aldervans",
+  "folio": "P-22",
+  "quote": "Vor dem Kaiser stand sein Ross – nicht umgekehrt.",
+  "quoteAttribution": "Überlieferte Hofweisheit",
+  "summary": "Der Ælvinger gilt als das Urpferd Aldervans – ein kräftiges, majestätisches Ross, dessen Ursprung im Nebel von Mythos und Kaiserzeit liegt. Manche sehen in ihm einen entfernten Nachfahren des Eiarach, andere behaupten, er sei eine göttliche Schöpfung, geschaffen um an der Seite von Aelthar und Thyrael , den Göttern von Feuer und Donner, zu dienen.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/aelvinger.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Ælvinger",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Ælvinger"
+  },
+  "facts": [
+    {
+      "label": "Status",
+      "value": "Seit ~1000 Jahren ausgestorben"
+    },
+    {
+      "label": "Abkömmlinge",
+      "value": "Cheval, Cyning, Brycing, Equo, Sale"
+    }
+  ],
+  "market": {
+    "tier": "Nicht am Markt",
+    "price": "Keine Überlieferung",
+    "tags": [
+      "Historische Linie"
+    ]
+  },
+  "performance": null,
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ælvinger gilt als das Urpferd Aldervans – ein kräftiges, majestätisches Ross, dessen Ursprung im Nebel von Mythos und Kaiserzeit liegt. Manche sehen in ihm einen entfernten Nachfahren des Eiarach, andere behaupten, er sei eine göttliche Schöpfung, geschaffen um an der Seite von Aelthar und Thyrael , den Göttern von Feuer und Donner, zu dienen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gesichert ist nur: Während der Kaiserzeit existierten echte Ælvinger als exklusive Zuchtlinie für Kaiser und Könige. Seit fast 1000 Jahren jedoch gilt die Rasse als vollständig ausgestorben."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ælvinger erscheint in zwei Überlieferungen: Entweder als erhabene Linie aus dem Blut des Eiarach – oder als göttliches Ross, das direkt von den Göttern Aldervans erschaffen wurde. Aus ihm sollen die bekannten Pferderassen Aldervans hervorgegangen sein: Cheval , Cyning , Brycing , Equo und Sale ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit dem Untergang des Alerischen Kaiserreiches zerbrachen sämtliche reinen Linien. Selbst die edlen Linien Aeldrunmars, die als die stärksten galten, erloschen. Aus den letzten Überresten entstanden schließlich Cyning und Brycing – heute die besten Pferde, die noch erwerbbar sind."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Überlieferungen beschreiben den Ælvinger als kräftig, großrahmig und von beeindruckender Präsenz. Breite Brust, mächtiger Hals und eine Muskulatur, die sowohl Eleganz als auch rohe Stärke vereinte. Er soll zugleich schneller als ein Cheval und stärker als ein Cyning gewesen sein – ob Legende oder Wahrheit, bleibt offen."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als stolz, feurig und unerschütterlich beschrieben. Kein gewöhnliches Kriegspferd, sondern ein Ross für Herrscher. Manche Chroniken schreiben ihm beinahe göttliche Wachsamkeit zu."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ausschließlich Reittier von Kaisern und Königen Aldervans. Symbol imperialer Macht. Mit dem Fall des Reiches verschwand auch sein letzter Einsatz."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Überliefert ist nur, dass seine Zucht streng kontrolliert und ausschließlich in kaiserlichen Gestüten betrieben wurde. Seit dem Untergang des Reiches existiert keine dokumentierte Linie mehr."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Letzte bestätigte Sichtung während der späten Kaiserzeit.",
+            "Die Linien Aeldrunmars galten als die reinsten.",
+            "Heute existieren nur noch Legenden und Wappenmotive."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

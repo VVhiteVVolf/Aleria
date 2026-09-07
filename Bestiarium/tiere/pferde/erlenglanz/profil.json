@@ -1,0 +1,192 @@
+{
+  "id": "erlenglanz",
+  "name": "Erlenglanz",
+  "classification": "Pferderasse aus Weisenfluh",
+  "continent": "Lothir",
+  "region": "Weisenfluh",
+  "folio": "P-18",
+  "quote": "Was soll das heißen ihr habt das Erlenglanz verloren?!",
+  "quoteAttribution": "Ein verduzter Gestütbesitzer",
+  "summary": "Der Erlenglanz ist eine der edelsten und zugleich unpraktischsten Pferderassen Lothirs. Heimisch im wohlhabenden Reich Weisenfluh , steht er weniger für Nutzen als für Status, Repräsentation und gesellschaftlichen Rang . Wer einen Erlenglanz reitet, will gesehen werden – nicht kämpfen, nicht arbeiten, nicht marschieren.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/erlenglanz.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Erlenglanz",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Erlenglanz"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Prestige",
+    "price": "5.000–60.000 Goldstücke",
+    "tags": [
+      "Parade",
+      "Prestige"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      3,
+      2,
+      9,
+      2,
+      2
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erlenglanz ist eine der edelsten und zugleich unpraktischsten Pferderassen Lothirs. Heimisch im wohlhabenden Reich Weisenfluh , steht er weniger für Nutzen als für Status, Repräsentation und gesellschaftlichen Rang . Wer einen Erlenglanz reitet, will gesehen werden – nicht kämpfen, nicht arbeiten, nicht marschieren."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gezüchtet in den gepflegten Gestüten Weisenfluhs, entstand der Erlenglanz aus der gezielten Auswahl besonders heller, feingliedriger Linien. Ziel war nie Funktionalität, sondern ästhetische Perfektion . Über Generationen wurde alles ausgesiebt, was Robustheit oder Erdverbundenheit verriet – übrig blieb ein Pferd, das mehr Schmuckstück als Tier ist."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erlenglanz besitzt einen schlanken, hochgezogenen Körper , lange Beine und einen feinen Hals. Sein Fell ist reinweiß bis elfenbeinfarben , seidig glänzend und extrem empfindlich. Die kurze, silbrig schimmernde Mähne unterstreicht seine fast künstliche Eleganz. Muskulatur ist vorhanden, aber nicht tief oder belastbar."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sensibel, nervös und stark auf seinen Reiter geprägt. Der Erlenglanz reagiert empfindlich auf Lärm, Blutgeruch und chaotische Situationen. In ruhiger Umgebung wirkt er stolz und ruhig, unter Stress jedoch schnell überfordert. Er verlangt einen erfahrenen, geduldigen Umgang."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erlenglanz wird fast ausschließlich für:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "höfische Auftritte",
+            "Turniere (Parade, nicht Tjost)",
+            "Festzüge",
+            "diplomatische Anlässe"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "eingesetzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im echten Krieg, auf langen Märschen oder in schlechtem Gelände ist er fehl am Platz ."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Außergewöhnliche Optik",
+            "Hohe Geschwindigkeit auf kurzer Distanz",
+            "Starkes Prestige- und Symboltier"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Ausdauer",
+            "Kaum belastbar",
+            "Hoher Pflegeaufwand",
+            "Panikanfällig im Kampf",
+            "Völlig ungeeignet als Arbeitspferd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erlenglanz benötigt:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "saubere, trockene Ställe",
+            "hochwertiges Futter",
+            "regelmäßige Fell- und Hufpflege",
+            "Schutz vor Kälte, Nässe und Hitze"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schon kleinere Vernachlässigung zeigt sich sofort im Fellglanz – was seinen Wert drastisch mindert."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Weisenfluh gilt ein befleckter Erlenglanz als gesellschaftlicher Makel.",
+            "Manche Adlige lassen ihre Pferde niemals reiten , sondern nur führen.",
+            "Bauern sagen spöttisch: „Er glänzt besser, als er läuft.“"
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "lothir"
+}

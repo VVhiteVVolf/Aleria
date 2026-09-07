@@ -1,0 +1,164 @@
+{
+  "id": "skuggr",
+  "name": "Skuggr",
+  "classification": "Grobschlächtiges Nordross Yrmandralls",
+  "continent": "Yrmandrall",
+  "region": "Norden",
+  "folio": "P-31",
+  "quote": "Er schiebt, was andere ziehen.",
+  "quoteAttribution": "Spruch nordischer Fuhrleute",
+  "summary": "Der Skuggr ist ein grobschlächtiges, recht großes Nordross: sperrig, kantig, mit dickem Fell und schwerem Körperbau. Er ist kein schnelles Pferd, aber ein verlässliches – langsam, zäh und gebaut für Arbeit.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/skuggr.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Skuggr",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Skuggr"
+  },
+  "facts": [
+    {
+      "label": "Abstammung",
+      "value": "Vermutlich Skjorn-Linien"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Arbeit, Zug, Last"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Norden; von Yrmandrall bis Estryll"
+    }
+  ],
+  "market": {
+    "tier": "Ungewöhnlich",
+    "price": "300–1.000 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Arbeit",
+      "Nord"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      3,
+      6,
+      7,
+      3,
+      3,
+      9
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skuggr ist ein grobschlächtiges, recht großes Nordross: sperrig, kantig, mit dickem Fell und schwerem Körperbau. Er ist kein schnelles Pferd, aber ein verlässliches – langsam, zäh und gebaut für Arbeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Nordmänner nutzen ihn vor allem als Arbeitspferd. Für Kavalleristen taugt er zur Not, doch ist er dafür zu träge und zu wenig wendig, um wirklich zu glänzen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wie bei vielen Geschöpfen Yrmandralls lässt sich auch beim Skuggr kaum sicher sagen, woher er genau stammt. Die Forschergilden haben dort oben nur schlechten Zugang, und verlässliche Zuchtbücher existieren praktisch nicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die gängigste Annahme ist, dass der Skuggr – wie Hross und Skaer – aus frühen Skjorn -Linien hervorging. Manche vermuten, es seien jene Linien gewesen, die in etwas milderen Regionen lebten, wo mehr Nahrung verfügbar war. Dort könnte sich der Skuggr zu einem größeren, schwereren Arbeitstier entwickelt haben."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skuggr ist groß, schwer und breit gebaut. Sein Körper wirkt wie ein Block aus Muskel und Fell: massige Schulter, dicker Hals, tiefe Brust. Die Beine sind kräftig, mit breiten Hufen für Schnee und weichen Boden. Sein Fell ist dicht und grob, oft dunkler in Erscheinung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist nicht elegant, nicht schnell, aber nahezu unbeeindruckt von Kälte, Wind und Last."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stur, stoisch und wenig beeindruckbar. Der Skuggr arbeitet zuverlässig, wenn er seinen Takt gefunden hat, hasst aber Hektik. Mit grober Hand wird er widerspenstig, mit ruhiger Konsequenz wird er zu einem der besten Arbeitstiere des Nordens."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Primär genutzt als Zug- und Arbeitspferd: Wagen, Holz, Vorräte, Lasten auf schlechten Wegen. Im Heer dient er eher als Pack- und Versorgungsross."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für Kavalleristen ist er „okay“ – solide im Marsch, standhaft, aber zu langsam und zu schwerfällig, um in schnellen Manövern zu glänzen."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Winterhart und genügsam. Der Skuggr frisst viel, aber er verwertet auch grobes Futter gut. Sein dickes Fell verlangt regelmäßiges Ausbürsten, sonst verfilzt es. Im Süden wird er selten gezüchtet – dort gibt es bessere Auswahl –, doch im Norden gilt er als verlässliche, robuste Linie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Auftreten ist heute weit verbreitet: in Yrmandrall, im Norden, im nördlichen Estryll, in Mathringen und vereinzelt auch weiter südlich."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Gilt unter Fuhrleuten als „das Pferd, das nicht diskutiert – nur schiebt“.",
+            "In südlichen Gestüten wird er selten gehalten, außer als Arbeitstier in kalten Regionen.",
+            "Viele Gelehrte führen ihn als „milde Skjorn-Abspaltung“ – beweisen kann es niemand."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "yrmandrall"
+}

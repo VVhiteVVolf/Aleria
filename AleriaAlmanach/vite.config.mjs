@@ -11,6 +11,7 @@ import { NORDMAENNER_CLASS_IDS } from './modules/classes/nordmaenner/nordmaenner
 import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/profile-registry.mjs';
 import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-article-registry.mjs';
 import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natural-species-registry.mjs';
+import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -82,6 +83,9 @@ export default defineConfig({
         ])),
         ...Object.fromEntries(NATURAL_SPECIES_IDS.map(id => [
           `bestiary-animal-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere', id, 'index.html')
+        ])),
+        ...Object.fromEntries(HORSE_PROFILE_IDS.map(id => [
+          `bestiary-horse-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/pferde', id, 'index.html')
         ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [

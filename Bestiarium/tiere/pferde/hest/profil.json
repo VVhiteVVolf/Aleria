@@ -1,0 +1,200 @@
+{
+  "id": "hest",
+  "name": "Hest",
+  "classification": "Pferderasse aus Aldrimar & Ceitheach",
+  "continent": "Estryll",
+  "region": "Aldrimar & Ceitheach",
+  "folio": "P-04",
+  "quote": "Kein schönes Ross – aber eines, das dich nach Hause bringt.",
+  "quoteAttribution": "Nordisches Sprichwort",
+  "summary": "Der Hest , auch Nordkleffer genannt, ist das klassische Pferd der kalten Regionen Estrylls. Er ist kein Tier des Prestiges, sondern eines der Notwendigkeit: robust, genügsam und nahezu unverwüstlich. Wo andere Pferde versagen, bleibt der Hest standhaft.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/hest.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel des Hest",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Hest"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kräftig, gedrungen"
+    },
+    {
+      "label": "Temperament",
+      "value": "Ruhig, stoisch"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Einfach"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Arbeit, Transport, einfache Reiterei"
+    },
+    {
+      "label": "Stärken",
+      "value": "Ausdauer, Robustheit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsam, wenig elegant"
+    }
+  ],
+  "market": {
+    "tier": "Ungewöhnlich",
+    "price": "300–1.000 Kupferstücke",
+    "tags": [
+      "Arbeit",
+      "Kavallerie",
+      "Transport"
+    ],
+    "age": "25–30 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      4,
+      7,
+      5,
+      4,
+      7,
+      9
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hest , auch Nordkleffer genannt, ist das klassische Pferd der kalten Regionen Estrylls. Er ist kein Tier des Prestiges, sondern eines der Notwendigkeit: robust, genügsam und nahezu unverwüstlich. Wo andere Pferde versagen, bleibt der Hest standhaft."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hest ist eine alte nordische Pferderasse, gezüchtet für raue Klimazonen und karge Böden. Seine Verbreitung konzentriert sich auf Nordcenyr , Aldrimar , Ceitheach sowie das ehemalige Vennyr/Fjordheim . Über Generationen wurde er nicht auf Schönheit, sondern auf Überleben selektiert."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hest ist gedrungen und kräftig gebaut. Breite Brust, starke Schultern und kurze, stabile Beine geben ihm enorme Trittsicherheit. Sein dichtes, oft zottiges Fell schützt ihn zuverlässig vor Kälte, Schnee und Wind. Eleganz ist ihm fremd – Stabilität nicht."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ruhig, stoisch und nervenfest. Der Hest reagiert gelassen auf Lärm, Chaos und schlechte Witterung. Er ist gutmütig, aber nicht träge, und verzeiht auch unerfahrenen Reitern viele Fehler. Panik oder Scheuen sind selten."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Arbeitspferd für Bauern und Fuhrleute",
+            "Reitpferd für einfache Soldaten, Boten und Grenzwächter",
+            "Bevorzugtes Pferd der aldrimischen Thegn",
+            "Zugtier in kalten, unwegsamen Regionen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Kriegspferd nur bedingt geeignet – seine Stärke liegt im Durchhalten, nicht im Sturmangriff."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Extreme Kälteresistenz",
+            "Hohe Ausdauer",
+            "Geringe Pflegeansprüche",
+            "Sehr gutmütig und zuverlässig"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsam",
+            "Wenig wendig",
+            "Kaum geeignet für Turniere oder schwere Kavallerie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hest ist genügsam. Er kommt mit einfachem Futter aus, verträgt schlechte Unterstände und bleibt auch bei minimaler Pflege einsatzfähig. Regelmäßige Fellpflege ist in kalten Regionen dennoch ratsam, um Verfilzungen zu vermeiden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Aldrimar gilt ein Hof ohne Hest als schlecht vorbereitet auf den Winter.",
+            "Viele Rhyfel-Zuchtlinien führen bewusst Hest-Blut, um Robustheit zu erhalten.",
+            "Nordmänner sagen: „Ein Ritter fällt – ein Hest bleibt stehen.“"
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

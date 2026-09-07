@@ -1,0 +1,162 @@
+{
+  "id": "nebtu",
+  "name": "Nebtu",
+  "classification": "Pferderasse aus Kemetara",
+  "continent": "Tirnara",
+  "region": "Kemetara",
+  "folio": "P-12",
+  "quote": "Wer zögert, sieht nur noch Staub.",
+  "quoteAttribution": "Kemetarische Reiterweisheit",
+  "summary": "Der Nebtu ist eine der auffälligsten und charakterstärksten Pferderassen Tirnaras. Mit seinem markanten, zebraähnlichen Streifenmuster und seiner ungezähmten Ausstrahlung verkörpert er Geschwindigkeit, Hitze und Bewegung. Für Fremde wirkt er exotisch und schwer kontrollierbar – für die Reiter Kemetaras hingegen ist er ein vertrautes Werkzeug des Krieges und der Jagd. Wo andere Pferde unter der Sonne ermüden, beginnt der Nebtu erst richtig zu arbeiten.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/nebtu.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Nebtu",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Nebtu"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gehoben",
+    "price": "800–4.000 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Wüste",
+      "Transport"
+    ],
+    "age": "30–35 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      8,
+      9,
+      4,
+      8,
+      3,
+      6
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebtu ist eine der auffälligsten und charakterstärksten Pferderassen Tirnaras. Mit seinem markanten, zebraähnlichen Streifenmuster und seiner ungezähmten Ausstrahlung verkörpert er Geschwindigkeit, Hitze und Bewegung. Für Fremde wirkt er exotisch und schwer kontrollierbar – für die Reiter Kemetaras hingegen ist er ein vertrautes Werkzeug des Krieges und der Jagd. Wo andere Pferde unter der Sonne ermüden, beginnt der Nebtu erst richtig zu arbeiten."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebtu geht direkt auf das Urpferd Tirnaras zurück und steht genetisch dem Zebra näher als den meisten anderen bekannten Pferderassen Estrylls. Seine Domestikation erfolgte nicht durch klassische Zucht, sondern durch Auslese über Generationen : Nur jene Tiere, die Hitze, Durst und Stress ertrugen, wurden weiter genutzt. Besonders in den Reichen Kemetaras wurde der Nebtu gezielt gefördert und schließlich zum kulturellen Symbol erhoben – weniger als edles Reittier, mehr als Werkzeug für schnelle, harte Einsätze."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebtu besitzt einen schlanken, sehnigen Körper , lange Beine und eine auffallend flexible Wirbelsäule. Sein Brustkorb ist schmal, die Muskulatur drahtig statt massiv. Die Hufe sind hart und trocken, ideal für Sand, Geröll und ausgedörrte Ebenen. Das gestreifte Fell dient nicht nur der Optik, sondern bricht aus der Distanz die Konturen des Körpers – ein natürlicher Tarnvorteil in Hitze und Staub."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unruhig, aufmerksam und eigenwillig. Der Nebtu ist kein Pferd für geduldlose oder unerfahrene Reiter. Er reagiert schnell, manchmal überreaktiv, und duldet keine grobe Behandlung. Gleichzeitig entwickelt er zu einem konsequenten Reiter eine respektbasierte Bindung , nicht aus Zuneigung, sondern aus Anerkennung. Wer zögert, verliert ihn."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine größte Stärke liegt in Beweglichkeit und Ausdauer unter Extrembedingungen . In Kemetara wird der Nebtu bevorzugt als Wagenpferd eingesetzt, da er enge Wendungen und abrupte Richtungswechsel meistert. Ebenso ist er das bevorzugte Reittier schneller Stürmer- und Plünderereinheiten, die auf Tempo, Chaos und Rückzug setzen. Für schwere Kavallerie oder lange Schlachtlinien ist er ungeeignet."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Außergewöhnliche Wendigkeit",
+            "Hohe Hitze- und Dürretoleranz",
+            "Geringer Wasserbedarf",
+            "Schnelle Reaktion und Trittsicherheit"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Schwer zu zähmen und auszubilden",
+            "Geringe Tragkraft",
+            "Nervös in engen Formationen",
+            "Kaum geeignet für kalte oder feuchte Regionen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebtu benötigt Bewegung, Hitze und offene Flächen . Stallhaltung bekommt ihm schlecht; zu viel Ruhe macht ihn nervös und aggressiv. Seine Pflege ist unkompliziert – das Fell ist kurz und widerstandsfähig –, doch psychisch verlangt er nach Abwechslung und klarer Führung. Vernachlässigung führt schnell zu Ungehorsam."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Kemetara gilt es als schlechtes Omen, einen Nebtu vollständig zu scheren.",
+            "Nebtu lassen sich nur ungern kreuzen – Versuche gelten als unzuverlässig und meist erfolglos."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

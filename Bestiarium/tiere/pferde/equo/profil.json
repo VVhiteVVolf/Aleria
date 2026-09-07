@@ -1,0 +1,175 @@
+{
+  "id": "equo",
+  "name": "Equo",
+  "classification": "Pferderasse aus Imperium Argentum",
+  "continent": "Aldervan",
+  "region": "Imperium Argentum",
+  "folio": "P-26",
+  "quote": "Ein Heer marschiert so weit, wie seine Equo tragen.",
+  "quoteAttribution": "Imperiale Kavallerieweisheit",
+  "summary": "Der Equo ist das Standard-Militärpferd des Imperiums Argentum . Er entstand aus einer kontrollierten Zuchtlinie unter Einbeziehung von Brycing-Rössern , mit dem klaren Ziel, ein massenfähiges, zuverlässiges und vielseitiges Kavalleriepferd zu schaffen. Der Equo ist kein legendäres Einzelstück – er ist die tragende Säule imperialer Reiterei.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/equo.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel des Equo",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Equo"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Besonders",
+    "price": "1.000–10.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Transport"
+    ],
+    "age": "30–35 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Equo ist das Standard-Militärpferd des Imperiums Argentum . Er entstand aus einer kontrollierten Zuchtlinie unter Einbeziehung von Brycing-Rössern , mit dem klaren Ziel, ein massenfähiges, zuverlässiges und vielseitiges Kavalleriepferd zu schaffen. Der Equo ist kein legendäres Einzelstück – er ist die tragende Säule imperialer Reiterei."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Zucht des Equo wurde zentral vom Imperium gesteuert, nachdem sich gezeigt hatte, dass Spitzenrassen wie Brycing oder Drake für großangelegte Heeresstrukturen zu teuer, zu selten und zu anspruchsvoll waren. Der Equo entstand als bewusster Kompromiss : leistungsstark genug für den Krieg, aber stabil, reproduzierbar und kontrollierbar ."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Equo ist kräftig und funktional gebaut , mit ausgeprägter Brust, solider Muskulatur und belastbaren Beinen. Er ist etwas kompakter als ein Brycing, dafür robuster im Dauerbetrieb. Sein Körperbau erlaubt sowohl Reitereinsatz als auch Zugleistungen – ein echtes Mehrzweckpferd im militärischen Kontext."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Wesen ist der Equo gehorsam, diszipliniert und trainierbar . Er reagiert zuverlässig auf Befehle, bleibt auch in Formationen ruhig und zeigt wenig Eigenwillen. Seine Bindung an den Reiter ist funktional, nicht emotional – ideal für wechselnde Reiter und militärische Ausbildung."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Equo ist das Rückgrat imperialer Reiterei :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kavallerie und Dragoner",
+            "Grenz- und Patrouillendienste",
+            "Eskorte und Botenwesen",
+            "Last- und Versorgungsaufgaben"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Er eignet sich sowohl für Schlachten als auch für lange Märsche und logistische Einsätze."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Zuverlässigkeit",
+            "Gute Balance aus Geschwindigkeit, Kraft und Ausdauer",
+            "Leicht trainierbar",
+            "Massenhaft verfügbar"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger leistungsfähig als Spitzenrassen",
+            "Geringerer Prestige-Faktor",
+            "In Extremsituationen unterlegen gegenüber Elitepferden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Equo ist pflegearm im militärischen Rahmen . Er benötigt keine Sonderbehandlung, verträgt einfache Stallungen und bleibt auch bei durchschnittlicher Versorgung einsatzfähig. Genau diese Eigenschaft macht ihn für das Imperium unersetzlich."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Im Imperium sagt man: „Der Brycing gewinnt Ruhm – der Equo gewinnt Kriege.“",
+            "Viele Veteranen vertrauen dem Equo mehr als teureren Rössern.",
+            "In Argentum existieren detaillierte Register über jede aktive Equo-Zuchtlinie."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

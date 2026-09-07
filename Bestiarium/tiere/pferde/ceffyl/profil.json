@@ -1,0 +1,191 @@
+{
+  "id": "ceffyl",
+  "name": "Ceffyl",
+  "classification": "Pferderasse aus Avallorn",
+  "continent": "Estryll",
+  "region": "Avallorn",
+  "folio": "P-02",
+  "quote": "Ein Ceffyl trägt keinen Reiter – er erkennt ihn an.",
+  "quoteAttribution": "Geläufiges Zitat",
+  "summary": "Der Ceffyl gilt als eine der edelsten und begehrtesten Pferderassen der bekannten Welt. Als direkter Nachkomme des mythischen Urpferdes von Avallorn verkörpert er Würde, Schnelligkeit und Loyalität. Wo ein Ceffyl erscheint, ist klar: Hier reitet kein gewöhnlicher Mann.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/ceffyl.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Ceffyl",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Ceffyl"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Groß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Elegant, muskulös"
+    },
+    {
+      "label": "Temperament",
+      "value": "Stolz, intelligent, loyal"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Sehr hoch"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Ritter, Turniere, Elitekavallerie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Bindung, Ausdauer, Prestige"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sensibel, teuer, anspruchsvoll"
+    }
+  ],
+  "market": {
+    "tier": "Außerordentlich",
+    "price": "5.000–35.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Parade"
+    ],
+    "age": "40–60 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      8,
+      7,
+      8,
+      10,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ceffyl gilt als eine der edelsten und begehrtesten Pferderassen der bekannten Welt. Als direkter Nachkomme des mythischen Urpferdes von Avallorn verkörpert er Würde, Schnelligkeit und Loyalität. Wo ein Ceffyl erscheint, ist klar: Hier reitet kein gewöhnlicher Mann."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nach dem Untergang Avallorns gelangte der Ceffyl mit den Avallorniern an die östlichen Küsten Estrylls. Aufgrund seiner geringen Anfangszahl wurde er nur sehr selektiv gezüchtet. Frühere Zuchtexperimente führten zur Kreuzung mit dem widerstandsfähigen Hest , woraus später der verbreitete Rhyfel hervorging. Der reine Ceffyl jedoch blieb stets selten und streng kontrolliert."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ceffyl besitzt einen hochgewachsenen, eleganten Körperbau mit langer, geschwungener Halslinie, kräftiger Hinterhand und außergewöhnlich feiner Muskulatur. Seine Bewegungen sind fließend und präzise, fast tänzerisch. Mähne und Schweif sind oft hell, seidig und auffällig gepflegt."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hochintelligent, sensibel und stolz. Ein Ceffyl bindet sich lebenslang an einen einzigen Reiter. Er akzeptiert Befehle nicht blind, sondern vertraut – oder verweigert sich vollständig. Besitzerwechsel sind möglich, aber selten erfolgreich."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der klassische Einsatz des Ceffyl liegt bei Rittern, Turnieren und elitärer Kavallerie. Auf dem Schlachtfeld glänzt er durch Ausdauer, Wendigkeit und Gehorsam gegenüber seinem gebundenen Reiter. Als Last- oder Reitpferd für Laien ist er ungeeignet."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Außergewöhnliche Intelligenz",
+            "Hohe Geschwindigkeit und Ausdauer",
+            "Enge Reiterbindung",
+            "Prestige und Statussymbol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr anspruchsvoll in Haltung und Ausbildung",
+            "Kaum für unerfahrene Reiter geeignet",
+            "Schwer weiterzuverkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Ceffyl benötigt ruhige Stallungen, feste Bezugspersonen und konstante Routinen. Vernachlässigung oder grobe Behandlung führen schnell zu Verhaltensverweigerung. Die Pflege von Fell und Hufen ist aufwendig, aber essenziell."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Ritter geben ihren Ceffyl niemals weiter, selbst im Alter oder nach schweren Verletzungen.",
+            "Es gilt als schlechtes Omen, einen Ceffyl gegen seinen Willen weiterzureiten.",
+            "In alten Liedern heißt es, ein Ceffyl erkenne den Tod seines Reiters, noch bevor dieser eintritt."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

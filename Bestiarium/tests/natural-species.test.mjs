@@ -85,7 +85,7 @@ test('horse breeds preserve the continent, ancestor and country hierarchy', asyn
     'Kontinent Estryll', 'Kontinent Tirnara', 'Kontinent Lothir', 'Kontinent Aldervan', 'Kontinent Yrmandrall'
   ]);
   assert.deepEqual(record.atlas.groups.map(group => group.ancestor.title), [
-    'Eiarach', 'Tanarhan', 'Fürstenglanz', 'Ælvinger', 'Skjon'
+    'Eiarach', 'Tanarhan', 'Fürstenglanz', 'Ælvinger', 'Skjorn'
   ]);
   assert.deepEqual(record.atlas.groups[0].entries.map(entry => entry.region), [
     'Avallorn', 'Cenyr', 'Aldrimar & Ceitheach', 'Zentrales Estryll', 'Süd-Estryll', 'Klaueninseln', 'Fjordheim', 'Estrylls Sumpfland'

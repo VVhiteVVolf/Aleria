@@ -1,0 +1,200 @@
+{
+  "id": "tanarhan",
+  "name": "Tanarhan",
+  "classification": "Urpferd Tirnaras",
+  "continent": "Tirnara",
+  "region": "Urpferd Tirnaras",
+  "folio": "P-10",
+  "quote": "Sein Blut blieb in der Steppe, auch als das letzte Ross fiel.",
+  "quoteAttribution": "Tirnaranische Klage",
+  "summary": "Der Tanarhan gilt als das Urpferd Tirnaras – eine Gestalt zwischen Geschichte und Legende. Anders als der streng bewahrte Eiarach ist der Tanarhan ein verlorenes Erbe. Er existiert nicht mehr. Kein Stamm, kein Hof, keine Zuchtlinie beansprucht ihn heute für sich.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/tanarhan.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Tanarhan",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Tanarhan"
+  },
+  "facts": [
+    {
+      "label": "Altersspanne",
+      "value": "Unbekannt aber vermutlich ähnlich wie beim Eiarach"
+    }
+  ],
+  "market": {
+    "tier": "Nicht am Markt",
+    "price": "Keine Überlieferung",
+    "tags": [
+      "Historische Linie"
+    ]
+  },
+  "performance": null,
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tanarhan gilt als das Urpferd Tirnaras – eine Gestalt zwischen Geschichte und Legende. Anders als der streng bewahrte Eiarach ist der Tanarhan ein verlorenes Erbe. Er existiert nicht mehr. Kein Stamm, kein Hof, keine Zuchtlinie beansprucht ihn heute für sich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er war das Zucht- und Kriegspferd der frühen Protoalben, die Tirnara besiedelten, als der Kontinent noch wild und ungezähmt war. In den Chroniken erscheint er als weiß oder gräulich, mit einem Fell, das im Sonnenlicht fast silbern schimmerte. Seine Geschwindigkeit und Ausdauer sollen sogar jene des Eiarach übertroffen haben – zumindest erzählen es die alten Lieder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heute gilt der Tanarhan als ausgestorben ."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Legende berichtet, dass ein Prinz der Eiarach – ein Hengst namens Fionn – einem Druiden folgte, der die Protoalben nach Tirnara führte. In der Hitze der neuen Welt soll Finn sich nicht nur dem Land, sondern auch einer wilden, zebraähnlichen Stute verbunden haben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aus dieser Verbindung entstand eine neue Linie – angepasst an Hitze, offene Ebenen und trockene Winde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spätere Erzählungen behaupten, aus diesen Nachkommen seien die bekannten Pferderassen Tirnaras hervorgegangen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nebtu",
+            "Afol",
+            "Sarkal",
+            "Xanathos"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Wie genau diese Entwicklung stattfand, ist unklar. Ob es direkte Blutlinien oder nur symbolische Abstammungen sind, bleibt offen. Doch die Tirnarer sprechen noch heute vom „Blut Finns“, wenn sie außergewöhnliche Geschwindigkeit oder Zähigkeit beschreiben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Historisch gesichert ist nur eines: Während der Tyrannei Zarakhuls , einer bösartigen Gottheit, die Tirnara in langen Kriegsjahren unterwarf, wurde der Tanarhan systematisch vernichtet. Er war das Reittier der freien Protoalben – und damit ein Symbol des Widerstands."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit seinem Untergang verschwand auch seine Linie."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Großrahmig, aber leichter gebaut als ein Eiarach",
+            "Schlanke, trockene Muskulatur – auf Hitze und Dauerlauf ausgelegt",
+            "Langes Bein, schmale Brust, tiefe Lunge",
+            "Helles, weiß-gräuliches Fell laut Überlieferung",
+            "Harte, widerstandsfähige Hufe für trockene Böden",
+            "Insgesamt mehr Geschwindigkeit als Masse"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Überlieferungen widersprechen sich – gesicherte anatomische Beschreibungen existieren nicht."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Freiheitsliebend und schwer zu bändigen",
+            "Hohe Eigenständigkeit",
+            "Stark auf einen Reiter fixiert, wenn Bindung entstand",
+            "Ruhig unter Belastung, aber nicht unterwürfig"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Man sagt, der Tanarhan duldete keinen schwachen Willen – ob das Mythos oder Realität war, ist unklar."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Zucht- und Kriegspferd der frühen Protoalben Tirnaras",
+            "Eingesetzt für weite Märsche, schnelle Vorstöße und Führungsreiter",
+            "Symboltier des Widerstands gegen Zarakhul"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Konkrete militärische Doktrin ist nicht überliefert; vieles basiert auf späteren Ausschmückungen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Außergewöhnliche Ausdauer in heißem Klima",
+            "Sehr hohe Geschwindigkeit",
+            "Anpassungsfähig an trockene Ebenen",
+            "Hoher symbolischer Wert"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Möglicherweise anspruchsvoll im Training",
+            "Vollständig ausgestorben – keine genetische Sicherung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Anpassungsfähig an Hitze und karge Böden",
+            "Wahrscheinlich genügsam im Futter",
+            "Benötigte vermutlich viel freie Bewegung"
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "tirnara"
+}

@@ -1,0 +1,175 @@
+{
+  "id": "cuanach",
+  "name": "Cuanach",
+  "classification": "Pferderasse aus Iatheach, Uathneach & Moinneach",
+  "continent": "Lothir",
+  "region": "Iatheach, Uathneach & Moinneach",
+  "folio": "P-17",
+  "quote": "Der Moorgrund kennt seinen Schritt und gibt ihm nach.",
+  "quoteAttribution": "Moinneacher Moorweisheit",
+  "summary": "Der Cuanach ist ein robustes, bodenständiges Pferd und ein naher Verwandter des Tirashan . Er gilt als typisches Sumpf- und Moorpferd und ist eng mit den feuchten Landschaften Lothirs verbunden. Wo andere Rassen scheitern, einsinken oder verenden, bleibt der Cuanach zuverlässig auf den Beinen.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/cuanach.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Cuanach",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Cuanach"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Ungewöhnlich",
+    "price": "400–1.000 Kupferstücke",
+    "tags": [
+      "Sumpf",
+      "Kundschaft",
+      "Transport"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      3,
+      6,
+      4,
+      5,
+      6,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cuanach ist ein robustes, bodenständiges Pferd und ein naher Verwandter des Tirashan . Er gilt als typisches Sumpf- und Moorpferd und ist eng mit den feuchten Landschaften Lothirs verbunden. Wo andere Rassen scheitern, einsinken oder verenden, bleibt der Cuanach zuverlässig auf den Beinen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cuanach kam einst mit den Kronalben nach Lothir und fand in den sumpfigen Regionen Moineachs , Uathneachs und Iathneachs seine natürliche Heimat. Dort wurde er früh von den albischen Fürstentümern übernommen und gezielt als Reit- und Arbeitspferd für feuchtes Gelände gehalten und vermehrt. Seine Zucht folgte stets der Notwendigkeit – nicht der Eleganz."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Körper des Cuanach ist kompakt, gedrungen und tiefstehend . Besonders auffällig sind seine breiten, flachen Hufe , die ihn vor dem Einsinken in Morast schützen. Sein Fell ist dicht und widerstandsfähig gegen Nässe, sein Körperbau weniger auf Geschwindigkeit als auf Stabilität und Trittsicherheit ausgelegt."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cuanach ist ruhig, träge und wenig schreckhaft . Er zeigt kaum Fluchtverhalten, reagiert langsam, aber zuverlässig auf Befehle und ist gegenüber Umweltreizen äußerst tolerant. Mut im Kampf gehört nicht zu seinen Eigenschaften – Vorsicht und Beharrlichkeit hingegen sehr wohl"
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cuanach wird vor allem eingesetzt als:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reitpferd für Bauern und Händler",
+            "Last- und Zugtier in Moorregionen",
+            "Reitpferd für Kundschafter und Boten in sumpfigem Gelände"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Kavalleriepferd oder Kriegstier ist er ungeeignet – zu langsam, zu wenig aggressiv und nicht belastbar genug für Schlachtfelder."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragend im Moor- und Sumpfgelände",
+            "Hohe Gift- und Pflanzenresistenz",
+            "Pflegeleicht und genügsam",
+            "Trittsicher und ausdauernd bei niedriger Belastung"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Geschwindigkeit",
+            "Träge Reaktionen",
+            "Kaum kampftauglich",
+            "Ungeeignet für lange Märsche in trockenem oder bergigem Terrain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cuanach ist unkompliziert in der Haltung . Er kommt mit feuchtem Futter, einfachen Unterständen und schlechterem Boden zurecht. Regelmäßige Hufpflege ist dennoch wichtig, da seine breiten Hufe in trockenem Gelände schneller Schaden nehmen können."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Moineach sagt man: „Wo der Cuanach steht, steht auch der Weg.“",
+            "Manche Händler schwören darauf, dass er selbst bei Hochwasser nicht in Panik gerät.",
+            "Ritter belächeln ihn – bis sie selbst im Sumpf stecken bleiben."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "lothir"
+}

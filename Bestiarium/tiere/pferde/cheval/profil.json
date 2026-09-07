@@ -1,0 +1,173 @@
+{
+  "id": "cheval",
+  "name": "Cheval",
+  "classification": "Pferderasse aus Brevanor",
+  "continent": "Aldervan",
+  "region": "Brevanor",
+  "folio": "P-23",
+  "quote": "Es trägt keinen Ruhm, sondern den Ausgang der Schlacht.",
+  "quoteAttribution": "Brevanorische Reiterlehre",
+  "summary": "Der Cheval gilt auf dem Kontinent Aldervan als das maßgebliche Kavalleriepferd seiner Zeit. Er steht in einer Reihe mit legendären Reitrössern wie Sarkal , Brycing , Drake und Ceffyl , verzichtet jedoch bewusst auf deren Überhöhung. Der Cheval ist kein Statussymbol – er ist ein Werkzeug des Krieges.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/cheval.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Cheval",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Cheval"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Außerordentlich",
+    "price": "3.000–20.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg"
+    ],
+    "age": "40–50 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      8,
+      8,
+      7,
+      8,
+      7,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cheval gilt auf dem Kontinent Aldervan als das maßgebliche Kavalleriepferd seiner Zeit. Er steht in einer Reihe mit legendären Reitrössern wie Sarkal , Brycing , Drake und Ceffyl , verzichtet jedoch bewusst auf deren Überhöhung. Der Cheval ist kein Statussymbol – er ist ein Werkzeug des Krieges."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cheval entstand nicht aus Mythos oder Prestigezucht, sondern aus militärischer Notwendigkeit . In den zentralen Reichen Baldreska , Aeldrunmar , Brevanor , Talyndor sowie im südlichen Mathringen wurde gezielt ein Pferd gezüchtet, das leistungsfähig, zuverlässig und in großen Zahlen verfügbar ist. Diese pragmatische Ausrichtung machte den Cheval schnell zum Rückgrat aldorvanischer Heere."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cheval besitzt einen kräftigen, ausgewogenen Körperbau , ausgelegt auf Last, Rüstung und langen Einsatz. Er ist weder übermäßig massig noch filigran, sondern klar funktional: starke Hinterhand, belastbare Gelenke, tiefe Brust und ein tragfähiger Rücken. Sein Fell ist dicht, wetterfest und unauffällig – kein Zierrat, keine Exzentrik."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Wesen ist der Cheval diszipliniert, nervenstark und arbeitswillig . Er reagiert zuverlässig auf Befehle, bleibt auch unter Lärm, Blut und Chaos kontrollierbar und zeigt kaum Panikverhalten. Er bindet sich an seinen Reiter, ohne sensibel oder eigensinnig zu werden – ideal für wechselnde Einsätze und lange Feldzüge."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cheval wird nahezu ausschließlich als Kavallerie- und Militärpferd eingesetzt:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "schwere und mittlere Kavallerie",
+            "Marsch- und Feldzüge",
+            "berittene Offiziere",
+            "Grenz- und Garnisonsdienste"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Gegensatz zu vielen Elitepferden eignet er sich auch für längere Märsche ohne übermäßigen Pflegeaufwand."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr hohe Gesamtleistung",
+            "Hohe Ausdauer und Belastbarkeit",
+            "Vergleichsweise günstige Zucht und Haltung",
+            "Große Verfügbarkeit"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger prestigeträchtig als Edelrassen",
+            "Kaum spezialisiert für Extreme (Wüste, Sumpf, Hochgebirge)",
+            "Optisch funktional, nicht imposant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cheval ist effizient in der Haltung . Er benötigt solide Versorgung, aber keine Luxuspflege. Seine Robustheit erlaubt einfache Stallungen und regelmäßigen Einsatz ohne lange Regenerationsphasen – ein klarer Vorteil gegenüber empfindlicheren Elitepferden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Veteranen bevorzugen den Cheval bewusst gegenüber prestigeträchtigeren Rassen.",
+            "Wer einen Cheval reitet, will siegen – nicht beeindrucken."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

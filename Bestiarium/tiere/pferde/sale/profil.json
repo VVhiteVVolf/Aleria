@@ -1,0 +1,161 @@
+{
+  "id": "sale",
+  "name": "Sale",
+  "classification": "Pferderasse aus Mathringen",
+  "continent": "Aldervan",
+  "region": "Mathringen",
+  "folio": "P-27",
+  "quote": "Der Norden fragt nicht nach Glanz, sondern nach Heimkehr.",
+  "quoteAttribution": "Mathringer Sprichwort",
+  "summary": "Der Sale ist das klassische Nordpferd Aldervans und gilt als Nationalpferd Mathringens . Er ist kein Symbol für Glanz oder Überlegenheit, sondern für Zuverlässigkeit, Anpassung und Zweckmäßigkeit . Wo das Land rau ist und die Bedingungen hart, ist der Sale zuhause.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/sale.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Sale",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Sale"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gehoben",
+    "price": "400–6.000 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Kundschaft",
+      "Arbeit"
+    ],
+    "age": "30–35 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      6,
+      7,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sale ist das klassische Nordpferd Aldervans und gilt als Nationalpferd Mathringens . Er ist kein Symbol für Glanz oder Überlegenheit, sondern für Zuverlässigkeit, Anpassung und Zweckmäßigkeit . Wo das Land rau ist und die Bedingungen hart, ist der Sale zuhause."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine Linie lässt sich vermutlich auf den Cyning zurückführen. Aus dessen massiver, kraftbetonter Zucht entwickelte sich über Generationen hinweg eine leichtere, beweglichere und genügsamere Variante , angepasst an die kühlen Hochländer und Gebirgsregionen Mathringens. Die Zucht folgte dabei stets der Notwendigkeit – nicht dem Anspruch auf Prestige."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sale ist kompakt, sehnig und widerstandsfähig gebaut. Er besitzt eine solide Muskulatur, stabile Beine und harte Hufe, die auf Fels und Geröll sicheren Halt bieten. Sein Fell ist dicht und wetterfest, ohne auffällige Merkmale – funktional bis ins Detail."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Wesen ist der Sale ruhig, ausdauernd und unkompliziert . Er zeigt wenig Nervosität, kommt mit wechselnden Reitern zurecht und bleibt auch unter schlechten Bedingungen zuverlässig. Eigenwilligkeit ist selten – der Sale arbeitet, solange man ihn führt."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sale ist ein echtes Allzweckpferd des Nordens :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reitpferd für Bauern und Händler",
+            "Kriegs- und Patrouillenpferd",
+            "Kundschafter- und Botenpferd",
+            "Reittier nordischer Ritter"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Er eignet sich für lange Märsche, unwegsames Gelände und kalte Regionen, ohne hohe Anforderungen an Versorgung oder Pflege."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Robustheit",
+            "Gute Geländegängigkeit",
+            "Pflegeleicht und genügsam",
+            "Günstig und leicht zu züchten"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Keine Spitzenleistung in Geschwindigkeit oder Kraft",
+            "Wenig Prestige",
+            "Für hochspezialisierte Rollen ungeeignet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sale ist einfach in der Haltung . Er kommt mit karger Nahrung aus, benötigt keine aufwendigen Stallungen und bleibt auch bei rauem Klima leistungsfähig. Genau diese Eigenschaften machen ihn in Mathringen allgegenwärtig."
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

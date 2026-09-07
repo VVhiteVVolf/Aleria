@@ -1,0 +1,176 @@
+{
+  "id": "curragh",
+  "name": "Curragh",
+  "classification": "Pferderasse aus Zentrales Estryll",
+  "continent": "Estryll",
+  "region": "Zentrales Estryll",
+  "folio": "P-05",
+  "quote": "Wo sein Geweih durchs Unterholz gleitet, schweigt selbst der Wald.",
+  "quoteAttribution": "Spruch der Waldläufer",
+  "summary": "Der Curragh ist eine der ältesten bekannten Pferderassen Estrylls und gilt als direkter Nachfahre des Eiarach , der mythischen Urform aller Pferde des Kontinents. Sein zierlicher Körperbau und das hirschartige Geweih machen ihn unverwechselbar. Weniger ein Kriegstier als ein lebendiges Symbol, steht der Curragh für Tradition, Herkunft und das albische Erbe.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/curragh.webp",
+    "width": 1024,
+    "height": 572,
+    "alt": "Überlieferte Bildtafel des Curragh",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Curragh"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Klein"
+    },
+    {
+      "label": "Temperament",
+      "value": "Scheu, eigenwillig"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Anspruchsvoll"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Wald, Boten, Tradition"
+    }
+  ],
+  "market": {
+    "tier": "Gehoben",
+    "price": "800–3.000 Kupferstücke",
+    "tags": [
+      "Wald",
+      "Prestige",
+      "Kundschaft"
+    ],
+    "age": "30–40 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      8,
+      2,
+      10,
+      9,
+      2
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Curragh ist eine der ältesten bekannten Pferderassen Estrylls und gilt als direkter Nachfahre des Eiarach , der mythischen Urform aller Pferde des Kontinents. Sein zierlicher Körperbau und das hirschartige Geweih machen ihn unverwechselbar. Weniger ein Kriegstier als ein lebendiges Symbol, steht der Curragh für Tradition, Herkunft und das albische Erbe."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Curragh entstammt den alten Wäldern der albischen Gebiete und ist eng mit den frühen Tiarna-Clans verbunden. Er wurde nie systematisch auf Leistung gezüchtet, sondern bewahrte über Generationen hinweg seine ursprüngliche Form. Seine Bedeutung ist daher weniger praktisch als kulturell und rituell."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klein, leicht und filigran gebaut, mit schlanken Beinen und schmalem Brustkorb. Das charakteristische hirschartige Geweih ist kein Zierat, sondern Teil seiner natürlichen Erscheinung. Der Curragh ist wendig und tritt sicher auf weichem Waldboden, jedoch wenig belastbar."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eigenwillig, scheu und schwer zu bändigen. Der Curragh bindet sich nur widerwillig an Reiter und reagiert sensibel auf Stress, Lärm und fremde Umgebung. Er verlangt Geduld, Ruhe und Erfahrung – rohe Führung lehnt er ab."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kein Kavalleriepferd. Im offenen Gelände und im Gefecht zeigt er geringe Standfestigkeit. Seine wahre Stärke liegt im Wald : Als Reittier für Waldläufer, Boten oder Tiarna in zerklüftetem, dicht bewachsenem Terrain ist er nahezu unerreicht."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragende Wendigkeit im Dickicht",
+            "Sicherer Tritt im Wald",
+            "Symbolischer und kultureller Wert"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Kampftauglichkeit",
+            "Schwerer zu kontrollieren",
+            "Nervös unter Gefechtsbedingungen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Benötigt ruhige, naturnahe Haltung in Waldnähe. Enge Ställe oder laute Gestüte setzen ihm zu. Das Geweih erfordert besondere Pflege, um Verletzungen oder Brüche zu vermeiden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Trivia..."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

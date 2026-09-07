@@ -1,0 +1,139 @@
+{
+  "id": "aurelianer",
+  "name": "Aurelianer",
+  "classification": "Goldross des Fürstentums Goldmund",
+  "continent": "Lothir",
+  "region": "Goldmund",
+  "folio": "P-20",
+  "quote": "Nicht für den Krieg gezüchtet – doch der Krieg zahlt den Preis für Schönheit.",
+  "quoteAttribution": "Sprichwort unter Goldmunder Rittern",
+  "summary": "Der Aurelianer ist das Ergebnis eines langen, fürstlichen Zuchtexperiments in Goldmund . Anders als bei den großen Kriegslinien stand hier nicht primär Leistung im Mittelpunkt, sondern Erscheinung . Ziel war ein Ross, das allein durch seine Farbe und Ausstrahlung als „goldenes Zeichen“ des Fürstentums taugt.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/aurelianer.webp",
+    "width": 1024,
+    "height": 506,
+    "alt": "Überlieferte Bildtafel des Aurelianer",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Aurelianer"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Prestige",
+    "price": "10.000–40.000 Goldstücke",
+    "tags": [
+      "Krieg",
+      "Kavallerie",
+      "Prestige"
+    ],
+    "age": "30–45 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      8,
+      7,
+      7,
+      7,
+      6,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Aurelianer ist das Ergebnis eines langen, fürstlichen Zuchtexperiments in Goldmund . Anders als bei den großen Kriegslinien stand hier nicht primär Leistung im Mittelpunkt, sondern Erscheinung . Ziel war ein Ross, das allein durch seine Farbe und Ausstrahlung als „goldenes Zeichen“ des Fürstentums taugt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aurelianer sind Pferde von goldenem Fell mit goldenen Mähnen und gelten als bevorzugte Reittiere der Goldmunder Ritterschaft. Sie sind durchaus gute Kavalleriepferde – doch ihre Haltung und ihr Preis machen sie zu einer Wahl für sehr reiche Ritterhäuser."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die genaue Zuchtformel der Aurelianer wird in Goldmund nicht offen gelegt. Man spricht von einem über Generationen geführten Programm der Fürstenhäuser, das gezielt auf Farbthema, Eleganz und Wiedererkennbarkeit selektierte."
+        },
+        {
+          "type": "paragraph",
+          "text": "In anderen Fürstentümern kursiert die Annahme, dass der Erlenglanz und womöglich sogar der Ceffyl aus Cenyr eine zentrale Rolle gespielt haben könnten. Ob dies Wahrheit ist oder nur Neid, wissen vermutlich nur die Züchter Goldmunds."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Aurelianer ist elegant und klar gebaut: hochgewachsen, athletisch, mit langen Linien und sichtbar definierter Muskulatur. Er wirkt edel und „sauber“, ohne die überirdische Aura eines Fürstenglanz. Das goldene Fell ist sein Markenzeichen – kräftig, warm und leuchtend, mit Mähne und Schweif in gleichem Ton."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stolz, sensibel und auf feine Führung ausgelegt. Der Aurelianer reagiert gut auf disziplinierte Reiter, ist aber wenig geeignet für grobe Behandlung oder harte, ruppige Ställe."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bevorzugt von Goldmunds Rittern als Status- und Kavalleriepferd. Geeignet für Turniere, Paraden und ausgewählte Feldzüge. Nicht als Massenross gedacht; sein Wert liegt ebenso im Anblick wie in seiner Reitleistung."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoher Pflegeaufwand. Das Fell wird regelmäßig gebürstet und gereinigt, um den goldenen Glanz zu erhalten. Gute Fütterung, ruhige Stallführung und aufmerksame Stallmeister gelten als Standard – wer sich das nicht leisten kann, sollte keinen Aurelianer halten."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Goldmund gilt ein Aurelianer als „lebender Wappenglanz“.",
+            "Andere Fürstentümer vermuten Ceffyl-Blut, Goldmund schweigt dazu.",
+            "Unreine Linien zeigen matte Farbe oder silbrige Spitzen in der Mähne."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "lothir"
+}

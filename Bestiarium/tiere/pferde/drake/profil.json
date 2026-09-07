@@ -1,0 +1,175 @@
+{
+  "id": "drake",
+  "name": "Drake",
+  "classification": "Pferderasse aus Baldreska",
+  "continent": "Aldervan",
+  "region": "Baldreska",
+  "folio": "P-28",
+  "quote": "Ein Drake folgt keinem Banner, das seinen Reiter nicht verdient.",
+  "quoteAttribution": "Baldreskische Reiterweisheit",
+  "summary": "Der Drake gehört unangefochten zu den besten Pferden der bekannten Welt . Sein Name steht nicht für Masse oder Verfügbarkeit, sondern für Exzellenz, Disziplin und Symbolkraft . Wer einen Drake reitet, reitet nicht einfach ein Pferd – er setzt ein Zeichen.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/drake.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Drake",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Drake"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Außerordentlich",
+    "price": "5.000–35.000 Goldstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Prestige"
+    ],
+    "age": "45–60 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      9,
+      9,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake gehört unangefochten zu den besten Pferden der bekannten Welt . Sein Name steht nicht für Masse oder Verfügbarkeit, sondern für Exzellenz, Disziplin und Symbolkraft . Wer einen Drake reitet, reitet nicht einfach ein Pferd – er setzt ein Zeichen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake gehört unangefochten zu den besten Pferden der bekannten Welt . Sein Name steht nicht für Masse oder Verfügbarkeit, sondern für Exzellenz, Disziplin und Symbolkraft . Wer einen Drake reitet, reitet nicht einfach ein Pferd – er setzt ein Zeichen."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake gehört unangefochten zu den besten Pferden der bekannten Welt . Sein Name steht nicht für Masse oder Verfügbarkeit, sondern für Exzellenz, Disziplin und Symbolkraft . Wer einen Drake reitet, reitet nicht einfach ein Pferd – er setzt ein Zeichen."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake gehört unangefochten zu den besten Pferden der bekannten Welt . Sein Name steht nicht für Masse oder Verfügbarkeit, sondern für Exzellenz, Disziplin und Symbolkraft . Wer einen Drake reitet, reitet nicht einfach ein Pferd – er setzt ein Zeichen."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake ist ein echtes Elitepferd :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "schwere und mittlere Kavallerie",
+            "Offiziers- und Kommandantenreitpferd",
+            "taktische Einsätze und Durchbrüche",
+            "Turniere und Repräsentation"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Er bewegt sich leistungsmäßig auf Augenhöhe mit Brycing , Ceffyl , Sarkal und Cheval – und übertrifft sie in einzelnen Disziplinen wie Balance, Gehorsam und taktischer Kontrolle."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Herausragende Intelligenz",
+            "Hohe Geschwindigkeit und Ausdauer",
+            "Sehr lange Lebensspanne",
+            "Extrem gute Reitbarkeit"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr teuer in Anschaffung und Haltung",
+            "Komplexe Ausbildung erforderlich",
+            "Geringe Verfügbarkeit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Drake verlangt erfahrene Reiter und erstklassige Versorgung . Fehler in Haltung oder Training wirken sich langfristig aus, da er alt wird und stark an seinen Reiter gebunden ist. In falschen Händen bleibt sein Potenzial ungenutzt."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Baldreska sagt man: „Ein Drake trägt keinen Ritter – er führt ihn.“",
+            "Viele Drakes überleben ihre ersten Reiter.",
+            "In manchen Archiven werden einzelne Drakes namentlich geführt – wie Feldherren."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}

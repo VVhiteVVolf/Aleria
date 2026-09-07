@@ -1,0 +1,159 @@
+{
+  "id": "hross",
+  "name": "Hross",
+  "classification": "Arbeitspferd der Nordmänner",
+  "continent": "Yrmandrall",
+  "region": "Norden",
+  "folio": "P-30",
+  "quote": "Er trägt mehr als er kämpft.",
+  "quoteAttribution": "Nordmännisches Sprichwort",
+  "summary": "Der Hross ist das gängige Arbeitspferd der Nordmänner. Robust, zottelig und genügsam begleitet er Bauern, Händler und Siedler durch Schnee, Wind und gefrorene Böden.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/hross.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Hross",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Hross"
+  },
+  "facts": [
+    {
+      "label": "Abstammung",
+      "value": "Vermutlich aus Skjorn-Linien"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Last- & Arbeitstier"
+    },
+    {
+      "label": "Status",
+      "value": "Weit verbreitet"
+    }
+  ],
+  "market": {
+    "tier": "Gewöhnlich",
+    "price": "100–300 Kupferstücke",
+    "tags": [
+      "Arbeit",
+      "Nord"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      2,
+      5,
+      5,
+      2,
+      4,
+      8
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hross ist das gängige Arbeitspferd der Nordmänner. Robust, zottelig und genügsam begleitet er Bauern, Händler und Siedler durch Schnee, Wind und gefrorene Böden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Exemplare finden sich mittlerweile auch im Süden, doch waren es die Nordmänner, die ihn im Zuge ihrer Expansionen und Seefahrten dorthin brachten."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hross gilt vermutlich als Abkömmling des sagenhaften Skjorn , einer frühen Nordlinie, die sich in Yrmandrall entwickelt haben soll. Mit der Zeit stabilisierte sich aus dieser Stammform ein kleineres, kompakteres Arbeitspferd – ideal für das raue Klima des Nordens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während sich andere Linien auf Prestige oder Krieg spezialisierten, blieb der Hross ein Tier des Alltags."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hross ist kleiner als ein Hest, gedrungen und kräftig gebaut. Sein dichtes, zotteliges Fell schützt vor Kälte und Nässe. Kurze, starke Beine und breite Hufe machen ihn trittsicher auf gefrorenem Boden und unebenem Terrain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eleganz spielt bei ihm keine Rolle – er ist gebaut für Ausdauer und Last."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stur, zäh und wenig beeindruckt von Lärm oder schlechtem Wetter. Der Hross arbeitet zuverlässig, zeigt aber wenig Begeisterung für unnötige Härte oder hektische Führung."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Hross wird vor allem von nordischen Bauern, Händlern und Siedlern genutzt. Als Lasttier und Transportpferd erfüllt er zuverlässig seinen Zweck."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selbst die Nordmänner vermeiden es, ihn als Schlachtross einzusetzen. Dafür ist er zu klein, zu eigensinnig und nicht für den Durchbruch gebaut. Für militärische Zwecke verlassen sich die Nordmänner eher auf den Hest aus Estryll."
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genügsam in Futter und Stallung. Der Hross kommt mit einfachen Bedingungen zurecht und verträgt raue Winter ohne besondere Maßnahmen. Seine Zucht ist pragmatisch – Leistung zählt mehr als Reinheit."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Wurde durch nordische Expansionen im Süden verbreitet.",
+            "Gilt als „Pferd des Volkes“ unter den Nordmännern.",
+            "Im Heer höchstens als Packtier geschätzt."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "yrmandrall"
+}

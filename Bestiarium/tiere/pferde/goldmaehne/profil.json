@@ -1,0 +1,177 @@
+{
+  "id": "goldmaehne",
+  "name": "Goldmähne",
+  "classification": "Pferderasse aus Lothir",
+  "continent": "Lothir",
+  "region": "Lothir",
+  "folio": "P-19",
+  "quote": "Schön genug für den Hof, standhaft genug für den Feldweg.",
+  "quoteAttribution": "Lothirisches Gestütswort",
+  "summary": "Die Goldmähne ist das mit Abstand verbreitetste und beliebteste Pferd des Kontinents Lothir. Kaum eine andere Rasse ist so flächendeckend anzutreffen – von königlichen Gestüten bis zu einfachen Gutshöfen. Sie vereint ansprechende Eleganz mit echter Belastbarkeit und gilt vielerorts als das ideale Mittelmaß zwischen Prestige und Nutzen .",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/goldmaehne.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Goldmähne",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Goldmähne"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Gehoben",
+    "price": "700–8.000 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Krieg",
+      "Arbeit",
+      "Parade"
+    ],
+    "age": "35–40 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      7,
+      7,
+      6,
+      6,
+      8,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Goldmähne ist das mit Abstand verbreitetste und beliebteste Pferd des Kontinents Lothir. Kaum eine andere Rasse ist so flächendeckend anzutreffen – von königlichen Gestüten bis zu einfachen Gutshöfen. Sie vereint ansprechende Eleganz mit echter Belastbarkeit und gilt vielerorts als das ideale Mittelmaß zwischen Prestige und Nutzen ."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Goldmähne ging ursprünglich aus Zuchtlinien des Erlenglanzes hervor. Ihr Ursprung liegt in dem Versuch, dessen ästhetische Vorzüge zu bewahren, ohne dessen gravierende Schwächen im Einsatz hinnehmen zu müssen. Durch gezielte Einkreuzungen robusterer Linien entstand ein Pferd, das kriegstauglich, marschfähig und arbeitsfähig ist – ohne seine edle Erscheinung zu verlieren."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Vergleich zum Erlenglanz ist die Goldmähne kräftiger gebaut , mit soliderer Muskulatur und belastbareren Gelenken. Sie besitzt eine markante, goldblonde bis honigfarbene Mähne, die ihr den Namen gab, sowie ein dichtes, widerstandsfähiges Fell. Der Körper ist ausgewogen: nicht übermäßig massig, aber deutlich robuster als reinrassige Paradepferde."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Goldmähne gilt als ruhig, zuverlässig und nervenstark . Sie ist weniger schreckhaft als der Erlenglanz und bleibt auch unter Stress kontrollierbar. Gleichzeitig ist sie aufmerksam und lernfähig, was sie für unerfahrene wie erfahrene Reiter gleichermaßen geeignet macht."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Goldmähne ist ein echtes Mehrzweckpferd :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kavalleriepferd",
+            "Reittier für Adlige und Offiziere",
+            "Kurier- und Botenpferd",
+            "Wagen- und Zugpferd",
+            "Leichtes Arbeitspferd"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie kommt mit langen Märschen zurecht, verträgt schlechte Wege und bleibt auch nach Tagen im Einsatz reitbar."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Vielseitigkeit",
+            "Gute Balance aus Geschwindigkeit, Ausdauer und Kraft",
+            "Pflegeleichter als Edelrassen",
+            "Breites Einsatzspektrum"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger prestigeträchtig als der Erlenglanz",
+            "Nicht spezialisiert genug, um Extremrollen perfekt zu erfüllen",
+            "In Turnieren meist unterlegen gegen reine Zuchtrassen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Goldmähne ist unkompliziert in der Haltung . Sie kommt mit einfacher Stallung aus, benötigt keine aufwendige Pflege und zeigt auch bei durchschnittlicher Versorgung stabile Leistung. Genau das macht sie für viele Reiche wirtschaftlich attraktiv."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Goldmund heißt es: „Wer kein Pferd hat, hat keinen Stand – wer eine Goldmähne hat, hat genug.“",
+            "Viele Ritter wechseln im Krieg von Erlenglanz auf Goldmähne – behalten aber den Erlenglanz für den Hof.",
+            "In Weisenfluh gilt sie als „das Pferd der Vernunft“."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "lothir"
+}

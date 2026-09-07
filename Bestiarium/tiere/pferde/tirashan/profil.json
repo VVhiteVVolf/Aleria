@@ -1,0 +1,191 @@
+{
+  "id": "tirashan",
+  "name": "Tirashan",
+  "classification": "Pferderasse aus Süd-Estryll",
+  "continent": "Estryll",
+  "region": "Süd-Estryll",
+  "folio": "P-06",
+  "quote": "Ein Tirashan stolpert nie – er entscheidet.",
+  "quoteAttribution": "Aislaerneacher Feldspruch",
+  "summary": "Der Tirashan ist das klassische Kavalleriepferd der südlichen albischen Fürstentümer Estrylls. Er verbindet Wendigkeit, Zähigkeit und militärische Verlässlichkeit und gilt als das pragmatische Gegenstück zu traditionsreicheren, aber weniger kampftauglichen Rassen. Wo der Curragh symbolisch ist und der Hest grob, ist der Tirashan funktional.",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/tirashan.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Tirashan",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Tirashan"
+  },
+  "facts": [
+    {
+      "label": "Größe",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kompakt, muskulös, kräftige Läufe, stabile Hufe"
+    },
+    {
+      "label": "Temperament",
+      "value": "Wachsam, arbeitswillig, mutig, gehorsam"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Mittel"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Waldkavallerie, Patrouillen, Überfälle, lange Märsche im schwierigen Gelände"
+    },
+    {
+      "label": "Stärken",
+      "value": "Sehr geländegängig, ausdauernd, zuverlässig im Gefecht, unempfindlich gegenüber giftigen Pflanzen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Wenig prestigeträchtig, unterlegen gegenüber schweren Schlachtrossen auf offenem Feld"
+    }
+  ],
+  "market": {
+    "tier": "Mittelklasse",
+    "price": "400–1.800 Kupferstücke",
+    "tags": [
+      "Kavallerie",
+      "Wald",
+      "Krieg"
+    ],
+    "age": "20–25 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      6,
+      6,
+      5,
+      6,
+      6,
+      7
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tirashan ist das klassische Kavalleriepferd der südlichen albischen Fürstentümer Estrylls. Er verbindet Wendigkeit, Zähigkeit und militärische Verlässlichkeit und gilt als das pragmatische Gegenstück zu traditionsreicheren, aber weniger kampftauglichen Rassen. Wo der Curragh symbolisch ist und der Hest grob, ist der Tirashan funktional."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tirashan entstand aus gezielten Kreuzungen zwischen Curragh und Hest unter Einfluss der Ui’Morna-Zuchtlinien. Ziel war ein Pferd, das sowohl im dichten Wald als auch im Gefecht bestehen konnte. Anders als viele ältere Rassen ist der Tirashan kein Mythenträger, sondern ein bewusst geschaffenes Werkzeug des Krieges."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittlere Größe, kompakt und muskulös. Kräftige Läufe, stabile Hufe, relativ kurzer Rücken. Weniger filigran als der Curragh, deutlich beweglicher als der Hest. Dichtes, aber nicht übermäßig langes Fell; angepasst an feuchte Wälder und wechselndes Klima."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wachsam, arbeitswillig und vergleichsweise mutig. Der Tirashan ist kein nervöses Pferd, reagiert aber schnell auf Reiterbefehle. Bindet sich gut, jedoch ohne die extreme Loyalität eines Ceffyl. Gut für längere Einsätze und wechselnde Reiter geeignet."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bevorzugtes Reittier der Mormaer. Ideal für Waldgefechte, Patrouillen, Überfälle und lange Märsche durch unwegsames Gelände. Weniger geeignet für schwere Lanzenangriffe auf offenem Feld, dort dem Rhyfel unterlegen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr gute Geländegängigkeit",
+            "Hohe Ausdauer",
+            "Unempfindlich gegen giftige Pflanzen",
+            "Zuverlässig im Gefecht"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Keine herausragende Eleganz oder Prestige",
+            "Unterlegen gegenüber schweren Schlachtrossen",
+            "Weniger traditionsgeladen als Curragh oder Ceffyl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anspruchslos. Kommt mit einfachen Ställen oder sogar Waldkoppeln zurecht. Verträgt feuchte Böden und wechselnde Nahrung gut. Regelmäßige Hufpflege bleibt essenziell, da Einsätze oft im schwierigen Gelände stattfinden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Mormaer benennen ihren Tirashan nicht – aus Aberglauben, um im Gefecht keine emotionale Bindung zu verlieren.",
+            "Tirashan gelten als besonders ruhig gegenüber Waldgeräuschen und wilden Tieren.",
+            "In Aislaerneach heißt es: „Ein Tirashan stolpert nie – er entscheidet.“"
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "estryll"
+}

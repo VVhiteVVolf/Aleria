@@ -1,0 +1,175 @@
+{
+  "id": "cyning",
+  "name": "Cyning",
+  "classification": "Pferderasse aus Kent",
+  "continent": "Aldervan",
+  "region": "Kent",
+  "folio": "P-24",
+  "quote": "Wo der Cyning zieht, wird selbst Stein zur Fracht.",
+  "quoteAttribution": "Kenter Fuhrmannsspruch",
+  "summary": "Der Cyning ist eine der ältesten und fundamentalsten Pferderassen Aldervans . Als direkter Nachfahre des aldorvanischen Urpferdes verkörpert er rohe Körperkraft und Masse wie kein anderes Tier seiner Art. Er ist kein Reitpferd, kein Schlachtross und kein Statussymbol – der Cyning ist ein Werkzeug der Last und des Zugs .",
+  "emblem": {
+    "src": "../../../assets/icons/pferde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": ""
+  },
+  "hero": {
+    "src": "../../../assets/horse-profiles/cyning.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Überlieferte Bildtafel des Cyning",
+    "caption": "Bildtafel aus dem pferdekundlichen Archiv: Cyning"
+  },
+  "facts": [],
+  "market": {
+    "tier": "Hervorragend",
+    "price": "3.000–20.000 Goldstücke",
+    "tags": [
+      "Schwerlast",
+      "Transport"
+    ],
+    "age": "50–60 Jahre"
+  },
+  "performance": {
+    "labels": [
+      "Schnelligkeit",
+      "Ausdauer",
+      "Stärke",
+      "Agilität",
+      "Sozialverhalten",
+      "Robustheit"
+    ],
+    "values": [
+      2,
+      8,
+      10,
+      1,
+      8,
+      10
+    ],
+    "source": "Rossmarkt"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cyning ist eine der ältesten und fundamentalsten Pferderassen Aldervans . Als direkter Nachfahre des aldorvanischen Urpferdes verkörpert er rohe Körperkraft und Masse wie kein anderes Tier seiner Art. Er ist kein Reitpferd, kein Schlachtross und kein Statussymbol – der Cyning ist ein Werkzeug der Last und des Zugs ."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cyning entstand früh in der Geschichte Aldervans, lange bevor spezialisierte Reit- oder Kriegspferde gezüchtet wurden. Seine Linie blieb vergleichsweise unverändert, da sein Nutzen eindeutig war: ziehen, tragen, bewegen . Besonders in den südöstlichen Regionen Aeldrumar , Talyndor und Brevanor wurde er über Jahrhunderte gezielt auf Größe und Muskelkraft selektiert."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cyning ist ein kolossales Tier – größer und massiger als jede andere bekannte Pferderasse. Breite Brust, extrem kräftige Schultern, massive Hinterhand und ein kurzer, stabiler Rücken zeichnen ihn aus. Seine Beine sind dickknochig und belastbar, seine Hufe groß und hart. Eleganz fehlt ihm völlig – alles an ihm ist auf physische Belastung ausgelegt."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trotz seiner Größe ist der Cyning ruhig, gleichmütig und stoisch . Er reagiert langsam, aber zuverlässig, zeigt kaum Schreckreaktionen und lässt sich auch in chaotischen Umgebungen führen. Eigeninitiative oder Kampfgeist besitzt er nicht – er arbeitet, solange er geführt wird."
+        }
+      ]
+    },
+    {
+      "id": "nutzung-einsatz",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cyning wird nahezu ausschließlich als Zug- und Lasttier eingesetzt:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ziehen von schweren Wagen und Transportkarren",
+            "Bewegen von Kriegsmaschinen und Belagerungsgerät",
+            "Landwirtschaftlicher Einsatz bei schweren Böden",
+            "Militärische Logistik"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Für Reiterei, Kavallerie oder schnelle Bewegungen ist er ungeeignet."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unübertroffene Zugkraft",
+            "Enorme Ausdauer unter Last",
+            "Hohe Belastbarkeit",
+            "Ruhiges, verlässliches Wesen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Völlig ungeeignet als Reit- oder Kriegspferd",
+            "Sehr hoher Futterbedarf",
+            "Langsam und unbeweglich",
+            "Aufwendig in Zucht und Haltung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haltung-pflege",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cyning benötigt große Stallungen , enorme Futtermengen und regelmäßige Pflege der Gelenke und Hufe. Seine Haltung ist teuer und logistisch anspruchsvoll, weshalb er meist nur von Großgütern, Militärdepots oder reichen Landbesitzern gehalten wird."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Aldervan sagt man: „Wenn der Cyning nicht zieht, zieht nichts.“",
+            "Viele Heere wären ohne ihn nicht marschfähig.",
+            "Manche Bauern messen ihren Reichtum nicht in Gold, sondern in Cyning-Gespannen ."
+          ]
+        }
+      ]
+    }
+  ],
+  "parentGroupId": "aldervan"
+}
