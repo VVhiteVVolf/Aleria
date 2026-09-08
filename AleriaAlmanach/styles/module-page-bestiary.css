@@ -10,14 +10,12 @@
     grid-template-rows: minmax(0, 1fr) auto;
     overflow: hidden;
     color: var(--ink);
-    background:
-      var(--bestiary-bg, linear-gradient(0deg, transparent, transparent)),
-      radial-gradient(circle at 50% 16%, rgba(255,255,255,0.36), transparent 34%),
-      linear-gradient(90deg, rgba(139,105,20,0.1), transparent 18%, transparent 82%, rgba(139,105,20,0.1)),
-      var(--parchment);
+    background: var(--module-paper, var(--parchment-dark));
     background-size: cover, auto, auto, auto;
     background-position: center;
-  }
+
+  min-width: 0;
+}
   .bestiary-page::before {
     content: '';
     position: absolute;
@@ -294,3 +292,35 @@
     text-transform: uppercase;
   }
 
+
+@container module-content (max-width: 860px) {
+  .bestiary-page {
+    display: block;
+    overflow: auto;
+  }
+  .bestiary-left,
+  .bestiary-right {
+    overflow: visible;
+    border: 0;
+  }
+  .bestiary-figure-stage {
+    min-height: 420px;
+    height: 56vh;
+    border-block: 1px solid rgba(139,105,20,0.22);
+  }
+  .bestiary-description {
+    max-width: 100%;
+  }
+  .bestiary-marker em {
+    display: none;
+  }
+  .bestiary-footer {
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+  }
+}
+
+@container module-content (max-width: 640px) {
+  .bestiary-edit-row.anatomy, .bestiary-edit-row.annotation,
+  .bestiary-edit-row.weakness { grid-template-columns: 1fr; }
+}

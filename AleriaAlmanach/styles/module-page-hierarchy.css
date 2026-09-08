@@ -1,11 +1,11 @@
 /* Aleria Almanach - dedicated hierarchy / organisation chart module page. */
 
 .hierarchy-page {
-  --hierarchy-ink: #2d1b0b;
-  --hierarchy-muted: #6f5632;
-  --hierarchy-line: rgba(139, 105, 45, 0.34);
-  --hierarchy-paper: #ead3a5;
-  --hierarchy-paper-light: #f5e5bf;
+  --hierarchy-ink: var(--ink);
+  --hierarchy-muted: var(--ink-faded);
+  --hierarchy-line: var(--module-line, var(--parchment-deeper));
+  --hierarchy-paper: var(--module-paper, var(--parchment-dark));
+  --hierarchy-paper-light: var(--module-paper-raised, var(--parchment));
   --hierarchy-card-font-scale: 0.92;
   --hierarchy-portrait-scale: 1;
   --hierarchy-chart-scale: 1;
@@ -16,18 +16,17 @@
   min-height: 0;
   position: relative;
   padding: clamp(0.65rem, 1.2vw, 1.2rem);
-  color: var(--hierarchy-ink);
-  background:
-    radial-gradient(circle at 22% 18%, rgba(255, 251, 226, 0.8), transparent 28%),
-    linear-gradient(180deg, #efd9ad, #d4b679);
-  border: 2px solid rgba(72, 42, 13, 0.8);
-  box-shadow: inset 0 0 0 2px rgba(201, 161, 92, 0.55), inset 0 0 42px rgba(94, 54, 15, 0.22);
+  color: var(--ink);
+  background: var(--module-paper, var(--parchment-dark));
+  border: 1px solid var(--module-line, var(--parchment-deeper));
+  box-shadow: none;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   align-content: start;
   gap: 0.45rem;
   overflow: hidden;
   scrollbar-color: rgba(113, 80, 36, 0.58) rgba(255, 248, 226, 0.24);
+  min-width: 0;
 }
 
 .hierarchy-page.fullscreen-active {
@@ -38,9 +37,7 @@
   max-height: 100dvh;
   grid-template-rows: auto minmax(0, 1fr);
   padding: clamp(0.55rem, 1vw, 0.95rem);
-  background:
-    radial-gradient(circle at 22% 18%, rgba(255, 251, 226, 0.86), transparent 28%),
-    linear-gradient(180deg, #efd9ad, #d0ad68);
+  background: var(--module-paper, var(--parchment-dark));
 }
 
 .hierarchy-page::before {
@@ -964,7 +961,7 @@
   max-height: none;
 }
 
-@media (max-width: 980px) {
+@container module-content (max-width: 980px) {
   .hierarchy-topbar,
   .hierarchy-document,
   .hierarchy-footer {
@@ -981,7 +978,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@container module-content (max-width: 640px) {
   .hierarchy-side-head,
   .hierarchy-node-card {
     grid-template-columns: 1fr;

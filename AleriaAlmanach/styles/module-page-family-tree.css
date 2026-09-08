@@ -6,10 +6,8 @@
   gap: 0.75rem;
   min-width: 0;
   padding: clamp(0.65rem, 1.6vw, 1.15rem);
-  color: #3f2b1e;
-  background:
-    radial-gradient(circle at 50% 0, rgba(255, 249, 228, 0.8), transparent 48%),
-    linear-gradient(180deg, #ead8b4, #d8bc8b);
+  color: var(--ink);
+  background: var(--module-paper, var(--parchment-dark));
 }
 
 .family-tree-embed-header {
@@ -147,7 +145,7 @@
   white-space: nowrap;
 }
 
-@media (max-width: 720px) {
+@container module-content (max-width: 720px) {
   .family-tree-embed-header,
   .family-tree-embed-footer {
     align-items: stretch;

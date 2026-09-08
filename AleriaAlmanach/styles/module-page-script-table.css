@@ -88,8 +88,9 @@
   --script-line: rgba(112, 77, 29, 0.3);
   width: 100%;
   box-sizing: border-box;
-  color: var(--script-ink);
-  background: linear-gradient(180deg, #f7eed5, #e7d5aa);
+  color: var(--ink);
+  background: var(--module-paper, var(--parchment-dark));
+  min-width: 0;
 }
 
 .script-table-header {
@@ -281,7 +282,7 @@
   text-align: center;
 }
 
-@media (max-width: 650px) {
+@container module-content (max-width: 650px) {
   .script-table-grid th,
   .script-table-grid td { padding: 0.42rem 0.55rem; }
 }

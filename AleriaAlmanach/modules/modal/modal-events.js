@@ -126,7 +126,7 @@ function isModalTypingTarget(target) {
 document.addEventListener('keydown', event => {
   const overlay = document.getElementById('modal-overlay');
   const isModalOpen = !!currentEntry && overlay?.classList.contains('active');
-  if (!isModalOpen || isModalKeyboardBlocked()) return;
+  if (event.defaultPrevented || !isModalOpen || isModalKeyboardBlocked()) return;
 
   if (event.key === 'Escape') {
     if (closeModalNavigationMenu({ restoreFocus: true })) {

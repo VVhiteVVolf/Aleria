@@ -16,6 +16,7 @@
     "pretest": "npm run prepare:dice-runtime",
     "test": "node --test tests/*.test.mjs",
     "test:landtroll": "node tools/check-landtroll.mjs",
+    "check:templates": "node scripts/check-module-template-assets.js && node scripts/check-module-template-roundtrip.js",
     "sync:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs",
     "check:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs --check",
     "sync:character-equipment": "node scripts/reconcile-character-equipment.mjs",

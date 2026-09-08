@@ -62,6 +62,8 @@ function buildInlineLanguageEditor(page) {
           <div class="trade-editor-list">${buildInlineLanguageSectionRows(data.sections)}</div>
         </div>
         ${field('Fußzeile', 'footer', data.footer)}
+        <div class="inline-edit-field wide"><span class="inline-edit-label">Zitat (optional)</span>${typeof buildTextFormatToolbar === 'function' ? buildTextFormatToolbar() : ''}<textarea class="inline-edit-textarea" data-language-inline-page-field="quote">${escapeHtml(page.quote || '')}</textarea></div>
+        <div class="inline-edit-field wide"><span class="inline-edit-label">Zitatgeber (optional)</span><input class="inline-edit-input" type="text" data-language-inline-page-field="quoteBy" value="${escapeHtml(page.quoteBy || '')}"></div>
       </div>
     </div>`;
 }
@@ -69,6 +71,15 @@ function buildInlineLanguageEditor(page) {
 function handleInlineLanguageField(event) {
   const field = event.target;
   if (!field?.closest?.('.inline-module-edit-pane')) return;
+
+  const pageField = field.dataset.languageInlinePageField;
+  if (pageField === 'quote' || pageField === 'quoteBy') {
+    const page = getInlineDraftPage();
+    if (!page) return;
+    page[pageField] = field.value;
+    scheduleInlineModuleLivePreviewRefresh();
+    return;
+  }
 
   const rootField = field.dataset.languageInlineField;
   if (rootField) {

@@ -29,6 +29,7 @@ const workspaceIconDirectories = [
   ['Zauber Icons', 'Oblivion Style'],
   ['Zauber Icons', 'Baldurs Gate'],
   ['Traits Icon'],
+  ['Etablissemant Icons'],
   ['ReiterIcons']
 ];
 

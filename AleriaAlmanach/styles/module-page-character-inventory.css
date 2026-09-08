@@ -1,17 +1,18 @@
 .character-inventory-page {
   container: character-inventory / inline-size;
-  --ci-ink: #392a1c;
-  --ci-muted: #6f5738;
-  --ci-line: #cbb584;
-  --ci-paper: #fff9e9;
+  --ci-ink: var(--ink);
+  --ci-muted: var(--ink-faded);
+  --ci-line: var(--module-line, var(--parchment-deeper));
+  --ci-paper: var(--module-paper-raised, var(--parchment));
   position: relative;
-  min-height: calc(var(--module-height, 100vh) - 7rem);
+  min-height: 0;
   padding: 1rem;
   border: 1px solid rgba(139,105,20,0.36);
-  background:
-    linear-gradient(135deg, rgba(255,250,232,0.9), rgba(221,184,106,0.3)),
-    var(--parchment);
-  color: var(--ci-ink);
+  background: var(--module-paper, var(--parchment-dark));
+  color: var(--ink);
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: auto;
 }
 
 .ci-header {
@@ -24,7 +25,7 @@
   min-height: 0;
   padding: 1rem 1.2rem;
   text-align: left;
-  background: linear-gradient(115deg, #dcc28b, #f4e6c1);
+  background: var(--module-paper-raised, var(--parchment));
   border: 1px solid var(--ci-line);
   margin-bottom: 0.9rem;
 }
@@ -1356,7 +1357,7 @@
   transform-origin: top left;
 }
 
-@media (max-width: 1180px) {
+@container module-content (max-width: 1180px) {
   .ci-profile-modal,
   .ci-full-editor {
     grid-template-columns: 1fr;

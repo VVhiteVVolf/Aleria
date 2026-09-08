@@ -1,16 +1,16 @@
 ﻿/* Aleria Almanach - header, archive navigation and entry card styles. Extracted from styles.css. */
 
   /* ── HEADER ── */
-  header { background: linear-gradient(180deg,#c8a96e 0%,#d4b87a 40%,var(--parchment-dark) 100%); border-bottom: 3px solid var(--gold); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
-  header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(184,149,42,0.18) 0%,transparent 70%); pointer-events:none; }
+  .almanach-header { background: linear-gradient(180deg,#c8a96e 0%,#d4b87a 40%,var(--parchment-dark) 100%); border-bottom: 3px solid var(--gold); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  .almanach-header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(184,149,42,0.18) 0%,transparent 70%); pointer-events:none; }
   .header-pre { font-style:italic; font-size:1rem; color:var(--ink-faded); letter-spacing:0.25em; opacity:0.75; margin-bottom:1.1rem; }
-  h1 { font-family:'Cinzel',serif; font-size:clamp(2.2rem,5vw,4rem); font-weight:700; color:var(--ink); text-shadow:0 1px 3px rgba(80,50,10,0.25); letter-spacing:0.07em; line-height:1.1; }
+  .almanach-header h1 { font-family:'Cinzel',serif; font-size:clamp(2.2rem,5vw,4rem); font-weight:700; color:var(--ink); text-shadow:0 1px 3px rgba(80,50,10,0.25); letter-spacing:0.07em; line-height:1.1; }
   .header-tagline { font-family:'Cinzel',serif; font-size:clamp(0.6rem,1.4vw,0.82rem); color:var(--ink-faded); letter-spacing:0.22em; margin-top:0.6rem; text-transform:uppercase; opacity:0.9; }
   .header-subtitle { font-style:italic; color:var(--ink-faded); font-size:0.95rem; margin-top:0.4rem; opacity:0.8; }
   .header-divider { width:300px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:1.6rem auto 0; }
 
   /* ── MAIN ── */
-  main { max-width:1400px; margin:0 auto; padding:3rem 2rem 5rem; }
+  #main-content { max-width:1400px; margin:0 auto; padding:3rem 2rem 5rem; }
 
   /* ── TAB NAVIGATION ── */
   .gallery-tabs {
@@ -2171,7 +2171,7 @@
       letter-spacing: 0.1em;
     }
 
-    main {
+    #main-content {
       padding-inline: 1rem;
     }
 
@@ -2417,4 +2417,3 @@
   /* ══════════════════════════════════════════
      MODAL — clean simple layout
   ══════════════════════════════════════════ */
-

@@ -2,6 +2,8 @@
 
 Stand: 2026-07-11
 
+Ergänzung 2026-09-09: Der [Layout- und Template-Durchlauf](module-template-layout.md) dokumentiert die inzwischen 30 Vorlagen, 33 Defaultseiten, die gemeinsame Gestaltung und die aktuellen Browser- und Regressionstests. Die ältere technische Momentaufnahme unten bleibt als Entwicklungshistorie erhalten.
+
 Ziel: Jede Live-Darstellung eines Modultyps muss im Bearbeitungsmodus deckend und organisch bearbeitbar sein. Sichtbare Felder duerfen nicht nur ueber Rohdaten, JSON, Pipe-Listen oder versteckte Sonderwege erreichbar sein.
 
 ## Leitlinien

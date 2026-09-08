@@ -1,0 +1,114 @@
+/* Shared, readable preview frames for the inline and full module editors. */
+.module-editor-preview-meta {
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  text-align: right;
+}
+.module-editor-preview-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+}
+.module-editor-preview-stage {
+  border-top: 1px solid var(--module-line);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.module-editor-preview-frame {
+  flex: 0 0 auto;
+}
+.module-editor-preview-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--parchment-dark);
+  border: 1px solid var(--module-line);
+  box-shadow: var(--module-shadow);
+  overflow: hidden;
+  pointer-events: auto;
+}
+.module-editor-preview-card a {
+  pointer-events: none;
+}
+.module-editor-preview-card .module-tooltip,
+.module-editor-preview-card .module-tooltip *,
+.module-editor-preview-card .module-tooltip-popover a {
+  pointer-events: auto;
+}
+.module-editor-preview-card .modal-resizer {
+  display: none;
+}
+.module-editor-preview-card .comments-form-bar,
+.module-editor-preview-card .modal-page-actions {
+  pointer-events: none;
+}
+.module-editor-preview-empty {
+  border: 1px dashed rgba(139,105,20,0.26);
+  background: rgba(255,255,255,0.14);
+  padding: 1rem 0.9rem;
+  text-align: center;
+  color: var(--ink-faded);
+  font-style: italic;
+  line-height: 1.55;
+  margin: 0.9rem;
+}
+
+
+.inline-module-preview-stage {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+.inline-module-preview-frame {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--parchment-dark);
+  border: 1px solid var(--module-line);
+  box-shadow: var(--module-shadow);
+  overflow: hidden;
+  pointer-events: auto;
+}
+.inline-module-preview-frame a {
+  pointer-events: none;
+}
+.inline-module-preview-frame .module-tooltip,
+.inline-module-preview-frame .module-tooltip *,
+.inline-module-preview-frame .module-tooltip-popover a {
+  pointer-events: auto;
+}
+
+
+/* Responsive templates measure their available page or editor width. */
+.modal-card, .module-editor-card { container-name: module-shell module-content; container-type: inline-size; }
+.inline-module-preview-frame, .module-editor-preview-card,
+.inline-module-edit-pane, .module-editor-main,
+.comment-module-preview-frame, .cp-biography-view-render { container: module-content / inline-size; }
+.module-editor-preview-stage, .inline-module-preview-stage { padding: 16px; background: var(--module-paper-soft); }
+.module-editor-main, .module-editor-side { min-width: 0; }
+.module-editor-field { min-width: 0; }
+@media (max-width: 900px) {
+  .module-editor-body.visible { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(240px, 46%) minmax(240px, 1fr); overflow: auto; }
+}
+@container module-content (max-width: 640px) {
+  .module-editor-grid { grid-template-columns: minmax(0, 1fr); }
+}

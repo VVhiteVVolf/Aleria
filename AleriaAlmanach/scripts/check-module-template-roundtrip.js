@@ -1,7 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const vm = require('vm');
-const { webcrypto } = require('crypto');
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { webcrypto } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const almanachRoot = path.resolve(__dirname, '..');
 const sources = [
@@ -14,6 +17,7 @@ const sources = [
   'modules/language/language-data.js',
   'modules/family-tree-embed/family-tree-embed-data.js',
   'modules/core/app-core.js',
+  'modules/core/aleria-calendar.js',
   'modules/module-editor/module-editor-data.js',
   'modules/family/family-api.js',
   'modules/family/editor/family-editor-model.js',

@@ -120,16 +120,12 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   empty.hidden = true;
   meta.textContent = `Seite ${_moduleEditorPreviewPageIndex + 1} · ${rawLabel}`;
   const previewSize = getModuleDisplaySize(previewEntry);
-  const previewWidth = Math.round(1280 * (previewSize.width / 100));
-  const previewMinHeight = Math.round(960 * (previewSize.height / 100));
-  // Biography/house dossiers cap the card height so their three columns scroll
-  // internally (like in the modal) instead of shrinking the whole preview scale.
-  const previewTemplateId = typeof getModuleTemplateForPage === 'function' ? getModuleTemplateForPage(page).id : '';
-  const fixedHeightStyle = previewTemplateId === 'object-profile' || previewTemplateId === 'houses'
-    ? `height:${previewMinHeight}px;`
-    : '';
+  // Render at the available reading size. Each template scrolls inside its frame,
+  // so long pages do not shrink the entire preview into an unreadable thumbnail.
+  const previewWidth = Math.round(Math.max(240, stage.clientWidth - 32) * (previewSize.width / 100));
+  const previewHeight = Math.round(Math.max(240, stage.clientHeight - 32) * (previewSize.height / 100));
   if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(frame);
-  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;${fixedHeightStyle}">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
+  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;height:${previewHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
   if (typeof mountRegisteredModuleTemplatePage === 'function') {
     mountRegisteredModuleTemplatePage(page, previewEntry, _moduleEditorPreviewPageIndex, frame, { preview: true });
   }
@@ -139,17 +135,6 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
 
   requestAnimationFrame(() => {
     if (renderToken !== _moduleEditorPreviewRenderToken) return;
-    const shell = document.getElementById('me-preview-shell');
-    if (!shell) return;
-    const availableWidth = Math.max(220, stage.clientWidth - 32);
-    const availableHeight = Math.max(220, stage.clientHeight - 32);
-    const previewCard = frame.querySelector('.module-editor-preview-card');
-    const rawWidth = previewCard?.offsetWidth || previewWidth || 1280;
-    const rawHeight = Math.max(previewMinHeight, previewCard?.scrollHeight || frame.scrollHeight || previewMinHeight);
-    const scale = Math.min(1, availableWidth / rawWidth, availableHeight / rawHeight);
-    frame.style.transform = `scale(${scale})`;
-    frame.style.width = `${Math.round(rawWidth * scale)}px`;
-    frame.style.height = `${Math.round(rawHeight * scale)}px`;
     stage.scrollTop = previousStageTop;
     stage.scrollLeft = previousStageLeft;
   });

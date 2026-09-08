@@ -2,13 +2,14 @@
   --guest-portrait-size: 96px;
   --guest-entry-height: calc((var(--guest-portrait-size) * 1.333) + 13.25rem);
   position: relative;
-  min-height: calc(var(--module-height, 100vh) - 7rem);
+  min-height: 0;
   padding: 1rem;
   border: 1px solid rgba(139,105,20,0.34);
-  background:
-    linear-gradient(135deg, rgba(255,250,232,0.92), rgba(221,184,106,0.28)),
-    var(--parchment);
+  background: var(--module-paper, var(--parchment-dark));
   color: var(--ink);
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: auto;
 }
 
 .guest-register-header {
@@ -417,7 +418,7 @@
   gap: 0.35rem;
 }
 
-@media (max-width: 980px) {
+@container module-content (max-width: 980px) {
   .guest-register-entry {
     grid-template-columns: 1fr;
     height: auto;
@@ -444,7 +445,7 @@
   }
 }
 
-@media (max-width: 1280px) {
+@container module-content (max-width: 1280px) {
   .guest-register-editor-subgrid {
     grid-template-columns: 1fr;
   }

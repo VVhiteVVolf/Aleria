@@ -1234,44 +1234,9 @@
     padding: 0.85rem 1rem 0.7rem;
     border-bottom: 1px solid rgba(139,105,20,0.2);
   }
-  .inline-module-preview-stage {
-    flex: 1;
-    min-height: 0;
-    overflow: auto;
-    padding: 1rem;
-  }
-  .inline-module-preview-frame {
-    width: 100%;
-    min-width: 720px;
-    min-height: 100%;
-    background: var(--parchment-dark);
-    border: 1px solid rgba(139,105,20,0.28);
-    box-shadow: 0 12px 30px rgba(70,42,18,0.18);
-    overflow: hidden;
-    pointer-events: auto;
-  }
-  .inline-module-preview-frame a {
-    pointer-events: none;
-  }
-  .inline-module-preview-frame .module-tooltip,
-  .inline-module-preview-frame .module-tooltip *,
-  .inline-module-preview-frame .module-tooltip-popover a {
-    pointer-events: auto;
-  }
-  .inline-module-preview-frame .modal-page-header {
-    display: none;
-  }
-  .inline-module-preview-frame .modal-row {
-    min-height: calc(100dvh - 142px);
-  }
-  .inline-module-preview-frame .wanted-page,
-  .inline-module-preview-frame .profile-page,
-  .inline-module-preview-frame .bestiary-page,
-  .inline-module-preview-frame .quest-file-page,
-  .inline-module-preview-frame .artifact-page,
-  .inline-module-preview-frame .recipe-page,
-  .inline-module-preview-frame .tleague-page,
-  .inline-module-preview-frame .session-page {
-    min-height: calc(100dvh - 142px);
-  }
 
+@media (max-width: 860px) {
+  .module-editor-body.visible { grid-template-columns: 1fr; }
+  .module-editor-main { border-right: none; border-bottom: 1px solid rgba(139,105,20,0.16); }
+  .module-editor-grid { grid-template-columns: 1fr; }
+}

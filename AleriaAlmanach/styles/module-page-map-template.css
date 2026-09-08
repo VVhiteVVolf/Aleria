@@ -1,17 +1,17 @@
 .map-template-page {
-  --map-border: rgba(141, 98, 34, 0.35);
-  --map-ink: #2f2113;
+  --map-border: var(--module-line, var(--parchment-deeper));
+  --map-ink: var(--ink);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  min-height: min(88vh, 1120px);
+  min-height: 0;
   height: 100%;
   padding: 0.65rem;
-  color: var(--map-ink);
-  background:
-    linear-gradient(180deg, rgba(255, 247, 220, 0.94), rgba(230, 203, 145, 0.88)),
-    repeating-linear-gradient(45deg, rgba(112, 75, 25, 0.035) 0 2px, transparent 2px 10px);
+  color: var(--ink);
+  background: var(--module-paper, var(--parchment-dark));
   border: 1px solid var(--map-border);
-  overflow: hidden;
+  overflow: auto;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .map-template-toolbar {
@@ -191,7 +191,7 @@ button.map-template-image-link {
   line-height: 1.65;
 }
 
-@media (max-width: 900px) {
+@container module-content (max-width: 900px) {
   .map-template-layout {
     grid-template-columns: minmax(0, 1fr);
   }

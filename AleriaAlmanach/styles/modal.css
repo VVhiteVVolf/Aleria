@@ -268,3 +268,44 @@
   /* Breitensteuerung wandert vom Einzelbild auf den Reiter-Block; die Bilder füllen ihn. */
   .biography-portrait-tabs { width: var(--biography-side-width); max-width: 100%; }
   .module-portrait-tabs .biography-portrait { width: 100%; }
+
+@container module-content (max-width: 860px) {
+  .modal-row {
+    flex-direction: column;
+  }
+  .modal-img-col {
+    width: 100% !important;
+    height: clamp(210px, 34vh, 320px);
+    border-right: none;
+    border-bottom: 1px solid var(--parchment-deeper);
+  }
+  .modal-resizer {
+    display: none;
+  }
+  .modal-text-col {
+    padding: 0.9rem 1rem 1.1rem;
+  }
+  .modal-text-inner {
+    width: 100%;
+    gap: 0.9rem;
+    padding-bottom: 0.5rem;
+  }
+  .modal-title {
+    font-size: 1rem;
+  }
+  .modal-description,
+  .commentator-block,
+  .entry-quote,
+  .scene-intro,
+  .scene-action {
+    max-width: 100%;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  #modal-overlay { padding: 0; }
+  .modal-card { width: 100vw; height: 100vh; max-width: none; border-width: 0; }
+}

@@ -11,8 +11,9 @@
   flex-direction: column;
   overflow: hidden;
   color: var(--ink);
-  background: radial-gradient(circle at 48% 8%, rgba(255,255,255,.34), transparent 32%), var(--parchment);
+  background: var(--module-paper, var(--parchment-dark));
   isolation: isolate;
+  min-width: 0;
 }
 
 .caste-page::before {
@@ -324,22 +325,24 @@
   text-transform: uppercase;
 }
 
-.inline-module-preview-frame:has(.caste-page),
-.module-editor-preview-card:has(.caste-page) { display: flex; flex-direction: column; height: 100%; min-height: 0; }
 
-@media (max-width: 980px) {
-  .caste-dossier { grid-template-columns: minmax(220px, 31%) minmax(0,1fr); overflow: auto; }
+@container module-content (max-width: 980px) {
+  .caste-dossier { grid-template-columns: minmax(220px, 31%) minmax(0,1fr); grid-template-rows: max-content max-content; overflow: auto; }
   .caste-column { overflow: visible; }
   .caste-column-right { grid-column: 1 / -1; border-left: 0; border-top: 1px solid rgba(139,105,20,.22); display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
 }
 
-@media (max-width: 680px) {
+@container module-content (max-width: 680px) {
   .caste-page { overflow: auto; }
   .caste-dossier-header { align-items: flex-start; flex-direction: column; }
   .caste-dossier-marks { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
-  .caste-dossier { display: block; overflow: visible; }
+  .caste-dossier { display: block; flex: none; overflow: visible; }
   .caste-column { border: 0; border-bottom: 1px solid rgba(139,105,20,.2); }
   .caste-column-right { display: block; }
   .caste-role-grid,
   .caste-rights-grid { grid-template-columns: 1fr; }
+}
+
+@container module-content (max-width: 640px) {
+  .caste-edit-row { grid-template-columns: 1fr; }
 }

@@ -106,6 +106,12 @@ function buildLanguageModuleEditorFields(page) {
           </div>
           <div class="trade-editor-list language-module-sections">${buildLanguageModuleSectionRows(data.sections)}</div>
         </div>
+        <div class="module-editor-field wide">
+          <label>Zitat (optional)</label>
+          ${typeof buildTextFormatToolbar === 'function' ? buildTextFormatToolbar() : ''}
+          <textarea class="me-language-quote">${escapeHtml(page?.quote || '')}</textarea>
+        </div>
+        <div class="module-editor-field wide"><label>Zitatgeber (optional)</label><input class="me-language-quote-by" type="text" value="${escapeHtml(page?.quoteBy || '')}"></div>
         <div class="module-editor-field wide"><label>Fußzeile</label><input class="me-language-footer" type="text" value="${escapeHtml(data.footer)}"></div>
       </div>
     </div>`;
@@ -114,6 +120,8 @@ function buildLanguageModuleEditorFields(page) {
 function collectLanguageModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="language"]') || card;
   page.languagePage = true;
+  page.quote = getTrimmedFormValue(block, '.me-language-quote');
+  page.quoteBy = getTrimmedFormValue(block, '.me-language-quote-by');
   page.language = sanitizeLanguageData({
     archiveLabel: getTrimmedFormValue(block, '.me-language-archive-label'),
     nativeName: getTrimmedFormValue(block, '.me-language-native-name'),

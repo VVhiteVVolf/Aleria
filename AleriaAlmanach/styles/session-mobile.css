@@ -1,4 +1,4 @@
-@media (max-width: 760px) {
+@container module-content (max-width: 760px) {
   .session-page {
     min-height: 0;
     background: var(--parchment-dark);
@@ -79,19 +79,6 @@
     width: 40px;
     height: 40px;
   }
-
-  .session-page .session-status-panel {
-    position: fixed;
-    top: auto;
-    right: 0.7rem;
-    bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
-    left: 0.7rem;
-    width: auto;
-    max-height: min(70dvh, 520px);
-    overflow-y: auto;
-  }
-
-  .session-page .session-status-panel::before { display: none; }
 
   .session-page .session-status-grid { grid-template-columns: 1fr; }
 
@@ -239,4 +226,21 @@
     padding-left: 0.78rem;
     padding-right: 0.78rem;
   }
+}
+
+/* The mobile status overlay is positioned against the viewport. */
+@media (max-width: 760px) {
+  .session-page .session-status-panel {
+    position: fixed;
+    top: auto;
+    right: 0.7rem;
+    bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    left: 0.7rem;
+    width: auto;
+    max-height: min(70dvh, 520px);
+    overflow-y: auto;
+  }
+
+  .session-page .session-status-panel::before { display: none; }
+
 }

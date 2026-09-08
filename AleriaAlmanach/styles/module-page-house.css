@@ -65,7 +65,7 @@
   aspect-ratio: 1 / 1;
 }
 
-@media (max-width: 720px) {
+@container module-content (max-width: 720px) {
   .house-header {
     flex-direction: column;
     align-items: flex-start;

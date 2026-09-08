@@ -1,10 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const projectRoot = path.resolve(__dirname, '..', '..');
 const almanachRoot = path.join(projectRoot, 'AleriaAlmanach');
 const mainHtmlPath = path.join(almanachRoot, 'AleriaAlmanach.html');
-const orteLoaderPath = path.join(projectRoot, 'Orte', 'assets', 'js', 'orte-scene-session.js');
 const templatesPath = path.join(almanachRoot, 'modules', 'module-editor', 'module-editor-templates.js');
 
 function read(filePath) {
@@ -29,20 +31,20 @@ function findDuplicates(values) {
 }
 
 const mainHtml = read(mainHtmlPath);
-const orteLoader = read(orteLoaderPath);
 const templates = read(templatesPath);
 const inlineEditorPath = path.join(almanachRoot, 'modules', 'inline-editor', 'inline-module-editor.js');
 const inlineEditor = read(inlineEditorPath);
 const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|language|name-list|script-table|landing|character-inventory|guest-register|hierarchy|family|family-tree-embed|house-warriors)\\/[^"?]+\\.js';
 const mainScripts = collect(mainHtml, new RegExp(`src="\\.\\/(${moduleAssetPattern})`, 'g'));
-const orteScripts = collect(orteLoader, new RegExp(`"(${moduleAssetPattern})(?:\\?[^" ]*)?"`, 'g'));
 const mainStyles = collect(mainHtml, /href="\.\/(styles\/(?:module-page-[^"?]+|family-(?:editor|workbench))\.css)/g);
-const orteStyles = collect(orteLoader, /"(styles\/(?:module-page-[^"?]+|family-(?:editor|workbench))\.css)(?:\?[^" ]*)?"/g);
 const mainVendorAssets = [
   ...collect(mainHtml, /src="\.\/(vendor\/[^"?]+\.(?:js))(?:\?[^" ]*)?"/g),
   ...collect(mainHtml, /href="\.\/(vendor\/[^"?]+\.(?:css))(?:\?[^" ]*)?"/g)
 ];
-const orteVendorAssets = collect(orteLoader, /"(vendor\/[^"?]+\.(?:js|css))(?:\?[^" ]*)?"/g);
+const shellScripts = ['modules/modal/modal-navigation.js', 'modules/rendering/module-renderer.js', 'modules/modal/modal-controller.js'];
+const shellStyles = ['modules/modal/modal-navigation.css', 'modules/modal/modal-surface.css', 'modules/module-editor/module-preview.css'];
+const loadedScripts = collect(mainHtml, /src="\.\/([^"?]+\.js)/g);
+const loadedStyles = collect(mainHtml, /href="\.\/([^"?]+\.css)/g);
 const requiredVendorFiles = [
   'vendor/d3/7.9.0/LICENSE',
   'vendor/d3/7.9.0/d3.min.js',
@@ -64,12 +66,12 @@ const inlineDispatchedTypes = collect(inlineEditor, /if \(type === '([^']+)'\)/g
 const inlineBuilderNames = collect(inlineEditor, /return wrapInlineEditor\([^;]*?(buildInline[A-Za-z0-9]+Editor)\(/g);
 
 const failures = {
-  missingOrteScripts: mainScripts.filter(asset => !orteScripts.includes(asset)),
-  missingOrteStyles: mainStyles.filter(asset => !orteStyles.includes(asset)),
-  missingOrteVendorAssets: mainVendorAssets.filter(asset => !orteVendorAssets.includes(asset)),
-  missingFiles: [...orteScripts, ...orteStyles, ...requiredVendorFiles].filter(asset => !fs.existsSync(path.join(almanachRoot, asset))),
-  duplicateOrteScripts: findDuplicates(orteScripts),
-  duplicateOrteStyles: findDuplicates(orteStyles),
+  missingShellScripts: shellScripts.filter(asset => !loadedScripts.includes(asset)),
+  missingShellStyles: shellStyles.filter(asset => !loadedStyles.includes(asset)),
+  shellScriptOrder: shellScripts.filter((asset, index) => index > 0 && loadedScripts.indexOf(asset) <= loadedScripts.indexOf(shellScripts[index - 1])),
+  missingFiles: [...mainScripts, ...mainStyles, ...mainVendorAssets, ...shellScripts, ...shellStyles, ...requiredVendorFiles].filter(asset => !fs.existsSync(path.join(almanachRoot, asset))),
+  duplicateScripts: findDuplicates(mainScripts),
+  duplicateStyles: findDuplicates(mainStyles),
   templatesWithoutDependencyContract: registryIds.filter(id => !dependencyTemplateIds.includes(id)),
   dependencyContractsWithoutTemplate: dependencyTemplateIds.filter(id => !registryIds.includes(id)),
   duplicateTemplateIds: findDuplicates(registryIds),

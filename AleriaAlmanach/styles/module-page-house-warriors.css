@@ -1,36 +1,32 @@
 .house-warriors-page {
-  --hw-ink: #2d1b12;
-  --hw-muted: #735f4b;
-  --hw-gold: #9a7137;
+  --hw-ink: var(--ink);
+  --hw-muted: var(--ink-faded);
+  --hw-gold: var(--module-bronze, var(--gold));
   --hw-line: rgba(116, 79, 35, 0.32);
-  --hw-paper: #eee0c2;
-  color: var(--hw-ink);
-  background:
-    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.45), transparent 31rem),
-    linear-gradient(135deg, rgba(93, 56, 21, 0.06), transparent 35%),
-    var(--hw-paper);
+  --hw-paper: var(--module-paper-raised, var(--parchment));
+  color: var(--ink);
+  background: var(--module-paper, var(--parchment-dark));
   border: 1px solid rgba(98, 66, 30, 0.46);
-  box-shadow: inset 0 0 3rem rgba(90, 55, 20, 0.12), 0 0.8rem 2.4rem rgba(21, 12, 5, 0.18);
-  font-family: Georgia, 'Times New Roman', serif;
+  box-shadow: none;
+  font-family: 'EB Garamond', Georgia, serif;
   flex: 1;
   min-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
+  min-width: 0;
 }
 
 .house-warriors-hero {
   isolation: isolate;
-  min-height: 19rem;
-  padding: clamp(2.2rem, 5vw, 4.4rem);
+  min-height: 14rem;
+  padding: clamp(24px, 3vw, 40px);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(8rem, 15rem);
   align-items: end;
   gap: 2rem;
   position: relative;
-  background:
-    linear-gradient(115deg, rgba(52, 28, 14, 0.08), transparent 65%),
-    #e1c99e;
+  background: var(--module-paper-raised, var(--parchment));
   border-bottom: 1px solid var(--hw-line);
 }
 
@@ -350,7 +346,7 @@
   aspect-ratio: 16 / 10;
 }
 
-@media (max-width: 900px) {
+@container module-content (max-width: 900px) {
   .house-warriors-knight-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -367,7 +363,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@container module-content (max-width: 640px) {
   .house-warriors-hero {
     min-height: 0;
     grid-template-columns: 1fr;

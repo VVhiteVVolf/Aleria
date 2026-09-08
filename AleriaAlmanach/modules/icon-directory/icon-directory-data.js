@@ -2953,6 +2953,573 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "AltarIcon",
+    "fileName": "AltarIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/AltarIcon.png",
+    "width": 267,
+    "height": 244,
+    "ratio": "square"
+  },
+  {
+    "name": "AmbossIcon",
+    "fileName": "AmbossIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/AmbossIcon.png",
+    "width": 308,
+    "height": 301,
+    "ratio": "square"
+  },
+  {
+    "name": "AngelruteIcon",
+    "fileName": "AngelruteIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/AngelruteIcon.png",
+    "width": 320,
+    "height": 327,
+    "ratio": "square"
+  },
+  {
+    "name": "AuftragsrolleIcon",
+    "fileName": "AuftragsrolleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/AuftragsrolleIcon.png",
+    "width": 264,
+    "height": 284,
+    "ratio": "square"
+  },
+  {
+    "name": "BierkrugIcon",
+    "fileName": "BierkrugIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/BierkrugIcon.png",
+    "width": 258,
+    "height": 304,
+    "ratio": "square"
+  },
+  {
+    "name": "BrezelIcon",
+    "fileName": "BrezelIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/BrezelIcon.png",
+    "width": 288,
+    "height": 266,
+    "ratio": "square"
+  },
+  {
+    "name": "FußspurenIcon",
+    "fileName": "FußspurenIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/FußspurenIcon.png",
+    "width": 234,
+    "height": 295,
+    "ratio": "square"
+  },
+  {
+    "name": "GarnrolleIcon",
+    "fileName": "GarnrolleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GarnrolleIcon.png",
+    "width": 230,
+    "height": 287,
+    "ratio": "square"
+  },
+  {
+    "name": "GebetbuchIcon",
+    "fileName": "GebetbuchIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GebetbuchIcon.png",
+    "width": 240,
+    "height": 282,
+    "ratio": "square"
+  },
+  {
+    "name": "GebirgeIcon",
+    "fileName": "GebirgeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GebirgeIcon.png",
+    "width": 322,
+    "height": 252,
+    "ratio": "wide"
+  },
+  {
+    "name": "GeldbeutelIcon",
+    "fileName": "GeldbeutelIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GeldbeutelIcon.png",
+    "width": 293,
+    "height": 308,
+    "ratio": "square"
+  },
+  {
+    "name": "GlockeIcon",
+    "fileName": "GlockeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GlockeIcon.png",
+    "width": 224,
+    "height": 282,
+    "ratio": "square"
+  },
+  {
+    "name": "GoldsackIcon",
+    "fileName": "GoldsackIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/GoldsackIcon.png",
+    "width": 231,
+    "height": 275,
+    "ratio": "square"
+  },
+  {
+    "name": "HähnchenkeuleIcon",
+    "fileName": "HähnchenkeuleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/HähnchenkeuleIcon.png",
+    "width": 247,
+    "height": 267,
+    "ratio": "square"
+  },
+  {
+    "name": "HakenIcon",
+    "fileName": "HakenIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/HakenIcon.png",
+    "width": 216,
+    "height": 276,
+    "ratio": "square"
+  },
+  {
+    "name": "HandschellenIcon",
+    "fileName": "HandschellenIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/HandschellenIcon.png",
+    "width": 341,
+    "height": 313,
+    "ratio": "square"
+  },
+  {
+    "name": "HeiligenscheinIcon",
+    "fileName": "HeiligenscheinIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/HeiligenscheinIcon.png",
+    "width": 268,
+    "height": 117,
+    "ratio": "banner"
+  },
+  {
+    "name": "KelchIcon",
+    "fileName": "KelchIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KelchIcon.png",
+    "width": 199,
+    "height": 270,
+    "ratio": "portrait"
+  },
+  {
+    "name": "Kerze2Icon",
+    "fileName": "Kerze2Icon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/Kerze2Icon.png",
+    "width": 178,
+    "height": 301,
+    "ratio": "portrait"
+  },
+  {
+    "name": "KerzeIcon",
+    "fileName": "KerzeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KerzeIcon.png",
+    "width": 184,
+    "height": 288,
+    "ratio": "portrait"
+  },
+  {
+    "name": "KesselIcon",
+    "fileName": "KesselIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KesselIcon.png",
+    "width": 314,
+    "height": 297,
+    "ratio": "square"
+  },
+  {
+    "name": "KirchenbannerIcon",
+    "fileName": "KirchenbannerIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KirchenbannerIcon.png",
+    "width": 270,
+    "height": 289,
+    "ratio": "square"
+  },
+  {
+    "name": "KompassIcon",
+    "fileName": "KompassIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KompassIcon.png",
+    "width": 251,
+    "height": 332,
+    "ratio": "portrait"
+  },
+  {
+    "name": "KräuterbündelIcon",
+    "fileName": "KräuterbündelIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KräuterbündelIcon.png",
+    "width": 161,
+    "height": 301,
+    "ratio": "portrait"
+  },
+  {
+    "name": "KreuzIcon",
+    "fileName": "KreuzIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/KreuzIcon.png",
+    "width": 260,
+    "height": 316,
+    "ratio": "square"
+  },
+  {
+    "name": "LagerfeuerIcon",
+    "fileName": "LagerfeuerIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/LagerfeuerIcon.png",
+    "width": 237,
+    "height": 305,
+    "ratio": "portrait"
+  },
+  {
+    "name": "LandkarteIcon",
+    "fileName": "LandkarteIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/LandkarteIcon.png",
+    "width": 321,
+    "height": 286,
+    "ratio": "square"
+  },
+  {
+    "name": "LaterneIcon",
+    "fileName": "LaterneIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/LaterneIcon.png",
+    "width": 203,
+    "height": 332,
+    "ratio": "portrait"
+  },
+  {
+    "name": "LauteIcon",
+    "fileName": "LauteIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/LauteIcon.png",
+    "width": 263,
+    "height": 310,
+    "ratio": "square"
+  },
+  {
+    "name": "Lupe2Icon",
+    "fileName": "Lupe2Icon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/Lupe2Icon.png",
+    "width": 285,
+    "height": 293,
+    "ratio": "square"
+  },
+  {
+    "name": "LupeIcon",
+    "fileName": "LupeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/LupeIcon.png",
+    "width": 288,
+    "height": 296,
+    "ratio": "square"
+  },
+  {
+    "name": "MondsichelIcon",
+    "fileName": "MondsichelIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/MondsichelIcon.png",
+    "width": 203,
+    "height": 245,
+    "ratio": "square"
+  },
+  {
+    "name": "OpferschaleIcon",
+    "fileName": "OpferschaleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/OpferschaleIcon.png",
+    "width": 265,
+    "height": 225,
+    "ratio": "square"
+  },
+  {
+    "name": "PferdIcon",
+    "fileName": "PferdIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/PferdIcon.png",
+    "width": 308,
+    "height": 298,
+    "ratio": "square"
+  },
+  {
+    "name": "PorträtIcon",
+    "fileName": "PorträtIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/PorträtIcon.png",
+    "width": 310,
+    "height": 305,
+    "ratio": "square"
+  },
+  {
+    "name": "RosenkranzIcon",
+    "fileName": "RosenkranzIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/RosenkranzIcon.png",
+    "width": 172,
+    "height": 290,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SägeIcon",
+    "fileName": "SägeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SägeIcon.png",
+    "width": 351,
+    "height": 316,
+    "ratio": "square"
+  },
+  {
+    "name": "Sanduhr2Icon",
+    "fileName": "Sanduhr2Icon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/Sanduhr2Icon.png",
+    "width": 223,
+    "height": 306,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SanduhrIcon",
+    "fileName": "SanduhrIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SanduhrIcon.png",
+    "width": 194,
+    "height": 303,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SchatztruheIcon",
+    "fileName": "SchatztruheIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchatztruheIcon.png",
+    "width": 292,
+    "height": 269,
+    "ratio": "square"
+  },
+  {
+    "name": "SchaufelIcon",
+    "fileName": "SchaufelIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchaufelIcon.png",
+    "width": 207,
+    "height": 343,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SchlüsselIcon",
+    "fileName": "SchlüsselIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchlüsselIcon.png",
+    "width": 133,
+    "height": 294,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SchmiedehammerIcon",
+    "fileName": "SchmiedehammerIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchmiedehammerIcon.png",
+    "width": 319,
+    "height": 311,
+    "ratio": "square"
+  },
+  {
+    "name": "SchriftrolleIcon",
+    "fileName": "SchriftrolleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchriftrolleIcon.png",
+    "width": 323,
+    "height": 290,
+    "ratio": "square"
+  },
+  {
+    "name": "SchwertIcon",
+    "fileName": "SchwertIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SchwertIcon.png",
+    "width": 262,
+    "height": 290,
+    "ratio": "square"
+  },
+  {
+    "name": "SegelschiffIcon",
+    "fileName": "SegelschiffIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SegelschiffIcon.png",
+    "width": 255,
+    "height": 289,
+    "ratio": "square"
+  },
+  {
+    "name": "SegenshandIcon",
+    "fileName": "SegenshandIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SegenshandIcon.png",
+    "width": 161,
+    "height": 295,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SonneIcon",
+    "fileName": "SonneIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SonneIcon.png",
+    "width": 258,
+    "height": 254,
+    "ratio": "square"
+  },
+  {
+    "name": "SpielkartenIcon",
+    "fileName": "SpielkartenIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SpielkartenIcon.png",
+    "width": 250,
+    "height": 284,
+    "ratio": "square"
+  },
+  {
+    "name": "SpitzhackeIcon",
+    "fileName": "SpitzhackeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SpitzhackeIcon.png",
+    "width": 211,
+    "height": 307,
+    "ratio": "portrait"
+  },
+  {
+    "name": "SteinbrückeIcon",
+    "fileName": "SteinbrückeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SteinbrückeIcon.png",
+    "width": 324,
+    "height": 190,
+    "ratio": "wide"
+  },
+  {
+    "name": "SternIcon",
+    "fileName": "SternIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/SternIcon.png",
+    "width": 280,
+    "height": 277,
+    "ratio": "square"
+  },
+  {
+    "name": "StuhlIcon",
+    "fileName": "StuhlIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/StuhlIcon.png",
+    "width": 245,
+    "height": 316,
+    "ratio": "portrait"
+  },
+  {
+    "name": "TavernenschildIcon",
+    "fileName": "TavernenschildIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/TavernenschildIcon.png",
+    "width": 293,
+    "height": 255,
+    "ratio": "square"
+  },
+  {
+    "name": "TotenkopfIcon",
+    "fileName": "TotenkopfIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/TotenkopfIcon.png",
+    "width": 248,
+    "height": 302,
+    "ratio": "square"
+  },
+  {
+    "name": "WappenschildIcon",
+    "fileName": "WappenschildIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WappenschildIcon.png",
+    "width": 287,
+    "height": 298,
+    "ratio": "square"
+  },
+  {
+    "name": "WegweiserIcon",
+    "fileName": "WegweiserIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WegweiserIcon.png",
+    "width": 224,
+    "height": 298,
+    "ratio": "portrait"
+  },
+  {
+    "name": "WeihrauchfassIcon",
+    "fileName": "WeihrauchfassIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WeihrauchfassIcon.png",
+    "width": 169,
+    "height": 303,
+    "ratio": "portrait"
+  },
+  {
+    "name": "WeihwasserschaleIcon",
+    "fileName": "WeihwasserschaleIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WeihwasserschaleIcon.png",
+    "width": 288,
+    "height": 203,
+    "ratio": "wide"
+  },
+  {
+    "name": "WeinIcon",
+    "fileName": "WeinIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WeinIcon.png",
+    "width": 202,
+    "height": 331,
+    "ratio": "portrait"
+  },
+  {
+    "name": "WerkzeugkisteIcon",
+    "fileName": "WerkzeugkisteIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/WerkzeugkisteIcon.png",
+    "width": 334,
+    "height": 340,
+    "ratio": "square"
+  },
+  {
+    "name": "ZeltIcon",
+    "fileName": "ZeltIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/ZeltIcon.png",
+    "width": 336,
+    "height": 286,
+    "ratio": "square"
+  },
+  {
+    "name": "ZielscheibeIcon",
+    "fileName": "ZielscheibeIcon.png",
+    "folder": "Etablissemant Icons",
+    "path": "../IconOrdner/Etablissemant Icons/ZielscheibeIcon.png",
+    "width": 294,
+    "height": 273,
+    "ratio": "square"
+  },
+  {
     "name": "AusrufezeichenScroll",
     "fileName": "AusrufezeichenScroll.PNG",
     "folder": "Etablissement Icons",

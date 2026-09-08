@@ -103,6 +103,15 @@ test('clicking outside the disclosure dismisses it without stealing focus', () =
   assert.equal(calls.focus, 0);
 });
 
+test('keys already handled by a template do not turn or close the module page', () => {
+  const { calls, listeners } = navigation();
+  for (const key of ['ArrowRight', 'ArrowLeft', 'Escape']) {
+    listeners.keydown({ key, defaultPrevented: true, target: {} });
+  }
+  assert.deepEqual(calls.flips, []);
+  assert.equal(calls.closed, 0);
+});
+
 test('page navigation reveals an active chapter outside the visible strip', () => {
   const { context } = navigation();
   const tabs = {
