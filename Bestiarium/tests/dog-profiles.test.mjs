@@ -133,6 +133,9 @@ test('dog dossiers use a shared metrics panel and keep Wissenswertes beside the 
   assert(template.includes('pet-profile-reading'));
   assert(css.includes('grid-template-columns: minmax(0, 1fr) 255px'));
   assert(css.includes('.pet-profile-facts { position: sticky'));
+  assert(css.includes('grid-template-columns: minmax(0, 82px) minmax(0, 1fr)'));
+  assert(css.includes('padding: 12px 0'));
+  assert(css.includes('overflow-wrap: anywhere'));
 });
 
 test('the dog-profile renderer escapes authored text', () => {

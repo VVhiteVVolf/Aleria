@@ -35,11 +35,21 @@
 .pet-profile-feature-heading h2 { margin-top: 2px; font-size: 27px; font-weight: 400; }
 .pet-profile-metrics-intro { max-width: 760px; padding: 20px 23px 0; color: #5a4e3e; font-size: 12px; line-height: 1.65; }
 .pet-profile-metrics-source { padding: 0 23px 22px; color: var(--muted); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
-.pet-profile-reading { display: grid; grid-template-columns: minmax(0, 1fr) 255px; align-items: start; gap: 54px; }
-.pet-profile-facts { position: sticky; top: 28px; }
-.pet-profile-facts dl { grid-template-columns: 1fr; }
+.pet-profile-reading { display: grid; grid-template-columns: minmax(0, 1fr) 255px; align-items: start; gap: 54px; min-width: 0; }
+.pet-profile-narrative,
+.pet-profile-facts { min-width: 0; }
+.pet-profile-facts { position: sticky; top: 28px; box-sizing: border-box; width: 100%; max-width: 100%; }
+.pet-profile-facts dl { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .pet-profile-facts dl > div,
-.pet-profile-facts dl > div:nth-child(odd) { border-right: 0; }
+.pet-profile-facts dl > div:nth-child(odd) {
+  grid-template-columns: minmax(0, 82px) minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 0;
+  border-right: 0;
+}
+.pet-profile-facts dt,
+.pet-profile-facts dd { min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
 .pet-profile-prose h3 { margin: 23px 0 9px; color: var(--red); font-size: 13px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; }
 .pet-profile-prose ul { display: grid; gap: 8px; margin: 10px 0 22px; padding: 0; list-style: none; }
 .pet-profile-prose li { position: relative; padding-left: 21px; }

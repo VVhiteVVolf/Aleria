@@ -1,7 +1,7 @@
 import { escapeHtml, renderPicture, romanNumeral } from '../book-shell/book-template-utils.mjs';
 import { renderProfileMetrics } from '../profile-metrics/profile-metrics-template.mjs';
 
-const VERSION = '20260908-pet-profile-v2';
+const VERSION = '20260908-pet-profile-v3';
 
 function renderBlock(block) {
   if (block.type === 'subheading') return `<h3>${escapeHtml(block.text)}</h3>`;
