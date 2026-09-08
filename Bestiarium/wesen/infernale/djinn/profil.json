@@ -1,0 +1,104 @@
+{
+  "id": "djinn",
+  "name": "Djinn",
+  "classification": "Naraths Brut · Gefallene Diener in gebundener Gestalt",
+  "continent": "Aleria",
+  "region": "Seelengefäße und ihre Fundorte",
+  "folio": "IV / 01",
+  "parentGroupId": "einzelne-infernale",
+  "summary": "Djinn sind gefallene Gefolgsleute Naraths, deren Körper aus verdichteter Willenskraft statt aus Fleisch bestehen. Der Fluch ihres einstigen Herrn bindet viele von ihnen an Seelengefäße und zwingt sie nach ihrer Befreiung zum Gehorsam gegenüber der Person, die das Gefäß geöffnet hat.",
+  "quote": "Wähle deinen Befehl so, als lausche jedes einzelne Wort auf eine Gelegenheit, sich gegen dich zu wenden.",
+  "quoteAttribution": "Shirazadische Warnung über den Umgang mit gebundenen Djinn",
+  "icon": {
+    "src": "../../../assets/icons/djinn.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Symbol für einen Djinn"
+  },
+  "hero": {
+    "src": "../../../assets/infernal-profiles/djinn.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig dargestellte Szene eines Djinn, der aus einer Lampe vor einem Reisenden erscheint",
+    "caption": "Überlieferte Bildtafel · Befreiung eines Djinn aus seinem Seelengefäß"
+  },
+  "facts": [
+    { "label": "Name", "value": "Djinn" },
+    { "label": "Typ", "value": "Infernales Zwischenwesen" },
+    { "label": "Entstehung", "value": "Mit Narath gefallene Diener und Gefolgsleute" },
+    { "label": "Herkunft", "value": "Migdals Ebene" },
+    { "label": "Lebensraum", "value": "Vorwiegend in Seelengefäßen; freie Djinn können durch Aleria wandern" },
+    { "label": "Verhalten", "value": "Listig, spöttisch, herrschsüchtig und vom erzwungenen Dienst verbittert" },
+    { "label": "Tag-Nacht-Zyklus", "value": "An keinen natürlichen Zyklus gebunden" },
+    { "label": "Fähigkeiten", "value": "Formwechsel, Geistangriff, Besetzung und vielseitige angeborene Magie" },
+    { "label": "Stärken", "value": "Hohe Willenskraft, astrale Unberührbarkeit, magische Vielfalt und genaue Kenntnis von Bannen" },
+    { "label": "Schwächen", "value": "Starke geistliche Präsenz, gesegnete Waffen, Tenebrium und der Bann des Befreiers" },
+    { "label": "Beute", "value": "???" }
+  ],
+  "metrics": {
+    "labels": ["Magiepotenz", "Formwechsel", "Willenskraft", "List", "Bannbindung", "Geistangriff"],
+    "values": [9, 9, 9, 10, 10, 8],
+    "source": "Aus astraler und materieller Gestalt, Dimensionsblick, Befehlsbindung, Geistangriffen und überliefertem Verhalten abgeleitet",
+    "intro": "Das Djinn-Diagramm bewertet seine übernatürliche Wirkung und die Widersprüche seines Fluchs. Hohe Bannbindung bedeutet, dass der Zwang durch Seelengefäß und Befreier besonders fest greift, nicht dass der Djinn leicht zu beherrschen wäre."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        { "type": "paragraph", "text": "Unter Gelehrten gelten Djinn als die gefährlichsten überlebenden Fragmente des Gefallenen Narath. Sie sind weder reine Infernale noch gewöhnliche Geister, sondern eine ungewöhnliche Verbindung aus seiner rebellischen Essenz und der chaotischen Macht, die er während seines Aufstands an sich riss." },
+        { "type": "paragraph", "text": "Ihre Gestalten erinnern an Sterbliche, doch sie bestehen aus verdichteter Willenskraft. Das dritte Auge, der sogenannte Dimensionsblick, verrät ein Dasein zwischen Ebenen. Für die Shirazad sind Djinn gefallene Diener, die in Gefäße gebunden werden müssen; für andere Völker sind sie wandelnde Katastrophen zwischen schemenhafter Ruhe und brutaler Manifestation." }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften",
+      "blocks": [
+        { "type": "paragraph", "text": "Djinn wechseln zwischen materieller und astraler Form. In körperlicher Gestalt können gewöhnliche Waffen sie verwunden, auch wenn sie widerstandsfähiger als Menschen sind. In astraler Gestalt gehen Klingen und Geschosse durch sie hindurch, während sie selbst weiterhin auf Geist und Körper eines Sterblichen einwirken können." },
+        { "type": "paragraph", "text": "Ein Djinn kann sich wie ein Mahr an ein Opfer klammern, in einen schwachen Körper eindringen und ihn auf geistiger Ebene würgen, zermürben oder zeitweise lenken. Geistliche Präsenz, starke mentale Abwehr und mächtig gesegnete Waffen treffen auch seine astrale Essenz; Tenebrium brennt sich besonders tief in sie ein." },
+        { "type": "paragraph", "text": "Magische Begabung ist allen Djinn eigen, ihre Ausprägung jedoch verschieden. Einige beherrschen Illusionen, andere Elemente, Flüche, Gefühle oder reine Energie. Selbst ein vergleichsweise schwacher Djinn übertrifft darin die meisten Sterblichen." }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        { "type": "paragraph", "text": "Djinn waren Naraths Söhne, Vertraute und Gefolgsleute, als er noch an Migdals Seite stand. Sie gehörten zu seiner himmlischen Gefolgschaft und dienten ihm aus Überzeugung. Als Narath rebellierte und in die Finsternis fiel, folgte ihm seine Sippe aus Treue in den Abgrund." },
+        { "type": "paragraph", "text": "Während Zarakhuls Tyrannei wirkten sie an Naraths Seite als Helfer und Vollstrecker. Nach der Verbannung nach Aleria suchten einige eigene Wege, andere unterwarfen Völker der südlichen Kontinente oder wandten sich gegen ihren einstigen Herrn. Naraths wachsendes Misstrauen verwandelte ehemalige Verbündete in vermeintliche Rivalen." },
+        { "type": "paragraph", "text": "Narath verfluchte daraufhin seine eigenen Kinder und übertrug den Shirazad die Aufgabe, sie aufzuspüren und in Seelengefäße einzuschließen. So wurden die Djinn verletzlich, bindbar und jagdbar, ohne ihre große Macht vollständig zu verlieren." }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        { "type": "paragraph", "text": "Jahrhunderte in Lampen, Ringen, Steinen und Urnen haben viele Djinn reizbar und misstrauisch gemacht. Eine Befreiung empfinden sie nicht als Gnade: Der Fluch unterstellt sie augenblicklich dem Willen des Befreiers. Ihre Loyalität ist erzwungen, während ihr eigener Drang auf Herrschaft und Freiheit gerichtet bleibt." },
+        { "type": "paragraph", "text": "Djinn lügen nicht zwingend, doch sie erfüllen Befehle mit gefährlicher Genauigkeit. Sie prüfen jeden Wortlaut auf Mehrdeutigkeit, provozieren, antworten spöttisch und nutzen jede Lücke, um den Willen ihres Meisters möglichst ungünstig umzusetzen. Je unklarer ein Auftrag formuliert ist, desto größer wird ihr Spielraum." }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        { "type": "paragraph", "text": "Der Lebensraum der meisten Djinn ist kein Gebiet, sondern ein Gegenstand. Ihre Seelengefäße wurden verborgen, geplündert, verkauft oder während der großen Wanderung der Shirazad von Sundara nach Tirnara verloren. Darum können sie heute in Ruinen, Gräbern, alten Siedlungen, Schatzkammern oder im Besitz ahnungsloser Reisender auftauchen." },
+        { "type": "paragraph", "text": "Einige freie Djinn hielten Narath die Treue oder entgingen der Jagd. Andere blieben unmittelbar an seinen Willen gekettet. Händler und Sammler betrachten echte Gefäße als kostbare Artefakte, weshalb neben zahlreichen Fälschungen gelegentlich ein Gegenstand den Besitzer wechselt, in dem der alte Fluch tatsächlich noch wartet." }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        { "type": "list", "items": ["Freier Wechsel zwischen materieller und astraler Form", "Dimensionsblick und instinktives Erkennen von Flüchen, Siegeln und Bannen", "Geistige Angriffe, Besitzergreifung und zeitweilige Kontrolle ungeschützter Körper", "Angeborene Magie mit unterschiedlichen Schwerpunkten wie Illusion, Elemente, Flüche oder Gefühlslenkung", "Wortgetreue magische Umsetzung eines Befehls innerhalb der Grenzen von Naraths Fluch"] },
+        { "type": "paragraph", "text": "Ihre gefährlichste Fähigkeit ist die Verbindung von Magie und Auslegung. Ein Befehl wird nicht nach der Absicht des Sprechers, sondern nach seinem Wortlaut Wirklichkeit. Der Djinn kann seinen eigenen Fluch nicht brechen, versteht seine Grenzen jedoch besser als jeder Befreier." }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        { "type": "list", "items": ["Ein unscheinbares Gefäß kann ebenso echt sein wie eine reich verzierte Lampe; äußere Pracht verrät nichts über seinen Inhalt.", "Djinn erinnern sich selbst nach Jahrhunderten an Wortlaut und Ton eines Befehls.", "Ein Auftrag ohne klaren Abschluss kann die Bindung länger aufrechterhalten, als der Befreier beabsichtigt.", "Kenner prüfen angebliche Djinn-Gefäße zuerst auf Naraths Bann und öffnen sie niemals während der Untersuchung."] }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -76,8 +76,8 @@ export const BESTIARY_CHAPTERS = [
         entry('psioniden', 'Psioniden', 'Die psioniden Wesen der infernalen Sammlung.')
       ] },
       { id: 'einzelne-infernale', title: 'Einzelne infernale Wesen', description: 'Besondere Wesen und individuelle Exemplare abseits der großen Linien.', entries: [
-        entry('djinn', 'Djinn', 'Ein eigener Platz für die Djinn und ihre Überlieferungen.'),
-        entry('muhmen', 'Muhmen', 'Die Muhmen erhalten eine eigene Sammlung ihrer Geschichten und Begegnungen.'),
+        entry('djinn', 'Djinn', 'Naraths gefallene Diener: gebundene Willenswesen zwischen astraler Gestalt, Magie und gefährlich genauem Gehorsam.', '', './wesen/infernale/djinn/index.html'),
+        entry('muhmen', 'Muhmen', 'Helas uralte Druidenhexen: Paktmagie, Fluchweberei und geduldig eingeforderte Preise.', '', './wesen/infernale/muhmen/index.html'),
         entry('gorgonnen', 'Gorgonnen', 'Eine eigene Tafel für die Gorgonnen Alerias.')
       ] }
     ],

@@ -1,4 +1,4 @@
-import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20260909-creature-groups-v1';
+import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20260909-infernal-profiles-v1';
 import { filterEntries } from './catalog-model.js?v=20260907-bestiarium-v1';
 import { createEntryLink } from '../entry-preview/entry-link.js?v=20260907-bestiarium-v1';
 
