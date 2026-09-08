@@ -7,7 +7,7 @@ import { renderPetBreedOverview } from '../modules/pet-breed/pet-breed-template.
 const expectedDogIds = [
   'dubghar', 'lannfoal', 'fairaeg',
   'gamir', 'herdskal',
-  'trywydd', 'ponter', 'brug', 'rhedwyr', 'gorfael', 'brodgi', 'clachair', 'refgi', 'tryw', 'bugail',
+  'trywydd', 'ponter', 'brag', 'rhedwyr', 'gorfael', 'brodgi', 'clachair', 'refgi', 'tryw', 'bugail',
   'pudel', 'unbekannt-lothir-1', 'unbekannt-lothir-2', 'unbekannt-lothir-3', 'unbekannt-lothir-4',
   'unbekannt-aldervan-1'
 ];
@@ -64,11 +64,12 @@ test('all 21 dog images become cards and only the five unnamed images get placeh
   assert.equal(entries.length, 21);
   const unknown = entries.filter(entry => entry.unknown);
   assert.equal(unknown.length, 5);
-  assert(unknown.every(entry => entry.title === 'Noch unbekannt'));
-  assert(unknown.every(entry => entry.status === 'Name noch unbekannt'));
-  assert.equal((html.match(/<h3>Noch unbekannt<\/h3>/g) || []).length, 5);
+  assert(unknown.every(entry => entry.title === '???'));
+  assert(unknown.every(entry => entry.status === 'Noch unausgefüllt'));
+  assert.equal((html.match(/<h3>\?\?\?<\/h3>/g) || []).length, 5);
   assert.equal((html.match(/livestock-entry--unknown/g) || []).length, 5);
-  assert(entries.filter(entry => !entry.unknown).every(entry => entry.status === 'Einzeldossier vorgemerkt'));
+  assert.equal(entries.filter(entry => entry.status === 'Dossier verfügbar').length, 15);
+  assert.equal(entries.find(entry => entry.id === 'pudel').status, 'Dossier noch nicht ausgearbeitet');
 });
 
 test('the 16 named dog breeds and their inherited task labels remain intact', async () => {
@@ -76,14 +77,14 @@ test('the 16 named dog breeds and their inherited task labels remain intact', as
   const named = entriesOf(record).filter(entry => !entry.unknown);
   assert.deepEqual(named.map(entry => entry.title), [
     'Dubghar', 'Lannfoal', 'Fairaeg', 'Gamir', 'Herdskal',
-    'Trywydd', 'Ponter', 'Brüg', 'Rhedwyr', 'Gorfael',
+    'Trywydd', 'Ponter', 'Brág', 'Rhedwyr', 'Gorfael',
     'Brodgi', 'Clachair', 'Refgi', 'Tryw', 'Bugail', 'Pudel'
   ]);
   const roles = named.map(entry => entry.region.split(' · ').at(-1));
   assert.deepEqual(roles, [
     'Wachhund', 'Kriegshund', 'Warnhund', 'Grenzhund', 'Schäferhund',
     'Spürhund', 'Wachhund', 'Hofhund', 'Jagdhund', 'Schäferhund',
-    'Haushund', 'Hofhund', 'Familienhund', 'Jägershund', 'Schäferhund', 'Dressurhund'
+    'Haushund', 'Hofhund', 'Familienhund', 'Jagdhund', 'Schäferhund', 'Dressurhund'
   ]);
 });
 

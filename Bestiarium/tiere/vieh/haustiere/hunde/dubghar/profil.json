@@ -1,0 +1,177 @@
+{
+  "id": "dubghar",
+  "name": "Dubghar",
+  "classification": "Hunderasse · Städtischer Wachhund",
+  "continent": "Estryll",
+  "region": "Südliche Albenfürstentümer",
+  "folio": "VI / 01-A-01",
+  "summary": "Der Dubghar ist der bevorzugte Wachhund der Städte und größeren Gemeinden der albischen Fürstentümer. Wo enge Gassen, Tore, Lagerhäuser und Marktviertel geschützt werden müssen, ist er in seinem Element. Er ist kein Tier der Weide oder Wildnis, sondern ein Hund der Mauern, Türen und Schatten.",
+  "quote": "Wenn die Gassen schlafen, zählt der Dubghar ihre Schritte.",
+  "quoteAttribution": "Spruch der albischen Nachtwachen",
+  "parentGroupId": "estryll-albische-fuerstentuemer",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/dubghar.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Dubghar"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/dubghar.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Dubghar",
+    "caption": "Archivtafel · Dubghar im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Dubghar"
+    },
+    {
+      "label": "Typ",
+      "value": "Städtischer Wachhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Südliche Albenfürstentümer"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Kontrollierte städtische Wachlinien"
+    },
+    {
+      "label": "Status",
+      "value": "Bevorzugter Wachhund der Städte und größeren Gemeinden"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; lernt Routen, Reviere und feste Posten"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Gezielte Gebrauchshundzucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Gehoben"
+    },
+    {
+      "label": "Stärke",
+      "value": "Nervenstärke, Mut und einschüchternde Präsenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Wenig familiengeeignet; kaum auf Wildtiere spezialisiert"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Nahezu lautlose Revierarbeit in vertrauter Umgebung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dubghar ist der bevorzugte Wachhund der Städte und größeren Gemeinden der albischen Fürstentümer. Wo enge Gassen, Tore, Lagerhäuser und Marktviertel geschützt werden müssen, ist er in seinem Element. Er ist kein Tier der Weide oder Wildnis, sondern ein Hund der Mauern, Türen und Schatten."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gezüchtet in den südlichen Albenfürstentümern, entstand der Dubghar aus der Notwendigkeit, Banditentum, Diebstahl und nächtliche Übergriffe innerhalb städtischer Strukturen einzudämmen. Seine Linie wurde bewusst auf Nervenstärke, Mut und Kontrollierbarkeit selektiert – weniger auf Jagdtrieb oder Tierabwehr."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Groß, kräftig und vollständig schwarz, mit dichtem, zottigem Fell. Sein massiger Kopf und der ruhige, dunkle Blick wirken einschüchternd, ohne wild zu erscheinen. Der Dubghar bewegt sich ruhig und bedacht, fast lautlos, besonders in vertrauter Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dubghar ist wachsam, geduldig und territorial. Er reagiert nicht hektisch, sondern beobachtet lange, bevor er handelt. Eindringlinge stellt er entschlossen, verfolgt sie durch Gassen und blockiert Fluchtwege. Gegen Menschen ist er furchteinflößend effektiv, gegen wilde Tiere jedoch weniger spezialisiert."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich stark an Stadtwachen, Nachtpatrouillen oder ganze Viertel. Der Dubghar akzeptiert Autorität und klare Befehle, zeigt aber wenig Zuneigung gegenüber Fremden. In städtischen Gemeinschaften gilt er als Symbol für Ordnung und Sicherheit."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung beginnt früh und ist streng strukturiert. Dubghar lernen Routen, Reviere und feste Posten. Sie eignen sich besonders für Nachtwachen und stationäre Sicherung. Untrainiert können sie misstrauisch bis aggressiv werden."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragend gegen Banditen, Diebe und Räuber",
+            "Hohe Stressresistenz im Stadtleben",
+            "Einschüchternde Präsenz"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger effektiv gegen wilde Tiere oder Monster",
+            "Kaum verspielt oder familiengeeignet",
+            "Braucht klare Führung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In manchen Städten tragen Dubghar Halsbänder mit dem Siegel der Stadtwache.",
+            "Ihr schwarzes Fell gilt als schlechtes Omen für Einbrecher.",
+            "Ein Dubghar schläft selten tief – selbst im Ruhen hört er alles."
+          ]
+        }
+      ]
+    }
+  ]
+}

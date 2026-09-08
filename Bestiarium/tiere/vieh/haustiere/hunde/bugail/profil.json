@@ -1,0 +1,178 @@
+{
+  "id": "bugail",
+  "name": "Bugail",
+  "classification": "Hunderasse · Schäferhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-15",
+  "summary": "Der Bugail ist der leise Wächter der Herden. Wo andere Schäferhunde durch Größe, Gebrüll oder Drohgebärden wirken, genügt ihm seine bloße Anwesenheit. Er ist kein Hund der Einschüchterung, sondern der Ordnung – ruhig, wachsam und unaufdringlich.",
+  "quote": "Der Gorfael vertreibt – der Bugail bewahrt.",
+  "quoteAttribution": "Cenyrisches Hirtensprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/bugail.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Bugail"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/bugail.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Bugail",
+    "caption": "Archivtafel · Bugail im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Bugail"
+    },
+    {
+      "label": "Typ",
+      "value": "Schäferhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Ruhige cenyrische Hütehundlinien"
+    },
+    {
+      "label": "Status",
+      "value": "Familiennaher Hütehund bei geringem Raubdruck"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Sehr hoch; ordnet Herden beinahe selbstständig"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Gezielte Zucht auf Bindung und Selbstkontrolle"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Selbstkontrolle, Verlässlichkeit und ruhige Herdensicherung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Wenig durchsetzungsstark in Hochrisikoregionen"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Lenkt Herden meist ohne Bellen oder Bedrängen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bugail ist der leise Wächter der Herden. Wo andere Schäferhunde durch Größe, Gebrüll oder Drohgebärden wirken, genügt ihm seine bloße Anwesenheit. Er ist kein Hund der Einschüchterung, sondern der Ordnung – ruhig, wachsam und unaufdringlich."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bugail stammt aus den ruhigeren, dichter besiedelten Regionen Cenyrs, wo Raubdruck geringer ist und Nähe zu Hof, Familie und Dorf Alltag bedeutet. Seine Linie wurde gezielt auf Ausgeglichenheit, Bindungstreue und Selbstkontrolle gezüchtet. Er gilt als Gegenpol zum Gorfael: weniger brachial, dafür verlässlicher im täglichen Umgang."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittelgroß bis groß, schlank gebaut, aufrechte Haltung. Sein Fell ist wetterfest, aber nicht massiv; sein Blick aufmerksam, ohne aggressiv zu wirken. Er bewegt sich ruhig, fast bedacht, und bleibt oft reglos an erhöhten Punkten stehen, um Herde und Umgebung zu überblicken."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Bugail arbeitet ohne Hektik. Er treibt nicht, er ordnet. Einzelne Tiere der Herde folgen ihm instinktiv, ohne dass er sie bedrängen muss. Er bellt selten, greift nur im Ernstfall ein und vermeidet unnötige Konfrontationen. Gegen kleinere Räuber oder streunende Hunde reicht meist seine Präsenz."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Extrem loyal, familiennah und kinderfreundlich. Viele Bauern bevorzugen den Bugail, weil er Hof, Herde und Familie zugleich im Blick behält. Er lebt mitten im Alltag und wird oft eher als stiller Gefährte denn als Arbeitstier wahrgenommen."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leicht auszubilden, besonders empfänglich für ruhige, konsequente Führung. Der Bugail reagiert schlecht auf Härte, aber hervorragend auf Vertrauen. Einmal gefestigt, arbeitet er nahezu selbstständig."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Selbstkontrolle",
+            "Familienfreundlich",
+            "Sehr zuverlässig bei geringer Raubgefahr",
+            "Leise, stressarme Herdensicherung"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger durchsetzungsstark als Gorfael",
+            "Für Hochrisikoregionen ungeeignet",
+            "Nicht als Kampf- oder Grenzhund gedacht"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Der Gorfael vertreibt – der Bugail bewahrt.“",
+            "Bugail-Hunde werden oft über viele Jahre alt, da sie weniger körperliche Extrembelastung erfahren.",
+            "Manche Schäfer schwören darauf, dass ihre Herde auf den Bugail stärker hört als auf Menschen."
+          ]
+        }
+      ]
+    }
+  ]
+}

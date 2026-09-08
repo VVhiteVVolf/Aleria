@@ -1,0 +1,177 @@
+{
+  "id": "gorfael",
+  "name": "Gorfael",
+  "classification": "Hunderasse · Schäferhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-10",
+  "summary": "Der Gorfael ist der klassische Schäferhund Cenyrs für abgelegene, raue Landstriche. Wo Weiden offen liegen, Wälder nah sind und Wölfe nicht nur Gerücht, sondern Realität, ist er unverzichtbar. Er ist kein Hofhund und kein Spielgefährte – er ist Wachsamkeit auf vier Beinen.",
+  "quote": "Wo der Gorfael sitzt, kommt der Wolf nicht näher.",
+  "quoteAttribution": "Cenyrischer Hirtenspruch",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/gorfael.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Gorfael"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/gorfael.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Gorfael",
+    "caption": "Archivtafel · Gorfael im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Gorfael"
+    },
+    {
+      "label": "Typ",
+      "value": "Schäferhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Laut Züchtern auf den Braunwolf Cenyrs zurückgehend"
+    },
+    {
+      "label": "Status",
+      "value": "Bewährter Hütehund abgelegener Weiden"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; beobachtet und entscheidet selbstständig"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Ländliche Schutz- und Hütezucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel bis gehoben"
+    },
+    {
+      "label": "Stärke",
+      "value": "Mut, Standfestigkeit und Wetterhärte"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kaum verspielt; benötigt Raum und eine feste Aufgabe"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Stellt sich auch größeren Raubtieren entgegen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gorfael ist der klassische Schäferhund Cenyrs für abgelegene, raue Landstriche. Wo Weiden offen liegen, Wälder nah sind und Wölfe nicht nur Gerücht, sondern Realität, ist er unverzichtbar. Er ist kein Hofhund und kein Spielgefährte – er ist Wachsamkeit auf vier Beinen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gezüchtet in den ländlichen Regionen Cenyrs, fernab der Städte, geht seine Linie laut Züchtern auf den Braunwolf Cenyrs zurück. Diese Nähe zeigt sich weniger in Wildheit als in Mut, Standfestigkeit und Revierverhalten. Die Zucht priorisiert Nervenstärke und Schutztrieb statt bloßer Größe."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittelgroß bis groß, kräftig, mit dichtem Fell und wolfstypischer Silhouette. Der Körperbau ist funktional: starke Schultern, ausdauernde Läufe, ein Kopf mit klarem, wachem Blick. Keine Zierde – alles an ihm dient dem Zweck."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gorfael ist ruhig, beobachtend und territorial. Er positioniert sich instinktiv erhöht, um Herde und Hof zu überblicken. Bei Gefahr zögert er nicht: Er stellt, bellt nicht unnötig, und ist bereit, sich einem Wolf oder größerer Bedrohung entgegenzustellen – selbst wenn die Chancen ungünstig sind."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich eng an Schäfer und Hirten, akzeptiert klare Hierarchien und arbeitet selbstständig. Fremden begegnet er misstrauisch, aber kontrolliert. Er braucht Führung, keinen Zwang."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frühe Prägung an Vieh ist entscheidend. Die Ausbildung ist pragmatisch: Revier halten, treiben, stellen, verteidigen. Übermäßige Härte schadet; Konsequenz und Routine formen ihn."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mutig, standhaft, territorial",
+            "Geeignet gegen Wölfe und größere Raubtiere",
+            "Hohe Ausdauer, wetterfest"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kaum verspielt",
+            "Weniger städtetauglich",
+            "Benötigt Raum und Aufgabe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Schäfer sagen: „Wo der Gorfael sitzt, kommt der Wolf nicht näher.“",
+            "In Cenyr gilt er als Hund der Weiden, nicht der Höfe.",
+            "Ein Gorfael verlässt seinen Posten erst, wenn er sicher ist, dass keine Gefahr droht."
+          ]
+        }
+      ]
+    }
+  ]
+}

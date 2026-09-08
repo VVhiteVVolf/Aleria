@@ -1,0 +1,176 @@
+{
+  "id": "herdskal",
+  "name": "Herdskal",
+  "classification": "Hunderasse · Schäfer- und Hofwächter",
+  "continent": "Aldrimar",
+  "region": "Raue Hochlagen",
+  "folio": "VI / 01-A-05",
+  "summary": "Der Herdskal ist Aldrimars unerlässlicher Schäfer- und Hofwächter. In einem Land mit harten Wintern, mageren Ernten und ständiger Konkurrenz durch Wildtiere ist er kein Luxus, sondern Notwendigkeit. Für Bauern und Hirten bedeutet ein Herdskal Sicherheit – für Wölfe eine klare Grenze.",
+  "quote": "Wo der Herdskal wacht, zählt nicht die Zahl der Wölfe.",
+  "quoteAttribution": "Aldrimarischer Hirtenspruch",
+  "parentGroupId": "aldrimar",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/herdskal.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Herdskal"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/herdskal.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Herdskal",
+    "caption": "Archivtafel · Herdskal im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Herdskal"
+    },
+    {
+      "label": "Typ",
+      "value": "Schäfer- und Hofwächter"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Raue Hochlagen"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Hochlandlinien mit kontrollierter Wolfsnähe"
+    },
+    {
+      "label": "Status",
+      "value": "Unerlässlicher Arbeits- und Schutzhund der Hirten"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; urteilt und arbeitet selbstständig"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Generationenlange Gebrauchszucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel bis gehoben"
+    },
+    {
+      "label": "Stärke",
+      "value": "Extreme Kältefestigkeit, Ausdauer und Revierbindung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kaum verspielt oder führig; ungeeignet für enge Siedlungen"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Kann mehrere Gramnir-Wölfe von einer Herde abhalten"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herdskal ist Aldrimars unerlässlicher Schäfer- und Hofwächter. In einem Land mit harten Wintern, mageren Ernten und ständiger Konkurrenz durch Wildtiere ist er kein Luxus, sondern Notwendigkeit. Für Bauern und Hirten bedeutet ein Herdskal Sicherheit – für Wölfe eine klare Grenze."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herdskal wurde über Generationen für Abwehr, Ausdauer und Urteilsvermögen gezüchtet. Die Linien stammen aus rauen Hochlagen Aldrimars; Wolfsnähe ist vorhanden, aber gezielt kontrolliert. Zuchtziel ist kein Jagdtrieb, sondern Standfestigkeit: halten, stellen, vertreiben."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Groß, dicht behaart, schwere Unterwolle. Kräftiger Hals, breiter Brustkorb, ruhiger Blick. Farblich dominieren Grau- und Sandtöne. Der Körper wirkt wie gebaut für Kälte und Dauerwache – nichts Überflüssiges, alles Zweck."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Herdskal ist nicht verspielt. Er wirkt mürrisch, altklug, fast melancholisch – wie ein Huscarl, der zu viel gesehen hat. Er bezieht erhöhte Positionen, beobachtet Herde und Hof zugleich und ruht erst, wenn die Lage sicher ist. Droht Gefahr, zeigt er Zähne ohne Zögern."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Loyal, aber distanziert. Der Herdskal respektiert seinen Hirten, sucht jedoch keine Zuneigung. Er arbeitet selbstständig und erwartet Vertrauen. Kinder werden toleriert, Fremde streng geprüft."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frühe Prägung bei der Herde, klare Regeln, wenig Kommandos. Der Herdskal entscheidet eigenständig; Eingriffe erfolgen nur, um Grenzen zu klären. Härte ist unnötig – Konsequenz genügt."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kann 2–3 Gramnir-Wölfe abwehren",
+            "Extrem kältefest und ausdauernd",
+            "Hohe Revierbindung, geringe Ablenkbarkeit"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kaum spiel- oder führig",
+            "Nicht für enge Siedlungen geeignet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Herdskale schlafen oft im Freien, selbst bei Schneesturm.",
+            "In Aldrimar gilt: „Ohne Herdskal keine Herde.“",
+            "Viele Hirten benennen ihre Hunde nicht – Arbeit steht über Namen."
+          ]
+        }
+      ]
+    }
+  ]
+}

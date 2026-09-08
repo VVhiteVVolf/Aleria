@@ -1,0 +1,176 @@
+{
+  "id": "trywydd",
+  "name": "Trywydd",
+  "classification": "Hunderasse · Vielseitiger Spür- und Gebrauchshund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-06",
+  "summary": "Der Trywydd gilt in Cenyr als der vielseitigste Hund, den man besitzen kann. Er ist kein Spezialist, sondern ein verlässlicher Alleskönner – robust genug für den Kampf, klug genug für die Spur und ausdauernd genug für lange Tage im Feld. Genau diese Zweckmäßigkeit machte ihn weit über Cenyr hinaus bekannt.",
+  "quote": "Wer nicht weiß, was ihn erwartet, nimmt einen Trywydd.",
+  "quoteAttribution": "Cenyrisches Grenzerwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/trywydd.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Trywydd"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/trywydd.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Trywydd",
+    "caption": "Archivtafel · Trywydd im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Trywydd"
+    },
+    {
+      "label": "Typ",
+      "value": "Vielseitiger Spür- und Gebrauchshund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Leistungsfähige cenyrische Jagd- und Wachlinien"
+    },
+    {
+      "label": "Status",
+      "value": "In ganz Estryll verbreitet"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Sehr hoch; lernt mehrere Aufgaben zugleich"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Breite, zweckmäßige Gebrauchszucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Vielseitigkeit, Schnelligkeit und Ausdauer"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kein ausgesprochener Spezialist; braucht regelmäßige Aufgaben"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Als Spür-, Jagd-, Wach- und Kampfhund formbar"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Trywydd gilt in Cenyr als der vielseitigste Hund, den man besitzen kann. Er ist kein Spezialist, sondern ein verlässlicher Alleskönner – robust genug für den Kampf, klug genug für die Spur und ausdauernd genug für lange Tage im Feld. Genau diese Zweckmäßigkeit machte ihn weit über Cenyr hinaus bekannt."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ursprünglich in den isolierten Landen Cenyrs gezüchtet, entstand der Trywydd aus leistungsfähigen Jagd- und Wachlinien. Die Zucht folgte keinem Adel oder Orden, sondern der Notwendigkeit: Hunde, die alles können müssen. Händler, Grenzer und Milwr brachten die Rasse bald nach ganz Estryll, wo sie sich rasch verbreitete."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Groß und langgliedrig, mit rauem, wetterfestem Fell. Sein Körperbau ist schlank, aber kräftig – gemacht für Geschwindigkeit und Durchhaltevermögen. Der Trywydd wirkt oft unscheinbar, bis er sich bewegt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ausgeglichen, aufmerksam und lernfähig. Der Trywydd passt sich seiner Aufgabe an: ruhig auf der Fährte, explosiv im Angriff, wachsam im Lager. Er ist kein hitziger Hund, sondern arbeitet konzentriert und ausdauernd."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich eng an seinen Führer, bleibt aber auch in wechselnden Händen zuverlässig. Deshalb ist er bei Reisenden, Grenzposten und freien Jägern besonders beliebt."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leicht auszubilden und vielseitig formbar. Viele Trywydd werden gleichzeitig als Spür-, Jagd- und Wachhunde trainiert. Mit entsprechender Führung eignen sie sich auch als Kampfhunde."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Vielseitigkeit",
+            "Schnell, kräftig, ausdauernd",
+            "Kann Wölfen standhalten"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kein ausgesprochener Spezialist",
+            "Braucht regelmäßige Aufgabe, sonst stumpf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Wer nicht weiß, was ihn erwartet, nimmt einen Trywydd.“",
+            "Viele alte Grenzgeschichten nennen den Trywydd schlicht „der Hund, der bleibt“.",
+            "Viele Händler und Grenzer bilden denselben Trywydd zugleich für Spur, Wache und Kampf aus."
+          ]
+        }
+      ]
+    }
+  ]
+}

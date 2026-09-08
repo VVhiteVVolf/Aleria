@@ -1,0 +1,178 @@
+{
+  "id": "refgi",
+  "name": "Refgi",
+  "classification": "Hunderasse · Familienhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-13",
+  "summary": "Der Refgi ist der Hund für Menschen, die keinen Spezialisten brauchen, sondern einen Gefährten. Er wurde gezielt als Familienhund gezüchtet – nicht für Krieg, nicht für Jagd, sondern für den Alltag zwischen Haus, Hof und Herdfeuer. Wo ein Refgi lebt, lebt er mitten im Geschehen.",
+  "quote": "Ein Refgi gehört nicht dem Haus – das Haus gehört dem Refgi.",
+  "quoteAttribution": "Cenyrisches Familiensprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/refgi.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Refgi"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/refgi.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Refgi",
+    "caption": "Archivtafel · Refgi im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Refgi"
+    },
+    {
+      "label": "Typ",
+      "value": "Familienhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Kreuzung aus Clachair und Brodgi"
+    },
+    {
+      "label": "Status",
+      "value": "Beliebter Begleiter junger Familien"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Mittel; versteht Regeln, bevorzugt aber Vertrauen vor Drill"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Gezielte Familienhundzucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Geduld, Nervenstärke und geringe Aggressivität"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Ausdauer; ungeeignet für Jagd und Krieg"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Verbindet Schutzbereitschaft mit sanftem Wesen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Refgi ist der Hund für Menschen, die keinen Spezialisten brauchen, sondern einen Gefährten. Er wurde gezielt als Familienhund gezüchtet – nicht für Krieg, nicht für Jagd, sondern für den Alltag zwischen Haus, Hof und Herdfeuer. Wo ein Refgi lebt, lebt er mitten im Geschehen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Refgi entstand aus der bewussten Kreuzung von Clachair (Hofhund) und Brodgi (Haushund). Ziel war es, die stoische Loyalität und Schutzbereitschaft des Clachair mit der Sanftheit und Verspieltheit des Brodgi zu vereinen. Heraus kam ein Hund, der vieles kann – aber nichts extrem. Genau das macht ihn so beliebt."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittelgroß bis groß, kräftig, weich wirkendes Fell, freundlicher Ausdruck. Der Refgi wirkt nie bedrohlich, aber auch nie hilflos. Sein Körperbau ist stabil, jedoch nicht ausdauernd; er ist für Nähe gemacht, nicht für Märsche."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Refgi ist ruhig, anhänglich und auffallend geduldig. Er sucht Nähe, liegt gern bei Menschen, beobachtet statt zu reagieren. Er zeigt Mut, wenn es nötig ist, aber ohne Aggression. Fremde werden gemeldet, nicht angefallen. In Gefahr stellt er sich zwischen Familie und Bedrohung – nicht aus Kampfeslust, sondern aus Pflichtgefühl."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Refgi bindet sich an den ganzen Haushalt und sucht bewusst die Nähe seiner Menschen. Kindern begegnet er geduldig, Fremde meldet er ohne unnötige Schärfe. Seine Schutzbereitschaft erwächst aus Zugehörigkeit und nicht aus Jagd- oder Kampftrieb."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leicht zu halten, mäßig lernwillig. Der Refgi versteht Regeln, aber hinterfragt ihren Sinn nicht – und setzt sie manchmal einfach nicht um, wenn sie unbequem sind. Er ist kein Hund für Drill, sondern für Vertrauen. Lob funktioniert besser als Zwang."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Loyal, treu, familienorientiert",
+            "Kinderfreundlich und nervenstark",
+            "Mutig genug zur Abschreckung",
+            "Geringe Aggressivität"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Faul, geringe Ausdauer",
+            "Ungeeignet für Jagd, Krieg oder Spurarbeit",
+            "Kein Spezialist, nur Allrounder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Ein Refgi gehört nicht dem Haus – das Haus gehört dem Refgi.“",
+            "Viele Refgi wählen selbst „ihren“ Menschen im Haushalt, schlafen aber immer dort, wo alle zusammenkommen.",
+            "Wird oft an junge Familien verschenkt – als Zeichen von Stabilität und Zukunft."
+          ]
+        }
+      ]
+    }
+  ]
+}

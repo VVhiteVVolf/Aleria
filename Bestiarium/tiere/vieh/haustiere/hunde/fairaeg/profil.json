@@ -1,0 +1,177 @@
+{
+  "id": "fairaeg",
+  "name": "Fairaeg",
+  "classification": "Hunderasse · Warnhund",
+  "continent": "Estryll",
+  "region": "Südliche Albenfürstentümer",
+  "folio": "VI / 01-A-03",
+  "summary": "Der Fairaeg ist der klassische Warnhund der südlichen Albenfürstentümer. Er ist kein Spieltier und kein reiner Hofhund, sondern ein wachsamer Grenz- und Dorfbeschützer, gezüchtet, um Gefahr früh zu erkennen und entschlossen zu reagieren. Wo Menschen schlafen, wacht der Fairaeg.",
+  "quote": "Wo Menschen schlafen, wacht der Fairaeg.",
+  "quoteAttribution": "Sprichwort der südlichen Albenfürstentümer",
+  "parentGroupId": "estryll-albische-fuerstentuemer",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/fairaeg.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Fairaeg"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/fairaeg.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Fairaeg",
+    "caption": "Archivtafel · Fairaeg im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Fairaeg"
+    },
+    {
+      "label": "Typ",
+      "value": "Warnhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Südliche Albenfürstentümer"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Südliche Wach- und Grenzhundlinien"
+    },
+    {
+      "label": "Status",
+      "value": "Bewährter Dorf- und Grenzbeschützer"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; instinktsicher und routinenfest"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Gezielte Sicherheitszucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Früher Alarm, Mut und Standfestigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Wenig verspielt; ungeeignet für unstete Haushalte"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Tiefe, weithin tragende Warnstimme"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fairaeg ist der klassische Warnhund der südlichen Albenfürstentümer. Er ist kein Spieltier und kein reiner Hofhund, sondern ein wachsamer Grenz- und Dorfbeschützer, gezüchtet, um Gefahr früh zu erkennen und entschlossen zu reagieren. Wo Menschen schlafen, wacht der Fairaeg."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fairaeg stammt aus den warmen, dicht besiedelten Albenlanden des Südens. Seine Zucht entstand aus der Notwendigkeit, Dörfer, Wegkreuzungen und Grenzlinien gegen Räuber, streunende Wölfe und nächtliche Eindringlinge zu sichern. Er ist kein Luxusgut, sondern ein bewusst gezüchtetes Werkzeug der Sicherheit."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kräftig gebaut, mit breitem Brustkorb und dichtem Fell. Seine Haltung ist ruhig, aufmerksam, niemals fahrig. Der Fairaeg wirkt wachsam selbst im Sitzen – als würde ihm nichts entgehen. Seine Stimme ist tief und tragend, sein Blick prüfend."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fairaeg ist aufmerksam, territorial und instinktstark. Er meldet Eindringlinge frühzeitig und scheut sich nicht, Bedrohungen zu stellen. Dabei ist er kein kopfloser Angreifer: Er hält Abstand, bindet Gegner und verschafft Zeit – genau das, wofür er gezüchtet wurde."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich eng an seinen Hof, sein Dorf oder seinen Wachposten, weniger an eine einzelne Person. Fremden gegenüber ist er misstrauisch, Dorfbewohnern gegenüber loyal. Er akzeptiert klare Hierarchien, duldet aber keine Nachlässigkeit."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fairaeg ist leicht auszubilden, benötigt jedoch klare Routinen und feste Aufgaben. Untätigkeit macht ihn nervös. Gute Warnhunde werden früh an Geräusche, Gerüche und Nachtwachen gewöhnt."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragender Wachinstinkt",
+            "Mutig und standhaft",
+            "Stark genug, um Wölfe abzuwehren oder aufzuhalten"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Wenig verspielt",
+            "Kein schneller Jagdhund",
+            "Ungeeignet für unstete Haushalte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In vielen Dörfern gilt ein schlafender Fairaeg als schlechtes Omen.",
+            "Sein Name leitet sich aus alten albischen Warnrufen ab.",
+            "Ein einzelner Fairaeg kann ein ganzes Dorf nachts wach halten – gewollt oder nicht."
+          ]
+        }
+      ]
+    }
+  ]
+}

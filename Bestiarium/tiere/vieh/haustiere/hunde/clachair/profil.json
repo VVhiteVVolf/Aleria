@@ -1,0 +1,178 @@
+{
+  "id": "clachair",
+  "name": "Clachair",
+  "classification": "Hunderasse · Hofhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-12",
+  "summary": "Der Clachair ist kein schneller Jäger, kein nervöser Wächter und kein verspielter Begleiter. Er ist der Hof selbst – in Fell und Knochen. Wo er liegt, gilt Ordnung. Wo er steht, weiß jedes Tier, jedes Kind und auch jeder andere Hund, was erlaubt ist und was nicht.",
+  "quote": "Wo ein Clachair liegt, braucht man keinen Zaun.",
+  "quoteAttribution": "Cenyrisches Hofsprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/clachair.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Clachair"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/clachair.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Clachair",
+    "caption": "Archivtafel · Clachair im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Clachair"
+    },
+    {
+      "label": "Typ",
+      "value": "Hofhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Ländliche Charakterzucht Cenyrs"
+    },
+    {
+      "label": "Status",
+      "value": "Geschätzter Ordnungs- und Familienhund"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Sehr hoch im Rollen- und Rudelverständnis"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Bäuerliche Auswahl auf Beständigkeit"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Körperkraft, Kontrolle und unerschütterliche Loyalität"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Ausdauer; kaum Interesse an spielerischer Arbeit"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Gibt jüngeren Hunden durch sein Verhalten Struktur"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Clachair ist kein schneller Jäger, kein nervöser Wächter und kein verspielter Begleiter. Er ist der Hof selbst – in Fell und Knochen. Wo er liegt, gilt Ordnung. Wo er steht, weiß jedes Tier, jedes Kind und auch jeder andere Hund, was erlaubt ist und was nicht."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Clachair stammt aus den ländlichen Regionen Cenyrs, wo Bauern seit Generationen Hunde nicht nach Schönheit, sondern nach Charakter auswählten. Er wurde gezüchtet, um Beständigkeit zu verkörpern: ruhig, verlässlich, dominant ohne aggressiv zu sein. Oft wird er bewusst gemeinsam mit jüngeren oder spezialisierteren Hunden gehalten, um Struktur in das Hofgefüge zu bringen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Groß, breit gebaut, schwer wirkend. Sein Fell ist dicht, meist einfarbig oder nur leicht schattiert. Sein Gesichtsausdruck wirkt oft müde, fast melancholisch – doch das täuscht. Der Clachair beobachtet ständig. Er bewegt sich selten hastig, sondern mit der Selbstverständlichkeit eines Wesens, das weiß, dass es nicht beeilen muss."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Clachair handelt ruhig, territorial und mit großer Selbstsicherheit. Er beobachtet Hof, Tiere und andere Hunde, greift selten vorschnell ein und setzt Grenzen dann mit unmissverständlicher Ruhe. Jüngere Hunde richten ihr Verhalten häufig an ihm aus."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Für den Clachair ist die Familie kein Besitz, sondern Rudel. Er behandelt Bauern, Kinder und Alte mit derselben Loyalität. Fremde werden aufmerksam beobachtet; erst wenn jemand die Schwelle des Erlaubten überschreitet, wird der Clachair ohne Zögern aktiv."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Clachair lässt sich nur begrenzt klassisch ausbilden. Er lernt stärker über Rollenverständnis und beständige Abläufe als über viele Einzelbefehle. Bauern setzen erfahrene Tiere deshalb oft ein, um Junghunden durch Nachahmung Ruhe und Ordnung zu vermitteln."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dominant, aber kontrolliert",
+            "Sehr stark, kann selbst Kampfhunde in die Schranken weisen",
+            "Extrem loyal und familienbezogen",
+            "Ideal zur Strukturierung anderer Hunde"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geringe Ausdauer",
+            "Ungeeignet für lange Jagden oder Märsche",
+            "Kaum Interesse an spielerischer Arbeit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Wo ein Clachair liegt, braucht man keinen Zaun.“",
+            "Viele Clachair wählen selbst ihren Schlafplatz – meist dort, wo Hof, Stall und Haus zugleich im Blick liegen.",
+            "Junghunde übernehmen häufig die ruhige Hofroutine eines erfahrenen Clachair, ohne dass ein Mensch eingreifen muss."
+          ]
+        }
+      ]
+    }
+  ]
+}

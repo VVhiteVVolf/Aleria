@@ -1,0 +1,176 @@
+{
+  "id": "ponter",
+  "name": "Ponter",
+  "classification": "Hunderasse · Wachhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-07",
+  "summary": "Der Ponter ist der klassische Wachhund Cenyrs – kein Kriegstier, kein Hirtenhund, sondern ein aufmerksamer Aufpasser für Orte, an denen Müdigkeit tödlich werden kann. Für einen Milwr ist er unverzichtbar: wachsam, standorttreu und unbestechlich. Er ist nicht dafür da, den Kampf zu suchen, sondern ihn rechtzeitig anzukündigen.",
+  "quote": "Wo der Milwr blinzelt, hält der Ponter die Augen offen.",
+  "quoteAttribution": "Cenyrische Redensart",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/ponter.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Ponter"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/ponter.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Ponter",
+    "caption": "Archivtafel · Ponter im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ponter"
+    },
+    {
+      "label": "Typ",
+      "value": "Wachhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Cenyrische Wachlinien"
+    },
+    {
+      "label": "Status",
+      "value": "Fester Begleiter von Städten, Brücken und Garnisonen"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; unterscheidet Alarm von Alltagsreiz"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Funktionale Wachhundzucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Mittel"
+    },
+    {
+      "label": "Stärke",
+      "value": "Wahrnehmung, Lautdisziplin und lange Standwachen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Begrenzte Kampfkraft und geringe Abschreckung durch Größe"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Meldet Veränderungen früh und eindeutig"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ponter ist der klassische Wachhund Cenyrs – kein Kriegstier, kein Hirtenhund, sondern ein aufmerksamer Aufpasser für Orte, an denen Müdigkeit tödlich werden kann. Für einen Milwr ist er unverzichtbar: wachsam, standorttreu und unbestechlich. Er ist nicht dafür da, den Kampf zu suchen, sondern ihn rechtzeitig anzukündigen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ponter entstammt cenyrischen Linien, die gezielt auf Aufmerksamkeit, Nervenstärke und Zuverlässigkeit gezüchtet wurden. Die Zucht erfolgt überwiegend durch Städte, Brückenmeister und Garnisonen. Größe und Kraft sind zweitrangig – entscheidend ist die Fähigkeit, Bewegung zu erkennen und Alarm zu geben, bevor ein Mensch reagieren muss."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittelgroß, schlank, mit aufgerichteten Ohren und klarem Blick. Das Fell ist wetterfest, meist in gedeckten Blau-, Grau- oder Erdtönen. Der Körperbau ist auf Ausdauer ausgelegt: stundenlanges Stehen, Sitzen und Beobachten ohne Ermüdung."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Ponter ist ruhig, konzentriert und kaum verspielt. Er bewegt sich wenig, scannt dafür ständig seine Umgebung. Er meldet früh und eindeutig, ohne sinnloses Gebell. Schleichen ist zwecklos – der Ponter bemerkt Veränderungen lange vor dem Menschen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich eng an seinen Milwr und arbeitet im Gleichklang mit ihm. Der Hund ergänzt die menschliche Wachsamkeit, ersetzt sie aber nicht. Vertrauen entsteht durch Routine und gemeinsames Stehen auf Posten, nicht nur durch Zuneigung."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung beginnt früh und ist streng funktional: Reizkontrolle, Lautdisziplin, klare Alarmzeichen. Der Ponter lernt, wann er melden muss – und wann nicht. Übertriebene Härte schadet seiner Zuverlässigkeit; klare Abläufe stärken sie."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hervorragende Wahrnehmung",
+            "Hohe Standfestigkeit bei Nachtwachen",
+            "Zuverlässiger Alarm ohne Panik"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kein Kampfhund",
+            "Begrenzte Abschreckung durch Größe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ponter werden oft paarweise mit Milwren eingesetzt, aber einzeln gehalten.",
+            "In Cenyr heißt es: „Wer am Ponter vorbei will, kommt nicht leise.“",
+            "An Brücken gelten sie als ebenso wichtig wie Schloss und Riegel."
+          ]
+        }
+      ]
+    }
+  ]
+}

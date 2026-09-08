@@ -1,0 +1,178 @@
+{
+  "id": "tryw",
+  "name": "Tryw",
+  "classification": "Hunderasse · Jagdhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-14",
+  "summary": "Der Tryw ist der Hund des einfachen Jägers. Kein Statussymbol, kein Luxus – sondern ein verlässliches Werkzeug mit Herz. In Cenyr gilt er als der Hund, auf den man sich verlassen kann, wenn Wild gefunden, verfolgt und gestellt werden muss, ohne dass man ein Vermögen ausgibt.",
+  "quote": "Der Rhedwyr jagt fürs Auge – der Tryw jagt fürs Mahl.",
+  "quoteAttribution": "Cenyrisches Jägersprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/tryw.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Tryw"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/tryw.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Tryw",
+    "caption": "Archivtafel · Tryw im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Tryw"
+    },
+    {
+      "label": "Typ",
+      "value": "Jagdhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Stabile cenyrische Jagdhundlinien"
+    },
+    {
+      "label": "Status",
+      "value": "Weit verbreiteter Hund einfacher Jäger"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch bei Geruchsbildern und Jagdroutinen"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Zweckmäßige und stabile Gebrauchszucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Günstig"
+    },
+    {
+      "label": "Stärke",
+      "value": "Geruchssinn, Fährtenarbeit und Robustheit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Weniger schnell als der Rhedwyr; geringe Kampfkraft"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Bewährter Spurpartner für einen Rhedwyr"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tryw ist der Hund des einfachen Jägers. Kein Statussymbol, kein Luxus – sondern ein verlässliches Werkzeug mit Herz. In Cenyr gilt er als der Hund, auf den man sich verlassen kann, wenn Wild gefunden, verfolgt und gestellt werden muss, ohne dass man ein Vermögen ausgibt."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tryw wurde in Cenyr gezielt als Gegenstück zum Rhedwyr gezüchtet. Während der Rhedwyr für Adlige, Jagdgesellschaften und prestigeträchtige Hetzen gedacht ist, entstand der Tryw für Bauern, Förster und einfache Jäger. Seine Zucht ist stabil, vergleichsweise günstig und weit verbreitet, weshalb er sich rasch über ganz Estryll ausgebreitet hat."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittelgroß, schlank, mit langem Fang und wachen Augen. Sein Körper ist auf Ausdauer statt Geschwindigkeit ausgelegt. Das Fell ist wetterfest, nicht prunkvoll, aber pflegeleicht – ein Hund, der draußen lebt und dafür gemacht ist."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tryw arbeitet mit der Nase, nicht mit dem Tempo. Er liest Fährten sauber, verliert sie nur selten und meldet Wild zuverlässig. In Kombination mit einem Rhedwyr übernimmt er die Spurarbeit, während der schnellere Hund hetzt. Allein eingesetzt eignet er sich hervorragend für Nachsuchen, Waldjagd und das Aufstöbern von Wild in unwegsamem Gelände."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tryw bindet sich stark an seinen Jäger. Er ist kein typischer Familienhund, aber zuverlässig, loyal und genügsam. Viele Cenyrische Bauern halten ihn sowohl als Jagd- als auch als Hofbegleiter, da er wachsam genug ist, um Fremde zu melden."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leicht auszubilden, besonders in jungen Jahren. Er lernt schnell Geruchsbilder und Jagdroutinen, benötigt jedoch klare Führung. Härte ist unnötig – Geduld und Wiederholung bringen bessere Ergebnisse."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sehr guter Geruchssinn",
+            "Zuverlässige Fährtenarbeit",
+            "Pflegeleicht und robust",
+            "Günstiger als adlige Jagdhunde"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger schnell als Rhedwyr",
+            "Keine ausgeprägte Kampfkraft",
+            "Nicht für prestigeträchtige Hetzjagden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Der Rhedwyr jagt fürs Auge – der Tryw jagt fürs Mahl.“",
+            "Tryw werden oft gemeinsam mit Rhedwyr geführt – eine klassische Zweierkombination der cenyrischen Jagd.",
+            "Auf cenyrischen Höfen meldet der Tryw Fremde oft ebenso zuverlässig, wie er im Wald einer Fährte folgt."
+          ]
+        }
+      ]
+    }
+  ]
+}

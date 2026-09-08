@@ -1,0 +1,176 @@
+{
+  "id": "brag",
+  "name": "Brág",
+  "classification": "Hunderasse · Hofhund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-08",
+  "summary": "Der Brág ist der klassische Hofhund der cenyrischen Bauern: klein genug, um nicht im Weg zu sein, aber präsent genug, um nicht übersehen zu werden. Er ist kein Wächter im militärischen Sinn und kein Jäger großer Beute, sondern ein alltäglicher Begleiter, der Ordnung, Leben und Aufmerksamkeit auf den Hof bringt. In Cenyr gilt er als selbstverständlicher Teil eines funktionierenden Bauernhofs.",
+  "quote": "Wo ein Brág liegt, ist der Hof nicht allein.",
+  "quoteAttribution": "Cenyrisches Bauernsprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/brag.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Rassensymbol: Brág"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/brag.webp",
+    "width": 1024,
+    "height": 687,
+    "alt": "Überlieferte Illustration der Hunderasse Brág",
+    "caption": "Archivtafel · Brág im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Brág"
+    },
+    {
+      "label": "Typ",
+      "value": "Hofhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Einfache ländliche Zuchtlinien Cenyrs"
+    },
+    {
+      "label": "Status",
+      "value": "Weit verbreiteter Begleiter bäuerlicher Höfe"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; lernt durch Nähe, Nachahmung und Lob"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Bäuerliche Auswahl nach Nutzen und Wesen"
+    },
+    {
+      "label": "Preis",
+      "value": "Günstig"
+    },
+    {
+      "label": "Stärke",
+      "value": "Sozialverhalten, Aufmerksamkeit und Genügsamkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Keine Eignung gegen Wölfe oder Räuber"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Bewegt sich als selbstständiger Aufpasser über den ganzen Hof"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brág ist der klassische Hofhund der cenyrischen Bauern: klein genug, um nicht im Weg zu sein, aber präsent genug, um nicht übersehen zu werden. Er ist kein Wächter im militärischen Sinn und kein Jäger großer Beute, sondern ein alltäglicher Begleiter, der Ordnung, Leben und Aufmerksamkeit auf den Hof bringt. In Cenyr gilt er als selbstverständlicher Teil eines funktionierenden Bauernhofs."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brág stammt aus einfachen ländlichen Zuchtlinien Cenyrs. Über Generationen hinweg wurden jene Tiere bevorzugt, die freundlich, lernfähig und standorttreu waren. Die Zucht ist unprätentiös: keine Adelshäuser, keine Kriegslinien, sondern bäuerliche Auswahl nach Nutzen und Wesen. Wolfseinfluss ist kaum vorhanden – der Brág ist bewusst hundisch, nicht wölfisch."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brág ist klein bis mittelgroß, kompakt gebaut, mit rauem, wetterfestem Fell. Seine Statur wirkt robust, ohne schwer zu sein. Die Ohren stehen halb aufrecht oder kippen leicht, der Schwanz wird aufmerksam getragen. Farben variieren, häufig sind warme Braun- und Ockertöne. Sein Blick ist wach und freundlich."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brág ist verspielt, neugierig und erstaunlich pflichtbewusst. Er bewegt sich frei über den Hof, kontrolliert Ställe und Nebengebäude, schaut nach Geflügel und hält fremde Tiere auf Abstand. Er bellt früh, aber nicht hysterisch, und beruhigt sich schnell, sobald sein Mensch anwesend ist."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich stark an „seinen Hof“ und dessen Bewohner. Kinder werden geduldet, oft sogar beschützt; Fremde werden gemeldet, aber nicht angegriffen. Für viele Bauern ist der Brág weniger Besitz als Mitbewohner – ein fröhlicher Hausmeister auf vier Pfoten."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung ist einfach und erfolgt meist beiläufig. Der Brág lernt durch Nähe, Nachahmung und Lob. Harte Hand schadet ihm; klare Routinen fördern sein bestes Verhalten. Er eignet sich hervorragend für Ersthalter und Familienbetriebe."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lernfähig, gehorsam, sozial",
+            "Frühwarnsystem für den Hof",
+            "Pflegeleicht und genügsam"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Keine Eignung gegen Wölfe oder Räuber",
+            "Neigt zu Überschätzung seiner eigenen Wichtigkeit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Ein Hof ohne Brág ist nur ein Platz mit Zäunen.“",
+            "Viele Brág schlafen tagsüber an wechselnden Orten, um „alles im Blick zu behalten“.",
+            "Sie gelten als Glücksbringer für Stall und Ernte."
+          ]
+        }
+      ]
+    }
+  ]
+}

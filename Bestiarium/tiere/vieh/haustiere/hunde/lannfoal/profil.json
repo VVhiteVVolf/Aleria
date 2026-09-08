@@ -1,0 +1,177 @@
+{
+  "id": "lannfoal",
+  "name": "Lannfoal",
+  "classification": "Hunderasse · Kriegshund",
+  "continent": "Estryll",
+  "region": "Albische Fürstentümer",
+  "folio": "VI / 01-A-02",
+  "summary": "Der Lannfoal ist kein gewöhnlicher Hund, sondern eine Waffe auf vier Beinen. Unter den Alben gilt er als der Inbegriff des Kriegshundes – groß, furchtlos und geschaffen für Kämpfe, die andere Hunde brechen würden. Besonders Serfs (Waldläufer) und Mormaer (berittene Kundschafter) setzen auf ihn, wenn sie jenseits sicherer Wege operieren.",
+  "quote": "Ein Lannfoal weicht nicht. Er wartet nur auf den Befehl.",
+  "quoteAttribution": "Wort der albischen Serfs",
+  "parentGroupId": "estryll-albische-fuerstentuemer",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/lannfoal.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Lannfoal"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/lannfoal.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Lannfoal",
+    "caption": "Archivtafel · Lannfoal im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Lannfoal"
+    },
+    {
+      "label": "Typ",
+      "value": "Kriegshund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Albische Fürstentümer"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Robuste Wolfsabkömmlinge"
+    },
+    {
+      "label": "Status",
+      "value": "Streng reglementiert und selten frei verkauft"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; arbeitet fokussiert unter klarer Führung"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Militärisch gebundene Spezialzucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Sehr hoch"
+    },
+    {
+      "label": "Stärke",
+      "value": "Kampfmoral, Ausdauer und Widerstandskraft"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Hoher Pflegeaufwand; im zivilen Umfeld schwer zu führen"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Toleranz gegen Gift, Krankheit und Verwesung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lannfoal ist kein gewöhnlicher Hund, sondern eine Waffe auf vier Beinen. Unter den Alben gilt er als der Inbegriff des Kriegshundes – groß, furchtlos und geschaffen für Kämpfe, die andere Hunde brechen würden. Besonders Serfs (Waldläufer) und Mormaer (berittene Kundschafter) setzen auf ihn, wenn sie jenseits sicherer Wege operieren."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lannfoal wurde gezielt aus robusten Wolfsabkömmlingen gezüchtet, mit Fokus auf Aggressionskontrolle, Ausdauer und Widerstandskraft gegen unnatürliche Einflüsse. Seine Zucht ist streng reglementiert und meist an militärische oder rangerhafte Orden der Alben gebunden. Ein echter Lannfoal ist selten frei verkauft."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sehr groß, hochbeinig und massiv, mit wolfsähnlichem Kopf und dichtem, grauschwarzem Fell. Seine Haltung ist ruhig, fast reglos – bis er handelt. Narben sind bei erwachsenen Tieren keine Seltenheit und gelten unter Serfs als Zeichen eines „bewährten“ Hundes."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lannfoal ist diszipliniert, territorial und extrem fokussiert. Er greift nicht unkontrolliert an, sondern arbeitet gezielt: Umkreisen, Festsetzen, Töten. Gegen Wölfe hat er keine Hemmungen, und auch unnatürliche Kreaturen wie Nekrophagen oder Waldgarn-Spinnen schrecken ihn nicht."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung ist hart und beginnt früh. Lannfoal werden an Blut, Tod und Gefahr gewöhnt. Serfs versorgen sie häufig mit alchemistischen Gebräuen und starken Heilmitteln, wodurch die Hunde über Jahre hinweg eine ungewöhnlich hohe Toleranz gegen Gift, Krankheit und Verwesung entwickeln."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung beginnt früh und gehört ausschließlich in erfahrene Hände. Der Lannfoal lernt, unter Lärm, Blutgeruch und unmittelbarer Gefahr auf klare Angriffs-, Halte- und Abbruchsignale zu reagieren. Unsichere oder widersprüchliche Führung macht ihn unberechenbar."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tötet Wölfe und Waldkreaturen zuverlässig",
+            "Hohe Resistenz gegen Gift und Untod",
+            "Unerschütterliche Kampfmoral"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kaum für ziviles Umfeld geeignet",
+            "Hoher Pflege- und Ausbildungsaufwand",
+            "Gefährlich bei falscher Führung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Serfs sagen, ein Lannfoal erkenne Untote, bevor sie sichtbar werden.",
+            "Ein ausgemusterter Lannfoal wird selten alt – er stirbt meist im Einsatz.",
+            "Unter Serfs gelten sichtbare Narben nicht als Makel, sondern als Zeichen eines bewährten Tieres."
+          ]
+        }
+      ]
+    }
+  ]
+}

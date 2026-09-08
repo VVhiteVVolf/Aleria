@@ -1,0 +1,176 @@
+{
+  "id": "gamir",
+  "name": "Gamir",
+  "classification": "Hunderasse · Grenzhund",
+  "continent": "Aldrimar",
+  "region": "Grenzen und Außenposten",
+  "folio": "VI / 01-A-04",
+  "summary": "Der Gamir ist Aldrimars Grenzhund – gezüchtet für Kälte, Konflikt und klare Fronten. Er arbeitet dort, wo Linien verteidigt werden müssen: an Grenzen, Brücken, Außenposten und in unruhigen Waldsäumen. Größer und durchsetzungsfähiger als der Ponter, kompromissloser als ein Schäferhund, ist der Gamir kein Warner, sondern ein Halter mit Biss.",
+  "quote": "Wo der Gamir steht, endet der Weg.",
+  "quoteAttribution": "Aldrimarisches Grenzwort",
+  "parentGroupId": "aldrimar",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/gamir.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Gamir"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/gamir.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Gamir",
+    "caption": "Archivtafel · Gamir im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Gamir"
+    },
+    {
+      "label": "Typ",
+      "value": "Grenzhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Grenzen und Außenposten"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Robuste aldrimarische Linien mit starkem Wolfsanteil"
+    },
+    {
+      "label": "Status",
+      "value": "Im Dienst von Grenztruppen, Hirdmännern, Schildmaiden und Skytte"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; liest Gesten und Bewegungen schnell"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Spezialisierte Grenzhundzucht"
+    },
+    {
+      "label": "Preis",
+      "value": "Hoch"
+    },
+    {
+      "label": "Stärke",
+      "value": "Kampfkraft, Kältefestigkeit und Durchhaltevermögen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Dominant; geringe Toleranz gegenüber Fremden"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Hält Übergänge und Positionen bis zur Entlastung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gamir ist Aldrimars Grenzhund – gezüchtet für Kälte, Konflikt und klare Fronten. Er arbeitet dort, wo Linien verteidigt werden müssen: an Grenzen, Brücken, Außenposten und in unruhigen Waldsäumen. Größer und durchsetzungsfähiger als der Ponter, kompromissloser als ein Schäferhund, ist der Gamir kein Warner, sondern ein Halter mit Biss."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gamir stammt aus robusten aldrimarischen Linien mit starkem Wolfsanteil. Die Zucht priorisiert Standfestigkeit, Mut und Durchhaltevermögen bei Frost und Dunkelheit. Er wird von Grenztruppen, Hirdmännern und Schildmaiden gehalten; viele Linien sind an Skytte (aldrimarische Waldläufer) gebunden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kräftig gebaut, dichte Unterwolle, harsches Deckhaar. Aufrechte Ohren, breiter Fang, hoch getragener Schweif. Farblich dominieren Grau-, Blau- und Sandtöne. Der Körper wirkt bereit – nicht elegant, sondern einsatzfähig."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gamir ist wachsam, dominant und konfliktbereit. Er scheut weder Wölfe noch Banditen und hält Position, bis Entlastung eintrifft. Er arbeitet nah am Menschen, liest Gesten und Bewegungen, reagiert schnell und entschlossen."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Er bindet sich an eine Führungsfigur. Freundlichkeit allein reicht nicht – der Gamir verlangt klare Rangordnung. Mit Hirdmännern und Schildmaiden bildet er verlässliche Zweier; mit Skytte arbeitet er lautlos und beweglich."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frühe Prägung, strenge Routine, konsequente Führung. Der Gamir braucht eine starke Hand an der Leine. Nachlässigkeit macht ihn eigensinnig; klare Befehle machen ihn zuverlässig. Lob wirkt, Unsicherheit nicht."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe Kampfkraft gegen Wölfe & Räuber",
+            "Kälteunempfindlich, ausdauernd",
+            "Hält Linien und Übergänge"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dominant, nichts für unerfahrene Führer",
+            "Geringe Toleranz gegenüber Fremden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Gamir werden oft an Brücken eingesetzt.",
+            "In Aldrimar heißt es: „Der Gamir friert nicht – er wartet.“",
+            "Ein Skytte ohne Gamir gilt als unvollständig ausgerüstet."
+          ]
+        }
+      ]
+    }
+  ]
+}

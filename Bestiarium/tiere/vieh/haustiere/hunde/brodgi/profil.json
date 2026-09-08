@@ -1,0 +1,177 @@
+{
+  "id": "brodgi",
+  "name": "Brodgi",
+  "classification": "Hunderasse · Haushund",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-A-11",
+  "summary": "Der Brodgi ist kein Arbeitstier, kein Wächter und ganz sicher kein Held. Und genau deshalb liebt man ihn. Er ist der klassische Haushund Cenyrs – gezüchtet nicht für Gefahr, Jagd oder Pflicht, sondern für Nähe, Wärme und Alltag. Wo andere Hunde Aufgaben haben, hat der Brodgi Menschen.",
+  "quote": "Ein Brodgi bewacht nichts – außer dein Herz.",
+  "quoteAttribution": "Cenyrisches Sprichwort",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/brodgi.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Rassensymbol: Brodgi"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/brodgi.webp",
+    "width": 1024,
+    "height": 687,
+    "alt": "Überlieferte Illustration der Hunderasse Brodgi",
+    "caption": "Archivtafel · Brodgi im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Brodgi"
+    },
+    {
+      "label": "Typ",
+      "value": "Haushund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Dörfliche und städtische Haushundlinien Cenyrs"
+    },
+    {
+      "label": "Status",
+      "value": "Häufiger Familien- und Kinderbegleiter"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Alltagsklug; geringe Freude an klassischer Ausbildung"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Auswahl auf Freundlichkeit und Alltagstauglichkeit"
+    },
+    {
+      "label": "Preis",
+      "value": "Günstig"
+    },
+    {
+      "label": "Stärke",
+      "value": "Kinderfreundlichkeit, Anhänglichkeit und Genügsamkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kaum wach-, schutz- oder kampftauglich"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Merkt sich häusliche Routinen zuverlässiger als Befehle"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brodgi ist kein Arbeitstier, kein Wächter und ganz sicher kein Held. Und genau deshalb liebt man ihn. Er ist der klassische Haushund Cenyrs – gezüchtet nicht für Gefahr, Jagd oder Pflicht, sondern für Nähe, Wärme und Alltag. Wo andere Hunde Aufgaben haben, hat der Brodgi Menschen."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brodgi stammt aus den Dörfern und Städten Cenyrs, wo man früh erkannte, dass nicht jeder Hund kämpfen oder hüten muss. Seine Zucht folgte keinem großen Plan, sondern dem einfachen Prinzip: freundlich, klein genug für Haus und Gasse, robust genug für das cenyrische Klima. Über Generationen wurde alles ausgesiebt, was zu scharf, zu eigenständig oder zu wild war."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kompakt gebaut, mittellanges Fell, weiche Konturen. Er wirkt freundlich, fast rundlich, mit einem Gesicht, das selten ernst schaut. Seine Bewegungen sind lebhaft, manchmal unbeholfen – ein Hund, der lieber springt als schreitet. Schönheit ist beim Brodgi nebensächlich, Sympathie unvermeidlich."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mut gehört nicht zu seinen Stärken. Bei echtem Lärm oder Gefahr zieht sich der Brodgi lieber zurück oder sucht Schutz bei Menschen. Doch er ist aufmerksam, neugierig und erstaunlich hartnäckig, wenn es um Zuwendung geht. Er folgt Kindern auf Schritt und Tritt, spielt endlos, fordert Aufmerksamkeit ein und gibt Ruhe erst auf, wenn er müde ist."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brodgi ist ein Familienhund im eigentlichen Sinn. Besonders Kinder schließen ihn schnell ins Herz – und umgekehrt. Er verzeiht grobes Streicheln, laute Stimmen und ungestümes Spielen. Für viele Kinder in Cenyr ist er der erste Gefährte, der erste „Freund“, der erste Verlust, wenn das Leben weiterzieht."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ausbildung ist beim Brodgi kaum nötig. Er lernt Grundgehorsam, meist widerwillig, und vergisst ihn ebenso schnell. Dafür versteht er Routinen hervorragend: Essenszeiten, Schlafplätze, vertraute Wege. Strenge bringt nichts – Lob und Nähe schon."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kinderfreundlich",
+            "Anhänglich und verspielt",
+            "Pflegeleicht und genügsam"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nicht mutig",
+            "Kaum wach- oder schutztauglich",
+            "Geringe Lernbereitschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr heißt es: „Ein Brodgi bewacht nichts – außer dein Herz.“",
+            "Viele Brodgi schlafen lieber in der Nähe von Kaminen oder Betten als draußen.",
+            "Kein Hund wird häufiger verschenkt – und keiner seltener verkauft."
+          ]
+        }
+      ]
+    }
+  ]
+}

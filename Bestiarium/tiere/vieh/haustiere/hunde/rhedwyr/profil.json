@@ -1,0 +1,180 @@
+{
+  "id": "rhedwyr",
+  "name": "Rhedwyr",
+  "classification": "Hunderasse · Jagd- und Hetzhund",
+  "continent": "Estryll",
+  "region": "Sonnenküste Cenyrs",
+  "folio": "VI / 01-A-09",
+  "summary": "Der Rhedwyr ist kein gewöhnlicher Hund, sondern das Ergebnis jahrzehntelanger, beinahe fanatischer Zucht auf Geschwindigkeit, Ausdauer und Gehorsam auf Distanz. In ganz Estryll gilt er als Maßstab für Schnelligkeit – kein anderer Hund erreicht seine Laufleistung oder hält sein Tempo über vergleichbare Strecken. Wo andere Hunde kämpfen oder bewachen, jagt der Rhedwyr.",
+  "quote": "Wo andere Hunde laufen, beginnt der Rhedwyr zu fliegen.",
+  "quoteAttribution": "Spruch der Windläufer",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/hunde/rhedwyr.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Rhedwyr"
+  },
+  "hero": {
+    "src": "../../../../../assets/dog-profiles/rhedwyr.webp",
+    "width": 741,
+    "height": 1024,
+    "alt": "Überlieferte Illustration der Hunderasse Rhedwyr",
+    "caption": "Archivtafel · Rhedwyr im Einsatz"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Rhedwyr"
+    },
+    {
+      "label": "Typ",
+      "value": "Jagd- und Hetzhund"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Sonnenküste Cenyrs"
+    },
+    {
+      "label": "Abstammung",
+      "value": "Leichte Jagdhunde mit stark zurückgedrängtem Wolfsblut"
+    },
+    {
+      "label": "Status",
+      "value": "Prestigeträchtige Spezialzucht"
+    },
+    {
+      "label": "Intelligenz",
+      "value": "Hoch; folgt Distanzsignalen präzise"
+    },
+    {
+      "label": "Niveau der Zucht",
+      "value": "Strenge Zucht der Windläufer und des Hauses Llwynog"
+    },
+    {
+      "label": "Preis",
+      "value": "Sehr hoch"
+    },
+    {
+      "label": "Stärke",
+      "value": "Höchste Geschwindigkeit und enorme Laufleistung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Eignung gegen schwere Gegner; kaum familientauglich"
+    },
+    {
+      "label": "Besonderheit",
+      "value": "Gehorsam über große Distanz mit Pfeif- und Handzeichen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhedwyr ist kein gewöhnlicher Hund, sondern das Ergebnis jahrzehntelanger, beinahe fanatischer Zucht auf Geschwindigkeit, Ausdauer und Gehorsam auf Distanz. In ganz Estryll gilt er als Maßstab für Schnelligkeit – kein anderer Hund erreicht seine Laufleistung oder hält sein Tempo über vergleichbare Strecken. Wo andere Hunde kämpfen oder bewachen, jagt der Rhedwyr."
+        }
+      ]
+    },
+    {
+      "id": "herkunft-und-zucht",
+      "title": "Herkunft & Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine Ursprünge liegen an der Sonnenküste Cenyrs, wo die Gilde der Windläufer gemeinsam mit dem adligen Haus Llwynog eine neue Hunderasse schaffen wollte: einen Hund, der Beute nicht stellt, sondern unausweichlich einholt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Zuchtlinien basieren auf besonders leichten, langbeinigen Jagdhunden und ausgewählten Wolfsblutlinien, allerdings stark zurückgedrängt, um Aggression und Eigenwillen zu minimieren. Der Rhedwyr ist damit weniger „wild“ als viele andere cenyrische Hunde – aber deutlich spezialisierter."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Körper des Rhedwyr ist schmal, hochgezogen und nahezu asketisch. Lange Beine, flexible Wirbelsäule, tiefe Brust für große Lungenkapazität. Der Kopf ist schmal, die Schnauze lang, die Ohren meist halb angelegt oder leicht hängend, um Luftwiderstand zu reduzieren. Sein Gang wirkt ruhig und kontrolliert – bis er lossprintet. Dann scheint er eher zu fliegen als zu laufen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Alltag ist der Rhedwyr erstaunlich ruhig, fast teilnahmslos. Er liegt, beobachtet, wartet. Energie verschwendet er nicht. Sobald jedoch ein Ziel vorgegeben wird, verändert er sich vollständig: Fokus, Beschleunigung, Verfolgung. Er jagt nicht blindlings, sondern hält Abstand, treibt Beute in offene Räume oder auf vorbereitete Positionen zu. Besonders bei Hetzjagden auf fliehende Gegner oder leichte Kreaturen ist er unersetzlich."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rhedwyr bindet sich stark an eine einzelne Bezugsperson. Diese Bindung ist funktional, nicht verspielt oder emotional. Er folgt Befehlen auch auf große Distanz, reagiert zuverlässig auf Pfeifsignale und Handzeichen. Fremde interessieren ihn kaum – weder positiv noch negativ. Für Hofleben oder Familien ist er ungeeignet."
+        }
+      ]
+    },
+    {
+      "id": "zaehmung-und-ausbildung",
+      "title": "Zähmung & Ausbildung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ausbildung beginnt früh und ist streng strukturiert. Ein schlecht geführter Rhedwyr wird nervös oder nutzlos. Er lernt keine komplexen Tricks, sondern klare Kommandos: Laufen, Halten, Drehen, Abbrechen. Gewalt in der Ausbildung gilt als schwerer Fehler – sie zerstört seine Präzision und sein Vertrauen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-und-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Schnellster Hund Estrylls",
+            "Enorme Ausdauer",
+            "Perfekt für Hetz-, Sport- und Verfolgungsjagd"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weniger kampftauglich als wirkliche Kampfhunde",
+            "Anfällig gegen schwere Gegner"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr heißt es: „Der Rhedwyr entscheidet nicht, ob du entkommst – nur wann du fällst.“",
+            "Viele Jagdherren messen den Wert eines Rhedwyr nicht in Gold, sondern in der Länge der Strecke, die er ohne Pause laufen kann.",
+            "Ein Rhedwyr reagiert auch über große Distanz zuverlässig auf Pfeifsignale und Handzeichen."
+          ]
+        }
+      ]
+    }
+  ]
+}
