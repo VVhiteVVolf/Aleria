@@ -8,7 +8,7 @@ import { renderCreatureGroupProfile } from '../modules/creature-group-profile/cr
 const expectedIds = ['geister', 'nekrophagen', 'trolle', 'riesen'];
 const expectedNames = ['Geister', 'Nekrophagen', 'Trolle', 'Riesen'];
 const expectedKnownNames = {
-  geister: ['Dullahan', 'Erscheinung (Geist)', 'Mahr', 'Dämon', 'Wächtergeist', 'Banshee (Todesfee)', 'Irrlicht', 'Naturahne'],
+  geister: ['Dullahan', 'Erscheinung (Geist)', 'Mahr', 'Dämon', 'Wächtergeist', 'Banshee (Todesfee)', 'Irrlichter & Irrlichtmutter', 'Naturahne'],
   nekrophagen: ['Zombie', 'Ghule', 'Draugr', 'Lich', 'Versunkener', 'Scheusal', 'Gruftweib / Verschlinger', 'Skelett', 'Nebling', 'Widergänger', 'Hexenrabe', 'Grall', 'Mumie', 'Sumpfzehrer'],
   trolle: ['Frosttroll', 'Flusstroll', 'Waldtroll', 'Bergtroll', 'Landtroll', 'Höhlentroll', 'Sumpftroll', 'Hügeltroll', 'Nebeltroll', 'Steppentroll', 'Aschetroll', 'Tundratroll', 'Dschungeltroll', 'Tiefentroll', 'Steintroll'],
   riesen: ['Jötun', 'Goliath', 'Zyklop', 'Fomóraig', 'Tlacharn', 'Bogann', 'Silvarn']

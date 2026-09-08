@@ -1,0 +1,60 @@
+{
+  "id": "naturahne",
+  "name": "Naturahne",
+  "classification": "Naturgeist · Ruheloser Hüter eines Hains",
+  "continent": "Aleria",
+  "region": "Albenische Haine und unberührte Natur",
+  "folio": "III-G / 06",
+  "parentGroupId": "geister",
+  "summary": "Naturahnen entstehen aus albenischen Druiden und naturverbundenen Seelen, denen der Übergang in einen Ahnenbaum verwehrt blieb. Sie verschmelzen mit ihrem Hain, kontrollieren dessen Pflanzen, Tiere und Wetter und verteidigen ein oft verzerrtes Verständnis des natürlichen Gleichgewichts.",
+  "quote": "Im Hain des Ahnen ist kein Zweig stumm und kein Tier bloß Zuschauer; der ganze Wald fällt ein Urteil.",
+  "quoteAttribution": "Druidische Warnung vor einem gebundenen Hain",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-naturahne.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Naturahne als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/naturahne.webp", "width": 687, "height": 1024, "alt": "Vollständig dargestellte Naturahne mit geisterhaften Tieren in einem alten Wald", "caption": "Überlieferte Bildtafel · Eine Naturahne manifestiert sich durch ihren Hain" },
+  "facts": [
+    { "label": "Name", "value": "Naturahne" },
+    { "label": "Typ", "value": "Naturgeist; ruheloser Wächter der Natur" },
+    { "label": "Entstehung", "value": "Tod albenischer Druiden ohne Ahnenbaum oder unter tragischen Umständen" },
+    { "label": "Herkunft", "value": "Albenische Völker wie Gaennath und Crannath" },
+    { "label": "Lebensraum", "value": "Wälder, Haine und andere naturbelassene, unberührte Regionen" },
+    { "label": "Verhalten", "value": "Schützend und obsessiv; verteidigt sein Gleichgewicht mit äußerster Härte" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Ständig gegenwärtig und an keinen Tageszyklus gebunden" },
+    { "label": "Fähigkeiten", "value": "Kontrolle über Pflanzen, Tiere und Wetter sowie geisterhafte Manifestationen" },
+    { "label": "Stärken", "value": "Unsichtbarkeit und beinahe vollständige Kontrolle über den eigenen Hain" },
+    { "label": "Schwächen", "value": "Hainbindung, trennende Rituale und ein manisches, berechenbares Gleichgewichtsverständnis" },
+    { "label": "Beute", "value": "Essenz des Hains und selten Naturfragmente oder druidische Artefakte" }
+  ],
+  "metrics": {
+    "labels": ["Hainbindung", "Naturkontrolle", "Unsichtbarkeit", "Gleichgewichtszwang", "Tiermanifestation", "Ritualresistenz"],
+    "values": [10, 10, 9, 9, 8, 7],
+    "source": "Aus Verschmelzung mit dem Hain, Kontrolle der Umgebung, Erscheinungsformen und den überlieferten Trennungsritualen abgeleitet",
+    "intro": "Das Naturahnen-Diagramm bewertet den Geist innerhalb seines Hains. Dort ist seine Macht nahezu vollständig; außerhalb der gebundenen Natur verliert er seine Existenzgrundlage."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Eine Naturahne ist der Geist eines gefallenen albenischen Druiden oder einer naturverbundenen Seele, die nach dem Tod mit der geschützten Umgebung verschmolz. Sie wird zum unsichtbaren Wächter ihres Hains und richtet jede Handlung nach dessen Gleichgewicht." },
+      { "type": "paragraph", "text": "Ihre Macht und Tragik entspringen derselben Bindung. Innerhalb des Territoriums ist die Natur ihr Körper; außerhalb kann sie kaum bestehen." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Bei alten albenischen Stämmen wie Gaennath und Crannath sollten verstorbene Druiden in einem Ahnenbaum weiterleben. Wurde der Körper vernichtet oder war der Tod von Krieg, Grabschändung oder außergewöhnlichem Leid geprägt, konnte dieser Übergang scheitern." },
+      { "type": "paragraph", "text": "Der zurückbleibende Geist verband sich dann mit dem gesamten Hain. Als Schutzgeist bewahrte er die Natur, doch seine unvollständige Ruhe konnte das Verständnis von Gleichgewicht in eine starre und gefährliche Obsession verwandeln." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Naturahnen handeln zunächst durch Warnungen: Tiere verstummen, Wind folgt einem Eindringling und Schatten bewegen sich gegen das Licht. Wird weiter gejagt, gefällt oder entweiht, greifen Pflanzen, Tiere und Wetter gemeinsam an." },
+      { "type": "paragraph", "text": "Respektvolle Reisende und Druiden können geduldet, geführt oder geschützt werden. Entscheidend ist jedoch das eigene Gleichgewichtsbild des Geistes, das nicht immer mit dem Verständnis der Lebenden übereinstimmt." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Für das bloße Auge bleibt eine Naturahne meist unsichtbar. Sie zeigt sich durch Tiere aus Licht oder Nebel, bewegte Bäume, geisterhafte Pflanzen oder eine humanoide Gestalt, die aus dem Hain selbst hervortritt." },
+      { "type": "paragraph", "text": "Ihr Lebensraum ist stets ein Wald, Hain oder eine unberührte Naturregion. Dort wirken Farben intensiver, Geräusche verstummen plötzlich und jede Bewegung scheint von einem gemeinsamen Willen beobachtet zu werden." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Innerhalb des Hains sind Bäume, Tiere und Wetter Werkzeuge der Naturahne. Unsichtbarkeit und allgegenwärtige Wahrnehmung machen einen direkten Kampf nahezu aussichtslos." },
+      { "type": "paragraph", "text": "Die Bindung an den Hain begrenzt sie. Zerstörung oder Entweihung schwächt zwar den Geist, vernichtet aber zugleich das, was geschützt werden soll. Kundige Druiden suchen deshalb Beschwichtigung, Heilung oder die Bindung an einen neuen Ahnenbaum." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Tiere im Hain können unabhängig wirken und dennoch gleichzeitig durch die Naturahne sehen.", "Eine Gabe wird nur angenommen, wenn sie dem Hain nützt und nicht bloß wertvoll ist.", "Druiden achten zuerst auf das Schweigen der Tiere, weil es die früheste verlässliche Warnung sein kann.", "Ein neuer Ahnenbaum kann den Geist retten, verlangt aber ein langes Ritual und die Zustimmung der Naturahne."] }
+    ] }
+  ],
+  "plates": []
+}

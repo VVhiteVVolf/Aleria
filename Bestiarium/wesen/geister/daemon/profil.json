@@ -1,0 +1,60 @@
+{
+  "id": "daemon",
+  "name": "Dämon",
+  "classification": "Infernaler Geist · Körperloses Besetzungswesen",
+  "continent": "Aleria",
+  "region": "Wirtskörper und infernal belastete Orte",
+  "folio": "III-G / 04",
+  "parentGroupId": "geister",
+  "summary": "Ein dämonischer Geist ist die fortbestehende Essenz eines infernalen Wesens, das seine körperliche Hülle verloren hat. Um in der physischen Welt handeln zu können, dringt er durch Pakt, Einladung oder Gewalt in einen Wirt ein und formt dessen Körper und Fähigkeiten nach seiner ursprünglichen Natur um.",
+  "quote": "Der fremde Blick im vertrauten Gesicht ist keine Maske; er ist der Augenblick, in dem der Wirt zu verschwinden beginnt.",
+  "quoteAttribution": "Warnung aus einem Bericht über Besessenheit",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-daemon.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer dämonischer Geist als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/daemon.webp", "width": 687, "height": 1024, "alt": "Vollständig dargestellte Szene eines roten dämonischen Geistes hinter seinem gerüsteten Wirt", "caption": "Überlieferte Bildtafel · Ein dämonischer Geist festigt die Kontrolle über seinen Wirt" },
+  "facts": [
+    { "label": "Name", "value": "Dämonischer Geist" },
+    { "label": "Typ", "value": "Infernaler Geist; Besetzungswesen" },
+    { "label": "Entstehung", "value": "Verlust der körperlichen Hülle eines infernalen Wesens" },
+    { "label": "Herkunft", "value": "Infernale Sphäre und die jeweilige ursprüngliche infernale Linie" },
+    { "label": "Lebensraum", "value": "An einen Wirt gebunden; bevorzugt dunkle, verfluchte oder tragische Orte" },
+    { "label": "Verhalten", "value": "Manipulativ, anpassungsfähig und auf Kontrolle oder Machtgewinn ausgerichtet" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Jederzeit aktiv; in der Nacht häufig dominanter" },
+    { "label": "Fähigkeiten", "value": "Besessenheit, Wirtsformung und Übertragung infernaler Kräfte" },
+    { "label": "Stärken", "value": "Mächtige Magie, körperliche Anpassung und Fortbestehen durch Wirtswechsel" },
+    { "label": "Schwächen", "value": "Abhängigkeit vom Wirt, Exorzismus, göttliche Magie und heilige Orte" },
+    { "label": "Beute", "value": "Dämonische Essenz, infernale Fragmente und selten Spuren übertragener Fähigkeiten" }
+  ],
+  "metrics": {
+    "labels": ["Besessenheit", "Wirtsformung", "Infernalenergie", "Zielstrebigkeit", "Anpassung", "Exorzismusresistenz"],
+    "values": [10, 9, 9, 9, 9, 8],
+    "source": "Aus Wirtsabhängigkeit, körperlicher Umformung, ursprünglicher infernaler Essenz und den bekannten Bannmöglichkeiten abgeleitet",
+    "intro": "Das Dämonendiagramm misst seine Fähigkeit, durch einen fremden Körper zu handeln. Stärke und Erscheinung variieren mit der infernalen Herkunft des Geistes und der Widerstandskraft des Wirtes."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Ein Dämon ist ein mächtiger infernaler Geist, der seine körperliche Hülle verloren hat. Seine Essenz bleibt bestehen und sucht einen Wirt, durch den sie erneut in der Welt handeln kann." },
+      { "type": "paragraph", "text": "Besessenheit kann aus einem bewussten Pakt, einer unbedachten Einladung oder dem gewaltsamen Eindringen in einen geschwächten Geist entstehen. Der Dämon nutzt den Wirt nicht nur als Schutz, sondern verändert Körper und Magie nach den Zügen seiner früheren Gestalt." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Dämonische Geister können aus verschiedenen infernalen Wesen hervorgehen, wenn göttliche Intervention, ein mächtiger Gegner oder Verrat ihre physische Form vernichtet. Ihre Ziele bleiben von dieser Herkunft geprägt: Zerstörung, Rache, Blutdurst oder die Wiedererlangung verlorener Macht." },
+      { "type": "paragraph", "text": "Viele dienen weiterhin einer infernalen Macht wie Hela und tragen deren Pläne durch einen sterblichen Körper in die Welt. Andere handeln selbstständig, doch auch sie verbreiten Kontrolle, Verderbnis und Angst weit über ihren unmittelbaren Wirt hinaus." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Der Dämon verbirgt seine Gegenwart, bis seine Kontrolle gefestigt ist. Veränderte Gewohnheiten, körperliche Merkmale oder plötzlich erwachte Magie erscheinen schrittweise. Ein Wirt kann übermenschliche Kraft, glühende Haut, Blutdurst oder andere Zeichen der ursprünglichen infernalen Linie entwickeln." },
+      { "type": "paragraph", "text": "Diese Macht ist kein Geschenk. Der Geist strebt nach vollständiger Herrschaft und verlässt den Körper niemals freiwillig. Er nutzt Wissen über Magie und menschliche Schwächen, um Verbündete zu täuschen und Gegenwehr zu verhindern." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Der eigentliche Lebensraum ist der Wirtskörper. Dunkle Kultstätten, verfluchte Häuser, Ruinen und alte Schlachtfelder erleichtern die Verbindung, doch ein passender Pakt kann einen Dämon ebenso in eine gewöhnliche Siedlung bringen." },
+      { "type": "paragraph", "text": "Nur während eines Exorzismus oder bei außergewöhnlicher Macht tritt der Geist eigenständig als Schatten, Feuer oder verzerrte Gestalt hervor. Je länger die Besessenheit andauert, desto stärker prägt seine Energie auch die Umgebung." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Ein Dämon verbindet geistige Manipulation mit den körperlichen Möglichkeiten seines Wirtes. Wird der Körper zerstört, kann die infernale Essenz unter günstigen Umständen weiterbestehen und einen neuen Träger suchen." },
+      { "type": "paragraph", "text": "Ohne Wirt bleibt seine Wirkung auf die physische Welt eingeschränkt. Göttliche Magie, heilige Orte und erfahren ausgeführte Exorzismen schwächen oder vertreiben ihn. Wird ein zugrunde liegender Pakt gebrochen und der Wille des Wirtes gestärkt, verliert der Geist seinen Halt." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Die Veränderungen eines Wirtes spiegeln häufig die verlorene körperliche Form des Dämons.", "Ein Dämon vermeidet frühe Machtdemonstrationen, wenn dadurch ein Exorzismus wahrscheinlicher würde.", "Heilige Schwellen können den Wirt passieren lassen und dennoch den in ihm gebundenen Geist zurückhalten.", "Nach einer Austreibung müssen sowohl der Wirt als auch der Ort auf verbleibende infernale Bindungen geprüft werden."] }
+    ] }
+  ],
+  "plates": []
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mahr",
+  "name": "Mahr",
+  "classification": "Parasitärer Geist · Diener Helas",
+  "continent": "Aleria",
+  "region": "Wirtsseelen und Orte tiefen Leids",
+  "folio": "III-G / 03",
+  "parentGroupId": "geister",
+  "summary": "Der Mahr ist ein infernaler, parasitärer Geist, der sich an Menschen, Tiere oder selten Gegenstände bindet. Er nährt sich von Trauer, Schuld und Kummer, verstärkt diese Gefühle durch Albträume und Halluzinationen und zerstört seinen Wirt langsam, ohne seine eigene Anwesenheit offen zu zeigen.",
+  "quote": "Der Mahr tritt nicht durch die Tür; er wartet in der Wunde, die sein Opfer vor allen anderen verbirgt.",
+  "quoteAttribution": "Lehrsatz aus Aufzeichnungen über Helas Diener",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-mahr.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Mahr als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/mahr.webp", "width": 687, "height": 1024, "alt": "Vollständig dargestellte Szene eines schattenhaften Mahr hinter seinem verzweifelten Wirt", "caption": "Überlieferte Bildtafel · Ein Mahr verstärkt das Leid seines Wirtes" },
+  "facts": [
+    { "label": "Name", "value": "Mahr" },
+    { "label": "Typ", "value": "Infernales Wesen; parasitärer Geist und Diener Helas" },
+    { "label": "Entstehung", "value": "Von Hela geschaffen und durch Leid und Kummer genährt" },
+    { "label": "Herkunft", "value": "Infernale Sphäre; unmittelbar mit Helas Domäne verbunden" },
+    { "label": "Lebensraum", "value": "Überall, wo Trauer, Schuld oder Verzweiflung einen möglichen Wirt schwächen" },
+    { "label": "Verhalten", "value": "Heimtückisch; nistet sich in verletzlichen Seelen ein und verstärkt deren Kummer" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Grundsätzlich unabhängig, doch in Schlaf und Nacht besonders wirksam" },
+    { "label": "Fähigkeiten", "value": "Besitzergreifung, Albträume, emotionale Manipulation und Verbreitung von Leid" },
+    { "label": "Stärken", "value": "Verborgen, körperlos, schwer zu erkennen und durch das Leid seines Wirtes geschützt" },
+    { "label": "Schwächen", "value": "Göttliche Magie, Exorzismus und die Heilung der emotionalen Wunde des Wirtes" },
+    { "label": "Beute", "value": "Spirituelle Essenz und selten infernale Fragmente" }
+  ],
+  "metrics": {
+    "labels": ["Heimlichkeit", "Wirtsbindung", "Traumkontrolle", "Leidverstärkung", "Besitzergreifung", "Exorzismusresistenz"],
+    "values": [10, 9, 9, 10, 8, 7],
+    "source": "Aus unsichtbarer Annäherung, seelischer Bindung, Albträumen, Ausbreitung des Leids und bekannten Austreibungswegen abgeleitet",
+    "intro": "Das Mahr-Diagramm beschreibt einen Parasiten der Seele. Seine Stärke wächst mit verborgenem Leid; Hilfe für den Wirt schwächt deshalb zugleich die Bindung des Geistes."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Der Mahr manifestiert sich nicht durch offene Gewalt, sondern durch Besitz und Manipulation. Er bindet sich an eine Person, ein Tier oder selten an einen Gegenstand und nährt sich von der Lebenskraft und den dunklen Gefühlen seines Wirtes." },
+      { "type": "paragraph", "text": "Bevorzugte Opfer tragen bereits Schuld, Trauer oder ungelöste Konflikte. Albträume, Paranoia und körperliche Schwäche werden zunächst für natürliche Folgen ihres Kummers gehalten, bis der Einfluss des Mahr weit fortgeschritten ist." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Der Mahr steht unmittelbar mit Hela, der Göttin des Todes, der Nekromantie und der ruhelosen Seelen, in Verbindung. Anders als ein tragisch gebundener Geist bewahrt er keine Menschlichkeit und sucht keine Erlösung; sein Dasein dient der Vermehrung von Leid und Verzweiflung." },
+      { "type": "paragraph", "text": "Hat er einen Wirt zerstört, greift sein Einfluss bereits auf dessen Umfeld über. Streit, Misstrauen und kollektive Trauer bereiten den nächsten Übergang vor und können eine ganze Gemeinschaft vergiften." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Ein Mahr isoliert seinen Wirt schrittweise. Er verstärkt negative Gedanken, verzerrt Erinnerungen und spricht durch Flüstern oder Träume, bis das Opfer den eigenen Wahrnehmungen nicht mehr traut. Offene Angriffe würden seine Entdeckung riskieren und werden deshalb vermieden." },
+      { "type": "paragraph", "text": "Seine Gestalt bleibt fast vollständig immateriell. Nur bei starkem Einfluss zeigt er sich als flüchtiger Schatten oder drückende Präsenz. Diese Unsichtbarkeit lässt Besessene häufig lediglich krank oder melancholisch erscheinen." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Der Mahr ist nicht an ein Gebiet, sondern an seelische Zustände gebunden. Unglücksstätten, verlassene Dörfer und Häuser tragischer Ereignisse ziehen ihn an, doch er kann ebenso in einer belebten Stadt einen verwundbaren Wirt finden." },
+      { "type": "paragraph", "text": "Nächtliche Unruhe, wiederkehrende Albträume, unerklärliche Erschöpfung und eine gleichzeitige Verschlechterung des sozialen Umfelds gelten als Hinweise auf seine Anwesenheit." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Körperliche Waffen können den Mahr nicht erreichen. Seine Heimlichkeit und die Verstärkung vorhandener Wunden machen ihn schwer von gewöhnlichem Leid zu unterscheiden. Mit jedem Rückzug des Opfers festigt sich seine Kontrolle." },
+      { "type": "paragraph", "text": "Göttliche Magie und Exorzismen können die Bindung durchtrennen. Ebenso verliert der Mahr Kraft, wenn Schuld aufgearbeitet, Trauer begleitet und die Isolation des Wirtes beendet wird. Das bewusste Benennen der Manipulation schwächt seine wichtigste Tarnung." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Ein Mahr kann lange im Umfeld eines möglichen Wirtes warten, bevor er die eigentliche Bindung eingeht.", "Gemeinsam erinnerte Tatsachen erschweren es ihm, einzelne Erinnerungen unbemerkt umzudeuten.", "Traumtagebücher werden bei Verdacht verglichen, weil wiederkehrende fremde Bilder seine Spur verraten können.", "Nach einer Austreibung bleibt die seelische Wunde behandlungsbedürftig, da der Mahr vorhandenes Leid verstärkt statt es allein zu erzeugen."] }
+    ] }
+  ],
+  "plates": []
+}

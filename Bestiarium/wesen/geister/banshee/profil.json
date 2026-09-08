@@ -1,0 +1,60 @@
+{
+  "id": "banshee",
+  "name": "Banshee (Todesfee)",
+  "classification": "Todesbote · Familien- und ortsgebundener Geist",
+  "continent": "Aleria",
+  "region": "Familien, Friedhöfe, Ruinen und neblige Hügel",
+  "folio": "III-G / 08",
+  "parentGroupId": "geister",
+  "summary": "Die Banshee ist ein passiver, doch erschütternder Todesbote. Ihr Klagelied kündigt einen nahenden Tod innerhalb der Familie, des Clans oder des Ortes an, an den sie gebunden ist. Sie greift gewöhnlich nicht selbst an, trägt aber Trauer und Gewissheit mit solcher Macht, dass ihr Ruf Körper und Geist lähmen kann.",
+  "quote": "Fürchte nicht, dass die Todesfee dich holt; fürchte, dass sie bereits weiß, wen dein Haus verlieren wird.",
+  "quoteAttribution": "Überlieferter Familienspruch über das Klagen der Banshee",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-banshee.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Banshee als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/banshee.webp", "width": 687, "height": 1024, "alt": "Vollständig dargestellte Szene einer klagenden Banshee über dem Meer vor einem erschrockenen Bootsfahrer", "caption": "Überlieferte Bildtafel · Der Klageruf einer Todesfee erreicht einen Reisenden" },
+  "facts": [
+    { "label": "Name", "value": "Banshee; Todesfee" },
+    { "label": "Typ", "value": "Rachegeist und Todesbote" },
+    { "label": "Entstehung", "value": "Tod durch großes Leid, Verrat oder Gewalt; häufig durch einen Fluch gebunden" },
+    { "label": "Herkunft", "value": "Tragische Mythen, Familienbindungen und regionale Überlieferungen" },
+    { "label": "Lebensraum", "value": "Friedhöfe, Ruinen, neblige Hügel und verlassene Orte" },
+    { "label": "Verhalten", "value": "Passiv und klagend; erscheint als Vorbote eines nahenden Todes" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Vor allem nachts oder in der Dämmerung und in zeitlicher Nähe eines Todesfalls" },
+    { "label": "Fähigkeiten", "value": "Klagelied, lähmende Angst, Todesahnung und körperlose Bewegung" },
+    { "label": "Stärken", "value": "Mächtige emotionale Wirkung und Immunität gegen gewöhnliche physische Angriffe" },
+    { "label": "Schwächen", "value": "Bindung an Familie oder Ort sowie göttliche Magie und Erlösungsrituale" },
+    { "label": "Beute", "value": "Essenz des Heulens und selten Fragmente von Fluch- oder Geistermagie" }
+  ],
+  "metrics": {
+    "labels": ["Todesahnung", "Klagemacht", "Familienbindung", "Körperlosigkeit", "Aggression", "Erlösbarkeit"],
+    "values": [10, 10, 9, 10, 1, 6],
+    "source": "Aus prophetischem Auftreten, Wirkung des Klagelieds, Orts- und Familienbindung sowie ihrer grundsätzlich passiven Rolle abgeleitet",
+    "intro": "Das Banshee-Diagramm macht ihren besonderen Charakter sichtbar: höchste spirituelle Wirkung bei sehr geringer eigener Aggression. Ihr Ruf kündigt den Tod an, verursacht ihn aber nicht zwingend."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Die Banshee ist ein unheilverkündender Geist, dessen durchdringendes Klagen als Vorbote eines nahenden Todes gilt. Sie ist häufig an eine Familie, einen Clan oder einen Ort mit tragischer Geschichte gebunden." },
+      { "type": "paragraph", "text": "Ihr Ursprung wird mit Frauen verbunden, die großes Leid und Unrecht erfuhren und nach dem Tod keine Ruhe fanden. Sie ist weder eindeutig gut noch böse, sondern kündigt den unvermeidlichen Übergang zwischen Leben und Tod an." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "In Kulturen mit starker Ahnenverehrung gilt die Banshee teils als Wächterin eines Hauses. Sie warnt vor einem bevorstehenden Verlust, bleibt jedoch selbst an das Leid und die Geschichte der Familie gefesselt." },
+      { "type": "paragraph", "text": "Andere Überlieferungen sehen in ihr eine unbarmherzige Prophetin. Beide Deutungen teilen dieselbe Tragik: Die Todesfee muss immer wieder in der Nähe des Todes erscheinen, ohne selbst Frieden zu finden." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Eine Banshee greift normalerweise nicht direkt an. Sie zeigt sich kurz, stimmt ihr Klagelied an und verschwindet. Dennoch kann der Ruf lähmende Angst, Verzweiflung und in schweren Fällen körperlichen Zusammenbruch auslösen." },
+      { "type": "paragraph", "text": "Ihre Gestalt reicht von einer jungen, traurig schönen Frau bis zu einer greisen, verzerrten Erscheinung. Blasse Durchsichtigkeit, Nebel und ein unheimliches Leuchten unterstreichen ihre körperlose Natur." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Dämmerung, Nacht und die Stunden vor einem Todesfall sind ihre häufigsten Erscheinungszeiten. Plötzliche Stille und ein kalter Hauch gehen dem Klagelied oft voraus." },
+      { "type": "paragraph", "text": "Friedhöfe, verfallene Ruinen, neblige Hügel und Orte vergangenen Leids bilden ihre sichtbaren Schwellen. Bei einer Familienbindung kann sie jedoch überall erscheinen, wo ein Mitglied der gebundenen Linie dem Tod nahe ist." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Körperlosigkeit schützt die Banshee vor gewöhnlichen Waffen. Ihr Wissen um nahende Tode und die emotionale Macht ihres Heulens verleihen ihr eine Autorität, der selbst gefasste Zuhörer kaum widerstehen." },
+      { "type": "paragraph", "text": "Sie bleibt an Familie, Ort, Fluch oder unerfüllte Aufgabe gebunden. Göttliche Magie kann Grenzen setzen, doch dauerhafte Ruhe verlangt gewöhnlich, die Quelle ihres Leids zu lösen." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Nicht jeder im Haus hört das Klagelied gleich laut; die engste Bindung zum nahenden Todesfall scheint es zu verstärken.", "Eine Banshee kann einen Tod ankündigen, der weit außerhalb ihres sichtbaren Erscheinungsortes eintreten wird.", "Das Ausbleiben eines erwarteten Rufes gilt nicht als Sicherheit, da manche Todesfeen nur einzelnen Familienmitgliedern erscheinen.", "Alte Familienaufzeichnungen werden genutzt, um Muster zwischen Klageliedern und vergangenen Todesfällen zu erkennen."] }
+    ] }
+  ],
+  "plates": []
+}

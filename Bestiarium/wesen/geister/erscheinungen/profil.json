@@ -1,0 +1,62 @@
+{
+  "id": "erscheinungen",
+  "name": "Erscheinungen",
+  "classification": "Flüchtige Geister · Zeit- und ortsgebundener Nachhall",
+  "continent": "Aleria",
+  "region": "Schwellenorte mit starker Erinnerung",
+  "folio": "III-G / 02",
+  "parentGroupId": "geister",
+  "summary": "Erscheinungen sind subtile Geister, deren Sichtbarkeit an einen Ort, eine Tageszeit oder eine wiederkehrende Bedingung gebunden ist. Sie reichen von kaum wahrnehmbaren Erinnerungsbildern bis zu territorialen Manifestationen, die Sinne, Wege und Gefühle der Lebenden beeinflussen.",
+  "quote": "Manche Tote klopfen nicht an die Tür; sie warten, bis Licht, Stunde und Erinnerung wieder genau zusammenfallen.",
+  "quoteAttribution": "Randnotiz eines Geisterkundigen",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-erscheinung.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Erscheinung als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/creature-group-profiles/geister-hero.webp", "width": 1696, "height": 2528, "alt": "Vollständig dargestellte geisterhafte Erscheinung mit Laterne auf einem Friedhof", "caption": "Überlieferte Bildtafel · Eine Erscheinung während ihrer gebundenen Stunde" },
+  "facts": [
+    { "label": "Name", "value": "Erscheinung" },
+    { "label": "Typ", "value": "Flüchtiger, nichtkörperlicher Geist" },
+    { "label": "Entstehung", "value": "Emotionale Bindung, tragisches Ereignis oder starke spirituelle Energie" },
+    { "label": "Herkunft", "value": "Überall möglich; bevorzugt Orte starker Erinnerung" },
+    { "label": "Lebensraum", "value": "Friedhöfe, Felder, Ruinen, Straßen und alte Häuser" },
+    { "label": "Verhalten", "value": "Subtil und meist passiv; bei Störung mitunter territorial" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Je nach Form nachts, um Mitternacht oder ausschließlich bei Tageslicht" },
+    { "label": "Fähigkeiten", "value": "Illusionen, Angst, Verwirrung und Beeinflussung der Umgebung" },
+    { "label": "Stärken", "value": "Körperlos, flüchtig, schwer wahrnehmbar und gegen physische Angriffe geschützt" },
+    { "label": "Schwächen", "value": "Zeit- und Ortsbindung sowie göttliche Magie und Bannrituale" },
+    { "label": "Beute", "value": "Spirituelle Essenz und gelegentlich Hinweise auf verborgene Geheimnisse" }
+  ],
+  "metrics": {
+    "labels": ["Wahrnehmbarkeit", "Ortsbindung", "Zeitbindung", "Illusionskraft", "Aggression", "Kommunikation"],
+    "values": [4, 7, 8, 6, 3, 6],
+    "source": "Aus bedingter Sichtbarkeit, örtlicher Erinnerung, Sinnestäuschung und den überlieferten Kontaktmöglichkeiten abgeleitet",
+    "intro": "Das Erscheinungsdiagramm bewertet nicht nur Gefahr, sondern vor allem die Bedingungen ihrer Sichtbarkeit. Niedrige Aggression bedeutet nicht, dass eine gestörte territoriale Erscheinung harmlos bleibt."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Erscheinungen bilden eine vielfältige Untergruppe der Geister. Anders als offen ruhelose oder rachsüchtige Wesen zeigen sie sich nur zu bestimmten Zeiten, an bestimmten Orten oder wenn eine festgelegte Bedingung erfüllt ist." },
+      { "type": "paragraph", "text": "Ihre Gegenwart ist meist indirekt: ein Schatten, eine Stimme, ein kalter Luftzug oder eine wiederkehrende Bewegung. Manche bleiben harmlos, andere verteidigen ihren Ort mit Angst, Illusionen und verwirrten Wegen." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Erscheinungen verkörpern unerfüllte Leben, vergessene Schicksale und Rituale, die nie abgeschlossen wurden. Sie wirken wie Botschaften zwischen den Welten und bewahren einen Augenblick, eine Emotion oder ein Geheimnis, das nicht verloren gehen konnte." },
+      { "type": "paragraph", "text": "Nicht jede Erscheinung besitzt noch eine vollständige Persönlichkeit. Einige können sprechen und warnen, andere wiederholen nur ein Bild ihrer Vergangenheit, ohne die Gegenwart wahrzunehmen." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Erscheinungen verfolgen Lebende selten gezielt, solange ihre Domäne nicht gestört wird. Kommunikation ist möglich, besonders für magisch Begabte. Dabei können sie vor Gefahren warnen, verlorene Dinge anzeigen oder lange bewahrte Geheimnisse enthüllen." },
+      { "type": "paragraph", "text": "Ihre körperlose Natur schützt sie vor gewöhnlichen Angriffen. Stattdessen wirken sie auf Sinne und Gefühle, erzeugen Flüstern, Kälte, falsche Bilder oder ein unbestimmtes Gefühl des Beobachtetwerdens." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Verlassene Straßen, Friedhöfe, Ruinen, Felder und alte Häuser sind typische Orte. Manche erscheinen nur im Mondlicht, andere genau um Mitternacht oder überraschend am hellen Tag." },
+      { "type": "paragraph", "text": "Wenn die notwendige Stunde oder Bedingung endet, verschwindet die Erscheinung häufig von selbst. Das macht Beobachtung und das Erkennen ihres Musters zu den wichtigsten Mitteln einer sicheren Begegnung." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Ihre flüchtige Manifestation macht Erscheinungen schwer erkennbar und gegen physische Gewalt nahezu unverwundbar. Illusionen und subtile Einflüsse können Reisende lange beschäftigen, bevor diese überhaupt einen Geist vermuten." },
+      { "type": "paragraph", "text": "Zeit, Ort und Emotion bilden zugleich ihre Schwäche. Reinigungsrituale, göttliche Magie oder die Lösung des zurückgebliebenen Konflikts können die Verbindung zur Zwischenwelt unterbrechen." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [
+      { "type": "list", "items": ["Nachterscheinungen, die sich aus Schatten, Mondlicht und nächtlicher Trauer formen", "Mitternachtserscheinungen, die ausschließlich zur Geisterstunde sichtbar werden", "Tageserscheinungen, die auf Feldern und offenen Wegen im hellen Licht auftreten", "Einfache Geister als schwacher Nebel, Lichtpunkt oder kaum hörbare Stimme"] }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Eine Erscheinung kann für verschiedene Beobachter unterschiedlich deutlich sichtbar sein.", "Wiederkehrende Gesten sind häufig Hinweise auf einen Ort oder Gegenstand ihrer Bindung.", "Tageserscheinungen werden öfter für lebende Personen gehalten als nächtliche Formen.", "Wer die Bedingung einer Manifestation kennt, kann eine sichere Beobachtung vorbereiten, ohne den Geist zu bannen."] }
+    ] }
+  ],
+  "plates": []
+}

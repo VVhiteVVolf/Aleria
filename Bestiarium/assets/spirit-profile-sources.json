@@ -1,0 +1,69 @@
+{
+  "description": "Vom Nutzer bereitgestellte Themenbilder der acht Geisterdossiers; identische Quellen werden als gemeinsames Asset wiederverwendet.",
+  "items": [
+    {
+      "id": "dullahan",
+      "file": "./spirit-profiles/dullahan.webp",
+      "source": "https://i.imgur.com/s72Sipf.jpeg",
+      "sourceType": "user-provided-profile-table",
+      "width": 1696,
+      "height": 2528
+    },
+    {
+      "id": "erscheinungen",
+      "file": "./creature-group-profiles/geister-hero.webp",
+      "source": "https://i.imgur.com/RZeDaB6.jpeg",
+      "sourceType": "user-provided-profile-table-shared",
+      "width": 1696,
+      "height": 2528
+    },
+    {
+      "id": "mahr",
+      "file": "./spirit-profiles/mahr.webp",
+      "source": "https://i.imgur.com/sUUkNnC.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 687,
+      "height": 1024
+    },
+    {
+      "id": "daemon",
+      "file": "./spirit-profiles/daemon.webp",
+      "source": "https://i.imgur.com/50jX7zz.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 687,
+      "height": 1024
+    },
+    {
+      "id": "waechtergeist",
+      "file": "./spirit-profiles/waechtergeist.webp",
+      "source": "https://i.imgur.com/i5H2iNb.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 687,
+      "height": 1024
+    },
+    {
+      "id": "naturahne",
+      "file": "./spirit-profiles/naturahne.webp",
+      "source": "https://i.imgur.com/roBIIlj.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 687,
+      "height": 1024
+    },
+    {
+      "id": "irrlichtmutter",
+      "file": "./spirit-profiles/irrlichtmutter.webp",
+      "source": "https://i.imgur.com/ywKQ1kI.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 800
+    },
+    {
+      "id": "banshee",
+      "file": "./spirit-profiles/banshee.webp",
+      "source": "https://i.imgur.com/RozsiVD.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 687,
+      "height": 1024
+    }
+  ]
+}

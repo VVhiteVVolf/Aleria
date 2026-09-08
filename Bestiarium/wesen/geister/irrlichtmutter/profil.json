@@ -1,0 +1,63 @@
+{
+  "id": "irrlichtmutter",
+  "name": "Irrlichter und Irrlichtmutter",
+  "classification": "Rachegeist · Herrin gebundener Irrlichter",
+  "continent": "Aleria",
+  "region": "Ruinen, Bergpässe, Nebelwälder und abgelegene Täler",
+  "folio": "III-G / 07",
+  "parentGroupId": "geister",
+  "summary": "Die Irrlichtmutter ist ein aus schwerem Unrecht und unbewältigtem Leid entstandener Rachegeist. In schöner Gestalt lockt sie Reisende in ihr Territorium, enthüllt dort ihre tödliche Form und bindet die Seelen ihrer Opfer als Irrlichter, die weitere Menschen von sicheren Wegen fortführen.",
+  "quote": "Die wahre Bedrohung der Irrlichtmutter liegt nicht in ihrer physischen Präsenz, sondern in ihrer meisterhaften Manipulation der menschlichen Wahrnehmung – eine Täuschung, die sich erst enthüllt, wenn die Flucht unmöglich geworden ist.",
+  "quoteAttribution": "Erzmeister Xelian Syvelius · Monsterjäger-Handbuch, Kapitel XI: Spektrale Erscheinungen",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-irrlicht.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbares Irrlicht als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/irrlichtmutter.webp", "width": 1024, "height": 800, "alt": "Vollständig dargestellte Szene einer Irrlichtmutter und mehrerer Irrlichter in einem nebligen Wald", "caption": "Überlieferte Bildtafel · Eine Irrlichtmutter lenkt ihre gebundenen Lichter" },
+  "facts": [
+    { "label": "Name", "value": "Irrlichtmutter" },
+    { "label": "Typ", "value": "Rachegeist; Täuscherin und Jägerin" },
+    { "label": "Entstehung", "value": "Tod durch schweres Unrecht, Schändung oder brutale Gewalt" },
+    { "label": "Herkunft", "value": "Überlieferungen von Frauen, die durch Verrat und Leid starben" },
+    { "label": "Lebensraum", "value": "Berge, Ruinen, neblige Wälder und abgelegene Täler" },
+    { "label": "Verhalten", "value": "Täuschend, territorial und gnadenlos; lockt Opfer durch eine schöne Gestalt" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Vor allem nachts aktiv, wenn Irrlichter und Trugbilder stärker wirken" },
+    { "label": "Fähigkeiten", "value": "Gestaltwandel, Licht- und Nebelmagie sowie Kontrolle gebundener Irrlichter" },
+    { "label": "Stärken", "value": "Wahrnehmungstäuschung, Umgebungskontrolle und lähmende Angst" },
+    { "label": "Schwächen", "value": "Territoriumsbindung, göttliche Magie, Schutzrituale und Erlösung ihrer gebundenen Seelen" },
+    { "label": "Beute", "value": "Fragmente von Irrlichtern sowie selten magische Essenz oder Fluchreste" }
+  ],
+  "metrics": {
+    "labels": ["Täuschung", "Territoriumsbindung", "Irrlichtkontrolle", "Rachedrang", "Nebelmacht", "Bannresistenz"],
+    "values": [10, 10, 10, 10, 9, 7],
+    "source": "Aus Gestaltwandel, Ortsbindung, hypnotischen Irrlichtern, Rachedurst und den überlieferten Erlösungsritualen abgeleitet",
+    "intro": "Das Diagramm trennt die Irrlichtmutter von gewöhnlichen Irrlichtern. Ihre Macht wächst durch gebundene Opfer und durch ein Gelände, dessen Licht, Nebel und Wege sie kontrolliert."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Die Irrlichtmutter ist ein Rachegeist, der aus tiefem Leid und schwerem Unrecht hervorgeht. Ihr Tod ließ keine Ruhe zu und verwandelte die erlittene Gewalt in einen unstillbaren Drang nach Vergeltung." },
+      { "type": "paragraph", "text": "Sie lauert an einsamen Orten und erscheint zunächst als anziehende Nymphe. Wer ihr folgt, wird in das beherrschte Gebiet gelockt, wo der Trug zerbricht. Getötete Opfer werden zu Irrlichtern und führen weitere Reisende zu ihrer Herrin." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Überlieferungen führen Irrlichtmütter auf Frauen zurück, die durch Verrat, Misshandlung oder Schändung starben. Der Geist bindet sich an den Ort des Todes oder an eine Landschaft, die denselben Schmerz bewahrt." },
+      { "type": "paragraph", "text": "Jede neu gebundene Seele verstärkt ihre Macht und verlängert die Kette des Leids. So ist die Irrlichtmutter zugleich Täterin und tragische Gefangene einer Rache, die keine Unterscheidung zwischen Schuldigen und zufälligen Wandernden mehr kennt." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Süße Worte, eine vertraute Silhouette oder ein scheinbar sicherer Lichtpunkt ziehen Opfer tiefer in ihr Gebiet. Erst aus unmittelbarer Nähe zeigt sie eine verzerrte, geisterhafte Gestalt und schlägt mit der gesamten Macht der vorbereiteten Umgebung zu." },
+      { "type": "paragraph", "text": "Nebel, Dunkelheit und bewegte Lichter verwischen Entfernung und Richtung. Ihre Rachsucht macht sie unerbittlich, aber auch berechenbar: Sie gibt eine mögliche Beute nur selten auf und lässt sich dadurch von ihrer stärksten Position fortlocken." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Bergpässe, verlassene Ruinen, neblige Wälder und abgeschiedene Täler bilden ihre Jagdgebiete. Unnatürliche Stille, Kälte und einzelne Lichter abseits des Weges kündigen ihre Nähe an." },
+      { "type": "paragraph", "text": "Ihre schöne Gestalt wirkt beinahe überirdisch, trägt jedoch stets eine unpassende Kälte. In wahrer Form wird sie schattenhaft und von glühenden Augen, Nebel und den tanzenden Seelen ihrer Opfer umgeben." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Täuschung und Kontrolle des Territoriums sind ihre größten Stärken. Irrlichter hypnotisieren, Nebel trennt Gruppen und falsche Wege führen selbst erfahrene Reisende zurück in ihre Nähe." },
+      { "type": "paragraph", "text": "Göttliche Magie, Schutzrituale und das Erlösen oder Zerstören gebundener Irrlichter schwächen sie. Wird die Verbindung zu Todesort und Leid gelöst, kann auch der Fluch der Mutter enden." }
+    ] },
+    { "id": "irrlichter", "title": "Die gebundenen Irrlichter", "blocks": [
+      { "type": "paragraph", "text": "Die kleinen Lichter sind Seelen früherer Opfer. Sie folgen dem Willen der Irrlichtmutter, ahmen sichere Feuer oder Wegzeichen nach und ziehen neue Beute in ihren Bann. Ihre Vernichtung schwächt die Herrin, ihre Erlösung kann zugleich einen Teil des zugrunde liegenden Leids lösen." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Ein echtes Weglicht bleibt aus wechselnden Blickwinkeln an derselben Stelle; ein Irrlicht scheint den Beobachter zu begleiten.", "Die schöne Gestalt der Mutter wirft in manchen Berichten keinen zum Licht passenden Schatten.", "Gerettete Reisende erinnern sich häufig an eine vertraute Stimme, obwohl niemand aus ihrem Umfeld anwesend war.", "Das gemeinsame Erlösen mehrerer Irrlichter kann die Landschaft für einen kurzen Augenblick vollständig vom Nebel befreien."] }
+    ] }
+  ],
+  "plates": []
+}

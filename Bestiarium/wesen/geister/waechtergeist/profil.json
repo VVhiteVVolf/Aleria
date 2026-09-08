@@ -1,0 +1,60 @@
+{
+  "id": "waechtergeist",
+  "name": "Wächtergeist",
+  "classification": "Celestialer Schutzgeist · Hüter heiliger Stätten",
+  "continent": "Aleria",
+  "region": "Tempel, Gräber und uralte Heiligtümer",
+  "folio": "III-G / 05",
+  "parentGroupId": "geister",
+  "summary": "Wächtergeister sind durch göttliche Macht getragene Beschützer heiliger Stätten, bedeutender Gräber und anvertrauter Relikte. Sie entstehen aus freiwillig gebundenen Seelen oder heiligen Ritualen und begegnen friedlichen Besuchern mit Ruhe, einer Entweihung jedoch mit unnachgiebiger Autorität.",
+  "quote": "Wer mit reinem Anliegen über die Schwelle tritt, sieht nur Licht; wer sie brechen will, begegnet dem Wächter darin.",
+  "quoteAttribution": "Inschrift an einem bewachten Heiligtum",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-waechtergeist.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Wächtergeist als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/waechtergeist.webp", "width": 687, "height": 1024, "alt": "Vollständig dargestellte Szene eines leuchtenden Wächtergeistes vor einem versiegelten Heiligtum", "caption": "Überlieferte Bildtafel · Ein Wächtergeist tritt Eindringlingen entgegen" },
+  "facts": [
+    { "label": "Name", "value": "Wächtergeist" },
+    { "label": "Typ", "value": "Celestialer Schutzgeist und Hüter heiliger Stätten" },
+    { "label": "Entstehung", "value": "Göttliche Rituale oder freiwilliger Dienst ehrenhafter Seelen" },
+    { "label": "Herkunft", "value": "Göttliche Sphäre oder durch heilige Magie hervorgebracht" },
+    { "label": "Lebensraum", "value": "Heilige Stätten, Tempel, Gräber, uralte Heiligtümer und gebundene Relikte" },
+    { "label": "Verhalten", "value": "Ruhig und beobachtend; unerbittlich gegen Eindringlinge mit böser Absicht" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Ständig wachsam und an keinen Tageszyklus gebunden" },
+    { "label": "Fähigkeiten", "value": "Barrieren, Absichtserkennung, göttliche Angriffe und Schutzzauber" },
+    { "label": "Stärken", "value": "Dunkler Magie gegenüber widerstandsfähig und im eigenen Schutzgebiet besonders mächtig" },
+    { "label": "Schwächen", "value": "Ortsbindung, Entweihungsrituale und starre göttliche Gebote" },
+    { "label": "Beute", "value": "Göttliche Essenz und selten Fragmente heiliger Magie oder Artefakte" }
+  ],
+  "metrics": {
+    "labels": ["Schutzmacht", "Gebietsbindung", "Urteilsvermögen", "Barrieren", "Lichtmacht", "Entweihungsresistenz"],
+    "values": [10, 10, 9, 10, 8, 8],
+    "source": "Aus göttlicher Bindung, Absichtserkennung, Schutzzaubern, territorialer Stärke und bekannten Entweihungsriten abgeleitet",
+    "intro": "Das Wächterdiagramm bewertet seine Aufgabe als heiliger Hüter. Die sehr hohe Gebietsbindung ist zugleich Kraftquelle und Begrenzung: Außerhalb des Schutzbereichs verliert er einen großen Teil seiner Macht."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Der Wächtergeist steht für Schutz und Hingabe. Göttliche oder heilige Magie trägt seine Existenz und richtet sie auf den Erhalt eines Tempels, Grabes, Relikts oder anderen bedeutsamen Ortes." },
+      { "type": "paragraph", "text": "Anders als ruhelose oder rachsüchtige Geister handelt er als Verteidiger göttlicher Ordnung. Seine Würde und Autorität stammen aus einem freiwillig fortgesetzten Dienst oder aus dem Ritus, der ihn als reine Schutzkraft erschuf." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Viele Wächtergeister waren ehrenhafte Menschen, die sich bereit erklärten, ihren Glauben über den Tod hinaus zu bewahren. Andere entstehen, wenn Priester göttliche Energie dauerhaft an einen Ort binden und daraus einen celestialen Hüter formen." },
+      { "type": "paragraph", "text": "Loyalität, Mut und Gerechtigkeit prägen ihr Urteil. Sie reagieren nicht auf bloße Anwesenheit, sondern auf Absicht und Entweihung. Wer einen heiligen Ort achtet, kann in ihrer Nähe sogar Schutz finden." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Ein Wächtergeist beobachtet zunächst. Friedliche Reisende lässt er passieren oder führt sie zu einer geschützten Stätte. Erkennt er Raub, Zerstörung oder dunkle Magie, setzt er Barrieren, heilige Flammen und körperliche Kraft ein." },
+      { "type": "paragraph", "text": "Sein Urteil ist unbestechlich, aber streng. Starre Gebote kennen wenige Grauzonen und können durch ausgeklügelte Täuschung kurzfristig umgangen werden, solange keine erkennbare Verletzung des Schutzauftrags erfolgt." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Sanftes Licht, schwebende Partikel, Wärme oder eine unerwartete Ruhe kündigen einen Wächtergeist an. Seine Gestalt kann an das frühere Leben erinnern oder als gesichtslose, aus Licht bestehende Rüstung erscheinen." },
+      { "type": "paragraph", "text": "Er entfernt sich kaum von dem Ort oder Gegenstand, an den er gebunden ist. Tempel, heilige Wälder, Gräber bedeutender Menschen und Orte göttlicher Wunder bilden deshalb zugleich Lebensraum und Machtquelle." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Im eigenen Schutzgebiet errichtet der Geist magische Barrieren, erkennt verborgene Absichten, verstärkt Verbündete und drängt dunkle Kräfte zurück. Viele infernale Zauber verlieren in seiner unmittelbaren Gegenwart an Wirkung." },
+      { "type": "paragraph", "text": "Wird das Schutzobjekt zerstört, der Ort entweiht oder die Bindung durch ein mächtiges Ritual getrennt, schwindet seine Kraft. Sein striktes Pflichtverständnis macht seine Reaktionen für kundige Gegner vorhersehbar." }
+    ] },
+    { "id": "unterarten", "title": "Unterarten", "blocks": [{ "type": "paragraph", "text": "???" }] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Opfergaben stärken einen Wächtergeist nur, wenn sie dem Sinn des bewachten Ortes entsprechen.", "Manche Hüter prüfen Besucher durch eine Warnung, bevor sie ihre volle Gestalt zeigen.", "Ein Wächtergeist unterscheidet Unwissen oft von bewusster Entweihung, sofern sein göttliches Gebot diesen Spielraum zulässt.", "Die Wiederherstellung eines beschädigten Heiligtums kann einen geschwächten Wächter erneut festigen."] }
+    ] }
+  ],
+  "plates": []
+}

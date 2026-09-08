@@ -1,0 +1,62 @@
+{
+  "id": "dullahan",
+  "name": "Dullahan",
+  "classification": "Ruheloser Geist · Kopfloser Reiter",
+  "continent": "Aleria",
+  "region": "Albische Länder, Schlachtfelder und alte Straßen",
+  "folio": "III-G / 01",
+  "parentGroupId": "geister",
+  "summary": "Der Dullahan ist ein ruheloser Geist, dessen Totenruhe durch einen entweihten oder unvollständig bestatteten Körper gebrochen wurde. Meist erscheint er als kopfloser Krieger oder Reiter und sucht nach seinen sterblichen Überresten, seinem verlorenen Namen oder einer würdigen Bestattung.",
+  "quote": "Wo der Reiter ohne Haupt die alte Straße nimmt, fehlt einem Toten noch immer der letzte Weg.",
+  "quoteAttribution": "Albischer Spruch über unruhige Schlachtfelder",
+  "icon": { "src": "../../../assets/creature-group-profiles/geister-dullahan.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Dullahan als aquarelliertes Dossiersymbol" },
+  "hero": { "src": "../../../assets/spirit-profiles/dullahan.webp", "width": 1696, "height": 2528, "alt": "Vollständig dargestellte Szene eines kopflosen Geisterkriegers auf einem Friedhof", "caption": "Überlieferte Bildtafel · Ein Dullahan fordert die Ruhe seiner Gebeine" },
+  "facts": [
+    { "label": "Name", "value": "Dullahan" },
+    { "label": "Typ", "value": "Ruheloser Geist; spektrale, meist humanoide Erscheinung" },
+    { "label": "Entstehung", "value": "Entweihte Körper, fehlende Bestattungsriten oder infernale Einflüsse" },
+    { "label": "Herkunft", "value": "Albische Legenden und Schlachtfelder; Sinnbild gebrochener Totenriten" },
+    { "label": "Lebensraum", "value": "Schlachtfelder, alte Straßen, Friedhöfe und Burgruinen" },
+    { "label": "Verhalten", "value": "Territorial; sucht Körperteile, seinen Namen oder eine würdige Bestattung" },
+    { "label": "Tag-Nacht-Zyklus", "value": "Vor allem nachts aktiv; am Tag nur selten sichtbar" },
+    { "label": "Fähigkeiten", "value": "Schreckensaura, plötzliche Erscheinung und übernatürliche Geschwindigkeit" },
+    { "label": "Stärken", "value": "Gewöhnlichen Waffen kaum zugänglich und durch seine Bindung ausdauernd" },
+    { "label": "Schwächen", "value": "Göttliche Magie, Bestattungsriten und die Auflösung seiner Bindung" },
+    { "label": "Beute", "value": "Spektrale Essenz, Fragmente verfluchter Objekte und selten magische Relikte" }
+  ],
+  "metrics": {
+    "labels": ["Ruhelosigkeit", "Körperbindung", "Schreckensaura", "Jagdtrieb", "Geschwindigkeit", "Erlösbarkeit"],
+    "values": [9, 8, 8, 8, 9, 7],
+    "source": "Aus gestörter Totenruhe, Suche nach Überresten, spektraler Bewegung und den überlieferten Erlösungswegen abgeleitet",
+    "intro": "Das Dullahan-Diagramm folgt seiner unvollendeten Bestattung. Ein hoher Wert bei Erlösbarkeit bedeutet, dass seine Bindung mit dem richtigen Ritus dauerhaft gelöst werden kann."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Der Dullahan, auch kopfloser Reiter genannt, nimmt besonders in den albischen Ländern einen festen Platz in Legenden und Schauermärchen ein. Häufig war er zu Lebzeiten Soldat, Krieger oder Adeliger und fiel in einer Schlacht oder durch Verrat." },
+      { "type": "paragraph", "text": "Ohne vollständigen Leib und würdige Bestattung bleibt seine Seele in der Zwischenwelt gefangen. Erst wenn die verstreuten Überreste gefunden und die gebrochenen Riten vollendet werden, kann der Dullahan seinen letzten Weg antreten." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Dullahan verkörpern die gebrochene Ordnung zwischen Leben und Tod. Entweihung, Grabschändung, unerfüllte Pflicht oder infernale Manipulation verzerren ihre Wahrnehmung von Gerechtigkeit und halten sie an der Welt fest." },
+      { "type": "paragraph", "text": "Ihre Existenz ist deshalb ebenso Mahnung wie Bedrohung. Sie erinnert die Lebenden an ihre Verantwortung gegenüber Gefallenen, an den Wert eines Namens und an die Riten, durch die ein Tod als abgeschlossen gilt." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten und Eigenschaften", "blocks": [
+      { "type": "paragraph", "text": "Ein Dullahan bewegt sich rastlos durch sein ehemaliges Gebiet und sucht, was ihm genommen wurde. Er greift nicht beliebig an, reagiert aber heftig auf Störungen an Grab, Todesstätte oder Bindungsobjekt. Kälte, flackerndes Licht und unnatürliche Stille kündigen ihn häufig an." },
+      { "type": "paragraph", "text": "Seine Gestalt wechselt zwischen durchscheinender Rüstung, verwittertem Leichnam und körperlosem Nebel. Angst und Verwirrung sind Teil seiner Gegenwart; seine Fixierung auf das erlittene Unrecht macht ihn zugleich gefährlich und berechenbar." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten und Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Schlachtfelder, Burgruinen, Friedhöfe und einsame Straßen gehören zu seinen häufigsten Erscheinungsorten. Meist kehrt er zu einer bestimmten Nachtstunde, am Todestag oder bei Annäherung einer mit seiner Geschichte verbundenen Person zurück." },
+      { "type": "paragraph", "text": "Das Gebiet trägt die Spuren seiner Bindung: Nebel liegt ungewöhnlich schwer, Geräusche verstummen und Wege scheinen Wandernde immer wieder zum selben Ort zurückzuführen." }
+    ] },
+    { "id": "staerken-schwaechen", "title": "Stärken und Schwächen", "blocks": [
+      { "type": "paragraph", "text": "Gewöhnliche Waffen gleiten durch die spektrale Gestalt. Der Dullahan bewegt sich schnell, erscheint ohne erkennbare Annäherung und lähmt Unvorbereitete durch Furcht. Geweihte Waffen und göttliche Rituale können ihn zurückdrängen." },
+      { "type": "paragraph", "text": "Seine eigentliche Schwäche ist die Ursache seiner Ruhelosigkeit. Wird der verlorene Kopf gefunden, der Leib vollständig bestattet oder das entweihte Grab wiederhergestellt, verliert er seine Bindung und kann endgültig verschwinden." }
+    ] },
+    { "id": "formen", "title": "Überlieferte Formen", "blocks": [
+      { "type": "list", "items": ["Kopfloser Reiter auf einem schwarzen Ross", "Verstümmelte Erscheinung an der eigenen Todesstätte", "Wandernder Wächter eines Grabes oder einer Ruine", "Geist einer Grabschändung auf der Suche nach geraubten Überresten", "Ruheloser Krieger eines alten Schlachtfeldes", "Durch Magie oder infernale Kräfte gefangene Seele"] }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Ein Dullahan verfolgt häufiger den Träger eines geraubten Grabstücks als den ursprünglichen Grabräuber.", "Das Nennen seines vollständigen Namens kann seine Raserei für einen Augenblick unterbrechen.", "Leere Gräber an alten Schlachtfeldern werden vorsorglich ebenso gesegnet wie belegte.", "Sein Ross gilt in manchen Erzählungen als Teil der Erscheinung und hinterlässt keine dauerhaften Hufspuren."] }
+    ] }
+  ],
+  "plates": []
+}
