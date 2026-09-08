@@ -174,5 +174,24 @@
         }
       ]
     }
-  ]
+  ],
+  "metrics": {
+    "labels": [
+      "Bindung",
+      "Lernfähigkeit",
+      "Körperkraft",
+      "Ausdauer",
+      "Sozialverhalten",
+      "Arbeits-/Jagdtrieb"
+    ],
+    "values": [
+      9,
+      10,
+      6,
+      8,
+      10,
+      9
+    ],
+    "source": "Aus Rassentext und Wissenswertes abgeleitete Archivbewertung"
+  }
 }

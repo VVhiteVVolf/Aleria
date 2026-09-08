@@ -82,6 +82,9 @@ for (const [index, profile] of profiles.entries()) {
     assert.equal(trivia.blocks[0].items.length, 3);
     assert.deepEqual(profile.facts.map(fact => fact.label), expectedFacts);
     assert(profile.facts.every(fact => fact.value.length > 0));
+    assert.deepEqual(profile.metrics.labels, ['Bindung', 'Lernfähigkeit', 'Körperkraft', 'Ausdauer', 'Sozialverhalten', 'Arbeits-/Jagdtrieb']);
+    assert(profile.metrics.values.every(value => Number.isInteger(value) && value >= 1 && value <= 10));
+    assert(html.indexOf('pet-profile-narrative') < html.indexOf('pet-profile-facts'));
     assert(html.includes(loreMarkers[profile.id]));
     assert(html.includes(`../index.html#bestand-${profile.parentGroupId}`));
     assert(!/https?:\/\/|animexx|tumblr|onclick=|oninput=|onchange=|Zitat bla|\.\.\.|\?\?\?/i.test(html));

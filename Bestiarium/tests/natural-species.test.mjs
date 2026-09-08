@@ -12,7 +12,7 @@ const expectedEntryCounts = {
   wild: 5,
   meerestiere: 5,
   vieh: 6,
-  reptilien: 2,
+  reptilien: 7,
   amphibien: 2,
   ornithosaurier: 2,
   insekten: 9
@@ -25,7 +25,7 @@ const expectedLegacyImageCounts = {
   wild: 5,
   meerestiere: 0,
   vieh: 6,
-  reptilien: 2,
+  reptilien: 4,
   amphibien: 1,
   ornithosaurier: 2,
   insekten: 9
@@ -36,7 +36,7 @@ const legacyNames = {
   flugwesen: ['Caoran', 'Rotmilan'],
   wild: ['Mittleres Wild', 'Keiler', 'Großwild', 'Kleinwild', 'Hirsche & Elche'],
   vieh: ['Rinder', 'Schafe & Ziegen', 'Schweine & Wildschweine', 'Hühner & Geflügel', 'Haustiere', 'Last- & Nutztiere'],
-  reptilien: ['Druchtan', 'Corrchuban'],
+  reptilien: ['Drúchtán', 'Corrchrúbán', 'Mýrrblóðr', 'Brúctar'],
   amphibien: ['Kröten', 'Frösche'],
   ornithosaurier: ['Klippenschnapper', 'Aerdrith'],
   insekten: ['Höhlenkriecher', 'Svelg / Sumpfpfähler', 'Garnspinnen', 'Koloss-Spinnen', 'Raub- & Laufspinnen', 'Gratspinnen', 'Panzerspinnen', 'Kumzehir / Dünenskorpion', 'Blutklammer']
@@ -62,8 +62,9 @@ for (const id of NATURAL_SPECIES_IDS) {
     assert.equal(new Set(entries.map(entry => entry.id)).size, entries.length);
     assert(record.sections.every(section => section.paragraphs.length >= 2));
     assert(entries.every(entry => entry.description.length >= 80));
+    assert(entries.filter(entry => entry.unknown).every(entry => entry.title === '???' && entry.href === null && entry.status === 'Noch unausgefüllt'));
     assert.equal(html, renderNaturalSpecies(record));
-    assert(!/https?:\/\/|animexx|tumblr|postimg|onclick=|oninput=|onchange=|(?:^|\W)\?\?(?:\W|$)|(?:^|\W)\.{3,}(?:\W|$)/i.test(html));
+    assert(!/https?:\/\/|animexx|tumblr|postimg|onclick=|oninput=|onchange=|(?:^|\W)\.{3,}(?:\W|$)/i.test(html));
 
     await access(new URL(record.icon.src, directory));
     await access(new URL(record.hero.src, directory));
@@ -98,9 +99,23 @@ test('horse breeds preserve the continent, ancestor and country hierarchy', asyn
 test('all named groups from the old sparse tables remain in the new atlases', async () => {
   for (const [id, expected] of Object.entries(legacyNames)) {
     const record = JSON.parse(await readFile(new URL(`../tiere/${id}/art.json`, import.meta.url), 'utf8'));
-    const names = allEntries(record).map(entry => entry.title);
+    const names = allEntries(record).filter(entry => !entry.unknown).map(entry => entry.title);
     assert.deepEqual(names, expected);
   }
+});
+
+test('the reptile register links four dossiers and preserves three open Druchtan variants', async () => {
+  const directory = new URL('../tiere/reptilien/', import.meta.url);
+  const record = JSON.parse(await readFile(new URL('art.json', directory), 'utf8'));
+  const entries = allEntries(record);
+  const available = entries.filter(entry => entry.href);
+  const unknown = entries.filter(entry => entry.unknown);
+
+  assert.deepEqual(available.map(entry => entry.id), ['druchtan', 'corrchuban', 'myrrblodr', 'bructar']);
+  assert.equal(unknown.length, 3);
+  assert.deepEqual(unknown.map(entry => entry.region), ['Tirnara', '???', '???']);
+  assert(available.every(entry => entry.status === 'Dossier verfügbar'));
+  await Promise.all(available.map(entry => access(new URL(entry.href, directory))));
 });
 
 test('art manifest documents the selected horse image and nine generated 2:3 illustrations', async () => {

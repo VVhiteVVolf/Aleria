@@ -1,4 +1,4 @@
-const VERSION = '20260907-natural-species-v3';
+const VERSION = '20260908-natural-species-v4';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const roman = number => ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'][number - 1] || String(number);
 const paragraphs = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
@@ -24,14 +24,17 @@ function renderFacts(record) {
 }
 
 function renderEntry(entry, groupTitle, modifier = '') {
-  return `<article class="species-entry ${modifier}" data-species-entry data-entry-id="${escape(entry.id)}" data-entry-group="${escape(groupTitle)}" data-entry-status="${escape(entry.status)}">
+  const classes = ['species-entry', modifier, entry.unknown ? 'species-entry--unknown' : ''].filter(Boolean).join(' ');
+  return `<article class="${classes}" data-species-entry data-entry-id="${escape(entry.id)}" data-entry-group="${escape(groupTitle)}" data-entry-status="${escape(entry.status)}">
     <p class="species-entry-region" data-entry-region>${escape(entry.region)}</p>
     <h4 data-entry-title>${escape(entry.title)}</h4>
-    ${entry.image ? `<figure class="${entryFigureClass(entry.image)}">${picture(entry.image)}</figure>` : ''}
+    ${entry.image ? `<figure class="${entryFigureClass(entry.image)}">${picture(entry.image)}</figure>` : entry.unknown ? '<div class="species-entry-placeholder" aria-hidden="true"><span>?</span></div>' : ''}
     <p data-entry-description>${escape(entry.description)}</p>
     ${entry.href
       ? `<a class="species-entry-link" href="${escape(entry.href)}">Dossier aufschlagen <span aria-hidden="true">↗</span></a>`
-      : `<button class="species-entry-link" type="button" data-action="preview-entry" data-entry-id="${escape(entry.id)}" aria-haspopup="dialog">Eigenes Dossier folgt <span aria-hidden="true">↗</span></button>`}
+      : entry.unknown
+        ? `<span class="species-entry-link species-entry-link--static">${escape(entry.status)}</span>`
+        : `<button class="species-entry-link" type="button" data-action="preview-entry" data-entry-id="${escape(entry.id)}" aria-haspopup="dialog">Eigenes Dossier folgt <span aria-hidden="true">↗</span></button>`}
   </article>`;
 }
 

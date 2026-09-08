@@ -440,6 +440,35 @@
   background: linear-gradient(100deg, #d8bd8c45, #f8f0dfc7);
 }
 
+.species-entry--unknown {
+  border-style: dashed;
+}
+
+.species-entry--unknown h4 {
+  color: #765144;
+  font-style: italic;
+}
+
+.species-entry-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 2px 0 16px;
+  border: 1px dashed #a28d6a;
+  background: #e7dcc385;
+}
+
+.species-entry-placeholder span {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 78px;
+  border: 1px solid #947c5b;
+  color: #765144;
+  font-size: 32px;
+}
+
 .species-entry-region {
   padding-right: 20px;
   color: var(--red);
@@ -510,6 +539,13 @@
 .species-entry-link:hover {
   color: #8c382a;
   border-color: currentColor;
+}
+
+.species-entry-link--static,
+.species-entry-link--static:hover {
+  color: #765144;
+  border-color: #7960497a;
+  cursor: default;
 }
 
 .species-noscript {

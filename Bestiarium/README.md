@@ -12,12 +12,13 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/creature-profile`: wiederverwendbare statische Profilvorlage, Profilregister und Anbindung der Vorschauen.
 - `modules/natural-species`: gemeinsame Naturkundevorlage für Tiergruppen, regionale Artenregister und spätere Einzeldossiers.
 - `modules/horse-profile`: gemeinsame statische Vorlage für Pferdedossiers, Rossmarkt-Werte und Leistungsdiagramme.
-- `modules/profile-metrics`: gemeinsames, zugängliches Sechs-Achsen-Diagramm für Pferde- und Raubtierdossiers.
+- `modules/profile-metrics`: gemeinsames, zugängliches Sechs-Achsen-Diagramm für Pferde-, Raubtier-, Haustier- und Reptiliendossiers.
 - `modules/predator-profile`: Übersichten für Raubkatzen, Wölfe, Warge und Bären sowie die einzelnen Raubtierdossiers.
 - `modules/livestock-category`: gemeinsame Unterregister, Viehkunde und Bestandskarten für die sechs Bereiche des Vieharchivs.
 - `modules/pet-breed`: Hunde- und Katzenregister mit regional geordneten Rassenkarten und offen gekennzeichneten, noch namenlosen Bildtafeln.
-- `modules/pet-profile`: gemeinsame Darstellung der Hunde- und Katzenprofile mit Rassenblatt, unbeschnittenen Einsatzbildern und Dossiernavigation.
+- `modules/pet-profile`: gemeinsame Darstellung der Hunde- und Katzenprofile mit Rassenblatt als rechter Randspalte, Rassendiagramm, unbeschnittenen Einsatzbildern und Dossiernavigation.
 - `modules/dog-profile` und `modules/cat-profile`: tierartspezifische Register, Archivtexte und Generator-Anbindung auf Basis der gemeinsamen Profilvorlage.
+- `modules/reptile-profile`: gemeinsame Darstellung und Generator-Anbindung für Drúchtán, seine verwandten Linien und weitere Reptiliendossiers.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -64,6 +65,8 @@ Die 62 überlieferten Kreaturbilder aus den alten Tierseiten bleiben in den zuge
 
 Die Seiten werden mit `node Bestiarium/scripts/build-natural-species.mjs` erzeugt und mit `--check` auf Aktualität geprüft. Neue Tiergruppen benötigen ein Verzeichnis `tiere/<id>/art.json` sowie einen Eintrag in `modules/natural-species/natural-species-registry.mjs`; Build-Skript und Vite verwenden dieses gemeinsame Register.
 
+Das Reptilienregister führt zu vier vollständigen Dossiers: Drúchtán, Corrchrúbán, Mýrrblóðr und Brúctar. Die beiden zuletzt genannten Einträge bilden das überlieferte Varianten- und Verwandtschaftsregister des Drúchtán; drei weitere Plätze bleiben entsprechend der alten Tafel als „???“ offen. Die zwölf gelieferten Abbildungen werden lokal und ohne Beschnitt aus `assets/reptile-profiles/` ausgeliefert, ihre Quellen und Originalmaße stehen in `assets/reptile-profile-sources.json`. Jedes Dossier besitzt eine aus der jeweiligen Lore abgeleitete Archivbewertung und zeigt „Wissenswertes“ rechts neben dem Text. Die Seiten entstehen mit `node Bestiarium/scripts/build-reptile-profiles.mjs`.
+
 ## Pferdedossiers
 
 Die 32 Pferde aus dem kontinental gegliederten Artenregister besitzen eigene Seiten unter `tiere/pferde/<id>/`. Jedes `profil.json` enthält den Text und die Bildtafel aus der jeweiligen alten Vorlage sowie die passenden Marktdaten. Für 29 im Rossmarkt geführte Linien zeigt die Seite dessen sechs Werte als Radar und als lesbare Zahlenleiste. Bei Tanarhan, Ælvinger und Skjorn fehlt dort ein vollständiges Leistungsblatt; ihre Seiten kennzeichnen diesen Quellenstand ausdrücklich.
@@ -96,7 +99,7 @@ Die Hundeseiten entstehen mit `node Bestiarium/scripts/build-dog-profiles.mjs`. 
 
 Zehn Katzenrassen besitzen vollständige Dossiers unter `tiere/vieh/haustiere/katzen/<id>/`: Ruachar, Dúriyn, Fialmor, Velir, Skjarn, Cenyric, Lethin, Cérix, Targwyn und Samtlicht. Die gelieferten Tafeln stellen Einführung, Herkunft, Erscheinungsbild, Rassenmerkmale, Verhalten, Beziehung zum Menschen, Eigenarten und Trivia bereit. Ihre vollständigen neuen Bildtafeln liegen lokal unter `assets/cat-profiles/`; Quellen und Originalmaße stehen in `assets/cat-profile-sources.json`.
 
-Die Katzenseiten entstehen mit `node Bestiarium/scripts/build-cat-profiles.mjs`. Neue Katzenrassendossiers benötigen ein `profil.json` sowie einen Eintrag in `modules/cat-profile/cat-profile-registry.mjs`. Beide Tierarten verwenden `modules/pet-profile`; Änderungen an der gemeinsamen Darstellung müssen daher gegen Hunde und Katzen geprüft werden.
+Die Katzenseiten entstehen mit `node Bestiarium/scripts/build-cat-profiles.mjs`. Neue Katzenrassendossiers benötigen ein `profil.json` sowie einen Eintrag in `modules/cat-profile/cat-profile-registry.mjs`. Beide Tierarten verwenden `modules/pet-profile`; Änderungen an der gemeinsamen Darstellung müssen daher gegen Hunde und Katzen geprüft werden. Alle 25 ausgearbeiteten Hunde- und Katzenprofile zeigen sechs aus der jeweiligen Lore abgeleitete Vergleichswerte. Das Rassenblatt „Wissenswertes“ steht in breiten Ansichten als Randspalte rechts neben dem eigentlichen Text.
 
 ## Bilder
 
@@ -125,5 +128,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/dog-profiles.test.mjs`
 
 `node --test Bestiarium/tests/cat-profiles.test.mjs`
+
+`node --test Bestiarium/tests/reptile-profiles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

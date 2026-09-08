@@ -71,6 +71,9 @@ for (const [index, profile] of profiles.entries()) {
     assert.equal(trivia.blocks[0].items.length, 3);
     assert.deepEqual(profile.facts.map(fact => fact.label), expectedFacts);
     assert(profile.facts.every(fact => fact.value.length > 0));
+    assert.deepEqual(profile.metrics.labels, ['Bindung', 'Lernfähigkeit', 'Körperkraft', 'Ausdauer', 'Sozialverhalten', 'Arbeits-/Jagdtrieb']);
+    assert(profile.metrics.values.every(value => Number.isInteger(value) && value >= 1 && value <= 10));
+    assert(html.indexOf('pet-profile-narrative') < html.indexOf('pet-profile-facts'));
     assert(!/https?:\/\/|animexx|tumblr|onclick=|oninput=|onchange=|Zitat bla|\.\.\.|\?\?\?/i.test(html));
     await access(new URL(profile.icon.src, directory));
     await access(new URL(profile.hero.src, directory));
@@ -121,6 +124,15 @@ test('dog images use the shared pet profile rules and are explicitly contained i
   assert(css.includes('.pet-profile .livestock-hero-image'));
   assert.equal((css.match(/object-fit:\s*contain/g) || []).length, 1);
   assert(!/object-fit:\s*cover/.test(css));
+});
+
+test('dog dossiers use a shared metrics panel and keep Wissenswertes beside the narrative', async () => {
+  const template = await readFile(new URL('../modules/pet-profile/pet-profile-template.mjs', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../modules/pet-profile/pet-profile.css', import.meta.url), 'utf8');
+  assert(template.includes('renderProfileMetrics(record.metrics'));
+  assert(template.includes('pet-profile-reading'));
+  assert(css.includes('grid-template-columns: minmax(0, 1fr) 255px'));
+  assert(css.includes('.pet-profile-facts { position: sticky'));
 });
 
 test('the dog-profile renderer escapes authored text', () => {

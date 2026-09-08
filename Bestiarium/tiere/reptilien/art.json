@@ -4,8 +4,8 @@
   "subtitle": "Schuppenträger der Wärme und stillen Wasser",
   "classification": "Tiere · Die natürlichen Arten",
   "folio": "I / 07",
-  "lead": "Reptilien Alerias bewohnen sonnenwarme Felsen, Schilfgürtel, Ruinen und trockene Ebenen. Geduld und sparsamer Stoffwechsel lassen sie Orte nutzen, die anderen Tieren zu heiß oder zu karg sind.",
-  "pullQuote": "Was reglos in der Sonne liegt, ist deshalb noch lange nicht unaufmerksam.",
+  "lead": "Reptilien Alerias reichen von stillen Wärmesuchern bis zu großen Sumpftieren. Das Archiv erschließt nun auch den domestizierten Drúchtán, seine verwandten Linien und den jagenden Corrchrúbán.",
+  "pullQuote": "Im Moor verrät nicht die Größe eines Schattens, ob er Lasttier, Panzerträger oder Jäger ist.",
   "icon": {
     "src": "../../assets/icons/reptilien.webp",
     "width": 512,
@@ -84,42 +84,105 @@
     }
   ],
   "atlas": {
-    "title": "Besondere Exemplare",
-    "intro": "Zwei benannte Reptilien sind aus der alten Tafel erhalten.",
+    "title": "Arten, Varianten & verwandte Linien",
+    "intro": "Vier benannte Großreptilien sind ausführlich erschlossen. Drei überlieferte Variantenplätze bleiben bewusst als ??? offen.",
     "groups": [
       {
         "id": "bekannte-reptilien",
-        "title": "Bekannte Reptilien",
-        "kicker": "Überlieferte Arten",
-        "description": "Beide Arten gelten als deutlich größer und auffälliger als gewöhnliche Echsen und Schlangen.",
+        "title": "Großreptilien der Sümpfe",
+        "kicker": "Stammart & Spitzenprädator",
+        "description": "Der friedliche Drúchtán und der jagende Corrchrúbán prägen auf sehr verschiedene Weise die Sumpflandschaften Móinneachs.",
         "entries": [
           {
             "id": "druchtan",
-            "title": "Druchtan",
-            "region": "Sonnenfelsen & Flussruinen",
-            "description": "Eine große, grün geschuppte Echse mit kräftigen Vorderläufen. Druchtan beobachten lange reglos und verteidigen bevorzugte Sonnenplätze mit drohender Körperhaltung.",
-            "href": null,
-            "status": "Eigenes Dossier vorgemerkt",
+            "title": "Drúchtán",
+            "region": "Móinneach · Lothir",
+            "href": "./druchtan/index.html",
+            "status": "Dossier verfügbar",
+            "description": "Ein friedliches, kräftiges Sumpfreptil, das in Móinneach als schwimmfähiges Reit-, Last- und Arbeitstier domestiziert wurde.",
             "image": {
               "src": "../../assets/species-entries/reptilien/druchtan.webp",
               "width": 612,
               "height": 408,
-              "alt": "Überlieferte Bildtafel: Druchtan"
+              "alt": "Vollständig abgebildeter Drúchtán"
             }
           },
           {
             "id": "corrchuban",
-            "title": "Corrchuban",
-            "region": "Schilfsümpfe & warme Niederungen",
-            "description": "Eine lange, kupferfarbene Schlange, die hervorragend schwimmt und Beute über Erschütterungen im Boden oder Wasser wahrnimmt.",
-            "href": null,
-            "status": "Eigenes Dossier vorgemerkt",
+            "title": "Corrchrúbán",
+            "region": "Sümpfe Móinneachs · Lothir",
+            "href": "./corrchuban/index.html",
+            "status": "Dossier verfügbar",
+            "description": "Der Klingenläufer ist ein schneller, zweibeiniger Sumpfprädator, der mit Sichelklauen und abgestimmter Rudeltaktik jagt.",
             "image": {
-              "src": "../../assets/species-entries/reptilien/corrchuban.webp",
-              "width": 500,
-              "height": 500,
-              "alt": "Überlieferte Bildtafel: Corrchuban"
+              "src": "../../assets/reptile-profiles/corrchuban-hero.webp",
+              "width": 1024,
+              "height": 687,
+              "alt": "Vollständig sichtbare Corrchrúbán im Sumpf"
             }
+          }
+        ]
+      },
+      {
+        "id": "druchtan-linie",
+        "title": "Varianten des Drúchtán",
+        "kicker": "Unterarten & Verwandte",
+        "description": "Zwei Linien besitzen eigene Dossiers. Die übrigen Felder entsprechen der alten Übersicht und warten auf spätere Überlieferungen.",
+        "entries": [
+          {
+            "id": "myrrblodr",
+            "title": "Mýrrblóðr",
+            "region": "Estryll · Sumpfregionen",
+            "href": "./myrrblodr/index.html",
+            "status": "Dossier verfügbar",
+            "description": "Der Rotkamm ist eine kleinere, schnellere und nicht zähmbare Drúchtán-Unterart, die als carnivorer Sumpfprädator lebt.",
+            "image": {
+              "src": "../../assets/reptile-profiles/myrrblodr-card.webp",
+              "width": 612,
+              "height": 408,
+              "alt": "Vollständig abgebildeter Mýrrblóðr"
+            }
+          },
+          {
+            "id": "bructar",
+            "title": "Brúctar",
+            "region": "Lothir · Sumpfregionen",
+            "href": "./bructar/index.html",
+            "status": "Dossier verfügbar",
+            "description": "Ein sanfter, schwer gepanzerter Verwandter des Drúchtán, dessen enorme Tragkraft ihn zum wertvollen Lasttier Móinneachs macht.",
+            "image": {
+              "src": "../../assets/reptile-profiles/bructar-card.webp",
+              "width": 610,
+              "height": 409,
+              "alt": "Vollständig abgebildeter Brúctar"
+            }
+          },
+          {
+            "id": "variante-tirnara",
+            "title": "???",
+            "region": "Tirnara",
+            "href": null,
+            "status": "Noch unausgefüllt",
+            "unknown": true,
+            "description": "Für diese in Tirnara vermerkte Variante sind Name, Merkmale und Lebensweise noch nicht überliefert."
+          },
+          {
+            "id": "variante-unbekannt-i",
+            "title": "???",
+            "region": "???",
+            "href": null,
+            "status": "Noch unausgefüllt",
+            "unknown": true,
+            "description": "Dieser Platz der alten Variantenübersicht bleibt frei, bis eine weitere Drúchtán-Linie überliefert ist."
+          },
+          {
+            "id": "variante-unbekannt-ii",
+            "title": "???",
+            "region": "???",
+            "href": null,
+            "status": "Noch unausgefüllt",
+            "unknown": true,
+            "description": "Dieser Platz der alten Variantenübersicht bleibt frei, bis eine weitere Drúchtán-Linie überliefert ist."
           }
         ]
       }

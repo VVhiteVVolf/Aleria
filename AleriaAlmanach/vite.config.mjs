@@ -17,6 +17,7 @@ import { LIVESTOCK_CATEGORY_IDS } from '../Bestiarium/modules/livestock-category
 import { PET_BREED_GROUP_IDS } from '../Bestiarium/modules/pet-breed/pet-breed-registry.mjs';
 import { DOG_PROFILE_IDS } from '../Bestiarium/modules/dog-profile/dog-profile-registry.mjs';
 import { CAT_PROFILE_IDS } from '../Bestiarium/modules/cat-profile/cat-profile-registry.mjs';
+import { REPTILE_PROFILE_IDS } from '../Bestiarium/modules/reptile-profile/reptile-profile-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -110,6 +111,9 @@ export default defineConfig({
         ])),
         ...Object.fromEntries(CAT_PROFILE_IDS.map(id => [
           `bestiary-cat-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/vieh/haustiere/katzen', id, 'index.html')
+        ])),
+        ...Object.fromEntries(REPTILE_PROFILE_IDS.map(id => [
+          `bestiary-reptile-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/reptilien', id, 'index.html')
         ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [

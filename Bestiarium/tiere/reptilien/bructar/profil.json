@@ -1,0 +1,206 @@
+{
+  "id": "bructar",
+  "name": "Brúctar",
+  "classification": "Gepanzerter Verwandter des Drúchtán · Lasttier",
+  "continent": "Lothir",
+  "region": "Móinneach und westliche Randgebiete",
+  "folio": "I / 07-A2",
+  "summary": "Der Brúctar ist ein schwer gepanzerter, friedfertiger Verwandter des Drúchtán, der als zutraulicher Pflanzenfresser entlang der Flüsse und Gebirgsränder Móinneachs lebt.",
+  "quote": "Er trägt ein Dorf durch den Sumpf und schläft danach im Schilf ein.",
+  "quoteAttribution": "Fuhrmannsspruch aus Móinneach",
+  "parentGroupId": "druchtan-linie",
+  "icon": {
+    "src": "../../../assets/icons/reptilien.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Reptilien"
+  },
+  "hero": {
+    "src": "../../../assets/reptile-profiles/bructar-hero.webp",
+    "width": 801,
+    "height": 803,
+    "alt": "Vollständig sichtbarer Brúctar als gepanzertes Last- und Kriegstier",
+    "caption": "Überlieferte Szenentafel · Brúctar im Sumpfverband"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Brúctar"
+    },
+    {
+      "label": "Typ",
+      "value": "Gepanzerter, herbivorer Verwandter des Drúchtán"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Verwandte, an Fluss- und Gebirgsränder angepasste Linie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Móinneach und westliche Randgebiete Lothirs"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Flussauen, Hügelrinnen, Randmoore und Übergänge zu festem Land"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Ruhiger Einzelgänger; nur zur Paarungszeit geselliger"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Nicht gesichert"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schwere Panzerung, Schwanzkeule, enorme Tragkraft und lange Märsche"
+    },
+    {
+      "label": "Stärken",
+      "value": "Körperkraft, Ausdauer, Zutraulichkeit und widerstandsfähige Panzerplatten"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsam; meidet tiefen Morast und schützt Jungtiere entschieden"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Panzerplatten, Haut und knochenverstärkte Keulenplatte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      6,
+      9,
+      6,
+      10,
+      4,
+      9
+    ],
+    "source": "Aus Haltung, Verteidigung und Lasttiergebrauch abgeleitete Archivbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brúctar ist ein schwer gepanzerter, friedfertiger Verwandter des Drúchtán, der vor allem in den Fluss- und Gebirgszonen Móinneachs heimisch ist, aber auch an den Randgebieten Lothirs vorkommt. Er gilt als eines der zutraulichsten Großreptilien Alerias – ein gemütlicher, langsam grasender Pflanzenfresser, der sich bevorzugt zwischen Schilf, Geröll und Flussauen niederlässt. Trotz seiner friedlichen Natur wurde der Brúctar von den Sumpfbewohnern zu einem unverzichtbaren Lasttier und, bei Bedarf, zu einer beeindruckenden Kriegsmaschine gemacht."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau-eigenschaften",
+      "title": "Körperbau & Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brúctar besitzt einen breiten, massiven Körperbau mit wuchtigen Gliedmaßen und einem dicken, an Panzerplatten erinnernden Schuppenrücken, der ihm ein beinahe undurchdringliches Profil verleiht. Seine hornigen Rückenstacheln sind stumpfer als die des Rotkamms, dafür größer und dichter angeordnet – ideal, um seinen Körper gegen Raubtiere oder herabstürzendes Geröll zu schützen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Schwanz endet in einer schweren, knochenverstärkten Keulenplatte , die das Tier in freier Wildbahn hauptsächlich zur Verteidigung nutzt. Als strikter Herbivore ernährt er sich von Gräsern, Wurzeln, Schilf und Wasserpflanzen, wobei sein Verdauungssystem selbst zähe oder nährstoffarme Kost problemlos verwertet. Seine Haut ist widerstandsfähig gegen Kälte, Feuchtigkeit und Stiche, was ihn zu einem nahezu optimalen Tier für die Sümpfe macht."
+        }
+      ]
+    },
+    {
+      "id": "hauptunterschiede-zum-drucht-n",
+      "title": "Hauptunterschiede zum Drúchtán",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brúctar ist deutlich massiger , aber ruhiger als der Drúchtán. Während der Drúchtán flink und kletterfähig ist, setzt der Brúctar auf schiere Gewichtskraft und Ausdauer . Er ist vollends herbivor , zeigt keinerlei Jagdtrieb und lässt sich wesentlich leichter domestizieren. Seine Panzerung ist schwerer, die Hornplatten stumpfer, dafür robuster."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Gegensatz zum Drúchtán besitzt der Brúctar keine ausgeprägte Stirnspitze, sondern orientiert sich in der Verteidigung auf seinen Keulenschwanz , der im Nahkampf erheblichen Schaden anrichten kann. Sein Temperament ist so sanft, dass viele Stämme ihn als das „ sanfte Moorwerkzeug “ bezeichnen – bis man ihn mit alchemischen Reizmitteln in eine tobende Ramme verwandelt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In freier Natur ist der Brúctar ein ausgesprochen ruhiger Einzelgänger , der lediglich zur Paarungszeit gesellige Züge zeigt. Er verbringt den Großteil des Tages mit Fressen, Ruhen oder Wälzen im Schlamm, was seine Panzerung pflegt und Parasiten abtötet. Gefahren begegnet er eher durch stumpfes Wegdrücken oder einen kräftigen Schlag seiner Schwanzkeule als durch Flucht oder Aggression."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gegenüber Menschen ist er nahezu zutraulich , solange keine Jungtiere in der Nähe sind. Seine Ruhe macht ihn besonders geeignet für Domestikation – allerdings führt genau diese Sanftmütigkeit dazu, dass einige Clans ihn erst durch Alchemie, Reizpilze oder Rauchwerk in einen kampffähigen Zustand versetzen. Unter solchen Einflüssen wird der sonst friedliche Brúctar zu einer unaufhaltsamen Kraft aus Gewicht, Panzer und Trägheit , die Tore, Mauern und Rüstungen wie morsches Holz zerbrechen kann."
+        }
+      ]
+    },
+    {
+      "id": "wirtschaftlicher-wert",
+      "title": "Wirtschaftlicher Wert",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brúctar liefert gleich mehrere wertvolle Ressourcen. Seine Panzerplatten werden zu hochstabilen Schuppenrüstungen , Werkzeuggriffen und Bauschuppen verarbeitet. Die Haut eignet sich hervorragend für Gürtel, Satteltaschen, wetterfeste Kleidung und Zeltbespannung ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Keulenplatte gilt als begehrtes Material für Kriegshämmer , Schildverstärkungen und rituelle Insignien. Außerdem ist der Brúctar ein unvergleichliches Lasttier : Er kann enorme Gewichte transportieren, durch Sumpf wie durch Fluss waten und stundenlang ohne Pause marschieren. Einige Stämme setzen ihn als lebende Belagerungsplattform ein – mit Gerüsten, Wurfarmen oder erhöhten Kampfpodesten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für den Handel Móinneachs ist der Brúctar deshalb eine Schlüsselressource: friedlich genug, um ihn zu halten, aber stark genug, um selbst ein Dorfumzug zu tragen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brúctar liebt feuchte, weiche Landschaften und bewegt sich bevorzugt entlang der Flussläufe, Hügelrinnen und Randmoore Móinneachs. Er kommt auch im westlichen Lothir vor, wo die Sümpfe in die ersten Gebirgsausläufer übergehen, und besucht gelegentlich die flachen Sumpfbecken, um zu trinken oder zu baden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Am häufigsten begegnet man ihm jedoch in Móinneachs Zonen zwischen Fluss und Gebirge , wo reichlich Vegetation wächst und das Terrain stabil genug ist, dass sein enormes Gewicht nicht versinkt. Der Brúctar vermeidet tiefe, gefährliche Moore weitgehend – er bleibt lieber am Übergang zwischen Sumpf und festem Land , wo er Nahrung, Sicherheit und wanderbares Terrain zugleich findet."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Schlammbäder dienen dem Brúctar zugleich zur Pflege seiner Panzerplatten und zur Abwehr von Parasiten.",
+            "Ohne äußeren Reiz setzt er seine schwere Schwanzkeule fast ausschließlich zur Verteidigung ein.",
+            "Seine Ruhe und Tragkraft machen ihn in Móinneach zum Lasttier für besonders schwere Transporte."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "src": "../../../assets/reptile-profiles/bructar-card.webp",
+      "width": 610,
+      "height": 409,
+      "alt": "Vollständig abgebildeter Brúctar mit Panzerplatten und Schwanzkeule",
+      "caption": "Freigestellte Artentafel des Brúctar"
+    },
+    {
+      "src": "../../../assets/reptile-profiles/bructar-field.webp",
+      "width": 547,
+      "height": 539,
+      "alt": "Brúctar-Schlüpfling zwischen aufgebrochenen Eiern",
+      "caption": "Schlüpfling und Gelege"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "id": "myrrblodr",
+  "name": "Mýrrblóðr",
+  "classification": "Wilde Unterart des Drúchtán · Rotkamm",
+  "continent": "Estryll",
+  "region": "Aldrimar, Cenyr und südliche Albische Fürstentümer",
+  "folio": "I / 07-A1",
+  "summary": "Der Mýrrblóðr oder Rotkamm ist eine kleinere, schnellere und deutlich gefährlichere Unterart des Drúchtán, die in Estrylls Mooren als territorialer Sumpfprädator lebt.",
+  "quote": "Sieh den roten Kamm, und du weißt: Das Moor hat dich bereits bemerkt.",
+  "quoteAttribution": "Aldrimarische Jägerregel",
+  "parentGroupId": "druchtan-linie",
+  "icon": {
+    "src": "../../../assets/icons/reptilien.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Reptilien"
+  },
+  "hero": {
+    "src": "../../../assets/reptile-profiles/myrrblodr-hero.webp",
+    "width": 2528,
+    "height": 1696,
+    "alt": "Mehrere vollständig sichtbare Mýrrblóðr und Jäger im Krähenmoor",
+    "caption": "Überlieferte Szenentafel · Rotkämme im Krähenmoor"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Mýrrblóðr (Rotkamm)"
+    },
+    {
+      "label": "Typ",
+      "value": "Wilde, überwiegend carnivore Unterart des Drúchtán"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch lange Isolation an Estrylls gefährliche Sumpfgebiete angepasst"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Estryll; größte Population im Krähenmoor von Aldrimar"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Ausgedehnte Moore, Sumpfwälder und verzweigte Flusssysteme"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, misstrauisch und in wechselnden Jagdverbänden streng hierarchisch"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Nicht gesichert"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Hohe Giftresistenz, schnelle Richtungswechsel, Stoßhorn und aggressive Rudeljagd"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähigkeit, Anpassungsfähigkeit, Giftresistenz und hohe Wendigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Brutale Rangkämpfe und geringe Duldung schwacher Rudelmitglieder"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Rückenkamm, Schuppen, Leder, Zähne, Krallen, Horn, Galle und Sehnen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      9,
+      1,
+      7,
+      7,
+      6,
+      9
+    ],
+    "source": "Aus Jagdverbänden, Giftresistenz und Revierverhalten abgeleitete Archivbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rotkamm , in Aldrimar ehrfürchtig wie fluchend Mýrrblóðr genannt, ist eine wilde Unterart des Drúchtán – kleiner, drahtiger, schneller und ungleich gefährlicher. Er erhielt seinen Namen wegen des auffälligen, blutrot gefärbten Rückenkamms, der sich wie eine gezackte Krone vom Nacken bis zur Schwanzwurzel zieht und in den nebligen Sümpfen weithin sichtbar lodert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo der Drúchtán ein friedfertiges Lasttier wurde, blieb der Rotkamm das genaue Gegenteil: ein aus uralter Isolation hervorgegangener Sumpfprädator, der sich in den kalten, mörderischen Mooren Estrylls behaupten musste. Die Trennung von seinen lothirischen Vettern zwang ihn zu einer härteren Lebensweise – und zu einem Wesen, das heute als einer der gefährlichsten Bewohner des Krähenmoors gilt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er wird „ Rotkamm “ genannt, weil der leuchtende, stachelige Kamm sein Markenzeichen ist – Warnsignal, Balzmerkmal und Waffe zugleich. Ein Anblick, der jedem im Moor sofort klar macht, womit er es zu tun hat: einem Wesen, das nicht weicht, nicht zähmbar ist und seinen Platz in einem Reich voller Schrecken mit Blut verteidigt."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau-eigenschaften",
+      "title": "Körperbau & Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rotkamm ist gedrungener und muskulöser gebaut als der Drúchtán, jedoch insgesamt kleiner und deutlich wendiger . Sein Körper wirkt wie auf ständigen Kampf zugeschnitten: ein niedriger Schwerpunkt, kräftige Läufe und ein flexibel geschwungener Schweif, der ihm schnelle Richtungswechsel im Morast erlaubt. Die grünliche Grundfärbung wird entlang des Rückens von einem markanten, leuchtend roten Stachelkamm durchzogen, dessen Dornen hart wie Knochenhorn sind und beim Drohverhalten aufgestellt werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wie sein sanfterer Vetter besitzt auch der Rotkamm eine enorme Giftresistenz . Die Sümpfe Estrylls sind voller toxischer Pflanzen, faulender Kadaver und alchemistischer Ausdünstungen – doch der Rotkamm frisst sich durch all das, ohne Anzeichen von Schwäche zu zeigen. Sein Magen kann sogar verwesende Kost problemlos verdauen, ein Überbleibsel seiner einst omnivoren Abstammung, das ihm heute erlaubt, selbst dann zu überleben, wenn Beute knapp wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Schädel ist breiter und stärker gewölbt als beim Drúchtán, mit einem langen, scharf zulaufenden Stoßhorn , das sowohl zum Angriff als auch zum Durchbrechen von Dickicht dient. Die Zähne sind länger, spitzer und dichter gesetzt – ein klarer Hinweis auf seine mittlerweile überwiegend carnivore Lebensweise . Die Haut ist dicker, aber elastischer und weniger schuppenbetont, ideal für schnelle Bewegungen im verknoteten Wurzelwerk der Estryll-Sümpfe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Insgesamt ist der Rotkamm ein Tier, das auf Überlebenskampf ausgelegt ist: zäh, giftresistent , anpassungsfähig – ein Moorjäger, der alles frisst, was lange genug zögert."
+        }
+      ]
+    },
+    {
+      "id": "hauptunterschiede-zum-drucht-n",
+      "title": "Hauptunterschiede zum Drúchtán",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rotkamm unterscheidet sich in mehreren Punkten deutlich von seinem lothirischen Vetter. Er ist kleiner , jedoch wesentlich aggressiver und auf schnelle Gefechte im dichten Moorwald ausgelegt, während der Drúchtán als trägeres, friedfertiges Lasttier gilt. Sein markanter, leuchtend roter Rückenkamm ersetzt die breiteren Schuppenplatten des Drúchtán und dient sowohl der Abschreckung als auch der Kommunikation mit Artgenossen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Statt der omnivoren Ernährungsweise des Drúchtán folgt der Rotkamm einer überwiegend carnivoren Lebensweise und besitzt entsprechend schärfere Zähne, eine kräftigere Kiefermuskulatur und ein ausgeprägtes Jagdverhalten. Während der Drúchtán als domestizierbar gilt, ist der Rotkamm aufgrund seines territorialen , misstrauischen und zu Angriffen neigenden Wesens nicht zähmbar ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch seine Giftresistenz ist stärker ausgeprägt, und sein Magen kann toxische oder verwesende Nahrung leichter verwerten – eine Anpassung an die rauen, gefährlichen Estryll-Sümpfe, denen der Drúchtán in dieser Form nie ausgesetzt war."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rotkamm lebt in losen, aber hochgradig hierarchischen Jagdverbänden , deren Struktur sich ständig verändert. Die Männchen schließen sich zu aggressiven Rudeln zusammen, die gemeinsam auf Raubzüge gehen, Beute hetzen und ihr Revier mit unerbittlicher Härte verteidigen. Schwache Tiere werden kaum geduldet – in Zeiten knapper Nahrung fallen die Rudel sogar über ihre eigenen, verletzten oder jungen Mitglieder her. Stärke ist ihr einziges Gesetz, und wer nicht mithalten kann, endet als Nahrung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Männchen sind territorial und tragen den namensgebenden Rotkamm wie ein lebendiges Banner vor sich her. In der Paarungszeit wächst dieser Kamm auf das Dreifache seiner üblichen Größe an und wird gespreizt und geschüttelt wie ein feuriges Segel, um Rivalen einzuschüchtern und Weibchen zu beeindrucken. Nur Männchen mit besonders langen, breiten und farbintensiven Kämmen erhalten eine Chance auf Fortpflanzung. Die Weibchen sind größer, kräftiger, aber weit weniger angriffslustig und bewegen sich meist einzeln durch den Sumpf. Kommt ein Weibchen in Sicht, beginnen die Männchen sofort zu buhlen – brutale Kämpfe sind dabei eher Regel als Ausnahme, und nur die stärksten Exemplare bestehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Lebenszyklus ist klar geregelt: Zur Paarungszeit versammeln sich die Rotkämme an trockeneren Stellen des Moores, wo die Schaukämpfe stattfinden. Nach der Paarung verlässt das Weibchen den Verband, sucht sich ein feuchtes, wasserreiches Nestgebiet und legt die Eier in geschützten, schwer zugänglichen Senken ab. Die Schlüpflinge bleiben zunächst im flachen Wasser und ernähren sich von Fröschen, Würmern und kleinen Fischen , bis sie groß genug sind, das Nest zu verlassen und sich entweder einem Rudel anzuschließen oder ein eigenes Territorium zu suchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Menschen begegnen sie mit misstrauischer Vorsicht , doch ausgewachsene Rotkämme zeigen schnell offensive Aggression , wenn sie sich bedroht fühlen oder Hunger haben. Sie fressen Menschen, greifen sie aber meist nur an, wenn andere Beute rar ist – wobei Kinder oder ungerüstete Reisende wesentlich häufiger Opfer werden als gepanzerte Huskarle, die durch Metall und Gruppentaktik zu wenig Gewinn für zu viel Risiko darstellen."
+        }
+      ]
+    },
+    {
+      "id": "wirtschaftlicher-wert",
+      "title": "Wirtschaftlicher Wert",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trotz – oder gerade wegen – ihrer Gefährlichkeit besitzen Rotkämme einen enormen wirtschaftlichen Nutzen für jene, die es wagen, sie zu jagen. Ihre Körper liefern Materialien, die in Aldrimar und Estryll seit Jahrhunderten begehrt sind. Vor allem die Huskarle, Sumpfjarl-Geweihten und Hexenmeister der Moore zahlen hohe Preise für einzelne Bestandteile, da jedes davon eine andere seltene Eigenschaft besitzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der auffällige Rückenkamm ist das wertvollste Stück des Tieres. Seine roten, hornartigen Zacken werden zu Schmuck , Ritualinsignien , Stammeskronen , aber auch zur Verstärkung von Speerspitzen und Klingen verarbeitet. Er gilt als Symbol für Mut und Überlegenheit, weshalb Krieger ihre Waffen oft mit einem Stück Rotkamm verzieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Schuppen und das Leder sind flexibler und elastischer als beim Drúchtán. Sie eignen sich hervorragend für Rüstungen , Kleidung , Zelte und besonders für Wetterfestes Handwerk , da sie Kälte, Feuchtigkeit und sogar Säuredämpfen gut standhalten. Gerben ist anspruchsvoll, aber das Endprodukt überlebt Generationen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aus Giftdrüsen, Zähnen und Krallen gewinnen Alchemisten und Hexen hochwirksame Gifte , Heiltränke , Salben , aber auch Komponenten für Waffenverzauberungen oder Trophäenamulette . Besonders begehrt sind die vorderen Bisszähne – sie werden zu Dolchverstärkungen , Talismananhängern und Jagdmessergriffen verarbeitet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Horn, Galle und Innereien liefern weitere wertvolle Rohstoffe."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Das Nasenhorn wird zu Werkzeugen , Trinkhörnern oder rituellen Klanginstrumenten.",
+            "Die Galle gilt als starkes Konservierungsmittel und wird für Beizmethoden, Brauwerk und manche dunkleren Rituale benötigt.",
+            "Getrocknete Sehnen dienen als Bogensehne, Zunderersatz oder Bindematerial in der Jägerei."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Insgesamt macht der Rotkamm jeden Jäger reich, der ihn erlegt – vorausgesetzt, er überlebt den Kampf. Keine Ressource seines Körpers ist wertlos; alles, von der starr leuchtenden Kammschuppe bis zur letzten Sehne, findet einen Platz im Handel der Sumpflande."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Rotkamm kommt überall in Estryll vor, wo sich ausgedehnte Sumpf- und Moorlandschaften gebildet haben, doch seine wahre Hochburg liegt im Krähenmoor von Aldrimar – dem größten, nassesten und gefährlichsten Sumpf des gesamten Kontinents. Eingekesselt zwischen Gebirge und Flusstälern, vom Regen überschwemmt und von Nebel durchzogen, bietet dieses flache, feuchte Land den idealen Nährboden für eine Art, die sich nur in rauem Terrain behaupten kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Weitere Vorkommen finden sich in der Grauen Weite im Norden Cenyrs, sowie im Tal der Milane , dessen verzweigte Flusssysteme und Sumpfrinnen reichlich Jagdgrund bieten. Auch in den südlichen Albischen Fürstentümern trifft man auf vereinzelte Rotkamm-Populationen, doch nirgendwo gedeihen sie so zahlreich und so selbstbewusst wie in Aldrimar, wo sie seit Jahrtausenden unangefochten zu den Spitzenprädatoren der Sümpfe zählen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der rote Rückenkamm wächst in der Paarungszeit auf bis zum Dreifachen seiner üblichen Größe an.",
+            "Mýrrblóðr verdauen toxische Pflanzenreste und stark verwesende Nahrung, ohne sichtbar geschwächt zu werden.",
+            "Im Krähenmoor gilt ein besonders breiter, farbintensiver Kamm als Zeichen eines fortpflanzungsstarken Männchens."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "src": "../../../assets/reptile-profiles/myrrblodr-card.webp",
+      "width": 612,
+      "height": 408,
+      "alt": "Vollständig abgebildeter Mýrrblóðr mit rotem Kamm",
+      "caption": "Freigestellte Artentafel des Rotkamms"
+    },
+    {
+      "src": "../../../assets/reptile-profiles/myrrblodr-field.webp",
+      "width": 610,
+      "height": 409,
+      "alt": "Gelege des Mýrrblóðr mit schlüpfenden Jungtieren",
+      "caption": "Gelege in einer geschützten Moorsenke"
+    }
+  ]
+}
