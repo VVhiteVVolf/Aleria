@@ -1741,8 +1741,10 @@ function buildPage(page, entry, pageIndex, total) {
     <div class="entry-quote">${sanitizeContentHtml(page.quote)}
       <div class="quote-attribution">${escapeHtml(page.quoteBy||'')}</div>
     </div>` : '';
-  const organicComments = !inlineEditing && inlineCommentThread && (commentSequenceHtml || comment)
-    ? buildOrganicCommentsContinuation(inlineCommentThread)
+  const inlineComments = !inlineEditing && inlineCommentThread
+    ? (commentSequenceHtml || comment
+      ? buildOrganicCommentsContinuation(inlineCommentThread)
+      : buildEmbeddedCommentsSection(inlineCommentThread))
     : '';
   const commentDivider = page.commentDivider ? `<div class="modal-divider"></div>` : '';
   const sym = effectiveEntry.symbol ? `<img class="modal-symbol" src="${sanitizeImageSrc(effectiveEntry.symbol)}" alt="" loading="lazy" decoding="async">` : '';
@@ -1772,7 +1774,7 @@ function buildPage(page, entry, pageIndex, total) {
               ${commentDivider}
               ${commentSequenceHtml || comment}
               ${quote}
-              ${organicComments}
+              ${inlineComments}
             </div>
         </div>
       </div>
