@@ -15,6 +15,7 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/profile-metrics`: gemeinsames, zugängliches Sechs-Achsen-Diagramm für Pferde- und Raubtierdossiers.
 - `modules/predator-profile`: Übersichten für Raubkatzen, Wölfe, Warge und Bären sowie die einzelnen Raubtierdossiers.
 - `modules/livestock-category`: gemeinsame Unterregister, Viehkunde und Bestandskarten für die sechs Bereiche des Vieharchivs.
+- `modules/pet-breed`: Hunde- und Katzenregister mit regional geordneten Rassenkarten und offen gekennzeichneten, noch namenlosen Bildtafeln.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -83,6 +84,10 @@ Das Bestandsregister übernimmt ausschließlich die 32 in den alten Tafeln benan
 
 Die Seiten entstehen mit `node Bestiarium/scripts/build-livestock-categories.mjs`; `--check` prüft alle sechs Unterregister. Ihre Quellen liegen als `uebersicht.json` im jeweiligen Verzeichnis unter `tiere/vieh/`. Neue Viehbereiche werden im gemeinsamen `modules/livestock-category/livestock-category-registry.mjs` registriert und dadurch zugleich in Build und Vite aufgenommen.
 
+Unter `tiere/vieh/haustiere/` führen Hunde und Katzen zu eigenen Rassenregistern. Die Hundeseite enthält 21 Bildkarten: 16 benannte Rassen und fünf echte Bilder ohne überlieferten Namen, die sichtbar als „Noch unbekannt“ markiert sind. Die Katzenseite enthält zehn benannte Bildkarten; reine graue Ersatzbilder aus den alten Tabellen wurden nicht als Rassen übernommen. Alle 33 Titel- und Rassenbilder liegen lokal unter `assets/pet-breeds/` und sind in `assets/pet-breed-sources.json` dokumentiert.
+
+Beide Haustierregister entstehen mit `node Bestiarium/scripts/build-pet-breeds.mjs`. Ihre Quellen liegen jeweils als `uebersicht.json` im Hunde- beziehungsweise Katzenverzeichnis; das gemeinsame Register `modules/pet-breed/pet-breed-registry.mjs` versorgt Generator und Vite.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -104,5 +109,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/predator-profiles.test.mjs`
 
 `node --test Bestiarium/tests/livestock-categories.test.mjs`
+
+`node --test Bestiarium/tests/pet-breeds.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

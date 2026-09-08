@@ -14,6 +14,7 @@ import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natur
 import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
 import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS } from '../Bestiarium/modules/predator-profile/predator-registry.mjs';
 import { LIVESTOCK_CATEGORY_IDS } from '../Bestiarium/modules/livestock-category/livestock-category-registry.mjs';
+import { PET_BREED_GROUP_IDS } from '../Bestiarium/modules/pet-breed/pet-breed-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -98,6 +99,9 @@ export default defineConfig({
         })),
         ...Object.fromEntries(LIVESTOCK_CATEGORY_IDS.map(id => [
           `bestiary-livestock-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/vieh', id, 'index.html')
+        ])),
+        ...Object.fromEntries(PET_BREED_GROUP_IDS.map(id => [
+          `bestiary-pet-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/vieh/haustiere', id, 'index.html')
         ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [

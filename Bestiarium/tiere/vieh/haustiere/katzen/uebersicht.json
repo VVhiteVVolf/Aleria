@@ -1,0 +1,279 @@
+{
+  "id": "katzen",
+  "title": "Katzen",
+  "subtitle": "Vertraute Hausgefährten und regionale Rassen",
+  "classification": "Tiere · Vieh · Haustiere",
+  "folio": "VI / 01-B",
+  "lead": "Die Katzentafel ordnet zehn benannte Rassen nach Estryll und Lothir. Für Aldervan ist das Register vorbereitet, enthält bisher aber weder einen Namen noch eine echte Bildtafel.",
+  "quote": "Katzen wählen ihre vertrauten Plätze mit Ruhe und großer Aufmerksamkeit.",
+  "icon": {
+    "src": "../../../../assets/livestock/haustiere/katzen.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Bestiarium-Symbol für Katzen"
+  },
+  "hero": {
+    "src": "../../../../assets/pet-breeds/katzen/hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Titeltafel für Katzen",
+    "caption": "Archivtafel · Katzen Alerias"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Haustier"
+    },
+    {
+      "label": "Bildtafeln",
+      "value": "10 überlieferte Rassenkarten"
+    },
+    {
+      "label": "Benannte Rassen",
+      "value": "10"
+    },
+    {
+      "label": "Offene Bildernamen",
+      "value": "Keine"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Estryll und Lothir"
+    },
+    {
+      "label": "Weitere Tafel",
+      "value": "Aldervan"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Katzen leben als Haustiere in enger Nähe zum Menschen und behalten dabei einen eigenständigen Tagesrhythmus. Die alte Tafel unterscheidet ihre Rassen nach Herkunft, ohne bereits nähere Eigenschaften zu nennen.",
+        "Alle zehn echten Bildtafeln besitzen einen Namen. Die vorbereiteten, aber bildlosen Felder bleiben als offene Stellen des Registers erhalten."
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "paragraphs": [
+        "Vertraute Wege, sichere Rückzugsorte und beständige Versorgung bestimmen den Alltag einer gehaltenen Katze. Haltung und Nähe zum Menschen können sich von Tier zu Tier deutlich unterscheiden.",
+        "Die vorhandenen Rassennamen und Herkunftsangaben werden ohne zusätzliche Deutung übernommen. Aussehen, Verhalten und besondere Eigenschaften folgen später in eigenen Dossiers."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Umgang",
+      "paragraphs": [
+        "Katzen benötigen Wasser, geeignetes Futter, Ruheplätze und Möglichkeiten zur Bewegung. Eine übersichtliche, verlässliche Umgebung erleichtert ihnen die Orientierung.",
+        "Aufmerksame Beobachtung hilft, Veränderungen im Verhalten früh zu erkennen. Geduld und ruhiger Umgang unterstützen das Vertrauen zwischen Tier und Mensch."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Katzenrassen",
+    "intro": "Das Register übernimmt alle zehn benannten Bildtafeln. Die ausschließlich mit einer grauen Ersatzgrafik gefüllten Tabellenfelder werden nicht als eigene Rassenkarte ausgegeben.",
+    "groups": [
+      {
+        "id": "estryll-albische-fuerstentuemer",
+        "title": "Estryll · Albische Fürstentümer",
+        "kicker": "Regionales Rassenregister",
+        "description": "Drei Katzenrassen sind für die Albischen Fürstentümer benannt.",
+        "entries": [
+          {
+            "id": "ruachar",
+            "title": "Ruachar",
+            "region": "Albische Fürstentümer",
+            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Ruachar. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/ruachar.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Ruachar"
+              }
+            ]
+          },
+          {
+            "id": "duriyn",
+            "title": "Duriyn",
+            "region": "Albische Fürstentümer",
+            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Duriyn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/duriyn.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Duriyn"
+              }
+            ]
+          },
+          {
+            "id": "fialmor",
+            "title": "Fialmor",
+            "region": "Albische Fürstentümer",
+            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Fialmor. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/fialmor.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Fialmor"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll-norden",
+        "title": "Estryll · Norden",
+        "kicker": "Regionales Rassenregister",
+        "description": "Zwei Katzenrassen sind für den Norden benannt.",
+        "entries": [
+          {
+            "id": "velir",
+            "title": "Velir",
+            "region": "Norden",
+            "description": "Eine für Norden überlieferte Katzenrasse mit dem Namen Velir. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/velir.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Velir"
+              }
+            ]
+          },
+          {
+            "id": "skjarn",
+            "title": "Skjarn",
+            "region": "Norden",
+            "description": "Eine für Norden überlieferte Katzenrasse mit dem Namen Skjarn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/skjarn.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Skjarn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll-cenyr",
+        "title": "Estryll · Cenyr",
+        "kicker": "Regionales Rassenregister",
+        "description": "Vier Katzenrassen sind für Cenyr benannt.",
+        "entries": [
+          {
+            "id": "cenyric",
+            "title": "Cenyric",
+            "region": "Cenyr",
+            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Cenyric. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/cenyric.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Cenyric"
+              }
+            ]
+          },
+          {
+            "id": "lethin",
+            "title": "Lethin",
+            "region": "Cenyr",
+            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Lethin. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/lethin.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Lethin"
+              }
+            ]
+          },
+          {
+            "id": "cerix",
+            "title": "Cerix",
+            "region": "Cenyr",
+            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Cerix. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/cerix.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Cerix"
+              }
+            ]
+          },
+          {
+            "id": "targwyn",
+            "title": "Targwyn",
+            "region": "Cenyr",
+            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Targwyn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/targwyn.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Targwyn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Regionales Rassenregister",
+        "description": "Eine Katzenrasse ist mit einem genauen Herkunftsvermerk überliefert.",
+        "entries": [
+          {
+            "id": "samtlicht",
+            "title": "Samtlicht",
+            "region": "Weisenfluh",
+            "description": "Eine für Weisenfluh überlieferte Katzenrasse mit dem Namen Samtlicht. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/katzen/samtlicht.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Samtlicht"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan bisher weder eine benannte Katzenrasse noch eine echte Bildtafel.",
+        "entries": []
+      }
+    ]
+  }
+}

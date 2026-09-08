@@ -1,0 +1,461 @@
+{
+  "id": "hunde",
+  "title": "Hunde",
+  "subtitle": "Begleiter, Wächter und arbeitende Rassen",
+  "classification": "Tiere · Vieh · Haustiere",
+  "folio": "VI / 01-A",
+  "lead": "Hunde begleiten Menschen im Alltag und werden in der alten Tafel nach Herkunft und Aufgabe geordnet. Sechzehn Rassen tragen bereits Namen; fünf weitere Bildtafeln warten noch auf ihre Bezeichnung.",
+  "quote": "Wer ist ein guter Junge? Bist du ein guter Junge? Ja klar bist du ein guter Junge!",
+  "icon": {
+    "src": "../../../../assets/livestock/haustiere/hunde.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Bestiarium-Symbol für Hunde"
+  },
+  "hero": {
+    "src": "../../../../assets/pet-breeds/hunde/hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Titeltafel für Hunde",
+    "caption": "Archivtafel · Hunde Alerias"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Haustier"
+    },
+    {
+      "label": "Bildtafeln",
+      "value": "21 überlieferte Rassenkarten"
+    },
+    {
+      "label": "Benannte Rassen",
+      "value": "16"
+    },
+    {
+      "label": "Offene Namen",
+      "value": "5"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Estryll, Lothir und Aldervan"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Nach Herkunft und Aufgabe"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Hunde leben in enger Gemeinschaft mit Menschen. Die überlieferte Tafel unterscheidet ihre Rassen nach Herkunft und nennt bei vielen zugleich eine Aufgabe, für die sie geführt werden.",
+        "Die Rassenkarten bilden den Ausgangspunkt des neuen Registers. Fehlende Namen werden offen gekennzeichnet, damit Bild und Herkunft erhalten bleiben, ohne eine Bezeichnung zu erfinden."
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "paragraphs": [
+        "Aufgabe und täglicher Umgang prägen die Haltung eines Hundes. Verlässliche Versorgung, Bewegung, Ruhe und klare Gewohnheiten schaffen die Grundlage für ein ausgeglichenes Zusammenleben.",
+        "Die Einteilung als Wachhund, Kriegshund, Warnhund, Grenzhund, Schäferhund, Spürhund, Hofhund, Jagdhund, Haushund, Familienhund, Jägershund oder Dressurhund stammt aus der alten Tafel. Weitere Eigenschaften werden erst mit den Einzeldossiers ergänzt."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Umgang",
+      "paragraphs": [
+        "Hunde benötigen regelmäßiges Futter, Wasser, Pflege und einen sicheren Ruheplatz. Beschäftigung und Bewegung richten sich nach Größe, Erfahrung und Aufgabe des einzelnen Tieres.",
+        "Ruhige, eindeutige Signale erleichtern die Zusammenarbeit. Belastung und Erholung werden so abgestimmt, dass Gesundheit und Vertrauen erhalten bleiben."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Hunderassen",
+    "intro": "Das Register enthält alle echten Bildtafeln der Vorlage. Fünf bebilderte, aber unbeschriftete Felder erscheinen als „Noch unbekannt“; reine Ersatzgrafiken wurden ausgelassen.",
+    "groups": [
+      {
+        "id": "estryll-albische-fuerstentuemer",
+        "title": "Estryll · Albische Fürstentümer",
+        "kicker": "Regionales Rassenregister",
+        "description": "Drei Hunderassen sind für die Albischen Fürstentümer benannt.",
+        "entries": [
+          {
+            "id": "dubghar",
+            "title": "Dubghar",
+            "region": "Albische Fürstentümer · Wachhund",
+            "description": "Der Dubghar wird in der alten Tafel als Wachhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/dubghar.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Dubghar"
+              }
+            ]
+          },
+          {
+            "id": "lannfoal",
+            "title": "Lannfoal",
+            "region": "Albische Fürstentümer · Kriegshund",
+            "description": "Der Lannfoal wird in der alten Tafel als Kriegshund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/lannfoal.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Lannfoal"
+              }
+            ]
+          },
+          {
+            "id": "fairaeg",
+            "title": "Fairaeg",
+            "region": "Albische Fürstentümer · Warnhund",
+            "description": "Der Fairaeg wird in der alten Tafel als Warnhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/fairaeg.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Fairaeg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll-norden",
+        "title": "Estryll · Norden",
+        "kicker": "Regionales Rassenregister",
+        "description": "Zwei Hunderassen sind für den Norden benannt.",
+        "entries": [
+          {
+            "id": "gamir",
+            "title": "Gamir",
+            "region": "Norden · Grenzhund",
+            "description": "Der Gamir wird in der alten Tafel als Grenzhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/gamir.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Gamir"
+              }
+            ]
+          },
+          {
+            "id": "herdskal",
+            "title": "Herdskal",
+            "region": "Norden · Schäferhund",
+            "description": "Der Herdskal wird in der alten Tafel als Schäferhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/herdskal.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Herdskal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll-cenyr",
+        "title": "Estryll · Cenyr",
+        "kicker": "Regionales Rassenregister",
+        "description": "Zehn Hunderassen sind für Cenyr mit Namen und Aufgabe überliefert.",
+        "entries": [
+          {
+            "id": "trywydd",
+            "title": "Trywydd",
+            "region": "Cenyr · Spürhund",
+            "description": "Der Trywydd wird in der alten Tafel als Spürhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/trywydd.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Trywydd"
+              }
+            ]
+          },
+          {
+            "id": "ponter",
+            "title": "Ponter",
+            "region": "Cenyr · Wachhund",
+            "description": "Der Ponter wird in der alten Tafel als Wachhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/ponter.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Ponter"
+              }
+            ]
+          },
+          {
+            "id": "brug",
+            "title": "Brüg",
+            "region": "Cenyr · Hofhund",
+            "description": "Der Brüg wird in der alten Tafel als Hofhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/brug.webp",
+                "width": 612,
+                "height": 408,
+                "alt": "Überlieferte Bildtafel: Brüg"
+              }
+            ]
+          },
+          {
+            "id": "rhedwyr",
+            "title": "Rhedwyr",
+            "region": "Cenyr · Jagdhund",
+            "description": "Der Rhedwyr wird in der alten Tafel als Jagdhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/rhedwyr.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Rhedwyr"
+              }
+            ]
+          },
+          {
+            "id": "gorfael",
+            "title": "Gorfael",
+            "region": "Cenyr · Schäferhund",
+            "description": "Der Gorfael wird in der alten Tafel als Schäferhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/gorfael.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Gorfael"
+              }
+            ]
+          },
+          {
+            "id": "brodgi",
+            "title": "Brodgi",
+            "region": "Cenyr · Haushund",
+            "description": "Der Brodgi wird in der alten Tafel als Haushund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/brodgi.webp",
+                "width": 612,
+                "height": 408,
+                "alt": "Überlieferte Bildtafel: Brodgi"
+              }
+            ]
+          },
+          {
+            "id": "clachair",
+            "title": "Clachair",
+            "region": "Cenyr · Hofhund",
+            "description": "Der Clachair wird in der alten Tafel als Hofhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/clachair.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Clachair"
+              }
+            ]
+          },
+          {
+            "id": "refgi",
+            "title": "Refgi",
+            "region": "Cenyr · Familienhund",
+            "description": "Der Refgi wird in der alten Tafel als Familienhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/refgi.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Refgi"
+              }
+            ]
+          },
+          {
+            "id": "tryw",
+            "title": "Tryw",
+            "region": "Cenyr · Jägershund",
+            "description": "Der Tryw wird in der alten Tafel als Jägershund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/tryw.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Tryw"
+              }
+            ]
+          },
+          {
+            "id": "bugail",
+            "title": "Bugail",
+            "region": "Cenyr · Schäferhund",
+            "description": "Der Bugail wird in der alten Tafel als Schäferhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/bugail.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Bugail"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Regionales Rassenregister",
+        "description": "Neben dem Pudel enthält die Tafel vier echte Bilder ohne Namen, Aufgabe oder genaueren Herkunftsort.",
+        "entries": [
+          {
+            "id": "pudel",
+            "title": "Pudel",
+            "region": "Weisenfluh · Dressurhund",
+            "description": "Der Pudel wird in der alten Tafel als Dressurhund geführt. Aussehen, Haltung und Arbeitsweise werden im späteren Einzeldossier ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/pudel.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Pudel"
+              }
+            ]
+          },
+          {
+            "id": "unbekannt-lothir-1",
+            "title": "Noch unbekannt",
+            "region": "Lothir · Herkunft noch unbekannt",
+            "description": "Eine bebilderte Hunderasse aus Lothir. Name, Aufgabe und genauer Herkunftsort sind in der alten Tafel noch nicht eingetragen.",
+            "status": "Name noch unbekannt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/unbekannt-lothir-1.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Unbenannte überlieferte Bildtafel aus Lothir · Herkunft noch unbekannt"
+              }
+            ],
+            "unknown": true
+          },
+          {
+            "id": "unbekannt-lothir-2",
+            "title": "Noch unbekannt",
+            "region": "Lothir · Herkunft noch unbekannt",
+            "description": "Eine bebilderte Hunderasse aus Lothir. Name, Aufgabe und genauer Herkunftsort sind in der alten Tafel noch nicht eingetragen.",
+            "status": "Name noch unbekannt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/unbekannt-lothir-2.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Unbenannte überlieferte Bildtafel aus Lothir · Herkunft noch unbekannt"
+              }
+            ],
+            "unknown": true
+          },
+          {
+            "id": "unbekannt-lothir-3",
+            "title": "Noch unbekannt",
+            "region": "Lothir · Herkunft noch unbekannt",
+            "description": "Eine bebilderte Hunderasse aus Lothir. Name, Aufgabe und genauer Herkunftsort sind in der alten Tafel noch nicht eingetragen.",
+            "status": "Name noch unbekannt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/unbekannt-lothir-3.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Unbenannte überlieferte Bildtafel aus Lothir · Herkunft noch unbekannt"
+              }
+            ],
+            "unknown": true
+          },
+          {
+            "id": "unbekannt-lothir-4",
+            "title": "Noch unbekannt",
+            "region": "Lothir · Herkunft noch unbekannt",
+            "description": "Eine bebilderte Hunderasse aus Lothir. Name, Aufgabe und genauer Herkunftsort sind in der alten Tafel noch nicht eingetragen.",
+            "status": "Name noch unbekannt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/unbekannt-lothir-4.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Unbenannte überlieferte Bildtafel aus Lothir · Herkunft noch unbekannt"
+              }
+            ],
+            "unknown": true
+          }
+        ]
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Regionales Rassenregister",
+        "description": "Eine echte Bildtafel ist vorhanden, trägt jedoch noch keinen Namen oder genaueren Herkunftsvermerk.",
+        "entries": [
+          {
+            "id": "unbekannt-aldervan-1",
+            "title": "Noch unbekannt",
+            "region": "Aldervan · Herkunft noch unbekannt",
+            "description": "Eine bebilderte Hunderasse aus Aldervan. Name, Aufgabe und genauer Herkunftsort sind in der alten Tafel noch nicht eingetragen.",
+            "status": "Name noch unbekannt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../../assets/pet-breeds/hunde/unbekannt-aldervan-1.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Unbenannte überlieferte Bildtafel aus Aldervan · Herkunft noch unbekannt"
+              }
+            ],
+            "unknown": true
+          }
+        ]
+      }
+    ]
+  }
+}

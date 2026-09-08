@@ -500,3 +500,8 @@ a.livestock-entry:hover {
   .livestock-entry-copy { padding-inline: 17px; }
   .livestock-entry-art--pair { gap: 4px; padding-inline: 7px; }
 }
+
+.livestock-tabs.livestock-tabs--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.livestock-tabs.livestock-tabs--2 a { border-bottom: 0; }
+.livestock-entry--unknown { border-style: dashed; }
+.livestock-entry--unknown .livestock-entry-copy h3 { color: #765144; font-style: italic; }

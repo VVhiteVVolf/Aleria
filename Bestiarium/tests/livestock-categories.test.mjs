@@ -46,7 +46,7 @@ test('all generated livestock pages match their source records', async () => {
     assert.equal(record.id, id);
     assert.equal(html.replace(/\r\n/g, '\n'), renderLivestockCategory(record));
     assert.equal((html.match(/aria-current="page"/g) || []).length, 2);
-    assert.equal((html.match(/class="livestock-tabs"/g) || []).length, 1);
+    assert.equal((html.match(/class="livestock-tabs livestock-tabs--6"/g) || []).length, 1);
     assert(!/https?:\/\//.test(html));
     assert(!/\son(?:click|input|change)=/i.test(html));
     assert(!html.includes('tumblr_otwjgn'));
@@ -61,8 +61,13 @@ test('the old tables contribute only their 32 named animal entries', async () =>
     const { record } = await readCategory(id);
     const entries = record.catalog.groups.flatMap(group => group.entries);
     assert.deepEqual(entries.map(entry => entry.title), expectedEntries[id]);
-    assert(entries.every(entry => entry.href === null));
-    assert(entries.every(entry => entry.status === 'Einzeldossier vorgemerkt'));
+    if (id === 'haustiere') {
+      assert.deepEqual(entries.map(entry => entry.href), ['./hunde/index.html', './katzen/index.html']);
+      assert(entries.every(entry => entry.status === 'Rassenregister verfügbar'));
+    } else {
+      assert(entries.every(entry => entry.href === null));
+      assert(entries.every(entry => entry.status === 'Einzeldossier vorgemerkt'));
+    }
     assert(entries.every(entry => entry.images.length > 0));
     count += entries.length;
   }

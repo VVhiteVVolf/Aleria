@@ -1,13 +1,43 @@
 import { escapeHtml, renderPicture, romanNumeral } from '../book-shell/book-template-utils.mjs';
 import { LIVESTOCK_CATEGORIES } from './livestock-category-registry.mjs';
 
-const VERSION = '20260908-livestock-category-v1';
+const VERSION = '20260908-livestock-category-v2';
 
-function renderTabs(currentId) {
-  return LIVESTOCK_CATEGORIES.map(category => {
-    const current = category.id === currentId;
-    return `<a href="${current ? './index.html' : `../${escapeHtml(category.id)}/index.html`}"${current ? ' aria-current="page"' : ''}>${escapeHtml(category.title)}</a>`;
+function renderTabs(currentId, tabs) {
+  return tabs.map(tab => {
+    const current = tab.id === currentId;
+    return `<a href="${escapeHtml(tab.href)}"${current ? ' aria-current="page"' : ''}>${escapeHtml(tab.title)}</a>`;
   }).join('\n');
+}
+
+function categoryNavigation(record) {
+  return {
+    generatedBy: 'Bestiarium/scripts/build-livestock-categories.mjs',
+    pageTitleContext: 'Vieh',
+    faviconHref: '../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp',
+    bookShellHref: '../../../modules/book-shell/book-shell.css',
+    stylesheetHref: '../../../modules/livestock-category/livestock-category.css',
+    skipLabel: 'Zur Viehkunde',
+    rootHref: '../../../index.html#tiere',
+    mastheadEdition: 'Thalenorische Akademie · Archiv der Viehkunde',
+    breadcrumbs: [
+      { title: 'Bestiarium', href: '../../../index.html' },
+      { title: 'Vieh', href: '../index.html' }
+    ],
+    tabsLabel: 'Unterregister der Viehkunde',
+    tabs: LIVESTOCK_CATEGORIES.map(category => ({
+      ...category,
+      href: category.id === record.id ? './index.html' : `../${category.id}/index.html`
+    })),
+    sealLabel: 'Viehregister',
+    parentHref: '../index.html',
+    parentLabel: 'Zur Viehkunde',
+    footerBackLabel: 'zur Viehkunde',
+    registerLabel: 'Kapitel der Viehkunde',
+    registerBackLabel: 'Alle Viehgruppen',
+    loreLabel: 'Viehkundlicher Text',
+    footerContext: 'Vieh Alerias'
+  };
 }
 
 function renderSection(section, index) {
@@ -27,9 +57,10 @@ function renderEntryArt(entry) {
 
 function renderEntry(entry, groupTitle) {
   const content = `${renderEntryArt(entry)}<div class="livestock-entry-copy"><p class="eyebrow">${escapeHtml(entry.region)}</p><h3>${escapeHtml(entry.title)}</h3><p>${escapeHtml(entry.description)}</p><span>${escapeHtml(entry.status)}${entry.href ? ' <i aria-hidden="true">↗</i>' : ''}</span></div>`;
+  const modifier = entry.unknown ? ' livestock-entry--unknown' : '';
   return entry.href
-    ? `<a class="livestock-entry" href="${escapeHtml(entry.href)}" data-livestock-entry data-entry-id="${escapeHtml(entry.id)}" data-entry-group="${escapeHtml(groupTitle)}">${content}</a>`
-    : `<article class="livestock-entry livestock-entry--pending" data-livestock-entry data-entry-id="${escapeHtml(entry.id)}" data-entry-group="${escapeHtml(groupTitle)}">${content}</article>`;
+    ? `<a class="livestock-entry${modifier}" href="${escapeHtml(entry.href)}" data-livestock-entry data-entry-id="${escapeHtml(entry.id)}" data-entry-group="${escapeHtml(groupTitle)}">${content}</a>`
+    : `<article class="livestock-entry livestock-entry--pending${modifier}" data-livestock-entry data-entry-id="${escapeHtml(entry.id)}" data-entry-group="${escapeHtml(groupTitle)}">${content}</article>`;
 }
 
 function renderGroup(group, index) {
@@ -42,42 +73,46 @@ function renderGroup(group, index) {
   </section>`;
 }
 
-export function renderLivestockCategory(record) {
+export function renderLivestockArchive(record, navigation) {
   const catalogNumber = romanNumeral(record.sections.length + 1);
   return `<!doctype html>
-<!-- Generated from uebersicht.json by Bestiarium/scripts/build-livestock-categories.mjs. -->
+<!-- Generated from uebersicht.json by ${escapeHtml(navigation.generatedBy)}. -->
 <html lang="de">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#eee5ce">
-  <title>${escapeHtml(record.title)} · Vieh · Bestiarium von Aleria</title><meta name="description" content="${escapeHtml(record.lead)}">
-  <link rel="icon" href="../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
-  <link rel="stylesheet" href="../../../modules/book-shell/book-shell.css?v=${VERSION}">
-  <link rel="stylesheet" href="../../../modules/livestock-category/livestock-category.css?v=${VERSION}">
+  <title>${escapeHtml(record.title)} · ${escapeHtml(navigation.pageTitleContext)} · Bestiarium von Aleria</title><meta name="description" content="${escapeHtml(record.lead)}">
+  <link rel="icon" href="${escapeHtml(navigation.faviconHref)}" type="image/webp">
+  <link rel="stylesheet" href="${escapeHtml(navigation.bookShellHref)}?v=${VERSION}">
+  <link rel="stylesheet" href="${escapeHtml(navigation.stylesheetHref)}?v=${VERSION}">
 </head>
 <body>
-  <a class="skip-link" href="#${escapeHtml(record.sections[0].id)}">Zur Viehkunde</a>
+  <a class="skip-link" href="#${escapeHtml(record.sections[0].id)}">${escapeHtml(navigation.skipLabel)}</a>
   <div class="bestiary-page livestock-page" data-livestock-category data-category-id="${escapeHtml(record.id)}">
-    <header class="masthead" id="anfang"><a class="almanach-link" href="../../../index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · Archiv der Viehkunde</span><span class="masthead-mark" aria-hidden="true">A</span></header>
+    <header class="masthead" id="anfang"><a class="almanach-link" href="${escapeHtml(navigation.rootHref)}"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">${escapeHtml(navigation.mastheadEdition)}</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
-      <nav class="livestock-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../index.html">Vieh</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(record.title)}</span></nav>
-      <nav class="livestock-tabs" aria-label="Unterregister der Viehkunde">${renderTabs(record.id)}</nav>
+      <nav class="livestock-breadcrumb" aria-label="Brotkrumennavigation">${navigation.breadcrumbs.map(crumb => `<a href="${escapeHtml(crumb.href)}">${escapeHtml(crumb.title)}</a><span aria-hidden="true">/</span>`).join('')}<span aria-current="page">${escapeHtml(record.title)}</span></nav>
+      <nav class="livestock-tabs livestock-tabs--${navigation.tabs.length}" aria-label="${escapeHtml(navigation.tabsLabel)}">${renderTabs(record.id, navigation.tabs)}</nav>
       <section class="livestock-hero" aria-labelledby="livestock-title">
-        <div class="livestock-hero-copy"><div class="livestock-seal">${renderPicture(record.icon, { className: 'livestock-icon', eager: true })}<span>Viehregister</span></div><p class="eyebrow">${escapeHtml(record.classification)} · Archivblatt ${escapeHtml(record.folio)}</p><h1 id="livestock-title">${escapeHtml(record.title)}</h1><p class="livestock-subtitle">${escapeHtml(record.subtitle)}</p><p class="livestock-lead">${escapeHtml(record.lead)}</p><div class="livestock-actions"><a class="ink-button" href="#bestand">Bestand aufschlagen <span aria-hidden="true">↓</span></a><a href="../index.html">Zur Viehkunde ↗</a></div></div>
+        <div class="livestock-hero-copy"><div class="livestock-seal">${renderPicture(record.icon, { className: 'livestock-icon', eager: true })}<span>${escapeHtml(navigation.sealLabel)}</span></div><p class="eyebrow">${escapeHtml(record.classification)} · Archivblatt ${escapeHtml(record.folio)}</p><h1 id="livestock-title">${escapeHtml(record.title)}</h1><p class="livestock-subtitle">${escapeHtml(record.subtitle)}</p><p class="livestock-lead">${escapeHtml(record.lead)}</p><div class="livestock-actions"><a class="ink-button" href="#bestand">Bestand aufschlagen <span aria-hidden="true">↓</span></a><a href="${escapeHtml(navigation.parentHref)}">${escapeHtml(navigation.parentLabel)} ↗</a></div></div>
         <figure class="livestock-hero-figure">${renderPicture(record.hero, { className: 'livestock-hero-image', eager: true })}<figcaption>${escapeHtml(record.hero.caption)}</figcaption></figure>
       </section>
       <blockquote class="livestock-quote"><span aria-hidden="true">❧</span><p>„${escapeHtml(record.quote)}“</p><span aria-hidden="true">❧</span></blockquote>
       <div class="livestock-book">
-        <aside class="livestock-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="Kapitel der Viehkunde">${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + 1)}</span>${escapeHtml(section.title)}</a>`).join('\n')}<a class="livestock-register-extra" href="#bestand"><span>${catalogNumber}</span>${escapeHtml(record.catalog.title)}</a></nav><a class="livestock-register-back" href="../index.html">← Alle Viehgruppen</a></div></aside>
+        <aside class="livestock-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="${escapeHtml(navigation.registerLabel)}">${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + 1)}</span>${escapeHtml(section.title)}</a>`).join('\n')}<a class="livestock-register-extra" href="#bestand"><span>${catalogNumber}</span>${escapeHtml(record.catalog.title)}</a></nav><a class="livestock-register-back" href="${escapeHtml(navigation.parentHref)}">← ${escapeHtml(navigation.registerBackLabel)}</a></div></aside>
         <div class="livestock-content">
           ${renderFacts(record.facts)}
-          <article class="livestock-lore" aria-label="Viehkundlicher Text zu ${escapeHtml(record.title)}">${record.sections.map(renderSection).join('\n')}</article>
+          <article class="livestock-lore" aria-label="${escapeHtml(navigation.loreLabel)} zu ${escapeHtml(record.title)}">${record.sections.map(renderSection).join('\n')}</article>
           <section class="livestock-catalog" id="bestand" aria-labelledby="livestock-catalog-title"><header class="livestock-catalog-heading"><p class="eyebrow">${catalogNumber} · Ordnung der alten Tafeln</p><h2 id="livestock-catalog-title">${escapeHtml(record.catalog.title)}</h2><p>${escapeHtml(record.catalog.intro)}</p></header>${record.catalog.groups.map(renderGroup).join('\n')}</section>
         </div>
       </div>
     </main>
-    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escapeHtml(record.title)} · Vieh Alerias</small></p><a href="../index.html">Zurück zur Viehkunde ↗</a></footer>
+    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escapeHtml(record.title)} · ${escapeHtml(navigation.footerContext)}</small></p><a href="${escapeHtml(navigation.parentHref)}">Zurück ${escapeHtml(navigation.footerBackLabel)} ↗</a></footer>
   </div>
 </body>
 </html>
 `.replace(/[ \t]+$/gm, '');
+}
+
+export function renderLivestockCategory(record) {
+  return renderLivestockArchive(record, categoryNavigation(record));
 }
