@@ -1,0 +1,92 @@
+{
+  "id": "riesen",
+  "name": "Riesen",
+  "classification": "Gigantische humanoide Kreaturen uralter Abstammung",
+  "continent": "Aleria",
+  "region": "Abgelegene Berge, Wälder, Höhlen und Kältezonen",
+  "folio": "III / 04",
+  "parentGroupId": "kreaturengruppen",
+  "summary": "Riesen gelten als Verkörperungen urtümlicher Natur, wilder Schöpfung und gefallener Größe. Ihre gewaltigen humanoiden Körper können Landschaften prägen, Festungen brechen und zugleich eine verlorene Würde erkennen lassen, an die sich manche von ihnen nur noch bruchstückhaft erinnern.",
+  "quote": "Wenn ein Riese schweigt, hört man den Berg atmen; wenn er zürnt, antwortet der Berg mit Steinen.",
+  "quoteAttribution": "Überlieferter Spruch aus den Berichten der Riesenbeobachter",
+  "icon": {
+    "src": "../../../assets/icons/riesen.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Symbol für Riesen"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/riesen-hero.webp",
+    "width": 772,
+    "height": 771,
+    "alt": "Vollständig sichtbarer sitzender Riese im Größenvergleich mit einer Person",
+    "caption": "Überlieferte Bildtafel · Ein Riese und eine menschliche Beobachterin"
+  },
+  "facts": [
+    { "label": "Name", "value": "Riesen" },
+    { "label": "Typ", "value": "Humanoide Kreatur" },
+    { "label": "Größe", "value": "Je nach Unterart stark verschieden" },
+    { "label": "Herkunft", "value": "Je nach Unterart verschieden" },
+    { "label": "Lebensraum", "value": "Abgelegene Gebirge, Höhlen, Wälder und kalte Wildnis" },
+    { "label": "Ernährung", "value": "Allesfresser" },
+    { "label": "Verhalten", "value": "Territorial, zurückgezogen und häufig melancholisch oder reizbar" },
+    { "label": "Stärken", "value": "Gewaltige Kraft, Reichweite, Ausdauer und je nach Form elementare Fähigkeiten" },
+    { "label": "Schwächen", "value": "Langsame Reflexe, geringe Beweglichkeit und Anfälligkeit für gezielte Magie" },
+    { "label": "Verständigung", "value": "Seltene Absprachen sind möglich, bleiben jedoch unberechenbar und gefährlich" },
+    { "label": "Bekannte Beute", "value": "???" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Körperlichkeit", "Intelligenz", "Widerstandskraft", "Sozialverhalten", "Übernatürliche Macht"],
+    "values": [10, 10, 4, 10, 3, 8],
+    "source": "Aus Körpergröße, Landschaftseinfluss, elementaren Fähigkeiten, Verhalten und den überlieferten taktischen Schwächen abgeleitet",
+    "intro": "Die Archivbewertung beschreibt einen ausgewachsenen Riesen. Unterarten, Alter und die jeweilige Bindung an Landschaft oder Element können einzelne Werte deutlich verändern."
+  },
+  "related": {
+    "eyebrow": "Überlieferte Erscheinungsformen",
+    "title": "Bekannte Unterarten",
+    "intro": "Sieben Riesenformen sind benannt und bildlich überliefert. Acht weitere Stellen bleiben ausdrücklich offen, bis Namen und sichere Beschreibungen vorliegen.",
+    "entries": [
+      { "id": "joetun", "name": "Jötun", "region": "Uralte Riesenform", "description": "Eine machtvolle, traditionsreiche Form, die besonders eng mit den ältesten Erzählungen über Riesen verbunden wird.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-joetun.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Jötun" } },
+      { "id": "goliath", "name": "Goliath", "region": "Kraftvolle Riesenform", "description": "Ein massig gebauter Riese, dessen überragende Körperkraft selbst unter seinesgleichen hervorsticht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-goliath.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Goliath" } },
+      { "id": "zyklop", "name": "Zyklop", "region": "Einäugige Riesenform", "description": "Ein einäugiger Riese mit ausgeprägter Tiefenwirkung seines Blicks, großer Reichweite und schwerer Schlagkraft.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-zyklop.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Zyklop" } },
+      { "id": "fomoraig", "name": "Fomóraig", "region": "Alte Riesenlinie", "description": "Eine fremdartig wirkende Linie, deren Gestalt in Überlieferungen häufig mit Chaos und uralter Wildnis verbunden ist.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-fomoraig.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Fomóraig" } },
+      { "id": "tlacharn", "name": "Tlacharn", "region": "Wehrhafte Riesenform", "description": "Ein widerstandsfähiger Riese, der sein Gebiet mit Geduld beobachtet und auf Eindringlinge mit überwältigender Gewalt reagiert.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-tlacharn.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Tlacharn" } },
+      { "id": "bogann", "name": "Bogann", "region": "Zurückgezogene Riesenform", "description": "Eine scheue und schwer aufzuspürende Form, die lange Ruhezeiten mit plötzlicher territorialer Härte verbindet.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-bogann.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Bogann" } },
+      { "id": "silvarn", "name": "Silvarn", "region": "Naturverbundene Riesenform", "description": "Ein Riese, dessen Erscheinung und Verhalten besonders eng mit wilder Vegetation und unberührter Landschaft verwoben sind.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/riesen-silvarn.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Silvarn" } },
+      { "id": "offener-eintrag-01", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-02", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-03", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-04", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-05", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-06", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-07", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-08", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true }
+    ]
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Riesen sind uralte humanoide Kreaturen, deren Größe jede vertraute Ordnung sprengt. In Erzählungen verkörpern sie Natur, Chaos und wilde Schöpfung zugleich. Sie können Wächter einer Landschaft oder ihre größte unmittelbare Bedrohung sein." },
+      { "type": "paragraph", "text": "Ihre Bewegungen wirken langsam, doch die Reichweite eines einzigen Schrittes oder Schlags gleicht diesen Eindruck aus. Einzelne Riesen zeigen Reste von Sprache, Erinnerung und Würde; andere reagieren beinahe nur noch auf Hunger und Störung." }
+    ] },
+    { "id": "mythos", "title": "Mythos", "blocks": [
+      { "type": "paragraph", "text": "Eine Überlieferung aus dem Äon der Göttlichen führt die Riesen auf albische Stämme zurück. Migdal der Trickser und Grimnar der Plünderer sollen ihnen Stärke, Größe und einen Anteil an Göttlichkeit versprochen haben. Die geschlossenen Pakte vergrößerten ihre Körper, während Verstand und Kultur verfielen." },
+      { "type": "paragraph", "text": "Seitdem gelten Riesen als Zeichen gefallener Größe und ungestillter Hybris. Ob der Wandel auch Unsterblichkeit brachte oder nur ein außergewöhnlich langes, rastloses Leben, bleibt ungeklärt." }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Riesen meiden dicht bewohnte Gebiete und ziehen sich in Berge, Höhlen, alte Wälder und kalte Wildnis zurück. Ihre Lager sind an gebrochenem Fels, tiefen Tritten und unnatürlich verschobenen Baumstämmen oft schon aus großer Entfernung zu erkennen." },
+      { "type": "paragraph", "text": "Manche Landschaften scheinen sich ihrer Anwesenheit anzupassen. Waldformen tragen Moos und Pflanzen, während Riesen kalter Regionen mit Eis, Wind und langer Starre verbunden werden. So spiegelt jedes Revier zugleich Majestät und Verwüstung." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten", "blocks": [
+      { "type": "paragraph", "text": "Die meisten Riesen verteidigen ihr Gebiet und begegnen Menschen mit Gleichgültigkeit oder Feindseligkeit. Neben roher Gewalt berichten Beobachter von langer Melancholie und Augenblicken, in denen ein Riese auf alte Zeichen oder Lieder reagiert." },
+      { "type": "paragraph", "text": "Absprachen sind selten, aber nicht ausgeschlossen. Wer einen Riesen anspricht, muss dessen Stolz, langsame Entschlüsse und plötzliche Reizbarkeit bedenken; ein scheinbar friedlicher Handel kann mit einem einzigen missverstandenen Wort enden." }
+    ] },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "blocks": [
+      { "type": "paragraph", "text": "Riesen entwurzeln Bäume, werfen Felsblöcke und können Mauern oder Befestigungen mit wenigen Treffern brechen. Ihre Körper widerstehen vielen gewöhnlichen Waffen, und ihre Ausdauer erlaubt ihnen lange Märsche durch unwirtliches Gelände." },
+      { "type": "paragraph", "text": "Einzelne Formen beherrschen elementare Kräfte wie Frostwind oder Feuer. Langsame Reflexe, geringe Wendigkeit und der gezielte Einsatz von Magie bieten kleineren Gegnern dennoch Möglichkeiten, solange sie Abstand und Gelände kontrollieren." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Drei unterschiedlich große Trittsiegel an einem Ort bedeuten nicht zwingend drei Riesen; derselbe Riese kann je nach Boden sehr verschiedene Spuren hinterlassen.", "Riesen verwenden abgebrochene Baumstämme und Gebäudeteile oft so selbstverständlich wie Menschen Stäbe und Keulen.", "Ein Riese, der einen alten Gegenstand bewacht, reagiert häufig stärker auf dessen Berührung als auf das bloße Betreten seines Reviers.", "Beobachter schätzen Entfernung und Reichweite grundsätzlich zu niedrig ein, weil die langsamen Bewegungen der Riesen ihre tatsächliche Geschwindigkeit verschleiern."] }
+    ] }
+  ],
+  "plates": []
+}

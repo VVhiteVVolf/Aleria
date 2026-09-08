@@ -1,0 +1,92 @@
+{
+  "id": "nekrophagen",
+  "name": "Nekrophagen",
+  "classification": "Untote Körper und nekromantisch verdorbene Wesen",
+  "continent": "Aleria",
+  "region": "Gräber, Ruinen und unheilige Orte",
+  "folio": "III / 02",
+  "parentGroupId": "kreaturengruppen",
+  "summary": "Nekrophagen sind Tote, die durch Nekromantie, Flüche oder widernatürliche Umstände in eine verzerrte Form des Daseins zurückkehren. Zwischen willenloser Hülle und planendem Lich umfasst die Gattung sehr verschiedene Grade von Verfall, Hunger und Bewusstsein.",
+  "quote": "Wo die Toten ohne Namen liegen, findet die Nacht genug Körper, um wieder aufzustehen.",
+  "quoteAttribution": "Überlieferter Warnspruch der Totengräber",
+  "icon": {
+    "src": "../../../assets/icons/nekrophagen.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Symbol für Nekrophagen"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer gerüsteter Untoter mit leuchtenden Augen und Axt",
+    "caption": "Überlieferte Bildtafel · Ein bewaffneter Nekrophag"
+  },
+  "facts": [
+    { "label": "Name", "value": "Nekrophag; Untoter" },
+    { "label": "Typ", "value": "Untot" },
+    { "label": "Variationen", "value": "Viele; von willenlosen Körpern bis zu mächtigen, selbstbewussten Wesen" },
+    { "label": "Zugehörigkeit", "value": "Zwischenwesen" },
+    { "label": "Entstehung", "value": "Nekromantie, Fluch, fehlende Totenruhe, starke Gefühle oder infernale Verderbnis" },
+    { "label": "Verbreitung", "value": "Bestattungsorte, Schlachtfelder, Ruinen, Sümpfe, Küsten und magisch belastete Stätten" },
+    { "label": "Antrieb", "value": "Hunger, Befehl, Rache, Grabwacht oder der eigene Wille" },
+    { "label": "Verhalten", "value": "Je nach Unterart stumpf, lauernd, schwarmbildend oder strategisch" },
+    { "label": "Stärken", "value": "Widerstand gegen Kälte, nekrotische Magie, Schmerz und Erschöpfung" },
+    { "label": "Schwächen", "value": "Feuer, strahlende Kraft, geweihte und teils silberne Waffen" },
+    { "label": "Nachsorge", "value": "Überreste reinigen, Ursache prüfen und den Ort erneut weihen oder sichern" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Körperlichkeit", "Intelligenz", "Widerstandskraft", "Sozialverhalten", "Übernatürliche Macht"],
+    "values": [8, 7, 4, 8, 5, 8],
+    "source": "Aus Entstehung, Jagdverhalten, körperlicher Zähigkeit und den überlieferten Abwehrmaßnahmen der Gattung abgeleitet",
+    "intro": "Die Werte bilden einen mittleren Nekrophagen ab. Willenlose Tote liegen bei der Intelligenz weit darunter, während Lichs und andere bewusste Untote sie deutlich übertreffen."
+  },
+  "related": {
+    "eyebrow": "Überlieferte Erscheinungsformen",
+    "title": "Bekannte Unterarten",
+    "intro": "Die verzeichneten Unterarten unterscheiden sich in Ursprung, Bewusstsein und körperlichem Verfall. Ein letzter Archivplatz bleibt für eine noch unbestimmte Form offen.",
+    "entries": [
+      { "id": "zombie", "name": "Zombie", "region": "Wiederbelebter Körper", "description": "Eine meist willenlose Hülle, die einfachen Befehlen, Geräuschen oder rastlosem Hunger folgt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-zombie.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Zombie" } },
+      { "id": "ghule", "name": "Ghule", "region": "Aas- und Grabjäger", "description": "Rasche Nekrophagen, die Friedhöfe und Schlachtfelder nach Fleisch absuchen und in Gruppen besonders gefährlich werden.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-ghule.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Ghul" } },
+      { "id": "draugr", "name": "Draugr", "region": "Grabhügel Norrnaighs", "description": "Ein bewaffneter Grabwächter, dessen Wille an Hügel, Beigaben und alte Schwüre gebunden bleibt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-draugr.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Draugr" } },
+      { "id": "lich", "name": "Lich", "region": "Bewusster Nekromant", "description": "Ein machtvoller Untoter, der Verstand und Zauberkraft bewahrt und häufig aus verborgenen Ruinen oder Katakomben wirkt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-lich.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Lich" } },
+      { "id": "versunkener", "name": "Versunkener", "region": "Küsten und Gewässer", "description": "Ein vom Wasser gezeichneter Toter, der an Flussmündungen, Sümpfen und alten Schiffswracks umgeht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-versunkener.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Versunkener" } },
+      { "id": "scheusal", "name": "Scheusal", "region": "Verdorbene Leichenform", "description": "Ein schwer entstellter Nekrophag, dessen Körper von Hunger, Magie und unkontrolliertem Wachstum umgeformt wurde.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-scheusal.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbares Scheusal" } },
+      { "id": "gruftweib-verschlinger", "name": "Gruftweib / Verschlinger", "region": "Gruftgebundener Jäger", "description": "Eine lauernde Form, die enge Grabstätten nutzt und Beute mit überraschender Kraft in die Dunkelheit zieht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-gruftweib-verschlinger.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbares Gruftweib oder Verschlinger" } },
+      { "id": "skelett", "name": "Skelett", "region": "Belebtes Gebein", "description": "Durch Magie bewegte Knochen, die ohne Schmerz und Müdigkeit einfache Wacht- oder Kampfaufträge erfüllen.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-skelett.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbares Skelett" } },
+      { "id": "nebling", "name": "Nebling", "region": "Dunstgebundener Untoter", "description": "Ein schwer greifbarer Nekrophag, der seine Gestalt im Nebel verbirgt und aus geringer Entfernung zuschlägt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-nebling.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Nebling" } },
+      { "id": "widergaenger", "name": "Widergänger", "region": "Willensgebundener Toter", "description": "Ein Verstorbener, der aus Pflicht, Rache oder einem gebrochenen Versprechen in seinen Körper zurückkehrt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-widergaenger.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Widergänger" } },
+      { "id": "hexenrabe", "name": "Hexenrabe", "region": "Nekrotischer Vogel", "description": "Ein verdorbener Rabenvogel, der unheilige Stätten umkreist und dort häufig größere Nekrophagen ankündigt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-hexenrabe.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Hexenrabe" } },
+      { "id": "grall", "name": "Grall", "region": "Nekrophage Sonderform", "description": "Eine selten verzeichnete Form, deren genaue Entstehung und Stellung innerhalb der Untoten noch untersucht wird.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-grall.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbarer Grall" } },
+      { "id": "mumie", "name": "Mumie", "region": "Rituell erhaltener Toter", "description": "Ein konservierter Leichnam, dessen Fluch an Grabritus, Beigaben oder die Verletzung seiner Ruhestätte gebunden ist.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-mumie.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Mumie" } },
+      { "id": "sumpfzehrer", "name": "Sumpfzehrer", "region": "Sumpf und Moor", "description": "Ein feuchtigkeitsgezeichneter Nekrophag, der reglos zwischen Schlamm und Schilf auf nahe Beute wartet.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/nekrophagen-sumpfzehrer.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Sumpfzehrer" } },
+      { "id": "offener-eintrag-01", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true }
+    ]
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Nekrophagen entstehen, wenn der Tod durch Magie, Fluch oder andere widernatürliche Umstände gestört wird. Ihr Dasein gilt als sichtbares Zeichen dafür, dass ein Ort, ein Körper oder ein Begräbnis seine vorgesehene Ruhe verloren hat." },
+      { "type": "paragraph", "text": "Nicht jeder Untote ist geistlos. Während Zombies und Skelette oft nur Befehle oder Triebe ausführen, können Widergänger, Draugr und Lichs Erinnerung, Absicht und eine erschreckende Geduld bewahren." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Viele Kulturen betrachten sorgfältige Totenriten, Segnungen und ein geordnetes Leben als Schutz vor nekrophager Wiederkehr. Ob fehlender Glaube allein einen Toten verwundbar macht, bleibt unter Gelehrten umstritten; sicher ist, dass ungeweihte Massengräber und gestörte Bestattungen das Risiko erhöhen." },
+      { "type": "paragraph", "text": "Wo Nekrophagen wiederholt auftreten, liegt oft eine gemeinsame Ursache vor: ein wirkender Nekromant, ein alter Fluch, infernale Verderbnis oder ein Ort, an dem Tod und Magie einander über lange Zeit durchdrungen haben." }
+    ] },
+    { "id": "entstehung", "title": "Entstehung und Ursache", "blocks": [
+      { "type": "list", "items": ["Gezielte Nekromantie und Bindung durch fremden Willen", "Unbestattete oder entweihte Leichname", "Starke Gefühle, Rache und gebrochene Schwüre", "Flüche, dunkle Magie und infernale Verderbnis", "Magisch belastete Schlachtfelder, Grabstätten und Unglücksorte"] },
+      { "type": "paragraph", "text": "Die Entstehung entscheidet über den Antrieb. Ein befohlener Körper kann mit dem Ende seines Beschwörers zusammenbrechen, während ein durch Rache gebundener Widergänger erst ruht, wenn sein Anlass beseitigt ist." }
+    ] },
+    { "id": "bekaempfung", "title": "Bekämpfung", "blocks": [
+      { "type": "paragraph", "text": "Göttliche und natürliche Magie, geweihte oder silberne Waffen und reinigendes Feuer gehören zu den verlässlichsten Mitteln. Bei körperlichen Untoten verhindert Feuer häufig, dass verdorbenes Gewebe weiterkämpft oder sich erneut erhebt." },
+      { "type": "paragraph", "text": "Da jede Unterart eigene Schwächen besitzt, sollte eine Jagd mit Beobachtung beginnen. Nach einem Kampf müssen Körper, Grabstätte und magische Ursache gereinigt werden. Geistliche, Hexenjäger und Gelehrte der Nekromantie werden deshalb oft gemeinsam hinzugezogen." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten", "blocks": [
+      { "type": "paragraph", "text": "Draugr werden vor allem mit den Grabhügeln Norrnaighs verbunden. Versunkene finden sich an Küsten, Flussmündungen, Sümpfen und Schiffswracks. Ghule und Scheusale folgen häufig den Spuren großer Schlachten, Friedhöfe und Massengräber." },
+      { "type": "paragraph", "text": "Lichs meiden offene Wege und wählen Ruinen, Türme, Katakomben oder andere magiereiche Orte. Die Umgebung verrät oft mehr als eine einzelne Spur: ausbleibende Tiere, verdorbene Luft und ungewöhnlich unversehrte Leichen weisen auf fortwirkende Nekromantie hin." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Totengräber legen Werkzeuge nie auf einen offenen Sarg, weil dies als Einladung zur Rückkehr gilt.", "Ein Nekrophag ohne sichtbaren Hunger kann gefährlicher sein als ein rasender Ghul, da er wahrscheinlich einem Ziel oder Befehl folgt.", "Silber wird nicht gegen jede Unterart benötigt, dient aber häufig als verlässlicher Träger geweihter Zeichen.", "Nach einer Begegnung wird selbst scheinbar saubere Ausrüstung geprüft, weil nekrotische Rückstände lange unbemerkt bleiben können."] }
+    ] }
+  ],
+  "plates": []
+}

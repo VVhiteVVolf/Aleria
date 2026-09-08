@@ -1,0 +1,92 @@
+{
+  "id": "trolle",
+  "name": "Trolle",
+  "classification": "Riesige, regenerierende Kreaturen der Wildnis",
+  "continent": "Aleria",
+  "region": "Abgelegene Wälder, Berge, Sümpfe und Höhlen",
+  "folio": "III / 03",
+  "parentGroupId": "kreaturengruppen",
+  "summary": "Trolle gehören zu den ältesten und körperlich gewaltigsten Kreaturen Alerias. Sie sind unberechenbar, zäh und von roher Naturkraft erfüllt; trotz ihres geringen Sprachvermögens handeln sie instinktiv klug und passen Jagd, Nahrung und Unterschlupf ihrer Umgebung an.",
+  "quote": "Ein Troll vergisst den Schmerz, sobald das Fleisch sich schließt; Feuer aber merkt er sich.",
+  "quoteAttribution": "Lehrsatz wandernder Trolljäger",
+  "icon": {
+    "src": "../../../assets/icons/trolle.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Symbol für Trolle"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/trolle-hero.webp",
+    "width": 772,
+    "height": 771,
+    "alt": "Vollständig sichtbarer gewaltiger Troll im Wald gegenüber einem gerüsteten Kämpfer",
+    "caption": "Überlieferte Bildtafel · Die Größe eines Trolls im Vergleich zu einem Menschen"
+  },
+  "facts": [
+    { "label": "Name", "value": "Troll" },
+    { "label": "Typ", "value": "Kreatur" },
+    { "label": "Größe", "value": "Etwa fünf bis sieben Meter" },
+    { "label": "Herkunft", "value": "Je nach Unterart verschieden" },
+    { "label": "Lebensraum", "value": "Abgelegene Wildnis mit Nahrung und lichtgeschütztem Unterschlupf" },
+    { "label": "Ernährung", "value": "Allesfresser und opportunistischer Jäger" },
+    { "label": "Verhalten", "value": "Territorial, hungergetrieben und instinktiv berechnend" },
+    { "label": "Stärken", "value": "Gewaltige Kraft, lange Reichweite, Kälteresistenz und schnelle Regeneration" },
+    { "label": "Schwächen", "value": "Feuer, Säure und Sonnenlicht" },
+    { "label": "Bekannte Beute", "value": "Trollblut und Trollknochen" },
+    { "label": "Verständigung", "value": "Selten verlässlich; Ablenkung, Tausch oder Abschreckung können gelingen" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Körperlichkeit", "Intelligenz", "Widerstandskraft", "Sozialverhalten", "Übernatürliche Macht"],
+    "values": [9, 10, 4, 10, 3, 7],
+    "source": "Aus Körpergröße, Regeneration, Jagdverhalten, Reizbarkeit und den überlieferten elementaren Varianten abgeleitet",
+    "intro": "Die Bewertung beschreibt einen ausgewachsenen Troll in seinem angestammten Lebensraum. Hunger, Feuer und die Fähigkeiten einzelner Unterarten verändern sein Verhalten erheblich."
+  },
+  "related": {
+    "eyebrow": "Überlieferte Erscheinungsformen",
+    "title": "Bekannte Unterarten",
+    "intro": "Trolle übernehmen Merkmale ihres Lebensraums. Die Tafeln zeigen alle bislang benannten Formen vollständig und ohne Bildbeschnitt.",
+    "entries": [
+      { "id": "frosttroll", "name": "Frosttroll", "region": "Kalte Regionen", "description": "Eine kälteresistente Form, die selbst in Schnee und Eis ausdauernd jagt und mitunter frostige Kräfte zeigt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-frosttroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Frosttroll" } },
+      { "id": "flusstroll", "name": "Flusstroll", "region": "Flüsse und Ufer", "description": "Ein kräftiger Schwimmer, der sich nahe Strömungen verbirgt und Übergänge als Jagdgebiet beansprucht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-flusstroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Flusstroll" } },
+      { "id": "waldtroll", "name": "Waldtroll", "region": "Dichte Wälder", "description": "Eine zwischen Stämmen und Unterholz schwer erkennbare Form, die Deckung und kurze Angriffswege nutzt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-waldtroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Waldtroll" } },
+      { "id": "bergtroll", "name": "Bergtroll", "region": "Gebirge", "description": "Ein schwer gebauter Troll, der Felsvorsprünge, Geröll und große Höhen als natürliches Revier beherrscht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-bergtroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Bergtroll" } },
+      { "id": "landtroll", "name": "Landtroll", "region": "Offenes Land", "description": "Eine weit wandernde Form, die weniger Deckung benötigt und Beute über größere Strecken verfolgt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-landtroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Landtroll" } },
+      { "id": "hoehlentroll", "name": "Höhlentroll", "region": "Höhlen", "description": "Ein lichtscheuer Lauerjäger, dessen Kraft und Orientierung in engen, dunklen Gängen besonders zur Geltung kommen.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-hoehlentroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Höhlentroll" } },
+      { "id": "sumpftroll", "name": "Sumpftroll", "region": "Sümpfe", "description": "Eine schlammfarbene Form, die weichen Grund sicher durchquert und reglos im trüben Wasser warten kann.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-sumpftroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Sumpftroll" } },
+      { "id": "huegeltroll", "name": "Hügeltroll", "region": "Hügelland", "description": "Ein ausdauernder Troll, der Kuppen als Aussichtspunkte und Mulden als geschützte Lager nutzt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-huegeltroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Hügeltroll" } },
+      { "id": "nebeltroll", "name": "Nebeltroll", "region": "Nebelreiche Wildnis", "description": "Eine selten früh erkannte Form, die gedämpfte Sicht und feuchte Luft zur Annäherung nutzt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-nebeltroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Nebeltroll" } },
+      { "id": "steppentroll", "name": "Steppentroll", "region": "Steppe", "description": "Ein langbeiniger, ausdauernder Jäger der offenen Weite, der Schattenplätze sorgfältig auswählt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-steppentroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Steppentroll" } },
+      { "id": "aschetroll", "name": "Aschetroll", "region": "Aschereiche Gebiete", "description": "Eine dunkle, hitzegezeichnete Form, deren Lebensraum den üblichen Einsatz von Feuer erschweren kann.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-aschetroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Aschetroll" } },
+      { "id": "tundratroll", "name": "Tundratroll", "region": "Tundra", "description": "Ein breit gebauter Wanderer kalter Ebenen, der lange Hungerzeiten und harte Witterung übersteht.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-tundratroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Tundratroll" } },
+      { "id": "dschungeltroll", "name": "Dschungeltroll", "region": "Dschungel", "description": "Eine bewegliche Form, die dichtes Pflanzenwerk, hohe Feuchtigkeit und überraschende Angriffe nutzt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-dschungeltroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Dschungeltroll" } },
+      { "id": "tiefentroll", "name": "Tiefentroll", "region": "Tiefe Höhlensysteme", "description": "Eine bleiche, an dauerhafte Dunkelheit angepasste Form, die Erschütterungen und Gerüche sicher verfolgt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-tiefentroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Tiefentroll" } },
+      { "id": "steintroll", "name": "Steintroll", "region": "Felsige Wildnis", "description": "Eine besonders schwer verletzbare Form, deren Haut und Haltung an verwitterten Stein erinnern.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/trolle-steintroll.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Steintroll" } }
+    ]
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Trolle sind Verkörperungen wilder Kraft: riesig, zerstörerisch und schwer vorherzusagen. Sie folgen weder einer gemeinsamen Herrschaft noch einem bewussten Bündnis, sondern Hunger, Gefahr und Revier. Ein gesättigter Troll kann Reisende unbeachtet lassen, während ein hungriger dieselbe Spur unerbittlich verfolgt." },
+      { "type": "paragraph", "text": "Ihre geringe Sprache wird häufig mit völliger Dummheit verwechselt. Tatsächlich erkennen Trolle einfache Fallen, merken sich sichere Jagdwege und passen ihr Verhalten der Umgebung an. Ihre Klugheit bleibt instinktiv und unmittelbar." }
+    ] },
+    { "id": "mythos", "title": "Mythos", "blocks": [
+      { "type": "paragraph", "text": "Eine druidische Überlieferung bezeichnet Trolle als Nachfahren eines Stammes von Ur-Alben. Im Äon der Göttlichen bot Migdal der Trickser ihnen unermessliche Stärke und Widerstandskraft an. Als Preis verloren sie ihre Verträglichkeit mit Sonnenlicht und Feuer." },
+      { "type": "paragraph", "text": "Mit den Körpern zerfielen Sprache, Kunst und die einstige Bindung an die Natur. Druiden erzählen den Mythos deshalb als Mahnung vor Stolz und falschen Versprechen, nicht als sichere Naturgeschichte." }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum", "blocks": [
+      { "type": "paragraph", "text": "Trolle können fast überall bestehen, sofern Nahrung und ein lichtgeschützter Unterschlupf vorhanden sind. Sie bevorzugen abgelegene Wälder, Gebirge, Sümpfe und Höhlen und verlassen ihre Lager meist nach Einbruch der Dunkelheit." },
+      { "type": "paragraph", "text": "Kälte vertragen viele Formen gut. Nahrung und Jagdweise richten sich nach der Umgebung; als Allesfresser nehmen sie Wild, Aas, Pflanzen und leicht erreichbare Vorräte gleichermaßen an." }
+    ] },
+    { "id": "verhalten", "title": "Verhalten", "blocks": [
+      { "type": "paragraph", "text": "Hunger, Gefahr und Revier bestimmen beinahe jede Begegnung. Trolle greifen häufig an, wenn sie bedrängt werden oder Nahrung wittern. Einzelne lassen sich durch List, Tausch oder deutlich überlegene Gewalt ablenken, doch keine dieser Methoden ist zuverlässig." },
+      { "type": "paragraph", "text": "Die meisten leben allein. Seltene Gruppen dulden einander, wenn ein großer Unterschlupf oder eine reiche Nahrungsquelle den offenen Streit vermeidet." }
+    ] },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "blocks": [
+      { "type": "paragraph", "text": "Enorme Kraft, lange Reichweite und die Nutzung von Felsen, Bäumen oder Trümmern als Waffen machen selbst einen unbewaffneten Troll zu einer Gefahr. Seine Regeneration schließt tiefe Wunden und kann sogar verlorene Glieder ersetzen." },
+      { "type": "paragraph", "text": "Feuer und Säure hemmen die Heilung. Sonnenlicht schwächt viele Trolle, während einzelne Unterarten zusätzliche Kräfte wie frostigen Atem oder Tarnung besitzen. Vorhersehbare Triebe und langsames Denken bleiben ihre wichtigsten taktischen Nachteile." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Trolljäger tragen Feuer und Säure getrennt, damit ein einzelner Verlust nicht beide Mittel unbrauchbar macht.", "Ein ungewöhnlich stilles Trollrevier weist oft auf einen gesättigten Troll oder eine stärkere Gefahr hin.", "Abgetrennte Glieder gelten erst dann als ungefährlich, wenn ihre Regeneration sicher unterbunden wurde.", "Trolle merken sich wiederholt erfolgreiche Jagdplätze und kehren selbst nach langer Zeit dorthin zurück."] }
+    ] }
+  ],
+  "plates": []
+}

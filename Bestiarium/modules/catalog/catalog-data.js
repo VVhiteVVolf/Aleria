@@ -46,10 +46,10 @@ export const BESTIARY_CHAPTERS = [
     description: 'Von ruhelosen Erscheinungen bis zu steinernen Kolossen: Geschöpfe, die sich nicht ohne Weiteres in die natürliche Ordnung einfügen.',
     groups: [
       { id: 'kreaturengruppen', title: 'Die Kreaturengruppen', entries: [
-        entry('geister', 'Geister', 'Erscheinungen und Nachhall der Verstorbenen.'),
-        entry('nekrophagen', 'Nekrophagen', 'Wesen, deren Geschichten mit Aas, Gräbern und unstillbarem Hunger verbunden sind.'),
-        entry('trolle', 'Trolle', 'Steinige Kolosse und ihre unterschiedlichen Erscheinungsformen.'),
-        entry('riesen', 'Riesen', 'Uralte Größe: die Riesen Alerias und ihre Überlieferungen.')
+        entry('geister', 'Geister', 'Ruhelose Seelen, Erscheinungen und gebundene Nachhalle der Verstorbenen.', '', './wesen/gruppen/geister/index.html'),
+        entry('nekrophagen', 'Nekrophagen', 'Untote Körper und verdorbene Wesen zwischen Nekromantie, Grabwacht und Hunger.', '', './wesen/gruppen/nekrophagen/index.html'),
+        entry('trolle', 'Trolle', 'Regenerierende Kolosse der Wildnis und ihre fünfzehn bekannten Erscheinungsformen.', '', './wesen/gruppen/trolle/index.html'),
+        entry('riesen', 'Riesen', 'Uralte humanoide Giganten, ihre Mythen und bislang verzeichneten Unterarten.', '', './wesen/gruppen/riesen/index.html')
       ] },
       { id: 'einzelne-kreaturen', title: 'Einzelne Kreaturen', description: 'Individuelle Exemplare und besondere Wesen dieses Kapitels.', entries: [
         entry('fairean', 'Fairean', 'Uralte druidische Wächtergeister in hölzerner Gestalt: Ursprung, Gattungen, Fähigkeiten und Bildatlas.', '', './wesen/fairean/index.html'),

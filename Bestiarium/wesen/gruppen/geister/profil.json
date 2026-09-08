@@ -1,0 +1,92 @@
+{
+  "id": "geister",
+  "name": "Geister",
+  "classification": "Ruhelose Seelen und Erscheinungen der Zwischenwelt",
+  "continent": "Aleria",
+  "region": "Orte, Dinge und Schwellen",
+  "folio": "III / 01",
+  "parentGroupId": "kreaturengruppen",
+  "summary": "Geister sind Seelen, Erinnerungen oder gebundene Erscheinungen, die den Übergang aus der Welt der Lebenden nicht vollendet haben. Ihre Gestalt und ihr Verhalten werden von Todesart, Bindung und dem Gefühl geprägt, das sie in der Zwischenwelt festhält.",
+  "quote": "Todesfeen heulen und kreischen, und wer sie hört, der weiß, dass er in der nächsten Nacht zu den Toten gehören wird.",
+  "quoteAttribution": "Ein albischer Bauer erzählt eine Gruselgeschichte über Banshees",
+  "icon": {
+    "src": "../../../assets/icons/geister.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Symbol für Geister"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/geister-hero.webp",
+    "width": 1696,
+    "height": 2528,
+    "alt": "Geisterhafte Gestalt mit Laterne auf einem verwunschenen Friedhof",
+    "caption": "Überlieferte Bildtafel · Eine Erscheinung an der Schwelle zur Zwischenwelt"
+  },
+  "facts": [
+    { "label": "Name", "value": "Geister" },
+    { "label": "Typ", "value": "Untote Zwischenwesen" },
+    { "label": "Variationen", "value": "Viele; von kaum sichtbarem Nachhall bis zur körperlichen Erscheinung" },
+    { "label": "Zugehörigkeit", "value": "Zwischenwelt" },
+    { "label": "Entstehung", "value": "Bindung, unerfüllte Aufgabe, Fluch, gewaltsamer Tod oder magischer Unfall" },
+    { "label": "Wahrnehmung", "value": "Nicht für jeden gleich deutlich; Seher, Priester und Hexen erkennen sie leichter" },
+    { "label": "Auftreten", "value": "Gebundene Orte und Gegenstände, Schlachtfelder, Friedhöfe und Unglücksstätten" },
+    { "label": "Verhalten", "value": "Passiv, warnend, suchend, territorial oder rachsüchtig" },
+    { "label": "Stärken", "value": "Widerstand gegen Kälte, nekrotische Magie und gewöhnliche körperliche Waffen" },
+    { "label": "Schwächen", "value": "Strahlende und geweihte Kräfte; die Auflösung ihrer persönlichen Bindung" },
+    { "label": "Dauerhafte Erlösung", "value": "Aufgabe erfüllen, Unrecht sühnen, Bindung brechen oder einen Fluch lösen" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Körperlichkeit", "Intelligenz", "Widerstandskraft", "Sozialverhalten", "Übernatürliche Macht"],
+    "values": [7, 2, 7, 8, 4, 9],
+    "source": "Aus Bindungsstärke, Wahrnehmung, möglichen Angriffen und den überlieferten Abwehrmitteln der Gattung abgeleitet",
+    "intro": "Die Archivbewertung beschreibt einen typischen gebundenen Geist. Einzelne Erscheinungen können abhängig von Todesart und Bindung erheblich davon abweichen."
+  },
+  "related": {
+    "eyebrow": "Überlieferte Erscheinungsformen",
+    "title": "Bekannte Unterarten",
+    "intro": "Die Archive unterscheiden Geister nach Erscheinung, Bindung und Wirkung. Die noch namenlosen Stellen bleiben als offene Einträge erhalten.",
+    "entries": [
+      { "id": "dullahan", "name": "Dullahan", "region": "Kopfloser Todesbote", "description": "Eine bewaffnete Erscheinung, deren Ankunft häufig als Vorzeichen eines nahenden Todes gedeutet wird.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-dullahan.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Dullahan" } },
+      { "id": "erscheinung", "name": "Erscheinung (Geist)", "region": "Gebundener Nachhall", "description": "Die verbreitetste Form eines Verstorbenen, die an eine Person, einen Ort oder einen Gegenstand gebunden bleibt.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-erscheinung.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare geisterhafte Erscheinung" } },
+      { "id": "mahr", "name": "Mahr", "region": "Traumheimsuchung", "description": "Ein nächtlicher Geist, der Schlafende bedrängt und Angst, Atemnot oder trügerische Bilder hervorruft.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-mahr.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Mahr" } },
+      { "id": "daemon", "name": "Dämon", "region": "Infernale Erscheinung", "description": "Eine bösartige Gestalt, bei der Geisterbindung und infernale Einwirkung kaum noch voneinander zu trennen sind.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-daemon.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare dämonische Erscheinung" } },
+      { "id": "waechtergeist", "name": "Wächtergeist", "region": "Ortgebundener Hüter", "description": "Ein an eine Stätte oder ein Gut gebundener Geist, der Eindringlinge warnt, prüft oder angreift.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-waechtergeist.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbarer Wächtergeist" } },
+      { "id": "banshee", "name": "Banshee (Todesfee)", "region": "Klagender Todesbote", "description": "Ihr durchdringender Klageruf gilt in vielen Erzählungen als Ankündigung von Tod und Verlust.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-banshee.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Banshee" } },
+      { "id": "irrlicht", "name": "Irrlicht", "region": "Lockende Lichterscheinung", "description": "Ein flackernder Geist, der Wandernde von sicheren Wegen fort und zu gebundenen Orten hinführen kann.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-irrlicht.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbares Irrlicht" } },
+      { "id": "naturahne", "name": "Naturahne", "region": "Ahngeist der Wildnis", "description": "Ein alter, mit Landschaft und Erinnerung verwobener Geist, der selten ohne Grund in die Welt der Lebenden eingreift.", "status": "Unterart verzeichnet", "href": null, "image": { "src": "../../../assets/creature-group-profiles/geister-naturahne.webp", "width": 408, "height": 612, "alt": "Vollständig sichtbare Naturahne" } },
+      { "id": "offener-eintrag-01", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-02", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-03", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-04", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-05", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-06", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true },
+      { "id": "offener-eintrag-07", "name": "???", "region": "???", "description": "Noch keine gesicherte Überlieferung.", "status": "Noch unausgefüllt", "href": null, "unknown": true }
+    ]
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Geister stehen zwischen den Welten. Sie sind weder vollständig lebendig noch endgültig tot, sondern ein Nachhall dessen, was eine Seele im Leben geprägt hat. Manche zeigen kaum mehr als Licht, Kälte oder eine wiederkehrende Bewegung; andere sprechen, erinnern und handeln mit erschreckender Klarheit." },
+      { "type": "paragraph", "text": "Die meisten Seelen gehen nach dem Tod in eine göttliche oder infernale Sphäre über. Geister verbleiben in einer Zwischenwelt, die sich stellenweise mit Aleria überschneidet und ihnen erlaubt, unter bestimmten Bedingungen sichtbar oder wirksam zu werden." }
+    ] },
+    { "id": "hintergruende", "title": "Hintergründe", "blocks": [
+      { "type": "paragraph", "text": "Kein Geist gleicht vollkommen einem anderen. Erinnerung, Wille und Erscheinung können klar erhalten sein oder nur noch aus einzelnen Gefühlen und Gewohnheiten bestehen. Darum ist die Frage nach der Geschichte eines Geistes meist wichtiger als die bloße Bestimmung seiner Gestalt." },
+      { "type": "paragraph", "text": "Gelehrte unterscheiden zwischen selbstbewussten Seelen, ortgebundenem Nachhall und Erscheinungen, die durch Magie geformt wurden. Die Grenzen bleiben unscharf, da ein lange gebundener Geist seine ursprüngliche Persönlichkeit verlieren kann." }
+    ] },
+    { "id": "entstehung", "title": "Entstehung und Ursache", "blocks": [
+      { "type": "list", "items": ["Trauer, Verlust, Zorn, Rache, Liebe oder unerfüllte Sehnsucht", "Eine nicht vollendete Aufgabe oder ein nicht eingelöstes Versprechen", "Flüche, Verträge, Rituale und infernale Bindungen", "Gewaltsamer Tod, magische Unfälle oder seltene kosmische Zusammenkünfte", "Göttliche Prüfungen, Botschaften oder die Bindung an einen Ort oder Gegenstand"] },
+      { "type": "paragraph", "text": "Die Ursache bestimmt gewöhnlich, wann und wie eine Erscheinung zurückkehrt. Ein Geist kann an eine Stunde, einen Jahrestag, einen Gegenstand oder die Anwesenheit einer bestimmten Person gebunden sein." }
+    ] },
+    { "id": "bekaempfung", "title": "Bekämpfung", "blocks": [
+      { "type": "paragraph", "text": "Geweihte Magie, Bannungen und Exorzismen können einen Geist vertreiben. Körperliche Erscheinungen lassen sich mit geweihten oder infernal gestärkten Waffen treffen. Solche Mittel lösen die Ursache jedoch häufig nicht und verschaffen lediglich Zeit." },
+      { "type": "paragraph", "text": "Eine dauerhafte Erlösung verlangt meist, die Bindung zu verstehen: ein Unrecht zu sühnen, eine Aufgabe zu vollenden, einen Gegenstand zu lösen oder einen Fluch zu brechen. Priester, Kleriker, Hexen und erfahrene Magier verbinden deshalb Schutz mit Nachforschung und, wenn möglich, einem Gespräch." }
+    ] },
+    { "id": "auftreten", "title": "Auftreten", "blocks": [
+      { "type": "paragraph", "text": "Kälte, flackernde Flammen, eine unerklärliche Beobachtung oder ein Schatten ohne Körper gehen vielen Sichtungen voraus. Erscheinungen sammeln sich an Häusern, Schlachtfeldern, Friedhöfen, Unfallstätten und Gegenständen, die ihre Geschichte bewahren." },
+      { "type": "paragraph", "text": "Manche Geister wiederholen nur einen Augenblick, andere verteidigen ihr Gebiet oder suchen gezielt Lebende auf. Nicht jeder kann sie wahrnehmen; Seher, Priester und Hexen erkennen oft Spuren, die anderen verborgen bleiben." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Ein plötzlich erlöschendes Licht gilt vielerorts erst dann als Geisterzeichen, wenn zugleich die Luft merklich kälter wird.", "Wiederholt ein Geist stets dieselbe Handlung, vermuten Geisterkundige darin einen Hinweis auf seine Bindung.", "Ein Name kann eine Erscheinung beruhigen, sie aber ebenso an eine verlorene Identität erinnern und dadurch aufbringen.", "Gegenstände mit langer gemeinsamer Geschichte dienen häufiger als Anker als bloß wertvolle Besitztümer."] }
+    ] }
+  ],
+  "plates": []
+}
