@@ -55,6 +55,15 @@ test('Druchtan links both known lineages and retains three unknown source slots'
   await Promise.all(known.map(entry => access(new URL(entry.href, new URL('../tiere/reptilien/druchtan/', import.meta.url)))));
 });
 
+test('the Corrchuban overview uses its species portrait while the dossier keeps the scene tableau', async () => {
+  const overview = JSON.parse(await readFile(new URL('../tiere/reptilien/art.json', import.meta.url), 'utf8'));
+  const entries = overview.atlas.groups.flatMap(group => group.entries);
+  const corrchuban = entries.find(entry => entry.id === 'corrchuban');
+  assert.equal(corrchuban.image.src, '../../assets/species-entries/reptilien/corrchuban.webp');
+  assert.equal(profiles[3].hero.src, '../../../assets/reptile-profiles/corrchuban-hero.webp');
+  assert.notEqual(corrchuban.image.src.split('/').at(-1), profiles[3].hero.src.split('/').at(-1));
+});
+
 test('all supplied reptile illustrations are archived locally with source dimensions', async () => {
   const manifest = JSON.parse(await readFile(new URL('../assets/reptile-profile-sources.json', import.meta.url), 'utf8'));
   assert.equal(manifest.items.length, 12);

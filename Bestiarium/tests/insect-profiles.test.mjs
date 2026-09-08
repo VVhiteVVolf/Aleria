@@ -65,12 +65,17 @@ test('unknown Koloss, Grat and Panzer variants remain explicitly unfilled', () =
   }
 });
 
-test('all sixteen newly supplied caste and variant images are local and documented', async () => {
+test('all supplied caste, variant and theme images are local and documented', async () => {
   const manifest = JSON.parse(await readFile(new URL('../assets/insect-profile-sources.json', import.meta.url), 'utf8'));
-  assert.equal(manifest.items.length, 16);
+  assert.equal(manifest.items.length, 21);
   assert(manifest.items.every(item => item.sourceType === 'user-provided-profile-table'));
   assert(manifest.items.every(item => item.width > 0 && item.height > 0));
   await Promise.all(manifest.items.map(item => access(new URL(`../assets/${item.file.slice(2)}`, import.meta.url))));
+
+  for (const profile of profiles.slice(1)) {
+    assert.equal(profile.hero.src, `../../../assets/insect-profiles/${profile.id}-hero.webp`);
+    assert(manifest.items.some(item => item.file.endsWith(`/${profile.id}-hero.webp`) && item.role === 'Themenbild'));
+  }
 });
 
 test('field-guide portraits and cards preserve complete illustrations and keep facts beside text', async () => {
