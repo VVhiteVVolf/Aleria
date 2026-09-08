@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/archive.css?v=20260830-dashboard-activity-v2">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
-<link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
+<link rel="stylesheet" href="./styles/modal.css?v=20260908-module-layout-v1">
   <link rel="stylesheet" href="./styles/comments.css?v=20260906-segment-avatars-v1">
   <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="./styles/creature-dossier.css?v=20260906-troll-v1">
 <link rel="stylesheet" href="./styles/creature-editor-theme.css?v=20260906-troll-v1">
 <link rel="stylesheet" href="./styles/character-genealogy.css?v=20260903-genealogy-bulk-import-v1">
-<link rel="stylesheet" href="./styles/module-editor.css?v=20260806-clear-comments-v1">
+<link rel="stylesheet" href="./styles/module-editor.css?v=20260908-module-navigation-v1">
 <link rel="stylesheet" href="./styles/aleria-calendar.css?v=20260723-aleria-calendar-v1">
 <link rel="stylesheet" href="./styles/family-editor.css?v=20260715-family-workbench-v1">
 <link rel="stylesheet" href="./styles/family-workbench.css?v=20260715-family-workbench-v2">
@@ -79,18 +79,20 @@
 <link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260620-guest-register-scroll-room-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/scene-blocks.css?v=20260712-layout-ownership-v1">
+<link rel="stylesheet" href="./styles/scene-blocks.css?v=20260908-module-navigation-v1">
 <link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260816-primary-registers-v1">
 <link rel="stylesheet" href="./styles/item-database.css?v=20260625-item-db-register-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
 <link rel="stylesheet" href="./styles/topic-board.css?v=20260826-topic-board-editor-v3">
 <link rel="stylesheet" href="./styles/world-date.css?v=20260826-world-date-shared-v3">
-<link rel="stylesheet" href="./styles/mobile.css?v=20260712-dashboard-readable-v1" media="(max-width: 640px)">
+<link rel="stylesheet" href="./styles/mobile.css?v=20260908-module-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260906-combat-status-v1">
 <link rel="stylesheet" href="./styles/combat-status.css?v=20260906-effect-rolls-v1">
 <link rel="stylesheet" href="./styles/comments-condition-tracker.css?v=20260906-effect-rolls-v1">
 <link rel="stylesheet" href="./styles/combat-roll-mode.css?v=20260906-effect-rolls-v1">
+<link rel="stylesheet" href="./modules/modal/modal-navigation.css?v=20260908-module-layout-v3">
+<link rel="stylesheet" href="./modules/modal/modal-surface.css?v=20260908-module-layout-v3">
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260906-character-vitality-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260903-genealogy-portrait-sync-v1"></script>
@@ -99,7 +101,7 @@
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./data/sections.js?v=20260802-brandhof-combat-v1" defer></script>
   <script src="./modules/drachentanz-volkstanz/drachentanz-volkstanz-data.js?v=20260908-drachentanz-volkstanz-v2" defer></script>
-  <script src="./modules/drachentanz-kampfstil/drachentanz-kampfstil-data.js?v=20260908-drachentanz-kampfstil-v2" defer></script>
+  <script src="./modules/drachentanz-kampfstil/drachentanz-kampfstil-data.js?v=20260908-drachentanz-kampfstil-v3" defer></script>
   <script src="./modules/house-warriors/house-warriors-data.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
@@ -109,9 +111,9 @@
   <script src="./modules/core/aleria-calendar.js?v=20260826-world-date-v1" defer></script>
   <script src="./modules/module-editor/module-editor-aleria-date-field.js?v=20260723-aleria-calendar-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/app/dialog-manager.js?v=20260807-fazit-v1" defer></script>
+  <script src="./modules/app/dialog-manager.js?v=20260908-disclosure-focus-v1" defer></script>
   <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/session/session-focus.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/module-store/module-store-sync.js?v=20260826-section-policy-v1" defer></script>
@@ -237,7 +239,8 @@
   <script src="./modules/family/family-renderer.js?v=20260715-family-chart-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-renderer.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260908-standard-page-comments-v1" defer></script>
+  <script src="./modules/modal/modal-navigation.js?v=20260908-module-layout-v3" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260908-module-layout-v1" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/archive/archive-hierarchy-browser.js?v=20260712-hierarchy-browser-v1" defer></script>
@@ -358,10 +361,10 @@
   <script src="./modules/speaker-profile/speaker-profile-ai.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-choice.js?v=20260710-speaker-choice-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1" defer></script>
-  <script src="./modules/modal/modal-layout.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/modal/modal-layout.js?v=20260908-module-split-v1" defer></script>
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
-  <script src="./modules/modal/modal-controller.js?v=20260715-family-workbench-v1" defer></script>
-  <script src="./modules/modal/modal-events.js?v=20260613-thread-rescue-v2" defer></script>
+  <script src="./modules/modal/modal-controller.js?v=20260908-module-navigation-v1" defer></script>
+  <script src="./modules/modal/modal-events.js?v=20260908-module-layout-v1" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20260907-bestiarium-v1" defer></script>
   <script src="./modules/topic-board/topic-board-travel.js?v=20260826-topic-board-editor-v3" defer></script>

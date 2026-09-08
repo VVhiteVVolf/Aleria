@@ -53,6 +53,7 @@ function afterModalPageRender(entry, page, pageIndex, scope) {
   globalThis.AleriaFamily?.workbench?.mount?.({ root: scope });
   initResizer();
   initInlineModuleSplitter(scope);
+  initModalNavigation(scope);
   resetScroll();
   const thread = getCommentThreadForPage(page, entry, pageIndex);
   consumeCommentAutoScrollRequest(thread);

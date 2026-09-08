@@ -4,6 +4,7 @@ document.getElementById('modal-overlay')?.addEventListener('click', event => {
 });
 
 document.addEventListener('click', event => {
+  if (!event.target?.closest?.('[data-modal-menu]')) closeModalNavigationMenu();
   const trigger = event.target?.closest?.('[data-modal-action]');
   if (!trigger || !trigger.closest('#modal-overlay')) return;
   const action = trigger.dataset.modalAction;
@@ -23,6 +24,7 @@ document.addEventListener('click', event => {
     'toggle-focus-mode'
   ].includes(action)) return;
   event.preventDefault();
+  closeModalNavigationMenu({ restoreFocus: true });
 
   if (action === 'close') {
     closeModal();
@@ -127,11 +129,15 @@ document.addEventListener('keydown', event => {
   if (!isModalOpen || isModalKeyboardBlocked()) return;
 
   if (event.key === 'Escape') {
+    if (closeModalNavigationMenu({ restoreFocus: true })) {
+      event.preventDefault();
+      return;
+    }
     closeModal();
     return;
   }
 
-  if (isModalTypingTarget(event.target)) return;
+  if (isModalTypingTarget(event.target) || event.target?.closest?.('[data-modal-menu], [role="separator"]')) return;
   if (event.key === 'ArrowRight') flipPage(1);
   if (event.key === 'ArrowLeft') flipPage(-1);
 });

@@ -22,6 +22,7 @@ const DIALOG_CONFIGS = {
 const DIALOG_FOCUSABLE_SELECTOR = [
   'a[href]',
   'button:not([disabled])',
+  'summary',
   'input:not([disabled]):not([type="hidden"])',
   'select:not([disabled])',
   'textarea:not([disabled])',
@@ -38,7 +39,7 @@ function getDialogFocusableElements(dialog) {
       if (!(el instanceof HTMLElement)) return false;
       if (el.hidden || el.getAttribute('aria-hidden') === 'true') return false;
       const style = window.getComputedStyle(el);
-      return style.visibility !== 'hidden' && style.display !== 'none';
+      return style.visibility !== 'hidden' && style.display !== 'none' && el.getClientRects().length > 0;
     });
 }
 

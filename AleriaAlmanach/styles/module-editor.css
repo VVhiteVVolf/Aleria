@@ -391,6 +391,7 @@
     padding: 0.28rem 0.55rem;
     cursor: pointer;
   }
+  select.module-editor-mini-btn { appearance: auto; }
   .module-editor-mini-btn:hover {
     border-color: var(--gold);
     color: var(--ink);

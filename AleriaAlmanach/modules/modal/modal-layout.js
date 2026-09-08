@@ -25,7 +25,8 @@ function initResizer() {
 
 function getInlineModuleSplitPercent() {
   try {
-    const value = Number(localStorage.getItem('aleria-inline-module-split'));
+    const stored = localStorage.getItem('aleria-inline-module-split');
+    const value = stored == null || stored === '' ? 42 : Number(stored);
     if (Number.isFinite(value)) return Math.max(24, Math.min(76, value));
   } catch {
     // localStorage may be unavailable in restricted browser modes.

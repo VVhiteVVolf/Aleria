@@ -25,14 +25,22 @@ function syncSessionFocusShell(enabled) {
 function toggleSessionFocusMode(button) {
   const card = document.querySelector('.modal-card');
   const enabled = !card?.classList.contains('session-focus-expanded');
-  const page = button?.closest?.('.session-page');
+  const page = button?.closest?.('.session-page') || document.querySelector('#modal-body .session-page');
   page?.classList.toggle('session-focus-mode', enabled);
   setSessionFocusModeEnabled(enabled);
   syncSessionFocusShell(enabled);
-  if (button) {
-    button.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-    button.setAttribute('aria-label', enabled ? 'Lesemodus verlassen' : 'Lesebereich maximieren');
-    button.setAttribute('title', enabled ? 'Lesemodus verlassen' : 'Lesebereich maximieren');
-    button.textContent = enabled ? '↙' : '⛶';
-  }
+  const label = enabled ? 'Lesemodus verlassen' : 'Lesebereich maximieren';
+  document.querySelectorAll('#modal-overlay [data-modal-action="toggle-focus-mode"], #modal-overlay [data-action="toggle-session-focus-mode"]').forEach(control => {
+    control.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+    control.setAttribute('aria-label', label);
+    control.setAttribute('title', label);
+    const icon = control.querySelector('[data-focus-icon]');
+    const text = control.querySelector('[data-focus-label]');
+    if (icon && text) {
+      icon.textContent = enabled ? '↙' : '⛶';
+      text.textContent = label;
+    } else {
+      control.textContent = enabled ? '↙' : '⛶';
+    }
+  });
 }

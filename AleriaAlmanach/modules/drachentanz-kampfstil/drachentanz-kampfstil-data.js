@@ -526,7 +526,7 @@
       ...page,
       image: illustration ? `${assetRoot}/${illustration}.png` : null,
       imageWidth: 38,
-      imageFit: 'contain',
+      imageFit: 'cover',
       imagePosition: 'top',
       description: paragraphs.join('<br><br>')
     }))

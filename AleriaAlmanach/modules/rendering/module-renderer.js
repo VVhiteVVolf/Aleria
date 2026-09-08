@@ -1758,7 +1758,7 @@ function buildPage(page, entry, pageIndex, total) {
 
   return `
     ${nav}
-    <div class="modal-row">
+    <div class="modal-row modal-story-row">
       ${imgCol}
       <div class="modal-text-col" id="modal-text-col-el">
         <div class="modal-text-inner modal-story-text-inner">
@@ -1780,101 +1780,6 @@ function buildPage(page, entry, pageIndex, total) {
       </div>
     </div>
     ${sym}`;
-}
-
-function buildModalFocusToggleButton() {
-  const enabled = typeof isSessionFocusModeEnabled === 'function' && isSessionFocusModeEnabled();
-  const label = enabled ? 'Lesemodus verlassen' : 'Lesebereich maximieren';
-  return `<button class="modal-page-tool" type="button" data-modal-action="toggle-focus-mode" aria-pressed="${enabled ? 'true' : 'false'}" title="${label}" aria-label="${label}">${enabled ? '↙' : '⛶'} ${label}</button>`;
-}
-
-function buildNav(page, pageIndex, total) {
-  const previewContext = globalThis._moduleRenderPreviewContext;
-  const previewOnly = !!previewContext?.entry;
-  const activeEntry = previewOnly
-    ? getRenderableEntry(previewContext.entry)
-    : (currentEntry ? getRenderableEntry(currentEntry) : null);
-  const pages = activeEntry ? getPages(activeEntry) : [];
-  const inlineEditing = !previewOnly && isInlineEditingEntry(currentEntry);
-  const currentLabel = getPageNavLabel(page, pageIndex, total);
-  const currentThread = !previewOnly && !inlineEditing && activeEntry
-    ? (getCommentThreadForPage(page, activeEntry, pageIndex) || getInlineCommentThreadForPage(page, activeEntry, pageIndex))
-    : null;
-  const commentThreadActions = !previewOnly && !inlineEditing ? `
-      <button class="modal-page-tool" type="button" data-modal-action="export-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare exportieren</button>
-      <button class="modal-page-tool" type="button" data-modal-action="import-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare importieren</button>
-      <button class="modal-page-tool" type="button" data-modal-action="rescue-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare retten</button>` : '';
-  const chapterTabs = pages.map((p, idx) => `
-    <button
-      class="modal-page-tab${idx === pageIndex ? ' active' : ''}"
-      type="button"
-      data-modal-action="jump-page"
-      data-page-index="${idx}"
-      title="${escapeHtml(getPageNavLabel(p, idx, pages.length))}"
-      aria-label="${escapeHtml(getPageNavLabel(p, idx, pages.length))}">
-      ${escapeHtml(getPageTabLabel(p, idx, pages.length))}
-    </button>`).join('') + (inlineEditing ? `
-    <select class="modal-page-tab modal-page-add-select" title="Seite hinzufügen" aria-label="Seite hinzufügen" data-modal-action="add-inline-page">
-      <option value="">+ Seite</option>
-      ${buildModulePageTypeOptions('')}
-    </select>` : '');
-  const templateSelect = inlineEditing ? `
-      <select class="modal-page-tool" title="Modulvorlage wählen" aria-label="Modulvorlage wählen" data-modal-action="apply-inline-template">
-        ${buildModuleTemplateOptions(inferModuleTemplateType(activeEntry))}
-      </select>` : '';
-  const actions = previewOnly
-    ? ''
-    : (inlineEditing
-    ? `
-      ${templateSelect}
-      <button class="modal-page-tool" type="button" data-modal-action="save-inline-edit">Speichern</button>
-      <button class="modal-page-tool" type="button" data-modal-action="cancel-inline-edit">Abbrechen</button>
-      <button class="modal-page-tool" type="button" data-modal-action="move-inline-page" data-direction="-1" ${pageIndex===0?'disabled':''}>Nach links</button>
-      <button class="modal-page-tool" type="button" data-modal-action="move-inline-page" data-direction="1" ${pageIndex===total-1?'disabled':''}>Nach rechts</button>
-      ${pages.length > 1 ? `<button class="modal-page-tool" type="button" data-modal-action="remove-inline-page">Seite löschen</button>` : ''}`
-    : `
-      ${page.sessionPage ? '' : buildModalFocusToggleButton()}
-      <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Export</button>
-      ${commentThreadActions}
-      <button class="modal-page-tool" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>`);
-  return `
-    <div class="modal-page-header">
-      <div class="modal-page-top">
-        <div class="modal-page-summary">
-          <span class="modal-page-title">${page.pageTitle||''}</span>
-          <span class="modal-page-subtitle">${escapeHtml(currentLabel)}</span>
-        </div>
-        <div class="modal-page-nav">
-          <button class="modal-page-btn" type="button" data-modal-action="flip-page" data-direction="-1" ${pageIndex===0?'disabled':''}>◀ Zurück</button>
-          <span class="modal-page-indicator">Seite ${pageIndex+1} von ${total}</span>
-          <button class="modal-page-btn" type="button" data-modal-action="flip-page" data-direction="1" ${pageIndex===total-1?'disabled':''}>Weiter ▶</button>
-        </div>
-        <div class="modal-page-actions">${actions}</div>
-      </div>
-      ${(pages.length > 1 || inlineEditing) ? `<div class="modal-page-tabs">${chapterTabs}</div>` : ''}
-    </div>`;
-}
-
-function getPageNavLabel(page, pageIndex, total) {
-  if (!page) return `Seite ${pageIndex + 1}`;
-  if (page._commentsPage) return `Kommentare`;
-  if (page.pageTitle) return page.pageTitle;
-  return `Seite ${pageIndex + 1} von ${total}`;
-}
-
-function getPageTabLabel(page, pageIndex, total) {
-  if (!page) return `${pageIndex + 1}`;
-  if (page._commentsPage) return 'Kommentare';
-  const title = String(page.pageTitle || '').trim();
-  if (!title) return `${pageIndex + 1}`;
-
-  const match = title.match(/^([IVXLCDM]+)\.\s*[—-]?\s*(.*)$/i);
-  if (match) {
-    const numeral = match[1].toUpperCase() + '.';
-    const rest = match[2].trim();
-    return rest ? `${numeral} ${rest}` : numeral;
-  }
-  return title;
 }
 
 // Klick-Umschaltung der Hauptbild-Reiter (siehe getModulePortraitTabs). Delegiert am Dokument,

@@ -10,6 +10,8 @@ werden sie in die reguläre Seitenbeschreibung überführt. Es gibt keine eigene
 Darstellungslogik, keine Zitatgeber und keine vorgegebenen Kommentare. Die reguläre
 Kommentierfunktion ist unter jeder Seite aktiviert (`enablePageComments: true`);
 eine zusätzliche Kommentarseite wird nicht angehängt.
+Die Illustrationen füllen ihre Bildspalte standardmäßig mit `imageFit: 'cover'`
+und oberem Bildfokus. Bildausschnitt und Einpassung bleiben im Editor anpassbar.
 Das Modul verändert keine Kampfregeln, Techniken oder Klassendaten.
 
 Grundlage ist der am 8. September 2026 bereitgestellte HTML-Text. Seine 314 Sachtextabsätze
