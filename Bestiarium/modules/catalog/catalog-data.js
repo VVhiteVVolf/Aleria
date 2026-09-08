@@ -36,8 +36,8 @@ export const BESTIARY_CHAPTERS = [
     id: 'besondere', kind: 'tiere', number: 'II', title: 'Besondere Exemplare', subtitle: 'Nicht jedes Wesen ist wie seinesgleichen',
     description: 'Ein eigener Platz für besondere Tiere, regionale Linien und individuelle Begegnungen. Den Anfang machen zwei überlieferte Namen.',
     groups: [{ id: 'besondere-tiere', title: 'Individuelle Exemplare · Tiere', featured: true, entries: [
-      entry('sturmbock', 'Sturmbock', 'Der Sturmbock aus Morgorn erhält hier künftig seine eigene Tafel.', 'Morgorn'),
-      entry('mondlaeufer', 'Mondläufer', 'Der Mondläufer aus Lichthain erhält hier künftig seine eigene Tafel.', 'Lichthain')
+      entry('sturmbock', 'Sturmbock', 'Massives morgornisches Gebirgsreittier mit sicherem Felstritt und großer Angriffswucht.', 'Morgorn', './tiere/besondere/sturmbock/index.html'),
+      entry('mondlaeufer', 'Mondläufer', 'Lautloses Waldreittier Lichthains, das vertraute Pfade selbst bei Nacht sicher findet.', 'Lichthain', './tiere/besondere/mondlaeufer/index.html')
     ] }],
     specimenNote: 'Die Sammlung bleibt offen für weitere benannte Tiere, außergewöhnliche Funde und ihre Geschichten.'
   },

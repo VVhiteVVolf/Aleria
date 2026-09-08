@@ -1,0 +1,113 @@
+{
+  "id": "mondlaeufer",
+  "name": "Mondläufer",
+  "classification": "Einheimische Hirschgattung und lautloses Waldreittier",
+  "continent": "Aldervan",
+  "region": "Fürstentum Lichthain",
+  "folio": "II / 02",
+  "parentGroupId": "besondere-tiere",
+  "summary": "Der Mondläufer ist das charakteristische Reittier Lichthains: eine helle, hochbeinige Hirschgattung, die sich nahezu lautlos durch dichtes Unterholz bewegt und ihre Stärke auf schmalen Waldpfaden, bei Nacht und in vertrauter Umgebung entfaltet.",
+  "quote": "Wer den Mondläufer lenken will, verliert den Pfad. Wer ihm vertraut, findet ihn.",
+  "quoteAttribution": "Überliefertes Sprichwort aus Lichthain",
+  "icon": {
+    "src": "../../../assets/icons/mondlaeufer.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Vollständig sichtbarer Mondläufer als schlichtes Bestiarium-Symbol"
+  },
+  "hero": {
+    "src": "../../../assets/special-animal-profiles/mondlaeufer.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer heller Mondläufer mit Reiterin in einem nächtlichen Wald",
+    "caption": "Überlieferte Bildtafel · Mondläufer im nächtlichen Wald Lichthains"
+  },
+  "facts": [
+    { "label": "Name", "value": "Mondläufer" },
+    { "label": "Typ", "value": "Einheimische Hirschgattung und spezielles Waldreittier" },
+    { "label": "Herkunft", "value": "Fürstentum Lichthain auf Aldervan" },
+    { "label": "Größe", "value": "Groß, hochbeinig und von leichter, sehniger Gestalt" },
+    { "label": "Körperbau", "value": "Lange elastische Gliedmaßen, schmale federnde Hufe und markantes Geweih" },
+    { "label": "Temperament", "value": "Ruhig, wachsam, scheu und empfindlich gegen grobe Führung" },
+    { "label": "Reitbarkeit", "value": "Zuverlässig nach persönlicher Bindung; für Fremde nur schwer führbar" },
+    { "label": "Haupteinsatz", "value": "Kundschaft, Botengänge und lautloses Reisen durch dichten Wald" },
+    { "label": "Stärken", "value": "Lautlosigkeit, Waldwendigkeit, Nachtsicht und Orientierung" },
+    { "label": "Schwächen", "value": "Lärm, offene Schlachtfelder, schwere Zuglasten und fremde Umgebung" },
+    { "label": "Kosten", "value": "???" }
+  ],
+  "metrics": {
+    "labels": ["Trittsicherheit", "Reitbarkeit", "Wendigkeit", "Ausdauer", "Tragkraft", "Kampfwert"],
+    "values": [9, 6, 10, 8, 3, 2],
+    "source": "Aus Körperbau, Bindungsverhalten, Waldnutzung sowie den überlieferten Stärken und Schwächen abgeleitet",
+    "intro": "Das Reittierprofil bewertet den Mondläufer in dichtem Wald und vertrautem Gelände. Auf Straßen, offenem Feld und unter Schlachtenlärm sinkt seine Eignung erheblich."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        { "type": "paragraph", "text": "Der Mondläufer ist eine anmutige Hirschgattung und das charakteristische Reittier des Fürstentums Lichthain auf Aldervan. Wo Pferde für das dichte, schattige Gehölz zu groß, zu laut oder zu unbeweglich sind, trägt er seinen Reiter beinahe geräuschlos durch lebendiges Unterholz." },
+        { "type": "paragraph", "text": "Er ist weder Kriegstier noch Arbeitstier und ersetzt das Pferd nicht allgemein. Seine besondere Rolle entsteht aus einem Lebensraum, in dem leise Bewegung, sichere Orientierung und eine enge Bindung wichtiger sind als Zugkraft oder Angriffswucht." }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        { "type": "paragraph", "text": "Der Mondläufer ist eine einheimische Wildgattung Lichthains, die über Generationen an die dunklen, feuchten Wälder angepasst wurde. Seine Domestizierung ging nicht aus einer planmäßigen Zucht hervor, sondern aus der wiederholten Bindung einzelner Tiere an die Waldvölker." },
+        { "type": "paragraph", "text": "Diese langsame Annäherung erklärt seine Seltenheit außerhalb Lichthains. Vertraute Stimmen, Gerüche und Wege geben ihm Sicherheit; Ortsfremde können dieses über lange Zeit gewachsene Vertrauen nur schwer nachbilden." }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        { "type": "paragraph", "text": "Der sehnige, hochbeinige Körper besitzt lange, elastische Gliedmaßen. Schmale, federnde Hufe verteilen das Gewicht auf Moos, Wurzeln und weichem Waldboden, ohne das Tier in seinem Schritt zu hemmen." },
+        { "type": "paragraph", "text": "Das markante Geweih unterstützt Orientierung und Gleichgewicht im dichten Geäst stärker, als es dem Kampf dient. Helles, silbriges oder weißliches Fell kann im Mondlicht schimmern und löst die Gestalt zwischen Nebel, Blättern und Lichtflecken auf." }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        { "type": "paragraph", "text": "Mondläufer sind ruhig, wachsam und scheu. Laute Befehle, hektische Bewegungen und grobe Führung verunsichern sie; Flucht und Ausweichen sind ihre bevorzugten Antworten auf Gefahr." },
+        { "type": "paragraph", "text": "Bindet sich ein Tier an seinen Reiter, folgt es zuverlässig und oft ohne sichtbare Zügelhilfe. Die Führung beruht dann auf feinen Gewichtsverlagerungen, vertrauten Zeichen und der Bereitschaft, dem Instinkt des Mondläufers Raum zu lassen." }
+      ]
+    },
+    {
+      "id": "nutzung",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        { "type": "paragraph", "text": "Mondläufer tragen Kundschafter, Boten, Waldfürsten und Waldläufer durch schwer zugängliches Gelände. Sie bewegen sich sicher auf schmalen Pfaden und behalten selbst bei Dunkelheit die Orientierung." },
+        { "type": "list", "items": ["Lautlose Kundschaft im Wald", "Botengänge über schmale und verwachsene Pfade", "Nächtliche Reisen in vertrauten Waldgebieten"] },
+        { "type": "paragraph", "text": "Auf Straßen, offenem Gelände oder im Schlachtenlärm verliert der Mondläufer seine Vorteile. Für schwere Lasten und geschlossene Angriffe fehlen ihm Masse und die nötige Gelassenheit gegenüber Lärm." }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        { "type": "subheading", "text": "Stärken" },
+        { "type": "list", "items": ["Extrem leise Fortbewegung", "Hervorragende Wendigkeit im Wald", "Sicherer Tritt auf weichem, unebenem Boden", "Hohe Orientierung bei Dunkelheit"] },
+        { "type": "subheading", "text": "Schwächen" },
+        { "type": "list", "items": ["Ungeeignet für offene Schlachtfelder", "Kaum zugstark", "Empfindlich gegenüber Lärm und Stress", "Für Ortsfremde schwer zu führen"] }
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        { "type": "paragraph", "text": "Mondläufer lassen sich nicht dauerhaft in klassischen Ställen halten. Sie benötigen offenen Waldzugang, Ruhe, weichen Boden und eine vertraute Umgebung. Falsche Haltung führt schnell zu Fluchtverhalten oder Apathie." },
+        { "type": "paragraph", "text": "Aus diesem Grund werden sie fast ausschließlich in Lichthain gehalten. Reisen außerhalb des Fürstentums verlangen einen vertrauten Reiter und genügend Rückzugsmöglichkeiten für das empfindsame Tier." }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        { "type": "list", "items": ["In Lichthain gilt es als schlechtes Omen, einen Mondläufer zu verletzen.", "Manche Waldfürsten reiten ihn ausschließlich bei Nacht.", "Fremde Reiter berichten häufig, das Tier entscheide selbst über den sichersten Weg.", "Erfahrene Führer sprechen leise und verwenden kleine Hand- und Gewichtszeichen, damit der Mondläufer seine Aufmerksamkeit auf den Wald richten kann."] }
+      ]
+    }
+  ],
+  "plates": []
+}

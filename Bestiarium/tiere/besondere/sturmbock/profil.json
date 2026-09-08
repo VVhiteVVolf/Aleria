@@ -1,0 +1,113 @@
+{
+  "id": "sturmbock",
+  "name": "Sturmbock",
+  "classification": "Domestizierte Widdergattung und spezielles Gebirgsreittier",
+  "continent": "Morgorn",
+  "region": "Hochgebirge",
+  "folio": "II / 01",
+  "parentGroupId": "besondere-tiere",
+  "summary": "Der Sturmbock ist eine massiv gezüchtete Widdergattung der Morgorns: trittsicher auf schmalem Fels, widerstandsfähig gegen Kälte und als Reittier, Lastenträger und lebende Sturmwaffe eng mit der Hochgebirgskultur verbunden.",
+  "quote": "Ein Sturmbock fragt nicht, ob der Pfad trägt. Er setzt den Huf, und der Berg gibt Antwort.",
+  "quoteAttribution": "Morgornisches Reitersprichwort",
+  "icon": {
+    "src": "../../../assets/icons/sturmbock.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Vollständig sichtbarer Sturmbock als schlichtes Bestiarium-Symbol"
+  },
+  "hero": {
+    "src": "../../../assets/special-animal-profiles/sturmbock.webp",
+    "width": 1536,
+    "height": 1024,
+    "alt": "Vollständig sichtbarer gerüsteter Morgorn auf einem Sturmbock im Hochgebirge",
+    "caption": "Überlieferte Bildtafel · Sturmbock und morgornischer Reiter"
+  },
+  "facts": [
+    { "label": "Name", "value": "Sturmbock" },
+    { "label": "Typ", "value": "Domestizierte Widdergattung; Gebirgs-, Sturm- und Lastreittier" },
+    { "label": "Herkunft", "value": "Die Hochgebirge Morgorns" },
+    { "label": "Größe", "value": "Groß und kräftig genug, um einen gerüsteten Morgorn zu tragen" },
+    { "label": "Körperbau", "value": "Breite Schultern, tiefer Schwerpunkt, kurze muskulöse Läufe und massive Hörner" },
+    { "label": "Temperament", "value": "Störrisch, dominant und bei gefestigter Bindung bedingungslos loyal" },
+    { "label": "Reitbarkeit", "value": "Anspruchsvoll; vor allem für erfahrene morgornische Reiter geeignet" },
+    { "label": "Haupteinsatz", "value": "Gebirgsritt, Stoßangriff und Transport in Hochlagen" },
+    { "label": "Stärken", "value": "Trittsicherheit, Balance, Sprungkraft, Kälteresistenz und Angriffswucht" },
+    { "label": "Schwächen", "value": "Langsam auf Ebenen, schwer zu führen und ungeeignet für lange Märsche" },
+    { "label": "Kosten", "value": "???" }
+  ],
+  "metrics": {
+    "labels": ["Trittsicherheit", "Reitbarkeit", "Wendigkeit", "Ausdauer", "Tragkraft", "Kampfwert"],
+    "values": [10, 4, 7, 6, 9, 9],
+    "source": "Aus Körperbau, Temperament, Gebirgseinsatz sowie den überlieferten Stärken und Schwächen abgeleitet",
+    "intro": "Das Reittierprofil bewertet den Sturmbock in seinem angestammten Hochgebirge. Auf offenem, ebenem Gelände fallen Wendigkeit und Ausdauer geringer aus."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        { "type": "paragraph", "text": "Der Sturmbock ist kein Pferd, sondern eine massiv gezüchtete Widdergattung, die vom Volk der Morgorns domestiziert und zum Reittier weiterentwickelt wurde. In ihrer steilen, felsigen Heimat sind Pferde zu unsicher und zu empfindlich; der Sturmbock füllt diese Lücke mit Kraft und außergewöhnlicher Trittsicherheit." },
+        { "type": "paragraph", "text": "Er ist Reittier, Waffe und Symbol zugleich. Seine Bedeutung entsteht nicht allein aus seiner Wucht, sondern aus der Fähigkeit, Reiter und Last über Wege zu tragen, auf denen andere große Tiere den Halt verlieren würden." }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        { "type": "paragraph", "text": "Der Sturmbock entstammt wilden Gebirgswiddern, die über Generationen nach Trittsicherheit, Wucht und Verlässlichkeit ausgewählt wurden. Geschwindigkeit und Eleganz spielten bei dieser Zucht nur eine untergeordnete Rolle." },
+        { "type": "paragraph", "text": "Seine Domestizierung ist eng mit der morgornischen Lebensweise verbunden. Tier und Reiter lernen dieselbe vertikale Welt aus Fels, Schnee und Sturm kennen; außerhalb dieser Umgebung lässt sich die gewachsene Vertrautheit nur schwer ersetzen." }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        { "type": "paragraph", "text": "Eine extrem breite Schulterpartie, ein tiefer Schwerpunkt und kurze, muskulöse Läufe verleihen dem Sturmbock sicheren Stand. Seine harten, kantigen Hufe greifen auf schmalen Vorsprüngen und losem Gestein." },
+        { "type": "paragraph", "text": "Die gewundenen Hörner sind massive Kampfwerkzeuge. Zusammen mit der kräftigen Halsmuskulatur erlauben sie Stoßangriffe, während Sprungkraft und Balance schnelle Wechsel zwischen unterschiedlichen Felshöhen ermöglichen." }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        { "type": "paragraph", "text": "Sturmböcke sind störrisch, dominant und nur schwer zu führen. Auf Unsicherheit oder zögerliche Befehle reagieren sie mit Verweigerung und mitunter Aggression. Erfahrene Reiter behandeln sie deshalb mit klarer, ruhiger Konsequenz." },
+        { "type": "paragraph", "text": "Ist die Bindung gefestigt, zeigt der Sturmbock außergewöhnliche Loyalität. Dann folgt er seinem Reiter selbst in Gefahr und hält auf schwierigem Grund eine Linie, die weniger vertraute Tiere längst aufgegeben hätten." }
+      ]
+    },
+    {
+      "id": "nutzung",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        { "type": "paragraph", "text": "Im Alltag dient der Sturmbock als Gebirgsreittier und als Lastenträger in Hochlagen. Im Kampf wird seine Masse für Sturm- und Durchbruchsangriffe genutzt, besonders dort, wo enge Wege eine geschlossene Gegenwehr erschweren." },
+        { "type": "list", "items": ["Sicherer Reitbetrieb auf steilen Felspfaden", "Transport schwerer Lasten in Hochlagen", "Stoß- und Durchbruchsangriffe im Gebirge"] },
+        { "type": "paragraph", "text": "Auf offenen Ebenen verliert er seinen entscheidenden Vorteil. Dort ist er langsamer und weniger ausdauernd als ein auf lange Strecken gezüchtetes Reittier." }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        { "type": "subheading", "text": "Stärken" },
+        { "type": "list", "items": ["Extreme Trittsicherheit", "Hohe Sprungkraft und Balance", "Enorme Durchschlagskraft im Angriff", "Große Widerstandskraft gegen Kälte und Höhe"] },
+        { "type": "subheading", "text": "Schwächen" },
+        { "type": "list", "items": ["Langsam auf freiem Gelände", "Schwer zu kontrollieren", "Ungeeignet für lange Märsche", "Außerhalb vertrauter morgornischer Führung nur eingeschränkt reitbar"] }
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        { "type": "paragraph", "text": "Sturmböcke benötigen Bewegung auf Fels, steile Weideflächen und kühle Hochlagen. Dauerhafte Stallhaltung nimmt ihnen den nötigen Ausgleich und kann zu Aggression oder Teilnahmslosigkeit führen." },
+        { "type": "paragraph", "text": "Ihre Pflege gilt als schlicht, verlangt aber die richtige Umgebung und einen sicheren Umgang mit Hörnern und Körperkraft. Außerhalb Morgorns sind beide Voraussetzungen nur selten gegeben." }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        { "type": "list", "items": ["Morgorns betrachten den Sturmbock als Kind des Berges.", "In Gebirgsschlachten werden die Tiere gezielt für kurze, wuchtige Stoßangriffe eingesetzt.", "Ein erfahrener Reiter prüft vor dem Aufsitzen zuerst den Stand des Tieres auf Geröll; ein unruhiger Huf gilt als deutlichere Warnung als jedes Schnauben.", "Sturmböcke wählen auf schwierigen Passagen häufig selbst den nächsten Tritt und widersetzen sich einer Führung, die sie an einen unsicheren Punkt zwingt."] }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -66,8 +66,15 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
     relatedEyebrow: 'Systematik der Art',
     rootDataAttribute: 'data-field-guide-profile',
     buildScript: 'Bestiarium/scripts/build-field-guide-profiles.mjs',
+    categoryHref: '../index.html',
+    overviewLinkLabel: 'Zur Artenübersicht ↗',
+    registerBackLabel: null,
+    footerBackLabel: 'Zurück zur Artenübersicht ↗',
     ...options
   };
+  const categoryHref = context.categoryHref;
+  const overviewHref = context.overviewHref || `${categoryHref}#gruppe-${record.parentGroupId}`;
+  const registerBackLabel = context.registerBackLabel || `Alle ${context.categoryName}`;
   const hasRelated = Boolean(record.related?.entries?.length);
   const sectionOffset = hasRelated ? 3 : 2;
   const plateNumber = sectionOffset + record.sections.length;
@@ -89,24 +96,24 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
   <div class="bestiary-page field-profile" ${context.rootDataAttribute} data-profile-id="${escapeHtml(record.id)}">
     <header class="masthead" id="anfang"><a class="almanach-link" href="../../../index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · ${escapeHtml(context.archiveEdition)}</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
-      <nav class="field-profile-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../index.html">${escapeHtml(context.categoryName)}</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(record.name)}</span></nav>
+      <nav class="field-profile-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="${escapeHtml(categoryHref)}">${escapeHtml(context.categoryName)}</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(record.name)}</span></nav>
       <section class="field-profile-hero" aria-labelledby="field-title">
-        <div class="field-profile-hero-copy"><div class="field-profile-seal">${renderPicture(record.icon, { className: 'field-profile-icon', eager: true })}<span>${escapeHtml(context.archiveBadge)}</span></div><p class="eyebrow">${escapeHtml(record.continent)} · ${escapeHtml(record.region)} · Archivblatt ${escapeHtml(record.folio)}</p><h1 id="field-title">${escapeHtml(record.name)}</h1><p class="field-profile-classification">${escapeHtml(record.classification)}</p><p class="field-profile-lead">${escapeHtml(record.summary)}</p><div class="field-profile-actions"><a class="ink-button" href="#feldbewertung">Das Dossier lesen <span aria-hidden="true">↓</span></a><a href="../index.html#gruppe-${escapeHtml(record.parentGroupId)}">Zur Artenübersicht ↗</a></div></div>
+        <div class="field-profile-hero-copy"><div class="field-profile-seal">${renderPicture(record.icon, { className: 'field-profile-icon', eager: true })}<span>${escapeHtml(context.archiveBadge)}</span></div><p class="eyebrow">${escapeHtml(record.continent)} · ${escapeHtml(record.region)} · Archivblatt ${escapeHtml(record.folio)}</p><h1 id="field-title">${escapeHtml(record.name)}</h1><p class="field-profile-classification">${escapeHtml(record.classification)}</p><p class="field-profile-lead">${escapeHtml(record.summary)}</p><div class="field-profile-actions"><a class="ink-button" href="#feldbewertung">Das Dossier lesen <span aria-hidden="true">↓</span></a><a href="${escapeHtml(overviewHref)}">${escapeHtml(context.overviewLinkLabel)}</a></div></div>
         <figure class="field-profile-portrait">${renderPicture(record.hero, { className: 'field-profile-portrait-image', eager: true })}<figcaption>${escapeHtml(record.hero.caption)}</figcaption></figure>
       </section>
       <blockquote class="field-profile-quote"><span aria-hidden="true">❧</span><p>„${escapeHtml(record.quote)}“<cite>${escapeHtml(record.quoteAttribution)}</cite></p><span aria-hidden="true">❧</span></blockquote>
       <div class="field-profile-book">
-        <aside class="field-profile-register"><div><p class="eyebrow">In diesem Dossier</p><nav aria-label="Kapitel des ${escapeHtml(context.dossierName)}"><a href="#feldbewertung"><span>I</span>Archivbewertung</a>${hasRelated ? `<a href="#verwandtschaft"><span>II</span>${escapeHtml(context.relatedLabel)}</a>` : ''}${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + sectionOffset)}</span>${escapeHtml(section.title)}</a>`).join('\n')}${record.plates?.length ? `<a href="#bildtafeln"><span>${romanNumeral(plateNumber)}</span>Bildtafeln</a>` : ''}</nav><a class="field-profile-register-back" href="../index.html">← Alle ${escapeHtml(context.categoryName)}</a></div></aside>
+        <aside class="field-profile-register"><div><p class="eyebrow">In diesem Dossier</p><nav aria-label="Kapitel des ${escapeHtml(context.dossierName)}"><a href="#feldbewertung"><span>I</span>Archivbewertung</a>${hasRelated ? `<a href="#verwandtschaft"><span>II</span>${escapeHtml(context.relatedLabel)}</a>` : ''}${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + sectionOffset)}</span>${escapeHtml(section.title)}</a>`).join('\n')}${record.plates?.length ? `<a href="#bildtafeln"><span>${romanNumeral(plateNumber)}</span>Bildtafeln</a>` : ''}</nav><a class="field-profile-register-back" href="${escapeHtml(categoryHref)}">← ${escapeHtml(registerBackLabel)}</a></div></aside>
         <div class="field-profile-content">
           <section class="field-profile-metrics" id="feldbewertung" aria-labelledby="metrics-title"><header class="field-profile-feature-heading"><span aria-hidden="true">I</span><div><p class="eyebrow">Sechs Merkmale · Skala 1–10</p><h2 id="metrics-title">Archivbewertung</h2></div></header><p class="field-profile-feature-intro">${escapeHtml(metricIntro)}</p>${renderProfileMetrics(record.metrics, { chartTitle: `Archivbewertung für ${record.name}` })}<p class="field-profile-metrics-source">Quelle der Einordnung: ${escapeHtml(record.metrics.source)}</p></section>
           ${renderRelated(record.related, context)}
           <div class="field-profile-reading"><article class="field-profile-narrative" aria-label="Überlieferung zu ${escapeHtml(record.name)}">${record.sections.map((section, index) => renderSection(section, index, sectionOffset)).join('\n')}</article>${renderFacts(record.facts)}</div>
           ${renderPlates(record.plates, plateNumber)}
-          <nav class="field-profile-navigation" aria-label="Weitere ${escapeHtml(context.categoryName)}-Dossiers">${renderSibling(navigation.previous, 'previous', context)}<a class="field-profile-all" href="../index.html">Alle ${escapeHtml(context.categoryName)}</a>${renderSibling(navigation.next, 'next', context)}</nav>
+          <nav class="field-profile-navigation" aria-label="Weitere ${escapeHtml(context.categoryName)}-Dossiers">${renderSibling(navigation.previous, 'previous', context)}<a class="field-profile-all" href="${escapeHtml(categoryHref)}">${escapeHtml(registerBackLabel)}</a>${renderSibling(navigation.next, 'next', context)}</nav>
         </div>
       </div>
     </main>
-    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escapeHtml(record.name)} · ${escapeHtml(context.pageGroup)} Alerias</small></p><a href="../index.html">Zurück zur Artenübersicht ↗</a></footer>
+    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escapeHtml(record.name)} · ${escapeHtml(context.pageGroup)} Alerias</small></p><a href="${escapeHtml(categoryHref)}">${escapeHtml(context.footerBackLabel)}</a></footer>
   </div>
 </body>
 </html>
