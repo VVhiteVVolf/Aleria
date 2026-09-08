@@ -115,10 +115,10 @@ test('all fifteen supplied profile illustrations are archived with their source 
   await Promise.all(manifest.items.map(item => access(new URL(`../assets/${item.file.slice(2)}`, import.meta.url))));
 });
 
-test('dog images are explicitly contained instead of cropped', async () => {
-  const css = await readFile(new URL('../modules/dog-profile/dog-profile.css', import.meta.url), 'utf8');
-  assert(css.includes('.dog-profile .livestock-icon'));
-  assert(css.includes('.dog-profile .livestock-hero-image'));
+test('dog images use the shared pet profile rules and are explicitly contained instead of cropped', async () => {
+  const css = await readFile(new URL('../modules/pet-profile/pet-profile.css', import.meta.url), 'utf8');
+  assert(css.includes('.pet-profile .livestock-icon'));
+  assert(css.includes('.pet-profile .livestock-hero-image'));
   assert.equal((css.match(/object-fit:\s*contain/g) || []).length, 1);
   assert(!/object-fit:\s*cover/.test(css));
 });

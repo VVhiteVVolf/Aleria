@@ -4,7 +4,7 @@
   "subtitle": "Vertraute Hausgefährten und regionale Rassen",
   "classification": "Tiere · Vieh · Haustiere",
   "folio": "VI / 01-B",
-  "lead": "Die Katzentafel ordnet zehn benannte Rassen nach Estryll und Lothir. Für Aldervan ist das Register vorbereitet, enthält bisher aber weder einen Namen noch eine echte Bildtafel.",
+  "lead": "Die Katzentafel ordnet zehn benannte Rassen nach Estryll und Lothir. Fünfzehn weitere Plätze aus dem alten Register bleiben als ??? sichtbar, bis Namen, Bilder und Lore überliefert sind.",
   "quote": "Katzen wählen ihre vertrauten Plätze mit Ruhe und großer Aufmerksamkeit.",
   "icon": {
     "src": "../../../../assets/livestock/haustiere/katzen.webp",
@@ -25,23 +25,23 @@
       "value": "Haustier"
     },
     {
-      "label": "Bildtafeln",
-      "value": "10 überlieferte Rassenkarten"
+      "label": "Registerplätze",
+      "value": "25"
     },
     {
-      "label": "Benannte Rassen",
+      "label": "Ausgearbeitete Rassen",
       "value": "10"
     },
     {
-      "label": "Offene Bildernamen",
-      "value": "Keine"
+      "label": "Offene Rassen",
+      "value": "15 × ???"
     },
     {
-      "label": "Verbreitung",
+      "label": "Belegte Verbreitung",
       "value": "Estryll und Lothir"
     },
     {
-      "label": "Weitere Tafel",
+      "label": "Vorbereitetes Register",
       "value": "Aldervan"
     }
   ],
@@ -50,16 +50,16 @@
       "id": "einfuehrung",
       "title": "Einführung",
       "paragraphs": [
-        "Katzen leben als Haustiere in enger Nähe zum Menschen und behalten dabei einen eigenständigen Tagesrhythmus. Die alte Tafel unterscheidet ihre Rassen nach Herkunft, ohne bereits nähere Eigenschaften zu nennen.",
-        "Alle zehn echten Bildtafeln besitzen einen Namen. Die vorbereiteten, aber bildlosen Felder bleiben als offene Stellen des Registers erhalten."
+        "Katzen leben als Haustiere in enger Nähe zum Menschen und behalten dabei einen eigenständigen Tagesrhythmus. Die überlieferten Rassen unterscheiden sich deutlich in Jagdtrieb, Bindung, Lebensraum und Aufgabe.",
+        "Zehn benannte Rassen besitzen nun ein vollständiges Dossier. Die fünfzehn weiteren Stellen des alten Registers bleiben bewusst als ??? unausgefüllt."
       ]
     },
     {
       "id": "hintergrund",
       "title": "Hintergrund",
       "paragraphs": [
-        "Vertraute Wege, sichere Rückzugsorte und beständige Versorgung bestimmen den Alltag einer gehaltenen Katze. Haltung und Nähe zum Menschen können sich von Tier zu Tier deutlich unterscheiden.",
-        "Die vorhandenen Rassennamen und Herkunftsangaben werden ohne zusätzliche Deutung übernommen. Aussehen, Verhalten und besondere Eigenschaften folgen später in eigenen Dossiers."
+        "Die vorhandenen Rassen reichen von Hof- und Jagdkatzen über Stadt- und Schiffskatzen bis zu höfischen Statuszuchten. Herkunft und Aufgaben folgen ausschließlich den überlieferten Tafeln.",
+        "Für die offenen Stellen werden weder Namen noch Tiere oder Orte ergänzt. Sie können später mit neuen Bildtafeln und Lore gefüllt werden."
       ]
     },
     {
@@ -73,21 +73,21 @@
   ],
   "catalog": {
     "title": "Überlieferte Katzenrassen",
-    "intro": "Das Register übernimmt alle zehn benannten Bildtafeln. Die ausschließlich mit einer grauen Ersatzgrafik gefüllten Tabellenfelder werden nicht als eigene Rassenkarte ausgegeben.",
+    "intro": "Alle zehn benannten Katzenrassen führen zu ihrem Dossier. Die fünfzehn noch fehlenden Rassen bleiben in der ursprünglichen regionalen Ordnung als ??? vorgemerkt.",
     "groups": [
       {
         "id": "estryll-albische-fuerstentuemer",
         "title": "Estryll · Albische Fürstentümer",
         "kicker": "Regionales Rassenregister",
-        "description": "Drei Katzenrassen sind für die Albischen Fürstentümer benannt.",
+        "description": "3 benannte Katzenrassen sind ausgearbeitet; 2 weitere Plätze bleiben als ??? offen.",
         "entries": [
           {
             "id": "ruachar",
             "title": "Ruachar",
             "region": "Albische Fürstentümer",
-            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Ruachar. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine robuste, selbstständige Hofkatze der Albischen Fürstentümer, die Vorräte geduldig bewacht und jeden sonnigen Ruheplatz als ihr Eigentum betrachtet.",
+            "status": "Dossier verfügbar",
+            "href": "./ruachar/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/ruachar.webp",
@@ -99,17 +99,17 @@
           },
           {
             "id": "duriyn",
-            "title": "Duriyn",
+            "title": "Dúriyn",
             "region": "Albische Fürstentümer",
-            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Duriyn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Ein schlanker, tiefschwarzer Nachtpirscher der südlichen Albenländer, der große Streifgebiete absucht und seinem Menschen die Jagdbeute demonstrativ vorlegt.",
+            "status": "Dossier verfügbar",
+            "href": "./duriyn/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/duriyn.webp",
                 "width": 408,
                 "height": 612,
-                "alt": "Überlieferte Bildtafel: Duriyn"
+                "alt": "Überlieferte Bildtafel: Dúriyn"
               }
             ]
           },
@@ -117,9 +117,9 @@
             "id": "fialmor",
             "title": "Fialmor",
             "region": "Albische Fürstentümer",
-            "description": "Eine für Albische Fürstentümer überlieferte Katzenrasse mit dem Namen Fialmor. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine große, lernfähige Jagdkatze der Albischen Länder, die festen Abläufen folgt, Kleinwild erbeutet und eher als Gefährte denn als bloßes Haustier gilt.",
+            "status": "Dossier verfügbar",
+            "href": "./fialmor/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/fialmor.webp",
@@ -128,6 +128,26 @@
                 "alt": "Überlieferte Bildtafel: Fialmor"
               }
             ]
+          },
+          {
+            "id": "unbekannt-alben-1",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-alben-2",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
           }
         ]
       },
@@ -135,15 +155,15 @@
         "id": "estryll-norden",
         "title": "Estryll · Norden",
         "kicker": "Regionales Rassenregister",
-        "description": "Zwei Katzenrassen sind für den Norden benannt.",
+        "description": "2 benannte Katzenrassen sind ausgearbeitet; 3 weitere Plätze bleiben als ??? offen.",
         "entries": [
           {
             "id": "velir",
             "title": "Velir",
             "region": "Norden",
-            "description": "Eine für Norden überlieferte Katzenrasse mit dem Namen Velir. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine widerstandsfähige weiße Nordkatze aus Fjordheim, die Kälte und größere Beute nicht scheut, monatelang verschwinden kann und allein aus eigenem Entschluss bleibt.",
+            "status": "Dossier verfügbar",
+            "href": "./velir/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/velir.webp",
@@ -157,9 +177,9 @@
             "id": "skjarn",
             "title": "Skjarn",
             "region": "Norden",
-            "description": "Eine für Norden überlieferte Katzenrasse mit dem Namen Skjarn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine robuste und menschennahe Hofkatze des Nordens, die zwischen langen Schlafphasen zuverlässig jagt und jede geschlossene Tür als persönlichen Auftrag versteht.",
+            "status": "Dossier verfügbar",
+            "href": "./skjarn/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/skjarn.webp",
@@ -168,6 +188,36 @@
                 "alt": "Überlieferte Bildtafel: Skjarn"
               }
             ]
+          },
+          {
+            "id": "unbekannt-norden-1",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-norden-2",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-norden-3",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
           }
         ]
       },
@@ -175,15 +225,15 @@
         "id": "estryll-cenyr",
         "title": "Estryll · Cenyr",
         "kicker": "Regionales Rassenregister",
-        "description": "Vier Katzenrassen sind für Cenyr benannt.",
+        "description": "4 benannte Katzenrassen sind ausgearbeitet; 1 weiterer Platz bleibt als ??? offen.",
         "entries": [
           {
             "id": "cenyric",
             "title": "Cenyric",
             "region": "Cenyr",
-            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Cenyric. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine vielseitige, ursprünglich aus Avallorn eingeführte Schiffskatze, die in Cenyr eine neue Heimat fand und sich eng, wenn auch launisch, an ihren Menschen bindet.",
+            "status": "Dossier verfügbar",
+            "href": "./cenyric/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/cenyric.webp",
@@ -197,9 +247,9 @@
             "id": "lethin",
             "title": "Lethin",
             "region": "Cenyr",
-            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Lethin. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine stattliche cenyrische Palastkatze mit ausgeprägtem Standesbewusstsein, die angemessene Behausungen fordert und nur aus eigenem Vergnügen auf die Jagd geht.",
+            "status": "Dossier verfügbar",
+            "href": "./lethin/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/lethin.webp",
@@ -211,17 +261,17 @@
           },
           {
             "id": "cerix",
-            "title": "Cerix",
+            "title": "Cérix",
             "region": "Cenyr",
-            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Cerix. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine geheime Zucht des Hauses Cath, deren lautlose Bewegung, Raumwahrnehmung und enge Einzelbindung sie zur Botin, Aufklärerin und stillen Beobachterin machen.",
+            "status": "Dossier verfügbar",
+            "href": "./cerix/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/cerix.webp",
                 "width": 408,
                 "height": 612,
-                "alt": "Überlieferte Bildtafel: Cerix"
+                "alt": "Überlieferte Bildtafel: Cérix"
               }
             ]
           },
@@ -229,9 +279,9 @@
             "id": "targwyn",
             "title": "Targwyn",
             "region": "Cenyr",
-            "description": "Eine für Cenyr überlieferte Katzenrasse mit dem Namen Targwyn. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine bewegliche Stadtkatze Cenyrs, die festen Wegen über Dächer, Mauern und Märkte folgt, Menschen genau kennt und dennoch niemandem vollständig gehört.",
+            "status": "Dossier verfügbar",
+            "href": "./targwyn/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/targwyn.webp",
@@ -240,6 +290,16 @@
                 "alt": "Überlieferte Bildtafel: Targwyn"
               }
             ]
+          },
+          {
+            "id": "unbekannt-cenyr-1",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
           }
         ]
       },
@@ -247,15 +307,15 @@
         "id": "lothir",
         "title": "Lothir",
         "kicker": "Regionales Rassenregister",
-        "description": "Eine Katzenrasse ist mit einem genauen Herkunftsvermerk überliefert.",
+        "description": "1 benannte Katzenrasse ist ausgearbeitet; 4 weitere Plätze bleiben als ??? offen.",
         "entries": [
           {
             "id": "samtlicht",
             "title": "Samtlicht",
             "region": "Weisenfluh",
-            "description": "Eine für Weisenfluh überlieferte Katzenrasse mit dem Namen Samtlicht. Aussehen, Haltung und Verhalten werden im späteren Einzeldossier ausgearbeitet.",
-            "status": "Einzeldossier vorgemerkt",
-            "href": null,
+            "description": "Eine gezielt nutzlos gehaltene Luxuszucht aus Weisenfluh, deren helles Langhaar, hohe Ansprüche und demonstrative Gelassenheit vor allem Wohlstand verkörpern.",
+            "status": "Dossier verfügbar",
+            "href": "./samtlicht/index.html",
             "images": [
               {
                 "src": "../../../../assets/pet-breeds/katzen/samtlicht.webp",
@@ -264,6 +324,46 @@
                 "alt": "Überlieferte Bildtafel: Samtlicht"
               }
             ]
+          },
+          {
+            "id": "unbekannt-lothir-1",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-lothir-2",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-lothir-3",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-lothir-4",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
           }
         ]
       },
@@ -271,8 +371,59 @@
         "id": "aldervan",
         "title": "Aldervan",
         "kicker": "Noch ohne benannte Einträge",
-        "description": "Die alte Tafel enthält für Aldervan bisher weder eine benannte Katzenrasse noch eine echte Bildtafel.",
-        "entries": []
+        "description": "5 Plätze sind vorbereitet und bleiben bis zur späteren Ausarbeitung als ??? offen.",
+        "entries": [
+          {
+            "id": "unbekannt-aldervan-1",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-aldervan-2",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-aldervan-3",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-aldervan-4",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          },
+          {
+            "id": "unbekannt-aldervan-5",
+            "title": "???",
+            "region": "Herkunft noch unbekannt",
+            "description": "Name, Erscheinungsbild und Überlieferung sind noch nicht ausgearbeitet.",
+            "status": "Noch unausgefüllt",
+            "href": null,
+            "unknown": true,
+            "images": []
+          }
+        ]
       }
     ]
   }

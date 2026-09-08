@@ -13,10 +13,11 @@ const expectedDogIds = [
 ];
 
 const expectedCatIds = [
-  'ruachar', 'duriyn', 'fialmor',
-  'velir', 'skjarn',
-  'cenyric', 'lethin', 'cerix', 'targwyn',
-  'samtlicht'
+  'ruachar', 'duriyn', 'fialmor', 'unbekannt-alben-1', 'unbekannt-alben-2',
+  'velir', 'skjarn', 'unbekannt-norden-1', 'unbekannt-norden-2', 'unbekannt-norden-3',
+  'cenyric', 'lethin', 'cerix', 'targwyn', 'unbekannt-cenyr-1',
+  'samtlicht', 'unbekannt-lothir-1', 'unbekannt-lothir-2', 'unbekannt-lothir-3', 'unbekannt-lothir-4',
+  'unbekannt-aldervan-1', 'unbekannt-aldervan-2', 'unbekannt-aldervan-3', 'unbekannt-aldervan-4', 'unbekannt-aldervan-5'
 ];
 
 async function readPetGroup(id) {
@@ -88,17 +89,23 @@ test('the 16 named dog breeds and their inherited task labels remain intact', as
   ]);
 });
 
-test('all ten real cat images retain their names while empty placeholders stay empty', async () => {
+test('all ten cat dossiers are linked and all fifteen inherited empty slots remain marked as unknown', async () => {
   const { record } = await readPetGroup('katzen');
   const entries = entriesOf(record);
   assert.deepEqual(entries.map(entry => entry.id), expectedCatIds);
-  assert.deepEqual(entries.map(entry => entry.title), [
-    'Ruachar', 'Duriyn', 'Fialmor', 'Velir', 'Skjarn',
-    'Cenyric', 'Lethin', 'Cerix', 'Targwyn', 'Samtlicht'
+  const named = entries.filter(entry => !entry.unknown);
+  assert.deepEqual(named.map(entry => entry.title), [
+    'Ruachar', 'Dúriyn', 'Fialmor', 'Velir', 'Skjarn',
+    'Cenyric', 'Lethin', 'Cérix', 'Targwyn', 'Samtlicht'
   ]);
-  assert(entries.every(entry => !entry.unknown));
-  const aldervan = record.catalog.groups.find(group => group.id === 'aldervan');
-  assert.deepEqual(aldervan.entries, []);
+  assert(named.every(entry => entry.href === `./${entry.id}/index.html`));
+  assert(named.every(entry => entry.status === 'Dossier verfügbar'));
+  const unknown = entries.filter(entry => entry.unknown);
+  assert.equal(unknown.length, 15);
+  assert(unknown.every(entry => entry.title === '???'));
+  assert(unknown.every(entry => entry.href === null && entry.status === 'Noch unausgefüllt'));
+  assert(unknown.every(entry => entry.images.length === 0));
+  assert(record.catalog.groups.every(group => group.entries.length === 5));
 });
 
 test('the Haustiere page links both breed registers', async () => {

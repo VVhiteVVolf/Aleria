@@ -1,0 +1,189 @@
+{
+  "id": "velir",
+  "name": "Velir",
+  "classification": "Katzenrasse · Kälteresistente Nordkatze",
+  "continent": "Estryll",
+  "region": "Fjordheim · ehemaliges Vennyr",
+  "folio": "VI / 01-B / 04",
+  "summary": "Eine widerstandsfähige weiße Nordkatze aus Fjordheim, die Kälte und größere Beute nicht scheut, monatelang verschwinden kann und allein aus eigenem Entschluss bleibt.",
+  "quote": "Er bleibt nicht, weil man ihn füttert. Er bleibt, weil es ihm gerade passt.",
+  "quoteAttribution": "alter Spruch aus dem Norden",
+  "parentGroupId": "estryll-norden",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/velir.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Velir"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/velir.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständige Bildtafel der Katzenrasse Velir",
+    "caption": "Rassentafel · Velir"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Velir"
+    },
+    {
+      "label": "Typ",
+      "value": "Kälteresistente Nordkatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Fjorde und Hochlande Fjordheims im nördlichen Estryll"
+    },
+    {
+      "label": "Größe",
+      "value": "Mittelgroß bis kräftig"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Dichtes, mehrschichtiges Fell und kräftiger Körper"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Unabhängige Streifzüge ohne festen Rhythmus"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; für Beutetiere hoch"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Größeres Ungeziefer und Kleinwild"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Hohe Kälteresistenz, Selbstständigkeit und ausgeprägte Sturheit"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Velir ist die typische Nordkatze: weiß wie Schnee, dick im Fell, hart im Nehmen und von einer Sturheit, die selbst nordische Menschen gelegentlich an ihre Grenzen bringt. Wo andere Katzen vor der Größe der Mäuse, den Feldtieren oder dem rauen Klima des Nordens zurückschrecken würden, betrachtet der Velir dies lediglich als angemessene Herausforderung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist kein Haustier im klassischen Sinne. Wer einen Velir erwartet, der treu wartet, folgt oder Nähe sucht, hat das Tier nicht verstanden – und wird ignoriert."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Velir stammt aus dem Norden Estrylls, insbesondere aus den Fjorden und Hochlanden von Fjordheim, dem ehemaligen Vennyr. Diese Region ist geprägt von Kälte, Wind, felsigem Boden und vergleichsweise großem Ungeziefer, das in milderen Landen längst als Kleinwild gelten würde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hier entwickelte sich der Velir nicht durch gezielte Zucht, sondern durch Aussortieren der Schwachen. Katzen, die das Klima, die Beute oder die Freiheit nicht ertrugen, verschwanden. Übrig blieb eine Linie, die selbstständig, widerstandsfähig und nahezu gleichgültig gegenüber menschlichen Erwartungen ist."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Velir ist eine mittelgroße bis kräftige Katze mit dichtem, mehrschichtigem Fell, das ihn zuverlässig vor Kälte schützt. Sein Fell ist meist reinweiß oder schneehell, gelegentlich mit kaum sichtbaren Schattierungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Augen sind klar, wach und oft von warmer, gelblicher Farbe – ein Kontrast zur kalten Umgebung. Seine Bewegungen sind ruhig, kontrolliert und effizient. Nichts an ihm wirkt verspielt oder überflüssig."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hohe Kälteresistenz",
+            "Außergewöhnliche Selbstständigkeit",
+            "Starke Jagdfähigkeiten auch bei größerer Beute",
+            "Geringes Bedürfnis nach sozialer Bindung",
+            "Extreme Sturheit"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Velir ist intelligent – aber nicht kooperativ. Er versteht sehr genau, was von ihm erwartet wird. Er entscheidet lediglich selbst, ob er darauf reagiert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Velir sind Einzelgänger mit ausgeprägtem Revierverhalten. Sie durchstreifen Höfe, Dörfer und Randgebiete der Wildnis und stellen sich Beutetieren, die in südlicheren Regionen selbst erfahrene Katzen meiden würden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Velir verschwindet, wenn es ihm sinnvoll erscheint. Tage, Wochen oder Monate. Wenn er zurückkehrt, tut er das ohne Erklärung und ohne erkennbare Veränderung im Verhalten – als wäre er nie weg gewesen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bindung ist für ihn kein Konzept, sondern eine Option, die er meist ablehnt. Herrchen werden erkannt, nicht gesucht. Nähe wird toleriert, nicht eingefordert."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Man holt sich keinen Velir. Man lebt an einem Ort, an dem Velir leben – und hofft, dass einer bleibt. Wenn ein Velir einen Hof oder ein Haus akzeptiert, gilt das als stilles Gütesiegel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Beziehung ist distanziert, respektvoll und von gegenseitiger Gleichgültigkeit geprägt. Ein Schulterstreifen im Vorbeigehen gilt bereits als Anerkennung. Mehr sollte man nicht erwarten."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Verschwindet monatelang ohne Vorwarnung",
+            "Ignoriert Rufe konsequent",
+            "Jagdtrieb auch bei widrigen Bedingungen",
+            "Zeigt Zuneigung nur beiläufig",
+            "Duldet Nähe nur aus eigener Entscheidung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Fjordheim heißt es, ein Velir verlasse einen Hof nur, wenn dieser „seine Ordnung verloren hat“",
+            "Velir gelten als schlechtes Omen für Eindringlinge, aber als gutes für Bewohner",
+            "Manche vergleichen ihren Mut mit dem eines Huskarls – die Katze würde dem Vergleich nicht widersprechen"
+          ]
+        }
+      ]
+    }
+  ]
+}

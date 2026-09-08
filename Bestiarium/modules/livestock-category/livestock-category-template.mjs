@@ -1,7 +1,7 @@
 import { escapeHtml, renderPicture, romanNumeral } from '../book-shell/book-template-utils.mjs';
 import { LIVESTOCK_CATEGORIES } from './livestock-category-registry.mjs';
 
-const VERSION = '20260908-livestock-category-v2';
+const VERSION = '20260908-livestock-category-v3';
 
 function renderTabs(currentId, tabs) {
   return tabs.map(tab => {
@@ -52,6 +52,9 @@ function renderFacts(facts) {
 }
 
 function renderEntryArt(entry) {
+  if (entry.images.length === 0) {
+    return '<div class="livestock-entry-art livestock-entry-art--missing" data-image-count="0"><span aria-hidden="true">?</span><p>Bildtafel folgt</p></div>';
+  }
   return `<div class="livestock-entry-art${entry.images.length > 1 ? ' livestock-entry-art--pair' : ''}" data-image-count="${entry.images.length}">${entry.images.map(image => `<figure>${renderPicture(image, { className: 'livestock-entry-image' })}</figure>`).join('\n')}</div>`;
 }
 

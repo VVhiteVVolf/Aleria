@@ -1,0 +1,189 @@
+{
+  "id": "cerix",
+  "name": "Cérix",
+  "classification": "Katzenrasse · Boten- und Aufklärungskatze",
+  "continent": "Estryll",
+  "region": "Cenyr · Haus Cath",
+  "folio": "VI / 01-B / 08",
+  "summary": "Eine geheime Zucht des Hauses Cath, deren lautlose Bewegung, Raumwahrnehmung und enge Einzelbindung sie zur Botin, Aufklärerin und stillen Beobachterin machen.",
+  "quote": "Wo ein Cérix war, wusste man es nie – aber jemand wusste danach mehr.",
+  "quoteAttribution": "geflüsterte Redensart in Cenyr",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/cerix.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Cérix"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/cerix.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständige Bildtafel der Katzenrasse Cérix",
+    "caption": "Rassentafel · Cérix"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Cérix"
+    },
+    {
+      "label": "Typ",
+      "value": "Boten- und Aufklärungskatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Geheime Zuchtlinien des cenyrischen Hauses Cath"
+    },
+    {
+      "label": "Größe",
+      "value": "Nicht näher überliefert"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Schlank, leicht und kurzhaarig"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Aufgabenbezogen und fortwährend aufmerksam"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Körperlich gering; als Beobachter bedeutsam"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Nicht als Jagdzucht überliefert"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Lautlose Bewegung, hohe Problemlösung und außergewöhnliche Raumwahrnehmung"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cérix ist eine besondere Zucht, deren Ursprung und genaue Linie ausschließlich dem Adelshaus Cath bekannt sind. Während andere Katzen aus Notwendigkeit, Zufall oder Dekadenz entstanden, wurde der Cérix gezielt erschaffen – mit einem klaren Zweck: Information."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist keine Katze, die man hält. Er ist eine Katze, die man einsetzt."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cérix entstammt den geheimen Zuchtlinien des Hauses Cath, eines cenyrischen Adelshauses, das seit Generationen für Spionage, Informationsbeschaffung und den Aufbau weit verzweigter Netzwerke bekannt ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entgegen verbreiteter Annahmen liegt der Ursprung dieser Zucht nicht im Wappentier des Hauses, sondern in nüchterner Logik: Katzen sind unauffällig, leise, beweglich – und werden ignoriert. Der Cérix ist die konsequente Ausformung dieser Erkenntnis."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cérix ist eine schlanke, kurzhaarige Katze mit unauffälliger Färbung – meist in dunklen Grau- oder Schwarztönen. Sein Körperbau ist leicht, seine Bewegungen lautlos und kontrolliert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Augen sind wach, ruhig und von einem durchdringenden Blick, der selten Emotion verrät. Alles an ihm wirkt funktional. Selbst im Ruhezustand scheint er aufmerksam."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Extrem leise Fortbewegung",
+            "Hohe Problemlösungsfähigkeit",
+            "Außergewöhnliche Orts- und Raumwahrnehmung",
+            "Enge Bindung an eine einzelne Bezugsperson",
+            "Kaum soziales Verhalten außerhalb dieser Bindung"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Cérix ist keine soziale Katze. Er ist fokussiert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cérix-Katzen werden vom Haus Cath abgerichtet, nicht erzogen. Sie lernen Wege, Zeichen, Orte und Abläufe. Sie dienen als Botengänger, Aufklärer und stille Beobachter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verbarrikadierte Burgen stellen kein Hindernis dar – der Cérix findet Schlupflöcher. Versteckte Räume, geheime Verbindungen oder unauffällige Übergänge werden von ihm oft schneller entdeckt als von Menschen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er agiert selbstständig, trifft Entscheidungen und kehrt zurück, wenn seine Aufgabe erfüllt ist. Lob erwartet er nicht. Anerkennung zeigt sich allein in fortgesetzter Zusammenarbeit."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Es heißt, jeder Cath müsse seinen eigenen Cérix selbst ausbilden. Diese Bindung gilt als essenziell. Ein Cath ohne Cérix wird als unvollständig betrachtet – jemand, der sein Haus nicht vollständig verkörpert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein herrenloser Cérix hingegen gilt als tragische Erscheinung: eine Katze ohne Bestimmung, ohne Zweck. Solche Tiere werden selten gesehen. Wenn doch, dann nur als scheinbare Streuner, denn niemand außerhalb des Hauses Cath weiß, wie man mit ihnen umgeht."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ignoriert Fremde vollständig",
+            "Zeigt kaum emotionale Regungen",
+            "Findet Wege, die andere übersehen",
+            "Kehrt zuverlässig zurück",
+            "Verliert außerhalb seiner Aufgabe an Orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In Cenyr sagt man: „Wenn du einen Cérix siehst, bist du bereits beobachtet worden.“",
+            "Es gibt keine bestätigten Aufzeichnungen über einen verkauften Cérix",
+            "Gerüchte besagen, dass manche Cérix ganze Städte besser kennen als ihre Bewohner"
+          ]
+        }
+      ]
+    }
+  ]
+}

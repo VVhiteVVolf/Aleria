@@ -1,0 +1,189 @@
+{
+  "id": "lethin",
+  "name": "Lethin",
+  "classification": "Katzenrasse · Palast- und Statuskatze",
+  "continent": "Estryll",
+  "region": "Cenyr",
+  "folio": "VI / 01-B / 07",
+  "summary": "Eine stattliche cenyrische Palastkatze mit ausgeprägtem Standesbewusstsein, die angemessene Behausungen fordert und nur aus eigenem Vergnügen auf die Jagd geht.",
+  "quote": "Er jagt nicht, weil er muss. Er jagt, weil es ihm Freude macht.",
+  "quoteAttribution": "aus einer cenyrischen Hofchronik",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/lethin.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Lethin"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/lethin.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständige Bildtafel der Katzenrasse Lethin",
+    "caption": "Rassentafel · Lethin"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Lethin"
+    },
+    {
+      "label": "Typ",
+      "value": "Palast- und Statuskatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alte cenyrische Reiche"
+    },
+    {
+      "label": "Größe",
+      "value": "Stattlich"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kräftig, elegant und langhaarig"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Selektiv aktiv; Jagd ausschließlich aus Vergnügen"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; gegenüber Respektlosigkeit reizbar"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Mäuse"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Vermutlicher Vorfahr des Samtlichts und an eine Person gebunden"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lethin gilt als der vermutliche Vorfahre des Weisenfluher Samtlichts. Wo jener das Endprodukt höfischer Degeneration darstellt, ist der Lethin noch die funktionsfähige Urform: eitel, arrogant, selbstverliebt – aber nicht völlig nutzlos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist eine ausgesprochene Palastkatze, geschaffen für Schlösser, Burgen und repräsentative Städte. Dort bewegt er sich, als gehöre ihm der Ort. Außerhalb solcher Umgebungen wirkt er fehl am Platz, gereizt und beleidigt."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lethin stammt aus den alten cenyrischen Reichen, wo Adel, Architektur und Status seit jeher eine Rolle spielen. Seine Linie entwickelte sich nicht auf Bauernhöfen, sondern in Burgen, Palästen und befestigten Städten, wo Mäuse zahlreich, aber Menschen zahlreicher waren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Man brauchte keine effiziente Hofkatze – man wollte eine standesgemäße."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lethin ist eine langhaarige, stattliche Katze mit dunklem, oft tiefgrauem oder schwarzem Fell. Sein Halskragen ist ausgeprägt, sein Körperbau kräftig, aber elegant. Er sitzt gern auf erhöhten Positionen und blickt von dort herab – nicht aus Vorsicht, sondern aus Gewohnheit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Augen sind klar, wach und häufig von warmer, goldener Farbe. Sein Ausdruck ist dauerhaft überlegen."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Stark ausgeprägtes Standesbewusstsein",
+            "Hohe Ortsgebundenheit an „angemessene“ Behausungen",
+            "Selektive Jagdbereitschaft",
+            "Hohe Eitelkeit und Anspruchshaltung",
+            "Geringe Toleranz gegenüber Mangel"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Lethin ist keine Katze für einfache Leute. Nicht, weil er gefährlich wäre – sondern weil er rebelliert, wenn ihm die Umgebung nicht gefällt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Burgen und Palästen fühlt sich der Lethin in seinem Element. Er patrouilliert Zinnen, Galerien und Innenhöfe, jagt Mäuse, bis er satt und träge ist, und legt sich anschließend dorthin, wo er gerade möchte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Außerhalb solcher Orte wird er unausstehlich. Einfache Häuser, ärmliche Behausungen oder ländliche Höfe empfindet er als Zumutung. In solchen Umgebungen zeigt der Lethin deutliches Missfallen, verweigert Nähe und kann regelrecht rebellisch werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jagen tut er – wenn er Lust hat. Nie aus Hunger, niemals aus Pflicht. Freude ist der einzige Antrieb."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lethin erkennt sein Herrchen an – ein einziges. Streicheleinheiten werden zugelassen, aber ausschließlich von dieser Person. Fremde, Diener oder Besucher werden ignoriert oder verächtlich gemustert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cenyri sind bekannt dafür, dem Lethin alberne, adelige Spitznamen zu verleihen: „Prinz Fantastisch“, „Eure Majestät“, „Lady“ oder „Fürst Mäuseschreck“. Der Lethin scheint diese Titel ernst zu nehmen – als wären sie Teil seiner Identität."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Rebelliert bei unangemessener Unterkunft",
+            "Ignoriert Fremde konsequent",
+            "Besteht auf regelmäßiger Fütterung",
+            "Jagt nur aus Vergnügen",
+            "Reagiert empfindlich auf Respektlosigkeit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In cenyrischen Burgen gelten Lethin als Statussymbol",
+            "Viele Samtlichter lassen sich auf Lethin-Linien zurückführen",
+            "Bauern meiden den Lethin – er sie ebenfalls"
+          ]
+        }
+      ]
+    }
+  ]
+}

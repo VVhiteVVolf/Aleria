@@ -1,0 +1,189 @@
+{
+  "id": "skjarn",
+  "name": "Skjarn",
+  "classification": "Katzenrasse · Nördliche Hofkatze",
+  "continent": "Estryll",
+  "region": "Bewohnte Nordregionen",
+  "folio": "VI / 01-B / 05",
+  "summary": "Eine robuste und menschennahe Hofkatze des Nordens, die zwischen langen Schlafphasen zuverlässig jagt und jede geschlossene Tür als persönlichen Auftrag versteht.",
+  "quote": "Wenn eine Tür geschlossen ist, dann ist sie falsch geschlossen.",
+  "quoteAttribution": "Skjarn-Weisheit, zuverlässig überliefert",
+  "parentGroupId": "estryll-norden",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/skjarn.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Skjarn"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/skjarn.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständige Bildtafel der Katzenrasse Skjarn",
+    "caption": "Rassentafel · Skjarn"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Skjarn"
+    },
+    {
+      "label": "Typ",
+      "value": "Nördliche Hofkatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Bewohnte Nordregionen Estrylls"
+    },
+    {
+      "label": "Größe",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kräftig gebaut mit dichtem, häufig halblangem Fell"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Lange Ruhephasen und konzentrierte Jagdzeiten"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; für Ungeziefer hoch"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Mäuse, Ratten und Kleingetier"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Sehr sozial und unerbittlich auf geschlossene Türen fixiert"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skjarn ist die wichtigste Katze des Nordens und ohne Zweifel der liebste Freund des Bauern. Auf Höfen gilt er als ebenso selbstverständlich wie Scheune, Kornkammer und Feuerstelle. Wo ein Skjarn lebt, dort bleiben Mäuse vorsichtig, Ratten selten und Kornkammern weitgehend unangetastet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist verschmust, freundlich und erstaunlich geduldig – zumindest solange sein Alltag nicht durch verschlossene Türen oder mangelnde Aufmerksamkeit gestört wird. Dann zeigt der Skjarn, dass Geduld eine endliche Ressource ist."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skjarn stammt aus den bewohnten Nordregionen Estrylls, wo Landwirtschaft den Takt des Lebens vorgibt. Über Generationen hinweg wurden jene Katzen bevorzugt, die zuverlässig Ungeziefer fernhielten und zugleich gut mit Menschen auskamen."
+        },
+        {
+          "type": "paragraph",
+          "text": "So entstand der Skjarn als klassische Hofkatze des Nordens: robust genug für das Klima, sozial genug für den Alltag und intelligent genug, um Menschen effektiv zu manipulieren."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skjarn ist eine mittelgroße, kräftig gebaute Katze mit dichtem, häufig halblangem Fell. Dieses schützt ihn zuverlässig vor Kälte und Wind, ohne ihn unbeweglich zu machen. Die Fellfarben sind meist gedeckt – Grau, Braun oder getigerte Muster – und fügen sich unauffällig in Hof und Scheune ein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Augen wirken wach und freundlich, oft mit einem Ausdruck, der irgendwo zwischen Neugier und berechnender Erwartung liegt."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Sehr hohe Toleranz gegenüber Menschen",
+            "Ausgeprägter Jagdtrieb auf Mäuse und Kleingetier",
+            "Starkes Bedürfnis nach Nähe und Körperkontakt",
+            "Hohe Anpassungsfähigkeit an Hofleben",
+            "Unerbittliche Fixierung auf geschlossene Türen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Skjarn ist kein distanziertes Tier. Er will Teil des Alltags sein – überall."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Tagesablauf eines Skjarn besteht zu großen Teilen aus Schlaf. Auf Bänken, in Heuhaufen, nahe dem Herd oder direkt bei seinen Menschen. Diese ausgedehnten Ruhephasen dienen jedoch nur einem Zweck: Energie sammeln."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sobald es Zeit ist zu jagen, wird der Skjarn aktiv. Mäuse werden zuverlässig aufgespürt, gejagt und gefressen. Er ist kein verspielter Jäger, sondern effizient und ausdauernd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Berüchtigt ist sein Verhältnis zu Türen. Jede geschlossene Tür stellt ein Problem dar. Dahinter könnten Mäuse sein. Oder Schätze. Oder schlicht ein Raum, der bislang unerforscht blieb. Skjarn belästigen ihre Herrchen so lange, bis jede Tür geöffnet ist. Lautstark, hartnäckig und mit wachsender Eskalation."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Skjarn ist sehr verschmust und sucht aktiv Nähe. Er schläft gern bei seinen Menschen, fordert Aufmerksamkeit ein und zeigt deutlich, wenn diese ausbleibt. Wer einen Skjarn hält, lebt nicht allein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bauern schätzen ihn sowohl als Mäusefänger als auch als Gesellschaft. Er belebt den Hof, sorgt für Bewegung – und hält die Menschen beschäftigt."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Terrorisiert Menschen wegen geschlossener Türen",
+            "Schläft viel, arbeitet effizient",
+            "Besteht auf Zutritt zu allen Räumen",
+            "Sucht aktiv Körperkontakt",
+            "Gibt keine Ruhe, bis er bekommt, was er will"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "In manchen Gegenden gilt ein Skjarn als Glücksbringer für volle Speicher",
+            "Skjarn öffnen keine Türen, aber sie trainieren Menschen darin",
+            "Ein Hof ohne Skjarn gilt als ungewöhnlich still"
+          ]
+        }
+      ]
+    }
+  ]
+}

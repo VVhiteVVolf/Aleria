@@ -1,0 +1,189 @@
+{
+  "id": "fialmor",
+  "name": "Fialmor",
+  "classification": "Katzenrasse · Jagd- und Hofkatze",
+  "continent": "Estryll",
+  "region": "Albische Fürstentümer",
+  "folio": "VI / 01-B / 03",
+  "summary": "Eine große, lernfähige Jagdkatze der Albischen Länder, die festen Abläufen folgt, Kleinwild erbeutet und eher als Gefährte denn als bloßes Haustier gilt.",
+  "quote": "Wenn er dir ein Kaninchen bringt, dann nicht aus Liebe. Sondern weil er es kann.",
+  "quoteAttribution": "aus einem Sprichwort unter albischen Jägern",
+  "parentGroupId": "estryll-albische-fuerstentuemer",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/fialmor.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Fialmor"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/fialmor.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständige Bildtafel der Katzenrasse Fialmor",
+    "caption": "Rassentafel · Fialmor"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Fialmor"
+    },
+    {
+      "label": "Typ",
+      "value": "Jagd- und Hofkatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Wald- und feldnahe Regionen der Albischen Länder"
+    },
+    {
+      "label": "Größe",
+      "value": "Groß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kräftig, langhaarig und ausdauernd"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Aktiv; die morgendliche Jagd ist besonders verbreitet"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; für Kleinwild hoch"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Kaninchen, Fasane, anderes Kleinwild und Ungeziefer"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Lernfähig, routinenfest und ungewöhnlich kooperativ"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fialmor gilt unter den albischen Katzen als die wildeste und zugleich nützlichste seiner Art. Größer, kräftiger und deutlich aktiver als die meisten Hauskatzen, bewegt er sich an der Grenze zwischen Hof- und Jagdtier. Wo andere Katzen Mäuse jagen, greift der Fialmor auch nach Kaninchen, Fasanen oder anderem Kleinwild – und tut dies mit bemerkenswerter Konsequenz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist verspielt, lernfähig und besitzt eine ungewöhnliche Bereitschaft, sich auf feste Abläufe einzulassen. Nicht aus Unterwürfigkeit, sondern weil er den Sinn dahinter erkennt. Zumindest behauptet er das."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fialmor stammt aus den offeneren, wald- und feldnahen Regionen der Albischen Länder, wo Jagd, Sammeln und alchemistische Arbeit zum Alltag gehören. Dort entstand das Bedürfnis nach einer Katze, die nicht nur Ungeziefer fernhält, sondern aktiv zur Versorgung beiträgt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Über Generationen hinweg setzten sich jene Tiere durch, die größer, ausdauernder und kooperativer waren. So entwickelte sich der Fialmor als Linie, die zwar eindeutig katzenhaft bleibt, in ihrem Verhalten aber ungewöhnlich hundsähnliche Züge zeigt."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Fialmor ist eine große, langhaarige Katze mit kräftigem Körperbau und dichtem Fell, das ihn gegen Kälte und Gestrüpp schützt. Sein Halskragen ist ausgeprägt, der Schwanz buschig und schwer. Die Fellfarben bewegen sich meist in erdigen Braun- und Grautönen, oft mit Streifen oder Schattierungen, die ihn in Wald und Feld nahezu unsichtbar machen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Blick ist aufmerksam, wach und selten wirklich entspannt. Selbst im Sitzen wirkt der Fialmor bereit, sich zu bewegen."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Überdurchschnittliche Größe für eine Hauskatze",
+            "Hohe Lernfähigkeit und Anpassungsbereitschaft",
+            "Ausgeprägter Jagdtrieb auch auf größeres Wild",
+            "Erhöhte Bindung an eine Bezugsperson",
+            "Deutlich ausgeprägte Eigenwilligkeit"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Fialmor ist keine Katze für enge Wohnräume oder träge Haushalte. Er braucht Aufgaben – oder er sucht sie sich selbst."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fialmor-Katzen sind verspielt, aber zielgerichtet. Sie lassen sich an feste Tagesabläufe gewöhnen und folgen ihnen erstaunlich zuverlässig. Besonders verbreitet ist die morgendliche Jagd, bei der der Fialmor selbstständig aufbricht, Kleinwild fängt und dieses seinem Herrchen bringt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ob dies als Geschenk, Beweis von Kompetenz oder subtile Erwartungshaltung zu verstehen ist, bleibt offen. Fest steht: Wer regelmäßig Kaninchen oder Fasane vor der Tür findet, lebt mit einem erfolgreichen Fialmor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Gegensatz zu den meisten Katzen sind Fialmor gesprächsbereit. Sie gehorchen nicht blind, aber sie hören zu. Manchmal lassen sie sich überzeugen – vorausgesetzt, die Argumente sind gut. Und selbst dann bleibt meist eine gewisse Attitüde."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fialmor sind besonders beliebt bei Jägern, Alchemisten, Kräuterkundigen und Waldläufern, die eine Katze schätzen, die mehr ist als bloße Gesellschaft. Sie erfüllen einen Nutzen, tragen zur Versorgung bei und halten zugleich Ungeziefer fern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Fialmor, der regelmäßig Beute nach Hause bringt, gilt als Katze, die ihren Unterhalt selbst bestreitet. Entsprechend respektvoll fällt oft der Umgang aus. Er wird weniger als Haustier, mehr als Gefährte betrachtet."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bringt auch größeres Wild nach Hause",
+            "Lässt sich an Tagesroutinen gewöhnen",
+            "Reagiert auf Stimme und Gesten",
+            "Kann beleidigt sein, wenn seine Leistung ignoriert wird",
+            "Zeigt gelegentlich deutliches Missfallen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Fialmor auf einem Jägerhof gilt als Zeichen von Können",
+            "Manche Alchemisten schreiben ihnen ein Gespür für seltene Zutaten zu",
+            "Fialmor verlieren in Städten schnell ihre Ausgeglichenheit"
+          ]
+        }
+      ]
+    }
+  ]
+}

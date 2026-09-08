@@ -1,0 +1,193 @@
+{
+  "id": "duriyn",
+  "name": "Dúriyn",
+  "classification": "Katzenrasse · Nachtaktive Arbeitskatze",
+  "continent": "Estryll",
+  "region": "Albische Fürstentümer",
+  "folio": "VI / 01-B / 02",
+  "summary": "Ein schlanker, tiefschwarzer Nachtpirscher der südlichen Albenländer, der große Streifgebiete absucht und seinem Menschen die Jagdbeute demonstrativ vorlegt.",
+  "quote": "Wenn ich dir Mäuse bringe, dann nicht, weil du Hunger hast. Sondern weil du unfähig bist.",
+  "quoteAttribution": "zugeschrieben einem Dúriyn, der zu lange beobachtet hat",
+  "parentGroupId": "estryll-albische-fuerstentuemer",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/duriyn.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Dúriyn"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/duriyn.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständige Bildtafel der Katzenrasse Dúriyn",
+    "caption": "Rassentafel · Dúriyn"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Dúriyn"
+    },
+    {
+      "label": "Typ",
+      "value": "Nachtaktive Arbeitskatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Südliche Regionen Estrylls und Albenländer"
+    },
+    {
+      "label": "Größe",
+      "value": "Nicht näher überliefert"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Leicht, sehnig und kurzhaarig"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Dämmerungs- und nachtaktiv"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; für Kleintiere hoch"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Mäuse, Eichhörnchen, Maulwürfe und Vögel"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Tiefschwarzes Fell, leuchtend blaue Augen und große Streifgebiete"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dúriyn ist ein ausgesprochener Nachtpirscher und unter den albischen Katzen wohl der engagierteste Mäuseschreck. Katzen sind dämmerungs- und nachtaktiv – doch der Dúriyn treibt dieses Prinzip mit beinahe missionarischem Eifer auf die Spitze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während andere Katzen schlafen, dösen oder zumindest so tun, als wären sie beschäftigt, durchkämmt der Dúriyn sein Dorf. Leise, zielstrebig und mit einem geradezu beleidigenden Arbeitsethos. Mäuse, Eichhörnchen, Maulwürfe, Vögel – alles, was klein genug ist, um gefangen zu werden, gerät ins Visier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nicht aus Grausamkeit. Aus Pflichtgefühl."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dúriyn stammt aus den südlichen Regionen Estrylls, wo die Albenländer in offener Landschaft, Feldern und kleineren Siedlungen liegen. Dort, wo sich Feldmäuse und anderes Ungeziefer großzügig vermehren, erwies sich der ruhigere Ruachar als zu ortsgebunden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Dúriyn entwickelte sich als Gegenpol: beweglicher, ausdauernder, nachtaktiver. Bauern begannen, diese Katzen gezielt zu dulden und zu behalten – weniger wegen ihres Aussehens, sondern wegen ihrer unbestreitbaren Effektivität."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dúriyn ist eine schlanke, kurzhaarige Katze mit tiefschwarzem Fell, das selbst bei schwachem Licht kaum Konturen preisgibt. Seine auffälligsten Merkmale sind die leuchtend blauen Augen, die im Dunkeln wie kalte Punkte aus der Finsternis wirken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Körperbau ist leicht, sehnig und auf Ausdauer ausgelegt. Nichts an ihm wirkt überflüssig. Selbst im Ruhezustand scheint er angespannt, als würde er jeden Moment aufspringen."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Stark ausgeprägte Nachtaktivität",
+            "Hohe Jagdleidenschaft und Ausdauer",
+            "Enge Bindung an „sein“ Herrchen",
+            "Geringe Reviertreue, dafür große Streifgebiete",
+            "Überraschend hohe Toleranz für Nähe"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Dúriyn ist kein Statussymbol und kein Schmucktier. Er ist eine Arbeitskatze mit Meinung."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nachts gehört das Dorf dem Dúriyn. Er patrouilliert Wege, Höfe, Scheunen und Felder, verschwindet stundenlang und kehrt regelmäßig mit Beute zurück. Diese wird bevorzugt vor Türen, Betten oder Schlafplätzen abgelegt – als stiller Vorwurf an die offensichtliche Jagdunfähigkeit des Menschen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Warum diese Mäuse kurz darauf „verschwinden“, entgeht ihm meist. Dass sein Herrchen sie entsorgt, statt sie zu würdigen, ist ein Detail, das man dem Dúriyn besser erspart. Es würde nur zu Unmut führen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tagsüber schläft er gern dort, wo auch sein Herrchen schläft. Ob dieser damit einverstanden ist, spielt keine Rolle. Man arrangiert sich. Gelegentlich gibt es ein gemeinsames Mittagsschläfchen, in dessen Verlauf der Dúriyn Streicheleinheiten duldet – manchmal sogar am Bauch, wenn die Umstände günstig sind."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Gegensatz zum distanzierten Ruachar ist der Dúriyn deutlich verschmuster. Er sucht Nähe, Wärme und Schlafgemeinschaft – allerdings zu seinen Bedingungen. Er mag sein Herrchen, schätzt dessen Gesellschaft und akzeptiert dessen Schwächen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bauern halten den Dúriyn besonders gern, da er größere Reviere abdeckt und Feldmäuse zuverlässig dezimiert. Wo ein Ruachar vor allem Gebäude sichert, sichert der Dúriyn das Land."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bringt Beute demonstrativ nach Hause",
+            "Schlafzeiten kollidieren regelmäßig mit denen des Menschen",
+            "Kann beleidigt wirken, wenn Jagderfolge ignoriert werden",
+            "Duldet Bauchstreicheln nur situativ",
+            "Verschwindet nachts oft spurlos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Dúriyn gilt als Zeichen für einen „sauberen Hof“",
+            "Manche Alben glauben, blaue Augen sähen Beute im Traum",
+            "Dúriyns werden selten alt in Städten – sie brauchen Raum"
+          ]
+        }
+      ]
+    }
+  ]
+}

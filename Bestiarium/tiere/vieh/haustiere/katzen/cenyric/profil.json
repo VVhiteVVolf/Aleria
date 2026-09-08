@@ -1,0 +1,194 @@
+{
+  "id": "cenyric",
+  "name": "Cenyric",
+  "classification": "Katzenrasse · Vielseitige Haus- und Schiffskatze",
+  "continent": "Estryll",
+  "region": "Cenyr · Wurzeln in Avallorn",
+  "folio": "VI / 01-B / 06",
+  "summary": "Eine vielseitige, ursprünglich aus Avallorn eingeführte Schiffskatze, die in Cenyr eine neue Heimat fand und sich eng, wenn auch launisch, an ihren Menschen bindet.",
+  "quote": "Er kam als Schiffskatze. Er blieb, weil er sich entschied zu bleiben.",
+  "quoteAttribution": "cenyrische Redensart",
+  "parentGroupId": "estryll-cenyr",
+  "icon": {
+    "src": "../../../../../assets/pet-breeds/katzen/cenyric.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Rassensymbol: Cenyric"
+  },
+  "hero": {
+    "src": "../../../../../assets/cat-profiles/cenyric.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständige Bildtafel der Katzenrasse Cenyric",
+    "caption": "Rassentafel · Cenyric"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Cenyric"
+    },
+    {
+      "label": "Typ",
+      "value": "Haus-, Schiffs- und Arbeitskatze"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Wurzeln in Avallorn; heutige Heimat Cenyr"
+    },
+    {
+      "label": "Größe",
+      "value": "Mittelgroß"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Ausgewogen gebaut mit kurzem bis mittellangem Fell"
+    },
+    {
+      "label": "Aktivzeiten",
+      "value": "Wechselhaft; kein fester Rhythmus überliefert"
+    },
+    {
+      "label": "Bedrohungsgrad",
+      "value": "Für Menschen gering; für Ungeziefer hoch"
+    },
+    {
+      "label": "Bevorzugte Beute",
+      "value": "Ungeziefer und Mäuse"
+    },
+    {
+      "label": "Besonderheiten",
+      "value": "Hohe Intelligenz, vielseitige Aufgaben und starke Bindungsfähigkeit"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cenyric ist eine Katze mit Geschichte. Keine Hofzucht, kein Palastprodukt, sondern ein Mitbringsel. Ursprünglich aus Avallorn stammend, wurde er von den Avallorniern in größerer Zahl auf Schiffen mitgeführt, um Frachträume, Vorräte und Taue von Ungeziefer freizuhalten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als die Avallornier schließlich an den Küsten Estrylls landeten – dort, wo später Cenyr entstehen sollte – ließ man diese Katzen frei. Ihr alter Name ging verloren. Was blieb, war eine neue Heimat und ein neuer Name: Cenyric."
+        }
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Herkunft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Wurzeln des Cenyric liegen in Avallorn, doch seine heutige Identität ist untrennbar mit Cenyr verbunden. Über Generationen hinweg passte er sich an Städte, Höfe und Haushalte an und entwickelte sich zu einer der beliebtesten Katzenrassen der Region."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dokumente über seine ursprüngliche Bezeichnung existieren vermutlich noch irgendwo in alten Archiven oder Logbüchern – doch im Alltag interessiert das niemanden mehr. Für die Cenyri ist er schlicht ihre Katze."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsbild",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Cenyric ist eine mittelgroße Katze mit variablem Erscheinungsbild. Kurz- bis mittellanges Fell, häufig in warmen Farben oder getigerten Mustern. Sein Körperbau ist ausgewogen: weder besonders massig noch auffallend schlank."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Gesichtsausdruck wirkt oft mürrisch oder skeptisch – was selten Rückschlüsse auf seine tatsächliche Stimmung zulässt."
+        }
+      ]
+    },
+    {
+      "id": "rassenmerkmale",
+      "title": "Rassenmerkmale",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hohe Intelligenz",
+            "Oftmals als Schiffskatze",
+            "Stark wechselhaftes Temperament",
+            "Ausgeprägte Bindungsfähigkeit",
+            "Vielseitige Einsatzmöglichkeiten",
+            "Deutlich ausgeprägter Eigenwille"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Cenyric ist kein Spezialist. Er ist ein Alleskönner."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cenyric-Katzen sind launisch. Heute verspielt, morgen zickig, übermorgen verschmust und am nächsten Tag vollkommen träge. Ihre Stimmung bestimmt ihren Tagesablauf – und den der Menschen um sie herum gleich mit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was sie jedoch fast alle eint, ist ihre starke Anhänglichkeit. Ein Cenyric bindet sich an sein Herrchen auf eine Weise, die man sonst eher von Hunden kennt. Er sucht Nähe, folgt durch Räume und zeigt deutlich, wenn ihm etwas gefällt – oder missfällt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zuneigung wird offen gezeigt, ebenso Unzufriedenheit. Ein beleidigter Cenyric lässt keinen Zweifel daran, dass etwas schiefgelaufen ist."
+        }
+      ]
+    },
+    {
+      "id": "beziehung-zum-menschen",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cenyric-Katzen werden gern von einheimischen Cenyri gehalten, da sie nahezu jeden Zweck erfüllen können: Hauskatze, Mäusefänger, Schmusepartner oder einfach Gesellschaft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wer nicht weiß, welche Katze er sich holen soll, holt einen Cenyric. Und liegt damit fast immer richtig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie sind präsent, aufmerksam und sozial, ohne dabei völlig anspruchslos zu sein. Ihr Herrchen wird als Bezugspunkt akzeptiert – und gelegentlich streng beurteilt."
+        }
+      ]
+    },
+    {
+      "id": "eigenarten",
+      "title": "Eigenarten",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Wechselhaftes Temperament",
+            "Starke emotionale Bindung",
+            "Reagiert deutlich auf Stimmung im Haushalt",
+            "Kann gleichzeitig nützlich und faul sein",
+            "Zeigt Zuneigung ebenso offen wie Ärger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Alte Seeleute behaupten, Cenyric-Katzen finden immer den Weg zurück",
+            "Manche glauben, sie spüren, wenn ihr Herrchen unsicher ist",
+            "Ihr ursprünglicher Name gilt als „irgendwo vermerkt“ – gefunden wurde er bisher nicht"
+          ]
+        }
+      ]
+    }
+  ]
+}
