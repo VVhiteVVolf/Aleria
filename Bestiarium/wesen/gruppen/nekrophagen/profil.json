@@ -36,10 +36,10 @@
     { "label": "Nachsorge", "value": "Überreste reinigen, Ursache prüfen und den Ort erneut weihen oder sichern" }
   ],
   "metrics": {
-    "labels": ["Gefahr", "Körperlichkeit", "Intelligenz", "Widerstandskraft", "Sozialverhalten", "Übernatürliche Macht"],
-    "values": [8, 7, 4, 8, 5, 8],
-    "source": "Aus Entstehung, Jagdverhalten, körperlicher Zähigkeit und den überlieferten Abwehrmaßnahmen der Gattung abgeleitet",
-    "intro": "Die Werte bilden einen mittleren Nekrophagen ab. Willenlose Tote liegen bei der Intelligenz weit darunter, während Lichs und andere bewusste Untote sie deutlich übertreffen."
+    "labels": ["Bedrohung", "Körperkraft", "Jagdtrieb", "Eigenwille", "Zähigkeit", "Nekrotische Macht"],
+    "values": [8, 7, 8, 4, 8, 8],
+    "source": "Aus körperlicher Gewalt, Hunger oder Auftrag, verbliebenem Eigenwillen, untoter Zähigkeit und nekrotischer Wirkung der Gattung abgeleitet",
+    "intro": "Das Nekrophagendiagramm trennt den Antrieb eines Untoten von seinem Eigenwillen. Ein Zombie kann einen hohen Jagdtrieb bei kaum vorhandenem Willen besitzen, während ein Lich beide Werte bewusst lenkt."
   },
   "related": {
     "eyebrow": "Überlieferte Erscheinungsformen",

@@ -14,7 +14,12 @@ const expectedKnownNames = {
   riesen: ['Jötun', 'Goliath', 'Zyklop', 'Fomóraig', 'Tlacharn', 'Bogann', 'Silvarn']
 };
 const expectedUnknownCounts = { geister: 7, nekrophagen: 1, trolle: 0, riesen: 8 };
-const metricLabels = ['Gefahr', 'Körperlichkeit', 'Intelligenz', 'Widerstandskraft', 'Sozialverhalten', 'Übernatürliche Macht'];
+const expectedMetricLabels = {
+  geister: ['Bedrohung', 'Manifestation', 'Eigenwille', 'Bindungsstärke', 'Bannresistenz', 'Jenseitsmacht'],
+  nekrophagen: ['Bedrohung', 'Körperkraft', 'Jagdtrieb', 'Eigenwille', 'Zähigkeit', 'Nekrotische Macht'],
+  trolle: ['Gefahr', 'Körperlichkeit', 'Intelligenz', 'Widerstandskraft', 'Sozialverhalten', 'Übernatürliche Macht'],
+  riesen: ['Gefahr', 'Körperlichkeit', 'Intelligenz', 'Widerstandskraft', 'Sozialverhalten', 'Übernatürliche Macht']
+};
 
 async function readProfile(id) {
   const directory = new URL(`../wesen/gruppen/${id}/`, import.meta.url);
@@ -45,7 +50,7 @@ for (const [index, profile] of profiles.entries()) {
     assert(profile.sections.every(section => section.blocks.length));
     assert(profile.sections.some(section => section.id === 'trivia'));
     assert(profile.facts.length >= 11);
-    assert.deepEqual(profile.metrics.labels, metricLabels);
+    assert.deepEqual(profile.metrics.labels, expectedMetricLabels[profile.id]);
     assert(profile.metrics.values.every(value => Number.isInteger(value) && value >= 1 && value <= 10));
     assert.equal(profile.related.entries.length, 15);
 
