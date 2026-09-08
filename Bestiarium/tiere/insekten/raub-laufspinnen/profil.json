@@ -1,0 +1,92 @@
+{
+  "id": "raub-laufspinnen",
+  "name": "Raub- & Laufspinnen",
+  "classification": "Riesenspinnen · Aktive Jagdarthropoden",
+  "continent": "Aleria",
+  "region": "Wälder, Hügelland, Ruinen, Steppen und Sumpfränder",
+  "folio": "IV / VI",
+  "parentGroupId": "riesenspinnen",
+  "summary": "Schnelle, wendige Einzeljäger mit spezialisierten Greifbeinen und mahlenden Mandibeln, die offenes Jagdterrain patrouillieren und aussichtslose Kämpfe meist vermeiden.",
+  "quote": "Solange sie jagen, was wir nicht jagen wollen, lassen wir sie laufen.",
+  "quoteAttribution": "Verbreitete Regel der Randdörfer",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten und Spinnen"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/raub-laufspinnen.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Vollständig sichtbare Raub- und Laufspinne mit langen Jagdbeinen",
+    "caption": "Überlieferte Bildtafel · Raub- und Laufspinne"
+  },
+  "facts": [
+    { "label": "Name", "value": "Raub- & Laufspinnen" },
+    { "label": "Typ", "value": "Riesenspinne und aktiver, laufjagender Arthropode" },
+    { "label": "Größe", "value": "Etwa 1,6–2 Meter Körperhöhe und 3–4 Meter Spannweite" },
+    { "label": "Gewicht", "value": "Etwa 120–350 Kilogramm" },
+    { "label": "Beinbau", "value": "Lange Laufbeine und zwei rechtwinklig geführte Greifvorderbeine" },
+    { "label": "Panzerung", "value": "Mittlerer, leichter Chitinpanzer mit begrenztem Klingenschutz" },
+    { "label": "Spinnwerk", "value": "Einfache Nestverspannungen und Paarungsnetze, keine Fangnetze" },
+    { "label": "Aktivität", "value": "Meist dämmerungs- und nachtaktiv; bei Beutedruck auch tagsüber" },
+    { "label": "Beute", "value": "Nagetiere, Wildtiere, andere Raubkreaturen und gelegentlich Menschen" },
+    { "label": "Bedrohung", "value": "Mittel bis hoch; gefährlich im Einzelkontakt, selten eine Plage" },
+    { "label": "Nutzen", "value": "Natürliche Bestandskontrolle problematischer Kreaturen" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [8, 2, 8, 7, 6, 6],
+    "source": "Aus Laufgeschwindigkeit, Beutewahl, Greifapparat, Gift und Rückzugsverhalten abgeleitet",
+    "intro": "Die Bewertung beschreibt die Gattung im direkten Einzelkontakt. Ihre Jagdintelligenz und Mobilität sind ausgeprägt, ihre leichtere Panzerung bleibt jedoch verwundbar."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Raub- und Laufspinnen sind keine Fallensteller und keine Revierarchitekten. Sie sind Jäger auf Beinen, die ihr Gebiet aktiv patrouillieren." },
+      { "type": "paragraph", "text": "Sie können Beute und Gegner einschätzen und meiden Auseinandersetzungen, die keinen Gewinn versprechen. In vielen Regionen gelten sie daher weniger als Monster denn als unangenehme Nachbarn, die geduldet werden, solange ihre Jagd nützlich bleibt." }
+    ] },
+    { "id": "anatomie", "title": "Körperbau & Anatomie", "blocks": [
+      { "type": "paragraph", "text": "Das auffälligste Merkmal sind die massiven Mandibeln. Ihre inneren Strukturen arbeiten wie ein Mahlwerk: Fleisch wird nicht gerissen, sondern zerkleinert." },
+      { "type": "list", "items": ["Zwei spezialisierte Vorderbeine führen zunächst aufwärts und knicken rechtwinklig nach unten ab.", "Die Greifbeine fixieren Beute während des Bisses.", "Die übrigen Beine sind auf Geschwindigkeit und schnelle Richtungswechsel ausgelegt.", "Das neuromuskulär wirkende Gift lähmt meist, ohne sofort zu töten."] }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum & Verbreitung", "blocks": [
+      { "type": "paragraph", "text": "Die Gattung ist anpassungsfähig und bewohnt Wälder, Hügelland, Ruinen, Steppen und die Randzonen von Sümpfen. Enge Höhlen meidet sie; für ihre Jagd braucht sie freie Laufwege und nahe Rückzugsorte." },
+      { "type": "paragraph", "text": "Regionale Linien unterscheiden sich vor allem durch Färbung, Beutewahl und die Art des Untergrunds, auf dem ihre Beine sicheren Halt finden." }
+    ] },
+    { "id": "jagd", "title": "Verhalten & Jagdweise", "blocks": [
+      { "type": "paragraph", "text": "Raub- und Laufspinnen leben und jagen überwiegend allein. Seide dient nur der Neststruktur, Paarungsvorbereitung und gelegentlichen Reviermarkierung." },
+      { "type": "list", "items": ["Beute wird verfolgt und durch plötzliche Richtungswechsel ausmanövriert.", "Der Zugriff erfolgt durch Anspringen und Fixieren mit den Greifbeinen.", "Der Giftbiss hält die Beute lebendig und damit frisch.", "Menschen werden nicht bevorzugt, aber bei günstiger Gelegenheit auch nicht gemieden."] }
+    ] },
+    { "id": "gefahr", "title": "Gefahr & Bedeutung", "blocks": [
+      { "type": "paragraph", "text": "Diese Spinnen sind keine typische Plage, sondern ein ökologisches Werkzeug. Sie verringern örtlich die Zahl anderer Jäger und problematischer Kreaturen. Einzelne Tiere können Menschen töten, handeln dabei jedoch aus Gelegenheit und nicht aus anhaltender Angriffslust." }
+    ] },
+    { "id": "kampf", "title": "Kampfverhalten", "blocks": [
+      { "type": "paragraph", "text": "Im direkten Kontakt setzen sie auf Geschwindigkeit, Greifbeine und Lähmgift. Ihre Panzerung ist leichter als die anderer Riesenspinnen. Verlieren sie Tempo oder Überraschung, suchen sie gewöhnlich einen freien Fluchtweg." },
+      { "type": "paragraph", "text": "Ein enger Kreis aus mehreren Gegnern nimmt ihnen ihren wichtigsten Vorteil. Unübersichtliches Gelände dagegen erlaubt schnelle Seitenwechsel und erneute Sprungangriffe." }
+    ] },
+    { "id": "fortpflanzung", "title": "Fortpflanzung & Zyklus", "blocks": [
+      { "type": "paragraph", "text": "Die Brutpflege ist gering. Weibchen sichern ihr Nest nur kurze Zeit; danach sind die Jungtiere auf sich gestellt. Wo reichlich Nahrung vorhanden ist, können Bestände rasch anwachsen und müssen gezielt zurückgedrängt werden." }
+    ] },
+    { "id": "nutzung", "title": "Nutzung & Wirtschaft", "blocks": [
+      { "type": "paragraph", "text": "Raub- und Laufspinnen sind kein klassisches Jagdziel. Siedlungen betrachten sie zwiespältig: Sie beseitigen Schädlinge und andere Räuber, werden bei Überpopulation aber vertrieben oder bejagt." },
+      { "type": "paragraph", "text": "Die charakteristischen Mahlmandibeln werden vereinzelt als Trophäen getragen. Einen regelmäßigen Handel mit Körperteilen gibt es nicht; meist steht die Bestandsregulation im Vordergrund." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Das mahlende Gebiss wird von manchen Jägern als Trophäe getragen.", "Alte Fährtenkundige erkennen die paarweise gesetzten Spuren der Greifbeine zwischen den gewöhnlichen Laufabdrücken.", "Eine Laufspinne bricht eine Verfolgung meist abrupt ab, sobald ihre Beute festen, engen Schutz erreicht.", "An häufig genutzten Ruheplätzen bleiben nur wenige Seidenfäden zurück; ein großes Fangnetz ist dort niemals zu erwarten."] }
+    ] }
+  ],
+  "related": {
+    "eyebrow": "Fünf regionale Jagdlinien",
+    "title": "Varianten & Unterarten",
+    "intro": "Die alte Bildtafel benennt fünf Linien und ihre bevorzugten Landschaften. Ihre ausführlichen Einzeldossiers bleiben einer späteren Ausarbeitung vorbehalten.",
+    "entries": [
+      { "id": "frosthetzer", "name": "Frosthetzer", "region": "Tundra und kühles Klima", "href": null, "status": "Unterart verzeichnet", "description": "Eine an kalten, offenen Untergrund angepasste Jagdlinie, deren Beweglichkeit auch bei Frost erhalten bleibt.", "image": { "src": "../../../assets/insect-profiles/laufspinnen-frosthetzer.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Frosthetzer" } },
+      { "id": "steinlaeufer", "name": "Steinläufer", "region": "Gebirgsregionen", "href": null, "status": "Unterart verzeichnet", "description": "Die steingängige Linie findet mit ihren Laufbeinen Halt auf Geröll, Hängen und schmalen Felswegen.", "image": { "src": "../../../assets/insect-profiles/laufspinnen-steinlaeufer.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Steinläufer" } },
+      { "id": "knochenlaeufer", "name": "Knochenläufer", "region": "Steppen, Wüsten und Tropen", "href": null, "status": "Unterart verzeichnet", "description": "Eine robuste Linie offener, warmer Landschaften, die weite Jagdstrecken zwischen Deckungen zurücklegt.", "image": { "src": "../../../assets/insect-profiles/laufspinnen-knochenlaeufer.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Knochenläufer" } },
+      { "id": "blutsucher", "name": "Blutsucher", "region": "Tiefe Höhlen", "href": null, "status": "Unterart verzeichnet", "description": "Eine lichtscheue Tiefenform, die in der Dunkelheit Wärme und frische Beutespuren verfolgt.", "image": { "src": "../../../assets/insect-profiles/laufspinnen-blutsucher.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Blutsucher" } },
+      { "id": "sumpfhetzer", "name": "Sumpfhetzer", "region": "Feuchtgebiete", "href": null, "status": "Unterart verzeichnet", "description": "Die feuchtlandtaugliche Linie bewegt sich sicher über weichen Boden und nutzt Schilf und Wurzeln als Deckung.", "image": { "src": "../../../assets/insect-profiles/laufspinnen-sumpfhetzer.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Sumpfhetzer" } }
+    ]
+  },
+  "plates": []
+}

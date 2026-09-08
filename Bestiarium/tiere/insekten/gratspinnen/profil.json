@@ -1,0 +1,92 @@
+{
+  "id": "gratspinnen",
+  "name": "Gratspinnen",
+  "classification": "Riesenspinnen · Netzjäger vertikaler Lebensräume",
+  "continent": "Aleria",
+  "region": "Hochgebirge, Schluchten und Steilwände",
+  "folio": "V / VI",
+  "parentGroupId": "riesenspinnen",
+  "summary": "Langbeinige Architekten des Abgrunds, die gewaltige, mehrlagige Netze zwischen Felstürmen und Steilwänden spannen und ihren Lebensraum durch Geometrie statt Körperkraft beherrschen.",
+  "quote": "Ein Seil trägt dich über den Abgrund. Ihr Faden entscheidet, ob du es je erreichst.",
+  "quoteAttribution": "Warnspruch der Hochgebirgsführer",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten und Spinnen"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/gratspinnen.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbare Gratspinne mit langen Beinen",
+    "caption": "Überlieferte Bildtafel · Gratspinne"
+  },
+  "facts": [
+    { "label": "Name", "value": "Gratspinnen" },
+    { "label": "Typ", "value": "Riesenspinne und Netzjäger vertikaler Lebensräume" },
+    { "label": "Größe", "value": "Sehr große Spannweite bei vergleichsweise kleinem Rumpf" },
+    { "label": "Gewicht", "value": "Für eine Riesenspinne leicht; die Masse liegt vor allem im schlanken Beinapparat" },
+    { "label": "Beinbau", "value": "Extrem lang, drahtig und für Fels sowie tragende Netzfäden angepasst" },
+    { "label": "Panzerung", "value": "Glatter, dunkler Chitinpanzer mit geringer Nahkampfresistenz" },
+    { "label": "Spinnwerk", "value": "Mehrlagige Schluchtennetze, Fangvorhänge und elastische Sicherungsfäden" },
+    { "label": "Aktivität", "value": "Netzgebunden; reagiert zu jeder Zeit auf deutliche Schwingungen" },
+    { "label": "Beute", "value": "Fliegende und kletternde Tiere sowie alles, was in die Spannfelder stürzt" },
+    { "label": "Bedrohung", "value": "Hoch im Netz; außerhalb des Netzes deutlich geringer" },
+    { "label": "Nutzen", "value": "Lange, elastische Seide für Seile, Netze und leichte Brückenkonstruktionen" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [8, 1, 7, 3, 10, 4],
+    "source": "Aus Netzgröße, vertikaler Jagdweise, Körperbau und Verwundbarkeit außerhalb des Netzes abgeleitet",
+    "intro": "Die Gratspinne erzielt ihre hohen Werte durch die Kontrolle des Raumes. Körperkraft und Widerstandskraft fallen gegenüber anderen Riesenspinnen gering aus."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Gratspinnen sind Architekten des Abgrunds. Ihre Netze überbrücken Schluchten, hängen zwischen Felstürmen oder ziehen sich wie Vorhänge durch senkrechte Wände. Sie beherrschen ihren Lebensraum durch Geometrie und Geduld." }
+    ] },
+    { "id": "anatomie", "title": "Körperbau & Anatomie", "blocks": [
+      { "type": "paragraph", "text": "Die beeindruckende Größe entsteht vor allem durch die Spannweite. Der Rumpf bleibt vergleichsweise klein, die Beine sind extrem lang, dünn und nahezu haarlos." },
+      { "type": "list", "items": ["Langgliedrige, drahtige Beine und geringe Körpermasse", "Glatter, dunkler Chitinpanzer", "Hochentwickelte Spinnwarzen", "Gift, das auf sichere Immobilisierung statt sofortige Tötung ausgelegt ist"] },
+      { "type": "paragraph", "text": "Im Nahkampf sind Gratspinnen zerbrechlich. An Felswänden und in ihren Spannfeldern trägt der lange Beinbau sie dagegen sicher über Lücken, die kein schwerer Jäger überwinden könnte." }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum & Verbreitung", "blocks": [
+      { "type": "paragraph", "text": "Gratspinnen leben ausschließlich in Hochgebirgen, besonders an tiefen Schluchten, Steilwänden, Felstoren und ausgesetzten Gratlinien. Je größer und freier der überspannte Raum, desto günstiger ist der Standort." },
+      { "type": "paragraph", "text": "Flache Gebiete meiden sie vollständig. Dort fehlen Höhe, feste Ankerpunkte und die Luftströmungen, die ihnen verraten, wo Beute in ein Netz geraten könnte." }
+    ] },
+    { "id": "jagd", "title": "Verhalten & Jagdweise", "blocks": [
+      { "type": "paragraph", "text": "Gratspinnen bauen die größten bekannten Spinnennetze. Mehrere Dutzend Meter breite, räumlich gestaffelte Lagen fangen Tiere ab, die fliegen, klettern oder vom Fels stürzen." },
+      { "type": "list", "items": ["Beute fällt oder fliegt in ein äußeres Spannfeld.", "Die Spinne fixiert sie aus der Distanz mit zusätzlichen Fäden.", "Der Giftbiss erfolgt erst nach vollständiger Immobilisierung.", "Das Hauptnetz wird nur selten verlassen."] }
+    ] },
+    { "id": "gefahr", "title": "Gefahr & Bedeutung", "blocks": [
+      { "type": "paragraph", "text": "Gratspinnen sind keine Plage, aber landschaftsprägend. Sie greifen Menschen selten gezielt an; wer in ihr Netz gerät, kann sich jedoch kaum befreien. Viele Opfer sterben durch den Absturz, bevor das Gift wirkt." }
+    ] },
+    { "id": "kampf", "title": "Kampfverhalten", "blocks": [
+      { "type": "paragraph", "text": "Außerhalb ihres Netzes sind Gratspinnen hochgradig verwundbar. Im Spannfeld nutzen sie Sturzfallen, sich verengende Netzbahnen und Giftbisse aus sicherer Entfernung." },
+      { "type": "paragraph", "text": "Das Durchtrennen einzelner Fäden ist riskant, weil Last und Spannung auf benachbarte Bahnen überspringen. Wer das Netz räumt, muss zuerst seine tragenden Anker erkennen." }
+    ] },
+    { "id": "fortpflanzung", "title": "Fortpflanzung & Zyklus", "blocks": [
+      { "type": "paragraph", "text": "Brutplätze liegen tief im Fels und häufig unterhalb der Hauptnetze. Jungtiere verbleiben lange im Netzverbund, bevor sie an dessen Rand eigene kleine Spannfelder errichten." }
+    ] },
+    { "id": "nutzung", "title": "Nutzung & Wirtschaft", "blocks": [
+      { "type": "paragraph", "text": "Die außergewöhnlich lange und elastische Seide eignet sich für Seile, Netze und leichte Brücken. Eine Jagd auf lebende Gratspinnen ist selten; nutzbare Fäden werden bevorzugt an aufgegebenen Randnetzen gewonnen." },
+      { "type": "paragraph", "text": "Manche Gebirgsbewohner lassen alte Netze bewusst stehen, wenn sie lockeres Gestein sichern oder als zusätzliche Sperre vor einem gefährlichen Abstieg dienen." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Alte Gebirgspfade enden mitunter abrupt an ehemaligen Gratspinnen-Netzen.", "Manche Netze überdauern Jahre und werden immer wieder repariert.", "Bergvölker betrachten die Tiere als Wächter der Höhe.", "Ein unbewohntes Netz bleibt durch Wind und Eis gespannt, bis ein zentraler Ankerfaden nachgibt."] }
+    ] }
+  ],
+  "related": {
+    "eyebrow": "Offene Stellen der alten Artentafel",
+    "title": "Varianten & Unterarten",
+    "intro": "Für fünf mögliche Linien sind bislang weder Namen noch verlässliche Merkmale überliefert. Diese Stellen bleiben bewusst unausgefüllt.",
+    "entries": [
+      { "id": "unbekannt-i", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-ii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iv", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-v", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." }
+    ]
+  },
+  "plates": []
+}

@@ -1,0 +1,134 @@
+{
+  "id": "hoehlenkriecher",
+  "name": "Höhlenkriecher",
+  "classification": "Insektoide Gattung · Schwarmorganismus",
+  "continent": "Aleria",
+  "region": "Gebirge und tiefe Höhlensysteme",
+  "folio": "I / VI",
+  "parentGroupId": "rieseninsekten",
+  "summary": "Große, insektoide Schwarmwesen, deren mineralgehärtete Panzer, verzweigte Tunnel und streng gegliederte Kasten das Innere ganzer Gebirge dauerhaft verändern.",
+  "quote": "Wenn der Fels unter deinen Stiefeln summt, ist der Stollen längst nicht mehr deiner.",
+  "quoteAttribution": "Warnspruch der Pickenden Spechte",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/hoehlenkriecher.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Vollständig dargestellter Höhlenkriecher mit kräftigem Chitinpanzer",
+    "caption": "Überlieferte Bildtafel · Drohne der Höhlenkriecher"
+  },
+  "facts": [
+    { "label": "Name", "value": "Kriecher / Höhlenkriecher" },
+    { "label": "Typ", "value": "Insektoide Gattung und Schwarmorganismus" },
+    { "label": "Größe", "value": "Zwischen Katze und Bär, abhängig von der Kaste" },
+    { "label": "Herkunft", "value": "Gebirge von Morgorn, Aldrimar, Cenyr und Mathringen" },
+    { "label": "Nahrung", "value": "Mineralien, Erze, pflanzliche Stoffe und bei Bedarf tierische Nahrung" },
+    { "label": "Verhalten", "value": "Territorial, meist nachtaktiv und durch Pheromone koordiniert" },
+    { "label": "Stärken", "value": "Harter Chitinpanzer, Gift und geordneter Schwarmangriff" },
+    { "label": "Schwächen", "value": "Gelenke, Gliedverbindungen, Rauch und große Hitze" },
+    { "label": "Ausbeute", "value": "Eier, Gift, Chitin, Sekret und leuchtende Nestpilze" },
+    { "label": "Fortpflanzung", "value": "Die Königin legt klebrige Eierbündel an Höhlendecken" },
+    { "label": "Lebensdauer", "value": "Drohnen wenige Jahre; Kundschafter 5–8 Jahre; Königinnen bis 100 Jahre" },
+    { "label": "Gefahrenstufe", "value": "Hoch, besonders innerhalb einer aktiven Kolonie" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [9, 3, 7, 8, 10, 9],
+    "source": "Aus Schwarmverhalten, Panzerung, Giftwirkung und den Berichten der Berggilden abgeleitet",
+    "intro": "Die Bewertung beschreibt eine aktive Kolonie. Einzelne Drohnen oder Larven erreichen deutlich geringere Gefahrenwerte."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        { "type": "paragraph", "text": "Kriecher, auch Höhlenkriecher genannt, sind große insektoide Lebewesen der Gebirge und unterirdischen Höhlensysteme. Ihre Gestalt erinnert an Ameisen, Wespen und Termiten, doch Größe und Spezialisierung reichen weit darüber hinaus. Je nach Kaste werden sie katzen- bis bärengroß." },
+        { "type": "paragraph", "text": "Sie besitzen keine Fühler. Wärme, Gerüche und feine Pheromonsignale führen sie selbst durch völlige Finsternis. Die Wände ihrer verzweigten Bauten tragen ein feuchtes, schimmerndes Sekret, das Fortbewegung und Reviermarkierung unterstützt und zugleich die Gänge stabilisiert." },
+        { "type": "paragraph", "text": "In den Bergen Morgorns werden Kriecher gefürchtet und genutzt. Ihre Tunnel erschließen Erzadern; Sekrete, Chitin und Gift sind begehrte Werkstoffe. Wo eine Kolonie erscheint, verändert sie die Tiefe dauerhaft." }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften & Attribute",
+      "blocks": [
+        { "type": "paragraph", "text": "Der robuste Körper ist von Chitin geschützt, das durch mineralreiche Nahrung gehärtet wird und eine mit Eisen vergleichbare Widerstandskraft erreichen kann. Drohnen und Krieger zerspalten mit ihren Mandibeln selbst hartes Gestein." },
+        { "type": "paragraph", "text": "Krieger tragen zusätzlich einen langen, beweglichen Giftstachel. Das stark neurotoxische Gift lähmt und verflüssigt in hoher Dosis innere Organe. Gelähmte Beute wird ausgesaugt; aufbereitete Nahrung gelangt anschließend in die Futtersäcke des Schwarms." },
+        { "type": "paragraph", "text": "Kundschafter sind kleiner und beweglicher. Ihr Rüssel nimmt Flüssigkeiten auf, ihre Flügel erlauben kurze Erkundungsflüge. Adlige besitzen kräftigere Körper, größere Flügel und eine besonders wirksame Pheromonkontrolle." },
+        { "type": "paragraph", "text": "Die Schwarmkönigin bildet Ursprung und Zentrum der Kolonie. Ihr angeschwollener Hinterleib erzeugt Eierbündel, die in zähen Schleimnetzen an der Höhlendecke hängen und durch ein besonderes Sekret feucht und pilzfrei bleiben." }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        { "type": "paragraph", "text": "Kriecher benötigen mineralreiche, felsige Tiefenschichten mit hoher Luftfeuchtigkeit und gleichmäßiger Wärme. Kolonien wachsen in Kavernen, entlang von Lavaadern und in verlassenen Stollen, häufig nahe Eisen-, Kupfer- und Schwefelvorkommen." },
+        { "type": "paragraph", "text": "Bekannte Populationen liegen in den Gebirgsketten von Morgorn, Aldrimar, Cenyr und Mathringen. Offene Ebenen und flache Regionen bieten ihnen weder Nahrung noch das beständige Höhlenklima, das Eier und Larven benötigen." }
+      ]
+    },
+    {
+      "id": "wirtschaft",
+      "title": "Ökonomischer Nutzen",
+      "blocks": [
+        { "type": "paragraph", "text": "Die Pickenden Spechte und die Kieselkratzer nutzen abgestimmte Pheromonmischungen, Rauch und Schallimpulse, um Kolonien zu lenken. Da Kriecher Erzadern instinktiv aufsuchen, können ihre Gänge den späteren Bergbau vorbereiten." },
+        { "type": "paragraph", "text": "Eier, Sekrete, Chitin und Gift werden in Handwerk, Alchemie und Medizin verarbeitet. Sekret dient als Bindemittel und Gleitstoff, Chitin für Panzerplatten und Werkzeuge, während gereinigte Giftbestandteile in Tränken und Gegengiften Verwendung finden." },
+        { "type": "paragraph", "text": "Die Schwärme begrenzen zudem gefährliche Bergbewohner. Dieser Nutzen besteht jedoch nur, solange kundige Gilden ihre Ausbreitung überwachen und Wege zu Siedlungen geschlossen halten." }
+      ]
+    },
+    {
+      "id": "hierarchie",
+      "title": "Hierarchie & Schwarm",
+      "blocks": [
+        { "type": "paragraph", "text": "Die Gesellschaft folgt einer festen Arbeitsteilung. Einzelne Kriecher planen kaum selbstständig; im Verbund handelt die Kolonie wie ein zusammenhängender Organismus." },
+        { "type": "list", "items": [
+          "Drohnen graben, transportieren, pflegen die Eier und sichern die Tunnel.",
+          "Kundschafter finden Ressourcen, überwachen Reviergrenzen und tragen Informationen zurück.",
+          "Krieger verteidigen Gänge, Königin und Vorratskammern.",
+          "Adlige übertragen die Pheromonsignale der Königin und führen kleinere Schwarmteile.",
+          "Die Schwarmkönigin legt Eier und bestimmt über ihre chemischen Signale die nächste Kastengeneration."
+        ] },
+        { "type": "paragraph", "text": "Fällt eine Königin, kann sich eine Adlige innerhalb weniger Tage körperlich verändern und ihre Rolle übernehmen. Zerstörte Gangabschnitte werden nach denselben chemischen Signalen unmittelbar repariert." }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung",
+      "blocks": [
+        { "type": "paragraph", "text": "Eine aktive Kolonie lässt sich nicht durch einen gewöhnlichen Vorstoß bezwingen. Spezialisten unterbrechen mit dichtem Rauch, Räucherstoffen und Pheromonneutralisierern die Verständigung des Schwarms und zwingen ihn in einen Rückzugszustand." },
+        { "type": "paragraph", "text": "Im Kampf gleiten Klingen und Pfeile häufig am mineralgehärteten Panzer ab. Verwundbar bleiben Beinansätze, Halsbereich und die weichen Verbindungen zwischen den Panzersegmenten." },
+        { "type": "paragraph", "text": "An der Oberfläche erscheinen meist Kundschafter. Ihr Tod alarmiert über Geruchssignale die tieferen Kasten; ein scheinbar einzelnes Tier darf daher nie als isolierte Gefahr betrachtet werden." }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        { "type": "list", "items": [
+          "Bergleute erkennen bewohnte Gänge am feuchten Schimmer des Wandsekrets und an einem kaum hörbaren Summen im Stein.",
+          "Eine stillgelegte Kolonie kann noch jahrelang durch ungewöhnlich feste Tunnelwände und leuchtende Nestpilze auffallen.",
+          "Die wertvollsten Chitinplatten stammen aus verlassenen Häutungskammern; ihre Bergung reizt den Schwarm weniger als die Jagd auf lebende Tiere.",
+          "Fehlt eine Adlige, wirken selbst große Gruppen kurzzeitig orientierungslos, bis neue Pheromonwege aufgebaut sind."
+        ] }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Die sieben Stufen des Schwarms",
+    "title": "Kasten der Höhlenkriecher",
+    "intro": "Jede Kaste besitzt eine eigene Körperform und erfüllt einen festen Zweck. Die Bildtafeln zeigen sämtliche im alten Archiv benannten Entwicklungs- und Rangstufen.",
+    "entries": [
+      { "id": "eier", "name": "Eier", "region": "Brutkammern", "href": null, "status": "Kaste verzeichnet", "description": "Feucht gehaltene Eierbündel, die in Schleimnetzen an den Höhlendecken hängen.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-eier.webp", "width": 518, "height": 481, "alt": "Vollständig sichtbares Eiergelege der Höhlenkriecher" } },
+      { "id": "larven", "name": "Larven", "region": "Brutkammern", "href": null, "status": "Kaste verzeichnet", "description": "Die junge Entwicklungsstufe wird von Drohnen versorgt und vor Pilzbefall geschützt.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-larven.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbare Larven der Höhlenkriecher" } },
+      { "id": "drohnen", "name": "Drohnen", "region": "Bau und Versorgung", "href": null, "status": "Kaste verzeichnet", "description": "Kräftige Arbeiter für Tunnelbau, Pflege, Transport und die Gewinnung von Mineralien.", "image": { "src": "../../../assets/species-entries/insekten/hoehlenkriecher.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbare Drohne der Höhlenkriecher" } },
+      { "id": "krieger", "name": "Krieger", "region": "Innere Verteidigung", "href": null, "status": "Kaste verzeichnet", "description": "Schwer gepanzerte Verteidiger mit kräftigen Mandibeln und langem Giftstachel.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-krieger.webp", "width": 612, "height": 408, "alt": "Vollständig sichtbarer Krieger der Höhlenkriecher" } },
+      { "id": "kundschafter", "name": "Kundschafter", "region": "Oberfläche und Randgänge", "href": null, "status": "Kaste verzeichnet", "description": "Bewegliche Späher, die Futterquellen und Gefahren über Pheromonspuren melden.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-kundschafter.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbarer Kundschafter der Höhlenkriecher" } },
+      { "id": "adlige", "name": "Adlige", "region": "Pheromonhierarchie", "href": null, "status": "Kaste verzeichnet", "description": "Mittler zwischen Königin und Arbeiterkasten, die kleinere Schwarmteile koordinieren.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-adlige.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Adlige der Höhlenkriecher" } },
+      { "id": "schwarmkoenigin", "name": "Schwarmkönigin", "region": "Tiefste Nestkammer", "href": null, "status": "Kaste verzeichnet", "description": "Das langlebige Zentrum der Kolonie und Ursprung sämtlicher neuer Kasten.", "image": { "src": "../../../assets/insect-profiles/hoehlenkriecher-koenigin.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Schwarmkönigin der Höhlenkriecher" } }
+    ]
+  },
+  "plates": []
+}

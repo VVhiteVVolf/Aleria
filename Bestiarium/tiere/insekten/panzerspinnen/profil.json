@@ -1,0 +1,92 @@
+{
+  "id": "panzerspinnen",
+  "name": "Panzerspinnen",
+  "classification": "Riesenspinnen · Schwer gepanzerte Jagdarthropoden",
+  "continent": "Aleria",
+  "region": "Küsten, Sümpfe, Mangroven und Flussdeltas",
+  "folio": "VI / VI",
+  "parentGroupId": "riesenspinnen",
+  "summary": "Langsame, amphibische Riesenspinnen mit segmentiertem Chitinpanzer, tiefem Schwerpunkt und mahlenden Mandibeln, die Beute durch Masse und stetiges Vorrücken überwältigen.",
+  "quote": "Schlag nicht auf den Panzer. Such das Gelenk – oder such einen anderen Weg.",
+  "quoteAttribution": "Lehrsatz der Küstenwachen",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten und Spinnen"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/panzerspinnen.webp",
+    "width": 463,
+    "height": 539,
+    "alt": "Vollständig sichtbare Panzerspinne mit segmentiertem Chitinpanzer",
+    "caption": "Überlieferte Bildtafel · Panzerspinne"
+  },
+  "facts": [
+    { "label": "Name", "value": "Panzerspinnen" },
+    { "label": "Typ", "value": "Schwer gepanzerte, amphibische Riesenspinne" },
+    { "label": "Größe", "value": "Massiger Rumpf mit niedriger Körperhöhe und breiter Beinspanne" },
+    { "label": "Gewicht", "value": "Sehr schwer; ausgewachsene Tiere hinterlassen tiefe Spuren in weichem Boden" },
+    { "label": "Beinbau", "value": "Kurz, kräftig und auf stetigen Vortrieb sowie sicheren Stand ausgelegt" },
+    { "label": "Panzerung", "value": "Massiver, segmentierter und stacheliger Chitinpanzer" },
+    { "label": "Spinnwerk", "value": "Nur Rückzugs- und Brutgespinste, keine Fangnetze" },
+    { "label": "Aktivität", "value": "Vor allem in kühlen Tageszeiten und bei hoher Feuchtigkeit" },
+    { "label": "Beute", "value": "Tiere, die im weichen Gelände nicht schnell genug ausweichen können" },
+    { "label": "Bedrohung", "value": "Lokal hoch; langsam, aber im direkten Weg kaum aufzuhalten" },
+    { "label": "Nutzen", "value": "Panzerplatten, Mandibeln und abgestreifte Häute" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [9, 1, 4, 10, 6, 10],
+    "source": "Aus Panzerung, Körpermasse, amphibischer Lebensweise und geringer Geschwindigkeit abgeleitet",
+    "intro": "Die Panzerspinne erreicht ihre höchsten Werte durch Kraft und Widerstandskraft. Ihre geringe Geschwindigkeit begrenzt Jagdintelligenz und großräumige Revierkontrolle."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Panzerspinnen sind weder Netzjäger noch Läufer, sondern lebende Panzer. Langsam, schwer und nahezu unaufhaltsam marschieren sie durch ihren Lebensraum und verändern dabei Pfade, Ufer und weichen Untergrund." }
+    ] },
+    { "id": "anatomie", "title": "Körperbau & Anatomie", "blocks": [
+      { "type": "paragraph", "text": "Ein massiver, segmentierter Chitinpanzer umschließt den Körper. Bei der regelmäßigen Häutung bleiben schwere, beinahe vollständige Hüllen zurück." },
+      { "type": "list", "items": ["Dicker, stacheliger Panzer und geringe Behaarung", "Massiger Rumpf mit tiefem Schwerpunkt", "Kräftige Beine für weichen Untergrund und flaches Wasser", "Mahlende Mandibeln ähnlich denen der Raub- und Laufspinnen", "Kaum vorhandenes oder nur schwach wirkendes Gift"] },
+      { "type": "paragraph", "text": "Nahrung wird mechanisch zerkleinert und nicht durch starkes Gift vorbereitet. Die Mandibeln arbeiten dabei wie ein schweres Mahlwerk." }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum & Verbreitung", "blocks": [
+      { "type": "paragraph", "text": "Panzerspinnen bevorzugen amphibische Zonen: Küsten, Sümpfe, Mangroven und Flussdeltas. Sie können lange im Wasser bleiben, sind jedoch keine reinen Wasserwesen." },
+      { "type": "paragraph", "text": "Weicher Untergrund begünstigt ihren schweren, niedrigen Körperbau. Felsige Trockenregionen meiden sie, weil dort die Gelenke stärker belastet werden und Häutungsplätze rasch austrocknen." }
+    ] },
+    { "id": "jagd", "title": "Verhalten & Jagdweise", "blocks": [
+      { "type": "paragraph", "text": "Panzerspinnen sind aktive, aber langsame Jäger. Sie verlassen sich auf Panzerung, Masse und stetiges Vorrücken, bis die Beute keine sichere Ausweichlinie mehr besitzt." },
+      { "type": "list", "items": ["Beute wird überrollt oder mit den Vorderbeinen fixiert.", "Die Mandibeln zerkleinern sie mechanisch.", "Gift spielt bei Jagd und Verteidigung kaum eine Rolle.", "Wasser und Morast werden genutzt, um Fluchtwege abzuschneiden."] }
+    ] },
+    { "id": "gefahr", "title": "Gefahr & Bedeutung", "blocks": [
+      { "type": "paragraph", "text": "Panzerspinnen gelten als hohe lokale Bedrohung, aber nicht als Plage. Wo sie regelmäßig wandern, verändern Siedlungen ihre Wege und Küstenrouten, statt die Tiere frontal zu bekämpfen." }
+    ] },
+    { "id": "kampf", "title": "Kampfverhalten", "blocks": [
+      { "type": "paragraph", "text": "Kleinere Verletzungen und Schmerzen halten eine Panzerspinne kaum auf. Zermalmung, Greifkraft und schwere Panzerstöße sind ihre wichtigsten Waffen." },
+      { "type": "paragraph", "text": "Nur schwere Waffen, Feuer oder präzise Treffer auf Gelenke zeigen verlässlich Wirkung. Angriffe auf die Panzerplatten selbst erschöpfen meist den Gegner, bevor das Tier ernsthaft verletzt wird." }
+    ] },
+    { "id": "fortpflanzung", "title": "Fortpflanzung & Zyklus", "blocks": [
+      { "type": "paragraph", "text": "Der Lebenszyklus ist langsam. Während der Häutung ziehen sich Panzerspinnen tief zurück, denn der neue Panzer bleibt zunächst weich. Jungtiere sind leichter und beweglicher, besitzen aber eine hohe Sterblichkeit." }
+    ] },
+    { "id": "nutzung", "title": "Nutzung & Wirtschaft", "blocks": [
+      { "type": "paragraph", "text": "Panzerplatten werden für Schilde und schwere Rüstungen gesucht, Mandibeln zu Werkzeugen oder Waffen verarbeitet. Besonders begehrt sind verlassene Häute, weil ihre Bergung keine Jagd auf ein lebendes Tier erfordert." },
+      { "type": "paragraph", "text": "Gezielte Jagden bleiben selten. Gewicht, Widerstandskraft und schwieriges Gelände machen jeden erlegten Panzer zu einem kostspielig gewonnenen Rohstoff." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Abgestreifte Panzer werden an Küsten manchmal zunächst für verendete Tiere gehalten.", "Im flachen Wasser verraten wandernde Panzerspinnen sich durch eine langsam voranschreitende Schlammlinie.", "Alte Tiere nutzen häufig dieselben Häutungsplätze und hinterlassen dort mehrere ineinandergeschobene Hüllen.", "Küstenwachen markieren bekannte Wechsel mit tief eingeschlagenen Pfählen, die auch bei Hochwasser sichtbar bleiben."] }
+    ] }
+  ],
+  "related": {
+    "eyebrow": "Offene Stellen der alten Artentafel",
+    "title": "Varianten & Unterarten",
+    "intro": "Für fünf mögliche Linien sind bislang weder Namen noch verlässliche Merkmale überliefert. Diese Stellen bleiben bewusst unausgefüllt.",
+    "entries": [
+      { "id": "unbekannt-i", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-ii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iv", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-v", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." }
+    ]
+  },
+  "plates": []
+}

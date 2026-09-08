@@ -37,7 +37,7 @@ for (const [index, profile] of profiles.entries()) {
     assert.equal(profile.facts.length, 11);
     assert.deepEqual(profile.metrics.labels, ['Gefahr', 'Zähmbarkeit', 'Intelligenz', 'Körperkraft', 'Sozialverhalten', 'Ausdauer']);
     assert(profile.metrics.values.every(value => Number.isInteger(value) && value >= 1 && value <= 10));
-    assert(html.indexOf('reptile-profile-narrative') < html.indexOf('reptile-profile-facts'));
+    assert(html.indexOf('field-profile-narrative') < html.indexOf('field-profile-facts'));
     assert(!/https?:\/\/|animexx|tumblr|onclick=|oninput=|onchange=|Zitat bla|(?:^|\W)\.{3,}(?:\W|$)/i.test(html));
     await access(new URL(profile.icon.src, directory));
     await access(new URL(profile.hero.src, directory));
@@ -64,10 +64,10 @@ test('all supplied reptile illustrations are archived locally with source dimens
 });
 
 test('reptile portraits, related cards and plates explicitly preserve the complete illustration', async () => {
-  const css = await readFile(new URL('../modules/reptile-profile/reptile-profile.css', import.meta.url), 'utf8');
-  assert(css.includes('.reptile-profile-portrait-image'));
-  assert(css.includes('.reptile-related-image'));
-  assert(css.includes('.reptile-plate img'));
+  const css = await readFile(new URL('../modules/field-guide-profile/field-guide-profile.css', import.meta.url), 'utf8');
+  assert(css.includes('.field-profile-portrait-image'));
+  assert(css.includes('.field-related-image'));
+  assert(css.includes('.field-plate img'));
   assert.equal((css.match(/object-fit:\s*contain/g) || []).length, 4);
   assert(!/object-fit:\s*cover/.test(css));
 });

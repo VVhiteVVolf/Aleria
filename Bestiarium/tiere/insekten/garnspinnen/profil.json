@@ -1,0 +1,128 @@
+{
+  "id": "garnspinnen",
+  "name": "Garnspinnen",
+  "classification": "Riesenspinnen · Netzbauende Arthropoden",
+  "continent": "Aleria",
+  "region": "Höhlen, Wälder, Tundren und Feuchtgebiete",
+  "folio": "II / VI",
+  "parentGroupId": "riesenspinnen",
+  "summary": "Geduldige Gebietskontrolleure, deren weitläufige, vibrationssensible Fangnetze zugleich Jagdgerät, Reviergrenze und Schutz ihrer über Generationen genutzten Nester sind.",
+  "quote": "Ein frisches Netz ist keine Wand. Es ist bereits der erste Teil der Jagd.",
+  "quoteAttribution": "Merksatz der Kundschafter an Höhlenwegen",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten und Spinnen"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/garnspinnen.webp",
+    "width": 438,
+    "height": 438,
+    "alt": "Vollständig sichtbare Garnspinne in ihrem Fangnetz",
+    "caption": "Überlieferte Bildtafel · Garnspinne"
+  },
+  "facts": [
+    { "label": "Name", "value": "Garnspinnen" },
+    { "label": "Typ", "value": "Riesenspinne und netzbauender Arthropode" },
+    { "label": "Größe", "value": "Etwa 1,5–4 Meter Spannweite; Weibchen deutlich größer" },
+    { "label": "Gewicht", "value": "Etwa 40–300 Kilogramm, abhängig von Unterart und Geschlecht" },
+    { "label": "Beinbau", "value": "Lang und schlank; auf Halt, Ausdauer und Netzarbeit ausgelegt" },
+    { "label": "Panzerung", "value": "Glatter, leicht bis mittel gehärteter Chitinpanzer mit wenig Behaarung" },
+    { "label": "Spinnwerk", "value": "Reißfeste Fangnetze, Höhlennetze und vibrationssensible Revierbarrieren" },
+    { "label": "Aktivität", "value": "Überwiegend nachtaktiv" },
+    { "label": "Beute", "value": "Nagetiere, Vögel, Ziegen sowie Wald- und Sumpftiere; große Exemplare auch Großwild" },
+    { "label": "Bedrohung", "value": "Hoch, besonders im eigenen Netzrevier" },
+    { "label": "Nutzen", "value": "Spinnseide, alchemistisch nutzbares Gift sowie Panzer- und Fangzähne" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [8, 1, 6, 5, 10, 6],
+    "source": "Aus Netzbau, Giftwirkung, Körperbau und Verhalten der fünf überlieferten Unterarten abgeleitet",
+    "intro": "Die Werte beschreiben eine ausgewachsene Garnspinne in einem vollständig angelegten Netz. Im offenen Gelände sinkt ihre Gefährlichkeit deutlich."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        { "type": "paragraph", "text": "Garnspinnen sind klassische Gebietskontrolleure. Sie verfolgen ihre Beute nicht, sondern beanspruchen Raum. Ihre Stärke liegt in Vorbereitung, Geduld und Kontrolle: Wo ihr Netz hängt, wird jede unvorsichtige Bewegung Teil der Falle." }
+      ]
+    },
+    {
+      "id": "anatomie",
+      "title": "Körperbau & Anatomie",
+      "blocks": [
+        { "type": "paragraph", "text": "Der glatte, kaum behaarte Chitinpanzer bindet wenig Schmutz und Feuchtigkeit und eignet sich damit für Höhlen, Felsspalten und unterirdische Nester. Der Körper ist massig, die Beine sind lang, aber nicht für schnelle Sprints gebaut." },
+        { "type": "paragraph", "text": "Die Giftklauen injizieren ein enzymatisches Toxin, das lähmt und das Innere der Beute verflüssigt. Anschließend wird die Nahrung ausgesaugt; Haut und Knochen bleiben im Netz zurück." },
+        { "type": "list", "items": ["Glatter Korpus mit mehreren an Dunkelheit angepassten Augenpaaren", "Stark entwickelte Spinnwarzen", "Langes, ausdauerndes Beinpaar für Netzarbeit", "Je nach Unterart lähmendes oder tödliches Gift"] }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum & Verbreitung",
+      "blocks": [
+        { "type": "paragraph", "text": "Garnspinnen bevorzugen geschützte, stark gegliederte Räume: Höhlen, Felsspalten, Baumkronen und unterirdische Gruben. Offene Ebenen meiden sie, weil dort feste Ankerpunkte für ihre Netze fehlen." },
+        { "type": "paragraph", "text": "Geeignete Nester werden über Generationen genutzt. Jede neue Spinne erweitert das vorhandene Geflecht, bis ganze Höhlenabschnitte oder Waldwege von mehreren Lagen Seide durchzogen sind." }
+      ]
+    },
+    {
+      "id": "jagd",
+      "title": "Verhalten & Jagdweise",
+      "blocks": [
+        { "type": "paragraph", "text": "Das Netz ist Waffe, Falle und Reviermarkierung zugleich. Garnspinnen verlassen ihr Nest meist nur nachts und reagieren unmittelbar auf charakteristische Schwingungen ihrer Seide." },
+        { "type": "list", "items": ["Beute wird abgewartet und nicht verfolgt.", "Gefangene Tiere werden zuerst fixiert, dann vergiftet und vollständig eingesponnen.", "Störungen am Rand des Netzes lösen Rückzug oder gezielte Netzblockaden aus."] }
+      ]
+    },
+    {
+      "id": "gefahr",
+      "title": "Gefahr & Bedeutung",
+      "blocks": [
+        { "type": "paragraph", "text": "Garnspinnen sind besonders nahe Siedlungen, Höhlenwegen und Waldpfaden eine hohe regionale Bedrohung. Solange sie Wildbestände verringern, werden abgelegene Nester mitunter geduldet. Das ändert sich gewöhnlich erst, wenn Menschen verschwinden." }
+      ]
+    },
+    {
+      "id": "kampf",
+      "title": "Kampfverhalten",
+      "blocks": [
+        { "type": "paragraph", "text": "Im offenen Kampf sind Garnspinnen vergleichsweise langsam. In ihrem Revier setzen sie Netzblockaden, Rückzugswege und lähmendes Gift ein, um Auseinandersetzungen zu verlängern und Eindringlinge schrittweise bewegungsunfähig zu machen." },
+        { "type": "paragraph", "text": "Wer ein Nest bekämpft, muss zuerst Fluchtwege und tragende Fäden erkennen. Ein unbedachter Schnitt kann weitere Netzlagen lösen und den eigenen Rückweg versperren." }
+      ]
+    },
+    {
+      "id": "fortpflanzung",
+      "title": "Fortpflanzung & Zyklus",
+      "blocks": [
+        { "type": "paragraph", "text": "Weibchen sind deutlich größer und dominanter. Nach der Paarung werden Männchen häufig gefressen. Die Brut liegt in großen, gut geschützten Kokons; Jungtiere bleiben zunächst im mütterlichen Netz, bis sie vertrieben oder selbst zur Beute werden." }
+      ]
+    },
+    {
+      "id": "nutzung",
+      "title": "Nutzung & Wirtschaft",
+      "blocks": [
+        { "type": "paragraph", "text": "Die außerordentlich reißfeste Seide ist der wichtigste Rohstoff der Garnspinnen. Gereinigt wird sie zu Garnen, Schnüren und belastbaren Geweben verarbeitet. Das Gift dient Alchemisten als Grundlage für Lähmstoffe und Blutgifte; Panzerreste und Fangzähne werden seltener als Trophäen gehandelt." },
+        { "type": "paragraph", "text": "Die Ernte ist gefährlich, aber lukrativ. Kundige Sammler bergen bevorzugt verlassene Randfäden, statt in das bewohnte Zentrum eines Netzes vorzudringen." }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        { "type": "list", "items": ["Erfahrene Reisende werfen lose Halme vor sich, um unsichtbare Randfäden zu erkennen.", "Das gleichmäßige Zupfen des Windes wird von Garnspinnen ignoriert; unregelmäßige Schritte beantworten sie sofort.", "Alte Netze sammeln Staub und Sporen, während frische Jagdfäden im schrägen Licht fast unsichtbar bleiben.", "Weibchen bessern bevorzugte Ankerpunkte so oft aus, dass einzelne Seilstränge dicker als ein Handgelenk werden können."] }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Fünf überlieferte Netzlinien",
+    "title": "Unterarten der Garnspinnen",
+    "intro": "Die Unterarten unterscheiden sich vor allem durch Lebensraum, Körperfarbe, Beweglichkeit und Giftwirkung. Alle fünf alten Bildtafeln bleiben vollständig erhalten.",
+    "entries": [
+      { "id": "hoehlengarn", "name": "Höhlengarn", "region": "Gebirgsregionen", "href": null, "status": "Unterart verzeichnet", "description": "Graubraune Standardform aus Höhlen und Felsspalten; ihr Gift wirkt stark lähmend.", "image": { "src": "../../../assets/insect-profiles/garnspinnen-hoehlengarn.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Höhlengarnspinne" } },
+      { "id": "waldgarn", "name": "Waldgarn", "region": "Waldregionen", "href": null, "status": "Unterart verzeichnet", "description": "Die kleinste und beweglichste Linie lebt in tiefen Wäldern und Baumkronen und trägt meist tödliches Gift.", "image": { "src": "../../../assets/insect-profiles/garnspinnen-waldgarn.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Waldgarnspinne" } },
+      { "id": "blutgarn", "name": "Blutgarn", "region": "Unterirdische Feuchtregionen", "href": null, "status": "Unterart verzeichnet", "description": "Eine seltene dunkelrote bis schwarze Linie, deren Gift das Blut stark verdünnt und die vorwiegend Blut aufnimmt.", "image": { "src": "../../../assets/insect-profiles/garnspinnen-blutgarn.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Blutgarnspinne" } },
+      { "id": "sumpfgarn", "name": "Sumpfgarn", "region": "Feuchtregionen", "href": null, "status": "Unterart verzeichnet", "description": "Menschengroße, schnell laufende Sumpfform mit wassertragfähigen Beinen, tiefen Schlammnestern und tödlichem Gift.", "image": { "src": "../../../assets/insect-profiles/garnspinnen-sumpfgarn.webp", "width": 500, "height": 500, "alt": "Vollständig sichtbare Sumpfgarnspinne" } },
+      { "id": "frostgarn", "name": "Frostgarn", "region": "Tundren und kühle Hochgebirge", "href": null, "status": "Unterart verzeichnet", "description": "Kälteresistente Linie mit weißem Korpus, schwarzen Beinen und lähmendem Gift; ihre Nester liegen in Eis- und Felsspalten.", "image": { "src": "../../../assets/insect-profiles/garnspinnen-frostgarn.webp", "width": 438, "height": 438, "alt": "Vollständig sichtbare Frostgarnspinne" } }
+    ]
+  },
+  "plates": []
+}

@@ -1,0 +1,93 @@
+{
+  "id": "koloss-spinnen",
+  "name": "Koloss-Spinnen",
+  "classification": "Riesenspinnen · Bodenlebende Kolossarthropoden",
+  "continent": "Sundara",
+  "region": "Warm-feuchte Inselreste und vereinzelte Bestände auf Tirnara",
+  "folio": "III / VI",
+  "parentGroupId": "riesenspinnen",
+  "summary": "Die größten bekannten Spinnen Alerias sind langsam reproduzierende Relikte Sundaras: gewaltige, dicht behaarte Lauerjäger, deren wenige Restbestände als stark bedroht gelten.",
+  "quote": "Wo der Boden atmet und die Farne schweigen, ruht vielleicht noch ein Kind Sundaras.",
+  "quoteAttribution": "Überlieferter Warnvers der Sundara-Fahrer",
+  "icon": {
+    "src": "../../../assets/icons/insekten.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Rieseninsekten und Spinnen"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/insekten/koloss-spinnen.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbare, massige Koloss-Spinne",
+    "caption": "Überlieferte Bildtafel · Koloss-Spinne"
+  },
+  "facts": [
+    { "label": "Name", "value": "Koloss-Spinnen" },
+    { "label": "Typ", "value": "Riesenspinne und bodenlebender Kolossarthropode" },
+    { "label": "Größe", "value": "Etwa 5–9 Meter Spannweite; ausgewachsene Weibchen bis 3 Meter Körperhöhe" },
+    { "label": "Gewicht", "value": "Etwa 800–2.500 Kilogramm; einzelne alte Weibchen vermutlich schwerer" },
+    { "label": "Beinbau", "value": "Kurz bis mittellang, äußerst kräftig und für enorme Masse ausgelegt" },
+    { "label": "Panzerung", "value": "Sehr dicker Chitinpanzer mit dichter, schützender Behaarung" },
+    { "label": "Spinnwerk", "value": "Wohnröhren, Bodenverspannungen und Kokonnetze statt Fangnetzen" },
+    { "label": "Aktivität", "value": "Meist nachtaktiv; bei hoher Luftfeuchtigkeit auch dämmerungsaktiv" },
+    { "label": "Beute", "value": "Großwild und andere große Tiere, die nahe an Wohnröhre oder Höhle geraten" },
+    { "label": "Bedrohung", "value": "Lokal extrem; keine Massenbedrohung, aber bei Kontakt meist tödlich" },
+    { "label": "Nutzen", "value": "Historisch Chitinplatten und hoch konzentriertes Gift; heute kaum genutzt" }
+  ],
+  "metrics": {
+    "labels": ["Gefahr", "Zähmbarkeit", "Jagdintelligenz", "Körperkraft", "Revierkontrolle", "Widerstandskraft"],
+    "values": [10, 1, 4, 10, 7, 10],
+    "source": "Aus Körpermasse, Panzerung, Lauerjagd und der geringen Beweglichkeit außerhalb des Baus abgeleitet",
+    "intro": "Die Bewertung zeigt die außergewöhnliche Einzelgefahr einer ausgewachsenen Koloss-Spinne. Ihre Seltenheit und langsame Fortpflanzung senken nur die großräumige Bedrohung."
+  },
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "blocks": [
+      { "type": "paragraph", "text": "Koloss-Spinnen sind die größten bekannten Spinnen der Welt. Sie sind weder Netzjäger noch Hetzer, sondern lebende Masse: langsam, kraftvoll und unerbittlich." },
+      { "type": "paragraph", "text": "Einst dominierten sie die warm-feuchten Regionen Sundaras. Mit dem Untergang des Kontinents verschwanden sie fast vollständig; heute gelten sie als stark bedroht oder regional bereits ausgestorben." }
+    ] },
+    { "id": "anatomie", "title": "Körperbau & Anatomie", "blocks": [
+      { "type": "paragraph", "text": "Der Körper ist extrem massig und dicht behaart, der Hinterleib gewaltig, die Beine kurz und kräftig. Die Behaarung dient zugleich der Sensorik und schützt vor Austrocknung." },
+      { "type": "list", "items": ["Enorme Körpermasse und sehr kräftige Giftklauen", "Dicker Chitinpanzer mit dichter Behaarung", "Nur schwach ausgeprägte Spinnwarzen", "Kurze, explosive Bewegungen statt ausdauernder Verfolgung"] },
+      { "type": "paragraph", "text": "Alles an der Koloss-Spinne ist auf Druck, Gewicht und Durchsetzungsfähigkeit ausgelegt. Filigrane Netzarbeit spielt in ihrer Jagd keine Rolle." }
+    ] },
+    { "id": "lebensraum", "title": "Lebensraum & Verbreitung", "blocks": [
+      { "type": "paragraph", "text": "Die ursprünglichen Bestände Sundaras bewohnten tropische Wälder, Feuchtgebiete und warme vulkanische Böden. Heute überleben nur isolierte Populationen auf kleinen Inselresten und vereinzelt auf Tirnara." },
+      { "type": "paragraph", "text": "Tirnara bietet Wärme, aber zu wenig beständige Feuchtigkeit. Häutung und Fortpflanzung misslingen dort häufiger, weshalb die Restbestände langfristig weiter zurückgehen." }
+    ] },
+    { "id": "jagd", "title": "Verhalten & Jagdweise", "blocks": [
+      { "type": "paragraph", "text": "Koloss-Spinnen sind bodenlebende Lauerjäger. Sie graben große Wohnröhren oder besetzen natürliche Höhlen und warten dort auf Beute, die in Reichweite gerät." },
+      { "type": "list", "items": ["Kurze, explosive Vorstöße", "Fixierung durch reine Körperkraft", "Gifteinsatz erst nach sicherem Zugriff", "Kein Verfolgen entkommener Beute"] }
+    ] },
+    { "id": "gefahr", "title": "Gefahr & Bedeutung", "blocks": [
+      { "type": "paragraph", "text": "Koloss-Spinnen sind keine Plage, sondern seltene Relikte. Wo sie noch vorkommen, gelten sie zugleich als Omen vergangener Katastrophen, Zeichen unberührter Wildnis und extrem gefährliche Einzelbedrohung." }
+    ] },
+    { "id": "kampf", "title": "Kampfverhalten", "blocks": [
+      { "type": "paragraph", "text": "Im offenen Gelände sind Koloss-Spinnen langsam, doch Masse, Panzerung und Durchhaltevermögen machen einen Frontalangriff äußerst gefährlich. Klingen und Pfeile wirken schlecht; Feuer und gezielte Angriffe auf Augen und Gelenke gelten als wirksamer." },
+      { "type": "paragraph", "text": "Eine bedrängte Koloss-Spinne verfolgt Gegner nur kurz. Sie versucht, den Zugang zu ihrer Wohnröhre zu halten und Angreifer mit wenigen schweren Vorstößen zu zerschlagen." }
+    ] },
+    { "id": "fortpflanzung", "title": "Fortpflanzung & Zyklus", "blocks": [
+      { "type": "paragraph", "text": "Die Art vermehrt sich sehr langsam. Weibchen legen wenige, aber ungewöhnlich große Kokons. Die Jungtiere brauchen über Jahre gleichmäßige Wärme und hohe Feuchtigkeit; ihr empfindlicher Entwicklungszyklus ist ein Hauptgrund für den Niedergang der Art." }
+    ] },
+    { "id": "nutzung", "title": "Nutzung & Wirtschaft", "blocks": [
+      { "type": "paragraph", "text": "Früher wurden Chitinplatten zu schweren Rüstungen verarbeitet und das konzentrierte Gift gesammelt. Heute ist die Jagd wegen der Seltenheit und der tödlichen Gefahr praktisch ohne wirtschaftliche Bedeutung." },
+      { "type": "paragraph", "text": "Verlassene Panzerreste besitzen weiterhin großen Wert. Ihr Fund wird jedoch geheim gehalten, damit weder Trophäenjäger noch unvorsichtige Sammler einen möglichen Restbestand aufscheuchen." }
+    ] },
+    { "id": "trivia", "title": "Trivia", "blocks": [
+      { "type": "list", "items": ["Ein frisch verlassener Bau ist an tiefen Schleifspuren und dicht in den Boden gedrückten Haaren zu erkennen.", "Bei trockener Luft ziehen sich Koloss-Spinnen weit in ihre Wohnröhren zurück und verschließen den Eingang mit Erde und Seide.", "Alte Inselkarten markieren mögliche Brutgebiete häufig nur mit einem schwarzen Kreis, um Neugierige fernzuhalten.", "Die Häutung eines ausgewachsenen Weibchens hinterlässt eine nahezu vollständige Hülle, die aus der Entfernung wie ein totes Tier wirkt."] }
+    ] }
+  ],
+  "related": {
+    "eyebrow": "Offene Stellen der alten Artentafel",
+    "title": "Varianten & Unterarten",
+    "intro": "Für fünf mögliche Linien sind bislang weder Namen noch verlässliche Merkmale überliefert. Diese Stellen bleiben bewusst unausgefüllt.",
+    "entries": [
+      { "id": "unbekannt-i", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-ii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iii", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-iv", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." },
+      { "id": "unbekannt-v", "name": "???", "region": "???", "href": null, "unknown": true, "status": "Noch unausgefüllt", "description": "Für diese mögliche Unterart liegt noch kein gesichertes Dossier vor." }
+    ]
+  },
+  "plates": []
+}
