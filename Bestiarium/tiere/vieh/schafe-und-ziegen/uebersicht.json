@@ -1,0 +1,226 @@
+{
+  "id": "schafe-und-ziegen",
+  "title": "Schafe & Ziegen",
+  "subtitle": "Genügsame Herden und regionale Linien",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 03",
+  "lead": "Schafe und Ziegen werden gemeinsam als Herdenvieh geführt. Die alte Tafel nennt eine allgemeine Form sowie fünf Linien aus Estryll.",
+  "quote": "Eine ruhige Herde folgt vertrauten Wegen und beständiger Pflege.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/schafe-und-ziegen.webp",
+    "width": 554,
+    "height": 451,
+    "alt": "Schaf und Ziege auf einer naturkundlichen Bildtafel",
+    "caption": "Archivtafel · Schafe & Ziegen"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Vieh · Herdentiere"
+    },
+    {
+      "label": "Grundform",
+      "value": "Gewöhnliche Ziege & Schaf"
+    },
+    {
+      "label": "Benannte Linien",
+      "value": "Fünf Linien in Estryll"
+    },
+    {
+      "label": "Weitere Tafeln",
+      "value": "Lothir, Aldervan, Tirnara und Sundara"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Pflanzliches Futter und Wasser"
+    },
+    {
+      "label": "Haltung",
+      "value": "In betreuten Herden"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Schafe und Ziegen stehen in der alten Tafel nebeneinander. Beide werden in Herden gehalten, wobei einzelne Linien durch ihren Namen und ihre Verbreitung voneinander abgegrenzt sind.",
+        "Für Estryll sind mehrere Formen benannt. Die übrigen Kontinentaltafeln sind bereits angelegt, enthalten aber noch keine bezeichneten Linien."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Herden benötigen zugängliches Futter, sauberes Wasser und geschützte Plätze zum Ruhen. Regelmäßige Wege und eine klare Führung helfen, den Bestand zusammenzuhalten.",
+        "Die genaue Umgebung einer regionalen Linie wird später in ihrem Einzeldossier beschrieben. Das jetzige Register bewahrt zunächst nur die überlieferten Zuordnungen."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Herdenpflege",
+      "paragraphs": [
+        "Zur Herdenpflege gehören tägliche Beobachtung, verlässliche Fütterung und die Kontrolle des allgemeinen Zustands. Ruhige Abläufe erleichtern das Führen und Zusammenhalten der Tiere.",
+        "Schafe und Ziegen werden im Register getrennt benannt, sobald die alte Tafel eine eigene Linie ausweist. Nicht beschriftete Felder erhalten keinen nachträglich erfundenen Namen."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "grundform",
+        "title": "Allgemeine Verbreitung",
+        "kicker": "Grundform",
+        "description": "Die gemeinsame Grundtafel zeigt Ziege und Schaf als weit verbreitete Formen.",
+        "entries": [
+          {
+            "id": "gewoehnliche-ziege-und-schaf",
+            "title": "Gewöhnliche Ziege & Schaf",
+            "region": "Überall vertreten",
+            "description": "Die gemeinsame Grundform der alten Tafel. Genauere Merkmale sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/gewoehnliche-ziege-und-schaf-1.webp",
+                "width": 554,
+                "height": 451,
+                "alt": "Überlieferte Bildtafel: Gewöhnliche Ziege & Schaf"
+              },
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/gewoehnliche-ziege-und-schaf-2.webp",
+                "width": 485,
+                "height": 514,
+                "alt": "Überlieferte Bildtafel: Gewöhnliche Ziege & Schaf"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Estryll",
+        "kicker": "Kontinentalregister",
+        "description": "Fünf Schaf- und Ziegenlinien sind für Estryll namentlich überliefert.",
+        "entries": [
+          {
+            "id": "estryller-schaf",
+            "title": "Estryller Schaf",
+            "region": "Überall in Estryll",
+            "description": "Eine in ganz Estryll verzeichnete Schaflinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/estryller-schaf.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Estryller Schaf"
+              }
+            ]
+          },
+          {
+            "id": "nordisches-schaf",
+            "title": "Nordisches Schaf",
+            "region": "Nördliches Estryll",
+            "description": "Eine für das nördliche Estryll verzeichnete Schaflinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/nordisches-schaf.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Nordisches Schaf"
+              }
+            ]
+          },
+          {
+            "id": "albisches-schaf",
+            "title": "Albisches Schaf",
+            "region": "Südliches Estryll",
+            "description": "Eine für das südliche Estryll verzeichnete Schaflinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/albisches-schaf.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Albisches Schaf"
+              }
+            ]
+          },
+          {
+            "id": "noerdliche-ziege",
+            "title": "Nördliche Ziege",
+            "region": "Nördliches Estryll",
+            "description": "Eine für das nördliche Estryll verzeichnete Ziegenlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/noerdliche-ziege.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Nördliche Ziege"
+              }
+            ]
+          },
+          {
+            "id": "albische-ziege",
+            "title": "Albische Ziege",
+            "region": "Überall in Estryll",
+            "description": "Eine in ganz Estryll verzeichnete Ziegenlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schafe-und-ziegen/albische-ziege.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Albische Ziege"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Lothir noch keine benannte Schaf- oder Ziegenlinie.",
+        "entries": []
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan noch keine benannte Schaf- oder Ziegenlinie.",
+        "entries": []
+      },
+      {
+        "id": "tirnara",
+        "title": "Tirnara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Tirnara noch keine benannte Schaf- oder Ziegenlinie.",
+        "entries": []
+      },
+      {
+        "id": "sundara",
+        "title": "Sundara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Sundara noch keine benannte Schaf- oder Ziegenlinie.",
+        "entries": []
+      }
+    ]
+  }
+}

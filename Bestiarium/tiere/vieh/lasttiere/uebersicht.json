@@ -1,0 +1,187 @@
+{
+  "id": "lasttiere",
+  "title": "Last- & Nutztiere",
+  "subtitle": "Träger und Zugtiere des Alltags",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 06",
+  "lead": "Die alte Tafel versammelt vier benannte Last- und Nutztiere. Regionale Unterformen sind für die fünf aufgeführten Kontinente noch nicht bezeichnet.",
+  "quote": "Verlässliche Arbeit beginnt mit angemessener Last, guter Versorgung und Ruhe.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/lasttiere.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Last- und Nutztier auf einer naturkundlichen Bildtafel",
+    "caption": "Archivtafel · Last- & Nutztiere"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Vieh · Last- und Nutztiere"
+    },
+    {
+      "label": "Benannte Tiere",
+      "value": "Ochse, Arbeitspferd, Maultier und Esel"
+    },
+    {
+      "label": "Regionale Tafeln",
+      "value": "Estryll, Lothir, Aldervan, Tirnara und Sundara"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Von Tier und Belastung abhängig"
+    },
+    {
+      "label": "Haltung",
+      "value": "Mit Ruhezeiten und angepasster Arbeit"
+    },
+    {
+      "label": "Aufgabe",
+      "value": "Lasten tragen oder ziehen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Unter Last- und Nutztieren führt die alte Tafel Ochse, Arbeitspferd, Maultier und Esel. Gemeinsam ist ihnen die Arbeit unter menschlicher Führung.",
+        "Die Einteilung beschreibt zunächst nur ihre Stellung im Viehregister. Regionale Formen oder besondere Linien sind noch nicht benannt."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Arbeits- und Lasttiere benötigen sichere Ruheplätze, Wasser, geeignetes Futter und Raum zur Erholung. Wege und Arbeitsflächen müssen zur Größe und Trittsicherheit des jeweiligen Tieres passen.",
+        "Zwischen Einsätzen brauchen die Tiere ausreichend Ruhe. Unterbringung und Versorgung richten sich nach Belastung, Witterung und Dauer der Arbeit."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Arbeit & Fürsorge",
+      "paragraphs": [
+        "Lasten werden dem Tier angepasst und gleichmäßig befestigt. Geschirr und Auflagen müssen regelmäßig geprüft werden, damit Druckstellen und unnötige Belastung vermieden werden.",
+        "Ein ruhiger Umgang und klare Abläufe fördern Verlässlichkeit. Leistung wird nicht allein an der getragenen oder gezogenen Last gemessen, sondern auch an Gesundheit und Erholung."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "grundformen",
+        "title": "Gewöhnliche Lasttiere",
+        "kicker": "Benannte Tiere",
+        "description": "Vier Tiere sind in der Grundtafel namentlich aufgeführt.",
+        "entries": [
+          {
+            "id": "ochse",
+            "title": "Ochse",
+            "region": "Allgemeine Tafel",
+            "description": "Der Ochse wird als Last- und Nutztier geführt. Ausführliche Angaben zu Haltung und Arbeit sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/lasttiere/ochse.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Ochse"
+              }
+            ]
+          },
+          {
+            "id": "arbeitspferd",
+            "title": "Arbeitspferd",
+            "region": "Allgemeine Tafel",
+            "description": "Das Arbeitspferd wird als Last- und Nutztier geführt. Ausführliche Angaben zu Haltung und Arbeit sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/lasttiere/arbeitspferd.webp",
+                "width": 1024,
+                "height": 1024,
+                "alt": "Überlieferte Bildtafel: Arbeitspferd"
+              }
+            ]
+          },
+          {
+            "id": "maultier",
+            "title": "Maultier",
+            "region": "Allgemeine Tafel",
+            "description": "Das Maultier wird als Last- und Nutztier geführt. Ausführliche Angaben zu Haltung und Arbeit sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/lasttiere/maultier.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Maultier"
+              }
+            ]
+          },
+          {
+            "id": "esel",
+            "title": "Esel",
+            "region": "Allgemeine Tafel",
+            "description": "Der Esel wird als Last- und Nutztier geführt. Ausführliche Angaben zu Haltung und Arbeit sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/lasttiere/esel.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Esel"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Estryll",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Estryll noch keine benannte regionale Form.",
+        "entries": []
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Lothir noch keine benannte regionale Form.",
+        "entries": []
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan noch keine benannte regionale Form.",
+        "entries": []
+      },
+      {
+        "id": "tirnara",
+        "title": "Tirnara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Tirnara noch keine benannte regionale Form.",
+        "entries": []
+      },
+      {
+        "id": "sundara",
+        "title": "Sundara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Sundara noch keine benannte regionale Form.",
+        "entries": []
+      }
+    ]
+  }
+}

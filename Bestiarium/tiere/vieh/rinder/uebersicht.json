@@ -1,0 +1,237 @@
+{
+  "id": "rinder",
+  "title": "Rinder",
+  "subtitle": "Herden, Linien und regionale Bestände",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 02",
+  "lead": "Rinder werden als Herdentiere gehalten und in der alten Tafel nach ihrer Verbreitung geordnet. Mehrere Linien sind für Estryll und Lothir benannt.",
+  "quote": "Eine Rinderlinie bewährt sich durch beständige Haltung und einen gesunden Bestand.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/rinder.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Rinder auf einer naturkundlichen Bildtafel",
+    "caption": "Archivtafel · Rinder"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Vieh · Herdentier"
+    },
+    {
+      "label": "Grundform",
+      "value": "Gewöhnliches Rind"
+    },
+    {
+      "label": "Benannte Kontinente",
+      "value": "Estryll und Lothir"
+    },
+    {
+      "label": "Weitere Tafeln",
+      "value": "Aldervan, Tirnara und Sundara"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Pflanzliches Futter und Wasser"
+    },
+    {
+      "label": "Haltung",
+      "value": "In betreuten Herden"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Rinder gehören zum beständig geführten Vieh. Die überlieferte Ordnung unterscheidet eine weit verbreitete Grundform und mehrere regional benannte Linien.",
+        "Die vorhandenen Namen werden nach Kontinent und überliefertem Herkunftsvermerk geführt. Wo die alte Tafel keine Bezeichnung nennt, bleibt das Feld offen."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Rinder benötigen ausreichend Futter, Wasser, Bewegungsraum und geschützte Ruheplätze. Ihre Umgebung wird durch die Größe des Bestands und den Wechsel zwischen offenen Flächen und Unterstand bestimmt.",
+        "Regionale Linien werden in ihrer vertrauten Haltung geführt. Genauere Angaben zu Klima und Landschaft sind in den einzelnen Dossiers noch auszuarbeiten."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Bestand",
+      "paragraphs": [
+        "Ein geordneter Bestand verlangt regelmäßige Versorgung, ruhigen Umgang und die Beobachtung jedes Tieres. Futterwechsel und lange Wege werden schrittweise vorbereitet.",
+        "Die Namen der Linien erlauben zunächst eine sichere Zuordnung. Aussagen zu Aussehen, Leistung und besonderen Eigenschaften bleiben den späteren Einzeldossiers vorbehalten."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "grundform",
+        "title": "Allgemeine Verbreitung",
+        "kicker": "Grundform",
+        "description": "Die alte Tafel stellt diese Form den regionalen Linien voran.",
+        "entries": [
+          {
+            "id": "gewoehnliches-rind",
+            "title": "Gewöhnliches Rind",
+            "region": "Fast überall vertreten",
+            "description": "Die verbreitete Grundform der Rinder. Genauere Merkmale und Unterschiede zu regionalen Linien sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/gewoehnliches-rind.webp",
+                "width": 612,
+                "height": 408,
+                "alt": "Überlieferte Bildtafel: Gewöhnliches Rind"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Estryll",
+        "kicker": "Kontinentalregister",
+        "description": "Drei Rinderlinien sind namentlich belegt. Weitere Bildfelder für Estryll, südliches und zentrales Estryll sowie Cenyr besitzen in der alten Tafel noch keinen Rassennamen.",
+        "entries": [
+          {
+            "id": "estryll-hochland-rind",
+            "title": "Estryll Hochland Rind",
+            "region": "Aldrimar / Fjordheim",
+            "description": "Eine für Aldrimar / Fjordheim verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/estryll-hochland-rind.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Estryll Hochland Rind"
+              }
+            ]
+          },
+          {
+            "id": "usail-rind",
+            "title": "Usail Rind",
+            "region": "Fürstentum Aislaerneach",
+            "description": "Eine für das Fürstentum Aislaerneach verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/usail-rind.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Usail Rind"
+              }
+            ]
+          },
+          {
+            "id": "faelorn-hochland-rind",
+            "title": "Faelorn Hochland Rind",
+            "region": "Faelorn",
+            "description": "Eine für Faelorn verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/faelorn-hochland-rind.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Faelorn Hochland Rind"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Kontinentalregister",
+        "description": "Drei Linien tragen einen überlieferten Namen. Ein weiteres Bildfeld aus Weisenfluh bleibt unbenannt.",
+        "entries": [
+          {
+            "id": "erlinger",
+            "title": "Erlinger",
+            "region": "Weisenfluh",
+            "description": "Eine für Weisenfluh verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/erlinger.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Erlinger"
+              }
+            ]
+          },
+          {
+            "id": "aldinger",
+            "title": "Aldinger",
+            "region": "Östliches Lothir",
+            "description": "Eine für das östliche Lothir verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/aldinger.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Aldinger"
+              }
+            ]
+          },
+          {
+            "id": "tiefland-rind",
+            "title": "Tiefland Rind",
+            "region": "Westliches Lothir",
+            "description": "Eine für das westliche Lothir verzeichnete Rinderlinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/rinder/tiefland-rind.webp",
+                "width": 408,
+                "height": 410,
+                "alt": "Überlieferte Bildtafel: Tiefland Rind"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan noch keine benannte Rinderlinie.",
+        "entries": []
+      },
+      {
+        "id": "tirnara",
+        "title": "Tirnara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Für das nordwestliche Tirnara ist eine Bildtafel vorhanden, doch ein Rassenname fehlt.",
+        "entries": []
+      },
+      {
+        "id": "sundara",
+        "title": "Sundara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Sundara noch keine benannte Rinderlinie.",
+        "entries": []
+      }
+    ]
+  }
+}

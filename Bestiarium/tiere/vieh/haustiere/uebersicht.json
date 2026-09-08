@@ -1,0 +1,120 @@
+{
+  "id": "haustiere",
+  "title": "Haustiere",
+  "subtitle": "Begleiter in Haus und Hof",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 01",
+  "lead": "Hunde und Katzen leben in enger Nähe zum Menschen. Ihre Aufgaben und ihr Alltag richten sich nach der jeweiligen Haltung und dem gemeinsamen Umfeld.",
+  "quote": "Nähe und Verlässlichkeit prägen das Zusammenleben mit Haustieren.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/haustiere.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Hunde und Katzen als Haustiere",
+    "caption": "Archivtafel · Haustiere"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Tiere in menschlicher Obhut"
+    },
+    {
+      "label": "Benannte Gruppen",
+      "value": "Hunde und Katzen"
+    },
+    {
+      "label": "Verbreitung",
+      "value": "Haus und Hof"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Von Haltung und Tier abhängig"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Durch Gewöhnung und Zusammenleben geprägt"
+    },
+    {
+      "label": "Nutzen",
+      "value": "Begleitung und Unterstützung im Alltag"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Als Haustiere führt die überlieferte Tafel Hunde und Katzen. Beide leben dauerhaft in menschlicher Nähe und werden über lange Zeit an Haus, Hof und ihre vertrauten Personen gewöhnt.",
+        "Die genaue Rolle eines Tieres hängt von Haltung, Erfahrung und Alltag ab. Verlässliche Versorgung und ruhiger Umgang bilden die Grundlage des Zusammenlebens."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Haustiere teilen ihren Lebensraum mit Menschen. Rückzugsorte, Schutz vor Witterung und ein beständiger Platz für Futter und Wasser helfen ihnen, sich sicher zu orientieren.",
+        "Wie viel Raum ein Tier benötigt, richtet sich nach seiner Größe, Bewegung und Aufgabe. Auch vertraute Wege und feste Abläufe gehören zu seinem Lebensraum."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Umgang",
+      "paragraphs": [
+        "Regelmäßige Pflege, geeignetes Futter und aufmerksame Beobachtung halten Haustiere gesund. Veränderungen im Verhalten geben häufig früh Auskunft darüber, ob Versorgung oder Umgebung angepasst werden müssen.",
+        "Geduld und klare Gewohnheiten erleichtern das Zusammenleben. Grober oder wechselhafter Umgang erschwert dagegen Vertrauen und Verlässlichkeit."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "begleiter",
+        "title": "Hunde & Katzen",
+        "kicker": "Benannte Haustiere",
+        "description": "Die alte Tafel nennt zwei Gruppen und ordnet ihnen jeweils eine Bildtafel zu.",
+        "entries": [
+          {
+            "id": "hunde",
+            "title": "Hunde",
+            "region": "Haus & Hof",
+            "description": "Hunde werden in menschlicher Nähe gehalten. Einzelne Formen und Aufgaben sind in der Vorlage noch nicht weiter unterschieden.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/haustiere/hunde.webp",
+                "width": 408,
+                "height": 612,
+                "alt": "Überlieferte Bildtafel: Hunde"
+              }
+            ]
+          },
+          {
+            "id": "katzen",
+            "title": "Katzen",
+            "region": "Haus & Hof",
+            "description": "Katzen werden als vertraute Haustiere geführt. Einzelne Formen und Aufgaben sind in der Vorlage noch nicht weiter unterschieden.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/haustiere/katzen.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Katzen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

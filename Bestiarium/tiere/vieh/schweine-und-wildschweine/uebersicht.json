@@ -1,0 +1,253 @@
+{
+  "id": "schweine-und-wildschweine",
+  "title": "Schweine & Wildschweine",
+  "subtitle": "Bestände und regionale Linien",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 04",
+  "lead": "Die alte Tafel führt eine gewöhnliche Grundform und mehrere benannte Schweinelinien aus Estryll und Lothir. Ihre genaueren Merkmale bleiben späteren Dossiers vorbehalten.",
+  "quote": "Ein gut versorgter Bestand braucht feste Abläufe, geeignetes Futter und aufmerksame Pflege.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/schweine-und-wildschweine.webp",
+    "width": 558,
+    "height": 447,
+    "alt": "Schwein auf einer naturkundlichen Bildtafel",
+    "caption": "Archivtafel · Schweine & Wildschweine"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Vieh"
+    },
+    {
+      "label": "Grundform",
+      "value": "Gewöhnliches Schwein"
+    },
+    {
+      "label": "Benannte Kontinente",
+      "value": "Estryll und Lothir"
+    },
+    {
+      "label": "Weitere Tafeln",
+      "value": "Aldervan, Tirnara und Sundara"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Gemischtes, geeignetes Futter und Wasser"
+    },
+    {
+      "label": "Haltung",
+      "value": "In betreuten Beständen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Schweine werden in der überlieferten Ordnung nach Grundform und regionalen Linien geführt. Einige Namen beziehen sich ausdrücklich auf wilde oder landschaftlich zugeordnete Formen.",
+        "Das Register übernimmt diese Bezeichnungen unverändert in ihrer Bedeutung. Es ergänzt keine weiteren Arten und legt keine fehlenden Rassennamen fest."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Ein geeigneter Bestand braucht trockene Ruheplätze, Wasser, Futter und genügend Raum für Bewegung. Sauberkeit und regelmäßige Beobachtung sind ein fester Teil der Haltung.",
+        "Regionale Unterschiede werden erst beschrieben, wenn dafür belastbare Angaben vorliegen. Bis dahin dienen Kontinent und Herkunftsvermerk der Einordnung."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Versorgung",
+      "paragraphs": [
+        "Futter wird auf den Bestand abgestimmt und verlässlich angeboten. Schutz, Pflege und ein ruhiger Umgang helfen, Unruhe und vermeidbare Verletzungen zu begrenzen.",
+        "Die Bildtafeln sichern das Erscheinungsbild der benannten Linien. Weitere Aussagen zu Eigenschaften und Nutzung werden nicht aus den Bildern abgeleitet."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "grundform",
+        "title": "Allgemeine Verbreitung",
+        "kicker": "Grundform",
+        "description": "Die alte Tafel führt diese Form vor den regionalen Linien.",
+        "entries": [
+          {
+            "id": "gewoehnliches-schwein",
+            "title": "Gewöhnliches Schwein",
+            "region": "Überall vertreten",
+            "description": "Die verbreitete Grundform der Schweine. Genauere Merkmale sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/gewoehnliches-schwein.webp",
+                "width": 612,
+                "height": 408,
+                "alt": "Überlieferte Bildtafel: Gewöhnliches Schwein"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Estryll",
+        "kicker": "Kontinentalregister",
+        "description": "Fünf Linien sind für Estryll benannt; weitere unbeschriftete Felder bleiben offen.",
+        "entries": [
+          {
+            "id": "gewoehnliches-estryll-schwein",
+            "title": "Gewöhnliches Estryll Schwein",
+            "region": "Überall in Estryll",
+            "description": "Eine in ganz Estryll verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/gewoehnliches-estryll-schwein.webp",
+                "width": 558,
+                "height": 447,
+                "alt": "Überlieferte Bildtafel: Gewöhnliches Estryll Schwein"
+              }
+            ]
+          },
+          {
+            "id": "nordisches-landschwein",
+            "title": "Nordisches Landschwein",
+            "region": "Nördliches Cenyr",
+            "description": "Eine für das nördliche Cenyr verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/nordisches-landschwein.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Nordisches Landschwein"
+              }
+            ]
+          },
+          {
+            "id": "domestiziertes-wildes-schwein-estryll",
+            "title": "Domestiziertes Wildes Schwein",
+            "region": "Überall in Estryll",
+            "description": "Eine in ganz Estryll verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/domestiziertes-wildes-schwein-estryll.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Domestiziertes Wildes Schwein"
+              }
+            ]
+          },
+          {
+            "id": "albisches-landschwein",
+            "title": "Albisches Landschwein",
+            "region": "Südliches Estryll",
+            "description": "Eine für das südliche Estryll verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/albisches-landschwein.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Albisches Landschwein"
+              }
+            ]
+          },
+          {
+            "id": "fiadh",
+            "title": "Fiadh",
+            "region": "Aislaerneach",
+            "description": "Eine für Aislaerneach verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/fiadh.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Fiadh"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Kontinentalregister",
+        "description": "Zwei Linien sind für Lothir namentlich überliefert.",
+        "entries": [
+          {
+            "id": "domestiziertes-wildes-schwein-lothir",
+            "title": "Domestiziertes Wildes Schwein",
+            "region": "Überall in Lothir",
+            "description": "Eine in ganz Lothir verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/domestiziertes-wildes-schwein-lothir.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Domestiziertes Wildes Schwein"
+              }
+            ]
+          },
+          {
+            "id": "lothir-landschwein",
+            "title": "Lothir Landschwein",
+            "region": "Überall in Lothir",
+            "description": "Eine in ganz Lothir verzeichnete Schweinelinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/schweine-und-wildschweine/lothir-landschwein.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Lothir Landschwein"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan noch keine benannte Schweinelinie.",
+        "entries": []
+      },
+      {
+        "id": "tirnara",
+        "title": "Tirnara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Tirnara noch keine benannte Schweinelinie.",
+        "entries": []
+      },
+      {
+        "id": "sundara",
+        "title": "Sundara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Sundara noch keine benannte Schweinelinie.",
+        "entries": []
+      }
+    ]
+  }
+}

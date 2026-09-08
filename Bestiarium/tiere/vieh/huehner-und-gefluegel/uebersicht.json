@@ -1,0 +1,205 @@
+{
+  "id": "huehner-und-gefluegel",
+  "title": "Hühner & Geflügel",
+  "subtitle": "Hofbestände und benannte Linien",
+  "classification": "Tiere · Vieh",
+  "folio": "VI / 05",
+  "lead": "Das Geflügelregister nennt das gewöhnliche Huhn sowie mehrere regionale Linien. Benannte Einträge liegen für Lothir und Tirnara vor.",
+  "quote": "Ein gepflegter Geflügelbestand lebt von Schutz, Ruhe und regelmäßiger Versorgung.",
+  "icon": {
+    "src": "../../../assets/icons/vieh.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Bestiarium-Symbol für Vieh"
+  },
+  "hero": {
+    "src": "../../../assets/species-entries/vieh/huehner-und-gefluegel.webp",
+    "width": 456,
+    "height": 547,
+    "alt": "Hühner und Geflügel auf einer naturkundlichen Bildtafel",
+    "caption": "Archivtafel · Hühner & Geflügel"
+  },
+  "facts": [
+    {
+      "label": "Typ",
+      "value": "Vieh · Geflügel"
+    },
+    {
+      "label": "Grundform",
+      "value": "Gewöhnliches Huhn"
+    },
+    {
+      "label": "Benannte Kontinente",
+      "value": "Lothir und Tirnara"
+    },
+    {
+      "label": "Weitere Tafeln",
+      "value": "Estryll, Aldervan und Sundara"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Geeignetes Futter und Wasser"
+    },
+    {
+      "label": "Haltung",
+      "value": "In geschützten Beständen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "paragraphs": [
+        "Hühner und Geflügel werden in der alten Tafel als gemeinsamer Hofbestand geführt. Neben dem gewöhnlichen Huhn sind vier Linien namentlich eingetragen.",
+        "Die Kontinentalordnung bleibt erhalten. Unbenannte Bildfelder werden dokumentiert, aber nicht zu neuen Linien erklärt."
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "paragraphs": [
+        "Geflügel braucht geschützte Ruheplätze, Wasser, Futter und ausreichend Raum für tägliche Bewegung. Die Unterbringung soll übersichtlich und gut zu pflegen sein.",
+        "Feste Abläufe erleichtern die Versorgung des Bestands. Genauere regionale Haltungsformen sind in der Vorlage nicht beschrieben."
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Bestandspflege",
+      "paragraphs": [
+        "Regelmäßige Reinigung, geeignetes Futter und die Beobachtung des Verhaltens gehören zur Grundversorgung. Veränderungen im Bestand sollten früh erkannt und geprüft werden.",
+        "Die Namen und Bildtafeln bilden den verlässlichen Ausgangspunkt für spätere Dossiers zu Aussehen, Verhalten und Nutzung."
+      ]
+    }
+  ],
+  "catalog": {
+    "title": "Überlieferte Arten & Linien",
+    "intro": "Das Register übernimmt ausschließlich die in der alten Tafel benannten Tiere, Linien und Orte. Leere Kontinentalfelder bleiben sichtbar gekennzeichnet.",
+    "groups": [
+      {
+        "id": "grundform",
+        "title": "Allgemeine Verbreitung",
+        "kicker": "Grundform",
+        "description": "Das gewöhnliche Huhn steht am Anfang der überlieferten Ordnung.",
+        "entries": [
+          {
+            "id": "gewoehnliches-huhn",
+            "title": "Gewöhnliches Huhn",
+            "region": "Fast überall auf Aleria",
+            "description": "Die verbreitete Grundform des Huhns. Genauere Merkmale sind noch nicht ausgearbeitet.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/huehner-und-gefluegel/gewoehnliches-huhn.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Gewöhnliches Huhn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "estryll",
+        "title": "Estryll",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die Tafel enthält drei Bildfelder mit Vermerken für ganz Estryll und den Norden, nennt dafür jedoch keine Linien.",
+        "entries": []
+      },
+      {
+        "id": "lothir",
+        "title": "Lothir",
+        "kicker": "Kontinentalregister",
+        "description": "Drei Geflügellinien sind für Lothir namentlich überliefert.",
+        "entries": [
+          {
+            "id": "goldfeder",
+            "title": "Goldfeder",
+            "region": "Goldmund",
+            "description": "Eine für Goldmund verzeichnete Geflügellinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/huehner-und-gefluegel/goldfeder.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Goldfeder"
+              }
+            ]
+          },
+          {
+            "id": "uanric-moorglucke",
+            "title": "Uanric-Moorglucke",
+            "region": "Moinneach",
+            "description": "Eine für Moinneach verzeichnete Geflügellinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/huehner-und-gefluegel/uanric-moorglucke.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Uanric-Moorglucke"
+              }
+            ]
+          },
+          {
+            "id": "hofschimmer",
+            "title": "Hofschimmer",
+            "region": "Weisenfluh",
+            "description": "Eine für Weisenfluh verzeichnete Geflügellinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/huehner-und-gefluegel/hofschimmer.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Hofschimmer"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aldervan",
+        "title": "Aldervan",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Aldervan noch keine benannte Geflügellinie.",
+        "entries": []
+      },
+      {
+        "id": "tirnara",
+        "title": "Tirnara",
+        "kicker": "Kontinentalregister",
+        "description": "Eine Geflügellinie ist für Tirnara namentlich überliefert.",
+        "entries": [
+          {
+            "id": "blaufeder",
+            "title": "Blaufeder",
+            "region": "Morgorn",
+            "description": "Eine für Morgorn verzeichnete Geflügellinie. Merkmale und Nutzung sind noch nicht näher beschrieben.",
+            "status": "Einzeldossier vorgemerkt",
+            "href": null,
+            "images": [
+              {
+                "src": "../../../assets/livestock/huehner-und-gefluegel/blaufeder.webp",
+                "width": 500,
+                "height": 500,
+                "alt": "Überlieferte Bildtafel: Blaufeder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sundara",
+        "title": "Sundara",
+        "kicker": "Noch ohne benannte Einträge",
+        "description": "Die alte Tafel enthält für Sundara noch keine benannte Geflügellinie.",
+        "entries": []
+      }
+    ]
+  }
+}

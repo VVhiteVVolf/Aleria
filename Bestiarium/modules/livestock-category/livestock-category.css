@@ -1,0 +1,502 @@
+.livestock-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 22px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.livestock-breadcrumb a {
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+
+.livestock-breadcrumb a:hover {
+  border-color: currentColor;
+  color: var(--red);
+}
+
+.livestock-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 22px;
+  border: 1px solid #aa956f;
+  background: #e5d8bc;
+}
+
+.livestock-tabs a {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  padding: 8px 10px;
+  border-right: 1px solid #aa956f;
+  color: #584937;
+  font-size: 9px;
+  letter-spacing: .08em;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.livestock-tabs a:last-child { border-right: 0; }
+.livestock-tabs a:hover { background: #f5ecd8; color: var(--red); }
+.livestock-tabs a[aria-current='page'] { background: var(--green); color: var(--paper-light); }
+
+.livestock-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(350px, .82fr);
+  align-items: center;
+  gap: clamp(44px, 7vw, 96px);
+  min-height: 630px;
+  padding: 38px 0 62px;
+}
+
+.livestock-hero-copy { padding: 20px 0; }
+
+.livestock-seal {
+  display: grid;
+  grid-template-columns: 58px auto;
+  align-items: center;
+  width: max-content;
+  margin-bottom: 28px;
+  padding: 5px 14px 5px 7px;
+  border: 1px solid #9f8964;
+  color: #765144;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.livestock-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: saturate(.82) sepia(.12);
+  mix-blend-mode: multiply;
+}
+
+.livestock-hero h1 {
+  margin-top: 10px;
+  color: #2c251c;
+  font-size: clamp(55px, 7.4vw, 104px);
+  font-weight: 400;
+  letter-spacing: -.06em;
+  line-height: .88;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.livestock-subtitle {
+  margin-top: 20px;
+  color: var(--red);
+  font-size: clamp(17px, 2vw, 24px);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.livestock-lead {
+  max-width: 670px;
+  margin-top: 24px;
+  color: #504435;
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.livestock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 23px;
+  margin-top: 31px;
+}
+
+.livestock-actions > a:last-child {
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.livestock-actions > a:last-child:hover { color: var(--red); }
+
+.livestock-hero-figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  width: min(100%, 500px);
+  min-height: 500px;
+  margin: 0;
+  padding: 24px 24px 52px;
+  overflow: hidden;
+  border: 1px solid #9c8765;
+  background: #e6dac0;
+  box-shadow: 15px 20px 48px #3c2d1b25;
+}
+
+.livestock-hero-figure::before {
+  position: absolute;
+  inset: 17px;
+  border: 1px solid #fff5dea8;
+  content: '';
+  pointer-events: none;
+}
+
+.livestock-hero-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 13px #4c351f42);
+}
+
+.livestock-hero-figure figcaption {
+  position: absolute;
+  right: 19px;
+  bottom: 15px;
+  left: 19px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.livestock-quote {
+  display: grid;
+  grid-template-columns: 1fr minmax(270px, 740px) 1fr;
+  align-items: center;
+  gap: 25px;
+  padding: 31px 0;
+  border-top: 3px double var(--line);
+  border-bottom: 3px double var(--line);
+  color: #594130;
+  text-align: center;
+}
+
+.livestock-quote > span { color: var(--red); font-size: 18px; }
+.livestock-quote p { font-size: clamp(18px, 2.1vw, 27px); font-style: italic; line-height: 1.5; }
+
+.livestock-book {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 58px;
+  padding: 64px 0 96px;
+}
+
+.livestock-register > div { position: sticky; top: 28px; }
+.livestock-register nav { display: grid; margin-top: 20px; }
+
+.livestock-register nav a {
+  display: grid;
+  grid-template-columns: 31px minmax(0, 1fr);
+  gap: 4px;
+  padding: 10px 7px;
+  border-bottom: 1px solid #b8a48070;
+  color: #42382b;
+  font-size: 10px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.livestock-register nav a:hover { color: var(--red); background: #f7eedb80; }
+.livestock-register nav span { color: var(--red); font-size: 8px; letter-spacing: .08em; }
+.livestock-register-extra { margin-top: 9px; border-top: 2px solid #9c8664; }
+
+.livestock-register-back {
+  display: inline-block;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.livestock-register-back:hover { color: var(--red); }
+
+.livestock-facts {
+  margin-bottom: 68px;
+  padding: 28px;
+  border: 1px solid #aa956f;
+  background: #e8dcc3a8;
+}
+
+.livestock-facts h2 {
+  margin-top: 4px;
+  color: #352b21;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.livestock-facts dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 24px 0 0;
+  border-top: 1px solid #ad9875;
+}
+
+.livestock-facts dl > div {
+  display: grid;
+  grid-template-columns: minmax(96px, .48fr) 1fr;
+  gap: 12px;
+  padding: 12px 13px;
+  border-right: 1px solid #ad9875;
+  border-bottom: 1px solid #ad9875;
+}
+
+.livestock-facts dl > div:nth-child(even) { border-right: 0; }
+.livestock-facts dt { color: var(--red); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.livestock-facts dd { margin: 0; color: #4c4134; font-size: 12px; line-height: 1.5; }
+
+.livestock-section { scroll-margin-top: 28px; }
+.livestock-section + .livestock-section { margin-top: 65px; }
+
+.livestock-section > header {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--line);
+}
+
+.livestock-section > header span { color: var(--red); font-size: 10px; }
+
+.livestock-section h2 {
+  color: #352b21;
+  font-size: clamp(29px, 3.3vw, 45px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+}
+
+.livestock-prose {
+  max-width: 830px;
+  color: #4c4134;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.livestock-prose p + p { margin-top: 18px; }
+
+.livestock-catalog { margin-top: 82px; scroll-margin-top: 28px; }
+
+.livestock-catalog-heading {
+  padding-bottom: 25px;
+  border-bottom: 3px double var(--line);
+}
+
+.livestock-catalog-heading h2 {
+  margin-top: 5px;
+  color: #31281e;
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+
+.livestock-catalog-heading > p:last-child {
+  max-width: 780px;
+  margin-top: 17px;
+  color: #5c4f3e;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.livestock-group { padding-top: 52px; scroll-margin-top: 28px; }
+
+.livestock-group > header {
+  display: grid;
+  grid-template-columns: minmax(220px, .6fr) minmax(300px, 1fr);
+  align-items: end;
+  gap: 10px 44px;
+  margin-bottom: 26px;
+}
+
+.livestock-group > header .eyebrow { grid-column: 1 / -1; }
+
+.livestock-group > header h2 {
+  color: #382d23;
+  font-size: clamp(29px, 3.5vw, 47px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.livestock-group > header > p:last-child {
+  color: #5f5140;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.livestock-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.livestock-entry {
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  min-width: 0;
+  border: 1px solid #b8a480;
+  background: #f7efdfb0;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+
+a.livestock-entry:hover {
+  transform: translateY(-3px);
+  border-color: #806448;
+  box-shadow: 0 12px 25px #4d382018;
+}
+
+.livestock-entry-art {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 14px;
+  overflow: hidden;
+  border-bottom: 1px solid #b8a480;
+  background: #e6dac0;
+}
+
+.livestock-entry-art--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.livestock-entry-art figure {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 270px;
+  min-width: 0;
+  margin: 0;
+}
+
+.livestock-entry-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 13px 10px #4c351f55);
+}
+
+.livestock-entry-copy {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 19px;
+}
+
+.livestock-entry-copy h3 {
+  margin-top: 4px;
+  color: #362c22;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.livestock-entry-copy > p:not(.eyebrow) {
+  margin-top: 14px;
+  color: #584b3b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.livestock-entry-copy > span {
+  display: block;
+  margin-top: auto;
+  padding-top: 20px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.livestock-entry-copy i { margin-left: 4px; font-style: normal; }
+
+.livestock-empty {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  border: 1px dashed #ad9875;
+  background: #eadfc78a;
+  color: #635543;
+}
+
+.livestock-empty > span { color: var(--red); font-size: 25px; }
+.livestock-empty strong { color: #473a2c; font-size: 12px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; }
+.livestock-empty p { margin-top: 6px; font-size: 12px; line-height: 1.65; }
+
+.livestock-group--empty {
+  display: grid;
+  grid-template-columns: minmax(180px, .4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.livestock-group--empty > header { display: block; margin: 0; }
+.livestock-group--empty > header h2 { margin-top: 5px; font-size: 29px; }
+
+@media (max-width: 1050px) {
+  .livestock-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .livestock-tabs a:nth-child(3) { border-right: 0; }
+  .livestock-tabs a:nth-child(-n + 3) { border-bottom: 1px solid #aa956f; }
+  .livestock-hero { grid-template-columns: 1fr 360px; min-height: 570px; gap: 40px; }
+  .livestock-hero-figure { min-height: 430px; }
+  .livestock-hero-image { max-height: 370px; }
+  .livestock-book { grid-template-columns: 180px minmax(0, 1fr); gap: 38px; }
+}
+
+@media (max-width: 820px) {
+  .livestock-hero { grid-template-columns: 1fr; padding-top: 34px; }
+  .livestock-hero-figure { justify-self: stretch; width: 100%; }
+  .livestock-book { grid-template-columns: 1fr; }
+  .livestock-register > div { position: static; }
+  .livestock-register nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .livestock-register-back { margin-top: 18px; }
+  .livestock-group > header { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .livestock-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .livestock-tabs a { border-bottom: 1px solid #aa956f; }
+  .livestock-tabs a:nth-child(3) { border-right: 1px solid #aa956f; }
+  .livestock-tabs a:nth-child(even) { border-right: 0; }
+  .livestock-tabs a:nth-last-child(-n + 2) { border-bottom: 0; }
+  .livestock-hero h1 { font-size: clamp(46px, 16vw, 72px); }
+  .livestock-hero-figure { min-height: 360px; padding: 18px 18px 46px; }
+  .livestock-hero-image { max-height: 300px; }
+  .livestock-quote { grid-template-columns: 18px 1fr 18px; gap: 8px; }
+  .livestock-book { padding-top: 45px; }
+  .livestock-register nav { grid-template-columns: 1fr; }
+  .livestock-facts { padding: 20px; }
+  .livestock-facts dl { grid-template-columns: 1fr; }
+  .livestock-facts dl > div { border-right: 0; }
+  .livestock-entry-grid { grid-template-columns: 1fr; }
+  .livestock-entry { grid-template-rows: 280px 1fr; }
+  .livestock-entry-art figure { height: 250px; }
+  .livestock-group--empty { grid-template-columns: 1fr; gap: 12px; }
+}
+
+@media (max-width: 390px) {
+  .livestock-seal { grid-template-columns: 48px auto; }
+  .livestock-icon { width: 42px; height: 42px; }
+  .livestock-actions { align-items: stretch; flex-direction: column; }
+  .livestock-actions .ink-button { width: 100%; }
+  .livestock-entry-copy { padding-inline: 17px; }
+  .livestock-entry-art--pair { gap: 4px; padding-inline: 7px; }
+}

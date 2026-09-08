@@ -35,7 +35,7 @@ const legacyNames = {
   raubtiere: ['Raubkatzen', 'Wölfe', 'Bären'],
   flugwesen: ['Caoran', 'Rotmilan'],
   wild: ['Mittleres Wild', 'Keiler', 'Großwild', 'Kleinwild', 'Hirsche & Elche'],
-  vieh: ['Rinder', 'Schafe & Ziegen', 'Schweine & Wildschweine', 'Hühner & Geflügel', 'Haustiere', 'Lasttiere'],
+  vieh: ['Rinder', 'Schafe & Ziegen', 'Schweine & Wildschweine', 'Hühner & Geflügel', 'Haustiere', 'Last- & Nutztiere'],
   reptilien: ['Druchtan', 'Corrchuban'],
   amphibien: ['Kröten', 'Frösche'],
   ornithosaurier: ['Klippenschnapper', 'Aerdrith'],

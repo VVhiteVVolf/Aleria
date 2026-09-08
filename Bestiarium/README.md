@@ -14,6 +14,7 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/horse-profile`: gemeinsame statische Vorlage für Pferdedossiers, Rossmarkt-Werte und Leistungsdiagramme.
 - `modules/profile-metrics`: gemeinsames, zugängliches Sechs-Achsen-Diagramm für Pferde- und Raubtierdossiers.
 - `modules/predator-profile`: Übersichten für Raubkatzen, Wölfe, Warge und Bären sowie die einzelnen Raubtierdossiers.
+- `modules/livestock-category`: gemeinsame Unterregister, Viehkunde und Bestandskarten für die sechs Bereiche des Vieharchivs.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -74,6 +75,14 @@ Jedes vollständige Dossier zeigt sechs aus dem überlieferten Arttext abgeleite
 
 Die Seiten entstehen mit `node Bestiarium/scripts/build-predator-profiles.mjs`; `--check` prüft Übersichten und Einzeldossiers. Neue Dossiers benötigen ein `profil.json` und einen Eintrag in `modules/predator-profile/predator-registry.mjs`. Der jeweilige Übersichtseintrag erhält anschließend sein lokales `href`.
 
+## Viehregister
+
+Die Viehseite führt zu sechs eigenen Unterregistern: Rinder, Schafe & Ziegen, Schweine & Wildschweine, Hühner & Geflügel, Haustiere sowie Last- & Nutztiere. Ein gemeinsames Register auf jeder Unterseite erlaubt den direkten Wechsel zwischen diesen Bereichen. Einführung, Lebensräume und Haltung sind als allgemeine alerische Viehkunde ausgearbeitet.
+
+Das Bestandsregister übernimmt ausschließlich die 32 in den alten Tafeln benannten Tiere und Linien sowie deren vorhandene Ortsangaben. Unbeschriftete Tabellenfelder bleiben als offene Archivstellen sichtbar und erhalten keine erfundenen Namen. Die 33 zugeordneten Bildtafeln liegen lokal unter `assets/livestock/`; Herkunft und Abmessungen stehen in `assets/livestock-sources.json`.
+
+Die Seiten entstehen mit `node Bestiarium/scripts/build-livestock-categories.mjs`; `--check` prüft alle sechs Unterregister. Ihre Quellen liegen als `uebersicht.json` im jeweiligen Verzeichnis unter `tiere/vieh/`. Neue Viehbereiche werden im gemeinsamen `modules/livestock-category/livestock-category-registry.mjs` registriert und dadurch zugleich in Build und Vite aufgenommen.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -93,5 +102,7 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/horse-profiles.test.mjs`
 
 `node --test Bestiarium/tests/predator-profiles.test.mjs`
+
+`node --test Bestiarium/tests/livestock-categories.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.
