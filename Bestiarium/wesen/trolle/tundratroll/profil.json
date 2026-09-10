@@ -1,0 +1,185 @@
+{
+  "id": "tundratroll",
+  "name": "Tundratroll",
+  "classification": "Trollunterart · Verhärtete nördliche Landtrollform",
+  "continent": "Aldrimar, Mathringen und Faelorn",
+  "region": "Tundren, Fjäll, Hochmoore und nördliche Grenzlande",
+  "folio": "III-T / 12",
+  "parentGroupId": "trolle",
+  "summary": "Tundratrolle sind durch Kälte, Hunger und Isolation veränderte Landtrolle aus Aldrimar, Mathringen und Faelorn. Blasse Haut, dichter Pelz, Hörner und bisweilen ein drittes Auge sichern ihr Überleben im Schneesturm; Verfolgung, Versklavung und Kriegseinsatz prägten eine harte Gewaltlogik, die jedes Gespräch zur Machtprobe macht.",
+  "quote": "Ein Tundratroll hört das Angebot erst, nachdem er geprüft hat, ob du den Schlag überstehst.",
+  "quoteAttribution": "Nordmännische Warnung an unerfahrene Händler",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-tundratroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Tundratroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/tundratroll.webp",
+    "width": 800,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Tundratroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Tundratroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Tundratroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; nördliche Landtrollform"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Klima und Isolation veränderte Landtrolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aldrimar, Mathringen und Faelorn"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Tundren, Fjäll, Hochmoore, Grabhügel und verlassene Wehranlagen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Misstrauisch, territorial und schnell gewalttätig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung, Nacht und Schneewetter"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Kälteresistenz, Schneesicht, langsamer Stoffwechsel und Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähigkeit, Wahrnehmung, Kraft und Widerstand gegen Witterung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Hitze, Feuer, warmes Klima und reizempfindliches drittes Auge"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Gesammelte Waffen, Rüstungsteile, Hörner und weißes Trollfell"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Kälteresistenz",
+      "Schneesicht",
+      "Zähigkeit",
+      "Aggression",
+      "Verhandlungswille",
+      "Hitzeanfälligkeit"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      4,
+      9
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Tundratrolls abgeleitet",
+    "intro": "Der Tundratroll deutet jede Begegnung als Machtprobe. Verhandlung ist möglich, bleibt aber schwach ausgeprägt; Hitze und Feuer setzen seinem kalten Stoffwechsel stark zu."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diese Trollart ist keine eigene Ursprungsform, sondern eine nördliche Abwandlung des Landtrolls. Sie ist größer, zäher und aggressiver als ihre südlichen Vettern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Blasse vernarbte Haut, dichter Pelz und asymmetrische Hörner sind verbreitet. Ein gelegentliches drittes Auge verbessert Bewegungs- und Lichtwahrnehmung im Schneesturm."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generationen in Aldrimar, Mathringen und Faelorn lebten unter Hunger, Kälte und beständiger Jagd durch Menschen. Die Nordmänner setzten gefangene Exemplare zudem als Krieger, Leibwächter oder Sklaven ein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Erfahrungen prägen eine einfache Gewaltlogik: Schwäche wird ausgenutzt, sichtbare Stärke gemieden oder geprüft. Loyalität zu Kriegshaufen hält nur so lange wie Nahrung und Beute."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tundratrolle kennen Verhandlungen, glauben aber selten an Fairness. Sie schlagen schneller zu als Landtrolle und schließen sich gelegentlich Banditen oder Plünderern an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gesammelte Waffen und Rüstungen dienen eher als Rangzeichen denn als verlässlich eingesetzte Ausrüstung."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Windgeschützte Senken, vereiste Höhlen, alte Grabhügel und verlassene Wehranlagen bieten Schutz. Bei knapper Beute suchen sie Randgebiete von Siedlungen auf."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer wirkt zuverlässig gegen Pelz und empfindliche Augen. Fernkampf nimmt der Kreatur Reichweite und Kraft; im Nahkampf müssen Gelenke, Hals oder Augen gemeinsam angegriffen werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einschüchterung ist verlässlicher als langes Feilschen. Zögern wird als Einladung verstanden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Das dritte Auge gilt Gelehrten als angepasstes Sinnesorgan, Druiden als Zeichen magischer Umweltbelastung.",
+            "Nordmänner kontrollieren gefangene Exemplare mit Ketten, Runen oder Drogen.",
+            "Weiße Riesen treten in nördlichen Sagen als Grenzwächter auf.",
+            "Lange Wärmeperioden machen Tundratrolle träge und reizbar."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

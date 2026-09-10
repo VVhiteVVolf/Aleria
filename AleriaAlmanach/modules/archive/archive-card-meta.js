@@ -16,7 +16,20 @@ function getArchiveEntryCommentLabel(entry) {
   return 'Keine Kommentare';
 }
 
+function getArchiveEntryGuildEmblem(entry) {
+  const pages = Array.isArray(entry?.pages) ? entry.pages : [];
+  for (const page of pages) {
+    if (!page?.guildPage || page._commentsPage) continue;
+    const emblem = sanitizeImageSrc(page.guild?.crestImage || '') || sanitizeImageSrc(page.image || '');
+    if (emblem) return emblem;
+  }
+  return '';
+}
+
 function getArchiveEntryPreviewImage(entry) {
+  const guildEmblem = getArchiveEntryGuildEmblem(entry);
+  if (guildEmblem) return guildEmblem;
+
   const pages = Array.isArray(entry?.pages) ? entry.pages.filter(page => page && !page._commentsPage) : [];
   const firstPageImage = sanitizeImageSrc(pages[0]?.image || '');
   if (firstPageImage) return firstPageImage;
@@ -48,27 +61,20 @@ function getArchiveEntryPreviewImage(entry) {
   return '';
 }
 
-function buildArchiveEntryMetaItems(entry, section, options = {}) {
+function buildArchiveEntryMetaItems(entry) {
   const pageCount = getArchiveEntryPageCount(entry);
-  const items = [];
-  if (entry?.type) items.push({ label: 'Typ', value: entry.type });
-  if (pageCount) items.push({ label: 'Seiten', value: String(pageCount) });
-  items.push({ label: 'Dialog', value: getArchiveEntryCommentLabel(entry) });
-  if (options.showLocation && (section?.tab || section?.key)) {
-    items.push({ label: 'Ort', value: getSectionOptionLabel(section), wide: true });
+  const items = [{ kind: 'pages', value: `${pageCount} ${pageCount === 1 ? 'Seite' : 'Seiten'}` }];
+  if (entry && (entry.appendCommentsPage !== false || hasArchiveEntryPageComments(entry))) {
+    items.push({ kind: 'comments', value: 'Kommentare möglich', description: getArchiveEntryCommentLabel(entry) });
   }
   return items;
 }
 
-function renderArchiveEntryMeta(entry, section, options = {}) {
-  const items = buildArchiveEntryMetaItems(entry, section, options);
-  if (!items.length) return '';
+function renderArchiveEntryMeta(entry) {
+  const items = buildArchiveEntryMetaItems(entry);
   return `
     <span class="entry-card-meta">
-      ${items.map(item => `
-        <span class="entry-card-meta-chip${item.wide ? ' wide' : ''}">
-          <span>${escapeHtml(item.label)}</span>
-          <strong>${escapeHtml(item.value)}</strong>
-        </span>`).join('')}
+      ${items.map(item => `<span class="entry-card-meta-item" data-card-meta="${item.kind}"${item.description ? ` title="${escapeHtml(item.description)}"` : ''}>${escapeHtml(item.value)}</span>`).join('')}
+      <span class="entry-card-open-mark" aria-hidden="true">↗</span>
     </span>`;
 }

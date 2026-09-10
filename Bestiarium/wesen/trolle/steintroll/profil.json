@@ -1,0 +1,185 @@
+{
+  "id": "steintroll",
+  "name": "Steintroll",
+  "classification": "Trollunterart · Verfluchter unsterblicher Felsleib",
+  "continent": "Aleria; Überlieferung des Tharannis",
+  "region": "Alte Hochgebirge und urtümliche Felsformationen",
+  "folio": "III-T / 15",
+  "parentGroupId": "trolle",
+  "summary": "Steintrolle sind keine natürliche Trolllinie, sondern durch Tharannis verfluchte Menschen mit lebenden Körpern aus Stein. Sie altern, hungern und schlafen nicht, werden über Jahrhunderte jedoch größer und unbeweglicher; die meisten verharren so passiv, dass Wege und ganze Siedlungen sie für natürliche Felsen halten.",
+  "quote": "Der Berg versperrt dir nicht den Weg. Vielleicht wurde ihm nur befohlen, nie wieder zu fliehen.",
+  "quoteAttribution": "Druidische Deutung des Fluchs von Tharannis",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-steintroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Steintroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/steintroll.webp",
+    "width": 1200,
+    "height": 655,
+    "alt": "Szenentafel mit einem Steintroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Steintroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Steintroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Göttlich verfluchter Humanoider; lebender Felsleib"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Fluch des Tharannis über geflohene menschliche Anhänger"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria; Überlieferung des Tharannis"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Alte Bergmassive, Grate, Pässe und urtümliche Felsformationen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Vollkommen passiv; Reaktionen nur bei gewaltigen Störungen"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Keine erkennbare Aktivitätsphase"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Unsterblichkeit, Magieresistenz und jahrzehntelange Gesteinsheilung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Lebender Stein, kein Hunger, kein Durst, kein Schlaf und kein Altern"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Extreme Langsamkeit, wachsende Unbeweglichkeit und göttliche Bindung"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Keine vertretbare Ausbeute; als Landmarke und Heiligtum geschützt"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gesteinshärte",
+      "Unsterblichkeit",
+      "Regenerationsdauer",
+      "Passivität",
+      "Magieresistenz",
+      "Beweglichkeit"
+    ],
+    "values": [
+      10,
+      10,
+      2,
+      10,
+      9,
+      1
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Steintrolls abgeleitet",
+    "intro": "Der Steintroll ist kein üblicher Gegner. Hohe Passivität und Unsterblichkeit stehen einer fast erloschenen Beweglichkeit gegenüber; Regeneration geschieht sicher, aber über Jahrzehnte."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Steintrolle gelten als älteste und seltenste bekannte Trollart, ohne Ursprung der übrigen Linien zu sein. Druidische Überlieferungen beschreiben sie als Menschen, die Tharannis dem Ochsen folgten und vor einer infernalen Bedrohung flohen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tharannis bestrafte sie mit Unsterblichkeit und Passivität. Fleisch wurde zu Stein; Hunger, Alter und Fortpflanzung verschwanden."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit jedem Jahrhundert verschmilzt der Körper stärker mit dem Gebirge. Junge Exemplare können noch gehen, alte sitzen oder liegen reglos wie ein Teil des Massivs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viele Bewohner kennen sie nur als heilige Berge, Landmarken oder ungewöhnlich menschlich geformte Felsen. Ob in ihnen noch Gedanken bestehen, ist nicht belegt."
+        }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften und Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Haut, Muskeln und Knochen bilden eine einzige lebende Gesteinsstruktur. Nahrung, Wasser und Schlaf sind unnötig; selbst elementare Magie wirkt nur eingeschränkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aggression und Neugier fehlen. Nur Erdbeben, göttliche Eingriffe oder massive Zerstörung des Gebirges sollen gelegentlich eine Bewegung auslösen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Exponierte Grate, alte Pässe, Gipfel und urtümliche Felsformationen sind typische Fundorte. Straßen verlaufen häufig um ihre Ruheplätze, ohne dass spätere Baumeister den Grund kennen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Umgang und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Waffen und gewöhnliches Belagerungsgerät sind nutzlos. Beschädigtes Gestein heilt über Jahrzehnte; ein gewaltsamer Versuch kann außerdem Einstürze und Erdrutsche auslösen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die einzige vernünftige Maßnahme ist, den Steintroll zu markieren, zu umgehen und seinen Ruheplatz nicht zu verändern."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Gesichter bewahren vage menschliche Züge wie Nasen, Augenhöhlen oder gefaltete Hände.",
+            "Druiden glauben, ein Ende von Tharannis’ Zorn ließe sie zu Staub, nicht zu Menschen, zerfallen.",
+            "Einige Gebirge sollen ganze Reihen schlafender Steintrolle enthalten.",
+            "Die genaue Zahl ist unbekannt, weil selbst Gelehrte lebenden und natürlichen Fels kaum unterscheiden können."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

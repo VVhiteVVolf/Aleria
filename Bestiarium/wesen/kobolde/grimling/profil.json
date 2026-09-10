@@ -1,0 +1,178 @@
+{
+  "id": "grimling",
+  "name": "Grimling",
+  "classification": "Plündernder Kobold und verzerrtes Menschenbild Grimnars",
+  "continent": "Infernale Sphären",
+  "region": "Die Blutödnis",
+  "folio": "IV / 01-C",
+  "parentGroupId": "kobolde",
+  "summary": "Grimlinge sind Grimnars grausame Parodie auf die Menschheit: klein, streitsüchtig und von ungezügelter Habgier getrieben. Ihre Clans überfallen Reisende und Siedlungen, fertigen grobe Waffen und gleichen fehlende Größe mit Hinterhalten, Zähigkeit und Überzahl aus.",
+  "quote": "Ein Grimling ist ein Feigling, bis sein Clan hinter dir steht und dein eigener Fluchtweg bereits voller Schlingen liegt.",
+  "quoteAttribution": "Aus den Feldnotizen eines Grenzsöldners",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Grimling"
+    },
+    {
+      "label": "Typ",
+      "value": "Niedere Kreatur und Diener Grimnars"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Grimnars Macht als boshafte Parodie auf die Menschheit geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Grimnars Domäne, die Blutödnis"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Klippen, Höhlen, zerstörte Gebiete, Wälder, Minen und Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Brutal, streitsüchtig, raubend und in Clans organisiert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Tag und Nacht, abhängig von Beute und Gelegenheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Hinterhalte, grober Waffenbau, Fallen und rudimentäre Sprache"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähigkeit, Furchtlosigkeit in Gruppen und Geländenutzung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Primitive Planung, geringe Einzelkraft und keine eigene Magie"
+    },
+    {
+      "label": "Beute",
+      "value": "Waffen, Lebensmittel und brauchbare Materialien"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Überfalllist",
+      "Plünderungsdrang",
+      "Rudeldruck",
+      "Waffenimprovisation",
+      "Disziplin",
+      "Magiebegabung"
+    ],
+    "values": [
+      7,
+      10,
+      9,
+      7,
+      3,
+      1
+    ],
+    "source": "Aus Clanverhalten, Hinterhalten, grobem Waffenbau, fehlender Magie und der geringen strategischen Reichweite abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Grimling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grimlinge verkörpern Grimnars Vorstellung einer Menschheit ohne Moral und Mitgefühl. Wo größere Kinder des Kriegsgottes rohe Zerstörung bringen, verbreiten seine kleinen Diener Habgier, Hinterlist und das Recht des jeweils Stärkeren."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie sind etwa halb so groß wie ein Mensch. Bläulich helle Haut, wildes weißes Haar, Hörner oder Stoßzähne und geraubte Kleidungsstücke geben jedem Clan ein zerlumptes, kriegerisches Aussehen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Innerhalb ihrer Clans herrscht ständiger Streit, doch vor einem Überfall ordnen sie sich dem stärksten Anführer unter. Sie sprechen in gebrochenen aggressiven Sätzen und nutzen ein gutturales eigenes Idiom für kurze Befehle."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In der Blutödnis besetzen sie Höhlen, Schluchten und zerstörte Ruinen. In Aleria wählen sie Wälder, verlassene Minen oder anderes unwegsames Gelände, das kleinen Angreifern Deckung und mehrere Fluchtwege bietet."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grimlinge improvisieren Waffen aus Holz, Knochen oder geraubtem Metall. Sie legen einfache Fallen, locken Gegner auf schlechten Grund und greifen aus mehreren Richtungen an; einzeln besitzen sie weder große Kraft noch Magie."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Offenes Gelände nimmt ihnen den wichtigsten Vorteil. Wer Fallen erkennt, den Anführer ausschaltet und den Clan voneinander trennt, bricht meist auch ihren Mut. In engen Ruinen sollte jedes scheinbar achtlos liegende Beutestück als Köder gelten."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Grimlinge schmücken Lager mit Trophäen, deren tatsächlichen Zweck sie oft nicht verstehen.",
+            "Ein erbeutetes Werkzeug gilt ihnen schnell als Waffe, selbst wenn es dafür völlig ungeeignet ist.",
+            "Clananführer wechseln häufig, weil Stärke bei Grimlingen täglich neu bewiesen werden muss."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/grimling-icon.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbarer Grimling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/grimling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Grimling",
+    "caption": "Überlieferte Bildtafel · Grimling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

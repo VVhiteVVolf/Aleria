@@ -1,0 +1,50 @@
+registerNewspaperGuild({
+  id: 'celtigerns-echo', asset: 'echo', name: 'Celtigerns Echo',
+  reach: 'Nur Celtigerns Wacht', seat: 'Gwynthor', patron: 'Haus Falchdyn',
+  tagline: 'Nah am Volk · Sorgfältig im Wort', publicationModel: 'Örtliche Ausgaben der Grafschaft', price: '3 Kupferstücke',
+  story: [
+    '<strong>Die kleinen Geschichten der Wacht</strong>',
+    'Auf einem Marktplatz geht eine Neuigkeit selten verloren. Sie wandert von einem Korb zum nächsten, verändert auf dem Weg ihre Gestalt und kommt nicht immer bei jenen an, die sie am dringendsten benötigen. <strong>Celtigerns Echo</strong> nimmt sich dieser unscheinbaren Wege an. Das Blatt des Hauses <strong>Falchdyn</strong> hört hin, wo Fischer, Handwerker, Reisende und Nachbarn von ihrem Alltag erzählen.',
+    'Seine Welt ist <strong>Celtigerns Wacht</strong>. Eine beschädigte Straße, eine unsichere Überfahrt oder ein Streit um den Zugang zum Brunnen kann hier mehr Raum erhalten als die Garderobe eines weit entfernten Höflings. Die Zeitung sucht die Bedeutung einer Nachricht in ihren Folgen für die Menschen vor Ort. Klatsch allein genügt ihr nicht.',
+    '<strong>Eine Stimme mit vielen Ohren</strong>',
+    'Die <strong>Hauptredaktion und Schreiberschule in Gwynthor</strong> bilden das gemeinsame Zentrum. Örtliche Redaktionsstuben sammeln Berichte aus den größeren Orten und ihren Bannkreisen. So bleibt die Zeitung ihrer Grafschaft verbunden, ohne jede Geschichte durch denselben Blickwinkel zu erzählen. Eine Hafennachricht aus Abergwint stellt andere Fragen als ein Bericht von den Pferdemärkten Rhosmeres.',
+    'Der Anspruch ist <em>volksnah und sorgfältig</em>. Wer eine Beschwerde bringt, soll verständlich zu Wort kommen; wer darin beschuldigt wird, soll nicht allein durch die Lautstärke seines Gegners verurteilt werden. Für die Schreiber beginnt eine gute Geschichte deshalb häufig mit einer zweiten Frage.',
+    '<strong>Lesen, zuhören, weitertragen</strong>',
+    'Ein einzelner Bogen erreicht mehr Menschen als seinen Käufer. Er wird am Tisch besprochen, einem Nachbarn vorgelesen und von Reisenden mitgenommen. In dieser Nähe liegt die Stärke des Echos – und seine Verpflichtung, mit Namen, Sorgen und kleinen Hoffnungen behutsam umzugehen.'
+  ],
+  overview: ['<strong>Celtigerns Echo</strong> ist die volksnahe Nachrichten- und Schreibergilde des Hauses Falchdyn. Sie verbindet örtliche Berichterstattung mit der Ausbildung von Schreibern.', 'Ihre Reichweite endet bei der <strong>Grafschaft Celtigerns Wacht</strong>; die Hauptredaktion in Gwynthor und die örtlichen Stuben bilden ein gemeinsames, regional verwurzeltes Netz.'],
+  traits: [['Zuhören', 'Anliegen von Nachbarschaften, Handwerkern und Reisenden bilden den Ausgangspunkt vieler Berichte.', 'Diplomatie'], ['Sorgfalt', 'Aussagen werden verglichen, Zusammenhänge erklärt und Fehler berichtigt.', 'Justiz'], ['Schreiberschule', 'Die Gwynthorer Schule verbindet sichere Schrift mit verständlichem Erzählen.', 'Administration']],
+  history: ['Als Herausgeberhaus ist <strong>Falchdyn</strong> überliefert. Die Hauptredaktion und ihre Schreiberschule liegen in Gwynthor.', 'Auch in <strong>Abergwint, Rhosmere und Castellbryn</strong> sind Redaktionsstuben eingerichtet. Die örtlichen Stellen werden unabhängig von der Besetzung der Hauptredaktion geführt. Ein Gründungsjahr ist bislang nicht überliefert.'],
+  topics: ['Aus dem Bannkreis: Wege, Versorgung und Alltag.', 'Nachbarschaft, Handwerk und Stimmen aus den Orten.', 'Ausführliche Geschichten über Menschen und ihre Anliegen.'],
+  trivia: ['Die preislich günstige Ausgabe kostet drei Kupferstücke.', 'Die Schreiberschule gehört zur Gwynthorer Zentrale.', 'Nähe zum Volk bedeutet nicht, jede umlaufende Behauptung ungeprüft zu drucken.'],
+  connections: [{ type: 'connection', name: 'Haus Falchdyn', detail: 'Herausgeberhaus und Träger der Hauptredaktion.', image: '../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png', imageFormat: 'square' }],
+  obligations: [['Örtliche Stimmen', 'Die Stuben bringen Anliegen und Berichte ihrer Bannkreise in das gemeinsame Netz.'], ['Ausbildung', 'Die Schreiberschule vermittelt lesbare Schrift, gewissenhafte Prüfung und Verantwortung für das gedruckte Wort.']],
+  property: [['Hauptredaktion zu Gwynthor', 'Schreibstuben, Ausgabenarchiv und Räume der Schreiberschule.'], ['Redaktionsstuben', 'Anlaufstellen für Berichte aus Abergwint, Rhosmere und Castellbryn.']],
+  governance: ['<strong>Haus Falchdyn</strong> trägt das Echo; die zentrale Ämterordnung verbindet die Verantwortung für das Blatt mit jener für seine Schreiberschule.', 'Die Hauptleitung wahrt den gemeinsamen Anspruch und die Zusammenarbeit der Stuben. Örtliche Redaktionen bringen ihre eigenen Berichte ein. Diese Übersicht beschreibt ausschließlich die übergeordneten Ämter.'],
+  governanceRemit: 'Grafschaftsweites Blatt und Schreiberschule',
+  head: ['Oberster Schriftmeister', 'Vertritt die Gilde im Auftrag des Herausgeberhauses und verantwortet ihren gemeinsamen Auftrag.', 'Administration'],
+  council: ['Rat der Federmeister', 'Stimmt Ausbildung, Berichterstattung und Versorgung der Redaktionsstuben miteinander ab.', 'Diplomatie'],
+  offices: [['Meister der Schreiberschule', 'Leitet die Ausbildung und prüft die Befähigung angehender Schreiber.', 'Administration'], ['Meister der Zeugnisse', 'Wacht über Quellenprüfung, Berichtigungen und die Bewahrung der Ausgaben.', 'Justiz'], ['Meister der Druckstuben', 'Sichert lesbare Drucke und die Versorgung der Gildenstuben mit Papier und Tinte.', 'Administration'], ['Meister der Botenwege', 'Ordnet den Nachrichtenaustausch und die Verteilung innerhalb der Grafschaft.', 'Diplomatie']],
+  governanceFooter: 'Die örtlichen Stuben gehören zum Netz; ihre personelle Leitung wird in den jeweiligen Ortsakten geführt.',
+  networkIntro: ['<strong>Ein regionales Netz mit einem gemeinsamen Mittelpunkt.</strong> Von Gwynthor führen die Wege zu den größeren Orten der Grafschaft. Jede Stube hört zuerst ihrem eigenen Umfeld zu.'],
+  networkModel: 'Gwynthor verbindet Hauptredaktion und Schreiberschule. Die örtlichen Stuben sammeln eigene Berichte für ihre Ausgaben und den Austausch innerhalb der Wacht.',
+  networkNote: 'Die verzeichneten Standorte sind belegt. Weitere Orte der Grafschaft gehören zum regionalen Wirkungsfeld, ohne dass dadurch bereits eine konkrete Redaktionsstube benannt wäre.',
+  sites: [
+    { name: 'Gwynthor', kind: 'headquarters', region: 'Llamreis Ankunft · Celtigerns Wacht', image: '../Stammbäume/assets/images/regions/gwynthor.png', description: 'Hauptredaktion des Hauses Falchdyn und Schreiberschule; Mittelpunkt des regionalen Netzes.', href: '../Orte/grossstadt.html?id=gwynthor', publicationHref: '../Zeitungen/zeitung.html?zeitung=celtigerns-echo-gwynthor' },
+    { name: 'Abergwint', kind: 'editorial', region: 'Gwendolyns Ufer', description: 'Örtliche Redaktionsstube für die Stadt, ihre Nachbarschaften und die Anliegen der Küste.', href: '../Orte/grossstadt.html?id=abergwint', publicationHref: '../Zeitungen/zeitung.html?zeitung=celtigerns-echo-abergwint' },
+    { name: 'Rhosmere', kind: 'editorial', region: 'Arthus Streben', description: 'Sammelt Berichte aus den Bezirken und dem Bannkreis für das volksnahe Netz der Zeitung.', href: '../Orte/grossstadt.html?id=rhosmere', publicationHref: '../Zeitungen/zeitung.html?zeitung=celtigerns-echo-rhosmere' },
+    { name: 'Castellbryn', kind: 'editorial', region: 'Rhonwens Tränen', description: 'Gibt den Sorgen von Fischern, Handwerkern und Reisenden aus den Inselgemeinden Raum.', href: '../Orte/grossstadt.html?id=castellbryn', publicationHref: '../Zeitungen/zeitung.html?zeitung=celtigerns-echo-castellbryn' }
+  ],
+  work: [
+    '<strong>Von der Erzählung zur Nachricht</strong>',
+    'Die Arbeit beginnt am Tisch einer Redaktionsstube. Ein Schreiber hört einer Besucherin zu, notiert Ort und Anlass ihrer Erzählung und fragt nach, was sie selbst gesehen hat. Zwischen einer Beobachtung und einer weitergetragenen Vermutung liegt ein Unterschied, den ein guter Lehrling früh begreifen muss.',
+    'Danach folgen <strong>Rückfrage und Vergleich</strong>. Eine zweite Stimme, ein alter Brief oder eine frühere Ausgabe können den Bericht bestätigen – oder seinen Sinn verändern. Die Schreiber bemühen sich um Wörter, die auch außerhalb ihrer eigenen Stube verständlich bleiben. Ein gelehrter Ausdruck ersetzt keine klare Erklärung.',
+    '<strong>Die Schreiberschule</strong>',
+    'Lehrlinge üben zuerst lesbare Abschriften und kurze Zusammenfassungen. Später begleiten sie erfahrene Schreiber zu Gesprächen und verfassen eigene Berichte. Eine geschickte Feder allein genügt nicht: Geduld beim Zuhören, Verlässlichkeit bei Namen und die Bereitschaft zur Berichtigung gehören zum Handwerk.',
+    'Ein angenommener Text wird gegengelesen, für den Druck geordnet und als Probe geprüft. Auch kleine Fehler können Folgen haben, wenn aus einem falschen Namen ein öffentlicher Vorwurf wird. Die Druckstube bewahrt deshalb eine Fassung für das <strong>Ausgabenarchiv</strong>, während Boten die fertigen Blätter weitertragen.',
+    '<strong>Was die Gilde von ihren Leuten erwartet</strong>',
+    'Wer Beschwerden sammelt, soll den Betroffenen nicht mehr versprechen, als das Blatt leisten kann. Wer eine Berichtigung schuldet, soll sie nicht hinter neuem Lärm verstecken. Der Ruf des Echos wächst dort, wo die Leser ihre Lebenswirklichkeit wiedererkennen.',
+    '<strong>Berührungspunkte für Reisende</strong>',
+    'Verlässliche Wegberichte, eine begleitete Botenfahrt oder die Suche nach einem zweiten Zeugen können Fremde mit der Gilde zusammenführen. Auch die Übergabe eines verlorenen Bündels Ausgaben mag klein erscheinen – bis deutlich wird, welche Nachbarschaft auf diese Nachricht wartet.'
+  ]
+});

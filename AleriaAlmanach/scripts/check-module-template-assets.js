@@ -34,7 +34,7 @@ const mainHtml = read(mainHtmlPath);
 const templates = read(templatesPath);
 const inlineEditorPath = path.join(almanachRoot, 'modules', 'inline-editor', 'inline-module-editor.js');
 const inlineEditor = read(inlineEditorPath);
-const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|language|name-list|script-table|landing|character-inventory|guest-register|hierarchy|family|family-tree-embed|house-warriors)\\/[^"?]+\\.js';
+const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|language|name-list|script-table|landing|character-inventory|guest-register|hierarchy|family|family-tree-embed|house-warriors|organization-network|newspaper-guilds|drachentanz-kampfstil)\\/[^"?]+\\.js';
 const mainScripts = collect(mainHtml, new RegExp(`src="\\.\\/(${moduleAssetPattern})`, 'g'));
 const mainStyles = collect(mainHtml, /href="\.\/(styles\/(?:module-page-[^"?]+|family-(?:editor|workbench))\.css)/g);
 const mainVendorAssets = [
@@ -42,7 +42,7 @@ const mainVendorAssets = [
   ...collect(mainHtml, /href="\.\/(vendor\/[^"?]+\.(?:css))(?:\?[^" ]*)?"/g)
 ];
 const shellScripts = ['modules/modal/modal-navigation.js', 'modules/rendering/module-renderer.js', 'modules/modal/modal-controller.js'];
-const shellStyles = ['modules/modal/modal-navigation.css', 'modules/modal/modal-surface.css', 'modules/module-editor/module-preview.css'];
+const shellStyles = ['modules/comments/embedded-comments.css', 'modules/organization-network/organization-network.css', 'modules/modal/modal-navigation.css', 'modules/modal/modal-surface.css', 'modules/module-editor/module-preview.css'];
 const loadedScripts = collect(mainHtml, /src="\.\/([^"?]+\.js)/g);
 const loadedStyles = collect(mainHtml, /href="\.\/([^"?]+\.css)/g);
 const requiredVendorFiles = [

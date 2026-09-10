@@ -1,0 +1,102 @@
+{
+  "godId": "nimue",
+  "intro": "Nimues Klerus verbindet die Reinheit des Wassers mit Güte und Wandelbarkeit. Seine Gemeinschaften begleiten das Leben an Seen, Flüssen und Quellen. Hilfe und Schutz gelten besonders den Menschen, deren Alltag vom Wasser abhängt.",
+  "community": "Ein Haus der Dame des Sees kann Quellheiligtum, Gästehaus und Hilfsstation verbinden. Priester und monastische Gemeinschaften tragen die Fürsorge, kleine Wachen den Schutz. Einzelne asketische Gläubige bleiben eine Ausnahme; wissenschaftliche Beratung wird aus dem Magisterium hinzugezogen.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der reinen Quelle",
+      "paragraphs": [
+        "Nimues Priester begleiten Gemeinden an Gewässern und die Sorgen der Reisenden auf dem Wasser. Ihre Riten verbinden Reinigung mit dem Gedanken einer erneuerten Hinwendung zur Güte. Ein sauberes äußeres Zeichen genügt ihnen nicht, wenn Hilflosigkeit und Not daneben unbeachtet bleiben."
+      ],
+      "tasks": [
+        "Quell- und Uferriten begleiten",
+        "Wasserreisenden und Familien beistehen",
+        "Gemeinschaftliche Hilfe an Gewässern fördern"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente an Quelle und Ufer",
+      "paragraphs": [
+        "Die Mönche und Nonnen der Dame pflegen Brunnenhöfe, Gärten und Herbergen. Ihre Zünfte erhalten die Anlagen des Hauses und geben praktische Erfahrung im Umgang mit Wasser weiter. Regelmäßige Sorge hält Orte zugänglich, an denen Reisende und Bedürftige versorgt werden."
+      ],
+      "tasks": [
+        "Quellhöfe und Brunnenanlagen pflegen",
+        "Gäste und Hilfesuchende aufnehmen",
+        "Gärten und Versorgung des Hauses erhalten"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Quellhüter",
+          "work": "Erhält Brunnenhöfe, Quellfassungen und die Wasseranlagen des Konvents."
+        },
+        {
+          "name": "Zunft der Ufergärtner",
+          "work": "Pflegt Gärten und die bepflanzten Ränder der gemeinschaftlichen Anlagen."
+        },
+        {
+          "name": "Zunft der Fährherbergen",
+          "work": "Versorgt Gäste, Wartende und Hilfesuchende an den kirchlichen Übergängen."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Hüter der sicheren Ufer",
+      "paragraphs": [
+        "Nimues Paladine bewachen Heiligtümer und begleiten gefährdete Wege entlang der Gewässer. Sie unterstützen Rettende, sichern Landestellen und schützen Hilfseinrichtungen. Ihre Berufung ist besonders dort sichtbar, wo eine kleine Gemeinschaft dem Übergriff Stärkerer oder einer plötzlich entstandenen Gefahr ausgesetzt ist."
+      ],
+      "tasks": [
+        "Uferheiligtümer und Landestellen sichern",
+        "Hilfskräfte und Reisende begleiten",
+        "Bedrohten Wassergemeinden beistehen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad des nachgebenden Wassers",
+      "paragraphs": [
+        "Vereinzelt suchen Anhänger Nimues einen asketischen Weg der ruhigen Aufmerksamkeit und anpassungsfähigen Bewegung. Sie leben zurückgezogen an einer Quelle oder schließen sich einer bestehenden Schule an. Eigenständige Asketenorden sind in ihrem Klerus kaum verbreitet; der Schutz gewöhnlicher Quellheiligtümer liegt bei den dortigen Gemeinschaften und Wachen."
+      ],
+      "tasks": [
+        "Anpassungsfähige Bewegung einüben",
+        "Quellheiligtümer bewachen",
+        "Ruhe unter wechselnden Bedingungen schulen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Nimue verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Buße an den Orten der Hilfe",
+      "paragraphs": [
+        "Bußgänger unterstützen Herbergen, Gärten und die Pflege gemeinsam genutzter Uferanlagen. Nach rücksichtsloser Verschmutzung oder verweigerter Hilfe kann die Vereinbarung die Wiederherstellung eines geschädigten Ortes betonen. Die Kirche bestimmt einen erreichbaren Abschluss, damit aus der Sorge um das Wasser eine neue Lebensführung erwächst."
+      ],
+      "tasks": [
+        "Gemeinsame Uferanlagen instand setzen",
+        "Herbergen und Hilfsdienste versorgen",
+        "Vereinbarte Schäden unter Anleitung beheben"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

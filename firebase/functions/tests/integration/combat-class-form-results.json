@@ -1,0 +1,1924 @@
+{
+  "environment": {
+    "project": "demo-aleria-combat-checkup",
+    "host": "127.0.0.1:8180",
+    "productionWrites": false
+  },
+  "matrix": [
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-form-ii-schwertdrache",
+      "foundation": "",
+      "title": "teulu · Tanz des Schwertdrachens",
+      "technique": "Eröffnung des Einen",
+      "weapon": "Schwert",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-form-iii-abwartender-drache",
+      "foundation": "",
+      "title": "teulu · Tanz des abwartenden Drachens",
+      "technique": "Rückschritt des Wächters",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-rueckschritt-des-waechters-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-form-iv-fliegender-drache",
+      "foundation": "",
+      "title": "teulu · Tanz des fliegenden Drachens",
+      "technique": "Aufwindtritt",
+      "weapon": "Schwert",
+      "damage": 10,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufwindtritt-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 50,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-pfad-aufsteigender-drache",
+      "foundation": "",
+      "title": "teulu · Tanz des aufsteigenden Drachens",
+      "technique": "Schattenanstieg",
+      "weapon": "Schwert",
+      "damage": 15,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 45,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-form-v-bruellender-drache",
+      "foundation": "",
+      "title": "teulu · Tanz des brüllenden Drachens",
+      "technique": "Brechender Ruf",
+      "weapon": "Schwert",
+      "damage": 20,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-brechender-ruf-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-brechender-ruf-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 40,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-form-vi-ausgeglichener-drache",
+      "foundation": "",
+      "title": "teulu · Tanz des ausgeglichenen Drachens",
+      "technique": "Vierfacher Empfang",
+      "weapon": "Schwert",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-vierfacher-empfang-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "teulu",
+      "formId": "drachentanz-pfad-zwillingsdrache",
+      "foundation": "",
+      "title": "teulu · Tanz des Zwillingsdrachens",
+      "technique": "Erste und zweite Klaue",
+      "weapon": "Schwertpaar",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "cantref",
+      "formId": "drachentanz-pfad-speerdrache",
+      "foundation": "",
+      "title": "cantref · Tanz des Speerdrachens",
+      "technique": "Fließende Eröffnung",
+      "weapon": "Speer",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "cantref",
+      "formId": "drachentanz-pfad-peitschender-drache",
+      "foundation": "",
+      "title": "cantref · Tanz des peitschenden Drachens",
+      "technique": "Erste Bahn der Lanze",
+      "weapon": "Speer",
+      "damage": 17,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 43,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "cantref",
+      "formId": "drachentanz-pfad-huetender-drache",
+      "foundation": "",
+      "title": "cantref · Tanz des hütenden Drachens",
+      "technique": "Ausdauernde Wehr",
+      "weapon": "Speer",
+      "damage": 13,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 47,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "uchelwyr",
+      "formId": "drachentanz-pfad-speerdrache",
+      "foundation": "",
+      "title": "uchelwyr · Tanz des Speerdrachens",
+      "technique": "Fließende Eröffnung",
+      "weapon": "Speer",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "uchelwyr",
+      "formId": "drachentanz-pfad-peitschender-drache",
+      "foundation": "",
+      "title": "uchelwyr · Tanz des peitschenden Drachens",
+      "technique": "Erste Bahn der Lanze",
+      "weapon": "Speer",
+      "damage": 17,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 43,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "uchelwyr",
+      "formId": "drachentanz-pfad-huetender-drache",
+      "foundation": "",
+      "title": "uchelwyr · Tanz des hütenden Drachens",
+      "technique": "Ausdauernde Wehr",
+      "weapon": "Speer",
+      "damage": 13,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 47,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "uchelwyr",
+      "formId": "drachentanz-pfad-stuermender-drache",
+      "foundation": "",
+      "title": "uchelwyr · Tanz des stürmenden Drachens",
+      "technique": "Donnernder Lanzenstoß",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-donnernder-lanzenstoss-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-donnernder-lanzenstoss-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "uchelwyr",
+      "formId": "drachentanz-pfad-schweifender-drache",
+      "foundation": "",
+      "title": "uchelwyr · Tanz des schweifenden Drachens",
+      "technique": "Flankenschnitt",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-schweifender-flankenschnitt-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-flankenschnitt-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-form-ii-schwertdrache",
+      "foundation": "",
+      "title": "helwyr · Tanz des Schwertdrachens",
+      "technique": "Eröffnung des Einen",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-form-iii-abwartender-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des abwartenden Drachens",
+      "technique": "Rückschritt des Wächters",
+      "weapon": "Schwert",
+      "damage": 12,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-rueckschritt-des-waechters-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 48,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-form-iv-fliegender-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des fliegenden Drachens",
+      "technique": "Aufwindtritt",
+      "weapon": "Schwert",
+      "damage": 8,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufwindtritt-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 52,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-pfad-aufsteigender-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des aufsteigenden Drachens",
+      "technique": "Schattenanstieg",
+      "weapon": "Schwert",
+      "damage": 13,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 47,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-form-v-bruellender-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des brüllenden Drachens",
+      "technique": "Brechender Ruf",
+      "weapon": "Schwert",
+      "damage": 18,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-brechender-ruf-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-brechender-ruf-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 42,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-form-vi-ausgeglichener-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des ausgeglichenen Drachens",
+      "technique": "Vierfacher Empfang",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-vierfacher-empfang-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-pfad-zwillingsdrache",
+      "foundation": "",
+      "title": "helwyr · Tanz des Zwillingsdrachens",
+      "technique": "Erste und zweite Klaue",
+      "weapon": "Schwertpaar",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-pfad-lauernder-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des lauernden Drachens",
+      "technique": "Zweite Wehre",
+      "weapon": "Schwert",
+      "damage": 12,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-lauernder-zweite-wehre-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 48,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "helwyr",
+      "formId": "drachentanz-pfad-jagender-drache",
+      "foundation": "",
+      "title": "helwyr · Tanz des jagenden Drachens",
+      "technique": "Hinterhaltsschuss",
+      "weapon": "Langbogen",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-jagender-hinterhaltsschuss-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-jagender-hinterhaltsschuss-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-ii-schwertdrache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des Schwertdrachens",
+      "technique": "Eröffnung des Einen",
+      "weapon": "Großschwert",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-iii-abwartender-drache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des abwartenden Drachens",
+      "technique": "Rückschritt des Wächters",
+      "weapon": "Großschwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-rueckschritt-des-waechters-reaction-1",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-iv-fliegender-drache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des fliegenden Drachens",
+      "technique": "Aufwindtritt",
+      "weapon": "Großschwert",
+      "damage": 10,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufwindtritt-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 50,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-pfad-aufsteigender-drache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des aufsteigenden Drachens",
+      "technique": "Schattenanstieg",
+      "weapon": "Großschwert",
+      "damage": 15,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-aufsteigender-schattenanstieg-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 45,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-v-bruellender-drache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des brüllenden Drachens",
+      "technique": "Welpengebrüll",
+      "weapon": "Großschwert",
+      "damage": 22,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-welpengebruell-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-welpengebruell-special-action-2",
+          "resourceId": "special-action",
+          "name": "Besondere Aktion",
+          "amount": 1,
+          "scope": "persistent"
+        }
+      ],
+      "remainingHitPoints": 38,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-vi-ausgeglichener-drache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des ausgeglichenen Drachens",
+      "technique": "Vierfacher Empfang",
+      "weapon": "Großschwert",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-vierfacher-empfang-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-pfad-zwillingsdrache",
+      "foundation": "",
+      "title": "arthwyr · Tanz des Zwillingsdrachens",
+      "technique": "Erste und zweite Klaue",
+      "weapon": "Schwertpaar",
+      "damage": 16,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-zwillingsdrache-erste-und-zweite-klaue-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 44,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "arthwyr",
+      "formId": "drachentanz-form-baerenklaue",
+      "foundation": "",
+      "title": "arthwyr · Tanz der Bärenklaue",
+      "technique": "Enterpranke",
+      "weapon": "Großschwert",
+      "damage": 18,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-baerenklaue-enterpranke-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-baerenklaue-enterpranke-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 42,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "barddwyr",
+      "formId": "drachentanz-form-ii-schwertdrache",
+      "foundation": "",
+      "title": "barddwyr · Tanz des Schwertdrachens",
+      "technique": "Eröffnung des Einen",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-schwertdrache-eroeffnung-des-einen-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "barddwyr",
+      "formId": "drachentanz-form-barddwyr-traellernder-drache",
+      "foundation": "",
+      "title": "barddwyr · Tanz des trällernden Drachens",
+      "technique": "Auftakt der Lerche",
+      "weapon": "Rapier",
+      "damage": 9,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-traellernder-auftakt-der-lerche-bonus-action-1",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 51,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "barddwyr",
+      "formId": "drachentanz-form-barddwyr-kreischender-drache",
+      "foundation": "",
+      "title": "barddwyr · Tanz des kreischenden Drachens",
+      "technique": "Schneidender Ton",
+      "weapon": "Rapier",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-drachentanz-kreischender-schneidender-ton-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-drachentanz-kreischender-schneidender-ton-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-fliessender-wyrm",
+      "foundation": "drachentanz-form-i-jungdrache",
+      "title": "derwyn · Tanz des fließenden Wyrms · Cenyr",
+      "technique": "Klingenrückfluss",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-klingenrueckfluss-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-klingenrueckfluss-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-brandender-wyrm",
+      "foundation": "drachentanz-form-i-jungdrache",
+      "title": "derwyn · Tanz des brandenden Wyrms · Cenyr",
+      "technique": "Drang der Zinken",
+      "weapon": "Dreizack",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-drang-der-zinken-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-drang-der-zinken-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-steigender-wyrm",
+      "foundation": "drachentanz-form-i-jungdrache",
+      "title": "derwyn · Tanz des steigenden Wyrms · Cenyr",
+      "technique": "Saphirkreis",
+      "weapon": "Kampfstab",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-saphirkreis-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-saphirkreis-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-peitschender-wyrm",
+      "foundation": "drachentanz-form-i-jungdrache",
+      "title": "derwyn · Tanz des peitschenden Wyrms · Cenyr",
+      "technique": "Peitschender Auftakt",
+      "weapon": "Morgenstern",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-peitschender-auftakt-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-peitschender-auftakt-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-fliessender-wyrm",
+      "foundation": "sirenentanz-junge-welle",
+      "title": "derwyn · Tanz des fließenden Wyrms · Vennyr",
+      "technique": "Klingenrückfluss",
+      "weapon": "Schwert",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-klingenrueckfluss-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-klingenrueckfluss-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-brandender-wyrm",
+      "foundation": "sirenentanz-junge-welle",
+      "title": "derwyn · Tanz des brandenden Wyrms · Vennyr",
+      "technique": "Drang der Zinken",
+      "weapon": "Dreizack",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-drang-der-zinken-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-drang-der-zinken-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-steigender-wyrm",
+      "foundation": "sirenentanz-junge-welle",
+      "title": "derwyn · Tanz des steigenden Wyrms · Vennyr",
+      "technique": "Saphirkreis",
+      "weapon": "Kampfstab",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-saphirkreis-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-saphirkreis-bonus-action-2",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    },
+    {
+      "classId": "derwyn",
+      "formId": "wyrmtanz-peitschender-wyrm",
+      "foundation": "sirenentanz-junge-welle",
+      "title": "derwyn · Tanz des peitschenden Wyrms · Vennyr",
+      "technique": "Peitschender Auftakt",
+      "weapon": "Morgenstern",
+      "damage": 14,
+      "costs": [
+        {
+          "id": "combat-style-sirenentanz-derwyn-peitschender-auftakt-action-1",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "combat-style-sirenentanz-derwyn-peitschender-auftakt-reaction-2",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        }
+      ],
+      "remainingHitPoints": 46,
+      "previewServerReplayEqual": true,
+      "undoRestored": true
+    }
+  ],
+  "fights": [
+    {
+      "scenario": "class-form-1",
+      "title": "teulu · Tanz des Schwertdrachens",
+      "seed": 2026,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 6,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 30,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 72,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 6,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "damage": 8,
+          "critical": false,
+          "hitPointsAfter": 72
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "action": "Eröffnung des Einen",
+          "target": "Prüfgegner",
+          "damage": 19,
+          "critical": false,
+          "hitPointsAfter": 41
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "action": "Letztes Urteil des Schwertdrachen",
+          "target": "Prüfgegner",
+          "damage": 30,
+          "critical": false,
+          "hitPointsAfter": 11
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "action": "Flügelschritt des Jungdrachens",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 11
+        },
+        {
+          "round": 2,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 72
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur teulu · Tanz des Schwertdrachens",
+          "action": "Letztes Urteil des Schwertdrachen",
+          "target": "Prüfgegner",
+          "damage": 22,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-10",
+      "title": "cantref · Tanz des hütenden Drachens",
+      "seed": 2097,
+      "rounds": 1,
+      "winner": "Klasse",
+      "actions": 4,
+      "firstDefeatRound": 1,
+      "maximumNormalDamage": 30,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur cantref · Tanz des hütenden Drachens",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 80,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 4,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur cantref · Tanz des hütenden Drachens",
+          "action": "Ausdauernde Wehr",
+          "target": "Prüfgegner",
+          "damage": 7,
+          "critical": false,
+          "hitPointsAfter": 53
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur cantref · Tanz des hütenden Drachens",
+          "action": "Letzte Schwelle des hütenden Drachen",
+          "target": "Prüfgegner",
+          "damage": 30,
+          "critical": false,
+          "hitPointsAfter": 23
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur cantref · Tanz des hütenden Drachens",
+          "action": "Weite Nadel",
+          "target": "Prüfgegner",
+          "damage": 18,
+          "critical": false,
+          "hitPointsAfter": 5
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur cantref · Tanz des hütenden Drachens",
+          "action": "Speer",
+          "target": "Prüfgegner",
+          "damage": 7,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-14",
+      "title": "uchelwyr · Tanz des stürmenden Drachens",
+      "seed": 2168,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 7,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 24,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 74,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 7,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Donnernder Lanzenstoß",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 60
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Krone des hohen Sattels",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 60
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Unbewegter Reiter",
+          "target": "Prüfgegner",
+          "damage": 20,
+          "critical": false,
+          "hitPointsAfter": 40
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Hoher Grußhieb",
+          "target": "Prüfgegner",
+          "damage": 14,
+          "critical": false,
+          "hitPointsAfter": 26
+        },
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "damage": 6,
+          "critical": false,
+          "hitPointsAfter": 74
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Krone des hohen Sattels",
+          "target": "Prüfgegner",
+          "damage": 18,
+          "critical": false,
+          "hitPointsAfter": 8
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur uchelwyr · Tanz des stürmenden Drachens",
+          "action": "Unbewegter Reiter",
+          "target": "Prüfgegner",
+          "damage": 24,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-24",
+      "title": "helwyr · Tanz des jagenden Drachens",
+      "seed": 2239,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 5,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 23,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 74,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 5,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "action": "Hinterhaltsschuss",
+          "target": "Prüfgegner",
+          "damage": 17,
+          "critical": false,
+          "hitPointsAfter": 43
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "action": "Vollendete Jagd",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 43
+        },
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "damage": 6,
+          "critical": false,
+          "hitPointsAfter": 74
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "action": "Vollendete Jagd",
+          "target": "Prüfgegner",
+          "damage": 23,
+          "critical": false,
+          "hitPointsAfter": 20
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur helwyr · Tanz des jagenden Drachens",
+          "action": "Pfeil aus dem Saum",
+          "target": "Prüfgegner",
+          "damage": 22,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-35",
+      "title": "barddwyr · Tanz des kreischenden Drachens",
+      "seed": 2310,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 6,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 26,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 69,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 6,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "damage": 3,
+          "critical": false,
+          "hitPointsAfter": 77
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "action": "Schneidender Ton",
+          "target": "Prüfgegner",
+          "damage": 13,
+          "critical": false,
+          "hitPointsAfter": 47
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "action": "Auravibrato",
+          "target": "Prüfgegner",
+          "damage": 16,
+          "critical": false,
+          "hitPointsAfter": 31
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "action": "Auftakt der Lerche",
+          "target": "Prüfgegner",
+          "damage": 10,
+          "critical": false,
+          "hitPointsAfter": 21
+        },
+        {
+          "round": 2,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "damage": 8,
+          "critical": false,
+          "hitPointsAfter": 69
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur barddwyr · Tanz des kreischenden Drachens",
+          "action": "Auravibrato",
+          "target": "Prüfgegner",
+          "damage": 26,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-32",
+      "title": "arthwyr · Tanz der Bärenklaue",
+      "seed": 2381,
+      "rounds": 1,
+      "winner": "Klasse",
+      "actions": 3,
+      "firstDefeatRound": 1,
+      "maximumNormalDamage": 29,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur arthwyr · Tanz der Bärenklaue",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 80,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 3,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur arthwyr · Tanz der Bärenklaue",
+          "action": "Enterpranke",
+          "target": "Prüfgegner",
+          "damage": 19,
+          "critical": false,
+          "hitPointsAfter": 41
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur arthwyr · Tanz der Bärenklaue",
+          "action": "Urteil der Bärenklaue",
+          "target": "Prüfgegner",
+          "damage": 29,
+          "critical": false,
+          "hitPointsAfter": 12
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur arthwyr · Tanz der Bärenklaue",
+          "action": "Tatze des Jungdrachens",
+          "target": "Prüfgegner",
+          "damage": 14,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-36",
+      "title": "derwyn · Tanz des fließenden Wyrms · Cenyr",
+      "seed": 2452,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 6,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 20,
+      "maximumCriticalDamage": 53,
+      "participants": [
+        {
+          "name": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 74,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 6,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "action": "Klingenrückfluss",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 60
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "action": "Meister des Rückflusses",
+          "target": "Prüfgegner",
+          "damage": 20,
+          "critical": false,
+          "hitPointsAfter": 40
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "action": "Geschlossene Hut",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 40
+        },
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "damage": 6,
+          "critical": false,
+          "hitPointsAfter": 74
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "action": "Meister des Rückflusses",
+          "target": "Prüfgegner",
+          "damage": 19,
+          "critical": false,
+          "hitPointsAfter": 21
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des fließenden Wyrms · Cenyr",
+          "action": "Antwort des Wyrms",
+          "target": "Prüfgegner",
+          "damage": 53,
+          "critical": true,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-41",
+      "title": "derwyn · Tanz des brandenden Wyrms · Vennyr",
+      "seed": 2523,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 5,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 25,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 74,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 5,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "action": "Drang der Zinken",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 60
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "action": "Drei stille Ströme",
+          "target": "Prüfgegner",
+          "damage": 15,
+          "critical": false,
+          "hitPointsAfter": 45
+        },
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "damage": 6,
+          "critical": false,
+          "hitPointsAfter": 74
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "action": "Drei stille Ströme",
+          "target": "Prüfgegner",
+          "damage": 21,
+          "critical": false,
+          "hitPointsAfter": 24
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des brandenden Wyrms · Vennyr",
+          "action": "Brandende Sperrlinie",
+          "target": "Prüfgegner",
+          "damage": 25,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-42",
+      "title": "derwyn · Tanz des steigenden Wyrms · Vennyr",
+      "seed": 2594,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 5,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 30,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 67,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 5,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "damage": 8,
+          "critical": false,
+          "hitPointsAfter": 72
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "action": "Saphirkreis",
+          "target": "Prüfgegner",
+          "damage": 17,
+          "critical": false,
+          "hitPointsAfter": 43
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "action": "Flut des Schaftes",
+          "target": "Prüfgegner",
+          "damage": 30,
+          "critical": false,
+          "hitPointsAfter": 13
+        },
+        {
+          "round": 2,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "damage": 5,
+          "critical": false,
+          "hitPointsAfter": 67
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des steigenden Wyrms · Vennyr",
+          "action": "Flut des Schaftes",
+          "target": "Prüfgegner",
+          "damage": 15,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    },
+    {
+      "scenario": "class-form-39",
+      "title": "derwyn · Tanz des peitschenden Wyrms · Cenyr",
+      "seed": 2665,
+      "rounds": 2,
+      "winner": "Klasse",
+      "actions": 5,
+      "firstDefeatRound": 2,
+      "maximumNormalDamage": 25,
+      "maximumCriticalDamage": 0,
+      "participants": [
+        {
+          "name": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "level": 20,
+          "team": "Klasse",
+          "hitPoints": 73,
+          "maximumHitPoints": 80
+        },
+        {
+          "name": "Prüfgegner",
+          "level": 9,
+          "team": "Gegner",
+          "hitPoints": 0,
+          "maximumHitPoints": 60
+        }
+      ],
+      "recordedActionCount": 5,
+      "trace": [
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "action": "Peitschender Auftakt",
+          "target": "Prüfgegner",
+          "damage": 24,
+          "critical": false,
+          "hitPointsAfter": 36
+        },
+        {
+          "round": 1,
+          "actor": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "action": "Meister des Sternbogens",
+          "target": "Prüfgegner",
+          "damage": 25,
+          "critical": false,
+          "hitPointsAfter": 11
+        },
+        {
+          "round": 1,
+          "actor": "Prüfgegner",
+          "action": "Übungsschwert",
+          "target": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "damage": 7,
+          "critical": false,
+          "hitPointsAfter": 73
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "action": "Meister des Sternbogens",
+          "target": "Prüfgegner",
+          "damage": 0,
+          "critical": false,
+          "hitPointsAfter": 11
+        },
+        {
+          "round": 2,
+          "actor": "Prüffigur derwyn · Tanz des peitschenden Wyrms · Cenyr",
+          "action": "Peitschenruf",
+          "target": "Prüfgegner",
+          "damage": 18,
+          "critical": false,
+          "hitPointsAfter": 0
+        }
+      ]
+    }
+  ],
+  "guards": [
+    {
+      "classId": "cantref",
+      "technique": "Ruhige Schwelle",
+      "paid": true,
+      "noDamage": true,
+      "persisted": true,
+      "expired": true
+    },
+    {
+      "classId": "derwyn",
+      "technique": "Wartende Klinge",
+      "paid": true,
+      "noDamage": true,
+      "persisted": true,
+      "expired": true
+    }
+  ]
+}

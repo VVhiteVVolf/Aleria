@@ -1,0 +1,349 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "hauptgoetter",
+      "title": "Die Hauptgötter",
+      "entries": [
+        {
+          "id": "wodin",
+          "name": "Wodin",
+          "epithet": "Der Vater / Adar",
+          "relatedIds": [
+            "ordan",
+            "adar"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/wodin.png",
+            "alt": "Wodin – Der Vater / Adar",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "marja",
+          "name": "Marja",
+          "epithet": "Die Mutter / Witwe",
+          "relatedIds": [
+            "mariel",
+            "lunara"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/marja.png",
+            "alt": "Marja – Die Mutter / Witwe",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "balthor",
+          "name": "Balthor",
+          "epithet": "Der Krieger / Plünderer",
+          "relatedIds": [
+            "baldran",
+            "grimnar"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/balthor.png",
+            "alt": "Balthor – Der Krieger / Plünderer",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "tyrdras",
+          "name": "Tyrdras",
+          "epithet": "Der Templer / Schänder / Usurpator",
+          "relatedIds": [
+            "maldras",
+            "bhaal",
+            "dagon"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/tyrdras.png",
+            "alt": "Tyrdras – Der Templer / Schänder / Usurpator",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "skadia",
+          "name": "Skadia",
+          "epithet": "Die Hirtin / Jäger",
+          "relatedIds": [
+            "sylvana",
+            "zatrach"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/skadia.png",
+            "alt": "Skadia – Die Hirtin / Jäger",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "eiris",
+          "name": "Eiris",
+          "epithet": "Die Maid / Hedonist",
+          "relatedIds": [
+            "lyris",
+            "sanguine"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/eiris.png",
+            "alt": "Eiris – Die Maid / Hedonist",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "thorim",
+          "name": "Thorim",
+          "epithet": "Der Knecht / Nachtmaid",
+          "relatedIds": [
+            "tharim",
+            "nyxara"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/thorim.png",
+            "alt": "Thorim – Der Knecht / Nachtmaid",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "runor",
+          "name": "Runor",
+          "epithet": "Der Mentor / Intrigant",
+          "relatedIds": [
+            "orin",
+            "amon"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/runor.png",
+            "alt": "Runor – Der Mentor / Intrigant",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "lokan",
+          "name": "Lôkan",
+          "epithet": "Der Hüter / Schicksalsweberin",
+          "relatedIds": [
+            "kharon",
+            "hela"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/lokan.png",
+            "alt": "Lôkan – Der Hüter / Schicksalsweberin",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "nebengoetter",
+      "title": "Die Nebengötter",
+      "entries": [
+        {
+          "id": "thalvaar",
+          "name": "Thalvaar",
+          "epithet": "Der Verschlinger",
+          "relatedIds": [
+            "thraal"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/thalvaar.png",
+            "alt": "Thalvaar – Der Verschlinger",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "fjolnir",
+          "name": "Fjolnir",
+          "epithet": "Der Trickser",
+          "relatedIds": [
+            "migdal"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/fjolnir.png",
+            "alt": "Fjolnir – Der Trickser",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "valdruna",
+          "name": "Valdruna",
+          "epithet": "Die Rächerin",
+          "relatedIds": [
+            "nemsara"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/valdruna.png",
+            "alt": "Valdruna – Die Rächerin",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "morvrad",
+          "name": "Morvrad",
+          "epithet": "Der Verseucher",
+          "relatedIds": [
+            "nergaloth"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/morvrad.png",
+            "alt": "Morvrad – Der Verseucher",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "thranir-varnir",
+          "name": "Thranir & Varnir",
+          "epithet": "Der Zweigesichtige",
+          "relatedIds": [
+            "azrath-morvath"
+          ],
+          "image": {
+            "src": "religionen/nordischer-pantheon/assets/thranir-varnir.png",
+            "alt": "Thranir & Varnir – Der Zweigesichtige",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Tempelhierarchie",
+    "entries": [
+      {
+        "id": "goettermeister",
+        "title": "Göttermeister",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Göttermeister ist der höchste Rang innerhalb des religiösen Systems. Er hat die ultimative Autorität über alle religiösen Angelegenheiten, leitet die höchsten Zeremonien und ist der Hauptverantwortliche für die Verbindung zwischen den Göttern und der Gemeinschaft. Er stellt sicher, dass die Lehren der Religion gewahrt bleiben und die religiösen Pflichten erfüllt werden."
+          }
+        ]
+      },
+      {
+        "id": "weiser",
+        "title": "Weiser",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Weise ist der Kopf eines der neun Stränge des Pantheons, die jeweils einem der neun primären Götter gewidmet sind. Als einer der neun Führer des Pantheons trägt der Weise die Verantwortung, die Lehren und den Willen seines Hauptgottes zu repräsentieren und zu leiten. Jeder Weise ist tief in die Mysterien und die spezifische Doktrin seines zugeordneten Gottes eingeweiht und sorgt dafür, dass die religiösen Praktiken und die Gemeinschaft im Einklang mit den göttlichen Prinzipien stehen. In dieser hohen Position koordiniert der Weise die Aktivitäten innerhalb seines Stranges, trifft wichtige Entscheidungen, die den gesamten Pantheon betreffen, und dient als Vermittler zwischen den Göttern und den Gläubigen. Der Weise hat die Aufgabe, den spirituellen Kurs seiner Gemeinschaft zu lenken und die göttlichen Orakel und Offenbarungen in die Praxis umzusetzen."
+          }
+        ]
+      },
+      {
+        "id": "prophet",
+        "title": "Prophet",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Prophet empfängt Visionen und Botschaften von den Göttern. Er ist für die Deutung und Weitergabe dieser göttlichen Offenbarungen verantwortlich und führt die Gemeinschaft basierend auf diesen Einsichten."
+          }
+        ]
+      },
+      {
+        "id": "wortmann",
+        "title": "Wortmann",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Wortmann ist ein Meister der religiösen Sprache und Rhetorik. Er leitet bedeutende Zeremonien und spricht die heiligen Texte und Gebete. Seine Aufgabe ist es, die Worte der Götter mit Macht und Klarheit zu verkünden."
+          }
+        ]
+      },
+      {
+        "id": "runenmeister",
+        "title": "Runenmeister",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Runenmeister ist spezialisiert auf die Kunst der Runenmagie und -schrift. Er ist verantwortlich für das Erstellen und Interpretieren von Runen, die in Ritualen verwendet werden, und für die Bewahrung der magischen Traditionen der Religion."
+          }
+        ]
+      },
+      {
+        "id": "erzaehler",
+        "title": "Erzähler",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Erzähler ist der Bewahrer der Geschichten und Legenden des Glaubens. Er hat die Aufgabe, die Geschichte der Götter und der Mythologie der nordischen Religion zu übermitteln und in den Ritualen und Lehrstunden weiterzugeben."
+          }
+        ]
+      },
+      {
+        "id": "hoher-priester",
+        "title": "Hoher Priester",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Hohe Priester hat umfangreiche Erfahrung und Verantwortung innerhalb des Tempels. Er überwacht die Priester, koordiniert wichtige Zeremonien und sorgt für die Einhaltung der religiösen Vorschriften."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Vanir (Paladin)"
+          }
+        ]
+      },
+      {
+        "id": "priester",
+        "title": "Priester",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Priester ist voll in die religiösen Riten und Lehren eingeweiht. Er leitet Zeremonien, bietet spirituelle Beratung an und hat die Aufgabe, die Glaubensgemeinschaft zu betreuen und die religiösen Gesetze zu wahren."
+          }
+        ]
+      },
+      {
+        "id": "schueler",
+        "title": "Schüler",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ein Schüler hat eine vertiefte Ausbildung im religiösen Wissen und in den Ritualen erhalten. Er ist darauf vorbereitet, selbstständig Zeremonien durchzuführen und übernimmt Mentorenrollen für die jüngeren Akolythen und Diener."
+          }
+        ]
+      },
+      {
+        "id": "diener",
+        "title": "Diener",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Diener hat die ersten Prüfungen bestanden und übernimmt zunehmend mehr Verantwortung. Er hilft bei der Durchführung von Zeremonien, führt kleinere Rituale durch und ist in der Gemeinschaft aktiv, um die Lehren des Tempels zu verbreiten."
+          }
+        ]
+      },
+      {
+        "id": "akolyth",
+        "title": "Akolyth",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Akolyth ist ein neuer Rekrut im Tempel, der sich noch in der Anfangsphase seiner Ausbildung befindet. Er assistiert bei täglichen Aufgaben wie der Pflege des Tempels, dem Vorbereiten von Ritualen und dem Erlernen der grundlegenden religiösen Praktiken."
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Halbgötter und Aesir werden als weitere Gruppen genannt; einzelne Namen sind noch nicht überliefert.",
+    "Diese Überlieferung verwendet für die infernalen Gegenbilder die traditionelle Neunerzählung. Das allgemeine Infernus-Register führt zehn hohe Mächte einschließlich Adars umstrittener Sonderstellung."
+  ]
+}

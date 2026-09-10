@@ -17,11 +17,11 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260909-dragon-parent-v2';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260906-effect-rolls-v1';
+} from './combat-effect-model.js?v=20260909-dragon-parent-v2';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -647,6 +647,10 @@ function sanitizeCenyrTechniqueTraining(value = {}) {
     weaponRuleSetId: normalizeText(source.weaponRuleSetId, 120),
     uchelwyrCompatible: normalizeBoolean(source.uchelwyrCompatible),
     requiresMounted: normalizeBoolean(source.requiresMounted),
+    ...(normalizeBoolean(source.requiresDualWield) ? { requiresDualWield: true } : {}),
+    ...(normalizeBoolean(source.requiresShield) ? { requiresShield: true } : {}),
+    ...(normalizeBoolean(source.requiresTwoHands) ? { requiresTwoHands: true } : {}),
+    ...(normalizeBoolean(source.singleTargetOnly) ? { singleTargetOnly: true } : {}),
     allowedClassIds: sanitizeList(source.allowedClassIds, item => normalizeText(item, 80).toLowerCase(), 20).filter(Boolean),
     classWeaponProfiles,
     slotBands: sanitizeList(source.slotBands, item => normalizeText(item, 80), 20).filter(Boolean),
@@ -662,7 +666,7 @@ function sanitizeCenyrTechniqueTraining(value = {}) {
 function sanitizeClassTraining(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const selections = sanitizeList(source.selections, (selection = {}) => ({
-    kind: ['path', 'branch'].includes(normalizeText(selection.kind, 20)) ? normalizeText(selection.kind, 20) : '',
+    kind: ['foundation', 'path', 'branch'].includes(normalizeText(selection.kind, 20)) ? normalizeText(selection.kind, 20) : '',
     selectionId: normalizeText(selection.selectionId, 120),
     selectedAtLevel: normalizeNumber(selection.selectedAtLevel, 1, 1, 20),
     spentTechniqueSlotId: normalizeText(selection.spentTechniqueSlotId, 120)
@@ -676,7 +680,7 @@ function sanitizeClassTraining(value = {}) {
     schemaVersion: 2,
     curriculumId: normalizeText(source.curriculumId, 120),
     selections: selections.filter((selection, index) => selections.findIndex(candidate => (
-      candidate.kind === selection.kind && candidate.selectionId === selection.selectionId
+      candidate.kind === selection.kind && (selection.kind === 'foundation' || candidate.selectionId === selection.selectionId)
     )) === index),
     techniqueSelections: techniqueSelections.filter((selection, index) => techniqueSelections.findIndex(candidate => (
       candidate.slotId === selection.slotId || candidate.techniqueId === selection.techniqueId

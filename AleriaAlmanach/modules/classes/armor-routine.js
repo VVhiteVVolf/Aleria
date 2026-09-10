@@ -13,6 +13,7 @@ export const ARMOR_ROUTINE_CLASS_IDS = Object.freeze([
   'riada', 'silvaner', 'galloghlaigh', 'fathach',
   'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde',
   'hird-kona', 'stjorn', 'ravnar', 'ulfhednar', 'berserkir', 'veigir', 'tungur', 'hestgar',
+  'karnach', 'haldr', 'zernach', 'wairg', 'dornach', 'skarrach', 'rheach', 'garnach',
   'gold-aldknecht', 'husar', 'aldmar', 'eldner', 'schirmer', 'flamberger', 'havner', 'guldner', 'oraner',
   'gardist', 'ritter', 'slogar', 'rathaire', 'coillan', 'druan', 'mordan',
   'landsknecht', 'landsprotektor', 'kurassier', 'harlekin', 'landsmariner', 'landsjager',

@@ -1,0 +1,102 @@
+{
+  "godId": "lyris",
+  "intro": "Lyris' Klerus verbindet Liebe, Fürsorge und schöpferische Hingabe. Ihre Gemeinschaften bewahren Musik, Dichtung und bildende Kunst. Maß und Aufmerksamkeit geben der schöpferischen Kraft eine Form, die andere Menschen erreicht.",
+  "community": "Ein Haus der Maid kann Kapelle, Singstube, Werkraum und Lehrsaal zugleich sein. Priester begleiten die Gemeinde, monastische Zünfte bewahren die praktische Kunstübung. Gelehrte des Magisteriums lehren dort, ohne einen eigenen Fachbereich der Maid zu bilden. Kleine Schutzgemeinschaften sichern Haus und Reisende.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der schöpferischen Hingabe",
+      "paragraphs": [
+        "Lyris' Priester gestalten gemeinsames Gebet durch Lied, Dichtung und aufmerksame Sprache. Sie begleiten Liebende und Menschen, die ihrer Erfahrung einen Ausdruck geben möchten. Ihr Amt verlangt Fürsorge und Maß; Bewunderung für ein Kunstwerk darf den Menschen hinter dem Werk nicht verdecken."
+      ],
+      "tasks": [
+        "Liturgie durch Musik und Dichtung gestalten",
+        "Liebende und Schaffende begleiten",
+        "Gemeinsame Feste und Darbietungen betreuen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der bewahrten Künste",
+      "paragraphs": [
+        "Mönche und Nonnen der Maid üben und bewahren die Künste im täglichen Dienst. Ihre Zünfte pflegen Instrumente, kopieren Lieder und gestalten die Räume des Hauses. Die regelmäßige Arbeit soll Können weitergeben und ermöglicht auch unscheinbaren Talenten einen Platz in der Gemeinschaft."
+      ],
+      "tasks": [
+        "Lieder und Bildwerke erhalten",
+        "Instrumente und Gewänder pflegen",
+        "Künstlerische Übung an Lernende weitergeben"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Sänger und Notenschreiber",
+          "work": "Bewahrt Lieder, kopiert Notenschriften und übt den Gesang des Konvents."
+        },
+        {
+          "name": "Zunft der Bild- und Gewandwirker",
+          "work": "Pflegt Malerei, Stickerei und die Gestaltung liturgischer Räume."
+        },
+        {
+          "name": "Zunft der Instrumentenpfleger",
+          "work": "Erhält die Instrumente des Hauses und vermittelt ihre sorgfältige Pflege."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter der behüteten Stimme",
+      "paragraphs": [
+        "Die Paladine der Maid schützen Heiligtümer, Reisende und bedrohte Kunstschaffende. Sie bewachen Feiern und begleiten wertvolle Überlieferungen auf ihren Wegen. Ihre Berufung liegt im Schaffen eines sicheren Raumes, in dem Menschen sich ausdrücken können, ohne der Willkür anderer ausgeliefert zu sein."
+      ],
+      "tasks": [
+        "Heiligtümer und Versammlungen sichern",
+        "Reisende Kunstschaffende begleiten",
+        "Überlieferungen bei Transporten schützen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad des rechten Maßes",
+      "paragraphs": [
+        "Einzelne Asketen im Glauben an Lyris üben Haltung, Atem und Bewegung als Formen disziplinierter Hingabe. Ihr Weg bleibt eine seltene Ausnahme. Tanz und Sammlung können die persönliche Übung prägen; eine eigene Asketenordnung gehört gewöhnlich nicht zu den Häusern der Maid. Wer wehrhafte Schulung sucht, kann sie an einem verbundenen Heiligtum erhalten."
+      ],
+      "tasks": [
+        "Körperbeherrschung und Sammlung üben",
+        "Maßvolle Übungsrhythmen vermitteln",
+        "Die wehrhafte Bewegung des Hauses schulen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Lyris verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Fürsorge statt Selbstinszenierung",
+      "paragraphs": [
+        "Bußgänger in Lyris' Häusern übernehmen Dienste, die andere beim Lernen und Schaffen unterstützen. Nach Vernachlässigung oder eigensüchtigem Verhalten kann der Eid besonders die verlässliche Sorge für gemeinsame Räume und Mittel betonen. Das Schweigegelübde lässt die Arbeit selbst für die Bereitschaft zur Umkehr sprechen."
+      ],
+      "tasks": [
+        "Gemeinsame Räume und Materialien pflegen",
+        "Gäste und Lernende versorgen",
+        "Beschädigte Einrichtungen wiederherstellen"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

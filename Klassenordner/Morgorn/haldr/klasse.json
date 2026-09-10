@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "haldr",
+  "cultureId": "morgorn",
+  "name": "Haldr",
+  "title": "Der Haldr",
+  "subtitle": "Hüter unter persönlichem Schutzauftrag",
+  "aliases": ["Hüter", "Hueter"],
+  "theme": "sacred",
+  "icon": "https://i.imgur.com/XmKRoA0.png",
+  "illustration": "https://i.imgur.com/XmKRoA0.png",
+  "artwork": { "source": "https://i.imgur.com/XmKRoA0.png", "width": 1024, "height": 1536, "caption": "Haldr · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Haldr · Hüter" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Kriegerkaste; Adel nur durch eigenen Rang" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Persönlicher Schutz und Obhut" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Axt, Hammer oder Schwert mit Schild" },
+    { "group": "Klassenprofil", "label": "Schutzgut", "html": "Person, Ort oder anvertrauter Gegenstand" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Ein Haldr ist ein Hüter im wörtlichen Sinn. Er bindet seinen Dienst an etwas Bestimmtes: einen Menschen, eine Halle, ein Heiligtum, ein Erbstück oder eine Aufgabe, die ihm persönlich anvertraut wurde.</p><p>Diese Bindung unterscheidet ihn vom allgemeinen Wächter. Ein Zernach bewacht eine Anlage als Teil einer Ordnung; ein Haldr trägt die Verantwortung für sein Schutzgut mit dem eigenen Namen.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Kaste entstand aus alten Schutzgelöbnissen zwischen Sippen, Hallenherren und ausgewählten Gefolgsleuten. Aus persönlicher Treue entwickelte sich eine geregelte Ausbildung, ohne dass der Haldr dadurch zu einem eigenen Adelsrang wurde.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Haldr beobachten Zugänge, Bewegungen und Gefahren stets aus der Sicht ihres Schutzauftrags. Sie lernen, Angriffe abzufangen, eine bedrohte Person aus einer Linie zu lösen, einen Rückzug zu decken und auch unter Druck beim Schutzgut zu bleiben.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Standfest und aufmerksam im Nahkampf</li><li>Starke Schild- und Schutzdisziplin</li><li>Hohe persönliche Verbindlichkeit</li></ul><h3>Schwächen</h3><ul><li>Der Schutzauftrag schränkt freie Bewegung ein</li><li>Kann durch Bedrohung des Schutzguts gebunden werden</li><li>Weniger auf Fernkampf und Verfolgung ausgerichtet</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Haldr führen Axt, Hammer oder Schwert gewöhnlich mit Schild. Ihr Kampf folgt kurzen Wegen: decken, abfangen, verdrängen und den Gegner vom Schutzgut trennen. Ein Angriff dient häufig dazu, Raum zurückzugewinnen.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Die Ausrüstung richtet sich nach dem Schutzauftrag. Schild und belastbare Nahkampfwaffe sind typisch, ergänzt durch Kette oder Platte. Bei Reisen treten wetterfester Mantel, Licht, Seil und ein deutliches Zeichen des übernommenen Eides hinzu.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Ein bewährter Haldr genießt hohes persönliches Vertrauen. Sein Ansehen hängt weniger von Reichtum als davon ab, ob das Anvertraute unter seiner Obhut Bestand hatte. Der Bruch eines Schutzgelöbnisses wiegt entsprechend schwer.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Haldr" }
+}

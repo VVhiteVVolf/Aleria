@@ -1,5 +1,5 @@
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
-import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js';
+import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { getHuskarlForms, HUSKARL_FORM_IDS as F } from './huskarl-forms.js';
 
 export const HUSKARL_WEAPONS = Object.freeze({

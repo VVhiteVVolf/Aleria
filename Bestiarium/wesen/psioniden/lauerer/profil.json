@@ -1,0 +1,213 @@
+{
+  "id": "lauerer",
+  "name": "Lauerer",
+  "classification": "Koloss der Tiefe und Lasttier des Wahnsinns",
+  "continent": "Infernale Sphären",
+  "region": "Amons Domäne und zerstörungsbedürftige Schwarmgebiete",
+  "folio": "IV / 10-C",
+  "parentGroupId": "psioniden",
+  "summary": "Lauerer sind turmhohe Psionidenkörper, die Amon als rohe Gegenstücke zu den Suchern schuf. Ihr eigener Wille wurde absichtlich nahezu geleert, damit Lenker und Sucher die gewaltige Körperkraft sicher befehlen können. Verschlungene magische Essenz speichern sie in einem lebenden Organ für den übrigen Schwarm.",
+  "quote": "Ein leerer Koloss, damit er beherrscht werden kann.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-lauerer.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Lauerer als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Lauerer"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/lauerer-hero.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Lauerer vollständig sichtbar als hochgewachsener psionischer Koloss",
+    "caption": "Überlieferte Bildtafel · Lasttier des Wahnsinns"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Lauerer"
+    },
+    {
+      "label": "Typ",
+      "value": "Koloss der Tiefe und Lasttier des Wahnsinns"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Schlüpft aus schleimigen, fischähnlichen Eiern"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Von Amon als rohes Gegenstück zum Sucher geschaffen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Brutstätten und Orte, an denen der Schwarm Zerstörungskraft benötigt"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Absichtlich willensschwach, befehlsabhängig und auf rohe Zerstörung gerichtet"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; tätig, solange eine lenkende Instanz Befehle gibt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Titanische Körperkraft und Speicherung verschlungener Magie"
+    },
+    {
+      "label": "Lenkung",
+      "value": "Folgt Lenkern, Suchern oder einem anderen starken psionischen Befehl"
+    },
+    {
+      "label": "Stärken",
+      "value": "Gewaltige Größe, rohe Zerstörungskraft und arkaner Speicher"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Fast kein Eigenwille, leicht geistig zu kontrollieren und ohne eigene Zauberkraft"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Magierleiber und geistige Essenz zur Speicherung arkaner Kraft"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Titanenkraft",
+      "Zerstörungswucht",
+      "Magiespeicher",
+      "Befehlstreue",
+      "Eigenwille",
+      "Zauberkraft"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      10,
+      1,
+      1
+    ],
+    "intro": "Die Tafel des Lauerers zeigt einen gebauten Widerspruch: außergewöhnliche Kraft, Speichervermögen und Befehlstreue treffen auf fast völlig fehlenden Eigenwillen und keine selbstständige Zauberkunst.",
+    "source": "Aus Körpergröße, Zerstörungskraft, dem lebenden Zauberspeicher, absichtlicher Willensleere und fehlender eigener Magie abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lauerer ist Amons rohe Hand. Wo Sucher Wissen ordnen und Lenker Gedanken führen, reißt dieser Koloss Mauern nieder, trägt Lasten oder zertritt Widerstand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine geistige Leere ist kein Fehler. Sie wurde geschaffen, damit gewaltige Kraft ohne eigenen Plan durch andere Psioniden gelenkt werden kann."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lauerer erreichen turmartige Größen. Fleischige Glieder, gewaltige Klauen und eine tentakelartige Zunge bilden einen Körper, dessen Masse jede feine Bewegung unnötig macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Art wirkt schwer und grob, kann aber mit bloßer Kraft Bäume aus dem Boden reißen, Dächer zertreten und Eisen oder Fels durchstoßen."
+        }
+      ]
+    },
+    {
+      "id": "brut",
+      "title": "Brutstätten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Kolosse schlüpfen aus schleimigen, fischähnlichen Eiern, die in nassem Fleisch und verborgenen Nestern lagern. Schädlinge halten diese Brutstätten sauber, feucht und funktionsfähig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schon während des Wachstums wird der eigene Wille gedämpft. Der fertige Lauerer bleibt ein Körper, der auf Richtung wartet."
+        }
+      ]
+    },
+    {
+      "id": "leere",
+      "title": "Der absichtlich leere Wille",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Lauerer plant nicht selbstständig und bildet keine eigene Gemeinschaft. Einfache Wahrnehmung und Reaktion bleiben erhalten, doch Ziel, Richtung und Zweck kommen von außen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Leere erlaubt Lenkern, Suchern, Amon oder einer ausreichend starken fremden Kontrolle, den Koloss wie ein lebendes Belagerungswerkzeug zu führen."
+        }
+      ]
+    },
+    {
+      "id": "magiespeicher",
+      "title": "Das lebende Speicherorgan",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lauerer wirken keine eigenen Zauber. Sie verschlingen jedoch Magierleiber und geistige Essenz und lagern deren arkane Kraft in einem inneren, lebenden Speicherorgan ein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sucher können diese gespeicherte Kraft später anzapfen. Der Lauerer wird dadurch zugleich Lasttier, Waffe und beweglicher Vorrat des Schwarms."
+        }
+      ]
+    },
+    {
+      "id": "zerstoerung",
+      "title": "Einsatz im Schwarm",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Amons Domäne erscheinen Lauerer dort, wo Räume geöffnet, Befestigungen gebrochen oder große Lasten bewegt werden müssen. Ihre Befehle sind einfach, weil jede unnötige Entscheidung vermieden wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohne Führung kann ein Lauerer stehen bleiben, ziellos werden oder auf den letzten verständlichen Impuls reagieren. Das macht den Verlust seines Lenkers gefährlich, aber auch ausnutzbar."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Abwehr",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Direkter Kraftvergleich begünstigt den Lauerer. Abstand, Gelände und die Unterbrechung seiner Befehlsquelle sind wirksamer als ein frontaler Angriff auf den massigen Körper."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Willensschwäche eröffnet Möglichkeiten zur Ablenkung oder Fremdkontrolle. Wer diese nutzt, muss bedenken, dass ein stärkerer psionischer Befehl die Herrschaft jederzeit zurückholen kann."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die alte Tafel nennt den Lauerer ausdrücklich ein Lasttier des Wahnsinns.",
+            "Sein leerer Wille gilt als beabsichtigtes Merkmal und nicht als misslungene Schöpfung.",
+            "Schädlinge versorgen die Eier und Nester der heranwachsenden Kolosse.",
+            "Die gespeicherte Magie gehört dem Lauerer nicht; sie wird für Sucher und den Schwarm bewahrt.",
+            "Ein führungsloser Lauerer ist nicht friedlich, sondern richtungslos."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

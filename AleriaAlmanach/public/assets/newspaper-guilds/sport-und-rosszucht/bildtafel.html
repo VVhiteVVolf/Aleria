@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zwei Zeitungsgilden – Bildentwürfe</title>
+  <style>
+    :root { color-scheme: light; font-family: Georgia, serif; color: #30291e; background: #f5efdf; }
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; padding: clamp(20px, 4vw, 60px); max-width: 1500px; }
+    header { max-width: 850px; margin-bottom: 40px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 500; margin: 12px 0; }
+    h2 { font-size: 28px; font-weight: 500; margin-bottom: 12px; }
+    p { line-height: 1.65; }
+    .eyebrow { letter-spacing: .13em; text-transform: uppercase; font-size: 12px; color: #766343; }
+    section { padding: 20px 0 38px; border-top: 1px solid #c6b38e; }
+    .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); margin-top: 24px; }
+    figure { margin: 0; background: #fcf8ed; border: 1px solid #cfbd98; }
+    figure a { display: block; aspect-ratio: 2 / 3; overflow: hidden; }
+    img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .emblem a { padding: 22px; background: radial-gradient(ellipse, #f8f0d9, #e5d1a7); }
+    figcaption { padding: 16px; border-top: 1px solid #cfbd98; line-height: 1.5; }
+    figcaption strong { display: block; margin-bottom: 4px; }
+    a { color: #705018; text-underline-offset: 3px; }
+    footer { margin-top: 24px; line-height: 1.7; }
+    @media (max-width: 720px) { .gallery { grid-template-columns: 1fr; } figure { max-width: 480px; } .emblem a { aspect-ratio: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Nachrichten und Schreibergilden · Konzept</p>
+    <h1>Am Turnierplatz und auf dem Gestüt</h1>
+    <p>Zwei Gildenentwürfe mit eigenen Wappen und je zwei Szenenbildern. Die Namen sind Arbeitsvorschläge. Die Wappen sind als Archivcover vorgesehen, die Szenen für die Seiten I und V.</p>
+    <a href="../../../../modules/newspaper-guilds/concepts/sport-und-rosszucht.md">Zum vollständigen Konzept mit Rubriken, Ämtern und Seitenaufbau</a>
+  </header>
+  <main>
+    <section>
+      <p class="eyebrow">Weltweit · Hauptsitz Blutstadt</p>
+      <h2>Der Waffengang</h2>
+      <p>Turniere, Wettkämpfe und Sport, ihre Teilnehmer, Waffen und Kriegerkasten – mit regelmäßigen Berichten über die Kämpfergilde.</p>
+      <div class="gallery">
+        <figure class="emblem"><a href="sports-emblem-v1.png"><img src="sports-emblem-v1.png" alt="Tannengrünes Wappen mit Turnierhelm, goldener Feder und Turnierlanze"></a><figcaption><strong>Das Gildenwappen</strong>Turnierhelm, Feder und Lanze auf Tannengrün.</figcaption></figure>
+        <figure><a href="sports-story-v1.png"><img src="sports-story-v1.png" alt="Junger Zeitungsausträger am mittelalterlichen Turnierplatz"></a><figcaption><strong>I. An den Schranken der Welt</strong>Ein junger Austräger bringt die Berichte vom Wettkampf unter die Leser.</figcaption></figure>
+        <figure><a href="sports-work-v1.png"><img src="sports-work-v1.png" alt="Vornehmer Lehrmeister mit einem Schüler und einer Schülerin an Ergebnisbuch und Wettkampfskizzen"></a><figcaption><strong>V. Vom Augenblick zum Wettkampfbericht</strong>Ergebnisse und Bewegungsskizzen in der Schreibgalerie.</figcaption></figure>
+      </div>
+    </section>
+    <section>
+      <p class="eyebrow">Weltweit · Ursprung Aeldrunmar</p>
+      <h2>Ross &amp; Sporn</h2>
+      <p>Das illustrierte Magazin für Pferdeliebhaber, Züchter und Ritter: Rösser, Gestüte und Stammrollen, Sattel, Pflege und ritterliches Handwerk.</p>
+      <div class="gallery">
+        <figure class="emblem"><a href="horse-emblem-v1.png"><img src="horse-emblem-v1.png" alt="Petrolfarbenes Wappen mit elfenbeinfarbenem Pferdekopf, goldenem Hufeisen und Feder"></a><figcaption><strong>Das Gildenwappen</strong>Pferdekopf, Hufeisen und Feder auf dunklem Petrol.</figcaption></figure>
+        <figure><a href="horse-story-v1.png"><img src="horse-story-v1.png" alt="Junger Austräger mit illustriertem Pferdemagazin und einem Braunen am Pferdemarkt"></a><figcaption><strong>I. Wo Kenner über Rösser sprechen</strong>Ein illustriertes Heft findet seine Leser auf dem Pferdemarkt.</figcaption></figure>
+        <figure><a href="horse-work-v1.png"><img src="horse-work-v1.png" alt="Lehrmeister und zwei junge Lernende beim Zeichnen und Betrachten eines Pferdes"></a><figcaption><strong>V. Mit Feder, Maß und Kennerblick</strong>Rosszeichnung und Stammrolle am lebenden Studienmodell.</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer>Eigenständige Figuren in der gewünschten Anime-Stilmischung. <a href="image-prompts.json">Vollständige Prompts und Bildnachweise</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,497 @@
+{
+  "id": "unhold",
+  "name": "Unholde",
+  "classification": "Von Zatrach überformte Mischkreaturen und Jagdreliquien",
+  "continent": "Aleria",
+  "region": "Von Zatrach geprägte Jagdreviere",
+  "folio": "IV / 06",
+  "parentGroupId": "infernale-linien",
+  "summary": "Unholde sind keine gewöhnlichen Tiere und keine beliebigen Monster, sondern von Zatrach überformte Abweichungen der Natur. In ihren Körpern werden Stärke, Beutetrieb, Revierverhalten und Anpassung bis zum Übermaß gesteigert; selbst vertraute Tiergestalten werden dadurch zu Werkzeugen einer fremden Jagdordnung.",
+  "quote": "Der Unhold jagt nicht, weil er Hunger hat; er jagt, weil Zatrachs Ordnung in ihm nur Sieger und Beute kennt.",
+  "quoteAttribution": "Lehrsatz der alerischen Unholdkunde",
+  "icon": {
+    "src": "../../../assets/icons/unhold.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Unholde"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/unhold-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Tschort vollständig sichtbar auf einer hellen Bildtafel",
+    "caption": "Überlieferte Bildtafel · Geweihtragender Tschort"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Unholde"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Mischkreaturen"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Zatrach"
+    },
+    {
+      "label": "Ursprung",
+      "value": "Überformung bestehender Natur"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Gattungen, seltene Relikte und einzigartige Unholde"
+    },
+    {
+      "label": "Erscheinung",
+      "value": "Tierähnlich, hybrid oder vollständig neuartig"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Lernend, territorial und jagdzentriert"
+    },
+    {
+      "label": "Jagdweise",
+      "value": "Selektion, Verfolgung, Anpassung und Eskalation"
+    },
+    {
+      "label": "Stärken",
+      "value": "Widerstandskraft, Ausdauer und teils Regeneration"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Übersteigerte Instinkte, Revierbindung und Selbstüberschätzung"
+    },
+    {
+      "label": "Folgerisiko",
+      "value": "Längerer Kontakt oder die Jagd kann schleichend korrumpieren"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Jagdtrieb",
+      "Anpassung",
+      "Revierbindung",
+      "Körperhärte",
+      "Regeneration",
+      "Korruptionsgefahr"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      7,
+      8
+    ],
+    "intro": "Die Unhold-Tafel folgt Zatrachs Jagdlogik. Sie bewertet, wie stark ein typischer Unhold lernt, sein Revier verteidigt, Verletzungen übersteht und seine Umgebung oder Jäger verderben kann.",
+    "source": "Aus zatrachischer Überformung, Jagdverhalten, Widerstandskraft, Regeneration und den beschriebenen Folgen längeren Kontakts abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Zatrachs überformte Jagdordnung",
+    "title": "Bekannte Unterarten",
+    "intro": "Zehn verbreitet überlieferte Unholde stehen neben fünf sehr seltenen Relikten. Fünf Plätze für einzigartige Unholde bleiben bewusst offen.",
+    "entries": [
+      {
+        "id": "basilisk",
+        "name": "Basilisk",
+        "region": "Zatrachischer Unhold",
+        "description": "Ein vogel- und echsenhafter Mischjäger, dessen übersteigerte Gestalt die natürliche Ordnung sichtbar verlässt.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-basilisk.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Basilisk vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "tschort",
+        "name": "Tschort",
+        "region": "Zatrachischer Unhold",
+        "description": "Ein schwerer, geweihtragender Hetzjäger mit raubtierhaftem Gebiss und übermäßig kräftigen Vordergliedmaßen.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-tschort.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Tschort vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "lykan",
+        "name": "Lykan",
+        "region": "Riesenwolf",
+        "description": "Die überformte Spiegelgestalt eines Wolfes, geprägt von ausdauernder Verfolgung und einem kaum zu stillenden Jagdtrieb.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-lykan.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Lykan vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "ursa",
+        "name": "Ursa",
+        "region": "Bärenmonster",
+        "description": "Ein massiger Unhold, in dem Kraft und Zähigkeit eines Bären zu einer unnatürlichen Raubgestalt gesteigert sind.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-ursa.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Ursa vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "drakar",
+        "name": "Drakar",
+        "region": "Echsenmonster",
+        "description": "Eine langgestreckte, gepanzerte Jagdkreatur, deren Körperbau auf schnellen Zugriff und zähe Verfolgung ausgerichtet ist.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-drakar.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Drakar vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "tuskar",
+        "name": "Tuskar",
+        "region": "Wildmonster",
+        "description": "Eine übergroße, hauerbewehrte Wildgestalt, die Hindernisse und Gegner mit derselben ungebremsten Wucht angeht.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-tuskar.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Tuskar vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "stravin",
+        "name": "Stravin",
+        "region": "Pferdemonster",
+        "description": "Ein verzerrtes, räuberisches Gegenbild des Pferdes, dessen Schnelligkeit der Jagd statt Flucht oder Reise dient.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-stravin.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Stravin vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "araknor",
+        "name": "Araknor",
+        "region": "Insektoide Monstrosität",
+        "description": "Ein vielgliedriger Lauerjäger, dessen natürliche Eigenschaften zu einer übergroßen, dornigen Silhouette überformt wurden.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-araknor.webp",
+          "width": 408,
+          "height": 389,
+          "alt": "Araknor vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "felkris",
+        "name": "Felkris",
+        "region": "Zatrachischer Unhold",
+        "description": "Eine gedrungene Raubgestalt, die ihre Beute mit Sprungkraft, Klauen und einem ausgeprägten Reviertrieb bedrängt.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-felkris.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Felkris vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "lithrak",
+        "name": "Lithrak",
+        "region": "Zatrachischer Unhold",
+        "description": "Ein schwer gepanzerter Vielbeiner, dessen scherenartige Gliedmaßen und tragender Panzer ihn zum ausdauernden Gegner machen.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-lithrak.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Lithrak vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "chimaere",
+        "name": "Chimäre",
+        "region": "Relikt · sehr selten",
+        "description": "Ein seltenes Mischwesen, in dem mehrere Raubtierformen zu einer einzigen widersprüchlichen Jagdgestalt verbunden sind.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-chimaere.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Chimäre vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "mantikor",
+        "name": "Mantikor",
+        "region": "Relikt · sehr selten",
+        "description": "Ein geflügeltes Relikt mit löwenhaftem Körper und weiteren überformten Merkmalen, das offene wie erhöhte Wege beherrscht.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-mantikor.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Mantikor vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "phoenix",
+        "name": "Phönix",
+        "region": "Relikt · sehr selten",
+        "description": "Ein feuergeprägtes Relikt, dessen Erscheinung den Kreislauf von Vergehen und Wiederkehr auf gefährliche Weise verzerrt.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-phoenix.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Phönix vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "hydra",
+        "name": "Hydra",
+        "region": "Relikt · sehr selten",
+        "description": "Ein vielköpfiges Relikt, dessen gleichzeitige Angriffe und schwer zu beendende Körperlichkeit jede Jagd eskalieren lassen.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-hydra.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Hydra vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "sphinx",
+        "name": "Sphinx",
+        "region": "Relikt · sehr selten",
+        "description": "Ein geflügeltes Relikt mit menschenähnlichen und raubtierhaften Zügen, das Kraft mit wachsamer Berechnung verbindet.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/unhold-sphinx.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Sphinx vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ],
+    "groups": [
+      {
+        "id": "unholde",
+        "eyebrow": "Überformte Tier- und Mischgestalten",
+        "title": "Unholde",
+        "intro": "Diese Gattungen bilden die regelmäßig benannten Erscheinungsformen der zatrachischen Jagdordnung.",
+        "entryIds": [
+          "basilisk",
+          "tschort",
+          "lykan",
+          "ursa",
+          "drakar",
+          "tuskar",
+          "stravin",
+          "araknor",
+          "felkris",
+          "lithrak"
+        ]
+      },
+      {
+        "id": "relikte",
+        "eyebrow": "Sehr selten",
+        "title": "Relikte",
+        "intro": "Relikte sind außergewöhnlich seltene Formen, die in den Archiven gesondert geführt werden.",
+        "entryIds": [
+          "chimaere",
+          "mantikor",
+          "phoenix",
+          "hydra",
+          "sphinx"
+        ]
+      },
+      {
+        "id": "einzigartige-unholde",
+        "eyebrow": "Offene Archivstellen",
+        "title": "Einzigartige Unholde",
+        "intro": "Diese fünf Stellen bleiben ohne Namen und Bild, bis gesicherte Überlieferungen vorliegen.",
+        "entryIds": [
+          "offener-eintrag-01",
+          "offener-eintrag-02",
+          "offener-eintrag-03",
+          "offener-eintrag-04",
+          "offener-eintrag-05"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unholde sind der Sammelbegriff für Kreaturen und Monster, deren Ursprung, Prägung oder fortbestehende Existenz Zatrach zugeschrieben wird. Der Jägergott greift aktiv in die natürliche Ordnung ein und verformt sie gegen Silvanis, die für Harmonie, Kreislauf und ökologische Stimmigkeit steht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo Silvanis Gleichgewicht bewahrt, hinterlässt Zatrach Jagdlogik: Selektion, Überformung und Übermaß. Unholde wirken deshalb manchmal wie Tiere, dienen aber nicht länger der natürlichen Balance."
+        }
+      ]
+    },
+    {
+      "id": "abweichungen",
+      "title": "Zatrachische Abweichungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Manche Unholde erscheinen als monströs gesteigerte Spiegel natürlicher Arten. Andere verbinden mehrere Körperformen oder lassen sich nur noch durch Instinkt, Beute- und Reviertrieb erklären."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gemeinsam ist ihnen keine einheitliche Gestalt, sondern Zatrachs Signatur: Natur wird als Jagdgebiet umgeschrieben und jedes Merkmal danach bewertet, ob es Verfolgung, Kampf oder Überleben verbessert."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unholde entstehen dort, wo sich Zatrachs und Silvanis Prinzipien überlagern und der Einfluss des Jägergottes die Natur überformt, ohne sie vollständig zu vernichten. Sie entstehen nicht aus dem Nichts, sondern aus bereits vorhandenen Lebensformen und Bindungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rituelle Jagden, Blutopfer, Totemverehrung oder die gezielte Ausrottung von Tierlinien können seinen Einfluss verdichten. Dadurch werden natürliche Wesen anfällig für weitere Überformung."
+        }
+      ]
+    },
+    {
+      "id": "korrumpierung",
+      "title": "Korrumpierte Bewahrer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Besonders tragisch ist das Schicksal korrumpierter Druiden und Naturpriester. Rituale oder erzwungene Pakte reißen sie aus Silvanis Schutz und formen sie zu Waldschraten, Leschen oder höheren Unholden um."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was einst die Natur bewahrte, besteht danach als ihre Verzerrung fort und verteidigt Zatrachs Jagdordnung gegen jene, die das frühere Gleichgewicht wiederherstellen wollen."
+        }
+      ]
+    },
+    {
+      "id": "jagdlogik",
+      "title": "Verhalten und Jagdlogik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Unhold ist kein passives Ziel. Er beobachtet, erkennt Schwächen und nutzt wiederholte Fehler. Seine Jagd kann sich während einer einzigen Begegnung verändern, wenn eine Beute dieselbe Finte oder denselben Schutz mehrfach einsetzt."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung und Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verdichtete Haut, hohe Ausdauer und teilweise Regeneration sorgen dafür, dass schwere Verletzungen viele Unholde nur verlangsamen. Reine Naturmagie wirkt inkonsistent; jagdbezogene Zauber, alchemistische Mittel und Bannungen gegen Zatrachs Aspekte gelten als verlässlicher."
+        },
+        {
+          "type": "paragraph",
+          "text": "Übersteigerte Instinkte, starke Revierbindung und Selbstüberschätzung können gegen sie verwendet werden. Die Jagd bleibt dennoch gefährlich, weil längerer Kontakt oder selbst das Erlegen eines Unholds eine schleichende Korrumpierung auslösen kann."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Das Wort Unhold bezeichnet eine gemeinsame Prägung und keinen einheitlichen Körperbau.",
+            "Der Tschort ist auf der großen Bildtafel und im Artenregister mit getrennten Fassungen desselben Motivs vertreten.",
+            "Relikte werden wegen ihrer Seltenheit getrennt von den häufiger verzeichneten Unholdgattungen geführt.",
+            "Eine erfolgreiche Jagd gilt erst dann als beendet, wenn auch Spuren einer möglichen Korrumpierung geprüft wurden."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

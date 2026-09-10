@@ -1,0 +1,238 @@
+{
+  "id": "ghule",
+  "name": "Ghule",
+  "classification": "Nekrophagen · Aas- und Grabjäger",
+  "continent": "Aleria",
+  "region": "Friedhöfe, Grüfte und Schlachtfelder",
+  "folio": "III-N / 02",
+  "parentGroupId": "nekrophagen",
+  "summary": "Ghule sind schreckliche Kreaturen, die als Aasfresser und unermüdliche Jäger bekannt sind. Im Gegensatz zu den stumpfen Zombies sind Ghule weitaus agiler, gefährlicher und von einer unstillbaren Gier nach Menschenfleisch getrieben. Ihre entstellten, unmenschlichen Körper und ihr grausames Verhalten machen sie zu einem Symbol für die absolute Entmenschlichung und Verderbnis.",
+  "quote": "Wo ein Grab offensteht, zählt ein Ghul nicht die Toten, sondern nur die nächste Mahlzeit.",
+  "quoteAttribution": "Warnspruch der nächtlichen Friedhofswachen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-ghule.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Ghule als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/ghule.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Ghule",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Ghule"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ghule"
+    },
+    {
+      "label": "Typ",
+      "value": "Untote Aasfresser und Rudeljäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Kannibalismus, Flüche, missglückte Nekromantie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Friedhöfe, Grüfte, Schlachtfelder, verfluchte Orte"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dunkle, abgeschiedene Orte wie Katakomben, Gruften, Massengräber"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Aggressiv, triebgesteuert, auf Beute lauernd"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv vor allem bei Nacht, ruhend oder lauernd bei Tag"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schnelligkeit, extreme Agilität, scharfe Klauen und Zähne, Aasverwertung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Beweglichkeit, schneller Angriff, Immunität gegen Angst"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Anfällig für Feuer, heilige Magie und geweihtes Silber"
+    },
+    {
+      "label": "Beute",
+      "value": "Knochenfragmente, verdorbene Fleischreste, gelegentlich Schmuck oder Waffen von Opfern"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Blutgier",
+      "Beweglichkeit",
+      "Rudeljagd",
+      "Hinterhalt",
+      "Zähigkeit",
+      "Lichtscheu"
+    ],
+    "values": [
+      10,
+      9,
+      7,
+      8,
+      7,
+      8
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Ghule abgeleitet",
+    "intro": "Das Ghul-Diagramm folgt dem Jagdverhalten zwischen Aasfraß und lebender Beute. Lichtscheu misst, wie stark Helligkeit seine üblichen Vorteile nimmt."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ghule sind schreckliche Kreaturen, die als Aasfresser und unermüdliche Jäger bekannt sind. Im Gegensatz zu den stumpfen Zombies sind Ghule weitaus agiler, gefährlicher und von einer unstillbaren Gier nach Menschenfleisch getrieben. Ihre entstellten, unmenschlichen Körper und ihr grausames Verhalten machen sie zu einem Symbol für die absolute Entmenschlichung und Verderbnis."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Dunkelheit von Grüften, Friedhöfen und verlassenen Orten lauern diese Kreaturen auf die Lebenden, bereit, sowohl die Toten als auch die Lebenden zu verschlingen. Ghule entstehen häufig aus Menschen, die im Leben durch Kannibalismus oder nekrotische Einflüsse verdorben wurden. Ihr Hunger ist nicht nur physisch, sondern auch magisch bedingt, da sie durch ihren schändlichen Lebensstil in den Zustand ewiger Verdammnis gerieten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Untoten sind weit mehr als einfache Aasfresser – sie sind ein Albtraum für jede Siedlung, die mit ihren nächtlichen Überfällen konfrontiert wird. Ghule verkörpern die Gefahr, die entsteht, wenn der Tod nicht mit Respekt behandelt wird und dunkle Einflüsse auf die Schwachen einwirken."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ghule sind eine der unheimlichsten Formen der Untoten und haben ihren Ursprung in Geschichten von Verderbnis, Kannibalismus und dunkler Magie. Die Legenden besagen, dass Ghule einst Menschen waren, die dem Kannibalismus verfallen sind – sei es aus Not oder aus krankhafter Gier. Dieser abscheuliche Akt zog mächtige Flüche und nekrotische Energien auf sie, die ihre Körper und Seelen entstellten und sie in die verdorbenen Kreaturen verwandelten, die heute gefürchtet werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "In einigen Kulturen wird behauptet, dass Ghule nicht nur durch Kannibalismus entstehen, sondern auch durch die Einwirkung dunkler Magie oder den Einfluss unheiliger Orte, an denen sich Verwesung und Tod konzentrieren. Friedhöfe, verlassene Grüfte und Schlachtfelder, auf denen die Toten unbeachtet verwesen, sind bevorzugte Brutstätten für diese Kreaturen. Es heißt, dass sie von der Energie der Toten angezogen werden, wie Motten vom Licht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein weiterer Ursprung für Ghule kann in missglückten nekromantischen Ritualen liegen. Manche Magier versuchen, verstorbene Diener wiederzubeleben, doch anstatt gehorsame Untote zu erschaffen, entstehen wilde und unkontrollierbare Ghule. Diese Kreaturen entziehen sich ihrer Kontrolle und bringen Verderben über alles, was ihnen begegnet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ghule sind nicht nur körperlich entstellt, sondern auch vollständig ihrer Menschlichkeit beraubt. Ihre Seelen sind entweder ausgelöscht oder von einem unstillbaren Hunger nach Menschenfleisch verdorben. Sie jagen nicht nur, um zu überleben, sondern auch aus einer tiefen, magisch geprägten Sucht. Dieser Hunger macht sie zu unberechenbaren und aggressiven Gegnern, die weder Angst noch Vernunft kennen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ghule sind triebgesteuerte und gefährliche Kreaturen, die von einem einzigen Ziel beherrscht werden: dem unstillbaren Hunger nach Menschenfleisch. Ihr Verhalten ist geprägt von einer animalischen Wildheit, die sie unermüdlich auf die Jagd nach lebenden oder toten Opfern treibt. Sie sind opportunistische Jäger und Aasfresser zugleich, die sowohl ungeschützte Leichen als auch lebendige Beute angreifen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl sie keine höhere Intelligenz besitzen, zeigen Ghule ein gewisses Maß an Instinkt und strategischem Verhalten. Sie agieren in Gruppen, lauern an Orten, die häufig von Lebewesen aufgesucht werden, und greifen bevorzugt aus dem Hinterhalt an. Ihre bevorzugten Lebensräume wie Friedhöfe, Katakomben oder Schlachtfelder bieten ihnen sowohl Nahrung als auch Schutz vor der Außenwelt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Physisch zeichnen sich Ghule durch ihre extreme Beweglichkeit aus. Sie bewegen sich auf allen Vieren, springen über Hindernisse und greifen mit ihren langen, scharfen Klauen und Zähnen an. Ihr entstelltes, menschenähnliches Erscheinungsbild, gepaart mit ihrer Fähigkeit, blitzschnell zuzuschlagen, macht sie zu besonders unheimlichen Gegnern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ghule verfügen über eine außergewöhnliche körperliche Zähigkeit. Ihr verwesender Körper macht sie unempfindlich gegenüber Schmerz, und ihre nekrotische Energie hält sie selbst nach schweren Verletzungen aktiv. Trotz dieser Widerstandsfähigkeit werden sie mit der Zeit vom Verfall eingeholt, was sich in ihrer zunehmend grotesken Erscheinung zeigt."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ghule sind eng mit Orten verbunden, die den Tod und Verfall verkörpern. Sie bevorzugen Friedhöfe, Katakomben, Schlachtfelder und andere Orte, an denen unbestattete Leichen oder verlassene Totenstätten zu finden sind. Diese dunklen, abgeschiedenen Umgebungen bieten ihnen nicht nur Schutz, sondern auch eine stetige Nahrungsquelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten wird oft von der Vernachlässigung oder Entweihung dieser Orte begünstigt. Wo die Ruhe der Toten gestört wurde, sei es durch Grabräuber, Kriege oder fehlende Begräbnisrituale, sind Ghule nicht weit. Sie werden von der nekrotischen Energie solcher Stätten angezogen, die sowohl ihre Existenz nährt als auch ihren Einfluss verstärkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Nähe von Siedlungen treten Ghule vor allem nach Seuchen oder Katastrophen auf, wenn die Menge an unbeerdigten Toten ansteigt. Besonders gefährlich sind sie in abgelegenen Gegenden, wo sie nachts aus ihren Verstecken hervorkommen, um Jagd auf Wanderer, Vieh oder unvorsichtige Dorfbewohner zu machen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ghule meiden helle und belebte Orte, da sie durch ihre animalische Natur von Dunkelheit und Stille angezogen werden. Während des Tages verbergen sie sich in Gräbern, Höhlen oder verlassenen Gebäuden, wo sie unbeweglich verharren und auf die Nacht warten. Ihr Auftreten bei Dunkelheit ist abrupt und oft begleitet von ihrem schrecklichen Heulen oder Geknurre, das ihre Anwesenheit ankündigt."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ghule sind äußerst gefährliche Gegner, deren Stärken sie zu unheimlich effektiven Jägern machen. Dennoch besitzen sie Schwächen, die eine gezielte Bekämpfung ermöglichen, wenn man auf sie vorbereitet ist."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Extreme Beweglichkeit: Ghule bewegen sich schnell und agil, oft auf allen Vieren, was sie zu schwer fassbaren Gegnern macht.",
+            "Scharfe Klauen und Zähne: Ihre natürlichen Waffen durchdringen leicht Fleisch und sogar leichte Rüstungen.",
+            "Gruppenverhalten: Ghule agieren in Rudeln, was ihre Angriffe koordinierter und gefährlicher macht.",
+            "Zähigkeit: Ihr verwesender Körper ist unempfindlich gegenüber Schmerz, und sie können selbst schwere Verletzungen ignorieren.",
+            "Unermüdlichkeit: Ghule kämpfen ohne Pause oder Rücksicht, bis sie zerstört sind.",
+            "Aasfresser-Fähigkeit: Sie überleben in nahezu jeder Umgebung, solange es Leichen oder frisches Fleisch gibt."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Anfällig für Feuer: Wie viele Untote sind Ghule extrem anfällig für Flammen, die ihren Körper schnell zerstören können.",
+            "Heilige Magie: Geweihte Waffen und göttliche Magie wirken besonders effektiv gegen sie, da diese Kräfte ihre nekrotische Energie durchbrechen.",
+            "Instinktives Handeln: Ghule sind triebgesteuert und nicht intelligent. Dies macht sie berechenbar und anfällig für taktische Überlistung.",
+            "Lichtempfindlichkeit: Sie meiden helles Licht und sind besonders bei Tag weniger aktiv und einfacher zu besiegen.",
+            "Rudelabhängigkeit: Einzelne Ghule sind deutlich leichter zu bekämpfen, da ihre Stärke vor allem in der Gruppendynamik liegt."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer Schwächen sind Ghule gefährliche Feinde, besonders in der Dunkelheit oder in engen Räumen, wo ihre Schnelligkeit und Wildheit kaum auszuweichen ist. Nur erfahrene Kämpfer, die ihre Stärken umgehen und ihre Schwächen gezielt ausnutzen, haben eine Chance, gegen sie zu bestehen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ghule bevorzugen Zugänge, die bereits nach Erde oder Verwesung riechen.",
+            "Ein sattes Rudel bleibt gefährlich, streitet jedoch häufiger um Beutereste.",
+            "Frische Kratzspuren liegen oft niedrig, weil Ghule viele Strecken auf allen Vieren zurücklegen.",
+            "Regelmäßig gepflegte und geweihte Grabstätten ziehen deutlich seltener Ghule an."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

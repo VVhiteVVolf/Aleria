@@ -1,0 +1,185 @@
+{
+  "id": "sumpftroll",
+  "name": "Sumpftroll",
+  "classification": "Trollunterart · Verfaulter Rottenjäger",
+  "continent": "Alerias Sumpfgebiete",
+  "region": "Tiefe Sümpfe, Moore und versunkene Ruinen",
+  "folio": "III-T / 07",
+  "parentGroupId": "trolle",
+  "summary": "Sumpftrolle sind kleine, degenerierte Rottenjäger, deren Körper durch Moder, stehendes Wasser und faulende Magie gezeichnet sind. Einzeln bleiben sie scheu; im Schwarm brechen sie aus dem Morast hervor, ziehen geschwächte Beute ins Wasser und widerstehen dank nasser Lederhaut selbst flüchtigem Feuer erstaunlich lange.",
+  "quote": "Ein Kopf im Schilf ist eine Warnung. Drei Köpfe sind bereits der Angriff.",
+  "quoteAttribution": "Sprichwort der alerischen Moorführer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-sumpftroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Sumpftroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/sumpftroll.webp",
+    "width": 805,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Sumpftroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Sumpftroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Sumpftroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Degenerierter Troll; amphibischer Rottenjäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus verstoßenen oder geschwächten Trollen in faulenden Sümpfen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alerias Sumpfgebiete"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Moore, versumpfte Flussauen, Wurzelhöhlen und versunkene Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Allein scheu, in Rotten hochaggressiv und rein instinktgetrieben"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Nacht, Nebel und trübes Dämmerlicht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Sumpftarnung, Rottenangriff, Geruchssinn und wasserfeste Zähigkeit"
+    },
+    {
+      "label": "Stärken",
+      "value": "Überzahl, Hinterhalt, nasse Lederhaut und Schmerzträgheit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Trockener fester Boden, helles Licht und anhaltendes Feuer"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Gering; Waffen- und Rüstungsreste an Fraßplätzen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Rottendruck",
+      "Sumpftarnung",
+      "Fäulniszähigkeit",
+      "Schwimmkraft",
+      "Sprachvermögen",
+      "Feuerresistenz"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      8,
+      1,
+      7
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Sumpftrolls abgeleitet",
+    "intro": "Die Gefahr des Sumpftrolls liegt in Tarnung, Überzahl und dem Gelände. Feuerresistenz beschreibt seine nasse Haut; dauerhafte Hitze bleibt dennoch wirksam."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpftrolle wirken halb tot: klein, sehnig, pilzbefallen und von Schlamm, Algen oder Blutegeln bedeckt. Ihr Geruch erinnert an Aas, ihre Bewegungen sind ruckartig und kriechend."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sprache ist fast verschwunden. Zischen, Gurgeln und Fauchen genügen einer Rotte, um auf Bewegung im Wasser gemeinsam zu reagieren."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Druiden beschreiben sie als Endzustand vertriebener Fluss- oder Landtrolle. Der Sumpf tötet die Geschwächten nicht, sondern zersetzt und erhält sie zugleich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit der Zeit verschwinden Erinnerung und individuelles Verhalten. Zurück bleibt ein lockerer Schwarmtrieb, der manche Gelehrte eher an Insekten oder Aasfresser als an Humanoide erinnert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpftrolle wählen Verwundete, Erschöpfte und einzelne Reisende. Sie greifen aus dem Hinterhalt an und ziehen gestürzte Opfer sofort ins Wasser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einzelne Tiere weichen starker Gegenwehr aus. Eine Rotte wird erst durch massive Verluste, trockenes Gelände oder lange brennende Barrieren zum Rückzug gezwungen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stehendes Wasser, halb versunkene Ruinen, alte Baumstümpfe und Wurzelräume sind bevorzugte Verstecke. Fester Boden und trockene Höhen werden gemieden, weil die kurzen Beine dort langsam und ungeschützt wirken."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Distanz, erhöhte Stellung, Speere und Haken verhindern, dass die Rotte einzelne Kämpfer ins Wasser zieht. Brandmittel müssen lange genug wirken, um die feuchte Haut auszutrocknen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wer im Morast fällt, wird sofort umringt. Formation und geordneter Rückzug sind wichtiger als die Jagd auf einzelne fliehende Tiere."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Sumpftrolle werden häufig mit Sumpfzehrern oder Untoten verwechselt.",
+            "Verwestes Fleisch wird frischer Beute vorgezogen, wenn beides erreichbar ist.",
+            "Waffenreste sammeln sich an festen Fraßplätzen, nicht aus bewusstem Sammeltrieb.",
+            "Andere Trollarten sollen ihre Nähe selbst dann meiden, wenn Nahrung knapp ist."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

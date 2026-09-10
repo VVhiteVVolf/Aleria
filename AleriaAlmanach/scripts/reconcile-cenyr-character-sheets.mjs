@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,14 +7,16 @@ import {
   selectCenyrTechniqueForSlot,
   synchronizeCenyrSelectedTechniques
 } from '../modules/classes/cenyr/cenyr-technique-selection.js';
-import { selectCenyrTrainingOption } from '../modules/classes/cenyr/cenyr-class-training.js';
+import { selectCenyrTrainingOption, getCenyrCanonicalTechniqueId } from '../modules/classes/cenyr/cenyr-class-training.js';
 import { DRACHENTANZ_FORM_IDS as FORM_IDS } from '../modules/combat-styles/drachentanz/drachentanz-ids.js';
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
+import { getCenyrClassDefinitionForProfile } from '../modules/classes/cenyr/cenyr-class-registry.js';
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = resolve(scriptDirectory, '..', '..');
 const exportRoot = resolve(workspaceRoot, 'Charakter Archiv Exporte');
 const checkOnly = process.argv.includes('--check');
+const formsOnly = process.argv.includes('--forms-only');
 
 const CHARACTER_FILES = Object.freeze([
   'gawain-draig.json',
@@ -171,6 +173,44 @@ async function processFile(name) {
   return exported.character;
 }
 
-const characters = [];
-for (const name of CHARACTER_FILES) characters.push(await processFile(name));
-console.log(`${characters.length} Cenyr-Charakterbögen ${checkOnly ? 'geprüft' : 'abgeglichen'}: ${characters.map(character => character.name).join(', ')}.`);
+async function processClassFormsOnly(name) {
+  const path = resolve(exportRoot, name);
+  const current = await readFile(path, 'utf8');
+  const exported = JSON.parse(current);
+  const character = exported?.type === 'aleria-character' ? exported.character : null;
+  const profile = character?.combatProfile;
+  const definition = profile && getCenyrClassDefinitionForProfile(profile);
+  if (!definition) return null;
+  const reconciled = reconcileCenyrTrainingForLevel(profile, profile.progression?.level, {
+    autoFill: true, preserveExisting: true, replaceClassTechniques: true
+  }).profile;
+  const normalized = sanitizeCharacterCombatProfile({ classTraining: reconciled.classTraining, techniques: reconciled.techniques });
+  const normalizedById = new Map(normalized.techniques.map(technique => [technique.id, technique]));
+  const previousById = new Map((profile.techniques || []).map(technique => [getCenyrCanonicalTechniqueId(definition, technique.id), technique]));
+  const learnedIds = new Set(reconciled.classTraining.techniqueSelections.map(selection => selection.techniqueId));
+  const techniques = reconciled.techniques.map(technique => learnedIds.has(technique.id)
+    ? { ...(previousById.get(technique.id) || {}), ...normalizedById.get(technique.id) } : technique);
+  // This revision owns training and generated techniques only. Equipment,
+  // abilities, biography and unrelated custom profile fields remain byte-for-byte
+  // equivalent as JSON values; the older curated-character reset is not run.
+  character.combatProfile = { ...profile, classTraining: normalized.classTraining, techniques };
+  const changed = JSON.stringify(profile) !== JSON.stringify(character.combatProfile);
+  if (checkOnly && changed) throw new Error(`${name} verwendet noch nicht die aktuelle Klassenformen-Ausbildung.`);
+  if (!checkOnly && changed) await writeFile(path, json(exported), 'utf8');
+  return { name: character.name, changed };
+}
+
+if (formsOnly) {
+  const files = (await readdir(exportRoot, { withFileTypes: true }))
+    .filter(entry => entry.isFile() && entry.name.endsWith('.json')).map(entry => entry.name).sort();
+  const results = [];
+  for (const name of files) {
+    const result = await processClassFormsOnly(name);
+    if (result) results.push(result);
+  }
+  console.log(`${results.length} passende Charakterbögen ${checkOnly ? 'geprüft' : 'auf Klassenformen abgeglichen'}; ${results.filter(result => result.changed).length} Änderungen.`);
+} else {
+  const characters = [];
+  for (const name of CHARACTER_FILES) characters.push(await processFile(name));
+  console.log(`${characters.length} Cenyr-Charakterbögen ${checkOnly ? 'geprüft' : 'abgeglichen'}: ${characters.map(character => character.name).join(', ')}.`);
+}

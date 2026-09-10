@@ -1,0 +1,102 @@
+{
+  "godId": "tharim",
+  "intro": "Tharims Klerus ehrt Fleiß, Integrität und selbstlosen Dienst. Seine Gemeinschaften finden den Glauben in verlässlicher Arbeit und einem redlichen Umgang miteinander. Sie tragen Werkstätten, Vorratshäuser und die Versorgung der Kirche.",
+  "community": "Ein Haus des Knechts ist häufig eng mit Landwirtschaft und Handwerk verbunden. Priester begleiten Arbeitsgemeinschaften, monastische Zünfte führen Werkstätten und Vorräte. Paladine sichern Menschen und Versorgung. Unterricht wird aus dem Magisterium hinzugezogen; ein eigener asketischer Wehrzweig besteht gewöhnlich nicht.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der redlichen Arbeit",
+      "paragraphs": [
+        "Tharims Priester begleiten die Sorgen arbeitender Menschen und erinnern an aufrichtigen Umgang mit Leistung, Lohn und Verantwortung. Sie segnen gemeinsame Vorhaben und vermitteln bei Streit. Ihr Dienst verlangt, dass selbstloses Handeln nicht zur Rechtfertigung von Korruption oder der Ausnutzung Wehrloser wird."
+      ],
+      "tasks": [
+        "Arbeitende und ihre Familien begleiten",
+        "Gemeinsame Vorhaben segnen",
+        "Bei Streit um redliche Verpflichtungen vermitteln"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Die arbeitenden Konvente",
+      "paragraphs": [
+        "Die Mönche und Nonnen des Knechts prägen den Alltag seiner Häuser. Ihre Zünfte bewahren handwerkliche Erfahrung, versorgen Gemeinschaft und Gäste und bilden neue Mitglieder aus. Fachstolz soll sich an sorgfältiger Arbeit zeigen; das Verheimlichen von Fehlern widerspricht der Integrität ihres Gottes."
+      ],
+      "tasks": [
+        "Werkstätten und Versorgung führen",
+        "Handwerkliche Kenntnisse weitergeben",
+        "Gemeinsame Güter verlässlich erhalten"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Schmiede",
+          "work": "Bewahrt die Metallarbeit des Konvents und erhält dessen Werkzeuge."
+        },
+        {
+          "name": "Zunft der Weber und Schneider",
+          "work": "Fertigt und pflegt Kleidung, Tücher und die gemeinsame Ausstattung."
+        },
+        {
+          "name": "Zunft der Acker- und Vorratshüter",
+          "work": "Ordnet Feldarbeit, Ernte, Lagerung und die Versorgung des Hauses."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Ritter des geschützten Dienstes",
+      "paragraphs": [
+        "Tharims Paladine schützen Menschen und Einrichtungen, von denen die Versorgung anderer abhängt. Sie begleiten gefährdete Transporte und stehen Gemeinden bei, deren Arbeit durch Gewalt bedroht wird. Ihr ritterlicher Auftrag ist an das Wohl der Anvertrauten gebunden, nicht an den bloßen Wert einer Ladung."
+      ],
+      "tasks": [
+        "Versorgungswege sichern",
+        "Arbeitende und Schutzgemeinschaften begleiten",
+        "Lager und kirchliche Hilfseinrichtungen bewachen"
+      ]
+    },
+    "asketen": {
+      "presence": "eingebunden",
+      "title": "Disziplin in der täglichen Arbeit",
+      "paragraphs": [
+        "Die gewöhnlichen Häuser des Knechts bilden keinen eigenen asketischen Wehrstand. Sammlung, Ausdauer und maßvoller Lebenswandel werden in den bestehenden Gemeinschaften geübt. Wer einen ausgeprägten asketischen Pfad sucht, kann sich an eine verbundene Schule wenden und bleibt seinem Gott im eigenen Handeln verpflichtet."
+      ],
+      "tasks": [
+        "Verlässliche Arbeitsrhythmen einüben",
+        "Sorgfalt auch bei unscheinbaren Aufgaben bewahren",
+        "Bei Bedarf eine asketische Schule aufsuchen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Tharim verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Buße durch redliches Schaffen",
+      "paragraphs": [
+        "Bußgänger Tharims erfüllen vereinbarte Arbeiten unter fachkundiger Anleitung. Nach Betrug oder Vernachlässigung kann der Eid besonders auf Offenheit und verlässliche Ausführung zielen. Ihre Aufnahme verpflichtet das Haus zur Begleitung; eine gute Arbeitskraft darf nicht allein deshalb über den abgeschlossenen Bußgang hinaus festgehalten werden."
+      ],
+      "tasks": [
+        "Reparatur- und Versorgungsdienste übernehmen",
+        "Fehler und Schäden offenlegen",
+        "Redliche Arbeitsgewohnheiten für die Rückkehr entwickeln"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

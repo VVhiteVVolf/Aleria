@@ -1,6 +1,6 @@
 import { escapeCombatMarkup as e, renderCombatCondition } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
 import { getCombatConditionGroups } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
-import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260906-effect-rolls-v1';
+import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260909-dragon-parent-v2';
 
 // One local instance per composer; closed drawers never resolve character profiles.
 const instances = new Map();

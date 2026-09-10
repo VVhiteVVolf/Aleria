@@ -1,0 +1,281 @@
+{
+  "id": "aelvar",
+  "name": "Aelvar",
+  "classification": "Matriarchale Finsteralben im Dienst infernaler Göttinnen",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Im Dienst Lunaras, Helas, Nyxaras und Nemsaras",
+  "folio": "IV / 05",
+  "parentGroupId": "infernale-linien",
+  "summary": "Die Aelvar sind finstere, mystische Finsteralben mit der Anmut von Nymphen und Elfen. Ihre streng matriarchale Ordnung, die Macht ihrer Matronen und ihre Bindung an Lunara, Hela, Nyxara oder Nemsara machen sie zu geduldigen Täuscherinnen, Zauberinnen und Mittlerinnen innerhalb der infernalen Welt.",
+  "quote": "Wer nur auf ihre Klinge achtet, hat die Entscheidung längst verpasst; eine Aelvar gewinnt zuerst über Blick, Wort und Zweifel.",
+  "quoteAttribution": "Randvermerk eines alerischen Hofkundigen",
+  "icon": {
+    "src": "../../../assets/icons/aelvar.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Aelvar"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/aelvar-hero.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Drei vollständig sichtbare Aelvar vor einem alten Waldschrein",
+    "caption": "Neue Bildtafel · Eine Aelvar-Matrone mit zwei Begleiterinnen"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Aelvar, auch Aelvaren"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Finsteralben"
+    },
+    {
+      "label": "Schöpferinnen",
+      "value": "Lunara, Hela, Nyxara und Nemsara"
+    },
+    {
+      "label": "Gesellschaft",
+      "value": "Streng matriarchal"
+    },
+    {
+      "label": "Führung",
+      "value": "Matronen mit politischer und magischer Macht"
+    },
+    {
+      "label": "Geschlechterordnung",
+      "value": "Weibliche Aelvar dominieren; männliche Aelvar dienen in untergeordneten Rollen"
+    },
+    {
+      "label": "Erscheinung",
+      "value": "Schlank, elfenhaft, blass oder schimmernd"
+    },
+    {
+      "label": "Auftreten",
+      "value": "Organisiert, elegant und meist aus dem Hintergrund"
+    },
+    {
+      "label": "Stärken",
+      "value": "Manipulation, Illusion, Magie und göttliche Bindung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Entlarvte Täuschungen und der Bruch ihrer magischen Wirkung"
+    },
+    {
+      "label": "Bekannte Linien",
+      "value": "Lunen, Lamenta, Nyxaren, Erinyen und Umbren"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Täuschung",
+      "Matronenmacht",
+      "Zauberwirken",
+      "Heimlichkeit",
+      "Göttinnenbindung",
+      "Nahkampfdruck"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      9,
+      9,
+      5
+    ],
+    "intro": "Die Aelvar-Tafel bewertet jene Mittel, mit denen die Finsteralben ihre Umgebung beherrschen: verborgene Einflussnahme, magische Führung und die Bindung an ihre jeweilige Göttin.",
+    "source": "Aus Gesellschaftsordnung, Erscheinung, Vorgehensweise, Zauberwirken und den überlieferten Gegenmitteln der Aelvar abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Matriarchale Linien",
+    "title": "Bekannte Aelvar-Linien",
+    "intro": "Die fünf überlieferten Linien werden nach ihrer jeweiligen Göttin benannt. Ihre Einzeldossiers sind für eine spätere Ausarbeitung vorgemerkt.",
+    "entries": [
+      {
+        "id": "lunen",
+        "name": "Lunen (Lunara)",
+        "region": "Finsteralben",
+        "description": "Eine an Lunara gebundene Aelvar-Linie, deren dunkle Eleganz und beherrschte Magie ihre matriarchale Stellung unterstreichen.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/aelvar-lunen.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Lunen (Lunara) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "lamenta",
+        "name": "Lamenta (Hela)",
+        "region": "Finsteralben",
+        "description": "Eine verhüllte, klagend wirkende Linie im Dienst Helas, die sich durch stille Präsenz und schwer lesbare Absichten auszeichnet.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/aelvar-lamenta.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Lamenta (Hela) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "nyxaren",
+        "name": "Nyxaren (Nyxara)",
+        "region": "Finsteralben",
+        "description": "Eine an Nyxara gebundene Linie, die Schatten, Täuschung und sorgfältig verborgene Macht miteinander verbindet.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/aelvar-nyxaren.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Nyxaren (Nyxara) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "erinyen",
+        "name": "Erinyen (Nemsara)",
+        "region": "Finsteralben",
+        "description": "Eine geflügelte Linie Nemsaras, deren kriegerische Erscheinung die sonst häufig indirekte Macht der Aelvar offen zeigt.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/aelvar-erinyen.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Erinyen (Nemsara) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "umbren",
+        "name": "Umbren (Nyxara)",
+        "region": "Finsteralben",
+        "description": "Eine schattenhafte Linie Nyxaras, deren Ketten und dunkle Flügel Bindung, Kontrolle und verborgenen Zwang versinnbildlichen.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/aelvar-umbren.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Umbren (Nyxara) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "id": "finsteralben",
+        "eyebrow": "Dienerinnen infernaler Göttinnen",
+        "title": "Finsteralben",
+        "intro": "Jede Linie trägt die Prägung ihrer Göttin, bleibt aber Teil derselben matriarchalen Aelvar-Ordnung.",
+        "entryIds": [
+          "lunen",
+          "lamenta",
+          "nyxaren",
+          "erinyen",
+          "umbren"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Aelvar sind eine finstere, mystische Gattung von Finsteralben im Dienst der infernalen Göttinnen Lunara, Hela, Nyxara und Nemsara. In ihnen verbinden sich die Anmut von Nymphen und Elfen mit einer dunklen, beinahe überirdischen Grazie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dadurch unterscheiden sie sich deutlich von den gröber auftretenden Ogroiden oder Inferniiden. Ihre Gefahr liegt selten in lärmender Gewalt, sondern in Beherrschung, Magie und dem sorgfältig gewählten Augenblick."
+        }
+      ]
+    },
+    {
+      "id": "gesellschaft",
+      "title": "Matriarchale Ordnung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Gesellschaft der Aelvar ist matriarchal. Weibliche Exemplare dominieren, während männliche Aelvar in untergeordnete und häufig dienende Rollen gezwungen werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Macht und Weisheit liegen in den Händen der Matronen. Sie führen ihre Linien, bewahren deren Wissen und gelten zugleich als besonders starke Magierinnen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aelvar besitzen schmale, anmutige Körper und feine Gesichtszüge. Ihre Haut wirkt meist blass oder schimmernd; die Augen können je nach Linie in mystischen Farben leuchten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prächtige dunkle Gewänder, Schmuck und Zeichen ihrer Göttin machen Zugehörigkeit und Rang sichtbar. Selbst in Ruhe wirken ihre Bewegungen bewusst gesetzt und beinahe hypnotisch."
+        }
+      ]
+    },
+    {
+      "id": "goettinnen",
+      "title": "Bindung an die Göttinnen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lunen folgen Lunara, Lamenta Hela, Nyxaren und Umbren Nyxara, Erinyen Nemsara. Die Bindung prägt Symbolik, Magie und Auftrag, ohne die gemeinsame Ordnung der Aelvar aufzulösen."
+        }
+      ]
+    },
+    {
+      "id": "vorgehen",
+      "title": "Vorgehen und Einfluss",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aelvar greifen nur selten offen in Konflikte ein. Häufig wirken sie im Hintergrund, vermitteln den Willen ihrer Göttinnen, lenken Diener oder verändern Entscheidungen durch Täuschung und wohlgesetzte Worte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Zurückhaltung ist kein Zeichen geringer Macht. Sie erlaubt ihnen, unerkannt zu bleiben, bis ein Bündnis, ein Hof oder eine Gemeinschaft bereits nach ihrem Plan handelt."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung und Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rohe Gewalt genügt selten, weil Aelvar Abstand, Illusion und Manipulation nutzen. Wer ihnen begegnet, muss Wahrnehmung und Urteilsvermögen schützen und zuerst erkennen, welche Bilder oder Aussagen nicht der Wirklichkeit entsprechen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Verbindung zu den Göttinnen kann sie besonders gegen sakrale Angriffe abschirmen. Sobald Täuschungen gebrochen und Zauberbindungen erkannt sind, können gezielte magische Gegenmaßnahmen ihre Kontrolle schwächen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Aelvar treten organisiert auf; selbst einzelne Vertreterinnen handeln meist im Sinn einer größeren Linie.",
+            "Die sichtbare Schönheit der Aelvar dient in vielen Begegnungen als Teil ihrer Täuschung.",
+            "Matronen vereinen gesellschaftliche Führung und Zaubermacht in derselben Stellung.",
+            "Nyxara ist mit zwei überlieferten Linien verbunden: Nyxaren und Umbren."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

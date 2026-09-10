@@ -1,16 +1,16 @@
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-effect-rolls-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
 import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
 import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
+import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
 import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260905-cenyr-character-training-v1';
+import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260909-dragon-parent-v2';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
 import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
-import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js';
+import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 import {
   getCharacterArchiveAttackGroups,
   matchesCharacterArchiveKind
-} from './character-archive-attack-groups.js?v=20260905-cenyr-character-training-v1';
+} from './character-archive-attack-groups.js?v=20260909-dragon-parent-v2';
 import {
   CHARACTER_ARCHIVE_KINDS,
   cloneArchiveValue,
@@ -26,7 +26,7 @@ import {
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260905-damage-balance-v1';
+} from './character-archive-store.js?v=20260909-dragon-parent-v2';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },

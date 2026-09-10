@@ -70,8 +70,8 @@ test('Gildas erhält keine veraltete zweite Reaktion oder Aura aus Profil und Sz
   assert.equal(applyCombatResourceCosts(first.after, getActionPaymentCosts(claws, 'standard', overlaid)).sufficient, false);
 });
 
-test('alle 249 Drachentanz-Attacken sind bei Freischaltung regulär bezahlbar, die Mehrheit ohne Tagesressourcen', () => {
-  assert.equal(attacks.length, 249);
+test('alle 297 Drachentanz-Attacken sind bei Freischaltung regulär bezahlbar, die Mehrheit ohne Tagesressourcen', () => {
+  assert.equal(attacks.length, 297);
   let renewable = 0;
   for (const attack of attacks) {
     const profile = sanitizeCharacterCombatProfile({ progression: { level: attack.minimumLevel } });
@@ -81,7 +81,7 @@ test('alle 249 Drachentanz-Attacken sind bei Freischaltung regulär bezahlbar, d
     if (attack.costs.some(cost => cost.resourceId === 'special-action')) assert.ok(attack.costs.length > 1, attack.name);
     assert.ok(attack.costs.filter(cost => ['action', 'bonus-action', 'reaction'].includes(cost.resourceId)).every(cost => cost.amount <= 1), `${attack.name} hängt von keiner Poolwahl ab`);
   }
-  assert.ok(renewable > attacks.length * 0.5, `${renewable}/249 ohne Tagesressourcen`);
+  assert.ok(renewable > attacks.length * 0.5, `${renewable}/${attacks.length} ohne Tagesressourcen`);
 });
 
 test('Aura ersetzt auch bei Meisterattacken das gesamte Paket; Tagesressourcen bleiben über Beiträge verbraucht', () => {

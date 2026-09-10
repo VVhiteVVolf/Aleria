@@ -31,20 +31,28 @@ function lookup(entries, kind, reference) {
     .some(value => normalizeArchiveSearchText(value) === key)) || null;
 }
 
-function styleOwners(style, entries, explicitClass = '', allowedClassIds = []) {
+function profileAllowsForm(profile, formId) {
+  if (!formId) return true;
+  if (Array.isArray(profile.formAccess)) return profile.formAccess.some(access => access.formId === formId
+    && !['blocked', 'unavailable', 'eligibility-pending'].includes(access.status));
+  if (Array.isArray(profile.formIds)) return profile.formIds.includes(formId);
+  return true;
+}
+
+function styleOwners(style, entries, explicitClass = '', allowedClassIds = [], formId = '') {
   if (explicitClass) return [{ name: lookup(entries, 'class', explicitClass)?.name || explicitClass, entry: lookup(entries, 'class', explicitClass) }];
   const allowedClasses = new Set(Array.isArray(allowedClassIds) ? allowedClassIds : []);
   return entries.filter(entry => entry.kind === 'class').flatMap(entry => {
     const cultural = entry.data?.cultureClassProfiles;
     if (cultural?.length) return cultural.filter(profile => profile.combatStyleGrants.some(grant => grant.styleId === style.data?.id)
-        && (!allowedClasses.size || allowedClasses.has(profile.classId)))
+        && (!allowedClasses.size || allowedClasses.has(profile.classId)) && profileAllowsForm(profile, formId))
       .map(profile => ({ name: entry.data.cultures?.length > 1 ? `${entry.name} · ${profile.culture}` : entry.name, entry }));
     return entry.data?.combatStyleGrants?.some(grant => grant.styleId === style.data?.id) ? [{ name: entry.name, entry }] : [];
   });
 }
 
-function stylePaths(groups, style, entries, explicitClass = '', allowedClassIds = []) {
-  const owners = styleOwners(style, entries, explicitClass, allowedClassIds);
+function stylePaths(groups, style, entries, explicitClass = '', allowedClassIds = [], formId = '') {
+  const owners = styleOwners(style, entries, explicitClass, allowedClassIds, formId);
   const branches = owners.length ? owners.map(owner => ensureArchiveGroup(groups, 'class', owner.name, owner.entry).children) : [groups];
   return branches.map(branch => ensureArchiveGroup(branch, 'style', style.name, style));
 }
@@ -59,8 +67,14 @@ function canonicalPaths(groups, entry, entries) {
   const style = isDefinition && !form ? entry : lookup(entries, 'combat-style', styleId);
   if (!style) return [];
   const styles = stylePaths(groups, style, entries, placement.className || style.data?.archivePlacement?.className,
-    isDefinition ? [] : data.cenyrTraining?.allowedClassIds);
-  return form ? styles.map(group => ensureArchiveGroup(group.children, 'form', form.name, form)) : styles;
+    isDefinition ? [] : data.cenyrTraining?.allowedClassIds, form?.data?.id || data.combatStyleFormId);
+  if (!form) return styles;
+  const parentForm = lookup(entries, 'combat-style', form.data?.parentPathId);
+  return styles.map(group => {
+    const container = parentForm && parentForm.data?.parentStyleId === style.data?.id
+      ? ensureArchiveGroup(group.children, 'form', parentForm.name, parentForm) : group;
+    return ensureArchiveGroup(container.children, 'form', form.name, form);
+  });
 }
 
 function personalPaths(groups, entry) {

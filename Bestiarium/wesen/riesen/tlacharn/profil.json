@@ -1,0 +1,207 @@
+{
+  "id": "tlacharn",
+  "name": "Tlacharn",
+  "classification": "Riesenart · Verfluchter Baumeister der Tiefe",
+  "continent": "Morgorn",
+  "region": "Tiefe Stollen, eingestürzte Hallen und unterirdische Schmieden",
+  "folio": "III-R / 05",
+  "parentGroupId": "riesen",
+  "summary": "Tlacharn sind die kleinsten bekannten Riesen und die gefallenen Baumeister eines alten albischen Bergreichs. Nach ihrer Weigerung, Schutzsuchende während Zarakhuls Tyrannei aufzunehmen, wurden sie von Druiden verflucht und in Morgorns Tiefe gestoßen, wo Blindheit, technische Meisterschaft und jahrtausendealter Hass eine tyrannische Unterweltmacht formten.",
+  "quote": "Nenne ihn nie Tiefenzwerg; der Tlacharn erinnert sich länger an Beleidigungen als an Niederlagen.",
+  "quoteAttribution": "Warnung der morgorner Stollenmeister",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-tlacharn.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Tlacharn als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/tlacharn.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Tlacharn in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Tlacharn"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Tlacharn"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter albischer Riese und Tiefenbaumeister"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Druidischer Fluch nach verweigerter Zuflucht während Zarakhuls Tyrannei"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Altes Bergreich im späteren Morgorn"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Tiefe Minenschächte, eingestürzte Hallen, Kavernen und Schmieden"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, tyrannisch, rachsüchtig und gegenüber Oberfläche feindselig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Unabhängig vom Tageslicht in unterirdischen Arbeitszyklen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schmiedekunst, Mechanik, Tiefensinne und Herrschaft über niedere Kreaturen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Metall- und Steinkenntnis, technische Fallen, geschärfte Sinne und Organisation"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Blindheit, grelles Licht, Hass auf Beleidigungen und Bindung an die Tiefe"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Tlacharn-Relikte, Werkzeuge, Mechanikteile und seltene Schmiedearbeiten"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schmiedekunst",
+      "Tiefensinn",
+      "Mechanik",
+      "Herrschaftsdrang",
+      "Rachsucht",
+      "Lichtempfindlichkeit"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      9,
+      10,
+      9
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Tlacharn abgeleitet",
+    "intro": "Beim Tlacharn bewertet das Archiv Handwerk, unterirdische Wahrnehmung und Vergeltungswillen. Lichtempfindlichkeit bleibt trotz funktional genutzter Glut ein entscheidender Nachteil."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tlacharn überragen Menschen deutlich, gelten aber als kleinste Riesenart. Der Volksname Tiefenzwerge ist sachlich falsch und wird von ihnen als schwere Beleidigung verstanden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Ursprung liegt bei albischen Riesen. Fluch, Isolation und Hass machten aus einem technischen Hochvolk die Herrscher vergessener Tiefen."
+        }
+      ]
+    },
+    {
+      "id": "mythos",
+      "title": "Mythos und Fall",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vor Morgorns heutiger Besiedlung errichteten Tlacharn ein Bergreich mit fortschrittlicher Schmiedekunst, Mechanik und Stollenbau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während Zarakhuls Tyrannei verweigerte ihr Fürst Flüchtlingen selbst vor sicherem Untergang die Zuflucht. Druiden zerschlugen das Reich, verfluchten den Stamm und überließen die Berge jenen, die später Morgorn gründeten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tlacharn-Schmieden und Relikte wurden zum Fundament späteren Wohlstands. Für die Verstoßenen ist jede morgorner Errungenschaft deshalb ein gestohlener Teil ihrer Vergangenheit."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Über Jahrtausende erblindeten sie, während Gehör, Geruch und Erschütterungssinn schärfer wurden. Eindringlinge werden gejagt, versklavt oder gefressen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trolle und andere niedere Untergrundwesen werden durch Gewalt und Furcht beherrscht. Raubzüge an die Oberfläche dienen Versorgung und Vergeltung."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alte Minenschächte, natürliche Kavernen und eingestürzte Hallen tief unter Morgorn bilden ihre Reiche. Hitze, Rauch und fortwährendes Hämmern prägen die bewohnten Zonen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Feuer und Glut werden als Werkzeuge genutzt; Tageslicht und offene Oberflächen meiden sie."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit und Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Kern bleiben Tlacharn gefallene Baumeister. Sie verstehen Metall, Stein und Mechanik, erinnern sich an frühere Größe und hassen jene, die auf ihren Ruinen leben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Fallen und Bauwerke gleichen geringere Körpergröße aus. Ein Tlacharn-Revier ist deshalb gefährlicher als der Riese allein."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mechanische Geräusche, Luftzug und Bodenplatten werden vor jedem Schritt geprüft. Grelle Lichtquellen stören die angepassten Sinne, dürfen aber keine brennbaren Grubengase entzünden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Offene Beleidigung oder das sichtbare Tragen eines Relikts provoziert sofortige Vergeltung. Rückzugspfade müssen vor Betreten der Werkhallen gesichert sein."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Tiefenzwerg ist in Morgorn verbreitet und bei Tlacharn verhasst.",
+            "Fortschrittliche morgorner Schmiedetechniken gehen teilweise auf geborgene Tlacharn-Relikte zurück.",
+            "Einige Schmieden sollen seit Jahrtausenden ohne Tageslicht weiterarbeiten.",
+            "Rhythmisches Hämmern kann Arbeitsstätte, Warnsignal oder gezielte Irreführung sein."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

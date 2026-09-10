@@ -1,0 +1,413 @@
+{
+  "id": "sylvaniiden",
+  "name": "Sylvaniiden",
+  "classification": "Jäger, Diener und korrumpierte Naturwächter Zatrachs",
+  "continent": "Aleria",
+  "region": "Wälder und korrumpierte Naturstätten",
+  "folio": "IV / 08",
+  "parentGroupId": "infernale-linien",
+  "summary": "Sylvaniiden sind Kreaturen und Diener Zatrachs sowie seines Geweihten Arkeon, des Häschers. Sie verkörpern Wald, Jagd, Revier und Herausforderung; besonders gefährlich sind jene Ahnenbäume, Druidenseelen und Ahnentiere, deren früherer Schutzauftrag durch Zatrachs Korrumpierung gegen die Natur gewendet wurde.",
+  "quote": "Wo ein geweihter Wächter plötzlich Jagd auf seine Schützlinge macht, hat Zatrach den alten Eid bereits verdreht.",
+  "quoteAttribution": "Warnung aus einem silvanischen Hüterkreis",
+  "icon": {
+    "src": "../../../assets/icons/sylvaniiden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Sylvaniiden"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/sylvaniiden-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Korrumpierter Ahnenbaum vollständig sichtbar auf einer violett glühenden Bildtafel",
+    "caption": "Überlieferte Bildtafel · Von Zatrach korrumpierter Ahnenbaum"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Sylvaniiden"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Wald- und Jagdwesen"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Zatrach"
+    },
+    {
+      "label": "Geweihter",
+      "value": "Arkeon, der Häscher"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Korrumpierte Wächter, Sylvaniide und Sylvaniide Kreaturen"
+    },
+    {
+      "label": "Prägung",
+      "value": "Wald, Jagd, Revier und Herausforderung"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial; Eindringlinge und Störer werden zu Gejagten"
+    },
+    {
+      "label": "Korrumpierung",
+      "value": "Kann Ahnenbäume, Druidenseelen und Ahnentiere erfassen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Umgebungsmanipulation, Illusion und tiefe Naturbindung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, heilige Magie, Reinigungsmagie und zerstörte Altäre"
+    },
+    {
+      "label": "Erlösung",
+      "value": "Bei höheren Korrumpierten nur durch Fluchbruch, hohe Magie oder göttliche Hilfe"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Jagdtrieb",
+      "Reviermacht",
+      "Verderbnisgrad",
+      "Umgebungswandel",
+      "Fluchbindung",
+      "Feueranfälligkeit"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      9,
+      8,
+      8
+    ],
+    "intro": "Die Sylvaniiden-Tafel bewertet ihre Herrschaft über Jagdraum und Umgebung ebenso wie den Grad der Korrumpierung und die Bindung an den zugrunde liegenden Fluch.",
+    "source": "Aus territorialem Verhalten, Zatrachs Korrumpierung, Umgebungsmanipulation und den überlieferten Bann- und Reinigungsmitteln abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Zatrachs Wald- und Jagdordnung",
+    "title": "Bekannte Unterarten",
+    "intro": "Die Tafel unterscheidet korrumpierte Ahnenwächter, eigentliche Sylvaniide und kleinere sylvaniide Kreaturen. Unbenannte Stellen bleiben offen.",
+    "entries": [
+      {
+        "id": "korrumpierter-ahnenbaum",
+        "name": "Korrumpierter (Ahnenbaum)",
+        "region": "Korrumpierte Ahnenbäume und Druiden",
+        "description": "Ein einstiger Wächterbaum, dessen Wurzeln und Krone von Zatrachs violetter Verderbnis durchzogen werden.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-korrumpierter-ahnenbaum.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Korrumpierter (Ahnenbaum) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "korrumpierter-abkoemmling",
+        "name": "Korrumpierter (Abkömmling)",
+        "region": "Korrumpierte Ahnenbäume und Druiden",
+        "description": "Eine aus der verdorbenen Ahnenlinie hervorgegangene Baumgestalt, die als beweglicher Jäger und Diener Zatrachs fortbesteht.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-korrumpierter-abkoemmling.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Korrumpierter (Abkömmling) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "korrumpiertes-ahnentier",
+        "name": "Korrumpiertes (Ahnentier)",
+        "region": "Korrumpierte Ahnenbäume und Druiden",
+        "description": "Ein geheiligtes Tier, dessen natürliche Würde in eine geweihtragende, von Verderbnis umflammte Jagdform gezwungen wurde.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-korrumpiertes-ahnentier.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Korrumpiertes (Ahnentier) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "korrumpierter-ahnengeist",
+        "name": "Korrumpierter (Ahnengeist)",
+        "region": "Korrumpierte Ahnenbäume und Druiden",
+        "description": "Ein körperloser Ahnenwächter, dessen Erinnerung und Schutzauftrag von Zatrachs Einfluss gegen die Lebenden gewendet wurden.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-korrumpierter-ahnengeist.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Korrumpierter (Ahnengeist) vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "waldschrat",
+        "name": "Waldschrat",
+        "region": "Sylvaniide",
+        "description": "Eine hochgewachsene Waldgestalt aus Holz, Geweih und gebundenem Geist, die Zatrachs Jagdreviere bewacht.",
+        "status": "Dossier öffnen",
+        "href": "../../sylvaniiden/waldschrat/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-waldschrat.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Waldschrat vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "erlschrat",
+        "name": "Erlschrat",
+        "region": "Sylvaniide",
+        "description": "Ein vierbeiniger, geweihtragender Waldjäger, der sich zwischen Stämmen und Unterholz beinahe lautlos bewegt.",
+        "status": "Dossier öffnen",
+        "href": "../../sylvaniiden/erlschrat/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-erlschrat.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Erlschrat vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "zarok",
+        "name": "Zarok",
+        "region": "Sylvaniide",
+        "description": "Ein kräftiger Jäger mit schamanischer Prägung, dessen Ausrüstung und Haltung auf unmittelbare Verfolgung ausgelegt sind.",
+        "status": "Dossier öffnen",
+        "href": "../../ogroiden/zarok/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-zarok.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Zarok vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "zatrakin",
+        "name": "Zatrakin",
+        "region": "Sylvaniide",
+        "description": "Ein gerüsteter Diener Zatrachs, der Jagdinstinkt mit Waffenführung und geordnetem Vorgehen verbindet.",
+        "status": "Dossier öffnen",
+        "href": "../../sylvaniiden/zatrakin/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-zatrakin.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Zatrakin vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "hornling",
+        "name": "Hornling",
+        "region": "Sylvaniide Kreaturen",
+        "description": "Ein kleiner geweihtragender Speerträger, der größere Jäger durch Wachsamkeit und schnelle Vorstöße unterstützt.",
+        "status": "Dossier öffnen",
+        "href": "../../kobolde/hornling/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/sylvaniiden-hornling.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Hornling vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-06",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ],
+    "groups": [
+      {
+        "id": "korrumpierte",
+        "eyebrow": "Verdorbene Wächter",
+        "title": "Korrumpierte Ahnenbäume und Druiden",
+        "intro": "Einstige Bewahrer werden durch Zatrachs Einfluss zu Werkzeugen von Jagd und Verderbnis.",
+        "entryIds": [
+          "korrumpierter-ahnenbaum",
+          "korrumpierter-abkoemmling",
+          "korrumpiertes-ahnentier",
+          "korrumpierter-ahnengeist",
+          "offener-eintrag-01"
+        ]
+      },
+      {
+        "id": "sylvaniide",
+        "eyebrow": "Eigentliche Gattungen",
+        "title": "Sylvaniide",
+        "intro": "Vier Gattungen sind benannt; eine weitere Archivstelle bleibt offen.",
+        "entryIds": [
+          "waldschrat",
+          "erlschrat",
+          "zarok",
+          "zatrakin",
+          "offener-eintrag-02"
+        ]
+      },
+      {
+        "id": "sylvaniide-kreaturen",
+        "eyebrow": "Kleinere Diener und Begleiter",
+        "title": "Sylvaniide Kreaturen",
+        "intro": "Der Hornling ist überliefert, vier weitere Stellen bleiben unbenannt.",
+        "entryIds": [
+          "hornling",
+          "offener-eintrag-03",
+          "offener-eintrag-04",
+          "offener-eintrag-05",
+          "offener-eintrag-06"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sylvaniide ist der Oberbegriff für Kreaturen und Diener Zatrachs, des Jägers, sowie seines Geweihten Arkeon, des Häschers. Sie spiegeln Wald, Jagd und das Streben nach Herausforderung wider."
+        },
+        {
+          "type": "paragraph",
+          "text": "Menschen betrachten sie nicht immer als so wahllos zerstörerisch wie andere infernale Wesen. Dennoch wird jeder, der ihr Territorium betritt oder ihre Rituale stört, rasch zum Gejagten."
+        }
+      ]
+    },
+    {
+      "id": "praegung",
+      "title": "Zatrachs Prägung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatrach verleiht seinen Geschöpfen intensiven Jagdtrieb, territoriales Verhalten und eine tiefe Erfüllung im Überwinden von Widerstand. Dadurch reagieren sie nicht nur auf Hunger oder Gefahr, sondern auf jede wahrgenommene Herausforderung."
+        }
+      ]
+    },
+    {
+      "id": "korrumpierung",
+      "title": "Korrumpierung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatrachs Verderbnis kann Ahnenbäume, Druidenseelen und Ahnentiere erfassen. Die betroffenen Wächter verlieren ihre frühere Reinheit und setzen Schutz, Magie und Erinnerung im Dienst der Jagd ein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Korrumpierte Sylvaniiden zeigen damit, dass selbst die heiligsten Bewahrer der Wildnis gegen ihren ursprünglichen Auftrag gewendet werden können."
+        }
+      ]
+    },
+    {
+      "id": "erscheinungsformen",
+      "title": "Erscheinungsformen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die überlieferten Formen reichen vom gebundenen Baum und Geist über geweihtragende Ahnentiere bis zu Waldschraten, bewaffneten Dienern und kleinen Hornlingen. Ihre Silhouetten bewahren Spuren der Natur, aus der sie hervorgingen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung und Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer, heilige Magie und Reinigungsmagie gelten als wirksam. Wird ein Altar Zatrachs zerstört, kann dies die örtliche Macht seiner Diener schwächen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Illusionen und die Manipulation der Umgebung machen direkte Angriffe gefährlich. Wege, Deckung und vermeintlich sichere Lichtungen können Teil der Jagd sein."
+        }
+      ]
+    },
+    {
+      "id": "erloesung",
+      "title": "Fluchbruch und Erlösung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Korrumpierte Ahnenbäume und Druiden gehören zu den schwierigsten Gegnern. Ihre Zerstörung kann unmöglich sein oder die in ihnen gebundene Seele vernichten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dauerhafter Erfolg verlangt daher häufig hohe Magie, das gezielte Brechen des Fluchs oder göttliche Hilfe. Erlösung und Sieg sind bei diesen Wesen nicht immer dasselbe."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Das gezeigte Ahnentier bewahrt sein Geweih, trägt jedoch deutlich die violette Signatur der Korrumpierung.",
+            "Waldschrat und Erlschrat werden getrennt geführt, obwohl beide geweihartige Merkmale besitzen.",
+            "Zarok und Zatrakin erscheinen bewaffnet und verbinden Jagdinstinkt mit Werkzeuggebrauch.",
+            "Sechs Archivstellen der drei Untergruppen sind weiterhin unbekannt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

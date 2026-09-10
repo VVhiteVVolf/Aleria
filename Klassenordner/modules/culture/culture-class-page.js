@@ -1,21 +1,27 @@
-import { getCultureClassProgression } from './culture-class-progression.js';
+import { getCultureClassProgression } from './culture-class-progression.js?v=20260909-dragon-parent-v2';
+import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260909-dragon-parent-v2';
 import { describeTechniqueDamage } from '../../../AleriaAlmanach/modules/combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 
 function initializeCultureTraining(root) {
-  const select = root.querySelector('[data-role="training-level"]');
-  const summary = root.querySelector('[data-role="training-summary"]');
-  const weaponFilter = root.querySelector('[data-role="training-weapon"]');
-  const earnedOnly = root.querySelector('[data-role="training-earned-only"]');
-  const cards = [...root.querySelectorAll('[data-training-attack]')];
   function applyFilters() {
-    cards.forEach(card => {
+    const weaponFilter = root.querySelector('[data-role="training-weapon"]');
+    const earnedOnly = root.querySelector('[data-role="training-earned-only"]');
+    root.querySelectorAll('[data-training-attack]').forEach(card => {
       card.hidden = Boolean(weaponFilter?.value && card.dataset.trainingWeapon !== weaponFilter.value)
         || Boolean(earnedOnly?.checked && card.dataset.available !== 'true');
     });
   }
-  function render(level) {
-    const plan = getCultureClassProgression(root.dataset.cultureClass, level);
+  function render(level, foundationFormId = '', replaceMarkup = false) {
+    const plan = getCultureClassProgression(root.dataset.cultureClass, level, { foundationFormId });
     if (!plan) return;
+    if (replaceMarkup) {
+      const template = document.createElement('template');
+      template.innerHTML = renderCultureClassTraining(plan);
+      root.querySelector('.cenyr-training').replaceWith(template.content);
+    }
+    const select = root.querySelector('[data-role="training-level"]');
+    const summary = root.querySelector('[data-role="training-summary"]');
+    const cards = [...root.querySelectorAll('[data-training-attack]')];
     select.value = String(plan.selectedLevel);
     const available = new Set(plan.attackCatalog
       .filter(attack => attack.minimumLevel <= plan.selectedLevel)
@@ -60,17 +66,28 @@ function initializeCultureTraining(root) {
       if (Number(row.dataset.trainingRow) === plan.selectedLevel) row.setAttribute('aria-current', 'step');
       else row.removeAttribute('aria-current');
     });
+    root.querySelectorAll('[data-training-controls]').forEach(control => { control.hidden = false; });
+    return plan;
   }
-  select.addEventListener('change', () => {
-    render(select.value);
+  root.addEventListener('change', event => {
+    const role = event.target.dataset.role;
+    if (role === 'training-weapon' || role === 'training-earned-only') {
+      applyFilters();
+      return;
+    }
+    if (role !== 'training-level' && role !== 'training-foundation') return;
+    const level = root.querySelector('[data-role="training-level"]').value;
+    const foundation = root.querySelector('[data-role="training-foundation"]')?.value || '';
+    const plan = render(level, foundation, role === 'training-foundation');
+    if (!plan) return;
     const url = new URL(window.location.href);
-    url.searchParams.set('stufe', select.value);
+    url.searchParams.set('stufe', String(plan.selectedLevel));
+    if (plan.selectedFoundationFormId) url.searchParams.set('grundform', plan.selectedFoundationFormId);
+    else url.searchParams.delete('grundform');
     window.history.replaceState(null, '', url);
   });
-  render(new URL(window.location.href).searchParams.get('stufe') || 1);
-  root.querySelectorAll('[data-training-controls]').forEach(control => { control.hidden = false; });
-  weaponFilter?.addEventListener('change', applyFilters);
-  earnedOnly?.addEventListener('change', applyFilters);
+  const params = new URL(window.location.href).searchParams;
+  render(params.get('stufe') || 1, params.get('grundform') || '', Boolean(params.get('grundform')));
 }
 
 const root = document.querySelector('[data-culture-class]');

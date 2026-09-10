@@ -34,10 +34,11 @@ export const BESTIARY_CHAPTERS = [
   },
   {
     id: 'besondere', kind: 'tiere', number: 'II', title: 'Besondere Exemplare', subtitle: 'Nicht jedes Wesen ist wie seinesgleichen',
-    description: 'Ein eigener Platz für besondere Tiere, regionale Linien und individuelle Begegnungen. Den Anfang machen zwei überlieferte Namen.',
+    description: 'Ein eigener Platz für besondere Tiere, regionale Linien und individuelle Begegnungen. Den Anfang machen drei überlieferte Namen.',
     groups: [{ id: 'besondere-tiere', title: 'Individuelle Exemplare · Tiere', featured: true, entries: [
       entry('sturmbock', 'Sturmbock', 'Massives morgornisches Gebirgsreittier mit sicherem Felstritt und großer Angriffswucht.', 'Morgorn', './tiere/besondere/sturmbock/index.html'),
-      entry('mondlaeufer', 'Mondläufer', 'Lautloses Waldreittier Lichthains, das vertraute Pfade selbst bei Nacht sicher findet.', 'Lichthain', './tiere/besondere/mondlaeufer/index.html')
+      entry('mondlaeufer', 'Mondläufer', 'Lautloses Waldreittier Lichthains, das vertraute Pfade selbst bei Nacht sicher findet.', 'Lichthain', './tiere/besondere/mondlaeufer/index.html'),
+      entry('cuimhorn', 'Cuimhorn', 'Morgornisches Botentier mit außergewöhnlichem Personengedächtnis, Orientierungssinn und sicherem Felstritt.', 'Morgorn', './tiere/besondere/cuimhorn/index.html')
     ] }],
     specimenNote: 'Die Sammlung bleibt offen für weitere benannte Tiere, außergewöhnliche Funde und ihre Geschichten.'
   },
@@ -64,16 +65,16 @@ export const BESTIARY_CHAPTERS = [
     description: 'Linien und Einzelwesen, deren Überlieferungen von Morgath, Rissen, Pakten und infernaler Essenz erzählen.',
     groups: [
       { id: 'infernale-linien', title: 'Die infernalen Linien', entries: [
-        entry('kobolde', 'Kobolde', 'Ein Verzeichnis der Kobolde innerhalb der infernalen Wesen.'),
-        entry('ogroiden', 'Ogroiden', 'Die ogroiden Linien und ihre Erscheinungsformen.'),
-        entry('vampire', 'Vampire', 'Überlieferungen von Blut und Nacht.'),
-        entry('inferniiden', 'Inferniiden', 'Die feuergeprägten Wesen der infernalen Sammlung.'),
-        entry('aelvar', 'Aelvar', 'Die Aelvar und ihre dunkle Abstammung.'),
-        entry('unhold', 'Unhold', 'Eine eigene Tafel für die Unholde Alerias.'),
-        entry('nautiloiden', 'Nautiloiden', 'Die nautiloiden Wesen der infernalen Ordnung.'),
-        entry('sylvaniiden', 'Sylvaniiden', 'Eine eigene Sammlung der sylvaniiden Wesen.'),
-        entry('infestiden', 'Infestiden', 'Die infestiden Wesen und ihre Erscheinungsformen.'),
-        entry('psioniden', 'Psioniden', 'Die psioniden Wesen der infernalen Sammlung.')
+        entry('kobolde', 'Kobolde', 'Kobolde, Wichtel und Goblins sowie ihre Bindung an die infernalen Götter.', '', './wesen/gruppen/kobolde/index.html'),
+        entry('ogroiden', 'Ogroiden', 'Die infernalen Kriegslinien der Goraks, Ognir, Grimnaks, Bhalgar und Zaroks.', '', './wesen/gruppen/ogroiden/index.html'),
+        entry('vampire', 'Vampire', 'Bhaals blutgebundene Ordnung von den Vampirfürsten bis zu ihren niederen Sprossen.', '', './wesen/gruppen/vampire/index.html'),
+        entry('inferniiden', 'Inferniiden', 'Dagons Teufelshierarchie und Sanguines Dämonenlinie mit Fürsten, hohen Dienern und niederen Gefolgschaften.', '', './wesen/gruppen/inferniiden/index.html'),
+        entry('aelvar', 'Aelvar', 'Matriarchale Finsteralben und ihre fünf überlieferten Linien im Dienst infernaler Göttinnen.', '', './wesen/gruppen/aelvar/index.html'),
+        entry('unhold', 'Unholde', 'Zatrachs überformte Jagdgestalten, seltene Relikte und offene Stellen für einzigartige Unholde.', '', './wesen/gruppen/unhold/index.html'),
+        entry('nautiloiden', 'Nautiloiden', 'Thraalkin, Sirenen und Leviathane innerhalb Thraals wassergebundener Ordnung.', '', './wesen/gruppen/nautiloiden/index.html'),
+        entry('sylvaniiden', 'Sylvaniiden', 'Korrumpierte Naturwächter, Jagddiener und Kreaturen unter Zatrachs Einfluss.', '', './wesen/gruppen/sylvaniiden/index.html'),
+        entry('infestiden', 'Infestiiden', 'Nergaloths infernale Ausbreitungswesen mit der Naga als bislang benannter Gattung.', '', './wesen/gruppen/infestiden/index.html'),
+        entry('psioniden', 'Psioniden', 'Amons Schwarmimperium aus Lenkern, Suchern, Lauerern und wandelbaren Dienerformen.', '', './wesen/gruppen/psioniden/index.html')
       ] },
       { id: 'einzelne-infernale', title: 'Einzelne infernale Wesen', description: 'Besondere Wesen und individuelle Exemplare abseits der großen Linien.', entries: [
         entry('djinn', 'Djinn', 'Naraths gefallene Diener: gebundene Willenswesen zwischen astraler Gestalt, Magie und gefährlich genauem Gehorsam.', '', './wesen/infernale/djinn/index.html'),

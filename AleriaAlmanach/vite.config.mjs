@@ -1,15 +1,19 @@
 import { defineConfig } from 'vite';
+import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
+import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { UNIVERSAL_CLASS_IDS } from '../Klassenordner/modules/pages/universal-class-registry.js';
 import { CENYR_CLASS_IDS } from './modules/classes/cenyr/cenyr-class-ids.js';
-import { VENNYR_CLASS_IDS } from './modules/classes/vennyr/vennyr-class-registry.js';
+import { VENNYR_CLASS_IDS } from './modules/classes/vennyr/vennyr-class-ids.js';
 import { ALDRIMAR_CLASS_IDS } from './modules/classes/aldrimar/aldrimar-class-registry.js';
 import { ALBEN_CLASS_IDS } from './modules/classes/alben/alben-class-registry.js';
 import { NORDMAENNER_CLASS_IDS } from './modules/classes/nordmaenner/nordmaenner-class-registry.js';
+import { MORGORN_CLASS_IDS } from './modules/classes/morgorn/morgorn-class-registry.js';
 import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/profile-registry.mjs';
 import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-article-registry.mjs';
+import { preserveBookReaderLicense } from '../Bestiarium/modules/book-reader/book-license-build.mjs';
 import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natural-species-registry.mjs';
 import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
 import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS } from '../Bestiarium/modules/predator-profile/predator-registry.mjs';
@@ -18,6 +22,13 @@ import { PET_BREED_GROUP_IDS } from '../Bestiarium/modules/pet-breed/pet-breed-r
 import { DOG_PROFILE_IDS } from '../Bestiarium/modules/dog-profile/dog-profile-registry.mjs';
 import { CAT_PROFILE_IDS } from '../Bestiarium/modules/cat-profile/cat-profile-registry.mjs';
 import { REPTILE_PROFILE_IDS } from '../Bestiarium/modules/reptile-profile/reptile-profile-registry.mjs';
+import { CREATURE_GROUP_PROFILE_IDS } from '../Bestiarium/modules/creature-group-profile/creature-group-profile-registry.mjs';
+import { KOBOLD_PROFILE_IDS } from '../Bestiarium/modules/kobold-profile/kobold-profile-registry.mjs';
+import { INFERNIID_PROFILE_IDS } from '../Bestiarium/modules/inferniid-profile/inferniid-profile-registry.mjs';
+import { NAUTILOID_PROFILE_IDS } from '../Bestiarium/modules/nautiloid-profile/nautiloid-profile-registry.mjs';
+import { SPECIAL_ANIMAL_PROFILE_IDS } from '../Bestiarium/modules/special-animal-profile/special-animal-profile-registry.mjs';
+import { SYLVANID_PROFILE_IDS } from '../Bestiarium/modules/sylvanid-profile/sylvanid-profile-registry.mjs';
+import { PSIONID_PROFILE_IDS } from '../Bestiarium/modules/psionid-profile/psionid-profile-registry.mjs';
 
 const classicDirectories = ['modules', 'data', 'vendor', 'licenses'];
 const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.js', 'THIRD_PARTY_NOTICES.md'];
@@ -70,17 +81,23 @@ export default defineConfig({
       // Keep full-size gallery links aligned with Vite's processed image URLs.
       a: {
         srcAttributes: ['href'],
-        filter: ({ attributes }) => Object.hasOwn(attributes, 'data-bestiary-image-link')
+        filter: ({ attributes }) => ['data-bestiary-image-link', 'data-clergy-image-link', 'data-religion-image-link'].some(key => Object.hasOwn(attributes, key))
       }
     }
   },
-  plugins: [preserveClassicAlmanachScripts()],
+  plugins: [preserveClassicAlmanachScripts(), preserveBookReaderLicense()],
   build: {
     outDir: buildRoot,
     emptyOutDir: true,
+    assetsInlineLimit(filePath) {
+      // Reuse cacheable SVG files across the codex; keep XML entities out of HTML data URLs.
+      if (filePath.replace(/\\/g, '/').includes('/Religionen/assets/infernal-symbols/')) return false;
+    },
     rollupOptions: {
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
+        ...getReligionPageInputs(),
+        ...getClergyPageInputs(),
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),
         ...Object.fromEntries(CREATURE_PROFILE_IDS.map(id => [
           `bestiary-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen', id, 'index.html')
@@ -116,6 +133,28 @@ export default defineConfig({
         ...Object.fromEntries(REPTILE_PROFILE_IDS.map(id => [
           `bestiary-reptile-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/reptilien', id, 'index.html')
         ])),
+        ...Object.fromEntries(CREATURE_GROUP_PROFILE_IDS.map(id => [
+          `bestiary-creature-group-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/gruppen', id, 'index.html')
+        ])),
+        'bestiary-creature-group-erzteufel': resolve(workspaceRoot, 'Bestiarium/wesen/gruppen/erzteufel/index.html'),
+        ...Object.fromEntries(KOBOLD_PROFILE_IDS.map(id => [
+          `bestiary-kobold-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/kobolde', id, 'index.html')
+        ])),
+        ...Object.fromEntries(INFERNIID_PROFILE_IDS.map(id => [
+          `bestiary-inferniid-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/inferniiden', id, 'index.html')
+        ])),
+        ...Object.fromEntries(NAUTILOID_PROFILE_IDS.map(id => [
+          `bestiary-nautiloid-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/nautiloiden', id, 'index.html')
+        ])),
+        ...Object.fromEntries(SPECIAL_ANIMAL_PROFILE_IDS.map(id => [
+          `bestiary-special-animal-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/besondere', id, 'index.html')
+        ])),
+        ...Object.fromEntries(SYLVANID_PROFILE_IDS.map(id => [
+          `bestiary-sylvanid-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/sylvaniiden', id, 'index.html')
+        ])),
+        ...Object.fromEntries(PSIONID_PROFILE_IDS.map(id => [
+          `bestiary-psionid-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen/psioniden', id, 'index.html')
+        ])),
         classes: resolve(workspaceRoot, 'Klassenordner/Klassenseite.html'),
         ...Object.fromEntries(UNIVERSAL_CLASS_IDS.map(id => [
           `class-${id}`, resolve(workspaceRoot, 'Klassenordner/Basisklassen', id, 'index.html')
@@ -134,6 +173,9 @@ export default defineConfig({
         ])),
         ...Object.fromEntries(NORDMAENNER_CLASS_IDS.map(id => [
           `class-nordmaenner-${id}`, resolve(workspaceRoot, 'Klassenordner/Nordmaenner', id, 'index.html')
+        ])),
+        ...Object.fromEntries(MORGORN_CLASS_IDS.map(id => [
+          `class-morgorn-${id}`, resolve(workspaceRoot, 'Klassenordner/Morgorn', id, 'index.html')
         ]))
       }
     }

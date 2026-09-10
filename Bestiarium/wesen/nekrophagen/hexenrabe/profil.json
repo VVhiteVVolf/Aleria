@@ -1,0 +1,223 @@
+{
+  "id": "hexenrabe",
+  "name": "Hexenrabe / Rabenhexe",
+  "classification": "Nekrophag · Verdorbene Rabenhexe",
+  "continent": "Aleria",
+  "region": "Sümpfe, Wälder und verlassene Ruinen",
+  "folio": "III-N / 11",
+  "parentGroupId": "nekrophagen",
+  "summary": "Hexenraben sind abscheuliche, untote Wesen, die einst mächtige Hexen waren, bevor sie ihre Menschlichkeit in dunklen Ritualen opferten. Diese Kreaturen sind eine unheilige Verschmelzung von Mensch und Vogel, gezeichnet von nekrotischer Energie und unstillbarer Gier nach Macht.",
+  "quote": "Wenn die Stimme im kahlen Geäst deinen Wunsch kennt, hat die Rabenhexe längst gehört, welchen Preis du zahlen würdest.",
+  "quoteAttribution": "Warnspruch über dunkle Pakte und Hexenraben",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-hexenrabe.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Hexenrabe / Rabenhexe als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/hexenrabe.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Hexenrabe / Rabenhexe",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Hexenrabe / Rabenhexe"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Hexenrabe / Rabenhexe"
+    },
+    {
+      "label": "Typ",
+      "value": "Untote Hexe; menschlich-vogelartige Paktform"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Junge Hexen, die durch dunkle Pakte ihre Jugend und Seele opfern"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aus Orten, an denen dunkle Magie praktiziert wird, oft Sümpfe, Wälder, verlassene Ruinen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verfallene Ruinen, magische Sümpfe, verfluchte Wälder"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Heimtückisch, rachsüchtig, manipulativ"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Hauptsächlich nachts aktiv, nutzen Dunkelheit als Deckung"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Flüche wirken, Illusionen schaffen, Essenz der Lebenden entziehen, Kontrolle über Untote"
+    },
+    {
+      "label": "Stärken",
+      "value": "Mächtige Magie, Fähigkeit zur Tarnung, resistent gegen physische Angriffe"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Anfällig für heilige Magie, Licht und Feuer, physisch zerbrechlich"
+    },
+    {
+      "label": "Beute",
+      "value": "Magische Essenzen, verfluchte Relikte, Knochen und Federn mit magischen Eigenschaften"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Fluchmagie",
+      "Illusion",
+      "Flugkraft",
+      "Seelenverfall",
+      "Heimlichkeit",
+      "Paktbindung"
+    ],
+    "values": [
+      9,
+      8,
+      7,
+      10,
+      8,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Hexenrabe / Rabenhexe abgeleitet",
+    "intro": "Das Hexenraben-Diagramm bewertet die Folgen eines dunklen Pakts: mächtige Flüche und Täuschung bei fortschreitendem körperlichem und seelischem Verfall."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hexenraben sind abscheuliche, untote Wesen, die einst mächtige Hexen waren, bevor sie ihre Menschlichkeit in dunklen Ritualen opferten. Diese Kreaturen sind eine unheilige Verschmelzung von Mensch und Vogel, gezeichnet von nekrotischer Energie und unstillbarer Gier nach Macht. Mit verzerrten, vogelartigen Zügen und der Fähigkeit, dunkle Magie zu wirken, lauern Hexenraben in verlassenen Ruinen, tiefen Wäldern und nebligen Sümpfen, wo sie ihre finsteren Pläne schmieden und ahnungslose Opfer in den Tod locken."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hexenraben entstehen aus den düsteren Ambitionen junger Hexen, die ihre Jugend und Seele für Macht opfern. Diese Hexen suchen oft nach schnellen Wegen zu arkaner Stärke und wenden sich dabei an dunkle Mächte, mit denen sie unheilige Pakte eingehen. Im Austausch für übernatürliche Fähigkeiten gewähren sie diesen Mächten ihre Lebenskraft, ihre Seele oder ihre Zukunft – ein Handel, der zunächst verlockend erscheint, jedoch mit einem grausamen Schicksal endet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Hexen erhalten durch diesen Pakt mächtige magische Fähigkeiten, insbesondere in den Bereichen Flüche, Nekromantie und Illusion. Doch mit der Zeit beginnen sie, die Kosten ihres Paktes zu spüren. Ihre Körper verfallen langsam, und sie zeigen erste Anzeichen einer verstörenden Transformation. Ihre Haut wird ledrig und verfärbt sich, ihre Knochen verformen sich, und ihre Züge werden vogelartig. Ihre einstigen Stimmen verwandeln sich in ein schauriges Kreischen, das wie das Krächzen von Krähen klingt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Verwandlung ist schleichend und erfolgt über Jahrhunderte. Mit jedem Ritual und jedem Opfer, das sie für ihre Macht darbringen, verlieren sie ein weiteres Stück ihrer Menschlichkeit. Die dunkle Magie, die sie einst beherrschten, wird zu einem Fluch, der ihren Geist und Körper verdirbt. Schließlich vollenden sie ihre Transformation und werden zu sogenannten Hexenraben – grotesken Mischwesen aus Mensch und Vogel, erfüllt von nekrotischer Energie und unheiliger Magie."
+        },
+        {
+          "type": "paragraph",
+          "text": "In dieser Form verlieren sie die letzten Reste ihres früheren Selbst. Sie sind nicht länger nur Hexen, sondern untote Kreaturen, die von den Mächten, denen sie dienten, vollständig beansprucht wurden. Ihre neuen, untoten Eigenschaften machen sie zu noch gefährlicheren Gegnern: Sie können Flüche wirken, sich durch Illusionen tarnen und die Essenz der Lebenden stehlen, um ihre verfallenen Körper zu erhalten."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hexenraben sind listige, berechnende Kreaturen, die ihre Gegner durch Manipulation, Täuschung und Magie überwältigen. Sie agieren meist aus dem Verborgenen, nutzen ihre magischen Fähigkeiten und die Dunkelheit ihrer Umgebung, um Feinde zu verwirren und zu schwächen, bevor sie zuschlagen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Verhalten ist geprägt von Heimtücke und Rachsucht. Hexenraben sind Meisterinnen darin, ihre Opfer in die Falle zu locken, oft durch Illusionen oder verführerische Flüche, die ihre wahre Gestalt verschleiern. Sie agieren nicht impulsiv, sondern planen ihre Angriffe gezielt, um maximale Wirkung zu erzielen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer untoten Natur besitzen Hexenraben Fragmente ihrer früheren Intelligenz und magischen Fähigkeiten. Diese Kreaturen sind hinterhältig und bevorzugen es, Feinde aus der Distanz zu schwächen oder zu verfluchen, anstatt direkt in den Kampf zu ziehen. Sie führen ihre Angriffe mit der Geduld und Kalkulation durch, die nur ein Wesen entwickeln kann, das Jahrhunderte überlebt hat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Physisch sind Hexenraben vogelartig und grotesk, mit hakenförmigen Klauen, einer verzerrten Haltung und zerrissenen Gewändern, die oft von Federn und Knochen geschmückt sind. Ihre Stimmen sind ein unheilvolles Kreischen, das ihre Opfer nicht nur einschüchtert, sondern oft auch als magisches Werkzeug dient, um Panik oder Verwirrung zu stiften."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hexenraben halten sich bevorzugt in dunklen, abgeschiedenen Orten auf, wie verfluchten Wäldern, nebligen Sümpfen oder verfallenen Ruinen. Diese Umgebungen bieten ihnen nicht nur Schutz, sondern auch die nötige Dunkelheit, um ihre Illusionen und Magie zu verstärken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten wird oft durch unheilvolle Vorzeichen angekündigt: krächzende Geräusche, plötzlicher Nebel oder ein unerklärliches Gefühl von Bedrohung. Hexenraben meiden belebte Gegenden und Tageslicht, da dieses ihre Schwächen offenlegt, und agieren meist bei Nacht, wo sie ihre Umgebung zu ihrem Vorteil nutzen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Anwesenheit hinterlässt oft magische Spuren wie verwelkte Pflanzen, verfluchte Gegenstände oder seltsame, vogelartige Markierungen in der Umgebung. Hexenraben verwandeln jeden Ort, den sie bewohnen, in ein Zentrum der Verderbnis und Furcht."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mächtige Magie: Hexenraben beherrschen Flüche, Illusionen und nekrotische Energien.",
+            "Tarnung: Sie nutzen Dunkelheit und Magie, um ihre wahre Gestalt zu verbergen.",
+            "Manipulation: Täuschung und psychologische Angriffe gehören zu ihren bevorzugten Waffen.",
+            "Untote Resistenz: Immun gegen Krankheiten, Schmerzen und viele physische Angriffe."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Heilige Magie: Göttliche Kräfte und geweihte Waffen fügen ihnen großen Schaden zu.",
+            "Lichtempfindlichkeit: Sonnenlicht oder magisches Licht schwächt ihre Magie und Tarnung.",
+            "Physische Zerbrechlichkeit: Trotz ihrer Magie sind sie körperlich schwach und verletzlich.",
+            "Feuer: Zerstört ihre nekrotische Energie und verbrennt ihre fragile Hülle."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Federn eines Hexenraben zerfallen häufig erst Stunden nach seinem Tod.",
+            "Seine Stimme kann zwischen menschlicher Rede und heiserem Krächzen wechseln.",
+            "Verlassene Ritualplätze verraten sich durch Federn, Knochen und unvollständige Schutzzeichen.",
+            "Ein gebrochener Pakt schwächt die Rabenhexe, löst die nekrotische Verwandlung jedoch nicht automatisch."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

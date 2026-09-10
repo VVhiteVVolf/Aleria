@@ -1,0 +1,212 @@
+{
+  "id": "waldschrat",
+  "name": "Waldschrat",
+  "classification": "Dämonischer Hirt der Wildnis und Verkörperung von Zatrachs Zorn",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Wälder, Wüsten, Tundren und Gebirge",
+  "folio": "IV / 08-A",
+  "parentGroupId": "sylvaniiden",
+  "summary": "Der Waldschrat ist ein dämonischer Hirt uralter Reviere und ein heiliger Priester Zatrachs. Aus Wurzel, Fluch, Knochen und dem überschäumenden Hass des Jägers geboren, verschmilzt er mit seinem Territorium, wandelt seine Gestalt und kehrt zurück, solange sein bindendes Totem besteht.",
+  "quote": "Der Zorn des Waldes, entzündet durch Zatrachs Willen.",
+  "quoteAttribution": "Alte Legende über den dämonischen Hirt der Wildnis",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/sylvaniiden-waldschrat.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Waldschrat vollständig sichtbar als humanoides Totemwesen aus Holz, Knochen und Geweih",
+    "caption": "Artenfigur · Waldschrat"
+  },
+  "hero": {
+    "src": "../../../assets/sylvanid-profiles/waldschrat-hero.webp",
+    "width": 683,
+    "height": 1024,
+    "alt": "Waldschrat vollständig sichtbar bei der Jagd auf einen Waldläufer und dessen Hunde",
+    "caption": "Überlieferte Szenentafel · Der Hirt des Waldes stellt einen Eindringling"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Waldschrat"
+    },
+    {
+      "label": "Typ",
+      "value": "Dämonischer Hirt der Wildnis"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus Zatrachs unermesslichem Hass und Jagdbesessenheit geboren"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Wurzel, Fluch und Knochen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Wälder, Wüsten, Tundren und Gebirge; das Revier breitet sich aus"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Extrem territorial, menschenfeindlich und von Jagd aus Verachtung getrieben"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Jederzeit; bevorzugt Dämmerung und Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Polymorphie, Naturflüche, Spiegelillusion, Jagdmagie und territoriale Verschmelzung"
+    },
+    {
+      "label": "Bindung",
+      "value": "Kehrt zurück, solange Totem und Ritualort bestehen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Gestaltwandlung, Naturbeherrschung, Wahnsinnsdruck und Wiederkehr"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geweihte Waffen, Zerstörung des Totems und Versiegelung des Ritualortes"
+    },
+    {
+      "label": "Beute",
+      "value": "Menschenopfer, Tierkadaver, Ritualgegenstände und verfluchte Artefakte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Reviermacht",
+      "Totemrückkehr",
+      "Gestaltwandel",
+      "Naturflüche",
+      "Jagdbesessenheit",
+      "Wahnsinnsdruck"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      9,
+      10,
+      8
+    ],
+    "intro": "Diese Tafel bewertet den Waldschrat nach seiner Bindung an das Revier, der Rückkehr über sein Totem und den Mitteln, mit denen er Eindringlinge jagt und zermürbt.",
+    "source": "Aus territorialer Verschmelzung, Totembindung, Polymorphie, Naturbeherrschung, Jagdtrieb und den überlieferten Halluzinationen in seiner Nähe abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Waldschrat ist kein neutraler Waldgeist. Er ist ein dämonischer Hirt uralter Reviere, ein heiliger Priester Zatrachs und ein Feind der Zivilisation. Feuer, Axt, Acker und menschliche Sprache gelten ihm als Zeichen eines Parasiten, der gehetzt und der Erde zurückgegeben werden muss."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er jagt nicht aus Hunger. Seine Gewalt entspringt Besitzdenken und Verachtung: Jeder Mensch in seinem Revier ist Eindringling, jeder Schritt eine Kriegserklärung."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und Wesen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Waldschrate wurden nicht durch einen bewussten Schöpfungsakt geformt. Die Überlieferung nennt sie Ausrutscher der Schöpfung: Furien aus dem Überfluss von Zatrachs Hass, Wildheit und manischer Jagdbesessenheit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie sind weder gewöhnliche Geister noch nachträglich beschworene Dämonen. Ein Waldschrat ist ein isolierter göttlicher Gedanke, der in Wurzel, Fluch und Knochen Gestalt gewann und deshalb frei in seiner Grausamkeit, aber unentrinnbar an seinen Ursprung gebunden ist."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung und Gestaltwandel",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine typische Gestalt gleicht einem aufrechten Totem aus morschem Holz, Lederfetzen, Flechten, Pilzgewebe, Tierknochen und verrottetem Pelz. Ein Geweih oder eine Schädelkrone sitzt über dem knarrenden Leib."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Gestalt ist trügerisch. Der Schrat kann Hirsch, Vogel, kriechender Nebel, ein alter Mensch mit leeren Augen oder eine vertraute Gestalt werden. Er imitiert Tiere, tarnt sich als Geist und kopiert Menschen, wenn dies die Jagd erleichtert."
+        }
+      ]
+    },
+    {
+      "id": "territorium",
+      "title": "Territorium und Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Waldschrat lebt nicht bloß in seinem Revier; sein Bewusstsein verschmilzt damit. Bäume, Sträucher und Steine werden zu Teilen seines Besitzes. Bewegungen am Rand des Blickfelds, Stimmen im Unterholz und eine plötzlich schwere Luft kündigen seine Nähe an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Ziel ist die Ausbreitung dieser Sphäre bis an die Schwelle der Städte. Dabei kann er Täuschung, Tiergestalt oder offene Gewalt wählen. Das wilde Gesetz lautet stets: jagen, hassen, töten."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum und Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Name beschreibt nur die bekannteste Form. Überliefert sind auch Wüstenschrate, die mit Sandstürmen und leeren Knochen sprechen, Tundraschrate aus Eis, Wind und Hunger sowie Gebirgsschrate, die Steinmeere bewohnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allen Formen ist das Wuchern gemeinsam. Der Waldschrat trägt den Hain nach außen, der Wüstenschrat die Dürre. Ihr Territorium bleibt lebendig und sucht beständig neue Flächen, bis dort nichts Menschliches mehr besteht."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zerschlagene Körper wachsen aus Holz, Harz, Pilzgewebe, Sporen und Willensresten nach. Gegen Feuer kann der Schrat in eine spektrale Form ausweichen; seine Wunden verlieren Teer und Harz statt Blut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Polymorphie, Spiegelillusion, Naturflüche und spirituelle Jagdmagie lassen Pilze aus seinem Atem sprießen und Dornengestrüpp aus seinen Schritten wachsen. Er bewegt sich durch Bäume, spricht mit Tieren und kann Stimmen sowie Halluzinationen aus dem Wurzelwerk senden."
+        }
+      ]
+    },
+    {
+      "id": "totem",
+      "title": "Totem, Bannung und Begegnung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Solange das erste Ritualobjekt als Herz des Schrats besteht, kann sein Körper nicht endgültig vernichtet werden. Geweihte Waffen verletzen ihn, lösen die Bindung jedoch allein nicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein dauerhafter Bann verlangt, Totem und Entstehungsort zu finden, zu reinigen, zu zerstören oder zu versiegeln. Ohne diesen Schritt kehrt der Schrat zurück und setzt die Jagd fort."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Waldschrate gelten als unbeabsichtigte Ausbrüche aus Zatrachs überschäumendem Hass.",
+            "Finstere Rituale können einen Schrat hervorrufen; Kontrolle über das entstandene Wesen versprechen sie nicht.",
+            "Wüsten-, Tundra- und Gebirgsschrate tragen ihr jeweiliges Territorium ebenso nach außen wie ein Waldschrat seinen Hain.",
+            "Die Bezeichnung Wächter beschreibt Besitzanspruch und Grausamkeit, nicht Fürsorge."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "alerischer-klerus",
+  "title": "Der Alerische Klerus",
+  "subtitle": "Sechs Berufungen · Ein gemeinsamer Glaube",
+  "collectionId": "goettlicher-kreis",
+  "castes": ["kasten/priester.json", "kasten/moenche.json", "kasten/paladine.json", "kasten/asketen.json", "kasten/magister.json", "kasten/gelaeuterte.json"],
+  "deities": ["ordan", "mariel", "baldran", "maldras", "sylvana", "lyris", "tharim", "orin", "kharon", "nimue", "rhea", "zephyr", "aelthar", "thyrael", "tethyra", "jovena", "auron", "selarion", "orith"],
+  "overviewSource": "gemeinschaften.json",
+  "facultiesSource": "wissenschaften.json",
+  "source": {
+    "attachment": "1ab18eae-96bd-4673-8e76-7b7a0d493944",
+    "note": "Neue Klerusordnung nach Nutzervorgabe. Gottesspezifische Ausprägungen und Rangbezeichnungen anhand dieser Vorgabe und der aktuellen Götterprofile ausgearbeitet. Zünfte ausschließlich bei Mönchen und Nonnen."
+  }
+}

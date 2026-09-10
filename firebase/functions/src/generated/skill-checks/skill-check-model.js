@@ -1,7 +1,7 @@
 import {
   getSkillTotal,
   resolveCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
 

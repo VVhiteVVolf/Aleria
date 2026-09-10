@@ -1,10 +1,10 @@
-import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
+import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import {
   createDrachentanzTechnique,
   movementEffect,
   secondarySave,
   temporaryCondition
-} from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
+} from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const F = DRACHENTANZ_FORM_IDS.jungdrache;
 const CANTREF_WEAPONS = { cantref: ['spear', 'lance', 'partisan', 'trident', 'halberd'] };

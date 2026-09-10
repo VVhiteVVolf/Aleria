@@ -1,0 +1,178 @@
+{
+  "id": "lustling",
+  "name": "Lustling",
+  "classification": "Sanguinarer Quasit und niederer Inferniide",
+  "continent": "Infernale Sphären",
+  "region": "Sanguines Reich der Ausschweifung",
+  "folio": "IV / 01-J",
+  "parentGroupId": "kobolde",
+  "summary": "Lustlinge sind unauffällige Quasiten in Sanguines Dienerschaft. Sie bereiten Rituale vor, bewachen Gemächer, überbringen Nachrichten und beobachten schweigend; eigene Begierden treten hinter einer beinahe zwanghaften Pflicht zurück, die sie zu verlässlichen Augen und Händen mächtigerer Herren macht.",
+  "quote": "Der Lustling steht nie im Mittelpunkt des Festes, doch am Morgen weiß er, wer gelogen, begehrt und heimlich befohlen hat.",
+  "quoteAttribution": "Notiz aus einem beschlagnahmten Hexerjournal",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Quasit „Lustling“"
+    },
+    {
+      "label": "Typ",
+      "value": "Sanguinarer niederer Inferniide"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Sanguines Willen aus verdorbenen Seelen geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Sanguines Reich der Ausschweifung"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Opulente Domänen sowie die Häuser von Zauberern, Hexern und Magiern"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Gefügig, unterwürfig, aufmerksam und dienstbeflissen"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Nach dem Rhythmus der jeweiligen Herrschaft"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Unauffälligkeit, Beobachtung, Koordination und lautloser Botendienst"
+    },
+    {
+      "label": "Stärken",
+      "value": "Akribie, Belastbarkeit und Widerstand gegen Verführung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Physisch schwach, befehlsabhängig und anfällig für göttliche Magie"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Verdorbene Seelenessenz und gesammelte Informationen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Dienstinstinkt",
+      "Unauffälligkeit",
+      "Beobachtungsgabe",
+      "Aufgabentreue",
+      "Geistresistenz",
+      "Kampfkraft"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      7,
+      2
+    ],
+    "source": "Aus dienender Rolle, lautloser Bewegung, genauer Beobachtung, psychischer Widerstandskraft und geringer physischer Stärke abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Lustling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lustling bildet die niedrige, dienende Stufe in Sanguines Reihen. Während Sukkuben und Inkuben Begierden lenken, bleibt der kleine Quasit am Rand und sorgt als Butler, Aufpasser, Bote oder Spion für einen reibungslosen Ablauf."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seine kleine, dürre Gestalt wirkt unscheinbar und für einen Inferniiden beinahe harmlos. Große Augen, lange Ohren und schlichte Kleidung unterstützen eine Erscheinung, die überall anwesend sein kann, ohne den Mittelpunkt zu beanspruchen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lustlinge besitzen kaum eigene Ambitionen. Sie beobachten schweigend, erkennen Wünsche ihrer Herrschaft früh und erledigen mehrere Aufgaben mit beinahe zwanghafter Genauigkeit. In Konflikten warten sie auf Befehle und meiden eigenmächtige Angriffe."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie bewohnen Sanguines opulente Domäne und treten in der Welt der Sterblichen als Gehilfen von Zauberern, Hexern oder Magiern auf. Dort bereiten sie Rituale vor, reichen Utensilien und halten verborgene Haushalte in Ordnung."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unauffällige Bewegung, genaue Beobachtung und schnelle Koordination machen sie zu zuverlässigen Augen und Ohren. Da sie die Freuden ihrer Herren nicht selbst teilen, widerstehen sie manchen Formen psychischer Verführung besser als erwartet."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Körperlich ist ein Lustling schwach und gegen göttliche Magie empfindlich. Eine Begegnung wird gefährlicher, wenn seine Beobachtungen einen mächtigen Meister erreichen; Nachrichtenwege und erteilte Befehle sind daher wichtiger als der direkte Kampf."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Lustling merkt sich die bevorzugte Reihenfolge von Ritualgeräten schon nach einer einzigen Vorbereitung.",
+            "Er sammelt Informationen meist nebenbei, während andere ihn für bloßes Personal halten.",
+            "Unerteilte Aufgaben machen Lustlinge sichtbar unruhiger als unmittelbare Gefahr."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/lustling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Lustling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/lustling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Lustling",
+    "caption": "Überlieferte Bildtafel · Lustling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

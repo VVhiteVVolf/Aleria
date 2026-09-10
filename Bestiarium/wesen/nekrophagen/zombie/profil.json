@@ -1,0 +1,275 @@
+{
+  "id": "zombie",
+  "name": "Zombie",
+  "classification": "Nekrophag · Willenlose Leichenhülle",
+  "continent": "Aleria",
+  "region": "Schlachtfelder, Friedhöfe und Massengräber",
+  "folio": "III-N / 01",
+  "parentGroupId": "nekrophagen",
+  "summary": "Zombies sind die bekanntesten und zugleich schlichtesten Formen von Untoten. Als willenlose Kreaturen, die durch Magie oder Flüche wiederbelebt wurden, sind sie weder besonders intelligent noch strategisch. Ihr Hauptzweck besteht darin, als Werkzeuge oder Waffen zu dienen, getrieben von einem unkontrollierbaren Hunger nach Leben.",
+  "quote": "Wenn der erste Tote wieder geht, frage nicht, wer er war; frage, wessen Befehl er trägt.",
+  "quoteAttribution": "Lehrsatz der Totengräber über belebte Leichen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-zombie.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Zombie als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/zombie.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Zombie",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Zombie"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Zombie"
+    },
+    {
+      "label": "Typ",
+      "value": "Untoter; belebte Leichenhülle"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Niedere Nekromantie, Flüche, magische Krankheiten oder Verderbnis"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Schlachtfelder, Friedhöfe, Massengräber"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verfallene Städte, verwüstete Regionen, Orte mit vielen Toten"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Triebgesteuert, aggressiv, ohne Intelligenz, willenlos"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv bei Tag und Nacht, keine Ruhephasen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Unermüdlich im Angriff, schiere Zahl als größte Gefahr"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe körperliche Zähigkeit, Schmerzunempfindlichkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsam, leicht zu kontrollieren, anfällig für Feuer und heilige Magie"
+    },
+    {
+      "label": "Beute",
+      "value": "Gering: Lumpen, einfache Waffen, selten persönliche Gegenstände"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Hordenwirkung",
+      "Gehorsam",
+      "Zähigkeit",
+      "Geschwindigkeit",
+      "Eigenwille",
+      "Feueranfälligkeit"
+    ],
+    "values": [
+      9,
+      10,
+      7,
+      2,
+      1,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Zombie abgeleitet",
+    "intro": "Das Zombie-Diagramm bewertet die Gefahr der Masse und der fremden Kontrolle. Hohe Feueranfälligkeit bezeichnet hier eine besonders wirksame Gegenmaßnahme."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies sind die bekanntesten und zugleich schlichtesten Formen von Untoten. Als willenlose Kreaturen, die durch Magie oder Flüche wiederbelebt wurden, sind sie weder besonders intelligent noch strategisch. Ihr Hauptzweck besteht darin, als Werkzeuge oder Waffen zu dienen, getrieben von einem unkontrollierbaren Hunger nach Leben. Trotz ihrer Einfachheit stellen sie eine erhebliche Gefahr dar, insbesondere durch ihre schiere Zahl und ihren unerschütterlichen Drang, alles Lebende anzugreifen. Sie sind ein Sinnbild für die Entweihung des Todes und die verdorbene Macht der Nekromantie."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies haben ihren Ursprung in den niederen Praktiken der Nekromantie, einer dunklen und verbotenen Kunst, die das natürliche Gleichgewicht zwischen Leben und Tod stört. Ursprünglich wurden sie als einfache Diener erschaffen, um körperliche Arbeit zu verrichten oder Schlachtfelder zu durchqueren, ohne Rücksicht auf Verluste. Im Laufe der Zeit wurden sie jedoch zu einem Symbol für die Gefahr unkontrollierter Magie und die Missachtung der Totenruhe."
+        },
+        {
+          "type": "paragraph",
+          "text": "In vielen Kulturen gelten Zombies als eine der schändlichsten Formen der Wiederbelebung, da sie jegliche Individualität und Persönlichkeit verlieren, die sie im Leben besaßen. Ihre Körper sind von Verfall gezeichnet, ihre Seelen gebunden oder vollständig ausgelöscht. Besonders in Regionen, in denen Tote nicht ordnungsgemäß bestattet werden, häufen sich die Berichte über ihre Erscheinung. Friedhöfe, Schlachtfelder und Massengräber gelten als die häufigsten Brutstätten für diese Kreaturen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zombies entstehen nicht nur durch absichtliche Magie, sondern auch durch unachtsame Handlungen. Wenn Nekromantie unkontrolliert angewendet wird oder dunkle Flüche eine Region heimsuchen, können die Leichen der Toten spontan als Zombies auferstehen. Besonders gefährlich ist dies in Seuchengebieten oder verfluchten Landstrichen, wo die Menge der Verstorbenen die Kontrolle über diese Kreaturen nahezu unmöglich macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Erschaffung von Zombies wird oft als eine respektlose Entweihung angesehen, die die Götter der Toten erzürnt. In einigen Kulturen wird dies als ein Frevel gegen die natürliche Ordnung betrachtet, und diejenigen, die für solche Praktiken verantwortlich sind, werden als Ketzermagier oder Todsünder verurteilt. Dennoch bleibt die Verlockung groß, die Toten als willenlose Diener oder Krieger einzusetzen, insbesondere in kriegerischen Zeiten oder in der Not."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies sind primitive und triebgesteuerte Untote, die von einem einzigen Ziel beherrscht werden: dem Angriff auf alles Lebende. Sie besitzen weder Intelligenz noch komplexe Verhaltensmuster, sondern folgen blind der Magie oder dem Fluch, der sie erschaffen hat. Obwohl sie oft als stumpfe Kreaturen wahrgenommen werden, können ihre schiere Beharrlichkeit und Anzahl eine erhebliche Bedrohung darstellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Verhalten von Zombies ist direkt mit ihrer Rolle als willenlose Diener verbunden. Sie agieren mechanisch und ohne Furcht, greifen direkt und unnachgiebig an, bis sie vollständig zerstört sind. Ihre mangelnde Intelligenz macht sie zwar berechenbar, aber auch schwer zu stoppen, da sie keinen Schmerz empfinden und selbst schwerste Verletzungen ignorieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Regel reagieren Zombies nur auf Reize wie Geräusche, Bewegungen oder den Geruch von Lebewesen. Sie haben keine eigenen Bedürfnisse oder Wünsche und zeigen keinerlei Initiative. Ihre Bewegungen sind langsam und unbeholfen, doch in der Masse können sie überwältigend wirken, insbesondere in engen Räumen oder an unvorbereiteten Orten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Körperlich sind Zombies robust, aber sie leiden unter dem ständigen Verfall ihrer Leiber. Ihre verrottenden Muskeln und Knochen schränken ihre Beweglichkeit und Stärke ein, doch dies wird durch ihre völlige Schmerzfreiheit und Zähigkeit kompensiert. Viele von ihnen tragen noch Überreste von Kleidung oder Rüstung, die sie zu Lebzeiten getragen haben, was ihnen eine unheimliche Verbindung zu ihrer Vergangenheit verleiht."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies sind vor allem an Orten des Todes und Verfalls zu finden, wie Schlachtfeldern, Massengräbern oder verlassenen Friedhöfen. Ihre Präsenz deutet oft auf unbestattete Tote, magische Verderbnis oder das Wirken eines Nekromanten hin. Sie bevorzugen dunkle, verlassene Umgebungen wie Katakomben oder Ruinen, wo sie ungestört auf Beute lauern können."
+        },
+        {
+          "type": "paragraph",
+          "text": "In besiedelten Gebieten treten sie häufig nach Katastrophen wie Seuchen oder Kriegen auf, wenn die Toten ohne Rituale zurückgelassen wurden. Besonders gefährlich sind sie in der Nähe von Magierkreisen oder Ritualorten, wo sie als Werkzeuge oder Wächter eingesetzt werden. Herrschen Chaos oder magische Krankheiten, streifen sie ziellos umher und greifen alles Lebende an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Anwesenheit ist ein klares Zeichen für magische Verderbnis oder gestörte Totenruhe und macht sie zu einer ständigen Bedrohung für die Lebenden."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies mögen einfache Kreaturen sein, doch ihre Stärken machen sie zu gefährlichen Gegnern, insbesondere in großer Zahl. Gleichzeitig besitzen sie Schwächen, die es gut vorbereiteten Kämpfern ermöglichen, sie effektiv zu bekämpfen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unermüdlichkeit: Zombies kämpfen, bis sie vollständig zerstört sind, ohne Schmerz oder Müdigkeit zu empfinden.",
+            "Zähigkeit: Ihre verrottenden Körper können schwere Verletzungen ignorieren, wodurch sie schwerer auszuschalten sind als lebende Gegner.",
+            "Einfache Kontrolle: Wenn sie von einem Nekromanten geführt werden, gehorchen sie blind jedem Befehl, ohne zu hinterfragen.",
+            "Masse: Einzelne Zombies mögen keine große Bedrohung darstellen, doch in Gruppen können sie überwältigend wirken."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsamkeit: Ihre Bewegungen sind träge und berechenbar, wodurch sie leicht umgangen oder aus der Distanz bekämpft werden können.",
+            "Feuer: Brennende Angriffe zerstören ihre Körper schnell und verhindern eine erneute Erhebung.",
+            "Heilige Magie: Göttliche Kräfte oder geweihte Waffen durchbrechen die nekrotische Energie, die sie belebt.",
+            "Zerfall: Ihre Körper sind von Natur aus instabil, und ohne Magie oder Fluch, der sie erhält, verfallen sie schnell."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Stärken und Schwächen der Zombies spiegeln ihre Rolle als willenlose Diener wider – einfach, aber effektiv, wenn sie in der richtigen Situation eingesetzt werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zombies treten in verschiedenen Variationen auf, abhängig von ihrer Entstehung und dem Einfluss der Magie oder Flüche, die sie hervorgebracht haben. Diese Unterarten unterscheiden sich in ihrer Erscheinung, Fähigkeiten und Gefährlichkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Standard-Zombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die häufigste Art, auch bekannt als Herrenloser Zombie, entsteht durch niedere Nekromantie oder Flüche. Sie sind langsam, dumm und angreifen ausschließlich mit ihren Händen und Zähnen. Ihr größtes Merkmal ist ihre Beharrlichkeit und die Möglichkeit, in großen Horden aufzutreten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verfluchter Zombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Variante entsteht durch besonders mächtige Flüche oder magische Krankheiten. Verfluchte Zombies sind widerstandsfähiger und aggressiver als normale Zombies. Ihr Verwesungszustand ist weiter fortgeschritten, was sie physisch gefährlicher macht, da ihre verfaulenden Körper oft Toxine absondern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sumpfzombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Untoten erheben sich in sumpfigen oder feuchten Umgebungen, wie versunkenen Dörfern oder alten Flussbetten. Ihr Fleisch ist von Wasser aufgequollen und verfault, und sie greifen mit überraschender Geschwindigkeit an. Sumpfzombies sind besonders resistent gegen physische Angriffe, da ihre durchnässten Körper Schläge besser abfedern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seuchen-Zombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seuchen-Zombies entstehen durch magische oder natürliche Krankheiten, die sowohl die Lebenden töten als auch die Toten wiedererwecken. Diese Untoten verbreiten Krankheiten mit ihrem Biss oder durch Berührung, was sie zu einer doppelten Bedrohung macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ritual-Zombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Variante wird von Nekromanten gezielt erschaffen. Ritual-Zombies sind stärker und robuster als ihre herrenlosen Pendants und können einfache Waffen führen. Sie sind vollständig dem Willen ihres Meisters unterworfen und agieren in Gruppen oder Formationen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Explodierender Zombie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Manche Zombies werden mit instabiler Magie geschaffen, die ihre Körper zur Explosion bringt, sobald sie schwer verletzt werden. Diese Zombies werden oft gezielt in Massen eingesetzt, um Panik oder Verwüstung zu verursachen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Unterarten zeigen die Vielseitigkeit und das Gefahrenpotenzial von Zombies, die von einfachen Dienern bis zu tödlichen Werkzeugen der Zerstörung reichen. Jede Begegnung erfordert Anpassung und ein klares Verständnis ihrer Eigenschaften, um zu überleben."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein einzelner Zombie folgt Geräuschen oft zuverlässiger als sichtbarer Beute.",
+            "Herrenlose Zombies sammeln sich dort, wo viele Reize zugleich auftreten.",
+            "Beschädigte Kleidung kann Hinweise auf Herkunft und Todesumstände geben.",
+            "Nach der Vernichtung wird der Leib verbrannt oder geweiht, damit keine Restmagie zurückbleibt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

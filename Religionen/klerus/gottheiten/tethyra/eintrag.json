@@ -1,0 +1,102 @@
+{
+  "godId": "tethyra",
+  "intro": "Tethyras Klerus folgt Forscherdrang, Wissbegierde und Neugierde. Ihre Gemeinschaften begleiten Aufbruch und Entdeckung, ohne die Achtung vor dem Vorgefundenen zu verlieren. Herbergen, Reiseberichte und der Austausch praktischer Erfahrung tragen ihren Glauben.",
+  "community": "Ein Haus der Seemaid dient Reisenden und Entdeckern als Anlaufstelle. Monastische Gemeinschaften versorgen Gäste und erhalten Karten; Priester begleiten den Aufbruch. Kleine Wachen ergänzen den Schutz, Lehrende kommen aus dem Magisterium. Ein eigener asketischer Konvent ist gewöhnlich nicht vorgesehen.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des aufmerksamen Aufbruchs",
+      "paragraphs": [
+        "Tethyras Priester begleiten Reisende, Entdecker und deren Angehörige. Sie lehren Neugier, die sich für Menschen und Landschaften öffnet. Ein neuer Weg soll mit Aufmerksamkeit beschritten werden; die eigene Unkenntnis berechtigt nicht dazu, fremde Lebensweisen oder heilige Orte geringzuachten."
+      ],
+      "tasks": [
+        "Aufbrüche und Heimkehr begleiten",
+        "Begegnungen zwischen Fremden vermitteln",
+        "Neugier mit Achtung verbinden"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der offenen Landkarte",
+      "paragraphs": [
+        "Mönche und Nonnen der Seemaid führen Herbergen, bewahren Reiseaufzeichnungen und halten Ausrüstung des Hauses instand. Ihre Zünfte machen Erfahrungen für die nächste Reise nutzbar. Auch ein Bericht über einen Irrweg verdient seinen Platz, wenn er anderen unnötige Gefahren erspart."
+      ],
+      "tasks": [
+        "Reiseberichte und Karten erhalten",
+        "Gäste und Heimkehrende versorgen",
+        "Anvertraute Ausrüstung pflegen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Kartenschreiber",
+          "work": "Bewahrt, kopiert und ordnet die Karten und Wegnotizen des Konvents."
+        },
+        {
+          "name": "Zunft der Reisezeughüter",
+          "work": "Erhält Packwerk, Kleidung und gemeinsame Reiseausrüstung."
+        },
+        {
+          "name": "Zunft der Ankerherbergen",
+          "work": "Führt die Anlaufstellen des Hauses für Reisende, Seefahrer und Heimkehrende."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter des sicheren Entdeckens",
+      "paragraphs": [
+        "Tethyras Paladine begleiten gefährdete Reisen und schützen kirchliche Anlaufstellen. Sie sollen dem Aufbruch Sicherheit geben, ohne jede Begegnung mit dem Unbekannten als Feindschaft zu behandeln. Umsicht und Bereitschaft zur Hilfe wiegen schwerer als das bloße Erreichen eines fernen Ziels."
+      ],
+      "tasks": [
+        "Entdeckungs- und Hilfsreisen begleiten",
+        "Abgelegene Raststätten sichern",
+        "Gefährdeten Reisenden beistehen"
+      ]
+    },
+    "asketen": {
+      "presence": "eingebunden",
+      "title": "Sammlung auf dem Weg",
+      "paragraphs": [
+        "Tethyras gewöhnliche Reisehäuser tragen keine eigene asketische Schule. Wer strenge Übung sucht, kann sich von verbundenen Schulen in Aufmerksamkeit und Körperbeherrschung unterweisen lassen. Im Dienst der Seemaid wird diese Disziplin auf verantwortliches Reisen und das Wahrnehmen einer fremden Umgebung bezogen."
+      ],
+      "tasks": [
+        "Aufmerksamkeit und maßvollen Lebenswandel üben",
+        "An verbundener Schule Anleitung erhalten",
+        "Gelerntes beim aufmerksamen Reisen anwenden"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Tethyra verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Aufmerksamkeit nach der Rücksichtslosigkeit",
+      "paragraphs": [
+        "Bußgänger der Seemaid helfen in Herbergen und bei der Erhaltung gemeinsamer Wege. Nach leichtfertigem Verhalten kann ihr Eid die Folgen für Mitreisende besonders aufnehmen. Der Dienst findet in einer verantwortlichen Kirchenstruktur statt; eine unbegleitete gefährliche Expedition ist kein Ersatz für einen vereinbarten Bußgang."
+      ],
+      "tasks": [
+        "Reiseherbergen und Weganlagen erhalten",
+        "Heimkehrende und Hilfesuchende versorgen",
+        "Rücksicht im Umgang mit gemeinsamer Ausrüstung einüben"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

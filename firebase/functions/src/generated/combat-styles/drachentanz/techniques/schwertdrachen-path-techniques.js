@@ -1,15 +1,13 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import {
   createDrachentanzTechnique,
   movementEffect,
   secondarySave,
   temporaryCondition
-} from './drachentanz-technique-factory.js?v=20260908-cenyr-paths-v1';
+} from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const CLASS_WEAPONS = Object.freeze({
   teulu: ['sword'],
-  cantref: ['spear', 'lance', 'partisan', 'trident', 'halberd'],
-  uchelwyr: ['lance', 'sword'],
   helwyr: ['sword'],
   arthwyr: ['greatsword', 'axe', 'battleaxe', 'club', 'mace'],
   barddwyr: ['sword']
@@ -25,8 +23,8 @@ function duel(spec) {
     allowedClassIds: CLASS_IDS,
     classWeaponProfiles: CLASS_WEAPONS,
     weaponTypes: ['sword', 'spear', 'polearm', 'axe', 'mace'],
-    weaponRuleSetId: 'cantref-polearm',
-    uchelwyrCompatible: true,
+    weaponRuleSetId: '',
+    uchelwyrCompatible: false,
     singleTargetOnly: true,
     maximumTargets: 1,
     target: 'Ein Duellgegner',

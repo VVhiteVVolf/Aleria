@@ -384,6 +384,620 @@
       "sourceType": "user-provided-profile-table",
       "width": 408,
       "height": 612
+    },
+    {
+      "id": "kobolde-hero",
+      "source": "https://i.imgur.com/6XLOTem.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/uebersicht-hero.webp",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-feuerkobold",
+      "source": "https://i.imgur.com/mqcRQDW.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/feuerkobold-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-leidling",
+      "source": "https://i.imgur.com/2hZzCcX.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/leidling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-grimling",
+      "source": "https://i.imgur.com/xbsUumW.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/grimling-icon.webp",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-blutling",
+      "source": "https://i.imgur.com/Ynrb1bk.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/blutling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-hornling",
+      "source": "https://i.imgur.com/RuDvFhD.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/hornling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-drachling",
+      "source": "https://i.imgur.com/0qIF9eC.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/drachling-icon.webp",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-schaedling",
+      "source": "https://i.imgur.com/sH0sfJC.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/schaedling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-racheling",
+      "source": "https://i.imgur.com/njiX22b.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/racheling-icon.webp",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-wunschling",
+      "source": "https://i.imgur.com/X0uS3Te.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/wunschling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "kobolde-lustling",
+      "source": "https://i.imgur.com/aApAHZD.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./kobold-profiles/lustling-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-hero",
+      "source": "https://i.imgur.com/Mf09Zs2.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/uebersicht-hero.webp",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-gorak",
+      "source": "https://i.imgur.com/4SfRnt3.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/gorak-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-ognir",
+      "source": "https://i.imgur.com/aElmkB8.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/ognir-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-grimnak",
+      "source": "https://i.imgur.com/HJFq9Qe.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/grimnak-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-bhalgar",
+      "source": "https://i.imgur.com/tM8dWAN.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/bhalgar-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "ogroiden-zarok",
+      "source": "https://i.imgur.com/vpUcWWJ.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./ogroid-profiles/zarok-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-hero",
+      "source": "https://i.imgur.com/5LrM5ta.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/uebersicht-hero.webp",
+      "width": 464,
+      "height": 537,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-vampirfuerst",
+      "source": "https://i.imgur.com/H4BEJlY.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/vampirfuerst-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-nosferat",
+      "source": "https://i.imgur.com/aeYnokK.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/nosferat-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-mula",
+      "source": "https://i.imgur.com/EPu8X8T.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/mula-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-alp",
+      "source": "https://i.imgur.com/1D9rLi0.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/alp-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-nachzehrer",
+      "source": "https://i.imgur.com/biJ1knq.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/nachzehrer-icon.webp",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "vampire-striga",
+      "source": "https://i.imgur.com/vYicRyP.png",
+      "sourceType": "user-provided-profile-table",
+      "file": "./vampire-profiles/striga-icon.webp",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-hero",
+      "file": "./creature-group-profiles/unhold-hero.webp",
+      "source": "https://i.imgur.com/sdiH7BN.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-basilisk",
+      "file": "./creature-group-profiles/unhold-basilisk.webp",
+      "source": "https://i.imgur.com/5kLnA2v.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-tschort",
+      "file": "./creature-group-profiles/unhold-tschort.webp",
+      "source": "https://i.imgur.com/EEYpcCv.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-lykan",
+      "file": "./creature-group-profiles/unhold-lykan.webp",
+      "source": "https://i.imgur.com/izAOftv.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-ursa",
+      "file": "./creature-group-profiles/unhold-ursa.webp",
+      "source": "https://i.imgur.com/A97z1rG.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-drakar",
+      "file": "./creature-group-profiles/unhold-drakar.webp",
+      "source": "https://i.imgur.com/zLOuQzl.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-tuskar",
+      "file": "./creature-group-profiles/unhold-tuskar.webp",
+      "source": "https://i.imgur.com/3ez2GEC.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-stravin",
+      "file": "./creature-group-profiles/unhold-stravin.webp",
+      "source": "https://i.imgur.com/xy5frcH.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-araknor",
+      "file": "./creature-group-profiles/unhold-araknor.webp",
+      "source": "https://i.imgur.com/BX8kfXb.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 389,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-felkris",
+      "file": "./creature-group-profiles/unhold-felkris.webp",
+      "source": "https://i.imgur.com/hnyzA6t.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-lithrak",
+      "file": "./creature-group-profiles/unhold-lithrak.webp",
+      "source": "https://i.imgur.com/qFO1FAl.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-chimaere",
+      "file": "./creature-group-profiles/unhold-chimaere.webp",
+      "source": "https://i.imgur.com/6tql639.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-mantikor",
+      "file": "./creature-group-profiles/unhold-mantikor.webp",
+      "source": "https://i.imgur.com/SCjJ32w.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-phoenix",
+      "file": "./creature-group-profiles/unhold-phoenix.webp",
+      "source": "https://i.imgur.com/L5ZeKhX.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-hydra",
+      "file": "./creature-group-profiles/unhold-hydra.webp",
+      "source": "https://i.imgur.com/F9ES2JM.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "unhold-sphinx",
+      "file": "./creature-group-profiles/unhold-sphinx.webp",
+      "source": "https://i.imgur.com/DCqq4g7.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "nautiloiden-hero",
+      "file": "./creature-group-profiles/nautiloiden-hero.webp",
+      "source": "https://i.imgur.com/z8Dhcbd.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "nautiloiden-thraalkin",
+      "file": "./creature-group-profiles/nautiloiden-thraalkin.webp",
+      "source": "https://i.imgur.com/KCr6CLK.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "nautiloiden-sirenen",
+      "file": "./creature-group-profiles/nautiloiden-sirenen.webp",
+      "source": "https://i.imgur.com/gFPrARY.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-hero",
+      "file": "./creature-group-profiles/sylvaniiden-hero.webp",
+      "source": "https://i.imgur.com/93Bu7Ab.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-korrumpierter-ahnenbaum",
+      "file": "./creature-group-profiles/sylvaniiden-korrumpierter-ahnenbaum.webp",
+      "source": "https://i.imgur.com/7wPt2O2.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-korrumpierter-abkoemmling",
+      "file": "./creature-group-profiles/sylvaniiden-korrumpierter-abkoemmling.webp",
+      "source": "https://i.imgur.com/pUpypu6.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-korrumpiertes-ahnentier",
+      "file": "./creature-group-profiles/sylvaniiden-korrumpiertes-ahnentier.webp",
+      "source": "https://i.imgur.com/vKdP6P9.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-korrumpierter-ahnengeist",
+      "file": "./creature-group-profiles/sylvaniiden-korrumpierter-ahnengeist.webp",
+      "source": "https://i.imgur.com/PNTQhkX.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-waldschrat",
+      "file": "./creature-group-profiles/sylvaniiden-waldschrat.webp",
+      "source": "https://i.imgur.com/QwZKTpG.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-erlschrat",
+      "file": "./creature-group-profiles/sylvaniiden-erlschrat.webp",
+      "source": "https://i.imgur.com/LIhyIP3.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 500,
+      "height": 500,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-zarok",
+      "file": "./creature-group-profiles/sylvaniiden-zarok.webp",
+      "source": "https://i.imgur.com/w9MaNxy.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-zatrakin",
+      "file": "./creature-group-profiles/sylvaniiden-zatrakin.webp",
+      "source": "https://i.imgur.com/F6uVdHZ.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "sylvaniiden-hornling",
+      "file": "./creature-group-profiles/sylvaniiden-hornling.webp",
+      "source": "https://i.imgur.com/rfIwU2f.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "infestiden-hero",
+      "file": "./creature-group-profiles/infestiden-hero.webp",
+      "source": "https://i.imgur.com/4RLsyUE.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "infestiden-naga",
+      "file": "./creature-group-profiles/infestiden-naga.webp",
+      "source": "https://i.imgur.com/S2g1gGo.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-lenker",
+      "file": "./creature-group-profiles/psioniden-lenker.webp",
+      "source": "https://i.imgur.com/lfCuUra.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-sucher",
+      "file": "./creature-group-profiles/psioniden-sucher.webp",
+      "source": "https://i.imgur.com/8N3bOht.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-lauerer",
+      "file": "./creature-group-profiles/psioniden-lauerer.webp",
+      "source": "https://i.imgur.com/hoWoM6E.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-schaedling",
+      "file": "./creature-group-profiles/psioniden-schaedling.webp",
+      "source": "https://i.imgur.com/sH0sfJC.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-bruetling",
+      "file": "./creature-group-profiles/psioniden-bruetling.webp",
+      "source": "https://i.imgur.com/5DQvils.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 599,
+      "height": 416,
+      "fit": "contain"
+    },
+    {
+      "id": "psioniden-wandler",
+      "file": "./creature-group-profiles/psioniden-wandler.webp",
+      "source": "https://i.imgur.com/MQ04jZC.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 612,
+      "height": 408,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-lunen",
+      "file": "./creature-group-profiles/aelvar-lunen.webp",
+      "source": "https://i.imgur.com/JgLi9Wi.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-lamenta",
+      "file": "./creature-group-profiles/aelvar-lamenta.webp",
+      "source": "https://i.imgur.com/y8S45aX.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-nyxaren",
+      "file": "./creature-group-profiles/aelvar-nyxaren.webp",
+      "source": "https://i.imgur.com/Z4O2fic.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-erinyen",
+      "file": "./creature-group-profiles/aelvar-erinyen.webp",
+      "source": "https://i.imgur.com/5c2XAJI.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-umbren",
+      "file": "./creature-group-profiles/aelvar-umbren.webp",
+      "source": "https://i.imgur.com/KHLv9w4.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "aelvar-hero",
+      "file": "./creature-group-profiles/aelvar-hero.webp",
+      "source": "generated:imagegen:aelvar-hero",
+      "sourceType": "generated-for-missing-group-image",
+      "width": 1254,
+      "height": 1254,
+      "fit": "contain",
+      "generationPrompt": "Drei Aelvar-Finsteralben vollständig sichtbar in einer dunklen Waldlichtung vor einem alten Schrein; quadratische Watercolor-Buntstift-Szenentafel mit matriarchaler Matrone im Zentrum."
+    },
+    {
+      "id": "nautiloiden-leviathan",
+      "file": "./creature-group-profiles/nautiloiden-leviathan.webp",
+      "source": "generated:imagegen:nautiloiden-leviathan",
+      "sourceType": "generated-for-missing-group-image",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain",
+      "generationPrompt": "Leviathan der nautiloiden Ordnung vollständig von Schnauze bis Schwanz sichtbar; 2:3-Aquarell-Buntstift-Artenbild auf warmem Pergamentton."
     }
   ]
 }

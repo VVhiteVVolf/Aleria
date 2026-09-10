@@ -1,7 +1,7 @@
 // Shared deterministic attack evaluation: the real roll and the preview use the same rules.
 import { evaluateAttackRoll } from './rules/combat-mvp-rules.js';
-import { getSavingThrowTotal } from './combat-profile-model.js';
-import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js';
+import { getSavingThrowTotal } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260909-dragon-parent-v2';
 
 export function evaluateSavingThrowRoll(roll, targetDefense) {
   const naturalRoll = Number(roll?.natural);

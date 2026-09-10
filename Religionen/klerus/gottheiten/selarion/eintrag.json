@@ -1,0 +1,102 @@
+{
+  "godId": "selarion",
+  "intro": "Selarions Klerus verbindet fairen Wettstreit mit dem verlässlichen Überbringen eines Wortes. Seine Gemeinschaften begleiten Sportler, Herolde und Abgesandte. Mut und Können sollen sich an ehrlichen Bedingungen bewähren.",
+  "community": "Ein Haus des Herausforderers kann Übungsstätte, Herberge und Ort geregelter Begegnung sein. Priester begleiten Gelübde und Verständigung, Mönche und Nonnen den täglichen Betrieb. Paladine schützen Begegnungen. Körperliche Ausbildung gehört zum Alltag, während ein asketischer Lebensweg nur vereinzelt hinzukommt. Akademischer Unterricht bleibt den drei wissenschaftlichen Bereichen zugeordnet.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des redlichen Wettstreits",
+      "paragraphs": [
+        "Selarions Priester begleiten faire Herausforderungen, gemeinsame Regeln und die Verantwortung eines anvertrauten Wortes. Sie vermitteln nach einem Streit und mahnen Sieger wie Unterlegene zu gegenseitiger Achtung. Geistliche Anerkennung hängt nicht allein am Ergebnis, sondern an der Redlichkeit des Weges dorthin."
+      ],
+      "tasks": [
+        "Regeln und Gelübde feierlich bekräftigen",
+        "Wettstreitende geistlich begleiten",
+        "Nach Konflikten eine faire Verständigung fördern"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der verlässlichen Begegnung",
+      "paragraphs": [
+        "Mönche und Nonnen bewahren Übungsplätze, Ausrüstung und die Unterkünfte des Hauses. Ihre Zünfte pflegen Wettkampfaufzeichnungen und unterstützen anvertraute Botendienste. Der geregelte Alltag hält eine Begegnung fair: Er sorgt dafür, dass vereinbarte Bedingungen auch tatsächlich eingehalten werden können."
+      ],
+      "tasks": [
+        "Übungsstätten und Ausrüstung erhalten",
+        "Gäste und Abgesandte versorgen",
+        "Wettkampf- und Botenaufzeichnungen bewahren"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Übungsstättenhüter",
+          "work": "Erhält Plätze, Markierungen und die gemeinsame Übungsausrüstung."
+        },
+        {
+          "name": "Zunft der Heroldsschreiber",
+          "work": "Bewahrt Botenaufzeichnungen, Wortlaute und Wettkampfregister des Konvents."
+        },
+        {
+          "name": "Zunft der Begegnungsherbergen",
+          "work": "Versorgt Gäste, Abgesandte und Wettstreitende in den Häusern des Gottes."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Ritter des freien Geleits",
+      "paragraphs": [
+        "Selarions Paladine begleiten Abgesandte und schützen Menschen, die sich zu einer vereinbarten Begegnung begeben. Sie sichern Wettstreite und verhindern gewaltsame Übergriffe. Der Schutz eines anvertrauten Wortes verlangt Verlässlichkeit auch dann, wenn die überbrachte Botschaft den eigenen Überzeugungen widerspricht."
+      ],
+      "tasks": [
+        "Abgesandte und Herolde begleiten",
+        "Geregelte Begegnungen sichern",
+        "Vereinbartes Geleit verlässlich tragen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Weg der beherrschten Herausforderung",
+      "paragraphs": [
+        "Sportliche Disziplin und fairer Wettstreit begründen bei Selarion keinen eigenen Asketenorden. Nur einzelne Anhänger verbinden ihren Glauben mit dem strengen Verzicht und der wehrhaften Selbstschulung dieser Kaste. Sie können an einem verbundenen Heiligtum lernen und ihren Umgang mit Herausforderung und Niederlage dort vertiefen. Im gewöhnlichen Übungsbetrieb bleiben sie eine Ausnahme."
+      ],
+      "tasks": [
+        "Ausdauer und Körperbeherrschung lehren",
+        "Fairen Vergleich unter klaren Regeln üben",
+        "Den gemeinsamen Schutzdienst tragen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Selarion verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Redlichkeit nach dem unfairen Vorteil",
+      "paragraphs": [
+        "Ein Bußgang unter Selarion kann auf Betrug im Wettstreit oder ein verratenes Wort eingehen. Büßende tragen vereinbarte Versorgungs- und Erhaltungsdienste innerhalb eines Hauses. Ziel ist, wieder auf ihren Beitrag vertrauen zu können; ein gewonnener Zweikampf allein hebt die Verpflichtung nicht auf."
+      ],
+      "tasks": [
+        "Übungsstätten und Gästeversorgung unterstützen",
+        "Vereinbarte Nachteile wiedergutmachen",
+        "Redlichkeit im verlässlichen Dienst einüben"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

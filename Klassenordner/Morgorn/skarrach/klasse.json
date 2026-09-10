@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "skarrach",
+  "cultureId": "morgorn",
+  "name": "Skarrach",
+  "title": "Der Skarrach",
+  "subtitle": "Stürmer und Widderreiter",
+  "aliases": ["Stürmer", "Widderreiter"],
+  "theme": "ember",
+  "icon": "https://i.imgur.com/eG6jTgX.png",
+  "illustration": "https://i.imgur.com/eG6jTgX.png",
+  "artwork": { "source": "https://i.imgur.com/eG6jTgX.png", "width": 1024, "height": 1536, "caption": "Skarrach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Skarrach · Stürmer" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Stoßkrieger oder Widderreiter; kein automatischer Adel" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Durchbruch, Anritt und entschlossener Nahkampf" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Lanze, Schwert, Axt und Bogen" },
+    { "group": "Klassenprofil", "label": "Besonderheit", "html": "Berittener Kampf auf morgornischen Widdern" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Skarrach sind Morgorns Stürmer. Wo eine Stellung rasch gebrochen, ein Zugang freigekämpft oder ein Gegner durch einen entschlossenen Anritt erschüttert werden muss, werden sie an die Spitze gesetzt.</p><p>Berühmt sind ihre Widderreiter: schwere Kämpfer auf trittsicheren Tieren, die steinige Hänge und schmale Bergwege bewältigen, an denen gewöhnliche Reiterei an Wirkung verliert.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Aus berittenen Boten, Herdenkämpfern und den Stoßtrupps alter Hallenverbände entstand eine eigene Angriffskaste. Die Skarrach verbanden die Kraft des Anritts mit der Geländegängigkeit der morgornischen Widder und wurden zum sichtbaren Zeichen eines Gegenangriffs.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Skarrach führen Lanze und Seitenwaffen aus dem Sattel, beherrschen jedoch ebenso den Kampf zu Fuß. Sie lesen den Augenblick eines Durchbruchs, halten auch bei Lärm und Gedränge ihre Richtung und können mit Bogen, Schwert oder Axt auf wechselnde Entfernungen reagieren. Die Bindung und Führung des Reittiers gehört fest zu ihrer Ausbildung.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Große Wirkung im Anritt und beim Durchbruch</li><li>Breite Waffenausbildung für Sattel und Fußkampf</li><li>Hohe Beweglichkeit in bergigem Gelände</li></ul><h3>Schwächen</h3><ul><li>Benötigt Raum, Schwung und ein einsatzfähiges Reittier</li><li>Ein festgefahrener Angriff verliert rasch an Wirkung</li><li>Versorgung und Schutz des Widders binden zusätzliche Kräfte</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Skarrach verdichtet Bewegung zu einem kurzen, schweren Stoß. Lanze und Widder eröffnen den Angriff; Schwert oder Axt führen ihn im Gedränge fort. Der Bogen dient zur Vorbereitung, Verfolgung oder zum Kampf, wenn ein direkter Anritt nicht möglich ist.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Zur Ausrüstung gehören eine belastbare Rüstung, Lanze, mindestens eine Seitenwaffe und häufig ein Bogen. Sattelzeug, Panzerung und Pflegegerät des Widders sind Teil der persönlichen Verantwortung des Skarrach und kein bloßes Zubehör.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Skarrach genießen hohes kriegerisches Ansehen, weil sie Gefahr sichtbar auf sich nehmen. Ihr Rang bleibt dennoch der einer Kaste. Ein berühmter Stürmer kann Gefolge und Ehre gewinnen, wird dadurch aber nicht ohne Weiteres Haldran, Karnath oder Angehöriger eines anderen Adelstitels.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Skarrach" }
+}

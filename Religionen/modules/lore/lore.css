@@ -1,0 +1,23 @@
+.profile-section h3 { font-size: 21px; color: var(--faith-green); margin: 27px 0 13px; }
+.lore-list { padding-left: 22px; margin: 20px 0; }
+.lore-list > li { padding-left: 5px; margin: 18px 0; font-size: 15px; line-height: 1.9; }
+.lore-list > li::marker { color: var(--faith-gold); }
+.lore-list strong { color: var(--faith-green); font-weight: 600; }
+.lore-list p { margin-top: 6px; }
+.shared-doctrine { margin: 18px 0 24px; border: 1px solid var(--faith-line); background: #d8c5a015; }
+.shared-doctrine summary { padding: 15px 18px; color: var(--faith-green); cursor: pointer; font-size: 14px; }
+.shared-doctrine summary::marker { color: var(--faith-gold); }
+.shared-doctrine[open] summary { border-bottom: 1px solid var(--faith-line); }
+.shared-doctrine > div { padding: 4px 20px 20px; }
+.shared-doctrine p { font-size: 14px; line-height: 1.9; margin-top: 15px; }
+.divine-names dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+.divine-names dl > div { padding: 15px 0; border-bottom: 1px solid var(--faith-line); }
+.divine-names dt { font-size: 10px; color: var(--faith-muted); letter-spacing: .05em; }
+.divine-names dd { margin: 5px 0 0; font-size: 17px; color: var(--faith-green); }
+.profile-cover .profile-epithet { font-size: 23px; font-style: italic; color: var(--faith-gold); margin: -10px 0 20px; }
+.profile-group-links { margin-top: 24px; border-top: 3px double var(--faith-line); }
+@media (max-width: 560px) {
+  .divine-names dl { grid-template-columns: 1fr; }
+  .lore-list { padding-left: 17px; }
+  .shared-doctrine > div { padding-inline: 15px; }
+}

@@ -12,8 +12,8 @@ const templates = new Map(getBuiltinCreatureTemplates().map(creature => [creatur
 
 export async function createCombatParty(definitions, title = 'Gemischte Kampfgruppe') {
   const actors = await Promise.all(definitions.map(async (definition, index) => {
-    const source = definition.creature ? templates.get(definition.creature)
-      : JSON.parse(await readFile(new URL(`../../../../Charakter%20Archiv%20Exporte/${definition.slug}.json`, import.meta.url), 'utf8')).character;
+    const source = definition.actor || (definition.creature ? templates.get(definition.creature)
+      : JSON.parse(await readFile(new URL(`../../../../Charakter%20Archiv%20Exporte/${definition.slug}.json`, import.meta.url), 'utf8')).character);
     assert.ok(source, `Testfigur ${definition.key} existiert`);
     const actor = structuredClone(source);
     if (definition.creature) {

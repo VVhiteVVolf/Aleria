@@ -1,0 +1,222 @@
+{
+  "id": "maldras",
+  "title": "Maldras",
+  "epithet": "Der Templer",
+  "kind": "Primäre Gottheit",
+  "summary": "Frömmigkeit, Gnade und Gerechtigkeit.",
+  "symbol": "BilderRüstungen/maldras_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Templer",
+    "Frömmigkeit",
+    "Gnade",
+    "Gerechtigkeit"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "sylvana",
+    "orin",
+    "aelthar"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maldras, auch bekannt als \" Der Templer \" oder \"Der Schild des Glaubens,\" ist der Gott der Frömmigkeit, Gnade, und Gerechtigkeit. Er wird als eine der wichtigsten göttlichen Figuren in der Alerischen Kirche verehrt und gilt als der Schutzpatron der Ritter, Kleriker, und Paladine. Maldras verkörpert die Prinzipien des unerschütterlichen Glaubens, der bedingungslosen Gnade und der unbestechlichen Gerechtigkeit. Er ist derjenige, der die Menschheit in ihrem Streben nach Tugend und Wahrheit anführt, ein leuchtendes Beispiel für alle, die in seinem Namen kämpfen und leben. Seine Anhänger sehen in ihm den ultimativen Beschützer der Reinheit des Glaubens und denjenigen, der für das Wohl der Menschheit eintritt, selbst in den dunkelsten Stunden."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Mythologie Alerias wird Maldras als die Kehrseite zum Schänder betrachtet, was ihn zu einem unerbittlichen Verteidiger des Glaubens und der Reinheit macht. Als Bruder des Vaters Ordan und Gemahl der Hüterin steht Maldras in einer besonders hohen Position im göttlichen Pantheon. Seine Verbindung zum Mentor unterstreicht seine Rolle als Richter und Verteidiger der Menschheit, wobei er sowohl Gerechtigkeit als auch Gnade walten lässt. In dieser Allegorie wird Maldras oft als der unerschütterliche Schild dargestellt, der das Unheilige abwehrt und den Glauben seiner Anhänger schützt. Die Beziehung zum Mentor, der ebenfalls als Rechtssprecher gilt, verdeutlicht, dass Maldras und der Mentor in ihrer Funktion als Bewahrer von Ordnung und Gerechtigkeit eng verbunden sind, wobei Maldras die spirituelle Verteidigung der Gläubigen anführt."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maldras, der Templer, ist nicht nur der Gott der Frömmigkeit, Gnade und Gerechtigkeit; er ist die lebendige Verkörperung dieser Tugenden. Diese Eigenschaften sind nicht bloß Merkmale seines Charakters, sondern das Fundament seines Wesens. Maldras ist die absolute Verkörperung von Frömmigkeit, was bedeutet, dass er in jedem seiner Handlungen den höchsten göttlichen Willen widerspiegelt. Seine Gnade ist unermesslich, denn sie fließt durch ihn als Quelle der Vergebung und des Mitgefühls, selbst für die Unwürdigsten. Gerechtigkeit durchdringt jede Entscheidung, die er trifft, und ist der unerschütterliche Maßstab, an dem er alle Taten misst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Tugenden machen ihn zu einem unverzichtbaren Schutzpatron der Ritter, Kleriker und Paladine, die sich in ihrer Suche nach göttlicher Gerechtigkeit und Barmherzigkeit an ihm orientieren. Doch genauso wie er diese Tugenden verkörpert, verachtet Maldras ihre gegenteiligen Eigenschaften. Er verabscheut Heuchelei, denn sie ist die Verleumdung der Frömmigkeit. Härte und Grausamkeit sind ihm ein Gräuel, da sie der Gnade entgegenstehen, und Ungerechtigkeit ist für ihn das größte aller Übel, da sie die Harmonie der Welt zerrüttet und die göttliche Ordnung gefährdet. Diese gegenteiligen Eigenschaften sind in Maldras' Augen nicht nur verwerflich, sondern sie bedrohen das Gleichgewicht der Welt, das er als Schild des Glaubens verteidigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Macht verkörpert die Heiligkeit in ihrer reinsten Form, ein strahlendes Licht, das die Dunkelheit vertreibt und die bösen Mächte der Infernalen in die Schranken weist. Maldras ist der Apologet der Menschheit, der Schutzpatron all jener, die gegen das Böse kämpfen und das Gute verteidigen. In seinem unablässigen Streben nach Gerechtigkeit und Reinheit nutzt er die weiße Flamme, ein heiliges Feuer, das alles Unreine verbrennt und die Seelen reinigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neben der weißen Flamme gebietet Maldras über das Licht, das als Symbol für Wahrheit und Offenbarung steht, und den Donner, der seine Macht und Gerechtigkeit laut und unmissverständlich verkündet. Diese Elemente machen ihn zu einem unüberwindbaren Bollwerk gegen die finsteren Kräfte, und seine Seraphiten folgen ihm mit unerschütterlicher Loyalität, erfüllt von der gleichen Heiligkeit, die ihren Herrn durchdringt. Maldras' Macht ist nicht nur physisch, sondern auch spirituell – sie inspiriert seine Anhänger, erhebt ihre Seelen und befähigt sie, mit unbeirrbarem Glauben gegen die Dunkelheit zu kämpfen."
+        }
+      ]
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid der Barmherzigkeit: Der Eid der Barmherzigkeit wird von Neulingen abgelegt die Maldras als ihren Schutzpatron ausrufen. Dieser Eid kann für Jünger und Kleriker wie auch Priester als eine Art Währungssytem betrachtet werden. Jünger qualifizieren sich durch das einhalten dieses Eides (Indem sie die Tugenden und Gebote des Hohepriesters einhalten) für weitere Aspekte und Segen!"
+          ]
+        }
+      ],
+      "sharedLore": "eide"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Der Aspekt der Gerechtigkeit ist eine Verhaltensrichtlinie für Jünger von Maldras, die dazu aufruft, Unrecht, Unnatürliches und Dämonisches in der Welt zu bekämpfen und Gnade, Barmherzigkeit und Wohltätigkeit zu zeigen. Durch das Einhalten dieser Richtlinien kann die Gunst von Maldras wachsen und es können bessere Aspekte erreicht werden. Der Aspekt der Gerechtigkeit kann auch als Währung für Maldras betrachtet werden.",
+            "Der Aspekt des Lichts gibt Jüngern von Maldras die Fähigkeit, Heilzauber und andere Formen von Licht-basierter Magie einzusetzen, um Geister, Nekrophagen und andere unnatürliche Wesen zu bekämpfen. Sie können auch Wunden heilen, dunkle Magie bannen, Flüche brechen und Waffen weihen, um Schaden an Kreaturen der Finsternis zu verursachen. Dieser Aspekt wird treuen Jüngern von Maldras verliehen."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Der Bund der Treue erlaubt es Jüngern von Maldras, Diener des Lichts heraufzubeschwören. Diese Diener, genannt Seraphen, sind ehemalige Krieger, Ritter und Paladine, die nach ihrem Tod weiterhin für Maldras kämpfen. Die Stärke eines Seraphen hängt von der Kampfkraft und dem Glauben seines Beschwörers ab. Mit diesem Aspekt können Jünger von Maldras auf magische Unterstützung im Kampf gegen dämonische und unnatürliche Wesen zurückgreifen.",
+            "Der Bund der weißen Flamme ist ein Aspekt, der von Maldras verliehen wird und es seinen Jüngern ermöglicht, ein heiliges Feuer zu beschwören, das den meisten Menschen und Kreaturen keinen Schaden zufügen kann, sondern sich sogar kühl und angenehm anfühlt. Diese Flamme hat die Macht, dämonische Magie und Kreaturen der Finsternis zu verzehren und ist daher besonders nützlich im Kampf gegen unnatürliche Kreaturen wie Waldschrate, Unholde, Vampire oder Geister. Die Hüter des Bunds der weißen Flamme sind besonders gut dafür geeignet, diese Kreaturen zu bekämpfen."
+          ]
+        }
+      ],
+      "sharedLore": "buende"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Mensch rebelliert jeden Tag aufs neue gegen die Neun Göttlichen und Tagtäglich werden die Gebote der Göttlichen gebrochen. Maldras, ist das Bindeglied der Menschen, ohne ihn würde es keine Beziehung zwischen Göttlichen und Menschen geben können. Der Hohepriester gewährt jedem Menschen, obgleich seiner Vergangen Missetaten, ob klein oder groß, die Vergebung und Versöhnung. Er gebietet den Menschen, gerecht, gnädig und vergebend zu sein, so wie die Göttlichen der Menschheit Vergeben, die ihrer nicht würdig sind. Maldras hasst jene, die keine Vergebung und Gnade für ihre Mitmenschen erübrigen können, ihnen verwehrt er die Gnade der Götter!"
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Maldras Tugendenden sind die Vergebung, Gnade und Barmherzigkeit. So wie Maldras barmherzig, vergebend, gnädig und gerecht ist, fordert er es auch von den Menschen. Kein Mensch kann vor seinen Attributen bestehen, der diese Eigenschaften auch nur im geringsten missachtet. Doch Maldras ist gnädig und nimmt jeden Bußgang an und gewährt jedem Sünder seine Gnade, solange er sich reumütig und ehrlich bekennt."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus von Maldras ist ein Haus der Anbetung, der Meditation und der Sühne. Hier werden fehlgeleitete Seelen resozialisiert, Sünder werden zu Heiligen, Mörder zu Heiler, Schänder zu Helfer. Unter den Schweigenden Geschwistern befinden sich die schlimmsten Sünder, die die Menschheit hervorbringen kann, solange sie reumütig sind und sich ehrlich schuldig bekennen, gewährt Maldras ihnen seine Vergebung. Diese Vergebung empfängt jeder, ganz gleich seiner verbrechen."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Frömmigkeit, Gnade und Gerechtigkeit"
+    },
+    {
+      "label": "Erzfeind",
+      "value": "Der Schänder"
+    },
+    {
+      "label": "Symbol",
+      "value": "Ein Schild"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Frömmigkeit, Gnade und Gerechtigkeit"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Heuchelei, Grausamkeit und Ungerechtigkeit"
+    },
+    {
+      "label": "Celestiale Diener",
+      "value": "Seraphiten / Seraphen"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Maldras"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Der Templer"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Der Löwe"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Belenor"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Myrdran"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Tyrdras"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Thedros"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "3eaf6978-e42d-45c1-bfb0-20d3e827f8c3",
+    "sha256": "38ac6e01c4c61a04c044ba9b6fe835c82b07d0dbdbf3e704033d73ca55ea7a3a"
+  },
+  "pending": "Namentlich angelegt, aber noch nicht beschrieben: Eid der Frömmigkeit, Eid der Knechtschaft. Artefakte sind bislang nicht überliefert.",
+  "portrait": {
+    "src": "assets/divine-art/maldras.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Maldras, Der Templer",
+    "caption": "Maldras · Der Templer"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Maldras",
+      "href": "Religionen/klerus/gottheiten/maldras/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

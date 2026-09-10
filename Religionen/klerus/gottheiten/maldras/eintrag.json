@@ -1,0 +1,103 @@
+{
+  "godId": "maldras",
+  "intro": "Maldras verbindet Frömmigkeit, Gnade und Gerechtigkeit. Sein Klerus sucht ein gerechtes Urteil, ohne den einzelnen Menschen aus dem Blick zu verlieren. Seelsorge, gelehrte Prüfung und wehrhafter Schutz sollen einander begrenzen und ergänzen.",
+  "community": "Viele Häuser des Templers vereinen Kapelle, Schreibstube und Schutzgemeinschaft. Priester tragen die geistliche Verantwortung, Magister aus Orins Bereich unterstützen die Prüfung schwieriger Rechtsfragen, und Paladine sichern Menschen und Orte. Klösterlicher Dienst hält diese Aufgaben im Alltag zusammen.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des gerechten Erbarmens",
+      "paragraphs": [
+        "Die Priester des Templers begleiten Gewissensfragen und die Versöhnung nach Unrecht. Sie sollen weder Schuld verharmlosen noch Grausamkeit mit Frömmigkeit bemänteln. Wo sie ein geistliches Urteil tragen, hören sie die Beteiligten an und verbinden Verantwortlichkeit mit der Möglichkeit zur Umkehr."
+      ],
+      "tasks": [
+        "Gewissens- und Versöhnungsgespräche führen",
+        "Geistliche Urteile sorgfältig vorbereiten",
+        "Gemeinden vor heuchlerischer Härte warnen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente des aufmerksamen Dienstes",
+      "paragraphs": [
+        "Mönche und Nonnen bewahren Zeugnisse, nehmen Bittstellende auf und versorgen die Häuser des Templers. Ihre Zünfte halten Schriftstücke nachvollziehbar und den Zugang zur Hilfe offen. Die stille Arbeit soll verhindern, dass eine Stimme allein wegen Armut oder geringer Bildung ungehört bleibt."
+      ],
+      "tasks": [
+        "Bittschriften und Zeugnisse ordnen",
+        "Gäste und Hilfesuchende versorgen",
+        "Schreib- und Lesedienste anbieten"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Zeugnisbewahrer",
+          "work": "Ordnet Bittschriften, Abschriften und überlassene Zeugnisse im Konvent."
+        },
+        {
+          "name": "Zunft der offenen Schwelle",
+          "work": "Betreut Herberge und Empfang für Bittstellende, Reisende und Schutzsuchende."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Die Ritter des Templers",
+      "paragraphs": [
+        "Maldras' Paladine schützen die Gemeinschaft und sichern Menschen, deren Anliegen in einem geordneten Verfahren gehört werden soll. Sie bewachen Zufluchten und begleiten gefährdete Zeugen. Ihr Auftrag fordert Entschlossenheit; die Macht über Wehrlose darf dabei nicht in Grausamkeit umschlagen."
+      ],
+      "tasks": [
+        "Gefährdete und Bittstellende schützen",
+        "Heilige Stätten bewachen",
+        "Gewaltsame Übergriffe auf Schutzbefohlene abwehren"
+      ]
+    },
+    "asketen": {
+      "presence": "klein",
+      "title": "Der Pfad des geprüften Gewissens",
+      "paragraphs": [
+        "Asketen des Templers verbinden wehrhafte Übungen mit strenger Prüfung der eigenen Beweggründe. Sie üben, Kränkung und Zorn wahrzunehmen, bevor diese ihr Handeln bestimmen. Kleine Schulen können den Schutz eines Heiligtums tragen und den ritterlichen Zweig in Selbstbeherrschung unterweisen."
+      ],
+      "tasks": [
+        "Zorn und vorschnelles Urteil beherrschen",
+        "Körperliche Disziplin mit Besinnung verbinden",
+        "Wachen und Schutzübungen anleiten"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Maldras verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Buße mit erkennbarem Ziel",
+      "paragraphs": [
+        "Bei Maldras steht die Wiedergutmachung konkreten Unrechts im Mittelpunkt des Bußgangs. Die zuständige Kirche hält fest, welche Dienste vereinbart sind und wie deren Abschluss festgestellt wird. Büßende helfen unter Anleitung und erhalten einen Weg zurück, statt auf ihre Schuld festgelegt zu bleiben."
+      ],
+      "tasks": [
+        "Vereinbarte Schäden wiedergutmachen",
+        "Hilfsdienste für Benachteiligte leisten",
+        "Die Entlassung aus dem Bußdienst vorbereiten"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "asketen": {
+      "src": "Religionen/klerus/assets/asketen-maldras.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

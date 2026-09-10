@@ -5,7 +5,8 @@ import { VENNYR_CLASS_IDS, getVennyrClassDefinition } from '../../AleriaAlmanach
 import { getVennyrClassProgression } from '../../AleriaAlmanach/modules/classes/vennyr/vennyr-class-progression.js';
 import { getCenyrClassProgression } from '../../AleriaAlmanach/modules/classes/cenyr/cenyr-class-progression.js';
 import { getCultureClassProgression } from '../modules/culture/culture-class-progression.js';
-import { SIRENENTANZ_FORM_IDS as F } from '../../AleriaAlmanach/modules/combat-styles/sirenentanz/sirenentanz-forms.js';
+import { SIRENENTANZ_FORM_IDS as F, DERWYN_FORM_IDS as D, DERWYN_EXPERT_PATH_IDS } from '../../AleriaAlmanach/modules/combat-styles/sirenentanz/sirenentanz-forms.js';
+import { DRACHENTANZ_FORM_IDS } from '../../AleriaAlmanach/modules/combat-styles/drachentanz/drachentanz-ids.js';
 import { resolveTechniqueDamageFormula, getTechniqueDamageScaling } from '../../AleriaAlmanach/modules/combat/combat-technique-damage.js';
 import { parseDamageFormula } from '../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 import { classifyCharacterArchiveEntries, getCharacterArchiveClassGroups } from '../../AleriaAlmanach/modules/character-archive/character-archive-classification.js';
@@ -24,24 +25,24 @@ function damageBounds(attack, level, formula = '1d10') {
     mean: terms.reduce((total, term) => total + term.diceCount * (term.sides + 1) / 2, parsed.fixedModifier) };
 }
 
-test('Vennyr plans contain coherent 1–20 progression, budgets and three expert paths', () => {
+test('Vennyr plans contain coherent 1–20 progression and class-specific expert budgets', () => {
   assert.equal(plans.length, 6);
   for (const plan of plans) {
     assert.equal(plan.levels.length, 20);
     assert.equal(plan.techniqueBudget.total, plan.techniqueBudget.slots.length);
     assert.equal(new Set(plan.techniqueBudget.slots.map(slot => slot.id)).size, plan.techniqueBudget.total);
-    assert.equal(plan.pathOptions.length, plan.classId === 'milwr' ? 0 : 3);
+    assert.equal(plan.pathOptions.length, plan.classId === 'milwr' ? 0 : plan.classId === 'derwyn' ? 4 : 3);
     for (const slot of plan.techniqueBudget.slots) {
       assert(plan.attackCatalog.some(attack => attack.minimumLevel <= slot.level && attack.cultureTraining.slotBands.includes(slot.band)), `${plan.name} ${slot.id}`);
     }
-    for (const form of plan.styles[0].forms) {
+    for (const form of plan.styles.flatMap(style => style.forms)) {
       assert(form.techniques.length > 0);
       assert(form.techniques.every(attack => attack.minimumLevel >= form.minimumLevel && attack.minimumLevel <= form.maximumTrainingLevel));
       if (form.isChoice) {
         assert.equal(form.minimumLevel, 9);
         assert.equal(form.maximumTrainingLevel, 20);
         assert(form.techniques.length >= plan.techniqueBudget.bands.expert.count, 'A single path can fill its expert budget');
-        assert.deepEqual(form.features.map(feature => feature.minimumLevel), [9, 13, 17]);
+        if (plan.classId !== 'derwyn') assert.deepEqual(form.features.map(feature => feature.minimumLevel), [9, 13, 17]);
       }
     }
   }
@@ -50,6 +51,7 @@ test('Vennyr plans contain coherent 1–20 progression, budgets and three expert
 test('draft plans never grant or activate abilities and have stable unique IDs', () => {
   assert.equal(new Set(attacks.map(attack => attack.id)).size, attacks.length);
   for (const plan of plans) {
+    if (plan.classId === 'derwyn') continue;
     assert.equal(plan.status, 'draft');
     assert.deepEqual(plan.combatStyleGrants, []);
     assert.deepEqual(plan.availableAttacks, []);
@@ -80,18 +82,30 @@ test('Ceidwyn and Rhiddwyr keep usable ranged and melee paths throughout trainin
   assert(ceidwyn.attackCatalog.some(attack => attack.minimumLevel <= 6 && attack.weaponLabel === 'Dreizack'));
 });
 
-test('Derwyn has all three physical weapon paths in every phase and no spells', () => {
+test('Derwyn chooses one foundation and has four distinct physical weapon paths after creative training', () => {
   const plan = getVennyrClassProgression('derwyn', 20);
   assert.deepEqual(plan.cultures, ['Cenyr', 'Vennyr']);
-  for (const form of plan.styles[0].forms) {
-    for (const weapon of ['staff', 'trident', 'mace']) assert(form.techniques.some(attack => attack.cultureTraining.branchId === `derwyn-${weapon}`), `${form.name}: ${weapon}`);
+  assert.equal(plan.selectedFoundationFormId, '');
+  assert.deepEqual(plan.pathSelection.allowedFormIds, DERWYN_EXPERT_PATH_IDS);
+  assert.deepEqual(plan.trainingPhases.slice(1).map(phase => [phase.minimumLevel, phase.maximumLevel]), [[7, 8], [9, 20]]);
+  for (const [formId, weapon] of [[D.flowing, 'sword'], [D.breaking, 'trident'], [D.rising, 'staff'], [D.whipping, 'morningstar']]) {
+    const form = plan.styles.flatMap(style => style.forms).find(form => form.id === formId);
+    assert(form.techniques.length >= 5);
+    assert(form.techniques.every(attack => attack.cultureTraining.branchId === `derwyn-${weapon}`));
   }
+  for (const foundationFormId of [D.foundation, DRACHENTANZ_FORM_IDS.jungdrache]) {
+    const selected = getVennyrClassProgression('derwyn', 20, { foundationFormId });
+    const foundations = selected.styles.flatMap(style => style.forms).filter(form => form.kind === 'foundation');
+    assert.deepEqual(foundations.map(form => form.id), [foundationFormId]);
+    assert.equal(selected.techniqueBudget.total, 10);
+  }
+  assert(!plan.styles.flatMap(style => style.forms).some(form => [F.advanced, F.breaker, F.current, F.depths].includes(form.id)));
   assert(plan.attackCatalog.every(attack => attack.effects.every(effect => effect.type !== 'heal' && effect.magical !== true)));
   assert(plan.attackCatalog.every(attack => !attack.costs.some(cost => ['mana', 'celestial-points'].includes(cost.resourceId))));
   assert(plan.pendingFeatures.some(feature => /Wiederherstellung/.test(feature.name)));
 });
 
-test('Sirenentanz uses bounded weapon dice, one replacement scaling die and no automatic extra hits', () => {
+test('Wyrmtanz uses bounded weapon dice, one replacement scaling die and no automatic extra hits', () => {
   const damaging = attacks.filter(attack => attack.effects.some(effect => effect.type === 'damage'));
   for (const attack of damaging) {
     assert.equal(attack.damageModel.weaponDiceMultiplier, 1);
@@ -128,7 +142,7 @@ test('resources and short-lived conditions match the existing combat contract', 
     for (const effect of attack.effects.filter(effect => effect.condition)) {
       assert.equal(effect.condition.durationModel.kind, 'actor-comments');
       assert.equal(effect.condition.durationModel.remainingActorComments, 1);
-      assert.equal(effect.condition.tags, 'Sirenentanz');
+      assert(['Wyrmtanz', 'Drachentanz'].includes(effect.condition.tags));
     }
   }
 });
@@ -164,7 +178,7 @@ test('all six documents preserve source art dimensions, clean lore and readable 
     const doc = resolveCultureClassDocument(JSON.parse(await readFile(new URL(`Klassenordner/Vennyr/${id}/klasse.json`, root), 'utf8')), culture);
     const page = await readFile(new URL(`Klassenordner/Vennyr/${id}/index.html`, root), 'utf8');
     assert.match(page, new RegExp(`<h1>Der ${doc.name}</h1>`));
-    assert(page.includes('Sirenentanz') && page.includes('data-role="training-level"'));
+    assert(page.includes('Wyrmtanz') && page.includes('data-role="training-level"'));
     assert(page.includes('data-role="training-weapon"'));
     assert(!/animexx|Titel hier|〈Clanname〉|Beschreibung \.\.\./i.test(page));
     assert(!/\bon(?:click|change|input)\s*=/i.test(page));

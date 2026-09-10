@@ -1,0 +1,148 @@
+{
+  "id": "nimue",
+  "title": "Nimue",
+  "epithet": "Die Dame des Sees",
+  "kind": "Souveräne Gottheit",
+  "summary": "Wasser, Reinheit und Güte.",
+  "symbol": "BilderRüstungen/nimue_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Die Dame des Sees",
+    "Wasser",
+    "Reinheit",
+    "Güte"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "tethyra"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Dame des Sees ist eine der Fünf Souveränen und dient als eine der wichtigsten Repräsentantinnen des Göttlichen Pantheons. Ihre Rolle ist die einer Hüterin und Stabilisatorin der Welt von Aleria, indem sie das Gleichgewicht und die Ordnung wahrt. Ihr Element ist das Wasser in all seinen Formen, von den ruhigen Seen bis hin zu den tosenden Ozeanen. Als eine der Eckpfeiler der göttlichen Ordnung ist sie der Mutter und der Hüterin unterstellt, die sie mit Weisheit und Anmut unterstützt. Die Dame des Sees wird als Symbol für Reinheit, Klarheit und die tiefe, unergründliche Kraft des Wassers verehrt."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der göttlichen Mythologie ranken sich viele Allegorien und Erzählungen um die Dame des Sees. Es heißt, sie sei die Tochter der Mutter und der Hüterin, die Schwester der Seemaid und die gute Kehrseite des Gottes Thraal. Diese Allegorien deuten auf die verschiedenen Aspekte hin, die sie mit anderen Göttern teilt oder von ihnen aufgreift. Ihre Beziehung zu diesen göttlichen Wesen betont ihre Rolle als eine der wichtigsten Figuren im Pantheon. Doch unabhängig von den vielen Geschichten, die um sie gesponnen werden, bleibt eines klar: Das Element des Wassers wurde ihr zur Obhut gegeben, und sie herrscht mit Weisheit und Mitgefühl über die Meere, Seen und Flüsse."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nimue, die Dame des Sees, ist eine Göttin, die durch ihre Verkörperung von Reinheit, Güte und Flexibilität, diese Tugenden in ihrer Reinform darstellt. Diese Eigenschaften spiegeln nicht nur die Essenz des Wassers wider, sondern definieren auch Nimues Wesen und ihre göttliche Rolle. Reinheit steht für ihre moralische Integrität und ihre Fähigkeit, alles, was sie berührt, zu reinigen. Güte repräsentiert ihre sanfte, mitfühlende Natur, die in ihrer Fürsorge für alle Lebewesen und in ihrem unerschütterlichen Gerechtigkeitssinn zum Ausdruck kommt. Flexibilität symbolisiert ihre Fähigkeit, sich den Herausforderungen der Welt anzupassen und sie mit Weisheit und Anmut zu meistern."
+        }
+      ]
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [],
+      "sharedLore": "eide"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt; Der Aspekt der Dame bewirkt, dass der Gesegnete in einem gewissne Radius das Wasser, welches er selbst oder mit seiner Waffe berührt, unter seine Kontrolle gerät. Zeitgleich kann er natürlich selbst eine gewisse Form der Wassermagie wirken kann. Derwyn wählen für gewöhnlich diese Form des Aspektes der Dame. Die Zweite Form des Aspektes der Dame ist etwas anders. Diese Form nennt sich \" Geweihtes Wasser \", ist natürlich mit herkömmlichem Weihwasser, welches man in den Kirchen findet, zu vergleichen. Mit diesem Wasser ist man in der Lage beispielsweise einen Menschen, ein Haus, gar einen Ort zu weihen und somit böse Geister von ihnen fern zu halten. Selbst Daedra Magie kommt an dieser Weihe nicht vorbei. Allerdings ist diese nur temporär und muss regelmäßig erneuert werden. In Cenyr werden Kinder für gewöhnlich bei der Taufe geweiht, damit sie nicht von Alpträumen geplagt werden. Ein promimentes Beispiel ist Kronprinzessin Elinor Pendragon, welche in der Sekunde ihrer Geburt geweiht wurde, damit die Schlange sie nicht beißen konnte. Mit dem geweihten Wasser ist man auch in der Lage Heilung und Regeneration zu wirken. Dies funktioniert allerdings nur, wenn besagte zu Heilenden von der Dame des Sees gesegnet sind.",
+            "Segen; Der Segen der Dame des Sees wird jenen zu Teil, die reinen Herzens sind, dies ist auch die einzige Anforderung, die sie hat. Dafür ist es eine, die es in sich hat. Ihr Segen bewirkt, dass der Gesegnete zum einen eine Verbesserte Atmung unter Wasser erhält. Doch der wahre 'Segen' ihres Segens ist, dass die Regeneration des Gesegneten steigt. So erholt er sich schneller von Verletzungen und auch sein Mana und seine Ausdauer regenerieren schneller als bei jemand anderen."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [],
+      "sharedLore": "buende"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nimue gebietet ihren Anhängern, in ihrem Leben Reinheit, Güte und Anpassungsfähigkeit zu verkörpern. Sie verlangt, dass ihre Jünger stets nach Klarheit in Gedanken und Taten streben, anderen mit Mitgefühl begegnen und in allen Herausforderungen flexibel bleiben. Wie das Wasser, das sich jeder Form anpasst, sollen sie in der Lage sein, sich den Gegebenheiten des Lebens anzupassen, ohne dabei ihre Integrität zu verlieren. Dieses Gebot ermutigt ihre Anhänger, Hindernisse sanft, aber bestimmt zu überwinden und stets nach dem höchsten moralischen Standard zu streben."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Tugend von Nimue ist die unerschütterliche Hingabe zur Reinheit, Güte und Flexibilität. Ihre Anhänger sollen wie das Wasser sein: klar, mitfühlend und in der Lage, sich jeder Situation anzupassen. Diese Tugenden sollen sie in ihrem täglichen Leben verkörpern, indem sie mit Sanftmut und Verständnis handeln, sich um die Natur und andere Lebewesen kümmern und stets bereit sind, sich den Herausforderungen des Lebens mit Anmut und Weisheit zu stellen."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus von Nimue ist häufig ein Tempel oder Schrein, der in der Nähe von Wasserquellen errichtet wird – sei es an den Ufern eines Sees, entlang eines Flusses oder in der Nähe einer heiligen Quelle. Diese heiligen Stätten dienen nicht nur als Orte der Verehrung, sondern auch als Zufluchtsorte für jene, die Heilung und spirituelle Erneuerung suchen. Besonders in Küstennähe findet man ihre Tempel, die sowohl den Seefahrern Schutz bieten als auch den Elementen trotzen. Waisenhäuser und Heiligtümer, die Kinder und Bedürftige aufnehmen, sind ebenfalls oft Nimue gewidmet, da sie als Göttin der Güte und des Schutzes von Schwachen und Hilfsbedürftigen verehrt wird."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Wasser, Reinheit und Güte"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Reinheit, Güte und Flexibilität"
+    },
+    {
+      "label": "Element",
+      "value": "Wasser"
+    },
+    {
+      "label": "Patronat",
+      "value": "Gewässer, Seefahrer, Kinder und Hilfsbedürftige"
+    }
+  ],
+  "names": [],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "766fbfff-8cb1-455b-ad2f-cf66dc486c27",
+    "sha256": "74622e39a2b579a0d4b585aab671dc7e2064846ca2303ebaaf5408665899c1c5"
+  },
+  "pending": "Namentlich angelegt, aber noch nicht beschrieben: Eid der Reinheit, Eid des Flusses. Artefakte sind bislang nicht überliefert.",
+  "portrait": {
+    "src": "assets/divine-art/nimue.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Nimue, Die Dame des Sees",
+    "caption": "Nimue · Die Dame des Sees"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Nimue",
+      "href": "Religionen/klerus/gottheiten/nimue/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

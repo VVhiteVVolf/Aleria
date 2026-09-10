@@ -1,0 +1,388 @@
+{
+  "id": "psioniden",
+  "name": "Psioniden",
+  "classification": "Amons Schwarmimperium und die Kreaturen des Wahnsinns",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Amons Domäne und Brutstätten",
+  "folio": "IV / 10",
+  "parentGroupId": "infernale-linien",
+  "summary": "Psioniden sind Amons lebendiges Schwarmimperium: Fleisch, Blut und Gedanken eines einzigen psionischen Netzes. Lenker führen, Sucher archivieren, Lauerer tragen rohe Gewalt, Schädlinge erhalten die Ordnung, Brütlinge liefern neue Formen und Wandler verkörpern die von Amon gelenkte Metamorphose.",
+  "quote": "Wo das Denken stirbt, beginnt ihr Reich; jeder einzelne Körper ist nur eine Seite in Amons lebendem Archiv.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/icons/psioniden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Psioniden"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/psioniden-lenker.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Lenker vollständig sichtbar als schwebende psionische Gestalt",
+    "caption": "Überlieferte Bildtafel · Ein Lenker an der Spitze des Schwarms"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Psioniden"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Schwarmwesen"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Amon"
+    },
+    {
+      "label": "Hierarchie",
+      "value": "Lenker, Sucher, Lauerer, Schädlinge, Brütlinge und Wandler"
+    },
+    {
+      "label": "Bekannte Formen",
+      "value": "Sechs benannte Unterarten"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Amons Domäne, Aleria und Brutstätten"
+    },
+    {
+      "label": "Zweck",
+      "value": "Schwarmimperium, Archivierung und Zerstörung"
+    },
+    {
+      "label": "Verbindung",
+      "value": "Gemeinsames psionisches Netzwerk unter Amons Willen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Kollektive Intelligenz, psionische Kräfte und Metamorphose"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Abhängigkeit von Amons Willen und psionische Störungen"
+    },
+    {
+      "label": "Grundsatz",
+      "value": "Jede Unterart verlangt eine eigene Kampfweise"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schwarmkopplung",
+      "Willensdruck",
+      "Gedankenraub",
+      "Metamorphose",
+      "Befehlsabhängigkeit",
+      "Netzstörung"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      8,
+      10,
+      9
+    ],
+    "intro": "Die Psioniden-Tafel bewertet die Kräfte des gemeinsamen Bewusstseins. Hohe Werte bei Abhängigkeit und Netzstörung bezeichnen zugleich die wichtigste systemische Schwachstelle des Schwarms.",
+    "source": "Aus Hierarchie, psionischer Verbindung, Gedankenarchivierung, Gestaltwandel und der Abhängigkeit von Amons Willen abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Amons Schwarmordnung",
+    "title": "Bekannte Unterarten",
+    "intro": "Die sechs benannten Formen erfüllen klar getrennte Aufgaben. Vier weitere Stellen der alten Tafel bleiben als unbekannt erhalten.",
+    "entries": [
+      {
+        "id": "lenker",
+        "name": "Lenker",
+        "region": "Psionide",
+        "description": "Die höchsten Willensträger und Generäle des Schwarms; sie koordinieren Legionen und brechen fremden Willen.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/lenker/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-lenker.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Lenker vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "sucher",
+        "name": "Sucher",
+        "region": "Psionide",
+        "description": "Archivare der Gedanken, die Wahrnehmungen sammeln, ordnen und durch das psionische Netz an den Schwarm weitergeben.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/sucher/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-sucher.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Sucher vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "lauerer",
+        "name": "Lauerer",
+        "region": "Psionide",
+        "description": "Willensschwache Kolosse und lebende Zauberspeicher, deren rohe Kraft durch fremde Befehle gelenkt wird.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/lauerer/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-lauerer.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Lauerer vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "schaedling",
+        "name": "Schädling",
+        "region": "Psionide Kreaturen",
+        "description": "Kleine, intelligente Diener ohne eigenen Willen, die in großer Zahl das Rückgrat des Schwarmimperiums bilden.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/schaedling/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-schaedling.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Schädling vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "bruetling",
+        "name": "Brütling",
+        "region": "Psionide Kreaturen",
+        "description": "Eine harmlose embryonale Grundform, die unter dem Einfluss eines Lenkers zu anderen Psioniden heranwachsen kann.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/bruetling/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-bruetling.webp",
+          "width": 599,
+          "height": 416,
+          "alt": "Brütling vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "wandler",
+        "name": "Wandler",
+        "region": "Psionide Kreaturen",
+        "description": "Eine instabile Gestalt reiner Metamorphose, deren Körper von Amons Willen immer wieder neu überschrieben werden kann.",
+        "status": "Dossier öffnen",
+        "href": "../../psioniden/wandler/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/psioniden-wandler.webp",
+          "width": 612,
+          "height": 408,
+          "alt": "Wandler vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ],
+    "groups": [
+      {
+        "id": "psionide",
+        "eyebrow": "Lenkende und tragende Formen",
+        "title": "Psionide",
+        "intro": "Lenker, Sucher und Lauerer bilden die benannten höheren und tragenden Funktionen des Schwarms.",
+        "entryIds": [
+          "lenker",
+          "sucher",
+          "lauerer",
+          "offener-eintrag-01",
+          "offener-eintrag-02"
+        ]
+      },
+      {
+        "id": "psionide-kreaturen",
+        "eyebrow": "Diener und Wandelkörper",
+        "title": "Psionide Kreaturen",
+        "intro": "Schädlinge, Brütlinge und Wandler erhalten, vermehren und verändern Amons Schwarm.",
+        "entryIds": [
+          "schaedling",
+          "bruetling",
+          "wandler",
+          "offener-eintrag-03",
+          "offener-eintrag-04"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Psioniden sind Amons gewaltiges Schwarmimperium, geboren aus dem Fleisch der Tiefe und dem Willen zur Verderbnis. Sie sind keine bloßen Werkzeuge, sondern lebendige Teile seiner Domäne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede Psionide ist ein Teil des größeren Ganzen. In Amons Reich bilden sie das Fleisch, das atmet, das Blut, das fließt, und die Gedanken, die sich durch das psionische Netz bewegen."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Psioniden entstanden durch Amons bewussten Schöpfungswillen. Jede Form erfüllt einen eigenen Zweck innerhalb eines Plans, der sich über lange Zeit entfaltet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie handeln nicht als voneinander unabhängige Wesen, sondern als Ausläufer eines einzigen Bewusstseins. Diese Ordnung macht den Schwarm mächtig und zugleich abhängig."
+        }
+      ]
+    },
+    {
+      "id": "hierarchie",
+      "title": "Die Hierarchie des Schwarms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenker stehen an der Spitze und brechen fremden Willen. Sucher hüten und ordnen Gedanken. Lauerer dienen als willensschwache Kolosse und lebende Zauberspeicher."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schädlinge halten als kleine Diener die Domäne am Leben. Brütlinge bilden harmlose Anfangsstadien, während Wandler als instabile Körper reiner Metamorphose von Amon neu geformt werden."
+        }
+      ]
+    },
+    {
+      "id": "verbindung",
+      "title": "Psionische Verbindung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein unsichtbares Netzwerk verbindet Gedanken, Befehle und Beobachtungen. Lenker koordinieren andere Formen, während Sucher ihre Erkenntnisse dem gesamten Schwarm zugänglich machen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wird Amons Einfluss gestört, können Psioniden Orientierung und Formstabilität verlieren. Versuche, diese Verbindung zur Kontrolle des Schwarms zu nutzen, bleiben gefährlich und unzuverlässig."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung nach Unterart",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Gegen Lenker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lenker müssen überrascht werden, bevor sie ihre psionische Kontrolle entfalten. Schutz gegen Gedankeneingriff ist wichtiger als schwere Rüstung."
+        },
+        {
+          "type": "subheading",
+          "text": "Gegen Sucher"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sucher sind aufmerksam und schwer zu täuschen. Ein Angriff muss erfolgen, bevor sie Absicht und Position im Netz weitergeben."
+        },
+        {
+          "type": "subheading",
+          "text": "Gegen Lauerer"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lauerer besitzen wenig eigenen Plan, aber enorme Zerstörungskraft. Abstand und konzentrierter Fernkampf begrenzen ihre Körpermacht."
+        },
+        {
+          "type": "subheading",
+          "text": "Gegen Schädlinge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Einzelne Schädlinge sind schwach; große Mengen können eine Anlage entkernen. Gruppenweise Eindämmung und die Sicherung ihrer Brutstätten sind entscheidend."
+        },
+        {
+          "type": "subheading",
+          "text": "Gegen Brütlinge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Brütlinge sind in der Grundform harmlos, müssen aber vor einer gelenkten Umwandlung isoliert werden."
+        },
+        {
+          "type": "subheading",
+          "text": "Gegen Wandler"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wandler sind unberechenbar und können ohne Befehl degenerieren. Distanz schützt vor plötzlichen Körperveränderungen."
+        }
+      ]
+    },
+    {
+      "id": "schutz",
+      "title": "Schutz vor dem Schwarm",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klare Signale, feste Aufgaben und Schutz gegen Gedankeneingriff helfen einer Gruppe, fremde Impulse früh zu erkennen. Sobald Wahrnehmung und Befehl auseinanderfallen, muss der Rückzug Vorrang erhalten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der sicherste Angriff richtet sich nicht immer gegen den stärksten Körper, sondern gegen die Verbindung, über die Amon den Schwarm koordiniert."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Lenker und Titelbild verwenden dieselbe überlieferte Abbildung, weil die Tafel den Lenker als Repräsentanten des Schwarms zeigt.",
+            "Brütlinge sind in ihrer Grundform harmlos, besitzen aber das größte Entwicklungspotenzial.",
+            "Lauerer werden absichtlich willensschwach gehalten, damit sie als Kolosse beherrschbar bleiben.",
+            "Die sechs bekannten Formen bilden gemeinsam einen Kreislauf aus Führung, Wissen, Kraft, Arbeit, Wachstum und Wandel."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

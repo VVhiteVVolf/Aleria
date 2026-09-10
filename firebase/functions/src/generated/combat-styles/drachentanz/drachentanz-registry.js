@@ -1,24 +1,28 @@
-import { DRACHENTANZ_FORM_IDS as FORM_IDS } from './drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { getDrachentanzPathFeatures } from './drachentanz-path-features.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_FORM_IDS as FORM_IDS } from './drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { getDrachentanzPathFeatures } from './drachentanz-path-features.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from './drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
-import { TEULU_FOUNDATION_ADDITIONS } from './techniques/teulu-foundation-techniques.js';
-import { CLASS_FOUNDATION_TECHNIQUES } from './techniques/foundation-techniques.js?v=20260905-damage-balance-v1';
-import { DUELIST_TECHNIQUES } from './techniques/duelist-techniques.js?v=20260905-damage-balance-v1';
-import { SCHWERTDRACHEN_PATH_TECHNIQUES } from './techniques/schwertdrachen-path-techniques.js?v=20260908-cenyr-paths-v1';
-import { ABWARTENDER_TECHNIQUES } from './techniques/abwartender-techniques.js?v=20260905-damage-balance-v1';
-import { FLIEGENDER_TECHNIQUES } from './techniques/fliegender-techniques.js?v=20260905-damage-balance-v1';
-import { ARTHWYR_EARLY_ROARING_TECHNIQUE, BRUELLENDER_TECHNIQUES } from './techniques/bruellender-techniques.js?v=20260905-damage-balance-v1';
-import { AUSGEGLICHENER_TECHNIQUES } from './techniques/ausgeglichener-techniques.js?v=20260905-damage-balance-v1';
-import { AUFSTEIGENDER_TECHNIQUES } from './techniques/aufsteigender-techniques.js?v=20260908-cenyr-paths-v1';
-import { ZWILLINGSDRACHEN_TECHNIQUES } from './techniques/zwillingsdrachen-techniques.js?v=20260908-cenyr-paths-v1';
-import { BRUELLENDER_SHIELD_TECHNIQUES } from './techniques/bruellender-shield-techniques.js?v=20260908-cenyr-paths-v1';
-import { BOGENDRACHEN_TECHNIQUES, LANZENDRACHEN_TECHNIQUES } from './techniques/exclusive-path-techniques.js?v=20260908-cenyr-paths-v1';
-import { UCHELWYR_MOUNTED_TECHNIQUES } from './techniques/uchelwyr-mounted-techniques.js?v=20260905-damage-balance-v1';
-import { DRACHLING_TECHNIQUES } from './techniques/milwr-techniques.js?v=20260905-damage-balance-v1';
-import { BARDDWYR_STANDARD_PATH_TECHNIQUES, KREISCHENDER_TECHNIQUES, TRAELLERNDER_TECHNIQUES } from './techniques/barddwyr-techniques.js?v=20260905-damage-balance-v1';
-import { HELWYR_EXPERT_TECHNIQUES } from './techniques/helwyr-expert-techniques.js?v=20260905-damage-balance-v1';
+import { TEULU_FOUNDATION_ADDITIONS } from './techniques/teulu-foundation-techniques.js?v=20260909-dragon-parent-v2';
+import { CLASS_FOUNDATION_TECHNIQUES } from './techniques/foundation-techniques.js?v=20260909-dragon-parent-v2';
+import { DUELIST_TECHNIQUES } from './techniques/duelist-techniques.js?v=20260909-dragon-parent-v2';
+import { SCHWERTDRACHEN_PATH_TECHNIQUES } from './techniques/schwertdrachen-path-techniques.js?v=20260909-dragon-parent-v2';
+import { ABWARTENDER_TECHNIQUES } from './techniques/abwartender-techniques.js?v=20260909-dragon-parent-v2';
+import { FLIEGENDER_TECHNIQUES } from './techniques/fliegender-techniques.js?v=20260909-dragon-parent-v2';
+import { ARTHWYR_EARLY_ROARING_TECHNIQUE, BRUELLENDER_TECHNIQUES } from './techniques/bruellender-techniques.js?v=20260909-dragon-parent-v2';
+import { AUSGEGLICHENER_TECHNIQUES } from './techniques/ausgeglichener-techniques.js?v=20260909-dragon-parent-v2';
+import { AUFSTEIGENDER_TECHNIQUES } from './techniques/aufsteigender-techniques.js?v=20260909-dragon-parent-v2';
+import { ZWILLINGSDRACHEN_TECHNIQUES } from './techniques/zwillingsdrachen-techniques.js?v=20260909-dragon-parent-v2';
+import { BRUELLENDER_SHIELD_TECHNIQUES } from './techniques/bruellender-shield-techniques.js?v=20260909-dragon-parent-v2';
+import { LAUERNDER_BOW_TECHNIQUES, SHARED_SPEAR_LEGACY_TECHNIQUES } from './techniques/exclusive-path-techniques.js?v=20260909-dragon-parent-v2';
+import { UCHELWYR_MOUNTED_TECHNIQUES } from './techniques/uchelwyr-mounted-techniques.js?v=20260909-dragon-parent-v2';
+import { DRACHLING_TECHNIQUES } from './techniques/milwr-techniques.js?v=20260909-dragon-parent-v2';
+import { BARDDWYR_STANDARD_PATH_TECHNIQUES, KREISCHENDER_TECHNIQUES, TRAELLERNDER_TECHNIQUES } from './techniques/barddwyr-techniques.js?v=20260909-dragon-parent-v2';
+import { HELWYR_EXPERT_TECHNIQUES } from './techniques/helwyr-expert-techniques.js?v=20260909-dragon-parent-v2';
 
-export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 8;
+import { SPEERDRACHEN_TECHNIQUES, SPEAR_SPECIALIST_TECHNIQUES } from './techniques/spear-path-techniques.js?v=20260909-dragon-parent-v2';
+import { BAERENKLAUEN_TECHNIQUES, JAGENDER_TECHNIQUES, LAUERNDER_SWORD_TECHNIQUES, SCHWEIFENDER_FOOT_TECHNIQUES } from './techniques/class-specialist-techniques.js?v=20260909-dragon-parent-v2';
+import { getDerwynCenyrFoundationTechniques } from '../sirenentanz/sirenentanz-basic-techniques.js?v=20260909-dragon-parent-v2';
+
+export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 9;
 
 const FORM_I_NAME = 'Drachentanz Form I · Tanz des Jungdrachens';
 
@@ -190,8 +194,14 @@ const ALL_DRAFT_TECHNIQUES = Object.freeze([
   ...AUFSTEIGENDER_TECHNIQUES,
   ...ZWILLINGSDRACHEN_TECHNIQUES,
   ...UCHELWYR_MOUNTED_TECHNIQUES,
-  ...LANZENDRACHEN_TECHNIQUES,
-  ...BOGENDRACHEN_TECHNIQUES,
+  ...SHARED_SPEAR_LEGACY_TECHNIQUES,
+  ...SPEERDRACHEN_TECHNIQUES,
+  ...SPEAR_SPECIALIST_TECHNIQUES,
+  ...LAUERNDER_BOW_TECHNIQUES,
+  ...LAUERNDER_SWORD_TECHNIQUES,
+  ...JAGENDER_TECHNIQUES,
+  ...BAERENKLAUEN_TECHNIQUES,
+  ...SCHWEIFENDER_FOOT_TECHNIQUES,
   ...DRACHLING_TECHNIQUES,
   ...TRAELLERNDER_TECHNIQUES,
   ...KREISCHENDER_TECHNIQUES,
@@ -253,44 +263,49 @@ export const DRACHENTANZ_COMBAT_STYLE = Object.freeze({
       minimumLevel: 1,
       unlockRule: 'Teulu schalten auf jeder Stufe von 1 bis 6 genau eine weitere Technik frei.',
       techniqueLevelBand: { minimum: 1, maximum: 6 },
-      techniques: [...JUNGDRACHE_TECHNIQUES, ...TEULU_FOUNDATION_ADDITIONS, ...techniquesForForm(FORM_IDS.jungdrache)]
+      techniques: [...JUNGDRACHE_TECHNIQUES, ...TEULU_FOUNDATION_ADDITIONS, ...techniquesForForm(FORM_IDS.jungdrache), ...getDerwynCenyrFoundationTechniques()]
     },
     plannedForm(null, 'freie-vertiefung', 'Freie Vertiefung', 'duelist', 7, 8,
       'Pufferzone für eigene Techniken oder die vier bewährten Übergangsangriffe der Klassenfolge.',
       { id: FORM_IDS.vertiefung, sequence: 2, trainingTier: 'Freie Vertiefung' }),
     plannedForm(2, 'ii-schwertdrache', 'Tanz des Schwertdrachens', 'path', 9, 20,
-      'Einzelziel-Duellpfad ohne Flächenangriffe. Die Bezeichnung folgt der Hauptwaffe der Klasse.',
+      'Einzelziel-Duellpfad für Teulu, Helwyr, Arthwyr und den Schwertzweig der Barddwyr.',
       { sequence: 3, features: getDrachentanzPathFeatures(FORM_IDS.schwertdrache) }),
     ...[
       [3, 'iii-abwartender-drache', 'Tanz des abwartenden Drachens'],
       [4, 'iv-fliegender-drache', 'Tanz des fliegenden Drachens'],
       [5, 'v-bruellender-drache', 'Tanz des brüllenden Drachens'],
       [6, 'vi-ausgeglichener-drache', 'Tanz des ausgeglichenen Drachens']
-    ].map(([number, suffix, name]) => plannedForm(number, suffix, name, 'path', 9, 20,
-      'Beim Stufenaufstieg wählbarer Expertenpfad. Die entworfenen Attacken werden aus dem gemeinsamen Klassenbudget gelernt.',
-      { sequence: number + 2, features: getDrachentanzPathFeatures(`drachentanz-form-${suffix}`) })),
-    plannedForm(null, 'aufsteigender-drache', 'Tanz des aufsteigenden Drachens', 'path', 9, 20,
-      'Akrobatischer Unterpfad des Fliegenden Drachen mit Geheimhaltung und wachsendem Kritbereich.',
-      { id: FORM_IDS.aufsteigender, sequence: 8, parentPathId: FORM_IDS.fliegender, features: getDrachentanzPathFeatures(FORM_IDS.aufsteigender) }),
+    ].flatMap(([number, suffix, name]) => {
+      const form = plannedForm(number, suffix, name, 'path', 9, 20,
+        'Beim Stufenaufstieg wählbarer Expertenpfad. Die entworfenen Attacken werden aus dem gemeinsamen Klassenbudget gelernt.',
+        { sequence: number + (number >= 5 ? 3 : 2), features: getDrachentanzPathFeatures(`drachentanz-form-${suffix}`) });
+      if (form.id !== FORM_IDS.fliegender) return [form];
+      return [form, plannedForm(null, 'aufsteigender-drache', 'Tanz des aufsteigenden Drachens', 'path', 9, 20,
+        'Akrobatische Unterform des fliegenden Drachens mit Geheimhaltung und wachsendem Kritbereich.',
+        { id: FORM_IDS.aufsteigender, sequence: 7, parentPathId: FORM_IDS.fliegender, features: getDrachentanzPathFeatures(FORM_IDS.aufsteigender) })];
+    }),
     plannedForm(null, 'zwillingsdrache', 'Tanz des Zwillingsdrachens', 'path', 9, 20,
       'Beidhändiger Pfad für zwei zugleich geführte Schwerter oder Dolche.',
-      { id: FORM_IDS.zwillingsdrache, sequence: 9, features: getDrachentanzPathFeatures(FORM_IDS.zwillingsdrache) }),
-    plannedForm(null, 'satteldrache', 'Tanz des Satteldrachens', 'path', 9, 20,
-      'Exklusiver Uchelwyr-Pfad für Anritt, Ross und Angriffe aus dem Sattel.',
-      { id: FORM_IDS.satteldrache, sequence: 10, exclusiveClassIds: ['uchelwyr'], features: getDrachentanzPathFeatures(FORM_IDS.satteldrache) }),
-    plannedForm(null, 'lanzendrache', 'Tanz des Lanzendrachens', 'path', 9, 20,
-      'Exklusiver Cantref-Pfad für die reine Lanzenlinie und den gesetzten Anritt.',
-      { id: FORM_IDS.lanzendrache, sequence: 11, exclusiveClassIds: ['cantref'], features: getDrachentanzPathFeatures(FORM_IDS.lanzendrache) }),
-    plannedForm(null, 'bogendrache', 'Tanz des Bogendrachens', 'path', 9, 20,
-      'Exklusiver Helwyr-Pfad für Langbogen, Kurzbogen und bewegte Schussfolgen.',
-      { id: FORM_IDS.bogendrache, sequence: 12, exclusiveClassIds: ['helwyr'], features: getDrachentanzPathFeatures(FORM_IDS.bogendrache) }),
+      { id: FORM_IDS.zwillingsdrache, sequence: 10, features: getDrachentanzPathFeatures(FORM_IDS.zwillingsdrache) }),
+    ...[
+      [FORM_IDS.speerdrache, 'Tanz des Speerdrachens', ['cantref', 'uchelwyr'], 'Erste Expertenform beider Speerklassen. Die Schwertdrachenlehre verbindet sich mit albischen Einflüssen zu flüssiger, stetiger Bewegung.'],
+      [FORM_IDS.peitschender, 'Tanz des peitschenden Drachens', ['cantref', 'uchelwyr'], 'Aggressive, explosive und offensive Speertechnik.'],
+      [FORM_IDS.huetender, 'Tanz des hütenden Drachens', ['cantref', 'uchelwyr'], 'Defensive Speertechnik mit sparsamen Bewegungen und ausdauernder Deckung.'],
+      [FORM_IDS.stuermender, 'Tanz des stürmenden Drachens', ['uchelwyr'], 'Kavallerieform für den Kampf aus dem Sattel.'],
+      [FORM_IDS.schweifender, 'Tanz des schweifenden Drachens', ['uchelwyr'], 'Offensive Bewegungsform mit Schwert und Speer; besondere Techniken werden beritten ausgeführt.'],
+      [FORM_IDS.lauernder, 'Tanz des lauernden Drachens', ['helwyr'], 'Bogenführung mit sekundärem Schwertgebrauch als Zweitwaffe.'],
+      [FORM_IDS.jagender, 'Tanz des jagenden Drachens', ['helwyr'], 'Bogen, Heimlichkeit, vorbereitete Hinterhalte und kurze Klingen.'],
+      [FORM_IDS.baerenklaue, 'Tanz der Bärenklaue', ['arthwyr'], 'Besondere Hausform des Arthwyr für engen Nah- und Enterkampf.']
+    ].map(([id, name, exclusiveClassIds, rule], index) => plannedForm(null, '', name, 'path', 9, 20, rule,
+      { id, sequence: 11 + index, exclusiveClassIds, features: getDrachentanzPathFeatures(id) })),
     plannedForm(null, 'drachling', 'Tanz des Drachlings', 'path', 6, 15,
       'Milwr-Pfad für Nicht-Ritter und Söldner: schwächer, direkter, brachialer und flexibler.',
-      { sequence: 13, trainingTier: 'Milwr-Pfad', features: getDrachentanzPathFeatures(FORM_IDS.drachling) }),
+      { sequence: 19, trainingTier: 'Milwr-Pfad', features: getDrachentanzPathFeatures(FORM_IDS.drachling) }),
     plannedForm(null, 'barddwyr-traellernder-drache', 'Tanz des trällernden Drachens', 'duelist', 7, 8,
-      'Rapieroption der Barddwyr innerhalb der freien Vertiefung auf Stufe 7–8.', { sequence: 14, trainingTier: 'Barddwyr-Vertiefung' }),
+      'Rapieroption der Barddwyr innerhalb der freien Vertiefung auf Stufe 7–8.', { sequence: 20, trainingTier: 'Barddwyr-Vertiefung' }),
     plannedForm(null, 'barddwyr-kreischender-drache', 'Tanz des kreischenden Drachens', 'path', 9, 20,
       'Eigener Barddwyr-Pfad mit Schnelligkeit, Ausweichen, Stellungswechseln und kritischen Treffern.',
-      { sequence: 15, trainingTier: 'Barddwyr-Pfad', features: getDrachentanzPathFeatures(FORM_IDS.kreischender) })
+      { sequence: 21, trainingTier: 'Barddwyr-Pfad', features: getDrachentanzPathFeatures(FORM_IDS.kreischender) })
   ]
 });

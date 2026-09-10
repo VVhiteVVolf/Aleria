@@ -1,5 +1,4 @@
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
-import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js';
+import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 import {
   CHARACTER_CREATION_METHODS,
   CHARACTER_CREATION_STEPS,
@@ -8,19 +7,21 @@ import {
   createCharacterCreationDraft,
   getCreationBaseAttributes,
   getCreationFinalAttributes,
+  getCreationFoundationOptions,
+  getCreationStartingTechniques,
   getPointBuyRemaining,
   getTemplateGrantedSkills,
   rollAttributeSet,
   setCreationAttributeMethod,
   validateCharacterCreationDraft
-} from '../combat/character-creation-model.js?v=20260906-effect-rolls-v1';
+} from '../combat/character-creation-model.js?v=20260909-dragon-parent-v2';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
-} from '../combat/character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 
 let activeSetup = null;
 
@@ -85,6 +86,7 @@ function renderTemplateStep(draft) {
       <label><span>Volk / Herkunft</span><select data-creation-field="ancestryId">${templateOptions(CHARACTER_ANCESTRY_TEMPLATES, draft.selections.ancestryId, 'Volk auswählen …')}</select></label>
       <label><span>Hintergrund</span><select data-creation-field="backgroundId">${templateOptions(CHARACTER_BACKGROUND_TEMPLATES, draft.selections.backgroundId, 'Hintergrund auswählen …')}</select></label>
       <label><span>Klasse / Archetyp</span><select data-creation-field="classId">${classTemplateOptions(draft.selections.classId)}</select></label>
+      ${getCreationFoundationOptions(draft).length ? `<label><span>Grundausbildung des Derwyn</span><select data-creation-field="foundationFormId"><option value="">Grundausbildung wählen …</option>${getCreationFoundationOptions(draft).map(option => `<option value="${escapeHtml(option.formId)}"${selected(draft.foundationFormId, option.formId)}>${escapeHtml(option.name)}</option>`).join('')}</select></label>` : ''}
     </div>
     <div class="cp-setup-template-grid">
       ${templatePreview('Volk', ancestry, 'Noch kein Volk gewählt.')}
@@ -169,7 +171,7 @@ function renderSkillsStep(draft, profile) {
 function renderEquipmentStep(draft) {
   const classTemplate = getCharacterCreationTemplate('class', draft.selections.classId);
   if (!classTemplate) return `<section class="cp-setup-step"><header><span>Schritt 4</span><h3>Kampfausbildung</h3></header><div class="cp-setup-empty">Wähle im ersten Schritt eine Klasse oder überspringe diesen Abschnitt.</div></section>`;
-  const startingTechniques = getCombatStyleTechniquesForGrants(classTemplate.combatStyleGrants, 1);
+  const startingTechniques = getCreationStartingTechniques(draft);
   return `<section class="cp-setup-step">
     <header><span>Schritt 4</span><h3>${escapeHtml(classTemplate.label)} · Kampfausbildung</h3><p>${escapeHtml(classTemplate.description)}</p></header>
     <div class="cp-setup-package-grid">
@@ -291,6 +293,9 @@ function handleChange(event) {
   const field = target.dataset.creationField;
   if (field && ['ancestryId', 'backgroundId', 'classId'].includes(field)) {
     activeSetup.draft.selections[field] = target.value;
+    markCurrentStepIncluded();
+  } else if (field === 'foundationFormId') {
+    activeSetup.draft.foundationFormId = target.value;
     markCurrentStepIncluded();
   } else if (field === 'replaceStartingEquipment' || field === 'resetLevelOne') {
     activeSetup.draft[field] = target.checked;

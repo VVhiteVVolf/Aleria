@@ -1,0 +1,359 @@
+{
+  "id": "kobolde",
+  "name": "Kobolde, Wichtel & Goblins",
+  "classification": "Niedere humanoide Diener der infernalen Götter",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Unter dem Einfluss ihrer jeweiligen Herren",
+  "folio": "IV / 01",
+  "parentGroupId": "infernale-linien",
+  "summary": "Kobolde, Wichtel und Goblins bilden die niederste Stufe vieler infernaler Gefolgschaften. Jede bekannte Linie ist eine groteske Spiegelung ihres göttlichen Schöpfers: klein und körperlich oft schwach, doch durch Überzahl, Fallen, besondere Gaben und eine enge Bindung an ihren Herrn gefährlich.",
+  "quote": "Unterschätze nie den kleinsten Diener des Abgrunds; was ihm an Größe fehlt, ersetzt sein Herr durch Zahl, List und einen ganz besonderen Fluch.",
+  "quoteAttribution": "Leitsatz der thalenorischen Infernalisten",
+  "icon": {
+    "src": "../../../assets/icons/kobolde.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Kobolde"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/uebersicht-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer gewöhnlicher Kobold auf neutralem Grund",
+    "caption": "Überlieferte Bildtafel · Allgemeine koboldartige Gestalt"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Kobold, Goblin oder Wichtel"
+    },
+    {
+      "label": "Typ",
+      "value": "Niederer infernaler humanoider Diener"
+    },
+    {
+      "label": "Variationen",
+      "value": "Durch die jeweilige infernale Gottheit geprägt"
+    },
+    {
+      "label": "Zugehörigkeit",
+      "value": "Abhängige Bindung an einen bestimmten infernalen Herrn"
+    },
+    {
+      "label": "Größe",
+      "value": "Meist 90–120 cm; einzelne Linien weichen ab"
+    },
+    {
+      "label": "Kultur",
+      "value": "Clans, Sippen oder streng dienende Schwärme"
+    },
+    {
+      "label": "Sprache",
+      "value": "Vom einfachen Grunzen bis zu Sprache und Gedankensprache"
+    },
+    {
+      "label": "Intellekt",
+      "value": "Je nach Linie instinktgetrieben bis hochintelligent"
+    },
+    {
+      "label": "Stärken",
+      "value": "Überzahl, Fallen, Heimvorteil und besondere infernale Gaben"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Einzelkraft, chaotisches Verhalten und Abhängigkeit vom Herrn"
+    },
+    {
+      "label": "Beute",
+      "value": "Je nach Linie materielle Vorräte, Gefühle, Wünsche oder Seelenreste"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Überzahldruck",
+      "Fallenbau",
+      "Anführerbindung",
+      "Infernale Prägung",
+      "Anpassungsbreite",
+      "Einzelkampfkraft"
+    ],
+    "values": [
+      9,
+      8,
+      9,
+      10,
+      8,
+      3
+    ],
+    "intro": "Die zehn Linien unterscheiden sich stark. Die gemeinsame Bewertung zeigt jene Merkmale, die Begegnungen mit koboldartigen Dienern am häufigsten bestimmen.",
+    "source": "Aus Gruppentaktik, Clanstruktur, infernaler Abhängigkeit, unterschiedlichen Fähigkeiten und der meist geringen physischen Einzelkraft abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Diener der infernalen Götter",
+    "title": "Bekannte Unterarten",
+    "intro": "Zehn koboldartige Linien sind namentlich und bildlich überliefert. Fünf weitere Archivstellen bleiben als ??? offen, bis gesicherte Namen und Berichte vorliegen.",
+    "entries": [
+      {
+        "id": "feuerkobold",
+        "name": "Feuerkobold",
+        "region": "Diener Dagons",
+        "description": "Feuerkobolde sind kleine, geflügelte Abbilder der Dagonaren.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/feuerkobold/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/feuerkobold-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Feuerkobold"
+        }
+      },
+      {
+        "id": "leidling",
+        "name": "Leidling",
+        "region": "Diener Lunaras",
+        "description": "Leidlinge sind bleiche, gebrechlich wirkende Sammler Lunaras.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/leidling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/leidling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Leidling"
+        }
+      },
+      {
+        "id": "grimling",
+        "name": "Grimling",
+        "region": "Diener Grimnars",
+        "description": "Grimlinge sind Grimnars grausame Parodie auf die Menschheit: klein, streitsüchtig und von ungezügelter Habgier getrieben.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/grimling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/grimling-icon.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Vollständig sichtbarer Grimling"
+        }
+      },
+      {
+        "id": "blutling",
+        "name": "Blutling",
+        "region": "Diener Bhaals",
+        "description": "Blutlinge sind Bhaals kleine, animalische Ebenbilder.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/blutling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/blutling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Blutling"
+        }
+      },
+      {
+        "id": "hornling",
+        "name": "Hornling",
+        "region": "Diener Zatrachs",
+        "description": "Hornlinge sind kleine, kräftige Jagddiener Zatrachs mit moosgrüner Haut und altersbedingt wachsenden Hörnern oder Geweihen.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/hornling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/hornling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Hornling"
+        }
+      },
+      {
+        "id": "drachling",
+        "name": "Drachling",
+        "region": "Diener Adars",
+        "description": "Drachlinge sind kleinwüchsige, stolze Zwischenwesen mit humanoidem Körper und drachenartigen Schuppen, Klauen und Köpfen.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/drachling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/drachling-icon.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Vollständig sichtbarer Drachling"
+        }
+      },
+      {
+        "id": "schaedling",
+        "name": "Schädling",
+        "region": "Diener Amons",
+        "description": "Schädlinge sind Amons kleinste und zahlreichste Knechte.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/schaedling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/schaedling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Schädling"
+        }
+      },
+      {
+        "id": "racheling",
+        "name": "Racheling",
+        "region": "Diener Nemsaras",
+        "description": "Rachelinge sind kleine, nachtschwarze Spione Nemsaras mit rot glühenden Augen.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/racheling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/racheling-icon.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Vollständig sichtbarer Racheling"
+        }
+      },
+      {
+        "id": "wunschling",
+        "name": "Wunschling",
+        "region": "Diener Migdals",
+        "description": "Wunschlinge sind giftgrüne, farbenfroh gekleidete Händler Migdals.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/wunschling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/wunschling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Wunschling"
+        }
+      },
+      {
+        "id": "lustling",
+        "name": "Lustling",
+        "region": "Diener Sanguines",
+        "description": "Lustlinge sind unauffällige Quasiten in Sanguines Dienerschaft.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../kobolde/lustling/index.html",
+        "image": {
+          "src": "../../../assets/kobold-profiles/lustling-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Lustling"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobolde, Wichtel und Goblins gelten als niederste Ebene der infernalen Hierarchie. Sie dienen als Sklaven, Boten, Spione, Jäger oder Werkzeuge und treten überall dort auf, wo der Einfluss eines infernalen Gottes die Welt berührt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede Linie spiegelt Wesen und Macht ihres Schöpfers. Dadurch reichen die Erscheinungsformen von animalischen Rudeljägern über geisterhafte Sammler bis zu listigen Händlern, deren geringe Größe wenig über die tatsächliche Gefahr verrät."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung & Prägung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die infernalen Götter schufen diese Wesen als absichtliche Verzerrung himmlischer Archetypen. Wo Celestiale Erhabenheit zeigen, tragen Kobolde groteske, chaotische oder düstere Züge und bleiben eng an den Willen ihrer Herren gebunden."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Clans, Sippen & Dienst",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viele Linien ahmen menschliche Gesellschaft in vereinfachter oder verzerrter Form nach. Clans sammeln Artefakte, bauen primitive Waffen und folgen Schamanen oder starken Kriegern; andere leben als organisierte Schwärme oder vollkommen unterwürfige Hausdiener."
+        }
+      ]
+    },
+    {
+      "id": "verstaendigung",
+      "title": "Sprache & Intellekt",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Verständigung reicht von Grunzen und Fauchen bis zu eigenen Dialekten, flüssiger Verhandlung oder Gedankensprache. Auch der Verstand folgt keiner gemeinsamen Stufe: Manche handeln fast nur aus Instinkt, andere planen, täuschen und lesen die Schwächen eines Gegenübers mit großer Genauigkeit."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Isolierte Kobolde sind häufig leicht zu überwältigen. In ihrem Revier nutzen sie jedoch Überzahl, Fallen, Engstellen und besondere Gaben; deshalb sollten Kundschafter den Anführer, vorbereitete Fluchtwege und die Bindung der jeweiligen Linie erkennen, bevor sie eine Gruppe angreifen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wird eine Gruppe zerstreut oder ihr Anführer ausgeschaltet, brechen viele einfache Clans rasch auseinander. Magisch geprägte Linien verlangen dagegen eine passende Antwort: Feuerkobolde fürchten Wasser und Eis, Wunschlinge sorgfältige Sprache, und körperlose Leidlinge lassen sich mit gewöhnlichen Waffen kaum erreichen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Sammeltrieb fast aller Linien richtet sich nach dem Wesen ihres Schöpfers: von Brennstoff über Trophäen bis zu immateriellen Wünschen und Klagen.",
+            "Eine koboldartige Silhouette sagt wenig über Gefahr oder Verstand aus; erst Verhalten und Umgebung verraten die zugehörige Linie.",
+            "Anführer tragen häufig die deutlichsten Zeichen ihres infernalen Herrn und sind für Zusammenhalt oder Aufgabenteilung einer Gruppe entscheidend.",
+            "Die Begriffe Kobold, Wichtel und Goblin werden in den Archiven überlappend verwendet."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,4 +1,4 @@
-import { applyCombatResourceCosts } from './combat-state-model.js';
+import { applyCombatResourceCosts } from './combat-state-model.js?v=20260909-dragon-parent-v2';
 import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { withEquippedCombatWeapon } from './combat-equipment-state.js';
 

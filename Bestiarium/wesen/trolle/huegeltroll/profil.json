@@ -1,0 +1,185 @@
+{
+  "id": "huegeltroll",
+  "name": "Hügeltroll",
+  "classification": "Trollunterart · Schlafender Landschaftsriese",
+  "continent": "Aleria",
+  "region": "Hügelland, Hochweiden und offene Übergangszonen",
+  "folio": "III-T / 08",
+  "parentGroupId": "trolle",
+  "summary": "Hügeltrolle sind kolossale, aber ungewöhnlich träge und konfliktscheue Vertreter ihrer Rasse. Ein langsamer Stoffwechsel lässt sie monatelang ohne Nahrung auskommen und im Sommer zu moosbewachsenen, reglosen Formen erstarren, die leicht für natürliche Hügel oder Felsen gehalten werden.",
+  "quote": "Nicht jeder Hügel schläft. Manche warten nur auf den Herbst.",
+  "quoteAttribution": "Eintrag auf einer alten alerischen Hirtenkarte",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-huegeltroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Hügeltroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/huegeltroll.webp",
+    "width": 805,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Hügeltroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Hügeltroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Hügeltroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; kolossaler Ruhestandtroll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Großwüchsige, von Landtrollen entfernte Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Sanfte Hügel, Hochweiden und Übergänge zwischen Wald und Gebirge"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Scheu, lethargisch und nur bei Bedrängnis oder Hunger aggressiv"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Vor allem Herbst und Winter; Sommerstarre ist verbreitet"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Monatelange Starre, langsamer Stoffwechsel und Felsmimikry"
+    },
+    {
+      "label": "Stärken",
+      "value": "Enorme Masse, dichte Haut, Ausdauer und geringer Nahrungsbedarf"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Trägheit, geringe Wendigkeit und gezielte Störung der Beine"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Selten gejagt; Trollgestein, Moosbewuchs und Knochen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körpermasse",
+      "Langzeitstarre",
+      "Sonnenverträglichkeit",
+      "Stoffwechselruhe",
+      "Konfliktlust",
+      "Regeneration"
+    ],
+    "values": [
+      10,
+      10,
+      7,
+      10,
+      2,
+      7
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Hügeltrolls abgeleitet",
+    "intro": "Der Hügeltroll wird als ruhender Landschaftsriese eingeordnet. Seine niedrige Konfliktlust mindert das Risiko, solange der Ruheplatz respektiert wird."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nur der sagenumwobene Steintroll soll den Hügeltroll an Masse übertreffen. Flechten, Moos und Erdkrusten bedecken seine dichte Haut und lassen ruhende Exemplare wie Felsformationen erscheinen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Bewegungen bleiben langsam, doch ein zum Kampf gezwungener Troll setzt diese Masse mit erdrückender Gewalt ein."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hügeltrolle gelten als entfernte Verwandte der Landtrolle. Sie verstehen menschliche Worte häufig besser, als sie selbst sprechen können, suchen jedoch weder Handel noch Gesellschaft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein außergewöhnlich langsamer Stoffwechsel ermöglicht monatelanges Fasten. Langes Sommerlicht begünstigt eine Versteinerungsstarre, aus der viele erst im Herbst erwachen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diese Trolle meiden Menschen und verteidigen sich erst bei Jagd, starker Bedrängnis oder großem Hunger. Ziegen, Wurzeln und Obst genügen ihnen meist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bekannte Ruheplätze werden von Hirten markiert und mit kleinen Opfergaben umgangen. Eine erzwungene Vertreibung richtet oft mehr Schaden an als die bloße Anwesenheit."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Weite Hügel, offene Hochweiden und fruchtbare Übergänge bieten Nahrung und natürliche Mulden. Wenig menschliche Präsenz ist wichtiger als völlige Abgeschiedenheit."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Jagd ist selten sinnvoll. Muss ein Troll gelenkt werden, dienen Feuer und Gelände vor allem der Bewegungskontrolle; Angriffe auf Beine und Augen sind wirksamer als Schläge gegen den Rumpf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geduld, Abstand und ein freier Fluchtweg verhindern, dass ein träger Nachbar zur wandelnden Katastrophe wird."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hirten sprechen von wandernden Hügeln, wenn ein Troll über Nacht den Ruheplatz wechselt.",
+            "Alte Karten enthalten Erhebungen, die in späteren Vermessungen fehlen.",
+            "Opfergaben sollen vor allem verhindern, dass Vieh in die Nähe eines schlafenden Tieres gerät.",
+            "Druidische Erzählungen schreiben einzelnen Hügeltrollen jahrzehntelange Schlafphasen zu."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

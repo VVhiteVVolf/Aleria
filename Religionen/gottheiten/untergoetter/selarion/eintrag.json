@@ -1,0 +1,243 @@
+{
+  "id": "selarion",
+  "title": "Selarion",
+  "epithet": "Der Herausforderer",
+  "kind": "Untergottheit",
+  "summary": "Sport, Wettstreit, Herolde und Abgesandte.",
+  "symbol": "BilderRüstungen/selarion_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Herausforderer",
+    "Sport",
+    "Wettstreit",
+    "Herolde",
+    "Abgesandte"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "zephyr"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Selarion, der Herausforderer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Selarion ist der Gott des Sports, der Herolde, Wettstreiter und Abgesandten. Seine Anhänger finden ihn im offenen Wettkampf, in der treu überbrachten Botschaft und in dem Mut, sich einer Prüfung zu stellen. Er ehrt den Willen, über sich hinauszuwachsen, ohne dem Gegenüber seine Würde zu nehmen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Untergottheit steht Selarion Baldrans Verständnis von Ehre und Pflicht nahe. Er führt diese Tugenden auf den Übungsplatz, in die Wettkampfarena und an den Verhandlungstisch. Die Beweglichkeit und Freiheit Zephyrs begleiten seine Boten auf ihren Wegen. Sein druidischer Beiname „Der Falke“ steht für den wachen Blick und den zielgerichteten Flug."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Selarion verkörpert Fairness, Mut und Verlässlichkeit. Er misst einen Wettstreiter an der Bereitschaft zur ehrlichen Anstrengung und an seinem Verhalten gegenüber Mitstreitern. Ein würdevoll eingestandener Verlust kann ihm mehr gefallen als ein erschlichener Sieg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine zweite Berufung liegt im Überbringen von Worten. Ein Herold soll die Botschaft unverfälscht verkünden, auch wenn sie unbequem ist. Ein Abgesandter soll den Auftrag seines Herrn kennen und zugleich die Regeln achten, die eine Begegnung überhaupt ermöglichen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selarion verabscheut Betrug, Demütigung und den Verrat an einem anvertrauten Wort. Wer einen Wettkampf als Vorwand nutzt, um Wehrlose zu verletzen, oder einen geschützten Boten hinterlistig angreift, widerspricht seinem Wesen. Seine Gunst fördert Wachheit, Ausdauer und klare Rede; sie hebt die Grenzen der Sterblichen nicht auf."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "brauchtum",
+      "title": "Wettstreit und Botenbrauch",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vor einem Wettstreit werden die Bedingungen hörbar ausgesprochen und von den Beteiligten anerkannt. Ein kleiner Fackelschrein erinnert daran, dass die Prüfung für alle sichtbar und nach denselben Regeln stattfinden soll. Nach dem Ende werden auch die Besiegten geehrt, sofern sie den Wettkampf aufrichtig geführt haben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Boten berühren vor dem Aufbruch das Zeichen der Fackel und wiederholen den Auftrag, der ihnen anvertraut wurde. An Wegekreuzungen können Selarions Schreine als Treffpunkte für Läufer, Herolde und Reisende dienen."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid des redlichen Wettstreits: Der Jünger verpflichtet sich, vereinbarte Regeln einzuhalten, fremde Leistungen anzuerkennen und sich weder durch heimlichen Betrug noch durch die mutwillige Schädigung seiner Mitstreiter einen Vorteil zu verschaffen.",
+            "Eid des unverfälschten Wortes: Der Jünger trägt einen angenommenen Auftrag gewissenhaft aus und verdreht eine Botschaft nicht zu seinem eigenen Nutzen. Kann er den Auftrag nicht erfüllen, legt er sein Scheitern offen und beansprucht keinen Erfolg, der ihm nicht zukommt."
+          ]
+        }
+      ],
+      "sharedLore": "eide",
+      "authorship": "continuation"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte & Segen",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt des Wettstreiters: Der Jünger gewinnt ein genaueres Gespür für Rhythmus, Abstand und die eigene Belastung. Geübte Bewegungen werden sicherer, doch eine nie erlernte Kunst wird ihm dadurch nicht geschenkt.",
+            "Aspekt des Herolds: Unter Selarions Gunst trägt die Stimme klarer über einen Platz, und eine anvertraute Botschaft bleibt leichter im Gedächtnis. Die Gabe macht den Sprecher verständlich; sie zwingt seine Zuhörer nicht zur Zustimmung.",
+            "Segen des langen Weges: Ein Bote, der seinen Auftrag aufrichtig trägt, kann seine Kräfte besser einteilen und sich nach Anstrengung leichter sammeln. Er muss weiterhin essen, ruhen und die Gefahren des Weges beachten.",
+            "Segen der gefassten Antwort: Vor einer Prüfung oder einer schwierigen Unterredung hilft Selarions Gunst, Furcht und aufwallenden Zorn zu ordnen. Der Jünger kann entschlossener handeln, ohne in blinden Übermut zu verfallen."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Bund der ehrenhaften Herausforderung: Zwei willige Wettstreiter weihen eine klar vereinbarte Prüfung. Beide spüren, wenn einer den gemeinsam beschworenen Rahmen absichtlich verletzt. Der Bund verlangt freie Zustimmung und verleiht keinem Beteiligten einen Anspruch auf den Sieg.",
+            "Bund des freien Geleits: Ein bewährter Abgesandter kann eine Botschaft unter Selarions Zeichen tragen. Menschen, die den Gott und die Heiligkeit des Botenamtes achten, erkennen den Anspruch auf Anhörung. Der Bund schenkt Standhaftigkeit und klare Rede in Gefahr, schützt jedoch nicht unfehlbar gegen Gewalt oder Verrat."
+          ]
+        }
+      ],
+      "sharedLore": "buende",
+      "authorship": "continuation"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Betrug unter Selarions Zeichen oder das bewusste Verfälschen einer Botschaft verletzt die Grundlage seiner Gunst. Zur Buße gehört es, einen erschlichenen Vorteil aufzugeben, das wahre Wort öffentlich richtigzustellen und den Geschädigten ihre Ehre zurückzugeben. Ein Sieg wird durch Reue nicht nachträglich rechtmäßig."
+        }
+      ],
+      "sharedLore": "uebertretungen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stelle dich der Prüfung und wahre das gegebene Wort. Selarion fordert den Mut zum offenen Vergleich und die Besonnenheit, im Gegner einen Mitmenschen zu erkennen."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fairness gibt dem Wettstreit seinen Wert, Mut trägt den Jünger durch die Prüfung, und Verlässlichkeit bindet ihn an sein Wort. Wer Niederlagen nur durch Ausflüchte erträgt, kann aus ihnen nicht lernen."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Selarions Schreine stehen an Übungsplätzen, Turnierstätten und wichtigen Wegen. Herolds- und Botenstuben können ihm ebenso geweiht sein wie einfache Laufbahnen. Eine brennende Fackel und ein freier Platz genügen, um eine faire Herausforderung in seinem Namen auszurufen."
+        }
+      ],
+      "authorship": "continuation"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Sport, Wettstreit, Herolde und Abgesandte"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Fairness, Mut und Verlässlichkeit"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Betrug, Demütigung und Verrat am anvertrauten Wort"
+    },
+    {
+      "label": "Symbol",
+      "value": "Fackel"
+    },
+    {
+      "label": "Patronat",
+      "value": "Sportler, Wettstreiter, Herolde und Abgesandte"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Selarion"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Der Herausforderer"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Der Falke"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Herion"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Heleron"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Halrion"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Helermis"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "2d79e49c-1b26-44a4-a109-2cfc23c9b8c4",
+    "sha256": "e02dc982c5bbb04e7522278de5e6f8e5b7db042aee184be39cdb3b3e6fc104b1",
+    "continuation": "Auf Nutzerwunsch anhand der Domäne, der überlieferten Beinamen und der bestehenden göttlichen Lehre ausgearbeitet."
+  },
+  "portrait": {
+    "src": "assets/divine-art/selarion.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Selarion, Der Herausforderer",
+    "caption": "Selarion · Der Herausforderer"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Selarion",
+      "href": "Religionen/klerus/gottheiten/selarion/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

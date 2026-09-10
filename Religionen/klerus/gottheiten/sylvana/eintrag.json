@@ -1,0 +1,107 @@
+{
+  "godId": "sylvana",
+  "intro": "Sylvanas Klerus lebt aus Ehrfurcht, Achtung und Verbundenheit mit der geschaffenen Welt. Ihre Häuser bewahren Haine, begleiten ländliche Gemeinschaften und achten auf das Verhältnis zwischen menschlicher Nutzung und lebendiger Umgebung.",
+  "community": "Ein Hainheiligtum kann Priester, monastische Garten- und Pflegegemeinschaften sowie eine kleine Schutzwache beherbergen. Druiden begegnen diesen Häusern in verwandten Aufgaben. Wissenschaftliche Vorhaben werden den drei Bereichen des Magisteriums zugeordnet; asketische Schulen finden an stillen Orten ihren Platz.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Die Priester der Hirtin",
+      "paragraphs": [
+        "Priesterinnen und Priester Sylvanas begleiten Aussaat, Ernte und die Sorgen ländlicher Gemeinden. Sie erinnern an die Achtung vor Tieren, Pflanzen und gemeinsamen Lebensräumen. Ihr geistlicher Dienst kann unter freiem Himmel stattfinden; ein aufwendiger Tempelbau ist dafür keine Voraussetzung."
+      ],
+      "tasks": [
+        "Ländliche Gemeinden begleiten",
+        "Lebensräume und heilige Haine segnen",
+        "Zur achtsamen Nutzung der Natur mahnen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Die bewahrenden Haingemeinschaften",
+      "paragraphs": [
+        "Mönche und Nonnen pflegen Gärten, Baumbestände und die Versorgung ihres Heiligtums. Ihre Zünfte verbinden geduldige Beobachtung mit alltäglicher Arbeit. Saatgut, Tiere und Gehölze werden als anvertrautes Leben behandelt; Ertrag und Bequemlichkeit sind nicht die einzigen Maßstäbe des Konvents."
+      ],
+      "tasks": [
+        "Heilgärten und Saatbestände pflegen",
+        "Tiere und Weideflächen betreuen",
+        "Heilige Haine erhalten"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Saatbewahrer",
+          "work": "Pflegt Saatgut, Anbauwissen und die Gärten des Konvents."
+        },
+        {
+          "name": "Zunft der Hainpfleger",
+          "work": "Erhält Gehölze, Wege und die Ruhe heiliger Haine."
+        },
+        {
+          "name": "Zunft der Tierhüter",
+          "work": "Versorgt die Tiere des Hauses und bewahrt die Erfahrung ihrer Pflege."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Hüter der lebendigen Zuflucht",
+      "paragraphs": [
+        "Sylvanas Paladine schützen Haine, ländliche Schutzgemeinschaften und Menschen auf gefährdeten Wegen. Sie treten mutwilliger Verwüstung entgegen und begleiten jene, die Hilfe in abgelegene Orte bringen. Ihr Auftrag verlangt Ortskenntnis und Rücksicht, damit der Schutz nicht selbst den Lebensraum zerstört."
+      ],
+      "tasks": [
+        "Haine und Zufluchtsorte sichern",
+        "Abgelegene Gemeinden begleiten",
+        "Verwüstung und Übergriffe abwehren"
+      ]
+    },
+    "asketen": {
+      "presence": "klein",
+      "title": "Der Pfad der Verbundenheit",
+      "paragraphs": [
+        "Asketen der Hirtin suchen stille Orte, an denen sie Aufmerksamkeit und Körperbeherrschung üben. Ihr wehrhafter Anteil liegt im behutsamen Wachen und im Handeln unter schwierigen natürlichen Bedingungen. Entbehrung soll ihre Verbundenheit schärfen, nicht Verachtung für die Bedürfnisse lebender Wesen hervorbringen."
+      ],
+      "tasks": [
+        "Aufmerksamkeit und leise Bewegung schulen",
+        "Abgeschiedene Heiligtümer bewachen",
+        "Den eigenen Bedarf maßvoll ordnen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Sylvana verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Wiedergutmachung am Anvertrauten",
+      "paragraphs": [
+        "Ein Bußgang unter Sylvana kann verwahrlosten Gärten, geschädigten Hainen oder vernachlässigten Tieren gelten. Büßende lernen, regelmäßig für etwas zu sorgen, das von ihrer Aufmerksamkeit abhängt. Art und Umfang des Dienstes werden vereinbart; ein schwerer Schaden macht aus dem Bußgang keine endlose Bindung."
+      ],
+      "tasks": [
+        "Beschädigte Lebensräume unter Anleitung pflegen",
+        "Vernachlässigte Anlagen instand setzen",
+        "Regelmäßige Sorge für Anvertrautes übernehmen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "asketen": {
+      "src": "Religionen/klerus/assets/asketen-sylvana.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

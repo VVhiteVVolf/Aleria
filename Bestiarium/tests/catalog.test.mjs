@@ -7,11 +7,11 @@ import { filterEntries, matchesEntry } from '../modules/catalog/catalog-model.js
 
 test('the legacy chapters, specimens and source topics remain represented', () => {
   assert.deepEqual(BESTIARY_CHAPTERS.map(chapter => chapter.title), ['Tiere', 'Besondere Exemplare', 'Kreaturen', 'Infernale Wesen', 'Celestiale Wesen']);
-  assert.equal(BESTIARY_ENTRIES.length, 42);
+  assert.equal(BESTIARY_ENTRIES.length, 43);
   assert.equal(BESTIARY_TOPICS.length, 13);
   const entries = [...BESTIARY_ENTRIES, ...BESTIARY_TOPICS];
   assert.equal(new Set(entries.map(entry => entry.id)).size, entries.length);
-  for (const title of ['Sturmbock', 'Mondläufer', 'Fairean', 'Lütten', 'Djinn', 'Muhmen', 'Gorgonnen', 'Noch ohne Namen', 'Pferdekreuzungsmatrix']) {
+  for (const title of ['Sturmbock', 'Mondläufer', 'Cuimhorn', 'Fairean', 'Lütten', 'Djinn', 'Muhmen', 'Gorgonnen', 'Noch ohne Namen', 'Pferdekreuzungsmatrix']) {
     assert(entries.some(entry => entry.title === title), `Missing legacy subject: ${title}`);
   }
   assert.equal(BESTIARY_ENTRIES.filter(entry => entry.group === 'Diener der Souveränen').length, 5);
@@ -22,14 +22,14 @@ test('search combines words and categories and accepts German umlaut translitera
   assert.deepEqual(filterEntries(BESTIARY_ENTRIES, { query: 'MONDLAEUFER Lichthain' }).map(entry => entry.id), ['mondlaeufer']);
   assert.deepEqual(filterEntries(BESTIARY_ENTRIES, { query: 'lütten' }).map(entry => entry.id), ['luetten']);
   assert.equal(filterEntries(BESTIARY_ENTRIES, { query: 'Mondläufer', kind: 'infernale' }).length, 0);
-  assert.equal(filterEntries(BESTIARY_ENTRIES, { kind: 'tiere' }).length, 12);
-  assert.equal(filterEntries(BESTIARY_ENTRIES, { query: '  ' }).length, 42);
+  assert.equal(filterEntries(BESTIARY_ENTRIES, { kind: 'tiere' }).length, 13);
+  assert.equal(filterEntries(BESTIARY_ENTRIES, { query: '  ' }).length, 43);
   assert.equal(filterEntries(BESTIARY_ENTRIES, { query: 'nirgendwo-gefunden' }).length, 0);
   assert(BESTIARY_TOPICS.some(entry => matchesEntry(entry, 'Hoellenpakte')));
 });
 
 test('each illustrated entry has its own local asset and no obsolete external link', async () => {
-  assert.equal(new Set(BESTIARY_ENTRIES.map(entry => entry.image)).size, 42);
+  assert.equal(new Set(BESTIARY_ENTRIES.map(entry => entry.image)).size, 43);
   await Promise.all(BESTIARY_ENTRIES.map(entry => access(new URL(entry.image))));
   for (const entry of [...BESTIARY_ENTRIES, ...BESTIARY_TOPICS]) {
     if (entry.href !== null) {

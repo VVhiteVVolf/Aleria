@@ -72,9 +72,13 @@ function getArchiveDashboardDailyDiscovery(sections = [], date = new Date()) {
     .sort((left, right) => String(left.entry.id).localeCompare(String(right.entry.id), 'de'));
   if (!candidates.length) return null;
 
+  // Prefer an illustrated discovery; text-only archives still have a daily entry.
+  const illustrated = candidates.filter(item => getArchiveDashboardEntryImage(item.entry));
+  const discoveries = illustrated.length ? illustrated : candidates;
+
   const dateKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   const seed = [...dateKey].reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 7);
-  return candidates[seed % candidates.length];
+  return discoveries[seed % discoveries.length];
 }
 
 function buildArchiveDashboardDiscoveryPanel(sections = []) {
@@ -210,8 +214,8 @@ function buildArchiveDashboardRecentTrail(sections = []) {
   if (!recent.length) return '';
   return `
     <div class="archive-dashboard-recent-head">
-      <span>Deine letzten Spuren</span>
-      <small>Lokal auf diesem Gerät</small>
+      <span>Zuletzt gelesen</span>
+      <small>Deine letzten Spuren</small>
     </div>
     <div class="archive-dashboard-recent-list">
       ${recent.map(item => `
@@ -238,6 +242,7 @@ function buildArchiveDashboardQuickCards(sections = []) {
 }
 
 const ARCHIVE_DASHBOARD_TAB_ICONS = Object.freeze({
+  'Gilden & Zünfte': '../IconOrdner/ReiterIcons/Weltpfade/gilden-zuenfte.png?v=20260909-pergament-v3',
   'Völker & Kulturen': '../IconOrdner/ReiterIcons/Weltpfade/voelker-kulturen.png',
   Magie: '../IconOrdner/ReiterIcons/Weltpfade/magie.png',
   Infernales: '../IconOrdner/ReiterIcons/Weltpfade/infernales.png',
@@ -319,24 +324,21 @@ function renderArchiveDashboard(sections = []) {
   const stats = getArchiveDashboardStats(sections);
   const discoveryPanel = buildArchiveDashboardDiscoveryPanel(sections);
   return `
-    <section class="archive-dashboard" aria-label="Archivuebersicht">
+    <section class="archive-dashboard" aria-label="Archivübersicht">
       <div class="archive-dashboard-hero">
         <div class="archive-dashboard-hero-copy">
-          <div class="archive-dashboard-kicker">Almanach-Dashboard</div>
-          <h2>Willkommen im Aleria Almanach</h2>
-          <p>Erkunde die Welt, kehre in eine Szene zurück oder finde gezielt den nächsten Archivpfad.</p>
+          <h2>Die Welt in Schrift und Bild</h2>
+          <p>Folge den Weltpfaden, vertiefe dich in Überlieferungen oder schreibe eine Geschichte weiter.</p>
           ${buildArchiveDashboardHeroActions(sections)}
         </div>
         <div class="archive-dashboard-stats">
           <span><strong>${stats.moduleCount}</strong> Module</span>
           <span><strong>${stats.pageCount}</strong> Seiten</span>
           <span><strong>${stats.sectionCount}</strong> Bereiche</span>
-          <span><strong>${stats.sceneCount}</strong> Szenen</span>
+          <span><strong>${stats.sceneCount}</strong> ${stats.sceneCount === 1 ? 'Szene' : 'Szenen'}</span>
         </div>
       </div>
-      <div class="archive-dashboard-recent" data-dashboard-recent>
-        ${buildArchiveDashboardRecentTrail(sections)}
-      </div>
+      <div class="archive-dashboard-recent" data-dashboard-recent>${buildArchiveDashboardRecentTrail(sections)}</div>
       <div class="archive-dashboard-grid">
         <section class="archive-dashboard-panel archive-dashboard-panel-paths archive-dashboard-panel-full">
           <div class="archive-dashboard-panel-head">

@@ -1,0 +1,471 @@
+{
+  "id": "inferniiden",
+  "name": "Inferniiden",
+  "classification": "Von Dagon und Sanguine geformte infernale Finsteralben, Dämonen und Teufel",
+  "continent": "Infernale Sphären",
+  "region": "Die Reiche Dagons und Sanguines",
+  "folio": "IV / 04",
+  "parentGroupId": "infernale-linien",
+  "summary": "Inferniiden sind eine mächtige Untergruppe der Finsteralben, deren Formen von gepeinigten Seelen und niederen Lemuren bis zu hohen Dagonaren, gestaltwandelnden Dienern Sanguines und den beinahe göttlichen Erzteufeln reichen. Ihre Ordnung folgt zwei deutlich getrennten Schöpferlinien.",
+  "quote": "Frage bei einem Inferniiden nicht zuerst nach Hörnern oder Flammen; frage, wessen Wille durch seine Gestalt spricht.",
+  "quoteAttribution": "Lehrsatz der Thalenorischen Akademie zur Infernalordnung",
+  "icon": {
+    "src": "../../../assets/icons/inferniiden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol der Inferniiden"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-hero.webp",
+    "width": 439,
+    "height": 635,
+    "alt": "Inferniide vollständig sichtbar auf einem infernalen Thron",
+    "caption": "Überlieferte Bildtafel · Ein hoher Inferniide in seinem Feuerreich"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Inferniiden"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Finsteralben, Dämonen und Teufel"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Dagon und Sanguine"
+    },
+    {
+      "label": "Ursprung",
+      "value": "Verdammte Seelen und unmittelbar geformte infernale Essenz"
+    },
+    {
+      "label": "Grundhierarchie",
+      "value": "Gepeinigte Seele → Lemuren → Unterarten → infernale Fürsten"
+    },
+    {
+      "label": "Dagons Linie",
+      "value": "Erzteufel, Dagonaren, Ignarii sowie niedere Feuerdiener"
+    },
+    {
+      "label": "Sanguines Linie",
+      "value": "Erzdämonen, Inkubi, Sukkuben, Formwandler und niedere Diener"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Hierarchisch, loyal und zugleich von Intrigen und Machtkämpfen geprägt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Infernale Magie, Verwandlung, Feuergewalt oder Seelenbeeinflussung je nach Linie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Übernatürliche Widerstandskraft und enge Bindung an den jeweiligen Schöpfer"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sakrale Magie, heilige Symbole und artgebundene Gegenmittel"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schöpferbindung",
+      "Hierarchiedruck",
+      "Infernale Macht",
+      "Seelenformung",
+      "Gestaltvielfalt",
+      "Sakralanfälligkeit"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      10,
+      8
+    ],
+    "intro": "Die Tafel beschreibt die gemeinsame Ordnung der Inferniiden. Sie misst Bindung, Rangzwang und Wandelbarkeit der gesamten Gattung statt Eigenschaften eines einzelnen Wesens.",
+    "source": "Aus Schöpfung, Rangordnung, Gattungsbreite, infernaler Magie und den überlieferten sakralen Gegenmitteln abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Zwei Schöpferlinien",
+    "title": "Dagons Teufel und Sanguines Dämonen",
+    "intro": "Die beiden Linien teilen einen infernalen Ursprung, besitzen aber eigene Fürsten, hohe Diener und niedere Gefolgschaften. Balors Sprösslinge bilden innerhalb Dagons Linie eine gesonderte Unterordnung.",
+    "entries": [
+      {
+        "id": "erzteufel",
+        "name": "Erzteufel",
+        "region": "Dagons höchste Inkarnationen",
+        "description": "Sechs infernale Prinzen verkörpern unmittelbare Wesenszüge Dagons und herrschen über eigene Reiche.",
+        "status": "Fürstenregister öffnen",
+        "href": "../erzteufel/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-erzteufel.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Erzteufel vollständig sichtbar auf seinem infernalen Thron"
+        }
+      },
+      {
+        "id": "dagonar",
+        "name": "Dagonar",
+        "region": "Hohe Diener Dagons",
+        "description": "Stolze Heerführer und Feuerkrieger, für Krieg, Eroberung und die Führung infernaler Legionen geformt.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/dagonar/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-dagonar.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Dagonar vollständig sichtbar als bewaffnete infernale Gestalt"
+        }
+      },
+      {
+        "id": "ignarii",
+        "name": "Ignarii",
+        "region": "Hohe Diener Dagons",
+        "description": "Massive Magmakrieger, deren rohe Gewalt und vulkanische Macht selbst befestigte Linien aufbrechen.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/ignarii/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-ignarii.webp",
+          "width": 500,
+          "height": 500,
+          "alt": "Ignarii vollständig sichtbar als glühende Magmagestalt"
+        }
+      },
+      {
+        "id": "ignit",
+        "name": "Ignit",
+        "region": "Niedere Diener Dagons",
+        "description": "Kleine, zähe Arbeiter und Fußsoldaten, die Feuer tragen, Befehle ausführen und in Scharen angreifen.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/ignit/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-ignit.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Ignit vollständig sichtbar als kleiner Feuerdiener"
+        }
+      },
+      {
+        "id": "nixhund",
+        "name": "Nixhunde",
+        "region": "Niedere Diener Dagons",
+        "description": "Gehorsame Jagd- und Kriegstiere aus Feuer, Stein und glimmender infernaler Essenz.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/nixhund/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-nixhund.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Nixhund vollständig sichtbar als gepanzerte infernale Bestie"
+        }
+      },
+      {
+        "id": "balgrath",
+        "name": "Balgrath",
+        "region": "Balors Sprösslinge",
+        "description": "Gewaltige einäugige Zerstörer und ehemalige Befehlshaber in Balors verwüstenden Heeren.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/balgrath/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-balgrath.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Balgrath vollständig sichtbar als großer einäugiger Inferniide"
+        }
+      },
+      {
+        "id": "flickerling",
+        "name": "Flickerlinge",
+        "region": "Balors Sprösslinge",
+        "description": "Kleine einäugige Feuerlinge, die nach Balors Fall herrenlos durch Ruinen und warme Wildnisse ziehen.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/flickerling/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-flickerling.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Flickerling vollständig sichtbar mit einem Auge und kleiner Flamme"
+        }
+      },
+      {
+        "id": "balor-unbekannt-1",
+        "name": "???",
+        "region": "???",
+        "description": "Noch nicht ausgearbeitet.",
+        "status": "Noch unbekannt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "balor-unbekannt-2",
+        "name": "???",
+        "region": "???",
+        "description": "Noch nicht ausgearbeitet.",
+        "status": "Noch unbekannt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "erzdaemon",
+        "name": "Erzdämon",
+        "region": "Sanguines höchste Inkarnation",
+        "description": "Sanguines oberste Macht steht über den gestaltwandelnden Verführern und den niederen Dienern ihrer Linie.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-erzdaemon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Erzdämon vollständig sichtbar mit Flügeln und infernaler Klinge"
+        }
+      },
+      {
+        "id": "sukkubus-inkubus",
+        "name": "Sukkubus & Inkubus",
+        "region": "Hohe Diener Sanguines",
+        "description": "Gestaltkundige Verführer, die Träume, Begierden und Lebenskraft ihrer Opfer gegen sie wenden.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/sukkubus-inkubus/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-sukkubus-inkubus.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Sukkubus vollständig sichtbar als geflügelte infernale Gestalt"
+        }
+      },
+      {
+        "id": "formwandler",
+        "name": "Formwandler",
+        "region": "Hohe Diener Sanguines",
+        "description": "Doppler und Formlinge stehlen Erscheinungen, Rollen und Vertrauen, um Gemeinschaften von innen zu lenken.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/formwandler/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-formwandler.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Formwandler vollständig sichtbar zwischen zwei angenommenen Gestalten"
+        }
+      },
+      {
+        "id": "lustling",
+        "name": "Lustling",
+        "region": "Niedere Diener Sanguines",
+        "description": "Unauffällige Quasiten dienen als Boten, Aufpasser und geduldige Beobachter in Sanguines Gefolge.",
+        "status": "Kanonisches Dossier öffnen",
+        "href": "../../kobolde/lustling/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-lustling.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Lustling vollständig sichtbar als kleiner geflügelter Quasit"
+        }
+      },
+      {
+        "id": "satyr",
+        "name": "Satyr",
+        "region": "Niedere Diener Sanguines",
+        "description": "Musikalische Verführer, Festordner und Illusionisten, die Gefühle steigern und Unordnung säen.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/satyr/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-satyr.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Satyr vollständig sichtbar beim Spiel seiner Flöte"
+        }
+      }
+    ],
+    "branches": [
+      {
+        "id": "dagon",
+        "theme": "dagon",
+        "eyebrow": "Herrschaft des Feuers",
+        "title": "Dagons Teufelshierarchie",
+        "intro": "Dagons Linie steigt von niederen Feuerwesen über Kriegerkasten bis zu sechs unmittelbaren Inkarnationen seines Wesens auf.",
+        "levels": [
+          {
+            "id": "erzteufel",
+            "eyebrow": "Infernale Fürsten",
+            "title": "Erzteufel",
+            "intro": "Die sechs Prinzen stehen gesondert über sämtlichen übrigen Teufeln.",
+            "entryIds": [
+              "erzteufel"
+            ]
+          },
+          {
+            "id": "hohe",
+            "eyebrow": "Hohe Inferniiden",
+            "title": "Dagonaren & Ignarii",
+            "entryIds": [
+              "dagonar",
+              "ignarii"
+            ]
+          },
+          {
+            "id": "niedere",
+            "eyebrow": "Niedere Inferniiden",
+            "title": "Igniten & Nixhunde",
+            "entryIds": [
+              "ignit",
+              "nixhund"
+            ]
+          },
+          {
+            "id": "balor",
+            "eyebrow": "Spezifische Diener Balors",
+            "title": "Balors Sprösslinge",
+            "entryIds": [
+              "balgrath",
+              "flickerling",
+              "balor-unbekannt-1",
+              "balor-unbekannt-2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sanguine",
+        "theme": "sanguine",
+        "eyebrow": "Herrschaft der Begierde",
+        "title": "Sanguines Dämonenlinie",
+        "intro": "Sanguines Gefolge beherrscht Erscheinung, Traum, Gefühl und soziale Tarnung; auch seine niederen Diener wirken vor allem durch Einfluss.",
+        "levels": [
+          {
+            "id": "erzdaemon",
+            "eyebrow": "Infernale Fürsten",
+            "title": "Erzdämonen",
+            "intro": "Die oberste sanguinare Inkarnation bleibt als eigenes Dossier vorgemerkt.",
+            "entryIds": [
+              "erzdaemon"
+            ]
+          },
+          {
+            "id": "hohe",
+            "eyebrow": "Hohe Inferniiden",
+            "title": "Verführer & Formwandler",
+            "entryIds": [
+              "sukkubus-inkubus",
+              "formwandler"
+            ]
+          },
+          {
+            "id": "niedere",
+            "eyebrow": "Niedere Inferniiden",
+            "title": "Lustlinge & Satyre",
+            "entryIds": [
+              "lustling",
+              "satyr"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inferniiden werden in sterblichen Überlieferungen meist als Teufel oder Dämonen bezeichnet. Die Begriffe erfassen jedoch nur einen Teil einer weit verzweigten Ordnung aus Finsteralben, niederen Dienern und beinahe göttlichen Fürsten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Gestalten tragen die Macht, den Charakter und die Absichten ihrer Schöpfer. Dagon prägt Krieg, Feuer und Zerstörung; Sanguine prägt Begierde, Täuschung, Wandel und seelische Abhängigkeit."
+        }
+      ]
+    },
+    {
+      "id": "entstehung",
+      "title": "Entstehung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viele Inferniiden gehen aus verdammten Seelen hervor, die in infernalen Domänen über lange Zeit durch Leid, Korruption und Magie umgeformt werden. Schwache Seelen sinken zu Lemuren oder Sklaven herab, während widerstandsfähige Seelen höhere Formen annehmen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die mächtigsten Gestalten wurden unmittelbar aus der Essenz ihres Schöpfers gebildet. Für sie gelten andere Maßstäbe als für gewandelte Seelen, denn ihre Existenz ist an den fortdauernden Willen einer infernalen Gottheit gebunden."
+        }
+      ]
+    },
+    {
+      "id": "hierarchie",
+      "title": "Hierarchie und Rang",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rang ist bei Inferniiden keine bloße Amtsbezeichnung. Er entscheidet über körperliche Gestalt, magische Reichweite, Befehlsgewalt und darüber, wem ein Wesen gehorchen muss."
+        },
+        {
+          "type": "paragraph",
+          "text": "Loyalität verhindert keine Intrigen. Höhere Inferniiden kämpfen um Einfluss, niedere Diener wechseln bei Schwäche ihres Meisters die Gefolgschaft, und selbst Fürsten spiegeln die inneren Widersprüche ihrer Schöpfer."
+        }
+      ]
+    },
+    {
+      "id": "dagon",
+      "title": "Dagons Linie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "An der Spitze stehen sechs Erzteufel als lebende Aspekte Dagons. Dagonaren führen Heere, Ignarii brechen Widerstand mit magmatischer Gewalt, während Igniten und Nixhunde die niederen Reihen füllen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Balgrath und Flickerlinge werden gesondert als Sprösslinge und ehemalige Unterlinge Balors geführt. Zwei weitere Plätze der alten Übersicht bleiben ungeklärt und deshalb ausdrücklich mit ??? vermerkt."
+        }
+      ]
+    },
+    {
+      "id": "sanguine",
+      "title": "Sanguines Linie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sanguines Erzdämonen stehen über Inkubi, Sukkuben und Formwandlern. Diese hohen Diener gewinnen durch Traum, Verführung, Identitätsraub und die genaue Kenntnis sterblicher Schwächen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lustlinge und Satyre bilden die niederen Ränge. Der eine beobachtet und dient beinahe unsichtbar, der andere lenkt Stimmung, Fest und Begehren durch Musik und Illusion."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein gemeinsames Gegenmittel für alle Inferniiden existiert nur bedingt. Sakrale Magie und heilige Zeichen stören ihre infernale Essenz, doch Feuerwesen verlangen andere Taktiken als Traumjäger oder Formwandler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vor einer Konfrontation muss daher zuerst die Linie bestimmt werden. Kälte und Wasser bremsen viele Diener Dagons; geistige Abschirmung, überprüfbare Identitäten und geweihte Schutzräume begrenzen Sanguines Gefolge."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die Bezeichnungen Teufel und Dämon beschreiben im Archiv vor allem die beiden Schöpferlinien und keine vollständig getrennten Ursprünge.",
+            "Balors Sprösslinge stehen innerhalb Dagons Ordnung, besitzen aber wegen ihrer besonderen Herkunft ein eigenes Unterregister.",
+            "Ein Lustling wird zusätzlich im Koboldregister geführt; sein bestehendes Dossier bleibt die kanonische Quelle.",
+            "Zwei namenlose Plätze aus Balors alter Artenübersicht bleiben als ??? erhalten."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

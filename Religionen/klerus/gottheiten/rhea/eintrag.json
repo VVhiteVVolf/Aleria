@@ -1,0 +1,102 @@
+{
+  "godId": "rhea",
+  "intro": "Rheas Klerus steht für Beständigkeit, Zuverlässigkeit und Entschlossenheit. Seine Häuser geben Berggemeinden und Reisenden festen Halt. Stein, Boden und die geduldig erhaltene Gemeinschaft prägen ihre Arbeit.",
+  "community": "Ein Heiligtum der Dame der Berge kann zugleich Herberge und Zuflucht sein. Monastische Gemeinschaften erhalten Gebäude und Vorräte, Priester begleiten die Gemeinde und Paladine die gefährdeten Wege. Asketische Einsiedler sind seltene Ausnahmen; Forschungsaufgaben gehören zu den drei Bereichen des Magisteriums.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des verlässlichen Halts",
+      "paragraphs": [
+        "Rheas Priester begleiten Berggemeinden in langen Zeiten der Entbehrung und in schwierigen Entscheidungen. Sie lehren Beständigkeit ohne gedankenlose Starrheit. Ein gegebenes Hilfsversprechen soll auch nach dem Ende einer feierlichen Versammlung getragen werden, besonders wenn das Leben im Gebirge die Gemeinschaft fordert."
+      ],
+      "tasks": [
+        "Berggemeinden geistlich begleiten",
+        "Versprechen gemeinsamer Hilfe bekräftigen",
+        "Menschen in anhaltender Not beistehen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente des festen Hauses",
+      "paragraphs": [
+        "Mönche und Nonnen der Berge erhalten Mauern, Speicher und Unterkünfte. Ihre Zünfte tragen Kenntnisse weiter, die ein abgelegenes Haus durch schwierige Jahreszeiten bringen. Der unscheinbare Erhalt eines Daches oder eines Vorrats gilt als Ausdruck jener Zuverlässigkeit, die Rhea von ihren Anhängern schätzt."
+      ],
+      "tasks": [
+        "Bauten und Schutzräume erhalten",
+        "Vorräte für abgelegene Häuser ordnen",
+        "Herbergen und Reisende versorgen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Stein- und Mauerhüter",
+          "work": "Bewahrt die handwerkliche Erfahrung zur Erhaltung der Klosterbauten."
+        },
+        {
+          "name": "Zunft der Speicherbewahrer",
+          "work": "Ordnet Vorräte und die Versorgung abgelegener Häuser."
+        },
+        {
+          "name": "Zunft der Passherbergen",
+          "work": "Erhält kirchliche Unterkünfte an Bergwegen und versorgt deren Gäste."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Wächter der Bergzuflucht",
+      "paragraphs": [
+        "Rheas Paladine schützen Pässe, Zufluchten und die Menschen, die auf sie angewiesen sind. Sie verbinden Standhaftigkeit mit gründlicher Vorbereitung. Ihr Schutzauftrag endet nicht an der Tempeltür; sie begleiten auch gefährdete Versorgungswege und halten den Zugang zu schützenden Unterkünften offen."
+      ],
+      "tasks": [
+        "Bergheiligtümer und Zufluchten sichern",
+        "Gefährdete Versorgungswege begleiten",
+        "Schutzgemeinschaften im Gebirge unterstützen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad des festen Standes",
+      "paragraphs": [
+        "Vereinzelt wählen Anhänger Rheas die asketische Abgeschiedenheit in den Bergen. Sie üben einen ruhigen Stand, Ausdauer und Besonnenheit unter Belastung. Diese seltenen Einzelwege begründen keinen üblichen eigenen Ordenszweig. Anleitung können die Übenden an einem bestehenden asketischen Heiligtum suchen; der reguläre Schutz der Berggemeinden bleibt Aufgabe ihrer kirchlichen Wachen."
+      ],
+      "tasks": [
+        "Standfestigkeit und Ausdauer schulen",
+        "Abgelegene Heiligtümer bewachen",
+        "Maßvolle Disziplin unter Belastung vermitteln"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Rhea verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Verlässlichkeit nach dem Versagen",
+      "paragraphs": [
+        "Bußgänger Rheas arbeiten an vereinbarten Erhaltungs- und Versorgungsaufgaben. Wer eine Gemeinschaft im Stich gelassen hat, kann durch regelmäßige Dienste neue Verlässlichkeit einüben. Entschlossenheit bedeutet dabei, ein gegebenes Ziel zu erfüllen; das Haus hält an der vereinbarten Entlassung ebenso zuverlässig fest."
+      ],
+      "tasks": [
+        "Schutzräume und Herbergen instand halten",
+        "Versorgung unter Anleitung unterstützen",
+        "Anvertraute Aufgaben regelmäßig erfüllen"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

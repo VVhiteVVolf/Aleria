@@ -1,0 +1,222 @@
+{
+  "id": "scheusal",
+  "name": "Scheusal",
+  "classification": "Nekrophag · Zusammengesetzte Moderhaut",
+  "continent": "Aleria",
+  "region": "Schlachtfelder, Laboratorien und verfluchte Ruinen",
+  "folio": "III-N / 06",
+  "parentGroupId": "nekrophagen",
+  "summary": "Das Scheusal, auch bekannt als Moderhaut, ist eine der abstoßendsten und furchterregendsten Formen der Untoten. Es ist das Ergebnis dunkler und unheiliger Experimente, bei denen Leichen mit anderen Leichen zusammengefügt werden, um einen kolossalen, fleischigen Abscheulichkeit zu erschaffen, die oft an einen grotesken Fleisch-Atronarchen erinnert.",
+  "quote": "Wo viele Tote zu einem Leib vernäht wurden, trägt keine einzelne Seele mehr die Schuld an seiner Wut.",
+  "quoteAttribution": "Notiz aus den Archiven nekromantischer Verbrechen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-scheusal.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Scheusal als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/scheusal.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Scheusal",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Scheusal"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Scheusal"
+    },
+    {
+      "label": "Typ",
+      "value": "Künstlich zusammengesetzter Untoter; Moderhaut"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Nekromantische Experimente: Verschmelzung mehrerer Leichen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Verlassene Schlachtfelder, dunkle Laboratorien, verfluchte Ruinen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Orte mit hoher Konzentration an nekrotischer Energie, wie Friedhöfe, Gruften, oder verlassene Kriegsschauplätze"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Willenlos, aggressiv, zerstörerisch"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv sowohl bei Tag als auch bei Nacht, unermüdlich"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Massive physische Stärke, Regeneration durch nekrotische Energie, Fähigkeit zur Zerstörung von Strukturen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Enorme Kraft, Immunität gegen Schmerz, hohe Ausdauer, unaufhaltsamer Wille"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsam und schwerfällig, anfällig für heilige Magie und Feuer, Abhängigkeit von nekrotischer Energie"
+    },
+    {
+      "label": "Beute",
+      "value": "Nekromantische Relikte, Überreste von Leichen, magische Essenzen aus dem Schöpfungsprozess"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körpermasse",
+      "Zähigkeit",
+      "Raserei",
+      "Regeneration",
+      "Gehorsam",
+      "Beweglichkeit"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      7,
+      5,
+      3
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Scheusal abgeleitet",
+    "intro": "Das Scheusal-Diagramm bewertet eine aus mehreren Leichen geschaffene Kriegsform. Seine Masse und Zähigkeit stehen einer geringen Beweglichkeit gegenüber."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Scheusal, auch bekannt als Moderhaut, ist eine der abstoßendsten und furchterregendsten Formen der Untoten. Es ist das Ergebnis dunkler und unheiliger Experimente, bei denen Leichen mit anderen Leichen zusammengefügt werden, um einen kolossalen, fleischigen Abscheulichkeit zu erschaffen, die oft an einen grotesken Fleisch-Atronarchen erinnert."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Scheusale sind das Ergebnis von nekromantischen Experimenten, die die Grenzen von Magie, Moral und Naturgesetzen auf grausamste Weise überschreiten. Sie entstehen, wenn Nekromanten Leichen nicht nur wiederbeleben, sondern auch auf abstoßende Weise zusammenfügen, um kolossale Kreaturen zu erschaffen, die sowohl Stärke als auch Schrecken verkörpern. Diese unheiligen Rituale sind eine Mischung aus Alchemie, dunkler Magie und chirurgischer Grausamkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Ursprünge solcher Praktiken reichen weit in die Geschichte zurück. Sie begannen oft als Versuche, perfekte untote Diener oder unbesiegbare Kriegsmaschinen zu schaffen. In den Schatten alter Reiche wurden Scheusale als Werkzeuge des Terrors eingesetzt, um ganze Armeen zu vernichten oder Städte zu unterwerfen. Doch mit der Zeit verloren viele der Schöpfer die Kontrolle über ihre Kreaturen, und diese Monster wurden zu ruhelosen Wanderern, die Tod und Verderben brachten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Scheusal entsteht, indem die Überreste mehrerer Leichen gesammelt und miteinander verschmolzen werden. Diese groteske Kombination wird dann durch nekrotische Energie belebt, die jedem Körperteil eine rudimentäre Funktion verleiht. Diese Energie bindet das Scheusal an seinen Schöpfer, verleiht ihm jedoch gleichzeitig ein Eigenleben, das es unabhängig agieren lässt, wenn sein Schöpfer stirbt oder die Kontrolle verliert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Erschaffung eines Scheusals erfordert nicht nur Kenntnisse in Nekromantie, sondern auch eine düstere Bereitschaft, die Grenzen der Menschlichkeit zu überschreiten. Manche Nekromanten verwenden sogar lebende Opfer in ihren Experimenten, um sicherzustellen, dass die notwendige Lebensenergie den Prozess vollständig antreibt. Solche Gräueltaten ziehen oft Flüche und göttlichen Zorn nach sich, was dazu führt, dass viele dieser Kreaturen mit einem instinktiven Hass auf die Lebenden erfüllt sind."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Scheusale sind triebgesteuerte, kolossale Kreaturen, die von Zerstörungswut und Hunger nach Leben angetrieben werden. Sie agieren meist langsam, aber mit brutaler Kraft und zerstören alles, was sich ihnen in den Weg stellt. Ihre Körper, zusammengesetzt aus mehreren Leichen, sind zäh und widerstandsfähig, wodurch sie selbst schwere Verletzungen ignorieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer Masse zeigen Scheusale eine rudimentäre Zielgerichtetheit, meist durch die Befehle ihres Schöpfers oder den Schutz eines bestimmten Ortes. Ohne Steuerung durch einen Nekromanten folgen sie einfachen Instinkten: Nahrung finden, Lebewesen vernichten und in Bewegung bleiben. Ihre Präsenz ist begleitet von einem fauligen Gestank und der Aura nekrotischer Energie, die Lebewesen in ihrer Nähe schwächt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scheusale sind ein Symbol für rohe, unkontrollierte Macht – schwerfällig, aber nahezu unaufhaltsam, wenn sie einmal in Bewegung sind."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Scheusale sind an Orten zu finden, die von Tod, Verfall und nekrotischer Energie durchdrungen sind. Sie treten oft in verlassenen Schlachtfeldern, vergessenen Ruinen oder unheiligen Laboratorien auf – überall dort, wo ihre Schöpfer ihre dunklen Rituale vollzogen haben. Besonders häufig sind sie in Regionen, in denen massenhafte Sterblichkeit oder magische Experimente die natürliche Ordnung gestört haben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kreaturen agieren meist als Wächter für ihre Schöpfer oder als Verteidiger bestimmter Orte. Sobald sie jedoch unkontrolliert sind, streifen sie ziellos durch ihre Umgebung und hinterlassen eine Spur der Zerstörung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scheusale sind an keine Tageszeit gebunden. Ihre unheilige Energie hält sie sowohl bei Tag als auch bei Nacht aktiv. Ihr Lebensraum ist oft geprägt von einem fauligen Gestank, verwesenden Überresten und einer Atmosphäre der Verderbnis, die Lebewesen in ihrer Nähe abschreckt oder schwächt. Sie meiden belebte Gegenden, es sei denn, sie werden dorthin gelenkt, und bleiben stattdessen in der Dunkelheit verlassener Orte verborgen, wo ihre bedrohliche Präsenz ungestört bleibt."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Scheusale sind mächtige, aber nicht unüberwindbare Kreaturen. Ihre Stärken machen sie zu schrecklichen Gegnern, doch ihre Schwächen bieten Möglichkeiten, sie zu besiegen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Massive Stärke: Scheusale besitzen enorme physische Kraft, mit der sie Gegner zerquetschen und sogar massive Strukturen zerstören können.",
+            "Hohe Widerstandsfähigkeit: Ihre Körper, zusammengesetzt aus mehreren Leichen, sind extrem zäh und widerstandsfähig gegen herkömmliche Waffen.",
+            "Immunität gegen Schmerz: Sie fühlen keinen Schmerz und kämpfen unaufhaltsam, selbst wenn sie schwer beschädigt sind.",
+            "Regeneration: Die nekrotische Energie, die sie antreibt, erlaubt ihnen eine begrenzte Regeneration, wodurch sie länger im Kampf bleiben können.",
+            "Zerstörungskraft: Ihre Größe und Kraft machen sie besonders gefährlich in engen Räumen oder bei großflächiger Zerstörung."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsamkeit: Scheusale sind schwerfällig und können leicht ausmanövriert werden, besonders von schnellen Gegnern.",
+            "Feuer: Ihre verrottenden Körper sind äußerst anfällig für Feuer, das ihre Regeneration unterdrückt und sie schnell zerstören kann.",
+            "Heilige Magie: Göttliche Zauber oder geweihte Waffen durchbrechen ihre nekrotische Energie und fügen ihnen erheblichen Schaden zu.",
+            "Abhängigkeit von Magie: Ohne die nekrotische Energie, die sie antreibt, zerfallen Scheusale schnell. Wird ihre magische Quelle gestört, verlieren sie ihre Stärke.",
+            "Unkontrollierbarkeit: Ohne einen Meister, der sie lenkt, können Scheusale unberechenbar werden und sogar in den eigenen Reihen Zerstörung anrichten.",
+            "Größe: Ihre massive Gestalt ist ein Nachteil in engen oder unzugänglichen Bereichen, wo sie leicht in Bewegung eingeschränkt werden können."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit ihrer unbändigen Kraft und Zähigkeit sind Scheusale beeindruckende Gegner. Wer jedoch ihre Schwächen ausnutzt – insbesondere ihre Langsamkeit und Anfälligkeit für Feuer und heilige Magie – hat eine gute Chance, diese schrecklichen Kreaturen zu besiegen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Unterschiedliche Nähte und Halterungen verraten oft mehrere Schaffensphasen.",
+            "Ein Scheusal kann Befehle wörtlich befolgen und dabei jede erkennbare Absicht seines Schöpfers verfehlen.",
+            "Nekrotische Nähte leuchten unter geweihter Prüfung schwächer als das verbundene Gewebe.",
+            "Nach der Vernichtung müssen sämtliche Körperteile getrennt gereinigt werden."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

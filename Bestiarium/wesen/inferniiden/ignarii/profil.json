@@ -1,0 +1,178 @@
+{
+  "id": "ignarii",
+  "name": "Ignarii",
+  "classification": "Hoher magmatischer Inferniide Dagons",
+  "continent": "Infernale Sphären",
+  "region": "Vulkanwüsten und Obsidianfestungen Dagons",
+  "folio": "IV / 04-C",
+  "parentGroupId": "inferniiden",
+  "summary": "Ignarii sind massive Magmakrieger in Dagons Diensten. Wo Dagonaren Heere ordnen, brechen Ignarii Mauern und Schlachtreihen mit Körpergewalt, Vulkanwut und glühender Magie. Ihre Loyalität ist fest, doch Ehre und Stärke bestimmen jeden Rang innerhalb ihrer Kaste.",
+  "quote": "Ein Ignarii verhandelt erst, wenn der Boden unter seinen Schritten aufgehört hat zu glühen.",
+  "quoteAttribution": "Warnung aus einem Feldbuch der Geweihten",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ignarii"
+    },
+    {
+      "label": "Typ",
+      "value": "Hoher magmatischer Inferniide"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Dagon"
+    },
+    {
+      "label": "Zweck",
+      "value": "Sturmkrieger, Wächter und Belagerungsbrecher"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Dagons vulkanische Reiche"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Vulkanwüsten, Lavafelder und Obsidianfestungen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Gewalttätig, ehrenstolz und rangbewusst"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Unabhängig von Tageslicht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Magmakontrolle, Feuerbälle, Vulkanwut und Lavawandel"
+    },
+    {
+      "label": "Stärken",
+      "value": "Nahkampfwucht, Feuerimmunität und große Zähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, Wasser und schwer lenkbarer Zorn"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Lavakontrolle",
+      "Vulkanwut",
+      "Nahkampfwucht",
+      "Feuerimmunität",
+      "Disziplin",
+      "Kältestarre"
+    ],
+    "values": [
+      9,
+      10,
+      10,
+      10,
+      7,
+      9
+    ],
+    "intro": "Die Ignarii-Tafel bewertet ihre vulkanische Gewalt, körperliche Rolle und die Grenzen ihrer kriegerischen Disziplin.",
+    "source": "Aus Magmakörper, Nahkampf, Feuerimmunität, Rangverständnis und der beschriebenen Kälteanfälligkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ignarii sind Dagons schwere Krieger und Wächter heiliger Vulkane. Sie werden auch als Söldner eingesetzt, wenn nicht Eroberung, sondern vollständige Verwüstung gefordert ist."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Körper wirken aus geschichtetem Basalt und flüssiger Glut gefügt. Hörner, Fäuste und Schultern bilden eine massige Silhouette, in deren Rissen orange Magma pulsiert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gewalt, Ehre und Zerstörung ordnen ihr Denken. Sie respektieren körperliche und magische Stärke, fordern Rangkämpfe jedoch oft so direkt, dass klügere Gegner ihren Zorn umlenken können."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ignarii bewachen Obsidianfestungen, Vulkanschlünde und Wege durch Dagons Feuerwüsten. Außerhalb heißer Regionen müssen sie ihre Glut durch Magie oder offene Flammen erhalten."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neben Feuerimmunität und gewaltiger Körperkraft beherrschen sie Feuerbälle, Magmamanipulation, Lavawandel und eine Vulkanwut, die den Boden erschüttert und ihre Schläge verstärkt."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kälte und Wasser verhärten ihren Magmakörper und verlangsamen die Bewegung. Fernkampf und das Trennen von Wärmequellen sind sicherer als ein Kräftevergleich im Nahkampf."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ignarii tragen gelegentlich Rüstung aus erstarrtem Schmelzstein.",
+            "Lava- und Aschenkristalle bleiben nach besonders mächtigen Exemplaren zurück.",
+            "Ein Dagonar führt häufig, doch ein Ignarii bildet die sichtbare Spitze des Angriffs."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-ignarii.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Ignarii vollständig sichtbar als freigestellte Bestiariumsfigur"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/ignarii-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Ignarii",
+    "caption": "Überlieferte Bildtafel · Ein Ignarii erhebt sich aus einem brennenden Lavafeld"
+  },
+  "plates": []
+}

@@ -1,5 +1,5 @@
-import { cp, mkdir, rm } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { cp, mkdir, readFile, rm } from 'node:fs/promises';
+import { dirname, isAbsolute, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
@@ -91,8 +91,33 @@ const files = [
   'skill-checks/skill-resolution-service.js'
 ];
 
+// Follow the same local imports as the browser so newly extracted rule modules
+// cannot silently go missing from the server copy.
+async function collectMechanicsFiles(entryPoints) {
+  const pending = [...entryPoints];
+  const collected = new Set();
+  while (pending.length) {
+    const relativePath = pending.pop();
+    if (collected.has(relativePath)) continue;
+    const source = resolve(sourceRoot, relativePath);
+    const withinSource = relative(sourceRoot, source);
+    if (withinSource.startsWith('..') || isAbsolute(withinSource)) throw new Error(`Mechanics import outside source root: ${relativePath}`);
+    const code = await readFile(source, 'utf8');
+    collected.add(relativePath);
+    for (const match of code.matchAll(/(?:\bfrom\s*|\bimport\s*\(\s*|\bimport\s*)['"]([^'"]+)['"]/g)) {
+      const specifier = match[1].split(/[?#]/)[0];
+      if (!specifier.startsWith('.') || !/\.(?:m?js)$/.test(specifier)) continue;
+      pending.push(relative(sourceRoot, resolve(dirname(source), specifier)).replaceAll('\\', '/'));
+    }
+  }
+  return [...collected].sort();
+}
+
+const mechanicsFiles = await collectMechanicsFiles(files);
+const expectedTarget = resolve(root, 'firebase/functions/src/generated');
+if (targetRoot !== expectedTarget || relative(root, targetRoot).startsWith('..')) throw new Error('Unsafe generated mechanics target');
 await rm(targetRoot, { recursive: true, force: true });
-for (const relativePath of files) {
+for (const relativePath of mechanicsFiles) {
   const target = resolve(targetRoot, relativePath);
   await mkdir(dirname(target), { recursive: true });
   await cp(resolve(sourceRoot, relativePath), target);

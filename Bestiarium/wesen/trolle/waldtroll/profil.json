@@ -1,0 +1,185 @@
+{
+  "id": "waldtroll",
+  "name": "Waldtroll",
+  "classification": "Trollunterart · Territorialer Waldjäger",
+  "continent": "Aleria",
+  "region": "Alte Wälder, Schluchten und bewaldete Höhen",
+  "folio": "III-T / 03",
+  "parentGroupId": "trolle",
+  "summary": "Waldtrolle sind große, kräftige Territorialjäger, die Alerias ausgedehnte Forste als Deckung und Jagdgrund nutzen. Moos, Blätter und Schlamm haften in ihrer zottigen Behaarung, während schnelle Hinterhalte, kräftige Klauen und eine berüchtigte Regeneration selbst erfahrene Waldläufer zu sorgfältiger Vorbereitung zwingen.",
+  "quote": "Der Waldtroll brüllt erst, wenn er sicher ist, dass du nicht mehr davonläufst.",
+  "quoteAttribution": "Überlieferung der alerischen Grenzjäger",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-waldtroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Waldtroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/waldtroll.webp",
+    "width": 1200,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Waldtroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Waldtroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Waldtroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; räuberischer Troll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "An große zusammenhängende Waldgebiete angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Alte Wälder, moosige Schluchten, Waldkanten und Höhenforste"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, räuberisch und gegenüber Beute hochaggressiv"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Vorwiegend Dämmerung und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Waldtarnung, kurzer Sprint, Hinterhalt und schnelle Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Körperkraft, Klauen, Gebiss, Revierkenntnis und Zähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, gebundene Bewegungsräume und koordinierte Jagdgruppen"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Trollblut, Knochen, Klauen und Gegenstände früherer Opfer"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Waldtarnung",
+      "Hinterhalt",
+      "Körperkraft",
+      "Regeneration",
+      "Reviertrieb",
+      "Feuerfurcht"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      9,
+      10,
+      8
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Waldtrolls abgeleitet",
+    "intro": "Das Diagramm bewertet den Waldtroll in seinem Kernrevier. Tarnung, kurze Angriffswege und Regeneration machen dort selbst einen einzelnen Jäger zur schlechten Wahl."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Waldtrolle zählen zu den häufigsten Trollarten, weil große Wälder weiterhin ungestörte Wildräume bilden. Sie überragen einen Menschen um zwei bis drei Köpfe und wirken aufrechter und muskulöser als Flusstrolle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zottige Hautbehaarung bindet Moos, Blätter und Schlamm. Zusammen mit grünlich grauer oder erdiger Haut lässt sie den Troll zwischen Stämmen und Wurzeln nahezu verschwinden."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diese Trollart verbindet rohe Kraft mit konsequent räuberischem Verhalten. Sie versteht Tonfall, Drohgebärden und wiederkehrende Muster und lernt schnell, welche Menschen gefährlich sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schnittwunden schließen sich rasch. Ein verletzter Waldtroll, dem Zeit gelassen wird, kehrt häufig in den Kampf oder in dasselbe Jagdgebiet zurück."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Menschen gelten vor allem als Beute oder Störung. Waldtrolle greifen aus dem Hinterhalt an, nutzen kurze Sprints und versuchen, einzelne Opfer zu packen und aus der Formation zu reißen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwache Wachen, abgelegene Höfe und Vieh am Waldrand ziehen sie an. Stein, Ast oder Knochen werden als unmittelbare Waffen erkannt, ohne dass daraus dauerhafte Handwerkskunst entsteht."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lager liegen in Höhlen, Wurzelräumen, verlassenen Ruinen oder primitiven Unterständen aus Ästen, Laub und Knochen. Klare Kernreviere werden durch zerstörte Pfadzeichen oder auffällige Knochenhaufen markiert."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Angriff erfordert Überzahl, Feuer, Stangenwaffen und einen Plan zum Binden oder Lenken. Augen, Kehle und Gelenke sind bessere Ziele als die regenerierende Körpermasse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein scheinbarer Rückzug darf nicht ungeordnet verfolgt werden. Waldtrolle führen Gegner instinktiv in dichtes Gelände, in dem Sicht und Formation zerbrechen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Jäger nennen sie Waldschatten, weil selbst große Exemplare erstaunlich leise gehen.",
+            "Ein einmal verbrannter Waldtroll erinnert sich lange an Feuer und dessen Träger.",
+            "Erfolgreiche Jagdplätze werden wiedererkannt und wiederholt aufgesucht.",
+            "Selten verteidigen Waldtrolle verletzte Artgenossen und zeigen damit eine einfache Sozialbindung."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

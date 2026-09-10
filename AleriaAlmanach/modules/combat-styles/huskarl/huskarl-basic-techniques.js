@@ -1,4 +1,4 @@
-import { createHuskarlTechnique } from './huskarl-technique-factory.js';
+import { createHuskarlTechnique } from './huskarl-technique-factory.js?v=20260909-dragon-parent-v2';
 import { HUSKARL_FORM_IDS as F } from './huskarl-forms.js';
 
 // Each tuple is an authored option: level, name, weapon, cost, effect, metadata.

@@ -3,14 +3,16 @@ import {
   getMaximumHitPoints,
   upgradeCharacterHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
-} from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
-import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260908-cenyr-paths-v1';
-import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
+} from './character-creation-templates.js?v=20260909-dragon-parent-v2';
+import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
+import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassDefinition } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([
   { id: 'standard-array', label: 'Standard-Array', description: '15, 14, 13, 12, 10 und 8 frei verteilen.' },
@@ -168,6 +170,7 @@ export function createCharacterCreationDraft(profileValue = {}, options = {}) {
     stepIndex: 0,
     skippedSteps: [],
     selections: { ancestryId, backgroundId, classId },
+    foundationFormId: profile.classTraining.selections.find(selection => selection.kind === 'foundation')?.selectionId || '',
     attributeMethod: method,
     baseAttributes: method === 'free' ? { ...freeAttributes } : { ...DEFAULT_STANDARD_ASSIGNMENT },
     freeAttributes,
@@ -276,8 +279,28 @@ function resetLevelOneResources(resources = []) {
   });
 }
 
+export function getCreationFoundationOptions(draft = {}) {
+  return getCenyrClassDefinition(draft.selections?.classId)?.foundationSelection?.options || [];
+}
+
+export function getCreationStartingTechniques(draft = {}) {
+  const template = getCharacterCreationTemplate('class', draft.selections?.classId);
+  const definition = getCenyrClassDefinition(draft.selections?.classId);
+  const foundations = getCreationFoundationOptions(draft);
+  return getCombatStyleTechniquesForGrants(template?.combatStyleGrants, 1)
+    .filter(technique => !definition || !technique.cenyrTraining?.allowedClassIds?.length
+      || technique.cenyrTraining.allowedClassIds.includes(definition.classId))
+    .filter(technique => !foundations.some(option => option.formId === technique.combatStyleFormId)
+      || technique.combatStyleFormId === draft.foundationFormId);
+}
+
 export function validateCharacterCreationDraft(draft = {}) {
   const errors = [];
+  const foundationOptions = getCreationFoundationOptions(draft);
+  if (!(draft.skippedSteps || []).includes('templates') && foundationOptions.length
+    && !foundationOptions.some(option => option.formId === draft.foundationFormId)) {
+    errors.push('Wähle die Grundausbildung des Derwyn: Tanz des Jungdrachen oder Tanz der jungen Welle.');
+  }
   if (!(draft.skippedSteps || []).includes('attributes')) {
     const base = getCreationBaseAttributes(draft);
     if (draft.attributeMethod === 'standard-array') {
@@ -363,7 +386,7 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
     profile.abilities = mergeItems(profile.abilities, classTemplate.abilities || [], draft.replaceStartingEquipment ? ['starter-'] : []);
     profile.techniques = mergeItems(
       profile.techniques,
-      getCombatStyleTechniquesForGrants(classTemplate.combatStyleGrants, 1),
+      getCreationStartingTechniques(draft),
       draft.replaceStartingEquipment ? ['combat-style-'] : []
     );
     profile.magic = {
@@ -395,6 +418,11 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
   }
 
   profile = applyCenyrClassLevelProgression(profile, profile.progression.level).profile;
+  if (!skipped.has('templates') && getCreationFoundationOptions(draft).length) {
+    const foundation = selectCenyrTrainingOption(profile, { kind: 'foundation', selectionId: draft.foundationFormId, selectedAtLevel: 1 });
+    if (!foundation.ok) return foundation;
+    profile = foundation.profile;
+  }
   profile = reconcileCenyrTrainingForLevel(profile, profile.progression.level, { autoFill: true }).profile;
   return { ok: true, errors: [], profile: sanitizeCharacterCombatProfile(profile) };
 }

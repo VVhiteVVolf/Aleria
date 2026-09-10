@@ -250,6 +250,7 @@ document.addEventListener('keydown', event => {
 
 function buildHierarchyPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
+  const commentThread = getInlineCommentThreadForPage(page, entry, pageIndex);
   const data = sanitizeHierarchyData(page.hierarchy || {});
   const emblem = sanitizeImageSrc(data.emblem || entry.symbol || '');
   const sideImage = sanitizeImageSrc(data.sideImage || page.image || '');
@@ -306,6 +307,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
               <span>${escapeHtml(data.quoteLabel)}</span>
               <p>${sanitizeContentHtml(data.quote)}</p>
             </blockquote>` : ''}
+          ${commentThread ? buildEmbeddedCommentsSection(commentThread) : ''}
         </aside>
 
         <main class="hierarchy-main">

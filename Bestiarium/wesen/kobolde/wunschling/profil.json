@@ -1,0 +1,178 @@
+{
+  "id": "wunschling",
+  "name": "Wunschling",
+  "classification": "Verlockender Kobold und Diener Migdals",
+  "continent": "Aleria",
+  "region": "Orte unerfüllter Sehnsucht",
+  "folio": "IV / 01-I",
+  "parentGroupId": "kobolde",
+  "summary": "Wunschlinge sind giftgrüne, farbenfroh gekleidete Händler Migdals. Sie erkennen verborgene Sehnsüchte, bieten deren Erfüllung in zweideutigen Worten an und verdrehen jeden Handel so, dass Gier, Abhängigkeit und unerwartete Folgen den Wünschenden an die Regeln des Paktes binden.",
+  "quote": "Der Wunschling lügt selten; er lässt nur genau jenes Wort ungesagt, das den schönsten Wunsch in eine Fessel verwandelt.",
+  "quoteAttribution": "Anmerkung eines alerischen Paktprüfers",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Wunschling"
+    },
+    {
+      "label": "Typ",
+      "value": "Koboldartiger Händler und Diener Migdals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Migdal zur Manipulation sterblicher Wünsche erschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Migdals von Illusionen geprägte Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Magische Wälder, Tempelruinen und Orte unerfüllter Wünsche"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Schelmisch, verlockend, listig und verhandlungsorientiert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend Dämmerung und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Wunschverdrehung, Gefühlsmanipulation, Illusion und Sprachmagie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Täuschung, schnelle Bewegung und geschickte Verhandlung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "An die Regeln eigener Abmachungen gebunden und körperlich schwach"
+    },
+    {
+      "label": "Beute",
+      "value": "Wünsche und Seelen von Gierigen oder Ehrgeizigen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Wunschverdrehung",
+      "Illusionskunst",
+      "Sprachmagie",
+      "Verhandlungsgeschick",
+      "Regelbindung",
+      "Körperkraft"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      8,
+      2
+    ],
+    "source": "Aus der Macht über Wünsche, sprachlicher Täuschung, Illusion, Paktregeln und der geringen körperlichen Stärke abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Wunschling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wunschlinge dienen Migdal als Händler und Fallensteller unter den Sterblichen. Sie suchen Menschen mit starken Sehnsüchten und erinnern daran, dass eine Erfüllung ebenso gefährlich sein kann wie ein offenkundiger Fluch."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Giftgrüne Haut, große Augen, ein affenartiger Körperbau und leuchtend farbige Kleidung geben ihnen ein verspieltes Aussehen. Gerade dieser harmlose Eindruck verdeckt die Gerissenheit, mit der sie jedes Wort eines Handels abwägen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie treten als hilfsbereite Geschäftspartner auf, stellen Fragen und lassen das Opfer den entscheidenden Wunsch selbst aussprechen. Die Erfüllung folgt dem Wortlaut, doch Doppeldeutigkeiten und ausgelassene Bedingungen führen in Abhängigkeit oder Verzweiflung."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wunschlinge erscheinen in magischen Wäldern, alten Tempelruinen, geheimen Märkten und anderen Orten voller unerfüllter Sehnsucht. Dämmerung, Dunkelheit und vorhandene Magie unterstützen ihre Verlockungen."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie erkennen Wünsche und Ambitionen, verstärken Gier oder Eifersucht und schaffen überzeugende Illusionen. Sprachmagie bindet Abmachungen; zugleich müssen Wunschlinge die Regeln ihrer eigenen Tricks einhalten."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kein Angebot sollte spontan beantwortet werden. Ein Wunsch muss vollständig, ohne bildliche Sprache und vor Zeugen formuliert sein; sicherer bleibt es, den Handel abzulehnen und den Wunschling nicht durch sichtbare Gier erkennen zu lassen, was er anbieten soll."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Wunschlinge stellen harmlose Fragen, lange bevor sie ein offenes Angebot machen.",
+            "Sie mögen funkelnde Schätze vor allem deshalb, weil diese bei anderen sofort Begehren wecken.",
+            "Ein sorgfältig formulierter Widerspruch kann einen Wunschling länger beschäftigen als eine Waffe."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/wunschling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Wunschling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/wunschling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Wunschling",
+    "caption": "Überlieferte Bildtafel · Wunschling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

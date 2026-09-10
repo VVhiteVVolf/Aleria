@@ -1,21 +1,24 @@
-import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 import {
   DRACHENTANZ_FORM_IDS as FORM_IDS
-} from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260908-cenyr-paths-v1';
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+} from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import {
   ensureCenyrTrainingState,
+  getCenyrFoundationOptions,
+  getCenyrCanonicalTechniqueId,
   getCenyrTechniqueSlots,
   getCenyrTrainingState,
   selectCenyrTrainingOption
-} from './cenyr-class-training.js?v=20260908-cenyr-paths-v1';
-import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260908-cenyr-paths-v1';
+} from './cenyr-class-training.js?v=20260909-dragon-parent-v2';
+import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
+import { isDrachentanzCanonicalTechniqueId } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
 
 const RECOMMENDED_EXPERT_PATHS = Object.freeze({
   teulu: FORM_IDS.ausgeglichener,
-  cantref: FORM_IDS.abwartender,
-  uchelwyr: FORM_IDS.fliegender,
+  cantref: FORM_IDS.speerdrache,
+  uchelwyr: FORM_IDS.speerdrache,
   helwyr: FORM_IDS.fliegender,
   arthwyr: FORM_IDS.bruellender,
   barddwyr: FORM_IDS.kreischender
@@ -142,17 +145,28 @@ export function synchronizeCenyrSelectedTechniques(profile = {}, options = {}) {
   const next = ensureCenyrTrainingState(profile);
   const progression = getCenyrClassProgression(definition.id, level, { classTraining: next.classTraining });
   const catalog = new Map(progression.attackCatalog.map(technique => [technique.id, technique]));
+  const slots = new Map(getCenyrTechniqueSlots(definition, level).map(slot => [slot.id, slot]));
+  const spentSlots = new Set(next.classTraining.selections.map(selection => selection.spentTechniqueSlotId).filter(Boolean));
+  const availableForms = new Set(progression.styles.flatMap(style => style.forms).filter(form => form.available).map(form => form.id));
   const selected = next.classTraining.techniqueSelections
-    .filter(selection => catalog.has(selection.techniqueId));
+    .filter(selection => {
+      const slot = slots.get(selection.slotId);
+      const technique = catalog.get(selection.techniqueId);
+      return slot && technique && !spentSlots.has(slot.id) && selection.selectedAtLevel <= level
+        && selection.selectedAtLevel >= slot.level && technique.minimumLevel <= slot.level
+        && technique.cenyrTraining?.slotBands?.includes(slot.band)
+        && availableForms.has(technique.combatStyleFormId) && isBranchAvailable(definition, next.classTraining, technique);
+    });
   next.classTraining.techniqueSelections = selected;
   const selectedIdsSet = new Set(selected.map(selection => selection.techniqueId));
-  const existing = new Map((Array.isArray(next.techniques) ? next.techniques : []).map(technique => [technique.id, technique]));
+  const existing = new Map((Array.isArray(next.techniques) ? next.techniques : [])
+    .map(technique => [getCenyrCanonicalTechniqueId(definition, technique.id), technique]));
   const canonicalIds = new Set(catalog.keys());
   const retained = (Array.isArray(next.techniques) ? next.techniques : []).filter(technique => {
     if (canonicalIds.has(technique.id)) return false;
-    if (options.replaceClassTechniques !== true) return true;
-    const haystack = `${technique.combatStyleId || ''} ${technique.trainingForm || ''} ${technique.tags || ''}`;
-    return !/drachentanz|teulu|helwyr|uchelwyr|cantref|arthwyr|barddwyr|milwr/i.test(haystack);
+    // Generated records are owned by the curriculum even if their old form no
+    // longer exists. A personally authored Drachentanz attack is not ours to erase.
+    return !isCanonicalClassTechnique(technique, definition);
   });
   const learned = selected.map(selection => materializeTechnique(
     catalog.get(selection.techniqueId),
@@ -204,6 +218,12 @@ function preferredBarddwyrBranch(profile = {}) {
     : 'barddwyr-sword';
 }
 
+function isCanonicalClassTechnique(technique, definition) {
+  const id = String(technique.id || '');
+  if (isDrachentanzCanonicalTechniqueId(id)) return true;
+  return definition.classId === 'derwyn' && /^(?:combat-style-)?(?:sirenentanz|wyrmtanz)-derwyn-/.test(id);
+}
+
 function recommendedTechnique(profile, definition, candidates, slot) {
   if (definition.classId === 'teulu' && /^foundation-0[1-6]$/.test(slot?.id || '')) {
     const core = candidates.find(technique => technique.id.startsWith(`combat-style-drachentanz-jungdrache-${slot.id.slice(-2)}-`));
@@ -240,6 +260,19 @@ export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = 
   let next = pruneTrainingForLevel(profile, definition, level);
   const added = [];
 
+  const foundations = getCenyrFoundationOptions(definition);
+  if (options.autoFill === true && foundations.length && !next.classTraining.selections.some(selection => selection.kind === 'foundation')) {
+    const previousFoundation = foundations.find(option => (next.techniques || []).some(technique => technique.combatStyleFormId === option.formId));
+    const culture = /cenyr|cenyri/i.test(String(profile.identity?.ancestry || '')) ? 'cenyr' : 'vennyr';
+    const preferred = previousFoundation || foundations.find(option => option.id === culture) || foundations[0];
+    const result = selectCenyrTrainingOption(next, { kind: 'foundation', selectionId: preferred.formId, selectedAtLevel: 1 });
+    if (result.ok) next = result.profile;
+  }
+
+  // Release obsolete or ineligible choices before filling the newly free slots.
+  // Otherwise an old attack would occupy its slot until after the autofill pass.
+  next = synchronizeCenyrSelectedTechniques(next, { targetLevel: level, preserveExisting: options.preserveExisting });
+
   if (options.autoFill === true && definition.classId === 'barddwyr' && level >= 7
     && !next.classTraining.selections.some(selection => selection.kind === 'branch')) {
     const branch = selectCenyrTrainingOption(next, {
@@ -250,7 +283,9 @@ export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = 
   if (options.autoFill === true && level >= definition.pathSelection.minimumLevel
     && definition.pathSelection.firstSelectionRequired === true
     && !next.classTraining.selections.some(selection => selection.kind === 'path')) {
-    const pathId = RECOMMENDED_EXPERT_PATHS[definition.classId];
+    const pathId = definition.classId === 'barddwyr' && next.classTraining.selections.some(selection => selection.selectionId === 'barddwyr-sword')
+      ? FORM_IDS.schwertdrache
+      : RECOMMENDED_EXPERT_PATHS[definition.classId] || definition.pathSelection.allowedFormIds[0];
     const path = selectCenyrTrainingOption(next, {
       kind: 'path', selectionId: pathId, selectedAtLevel: definition.pathSelection.minimumLevel
     });
@@ -293,5 +328,6 @@ export const cenyrTechniqueSelectionInternals = Object.freeze({
   requiredBarddwyrBranch,
   getCompatibleWeapons,
   getAttackCandidates,
-  pruneTrainingForLevel
+  pruneTrainingForLevel,
+  isCanonicalClassTechnique
 });

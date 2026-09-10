@@ -5,15 +5,15 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260906-effect-rolls-v1';
-import { getAuraTargetMechanics, getActiveRollModes } from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from './skill-check-model.js?v=20260909-dragon-parent-v2';
+import { getAuraTargetMechanics, getActiveRollModes } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { mergeRollModes } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects
-} from '../combat/combat-trigger-rules.js?v=20260906-effect-rolls-v1';
-import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260906-effect-rolls-v1';
+} from '../combat/combat-trigger-rules.js?v=20260909-dragon-parent-v2';
+import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260909-dragon-parent-v2';
 
 export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-3';
 

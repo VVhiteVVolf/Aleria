@@ -1,0 +1,314 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "harmonie",
+      "title": "Die Harmonie",
+      "entries": [
+        {
+          "id": "shindar",
+          "name": "Shindar",
+          "epithet": "Die Sonne",
+          "relatedIds": [
+            "neun-goettliche"
+          ],
+          "image": {
+            "src": "religionen/harmonie-von-mond-und-sonne/assets/shindar.png",
+            "alt": "Shindar – Die Sonne",
+            "width": 638,
+            "height": 1115
+          }
+        },
+        {
+          "id": "mahzar",
+          "name": "Mahzar",
+          "epithet": "Der Mond",
+          "relatedIds": [
+            "infernus"
+          ],
+          "image": {
+            "src": "religionen/harmonie-von-mond-und-sonne/assets/mahzar.png",
+            "alt": "Mahzar – Der Mond",
+            "width": 637,
+            "height": 1114
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Ränge der Großen Schule",
+    "entries": [
+      {
+        "id": "auserwaehlter",
+        "title": "Auserwählter",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Auserwählte ist ein außergewöhnlicher Ehrentitel und Rang innerhalb der Harmonie von Mond & Sonne, der nur in besonderen Zeiten vergeben wird. Diese Religion ist so strukturiert, dass sie von einem Rat mehrerer Erwachter geführt wird, die als Vorstand und Gremium fungieren. Diese Erwachten treffen gemeinsam Entscheidungen und leiten die spirituellen und organisatorischen Geschicke der Gemeinschaft."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Auserwählte wird in außergewöhnlichen Situationen aus diesem Gremium heraus temporär gewählt, um als Richter, Mediator oder Kanzler zu agieren. Seine Rolle ist es, in Zeiten besonderer Herausforderungen oder Konflikte absolute Entscheidungen zu treffen, die über die übliche kollektive Führung hinausgehen. Er besitzt in dieser Zeit eine besondere Autorität, die es ihm ermöglicht, auch schwierige und weitreichende Entscheidungen im Sinne der Harmonie zu fällen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Das Amt des Auserwählten ist jedoch nicht dauerhaft. Es ist so konzipiert, dass es nach einer bestimmten Periode wieder niedergelegt werden muss. Diese Amtszeit ist bewusst begrenzt, um zu verhindern, dass eine einzelne Person zu viel Macht akkumuliert und um sicherzustellen, dass die Entscheidungsprozesse wieder an das Gremium der Erwachten zurückgegeben werden. Nach dem Ende seiner Amtszeit kehrt der Auserwählte in seine frühere Position zurück, und es folgt oft eine Phase, in der das Amt vakant bleibt, bevor erneut ein Auserwählter ernannt wird."
+          },
+          {
+            "type": "paragraph",
+            "text": "Diese Struktur ermöglicht es der Religion, in Zeiten der Not oder Unsicherheit schnell und entschlossen zu handeln, während sie gleichzeitig sicherstellt, dass die Macht und Verantwortung innerhalb der Gemeinschaft verteilt bleibt. Der Auserwählte wird daher als ein Amt betrachtet, das sowohl große Ehre als auch große Verantwortung mit sich bringt, und das nur dann zum Einsatz kommt, wenn es wirklich notwendig ist."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Mojtaba"
+          },
+          {
+            "type": "paragraph",
+            "text": "Erz-Meister"
+          }
+        ]
+      },
+      {
+        "id": "erwachter",
+        "title": "Erwachter",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Erwachte ist der höchste Rang innerhalb der Harmonie von Mond & Sonne und steht über dem Erleuchteten. Als Großmeister verkörpert der Erwachte die vollkommene Verbindung von Weisheit, spiritueller Erleuchtung und autoritativer Führung. Dieser Titel ist jenen vorbehalten, die nicht nur tief in die Geheimnisse der Lehren eingedrungen sind, sondern auch die Fähigkeit besitzen, eine gesamte Strömung oder ein großes Gebiet innerhalb der Religion zu leiten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Erwachte ist oft verantwortlich für die übergeordnete Aufsicht und Führung mehrerer Schulen, Universitäten oder Klöster. Er koordiniert die Aktivitäten der Erleuchteten und stellt sicher, dass die Lehren der Harmonie von Mond & Sonne einheitlich und in ihrer wahren Form weitergegeben werden. Seine Aufgabe ist es, die philosophischen und spirituellen Prinzipien in den gesamten von ihm betreuten Gebieten zu bewahren und weiterzuentwickeln."
+          },
+          {
+            "type": "paragraph",
+            "text": "Darüber hinaus spielt der Erwachte eine bedeutende Rolle am Hofe des Adels. Als spiritueller Berater und weiser Ratgeber dient er den Herrschern in Angelegenheiten, die das Gleichgewicht von Licht und Dunkelheit, ethische Fragen oder wichtige Entscheidungen betreffen. Seine Anwesenheit am Hof verleiht dem Adel nicht nur eine spirituelle Legitimation, sondern auch tiefe Einsichten, die in politischen und sozialen Entscheidungen von entscheidender Bedeutung sein können."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Erwachte ist das lebende Symbol der Harmonie und des Gleichgewichts. Seine Weisheit wird weit über die Grenzen seiner Gemeinschaft hinaus anerkannt, und seine Lehren beeinflussen das Leben vieler Menschen, sowohl innerhalb der religiösen Gemeinschaft als auch in der weltlichen Gesellschaft. Seine Verantwortung ist es, die Essenz der Harmonie von Mond & Sonne zu verkörpern und die Balance zwischen den Kräften des Lichts und der Dunkelheit aufrechtzuerhalten, sowohl in der spirituellen Sphäre als auch in der realen Welt."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Hakim"
+          },
+          {
+            "type": "paragraph",
+            "text": "Großmeister"
+          }
+        ]
+      },
+      {
+        "id": "erleuchteter",
+        "title": "Erleuchteter",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Erleuchtete ist ein hochrangiger Kleriker in der Harmonie von Mond & Sonne, der die Leitung einer Schule, Universität oder eines Klosters innehat. In dieser erhabenen Position ist der Erleuchtete sowohl ein spiritueller als auch ein intellektueller Führer, der eine Vielzahl von Lehrern und Schülern unter sich hat. Seine Weisheit und sein umfassendes Wissen machen ihn zu einem unbestrittenen Autoritätsfigur, der die Richtung der Lehre und die Entwicklung der Schüler maßgeblich prägt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Leiter einer Institution ist der Erleuchtete verantwortlich für die Gestaltung und Überwachung des gesamten Lehrplans, die spirituelle Führung der Gemeinschaft und die Aufrechterhaltung der philosophischen und ethischen Standards der Harmonie. Er leitet fortgeschrittene Studiengruppen, hält bedeutende Vorlesungen und dient als Hauptberater in theologischen und philosophischen Fragen. Der Erleuchtete ist derjenige, der die Prinzipien von Licht und Dunkelheit in ihrer tiefsten Form verstanden hat und diese Einsichten an die nächste Generation weitergibt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Im kriegerischen Aspekt der Religion übernimmt der Erleuchtete eine ebenso bedeutende Rolle. Als Meister einer Kampfschule ist er der oberste Lehrer und Führer der Kriegermönche. Unter seiner Leitung werden nicht nur die körperlichen Fähigkeiten der Schüler geschult, sondern auch ihre geistige und moralische Disziplin gestärkt. Der Erleuchtete sorgt dafür, dass die Schüler nicht nur starke Kämpfer, sondern auch weise und besonnene Krieger werden, die die Werte der Harmonie von Mond & Sonne auf dem Schlachtfeld verkörpern."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Erleuchtete ist somit sowohl im intellektuellen als auch im kriegerischen Bereich eine zentrale Figur, die die Verbindung zwischen spiritueller Weisheit und praktischer Anwendung symbolisiert. Seine Rolle ist es, die Lehren der Harmonie zu bewahren, weiterzuentwickeln und sicherzustellen, dass sie durch die Schüler und Krieger, die unter seiner Anleitung stehen, in die Welt hinausgetragen werden."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Usta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lehrmeister"
+          }
+        ]
+      },
+      {
+        "id": "philosoph",
+        "title": "Philosoph",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Philosoph ist ein hoch angesehener Lehrmeister innerhalb der Harmonie von Mond & Sonne. Dieser Rang steht für jemanden, der nicht nur tiefes Wissen und Weisheit erlangt hat, sondern auch die Fähigkeit besitzt, diese Erkenntnisse an andere weiterzugeben. Der Philosoph ist sowohl ein Mentor als auch ein Lehrer, der die Verantwortung trägt, die nächsten Generationen von Suchenden, Laien und Novizen zu formen und zu leiten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Kopf einer Schule oder als einer von mehreren Lehrmeistern ist der Philosoph dafür verantwortlich, die Lehren der Harmonie in ihrer reinsten Form zu vermitteln und zu bewahren. Er führt seine Schüler durch komplexe philosophische und spirituelle Studien und hilft ihnen, die Prinzipien von Licht und Dunkelheit, wie sie in dieser Religion verstanden werden, zu erfassen und in ihrem Leben anzuwenden."
+          },
+          {
+            "type": "paragraph",
+            "text": "Neben seiner Rolle als Lehrer übernimmt der Philosoph oft auch administrative Aufgaben innerhalb der Schule. Er ist in die Gestaltung des Lehrplans involviert, organisiert Meditationen und Studienkreise und sorgt dafür, dass die Schule in Übereinstimmung mit den spirituellen und moralischen Prinzipien der Harmonie von Mond & Sonne geführt wird."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Philosoph ist ein zentraler Pfeiler der Gemeinschaft, der sowohl durch seine Weisheit als auch durch sein Engagement für die Bildung und das Wohl seiner Schüler hervorsticht. Er dient als Vorbild für andere und trägt die schwere Verantwortung, die spirituellen und philosophischen Traditionen der Harmonie zu bewahren und weiterzugeben."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Rahim"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lehrer"
+          }
+        ]
+      },
+      {
+        "id": "juenger",
+        "title": "Jünger",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Jünger ist ein einzigartiger Rang innerhalb der Harmonie von Mond & Sonne, der speziell für diejenigen reserviert ist, die ihren Weg als Krieger in den Dienst des Klerus gestellt haben. Anders als die traditionelleren Mitglieder des Klerus, die tief in den philosophischen und spirituellen Lehren der Religion verwurzelt sind, hat der Jünger eine eher oberflächliche Ausbildung in diesen Bereichen erhalten. Seine Hauptkompetenz liegt im kämpferischen Aspekt der Religion, und er hat sich dem Schutz der Gemeinschaft und der Verteidigung ihrer Werte verschrieben."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Jünger wird in den Klerus aufgenommen, um seine Rolle als Mönchskrieger anzuerkennen und ihm einen formalen Platz innerhalb der religiösen Hierarchie zu geben. Allerdings wird ihm nicht dieselbe Verpflichtung zur intensiven spirituellen Schulung auferlegt wie denjenigen, die sich ganz dem Studium und der Meditation widmen. Stattdessen wird er als vollwertiger Kleriker anerkannt, ohne die Verpflichtung, sich tiefgreifend mit den theologischen oder administrativen Aspekten der Religion zu befassen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang bietet den Mönchskriegern die Möglichkeit, Teil der religiösen Gemeinschaft zu sein, ohne ihre primäre Berufung – die Kriegsführung und den Schutz der Harmonie – aufgeben zu müssen. Sie werden respektiert und geschätzt für ihre Fähigkeiten und ihren Mut, auch wenn sie nicht das gleiche Niveau an spirituellem Wissen erreicht haben wie die anderen Ränge des Klerus."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Jünger steht somit symbolisch für die Verbindung von körperlicher Stärke und spiritueller Hingabe, wobei der Schwerpunkt eher auf der Tatkraft und der Verteidigung der Gemeinschaft liegt. Seine Rolle ist es, die Prinzipien der Harmonie von Mond & Sonne durch sein Handeln auf dem Schlachtfeld zu verteidigen und zu verkörpern, während er gleichzeitig die Unterstützung und Anerkennung des Klerus genießt."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Jahid"
+          },
+          {
+            "type": "paragraph",
+            "text": "Kriegermönch"
+          }
+        ]
+      },
+      {
+        "id": "gelehrter",
+        "title": "Gelehrter",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Gelehrte ist ein hoch angesehener Mönch der Harmonie von Mond & Sonne, der durch sein tiefes Wissen und seine Erfahrung eine zentrale Rolle innerhalb der Schule oder des Klosters einnimmt. Mit seiner fortgeschrittenen Weisheit und seinem umfassenden Verständnis der Lehren hat er sich das Vertrauen und den Respekt der Gemeinschaft erworben und übernimmt nun vielfältige Rollen und Aufgaben, die weit über die der Adepten hinausgehen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Gelehrter trägt er eine große Verantwortung, sowohl in der Lehre als auch in der Verwaltung der Institution. Er ist befähigt, verschiedene Themen zu unterrichten, Studiengruppen zu leiten und tiefergehende spirituelle und philosophische Diskussionen zu führen. Seine Aufgabe ist es, die nachfolgenden Generationen in den Lehren der Harmonie zu unterweisen und sie auf ihren eigenen spirituellen Wegen zu begleiten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Neben seinen Lehrverpflichtungen übernimmt der Gelehrte oft auch organisatorische und administrative Aufgaben. Er kann für die Leitung bestimmter Einrichtungen innerhalb des Klosters oder der Schule verantwortlich sein, wie beispielsweise die Bibliothek, die Studienhallen oder Meditationsräume. Darüber hinaus spielt er eine entscheidende Rolle in der Planung und Durchführung von Ritualen, Festen und anderen wichtigen Ereignissen in der Gemeinschaft."
+          },
+          {
+            "type": "paragraph",
+            "text": "Die Position des Gelehrten erfordert nicht nur tiefes Wissen, sondern auch die Fähigkeit, komplexe organisatorische Herausforderungen zu meistern. Er muss sicherstellen, dass die Lehren der Harmonie von Mond & Sonne in allen Bereichen des Gemeinschaftslebens präsent sind und dass die Strukturen des Klosters oder der Schule reibungslos funktionieren. Seine administrative Rolle umfasst die Koordination der täglichen Abläufe, die Verwaltung von Ressourcen und die Sicherstellung, dass die Gemeinschaft ihre Ziele in Übereinstimmung mit den Prinzipien der Harmonie erreicht."
+          },
+          {
+            "type": "paragraph",
+            "text": "Insgesamt ist der Gelehrte eine Schlüsselperson innerhalb der Schule oder des Klosters, die sowohl als Lehrer, Führer und Verwalter agiert und wesentlich zur Aufrechterhaltung und Weiterentwicklung der Gemeinschaft beiträgt."
+          }
+        ]
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Adept ist ein vollwertiger Mönch der Harmonie von Mond & Sonne und hat sich als fähiger und verantwortungsvoller Anhänger der Lehren etabliert. In dieser Phase seines spirituellen Weges hat er nicht nur ein tiefes Verständnis der dualistischen Prinzipien erlangt, sondern auch die Disziplin und Weisheit entwickelt, die erforderlich sind, um diese Lehren in allen Aspekten seines Lebens anzuwenden."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Adept übernimmt er bereits erhebliche Verantwortung innerhalb des Klosters und der Schule. Seine Aufgaben können das Leiten von Studiengruppen, die Durchführung von Meditationen oder die Überwachung der täglichen Abläufe im Kloster umfassen. Der Adept ist zudem in der Lage, jüngere Novizen anzuleiten und sie in ihrem Studium zu unterstützen, was ihm eine wichtige Mentor- oder stellvertretende Rolle innerhalb der Gemeinschaft verleiht."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Adept wird von seinen Mitbrüdern und -schwestern respektiert und als Vorbild angesehen. Seine Erfahrungen und sein Wissen ermöglichen es ihm, in schwierigen Situationen Rat zu geben und als Vermittler oder Berater zu fungieren. Durch seine Hingabe an die Lehren und seine Bereitschaft, diese aktiv zu praktizieren und zu lehren, trägt der Adept wesentlich zur Erhaltung und Weitergabe der Weisheiten der Harmonie von Mond & Sonne bei."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang markiert einen entscheidenden Punkt in der spirituellen Reise des Adepten, da er nun nicht nur Schüler, sondern auch Lehrer und Führer innerhalb der Gemeinschaft ist. Seine Rolle ist von zentraler Bedeutung für die Kontinuität und das Wachstum der Lehren, und er bereitet sich darauf vor, in Zukunft noch größere Verantwortung zu übernehmen."
+          }
+        ]
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Novize hat auf seinem Weg der Erkenntnis bereits bedeutende Fortschritte gemacht und beginnt, ein tieferes Verständnis für die Lehren der Harmonie von Mond & Sonne zu entwickeln. Er hat die Grundlagen verinnerlicht und zeigt ein gesteigertes Bewusstsein für die dualistischen Prinzipien von Licht und Dunkelheit sowie deren Einfluss auf das menschliche Dasein."
+          },
+          {
+            "type": "paragraph",
+            "text": "In dieser Phase wird der Novize langsam an seine Aufgaben innerhalb des Klosters und der Schule herangeführt. Er übernimmt erste Verantwortungen, die ihm helfen, seine Kenntnisse praktisch anzuwenden und seine Fähigkeiten weiter auszubauen. Dazu gehören Tätigkeiten wie die Unterstützung bei Lehrveranstaltungen, die Pflege der spirituellen Räume und die Anleitung jüngerer Schüler bei einfachen Studienaufgaben."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Alltag des Novizen ist geprägt von intensivem Studium, regelmäßiger Meditation und der aktiven Teilnahme am gemeinschaftlichen Leben des Klosters. Durch diese Erfahrungen lernt er, Theorie und Praxis zu vereinen und die Prinzipien der Harmonie in seinem täglichen Handeln widerzuspiegeln. Zudem beginnt er, seine eigenen Gedanken und Einsichten mit anderen zu teilen, was seine rhetorischen und didaktischen Fähigkeiten fördert."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Übergang zum Novizenstatus markiert einen wichtigen Meilenstein auf dem spirituellen Pfad des Individuums. Es ist eine Zeit des Wachstums und der Vertiefung, in der der Novize sich darauf vorbereitet, künftig noch größere Rollen und Verantwortlichkeiten innerhalb der Gemeinschaft zu übernehmen und sein Wissen zum Wohle aller einzusetzen."
+          }
+        ]
+      },
+      {
+        "id": "laie",
+        "title": "Laie",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Laie ist ein Schüler, der den ersten Schritt über die Schwelle des Suchenden hinaus gemacht hat und sich aktiv dem Studium der Harmonie von Mond & Sonne widmet. Obwohl er bereits einige grundlegende Erkenntnisse gewonnen hat, steht ihm noch ein langer Weg bevor, um das volle Verständnis der Lehren zu erlangen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Laie hat sein Studium aufgenommen und zeigt ein tieferes Engagement und eine größere Hingabe an die Prinzipien der Harmonie. Er beginnt, sich intensiver mit den philosophischen und spirituellen Lehren auseinanderzusetzen und erwirbt ein grundlegendes Verständnis der Dualität von Licht und Dunkelheit, wie sie in dieser Religion interpretiert wird."
+          },
+          {
+            "type": "paragraph",
+            "text": "Doch trotz seines Fortschritts ist der Laie sich bewusst, dass er noch viel zu lernen hat. Er bleibt demütig in seiner Suche nach Weisheit und Erkenntnis und widmet sich weiterhin der Meditation, dem Studium und der Disziplin, um sich weiterzuentwickeln. Der Laie ist auf dem Weg zur Erleuchtung, aber er weiß, dass dies nur der Anfang einer langen und tiefgründigen Reise ist."
+          }
+        ]
+      },
+      {
+        "id": "suchender",
+        "title": "Suchender",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Suchende ist der erste Rang in der Schule der Harmonie von Mond & Sonne und bezeichnet einen Zögling, der gerade erst seinen Weg in diese spirituelle Gemeinschaft gefunden hat. Als junger Rekrut und Neuling ist der Suchende ein Frischling, der voller Neugier und Eifer nach Wissen strebt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang markiert den Anfang der Reise des Einzelnen auf der Suche nach Erkenntnis und Weisheit. Der Suchende ist bereit, die Grundlagen der Lehren zu erlernen und sich den philosophischen und spirituellen Disziplinen zu widmen, die die Harmonie von Mond & Sonne prägen. In dieser frühen Phase seiner Entwicklung lernt er, seine Gedanken zu fokussieren, seine Emotionen zu kontrollieren und die ersten Schritte in Richtung eines tieferen Verständnisses der Dualität von Licht und Dunkelheit zu machen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Suchende ist voller Potenzial, aber auch voller Herausforderungen, die es zu meistern gilt. Seine Zeit als Suchender ist geprägt von intensiver Schulung, Meditation und Selbstreflexion, während er sich darauf vorbereitet, in höhere Ränge aufzusteigen und die komplexeren Aspekte der Harmonie zu verstehen."
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Diese Überlieferung verwendet für die infernalen Gegenbilder die traditionelle Neunerzählung. Das allgemeine Infernus-Register führt zehn hohe Mächte einschließlich Adars umstrittener Sonderstellung."
+  ]
+}

@@ -6,12 +6,12 @@ import {
 import {
   activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
   getActionGroups, renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
-} from './combat-action-card.js?v=20260905-party-combat-v1';
-import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260905-resource-balance-v2';
-import { getActiveRollModes } from '../combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from './combat-action-card.js?v=20260909-dragon-parent-v2';
+import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260909-dragon-parent-v2';
+import { getActiveRollModes } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260905-party-combat-v1';
-import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260905-resource-balance-v2';
+import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260909-dragon-parent-v2';
+import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260909-dragon-parent-v2';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')

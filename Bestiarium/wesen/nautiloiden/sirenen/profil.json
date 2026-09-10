@@ -1,0 +1,266 @@
+{
+  "id": "sirenen",
+  "name": "Sirenen",
+  "classification": "Kreaturen der Tiefe und boshafte Parodie auf die Meerjungfrauen",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Klippen, Lagunen, Meeresbuchten und versunkene Tempel",
+  "folio": "IV / 07-B",
+  "parentGroupId": "nautiloiden",
+  "summary": "Sirenen sind Thraals grausame Karikatur der Meerjungfrauen der Dame der See. Sie verbergen Schuppen, Klauen und vampirhafte Zähne hinter anmutigen Gestalten, locken Seeleute mit magischem Gesang in die Tiefe und verbinden Illusion, Lebensraub und Schwarmplanung mit spielerischer Grausamkeit.",
+  "quote": "Eine absichtliche Karikatur der Meerjungfrauen der Dame der See.",
+  "quoteAttribution": "Alte Legende über Thraals Lieblingswerk",
+  "platesTitle": "Sirenen-Galerie",
+  "platesEyebrow": "Lockgestalt und enthüllte Jagdform",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nautiloiden-sirenen.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Sirene vollständig sichtbar in ihrer verhüllten Lockgestalt"
+  },
+  "hero": {
+    "src": "../../../assets/nautiloid-profiles/sirenen-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Sirene vollständig sichtbar im Angriff auf einen mittelalterlichen Krieger",
+    "caption": "Überlieferte Szenentafel · Die wahre Gestalt einer Sirene an der stürmischen Küste"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Sirenen"
+    },
+    {
+      "label": "Typ",
+      "value": "Kreaturen der Tiefe und boshafte Parodie"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Thraal als Spott auf die Dame der See geschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Nach alten Legenden aus verdammten Seelen ertrunkener Priesterinnen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Klippen, Lagunen, Meeresbuchten und versunkene Tempel"
+    },
+    {
+      "label": "Gesellschaft",
+      "value": "Kleine Schwärme unter einer Ältesten oder Hohen Stimme"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, aggressiv und verspielt in ihrer Grausamkeit"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zu jeder Zeit; bevorzugt Nacht und Nebel"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Gesang der Tiefe, Spiegelschein, Schattenflucht, Vampirbiss, Klauen und Sturmzauber"
+    },
+    {
+      "label": "Stärken",
+      "value": "Lockgesang, Illusionsmagie, Lebensraub und Küstentarnung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Starke Willenskraft, magische Isolation und geweihte Waffen"
+    },
+    {
+      "label": "Beute",
+      "value": "Seeleute, Fischer, Matrosen und Reisende an Küstenpfaden"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Lockgesang",
+      "Illusionsmacht",
+      "Lebensraub",
+      "Nebeltarnung",
+      "Schwarmplanung",
+      "Willensabwehr"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      8,
+      7
+    ],
+    "intro": "Die Sirenen-Tafel bewertet ihre Jagd über Stimme, falsche Schönheit und Küstenverstecke. Willensabwehr bezeichnet hier die Schwierigkeit, ihren Einfluss geistig abzuwehren.",
+    "source": "Aus Gesang der Tiefe, Spiegelschein, Vampirbiss, Schattenflucht, Schwarmgesellschaft und den überlieferten geistigen Gegenmitteln abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sirenen gingen aus Thraals höhnischem Willen hervor. Wo die Meerjungfrauen der Dame der See Hoffnung und Gnade verkörpern, sollen Sirenen Schönheit, Trost und Sehnsucht in tödliche Lügen verwandeln."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zunächst erscheinen sie als junge, betörende Frauen. Erst aus der Nähe werden schuppige Haut, schwarze oder rote Augen, blutige Klauen, Reißzähne und ein kräftiger Fischleib sichtbar."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung und Spiegelschein",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Oberkörper kann makellos menschlich wirken, während der Unterkörper in einer kräftigen Schwanzflosse endet. Zusätzliche Flossen, Stacheln oder flügelartige Anhänge erlauben manchen Sirenen, aus der Brandung zu schnellen oder kurze Strecken über Klippen zu flattern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn der Spiegelschein fällt, verzerren sich Mund, Augen und Hände. Die Galerie bewahrt sowohl die verführerische Lockgestalt als auch die entlarvte Jagdgestalt, ohne beide als getrennte Arten auszugeben."
+        }
+      ]
+    },
+    {
+      "id": "jagd",
+      "title": "Jagdmethoden und Opfer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Schwarm lockt bevorzugt Seeleute, Fischer und Reisende an Küstenpfaden. Das Opfer wird häufig nicht sofort getötet, sondern durch wechselnde Stimmen, falsche Rettungsversprechen und sadistische Spiele von Begleitern getrennt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Männliche Opfer werden in manchen Riten bevorzugt. Sirenen erklären dies als Reinigung des Ozeans, bevor sie Blut, Lebensenergie oder den gesamten Körper des Gefangenen verzehren."
+        }
+      ]
+    },
+    {
+      "id": "gesellschaft",
+      "title": "Rituale und Gesellschaft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kleine Schwärme folgen einer Ältesten oder Hohen Stimme. Sie planen gemeinsam, bewachen Nester und verehren Thraal bisweilen als Bräutigam der Tiefe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Legenden führen die ersten Sirenen auf ertrunkene Priesterinnen der Dame der See zurück. Weitere Sirenen sollen durch Nachkommen, Flüche oder gezielte Riten entstehen; keine dieser Überlieferungen gilt als abschließend gesichert."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sirenen bevorzugen die Grenze zwischen Wasser und Land: Klippen, Lagunen, Buchten, Unterwasserhöhlen, versunkene Städte und Tempel. Offene See bietet zu wenig Deckung für ihre lauernde Jagd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Besonders gefährliche Schwärme halten sich an Meeresengen, Wrackfeldern, Nebelbänken und stark befahrenen Routen auf. Dort können sie Masten früh erkennen und ihren Gesang lange vor dem eigentlichen Angriff beginnen."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Gesang der Tiefe vernebelt Sinne, erschafft Illusionen und lenkt Gedanken. Spiegelschein verbirgt die wahre Gestalt, Schattenflucht lässt die Sirene in Dunkelheit oder Nebel nahezu verschwinden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vampirbiss entzieht Blut und Lebensenergie; gierige Klauen schneiden selbst durch Rüstung. Alte Exemplare verbinden diese Jagdmittel mit rudimentärer Wasser- und Sturmmagie oder einem weitergehenden Gestaltwandel."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vollständigen Schutz gegen den Gesang kennt das Archiv nicht. Starke Willenskraft, magische Isolation, klare Verständigungszeichen und räumliche Trennung erschweren jedoch, dass ein ganzer Trupp derselben Stimme folgt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geweihte Waffen und ein Kampf fern von Nebel und Wasser nehmen der Sirene mehrere Vorteile. Niemand sollte einer scheinbar geretteten Person allein folgen, solange Spiegelbild, Erinnerungen und Begleiter nicht geprüft sind."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Sirenen gelten als Thraals Lieblingswerk, weil sie mit Schönheit lügen und damit die Götter der Ordnung verhöhnen.",
+            "Eine Legende behauptet, Sirenen könnten sich selbst nicht im Wasser spiegeln.",
+            "Muschelohrringe und Haizahnamulette werden von Matrosen als zweifelhafter Schutz getragen.",
+            "Die sechs Galerietafeln zeigen verschiedene Stufen zwischen Lockgestalt und enthülltem Jagdleib."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "src": "../../../assets/creature-group-profiles/nautiloiden-sirenen.webp",
+      "width": 408,
+      "height": 612,
+      "alt": "Sirene vollständig sichtbar in ihrer verführerischen Lockgestalt",
+      "caption": "Artenbild · Verhüllte Lockgestalt"
+    },
+    {
+      "src": "../../../assets/nautiloid-profiles/sirenen-variant.webp",
+      "width": 408,
+      "height": 612,
+      "alt": "Sirene vollständig sichtbar in ihrer geflügelten Jagdgestalt",
+      "caption": "Artenbild · Enthüllte Jagdgestalt"
+    },
+    {
+      "src": "../../../assets/nautiloid-profiles/sirenen-galerie-01.webp",
+      "width": 1024,
+      "height": 1536,
+      "alt": "Sirene auf einem Felsen im Abendlicht",
+      "caption": "Sirenen-Galerie I · Lockgesang im Abendlicht"
+    },
+    {
+      "src": "../../../assets/nautiloid-profiles/sirenen-galerie-02.webp",
+      "width": 1024,
+      "height": 1536,
+      "alt": "Sirene auf einer Klippe über offener See",
+      "caption": "Sirenen-Galerie II · Harmloser Spiegelschein"
+    },
+    {
+      "src": "../../../assets/nautiloid-profiles/sirenen-galerie-03.webp",
+      "width": 1024,
+      "height": 1536,
+      "alt": "Geflügelte Sirene im Sturm über einer Klippe",
+      "caption": "Sirenen-Galerie III · Die Maske beginnt zu fallen"
+    },
+    {
+      "src": "../../../assets/nautiloid-profiles/sirenen-galerie-04.webp",
+      "width": 1024,
+      "height": 1536,
+      "alt": "Sirene vollständig im Angriff aus stürmischer Brandung",
+      "caption": "Sirenen-Galerie IV · Enthüllte Küstenjägerin"
+    }
+  ]
+}

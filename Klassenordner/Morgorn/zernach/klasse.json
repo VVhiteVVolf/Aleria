@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "zernach",
+  "cultureId": "morgorn",
+  "name": "Zernach",
+  "title": "Der Zernach",
+  "subtitle": "Wächter von Tor, Mauer und Feste",
+  "aliases": ["Wächter", "Waechter"],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/M26U8dl.png",
+  "illustration": "https://i.imgur.com/M26U8dl.png",
+  "artwork": { "source": "https://i.imgur.com/M26U8dl.png", "width": 1024, "height": 1536, "caption": "Zernach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Zernach · Wächter" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Kriegerkaste; Teil einer festen Wachordnung" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Festungs-, Tor- und Anlagenwache" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Hammer und Langwaffe" },
+    { "group": "Klassenprofil", "label": "Rüstung", "html": "Schwere Panzerung" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Zernach sind Morgorns Wächter. Sie halten Tore, Mauern, Brücken, Wege und militärisch wichtige Anlagen. Wo der Haldr persönlich an ein Schutzgut gebunden ist, steht der Zernach innerhalb einer dauerhaften Wachordnung.</p><p>Ihre Arbeit besteht aus Geduld, geregelter Ablösung und der Fähigkeit, einen Zugang selbst unter schwerem Druck geschlossen zu halten.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Mit dem Wachstum befestigter Hallen, Minenkomplexe und Bergstädte wurden aus wechselnden Sippenwachen feste Zernach-Verbände. Ihre Pflichten, Wachzeiten und Übergaben gelten als ebenso wichtig wie ihr Können mit der Waffe.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Zernach lesen Zugänge und Verteidigungslinien, prüfen Verschlüsse, organisieren Wachwechsel und melden Unregelmäßigkeiten. Im Kampf kontrollieren sie Engstellen mit Langwaffen und nutzen schwere Hämmer gegen Schilde, Rüstung und Hindernisse.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Sehr widerstandsfähig in befestigten Positionen</li><li>Diszipliniert bei langen Wachen</li><li>Wirksam gegen Rüstung und an Engstellen</li></ul><h3>Schwächen</h3><ul><li>Schwere Ausrüstung begrenzt Tempo und Ausdauer auf Märschen</li><li>Weniger geeignet für verdeckte Einsätze</li><li>Offene Flanken mindern den Vorteil der Wachstellung</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Zernach kämpft aus einer gehaltenen Linie. Langwaffen sperren Zugänge, während Hammer und gepanzerter Körper den unmittelbaren Durchbruch verhindern. Seine Bewegungen sind knapp und auf Stand, Reichweite und Ablösung abgestimmt.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Schwere Rüstung, geschlossener Helm, Hammer und eine Langwaffe prägen das Bild der Kaste. Wachlaterne, Horn, Schlüssel, Siegel und Werkzeug zur Prüfung von Toren oder Mauerwerk ergänzen die dienstliche Ausrüstung.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Zernach verkörpern die sichtbare Dauer einer Herrschaft. Sie dienen Haldran, Karnath oder größeren Hallenverbänden, ohne durch diesen Dienst selbst adelig zu werden. Eine makellose Wachakte kann einer Familie dennoch über Generationen Gewicht geben.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Zernach" }
+}

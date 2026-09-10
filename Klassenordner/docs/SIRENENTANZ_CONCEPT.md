@@ -1,14 +1,27 @@
-# Sirenentanz und Vennyr-Klassen
+# Wyrmtanz und Vennyr-Klassen
 
 ## Stand und Umfang
 
 Die fünf überlieferten Vorlagen sind als Morwyr, Rhyfelwyr, Ceidwyn, Rhiddwyr und Derwyn übernommen. Hinzu kommt die vennyriische Milwr-Ausbildung. Derwyn und Milwr erscheinen in Cenyr und Vennyr. Derwyn besitzt eine gemeinsame kanonische Seite; Milwr besitzen zwei kulturelle Ausbildungsseiten derselben Klasse.
 
-**Derzeit Seiten und Ausbildungsentwurf:** Waffenfolgen, Kosten, kurze Wirkungen, Klassenmerkmale und Pfadboni sind strukturiert hinterlegt. Die vorhandenen Figuren, Live-Kämpfe, Waffeninventare und ihre erlernten Attacken werden nicht umgestellt. Die neuen Attacken sind ausdrücklich `draft`, `active: false`, ohne automatische Grants. Bestehende Cenyr-Ausbildungen bleiben gültig.
+**Stand:** Derwyn sind mit ihrer gemeinsamen Waffenlehre an Charakterbogen, Ausbildungswahl und Kampfauflösung angebunden. Eine Grundausbildung wird ausdrücklich gewählt; sie verleiht keine zweite Folge kostenloser Grundtechniken. Die übrigen Vennyr-Klassen behalten ihren bisherigen Entwurfsstand (`draft`, `active: false`). Der sichtbare Stilname lautet **Wyrmtanz**. Bestehende interne `sirenentanz`-IDs und Dateipfade bleiben zur Kompatibilität mit gespeicherten Daten und Links erhalten.
 
 Die gelieferten Texte bleiben als Herkunft, Geschichte, Ausstattung und kultureller Status erhalten. Leere Dialoge, Musterfiguren und Platzhalter wurden entfernt. Alte Paladin-Bezeichnungen wurden entsprechend der bestehenden Benennung zu Eidgeschworenen normalisiert. Derwyns alte Beschränkung auf Haus Arth wird mit dokumentierter redaktioneller Korrektur durch die ausdrücklich gewünschte Zugehörigkeit zu beiden Kulturen ersetzt.
 
 ## Ausbildung
+
+Für **Derwyn beider Kulturen** gilt:
+
+| Stufen | Form | Waffenführung |
+| --- | --- | --- |
+| 1–6 | Wahl: Tanz des Jungdrachens oder Tanz der jungen Welle | Genau eine Grundausbildung |
+| 7–8 | Freie kreative Phase | Verbindung und Vertiefung der Grundlagen |
+| 9–20 | Tanz des fließenden Wyrms | Schwert; Abwandlung des abwartenden Drachens |
+| 9–20 | Tanz des brandenden Wyrms | Dreizack |
+| 9–20 | Tanz des steigenden Wyrms | Kampfstab oder als Nahkampfwaffe geeigneter Zauberstab |
+| 9–20 | Tanz des peitschenden Wyrms | Morgenstern |
+
+Die vier Wyrmformen stehen nach beiden Grundlagen zur Wahl. Die frühere kehrende Flut und die drei allgemeinen Vennyr-Expertenpfade gehören nicht mehr zum Derwyn-Lehrplan. Die folgenden ursprünglichen Vennyr-Formen gelten weiterhin für die übrigen Klassen:
 
 | Stufen | Form | Zweck |
 | --- | --- | --- |
@@ -19,7 +32,7 @@ Die gelieferten Texte bleiben als Herkunft, Geschichte, Ausstattung und kulturel
 | 9–20 | Tanz des stillen Tiefwassers | Schutz, Ruhe und kontrollierende Bindung |
 | 6–15, nur Milwr | Tanz der Küstenwache | Vereinfachte Fortsetzung für Waffenknechte |
 
-Die drei Expertenpfade bieten je acht Optionen pro Ritterklasse. Der erste Pfad auf Stufe 9 kostet keinen zusätzlichen Slot. Ein weiterer Pfad verbraucht einen bereits verdienten Experten-Attackenslot. Klassenbudgets: Morwyr 16, Rhyfelwyr 16, Ceidwyn 12, Rhiddwyr 14, Derwyn 10, Milwr 9. Eine einzelne Spezialisierung kann das Expertenbudget ausfüllen. Neue Waffenwege verleihen keine zusätzlichen Slots.
+Die drei allgemeinen Expertenpfade bieten je acht Optionen pro Ritterklasse; Derwyn besitzen stattdessen ihre vier eigenen Wyrmformen. Der erste Pfad auf Stufe 9 kostet keinen zusätzlichen Slot. Ein weiterer Pfad verbraucht einen bereits verdienten Experten-Attackenslot. Klassenbudgets: Morwyr 16, Rhyfelwyr 16, Ceidwyn 12, Rhiddwyr 14, Derwyn 10, Milwr 9. Eine einzelne Spezialisierung kann das Expertenbudget ausfüllen. Neue Waffenwege verleihen keine zusätzlichen Slots.
 
 Milwr erhalten weder die Aufbauform noch die drei Ritterpfade. Ihre Küstenwache endet auf Stufe 15; Stufe 16–20 behalten die allgemeinen Ressourcen und offene Klassenentwicklung. Jungdrache/Drachling und junge Welle/Küstenwache sind kulturelle Alternativen und werden nicht automatisch zusammengerechnet.
 
@@ -31,16 +44,16 @@ Milwr erhalten weder die Aufbauform noch die drei Ritterpfade. Ihre Küstenwache
 | Rhyfelwyr | Großaxt, Hammer, Morgenstern, Kolben, Flegel; auch Schwert | Wucht und Standfestigkeit |
 | Ceidwyn | Kurzbogen, Armbrust, Säbel, Dreizack | Fern- und Nahkampf in jeder Ausbildungsphase |
 | Rhiddwyr | Flegel, Rabenschnabel, Reiteraxt, Kolben; Glefe/Reiterspieß; Armbrust | Reiterkampf mit eigenständigen Optionen zu Fuß |
-| Derwyn | Stab, Dreizack, Streitkolben | Drei physische Wege für beide Kulturen |
+| Derwyn | Schwert, Dreizack, Kampfstab / Zauberstab, Morgenstern | Vier eigene Wyrmformen nach einer gewählten Grundausbildung |
 | Milwr | Speer, Axt, Streitkolben, Schwert | Einfache, flexible Nahkampfdisziplin |
 
-Beim späteren automatischen Ausfüllen sollen Ceidwyns vier Grundslots einen Schuss, einen weiteren Schuss oder eine Vorbereitung sowie Säbel und Dreizack abdecken, soweit die Waffen getragen werden. Derwyns drei Grundslots verteilen sich entsprechend der getragenen Waffen auf Stab, Dreizack und Kolben. Das ist eine Empfehlung für die nächste Figurenintegration, noch keine Änderung vorhandener Bögen.
+Beim späteren automatischen Ausfüllen sollen Ceidwyns vier Grundslots einen Schuss, einen weiteren Schuss oder eine Vorbereitung sowie Säbel und Dreizack abdecken, soweit die Waffen getragen werden. Derwyns drei Grundslots stammen ausschließlich aus dem gewählten Fundament und berücksichtigen die vorhandenen geeigneten Waffen. Waffenwechsel vergrößern ihr Lernbudget nicht.
 
 Harpunenwurf benötigt eine einsatzbereite Wurfwaffe. Heranziehen erfordert befestigte Leine, freien Zugweg, erfolgreichen Treffer und misslungenen KRF-Rettungswurf gegen 8 + KRF-Modifikator + Kompetenz. Überbordwerfen, Ertrinken, Tauzerstörung und Entwaffnen sind niemals automatische Folgen des Schadenswurfs. Ortsänderungen bleiben innerhalb der verfügbaren Bewegung. Armbrüste benötigen Munition und Nachladen; berittene Attacken erfordern Ross und Status, Anritte mindestens 3 m freien Anlauf.
 
 ## Schaden und Ressourcen
 
-Der Sirenentanz verwendet bewusst das bestehende Drachentanz-Schadensbudget. Eine Technik kopiert höchstens einmal die Würfel ihrer Waffe; zusätzliche Waffenwürfel werden einzeln begrenzt. Ein Mehrwürfel-Großschwert oder eine Axt vervielfacht dadurch nicht seinen gesamten Grundschaden. Schwache Bonusattacken beginnen mit 1W4. Mit einer 1W10-Referenzwaffe überschreitet keine Grundattacke auf Stufe 6 den Würfelhöchstwert 20; feste Boni bleiben separat.
+Der Wyrmtanz verwendet bewusst das bestehende Drachentanz-Schadensbudget. Eine Technik kopiert höchstens einmal die Würfel ihrer Waffe; zusätzliche Waffenwürfel werden einzeln begrenzt. Ein Mehrwürfel-Großschwert oder eine Axt vervielfacht dadurch nicht seinen gesamten Grundschaden. Schwache Bonusattacken beginnen mit 1W4. Mit einer 1W10-Referenzwaffe überschreitet keine Grundattacke auf Stufe 6 den Würfelhöchstwert 20; feste Boni bleiben separat.
 
 Ältere Grundangriffe erhalten ab 7 einen Ausbildungswürfel W4, ab 9 stattdessen W6, ab 13 W8 und ab 17 W10. Aufbauangriffe erhalten ab 9 W4, ab 13 W6, ab 17 W8. Ältere Pfadattacken wachsen auf Stufe 13 und 17 begrenzt mit. Es gilt jeweils nur der höchste erreichte Ausbildungswürfel. Milwr verwenden die bestehende, auf Stufe 15 endende Milizstaffel. Schadenslose Vorbereitungen erhalten niemals einen Schadenswürfel.
 
@@ -52,15 +65,15 @@ Die Ressourcen werden aus den bestehenden gemeinsamen Funktionen gelesen: Aktion
 
 Deckung und Vorbereitung dauern einen eigenen Beitrag der betroffenen Figur. Direkte numerische Effekte verwenden das vorhandene Zustandsschema (`armorClass`, `attack`, `actor-comments`); kontrollierende Treffer nutzen einen sekundären KRF-Rettungswurf. Es gibt keine pauschalen Stuns, zusätzlichen Reaktionsangriffe oder unendlichen Betäubungsketten.
 
-Pfadmerkmale entstehen auf Stufe 9, 13 und 17. Eine höhere Stufe ersetzt die frühere. Gleiche Deckungsboni, wiederholte Bindungen und vergleichbare Boni verschiedener Sirenenpfade werden nicht addiert. Die spätere Aktivierung muss diese Obergrenze ausdrücklich auswerten; die Metadaten `stacking: highest-per-style` allein führen keine Spielzustandsänderung aus. Situative Balance-, Reit- und Willensboni werden nur bei einem passenden Wurf berücksichtigt.
+Pfadmerkmale entstehen auf Stufe 9, 13 und 17. Eine höhere Stufe ersetzt die frühere. Gleiche Deckungsboni, wiederholte Bindungen und vergleichbare Boni verschiedener Wyrmpfade werden nicht addiert. Die spätere Aktivierung muss diese Obergrenze ausdrücklich auswerten; die Metadaten `stacking: highest-per-style` allein führen keine Spielzustandsänderung aus. Situative Balance-, Reit- und Willensboni werden nur bei einem passenden Wurf berücksichtigt.
 
-Die gemeinsame Effektstruktur ist für die spätere Kampfanbindung vorbereitet. Waffenprofil- und Reitbeschränkungen stehen in `cultureTraining`. Ihre sichere Prüfung sowie die Vergabe von Pfadmerkmalen werden erst in der folgenden Charakterintegration aktiviert. Diese Draft-Metadaten werden noch nicht als ausführbare Klassenlogik an die Serverfunktionen ausgeliefert.
+Die Entwurfsfolgen der übrigen Vennyr-Klassen verwenden weiter `cultureTraining`. Die spielbaren Derwyn-Techniken nutzen zusätzlich die gemeinsame Klassen- und Waffenprüfung der Charakterausbildung. Numerische Schutz- und Angriffseffekte sowie Rettungswürfe werden mit dem vorhandenen Zustandssystem aufgelöst; physische Waffenangriffe gewähren keine kostenlose Magie.
 
 ## Derwyn: Magie vorgemerkt
 
 Alle Derwyn sind Geistliche Nimues, aber nicht alle Ritter oder Eidgeschworene. Dieser Waffenplan ersetzt weder ihre Berufung noch eine individuelle zusätzliche Ritterausbildung.
 
-Vorgemerkt sind Wassermagie sowie Wiederherstellung nach dem gewünschten Morrowind-/Elder-Scrolls-Vorbild: Heilung, Reinigung, Stärkung, Widerstände und das Zusammenspiel mit Stab/Fokus, Dreizack und Kolben. Zauber, Heilwerte, Wasserzusatzschaden, Rituale und deren Ressourcen bleiben offen. Die hier ausgearbeiteten Waffenangriffe sind physisch.
+Vorgemerkt sind Wassermagie sowie Wiederherstellung nach dem gewünschten Morrowind-/Elder-Scrolls-Vorbild: Heilung, Reinigung, Stärkung, Widerstände und das Zusammenspiel mit Stab/Fokus, Dreizack, Schwert und Morgenstern. Zauber, Heilwerte, Wasserzusatzschaden, Rituale und deren Ressourcen bleiben offen. Die hier ausgearbeiteten Waffenangriffe sind physisch.
 
 ## Quellen, Pflege und Prüfung
 

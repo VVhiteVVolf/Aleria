@@ -1,7 +1,7 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
-import { ensureCenyrTrainingState } from './cenyr-class-training.js?v=20260908-cenyr-paths-v1';
-import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260908-cenyr-paths-v1';
-import { getDrachentanzPathFeatures } from '../../combat-styles/drachentanz/drachentanz-path-features.js?v=20260908-cenyr-paths-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { ensureCenyrTrainingState } from './cenyr-class-training.js?v=20260909-dragon-parent-v2';
+import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
+import { getDrachentanzPathFeatures } from '../../combat-styles/drachentanz/drachentanz-path-features.js?v=20260909-dragon-parent-v2';
 
 const RANGED_WEAPON_TYPES = new Set(['bow', 'crossbow', 'firearm']);
 

@@ -301,6 +301,7 @@ function getInlineTemplatePickerType(type, entry) {
     'trade-catalog': 'trade-catalog',
     'map-template': 'map-template',
     language: 'language',
+    'organization-network': 'organization-network',
     'name-list': 'name-list',
     'script-table': 'script-table',
     landing: 'landing',
@@ -477,6 +478,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'goods') return wrapInlineEditor(`${moduleMeta}${buildInlineGoodsEditor(page)}`);
   if (type === 'trade-catalog') return wrapInlineEditor(`${moduleMeta}${buildInlineTradeCatalogEditor(page)}`);
   if (type === 'map-template') return wrapInlineEditor(`${moduleMeta}${buildInlineMapTemplateEditor(page)}`);
+  if (type === 'organization-network') return wrapInlineEditor(`${moduleMeta}${buildInlineOrganizationNetworkEditor(page)}`);
   if (type === 'language') return wrapInlineEditor(`${moduleMeta}${buildInlineLanguageEditor(page)}`);
   if (type === 'name-list') return wrapInlineEditor(`${moduleMeta}${buildInlineNameListEditor(page)}`);
   if (type === 'script-table') return wrapInlineEditor(`${moduleMeta}${buildInlineScriptTableEditor(page)}`);

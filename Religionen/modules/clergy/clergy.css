@@ -1,0 +1,175 @@
+.clergy-directory > .breadcrumbs { padding-top: 28px; }
+.clergy-cover { display: grid; grid-template-columns: minmax(0,1fr) minmax(380px,.9fr); gap: 48px; align-items: center; padding: 24px 0 38px; }
+.clergy-cover h1 { color: var(--faith-green); font-size: clamp(38px,4.8vw,68px); letter-spacing: -.04em; margin: 16px 0 24px; }
+.clergy-cover > div > p:not(.eyebrow) { max-width: 610px; color: var(--faith-muted); font-size: 17px; line-height: 1.85; }
+.clergy-cover .ink-button { margin-top: 27px; }
+.clergy-triptych { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; align-items: center; }
+.clergy-triptych figure { border: 1px solid var(--faith-line); padding: 5px; background: #eee3c944; }
+.clergy-triptych figure:nth-child(2) { transform: translateY(-15px); }
+.clergy-triptych img { width: 100%; height: auto; }
+.clergy-triptych figcaption { padding: 9px 2px 5px; text-align: center; font-size: 10px; color: var(--faith-muted); }
+.clergy-prologue { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; border-block: 3px double var(--faith-line); padding: 27px 8px; margin-bottom: 43px; }
+.clergy-prologue p { font-size: 14px; line-height: 1.85; color: var(--faith-muted); }
+.clergy-register-note { font-size: 14px; font-style: italic; color: var(--faith-muted); border-top: 1px solid var(--faith-line); padding-top: 25px; }
+.clergy-section { margin: 0 0 52px; scroll-margin-top: 25px; }
+.clergy-section h2, .clergy-local-community h2 { font-size: clamp(27px,3vw,35px); color: var(--faith-green); margin: 8px 0 17px; }
+.clergy-section > p:not(.eyebrow), .clergy-local-community > p:not(.eyebrow) { font-size: 15px; line-height: 1.85; margin-bottom: 18px; }
+.clergy-section-intro { color: var(--faith-muted); }
+.caste-overview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; margin-top: 23px; }
+.caste-overview article { position: relative; padding: 25px 22px; border: 1px solid var(--faith-line); background: #fcf8ed77; }
+.caste-numeral { color: var(--faith-gold); font-size: 28px; display: block; margin-bottom: 15px; }
+.caste-overview h3 { color: var(--faith-green); font-size: 24px; margin: 8px 0 14px; }
+.caste-overview p { font-size: 13px; line-height: 1.85; }
+.caste-overview details { margin-top: 18px; font-size: 12px; }
+.caste-overview summary { cursor: pointer; color: var(--faith-gold); }
+.caste-overview details p { margin-top: 12px; }
+.clergy-directory .faith-summary { font-size: 12px; }
+.hierarchy-scroll { overflow: auto; max-height: 680px; border: 1px solid var(--faith-line); margin-top: 23px; }
+.hierarchy-table { border-collapse: separate; border-spacing: 0; min-width: 1000px; width: 100%; table-layout: fixed; font-size: 12px; }
+.hierarchy-table caption { text-align: left; padding: 14px 18px; font-size: 12px; color: var(--faith-muted); background: var(--faith-paper); }
+.hierarchy-table th { position: sticky; top: 0; padding: 17px 12px; text-align: left; background: var(--faith-green); color: var(--faith-light); font-weight: normal; font-size: 15px; border-right: 1px solid #f2ebda25; }
+.hierarchy-table th > span { display: block; color: #d2b477; font-size: 10px; margin-bottom: 5px; }
+.hierarchy-table td { padding: 18px 12px; vertical-align: top; border-right: 1px solid var(--faith-line); border-bottom: 1px solid var(--faith-line); background: #fcf8ed70; }
+.hierarchy-table strong { font-size: 13px; font-weight: normal; color: var(--faith-green); }
+.hierarchy-table p { font-size: 11px; line-height: 1.75; margin-top: 8px; color: var(--faith-muted); }
+.hierarchy-table .rank-blank { background: transparent; color: var(--faith-line); }
+.hierarchy-notes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 22px; margin-top: 17px; }
+.hierarchy-notes details, .clergy-community-list details { border-bottom: 1px solid var(--faith-line); padding: 13px 0; }
+.hierarchy-notes summary, .clergy-community-list summary { cursor: pointer; color: var(--faith-green); font-size: 13px; }
+.hierarchy-notes p, .clergy-community-list p { color: var(--faith-muted); font-size: 13px; line-height: 1.85; margin-top: 12px; }
+.faculty-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin-top: 25px; }
+.faculty-card { display: block; text-decoration: none; border: 1px solid var(--faith-line); background: #fcf8ed70; }
+.faculty-card:hover { border-color: var(--faith-gold); background: var(--faith-light); }
+.faculty-card > img { width: 100%; height: 310px; padding: 15px 15px 0; object-fit: contain; }
+.faculty-card > div { padding: 22px; }
+.faculty-card h3 { font-size: 24px; color: var(--faith-green); margin: 8px 0 15px; }
+.faculty-card p:not(.eyebrow) { font-size: 13px; line-height: 1.8; }
+.faculty-card .faculty-note { color: var(--faith-muted); margin-top: 14px; }
+.faculty-card span { display: block; color: var(--faith-gold); font-size: 11px; margin-top: 20px; }
+.clergy-callout { padding: 20px 23px; border-left: 3px solid var(--faith-gold); background: #d8c5a026; margin-top: 23px; }
+.clergy-house-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 25px; }
+.clergy-house-grid article { padding: 22px; border: 1px solid var(--faith-line); }
+.clergy-house-grid h3, .clergy-clarifications h3 { font-size: 22px; color: var(--faith-green); margin-bottom: 13px; }
+.clergy-house-grid p, .clergy-clarifications p { font-size: 14px; line-height: 1.85; }
+.clergy-subheading { font-size: 26px; color: var(--faith-green); margin: 32px 0 10px; }
+.clergy-clarifications { display: grid; gap: 24px; }
+.clergy-clarifications article { padding-left: 22px; border-left: 1px solid var(--faith-gold); }
+.clergy-god-cover { display: grid; grid-template-columns: minmax(0,1fr) 150px; align-items: center; gap: 32px; padding-bottom: 28px; }
+.clergy-god-cover h1 { color: var(--faith-green); font-size: clamp(40px,5vw,66px); letter-spacing: -.03em; margin: 10px 0 20px; }
+.clergy-god-cover h1 > span { display: block; font-size: 21px; font-style: italic; letter-spacing: 0; margin-bottom: 8px; color: var(--faith-muted); }
+.clergy-god-cover p:not(.eyebrow) { font-size: 16px; color: var(--faith-muted); max-width: 740px; line-height: 1.85; }
+.clergy-god-cover > img { width: 150px; height: 150px; }
+.clergy-god-lore { display: inline-block; font-size: 12px; margin-top: 20px; }
+.clergy-caste-tabs { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); border-block: 3px double var(--faith-line); margin: 12px 0 14px; scroll-margin-top: 20px; }
+.clergy-caste-tabs a { display: flex; flex-direction: column; justify-content: center; text-align: center; text-decoration: none; padding: 14px 7px; font-size: 13px; border-right: 1px solid var(--faith-line); }
+.clergy-caste-tabs a:last-child { border-right: 0; }
+.clergy-caste-tabs a > span { font-size: 10px; color: var(--faith-gold); margin-bottom: 5px; }
+.clergy-caste-tabs a:hover { background: #d8c5a025; }
+.clergy-caste-tabs a[aria-selected="true"] { background: var(--faith-green); color: var(--faith-light); }
+.clergy-caste-tabs a[aria-selected="true"] > span { color: #e3c48e; }
+.clergy-switch-hint { font-size: 12px; color: var(--faith-muted); margin: 15px 0 24px; }
+.clergy-panel { padding-top: 20px; margin-bottom: 35px; scroll-margin-top: 25px; }
+.clergy-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-bottom: 25px; }
+.clergy-panel-heading h2 { color: var(--faith-green); font-size: clamp(26px,2.8vw,34px); margin-top: 6px; }
+.clergy-presence { flex: 0 0 auto; padding: 5px 10px; border: 1px solid var(--faith-line); font-size: 11px; color: var(--faith-green); background: #263e3509; }
+.clergy-presence.is-special { color: var(--faith-muted); background: #99774309; }
+.clergy-caste-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(240px,.7fr); gap: 35px; align-items: start; }
+.clergy-caste-layout.has-no-portrait { display: block; }
+.clergy-caste-copy { min-width: 0; }
+.clergy-caste-copy > p { font-size: 16px; line-height: 1.9; margin-bottom: 18px; }
+.clergy-caste-copy h3 { font-size: 23px; color: var(--faith-green); margin: 26px 0 14px; }
+.clergy-tasks { padding-left: 21px; font-size: 14px; line-height: 1.9; }
+.clergy-tasks li { padding-left: 5px; margin-bottom: 9px; }
+.clergy-tasks li::marker { color: var(--faith-gold); }
+.clergy-caste-art { margin: 0; padding: 7px; border: 1px solid var(--faith-line); background: #eee3c94a; }
+.clergy-caste-art img { width: 100%; height: auto; max-height: 650px; object-fit: contain; }
+.clergy-caste-art a { display: block; }
+.clergy-caste-art figcaption { font-size: 11px; color: var(--faith-muted); text-align: center; padding: 14px 7px 8px; }
+.clergy-caste-art small { display: block; margin-top: 5px; font-size: 10px; }
+.clergy-guilds { padding-top: 19px; margin-top: 24px; border-top: 1px solid var(--faith-line); }
+.clergy-guilds > h3 { margin-top: 5px; }
+.clergy-guilds article { margin-top: 18px; padding-left: 16px; border-left: 2px solid var(--faith-line); }
+.clergy-guilds h4 { font-size: 16px; font-weight: normal; color: var(--faith-green); margin: 0 0 7px; }
+.clergy-guilds p { font-size: 13px; line-height: 1.8; }
+.clergy-guilds > .eyebrow { font-size: 9px; }
+.clergy-caste-doctrine, .clergy-ranks { border: 1px solid var(--faith-line); margin-top: 22px; background: #d8c5a015; }
+.clergy-caste-doctrine summary, .clergy-ranks summary { cursor: pointer; padding: 15px 17px; color: var(--faith-green); font-size: 13px; }
+.clergy-caste-doctrine > p, .clergy-ranks > p { font-size: 13px; line-height: 1.8; padding: 0 17px 17px; color: var(--faith-muted); }
+.clergy-ranks ol { padding: 0 20px 12px 42px; }
+.clergy-ranks li { padding-left: 5px; margin: 0 0 17px; font-size: 13px; }
+.clergy-ranks li::marker { color: var(--faith-gold); }
+.clergy-ranks strong { color: var(--faith-green); font-weight: normal; font-size: 15px; }
+.clergy-ranks li p { margin-top: 5px; line-height: 1.8; color: var(--faith-muted); }
+.penitence-states { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-top: 25px; }
+.penitence-states > div { border-block: 3px double var(--faith-line); padding: 15px 8px; }
+.penitence-states span { color: var(--faith-gold); font-size: 13px; }
+.penitence-states h3 { font-size: 21px; margin: 8px 0 12px; }
+.penitence-states p { font-size: 13px; line-height: 1.8; }
+.clergy-local-community { border-top: 3px double var(--faith-line); padding-top: 26px; margin-top: 35px; }
+.clergy-local-community a { font-size: 12px; }
+.faculty-grid-compact { margin: 26px 0; }
+.faculty-grid-compact h3 { font-size: 21px; }
+.faculty-grid-compact .faculty-card > div { padding: 19px; }
+@media (max-width: 1180px) {
+  .caste-overview { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .clergy-caste-layout { grid-template-columns: minmax(0,1fr) 240px; gap: 24px; }
+  .faculty-grid { grid-template-columns: 1fr; }
+  .faculty-card { display: grid; grid-template-columns: 165px minmax(0,1fr); align-items: center; }
+  .faculty-card > img { height: 240px; padding: 12px; }
+  .faculty-grid-compact .faculty-card { display: block; }
+  .clergy-panel-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
+}
+@media (max-width: 900px) {
+  .clergy-cover { gap: 25px; grid-template-columns: minmax(0,1fr) 310px; }
+  .clergy-prologue { gap: 20px; }
+  .clergy-caste-tabs { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .clergy-caste-tabs a:nth-child(3) { border-right: 0; }
+  .clergy-caste-tabs a:nth-child(-n+3) { border-bottom: 1px solid var(--faith-line); }
+}
+@media (max-width: 780px) {
+  .clergy-cover { grid-template-columns: 1fr; padding-top: 10px; }
+  .clergy-triptych { max-width: 540px; margin: 20px auto 0; }
+  .clergy-prologue { grid-template-columns: 1fr; }
+  .clergy-register-note { display: none; }
+  .clergy-caste-layout { grid-template-columns: minmax(0,1fr) 260px; }
+  .clergy-profile-register nav { max-height: 180px; overflow-y: auto; }
+}
+@media (max-width: 560px) {
+  .clergy-cover h1 { font-size: 40px; }
+  .clergy-cover > div > p:not(.eyebrow) { font-size: 15px; }
+  .clergy-cover .ink-button { gap: 13px; padding-inline: 13px; font-size: 12px; }
+  .clergy-triptych figcaption { font-size: 9px; }
+  .clergy-prologue { padding-inline: 0; margin-bottom: 30px; }
+  .caste-overview, .hierarchy-notes, .clergy-house-grid { grid-template-columns: 1fr; }
+  .clergy-section { margin-bottom: 40px; }
+  .hierarchy-scroll { max-height: 560px; }
+  .faculty-card { grid-template-columns: 110px minmax(0,1fr); }
+  .faculty-card > img { height: 190px; padding: 7px; }
+  .faculty-card > div { padding: 17px 15px; }
+  .faculty-card h3 { font-size: 21px; }
+  .clergy-god-cover { grid-template-columns: minmax(0,1fr) 70px; gap: 14px; }
+  .clergy-god-cover > img { width: 70px; height: 85px; }
+  .clergy-god-cover h1 { font-size: 43px; }
+  .clergy-god-cover p:not(.eyebrow) { font-size: 15px; }
+  .clergy-caste-tabs a { font-size: 12px; }
+  .clergy-caste-layout { display: flex; flex-direction: column; }
+  .clergy-caste-art { width: min(100%,350px); align-self: center; order: -1; }
+  .clergy-caste-copy > p { font-size: 15px; }
+  .clergy-panel-heading h2 { font-size: 28px; }
+  .penitence-states { grid-template-columns: 1fr; }
+}
+@media print {
+  .clergy-cover { grid-template-columns: minmax(0,1fr) 260px; }
+  .clergy-cover .ink-button, .clergy-caste-tabs, .clergy-switch-hint { display: none; }
+  .religion-page .clergy-panel[hidden] { display: block; }
+  .clergy-panel { break-before: page; }
+  .clergy-caste-layout { display: grid; grid-template-columns: minmax(0,1fr) 190px; }
+  .clergy-caste-art { order: initial; }
+  .hierarchy-scroll { overflow: visible; max-height: none; }
+  .hierarchy-table { min-width: 0; font-size: 9px; }
+  .hierarchy-table th { position: static; font-size: 10px; }
+  .hierarchy-table td { padding: 9px 5px; }
+  .hierarchy-table strong { font-size: 10px; }
+  .hierarchy-table p { font-size: 9px; }
+  .faculty-card { break-inside: avoid; }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "hoehlentroll",
+  "name": "Höhlentroll",
+  "classification": "Trollunterart · Lichtloser Lauerjäger",
+  "continent": "Alerias Gebirge",
+  "region": "Tiefe Höhlen, Stollen und unterirdische Kammern",
+  "folio": "III-T / 06",
+  "parentGroupId": "trolle",
+  "summary": "Höhlentrolle sind degenerierte, vollständig lichtscheue Verwandte der Bergtrolle. In verzweigten Gängen ersetzen Gehör, Geruch und die Wahrnehmung von Erschütterungen ihr verkümmertes Sehvermögen; dort warten sie oft tagelang und machen Dunkelheit, Engstellen und fehlende Fluchtwege zu tödlichen Waffen.",
+  "quote": "Hörst du den zweiten Stein fallen, hat der erste bereits verraten, wo du stehst.",
+  "quoteAttribution": "Warnung aus den Chroniken alerischer Bergleute",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-hoehlentroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Höhlentroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/hoehlentroll.webp",
+    "width": 770,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Höhlentroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Höhlentroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Höhlentroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; unterirdischer Troll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch lange Isolation degenerierte Abspaltung des Bergtrolls"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alerias Gebirge"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Tiefe Höhlensysteme, alte Stollen, Minen und Karsthöhlen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Furchtlos, territorial, lauernd und nicht verhandlungsfähig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Daueraktiv in völliger Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Echogehör, Geruchssinn, Erschütterungswahrnehmung und Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Engstellenkampf, dicke Haut, Ortsgedächtnis und Geduld"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Grelles Licht, Feuer, Rauch und Kämpfe außerhalb des Kernreviers"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Münzen, Helme, Ketten und Waffenreste aus Beutehorten"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Dunkelgehör",
+      "Geruchssinn",
+      "Engstellenkampf",
+      "Zähigkeit",
+      "Lichtempfindlichkeit",
+      "Fluchttrieb"
+    ],
+    "values": [
+      10,
+      9,
+      10,
+      9,
+      10,
+      1
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Höhlentrolls abgeleitet",
+    "intro": "Der Höhlentroll wird nach seinen unterirdischen Sinnen und seinem Verhalten in Engstellen bewertet. Der sehr geringe Fluchttrieb macht eine Verwundung keineswegs zu einem sicheren Vorteil."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Höhlentroll gilt als dunklere, stärker abgeschottete Ausprägung des Bergtrolls. Sprache und soziale Bindung sind fast vollständig verkümmert; Knurren, Echorufe und Steinwürfe ersetzen Verständigung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein gedrungener, vorgebeugter Körper passt in niedrige Gänge. Verhärtete Hautwucherungen schützen vor Fels, Schnitten und Stößen."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gelehrte führen die Linie auf Bergtrolle zurück, die verwundet, vertrieben oder verstoßen in die Tiefe auswichen. Generationen ohne Licht und Kontakt ließen Sprache und Planung verfallen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Fluch alter Minen werden sie für das Verschwinden ganzer Siedlungen verantwortlich gemacht. Ob sie vergessene Stätten bewachen oder nur Dunkelheit und Nahrung folgen, bleibt ungeklärt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alles Fremde gilt als Beute oder Bedrohung. Höhlentrolle warten in Schächten und Sackgassen, deuten Schwingungen im Stein und schlagen zu, sobald ein Gegner seine Formation verliert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie fliehen kaum und ziehen Kadaver in Felsspalten, um sie über lange Zeit zu verzehren. Wege, Gerüche und wiederkehrende Beute bleiben ihnen trotz geringer Planung im Gedächtnis."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Revier besteht aus mehreren Ebenen, Kammern und Sackgängen, die der Troll instinktiv kennt. Unterirdische Flüsse und Tropfseen werden bevorzugt, weil sie Nahrung und neue Beute anziehen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grelles Licht, Feuer und Rauch stören die geschärften Sinne. Hämmer, Äxte und Spieße sind Klingen überlegen; Sackgassen und niedrige Decken müssen gemieden werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erfahrene Truppen greifen außerhalb des Kernreviers an oder nutzen Einstürze. Ein vorbereiteter Rückweg und mehrere Lichtquellen sind zwingend."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Gleichmäßiges Trommeln oder metallisches Schlagen kann Höhlentrolle gezielt anlocken.",
+            "Knochenstapel und Steinsetzungen wirken ritualhaft, ihre bewusste Bedeutung ist ungeklärt.",
+            "Kleinere Höhlenwesen werden geduldet, wenn sie Abfälle oder Beute hinterlassen.",
+            "Sehr alte Exemplare sollen so massig werden, dass sie selbst wie ein Teil des Felses wirken."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

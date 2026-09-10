@@ -1224,6 +1224,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildMapTemplatePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'map-template')
   },
+  'organization-network': {
+    id: 'organization-network',
+    pageType: 'organization-network',
+    pageFlag: 'organizationNetworkPage',
+    label: 'Netzwerk-Template',
+    pageLabel: 'Netzwerk & Niederlassungen',
+    defaultTitle: 'Neues Netzwerk',
+    defaultSubtitle: 'Häuser, Niederlassungen und Verbreitung',
+    entryType: 'Organisationsnetzwerk',
+    typeMatchers: ['organisationsnetzwerk', 'niederlassungsnetz'],
+    createPages: () => [createDefaultOrganizationNetworkPage(0)],
+    createPage: index => createDefaultOrganizationNetworkPage(index),
+    buildEditorFields: page => buildOrganizationNetworkModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectOrganizationNetworkModuleEditorPage(card, page),
+    renderPage: (page, entry, index, total) => buildOrganizationNetworkPage(page, entry, index, total),
+    renderInlinePage: (page, entry, index, total) => buildInlineComplexTemplatePage(page, entry, index, total, 'organization-network')
+  },
   language: {
     id: 'language',
     pageType: 'language',
@@ -1611,6 +1628,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   goods: ['buildGoodsModuleEditorFields', 'collectGoodsModuleEditorPage', 'buildGoodsTablePage'],
   'trade-catalog': ['buildTradeCatalogModuleEditorFields', 'collectTradeCatalogModuleEditorPage', 'buildTradeCatalogPage'],
   'map-template': ['buildMapTemplateModuleEditorFields', 'collectMapTemplateModuleEditorPage', 'buildMapTemplatePage'],
+  'organization-network': ['buildOrganizationNetworkModuleEditorFields', 'collectOrganizationNetworkModuleEditorPage', 'buildOrganizationNetworkPage'],
   language: ['buildLanguageModuleEditorFields', 'collectLanguageModuleEditorPage', 'buildLanguagePage'],
   'name-list': ['buildNameListModuleEditorFields', 'collectNameListModuleEditorPage', 'buildNameListPage'],
   'script-table': ['buildScriptTableModuleEditorFields', 'collectScriptTableModuleEditorPage', 'buildScriptTablePage'],

@@ -2,6 +2,10 @@ import { escapeHtml, renderPicture, romanNumeral } from '../book-shell/book-temp
 import { renderProfileMetrics } from '../profile-metrics/profile-metrics-template.mjs';
 
 const VERSION = '20260908-field-guide-profile-v1';
+const RELATED_HIERARCHY_VERSION = '20260909-field-related-hierarchy-v1';
+const RELATED_GROUPS_VERSION = '20260909-field-related-groups-v1';
+const RELATED_BRANCHES_VERSION = '20260910-field-related-branches-v1';
+const RELATED_TIER_VARIANTS = new Set(['apex', 'lineage', 'transition', 'subgroup']);
 
 function renderBlock(block) {
   if (block.type === 'subheading') return `<h3>${escapeHtml(block.text)}</h3>`;
@@ -31,12 +35,77 @@ function renderRelatedCard(entry) {
   return `<article class="field-related-card${unknown ? ' field-related-card--unknown' : ''}">${cardBody}</article>`;
 }
 
+function renderRelatedTier(tier, entriesById) {
+  const entries = tier.entryIds.map(id => {
+    const entry = entriesById.get(id);
+    if (!entry) throw new Error(`Unknown related entry in tier ${tier.id}: ${id}`);
+    return entry;
+  });
+  const variant = RELATED_TIER_VARIANTS.has(tier.variant) ? ` field-related-tier--${tier.variant}` : '';
+  const single = entries.length === 1 ? ' field-related-grid--single' : '';
+  const titleId = `related-tier-${tier.id}`;
+
+  return `<section class="field-related-tier${variant}" data-related-tier="${escapeHtml(tier.id)}" aria-labelledby="${escapeHtml(titleId)}">
+      <header><p class="eyebrow">${escapeHtml(tier.eyebrow)}</p><h3 id="${escapeHtml(titleId)}">${escapeHtml(tier.title)}</h3>${tier.intro ? `<p>${escapeHtml(tier.intro)}</p>` : ''}</header>
+      <div class="field-related-grid${single}">${entries.map(renderRelatedCard).join('\n')}</div>
+    </section>`;
+}
+
+function renderRelatedGroup(group, entriesById) {
+  const entries = group.entryIds.map(id => {
+    const entry = entriesById.get(id);
+    if (!entry) throw new Error(`Unknown related entry in group ${group.id}: ${id}`);
+    return entry;
+  });
+  const titleId = `related-group-${group.id}`;
+
+  return `<section class="field-related-group" data-related-group="${escapeHtml(group.id)}" aria-labelledby="${escapeHtml(titleId)}">
+      <header><p class="eyebrow">${escapeHtml(group.eyebrow)}</p><h3 id="${escapeHtml(titleId)}">${escapeHtml(group.title)}</h3>${group.intro ? `<p>${escapeHtml(group.intro)}</p>` : ''}</header>
+      <div class="field-related-grid">${entries.map(renderRelatedCard).join('\n')}</div>
+    </section>`;
+}
+
+function resolveRelatedEntries(entryIds, entriesById, contextLabel) {
+  return entryIds.map(id => {
+    const entry = entriesById.get(id);
+    if (!entry) throw new Error(`Unknown related entry in ${contextLabel}: ${id}`);
+    return entry;
+  });
+}
+
+function renderRelatedBranchLevel(level, entriesById, branchId) {
+  const entries = resolveRelatedEntries(level.entryIds, entriesById, `branch ${branchId}, level ${level.id}`);
+  const single = entries.length === 1 ? ' field-related-grid--single' : '';
+  const titleId = `related-branch-${branchId}-${level.id}`;
+
+  return `<section class="field-related-branch-level" data-related-branch-level="${escapeHtml(level.id)}" aria-labelledby="${escapeHtml(titleId)}">
+      <header><p class="eyebrow">${escapeHtml(level.eyebrow)}</p><h4 id="${escapeHtml(titleId)}">${escapeHtml(level.title)}</h4>${level.intro ? `<p>${escapeHtml(level.intro)}</p>` : ''}</header>
+      <div class="field-related-grid${single}">${entries.map(renderRelatedCard).join('\n')}</div>
+    </section>`;
+}
+
+function renderRelatedBranch(branch, entriesById) {
+  const titleId = `related-branch-${branch.id}`;
+  return `<section class="field-related-branch field-related-branch--${escapeHtml(branch.theme || 'neutral')}" data-related-branch="${escapeHtml(branch.id)}" aria-labelledby="${escapeHtml(titleId)}">
+      <header><p class="eyebrow">${escapeHtml(branch.eyebrow)}</p><h3 id="${escapeHtml(titleId)}">${escapeHtml(branch.title)}</h3>${branch.intro ? `<p>${escapeHtml(branch.intro)}</p>` : ''}</header>
+      <div class="field-related-branch-levels">${branch.levels.map(level => renderRelatedBranchLevel(level, entriesById, branch.id)).join('\n')}</div>
+    </section>`;
+}
+
 function renderRelated(related, context) {
   if (!related?.entries?.length) return '';
+  const entriesById = new Map(related.entries.map(entry => [entry.id, entry]));
+  const collection = related.branches?.length
+    ? `<div class="field-related-branches">${related.branches.map(branch => renderRelatedBranch(branch, entriesById)).join('\n')}</div>`
+    : related.groups?.length
+    ? `<div class="field-related-groups">${related.groups.map(group => renderRelatedGroup(group, entriesById)).join('\n')}</div>`
+    : related.tiers?.length
+    ? `<div class="field-related-hierarchy">${related.tiers.map(tier => renderRelatedTier(tier, entriesById)).join('\n')}</div>`
+    : `<div class="field-related-grid">${related.entries.map(renderRelatedCard).join('\n')}</div>`;
   return `<section class="field-profile-related" id="verwandtschaft" aria-labelledby="related-title">
     <header class="field-profile-feature-heading"><span aria-hidden="true">II</span><div><p class="eyebrow">${escapeHtml(related.eyebrow || context.relatedEyebrow)}</p><h2 id="related-title">${escapeHtml(related.title)}</h2></div></header>
     <p class="field-profile-feature-intro">${escapeHtml(related.intro)}</p>
-    <div class="field-related-grid">${related.entries.map(renderRelatedCard).join('\n')}</div>
+    ${collection}
   </section>`;
 }
 
@@ -44,9 +113,9 @@ function renderPlate(plate) {
   return `<a class="field-plate" href="${escapeHtml(plate.src)}" data-bestiary-image-link><figure>${renderPicture(plate)}<figcaption>${escapeHtml(plate.caption)}</figcaption></figure></a>`;
 }
 
-function renderPlates(plates, number) {
+function renderPlates(plates, number, { title = 'Bildtafeln', eyebrow = 'Überlieferte Abbildungen' } = {}) {
   if (!plates?.length) return '';
-  return `<section class="field-profile-plates" id="bildtafeln" aria-labelledby="plates-title"><header><span aria-hidden="true">${romanNumeral(number)}</span><div><p class="eyebrow">Überlieferte Abbildungen</p><h2 id="plates-title">Bildtafeln</h2></div></header><div class="field-plate-grid">${plates.map(renderPlate).join('\n')}</div></section>`;
+  return `<section class="field-profile-plates" id="bildtafeln" aria-labelledby="plates-title"><header><span aria-hidden="true">${romanNumeral(number)}</span><div><p class="eyebrow">${escapeHtml(eyebrow)}</p><h2 id="plates-title">${escapeHtml(title)}</h2></div></header><div class="field-plate-grid">${plates.map(renderPlate).join('\n')}</div></section>`;
 }
 
 function renderSibling(link, direction, context) {
@@ -75,7 +144,11 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
   const categoryHref = context.categoryHref;
   const overviewHref = context.overviewHref || `${categoryHref}#gruppe-${record.parentGroupId}`;
   const registerBackLabel = context.registerBackLabel || `Alle ${context.categoryName}`;
+  const bestiaryChapterHref = context.bestiaryChapterHref || '../../../index.html#tiere';
   const hasRelated = Boolean(record.related?.entries?.length);
+  const hasRelatedHierarchy = Boolean(record.related?.tiers?.length);
+  const hasRelatedGroups = Boolean(record.related?.groups?.length);
+  const hasRelatedBranches = Boolean(record.related?.branches?.length);
   const sectionOffset = hasRelated ? 3 : 2;
   const plateNumber = sectionOffset + record.sections.length;
   const metricIntro = record.metrics.intro || 'Die Werte wurden aus den überlieferten Beschreibungen abgeleitet und machen verwandte Arten und Linien vergleichbar.';
@@ -89,12 +162,15 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
   <link rel="icon" href="../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
   <link rel="stylesheet" href="../../../modules/book-shell/book-shell.css?v=${VERSION}">
   <link rel="stylesheet" href="../../../modules/profile-metrics/profile-metrics.css?v=${VERSION}">
-  <link rel="stylesheet" href="../../../modules/field-guide-profile/field-guide-profile.css?v=${VERSION}">
+  <link rel="stylesheet" href="../../../modules/field-guide-profile/field-guide-profile.css?v=${VERSION}">${hasRelatedHierarchy ? `
+  <link rel="stylesheet" href="../../../modules/field-guide-profile/field-related-hierarchy.css?v=${RELATED_HIERARCHY_VERSION}">` : ''}${hasRelatedGroups ? `
+  <link rel="stylesheet" href="../../../modules/field-guide-profile/field-related-groups.css?v=${RELATED_GROUPS_VERSION}">` : ''}${hasRelatedBranches ? `
+  <link rel="stylesheet" href="../../../modules/field-guide-profile/field-related-branches.css?v=${RELATED_BRANCHES_VERSION}">` : ''}
 </head>
 <body>
   <a class="skip-link" href="#feldbewertung">Zum ${escapeHtml(context.dossierName)}</a>
   <div class="bestiary-page field-profile" ${context.rootDataAttribute} data-profile-id="${escapeHtml(record.id)}">
-    <header class="masthead" id="anfang"><a class="almanach-link" href="../../../index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · ${escapeHtml(context.archiveEdition)}</span><span class="masthead-mark" aria-hidden="true">A</span></header>
+    <header class="masthead" id="anfang"><a class="almanach-link" href="${escapeHtml(bestiaryChapterHref)}"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · ${escapeHtml(context.archiveEdition)}</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
       <nav class="field-profile-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="${escapeHtml(categoryHref)}">${escapeHtml(context.categoryName)}</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(record.name)}</span></nav>
       <section class="field-profile-hero" aria-labelledby="field-title">
@@ -108,7 +184,7 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
           <section class="field-profile-metrics" id="feldbewertung" aria-labelledby="metrics-title"><header class="field-profile-feature-heading"><span aria-hidden="true">I</span><div><p class="eyebrow">Sechs Merkmale · Skala 1–10</p><h2 id="metrics-title">Archivbewertung</h2></div></header><p class="field-profile-feature-intro">${escapeHtml(metricIntro)}</p>${renderProfileMetrics(record.metrics, { chartTitle: `Archivbewertung für ${record.name}` })}<p class="field-profile-metrics-source">Quelle der Einordnung: ${escapeHtml(record.metrics.source)}</p></section>
           ${renderRelated(record.related, context)}
           <div class="field-profile-reading"><article class="field-profile-narrative" aria-label="Überlieferung zu ${escapeHtml(record.name)}">${record.sections.map((section, index) => renderSection(section, index, sectionOffset)).join('\n')}</article>${renderFacts(record.facts)}</div>
-          ${renderPlates(record.plates, plateNumber)}
+          ${renderPlates(record.plates, plateNumber, { title: record.platesTitle, eyebrow: record.platesEyebrow })}
           <nav class="field-profile-navigation" aria-label="Weitere ${escapeHtml(context.categoryName)}-Dossiers">${renderSibling(navigation.previous, 'previous', context)}<a class="field-profile-all" href="${escapeHtml(categoryHref)}">${escapeHtml(registerBackLabel)}</a>${renderSibling(navigation.next, 'next', context)}</nav>
         </div>
       </div>

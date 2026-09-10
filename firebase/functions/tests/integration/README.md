@@ -25,6 +25,16 @@ Die Integrationstests laufen bewusst separat vom normalen `npm test`. Sie prüfe
 
 Die beiden Befehle dürfen nicht gleichzeitig laufen, weil sie dieselbe wegwerfbare Demo-Datenbank verwenden. Innerhalb von `test:combat-integration` erzwingt `--test-concurrency=1` die getrennte Ausführung der Testdateien.
 
+Die Drachentanz-/Wyrmtanz-Klassenrevision besitzt eine zusätzliche Prüfung:
+
+```powershell
+$env:FIRESTORE_EMULATOR_HOST = '127.0.0.1:8180'
+$env:CLASS_FORM_REPORT = '1'
+npm run test:class-forms
+```
+
+Auch dieser Lauf verwendet dieselbe Demo-Datenbank und muss getrennt von den anderen Emulatorprüfungen stattfinden. Die Testcharaktere entstehen über die regulären Pfad- und Attackenwahlen. 43 Klassen-/Form-/Grundausbildungskombinationen prüfen Speicherung und Rücknahme, zehn vollständige Kämpfe prüfen das Zusammenspiel bis zum Kampfabschluss. Schutz ohne Schaden, Ablauf und die Ablehnung entfernter Attacken ergänzen den Lauf. `CLASS_FORM_REPORT=1` schreibt die Ergebnisse samt Kampfverläufen nach `combat-class-form-results.json`; die Einordnung steht in [CLASS_FORM_CHECKUP.md](CLASS_FORM_CHECKUP.md).
+
 `combat-loadout.integration.mjs` prüft zusätzlich kostenlose Startausrüstung, zwei aktive Waffen, kostenpflichtige Wechsel im selben Angriffsabschnitt, Rücknahme, manipulierte Ausrüstungsangaben und einmalige Kosten bei mehreren Zielen. Temporäre Fähigkeiten entstehen nur in der lokalen Testdatenbank.
 
 `combat-test-actions.mjs` verwendet dieselbe Auflösung und Regelhäufigkeit wie die Vorschau; `combat-test-context.mjs` verwendet dieselbe Komprimierung der Mechanikdaten wie der Client. `combat-party-context.mjs` verwaltet Gruppen und prüft nach jeder Speicherung Vorschau, Serverergebnis, Szenen-Replay und persistente TP. `combat-party-simulation.mjs` enthält Szenarien und die begrenzte automatische Zugstrategie.

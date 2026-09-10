@@ -1,0 +1,6 @@
+import { escapeHtml as h } from '../content/content-html.mjs';
+
+export function renderArtifacts(artifacts, link) {
+  if (!artifacts) return '';
+  return `<section class="profile-section profile-artifacts" id="artefakte"><p class="eyebrow">Relikte, Macht und Vermächtnis</p><h2>Artefakte</h2>${artifacts.intro.map(text => `<p>${h(text)}</p>`).join('')}<div class="artifact-grid">${artifacts.entries.map(artifact => `<article class="artifact-card${artifact.paragraphs.length ? ' has-description' : ''}" id="artefakt-${h(artifact.id)}">${artifact.image ? `<figure><a href="${link(`Religionen/${artifact.image.src}`)}" data-religion-image-link target="_blank" rel="noopener" aria-label="${h(artifact.title)}: vollständiges Bild öffnen"><img src="${link(`Religionen/${artifact.image.src}`)}" alt="${h(artifact.image.alt)}" width="${artifact.image.width}" height="${artifact.image.height}" loading="lazy" decoding="async"></a><figcaption>Bild in voller Größe öffnen ↗</figcaption></figure>` : ''}<div><h3>${h(artifact.title)}</h3>${artifact.paragraphs.map(text => `<p>${h(text)}</p>`).join('')}${artifact.keeper ? `<p class="artifact-keeper"><strong>Bewahrt von</strong> ${h(artifact.keeper)}</p>` : ''}${artifact.pending ? `<p class="artifact-pending">${h(artifact.pending)}</p>` : ''}</div></article>`).join('')}</div></section>`;
+}

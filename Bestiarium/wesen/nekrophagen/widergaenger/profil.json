@@ -1,0 +1,242 @@
+{
+  "id": "widergaenger",
+  "name": "Widergänger",
+  "classification": "Nekrophag · Willensgebundener Toter",
+  "continent": "Aleria",
+  "region": "Orte von Verrat, Mord und starken Bindungen",
+  "folio": "III-N / 10",
+  "parentGroupId": "nekrophagen",
+  "summary": "Der Widergänger ist eine untote Kreatur, die durch den unheiligen Einfluss von nekromantischer Magie oder durch den unaufgelösten Willen eines Verstorbenen ins Leben zurückkehrt. Im Gegensatz zu gewöhnlichen Zombies besitzt der Widergänger eine unheimliche Zielgerichtetheit, die ihn unaufhaltsam auf seine Opfer zusteuern lässt.",
+  "quote": "Ein Widergänger kennt keine Eile; solange sein Ziel lebt, gehört ihm jeder kommende Morgen.",
+  "quoteAttribution": "Überlieferter Lehrsatz über rachsüchtige Tote",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-widergaenger.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Widergänger als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/widergaenger.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Widergänger",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Widergänger"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Widergänger"
+    },
+    {
+      "label": "Typ",
+      "value": "Bewusster Untoter mit unvollendetem Ziel"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Nekromantie, Flüche oder unaufgelöste emotionale Bindungen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Orte des Verrats, Mords oder starker emotionaler Ereignisse"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Alte Schlachtfelder, verfluchte Dörfer, Ruinen oder Gräber"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Zielgerichtet, unnachgiebig, von einem einzigen Motiv getrieben"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv sowohl bei Tag als auch bei Nacht, besonders in der Dunkelheit effektiver"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Übernatürliche Ausdauer, Regeneration, Immunität gegen Schmerz, die Fähigkeit, seinen Verfolgern unermüdlich zu folgen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Widerstandsfähigkeit, emotionale Intelligenz, zielgerichteter Fokus, Immunität gegen mentale Beeinflussung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Verwundbarkeit durch heilige Magie, Feuer, und starke physische Angriffe, abhängige Existenz von seinem Ziel oder Fluch"
+    },
+    {
+      "label": "Beute",
+      "value": "Persönliche Gegenstände des Verstorbenen, magische Essenzen, oft nichts materielles, da die Rache im Vordergrund steht"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Rachebindung",
+      "Eigenwille",
+      "Zielverfolgung",
+      "Erinnerung",
+      "Zähigkeit",
+      "Erlösbarkeit"
+    ],
+    "values": [
+      10,
+      9,
+      10,
+      8,
+      9,
+      7
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Widergänger abgeleitet",
+    "intro": "Das Widergänger-Diagramm folgt dem einen Ziel, das Tod und Verfall überdauert. Erlösbarkeit misst, wie wirksam die Auflösung dieses Ziels seine Rückkehr beendet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Widergänger ist eine untote Kreatur, die durch den unheiligen Einfluss von nekromantischer Magie oder durch den unaufgelösten Willen eines Verstorbenen ins Leben zurückkehrt. Im Gegensatz zu gewöhnlichen Zombies besitzt der Widergänger eine unheimliche Zielgerichtetheit, die ihn unaufhaltsam auf seine Opfer zusteuern lässt. Diese Kreaturen sind oft von einem drängenden Rachemotiv oder einem unvollendeten Ziel getrieben, das sie über den Tod hinaus antreibt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Widergänger sind nicht willenslos. Sie bewahren Fragmente ihrer Persönlichkeit, Erinnerungen und Intelligenz, was sie zu gefährlicheren Gegnern macht als einfache Untote. Ihre Erscheinung ist oft geprägt von einem morbiden Verfall: blasse, fast ledrige Haut, verwesende Merkmale und leere, glühende Augen, die ihre übernatürliche Herkunft verraten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Widergänger ist eine Verkörperung von Rache, Verbitterung und Magie, eine ruhelose Seele, die durch den Tod nicht gestoppt werden kann. Sein Ziel bestimmt sein Handeln, und nichts, weder Mauern noch Zeit, kann ihn davon abhalten, sein unheilvolles Werk zu vollenden."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Widergänger entstehen aus einer Kombination von magischen Einflüssen und emotionalen Extremen, die ihren Tod überschreiten. Im Zentrum ihrer Existenz steht eine starke Verbindung zur Welt der Lebenden – sei es durch unaufgelöste Rache, tiefen Hass, verratene Liebe oder unvollendete Pflichten. Während die meisten Toten durch den Lauf der Zeit vergessen werden, bleibt der Widergänger durch diese bindenden Kräfte an die Welt gekettet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein häufiger Ursprung ist die Nekromantie, bei der ein Magier die Seele eines Verstorbenen beschwört und an dessen verwesenden Körper bindet, um einen willensstarken untoten Diener zu erschaffen. Doch im Gegensatz zu Zombies ist ein Widergänger nicht vollständig unter der Kontrolle seines Erschaffers. Der Geist, der wiederbelebt wurde, kann sich gegen den Nekromanten wenden, wenn seine Rache oder sein Wille stärker ist als der Zauber, der ihn bindet."
+        },
+        {
+          "type": "paragraph",
+          "text": "In anderen Fällen entstehen Widergänger durch die schiere Stärke ihres eigenen Willens oder Hasses. Diese selbsterschaffenen Untoten sind oft Opfer von Verrat, Mord oder unerfüllter Liebe, deren Seelen durch ihren Schmerz und ihre Wut gefangen bleiben. Sie kehren zurück, um ihre Mörder zu verfolgen, einen Verrat zu sühnen oder eine letzte Mission zu erfüllen, die ihnen zu Lebzeiten versagt blieb."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den Mythen vieler Kulturen werden Widergänger oft als Warnung erzählt. Es heißt, dass diejenigen, die in ihrem Leben großen Verrat üben oder mächtige Feinde hinterlassen, nie sicher vor den ruhelosen Toten sind. Es ist nicht ungewöhnlich, dass ein Widergänger Monate oder sogar Jahre nach seinem Tod auftaucht, um diejenigen zu bestrafen, die ihm Unrecht getan haben."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Widergänger sind zielgerichtete und unermüdliche Kreaturen, deren Handeln vollständig von ihrem ursprünglichen Motiv bestimmt wird. Im Gegensatz zu anderen Untoten besitzen sie eine bemerkenswerte Intelligenz und Fragmente ihres früheren Bewusstseins, die sie zu gefährlichen und schwer berechenbaren Gegnern machen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Widergänger agiert mit einer unheimlichen Effizienz, besonders wenn es darum geht, ein Ziel zu verfolgen. Sobald er ein Opfer oder eine Aufgabe ins Visier genommen hat, gibt es für ihn keine Ablenkung oder Abweichung vom Pfad. Er wird Distanzen überwinden, Hindernisse ignorieren und sogar über Jahre hinweg auf Rache warten, ohne je die Entschlossenheit zu verlieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Verhalten ist geprägt von einer kühlen, fast maschinellen Präzision. Sie sind keine impulsiven oder wilden Wesen; stattdessen agieren sie strategisch, lauern, verfolgen und greifen nur dann an, wenn sie sicher sind, dass sie einen Vorteil haben. Trotz ihres untoten Zustands sind sie nicht völlig unberechenbar – sie können planen, Fallen umgehen und ihre Umgebung analysieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre physische Erscheinung spiegelt den Verfall und die nekrotische Magie wider, die sie antreibt. Widergänger besitzen blasse, lederartige Haut, mit sichtbaren Wunden, die nicht heilen. Ihre Augen, oft leer oder glühend, vermitteln eine kalte, übernatürliche Präsenz. Trotz ihres verwesenden Zustands zeigen sie eine übermenschliche Stärke und Ausdauer."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Widergänger sind vor allem an Orten zu finden, die von Tod, Verrat oder emotionaler Intensität geprägt sind. Diese Kreaturen entstehen in der Regel dort, wo ein Leben gewaltsam beendet wurde oder ein starkes Unrecht geschah, das nicht gesühnt wurde. Sie sind an keine festen Gebiete gebunden und können große Distanzen zurücklegen, wenn ihr Ziel sie dazu treibt, doch ihre Ursprungsorte sind oft mit Nekromantie oder Flüchen durchsetzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Widergänger ziehen Orte vor, die von Dunkelheit und Verfall geprägt sind, wie:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Schlachtfelder: Hier entstehen sie häufig aus Soldaten, die mit unaufgelöstem Hass oder Pflichtgefühl starben.",
+            "Verfluchte Dörfer oder Burgen: Besonders, wenn sie Schauplätze von Verrat, Mord oder Massenhinrichtungen waren.",
+            "Grabhügel und Friedhöfe: Widergänger, die durch Nekromantie erschaffen wurden, kehren oft an diese Orte zurück, um die Totenruhe zu stören.",
+            "Ruinen: Ehemals bedeutende Orte, die von einer düsteren Vergangenheit geprägt sind, ziehen sie magisch an."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In Bewegung sind Widergänger nicht leicht zu erkennen. Ihr Auftreten wird jedoch oft von düsteren Vorzeichen begleitet:"
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unaufhaltsam: Verfolgt sein Ziel mit übermenschlicher Ausdauer.",
+            "Regeneration: Heilt selbst schwere Verletzungen.",
+            "Physisch stark: Große Kraft und Immunität gegen Schmerz.",
+            "Taktisch: Bewahrt Fragmente seines Verstands, agiert strategisch.",
+            "Furchtaura: Einschüchtert Lebende und schwächt ihren Mut."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Heilige Magie: Unterbricht Regeneration, verursacht großen Schaden.",
+            "Feuer: Vernichtet nekrotische Energie effektiv.",
+            "Anti-Magie: Macht sie anfällig und schwächt ihre Fähigkeiten.",
+            "Zielbindung: Wird nach Erreichen seines Ziels oder Fluchauflösung zerstört.",
+            "Langsam: Kann leichter ausmanövriert werden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Widergänger ignoriert häufig Unbeteiligte, solange sie sein Ziel nicht behindern.",
+            "Persönliche Gegenstände können Erinnerungen wecken, aber ebenso die Bindung verstärken.",
+            "Seine Spur wirkt zielgerichteter als die anderer wandelnder Toter.",
+            "Wird das unvollendete Ziel erfüllt, bleibt dennoch ein abschließender Totenritus notwendig."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

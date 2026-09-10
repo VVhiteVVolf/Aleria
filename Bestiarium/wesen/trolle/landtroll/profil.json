@@ -1,0 +1,185 @@
+{
+  "id": "landtroll",
+  "name": "Landtroll",
+  "classification": "Trollunterart · Listiger Wege- und Brückentroll",
+  "continent": "Aleria",
+  "region": "Straßen, Brücken, Furten und ländliche Engstellen",
+  "folio": "III-T / 05",
+  "parentGroupId": "trolle",
+  "summary": "Landtrolle leben bewusst an Straßen, Brücken und Furten und gehören zu den sprachbegabtesten und passivsten Trollarten. Sie verlangen Nahrung, Tand oder kleine Aufgaben als Wegezoll, überschätzen dabei jedoch regelmäßig ihre eigene Schlauheit und lassen sich eher durch Verhandlung als durch einen kostspieligen Kampf überwinden.",
+  "quote": "Zahl den Zoll mit altem Messing und frischen Worten; beides glänzt für ihn gleich.",
+  "quoteAttribution": "Rat eines fahrenden alerischen Händlers",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-landtroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Landtroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/landtroll.webp",
+    "width": 1200,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Landtroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Landtroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Landtroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; zivilisationsnaher Troll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "An offene Kulturlandschaften und Verkehrswege angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Alte Straßen, Brücken, Furten, Wachhäuser und Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Eigennützig, verhandlungsbereit, eitel und selten grundlos brutal"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung und Nacht; an schattigen Übergängen auch tagsüber"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Menschensprache, Täuschung, Handel und einfache Konstruktionen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Für Trollmaß hohe Intelligenz, Körperkraft und Sesshaftigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Selbstüberschätzung, Feuer und entschlossene organisierte Gegenwehr"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Wertloser Tand, Zolleinnahmen und Fundstücke von Reisenden"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Verhandlung",
+      "List",
+      "Sprachvermögen",
+      "Körperkraft",
+      "Sesshaftigkeit",
+      "Selbstüberschätzung"
+    ],
+    "values": [
+      9,
+      7,
+      9,
+      6,
+      8,
+      10
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Landtrolls abgeleitet",
+    "intro": "Beim Landtroll bewertet das Archiv die Begegnung als Wort- und Machtprobe. Selbstüberschätzung ist stark ausgeprägt und kann gezielt gegen ihn verwendet werden."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Landtrolle sind mittelgroß, kräftig und meist nur wenig größer als Menschen. Humanoide Proportionen, lesbare Mimik und geschickte Hände lassen sie vertrauter erscheinen als andere Trollarten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Nähe täuscht nicht vollständig: Sie sprechen vergleichsweise gut, sortieren Gegenstände und manipulieren einfache Sperren. Ihre dicke Haut und Trollkraft bleiben dennoch gefährlich."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keine andere Trollart interagiert so häufig mit Menschen. Landtrolle nutzen die Menschensprache, um zu verhandeln, zu täuschen und Vorteile zu sichern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einzelne Exemplare wurden über Jahre von Eremiten oder Dorfgemeinschaften sozialisiert und zeigen Humor, Sturheit und Eitelkeit. Ihr Handeln bleibt eigennützig, aber nicht zwangsläufig grausam."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Typisch sind inoffizielle Zollstellen an Brücken und Engpässen. Verlangt werden Essen, Abfälle, Schmuck oder vermeintlich hübsche Dinge; Rätsel und Aufgaben dienen vor allem der Freude an der eigenen Klugheit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Angriffe entstehen eher aus Verzweiflung, Grausamkeit oder gekränktem Stolz als aus unmittelbarem Hunger. Erkennt der Troll entschlossenen Widerstand, zieht er sich häufiger zurück als Wald- oder Bergtrolle."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alte Wachhäuser, Ruinen, Unterstände und Höhlen an wenig bewachten Verkehrswegen werden oft über Jahre bewohnt. Ländliche Regionen dulden solche Nachbarn manchmal, weil ein regelmäßiger Tribut günstiger ist als eine Jagd."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Umgang und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verhandlung, Umgehung und das Ausnutzen seiner Eitelkeit sind meist die sichersten Wege. Verdorbener Abfall oder wertloser Tand kann Blutvergießen verhindern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muss gekämpft werden, sind Landtrolle weniger erfahren als ihre wilden Vettern. Entschlossene Gruppen und Feuer brechen ihr Selbstvertrauen schnell."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Landtrolle führen über Zolleinnahmen Buch, obwohl sie nicht lesen können.",
+            "Verbogene Silberlöffel gelten ihnen oft mehr als brauchbare Waffen.",
+            "Einige Übergänge standen nachweislich jahrzehntelang unter der Kontrolle desselben Trolls.",
+            "Bei seltenen Tauschtagen sammeln Dörfer Ausschussware und erhalten dafür sichere Passage."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

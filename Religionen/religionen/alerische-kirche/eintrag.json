@@ -1,0 +1,42 @@
+{
+  "id": "alerische-kirche",
+  "title": "Die Alerische Kirche",
+  "kind": "Kirche",
+  "summary": "Der Glaube an die Neun Göttlichen, ihre Souveräne und Untergottheiten.",
+  "symbol": "assets/symbols/alerische-kirche.webp",
+  "tags": [
+    "Klerus",
+    "Priester",
+    "Orden"
+  ],
+  "relations": [
+    "neun-goettliche"
+  ],
+  "sections": [
+    {
+      "id": "ueberblick",
+      "title": "Im Glauben der Göttlichen",
+      "paragraphs": [
+        "Die Alerische Kirche verehrt die Neun Göttlichen und den mit ihnen verbundenen Kreis der fünf Souveräne und fünf Untergottheiten. Ihre Überlieferungen erzählen von den Tugenden der göttlichen Mächte und von den Wegen, auf denen sich die Gläubigen ihnen nähern.",
+        "Eide, Aspekte, Segen und Bünde beschreiben unterschiedliche Formen dieser Nähe. Die Namen der Heiligen erinnern an Menschen, deren Wirken im Glauben bewahrt wird. Gottheiten und Heilige sind im Verzeichnis der Neun Göttlichen versammelt."
+      ]
+    },
+    {
+      "id": "gemeinschaft",
+      "title": "Die Menschen im Dienst der Kirche",
+      "paragraphs": [
+        "Priester, Mönche und Nonnen, Paladine, Asketen, Magister und Büßende tragen unterschiedliche Berufungen innerhalb derselben Kirche. Eine Gemeinde kann mehrere dieser Kasten vereinen; besondere Konvente, Ritterorden und Lehrhäuser setzen eigene Schwerpunkte.",
+        "Der Kleruscodex beschreibt ihre Aufgaben und Rangordnungen sowie ihre Ausprägungen unter den einzelnen Gottheiten. Das Magisterium besitzt die drei wissenschaftlichen Bereiche Orins, Aurons und Oriths; monastische Zünfte gehören ausschließlich zu den Mönchen und Nonnen."
+      ]
+    }
+  ],
+  "page": true,
+  "pending": "Die Riten und heiligen Orte der Kirche werden mit den kommenden Überlieferungen ergänzt.",
+  "links": [
+    {
+      "label": "Der Alerische Klerus",
+      "href": "Religionen/klerus/index.html",
+      "note": "Sechs Kasten, ihre Hierarchien, monastische Zünfte und die Häuser der Göttlichen"
+    }
+  ]
+}

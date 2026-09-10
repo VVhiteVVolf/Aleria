@@ -1,0 +1,286 @@
+{
+  "id": "erzteufel",
+  "name": "Erzteufel",
+  "classification": "Sechs infernale Prinzen und unmittelbare Inkarnationen Dagons",
+  "continent": "Infernale Sphären",
+  "region": "Die sechs Fürstenreiche Dagons",
+  "folio": "IV / 04-A",
+  "parentGroupId": "inferniiden",
+  "summary": "Die sechs Erzteufel sind keine gewöhnlich aufgestiegenen Inferniiden, sondern lebende Abbilder grundlegender Eigenschaften Dagons. Asharon, Malekar, Nashira, Tamaraon, Zabaron und Balor herrschen über eigene Reiche, deren Landschaften und Bewohner den jeweiligen Aspekt ihres Fürsten widerspiegeln.",
+  "quote": "Wo Dagon mit sich selbst ringt, erhebt sich ein Fürst; sein Reich ist die Narbe dieses Gedankens.",
+  "quoteAttribution": "Verbotene Randglosse aus dem Prinzenarchiv",
+  "icon": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-erzteufel.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Erzteufel vollständig sichtbar auf einem infernalen Thron"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/erzteufel-hero.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Erzteufel vollständig sichtbar mit sechs Armen",
+    "caption": "Überlieferte Bildtafel · Sinnbild der sechs Aspekte Dagons"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Erzteufel, auch infernale Prinzen"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Fürsten"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Dagon"
+    },
+    {
+      "label": "Ursprung",
+      "value": "Unmittelbar aus Dagons Essenz geformt"
+    },
+    {
+      "label": "Anzahl",
+      "value": "Sechs bekannte Prinzen"
+    },
+    {
+      "label": "Rang",
+      "value": "Über sämtlichen Dagonaren, Ignarii und niederen Dienern"
+    },
+    {
+      "label": "Reiche",
+      "value": "Je ein Reich als verkörperter Gemüts- und Wesensaspekt"
+    },
+    {
+      "label": "Bekannte Aspekte",
+      "value": "Dominanz, Rebellion, Verrat, Spaltung, Hass und Zerstörung"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Herrschsüchtig, rivalisierend und an den eigenen Aspekt gebunden"
+    },
+    {
+      "label": "Stärken",
+      "value": "Fürstenmacht, Reichsbindung und Fortbestand durch Dagon"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Innere Spaltung, Rivalität und die Grenzen des verkörperten Aspekts"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Dagonessenz",
+      "Herrschaft",
+      "Reichsbindung",
+      "Unsterblichkeit",
+      "Intrigendruck",
+      "Zerstörungsmacht"
+    ],
+    "values": [
+      10,
+      10,
+      10,
+      10,
+      9,
+      10
+    ],
+    "intro": "Diese Fürstentafel bewertet keine Tiermerkmale. Sie ordnet die Erzteufel nach ihrer unmittelbaren Dagonbindung, ihrer Herrschaft über ein eigenes Reich und der Macht ihrer personifizierten Aspekte ein.",
+    "source": "Aus Ursprung, Fürstenrang, Reichsbindung, gegenseitigen Machtkämpfen und der an Dagon gebundenen Unzerstörbarkeit abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Dagons sechs Aspekte",
+    "title": "Die infernalen Prinzen",
+    "intro": "Die Titel der alten Tafel und die ausführlichen Aspektbeschreibungen werden gemeinsam bewahrt. Eigene Fürstendossiers sind für eine spätere Ausarbeitung vorgemerkt.",
+    "entries": [
+      {
+        "id": "asharon",
+        "name": "Asharon – Der Despot",
+        "region": "Dominanz",
+        "description": "Herrscher der Tiefen und Verkörperung unbedingter Herrschaft.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-asharon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Asharon – Der Despot vollständig sichtbar als infernaler Prinz"
+        }
+      },
+      {
+        "id": "malekar",
+        "name": "Malekar – Der Aufrührer",
+        "region": "Rebellion",
+        "description": "Anstifter ewiger Aufstände gegen jede feste Ordnung.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-malekar.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Malekar – Der Aufrührer vollständig sichtbar als infernaler Prinz"
+        }
+      },
+      {
+        "id": "nashira",
+        "name": "Nashira – Die Spalterin",
+        "region": "Verrat",
+        "description": "Meisterin verborgener Klingen, Täuschungen und zersetzender Bündnisse.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-nashira.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Nashira – Die Spalterin vollständig sichtbar als infernaler Prinz"
+        }
+      },
+      {
+        "id": "tamaraon",
+        "name": "Tamaraon – Die Renegantin",
+        "region": "Spaltung",
+        "description": "Herrin sich verschiebender Reiche und unheilbarer Trennungen.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-tamaraon.webp",
+          "width": 391,
+          "height": 637,
+          "alt": "Tamaraon – Die Renegantin vollständig sichtbar als infernaler Prinz"
+        }
+      },
+      {
+        "id": "zabaron",
+        "name": "Zabaron – Der Vertilger",
+        "region": "Hass",
+        "description": "Hasserfüllter Vernichter, dessen Zorn jeden Ausgleich verweigert.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-zabaron.webp",
+          "width": 423,
+          "height": 590,
+          "alt": "Zabaron – Der Vertilger vollständig sichtbar als infernaler Prinz"
+        }
+      },
+      {
+        "id": "balor",
+        "name": "Balor – Der Auslöscher",
+        "region": "Zerstörung",
+        "description": "Verwüster und ehemaliger Geweihter Dagons, dessen Aufbegehren die Ordnung erschütterte.",
+        "status": "Fürstendossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/inferniid-profiles/erzteufel-balor.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Balor – Der Auslöscher vollständig sichtbar als infernaler Prinz"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "id": "prinzen",
+        "eyebrow": "Über allen übrigen Inferniiden",
+        "title": "Die sechs Erzteufel",
+        "intro": "Jeder Prinz regiert ein Reich, das seinen Wesensaspekt als Landschaft, Ordnung und ewigen Konflikt ausdrückt.",
+        "entryIds": [
+          "asharon",
+          "malekar",
+          "nashira",
+          "tamaraon",
+          "zabaron",
+          "balor"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erzteufel sind die sechs höchsten Fürsten in Dagons Linie. Sie wurden nicht durch gewöhnliche Läuterung oder Verderbnis geschaffen, sondern unmittelbar aus der Essenz des infernalen Gottes geformt."
+        }
+      ]
+    },
+    {
+      "id": "wesen",
+      "title": "Inkarnationen Dagons",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jeder Erzteufel verkörpert einen grundlegenden Zug seines Schöpfers. Dadurch handelt er eigenständig und bleibt zugleich ein lebendes Bild eines größeren, widersprüchlichen Ganzen."
+        }
+      ]
+    },
+    {
+      "id": "reiche",
+      "title": "Die sechs Reiche",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Fürstenreiche sind keine neutralen Länder. Feuer, Tiefe, Schatten, Spaltung und Verwüstung übersetzen den jeweiligen Aspekt in Landschaft, Architektur und die Ordnung ihrer Bewohner."
+        }
+      ]
+    },
+    {
+      "id": "prinzen",
+      "title": "Fürsten und Aspekte",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Asharon steht für Dominanz, Malekar für Rebellion, Nashira für Verrat, Tamaraon für Spaltung, Zabaron für Hass und Balor für Zerstörung. Die alte Übersicht überliefert daneben die Titel Despot, Aufrührer, Spalterin, Renegantin, Vertilger und Auslöscher."
+        }
+      ]
+    },
+    {
+      "id": "konflikt",
+      "title": "Zerwürfnis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die ständigen Machtkämpfe der Prinzen spiegeln Dagons eigene Zerrissenheit. Balor, einst Geweihter und Vollstrecker, wandte sich gegen die bestehende Ordnung und zog seine besonderen Sprösslinge in den Aufruhr."
+        }
+      ]
+    },
+    {
+      "id": "fortbestand",
+      "title": "Fortbestand",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Solange Dagon besteht, können seine unmittelbaren Inkarnationen nicht endgültig ausgelöscht werden. Niederlagen schwächen ihre Erscheinung und ihren Einfluss, trennen den Aspekt aber nicht dauerhaft von seinem Ursprung."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine direkte Konfrontation mit einem Erzteufel gleicht einem Angriff auf sein gesamtes Reich. Aussicht versprechen nur genaue Kenntnis des verkörperten Aspekts, geweihte Gegenmacht und die Ausnutzung der Rivalitäten zwischen den Prinzen."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die sechs Fürsten stehen als eigene Stufe über Dagonaren und Ignarii.",
+            "Nashiras und Tamaraons alte Kurztitel weichen von einzelnen ausführlichen Aspektbeschreibungen ab; das Register bewahrt beide Überlieferungen.",
+            "Balgrath und Flickerlinge werden wegen ihrer besonderen Bindung unter Balors Sprösslingen geführt.",
+            "Keiner der sechs Prinzen besitzt bereits ein ausgearbeitetes Einzeldossier."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,288 @@
+{
+  "id": "draugr",
+  "name": "Draugr",
+  "classification": "Nekrophag · Verfluchter Grabwächter",
+  "continent": "Aleria",
+  "region": "Hügelgräber der Norrnaigh",
+  "folio": "III-N / 03",
+  "parentGroupId": "nekrophagen",
+  "summary": "Die Draugr gehören zu den berüchtigtsten und gefürchtetsten Gattungen der Untoten. Sie entstammen den Legenden der Norrnaigh, einem längst vergangenen nordischen Volk, und sind die verfluchten Wächter ihrer Hügelgräber. Durch dunkle Flüche oder rituelle Magie gebunden, verweilen sie in einer unheiligen Existenz zwischen Leben und Tod.",
+  "quote": "Nimm aus dem Hügel nur, was du dort selbst niederlegen willst, denn der Wächter rechnet jede Gabe nach.",
+  "quoteAttribution": "Überlieferte Warnung vor den Grabhügeln der Norrnaigh",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-draugr.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Draugr als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/draugr.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Draugr",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Draugr"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Draugr"
+    },
+    {
+      "label": "Typ",
+      "value": "Bewaffneter Untoter; ritueller Grabwächter"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Verfluchter Tod, magische Bindung durch Rituale"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Hügelgräber der Norrnaigh"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Grabhügel, Katakomben, Verfluchte Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Wachsam, territorial, organisiert"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv bei Nacht, Ruhephasen am Tag"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Patrouillieren, rudimentäre Sprache, Nutzung von Waffen, seltener auch Magie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe körperliche Ausdauer, magischer Schutz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geweihte Waffen, Feuer, Lichtmagie"
+    },
+    {
+      "label": "Beute",
+      "value": "Alte Waffen, Rüstungen, Schmuckstücke"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Grabbindung",
+      "Waffenführung",
+      "Ahnenwille",
+      "Magieresistenz",
+      "Körperkraft",
+      "Fluchmacht"
+    ],
+    "values": [
+      10,
+      8,
+      8,
+      8,
+      9,
+      7
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Draugr abgeleitet",
+    "intro": "Das Draugr-Diagramm beschreibt einen bewaffneten Wächter, dessen Stärke aus Grabritus, Pflicht und erhaltener Kampferfahrung entsteht."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Draugr gehören zu den berüchtigtsten und gefürchtetsten Gattungen der Untoten. Sie entstammen den Legenden der Norrnaigh, einem längst vergangenen nordischen Volk, und sind die verfluchten Wächter ihrer Hügelgräber. Durch dunkle Flüche oder rituelle Magie gebunden, verweilen sie in einer unheiligen Existenz zwischen Leben und Tod. Ihre Aufgabe ist es, die Grabstätten ihrer Herren und Ahnen vor Eindringlingen zu schützen – eine Aufgabe, die sie mit unnachgiebiger Wachsamkeit erfüllen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Draugr sind jedoch keine willenlosen Untoten, wie man sie von Zombies kennt. Sie besitzen eine rudimentäre Intelligenz, können Waffen führen und gelegentlich sogar einfache Magie wirken. Ihre körperliche Ausdauer und magische Resistenz machen sie zu gefährlichen Gegnern, denen nur die Mutigsten – oder die am besten vorbereiteten – trotzen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Anwesenheit von Draugr ist ein unheilvolles Zeichen für dunkle Energien und gestörte Totenruhe. Ihre schaurige Erscheinung – verrottende Körper, umgeben von einem Hauch nekrotischer Magie – ist ein warnender Hinweis darauf, dass manche Orte besser unberührt bleiben sollten. Nur diejenigen, die sich mit geweihten Waffen und heiligen Ritualen auskennen, haben eine Chance, diesen untoten Hütern zu entkommen."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Draugr sind tief in den religiösen und kulturellen Praktiken der Norrnaigh verwurzelt, eines alten nordischen Volkes, das an den Gott Lôkan glaubte. Dieser Gott war eine verschmolzene Interpretation von zwei mächtigen und düsteren Gottheiten: Hela, der Herrscherin über die Leere, und Kharon, dem Fährmann, der Seelen über den \"Fluss\" des Todes geleitet. Die Norrnaigh verehrten Lôkan in dieser verwaschenen Form, ohne die Feinheiten der ursprünglichen Gottheiten vollständig zu verstehen. Diese Unklarheit führte nicht nur zu Verwirrung in ihren Glaubenspraktiken, sondern auch zu gefährlichen Fehlinterpretationen – und Draugr sind ein Ergebnis davon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Beerdigungsrituale der Norrnaigh waren von dieser Glaubensvorstellung stark geprägt. Um sicherzustellen, dass die Seelen der Verstorbenen nicht zurückkehrten und die Ruhe der Toten nicht gestört wurde, versiegelten die Norrnaigh ihre Toten in prächtigen Hügelgräbern. Diese Gräber wurden mit mechanischen Sperren versehen, um jeglichen Zugang zu verhindern. Gleichzeitig glaubten die Norrnaigh jedoch, dass die Toten vor Grabräubern und Störungen geschützt werden mussten. Um dies zu gewährleisten, erschufen sie untote Wächter, die als ewige Hüter der Grabkammern fungierten – die Draugr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Praktik, ihre Verstorbenen mit Untoten zu schützen, war eine paradoxe Mischung aus Verehrung und Misstrauen. Während die Draugr geschaffen wurden, um die Gräber zu bewachen, sorgte die dunkle Magie, die zu ihrer Erschaffung notwendig war, oft dafür, dass sie zu einem unkontrollierbaren Risiko wurden. Die Hügelgräber wurden daher mit komplizierten Mechanismen versiegelt, um die Draugr daran zu hindern, an die Oberfläche zu gelangen und Chaos zu stiften."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Draugr gehören zu den wenigen Untoten, die eine rudimentäre Intelligenz besitzen und nicht ausschließlich von primitiven Instinkten gesteuert werden. Obwohl ihr Denken und Handeln stark durch die Auswirkungen von Verfall und Nekrose eingeschränkt ist, können sie grundlegende Entscheidungen treffen, strategisch handeln und sogar in gewissem Maße miteinander kommunizieren. Unter den Untoten gelten sie daher als eine der intelligentesten Gattungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein bemerkenswertes Merkmal der Draugr ist ihre Fähigkeit, die alte Sprache der Norrnaigh zu sprechen. Auch wenn ihre Stimmen oft von einem kehligen Röcheln und knirschenden Lauten geprägt sind, können sie Befehle, Warnungen oder einfache Phrasen artikulieren, die sie einst im Leben beherrschten. Diese Sprachfertigkeit deutet darauf hin, dass Fragmente ihrer früheren Identität in ihnen weiterbestehen, auch wenn sie nun durch dunkle Magie verdorben sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Draugr verhalten sich äußerst wachsam und territorial. Ihre primäre Aufgabe besteht darin, die Hügelgräber, in denen sie versiegelt wurden, zu schützen. Sie patrouillieren durch die verwinkelten Hallen und reagieren sofort auf Eindringlinge, die als Bedrohung für die Ruhe der Gräber angesehen werden. Diese Untoten sind in der Lage, einfache Waffen zu führen – Schwerter, Äxte oder Schilde – und nutzen diese effektiv im Kampf. In seltenen Fällen können besonders mächtige Draugr sogar einfache magische Angriffe einsetzen, was sie zu gefährlichen Gegnern macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer Wachsamkeit und ihrem Sinn für Schutz ist ihr Denken begrenzt. Draugr handeln innerhalb eines festen Musters, das von der Magie geprägt ist, die sie erschaffen hat. Sie zeigen keine komplexe Kreativität, sondern orientieren sich an vorherbestimmten Zielen und Befehlen. Ihr Verhalten mag dadurch berechenbar erscheinen, doch ihre körperliche Ausdauer, gepaart mit ihrem strategischen Handeln, macht sie zu einer ernsten Bedrohung für jeden, der die Ruhe der Gräber stören will."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Draugr sind eng mit den Hügelgräbern der Norrnaigh verbunden, die in der ganzen Welt verstreut zu finden sind. Diese Gräber, oft auf abgelegenen Hochebenen oder in dichten Wäldern verborgen, dienten einst als Ruhestätten für die Ahnen und Helden dieses alten Volkes. Die Gräber selbst bestehen aus weitläufigen Katakomben und Grabkammern, die mit komplexen Mechanismen versiegelt wurden, um sowohl Eindringlinge als auch die Draugr selbst daran zu hindern, an die Oberfläche zu gelangen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Lebensräume sind von einer düsteren Atmosphäre durchdrungen – kalte, feuchte Hallen, die von Fackeln oder magischen Leuchten erhellt werden, und der stetige Hauch nekrotischer Energie, der die Luft durchdringt. Solche Orte sind oft voller Fallen, Schutzmechanismen und Relikte der Norrnaigh, die den Wert der Gräber und die Notwendigkeit ihrer Bewachung unterstreichen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Draugr treten ausschließlich in Verbindung mit diesen heiligen Stätten auf. Ihre Präsenz ist stets ein Hinweis darauf, dass die Ruhe der Toten gestört wurde oder ein Ritual, das ihre Kontrolle sichern sollte, fehlschlug. Abenteurer, die sich in diese Hügelgräber wagen, berichten oft von patrouillierenden Draugr, die unermüdlich durch die Hallen ziehen, sowie von einer spürbaren, allgegenwärtigen Bedrohung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gelegentlich können Draugr auch in verfluchten Ruinen oder magisch vergifteten Gebieten außerhalb der Hügelgräber gefunden werden. Dies geschieht meist, wenn dunkle Magier oder Nekromanten es wagen, die Kontrolle über diese Wächter zu übernehmen, um sie für ihre eigenen Zwecke zu missbrauchen. In solchen Fällen bleibt jedoch immer ein Teil ihrer ursprünglichen Loyalität bestehen – Draugr können rebellieren oder unberechenbar werden, wenn sie sich zu weit von den Ritualen und Orten entfernen, die sie erschaffen haben."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Draugr sind mächtige Gegner, die sowohl durch ihre körperlichen Eigenschaften als auch durch die Magie, die sie bindet, zu den gefährlichsten Untoten zählen. Ihre Stärken und Schwächen machen sie zu einer einzigartigen Herausforderung für alle, die es wagen, ihre Ruhe zu stören."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hohe körperliche Ausdauer Draugr können schwere Verletzungen erleiden, ohne dabei an Kampfkraft zu verlieren. Ihre verrotteten Körper sind zäh und widerstandsfähig gegen herkömmliche Waffen.",
+            "Magische Resistenz Sie besitzen eine natürliche Resistenz gegen viele Formen von Magie, insbesondere Illusionen und mentale Beeinflussung, da ihr Verstand bereits durch die Magie ihrer Erschaffung verdorben wurde.",
+            "Bewaffnung und Kampfgeschick Im Gegensatz zu vielen anderen Untoten verwenden Draugr Waffen wie Schwerter, Äxte und Schilde mit beeindruckender Geschicklichkeit. Einige von ihnen können sogar rudimentäre Kampfstrategien anwenden.",
+            "Rudimentäre Magie Manche Draugr verfügen über die Fähigkeit, einfache Zauber wie Frost- oder Schattenschläge zu wirken, was sie noch gefährlicher macht.",
+            "Wachsamkeit Draugr sind unermüdliche Wächter, die keine Pausen kennen. Ihre Fähigkeit, durch die alten Hallen zu patrouillieren und auf Eindringlinge zu reagieren, macht sie zu effektiven Beschützern.",
+            "Furchtlose Natur Da sie weder Schmerz noch Angst empfinden, kämpfen Draugr unermüdlich bis zu ihrer endgültigen Zerstörung."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Geweihte Waffen Waffen, die mit göttlicher Energie gesegnet wurden, können die nekrotische Bindung, die sie belebt, durchbrechen und ihnen schweren Schaden zufügen.",
+            "Feuer Draugr sind anfällig für Feuer, da die Flammen ihre verrotteten Körper schnell zerstören und die Magie schwächen, die sie bindet.",
+            "Lichtmagie Zauber, die auf Licht oder göttlicher Kraft basieren, können ihre magischen Schutzmechanismen durchdringen und sie kampfunfähig machen.",
+            "Versiegelte Mechanismen Die Hügelgräber der Norrnaigh sind oft so konzipiert, dass sie Draugr daran hindern, an die Oberfläche zu gelangen. Diese mechanischen Sperren können als Schutzbarriere genutzt werden.",
+            "Langsames Denken Trotz ihrer Intelligenz ist das Denken der Draugr durch Nekrose und Verfall stark eingeschränkt. Sie handeln oft nach vorhersehbaren Mustern und können durch Ablenkung oder taktische Überlegenheit ausmanövriert werden.",
+            "Zerstörung ihrer Magiequelle Einige Draugr sind an magische Objekte oder Glyphen in den Hügelgräbern gebunden. Wird diese Quelle zerstört, können sie sich nicht länger erheben."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Draugr vereinen die Unbarmherzigkeit eines Untoten mit der Disziplin eines Wächters, was sie zu gefürchteten Gegnern macht. Nur jene, die ihre Schwächen ausnutzen und gut vorbereitet sind, können es mit diesen unheiligen Hütern aufnehmen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Draugr sind keine homogene Gattung, sondern treten in unterschiedlichen Formen und mit variierenden Fähigkeiten auf. Diese Unterschiede hängen oft mit der Bedeutung des Verstorbenen zu Lebzeiten, dem Grad der angewandten Magie und der spezifischen Funktion zusammen, die sie nach ihrer Wiederbelebung erfüllen sollen. Hier sind die wichtigsten Variationen von Draugr:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Die häufigste Form von Draugr, bewaffnet mit alten Schwertern, Äxten oder Schilden. Diese Krieger sind einfache Wächter, deren Hauptaufgabe der Schutz der Hügelgräber ist.",
+            "Fähigkeiten: Solide Nahkampffertigkeiten, starke körperliche Ausdauer, rudimentäre Taktiken.",
+            "Besonderheit: Sie sind oft in alte, verrostete Rüstungen gehüllt und verwenden die Kampfmethoden, die sie zu Lebzeiten beherrschten."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Größere und aggressivere Draugr, die für brutale Nahkämpfe geschaffen wurden. Berserker sind stärker als gewöhnliche Draugr, aber weniger intelligent.",
+            "Fähigkeiten: Rohkraft, hohe Schadensresistenz und eine unbändige Wut, die sie im Kampf entfesseln.",
+            "Besonderheit: Ihre Angriffe sind unberechenbar, sie können Gegner schnell überwältigen, sind aber anfällig für gut geplante Gegenangriffe."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Seltener anzutreffen, aber extrem gefährlich. Diese Draugr besitzen magische Fähigkeiten und waren zu Lebzeiten oft Priester oder Magier der Norrnaigh.",
+            "Fähigkeiten: Frostmagie, Flüche und Schutzzauber, die sie sowohl offensiv als auch defensiv einsetzen können.",
+            "Besonderheit: Sie nutzen ihre Magie, um ihre Verbündeten zu stärken oder Eindringlinge aus der Ferne zu attackieren."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Hochrangige Draugr, die speziell erschaffen wurden, um die inneren Kammern der Hügelgräber oder wertvolle Schätze zu bewachen.",
+            "Fähigkeiten: Verbesserte Intelligenz, Fähigkeit zur Befehlsführung über andere Draugr, stärkerer magischer Schutz.",
+            "Besonderheit: Sie sind oft mit hochwertigen Waffen oder antiken Relikten ausgerüstet, die sie effektiver im Kampf machen."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Eine seltene, besonders gefährliche Variation, die durch außergewöhnlich mächtige Flüche oder unheilige Rituale entstanden ist.",
+            "Fähigkeiten: Kombination aus physischen und magischen Fähigkeiten, erhöhte Regenerationsfähigkeit.",
+            "Besonderheit: Ihre Existenz ist meist an ein starkes magisches Relikt oder einen unheilvollen Fluch gebunden, dessen Zerstörung sie vernichten kann."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beschreibung: Der mächtigste und seltenste Typ. Draugr-Lords sind Überreste von Königen oder großen Helden der Norrnaigh, die durch mächtige Magie als oberste Wächter wiederbelebt wurden.",
+            "Fähigkeiten: Beherrschung von Waffen und Magie, Befehlsgewalt über andere Draugr, und ein nahezu unzerstörbarer Körper.",
+            "Besonderheit: Sie tragen oft legendäre Relikte oder Schätze, die tief in den Gräbern verborgen liegen. Ihre Vernichtung ist extrem schwierig und erfordert meist eine Kombination aus heiligen Waffen und magischer Stärke."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Variationen zeigen die Vielseitigkeit der Draugr und wie unterschiedlich sie je nach ihren ursprünglichen Aufgaben und der angewandten Magie auftreten können. Jede Begegnung mit ihnen erfordert eine andere Herangehensweise und Strategie."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Draugr sind gewollte Untote, welche die ehrbaren Toten großer Clans in den Hügelgräbern beschützen sollen. Sie haben einen Tages und Nacht Zyklus in der sie in den Katakomben umherwandern, die Gruften pflegen, eindringlinge bekämpfen und über die toten Wache halten.",
+            "Ein Draugr ordnet verrückte Grabbeigaben mitunter neu, bevor er Eindringlinge verfolgt.",
+            "Beschädigte Runen am Eingang können auf eine bereits geschwächte Bindung hinweisen.",
+            "Manche Draugr erkennen alte Rangzeichen und reagieren für einen Augenblick zögerlich.",
+            "Die Rückgabe geraubter Beigaben beendet den Angriff nicht sicher, kann aber den ursprünglichen Ritus wiederherstellbar machen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

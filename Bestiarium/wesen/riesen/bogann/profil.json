@@ -1,0 +1,207 @@
+{
+  "id": "bogann",
+  "name": "Bogann",
+  "classification": "Riesenart · Verfluchter Wächter faulender Haine",
+  "continent": "Aleria",
+  "region": "Dunkelhain in Estryll, Krähenmoor in Aldrimar und Moinneach in Lothir",
+  "folio": "III-R / 06",
+  "parentGroupId": "riesen",
+  "summary": "Bogann sind halbverwest wirkende Wald- und Sumpfriesen aus einer gefallenen Fomóraig-Linie. Der Verrat ihres Fürsten Ealadha und Helas List banden sie an verdorbene Haine; seither lassen ihre Gegenwart Wasser faulen und Wälder versumpfen, während Hunger, Fluch und kaum verbliebene Sprache sie zu grausamen Menschenjägern machen.",
+  "quote": "Der Bogann bewacht keinen Hain mehr; er bewacht nur noch die Wunde, die daraus geworden ist.",
+  "quoteAttribution": "Klagevers der Druiden über Ealadhas Fall",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-bogann.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Bogann als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/bogann.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Bogann in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Bogann"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Bogann"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Fomóraig-Riese; verderbter Naturwächter"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Helas List und der Bruch des heiligen Wächterauftrags durch Ealadha"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Gefallene Fomóraig-Linie aus dem Äon der Göttlichen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Faulende Wälder, tiefe Sümpfe, Höhlen und verfallene Haine"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Brutal, instinktgetrieben, menschenfressend und kaum sprachfähig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung und Nacht, besonders in feuchtem Nebel"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Verderben von Wasser und Wald, Sumpfanpassung und Fluchzähigkeit"
+    },
+    {
+      "label": "Stärken",
+      "value": "Massiger amphibischer Körper, Tarnung im Moder und Furchtwirkung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Offenes Feuer, gereinigte Haine und Entfernung aus verdorbenem Gelände"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Fluchbefallene Riesenhaut, Zähne und Gegenstände geopferter Opfer"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Verderbnisaura",
+      "Sumpfanpassung",
+      "Menschenhunger",
+      "Fluchbindung",
+      "Sprachvermögen",
+      "Feuermeidung"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      1,
+      8
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Bogann abgeleitet",
+    "intro": "Die Bogann-Wertung beschreibt einen gefallenen Naturwächter. Verderbnis und Fluchbindung prägen die Gefahr stärker als Sprache oder bewusstes Planen."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bogann sind entstellte Wald- und Sumpfriesen, die halbverwest und kaum lebendig wirken. Wo sie lange bleiben, kippt Hain in Moor und Harmonie in Fäulnis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie gelten nicht mehr als Naturvolk, sondern als Echo eines gebrochenen Schwurs. Menschenfleisch und verdorbene Nahrung ziehen sie besonders an."
+        }
+      ]
+    },
+    {
+      "id": "mythos",
+      "title": "Mythos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Äon der Göttlichen waren sie eine direkte Linie der Fomóraig und bewahrten Wälder, Haine und das Gleichgewicht zwischen Mensch, Tier und Natur. Fürst Ealadha galt als gütiger Waldfürst."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Epoche des Zwists verliebte er sich in eine vermeintliche Jötun-Prinzessin. Für sie gab er als letzte Heldenleistung das unantastbare Herz des Waldes hin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Braut war Helas Tochter und der Handel eine List der Schicksalsweberin. Der Hain verfiel, die Nachkommen wurden entstellt und versklavt. Druiden reinigten später das Land, konnten den Fluch der Bogann jedoch nicht lösen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Moderne Bogann kennen weder Ehre noch Maß. Sie durchstreifen Sümpfe und verfaulte Wälder, jagen Menschen und drücken Herrschaft ausschließlich durch Gewalt aus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aus Angst opfern manche Bewohner Gefangene oder Kinder. Solche Gaben sättigen den Riesen nur vorübergehend und verstärken die Bindung an den Ort."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gesicherte Erscheinungsorte sind der Dunkelhain im zentralen Estryll, das Krähenmoor in Aldrimar und Moinneach in Lothir. Jeder dieser Orte gilt dauerhaft verdorben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Höhlen, versunkene Baumhöfe und verfallene Kultplätze bieten Lager. Wasser in ihrer Nähe wird unbrauchbar."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit und Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blasse, feuchte Lederhaut und amphibische Züge lassen Bogann untot erscheinen. Tatsächlich erhält sie ein Fluch, der Fäulnis verbreitet, ohne den Körper völlig sterben zu lassen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Offenes Feuer wird gemieden, aber nicht panisch gefürchtet. Gereinigtes Gelände nimmt Tarnung und schwächt die Wirkung der Verderbnis."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Riese wird aus Wasser und dichter Vegetation gelockt. Feuer hält Wege offen, während druidische Reinigung verhindert, dass verdorbener Boden jede Verwundung begünstigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Opferplätze werden nicht als Köder verwendet: Der Bogann kennt wiederkehrende Gaben und erwartet dort leichte Beute."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bogann meiden offenes Feuer, stürmen jedoch durch kleine Flammen, wenn Beute nahe ist.",
+            "Ihre Anwesenheit lässt Gewässer faulen und Waldgrund versumpfen.",
+            "Druiden erkennen in ihnen ehemalige Fomóraig und hassen den Fluch gerade deshalb.",
+            "Der Name Ealadha wird in manchen verdorbenen Hainen noch als gebrochenes Brüllen gehört."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,213 @@
+{
+  "id": "lenker",
+  "name": "Lenker",
+  "classification": "General des Schwarms und Heerführer des Denkens",
+  "continent": "Infernale Sphären",
+  "region": "Amons Domäne und psionische Knotenpunkte",
+  "folio": "IV / 10-A",
+  "parentGroupId": "psioniden",
+  "summary": "Lenker sind die höchsten Willensträger in Amons Schwarmimperium. Ihre schwebenden, verletzlichen Leiber tragen eine psionische Macht, mit der sie Sucher, Lauerer, Schädlinge und Brutstätten zugleich führen, fremde Gedanken brechen und selbst geordnete Wirklichkeit aus dem Takt bringen.",
+  "quote": "Wo das Denken stirbt, beginnt sein Reich.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-lenker.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Lenker als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Lenker"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/lenker-hero.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Lenker vollständig sichtbar mit schwebendem Schädelkörper und Tentakeln",
+    "caption": "Überlieferte Bildtafel · General des Schwarms"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Lenker"
+    },
+    {
+      "label": "Typ",
+      "value": "General des Schwarms und Heerführer des Denkens"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Erwacht, wenn sich die Gedanken von hundert Suchern auf einen Willen richten"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Geformter Wille Amons und höchster psionischer Willensträger"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Amons Domäne, Kontrollzentren und psionische Knotenpunkte"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Beherrschend, planend und vollständig auf die Führung des Schwarms gerichtet"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; erwacht, sobald ein Schwarm geführt werden muss"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Telepathie, Gedankenkontrolle, Telekinese und Realitätsdissonanz"
+    },
+    {
+      "label": "Herrschaft",
+      "value": "Koordiniert Unterarten, Brutstätten und ganze psionische Felder"
+    },
+    {
+      "label": "Stärken",
+      "value": "Unermesslicher Geist, Schwarmkontrolle und Willenstyrannis"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Weicher, langsamer und sterblicher Körper"
+    },
+    {
+      "label": "Ziele",
+      "value": "Städte, Krieger, Magier und alle Gedanken, die sich unterwerfen lassen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Willenstyrannis",
+      "Schwarmkontrolle",
+      "Telepathie",
+      "Telekinese",
+      "Realitätsdissonanz",
+      "Körperhärte"
+    ],
+    "values": [
+      10,
+      10,
+      10,
+      9,
+      9,
+      3
+    ],
+    "intro": "Beim Lenker misst die Tafel die Werkzeuge geistiger Herrschaft. Der niedrige Wert der Körperhärte zeigt den scharfen Gegensatz zwischen nahezu grenzenloser psionischer Gewalt und einem verwundbaren Leib.",
+    "source": "Aus Schwarmführung, Gedankenbeherrschung, telekinetischer Gewalt, Wirklichkeitsstörung und der körperlichen Verwundbarkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lenker ist General und Sprecher Amons. Wo andere Psioniden einzelne Aufgaben erfüllen, hält er ihre Wahrnehmungen, Befehle und Bewegungen in einem einzigen herrschenden Gedanken zusammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Gegenwart macht aus einer Ansammlung von Körpern ein Heer. Sucher liefern ihm Erinnerung und Beobachtung, Lauerer rohe Kraft, Schädlinge Arbeit und Brütlinge neue Formen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Leib gleicht einem schwebenden, grotesken Schädelkoloss aus psionischem Fleisch. Tentakel und empfindliche Rezeptoren hängen unter ihm, während zwei rote Augen den Eindruck eines stets wachen, fremden Verstandes erzeugen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die mächtige Silhouette täuscht über die Beschaffenheit des Körpers hinweg. Unter der psionischen Abwehr bleiben Haut und Gewebe weich, langsam und sterblich."
+        }
+      ]
+    },
+    {
+      "id": "entstehung",
+      "title": "Erwachen des Lenkers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Lenker wird nicht gewöhnlich geboren. Er erwacht, wenn die Gedanken von hundert Suchern lange genug auf einen gemeinsamen Willen gerichtet werden und Amon diesem Knoten eine eigene Gestalt verleiht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Darum gilt jeder Lenker als geformter Anteil von Amons höchstem Willen. Eine eigenständige Fortpflanzung ist nicht überliefert."
+        }
+      ]
+    },
+    {
+      "id": "herrschaft",
+      "title": "Herrschaft über den Schwarm",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Über Telepathie liest, verändert und pflanzt der Lenker Gedanken. Er kann Soldaten gegen Gefährten wenden, den Aufbau eines Zaubers im Geist seines Urhebers zerbrechen oder einen ganzen Schwarm ohne gesprochenes Wort lenken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeder seiner Tentakel kann ein einzelnes Wesen geistig binden. In großen Gefechten verteilt der Lenker seine Aufmerksamkeit auf zahlreiche Ziele, ohne die Ordnung der Psioniden zu verlieren."
+        }
+      ]
+    },
+    {
+      "id": "wirklichkeit",
+      "title": "Psionische Gewalt",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telekinetische Kraft hebt Körper, verschiebt Hindernisse und zerreißt Formationen. Die gefürchtete Realitätsdissonanz stört darüber hinaus Wahrnehmung und Ordnung, bis Entfernungen, Schwerkraft oder vertraute Abläufe falsch erscheinen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Macht muss nicht sichtbar beginnen. Ein misslungener Befehl, eine plötzlich verkehrte Freund-Feind-Erkennung oder ein aus dem Takt geratener Zauber kann das erste Zeichen seiner Anwesenheit sein."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Kontrollzentren und Knoten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenker halten sich dort auf, wo viele Schwarmkörper geführt werden müssen: in Brutstätten, lebenden Hallen, psionischen Feldern oder den Knoten von Amons Domäne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der umgebende Schwarm schützt ihren verletzlichen Körper und bildet zugleich Sinnesorgan, Werkzeug und Waffe. Ein isolierter Lenker verliert Schutz, jedoch nicht sofort seine geistige Macht."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Abwehr",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gegen einen Lenker ist Schutz vor Gedankeneingriff wichtiger als schwere Rüstung. Klare Erkennungszeichen innerhalb einer Gruppe helfen, eingepflanzte Befehle und verfälschte Wahrnehmungen früh zu bemerken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Angriff muss den weichen Körper erreichen, bevor der Lenker seine Umgebung vollständig ordnet. Überlieferte Versuche, einen Lenker magisch zu binden, endeten meist damit, dass er nur so lange gehorchte, wie es seinem eigenen Nutzen entsprach."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Lenker soll erst erwachen, wenn hundert Sucher denselben Gedanken tragen.",
+            "Seine Stimme wird wie das gleichzeitige Sprechen eines ganzen Volkes beschrieben.",
+            "Kein vollständiger Schutz gegen seine Gedankenkontrolle ist überliefert.",
+            "Gebundene Lenker gelten nicht als gezähmt; sie warten lediglich auf die Schwäche ihres vermeintlichen Herrn.",
+            "Die roten Augen werden in Berichten als die ruhigsten Teile seiner ständig arbeitenden Gestalt bezeichnet."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

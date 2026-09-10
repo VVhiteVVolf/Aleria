@@ -1,0 +1,317 @@
+{
+  "id": "nautiloiden",
+  "name": "Nautiloiden",
+  "classification": "Wassergebundene infernale Gattungen im Dienst Thraals",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Gewässer und Thraals Domäne",
+  "folio": "IV / 07",
+  "parentGroupId": "infernale-linien",
+  "summary": "Nautiloiden sind von Thraal geprägte Wesen der Gewässer. Ihre bekannten Formen reichen vom bewaffneten Thraalkin über die menschenähnliche Sirene bis zum gewaltigen Leviathan; Körperbau, Bewegung und Jagdweise folgen dem Wasser und der infernalen Ordnung ihres Schöpfers.",
+  "quote": "Im Wasser verrät kein Fußtritt ihre Nähe; achte auf Strömung, Stille und den Schatten, der gegen die Tiefe zieht.",
+  "quoteAttribution": "Hinweis aus einem alerischen Seefahrerarchiv",
+  "icon": {
+    "src": "../../../assets/icons/nautiloiden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Nautiloiden"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/nautiloiden-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Thraalkin vollständig sichtbar auf einer hellen Bildtafel",
+    "caption": "Überlieferte Bildtafel · Bewaffneter Thraalkin"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nautiloiden"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Wasserwesen"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Thraal"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Nautiloide und nautiloide Kreaturen"
+    },
+    {
+      "label": "Bekannte Formen",
+      "value": "Thraalkin, Sirenen und Leviathane"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Gewässer und Thraals infernaler Einfluss"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Amphibisch, fischartig oder vollständig an die Tiefe gebunden"
+    },
+    {
+      "label": "Bewegung",
+      "value": "Im Wasser deutlich stärker als an Land"
+    },
+    {
+      "label": "Stärken",
+      "value": "Strömungsnutzung, Tiefentauglichkeit und überraschender Zugriff"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Eingeschränkte Beweglichkeit außerhalb geeigneter Gewässer"
+    },
+    {
+      "label": "Archivstand",
+      "value": "Drei Formen benannt, sieben Plätze offen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Tiefenbindung",
+      "Wasserkraft",
+      "Fremdartigkeit",
+      "Thraalbindung",
+      "Landtauglichkeit",
+      "Bannresistenz"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      9,
+      3,
+      7
+    ],
+    "intro": "Das Diagramm beschreibt die gemeinsame Wasserprägung der Nautiloiden: Bindung an die Tiefe, Beweglichkeit im Element und Abhängigkeit von Thraals infernalem Einfluss.",
+    "source": "Aus Schöpferzuordnung, bekannten Körperformen, wassergebundener Erscheinung und den überlieferten Gattungen der Nautiloiden abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Thraals wassergebundene Ordnung",
+    "title": "Bekannte Unterarten",
+    "intro": "Zwei nautiloide Gattungen und ein benanntes Großwesen sind überliefert. Alle übrigen Stellen bleiben ohne erfundene Namen offen.",
+    "entries": [
+      {
+        "id": "thraalkin",
+        "name": "Thraalkin",
+        "region": "Nautiloide",
+        "description": "Ein aufrecht gehender, gepanzerter Diener Thraals, dessen Körper sowohl für Wasser als auch für bewaffnete Vorstöße geschaffen wirkt.",
+        "status": "Dossier öffnen",
+        "href": "../../nautiloiden/thraalkin/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/nautiloiden-thraalkin.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Thraalkin vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "sirenen",
+        "name": "Sirenen",
+        "region": "Nautiloide",
+        "description": "Menschenähnliche Lockwesen der Gewässer, deren anmutige Erscheinung die Gefahr ihrer infernalen Bindung verdeckt.",
+        "status": "Dossier öffnen",
+        "href": "../../nautiloiden/sirenen/index.html",
+        "image": {
+          "src": "../../../assets/creature-group-profiles/nautiloiden-sirenen.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Sirenen vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "leviathan",
+        "name": "Leviathane",
+        "region": "Nautiloide Kreaturen",
+        "description": "Gewaltige gepanzerte Tiefenwesen, deren schlangenförmige Körper und breiten Flossen für eine vollständig wassergebundene Jagd geschaffen sind.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/nautiloiden-leviathan.webp",
+          "width": 1024,
+          "height": 1536,
+          "alt": "Leviathane vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-06",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-07",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ],
+    "groups": [
+      {
+        "id": "nautiloide",
+        "eyebrow": "Aufrecht gehende und menschenähnliche Formen",
+        "title": "Nautiloide",
+        "intro": "Thraalkin und Sirenen bilden die zwei benannten Vertreter dieser Reihe.",
+        "entryIds": [
+          "thraalkin",
+          "sirenen",
+          "offener-eintrag-01",
+          "offener-eintrag-02",
+          "offener-eintrag-03"
+        ]
+      },
+      {
+        "id": "nautiloide-kreaturen",
+        "eyebrow": "Großwesen der Wasserordnung",
+        "title": "Nautiloide Kreaturen",
+        "intro": "Der Leviathan ist hier als einzige benannte Kreatur verzeichnet.",
+        "entryIds": [
+          "leviathan",
+          "offener-eintrag-04",
+          "offener-eintrag-05",
+          "offener-eintrag-06",
+          "offener-eintrag-07"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nautiloiden bilden eine infernale Ordnung, deren bekannte Gestalten an Wasser, Tiefe und Thraals Willen gebunden sind. Der Begriff umfasst sowohl aufrecht gehende oder menschenähnliche Gattungen als auch große Kreaturen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nicht jede Form ist gleich gebaut oder gleich beweglich. Gemeinsam ist ihnen, dass das Wasser ihre natürliche Stärke trägt und trockener Boden diese Überlegenheit mindert."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und Bindung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als Schöpfer gilt Thraal. Seine Prägung zeigt sich weniger in einer einzigen Körperform als in der Anpassung an Strömung, Druck, Dunkelheit und das lautlose Annähern unter der Wasseroberfläche."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsformen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Thraalkin verbindet einen amphibischen Körper mit Werkzeug- und Waffenführung. Sirenen verbergen ihre Fremdartigkeit hinter einer menschenähnlichen Gestalt, während Leviathane als gewaltige, vollständig wassergebundene Kreaturen geführt werden."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Gattungen und Großwesen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die alte Tafel trennt Nautiloide von nautiloiden Kreaturen. Damit werden handelnde Gattungen wie Thraalkin und Sirenen von Großwesen wie den Leviathanen unterschieden, ohne ihre gemeinsame Zugehörigkeit zu Thraal aufzulösen."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Zeichen einer Begegnung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nautiloiden kündigen sich nicht durch gewöhnliche Landspuren an. Ungewöhnliche Strömungen, plötzlich verstummende Gewässer und Bewegungen unterhalb der sichtbaren Tiefe sind verlässlicher als Abdrücke am Ufer."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung und Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Begegnung sollte nach Möglichkeit aus dem Wasser heraus verlagert werden. An Land verlieren viele Formen einen Teil ihrer Beweglichkeit; im Wasser bestimmen sie Abstand, Richtung und Zeitpunkt des Angriffs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gegen größere Formen ist Rückzug oft sinnvoller als ein direkter Kampf. Schutz vor Lockung, klare Verständigungszeichen und eine gesicherte Uferlinie mindern die Gefahr, getrennt oder in die Tiefe gezogen zu werden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Das Register trennt nautiloide Gattungen von nautiloiden Kreaturen.",
+            "Der Thraalkin stellt zugleich das große Titelmotiv der alten Tafel.",
+            "Der Leviathan war benannt, besaß jedoch kein eigenes Bild; die neue Artenabbildung schließt nur diese Bildlücke.",
+            "Sieben weitere Plätze bleiben bis zu einer gesicherten Benennung als unbekannt markiert."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

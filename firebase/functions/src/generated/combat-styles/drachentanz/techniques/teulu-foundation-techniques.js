@@ -1,5 +1,5 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js';
-import { createDrachentanzTechnique, temporaryCondition, movementEffect } from './drachentanz-technique-factory.js';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { createDrachentanzTechnique, temporaryCondition, movementEffect } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const make = spec => createDrachentanzTechnique({
   formId: F.jungdrache, status: 'confirmed', tier: 'Grundform', slotBands: ['foundation'],

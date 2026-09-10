@@ -8,38 +8,55 @@ Die Klassenregeln, Waffenvarianten, Lernbudgets und Pfadzugänge liegen getrennt
 
 | Form oder Pfad | Attacken im Gesamtpool | Ausbildung |
 | --- | ---: | --- |
-| Tanz des Jungdrachens | 54 | Stufe 1–6 |
-| Freie Vertiefung | 24 | Pufferzone, Stufe 7–8 |
-| Tanz des Schwertdrachens / Speerdrachens | 12 | Duellpfad, Stufe 9–20 |
-| Tanz des abwartenden Drachens | 22 | Stufe 9–20 |
-| Tanz des fliegenden Drachens | 22 | Stufe 9–20 |
+| Tanz des Jungdrachens | 60 | Stufe 1–6, einschließlich des cenyrischen Derwyn-Pfades |
+| Freie Vertiefung | 24 | Stufe 7–8 |
+| Tanz des Schwertdrachens | 24 | Stufe 9–20, einschließlich Barddwyr-Schwertoptionen |
+| Tanz des abwartenden Drachens | 18 | Stufe 9–20 |
+| Tanz des fliegenden Drachens | 18 | Stufe 9–20 |
+| ↳ Tanz des aufsteigenden Drachens | 6 | Unterform des fliegenden Drachens, Stufe 9–20; setzt dessen Wahl voraus |
 | Tanz des brüllenden Drachens | 22 | Stufe 9–20; eine Arthwyr-Attacke ab 6 |
-| Tanz des ausgeglichenen Drachens | 22 | Stufe 9–20 |
-| Tanz des aufsteigenden Drachens | 6 | Unterpfad des Fliegenden Drachen, Stufe 9–20 |
-| Tanz des Zwillingsdrachens | 12 | Beidhändiger Pfad, Stufe 9–20 |
-| Tanz des Satteldrachens | 12 | Uchelwyr, Stufe 9–20 |
-| Tanz des Lanzendrachens | 8 | Cantref, Stufe 9–20 |
-| Tanz des Bogendrachens | 12 | Helwyr, Stufe 9–20 |
-| Tanz des Drachlings | 5 | Milwr, Stufe 6–15 |
+| Tanz des ausgeglichenen Drachens | 18 | Stufe 9–20 |
+| Tanz des Zwillingsdrachens | 12 | Stufe 9–20 |
+| Tanz des Speerdrachens | 12 | Erste Expertenform von Cantref und Uchelwyr, Stufe 9–20 |
+| Tanz des peitschenden Drachens | 8 | Cantref und Uchelwyr, Stufe 9–20 |
+| Tanz des hütenden Drachens | 8 | Cantref und Uchelwyr, Stufe 9–20 |
+| Tanz des stürmenden Drachens | 6 | Berittener Uchelwyr, Stufe 9–20 |
+| Tanz des schweifenden Drachens | 12 | Uchelwyr zu Fuß und mit Reiteroptionen, Stufe 9–20 |
+| Tanz des lauernden Drachens | 14 | Helwyr: zwölf Bogen-, zwei Schwertoptionen, Stufe 9–20 |
+| Tanz des jagenden Drachens | 8 | Helwyr: Bogen, kurze Klingen und gedeckte Bewegung, Stufe 9–20 |
+| Tanz der Bärenklaue | 6 | Eigene Arthwyr-Form, Stufe 9–20 |
+| Tanz des Drachlings | 5 | Milwr, unverändert Stufe 6–15 |
 | Tanz des trällernden Drachens | 4 | Barddwyr, Stufe 7–8 |
 | Tanz des kreischenden Drachens | 12 | Barddwyr, Stufe 9–20 |
 
-Das Register enthält 249 Techniken. Die sechs historischen Jungdrachen-Attacken und vier ergänzende Teulu-Techniken sind als `confirmed` markiert. Die übrigen 239 geplanten Attacken tragen im Katalog `draft`. Ein Charakter erhält eine Technik über einen verfügbaren Ausbildungsslot; die automatische Klassenwahl belegt fehlende Slots, der geführte Aufstieg erlaubt eigene Entscheidungen. Danach ist die gespeicherte Kopie nutzbar und merkt sich den ursprünglichen Katalogstatus als `sourceStatus`.
+Das Register enthält 297 Techniken: zehn bestätigte historische/ergänzende Teulu-Techniken, sechs bestätigte Derwyn-Grundtechniken sowie 281 als `draft` geführte Ausbildungsoptionen. Auswahl über verdiente Slots macht Entwürfe auf einem konkreten Charakter nutzbar und bewahrt den Katalogstatus als `sourceStatus`. Kein neuer Pfad erhöht das Lernbudget.
 
-## Technikmodule
+## Klassen und Technikmodule
 
-- `foundation-techniques.js` enthält die klasseneigenen Grundfolgen.
-- `teulu-foundation-techniques.js` ergänzt Schuppenschnitt, Geschlossene Schuppe, Flügelschritt und Ruhigen Drachenatem. Teulu haben auf Stufe 6 zehn Grundtechniken; die ursprünglichen sechs Slot-IDs bleiben erhalten.
-- `duelist-techniques.js` enthält unter stabil gebliebenen IDs die vier klasseneigenen Übergangstechniken für die freie Vertiefung auf Stufe 7–8.
-- `schwertdrachen-path-techniques.js` enthält zwölf neue, reine Einzelzieltechniken des Schwert- beziehungsweise Speerdrachen.
-- Die Dateien `abwartender-`, `fliegender-`, `bruellender-` und `ausgeglichener-techniques.js` enthalten je zwölf gemeinsame Ritterattacken; der Zornige Drache wurde vollständig entfernt.
-- `aufsteigender-techniques.js` enthält sechs akrobatische Unterpfadtechniken, `zwillingsdrachen-techniques.js` zwölf Techniken für zwei geführte Klingen.
-- `exclusive-path-techniques.js` enthält den Cantref-Lanzendrachen und den Helwyr-Bogendrachen. `uchelwyr-mounted-techniques.js` bündelt die zwölf Expertenoptionen des Uchelwyr im Satteldrachen und erhält die frühen Reiteroptionen.
-- `bruellender-shield-techniques.js` ergänzt den Brüllenden Drachen um Schildangriffe, die nur mit tatsächlich geführtem Schild verfügbar sind.
-- `helwyr-expert-techniques.js` enthält sechs Fernkampf- oder Klingenoptionen je Expertenpfad.
-- `barddwyr-techniques.js` enthält Trällernder Drache, Kreischender Drache und die verkleinerten Schwertpfade.
-- `milwr-techniques.js` enthält die fünf Drachling-Attacken.
+`DRACHENTANZ_CLASS_PATH_IDS` in `drachentanz-ids.js` hält die verbindliche Pfadzuordnung und Reihenfolge. Teulu behalten ausschließlich die sieben klassischen Expertenformen; Helwyr ergänzen sie um Lauernden und Jagenden Drachen, Arthwyr um die Bärenklaue. Cantref erhalten ausschließlich die drei gemeinsamen Speerformen, Uchelwyr zusätzlich Stürmenden und Schweifenden Drachen. Barddwyr behalten nur Schwertdrache und ihre zwei eigenen Formen. Der Jungdrache und die bestehenden Slot-IDs bleiben erhalten.
+
+- `foundation-techniques.js` und `teulu-foundation-techniques.js` enthalten die Grundausbildung; die Derwyn-Schwertfolge kommt aus dem gemeinsamen Derwyn-Modul in `sirenentanz/derwyn-techniques.js`.
+- `duelist-techniques.js` führt die freien Übergangstechniken der Stufen 7–8.
+- `schwertdrachen-path-techniques.js` und die klassischen Expertenmodule enthalten die zugelassenen Teulu-, Helwyr- und Arthwyr-Techniken. Der Schwertdrache bleibt auch Barddwyr zugänglich.
+- `spear-path-techniques.js` enthält den eigenständigen Speerdrachen sowie ergänzende offensive und defensive Speertechniken. Beide Speerklassen teilen dieselben IDs und Waffenprofile. Der Speerdrache wahrt die Einzelzielregel auch mit Hellebarde.
+- `exclusive-path-techniques.js` erhält die früheren Lanzen- und Bogen-Attacken unter stabilen Technik-IDs; die aktive Formzuordnung lautet jetzt Peitschender/Hütender beziehungsweise Lauernder Drache.
+- `uchelwyr-mounted-techniques.js` teilt die bisherigen Reiteroptionen auf Stürmenden und Schweifenden Drachen auf. Jungdrache und freie Vertiefung behalten ihre frühen Reiteroptionen.
+- `class-specialist-techniques.js` ergänzt Fußtechniken des Schweifenden, Schwertantworten des Lauernden, die Jagdform und die Bärenklaue. Unterstützende Techniken erzeugen keinen ungewollten Waffenwurf. Verbergen bleibt eine eigene Probe und wird nicht durch einen bloßen Beschreibungstext automatisch gewährt.
+- `barddwyr-techniques.js` führt Trällernden und Kreischenden Drachen; übernommene Schwerttechniken liegen jetzt ausschließlich im Schwertdrachen.
+- `helwyr-expert-techniques.js`, `bruellender-shield-techniques.js`, `aufsteigender-techniques.js` und `zwillingsdrachen-techniques.js` erhalten die passenden klassischen Erweiterungen. `milwr-techniques.js` bleibt unverändert.
 - `drachentanz-technique-factory.js` normalisiert Kosten, Waffenwürfel, Effekte und Klassenmetadaten.
+
+## Bestehende Bögen
+
+`drachentanz-training-migration.js` stellt reine Migrationen für Form- und Technik-IDs bereit. Die vormals nur umbenannte Schwertdrachenfolge wird für Cantref und Uchelwyr in die zwölf korrespondierenden Speerdrache-Techniken überführt. Brauchbare frühere Lanzen-, Bogen-, Reiter- und Barddwyr-IDs behalten ihre Identität und erhalten ihre neue kanonische Form. Klassenfremde Attacken geben ihren Slot frei; eigene Techniken außerhalb der reservierten Katalog-IDs bleiben erhalten.
+
+Ein früherer Sattel- oder Lanzenpfad kann auf zwei neue Formen verteilt sein. Eine Migration schenkt deshalb keinen zweiten Pfad: Der gültige gewählte Pfad bleibt, für weitere Formen gilt der bestehende Slotpreis. Der gemeinsame Auswahlprozess entscheidet über ungültige oder erneut verfügbare Slots.
+
+## Prüfung
+
+`tests/drachentanz-class-forms.test.mjs` prüft die genaue Klassenzuordnung, Speerzugang für beide Klassen, den Ausschluss fremder Techniken, Reiter- und Waffenbedingungen, ausführbare Schutzwirkungen und die ID-Migration. `Klassenordner/tests/cenyr-classes.test.mjs` prüft zusätzlich alle Stufenaufstiege bis 20, manuelle Stufenänderungen, Budgets, Kosten und die erzeugten Klassenseiten.
+
+`tests/drachentanz-class-runtime.test.mjs` führt die echte Szenenauswertung für Hütenden und Jagenden Drachen aus: Schutz ohne Treffer-/Schadenswurf und Ablauf nach dem nächsten eigenen Beitrag, Bewegungshinweis mit Pfadbonus sowie der nur gegen aktiv als „Überrascht“ markierte Ziele geltende Hinterhaltsschuss. Dessen `pre-roll`-Regel gilt ausschließlich für diese Technik; gewöhnliche Schüsse erhalten den Bonus nicht. Heimlichkeit wird weiterhin über die bestehenden Fertigkeitsproben und Szenenzustände beurteilt.
 
 ## Freigabe und Vergabe
 
@@ -59,7 +76,7 @@ Aktion, Bonusaktion und Reaktion beginnen bei 1 und erneuern sich pro vollständ
 
 ## Schadensbalance und ältere Formen
 
-`drachentanz-damage-progression.js` legt das gemeinsame Schadensbudget für Drachentanz, Sirenentanz und Huskarl anhand der Freigabestufe und des Kostenpakets fest. Aktion, Reaktion und Bonusaktion haben eigene Budgets; Kombinationen mit einer Besonderen Aktion reichen vom vielseitigen Nebenangriff bis zur vollständigen Meisterfolge. Eine reguläre Technik verwendet einmal die Waffenwürfel und begrenzte einzelne Zusatzwürfel. Ein Großschwert mit 2W6 erhält pro Zusatzwürfel nur ein weiteres W6. Reine Bonusangriffe beginnen mit 1W6. Flächenattacken tauschen einen Teil ihres Schadens pro Ziel gegen mehrere Ziele ein. `damageModel.bonusModifier` enthält gegebenenfalls einen kleinen festen Technikbonus, der bei kritischen Treffern nicht verdoppelt wird. Reine Schutz- und Hilfstechniken erhalten keinen Waffenwurf.
+`drachentanz-damage-progression.js` legt das gemeinsame Schadensbudget für Drachentanz, Wyrmtanz und Huskarl anhand der Freigabestufe und des Kostenpakets fest. Aktion, Reaktion und Bonusaktion haben eigene Budgets; Kombinationen mit einer Besonderen Aktion reichen vom vielseitigen Nebenangriff bis zur vollständigen Meisterfolge. Eine reguläre Technik verwendet einmal die Waffenwürfel und begrenzte einzelne Zusatzwürfel. Ein Großschwert mit 2W6 erhält pro Zusatzwürfel nur ein weiteres W6. Reine Bonusangriffe beginnen mit 1W6. Flächenattacken tauschen einen Teil ihres Schadens pro Ziel gegen mehrere Ziele ein. `damageModel.bonusModifier` enthält gegebenenfalls einen kleinen festen Technikbonus, der bei kritischen Treffern nicht verdoppelt wird. Reine Schutz- und Hilfstechniken erhalten keinen Waffenwurf.
 
 `damageModel.scalingSteps` enthält den Ausbildungsbonus älterer Attacken. `combat-technique-damage.js` wählt ausschließlich den höchsten erreichten Eintrag; weder mehrere Pfade noch erneutes Speichern vervielfachen ihn. Waffenwechsel, ein- oder zweihändige Führung und manuelle Stufenänderungen berechnen die Formel neu. Die Schritte 7/9 bilden den Form- und Pfadwechsel ab, 13/17 die vertiefte Experten- und Meisterausbildung. Milwr verwendet stattdessen 6/10/15.
 

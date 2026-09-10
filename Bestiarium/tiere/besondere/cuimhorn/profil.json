@@ -1,0 +1,230 @@
+{
+  "id": "cuimhorn",
+  "name": "Cuimhorn",
+  "classification": "Morgornisches Gebirgstier, Botentier und treuer Hausgefährte",
+  "continent": "Morgorn",
+  "region": "Schroffe Gebirge, Grenzfesten und Bergdörfer",
+  "folio": "II / 03",
+  "parentGroupId": "besondere-tiere",
+  "summary": "Das Cuimhorn ist eine kleine ziegenartige Tierart Morgorns, die über Jahrhunderte von Druiden als verlässliches Botentier gezüchtet wurde. Sein nahezu unfehlbares Gedächtnis für Gesichter, Namen, Stimmen und Wege verbindet sich mit großer Trittsicherheit, ruhigem Wesen und einer lebenslangen Bindung an vertraute Menschen.",
+  "quote": "Ein Cuimhorn vergisst keinen Freund – und wenn es einen Weg verweigert, warnt es.",
+  "quoteAttribution": "Morgornisches Sprichwort über lebenslange Bindung",
+  "icon": {
+    "src": "../../../assets/icons/cuimhorn.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Cuimhorn vollständig von den Hörnern bis zu allen vier Hufen sichtbar"
+  },
+  "hero": {
+    "src": "../../../assets/special-animal-profiles/cuimhorn-hero.webp",
+    "width": 1402,
+    "height": 1122,
+    "alt": "Cuimhorn vollständig sichtbar mit Botengepäck auf einem morgornischen Gebirgspfad",
+    "caption": "Überlieferte Szenentafel · Ein Cuimhorn auf dem Weg zu einer Grenzfeste"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Cuimhorn; Mehrzahl Cuimhörner"
+    },
+    {
+      "label": "Typ",
+      "value": "Ziegenartiges Gebirgs- und Botentier"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Ausschließlich die Gebirge Morgorns"
+    },
+    {
+      "label": "Größe",
+      "value": "40–70 cm"
+    },
+    {
+      "label": "Körperbau",
+      "value": "Kompakt, schlank, muskulös und für steile Hochgebirgspfade angepasst"
+    },
+    {
+      "label": "Temperament",
+      "value": "Ruhig, aufmerksam, menschenfreundlich und vorsichtig"
+    },
+    {
+      "label": "Reitbarkeit",
+      "value": "Nicht reitbar; begrenzte Tragkraft für Nachrichten und kleine Vorräte"
+    },
+    {
+      "label": "Haupteinsatz",
+      "value": "Botendienst, Grenzdienst, kleine Transporte und Haustier"
+    },
+    {
+      "label": "Stärken",
+      "value": "Langzeitgedächtnis, Orientierung, Trittsicherheit, Ausdauer und hohe Lernfähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Geschwindigkeit, Hitzeempfindlichkeit, enge Halterbindung und geringe Kampfkraft"
+    },
+    {
+      "label": "Kosten",
+      "value": "???"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Personengedächtnis",
+      "Orientierung",
+      "Trittsicherheit",
+      "Botentreue",
+      "Ausdauer",
+      "Hitzetoleranz"
+    ],
+    "values": [
+      10,
+      10,
+      10,
+      10,
+      8,
+      2
+    ],
+    "intro": "Das Cuimhorn wird nach seinen tatsächlichen Aufgaben bewertet. Personengedächtnis, sichere Wegwahl und Bindung bestimmen seinen Wert stärker als Geschwindigkeit, Tragkraft oder Kampfvermögen.",
+    "source": "Aus dem lebenslangen Erinnerungsvermögen, der selbstständigen Orientierung, Gebirgsanpassung, Halterbindung, Botenleistung und beschriebenen Hitzeempfindlichkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Cuimhorn ist eine ziegenartige Tierart, die ausschließlich in den schroffen Gebirgen Morgorns beheimatet ist. Seit Jahrhunderten dient sie als Botentier und gilt zugleich als eines der beliebtesten Haustiere der Region."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Cuimhorn prägt sich Gesicht und Namen eines Menschen dauerhaft ein. Es findet eine bekannte Person selbst nach Jahren wieder, unabhängig davon, ob sie sich in einer Grenzfeste, Berghütte oder auf einem abgelegenen Pass aufhält."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und druidische Zucht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die ältesten Druiden beobachteten kleine Bergziegen, die nach Monaten oder Jahren zu denselben Menschen zurückkehrten. Ihre Orientierung schien weder allein auf Geruch noch auf gewöhnlichem Instinkt zu beruhen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Über viele Generationen wählten die Druiden Tiere mit besonders starkem Gedächtnis, ruhigem Charakter und sicherem Tritt aus. Sie veränderten die Tiere nicht durch Magie, sondern durch geduldige Beobachtung und Zucht. Das Cuimhorn gilt deshalb als Meisterwerk einer Lehre, die bereits vorhandene natürliche Anlagen erkennt und stärkt."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der kompakte, schlanke Körper besitzt kräftige Hinterläufe für Sprünge und etwas kürzere Vorderläufe für Balance. Elegant nach hinten geschwungene Hörner behindern die Bewegung in engen Felsspalten nicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Hufe verbinden einen harten Hornrand mit einem weichen, griffigen Sohlenkern. Dichte Unterwolle und wasserabweisende Deckhaare schützen vor Gebirgswetter; graubraune, schiefergraue und dunkelbraune Färbungen tarnen das Tier im Fels."
+        }
+      ]
+    },
+    {
+      "id": "temperament",
+      "title": "Temperament",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cuimhörner sind ruhig, neugierig und lernfähig. Fremden begegnen sie vorsichtig, vertrauten Menschen jedoch mit großer Geduld. Aggressive oder unberechenbare Tiere wurden über Jahrhunderte von der Zucht ausgeschlossen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verweigert ein Tier einen Weg, deutet dies meist auf Steinschlag, Lawinengefahr oder brüchigen Untergrund. Grenzer sagen deshalb: Ein Cuimhorn weigert sich nicht. Es warnt."
+        }
+      ]
+    },
+    {
+      "id": "nutzung",
+      "title": "Nutzung & Einsatz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nachrichten reisen in kleinen wetterfesten Lederkapseln am Halsband oder Geschirr. Nach der Übergabe bleibt das Cuimhorn beim Empfänger oder kehrt auf neue Anweisung zu seinem Halter zurück."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Kriegszeiten verbinden die Tiere Wachtürme, Grenzfestungen und Patrouillen, ohne feste Routen zu benötigen. In Friedenszeiten sind Vögel auf langen freien Strecken schneller; Gebirge, Nebel und Unwetter machen das Cuimhorn dennoch unersetzlich. Kleine Vorräte, Werkzeuge oder Medikamente kann es ebenfalls tragen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken & Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gesichter, Namen, Stimmen, Orte und Wege bleiben dem Cuimhorn lebenslang im Gedächtnis. Dazu kommen Orientierung, Trittsicherheit, Ausdauer, hohe Lernfähigkeit und eine starke Bindung an seinen Halter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Grenzen sind geringe Geschwindigkeit, begrenzte Tragkraft und geringe Kampfkraft. Hitze belastet das Gebirgstier; ein Besitzerwechsel dauert lange, und schlechte Erfahrungen mit Menschen oder gefährlichen Orten werden ebenso dauerhaft erinnert wie Freundschaft."
+        }
+      ]
+    },
+    {
+      "id": "haltung",
+      "title": "Haltung & Pflege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cuimhörner brauchen offene bergnahe Gehege mit Fels, Höhenunterschieden und täglicher Bewegung. Dauerhafte Stallhaltung und lange Isolation schaden Körper, Neugier und Sozialverhalten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gräser, Kräuter, Moose, Flechten und junge Blätter bilden die Nahrung. Fell, Hufe und Hörner benötigen regelmäßige Kontrolle; geistige Beschäftigung durch kleine Botengänge ist ebenso wichtig wie körperliche Bewegung."
+        }
+      ]
+    },
+    {
+      "id": "beziehung",
+      "title": "Beziehung zum Menschen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viele Kinder erhalten ihr erstes Cuimhorn im Alter von zehn bis zwölf Jahren und wachsen mit ihm auf. Alte Tiere bleiben häufig über Generationen in einer Familie und erkennen noch Menschen, denen sie Jahrzehnte zuvor Nachrichten brachten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Besitz wird in Morgorn eher als Freundschaft denn als Eigentum verstanden. Manche Tiere trauern nach dem Tod ihres Halters, verweigern zeitweise Futter oder kehren wiederholt an gemeinsam besuchte Orte zurück."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Nach der ersten erfolgreichen Botenreise erhält ein Cuimhorn häufig einen Anhänger aus Holz, Messing oder Silber.",
+            "Weiße Cuimhörner gelten als seltene Glücksbringer, die selbst im dichtesten Nebel den Heimweg finden.",
+            "Süße Bergbeeren und getrocknete Apfelscheiben sind verbreitete Belohnungen bei der Ausbildung.",
+            "Ein Cuimhorn zu stehlen gilt als Vertrauensbruch und als besonders verwerfliches Vergehen.",
+            "Traue deinem Cuimhorn mehr als deiner Karte, lautet ein Rat an junge Grenzer."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "src": "../../../assets/special-animal-profiles/cuimhorn-detail.webp",
+      "width": 1492,
+      "height": 1054,
+      "alt": "Vollständige naturkundliche Studien verschiedener Cuimhörner, Hufe und Hörner",
+      "caption": "Überlieferte Bildtafel · Körperbau und Bewegungsstudien des Cuimhorns"
+    }
+  ]
+}

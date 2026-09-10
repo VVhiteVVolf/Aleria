@@ -13,14 +13,14 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260906-effect-rolls-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260906-effect-rolls-v1';
+} from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260908-cenyr-paths-v1';
+} from '../combat/combat-level-up-model.js?v=20260909-dragon-parent-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -39,15 +39,17 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260908-cenyr-paths-v1';
-import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260908-cenyr-paths-v1';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260908-cenyr-paths-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260909-dragon-parent-v2';
+import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260909-dragon-parent-v2';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260909-dragon-parent-v2';
+import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
-import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260906-effect-rolls-v1';
+import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260909-dragon-parent-v2';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -257,7 +259,8 @@ function renderIdentityAndProgression(profile) {
         <label><span>Volk / Herkunft</span><input data-combat-path="identity.ancestry" value="${escapeMarkup(profile.identity.ancestry)}" maxlength="100" placeholder="z. B. Halbelf"></label>
         <label><span>Klasse / Archetyp</span><input data-combat-path="identity.archetype" value="${escapeMarkup(profile.identity.archetype)}" maxlength="120" placeholder="z. B. Waldläufer"></label>
         <label><span>Hintergrund</span><input data-combat-path="identity.background" value="${escapeMarkup(profile.identity.background)}" maxlength="120" placeholder="z. B. Volksheld"></label>
-        ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · Cenyr · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount}/${classSummary.earnedTechniqueSlots} Attackenslots mit Techniken belegt${classSummary.spentTechniqueSlotCount ? ` · ${classSummary.spentTechniqueSlotCount} für zusätzliche Wege verwendet` : ''}${classSummary.pendingTechniqueSlotCount ? ` · ${classSummary.pendingTechniqueSlotCount} Auswahl offen` : ''} · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
+        ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · ${escapeMarkup(classSummary.culture)} · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount}/${classSummary.earnedTechniqueSlots} Attackenslots mit Techniken belegt${classSummary.spentTechniqueSlotCount ? ` · ${classSummary.spentTechniqueSlotCount} für zusätzliche Wege verwendet` : ''}${classSummary.pendingTechniqueSlotCount ? ` · ${classSummary.pendingTechniqueSlotCount} Auswahl offen` : ''} · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
+        ${classSummary?.foundationOptions.length ? `<label class="wide"><span>Grundausbildung des Derwyn</span><select data-combat-foundation-choice>${classSummary.foundationOptions.map(option => `<option value="${escapeMarkup(option.formId)}"${selected(classSummary.foundationFormId, option.formId)}>${escapeMarkup(option.name)}</option>`).join('')}</select><small>Beide Wege führen nach der freien kreativen Phase zu denselben vier Wyrmformen. Ein Wechsel gleicht die Grundtechniken an.</small></label>` : ''}
       </div>
       <div class="cp-sheet-progression">
         <label><span>Stufe</span><input type="number" min="1" max="20" data-combat-manual-level value="${profile.progression.level}"><small>Manueller Schnellabgleich 1–20</small></label>
@@ -1280,6 +1283,17 @@ document.addEventListener('change', event => {
   const target = event.target;
   if (!target?.closest?.('#cp-tab-combat')) return;
   if (updateLevelUpPlan(target)) return;
+  if (target.matches('[data-combat-foundation-choice]')) {
+    const result = selectCenyrTrainingOption(draftProfile, { kind: 'foundation', selectionId: target.value, selectedAtLevel: 1 });
+    if (result.ok) {
+      draftProfile = reconcileCenyrTrainingForLevel(result.profile, draftProfile.progression.level, { autoFill: true, preserveExisting: true }).profile;
+      synchronizeDraftFromCombat();
+      levelUpState = null;
+      setupNotice = 'Grundausbildung und zugehörige Techniken wurden abgeglichen.';
+    } else setupNotice = result.errors.join(' ');
+    renderSheet();
+    return;
+  }
   if (updateManualLevel(target)) return;
   if (target.dataset.combatAction === 'equip-weapon') return;
   if (updateDraftField(target)) {

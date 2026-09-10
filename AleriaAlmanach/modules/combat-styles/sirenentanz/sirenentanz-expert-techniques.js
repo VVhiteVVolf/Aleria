@@ -1,5 +1,6 @@
-import { createSirenentanzTechnique } from './sirenentanz-technique-factory.js';
-import { SIRENENTANZ_FORM_IDS as F } from './sirenentanz-forms.js';
+import { getDerwynExpertTechniques } from './derwyn-techniques.js?v=20260909-dragon-parent-v2';
+import { createSirenentanzTechnique } from './sirenentanz-technique-factory.js?v=20260909-dragon-parent-v2';
+import { SIRENENTANZ_FORM_IDS as F } from './sirenentanz-forms.js?v=20260909-dragon-parent-v2';
 
 // Shared lesson budgets keep the three paths comparable. Names, weapon routes
 // and execution remain class-specific; a catalogue option is never a free hit.
@@ -166,41 +167,11 @@ const routes = {
       ['letzter-hueter-des-weges', 'Letzter Hüter des Weges', 'rider', 'Der Abschluss hält Gegner und eigene Flanke gleichermaßen unter Kontrolle.']
     ]
   },
-  derwyn: {
-    breaker: [
-      ['kolbenkeil', 'Kolbenkeil', 'mace', 'Der Kolben sucht die schmale Kante der Deckung.'],
-      ['schwerer-saphir', 'Schwerer Saphir', 'staff', 'Der Stab schlägt mit dem Gewicht hinter beiden Händen.'],
-      ['drang-der-zinken', 'Drang der Zinken', 'trident', 'Die Zinken lenken die fremde Waffe aus ihrer Linie.'],
-      ['bewahrender-hieb', 'Bewahrender Hieb', 'mace', 'Der Kolben kehrt nach dem Schlag vor den Körper zurück.'],
-      ['brechender-schaft', 'Brechender Schaft', 'staff', 'Ein weiter Griff legt große Kraft hinter einen einzelnen Stabschlag.'],
-      ['fesselnde-zinken', 'Fesselnde Zinken', 'trident', 'Der Dreizack drückt gegen die gegnerische Waffenhaltung, ohne magische Fesseln zu erzeugen.'],
-      ['schwere-des-heiligtums', 'Schwere des Heiligtums', 'mace', 'Der feste Schritt trägt einen schweren physischen Kolbenhieb.'],
-      ['flut-des-schaftes', 'Flut des Schaftes', 'staff', 'Die Meisterfolge endet in einem einzigen physischen Stabschlag; die Flut bleibt ein Bewegungsbild.']
-    ],
-    current: [
-      ['saphirkreis', 'Saphirkreis', 'staff', 'Der Schaft beschreibt einen engen Kreis vor dem Körper.'],
-      ['kleine-zinke', 'Kleine Zinke', 'trident', 'Ein kurzer Stich prüft die gegnerische Deckung.'],
-      ['ruhe-der-hand', 'Ruhe der Hand', 'mace', 'Der Derwyn setzt den Griff neu und lässt den Schlag noch ruhen.'],
-      ['ufergang', 'Ufergang', 'staff', 'Der Stabschlag deckt einen kleinen Schritt in freien Raum.'],
-      ['umspuelende-spitze', 'Umspülende Spitze', 'trident', 'Die Zinken umgehen die fremde Klinge und stören ihren Stand.'],
-      ['kehrender-hueter', 'Kehrender Hüter', 'mace', 'Der Kolben beschreibt eine kurze Bahn zurück in die Deckung.'],
-      ['saphirlinie', 'Saphirlinie', 'staff', 'Schritte und kurze Drehungen öffnen eine einzige saubere Schlaglinie.'],
-      ['drei-stille-stroeme', 'Drei stille Ströme', 'trident', 'Die drei Spitzen folgen einer gemeinsamen Meisterbewegung; sie sind keine drei Angriffe.']
-    ],
-    depths: [
-      ['schwelle-des-hueters', 'Schwelle des Hüters', 'staff', 'Der Stab sperrt den unmittelbaren Zugang.'],
-      ['gebundener-aufprall', 'Gebundener Aufprall', 'mace', 'Der kurze Kolbenhieb stört die gegnerische Waffenlinie.'],
-      ['drei-ruhende-spitzen', 'Drei ruhende Spitzen', 'trident', 'Der Dreizack bleibt ruhig, während der eigene Stand neu gefasst wird.'],
-      ['grundschlag-des-stabes', 'Grundschlag des Stabes', 'staff', 'Ein gerader Schlag löst sich aus ruhiger Haltung.'],
-      ['versperrte-linie', 'Versperrte Linie', 'trident', 'Die Zinken nehmen dem Gegner Raum für seine Antwort.'],
-      ['kolbenwacht', 'Kolbenwacht', 'mace', 'Der Derwyn widmet Griff und Körper allein der Deckung.'],
-      ['saphirantwort', 'Saphirantwort', 'staff', 'Ein schwerer physischer Stabschlag endet vor der eigenen offenen Flanke.'],
-      ['bewahrer-der-schwelle', 'Bewahrer der Schwelle', 'mace', 'Ein einzelner Meisterhieb und eine geschlossene Waffenstellung bewahren den Zugang.']
-    ]
-  }
+
 };
 
 export function getSirenentanzExpertTechniques(classId) {
+  if (classId === 'derwyn') return getDerwynExpertTechniques();
   return Object.entries(routes[classId] || {}).flatMap(([path, entries]) => entries.map(([slug, name, weapon, description, options = {}], index) =>
     createSirenentanzTechnique(classId, { ...lessons[path][index], ...options, slug, name, weapon, description, formId: F[path] })
   ));

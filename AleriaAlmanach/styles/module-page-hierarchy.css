@@ -282,10 +282,19 @@
   overflow: auto;
 }
 
+.hierarchy-sidebar > .module-embedded-comments {
+  flex-shrink: 0;
+}
+
 .hierarchy-side-head {
   display: grid;
   grid-template-columns: minmax(7rem, 38%) minmax(0, 1fr);
   gap: 1rem;
+}
+
+.hierarchy-side-head > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .hierarchy-side-image,

@@ -30,7 +30,7 @@ const definitions = getCenyrClassDefinitions();
 const root = new URL('../', import.meta.url);
 const culture = JSON.parse(await readFile(new URL('Cenyr/kultur.json', root), 'utf8'));
 const sourcePassages = { milwr: 'Fundament des cenyrischen Heeres', teulu: 'Vom Becher und vom Durst', cantref: 'Hundertschaft des Landes', uchelwyr: 'Ritter des hohen Sattels', helwyr: 'Offiziere, Bannerträger, Engstellen', arthwyr: 'Tanz der Bärenklaue', barddwyr: 'Haus Ceirwyn O’Calon' };
-const trainingPassages = { milwr: '9 Slots bis Stufe 20', teulu: '24 Slots bis Stufe 20', cantref: 'Hellebarde', uchelwyr: 'Tanz des Satteldrachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
+const trainingPassages = { milwr: '9 Slots bis Stufe 20', teulu: '24 Slots bis Stufe 20', cantref: 'Hellebarde', uchelwyr: 'Tanz des stürmenden Drachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
 
 test('seven cultural pages preserve supplied lore, artwork proportions and local navigation', async () => {
   for (const definition of definitions) {
@@ -55,20 +55,20 @@ test('seven cultural pages preserve supplied lore, artwork proportions and local
 
 test('class curricula separate foundation, free training and selectable paths with complete attack pools', () => {
   const canonical = getCombatStyle('drachentanz');
-  assert.equal(canonical.forms.length, 15);
+  assert.equal(canonical.forms.length, 20);
   assert.deepEqual(canonical.forms.slice(0, 3).map(form => form.kind), ['foundation', 'duelist', 'path']);
   assert.deepEqual(canonical.forms.slice(2, 7).map(form => form.techniqueLevelBand), Array(5).fill({ minimum: 9, maximum: 20 }));
   assert.equal(canonical.forms[1].shortName, 'Freie Vertiefung');
   assert.deepEqual(canonical.forms[1].techniqueLevelBand, { minimum: 7, maximum: 8 });
   assert.equal(canonical.forms[2].shortName, 'Tanz des Schwertdrachens');
-  assert.equal(canonical.forms[2].techniques.length, 12);
+  assert.equal(canonical.forms[2].techniques.length, 24);
   assert(canonical.forms[2].techniques.every(technique => technique.maximumTargets === 1));
   assert.equal(canonical.forms.some(form => /zornigen/i.test(form.shortName)), false);
   assert.equal(canonical.forms.at(-3).shortName, 'Tanz des Drachlings');
   assert.equal(canonical.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(canonical.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
   const expectedBudgets = { milwr: 9, teulu: 24, cantref: 14, uchelwyr: 16, helwyr: 12, arthwyr: 14, barddwyr: 8 };
-  const expectedCatalogSizes = { milwr: 9, teulu: 95, cantref: 87, uchelwyr: 112, helwyr: 84, arthwyr: 92, barddwyr: 48 };
+  const expectedCatalogSizes = { milwr: 9, teulu: 95, cantref: 38, uchelwyr: 65, helwyr: 145, arthwyr: 98, barddwyr: 48 };
   for (const definition of definitions) {
     const plan = getCenyrClassProgression(definition.id, 20);
     assert.equal(plan.levels.length, 20);
@@ -88,20 +88,21 @@ test('class curricula separate foundation, free training and selectable paths wi
   assert.equal(getCenyrClassProgression('arthwyr', 6).styles[0].forms.find(form => form.shortName === 'Tanz des brüllenden Drachens').available, true);
   assert.equal(getCenyrClassDefinition('helwyr').techniquePool.ratioToTeulu, 0.5);
   assert.deepEqual(getCenyrClassProgression('barddwyr', 9).pathOptions.filter(path => path.eligible).map(path => path.shortName), [
-    'Tanz des Schwertdrachens', 'Tanz des abwartenden Drachens', 'Tanz des fliegenden Drachens', 'Tanz des ausgeglichenen Drachens', 'Tanz des kreischenden Drachens'
+    'Tanz des Schwertdrachens', 'Tanz des kreischenden Drachens'
   ]);
-  assert.deepEqual(getCenyrClassProgression('barddwyr', 9).pathOptions.filter(path => path.blocked).map(path => path.shortName), [
-    'Tanz des brüllenden Drachens', 'Tanz des aufsteigenden Drachens', 'Tanz des Zwillingsdrachens',
-    'Tanz des Satteldrachens', 'Tanz des Lanzendrachens', 'Tanz des Bogendrachens'
-  ]);
-  assert.equal(getCenyrClassProgression('cantref', 9).styles[0].forms.find(form => form.id === FORM_IDS.schwertdrache).shortName, 'Tanz des Speerdrachens');
-  assert.equal(getCenyrClassProgression('uchelwyr', 9).styles[0].forms.find(form => form.id === FORM_IDS.schwertdrache).shortName, 'Tanz des Speerdrachens');
+  assert.deepEqual(getCenyrClassProgression('barddwyr', 9).pathOptions.filter(path => path.blocked), []);
+  for (const classId of ['cantref', 'uchelwyr']) {
+    const paths = getCenyrClassProgression(classId, 9).pathOptions;
+    assert.equal(paths[0].id, FORM_IDS.speerdrache);
+    assert.equal(paths[0].shortName, 'Tanz des Speerdrachens');
+    assert.equal(paths.some(path => path.id === FORM_IDS.schwertdrache), false);
+  }
   assert.equal(getCenyrClassProgression('teulu', 6).availableAttacks.length, 10);
 });
 
-test('all 249 attack designs are complete, level-valid and safely kept in draft', () => {
+test('all registered attack designs are complete, level-valid and safely kept in draft', () => {
   const techniques = getCombatStyle('drachentanz').forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 249);
+  assert.equal(techniques.length, 297);
   assert.equal(new Set(techniques.map(technique => technique.id)).size, techniques.length);
   for (const technique of techniques) {
     assert(technique.name && technique.description && technique.effect && technique.requirements, technique.id);
@@ -109,7 +110,8 @@ test('all 249 attack designs are complete, level-valid and safely kept in draft'
     assert(technique.costs.length > 0, technique.id);
     if (technique.status === 'draft') {
       const light = technique.costs.length === 1 && technique.costs[0].resourceId === 'bonus-action';
-      assert.equal(technique.damageModel.mode, light ? 'fixed' : 'weapon-dice', technique.id);
+      const support = !technique.effects.some(effect => effect.type === 'damage');
+      assert.equal(technique.damageModel.mode, light || support ? 'fixed' : 'weapon-dice', technique.id);
       if (light) assert.equal(technique.damageFormula, '1d6', technique.id);
       assert(technique.cenyrTraining.allowedClassIds.length > 0, technique.id);
     }
@@ -123,7 +125,7 @@ test('all 249 attack designs are complete, level-valid and safely kept in draft'
     }
   }
   const drafts = techniques.filter(technique => technique.status === 'draft');
-  assert.equal(drafts.length, 239);
+  assert.equal(drafts.length, 281);
   const experts = drafts.filter(technique => technique.minimumLevel >= 13 && technique.cenyrTraining.slotBands.includes('expert'));
   assert(experts.some(technique => technique.costs.every(cost => ['action', 'bonus-action', 'reaction'].includes(cost.resourceId))), 'Auch erfahrene Figuren behalten erneuerbare Expertenattacken');
   assert(experts.filter(technique => technique.minimumLevel === 20).every(technique => technique.costs.some(cost => cost.resourceId === 'special-action')), 'Meisterabschlüsse benötigen Tagesressourcen');
@@ -135,15 +137,15 @@ test('class-specific attack quotas preserve each Cenyr combat identity', () => {
   assert.equal(mounted.length, 16);
   assert.equal(mounted.filter(technique => technique.combatStyleFormId === FORM_IDS.jungdrache).length, 2);
   assert.equal(mounted.filter(technique => technique.combatStyleFormId === FORM_IDS.vertiefung).length, 2);
-  assert.equal(mounted.filter(technique => technique.combatStyleFormId === FORM_IDS.satteldrache).length, 12);
+  assert.equal(mounted.filter(technique => [FORM_IDS.stuermender, FORM_IDS.schweifender].includes(technique.combatStyleFormId)).length, 12);
   const borrowedCantref = uchelwyr.attackCatalog.filter(technique => technique.id.startsWith('combat-style-drachentanz-cantref-')
     && technique.cenyrTraining.allowedClassIds.includes('cantref'));
   assert.equal(borrowedCantref.length, 5);
   assert(borrowedCantref.every(technique => technique.cenyrTraining.classWeaponProfiles.uchelwyr?.includes('lance')));
 
   const helwyr = getCenyrClassProgression('helwyr', 20);
-  assert.equal(helwyr.attackCatalog.filter(technique => technique.cenyrTraining.slotBands.includes('expert')).length, 66);
-  assert.equal(helwyr.attackCatalog.filter(technique => technique.combatStyleFormId === FORM_IDS.bogendrache).length, 12);
+  assert.equal(helwyr.attackCatalog.filter(technique => technique.cenyrTraining.slotBands.includes('expert')).length, 127);
+  assert.equal(helwyr.attackCatalog.filter(technique => technique.combatStyleFormId === FORM_IDS.lauernder).length, 14);
   assert.equal(helwyr.attackCatalog.filter(technique => technique.combatStyleFormId === FORM_IDS.zwillingsdrache).length, 12);
   assert.equal(helwyr.attackCatalog.filter(technique => technique.combatStyleFormId === FORM_IDS.schwertdrache).length, 12);
 
@@ -173,9 +175,9 @@ test('path dependencies, exclusive paths and equipment requirements fail closed'
   assert.equal(rising.ok, true);
   assert.equal(rising.selection.spentTechniqueSlotId, 'expert-01');
 
-  for (const [classId, formId] of [['uchelwyr', FORM_IDS.satteldrache], ['cantref', FORM_IDS.lanzendrache], ['helwyr', FORM_IDS.bogendrache]]) {
+  for (const [classId, formId] of [['uchelwyr', FORM_IDS.stuermender], ['cantref', FORM_IDS.speerdrache], ['helwyr', FORM_IDS.lauernder]]) {
     assert(getCenyrClassProgression(classId, 9).pathOptions.some(path => path.id === formId && path.eligible));
-    assert(getCenyrClassProgression('teulu', 9).pathOptions.some(path => path.id === formId && path.blocked));
+    assert.equal(getCenyrClassProgression('teulu', 9).pathOptions.some(path => path.id === formId), false);
   }
 
   const twin = getCenyrClassProgression('helwyr', 20).attackCatalog.find(technique => technique.combatStyleFormId === FORM_IDS.zwillingsdrache);
@@ -189,7 +191,7 @@ test('path dependencies, exclusive paths and equipment requirements fail closed'
   assert.equal(resolveCenyrTechniqueWeaponRules({ ...teulu, armorItems: [{ id: 'shield', kind: 'shield', equipped: true }] }, shield, { weaponType: 'sword', weaponProfileId: 'sword' }).compatible, true);
 
   const spearDragonDuel = getCenyrClassProgression('cantref', 20).attackCatalog
-    .find(technique => technique.combatStyleFormId === FORM_IDS.schwertdrache);
+    .find(technique => technique.combatStyleFormId === FORM_IDS.speerdrache);
   const halberdDuel = resolveCenyrTechniqueWeaponRules(
     { templateSelections: { classId: 'cantref' }, progression: { level: 20 } },
     spearDragonDuel,

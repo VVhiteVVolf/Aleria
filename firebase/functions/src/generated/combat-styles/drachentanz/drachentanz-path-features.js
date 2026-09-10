@@ -1,4 +1,4 @@
-import { DRACHENTANZ_FORM_IDS as F } from './drachentanz-ids.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_FORM_IDS as F } from './drachentanz-ids.js?v=20260909-dragon-parent-v2';
 
 function feature(id, name, minimumLevel, description, mechanics = {}) {
   return Object.freeze({ id, name, minimumLevel, description, mechanics: Object.freeze({ ...mechanics }) });
@@ -82,38 +82,45 @@ const FEATURES = Object.freeze({
       'Der Trefferbonus steigt auf +2 und ersetzt +1. Zusätzliche Angriffe oder Ressourcen entstehen dadurch nicht.',
       { attackBonus: 2, requiresDualWield: true })
   ]),
-  [F.satteldrache]: Object.freeze([
-    feature('satteldrache-hoher-sitz', 'Hoher Sitz', 9,
-      'Berittene Techniken dieses Pfades erhalten +1 auf den Trefferwurf; abgesessen ist der Pfad nicht einsetzbar.',
-      { attackBonus: 1, requiresMounted: true }),
-    feature('satteldrache-eins-mit-dem-ross', 'Eins mit dem Ross', 15,
-      'Die erste Eigenbewegung einer Technik dieses Pfades darf 2 Meter weiter führen.',
-      { movementBonus: 2, requiresMounted: true }),
-    feature('satteldrache-hochkoeniglicher-anritt', 'Hochköniglicher Anritt', 20,
-      'Der Trefferbonus steigt auf +2 und ersetzt +1; er gilt weiterhin ausschließlich beritten.',
-      { attackBonus: 2, requiresMounted: true })
+  [F.speerdrache]: Object.freeze([
+    feature('speerdrache-steter-fluss', 'Steter Fluss', 9, 'Die flüssige Speerführung gewährt +1 Angriff mit Techniken dieser Form.', { attackBonus: 1 }),
+    feature('speerdrache-albischer-schritt', 'Albischer Schritt', 15, 'Die erste Eigenbewegung einer Technik darf 1 Meter weiter führen.', { movementBonus: 1 }),
+    feature('speerdrache-endloser-reigen', 'Endloser Reigen', 20, 'Der Trefferbonus steigt auf +2 und ersetzt +1.', { attackBonus: 2 })
   ]),
-  [F.lanzendrache]: Object.freeze([
-    feature('lanzendrache-gesetzte-spitze', 'Gesetzte Spitze', 9,
-      'Lanzentechniken dieses Pfades behandeln die Zielverteidigung als 1 Punkt niedriger. Dies ersetzt denselben Bonus der gewöhnlichen Lanzenregel.',
-      { weaponRuleTargetDefenseModifier: -1, requiresWeaponProfileId: 'lance' }),
-    feature('lanzendrache-durchgehende-linie', 'Durchgehende Linie', 15,
-      'Nach mindestens 3 Metern geradem Anlauf verursachen Techniken dieses Pfades +2 Schaden; der Anlauf wird erzählerisch und durch die Szene geprüft.',
-      { damageBonus: 2, requiresWeaponProfileId: 'lance', requiresCharge: true }),
-    feature('lanzendrache-koenigsspitze', 'Königsspitze', 20,
-      'Der Anlaufbonus steigt auf +4 Schaden und ersetzt +2.',
-      { damageBonus: 4, requiresWeaponProfileId: 'lance', requiresCharge: true })
+  [F.peitschender]: Object.freeze([
+    feature('peitschender-explosive-spitze', 'Explosive Spitze', 9, 'Die aggressive Speerführung gewährt +2 Schaden, öffnet die Deckung danach jedoch bis zum nächsten eigenen Beitrag um 1 Rüstungsklasse.', { damageBonus: 2, afterTechniqueArmorClass: -1 }),
+    feature('peitschender-rascher-ausbruch', 'Rascher Ausbruch', 15, 'Die erste Eigenbewegung einer Technik darf 1 Meter weiter führen.', { movementBonus: 1 }),
+    feature('peitschender-vollendeter-ausbruch', 'Vollendeter Ausbruch', 20, 'Der Schadensbonus steigt auf +3 und ersetzt +2; die offene Deckung bleibt bestehen.', { damageBonus: 3, afterTechniqueArmorClass: -1 })
   ]),
-  [F.bogendrache]: Object.freeze([
-    feature('bogendrache-ruhige-sehne', 'Ruhige Sehne', 9,
-      'Bogenangriffe dieses Pfades ignorieren 1 Punkt Zielverteidigung. Der allgemeine Fernkampfbonus des Helwyr wird weiterhin nur einmal addiert.',
-      { targetDefenseModifier: -1, requiresRangedWeapon: true }),
-    feature('bogendrache-jagdschritt', 'Jagdschritt', 15,
-      'Die erste in einer Bogenattacke genannte Eigenbewegung pro Beitrag darf 2 Meter weiter führen.',
-      { movementBonus: 2, requiresRangedWeapon: true }),
-    feature('bogendrache-fernes-auge', 'Fernes Auge', 20,
-      'Techniken dieses Pfades sind bei einer natürlichen 19 oder 20 kritisch.',
-      { criticalThreshold: 19, requiresRangedWeapon: true })
+  [F.huetender]: Object.freeze([
+    feature('huetender-sparsame-wehr', 'Sparsame Wehr', 9, 'Nach einer Technik gewährt die geschlossene Speerlinie bis zum nächsten eigenen Beitrag +1 Rüstungsklasse.', { afterTechniqueArmorClass: 1 }),
+    feature('huetender-langer-atem', 'Langer Atem', 15, 'Die Speerlinie gewährt +2 statt +1 Rüstungsklasse; sie erzeugt keine zusätzlichen Aktionen.', { afterTechniqueArmorClass: 2 }),
+    feature('huetender-unermuedliche-schwelle', 'Unermüdliche Schwelle', 20, 'Die Speerlinie gewährt +3 statt +2 Rüstungsklasse.', { afterTechniqueArmorClass: 3 })
+  ]),
+  [F.stuermender]: Object.freeze([
+    feature('stuermender-hoher-sitz', 'Hoher Sitz', 9, 'Berittene Techniken erhalten +1 Angriff; abgesessen ist die Form nicht einsetzbar.', { attackBonus: 1, requiresMounted: true }),
+    feature('stuermender-eins-mit-dem-ross', 'Eins mit dem Ross', 15, 'Die erste Eigenbewegung einer Technik darf beritten 2 Meter weiter führen.', { movementBonus: 2, requiresMounted: true }),
+    feature('stuermender-hochkoeniglicher-anritt', 'Hochköniglicher Anritt', 20, 'Der berittene Trefferbonus steigt auf +2 und ersetzt +1.', { attackBonus: 2, requiresMounted: true })
+  ]),
+  [F.schweifender]: Object.freeze([
+    feature('schweifender-offene-flanke', 'Offene Flanke', 9, 'Die offensive Waffenführung erhält +1 Angriff.', { attackBonus: 1 }),
+    feature('schweifender-weiter-bogen', 'Weiter Bogen', 15, 'Die erste Eigenbewegung einer Technik darf 2 Meter weiter führen.', { movementBonus: 2 }),
+    feature('schweifender-horizont', 'Ungebrochener Horizont', 20, 'Der Trefferbonus steigt auf +2 und ersetzt +1.', { attackBonus: 2 })
+  ]),
+  [F.lauernder]: Object.freeze([
+    feature('lauernder-ruhige-sehne', 'Ruhige Sehne', 9, 'Bogenangriffe dieser Form behandeln die Zielverteidigung als 1 Punkt niedriger. Der allgemeine Fernkampfbonus des Helwyr wird nur einmal addiert.', { targetDefenseModifier: -1, requiresRangedWeapon: true }),
+    feature('lauernder-geordneter-rueckzug', 'Geordneter Rückzug', 15, 'Die erste Eigenbewegung einer Technik darf 1 Meter weiter führen, auch mit dem Schwert als Zweitwaffe.', { movementBonus: 1 }),
+    feature('lauernder-fernes-auge', 'Fernes Auge', 20, 'Bogenangriffe dieser Form sind bei natürlicher 19–20 kritisch.', { criticalThreshold: 19, requiresRangedWeapon: true })
+  ]),
+  [F.jagender]: Object.freeze([
+    feature('jagender-wechselnder-winkel', 'Wechselnder Winkel', 9, 'Die erste Eigenbewegung einer Technik darf 1 Meter weiter führen. Verbergen und das Anlegen eines Hinterhalts bleiben eigene Proben.', { movementBonus: 1 }),
+    feature('jagender-sicherer-fang', 'Sicherer Fang', 15, 'Techniken dieser Form erhalten +1 Angriff.', { attackBonus: 1 }),
+    feature('jagender-vollendete-spur', 'Vollendete Spur', 20, 'Die erste Eigenbewegung darf 2 statt 1 Meter weiter führen.', { movementBonus: 2 })
+  ]),
+  [F.baerenklaue]: Object.freeze([
+    feature('baerenklaue-schwerer-griff', 'Schwerer Griff', 9, 'Techniken der Bärenklaue verursachen +1 Schaden.', { damageBonus: 1 }),
+    feature('baerenklaue-fester-leib', 'Fester Leib', 15, 'Nach einer Technik bleibt bis zum nächsten eigenen Beitrag +1 Rüstungsklasse bestehen.', { afterTechniqueArmorClass: 1 }),
+    feature('baerenklaue-uralte-kraft', 'Uralte Kraft', 20, 'Der Schadensbonus steigt auf +2 und ersetzt +1.', { damageBonus: 2 })
   ]),
   [F.drachling]: Object.freeze([
     feature('drachling-rauer-griff', 'Rauer Griff', 6,

@@ -1,6 +1,6 @@
 import { getActionPaymentCosts } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-import { getActionGroups } from './combat-action-card.js?v=20260905-party-combat-v1';
+import { getActionGroups } from './combat-action-card.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);

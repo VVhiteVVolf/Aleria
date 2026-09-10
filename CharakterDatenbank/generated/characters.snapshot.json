@@ -72102,8 +72102,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -72296,29 +72294,20 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": true,
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
-                  "sword",
-                  "lance"
+                "helwyr": [
+                  "sword"
                 ],
                 "arthwyr": [
                   "greatsword",
@@ -72351,8 +72340,6 @@
             "activationType": "reaction",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -72549,27 +72536,19 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
+              "weaponRuleSetId": "",
               "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
+                "helwyr": [
                   "sword"
                 ],
                 "arthwyr": [
@@ -72603,8 +72582,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -72757,29 +72734,20 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": true,
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
-                  "sword",
-                  "lance"
+                "helwyr": [
+                  "sword"
                 ],
                 "arthwyr": [
                   "greatsword",
@@ -72812,8 +72780,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -72966,27 +72932,19 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
+              "weaponRuleSetId": "",
               "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
+                "helwyr": [
                   "sword"
                 ],
                 "arthwyr": [
@@ -73020,8 +72978,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -73176,29 +73132,20 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": true,
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
-                  "sword",
-                  "lance"
+                "helwyr": [
+                  "sword"
                 ],
                 "arthwyr": [
                   "greatsword",
@@ -73432,30 +73379,18 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": true,
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
               "requiresMounted": false,
+              "singleTargetOnly": true,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
                 "helwyr",
                 "arthwyr",
                 "barddwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
-                  "sword"
-                ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
-                  "lance",
                   "sword"
                 ],
                 "helwyr": [
@@ -73495,8 +73430,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -73658,29 +73591,20 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
-              "uchelwyrCompatible": true,
+              "weaponRuleSetId": "",
+              "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
-                  "sword",
-                  "lance"
+                "helwyr": [
+                  "sword"
                 ],
                 "arthwyr": [
                   "greatsword",
@@ -73713,8 +73637,6 @@
             "activationType": "action",
             "weaponTypes": [
               "sword",
-              "spear",
-              "polearm",
               "axe",
               "mace"
             ],
@@ -73949,27 +73871,19 @@
             },
             "cenyrTraining": {
               "branchId": "",
-              "weaponRuleSetId": "cantref-polearm",
+              "weaponRuleSetId": "",
               "uchelwyrCompatible": false,
               "requiresMounted": false,
               "allowedClassIds": [
                 "teulu",
-                "cantref",
-                "uchelwyr",
+                "helwyr",
                 "arthwyr"
               ],
               "classWeaponProfiles": {
                 "teulu": [
                   "sword"
                 ],
-                "cantref": [
-                  "spear",
-                  "lance",
-                  "partisan",
-                  "trident",
-                  "halberd"
-                ],
-                "uchelwyr": [
+                "helwyr": [
                   "sword"
                 ],
                 "arthwyr": [
@@ -74623,7 +74537,7 @@
         "recordId": "character--tmfBA2zPTc88EMMGkyyA",
         "path": "records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
         "schemaVersion": 1,
-        "contentHash": "fad1634f0326000bfa494c3df7ccaf7495ed74f5f277b590816f0729fbc4d7d8",
+        "contentHash": "652f8d116c521505c77a1ffcf2b09df35804767922711d5b0f171f2ce5dbc827",
         "firestoreDocumentIds": [
           "tmfBA2zPTc88EMMGkyyA",
           "tmfBA2zPTc88EMMGkyyA"

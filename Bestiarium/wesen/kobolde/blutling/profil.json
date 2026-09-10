@@ -1,0 +1,178 @@
+{
+  "id": "blutling",
+  "name": "Blutling",
+  "classification": "Animalischer Kobolddämon und niederer Diener Bhaals",
+  "continent": "Infernale Sphären",
+  "region": "Der Blutabyss",
+  "folio": "IV / 01-D",
+  "parentGroupId": "kobolde",
+  "summary": "Blutlinge sind Bhaals kleine, animalische Ebenbilder. Bleiche Körper, Ziegenhörner und rot glühende Augen begleiten einen unstillbaren Blutdurst; in Rudeln hetzen sie Eindringlinge, reißen ihre Beute mit Klauen und Zähnen nieder und kennen weder Gnade noch Verhandlung.",
+  "quote": "Hörst du erst das Fauchen, hat das Rudel dich längst gerochen; hörst du gar nichts mehr, beginnt bereits die Jagd.",
+  "quoteAttribution": "Überlieferte Mahnung aus Berichten über den Blutabyss",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Blutling"
+    },
+    {
+      "label": "Typ",
+      "value": "Koboldartiger Dämon und primitiver Diener Bhaals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Bhaals Verderbnis und Blutmagie als kleines Ebenbild geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Der Blutabyss, Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verfluchte Regionen, dunkle Höhlen, Ruinen und unheilige Schreine"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Wild, territorial, grausam und in Rudeln jagend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Ungebunden; Dunkelheit wird bevorzugt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Klauen- und Bissangriffe, starke Instinkte und Rudeljagd"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähigkeit, Furchtlosigkeit und überwältigender Rudeldruck"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sehr geringer Verstand, fehlende Organisation und berechenbarer Jagdtrieb"
+    },
+    {
+      "label": "Beute",
+      "value": "Blut und Fleisch der Opfer"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Blutdurst",
+      "Rudeljagd",
+      "Klauenhärte",
+      "Furchtlosigkeit",
+      "Fährteninstinkt",
+      "Verstand"
+    ],
+    "values": [
+      10,
+      9,
+      7,
+      10,
+      8,
+      1
+    ],
+    "source": "Aus Bluttrieb, animalischem Körperbau, Rudelverhalten, Jagdinstinkt und dem nahezu fehlenden vernünftigen Denken abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Blutling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blutlinge gelten als die roheste koboldartige Ausprägung infernaler Verderbnis. Bhaal formte sie nicht als geschickte Diener, sondern als lebende Verkörperung von Hunger, Chaos und blutiger Zerstörung."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre krankhaft bleichen oder grauen Körper tragen nur schütteres Fell. Ziegenhörner, glühend rote Augen, lange Klauen und scharfe Zähne prägen die gedrungene Gestalt, die sich bei der Jagd häufig auf allen vieren bewegt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie kennen kaum mehr als Hunger, Revier und Rudel. Mit Grunzen und Fauchen treiben sie einander an, kreisen Beute ein und greifen ohne Warnung an. Gnade, Drohung oder ein Handel erreichen sie nicht."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blutlinge hausen im Blutabyss und an verfluchten Orten, in dunklen Höhlen, zerfallenen Ruinen oder unheiligen Schreinen. Jede Deckung, die einen überraschenden Sprung erlaubt, wird gegenüber offenem Gelände bevorzugt."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klauen und Zähne sind ihre einzigen Waffen, doch Zähigkeit, Geruchssinn und Rudeldruck machen sie gefährlich. Ihre Angriffe wirken chaotisch, folgen im Rudel aber dem einfachen Muster von Hetze, Einkreisung und gemeinsamem Niederreißen."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Rudel darf nicht die Flanken erreichen. Licht, Abstand und eine geschlossene Formation begrenzen seine Angriffswinkel; vorbereitete Gegner können den immer gleichen Jagdtrieb gegen die Tiere wenden und sie in kontrollierte Engstellen locken."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Blutlinge untersuchen frische Blutspuren selbst dann, wenn sie eine offensichtliche Falle wittern.",
+            "Ein einzelnes Tier wirkt oft unruhig und sucht sofort nach dem nächsten Rudel.",
+            "Ihre Reviere lassen sich an tiefen Kratzspuren und verstreuten Knochen erkennen."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/blutling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Blutling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/blutling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Blutling",
+    "caption": "Überlieferte Bildtafel · Blutling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

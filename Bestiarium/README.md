@@ -19,6 +19,8 @@ Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direk
 - `modules/pet-profile`: gemeinsame Darstellung der Hunde- und Katzenprofile mit Rassenblatt als rechter Randspalte, Rassendiagramm, unbeschnittenen Einsatzbildern und Dossiernavigation.
 - `modules/dog-profile` und `modules/cat-profile`: tierartspezifische Register, Archivtexte und Generator-Anbindung auf Basis der gemeinsamen Profilvorlage.
 - `modules/reptile-profile`: gemeinsame Darstellung und Generator-Anbindung für Drúchtán, seine verwandten Linien und weitere Reptiliendossiers.
+- `modules/field-guide-profile`: gemeinsame Dossierdarstellung für Kreaturengruppen und Einzelarten mit rechter Wissenswertes-Spalte, Bildtafeln und frei benennbaren Vergleichswerten.
+- `modules/creature-group-profile`, `modules/kobold-profile`, `modules/ogroid-profile`, `modules/vampire-profile` und `modules/bloodsucker-profile`: Register, Kontext und Generator-Anbindung für Gruppenübersichten sowie die einzelnen infernalen Linien und vampirischen Sprosse.
 - `modules/image-gallery`: unabhängige Bildgalerie mit Großansicht, Blätterfunktion und Tastaturbedienung.
 - `bestiarium-page.js`: verbindet die Module und das Kapitelregister. Die Module verwalten ihren eigenen DOM-Bereich und Zustand.
 
@@ -48,6 +50,8 @@ Galerie-Bildlinks tragen `data-bestiary-image-link`. Die Vite-Konfiguration beha
 Die frühere Bestiarium-Seite und ihre ausschließlich dort verwendeten Dateien wurden entfernt. Verzeichnisse und Portalseiten verweisen einheitlich auf `Bestiarium/index.html`; Animexx-Verlinkungen wurden nicht übernommen.
 
 ## Wiederverwendbare Themenseiten
+
+Der Literaturverweis **„Das Wesen des Infernalen“** führt auf `themen/wesen-des-infernalen/index.html`. Er verwendet dasselbe Themenregister und denselben Generator, mit `presentation: "book"` als wiederverwendbarer Buchvariante. Die 44 überlieferten Absätze und fünf Buchkapitel stehen als normales HTML sowie als blätterbares Pergamentbuch zur Verfügung. Architektur, Datenformat, Lizenzen, Abnahme und Grenzen sind in [modules/book-reader/README.md](modules/book-reader/README.md) dokumentiert.
 
 Die sechs Einträge „Kalpa & Morgath“, „Risse & Manât“, „Geweihte“, „Gefallene“, „Celestiale“ und „Infernale“ in der Sphärenkunde führen auf ausgearbeitete lokale Seiten unter `themen/`. Ihre redaktionellen Quellen liegen jeweils als `thema.json` neben dem erzeugten `index.html`. Abschnitte, Unterkapitel, Merkpunkte und Fakten werden von einer gemeinsamen Vorlage dargestellt; Inhalte ohne überlieferten Text sind sichtbar als noch nicht ausgearbeitet gekennzeichnet.
 
@@ -103,6 +107,66 @@ Zehn Katzenrassen besitzen vollständige Dossiers unter `tiere/vieh/haustiere/ka
 
 Die Katzenseiten entstehen mit `node Bestiarium/scripts/build-cat-profiles.mjs`. Neue Katzenrassendossiers benötigen ein `profil.json` sowie einen Eintrag in `modules/cat-profile/cat-profile-registry.mjs`. Beide Tierarten verwenden `modules/pet-profile`; Änderungen an der gemeinsamen Darstellung müssen daher gegen Hunde und Katzen geprüft werden. Alle 25 ausgearbeiteten Hunde- und Katzenprofile zeigen sechs aus der jeweiligen Lore abgeleitete Vergleichswerte. Das Rassenblatt „Wissenswertes“ steht in breiten Ansichten als Randspalte rechts neben dem eigentlichen Text.
 
+## Kobolddossiers
+
+Die Seite `wesen/gruppen/kobolde/index.html` ordnet zehn überlieferte Linien ihren infernalen Herren zu: Feuerkobold, Leidling, Grimling, Blutling, Hornling, Drachling, Schädling, Racheling, Wunschling und Lustling. Fünf noch unbelegte Stellen der Artenübersicht bleiben als „???“ sichtbar. Jede bekannte Linie besitzt ein eigenes Dossier mit ergänztem Zitat und Trivia, elf Wissenswertes-Einträgen und sechs aus ihrer jeweiligen Lore abgeleiteten Vergleichswerten.
+
+Die transparente Figurenabbildung und das zugehörige Szenenbild bleiben je Dossier getrennte lokale Dateien unter `assets/kobold-profiles/`; beide werden vollständig und ohne Beschnitt dargestellt. Quellen und Maße stehen in `assets/kobold-profile-sources.json`. Die Einzelseiten entstehen mit `node Bestiarium/scripts/build-kobold-profiles.mjs`, die gemeinsame Übersicht mit `node Bestiarium/scripts/build-creature-group-profiles.mjs`.
+
+## Ogroidendossiers
+
+Die Seite `wesen/gruppen/ogroiden/index.html` führt zu fünf überlieferten Linien: Gorak, Ognir, Grimnak, Bhalgar und Zarok. Zehn weitere Stellen bleiben als „???“ erhalten. Die Zarok-Seite berichtigt den offensichtlichen Namensfehler der alten Wissenswertes-Tabelle, die ihn als Ognir bezeichnete. Alle fünf Dossiers besitzen ergänzte Zitate und Trivia sowie eine eigene, aus Fähigkeiten und Schwächen der jeweiligen Linie abgeleitete Archivbewertung.
+
+Die vollständigen Figuren und die getrennten Szenentafeln liegen unter `assets/ogroid-profiles/`; Quellen, Maße und die vorgesehene unbeschnittene Darstellung stehen in `assets/ogroid-profile-sources.json`. Die Einzelseiten entstehen mit `node Bestiarium/scripts/build-ogroid-profiles.mjs`, die gemeinsame Übersicht mit `node Bestiarium/scripts/build-creature-group-profiles.mjs`.
+
+## Vampirdossiers
+
+Die Seite `wesen/gruppen/vampire/index.html` stellt Bhaals blutgebundene Hierarchie in vier getrennten Stufen dar: Der Vampirfürst steht allein an der Spitze, darunter folgen Nosferat, Mula, Alp und Nachzehrer als höhere Vampire. Die geborene Striga steht gesondert zwischen diesen Gattungen und den niederen Blutsaugern. Der Vampirfürst bleibt ohne eigenes Dossier vorgemerkt, neun weitere Archivstellen bleiben als „???“ offen. Die Dossiers der fünf ausgearbeiteten Gattungen übernehmen ihre überlieferten Merkmale und Fähigkeiten; ergänzte Zitate und Trivia folgen der jeweiligen Lore.
+
+Vollständige Figuren, Titelbilder und Szenentafeln werden getrennt und ohne Beschnitt unter `assets/vampire-profiles/` ausgeliefert. Die Nosferat-Szenentafel bleibt mit allen 80 Einzelbildern animiert. Quellen, Maße und Darstellungsart stehen in `assets/vampire-profile-sources.json`. Die Einzelseiten entstehen mit `node Bestiarium/scripts/build-vampire-profiles.mjs`, die gemeinsame Übersicht mit `node Bestiarium/scripts/build-creature-group-profiles.mjs`.
+
+Die anklickbare Blutsaugerstufe führt zu `wesen/gruppen/blutsauger/index.html`. Dort folgen die vier überlieferten Sprossformen Mulinar, Alpyr, Nosphyr und Mortis; eine fünfte Stelle bleibt als „???“ erhalten. Jedes Dossier beschreibt den eigenen Sanguinaris-Erreger, den Wandlungsprozess, Verhalten, Fähigkeiten, Gegenmittel und sechs zur Sprossform passende Vergleichswerte. Die kleinen Figuren stammen aus der gelieferten Übersicht. Für die zuvor bildlosen Dossiers wurden vier quadratische Aquarell- und Buntstiftszenen erstellt. Die korrigierte Nosphyr-Tafel zeigt zwei vollständige Arme, zwei getrennte Flügel und einen mittelalterlichen Ordensritter als Gegner. Bildquellen und Generierungshinweise stehen in `assets/bloodsucker-profile-sources.json`; alle Seiten entstehen mit `node Bestiarium/scripts/build-bloodsucker-profiles.mjs`.
+
+## Besondere Tierexemplare
+
+Neben Sturmbock und Mondläufer besitzt nun auch das Cuimhorn ein vollständiges Dossier unter `tiere/besondere/cuimhorn/`. Das morgornische Gebirgs- und Botentier erhält eigene Vergleichswerte für Personengedächtnis, Orientierung, Trittsicherheit, Botentreue, Ausdauer und Hitzetoleranz. Der nicht überlieferte Preis bleibt als `???` gekennzeichnet. Die bekannten Szenen- und Körperstudien werden getrennt vom neu erzeugten, transparenten Ganzkörper-Icon verwendet und überall ohne Beschnitt dargestellt.
+
+Die Bildquellen und der Generierungshinweis für das Cuimhorn stehen zusammen mit den bisherigen besonderen Tieren in `assets/special-animal-profile-sources.json`. Alle drei Seiten entstehen über das gemeinsame Register mit `node Bestiarium/scripts/build-special-animal-profiles.mjs`.
+
+## Nautiloidendossiers
+
+Die Nautiloidenübersicht verlinkt Thraalkin und Sirenen auf vollständige Dossiers unter `wesen/nautiloiden/`; der Leviathan und alle wirklich unbekannten Stellen bleiben weiterhin vorgemerkt. Beide Artikel übernehmen die gelieferten Texte und getrennten Rollen für Artenfigur, Szenentafel und Zusatzabbildungen. Ihre Diagramme bewerten jeweils passende Merkmale: beim Thraalkin unter anderem Schwarmordnung und Tiefentoleranz, bei den Sirenen Lockgesang, Illusionsmacht und Lebensraub.
+
+Die Sirenen-Galerie enthält beide überlieferten Artenfiguren und alle vier ergänzten Bonusbilder. Sämtliche Bilder liegen lokal unter `assets/nautiloid-profiles/`, ihre Quellen und Maße stehen in `assets/nautiloid-profile-sources.json`. Die Einzelseiten entstehen mit `node Bestiarium/scripts/build-nautiloid-profiles.mjs`; die gemeinsame Übersicht wird weiterhin über den Gruppendossier-Generator gebaut.
+
+## Weitere infernale Gruppen
+
+Die sechs Katalogtafeln Aelvar, Unholde, Nautiloiden, Sylvaniiden, Infestiiden und Psioniden führen nun zu eigenen Gruppendossiers unter `wesen/gruppen/`. Zusammen bewahren sie 70 Stellen der alten Artenraster: 39 benannte Formen mit ihren korrekt zugeordneten Abbildungen und 31 weiterhin offene Einträge als „???“. Untergruppen wie Relikte, einzigartige Unholde, korrumpierte Ahnenwächter oder nautiloide Kreaturen erscheinen als sachliche Registergruppen; sie verwenden keine Rangpfeile. Hierarchische Stufen bleiben den Kreaturenordnungen vorbehalten, deren Lore tatsächlich eine Rangfolge nennt.
+
+Jede Gruppe besitzt ein eigenes Diagramm mit passenden Begriffen, mindestens elf Einträge in der rechten Wissenswertes-Spalte sowie ausgearbeitete Einführung, Hintergründe, Begegnungshinweise und Trivia. Die Psioniden werden deshalb über Schwarmkopplung, Willensdruck und Netzstörung bewertet, die Aelvar über Täuschung, Matronenmacht und Göttinnenbindung und die Unholde über Jagdtrieb, Anpassung und Korruptionsgefahr.
+
+Die 42 gelieferten Bilddateien sowie zwei ergänzte Motive liegen unter `assets/creature-group-profiles/` und werden überall mit `object-fit: contain` und weichem Schlagschatten dargestellt. Das gezeigte Geweihwesen ist dem Tschort zugeordnet. Für den benannten, zuvor bildlosen Leviathan entstand ein vollständiges 2:3-Artenbild; für die Aelvar wurde das fehlende quadratische Themenbild mit drei vollständig sichtbaren Figuren ergänzt. Quellen, Originalmaße und die beiden Generierungshinweise stehen in `assets/creature-group-profile-sources.json`.
+
+## Sylvaniidendossiers
+
+Waldschrat, Erlschrat und Zatrakin besitzen vollständige Einzeldossiers unter `wesen/sylvaniiden/`. Ihre Vergleichswerte folgen der jeweiligen Lore: Der Waldschrat wird nach Reviermacht, Totemrückkehr und Naturflüchen eingeordnet, der Erlschrat nach Zielbindung, Seelenspur und Fluchverderbnis und der Zatrakin nach Jagdkunst, Taktik und Willenskraft. Die Wissenswertes-Spalte steht in breiten Ansichten rechts neben dem Text.
+
+Zarok und Hornling werden aus der Sylvaniidenübersicht mit ihren bereits vorhandenen kanonischen Dossiers bei den Ogroiden beziehungsweise Kobolden verknüpft. Die sechs unbekannten Stellen bleiben `???`. Waldschrat und Zatrakin verwenden ihre gelieferten Szenentafeln; für den bildlosen Erlschrat wurde anhand seiner Artenfigur eine quadratische Aquarell- und Buntstiftszene erzeugt. Quellen, Maße und Generierungsangaben stehen in `assets/sylvanid-profile-sources.json`. Die drei Seiten entstehen mit `node Bestiarium/scripts/build-sylvanid-profiles.mjs`.
+
+## Inferniidendossiers
+
+Die Seite `wesen/gruppen/inferniiden/index.html` trennt die Ordnung sichtbar in Dagons Teufelshierarchie und Sanguines Dämonenlinie. In Dagons Zweig stehen die Erzteufel gesondert über Dagonaren und Ignarii, darunter folgen Igniten und Nixhunde sowie Balors Sprösslinge Balgrath und Flickerlinge. Zwei nicht überlieferte Sprösslinge bleiben als `???` offen. Sanguines Zweig beginnt mit dem vorgemerkten Erzdämon, gefolgt von Sukkubus und Inkubus, Formwandlern, Lustlingen und Satyren.
+
+Das Erzteufelregister unter `wesen/gruppen/erzteufel/` bewahrt Asharon, Malekar, Nashira, Tamaraon, Zabaron und Balor mit ihren Fürstentiteln und Aspekten. Neun neue Einzeldossiers liegen unter `wesen/inferniiden/`. Der bereits im Koboldregister ausgearbeitete Lustling bleibt ein gemeinsames kanonisches Dossier und wird aus beiden Übersichten verlinkt, damit seine Lore nicht doppelt gepflegt werden muss.
+
+Alle 29 gelieferten Bilder werden lokal und ohne Beschnitt aus `assets/inferniid-profiles/` ausgeliefert. Die alte Flickerling-Seite verwendete irrtümlich die Balgrath-Szene; sie wurde durch eine neue quadratische Aquarell- und Buntstifttafel mit einem vollständig sichtbaren Flickerling ersetzt. Quellen, Maße und Generierungshinweis stehen in `assets/inferniid-profile-sources.json`. Die Einzelseiten und das Erzteufelregister entstehen mit `node Bestiarium/scripts/build-inferniid-profiles.mjs`, die gemeinsame Übersicht mit `node Bestiarium/scripts/build-creature-group-profiles.mjs`.
+
+## Psionidendossiers
+
+Lenker, Sucher, Lauerer, Schädling, Brütling und Wandler besitzen vollständige Einzeldossiers unter `wesen/psioniden/`. Der Schreibfehler „Laurerer“ aus der alten Tafel wurde dabei auf die bereits in der Übersicht verwendete Form „Lauerer“ berichtigt. Der psionidische Schädling erhält ein eigenes Dossier und bleibt dadurch klar vom gleichnamigen Kobold getrennt; die vier unbekannten Stellen des Gruppenregisters bleiben als `???` erhalten.
+
+Jedes Diagramm beschreibt die jeweilige Schwarmfunktion: beim Lenker geistige Herrschaft und Körperhärte, beim Sucher Archivierung und Magiestörung, beim Lauerer Körperkraft und Willensleere, beim Schädling Zahl und Bauleistung, beim Brütling Entwicklung und beim Wandler Metamorphose. Artenfiguren und Titelbilder werden getrennt, lokal und vollständig dargestellt. Quellen und Maße der sechs gelieferten Titelbilder stehen in `assets/psionid-profile-sources.json`. Die Seiten entstehen mit `node Bestiarium/scripts/build-psionid-profiles.mjs`; die Übersicht wird über den Gruppendossier-Generator gebaut.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -114,6 +178,8 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/catalog.test.mjs`
 
 `node --test Bestiarium/tests/creature-profiles.test.mjs`
+
+`node --test Bestiarium/tests/creature-group-profiles.test.mjs`
 
 `node --test Bestiarium/tests/topic-articles.test.mjs`
 
@@ -132,5 +198,23 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/cat-profiles.test.mjs`
 
 `node --test Bestiarium/tests/reptile-profiles.test.mjs`
+
+`node --test Bestiarium/tests/kobold-profiles.test.mjs`
+
+`node --test Bestiarium/tests/ogroid-profiles.test.mjs`
+
+`node --test Bestiarium/tests/vampire-profiles.test.mjs`
+
+`node --test Bestiarium/tests/bloodsucker-profiles.test.mjs`
+
+`node --test Bestiarium/tests/inferniid-profiles.test.mjs`
+
+`node --test Bestiarium/tests/nautiloid-profiles.test.mjs`
+
+`node --test Bestiarium/tests/special-animal-profiles.test.mjs`
+
+`node --test Bestiarium/tests/sylvanid-profiles.test.mjs`
+
+`node --test Bestiarium/tests/psionid-profiles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.

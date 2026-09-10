@@ -1,0 +1,242 @@
+{
+  "id": "auron",
+  "title": "Auron",
+  "epithet": "Der Erbauer",
+  "kind": "Untergottheit",
+  "summary": "Erfindung, Baukunst und verantwortungsvolles Schaffen.",
+  "symbol": "BilderRüstungen/auron_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Erbauer",
+    "Erfindung",
+    "Baukunst",
+    "verantwortungsvolles Schaffen"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "orin"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Auron, der Erbauer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Auron ist der Gott der Erfinder, Tüftler, Erbauer und Baumeister. Wo ein Mensch eine bessere Lösung sucht, einen verlässlichen Bau errichtet oder aus einem scheinbar nutzlosen Rest ein brauchbares Werkzeug schafft, erkennen seine Anhänger das Wirken des Erbauers. Er steht für die schöpferische Verbindung von Einfall, Können und Verantwortung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Untergottheit führt Auron die aufrichtige Arbeit Tharims und das erkennende Denken Orins zusammen. Im Mythos sitzt er zwischen der Werkbank des Knechts und dem Lesepult des Mentors: Was der eine mit Ausdauer erarbeitet und der andere im Geiste begreift, soll durch ihn eine Form erhalten, die den Menschen dient. Der druidische Beiname „Der Biber“ beschreibt dieselbe Hingabe an das Bauen und Bewahren."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Auron verkörpert Einfallsreichtum, Sorgfalt und Verantwortung. Ein kühner Gedanke erfreut ihn, doch erst die gewissenhafte Ausführung macht aus dem Gedanken ein würdiges Werk. Für ihn trägt der Baumeister Verantwortung für diejenigen, die seine Brücke überqueren, unter seinem Dach schlafen oder seinem Werkzeug vertrauen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er verachtet Pfusch, Täuschung und mutwillige Zerstörung. Eine verborgene Schwachstelle aus Gewinnsucht zu verschweigen, wiegt in seinem Glauben schwerer als ein ehrlich eingestandener Irrtum. Seine Anhänger sollen Fehler untersuchen, beschädigte Werke sichern und Erlerntes weitergeben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Gunst schärft den Blick für Verbindungen, Lasten und Werkstoffe. Sie kann einer Hand größere Ruhe verleihen oder einem erschöpften Geist den entscheidenden Einfall schenken. Auron erschafft jedoch kein Können aus Unwissenheit: Seine Segnungen entfalten sich durch geübte Hände und durch das Verständnis derer, die sie empfangen."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "brauchtum",
+      "title": "Werkstätten und Brauchtum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vor dem ersten Schnitt oder Hammerschlag legen Gläubige ihr Werkzeug auf den noch unvollendeten Plan. Sie bitten um einen klaren Blick und die Geduld, das Werk gewissenhaft zu vollenden. Bei der Übergabe eines Hauses wird ein kleines Zeichen des Zirkels nahe dem Eingang angebracht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gemeinschaftswerkstätten bewahren auch misslungene Werkstücke. An ihnen werden Lehrlinge unterrichtet, damit Fehler zu Erkenntnis werden. Das Ausbessern einer gefährlichen Brücke oder der Bau eines Schutzdaches für Bedürftige gilt als ebenso ehrwürdige Gabe wie ein kunstvoller Tempelbau."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid des redlichen Werkes: Der Jünger gelobt, sein Können ehrlich anzugeben, Werkstoffe nicht betrügerisch zu ersetzen und erkennbare Mängel offenzulegen. Er trägt die Verantwortung für sein Werk auch dann, wenn ein anderer dessen Schwäche noch nicht bemerkt hat.",
+            "Eid der offenen Werkstatt: Der Jünger verpflichtet sich, sein Wissen gewissenhaft an Lernende weiterzugeben, fremde Leistungen anzuerkennen und notwendige Hilfe nicht aus Eitelkeit zu verweigern. Wissen darf bewahrt werden, doch nicht allein dazu dienen, andere in Abhängigkeit zu halten."
+          ]
+        }
+      ],
+      "sharedLore": "eide",
+      "authorship": "continuation"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte & Segen",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt des Werkblicks: Durch die Untersuchung eines Gegenstands erkennt der Jünger Spannungen, Verschleiß und verborgene Bruchstellen leichter. Die Gabe ergänzt sein Handwerk; unbekannte Werkstoffe und fremde Verzauberungen verlangen weiterhin gründliche Prüfung.",
+            "Aspekt des Entwurfs: Ein vertrauter Bauplan lässt sich vor dem inneren Auge räumlich zusammensetzen. Der Jünger kann das Zusammenspiel seiner Teile prüfen und anderen verständlich erklären, ohne dass daraus automatisch ein funktionsfähiges Werk entsteht.",
+            "Segen der ruhigen Hand: Bei sorgfältiger Arbeit werden Zittern, Ablenkung und unnötige Bewegungen gemildert. Die Segnung ist bei feinen Reparaturen und schwierigen Verbindungen hilfreich, ersetzt jedoch weder geeignetes Werkzeug noch notwendige Ruhe.",
+            "Segen des festen Gefüges: Ein fachgerecht gefügtes und im Namen Aurons geweihtes Werk erhält zusätzliche Beständigkeit gegen gewöhnliche Beanspruchung. Offenkundiger Pfusch wird durch diese Gunst nicht verdeckt."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Bund des gemeinsamen Werkes: Meister und Mitwirkende verbinden sich für ein gemeinsames Bauvorhaben. Sie gewinnen ein feineres Gespür für die Arbeitsschritte der anderen und bemerken Unstimmigkeiten im Ablauf. Der Bund verlangt gegenseitiges Vertrauen und zerfällt, wenn Täuschung oder bewusste Sabotage die Zusammenarbeit bestimmen.",
+            "Bund des Bewahrers: Ein besonders bewährter Jünger bindet seine Fürsorge an ein selbst geschaffenes oder wiederhergestelltes Bauwerk. Schwere Beschädigungen können ihn als Unruhe oder drängende Eingebung erreichen. Er bleibt für Pflege und Instandsetzung verantwortlich; der Bund macht das Werk weder unzerstörbar noch von seiner Obhut unabhängig."
+          ]
+        }
+      ],
+      "sharedLore": "buende",
+      "authorship": "continuation"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aurons Gunst schwindet, wenn seine Zeichen einen Betrug decken oder ein Werk wissentlich Menschen gefährdet. Wiedergutmachung bedeutet, den Schaden offenzulegen, Gefährdete zu schützen und nach eigenem Vermögen an der Wiederherstellung mitzuwirken. Ein gesprochenes Schuldbekenntnis ohne Bereitschaft zur Ausbesserung genügt dem Erbauer nicht."
+        }
+      ],
+      "sharedLore": "uebertretungen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Schaffe mit klarem Verstand und verantwortlicher Hand. Ein Werk soll seinem Zweck dienen und denen zugutekommen, die darauf vertrauen. Auron fordert, vor dem Bauen zu verstehen und nach dem Vollenden weiter Verantwortung zu tragen."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Einfallsreichtum öffnet neue Wege, Sorgfalt prüft sie und Verantwortung bestimmt, wohin sie führen. Auron schätzt den geduldigen Lehrling ebenso wie den berühmten Baumeister, solange beide bereit sind, ihre Arbeit ehrlich zu prüfen."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aurons Häuser sind Werkstätten, Bauhütten und Lehrstuben. Pläne, Messgeräte und Musterstücke gehören zu ihren wichtigsten Schätzen. Der Altar kann eine einfache Werkbank sein, auf der ein Zirkel liegt; das eigentliche Zeichen der Verehrung ist die Arbeit, die dort mit Bedacht geschieht."
+        }
+      ],
+      "authorship": "continuation"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Erfindung, Baukunst und verantwortungsvolles Schaffen"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Einfallsreichtum, Sorgfalt und Verantwortung"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Pfusch, Täuschung und mutwillige Zerstörung"
+    },
+    {
+      "label": "Symbol",
+      "value": "Zirkel"
+    },
+    {
+      "label": "Patronat",
+      "value": "Erfinder, Tüftler, Erbauer und Baumeister"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Auron"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Der Erbauer"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Der Biber"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Arvendil"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Aedon"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Aldrun"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Aurion"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "fb99a0d4-d227-4d30-852c-6777e177a015",
+    "sha256": "271aef5232a658969ccd092ad2235d8570db5b3e91060f1eafafbf572cb95c6e",
+    "continuation": "Auf Nutzerwunsch anhand der Domäne, der überlieferten Beinamen und der bestehenden göttlichen Lehre ausgearbeitet."
+  },
+  "portrait": {
+    "src": "assets/divine-art/auron.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Auron, Der Erbauer",
+    "caption": "Auron · Der Erbauer"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Auron",
+      "href": "Religionen/klerus/gottheiten/auron/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

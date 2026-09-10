@@ -1,0 +1,213 @@
+{
+  "id": "wandler",
+  "name": "Wandler",
+  "classification": "Formlose Metamorphose und willenloses Werkzeug Amons",
+  "continent": "Infernale Sphären",
+  "region": "Brutschleimbecken, Verfallsstätten und Zentren der Metamorphose",
+  "folio": "IV / 10-F",
+  "parentGroupId": "psioniden",
+  "summary": "Wandler besitzen keine dauerhafte Gestalt. Sie entstehen aus Brutschleim, zerfallenen Schwarmkörpern oder fehlgeschlagenen Brütlingen und dienen Amon als leere Körperseite für einen neuen Zweck. Ihre Masse kann Gewebe aufnehmen, Merkmale fehlerhaft spiegeln und sich mit anderen Psioniden zu vorübergehenden Formen verbinden.",
+  "quote": "Ein Wandler wird immer das, was du am meisten fürchtest – oder brauchst.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-wandler.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Wandler als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Wandler"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/wandler-hero.webp",
+    "width": 612,
+    "height": 408,
+    "alt": "Wandler vollständig sichtbar als unstete organische Form mit roten Säckchen",
+    "caption": "Überlieferte Bildtafel · Formlose Metamorphose"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Wandler"
+    },
+    {
+      "label": "Typ",
+      "value": "Formlose Metamorphose und willenloses Schwarmwerkzeug"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Erhebt sich aus gedankenloser Masse, Brutschleim oder zerfallenen Körpern"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Fehlgeschlagene Brütlinge sowie sterbende Gedankenmasse von Lauerern und Schädlingen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Amons Domäne, Brutschleimbecken und Zentren der Metamorphose"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Zieht sich träge voran und lässt vergängliche Glieder hinter sich"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos, solange ein formender Impuls oder verwertbare Masse vorhanden ist"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Mutation, Absorption, fehlerhafte Spiegelung und Symbiose"
+    },
+    {
+      "label": "Form",
+      "value": "Niemals stabil; Fleisch, Augen und Glieder wachsen und zerfallen fortwährend"
+    },
+    {
+      "label": "Stärken",
+      "value": "Metamorphose, formlose Anpassung und Verbindung mit Schwarmkörpern"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Richtungslos ohne Lenker und anfällig für fortschreitende Degeneration"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Organische Masse und andere Schwarmwesen für Absorption oder Symbiose"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Metamorphose",
+      "Absorption",
+      "Spiegelung",
+      "Symbiose",
+      "Formstabilität",
+      "Eigenwille"
+    ],
+    "values": [
+      10,
+      9,
+      7,
+      9,
+      1,
+      1
+    ],
+    "intro": "Beim Wandler misst die Tafel die Wege körperlicher Veränderung. Große Anpassungsfähigkeit, Aufnahme und Symbiose beruhen gerade auf dem beinahe vollständigen Fehlen stabiler Form und eigenen Willens.",
+    "source": "Aus ständiger Mutation, Aufnahme fremden Gewebes, unvollständiger Nachahmung, Verschmelzung, Formzerfall und Befehlsabhängigkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Wandler ist reine Metamorphose. Er besitzt weder eine verlässliche Silhouette noch einen eigenen Zweck und wird von Amon oder einem Lenker wie eine leere Seite mit einer neuen Aufgabe überschrieben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Wandelbarkeit macht ihn wertvoll und erschreckend. Was in einem Augenblick unfertig wirkt, kann im nächsten eine nützliche oder gefürchtete Form annehmen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleisch wächst und zerfällt ohne Ruhe. Glieder, Augen, Häute und Säckchen erscheinen, verändern ihre Lage und werden abgestoßen, während sich die Masse träge weiterzieht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hinterlassene Glieder sind kein sicherer Hinweis auf eine Verletzung. Sie können bloß Reste einer Form sein, die der Wandler nicht länger benötigt."
+        }
+      ]
+    },
+    {
+      "id": "entstehung",
+      "title": "Entstehung aus Resten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wandler werden nicht gezielt ausgebrütet. Sie erheben sich aus gedankenloser Suppe, Brutschleim, fehlgeschlagenen Brütlingen oder dem zerfallenden Gewebe anderer Psioniden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch sterbende Gedankenmasse von Lauerern und Schädlingen kann in ihre Bildung eingehen. Dadurch beginnt jeder Wandler als Mischung aus Rest, Möglichkeit und fremdem Befehl."
+        }
+      ]
+    },
+    {
+      "id": "wille",
+      "title": "Formloser Wille",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Wandler besitzt kaum eigene Richtung. Lenker und Amon geben der Masse Zweck, Gestalt und Dauer; ohne diesen Impuls beginnt sie, sich selbst zu verbrauchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Leere erlaubt eine besonders weitreichende Umgestaltung. Der Wandler kann zu einer bekannten Schwarmform werden oder eine nur für eine einzelne Aufgabe brauchbare Gestalt bilden."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Mutation und Absorption",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durch Mutation verändert der Wandler Organe und Glieder. Absorption nimmt fremde organische Masse auf und macht sie zum Material der nächsten Form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beim Spiegeln entstehen Merkmale beobachteter Wesen, jedoch selten fehlerfrei. Proportionen, Zahl der Glieder oder innere Funktionen können unvollständig bleiben."
+        }
+      ]
+    },
+    {
+      "id": "symbiose",
+      "title": "Symbiose im Schwarm",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Wandler kann sich mit einem anderen Schwarmkörper verbinden und dessen Aufgabe vorübergehend verstärken oder verändern. Diese Symbiose ist Werkzeug, Heilung und Umbau zugleich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der beteiligte Körper bleibt dabei nicht zwingend unverändert. Nach der Trennung können fremde Organe, Sinnesleistungen oder Schäden zurückbleiben."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Abwehr",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gegen einen Wandler sind Abstand und Beobachtung entscheidend. Direkter Kontakt liefert ihm Gewebe zur Aufnahme und kann eine neue Anpassung auslösen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wird die lenkende Verbindung unterbrochen, verliert er oft die Richtung. Das senkt seine planvolle Gefahr, beschleunigt aber mitunter den unberechenbaren Zerfall und die Ausbildung fehlerhafter Glieder."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Kein verlässlicher Bericht beschreibt zwei Wandler mit derselben Gestalt.",
+            "Abgeworfene Glieder können noch kurze Zeit zucken oder sich weiter verändern.",
+            "Eine fehlerhafte Spiegelung übernimmt sichtbare Merkmale, aber nicht zwingend deren vollständige Funktion.",
+            "Ohne lenkenden Willen kann ein Wandler sich selbst aufzehren.",
+            "Der Schwarm nutzt ihn als Rohstoff, Reparaturmasse und Ausgangspunkt neuer Aufgaben zugleich."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

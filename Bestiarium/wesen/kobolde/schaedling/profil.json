@@ -1,0 +1,178 @@
+{
+  "id": "schaedling",
+  "name": "Schädling",
+  "classification": "Niederster Schwarmdiener und Knecht Amons",
+  "continent": "Infernale Sphären",
+  "region": "Amons Schwarmimperium",
+  "folio": "IV / 01-G",
+  "parentGroupId": "kobolde",
+  "summary": "Schädlinge sind Amons kleinste und zahlreichste Knechte. In ungezählten Schwärmen pflegen sie Brutstätten, sortieren Runenfragmente und reparieren lebende Tempel; sie sind intelligent, aber ohne eigenen Willen, sprechen in kratzigen Gedankenbildern und gehorchen bis zur Selbstauflösung.",
+  "quote": "Ohne sie würde seine Domäne buchstäblich verrotten, denn jedes große Werk Amons ruht auf tausend unsichtbaren Händen.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Schädling"
+    },
+    {
+      "label": "Typ",
+      "value": "Niederster Diener und Rückgrat des Schwarmimperiums"
+    },
+    {
+      "label": "Entstehung",
+      "value": "In Massen aus feuchten Nestgängen von Amons Domäne geboren"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Amons Domäne und uralte Schattenwelten"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Bibliotheken, Brutstätten, Hallen und Tempel aus lebendigem Fleisch"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Rastlos dienend, kletternd, ordnend und pflegend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; ständig im Dienst"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Gedankensprache, Bau, Pflege, natürliche Tarnung und instinktive Treue"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zahl, Mustererkennung, Anpassung und völlige Loyalität"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Allein hilflos, kampfschwach und ohne Führung degenerierend"
+    },
+    {
+      "label": "Beute",
+      "value": "Keine eigene Beute; sie versorgen andere Schwarmkreaturen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schwarmdienst",
+      "Gedankensprache",
+      "Tarnung",
+      "Baupflege",
+      "Eigenwille",
+      "Einzelkampfkraft"
+    ],
+    "values": [
+      10,
+      7,
+      8,
+      9,
+      1,
+      1
+    ],
+    "source": "Aus Schwarmzahl, telepathischer Verständigung, natürlicher Unauffälligkeit, handwerklichem Dienst und vollständig fehlendem Eigenwillen abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Schädling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schädlinge sind Amons niederste, aber für seine Domäne unentbehrliche Diener. Sie versorgen Brütlinge, ordnen Runenfragmente, errichten kleine Ritualplätze und beseitigen Fehler im lebenden Gewebe des Schwarmimperiums."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der kleine Körper besitzt ledrige, feuchte Haut, goldene Augen und tentakelartige Bartanhänge. Die gedrückte Haltung und unauffällige Färbung lassen ein einzelnes Tier leicht wie einen Schatten oder ein kleines Ungeziefer erscheinen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie besitzen Intelligenz ohne eigenen Willen. Ein Schädling erkennt Muster, speichert Wege und führt Aufgaben genau aus, passt sich aber stets dem nächsten übergeordneten Befehl an. Verrat ist ihm ebenso fremd wie persönlicher Ehrgeiz."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Welt besteht aus Amons Bibliotheken, Brutstätten, Hallen und Tempeln aus lebendigem Fleisch. In den feuchten tiefsten Ebenen liegen die größten Nestgänge, doch dienende Schwärme erreichen jeden Ort, an dem Pflege oder Ordnung nötig ist."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kratzige Gedankensprache übermittelt Befehle, Namen und Wege. Schädlinge bauen kleine Altäre und Brutgruben, pflegen organische Strukturen und entziehen sich durch geringe Präsenz und natürliche Tarnung der Aufmerksamkeit."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Einzelne Schädlinge sind nahezu hilflos. Gefährlich wird ihre Anwesenheit als Hinweis auf einen nahen Schwarm, vorbereitete Ritualstätten oder bereits weitergegebene Beobachtungen; Eindringlinge sollten deshalb Kommunikationswege und Nestzugänge beachten."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Schädlinge sind das Rückgrat von Amons Schwarmimperium; ohne ihre Pflege würde die Domäne verrotten.",
+            "Sie können Wege und Namen speichern, auch wenn sie keinen persönlichen Bezug dazu entwickeln.",
+            "Unter Zwang lösen sie eher den eigenen Körper auf, als ein Geheimnis ihres Meisters preiszugeben."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/schaedling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Schädling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/schaedling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Schädling",
+    "caption": "Überlieferte Bildtafel · Schädling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

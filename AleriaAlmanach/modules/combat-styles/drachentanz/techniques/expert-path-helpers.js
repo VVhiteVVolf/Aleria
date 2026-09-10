@@ -1,19 +1,15 @@
-import { createDrachentanzTechnique } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
+import { createDrachentanzTechnique } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
-export const KNIGHT_PATH_CLASS_IDS = Object.freeze(['teulu', 'cantref', 'uchelwyr', 'arthwyr']);
+export const KNIGHT_PATH_CLASS_IDS = Object.freeze(['teulu', 'helwyr', 'arthwyr']);
 
 const BASE_CLASS_WEAPONS = Object.freeze({
   teulu: ['sword'],
-  cantref: ['spear', 'lance', 'partisan', 'trident', 'halberd'],
-  uchelwyr: ['sword'],
+  helwyr: ['sword'],
   arthwyr: ['greatsword', 'axe', 'battleaxe', 'club', 'mace']
 });
 
 export function pathClassWeapons(uchelwyrLance = false) {
-  return {
-    ...BASE_CLASS_WEAPONS,
-    uchelwyr: uchelwyrLance ? ['sword', 'lance'] : ['sword']
-  };
+  return { ...BASE_CLASS_WEAPONS };
 }
 
 export function createExpertPathTechnique(formId, pathSlug, spec) {
@@ -22,11 +18,11 @@ export function createExpertPathTechnique(formId, pathSlug, spec) {
     slug: `${pathSlug}-${spec.slug}`,
     slotBands: ['expert'],
     tier: spec.minimumLevel >= 17 ? 'Meisterattacke' : (spec.minimumLevel >= 13 ? 'Expertenattacke' : 'Pfadattacke'),
-    weaponRuleSetId: 'cantref-polearm',
-    uchelwyrCompatible: spec.uchelwyrLance === true,
+    weaponRuleSetId: '',
+    uchelwyrCompatible: false,
     allowedClassIds: KNIGHT_PATH_CLASS_IDS,
     classWeaponProfiles: pathClassWeapons(spec.uchelwyrLance === true),
-    weaponTypes: ['sword', 'spear', 'polearm', 'axe', 'mace'],
+    weaponTypes: ['sword', 'axe', 'mace'],
     ...spec
   });
 }

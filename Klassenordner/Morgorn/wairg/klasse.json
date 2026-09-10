@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "wairg",
+  "cultureId": "morgorn",
+  "name": "Wairg",
+  "title": "Der Wairg",
+  "subtitle": "Hirte, Tierhüter und Speerkrieger",
+  "aliases": ["Hirte", "Hirten"],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/wAs82GO.png",
+  "illustration": "https://i.imgur.com/wAs82GO.png",
+  "artwork": { "source": "https://i.imgur.com/wAs82GO.png", "width": 1024, "height": 1536, "caption": "Wairg · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Wairg · Hirten" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Kriegerische Hüter abgelegener Nutzgebiete" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Herdenschutz, Wildniswacht und Begleitung" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Speer und weitere Stangenwaffen" },
+    { "group": "Klassenprofil", "label": "Einsatzraum", "html": "Hochweiden, Bergpfade und Wildnis" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Wairg sind Hirten und Krieger zugleich. Sie schützen Herden, Zuchttiere und abgelegene Nutzgebiete vor Raubtieren, Dieben und den Gefahren der Berge. Ihr Dienst beginnt weit außerhalb sicherer Hallenmauern.</p><p>Ihre Ritterlichkeit zeigt sich weniger im Hof als in der täglichen Obhut: Eine Herde, die vollständig zurückkehrt, ist der sichtbare Beweis eines gehaltenen Auftrags.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Wairg wuchsen aus den bewaffneten Hirten der Hochweiden hervor. Als Tierzucht, Lastverkehr und Widderhaltung für Morgorns Hallen immer wichtiger wurden, entwickelte sich aus regionalem Wissen eine eigene Kaste.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Wairg lesen Spuren, Wetter, Tierverhalten und die Beschaffenheit eines Pfades. Sie treiben Herden geordnet durch Engstellen, beruhigen verletzte Tiere und erkennen früh, ob Unruhe von Raubwild, fremden Menschen oder einem Geländeproblem ausgeht.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Geländesicher und ausdauernd in der Wildnis</li><li>Erfahren im Umgang mit Herden und Reittieren</li><li>Große Reichweite mit Speer und Stangenwaffe</li></ul><h3>Schwächen</h3><ul><li>Schutzpflicht kann Bewegungen vorhersehbar machen</li><li>Weniger stark in dichtem Stadtgelände</li><li>Nicht auf schwere Belagerungsarbeit ausgelegt</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Wairg hält Gefahren auf Abstand. Speer und Stangenwaffe schaffen Raum zwischen Angreifer und Herde, lenken Bewegungen und sichern schmale Pfade. Die Technik bleibt beweglich genug, um zwischen verstreuten Tieren die Linie zu wechseln.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Speer oder andere Stangenwaffe, wetterfeste Rüstung, Seile, Haken, Decken und Material zur Tierpflege gehören zur Grundausstattung. Schwere Panzerung wird dort getragen, wo Gelände und Auftrag sie erlauben.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Wairg verbinden wirtschaftliche und militärische Verantwortung. Hallen, die von Fleisch, Wolle, Last- oder Reittieren leben, messen ihrer Arbeit besonderes Gewicht bei. Einfluss folgt aus der Größe und Bedeutung des anvertrauten Bestands, nicht automatisch aus Adel.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Wairg" }
+}

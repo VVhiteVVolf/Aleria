@@ -1,15 +1,15 @@
-import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js';
-import { estimateCombatHitChance } from './combat-action-estimates.js';
+import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260909-dragon-parent-v2';
+import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260909-dragon-parent-v2';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
-import { mountCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260906-effect-rolls-v1';
-import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260905-resource-balance-v2';
+import { mountCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260909-dragon-parent-v2';
+import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260909-dragon-parent-v2';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260908-cenyr-paths-v1';
-import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260908-cenyr-paths-v1';
+} from './combat-profile-resolver.js?v=20260909-dragon-parent-v2';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260909-dragon-parent-v2';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -27,7 +27,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260906-effect-rolls-v1';
+} from './combat-state-model.js?v=20260909-dragon-parent-v2';
 import {
   getReservedEquipmentSwitchWeaponId,
   withEquippedCombatWeapon
@@ -46,13 +46,13 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260906-effect-rolls-v1';
-import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260905-resource-balance-v2';
+} from './ui/combat-ui.js?v=20260909-dragon-parent-v2';
+import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260909-dragon-parent-v2';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260906-effect-rolls-v1';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260906-effect-rolls-v1';
+} from './combat-trigger-rules.js?v=20260909-dragon-parent-v2';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260909-dragon-parent-v2';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 
 const profileResolver = new CombatProfileResolver();

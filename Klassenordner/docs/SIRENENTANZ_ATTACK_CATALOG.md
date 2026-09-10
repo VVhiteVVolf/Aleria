@@ -1,8 +1,8 @@
-# Sirenentanz · Waffen- und Attackenkatalog 1–20
+# Wyrmtanz · Waffen- und Attackenkatalog 1–20
 
-> Aus den Sirenentanz-Technikmodulen erzeugt. Bearbeitung: `AleriaAlmanach/modules/combat-styles/sirenentanz/`.
+> Aus den Wyrmtanz-Technikmodulen erzeugt. Bearbeitung: `AleriaAlmanach/modules/combat-styles/sirenentanz/`. Die bestehenden Dateipfade bleiben für alte Verweise erhalten.
 
-**180 Katalogoptionen**, sechs Klassenpläne und drei ritterliche Expertenpfade. Alle neuen Waffenfolgen und Boni sind Entwürfe. Es werden keine bestehenden Figuren verändert oder automatisch mit neuen Attacken ausgestattet.
+**194 Katalogoptionen** in sechs Klassenplänen. Derwyn wählen Jungdrache oder junge Welle, eine freie kreative Phase auf Stufe 7–8 und vier eigene Wyrmpfade ab Stufe 9. Ihre Auswahl ist an Charakterbogen und Kampfsystem angebunden. Die übrigen Vennyr-Waffenfolgen behalten ihren bisherigen Entwurfsstand.
 
 Die Vergleichswerte verwenden eine Waffe mit 1W10 ohne feste Attribut-, Waffen- oder Klassenboni. In einer späteren Kampfvergabe gelten die echte Waffe, ihr Typ, ihre Reichweite und die ausgewiesenen Voraussetzungen. Der Schaden folgt dem gemeinsamen, gebremsten Drachentanz-Budget. Reine Vorbereitungen verursachen keinen Schaden.
 
@@ -13,7 +13,7 @@ Die Vergleichswerte verwenden eine Waffe mit 1W10 ohne feste Attribut-, Waffen- 
 | Rhyfelwyr | 16 | 32 |
 | Ceidwyn | 12 | 34 |
 | Rhiddwyr | 14 | 35 |
-| Derwyn | 10 | 34 |
+| Derwyn | 10 | 48 |
 
 Die Anzahl der Katalogoptionen ist keine Anzahl erlernter Attacken. Erster Expertenpfad ab Stufe 9 ohne zusätzliche Slotkosten; weitere Pfade kosten jeweils einen Experten-Slot. Mehrere Pfade vergrößern das Budget nicht.
 
@@ -64,10 +64,10 @@ Stangenwaffe für Distanz, Axt für Gedränge, Harpune für den Auftakt. Ziehen 
 ### Klassenmerkmale
 
 - **Stufe 1 · Seebeine:** +2 auf Balanceproben an Deck; der Situationsbonus wird manuell berücksichtigt und ist kein allgemeiner RK-Bonus.
-- **Stufe 6 · Sicherer Entergriff:** +1 auf den Angriffswurf mit Sirenentanz-Harpunentechniken; keine zusätzliche Attacke.
+- **Stufe 6 · Sicherer Entergriff:** +1 auf den Angriffswurf mit Wyrmtanz-Harpunentechniken; keine zusätzliche Attacke.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Leinenmeister:** Ein im Manöver ausdrücklich erlaubtes Heranziehen darf bis 3 m statt 2 m reichen. Rettungswurf und Leinenbedingung bleiben bestehen.
-- **Stufe 20 · Meister des Decks:** Einmal pro Beitrag +1 Schaden auf einen Partisanen- oder Enteraxttreffer nach einem eigenen gelungenen Sirenentanz-Verschiebemanöver.
+- **Stufe 20 · Meister des Decks:** Einmal pro Beitrag +1 Schaden auf einen Partisanen- oder Enteraxttreffer nach einem eigenen gelungenen Wyrmtanz-Verschiebemanöver.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -159,7 +159,7 @@ Dieselben schweren Folgen passen zu Axt, Hammer, Morgenstern und Kolben. Schwert
 ### Klassenmerkmale
 
 - **Stufe 1 · Stand gegen den Sturm:** +1 auf Rettungswürfe gegen Furcht und Umwerfen; nur bei einem tatsächlich geforderten passenden Wurf.
-- **Stufe 6 · Kontrollierte Wucht:** Bei Sirenentanz-Angriffen mit schwerer Axt, Hammer, Flegel oder Kolben: −1 Angriff und +1 Schaden. Kein Bonus auf Schwertangriffe.
+- **Stufe 6 · Kontrollierte Wucht:** Bei Wyrmtanz-Angriffen mit schwerer Axt, Hammer, Flegel oder Kolben: −1 Angriff und +1 Schaden. Kein Bonus auf Schwertangriffe.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Fassung unter Druck:** Stand gegen den Sturm steigt auf +2 und ersetzt den bisherigen Bonus; keine Immunität gegen Zustände.
 - **Stufe 20 · Unerschütterliche Front:** Nach einer schadenslosen Tiefwasser-Schutztechnik erhält der Anwender einmal pro Beitrag 3 temporäre LP bis zum Ende seines nächsten Beitrags. Temporäre LP werden nicht addiert.
@@ -255,7 +255,7 @@ Fern- und Nahkampf teilen sich die Slots. Bereits die Grundform enthält zwei ec
 - **Stufe 6 · Verteidiger der Reling:** Die vier Grundslots sollen mindestens eine Fernkampf- und eine Nahkampftechnik enthalten. Die Empfehlung vergibt Säbel und Dreizack, bevor weitere Schüsse gewählt werden.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Wachsamer Ausguck:** +2 auf manuell ausgewertete Wahrnehmungsproben über freier See; Vögel handeln nicht automatisch mit.
-- **Stufe 20 · Meister beider Distanzen:** Nach einem bezahlten Wechsel zwischen Fern- und Nahwaffe erhält der erste passende Sirenentanz-Angriff im selben Beitrag +1 Angriff. Waffenwechsel bleibt kostenpflichtig.
+- **Stufe 20 · Meister beider Distanzen:** Nach einem bezahlten Wechsel zwischen Fern- und Nahwaffe erhält der erste passende Wyrmtanz-Angriff im selben Beitrag +1 Angriff. Waffenwechsel bleibt kostenpflichtig.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -347,7 +347,7 @@ Sattelangriffe erfordern ein tatsächlich geführtes Reittier und den Status ber
 ### Klassenmerkmale
 
 - **Stufe 1 · Trittsicherer Reisender:** +2 auf manuell ausgewertete Reitproben in Hügeln und Küstenpfaden; keine zusätzlichen Aktionen des Rosses.
-- **Stufe 6 · Sicher im Sattel:** +1 Angriff bei ausdrücklich berittenen Sirenentanz-Techniken. Zu Fuß entfällt dieser Bonus.
+- **Stufe 6 · Sicher im Sattel:** +1 Angriff bei ausdrücklich berittenen Wyrmtanz-Techniken. Zu Fuß entfällt dieser Bonus.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Hut des Reisenden:** Eine schadenslose Schutztechnik darf auch das eigene Ross in 2 m Reichweite wählen. Kosten und Dauer bleiben gleich.
 - **Stufe 20 · Meister der Wende:** Eine Eigenbewegung einer berittenen Strömungstechnik darf einmal pro Beitrag 2 m weiter reichen. Sie addiert sich nicht zu Weiter Bogen.
@@ -438,95 +438,112 @@ Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegena
 
 ## Derwyn
 
-Drei gleichberechtigte Waffenwege aus einem Budget. Ein Stab ist hier eine physische Waffe; seine künftige Funktion als Zauberfokus bleibt unberührt.
+Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaffe geeignet sein; Zauber benötigen weiterhin ihre eigene Fähigkeit und deren Kosten.
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Drei Werkzeuge der Flut:** Stab, Dreizack und Streitkolben sind gleichwertige Ausbildungszweige. Kein zusätzlicher Angriff und kein zusätzlicher Slot durch Waffenvielfalt.
-- **Stufe 6 · Ruhe des Hüters:** +1 auf manuell ausgewertete Rettungswürfe gegen Furcht und Bezauberung; die Waffenausbildung gewährt noch keine Zauber.
 - **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
-- **Stufe 15 · Wacht des Heiligtums:** Schadenslose Waffenschutztechniken dürfen einen Verbündeten in 2 m Reichweite wählen; Dauer und Kosten bleiben unverändert.
-- **Stufe 20 · Meister des Bewahrens:** Einmal pro Beitrag gewährt eine solche Schutztechnik zusätzlich 3 temporäre LP für ihre Dauer. Kein Heilen verlorener LP, kein Stapeln temporärer LP.
 
-### Tanz der jungen Welle · 1–6
+### Drachentanz Form · Tanz des Jungdrachens · 1–6
+
+
+
+
+| Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
+| ---: | --- | --- | --- | --- | --- | --- |
+| 1 | Erste Schuppe | Schwert | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein schwacher Bonusangriff mit 1W6. Schwert |
+| 2 | Ruhige Klaue | Schwert | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. Schwert |
+| 3 | Geschlossene Hut | Schwert | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK für einen eigenen Beitrag. Schwert |
+| 4 | Kleine Wende | Schwert | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
+| 5 | Ruhiger Biss | Schwert | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Technikschaden; nach misslungenem KRF-Rettungswurf −1 Angriff für einen eigenen Beitrag. Schwert |
+| 6 | Gesammelter Atem | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Schwert |
+
+### Wyrmtanz Form · Tanz der jungen Welle · 1–6
 
 Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der tatsächlich geführten Waffe gelernt.
 
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Leiser Stab | Stab oder Saphirstab | 1 Bonusaktion | 1W6 | 1W6+1W10 | Schwacher physischer Bonusangriff mit 1W6; keine Magie. Stab oder Saphirstab |
-| 2 | Erste Spitze | Dreizack | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Regulärer physischer Techniktreffer mit Dreizackwürfeln. Dreizack |
-| 3 | Hüterhieb | Streitkolben | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Regulärer physischer Techniktreffer mit Streitkolbenwürfeln. Streitkolben |
-| 4 | Stab der Schwelle | Stab oder Saphirstab | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK für einen eigenen Beitrag durch Waffendeckung. Stab oder Saphirstab |
-| 5 | Gebundene Spitze | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
-| 6 | Last des Hüters | Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W8+1 | 2W10+1W8+1 | Kräftiger physischer Grundabschluss. Weder Heilung noch Wasserzusatzschaden. Streitkolben |
+| 1 | Leiser Stab | Kampfstab oder nahkampftauglicher Zauberstab | 1 Bonusaktion | 1W6 | 1W6+1W10 | Ein schwacher physischer Bonusangriff mit 1W6; keine Magie. Kampfstab oder nahkampftauglicher Zauberstab |
+| 2 | Erste Spitze | Dreizack | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. Dreizack |
+| 3 | Erster Morgenstern | Morgenstern | 1 Aktion | 1W10+1W6 | 2W10+1W6 | Ein regulärer physischer Treffer; kein pauschales Umgehen von Rüstung. Morgenstern |
+| 4 | Stab der Schwelle | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
+| 5 | Gebundene Spitze | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10+1W8 | Technikschaden; nach misslungenem KRF-Rettungswurf −1 Angriff für einen eigenen Beitrag. Dreizack |
+| 6 | Erste Klingenwelle | Schwert | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10+1W8 | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
 
-### Tanz der kehrenden Flut · 7–8
+### Wyrmtanz Form · Freie kreative Phase · 7–8
 
-Druck aufnehmen, umlenken und zurückgeben. Waffenwechsel und Ausweichschritte verbinden die Grundtechniken.
+Eigene Übergänge, Waffenwechsel und Übungen vertiefen das gewählte Fundament; dies ist kein zusätzlicher Expertenpfad.
+
+
+| Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
+| ---: | --- | --- | --- | --- | --- | --- |
+| 7 | Kehrender Saphir | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 7 | Kehrende Zinken | Dreizack | 1 Aktion | 1W10+1W8 | 1W10+2W8 | Ein regulärer Techniktreffer mit Aufbau-Technikbonus. Dreizack |
+| 8 | Freie Klingenlinie | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Schwert |
+| 8 | Freie Morgensternwende | Morgenstern | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern |
+
+### Wyrmtanz Pfad · Tanz des fließenden Wyrms · 9–20
+
+Schwertform aus dem Tanz des abwartenden Drachens: ruhig aufnehmen, die gegnerische Klinge umlenken und erst in die entstandene Öffnung schlagen.
 
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 7 | Kehrender Saphir | Stab oder Saphirstab | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Stab oder Saphirstab |
-| 8 | Ruhende Zinken | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Dreizack |
-| 8 | Kehrender Kolben | Streitkolben | 1 Aktion + 1 Bonusaktion | 1W10+1W8+1 | 1W10+2W8+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Streitkolben |
-| 7 | Kehrende Zinken | Dreizack | 1 Aktion | 1W10+1W8 | 1W10+2W8 | Ein regulärer physischer Techniktreffer mit Aufbau-Technikbonus. Dreizack |
+| 9 | Wartende Klinge | Schwert | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK für einen eigenen Beitrag. Kein automatischer Gegenangriff. Schwert |
+| 10 | Fließende Antwort | Schwert | 1 Aktion | 2W10 | 2W10+1W6 | Ein regulärer Techniktreffer; die eigene Aktion wird bezahlt. Schwert |
+| 11 | Stille Schwertbindung | Schwert | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Schwert |
+| 12 | Klingenrückfluss | Schwert | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
+| 13 | Gespiegelte Linie | Schwert | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Kostet Reaktion und Besondere Aktion. Schwert |
+| 15 | Unbewegte Schwerthut | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +2 RK für einen eigenen Beitrag. Gleichartige Deckung wird nicht addiert. Schwert |
+| 17 | Antwort des Wyrms | Schwert | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein starker Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
+| 20 | Meister des Rückflusses | Schwert | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer; auf Treffer +2 RK. KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Schwert |
 
-### Tanz der brechenden Brandung · 9–20
+### Wyrmtanz Pfad · Tanz des brandenden Wyrms · 9–20
 
-Wucht und Durchbruch. Kontrollierte Überdehnung erkauft stärkere Treffer mit mehreren Ressourcen und kurzen eigenen Nachteilen.
+Der Dreizack bestimmt Abstand und Waffenbindung. Gerichtete Stöße wechseln mit kontrolliertem Druck gegen die gegnerische Linie.
 
-- **Stufe 9 · Gesetzter Aufprall:** Einmal pro eigenem Beitrag +1 Schaden auf einen Treffer dieses Pfades, wenn die Attacke Aktion und Reaktion kostet.
-- **Stufe 13 · Wucht der Brandung:** Der Bonus von Gesetzter Aufprall steigt auf +2; er ersetzt den bisherigen Bonus.
-- **Stufe 17 · Brecher der Linie:** Nach diesem verstärkten Treffer erhält das Ziel bis zum Ende seines nächsten eigenen Beitrags −1 Angriff. Erneute Anwendung erneuert nur die Dauer; keine Addition.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Kolbenkeil | Streitkolben | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Streitkolben |
-| 10 | Schwerer Saphir | Stab oder Saphirstab | 1 Aktion | 2W10 | 2W10+1W6 | Ein kontrollierter Techniktreffer mit der angegebenen Waffe. Stab oder Saphirstab |
-| 11 | Drang der Zinken | Dreizack | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
-| 12 | Bewahrender Hieb | Streitkolben | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Streitkolben |
-| 13 | Brechender Schaft | Stab oder Saphirstab | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Kräftiger Techniktreffer gegen −1 Zielverteidigung; anschließend eigene RK −1 für einen Beitrag. Stab oder Saphirstab |
+| 9 | Drang der Zinken | Dreizack | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
+| 10 | Brandender Stich | Dreizack | 1 Aktion | 2W10 | 2W10+1W6 | Ein regulärer Techniktreffer mit Dreizackwürfeln. Dreizack |
+| 11 | Ruhende Zinken | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Dreizack |
+| 13 | Umspülende Spitze | Dreizack | 1 Aktion + 1 Bonusaktion | 1W10+2W8 | 1W10+2W8+1W4 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Dreizack |
+| 13 | Brandungskeil | Dreizack | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Technikschaden gegen −1 Zielverteidigung nur für diesen Wurf. Dreizack |
 | 15 | Fesselnde Zinken | Dreizack | 1 Aktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Dreizack |
-| 17 | Schwere des Heiligtums | Streitkolben | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion. Streitkolben |
-| 20 | Flut des Schaftes | Stab oder Saphirstab | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt. Stab oder Saphirstab |
+| 17 | Brandende Sperrlinie | Dreizack | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein starker Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Dreizack |
+| 20 | Drei stille Ströme | Dreizack | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Genau ein Angriffswurf. Dreizack |
 
-### Tanz der kreisenden Strömung · 9–20
+### Wyrmtanz Pfad · Tanz des steigenden Wyrms · 9–20
 
-Flanke, Rückzug und wechselnde Distanzen. Fernwaffe, Seitenwaffe und Reiterbewegung bleiben getrennte Handlungen mit ihren normalen Kosten.
+Kampfstab oder ein für Nahkampf geeigneter Zauberstab: kurze Griffwechsel, aufsteigende Schläge und schützende Schaftführungen. Zauber werden gesondert gewirkt.
 
-- **Stufe 9 · Sicherer Schritt:** Eine Bewegungstechnik dieses Pfades gewährt einmal pro eigenem Beitrag +1 RK bis zum Ende des nächsten eigenen Beitrags.
-- **Stufe 13 · Weiter Bogen:** Die erste ausdrücklich in einer Pfadattacke enthaltene Eigenbewegung pro Beitrag darf 1 m weiter führen; dies ist keine zusätzliche Bewegungshandlung.
-- **Stufe 17 · Unerreichbare Flanke:** Sicherer Schritt gewährt +2 statt +1 RK. Gleichartige Strömungs- und Tiefwasser-RK-Boni verwenden nur den höheren Wert.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Saphirkreis | Stab oder Saphirstab | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Stab oder Saphirstab |
-| 10 | Kleine Zinke | Dreizack | 1 Bonusaktion | 1W6 | 2W6 | Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Dreizack |
-| 11 | Ruhe der Hand | Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Streitkolben |
-| 12 | Ufergang | Stab oder Saphirstab | 1 Bonusaktion + 1 Besondere Aktion | 1W10+2W6 | 1W10+3W6 | Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung. Stab oder Saphirstab |
-| 13 | Umspülende Spitze | Dreizack | 1 Aktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
-| 15 | Kehrender Hüter | Streitkolben | 1 Aktion + 1 Bonusaktion | 1W10+2W8 | 1W10+2W8+1W4 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Streitkolben |
-| 17 | Saphirlinie | Stab oder Saphirstab | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 1W10+3W8+1 | 1W10+3W8+1 | Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion. Stab oder Saphirstab |
-| 20 | Drei stille Ströme | Dreizack | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand. Dreizack |
+| 9 | Saphirkreis | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 10 | Schwerer Saphir | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion | 2W10 | 2W10+1W6 | Ein regulärer physischer Techniktreffer. Kampfstab oder nahkampftauglicher Zauberstab |
+| 11 | Schwelle des Hüters | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 12 | Grundschlag des Stabes | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 13 | Brechender Schaft | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Technikschaden gegen −1 Zielverteidigung nur für diesen Wurf. Kampfstab oder nahkampftauglicher Zauberstab |
+| 15 | Steigende Stabwacht | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +2 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 17 | Saphirantwort | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein starker physischer Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
+| 20 | Flut des Schaftes | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine zusätzliche Zauberwirkung. Kampfstab oder nahkampftauglicher Zauberstab |
 
-### Tanz des stillen Tiefwassers · 9–20
+### Wyrmtanz Pfad · Tanz des peitschenden Wyrms · 9–20
 
-Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegenangriffe; Vorbereitung verursacht keinen unmittelbaren Schaden.
+Morgensternform mit beschleunigten, eng zurückgenommenen Hieben. Offensiver Druck verlangt einen freien Waffenweg und eine bewusst geschlossene Rückführung.
 
-- **Stufe 9 · Ruhiger Grund:** Eine schadenslose Schutztechnik dieses Pfades gewährt ihrem geschützten Ziel +1 RK für die angegebene Dauer, höchstens einen eigenen Beitrag.
-- **Stufe 13 · Fester Halt:** Während dieses Schutzes erhält das Ziel außerdem +1 auf ausdrücklich geforderte Rettungswürfe gegen Umwerfen oder Verschieben; situativ auszuwerten.
-- **Stufe 17 · Ungebrochene Deckung:** Ruhiger Grund gewährt +2 statt +1 RK. Schutz derselben Quelle und gleichartige Pfadboni addieren sich nicht.
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 9 | Schwelle des Hüters | Stab oder Saphirstab | 1 Reaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Stab oder Saphirstab |
-| 10 | Gebundener Aufprall | Streitkolben | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Streitkolben |
-| 11 | Drei ruhende Spitzen | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Dreizack |
-| 12 | Grundschlag des Stabes | Stab oder Saphirstab | 1 Aktion | 2W10 | 2W10+1W6 | Ein regulärer Techniktreffer aus ruhigem Stand; kein automatischer Gegenangriff. Stab oder Saphirstab |
-| 13 | Versperrte Linie | Dreizack | 1 Reaktion + 1 Besondere Aktion | 1W10+2W8+1 | 1W10+2W8+1W4+1 | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Dreizack |
-| 15 | Kolbenwacht | Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert. Streitkolben |
-| 17 | Saphirantwort | Stab oder Saphirstab | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion. Stab oder Saphirstab |
-| 20 | Bewahrer der Schwelle | Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag. Streitkolben |
+| 9 | Peitschender Auftakt | Morgenstern | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern |
+| 10 | Kurzer Sternhieb | Morgenstern | 1 Aktion | 2W10 | 2W10+1W6 | Ein regulärer physischer Techniktreffer. Morgenstern |
+| 11 | Stern gegen Stahl | Morgenstern | 1 Aktion + 1 Reaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Morgenstern |
+| 12 | Geschlossene Sternwende | Morgenstern | 1 Aktion + 1 Bonusaktion | 2W10+1 | 2W10+1W6+1 | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern |
+| 13 | Offener Sternbogen | Morgenstern | 1 Aktion + 1 Besondere Aktion | 1W10+2W8+2 | 1W10+2W8+1W4+2 | Technikschaden gegen −1 Zielverteidigung; danach eigene RK −1 für einen Beitrag. Morgenstern |
+| 15 | Drang des Morgensterns | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+2W8 | 1W10+2W8+1W4 | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Morgenstern |
+| 17 | Peitschenruf | Morgenstern | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10+3W8+2 | 1W10+3W8+2 | Ein starker Techniktreffer; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern |
+| 20 | Meister des Sternbogens | Morgenstern | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 4W10+3 | 4W10+3 | Ein Meistertreffer; −1 eigener Angriff, −1 Zielverteidigung und danach eigene RK −1 für einen Beitrag. Morgenstern |

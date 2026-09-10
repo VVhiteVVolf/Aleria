@@ -123,7 +123,7 @@ function buildBiographyConnectionRows(connections = [], mode = 'module') {
 }
 
 function buildModuleBiographyStatRows(stats = []) {
-  const rows = Array.isArray(stats) && stats.length ? stats : [['Neuer Eintrag', 'Wert']];
+  const rows = Array.isArray(stats) ? stats : [];
   return rows.map(([label, value]) => `
     <div class="inline-stat-row module-biography-stat-row">
       <input class="inline-edit-input me-biography-stat-label" type="text" value="${escapeHtml(label || '')}" placeholder="Label">

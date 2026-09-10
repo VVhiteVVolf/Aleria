@@ -1,0 +1,185 @@
+{
+  "id": "nebeltroll",
+  "name": "Nebeltroll",
+  "classification": "Trollunterart · Listiger Dunstjäger",
+  "continent": "Aleria",
+  "region": "Nebelreiche Hügel, Vorgebirge und verlassene Pfade",
+  "folio": "III-T / 09",
+  "parentGroupId": "trolle",
+  "summary": "Nebeltrolle sind kleine, drahtige Randformen der Höhlen- und Bergtrolle. Geringere Kraft gleichen sie durch hervorragenden Geruch, scharfes Gehör, Stimmenimitation und geduldige Hinterhalte aus; im Dunst trennen sie Nachzügler von Reisegruppen und verschwinden vor einer geordneten Gegenwehr.",
+  "quote": "Antworte keiner Stimme im Nebel, die deinen Namen nur beinahe richtig spricht.",
+  "quoteAttribution": "Regel der alerischen Hochlandboten",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-nebeltroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Nebeltroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/nebeltroll.webp",
+    "width": 805,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Nebeltroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Nebeltroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nebeltroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; nebelgebundener Lauerjäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Verdrängte Randform von Höhlen- und Bergtrollen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Neblige Hochlagen, Vorgebirge, Geröllfelder und alte Minenzugänge"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Listig, transitierend und nur bei Vorteil offen aggressiv"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Nebel, Dämmerung und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Stimmenimitation, Spürsinne, Lockrufe und Nebeltarnung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hinterhalt, Täuschung, Beweglichkeit und Rückzugsplanung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Offenes Gelände, Wind, grelles Licht und geringe Körperzähigkeit"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Gesammelte Gegenstände und Ausrüstung verschwundener Reisender"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Nebeltarnung",
+      "Stimmenimitation",
+      "Hinterhalt",
+      "Spürsinn",
+      "Körperkraft",
+      "Lichtempfindlichkeit"
+    ],
+    "values": [
+      10,
+      8,
+      9,
+      9,
+      4,
+      8
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Nebeltrolls abgeleitet",
+    "intro": "Beim Nebeltroll misst das Archiv Täuschung und Sinnesleistung. Seine geringe Körperkraft wird gefährlich, wenn Sicht und Formation der Reisenden zuvor gebrochen wurden."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung und Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nebeltrolle sind zu klein, um sich gegen große Höhlen- oder Bergtrolle zu behaupten, und zu rastlos für feste Lager. Sie ziehen durch kühle Hügel und Vorgebirge, in denen Dunst und Wetterumschwünge die Sicht nehmen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Offene Gewalt wäre gegen viele Gegner ihr Untergang. Deshalb locken, trennen und erschöpfen sie ihre Beute, bevor sie angreifen."
+        }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lange Arme, ein schmaler Rumpf und helle, lichtempfindliche Augen kennzeichnen die Art. Dünnes, feuchtes Fell nimmt graugrüne Töne der Umgebung an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gehör und Geruch sind hervorragend. Die rohe Kraft bleibt deutlich unter der größerer Trollvettern."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nebeltrolle verstehen Menschensprache und sprechen sie flüsternd oder verzerrt. Nachgeahmte Stimmen führen Nachzügler vom Weg oder lassen Gruppen an der falschen Stelle suchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verwundete und vereinzelte Opfer werden bevorzugt. Solange keine klare Überlegenheit besteht, weicht der Troll einer direkten Konfrontation aus."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nebelreiche Hochlagen, verlassene Pfade, Geröllfelder und alte Mineneingänge dienen als wechselnde Reviere. Beständiger Wind und freie Sicht machen ein Gebiet unattraktiv."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Gruppe bleibt geschlossen, antwortet unbekannten Stimmen nicht und kombiniert Licht mit Fernwaffen. Wind, erhöhte Standorte und Feuer lichten den Nebel und nehmen dem Troll seinen Vorteil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im offenen Kampf ist er rasch unterlegen – sofern er überhaupt gestellt werden kann."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Nebeltrolle sammeln Gegenstände ihrer Opfer, ohne sie sinnvoll zu verwenden.",
+            "Imitationen treffen Tonfall häufig besser als einzelne Namen oder Satzbedeutungen.",
+            "Ihr Auftauchen gilt als schlechtes Omen, weil der eigentliche Angriff meist verborgen bleibt.",
+            "Wandernde Exemplare kehren bei ähnlichem Wetter zu erfolgreichen Pfaden zurück."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

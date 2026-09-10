@@ -80,3 +80,19 @@ test('Platzhalterbilder und Platzhaltertexte werden nicht als Fundstück verwend
   assert.equal(context.isArchiveDashboardPlaceholderText('TODO: Noch ausfüllen'), true);
   assert.equal(context.isArchiveDashboardPlaceholderText('Ein belegter Satz aus der Chronik.'), false);
 });
+
+test('Fundstücke bevorzugen echte Illustrationen und erhalten einen Rückfall auf Text', () => {
+  const { context, sections } = createContext();
+  const textEntry = {
+    id: 'text-only', title: 'Notizen aus dem Archiv',
+    pages: [{ description: 'Ein ausführlicher Bericht ohne Illustration bewahrt das Wissen der Reisenden für kommende Generationen.' }]
+  };
+  sections[0].entries.push(textEntry);
+  context.getArchiveEntryPreviewImage = entry => entry.id === 'lore-cenyr' ? 'chronik.png' : '';
+  const date = new Date('2026-09-10T12:00:00Z');
+  assert.equal(context.getArchiveDashboardDailyDiscovery(sections, date).entry.id, 'lore-cenyr');
+  context.getArchiveEntryPreviewImage = () => '';
+  const discovery = context.getArchiveDashboardDailyDiscovery([{ ...sections[0], entries: [textEntry] }], date);
+  assert.equal(discovery.entry.id, 'text-only');
+  assert.equal(context.getArchiveDashboardDailyDiscovery([], date), null);
+});

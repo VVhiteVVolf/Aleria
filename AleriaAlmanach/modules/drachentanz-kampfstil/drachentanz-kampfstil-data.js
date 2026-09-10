@@ -176,7 +176,7 @@
         ],
         [
           "Weiterentwicklungen",
-          "Aufsteigender Drache · Zwillingsdrache"
+          "Aufsteigender Drache (Unterform des fliegenden Drachens) · Zwillingsdrache"
         ]
       ]
     },

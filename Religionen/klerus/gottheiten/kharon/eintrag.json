@@ -1,0 +1,107 @@
+{
+  "godId": "kharon",
+  "intro": "Kharons Klerus begleitet Leben, Tod und die Ruhe der Seelen. Beständigkeit und Bescheidenheit prägen seinen Dienst. Die Gemeinschaften bewahren das Andenken der Toten und helfen den Lebenden, mit Verlust und Vergänglichkeit umzugehen.",
+  "community": "Ein Haus des Hüters verbindet häufig Kapelle, Begräbnisstätte und Herberge für Trauernde. Priester tragen die Riten, Mönche und Nonnen den regelmäßigen Erhalt. Paladine bewachen die Totenruhe, Asketen vertiefen die Besinnung. Gelehrte Vorhaben bleiben den drei Bereichen des Magisteriums zugeordnet.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester an der letzten Schwelle",
+      "paragraphs": [
+        "Kharons Priester begleiten Sterbende, vollziehen Totenriten und stehen den Hinterbliebenen bei. Sie lehren die Achtung vor Leben und Tod gleichermaßen. Der Dienst des Hüters verlangt Würde auch für Menschen, deren Herkunft, Armut oder Verfehlungen ihnen zu Lebzeiten wenig Ansehen eingebracht haben."
+      ],
+      "tasks": [
+        "Sterbende und Trauernde begleiten",
+        "Begräbnisse und Totengedenken leiten",
+        "Die Würde der Toten bewahren"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der stillen Erinnerung",
+      "paragraphs": [
+        "Mönche und Nonnen erhalten Begräbnisstätten, Totenbücher und die Versorgung der Gäste. Ihre Zünfte pflegen die Orte, an denen Erinnerung eine feste Gestalt bekommt. Ein vergessenes Grab oder ein ungenannter Toter verdient ihre Aufmerksamkeit ebenso wie das aufwendige Denkmal einer angesehenen Familie."
+      ],
+      "tasks": [
+        "Begräbnisstätten erhalten",
+        "Totenbücher und Gedenktage pflegen",
+        "Trauernde Gäste versorgen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Totenbuchschreiber",
+          "work": "Bewahrt Namen, Bestattungszeugnisse und die Gedenkordnung des Hauses."
+        },
+        {
+          "name": "Zunft der Grab- und Gartenhüter",
+          "work": "Pflegt Gräber, Wege und die lebendigen Gärten der Begräbnisstätten."
+        },
+        {
+          "name": "Zunft der Leinen- und Lichthüter",
+          "work": "Erhält Tücher, Leuchten und die Ausstattung für würdige Totenriten."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Wächter der Totenruhe",
+      "paragraphs": [
+        "Die Paladine des Hüters verteidigen Begräbnisstätten und schützen die Gemeinschaft vor Entweihung und der Störung der Totenruhe. Sie begleiten gefährdete Bestattungen und bewachen heilige Schwellen. Ihre Wachsamkeit soll den Lebenden Sicherheit geben und den Verstorbenen den geschuldeten Frieden bewahren."
+      ],
+      "tasks": [
+        "Friedhöfe und Gruften bewachen",
+        "Gefährdete Bestattungszüge begleiten",
+        "Entweihung und Störungen der Totenruhe abwehren"
+      ]
+    },
+    "asketen": {
+      "presence": "klein",
+      "title": "Der Pfad der Vergänglichkeit",
+      "paragraphs": [
+        "Kharons Asketen üben Gelassenheit gegenüber Verlust und der Begrenztheit des eigenen Lebens. Schweigende Wachen und beherrschte Bewegung bilden einen ruhigen, wehrhaften Pfad. Die Übung soll dazu befähigen, in Furcht oder Trauer handlungsfähig zu bleiben, ohne Gefühllosigkeit zum Ideal zu erheben."
+      ],
+      "tasks": [
+        "Stille Wachen und Sammlung üben",
+        "Abgelegene Gedenkstätten schützen",
+        "Besonnenheit angesichts von Verlust schulen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Kharon verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Ein Dienst für Erinnerung und Frieden",
+      "paragraphs": [
+        "Bußgänger unterstützen die Pflege gemeinsamer Anlagen und die Versorgung Trauernder. Ein vereinbarter Dienst kann beschädigte Gedenkorte oder vernachlässigte Gräber betreffen. Die Würde der Toten und die Grenzen der Büßenden werden geachtet; der Umgang mit Verstorbenen ist kein Mittel der Erniedrigung."
+      ],
+      "tasks": [
+        "Gedenkwege und Anlagen pflegen",
+        "Herbergen und Trauernde unterstützen",
+        "Vereinbarte Erinnerungsorte wiederherstellen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "asketen": {
+      "src": "Religionen/klerus/assets/asketen-kharon.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

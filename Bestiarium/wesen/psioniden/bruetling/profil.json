@@ -1,0 +1,213 @@
+{
+  "id": "bruetling",
+  "name": "Brütling",
+  "classification": "Embryonaler Anfang und wandelbare Grundform des Schwarms",
+  "continent": "Infernale Sphären",
+  "region": "Brutnester, dunkle Teiche und Amons Domäne",
+  "folio": "IV / 10-E",
+  "parentGroupId": "psioniden",
+  "summary": "Brütlinge sind die willenlose embryonale Grundform fast aller Psioniden. Aus schleimigen Eiern in dunklen Brutteichen geschlüpft, warten sie auf den Zweck, den Lenker oder Sucher ihnen zuweisen. Durch Verpuppung oder gewaltsames Aufbrechen können aus ihnen Schädlinge, Sucher, Lauerer und in seltenen Fällen Lenker entstehen.",
+  "quote": "Gefangen in ewiger Degeneration, bis ihre Form seinem Willen genügt.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-bruetling.webp",
+    "width": 599,
+    "height": 416,
+    "alt": "Brütling als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Brütling"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/bruetling-hero.webp",
+    "width": 599,
+    "height": 416,
+    "alt": "Brütling vollständig sichtbar mit embryonalem Körper und Gesichtstentakeln",
+    "caption": "Überlieferte Bildtafel · Embryonale Grundform"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Brütling"
+    },
+    {
+      "label": "Typ",
+      "value": "Embryonale Grundform des psionidischen Schwarms"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Schlüpft aus schleimigen, fischähnlichen Eiern in Brutstätten"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Möglicherweise umgeformte Seelen, die Amon verfallen sind"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Brutnester, dunkle Teiche und feuchte Bereiche von Amons Domäne"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Harmlos, kriechend und leise fiepend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; Entwicklung beginnt erst durch einen lenkenden Impuls"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Verpuppung, Formwandel und Entwicklung in mehrere Schwarmfunktionen"
+    },
+    {
+      "label": "Größe",
+      "value": "Etwa so groß wie ein Rehkitz"
+    },
+    {
+      "label": "Stärken",
+      "value": "Großes Wandlungspotential und vollständige Einbindung in den Schwarm"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Gebrochener Wille, geringe Wehrhaftigkeit und Gefahr ewiger Degeneration"
+    },
+    {
+      "label": "Beute",
+      "value": "Keine; kann selbst von anderen Schwarmwesen verwertet werden"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Wandlungspotential",
+      "Schwarmbindung",
+      "Verpuppung",
+      "Eigenwille",
+      "Kampfkraft",
+      "Formstabilität"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      1,
+      1,
+      2
+    ],
+    "intro": "Die Brütlingstafel beschreibt Entwicklung statt Kampf. Fast unbegrenztes Wandlungspotential und feste Schwarmbindung stehen einem gebrochenen Willen, schwacher Wehrhaftigkeit und unsteter Form gegenüber.",
+    "source": "Aus embryonaler Grundform, gelenkter Verpuppung, möglicher Entwicklung in mehrere Unterarten, Willensbruch und Degeneration abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Brütling ist der Anfang fast aller psionidischen Körper. Er besitzt noch keine feste Aufgabe und wird deshalb als wandelbare Grundlage des Schwarms behandelt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Harmlosigkeit bedeutet bei ihm keinen dauerhaften Zustand. Unter einem lenkenden Gedanken kann die unscheinbare Form zu einer spezialisierten Psionide werden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Brütling erreicht ungefähr die Größe eines Rehkitzes. Seine Haut ist ledrig, warm und feucht; darunter liegt bereits eine chitinartige Festigkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tentakel im Gesicht erinnern an Nabelschnüre oder freiliegende Eingeweide. Glasige Augen und leises Fiepen verstärken den Eindruck eines nie vollendeten Embryos."
+        }
+      ]
+    },
+    {
+      "id": "brut",
+      "title": "Ei und Brutteich",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Brutstätten geben schleimige, fischähnliche Eier aus gallertartigen Säcken in dunkle Teiche ab. Dort schlüpfen die Brütlinge in einer Umgebung aus Feuchtigkeit, organischem Gewebe und psionischer Gegenwart."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schädlinge versorgen Eier und Jungformen. Eine Brutstätte ist daher zugleich Geburtsort, Arbeitsraum und Knoten des Schwarms."
+        }
+      ]
+    },
+    {
+      "id": "wille",
+      "title": "Gebrochener Wille",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schon beim Schlüpfen ist der eigene Wille des Brütlings gebrochen. Lenker und Sucher weisen ihm Zweck und zukünftige Form zu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohne einen solchen Impuls bleibt das Wesen in einer fortdauernden, unvollständigen Entwicklung gefangen. Diese Degeneration kann Körperteile wachsen und wieder vergehen lassen, ohne eine brauchbare Gestalt hervorzubringen."
+        }
+      ]
+    },
+    {
+      "id": "wandlung",
+      "title": "Verpuppung und Aufbruch",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unter einem Lenker kann sich der Brütling verpuppen oder seinen Körper von innen aufbrechen. Daraus entstehen Sucher, Lauerer, Schädlinge und selten ein neuer Lenker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Entscheidung trifft nicht der einzelne Brütling. Der Schwarm formt, was an einem Ort benötigt wird, und verwirft ungeeignete Entwicklungen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Die ungeklärte Seelenlehre",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Einige Dämonologen deuten Brütlinge als verlorene menschliche Seelen, die in Amons Domäne zu neuen Körpern gezwungen wurden. Beweise für diese Lehre fehlen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Archiv führt sie deshalb als Möglichkeit, nicht als gesicherte Entstehung. Ihre frühe Empfänglichkeit für fremden Willen bleibt dennoch auffällig."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Sicherung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein einzelner Brütling ist kaum gefährlich. Entscheidend sind die Nähe eines Lenkers, der Zustand der Brutstätte und Anzeichen einer beginnenden Verpuppung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wer eine Brut sichern will, muss sie vom psionischen Netz trennen und ihre Entwicklung beobachten. Andere Schwarmwesen können unbrauchbare Brütlinge als organische Masse verwerten."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Fast jede benannte Schwarmform kann aus einem Brütling hervorgehen.",
+            "Nur selten wird aus der Grundform ein Lenker.",
+            "Die Gesichtstentakel werden in alten Berichten mit Nabelschnüren verglichen.",
+            "Die Lehre von umgeformten Menschenseelen ist nicht bestätigt.",
+            "Ein Brütling ohne zugewiesenen Zweck kann in dauernder Degeneration gefangen bleiben."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

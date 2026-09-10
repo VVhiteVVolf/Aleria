@@ -1,5 +1,5 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const LEVEL_RULES = Object.freeze({
   9: { costs: ['action', 'bonus-action'] },

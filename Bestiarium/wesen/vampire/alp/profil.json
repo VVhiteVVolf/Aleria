@@ -1,0 +1,201 @@
+{
+  "id": "alp",
+  "name": "Alp",
+  "classification": "Gesellschaftlicher Vampir Bhaals und Meister verborgener Rollen",
+  "continent": "Aleria",
+  "region": "Inmitten menschlicher Gesellschaft",
+  "folio": "IV / 03-C",
+  "parentGroupId": "vampire",
+  "summary": "Alpe sind die raffiniertesten Gesellschaftstäuscher unter Bhaals Vampiren. Sie unterdrücken ihre vampirische Präsenz, leben über Jahrzehnte als Kaufleute, Adlige oder wohlhabende Bürger und nähren sich an Menschen, deren Verschwinden kaum Fragen weckt; erst eine bedrohte Tarnung macht sie offen gewalttätig.",
+  "quote": "Beim Alp verrät nicht die Nacht das Monster, sondern die lückenlose Geschichte eines Menschen, an den sich dennoch niemand wirklich erinnert.",
+  "quoteAttribution": "Merksatz eines Ermittlers für verborgene Kulte",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Alp"
+    },
+    {
+      "label": "Typ",
+      "value": "Gesellschaftlicher Vampir Bhaals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus geknechteten, verratenen oder ausgegrenzten Seelen geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Unauffällig inmitten menschlicher Gesellschaft"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Anpassungsfähig, sozial auftretend und heimlich jagend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend nachts; Sonnenlicht wird gemieden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Polymorphie, Illusion, Hypnose und zurückhaltende Blutmagie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Täuschung, soziale Anpassung und unterdrückte vampirische Präsenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sakrale Magie, Sonnenlicht und geweihtes Silber"
+    },
+    {
+      "label": "Beute",
+      "value": "Blut unauffällig ausgewählter Außenseiter"
+    },
+    {
+      "label": "Vampirspross",
+      "value": "Alpyr, ein Blutsauger"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gesellschaftstarnung",
+      "Rollenwechsel",
+      "Illusionskunst",
+      "Hypnose",
+      "Spurvermeidung",
+      "Offenkampfkraft"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      8,
+      10,
+      5
+    ],
+    "source": "Aus jahrzehntelanger sozialer Tarnung, Polymorphie, Illusion, hypnotischer Präsenz, vorsichtiger Opferwahl und zurückhaltendem Kampfeinsatz abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Alp überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Bindung oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Alp lebt dort, wo andere Vampire auffallen würden: in lauten Städten und einflussreichen menschlichen Kreisen. Seine gefährlichste Fähigkeit ist ein glaubwürdiges gewöhnliches Leben, das über Jahre keinen Anlass zur Prüfung gibt."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alpe entstehen aus Seelen, die einst auf Gemeinschaft angewiesen waren und schließlich verraten oder ausgegrenzt wurden. Bhaal zerstört ihre Menschlichkeit, lässt aber den Überlebensdrang und die Furcht vor erneuter Isolation als Werkzeug perfekter Anpassung bestehen."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leichte Blässe, ungewöhnlich tiefe Augenfarben und kleine Fangzähne bleiben bei flüchtigem Blick unsichtbar. Gepflegte Kleidung und selbstsicheres Auftreten unterstützen Rollen als Kaufmann, Adliger oder wohlhabender Bürger."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Alp schont Menschen seines regelmäßigen Umfelds, um keine Spuren zu erzeugen. Er wählt Außenseiter als Opfer, meidet Priester und kundige Magier und wird erst dann schnell und skrupellos, wenn seine aufgebaute Identität gefährdet ist."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Polymorphie verändert Alter und Erscheinung, Illusionen formen die Umgebung, und eine hypnotische Präsenz erzeugt Vertrauen oder lenkt Aufmerksamkeit ab. Blutmagie und übermenschliche Kraft setzt er erst ein, wenn Täuschung nicht mehr genügt."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Enttarnung verlangt überprüfbare Lebensläufe, unabhängige Zeugen und sakrale Prüfungen. Danach wirken Sonnenlicht, geweihtes Silber und göttliche Magie wie bei anderen Vampiren; zuvor richtet ein falscher Verdacht leicht mehr Schaden an als der verborgene Alp."
+        }
+      ]
+    },
+    {
+      "id": "vampirspross",
+      "title": "Vampirspross",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alpyr sind die als Blutsauger überlieferte Sprossform des Alps."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Alpe pflegen mehrere glaubwürdige Erklärungen für nächtliche Gewohnheiten.",
+            "Eine langjährige Rolle wird eher vollständig aufgegeben als durch eine hastige Rechtfertigung beschädigt.",
+            "Besonders sichere Alpe sammeln gesellschaftlichen Einfluss, ohne jemals selbst die sichtbar höchste Stellung einzunehmen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "id": "enttarnung",
+      "caption": "Bildtafel · Der Alp verliert während einer Gesellschaft seine menschliche Tarnung",
+      "alt": "Enttarnter Alp inmitten einer festlich gekleideten Gesellschaft",
+      "src": "../../../assets/vampire-profiles/alp-plate.webp",
+      "width": 687,
+      "height": 1024
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/vampire-profiles/alp-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Alp in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/vampire-profiles/alp-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Überlieferte Darstellung eines Alp",
+    "caption": "Überlieferte Bildtafel · Alp"
+  }
+}

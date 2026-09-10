@@ -1,0 +1,213 @@
+{
+  "id": "schaedling",
+  "name": "Schädling",
+  "classification": "Niederer Schwarmdiener und Rückgrat der lebenden Domäne",
+  "continent": "Infernale Sphären",
+  "region": "Amons Bibliotheken, Brutstätten, Hallen und Fleischtempel",
+  "folio": "IV / 10-D",
+  "parentGroupId": "psioniden",
+  "summary": "Psionidische Schädlinge sind kleine, zahllose Diener mit ausgeprägter Arbeitsintelligenz und nahezu keinem eigenen Willen. Sie erhalten organische Bibliotheken, pflegen Brütlinge, ordnen Runenfragmente und reparieren Amons lebende Domäne. Allein sind sie kaum wehrhaft; als Masse können sie eine Festung von innen zerlegen.",
+  "quote": "Ohne sie würde seine Domäne buchstäblich verrotten.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-schaedling.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Psionidischer Schädling als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Psionidischer Schädling"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/schaedling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Mehrere psionidische Schädlinge pflegen Eier in einer organischen Brutstätte",
+    "caption": "Überlieferte Bildtafel · Diener einer Brutstätte"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Schädling"
+    },
+    {
+      "label": "Typ",
+      "value": "Niederer Schwarmdiener und Rückgrat des Schwarmimperiums"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Wird massenhaft in feuchten Nesttunneln geboren"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Psionidische Dienerform zwischen Parasit und Verwalter"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Bibliotheken, Brutstätten, Hallen und Fleischtempel Amons"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Kriecht, klettert, schleicht und arbeitet in unzähligen Verbänden"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; ruht nur nach dem Takt des Schwarms"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Gedankensprache, Brutpflege, Bauarbeit und natürliche Tarnung"
+    },
+    {
+      "label": "Aufgaben",
+      "value": "Pflegt Brütlinge, sortiert Runen und repariert lebendes Gewebe"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zahl, Anpassung, Tarnung, Arbeitsintelligenz und unbedingte Treue"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Allein hilflos, kaum kampffähig und ohne Führung degenerierend"
+    },
+    {
+      "label": "Beute",
+      "value": "Keine eigene; dient ausschließlich dem Schwarm"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schwarmzahl",
+      "Bauleistung",
+      "Tarnung",
+      "Telepathie",
+      "Diensttreue",
+      "Einzelkampfkraft"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      6,
+      10,
+      1
+    ],
+    "intro": "Beim Schädling zählen Zahl, Versorgung und unauffällige Arbeit stärker als offene Gewalt. Die niedrige Einzelkampfkraft darf nicht über die Wirkung einer koordinierten Masse hinwegtäuschen.",
+    "source": "Aus massenhafter Brut, Pflege- und Bauaufgaben, gedanklicher Verständigung, Tarnung, Schwarmtreue und geringer Einzelwehrhaftigkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der psionidische Schädling ist die niedrigste benannte Dienerform und zugleich das praktische Rückgrat des Schwarmimperiums. Wo er fehlt, verrotten Archive, Brutkammern und lebende Hallen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Bedeutung entsteht aus Zahl und Spezialisierung. Einzelne Tiere wirken gering, doch der Schwarm setzt sie wie tausende Hände, Augen und Werkzeuge ein."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die kleinen Körper tragen ledrige, stellenweise schleimige Haut, goldene Augen und einen Bart aus kurzen Tentakeln. Ihre Glieder eignen sich zum Kriechen, Klettern und Arbeiten in engen organischen Gängen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zwischen Gewebe, Runenmaterial und Schatten bleiben sie leicht übersehbar. Diese Tarnung beruht auf Haltung, Farbe und Bewegung, nicht auf einem bewussten Zauber."
+        }
+      ]
+    },
+    {
+      "id": "brut",
+      "title": "Massenhafte Brut",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schädlinge entstehen in großer Zahl in feuchten Nesttunneln. Ihre Entwicklung ist auf rasche Einsatzfähigkeit ausgelegt; eine persönliche Aufzucht oder feste Familienbindung ist nicht überliefert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohne lenkende Gegenwart verlieren sie Ordnung und beginnen zu degenerieren. Deshalb bleiben auch weit verteilte Arbeitsgruppen an den psionischen Takt des Schwarms gebunden."
+        }
+      ]
+    },
+    {
+      "id": "arbeit",
+      "title": "Arbeit der Domäne",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie pflegen Brütlinge, tragen Runenfragmente, säubern Nester und schließen Verletzungen in organischen Bauwerken. Ihre Mustererkennung hilft ihnen, Schäden und Abweichungen schnell zu finden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gewebe und Überreste werden verwertet. Eine große Kolonie kann eine eroberte Anlage aushöhlen und brauchbare organische Masse in neue Nester oder Reparaturmaterial überführen."
+        }
+      ]
+    },
+    {
+      "id": "denken",
+      "title": "Gedankensprache und Loyalität",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schädlinge sind intelligent genug für Fragen, Zahlen, Baufolgen und einfache Schlussfolgerungen. Ihre Verständigung geschieht in knapper Gedankensprache."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein eigener Wille ist kaum vorhanden. Vor erzwungenem Verrat löst sich ein Schädling eher selbst auf, als dem Schwarm bewusst zu schaden."
+        }
+      ]
+    },
+    {
+      "id": "schwarmwirkung",
+      "title": "Gefahr der Menge",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein einzelner Schädling ist kaum kampffähig. In großer Zahl können die Tiere jedoch Zugänge verstopfen, Vorräte zerlegen, Werkzeuge entwenden und eine Festung von innen unbrauchbar machen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Aufmerksamkeit passt sich wiederkehrenden Abläufen an. Ein Schutzplan, der mehrfach gleich ausgeführt wird, verliert deshalb rasch an Wirkung."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Eindämmung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bei einem Fund muss nach Nesttunneln, Brutkammern und der lenkenden Psionide gesucht werden. Nur sichtbare Arbeiter zu vertreiben lässt die eigentliche Struktur bestehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kleine Gruppen lassen sich eindämmen, bevor sie Verstärkung rufen oder Schäden über Gedankensprache melden. Gegen eine Kolonie sind geschlossene Abschnitte und systematisches Vorgehen erforderlich."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Name bezeichnet im Schwarm eine Funktion und keine Verwandtschaft mit dem gleichnamigen Kobold.",
+            "Schädlinge können einfache Fragen, Zahlen und Arbeitsfolgen telepathisch übermitteln.",
+            "Ihre Nester werden feucht gehalten, weil ihre Haut und die gepflegte Brut austrocknen können.",
+            "Vor einem erzwungenen Verrat soll sich ein Schädling selbst auflösen.",
+            "Viele frühe Berichte unterschätzten sie, weil nur einzelne Arbeiter beobachtet wurden."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,106 @@
+{
+  "godId": "orith",
+  "intro": "Oriths Klerus nähert sich Magie und Mystik mit Achtsamkeit, Erkenntnisdrang und Demut. Seine Gemeinschaften hüten stille Studienorte und lebendige Heiligtümer. Die Nähe zur druidischen Überlieferung prägt besonders die Häuser bei Lichthain und dem Hain der Druiden.",
+  "community": "Ein Heiligtum des Mystikers verbindet klösterliche Pflege und gelehrte Beobachtung. Priester begleiten die geistliche Deutung, Magister vergleichen Erkenntnisse, und kleine Wachen schützen Menschen und Ort. Asketische Einsiedler oder Kleinstgemeinschaften kommen nur ausnahmsweise hinzu. Benachbarte druidische Gemeinschaften gehören nicht schon durch ihre Nähe zur Kirche.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der achtsamen Deutung",
+      "paragraphs": [
+        "Oriths Priester begleiten Menschen, die ein mystisches Erlebnis verstehen oder ihren geistlichen Weg prüfen möchten. Sie lehren Demut gegenüber dem Unbekannten. Eine eindrucksvolle Erscheinung ist für sie Anlass zur Aufmerksamkeit; sie berechtigt nicht dazu, andere durch behauptete Offenbarung dem eigenen Willen zu unterwerfen."
+      ],
+      "tasks": [
+        "Suchende und mystische Erfahrungen begleiten",
+        "Demut in der Deutung lehren",
+        "Heiligtumsriten und Besinnung betreuen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der stillen Bewahrung",
+      "paragraphs": [
+        "Mönche und Nonnen erhalten Haine, Studienräume und die materiellen Zeichen ihrer Überlieferung. Ihre Zünfte kopieren Aufzeichnungen und pflegen Orte regelmäßiger Beobachtung. Die stille Arbeit bewahrt einen verlässlichen Rahmen, in dem Suchende ihre Erfahrungen festhalten und später miteinander vergleichen können."
+      ],
+      "tasks": [
+        "Haine und Studienräume pflegen",
+        "Beobachtungen und Zeichenbücher bewahren",
+        "Abgeschiedene Gemeinschaften versorgen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Zeichenbewahrer",
+          "work": "Kopiert und erhält die Zeichen- und Beobachtungsbücher des Konvents."
+        },
+        {
+          "name": "Zunft der stillen Hainhüter",
+          "work": "Pflegt die lebendigen Heiligtümer und wahrt deren regelmäßige Ruhe."
+        },
+        {
+          "name": "Zunft der Studienhausbewahrer",
+          "work": "Versorgt Suchende und erhält die Räume, Geräte und Vorräte der stillen Häuser."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Wächter des ungestörten Heiligtums",
+      "paragraphs": [
+        "Oriths wenige Paladine schützen Studienorte und lebendige Heiligtümer vor Übergriffen und Entweihung. Sie begleiten Suchende an gefährdeten Orten und tragen den äußeren Schutz bei Untersuchungen. Ihre Wachsamkeit richtet sich auf erkennbare Gefahren, ohne jedes unverstandene Phänomen vorschnell zum Feind zu erklären."
+      ],
+      "tasks": [
+        "Heilige Haine und Studienorte sichern",
+        "Suchende an gefährdeten Orten begleiten",
+        "Untersuchungen von außen schützen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad der inneren Sammlung",
+      "paragraphs": [
+        "Mystische Versenkung macht einen Anhänger Oriths noch nicht zum Asketen. Nur wenige verbinden sie mit dem strengen körperlichen und wehrhaften Pfad dieser Kaste. Einzelne Einsiedler oder kleine Ausnahmegemeinschaften können Stille und kontrollierte Bewegung üben; ein verbreiteter eigener Asketenorden gehört nicht zur gewöhnlichen Struktur des Mystikers."
+      ],
+      "tasks": [
+        "Meditation und beherrschte Bewegung lehren",
+        "Abgeschiedene Heiligtümer bewachen",
+        "Wahrnehmung und Deutung bewusst auseinanderhalten"
+      ]
+    },
+    "magister": {
+      "presence": "fest",
+      "title": "Gelehrte der verborgenen Zusammenhänge",
+      "paragraphs": [
+        "Oriths Magister untersuchen magische Erscheinungen, Zeichen und druidische Überlieferungen. Sie vergleichen eigene Beobachtung mit fremden Berichten und halten offene Fragen ausdrücklich fest. Ihre Lehrkreise können mit Orins Häusern zusammenarbeiten; die geistliche Bedeutung einer Erfahrung wird dabei von ihrer gelehrten Untersuchung unterschieden."
+      ],
+      "tasks": [
+        "Magische Beobachtungen dokumentieren",
+        "Zeichen und Überlieferungen vergleichen",
+        "Suchende in sorgfältiger Untersuchung unterrichten"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Demut nach der falschen Gewissheit",
+      "paragraphs": [
+        "Bußgänger Oriths unterstützen die Pflege der Heiligtümer und die Versorgung stiller Studienorte. Nach falscher Offenbarung oder missbrauchtem Vertrauen kann der Eid eine angemessene Richtigstellung einschließen. Der Dienst gibt Raum, die Grenzen des eigenen Urteils anzuerkennen und anschließend wieder verantwortlich unter Menschen zu leben."
+      ],
+      "tasks": [
+        "Heiligtümer und Studienräume pflegen",
+        "Abgeschiedene Gemeinschaften versorgen",
+        "Vereinbarte Richtigstellungen unterstützen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "magister": {
+      "src": "Religionen/klerus/assets/magister-orith.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

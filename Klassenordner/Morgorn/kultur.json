@@ -1,0 +1,122 @@
+{
+  "id": "morgorn",
+  "name": "Morgorn",
+  "emblem": "https://i.imgur.com/gXAED3v.png",
+  "pageLabels": {
+    "brand": "Klassen Morgorns",
+    "collection": "Die Kasten Morgorns",
+    "traditionsLines": [
+      "Hallen & Kasten",
+      "Morgorns"
+    ]
+  },
+  "sharedSections": {
+    "kriegerkaste": "<p>Die traditionellen Kriegerkasten Morgorns beschreiben militärische Ausbildung, Aufgabe und gesellschaftliche Funktion. Sie bilden keine zweite Adelshierarchie. Ein Angehöriger einer Kaste kann adelig sein, doch die Zugehörigkeit allein verleiht weder Land noch Rang.</p>",
+    "verantwortung": "<p>In Morgorn gilt ein Amt als getragene Last. Wer eine Halle, einen Pass, eine Sippe, eine Herde oder ein Werkzeug anvertraut bekommt, haftet mit seinem Namen für deren Erhalt. Die Würde einer Kaste entsteht deshalb aus erfülltem Dienst und gehaltenem Eid.</p>",
+    "ausbildung-offen": "<p>Die Waffen, Aufgaben und überlieferten Arbeitsweisen dieser Kaste sind beschrieben. Ein Stufenplan, feste Klassenmerkmale und eigene Kampftechniken sind noch nicht festgelegt und werden erst in einer späteren Ausarbeitung ergänzt.</p>"
+  },
+  "orderOverview": {
+    "eyebrow": "Adel, Kriegerkasten & gesellschaftliche Ordnung",
+    "navigationTitle": "Morgorns Gesellschaftsordnung",
+    "title": "Rang bedeutet Last",
+    "introduction": "Morgorn versteht Herrschaft weniger als höfisches Privileg denn als Verantwortung für Reich, Land, Feste, Halle und Sippe. Neben dieser Adelshierarchie stehen acht Kriegerkasten, die Ausbildung und Dienst eines Kriegers benennen, ohne ihn dadurch automatisch zu adeln.",
+    "nobleTitle": "Der morgornische Adel",
+    "nobleRanks": [
+      {
+        "title": "Urortharn",
+        "subtitle": "Hochkönig Morgorns",
+        "scope": "Reich",
+        "description": "Oberster Herrscher und höchster Träger der Eide, der die großen Herren, Hallen und Sippen des Reiches verbindet."
+      },
+      {
+        "title": "Lannach",
+        "subtitle": "Großer Territorialherr",
+        "scope": "Land",
+        "description": "Herr weiter Berglande, Täler, Minengebiete und zahlreicher Hallen innerhalb eines großen Landesverbandes."
+      },
+      {
+        "title": "Karnath",
+        "subtitle": "Regionaler Hochadel und Festungsherr",
+        "scope": "Feste",
+        "description": "Herr bedeutender Bergfesten, befestigter Städte, großer Minenkomplexe oder verbundener Hallen."
+      },
+      {
+        "title": "Haldran",
+        "subtitle": "Hallen- und Lokalherr",
+        "scope": "Halle",
+        "description": "Lokaler Land- und Hallenadel über einzelne Hallen, kleinere Festungen, Bergsiedlungen oder wichtige Anlagen."
+      },
+      {
+        "title": "Rannach",
+        "subtitle": "Sippenherr",
+        "scope": "Sippe",
+        "description": "Herr einer bedeutenden Sippe, dessen Gewicht aus Abstammung, Gefolgschaft, Reichtum, Rat oder altem Namen erwächst."
+      }
+    ],
+    "hierarchy": [
+      "Urortharn",
+      "Lannach",
+      "Karnath",
+      "Haldran",
+      "Rannach"
+    ],
+    "castesTitle": "Die Kriegerkasten",
+    "castesIntroduction": "Kaste bezeichnet Aufgabe und Ausbildung. Adel bezeichnet den Kreis der Verantwortung. Beides kann sich in einer Person verbinden, bleibt aber rechtlich und gesellschaftlich getrennt.",
+    "castes": [
+      {
+        "id": "karnach",
+        "name": "Karnach",
+        "designation": "Bergknechte",
+        "function": "Gebirgs- und Bergkrieger für felsiges Gelände, Engstellen und unterirdische Kampfplätze."
+      },
+      {
+        "id": "haldr",
+        "name": "Haldr",
+        "designation": "Hüter",
+        "function": "Persönlich verpflichtete Beschützer anvertrauter Menschen, Orte und Dinge."
+      },
+      {
+        "id": "zernach",
+        "name": "Zernach",
+        "designation": "Wächter",
+        "function": "Schwer gerüstete Wachen für Tore, Mauern, Wege, Festungen und militärische Anlagen."
+      },
+      {
+        "id": "wairg",
+        "name": "Wairg",
+        "designation": "Hirten",
+        "function": "Kriegerische Hüter von Herden, Tieren, Wildnis und abgelegenen Nutzgebieten."
+      },
+      {
+        "id": "dornach",
+        "name": "Dornach",
+        "designation": "Grenzer",
+        "function": "Patrouillen und Waldläufer für Pässe, Außengebiete und schwer zugängliche Grenzräume."
+      },
+      {
+        "id": "skarrach",
+        "name": "Skarrach",
+        "designation": "Stürmer",
+        "function": "Offensive Stoßkrieger und Widderreiter für Durchbruch, Anritt und schweren Nahkampf."
+      },
+      {
+        "id": "rheach",
+        "name": "Rheach",
+        "designation": "Diener Rheas",
+        "function": "Gesalbte Ritter und Geistliche im Dienst Rheas, der Göttin der Erde."
+      },
+      {
+        "id": "garnach",
+        "name": "Garnach",
+        "designation": "Luntierer",
+        "function": "Schwarzpulverkrieger, Schützen, Tüftler und Alchemisten für neue Waffentechnik."
+      }
+    ],
+    "foundationTitle": "Sippe, Halle und Gefolgschaft",
+    "foundation": "Die Sippe bestimmt Herkunft, Bindung und Pflicht. Die Halle ist der konkrete Ort, an dem Gemeinschaft Bestand erhält. Herrschaft besteht daher aus Menschen, befestigten Orten, Arbeitsstätten und gegenseitigen Verpflichtungen, nicht nur aus Fläche auf einer Karte.",
+    "selfImageTitle": "Kulturelles Selbstverständnis",
+    "selfImage": "Ein Eid besitzt Gewicht, weil er gehalten wird. Eine Halle besitzt Wert, weil sie bewahrt wird. Besitz begründet Verantwortung, ein Amt ist Last und ein Name gewinnt Bedeutung durch die Taten, die unter ihm vollbracht werden.",
+    "quote": "Ein Wort gilt erst dann, wenn sein Träger es mit Tat, Stein oder Eid beschwert.",
+    "quoteAttribution": "Morgornischer Lehrsatz"
+  }
+}

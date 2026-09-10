@@ -1,21 +1,19 @@
 import {
   DRACHENTANZ_EXPERT_PATH_IDS as EXPERT_PATH_IDS,
+  DRACHENTANZ_CLASS_PATH_IDS as PATH_ACCESS,
   DRACHENTANZ_FORM_IDS as FORM_IDS,
   DRACHENTANZ_FORM_NAMES as CENYR_FORM_LABELS
-} from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
+} from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { CENYR_CLASS_IDS } from './cenyr-class-ids.js?v=20260905-cenyr-character-training-v1';
 import { ARMOR_ROUTINE } from '../armor-routine.js?v=20260906-armor-routine-v1';
+import { getVennyrClassDefinition } from '../vennyr/vennyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { WYRMTANZ_FORM_NAMES } from '../../combat-styles/sirenentanz/sirenentanz-forms.js?v=20260909-dragon-parent-v2';
 
 export { CENYR_FORM_LABELS };
 
-const CLASS_FORM_LABELS = Object.freeze({
-  cantref: Object.freeze({ [FORM_IDS.schwertdrache]: 'Tanz des Speerdrachens' }),
-  uchelwyr: Object.freeze({ [FORM_IDS.schwertdrache]: 'Tanz des Speerdrachens' })
-});
-
 export function getCenyrFormLabel(formId, classId = '') {
-  return CLASS_FORM_LABELS[String(classId || '').toLowerCase()]?.[formId]
-    || CENYR_FORM_LABELS[formId]
+  return CENYR_FORM_LABELS[formId]
+    || WYRMTANZ_FORM_NAMES[formId]
     || formId;
 }
 
@@ -78,27 +76,15 @@ const KNIGHT_PATH_SELECTION = Object.freeze({
   rule: 'Auf Stufe 9 wird der erste Expertenpfad ohne Slotkosten gewählt. Jeder weitere Pfad verbraucht einen verdienten Experten-Attackenslot; dadurch bleiben weniger Slots für Attacken.'
 });
 
-const COMMON_KNIGHT_PATH_IDS = Object.freeze([
-  FORM_IDS.schwertdrache,
-  FORM_IDS.abwartender,
-  FORM_IDS.fliegender,
-  FORM_IDS.bruellender,
-  FORM_IDS.ausgeglichener,
-  FORM_IDS.aufsteigender
-]);
-
-const PATH_ACCESS = Object.freeze({
-  teulu: [...COMMON_KNIGHT_PATH_IDS, FORM_IDS.zwillingsdrache],
-  cantref: [...COMMON_KNIGHT_PATH_IDS, FORM_IDS.lanzendrache],
-  uchelwyr: [...COMMON_KNIGHT_PATH_IDS, FORM_IDS.zwillingsdrache, FORM_IDS.satteldrache],
-  helwyr: [...COMMON_KNIGHT_PATH_IDS, FORM_IDS.zwillingsdrache, FORM_IDS.bogendrache],
-  arthwyr: [...COMMON_KNIGHT_PATH_IDS, FORM_IDS.zwillingsdrache]
-});
-
 const EXCLUSIVE_PATH_OWNERS = Object.freeze({
-  [FORM_IDS.satteldrache]: { classId: 'uchelwyr', note: 'Exklusiver Uchelwyr-Pfad für den Kampf zu Pferd.' },
-  [FORM_IDS.lanzendrache]: { classId: 'cantref', note: 'Exklusiver Cantref-Pfad für die Lanze.' },
-  [FORM_IDS.bogendrache]: { classId: 'helwyr', note: 'Exklusiver Helwyr-Pfad für Lang- und Kurzbogen.' }
+  [FORM_IDS.speerdrache]: { note: 'Gemeinsame erste Expertenform von Cantref und Uchelwyr: Schwertdrachenlehre mit albischem Bewegungsfluss.' },
+  [FORM_IDS.peitschender]: { note: 'Gemeinsame explosive, offensive Speerform von Cantref und Uchelwyr.' },
+  [FORM_IDS.huetender]: { note: 'Gemeinsame defensive, ausdauernde Speerform von Cantref und Uchelwyr.' },
+  [FORM_IDS.stuermender]: { note: 'Kavallerieform des Uchelwyr; berittener Einsatz.' },
+  [FORM_IDS.schweifender]: { note: 'Offensive Bewegungsform des Uchelwyr mit Schwert und Speer; einzelne Techniken erfordern ein Ross.' },
+  [FORM_IDS.lauernder]: { note: 'Bogenform des Helwyr mit dem Schwert als Zweitwaffe.' },
+  [FORM_IDS.jagender]: { note: 'Helwyr-Form für Bogen, Heimlichkeit, Hinterhalt und kurze Klingen.' },
+  [FORM_IDS.baerenklaue]: { note: 'Einzige besondere Eigenform des Arthwyr: schwerer Nah- und Enterkampf.' }
 });
 
 function knightPathSelection(classId) {
@@ -141,7 +127,7 @@ const CANTREF_WEAPON_VARIANTS = Object.freeze([
 const knightAccess = classId => [
   access(FORM_IDS.jungdrache, 1, 6),
   access(FORM_IDS.vertiefung, 7, 8, { note: 'Eigene Techniken oder die vier bewährten Übergangsangriffe der Klassenfolge.' }),
-  ...EXPERT_PATH_IDS.map(formId => {
+  ...(PATH_ACCESS[classId] || []).map(formId => {
     const owner = EXCLUSIVE_PATH_OWNERS[formId];
     const allowed = (PATH_ACCESS[classId] || []).includes(formId);
     return access(formId, 9, 20, {
@@ -199,14 +185,14 @@ const DEFINITIONS = [
     formAccess: knightAccess('uchelwyr'), pathSelection: knightPathSelection('uchelwyr'),
     techniqueBudget: techniqueBudget(16, { foundation: [1, 2, 3, 4, 5, 6], duelist: [7, 8], expert: [9, 10, 12, 14, 16, 18, 19, 20] }),
     trainingBranches: [
-      branch('uchelwyr-sword', 'Schwertfolge des Uchelwyr', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, ...PATH_ACCESS.uchelwyr], weaponProfileIds: ['sword'] }),
-      branch('uchelwyr-lance', 'Übernommene Cantref-Lanzenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.schwertdrache], weaponProfileIds: ['lance'], note: 'Nur ausdrücklich als Uchelwyr-kompatibel markierte Cantref-Attacken.' }),
-      branch('uchelwyr-mounted', 'Tanz des Satteldrachens', 9, { formIds: [FORM_IDS.satteldrache], weaponProfileIds: ['sword', 'lance'], note: 'Exklusiver Reiterpfad mit zwölf Angriffen und Fähigkeiten aus dem Sattel.' })
+      branch('uchelwyr-sword', 'Schwertfolge des Uchelwyr', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.stuermender, FORM_IDS.schweifender], weaponProfileIds: ['sword'] }),
+      branch('uchelwyr-lance', 'Gemeinsame Speerfolge mit dem Cantref', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.speerdrache, FORM_IDS.peitschender, FORM_IDS.huetender], weaponProfileIds: ['spear', 'lance', 'partisan', 'trident', 'halberd'], note: 'Die drei Speerformen teilen ihre Techniken mit dem Cantref.' }),
+      branch('uchelwyr-mounted', 'Tanz des stürmenden Drachens', 9, { formIds: [FORM_IDS.stuermender, FORM_IDS.schweifender], weaponProfileIds: ['sword', 'lance'], note: 'Der stürmende Drache setzt ein Ross voraus; der schweifende Drache ergänzt den Fußkampf um besondere Reiteroptionen.' })
     ],
     techniquePool: { rank: 2, totalSlots: 16, description: 'Sechzehn Attackenslots: sechs Grundtechniken, zwei freie Vertiefungen und acht Expertenattacken.' },
-    weaponTraining: { primary: ['Schwert', 'Lanze'], secondary: [], note: 'Lanzenattacken stammen aus dem ausdrücklich freigegebenen Cantref-Teilpool; berittene Optionen benötigen den Status „beritten“.' },
+    weaponTraining: { primary: ['Schwert', 'Speer', 'Lanze'], secondary: ['Partisane', 'Dreizack', 'Hellebarde'], note: 'Die drei Speerformen teilen ihre Techniken mit dem Cantref; berittene Optionen benötigen den Status „beritten“.' },
     weaponVariants: [CANTREF_WEAPON_VARIANTS[0]],
-    classFeatures: [feature('uchelwyr-mounted-training', 'Ritter des hohen Sattels', 9, 'Der exklusive Tanz des Satteldrachens bietet zwölf berittene Attacken und Fähigkeiten; sie werden aus dem gemeinsamen Attackenbudget gewählt.', null, 'partial')],
+    classFeatures: [feature('uchelwyr-mounted-training', 'Ritter des hohen Sattels', 9, 'Stürmender und schweifender Drache ergänzen die drei gemeinsamen Speerformen. Alle Formen teilen dasselbe Attackenbudget.', null, 'partial')],
     combatStyleGrants: [jungdracheGrant()],
     pending: ['Feinbalance der berittenen Attacken', 'Weitere passive Reiterboni', 'Zusammenspiel von Reiter und Ross']
   }),
@@ -215,8 +201,8 @@ const DEFINITIONS = [
     formAccess: knightAccess('helwyr'), pathSelection: knightPathSelection('helwyr'),
     techniqueBudget: techniqueBudget(12, { foundation: [1, 3, 5, 4, 6], duelist: [7], expert: [9, 11, 13, 16, 18, 20] }),
     trainingBranches: [
-      branch('helwyr-longbow', 'Langbogenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.bogendrache], weaponProfileIds: ['longbow'], note: 'Reichweite, Durchschlagskraft und gezielte Spezialschüsse.' }),
-      branch('helwyr-shortbow', 'Kurzbogenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.bogendrache], weaponProfileIds: ['shortbow'], note: 'Beweglichkeit, Stellungswechsel und geringere Aktionskosten.' }),
+      branch('helwyr-longbow', 'Langbogenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.lauernder, FORM_IDS.jagender], weaponProfileIds: ['longbow'], note: 'Reichweite, Durchschlagskraft und gezielte Spezialschüsse.' }),
+      branch('helwyr-shortbow', 'Kurzbogenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.lauernder, FORM_IDS.jagender], weaponProfileIds: ['shortbow'], note: 'Beweglichkeit, Stellungswechsel und geringere Aktionskosten.' }),
       branch('helwyr-dual-blades', 'Beidhändige Klingenfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.zwillingsdrache], weaponProfileIds: ['dual-swords', 'dual-daggers'], note: 'Schadenswürfel richten sich nach Schwertern oder Dolchen.' }),
       branch('helwyr-classic-sword', 'Klassische Schwertfolge', 1, { weaponProfileIds: ['sword'], note: 'Kleiner gemeinsamer Ritterpool.' })
     ],
@@ -227,7 +213,7 @@ const DEFINITIONS = [
     pending: ['Feinbalance der vier Waffenfolgen', 'Munitionsbesonderheiten der Spezialschüsse']
   }),
   curriculum({
-    classId: 'arthwyr', name: 'Arthwyr', focus: 'Vorhut, Enterkampf und Durchbruch', trainingFocus: 'Brachiale Drachentanz-Variante mit frühem Brüllenden Drachen',
+    classId: 'arthwyr', name: 'Arthwyr', focus: 'Vorhut, Enterkampf und Durchbruch', trainingFocus: 'Brachiale Drachentanz-Variante mit eigener Bärenklaue und frühem Brüllenden Drachen',
     affiliation: 'Haus Arth O’Guwan und Kadettenhäuser Pawen und Crafanc',
     formAccess: knightAccess('arthwyr').map(entry => entry.formId === FORM_IDS.bruellender
       ? access(entry.formId, 6, 20, { initialTechniqueCount: 1, note: 'Eine Attacke bereits ab Stufe 6; der reguläre Pfad beginnt ab Stufe 9.' }) : entry),
@@ -242,7 +228,7 @@ const DEFINITIONS = [
       feature('arthwyr-roaring-entry', 'Früher Ruf des Brüllenden Drachen', 6, 'Eine Attacke dieses Pfades wird bereits auf Stufe 6 zugänglich.', null, 'partial')
     ],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance der brachialen Waffenwerte', 'Tanz der Bärenklaue und Enterkampf']
+    pending: ['Feinbalance der brachialen Waffenwerte']
   }),
   curriculum({
     classId: 'barddwyr', name: 'Barddwyr', focus: 'Klang, Magie und Rapier', trainingFocus: 'Kleinster Drachentanz-Pool und wachsende Zauberkunst',
@@ -252,19 +238,12 @@ const DEFINITIONS = [
       access(FORM_IDS.vertiefung, 7, 8, { status: 'optional-branch', note: 'Freie Vertiefung des reduzierten Schwertzweigs.' }),
       access(FORM_IDS.traellernder, 7, 8, { note: 'Rapieroption innerhalb der freien Vertiefung.' }),
       access(FORM_IDS.schwertdrache, 9, 20, { note: 'Duellpfad des reduzierten Schwertzweigs.' }),
-      access(FORM_IDS.abwartender, 9, 20), access(FORM_IDS.fliegender, 9, 20),
-      access(FORM_IDS.ausgeglichener, 9, 20), access(FORM_IDS.kreischender, 9, 20),
-      access(FORM_IDS.bruellender, 9, 20, { status: 'blocked', note: 'Für Barddwyr gesperrt.' }),
-      access(FORM_IDS.aufsteigender, 9, 20, { status: 'blocked', note: 'Barddwyr verwenden dafür den eigenen Kreischenden Drachen.' }),
-      access(FORM_IDS.zwillingsdrache, 9, 20, { status: 'blocked', note: 'Die Barddwyr-Ausbildung bindet eine Hand an Rapierführung, Klang oder Zaubergeste.' }),
-      access(FORM_IDS.satteldrache, 9, 20, { status: 'blocked', note: EXCLUSIVE_PATH_OWNERS[FORM_IDS.satteldrache].note }),
-      access(FORM_IDS.lanzendrache, 9, 20, { status: 'blocked', note: EXCLUSIVE_PATH_OWNERS[FORM_IDS.lanzendrache].note }),
-      access(FORM_IDS.bogendrache, 9, 20, { status: 'blocked', note: EXCLUSIVE_PATH_OWNERS[FORM_IDS.bogendrache].note })
+      access(FORM_IDS.kreischender, 9, 20)
     ],
     pathSelection: { ...KNIGHT_PATH_SELECTION,
-      allowedFormIds: [FORM_IDS.schwertdrache, FORM_IDS.abwartender, FORM_IDS.fliegender, FORM_IDS.ausgeglichener, FORM_IDS.kreischender],
-      blockedFormIds: [FORM_IDS.bruellender, FORM_IDS.aufsteigender, FORM_IDS.zwillingsdrache, FORM_IDS.satteldrache, FORM_IDS.lanzendrache, FORM_IDS.bogendrache],
-      rule: 'Ab Stufe 9 stehen Schwertdrache, Abwartender, Fliegender, Ausgeglichener und der eigene Kreischende Drache offen. Waffenfremde Pfade sind gesperrt; weitere Pfade kosten Attackenslots.' },
+      allowedFormIds: [FORM_IDS.schwertdrache, FORM_IDS.kreischender],
+      blockedFormIds: [],
+      rule: 'Ab Stufe 9 stehen Schwertdrache und Kreischender Drache offen. Der trällernde Drache bleibt die eigene Rapierform der Stufen 7–8. Weitere Expertenpfade kosten Attackenslots.' },
     techniqueBudget: techniqueBudget(8, { foundation: [1, 4], duelist: [7, 8], expert: [9, 13, 17, 20] }),
     trainingBranches: [
       branch('barddwyr-sword', 'Reduzierte Schwertfolge', 1, { formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, FORM_IDS.schwertdrache], weaponProfileIds: ['sword'], note: 'Folgt einer kleineren Auswahl der Teulu-Schwertfolge.' }),
@@ -287,8 +266,9 @@ const DEFINITIONS = [
 export { CENYR_CLASS_IDS };
 
 export function getCenyrClassDefinition(id, cultureId = 'cenyr') {
-  if (cultureId !== 'cenyr') return null;
   const key = String(id || '').toLowerCase();
+  if (['derwyn', 'vennyr-derwyn', 'cenyr-derwyn'].includes(key) && ['cenyr', 'vennyr'].includes(cultureId)) return getVennyrClassDefinition('derwyn');
+  if (cultureId !== 'cenyr') return null;
   const entry = DEFINITIONS.find(candidate => [candidate.id, candidate.classId, candidate.templateId].includes(key));
   return entry ? structuredClone(entry) : null;
 }
@@ -308,8 +288,8 @@ export function getCenyrClassDefinitionForProfile(profile = {}) {
 }
 
 export function withCenyrClassTraining(template) {
-  const definition = DEFINITIONS.find(entry => entry.templateId === template.id);
-  return definition ? { ...template, group: 'Cenyr-Klassen', cultureId: 'cenyr', classProgressionId: definition.id,
+  const definition = template.id === 'derwyn' ? getCenyrClassDefinition('derwyn') : DEFINITIONS.find(entry => entry.templateId === template.id);
+  return definition ? { ...template, group: definition.classId === 'derwyn' ? 'Cenyr & Vennyr' : 'Cenyr-Klassen', cultureId: definition.cultureId, classProgressionId: definition.id,
     combatStyleGrants: structuredClone(definition.combatStyleGrants) } : template;
 }
 

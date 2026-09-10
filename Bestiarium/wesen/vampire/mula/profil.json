@@ -1,0 +1,201 @@
+{
+  "id": "mula",
+  "name": "Mula",
+  "classification": "Menschenähnliche Vampirin Bhaals und verborgene Lockjägerin",
+  "continent": "Infernale Sphären und Aleria",
+  "region": "Abgelegene Wege und Ruinen",
+  "folio": "IV / 03-B",
+  "parentGroupId": "vampire",
+  "summary": "Mulen sind anmutige, menschenähnliche Vampire, deren scheue Zurückhaltung eine gefährliche Lockjägerin verbirgt. Als reisende Künstlerinnen oder Bardinnen ziehen sie Verehrer mit einer außergewöhnlichen Singstimme an abgelegene Orte und verbinden Illusion, Polymorphie und Blutmagie mit sorgfältiger Fluchtplanung.",
+  "quote": "Wer der Mula bis hinter den letzten beleuchteten Weg folgt, hört vielleicht noch dasselbe Lied, doch niemals mehr dieselbe Stimme.",
+  "quoteAttribution": "Warnvers aus einer Sammlung nächtlicher Reiseberichte",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Mula"
+    },
+    {
+      "label": "Typ",
+      "value": "Höhere Vampirgattung Bhaals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus jüngeren, schwächeren und rasch unterworfenen Seelen geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Abseits der Wege, in verlassenen Ruinen, Hütten und an Scheidewegen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Scheue Einzelgängerin und vorsichtige Lockjägerin"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend nachts; Sonnenlicht wird gemieden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Polymorphie, Blutmagie, Illusion und bezaubernder Gesang"
+    },
+    {
+      "label": "Stärken",
+      "value": "Täuschung, Verführung, Menschenähnlichkeit und Fluchtkunst"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sakrale Magie, Sonnenlicht und geweihtes Silber"
+    },
+    {
+      "label": "Beute",
+      "value": "Blut sorgfältig ausgewählter, fortgelockter Opfer"
+    },
+    {
+      "label": "Vampirspross",
+      "value": "Mulinar, ein Blutsauger"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Menschentarnung",
+      "Gesangsbann",
+      "Illusionskunst",
+      "Polymorphie",
+      "Blutmagie",
+      "Konfrontationswille"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      8,
+      7,
+      2
+    ],
+    "source": "Aus menschenähnlicher Gestalt, lockendem Gesang, Illusions- und Wandlungsmagie, vampirischer Blutkunst und ausgeprägter Konfliktvermeidung abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Mula überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Bindung oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Mula ist eine höhere, zurückhaltende Vampirgattung in Bhaals Ordnung. Ihre anmutige Erscheinung und vorsichtige Lebensweise erlauben ihr, unter Menschen harmlos zu wirken, während sie einzelne Opfer aus sicherer Entfernung auswählt."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mulen entstehen aus jüngeren und schwächeren Seelen, deren Widerstand gegen Bhaals Verderbnis rasch brach. Ihre vergleichsweise kurze Umformung schenkt ihnen weniger offene Macht, bewahrt aber jene Anpassungsfähigkeit, die ihre subtile Rolle verlangt."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blasse makellose Haut, helles Haar, zarte Züge und Augen in Purpur, Gelb oder Blau lassen sie beinahe menschlich erscheinen. Fangzähne bleiben klein und verborgen; eine schüchterne Haltung lenkt den Verdacht zusätzlich von ihrer dunklen Natur ab."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mulen meiden Herrschaft und offene Konfrontation. Als Künstlerin, Vagabundin oder Bardin ziehen sie Verehrer durch Gesang an abgelegene Orte, schlagen nur unter sicheren Bedingungen zu und verschwinden, sobald Aufmerksamkeit droht."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Polymorphie und Illusion verbergen Gesicht und Umgebung. Die Stimme kann Vertrauen und Faszination verstärken, während Blutmagie als Angriff oder letzte Verteidigung dient; ihre eigentliche Stärke liegt im vorbereiteten Augenblick."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Begegnung sollte niemals allein und außerhalb beleuchteter Wege fortgesetzt werden. Sakrale Magie, geweihtes Silber und Sonnenlicht bleiben wirksam; ebenso wichtig ist es, die Illusion zu brechen und der Stimme keinen ungestörten Einfluss zu lassen."
+        }
+      ]
+    },
+    {
+      "id": "vampirspross",
+      "title": "Vampirspross",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mulinar sind die als Blutsauger überlieferte Sprossform der Mula."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Mulen wählen Rollen, in denen häufiges Weiterreisen keinen Verdacht erregt.",
+            "Ihre Singstimme wird meist lange vor einem offenen vampirischen Merkmal bemerkt.",
+            "Eine Mula bricht eine Jagd lieber ab, als ihre menschliche Tarnung vor mehreren Zeugen zu verlieren."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "id": "enthuellung",
+      "caption": "Bildtafel · Enthüllte Mula im Kampf auf einem nächtlichen Friedhof",
+      "alt": "Mula in vampirischer Gestalt im Kampf mit einem gerüsteten Gegner",
+      "src": "../../../assets/vampire-profiles/mula-plate.webp",
+      "width": 409,
+      "height": 610
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/vampire-profiles/mula-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Mula in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/vampire-profiles/mula-hero.webp",
+    "width": 409,
+    "height": 610,
+    "alt": "Überlieferte Darstellung eines Mula",
+    "caption": "Überlieferte Bildtafel · Mula"
+  }
+}

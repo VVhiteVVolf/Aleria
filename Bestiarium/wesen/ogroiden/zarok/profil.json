@@ -1,0 +1,178 @@
+{
+  "id": "zarok",
+  "name": "Zarok",
+  "classification": "Zatrachischer Jagdogroide und Wächter der Wildnis",
+  "continent": "Infernale Sphären und Aleria",
+  "region": "Die Ewigen Jagdgründe",
+  "folio": "IV / 02-E",
+  "parentGroupId": "ogroiden",
+  "summary": "Zaroks sind Zatrachs mächtigste sterbliche Jäger: massive, geweihtragende Ogroiden mit erdiger Tarnung, scharfem Spürsinn und überraschender Beweglichkeit. Ihre Clans folgen dem Großhorn, prüfen Rang durch Jagderfolg und führen würdige Bestien als Reit- oder Kriegstiere.",
+  "quote": "Ein Zarok verfolgt keine Spur, weil er hofft, dich zu finden; für ihn ist dein Ende bereits Teil des Weges.",
+  "quoteAttribution": "Spruch der Kundschafter an den Ewigen Jagdgründen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Zarok"
+    },
+    {
+      "label": "Typ",
+      "value": "Jagdogroide Zatrachs"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Zatrach aus Tier- und Menschenseelen als Verkörperung roher Jagdkraft geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Die Ewigen Jagdgründe, Zatrachs Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Wälder, Berge und Sümpfe; in Aleria dichte Wildnis und abgelegene Gegenden"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, brutal, jagdgebunden und in Clans oder allein lebend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Jederzeit; Dämmerung und Dunkelheit werden bevorzugt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Übermenschliche Stärke, Fährtenlesen, Wildnistarnung und Bestienführung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähigkeit, Beweglichkeit, Jagdpräzision und Überlebenskunst"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Göttliche Magie, gezielte Täuschung und begrenzte strategische Tiefe"
+    },
+    {
+      "label": "Beute",
+      "value": "Primitive Waffen, Rüstungen, Geweihe und Stoßzähne"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Fährtenkunst",
+      "Wildnistarnung",
+      "Körperkraft",
+      "Jagdpräzision",
+      "Bestienführung",
+      "Strategische Tiefe"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      8,
+      5
+    ],
+    "source": "Aus Spurensinn, natürlicher Tarnung, massigem Körperbau, geordneter Clan-Jagd, gezähmten Bestien und überwiegend instinktiver Planung abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Zarok überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Abhängigkeit oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zaroks sind die mächtigsten sterblichen Diener Zatrachs und zugleich Krieger, Jäger und Wächter ungezähmter Natur. Jede Jagd gilt als Prüfung ihres Gottes, und jedes würdige Ziel als Gelegenheit, Rang und Daseinszweck zu bestätigen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Massige Körper tragen moosgrüne, graubraune oder dunkelgraue Haut und tribalartige Narben. Hörner wachsen mit Alter und Rang; erfahrene Anführer, die Großhörner, tragen prächtige verzweigte Geweihe als Statuszeichen und Nahkampfwaffe."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Ordnung & Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Clans ordnen sich dem erfolgreichsten Jäger unter. Jagderfolg, Stärke und Überleben bestimmen den Rang; versagende Mitglieder werden ausgestoßen. Gegenüber fähigen fremden Jägern können Zaroks widerwilligen Respekt zeigen, Schwache betrachten sie als Beute."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Ewigen Jagdgründe bestehen aus Wäldern, Mooren und felsigen Gebirgen. In Aleria wählen Zaroks vergleichbare Wildnis, errichten Lager aus Ästen und Knochen und markieren ihr Revier mit Trophäen der erlegten Beute."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie lesen selbst alte Spuren, tarnen sich trotz ihrer Größe und verbinden schwere Waffen mit überraschender Beweglichkeit. Geeignete Bestien werden gezähmt und als Reittiere, heilige Begleiter oder Kriegstiere in die Jagd eingebunden."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine falsche Fährte, wechselnder Untergrund und göttliche Magie können ihren Jagdvorteil brechen. Offene Stärke weckt eher Respekt als Flehen, bleibt aber gefährlich; Trophäenzeichen und vorbereitete Fallen sollten als Grenze eines ganzen Clans verstanden werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Rang eines Großhorns lässt sich an der Verzweigung seines Geweihs und den daran befestigten Jagdtrophäen erkennen.",
+            "Zaroks töten nicht jede würdige Bestie; manche werden als Begleiter in den Clan aufgenommen.",
+            "Ein absichtlich verwischter Pfad reizt ihren Jagdtrieb stärker als eine deutlich sichtbare Fluchtspur."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/ogroid-profiles/zarok-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Zarok in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/zarok-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Zarok",
+    "caption": "Überlieferte Bildtafel · Zarok in seiner typischen Umgebung"
+  },
+  "plates": []
+}

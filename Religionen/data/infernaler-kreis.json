@@ -1,0 +1,73 @@
+{
+  "id": "infernaler-kreis",
+  "parentId": "infernus",
+  "title": "Der infernale Kreis",
+  "subtitle": "Die Zehn Infernalen und die Mächte ihres Umkreises",
+  "theme": "infernal",
+  "exploreLabel": "Den infernalen Kreis erkunden",
+  "symbolCaption": "Macht, Verlangen und die Spuren des Großen Spalts.",
+  "groups": [
+    {
+      "id": "infernale",
+      "number": "I",
+      "title": "Die Zehn Infernalen",
+      "label": "Die Zehn Infernalen",
+      "shortLabel": "Hohe Mächte",
+      "intro": "Zehn Namen im infernalen Register – von Dagons Herrschaftsanspruch bis zu Adars rätselhafter Sonderstellung.",
+      "entries": [
+        "gottheiten/infernale/goetter/dagon/eintrag.json",
+        "gottheiten/infernale/goetter/lunara/eintrag.json",
+        "gottheiten/infernale/goetter/grimnar/eintrag.json",
+        "gottheiten/infernale/goetter/bhaal/eintrag.json",
+        "gottheiten/infernale/goetter/zatrach/eintrag.json",
+        "gottheiten/infernale/goetter/sanguine/eintrag.json",
+        "gottheiten/infernale/goetter/nyxara/eintrag.json",
+        "gottheiten/infernale/goetter/adar/eintrag.json",
+        "gottheiten/infernale/goetter/amon/eintrag.json",
+        "gottheiten/infernale/goetter/hela/eintrag.json"
+      ]
+    },
+    {
+      "id": "untergoetter",
+      "number": "II",
+      "title": "Die infernalen Untergötter",
+      "label": "Die infernalen Untergötter",
+      "shortLabel": "Untergötter",
+      "intro": "Tiefe, Rache, Zerrissenheit, Verlockung und Verderbnis erhalten eigene Gestalten.",
+      "entries": [
+        "gottheiten/infernale/untergoetter/thraal/eintrag.json",
+        "gottheiten/infernale/untergoetter/nemsara/eintrag.json",
+        "gottheiten/infernale/untergoetter/azrath-morvath/eintrag.json",
+        "gottheiten/infernale/untergoetter/migdal/eintrag.json",
+        "gottheiten/infernale/untergoetter/nergaloth/eintrag.json"
+      ]
+    },
+    {
+      "id": "geweihte",
+      "number": "III",
+      "title": "Infernale Geweihte",
+      "label": "Infernale Geweihte",
+      "shortLabel": "Geweihte",
+      "intro": "Arkeon und Asphyra sind mit Namen, Beinamen und Bildnissen überliefert.",
+      "entries": [
+        "gottheiten/infernale/geweihte/arkeon/eintrag.json",
+        "gottheiten/infernale/geweihte/asphyra/eintrag.json"
+      ]
+    },
+    {
+      "id": "gefallene",
+      "number": "IV",
+      "title": "Die Gefallenen",
+      "label": "Die Gefallenen",
+      "shortLabel": "Gefallene",
+      "intro": "Gefallene Mächte und ihre Hinterlassenschaften; die ausführlichen Überlieferungen Zarakhuls und Balors stehen neben den noch unvollständigen Namen.",
+      "entries": [
+        "gottheiten/infernale/gefallene/seelenherr/eintrag.json",
+        "gottheiten/infernale/gefallene/narzisst/eintrag.json",
+        "gottheiten/infernale/gefallene/narath/eintrag.json",
+        "gottheiten/infernale/gefallene/zarakhul/eintrag.json",
+        "gottheiten/infernale/gefallene/balor/eintrag.json"
+      ]
+    }
+  ]
+}

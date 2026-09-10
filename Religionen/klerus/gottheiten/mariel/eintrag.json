@@ -1,0 +1,102 @@
+{
+  "godId": "mariel",
+  "intro": "Mariels Klerus trägt die Liebe der Mutter in Hospitäler, Armenhäuser und Familien. Barmherzigkeit bestimmt sowohl die öffentliche Seelsorge als auch die stille Pflege. Die verschiedenen Kasten helfen Menschen, deren Leid leicht übersehen wird.",
+  "community": "Ein Haus der Mutter verbindet häufig Kapelle, Krankenstube und Armenküche. Priester begleiten die Menschen, Mönche und Nonnen tragen den täglichen Betrieb, und wenige Paladine schützen Hilfesuchende. Lehrende aus dem Magisterium unterstützen die Ausbildung der Pflegenden; Mariel ist kein eigener Wissenschaftsbereich zugeordnet.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Die tröstende Priesterschaft",
+      "paragraphs": [
+        "Priesterinnen und Priester Mariels begleiten Trauer, Krankheit, Geburt und den Bund der Ehe. Sie predigen eine Nächstenliebe, die über Verwandtschaft und Freundschaft hinausreicht. Ihr Amt verlangt offene Türen für Hilfesuchende und die Bereitschaft, auch Menschen beizustehen, deren Lebensweg die Gemeinde missbilligt."
+      ],
+      "tasks": [
+        "Familien und Trauernde begleiten",
+        "Ehen und gemeinschaftliche Hilfswerke segnen",
+        "Zwischen Verfeindeten vermitteln"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Häuser der Barmherzigkeit",
+      "paragraphs": [
+        "Mönche und Nonnen halten Hospize, Waisenhäuser und Armenküchen am Leben. In ihren Zünften verbinden sie Erfahrung mit der Unterweisung neuer Mitglieder. Pflegen, Kochen und Zuhören gehören zur gelebten Andacht; ein aufsehenerregendes Wunder gilt nicht als Voraussetzung für einen wertvollen Dienst."
+      ],
+      "tasks": [
+        "Kranke und Bedürftige versorgen",
+        "Heilgärten und Vorräte pflegen",
+        "Neuen Mitgliedern Fürsorge vermitteln"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der heilenden Hände",
+          "work": "Bewahrt die praktische Pflegeerfahrung der Konvente und unterweist deren Mitglieder."
+        },
+        {
+          "name": "Zunft der Heilgärtner",
+          "work": "Pflegt die klösterlichen Gärten und versorgt die Krankenstuben mit ihren Erträgen."
+        },
+        {
+          "name": "Zunft der offenen Tafel",
+          "work": "Führt Armenküchen, Bäckereien und die Vorratshaltung für bedürftige Gäste."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Beschützer der Zuflucht",
+      "paragraphs": [
+        "Paladine der Mutter bewachen Zufluchtsorte und begleiten Menschen, die sich selbst nicht schützen können. Ihr ritterlicher Mut zeigt sich darin, zwischen Angreifenden und Schutzsuchenden zu stehen. Sie bemühen sich um das Ende eines Kampfes, sobald sichere Hilfe und Schutz möglich sind."
+      ],
+      "tasks": [
+        "Hospize und Zufluchtsorte bewachen",
+        "Hilfstransporte und Gefährdete begleiten",
+        "Verwundete aus Gefahrenbereichen bergen"
+      ]
+    },
+    "asketen": {
+      "presence": "eingebunden",
+      "title": "Disziplin im Dienst der Fürsorge",
+      "paragraphs": [
+        "Eine eigene wehrhafte Asketenordnung ist in Mariels gewöhnlichen Häusern nicht vorgesehen. Wer den Weg strenger Selbstbeherrschung sucht, kann ihn in angeleiteten stillen Übungen und geduldigem Pflegedienst leben. Die Übung soll die Fähigkeit zur Fürsorge erhalten; Leiden um seiner selbst willen ist kein Ziel der Mutter."
+      ],
+      "tasks": [
+        "Geduld und aufmerksames Zuhören üben",
+        "An einer geeigneten Schule Anleitung suchen",
+        "Den eigenen Lebenswandel mit Mitgefühl verbinden"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Mariel verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Wiedergutmachung durch Mitgefühl",
+      "paragraphs": [
+        "Bußgänger der Mutter helfen in Küchen, Herbergen und bei angeleiteten Hilfsdiensten. Die Vereinbarung kann besonders auf unterlassene Hilfe oder rücksichtsloses Verhalten eingehen. Bedürftige sind dabei Menschen mit eigenen Wünschen; ihre Versorgung dient der Wiedergutmachung und wird nicht zur Bühne der Selbstrechtfertigung."
+      ],
+      "tasks": [
+        "Armenküchen und Herbergen unterstützen",
+        "Anvertraute Hilfsdienste behutsam ausführen",
+        "Einen verlässlichen Alltag nach dem Bußgang aufbauen"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

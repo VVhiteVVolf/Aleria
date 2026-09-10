@@ -1,0 +1,178 @@
+{
+  "id": "drachling",
+  "name": "Drachling",
+  "classification": "Drachenartiger Kobold und niederer Diener Adars",
+  "continent": "Aleria",
+  "region": "Fernöstliche Gebirge und Wälder",
+  "folio": "IV / 01-F",
+  "parentGroupId": "kobolde",
+  "summary": "Drachlinge sind kleinwüchsige, stolze Zwischenwesen mit humanoidem Körper und drachenartigen Schuppen, Klauen und Köpfen. Als Diener Adars verbinden sie elementare Kräfte und hohe Widerstandskraft mit Gier, geschickter Jagd und einer Vorliebe für Schätze und magische Artefakte.",
+  "quote": "Sprich nie von einem kleinen Drachen; ein Drachling hört nur die Beleidigung und vergisst darüber selbst den Handel.",
+  "quoteAttribution": "Rat eines fernöstlichen Artefakthändlers",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Drachling"
+    },
+    {
+      "label": "Typ",
+      "value": "Drachenartige Kreatur und niederer Diener Adars"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Adar als Diener und Krieger erschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Fernost Alerias"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Abgelegene Gebirgshöhlen, Wälder, unterirdische Gänge und dunkle Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Stolz, gierig, plündernd und gewinnorientiert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Tag und Nacht; bevorzugt Dämmerung und Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Elementarmagie, Resistenzen, Tarnung, Kampfgeschick und teils Flug"
+    },
+    {
+      "label": "Stärken",
+      "value": "Schuppenpanzer, scharfe Sinne und hohe Beweglichkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Gier, begrenzte Größe und geringe langfristige Planung"
+    },
+    {
+      "label": "Beute",
+      "value": "Schätze, magische Artefakte und Jagdbeute"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Elementarkraft",
+      "Schuppenpanzer",
+      "Flugvermögen",
+      "Schatzgier",
+      "Kampfgeschick",
+      "Langzeitplanung"
+    ],
+    "values": [
+      8,
+      8,
+      5,
+      10,
+      8,
+      3
+    ],
+    "source": "Aus elementarer Prägung, Schuppenschutz, teils vorhandenen Flügeln, ausgeprägter Gier und taktischem Kurzzeitdenken abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Drachling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Drachlinge stehen zwischen den majestätischen Drachen und den niederen koboldartigen Geschöpfen. In ihrer zähen, gerissenen Gestalt spiegelt sich Adars Stolz, ohne dass sie Größe und Würde eines echten Drachen erreichen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihr humanoider Körper trägt fest sitzende Schuppen in dunklem Grau, Schwarz oder Dunkelrot. Drachenkopf, kräftiger Kiefer, Klauen, Schwanz und bei manchen Exemplaren Flügel bestimmen die Silhouette."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie treten stolz und aggressiv auf, sammeln Schätze und beurteilen Begegnungen nach Gewinn. Drachlinge können jagen, plündern oder handeln, doch ihre Gier und schnelle Kränkbarkeit verhindern häufig eine langfristig verlässliche Abmachung."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Überliefert sind abgelegene Gebirgshöhlen und mystische Wälder im Fernosten Alerias sowie unterirdische Gänge und Ruinen. Sie wählen Plätze, die einen Schatz verbergen und zugleich mehrere verdeckte Zugänge bieten."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Je nach Färbung zeigen Drachlinge elementare Kräfte und passende Resistenzen. Schuppen schützen vor leichten Treffern, scharfe Sinne warnen vor Eindringlingen, und einzelne Tiere nutzen Flügel für kurze Flüge oder schnelle Höhenwechsel."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine offene Beleidigung ihres Stolzes macht sie unberechenbar; ein sichtbar wertvoller Gegenstand kann dagegen ihre Aufmerksamkeit lenken. Gegner sollten die jeweilige Elementarprägung beobachten, Abstand zu Klauen und Kiefer halten und den Hort nicht unterschätzen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Drachlinge ordnen selbst wertlosen glänzenden Tand sorgfältiger als brauchbare Vorräte.",
+            "Manche üben eine dröhnende Drachensprache, obwohl ihre kleine Brust nur ein heiseres Knurren hervorbringt.",
+            "Ein leerer Hort beschämt einen Drachling stärker als eine verlorene Jagd."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/drachling-icon.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbarer Drachling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/drachling-hero.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Drachling",
+    "caption": "Überlieferte Bildtafel · Drachling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

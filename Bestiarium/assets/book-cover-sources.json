@@ -1,0 +1,24 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "created": "2026-09-09",
+  "covers": [
+    {
+      "book": "wesen-des-infernalen",
+      "file": "book-covers/wesen-des-infernalen.png",
+      "width": 1024,
+      "height": 1536,
+      "purpose": "Antikes, verwittertes Einbandbild; ersetzt die separate HTML-Verzierung und -Beschriftung auf dem vorderen Einband.",
+      "prompt": "Use case: product-mockup.\nAsset type: full-bleed raster FRONT COVER texture for an interactive antique fantasy book, portrait 2:3.\nPrimary request: A truly ancient, weathered, centuries-old hand-bound grimoire cover for Aleria's book \"Das Wesen des Infernalen\", in an old-school Dungeons & Dragons tabletop RPG aesthetic.\nComposition: perfectly straight-on orthographic view of the FRONT COVER ONLY, rectangular, covering the whole canvas edge to edge. This image will itself be placed on a moving physical book cover, so no surrounding scene, no table, no visible page block, no perspective mockup, no floating book, no background margin.\nMaterials: deeply cracked, desiccated umber and near-black brown leather stretched over an old wooden board, rubbed lighter on the raised surfaces, abraded corners, subtle water stains, irregular scratches and patina accumulated over centuries. Restrained, time-worn oxidized bronze corner protectors and a fine hand-tooled border, scratched and tarnished, physically attached to the cover. Serious, scholarly, ominous antique artifact; tactile painterly realism suited to an old RPG sourcebook.\nDesign: a single weathered central circular blind-embossed occult geometrical seal, barely discernible against aged leather, no invented deity or character portrait. Subdued muted aged brass and warm sepia palette, no neon, no glowing effects, no plastic shine.\nText (verbatim, integrated into the image): \"DAS WESEN\" then \"DES INFERNALEN\" on a smaller-to-equal size second line, in weathered embossed antiquarian serif lettering on the upper half of the board. Keep those exact German words correct, legible but organically worn, fitting inside the border. No author name, no subtitle, no other text, no watermark, no logo.\nLighting: soft even raking museum light that reveals texture and shallow tooling without dramatic cast shadows; preserve rich readable midtones.\nThe result must feel like a genuinely ancient recovered book rather than a modern fantasy poster."
+    },
+    {
+      "book": "wesen-des-infernalen",
+      "side": "back",
+      "file": "book-covers/wesen-des-infernalen-rueckseite.png",
+      "width": 1024,
+      "height": 1536,
+      "reference": "book-covers/wesen-des-infernalen.png",
+      "purpose": "Passender antiker Rückdeckel mit verwittertem Leder, gealterten Metallbeschlägen und kleinem zentralem Ornament, ohne Beschriftung.",
+      "prompt": "Use case: precise-object-edit.\nAsset type: matching BACK COVER texture for the antique fantasy book \"Das Wesen des Infernalen\".\nInput image: the existing front cover, used as the visual base and material reference. Produce a separate rear-cover variant.\nKeep: the exact portrait 2:3 full-bleed rectangular format, straight-on orthographic view, dark umber and nearly black centuries-old cracked leather, worn gold-brown edges, deeply aged tarnished bronze corner protectors and fine hand-tooled perimeter border. Keep the same restrained museum lighting, scale of leather grain, material realism, craftsmanship and old-school tabletop RPG aesthetic so both covers unmistakably belong to one physical book.\nChange for the back: remove ALL lettering and the large central geometric seal. Replace their areas with organically continuous, naturally worn leather showing old abrasions, fine cracks and faded stains, with a small, very subtle blind-embossed lozenge ornament at the exact center. The rear board should be simpler and quieter than the front, with broad leather areas and the matching weathered ornamental border. No text, no title, no author, no modern publisher marks, no barcode, no watermark, no new lore symbols or characters.\nComposition: rear board only, filling the canvas edge to edge; no surrounding scene, no table, no book spine or pages, no perspective mockup. Preserve all four aged metal corner protectors and the full cover boundary."
+    }
+  ]
+}

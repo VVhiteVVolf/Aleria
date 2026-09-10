@@ -1,0 +1,178 @@
+{
+  "id": "grimnak",
+  "name": "Grimnak",
+  "classification": "Frostharter Kriegerogroide und bevorzugter Diener Grimnars",
+  "continent": "Infernale Sphären",
+  "region": "Die Blutödnis",
+  "folio": "IV / 02-C",
+  "parentGroupId": "ogroiden",
+  "summary": "Grimnaks sind Grimnars bevorzugte Krieger: gehörnte, frostharte Ogroiden mit grober Schmiedekunst und deutlich mehr taktischem Verstand als die kleineren Grimlinge. In hierarchischen Clans verbinden sie Nahkampfkraft, Regeneration und Gruppenordnung zu einer disziplinierten Bedrohung der Blutödnis.",
+  "quote": "Fürchte am Grimnak nicht zuerst die Axt, sondern den zweiten Krieger, der genau dort wartet, wohin dich der erste treiben will.",
+  "quoteAttribution": "Lehrsatz aus der Akademie für winterliche Feldzüge",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Grimnak"
+    },
+    {
+      "label": "Typ",
+      "value": "Kriegerogroide Grimnars"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Im Zeitalter des Zwiespalts von Grimnar aus Zorn und Grausamkeit geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Die Blutödnis, Grimnars frostige Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Gefrorene Ebenen, Gebirge, Höhlen und lebensfeindliche Kälteregionen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Hierarchisch, grausam, pragmatisch und nach dem Recht des Stärksten organisiert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Tag und Nacht; Kälte und Dunkelheit werden bevorzugt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Übermenschliche Stärke, Frostresistenz, Regeneration, Schmiedekunst und Kampfintuition"
+    },
+    {
+      "label": "Stärken",
+      "value": "Körperliche Robustheit, Gruppenordnung und wirksame grobe Ausrüstung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, göttliche Magie und eingeschränkte Anpassung an Wärme"
+    },
+    {
+      "label": "Beute",
+      "value": "Primitive Waffen und Rüstungen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schmiedekunst",
+      "Kälteresistenz",
+      "Nahkampfkunst",
+      "Regeneration",
+      "Gruppenordnung",
+      "Feueranfälligkeit"
+    ],
+    "values": [
+      7,
+      10,
+      8,
+      7,
+      8,
+      9
+    ],
+    "source": "Aus grober Metallarbeit, Frosthärte, organisiertem Nahkampf, Wundheilung und der ausgeprägten Schwäche gegen Feuer abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Grimnak überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Abhängigkeit oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grimnaks sind Grimnars düstere Parodie auf menschliche Krieger und seine bevorzugten Vollstrecker. Sie verkörpern Zorn, Grausamkeit und Verachtung für Schwäche, besitzen dabei jedoch genug Verstand, um Waffen zu fertigen und als Einheit zu kämpfen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie überragen Menschen deutlich. Frostblaue, aschgraue oder gelbliche Haut bedeckt einen massigen Körper; breite Gesichter, Stoßzähne und je nach Clan oder Rang verschieden geformte Hörner verleihen ihnen eine klar erkennbare Kriegergestalt."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Ordnung & Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Clans folgen einer harten Rangordnung. Stärkere befehlen, Schwächere dienen, und Kampfwert bestimmt Ansehen. Grimnaks handeln pragmatischer als Ognir, dienen diesen Kolossen aber häufig, wenn deren rohe Dominanz keinen offenen Widerspruch erlaubt."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Heimat sind die gefrorenen Ödflächen, Gewässer, Höhlen und Berge der Blutödnis. In Aleria suchen sie Hochgebirge oder Regionen langen Winters; in Wärme weichen sie in Schatten und nächtliche Kälte aus."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neben Stärke und Ausdauer besitzen sie robuste Haut, schnelle Regeneration und Resistenz gegen Wasser- und Kältemagie. Aus knappen Mitteln schmieden sie grobe, tödliche Waffen und Rüstungen und stimmen Angriffe durch kriegerische Intuition aufeinander ab."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer und göttliche Kräfte nutzen ihre gemeinsamen Schwächen. Wer ihre Formation stört, nimmt ihnen mehr als bloßen Schutz; dennoch darf ein verwundeter Grimnak wegen seiner Regeneration niemals vorschnell als ausgeschaltet gelten."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Form und Verzierung der Hörner geben häufig Clan und Rang eines Grimnaks an.",
+            "Ein beschädigtes Werkzeug wird fast immer repariert, solange noch irgendein Teil als Waffe dienen kann.",
+            "Grimnaks können stundenlang in gefrorenem Wasser ausharren, ohne ihre Kampffähigkeit einzubüßen."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/ogroid-profiles/grimnak-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Grimnak in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/grimnak-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Grimnak",
+    "caption": "Überlieferte Bildtafel · Grimnak in seiner typischen Umgebung"
+  },
+  "plates": []
+}

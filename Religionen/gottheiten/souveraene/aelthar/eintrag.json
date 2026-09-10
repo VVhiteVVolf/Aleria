@@ -1,0 +1,170 @@
+{
+  "id": "aelthar",
+  "title": "Aelthar",
+  "epithet": "Der Herr der Wolken",
+  "kind": "Souveräne Gottheit",
+  "summary": "Blitz, Donner und Gemeinschaft.",
+  "symbol": "BilderRüstungen/aelthar_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Herr der Wolken",
+    "Blitz",
+    "Donner",
+    "Gemeinschaft"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aelthar ist der Gott des Donners und Herr der Wolken, einer der fünf Souveräne, die als Eckpfeiler über Aleria wachen und die Welt in Stabilität und Gleichgewicht halten. Als Verkörperung des mächtigen Donners und der donnernden Wolken repräsentiert Aelthar die gewaltigen Naturkräfte, die die Ordnung in der Welt sichern. Seine Verehrung findet ihren Höhepunkt in Mathringen, der Hochburg seines Kultes, wo ihm zahlreiche Tempel und Schreine geweiht sind. Aelthar wird als unerschütterlicher Wächter angesehen, dessen Donner sowohl Warnung als auch Schutz für die Gläubigen bedeutet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Mythos gilt Aelthar als Sohn des Templers, des Gottes der Heiligkeit und der Frömmigkeit. In dieser Analogie übernimmt Aelthar viele der heiligen Aspekte seines Obergottes und transformiert sie in die charakteristischen Eigenschaften des Elements Donners. So steht er nicht nur für die reine Macht der Naturgewalten, sondern auch für den göttlichen Schutz und die Einsicht, die das Heilige mit dem Donner verbindet. Aelthar manifestiert die Entschlossenheit, die sich in jedem Donnerstoß zeigt, und die Gemeinschaft, die durch das verbindende Element der Elektrizität symbolisiert wird."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aelthars Wesenheit spiegelt die immense Kraft und die tiefen, verbindenden Aspekte des Donners wider."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist der Gott, der durch den Blitz die Dunkelheit erhellt, was seine Tugend der Einsicht verkörpert. Diese Einsicht ermöglicht es seinen Jüngern, Klarheit und Verständnis in den komplexesten Situationen zu finden. Aelthar steht auch für Gemeinschaft, da der Donner als verbindendes Element die Menschen zusammenführt und sie daran erinnert, dass sie Teil eines größeren Ganzen sind. Seine Entschlossenheit zeigt sich in der unaufhaltsamen Kraft des Donners, der alles durchdringt und keine Hindernisse duldet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gegen diese Tugenden stehen die Übertretungen, die Aelthar zutiefst verabscheut. Einfältigkeit ist das Gegenteil seiner Einsicht, und jene, die sich der Unwissenheit hingeben, verlieren seine Gunst. Isolation widerspricht der Gemeinschaft, die Aelthar fördert; diejenigen, die sich von anderen absondern und nur an sich selbst denken, gehen gegen seinen Willen. Schließlich ist Unentschlossenheit das genaue Gegenteil der Entschlossenheit, die Aelthar fordert. Zögerlichkeit und mangelnde Durchsetzungskraft sind Eigenschaften, die er nicht toleriert, da sie den wahren Geist des Donners entehren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aelthar, der Herr des Donners, besitzt eine gewaltige Macht, die sich in den Elementen Blitz und Donner manifestiert. Seine Macht liegt in der Kontrolle über den Himmel und die Stürme, die er nach seinem Willen entfesselt oder besänftigt. Als Gott des Donners hat Aelthar die Fähigkeit, die dunklen Wolken zu rufen und sie mit elektrischer Energie aufzuladen, um Blitzschläge zu erzeugen, die die Dunkelheit durchdringen und alles erhellen, was im Schatten verborgen liegt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Macht wird besonders in Momenten der Entscheidung und der Prüfung spürbar, wenn er seinen Anhängern durch plötzliche Eingebungen und erleuchtende Gedanken die nötige Einsicht verleiht, um komplexe Probleme zu lösen. In diesen Momenten zeigt sich Aelthar als Lichtbringer, der das Dunkel des Unwissens vertreibt. Gleichzeitig ist er auch der Gott, der die Gemeinschaft stärkt, indem er seine Jünger zusammenführt und sie daran erinnert, dass sie gemeinsam stärker sind. Der Donner ist ein Zeichen seiner Gegenwart, ein Ruf zur Einheit und zur kollektiven Stärke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aelthar belohnt diejenigen, die mit Entschlossenheit handeln, indem er ihnen die Kraft verleiht, ihre Ziele zu verfolgen, Hindernisse zu überwinden und ihre Bestimmung zu erfüllen. In Schlachten und in Zeiten der Not ist er derjenige, der Mut und Durchhaltevermögen schenkt, um den Sturm zu überstehen und gestärkt daraus hervorzugehen. Seine Macht ist unnachgiebig, aber gerecht, und sie dient dazu, seine Jünger zu führen, zu schützen und zu inspirieren."
+        }
+      ]
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [],
+      "sharedLore": "eide"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt; Der Aspekt des Herrn bewirkt, dass der Gesegnete in einem gewissen Radius über Blitz und Donner, welches er selbst oder mit seiner Waffe berührt, unter seine Kontrolle gerät. Zeitgleich kann er natürlich selbst eine gewisse Form der Blitzmagie wirken kann. Die Zweite Form des Aspektes des Herrn ist etwas anders. Diese Form nennt sich \"Donnergrollen\". Damit bezeichnet man zwei verschiedene Dinge. Zum einen ist er In der Lage Wölkchen zu erschaffen, die Blitz und Donner begünstigen. Zum anderen kann er, egal wie groß eine Wolke ist, einen Donnerknall entstehen lassen, also ohrenbetäubenden Krach.",
+            "Segen; Der Segen des Herrn der Wolken wird jenen zu Teil, die Impulsiver Natur sind, Menschen, die Hnadeln! Dies ist auch die einzige Anforderung, die er hat. Sein Segen bewirkt, dass es den Gesegneten einfacher fällt, auf die Umstände in Ihren Leben zu reagieren. So sind diese Leute oft schwer von hinten zu attackieren, dass sie in dem Moment der Berührung oft schnell schalten und walten können."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [],
+      "sharedLore": "buende"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aelthar schätzt besonders die Tugenden Einsicht, Gemeinschaft und Entschlossenheit. Die Einsicht steht für das klare Verständnis und die Weisheit, die es braucht, um die Welt zu erleuchten, wie es der Blitz am Himmel tut. Gemeinschaft symbolisiert die Fähigkeit, Verbindungen zu schaffen und zu pflegen, ähnlich wie Elektrizität, die Dinge miteinander verbindet. Entschlossenheit spiegelt die Stärke und den unerschütterlichen Willen wider, sich durch alle Widrigkeiten hindurchzusetzen, wie der Donner, der die Stille durchbricht."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aelthar gebietet seinen Anhängern, stets nach Wahrheit und Weisheit zu streben, sich um das Wohl der Gemeinschaft zu sorgen und in ihren Entscheidungen entschlossen zu handeln. Er verachtet Einfältigkeit, Isolation und Unentschlossenheit und fordert, dass seine Gläubigen in ihrem Handeln sowohl Stärke als auch Klarheit zeigen."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus von Aelthar ist oft eine imposante Feste oder ein hoher Tempel, der auf einer Bergspitze thront. Von diesen heiligen Stätten aus kann man weit in die Lande blicken, als würde man die Welt unter den wachsamen Augen des Donnergottes betrachten. Diese Tempel sind zugleich Orte der Gemeinschaft und der Entschlossenheit, wo sich Gläubige versammeln, um ihre Bindungen zu stärken und ihre Entschlossenheit in Aelthars Namen zu erneuern."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Blitz, Donner und Gemeinschaft"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Einsicht, Gemeinschaft und Entschlossenheit"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Einfältigkeit, Isolation und Unentschlossenheit"
+    },
+    {
+      "label": "Element",
+      "value": "Blitz und Donner"
+    },
+    {
+      "label": "Hochburg",
+      "value": "Mathringen"
+    }
+  ],
+  "names": [],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "e965ad93-12e9-4bfd-af88-994490d36e74",
+    "sha256": "1fcbc89f96de994c090a38c49d832148cd4c62783b37652396ce231e92c1a978"
+  },
+  "portrait": {
+    "src": "assets/divine-art/aelthar.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Aelthar, Der Herr der Wolken",
+    "caption": "Aelthar · Der Herr der Wolken"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Aelthar",
+      "href": "Religionen/klerus/gottheiten/aelthar/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

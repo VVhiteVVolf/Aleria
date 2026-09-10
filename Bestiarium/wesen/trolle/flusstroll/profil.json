@@ -1,0 +1,185 @@
+{
+  "id": "flusstroll",
+  "name": "Flusstroll",
+  "classification": "Trollunterart · Scheuer Uferbewohner",
+  "continent": "Aleria",
+  "region": "Flüsse, Uferzonen und verlassene Wasserbauten",
+  "folio": "III-T / 02",
+  "parentGroupId": "trolle",
+  "summary": "Flusstrolle sind die kleinsten und körperlich schwächsten bekannten Trolle, dafür geschickte Schwimmer und ungewöhnlich lernfähig. In Uferhöhlen, alten Mühlen und verlassenen Gehöften leben sie von Fisch, Krebsen und Aas und suchen eher Deckung oder eine primitive Verständigung als den offenen Kampf.",
+  "quote": "Wenn das Schilf nach fauligem Fisch riecht, hat der Fluss bereits einen neuen Nachbarn.",
+  "quoteAttribution": "Merksatz der alerischen Fährleute",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-flusstroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Flusstroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/flusstroll.webp",
+    "width": 1200,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Flusstroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Flusstroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Flusstroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; wasserbewohnender Troll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Kleine, an Ufer und Strömungen angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Aleria"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Flüsse, Uferhöhlen, alte Mühlen und verlassene Wasserbauten"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Scheu, lernfähig und bei Überlegenheit oder Bedrängnis aggressiv"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung und Nacht; tagsüber in dunklen Unterschlüpfen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schwimmen, Dunkelsicht, guter Geruchssinn und rudimentäre Sprache"
+    },
+    {
+      "label": "Stärken",
+      "value": "Anpassung, Ortskenntnis, Heimlichkeit im Wasser"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Körperkraft, Sonnenlicht, Feuer und organisierte Gegenwehr"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Gesammelter Tand, Angelgerät, Münzen und verwertbare Zähne"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schwimmkraft",
+      "Sprachvermögen",
+      "Geruchssinn",
+      "Konfliktscheu",
+      "Anpassung",
+      "Feueranfälligkeit"
+    ],
+    "values": [
+      9,
+      7,
+      9,
+      8,
+      8,
+      8
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Flusstrolls abgeleitet",
+    "intro": "Beim Flusstroll bestimmen Anpassung, Verständigung und Fluchtverhalten die Begegnung stärker als rohe Gewalt. Hohe Konfliktscheu eröffnet häufig einen Weg ohne Kampf."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ausgewachsene Flusstrolle erreichen meist nur menschliche Größe oder bleiben darunter. Sie gehen gebeugt, besitzen lange Arme und kurze Beine und können aus der Entfernung wie verwilderte Menschen wirken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Breite Nasen, spitze Ohren, vergilbte Zähne und ein durchdringender Eigengeruch verraten sie aus der Nähe. Ihre grünlich graue Haut ist an feuchte Ufer angepasst."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Druidische Lehren zählen Flusstrolle zu den verfluchten Humanoiden und erkennen in ihrer Gestalt sowie Sprache Reste einer sehr alten menschlichen Herkunft. Ihre eigene Rede gilt als verfallene Form einer antiken albischen Zunge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch den häufigen Kontakt mit Reisenden und Dörfern lernen sie Worte der menschlichen Sprache. Sie nutzen diese selten für echten Handel, wohl aber für Warnungen, Bitten und primitive Absprachen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flusstrolle meiden bewaffnete Krieger und offene Kämpfe aus Selbsterhaltung. Fühlen sie sich überlegen oder in die Enge getrieben, schlagen Scheu und Rückzug jedoch schnell in Aggression um."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zu einer Plage werden sie, wenn sie Reusen leeren, Vorräte stehlen oder Vieh aus abgelegenen Höfen holen. Sattgefressene Exemplare können dagegen stundenlang reglos im Schilf liegen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Höhlen, verlassene Unterschlüpfe, alte Mühlen und ruinöse Uferbauten bieten Dunkelheit und Nähe zu Nahrung. Fische, Aale, Krebse und Aas bilden den größten Teil ihrer Kost."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grenzer vertreiben einzelne Flusstrolle meist, statt sie zu jagen. Pfeile, einfache Klingen und Feuer genügen gegen ihre geringe Körperkraft; ein freier Rückweg senkt die Gefahr eines verzweifelten Angriffs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pragmatische Dorfgemeinschaften dulden mitunter einen Einzelgänger, solange er Fisch statt Vieh nimmt. Wächst ihre Zahl, endet diese stillschweigende Übereinkunft."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Flusstrolle brummen alte albische Wiegenlieder, ohne deren Bedeutung zu kennen.",
+            "Glänzende Knöpfe, Münzen und Nägel werden gesammelt, obwohl sie keinen erkennbaren Nutzen haben.",
+            "Einige geben sich menschliche Namen, die sie verkürzen oder falsch aussprechen.",
+            "Sie singen angeblich nur dann, wenn sie sich vollkommen unbeobachtet glauben."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,185 @@
+{
+  "id": "bergtroll",
+  "name": "Bergtroll",
+  "classification": "Trollunterart · Gewaltige Gebirgsbestie",
+  "continent": "Alerias Gebirge",
+  "region": "Hochgebirge, Pässe und schroffe Täler",
+  "folio": "III-T / 04",
+  "parentGroupId": "trolle",
+  "summary": "Bergtrolle gehören zu den größten, zähesten und zerstörerischsten Vertretern ihrer Rasse. Hörner, Stoßzähne, dicke Haut und eine gewaltige Körpermasse machen sie zu wandelnden Naturgewalten, die isolierte Gebirgstäler beherrschen und selbst organisierte Jagdgesellschaften nur mit Feuer, Fallen und Ausdauer bezwingen.",
+  "quote": "Man begegnet keinem Bergtroll. Man bereitet eine Jagd vor – oder ein Begräbnis.",
+  "quoteAttribution": "Leitsatz der Passwächter von Aleria",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-bergtroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Bergtroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/bergtroll.webp",
+    "width": 1200,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Bergtroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Bergtroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Bergtroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; riesenhafte Trollbestie"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Großwüchsige, an Hochgebirge angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alerias Gebirge"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Hochgebirge, Passregionen, Geröllfelder und Schluchten"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Einzelgängerisch, offen aggressiv und kannibalisch"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung und Nacht, bei schlechtem Wetter auch tagsüber"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Extreme Kraft, Regeneration und Schmerzresistenz"
+    },
+    {
+      "label": "Stärken",
+      "value": "Masse, dicke Haut, Hörner, Hauer und Furchtlosigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, Fallen, Erschöpfung und koordinierte Jagd"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Hörner, Hauer, Trollblut und schwere Knochen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körpermasse",
+      "Zähigkeit",
+      "Regeneration",
+      "Angriffswille",
+      "Sprachvermögen",
+      "Feueranfälligkeit"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      10,
+      1,
+      8
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Bergtrolls abgeleitet",
+    "intro": "Der Bergtroll wird über Masse, Schmerzresistenz und ungebremsten Angriff bewertet. Sein geringes Sprachvermögen ist Folge extremer Isolation und fehlender sozialer Notwendigkeit."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein ausgewachsener Bergtroll kann bis zu dreimal so groß wie ein Mensch werden. Sein gedrungener Körper, der schwere Schädel und die breiten Schultern sind auf maximale Kraft ausgelegt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asymmetrische Hörner, lang gewachsene Stoßzähne und dichtes Fell schützen und drohen zugleich. Die vernarbte Lederhaut nimmt Pfeilen und Klingen viel von ihrer Wirkung."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bergtrolle leben so isoliert, dass Sprache bei vielen Exemplaren auf einzelne Worte oder Drohlaute verkümmert ist. Gebrüll, Gesten und Körperspannung ersetzen jedes längere Gespräch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie kennen kaum Scheu vor Siedlungen und greifen gezielt an, wenn Gebirgsdörfer oder Reisende in Reichweite liegen. Ein einzelnes Exemplar kann ein Tal über Wochen in Angst halten."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Kampf verlassen sich Bergtrolle auf Masse, Kraft und Regeneration. Pfeile werden aus dem Fleisch gerissen, Speere zerbrochen und Gegner frontal überrannt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn Menschen fehlen, reißen sie Gebirgswild oder nehmen Aas. Besonders männliche Exemplare dulden kaum Konkurrenz und töten selbst schwächere Trolle."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schroffe Gipfel, vereiste Höhen, tiefe Schluchten und schwer zugängliche Höhlensysteme bilden ihre Reviere. Alte Pfade werden durch die Tiere, durch Felswürfe oder absichtliche Zerstörung unpassierbar."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine organisierte Jagd braucht Kundschafter, Hetzer, schwere Waffen, Feuer und vorbereitete Engstellen. Fallgruben, Felsbarrieren und Erschöpfung entscheiden mehr als ein offener Schlagabtausch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Einzelkämpfer hat nur als außergewöhnliche Gestalt eine Chance. Für alle anderen ist Planung die einzige verlässliche Waffe."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bergtrolle werden wegen ihrer Angriffe auf schwächere Artgenossen als Kannibalen unter den Trollen bezeichnet.",
+            "Hörner dienen manchen Kulturen als Kriegstrophäen und Rangzeichen.",
+            "Lawinen und Felsstürze werden ihnen zugeschrieben – nicht immer zu Unrecht.",
+            "Ein gesättigter Bergtroll kann wochenlang verschwinden; ein hungriger wird zur regionalen Katastrophe."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

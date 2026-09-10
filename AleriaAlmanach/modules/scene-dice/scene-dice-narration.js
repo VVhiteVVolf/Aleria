@@ -3,7 +3,7 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js?v=20260906-effect-rolls-v1';
+} from './scene-dice-narration-core.js?v=20260909-dragon-parent-v2';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,

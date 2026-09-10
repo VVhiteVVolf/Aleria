@@ -1,0 +1,178 @@
+{
+  "id": "bhalgar",
+  "name": "Bhalgar",
+  "classification": "Vampirhafter Ogroide und Blutdiener Bhaals",
+  "continent": "Infernale Sphären",
+  "region": "Der Blutabyss",
+  "folio": "IV / 02-D",
+  "parentGroupId": "ogroiden",
+  "summary": "Bhalgar sind Bhaals dürre, vampirhafte Ogroiden. Sie ersetzen die rohe Kraft ihrer Verwandten durch Blutmagie, Schattenbewegung und geduldige Hinterhalte; rote Adern und Fangzähne verraten den Hunger, von dem zugleich ihre Regeneration und ihre größte Abhängigkeit bestimmt werden.",
+  "quote": "Der Bhalgar wirkt schwach, weil er den Kampf erst beginnt, wenn dein Blut bereits mehr auf seinen Befehl hört als auf deinen.",
+  "quoteAttribution": "Warnung eines alerischen Bannkundigen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Bhalgar"
+    },
+    {
+      "label": "Typ",
+      "value": "Vampirhafter Ogroide und Diener Bhaals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Bhaal durch Verderbnis und vampirische Magie geschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Der Blutabyss, Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Ruinen, Höhlen und Sümpfe; bevorzugt verborgene und abgelegene Orte"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Einzelgänger oder kleine Zirkel, verschlagen, geduldig und blutgierig"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend nachtaktiv"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Blutmagie, Schattenmanipulation, schnelle Bewegung und vampirische Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Intelligenz, Heimlichkeit, Präzision und blutgestützte Heilung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Göttliche Magie, geringe Körperkraft und Abhängigkeit von Blut"
+    },
+    {
+      "label": "Beute",
+      "value": "Fangzähne und Spuren verdorbener Blutessenz"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Blutmagie",
+      "Schattenjagd",
+      "Beweglichkeit",
+      "Regeneration",
+      "Hinterhaltsplanung",
+      "Blutabhängigkeit"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      8,
+      9,
+      10
+    ],
+    "source": "Aus vampirischer Magie, nächtlicher Heimlichkeit, schneller Jagdweise, blutgebundener Heilung und hoher planerischer Intelligenz abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Bhalgar überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Abhängigkeit oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bhalgar bilden gemeinsam mit den Blutlingen eine große Bevölkerungsschicht im Blutabyss. Anders als massige Ogroiden verkörpern sie Bhaals Intelligenz und Hinterlist und führen als Einzeljäger oder Anführer kleiner Zirkel die Verderbnis aus dem Verborgenen fort."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dürre, langgliedrige Körper tragen blasse Haut mit pulsierenden roten Adern. Leuchtende Augen, ein haarloser und hornloser Kopf sowie scharfe Fangzähne geben ihnen eine fremdartige vampirische Erscheinung."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Ordnung & Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bhalgar beobachten Beute geduldig und schlagen nur bei günstigem Verhältnis von Gefahr und Gewinn zu. Zirkel bleiben klein und voller Misstrauen; Führung fällt dem gerissensten Mitglied zu, bis Rivalität oder Blutgier das Bündnis wieder spaltet."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Aleria verbergen sie sich in verlassenen Ruinen, unterirdischen Höhlen und dichten Sümpfen. Abgelegene Wege und kleine isolierte Siedlungen bieten ihnen Opfer, die lange beobachtet werden können, ohne Aufmerksamkeit zu wecken."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blutmagie öffnet Wunden, legt lähmende Flüche und entzieht Lebenskraft auf Entfernung. Bhalgar verschwinden im Schatten, bewegen sich schnell und heilen schwere Verletzungen, solange ihnen frisches Blut zur Verfügung steht."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Göttliche Magie unterbricht ihre vampirischen Kräfte besonders wirksam. Licht, geschlossene Wunden und die Verweigerung frischen Blutes begrenzen Regeneration und Tarnung; ein scheinbarer Rückzug sollte dennoch als neuer Hinterhalt behandelt werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bhalgar verschwenden ungern Blut und wählen deshalb präzise Angriffe statt langer Kraftproben.",
+            "In einem Zirkel wird jede gemeinsam erlegte Beute zum Anlass für neue Rangstreitigkeiten.",
+            "Rot pulsierende Adern werden heller, sobald Blutmagie oder Regeneration einsetzt."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/ogroid-profiles/bhalgar-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Bhalgar in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/bhalgar-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Bhalgar",
+    "caption": "Überlieferte Bildtafel · Bhalgar in seiner typischen Umgebung"
+  },
+  "plates": []
+}

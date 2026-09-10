@@ -648,6 +648,7 @@ function buildHousePage(page, entry, pageIndex, total) {
 // between 2:3 and 1:1 via data.portraitFormat.
 function buildGuildPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
+  const commentThread = getInlineCommentThreadForPage(page, entry, pageIndex);
   const data = sanitizeGuildData(page.guild || {});
   const stats = Array.isArray(page.stats) ? page.stats : [];
   const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
@@ -690,6 +691,7 @@ function buildGuildPage(page, entry, pageIndex, total) {
         ${buildBiographyHeading(data.worksTitle)}
         ${buildBiographyLines(data.works, 'compact')}
         ${buildBiographyExtraSections(data.extraSections, 'afterWorks')}
+        ${commentThread ? buildEmbeddedCommentsSection(commentThread) : ''}
       </main>
       <aside class="biography-right">
         ${buildBiographyHeading(data.triviaTitle)}

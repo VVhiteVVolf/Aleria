@@ -1,15 +1,19 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 
 const WEAPON_PROFILE_ALIASES = Object.freeze([
   ['halberd', /hellebarde/],
   ['partisan', /partisane/],
   ['trident', /dreizack/],
+  ['morningstar', /morgenstern/],
+  ['staff', /kampfstab|zauberstab|\bstab\b/],
   ['lance', /lanze|reiterspie(?:ss|ß)/],
   ['rapier', /rapier|degen/],
   ['longbow', /langbogen/],
   ['shortbow', /kurzbogen/],
   ['dual-daggers', /dolch.*(?:paar|beidh)|(?:paar|beidh).*dolch/],
   ['dual-swords', /schwert.*(?:paar|beidh)|(?:paar|beidh).*schwert/],
+  ['shortsword', /kurzschwert/],
+  ['dagger', /dolch|messer/],
   ['greatsword', /gro(?:ss|ß)schwert|zweih[aä]nder/],
   ['battleaxe', /streitaxt/],
   ['axe', /axt|beil/],
@@ -41,7 +45,7 @@ function supportsCantrefPolearmRule(definition, technique, weaponProfileId = '')
   if (definition.classId === 'cantref') return true;
   return definition.classId === 'uchelwyr'
     && technique.cenyrTraining?.uchelwyrCompatible === true
-    && weaponProfileId === 'lance';
+    && ['spear', 'lance', 'partisan', 'trident', 'halberd'].includes(weaponProfileId);
 }
 
 function validateClassAndWeapon(definition, technique, weaponProfileId, weapon = {}) {
@@ -70,7 +74,7 @@ function hasEquippedShield(profile = {}) {
 export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, weapon = {}) {
   const rules = emptyRules(technique);
   const definition = getCenyrClassDefinitionForProfile(profile);
-  if (!definition || technique.combatStyleId !== 'drachentanz') return rules;
+  if (!definition || !['drachentanz', 'sirenentanz'].includes(technique.combatStyleId)) return rules;
   const weaponProfileId = getCenyrWeaponProfileId(weapon);
 
   const classWeaponError = validateClassAndWeapon(definition, technique, weaponProfileId, weapon);
@@ -83,6 +87,13 @@ export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, w
   if (technique.cenyrTraining?.requiresMounted && profile.combat?.mounted !== true) {
     rules.compatible = false;
     rules.disabledReason = 'Diese Technik kann nur beritten eingesetzt werden.';
+  }
+
+  const occupiedOffHand = (profile.weapons || []).some(item => item.id === profile.combat?.offHandWeaponId && item.id !== weapon.id);
+  if (technique.cenyrTraining?.requiresTwoHands && (occupiedOffHand || hasEquippedShield(profile))) {
+    rules.compatible = false;
+    rules.disabledReason = 'Diese Technik benötigt beide Hände; Zweitwaffe oder Schild müssen zuvor abgelegt werden.';
+    return rules;
   }
 
 

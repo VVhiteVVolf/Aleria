@@ -1,14 +1,14 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260905-damage-balance-v1';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260909-dragon-parent-v2';
 import {
   cloneArchiveValue,
   CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION,
-  extractCharacterArchiveEntries,
   extractItemRegisterArchiveEntries,
   makeCharacterArchiveKey,
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
+import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
+import { extractCurrentCharacterArchiveEntries, reconcileCharacterArchiveClassTraining } from './character-archive-class-training.js?v=20260909-dragon-parent-v2';
 
 const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';
 
@@ -104,16 +104,16 @@ export async function ensureCharacterArchiveLoaded() {
 }
 
 export function getCharacterArchiveEntries() {
-  return mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([
+  return mergeCharacterArchiveEntries(classifyCharacterArchiveEntries(reconcileCharacterArchiveClassTraining([
     ...state.builtin, ...state.live, ...state.register, ...state.remote
-  ])).map(entry => cloneArchiveValue(entry));
+  ]))).map(entry => cloneArchiveValue(entry));
 }
 
 export function setCharacterArchiveLiveRecords(characters = [], creatures = []) {
   const characterEntries = (Array.isArray(characters) ? characters : [])
-    .flatMap(record => extractCharacterArchiveEntries(record, 'character'));
+    .flatMap(record => extractCurrentCharacterArchiveEntries(record, 'character'));
   const creatureEntries = (Array.isArray(creatures) ? creatures : [])
-    .flatMap(record => extractCharacterArchiveEntries({ ...record, entityType: 'creature' }, 'creature'));
+    .flatMap(record => extractCurrentCharacterArchiveEntries({ ...record, entityType: 'creature' }, 'creature'));
   state.live = mergeCharacterArchiveEntries(characterEntries, creatureEntries);
   if (state.loaded) dispatchChanged();
 }
@@ -159,7 +159,7 @@ export async function saveCharacterArchiveEntry(entry = {}) {
 
 export async function archiveCharacterRecord(record = {}, sourceKind = '') {
   await ensureCharacterArchiveLoaded();
-  const extracted = extractCharacterArchiveEntries(record, sourceKind);
+  const extracted = extractCurrentCharacterArchiveEntries(record, sourceKind);
   if (!extracted.length) return [];
   const existingByKey = new Map(getCharacterArchiveEntries().map(entry => [makeCharacterArchiveKey(entry.kind, entry.name), entry]));
   const now = new Date().toISOString();

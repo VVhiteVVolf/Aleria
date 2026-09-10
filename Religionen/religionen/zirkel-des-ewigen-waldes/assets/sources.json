@@ -1,0 +1,244 @@
+{
+  "attachment": "c7df8aaa-b0e3-4b4c-ba01-48c765d847d2",
+  "images": [
+    {
+      "id": "klytharios",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/klytharios.png",
+      "url": "https://i.imgur.com/1hKtfJ8.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "567031693246a18c74cacf128977dfd30dd69c8631548dee051c9b20bf54cc92",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "aristhea",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/aristhea.png",
+      "url": "https://i.imgur.com/9plR4Vl.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "06fa0394de8aeb10b43896adda3c90ead60e0ca00b25d9a145833aff98ba5aad",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "artemisra",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/artemisra.png",
+      "url": "https://i.imgur.com/zFm8HVz.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "7cc05f9b423758109cd5d937430ff6930fa291ff378159af4040de47b4b20b74",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "elythra",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/elythra.png",
+      "url": "https://i.imgur.com/mcVXFzI.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "7732c40fe429d3df1712aee73e890f7f625cf176a2b73d54a7a0cd23324d4296",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "kallistra",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/kallistra.png",
+      "url": "https://i.imgur.com/dqEUpSl.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "31f9922a501fc9c0a6dc21d4a9dfa02c64d7c34df6c5c510574a4598433f4825",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "klythara",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/klythara.png",
+      "url": "https://i.imgur.com/mbHWIlg.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "81fb291774d9a1e14469336502a94d5d03a2218157cc6653a7a984ab6bc3443e",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "nekara",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/nekara.png",
+      "url": "https://i.imgur.com/TlVKW1i.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "d949ebbb2cb6a350d812e3c26e4fa832d4dfa8fef80cefe1d38e860a3da2fb19",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "alethea",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/alethea.png",
+      "url": "https://i.imgur.com/Pesy4eG.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "ff59b1ff1663bdfd1a89e157b90b28c0204746a5131ee5b7fae485c4008f4226",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "kyreon",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+      "url": "https://i.imgur.com/YDappwv.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "dd988d0a441fdefb9a28e362ab1450b701d5d3f4a754c90c7243e0f7cbcb606b",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "tethron",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/tethron-waldzirkel.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ce9e5bdfd7d52e803082b304268ac65003f34de51c3cabf794dc719fe879a591",
+      "tool": "built-in image_gen",
+      "promptId": "zirkel-des-ewigen-waldes/tethron",
+      "references": [
+        "religionen/zirkel-des-ewigen-waldes/assets/klytharios.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/nekara.png"
+      ],
+      "replaces": "religionen/zirkel-des-ewigen-waldes/assets/tethron.png"
+    },
+    {
+      "id": "baalzor",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/baalzor-waldzirkel.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b182f98fc2f5517f0e0e99764ae9b2bb7470494b543769b24d4496e8d9519419",
+      "tool": "built-in image_gen",
+      "promptId": "zirkel-des-ewigen-waldes/baalzor",
+      "references": [
+        "religionen/zirkel-des-ewigen-waldes/assets/klytharios.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/nekara.png"
+      ],
+      "replaces": "religionen/zirkel-des-ewigen-waldes/assets/baalzor.png",
+      "postProcessing": {
+        "tool": "local Pillow/NumPy",
+        "operation": "Neutral checkerboard removal using foreground chroma and edge color unmixing",
+        "authorization": "User explicitly approved local image processing in the conversation",
+        "inputSha256": "55e2a08abe4072191a729a69e3a20868e12c866a6dfa633514b582508b80fb6f"
+      }
+    },
+    {
+      "id": "lyrion",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/lyrion-waldzirkel.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "aefa8885dae92de3ca57d20d2a421a7ee0b44d77f7dfc64c4b1659255a984014",
+      "tool": "built-in image_gen",
+      "promptId": "zirkel-des-ewigen-waldes/lyrion",
+      "references": [
+        "religionen/zirkel-des-ewigen-waldes/assets/klythara.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/nekara.png"
+      ],
+      "replaces": "religionen/zirkel-des-ewigen-waldes/assets/lyrion.png",
+      "postProcessing": {
+        "tool": "local Pillow/NumPy",
+        "operation": "Neutral checkerboard removal using foreground chroma and edge color unmixing",
+        "authorization": "User explicitly approved local image processing in the conversation",
+        "inputSha256": "70509dd81da613df71d48e38f5120a960b60a53fc0613598b034ef862429ee4e"
+      }
+    },
+    {
+      "id": "gryloth",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/gryloth-waldzirkel.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e417e18f6a80a04498ba455ef14d69a9afb743a9384b82a9af6fc24b27b862b6",
+      "tool": "built-in image_gen",
+      "promptId": "zirkel-des-ewigen-waldes/gryloth",
+      "references": [
+        "religionen/zirkel-des-ewigen-waldes/assets/klytharios.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/nekara.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/klythara.png"
+      ],
+      "replaces": "religionen/zirkel-des-ewigen-waldes/assets/gryloth.png",
+      "postProcessing": {
+        "tool": "local Pillow/NumPy",
+        "operation": "Neutral checkerboard removal using foreground chroma and edge color unmixing",
+        "authorization": "User explicitly approved local image processing in the conversation",
+        "inputSha256": "532a7257d1a948d3a2ca6b5cc7ac0e9a181f83c6d69844dae3acda3368c641c1"
+      }
+    },
+    {
+      "id": "aurion-noxus",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/aurion-noxus-waldzirkel.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "0283e33b16bed14efe852220088017170698f733812d24db0b30deda79a350b9",
+      "tool": "built-in image_gen",
+      "promptId": "zirkel-des-ewigen-waldes/aurion-noxus",
+      "references": [
+        "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/nekara.png",
+        "religionen/zirkel-des-ewigen-waldes/assets/klythara.png"
+      ],
+      "replaces": "religionen/zirkel-des-ewigen-waldes/assets/aurion-noxus.png",
+      "postProcessing": {
+        "tool": "local Pillow/NumPy",
+        "operation": "Neutral checkerboard removal using foreground chroma and edge color unmixing",
+        "authorization": "User explicitly approved local image processing in the conversation",
+        "inputSha256": "4c757f2100f5112d402d48f728b48d2b3d47f4c286993b93f0a878586d9d62f5"
+      }
+    }
+  ],
+  "unusedLegacyHeader": "https://i.imgur.com/VbFW6YU.png",
+  "note": "Die vorhandenen farbigen Religionszeichen bleiben erhalten. Die sieben schwarzen Kopfzeichen aus den neuen Vorlagen ersetzen sie nicht.",
+  "legacyImages": [
+    {
+      "id": "tethron",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/tethron.png",
+      "url": "https://i.imgur.com/TdE6JIm.png",
+      "width": 430,
+      "height": 466,
+      "sha256": "a83160c249e37fe06cde5b9e3a0f379b17ab32b89fc7b4a7178de7ae25aa6018",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "baalzor",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/baalzor.png",
+      "url": "https://i.imgur.com/Bb5fhiv.png",
+      "width": 500,
+      "height": 500,
+      "sha256": "c1633b2fea6af69fb82fe513d23db142a1d8eaf68110ca112a5aa5418cce0698",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "lyrion",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/lyrion.png",
+      "url": "https://i.imgur.com/rym1MNu.png",
+      "width": 500,
+      "height": 500,
+      "sha256": "c6b14ec990325eb1c8efd796348556a5283564d80edb9d7973bd7b650d053a4f",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "gryloth",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/gryloth.png",
+      "url": "https://i.imgur.com/rlyHfBv.png",
+      "width": 512,
+      "height": 487,
+      "sha256": "f5eb71809c11e0513c0cf5b0f2104dc740d294503d16f13c50894389f029b481",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "aurion-noxus",
+      "src": "religionen/zirkel-des-ewigen-waldes/assets/aurion-noxus.png",
+      "url": "https://i.imgur.com/cvyVKWx.png",
+      "width": 500,
+      "height": 500,
+      "sha256": "7c80458bb5b9b3ee17ea3d830f7f6f37f398ec337be84bf68c52813a53c7516e",
+      "authorship": "user-supplied"
+    }
+  ]
+}

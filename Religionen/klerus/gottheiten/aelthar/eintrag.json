@@ -1,0 +1,102 @@
+{
+  "godId": "aelthar",
+  "intro": "Aelthars Klerus trägt Einsicht, Gemeinschaft und Entschlossenheit in das Zusammenleben. Unter dem Herrn der Wolken wird das einzelne Handeln Teil einer gemeinsamen Antwort. Seine Häuser suchen Zusammenhalt auch in plötzlich eintretender Gefahr.",
+  "community": "Ein Haus Aelthars kann Gebetsort, Versammlungshaus und geschützte Unterkunft zugleich sein. Priester vermitteln, monastische Gemeinschaften versorgen und Paladine sichern die Gemeinde. Asketische Gläubige können vereinzelt Anleitung geben, bleiben aber seltene Ausnahmen. Wissenschaftliche Beobachtungen werden mit dem Magisterium geteilt.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der gemeinsamen Stimme",
+      "paragraphs": [
+        "Aelthars Priester begleiten Versammlungen und helfen, aus unterschiedlichen Einsichten eine gemeinsame Entscheidung zu formen. Sie mahnen zur Entschlossenheit, wenn bloßes Zögern die Gemeinschaft gefährdet. Zugleich verlangt Einsicht, Einwände wirklich anzuhören, bevor eine mächtige Stimme den gemeinsamen Willen übertönt."
+      ],
+      "tasks": [
+        "Gemeinschaftliche Beratungen begleiten",
+        "Bei drohender Spaltung vermitteln",
+        "Zu begründetem gemeinsamem Handeln ermutigen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente des tragenden Zusammenhalts",
+      "paragraphs": [
+        "Mönche und Nonnen des Wolkenherrn versorgen Versammlungshäuser, Unterkünfte und gemeinsame Vorräte. Ihre Zünfte sorgen dafür, dass nach einer dringlichen Entscheidung auch die praktische Arbeit gelingt. Sie bewahren Erfahrungen darüber, wie Menschen in Not füreinander einstehen und Hilfe verlässlich verteilen können."
+      ],
+      "tasks": [
+        "Gemeinsame Unterkünfte erhalten",
+        "Hilfsvorräte und Ausgabe organisieren",
+        "Die Erinnerung an gemeinschaftliche Hilfe bewahren"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Versammlungshüter",
+          "work": "Erhält die Räume, in denen die Gemeinde berät und Hilfe organisiert."
+        },
+        {
+          "name": "Zunft der Vorrats- und Hilfshüter",
+          "work": "Bewahrt gemeinsame Vorräte und trägt deren regelmäßige Ausgabe."
+        },
+        {
+          "name": "Zunft der Wetterchronisten",
+          "work": "Führt die Beobachtungsbücher des Konvents und sammelt Berichte umliegender Häuser."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Ritter des gemeinsamen Schildes",
+      "paragraphs": [
+        "Aelthars Paladine üben abgestimmtes Handeln und übernehmen den Schutz gemeinsamer Zufluchten. Ihr Mut soll anderen Halt geben. In unübersichtlicher Gefahr tragen sie klare Absprachen und achten darauf, dass eine entschlossene Bewegung die Schwächeren nicht zurücklässt."
+      ],
+      "tasks": [
+        "Gemeinsame Zufluchten bewachen",
+        "Abgestimmten Schutz in Gruppen einüben",
+        "Gefährdete Gemeinschaften begleiten"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad der wachen Entschlossenheit",
+      "paragraphs": [
+        "Seltene asketische Anhänger des Wolkenherrn schulen Aufmerksamkeit, Entschlossenheit und die Bereitschaft, einen Irrtum zu berichtigen. Sie verbinden Sammlung mit beherrschter Bewegung und können an einer bestehenden Schule lernen. Eine eigene regelmäßige Asketenordnung ist für Aelthars Häuser nicht üblich; einzelne Übende bleiben besondere Ausnahmen."
+      ],
+      "tasks": [
+        "Wachsame Reaktion und Abstimmung üben",
+        "Den Schutz des Heiligtums koordinieren",
+        "Entschlossenheit mit Einsicht verbinden"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Aelthar verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Wiedereingliederung durch gemeinsamen Dienst",
+      "paragraphs": [
+        "Bußgänger Aelthars übernehmen Aufgaben, bei denen andere auf ihren Beitrag angewiesen sind. Nach mutwilliger Spaltung oder verweigerter Hilfe kann der Eid besonders das zuverlässige Mitwirken betonen. Die Kirche begleitet den Weg zurück in die Gemeinschaft, deren Vertrauen in kleinen, überschaubaren Schritten wieder wachsen soll."
+      ],
+      "tasks": [
+        "Gemeinsame Hilfsdienste unterstützen",
+        "Unterkünfte und Vorräte pflegen",
+        "Zuverlässig an vereinbarten Gemeinschaftsaufgaben mitwirken"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

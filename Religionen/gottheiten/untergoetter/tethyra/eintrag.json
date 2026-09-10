@@ -1,0 +1,227 @@
+{
+  "id": "tethyra",
+  "title": "Tethyra",
+  "epithet": "Die Seemaid",
+  "kind": "Untergottheit",
+  "summary": "Abenteuerlust, Entdeckung und Neugierde.",
+  "symbol": "BilderRüstungen/tethyra_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Die Seemaid",
+    "Abenteuerlust",
+    "Entdeckung",
+    "Neugierde"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tethyra, auch bekannt als die Göttin der Abenteuerlust und Entdecker, ist eine Untergottheit von Sylvana, der Hüterin. Sie steht im Pantheon der Neun Göttlichen und wird als sekundäre Patrongöttin der Abenteuerlust und Entdeckung verehrt und gefeiert. Tethyra inspiriert die Sterblichen, die Grenzen des Bekannten zu überschreiten, Neues zu wagen und die Welt mit einem offenen Geist zu erkunden. Als Hüterin des Forschergeistes und der Neugierde, lenkt sie jene, die sich auf den Weg machen, um das Unentdeckte zu erforschen und die Geheimnisse der Welt zu enthüllen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der göttlichen Mythologie wird Tethyra als Tochter von Sylvana, der Hüterin, dargestellt, welche die Geliebte und Ehefrau von Zephyr, dem Herr der Winde, ist. Tethyra wird in dieser Allegorie oft auch mit Nimue, der Göttin des Wassers, assoziiert und als ihre Cousine und Leidensgenossin betrachtet. Die beiden Göttinnen teilen einen großen Erzfeind: Nargoth, auch bekannt als der Verschlinger, der als Kehrseite von Nimue gilt. In dieser mythologischen Erzählung versteht man Tethyra als eine Untergöttin, die viele verschiedene Faktoren, Einflüsse und Merkmale von anderen Göttern aufgreift, jedoch in ihrer eigenen Domäne spezialisiert bleibt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tethyra vereint die Merkmale ihres Mannes Zephyr, der als freigeistiger Gottheit gilt, und feiert zugleich die natürliche Schöpfung ihrer Mutter Sylvana, indem sie die Sterblichen zur Entdeckung und Erkundung der Welt anregt. Ihre Verbindung zu Nimue wird durch den gemeinsamen Kampf gegen Nargoth und ihrer Teilnutzung des Elements Wasser deutlich. Tethyra ist eine komplexe Figur im göttlichen Pantheon, die durch die Vermischung und Spezialisierung der Einflüsse ihrer göttlichen Familie und Verbündeten einzigartig und eigenständig wird. Sie repräsentiert den Drang, das Unbekannte zu erforschen, und das Streben, die Geheimnisse der Welt zu lüften, während sie die Freiheiten und die Offenheit ihrer göttlichen Herkunft verkörpert."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tethyra, die Göttin der Abenteuerlust und Entdeckung, verkörpert die Tugenden Forscherdrang, Wissbegierde und Neugierde. Sie inspiriert ihre Anhänger, stets das Unbekannte zu suchen, zu lernen und sich neuen Herausforderungen zu stellen. Für Tethyra ist es wichtig, dass ihre Jünger mutig und offen gegenüber der Welt sind, stets bereit, über die Grenzen des Bekannten hinauszugehen. Gleichzeitig verachtet sie die gegenteiligen Sünden: Ignoranz, Stagnation und Engstirnigkeit. Diese Eigenschaften sieht sie als die größten Feinde des Wachstums und der Erkenntnis an, da sie den Geist fesseln und die Seele daran hindern, sich weiterzuentwickeln. Tethyra ist eine Göttin, die Abenteuerlust und die unstillbare Sehnsucht nach Wissen fördert, während sie jene bestraft, die in Unwissenheit, Bequemlichkeit und starrer Denkweise verharren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tethyra, die Herrin der Wildnis und Abenteuerlust, ist eine Göttin, deren Macht sich in der unbändigen Kraft der Natur und dem Drang zur Entdeckung manifestiert. Sie stärkt ihre Jünger mit einem unerschütterlichen Entdeckergeist, der sie dazu antreibt, die unerschlossenen Winkel der Welt zu erkunden und sich Herausforderungen zu stellen, die andere abschrecken würden. Tethyra ist der Wind in den Segeln ihrer Anhänger, der sie vorantreibt und ihnen die nötige Kraft und Ausdauer verleiht, um ihre Ziele zu erreichen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den Wäldern, Bergen und weiten Ozeanen spüren ihre Jünger ihre Präsenz als eine führende Kraft, die ihnen den Weg weist und sie vor Gefahren schützt. Ihre Macht liegt nicht nur in der Führung und dem Schutz, sondern auch in der Gabe, den Geist zu schärfen und den Blick zu öffnen für die Wunder und Geheimnisse der Welt. Wenn ein Entdecker sich in unbekanntes Terrain wagt, kann er sicher sein, dass Tethyra über ihn wacht und ihm die nötige Inspiration und den Mut schenkt, die Geheimnisse der Natur zu entschlüsseln und die Schönheit der Wildnis zu erleben."
+        }
+      ]
+    },
+    {
+      "id": "mythische-verbindungen",
+      "title": "Die Bilder der Überlieferung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Verwandtschaft mit Nimue wird unterschiedlich erzählt: Tethyras Überlieferung nennt sie eine Cousine, während Nimues Mythos von einer Schwester spricht. Auch die Wendungen um Sylvana und Zephyr sind nicht überall gleich. Gemeinsam ist diesen Bildern die Nähe von Natur, Wasser, Wind und Entdeckergeist; sie werden als allegorische Überlieferungen bewahrt."
+        }
+      ]
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid des Abenteurers: Der Jünger gelobt, Herausforderungen mutig und mit wachem Verstand anzunehmen. Er soll Gefahren weder aus Bequemlichkeit leugnen noch Gefährten leichtfertig aufs Spiel setzen, um sich selbst als furchtlos darzustellen.",
+            "Eid des Entdeckers: Der Jünger verpflichtet sich, seine Beobachtungen wahrhaftig festzuhalten und neu erworbenes Wissen nicht durch erfundene Geschichten zu verfälschen. Unbekannte Orte und ihre Bewohner begegnet er mit Neugier und Achtung.",
+            "Eid des Freigeistes: Der Jünger hält seinen Geist für neue Erfahrungen offen und erkennt an, dass andere Menschen eigene Wege wählen dürfen. Er soll weder aus Engstirnigkeit eine Erkenntnis verwerfen noch andere dazu zwingen, seine Reise mitzugehen."
+          ]
+        }
+      ],
+      "sharedLore": "eide",
+      "authorship": "continuation"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt; Der Aspekt \" Flüstern der Wildnis \" ist eine tiefgehende Gabe, die von Entdeckern, Waldläufern und Seefahrern erbeten wird. Diese Wahrnehmungsfähigkeit gewährt den Jüngern die Gabe, im \"Nebel des Krieges\" verborgene Gefahren zu erahnen und unerforschtes Terrain mit größerer Weisheit zu betreten. Durch vorausschauende Intuition, die Enthüllung verborgener Pfade, die Erkennung von Gefahren im unbekannten Nebel und die Weisheit im Umgang mit dem Unbekannten wird den Jüngern eine einzigartige Verbindung zur Natur geschenkt. Diese Gabe vertieft nicht nur ihre Wahrnehmungsfähigkeiten, sondern ermöglicht es ihnen auch, die Sprache der Wildnis zu verstehen und sicher durch die geheimnisvollen Pfade des Unbekannten zu navigieren. Der Aspekt \"Flüstern der Wildnis\" ist somit eine mächtige Führung für diejenigen, die sich in die Unsicherheiten ihrer Entdeckungsreisen wagen."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Bund der Wildnis: Der Bund der Wildnis verbindet einen bewährten Jünger Tethyras mit den lebendigen Spuren einer Landschaft. Durch aufmerksames Beobachten kann er Pfade, Wasserstellen und nahende Veränderungen leichter erkennen. Der Bund stärkt seine Verbindung zur Natur, ohne ihm die Entscheidungen der Reise abzunehmen oder unbekannte Gefahren unfehlbar zu enthüllen. Wer eine Landschaft mutwillig verwüstet oder ihre Geschöpfe bloß als Hindernisse behandelt, verliert diese Nähe."
+          ]
+        }
+      ],
+      "sharedLore": "buende",
+      "authorship": "continuation"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Gebot von Tethyra fordert ihre Anhänger auf, das Unbekannte zu suchen und sich den Herausforderungen der Welt mutig zu stellen. Tethyra lehrt, dass das Leben ein ewiges Abenteuer ist und dass wahre Erfüllung nur durch das Streben nach neuen Erkenntnissen und Erfahrungen erreicht werden kann. Ihre Jünger sollen die Welt mit offenen Augen und einem unerschütterlichen Entdeckergeist durchstreifen, stets bereit, über die Grenzen des Bekannten hinauszugehen und sich dem Wandel zu stellen."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Tugend von Tethyra ist der unerschütterliche Forscherdrang, der in ihren Anhängern brennt. Sie schätzt diejenigen, die nicht nur neugierig sind, sondern auch bereit, ihr Wissen zu erweitern und neue Wege zu gehen. Tethyra belohnt Mut, Entschlossenheit und die Bereitschaft, Risiken einzugehen, um die Geheimnisse der Welt zu lüften. Sie sieht in jeder neuen Entdeckung einen Schritt auf dem Weg zur Selbstverwirklichung und fordert ihre Jünger auf, stets nach mehr zu streben."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus von Tethyra ist meist ein einfacher, aber bedeutungsvoller Ort, oft ein Schrein oder ein kleiner Tempel in Küstennähe oder in den Residenzen von Adelsfamilien, die stolz auf ihre Entdeckungsreisen sind. Diese heiligen Orte sind oft mit nautischen Symbolen wie Karten, Kompassen und Seilen geschmückt und dienen als Zufluchtsorte für Seeleute, Entdecker und Abenteurer, die vor einer Reise oder Expedition Tethyras Segen erbitten. Die Schreine sind oft an Orten errichtet, von denen aus man den Horizont überblicken kann, symbolisch für die unendlichen Möglichkeiten und Abenteuer, die vor den Gläubigen liegen."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Abenteuerlust, Entdeckung und Neugierde"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Forscherdrang, Wissbegierde und Neugierde"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Ignoranz, Stagnation und Engstirnigkeit"
+    },
+    {
+      "label": "Erzfeind",
+      "value": "Nargoth, der Verschlinger"
+    },
+    {
+      "label": "Patronat",
+      "value": "Entdecker, Abenteurer, Waldläufer und Seefahrer"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Tethyra"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Die Seemaid"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Die Möwe"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Muirenn"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Aelrith"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Aegyra"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Nereidia"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "fcf10144-3dd4-4815-9b7a-1c4ecdb2a5dd",
+    "sha256": "c7609c6d0570ce54e1940032a8a110891d3a3b2f588cd32b50dbdb2ae39a2a72",
+    "continuation": "Drei benannte Eide und der abgebrochene Bund der Wildnis ausgearbeitet. Der fremde Vorlagenname Yondalla im Bund wird durch Tethyra ersetzt. Abweichende Verwandtschaftsbilder bleiben ausdrücklich als Überlieferungen erhalten."
+  },
+  "portrait": {
+    "src": "assets/divine-art/tethyra.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Tethyra, Die Seemaid",
+    "caption": "Tethyra · Die Seemaid"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Tethyra",
+      "href": "Religionen/klerus/gottheiten/tethyra/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

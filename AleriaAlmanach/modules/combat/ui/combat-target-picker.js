@@ -1,4 +1,4 @@
-import { formatCombatChance } from '../combat-action-estimates.js';
+import { formatCombatChance } from '../combat-action-estimates.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);

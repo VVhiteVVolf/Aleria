@@ -1,0 +1,100 @@
+.field-related-hierarchy {
+  position: relative;
+  display: grid;
+  gap: 0;
+  padding: 28px 23px 30px;
+}
+
+.field-related-tier {
+  position: relative;
+  padding: 26px 0 34px;
+}
+
+.field-related-tier:first-child { padding-top: 4px; }
+.field-related-tier:last-child { padding-bottom: 0; }
+
+.field-related-tier + .field-related-tier::before {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 1px;
+  height: 31px;
+  background: #907655;
+  content: '';
+}
+
+.field-related-tier + .field-related-tier::after {
+  position: absolute;
+  top: 18px;
+  left: calc(50% - 4px);
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid #907655;
+  border-bottom: 1px solid #907655;
+  transform: rotate(45deg);
+  content: '';
+}
+
+.field-related-tier > header {
+  max-width: 690px;
+  margin: 0 auto 17px;
+  text-align: center;
+}
+
+.field-related-tier > header h3 {
+  margin-top: 5px;
+  color: #382c22;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.field-related-tier > header > p:last-child:not(.eyebrow) {
+  margin-top: 7px;
+  color: #655646;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.field-related-hierarchy .field-related-grid { padding: 0; }
+
+.field-related-grid--single {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
+.field-related-tier--apex .field-related-card {
+  border: 3px double #7a503f;
+  background: #eadbc0;
+  box-shadow: 0 15px 36px #5237211f;
+}
+
+.field-related-tier--apex .field-related-card h3 { font-size: 31px; }
+
+.field-related-tier--transition {
+  margin: 0 auto;
+  width: min(100%, 800px);
+}
+
+.field-related-tier--transition .field-related-card {
+  border-color: #9d8460;
+  background: #f2e7d1;
+}
+
+.field-related-tier--subgroup {
+  margin-top: 5px;
+  padding-top: 31px;
+  border-top: 3px double #9d8561;
+}
+
+.field-related-tier--subgroup .field-related-card {
+  border-color: #75483e;
+  background: #e6d4b8;
+  box-shadow: inset 0 0 0 4px #f7ecd576;
+}
+
+.field-related-tier--subgroup .field-related-card h3 { color: #6e392f; }
+
+@media (max-width: 780px) {
+  .field-related-hierarchy { padding-inline: 16px; }
+  .field-related-tier + .field-related-tier::before { height: 27px; }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "paladine", "title": "Paladine", "number": "III", "motto": "Den Glauben verteidigen",
+  "summary": "Geweihte Ritter, Beschützer der Gläubigen und Wächter heiliger Stätten.",
+  "paragraphs": ["Paladine verbinden kämpferische Ausbildung mit Glauben, Pflicht und Ehre. Ihr Auftrag reicht von der Begleitung gefährdeter Reisender bis zur Verteidigung eines Heiligtums. Die Art ihres Dienstes folgt dem Wesen der Gottheit, der sie ihren Eid geben.", "Ihre Ordnung ähnelt der eines Ritterverbandes. Ausbildung, persönliches Gelübde und militärische Führung greifen ineinander. Ein Kommandant führt seine Truppe; daraus erwächst ihm keine allgemeine Gewalt über Priester, Lehrhäuser oder Klöster."],
+  "art": {"pattern": "BilderRüstungen/{godId}_paladin.png", "placeholder": false},
+  "hierarchy": {
+    "title": "Die ritterliche Ordnung", "note": "Knappe und Waffenknecht bezeichnen Ausbildungs- und Dienststufen. Die höheren Führungsämter bestehen je nach Größe des Ordens; eine Dorfkirche mit wenigen Paladinen bildet diese ganze Struktur nicht ab.",
+    "ranks": [
+      {"title":"Page", "duty":"Erlernt Umgangsformen, Versorgung und die ersten Grundlagen des Ordensdienstes."},
+      {"title":"Knappe", "duty":"Begleitet einen Ritter und übt Waffenführung und Glaubenspflichten."},
+      {"title":"Waffenknecht", "duty":"Leistet ausgebildeten bewaffneten Dienst vor der vollen ritterlichen Weihe."},
+      {"title":"Geweihter Ritter / Paladin", "duty":"Trägt den Eid und dient als selbstständig eingesetzter Verteidiger."},
+      {"title":"Hochpaladin", "duty":"Bewährter Ritter mit Lehr- und Vorbildverantwortung."},
+      {"title":"Hauptmann", "duty":"Führt eine Schar oder die Wache eines Heiligtums."},
+      {"title":"Komtur", "duty":"Leitet eine Niederlassung und ihre ritterlichen Kräfte."},
+      {"title":"Marschall", "duty":"Koordiniert Ausbildung, Versorgung und größere militärische Einsätze."},
+      {"title":"Großmeister / Großmeisterin", "duty":"Leitet den geistlichen Ritterorden unter der übergeordneten kirchlichen Ordnung."}
+    ]
+  }
+}

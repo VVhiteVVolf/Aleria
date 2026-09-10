@@ -1,0 +1,17 @@
+{
+  "id": "moenche", "title": "Mönche & Nonnen", "number": "II", "motto": "Den Glauben bewahren",
+  "summary": "Gebet, Dienst und gelebte Tradition im klösterlichen Alltag.",
+  "paragraphs": ["Mönche und Nonnen ordnen ihr Leben nach den Regeln ihres Konvents. Gebet, Arbeit, gemeinsame Mahlzeiten und die Bewahrung alter Schriften und Bräuche geben dem Tag seine Gestalt. Ihre Gemeinschaft trägt oft den praktischen Alltag einer Kirche.", "Nur in dieser Kaste bestehen die hier beschriebenen Zünfte: klösterliche Arbeits- und Lehrgemeinschaften, die etwa Heilkunde, Abschriften, Gartenbau oder Handwerk pflegen. Die Zugehörigkeit zu einer Zunft ersetzt keine Profess und verleiht keine priesterliche Weihe."],
+  "art": {"pattern": "BilderRüstungen/{godId}_monk.png", "placeholder": false},
+  "hierarchy": {
+    "title": "Die dienende Gemeinschaft", "note": "Der Weg beginnt bescheiden. Zunftmeister ist ein Fachamt, kein notwendiger Schritt für jedes Mitglied. Ein Prior kann ein kleines Haus selbst führen; einem größeren Kloster steht meist ein Abt vor. Beide können zugleich Priester sein.",
+    "ranks": [
+      {"title":"Oblat", "duty":"Hilft im Haus und lernt den klösterlichen Lebensrhythmus kennen."},
+      {"title":"Novize / Novizin", "duty":"Erprobt Regel, Gehorsam und gemeinschaftliches Leben."},
+      {"title":"Mönch / Nonne", "duty":"Hat die Profess abgelegt und trägt Gebet und regelmäßigen Dienst."},
+      {"title":"Zunftmeister / Zunftmeisterin", "duty":"Fachamt: leitet eine monastische Zunft und unterweist ihre Lernenden."},
+      {"title":"Prior / Priorin", "duty":"Ordnet den Alltag; führt ein Priorat oder vertritt die Klosterleitung."},
+      {"title":"Abt / Äbtissin", "duty":"Leitet die Abtei und verantwortet Regel, Fürsorge und Zusammenhalt."}
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "title": "Codex der Glaubenswelten",
+  "intro": "Die Titanen, Ahnen oder einfach Urgötter – bisweilen unter anderen Namen bekannt – sind Wesen, die das Universum bewohnten, bevor es Menschen und ihre Welt gab. Sie bilden die Grundlage aller Gottheiten, die von den Menschen als Ahnen verehrt oder als Dämonen gefürchtet werden.",
+  "chapters": [
+    {
+      "id": "pantheons",
+      "number": "I",
+      "title": "Die großen Götterkreise",
+      "label": "Götterkreise",
+      "intro": "Der göttliche und der infernale Kreis: ihre Mächte, Verbindungen und Überlieferungen.",
+      "entries": [
+        "pantheons/neun-goettliche/eintrag.json",
+        "pantheons/infernus/eintrag.json"
+      ]
+    },
+    {
+      "id": "religionen",
+      "number": "II",
+      "title": "Die Glaubenswelten Alerias",
+      "label": "Religionen",
+      "intro": "Kirchen, Pantheons und Bündnisse – die überlieferten Namen des Glaubens.",
+      "entries": [
+        "religionen/alerische-kirche/eintrag.json",
+        "religionen/nordischer-pantheon/eintrag.json",
+        "religionen/alter-pantheon/eintrag.json",
+        "religionen/triarchie-der-eroberung/eintrag.json",
+        "religionen/celestische-synode/eintrag.json",
+        "religionen/hohe-drei/eintrag.json",
+        "religionen/harmonie-von-mond-und-sonne/eintrag.json",
+        "religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "religionen/phalantischer-bund/eintrag.json",
+        "religionen/schwarze-sonne/eintrag.json"
+      ]
+    },
+    {
+      "id": "neutrale",
+      "number": "III",
+      "title": "Jenseits der Götterkreise",
+      "label": "Neutrale Entitäten",
+      "intro": "Mächte zwischen Welt, Wandel und Ewigkeit. Ihre Spuren führen in die Sphärenkunde.",
+      "entries": [
+        "gottheiten/neutrale/morgath/eintrag.json",
+        "gottheiten/neutrale/manat/eintrag.json"
+      ]
+    },
+    {
+      "id": "halbgoetter",
+      "number": "IV",
+      "title": "Zwischen Göttern und Sterblichen",
+      "label": "Halbgötter",
+      "intro": "Göttliche Sendung und Verbannung: die Geweihten und die Gefallenen.",
+      "entries": [
+        "sphaerenkunde/geweihte/eintrag.json",
+        "sphaerenkunde/gefallene/eintrag.json"
+      ]
+    },
+    {
+      "id": "diener",
+      "number": "V",
+      "title": "Die Diener der höheren Mächte",
+      "label": "Göttliche & infernale Diener",
+      "intro": "Lichtalben und Finsteralben in den Überlieferungen Alerias.",
+      "entries": [
+        "sphaerenkunde/lichtalben/eintrag.json",
+        "sphaerenkunde/finsteralben/eintrag.json"
+      ]
+    },
+    {
+      "id": "kulte",
+      "number": "VI",
+      "title": "Häresien, Kulte & Sekten",
+      "label": "Häresien & Kulte",
+      "intro": "Am Rande der großen Glaubensgemeinschaften beginnt ein weiteres Kapitel.",
+      "empty": "Noch ist kein Kult in diesem Register verzeichnet. Hier finden künftig Häresien, Sekten und ihre Überlieferungen ihren Platz.",
+      "entries": []
+    },
+    {
+      "id": "weltanschauungen",
+      "number": "VII",
+      "title": "Andere Wege, die Welt zu deuten",
+      "label": "Weltanschauungen",
+      "intro": "Nicht jede Weltanschauung nimmt ihren Anfang bei einer Gottheit.",
+      "empty": "Dieses Kapitel ist für eigenständige Weltanschauungen vorbereitet. Die ersten Einträge folgen mit ihren Überlieferungen.",
+      "entries": []
+    }
+  ],
+  "collections": [
+    "data/goettlicher-kreis.json",
+    "data/infernaler-kreis.json"
+  ],
+  "sharedLoreSource": "data/goettliche-lehre.json"
+}

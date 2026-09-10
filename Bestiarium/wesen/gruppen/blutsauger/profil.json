@@ -1,0 +1,260 @@
+{
+  "id": "blutsauger",
+  "name": "Blutsauger",
+  "classification": "Niedere, durch vampirische Infektion entstandene Sprossformen",
+  "continent": "Aleria",
+  "region": "Im Schatten höherer Vampire",
+  "folio": "IV / 03-B",
+  "parentGroupId": "vampire",
+  "summary": "Blutsauger sind keine unmittelbaren Schöpfungen Bhaals, sondern durch vampirische Infektion veränderte Sterbliche. Die Gattung des übertragenden Vampirs bestimmt Virus, Wandlungsdauer und Fähigkeiten des Sprosses. Zwischen Resten menschlicher Erinnerung und raubtierhafter Blutgier dienen sie höheren Vampiren als Werkzeuge, Wächter oder unberechenbare Jäger.",
+  "quote": "Ein Blutsauger trägt noch den Namen seines früheren Lebens, doch in seinem Blut spricht bereits die Gattung des Wesens, das ihn erschuf.",
+  "quoteAttribution": "Grundsatz aus dem Archiv der vampirischen Infektionen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Blutsauger"
+    },
+    {
+      "label": "Typ",
+      "value": "Infizierter Halbvampir und Mutant"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Übertragung eines gattungsspezifischen Vampirvirus"
+    },
+    {
+      "label": "Variationen",
+      "value": "Mulinar, Alpyr, Nosphyr, Mortis und unbekannte Formen"
+    },
+    {
+      "label": "Zugehörigkeit",
+      "value": "Spross und häufiges Werkzeug eines höheren Vampirs"
+    },
+    {
+      "label": "Größe",
+      "value": "Meist menschengroß; Nosphyre deutlich verändert"
+    },
+    {
+      "label": "Sprache",
+      "value": "Je nach erhaltenem Intellekt Menschensprachen"
+    },
+    {
+      "label": "Intellekt",
+      "value": "Von gesellschaftlich planend bis vollständig triebgesteuert"
+    },
+    {
+      "label": "Ernährung",
+      "value": "Blut oder bei Mortis verwesendes Fleisch und Blut"
+    },
+    {
+      "label": "Stärken",
+      "value": "Gesteigerte Sinne, Körperkraft und gattungsspezifische Fähigkeiten"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sterblichkeit, Feuer, geweihte Waffen und sakrale Magie"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Infektionsgefahr",
+      "Blutgier",
+      "Menschlichkeitsverlust",
+      "Körpermutation",
+      "Meisterbindung",
+      "Sakralanfälligkeit"
+    ],
+    "values": [
+      8,
+      9,
+      8,
+      7,
+      8,
+      9
+    ],
+    "intro": "Die gemeinsame Bewertung beschreibt den unvollkommenen Vampirismus der Sprosse. Einzelne Linien weichen stark voneinander ab, weil das übertragende Virus ihre Gestalt und ihr Denken bestimmt.",
+    "source": "Aus Infektionsweg, Blutdurst, verbliebener Menschlichkeit, körperlicher Umgestaltung, Bindung an den Schöpfer und den überlieferten Gegenmitteln abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Infizierte Linien",
+    "title": "Bekannte Blutsaugerarten",
+    "intro": "Vier gattungsspezifische Sprosse sind namentlich überliefert und besitzen eigene Dossiers. Eine weitere Stelle der alten Artenübersicht bleibt als ??? unausgefüllt.",
+    "entries": [
+      {
+        "id": "mulinar",
+        "name": "Mulinar",
+        "region": "Infizierter Vampirspross der Mula",
+        "description": "Mulinar entstehen durch den Sanguinaris Serenatis einer Mula.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../blutsauger/mulinar/index.html",
+        "image": {
+          "src": "../../../assets/bloodsucker-profiles/mulinar-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Mulinar in dunkler Kapuze"
+        }
+      },
+      {
+        "id": "alpyr",
+        "name": "Alpyr",
+        "region": "Gesellschaftlich getarnter Vampirspross des Alp",
+        "description": "Alpyr entstehen durch den schleichenden Sanguinaris Mendax eines Alp.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../blutsauger/alpyr/index.html",
+        "image": {
+          "src": "../../../assets/bloodsucker-profiles/alpyr-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Alpyr in reisender Gestalt"
+        }
+      },
+      {
+        "id": "nosphyr",
+        "name": "Nosphyr",
+        "region": "Monströser Vampirspross des Nosferat",
+        "description": "Nosphyre entstehen durch den aggressiven Sanguinaris Umbra eines Nosferat.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../blutsauger/nosphyr/index.html",
+        "image": {
+          "src": "../../../assets/bloodsucker-profiles/nosphyr-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Nosphyr mit zwei Armen und zwei Flügeln"
+        }
+      },
+      {
+        "id": "mortis",
+        "name": "Mortis",
+        "region": "Verfallsgezeichneter Vampirspross des Nachzehrers",
+        "description": "Mortis entstehen durch den degenerativen Sanguinaris Putrescens eines Nachzehrers.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../blutsauger/mortis/index.html",
+        "image": {
+          "src": "../../../assets/bloodsucker-profiles/mortis-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Mortis in verfallener Gestalt"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blutsauger bilden eine niedere und unter reinen Vampiren häufig verachtete Gattung. Sie entstehen nicht unmittelbar durch Bhaals Willen, sondern wenn ein Vampirismus durch Biss, Blut, Speichel oder Verletzung auf einen Sterblichen übergeht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Verwandlung schafft weder einen vollständig lebenden Menschen noch einen wahren Vampir. Der Wirt bleibt sterblich, gewinnt jedoch vampirische Merkmale und einen Hunger, der die erhaltene Persönlichkeit immer weiter verdrängt."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Infektion beginnt, wenn ein Opfer nicht ausgelöscht, sondern mit dem Erreger eines höheren Vampirs zurückgelassen wird. Qualen, Wahn und körperliche Veränderungen folgen innerhalb von Stunden, Tagen oder Monaten, abhängig von der übertragenden Gattung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der genaue Zustand bleibt deshalb uneinheitlich. Manche Sprosse bewahren Sprache, Planung und eine menschliche Fassade; andere verlieren innerhalb weniger Tage jede Erinnerung und werden zu geflügelten Jagdbestien oder wandelnden Trägern des Verfalls."
+        }
+      ]
+    },
+    {
+      "id": "infektion",
+      "title": "Infektion & Wandlung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die bekannten Erreger heißen Sanguinaris Serenatis, Mendax, Umbra und Putrescens. Jeder verändert den Wirt auf eigene Weise, bindet ihn aber an die Linie seiner Schöpferin oder seines Schöpfers und trägt Bhaals Verderbnis weiter."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Serenatis: langsame Wandlung zum lockenden Mulinar",
+            "Mendax: schleichende gesellschaftliche Tarnung des Alpyr",
+            "Umbra: rasche animalische Zerstörung zum Nosphyr",
+            "Putrescens: fortschreitender Verfall zum Mortis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hierarchie",
+      "title": "Stellung unter Vampiren",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Höhere Vampire nutzen Blutsauger als Werkzeuge, Diener oder Wächter, gewähren ihnen aber kaum Ansehen. Ein Spross trägt nur Fragmente der Macht seines Ursprungs und bleibt innerhalb der Hierarchie von dessen Schutz und Befehlen abhängig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unter Lebenden sind Blutsauger dennoch gefährlich, weil sie häufig unberechenbarer als ihre Schöpfer handeln und durch weitere Infektionen neue Ausbrüche verursachen können."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blutsauger sind sterblich und können durch schwere Verwundung, Zerstörung des Herzens oder Enthauptung getötet werden. Feuer, geweihte Waffen, heiliges Wasser und sakrale Magie wirken gegen den unvollkommenen Fluch besonders stark."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Heilung ist wesentlich schwieriger als eine Tötung. Nur außergewöhnliche göttliche oder naturmagische Kräfte können den tief verankerten Erreger entfernen, und mit fortschreitender Wandlung sinkt die Aussicht, den früheren Menschen zu bewahren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vor einer Konfrontation muss die Sprosslinie bestimmt werden: Ein Alpyr verlangt Enttarnung, ein Mulinar Schutz vor Lockmagie, ein Nosphyr geschlossene Abwehr und ein Mortis Abstand zu seiner Verfallsaura."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Name des Erregers verweist meist auf seine auffälligste Wirkung.",
+            "Erhaltene Menschlichkeit bedeutet bei Blutsaugern nicht automatisch geringere Gefahr.",
+            "Reine Vampire betrachten ihre Sprosse häufig als Besitz und nicht als Angehörige derselben Gattung.",
+            "Die Striga entsteht durch Geburt und gehört deshalb nicht zu den Blutsaugern."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/bloodsucker-profiles/blutsauger-icon.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer Blutsauger als Symbol der niederen Vampirsprosse"
+  },
+  "hero": {
+    "src": "../../../assets/bloodsucker-profiles/blutsauger-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer Blutsauger auf einer aquarellierten Archivtafel",
+    "caption": "Überlieferte Bildtafel · Blutsauger"
+  }
+}

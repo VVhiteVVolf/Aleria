@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "garnach",
+  "cultureId": "morgorn",
+  "name": "Garnach",
+  "title": "Der Garnach",
+  "subtitle": "Luntierer, Tüftler und Schwarzpulverkrieger",
+  "aliases": ["Luntierer", "Schwarzpulverkrieger"],
+  "theme": "ember",
+  "icon": "https://i.imgur.com/Pxj3mzm.png",
+  "illustration": "https://i.imgur.com/Pxj3mzm.png",
+  "artwork": { "source": "https://i.imgur.com/Pxj3mzm.png", "width": 916, "height": 1373, "caption": "Garnach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Garnach · Luntierer" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Spezialisierter Schütze und Handwerker; kein automatischer Adel" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Schwarzpulverfeuer, Fernkampf und technische Unterstützung" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Luntenschloss, Armbrust, Haken und Axt" },
+    { "group": "Klassenprofil", "label": "Kenntnisse", "html": "Tüftelei, Artificer-Handwerk und Alchemie" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Garnach sind Morgorns Luntierer: Schützen und Tüftler, die Luntenschlosswaffen, Armbrüste und alchemistische Mittel in den Dienst der Hallen stellen. Sie verbinden die Geduld des Handwerkers mit der Nervenstärke eines Kriegers.</p><p>Wo andere Kasten eine Stellung halten oder stürmen, bereiten Garnach Schussfelder vor, bedienen schwere oder empfindliche Waffen und sorgen dafür, dass Pulver, Lunte und Mechanik im entscheidenden Augenblick funktionieren.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Nähe zu Erz, Schmieden und alchemistischen Werkstätten machte Morgorns Hallen zu einem natürlichen Ort für frühe Schwarzpulverwaffen. Aus Handwerkern, Armbrustschützen und Grubenpionieren entstand eine Kaste, die neue Technik nicht als Spielerei, sondern als verantwortungsvoll zu bewahrendes Werkzeug verstand.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Garnach warten Luntenschlösser und Armbrüste, beurteilen Pulver und Zündmittel und richten vorbereitete Schusspositionen ein. Haken und Werkzeuge helfen bei Hindernissen, Sicherungen und der Bewegung schwerer Lasten. Axt und robuste Nebenwaffen sichern sie, wenn ein Gegner die Distanz schließt.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Durchschlagskräftiger, technisch unterstützter Fernkampf</li><li>Breites Wissen über Mechanik, Pulver und Alchemie</li><li>Nützlich bei Belagerung, Sicherung und Vorbereitung</li></ul><h3>Schwächen</h3><ul><li>Feuchtigkeit, Rauch und schlechte Wartung beeinträchtigen die Waffen</li><li>Laden und Vorbereiten erfordern Zeit und freien Raum</li><li>Im überraschenden Nahkampf auf Nebenwaffen angewiesen</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Garnach kämpfen vorbereitet. Sie wählen Stand, Ziel und Zeitpunkt, koordinieren Schussfolgen und wechseln bei Bedarf zur Armbrust oder Axt. Ihre Stärke liegt in der Verbindung aus Waffenwirkung, Werkzeuggebrauch und kontrollierter Versorgung.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Zum Satz eines Garnach gehören Luntenschloss oder Armbrust, Pulverbehälter, Lunte, Werkzeug, Haken und eine Axt oder andere belastbare Seitenwaffe. Schutzkleidung gegen Funken und Rauch sowie trockene Behälter sind ebenso wichtig wie Munition.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Garnach stehen zwischen Krieger und Fachhandwerker. Manche Morgorner begegnen ihrer Technik mit Vorsicht, doch eine Halle, die ihre Luntierer gut ausbildet und versorgt, gewinnt eine Wirkung, die herkömmliche Wachen allein nicht erreichen. Missbrauch oder Nachlässigkeit beschmutzen den Namen des verantwortlichen Garnach.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Garnach" }
+}

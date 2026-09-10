@@ -1,0 +1,242 @@
+{
+  "id": "mumie",
+  "name": "Mumie",
+  "classification": "Nekrophag · Rituell gebundener Grabwächter",
+  "continent": "Aleria",
+  "region": "Ahnengruften und Pyramiden Kemetaras",
+  "folio": "III-N / 13",
+  "parentGroupId": "nekrophagen",
+  "summary": "Mumien sind mächtige Untote, die durch die komplexen Begräbnisrituale und die magischen Praktiken des alten Landes Kemetara geschaffen wurden. Ursprünglich sollten diese Wesen die verstorbenen Herrscher und Adeligen im Jenseits schützen und ihre ewige Existenz sichern. Doch wenn ihre Ruhestätte entweiht wird oder dunkle Magie ihre Begräbnisrituale korrumpiert, erheben sich diese mumifizierten Toten als unsterbliche Wächter oder rachsüchtige Kreaturen.",
+  "quote": "Wer die Ruhe einer Mumie bricht, weckt nicht nur einen Leib, sondern jeden Eid, der um sein Grab gesprochen wurde.",
+  "quoteAttribution": "Kemetarische Warnung vor der Entweihung von Gräbern",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-mumie.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Mumie als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/mumie.webp",
+    "width": 683,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Mumie",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Mumie"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Mumie"
+    },
+    {
+      "label": "Typ",
+      "value": "Konservierter Untoter; fluchgebundener Grabwächter"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Begräbnisrituale und magische Schutzflüche (meist) von Kemetara"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Ahnengruften, Pyramiden, heilige Stätten"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verfluchte Grabstätten, Pyramiden, heilige Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Wächterinstinkt, zielgerichtet, unerbittlich gegenüber Eindringlingen"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Stets aktiv, gebunden an die Verteidigung ihrer Ruhestätte"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Übermenschliche Stärke, Magische Flüche, Immunität gegen Schmerz, Kontrolle über Flüche und Schutzzauber"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Resistenz gegen physische Angriffe, unnachgiebig, kann mächtige Flüche wirken, unsterblich, solange der Fluch aktiv ist"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Anfällig für heilige Magie und Feuer, langsam und schwerfällig, abhängig von ihrer Bindung an die Grabstätte"
+    },
+    {
+      "label": "Beute",
+      "value": "Wertvolle Grabbeigaben, magische Relikte, Schmuckstücke, Schätze aus Kemetara"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Grabbindung",
+      "Fluchmacht",
+      "Körperkraft",
+      "Furchtaura",
+      "Widerstand",
+      "Beweglichkeit"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      8,
+      10,
+      3
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Mumie abgeleitet",
+    "intro": "Das Mumien-Diagramm bewertet Grabbindung, Schutzflüche und körperliche Unnachgiebigkeit. Ihre geringe Beweglichkeit wird innerhalb der Ruhestätte durch vorbereitete Magie ausgeglichen."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mumien sind mächtige Untote, die durch die komplexen Begräbnisrituale und die magischen Praktiken des alten Landes Kemetara geschaffen wurden. Ursprünglich sollten diese Wesen die verstorbenen Herrscher und Adeligen im Jenseits schützen und ihre ewige Existenz sichern. Doch wenn ihre Ruhestätte entweiht wird oder dunkle Magie ihre Begräbnisrituale korrumpiert, erheben sich diese mumifizierten Toten als unsterbliche Wächter oder rachsüchtige Kreaturen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit sorgfältig gewickelten Bandagen, die ihren verwesenden Körper zusammenhalten, und uralten Flüchen, die sie antreiben, sind Mumien sowohl Symbole von Ehre und Schutz als auch von Fluch und Verderbnis. Diese untoten Wesen sind nicht nur physisch beeindruckend, sondern auch durchdrungen von magischer Kraft, die sie zu gefährlichen Gegnern macht. Sie verkörpern die Verbindung von Ritual, Tradition und unheiliger Macht, die die Kultur von Kemetara tief geprägt hat."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mumien sind das Ergebnis der hochentwickelten Begräbnisrituale des Landes Kemetara, in dem der Tod als Übergang in ein ewiges Jenseits betrachtet wird. Durch die kunstvolle Mumifizierung und das Einbinden von magischen Schutzzaubern sollte sichergestellt werden, dass die Toten in ihren Ahnengruften, Pyramiden oder anderen heiligen Grabstätten für alle Ewigkeit ruhen können. Doch diese Rituale bergen eine Schattenseite: Wird die Ruhe der Verstorbenen gestört, entfaltet sich die unheilige Macht, die sie einst schützen sollte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn ein Grab entweiht wird – sei es durch Diebstahl, Zerstörung oder profane Magie – erwacht die Mumie aus ihrem Todesschlaf. Dabei wird sie von einem Fluch angetrieben, der ihre Existenz mit einem einzigen Ziel verbindet: die Bestrafung der Eindringlinge und die Wiederherstellung der Ordnung ihrer Grabstätte. Solche Flüche sind mächtig und komplex, und ihre Auswirkungen können weit über die Mumie hinausgehen. Typische Flüche umfassen:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dürren und Krankheiten in der Region.",
+            "Albträume und Wahnsinn, die Eindringlinge heimsuchen.",
+            "Rachsüchtige Geister, die die Eindringlinge über große Entfernungen verfolgen."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Bandagen der Mumie selbst sind oft mit magischen Symbolen durchzogen, die Schutz und Zerstörung vereinen. Diese Zauber wurden einst von den Priesterorden Kemetaras gewoben, um den Verstorbenen Stärke zu verleihen, falls ihre Ruhe gestört wird."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mumien sind unerbittliche Wächter ihrer Ruhestätten, deren einziges Ziel es ist, Eindringlinge zu bestrafen und die heilige Ordnung ihrer Grabstätte wiederherzustellen. Sie agieren instinktiv und ohne Gnade, geleitet von den Flüchen und magischen Befehlen, die ihnen im Tod auferlegt wurden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Verhalten ist zielgerichtet und methodisch. Mumien verfolgen Eindringlinge unaufhaltsam, bis diese die Grabstätte verlassen oder vernichtet werden. Trotz ihrer scheinbaren Langsamkeit sind sie äußerst präzise und tödlich, wobei sie magische Flüche, rohe Kraft und ihre Unverwüstlichkeit kombinieren, um ihre Feinde zu überwältigen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die magischen Symbole auf ihren Bandagen und die sie umgebende nekrotische Energie verleihen ihnen Eigenschaften, die über das Physische hinausgehen. Mumien können:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Flüche wirken, die Eindringlinge schwächen, lähmen oder ihnen Krankheiten zufügen.",
+            "Angst verbreiten, indem sie eine Aura der Furcht ausstrahlen, die selbst tapfere Krieger lähmen kann.",
+            "Magische Verteidigungen aufrechterhalten, die sie und ihre Grabstätte schützen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mumien treten fast ausschließlich in den heiligen Stätten und Grabstätten des Landes Kemetara auf. Sie sind untrennbar mit den Ahnengruften, Pyramiden und anderen Begräbnisstätten verbunden, die als Orte spiritueller und kultureller Bedeutung gelten. Diese Orte sind oft mit Flüchen und magischen Barrieren geschützt, die die Mumien erwecken, sobald Eindringlinge die Ruhe der Toten stören."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten ist unheilvoll und von düsteren Vorzeichen begleitet, wie plötzlicher Windstille, verstärktem Verwesungsgeruch oder flackernden magischen Lichtquellen. Mumien erwachen in der Regel, wenn ihre Grabstätte entweiht oder ihre Schätze gestohlen werden, und treten als gnadenlose Verteidiger auf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Lebensraum ist geprägt von Symbolen vergangener Macht und Magie: kunstvolle Reliefs, verzierte Sarkophage, zeremonielle Gegenstände und uralte Fallen durchziehen die heiligen Hallen, die sie bewachen. Diese Orte sind oft mit Staub und Verfall bedeckt, aber ihre spirituelle Energie bleibt spürbar, eine Mahnung an die Macht der Rituale von Kemetara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mumien agieren nur in ihrer Umgebung und verlassen selten die Begrenzungen ihrer Grabstätte, da sie an die sie umgebende Magie gebunden sind. Dennoch sind sie innerhalb dieses Bereichs unermüdliche Jäger, die Eindringlinge selbst durch die komplexesten Labyrinthe verfolgen können. Ihr Lebensraum ist somit nicht nur ein Ort des Schutzes, sondern auch eine tödliche Falle für jene, die sich an den Schätzen oder dem Wissen vergangener Zeiten vergreifen."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Übermenschliche Stärke: Mumien verfügen über immense körperliche Kraft, die es ihnen ermöglicht, selbst schwer bewaffnete Gegner zu überwältigen.",
+            "Magische Flüche: Sie können tödliche Flüche wirken, die ihre Gegner schwächen, lähmen oder mit Krankheiten belegen.",
+            "Unnachgiebigkeit: Sie sind unermüdlich und kämpfen weiter, bis ihr Ziel erreicht oder sie zerstört werden.",
+            "Resistenz: Immun gegen Schmerz, Krankheiten und die meisten physischen Verletzungen.",
+            "Furchtaura: Ihre Präsenz kann Furcht verbreiten und Gegner psychisch schwächen.",
+            "Magische Verteidigung: Die Flüche und Rituale, die sie umgeben, erschweren ihren direkten Angriff."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsamkeit: Mumien sind schwerfällig und anfällig für schnelle oder taktische Gegner.",
+            "Heilige Magie: Geweihte Waffen und göttliche Zauber sind äußerst effektiv gegen sie.",
+            "Feuer: Ihre trockenen, bandagierten Körper sind extrem anfällig für Feuerangriffe.",
+            "Bindung: Sie sind an ihre Grabstätte oder den Fluch, der sie animiert, gebunden. Entfernt man sie davon oder bricht den Fluch, verlieren sie ihre Macht.",
+            "Zerfall: Trotz ihrer Magie sind sie körperlich anfällig für starke physische Zerstörung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Beschriftete Bandagen können Schutz, Rang und den Zweck der Grabwacht zugleich benennen.",
+            "Nicht jede Mumie erwacht; häufig löst erst eine konkrete Entweihung den Fluch aus.",
+            "Zurückgebrachte Grabbeigaben müssen an ihrem rituell vorgesehenen Platz liegen.",
+            "Der Staub einer gebrochenen Mumienbindung gilt weiterhin als magisch belastet."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

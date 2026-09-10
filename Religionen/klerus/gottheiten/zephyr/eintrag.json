@@ -1,0 +1,102 @@
+{
+  "godId": "zephyr",
+  "intro": "Zephyrs Klerus verbindet Freiheit, Wandelbarkeit und Ausdruckskraft. Seine Gemeinschaften begleiten Reisende, vermitteln Nachrichten und halten den Austausch zwischen entfernten Orten lebendig. Ihre Bindungen sollen Bewegung ermöglichen und Verantwortung tragen.",
+  "community": "Die Häuser des Herrn der Winde sind oft offene Anlaufstellen an Reisewegen. Priester und Mönchsgemeinschaften versorgen Gäste und Nachrichten, kleine ritterliche Wachen sichern Übergänge. Wandernde Asketen sind seltene Gäste; gastierende Magister bleiben ihrem wissenschaftlichen Bereich zugeordnet.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des freien Wortes",
+      "paragraphs": [
+        "Zephyrs Priester begleiten Aufbruch, Reise und das Zusammenfinden fremder Menschen. Sie lehren Ausdruckskraft und die Achtung vor dem freien Willen. Ihr geistlicher Auftrag verlangt, auch leisere Stimmen zu hören; eine eindrucksvolle Predigt soll nicht zum Werkzeug der Unterdrückung werden."
+      ],
+      "tasks": [
+        "Reisende und neue Gemeinschaften begleiten",
+        "Begegnungen und Aufbrüche segnen",
+        "Raum für unterschiedliche Stimmen schaffen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente an den offenen Wegen",
+      "paragraphs": [
+        "Mönche und Nonnen des Windherrn bewahren Herbergen, Reiseaufzeichnungen und verlässliche Nachrichtenwege. Ihre Zünfte halten die praktische Verbindung zwischen den Häusern aufrecht. Bewegung und klösterliche Regel widersprechen sich dabei nicht: Verlässliche Anlaufstellen geben den Reisenden erst die Möglichkeit zum freien Weiterziehen."
+      ],
+      "tasks": [
+        "Reiseherbergen und Botenstuben führen",
+        "Wegaufzeichnungen aktuell halten",
+        "Gäste unterschiedlicher Herkunft versorgen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Botenstuben",
+          "work": "Bewahrt anvertraute Nachrichten und organisiert die klösterlichen Botendienste."
+        },
+        {
+          "name": "Zunft der Wegschreiber",
+          "work": "Sammelt Reiseaufzeichnungen und pflegt die Wegregister des Konvents."
+        },
+        {
+          "name": "Zunft der offenen Herbergen",
+          "work": "Versorgt Reisende und erhält die kirchlichen Raststätten."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter des freien Geleits",
+      "paragraphs": [
+        "Zephyrs Paladine sichern Wege und begleiten Menschen, deren freie Bewegung bedroht ist. Sie schützen Boten und kirchliche Hilfszüge. Beweglichkeit gehört zu ihrer Ausbildung; die Freiheit des eigenen Handelns verlangt zugleich, verlässliche Absprachen mit Schutzbefohlenen und Gefährten einzuhalten."
+      ],
+      "tasks": [
+        "Boten und Reisende begleiten",
+        "Gefährdete Übergänge sichern",
+        "Menschen vor gewaltsamer Verschleppung schützen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad der bewegten Stille",
+      "paragraphs": [
+        "Einzelne Anhänger des Windherrn verbinden Atem, Gleichgewicht und den Wechsel der Bewegung mit einem asketischen Lebenswandel. Ihr Weg bleibt selten. Sie können auf Wanderschaft üben oder zeitweise an einer bestehenden Schule lernen; gewöhnliche Häuser Zephyrs besitzen keinen eigenen Asketenorden. Beweglichkeit und Sammlung dienen der persönlichen Schulung."
+      ],
+      "tasks": [
+        "Gleichgewicht und Wechselbewegungen schulen",
+        "Bewegliche Schutzdienste einüben",
+        "Sammlung trotz äußerer Unruhe vermitteln"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Zephyr verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Ein gebundener Weg zurück zur Freiheit",
+      "paragraphs": [
+        "Ein Bußgang unter Zephyr kann auf die Wiedergutmachung von Unterdrückung oder missbrauchter Freiheit zielen. Büßende dienen innerhalb eines aufnehmenden Hauses und helfen bei Versorgung und Erhalt der Reisewege. Der begrenzte Eid soll eine verantwortliche Rückkehr zur Freiheit ermöglichen und bleibt an seinen vereinbarten Abschluss gebunden."
+      ],
+      "tasks": [
+        "Reiseherbergen und Hilfsdienste unterstützen",
+        "Gemeinsame Wege pflegen",
+        "Verantwortliche Verlässlichkeit in freiem Leben vorbereiten"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

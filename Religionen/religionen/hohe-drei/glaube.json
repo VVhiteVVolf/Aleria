@@ -1,0 +1,511 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "hauptgoetter",
+      "title": "Die Hohen Drei",
+      "entries": [
+        {
+          "id": "osiran",
+          "name": "Osiran",
+          "epithet": "Der Wächter · Vater, Streiter & Schmied",
+          "relatedIds": [
+            "ordan",
+            "baldran",
+            "tharim"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/osiran.png",
+            "alt": "Osiran – Der Wächter · Vater, Streiter & Schmied",
+            "width": 412,
+            "height": 605
+          }
+        },
+        {
+          "id": "isiriel",
+          "name": "Isiriel",
+          "epithet": "Die Muse · Mutter, Maid & Hirtin",
+          "relatedIds": [
+            "mariel",
+            "lyris",
+            "sylvana"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/isiriel.png",
+            "alt": "Isiriel – Die Muse · Mutter, Maid & Hirtin",
+            "width": 412,
+            "height": 606
+          }
+        },
+        {
+          "id": "sethran",
+          "name": "Sethran",
+          "epithet": "Der Seher · Mentor, Hüter & Templer",
+          "relatedIds": [
+            "orin",
+            "kharon",
+            "maldras"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/sethran.png",
+            "alt": "Sethran – Der Seher · Mentor, Hüter & Templer",
+            "width": 413,
+            "height": 605
+          }
+        }
+      ]
+    },
+    {
+      "id": "nebengoetter",
+      "title": "Die Nebengötter",
+      "entries": [
+        {
+          "id": "dagoth",
+          "name": "Dagoth",
+          "epithet": "Usurpator",
+          "relatedIds": [
+            "dagon"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/dagoth.png",
+            "alt": "Dagoth – Usurpator",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "luarith",
+          "name": "Luarith",
+          "epithet": "Witwe",
+          "relatedIds": [
+            "lunara"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/luarith.png",
+            "alt": "Luarith – Witwe",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "zethnar",
+          "name": "Zethnar",
+          "epithet": "Plünderer",
+          "relatedIds": [
+            "grimnar"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/zethnar.png",
+            "alt": "Zethnar – Plünderer",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "ba-reth",
+          "name": "Ba'reth",
+          "epithet": "Schänder",
+          "relatedIds": [
+            "bhaal"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/ba-reth.png",
+            "alt": "Ba'reth – Schänder",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "zat-rahotep",
+          "name": "Zat-rahotep",
+          "epithet": "Jäger",
+          "relatedIds": [
+            "zatrach"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/zat-rahotep.png",
+            "alt": "Zat-rahotep – Jäger",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "tamreth",
+          "name": "Tamreth",
+          "epithet": "Hedonist",
+          "relatedIds": [
+            "sanguine"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/tamreth.png",
+            "alt": "Tamreth – Hedonist",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "xekthet",
+          "name": "Xekthet",
+          "epithet": "Nachtmaid",
+          "relatedIds": [
+            "nyxara"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/xekthet.png",
+            "alt": "Xekthet – Nachtmaid",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "amotep",
+          "name": "Amotep",
+          "epithet": "Intrigant",
+          "relatedIds": [
+            "amon"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/amotep.png",
+            "alt": "Amotep – Intrigant",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "haketh",
+          "name": "Haketh",
+          "epithet": "Schicksalsweberin",
+          "relatedIds": [
+            "hela"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/haketh.png",
+            "alt": "Haketh – Schicksalsweberin",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "thraankh",
+          "name": "Thraankh",
+          "epithet": "Verschlinger",
+          "relatedIds": [
+            "thraal"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/thraankh.png",
+            "alt": "Thraankh – Verschlinger",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "nemseth",
+          "name": "Nemseth",
+          "epithet": "Rächerin",
+          "relatedIds": [
+            "nemsara"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/nemseth.png",
+            "alt": "Nemseth – Rächerin",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "keth-zath",
+          "name": "Keth & Zath",
+          "epithet": "Zweigesichtige",
+          "relatedIds": [
+            "azrath-morvath"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/keth-zath.png",
+            "alt": "Keth & Zath – Zweigesichtige",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "kethal",
+          "name": "Kethal",
+          "epithet": "Trickser",
+          "relatedIds": [
+            "migdal"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/kethal.png",
+            "alt": "Kethal – Trickser",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "nebthar",
+          "name": "Nebthar",
+          "epithet": "Verseucher",
+          "relatedIds": [
+            "nergaloth"
+          ],
+          "image": {
+            "src": "religionen/hohe-drei/assets/nebthar.png",
+            "alt": "Nebthar – Verseucher",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Tempelhierarchie",
+    "entries": [
+      {
+        "id": "oberster-triarch",
+        "title": "Oberster Triarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Oberste Triarch ist ein Titel, der dem Monarchen des Landes verliehen wird und ihn zur höchsten Autorität sowohl im politischen als auch im religiösen Bereich erhebt. Als Monarch und gleichzeitig als Kopf der Kirchenhierarchie vereint der Oberste Triarch die höchste weltliche und religiöse Macht in einer Person."
+          },
+          {
+            "type": "paragraph",
+            "text": "Innerhalb der Kirche übernimmt der Oberste Triarch oft die Rolle eines Mediators zwischen den drei Erz-Triarchen, die jeweils die höchsten Instanzen in ihren spezifischen religiösen Bereichen darstellen. Er sorgt für eine harmonische Zusammenarbeit und Koordination zwischen den verschiedenen religiösen Strömungen und sorgt dafür, dass die verschiedenen Perspektiven und Interessen der Erz-Triarchen ausgewogen berücksichtigt werden."
+          },
+          {
+            "type": "paragraph",
+            "text": "Diese Doppelrolle erfordert von ihm nicht nur politische Weisheit, sondern auch tiefes Verständnis und Geschick im Umgang mit religiösen Angelegenheiten, um sicherzustellen, dass die Kirche in Einklang mit den Prinzipien des Glaubens und den weltlichen Bedürfnissen des Landes funktioniert."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Nes'bit"
+          }
+        ]
+      },
+      {
+        "id": "erz-triarch",
+        "title": "Erz-Triarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "In der Religion der Drei Hohen gibt es drei Erz-Triarchen , die jeweils die höchste Autorität innerhalb ihres spezifischen Bereichs und ihrer Tempelangehörigkeit darstellen. Jeder Erz-Triarch ist die oberste Instanz seines eigenen Bereichs und verantwortlich für die umfassende Leitung und Verwaltung der Tempel, die dem jeweiligen Gott gewidmet sind."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Erz-Triarch fungiert als oberster Führer und Hüter der religiösen Praktiken und Rituale, die mit seinem Bereich verbunden sind. Er sorgt dafür, dass alle religiösen und administrativen Aufgaben auf höchstem Niveau ausgeführt werden und dass die Lehren und Prinzipien seines Bereichs in allen Tempeln und Regionen, die ihm unterstehen, strikt befolgt werden."
+          },
+          {
+            "type": "paragraph",
+            "text": "Diese Position umfasst auch die Koordination und Überwachung der verschiedenen Tempel und deren Aktivitäten innerhalb des Zuständigkeitsbereichs des Erz-Triarchen. Er ist verantwortlich für die langfristige Planung, strategische Entscheidungen und die Aufrechterhaltung der religiösen Ordnung und Integrität. Der Erz-Triarch spielt zudem eine zentrale Rolle bei der Führung der höchsten Kleriker und der Formulierung von Richtlinien und Anweisungen, die das religiöse Leben und die Tempelverwaltung betreffen."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Hati'ib"
+          }
+        ]
+      },
+      {
+        "id": "hoher-triarch",
+        "title": "Hoher Triarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Hohe Triarch ist eine noch höhere Stufe innerhalb der Tempelhierarchie, die weit über die Verantwortung eines gewöhnlichen Triarchen hinausgeht. Während ein Triarch die Leitung eines einzelnen Tempels übernimmt, trägt der Hohe Triarch die Verantwortung für größere Gebiete, wie eine ganze Stadt oder sogar eine Provinz."
+          },
+          {
+            "type": "paragraph",
+            "text": "In dieser Rolle überwacht der Hohe Triarch mehrere Tempel und koordiniert die Aktivitäten und Verpflichtungen innerhalb seines Zuständigkeitsbereichs. Er sorgt für die Einhaltung der religiösen und administrativen Richtlinien in allen Tempeln seiner Region und spielt eine zentrale Rolle in der strategischen Planung und Entscheidungsfindung auf einer höheren Ebene. Der Hohe Triarch pflegt wichtige Beziehungen zu lokalen Herrschern, Beamten und anderen religiösen Führern und sorgt dafür, dass die Interessen des Tempels in seinem gesamten Einflussbereich gewahrt bleiben."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Hekenu"
+          }
+        ]
+      },
+      {
+        "id": "triarch",
+        "title": "Triarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Triarch ist ein Templer von herausragender Bedeutung, der die Führung eines Tempels übernimmt. In seiner Rolle trägt er die umfassende Verantwortung für die Leitung und Verwaltung des gesamten Tempels. Der Triarch ist für die Überwachung aller Tempeldienste und -aktivitäten zuständig und sorgt dafür, dass die spirituellen und administrativen Aufgaben reibungslos ablaufen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Er ist sowohl für die Organisation der täglichen Abläufe als auch für die langfristige Planung und strategische Ausrichtung des Tempels verantwortlich. Der Triarch leitet die anderen Kleriker und Tempeldiener an, stellt sicher, dass die religiösen Rituale ordnungsgemäß durchgeführt werden, und pflegt die Beziehungen zu den Gläubigen sowie zu anderen wichtigen Institutionen."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Djaru"
+          }
+        ]
+      },
+      {
+        "id": "hoher-trion",
+        "title": "Hoher Trion",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Hohe Trion ist eine höhere Stufe innerhalb des Ranges der Trions. Er nimmt eine noch bedeutendere Rolle im Tempel ein und genießt ein höheres Ansehen. Im Gegensatz zu den regulären Trions, die weitgehend von festen Verpflichtungen im Tempeldienst befreit sind, übernimmt der Hohe Trion zusätzlich wichtige Aufgaben und Verantwortungen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang ist dazu gedacht, den Trions, die sich besonders bewährt haben oder herausragende Leistungen erbracht haben, eine weiterführende Anerkennung zu verleihen. Als Hoher Trion kann er möglicherweise in wichtigen Angelegenheiten des Tempels mitwirken oder beratende Funktionen übernehmen, während er gleichzeitig die Flexibilität behält, seine militärischen oder anderen Verpflichtungen zu erfüllen."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Par'aa"
+          }
+        ]
+      },
+      {
+        "id": "trion",
+        "title": "Trion",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Trion ist ein speziell eingeführter Rang, um auch Glaubenskrieger in den Tempel aufzunehmen und ihnen eine formelle Kennzeichnung zu verleihen. Der Rang des Trion ist an keine festen Verpflichtungen gebunden, was von großer Bedeutung ist, da die Trions oft im Dienste des Adels stehen und diese Flexibilität benötigen, um ihre militärischen oder sonstigen Verpflichtungen wahrzunehmen. Daher sind sie im Tempeldienst weitgehend freigestellt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Trions dienen meistens auch in einem Orden oder unter einem Herrscher und entsprechen der alerischen Version eines Paladins. Der Rang des Trion ermöglicht es dem Tempel, einen Krieger anzuerkennen und ihm einen Status zu verleihen, ohne ihm feste Verpflichtungen im Tempeldienst aufzubürden. Ein Trion kann jedoch auch freiwillig höhere Ränge erreichen oder zusätzliche Verpflichtungen übernehmen, wenn er dies wünscht."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Atemu"
+          }
+        ]
+      },
+      {
+        "id": "triator",
+        "title": "Triator",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Triator ist ein erfahrener Templer und Kleriker, der eine bedeutende Rolle innerhalb des Tempels einnimmt. Er trägt größere Verantwortung und kann verschiedene Aufgabenbereiche innerhalb des Tempels übernehmen und delegieren. Dies umfasst beispielsweise die Leitung der Bibliothek, die Verwaltung der Zimmer, die Aufsicht über die Schatzkammer, die Pflege der Waffen, die Betreuung der Tiere und die Organisation des Briefverkehrs."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Triator ist nicht nur für die administrativen Aufgaben zuständig, sondern leitet auch jüngere Kleriker an und bietet ihnen Anleitung und Unterstützung. Zudem fungiert er oft als Ansprechpartner für die Tempelgemeinde und übernimmt eine wichtige Rolle in der Kommunikation und Organisation innerhalb des Tempels."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Heka"
+          }
+        ]
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Adept ist ein Tempeldiener und Kleriker, der als vollwertiger Templer angesehen wird, nachdem er seine Ausbildung abgeschlossen hat. Er ist bereit, in den Dienst der Götter zu treten und übernimmt verschiedene Aufgaben innerhalb des Tempels. Der Adept dient einem Triator oder höheren Kleriker und kann eine Vielzahl von Aufgaben übernehmen. Dies umfasst das Durchführen von Ritualen, das Unterstützen bei religiösen Zeremonien und das Erfüllen anderer dienstlicher Verpflichtungen, die ihm übertragen werden."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Wab"
+          }
+        ]
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Novize ist ein höherer Rang innerhalb der Religion der „Hohen Drei“ und stellt die nächste Stufe auf dem Weg zur vollen Priesterschaft dar, über dem Rang des Laien. Als Novize hat er sich bereits in den grundlegenden Lehren und Praktiken der Religion bewährt und zeigt eine tiefere Hingabe und Bereitschaft, in den Dienst der Hohen Drei einzutreten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Novize ist in die täglichen Aufgaben des Tempels stärker eingebunden und übernimmt zunehmend Verantwortung, die über die der Laien hinausgeht. Er assistiert bei wichtigen Zeremonien, vertieft sein Wissen über die heiligen Schriften und Rituale und beginnt, unter der Anleitung erfahrener Priester komplexere spirituelle Pflichten zu erfüllen. Der Novize wird oft mit der Betreuung und Ausbildung der Tempeldiener und Laien betraut, wobei er seine Rolle als angehender Priester weiter festigt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Obwohl der Novize noch nicht die volle Priesterweihe empfangen hat, ist er ein anerkannter Teil der Tempelgemeinschaft und wird zunehmend in die spirituelle und administrative Arbeit des Tempels eingebunden. Seine Aufgaben können das Leiten von Gebetsgruppen, die Vorbereitung auf rituelle Zeremonien und die Pflege heiliger Stätten umfassen. Der Novize steht unter der ständigen Beobachtung und Anleitung höherer Kleriker, die seine Entwicklung überwachen und ihn auf seine zukünftige Rolle als Priester vorbereiten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang markiert eine Phase intensiver Ausbildung und spiritueller Reifung. Der Novize ist auf dem Weg, ein vollwertiger Priester zu werden, und arbeitet darauf hin, die tiefen Mysterien der Hohen Drei vollständig zu verstehen und in den Dienst der Gemeinschaft zu stellen."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Iri"
+          }
+        ]
+      },
+      {
+        "id": "laie",
+        "title": "Laie",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Laie ist der nächste Rang innerhalb der Religion der „Hohen Drei“ und repräsentiert eine Stufe des Dienstes, die über die des Tempeldieners hinausgeht. Der Laie hat bereits die grundlegenden Pflichten und Lehren des Tempels kennengelernt und sich als fähig erwiesen, tiefer in die spirituellen Praktiken und Rituale der Hohen Drei einzutauchen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Obwohl der Laie noch nicht den vollen Status eines Priesters erreicht hat, ist er in die Gemeinschaft des Tempels stärker integriert und übernimmt Aufgaben von größerer Verantwortung. Diese können das Assistieren bei Ritualen, das Leiten von Gebeten oder das Unterrichten von Tempeldienern umfassen. Der Laie dient als Brücke zwischen den einfachen Aufgaben eines Tempeldieners und den komplexeren Pflichten eines Priesters."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Laie ist oft in der Lage, einfache rituelle Handlungen selbstständig durchzuführen, und spielt eine wichtige Rolle in der täglichen Verwaltung des Tempels. Sein Wissen über die Lehren der Hohen Drei wird vertieft, und er beginnt, eine engere Verbindung zu den göttlichen Prinzipien der Religion zu entwickeln. Gleichzeitig bleibt der Laie jedoch noch ein Lernender, der weiterhin unter der Anleitung erfahrenerer Kleriker steht."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang ist eine wichtige Übergangsphase auf dem Weg zu höheren geistlichen Ämtern innerhalb der Religion der Hohen Drei. Der Laie entwickelt in dieser Zeit die Fähigkeiten und das Wissen, die notwendig sind, um die Verantwortung und die spirituellen Aufgaben eines vollwertigen Priesters übernehmen zu können."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Sekhem"
+          }
+        ]
+      },
+      {
+        "id": "tempeldiener",
+        "title": "Tempeldiener",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Tempeldiener ist der niedrigste Rang innerhalb der Religion der „Hohen Drei“ und markiert den Eintritt in den Dienst des Tempels. Als Rekrut und Neuling beginnt der Tempeldiener seine spirituelle Reise durch einfache, aber bedeutungsvolle Aufgaben, die ihn in die Grundlagen der Tempellehren und -praktiken einführen. Er unterstützt die Priester und höheren Kleriker bei ihren täglichen Pflichten und lernt die Disziplin und Hingabe, die notwendig sind, um in den Rängen der Religion aufzusteigen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Tempeldiener übernimmt in erster Linie einfache, oft körperliche Aufgaben wie die Pflege der Tempelanlagen, das Vorbereiten von Ritualgegenständen und die Betreuung der Pilger, die den Tempel besuchen. In dieser frühen Phase seines Dienstes wird der Tempeldiener in die grundlegenden Lehren und Rituale der Hohen Drei eingeführt, wobei er die Gelegenheit hat, die tieferen spirituellen Praktiken zu beobachten und von den erfahreneren Mitgliedern der Tempelgemeinschaft zu lernen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Rang dient als grundlegende Ausbildung und Bewährungszeit, in der der Tempeldiener seine Hingabe und Eignung für den weiteren Aufstieg in der religiösen Hierarchie unter Beweis stellt. Es ist eine Phase des Lernens und des Dienens, in der der Tempeldiener die ersten Schritte auf seinem Weg der spirituellen und religiösen Entwicklung macht."
+          }
+        ],
+        "military": [
+          {
+            "type": "heading",
+            "text": "Haru"
+          }
+        ]
+      }
+    ]
+  }
+}

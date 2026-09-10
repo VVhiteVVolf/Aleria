@@ -21,7 +21,7 @@ function paragraphCount(sections) {
     + (section.subsections || []).reduce((sum, subsection) => sum + (subsection.paragraphs?.length || 0), 0), 0);
 }
 
-for (const id of TOPIC_ARTICLE_IDS) {
+for (const id of Object.keys(expected)) {
   test(`${id}: generated topic page retains its source structure and blank art slot`, async () => {
     const directory = new URL(`../themen/${id}/`, import.meta.url);
     const topic = JSON.parse(await readFile(new URL('thema.json', directory), 'utf8'));
@@ -41,7 +41,8 @@ for (const id of TOPIC_ARTICLE_IDS) {
 
 test('the six sphere-lore notes link to their local topic pages', async () => {
   const group = BESTIARY_TOPIC_GROUPS.find(entry => entry.id === 'sphaerenkunde');
-  assert.deepEqual(group.entries.map(entry => entry.id), TOPIC_ARTICLE_IDS);
+  assert.deepEqual(group.entries.map(entry => entry.id), Object.keys(expected));
+  assert(group.entries.every(entry => TOPIC_ARTICLE_IDS.includes(entry.id)));
   assert(group.entries.every(entry => entry.href === `./themen/${entry.id}/index.html`));
   await Promise.all(group.entries.map(entry => access(new URL(`../${entry.href.slice(2)}`, import.meta.url))));
 });

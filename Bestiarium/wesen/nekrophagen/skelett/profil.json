@@ -1,0 +1,223 @@
+{
+  "id": "skelett",
+  "name": "Skelett",
+  "classification": "Nekrophag · Belebtes Gebein",
+  "continent": "Aleria",
+  "region": "Gräber, Schlachtfelder und Ruinen",
+  "folio": "III-N / 08",
+  "parentGroupId": "nekrophagen",
+  "summary": "Das Skelett ist eine der einfachsten Formen untoter Kreaturen, die durch nekromantische Magie wieder zum Leben erweckt wurden. Diese Wesen bestehen aus den bloßen Überresten von Verstorbenen, ihre Fleischhüllen sind längst vergangen, und was bleibt, ist ein wandelndes Knochengerüst, das von dunklen Mächten oder magischen Flüchen animiert wird.",
+  "quote": "Knochen schlafen leicht, doch ein schlechter Befehl weckt sie länger, als sein Sprecher lebt.",
+  "quoteAttribution": "Spruch der Wächter alter Katakomben",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-skelett.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Skelett als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/skelett.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Skelett",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Skelett"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Skelett"
+    },
+    {
+      "label": "Typ",
+      "value": "Animiertes Knochengerüst; untoter Diener"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch nekromantische Magie, Flüche oder Störung der Totenruhe"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alte Gräber, Schlachtfelder, verfluchte Ruinen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Katakomben, Friedhöfe, Ruinen, verlassene Burgen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Willenlos, gehorsam, aggressiv gegenüber Eindringlingen"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Rund um die Uhr aktiv, keine Notwendigkeit zur Ruhe"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Präzise Nahkampfmanöver, Nutzung von Waffen und Rüstungen, unbeirrbar und furchtlos"
+    },
+    {
+      "label": "Stärken",
+      "value": "Immunität gegen Schmerz, Ermüdung und Krankheiten, schwer zu töten ohne magische oder gezielte Angriffe"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Zerbrechlich gegen schwere Schläge, empfindlich gegen göttliche Magie und Feuer"
+    },
+    {
+      "label": "Beute",
+      "value": "Alte Waffen, beschädigte Rüstungen, Knochenfragmente, gelegentlich magische Relikte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gehorsam",
+      "Waffenführung",
+      "Ausdauer",
+      "Körperstabilität",
+      "Eigenwille",
+      "Beschwörungsbindung"
+    ],
+    "values": [
+      10,
+      6,
+      10,
+      4,
+      1,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Skelett abgeleitet",
+    "intro": "Das Skelett-Diagramm misst eine einfache, ausdauernde Beschwörung. Hoher Gehorsam und geringe Körperstabilität erklären zugleich Nutzen und Verwundbarkeit."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Skelett ist eine der einfachsten Formen untoter Kreaturen, die durch nekromantische Magie wieder zum Leben erweckt wurden. Diese Wesen bestehen aus den bloßen Überresten von Verstorbenen, ihre Fleischhüllen sind längst vergangen, und was bleibt, ist ein wandelndes Knochengerüst, das von dunklen Mächten oder magischen Flüchen animiert wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl sie keine Intelligenz oder Emotionen besitzen, sind Skelette äußerst gehorsame Diener, die Befehle ohne Zögern ausführen. Sie werden oft von Nekromanten oder anderen magisch Begabten als Wächter oder Soldaten eingesetzt, da sie leicht zu kontrollieren sind und keine Ruhe oder Nahrung benötigen. Trotz ihrer Einfachheit sind sie in großer Zahl oder mit der richtigen Ausrüstung gefährliche Gegner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr klappriges, knöchernes Erscheinungsbild und ihre unnatürliche Bewegungsweise machen sie zu einem unheimlichen Anblick, besonders in stillen Grabmälern, verfluchten Ruinen oder auf alten Schlachtfeldern. Ein Skelett ist ein Symbol für den Tod und die Manipulation des Lebens, das in seiner dürren, leblosen Form den Schrecken untoter Magie verkörpert."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skelette entstehen durch die Einwirkung von nekromantischer Magie, die die Überreste Verstorbener belebt. Diese Form der Wiederbelebung ist eine der grundlegendsten Praktiken der Nekromantie und erfordert vergleichsweise wenig magische Kraft. Skelette werden oft aus den Knochen von Kriegern, Bauern oder anderen gewöhnlichen Menschen geschaffen, die in unmarkierten Gräbern oder auf alten Schlachtfeldern ihre letzte Ruhe fanden."
+        },
+        {
+          "type": "paragraph",
+          "text": "In ihrer ursprünglichen Form sind Skelette nicht mehr als einfache, willenlose Werkzeuge. Sie bewahren keine Erinnerungen an ihr früheres Leben, da die Magie lediglich ihren Körper und nicht ihre Seele zurückbringt. Dennoch tragen sie manchmal die Waffen oder Rüstungen, die sie zu Lebzeiten besaßen, was sie zu effektiven Kämpfern machen kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skelette sind ein bevorzugtes Mittel von Nekromanten und dunklen Magiern, da sie einfach zu erschaffen und leicht zu kontrollieren sind. Im Gegensatz zu Zombies verrotten sie nicht weiter, und ihre Bewegungen sind weniger eingeschränkt. Sie können jahrelang in einem Zustand der Untätigkeit verweilen und nur dann wiederbelebt werden, wenn sie gebraucht werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "In manchen Kulturen werden Skelette auch durch Flüche oder heilige Störungen wiederbelebt. Beispielsweise kann das Entweihen von Gräbern oder das Stören der Ruhe der Toten dazu führen, dass Skelette spontan zum Leben erwachen, um ihre Ruhestätte zu verteidigen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skelette sind willenslose, furchtlose Diener, die einfache Befehle oder instinktive Aufgaben ausführen. Sie agieren präzise und unermüdlich, oft als Wächter oder Soldaten, und greifen Eindringlinge ohne Zögern an. Ihre Bewegungen sind mechanisch, leise und effektiv, während ihre untote Natur sie immun gegen Schmerzen, Müdigkeit und Krankheiten macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer Gefährlichkeit sind sie strategisch eingeschränkt und reagieren starr auf Angriffe. Ohne klare Anweisungen oder ein Ziel bleiben sie oft passiv. Ihre zerbrechliche Struktur macht sie anfällig für gezielte Angriffe oder heilige Magie, aber ihre stoische Ausdauer und Beharrlichkeit machen sie zu furchteinflößenden Gegnern."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skelette sind häufig in alten Gräbern, Katakomben, Ruinen oder auf verlassenen Schlachtfeldern anzutreffen – überall dort, wo die Totenruhe gestört wurde oder dunkle Magie wirkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten ist oft abrupt und unheilvoll: Sie erheben sich aus Särgen, Knochenhaufen oder Gräbern, oft begleitet von unheimlichen Geräuschen wie klappernden Knochen. Diese Untoten sind an Orte gebunden, die mit Nekromantie, Flüchen oder vergangenen Tragödien durchdrungen sind, und verteidigen diese unerbittlich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Anwesenheit verwandelt solche Orte in grimmige, gefährliche Zonen, die von Tod und Verderbnis geprägt sind. Skelette sind besonders in düsteren, abgeschiedenen Umgebungen aktiv, wo sie kaum gestört werden."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unermüdlich: Keine Ermüdung, Schmerzen oder Emotionen, sie kämpfen bis zur Zerstörung.",
+            "Immunitäten: Unempfindlich gegen Krankheiten, Gifte und psychische Beeinflussungen.",
+            "Effiziente Kämpfer: Können Waffen und Rüstungen präzise einsetzen.",
+            "Leicht verfügbar: Einfach durch Nekromantie oder Flüche zu erschaffen."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Zerbrechlich: Anfällig für schwere physische Angriffe und magische Explosionen.",
+            "Heilige Magie: Göttliche Kräfte und geweihtes Feuer zerstören sie effektiv.",
+            "Einfache Intelligenz: Reagieren starr und vorhersehbar auf Angriffe.",
+            "Bindung: Oft auf ein bestimmtes Territorium oder Befehle beschränkt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Skelette greifen oft nach der Waffe, die ihrem Leib im Ritual beigelegt wurde.",
+            "Fehlende Knochen werden durch Magie nur begrenzt ausgeglichen und verändern den Bewegungsablauf.",
+            "Ein zerlegtes Skelett ist nicht sicher gebannt, solange seine Beschwörung fortwirkt.",
+            "Alte Rüstungsteile können Rückschlüsse auf Grab, Heer oder Aufgabe zulassen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

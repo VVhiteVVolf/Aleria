@@ -1,6 +1,6 @@
 // Versionierte Ausgangspakete für den Stufe-1-Assistenten.
 // Die Vorlagen enthalten nur strukturierte Startdaten; individuelle Regeln bleiben im Charakterbogen editierbar.
-import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 
@@ -294,13 +294,14 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     armorItems: [armor('rhiddwyrr-light-scale', 'Leichter Schuppenpanzer', 'medium', 13, 'capped', 3)]
   },
   {
-    id: 'derwyn', group: 'Vennyr-Klassen', label: 'Derwyn', subtitle: 'Kleriker oder Paladin',
-    description: 'Geweihter Kämpfer Nimues mit göttlicher Wasser- und Heilungsmagie.',
+    id: 'derwyn', group: 'Cenyr- und Vennyr-Klassen', label: 'Derwyn', subtitle: 'Nimue-Kleriker · Cenyr und Vennyr',
+    description: 'Geweihter Nimues mit wählbarer Grundausbildung: Jungdrache oder junge Welle. Beide Wege führen zu den vier Nahkampfformen des Wyrmtanzes.',
     hitDie: 10,
     savingThrowProficiencies: ['wisdom', 'charisma'],
-    proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'mace', 'staff', 'spear'], tools: ['Religiöse Liturgie Nimues'] },
+    proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'sword', 'mace', 'staff', 'spear'], tools: ['Religiöse Liturgie Nimues'] },
     weapons: [
       weapon('derwyn-morningstar', 'Morgenstern', 'mace', '1d8', 'Stich'),
+      weapon('derwyn-sword', 'Ritterschwert', 'sword', '1d8', 'Hieb'),
       weapon('derwyn-staff', 'Stab', 'staff', '1d6', 'Wucht'),
       weapon('derwyn-trident', 'Dreizack', 'spear', '1d6', 'Stich')
     ],

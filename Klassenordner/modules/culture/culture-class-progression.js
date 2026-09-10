@@ -1,8 +1,8 @@
-import { getCenyrClassProgression } from '../../../AleriaAlmanach/modules/classes/cenyr/cenyr-class-progression.js?v=20260908-cenyr-paths-v1';
-import { getVennyrClassProgression } from '../../../AleriaAlmanach/modules/classes/vennyr/vennyr-class-progression.js';
-import { getAldrimarClassProgression } from '../../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js';
+import { getCenyrClassProgression } from '../../../AleriaAlmanach/modules/classes/cenyr/cenyr-class-progression.js?v=20260909-dragon-parent-v2';
+import { getVennyrClassProgression } from '../../../AleriaAlmanach/modules/classes/vennyr/vennyr-class-progression.js?v=20260909-dragon-parent-v2';
+import { getAldrimarClassProgression } from '../../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js?v=20260909-dragon-parent-v2';
 
-export function getCultureClassProgression(id, level = 1) {
+export function getCultureClassProgression(id, level = 1, options = {}) {
   if (String(id).startsWith('aldrimar-')) return getAldrimarClassProgression(id, level);
-  return String(id).startsWith('vennyr-') ? getVennyrClassProgression(id, level) : getCenyrClassProgression(id, level);
+  return String(id).startsWith('vennyr-') ? getVennyrClassProgression(id, level, options) : getCenyrClassProgression(id, level);
 }

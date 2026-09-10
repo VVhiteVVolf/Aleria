@@ -1,0 +1,213 @@
+{
+  "id": "sucher",
+  "name": "Sucher",
+  "classification": "Hüter des Unfassbaren und Archivar der Gedanken",
+  "continent": "Infernale Sphären",
+  "region": "Amons Bibliotheksgründe und organische Archive",
+  "folio": "IV / 10-B",
+  "parentGroupId": "psioniden",
+  "summary": "Sucher sind Amons schweigende Archivare. Sie sammeln Gedanken, Erinnerungen und Seelen in lebenden Schriften, bewachen verborgene Wahrheiten und speisen das psionische Netz mit allem, was sie erbeuten. Alte Sucher können Magie stören, Willen brechen und selbst große Verbände durch verfälschte Gedanken gegeneinander wenden.",
+  "quote": "Das Auge in deinem Schädel, das du nie bemerkt hast.",
+  "quoteAttribution": "Archiv der Verborgenen Wahrheit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/psioniden-sucher.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Sucher als vollständig sichtbare freigestellte Artenfigur",
+    "caption": "Artenfigur · Sucher"
+  },
+  "hero": {
+    "src": "../../../assets/psionid-profiles/sucher-hero.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Sucher vollständig sichtbar als tentakeltragender Archivar",
+    "caption": "Überlieferte Bildtafel · Hüter des Unfassbaren"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Sucher"
+    },
+    {
+      "label": "Typ",
+      "value": "Hüter des Unfassbaren und Archivar der Gedanken"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Schlüpft aus gallertartigen Eiern in Amons Bibliotheksgründen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Von Amon als Wächter verborgener Wahrheit geschaffen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Organische Bibliotheken, schwebende Runenblöcke und Seelenarchive"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Beobachtet, sammelt und schreibt; spricht niemals mit einer natürlichen Stimme"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos und ohne erkennbare Ruhephase"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Telepathie, Telekinese, Gedankenarchivierung und Magiestörung"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Blut, Gedanken, Erinnerungen und geistige Essenz"
+    },
+    {
+      "label": "Stärken",
+      "value": "Willensbruch, Gedankenmanipulation und Kontrolle der Umgebung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Verwundbarer Körper und mögliche Überrumpelung"
+    },
+    {
+      "label": "Beute",
+      "value": "Magier und Suchende nach verbotenem Wissen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gedankenarchiv",
+      "Willensbruch",
+      "Magie-Störung",
+      "Telekinese",
+      "Telepathie",
+      "Körperhärte"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      9,
+      10,
+      3
+    ],
+    "intro": "Die Sucher-Tafel bewertet Sammlung, Weitergabe und gewaltsame Bearbeitung von Gedanken. Ihre große Reichweite im Geist steht einem vergleichsweise verwundbaren Körper gegenüber.",
+    "source": "Aus der Rolle als Gedankenarchivar, der Störung von Zaubern, telepathischer Verständigung, telekinetischer Gewalt und körperlicher Verletzlichkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sucher hüten das Wissen, das Amon dem übrigen Denken entziehen will. Sie sind Zeugen, Archivare und Wächter in einer Gestalt und geben ihre Funde an das gemeinsame Netz weiter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie sprechen nicht. Ihre Aufzeichnungen sind lebende Schrift, in der Gedanken und Seelen als nutzbare Erinnerung bewahrt werden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sucher wirkt wie eine schwimmende Verbindung aus Tiefseeleben, pflanzlicher Fäulnis und sehnigem Fleisch. Tentakel, Fäden und borkige Flächen bilden einen Leib, dessen Schwerpunkt unter einem kopffüßerartigen Haupt verborgen bleibt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hinter den Gesichtstentakeln liegt ein schnabelartiger Spiralrachen mit Zähnen aus glasigem oder knöchernem Material. Damit nimmt der Sucher Blut und geistige Essenz zugleich auf."
+        }
+      ]
+    },
+    {
+      "id": "brut",
+      "title": "Brut und Entwicklung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sucher schlüpfen aus gallertartigen Eiern in feuchten Bereichen von Amons Bibliotheksgründen. Bereits junge Wesen werden zwischen Runenblöcken, organischen Regalen und gespeicherten Erinnerungen in ihre Aufgabe eingegliedert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manche Gelehrte vermuten, tote Archivare könnten zu Suchern umgeformt werden. Diese Deutung bleibt umstritten und wird im Register nicht als gesicherte Herkunft geführt."
+        }
+      ]
+    },
+    {
+      "id": "archiv",
+      "title": "Das lebende Archiv",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Sucher nimmt Gedanken nicht nur wahr, sondern ordnet sie. Erinnerungen können aus einem Geist gelöst, in lebender Schrift abgelegt und später vom Schwarm erneut gelesen werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verbotenes Wissen macht seine bevorzugte Beute gefährlich: Magier und Suchende tragen oft genau jene Erinnerungen, die Amons Archive erweitern sollen."
+        }
+      ]
+    },
+    {
+      "id": "kraefte",
+      "title": "Psionische Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telepathie verbindet den Sucher mit anderen Psioniden, während Telekinese Körper und Gegenstände bewegt. Durch gezielte Störung kann er die geistige Ordnung eines Zaubers auflösen, bevor dieser vollendet wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sehr alte Sucher sollen den Willen vieler Personen zugleich brechen, Festungen durch psionische Gewalt erschüttern und Heere mit verfälschten Gedanken gegeneinander wenden können."
+        }
+      ]
+    },
+    {
+      "id": "gemeinschaft",
+      "title": "Planung und Glaube",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sucher denken, planen und arbeiten miteinander. Ihre Zusammenarbeit unterscheidet sie von den absichtlich leeren Lauerern und macht sie zu den eigentlichen Verwaltern von Amons Wissen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einige Beobachtungen deuten auf eine eigene Verehrung Amons hin. Ob dies Glaube, eingeprägte Pflicht oder nur die Form ihres gemeinsamen Denkens ist, bleibt ungeklärt."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Abwehr",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Sucher sollte überrascht werden, bevor er Absicht, Zahl und Position eines Trupps im Schwarmnetz verbreitet. Geistiger Schutz und abrupte, einfache Manöver erschweren ihm das Lesen vorbereiteter Pläne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wird sein Körper erreicht, ist er weniger widerstandsfähig als seine Kräfte erwarten lassen. Spiegel, Amulette und andere überlieferte Schutzmittel werden genannt, doch ihre Wirkung ist nicht verlässlich belegt."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Sucher gelten als Amons bevorzugte Archivare.",
+            "Sie sprechen niemals, obwohl ihre telepathischen Mitteilungen als deutlich und präzise beschrieben werden.",
+            "Eine alte Legende behauptet, ein Spiegel könne den Blick eines Suchers auf ihn selbst zurückwerfen.",
+            "Schutzamulette gegen Sucher werden gehandelt, doch viele davon sind wirkungslos.",
+            "Die Vermutung, Sucher entstünden aus toten Archivaren, bleibt unter Gelehrten umstritten."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

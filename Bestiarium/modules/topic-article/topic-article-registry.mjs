@@ -4,5 +4,6 @@ export const TOPIC_ARTICLE_IDS = [
   'geweihte',
   'gefallene',
   'lichtalben',
-  'dunkelalben'
+  'dunkelalben',
+  'wesen-des-infernalen'
 ];

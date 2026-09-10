@@ -1,0 +1,226 @@
+{
+  "id": "erlschrat",
+  "name": "Erlschrat",
+  "classification": "Höllischer Wächter, Knochenjäger und korrumpierender Bestienformer",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Verfluchte Haine, Tierpfade und vergessene Opferplätze",
+  "folio": "IV / 08-B",
+  "parentGroupId": "sylvaniiden",
+  "summary": "Der Erlschrat ist ein vierbeiniger, tierisch geformter Verwandter des Waldschrats. Durch gezielte Rituale an eine Aufgabe gebunden, verfolgt er Beute über deren Angst, verdirbt Tiere zu Unholden und kehrt über sein Ritualobjekt zurück, solange dessen Bindung nicht zerstört oder versiegelt wurde.",
+  "quote": "Der Verderber der Wildnis, der Fluchbringer unter den Kreaturen.",
+  "quoteAttribution": "Alte Legende über den Knochenjäger",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/sylvaniiden-erlschrat.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Erlschrat vollständig sichtbar mit vier Hufen, Schweif und gewaltigem Geweih",
+    "caption": "Artenfigur · Erlschrat"
+  },
+  "hero": {
+    "src": "../../../assets/sylvanid-profiles/erlschrat-hero.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Erlschrat vollständig sichtbar vor einem Opferstein, beobachtet von Waldläufer und Druide",
+    "caption": "Neue Szenentafel · Ein Erlschrat tritt aus einem verfluchten Hain"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Erlschrat; auch Knochenjäger, Fluchhüter oder Bestienformer"
+    },
+    {
+      "label": "Typ",
+      "value": "Höllischer Wächter und korrumpierender Jäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Gezielte Rituale von Kultisten, Hexern oder Silvanern"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Verderbte Tiere oder aus Lehm, Blut und Geweihteilen geformte Gefäße"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verfluchte Haine, verlassene Tierpfade und vergessene Opferplätze"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Zielgerichtet, funktional und auf Bewachen, Jagen oder Verderben gebunden"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Jederzeit; bevorzugt Dämmerung und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Fluchverderbnis, Gestaltverformung, Schattenschritt und Seelenspur"
+    },
+    {
+      "label": "Bindung",
+      "value": "Regeneriert über Schädelaltar, Knochentotem oder verfluchte Tierhaut"
+    },
+    {
+      "label": "Stärken",
+      "value": "Runenresistenz, tödliche Jagdintelligenz und Erzeugung von Unholden"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Zerstörung des Ritualobjekts, geweihte Waffen und Versiegelung"
+    },
+    {
+      "label": "Beute",
+      "value": "Verderbte Tiere, Ritualopfer und verfluchte Artefakte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Zielbindung",
+      "Seelenspur",
+      "Fluchverderbnis",
+      "Schattenschritt",
+      "Runenresistenz",
+      "Unholdbrut"
+    ],
+    "values": [
+      10,
+      9,
+      10,
+      9,
+      8,
+      10
+    ],
+    "intro": "Der Erlschrat wird nach seiner rituellen Aufgabe und den Werkzeugen seiner Jagd bewertet: Zielbindung, Verfolgung über Angst, unbemerkte Annäherung und die Verderbnis anderer Tiere.",
+    "source": "Aus Zweckbindung, Seelenspur, Fluchverderbnis, Schattenschritt, magischer Resistenz und der überlieferten Entstehung von Unholden abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erlschrat ist ein höllischer Wächter und korrumpierender Jäger in Zatrachs Dienerschaft. Während der Waldschrat mit einem Ort verschmilzt, richtet sich seine Obsession auf Tiere, Beute und Instinkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ist Verderber der Wildnis und unheiliger Vater der Unholde. Wo ein Erlschrat wandelt, folgen Tiere, die durch Zatrachs Einfluss zu Jagdmaschinen verdreht wurden."
+        }
+      ]
+    },
+    {
+      "id": "entstehung",
+      "title": "Entstehung und Aufgabe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viele Erlschrate werden gezielt durch Kultisten, Hexer oder Silvaner erschaffen. Das Ritual soll einen Hain bewachen, einen bestimmten Feind jagen, einen Tierpfad verderben oder eine Brut von Unholden hervorbringen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Gefäß dient ein Tier mit Symbolkraft, etwa Wächtertier, Totemtier oder Jagdtrophäe. Andere Überlieferungen nennen Körper aus Lehm, Blut und Geweihteilen. Fleischrunen und Knochentalismane bewahren Herkunft und Zweck des Rituals."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erlschrate behalten eine vierbeinige Tierform. Hirsch, Wolf oder Bär werden vergrößert, entstellt und totemisch überzeichnet; Astwerk, Geweihsplitter, Pilze und Ranken durchziehen den Leib."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maskenhafte Schädel, leere oder glühende Augen und zu geschmeidige, lautlose Bewegungen unterscheiden sie von gewöhnlichen Tieren. Manche verändern einzelne Körperteile und verbinden Wolfszähne, Bärenkrallen oder übermäßiges Geweih in einer Gestalt."
+        }
+      ]
+    },
+    {
+      "id": "jagd",
+      "title": "Zielgerichtete Jagd",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Erlschrat lebt nicht im gewöhnlichen Sinn; er erfüllt seine Bindung. Er bewacht, jagt oder verdirbt ohne Zorn und Mitleid. Fallen, Spuren und Hinterhalte versteht er mit tödlicher Genauigkeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Direkte Angriffe meidet er, bis die Beute geschwächt oder isoliert ist. Über die Seelenspur folgt er nicht dem Geruch, sondern der Angst: Je stärker die Furcht, desto sicherer findet er sein Ziel."
+        }
+      ]
+    },
+    {
+      "id": "verderbnis",
+      "title": "Verderbnis und Geburt der Unholde",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In seiner Nähe schreien Vögel grundlos, Hirsche behalten ihr Geweih, Füchse werden aggressiv und Aas bleibt unberührt. Angst geht in Krankheit und schließlich Mutation über."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gewöhnliche Tiere können unter diesem Einfluss zu Unholden werden. Ein Tier wächst, Knochen und Geweih wuchern, neue Glieder oder Mäuler entstehen und der fremde Jagdwille verdrängt sein früheres Verhalten."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erlschrate sind nicht vollständig ortsgebunden, bleiben ihrer Aufgabe und dem Ort ihrer Erschaffung jedoch eng verbunden. Verfluchte Haine, verlassene Tierpfade, Opferplätze und kultisch geschändete Lichtungen verändern sich unter ihrer Gegenwart."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ist eine Aufgabe erfüllt oder unmöglich geworden, kann der Erlschrat weiterziehen und einen neuen Ort wählen. Seltene Berichte verfolgen solche Jäger durch Wüsten, Sümpfe und sogar Städte."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fluchverderbnis mutiert Tiere, Gestaltverformung verbindet mehrere Tiermerkmale, und der Schattenschritt macht den Erlschrat in Dämmerung oder unter bedecktem Himmel beinahe unsichtbar. Arkane Angriffe verlieren an seinen Runen einen Teil ihrer Wirkung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Ritualobjekt kann ein Schädelaltar, Knochentotem oder eine verfluchte Tierhaut sein. Solange es besteht, regeneriert der Erlschrat, kehrt nach Zerstörung des Körpers zurück oder sendet Flüche aus der Ferne."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung und Bannung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Jagd auf den Körper allein beendet die Gefahr nicht. Spuren des Ursprungsrituals, Fleischrunen und die Veränderung des Reviers müssen zum bindenden Gegenstand zurückverfolgt werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geweihte Waffen verletzen den Erlschrat. Dauerhaft endet seine Rückkehr erst mit der Zerstörung oder Versiegelung des Ritualobjekts; dabei muss der Jagdtrupp den Einfluss auf Tiere und die daraus entstandenen Unholde zugleich beachten."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die Namen Knochenjäger, Fluchhüter und Bestienformer bezeichnen verschiedene Seiten derselben Aufgabe.",
+            "Nur Tiere mit starker Symbolkraft eignen sich als Gefäß für die Erschaffung.",
+            "Fleischrunen sollen Herkunft und Zweck verraten; nur Wahnsinnige oder Silvaner behaupten, sie lesen zu können.",
+            "Seine tierische Form und feste Zielbindung unterscheiden den Erlschrat vom humanoiden, territorialen Waldschrat."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

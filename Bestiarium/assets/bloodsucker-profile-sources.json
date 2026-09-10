@@ -1,0 +1,100 @@
+{
+  "collection": "bloodsucker-profile-images",
+  "items": [
+    {
+      "id": "blutsauger-icon",
+      "file": "./bloodsucker-profiles/blutsauger-icon.webp",
+      "source": "generated:imagegen:blutsauger-hierarchy-icon",
+      "sourceType": "generated-for-hierarchy-icon",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain",
+      "generationPrompt": "Repräsentativer Blutsauger vollständig sichtbar; transparentes 2:3-Aquarell-Buntstift-Icon für die Vampirhierarchie"
+    },
+    {
+      "id": "blutsauger-hero",
+      "file": "./bloodsucker-profiles/blutsauger-hero.webp",
+      "source": "https://i.imgur.com/0myWIpd.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 1024,
+      "height": 1536,
+      "fit": "contain"
+    },
+    {
+      "id": "mulinar-icon",
+      "file": "./bloodsucker-profiles/mulinar-icon.webp",
+      "source": "https://i.imgur.com/9p64rte.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "alpyr-icon",
+      "file": "./bloodsucker-profiles/alpyr-icon.webp",
+      "source": "https://i.imgur.com/950AqJ7.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "nosphyr-icon",
+      "file": "./bloodsucker-profiles/nosphyr-icon.webp",
+      "source": "https://i.imgur.com/THvM9wo.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "mortis-icon",
+      "file": "./bloodsucker-profiles/mortis-icon.webp",
+      "source": "https://i.imgur.com/FOSadEb.png",
+      "sourceType": "user-provided-profile-table",
+      "width": 408,
+      "height": 612,
+      "fit": "contain"
+    },
+    {
+      "id": "mulinar-scene",
+      "file": "./bloodsucker-profiles/mulinar-scene.webp",
+      "source": "generated:imagegen:mulinar-ruins-scene",
+      "sourceType": "generated-for-missing-theme-image",
+      "width": 1254,
+      "height": 1254,
+      "fit": "contain",
+      "generationPrompt": "Mulinar lockt einen Reisenden mit Gesang und Illusion auf einem verlassenen Weg bei Ruinen; quadratische Watercolor-Buntstift-Szenentafel"
+    },
+    {
+      "id": "alpyr-scene",
+      "file": "./bloodsucker-profiles/alpyr-scene.webp",
+      "source": "generated:imagegen:alpyr-society-scene",
+      "sourceType": "generated-for-missing-theme-image",
+      "width": 1254,
+      "height": 1254,
+      "fit": "contain",
+      "generationPrompt": "Alpyr wahrt auf einer abendlichen Gesellschaft seine menschliche Tarnung, während Spiegelbild und Ordensjäger die Gefahr andeuten; quadratische Watercolor-Buntstift-Szenentafel"
+    },
+    {
+      "id": "nosphyr-scene",
+      "file": "./bloodsucker-profiles/nosphyr-scene.webp",
+      "source": "generated:imagegen:nosphyr-paladin-scene-v2",
+      "sourceType": "generated-for-missing-theme-image",
+      "width": 1254,
+      "height": 1254,
+      "fit": "contain",
+      "generationPrompt": "Anatomisch vollständiger Nosphyr mit zwei Armen und zwei Flügeln vor einer Gruft im Kampf gegen einen gerüsteten Ordensritter; quadratische Watercolor-Buntstift-Szenentafel"
+    },
+    {
+      "id": "mortis-scene",
+      "file": "./bloodsucker-profiles/mortis-scene.webp",
+      "source": "generated:imagegen:mortis-graveyard-scene",
+      "sourceType": "generated-for-missing-theme-image",
+      "width": 1254,
+      "height": 1254,
+      "fit": "contain",
+      "generationPrompt": "Mortis vollständig sichtbar auf einem regennassen Friedhof vor einer Gruft, aus sicherer Entfernung von einem Grabwächter beobachtet; quadratische Watercolor-Buntstift-Szenentafel"
+    }
+  ]
+}

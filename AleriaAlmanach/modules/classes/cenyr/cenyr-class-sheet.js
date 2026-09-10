@@ -1,7 +1,7 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
-import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260908-cenyr-paths-v1';
-import { getCenyrTrainingState } from './cenyr-class-training.js?v=20260908-cenyr-paths-v1';
-import { getCenyrTechniqueChoiceGroups } from './cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260909-dragon-parent-v2';
+import { getCenyrTrainingState } from './cenyr-class-training.js?v=20260909-dragon-parent-v2';
+import { getCenyrTechniqueChoiceGroups } from './cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 
 export function getCenyrCharacterClassSummary(profile = {}) {
   // An explicit template wins; never reinterpret a different selected class from
@@ -29,5 +29,7 @@ export function getCenyrCharacterClassSummary(profile = {}) {
     earnedTechniqueSlots: plan.earnedTechniqueSlots.length, selectedPathCount: plan.selectedPathIds.length,
     pathSelectionRequired: Boolean(plan.pathSelection.firstSelectionRequired
       && plan.selectedLevel >= plan.pathSelection.minimumLevel && plan.selectedPathIds.length === 0),
-    learnedForms, trainingFocus: definition.trainingFocus, href };
+    learnedForms, trainingFocus: definition.trainingFocus, href,
+    foundationOptions: definition.foundationSelection?.options || [],
+    foundationFormId: state.selections.find(selection => selection.kind === 'foundation')?.selectionId || '' };
 }

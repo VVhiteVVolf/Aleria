@@ -1,0 +1,203 @@
+{
+  "id": "silvarn",
+  "name": "Silvarn",
+  "classification": "Riesenart · Verderbter Lehrer und falscher Halbgott",
+  "continent": "Aleria",
+  "region": "Wälder, verwilderte Haine und vergessene Kultplätze nahe Siedlungen",
+  "folio": "III-R / 07",
+  "parentGroupId": "riesen",
+  "summary": "Silvarn sind listige, charismatische Riesen aus einer gefallenen Fomóraig-Linie. Einst lehrten sie Menschen Saat, Ernte und Vorratshaltung; nach Verrat und göttlichem Fluch herrschen sie durch falsche Offenbarungen, Opferforderungen und Kulte über abergläubische Dörfer oder unterworfene Hornlingsstämme.",
+  "quote": "Der Silvarn fordert selten dein Blut zuerst; lieber lässt er dich glauben, du hättest es freiwillig versprochen.",
+  "quoteAttribution": "Druidische Warnung vor falschen Ernteheiligen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-silvarn.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Silvarn als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/silvarn.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Silvarn in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Silvarn"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Silvarn"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Fomóraig-Riese; religiöser Betrüger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Fluch eines Druiden des Tharannis nach Verrat während einer Hungersnot"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Frühe Ebenen der Menschen und Alben"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dichte Wälder, alte Kultplätze, verwilderte Haine und vergessene Siedlungen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Charismatisch, gierig, manipulierend und erst nach Entlarvung offen gewalttätig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und Dämmerung; Auftritte richten sich nach Kult und Erntezeiten"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Täuschung, Kultbildung, religiöse Inszenierung und Herrschaft durch Tribute"
+    },
+    {
+      "label": "Stärken",
+      "value": "Menschenkenntnis, Stimme, Geduld, Körpermasse und langfristige Manipulation"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Echte heilige Orte, Druiden, überprüfbare Forderungen und öffentlich entlarvte Lügen"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Opfergaben, gehortete Vorräte, Kultschmuck und geraubte Tribute"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Charisma",
+      "Täuschung",
+      "Kultbildung",
+      "Vorratshortung",
+      "Körperkraft",
+      "Heiligenscheu"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      9,
+      7,
+      9
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Silvarn abgeleitet",
+    "intro": "Der Silvarn herrscht mit Sprache und Glauben. Heiligenscheu ist hoch, weil echte geweihte Orte und kundige Druiden seine Inszenierung besonders wirksam brechen."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Silvarn gehören zu den kleinsten Riesen, bleiben jedoch massig und körperlich gefährlich. Ihre eigentliche Macht liegt in Charisma, List und der Fähigkeit, Bedürftige zu lenken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie geben sich als Halbgötter, Naturmittler oder Stimmen einer höheren Macht aus und verwandeln Abhängigkeit in Gehorsam."
+        }
+      ]
+    },
+    {
+      "id": "mythos",
+      "title": "Mythos und Fall",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als Fomóraig-Linie sollten die Silvarn über Wachstum und Ernte wachen. Sie lehrten den ersten Menschen Landwirtschaft, Saatpflege und Vorratshaltung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während einer langen Hungersnot horteten sie Nahrung und ließen Schutzbefohlene sterben. Ein Druide des Tharannis verfluchte die Sippe und verbannte sie aus den fruchtbaren Ebenen in die Wälder."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Honigsüße Stimme, falsche Weisheit und eindrucksvolle Erscheinung schaffen lokale Kulte. Angeblicher Segen wird gegen Tribute, Opfergaben und Gehorsam verkauft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wo Menschen nicht folgen, unterwerfen Silvarn schwächere Völker, darunter Hornlingsstämme. Offener Kampf beginnt meist erst, wenn die Täuschung sichtbar zerbricht."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dichte Wälder, alte Kultplätze und verwilderte Haine liegen stets nah genug an Siedlungen, um Einfluss zu gewinnen. Offene Ebenen werden seit dem Fluch gemieden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verlassene Höfe und kleine Heiligtümer werden zu Bühnen, Lagern und Tributsammelstellen umgestaltet."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit und Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Kern sind Silvarn gefallene Lehrer. Sie erinnern sich an Saat, Vorrat und menschliche Not und verdrehen dieses Wissen zu ihrem Vorteil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druiden erkennen die falsche Heiligkeit rasch. Für isolierte Dörfer kann ein Silvarn dagegen über Generationen zur unhinterfragten Autorität werden."
+        }
+      ]
+    },
+    {
+      "id": "umgang",
+      "title": "Entlarvung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forderungen werden öffentlich geprüft, Vorräte gezählt und angebliche Wunder mit druidischer Hilfe untersucht. Ein gebrochener Kult nimmt dem Riesen Diener, Schutz und Verhandlungsmacht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Echte heilige Orte und klare Beweise zwingen ihn aus der religiösen Rolle. Erst dann wird der körperlich starke, aber träge Riese direkt bekämpft."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Silvarn nennen sich gern Stimmen der Göttlichen, meiden aber echte heilige Orte.",
+            "Viele lokale Fruchtbarkeitskulte gehen auf ihre langfristige Manipulation zurück.",
+            "Ein Silvarn kämpft offen, sobald seine Täuschung nicht mehr trägt.",
+            "Gehortete Vorräte werden zugleich als Reichtum, Druckmittel und angeblicher Segen vorgeführt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

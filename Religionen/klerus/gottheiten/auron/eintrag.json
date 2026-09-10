@@ -1,0 +1,106 @@
+{
+  "godId": "auron",
+  "intro": "Aurons Klerus verbindet Erfindung, Baukunst und verantwortliches Schaffen. Seine Häuser bewahren Werkstätten und Lehrorte. Ein gutes Werk soll den Menschen dienen, die auf seine Verlässlichkeit angewiesen sind.",
+  "community": "Im Haus des Erbauers können Priester ein gemeinsames Vorhaben begleiten, Mönche und Nonnen praktische Werkstätten führen und Magister Entwurf und Werkstoffkunde lehren. Kleine Paladingemeinschaften schützen Bau- und Hilfsorte; eine eigene asketische Schule ist gewöhnlich nicht nötig.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des verantworteten Werkes",
+      "paragraphs": [
+        "Aurons Priester begleiten die Verantwortung, die mit einem geschaffenen Werk entsteht. Sie segnen Grundlegungen und Übergaben und sprechen über Redlichkeit und sorgfältige Ausführung. Ein Segen ersetzt keinen tragfähigen Bau; geistliche Begleitung soll das Bewusstsein für die Menschen stärken, die später auf das Werk vertrauen."
+      ],
+      "tasks": [
+        "Grundlegungen und Werkübergaben begleiten",
+        "Redlichkeit im Schaffen lehren",
+        "Bei Verantwortungskonflikten vermitteln"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der offenen Werkstatt",
+      "paragraphs": [
+        "Mönche und Nonnen des Erbauers führen praktische Werkstätten und bewahren die Erfahrung gelungener wie misslungener Arbeiten. Ihre Zünfte unterweisen Lernende und erhalten die Häuser der Kirche. Fehler werden nachvollziehbar gemacht, damit die nächste Hand verstehen kann, weshalb eine Verbindung trägt oder versagt."
+      ],
+      "tasks": [
+        "Werkstätten und Bauhütten führen",
+        "Reparaturen und Erhaltungsarbeiten leisten",
+        "Handwerkliche Erfahrung offen weitergeben"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Bauhütten",
+          "work": "Bewahrt Bauhandwerk und trägt die praktische Instandhaltung der kirchlichen Häuser."
+        },
+        {
+          "name": "Zunft der Feinwerker",
+          "work": "Pflegt Messgeräte, Beschläge und die feinen Arbeiten der Werkstätten."
+        },
+        {
+          "name": "Zunft der Planbewahrer",
+          "work": "Erhält Werkzeichnungen und Musterstücke für die praktische Unterweisung des Konvents."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter des geschützten Aufbaus",
+      "paragraphs": [
+        "Aurons Paladine schützen Menschen an Bau- und Wiederherstellungsorten sowie die Versorgung ihrer Gemeinschaften. Sie sichern gefährdete Transporte und bewahren Hilfswerke vor gewaltsamer Zerstörung. Ihr Auftrag schützt den Raum zum Schaffen; fachliche Entscheidungen bleiben bei den dafür ausgebildeten Bauenden."
+      ],
+      "tasks": [
+        "Wiederaufbau und Hilfswerke schützen",
+        "Werkzeug- und Versorgungstransporte begleiten",
+        "Gemeinsame Werkstätten bewachen"
+      ]
+    },
+    "asketen": {
+      "presence": "eingebunden",
+      "title": "Die gesammelte Hand",
+      "paragraphs": [
+        "Aurons gewöhnliche Häuser unterhalten keinen eigenen asketischen Wehrzweig. Geduld, ruhige Aufmerksamkeit und maßvolle Wiederholung werden in der Werkpraxis eingeübt. Wer eine strenge asketische Berufung sucht, kann sich einer verbundenen Schule anvertrauen und deren Disziplin auf den verantwortlichen Umgang mit seinem Können beziehen."
+      ],
+      "tasks": [
+        "Geduld und Aufmerksamkeit im Arbeiten üben",
+        "Angeeignete Disziplin verantwortungsvoll einsetzen",
+        "Für eine besondere Berufung Anleitung suchen"
+      ]
+    },
+    "magister": {
+      "presence": "fest",
+      "title": "Lehrhäuser des Entwurfs",
+      "paragraphs": [
+        "Aurons Magister erforschen Konstruktion, Werkstoffe, Maß und das Zusammenspiel von Teilen. Sie unterrichten das verständliche Darstellen eines Entwurfs und prüfen, welche Annahmen ihm zugrunde liegen. Werkstätten und Lehrhäuser ergänzen sich: Geübte Hände und begründetes Verständnis sollen gemeinsam verlässliche Werke ermöglichen."
+      ],
+      "tasks": [
+        "Bau- und Werkstoffkunde lehren",
+        "Entwürfe vergleichen und nachvollziehbar prüfen",
+        "Lernende in der Darstellung von Plänen unterweisen"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Ausbessern statt Verbergen",
+      "paragraphs": [
+        "Bußgänger des Erbauers unterstützen Wiederherstellung, Pflege und die Versorgung gemeinsamer Werkstätten. Nach Pfusch oder Täuschung kann die Vereinbarung die Offenlegung des Schadens und angemessene Mithilfe bei der Ausbesserung vorsehen. Fachlich riskante Arbeiten bleiben angeleitet; ein Eid verleiht keine handwerkliche Befähigung."
+      ],
+      "tasks": [
+        "Vereinbarte Schäden offenlegen",
+        "Unter Anleitung an Ausbesserungen mitwirken",
+        "Gemeinsame Werkzeuge und Räume pflegen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "magister": {
+      "src": "Religionen/klerus/assets/magister-auron.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

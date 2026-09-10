@@ -1,0 +1,178 @@
+{
+  "id": "hornling",
+  "name": "Hornling",
+  "classification": "Wildnisgebundener Jagdkobold und Diener Zatrachs",
+  "continent": "Aleria",
+  "region": "Wälder, Berge und Wildnis",
+  "folio": "IV / 01-E",
+  "parentGroupId": "kobolde",
+  "summary": "Hornlinge sind kleine, kräftige Jagddiener Zatrachs mit moosgrüner Haut und altersbedingt wachsenden Hörnern oder Geweihen. Sie lesen Spuren, stellen Fallen und verteidigen ihre Wildnisreviere in streng geordneten Clans, für die jede Jagd zugleich Nahrung und Ritual ist.",
+  "quote": "Wo die Äste Geweihe tragen und kein Vogel mehr ruft, hat ein Hornling den Pfad längst zu seinem Jagdgrund erklärt.",
+  "quoteAttribution": "Merksatz alerischer Wildniskundiger",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Hornling"
+    },
+    {
+      "label": "Typ",
+      "value": "Goblinartige Jagdkreatur und Diener Zatrachs"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Zatrach als Verkörperung von Jagd und Überleben geschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Wälder, Berge und Wildnisse Alerias"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dichte Wälder, felsige Gebirge, Höhlen und unberührte Wildnis"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, ritualistisch und in Jagdclans organisiert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Meist nachtaktiv; nach Jagdbedingungen anpassungsfähig"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Fährtenlesen, Fallenstellen, Tarnung und koordinierte Jagd"
+    },
+    {
+      "label": "Stärken",
+      "value": "Scharfe Sinne, Überlebenskunst und natürliche Tarnung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Starke Revierabhängigkeit und Nachteile gegen überlegene Technik"
+    },
+    {
+      "label": "Beute",
+      "value": "Tiere und Monster der Wildnis als Nahrung und Opfergabe"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Fährtenlesen",
+      "Waldtarnung",
+      "Fallenbau",
+      "Ritualtreue",
+      "Revierbindung",
+      "Nahkampfhärte"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      10,
+      9,
+      6
+    ],
+    "source": "Aus Sinnesleistung, Tarnung, Jagdritualen, territorialer Bindung und dem kräftigen Körperbau abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Hornling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hornlinge dienen Zatrach, dem Jäger, und übertragen seine Ideale auf ein koboldartiges Leben. Jagd bedeutet für sie Nahrung, Prüfung und heilige Handlung zugleich; jedes erlegte Wesen wird als Gabe ihres Gottes verstanden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kleine, kräftige Körper und erdige bis moosgrüne Haut lassen sie mit Wald und Fels verschmelzen. Hörner oder Geweihe wachsen im Alter und zeigen Rang, Erfahrung und Macht innerhalb eines Clans."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Hierarchie richtet sich nach Jagderfolg und Geweihgröße. Clans planen Pirsch und Hinterhalte gemeinsam, danken nach erfolgreicher Jagd in schlichten Zeremonien und greifen Eindringlinge in beanspruchten Revieren entschlossen an."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hornlinge ziehen durch dichte Wälder, felsige Gebirge und Höhlenlandschaften. Ihr Lebensstil bleibt nomadisch, doch ergiebige Jagdgründe werden mit Fallen, Zeichen und wiederkehrenden Ritualplätzen deutlich verteidigt."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Scharfe Sinne, genaues Fährtenlesen und natürliche Tarnung machen sie zu geduldigen Jägern. Hörner dienen zugleich als Rangzeichen und Nahkampfwaffe; einfache Fallen lenken Beute in die Reichweite wartender Clanmitglieder."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In ihrem Revier sollte man sichtbare Spuren als Ablenkung betrachten und höher gelegene Deckung prüfen. Rauch, Lärm oder breite freie Wege stören ihre Tarnung; wer eine Jagdbeute oder einen Ritualplatz berührt, muss mit dem ganzen Clan rechnen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Junge Hornlinge vergleichen ihre ersten Hornansätze mit großer Ernsthaftigkeit.",
+            "Eine erfolgreiche Jagd wird erst nach dem Dankritual vollständig als Besitz des Clans betrachtet.",
+            "Abgeworfene oder abgebrochene Hornstücke werden nicht achtlos zurückgelassen."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/hornling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Hornling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/hornling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Hornling",
+    "caption": "Überlieferte Bildtafel · Hornling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

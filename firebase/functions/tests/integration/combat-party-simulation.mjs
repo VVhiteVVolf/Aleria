@@ -47,10 +47,10 @@ function maximumTargets(action) {
   return Math.max(1, Number(action.maximumTargets) || ((action.effects || []).some(effect => ['selected', 'enemies', 'all'].includes(effect.target)) ? 20 : 1));
 }
 
-function chooseAction(profile, key, round, selected, enemies, resources) {
+function chooseAction(profile, key, round, selected, enemies, resources, openingActionIds = {}) {
   const options = profile.actions.filter(action => action.compatible !== false && !selected.has(action.id)
     && getActionPaymentCosts(action, 'standard', profile).every(cost => (resources.find(resource => resource.id === cost.resourceId)?.current || 0) >= cost.amount));
-  const opener = round === 1 ? { rhiannon: 'spell:rhiannon-magierruestung', fenrir: 'ability:fenrir-berserkergang', freya: 'ability:freya-arkaner-schrei' }[key] : '';
+  const opener = round === 1 ? openingActionIds[key] || { rhiannon: 'spell:rhiannon-magierruestung', fenrir: 'ability:fenrir-berserkergang', freya: 'ability:freya-arkaner-schrei' }[key] : '';
   if (opener && options.some(action => action.id === opener)) return options.find(action => action.id === opener);
   if (key === 'rhiannon' && !profile.conditions.some(condition => condition.active !== false && condition.ward?.charges > 0)) {
     const shield = options.find(action => action.id === 'spell:rhiannon-schild');
@@ -78,7 +78,7 @@ export async function simulateCombatParty(scenario, seed) {
       const segments = [];
       let resources = resetCommentScopedResources(profile.resources);
       while (selected.size < 12 && enemies.length) {
-        const action = chooseAction(profile, actor.testKey, round, selected, enemies, resources);
+        const action = chooseAction(profile, actor.testKey, round, selected, enemies, resources, scenario.openingActionIds);
         if (!action) break;
         selected.add(action.id);
         const targets = hasDamage(action) ? enemies.slice(0, maximumTargets(action)).map(enemy => enemy.testKey) : [actor.testKey];

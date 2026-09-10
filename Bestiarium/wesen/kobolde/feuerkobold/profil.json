@@ -1,0 +1,178 @@
+{
+  "id": "feuerkobold",
+  "name": "Feuerkobold",
+  "classification": "Flammengeprägter Kobold und niederer Diener Dagons",
+  "continent": "Infernale Sphären",
+  "region": "Vulkanische Zonen",
+  "folio": "IV / 01-A",
+  "parentGroupId": "kobolde",
+  "summary": "Feuerkobolde sind kleine, geflügelte Abbilder der Dagonaren. Unter ihrer roten bis schwärzlichen Haut glimmt infernale Hitze; in Gruppen legen sie Brände, treiben Gegner in vorbereitete Engstellen und verwandeln selbst sichere Lager in ein flammendes Durcheinander.",
+  "quote": "Wo ein Feuerkobold lacht, prüfe zuerst die Dächer, dann die Fluchtwege und erst zuletzt den kleinen Brandstifter selbst.",
+  "quoteAttribution": "Warnspruch der thalenorischen Brandwächter",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Feuerkobold"
+    },
+    {
+      "label": "Typ",
+      "value": "Flammengeprägter Kobold"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Dagons infernale Magie aus geschmolzenem Gestein und Flammen geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Infernalreiche und vulkanische Zonen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Vulkanhöhlen, Lavaseen, brennende Ödlandschaften und verkohlte Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Hinterlistig, destruktiv und in Gruppen koordiniert"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Ungebunden; bevorzugt Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Feuerbälle, Flammenstöße, Brandlegung und kurze Gleitflüge"
+    },
+    {
+      "label": "Stärken",
+      "value": "Feuerimmunität, Pyromantie und Wendigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Wasser, Eis, geringe Körperkraft und fehlende Feuerquellen"
+    },
+    {
+      "label": "Beute",
+      "value": "Brennbares Material, Metalle und magische Artefakte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Brandmacht",
+      "Feuerbindung",
+      "Gleitflug",
+      "Gruppenbrand",
+      "Kälteschwäche",
+      "Körperresistenz"
+    ],
+    "values": [
+      9,
+      10,
+      5,
+      8,
+      9,
+      3
+    ],
+    "source": "Aus Pyromantie, Feuerimmunität, Gleitfähigkeit, Gruppentaktik und den überlieferten Wasser- und Eisschwächen abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Feuerkobold überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als niederste Diener Dagons tragen Feuerkobolde die Gestalt einer verkleinerten, höhnischen Dagonarenform. Sie werden als Saboteure und Brandstifter eingesetzt und gelten trotz ihrer geringen Größe als Vorboten größerer Zerstörung."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie erreichen meist siebzig bis neunzig Zentimeter und wiegen nur zehn bis fünfzehn Kilogramm. Tiefrote oder schwärzliche Haut, glühende Augen, spitze Zähne, Fledermausflügel und ein gegabelter Schwanz lassen sie wie lebende Flammenalben erscheinen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuerkobolde sind impulsiv und sadistisch, können Angriffe aber überraschend gut abstimmen. Sie legen Brände, um Gegner zu trennen, nutzen Panik als Deckung und fliehen mit kurzen Gleitflügen, sobald eine Gruppe ihren Vorteil verliert."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie bevorzugen Vulkanhöhlen, Lavaseen und infernale Schmiedestätten. In Aleria nisten sie auch in verkohlten Ruinen oder trockenen Gegenden, sofern genügend Brennstoff vorhanden ist; ohne Wärme werden sie unsicher und deutlich schwächer."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Pyromantie reicht vom Entfachen kleiner Feuer bis zu Feuerbällen und kurzen Flammenstößen. Hitze schadet ihnen nicht, große Feuerquellen stärken sie, und ihre Flügel tragen sie über Spalten oder auf schwer erreichbare Vorsprünge."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wasser und Eis schwächen Magie, Beweglichkeit und Moral zugleich. Eine Gruppe sollte auseinandergetrieben werden, ehe sie Brände verbinden kann; kühle, freie Flächen nehmen den Kobolden Deckung und die Feuerquellen, von denen ihr Mut abhängt."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Feuerkobolde sammeln selbst feuchte Holzstücke, nur um sie langsam an einer Glut zu trocknen.",
+            "Ein Feuerkobold löscht eine Flamme niemals freiwillig; selbst beim Rückzug versucht er, wenigstens Funken zurückzulassen.",
+            "Ihre lautesten Streitigkeiten drehen sich häufig darum, wer einen Brand zuerst gelegt hat."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/feuerkobold-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Feuerkobold in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/feuerkobold-hero.webp",
+    "width": 761,
+    "height": 766,
+    "alt": "Szenentafel mit einem Feuerkobold",
+    "caption": "Überlieferte Bildtafel · Feuerkobold in seiner typischen Umgebung"
+  },
+  "plates": []
+}

@@ -1,0 +1,41 @@
+.field-related-groups {
+  display: grid;
+  gap: 38px;
+  padding: 28px 23px 32px;
+}
+
+.field-related-group {
+  min-width: 0;
+}
+
+.field-related-group + .field-related-group {
+  padding-top: 35px;
+  border-top: 3px double #9d8561;
+}
+
+.field-related-group > header {
+  max-width: 760px;
+  margin: 0 0 18px;
+}
+
+.field-related-group > header h3 {
+  margin-top: 5px;
+  color: #382c22;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.field-related-group > header > p:last-child:not(.eyebrow) {
+  margin-top: 7px;
+  color: #655646;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.field-related-group .field-related-grid {
+  padding: 0;
+}
+
+@media (max-width: 780px) {
+  .field-related-groups { padding-inline: 16px; }
+}

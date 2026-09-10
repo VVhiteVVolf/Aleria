@@ -1,0 +1,178 @@
+{
+  "id": "ognir",
+  "name": "Ognir",
+  "classification": "Kolossaler Ogroide Grimnars, im Volksmund Oger",
+  "continent": "Infernale Sphären",
+  "region": "Die Blutödnis",
+  "folio": "IV / 02-B",
+  "parentGroupId": "ogroiden",
+  "summary": "Ognir sind Grimnars größte sterbliche Schöpfungen und werden im Volksmund Oger genannt. Die hornlosen Kolosse beherrschen Grimnak-Clans durch Furcht, zerschlagen Gegner mit übergroßen Waffen und trotzen Frost und schweren Wunden, während Hitze und göttliche Magie ihre gewaltige Widerstandskraft brechen können.",
+  "quote": "Ein Ognir verhandelt nur so lange, wie er den Tribut nicht selbst tragen muss; danach erinnert er sich allein an seine Stärke.",
+  "quoteAttribution": "Aufzeichnung eines überlebenden Tributzahlers",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ognir; im Volksmund Oger"
+    },
+    {
+      "label": "Typ",
+      "value": "Kolossaler Ogroide Grimnars"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Im Zeitalter des Zwiespalts von Grimnar aus Zorn und Grausamkeit geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Die Blutödnis, Grimnars frostige Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Eisige Ebenen, Gebirge, Höhlen und andere unwirtliche Kältezonen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, dominant, brutal und als Anführer von Grimnak-Clans auftretend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Tag und Nacht; Dunkelheit und Kälte werden bevorzugt"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Kolossale Stärke, Kälteresistenz, Ausdauer, Regeneration und Kampfintuition"
+    },
+    {
+      "label": "Stärken",
+      "value": "Körperliche Robustheit, Frostimmunität und überwältigender Nahkampf"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, göttliche Magie, Wärme und geringe Anpassungsfähigkeit"
+    },
+    {
+      "label": "Beute",
+      "value": "Primitive Waffen und Rüstungen sowie erzwungene Tribute"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Kolossalkraft",
+      "Kälteresistenz",
+      "Regeneration",
+      "Dominanzgewalt",
+      "Kampfintuition",
+      "Hitzeverträglichkeit"
+    ],
+    "values": [
+      10,
+      10,
+      8,
+      10,
+      6,
+      1
+    ],
+    "source": "Aus Körpergröße, Frostimmunität, Wundheilung, Herrschaft über Grimnak-Clans, instinktivem Kampfverhalten und Wärmeschwäche abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Ognir überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Abhängigkeit oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ognir stehen an der Spitze von Grimnars sterblichen Schöpfungen. Als finstere Kriegshunde und Anführer von Grimnak-Clans sichern sie seinen Einfluss durch eine Herrschaft, die allein auf Körperkraft, Furcht und jederzeit beweisbarer Überlegenheit beruht."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre kolossalen, muskulösen Körper tragen frostblaues, aschgraues oder kränklich gelbes Hautgewebe. Breite Nasen, spitze Ohren und dolchartige Eckzähne prägen das Gesicht; anders als Grimnaks besitzen Ognir keine Hörner."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Ordnung & Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie beanspruchen große Reviere und bestrafen jede wahrgenommene Schwäche. Menschen werden bedroht oder zu Tributen gezwungen, Versprechen gelten nur bis zum nächsten Vorteil. Untereinander führen Ognir zähe Dominanzkämpfe und kooperieren nur für größere Ziele Grimnars."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In der Blutödnis besetzen sie gefrorene Ebenen, Gebirge und schützende Höhlen. Alerische Wärme belastet sie; deshalb suchen sie auch dort kalte Hochlagen, Schatten und unwirtliche Gebiete, die kleineren Gegnern die Bewegung erschweren."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ognir schwingen gewaltige Keulen, Baumstämme oder von Grimnaks gefertigte Waffen. Kälte schadet ihnen nicht, kleinere Wunden schließen sich schnell, und selbst schwere Verletzungen stoppen ihren Vormarsch oft erst spät."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer und göttliche Magie durchdringen ihre natürliche Widerstandskraft am zuverlässigsten. Bewegliche Gegner sollten Reichweite, Höhenunterschiede und Wärme nutzen; ein Nahkampf auf engem Grund spielt ausschließlich Größe und Regeneration des Ognir in die Hände."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ognir lassen Rüstungen meist von Grimnaks fertigen, behandeln die Schmiede aber dennoch als Untergebene.",
+            "Ein angebotener Tribut wird zuerst nach Gewicht und erst danach nach tatsächlichem Wert beurteilt.",
+            "Der hornlose Kopf unterscheidet einen Ognir selbst aus großer Entfernung von einem ähnlich gefärbten Grimnak."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/ogroid-profiles/ognir-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Ognir in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/ognir-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Ognir",
+    "caption": "Überlieferte Bildtafel · Ognir in seiner typischen Umgebung"
+  },
+  "plates": []
+}

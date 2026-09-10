@@ -1,0 +1,239 @@
+{
+  "id": "versunkener",
+  "name": "Versunkener",
+  "classification": "Nekrophag · Amphibische Leichenform",
+  "continent": "Aleria",
+  "region": "Küsten, Kanäle, Inseln und Ozeane",
+  "folio": "III-N / 05",
+  "parentGroupId": "nekrophagen",
+  "summary": "Der Versunkene ist eine grauenhafte Abscheulichkeit, die das Schicksal jener besiegelt, die unter der finsteren Macht von Thraal, dem Herrscher über die Tiefen und die unbarmherzige See, umkamen. Diese Kreaturen verkörpern den Verlust von Menschlichkeit und die Verwandlung in etwas Fremdes und Schreckliches. Ob als treuer Anhänger Thraals, der in seinem Dienst starb, oder als unschuldiges Opfer, das von den Wellen verschlungen wurde – Thraal macht keinen Unterschied.",
+  "quote": "Hörst du unter dem Kiel ein Klopfen, antworte nicht; die Ertrunkenen suchen keine Rettung mehr.",
+  "quoteAttribution": "Warnspruch erfahrener Küstenfahrer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-versunkener.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Versunkener als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/versunkener.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Versunkener",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Versunkener"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Versunkener"
+    },
+    {
+      "label": "Typ",
+      "value": "Amphibischer Untoter unter Thraals Einfluss"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Thraals Magie: Tod durch Ertrinken, Fluch oder Opferung"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Küsten, Kanäle, verlassene Inseln, Ozeane"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Gewässer, Riffe, dunkle Kanäle, unterirdische Wasserwege, Thraals Domäne"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Triebgesteuert, aggressiv, auf Fleisch und Blut fixiert"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Besonders aktiv bei Nacht, ruhender oder lauernder Zustand bei Tag"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schnelle Bewegung im Wasser, unerwartete Agilität, tödliche Klauen und Zähne, Fähigkeit zur Vermehrung durch Infektion"
+    },
+    {
+      "label": "Stärken",
+      "value": "Schnelligkeit und Wendigkeit im Wasser, Unermüdlichkeit, Immunität gegen Schmerz und Ertrinken"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsam und unbeholfen an Land, anfällig für Feuer und heilige Magie, Abhängigkeit von Wasser"
+    },
+    {
+      "label": "Beute",
+      "value": "Persönliche Gegenstände von Opfern (Ringe, Amulette), nautische Relikte, verfallene Waffen und Rüstungen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Wasserbindung",
+      "Schwimmkraft",
+      "Fleischhunger",
+      "Meeresverderbnis",
+      "Landbewegung",
+      "Thraalbindung"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      8,
+      5,
+      10
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Versunkener abgeleitet",
+    "intro": "Das Diagramm des Versunkenen zeigt seine Überlegenheit im Wasser und die hemmende Wirkung trockenen Landes. Die Thraalbindung beschreibt den göttlichen Ursprung seiner Verderbnis."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Versunkene ist eine grauenhafte Abscheulichkeit, die das Schicksal jener besiegelt, die unter der finsteren Macht von Thraal, dem Herrscher über die Tiefen und die unbarmherzige See, umkamen. Diese Kreaturen verkörpern den Verlust von Menschlichkeit und die Verwandlung in etwas Fremdes und Schreckliches."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ob als treuer Anhänger Thraals, der in seinem Dienst starb, oder als unschuldiges Opfer, das von den Wellen verschlungen wurde – Thraal macht keinen Unterschied. Für ihn sind diese verlorenen Seelen lediglich Rohmaterial, das er für seine dunklen Zwecke nutzt. In seinem Einflussbereich werden die Körper dieser Unglücklichen in amphibienartige Zombies verwandelt, deren bloße Existenz eine Beleidigung des Lebens ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Versunkene ist aufgequollen, verwest und von seiner einst menschlichen Erscheinung nichts weiter als ein grotesker Schatten geblieben. Trotz seines Zustands ist er von einer grausamen Gier nach Fleisch und Blut getrieben, die ihn unaufhaltsam durch die Gewässer und Küstengebiete Alerias streifen lässt. Diese Kreaturen sind ein schreckliches Mahnmal für Thraals Macht und seine Gleichgültigkeit gegenüber den Seelen, die in seine Dunkelheit geraten."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Entstehung der Versunkenen ist untrennbar mit der Macht und den Absichten von Thraal, dem Gott der Tiefen und Herrscher über die unbarmherzige See, verbunden. Thraal ist eine düstere, gleichgültige Entität, die sowohl das Chaos als auch die Ordnung der Meere repräsentiert. In seinem Reich gibt es keine Gnade, nur die ewige Gleichgültigkeit des Ozeans. Die Versunkenen sind ein direktes Produkt dieser Philosophie, ein grausamer Beweis für seine Macht und seine Abneigung gegen das Leben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Versunkener entsteht aus den Überresten eines Menschen, der in Verbindung mit Thraals Domäne ums Leben kam. Ob es sich um einen treuen Anhänger handelt, der in seinem Dienst fiel, oder um ein zufälliges Opfer, das von den Tiefen verschlungen wurde, spielt keine Rolle. Thraal sieht in den Leichen lediglich nützliche Ressourcen. Sobald ein Körper in seinen Einflussbereich gerät, wird er durch die nekrotische Energie der See wiederbelebt und zu einem Versunkenen transformiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Transformation ist sowohl physisch als auch spirituell. Der Körper eines Versunkenen wird durch die Kräfte des Meeres deformiert: Aufgequollen, mit bläulicher Haut und entstellten Gesichtszügen, während die Seele in einen Zustand ewiger Verdammnis gezwungen wird. Der ursprüngliche Mensch, der einst in diesem Körper lebte, ist verloren – übrig bleibt nur ein leeres Gefäß, das von Thraals Willen und einer unstillbaren Gier nach Fleisch gelenkt wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Historisch werden die Versunkenen oft in den Mythen und Legenden der Küstenvölker erwähnt. Sie gelten als Strafe für Hochmut oder als Mahnung vor der Unberechenbarkeit der See. Einige Geschichten berichten von Seefahrern, die sich Thraal verweigerten, und von ganzen Crews, die durch Stürme ins Meer gerissen und später als Versunkene zurückkehrten, um ihre ehemaligen Kameraden in den Tod zu ziehen. Andere erzählen von Fischern, die Thraals Gunst suchten, nur um später selbst zu seinen Dienern zu werden."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Versunkenen sind triebgesteuerte Kreaturen, die keine eigene Intelligenz mehr besitzen, aber von einem grausamen und zielgerichteten Instinkt beherrscht werden. Ihr Verhalten wird von zwei dominierenden Trieben bestimmt: der unstillbaren Gier nach Fleisch und der Notwendigkeit, ihre Opfer in die Reihen der Versunkenen aufzunehmen. Obwohl sie keine individuellen Gedanken mehr haben, agieren sie mit einer unheimlichen Koordination, die auf Thraals verderblichem Einfluss beruht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Physisch sind die Versunkenen durch die nekrotische Magie des Meeres deformiert. Ihre Körper sind aufgequollen, mit bläulicher, rissiger Haut, die von Wasser und Verfall gezeichnet ist. Ihre einst menschlichen Züge sind verzerrt, und aus ihren verrottenden Mäulern tropft eine unheilige Mischung aus Salzwasser und Blut. Trotz ihres Zustands sind sie bemerkenswert agil im Wasser, wo sie sich mit erschreckender Geschwindigkeit bewegen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "An Land sind sie weniger beweglich, aber immer noch eine erhebliche Bedrohung. Ihre Bewegungen sind rückartig und instinktiv, doch sie behalten genug Geschicklichkeit, um Fallen zu umgehen oder Beute in die Enge zu treiben. Ihre Klauen und Zähne sind ihre Hauptwaffen, die sie ohne Gnade einsetzen, um ihre Opfer zu zerreißen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Verhalten der Versunkenen zeigt eine klare Bindung an die Orte, die Thraal kontrolliert. Sie streifen bevorzugt durch Küstengebiete, dunkle Kanäle, versunkene Schiffswracks oder verlassene Inseln, wo sie auf Opfer lauern. Bei Nacht werden sie noch aktiver und aggressiver, da die Dunkelheit ihre bevorzugte Deckung bietet."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Versunkenen sind in allen Regionen zu finden, die mit Thraals Domäne verbunden sind, sei es an den Küsten, in unterirdischen Kanälen oder in den dunklen Tiefen der Ozeane. Ihr Lebensraum spiegelt ihre Verbindung zur See und ihrer nekrotischen Magie wider, und sie sind vor allem an Orten anzutreffen, die von Wasser, Verfall und Tod geprägt sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "An Küstengebieten erscheinen die Versunkenen häufig bei Nacht, wo sie durch Nebel und Dunkelheit unentdeckt bleiben können. Sie lauern in scharfen Riffen, Höhlen oder verfallenen Fischerdörfern, immer auf der Suche nach unvorsichtigen Reisenden oder Dorfbewohnern, die sich zu weit vom Schutz ihrer Gemeinschaft entfernen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den dunklen Kanälen und Abwasserwegen großer Städte bilden die Versunkenen eine noch heimtückischere Gefahr. Dort verstecken sie sich in den Schatten, lauern unter Brücken oder in vergessenen Wassereinlässen und nutzen ihre Umgebung, um Beute zu überraschen und hinab in die Dunkelheit zu ziehen. Diese Wasserwege bieten ihnen ideale Rückzugsorte, wo sie ungestört hausen und ihre Zahl unbemerkt wachsen lassen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die verlassenen Inseln von Aleria sind eine weitere Brutstätte der Versunkenen. Diese abgeschiedenen Orte, oft mit düsterer Vergangenheit, werden von den Kreaturen regelrecht heimgesucht. Sie errichten dort primitive Nester aus Treibgut und Überresten ihrer Opfer und ziehen oft andere Versunkene aus der Umgebung an, wodurch solche Inseln vollständig in Thraals Einfluss geraten."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Versunkenen sind mächtige und unheimliche Kreaturen, die sich in ihrer amphibischen Umgebung wie Jäger der Tiefsee verhalten. Ihre Stärken machen sie zu tödlichen Gegnern, insbesondere in oder nahe am Wasser, während ihre Schwächen sie unter bestimmten Bedingungen verwundbar machen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Überlegene Beweglichkeit im Wasser Die Versunkenen sind im Wasser extrem schnell und wendig, was sie zu unberechenbaren Gegnern macht.",
+            "Unermüdlichkeit Sie benötigen keine Ruhe und sind in der Lage, über Stunden oder sogar Tage hinweg zu jagen, ohne an Kraft zu verlieren.",
+            "Schmerzimmunität Als Untote fühlen sie keinen Schmerz, was sie zu furchtlosen und hartnäckigen Kämpfern macht.",
+            "Vermehrung durch Infektion Ein Biss oder Kratzer eines Versunkenen kann Opfer infizieren und diese langsam selbst in Versunkene verwandeln. Dies macht sie zu einer ständig wachsenden Bedrohung.",
+            "Amphibische Natur Sie können sich sowohl im Wasser als auch an Land bewegen, was ihnen eine größere Reichweite verleiht, obwohl sie an Land langsamer sind.",
+            "Koordination in Gruppen Versunkene agieren oft in kleinen Gruppen mit einer unheimlichen Einheitlichkeit, die ihre Angriffe noch gefährlicher macht."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Langsamkeit an Land An Land bewegen sich die Versunkenen schwerfällig und können leicht überholt oder ausmanövriert werden.",
+            "Anfälligkeit für Feuer Ihre aufgequollenen, verwesenden Körper reagieren besonders empfindlich auf Feuer, das sie schnell zerstören kann.",
+            "Heilige Magie und geweihtes Silber Göttliche oder heilige Magie sowie Waffen aus geweihtem Silber sind besonders effektiv gegen die nekrotische Energie, die sie antreibt.",
+            "Abhängigkeit von Wasser Sie sind auf feuchte Umgebungen angewiesen. In trockenen Regionen verlieren sie schnell an Kraft und können sogar bewegungsunfähig werden.",
+            "Einfache Intelligenz Versunkene agieren rein instinktiv und können durch geschickte Taktiken oder Fallen ausmanövriert werden.",
+            "Zerfall Ihre körperliche Struktur ist durch Verwesung geschwächt, was sie anfällig für schwere physische Angriffe macht, wenn ihre Agilität überwunden wird."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Versunkenen sind tödlich in ihrem bevorzugten Element, dem Wasser, und eine ernsthafte Bedrohung an den Küsten oder in feuchten Umgebungen. Mit der richtigen Vorbereitung und Ausnutzung ihrer Schwächen können sie jedoch effektiv bekämpft werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Versunkene verharren unter ruhigem Wasser oft so lange, bis jede Welle ihre Spur verdeckt.",
+            "Salzkrusten an alten Kleidungsresten können selbst weit im Landesinneren auf sie hinweisen.",
+            "Ein bewegungsloser Versunkener ist nicht notwendigerweise zerstört.",
+            "Nautische Gegenstände bleiben häufig an seinem Körper hängen und verraten frühere Opfer oder Wracks."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

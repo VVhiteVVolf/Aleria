@@ -10,10 +10,10 @@ import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260906-effect-rolls-v1';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260909-dragon-parent-v2';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
-import { getEffectiveCombatAttribute, getAttributeModifier } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { getEffectiveCombatAttribute, getAttributeModifier } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { getBurningArmorPenalty } from './combat-creature-traits.js';
 
 function finiteOrNull(value) {

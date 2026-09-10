@@ -1,0 +1,107 @@
+{
+  "godId": "ordan",
+  "intro": "Ordans Klerus verbindet die Bewahrung der Zeit mit Autorität, Gnade und Gefolgschaft. Seine Häuser tragen öffentliche Verantwortung: Sie hüten Überlieferungen, begleiten Eide und erinnern Herrschende daran, dass Führung eine Verpflichtung gegenüber den Geführten ist.",
+  "community": "In einer Kirche des Vaters können Priester die Gemeinde leiten, Mönche Urkunden und Versorgung bewahren und wenige Paladine das Haus schützen. Ein angeschlossenes Lehrhaus gehört bei Rechts- und Geschichtskunde zum Bereich Orins; eine asketische Schule braucht einen eigenen, ruhigen Ort der Übung.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priesterschaft des Vaters",
+      "paragraphs": [
+        "Die Priester Ordans begleiten Herrschaft, Eide und die Lebensordnung der Gemeinde. Bei Salbungen und öffentlichen Gelübden erinnern sie an das Zusammenspiel von Autorität und Gnade. Ihr geistliches Urteil soll verantwortliche Führung stärken; persönliche Vergeltung verträgt sich nicht mit der Gnade des Vaters."
+      ],
+      "tasks": [
+        "Salbungen und feierliche Eide begleiten",
+        "Gemeinden führen und Streit schlichten",
+        "Verantwortung der Amtsträger anmahnen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der Erinnerung",
+      "paragraphs": [
+        "Mönche und Nonnen des Vaters bewahren den geordneten Rhythmus des Hauses. Sie führen Chroniken, kopieren Urkunden und versorgen die Gemeinschaft. Ihre Zünfte dienen der Verlässlichkeit: Ein sorgfältig erhaltenes Zeugnis schützt die Erinnerung ebenso wie ein regelmäßig verrichteter Dienst den Zusammenhalt des Konvents."
+      ],
+      "tasks": [
+        "Chroniken und Urkunden erhalten",
+        "Gebetszeiten und Hausdienste ordnen",
+        "Lernende in sorgfältiger Arbeit unterweisen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Chronisten",
+          "work": "Führt Hauschroniken, bewahrt Zeugnisse und lehrt das gewissenhafte Abschreiben."
+        },
+        {
+          "name": "Zunft der Siegelhüter",
+          "work": "Ordnet Urkunden, pflegt die Schreibstube und schützt überlassene Schriftstücke vor Verlust."
+        },
+        {
+          "name": "Zunft der Hausbewahrer",
+          "work": "Verantwortet Vorräte, Instandhaltung und den verlässlichen Ablauf gemeinsamer Dienste."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Ritter des anvertrauten Eides",
+      "paragraphs": [
+        "Ordans Paladine schützen Menschen, denen ein Eid Sicherheit versprochen hat, und verteidigen die Heiligtümer des Vaters. Sie sollen sich auch im Streit beherrschen. Die Berufung verlangt, einen besiegten Gegner der geordneten Entscheidung zuzuführen und Macht nicht als Erlaubnis zu persönlicher Rache zu verstehen."
+      ],
+      "tasks": [
+        "Eidträger und Schutzbefohlene begleiten",
+        "Heiligtümer und Versammlungen sichern",
+        "Geordnete Übergaben nach einem Konflikt gewährleisten"
+      ]
+    },
+    "asketen": {
+      "presence": "klein",
+      "title": "Der Pfad der Geduld",
+      "paragraphs": [
+        "Asketen des Vaters üben Wachsamkeit, Geduld und den beherrschten Augenblick. Stille Wachen und wiederkehrende Bewegungsfolgen verbinden geistige Sammlung mit körperlicher Disziplin. Kleine Schulen können wichtige Heiligtümer bewachen; sie ersetzen weder die Gemeindeleitung noch die ritterlichen Verbände."
+      ],
+      "tasks": [
+        "Ausdauer und besonnenes Handeln schulen",
+        "Stille Wachen am Heiligtum halten",
+        "Ungeduld und Vergeltungsdrang beherrschen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Ordan verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Buße durch verlässlichen Dienst",
+      "paragraphs": [
+        "Bußgänger dienen dort, wo Vertrauen wieder wachsen soll: bei der Versorgung des Hauses, der geordneten Ausgabe von Hilfsgütern oder dem Erhalt öffentlicher Räume. Ihr Schweigegelübde entbindet sie nicht von ehrlichem Handeln. Ein Eid kann die Wiedergutmachung gebrochener Zusagen besonders berücksichtigen."
+      ],
+      "tasks": [
+        "Anvertraute Dienste zuverlässig erfüllen",
+        "Vereinbarte Schäden wiedergutmachen",
+        "Die Rückkehr in ein verantwortliches Leben vorbereiten"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "asketen": {
+      "src": "Religionen/klerus/assets/asketen-ordan.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

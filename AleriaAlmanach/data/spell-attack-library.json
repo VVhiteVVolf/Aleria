@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "aleria-spell-attack-library",
-  "generatedAt": "2026-09-07T23:29:37.175Z",
+  "generatedAt": "2026-09-09T19:04:20.115Z",
   "notes": "Sammlung aller Zauber, Techniken und besonderen Fähigkeiten, die bislang für Spielercharaktere gebaut wurden - als Fundus für künftige Charaktere derselben Klasse/Waffe/Zauberschule. Direkt aus den Charakter-Archiv-Exporten zusammengestellt; jede Kopie trägt sourceCharacter/sourceClassId zur Herkunft. Änderungen hier wirken sich NICHT auf die lebenden Charaktere aus (keine Referenz, reine Ablage). Zum Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs (CHARACTERS-Liste im Skript um neue Charaktere ergänzen).",
   "byClass": {
     "teulu": {

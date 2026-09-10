@@ -1,15 +1,17 @@
 import { escapeClassHtml as escape } from '../pages/class-page-content.js';
 import { renderContents, renderIllustration, renderFacts, renderSection, renderPending } from '../pages/class-page-sections.js';
-import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260908-cenyr-paths-v1';
+import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260909-dragon-parent-v2';
+import { getCultureOrderContentsEntry, renderCultureOrderOverview } from './culture-order-overview.js';
 
-const VERSION = '20260908-cenyr-paths-v1';
+const VERSION = '20260910-morgorn-v1';
 const FALLBACK = '../../../IconOrdner/ReiterIcons/Klassen.png';
 const CULTURE_FOLDERS = Object.freeze({
   cenyr: 'Cenyr',
   vennyr: 'Vennyr',
   aldrimar: 'Aldrimar',
   alben: 'Alben',
-  nordmaenner: 'Nordmaenner'
+  nordmaenner: 'Nordmaenner',
+  morgorn: 'Morgorn'
 });
 
 function culturePageLabels(culture) {
@@ -36,26 +38,28 @@ function sharedCultureNote(document) {
   const links = document.id === 'milwr'
     ? '<a href="../../Cenyr/milwr/index.html">Cenyr · Drachling</a><a href="../../Vennyr/milwr/index.html">Vennyr · Küstenwache</a>'
     : '<a href="../../Klassenseite.html#cenyr">Im Register Cenyrs</a><a href="../../Klassenseite.html#vennyr">Im Register Vennyrs</a>';
-  return `<aside class="culture-shared-class"><strong>Gemeinsame Klasse · Cenyr &amp; Vennyr</strong><p>${document.id === 'milwr' ? 'Zwei kulturelle Ausbildungswege derselben Klasse. Eine Herkunft verleiht keine zusätzlichen Attackenslots.' : 'Ein gemeinsames Klassenprofil für die Geistlichen Nimues beider Kulturen. Hier werden zunächst nur Stab, Dreizack und Streitkolben ausgearbeitet.'}</p><div>${links}</div></aside>`;
+  return `<aside class="culture-shared-class"><strong>Gemeinsame Klasse · Cenyr &amp; Vennyr</strong><p>${document.id === 'milwr' ? 'Zwei kulturelle Ausbildungswege derselben Klasse. Eine Herkunft verleiht keine zusätzlichen Attackenslots.' : 'Ein gemeinsames Klassenprofil für die Geistlichen Nimues beider Kulturen. Jungdrache oder junge Welle bilden die wählbare Grundlage; Schwert, Dreizack, Stab und Morgenstern führen in die vier eigenen Wyrmformen.'}</p><div>${links}</div></aside>`;
 }
 
 export function renderCultureClassPage(document, documents, culture, plan) {
   const written = document.sections.filter(section => section.status === 'written');
   const pending = document.sections.filter(section => section.status === 'pending');
   const hasProgression = Boolean(plan);
+  const orderContents = getCultureOrderContentsEntry(culture);
+  const loreContents = [written[0], ...(orderContents ? [orderContents] : []), ...written.slice(1)];
   const contents = hasProgression
-    ? [written[0], { id: 'ausbildungsplan', title: 'Ausbildung · Stufe 1–20' }, ...written.slice(1)]
-    : written;
+    ? [loreContents[0], { id: 'ausbildungsplan', title: 'Ausbildung · Stufe 1–20' }, ...loreContents.slice(1)]
+    : loreContents;
   const index = documents.findIndex(entry => entry.id === document.id);
   const previous = documents[(index + documents.length - 1) % documents.length];
   const next = documents[(index + 1) % documents.length];
   const companion = document.companionArtwork;
-  const styleName = hasProgression ? plan.styles[0]?.name || 'Skaldisches Repertoire' : '';
+  const styleName = hasProgression ? document.id === 'derwyn' ? 'Wyrmtanz' : plan.styles[0]?.name || 'Skaldisches Repertoire' : '';
   const trainingLabel = hasProgression && plan.authoredThroughLevel === 5 ? 'Ausbildung 1–5 · 6–20 offen' : 'Ausbildung 1–20';
   const focus = hasProgression ? plan.focus : document.subtitle;
   const affiliation = hasProgression ? plan.affiliation : `${document.subtitle} · ${culture.name}`;
   const progressionAttribute = hasProgression ? ` data-culture-class="${escape(plan.id)}"` : '';
-  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner'].includes(culture.id)
+  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn'].includes(culture.id)
     ? `<link rel="stylesheet" href="../../modules/culture/${culture.id}-class-page.css?v=${VERSION}">`
     : '';
   const labels = culturePageLabels(culture);
@@ -81,6 +85,7 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   ${sharedCultureNote(document)}
   <details class="class-mobile-nav"><summary>Inhalt &amp; ${escape(culture.name)}-Klassen</summary>${renderContents(contents, pending.length > 0)}${cultureNavigation(documents, document.id, culture)}</details>
   <div class="class-reading-layout cenyr-introduction"><div class="class-chapters">${renderSection(written[0], 0)}</div><aside class="class-reference" aria-label="Klassenillustration">${renderIllustration(document)}</aside></div>
+  ${renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) })}
   ${hasProgression ? renderCultureClassTraining(plan) : ''}
   <div class="class-reading-layout"><div class="class-chapters">${written.slice(1).map((section, index) => renderSection(section, index + 1)).join('\n')}${renderPending(pending)}</div><aside class="class-reference" aria-label="Klassenprofil">${renderFacts(document)}${companion ? renderIllustration({ name: document.name, title: companion.caption, illustration: companion.source, artwork: companion }) : ''}</aside></div>
   <nav class="class-next-pages" aria-label="Weitere ${escape(culture.name)}-Klassen"><a href="${pageHref(previous)}"><span>← Vorherige Klasse</span><strong>${escape(previous.name)}</strong></a><a href="${pageHref(next)}"><span>Nächste Klasse →</span><strong>${escape(next.name)}</strong></a></nav>

@@ -1,0 +1,137 @@
+.field-related-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+  padding: 28px 23px 34px;
+}
+
+.field-related-branch {
+  --branch-accent: #7e382d;
+  --branch-wash: #8e422112;
+  min-width: 0;
+  padding: 21px 18px 24px;
+  border-top: 4px double var(--branch-accent);
+  border-bottom: 1px solid #9d8561;
+  background: linear-gradient(180deg, var(--branch-wash), transparent 220px), #e8dcc3a3;
+}
+
+.field-related-branch--dagon {
+  --branch-accent: #944729;
+  --branch-wash: #b458241c;
+}
+
+.field-related-branch--sanguine {
+  --branch-accent: #6f3049;
+  --branch-wash: #76334d1c;
+}
+
+.field-related-branch > header {
+  min-height: 144px;
+  padding: 2px 4px 18px;
+  border-bottom: 1px solid #a48d6a;
+}
+
+.field-related-branch > header h3 {
+  margin-top: 6px;
+  color: #382c22;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.field-related-branch > header > p:last-child:not(.eyebrow) {
+  margin-top: 8px;
+  color: #655646;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.field-related-branch-levels {
+  display: grid;
+  gap: 0;
+}
+
+.field-related-branch-level {
+  position: relative;
+  min-width: 0;
+  padding: 29px 0 4px;
+}
+
+.field-related-branch-level + .field-related-branch-level::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 21px;
+  background: var(--branch-accent);
+  content: '';
+}
+
+.field-related-branch-level + .field-related-branch-level::after {
+  position: absolute;
+  top: 16px;
+  left: calc(50% - 3px);
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid var(--branch-accent);
+  border-bottom: 1px solid var(--branch-accent);
+  transform: rotate(45deg);
+  content: '';
+}
+
+.field-related-branch-level > header {
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.field-related-branch-level > header h4 {
+  margin: 4px 0 0;
+  color: #443328;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.field-related-branch-level > header > p:last-child:not(.eyebrow) {
+  max-width: 430px;
+  margin: 6px auto 0;
+  color: #6b5a48;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.field-related-branch-level .field-related-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+}
+
+.field-related-branch-level .field-related-grid--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.field-related-branch-level .field-related-card {
+  grid-template-columns: 1fr;
+}
+
+.field-related-branch-level .field-related-card figure,
+.field-related-branch-level .field-related-placeholder {
+  min-height: 190px;
+  border-right: 0;
+  border-bottom: 1px solid #b7a27f;
+}
+
+.field-related-branch-level .field-related-image {
+  max-height: 218px;
+}
+
+@media (max-width: 1040px) {
+  .field-related-branches { grid-template-columns: 1fr; }
+  .field-related-branch > header { min-height: 0; }
+}
+
+@media (max-width: 620px) {
+  .field-related-branches { padding-inline: 14px; }
+  .field-related-branch { padding-inline: 13px; }
+  .field-related-branch-level .field-related-grid { grid-template-columns: 1fr; }
+}

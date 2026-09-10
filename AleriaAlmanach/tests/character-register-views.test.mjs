@@ -136,8 +136,8 @@ test('family view shows one character in multiple trees while keeping one profil
 });
 
 test('characters and creatures are primary registers instead of crowded theme tabs', () => {
-  const archiveViewSource = fs.readFileSync(
-    new URL('../modules/archive/archive-view.js', import.meta.url),
+  const navigationSource = fs.readFileSync(
+    new URL('../modules/archive/archive-navigation.js', import.meta.url),
     'utf8'
   );
   const sidebarSource = fs.readFileSync(
@@ -145,9 +145,16 @@ test('characters and creatures are primary registers instead of crowded theme ta
     'utf8'
   );
 
-  assert.match(archiveViewSource, /const tabOrder = \['Alle', \.\.\.sectionTabs\]/);
-  assert.doesNotMatch(archiveViewSource, /const tabOrder = \[[^\n]*'Charaktere'/);
-  assert.match(archiveViewSource, /new Set\(\['Alle', 'Charaktere', 'Kreaturen'\]\)/);
+  const context = vm.createContext({
+    escapeHtml: value => String(value),
+    getThemeMetaForTab: () => ({ slug: 'archive' }),
+    buildArchiveDashboardSectionCards: () => ''
+  });
+  vm.runInContext(navigationSource, context);
+  const html = vm.runInContext("AleriaArchiveNavigation.render([{tab:'Kultur'}, {tab:'Charaktere'}, {tab:'Kreaturen'}])", context);
+  assert.match(html, /data-tab="Alle"/);
+  assert.match(html, /data-tab="Kultur"/);
+  assert.doesNotMatch(html, /data-tab="(?:Charaktere|Kreaturen)"/);
   assert.match(sidebarSource, /archiveTab: 'Charaktere'/);
   assert.match(sidebarSource, /archiveTab: 'Kreaturen'/);
   assert.match(sidebarSource, /icon: 'Charaktere\.png'/);

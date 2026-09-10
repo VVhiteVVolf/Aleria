@@ -1,10 +1,8 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260908-cenyr-paths-v1';
-import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const CLASS_WEAPONS = Object.freeze({
   teulu: ['sword'],
-  cantref: ['spear', 'lance', 'partisan', 'trident', 'halberd'],
-  uchelwyr: ['sword', 'lance'],
   arthwyr: ['greatsword', 'axe', 'battleaxe', 'club', 'mace'],
   helwyr: ['sword', 'dual-swords', 'dual-daggers']
 });
@@ -17,8 +15,8 @@ function rise(spec) {
     allowedClassIds: Object.keys(CLASS_WEAPONS),
     classWeaponProfiles: CLASS_WEAPONS,
     weaponTypes: ['sword', 'spear', 'polearm', 'dagger', 'axe', 'mace'],
-    weaponRuleSetId: 'cantref-polearm',
-    uchelwyrCompatible: true,
+    weaponRuleSetId: '',
+    uchelwyrCompatible: false,
     maximumTargets: 1,
     target: 'Ein Gegner',
     tags: ['Akrobatik', 'Geheimhaltung', 'Kritischer Treffer'],

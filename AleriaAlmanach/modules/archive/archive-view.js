@@ -249,8 +249,10 @@ function handleArchiveActionClick(event) {
   if (action === 'toggle-hierarchy-node') {
     event.preventDefault();
     if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
-    toggleArchiveHierarchyNode(_activeTab, decodeArchivePathData(trigger.dataset.sectionPath || ''));
+    const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
+    toggleArchiveHierarchyNode(_activeTab, path);
     renderAll();
+    restoreArchiveHierarchyFocus(path, true);
     return;
   }
   if (action === 'select-hierarchy-node') {
@@ -260,20 +262,7 @@ function handleArchiveActionClick(event) {
     setActiveArchivePath(_activeTab, path);
     expandArchiveHierarchyPath(_activeTab, path);
     renderAll();
-    return;
-  }
-  if (action === 'show-hierarchy-content') {
-    event.preventDefault();
-    if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
-    const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
-    const pathChanged = !archivePathsEqual(getActiveArchivePath(_activeTab), path);
-    if (pathChanged) {
-      setActiveArchivePath(_activeTab, path);
-      renderAll();
-    }
-    window.requestAnimationFrame(() => {
-      document.getElementById('archive-hierarchy-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    restoreArchiveHierarchyFocus(path);
     return;
   }
   if (action === 'focus-dashboard-search') {
@@ -566,13 +555,16 @@ function renderAll() {
   const previousHierarchy = main.querySelector('[data-archive-hierarchy-tab]');
   const previousHierarchyTab = previousHierarchy?.dataset.archiveHierarchyTab || '';
   const previousHierarchyScroll = previousHierarchy?.querySelector('.archive-hierarchy-tree-scroll')?.scrollTop || 0;
+  const navigationOpen = previousHierarchyTab === _activeTab
+    ? previousHierarchy.querySelector('.archive-hierarchy-tree')?.open
+    : !window.matchMedia('(max-width: 1100px)').matches;
   clearTimeout(_archiveSearchRenderTimer);
   _archiveSearchRenderTimer = null;
   const sections = getValidSections();
-  const sectionByEntryId = new Map();
+  const sectionByEntry = new Map();
   sections.forEach(section => {
     (section.entries || []).forEach(entry => {
-      if (entry?.id && !sectionByEntryId.has(entry.id)) sectionByEntryId.set(entry.id, section);
+      if (entry) sectionByEntry.set(entry, section);
     });
   });
   const customSectionSignatures = new Set(_customSections.map(section => makeSectionSignature(section)));
@@ -581,6 +573,7 @@ function renderAll() {
   let priorityCardImageBudget = 10;
 
   const activeEl = document.activeElement;
+  const refocusArchiveTab = tabsNav.contains(activeEl) && activeEl?.dataset.archiveAction === 'switch-tab';
   const refocusSearch = activeEl && activeEl.id === 'archive-search-input';
   const searchSelectionStart = refocusSearch ? activeEl.selectionStart : null;
   const searchSelectionEnd = refocusSearch ? activeEl.selectionEnd : null;
@@ -588,106 +581,17 @@ function renderAll() {
   main.innerHTML = '';
   tabsNav.innerHTML = '';
 
-  // Die Themenleiste enthält nur Archivthemen. Eigenständige Register wie
-  // Charaktere und Kreaturen werden über die Register-Navigation geöffnet.
-  const primaryRegisterTabs = new Set(['Alle', 'Charaktere', 'Kreaturen']);
-  const sectionTabs = [...new Set(sections.map(s => s.tab || s.key).filter(t => !primaryRegisterTabs.has(t)))];
-  const tabOrder = ['Alle', ...sectionTabs];
-  const tabGroup = document.createElement('div');
-  tabGroup.className = 'gallery-tab-group gallery-tab-group-main';
-  tabsNav.appendChild(tabGroup);
-  const toolGroup = document.createElement('div');
-  toolGroup.className = `gallery-tab-group gallery-tab-group-tools${_archiveToolsExpanded ? ' is-expanded' : ''}`;
-  toolGroup.setAttribute('aria-label', 'Archivwerkzeuge');
-  tabsNav.appendChild(toolGroup);
-
-  // Build tab buttons
-  tabOrder.forEach(tab => {
-    const btn = document.createElement('button');
-    btn.className = 'gallery-tab-btn' + (tab === 'Alle' ? ' active' : '');
-    btn.dataset.tab = tab;
-    btn.dataset.tabTheme = getThemeMetaForTab(tab).slug;
-    btn.dataset.archiveAction = 'switch-tab';
-    btn.type = 'button';
-    btn.textContent = tab === 'Alle' ? 'Dashboard' : tab;
-    tabGroup.appendChild(btn);
+  tabsNav.innerHTML = AleriaArchiveNavigation.render(sections, {
+    activeTab: _activeTab, toolsExpanded: _archiveToolsExpanded
   });
-
-  const editToolsBtn = document.createElement('button');
-  editToolsBtn.className = `gallery-tab-btn gallery-tab-edit-toggle${_archiveToolsExpanded ? ' active' : ''}`;
-  editToolsBtn.type = 'button';
-  editToolsBtn.textContent = 'Bearbeiten';
-  editToolsBtn.title = 'Werkzeuge fuer Module, Import, Stempel und Reiter anzeigen';
-  editToolsBtn.dataset.archiveAction = 'toggle-archive-tools';
-  editToolsBtn.setAttribute('aria-label', editToolsBtn.title);
-  editToolsBtn.setAttribute('aria-expanded', _archiveToolsExpanded ? 'true' : 'false');
-  toolGroup.appendChild(editToolsBtn);
-
-  const toolActions = document.createElement('div');
-  toolActions.className = 'gallery-tab-tool-actions';
-  toolActions.setAttribute('aria-label', 'Bearbeitungswerkzeuge');
-  toolGroup.appendChild(toolActions);
-
-  const addBtn = document.createElement('button');
-  addBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  addBtn.type = 'button';
-  addBtn.textContent = '+ Modul';
-  addBtn.title = 'Neues Modul anlegen';
-  addBtn.dataset.archiveAction = 'new-module';
-  addBtn.setAttribute('aria-label', 'Neues Modul anlegen');
-  toolActions.appendChild(addBtn);
-
-  const importBtn = document.createElement('button');
-  importBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  importBtn.type = 'button';
-  importBtn.textContent = 'Import';
-  importBtn.title = 'Modul importieren, exportieren oder Backup verwalten';
-  importBtn.dataset.archiveAction = 'import-module';
-  importBtn.setAttribute('aria-label', 'Modul importieren, exportieren oder Backup verwalten');
-  toolActions.appendChild(importBtn);
-
-  const stampBtn = document.createElement('button');
-  stampBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  stampBtn.type = 'button';
-  stampBtn.textContent = 'Stempel';
-  stampBtn.title = 'Bestehendes Modul kopieren und als eigenstaendige Kopie einsetzen';
-  stampBtn.dataset.archiveAction = 'open-module-stamp';
-  stampBtn.setAttribute('aria-label', stampBtn.title);
-  toolActions.appendChild(stampBtn);
-
-  const sectionBtn = document.createElement('button');
-  sectionBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  sectionBtn.type = 'button';
-  sectionBtn.textContent = '+ Reiter';
-  sectionBtn.title = 'Neuen großen Modul-Reiter erstellen';
-  sectionBtn.dataset.archiveAction = 'create-module-section';
-  sectionBtn.setAttribute('aria-label', 'Neuen großen Modul-Reiter erstellen');
-  toolActions.appendChild(sectionBtn);
-
-  const manageBtn = document.createElement('button');
-  manageBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  manageBtn.type = 'button';
-  manageBtn.textContent = 'Verwalten';
-  manageBtn.title = 'Reiter, Pfade und Modulpositionen verwalten';
-  manageBtn.dataset.archiveAction = 'toggle-archive-manage';
-  manageBtn.setAttribute('aria-label', manageBtn.title);
-  toolActions.appendChild(manageBtn);
-
-  const iconDirectoryBtn = document.createElement('button');
-  iconDirectoryBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
-  iconDirectoryBtn.type = 'button';
-  iconDirectoryBtn.textContent = 'Icons';
-  iconDirectoryBtn.title = 'Icon-Verzeichnis aus dem Projektordner oeffnen';
-  iconDirectoryBtn.dataset.archiveAction = 'open-icon-directory';
-  iconDirectoryBtn.setAttribute('aria-label', iconDirectoryBtn.title);
-  toolActions.appendChild(iconDirectoryBtn);
 
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
   toolbar.innerHTML = `
-    <label class="archive-toolbar-label" for="archive-search-input">Archivsuche</label>
+    <label class="archive-toolbar-label" for="archive-search-input">Was suchst du in Aleria?</label>
     <div class="archive-search-wrap">
-      <input class="archive-search-input" id="archive-search-input" name="aleria-archive-search-${Date.now()}" type="search" placeholder="Titel, Kategorie, Person oder Stichwort eingeben" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-lpignore="true" data-form-type="other">
+      <svg class="archive-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg>
+      <input class="archive-search-input" id="archive-search-input" name="aleria-archive-search-${Date.now()}" type="search" placeholder="Orte, Personen, Gilden und Überlieferungen …" aria-describedby="archive-search-meta" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-lpignore="true" data-form-type="other">
       <button class="archive-search-clear" id="archive-search-clear" type="button">Leeren</button>
     </div>
     <div class="archive-search-meta" id="archive-search-meta"></div>`;
@@ -729,20 +633,13 @@ function renderAll() {
     const currentPath = getActiveArchivePath(_activeTab);
     const tabSections = getArchiveTabSections(sections, _activeTab);
     const hierarchyModel = buildArchiveHierarchyModel(tabSections, _activeTab);
-    const defaultChild = !currentPath.length && !hierarchyModel.root.directEntries.length
-      ? hierarchyModel.root.children[0]
-      : null;
-    const selectedNode = defaultChild
-      || findArchiveHierarchyNode(hierarchyModel.root, currentPath)
-      || hierarchyModel.root;
-    if (defaultChild) setActiveArchivePath(_activeTab, defaultChild.path);
+    const selectedNode = findArchiveHierarchyNode(hierarchyModel.root, currentPath) || hierarchyModel.root;
     const renderSection = getArchiveHierarchySection(selectedNode, _activeTab);
     const renderSignature = makeSectionSignature(renderSection);
     renderSections = [renderSection];
     hierarchyBySignature.set(renderSignature, {
       model: hierarchyModel,
-      selectedNode,
-      rootSection: getArchiveHierarchySection(hierarchyModel.root, _activeTab)
+      selectedNode
     });
   }
 
@@ -762,17 +659,16 @@ function renderAll() {
     block.dataset.sectionTheme = theme.slug;
     block.dataset.sectionDepth = String(sectionDepth);
     block.dataset.hasMatches = filteredEntries.length || showEmptySection || hierarchy ? 'true' : 'false';
-    block.innerHTML = `
-      ${hierarchy
-        ? renderArchiveSectionBand(
-            hierarchy.rootSection,
-            hierarchy.model.root.entries,
-            { isCustom: customSectionSignatures.has(makeSectionSignature(hierarchy.rootSection)) }
-          )
-        : renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}
-      ${hierarchy ? renderArchiveHierarchyBrowser(hierarchy.model, hierarchy.selectedNode.path) : ''}
-      ${hierarchy ? renderArchiveHierarchyContentHeading(hierarchy.selectedNode) : ''}
-      <div class="card-grid"></div>`;
+    if (hierarchy) block.classList.add('archive-section-browser');
+    block.innerHTML = hierarchy
+      ? `<div class="archive-browser-layout" data-archive-hierarchy-tab="${escapeHtml(hierarchy.model.tab)}">
+          ${renderArchiveHierarchyBrowser(hierarchy.model, hierarchy.selectedNode.path, { navigationOpen })}
+          <section class="archive-browser-content" id="archive-hierarchy-content" aria-label="Module des gewählten Bereichs">
+            ${renderArchiveHierarchyContentHeading(hierarchy.selectedNode, hierarchy.model)}
+            <div class="card-grid"></div>
+          </section>
+        </div>`
+      : `${renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}<div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');
     if (showEmptySection || (hierarchy && !filteredEntries.length)) {
@@ -782,38 +678,20 @@ function renderAll() {
       grid.appendChild(hint);
     }
     const visibleEntries = getArchiveSectionVisibleEntries(section, filteredEntries, { searchActive: !!_archiveSearchNeedle });
-    visibleEntries.forEach((entry, i) => {
+    visibleEntries.forEach(entry => {
       const cardSection = hierarchy
-        ? (sectionByEntryId.get(entry.id) || section)
+        ? (sectionByEntry.get(entry) || section)
         : section;
-      const cardSectionSignature = makeSectionSignature(cardSection);
       const card = document.createElement('article');
-      card.className = 'entry-card' + (entry.locked ? ' card-locked' : '');
-      card.style.animationDelay = `${i * 0.07}s`;
+      card.className = 'entry-card'
+        + (getArchiveEntryGuildEmblem(entry) ? ' entry-card-emblem' : '')
+        + (entry.locked ? ' card-locked' : '');
       card.dataset.searchKind = 'entry';
       const previewImage = getArchiveEntryPreviewImage(entry);
       const usePriorityImage = !!previewImage && priorityCardImageBudget > 0;
-      const imageLoadingAttrs = usePriorityImage
-        ? 'loading="eager" decoding="async" fetchpriority="high"'
-        : 'loading="lazy" decoding="async" fetchpriority="low"';
-      card.innerHTML = `
-        <button class="entry-card-open" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} öffnen">
-          <span class="card-image-wrap">
-            ${previewImage ? `<img src="${previewImage}" alt="" ${imageLoadingAttrs}>` : `<span class="card-placeholder-inner">${escapeHtml(entry.icon || '')}</span>`}
-            <span class="card-image-overlay"></span>
-            ${entry.locked ? `<span class="lock-icon" aria-hidden="true">🔒</span>` : ''}
-            <span class="card-label"><span class="entry-card-title">${escapeHtml(entry.title)}</span><span class="card-type-tag">${escapeHtml(entry.type)}</span></span>
-          </span>
-          ${renderArchiveEntryMeta(entry, cardSection, { showLocation: _archiveSearchNeedle || _activeTab === 'Alle' })}
-          <span class="card-corner" aria-hidden="true"></span><span class="card-corner-bl" aria-hidden="true"></span>
-        </button>
-        ${_archiveManageMode ? `<div class="entry-card-admin">
-          <label>Verschieben nach</label>
-          <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
-            ${buildModuleSectionTargetOptions(cardSectionSignature)}
-          </select>
-          <button type="button" data-archive-action="open-module-stamp" data-source-entry-id="${escapeHtml(entry.id || '')}">Kopieren</button>
-        </div>` : ''}`;
+      card.innerHTML = renderArchiveEntryCard(entry, cardSection, {
+        priorityImage: usePriorityImage, manageMode: _archiveManageMode
+      });
       if (usePriorityImage) priorityCardImageBudget--;
       grid.appendChild(card);
     });
@@ -868,6 +746,7 @@ function renderAll() {
   }
   loadCharacters();
   window.AleriaCreatures?.mount?.();
+  AleriaArchiveNavigation.mount({ activeTab: _activeTab, focusActiveTab: refocusArchiveTab });
 }
 
 function initPage() {

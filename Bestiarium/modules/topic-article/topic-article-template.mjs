@@ -1,3 +1,4 @@
+import { BOOK_ASSETS, renderBookArticleContent } from '../book-reader/book-article-template.mjs';
 const VERSION = '20260907-topic-articles-v1';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const roman = number => ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'][number - 1] || String(number);
@@ -58,14 +59,14 @@ export function renderTopicArticle(topic) {
   <title>${escape(topic.title)} · Themenwand · Bestiarium von Aleria</title><meta name="description" content="${escape(topic.lead)}">
   <link rel="icon" href="../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
   <link rel="stylesheet" href="../../modules/book-shell/book-shell.css?v=${VERSION}">
-  <link rel="stylesheet" href="../../modules/topic-article/topic-article.css?v=${VERSION}">
+  <link rel="stylesheet" href="../../modules/topic-article/topic-article.css?v=${VERSION}">${topic.presentation === 'book' ? BOOK_ASSETS : ''}
 </head>
 <body>
-  <a class="skip-link" href="#${escape(topic.sections[0].id)}">Zum Themenblatt</a>
+  <a class="skip-link${topic.presentation === 'book' ? ' book-skip-link' : ''}" href="#${escape(topic.sections[0].id)}">${topic.presentation === 'book' ? 'Zum Buchinhalt' : 'Zum Themenblatt'}</a>
   <div class="bestiary-page topic-article">
     <header class="masthead" id="anfang"><a class="almanach-link" href="../../index.html#themenwand"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · Sphärenkundliches Archiv</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
-      <nav class="topic-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html#themenwand">Themenwand</a><span aria-hidden="true">/</span><span aria-current="page">${escape(topic.title)}</span></nav>
+      ${topic.presentation === 'book' ? renderBookArticleContent(topic) : `<nav class="topic-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html#themenwand">Themenwand</a><span aria-hidden="true">/</span><span aria-current="page">${escape(topic.title)}</span></nav>
       <section class="topic-hero" aria-labelledby="topic-title">
         <div class="topic-hero-copy"><div class="topic-icon-seal">${picture(topic.icon, { className: 'topic-header-icon', alt: topic.icon.alt, eager: true })}</div><p class="eyebrow">${escape(topic.classification)} <span aria-hidden="true">·</span> Archivblatt ${escape(topic.folio)}</p><h1 id="topic-title">${escape(topic.title)}</h1><p class="topic-subtitle">${escape(topic.subtitle)}</p><p class="topic-lead">${escape(topic.lead)}</p><div class="topic-tags">${topic.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div><a class="ink-button" href="#${escape(topic.sections[0].id)}">Das Manuskript lesen <span aria-hidden="true">↓</span></a></div>
         ${renderThemeImage(topic)}
@@ -74,7 +75,7 @@ export function renderTopicArticle(topic) {
       <div class="topic-book">
         <aside class="topic-register"><div><p class="eyebrow">In diesem Themenblatt</p><nav aria-label="Themenkapitel">${topic.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 1)}</span>${escape(section.title)}</a>`).join('\n')}</nav><a class="topic-register-back" href="../../index.html#themenwand">← Zur Themenwand</a></div></aside>
         <div class="topic-reading"><article class="topic-narrative" aria-label="Überlieferung zu ${escape(topic.title)}">${topic.sections.map(renderSection).join('\n')}</article>${renderFacts(topic)}</div>
-      </div>
+      </div>`}
     </main>
     <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escape(topic.title)} · Themenwand des Bestiariums</small></p><a href="../../index.html#themenwand">Zurück zur Themenwand ↗</a></footer>
   </div>

@@ -1,0 +1,47 @@
+{
+  "id": "asketen",
+  "title": "Asketen",
+  "number": "IV",
+  "motto": "Den Glauben verkörpern",
+  "summary": "Selbstbeherrschung durch Meditation, Entbehrung und körperliche Schulung.",
+  "paragraphs": [
+    "Asketen streben nach einer Übereinstimmung von Körper, Geist und Seele. Ihr Weg verbindet geregelte Entbehrung, Meditation und anspruchsvolle Übung. Eine asketische Schule erkennt Hingabe am Lebenswandel ihrer Mitglieder.",
+    "Ihre Struktur ist der eines Klosters verwandt, besitzt aber einen wehrhaften Anteil: Körperbeherrschung, Schutz des Heiligtums und gemeinsames Handeln in Gefahr gehören zur Ausbildung. Der Meister des Pfades wahrt Lehre und Disziplin. Ein asketischer Rang ist kein Rang in einem Paladinorden.",
+    "Eigene asketische Gemeinschaften finden sich besonders im Glauben an Ordan, Baldran, Maldras, Sylvana und Kharon. Bei den übrigen Gottheiten gibt es keinen oder kaum eigenen asketischen Klerus. Einzelne Gläubige und seltene kleine Gemeinschaften können dennoch einen solchen Weg wählen."
+  ],
+  "art": null,
+  "hierarchy": {
+    "title": "Der Pfad der Disziplin",
+    "note": "Die höchste Bezeichnung lautet Meister des Pfades. In einem kleinen Heiligtum können Lehr- und Schutzaufgaben in einer Hand liegen; große Schulen verteilen sie auf mehrere Bewährte. Die Stufen beschreiben die Ordnung einer bestehenden asketischen Schule. Sie setzen keinen eigenen Asketenorden bei jeder Gottheit voraus; ein einzelner Gläubiger kann einer verbundenen Schule angehören.",
+    "ranks": [
+      {
+        "title": "Anwärter / Anwärterin",
+        "duty": "Erprobt die Abgeschiedenheit und den geregelten Verzicht."
+      },
+      {
+        "title": "Novize / Novizin",
+        "duty": "Lernt Meditation, Grundübungen und die Regeln der Schule."
+      },
+      {
+        "title": "Adept",
+        "duty": "Übt selbstständig und nimmt am gemeinschaftlichen Wachdienst teil."
+      },
+      {
+        "title": "Asket / Asketin",
+        "duty": "Hat sich im gewählten Pfad bewährt und lebt dessen Disziplin."
+      },
+      {
+        "title": "Lehrmeister / Lehrmeisterin",
+        "duty": "Unterweist Lernende und wacht über Maß und Fortschritt ihrer Übungen."
+      },
+      {
+        "title": "Hüter / Hüterin des Pfades",
+        "duty": "Koordiniert Schutz, Ordnung und gemeinsames Handeln des Heiligtums."
+      },
+      {
+        "title": "Meister / Meisterin des Pfades",
+        "duty": "Leitet die Schule und trägt Verantwortung für ihre geistige und körperliche Lehre."
+      }
+    ]
+  }
+}

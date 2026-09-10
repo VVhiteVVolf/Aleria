@@ -1,0 +1,51 @@
+registerNewspaperGuild({
+  id: 'kronenspiegel', asset: 'kronenspiegel', name: 'Der Kronenspiegel',
+  reach: 'Nur Cenyr · einheitliche Gesamtausgabe', seat: 'Mathragon', patron: 'Haus Pengair',
+  tagline: 'Hart, aber fair.', publicationModel: 'Eine identische Ausgabe für ganz Cenyr', price: '5 Kupferstücke',
+  story: [
+    '<strong>Ein Königreich im Zusammenhang</strong>',
+    'Nicht jede Nachricht wird größer, nur weil man sie lauter verkündet. Der <strong>Kronenspiegel</strong> sucht jene Entwicklungen, deren Folgen über einen einzelnen Markt oder eine einzelne Stadt hinausreichen. Handel, Recht, Krone, Adel und die Beziehungen zu anderen Reichen werden danach betrachtet, was sie für <strong>Cenyr als Ganzes</strong> bedeuten.',
+    'Hinter dem Blatt steht <strong>Haus Pengair</strong>. Seine Hauptredaktion in <strong>Mathragon</strong> sammelt Meldungen, wägt ihre Bedeutung ab und formt daraus eine gemeinsame Ausgabe. Die Haltung ist <em>neutral-konservativ</em>: Bestehende Ordnungen werden ernst genommen, ohne dass Rang oder Amt vor einem begründeten Urteil schützen sollen.',
+    '<strong>Hart, aber fair</strong>',
+    'Der Leitsatz verlangt mehr als einen feierlichen Ton. Wer Missstände benennt, muss Belege vorlegen können; wer hart urteilt, muss Gegendarstellung und Korrektur zulassen. Ein großer Name ist eine Nachricht wert, wenn seine Handlungen Folgen haben. Ein Gerücht allein genügt nicht, um ihm eine ganze Seite zu widmen.',
+    '<strong>Viele Druckorte, eine Fassung</strong>',
+    'Die Häuser in Gwynthor, Abergwint, Castellbryn und Rhosmere führen Meldungen an die Zentrale heran. Nach der redaktionellen Entscheidung verbreiten die Standorte <strong>denselben Inhalt</strong>. Sie schaffen keine eigenen Stadtfassungen. So können Leser an verschiedenen Enden des Königreichs tatsächlich über dieselbe Ausgabe sprechen.',
+    'Der Kronenspiegel erscheint am <strong>ersten, achtzehnten und letzten Tag jedes Monats</strong>. Zwischen diesen Terminen liegt das stille Handwerk der Prüfung: Briefe werden verglichen, Widersprüche festgehalten und die Bedeutung einer Nachricht gegen ihren bloßen Reiz abgewogen.'
+  ],
+  overview: ['Der <strong>Kronenspiegel</strong> ist die cenyrweite Nachrichtenorganisation des Hauses Pengair mit Hauptredaktion und Zentraldruckerei in Mathragon.', 'Die Standorte liefern geprüfte regionale Nachrichten und drucken die <strong>unveränderte Gesamtausgabe</strong>. Themen von überörtlicher Tragweite bestimmen die Auswahl.'],
+  traits: [['Das große Bild', 'Nachrichten werden nach ihrer Bedeutung für das Königreich ausgewählt.', 'Diplomatie'], ['Quellenprüfung', 'Belege, Gegendarstellungen und redaktionelle Korrekturen gehören zum Anspruch des Blattes.', 'Justiz'], ['Gemeinsame Ausgabe', 'Alle Druckorte verbreiten dieselbe redaktionell verantwortete Fassung.', 'Administration']],
+  history: ['Die Verantwortung des Hauses <strong>Pengair</strong> und der Hauptsitz <strong>Mathragon</strong> sind festgelegt. Druck- und Korrespondenzstandorte sind in mehreren großen Städten Cenyrs verzeichnet.', 'Die zentrale Redaktion ist nach Themenfeldern gegliedert; ihre namentliche Besetzung ist noch nicht ausgearbeitet. Ein Gründungsjahr ist nicht überliefert.'],
+  topics: ['Krone & Politik; Handel & Wirtschaft.', 'Personen & Adel; Recht & Kriminalität.', 'Beziehungen & Ausland; große Entwicklungen aus den Regionen.', 'Prüfung, Einordnung und Gegendarstellungen.'],
+  trivia: ['Erscheinungstage: der erste, achtzehnte und letzte Tag jedes Monats.', 'Ein Druckort begründet beim Kronenspiegel keine eigene Ortsausgabe.', 'Das Wappen verbindet Krone, Feder und Schriftrolle mit einem Spiegel und wachendem Auge.'],
+  connections: [{ type: 'connection', name: 'Haus Pengair', detail: 'Trägt die Verantwortung für das Blatt und die Mathragoner Hauptredaktion.', image: '../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-pengair.png', imageFormat: 'square' }],
+  obligations: [['Einheitliche Fassung', 'Die Standorte drucken die zentral verantwortete Gesamtausgabe ohne eigene redaktionelle Ergänzungen.'], ['Fairness im Urteil', 'Quellenprüfung und Gegendarstellung begrenzen die Härte der öffentlichen Kritik.']],
+  property: [['Mathragoner Hauptsitz', 'Hauptredaktion und Zentraldruckerei.'], ['Druck- und Korrespondenzhäuser', 'Regionale Quellenannahme, Weiterleitung und Druck der gemeinsamen Ausgabe.']],
+  governance: ['Die Hauptleitung sitzt in <strong>Mathragon</strong> und handelt unter der Verantwortung des Hauses Pengair. Hier werden Auswahl, Prüfung und endgültige Gestalt der Gesamtausgabe zusammengeführt.', 'Die Themenleitungen für Politik, Wirtschaft, Adel, Recht, Ausland und Regionen arbeiten innerhalb der Hauptredaktion. Die nachstehenden Meisterämter ordnen ihre gemeinsame Verantwortung; Standortleitungen gehören nicht zu dieser Übersicht.'],
+  governanceRemit: 'Cenyrweite Ausgabe und zentrale Prüfung',
+  head: ['Oberster Herausgeber', 'Trägt im Auftrag des Hauses Pengair die letzte Verantwortung für Linie und Veröffentlichung des Kronenspiegels.', 'Administration'],
+  council: ['Rat der Schriftmeister', 'Wägt die Meldungen der zentralen Themenleitungen ab und bestimmt den Aufbau der Gesamtausgabe.', 'Diplomatie'],
+  offices: [['Meister der Hauptschrift', 'Führt die zentralen Themenleitungen und stimmt ihre Beiträge für die gemeinsame Ausgabe ab.', 'Administration'], ['Meister der Quellenprüfung', 'Verlangt Belege, prüft Gegendarstellungen und verantwortet notwendige Berichtigungen.', 'Justiz'], ['Meister der Korrespondenz', 'Bündelt Berichte aus Grafschaften, Städten und Grenzlanden für die Hauptredaktion.', 'Diplomatie'], ['Meister des Zentraldrucks', 'Gibt die verbindliche Druckfassung weiter und überwacht die Übereinstimmung aller Druckorte.', 'Administration']],
+  governanceFooter: 'Die Themenleitungen gehören zur Hauptredaktion in Mathragon; örtliche Druck- und Korrespondenzstäbe liefern zu.',
+  networkIntro: ['<strong>Alle Wege führen zur gemeinsamen Ausgabe.</strong> Die Hauptredaktion in Mathragon verbindet regionale Berichte zu einem Bild des Königreichs. Von dort geht die verbindliche Fassung an die Druckstandorte.'],
+  networkModel: 'Standort → Quellenannahme und Prüfung → Hauptredaktion Mathragon → gemeinsame Druckfassung → identische Ausgabe an allen Standorten.',
+  networkNote: 'Der Kronenspiegel ist auf Cenyr ausgerichtet. Seine bekannten Häuser sind keine eigenständigen Lokalzeitungen.',
+  sites: [
+    { name: 'Mathragon', kind: 'headquarters', region: 'Hauptstadt Cenyrs', description: 'Hauptredaktion des Hauses Pengair und Zentraldruckerei; verbindliche Auswahl und Fassung der Gesamtausgabe.', publicationHref: '../Zeitungen/zeitung.html?zeitung=kronenspiegel-mathragon' },
+    { name: 'Gwynthor', kind: 'printing', region: 'Celtigerns Wacht', image: '../Stammbäume/assets/images/regions/gwynthor.png', description: 'Prüft große Entwicklungen der Grafschaft und übermittelt sie nach Mathragon; druckt die unveränderte Gesamtausgabe.', href: '../Orte/grossstadt.html?id=gwynthor', publicationHref: '../Zeitungen/zeitung.html?zeitung=kronenspiegel-gwynthor' },
+    { name: 'Abergwint', kind: 'printing', region: 'Gwendolyns Ufer', description: 'Bündelt Nachrichten von Küste, Flotte und Seehandel für Mathragon.', href: '../Orte/grossstadt.html?id=abergwint', publicationHref: '../Zeitungen/zeitung.html?zeitung=kronenspiegel-abergwint' },
+    { name: 'Castellbryn', kind: 'printing', region: 'Rhonwens Tränen', description: 'Beobachtet politische, rechtliche und wirtschaftliche Entwicklungen der Herrschaft.', href: '../Orte/grossstadt.html?id=castellbryn', publicationHref: '../Zeitungen/zeitung.html?zeitung=kronenspiegel-castellbryn' },
+    { name: 'Rhosmere', kind: 'printing', region: 'Arthus Streben', description: 'Leitet große Meldungen zu Handel, Verkehrswegen und regionaler Versorgung an die Zentrale weiter.', href: '../Orte/grossstadt.html?id=rhosmere', publicationHref: '../Zeitungen/zeitung.html?zeitung=kronenspiegel-rhosmere' }
+  ],
+  work: [
+    '<strong>Zuerst die Bedeutung, dann die Überschrift</strong>',
+    'Ein Brief aus einer Grafschaft berichtet von einem Streit um Zölle. Für die Hauptredaktion beginnt damit eine Reihe von Fragen: Betrifft er einen einzelnen Händler oder einen ganzen Verkehrsweg? Bleiben Waren liegen? Welche Entscheidung ist belegt, welche nur angekündigt? Erst der Zusammenhang macht aus der Meldung einen Beitrag für ganz Cenyr.',
+    'Die <strong>Themenleitungen</strong> ordnen den Stoff. Politik, Wirtschaft, Adel, Recht, Ausland und Regionen bringen unterschiedliche Kenntnisse ein. Die Quellenprüfung achtet darauf, dass eine entschiedene Formulierung nicht weiter reicht als ihre Belege. Ein Bericht kann dadurch kürzer werden – oder eine zweite Recherche nötig machen.',
+    '<strong>Die verbindliche Fassung</strong>',
+    'Nach der redaktionellen Abwägung entsteht eine freigegebene Vorlage. Überschriften, Text und Berichtigungen gehören zusammen. Die Druckhäuser erhalten diese Fassung und vervielfältigen sie unverändert. Ein örtlicher Nachtrag mag verlockend sein, würde aber das Versprechen brechen, überall dieselbe Ausgabe zu liefern.',
+    '<strong>Das Handwerk lernen</strong>',
+    'Angehende Schreiber üben genaue Abschrift, den Vergleich widersprüchlicher Briefe und knappe Zusammenfassungen. Wer eine Quelle zitiert, muss sie wiederfinden können. Wer eine Entscheidung einordnet, muss ihre Folgen erklären. Der prüfende Blick zählt ebenso viel wie eine elegante Feder.',
+    'Der Meister des Zentraldrucks achtet auf lesbare, übereinstimmende Bögen. Boten tragen Vorlagen und Meldungen über die Wege des Königreichs. Die drei festen Erscheinungstermine geben dieser Arbeit ihren Takt, doch eine verspätete Wahrheit ist dem Anspruch des Blattes näher als eine pünktliche Erfindung.',
+    '<strong>Aufträge für verlässliche Reisende</strong>',
+    'Gesucht werden belastbare Berichte aus schwer erreichbaren Gegenden, sichere Übergaben versiegelter Vorlagen und Zeugen für Vorgänge von größerer Tragweite. Auch der Vergleich zweier scheinbar gleicher Druckfassungen kann zum Ausgangspunkt einer Untersuchung werden.'
+  ]
+});

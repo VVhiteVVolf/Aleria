@@ -1,0 +1,178 @@
+{
+  "id": "leidling",
+  "name": "Leidling",
+  "classification": "Geisterhafter Sammler und niederer Diener Lunaras",
+  "continent": "Infernale Sphären",
+  "region": "Der Leidschleier",
+  "folio": "IV / 01-B",
+  "parentGroupId": "kobolde",
+  "summary": "Leidlinge sind bleiche, gebrechlich wirkende Sammler Lunaras. Sie folgen Trauer, Tränen und Seelenklagen durch die stillen Weiten des Leidschleiers, nehmen das gefundene Leid in sich auf und verstärken durch ihre bloße Nähe die Melancholie der Lebenden.",
+  "quote": "Er hob keine Hand gegen uns; dennoch trug jeder von uns beim Fortgehen eine fremde Trauer im Herzen.",
+  "quoteAttribution": "Randnotiz eines namenlosen Leidschleier-Reisenden",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Leidling"
+    },
+    {
+      "label": "Typ",
+      "value": "Geisterhafter Sammler und niederer Diener Lunaras"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus der Essenz von Trauer, Verlust und Klagen geschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Der Leidschleier, Lunaras Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Stille Ebenen, leere Täler und verlassene Bereiche des Leidschleiers"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Rastlos, schweigsam und ohne erkennbare Kampfabsicht"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zeitlos; nicht an Tag oder Nacht gebunden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Leid erspüren, Seelenklagen sammeln und Melancholie verstärken"
+    },
+    {
+      "label": "Stärken",
+      "value": "Für viele Lebewesen unsichtbar und gegen gewöhnliche Angriffe körperlos"
+    },
+    {
+      "label": "Schwächen",
+      "value": "An vorhandene Trauer gebunden und im direkten Kampf wehrlos"
+    },
+    {
+      "label": "Beute",
+      "value": "Keine materielle Beute; gesammelt werden Klagen, Tränen und Emotionen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Leidresonanz",
+      "Körperlosigkeit",
+      "Melancholieaura",
+      "Klagesammlung",
+      "Kampfvermögen",
+      "Trauerbindung"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      10,
+      1,
+      10
+    ],
+    "source": "Aus der Bindung an den Leidschleier, der körperlosen Natur, der Wirkung auf Gefühle und dem fehlenden Kampftrieb abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Leidling überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie für die Kreatur selbst eine Bindung oder Schwäche bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lunaras kleine Diener wirken weniger wie befehlsempfangende Knechte als wie Wesen, die vom Leid selbst geführt werden. Ihre einzige erkennbare Bestimmung ist das Sammeln von Tränen, Klagen und den emotionalen Resten eines Verlustes."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aschfahle Haut, dünne zitternde Finger und abgenutzte Trauergewänder bestimmen ihre Gestalt. Jede Bewegung erscheint mühsam und geisterhaft, als trüge der kleine Körper das Gewicht aller Gefühle, die er bereits aufgenommen hat."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leidlinge meiden Lärm und Konflikt. Sie nähern sich Trauernden schweigend, beobachten sie ohne erkennbare Bosheit und ziehen weiter, sobald die Klage verklungen ist. Ihre Anwesenheit macht vorhandenen Schmerz jedoch schwerer und unmittelbarer."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie bewegen sich durch silbern schimmernde Ebenen, leere Täler und stille waldartige Landschaften des Leidschleiers. Orte, an denen vergangene Stimmen besonders deutlich nachhallen, ziehen sie stärker an als jede feste Behausung."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leidlinge spüren emotionale Wunden, sammeln Seelenklagen und tragen sie wie unsichtbare Gefäße fort. Gewöhnliche Waffen finden an ihrer körperlosen Gestalt kaum Halt; zugleich besitzen sie keine überlieferte Angriffsweise."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Begegnung verlangt Ruhe, keine Gewalt. Wer die eigene Fassung bewahrt und den Ort verlässt, entzieht dem Leidling meist die stärkste Resonanz. Bannungen gegen geisterhafte Wesen können Abstand schaffen, doch ein grundloser Angriff verstärkt oft nur die umgebende Verzweiflung."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Leidlinge wenden den Kopf häufig schon vor einem hörbaren Schluchzen in dessen Richtung.",
+            "In ihrer Nähe werden alte Erinnerungen klarer, aber selten tröstlicher.",
+            "Kein gesicherter Bericht beschreibt einen Leidling, der materielle Beute getragen hätte."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/kobold-profiles/leidling-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Leidling in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/kobold-profiles/leidling-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Leidling",
+    "caption": "Überlieferte Bildtafel · Leidling in seiner typischen Umgebung"
+  },
+  "plates": []
+}

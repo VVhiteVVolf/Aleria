@@ -19,16 +19,16 @@ Das Kampfsystem bildet diese kombinierten Kosten direkt ab. Weitere Aura-Fokuspu
 | Klasse | Attackenslots | Drachentanz | Feste Eigenheit |
 | --- | --- | --- | --- |
 | Teulu | 24 | Zehn Grund-, zwei Vertiefungs- und zwölf Expertenslots | Ab Stufe 6: +2 Schaden mit Schwert-Drachentanz-Angriffen |
-| Uchelwyr | 16 | Schwert, Cantref-Lanzenauswahl und exklusiver Satteldrachenpfad | Berittene Attacken verlangen den Status „beritten“ |
-| Cantref | 14 | Lanze, Partisane, Dreizack und Hellebarde verwenden dieselben Stangenwaffenattacken | Waffenschaden und Waffeneffekt werden zur Laufzeit aufgelöst |
-| Helwyr | 12 | Langbogen, Kurzbogen, beidhändige Klingen oder eine kleine klassische Schwertauswahl | Genau halbes Teulu-Budget und +2 Treffer mit Fernkampfangriffen |
+| Uchelwyr | 16 | Speerdrache, peitschender und hütender Drache; zusätzlich stürmender und schweifender Drache | Berittene Attacken verlangen den Status „beritten“ |
+| Cantref | 14 | Speerdrache, peitschender und hütender Drache; gemeinsame Speerlehre mit Uchelwyr | Waffenschaden und Waffeneffekt werden zur Laufzeit aufgelöst |
+| Helwyr | 12 | Sieben Teulu-Pfade; zusätzlich lauernder und jagender Drache | Genau halbes Teulu-Budget und +2 Treffer mit Fernkampfangriffen |
 | Arthwyr | 14 | Großschwert; alternativ Axt, Keule oder Streitaxt | −2 Treffer, +2 Schaden und ein früher Brüllender-Slot auf Stufe 6 |
 | Barddwyr | 8 | Reduzierter Schwertzweig oder Rapier; Trällernder Drache 7–8 und Kreischender Drache 9–20 | Rapier-Krits auf 19–20; waffenfremde Pfade gesperrt |
 | Milwr | 9 | Vier Jungdrachen- und fünf Drachling-Slots | Drachling als flexibler Söldnerpfad von Stufe 6–15 |
 
 Arthwyr erhalten bereits auf Stufe 6 einen zusätzlichen Slot für eine Attacke des Brüllenden Drachen. Der normale Zugang zu diesem Expertenpfad beginnt für andere berechtigte Klassen weiterhin auf Stufe 9.
 
-Der neue Schwertdrache ist ein reiner Duellpfad mit zwölf Einzelzieltechniken. Für Cantref und Uchelwyr wird derselbe kanonische Pfad als **Tanz des Speerdrachens** angezeigt. Der Aufsteigende Drache ist ein Unterpfad des Fliegenden Drachen und kann erst nach diesem gewählt werden. Der Zwillingsdrache verlangt zwei gleichzeitig geführte Klingen. Satteldrache, Lanzendrache und Bogendrache sind exklusiv für Uchelwyr, Cantref und Helwyr; bei anderen Klassen erscheinen sie gesperrt.
+Der Schwertdrache ist ein Duellpfad. Der **Speerdrache** besitzt eine eigene kanonische ID und steht bei Cantref und Uchelwyr an erster Stelle ihrer Expertenformen: Er folgt der Schwertdrachenlehre, verbindet sie mit albischen Einflüssen und setzt auf flüssige, stetige Bewegung. Beide Klassen teilen außerdem den offensiven **peitschenden** und den defensiven **hütenden Drachen**. Uchelwyr ergänzen den **stürmenden** und **schweifenden Drachen**. Helwyr behalten alle sieben Teulu-Pfade und erhalten **lauernden** und **jagenden Drachen**. Arthwyr ergänzen dieselben Teulu-Pfade um ihre einzige eigene Form, die **Bärenklaue**. Barddwyr behalten ausschließlich Jungdrache, Schwertdrache, trällernden und kreischenden Drachen. Der Aufsteigende Drache setzt weiterhin den Fliegenden Drachen voraus; der Zwillingsdrache verlangt zwei geführte Klingen. Die alten Sattel-, Lanzen- und Bogendrachenpfade werden in bestehenden Ausbildungen auf ihre Nachfolger umgestellt und nicht mehr als eigenständige Pfade angeboten.
 
 Jeder Pfad besitzt gestaffelte passive Eigenschaften. Sie werden zur Laufzeit aus Pfadwahl, Stufe, Waffe und Kampfsituation ermittelt. Dazu gehören der auf einen einzelnen Gegner beschränkte Ehrenzweikampf, die Schutzstellung des Abwartenden Drachen, das offensive Tempo des Fliegenden Drachen, Wucht und Schildtechniken des Brüllenden Drachen sowie der erweiterte Kritbereich des Aufsteigenden Drachen.
 
@@ -49,7 +49,7 @@ Barddwyr wählen auf Stufe 7 Schwert oder Rapier als Hauptzweig. Beide Zweige gl
 
 ## Attackenkatalog und ausführbare Regeln
 
-Der vollständige [Cenyr-Attackenkatalog](./CENYR_ATTACK_CATALOG.md) umfasst 249 konkrete Angriffe mit Stufe, Waffenprofil, Schadensmodell, Kosten und Wirkung. Die Klassenbögen zeigen den jeweiligen Auswahlpool: Teulu 95, Uchelwyr 112, Cantref 87, Helwyr 84, Arthwyr 92, Barddwyr 48 und Milwr 9 Optionen. Die Zahl der erlernbaren Attacken bleibt durch das deutlich kleinere Klassenbudget begrenzt.
+Der vollständige [Cenyr-Attackenkatalog](./CENYR_ATTACK_CATALOG.md) führt die aktuellen Angriffe mit Stufe, Waffenprofil, Schadensmodell, Kosten und Wirkung auf. Seine aus dem Register erzeugten Klassen- und Formtabellen enthalten die aktuellen Poolgrößen. Die Zahl der erlernbaren Attacken bleibt durch das deutlich kleinere Klassenbudget begrenzt.
 
 Die sechs bereits vorhandenen Jungdrachen-Attacken wurden ursprünglich als vollständige Teulu-Schwertfolge beschrieben. Sie bilden den bestätigten Teulu-Auswahlpool auf Stufe 1–6. Alle neuen Angriffe bleiben im zentralen Katalog als prüfbare Entwürfe erfasst. Sobald ein Charakter eine solche Attacke ausdrücklich für einen verdienten Slot auswählt, speichert sein Bogen sie als nutzbare Technik und behält den Katalogstatus getrennt als Herkunftsinformation.
 

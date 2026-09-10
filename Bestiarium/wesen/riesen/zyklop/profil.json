@@ -1,0 +1,199 @@
+{
+  "id": "zyklop",
+  "name": "Zyklop",
+  "classification": "Südländischer Riese · Verfluchter Menschenjäger",
+  "continent": "Tirnara",
+  "region": "Galadorn, Morgorn, Kemtara und abgelegene Inseln",
+  "folio": "III-R / 03",
+  "parentGroupId": "riesen",
+  "summary": "Zyklopen sind deformierte Nachfahren eines albischen Bergstammes Tirnaras, der in einer Hungersnot dem Kannibalismus verfiel. Nicht alle tragen nur ein Auge, doch Missbildungen, ungeheure Kraft und ein scharfer Jagdblick kennzeichnen die sterbende Linie, die Menschen als bevorzugte Beute durch Berge, Wälder und Inselwildnis verfolgt.",
+  "quote": "Zähle beim Zyklopen niemals die Augen; zähle die Wege, auf denen er dich erreichen kann.",
+  "quoteAttribution": "Lehre tirnarischer Wildnisführer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-zyklop.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Zyklop als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/zyklop.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Zyklop in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Zyklop"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Zyklop; Steppenriese"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter albischer Riese"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Göttlicher Fluch nach Hungerkriegen und Kannibalismus"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Berge Tirnaras"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Karge Berge, tiefe Wälder, unzugängliche Ebenen und Inseln"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Menschenfressend, einzelgängerisch, wild und bei Jagd unbarmherzig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Vorwiegend Dämmerung und Nacht, regional verschieden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Felswurf, scharfe Bewegungswahrnehmung, Ausdauerjagd und primitive Fallen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Kolossale Kraft, Zähigkeit, plötzliche Angriffe und Überlebensfähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Körperliche Fehlbildungen, geringe Planung und kaum Gruppenkoordination"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Große Werkzeuge, primitive Hortgegenstände, Zähne und Knochen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Felswurf",
+      "Jagdausdauer",
+      "Scharfsicht",
+      "Raserei",
+      "Fehlbildungslast",
+      "Gruppenfähigkeit"
+    ],
+    "values": [
+      9,
+      9,
+      9,
+      10,
+      8,
+      2
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Zyklop abgeleitet",
+    "intro": "Der Zyklop wird als einzelner Ausdauerjäger bewertet. Eine hohe Fehlbildungslast bezeichnet den starken körperlichen Makel, während geringe Gruppenfähigkeit seine Koordination begrenzt."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Zyklop ist vor allem mit Tirnara verbunden. Das einzelne Auge ist häufig, aber nicht zwingend; deformierte Gliedmaßen und ungewöhnliche Proportionen sind das verlässlichere Merkmal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Menschen gelten als bevorzugte Beute. Kannibalismus unter Artgenossen tritt ebenfalls auf."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Überlieferung beschreibt einen albischen Bergstamm ohne Kenntnis der Agrarkultur. In einer langen Hungersnot kämpften die Angehörigen um Nahrung und begannen schließlich, einander zu fressen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Göttlichen verfluchten ihre Körper und vertrieben sie aus fruchtbaren Gebieten. Kultur und Zahl zerfielen in Galadorn, Morgorn, Kemtara und auf unzugänglichen Inseln."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zyklopen stehen kurz vor dem Aussterben und leben meist allein. Jagd durch Menschen und unwirtliche Lebensräume haben die Linie stark dezimiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Angriff verbinden sie Verzweiflung mit wuchtiger Gewalt. Sie verfolgen Beute hartnäckig, schließen Wege und setzen einfache Fallen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In Morgorn dienen Höhlen und zerklüftete Felsen als Lager; in Galadorn und Kemtara tiefe Wälder oder abgelegene Ebenen. Inselpopulationen leben fern jeder Zivilisation."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Felsbrocken und Hindernisse werden mit Leichtigkeit bewegt. Trotz schwerfälliger Erscheinung erfolgen einzelne Angriffe überraschend schnell."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Jagdblick erkennt Bewegungen in Dunkelheit und Deckung. Geschichten über das Erkennen magischer Spuren oder gegnerischer Schwächen bleiben unbestätigt."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fehlgebildete Gelenke, eingeschränkte Blickwinkel und geringe Gruppenkoordination bieten Ansatzpunkte. Bewegliche Gegner teilen seine Aufmerksamkeit und vermeiden den direkten Kraftvergleich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raserei macht ihn unbarmherzig, aber berechenbar. Ein klarer Fluchtweg darf nicht durch Felswurf abgeschnitten werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein einzelnes Auge ist ein verbreitetes, jedoch kein notwendiges Merkmal.",
+            "Manche Zyklopen erkennen Bewegungen besser als unbewegte, nahe Gegner.",
+            "Inselbewohner halten einzelne alte Exemplare bereits für Landschaftsgeister.",
+            "Der Fluch zeigt sich bei jedem Individuum in anderen körperlichen Fehlbildungen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

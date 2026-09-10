@@ -1,0 +1,334 @@
+{
+  "id": "ogroiden",
+  "name": "Ogroiden",
+  "classification": "Infernale Krieger und grobschlächtige Spiegelbilder der Menschen",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Heere der infernalen Herren",
+  "folio": "IV / 02",
+  "parentGroupId": "infernale-linien",
+  "summary": "Ogroiden, bisweilen Finsteralben genannt, sind massige infernale Krieger und eine brutale Parodie auf die von den Göttlichen geschaffenen Menschen. Meist zweieinhalb bis drei Meter groß, folgen sie hierarchischen Kriegskulturen; Gestalt, Kräfte und Schwächen jeder Linie tragen unverkennbar das Wesen ihres Herren.",
+  "quote": "Ein Ogroide trägt den Krieg nicht nur in der Hand, sondern in seiner Ordnung, seiner Sprache und in jedem Zeichen des Herren, der ihn geformt hat.",
+  "quoteAttribution": "Einordnung aus dem Archiv der infernalen Heere",
+  "icon": {
+    "src": "../../../assets/icons/ogroiden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Aquarelliertes Archivsymbol für Ogroiden"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/uebersicht-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Vollständig sichtbarer Ogroide auf neutralem Grund",
+    "caption": "Überlieferte Bildtafel · Allgemeine ogroide Gestalt"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ogroide; auch Finsteralben"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernaler Krieger"
+    },
+    {
+      "label": "Variationen",
+      "value": "Durch den jeweiligen infernalen Herrn geprägt"
+    },
+    {
+      "label": "Zugehörigkeit",
+      "value": "Diener infernaler Herren wie Dagon, Grimnar, Bhaal und Zatrach"
+    },
+    {
+      "label": "Größe",
+      "value": "Meist 2,5–3 Meter"
+    },
+    {
+      "label": "Kultur",
+      "value": "Kriegerisch, hierarchisch und vom Recht des Stärksten geprägt"
+    },
+    {
+      "label": "Sprache",
+      "value": "Grobe Dialekte, Rituale und kurze Kriegsbefehle"
+    },
+    {
+      "label": "Intellekt",
+      "value": "Gering bis mittel; auf Kampf, Überleben und Herrschaft ausgerichtet"
+    },
+    {
+      "label": "Stärken",
+      "value": "Körperkraft, Nahkampf, Ausdauer und Kriegserfahrung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe taktische Flexibilität und meist schwache Magieresistenz"
+    },
+    {
+      "label": "Beute",
+      "value": "Je nach Linie Waffen, Körperteile oder Spuren infernaler Essenz"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Nahkampfdruck",
+      "Kriegserfahrung",
+      "Hierarchiezwang",
+      "Infernale Prägung",
+      "Magiebegabung",
+      "Taktische Wendigkeit"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      3,
+      4
+    ],
+    "intro": "Die fünf bekannten Linien setzen unterschiedliche Kräfte ein. Diese gemeinsame Bewertung beschreibt die wiederkehrenden Merkmale ogroider Kriegskulturen.",
+    "source": "Aus Körpergröße, Nahkampfweise, hierarchischer Organisation, Bindung an infernale Herren, geringer allgemeiner Magiebegabung und begrenzter taktischer Flexibilität abgeleitet"
+  },
+  "related": {
+    "eyebrow": "Krieger der infernalen Herren",
+    "title": "Bekannte Unterarten",
+    "intro": "Fünf ogroide Linien sind namentlich und bildlich überliefert. Zehn weitere Archivstellen bleiben als ??? offen, bis gesicherte Namen und Berichte vorliegen.",
+    "entries": [
+      {
+        "id": "gorak",
+        "name": "Gorak",
+        "region": "Diener Dagons",
+        "description": "Goraks sind Dagons glühende Vollstrecker: rötliche Ogroiden, deren Adern bei Wut golden aufleuchten und deren Körperhitze bereits eine Berührung zur Waffe macht.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../ogroiden/gorak/index.html",
+        "image": {
+          "src": "../../../assets/ogroid-profiles/gorak-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Gorak"
+        }
+      },
+      {
+        "id": "ognir",
+        "name": "Ognir",
+        "region": "Diener Grimnars",
+        "description": "Ognir sind Grimnars größte sterbliche Schöpfungen und werden im Volksmund Oger genannt.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../ogroiden/ognir/index.html",
+        "image": {
+          "src": "../../../assets/ogroid-profiles/ognir-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Ognir"
+        }
+      },
+      {
+        "id": "grimnak",
+        "name": "Grimnak",
+        "region": "Diener Grimnars",
+        "description": "Grimnaks sind Grimnars bevorzugte Krieger: gehörnte, frostharte Ogroiden mit grober Schmiedekunst und deutlich mehr taktischem Verstand als die kleineren Grimlinge.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../ogroiden/grimnak/index.html",
+        "image": {
+          "src": "../../../assets/ogroid-profiles/grimnak-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Grimnak"
+        }
+      },
+      {
+        "id": "bhalgar",
+        "name": "Bhalgar",
+        "region": "Diener Bhaals",
+        "description": "Bhalgar sind Bhaals dürre, vampirhafte Ogroiden.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../ogroiden/bhalgar/index.html",
+        "image": {
+          "src": "../../../assets/ogroid-profiles/bhalgar-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Bhalgar"
+        }
+      },
+      {
+        "id": "zarok",
+        "name": "Zarok",
+        "region": "Diener Zatrachs",
+        "description": "Zaroks sind Zatrachs mächtigste sterbliche Jäger: massive, geweihtragende Ogroiden mit erdiger Tarnung, scharfem Spürsinn und überraschender Beweglichkeit.",
+        "status": "Dossier öffnen ↗",
+        "href": "../../ogroiden/zarok/index.html",
+        "image": {
+          "src": "../../../assets/ogroid-profiles/zarok-icon.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Vollständig sichtbarer Zarok"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-06",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-07",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-08",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-09",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-10",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ogroiden wurden von den infernalen Herren als grobschlächtige und entmenschlichte Spiegelbilder der Menschen geschaffen. Übermäßige Muskulatur, rüde Gestalt und die Zeichen ihres jeweiligen Schöpfers machen sie zu sichtbaren Trägern infernaler Kriegsmacht."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den Armeen ihrer Herren dienen sie als Vollstrecker, Eroberer, Söldner und Zerstörer. Nur wenige Linien besitzen ausgeprägte Magie; Körperkraft, Kampfkunst und ein Leben in ständiger Gewalt ersetzen diese Begabung."
+        }
+      ]
+    },
+    {
+      "id": "praegung",
+      "title": "Infernale Prägung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jede Linie spiegelt eine andere Herrschaft: Goraks tragen Dagons Hitze, Ognir und Grimnaks Grimnars Frost und Zorn, Bhalgar Bhaals Blutmagie und Zaroks Zatrachs Jagdtrieb. Dadurch unterscheiden sich selbst nah verwandte Ogroiden deutlich in Körperbau, Taktik und Lebensraum."
+        }
+      ]
+    },
+    {
+      "id": "kriegskultur",
+      "title": "Hierarchie & Kriegskultur",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ogroidische Gemeinschaften folgen dem Recht des Stärksten. Mächtige Krieger herrschen über Clans und schwächere Diener, während Rang in Kämpfen, Jagden oder grausamen Ritualen bewiesen wird. Diese Ordnung erzeugt Disziplin, bleibt jedoch anfällig für Rivalität und den Verlust eines Anführers."
+        }
+      ]
+    },
+    {
+      "id": "lebensraeume",
+      "title": "Lebensräume",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Linien suchen Gebiete, die den Domänen ihrer Herren ähneln: Goraks Hitze und Kriegsruinen, Grimnars Ogroiden Frost und Gebirge, Bhalgar verborgene Ruinen und Sümpfe sowie Zaroks dichte Wildnis. Der Lebensraum ist deshalb stets ein Hinweis auf Fähigkeiten und Schwächen der dort auftretenden Ogroiden."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein offener Nahkampf spielt Größe, Reichweite und Ausdauer der Ogroiden aus. Beweglichkeit, Fernkampf, Fallen und eine zur jeweiligen Linie passende Magie sind verlässlicher; besonders wichtig bleibt, Kampfplatz und Anführer zu kontrollieren, bevor eine Schlachtreihe geschlossen vorrückt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gemeinsame Regeln ersetzen keine Artenkenntnis. Feuer bedroht Grimnars frostgeprägte Linien, während es einen Gorak stärkt oder unberührt lässt. Bhalgar verlangen Licht und göttliche Kräfte, Zaroks wiederum verlieren ihren größten Vorteil, wenn Spuren und Gelände gegen sie arbeiten."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Hautfarbe, Hörner und Körperbau verraten meist zuverlässiger als Waffen, welchem infernalen Herrn eine Linie dient.",
+            "Ogroidische Rüstungen wirken grob, sind jedoch auf große Kraft und einfache Reparatur ausgelegt.",
+            "Der Verlust eines Anführers kann eine Einheit brechen oder unmittelbar einen noch gewaltsameren Rangkampf auslösen.",
+            "Die Bezeichnung Finsteralben wird in alten Archiven als Sammelbegriff für Ogroiden verwendet."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

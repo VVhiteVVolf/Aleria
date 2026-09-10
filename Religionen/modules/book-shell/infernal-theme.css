@@ -1,0 +1,10 @@
+.religion-page[data-theme="infernal"] {
+  --faith-green: #633a31;
+  --faith-gold: #976c36;
+  --faith-muted: #70614f;
+  --faith-line: #cdb790;
+}
+.religion-page[data-theme="infernal"] .site-header { background: #382b2a; }
+.religion-page[data-theme="infernal"] .pantheon-cover figure { background: radial-gradient(ellipse at center, #c6905525, #6d29220b 70%); }
+.religion-page[data-theme="infernal"] .faith-card { border-top: 2px solid #a9714c; }
+.religion-page[data-theme="infernal"] .profile-art { box-shadow: 0 16px 40px #5e30261a; }

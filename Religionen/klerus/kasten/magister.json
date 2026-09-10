@@ -1,0 +1,18 @@
+{
+  "id": "magister", "title": "Magister", "number": "V", "motto": "Den Glauben verstehen",
+  "summary": "Gelehrte, Lehrende und Wissenshüter in Schulen und Universitäten.",
+  "paragraphs": ["Magister erforschen Geschichte, Theologie, Recht und die Geheimnisse der Schöpfung. Sie bewahren Wissen, prüfen Überlieferungen und unterrichten kommende Generationen. Ihre Arbeit steht im Dienst des Verstehens und folgt vor allem akademischen und schulischen Formen.", "Ihre Ordnung unterscheidet Bildungsabschlüsse, Lehrbefähigung und Leitungsämter. An kirchlichen Hochschulen lernen auch Menschen außerhalb des Klerus. Die Bezeichnung Magister als akademischer Grad allein macht einen Menschen ebenso wenig zum Geistlichen wie eine Immatrikulation."],
+  "art": null,
+  "hierarchy": {
+    "title": "Die akademische Laufbahn", "note": "Abschlüsse und Ämter sind keine Weihegrade. Dekan und Rektor sind Leitungsaufgaben, die einem befähigten Lehrenden übertragen werden; Forschung und Lehre bleiben auch ohne diese Ämter vollwertige Wege.",
+    "ranks": [
+      {"title":"Lernender / Studierender", "duty":"Besucht Unterricht und erwirbt Grundlagen; kann ausdrücklich außerhalb des Klerus stehen."},
+      {"title":"Bakkalar", "duty":"Hat die Grundlagenprüfung bestanden und vertieft ein Fachgebiet."},
+      {"title":"Magister", "duty":"Verfügt über einen höheren Abschluss und lehrt oder forscht selbstständig."},
+      {"title":"Dozent / Dozentin", "duty":"Trägt einen regelmäßigen Lehrauftrag und betreut Lernende."},
+      {"title":"Lehrstuhlinhaber / Lehrstuhlinhaberin", "duty":"Verantwortet ein Fachgebiet und dessen wissenschaftliche Arbeit."},
+      {"title":"Dekan / Dekanin", "duty":"Leitet eine Fakultät und koordiniert ihre Lehrenden."},
+      {"title":"Rektor / Rektorin", "duty":"Verantwortet die Hochschule als akademische Einrichtung."}
+    ]
+  }
+}

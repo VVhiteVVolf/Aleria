@@ -1,0 +1,106 @@
+{
+  "godId": "orin",
+  "intro": "Orins Klerus sucht Weisheit, Wahrheit und Erkenntnis. Seine Häuser bewahren Wissen und öffnen Wege zum Lernen. Gelehrte Forschung prägt den Glauben des Mentors, während Seelsorge, klösterliche Arbeit und Schutz diesen Auftrag tragen.",
+  "community": "Bibliothek und Lehrhaus stehen oft im Mittelpunkt. Magister lehren, Mönche und Nonnen erhalten Bücher und Räume, und Priester begleiten die geistliche Gemeinschaft. Eine kleine Wache schützt Menschen und Sammlungen. Nur ausnahmsweise lebt hier ein asketischer Gelehrter oder unterweist eine solche Lehrperson die Gemeinschaft.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des wahrhaftigen Suchens",
+      "paragraphs": [
+        "Orins Priester lehren Demut vor dem noch Unverstandenen und den aufrichtigen Umgang mit Erkenntnis. Sie begleiten Lehrende und Lernende in Gewissensfragen. Ein Priester muss nicht jedes Wissensgebiet beherrschen; sein geistlicher Auftrag liegt darin, Wahrheitssuche und Verantwortung im Handeln zusammenzuhalten."
+      ],
+      "tasks": [
+        "Lernende und Lehrende geistlich begleiten",
+        "Aufrichtigen Umgang mit Wissen lehren",
+        "Missbrauch vermeintlicher Gewissheit hinterfragen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der bewahrten Schrift",
+      "paragraphs": [
+        "Mönche und Nonnen des Mentors bewahren den materiellen Bestand der Gelehrsamkeit. Ihre Zünfte kopieren, binden und ordnen Bücher, halten Schreibstuben bereit und unterstützen den Unterricht. Die sorgfältige Überlieferung eines fremden Gedankens ist ein eigener Dienst, auch wenn seine wissenschaftliche Bewertung anderen obliegt."
+      ],
+      "tasks": [
+        "Bücher und Handschriften erhalten",
+        "Schreibstuben und Lesesäle führen",
+        "Überlieferungen auffindbar ordnen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Abschreiber",
+          "work": "Fertigt sorgfältige Kopien und bewahrt die Lesbarkeit alter Handschriften."
+        },
+        {
+          "name": "Zunft der Buchbinder",
+          "work": "Erhält Einbände, Schreibmaterial und die handwerkliche Ausstattung der Bibliothek."
+        },
+        {
+          "name": "Zunft der Registerhüter",
+          "work": "Ordnet Bestände und hält Bücher, Abschriften und Ausleihen auffindbar."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter der behüteten Erkenntnis",
+      "paragraphs": [
+        "Orins Paladine schützen Lehrhäuser, Sammlungen und gefährdete Gelehrte. Sie begleiten Transporte seltener Schriften und sichern Orte, an denen riskante Untersuchungen stattfinden. Ihre Aufgabe besteht im Schutz der Menschen und des anvertrauten Wissens; geistliche oder akademische Streitfragen entscheiden sie nicht mit der Waffe."
+      ],
+      "tasks": [
+        "Lehrhäuser und Bibliotheken bewachen",
+        "Gelehrte und Schrifttransporte begleiten",
+        "Bei Untersuchungen den äußeren Schutz tragen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Weg der gesammelten Aufmerksamkeit",
+      "paragraphs": [
+        "Einzelne Anhänger des Mentors vertiefen Konzentration und Erinnerungsvermögen durch einen asketischen Lebenswandel. Geregelte Bewegung und Stille können ihnen helfen, die Grenzen ihrer Aufmerksamkeit zu erkennen. Solche Wege sind selten und werden persönlich oder an einer verbundenen Schule verfolgt. Orins Lehrhäuser bilden deshalb keinen regelmäßigen eigenen Asketenzweig."
+      ],
+      "tasks": [
+        "Konzentration und besonnene Reaktion üben",
+        "Abgeschiedene Studienorte schützen",
+        "Lernenden geregelte Sammlung vermitteln"
+      ]
+    },
+    "magister": {
+      "presence": "fest",
+      "title": "Das gelehrte Herz des Mentors",
+      "paragraphs": [
+        "Orins Magister prägen Universitäten, Lehrhäuser und Forschungszirkel. Ihr Bereich umfasst Grundlagen, Naturkunde, Sprache, Geschichte, Recht und die Erforschung der Gesellschaft. Behauptungen sollen nachvollziehbar geprüft und Irrtümer berichtigt werden. Sie arbeiten mit Aurons angewandter Forschung und Oriths Untersuchung magischer Zusammenhänge zusammen. Ihre Lehre steht weltlichen Lernenden offen; ein Lehrstuhl begründet kein priesterliches Amt."
+      ],
+      "tasks": [
+        "Wissenschaftliche Lehre und Forschung tragen",
+        "Quellen und Behauptungen vergleichen",
+        "Lernende zu eigenständiger Erkenntnis führen"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Die Rückkehr zur Wahrhaftigkeit",
+      "paragraphs": [
+        "Bußgänger dienen in der Versorgung der Lehrhäuser und bei geeigneten Erhaltungsarbeiten. Nach Täuschung oder absichtlicher Verfälschung kann zur Wiedergutmachung gehören, betroffene Zeugnisse unter Aufsicht richtigzustellen. Vertrauliche Sammlungen werden nicht allein wegen eines abgelegten Eides zur freien Verfügung überlassen."
+      ],
+      "tasks": [
+        "Lesesäle und Unterkunft versorgen",
+        "Geeignete Erhaltungsdienste leisten",
+        "Vereinbarte Richtigstellungen unterstützen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "magister": {
+      "src": "Religionen/klerus/assets/magister-orin.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

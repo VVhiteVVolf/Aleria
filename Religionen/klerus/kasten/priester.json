@@ -1,0 +1,25 @@
+{
+  "id": "priester", "title": "Priester", "number": "I", "motto": "Den Glauben lehren",
+  "summary": "Hirten der Gläubigen und öffentliches Gesicht der Kirche.",
+  "paragraphs": ["Priester verkünden die Lehren der Neun Göttlichen, führen religiöse Zeremonien durch und begleiten die Menschen von der Geburt bis zum Tod. Sie sind Ansprechpartner für Seelsorge, Segnungen, Gelübde und die Fragen des gemeinschaftlichen Glaubens.", "Ihre Hierarchie trägt die oberste geistliche Ordnung. Hohe Ämter leiten Gemeinden, Bistümer und Landeskirchen; an der Spitze steht der Hierarch. Eine priesterliche Weihe und ein Leitungsamt sind eigene Befugnisse, die mit einer anderen Lebensform verbunden sein können."],
+  "art": {"pattern": "BilderRüstungen/{godId}_priest.png", "placeholder": false},
+  "hierarchy": {
+    "title": "Die geistliche Leitung", "note": "Die vierzehn Stufen umfassen Ausbildung, Weihe, Leitung und geistliche Stellung. Laie, Oblat und Novize sind Vorstufen. Das Bischofsamt ist optional; ein Bischof kann zugleich Patriarch sein. Ein Erzbischof besitzt mindestens patriarchale, gegebenenfalls erzpatriarchale Stellung. Diese Titel können sich in einer Person verbinden. Ein Prälat dient in einem hohen Amt ohne eigene örtliche Zuständigkeit. Erzpatriarchen können sowohl Länder als auch große Orden vertreten.",
+    "ranks": [
+      {"title":"Laie", "duty":"Lebt im Glauben, ohne ein geistliches Amt zu bekleiden."},
+      {"title":"Oblat", "duty":"Bindet sich zunächst an ein kirchliches Haus und erprobt den Dienst."},
+      {"title":"Novize", "duty":"Erlernt Liturgie, Lehre und gemeinschaftliche Pflichten."},
+      {"title":"Adept", "duty":"Vertieft die Ausbildung und übernimmt angeleitete Aufgaben."},
+      {"title":"Kurator", "duty":"Unterstützt Liturgie, Fürsorge und Gemeindedienst."},
+      {"title":"Priester / Priesterin", "duty":"Trägt die Weihe und betreut die Gläubigen; Pfarrer bezeichnet das Gemeindeamt."},
+      {"title":"Diakon / Diakonin · Pastor", "duty":"Leitet eine Ortskirche und trägt die Verantwortung für deren geistliches Leben."},
+      {"title":"Vikar / Vikarin", "duty":"Leitet eine größere Gemeinde, etwa eine kleinere Stadt mit ihrem Bannkreis. Ihm oder ihr unterstehen zahlreiche Diakone."},
+      {"title":"Prälat / Prälatin", "duty":"Steht über dem Vikar und dient einem Bischof oder Patriarchen in hohen geistlichen Aufgaben. Der Rang ist nicht an einen eigenen Standort gebunden."},
+      {"title":"Bischof / Bischöfin", "duty":"Optionales hohes geistliches Amt mit einer Stellung gleich einem Baron. Ein Bischof kann zugleich Patriarch sein."},
+      {"title":"Erzbischof / Erzbischöfin", "duty":"Koordiniert mehrere Bistümer einer Provinz und steht einem Grafen oder auch Fürsten gleich. Besitzt mindestens patriarchale, gegebenenfalls erzpatriarchale Stellung."},
+      {"title":"Patriarch / Matriarchin", "duty":"Oberster Geistlicher innerhalb einer feudalen Struktur, etwa einer Grafschaft oder Baronie. Diese Stellung kann mit einem Bischofsamt verbunden sein."},
+      {"title":"Erzpatriarch / Erzmatriarchin", "duty":"Geistliches Oberhaupt eines Landes, etwa Cenyr oder Aldrimar. Auch ein großer Orden kann innerhalb der priesterlichen Ordnung einen Erzpatriarchen stellen; der Titel setzt keine Landeszugehörigkeit voraus."},
+      {"title":"Hierarch", "duty":"Oberhaupt der Alerischen Kirche und höchste Instanz ihrer geistlichen Ordnung."}
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 import { getAldrimarClassDefinition } from './aldrimar-class-registry.js';
 import { createCultureDraftProgression } from '../culture-draft-progression.js';
 import { getHuskarlForms } from '../../combat-styles/huskarl/huskarl-forms.js';
-import { getHuskarlBasicTechniques } from '../../combat-styles/huskarl/huskarl-basic-techniques.js';
-import { getHuskarlExpertTechniques } from '../../combat-styles/huskarl/huskarl-expert-techniques.js';
+import { getHuskarlBasicTechniques } from '../../combat-styles/huskarl/huskarl-basic-techniques.js?v=20260909-dragon-parent-v2';
+import { getHuskarlExpertTechniques } from '../../combat-styles/huskarl/huskarl-expert-techniques.js?v=20260909-dragon-parent-v2';
 import { getSkjaldrBerserkProgression, getSkjaldrBerserkTiers } from './skjaldr-berserk-progression.js';
 import { SKALD_FREYA_REFERENCE } from './skald-freya-reference.js';
 

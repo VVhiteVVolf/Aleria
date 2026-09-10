@@ -1,0 +1,27 @@
+/* Embedded threads respond to their column width, including desktop sidebars. */
+.module-embedded-comments {
+  container: embedded-comments / inline-size;
+}
+
+.module-embedded-comments-head {
+  flex-wrap: wrap;
+}
+
+@container embedded-comments (max-width: 600px) {
+  .module-embedded-comments .comment-quick-tools,
+  .module-embedded-comments .comments-form-bar {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .module-embedded-comments .comment-jump-search,
+  .module-embedded-comments .comments-form-hint {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .module-embedded-comments .comment-jump-status {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+}

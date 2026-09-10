@@ -1,0 +1,107 @@
+{
+  "godId": "baldran",
+  "intro": "Unter Baldran werden Ehre, Mut und Pflicht zu einer gemeinsamen Lebensordnung. Sein Klerus begleitet die Kämpfenden, bewahrt ihre Erinnerung und schützt jene, die sich auf ein gegebenes Wort verlassen. Der ritterliche Zweig prägt viele seiner Häuser.",
+  "community": "Ein Heiligtum des Streiters kann eng mit einem Ritterorden verbunden sein. Priester und klösterliche Gemeinschaften tragen Seelsorge und Versorgung; Paladine bilden den wehrhaften Kern. Asketische Schulen ergänzen die Ausbildung, während gelehrte Beratung oft von benachbarten Lehrhäusern kommt.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester des ehrenhaften Streits",
+      "paragraphs": [
+        "Baldrans Priester begleiten Eide, erinnern an gefallene Gefährten und sprechen über die Pflichten des Streiters. Sie helfen, Mut von Übermut und Treue von blindem Ehrgeiz zu unterscheiden. Vor und nach einem Feldzug tragen sie die Seelsorge für Menschen, deren Entscheidungen schwere Folgen hatten."
+      ],
+      "tasks": [
+        "Ritterliche Gelübde begleiten",
+        "Gefallener gedenken",
+        "Über Pflicht und Ehrenhaftigkeit unterweisen"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente des bewahrten Eides",
+      "paragraphs": [
+        "Mönche und Nonnen bewahren die Namen der Gefallenen, pflegen die Ausrüstung des Hauses und versorgen Gäste. Ihre Zünfte erhalten auch Zeugnisse beschämender Niederlagen. Erinnerung soll die Gemeinschaft lehren; sie darf nicht nur die Siege der Mächtigen schmücken."
+      ],
+      "tasks": [
+        "Totenlisten und Feldchroniken führen",
+        "Kleidung und Ausrüstung erhalten",
+        "Verwundete und Heimkehrende aufnehmen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Feldchronisten",
+          "work": "Bewahrt Totenlisten, Berichte und die Erinnerung an gegebene Eide."
+        },
+        {
+          "name": "Zunft der Zeugbewahrer",
+          "work": "Erhält klösterliche Werkstätten, Kleidung und anvertraute Ausrüstung."
+        },
+        {
+          "name": "Zunft der Herbergshüter",
+          "work": "Versorgt Heimkehrende, verwundete Gäste und reisende Gefährten des Hauses."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Die geweihten Streiter",
+      "paragraphs": [
+        "Baldrans Paladine leben den ritterlichen Schutzauftrag besonders unmittelbar. Sie üben Waffenführung, Standhaftigkeit und Verantwortung für ihre Gefährten. Ein gegebener Schutz darf nicht aus Bequemlichkeit aufgegeben werden; zugleich soll Mut nicht mit der Verschwendung fremden Lebens verwechselt werden."
+      ],
+      "tasks": [
+        "Schutzaufträge und Wachdienste tragen",
+        "Ritter und Knappen ausbilden",
+        "Gefährten in geordnetem Zusammenwirken führen"
+      ]
+    },
+    "asketen": {
+      "presence": "fest",
+      "title": "Schulen des beherrschten Mutes",
+      "paragraphs": [
+        "Die Asketen des Streiters formen Ausdauer und Körperbeherrschung zu einer wehrhaften Disziplin. Übungen unter Belastung sollen Furcht und unbedachten Zorn erkennbar machen. Ihre Lehrmeister verlangen kontrolliertes Handeln, damit die erlernte Stärke auch dann zuverlässig bleibt, wenn Stolz oder Kränkung das Urteil trüben."
+      ],
+      "tasks": [
+        "Standhaftigkeit und kontrollierte Bewegung schulen",
+        "Das Heiligtum gemeinsam verteidigen",
+        "Mut ohne unnötige Selbstgefährdung einüben"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Baldran verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Die Wiedergewinnung des Vertrauens",
+      "paragraphs": [
+        "Ein Bußgang im Haus des Streiters kann die Folgen von Treuebruch, Feigheit oder einem ehrlosen Sieg aufnehmen. Die Büßenden tragen vereinbarte Versorgungs- und Wiederherstellungsdienste. Ihr Schweigen soll Raum für Besinnung geben; der Bußgang ist kein Befehl zu einem aussichtslosen Todeskampf."
+      ],
+      "tasks": [
+        "Hinterbliebene und Heimkehrende unterstützen",
+        "Beschädigte Unterkünfte wiederherstellen",
+        "Verlässlichkeit in unscheinbaren Diensten beweisen"
+      ]
+    }
+  },
+  "imageOverrides": {
+    "asketen": {
+      "src": "Religionen/klerus/assets/asketen-baldran.png",
+      "placeholder": false
+    }
+  },
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

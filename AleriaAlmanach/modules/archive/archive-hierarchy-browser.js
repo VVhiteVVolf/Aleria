@@ -93,7 +93,8 @@ function initializeArchiveHierarchyExpansion(model, selectedPath = []) {
     const firstChild = model?.root?.children?.[0];
     if (firstChild) _expandedArchiveHierarchyNodes.add(getArchiveHierarchyNodeKey(model.tab, firstChild.path));
   }
-  expandArchiveHierarchyPath(model?.tab, selectedPath);
+  // Keep ancestors visible, but respect an explicitly collapsed selected folder.
+  expandArchiveHierarchyPath(model?.tab, selectedPath.slice(0, -1));
 }
 
 function toggleArchiveHierarchyNode(tab, path = []) {
@@ -140,17 +141,13 @@ function renderArchiveHierarchyRowIcon(node, className = 'archive-hierarchy-row-
 function renderArchiveHierarchyEntry(entry) {
   const image = getArchiveEntryPreviewImage(entry);
   const pageCount = getArchiveEntryPageCount(entry);
-  const dialogLabel = getArchiveEntryCommentLabel(entry);
   return `
     <button class="archive-hierarchy-entry" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry?.id || '')}">
       ${image
         ? `<span class="archive-hierarchy-entry-icon"><img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async"></span>`
         : `<span class="archive-hierarchy-entry-icon archive-hierarchy-entry-mark" aria-hidden="true">${escapeHtml(entry?.icon || '✦')}</span>`}
       <span class="archive-hierarchy-entry-title">${escapeHtml(entry?.title || 'Unbenanntes Modul')}</span>
-      <span class="archive-hierarchy-entry-meta">
-        ${pageCount ? `<span>Seiten: ${pageCount}</span>` : ''}
-        <span>${escapeHtml(dialogLabel)}</span>
-      </span>
+      <span class="archive-hierarchy-entry-meta">${pageCount} S.</span>
     </button>`;
 }
 
@@ -169,7 +166,7 @@ function renderArchiveHierarchyNode(node, model, selectedPath = []) {
         <button class="archive-hierarchy-select" type="button" data-archive-action="select-hierarchy-node" data-section-path="${escapeHtml(encodeArchivePathData(node.path))}"${selected ? ' aria-current="true"' : ''}>
           ${renderArchiveHierarchyRowIcon(node)}
           <span class="archive-hierarchy-row-title">${escapeHtml(node.label)}</span>
-          <span class="archive-hierarchy-row-meta">${stats.moduleCount} Module${stats.childCount ? ` · ${stats.childCount} Unterreiter` : ''}</span>
+          <span class="archive-hierarchy-row-meta" title="${stats.moduleCount} Module">${stats.moduleCount}</span>
         </button>
       </div>
       ${expanded ? `
@@ -180,68 +177,66 @@ function renderArchiveHierarchyNode(node, model, selectedPath = []) {
     </div>`;
 }
 
-function renderArchiveHierarchyPreview(node, model) {
-  const stats = getArchiveHierarchyNodeStats(node);
-  const section = getArchiveHierarchySection(node, model.tab);
-  const image = getArchiveHierarchyNodeImage(node);
-  const icon = sanitizeImageSrc(section.iconUrl || '');
-  const kind = node.path.length ? 'Unterbereich' : 'Archivbereich';
-  const description = String(section.desc || getThemeMetaForTab(model.tab).note || '').trim();
-  return `
-    <aside class="archive-hierarchy-preview" aria-label="Vorschau ${escapeHtml(node.label)}">
-      <div class="archive-hierarchy-preview-image${image ? ' has-image' : ''}">
-        ${image ? `<img src="${escapeHtml(image)}" alt="" loading="eager" decoding="async">` : '<span aria-hidden="true"></span>'}
-        ${icon ? `<img class="archive-hierarchy-preview-emblem" src="${escapeHtml(icon)}" alt="" loading="lazy" decoding="async">` : ''}
-      </div>
-      <div class="archive-hierarchy-preview-copy">
-        <div class="archive-hierarchy-preview-kicker">${escapeHtml(kind)}</div>
-        <h3>${escapeHtml(node.label)}</h3>
-        ${description ? `<p>${escapeHtml(description)}</p>` : ''}
-        <dl class="archive-hierarchy-preview-stats">
-          <div><dt>Module</dt><dd>${stats.moduleCount}</dd></div>
-          <div><dt>Unterreiter</dt><dd>${stats.childCount}</dd></div>
-          <div><dt>Seiten</dt><dd>${stats.pageCount}</dd></div>
-          <div><dt>Dialogbereiche</dt><dd>${stats.dialogCount}</dd></div>
-        </dl>
-        <button class="archive-hierarchy-show" type="button" data-archive-action="show-hierarchy-content" data-section-path="${escapeHtml(encodeArchivePathData(node.path))}">
-          Inhalte anzeigen
-        </button>
-      </div>
-    </aside>`;
-}
-
-function renderArchiveHierarchyBrowser(model, selectedPath = []) {
+function renderArchiveHierarchyBrowser(model, selectedPath = [], options = {}) {
   initializeArchiveHierarchyExpansion(model, selectedPath);
   const selectedNode = findArchiveHierarchyNode(model.root, selectedPath) || model.root;
   const rootEntries = model.root.directEntries.map(renderArchiveHierarchyEntry).join('');
   return `
-    <div class="archive-hierarchy-browser" data-archive-hierarchy-tab="${escapeHtml(model.tab)}">
-      <section class="archive-hierarchy-tree" aria-label="Unterbereiche ${escapeHtml(model.tab)}">
-        <div class="archive-hierarchy-tree-head">
-          <div class="archive-hierarchy-tree-kicker">Unterbereiche</div>
-          ${selectedNode.path.length ? `
-            <button type="button" data-archive-action="select-hierarchy-node" data-section-path="${escapeHtml(encodeArchivePathData([]))}">
-              Gesamtübersicht
-            </button>` : ''}
-        </div>
+      <details class="archive-hierarchy-tree"${options.navigationOpen ? ' open' : ''}>
+        <summary><span class="archive-hierarchy-desktop-label">Inhaltsverzeichnis</span><span class="archive-hierarchy-mobile-label">Bereich wechseln</span><span class="archive-hierarchy-disclosure" aria-hidden="true">⌄</span></summary>
         <div class="archive-hierarchy-tree-scroll">
+          <button class="archive-hierarchy-overview" type="button" data-archive-action="select-hierarchy-node" data-section-path="${escapeHtml(encodeArchivePathData([]))}"${!selectedNode.path.length ? ' aria-current="true"' : ''}>Alle Inhalte <span>${model.root.entries.length}</span></button>
           ${rootEntries}
           ${model.root.children.map(child => renderArchiveHierarchyNode(child, model, selectedNode.path)).join('')}
           ${!rootEntries && !model.root.children.length ? '<div class="archive-hierarchy-empty">Noch keine Unterbereiche angelegt.</div>' : ''}
         </div>
-      </section>
-      ${renderArchiveHierarchyPreview(selectedNode, model)}
-    </div>`;
+      </details>`;
 }
 
-function renderArchiveHierarchyContentHeading(node) {
+function renderArchiveHierarchyBreadcrumbs(node, model) {
+  const crumbs = [
+    { label: model.root.label, path: [] },
+    ...node.path.map((label, index) => ({ label, path: node.path.slice(0, index + 1) }))
+  ];
+  return `<nav class="archive-hierarchy-breadcrumbs" aria-label="Aktueller Archivpfad">
+    <button type="button" data-archive-action="switch-tab" data-tab="Alle">Weltpfade</button>
+    ${crumbs.map((crumb, index) => `<span aria-hidden="true">›</span>${index === crumbs.length - 1
+      ? `<span aria-current="page">${escapeHtml(crumb.label)}</span>`
+      : `<button type="button" data-archive-action="select-hierarchy-node" data-section-path="${escapeHtml(encodeArchivePathData(crumb.path))}">${escapeHtml(crumb.label)}</button>`}`).join('')}
+  </nav>`;
+}
+
+function renderArchiveHierarchyContentHeading(node, model) {
   const stats = getArchiveHierarchyNodeStats(node);
+  const section = getArchiveHierarchySection(node, model.tab);
+  const icon = !node.path.length
+    ? getArchiveDashboardTabIcon(model.tab, section.iconUrl)
+    : sanitizeImageSrc(section.iconUrl || '');
+  const image = icon || getArchiveHierarchyNodeImage(node);
+  const description = String(section.desc || (!node.path.length ? getThemeMetaForTab(model.tab).note : '') || '').trim();
   return `
-    <div class="archive-hierarchy-content-heading" id="archive-hierarchy-content" tabindex="-1">
+    ${renderArchiveHierarchyBreadcrumbs(node, model)}
+    <header class="archive-hierarchy-content-heading">
+      ${image ? `<img class="archive-hierarchy-heading-image${icon ? ' is-emblem' : ''}" src="${escapeHtml(image)}" alt="" decoding="async">` : ''}
       <div>
-        <span>Inhalte</span>
-        <h3>${escapeHtml(node.label)}</h3>
+        <h2>${escapeHtml(node.label)}</h2>
+        ${description ? `<p>${escapeHtml(description)}</p>` : ''}
+        <small>${stats.moduleCount} ${stats.moduleCount === 1 ? 'Modul' : 'Module'} · ${stats.pageCount} ${stats.pageCount === 1 ? 'Seite' : 'Seiten'}</small>
       </div>
-      <small>${stats.moduleCount} Module · ${stats.pageCount} Seiten</small>
-    </div>`;
+    </header>`;
+}
+
+function restoreArchiveHierarchyFocus(path, toggle = false) {
+  const browser = document.querySelector('[data-archive-hierarchy-tab]');
+  if (!browser) return;
+  const details = browser.querySelector('.archive-hierarchy-tree');
+  if (!toggle && window.matchMedia('(max-width: 1100px)').matches) {
+    details.open = false;
+    details.querySelector('summary')?.focus({ preventScroll: true });
+    return;
+  }
+  const action = toggle ? 'toggle-hierarchy-node' : 'select-hierarchy-node';
+  const target = [...browser.querySelectorAll(`[data-archive-action="${action}"]`)]
+    .find(button => button.dataset.sectionPath === encodeArchivePathData(path));
+  target?.focus({ preventScroll: true });
 }

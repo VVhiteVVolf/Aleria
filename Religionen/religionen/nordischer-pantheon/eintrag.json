@@ -1,0 +1,93 @@
+{
+  "id": "nordischer-pantheon",
+  "title": "Der Nordische Pantheon",
+  "kind": "Pantheon",
+  "summary": "Der Nordkult vereint lichte und dunkle Aspekte in neun Hauptgöttern. Runen, Überlieferung und die Deutung ihrer Priester prägen den Glauben der Nordmänner.",
+  "symbol": "assets/symbols/nordischer-pantheon.webp",
+  "tags": [
+    "Nordmänner",
+    "Nordkult",
+    "Runen",
+    "Aesir",
+    "Vanir"
+  ],
+  "relations": [
+    "alter-pantheon",
+    "alerische-kirche",
+    "infernus"
+  ],
+  "sections": [
+    {
+      "id": "uebersicht",
+      "title": "Übersicht",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nord Pantheon ist eine Religion, die, wie viele andere, ihre Wurzeln im „alten Pantheon“ hat, das ursprünglich von den Druiden an die Menschheit überliefert wurde. Im Laufe der Jahrtausende, durch Isolation und den schwindenden Einfluss der Druiden, hat sich der Nord Pantheon jedoch stark von seinen Ursprüngen entfernt. Diese Abkehr führte dazu, dass die ursprünglichen Lehren und Interpretationen der Götter verfälscht und verwaschen wurden, ähnlich wie es auch bei anderen „fehlgeleiteten“ Pantheons der Fall ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während die Nordmänner im Grunde dieselben Götter verehren wie die Menschen in Aldrimar oder die Gläubigen der Alerischen Kirche, sind die Interpretationen im Norden oft radikal anders. Ein Beispiel hierfür ist die unterschiedliche Auffassung des Gottes Balthor, der im Norden eine andere, oftmals finstere und kriegerische Bedeutung erhält als in den südlichen Regionen Cenyr und Aldrimar. Obwohl es unter den Nordmännern noch Anhänger gibt, die eine „richtige“ Interpretation der Götter bewahren, tendiert die Mehrheit dazu, sich auf eher negative oder düstere Eigenschaften der Götter zu konzentrieren und diese für ihre eigenen Zwecke zu definieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Verzerrung des Glaubens hat dazu geführt, dass der Nord Pantheon und seine Praktiken von der Alerischen Kirche und anderen südlichen Gläubigen als Götzendienst und Blasphemie betrachtet werden. Für die Nordmänner jedoch verkörpert ihr Pantheon die rauen, unerbittlichen Kräfte ihrer Welt und spiegelt ihre eigene harte Existenz in den harschen Landschaften des Nordens wider. In ihren Augen sind die Götter des Nord Pantheon keine gütigen Beschützer, sondern mächtige, oft unberechenbare Wesen, deren Gunst man durch Opfer und Taten gewinnen oder besänftigen muss."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nordkult, wie er heute bekannt ist, entstand durch die zunehmende Entfremdung und Isolation der Nordmänner von den Druiden, die einst ihre Kultur geführt und begleitet hatten. Als diese weisheitsvollen Führer und Vermittler nach und nach verschwanden, verloren die Menschen des Nordens den direkten Zugang zu den ursprünglichen Lehren und Weisheiten. Mit dem Schwinden jener, die das Wissen der Götter überlieferten und korrigierend eingriffen, wenn es nötig war, begann die Religion sich zu verfälschen und entwickelte sich zu einem Pantheon, das zunehmend auf persönlichen Auslegungen und individuellen Interpretationen basierte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl die Neun Götter des Nordkults im Wesentlichen dieselben sind, die auch von der Alerischen Kirche verehrt werden, hat die Isolation dazu geführt, dass ihre Bedeutungen und Eigenschaften im Norden oft anders verstanden und interpretiert werden. Diese Unterschiede sind nicht trivial: Während die Alerische Kirche eine kohärente, einheitliche Interpretation der Götter lehrt, haben die Nordmänner häufig eine verzerrte oder verworrene Auffassung von ihnen. Ein prägnantes Beispiel dafür ist die Figur des Streiters Balthor, der in der Alerischen Kirche als göttlicher Krieger verehrt wird, im Norden jedoch nicht selten mit dem Infernalen Gott Grimnar verwechselt wird, was zu einem deutlichen Bruch in der religiösen Praxis führt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese fehlgeleiteten Interpretationen und die Verwechslung von göttlichen mit infernalen Kräften haben dazu beigetragen, dass der Nordkult von anderen, insbesondere von der Alerischen Kirche, als heidnisch oder sogar blasphemisch betrachtet wird. Dennoch bleibt er ein zentraler Bestandteil der nordischen Kultur, geprägt von den rauen Lebensbedingungen und der selbstbestimmten Natur der Nordmänner, die sich ihren eigenen Weg zu den Göttern bahnen."
+        }
+      ]
+    },
+    {
+      "id": "unterschiede",
+      "title": "Unterschiede",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein wesentlicher Unterschied des Nordkults gegenüber anderen Glaubensrichtungen, wie der Alerischen Kirche, liegt in der fehlenden Unterscheidung zwischen den Göttlichen und den Infernalen . Im Nordkult existiert keine grundlegende Lehre, die die neun Göttlichen von ihren dunklen Gegenstücken, den neun Infernalen, trennt. Stattdessen werden alle Götter als eine einheitliche Gruppe wahrgenommen, ohne klare Trennung zwischen den guten und bösen Aspekten ihrer Natur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für die Nordmänner sind die Götter einfach nur Götter, die verschiedene Aspekte des Lebens und der Welt verkörpern. Diese Sichtweise führt dazu, dass oft keine klare Unterscheidung zwischen einem göttlichen Wesen und seinem infernalen Gegenstück getroffen wird. Ein Beispiel hierfür ist die Göttin Eiris , die in der Alerischen Kirche als die Verkörperung von Güte und Reinheit verehrt wird, während ihr infernales Gegenstück, Sanguine , als bösartig und verderbend gilt. Im Nordkult jedoch werden Eiris und Sanguine nicht als getrennte, gegensätzliche Wesen betrachtet. Stattdessen sieht man sie als Aspekte derselben göttlichen Kraft, die sowohl positive als auch negative Eigenschaften in sich vereint."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Vermischung der göttlichen und infernalen Attribute führt dazu, dass der Nordkult oft als verworren und fehlgeleitet angesehen wird, insbesondere von jenen, die an die strikte Trennung zwischen Gut und Böse glauben, wie es in der Alerischen Kirche gelehrt wird. Für die Nordmänner jedoch ist diese dualistische Sichtweise nicht relevant; sie sehen die Götter als komplexe Wesen, die nicht einfach in gut und böse unterteilt werden können. Diese Perspektive spiegelt die raue und ambivalente Natur ihrer eigenen Welt wider, in der Licht und Dunkelheit oft untrennbar miteinander verbunden sind."
+        }
+      ]
+    }
+  ],
+  "page": true,
+  "epithet": "Die alten Nordgötter",
+  "traditionSource": "religionen/nordischer-pantheon/glaube.json",
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "899b54a3-4f10-4b8a-acc6-5d50c314e6ea",
+    "sha256": "eefd215b31cd79f7d51b358c4af079019172741f5cc760030080e9111806411d"
+  },
+  "facts": [
+    {
+      "label": "Glaubensrichtung",
+      "value": "Die alten Nordgötter"
+    },
+    {
+      "label": "Verzeichnete Gestalten",
+      "value": "14"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "id": "striga",
+  "name": "Striga",
+  "classification": "Halbvampirisches Mischwesen aus Mensch und Vampir",
+  "continent": "Aleria",
+  "region": "Verborgen in menschlicher Gesellschaft",
+  "folio": "IV / 03-E",
+  "parentGroupId": "vampire",
+  "summary": "Striga sind seltene Halbvampire, die aus der Verbindung eines Vampirs mit einem Menschen hervorgehen. Sie benötigen kein Blut, können damit jedoch ihre schlummernde Magie stärken, besitzen weder klassische Vampirform noch übliche Sonnenfessel und ringen besonders im Erwachsenenalter mit Bhaals wachsendem Einfluss.",
+  "quote": "Eine Striga wird nicht durch ihren Hunger entschieden, sondern in jedem Augenblick, in dem sie ihm Macht gibt oder Menschlichkeit entgegensetzt.",
+  "quoteAttribution": "Randbemerkung eines alerischen Blutmagiers",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Striga"
+    },
+    {
+      "label": "Typ",
+      "value": "Halbvampirisches Mischwesen"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch die Verbindung eines Vampirs mit einem Menschen geboren"
+    },
+    {
+      "label": "Herkunft",
+      "value": "In der menschlichen Welt geboren und durch Bhaals Erbe geprägt"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verborgen innerhalb menschlicher Gesellschaft"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Anpassungsfähig, innerlich zerrissen und häufig lange unauffällig"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Keine besondere Bindung an Tag oder Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Hohe Affinität zu Blutmagie, Polymorphie und vampirischen Zaubern"
+    },
+    {
+      "label": "Stärken",
+      "value": "Natürliche Resistenzen, Anpassung und großes magisches Potenzial"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Göttliche Magie und die Versuchung durch Bhaals dunklen Einfluss"
+    },
+    {
+      "label": "Beute",
+      "value": "Kein Blut zum Überleben nötig; wird dennoch begehrt"
+    },
+    {
+      "label": "Vampirspross",
+      "value": "Keiner"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Menschlichkeit",
+      "Blutmagiepotenzial",
+      "Anpassung",
+      "Körperresistenz",
+      "Bhaals Versuchung",
+      "Sonnenfreiheit"
+    ],
+    "values": [
+      7,
+      9,
+      10,
+      7,
+      9,
+      10
+    ],
+    "source": "Aus halbsterblicher Herkunft, schlummernder Vampirmagie, gesellschaftlicher Anpassung, natürlichen Resistenzen, innerem Konflikt und fehlender Sonnenbindung abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Striga überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Bindung oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Striga ist keine durch Infektion entstandene Sprossform, sondern ein von Geburt an bestehender Halbvampir. Ihre Seltenheit folgt aus der gefährlichen Geburt, die menschliche Mütter häufig nicht überleben und der auch viele Kinder selbst nicht standhalten."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein vampirischer und ein menschlicher Elternteil verbinden zwei unvereinbare Naturen. Überlebende Kinder wirken lange menschlich, tragen Bhaals Erbe jedoch von Anfang an; im Erwachsenenalter drängen Blutgier und das Versprechen dunkler Macht zunehmend an die Oberfläche."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Striga können äußerlich vollkommen menschlich erscheinen. Sie besitzen keine feste alternative Vampirform und keine klassischen vampirischen Einschränkungen, zeigen aber ein angeborenes Gespür für jene Magie, die ihre vampirischen Vorfahren beherrschen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viele führen in der Jugend ein unauffälliges Leben und versuchen, ihre Herkunft zu verbergen. Später wächst der innere Konflikt zwischen menschlicher Moral und Bhaals Einfluss; manche widerstehen, andere werden zu Jägern, obwohl Blut für ihr Überleben nie notwendig war."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre Begabung umfasst Blutmagie, Polymorphie und andere vampirische Künste, muss jedoch wie jede Magie erlernt werden. Blut kann diese Kräfte verstärken, während natürliche Resistenzen sie widerstandsfähiger als gewöhnliche Menschen machen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Striga lassen sich nicht mit allen klassischen Vampirregeln beurteilen: Sonnenlicht bindet sie nicht, und Blutentzug schwächt sie nicht zwangsläufig. Göttliche Magie bleibt wirksam; zugleich kann eine vorschnelle Verfolgung genau jene Menschlichkeit zerstören, die Bhaals Einfluss noch entgegensteht."
+        }
+      ]
+    },
+    {
+      "id": "vampirspross",
+      "title": "Vampirspross",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Striga erschaffen keinen eigenen Vampirspross."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Eine Striga kann ihr ganzes Leben ohne Blutaufnahme überstehen.",
+            "Magische Begabung bedeutet nicht automatisch ausgebildete Zauberkunst; manche Striga wirken nie einen bewussten Zauber.",
+            "Die ersten deutlichen Zeichen vampirischer Versuchung treten häufig erst beim Erwachsenwerden hervor."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/vampire-profiles/striga-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Striga in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/vampire-profiles/striga-hero.webp",
+    "width": 805,
+    "height": 803,
+    "alt": "Überlieferte Darstellung eines Striga",
+    "caption": "Überlieferte Bildtafel · Striga"
+  }
+}

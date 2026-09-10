@@ -1,0 +1,201 @@
+{
+  "id": "nachzehrer",
+  "name": "Nachzehrer",
+  "classification": "Verfallsgebundener Vampir Bhaals und unauffälliger Totenzehrer",
+  "continent": "Aleria",
+  "region": "Am Rand menschlicher Gesellschaft",
+  "folio": "IV / 03-D",
+  "parentGroupId": "vampire",
+  "summary": "Nachzehrer sind hagere, zurückgezogene Vampire mit einer Vorliebe für verwesendes Blut und Fleisch. Als Totengräber, Henker oder andere gemiedene Außenseiter erhalten sie Zugang zu Leichen, wirken Nekromantie und Flüche aus dem Verborgenen und bleiben gerade deshalb oft länger unentdeckt als offen jagende Blutsauger.",
+  "quote": "Der Nachzehrer hinterlässt selten einen frischen Toten; sein wahres Revier erkennt man daran, dass selbst die Gräber nicht zur Ruhe kommen.",
+  "quoteAttribution": "Notiz aus einem Bericht über geschändete Friedhöfe",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nachzehrer"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfallsgebundener Vampir Bhaals"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus den geknechteten Seelen ehemaliger Kultisten Bhaals geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Friedhöfe, Grüfte und unauffällige Randbereiche der Gesellschaft"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Zurückgezogen, schweigsam und als Außenseiter getarnt"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend nachts; Sonnenlicht wird gemieden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Nekromantie, verwesungsgebundene Blutmagie, Flüche und Polymorphie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Unauffälligkeit, Geduld und Kontrolle toter Körper"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sakrale Magie, Sonnenlicht, Feuer und geweihtes Silber"
+    },
+    {
+      "label": "Beute",
+      "value": "Verwesendes Blut und Fleisch; nur bei Not lebende Außenseiter"
+    },
+    {
+      "label": "Vampirspross",
+      "value": "Mortis, ein Blutsauger"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Verfallsmagie",
+      "Nekromantie",
+      "Unauffälligkeit",
+      "Fluchwirken",
+      "Leichenversorgung",
+      "Sonnenanfälligkeit"
+    ],
+    "values": [
+      9,
+      9,
+      10,
+      8,
+      8,
+      9
+    ],
+    "source": "Aus verwesungsgebundener Blutmagie, Totenkontrolle, unauffälliger Außenseiterrolle, Flüchen, Ernährungsweise und der Schwäche gegen Sonnenlicht abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Nachzehrer überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Bindung oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nachzehrer gehören zu den unauffälligsten Vampiren Bhaals. Ihre Nähe zu Tod und Verfall führt sie an Orte und in Berufe, die andere Menschen meiden; dadurch können sie ihre Bedürfnisse erfüllen, ohne die regelmäßigen Spuren einer offenen Jagd zu hinterlassen."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie entstehen aus den Seelen ehemaliger Bhaal-Kultisten, die nach dem Tod statt erhoffter Belohnung Knechtschaft und Qual erfuhren. Vollständige Unterwerfung formte sie zu gebrochenen Dienern, deren gesamte Existenz Tod und Verwesung widerspiegelt."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hagere Körper, eingefallene Wangen, faltige Blässe und dunkel umrandete Augen lassen sie alt oder gebrechlich wirken. Die in sich gekehrte Körpersprache passt zu Rollen als Totengräber, Henker oder stiller Verwalter gemiedener Orte."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nachzehrer sprechen wenig und vermeiden Beziehungen, Priester und Magier. Sie ernähren sich bevorzugt von Verwesendem; nur ohne Zugang dazu wählen sie unauffällige Opfer, verbergen die Körper und kehren erst nach fortschreitendem Verfall zurück."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nekromantie bewegt oder verbirgt Leichen, Blutmagie gewinnt Kraft aus zersetztem Blut, und langsame Flüche bringen Krankheit oder Pech. Polymorphie lässt den Nachzehrer älter und harmloser erscheinen, als er tatsächlich ist."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entdeckung beginnt bei gestörten Gräbern und ungewöhnlichen Abläufen rund um Leichen, nicht bei frischen Bissopfern. Sakrale Magie, Sonnenlicht, Feuer und geweihtes Silber behindern seine Regeneration; kontrollierte Tote müssen zugleich vom Vampir getrennt werden."
+        }
+      ]
+    },
+    {
+      "id": "vampirspross",
+      "title": "Vampirspross",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mortis sind die als Blutsauger überlieferte Sprossform des Nachzehrers."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Nachzehrer können lange an einem Ort bleiben, weil ihre Nahrung selten als Vampirangriff erkannt wird.",
+            "Ihre gewählten Berufe erklären sowohl nächtliche Arbeit als auch den Geruch nach Erde und Verfall.",
+            "Ein auffällig ordentliches Gräberfeld kann ebenso verdächtig sein wie ein geschändetes, wenn Nekromantie Spuren beseitigt hat."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "id": "offenbarung",
+      "caption": "Bildtafel · Offenbarte Gestalt eines Nachzehrers zwischen den Gräbern",
+      "alt": "Vampirischer Nachzehrer in monströser Gestalt auf einem Friedhof",
+      "src": "../../../assets/vampire-profiles/nachzehrer-plate.webp",
+      "width": 1024,
+      "height": 1008
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/vampire-profiles/nachzehrer-icon.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbarer Nachzehrer in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/vampire-profiles/nachzehrer-hero.webp",
+    "width": 1008,
+    "height": 1024,
+    "alt": "Überlieferte Darstellung eines Nachzehrer",
+    "caption": "Überlieferte Bildtafel · Nachzehrer"
+  }
+}

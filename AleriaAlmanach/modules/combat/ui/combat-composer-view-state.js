@@ -1,5 +1,5 @@
 // Presentation state stays in the composer DOM; combat state belongs to the controller.
-import { filterCombatActions } from './combat-action-picker.js';
+import { filterCombatActions } from './combat-action-picker.js?v=20260909-dragon-parent-v2';
 
 const CONTROL_ATTRIBUTES = Object.freeze([
   'data-combat-input', 'data-combat-target-search', 'data-combat-action-search', 'data-combat-action-option', 'data-weapon-id', 'data-role',

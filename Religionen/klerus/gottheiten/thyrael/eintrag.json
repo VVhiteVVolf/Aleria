@@ -1,0 +1,102 @@
+{
+  "godId": "thyrael",
+  "intro": "Thyraels Klerus verehrt Leidenschaft, Erneuerung und Stärke. Seine Häuser bewahren das Feuer als Kraft des Wandels und der verantwortlichen Gestaltung. Glut und Entschlossenheit sollen einen neuen Anfang tragen, statt in ziellose Zerstörung umzuschlagen.",
+  "community": "Priester betreuen Herdheiligtümer und gemeinschaftliche Riten; monastische Zünfte erhalten Feuerstellen und Werkstätten. Paladine sichern Haus und Umgebung. Einzelne asketische Gläubige können die Selbstbeherrschung vertiefen, bilden aber keinen üblichen eigenen Zweig. Gelehrte Untersuchungen gehören zu Orins, Aurons oder Oriths Bereich.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der erneuernden Flamme",
+      "paragraphs": [
+        "Thyraels Priester begleiten Neuanfänge und lehren den Unterschied zwischen lebendiger Leidenschaft und zerstörerischer Unbeherrschtheit. Sie bewahren die Riten der heiligen Flamme. Ihr Dienst soll Menschen nach Stillstand und Verlust wieder zum Handeln befähigen und dabei die Verantwortung für die Folgen wachhalten."
+      ],
+      "tasks": [
+        "Feuer- und Erneuerungsriten begleiten",
+        "Menschen bei einem Neuanfang stärken",
+        "Verantwortlichen Umgang mit Leidenschaft lehren"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente der behüteten Glut",
+      "paragraphs": [
+        "Mönche und Nonnen des Flammenherrn bewahren die Feuerstellen, Wärme und Versorgung ihrer Häuser. Ihre Zünfte arbeiten mit Schmiede, Ofen und Licht. Sie kennen den Wert regelmäßiger Aufmerksamkeit: Eine vernachlässigte Glut kann erlöschen oder die Gemeinschaft gefährden."
+      ],
+      "tasks": [
+        "Feuerstellen und Beleuchtung erhalten",
+        "Werkstätten und Öfen betreuen",
+        "Vorräte für Wärme und Versorgung ordnen"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Herd- und Lichthüter",
+          "work": "Erhält Feuerstellen, Leuchten und die Wärmeversorgung des Konvents."
+        },
+        {
+          "name": "Zunft der Ofenwerker",
+          "work": "Bewahrt die Arbeit an Brennöfen und deren regelmäßige Pflege."
+        },
+        {
+          "name": "Zunft der Schmiedeglut",
+          "work": "Trägt die Metallarbeit des Hauses und unterweist im sorgfältigen Werkstattdienst."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "fest",
+      "title": "Ritter des bewahrten Neuanfangs",
+      "paragraphs": [
+        "Thyraels Paladine verbinden Tatkraft mit der Pflicht, Schutzbedürftige zu bewahren. Sie sichern Heiligtümer und helfen Gemeinschaften, nach Verwüstung wieder Fuß zu fassen. Die Stärke ihres Gottes rechtfertigt keine wahllose Gewalt; ein neuer Anfang soll auch für jene möglich bleiben, die sich bereits ergeben haben."
+      ],
+      "tasks": [
+        "Heiligtümer und Wiederaufbau schützen",
+        "Hilfskräfte in verwüstete Orte begleiten",
+        "Tatkraft unter geordnetem Auftrag einsetzen"
+      ]
+    },
+    "asketen": {
+      "presence": "selten",
+      "title": "Der Pfad der beherrschten Glut",
+      "paragraphs": [
+        "Nur wenige Anhänger des Flammenherrn wählen einen asketischen Pfad, um Kraft und Leidenschaft zu beherrschen. Intensive Bewegung wechselt dabei mit ruhiger Sammlung. Solche Einzelwege oder seltenen kleinen Gemeinschaften sind Ausnahmen; die gewöhnlichen Häuser Thyraels bilden keine eigene Asketenordnung. Wehrhafte Unterweisung kann an einer verbundenen Schule erfolgen."
+      ],
+      "tasks": [
+        "Kraft und Selbstbeherrschung gemeinsam üben",
+        "Wehrhafte Disziplin unterrichten",
+        "Heiligtümer mit besonnener Entschlossenheit schützen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Thyrael verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Ein neuer Anfang nach der Zerstörung",
+      "paragraphs": [
+        "Bußgänger des Flammenherrn können beim Wiederaufbau und bei der Versorgung geschädigter Häuser dienen. Der Eid nimmt die konkrete Schuld auf und richtet die Entschlossenheit auf etwas Wiederherstellendes. Reinigung bedeutet hier einen veränderten Lebenswandel; körperliche Verbrennung ist kein Bestandteil dieser Bußordnung."
+      ],
+      "tasks": [
+        "Wiederaufbau unter Anleitung unterstützen",
+        "Geschädigte Gemeinschaften versorgen",
+        "Verantwortliches Handeln nach unbeherrschten Taten einüben"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

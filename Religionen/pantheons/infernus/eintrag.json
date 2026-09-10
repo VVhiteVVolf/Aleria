@@ -1,0 +1,42 @@
+{
+  "id": "infernus",
+  "title": "Infernus",
+  "kind": "Infernaler Götterkreis",
+  "summary": "Die Zehn Infernalen, fünf Untergötter, infernale Geweihte und Gefallene – ihre Wesenheiten, Domänen, Pakte und Hinterlassenschaften.",
+  "symbol": "assets/infernal-symbols/infernus.svg",
+  "tags": [
+    "Infernale",
+    "Zehn Infernale",
+    "Infernus",
+    "Götter",
+    "Dämonen",
+    "Großer Spalt"
+  ],
+  "page": true,
+  "relations": [],
+  "aliases": [
+    "Religionen/pantheons/neun-infernalen/index.html"
+  ],
+  "sections": [
+    {
+      "id": "ueberblick",
+      "title": "Im Schatten des Großen Spalts",
+      "paragraphs": [
+        "Die Überlieferungen verbinden die Infernalen mit dem Großen Spalt, mit göttlichen Gegenbildern und mit den Begierden der Sterblichen. Ihre Ziele und Formen der Verehrung unterscheiden sich: Herrschaft, Rache und Verderbnis stehen neben Jagd, verborgenem Wissen und widersprüchlichen Mythen. Eine gemeinsame Rangordnung nach dem Vorbild der Alerischen Kirche lässt sich daraus nicht ableiten.",
+        "Zehn Namen stehen unter den hohen Mächten dieses Registers. Adar nimmt dabei eine Sonderstellung ein: Seine Überlieferung bestreitet eine eindeutige Zugehörigkeit zu den Infernalen. Die Gefallenen bilden eine eigene Gruppe; Zarakhul ist in seinen Splittern gebannt, Balor nach seinem Fall wieder mit Dagon vereint. Beide vergeben gegenwärtig keine eigenen Pakte."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Das Wesen des Infernalen",
+      "href": "Bestiarium/themen/wesen-des-infernalen/index.html",
+      "note": "Das Buch der infernalen Sphärenkunde im Bestiarium."
+    }
+  ],
+  "source": {
+    "attachment": "a860b121-5808-4af0-bd9a-6edd495ca274",
+    "sha256": "cb9a25dbe636f28593eeee01990b0c33011524747703a65d64e60d727c692273",
+    "note": "Die neue Quelle nennt zehn hohe Mächte. Die bisherige Neuner-Bezeichnung wurde ersetzt; der frühere Seitenpfad leitet weiter."
+  }
+}

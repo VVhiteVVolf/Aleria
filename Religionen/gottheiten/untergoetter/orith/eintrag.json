@@ -1,0 +1,246 @@
+{
+  "id": "orith",
+  "title": "Orith",
+  "epithet": "Der Mystiker",
+  "kind": "Untergottheit",
+  "summary": "Magie, Zauberei und Mystik.",
+  "symbol": "BilderRüstungen/orith_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Mystiker",
+    "Magie",
+    "Zauberei",
+    "Mystik"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "sylvana"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Orith, der Mystiker",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orith ist der Gott der Magie, Zauberei und Mystik. Für Druiden und Zauberer besitzt er besondere Bedeutung; seine größte Verehrung findet er im Lichthain und im Hain der Druiden. Er begleitet jene, die Magie durch aufmerksame Wahrnehmung, gelebte Erfahrung und geduldige Versenkung begreifen wollen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als Untergottheit verbindet Orith Orins Streben nach Erkenntnis mit Sylvanas Achtung vor den lebendigen Zusammenhängen der Welt. Wo der Mentor Wissen ordnet und die Hirtin das Leben bewahrt, richtet der Mystiker den Blick auf die feinen Verbindungen zwischen beidem. Der druidische Beiname „Die Krähe“ beschreibt den wachen Geist, der Spuren liest und sich einem Geheimnis behutsam nähert."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orith verkörpert Achtsamkeit, Erkenntnisdrang und Demut vor dem Unbekannten. Seine Anhänger unterscheiden sorgfältig zwischen einer Ahnung, einer Erfahrung und einer gesicherten Erkenntnis. Ein unerklärtes Zeichen ist für sie ein Anlass zur Untersuchung, kein Freibrief für beliebige Behauptungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Magie erscheint in seinem Glauben als ein Geflecht von Beziehungen. Orte, Lebewesen und Gegenstände können Spuren tragen, die ein geschulter Geist bemerkt. Orith lehrt, diesen Spuren zu folgen, ohne das Beobachtete aus bloßer Neugier zu verletzen oder fremden Willen zu unterwerfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Gunst kann den Blick für Magicka schärfen, die Sammlung im Ritual stärken und das Erkennen von Störungen erleichtern. Sie gewährt weder Allwissenheit noch Unfehlbarkeit. Wer ein Zeichen missdeutet, soll die Deutung prüfen und berichtigen; gerade darin zeigt sich die Demut des Mystikers."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "brauchtum",
+      "title": "Haine und stille Übungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In den Orith geweihten Hainen beginnen viele Unterweisungen mit einer Zeit des Schweigens. Die Lernenden beobachten einen Ort, bevor sie eine Erklärung versuchen. Ihre Eindrücke werden anschließend verglichen, damit persönliche Einbildung und gemeinsam erkennbare Spuren voneinander unterschieden werden können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Knoten aus Schnur oder Zweigen dienen als Erinnerungszeichen für Verbindungen, die noch nicht vollständig verstanden sind. Ein gelöster Knoten kann das Ende einer Untersuchung markieren. Ein ungelöster wird bewahrt, ohne sein Geheimnis als bereits erkannt auszugeben."
+        }
+      ],
+      "authorship": "continuation"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid der Achtsamkeit: Der Jünger gelobt, die Folgen seines magischen Handelns zu bedenken und ein lebendiges Wesen oder einen geheiligten Ort nicht allein zur Befriedigung seiner Neugier zu schädigen.",
+            "Eid der redlichen Erkenntnis: Der Jünger verpflichtet sich, Irrtümer einzugestehen, Beobachtung und Vermutung auseinanderzuhalten und das Ansehen des Mystikers nicht für Täuschung oder falsche Offenbarungen zu missbrauchen."
+          ]
+        }
+      ],
+      "sharedLore": "eide",
+      "authorship": "continuation"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte & Segen",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt des Schleierblicks: Bei konzentrierter Betrachtung kann der Jünger magische Spuren und Unregelmäßigkeiten deutlicher wahrnehmen. Eine wahrgenommene Spur verrät nicht automatisch ihren Ursprung; Täuschungen und unbekannte Magie verlangen weitere Untersuchung.",
+            "Aspekt der Resonanz: Durch behutsame Berührung erspürt der Jünger, ob ein vertrauter Ritualgegenstand oder ein Ort mit einer bekannten Form von Magicka in Einklang steht. Diese Gabe erleichtert die Vorbereitung von Ritualen, ersetzt aber keine Kenntnis ihrer Regeln.",
+            "Segen der Sammlung: In einer stillen Übung ordnet sich der Geist des Jüngers leichter. Äußere Ablenkungen verlieren an Gewicht, solange er sich bewusst auf das Ritual konzentriert. Plötzliche Gefahren können diese Sammlung weiterhin unterbrechen.",
+            "Segen des gehüteten Hains: Eine sorgsam vorbereitete Weihe macht fremde Störungen innerhalb eines betreuten Heiligtums leichter bemerkbar. Sie dient als Warnung und fordert Pflege; sie bildet keine undurchdringliche Grenze."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Bund des lebendigen Zeichens: Ein bewährter Jünger weiht einen selbst gepflegten Ritualort als Stätte seiner Arbeit. Wiederkehrende Veränderungen hinterlassen dort für ihn deutlicher erkennbare Spuren. Der Bund verlangt fortgesetzte Fürsorge und erlischt, wenn der Ort ausgebeutet oder wissentlich entweiht wird.",
+            "Bund der geteilten Einsicht: Lehrender und Lernender stimmen sich für eine freiwillige gemeinsame Meditation aufeinander ein. Sie können eine ausgewählte magische Wahrnehmung miteinander teilen und im Anschluss vergleichen. Verborgene Gedanken bleiben geschützt; Zwang und das heimliche Ausforschen des Gegenübers brechen die Verbindung."
+          ]
+        }
+      ],
+      "sharedLore": "buende",
+      "authorship": "continuation"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orith entzieht seine Gunst jenen, die Einbildung als unfehlbare Offenbarung ausgeben, fremden Willen brechen oder einen Hain für persönlichen Machtgewinn verderben. Buße beginnt mit dem Eingeständnis des Irrtums und dem Bemühen, angerichtete Störungen zu beheben. Seine Anhänger sollen sich erneut dem geduldigen Lernen zuwenden."
+        }
+      ],
+      "sharedLore": "uebertretungen",
+      "authorship": "continuation"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Erkenne die Verbindung und achte ihre Grenzen. Orith fordert, der Magie mit Neugier und Respekt zu begegnen und die eigene Deutung nicht mit der Wahrheit selbst zu verwechseln."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Achtsamkeit richtet den Blick auf das Gegenwärtige, Erkenntnisdrang führt über das Bekannte hinaus, und Demut bewahrt vor dem Missbrauch des Erkannten. Diese drei Tugenden gehören für den Mystiker untrennbar zusammen."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Orith wird vor allem im Lichthain und im Hain der Druiden verehrt. Seine Stätten sind stille Haine, Ritualkreise und einfache Lehrhäuser an Orten, deren magische Eigenart sorgfältig bewahrt wird. Das Zeichen des druidischen Knotens erinnert daran, dass keine Erkenntnis für sich allein steht."
+        }
+      ],
+      "authorship": "continuation"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Magie, Zauberei und Mystik"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Achtsamkeit, Erkenntnisdrang und Demut"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Falsche Offenbarung, Willenszwang und Entweihung"
+    },
+    {
+      "label": "Symbol",
+      "value": "Druidischer Knoten"
+    },
+    {
+      "label": "Hochburgen",
+      "value": "Lichthain und Hain der Druiden"
+    },
+    {
+      "label": "Patronat",
+      "value": "Druiden, Zauberer und Suchende der Mystik"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Orith"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Der Mystiker"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Die Krähe"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Oriadh"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Llorith"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Orvindir"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Othellus"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "b42faebe-f822-4e4d-b077-9c8d2a3a2e7f",
+    "sha256": "9ed23e94465e5f295d5782c7d4892ff94a38d983376171bce3c19096e2c1ca05",
+    "continuation": "Auf Nutzerwunsch anhand der Domäne, der überlieferten Beinamen und der bestehenden göttlichen Lehre ausgearbeitet."
+  },
+  "portrait": {
+    "src": "assets/divine-art/orith.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Orith, Der Mystiker",
+    "caption": "Orith · Der Mystiker"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Orith",
+      "href": "Religionen/klerus/gottheiten/orith/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

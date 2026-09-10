@@ -1,6 +1,6 @@
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 import { STATUS_DURATIONS, createManualCombatCondition } from './combat-status-model.js?v=20260906-effect-rolls-v1';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260906-effect-rolls-v1';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260909-dragon-parent-v2';
 import { escapeCombatMarkup as e, renderCombatCondition as renderMiniProfileCondition } from './combat-status-view.js?v=20260906-effect-rolls-v1';
 
 let dialog = null;

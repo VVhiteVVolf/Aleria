@@ -1,0 +1,241 @@
+{
+  "id": "mulinar",
+  "name": "Mulinar",
+  "classification": "Infizierter Vampirspross der Mula",
+  "continent": "Aleria",
+  "region": "Abgelegene Wege, Wälder und Ruinen",
+  "folio": "IV / 03-B-1",
+  "parentGroupId": "blutsauger",
+  "summary": "Mulinar entstehen durch den Sanguinaris Serenatis einer Mula. Die langsame Infektion erhält einen Rest Menschlichkeit, verankert zugleich jedoch Blutgier, instinktive Illusionen und eine Bindung an die Schöpferin. Mit Gesang und unbewusster Manipulation locken sie Reisende aus sicherer Gemeinschaft in die Einsamkeit.",
+  "quote": "Wenn ein Lied auf einem leeren Weg schöner klingt als jedes Fest, prüfe zuerst, ob dein eigener Schritt noch deinem Willen folgt.",
+  "quoteAttribution": "Warnung eines reisenden Vampirjägers",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Mulinar"
+    },
+    {
+      "label": "Typ",
+      "value": "Vampirspross und infizierter Halbvampir"
+    },
+    {
+      "label": "Schöpferlinie",
+      "value": "Mula"
+    },
+    {
+      "label": "Virus",
+      "value": "Sanguinaris Serenatis"
+    },
+    {
+      "label": "Übertragung",
+      "value": "Blut, Speichel, Biss oder Kratzer einer Mula"
+    },
+    {
+      "label": "Verwandlungsdauer",
+      "value": "Etwa 31 Tage bis zur Vollendung"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Abgelegene Wege, Wälder, Ruinen und einsame Zufluchten"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Unsteter Lockjäger mit geringer Selbstbeherrschung"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend Dämmerung und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Betörender Gesang, instinktive Illusion und Manipulation"
+    },
+    {
+      "label": "Stärken",
+      "value": "Menschenähnlichkeit, Täuschung und überraschende Wildheit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, geweihte Waffen, sakrale Magie und gebrochene Konzentration"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Blutgier",
+      "Gesangslockung",
+      "Illusionsreflexe",
+      "Menschlichkeitsrest",
+      "Meisterbindung",
+      "Tarnfähigkeit"
+    ],
+    "values": [
+      9,
+      8,
+      7,
+      5,
+      8,
+      7
+    ],
+    "intro": "Die Bewertung zeigt die widersprüchliche Natur des Mulinar zwischen erhaltenem sterblichem Denken, wachsender Blutgier und unbewusster Lockmagie.",
+    "source": "Aus dem Sanguinaris Serenatis, dem vierstufigen Wandel, der Bindung an die Mula sowie Gesang, Illusion und Jagdverhalten abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Mulinar ist der Vampirspross der Mula. Er entsteht, wenn deren vampirischer Erreger auf einen Menschen übergeht und die Eigenschaften der Schöpferin nur bruchstückhaft in den neuen Wirt einschreibt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Verwandlung verläuft langsam und qualvoll. Der Mulinar bleibt zwischen sterblicher Erinnerung und Bhaals Dunkelheit gefangen; seine geringere Macht macht ihn keineswegs harmlos, denn Instinkt und unbeständige Magie lassen ihn schwer berechenbar werden."
+        }
+      ]
+    },
+    {
+      "id": "virus",
+      "title": "Sanguinaris Serenatis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der infernale Erreger kann durch Blut, Speichel, einen Biss oder selbst einen Kratzer einer Mula in den Kreislauf gelangen. Gewöhnliche Heilkunst ist wirkungslos, und schwache sakrale Magie erreicht die bereits verdorbene Essenz kaum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nur hochrangige Priester oder Druiden besitzen eine Aussicht, den Wandel rechtzeitig aufzuhalten. Der Virus verändert Körper und Geist zugleich und verstärkt dabei die Bindung an jene Mula, von der die Infektion ausging."
+        }
+      ]
+    },
+    {
+      "id": "prozess",
+      "title": "Verwandlungsprozess",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Inkubation · 1–3 Tage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Erreger breitet sich beinahe unbemerkt aus. Müdigkeit, Schwindel, innere Unruhe und ein wachsendes Verlangen nach Stille oder Abgeschiedenheit sind die ersten Hinweise."
+        },
+        {
+          "type": "subheading",
+          "text": "Mutation · 4–10 Tage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Haut erbleicht, die Augen können gelbe oder purpurne Töne annehmen und der erste Blutdurst erwacht. Albträume, emotionale Schwankungen und eine unerklärliche Anziehung zu einsamen Orten begleiten den körperlichen Wandel."
+        },
+        {
+          "type": "subheading",
+          "text": "Übergang · 11–30 Tage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anmut und Sinnesleistung nehmen zu; Gesang, Illusion und Manipulation beginnen sich instinktiv zu zeigen. Die Blutgier wird in belastenden Augenblicken fast unkontrollierbar, während der Wirt noch verzweifelt an seiner Menschlichkeit festhält."
+        },
+        {
+          "type": "subheading",
+          "text": "Vollendung · ab 31 Tagen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Körper stabilisiert sich als Mulinar. Seine Magie bleibt roh, die Bindung an die Mula wird dauerhaft und der Blutdurst bestimmt fortan große Teile seines Handelns, auch wenn einzelne menschliche Regungen überleben."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mulinar bleiben menschenähnlich und können ihre Herkunft unter Mantel und Kapuze verbergen. Blasse Haut, ungewöhnlich helle Augen, verlängerte Zähne und ein unsteter, lauschender Ausdruck verraten sie bei genauer Beobachtung."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vor allem in den ersten Jahren fehlt dem Mulinar die Selbstbeherrschung eines vollwertigen Vampirs. Nach einer Blutmahlzeit beruhigt sich die Gier nur für wenige Tage, bevor die Jagd von Neuem beginnt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er ahmt die Methoden seiner Schöpferin nach und lockt Einzelne durch Gesang oder spontan entstehende Trugbilder fort. Die Verbindung aus blinder Gier und manipulativer Taktik macht seine Spur wechselhaft und gefährlich."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Illusionen und manipulative Kräfte treten meist als Reflex während Jagd, Angst oder Hunger hervor. Sie reichen nicht an die bewusste Magie einer Mula heran, können ein Opfer aber lange genug täuschen, um Abstand und Fluchtweg zu verlieren."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Betörender Gesang und verstärkte Stimme",
+            "Instinktive Illusionen und emotionale Beeinflussung",
+            "Geschärfte Sinne und gesteigerte Beweglichkeit",
+            "Menschenähnliche Tarnung bei gestilltem Hunger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jäger sollten die Stimme des Mulinar unterbrechen, Blickkontakt vermeiden und ihm keine Gelegenheit geben, einzelne Mitglieder einer Gruppe fortzulocken. Feuer, geweihte Waffen und starke sakrale Magie wirken gegen seinen unvollkommenen Fluch besonders zuverlässig."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Mulinar suchen während der frühen Wandlung freiwillig einsame Orte auf, ohne den Grund dafür zu verstehen.",
+            "Musik kann sie beruhigen und zugleich ihre Lockmagie auslösen.",
+            "Ein auffallend schöner Gesang an einem verlassenen Weg gilt unter Vampirjägern als klassisches Warnzeichen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/bloodsucker-profiles/mulinar-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Mulinar in dunkler Kapuze"
+  },
+  "hero": {
+    "src": "../../../assets/bloodsucker-profiles/mulinar-scene.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Mulinar und Reisender vollständig sichtbar auf einem verlassenen Weg bei Ruinen",
+    "caption": "Neu angelegte Bildtafel · Der Lockgesang des Mulinar"
+  }
+}

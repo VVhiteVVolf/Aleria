@@ -15445,6 +15445,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "gilden-zuenfte",
+    "fileName": "gilden-zuenfte.png",
+    "folder": "ReiterIcons/Weltpfade",
+    "path": "../IconOrdner/ReiterIcons/Weltpfade/gilden-zuenfte.png",
+    "width": 1254,
+    "height": 1254,
+    "ratio": "square"
+  },
+  {
     "name": "Zauber",
     "fileName": "Zauber.png",
     "folder": "ReiterIcons",

@@ -1,0 +1,181 @@
+{
+  "id": "frosttroll",
+  "name": "Frosttroll",
+  "classification": "Trollunterart · Eisiger Überlebensjäger",
+  "continent": "Alerias kalte Regionen",
+  "region": "Gletscher, Tundren und verschneite Gebirge",
+  "folio": "III-T / 01",
+  "parentGroupId": "trolle",
+  "summary": "Frosttrolle sind massige, weiß behaarte Bewohner eisiger Einöden und schneebedeckter Gebirge. Sie behaupten ihre Reviere mit großer Geduld, nutzen tiefen Schnee als Waffe und verbinden die Regeneration ihrer Art mit einer ungewöhnlich engen Bindung an Kälte und Frost.",
+  "quote": "Im Schneesturm siehst du seine Augen zuletzt – und seinen Atem zuerst.",
+  "quoteAttribution": "Warnspruch der nördlichen Gebirgsführer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-frosttroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Frosttroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/frosttroll.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Frosttroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Frosttroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Frosttroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; kältegebundener Troll"
+    },
+    {
+      "label": "Entstehung",
+      "value": "An Eis und Hochgebirge angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Alerias kalte Regionen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Gletscherhöhlen, eisige Tundren und verschneite Gebirge"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, geduldig und aggressiv gegenüber Eindringlingen"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung, Nacht und Schneestürme"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Kälteimmunität, Eisatem und kältegebundene Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Schneetarnung, Kraft, Ausdauer und Sicht im Sturm"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, anhaltende Hitze und warme Umgebungen"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Kaltes Trollblut, frostgehärtete Zähne und seltene Hortfunde"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Kälteresistenz",
+      "Eisatem",
+      "Schneetarnung",
+      "Hinterhalt",
+      "Regeneration",
+      "Hitzeanfälligkeit"
+    ],
+    "values": [
+      10,
+      8,
+      8,
+      7,
+      8,
+      10
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Frosttrolls abgeleitet",
+    "intro": "Die Bewertung zeigt, wie sehr Frost und Gelände diese Trollart stärken. Eine hohe Hitzeanfälligkeit bezeichnet die Wirksamkeit von Feuer und warmer Umgebung gegen sie."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Frosttroll gedeiht in Regionen, die für die meisten Lebewesen tödlich wären. Dickes weißes Fell schützt seinen massiven Körper, während eisblaue Augen selbst in Dunkelheit und Schneetreiben Bewegungen erfassen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Gestalt wirkt im offenen Gelände auffällig, verschmilzt im Sturm jedoch mit Eiswehen und verwehten Felsrücken. Ein stillstehender Frosttroll wird deshalb häufig erst erkannt, wenn er bereits zum Angriff ansetzt."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frosttrolle durchstreifen feste Reviere und greifen Eindringlinge an, sobald sie Beute oder Konkurrenz vermuten. Sie können stundenlang regungslos warten und treiben Opfer gezielt in tiefen Schnee, wo Flucht und Gegenwehr erschwert werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Jagdweise beweist keine hohe Gelehrsamkeit, wohl aber Geduld, Erinnerung und ein sicheres Verständnis der eigenen Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bevorzugt werden Gletscher, eisige Tundren und schwer zugängliche Gebirgstäler. Lager liegen in Eis- oder Felshöhlen und enthalten Knochen, Beutereste sowie Gegenstände, deren magischen oder materiellen Wert der Troll meist nicht versteht."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kälte und Schnee schaden Frosttrollen nicht. Manche Exemplare stoßen einen frostigen Atem aus, der Glieder erstarren lässt und ungeschützte Gegner bewegungsunfähig machen kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Regeneration arbeitet in kalter Umgebung besonders zuverlässig. Feuer und dauerhafte Hitze unterbrechen diesen Vorteil und schwächen den Körper rasch."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jäger vermeiden die Verfolgung im Schneesturm, halten Feuerquellen getrennt bereit und sichern einen festen Rückweg. Der Troll soll aus seinem kalten Revier gelockt oder durch anhaltende Hitze an der Regeneration gehindert werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Frosttrolle legen Beute im Schnee ab und finden sie selbst nach starkem Schneefall wieder.",
+            "Ein plötzlich verstummender Wind wird in manchen Hochpässen als Warnung vor ihrem Eisatem gedeutet.",
+            "In alten Höhlen lagern bisweilen Artefakte zwischen wertlosen Knochen, weil der Troll beides unterschiedslos hortet.",
+            "Brandnarben bleiben bei dieser Trollart länger sichtbar als gewöhnliche Wunden."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

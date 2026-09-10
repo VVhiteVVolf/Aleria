@@ -2,8 +2,8 @@ import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   CHARACTER_CLASS_TEMPLATES
-} from '../combat/character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
+} from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
+import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import {
   mergeCharacterArchiveEntries,
@@ -11,7 +11,7 @@ import {
 } from './character-archive-model.js?v=20260905-archive-order-v2';
 import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260905-barde-icon-v1';
-import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
+import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
 
 const SPELL_ATTACK_LIBRARY_URL = new URL('../../data/spell-attack-library.json', import.meta.url);
 

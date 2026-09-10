@@ -1,0 +1,206 @@
+{
+  "id": "sumpfzehrer",
+  "name": "Sumpfzehrer",
+  "classification": "Nekrophag · Vampirischer Ghul der Sümpfe",
+  "continent": "Aleria",
+  "region": "Nebelmoore, Sümpfe und verfluchte Marschlande",
+  "folio": "III-N / 14",
+  "parentGroupId": "nekrophagen",
+  "summary": "Der Sumpfzehrer ist eine untote Kreatur, die in nassen, nebligen Sümpfen und Mooren heimisch ist. Oft wird er mit dem Versunkenen verwechselt – einem amphibienartigen Strandzombie –, doch der Zehrer ist mehr als nur ein verwesender Leichnam. Er ist ein vampirischer Ghul, entstanden aus den Leibern verlorener Wanderer, Söldner oder Räuber, die in den Sümpfen umkamen.",
+  "quote": "Der Sumpf vergisst nichts – er verdaut nur langsam.",
+  "quoteAttribution": "Sprichwort der Sumpfler",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-sumpfzehrer.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Sumpfzehrer als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/sumpfzehrer.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Sumpfzehrer",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Sumpfzehrer"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Sumpfzehrer"
+    },
+    {
+      "label": "Typ",
+      "value": "Nekrophag; untoter Jäger der Sümpfe"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Verfluchung, göttliche Strafe oder spontane Wiederkehr aus Sumpfleichen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Nebelmoore, Sümpfe und verfluchte Marschlande"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Feuchtgebiete, Moorlandschaften, Nebelzonen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Rudelbildung, triebgesteuert, aggressiv territorial"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Dämmerungs- und Nachtaktiv"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Regeneration, Unterwasseratmung, Tarnung im Nebel"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Ausdauer, kaum schmerzempfindlich, Feuerresistenz durch feuchte Haut"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Lichtempfindlichkeit, gesegnete Waffen, heilige Flammen"
+    },
+    {
+      "label": "Beute",
+      "value": "Sumpffleisch, verfluchte Organe, Galle für Giftmischer"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Sumpftarnung",
+      "Regeneration",
+      "Schwimmkraft",
+      "Rudeljagd",
+      "Lichtscheu",
+      "Feuerresistenz"
+    ],
+    "values": [
+      10,
+      9,
+      10,
+      8,
+      8,
+      8
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Sumpfzehrer abgeleitet",
+    "intro": "Das Sumpfzehrer-Diagramm bewertet seine Anpassung an Feuchtigkeit, Nebel und stehendes Wasser. Lichtscheu und Feuerresistenz erklären die besonderen Anforderungen einer Jagd."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Sumpfzehrer ist eine untote Kreatur, die in nassen, nebligen Sümpfen und Mooren heimisch ist. Oft wird er mit dem Versunkenen verwechselt – einem amphibienartigen Strandzombie –, doch der Zehrer ist mehr als nur ein verwesender Leichnam. Er ist ein vampirischer Ghul, entstanden aus den Leibern verlorener Wanderer, Söldner oder Räuber, die in den Sümpfen umkamen. Manche Legenden erzählen von Flüchen oder von Sumpflern, die aus Hunger Menschenfleisch verzehrten und von den Göttern in diese Gestalt verdammt wurden."
+        }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpfzehrer sind keine verrottenden Leichen – sie sind feucht, glatt und überraschend lebendig in ihrer Beweglichkeit. Ihre Haut ist mit einer dünnen, schleimigen Substanz überzogen, die sie vor Feuer schützt, doch Licht meiden sie instinktiv. Sie sind wendige Schwimmer, hervorragende Kletterer und können mit erschreckender Geschwindigkeit rennen. Ihr Verhalten gleicht dem eines Raubtiers – präzise, zielgerichtet, ohne jede Menschlichkeit."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Über die Entstehung der Sumpfzehrer wird seit Jahrhunderten gestritten. Theologen sehen in ihnen ein Werk von Hela, der Göttin des Untods und der Nekrophagen. Andere glauben an einen natürlichen Ursprung – eine Art degenerierte Lebensform, die sich aus dem Fleisch der Toten entwickelt. Forscher der Jagdklingen und des Zirkels des Lebens haben dokumentiert, dass Sumpfzehrer in allen Altersstufen und Geschlechtern vorkommen, was auf Fortpflanzung hinweisen könnte. Beweise dafür gibt es jedoch keine. Die Bauern glauben stattdessen, der Sumpf selbst „gebäre“ sie aus Trotz, wann immer zu viele Fremde sein Land entweihen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpfzehrer leben und jagen meist in kleinen Gruppen, die von den Sumpfbewohnern schlicht „Rudeln“ genannt werden. Innerhalb solcher Rudel herrscht keine erkennbare Hierarchie, doch sie folgen instinktiv dem Stärksten oder Ältesten. Ihr Verhalten ist triebgesteuert – sie jagen, fressen, ruhen und wiederholen diesen Zyklus in endloser Schleife. Menschliche Züge sind ihnen längst abhandengekommen, ebenso Sprache und Verständnis für komplexe Kommunikation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beobachtungen der Jagdklingen berichten, dass Sumpfzehrer strategisch jagen: Sie scheuchen Beute in seichte Gewässer, um sie dort zu ertränken oder zu lähmen. Manchmal bleiben sie stundenlang regungslos unter Wasser verborgen, nur die Oberfläche ihres schleimigen Rückens lugt aus dem Schilf – leicht zu verwechseln mit einem verrotteten Baumstamm."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obwohl sie sich zu Gruppen zusammenfinden, zeigen sie keine emotionale Bindung untereinander. Ein verletzter oder geschwächter Zehrer wird oft von den eigenen Artgenossen gefressen. Dieses Verhalten hat den Aberglauben genährt, dass der Sumpf selbst durch sie „Selbstreinigung“ betreibt – frisst, was schwach wird."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpfzehrer findet man in nahezu allen Feuchtgebieten, besonders dort, wo Nebel und stehendes Wasser die Sicht verschlucken. Sie bevorzugen modrige Moore, dichte Schilfgebiete und verlassene Wassergräben, in denen die Sonne kaum den Boden erreicht. Viele Dörfer am Rande solcher Regionen errichten jährlich Opferstätten aus Tierkadavern, um die Kreaturen fernzuhalten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie meiden offenes Land und trockenes Gelände. Ihr schmieriger Körper verliert außerhalb der Feuchtigkeit an Elastizität, was sie langsamer und verletzlicher macht. Im Schutz des Nebels jedoch sind sie beinahe unsichtbar – ihre Haut reflektiert das matte Licht des Morgengrauens, als wären sie Teil des Sumpfes selbst. Nur ihr widerlicher Geruch aus Moder, Blut und altem Wasser kündigt ihre Nähe an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manche Sumpfzehrer scheinen bestimmte Regionen regelrecht zu „bewachen“. Es heißt, sie kehren immer wieder an Orte zurück, an denen sie selbst einst starben oder an denen Menschen im Morast verschwanden. Für viele Sümpfler sind diese Orte tabu – sie nennen sie schlicht Die Tiefe Brut."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sumpfzehrer gelten technisch als Untote, doch ihr Zustand widerspricht vielem, was man über den Tod weiß. Selbst schwere Verletzungen hindern sie kaum daran, weiterzukämpfen. Ihre Körper regenerieren träge, aber stetig – zerrissenes Fleisch schließt sich, gebrochene Knochen richten sich, und sogar Enthauptete sollen nach Tagen wieder gesehen worden sein. Einige Gelehrte vermuten, dass eine Art nekromantische Restenergie ihren Körper am Leben hält, gespeist durch den Sumpf selbst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Effektiv gegen sie sind gesegnete Waffen oder Feuer, doch Letzteres ist schwierig: Ihre feuchte, lederartige Haut widersteht Flammen, und erst bei intensiver Hitze beginnen sie zu brennen. Heiliges Öl oder geweihtes Salz zeigen bessere Wirkung, ebenso Sonnenlicht – das sie zwar nicht sofort vernichtet, aber schwächt und in Panik versetzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Sumpfland ist es Brauch, einmal im Jahr eine Säuberung durchzuführen. Bewaffnete Dorfbewohner und Milizen waten durch die Moore, treiben die Zehrer zusammen, häufen ihre Leiber auf trockenen Boden und verbrennen sie. Ein gefährliches Ritual, doch notwendig, um das Land bewohnbar zu halten."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche berichten, dass Sumpfzehrer die Stimmen derer nachahmen können, die im Morast gestorben sind.",
+            "Ihre Schleimhaut wird von Alchemisten als seltene Zutat für wasserabweisende Tinkturen verwendet.",
+            "In alten Liedern der Marschlande wird behauptet, dass der Sumpfzehrer das letzte Gesicht seines Opfers stiehlt – um es bei der nächsten Jagd zu tragen.",
+            "Manche Berichte schreiben Sumpfzehrern die Stimmen im Morast Verstorbener zu.",
+            "Ihre Schleimhaut wird als seltene Zutat für wasserabweisende Tinkturen gesammelt.",
+            "Alte Lieder behaupten, der Sumpfzehrer stehle das letzte Gesicht seines Opfers.",
+            "Reglose Rücken im Schilf werden leicht mit verrottetem Holz verwechselt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

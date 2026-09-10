@@ -1,0 +1,264 @@
+/* Archive shell only. Shared modal/editor theme tokens remain independent. */
+.almanach-app {
+  --almanach-paper: #f5f0e2;
+  --almanach-background: #e6d8ba;
+  --almanach-ink: #342b22;
+  --almanach-muted: #716451;
+  --almanach-brass: #a58b57;
+  --almanach-line: #d7c9ae;
+  --almanach-green: #435548;
+  --almanach-green-soft: #e5e8dc;
+  background: var(--almanach-background);
+}
+
+  .almanach-header { text-align: center; position: relative; overflow: hidden; background: var(--almanach-paper); border-bottom: 1px solid var(--almanach-line); padding: 1.65rem 1.5rem 1.35rem; color: var(--almanach-ink); }
+  .almanach-header::before { content:''; position:absolute; pointer-events:none; inset: 50% auto auto clamp(1.5rem, 9vw, 11rem); width: 15rem; height: 15rem; transform: translateY(-50%) rotate(-12deg); background: url("../../public/assets/dashboard/compass.svg") center / contain no-repeat; opacity: 0.2; }
+  .header-pre { font-style:italic; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--almanach-muted); opacity: 1; margin-bottom: 0.65rem; }
+  .almanach-header h1 { font-family:'Cinzel',serif; font-weight:700; line-height:1.1; font-size: clamp(1.9rem, 3.6vw, 3.2rem); text-shadow: none; color: var(--almanach-ink); letter-spacing: 0.06em; }
+  .header-tagline { font-family:'Cinzel',serif; font-size:clamp(0.6rem,1.4vw,0.82rem); color:var(--ink-faded); letter-spacing:0.22em; margin-top:0.6rem; text-transform:uppercase; opacity:0.9; }
+  .header-subtitle { font-style:italic; color: var(--almanach-muted); font-size: 0.92rem; opacity: 1; margin-top: 0.55rem; }
+  .header-divider { height:1px; width: min(20rem, 70%); background: linear-gradient(90deg, transparent, var(--almanach-brass), transparent); margin: 1rem auto 0; }
+  .gallery-tabs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--almanach-line);
+    margin-bottom: 0;
+    background: var(--almanach-paper);
+    box-shadow: 0 4px 12px rgba(52,43,34,0.035);
+    padding: 0.45rem clamp(0.75rem, 2vw, 1.3rem);
+  }
+  .gallery-tab-group {
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+  .gallery-tab-group-main {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 0.08rem;
+  }
+  .gallery-tab-group-tools {
+    flex-wrap: nowrap;
+    padding-left: 0.65rem;
+    border-left: 1px solid var(--almanach-line);
+  }
+  .gallery-tab-tool-actions {
+    display: none;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+  .gallery-tab-group-tools.is-expanded .gallery-tab-tool-actions {
+    display: flex;
+  }
+  .gallery-tab-btn {
+    font-family: 'Cinzel', serif;
+    min-height: 2.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s, border-color 0.2s, color 0.2s, background 0.2s;
+    white-space: nowrap;
+    font-size: 0.67rem;
+    letter-spacing: 0.055em;
+    color: var(--almanach-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    opacity: 1;
+    padding: 0.7rem 0.85rem;
+  }
+  .gallery-tab-btn:hover {
+    opacity: 1;
+    color: var(--almanach-green);
+    background: var(--almanach-green-soft);
+  }
+  .gallery-tab-btn.active {
+    opacity: 1;
+    border-bottom-color: var(--almanach-green);
+    border-inline-color: transparent;
+    color: var(--almanach-green);
+    background: var(--almanach-green-soft);
+    box-shadow: none;
+  }
+  .gallery-tab-btn.gallery-tab-add {
+    opacity: 1;
+    color: var(--almanach-muted);
+    background: transparent;
+    border-color: var(--almanach-line);
+  }
+  .gallery-tab-btn.gallery-tab-add:hover {
+    opacity: 1;
+    color: var(--gold);
+    border-color: rgba(139,105,20,0.36);
+  }
+  .gallery-tab-edit-toggle {
+    min-width: 7.6rem;
+  }
+  .gallery-tab-edit-toggle::after {
+    content: '▾';
+    margin-left: 0.45rem;
+    font-size: 0.62rem;
+  }
+  .gallery-tab-edit-toggle.active::after {
+    content: '▴';
+  }
+
+  .archive-toolbar {
+    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 1.1rem;
+    padding: 0 0 1.2rem;
+    border: 0;
+    border-bottom: 1px solid var(--almanach-line);
+    background: transparent;
+    box-shadow: none;
+  }
+  .archive-toolbar-label {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    text-transform: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    color: var(--almanach-ink);
+    white-space: normal;
+  }
+  .archive-search-wrap {
+    flex: 1 1 340px;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    position: relative;
+    gap: 0;
+    width: 100%;
+  }
+  .archive-search-input {
+    flex: 1;
+    min-width: 0;
+    font-family: 'EB Garamond', serif;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    min-height: 3.25rem;
+    background: var(--almanach-paper);
+    border: 1px solid var(--almanach-line);
+    color: var(--almanach-ink);
+    padding: 0.75rem 5.2rem 0.75rem 2.75rem;
+    font-size: 1.05rem;
+    border-radius: 3px;
+  }
+  .archive-search-input:focus {
+    border-color: var(--almanach-green);
+    box-shadow: 0 0 0 3px var(--almanach-green-soft);
+    background: #fffdf7;
+  }
+  .archive-search-input::placeholder {
+    color: var(--almanach-muted);
+    opacity: 1;
+  }
+  .archive-search-clear {
+    flex-shrink: 0;
+    background: transparent;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s, opacity 0.15s;
+    position: absolute;
+    right: 0.3rem;
+    min-height: 2.65rem;
+    padding: 0.45rem 0.6rem;
+    border: 0;
+    color: var(--almanach-green);
+    font-size: 0.65rem;
+    letter-spacing: 0.025em;
+  }
+  .archive-search-clear:hover:not(:disabled) {
+    border-color: var(--theme-accent);
+    color: var(--theme-accent);
+    background: var(--theme-accent-soft);
+  }
+  .archive-search-clear:disabled {
+    cursor: default;
+    visibility: hidden;
+    opacity: 1;
+  }
+  .archive-search-meta {
+    line-height: 1.45;
+    color: var(--almanach-muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 860px) {
+    .archive-toolbar {
+      align-items: stretch;
+    }
+
+    .archive-search-clear {
+      min-width: 88px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .gallery-tabs {
+      padding: 0.45rem 0.65rem;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.35rem;
+    }
+
+    .gallery-tab-group-main,
+.gallery-tab-group-tools {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+
+    .gallery-tab-group-tools {
+      padding-top: 0;
+      padding-left: 0.35rem;
+      border-top: 0;
+      border-left: 1px solid var(--almanach-line);
+    }
+
+    .gallery-tab-btn {
+      padding-inline: 0.72rem;
+      font-size: 0.64rem;
+      letter-spacing: 0.025em;
+    }
+
+    .archive-toolbar {
+      align-items: stretch;
+    }
+
+    .archive-search-wrap {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    .archive-toolbar-label,
+.archive-search-meta {
+      width: 100%;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+  }
+.almanach-header > * { position: relative; }
+.archive-search-icon { position: absolute; left: 1rem; width: 1.1rem; height: 1.1rem; color: var(--almanach-muted); pointer-events: none; }
+.gallery-tab-group-tools.is-expanded { max-width: min(68vw, 44rem); }
+.gallery-tab-group-tools.is-expanded .gallery-tab-tool-actions { overflow-x: auto; }
+.gallery-tab-btn:focus-visible, .archive-search-clear:focus-visible { outline: 2px solid var(--almanach-green); outline-offset: -3px; }
+@media (max-width: 760px) {
+  .almanach-header { padding: 1.2rem 1rem; }
+  .almanach-header::before { left: -6rem; opacity: 0.12; }
+  .header-pre { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .header-subtitle { max-width: 25rem; margin-inline: auto; font-size: 0.8rem; }
+  .gallery-tab-edit-toggle { min-width: 0; }
+  .archive-search-input { padding-left: 2.4rem; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-tab-btn, .archive-search-input, .archive-search-clear { transition: none; }
+}

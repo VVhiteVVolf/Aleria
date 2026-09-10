@@ -1,8 +1,9 @@
-import { DRACHENTANZ_COMBAT_STYLE } from './drachentanz/drachentanz-registry.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_COMBAT_STYLE } from './drachentanz/drachentanz-registry.js?v=20260909-dragon-parent-v2';
+import { WYRMTANZ_COMBAT_STYLE } from './sirenentanz/wyrmtanz-registry.js?v=20260909-dragon-parent-v2';
 
 export const COMBAT_STYLE_REGISTRY_SCHEMA_VERSION = 1;
 
-const STYLES = Object.freeze([DRACHENTANZ_COMBAT_STYLE]);
+const STYLES = Object.freeze([DRACHENTANZ_COMBAT_STYLE, WYRMTANZ_COMBAT_STYLE]);
 
 function clone(value) {
   return typeof structuredClone === 'function'

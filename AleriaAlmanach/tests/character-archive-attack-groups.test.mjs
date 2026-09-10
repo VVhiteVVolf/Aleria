@@ -24,21 +24,59 @@ const groupEntries = group => [
   ...(group?.children || []).flatMap(groupEntries)
 ];
 
+test('ascending form and its attacks are nested only beneath the flying dragon, including filtered searches', () => {
+  const ascendingId = 'drachentanz-pfad-aufsteigender-drache';
+  const attack = catalog.find(entry => entry.kind === 'technique' && entry.data.combatStyleFormId === ascendingId);
+  assert(attack);
+  for (const selected of [entries.filter(entry => matchesCharacterArchiveKind(entry, 'technique')), [attack]]) {
+    const groups = getCharacterArchiveAttackGroups(selected, entries);
+    for (const className of ['Teulu', 'Helwyr', 'Arthwyr']) {
+      const style = groups.find(group => group.name === className).children.find(group => group.name === 'Drachentanz');
+      assert(!style.children.some(group => group.parentEntry?.data.id === ascendingId));
+      const flying = style.children.find(group => group.parentEntry?.data.id === 'drachentanz-form-iv-fliegender-drache');
+      assert.equal(flying.children.length, 1, className);
+      assert.equal(flying.children[0].parentEntry.data.id, ascendingId, className);
+      assert(flying.children[0].entries.some(entry => entry.data.id === attack.data.id), className);
+      const balanced = style.children.find(group => group.parentEntry?.data.id === 'drachentanz-form-vi-ausgeglichener-drache');
+      assert(!balanced?.children.length, className);
+    }
+  }
+});
+
 test('canonical Drachentanz keeps every Cenyr attack under class, style and form', () => {
   const groups = getCharacterArchiveAttackGroups(entries.filter(entry => matchesCharacterArchiveKind(entry, 'technique')), entries);
   const teulu = groups.find(group => group.name === 'Teulu');
   assert(teulu);
   const style = teulu.children.find(group => group.name === 'Drachentanz');
-  assert.equal(style.children.length, 15);
+  assert.equal(style.children.length, 8);
   assert.deepEqual(style.children.slice(0, 6).map(group => group.parentEntry.data.number), [1, null, 2, 3, 4, 5]);
   assert.equal(style.children.filter(group => group.parentEntry.data.number === 6).length, 1);
   assert.equal(style.children[0].entries.length, 10);
-  assert.equal(style.children.find(group => group.parentEntry.data.id === 'drachentanz-pfad-bogendrache').entries.length, 0, 'Gesperrte kanonische Pfade bleiben sichtbar');
+  assert.ok(!style.children.some(group => group.parentEntry.data.id === 'drachentanz-pfad-lauernder-drache'), 'Klassenfremde Pfade werden nicht unter Teulu einsortiert');
+  assert.ok(!style.children.some(group => /(?:bogendrache|satteldrache|lanzendrache)$/.test(group.parentEntry.data.id)), 'Abgelöste Pfade erscheinen nicht mehr');
   const people = groups.find(group => group.name === 'Personen');
   const gawain = people?.children.find(group => group.name === 'Gawain Draig');
   assert.equal(groupEntries(gawain).some(entry => String(entry.data?.id || '').startsWith('gawain-dragon-')), false);
   assert.equal(style.children[0].entries.some(entry => entry.name === 'Biss des Jungdrachens'), true);
   assert(!groupNames(groups).includes('Drachentanz · Ausbildungsform'));
+});
+
+test('the attack archive routes class forms only to their permitted curricula', () => {
+  const groups = getCharacterArchiveAttackGroups(entries.filter(entry => matchesCharacterArchiveKind(entry, 'technique')), entries);
+  const counts = { Teulu: 9, Cantref: 5, Uchelwyr: 7, Helwyr: 11, Arthwyr: 10, Barddwyr: 5 };
+  for (const [name, count] of Object.entries(counts)) {
+    const owner = groups.find(group => group.name === name);
+    const rootForms = owner.children.find(group => group.name === 'Drachentanz').children;
+    const forms = rootForms.flatMap(form => [form, ...form.children]);
+    assert.equal(forms.length, count, name);
+    const accesses = owner.parentEntry.data.cultureClassProfiles.flatMap(profile => profile.formAccess || []);
+    assert.ok(forms.every(form => accesses.some(access => access.formId === form.parentEntry.data.id && access.status !== 'blocked')), name);
+  }
+  const derwyn = groups.filter(group => group.name.startsWith('Derwyn'));
+  assert.equal(derwyn.length, 1, 'one unified Derwyn curriculum');
+  assert.equal(derwyn[0].parentEntry.data.cultureClassProfiles.length, 1);
+  assert.equal(derwyn[0].children.find(group => group.name === 'Drachentanz').children.length, 1);
+  assert.equal(derwyn[0].children.find(group => group.name === 'Wyrmtanz').children.length, 6);
 });
 
 test('filtered attack retains its canonical parents even when those are not visible search results', () => {

@@ -1,0 +1,29 @@
+/* Overflow and the full area chooser supplement the existing theme tabs. */
+.gallery-tabs { grid-template-columns: minmax(0, 1fr) auto auto; }
+.archive-tab-scroller { display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; align-items: stretch; }
+.archive-tab-scroller.has-overflow { grid-template-columns: 2rem minmax(0, 1fr) 2rem; }
+.archive-tab-scroll { padding: 0; border: 0; background: transparent; color: var(--almanach-green); font: 1.4rem 'EB Garamond', serif; cursor: pointer; }
+.archive-tab-scroll[hidden] { display: none; }
+.archive-tab-scroll:disabled { opacity: 0.3; cursor: default; }
+.archive-area-toggle { display: flex; align-items: center; gap: 0.65rem; min-height: 2.75rem; height: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--almanach-line); border-radius: 3px; background: #fbf8ef; color: var(--almanach-green); font: 600 0.66rem/1.3 'Cinzel', serif; white-space: nowrap; cursor: pointer; }
+.archive-area-toggle[aria-expanded="true"] { background: var(--almanach-green-soft); border-color: var(--almanach-green); }
+.archive-area-panel { position: absolute; top: calc(100% + 0.35rem); right: 1rem; z-index: 1; width: min(40rem, calc(100vw - 2rem)); max-height: min(70dvh, 42rem); padding: 1.1rem; overflow: auto; border: 1px solid var(--almanach-brass); border-radius: 3px; background: var(--almanach-paper); box-shadow: 0 16px 40px rgba(52,43,34,0.2); }
+.archive-area-panel[hidden] { display: none; }
+.archive-area-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; color: var(--almanach-ink); font: 600 1rem 'Cinzel', serif; }
+.archive-area-panel-head button { width: 2.75rem; height: 2.75rem; border: 0; background: transparent; color: var(--almanach-muted); font-size: 1.4rem; cursor: pointer; }
+.archive-area-home { display: flex; justify-content: space-between; width: 100%; min-height: 2.75rem; align-items: center; margin-bottom: 0.8rem; padding: 0.65rem; border: 1px solid var(--almanach-line); background: #fbf8ef; color: var(--almanach-green); font: 600 0.75rem 'Cinzel', serif; cursor: pointer; }
+.archive-area-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+.archive-area-grid .archive-dashboard-section { grid-template-columns: 2.5rem minmax(0, 1fr); padding: 0.65rem; gap: 0.65rem; }
+.archive-area-grid .archive-dashboard-section-icon, .archive-area-grid .archive-dashboard-section-mark { width: 2.5rem; height: 2.5rem; }
+.archive-area-grid .archive-dashboard-section-arrow { display: none; }
+.archive-area-panel [aria-current="page"] { border-color: var(--almanach-green); background: var(--almanach-green-soft); }
+.gallery-tabs :is(.archive-tab-scroll, .archive-area-toggle, .archive-area-panel button):focus-visible { outline: 2px solid var(--almanach-green); outline-offset: -3px; }
+@media (max-width: 760px) {
+  .gallery-tabs { grid-template-columns: minmax(0, 1fr) auto; }
+  .archive-tab-scroller { grid-column: 1 / -1; }
+  .archive-area-toggle { min-height: 2.75rem; }
+  .gallery-tab-group-tools { justify-self: end; border-left: 0; }
+  .gallery-tab-group-tools.is-expanded { max-width: 62vw; }
+  .archive-area-panel { right: 0.6rem; width: calc(100vw - 1.2rem); padding: 0.8rem; }
+}
+@media (max-width: 440px) { .archive-area-grid { grid-template-columns: 1fr; } }

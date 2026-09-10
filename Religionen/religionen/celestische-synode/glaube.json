@@ -1,0 +1,452 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "titanen",
+      "title": "Die Titanen",
+      "entries": [
+        {
+          "id": "ordeus",
+          "name": "Ordeus",
+          "epithet": "",
+          "relatedIds": [
+            "ordan"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/ordeus.png",
+            "alt": "Ordeus",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "mariella",
+          "name": "Mariella",
+          "epithet": "",
+          "relatedIds": [
+            "mariel"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/mariella.png",
+            "alt": "Mariella",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "mardran",
+          "name": "Mardran",
+          "epithet": "",
+          "relatedIds": [
+            "baldran"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/mardran.png",
+            "alt": "Mardran",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "thedros",
+          "name": "Thedros",
+          "epithet": "",
+          "relatedIds": [
+            "maldras"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/thedros.png",
+            "alt": "Thedros",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "divana",
+          "name": "Divana",
+          "epithet": "",
+          "relatedIds": [
+            "sylvana"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/divana.png",
+            "alt": "Divana",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "lytheris",
+          "name": "Lytheris",
+          "epithet": "",
+          "relatedIds": [
+            "lyris"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/lytheris.png",
+            "alt": "Lytheris",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "tharistos",
+          "name": "Tharistos",
+          "epithet": "",
+          "relatedIds": [
+            "tharim"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/tharistos.png",
+            "alt": "Tharistos",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "othorin",
+          "name": "Othorin",
+          "epithet": "",
+          "relatedIds": [
+            "orin"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/othorin.png",
+            "alt": "Othorin",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "kharos",
+          "name": "Kharos",
+          "epithet": "",
+          "relatedIds": [
+            "kharon"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/kharos.png",
+            "alt": "Kharos",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "patron",
+      "title": "Der Patrongott",
+      "entries": [
+        {
+          "id": "zephyr",
+          "name": "Zephyr",
+          "epithet": "Patrongott der Synode",
+          "relatedIds": [
+            "zephyr"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/zephyr.png",
+            "alt": "Zephyr – Patrongott der Synode",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "nebengoetter",
+      "title": "Celestische Unter- und Nebengötter",
+      "entries": [
+        {
+          "id": "pyrotes",
+          "name": "Pyrotes",
+          "epithet": "Der Trickser",
+          "relatedIds": [
+            "migdal"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/pyrotes.png",
+            "alt": "Pyrotes – Der Trickser",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "nereidia",
+          "name": "Nereidia",
+          "epithet": "Die Seemaid",
+          "relatedIds": [
+            "tethyra"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/nereidia.png",
+            "alt": "Nereidia – Die Seemaid",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "fortuna",
+          "name": "Fortuna",
+          "epithet": "Die Glücksmaid",
+          "relatedIds": [
+            "jovena"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/fortuna.png",
+            "alt": "Fortuna – Die Glücksmaid",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "nemesis",
+          "name": "Nemesis",
+          "epithet": "Die Rächerin",
+          "relatedIds": [
+            "nemsara"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/nemesis.png",
+            "alt": "Nemesis – Die Rächerin",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "geminius",
+          "name": "Geminius",
+          "epithet": "Der Zweigesichtige",
+          "relatedIds": [
+            "azrath-morvath"
+          ],
+          "image": {
+            "src": "religionen/celestische-synode/assets/geminius.png",
+            "alt": "Geminius – Der Zweigesichtige",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Tempelhierarchie",
+    "entries": [
+      {
+        "id": "pontifex",
+        "title": "Pontifex",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Pontifex ist die höchste kirchliche Autorität innerhalb der Celestischen Synode, jedoch nicht der oberste Herrscher über die gesamte Hierarchie. Als ranghöchster Kleriker steht der Pontifex über den Primarchen, den Führern der einzelnen Stränge der Tempelhierarchie, und lenkt die spirituellen und administrativen Belange der Kirche. Seine Rolle ist jedoch klar abgegrenzt, denn er steht nicht über dem Kaiser oder dem göttlichen Zephyr selbst."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Pontifex agiert vielmehr als Mediator und Brücke zwischen der Kirche, dem Adel und dem göttlichen Zephyr. Er sorgt dafür, dass die Lehren und Gebote der Kirche im Einklang mit den weltlichen Herrschern und den göttlichen Willen Zephyrs umgesetzt werden. Diese Vermittlerrolle erfordert nicht nur tiefes religiöses Wissen und Autorität, sondern auch politisches Geschick und diplomatische Fähigkeiten, um die Interessen der Kirche in einer Welt voller mächtiger Monarchen und göttlicher Einflüsse zu wahren."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieser Mediatorenstatus des Pontifex ist ein gravierender Unterschied zum Hierarchen der Alerischen Kirche, der über jede Monarchie und weltliche Macht steht und direkten Einfluss auf die Herrscher ausübt. Der Pontifex der Celestischen Synode hingegen muss die Balance zwischen geistlicher Führung und weltlicher Macht halten, stets darauf bedacht, die Kirche stark und geeint zu halten, ohne jedoch die Autorität des Kaisers oder Zephyrs zu untergraben."
+          },
+          {
+            "type": "paragraph",
+            "text": "In seiner Funktion als Pontifex gewährleistet er, dass die Kirche ihren Einfluss ausübt, ohne in direkte Konfrontation mit weltlichen Mächten zu geraten, und dass die spirituellen Belange der Gläubigen im Einklang mit den herrschenden Strukturen geführt werden. Seine Rolle ist von zentraler Bedeutung für die Stabilität und Einheit der Celestischen Synode in einer komplexen und oft herausfordernden Welt."
+          }
+        ]
+      },
+      {
+        "id": "primarch",
+        "title": "Primarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Primarch ist eine der höchsten Positionen innerhalb der Celestischen Synode und repräsentiert die Spitze der Hierarchie , die jedem der 9 primären Götter, auch als Titanen bekannt, gewidmet ist. In der Kirche der Celestischen Synode hat jeder dieser Titanen einen eigenen Strang in der Tempelhierarchie, der bestimmte Aufgabenbereiche und Domänen abdeckt. Der Primarch steht als Kopf dieser Stränge und ist die oberste Autorität innerhalb der jeweiligen Hierarchie, sowohl in spiritueller als auch in administrativer Hinsicht."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Primarch ist er verantwortlich für die gesamte Organisation, Lehre und Praxis, die mit dem ihm zugewiesenen Gott verbunden sind. Seine Rolle umfasst die Leitung aller untergeordneten Kleriker, die diesem Strang angehören, von Diakonen und Lektoren bis hin zu Caelarchen und Auguren. Er stellt sicher, dass die Lehren und Rituale im Einklang mit den göttlichen Geboten durchgeführt werden und dass die Tempel, die diesem Titanen geweiht sind, in ihrem vollen Glanz erstrahlen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Darüber hinaus gibt es auch Primarchen für die sogenannten Sekundärgötter, die als Nebengötter oder geringere Titanen angesehen werden. Diese Primarchen übernehmen ähnliche Verantwortungen, sind jedoch in einem kleineren und spezialisierteren Bereich tätig."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Primarch ist nicht nur eine spirituelle Figur, sondern auch ein politischer und administrativer Führer innerhalb der Kirche. Sein Einfluss reicht weit über den Tempel hinaus, den er direkt leitet; er ist eine Schlüsselfigur in der Ausrichtung und Ausführung der großen Ziele der Celestischen Synode. Jeder der 9 Primarchen für die Haupttitanen ist für einen zentralen Aspekt des Glaubens verantwortlich und trägt entscheidend dazu bei, die Einheit und Stärke der Synode zu bewahren."
+          }
+        ]
+      },
+      {
+        "id": "cealarch",
+        "title": "Cealarch",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Caelarch ist ein hochrangiger Templer und Kleriker innerhalb der Celestischen Synode, der nicht nur durch seine militärische Position, sondern auch durch seine außergewöhnliche religiöse Autorität hervorsticht. Als eine der höchsten geistlichen und militärischen Instanzen verbindet der Caelarch die spirituelle Führung mit strategischem Denken und militärischem Geschick. Er ist oft für die Leitung wichtiger Tempel oder heiliger Stätten verantwortlich, kann aber auch eine Abtei oder ein Kloster führen, wobei sein Einfluss und seine Macht weit über die eines gewöhnlichen Abtes hinausgehen."
+          },
+          {
+            "type": "paragraph",
+            "text": "In seiner Rolle als Caelarch führt er nicht nur die ihm unterstellten Diakone, Lektoren und niederen Kleriker, sondern auch Kriegerpriester und Templer, die unter seinem Kommando stehen. Seine Aufgaben umfassen sowohl die spirituelle Leitung als auch die strategische Planung und Durchführung von heiligen Feldzügen oder der Verteidigung heiliger Orte. Seine Entscheidungen haben oft weitreichende Auswirkungen sowohl auf die religiösen als auch auf die militärischen Belange der Synode."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Caelarch genießt höchste Anerkennung innerhalb der Kirche und ist eine Schlüsselfigur in der Vereinigung von Glauben und Kriegskunst. Seine Autorität reicht bis in die höchsten Kreise der Synode, und seine Meinung wird in wichtigen spirituellen und militärischen Angelegenheiten stark berücksichtigt. Als Führer, Lehrer und Krieger in einer Person ist der Caelarch ein Symbol für die Macht und den Schutz, den die Götter der Synode ihren Anhängern gewähren."
+          }
+        ]
+      },
+      {
+        "id": "augur",
+        "title": "Augur",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Augur ist ein hoher Kleriker innerhalb der Celestischen Synode, dem die Leitung eines Klosters oder einer Abtei anvertraut wurde. In dieser bedeutenden Rolle steht der Augur an der Spitze einer großen geistlichen Gemeinschaft und trägt die Verantwortung für deren spirituelle Führung und die Verwaltung der klösterlichen oder abteilichen Angelegenheiten. Unter seiner Leitung dienen zahlreiche Diakone, Lektoren und viele niedere Kleriker, die gemeinsam das religiöse Leben und die täglichen Abläufe in der Abtei oder dem Kloster aufrechterhalten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Führer einer solch bedeutenden Einrichtung ist der Augur nicht nur ein spiritueller Mentor und Lehrer für die ihm unterstellten Kleriker, sondern auch ein Verwalter, der dafür sorgt, dass die klösterliche Gemeinschaft in Einklang mit den Lehren der Synode und den Geboten der Götter lebt. Er überwacht die Ausbildung der jüngeren Kleriker, stellt sicher, dass die klösterlichen Regeln eingehalten werden, und leitet die Durchführung aller religiösen Zeremonien und Rituale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Augur ist eine zentrale Figur in der kirchlichen Hierarchie, deren Weisheit und Führungsstärke entscheidend für das Wohlergehen der Gemeinschaft und die Erhaltung der kirchlichen Traditionen sind. Sein Einfluss erstreckt sich über die Mauern des Klosters hinaus, da er oft auch eine beratende Rolle in der weiteren Kirche spielt und in wichtigen spirituellen Angelegenheiten zu Rate gezogen wird."
+          }
+        ]
+      },
+      {
+        "id": "diakon",
+        "title": "Diakon",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Diakon ist ein höher gestellter Kleriker innerhalb der Celestischen Synode, dem die Verantwortung übertragen wurde, eine kleine Gemeinde oder Kirche zu führen. In seiner Rolle als geistlicher Führer leitet der Diakon die täglichen Andachten, führt rituelle Zeremonien durch und sorgt für das spirituelle Wohl seiner Gemeinde. Diese Position erfordert nicht nur tiefes Wissen über die kirchlichen Lehren und Riten, sondern auch Führungsqualitäten, um eine Gemeinschaft effektiv zu leiten."
+          },
+          {
+            "type": "paragraph",
+            "text": "Neben seinen Aufgaben als Gemeindeleiter spielt der Diakon eine zentrale Rolle in der Ausbildung der jüngeren Kleriker. Diakone sind häufig die Lehrer von Novizen und Lehrlingen, denen sie die Grundlagen des Glaubens und der kirchlichen Praxis vermitteln. Sie weihen die jungen Mitglieder der Kirche in die heiligen Schriften, die Liturgie und die rituellen Traditionen ein und bereiten sie auf ihre zukünftigen Aufgaben innerhalb der Synode vor. Durch diese pädagogische Verantwortung tragen Diakone maßgeblich zur Weitergabe des Wissens und zur Aufrechterhaltung der kirchlichen Traditionen bei."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Diakon ist somit eine Schlüsselperson in der Struktur der Celestischen Synode, die sowohl als geistlicher Führer ihrer Gemeinde als auch als Lehrer und Mentor für die nächste Generation von Klerikern wirkt. Seine Rolle verbindet pastorale Fürsorge mit pädagogischer Verantwortung, wodurch er sowohl das spirituelle Leben seiner Gemeinde als auch die Ausbildung künftiger Priester nachhaltig prägt."
+          }
+        ]
+      },
+      {
+        "id": "juenger",
+        "title": "Jünger",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Jünger ist ein Rang innerhalb der Celestischen Synode, der reguläre Diener der Kirche kennzeichnet, denen keine großen Obligationen oder festen Verpflichtungen auferlegt sind. Dieser Rang ist besonders jenen vorbehalten, die im Dienst von Herrschern, Ritterorden oder ähnlichen Institutionen stehen. Der Rang des Jüngers dient in erster Linie dazu, diese Personen als vollwertige Kleriker anzuerkennen, ohne ihnen die strengen Verpflichtungen aufzuerlegen, die mit höheren kirchlichen Rängen verbunden sind."
+          },
+          {
+            "type": "paragraph",
+            "text": "Jünger genießen somit eine gewisse Flexibilität, die es ihnen ermöglicht, ihren primären Verpflichtungen nachzugehen, sei es im Dienst eines Herrschers, in einem militärischen Orden oder in anderen weltlichen Aufgaben. Gleichzeitig sind sie durch den Rang des Jüngers als vollwertige Mitglieder der kirchlichen Gemeinschaft anerkannt, mit allen Rechten und dem Respekt, der einem Kleriker zusteht. Dies ermöglicht ihnen, sowohl ihren weltlichen als auch ihren spirituellen Pflichten gerecht zu werden, ohne an die strikten Strukturen und Hierarchien der Kirche gebunden zu sein."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Rang des Jüngers stellt somit eine Brücke zwischen der kirchlichen und der weltlichen Welt dar, indem er die spirituelle Rolle dieser Personen anerkennt, ohne sie durch kirchliche Obligationen einzuschränken. Auf diese Weise bleibt ihre Flexibilität gewahrt, während sie dennoch in vollem Umfang als Diener der Kirche respektiert und akzeptiert werden."
+          }
+        ]
+      },
+      {
+        "id": "lektor",
+        "title": "Lektor",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Lektor ist ein höherer Kleriker innerhalb der Celestischen Synode, der häufig administrative und organisatorische Aufgaben übernimmt. Obwohl er gelegentlich den angesehenen Posten eines Hofkaplans besetzen kann, wird er in der Regel als mittlerer Priester betrachtet, dessen Hauptverantwortung in der Unterstützung und Vertretung höherer Kleriker liegt. Der Lektor agiert oft als Stellvertreter oder Sekretär für ranghöhere Priester und übernimmt eine Vielzahl von Aufgaben, die sowohl geistliche als auch praktische Aspekte des kirchlichen Lebens betreffen."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ein typischer Lektor ist mit niederen administrativen Diensten betraut, die jedoch von entscheidender Bedeutung für den reibungslosen Ablauf des kirchlichen Alltags sind. Dazu gehören die Regelung des Briefverkehrs, die Instandhaltung von Räumlichkeiten, sowie die Überwachung und Leitung spezifischer Bereiche wie die eines Küchenmeisters oder Stallmeisters. Der Lektor sorgt dafür, dass alle notwendigen Vorbereitungen für religiöse Zeremonien und tägliche Abläufe reibungslos ablaufen und unterstützt die höheren Kleriker in ihrer geistlichen und administrativen Arbeit."
+          },
+          {
+            "type": "paragraph",
+            "text": "Obwohl der Lektor in der Hierarchie nicht die höchste Position innehat, spielt er eine unverzichtbare Rolle in der Struktur der Synode, indem er dafür sorgt, dass die praktischen und administrativen Belange des Tempels oder der Kirche effektiv verwaltet werden. Seine Position verlangt nicht nur organisatorisches Geschick, sondern auch ein tiefes Verständnis der kirchlichen Lehren, um die Kleriker in ihrer Mission zu unterstützen und die Gemeinde zu leiten."
+          }
+        ]
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Adept ist ein Priester in der Celestischen Synode, der bereits tiefere Einblicke in die Lehren und Riten seines Tempels gewonnen hat und nun Aufgaben mit größerer Verantwortung übernimmt. Seine Erfahrungen und Kenntnisse erlauben es ihm, eine wichtigere Rolle innerhalb seiner Glaubensgemeinschaft zu spielen, wobei seine spezifischen Pflichten stark von dem Gott abhängen, dem er dient."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ein Adept des Kharos, des Gottes des Todes, könnte in Bereiche involviert sein, die mit Übergangsriten, Bestattungen oder der Begleitung von Seelen in das Jenseits zu tun haben. Seine Aufgaben reflektieren die ernste und tiefgründige Natur des Gottes, dem er dient."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ein Adept des Mardran, des Gottes des Krieges, übernimmt hingegen Aufgaben, die in der Vorbereitung auf und Durchführung von rituellen Kriegen oder militärischen Zeremonien liegen könnten. Seine Rolle ist eng mit den kriegerischen Traditionen und der Ehre im Kampf verbunden."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Adept befindet sich in einer wichtigen Übergangsphase seiner priesterlichen Laufbahn. Er ist kein Novize mehr, sondern ein erfahrener Priester, der sich darauf vorbereitet, in der Hierarchie der Synode weiter aufzusteigen. Die Verantwortung, die er trägt, ist größer, und er ist bestrebt, die Weisheit und den Willen seines Gottes noch tiefer zu verstehen und in die Praxis umzusetzen."
+          }
+        ]
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Novize ist ein niederer Priester innerhalb der Celestischen Synode, der in den heiligen Kreis der Brüder oder Schwestern aufgenommen wurde. Mit dieser Aufnahme beginnt ein neuer Abschnitt auf seinem spirituellen Weg. Obwohl der Novize bereits die Grundausbildung hinter sich hat und nun offiziell Teil des geistlichen Lebens ist, steht er noch am Anfang seiner priesterlichen Laufbahn."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Novize übernimmt er eine Vielzahl alltäglicher Aufgaben innerhalb des Tempels oder der Kirche. Dazu gehören die Pflege der heiligen Stätten, die Unterstützung bei rituellen Zeremonien, und die Betreuung der Gläubigen, die den Tempel aufsuchen. Seine Rolle ist wichtig für den reibungslosen Ablauf des kirchlichen Lebens, doch gleichzeitig ist ihm bewusst, dass er noch einen langen Weg vor sich hat."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Novize muss weiterhin viel lernen, sowohl in spiritueller als auch in praktischer Hinsicht. Er wird von älteren Priestern und Lehrern angeleitet, die ihm helfen, seine Kenntnisse zu vertiefen und seine Fähigkeiten zu verfeinern. Diese Phase seines Lebens ist geprägt von intensiver Ausbildung und persönlicher Entwicklung, da er sich auf die höheren Weihen und die damit verbundenen größeren Verantwortlichkeiten vorbereitet. Der Novize strebt danach, die Tugenden und Weisheiten der Götter zu verkörpern, und arbeitet daran, eines Tages als vollwertiger Priester in der Celestischen Synode zu dienen."
+          }
+        ]
+      },
+      {
+        "id": "lehrling",
+        "title": "Lehrling",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Lehrling ist ein Tempeldiener der Celestischen Synode, der bereits einige Jahre im Tempel verbracht hat und sich in den fortgeschrittenen Stadien seiner Ausbildung befindet. Obwohl er noch kein vollwertiger Priester ist, hat er sich durch seine Hingabe und seinen Fleiß im Dienst der Kirche ausgezeichnet. Der Lehrling ist oft noch nicht volljährig, doch seine Rolle im Tempel ist bereits von wachsender Verantwortung geprägt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Als Lehrling übernimmt er vielfältige Aufgaben innerhalb des Tempels, die über die grundlegenden Pflichten eines Tiro hinausgehen. Er unterstützt die Priester bei rituellen Zeremonien, hilft bei der Pflege und Vorbereitung der heiligen Stätten und vertieft sein Wissen über die kirchlichen Lehren und Riten. Seine Ausbildung umfasst sowohl theoretisches Wissen als auch praktische Fertigkeiten, die für die spätere Priesterschaft unerlässlich sind."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Lehrling steht an einem entscheidenden Punkt seiner spirituellen Reise. Er ist mehr als nur ein Schüler, aber noch nicht ganz ein Priester. Er wird weiterhin von erfahrenen Geistlichen angeleitet, die ihn auf die Herausforderungen und Pflichten vorbereiten, die mit der vollen Priesterschaft einhergehen. In dieser Phase der Ausbildung festigt der Lehrling seine Hingabe an die Götter und entwickelt die spirituelle und moralische Stärke, die erforderlich ist, um eines Tages als Priester in den Dienst der Synode zu treten."
+          }
+        ]
+      },
+      {
+        "id": "tiro",
+        "title": "Tiro",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Tiro ist der erste Rang innerhalb der Celestischen Synode, ein Akolyth und Rekrut der Kirche. Als Tiro beginnt ein junger Novize seine Reise im Dienst der Götter, in der Regel bereits in jungen Jahren aufgenommen, oft als Jüngling, um die heiligen Lehren und Riten der Kirche zu erlernen. Die Ausbildung eines Tiro umfasst sowohl das Studium der heiligen Schriften als auch die praktische Anwendung der kirchlichen Lehren."
+          },
+          {
+            "type": "paragraph",
+            "text": "Die Aufgaben eines Tiro variieren stark und richten sich nach den spezifischen Göttern, denen er sich verpflichtet hat. Diese Aufgaben können von einfachen Diensten wie der Pflege heiliger Stätten und der Unterstützung höherer Geistlicher bis hin zu komplexeren Aufgaben wie der Teilnahme an rituellen Zeremonien reichen. Ein Tiro lernt, die Disziplin und Hingabe zu entwickeln, die notwendig sind, um in den höheren Rängen der Kirche aufzusteigen. Dabei wird er von erfahrenen Priestern und Lehrern angeleitet, die ihm die Grundlagen des Glaubens und der kirchlichen Pflichten vermitteln."
+          },
+          {
+            "type": "paragraph",
+            "text": "Der Tiro ist nicht nur ein Lernender, sondern auch ein Diener, der seinen ersten Schritt in die spirituelle Hierarchie der Celestischen Synode setzt, bereit, die Herausforderungen und Pflichten anzunehmen, die ihn auf seinem Weg zur vollen Priesterschaft erwarten."
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Ein Register celestischer Heiliger ist vorgesehen; einzelne Namen sind noch nicht überliefert."
+  ]
+}

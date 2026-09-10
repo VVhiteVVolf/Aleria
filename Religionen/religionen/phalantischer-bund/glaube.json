@@ -1,0 +1,356 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "goettervater",
+      "title": "Der Göttervater",
+      "entries": [
+        {
+          "id": "krathos",
+          "name": "Krathos",
+          "epithet": "Vater, Streiter, Plünderer",
+          "relatedIds": [
+            "ordan",
+            "baldran",
+            "grimnar"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/krathos.png",
+            "alt": "Krathos – Vater, Streiter, Plünderer",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    },
+    {
+      "id": "gemahlinnen",
+      "title": "Die Sechs Gemahlinnen · Der Celestiale Ehebund",
+      "entries": [
+        {
+          "id": "khalyne",
+          "name": "Khalyne",
+          "epithet": "Liebe & Gnade · Mutter",
+          "relatedIds": [
+            "mariel"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/khalyne.png",
+            "alt": "Khalyne – Liebe & Gnade · Mutter",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "hedone",
+          "name": "Hedone",
+          "epithet": "Lust & Kunst · Maid, Hedonist",
+          "relatedIds": [
+            "lyris",
+            "sanguine"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/hedone.png",
+            "alt": "Hedone – Lust & Kunst · Maid, Hedonist",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "logara",
+          "name": "Logara",
+          "epithet": "Wissen & Gesetz · Templer, Mentor",
+          "relatedIds": [
+            "maldras",
+            "orin"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/logara.png",
+            "alt": "Logara – Wissen & Gesetz · Templer, Mentor",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "thyrne",
+          "name": "Thyrne",
+          "epithet": "Natur & Jagd · Hirtin, Jäger",
+          "relatedIds": [
+            "sylvana",
+            "zatrach"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/thyrne.png",
+            "alt": "Thyrne – Natur & Jagd · Hirtin, Jäger",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "ponara",
+          "name": "Ponara",
+          "epithet": "Handwerk & Arbeit · Knecht",
+          "relatedIds": [
+            "tharim"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/ponara.png",
+            "alt": "Ponara – Handwerk & Arbeit · Knecht",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "zoane",
+          "name": "Zoane",
+          "epithet": "Tod & Leben · Hüter, Schicksalsweberin",
+          "relatedIds": [
+            "kharon",
+            "hela"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/zoane.png",
+            "alt": "Zoane – Tod & Leben · Hüter, Schicksalsweberin",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    },
+    {
+      "id": "nebengoetter",
+      "title": "Phalantische Nebengötter",
+      "entries": [
+        {
+          "id": "nereidia",
+          "name": "Nereidia",
+          "epithet": "Meer, Wasser, Abenteuer · Nimue, Seemaid",
+          "relatedIds": [
+            "nimue",
+            "tethyra"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/nereidia.png",
+            "alt": "Nereidia – Meer, Wasser, Abenteuer · Nimue, Seemaid",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "tychia",
+          "name": "Tychia",
+          "epithet": "Glück, Kinder, Wohltat · Glücksmaid",
+          "relatedIds": [
+            "jovena"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/tychia.png",
+            "alt": "Tychia – Glück, Kinder, Wohltat · Glücksmaid",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "anemios",
+          "name": "Anemios",
+          "epithet": "Sport, Botschaft · Herausforderer",
+          "relatedIds": [
+            "selarion"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/anemios.png",
+            "alt": "Anemios – Sport, Botschaft · Herausforderer",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "mystrios",
+          "name": "Mystrios",
+          "epithet": "Arkanes, Orakel, Magie · Mystiker",
+          "relatedIds": [
+            "orith"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/mystrios.png",
+            "alt": "Mystrios – Arkanes, Orakel, Magie · Mystiker",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "tekton",
+          "name": "Tekton",
+          "epithet": "Baukunst, Entwicklung · Erbauer",
+          "relatedIds": [
+            "auron"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/tekton.png",
+            "alt": "Tekton – Baukunst, Entwicklung · Erbauer",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "gaiana",
+          "name": "Gaiana",
+          "epithet": "Erde, Ernte, Stabilität · Rhea",
+          "relatedIds": [
+            "rhea"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/gaiana.png",
+            "alt": "Gaiana – Erde, Ernte, Stabilität · Rhea",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "aetherius",
+          "name": "Aetherius",
+          "epithet": "Wetter, Donner · Aelthar",
+          "relatedIds": [
+            "aelthar"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/aetherius.png",
+            "alt": "Aetherius – Wetter, Donner · Aelthar",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "zephyros",
+          "name": "Zephyros",
+          "epithet": "Wind, Freiheit, Inspiration · Zephyr",
+          "relatedIds": [
+            "zephyr"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/zephyros.png",
+            "alt": "Zephyros – Wind, Freiheit, Inspiration · Zephyr",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "menios",
+          "name": "Menios",
+          "epithet": "Reinheit, Feuer, Wahrheit · Thyrael",
+          "relatedIds": [
+            "thyrael"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/menios.png",
+            "alt": "Menios – Reinheit, Feuer, Wahrheit · Thyrael",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "areion",
+          "name": "Areion",
+          "epithet": "Krieg, Beute, Strafe · Plünderer, Schänder",
+          "relatedIds": [
+            "grimnar",
+            "bhaal"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/areion.png",
+            "alt": "Areion – Krieg, Beute, Strafe · Plünderer, Schänder",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "sophion",
+          "name": "Sophion",
+          "epithet": "Unbekanntes, Leere · Intrigant",
+          "relatedIds": [
+            "amon"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/sophion.png",
+            "alt": "Sophion – Unbekanntes, Leere · Intrigant",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "pelagos",
+          "name": "Pelagos",
+          "epithet": "Unterwelt, Meerestiefe · Verschlinger",
+          "relatedIds": [
+            "thraal"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/pelagos.png",
+            "alt": "Pelagos – Unterwelt, Meerestiefe · Verschlinger",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "feindbilder",
+      "title": "Die Verstoßenen & der Usurpator",
+      "entries": [
+        {
+          "id": "thyrane",
+          "name": "Thyrane",
+          "epithet": "Rache & Niedertracht · Witwe, Rächerin",
+          "relatedIds": [
+            "lunara",
+            "nemsara"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/thyrane.png",
+            "alt": "Thyrane – Rache & Niedertracht · Witwe, Rächerin",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "phantyne",
+          "name": "Phantyne",
+          "epithet": "Zwiespalt & Täuschung · Trickser, Zweigesichtige",
+          "relatedIds": [
+            "migdal",
+            "azrath-morvath"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/phantyne.png",
+            "alt": "Phantyne – Zwiespalt & Täuschung · Trickser, Zweigesichtige",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "ophidron",
+          "name": "Ophidron",
+          "epithet": "Usurpation & Chaos · Ketzer, Usurpator",
+          "relatedIds": [
+            "adar",
+            "dagon"
+          ],
+          "image": {
+            "src": "religionen/phalantischer-bund/assets/ophidron.png",
+            "alt": "Ophidron – Usurpation & Chaos · Ketzer, Usurpator",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    }
+  ],
+  "quotation": {
+    "text": "„Krathos gab uns das Schwert. Die Gemahlinnen gaben uns den Grund, es zu führen.“",
+    "attribution": "Phalantische Überlieferung"
+  },
+  "notes": [
+    "Eine eigene Tempelhierarchie ist in dieser Überlieferung noch nicht beschrieben."
+  ]
+}

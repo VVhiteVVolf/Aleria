@@ -5,9 +5,13 @@ import { BESTIARY_ENTRIES } from '../modules/catalog/catalog-data.js';
 import { SPECIAL_ANIMAL_PROFILE_IDS } from '../modules/special-animal-profile/special-animal-profile-registry.mjs';
 import { renderSpecialAnimalProfile } from '../modules/special-animal-profile/special-animal-profile-template.mjs';
 
-const expectedIds = ['sturmbock', 'mondlaeufer'];
-const expectedNames = ['Sturmbock', 'Mondläufer'];
-const metricLabels = ['Trittsicherheit', 'Reitbarkeit', 'Wendigkeit', 'Ausdauer', 'Tragkraft', 'Kampfwert'];
+const expectedIds = ['sturmbock', 'mondlaeufer', 'cuimhorn'];
+const expectedNames = ['Sturmbock', 'Mondläufer', 'Cuimhorn'];
+const metricLabels = new Map([
+  ['sturmbock', ['Trittsicherheit', 'Reitbarkeit', 'Wendigkeit', 'Ausdauer', 'Tragkraft', 'Kampfwert']],
+  ['mondlaeufer', ['Trittsicherheit', 'Reitbarkeit', 'Wendigkeit', 'Ausdauer', 'Tragkraft', 'Kampfwert']],
+  ['cuimhorn', ['Personengedächtnis', 'Orientierung', 'Trittsicherheit', 'Botentreue', 'Ausdauer', 'Hitzetoleranz']]
+]);
 
 async function readProfile(id) {
   const directory = new URL(`../tiere/besondere/${id}/`, import.meta.url);
@@ -16,7 +20,7 @@ async function readProfile(id) {
 
 const profiles = await Promise.all(SPECIAL_ANIMAL_PROFILE_IDS.map(readProfile));
 
-test('the special-animal registry contains both supplied mounts in catalog order', () => {
+test('the special-animal registry contains all completed exemplars in catalog order', () => {
   assert.deepEqual(SPECIAL_ANIMAL_PROFILE_IDS, expectedIds);
   assert.deepEqual(profiles.map(profile => profile.name), expectedNames);
 });
@@ -38,7 +42,7 @@ for (const [index, profile] of profiles.entries()) {
     assert(profile.sections.every(section => section.blocks.length));
     assert(profile.facts.length >= 11);
     assert.equal(profile.facts.find(fact => fact.label === 'Kosten')?.value, '???');
-    assert.deepEqual(profile.metrics.labels, metricLabels);
+    assert.deepEqual(profile.metrics.labels, metricLabels.get(profile.id));
     assert(profile.metrics.values.every(value => Number.isInteger(value) && value >= 1 && value <= 10));
     assert(html.indexOf('field-profile-narrative') < html.indexOf('field-profile-facts'));
     assert.match(html, /href="\.\.\/\.\.\/\.\.\/index\.html#besondere"/);
@@ -50,9 +54,13 @@ for (const [index, profile] of profiles.entries()) {
 
 test('the supplied image tableaux are local, documented and rendered without cropping', async () => {
   const manifest = JSON.parse(await readFile(new URL('../assets/special-animal-profile-sources.json', import.meta.url), 'utf8'));
-  assert.equal(manifest.items.length, 2);
-  assert.deepEqual(manifest.items.map(item => item.id), expectedIds);
-  assert(manifest.items.every(item => item.sourceType === 'user-provided-profile-table'));
+  assert.equal(manifest.items.length, 5);
+  assert.deepEqual(manifest.items.map(item => item.id), ['sturmbock', 'mondlaeufer', 'cuimhorn-hero', 'cuimhorn-detail', 'cuimhorn-icon']);
+  assert(manifest.items.slice(0, 4).every(item => item.sourceType === 'user-provided-profile-table'));
+  const generatedIcon = manifest.items.at(-1);
+  assert.equal(generatedIcon.sourceType, 'generated-transparent-profile-icon');
+  assert.equal(generatedIcon.width, generatedIcon.height);
+  assert(generatedIcon.generationPrompt.length >= 120);
   assert(manifest.items.every(item => item.width > 0 && item.height > 0));
   await Promise.all(manifest.items.map(item => access(new URL(`../assets/${item.file.slice(2)}`, import.meta.url))));
 
@@ -63,7 +71,7 @@ test('the supplied image tableaux are local, documented and rendered without cro
   assert(css.includes('grid-template-columns: minmax(0, 1fr) 255px'));
 });
 
-test('the special-exemplar cards link directly to both completed dossiers', () => {
+test('the special-exemplar cards link directly to all completed dossiers', () => {
   for (const id of expectedIds) {
     const entry = BESTIARY_ENTRIES.find(candidate => candidate.id === id);
     assert.equal(entry.href, `./tiere/besondere/${id}/index.html`);

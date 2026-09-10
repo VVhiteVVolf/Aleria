@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "dornach",
+  "cultureId": "morgorn",
+  "name": "Dornach",
+  "title": "Der Dornach",
+  "subtitle": "Grenzer der Pässe und Bergwälder",
+  "aliases": ["Grenzer", "Gebirgsgrenzer"],
+  "theme": "wild",
+  "icon": "https://i.imgur.com/erG4OPu.png",
+  "illustration": "https://i.imgur.com/erG4OPu.png",
+  "artwork": { "source": "https://i.imgur.com/erG4OPu.png", "width": 1024, "height": 1536, "caption": "Dornach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Dornach · Grenzer" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Waldläuferritter oder Grenzwächter; kein automatischer Adel" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Aufklärung, Patrouille und Sicherung äußerer Gebiete" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Fernwaffe, Speer oder andere verlässliche Seitenwaffe" },
+    { "group": "Klassenprofil", "label": "Einsatzraum", "html": "Pässe, Bergwälder und abgelegene Grenzräume" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Dornach halten Morgorns äußere Räume. Sie ziehen über Pässe, durch Bergwälder und entlang schwer sichtbarer Grenzen, lange bevor ein fremder Trupp die Tore einer Halle erreicht.</p><p>Ein Dornach muss ohne unmittelbare Hilfe urteilen können. Er liest Spuren, beobachtet Wege und entscheidet, ob er warnt, verfolgt, umgeht oder eine Engstelle hält.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Kaste entstand aus den fern der großen Hallen eingesetzten Wegwachen und Jägern. Mit der Zeit wurden aus örtlichen Kundigen fest ausgebildete Grenzer, deren Berichte für Handel, Heerzüge und die Sicherheit ganzer Täler entscheidend sein konnten.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Dornach beherrschen Orientierung, Spurensuche, Tarnung und das Überleben in kaltem oder felsigem Gelände. Sie beobachten aus gedeckter Stellung, übermitteln Warnungen und führen kleine Gruppen über sichere Routen. Im Kampf verbinden sie vorbereitete Distanzangriffe mit einem beweglichen Nahkampf.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Sicher in Gebirge, Wald und abgelegenen Grenzräumen</li><li>Ausdauernd in Aufklärung und Verfolgung</li><li>Eigenständig und vielseitig bewaffnet</li></ul><h3>Schwächen</h3><ul><li>Weniger für eine schwere Schlachtlinie gerüstet</li><li>Abgeschnittene Patrouillen erhalten nur langsam Unterstützung</li><li>Im offenen Gelände leichter zu entdecken und zu binden</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Dornach wählen den Kampfplatz, bevor sie den ersten Schlag führen. Sie nutzen Höhe, Deckung und schmale Wege, wechseln zwischen Distanz und Nahkampf und lösen sich aus ungünstigen Gefechten, um an anderer Stelle erneut zuzuschlagen.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Wetterfeste, bewegliche Rüstung, Umhang, Fernwaffe und eine zuverlässige Seitenwaffe bilden die Grundlage. Seil, Haken, Proviant, Feuerzeug und Werkzeuge zur Wegmarkierung sind für einen Dornach ebenso wichtig wie seine Waffen.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Dornach leben häufig fern der Zentren und wirken in Hallen mitunter wortkarg oder fremd. Ihre Warnung besitzt dennoch Gewicht: Wer einen Pass über Monate beobachtet, trägt die Verantwortung dafür, Gefahr zu erkennen, bevor andere sie sehen können.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Dornach" }
+}

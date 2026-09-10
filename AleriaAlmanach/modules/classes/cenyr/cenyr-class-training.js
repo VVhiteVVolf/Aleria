@@ -1,6 +1,23 @@
-import { getCenyrClassDefinitionForProfile, getCenyrFormLabel } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+import { getCenyrClassDefinitionForProfile, getCenyrFormLabel } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { migrateDrachentanzFormId, migrateDrachentanzTechniqueId } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
+import { migrateDerwynFormId, migrateDerwynTechniqueId, migrateDerwynTechniqueSlotId } from '../../combat-styles/sirenentanz/wyrmtanz-training-migration.js?v=20260909-dragon-parent-v2';
 
-const SELECTION_KINDS = new Set(['path', 'branch']);
+const SELECTION_KINDS = new Set(['foundation', 'path', 'branch']);
+
+export function getCenyrFoundationOptions(definition) {
+  return definition?.foundationSelection?.options || [];
+}
+
+export function getCenyrCanonicalTechniqueId(definition, techniqueId) {
+  return definition.classId === 'derwyn' ? migrateDerwynTechniqueId(techniqueId)
+    : migrateDrachentanzTechniqueId(definition.classId, techniqueId);
+}
+
+function isSelectionAvailable(definition, selection) {
+  if (selection.kind === 'foundation') return getCenyrFoundationOptions(definition).some(option => option.formId === selection.selectionId);
+  if (selection.kind === 'path') return definition.pathSelection?.allowedFormIds?.includes(selection.selectionId);
+  return definition.trainingBranches.some(branch => branch.id === selection.selectionId);
+}
 
 function normalizeLevel(value) {
   return Math.max(1, Math.min(20, Math.trunc(Number(value) || 1)));
@@ -24,33 +41,37 @@ export function getCenyrTrainingState(profile = {}, definitionValue = null) {
   const definition = definitionValue || getCenyrClassDefinitionForProfile(profile);
   const source = profile.classTraining || {};
   if (!definition) return null;
-  const sameCurriculum = !source.curriculumId || source.curriculumId === definition.id;
+  const sameCurriculum = !source.curriculumId || source.curriculumId === definition.id
+    || (definition.classId === 'derwyn' && ['cenyr-derwyn', 'derwyn'].includes(source.curriculumId));
+  const migrateForm = formId => definition.classId === 'derwyn'
+    ? migrateDerwynFormId(formId) : migrateDrachentanzFormId(definition.classId, formId);
+  const migrateSlot = slotId => definition.classId === 'derwyn' ? migrateDerwynTechniqueSlotId(slotId) : slotId;
   const selections = (Array.isArray(source.selections) ? source.selections : [])
     .filter(() => sameCurriculum)
-    .filter(selection => SELECTION_KINDS.has(selection.kind))
+    .filter(selection => selection && SELECTION_KINDS.has(selection.kind))
     .filter(selection => selection.selectionId)
-    .filter(selection => selection.kind === 'path'
-      ? definition.pathSelection?.allowedFormIds?.includes(String(selection.selectionId))
-      : definition.trainingBranches.some(branch => branch.id === String(selection.selectionId)))
+    .map(selection => ({ ...selection, selectionId: selection.kind === 'path'
+      ? migrateForm(String(selection.selectionId)) : String(selection.selectionId) }))
+    .filter(selection => isSelectionAvailable(definition, selection))
     .map(selection => ({
       kind: selection.kind,
       selectionId: String(selection.selectionId),
       selectedAtLevel: normalizeLevel(selection.selectedAtLevel),
-      spentTechniqueSlotId: String(selection.spentTechniqueSlotId || '')
+      spentTechniqueSlotId: migrateSlot(String(selection.spentTechniqueSlotId || ''))
     }));
   const techniqueSelections = (Array.isArray(source.techniqueSelections) ? source.techniqueSelections : [])
     .filter(() => sameCurriculum)
     .filter(selection => selection?.slotId && selection?.techniqueId)
     .map(selection => ({
-      slotId: String(selection.slotId),
-      techniqueId: String(selection.techniqueId),
+      slotId: migrateSlot(String(selection.slotId)),
+      techniqueId: getCenyrCanonicalTechniqueId(definition, String(selection.techniqueId)),
       selectedAtLevel: normalizeLevel(selection.selectedAtLevel)
-    }));
+    })).filter(selection => selection.techniqueId);
   return {
     schemaVersion: 2,
     curriculumId: definition.id,
     selections: selections.filter((selection, index) => selections.findIndex(candidate => (
-      candidate.kind === selection.kind && candidate.selectionId === selection.selectionId
+      candidate.kind === selection.kind && (selection.kind === 'foundation' || candidate.selectionId === selection.selectionId)
     )) === index),
     techniqueSelections: techniqueSelections.filter((selection, index) => techniqueSelections.findIndex(candidate => (
       candidate.slotId === selection.slotId || candidate.techniqueId === selection.techniqueId
@@ -72,6 +93,12 @@ export function getCenyrLevelUpTrainingChoices(profile = {}, targetLevelValue = 
   const selectedPaths = new Set(state.selections.filter(item => item.kind === 'path').map(item => item.selectionId));
   const selectedBranches = new Set(state.selections.filter(item => item.kind === 'branch').map(item => item.selectionId));
   const groups = [];
+
+  const foundationOptions = getCenyrFoundationOptions(definition);
+  if (foundationOptions.length && !state.selections.some(item => item.kind === 'foundation')) groups.push({
+    kind: 'foundation', label: 'Grundausbildung des Derwyn', required: definition.foundationSelection.required === true,
+    options: foundationOptions.map(option => ({ id: option.formId, name: option.name }))
+  });
 
   if (definition.classId === 'barddwyr' && targetLevel >= 7) {
     const options = definition.trainingBranches
@@ -105,6 +132,8 @@ export function getCenyrLevelUpTrainingChoices(profile = {}, targetLevelValue = 
 }
 
 function getSelectionRule(definition, kind, selectionId) {
+  if (kind === 'foundation') return getCenyrFoundationOptions(definition).some(option => option.formId === selectionId)
+    ? { minimumLevel: definition.foundationSelection.minimumLevel || 1, band: 'foundation' } : null;
   if (kind === 'path') {
     const access = definition.formAccess.find(entry => entry.formId === selectionId);
     const allowed = definition.pathSelection?.allowedFormIds || [];
@@ -121,6 +150,7 @@ function getSelectionRule(definition, kind, selectionId) {
 }
 
 function getFreeSelectionCount(definition, kind, minimumLevel) {
+  if (kind === 'foundation') return 1;
   if (kind === 'path') return definition.pathSelection?.firstSelectionCost === 0 ? 1 : 0;
   if (kind === 'branch' && definition.classId === 'barddwyr' && minimumLevel <= 7) return 1;
   return 0;
@@ -139,6 +169,9 @@ export function selectCenyrTrainingOption(profile = {}, selection = {}) {
   if (level < rule.minimumLevel) return { ok: false, errors: [`Diese Ausbildung beginnt erst auf Stufe ${rule.minimumLevel}.`], profile: clone(profile) };
 
   const next = ensureCenyrTrainingState(profile);
+  // A foundation is an exclusive cultural choice. Replacing it is free; the
+  // technique synchronizer subsequently releases incompatible foundation slots.
+  if (kind === 'foundation') next.classTraining.selections = next.classTraining.selections.filter(entry => entry.kind !== 'foundation');
   if (rule.requiredPathId && !next.classTraining.selections.some(entry => (
     entry.kind === 'path' && entry.selectionId === rule.requiredPathId
   ))) {

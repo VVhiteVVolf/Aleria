@@ -1,10 +1,10 @@
-import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
+import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import {
   createDrachentanzTechnique,
   movementEffect,
   secondarySave,
   temporaryCondition
-} from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
+} from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 // These stable technique IDs are the four established options for the level
 // 7–8 buffer. The former form ID is deliberately not reused: Schwertdrache is

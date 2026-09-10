@@ -1,0 +1,55 @@
+/* Nested archive navigation with immediate contents beside the directory. */
+.section-block.archive-section-browser { padding: 0; border: 0; background: transparent; box-shadow: none; overflow: visible; }
+.section-block.archive-section-browser::before, .section-block.archive-section-browser::after { content: none; }
+.archive-browser-layout { display: grid; grid-template-columns: minmax(190px, 0.3fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.archive-browser-content { min-width: 0; }
+.archive-hierarchy-tree { position: sticky; top: 4.7rem; min-width: 0; border-right: 1px solid var(--almanach-line); padding-right: 0.85rem; }
+.archive-hierarchy-tree > summary { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.8rem 0.45rem; list-style: none; color: var(--almanach-green); font: 600 0.68rem/1.4 'Cinzel', serif; }
+.archive-hierarchy-tree > summary::-webkit-details-marker { display: none; }
+.archive-hierarchy-tree > summary { cursor: pointer; }
+.archive-hierarchy-mobile-label { display: none; }
+.archive-hierarchy-tree[open] .archive-hierarchy-disclosure { transform: rotate(180deg); }
+.archive-hierarchy-tree-scroll { max-height: calc(100dvh - 9rem); overflow: auto; padding-right: 0.2rem; scrollbar-width: thin; }
+.archive-hierarchy-overview { display: flex; align-items: center; justify-content: space-between; gap: 0.65rem; width: 100%; min-height: 2.75rem; padding: 0.6rem; margin-bottom: 0.5rem; border: 1px solid var(--almanach-line); border-radius: 2px; background: #fbf8ef; color: var(--almanach-ink); font: 600 0.82rem/1.4 'EB Garamond', serif; text-align: left; cursor: pointer; }
+.archive-hierarchy-overview[aria-current] { border-color: var(--almanach-green); background: var(--almanach-green-soft); color: var(--almanach-green); }
+.archive-hierarchy-node { min-width: 0; }
+.archive-hierarchy-row { display: grid; grid-template-columns: 1.75rem minmax(0, 1fr); align-items: stretch; margin: 0.2rem 0; border-left: 2px solid transparent; }
+.archive-hierarchy-node.is-selected > .archive-hierarchy-row { border-left-color: var(--almanach-green); background: var(--almanach-green-soft); }
+.archive-hierarchy-toggle, .archive-hierarchy-select, .archive-hierarchy-entry { border: 0; color: var(--almanach-ink); background: transparent; font: inherit; cursor: pointer; }
+.archive-hierarchy-toggle { min-height: 2.75rem; padding: 0; font-size: 1.1rem; }
+.archive-hierarchy-toggle:disabled { opacity: 0.2; cursor: default; }
+.archive-hierarchy-select { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; gap: 0.4rem; align-items: center; min-width: 0; min-height: 2.75rem; padding: 0.45rem 0.35rem 0.45rem 0; text-align: left; }
+.archive-hierarchy-row-icon, .archive-hierarchy-entry-icon { display: grid; place-items: center; width: 1.5rem; height: 1.5rem; overflow: hidden; color: var(--almanach-brass); font-size: 0.8rem; }
+.archive-hierarchy-row-icon img, .archive-hierarchy-entry-icon img { width: 100%; height: 100%; object-fit: contain; }
+.archive-hierarchy-entry-icon img { object-fit: cover; }
+.archive-hierarchy-row-title { color: var(--almanach-ink); font: 600 0.71rem/1.5 'Cinzel', serif; overflow-wrap: break-word; }
+.archive-hierarchy-row-meta, .archive-hierarchy-entry-meta { color: var(--almanach-muted); font: 0.75rem 'EB Garamond', serif; white-space: nowrap; }
+.archive-hierarchy-children { margin-left: 0.6rem; padding-left: 0.45rem; border-left: 1px solid var(--almanach-line); }
+.archive-hierarchy-entry { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr) auto; gap: 0.4rem; align-items: center; width: 100%; min-height: 2.75rem; padding: 0.4rem 0.25rem; text-align: left; }
+.archive-hierarchy-entry-title { color: var(--almanach-muted); font: 0.9rem/1.35 'EB Garamond', serif; overflow-wrap: break-word; }
+.archive-hierarchy-entry-icon { width: 1.4rem; height: 1.6rem; }
+.archive-hierarchy-entry:hover, .archive-hierarchy-select:hover, .archive-hierarchy-toggle:not(:disabled):hover { background: rgba(67,85,72,0.06); }
+.archive-hierarchy-empty { padding: 0.65rem; color: var(--almanach-muted); font-size: 0.9rem; }
+.archive-hierarchy-breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 0.1rem 0.4rem; margin-bottom: 0.8rem; color: var(--almanach-muted); font: 0.85rem/1.5 'EB Garamond', serif; }
+.archive-hierarchy-breadcrumbs button { min-height: 2.2rem; border: 0; padding: 0.15rem 0.2rem; background: transparent; color: var(--almanach-green); font: inherit; cursor: pointer; }
+.archive-hierarchy-breadcrumbs button:hover { text-decoration: underline; }
+.archive-hierarchy-breadcrumbs [aria-current] { color: var(--almanach-ink); }
+.archive-hierarchy-content-heading { display: flex; gap: 1rem; align-items: center; padding-bottom: 1.2rem; margin-bottom: 1.3rem; border-bottom: 1px solid var(--almanach-line); }
+.archive-hierarchy-heading-image { flex-shrink: 0; display: block; width: 4.5rem; height: 4.5rem; object-fit: cover; object-position: top; border: 1px solid var(--almanach-line); }
+.archive-hierarchy-heading-image.is-emblem { object-fit: contain; padding: 0.3rem; }
+.archive-hierarchy-content-heading > div { min-width: 0; }
+.archive-hierarchy-content-heading h2 { color: var(--almanach-ink); font: 600 clamp(1.05rem, 1.8vw, 1.4rem)/1.4 'Cinzel', serif; overflow-wrap: break-word; }
+.archive-hierarchy-content-heading p { margin: 0.35rem 0; color: var(--almanach-muted); font: 1rem/1.5 'EB Garamond', serif; }
+.archive-hierarchy-content-heading small { display: block; margin-top: 0.4rem; color: var(--almanach-muted); font-size: 0.83rem; }
+.archive-browser-layout :is(button, summary):focus-visible { outline: 2px solid var(--almanach-green); outline-offset: -2px; }
+@media (max-width: 1100px) {
+  .archive-browser-layout { grid-template-columns: 1fr; gap: 1rem; }
+  .archive-hierarchy-tree { position: static; padding: 0; border: 1px solid var(--almanach-line); background: #fbf8ef; }
+  .archive-hierarchy-tree > summary { min-height: 2.75rem; padding: 0.8rem; cursor: pointer; }
+  .archive-hierarchy-mobile-label, .archive-hierarchy-disclosure { display: inline; }
+  .archive-hierarchy-desktop-label { display: none; }
+  .archive-hierarchy-tree-scroll { max-height: 55dvh; padding: 0 0.7rem 0.7rem; }
+  .archive-hierarchy-toggle { min-width: 2.75rem; }
+  .archive-hierarchy-row { grid-template-columns: 2.75rem minmax(0, 1fr); }
+  .archive-hierarchy-breadcrumbs { margin-bottom: 0.6rem; }
+}

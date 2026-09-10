@@ -1,6 +1,6 @@
-import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
-import { createExpertPathTechnique } from './expert-path-helpers.js?v=20260905-damage-balance-v1';
+import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
+import { createExpertPathTechnique } from './expert-path-helpers.js?v=20260909-dragon-parent-v2';
 
 const F = DRACHENTANZ_FORM_IDS.fliegender;
 const make = spec => createExpertPathTechnique(F, 'fliegender', spec);

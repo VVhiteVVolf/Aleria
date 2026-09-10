@@ -1,0 +1,207 @@
+{
+  "id": "joetun",
+  "name": "Jötun",
+  "classification": "Nordischer Riese · Verfluchte Verkörperung des Winters",
+  "continent": "Nördliches Aleria",
+  "region": "Schneebedeckte Berge, Gletscher und gefrorene Ebenen",
+  "folio": "III-R / 01",
+  "parentGroupId": "riesen",
+  "summary": "Jötune sind urtümliche, weiß bepelzte Eisriesen der nördlichen Berge. Der Fluch der Neun Göttlichen nahm ihnen ihre albische Gestalt, band sie an Winter und Kälte und ließ nur eine fremdartige Ehre zurück, die Stärke anerkennt, während Eisatem, Frostwände und kolossale Ausdauer ihr Revier nahezu uneinnehmbar machen.",
+  "quote": "Ein Jötun prüft nicht, ob du siegen kannst; er prüft, ob dein Mut den Winter überdauert.",
+  "quoteAttribution": "Nordmännischer Lehrspruch über die weißen Riesen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-joetun.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Jötun als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/joetun.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Jötun in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Jötun"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Jötun; Eis- und Frostriese"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter albischer Riese"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Göttlicher Fluch nach der Verehrung Grimnars des Verschlingers"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Schneebedeckte Berge des Nordens"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Gletscherhöhlen, Eisschluchten und gefrorene Ödlande"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, bedächtig, stolz und nach fremdartiger Ehrenlogik handelnd"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und Nacht; besonders sicher in Sturm und Frost"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Eisatem, gefrierender Boden, Eiswände und Kälteresistenz"
+    },
+    {
+      "label": "Stärken",
+      "value": "Kolossale Kraft, Winterausdauer, dichter Pelz und Gebietskontrolle"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Langsamkeit, anhaltende Wärme und Verlust der Eiskräfte in warmem Klima"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Dichtes Riesenfell, Zähne, Knochen und Gegenstände aus den Höhlenhorten"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Frostherrschaft",
+      "Eisatem",
+      "Winterausdauer",
+      "Ehreninstinkt",
+      "Gebietskontrolle",
+      "Wärmeanfälligkeit"
+    ],
+    "values": [
+      10,
+      10,
+      10,
+      7,
+      9,
+      10
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Jötun abgeleitet",
+    "intro": "Der Jötun wird als Verkörperung des Winters bewertet. Hohe Wärmeanfälligkeit bezeichnet den raschen Verlust seiner Regeneration und elementaren Vorteile außerhalb der Kälte."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jötune gehören zu den urtümlichsten und wildesten Riesen. Ihr massiger Körper ist bis an die kräftigen Gliedmaßen mit weißem Pelz bedeckt und erinnert stärker an eine uralte Bestie als an einen Humanoiden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Bewegungen wirken ruhig und bedächtig. Wird ein Revier verletzt, kann diese Ruhe ohne Vorwarnung in erschütternde Gewalt umschlagen."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Legenden führen die Jötune auf einen stolzen albischen Stamm zurück, der im Äon der Göttlichen Grimnar den Verschlinger verehrte. Die Neun Göttlichen verfluchten und verbannten ihn in die Berge des Nordens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alben betrachten die weißen Riesen als Mahnmale der Hybris. Nordmänner sehen in ihnen ehrenhafte Prüfungen und Sinnbilder einer Natur, die weder gezähmt noch bestochen werden kann."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jötune ziehen allein oder in kleinen Gruppen durch Schneegebirge und gefrorene Ebenen. Eindringlinge werden mit Gebrüll gewarnt, geprüft oder unmittelbar angegriffen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie folgen einer schwer verständlichen Logik. Schwache Gegner werden bisweilen übergangen, sichtbarer Mut kann Respekt gewinnen, und ein als beendet betrachteter Kampf wird durch wortlosen Abzug beschlossen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lange reglose Phasen im Schnee werden als Melancholie gedeutet: ein Rest der Erinnerung an Gestalt, Heimat und Namen, die der Fluch auslöschte."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiefe Höhlen, Gletscherspalten und Eisschluchten schützen sie vor den härtesten Stürmen. Riesige Spuren, verschobenes Eis und ungewöhnlich heftiger Wind gelten als sichere Warnzeichen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die eisige Wildnis ist zugleich Heimat und Gefängnis. Wärmere Regionen schwächen Körper und elementare Bindung."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolossale Kraft erlaubt das Werfen großer Fels- und Eisbrocken. Der Eisatem überzieht Gegner und Rüstung in kurzer Zeit mit tödlichem Frost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jötune lassen Boden gefrieren und errichten Eisbarrieren. In ihrer Heimat jagen und kämpfen sie tagelang; außerhalb der Kälte verlieren Regeneration und Frostmacht deutlich an Wirkung."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Umgang und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Kampf im Eisrevier wird vermieden. Wärme, anhaltendes Feuer, bewegliche Formationen und der Rückzug auf sicheren Fels nehmen dem Riesen Boden- und Frostvorteile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nordmännische Überlieferungen raten, offene Furcht ebenso zu vermeiden wie grundlose Herausforderung. Ein klarer Rückzug kann eher geduldet werden als eine Täuschung."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Nordmännische Sagen erzählen häufiger von überstandenen Prüfungen als von getöteten Jötunen.",
+            "Ein stundenlang stillstehender Jötun soll vergangene Landschaften im Schnee wiedererkennen.",
+            "Der Eisatem kann Metall so rasch abkühlen, dass spröde Rüstungsteile brechen.",
+            "Spuren eines einzelnen Jötun wirken wegen unterschiedlicher Schneetiefe oft wie die Fährte mehrerer Riesen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

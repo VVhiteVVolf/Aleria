@@ -1,0 +1,240 @@
+{
+  "id": "zatrakin",
+  "name": "Zatrakin",
+  "classification": "Erstgeborene Zatrachs und wiedergeborene Meisterjäger",
+  "continent": "Infernale Sphären und selten Aleria",
+  "region": "Wilde Domäne Zatrachs",
+  "folio": "IV / 08-C",
+  "parentGroupId": "sylvaniiden",
+  "summary": "Zatrakin gelten als Zatrachs älteste und treueste Kinder: Spiegelbilder des Menschen, die allein für Jagd, Wettstreit und Prüfung leben. Manche sollen zu Lebzeiten legendäre menschliche Jäger gewesen sein und nach dem Tod in der Wilden Domäne als drahtige, taktisch denkende Spitzenjäger wiedergeboren werden.",
+  "quote": "Erstgeborene des Jägers, Jäger der Erstgeborenen.",
+  "quoteAttribution": "Zatrach über seine auserwählten Jäger",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/sylvaniiden-zatrakin.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Zatrakin vollständig sichtbar als gehörnter zweibeiniger Jäger",
+    "caption": "Artenfigur · Zatrakin"
+  },
+  "hero": {
+    "src": "../../../assets/sylvanid-profiles/zatrakin-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Zatrakin und gerüsteter Krieger vollständig sichtbar im Zweikampf im Wald",
+    "caption": "Überlieferte Szenentafel · Ein Zatrakin stellt sich einem gerüsteten Gegner"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Zatrakin; Erstgeborene des Jägers"
+    },
+    {
+      "label": "Typ",
+      "value": "Älteste Kinder und Spiegelbilder des Menschen für Zatrach"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Wiedergeborene legendäre Jäger, aus Zatrachs göttlichem Willen geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Wilde Domäne Zatrachs"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Endlose Jagdreviere der Wilden Domäne; selten in der sterblichen Welt"
+    },
+    {
+      "label": "Gesellschaft",
+      "value": "Clans mit einer Leiter des Aufstiegs nach Stärke und Erfolg"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Jagdgetrieben, taktisch und ohne Mitleid; Stärke gilt als Gesetz"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "In der ewigen Dämmerung ihrer Heimat jederzeit aktiv"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Meisterjagd, taktische Intelligenz, Anpassung, natürliche Magie und Wiedergeburt"
+    },
+    {
+      "label": "Stärken",
+      "value": "Erfahrung, Willenskraft, göttliche Gunst und tödliche Präzision"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Keine angeborenen Waffen, fehlende Empathie und seltene Präsenz in Aleria"
+    },
+    {
+      "label": "Beute & Trophäen",
+      "value": "Jagdwaffen, Bestienfelle und göttliche Artefakte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Jagdkunst",
+      "Taktik",
+      "Anpassung",
+      "Willenskraft",
+      "Naturmagie",
+      "Gunst Zatrachs"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      7,
+      9
+    ],
+    "intro": "Zatrakin werden über erlernte Jagdkunst und Willen eingeordnet. Ihr Rang beruht auf errungenem Können, nicht auf Krallen, Fangzähnen oder anderen angeborenen Waffen.",
+    "source": "Aus Meisterjagd, taktischer Analyse, Anpassungsfähigkeit, Jagdphilosophie, schamanischer Naturmagie und dem Segen des Jägers abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatrakin gelten als Zatrachs älteste und treueste Kinder. Wie Menschen den Neun als Diener und Ebenbilder gelten, sind sie das Spiegelbild des Menschen allein für den Gott der Jagd: geboren aus Jagdtrieb, Stolz und ewiger Prüfung."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Aleria erscheinen sie selten und gewöhnlich allein. Berichte schildern schweigende Gestalten unter den Kronen, deren Auftauchen eine göttliche Jagd, Prüfung oder Vergeltung ankündigt."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und Wiedergeburt",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Mythos beschreibt die ersten Zatrakin als außergewöhnliche menschliche Jäger, deren Ruhm den Tod überdauerte. Wer Jagd zur Kunst und Überleben zur Legende erhob, konnte in Zatrachs Domäne wiedergeboren werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nur wenige erhalten diese Ehre. Wer den Pfad betritt, kehrt nicht als Mensch zurück und kann nach erneutem Tod in der Wilden Domäne wiederkehren, um den Wettstreit fortzusetzen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihr Äußeres erinnert an eine wilde, urtümliche Menschengestalt mit Zügen von Satyrn und Bestien. Drahtige, kräftige und geschmeidige Körper, ledrige oder behaarte Haut und ruhige Raubtieraugen tragen die Spuren eines Lebens für die Jagd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manche besitzen Hörner oder Geweihe als Echo der göttlichen Linie. Natürliche Waffen wie Krallen, Fangzähne und Stacheln fehlen bewusst: Zatrach verlangt den Sieg durch Können, Instinkt und Disziplin."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Clans und Leiter des Aufstiegs",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärke ist Gesetz, Überleben Ehre und Schwäche Schuld. Die Clans kennen keine Erbfolge und keine unveränderlichen Titel. Jeder Platz auf der Leiter des Aufstiegs muss durch Jagderfolg und Kampf behauptet werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Anführer bleibt nur, solange er den Clan führen kann. Feigheit gilt als schwerstes Vergehen; wer einer Prüfung ausweicht, wird ausgestoßen oder selbst zur Beute."
+        }
+      ]
+    },
+    {
+      "id": "verwandtschaft",
+      "title": "Andere Kinder Zatrachs",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hornlinge gelten den Zatrakin als Sklaven, Werkzeuge oder Futter für Bestien. Zaroks werden als wilde Rivalen respektiert, aber nicht geliebt. Frieden zwischen diesen Kindern des Jägers ist nur eine Pause im Wettstreit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unholde gelten als natürliche Beute. Waldschrate genießen als Priester und Wächter heiliger Reviere Achtung, werden jedoch ebenfalls aufmerksam geprüft und niemals bedingungslos verehrt."
+        }
+      ]
+    },
+    {
+      "id": "krieg",
+      "title": "Krieg und Jagd",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In der Wilden Domäne herrscht ewiger Krieg. Zatrakin führen Jagdlager, Totemfeste und Fanglichtungen, verfolgen Unholde und liefern sich epische Kämpfe mit Zaroks und konkurrierenden Clans."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieser Wettstreit gilt als von Zatrach gewolltes Schauspiel. Jede Jagd prüft Rang und Können; jeder Tod eröffnet die Möglichkeit zu Fall, Wiederkehr oder neuem Aufstieg."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Wilde Domäne besteht aus Wäldern, Gebirgen, Schluchten und Ebenen in ewiger Dämmerung. Grenzen werden durch Ruf, Blut und Jagderfolg bestimmt, nicht durch Mauern oder Städte."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Welt der Sterblichen treten Zatrakin als einzelne Spitzenjäger, Avatare oder Rächer auf. Ihr Auftrag gilt einer bestimmten Beute, einer Prüfung oder der Wiederherstellung eines von Zatrach beanspruchten Gleichgewichts."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatrakin lesen Spuren, stellen Fallen und verfolgen Beute mit großer Präzision. Sie analysieren Gegner, wechseln Taktiken und passen sich Hochland, Sumpf oder Ebene an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Magisch Begabte folgen dem Wilden Pfad: Sie sprechen mit Geistern, lenken das Raunen des Waldes, verschmelzen mit Schatten oder rufen Bestien. Der Segen des Jägers kann Heilung, übernatürliches Spurenlesen oder eine tiefere Verständigung mit Tieren gewähren."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Zatrakin verlässt sich nicht auf angeborene Waffen. Seine Gefährlichkeit liegt in Erfahrung, Planung und der Bereitschaft, eine Begegnung lange vorzubereiten. Gewohnte Wege und scheinbar sichere Deckung können bereits Teil seiner Jagd sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine geringe Empathie verhindert Nachsicht, doch Stolz und der Glaube an die offene Prüfung können sein Verhalten berechenbarer machen als das eines blind rasenden Unholds."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Titel Erstgeborene des Jägers unterstreicht ihre besondere Stellung unter Zatrachs Kindern.",
+            "Nur Jäger mit einem Ruhm über den Tod hinaus sollen als Zatrakin wiedergeboren werden.",
+            "Der ewige Krieg in der Wilden Domäne gilt als Prüfung, die Zatrach selbst befeuert.",
+            "Das Fehlen natürlicher Waffen soll sicherstellen, dass Können über angeborene Vorteile triumphiert."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

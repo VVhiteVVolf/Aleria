@@ -1,0 +1,185 @@
+{
+  "id": "tiefentroll",
+  "name": "Tiefentroll",
+  "classification": "Trollunterart · Blinder Jäger Morgorns",
+  "continent": "Morgorn",
+  "region": "Unterirdische Reiche, Minen und vergessene Städte Morgorns",
+  "folio": "III-T / 14",
+  "parentGroupId": "trolle",
+  "summary": "Tiefentrolle sind vollständig von der Oberfläche abgeschnittene Jäger aus Morgorns unterirdischen Reichen. Vergrößerte lichtempfindliche Augen, Echogehör und ein rissiger, muskulöser Körper erlauben ihnen die Jagd in völliger Finsternis; Sprache, Verhandlung und Furcht sind über Generationen fast restlos verschwunden.",
+  "quote": "Nimm zwei Lichter mit in die Tiefe: eines zum Sehen und eines für den Troll.",
+  "quoteAttribution": "Morgorner Regel für Grubenfahrten",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-tiefentroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Tiefentroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/tiefentroll.webp",
+    "width": 1024,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Tiefentroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Tiefentroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Tiefentroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Degenerierter Troll; lichtloser Tiefenjäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch völlige Isolation unter der Erde veränderte Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Morgorn"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Tiefe Höhlen, alte Minen, Kavernen und eingestürzte Städte"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Hochaggressiv, territorial, furchtlos und ohne Verhandlung"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Unabhängig vom Tag in ewiger Finsternis"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Dunkelsicht, Echogehör, Erschütterungssinn und lange Verfolgung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Muskelkraft, Zähigkeit, Orientierung und Schmerzresistenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Grelles Licht, Feuerblitze und vorbereitete Rückzugsräume"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Gering; rissige Hautplatten und Überreste früherer Opfer"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Dunkelsicht",
+      "Echospürsinn",
+      "Zähigkeit",
+      "Verfolgungsdrang",
+      "Lichtempfindlichkeit",
+      "Sprachvermögen"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      10,
+      10,
+      1
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Tiefentrolls abgeleitet",
+    "intro": "Die Tiefentroll-Wertung konzentriert sich auf Sinne und Verfolgung in absoluter Finsternis. Lichtempfindlichkeit ist hoch und bildet die wichtigste taktische Schwäche."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiefentrolle kennen weder Sonne noch Wind noch Regen. Ihr kompakter, stark muskulöser Körper trägt dunkle Haut mit rissigen, steinartigen Verhärtungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergrößerte Augen und eine selbstleuchtend wirkende Netzhaut ermöglichen Orientierung im Dunkel, werden an der Oberfläche jedoch schnell geschädigt."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Art stammt aus Morgorn, dessen wahre Ausdehnung unter Gipfeln und Stollen liegt. Dort gehen natürliche Höhlen, alte Minen und vergessene Städte ineinander über."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ob Tiefentrolle aus Berg- oder Höhlentrollen hervorgingen oder eine ältere Linie bilden, ist ungeklärt. Sicher ist nur der vollständige Verlust von Sprache, Kultur und Verhandlung."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alles Fremde gilt als Nahrung oder Bedrohung. Der Troll verfolgt Beute über lange Strecken und arbeitet allein oder in losen Gruppen ohne erkennbare Hierarchie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kadaver werden nicht immer vollständig gefressen. Knochen, Rüstungen und Werkzeuge bleiben achtlos zurück."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiefe Kavernen, eingestürzte Zwergenstädte und kilometerlange Stollennetze Morgorns bilden den Kernraum. Selbst Dämmerlicht wird gemieden."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grelles Feuer und starke Lichtquellen blenden und desorientieren kurzzeitig. Stangen- und Wuchtwaffen schaffen Abstand, wo enge Gänge den Troll sonst bevorteilen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede Gruppe benötigt eine Lichtreserve, Fallen und einen markierten Rückzug. Ohne Licht ist auch ein verwundeter Tiefentroll kaum zu verfolgen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Laute Echos reizen Tiefentrolle, weil sie stark über Gehör jagen.",
+            "Ihre Augen können an der Oberfläche binnen Stunden dauerhaft erblinden.",
+            "In Morgorn gelten sie eher als Naturgefahr denn als bewusstes Monster.",
+            "Einzelne Exemplare warten wochenlang reglos auf vorbeiziehende Beute."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

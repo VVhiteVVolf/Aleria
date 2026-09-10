@@ -1,0 +1,208 @@
+{
+  "attachment": "7e821ab5-00f3-4960-8774-e9131073dffb",
+  "images": [
+    {
+      "id": "ordates",
+      "src": "religionen/alter-pantheon/assets/ordates.png",
+      "url": "https://i.imgur.com/J1Snp6E.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1489beb051f495b2d06e07d2ce16b291f183363c604da07a7a9656077c4861ca",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "mariona",
+      "src": "religionen/alter-pantheon/assets/mariona.png",
+      "url": "https://i.imgur.com/6Tsm9Ff.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4ea9930fa3c932099076c2067c48a84a9636ff70fe4d0040121f13177adddd0f",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "balrion",
+      "src": "religionen/alter-pantheon/assets/balrion.png",
+      "url": "https://i.imgur.com/yMU1SvL.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "121442f621033310a563f64c58c7925b785f6f958015f1829c6a36b20986aee3",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "belenor",
+      "src": "religionen/alter-pantheon/assets/belenor.png",
+      "url": "https://i.imgur.com/msRgq5i.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6cca9507ffd293d3af94bc48a52de84de4e6d4bca259c5ca7a9dd38fc876d342",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "silvanis",
+      "src": "religionen/alter-pantheon/assets/silvanis.png",
+      "url": "https://i.imgur.com/HnhsMsc.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "0dc47e375e89ded9c834a1d1219f2c35b7a4db47f7920e657b0391910abdadaf",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "lyrentia",
+      "src": "religionen/alter-pantheon/assets/lyrentia.png",
+      "url": "https://i.imgur.com/l4n975n.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "2c159923bb680f111b84d1d30261f06d4156958c7bc1669f48d0c6fd838994cc",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "tharannis",
+      "src": "religionen/alter-pantheon/assets/tharannis.png",
+      "url": "https://i.imgur.com/rop7jEp.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b15c4ae0d4cc52f80438b7206a1a6de19ac083e690db25784a613528cb580fbc",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "oghma",
+      "src": "religionen/alter-pantheon/assets/oghma.png",
+      "url": "https://i.imgur.com/Geeu9PK.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "82b7e9b3b8e1d34f2d08bdc450fee9ac63d4e7b5d99a2dbd17da23de01f312a5",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "kharan",
+      "src": "religionen/alter-pantheon/assets/kharan.png",
+      "url": "https://i.imgur.com/8VheRTm.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4ada4912c1157b525356d3d0ca9a8f80918e4590a8e7bb268f9f5f702fe1b3e2",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "nimue",
+      "src": "religionen/alter-pantheon/assets/nimue.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8e8c10386a0229714c21170ab0a7726fab0ebe48fdcf5ca7d6c22e9dab73aef0",
+      "tool": "built-in image_gen",
+      "promptId": "alter-pantheon/nimue",
+      "references": [
+        "religionen/alter-pantheon/assets/jovellia.png",
+        "religionen/alter-pantheon/assets/ordates.png"
+      ]
+    },
+    {
+      "id": "rhea",
+      "src": "religionen/alter-pantheon/assets/rhea.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "441229a5d4e613872fcefb3b2a8d6d86accff68b5a0df37c3c1ee5615615b18b",
+      "tool": "built-in image_gen",
+      "promptId": "alter-pantheon/rhea",
+      "references": [
+        "religionen/alter-pantheon/assets/ordates.png",
+        "religionen/alter-pantheon/assets/jovellia.png"
+      ]
+    },
+    {
+      "id": "zephyr",
+      "src": "religionen/alter-pantheon/assets/zephyr.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d1c78bdbcbb21224d2f162f6e0e74cd7458564de902a2b8e4ecedfa6f38adb4f",
+      "tool": "built-in image_gen",
+      "promptId": "alter-pantheon/zephyr",
+      "references": [
+        "religionen/alter-pantheon/assets/ordates.png",
+        "religionen/alter-pantheon/assets/jovellia.png"
+      ]
+    },
+    {
+      "id": "aelthar",
+      "src": "religionen/alter-pantheon/assets/aelthar.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "47e477e1ca2904eabaa0bd4f75d75f8ff90223011dd91001ef6cf2aa681f63be",
+      "tool": "built-in image_gen",
+      "promptId": "alter-pantheon/aelthar",
+      "references": [
+        "religionen/alter-pantheon/assets/ordates.png",
+        "religionen/alter-pantheon/assets/jovellia.png"
+      ]
+    },
+    {
+      "id": "thyrael",
+      "src": "religionen/alter-pantheon/assets/thyrael.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "989170700a01c9fe8e9284e88165fe7264cbd81b8726e15c26b5d75ec997ff8d",
+      "tool": "built-in image_gen",
+      "promptId": "alter-pantheon/thyrael",
+      "references": [
+        "religionen/alter-pantheon/assets/ordates.png",
+        "religionen/alter-pantheon/assets/jovellia.png"
+      ]
+    },
+    {
+      "id": "muirenn",
+      "src": "religionen/alter-pantheon/assets/muirenn.png",
+      "url": "https://i.imgur.com/e8Y66ny.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "166bc1205d5761c1c20efd3ae8e0d63c8a3abeaf50b3a1a7fab66de0b371cade",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "jovellia",
+      "src": "religionen/alter-pantheon/assets/jovellia.png",
+      "url": "https://i.imgur.com/GUD6xbb.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "204841a15f035dd871ca10022ca46a2428b2619ce03e586e7f570cdd5396efe6",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "arvendil",
+      "src": "religionen/alter-pantheon/assets/arvendil.png",
+      "url": "https://i.imgur.com/fw9qaVU.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "45d9dbc64b42218b4ece24f47c7f15238d8948bdf1839f6ecb560f5019184262",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "herion",
+      "src": "religionen/alter-pantheon/assets/herion.png",
+      "url": "https://i.imgur.com/SzxAxa7.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7f2c2623c2a45ffb1380bc13802c37ccfe585bb4cec6d9aaaf007e84d46c80ac",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "oriadh",
+      "src": "religionen/alter-pantheon/assets/oriadh.png",
+      "url": "https://i.imgur.com/6JRV4uX.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1c10d30a71888d7ac2fd14c1d9ee26a5de378d31a1af0a66829ba7fe26cf64f0",
+      "authorship": "user-supplied"
+    }
+  ],
+  "unusedLegacyHeader": "https://i.imgur.com/pprCCfc.png",
+  "note": "Die vorhandenen farbigen Religionszeichen bleiben erhalten. Die sieben schwarzen Kopfzeichen aus den neuen Vorlagen ersetzen sie nicht."
+}

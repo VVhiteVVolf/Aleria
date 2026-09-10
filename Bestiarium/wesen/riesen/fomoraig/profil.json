@@ -1,0 +1,203 @@
+{
+  "id": "fomoraig",
+  "name": "Fomóraig",
+  "classification": "Albischer Riese · Friedvoller göttlicher Wächter",
+  "continent": "Albische Kernlande",
+  "region": "Wälder, einsame Hügel und felsige Berge",
+  "folio": "III-R / 04",
+  "parentGroupId": "riesen",
+  "summary": "Fomóraig sind seltene, friedliebende Riesen aus den ersten albischen Stämmen der Kernlande. Von den Göttlichen als Wächter gesegnet, verbinden sie gewaltige Kraft mit Weisheit und tiefer Naturbindung; Verfolgung, Verwechslung mit Goliath und Jötun und jahrtausendelanges Misstrauen haben sie jedoch fast vollständig aus der Welt gedrängt.",
+  "quote": "Der Fomóraig hebt die Hand nicht zum Schlag, solange noch ein Wort den Hain bewahren kann.",
+  "quoteAttribution": "Überlieferung der Druiden aus den albischen Kernlanden",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-fomoraig.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Fomóraig als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/fomoraig.webp",
+    "width": 1008,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Fomóraig in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Fomóraig"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Fomóraig"
+    },
+    {
+      "label": "Typ",
+      "value": "Gesegneter albischer Riese und Naturwächter"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Göttlicher Segen über frühe Albenstämme der Kernlande"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Albische Kernlande"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Weite Wälder, einsame Hügel, Lichtungen und felsige Berge"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Friedliebend, besonnen, zurückgezogen und gegenüber Fremden vorsichtig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und Dämmerung, mit langen ruhigen Beobachtungsphasen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Tierverständnis, Pflanzenbeeinflussung und Gespür für Wetter und Natur"
+    },
+    {
+      "label": "Stärken",
+      "value": "Weisheit, Körperkraft, Schutzinstinkt und Harmonie mit dem Lebensraum"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Fast erloschenes Vertrauen und Verfolgung durch unwissende Bewohner"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Keine vertretbare Ausbeute; Wissen, Schutz und freiwillig überlassene Naturgaben"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Naturbindung",
+      "Weisheit",
+      "Tierverständnis",
+      "Schutzinstinkt",
+      "Friedfertigkeit",
+      "Menschenvertrauen"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      10,
+      10,
+      2
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Fomóraig abgeleitet",
+    "intro": "Die Fomóraig-Wertung beschreibt einen Wächter und möglichen Verbündeten. Das geringe Menschenvertrauen ist Folge langer Verfolgung, nicht fehlender Verständigungsfähigkeit."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fomóraig sind ein seltenes Riesengeschlecht aus den ersten albischen Stämmen. Göttlicher Segen bestimmte sie zu Wächtern und Beschützern der frühen Alben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Macht und Weisheit galten bei ihnen als Einheit. Natur und kosmische Ordnung wurden nicht beherrscht, sondern bewahrt."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Tyrannei von Jötun und Goliath stellte alle Riesen unter Verdacht. Aus Angst jagten selbst Alben die Fomóraig, obwohl Druiden und später die Fianna sie schützten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nur wenige überlebten. Die Verwechslung mit feindlichen Linien hält bis heute an und zerstörte fast jedes Vertrauen in andere Völker."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fomóraig meiden Konflikte und beobachten Menschen zunächst mit vorsichtiger Neugier. Druiden und wenige vertraute Clans können ihr Gehör finden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Clan Nic’Nuadat bewahrt die Erzählung, ein Vorfahr habe eine Fomóraig-Riesin geheiratet. Ob Sage oder Erinnerung, die Geschichte begründet bis heute besonderen Respekt."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Höhlen, Lichtungen und steinerne Unterstände liegen harmonisch in Wäldern, auf einsamen Hügeln oder in Bergen. Die Plätze dienen zugleich als Rückzug und als still beobachtete Schutzgebiete."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiere zeigen in ihrer Nähe häufig wenig Scheu. Eindringlinge und Jäger bedrohen dennoch auch entlegene Reviere."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihr Intellekt reicht beinahe an den der Menschen heran, bleibt jedoch frei von Ehrgeiz und Gier. Mit Tieren ist eine einfache Verständigung möglich; Wachstum und Wetter werden feiner wahrgenommen als von gewöhnlichen Beobachtern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Körperkraft wird nur zum Schutz eingesetzt. Ein Angriff ohne erkennbaren Anlass widerspricht allen gesicherten Berichten."
+        }
+      ]
+    },
+    {
+      "id": "umgang",
+      "title": "Umgang und Verständigung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Waffen werden gesenkt, druidische Zeichen offen gezeigt und Schutzgebiete nicht betreten. Geduld ist nötig, weil ein Fomóraig jedes Angebot gegen Jahrtausende der Verfolgung abwägt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein erzwungener Kampf schadet meist dem geschützten Land und bestätigt genau jenes Misstrauen, das die Linie isoliert."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Viele Bauern erkennen Fomóraig nicht sicher von Goliath oder Jötun.",
+            "Tiere sollen in ihrer Nähe ungewöhnlich ruhig bleiben.",
+            "Druiden überliefern Begegnungen häufiger als Gespräche, weil Vertrauen langsam entsteht.",
+            "Die Sage des Clan Nic’Nuadat gehört zu den wenigen menschlichen Erzählungen über familiäre Nähe zu dieser Linie."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

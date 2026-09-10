@@ -1,0 +1,201 @@
+{
+  "id": "nosferat",
+  "name": "Nosferat",
+  "classification": "Erstgeborener Vampir Bhaals und tyrannischer Vampirfürst",
+  "continent": "Infernale Sphären und Aleria",
+  "region": "Bhaals finstere Ordnung",
+  "folio": "IV / 03-A",
+  "parentGroupId": "vampire",
+  "summary": "Nosferat sind die ältesten und reinsten Vampire Bhaals. Als stolze Einzelherrscher verbinden sie übermenschliche Kraft, Blutmagie, Gedankenkontrolle und Beschwörung mit einer lähmenden Furchtaura; Kulte, Vasallen und versklavte Gemeinschaften verlängern ihre Tyrannei weit über den eigenen Aufenthaltsort hinaus.",
+  "quote": "Ein Nosferat braucht keine Krone, solange jedes gesenkte Haupt und jede verschwiegene Stimme seine Herrschaft bestätigt.",
+  "quoteAttribution": "Aus den Chroniken gestürzter Vampirherrschaften",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nosferat"
+    },
+    {
+      "label": "Typ",
+      "value": "Bhaals Vampir und Erstgeborener seiner Ordnung"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Aus den ältesten und verdorbensten Seelen in Bhaals Domäne geformt"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Bhaals finstere Domäne"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verlassene Burgen, Ruinen und dunkle Wälder"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Tyrannischer Einzelgänger, der über Vasallen und Sklaven herrscht"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Vorwiegend nachts; Sonnenlicht wird gemieden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Polymorphie, Blutmagie, Gedankenkontrolle und Beschwörung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Übermenschliche Kraft, Furchtaura und hohe Magieresistenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Sakrale Magie, Sonnenlicht und geweihtes Silber"
+    },
+    {
+      "label": "Beute",
+      "value": "Blut und Seelen der Opfer"
+    },
+    {
+      "label": "Vampirspross",
+      "value": "Nosphyr, ein Blutsauger"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Herrschaftsmacht",
+      "Blutmagie",
+      "Gedankenkontrolle",
+      "Beschwörung",
+      "Furchtaura",
+      "Sonnenanfälligkeit"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      9,
+      10,
+      9
+    ],
+    "source": "Aus tyrannischer Herrschaft, überlieferter Blutmagie, geistiger Dominanz, Dienerbeschwörung, unheiliger Aura und der Schwäche gegen Sonnenlicht abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Nosferat überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Bindung oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nosferat gelten als Bhaals Erstgeborene und reinste Ausprägung des Vampirs. Sie verbergen sich nicht aus Furcht, sondern herrschen durch Kontrolle; seit offene Vampirreiche gestürzt wurden, sichern Kulte, Verschwörungen und manipulierte Vasallen ihre Macht."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nur besonders alte, verdorbene Seelen überstehen die jahrhundertelangen Qualen, aus denen Bhaal einen Nosferat formt. Manche werden unmittelbar von ihm erhoben, andere durch Rituale mächtiger Vampirfürsten, doch jede Erhebung bindet die Seele endgültig an seinen Willen."
+        }
+      ]
+    },
+    {
+      "id": "merkmale",
+      "title": "Merkmale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schneeweiße dünne Haut lässt rote Adern hervortreten. Glühende Augen, spitze Ohren, übergroße Fangzähne und scharfe Krallen durchbrechen die bleiche menschliche Gestalt; ihre Präsenz allein erzeugt Furcht und Abscheu."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nosferat leben als absolute Einzelgänger, dulden aber zahlreiche Untergebene. Sie versklaven Bhalgar, Blutlinge oder ganze Gemeinschaften, kontrollieren abgelegene Herrschaften und bestrafen jeden Widerstand als Angriff auf Bhaals Ordnung."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie wandeln sich in größere Monsterformen, lenken Blut und Gedanken, beschwören niedere Diener und verbinden vampirische Geschwindigkeit mit großer Körperkraft. Verletzungen können sie aus dem Blut Lebender schließen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gewöhnliche Waffen reichen selten aus. Sonnenlicht, geweihtes Silber und sakrale Magie müssen mit einer Unterbrechung seiner Blutversorgung und dem Bruch kontrollierter Vasallen verbunden werden; eine scheinbar leere Burg kann weiterhin durch seinen Willen verteidigt sein."
+        }
+      ]
+    },
+    {
+      "id": "vampirspross",
+      "title": "Vampirspross",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nosphyr sind die als Blutsauger überlieferte Sprossform der Nosferat."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Nosferat wählt seinen Sitz nach Kontrolle über Menschen und Wege, nicht nach persönlichem Komfort.",
+            "Die selten genutzte Monsterform gilt als Zeichen, dass seine gewöhnliche Herrschaft nicht mehr genügt.",
+            "Vasallen können den Einfluss eines Nosferat noch ausführen, wenn der Vampir selbst seit Tagen nicht gesehen wurde."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "id": "wandlung",
+      "caption": "Bewegte Bildtafel · Nosferat in monströser Gestalt im Kampf",
+      "alt": "Nosferat in monströser Gestalt gegenüber einem bewaffneten Gegner",
+      "src": "../../../assets/vampire-profiles/nosferat-plate.webp",
+      "width": 800,
+      "height": 450
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/vampire-profiles/nosferat-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Nosferat in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/vampire-profiles/nosferat-hero.webp",
+    "width": 409,
+    "height": 610,
+    "alt": "Überlieferte Darstellung eines Nosferat",
+    "caption": "Überlieferte Bildtafel · Nosferat"
+  }
+}

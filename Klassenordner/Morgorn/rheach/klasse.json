@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "rheach",
+  "cultureId": "morgorn",
+  "name": "Rheach",
+  "title": "Der Rheach",
+  "subtitle": "Gesalbter Diener Rheas",
+  "aliases": ["Diener Rheas", "Rheas Jünger"],
+  "theme": "sacred",
+  "icon": "https://i.imgur.com/HoGqVtM.png",
+  "illustration": "https://i.imgur.com/HoGqVtM.png",
+  "artwork": { "source": "https://i.imgur.com/HoGqVtM.png", "width": 1024, "height": 1536, "caption": "Rheach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Rheach · Diener Rheas" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Gesalbter Ritter oder Angehöriger des Klerus" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Religiöser Schutzdienst, Beistand und geweihter Kampf" },
+    { "group": "Klassenprofil", "label": "Gottheit", "html": "Rhea · Göttin der Erde" },
+    { "group": "Klassenprofil", "label": "Ausrichtung", "html": "Ritterlich oder geistlich, abhängig von Amt und Ausbildung" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Rheach dienen Rhea, der Göttin der Erde. Manche werden als gesalbte und geschulte Ritter in den Kampf entsandt, andere erfüllen ihre Pflicht als Geistliche, Bewahrer von Heiligtümern oder Begleiter einer Halle.</p><p>Beide Wege verbindet derselbe Eid: Erde, Stein und die darauf gegründete Gemeinschaft sind anvertrautes Gut. Sie zu schützen ist Gottesdienst und öffentliche Verantwortung zugleich.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Rheach entwickelten sich im Umfeld alter Erdheiligtümer, Bergtempel und geweihter Hallengründungen. Aus Tempelhütern und reisenden Dienern Rheas entstand eine Kaste, in der Klerus und ritterliche Ausbildung nebeneinander bestehen können.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Rheach kennen Riten, Eide, Heiligtümer und die Pflichten morgornischer Hallengemeinschaften. Ritterlich ausgebildete Angehörige schützen Pilger, Geistliche und geweihte Orte im Nahkampf; geistliche Rheach beraten, versorgen und führen Rituale. Welche übernatürlichen Kräfte daraus im Kampfsystem entstehen, bleibt der späteren Ausarbeitung vorbehalten.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Verbindet religiöse Autorität mit praktischem Schutzdienst</li><li>Standhaft bei der Verteidigung von Menschen und Heiligtümern</li><li>Kann ritterlich oder klerikal ausgebildet sein</li></ul><h3>Schwächen</h3><ul><li>Strenge Eide schränken eigenmächtiges Handeln ein</li><li>Aufgaben und Bewaffnung unterscheiden sich stark nach Amt</li><li>Religiöse Verantwortung kann mit weltlichen Befehlen kollidieren</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der ritterliche Rheach kämpft schützend und standfest. Er hält den Raum um Schutzbefohlene oder ein Heiligtum und verbindet Waffenführung mit Eid und Ritus. Klerikale Rheach können dieselbe Kaste vertreten, ohne denselben Waffenweg zu beschreiten.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Gesalbte Ritter tragen ihrer Aufgabe angemessene Rüstung und Nahkampfwaffen; Geistliche führen liturgische Geräte, Zeichen Rheas und Reiseausrüstung. Geweihter Stein, Erdpigmente oder ein Hallensiegel können die Zugehörigkeit sichtbar machen.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Rheach besitzen religiöses Ansehen, ohne dadurch automatisch dem Adel anzugehören. Ihr Wort wiegt besonders bei Eiden, Begräbnissen, Hallengründungen und Fragen geweihter Erde. Ein Rheach haftet dabei ebenso für sein Amt wie jeder weltliche Träger morgornischer Verantwortung.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Rheach" }
+}

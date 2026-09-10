@@ -1,0 +1,50 @@
+.tradition-register { margin: 36px 0 48px; }
+.tradition-heading h2 { margin: 8px 0 14px; font-size: 32px; color: var(--faith-green); }
+.tradition-heading > p:last-child { max-width: 780px; font-size: 14px; color: var(--faith-muted); }
+.tradition-quotation { margin: 25px 0; border-left: 3px solid var(--faith-gold); padding: 12px 22px; font-style: italic; }
+.tradition-quotation cite { display: block; margin-top: 8px; color: var(--faith-muted); font-size: 12px; }
+.tradition-groups { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 24px 0; }
+.tradition-groups a { font-size: 12px; padding: 5px 0; }
+.tradition-groups span { margin-left: 7px; color: var(--faith-gold); }
+.tradition-group { margin-top: 32px; }
+.tradition-group > header { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding-bottom: 12px; margin-bottom: 20px; border-bottom: 3px double var(--faith-line); }
+.tradition-group h3 { font-size: 25px; color: var(--faith-green); }
+.tradition-group [data-role="chapter-count"] { color: var(--faith-gold); font-size: 24px; }
+.tradition-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px 22px; }
+.tradition-card { min-width: 0; display: flex; flex-direction: column; border-bottom: 1px solid var(--faith-line); }
+.tradition-image { display: block; padding: 8px; background: #f8f0df70; }
+.tradition-image img { width: 100%; height: 350px; object-fit: contain; }
+.tradition-image:hover { background: #e4d1a83d; }
+.tradition-card-copy { padding: 16px 5px 21px; text-align: center; }
+.tradition-card h4 { margin: 0; color: var(--faith-green); font: normal 24px/1.25 Georgia,serif; overflow-wrap: anywhere; }
+.tradition-card-copy > p { margin-top: 8px; font-size: 13px; color: var(--faith-muted); }
+.tradition-comparisons { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 11px; margin-top: 15px; font-size: 11px; }
+.tradition-comparisons > span { flex-basis: 100%; color: var(--faith-muted); font-size: 9px; letter-spacing: .09em; text-transform: uppercase; }
+.tradition-notes { border-left: 2px solid var(--faith-line); padding: 8px 19px; margin-top: 28px; font-size: 12px; color: var(--faith-muted); }
+.tradition-notes p + p { margin-top: 10px; }
+.tradition-ranks { display: grid; gap: 12px; margin-top: 24px; }
+.tradition-rank { border: 1px solid var(--faith-line); background: #fcf7ea50; }
+.tradition-rank summary { cursor: pointer; padding: 17px 20px; color: var(--faith-green); font-size: 19px; }
+.tradition-rank-number { display: inline-block; margin: 0 16px 0 5px; font-size: 13px; color: var(--faith-gold); }
+.tradition-rank-body { padding: 0 22px 22px; font-size: 15px; line-height: 1.9; }
+.tradition-rank-body p + p { margin-top: 14px; }
+.tradition-rank-body h3 { margin: 17px 0 9px; }
+.tradition-rank-pending { color: var(--faith-muted); font-style: italic; }
+.tradition-military { margin-top: 18px; padding: 15px 18px; border-left: 2px solid var(--faith-gold); background: #e3d4b829; }
+.tradition-military h3 { font-size: 20px; }
+@media (max-width: 1100px) { .tradition-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 560px) {
+  .tradition-grid { grid-template-columns: 1fr; gap: 25px; }
+  .tradition-image img { height: 390px; }
+  .tradition-heading h2 { font-size: 28px; }
+  .tradition-group h3 { font-size: 23px; }
+  .tradition-rank summary { padding: 15px 12px; font-size: 17px; }
+  .tradition-rank-body { padding: 0 16px 18px; }
+}
+@media print {
+  .tradition-groups, .tradition-register .catalog-tools { display: none; }
+  .tradition-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .tradition-image img { height: 200px; }
+  .tradition-card { break-inside: avoid; }
+  .tradition-rank::details-content { display: block; content-visibility: visible; }
+}

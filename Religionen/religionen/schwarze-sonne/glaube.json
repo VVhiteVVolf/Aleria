@@ -1,0 +1,114 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "allmaechtiger",
+      "title": "Der Allmächtige",
+      "entries": [
+        {
+          "id": "al-malak",
+          "name": "Al-Malak",
+          "epithet": "Der Allmächtige",
+          "relatedIds": [],
+          "image": {
+            "src": "religionen/schwarze-sonne/assets/al-malak.png",
+            "alt": "Al-Malak – Der Allmächtige",
+            "width": 801,
+            "height": 807
+          }
+        }
+      ]
+    },
+    {
+      "id": "prophet",
+      "title": "Der Prophet",
+      "entries": [
+        {
+          "id": "narath",
+          "name": "Narath",
+          "epithet": "Der Prophet",
+          "relatedIds": [
+            "narath"
+          ],
+          "image": {
+            "src": "religionen/schwarze-sonne/assets/narath.png",
+            "alt": "Narath – Der Prophet",
+            "width": 798,
+            "height": 799
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Hierarchie",
+    "entries": [
+      {
+        "id": "khalif",
+        "title": "Khalif",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Khalif ist der Monarch und das Oberhaupt der Menschen Shirazads, doch selbst er ist dem Propheten untergeordnet. Er wird vom Propheten selbst auserkoren und könnte technisch gesehen auch ein Bettler sein."
+          }
+        ]
+      },
+      {
+        "id": "hoher-imam",
+        "title": "Hoher Imam",
+        "blocks": []
+      },
+      {
+        "id": "imam",
+        "title": "Imam",
+        "blocks": []
+      },
+      {
+        "id": "sheik",
+        "title": "Sheik",
+        "blocks": []
+      },
+      {
+        "id": "mugla",
+        "title": "Mugla",
+        "blocks": []
+      },
+      {
+        "id": "wali",
+        "title": "Wali",
+        "blocks": []
+      },
+      {
+        "id": "ulma",
+        "title": "Ulma",
+        "blocks": []
+      },
+      {
+        "id": "mujahid",
+        "title": "Mujahid",
+        "blocks": []
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": []
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": []
+      },
+      {
+        "id": "schueler",
+        "title": "Schüler",
+        "blocks": []
+      },
+      {
+        "id": "laie",
+        "title": "Laie",
+        "blocks": []
+      }
+    ]
+  }
+}

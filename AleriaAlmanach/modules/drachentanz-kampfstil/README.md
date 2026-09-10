@@ -1,5 +1,41 @@
 # Drachentanz Kampfstil
 
+## Erweiterung: Klassen
+
+`drachentanz-kampfstil-klassen-data.js` ergänzt **Drachentanz Kampfstil - Klassen** direkt neben dem ersten Teil in **Techniken → Cenyr**. Die Datei wird unmittelbar nach dem ersten Teil geladen und übernimmt dessen Kategorie und Stempel. Sie verändert den ersten Teil nicht und registriert sich anhand der stabilen ID `drachentanz-kampfstil-klassen` nur einmal.
+
+Die sechs vom Nutzer zugewiesenen Illustrationen liegen unverändert unter `public/assets/drachentanz-kampfstil-klassen/`: `cantref.png`, `helwyr.png`, `uchelwyr.png`, `barddwyr.png`, `arthwyr.png` und `derwyn.png` gehören in dieser Reihenfolge zu den Seiten 1–6. Die erste Illustration dient zugleich als Modulcover. `sources.json` dokumentiert Seitenzuordnung, Original-URLs, Abmessungen und SHA-256-Prüfsummen. Die Bildspalten behalten ihre füllende Darstellung mit oberem Bildfokus; der Ausschnitt bleibt im Editor anpassbar.
+
+Die sechs Seiten folgen der Nutzerreihenfolge: **Cantref, Helwyr, Uchelwyr, Barddwyr, Arthwyr, Derwyn**. Sie nutzen die vorhandene Standard-/Story-Vorlage mit Klassenüberschrift, gekürzter Geschichte, Bezug zum Drachentanz sowie Beschreibungen der verbindlich festgelegten Formen. Die Texte bleiben in beiden vorhandenen Editoren bearbeitbar. Seitenkommentare bleiben auf allen sechs Story-Seiten verfügbar; es gibt keine zusätzlichen Kommentarabschlussseiten oder vorgegebenen Zitatgeber.
+
+Das Klassenmodul erzählt ausschließlich aus der Welt heraus: Lehrjahre, freie Erprobung, Unterweisung und Meisterschaft ersetzen Stufenangaben, Freischaltungen und Lernbudgets. Technische Ausbildungsdaten bleiben in den verlinkten Klassenseiten und den Kampfregistern; die redaktionellen Texte verändern diese Regeln nicht.
+
+| Klasse | Eigene Formen |
+| --- | --- |
+| Cantref | Speerdrache, peitschender Drache, hütender Drache |
+| Uchelwyr | Dieselben drei Speerformen in derselben Reihenfolge; zusätzlich stürmender und schweifender Drache |
+| Helwyr | Lauernder und jagender Drache; dazu alle sieben Teulu-Pfade |
+| Barddwyr | Trällernder und kreischender Drache; dazu der Schwertdrache |
+| Arthwyr | Bärenklaue; dazu alle sieben Teulu-Pfade |
+| Derwyn | Fließender, brandender, steigender und peitschender Wyrm |
+
+Der Jungdrache bleibt die Grundausbildung; Derwyn können stattdessen die junge Welle wählen. Ihre freie kreative Phase liegt auf Stufe 7–8, die vier Wyrmformen beginnen ab Stufe 9. Die beiden Herkunftskulturen verwenden dieselbe Klasse. Gemeinsame Speerformen werden innerhalb des Moduls aus einem einzigen Beschreibungsblock erzeugt. Attacken, Kosten, Waffenbedingungen und Ausbildungsregeln kommen aus den kanonischen Kampfregistern; jede Modulseite verlinkt unmittelbar auf den zugehörigen Ausbildungsplan. Der Vertragstest `tests/drachentanz-klassen-module.test.mjs` prüft Namen, Reihenfolge und tatsächlich vorhandene Attacken gegen diese Register sowie die erzeugten Klassenseiten.
+
+Quellen der redaktionellen Kurzfassungen sind jeweils `Geschichte` sowie ergänzend `Einführung` und `Fähigkeiten` in:
+
+- `Klassenordner/Cenyr/cantref/klasse.json`
+- `Klassenordner/Cenyr/helwyr/klasse.json`
+- `Klassenordner/Cenyr/uchelwyr/klasse.json`
+- `Klassenordner/Cenyr/barddwyr/klasse.json`
+- `Klassenordner/Cenyr/arthwyr/klasse.json`
+- `Klassenordner/Vennyr/derwyn/klasse.json`
+
+Die allgemeinen Einleitungen zum Rittertum sind gekürzt; beim Derwyn wird die spezifische avallornische Überlieferung herausgestellt. Seine Quelldatei liegt unter Vennyr, führt die Klasse aber ausdrücklich gemeinsam für **Cenyr und Vennyr**. Die Unterscheidung zwischen Kleriker und zusätzlich ausgebildetem Ritter bleibt erhalten. Die bereits in der Arthwyr-Quelle benannte Bärenklaue ist als einzige eigene Form übernommen. Die Klassenseiten sind von jeder neuen Modulseite aus verlinkt; die Quellen werden nicht zur Laufzeit nachgeladen.
+
+Geprüft wurden die unveränderte Registrierung des ersten Teils, die sechs Seiten samt Ausbildungslinks und Formen sowie alle Seiten bei 1440 und 390 Pixeln Breite. Navigation, Bildfüllung und Seitenkommentare funktionieren; Inline-Bearbeitung mit Abbrechen und die Übernahme aller sechs Seiten im vollständigen Editor erhalten die Inhalte. Der gemeinsame Infozeilen-Editor ergänzt bei leeren Daten keine Musterwerte mehr; bewusstes Hinzufügen und Entfernen bleibt möglich.
+
+## Erster Teil
+
 Redaktionelles Almanach-Modul unter **Techniken → Cenyr → Drachentanz Kampfstil**.
 Die Registrierung erfolgt nach `data/sections.js` und vor der Initialisierung des Archivs.
 Erneutes Laden registriert den Eintrag nicht doppelt.

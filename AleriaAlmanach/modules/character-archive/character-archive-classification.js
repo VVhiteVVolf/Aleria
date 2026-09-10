@@ -1,7 +1,7 @@
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260905-barde-icon-v1';
 import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260905-cenyr-v2';
 import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js';
+import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js?v=20260909-dragon-parent-v2';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const mountByName = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [normalizeArchiveSearchText(entry.name), entry]));

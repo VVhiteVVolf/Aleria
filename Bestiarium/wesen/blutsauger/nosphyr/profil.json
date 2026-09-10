@@ -1,0 +1,241 @@
+{
+  "id": "nosphyr",
+  "name": "Nosphyr",
+  "classification": "Monströser Vampirspross des Nosferat",
+  "continent": "Aleria",
+  "region": "Dunkle Höhlen, verlassene Ruinen und Gruften",
+  "folio": "IV / 03-B-3",
+  "parentGroupId": "blutsauger",
+  "summary": "Nosphyre entstehen durch den aggressiven Sanguinaris Umbra eines Nosferat. Innerhalb weniger Tage vernichtet die Infektion fast jede menschliche Eigenschaft und formt eine geflügelte, fledermausartige Jagdbestie. Magisch wenig begabt, verbinden Nosphyre gewaltige Körperkraft, scharfe Sinne und kurze Flüge mit völlig ungezügeltem Blutdurst.",
+  "quote": "Wo der Nosphyr landet, endet jede Verhandlung; dann zählen nur geweihter Stahl, geschlossene Reihen und der Weg ins Licht.",
+  "quoteAttribution": "Lehrspruch des Ordens der Morgenwacht",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nosphyr"
+    },
+    {
+      "label": "Typ",
+      "value": "Monströser Vampirspross und Jagdbestie"
+    },
+    {
+      "label": "Schöpferlinie",
+      "value": "Nosferat"
+    },
+    {
+      "label": "Virus",
+      "value": "Sanguinaris Umbra"
+    },
+    {
+      "label": "Übertragung",
+      "value": "Biss, tiefer Kratzer oder infiziertes Blut"
+    },
+    {
+      "label": "Verwandlungsdauer",
+      "value": "Weniger als sieben Tage"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Höhlen, Ruinen, Grüfte und andere lichtlose Verstecke"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Triebgesteuerter nächtlicher Einzeljäger"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Nacht; tagsüber verborgen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Kurzer Flug, Dunkelsicht, scharfe Sinne und enorme Kraft"
+    },
+    {
+      "label": "Stärken",
+      "value": "Geschwindigkeit, natürliche Waffen und zäher Überlebenswille"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Tageslicht, Feuer, geweihte Waffen und koordinierte Fernabwehr"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körperkraft",
+      "Flugvermögen",
+      "Jagdsinne",
+      "Blutgier",
+      "Magiebegabung",
+      "Menschlichkeitsrest"
+    ],
+    "values": [
+      10,
+      6,
+      9,
+      10,
+      2,
+      1
+    ],
+    "intro": "Beim Nosphyr verdrängen körperliche Mutation und Jagdtrieb fast vollständig die sterbliche Persönlichkeit. Seine geringe Magiebegabung mindert die unmittelbare Gefahr kaum.",
+    "source": "Aus dem raschen Sanguinaris Umbra, der fledermausartigen Mutation, Dunkelsicht, Flugfähigkeit, rohen Kraft und vollständigen geistigen Degeneration abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nosphyr ist der Vampirspross eines Nosferat und gehört zu den gefährlichsten niederen Abkömmlingen Bhaals. Die Verwandlung tilgt nicht nur die Menschlichkeit, sondern zerreißt auch das frühere Erscheinungsbild des Wirtes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was zurückbleibt, ist eine geflügelte, fledermausartige Bestie. Sie kann keine menschliche Rolle mehr spielen und lebt verborgen in lichtlosen Zufluchten, bis die Nacht ihre Jagd ermöglicht."
+        }
+      ]
+    },
+    {
+      "id": "virus",
+      "title": "Sanguinaris Umbra",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Umbra-Erreger ist eine aggressive, von infernaler Energie durchdrungene Infektion, die fast ausschließlich durch Nosferat übertragen wird. Bisse, tiefe Kratzer oder die gezielte Einbringung infizierten Blutes genügen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Übertragung: Biss, tiefer Kratzer oder infiziertes Blut",
+            "Heilung: Nach Ausbruch praktisch unmöglich; mächtige Magie kann den Verlauf allenfalls verzögern",
+            "Wirkung: rasche Zerstörung menschlicher Essenz und vollständige animalische Mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prozess",
+      "title": "Verwandlungsprozess",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Initiale Infektion · 0–12 Stunden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fieber, Schüttelfrost und rasende Schmerzen setzen ein. Der Wirt wird ruhelos und reagiert erstmals ungewohnt aggressiv."
+        },
+        {
+          "type": "subheading",
+          "text": "Degeneration · 12–48 Stunden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Haut verfärbt sich grau oder bläulich, Zähne und Klauen wachsen und rationale Entscheidungen weichen dem Jagdtrieb."
+        },
+        {
+          "type": "subheading",
+          "text": "Transformation · 48 Stunden bis 7 Tage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Flügel brechen aus dem Rücken hervor, das Gesicht verformt sich zu einem fledermausartigen Maul und die gesamte Physiologie richtet sich auf Angriff, Bewegung und Beutesuche aus."
+        },
+        {
+          "type": "subheading",
+          "text": "Vollständige Korruption · ab 7 Tagen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Nosphyr besitzt keine erkennbare Menschlichkeit mehr. Als muskulöse Jagdbestie kann er von einem Nosferat gelenkt oder als lebende Waffe freigesetzt werden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der ausgewachsene Nosphyr ist ein hagerer bis muskulöser Humanoider mit zwei kräftigen Armen, zwei ledrigen Flügeln, langen Klauen, tierhaftem Fang und glühenden Augen. Die alte menschliche Gestalt ist nicht mehr zu erkennen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nosphyre werden vollständig von Jagdinstinkt und Blutgier getrieben. Sie kennen weder die Subtilität anderer Sprosse noch den Wunsch nach Gesellschaft und stürzen sich auf erreichbare Beute, sobald Hunger oder ein Befehl ihres Meisters sie aus dem Versteck treibt."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rohe Kraft, Geschwindigkeit und Beweglichkeit ersetzen fast jede Magie. Gehör und Geruch erfassen Beute über große Entfernung; Dunkelsicht, Klauen und Fangzähne machen den Nosphyr in engen Ruinen ebenso gefährlich wie im offenen nächtlichen Angriff."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Übermenschliche Körperkraft und Geschwindigkeit",
+            "Zwei ledrige Flügel für kurze Flüge und Sprungangriffe",
+            "Hervorragende Dunkelsicht, Geruchs- und Gehörsinne",
+            "Hohe Schmerztoleranz und ausgeprägter Überlebenswille"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geschlossene Reihen und lange, geweihte Waffen verhindern, dass der Nosphyr einzelne Kämpfer anspringt. Ordensritter zwingen ihn aus der Luft, halten die Flügel auf Abstand und treiben ihn in Feuer oder Tageslicht; eine Verfolgung in seine Gruft begünstigt dagegen seine Sinne und Beweglichkeit."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Der Sanguinaris Umbra besitzt den kürzesten überlieferten Wandlungsverlauf der vier bekannten Sprosslinien.",
+            "Nosphyre werden von Nosferat eher als Waffen denn als Nachkommen behandelt.",
+            "Leuchtende Augen sind häufig das letzte Zeichen, das ein Opfer vor dem Sprungangriff erkennt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/bloodsucker-profiles/nosphyr-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Nosphyr mit zwei Armen und zwei Flügeln"
+  },
+  "hero": {
+    "src": "../../../assets/bloodsucker-profiles/nosphyr-scene.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Nosphyr mit zwei Armen und zwei Flügeln vollständig sichtbar im Kampf gegen einen mittelalterlichen Ordensritter",
+    "caption": "Neu angelegte Bildtafel · Nosphyr gegen einen Ordensritter"
+  }
+}

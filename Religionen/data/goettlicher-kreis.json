@@ -1,0 +1,62 @@
+{
+  "id": "goettlicher-kreis",
+  "parentId": "neun-goettliche",
+  "title": "Der göttliche Kreis",
+  "subtitle": "Im Glauben der Alerischen Kirche",
+  "exploreLabel": "Den göttlichen Kreis erkunden",
+  "symbolCaption": "Viele Gestalten. Ein göttlicher Kreis.",
+  "doctrineIds": ["sphaere", "eide", "aspekte-segen", "buende", "uebertretungen"],
+  "readingEntryIds": ["alerische-kirche"],
+  "groups": [
+    {
+      "id": "goettliche",
+      "number": "I",
+      "title": "Die Neun Göttlichen",
+      "label": "Die Neun Göttlichen",
+      "shortLabel": "Primäre Gottheiten",
+      "intro": "Die primären Mächte: Vater und Mutter, Streiter und Templer, Hirtin und Maid, Knecht, Mentor und Hüter.",
+      "entries": [
+        "gottheiten/goettliche/ordan/eintrag.json",
+        "gottheiten/goettliche/mariel/eintrag.json",
+        "gottheiten/goettliche/baldran/eintrag.json",
+        "gottheiten/goettliche/maldras/eintrag.json",
+        "gottheiten/goettliche/sylvana/eintrag.json",
+        "gottheiten/goettliche/lyris/eintrag.json",
+        "gottheiten/goettliche/tharim/eintrag.json",
+        "gottheiten/goettliche/orin/eintrag.json",
+        "gottheiten/goettliche/kharon/eintrag.json"
+      ]
+    },
+    {
+      "id": "souveraene",
+      "number": "II",
+      "title": "Die Fünf Souveräne",
+      "label": "Die Fünf Souveräne",
+      "shortLabel": "Souveräne",
+      "intro": "Die Eckpfeiler der Welt hüten Wasser, Erde, Wind, Donner und Feuer.",
+      "entries": [
+        "gottheiten/souveraene/nimue/eintrag.json",
+        "gottheiten/souveraene/rhea/eintrag.json",
+        "gottheiten/souveraene/zephyr/eintrag.json",
+        "gottheiten/souveraene/aelthar/eintrag.json",
+        "gottheiten/souveraene/thyrael/eintrag.json"
+      ]
+    },
+    {
+      "id": "untergoetter",
+      "number": "III",
+      "title": "Die Fünf Untergottheiten",
+      "label": "Die Fünf Untergottheiten",
+      "shortLabel": "Untergottheiten",
+      "intro": "Eigene Wege des Göttlichen: Entdeckung, Glück, Schaffenskraft, Wettstreit und Mystik.",
+      "entries": [
+        "gottheiten/untergoetter/tethyra/eintrag.json",
+        "gottheiten/untergoetter/jovena/eintrag.json",
+        "gottheiten/untergoetter/auron/eintrag.json",
+        "gottheiten/untergoetter/selarion/eintrag.json",
+        "gottheiten/untergoetter/orith/eintrag.json"
+      ]
+    }
+  ],
+  "saintsSource": "heilige/register.json"
+}

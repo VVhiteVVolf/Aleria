@@ -1,8 +1,8 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-import { estimateCombatDamage } from '../combat-action-estimates.js';
-import { getBonusDamageFormulas } from '../combat-profile-model.js';
+import { estimateCombatDamage } from '../combat-action-estimates.js?v=20260909-dragon-parent-v2';
+import { getBonusDamageFormulas } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { combineDamageFormulas, buildDamageNotation } from '../rules/combat-mvp-rules.js';
-import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js';
+import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')

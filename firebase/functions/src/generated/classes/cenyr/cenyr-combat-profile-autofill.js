@@ -1,5 +1,5 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
-import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
+import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 
 const autofillCache = new WeakMap();
 
@@ -9,6 +9,7 @@ function trainingSignature(profile = {}) {
     classId: profile.templateSelections?.classId || profile.identity?.archetype || '',
     ancestry: profile.identity?.ancestry || '',
     level: profile.progression?.level || 1,
+    curriculumId: training.curriculumId || '',
     selections: (training.selections || []).map(selection => [
       selection.kind,
       selection.selectionId,

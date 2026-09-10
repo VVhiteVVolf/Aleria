@@ -1,0 +1,185 @@
+{
+  "id": "aschetroll",
+  "name": "Aschetroll",
+  "classification": "Trollunterart · Zarakhuls zyklopische Stoßbrut",
+  "continent": "Tyrannische Zeit Zarakhuls",
+  "region": "Vulkanlandschaften, Aschewüsten und Lavaschluchten",
+  "folio": "III-T / 11",
+  "parentGroupId": "trolle",
+  "summary": "Aschetrolle sind seltene, aus Landtrollen und Zyklopen gezüchtete Relikte aus Zarakhuls Tyrannischer Zeit. Ein dominantes Auge, lavagraue Haut und außergewöhnliche Hitzeresistenz erinnern an ihre Bestimmung als Stoßtruppen; Feuer lässt sie kalt, während Wasser, Frost und gezielte Angriffe auf Gelenke ihre zähe Kraft brechen.",
+  "quote": "Der Aschetroll trägt keinen Befehl mehr – nur den Zorn, der davon übrig blieb.",
+  "quoteAttribution": "Randnotiz eines Chronisten der Tyrannischen Zeit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-aschetroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Aschetroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/aschetroll.webp",
+    "width": 853,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Aschetroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Aschetroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Aschetroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Gezüchteter Troll-Zyklop-Hybrid"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Gezielte Kreuzung von Landtrollen und Zyklopen unter Zarakhul"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Tyrannische Zeit Zarakhuls"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Vulkane, Ascheebenen, Lavaschluchten und heiße Gebirgskessel"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Wortkarg, einzelgängerisch, territorial und zweckgerichtet gewalttätig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und Nacht; besonders bei großer Hitze"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Feuerresistenz, Hitzesicht, Riesenstärke und langsame Regeneration"
+    },
+    {
+      "label": "Stärken",
+      "value": "Massiver Körper, Lavahaut, Furchtlosigkeit und Zähigkeit"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, große Wassermengen, Gelenke und das einzelne Auge"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Schwefliges Trollblut, Lavahaut und seltene Reliktwaffen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Feuerresistenz",
+      "Riesenblut",
+      "Befehlsprägung",
+      "Körperkraft",
+      "Regeneration",
+      "Kälteanfälligkeit"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      10,
+      5,
+      10
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Aschetrolls abgeleitet",
+    "intro": "Das Archiv bewertet den Aschetroll als gezüchtete Stoßkreatur. Feuer ist nahezu wirkungslos; eine hohe Kälteanfälligkeit weist auf seine entscheidende Gegenprobe hin."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Graue vernarbte Haut, Ruß, ein einzelnes dominantes Auge und ein Körperbau zwischen Troll und Riese verraten den künstlichen Ursprung. Der Aschetroll sucht Hitze, statt sie zu fürchten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er bewegt sich in Vulkanlandschaften, Ascheebenen und verbrannten Gebirgszügen, in denen gewöhnliche Trolle nicht bestehen."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Während Zarakhuls Tyrannischer Zeit wurden Landtrolle gezielt mit Zyklopen vermischt. Die entstehende Linie sollte als furchtlose, feuerfeste Stoßtruppe dienen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nach dem Zerfall der Heere verschwanden die meisten Exemplare. Ohne weitere Zucht wurde die Linie kleiner, behielt jedoch Riesenblut, Widerstand und eine schwer erklärbare Befehlsprägung."
+        }
+      ]
+    },
+    {
+      "id": "eigenschaften",
+      "title": "Eigenschaften und Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aschgraue Verhärtungen gleichen erkalteter Lava. Das einzelne Auge erkennt Hitze, Bewegung und Kontraste hervorragend; Frost überlastet den Kreislauf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aschetrolle sprechen wenig und greifen Eindringlinge zielgerichtet an. Ihr Verhalten wirkt, als folgten sie weiterhin einem längst erloschenen Kriegsbefehl."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Primitive Höhlen in Aschehängen, heiße Stollen und Gebirgskessel nahe aktiver oder halb erloschener Vulkane dienen als Lager. Fruchtbares Land und Wälder werden gemieden."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer und Lava sind wirkungslos. Große Wassermengen, Eiszauber, schwere Wuchtwaffen und Angriffe auf Gelenke oder Auge sind erforderlich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koordinierte Gruppen lassen den Troll auskühlen, ermüden und binden. Ein direkter Schlagabtausch endet fast immer tödlich."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche Aschetrolle stehen stundenlang vor Lavaflüssen, als würden sie lauschen.",
+            "Primitive Waffen aus Zarakhuls Zeit besitzen oft geringen Nutzwert, aber hohe geschichtliche Bedeutung.",
+            "Vulkanausbrüche scheinen ruhende Exemplare instinktiv zu aktivieren.",
+            "Ihr Blut verdampft an Feuer und hinterlässt einen schwefligen Geruch."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

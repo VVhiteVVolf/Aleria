@@ -1,0 +1,107 @@
+:root {
+  color-scheme: light;
+  --faith-paper: #f2ebda;
+  --faith-light: #fbf6ea;
+  --faith-ink: #352f25;
+  --faith-muted: #72654f;
+  --faith-line: #cbbb99;
+  --faith-gold: #997743;
+  --faith-green: #263e35;
+  --faith-rust: #7f4234;
+  scroll-behavior: smooth;
+  scroll-padding-top: 28px;
+}
+.religion-page { margin: 0; color: var(--faith-ink); background: radial-gradient(ellipse at 70% 0, #fff9eac9, transparent 65%), repeating-linear-gradient(95deg, #69563504 0 1px, transparent 1px 4px), var(--faith-paper); font: 16px/1.65 Georgia, 'Times New Roman', serif; }
+.religion-page *, .religion-page *::before, .religion-page *::after { box-sizing: border-box; }
+:where(.religion-page) h1, :where(.religion-page) h2, :where(.religion-page) h3 { margin: 0; font-weight: normal; line-height: 1.2; }
+:where(.religion-page) p, :where(.religion-page) figure { margin: 0; }
+.religion-page a { color: inherit; text-underline-offset: 4px; }
+.religion-page button, .religion-page input, .religion-page select { font: inherit; color: inherit; }
+.religion-page button, .religion-page select { cursor: pointer; }
+.religion-page img { display: block; max-width: 100%; object-fit: contain; }
+.religion-page :focus-visible { outline: 3px solid var(--faith-gold); outline-offset: 5px; }
+.religion-page [hidden] { display: none; }
+.religion-page ::selection { background: #d9c49d; color: #29261f; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link { position: fixed; z-index: 10; top: -100px; left: 15px; padding: 12px 18px; background: var(--faith-light); }
+.skip-link:focus { top: 12px; }
+.site-header { background: var(--faith-green); color: #f8eed9; border-bottom: 3px solid var(--faith-gold); }
+.header-inner { width: min(1440px, 100% - 80px); min-height: 66px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.site-brand { text-decoration: none; font-size: 11px; letter-spacing: .16em; white-space: nowrap; }
+.site-brand > span:first-child { margin-right: 15px; font-size: 17px; }
+.brand-divider { margin-inline: 13px; color: #c4ab76; }
+.sibling-nav { display: flex; gap: 28px; font-size: 12px; }
+.sibling-nav a { padding: 19px 0; text-decoration: none; }
+.sibling-nav a:hover, .sibling-nav a[aria-current] { color: #e5c992; text-decoration: underline; text-underline-offset: 8px; }
+.codex-page { width: min(1400px, 100% - 96px); margin: auto; }
+.eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: .16em; line-height: 1.8; color: var(--faith-muted); }
+.ink-button { display: inline-flex; align-items: center; justify-content: center; gap: 32px; min-height: 46px; border: 1px solid var(--faith-green); padding: 12px 20px; color: var(--faith-light); background: var(--faith-green); text-decoration: none; font-size: 13px; box-shadow: inset 0 0 0 3px #f9edca0d; transition: background .18s; }
+.religion-page a.ink-button, .religion-page button.ink-button { color: var(--faith-light); }
+.ink-button:hover { background: #3b5243; }
+.text-button { padding: 9px 0; border: 0; background: none; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.book-layout, .profile-layout { display: grid; grid-template-columns: 225px minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); }
+.chapter-register { border-right: 1px solid var(--faith-line); padding: 8px 24px 40px 0; }
+.register-sticky { position: sticky; top: 28px; max-height: calc(100dvh - 56px); overflow-y: auto; }
+.register-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 32px; color: var(--faith-green); text-decoration: none; font-size: 18px; line-height: 1.35; }
+.register-heading > span { color: var(--faith-gold); font-size: 27px; }
+.chapter-register nav { display: grid; gap: 4px; margin-block: 16px 32px; }
+.chapter-register nav a { display: flex; align-items: baseline; gap: 11px; padding: 11px 8px; font-size: 13px; line-height: 1.4; text-decoration: none; border-left: 2px solid transparent; }
+.chapter-register nav a:hover, .chapter-register nav a[aria-current] { border-color: var(--faith-gold); background: #d8c6a329; color: var(--faith-green); }
+.chapter-numeral { flex: 0 0 20px; font-size: 11px; color: var(--faith-gold); }
+.chapter-register nav small { margin-left: auto; color: var(--faith-muted); font-size: 10px; }
+.register-note { margin-top: 28px; padding: 22px 8px; border-top: 1px solid var(--faith-line); }
+.register-note > span { color: var(--faith-gold); font-size: 28px; }
+.register-note p { margin: 8px 0 12px; font-size: 15px; font-style: italic; color: var(--faith-green); }
+.register-note small { display: block; color: var(--faith-muted); font-size: 12px; line-height: 1.7; }
+.back-to-top { display: inline-block; padding: 10px 8px; font-size: 11px; color: var(--faith-muted); text-decoration: none; }
+.codex-footer { display: flex; align-items: center; gap: 22px; margin-top: 60px; padding: 28px 0 36px; border-top: 3px double var(--faith-line); }
+.footer-mark { font-size: 38px; color: var(--faith-gold); }
+.codex-footer p { font-size: 13px; }
+.codex-footer small { display: block; margin-top: 5px; font-size: 10px; color: var(--faith-muted); }
+.codex-footer a { margin-left: auto; font-size: 12px; text-decoration: none; }
+@media (max-width: 1100px) {
+  .codex-page { width: calc(100% - 56px); }
+  .book-layout, .profile-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 28px; }
+  .chapter-register { padding-right: 16px; }
+}
+@media (max-width: 780px) {
+  .codex-page, .header-inner { width: calc(100% - 36px); }
+  .header-inner { min-height: 62px; }
+  .sibling-nav { gap: 16px; }
+  .site-brand { font-size: 9px; letter-spacing: .1em; }
+  .site-brand > span:first-child { margin-right: 6px; }
+  .brand-divider { margin-inline: 6px; }
+  .book-layout, .profile-layout { display: block; }
+  .chapter-register { border-right: 0; border-bottom: 1px solid var(--faith-line); padding: 0 0 18px; margin-bottom: 30px; }
+  .register-sticky { position: static; max-height: none; overflow: visible; }
+  .register-heading { margin-bottom: 14px; }
+  .chapter-register nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; margin: 12px 0 0; }
+  .register-note, .back-to-top { display: none; }
+  .codex-footer { flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+  .codex-footer a { margin-left: auto; }
+}
+@media (max-width: 480px) {
+  .header-inner { flex-wrap: wrap; justify-content: center; gap: 0; padding-top: 13px; }
+  .site-brand { width: 100%; text-align: center; }
+  .sibling-nav { gap: 30px; }
+  .sibling-nav a { padding: 12px 0; }
+  .chapter-register nav a { font-size: 12px; padding-left: 3px; gap: 7px; }
+  .codex-footer a { margin-left: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  .religion-page * { transition: none; }
+}
+@media print {
+  :root { --faith-paper: white; --faith-light: white; --faith-ink: black; --faith-muted: #444; }
+  .religion-page { background: white; font-size: 12px; }
+  .site-header, .chapter-register, .catalog-tools, .codex-footer, .profile-pagination, .skip-link { display: none; }
+  .codex-page { width: 100%; }
+  .book-layout, .profile-layout { display: block; }
+  .religion-page a { text-decoration: none; }
+}
+
+.breadcrumbs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 10px; font-size: 11px; color: var(--faith-muted); margin: 8px 0 32px; }
+.breadcrumbs a { text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs > span[aria-hidden] { color: var(--faith-gold); }

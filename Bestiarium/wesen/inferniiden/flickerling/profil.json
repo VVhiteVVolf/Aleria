@@ -1,0 +1,178 @@
+{
+  "id": "flickerling",
+  "name": "Flickerling",
+  "classification": "Kleiner einäugiger Feuerling und früherer Diener Balors",
+  "continent": "Infernale Sphären",
+  "region": "Warme Ruinen, Vulkanhöhlen und verlassene Tempel",
+  "folio": "IV / 04-G",
+  "parentGroupId": "inferniiden",
+  "summary": "Flickerlinge sind kleine zyklopenartige Feuerinferniiden, die einst zu Balors wichtigsten niederen Dienern zählten. Nach seiner Verbannung oder Vernichtung wurden viele herrenlos. Seither ziehen sie durch warme Wildnisse und Ruinen oder schließen sich dunklen Magiern, Kultisten und mächtigeren Inferniiden an.",
+  "quote": "Der Flickerling verspricht das Feuer zu hüten; er sagt nur nie, welches Haus dafür brennen soll.",
+  "quoteAttribution": "Sprichwort aus einem verlassenen Tempelbezirk",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Flickerling"
+    },
+    {
+      "label": "Typ",
+      "value": "Niederer Feuerinferniide; mit Igniten verwandt"
+    },
+    {
+      "label": "Schöpferbindung",
+      "value": "Ehemals Balor"
+    },
+    {
+      "label": "Rang",
+      "value": "Kleiner Diener und Brandstifter"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Balors frühe Heere"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Vulkanhöhlen, warme Wildnisse, Ruinen und verlassene Tempel"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Rebellisch, hinterlistig, unstet und schwer kontrollierbar"
+    },
+    {
+      "label": "Gefolge",
+      "value": "Dient gelegentlich Dämonen, Kultisten, Hexern oder dunklen Magiern"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Feuerbälle, Flammenflächen, Brandstiftung und geschickte Bewegung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Natürliche Feuermagie, Heimlichkeit und rascher Seitenwechsel"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, geringe Körperkraft und unzuverlässige Bindungen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Feuerlist",
+      "Schwarmchaos",
+      "Verratsneigung",
+      "Meisterbindung",
+      "Beweglichkeit",
+      "Kältefurcht"
+    ],
+    "values": [
+      8,
+      7,
+      9,
+      3,
+      9,
+      9
+    ],
+    "intro": "Die Flickerling-Tafel bewertet seine eigenwillige Feuermagie und Beweglichkeit ebenso wie die geringe Verlässlichkeit jeder neuen Gefolgschaft.",
+    "source": "Aus Brandmagie, unstetem Verhalten, früherer Balorbindung, Beweglichkeit und Meidung kalter Regionen abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flickerlinge waren in der frühen Zeit Balors verbreitete niedere Diener. Nach dem Fall ihres Herrn kehrten einige in Dagons Ordnung zurück, während andere unabhängig wurden."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der kleine drahtige Körper besitzt ein einziges großes Auge, kurze Hörner, lange Glieder und einen Schweif. Rußschwarze Haut ist von glimmenden Rissen durchzogen; Feuer sammelt sich leicht an den Händen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flickerlinge sind rebellisch, spöttisch und schwer zu halten. Sie dienen mächtigeren Wesen nur so lange, wie Schutz, Wärme oder Gelegenheit zum Brand ihre Unfreiheit aufwiegen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie bevorzugen Vulkanhöhlen, tropisch warme Ruinen und verlassene Tempel. Gefrorene Gebiete und die kalten Teile Aldrimars meiden sie konsequent."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schon junge Flickerlinge können Flammen entzünden; alte Exemplare erreichen mit Feuerbällen und brennenden Bodenflächen die Macht eines unerfahrenen Zauberers. Kleine Gebäude können sie ohne fremde Hilfe in Brand setzen."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kälte nimmt ihnen Beweglichkeit und magische Sicherheit. In Gruppen müssen Fluchtwege und brennbare Vorräte geschützt werden, denn Flickerlinge kämpfen lieber über Ausbreitung und Ablenkung als in fester Linie."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Flickerlinge werden wegen Größe und Feuerbindung oft mit Igniten verwechselt.",
+            "Die alte Einzelseite verwendete irrtümlich die Balgrath-Szenentafel; dieses Dossier besitzt deshalb eine neue eindeutige Abbildung.",
+            "Herrenlose Exemplare schließen sich eher einem starken Einzelmeister als einer festen Ordnung an."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-flickerling.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Flickerling vollständig sichtbar als freigestellte Bestiariumsfigur"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/flickerling-hero.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Szenentafel mit einem Flickerling",
+    "caption": "Neue Bildtafel · Ein vollständig sichtbarer Flickerling in infernalen Tempelruinen"
+  },
+  "plates": []
+}

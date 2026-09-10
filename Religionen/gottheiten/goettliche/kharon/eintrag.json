@@ -1,0 +1,218 @@
+{
+  "id": "kharon",
+  "title": "Kharon",
+  "epithet": "Der Hüter",
+  "kind": "Primäre Gottheit",
+  "summary": "Leben, Tod und die Ruhe der Seelen.",
+  "symbol": "BilderRüstungen/kharon_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Der Hüter",
+    "Leben",
+    "Tod",
+    "die Ruhe der Seelen"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "thyrael"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kharon der Hüter ist der Gott, der sowohl Leben schenkt als auch Leben nimmt, der Herr des Todes und der Lebenden. Als einer der Neun Primären Göttlichen ist er der Wächter über das Schicksal der Sterblichen und der Richter über ihre Seelen, wenn sie das Ende ihrer Zeit erreichen. Kharon wacht über die Übergänge zwischen Leben und Tod, und jene, die im Einklang mit seinen Geboten und denen der Neun Göttlichen bestattet werden, finden Schutz und Gnade in seiner Obhut. Doch die Seelen derer, die außerhalb seines Schutzes sterben, werden den anderen Göttern überlassen, die wie Schakale über ihre Seelen herfallen, um sie zu verschlingen und zu missbrauchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Mythologie wird Kharon als Bruder des Ordan und als Lehrmeister anderer Untergötter verehrt. Er verkörpert die Tugenden der Beständigkeit, Bescheidenheit und Vergänglichkeit und steht als Wächter über das Leben und den Tod. Diese Analogie beschreibt ihn als den Gott, der über die Lebenden herrscht und sie im Tod begleitet. Aufgrund seiner mächtigen und unausweichlichen Rolle empfinden die Menschen oft ein beklemmendes Gefühl in Bezug auf Kharon. Doch dieses Unbehagen ist unbegründet, denn er ist der Hüter, der zwischen dem Abyss und dem Frieden steht, wenn ein Mensch seinem Ende entgegensieht. Kharon bietet den Sterblichen Schutz und Gnade, indem er sie sicher durch die Dunkelheit führt, die das Leben nach dem Tod umgibt."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kharon, der Hüter, ist ein Gott, dessen Wesen durch drei zentrale Eigenschaften definiert ist: Beständigkeit, Bescheidenheit und Vergänglichkeit. Diese Tugenden sind nicht nur Merkmale, sondern der Kern seines Seins. Kharon verkörpert die unerschütterliche Beständigkeit, die über das Leben und den Tod wacht, und steht für eine ruhige, unausweichliche Kraft, die den natürlichen Lauf der Dinge erhält. Seine Bescheidenheit zeigt sich in der Art, wie er über die Seelen urteilt—ohne Eitelkeit oder Arroganz, sondern mit einer unvoreingenommenen, gerechten Hand. Die Vergänglichkeit, die er verkörpert, erinnert alle Lebenden daran, dass alles Leben endlich ist, und dass der Tod ein integraler Bestandteil des Lebenszyklus ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gegensätzlich zu diesen Eigenschaften verabscheut Kharon Eitelkeit, die sich gegen die Bescheidenheit auflehnt, Unbeständigkeit, die im Gegensatz zu seiner eigenen stabilen Natur steht, und Arroganz, die sich gegen die Akzeptanz der Vergänglichkeit erhebt. Diese negativen Eigenschaften widersprechen der Natur Kharons, da sie den natürlichen Lauf der Dinge stören und das Gleichgewicht, das er bewahrt, gefährden. Kharon sieht diese Gegensätze als Bedrohung für das Gleichgewicht von Leben und Tod, das er aufrechterhält, und bekämpft sie in seinem unermüdlichen Bestreben, die Seelen der Sterblichen auf ihrem Weg zu führen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kharon ist der Gott über Leben und Tot. Seine Jünger sind meistens Priester und in einer Krypta, einem Friedhof oder als Patriarchen größerer Kapellen anzutreffen. Oft werden auch Armeen von solchen Priestern begleitet, ganz einfach um die Toten ordnungsgemäß zu bestatten, sie zu segnen damit sie nicht als Geister oder Nekromantische Wesen wiedererweckt werden. Dies ist die Primäre Macht, von Kharon! Jedoch gibt es auch Ritter die ihn als Kharon anrufen und in seinen Namen gegen das böse Kämpfen. Kharons Heilung, übertrifft die Heilung der Mutter bei weitem. Allerdings gewährt er sie nur sehr wenigen Jüngern."
+        }
+      ]
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid der Sterblichkeit: Der Eid der Sterblichkeit ist ein Gelübde welches von jedem Priester, Jünger, Kleriker und Ritter der dem Hirten folgen und als Schirmherren auserwählen will, eingehalten werden. Dieser Eid dient dafür, sich für spätere Aspekte und Segen bewährt zu machen. Man verdient sich Kharons Anerkennung, indem man seine Gebote und Weisheiten befolgt und sich nicht gegen ihn versündigt."
+          ]
+        }
+      ],
+      "sharedLore": "eide"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt des Fährmanns; Der Aspekt des Fährmanns ist ein Segen, der von Kharon an seine Jünger vergeben wird, die im Tempel des Kharon als Bestatter und Diener arbeiten. Mit diesem Aspekt werden sie befähigt, die Toten zu bestatten, ihnen die letzte Ölung zu geben und sie zu segnen.",
+            "Aspekt des Wohltäters; Der Aspekt des Wohltäters ermöglicht es Jüngern von Kharon, ihre Fähigkeiten in der Heilmagie zu nutzen, um Verletzungen zu behandeln und zu heilen. Dieser Aspekt wird hauptsächlich von Priestern verwendet, die im Tempel von Kharon arbeiten und Verwundete und Soldaten heilen, die nach einem Krieg zum Tempel geschickt werden. Dieser Aspekt ist jedoch auf die Heilung von Verletzungen beschränkt und für die Behandlung von Krankheiten werden Priester der Mutter empfohlen."
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Segen des Grabhüters; Der Segen des Grabhüters befähigt Kleriker und gesalbte Ritter des Kharon, aktiv gegen Nekromanten, Hexen und Untote vorzugehen und die Lichtmagie des Kharon zu nutzen, um Geister zu verbannen, Untote zu zermalen und Nekromanten das Handwerk zu legen. Dieser Segen ist eine Erweiterung des Aspekts des Fährmanns und wird von Klerikern beherrscht.",
+            "Segen des Judikatoren; Der Segen des Judikatoren ist ein mächtiger Segen, der von Jüngern des Kharon genutzt wird, um sich gegen Angriffe mit Blut- oder Seelenmagie zu schützen. Er erlaubt es dem Anwender, sein eigenes Fleisch und Blut zu weihen, um es vor der Nutzung durch andere zu schützen, und verleiht ihm außerdem eine heilige Aura, die schwächeren Kreaturen der Finsternis Schaden zufügen kann. Der Segen wirkt sich auch auf die Waffe des Anwenders aus und kann aus einer herkömmlichen Waffe eine geweihte Waffe machen.",
+            "Segen der Erlösung; Der Segen der Erlösung ist eine Fähigkeit, die von Jüngern von Kharon beherrscht wird und sich auf Geister richtet, die nicht in der Lage sind, Ruhe zu finden. Mit diesem Segen können Jünger Geister sehen, die für normale Menschen unsichtbar sind, sowie die Chakren und das Magicka von Menschen, Kreaturen und Tieren visualisieren und bestimmen, ob sie korrumpiert, rein oder neutral sind."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Bund der Wunderheilung; Dieser Bund erlaubt es dem Priester, die Heilmagie von Kharon in ihrer vollen Stärke zu nutzen und selbst schwerste Verletzungen zu heilen. Die Verwendung dieses Bundes erfordert jedoch einen hohen Preis von dem Priester, da er seine eigene Lebenskraft einsetzen muss, um die Heilung zu vollbringen. Es ist daher wichtig, diesen Bund sorgfältig und verantwortungsvoll einzusetzen.",
+            "Bund der Selbstlosigkeit; Dieser Bund ist sehr selten und wird nur in den extremsten Situationen angewandt, da er ein hohes Risiko für den Jünger birgt. Die heilung des anderen kommt zu Lasten der eigenen Gesundheit und Verletzungen, die der Jünger sich zufügt, um die Heilung zu vollziehen, können schwerwiegend sein und sogar tödlich enden. Der Jünger muss also eine große Selbstlosigkeit und Opferbereitschaft besitzen, um diesen Bund anwenden zu können.",
+            "Bund der Aufopferung; Der Bund der Aufopferung ist ein sehr mächtiger und selten genutzter Bund, der von Jüngern von Kharon praktiziert wird, die eine besondere Opferbereitschaft zeigen. Durch diesen Bund ist es dem Jünger möglich, eine kürzlich verstorbene Person wiederzubeleben und vollständig zu heilen. Allerdings hat diese Wiederbelebung immer einen Preis für den Jünger, der variieren kann, aber in der Vergangenheit beispielsweise das Verlust von Augen beinhaltete. Dieser Bund wird nur in extremen Notfällen genutzt und ist weit davon entfernt, etwas Alltägliches zu sein.",
+            "Bund der Reformation; Der Bund der Reformation erlaubt es einem Jünger von Kharon, nach seinem Tod augenblicklich wiederbelebt zu werden und mit voller Gesundheit zurückzukehren. Allerdings vergisst der Jünger bei jeder Wiedergeburt sich selbst und kann Schwierigkeiten haben, seine Verwandten wiederzuerkennen, wenn er häufig wiedergeboren wurde. Dieser Bund ist nur wenigen Jüngern Kharons vergönnt und wird von Kharon selbst gewährt."
+          ]
+        }
+      ],
+      "sharedLore": "buende"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Gebot von Kharon ist einfach und doch tiefgreifend: \"Ehre das Leben und den Tod gleichermaßen.\" Kharon lehrt, dass das Leben ein kostbares Geschenk ist, das mit Würde und Respekt behandelt werden muss, doch ebenso soll der Tod als natürlicher Teil des Lebenszyklus akzeptiert werden. Sterbliche werden angehalten, das Leben zu schätzen, ohne Angst vor dem Tod zu haben, und die Seelen Verstorbener in Respekt und Ruhe zu bestatten, um ihnen den Übergang in das Reich Kharons zu ermöglichen. Wer dieses Gebot missachtet, gefährdet die Balance zwischen Leben und Tod und riskiert, den Schutz Kharons zu verlieren."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kharon verkörpert die Tugenden Beständigkeit, Bescheidenheit und Vergänglichkeit. Er lehrt, dass Stabilität und Verlässlichkeit im Leben von größter Bedeutung sind, und fordert seine Anhänger auf, die natürlichen Zyklen des Lebens zu achten, ohne in Hast oder Ungeduld zu verfallen. Bescheidenheit ist eine weitere zentrale Tugend, die Kharon hochhält: Seine Anhänger sollen demütig vor dem Leben und dem Tod stehen, ihren Platz im großen Gefüge des Seins akzeptieren und sich nicht durch Eitelkeit oder Arroganz über die Natur erheben. Schließlich erinnert Kharon stets an die Vergänglichkeit allen Lebens. Diese Tugend lehrt, dass alles Leben endlich ist, und dass die Akzeptanz dieser Endlichkeit zu einem tieferen Verständnis und Respekt für den Lebenszyklus führt. Diese Tugenden sind das Fundament von Kharons Lehren und formen das Leben seiner Anhänger, die sich bemühen, im Einklang mit der natürlichen Ordnung zu leben."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus Kharon, ist im Grunde immer ein Friedhof oder ein Ort der Ruhestätte. Manchmal, ist ihm auch eine große Kapelle oder Kathendrale geweiht."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Leben, Tod und die Ruhe der Seelen"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Beständigkeit, Bescheidenheit und Vergänglichkeit"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Eitelkeit, Unbeständigkeit und Arroganz"
+    },
+    {
+      "label": "Patronat",
+      "value": "Bestatter, Priester und Hüter der Totenruhe"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Kharon"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Der Hüter"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Der Rabe"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Kharan"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Lokhar"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Lôkan"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Kharos"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "2d423590-fc9d-42d6-a48b-7f20496653c5",
+    "sha256": "e3561dcaf2aaf8867d9f9fe32eaf835ca3355dd680de5400e46b3e6f674e3912"
+  },
+  "portrait": {
+    "src": "assets/divine-art/kharon.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Kharon, Der Hüter",
+    "caption": "Kharon · Der Hüter"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Kharon",
+      "href": "Religionen/klerus/gottheiten/kharon/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

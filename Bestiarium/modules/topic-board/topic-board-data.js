@@ -22,7 +22,7 @@ export const BESTIARY_TOPIC_GROUPS = [
     id: 'literatur', title: 'Literatur & Quellen', number: '03', kind: 'Literaturverweis',
     description: 'Die Bibliothek hinter dem Bestiarium.',
     entries: [
-      topic('wesen-des-infernalen', 'Das Wesen des Infernalen', 'Vorgemerktes Werk aus dem Literaturverzeichnis der bisherigen Sammlung.'),
+      topic('wesen-des-infernalen', 'Das Wesen des Infernalen', 'Eine infernale Schrift in f?nf Kapiteln, begleitet von ?berlieferung und Analyse.', 'Abschrift ? Als Buch lesen', './themen/wesen-des-infernalen/index.html'),
       topic('daemonologie', 'Dämonologie', 'Die Bände I bis X der Dämonologie sind für die Bibliothek vorgemerkt.', 'Band I–X'),
       topic('nekrophagen-baende', 'Nekrophagen', 'Die Bände I bis V über Nekrophagen sind für die Bibliothek vorgemerkt.', 'Band I–V'),
       topic('bestienkunde', 'Bestienkunde der Alten Reiche', 'Vorgemerktes Werk aus dem Literaturverzeichnis der bisherigen Sammlung.'),

@@ -1,0 +1,215 @@
+{
+  "id": "lyris",
+  "title": "Lyris",
+  "epithet": "Die Maid",
+  "kind": "Primäre Gottheit",
+  "summary": "Liebe, Musik und Kunst.",
+  "symbol": "BilderRüstungen/lyris_icon.png",
+  "symbolRoot": "workspace",
+  "tags": [
+    "Die Maid",
+    "Liebe",
+    "Musik",
+    "Kunst"
+  ],
+  "page": true,
+  "relations": [
+    "neun-goettliche",
+    "zephyr",
+    "jovena"
+  ],
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lyris ist eine der neun primären Göttinnen des göttlichen Pantheons. Sie verkörpert die Liebe, Musik und Kunst und steht für Enthaltsamkeit, Fürsorge und Kreativität, die sich oft in leidenschaftlichen Ausdrucksformen zeigen. Trotz ihrer tiefen Verbindung zur Liebe und Kreativität, wird sie manchmal missverstanden und fälschlicherweise nur als Göttin der Künstler oder als Symbol für sexuelle Lust betrachtet. Diese Fehlinterpretation rührt von der Verwechslung mit Sanguine, ihrer Kehrseite und Erzfeind, dessen Eigenschaften in starkem Kontrast zu denen von Lyris stehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Mythos ist Lyris die Gattin ihrer Kehrseite, Sanguine, einem Gott, der für Treulosigkeit, Zügellosigkeit und hemmungslosen Hedonismus steht. Im Gegensatz dazu verkörpert Lyris die Tugenden einer treuen Ehefrau, die sexuelle Treue, Fürsorge, Kreativität und Enthaltsamkeit in den Vordergrund stellt. Diese Analogie betont den starken Gegensatz zwischen den beiden Gottheiten, der oft zu Verwechslungen führt. Leider neigen die Menschen dazu, Lyris fälschlicherweise als Göttin der Lust oder des Spaßes zu betrachten, was nur einen kleinen Bruchteil ihres wahren Wesens widerspiegelt und ihre tieferen Tugenden verkennt."
+        }
+      ]
+    },
+    {
+      "id": "wesenheit",
+      "title": "Wesenheit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lyris' Wesen ist tief verwurzelt in den Tugenden der Enthaltsamkeit, Fürsorge und Kreativität. Sie verkörpert diese Eigenschaften nicht nur als Attribute, sondern als grundlegende Aspekte ihres Seins. Enthaltsamkeit spiegelt ihre Hingabe zur Reinheit und Treue wider, während Fürsorge ihre unerschütterliche Verpflichtung zur liebevollen Unterstützung und zum Schutz derer, die ihr anvertraut sind, betont. Kreativität schließlich zeigt sich in ihrer Fähigkeit, Schönheit und Kunst in die Welt zu bringen, indem sie ihre Jünger inspiriert, ihre tiefsten Gefühle und Träume durch Musik, Poesie und andere künstlerische Ausdrucksformen zu manifestieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gleichzeitig verabscheut Lyris die Übertretungen, die im Gegensatz zu ihren Tugenden stehen. Wollust, als Ausdruck von unkontrollierter Begierde und Zügellosigkeit, widerspricht ihrer Hingabe zur Enthaltsamkeit. Faulheit, die den kreativen Geist erstickt und jede Anstrengung zur Entfaltung bremst, ist ihr zuwider, da sie die schöpferische Kraft untergräbt. Vernachlässigung schließlich, das Versäumnis, sich um andere zu kümmern und Verantwortung zu übernehmen, steht im scharfen Kontrast zu ihrer Fürsorge, die stets bemüht ist, Harmonie und Liebe zu wahren. Diese gegensätzlichen Eigenschaften sind für Lyris inakzeptabel und stellen alles dar, was sie in ihrem Wesen und Handeln verachtet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lyris, als Göttin der Liebe, Musik und Kunst, entfaltet ihre Macht durch die Förderung und Unterstützung von Kreativität, Leidenschaft und ästhetischer Schönheit in der Welt. Ihre Präsenz inspiriert Künstler, Dichter, Musiker und Liebende gleichermaßen, indem sie ihnen die Gabe der Bardenmagie verleiht. Diese Magie ist eine einzigartige Form der Zauberkunst, die Emotionen durch Melodien, Gesänge und Poesie hervorruft und lenkt, wodurch ihre Jünger in der Lage sind, Herzen zu bewegen, Seelen zu beruhigen und sogar heilende Kräfte durch ihre Kunst zu entfesseln."
+        },
+        {
+          "type": "paragraph",
+          "text": "Darüber hinaus gewährt Lyris ihren Anhängern die Gaben von Schönheit und Anmut, was sie nicht nur in ihrem äußeren Erscheinungsbild, sondern auch in ihrer Ausstrahlung und ihrem Wesen widerspiegelt. Diese göttlichen Segnungen machen sie zu charismatischen und anziehenden Persönlichkeiten, die in der Lage sind, ihre Umgebung mit ihrem Charme und ihrer Kreativität zu verzaubern. Ebenso verleiht Lyris Kreativität und Inspiration, indem sie die Gedanken und Herzen ihrer Jünger erleuchtet und ihnen ermöglicht, Werke von tiefer Bedeutung und großer Schönheit zu erschaffen. So sorgt sie dafür, dass die Flamme der Kunst und Leidenschaft in der Welt nie erlischt, sondern stetig weiter brennt."
+        }
+      ]
+    },
+    {
+      "id": "sphaere",
+      "title": "Sphäre",
+      "blocks": [],
+      "sharedLore": "sphaere"
+    },
+    {
+      "id": "eide",
+      "title": "Eide",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Eid der Anmutigkeit: Der Eid der Anmutigkeit wird für Jünger der Lyris als Währung betrachtet. Indem man ihren Tugenden nacheifert und sich als würdiger und Tugendhafter Jünger bewährt, erhält man im Gegenzug Aspekte und Segen. Werden diese \"Eide\" bzw. Tugenden aber missachtet, so wanken und verschwinden die Segen, bis man sich wieder als würdig erweist.",
+            "Eid der Reinheit: Der Eid der Reinheit ist ein Keuschheitsgelübde welches von Jüngern der Maid abgelegt wird um sich für den Aspekt der Reinheit zu qualifizieren. Das Keuschheitsgelübde kann bis zur Ehe oder bis zu einer Vereinbarung eingehalten werden, beispielsweise wenn sich zwei Jünger verloben oder aber auch von Jüngern die sexuelle Zügellosigkeit gezeigt haben und nun eine gewisse Reinheit erfahren wollen."
+          ]
+        }
+      ],
+      "sharedLore": "eide"
+    },
+    {
+      "id": "aspekte-segen",
+      "title": "Aspekte, Segen & Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Aspekt des Troubadours; Der Aspekt des Troubadours ist ein Segen, der von Barden und Skalden von Lyris erbeten wird, um ihre magischen Künste in der magischen Kunst der Töne zu verbessern. Er umfasst eine Vielzahl von Fähigkeiten und Segen. Einige Beispiele für derartige Fähigkeiten und Segen wären auch; Die Fähigkeit, durch das Singen oder Spielen von Musik Emotionen in anderen zu wecken oder zu verstärken. Die Fähigkeit, durch das Singen oder Spielen von Musik bestimmte magische Effekte zu erzielen, z.B. Heilung, Verstärkung von magischen Fähigkeiten oder Verwirrung. Die Fähigkeit, durch das Singen oder Spielen von Musik die Stimmung in einer Gruppe zu verbessern oder zu verschlechtern.",
+            "Aspekt der Schönheit; Der Aspekt der Schönheit ist ein Geschenk von Lyris, die damit ihre Jünger mit Jugend und Schönheit segnet. Dieser Aspekt wird von anderen als oberflächlich angesehen, aber von Lyris an Menschen vergeben, die ein schönes inneres Herz haben, auch ohne dass sie danach gefragt werden. Dies bedeutet jedoch nicht, dass jede attraktive Person von diesem Segen betroffen ist. Lyris bevorzugt Menschen die demütig sind.",
+            "Aspekt der Reinheit; Der Eid der Reinheit wird mit dem Aspekt der Reinheit belohnt! Jünger die den Eid der Reinheit bis zur Ehe oder für eine Vereinbarung eingehalten haben, werden großzügig von Lyris belohnt, diese Belohunung varriert von Jünger zu Jünger.",
+            "Aspekt der Kreativität; Der Aspekt der Kreativität ist ein Geschenk von Lyris, das an ihre Jünger verliehen wird, um ihre künstlerischen Fähigkeiten zu verstärken und ihre Kreativität anzufachen. Dieser Aspekt kann in verschiedenen Bereichen wirken, wie zum Beispiel in der Musik, der Malerei, dem Schreiben oder auch in handwerklichen Tätigkeiten. Er ermöglicht es den Jüngern, neue Ideen und Lösungen für Probleme zu finden und ihre Fähigkeiten in ihrem künstlerischen Bereich zu verbessern. Die Jünger, die von diesem Aspekt betroffen sind, werden talentierter und kreativer und können somit ihre Kunstwerke auf ein höheres Niveau heben."
+          ]
+        }
+      ],
+      "sharedLore": "aspekte-segen"
+    },
+    {
+      "id": "buende",
+      "title": "Bünde",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Der Bund der Stimme; Der Bund der Stimme ist eine besondere Macht, die Lyris an ihre fähigsten Diener verleiht und ihnen ermöglicht, ihre Skaldenkunst auf ein noch höheres Niveau zu bringen. Sie sind in der Lage, die Macht ihrer Stimme und ihres Wortes für verschiedene Zwecke einzusetzen, wie zum Beispiel für die Unterhaltung, die Inspiration oder sogar für den Einfluss auf andere. Sie können ihre Stimme nutzen, um Gefühle und Emotionen zu vermitteln, um Botschaften zu vermitteln oder sogar um Magie zu wirken. Der Bund der Stimme ist eine besondere und seltene Macht, die nur an diejenigen verliehen wird, die Lyris besonders nahe stehen und die ihre Fähigkeiten in der Skaldenkunst bewiesen haben.",
+            "Der Bund des Windes; Der Bund des Windes gibt Jüngern von Lyris die Macht, den Wind durch ihre Stimme zu befehlen und ihn für verschiedene Zwecke einzusetzen. Sie können den Wind nutzen, um Gegenstände zu bewegen, um sich fortzubewegen oder um Schallwellen zu erzeugen. Diese Fähigkeiten können von den Jüngern eingesetzt werden, um ihre Kunst zu verbessern, indem sie zum Beispiel Musikinstrumente spielen oder Gesang darbieten, oder um sich in schwierigen Situationen zu verteidigen. Allerdings ist die Nutzung des Bunds des Windes mit großer Verantwortung verbunden und Jünger müssen sorgfältig überlegen, wie sie ihn einsetzen, um keinen Schaden anzurichten. Lyris ist die Muse des Windes, Zephyr ist der Gott des Windes. Lyris vergibt ihren Jüngern den Bund des Windes, welcher es ihnen ermöglicht, die Macht des Windes durch die Stimme zu gebieten. Zephyr hingegen verleiht seinen Jüngern die Macht des Windes, indem sie diese über Waffen kanalisieren. Lyris schenkt also ihren Jüngern die Fähigkeit, den Wind durch ihre Stimme zu beeinflussen, während Zephyr seinen Jüngern die Macht gibt, den Wind durch Waffen zu kontrollieren."
+          ]
+        }
+      ],
+      "sharedLore": "buende"
+    },
+    {
+      "id": "uebertretungen",
+      "title": "Übertretungen",
+      "blocks": [],
+      "sharedLore": "uebertretungen"
+    },
+    {
+      "id": "kult",
+      "title": "Kult",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Das Gebot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Gebot der Göttin Lyris ist klar und einfach: Ehre die Liebe und die Kunst in ihrer reinsten Form. Ihre Anhänger sind angehalten, die heilige Verbindung zwischen Partnern zu respektieren und zu bewahren, wobei Treue und Hingabe an erster Stelle stehen. Ebenso fordert Lyris, dass ihre Jünger die kreative Schaffenskraft in all ihren Formen pflegen und fördern, sei es durch Musik, Kunst, Poesie oder Tanz. Jede Handlung, die diese heiligen Prinzipien untergräbt, sei es durch Untreue, Zügellosigkeit oder die bewusste Entweihung von Kunst, gilt als Übertretung ihres Gebots."
+        },
+        {
+          "type": "heading",
+          "text": "Die Tugenden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Tugenden von Lyris, Enthaltsamkeit, Fürsorge und Kreativität, sind die Grundpfeiler, auf denen die Verehrung der Göttin ruht. Enthaltsamkeit steht für die Selbstkontrolle und die Reinheit des Herzens, welche die Grundlage für treue und beständige Beziehungen bildet. Fürsorge repräsentiert das Mitgefühl und die Liebe, die man nicht nur dem Partner, sondern allen Lebewesen entgegenbringen sollte. Kreativität schließlich ist die heilige Flamme, die Lyris in jedem ihrer Anhänger entfachen möchte, um die Welt durch Kunst und Schönheit zu bereichern. Diese Tugenden sollen von allen, die Lyris verehren, in ihrem täglichen Leben praktiziert werden."
+        },
+        {
+          "type": "heading",
+          "text": "Das Haus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Haus der Göttin Lyris ist in den Städten und Dörfern Alerias oft als Tempel der Musik und Kunst bekannt. Diese heiligen Stätten dienen als Schulen für Barden, Künstler und Handwerker, die dort ihre Talente verfeinern und sich der Muse der Göttin widmen. Die Tempel sind Orte des Friedens und der Harmonie, in denen Gesang und Poesie den Alltag erhellen. In den Hallen dieser Häuser finden regelmäßig Feste und Aufführungen statt, bei denen die Gemeinschaft zusammenkommt, um die Geschenke der Göttin zu feiern. Darüber hinaus sind diese Tempel auch Rückzugsorte für jene, die Trost und Inspiration suchen, sei es in Zeiten der Trauer oder des künstlerischen Stillstands."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Domäne",
+      "value": "Liebe, Musik und Kunst"
+    },
+    {
+      "label": "Tugenden",
+      "value": "Enthaltsamkeit, Fürsorge und Kreativität"
+    },
+    {
+      "label": "Übertretungen",
+      "value": "Wollust, Faulheit und Vernachlässigung"
+    },
+    {
+      "label": "Patronat",
+      "value": "Künstler, Dichter, Musiker und Liebende"
+    }
+  ],
+  "names": [
+    {
+      "label": "Gemeine Zunge",
+      "value": "Lyris"
+    },
+    {
+      "label": "Gemeiner Titel",
+      "value": "Die Maid"
+    },
+    {
+      "label": "Druidischer Titel",
+      "value": "Die Nachtigall"
+    },
+    {
+      "label": "Alben ( Oghma )",
+      "value": "Lyrentia"
+    },
+    {
+      "label": "Avallornisch ( Rheunwaith )",
+      "value": "Myrien"
+    },
+    {
+      "label": "Nordisch ( Futhark )",
+      "value": "Eiris"
+    },
+    {
+      "label": "Kaiserlich",
+      "value": "Lytheris"
+    }
+  ],
+  "source": {
+    "kind": "user-supplied-lore",
+    "attachment": "85d1d1e8-a4bf-4345-bc2d-2a2696acdf21",
+    "sha256": "854cbdb790b3dc258d058a1db974faef3c384741ee7b15a546976c6b0003a1b4"
+  },
+  "portrait": {
+    "src": "assets/divine-art/lyris.png",
+    "width": 408,
+    "height": 612,
+    "alt": "Glasmalerei von Lyris, Die Maid",
+    "caption": "Lyris · Die Maid"
+  },
+  "links": [
+    {
+      "label": "Der Klerus im Glauben an Lyris",
+      "href": "Religionen/klerus/gottheiten/lyris/index.html",
+      "note": "Priester, Mönche, Paladine, Asketen, Magister und der Weg der Büßenden"
+    }
+  ]
+}

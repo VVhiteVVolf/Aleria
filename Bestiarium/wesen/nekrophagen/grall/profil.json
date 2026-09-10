@@ -1,0 +1,219 @@
+{
+  "id": "grall",
+  "name": "Grall",
+  "classification": "Nekrophag · Wiederbelebtes Tier",
+  "continent": "Aleria",
+  "region": "Verfluchte Wälder, Ruinen und Schlachtfelder",
+  "folio": "III-N / 12",
+  "parentGroupId": "nekrophagen",
+  "summary": "Die Gralle sind untote Kreaturen tierischen Ursprungs, die durch Nekromantie oder dunkle Magie wiederbelebt wurden. Im Gegensatz zu den eher humanoiden Untoten sind Grallen Überreste von Tieren – sei es Raubtiere, Vögel oder Nutztiere – die in grotesken, verdorbenen Formen erneut zum Leben erweckt wurden. Grallen zeigen oft eine verstärkte Aggressivität und Wildheit, da sie von ihrem natürlichen Verhalten und der unheiligen Energie, die sie antreibt, geprägt sind.",
+  "quote": "Der Grall vergisst den Namen seines Herrn, niemals aber den Geruch der letzten Jagd.",
+  "quoteAttribution": "Beobachtung aus den Aufzeichnungen der Untotenjäger",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-grall.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Vollständig sichtbarer Grall als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/grall.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Grall",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Grall"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Grall"
+    },
+    {
+      "label": "Typ",
+      "value": "Untotes Tier; nekromantischer Wächter oder Jäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Nekromantie oder Flüche"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Verfluchte Wälder, Ruinen, Schlachtfelder"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dunkle Wälder, Höhlen, Nekromantenverstecke"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Aggressiv, jagend, territorial"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Rund um die Uhr aktiv, bevorzugt bei Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Schnelligkeit, tierische Instinkte, unermüdliche Jagd, Resistenz gegen Schmerz"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Geschwindigkeit, natürliche Waffen (Krallen, Zähne), unerbittlich im Verfolgen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Zerbrechlich, empfindlich gegen heilige Magie und Feuer, vorhersehbares Jagdverhalten"
+    },
+    {
+      "label": "Beute",
+      "value": "Tierische Überreste, gelegentlich magische Essenzen, Knochenstücke"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Jagdinstinkt",
+      "Fährtenlese",
+      "Geschwindigkeit",
+      "Rudelangriff",
+      "Zähigkeit",
+      "Nekromantenbindung"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      7,
+      8,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Grall abgeleitet",
+    "intro": "Das Grall-Diagramm folgt den erhaltenen Tierinstinkten und ihrer nekromantischen Überformung. Die konkrete Körpergestalt verändert einzelne Werte, nicht aber das Grundmuster."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Gralle sind untote Kreaturen tierischen Ursprungs, die durch Nekromantie oder dunkle Magie wiederbelebt wurden. Im Gegensatz zu den eher humanoiden Untoten sind Grallen Überreste von Tieren – sei es Raubtiere, Vögel oder Nutztiere – die in grotesken, verdorbenen Formen erneut zum Leben erweckt wurden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Grallen zeigen oft eine verstärkte Aggressivität und Wildheit, da sie von ihrem natürlichen Verhalten und der unheiligen Energie, die sie antreibt, geprägt sind. Ihre Erscheinung ist eine groteske Mischung aus Verwesung und Magie: zerfleddertes Fell, freiliegende Knochen und glühende, untote Augen machen sie zu einem unheimlichen Anblick."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kreaturen dienen häufig als Wächter oder Jagdhunde für Nekromanten und werden gezielt für ihre Stärke und Geschwindigkeit genutzt. Grallen sind eine tödliche Kombination aus tierischem Instinkt und nekrotischer Ausdauer, die sie zu gefährlichen Gegnern macht."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grallen entstehen, wenn Tiere durch Nekromantie oder dunkle Flüche wiederbelebt werden. Oft nutzen Nekromanten die Überreste von Raubtieren oder kräftigen Tieren, um unermüdliche Wächter oder Jäger zu erschaffen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kreaturen bewahren Teile ihres ursprünglichen Instinkts, sind jedoch durch die Magie, die sie antreibt, aggressiver und unberechenbarer. Sie werden meist in verfluchten Wäldern, Schlachtfeldern oder Ruinen gefunden, wo sie ihrem tierischen Jagdverhalten folgen und Eindringlinge unerbittlich verfolgen. Grallen verkörpern die pervertierte Form tierischen Lebens durch die dunklen Kräfte der Nekromantie."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grallen sind instinktive und aggressive Kreaturen, die vor allem von ihren tierischen Instinkten und der nekrotischen Magie, die sie antreibt, geprägt sind. Sie agieren wie wilde Raubtiere, patrouillieren ihre Territorien und greifen Eindringlinge ohne Zögern an. Ihre Angriffe sind schnell, zielgerichtet und oft brutal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre tierische Herkunft macht sie zu exzellenten Jägern: Sie können Beute über weite Strecken verfolgen, ihre Umgebung durch Geruch und Geräusche wahrnehmen und Fallen instinktiv umgehen. Allerdings fehlt ihnen die Intelligenz lebender Tiere – ihre Bewegungen sind mechanisch und vorhersehbar, was erfahrene Gegner ausnutzen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Grallen sind besonders effektiv in Gruppen, wo sie wie ein Rudel operieren und ihre Beute einkreisen. Sie bewachen häufig magische Orte oder dienen ihren nekromantischen Schöpfern als unermüdliche Wächter. Ihre ständige Aktivität und ihre Fähigkeit, selbst schwere Verletzungen zu ignorieren, machen sie zu furchterregenden Gegnern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Optisch sind Grallen eine groteske Mischung aus Verfall und Tierform: freiliegende Knochen, zerfleddertes Fell oder Federn und glühende Augen unterstreichen ihre untote Natur. Sie strahlen eine unnatürliche Bedrohung aus und hinterlassen oft Spuren von Verwesung oder nekrotischer Energie in ihrer Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grallen sind an Orten zu finden, die von Tod und Magie durchdrungen sind, wie verfluchte Wälder, Ruinen oder Schlachtfelder. Sie ziehen abgeschiedene und dunkle Gebiete vor, wo sie ungestört jagen oder bewachen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten ist oft begleitet von subtilen Anzeichen wie totenstillen Wäldern, Spuren von Krallen oder Bisswunden und einem fauligen Geruch. Diese untoten Kreaturen sind am aktivsten in der Nacht, wenn die Dunkelheit ihnen Deckung bietet. Sie verwandeln jeden Ort, den sie bewohnen, in ein gefährliches Jagdrevier."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stärken"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tierische Instinkte: Hervorragender Geruchssinn und Jagdgeschick, ideal für Verfolgungen.",
+            "Schnelligkeit und Agilität: Beweglich und schwer einzufangen.",
+            "Unermüdlichkeit: Kein Hunger, keine Erschöpfung, jagt bis zum Ende.",
+            "Natürliche Waffen: Scharfe Krallen und Zähne, gepaart mit aggressiver Wildheit."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwächen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Zerbrechlich: Anfällig für schwere Schläge und gezielte Angriffe.",
+            "Heilige Magie: Göttliche Kräfte und Feuer zerstören ihre untote Energie.",
+            "Vorhersehbares Verhalten: Folgen ihrer Beute stur und ohne strategische Anpassung.",
+            "Magieabhängigkeit: Verliert bei Störung der nekrotischen Magie sofort ihre Funktion."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alle Tiere haben das potenzial zu einem Grall zu werden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die Bewegungsweise eines Gralls lässt oft noch die ursprüngliche Tierart erkennen.",
+            "Er folgt Geruch und Geräusch, obwohl zerstörte Sinnesorgane dies unmöglich machen müssten.",
+            "Mehrere Gralle übernehmen instinktiv alte Jagdordnungen, ohne echte Bindung zueinander zu zeigen.",
+            "Jede Tierart kann durch denselben nekromantischen Eingriff zu einem Grall werden."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,229 @@
+{
+  "id": "thraalkin",
+  "name": "Thraalkin",
+  "classification": "Amphibische Reptiloiden der Untiefen",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Küsten, Seewege und Thraals ertrunkene Spiegelwelt",
+  "folio": "IV / 07-A",
+  "parentGroupId": "nautiloiden",
+  "summary": "Thraalkin sind amphibische Reptiloiden, die Thraal als grausame Spiegelung der Menschheit erschuf. Ihre gepanzerten Schwärme bedrohen Küsten und Seewege, folgen einer biologisch gefestigten matriarchalen Ordnung und verbinden Gifthaut, Tiefenanpassung und Ritualgesang mit zielgerichteter Kriegsführung.",
+  "quote": "Eine perverse Spiegelung der Menschheit, wie sie Thraal sich erträumt hat.",
+  "quoteAttribution": "Alte Legende über die Bewohner der Untiefen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nautiloiden-thraalkin.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Thraalkin vollständig sichtbar als amphibische Bestiariumsfigur"
+  },
+  "hero": {
+    "src": "../../../assets/nautiloid-profiles/thraalkin-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Thraalkin vollständig sichtbar im Kampf mit einem gerüsteten Krieger",
+    "caption": "Überlieferte Szenentafel · Ein Thraalkin greift im Sumpfwasser an"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Thraalkin"
+    },
+    {
+      "label": "Typ",
+      "value": "Amphibische Reptiloiden der Untiefen"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Geschaffen von Thraal, dem Gott der Untiefen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Thraals ertrunkene Spiegelwelt Alerias"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Küsten, Seewege, flutnahe Regionen und Tiefsee"
+    },
+    {
+      "label": "Gesellschaft",
+      "value": "Streng matriarchale Schwärme unter je einer Königin"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Territorial, organisiert und fast immer menschenfeindlich"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zu jeder Zeit; bevorzugt Stürme und Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Wasseratmung, Gifthaut, Tentakelzunge, Biolumineszenz, Ritualgesang und Tiefenfluch"
+    },
+    {
+      "label": "Stärken",
+      "value": "Extreme Tiefentoleranz, Schuppenpanzer und Schwarmtaktik"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Abhängigkeit von Wasser sowie Anfälligkeit gegen Eisenwaffen und Feuer"
+    },
+    {
+      "label": "Beute",
+      "value": "Matrosen, Fischer, Schiffe und Meereskreaturen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Schwarmordnung",
+      "Tiefentoleranz",
+      "Gifthaut",
+      "Schuppenpanzer",
+      "Ritualmacht",
+      "Landabhängigkeit"
+    ],
+    "values": [
+      9,
+      10,
+      9,
+      9,
+      8,
+      9
+    ],
+    "intro": "Die Thraalkin-Tafel bewertet die Merkmale ihres amphibischen Schwarms: Überleben unter Druck, biologische Ordnung, giftige Abwehr und die Grenzen längerer Landgänge.",
+    "source": "Aus matriarchaler Schwarmordnung, Tiefenanpassung, Gifthaut, Panzerung, Tiefenritualen und der überlieferten Wasserabhängigkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thraalkin sind amphibische Reptiloiden und eine boshafte Spiegelung der Menschheit, wie Thraal sie für seine Untiefen ersann. Ihre Sprache verbindet Klicklaute, Gurgeln und kehliges Fauchen; sie wirkt langsam, bis ein Satz mit der Plötzlichkeit eines schnappenden Kiefers endet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anders als seltene infernale Erscheinungen bilden sie an Küsten, auf Seewegen und in flutnahen Regionen eine beständige Gefahr. Ihr Auftreten ist offen und kommt gewöhnlich als geschlossener Schwarm."
+        }
+      ]
+    },
+    {
+      "id": "koerperbau",
+      "title": "Körperbau",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihre zweibeinige Gestalt trägt Züge von Eidechse, Frosch und Seeschlange. Grünliche, blauschwarze oder violett schimmernde Schuppen bilden einen Panzer, der härter als mancher Eisenharnisch sein kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwimmhäute, ein flossenbesetzter kräftiger Schwanz, giftüberzogene Haut und eine elastische Tentakelzunge richten den gesamten Körper auf Wasser, Sumpf und den überraschenden Zugriff aus."
+        }
+      ]
+    },
+    {
+      "id": "gesellschaft",
+      "title": "Matriarchale Gesellschaft",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um eine große, gebärfähige Königin sammelt sich jeweils ein Schwarm. Sie bestimmt Paarung, Eiablage und Beuteverteilung. Fast alle Eier bringen Männchen hervor; nur wenige Weibchen wachsen zu neuen Königinnen heran."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stirbt die Königin, bricht der biologische Gehorsam binnen kurzer Zeit zusammen. Die Überlebenden werden von anderen Schwärmen aufgenommen oder verfallen in Hunger, Regression und Wahnsinn."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thraalkin verteidigen Schiffe, Taucher, Festungen und fremde Kreaturen gleichermaßen aus ihrem Revier. Ihre Angriffe sind zielgerichtet: Knochen-, Zahn- und Chitinwaffen ersetzen im Salzwasser unzuverlässiges Eisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikte innerhalb eines Schwarms sind selten. Treffen zwei Königinnen aufeinander, entstehen jedoch heftige Revierkämpfe, besonders an seichten Gewässern und stark genutzten Schiffsrouten. Gegen Menschen bleiben Plünderung, Entführung und rituelle Tötung die Regel; Diplomatie gelingt fast nie."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thraals Domäne ist eine ertrunkene Spiegelwelt ohne echtes Festland. Felsnadeln, Salzgletscher, Riffgipfel, versunkene Kathedralen, Knochenkuppeln und gestrandete Götterschiffe bilden die Städte der Thraalkin."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Aleria nutzen sie Brackwassersümpfe, Riffe, Unterwasserhöhlen, verfallene Häfen und Tiefseegräben. An Land gehen sie fast nur für Raubzüge oder Rituale."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wasseratmung und große Drucktoleranz erlauben ihnen das Leben in tiefsten Gräben. Gifthaut lähmt oder verwirrt bei Berührung, die Tentakelzunge entreißt Waffen und Biolumineszenz dient Kommunikation, Täuschung und Jagd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ritualgesänge können Stürme anrufen oder Meereskreaturen beschwören. Der Tiefenfluch stört die Orientierung eines Opfers im Wasser; Runen aus Seepocken und Opfer aus Tang binden diese Magie an Druck, Salz und Schmerz."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Auf trockenem Boden verlieren Thraalkin einen Teil ihrer Beweglichkeit und Ausdauer. Feuer sowie sorgfältig eingesetzte Eisenwaffen durchdringen Schutz und Giftbereich besser, dürfen aber nicht durch Kontakt mit der Haut verloren gehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Königin ist der organisatorische Kern des Schwarms. Ihr Fall kann die Angreifer retten, löst jedoch unberechenbares Chaos aus und sollte deshalb nur mit einem gesicherten Rückzug aus dem Wasser geplant werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Erwählte Königinnen sollen einen Schuppenpanzer tragen, der wie schwarze Perlmutt leuchtet.",
+            "Einige Seevölker opfern Schiffe, um ihre Häfen vor späteren Schwarmangriffen zu bewahren.",
+            "Der Gurgelmond gilt in Legenden als Zeit, in der neue Schwärme geboren werden.",
+            "Der Verzehr von Thraalkinfleisch soll wasserfeste Haut verleihen; häufiger endet er durch das Gift tödlich."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [
+    {
+      "src": "../../../assets/nautiloid-profiles/thraalkin-detail.webp",
+      "width": 408,
+      "height": 612,
+      "alt": "Vollständig sichtbares Thraalkin-Jungtier bei seinem Gelege",
+      "caption": "Überlieferte Bildtafel · Jungtier und Eier eines Thraalkin-Schwarms"
+    }
+  ]
+}

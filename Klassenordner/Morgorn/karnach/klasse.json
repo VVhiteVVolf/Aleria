@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "karnach",
+  "cultureId": "morgorn",
+  "name": "Karnach",
+  "title": "Der Karnach",
+  "subtitle": "Bergknecht und Linienkrieger",
+  "aliases": ["Bergknecht", "Bergknechte"],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/CarFalg.png",
+  "illustration": "https://i.imgur.com/CarFalg.png",
+  "artwork": { "source": "https://i.imgur.com/CarFalg.png", "width": 1024, "height": 1536, "caption": "Karnach · Morgorn" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Morgorn" },
+    { "group": "Einordnung", "label": "Kaste", "html": "Karnach · Bergknechte" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Miliz oder Waffenknecht; kein automatischer Adel" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Gebirgs-, Gruben- und Engstellenkämpfer" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Robuste Nahkampfwaffen, Schild und Werkzeugwaffen" },
+    { "group": "Klassenprofil", "label": "Einsatzraum", "html": "Felsgelände, Stollen, Minen und schmale Zugänge" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Die Karnach sind die Bergknechte Morgorns: bewaffnete Männer und Frauen aus Hallen, Minen und Bergsiedlungen, die dort kämpfen, wo eine geschlossene Formation kaum Raum findet. Sie bilden häufig Milizen, Arbeitswachen und das einfache Fußvolk einer Halle.</p><p>Ihr Ansehen entsteht aus Verlässlichkeit. Ein Karnach hält den Stollen, räumt einen versperrten Zugang und trägt den Kampf durch Gelände, das schwer gerüstete Fremde bereits beim Marsch erschöpft.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Kaste", "status": "written", "sharedIntro": "kriegerkaste", "html": "<p>Die Karnach gingen aus der Notwendigkeit hervor, Bergwerke, Erzwege und unterirdische Siedlungen mit Kräften zu schützen, die das Gelände aus täglicher Arbeit kannten. Ihre Ausbildung blieb deshalb eng mit Bergbau, Lastentransport und gemeinschaftlicher Hallenwehr verbunden.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Karnach bewegen sich sicher auf Geröll, in niedrigen Gängen und an steilen Hängen. Sie erkennen tragfähigen Grund, gefährliche Engstellen und einfache Einsturzrisiken. Im Verband sichern sie Durchgänge, lösen einander an der Front ab und nutzen Felswände, Pfeiler und Stützbalken als natürliche Deckung.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Sicher in Fels, Stollen und Engstellen</li><li>Robust, arbeitsgewohnt und standfest</li><li>Verlässlich in kleiner Formation</li></ul><h3>Schwächen</h3><ul><li>Weniger beweglich im offenen Feld</li><li>Meist geringere Ausrüstung als die ritterlichen Kasten</li><li>Kaum auf höfische Einzelduelle ausgerichtet</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Karnach kämpft kurz, zweckmäßig und raumsparend. Stöße, Haken, Schildarbeit und gemeinsames Drücken sind wichtiger als weite Schwünge. Werkzeugwaffen können im Notfall dienen, ersetzen aber keine geregelte Bewaffnung.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Üblich sind robuste Helme, Leder, Kette oder einfache Plattenstücke, dazu Schild, kurze Seitenwaffe und eine Hauptwaffe, die in engen Räumen geführt werden kann. Seil, Lampe, Keile und Grubenwerkzeug gehören ebenso selbstverständlich zur Ausrüstung.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "verantwortung", "html": "<p>Karnach stehen gesellschaftlich unter den hoch ausgebildeten Hütern, Wächtern und Stürmern, werden jedoch als notwendiges Fundament jeder Halle geachtet. Viele bleiben ihr Leben lang einfache Bergknechte; bewährte Kämpfer können Wachaufgaben, Ausbildung oder die Führung einer kleinen Schar übernehmen.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Kaste", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Morgornische Kriegerkasten · Karnach" }
+}

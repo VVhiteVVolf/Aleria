@@ -1,0 +1,178 @@
+{
+  "id": "gorak",
+  "name": "Gorak",
+  "classification": "Dagonischer Ogroide und infernaler Chaoskrieger",
+  "continent": "Infernale Sphären",
+  "region": "Dagons Chaoslande",
+  "folio": "IV / 02-A",
+  "parentGroupId": "ogroiden",
+  "summary": "Goraks sind Dagons glühende Vollstrecker: rötliche Ogroiden, deren Adern bei Wut golden aufleuchten und deren Körperhitze bereits eine Berührung zur Waffe macht. Schlaflos, ausdauernd und rebellisch verwüsten sie Schlachtfelder, obwohl ihre instabilen Clans ständig an inneren Machtkämpfen zerbrechen.",
+  "quote": "Wenn die Luft nach Metall schmeckt und der Fels unter nackten Füßen warm wird, marschiert ein Gorak näher, als der Rauch vermuten lässt.",
+  "quoteAttribution": "Warnung aus den Berichten alerischer Grenzwachen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Gorak"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernalischer Ogroide, Krieger und Chaosdiener"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Von Dagon aus Chaos und Hass erschaffen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Dagons Domäne, die Chaoslande"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Lavaflüsse, Aschewüsten und brennende Felder; in Aleria Gebirge und Kriegsruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Chaotisch, rebellisch und nach Dagons Anerkennung strebend"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Schlaflos; Tag und Nacht aktiv, bevorzugt Dunkelheit"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Übermenschliche Stärke, Körperhitze, große Ausdauer und infernale Aura"
+    },
+    {
+      "label": "Stärken",
+      "value": "Feuerimmunität, physische Dominanz und furchteinflößende Präsenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Magische Angriffe, geringe Intelligenz und instabile Clanordnung"
+    },
+    {
+      "label": "Beute",
+      "value": "Sterbliche, Tiere und gegnerische Truppen sowie geplünderte Vorräte"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körperhitze",
+      "Zerstörungskraft",
+      "Kampfausdauer",
+      "Schreckensaura",
+      "Clanordnung",
+      "Magieresistenz"
+    ],
+    "values": [
+      10,
+      9,
+      10,
+      8,
+      2,
+      3
+    ],
+    "source": "Aus Feuerimmunität, glühender Körpertemperatur, unermüdlichem Kampftrieb, infernaler Präsenz und den instabilen Clanstrukturen abgeleitet",
+    "intro": "Diese Einordnung beschreibt die für Gorak überlieferten Eigenheiten. Hohe Werte zeigen eine stark ausgeprägte Eigenschaft, auch wenn sie eine Abhängigkeit oder Anfälligkeit bezeichnet."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Goraks entstanden in den feurigen Tiefen von Dagons Chaoslanden als Vollstrecker und Plünderer seiner Armeen. Sie sind keine subtilen Strategen, sondern lebende Kriegsmaschinen, die Anerkennung durch möglichst sichtbare Verwüstung suchen."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rötliche Haut, abgebrochene weiße Hörner, Stoßzähne und ein gegabelter Schwanz kennzeichnen ihre Gestalt. Im Kampfrausch zeichnen gelblich goldene Adern ein glühendes Netz über den Körper; Augen und Blut wirken dann wie flüssiges Feuer."
+        }
+      ]
+    },
+    {
+      "id": "ordnung",
+      "title": "Ordnung & Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Clan folgt nur so lange einem Anführer, wie dieser jeden Herausforderer niederhalten kann. Paranoia, Rebellion und das Recht des Stärksten verhindern dauerhafte Ordnung, während die Furcht vor Dagon eine widersprüchliche Form von Loyalität erzwingt."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In den Chaoslanden durchstreifen Goraks Lavafelder, Aschewüsten und glühende Schlacke. In Aleria suchen sie zerstörte Gebirge, verwüstete Täler und Kriegsruinen auf, ziehen jedoch weiter, sobald ihre eigene Zerstörung den Ort unbrauchbar gemacht hat."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer und Hitze verletzen sie nicht. Schon ihre Nähe erschöpft Sterbliche, Berührungen verbrennen Haut, und ihre Ausdauer hält sie lange im Nahkampf. Nur seltene Feuerschamanen kanalisieren darüber hinaus die Flammen ihrer Umgebung als Magie."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Abstand und Magie sind wirksamer als ein Kraftvergleich. Eine Gruppe sollte die Goraks voneinander trennen und interne Rivalität ausnutzen; in enger Formation oder nahe offener Flammen verstärken Hitze, Reichweite und Ausdauer ihren Vorteil."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Abgebrochene Hörner gelten nicht als Makel, sondern als sichtbarer Beweis überstandener Kämpfe.",
+            "Ein Gorak-Clan kann innerhalb eines einzigen Tages mehrfach den Anführer wechseln.",
+            "Selbst beim Lagern halten Goraks Abstand voneinander, damit keine Berührung als Herausforderung missverstanden wird."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/ogroid-profiles/gorak-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Gorak in aquarellierter Bestiariumdarstellung"
+  },
+  "hero": {
+    "src": "../../../assets/ogroid-profiles/gorak-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Gorak",
+    "caption": "Überlieferte Bildtafel · Gorak in seiner typischen Umgebung"
+  },
+  "plates": []
+}

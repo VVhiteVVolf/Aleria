@@ -15,18 +15,17 @@ function buildSchemaIconField(field, item, index, mode, schemaKey) {
     ? `data-inline-action="schema-pick-icon" data-schema-key="${escapeHtml(schemaKey)}" data-schema-field="${escapeHtml(field.key)}"`
     : `data-module-editor-action="schema-pick-icon" data-schema-key="${escapeHtml(schemaKey)}" data-schema-field="${escapeHtml(field.key)}"`;
   return `
-      <span class="biography-ability-icon-field">
+      <span class="biography-ability-icon-field" data-role="schema-icon-field">
         <input class="inline-edit-input schema-icon-field ${inputClass}" type="text" value="${escapeHtml(value)}" placeholder="${escapeHtml(field.placeholder || 'Symbol oder Bild-URL')}" data-schema-field="${escapeHtml(field.key)}" ${inputAttrs}>
         <button class="module-editor-mini-btn biography-ability-icon-picker" type="button" ${pickerAttrs} title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
       </span>`;
 }
 
 function openSchemaIconPicker(button) {
-  const schemaKey = button?.dataset?.schemaKey || '';
   const fieldKey = button?.dataset?.schemaField || '';
-  const row = button?.closest?.('[data-row-variant], .biography-edit-row, .module-house-influence-row');
-  const target = row?.querySelector?.(`.schema-icon-field[data-schema-field="${fieldKey}"]`)
-    || row?.querySelector?.('.schema-icon-field');
+  const field = button?.closest?.('[data-role="schema-icon-field"]');
+  const target = field?.querySelector?.(`.schema-icon-field[data-schema-field="${fieldKey}"]`)
+    || field?.querySelector?.('.schema-icon-field');
   if (!target) return;
   _schemaIconPickerTarget = target;
   if (typeof openIconDirectory === 'function') {

@@ -60,11 +60,12 @@ for (const definition of definitions) {
 
 lines.push('', '## Formen und Attacken');
 for (const form of forms) {
+  const parent = forms.find(candidate => candidate.id === form.parentPathId);
   lines.push(
     '',
-    `### ${form.shortName}`,
+    `${parent ? '####' : '###'} ${form.shortName}`,
     '',
-    `${form.kind === 'foundation' ? 'Grundform' : form.kind === 'duelist' ? 'Duellantenform' : 'Pfad'} · Ausbildung Stufe ${form.techniqueLevelBand.minimum}–${form.techniqueLevelBand.maximum} · ${form.techniques.length} Attacken im Gesamtpool.`,
+    `${parent ? `Unterform von: ${parent.shortName}` : form.kind === 'foundation' ? 'Grundform' : form.kind === 'duelist' ? 'Duellantenform' : 'Pfad'} · Ausbildung Stufe ${form.techniqueLevelBand.minimum}–${form.techniqueLevelBand.maximum} · ${form.techniques.length} Attacken im Gesamtpool.`,
     '',
     '| Stufe | Attacke | Klassen | Waffenprofile | Schadensmodell | Mit 1W10 bei Freigabe | Mit 1W10 auf Stufe 20 | Kosten | Wirkung | Stand |',
     '| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |'

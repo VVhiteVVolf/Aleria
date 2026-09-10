@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "id": "waldschrat-hero",
+      "file": "./sylvanid-profiles/waldschrat-hero.webp",
+      "width": 683,
+      "height": 1024,
+      "sourceType": "user-provided-profile-table",
+      "sourceUrl": "https://i.imgur.com/gYRWp9v.png",
+      "role": "Szenentafel"
+    },
+    {
+      "id": "erlschrat-hero",
+      "file": "./sylvanid-profiles/erlschrat-hero.webp",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "generated-scene-tableau",
+      "sourceUrl": "generated",
+      "role": "Szenentafel",
+      "original": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a07b20-2f96-7d30-b841-529cc94f1ddb\\exec-ff05c62b-8ac2-44e1-99a3-976bdf2b303d.png",
+      "generationMode": "edit-from-reference",
+      "reference": "./creature-group-profiles/sylvaniiden-erlschrat.webp",
+      "generationPrompt": "Quadratische 1:1-Szenentafel mit dem vollständig sichtbaren vierbeinigen Erlschrat aus der Artenreferenz, großem Geweih, dunklem verrottetem Fell, Astwerk, Pilzen, Ranken und knöchernen Wucherungen; verfluchter Hain und Opferstein, mittelalterlicher Waldläufer und Druide; Watercolor, Buntstift, comichaft, verwaschene Kanten und leichter Color Bleed; keine modernen Elemente, kein Text, kein Anschnitt."
+    },
+    {
+      "id": "zatrakin-hero",
+      "file": "./sylvanid-profiles/zatrakin-hero.webp",
+      "width": 687,
+      "height": 1024,
+      "sourceType": "user-provided-profile-table",
+      "sourceUrl": "https://i.imgur.com/v2h1qji.png",
+      "role": "Szenentafel"
+    }
+  ]
+}

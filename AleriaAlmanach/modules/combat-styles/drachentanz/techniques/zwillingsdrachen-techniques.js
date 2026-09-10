@@ -1,7 +1,7 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260908-cenyr-paths-v1';
-import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260908-cenyr-paths-v1';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
-const CLASS_IDS = Object.freeze(['teulu', 'uchelwyr', 'helwyr', 'arthwyr']);
+const CLASS_IDS = Object.freeze(['teulu', 'helwyr', 'arthwyr']);
 const CLASS_WEAPONS = Object.freeze(Object.fromEntries(CLASS_IDS.map(id => [id, ['dual-swords', 'dual-daggers']])));
 
 function twin(spec) {

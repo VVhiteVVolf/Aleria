@@ -1,4 +1,4 @@
-import { DRACHENTANZ_FORM_NAMES } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
+import { DRACHENTANZ_FORM_NAMES } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from '../drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
 
 const RESOURCE_NAMES = Object.freeze({

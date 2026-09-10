@@ -360,23 +360,6 @@ const SECTIONS = [
     key: "Kultur", desc: "Menschliche Völker, Krieger & Kulturen", tab: "Völker & Kulturen",
     entries: [
       {
-        id:"klythesische-toxare", title:"Klythesische Toxare",
-        subtitle:"Berittene Bogenschützin der Klythesischen Amazonen",
-        type:"Kriegerin", category:"Mensch · Kriegerin · Tirnara",
-        image:"https://i.imgur.com/mxSGUng.png", stamp:"TIRNARA · KLYTHESIA",
-        description:"Diese Darstellung zeigt eine Klythesische Toxare — eine berittene Bogenschützin des Amazonenvolkes der Klythesen, beheimatet auf dem südlichen Kontinent Tirnara. Im Norden Estrylls kaum bekannt, sind sie in ihren Heimatgefilden gefürchtet als Plünderinnen und Sklavenfängerinnen. Unter den Klythesen gilt die Toxare als die gefürchtetste Kriegerinnengattung im offenen Schlachtfeld.",
-        stats:[
-          ["Typ","Berittener Bogenschütze"],["Kontinent","Tirnara"],
-          ["Land","Klythesia"],["Religion","Zirkel des Ewigen Waldes"],
-          ["Waffen","Kopis, Peitsche, Harpune, Bola, Lasso, Reflexbogen"],
-          ["Reittiere","Nebtu-Pferd, Sarkal, Xhanatos"],
-        ],
-        commentator:YVAIN, commentatorMood:"erklarend",
-        commentText:"Was wir hier vor uns haben, meine Damen und Herren, ist eine Klythesische Toxare in voller Kampfmontur — die gefürchtetste berittene Bogenschützin des südlichen Kontinents Tirnara. Das Klythesische Volk, ein Amazonenvolk von erheblicher martialischer Tradition, gliedert seine Kriegerinnen in streng definierte Kasten. Die Toxare ist die beweglichste und offensivste: Sie reitet weit in Feindesland, schlägt schnell zu und ist verschwunden, ehe der Gegner auch nur reagieren kann.",
-        quote:"Unter den Klythesen sind die Toxaren die Ersten, die den Kontakt mit dem Feind suchen, dringen tief in Feindesland ein und rauben alles, was sie in die Finger bekommen.",
-        quoteBy:"— Yvain Seldryn", locked:false, icon:"⚔",
-      },
-      {
         id: "roter-drache",
         title: "Zum Roten Drachen",
         subtitle: "Straßentaverne · Baronie Lamreis Ankunft",

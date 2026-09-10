@@ -1,0 +1,233 @@
+{
+  "id": "mortis",
+  "name": "Mortis",
+  "classification": "Verfallsgezeichneter Vampirspross des Nachzehrers",
+  "continent": "Aleria",
+  "region": "Friedhöfe, Gruften, Ruinen und Schlachtfelder",
+  "folio": "IV / 03-B-4",
+  "parentGroupId": "blutsauger",
+  "summary": "Mortis entstehen durch den degenerativen Sanguinaris Putrescens eines Nachzehrers. Der Erreger hält einen zerfallenden Körper durch infernale Energie in Bewegung, vernichtet die Persönlichkeit und richtet den Hunger auf verwesendes Fleisch und Blut. Als langsame Aasfresser meiden Mortis das Leben, reagieren bei Gefahr jedoch mit plötzlicher brutaler Kraft.",
+  "quote": "Folge auf dem Friedhof nicht zuerst den Spuren im Schlamm, sondern dem Kreis welker Pflanzen; in seiner Mitte wandelt meist der Mortis.",
+  "quoteAttribution": "Aufzeichnung eines thalenorischen Gruftwächters",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Mortis"
+    },
+    {
+      "label": "Typ",
+      "value": "Degenerierter Vampirspross und Aasfresser"
+    },
+    {
+      "label": "Schöpferlinie",
+      "value": "Nachzehrer"
+    },
+    {
+      "label": "Virus",
+      "value": "Sanguinaris Putrescens"
+    },
+    {
+      "label": "Übertragung",
+      "value": "Biss sowie Kontakt mit Blut oder Fleisch eines Nachzehrers"
+    },
+    {
+      "label": "Verwandlungsdauer",
+      "value": "Langsam fortschreitend über mehrere Phasen"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Friedhöfe, Grüfte, Höhlen, Ruinen und Schlachtfelder"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Zurückgezogener Aasfresser; bei Gefahr plötzlich gewalttätig"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Nachts; tagsüber in Grabstätten verborgen"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Verfallsaura, Dunkelsicht, große Zähigkeit und jähe Angriffskraft"
+    },
+    {
+      "label": "Stärken",
+      "value": "Schmerzunempfindlichkeit und Widerstand gegen schwere Verletzungen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Feuer, sakrale Magie, geweihte Waffen und geringe Grundgeschwindigkeit"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Verfallsaura",
+      "Zähigkeit",
+      "Aasbindung",
+      "Angriffswucht",
+      "Beweglichkeit",
+      "Menschlichkeitsrest"
+    ],
+    "values": [
+      9,
+      9,
+      10,
+      8,
+      3,
+      1
+    ],
+    "intro": "Der Mortis ist kein geschickter Jäger. Seine Gefahr entsteht aus Verfall, großer Zähigkeit und einer unerwarteten Angriffswucht, sobald sein Rückzugsort bedroht wird.",
+    "source": "Aus dem Sanguinaris Putrescens, dem fortschreitenden körperlichen Zerfall, der Nahrungssuche an Todesorten, der Verfallsaura und dem Verlust der Persönlichkeit abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Mortis ist der durch Infektion geschaffene Vampirspross eines Nachzehrers. Der Sanguinaris Putrescens formt ihn zu einer grotesken Verkörperung von Krankheit und Verfall, deren Nahrung aus verwesendem Fleisch und Blut besteht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er verhält sich eher wie ein Aasfresser als wie ein aktiver Jäger. Dennoch machen seine Nähe zum Tod, seine Zähigkeit und die plötzliche Gewalt eines gereizten Wesens ihn zu einer oft unterschätzten Bedrohung."
+        }
+      ]
+    },
+    {
+      "id": "virus",
+      "title": "Sanguinaris Putrescens",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Erreger wird durch einen Biss oder den Kontakt mit Blut oder Fleisch eines Nachzehrers übertragen. Er zerstört gesundes Gewebe und ersetzt seine Funktion durch infernale Energie, sodass der Wirt den eigenen körperlichen Zerfall überlebt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Prozess erfasst auch den Geist. Während Wunden, Blässe und Verwesungsgeruch zunehmen, zerbricht die mentale Stabilität; Persönlichkeit und Erinnerung weichen allmählich einem einzigen Nahrungstrieb."
+        }
+      ]
+    },
+    {
+      "id": "prozess",
+      "title": "Verwandlungsprozess",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Erste Erkrankung"
+        },
+        {
+          "type": "paragraph",
+          "text": "Schwindel, Fieber und Schwäche gleichen zunächst einer schweren Krankheit. Der Infizierte entwickelt zugleich eine Abscheu gegen gewöhnliche Nahrung und frisches Blut."
+        },
+        {
+          "type": "subheading",
+          "text": "Fortschreitender Zerfall"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Haut wird fahl und hager, Wunden öffnen sich und ein Verwesungsgeruch haftet am Körper. Bewegungen werden schleppend, während Gedanken und Gefühle immer weiter abstumpfen."
+        },
+        {
+          "type": "subheading",
+          "text": "Vollendung"
+        },
+        {
+          "type": "paragraph",
+          "text": "Schließlich richtet sich der Hunger ausschließlich auf verwesende Überreste. Die individuelle Persönlichkeit erlischt und ein Mortis bleibt zurück, dessen Körper zwischen Zerfall und infernaler Erhaltung gefangen ist."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mortis sind hager, fahl und sichtbar deformiert. Aufgerissene Haut, lange Finger, verrottende Kleidung und eine gebeugte Haltung lassen sie selbst in Dunkelheit kaum menschlich wirken; welke Pflanzen und der Geruch von Fäulnis kündigen ihre Nähe an."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tagsüber verbergen sich Mortis in Grüften, Höhlen oder aufgegebenen Grabstätten. Nachts wandern sie über Friedhöfe, Schlachtfelder und Ruinen, wo sie Nahrung und Schutz finden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie meiden lebendige Gemeinschaften und greifen Lebende nur bei Mangel oder Bedrohung an. Ein provozierter Mortis kann seine sonstige Trägheit für einen kurzen, brutalen Ausbruch ablegen und wird bisweilen von einem Nachzehrer als Wächter eingesetzt."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Aura des Verfalls lässt Pflanzen welken und ruft bei Lebenden Übelkeit und Unruhe hervor. Der Mortis ignoriert Verletzungen, die einen Sterblichen sofort niederwerfen würden, und besitzt im Nahkampf weit mehr Kraft, als seine dürre Gestalt vermuten lässt."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Verfallsaura und erkennbare Spur verwelkender Umgebung",
+            "Große Zähigkeit und geringe Schmerzreaktion",
+            "Dunkelsicht und instinktive Orientierung an Todesorten",
+            "Plötzliche rohe Kraft bei Gefahr oder Nahrungskonkurrenz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Feuer und geweihte Waffen unterbrechen die infernale Erhaltung des zerfallenden Körpers. Jäger halten Abstand zur Verfallsaura, beleuchten Gruftgänge vollständig und vermeiden den scheinbar sicheren Nahkampf gegen einen reglosen Mortis."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Ring plötzlich welker Friedhofspflanzen kann einen Mortis verraten, bevor Spuren sichtbar werden.",
+            "Mortis bevorzugen alte Todesorte und folgen deshalb selten regelmäßig genutzten Wegen.",
+            "Nachzehrer nutzen einzelne Mortis als Wächter, weil deren Hunger sie zuverlässig an Grüfte und Vorräte bindet."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/bloodsucker-profiles/mortis-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Mortis in verfallener Gestalt"
+  },
+  "hero": {
+    "src": "../../../assets/bloodsucker-profiles/mortis-scene.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Mortis und Grabwächter vollständig sichtbar auf einem regennassen Friedhof",
+    "caption": "Neu angelegte Bildtafel · Der Mortis an einer geöffneten Gruft"
+  }
+}

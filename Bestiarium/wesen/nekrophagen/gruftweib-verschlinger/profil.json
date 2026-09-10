@@ -1,0 +1,237 @@
+{
+  "id": "gruftweib-verschlinger",
+  "name": "Gruftweib / Verschlinger",
+  "classification": "Nekrophag · Täuschender Verschlinger",
+  "continent": "Aleria",
+  "region": "Friedhöfe, Sümpfe und andere Todesorte",
+  "folio": "III-N / 07",
+  "parentGroupId": "nekrophagen",
+  "summary": "Das Gruftweib, auch als Verschlinger bekannt, ist eine schaurige Kreatur, die die Grenzen zwischen Untoten und dämonischer Verderbnis verschwimmen lässt. Diese Wesen entstehen durch dunkle Rituale oder unheilige Flüche, die sterbliche Seelen verdammen und ihre Körper in grausame Abscheulichkeiten verwandeln. Gruftweiber sind für ihren unersättlichen Hunger nach Fleisch bekannt, wobei sie lebende Beute bevorzugen.",
+  "quote": "Die Alte am Weg bittet nur einmal um Hilfe; beim zweiten Ruf kennt sie bereits deinen Namen und deinen Schritt.",
+  "quoteAttribution": "Warnung über die Jagdweise der Gruftweiber",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-gruftweib-verschlinger.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Gruftweib / Verschlinger als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/gruftweib-verschlinger.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Gruftweib / Verschlinger",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Gruftweib / Verschlinger"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Gruftweib / Verschlinger"
+    },
+    {
+      "label": "Typ",
+      "value": "Täuschender Untoter mit dämonischer Verderbnis"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch Flüche, dunkle Rituale oder dämonischen Einfluss"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Verfluchte Friedhöfe, Sümpfe, Ruinen oder andere Todesorte"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dunkle Wälder, verlassene Gräber, Sümpfe und neblige Friedhöfe"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Heimtückisch, jagend, täuschend"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiv vor allem bei Nacht, lauernd oder ruhend bei Tag"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Tarnung, Nutzung von Magie (Illusionen, Dunkelheit), scharfe Klauen und Zähne, psychologischer Schrecken"
+    },
+    {
+      "label": "Stärken",
+      "value": "Hohe Intelligenz, Täuschungsfähigkeit, unstillbarer Hunger macht sie unermüdlich"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Anfällig für Licht und Feuer, heilige Magie bricht ihre Tarnung, körperlich schwächer als andere Untote"
+    },
+    {
+      "label": "Beute",
+      "value": "Alte Schmuckstücke, Ritualgegenstände, Überreste von Opfern (Knochen, Kleidung, kleine Relikte)"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Täuschung",
+      "Jagdinstinkt",
+      "Körperkraft",
+      "Verwesungsaura",
+      "Heimlichkeit",
+      "Gier"
+    ],
+    "values": [
+      9,
+      9,
+      8,
+      8,
+      8,
+      10
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Gruftweib / Verschlinger abgeleitet",
+    "intro": "Das Gruftweib-Diagramm verbindet die anfängliche Täuschung mit dem späteren Jagdangriff. Gier und Heimlichkeit bestimmen, wie lange es seine Tarnung wahrt."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Gruftweib, auch als Verschlinger bekannt, ist eine schaurige Kreatur, die die Grenzen zwischen Untoten und dämonischer Verderbnis verschwimmen lässt. Diese Wesen entstehen durch dunkle Rituale oder unheilige Flüche, die sterbliche Seelen verdammen und ihre Körper in grausame Abscheulichkeiten verwandeln."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber sind für ihren unersättlichen Hunger nach Fleisch bekannt, wobei sie lebende Beute bevorzugen. Sie jagen mit einer Mischung aus Täuschung und brutaler Gewalt, oft indem sie sich als harmlose, alte Frauen tarnen, um das Vertrauen ihrer Opfer zu gewinnen. Sobald sie ihre Beute in Sicherheit wiegen, schlagen sie mit tödlicher Präzision zu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kreaturen sind nicht nur physisch gefährlich, sondern auch psychologisch furchteinflößend. Ihr entstelltes, menschenähnliches Aussehen und ihre Fähigkeit, die Schwächen ihrer Opfer auszunutzen, machen sie zu einer Bedrohung, die nicht nur mit Waffen bekämpft werden kann. Gruftweiber streifen durch verlassene Friedhöfe, finstere Wälder oder verfluchte Sümpfe, wo sie unachtsame Wanderer oder abtrünnige Seelen in ihre tödlichen Fallen locken."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber, auch bekannt als Verschlinger, sind das Ergebnis dunkler Rituale, unheiliger Flüche oder dämonischer Korruption, die sterbliche Seelen in ein untotes Dasein verfluchen. Diese Kreaturen entstehen oft an Orten, die mit großer Verzweiflung, Tod oder Verrat verbunden sind. Manche Mythen besagen, dass sie aus Frauen hervorgehen, die zu Lebzeiten verraten, verstoßen oder grausam ermordet wurden. Ihr untotes Dasein ist eine Mischung aus unbändiger Rachsucht und unstillbarem Hunger nach Leben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber wurden in alten Zeiten auch gezielt erschaffen. Kulte oder nekromantische Zirkel nutzten diese Kreaturen als Wächter von Gräbern oder als Jäger, um unheilige Opfer zu sichern. Mit der Zeit wurden diese Kreaturen jedoch unkontrollierbar, und viele entkamen ihren Meistern, um in der Dunkelheit ihr eigenes grauenhaftes Leben zu führen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine weitere Entstehungsweise ist der Einfluss von verfluchten Orten, wie Friedhöfen, Sümpfen oder Ruinen, an denen dunkle Magie oder dämonische Energie vorherrscht. Frauen, die an solchen Orten starben – sei es durch Mord, Suizid oder Seuchen – sind besonders anfällig dafür, als Gruftweiber zurückzukehren. Ihre Seelen werden von Hass, Verzweiflung und Hunger vergiftet, was sie zu verdorbenen, grausamen Jägern macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "In vielen Kulturen gelten Gruftweiber als eine Art Lebenswarnung. Sie symbolisieren, was geschieht, wenn Gemeinschaften ihre Schwachen, Kranken oder Alten im Stich lassen. Die Legende besagt, dass ein Gruftweib Rache an denen nimmt, die es zu Lebzeiten im Stich gelassen haben, und ihre Opfer grausam quält, bevor es sie tötet."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber, auch Verschlinger genannt, sind äußerst heimtückische und gefährliche Kreaturen, deren Verhalten von Täuschung, Hinterlist und brutaler Gier geprägt ist. Sie agieren nicht wie stumpfe Untote, sondern besitzen eine erschreckend hohe Intelligenz und eine instinktive Fähigkeit, ihre Opfer zu manipulieren und zu überlisten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kreaturen tarnen sich oft als harmlose alte Frauen oder hilflose Gestalten, um das Vertrauen ihrer Beute zu gewinnen. Sobald sie ihre Opfer in Sicherheit wiegen, entlarven sie ihre wahre Natur und greifen mit scharfen Klauen und Zähnen an. Ihre Angriffe sind nicht nur physisch brutal, sondern auch psychologisch, da sie ihre Opfer durch Flüche oder Illusionen in Angst und Schrecken versetzen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber jagen bevorzugt in dunkler Umgebung, da sie helles Licht meiden. Sie sind in der Lage, sich nahezu lautlos zu bewegen, und agieren oft aus dem Hinterhalt. Ihr Verhalten ist besonders aggressiv, wenn sie spüren, dass ihre Beute schwach oder unvorbereitet ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz ihrer Täuschungsmanöver und Tarnung sind Gruftweiber von tierischer Gier nach Leben und Fleisch getrieben. Ihr unstillbarer Hunger macht sie unermüdlich, und sie verfolgen ihre Beute mit unerbittlicher Ausdauer, bis diese entweder erschöpft oder gefangen ist."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber sind an Orten zu finden, die von Tod, Verfall und dunkler Magie durchdrungen sind. Sie bevorzugen verlassene Friedhöfe, neblige Sümpfe, alte Ruinen und verwunschene Wälder. Überall dort, wo die Lebenden die Toten vernachlässigt haben oder wo düstere Flüche gewirkt wurden, können diese Kreaturen auftauchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Friedhöfen lauern sie oft zwischen verfallenen Gräbern, während sie in Sümpfen oder Wäldern mit ihrer Umgebung verschmelzen und sich perfekt tarnen. Gruftweiber meiden belebte Gebiete und suchen stattdessen abgeschiedene Orte, die ihnen Schutz und eine konstante Nahrungsquelle bieten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten ist meist von subtilen, unheilvollen Vorzeichen begleitet. Ein fauliger Geruch, plötzliche Kälte oder das Rascheln von Blättern können Hinweise darauf sein, dass ein Gruftweib in der Nähe ist. In der Dunkelheit verstärken diese Kreaturen ihre Bedrohlichkeit, da sie ihre Opfer mit Täuschung und Furcht isolieren, bevor sie zuschlagen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber sind besonders aktiv bei Nacht, wenn sie ihre Tarnung und die Dunkelheit nutzen, um unachtsame Wanderer oder Dorfbewohner zu überraschen. Tagsüber ziehen sie sich in ihre Verstecke zurück, wo sie lauern oder ruhen, bis die Dunkelheit zurückkehrt."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber sind gefährliche und hinterhältige Gegner, die ihre Stärken geschickt ausnutzen, um ihre Opfer in die Enge zu treiben. Dennoch besitzen sie Schwächen, die gut vorbereitete Gegner nutzen können, um sie zu besiegen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Täuschungsfähigkeit: Gruftweiber können sich durch Magie oder Verkleidung als harmlose, alte Frauen tarnen und so das Vertrauen ihrer Opfer gewinnen.",
+            "Psychologische Furcht: Ihr entstelltes Äußeres, ihr unheimliches Kreischen und ihre magischen Illusionen erzeugen Furcht, die selbst erfahrene Kämpfer verunsichern kann.",
+            "Schnelligkeit und Beweglichkeit: In der Dunkelheit und in unwegsamem Gelände bewegen sie sich lautlos und überraschend schnell, was sie zu gefährlichen Jägern macht.",
+            "Magische Fähigkeiten: Gruftweiber nutzen Illusionen und Flüche, um ihre Beute zu verwirren oder zu schwächen, bevor sie angreifen.",
+            "Unermüdlichkeit: Sie verfolgen ihre Opfer gnadenlos, ohne je an Kraft oder Ausdauer zu verlieren."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Anfälligkeit für Licht: Helles Licht, insbesondere Sonnenlicht oder magisches Licht, schwächt ihre Fähigkeiten und zwingt sie, sich zurückzuziehen.",
+            "Heilige Magie: Göttliche Zauber oder geweihte Waffen durchbrechen ihre Illusionen und fügen ihnen schweren Schaden zu.",
+            "Körperliche Schwäche: Gruftweiber sind physisch schwächer als andere Untote und verlassen sich eher auf Täuschung als auf rohe Kraft.",
+            "Feuerempfindlichkeit: Ihre verrottenden Körper sind extrem anfällig für Feuer, das ihre Regeneration unterdrückt und sie schnell zerstören kann.",
+            "Tarnung aufheben: Wenn ihre Tarnung oder Magie entlarvt wird, verlieren sie ihren Überraschungsvorteil und werden deutlich verwundbarer."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gruftweiber sind tödliche Gegner in der Dunkelheit, doch wer ihre Schwächen kennt und vorbereitet ist, kann sie effektiv bekämpfen. Ihre Abhängigkeit von Illusionen und Dunkelheit macht sie besonders anfällig für Licht und göttliche Kräfte."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Gruftweib wählt eine harmlose Haltung sorgfältiger als ein glaubwürdiges Gesicht.",
+            "Der Geruch nach Verwesung und Fisch bleibt selbst dann, wenn die Illusion vollkommen wirkt.",
+            "Es merkt sich Fluchtwege und verändert seine Lockrufe bei wiederkehrenden Reisenden.",
+            "Heilige Magie kann die Tarnung brechen, bevor sie den Leib ernsthaft verletzt."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

@@ -1,0 +1,199 @@
+{
+  "id": "goliath",
+  "name": "Goliath",
+  "classification": "Riese · Verfluchter barbarischer Plünderer",
+  "continent": "Aleria",
+  "region": "Abgelegene Berge und Wälder",
+  "folio": "III-R / 02",
+  "parentGroupId": "riesen",
+  "summary": "Goliath sind aus verräterischen Fomóraig hervorgegangene Riesen, denen die Göttlichen Weisheit und Naturverbundenheit nahmen. Die wenigen Überlebenden ziehen als barbarische Plünderer durch Berge und Wälder, brechen mit bloßer Kraft Mauern und Bäume und erinnern nur in seltenen, schmerzvollen Augenblicken an ihre frühere Aufgabe.",
+  "quote": "Wo der Goliath nach einer Krone griff, blieb ihm nur der Hunger nach allem, was kleiner ist.",
+  "quoteAttribution": "Druidische Mahnung über Migdals Versprechen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/riesen-goliath.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Goliath als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/giant-profiles/goliath.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Goliath in seinem überlieferten Lebensraum",
+    "caption": "Überlieferte Bildtafel · Begegnung mit einem Goliath"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Goliath"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Riese; gefallene Fomóraig-Linie"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Verrat an den Alben nach einer List Migdals und göttlicher Bestrafung"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Frühe albische Kernlande"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Abgelegene Berge, große Wälder und verlassene Wildnis"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Barbarisch, plündernd, gierig und meist berechenbar gewalttätig"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und Nacht, häufig in Dämmerung und schlechtem Wetter"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Felswurf, Entwurzeln von Bäumen, Furchtgebrüll und einfache Kraftfallen"
+    },
+    {
+      "label": "Stärken",
+      "value": "Überwältigende Kraft, ledrige Haut, Zähigkeit und Schmerzresistenz"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Geringe Planung, ungezielte Angriffe und leicht ausnutzbare Gier"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Plündergut, grobe Waffen, Riesenleder, Zähne und Knochen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Körperkraft",
+      "Plünderungsdrang",
+      "Schmerzresistenz",
+      "Instinktlist",
+      "Naturerinnerung",
+      "Furchtgebrüll"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      5,
+      2,
+      8
+    ],
+    "source": "Aus Ursprung, Körperbau, Verhalten, Fähigkeiten und den überlieferten Begegnungen mit Goliath abgeleitet",
+    "intro": "Die Goliath-Wertung zeigt rohe Gewalt und den Drang zur Plünderung. Naturerinnerung ist selten, aber nicht völlig erloschen und unterscheidet einzelne alte Exemplare."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Goliath sind barbarische Riesen, die durch Verrat und göttliche Strafe ihrer Weisheit beraubt wurden. Seitdem gelten sie als zerstörerische Plünderer und Relikte einer alten Bedrohung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Erscheinung ähnelt den Fomóraig, weshalb friedliche Riesen bis heute unter demselben Misstrauen leiden."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Migdal versprach einzelnen Fomóraig, als Könige über die Alben zu herrschen, wenn sie ihre Wächteraufgabe verrieten. Der Abfall rief den Zorn der Göttlichen hervor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Intelligenz und Naturverbundenheit wurden genommen. Die neuen Goliath plünderten Höfe, zerstörten Siedlungen und verschlangen Menschen und Tiere, bis Fianna und Fomóraig sie aus den fruchtbaren Gebieten vertrieben."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gier, Hunger und augenblicklicher Vorteil bestimmen ihr Handeln. Gewalt wird ohne Maß eingesetzt, ist aber so ungezielt, dass vorbereitete Gegner Muster erkennen können."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seltene Goliath zeigen bruchstückhafte Naturerinnerungen. Solche Augenblicke äußern sich als Verwirrung, Trauer oder unerklärlicher Rückzug."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die sterbende Linie hält sich in Bergen und großen Wäldern fern organisierter Jagdgesellschaften. Verlassene Höfe und gebrochene Bäume markieren durchzogene Gebiete."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Goliath werfen Felsen, entwurzeln Bäume und brechen selbst befestigte Bauwerke. Dicke Haut und Schmerzresistenz lassen sie nach tiefen Wunden weiterkämpfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primitive List besteht aus einfachen Fallen, eingedrückten Fluchtwegen und dem Treiben von Beute. Ihr Gebrüll verbreitet Furcht und kann an instabilen Hängen Geröll lösen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Abstand, bewegliche Gruppen und vorbereitete Engstellen nutzen die fehlende Planung aus. Köder dürfen seine Gier lenken, ohne die eigene Rückzugslinie zu öffnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein niedergeschlagener Goliath bleibt gefährlich. Schmerz und sichtbare Verletzungen sind kein verlässliches Zeichen für Kampfunfähigkeit."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Goliath und Fomóraig werden von ungeübten Beobachtern häufig verwechselt.",
+            "Fianna-Lieder zählen besiegte Goliath nach zerstörten Höfen statt nach Namen.",
+            "Alte Exemplare halten manchmal inne, wenn sie druidische Zeichen sehen.",
+            "Ihr Gebrüll kündigt einen Angriff an, kann aber ebenso Ausdruck von Hunger oder Verwirrung sein."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

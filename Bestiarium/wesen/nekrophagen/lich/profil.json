@@ -1,0 +1,235 @@
+{
+  "id": "lich",
+  "name": "Lich",
+  "classification": "Nekrophag · Seelengebundener Erzmagier",
+  "continent": "Aleria",
+  "region": "Verlassene Türme, Katakomben und alte Ruinen",
+  "folio": "III-N / 04",
+  "parentGroupId": "nekrophagen",
+  "summary": "Der Lich ist der mächtigste und gefährlichste aller Untoten. Er entsteht aus einem Individuum, das sich aus eigenem Willen der dunklen Magie verschrieben hat, um die Sterblichkeit zu überwinden. Während andere Untote wie Zombies oder Ghule oft Opfer von Flüchen oder nekromantischen Ritualen sind, ist der Lich ein bewusster Schöpfer seines eigenen Schicksals.",
+  "quote": "Der Lich bewahrt nicht sein Leben, sondern nur genügend Zeit, um jeden Preis seines Wissens zu vergessen.",
+  "quoteAttribution": "Lehrsatz über verbotene Formen der Unsterblichkeit",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-lich.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Lich als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/lich.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Vollständig dargestellte Szene mit Lich",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Lich"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Lich"
+    },
+    {
+      "label": "Typ",
+      "value": "Bewusster Untoter; seelengebundener Magier"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch bewusste Rituale, bei denen die Seele in ein Phylakterium gebunden wird"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Einst mächtige Magier oder Priester, die nach Unsterblichkeit strebten"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Verlassene Türme, dunkle Katakomben, alte Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Kalkulierend, strategisch, langfristig planend"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Immer aktiv, benötigt keine Ruhe oder Schlaf"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Beherrschung mächtiger Magie, Kontrolle über untote Diener, Manipulation von Flüchen und dunkler Energie"
+    },
+    {
+      "label": "Stärken",
+      "value": "Unsterblichkeit (solange das Phylakterium intakt ist), große magische Macht, intelligente Planung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Zerstörung des Phylakteriums führt zu endgültigem Tod, anfällig für heilige Magie, physisch schwach"
+    },
+    {
+      "label": "Beute",
+      "value": "Magische Relikte, verbotene Zauberbücher, seltene Ressourcen, Phylakterium als Trophäe"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Zaubermacht",
+      "Planung",
+      "Seelenbindung",
+      "Untotenherrschaft",
+      "Körperkraft",
+      "Phylakteriumsschutz"
+    ],
+    "values": [
+      10,
+      10,
+      10,
+      10,
+      4,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Lich abgeleitet",
+    "intro": "Das Lich-Diagramm trennt die geringe Bedeutung seines Körpers von Zaubermacht, Planung und der Sicherung des Phylakteriums."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lich ist der mächtigste und gefährlichste aller Untoten. Er entsteht aus einem Individuum, das sich aus eigenem Willen der dunklen Magie verschrieben hat, um die Sterblichkeit zu überwinden. Während andere Untote wie Zombies oder Ghule oft Opfer von Flüchen oder nekromantischen Ritualen sind, ist der Lich ein bewusster Schöpfer seines eigenen Schicksals."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch jahrzehntelange Studien und finstere Rituale gelingt es einem Magier, seine Seele vom sterblichen Körper zu lösen und in ein Phylakterium, ein magisches Gefäß, zu binden. Dieser Akt verleiht dem Lich theoretisch ewiges Leben, doch der Preis ist hoch: Sein Körper verfällt, wird zu einer verwesenden Hülle, und die Seele wird von dunkler Magie korrumpiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Liche sind nicht nur mächtige Zauberer, sondern auch strategische Denker, die ihre untoten Armeen anführen und komplexe Pläne schmieden, oft über Jahrhunderte hinweg. Ihre Motivation ist häufig geprägt von der Suche nach noch größerer Macht, Rache oder dem Streben nach absoluter Kontrolle. Der Lich ist nicht einfach nur ein Feind – er ist eine intelligente und kalkulierende Bedrohung, die weit über die Gefahren gewöhnlicher Untoter hinausgeht."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Lich entsteht aus einem mächtigen Magier, der bereit ist, jede Grenze zu überschreiten, um die Sterblichkeit zu überwinden. Diese Transformation ist kein Zufall, sondern das Ergebnis jahrelanger Studien und finsterer Rituale. Der Weg zum Lichsein ist gefährlich und erfordert nicht nur enormes magisches Wissen, sondern auch die Bereitschaft, seine eigene Menschlichkeit zu opfern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das zentrale Element dieses Prozesses ist das Phylakterium, ein magisches Gefäß, in dem die Seele des Magiers gebunden wird. Dieses Artefakt dient als Anker für seine Existenz und macht den Lich praktisch unsterblich, solange das Phylakterium intakt bleibt. Die Herstellung dieses Gefäßes ist jedoch mit unsagbarem Leid verbunden: Sie erfordert oft Blutopfer, dunkle Rituale und den Einsatz mächtiger nekromantischer Magie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Leben sind die meisten zukünftigen Liche von einem unersättlichen Durst nach Wissen oder Macht getrieben. Oft sind es Magier, die die Vergänglichkeit des Lebens als Hindernis für ihre Ziele betrachten. Doch der Übergang zum Lichdasein ist kein perfekter Prozess – der Körper des Magiers beginnt nach dem Ritual zu verwesen, und die Seele wird zunehmend von der Dunkelheit der nekrotischen Energie korrumpiert."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liche sind im Gegensatz zu vielen anderen Untoten keine wilden Kreaturen, sondern hochintelligente und kalkulierende Wesen. Sie behalten die intellektuellen Fähigkeiten, das Wissen und die magischen Fertigkeiten, die sie zu Lebzeiten besaßen, und nutzen diese in Kombination mit ihrer Unsterblichkeit, um langfristige, oft über Jahrhunderte reichende Pläne zu verfolgen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Lich ist von Natur aus ein Meister der Magie. Seine nekromantischen Fähigkeiten erlauben es ihm, ganze Armeen von Untoten zu kontrollieren und seine Umgebung mit Flüchen und magischen Barrieren zu schützen. Er bevorzugt es, Konflikte aus sicherer Entfernung zu steuern und seine Gegner durch Manipulation und Überlistung zu besiegen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotz seiner Macht ist der Lich von einem fast paranoiden Bedürfnis nach Schutz seines Phylakteriums getrieben. Dieses magische Gefäß, das seine Seele beherbergt, ist der Schlüssel zu seiner Existenz. Daher verbirgt ein Lich sein Phylakterium an schwer zugänglichen Orten, um sicherzustellen, dass es nicht entdeckt oder zerstört wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Physisch ist ein Lich oft schwach, da sein Körper aufgrund der nekrotischen Energie in einem Zustand des ständigen Verfalls ist. Doch dieser Schwäche begegnet er mit mächtigen Zaubern und der Fähigkeit, durch dunkle Rituale seine Kraft zu erneuern. Trotz seines fragilen Körpers strahlt ein Lich eine unheimliche Aura aus, die auf die Verderbnis seiner Existenz hinweist."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liche sind äußerst selten und treten nur an Orten auf, die mit starker dunkler Magie oder nekrotischer Energie durchdrungen sind. Ihr Lebensraum ist in der Regel gut verborgen und schwer zugänglich, da sie sich von der Außenwelt abschirmen, um ihre Unsterblichkeit zu bewahren und ihre Pläne ungestört voranzutreiben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Typische Rückzugsorte eines Lichs sind verfallene Türme, alte Katakomben oder vergessene Ruinen – Orte, die abgeschieden und von dunkler Geschichte geprägt sind. Sie umgeben sich oft mit unzähligen Schutzmechanismen, wie magischen Barrieren, tödlichen Fallen und Horden von untoten Dienern, um Eindringlinge fernzuhalten. Diese Verstecke dienen nicht nur als Basis für ihre Studien, sondern auch als Schutz für ihr Phylakterium, das sie in den tiefsten und sichersten Bereichen verbergen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Anwesenheit eines Lichs macht sich oft durch subtile, aber unheilvolle Veränderungen in seiner Umgebung bemerkbar. Pflanzen beginnen zu verdorren, die Luft fühlt sich schwer und bedrückend an, und die Lebenskraft der Region scheint zu schwinden. Manche Regionen, die von einem Lich beherrscht werden, verwandeln sich in eine tote Zone, in der keine natürliche Ordnung mehr existiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Liche agieren selten direkt und ziehen es vor, ihre Pläne aus den Schatten zu steuern. Sie entsenden ihre untoten Armeen, Diener oder sogar kontrollierte Sterbliche, um ihre Befehle auszuführen. Diese indirekte Vorgehensweise macht es schwer, ihre genaue Position oder ihr wahres Ziel zu ermitteln."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Lich ist einer der gefährlichsten Gegner, den es gibt. Seine Stärken machen ihn nahezu unbesiegbar, doch auch er hat Schwachstellen, die mit sorgfältiger Planung ausgenutzt werden können."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unsterblichkeit: Solange sein Phylakterium intakt ist, kann ein Lich immer wieder zurückkehren, selbst wenn sein Körper zerstört wird.",
+            "Magische Macht: Ein Lich beherrscht mächtige Zauber, darunter Flüche, Todesmagie und Beschwörungen. Er ist in der Lage, ganze Armeen von Untoten zu kontrollieren.",
+            "Intelligenz und Strategie: Liche sind keine impulsiven Kreaturen. Sie planen ihre Schritte sorgfältig und nutzen ihre Intelligenz, um Gegner zu manipulieren oder in tödliche Fallen zu locken.",
+            "Kontrolle über Untote: Ein Lich kann eine Vielzahl von Untoten Dienern beschwören und koordinieren, die als Schutz oder als Waffen gegen Eindringlinge dienen.",
+            "Magische Verteidigung: Liche sind von mächtigen Schutzzaubern umgeben, die sie gegen physische und magische Angriffe absichern.",
+            "Aura des Schreckens: Die Anwesenheit eines Lichs erfüllt selbst die tapfersten Krieger mit Angst, was ihre Moral und Kampfbereitschaft schwächt."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Phylakterium: Das Phylakterium ist der größte Schwachpunkt eines Lichs. Wenn dieses magische Gefäß zerstört wird, verliert der Lich seine Unsterblichkeit und stirbt endgültig. Es ist jedoch oft gut versteckt und schwer zugänglich.",
+            "Physische Schwäche: Der Körper eines Lichs ist verwesend und schwach. Im Nahkampf ist er anfällig und kann durch gezielte physische Angriffe verletzt werden, wenn er ungeschützt ist.",
+            "Heilige Magie: Göttliche Kräfte und geweihte Waffen sind besonders effektiv gegen Liche. Sie durchbrechen ihre nekrotischen Schutzmechanismen und verursachen großen Schaden.",
+            "Abhängigkeit von Magie: Ein Lich verlässt sich stark auf Magie. Wird er von seiner Zauberkraft abgeschnitten (z. B. durch Anti-Magie-Zauber oder magische Barrieren), verliert er einen Großteil seiner Bedrohlichkeit.",
+            "Paranoia: Die Furcht vor der Zerstörung seines Phylakteriums macht einen Lich oft übervorsichtig. Diese Paranoia kann ausgenutzt werden, um ihn in die Defensive zu zwingen.",
+            "Isolation: Liche agieren oft allein und verlassen sich auf ihre Diener. Wird er isoliert oder von seiner Armee getrennt, kann er leichter überwältigt werden."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Lich vereint Intelligenz, Magie und Unsterblichkeit, was ihn zu einem nahezu unschlagbaren Gegner macht. Doch wer seine Schwächen erkennt und sorgfältig plant, hat eine Chance, diesen mächtigen Untoten zu besiegen – und sein Phylakterium zu zerstören, bevor er sich erneut erhebt."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Lich schützt häufig falsche Gefäße, um die Suche nach dem Phylakterium zu lenken.",
+            "Seine Pläne rechnen eher in Jahrzehnten als in Jahreszeiten.",
+            "Verbotene Bibliotheken können gefährlicher sein als der sichtbare Thronsaal.",
+            "Die Zerstörung des Körpers verschafft nur Zeit, solange die gebundene Seele fortbesteht."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

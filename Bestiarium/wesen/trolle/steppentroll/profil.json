@@ -1,0 +1,185 @@
+{
+  "id": "steppentroll",
+  "name": "Steppentroll",
+  "classification": "Trollunterart · Sonnenfester Ausdauerjäger",
+  "continent": "Tirnara und Sundara",
+  "region": "Heiße Steppen und Halbwüsten Tirnaras und Sundaras",
+  "folio": "III-T / 10",
+  "parentGroupId": "trolle",
+  "summary": "Steppentrolle sind seltene, sonnenfeste Einzeljäger der heißen Ebenen Tirnaras und Sundaras. Ihre löwenartige Mähne, scharfe Tagessicht und gewaltige Ausdauer erlauben ihnen, Reisende und Herden über lange Strecken zu verfolgen; Kälte und Nachtfrost schwächen sie dagegen rasch.",
+  "quote": "Wenn der Sonnenlöwe am Horizont klein bleibt, läuft er nur schneller als du.",
+  "quoteAttribution": "Warnung tirnarischer Karawanenführer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-steppentroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Steppentroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/steppentroll.webp",
+    "width": 805,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Steppentroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Steppentroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Steppentroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Verfluchter Humanoider; hitzeangepasster Ausdauerjäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "An offene heiße Ebenen angepasste Trolllinie"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Tirnara und Sundara"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Heiße Steppen, Halbwüsten, trockene Ebenen und Felsruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Einzelgängerisch, territorial und kalkuliert aggressiv"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Tag und warme Dämmerung"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Tagessicht, Hitzeresistenz, Fährtenjagd und lange Verfolgung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Ausdauer, Körperkraft, offene Sicht und geringe Lichtscheu"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, Nachtfrost, Engstellen und schwächere Regeneration"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Mähnenhaar, Trollblut und Trophäen aus Karawanen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Hitzeresistenz",
+      "Ausdauerjagd",
+      "Tageslichtverträglichkeit",
+      "Revierweite",
+      "Regeneration",
+      "Kälteanfälligkeit"
+    ],
+    "values": [
+      10,
+      10,
+      9,
+      9,
+      5,
+      10
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Steppentrolls abgeleitet",
+    "intro": "Die Wertung beschreibt einen Jäger der offenen Hitze. Seine hohe Kälteanfälligkeit macht Nachtangriffe und künstliche Kälte zu den verlässlichsten Gegenmitteln."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit breitem Schädel, löwenartiger Mähne und aufrechter Haltung wirkt der Steppentroll wie ein urtümliches Raubtier. Anders als fast alle Trolle erträgt er grelles Sonnenlicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sein Körper ist auf Ausdauer statt schnelle Regeneration ausgelegt. Trockene Haut und ein zäher Kreislauf widerstehen Hitze, während die Mähne Nacken und Schultern schützt."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Linie stammt aus den südlichen Kontinenten Tirnara und Sundara. Sie versteht die dortigen Menschensprachen, nutzt Worte aber eher zur Einschüchterung als zum Handel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Steppenvölker behandeln diese Trolle als gefährliche Raubtiere: Man meidet ihre Reviere, vertreibt sie oder organisiert eine Jagd."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Einzelne Reisende, Viehherden und kleine Karawanen werden offen verfolgt. Der Troll prüft Schwäche, droht und setzt dann auf einen direkten Angriff oder tagelange Ermüdung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kühle Nächte, Hochgebirge und feuchte Regionen werden gemieden. Sinkt die Temperatur, bricht er eine Jagd eher ab."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Offene Landschaften mit weiter Sicht, spärlicher Vegetation und einzelnen Felsen oder Ruinen bieten ideale Lager. Große Reviere werden allein beansprucht."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Offenes Gelände begünstigt seine Ausdauer. Engstellen, Hinterhalte, Fernkampf und eine Verlagerung in die kalte Nacht nehmen ihm diesen Vorteil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Feuer schreckt ihn, verletzt ihn jedoch weniger als andere Trollarten. Erzwungene Erschöpfung und Kälte sind zuverlässiger."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Sonnenlöwe ist in Wüstenlegenden eine verbreitete Bezeichnung für diese Trollart.",
+            "Schmuck, Stoffe und Waffenreste werden als Trophäen getragen.",
+            "Karawanen berichten von Verfolgungen, die erst nach mehreren Tagen endeten.",
+            "Die Mähne schützt vor Hieben und Bissen, speichert jedoch in kalten Nächten kaum Wärme."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

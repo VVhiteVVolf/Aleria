@@ -45,29 +45,6 @@
       margin-top: 1rem;
     }
 
-    .gallery-tabs {
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      overflow-y: hidden;
-      gap: 0.25rem;
-      margin-bottom: 1.1rem;
-      padding: 0 0.65rem;
-      scrollbar-width: thin;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .gallery-tab-btn {
-      flex: 0 0 auto;
-      padding: 0.72rem 0.82rem;
-      font-size: 0.55rem;
-      letter-spacing: 0.13em;
-    }
-
-    .gallery-tab-btn.gallery-tab-add {
-      margin-left: 0;
-    }
-
     #main-content {
       padding: 1.1rem 0.75rem 1rem;
       width: 100%;
@@ -106,17 +83,6 @@
       font-size: 0.8rem;
     }
 
-    .archive-toolbar {
-      flex-direction: column;
-      gap: 0.65rem;
-      align-items: stretch;
-      margin-bottom: 1rem;
-      padding: 0.85rem;
-      width: 100%;
-      max-width: calc(100vw - 1.5rem);
-    }
-
-    .archive-search-wrap,
     .comment-form-row,
     .cp-portrait-upload-area,
     .module-editor-inline {
@@ -124,11 +90,6 @@
       align-items: stretch;
     }
 
-    .archive-search-clear {
-      width: 100%;
-    }
-
-    .archive-search-meta,
     .archive-empty-text {
       width: 100%;
       max-width: min(100%, 34ch);
@@ -136,39 +97,23 @@
       white-space: normal;
     }
 
-    .card-grid,
     .char-grid {
       grid-template-columns: repeat(2, minmax(0, calc((100vw - 3.75rem) / 2)));
       gap: 0.75rem;
       justify-content: start;
     }
 
-    .card-label,
     .char-card-label {
       padding: 0.75rem 0.65rem 0.6rem;
     }
 
-    .entry-card-title,
     .char-card-name {
       font-size: 0.78rem;
       line-height: 1.32;
     }
 
-    .card-type-tag,
     .char-card-title {
       font-size: 0.7rem;
-    }
-
-    .entry-card-meta {
-      grid-template-columns: 1fr;
-    }
-
-    .entry-card-meta-chip,
-    .entry-card-meta-chip.wide {
-      grid-template-columns: minmax(3.5rem, auto) minmax(0, 1fr);
-      gap: 0.35rem;
-      font-size: 0.68rem;
-      text-align: left;
     }
 
     #sidebar {
@@ -608,12 +553,7 @@
       height: 132px;
     }
 
-    .card-grid,
     .char-grid {
       grid-template-columns: 1fr;
-    }
-
-    .gallery-tab-btn {
-      padding-inline: 0.7rem;
     }
   }

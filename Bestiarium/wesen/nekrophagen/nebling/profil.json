@@ -1,0 +1,239 @@
+{
+  "id": "nebling",
+  "name": "Nebling",
+  "classification": "Nekrophag · Ätherisch entstellter Magier",
+  "continent": "Aleria",
+  "region": "Magisch belastete Sümpfe, Wälder und Berge",
+  "folio": "III-N / 09",
+  "parentGroupId": "nekrophagen",
+  "summary": "Der Nebling ist eine schaurige und mysteriöse Kreatur, die die Grenzen zwischen Lebewesen und magischem Wesen verwischt. Diese unheimlichen Gestalten entstehen aus wahnsinnigen Magiern oder verdorbenen Seelen, die durch exzessive Nutzung dunkler Magie ihre menschliche Form verloren haben. Neblinge sind ätherische, halb-verblichene Wesen, die sich in Sümpfen, tiefen Wäldern oder nebligen Bergen aufhalten und ihre Umgebung in eine unheimliche Stille tauchen.",
+  "quote": "Ein Nebling ist weniger ein physisches Wesen als vielmehr eine Manifestation magischen Exzesses, geboren aus der Arroganz jener, die die Arkane Kunst missbrauchen. Sein Ätherleib macht ihn immun gegen gewöhnliche Waffen, doch Licht und heilige Magie entziehen ihm die Energie, die ihn zusammenhält, und führen letztlich zu seiner Auflösung.",
+  "quoteAttribution": "Meister Arvan Trellius · Monsterjäger-Handbuch, Kapitel XII: Ätherische Bedrohungen",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/nekrophagen-nebling.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Nebling als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/necrophage-profiles/nebling.webp",
+    "width": 1696,
+    "height": 2528,
+    "alt": "Vollständig dargestellte Szene mit Nebling",
+    "caption": "Überlieferte Bildtafel · Begegnung mit Nebling"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nebling"
+    },
+    {
+      "label": "Typ",
+      "value": "Ätherischer Untoter aus magischem Verfall"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Durch das Arkanistenfieber: Verfall eines Magiers durch Überbelastung mit magischen Energien"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Magisch kontaminierte Gebiete, Orte mit starker magischer Aktivität"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Sümpfe, neblige Wälder, verlassene magische Ruinen, Bergketten"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Lauernd, hinterhältig, von einem unstillbaren Hunger nach Magie getrieben"
+    },
+    {
+      "label": "Tag-Nacht-Zyklus",
+      "value": "Aktiver bei Nacht oder in Dunkelheit, vermeidet helle Orte"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Magische Illusionen, Manipulation von Nebel, Lebensentzug durch Berührung, lautlose Bewegung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Immunität gegen herkömmliche Waffen, kann sich in Nebel auflösen, meisterhafte Nutzung von Illusionen"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Verletzlich durch heilige Magie, anfällig für Anti-Magie-Bereiche, körperlich schwach"
+    },
+    {
+      "label": "Beute",
+      "value": "Magische Essenzen, zerfallene Überreste von Artefakten oder Zauberbüchern, Fragmente von Seelenenergie"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Ätherkörper",
+      "Magieentzug",
+      "Wahnsinnsaura",
+      "Nebeltarnung",
+      "Lebensraub",
+      "Lichtanfälligkeit"
+    ],
+    "values": [
+      10,
+      9,
+      8,
+      9,
+      8,
+      9
+    ],
+    "source": "Aus Entstehung, Verhalten, Fähigkeiten, Stärken und Schwächen der Überlieferungen über Nebling abgeleitet",
+    "intro": "Das Nebling-Diagramm bewertet eine ätherische Jagdform, die sich durch Nebel schützt und Magie wie Lebenskraft entzieht. Lichtanfälligkeit bezeichnet ihre wichtigste Gegenkraft."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebling ist eine schaurige und mysteriöse Kreatur, die die Grenzen zwischen Lebewesen und magischem Wesen verwischt. Diese unheimlichen Gestalten entstehen aus wahnsinnigen Magiern oder verdorbenen Seelen, die durch exzessive Nutzung dunkler Magie ihre menschliche Form verloren haben. Neblinge sind ätherische, halb-verblichene Wesen, die sich in Sümpfen, tiefen Wäldern oder nebligen Bergen aufhalten und ihre Umgebung in eine unheimliche Stille tauchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Erscheinungsbild ist so seltsam wie verstörend: humanoid, aber durchscheinend, mit glühenden Augen und langen, feingliedrigen Fingern, die sie nutzen, um ihre Opfer zu manipulieren oder tödliche Magie zu wirken. Trotz ihrer zerbrechlich wirkenden Erscheinung sind Neblinge tödliche Jäger, die sich von der Lebenskraft ihrer Beute nähren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Nebling ist nicht nur eine physische Bedrohung, sondern auch eine psychologische. Seine Anwesenheit ruft Angst, Orientierungslosigkeit und Wahnsinn hervor, was ihn zu einem gefährlichen Gegner macht. Begegnungen mit diesen Wesen sind selten, aber diejenigen, die überleben, berichten von einer düsteren Präsenz, die die Grenze zwischen Realität und Illusion verschwimmen lässt."
+        }
+      ]
+    },
+    {
+      "id": "hintergruende",
+      "title": "Hintergründe",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neblinge sind die tragischen Überreste von Magiern, die dem sogenannten Arkanistenfieber oder dem Wahnsinn der Magie verfallen sind. Diese Krankheit, die als eine der gefährlichsten Folgen exzessiver Magienutzung gilt, entsteht durch die ständige und unkontrollierte Aussetzung gegenüber magischen Energien. Je tiefer sich ein Magier in die Geheimnisse der arkanen Künste vertieft, desto größer wird die Gefahr, dass sein Körper und Geist die Belastung nicht mehr ertragen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Arkanistenfieber beginnt oft schleichend. Zu den ersten Symptomen zählen eine Überempfindlichkeit gegenüber magischen Strömen, Halluzinationen und eine zunehmende Abhängigkeit von Magie. Mit der Zeit nimmt die Krankheit jedoch immer grausamere Formen an: Die Haut beginnt sich zu verfärben, das Gewebe stirbt langsam ab, und die betroffene Person verfällt immer tiefer in einen Zustand des Wahnsinns, da ihr Geist von der intensiven magischen Energie förmlich überflutet wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im letzten Stadium des Fiebers führt die Krankheit zu einer völligen Auflösung des Körpers und der Seele. Die sterblichen Überreste beginnen zu verfaulen, während die magische Energie, die den Magier einst stärkte, nun zu einer zerstörerischen Kraft wird. Diese Energie verbindet sich mit den sterbenden Fragmenten des Geistes und formt den Magier zu einem Nebling – einer ätherischen Kreatur, die halb aus Magie und halb aus den Überresten ihrer früheren Gestalt besteht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neblinge sind daher nicht nur ein Produkt des körperlichen Verfalls, sondern auch des geistigen Wahnsinns. Ihr Verstand ist von ihrer einstigen Besessenheit nach Macht geprägt, und sie streifen durch die Welt, getrieben von einem instinktiven Hunger nach weiterer magischer Energie. Dieser Hunger zwingt sie dazu, die Lebenskraft und Magie ihrer Opfer zu verschlingen, wodurch sie ihre Existenz verlängern können."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten und Eigenschaften",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neblinge sind scheue, aber äußerst gefährliche Kreaturen, deren Verhalten von ihrem unstillbaren Hunger nach Magie geprägt ist. Sie sind hinterhältig und agieren bevorzugt aus dem Schatten, wo sie ihre Opfer durch Täuschung, Illusionen und gezielte Angriffe schwächen, bevor sie zuschlagen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neblinge meiden direkte Konfrontationen und nutzen ihre intelligenten, taktischen Fähigkeiten, um Gegner in die Irre zu führen. Sie manipulieren die Umgebung, indem sie dichten Nebel oder magische Dunkelheit herbeirufen, was ihre Anwesenheit zusätzlich erschreckend und überwältigend wirken lässt. Ihre Opfer fühlen sich oft isoliert und verwirrt, was den Neblingen einen entscheidenden Vorteil verschafft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Erscheinung ist ätherisch und verstörend: schattenhafte, halb durchscheinende Körper mit glühenden Augen, die die Dunkelheit durchdringen. Sie bewegen sich lautlos und hinterlassen keine Spuren, was sie schwer fassbar und noch beängstigender macht. Obwohl sie in ihrer Erscheinung zerbrechlich wirken, können sie durch die nekrotische Magie, die sie antreibt, verheerende Schäden verursachen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neblinge bevorzugen es, in Sümpfen, nebligen Wäldern oder verfallenen magischen Ruinen zu lauern – Orte, an denen die Grenze zwischen Magie und Realität verschwimmt. Sie sind besonders aktiv bei Nacht oder in dichtem Nebel, wo sie sich nahezu unsichtbar bewegen können."
+        }
+      ]
+    },
+    {
+      "id": "auftreten",
+      "title": "Auftreten und Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neblinge sind seltene, aber gefürchtete Kreaturen, die sich an Orten ansiedeln, die von magischer Energie oder Verfall durchdrungen sind. Ihre bevorzugten Lebensräume sind neblige Sümpfe, dichte Wälder, abgelegene Gebirge oder verfallene magische Ruinen. Diese Orte bieten ihnen nicht nur Schutz vor der Außenwelt, sondern sind auch reich an der magischen Energie, die sie benötigen, um zu existieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Nebling tritt meist in Gebieten auf, die mit magischen Katastrophen oder der Übernutzung von Magie in Verbindung stehen. Besonders Orte, an denen mächtige Zauber gewirkt oder magische Kämpfe ausgetragen wurden, werden oft von diesen Kreaturen heimgesucht. Ihre Anwesenheit ist ein Zeichen dafür, dass die Balance der magischen Energie gestört ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Sümpfen und Wäldern nutzen Neblinge die natürliche Dunkelheit und den Nebel, um sich zu verbergen. Dort lauern sie auf unachtsame Reisende, die sich in ihre Domäne wagen. Verlassene Ruinen und alte magische Türme ziehen sie ebenfalls an, da diese oft mit Resten magischer Energien durchzogen sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihr Auftreten wird oft von unheimlichen Wetterphänomenen begleitet, wie plötzlich aufziehendem Nebel, fallender Temperatur oder einer seltsamen Stille, die jede natürliche Geräuschkulisse verstummen lässt. Diese Phänomene sind meist die ersten Anzeichen dafür, dass ein Nebling in der Nähe ist."
+        }
+      ]
+    },
+    {
+      "id": "staerken-schwaechen",
+      "title": "Stärken und Schwächen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Nebling ist eine tödliche und schwer greifbare Kreatur, deren Stärken ihn zu einem gefährlichen Gegner machen. Dennoch besitzen sie klare Schwächen, die gut vorbereiteten Abenteurern eine Chance geben, ihn zu besiegen."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Magische Präsenz: Neblinge können Illusionen und magischen Nebel erzeugen, um ihre Umgebung zu manipulieren und ihre Opfer zu verwirren.",
+            "Lautlosigkeit: Sie bewegen sich ohne jegliches Geräusch, was sie zu nahezu unsichtbaren Jägern macht, besonders in dunklen oder nebligen Gebieten.",
+            "Lebensentzug: Sie können die Lebensenergie ihrer Opfer durch Berührung oder magische Angriffe entziehen und diese Energie nutzen, um ihre Existenz zu verlängern.",
+            "Immunität gegen herkömmliche Waffen: Aufgrund ihrer ätherischen Natur können sie nur durch magische Waffen oder spezifische Zauber verletzt werden.",
+            "Meister der Tarnung: Sie verschmelzen mit Nebel oder Dunkelheit und können sich nahezu unsichtbar machen.",
+            "Psychologische Manipulation: Ihre Anwesenheit verursacht Angst, Halluzinationen und Orientierungslosigkeit, was ihre Gegner schwächt, bevor der Kampf beginnt."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Heilige Magie: Göttliche oder geweihte Kräfte sind extrem effektiv gegen Neblinge und können ihre ätherische Form zerstören.",
+            "Anti-Magie-Bereiche: In Zonen, die Magie unterdrücken, verlieren sie ihre Fähigkeiten und werden stark geschwächt.",
+            "Licht: Helles Licht oder Lichtzauber machen sie sichtbar und nehmen ihnen ihre Tarnfähigkeit.",
+            "Körperliche Schwäche: Obwohl sie magisch stark sind, sind sie physisch zerbrechlich und können durch gezielte Angriffe, besonders mit magischen Waffen, leicht verletzt werden.",
+            "Anfälligkeit für Feuer: Magisches Feuer zerstört ihre ätherische Gestalt und kann sie effektiv bekämpfen.",
+            "Abhängigkeit von Magie: Ohne eine magisch aufgeladene Umgebung verlieren sie schnell ihre Stärke und können nicht lange überleben."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Nebling kombiniert magische Fähigkeiten und psychologischen Schrecken, doch gezielte Vorbereitung – insbesondere der Einsatz von Licht, Feuer und göttlicher Magie – kann ihn effektiv bekämpfen. Seine Schwäche gegenüber Anti-Magie und seine Abhängigkeit von dunklen, nebligen Umgebungen geben erfahrenen Abenteurern die Möglichkeit, seine Bedrohung zu neutralisieren."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ein Nebling dämpft Umgebungsgeräusche, noch bevor seine Gestalt im Dunst erkennbar wird.",
+            "Magische Gegenstände können in seiner Nähe vorübergehend glanzlos wirken.",
+            "Seine Finger hinterlassen keine Abdrücke, wohl aber kalte, feuchte Stellen.",
+            "Mehrere Sichtungen an demselben Ort deuten häufig auf fortwirkende magische Belastung hin."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

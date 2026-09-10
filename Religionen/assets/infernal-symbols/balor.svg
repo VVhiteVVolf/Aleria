@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+<title id="title">Balor</title><desc id="desc">Einäugiges Flammenzeichen des Auslöschers</desc>
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eed09a"/><stop offset=".48" stop-color="#b88a49"/><stop offset="1" stop-color="#8d6033"/></linearGradient><linearGradient id="ember" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#d78044"/><stop offset="1" stop-color="#743930"/></linearGradient></defs>
+<g fill="url(#gold)" stroke="#654731" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M100 17c9 28 38 29 44 57 15-3 19-14 17-25 31 38 29 103-19 123H58C10 152 8 87 39 49c-2 11 2 22 17 25 6-28 35-29 44-57Z" fill="url(#ember)"/><path d="M43 113q57-57 114 0-57 58-114 0Z"/><ellipse cx="100" cy="113" rx="18" ry="25" fill="url(#ember)"/><path d="M100 95v37" fill="none" stroke="#efcf83" stroke-width="6"/><path d="m59 167-14 14m96-14 14 14" fill="none" stroke-width="8"/></g>
+</svg>

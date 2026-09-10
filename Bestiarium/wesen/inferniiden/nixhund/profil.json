@@ -1,0 +1,178 @@
+{
+  "id": "nixhund",
+  "name": "Nixhund",
+  "classification": "Infernales Jagd- und Kriegstier aus Feuer und Stein",
+  "continent": "Infernale Sphären",
+  "region": "Magmafelder und Feuerhöhlen Dagons",
+  "folio": "IV / 04-E",
+  "parentGroupId": "inferniiden",
+  "summary": "Nixhunde sind vierbeinige infernale Bestien aus dunklem Gestein, Panzerplatten und glühender Magma. Sie jagen im Rudel, schwimmen durch Lava und gehorchen ihren Führern mit beinahe mechanischer Härte. Ignite und höhere Diener Dagons setzen sie als Spürtiere, Wachen und Sturmtiere ein.",
+  "quote": "Wenn die Spur im erkalteten Stein weiterglüht, ist der Nixhund längst näher, als sein Bellen vermuten lässt.",
+  "quoteAttribution": "Jagdregel der Vulkanwacht",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Nixhund"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernales Jagd- und Kriegstier"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Dagon"
+    },
+    {
+      "label": "Körper",
+      "value": "Vierbeinig, gepanzert und von glühenden Rissen durchzogen"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Dagons Magmafelder"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Feuerhöhlen, Lavaströme und vulkanische Schlachtfelder"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Rudelgebunden, jagdgetrieben und seinem Führer absolut gehorsam"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Unabhängig von Tageslicht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Lavabewegung, Feueratem, Hitzespur und Magmaentladung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Panzerkörper, Feuerimmunität und ausdauernde Verfolgung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, Wasser und der Verlust des Rudelführers"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Jagdtrieb",
+      "Rudelkoordination",
+      "Magmaentladung",
+      "Panzerkörper",
+      "Führungsbindung",
+      "Kälteanfälligkeit"
+    ],
+    "values": [
+      10,
+      8,
+      8,
+      9,
+      10,
+      9
+    ],
+    "intro": "Die Nixhund-Tafel bewertet Jagd, Rudel und Elementarkörper statt menschlicher Intelligenz oder Sozialformen.",
+    "source": "Aus Verfolgungstrieb, Packverhalten, steinernem Körper, Führergehorsam und den Kälte- und Wassergegenmitteln abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nixhunde dienen den Feuerheeren als Spürtiere, Wachen und lebende Sturmkeile. Ihre elementare Gestalt macht sie dort besonders gefährlich, wo natürliche Tiere weder atmen noch laufen könnten."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Körper erinnert an einen schwer gepanzerten Hund oder eine Echse. Schwarze Platten überdecken glühende Risse; aus Maul und Rücken schlagen Flammen, während die Augen wie Kohlen brennen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Jagdtrieb ist stark, doch der Gehorsam gegenüber einem anerkannten Führer bleibt stärker. Im Rudel wechseln Nixhunde zwischen Hetzen, Umstellen und dem gemeinsamen Sprung auf ein Ziel."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Magmafelder, Feuerhöhlen und vulkanische Festungen bieten Nahrung und Deckung. Nixhunde können sich durch Lava bewegen und nutzen heiße Ströme als für andere Wesen unpassierbare Wege."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie widerstehen Feuer, speien glühende Masse und entladen Hitze aus den Spalten ihres Körpers. Ihre Fährte bleibt auf warmem Stein lange lesbar, wodurch Verfolgungen kaum abreißen."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kälte und große Wassermengen lassen Platten reißen und Magma erstarren. Wird der führende Inferniide ausgeschaltet, verliert das Rudel häufig seine geschlossene Taktik."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Nixhunde werden oft von Igniten versorgt und von höheren Inferniiden geführt.",
+            "Ihre Bewegung durch Lava lässt sie an unerwarteten Stellen auftauchen.",
+            "Erkaltete Panzerstücke zerfallen meist, sobald die gebundene Essenz entweicht."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-nixhund.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Nixhund vollständig sichtbar als freigestellte Bestiariumsfigur"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/nixhund-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Nixhund",
+    "caption": "Überlieferte Bildtafel · Ein Nixhund auf glühendem Vulkangestein"
+  },
+  "plates": []
+}

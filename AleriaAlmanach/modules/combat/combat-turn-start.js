@@ -1,4 +1,4 @@
-import { getAttributeModifier, getEffectiveCombatAttribute } from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+import { getAttributeModifier, getEffectiveCombatAttribute } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { getRegenerationTrait, isBurning } from './combat-creature-traits.js';
 
 // A comment-scoped charge provides the existing replay/undo machinery with an

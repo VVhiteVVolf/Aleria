@@ -1,5 +1,5 @@
-import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260905-cenyr-character-training-v1';
-import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260905-damage-balance-v1';
+import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
 const RAPIER = { barddwyr: ['rapier'] };
 const SWORD = { barddwyr: ['sword'] };
@@ -82,7 +82,7 @@ const STANDARD_PATH_SERIES = Object.freeze([
   }
 ]);
 
-export const BARDDWYR_STANDARD_PATH_TECHNIQUES = Object.freeze(STANDARD_PATH_SERIES.flatMap(series => series.entries.map(([level, slug, name, description, effect]) => bard(series.formId, 'barddwyr-sword', SWORD, {
+export const BARDDWYR_STANDARD_PATH_TECHNIQUES = Object.freeze(STANDARD_PATH_SERIES.flatMap(series => series.entries.map(([level, slug, name, description, effect]) => bard(F.schwertdrache, 'barddwyr-sword', SWORD, {
   slug: `${series.path}-${slug}`, name, minimumLevel: level, slotBands: ['expert'], tier: 'Barddwyr-Schwertpfad',
   activationType: series.path === 'abwartender' ? 'reaction' : 'action',
   costs: level === 9 ? ['action', 'reaction'] : (level === 13 ? ['action', 'bonus-action', 'reaction'] : (level === 17 ? ['action', 'reaction', 'special-action', 'aura-focus'] : ['action', 'bonus-action', 'reaction', { resourceId: 'special-action', amount: 2 }, { resourceId: 'aura-focus', amount: 2 }])),

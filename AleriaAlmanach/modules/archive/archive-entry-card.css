@@ -1,0 +1,54 @@
+/* Shared module previews in categories, nested areas and search results. */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 1.1rem; }
+.entry-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--almanach-line);
+  border-radius: 3px;
+  background: #fbf8ef;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(52,43,34,0.045);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.entry-card:hover { border-color: var(--almanach-brass); box-shadow: 0 5px 18px rgba(52,43,34,0.09); }
+.entry-card-open {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--almanach-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.entry-card-open:focus-visible { outline: 3px solid var(--almanach-green); outline-offset: -3px; }
+.card-image-wrap { position: relative; display: block; flex-shrink: 0; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; background: var(--almanach-background); }
+.card-image-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.card-placeholder-inner { display: grid; width: 100%; height: 100%; place-items: center; color: var(--almanach-brass); font-size: 3rem; background: radial-gradient(ellipse, #f5f0e2, #e6d8ba); }
+.entry-card-emblem .card-image-wrap { background: radial-gradient(ellipse, #fbf8ef, #ede3ce); }
+.entry-card-emblem .card-image-wrap img { object-fit: contain; padding: 1rem; }
+.entry-card-lock { position: absolute; top: 0.65rem; right: 0.65rem; padding: 0.35rem 0.5rem; background: #f5f0e2; color: var(--almanach-ink); border: 1px solid var(--almanach-line); font: 600 0.64rem/1.3 'Cinzel', serif; }
+.entry-card-copy { display: grid; align-content: start; gap: 0.5rem; flex: 1; width: 100%; padding: 1rem 1rem 0.9rem; }
+.entry-card-category { color: var(--almanach-muted); font: 600 0.62rem/1.5 'Cinzel', serif; letter-spacing: 0.055em; overflow-wrap: break-word; }
+.entry-card-title { display: block; color: var(--almanach-ink); font: 600 1rem/1.4 'Cinzel', serif; overflow-wrap: break-word; }
+.entry-card-subtitle { display: block; color: var(--almanach-muted); font: italic 1rem/1.45 'EB Garamond', serif; overflow-wrap: break-word; }
+.entry-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.9rem; width: calc(100% - 2rem); min-height: 2.8rem; margin: auto 1rem 0; padding: 0.65rem 0; border-top: 1px solid var(--almanach-line); color: var(--almanach-muted); font: 0.83rem/1.4 'EB Garamond', serif; }
+.entry-card-meta-item { white-space: nowrap; }
+.entry-card-meta-item[data-card-meta="pages"] { color: var(--almanach-green); font-weight: 600; }
+.entry-card-open-mark { margin-left: auto; color: var(--almanach-green); font-size: 1rem; }
+.entry-card-admin { display: grid; gap: 0.5rem; padding: 0.75rem 1rem; border-top: 1px solid var(--almanach-line); background: var(--almanach-paper); }
+.entry-card-admin label { display: grid; gap: 0.35rem; font: 600 0.67rem/1.4 'Cinzel', serif; color: var(--almanach-muted); }
+.entry-card-admin select, .entry-card-admin button { width: 100%; min-width: 0; min-height: 2.75rem; padding: 0.5rem; border: 1px solid var(--almanach-line); background: #fbf8ef; color: var(--almanach-ink); font: 0.9rem 'EB Garamond', serif; }
+.entry-card-admin button { cursor: pointer; }
+.entry-card-admin :is(select, button):focus-visible { outline: 2px solid var(--almanach-green); outline-offset: 2px; }
+.archive-section-more, .archive-section-empty-hint { grid-column: 1 / -1; padding: 1rem; text-align: center; }
+.archive-section-empty-hint { color: var(--almanach-muted); background: #fbf8ef; border: 1px dashed var(--almanach-line); font-style: italic; }
+.archive-section-more button { min-height: 2.75rem; padding: 0.6rem 1rem; border: 1px solid var(--almanach-line); background: #fbf8ef; color: var(--almanach-green); font: 600 0.75rem/1.4 'Cinzel', serif; cursor: pointer; }
+.archive-section-more button:hover { border-color: var(--almanach-green); background: var(--almanach-green-soft); }
+.archive-section-more button:focus-visible { outline: 2px solid var(--almanach-green); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .entry-card { transition: none; } }

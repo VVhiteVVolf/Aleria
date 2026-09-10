@@ -1,0 +1,102 @@
+{
+  "godId": "jovena",
+  "intro": "Jovenas Klerus verbindet Wohlwollen, Fröhlichkeit und Mitgefühl. Er sucht die kleine Freude, die Menschen auch in Not miteinander teilen können. Besonders der Orden des lachenden Kleeblatts steht dieser karitativen Berufung nahe.",
+  "community": "Eine Gemeinschaft der Glücksbringerin kann Armenküche, Kinderhaus und Herberge vereinen. Priester, Mönche, Nonnen und Bußgänger tragen die tägliche Hilfe; wenige Paladine bewahren den Schutzraum. Unterricht wird bei Bedarf aus geeigneten Lehrhäusern hinzugezogen.",
+  "castes": {
+    "priester": {
+      "presence": "fest",
+      "title": "Priester der geteilten Zuversicht",
+      "paragraphs": [
+        "Jovenas Priester begleiten Menschen, die Trost, Freude oder einen neuen Zugang zur Gemeinschaft suchen. Sie gestalten Feste und einfache Begegnungen, ohne Trauer zu verbieten. Fröhlichkeit wird zur Gabe, wenn sie andere mitnimmt; erzwungenes Lachen über fremdes Leid widerspricht ihrem Auftrag."
+      ],
+      "tasks": [
+        "Bedrückte und ausgegrenzte Menschen begleiten",
+        "Gemeinsame Feste und Wohltaten betreuen",
+        "Freude ohne Demütigung vermitteln"
+      ]
+    },
+    "moenche": {
+      "presence": "fest",
+      "title": "Konvente des lachenden Kleeblatts",
+      "paragraphs": [
+        "Mönche und Nonnen führen die alltäglichen Hilfswerke der Glücksbringerin. Ihre Zünfte backen, nähen, pflegen und bewahren Lieder und Spiele. Die Arbeit gibt Kindern, Kranken und armen Gästen einen verlässlichen Ort; Freude wächst hier aus Fürsorge und geteilter Zeit."
+      ],
+      "tasks": [
+        "Armenküchen und Kinderhäuser versorgen",
+        "Lieder und gemeinschaftliche Spiele bewahren",
+        "Gästen verlässliche Fürsorge bieten"
+      ],
+      "guilds": [
+        {
+          "name": "Zunft der Kleeblattbäcker",
+          "work": "Trägt Backstuben, Armenküchen und gemeinsame Festtafeln des Konvents."
+        },
+        {
+          "name": "Zunft der Trostlieder",
+          "work": "Bewahrt Lieder, Geschichten und Spiele für Kinder, Kranke und Gäste."
+        },
+        {
+          "name": "Zunft der Flick- und Puppenwerker",
+          "work": "Pflegt Kleidung und fertigt einfache Spielsachen für die Hilfshäuser."
+        }
+      ]
+    },
+    "paladine": {
+      "presence": "klein",
+      "title": "Ritter der unversehrten Freude",
+      "paragraphs": [
+        "Jovenas wenige Paladine schützen Hilfshäuser, Kinder und gefährdete karitative Gemeinschaften. Sie sichern Feste und begleiten Transporte der Wohltätigkeit. Ihr ritterlicher Dienst soll die Möglichkeit eines friedlichen Zusammenseins erhalten und verlangt besonders viel Geduld gegenüber Menschen in Angst oder Not."
+      ],
+      "tasks": [
+        "Kinder- und Hilfshäuser schützen",
+        "Karitative Transporte begleiten",
+        "Friedliche Versammlungen sichern"
+      ]
+    },
+    "asketen": {
+      "presence": "eingebunden",
+      "title": "Selbstbeherrschung im offenen Haus",
+      "paragraphs": [
+        "Jovenas Häuser bilden keinen eigenen zurückgezogenen Asketenstand. Maß, Geduld und die Zurücknahme eigener Eitelkeit werden im gemeinsamen Alltag geübt. Wer einen besonderen asketischen Weg verfolgt, erhält dafür Anleitung in einer verbundenen Schule; der Dienst der Glücksbringerin führt ihn immer wieder zu den Menschen."
+      ],
+      "tasks": [
+        "Geduld im alltäglichen Helfen üben",
+        "Eitelkeit und verletzenden Spott zurücknehmen",
+        "Bei Bedarf eine verbundene Schule aufsuchen"
+      ]
+    },
+    "magister": {
+      "presence": "angebunden",
+      "title": "Persönlicher Glaube, gemeinsame Wissenschaft",
+      "paragraphs": [
+        "Magister können Jovena verehren und dessen Tugenden in ihrem Leben folgen. Diesem Gott ist jedoch kein eigener Wissenschaftsbereich gewidmet. Ausbildung, Forschung und akademische Ämter gehören zu den drei Bereichen Orins, Aurons und Oriths.",
+        "Ein kirchliches Haus kann solche Lehrenden aufnehmen, mit ihnen zusammenarbeiten oder Unterricht anbieten. Daraus entsteht kein zusätzlicher Fachbereich. Wissenschaftliche Zuordnung und persönliche Glaubenszugehörigkeit bleiben voneinander unabhängig."
+      ],
+      "tasks": [
+        "Mit den drei Fachbereichen zusammenarbeiten",
+        "Gastunterricht im kirchlichen Haus ermöglichen",
+        "Persönliche Frömmigkeit und akademisches Amt unterscheiden"
+      ]
+    },
+    "gelaeuterte": {
+      "presence": "fest",
+      "title": "Wohlwollen als gelebte Umkehr",
+      "paragraphs": [
+        "Bußgänger Jovenas übernehmen stille Dienste in Küchen, Herbergen und gemeinschaftlichen Anlagen. Nach Spott oder rücksichtsloser Selbstbezogenheit kann der Eid die Aufmerksamkeit für andere betonen. Hilfe soll den Bedürftigen zugutekommen; die Anerkennung des Bußgangs hängt nicht von öffentlichem Beifall ab."
+      ],
+      "tasks": [
+        "Hilfswerke im Hintergrund unterstützen",
+        "Räume und Versorgung für Gäste pflegen",
+        "Aufmerksamkeit für die Bedürfnisse anderer entwickeln"
+      ]
+    }
+  },
+  "imageOverrides": {},
+  "source": {
+    "kind": "authored-continuation",
+    "basis": "Nutzervorgaben zur neuen Klerusordnung und aktuelles Götterprofil",
+    "guilds": "Ausschließlich monastische Arbeitsgemeinschaften",
+    "magisterium": "Drei Fachbereiche: Orin, Auron und Orith; persönliche Bindung an weitere Gottheiten möglich",
+    "asceticClarification": "Nutzernachtrag vom 10.09.2026: Bildnisse für Ordan, Baldran, Maldras, Sylvana und Kharon; bei den übrigen Gottheiten kein oder kaum eigener asketischer Klerus, Ausnahmen möglich."
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "ignit",
+  "name": "Ignit",
+  "classification": "Niederer Feuerinferniide und Diener Dagons",
+  "continent": "Infernale Sphären",
+  "region": "Feuergruben, Schmieden und Ascheruinen",
+  "folio": "IV / 04-D",
+  "parentGroupId": "inferniiden",
+  "summary": "Igniten bilden die arbeitende und kämpfende Masse in Dagons niederen Reihen. Sie besitzen nur rudimentäre Eigenplanung, sind jedoch hitzefest, zäh und in großer Zahl gefährlich. Als Träger, Schmiedegehilfen, Brandstifter und Fußsoldaten folgen sie meist Dagonaren oder Ignarii.",
+  "quote": "Ein Ignit ist klein genug, um übersehen zu werden, und gehorsam genug, um genau dort Feuer zu legen.",
+  "quoteAttribution": "Merksatz eines reisenden Bannkundigen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Ignit"
+    },
+    {
+      "label": "Typ",
+      "value": "Niederer Inferniide"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Dagon"
+    },
+    {
+      "label": "Rang",
+      "value": "Arbeiter, Sklave und Fußsoldat"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Dagons Feuerreiche"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Vulkanhöhlen, Ascheruinen, Feuergruben und infernale Schmieden"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Unterwürfig, opportunistisch, streitsüchtig und befehlsgebunden"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Tag und Nacht"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Feuertragen, rudimentäre Brandmagie und Schwarmangriff"
+    },
+    {
+      "label": "Stärken",
+      "value": "Feuerimmunität, Ausdauer und große Zahl"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Kälte, geringe Eigenplanung und Abhängigkeit von Anführern"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Dienstgehorsam",
+      "Arbeitsausdauer",
+      "Schwarmdruck",
+      "Feuerfestigkeit",
+      "Eigenplanung",
+      "Kälteanfälligkeit"
+    ],
+    "values": [
+      9,
+      8,
+      8,
+      10,
+      3,
+      8
+    ],
+    "intro": "Die Ignit-Tafel zeigt, weshalb ein einzelner niederer Diener harmloser wirkt als seine geschlossene Schar.",
+    "source": "Aus Arbeitsrolle, Unterordnung, Feuerimmunität, Schwarmverhalten und geringer selbstständiger Planung abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Igniten stehen am unteren Ende von Dagons geordneter Dienerschaft. Sie erledigen gefährliche Arbeiten in Feuergruben und bilden zugleich eine leicht ersetzbare Masse für Überfälle und Feldzüge."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die kleinen, gekrümmten Gestalten besitzen rußrote Haut, glimmende Augen, Klauen, dünne Hörner und einen langen Schwanz. Narben und Asche überziehen viele Körper."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ohne Führung streiten Igniten um Nahrung, Beute und einen Platz nahe der Wärme. Unter Dagonaren oder Ignarii folgen sie einfachen Befehlen ausdauernd und nutzen jede sichtbare Schwäche."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie hausen in primitiven Höhlen, Werkstätten, Ruinen und den Randzonen großer infernaler Festungen. Hitze ist Schutz, Nahrung und Mittelpunkt ihres Tages zugleich."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Igniten widerstehen Feuer, tragen Glut über große Strecken und entfachen kleine Brände. In Scharen umringen sie Gegner, lenken ab und öffnen stärkeren Inferniiden den Weg."
+        }
+      ]
+    },
+    {
+      "id": "begegnung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kälte löst ihre Ordnung rasch auf. Wer den Anführer trennt und Feuerquellen nimmt, verhindert, dass viele kleine Angriffe zu einem gefährlichen Schwarmdruck anwachsen."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Igniten werden häufig mit Flickerlingen verwechselt.",
+            "Ihre beschädigten Hörner gelten meist als Folge harter Arbeit und innerer Rangkämpfe.",
+            "Einzelne Igniten tragen Glut in Tonschalen, wenn keine eigene Magie ausreicht."
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/inferniid-profiles/inferniiden-ignit.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Ignit vollständig sichtbar als freigestellte Bestiariumsfigur"
+  },
+  "hero": {
+    "src": "../../../assets/inferniid-profiles/ignit-hero.webp",
+    "width": 687,
+    "height": 1024,
+    "alt": "Szenentafel mit einem Ignit",
+    "caption": "Überlieferte Bildtafel · Ein Ignit ringt mit einem mittelalterlichen Ordenskrieger"
+  },
+  "plates": []
+}

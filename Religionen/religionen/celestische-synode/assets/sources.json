@@ -1,0 +1,176 @@
+{
+  "attachment": "d9871e04-d346-42d9-b90c-35f1de74385b",
+  "images": [
+    {
+      "id": "ordeus",
+      "src": "religionen/celestische-synode/assets/ordeus.png",
+      "url": "https://i.imgur.com/9DrV0f9.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "0825f141e7c0fe5a25a0fbb8d449d327d3a98d46fdab96e5ccfe668e726c645a",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "mariella",
+      "src": "religionen/celestische-synode/assets/mariella.png",
+      "url": "https://i.imgur.com/JdnH8RW.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "bb2ec8f7653f9902b81841ca45f3c100e4248c06c7b4b3f86b56c842e00b573c",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "mardran",
+      "src": "religionen/celestische-synode/assets/mardran.png",
+      "url": "https://i.imgur.com/SvMQEI4.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "7751bdaeb5f126c947bb62e2b9cbac5533a11ef14343ed553c205bd715091b2d",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "thedros",
+      "src": "religionen/celestische-synode/assets/thedros.png",
+      "url": "https://i.imgur.com/XR70RtS.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "8e48a2e18dd6db7835b17ce79bcbcb6b2550c413d22b37025d262cfb21f43d67",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "divana",
+      "src": "religionen/celestische-synode/assets/divana.png",
+      "url": "https://i.imgur.com/bJdRRvv.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "32b834b0ba2e54afdc667e6976ed27aeef3ce2820ea1569f7321e94edfe708b2",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "lytheris",
+      "src": "religionen/celestische-synode/assets/lytheris.png",
+      "url": "https://i.imgur.com/lU4oF8a.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "0d73fb06ffeecff085834c087a8e42220a452c2d168e829111caaef786cf41a6",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "tharistos",
+      "src": "religionen/celestische-synode/assets/tharistos.png",
+      "url": "https://i.imgur.com/52l6MES.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "9797691fb023b8128dcc7689ae6b07cd87eb1bdd5c8a46df3d784c7bd4e854b1",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "othorin",
+      "src": "religionen/celestische-synode/assets/othorin.png",
+      "url": "https://i.imgur.com/ja2ccch.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "f1544e1a15da38710065126f8112e5ec157239118945c8eda6c2c1b35664056a",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "kharos",
+      "src": "religionen/celestische-synode/assets/kharos.png",
+      "url": "https://i.imgur.com/ulanesO.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "9ec4216a7194a7b7178dc382fe4e91cfb5de0560f29060ab454993dbb8b4086a",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "zephyr",
+      "src": "religionen/celestische-synode/assets/zephyr.png",
+      "url": "https://i.imgur.com/hmWXSxb.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "b0049c8b89c52dcbc90c79c6ebf80d31eab3abea1fb7df2ed48b134629084d6d",
+      "authorship": "user-supplied"
+    },
+    {
+      "id": "pyrotes",
+      "src": "religionen/celestische-synode/assets/pyrotes.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c2f94b7b2c7036671219cf5cf8ed841e336d51481a1bae5ad1c1462458cd57aa",
+      "tool": "built-in image_gen",
+      "promptId": "celestische-synode/pyrotes",
+      "references": [
+        "religionen/celestische-synode/assets/ordeus.png",
+        "religionen/celestische-synode/assets/zephyr.png"
+      ]
+    },
+    {
+      "id": "nereidia",
+      "src": "religionen/celestische-synode/assets/nereidia.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1f8accbf9cb6ea9103fa0aa07df796696e39e2900785c0c0fb03b0cd782b6e9b",
+      "tool": "built-in image_gen",
+      "promptId": "celestische-synode/nereidia",
+      "references": [
+        "religionen/celestische-synode/assets/ordeus.png",
+        "religionen/celestische-synode/assets/mariella.png",
+        "religionen/celestische-synode/assets/zephyr.png"
+      ]
+    },
+    {
+      "id": "fortuna",
+      "src": "religionen/celestische-synode/assets/fortuna.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9de2260141783cde2da76a3b987e699f1699b7a447dd0e832cd6ebd41ff09816",
+      "tool": "built-in image_gen",
+      "promptId": "celestische-synode/fortuna",
+      "references": [
+        "religionen/celestische-synode/assets/ordeus.png",
+        "religionen/celestische-synode/assets/mariella.png",
+        "religionen/celestische-synode/assets/zephyr.png"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "src": "religionen/celestische-synode/assets/nemesis.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "aa17f8d0a952cc2c8dd9fe37c37c076243aab52cdd8b8eae1256ecec00b98a16",
+      "tool": "built-in image_gen",
+      "promptId": "celestische-synode/nemesis",
+      "references": [
+        "religionen/celestische-synode/assets/ordeus.png",
+        "religionen/celestische-synode/assets/mariella.png",
+        "religionen/celestische-synode/assets/zephyr.png"
+      ]
+    },
+    {
+      "id": "geminius",
+      "src": "religionen/celestische-synode/assets/geminius.png",
+      "authorship": "generated-from-sibling-references",
+      "status": "ready",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6718dc4c0a4f585e5edd54093597bc5756ba9835ba4cdb4f5fe79bd0a287d0bd",
+      "tool": "built-in image_gen",
+      "promptId": "celestische-synode/geminius",
+      "references": [
+        "religionen/celestische-synode/assets/ordeus.png",
+        "religionen/celestische-synode/assets/mariella.png",
+        "religionen/celestische-synode/assets/zephyr.png"
+      ]
+    }
+  ],
+  "unusedLegacyHeader": "https://i.imgur.com/ppacAdq.png",
+  "note": "Die vorhandenen farbigen Religionszeichen bleiben erhalten. Die sieben schwarzen Kopfzeichen aus den neuen Vorlagen ersetzen sie nicht."
+}

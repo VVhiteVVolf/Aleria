@@ -31,7 +31,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'orden', label: 'Orden', icon: 'Orden.png' },
   { key: 'organisationen', label: 'Organisationen', icon: 'Organisationen.png' },
   { key: 'charakterbogen-archiv', label: 'Charakterbogen Archiv', note: 'Traits, Zauber, Klassen & mehr', icon: 'Charakterbogen Archiv.png', action: 'open-character-archive' },
-  { key: 'religion', label: 'Religion', icon: 'Religion.png' },
+  { key: 'religion', label: 'Religion', note: 'Glaubenswelten, Gottheiten und Überlieferungen', icon: 'Religion.png', href: '../Religionen/index.html' },
   { key: 'stammbaeume', label: 'Stammbäume', note: 'Familienregister der Häuser', icon: 'Stammbäume.png', href: '../Stammbäume/register.html' },
   { key: 'sternzeichen', label: 'Sternzeichen', icon: 'Sternzeichen.png' },
   { key: 'zauber', label: 'Zauber', icon: 'Zauber.png' },

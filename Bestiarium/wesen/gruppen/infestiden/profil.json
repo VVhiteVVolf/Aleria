@@ -1,0 +1,311 @@
+{
+  "id": "infestiden",
+  "name": "Infestiiden",
+  "classification": "Infernale Ausbreitungswesen unter Nergaloths Einfluss",
+  "continent": "Aleria und infernale Sphären",
+  "region": "Nergaloths Einflussbereiche",
+  "folio": "IV / 09",
+  "parentGroupId": "infernale-linien",
+  "summary": "Infestiiden sind infernale Wesen unter Nergaloths Einfluss, deren Wirken auf Eindringen, Festsetzen und fortschreitende Ausbreitung gerichtet ist. Die Naga ist bislang die einzige benannte Gattung der Tafel; neun weitere Stellen bleiben offen, damit spätere Überlieferungen ohne erfundene Arten ergänzt werden können.",
+  "quote": "Eine Infestiide ist selten nur das Tier vor dir; prüfe immer den Weg, den sie nahm, und die Spuren, die hinter ihr zurückblieben.",
+  "quoteAttribution": "Arbeitsregel der alerischen Seuchenwacht",
+  "icon": {
+    "src": "../../../assets/icons/infestiden.webp",
+    "width": 512,
+    "height": 512,
+    "alt": "Schlichtes aquarelliertes Archivsymbol für Infestiiden"
+  },
+  "hero": {
+    "src": "../../../assets/creature-group-profiles/infestiden-hero.webp",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Naga vollständig sichtbar auf einer hellen Bildtafel",
+    "caption": "Überlieferte Bildtafel · Eine bewaffnete Naga"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Infestiiden"
+    },
+    {
+      "label": "Typ",
+      "value": "Infernale Ausbreitungswesen"
+    },
+    {
+      "label": "Schöpfer",
+      "value": "Nergaloth"
+    },
+    {
+      "label": "Ordnung",
+      "value": "Infestiiden und infestiide Kreaturen"
+    },
+    {
+      "label": "Bekannte Gattung",
+      "value": "Naga"
+    },
+    {
+      "label": "Archivstand",
+      "value": "Eine Form benannt, neun Stellen offen"
+    },
+    {
+      "label": "Prägung",
+      "value": "Eindringen, Festsetzen und Ausbreitung"
+    },
+    {
+      "label": "Auftreten",
+      "value": "Oft erst an wiederkehrenden Spuren erkennbar"
+    },
+    {
+      "label": "Stärken",
+      "value": "Zähe Anpassung, Beharrlichkeit und verborgene Vermehrung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Frühe Eindämmung, Reinigung und die Unterbrechung ihrer Ausbreitungswege"
+    },
+    {
+      "label": "Vorgehen",
+      "value": "Nicht nur das Einzelwesen, sondern auch sein Umfeld prüfen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Ausbreitungsdruck",
+      "Nergalothbindung",
+      "Körperwandel",
+      "Brutbeharrlichkeit",
+      "Verbergung",
+      "Reinigungsanfälligkeit"
+    ],
+    "values": [
+      9,
+      9,
+      7,
+      9,
+      8,
+      7
+    ],
+    "intro": "Das Infestiiden-Diagramm richtet sich nach ihrer Funktion als Ausbreitungswesen. Es bewertet Festsetzung, verborgene Präsenz, körperliche Anpassung und die Wirkung konsequenter Reinigung.",
+    "source": "Aus der Zuordnung zu Nergaloth, der Benennung als Infestiiden und der einzigen bildlich überlieferten Gattung Naga vorsichtig ergänzt"
+  },
+  "related": {
+    "eyebrow": "Nergaloths infernale Ordnung",
+    "title": "Bekannte Unterarten",
+    "intro": "Nur die Naga ist benannt und bebildert. Die neun übrigen Felder bleiben entsprechend der alten Tafel ohne erfundene Namen oder Ersatzarten.",
+    "entries": [
+      {
+        "id": "naga",
+        "name": "Naga",
+        "region": "Infestiiden",
+        "description": "Eine gedrungene, rattenähnliche Infestiide, die Nergaloths Einfluss mit Werkzeug, Rudelinstinkt und zäher Anpassung verbreitet.",
+        "status": "Dossier vorgemerkt",
+        "href": null,
+        "image": {
+          "src": "../../../assets/creature-group-profiles/infestiden-naga.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Naga vollständig sichtbar als aquarellierte Artenabbildung"
+        }
+      },
+      {
+        "id": "offener-eintrag-01",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-02",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-03",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-04",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-05",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-06",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-07",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-08",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      },
+      {
+        "id": "offener-eintrag-09",
+        "name": "???",
+        "region": "???",
+        "description": "Noch keine gesicherte Überlieferung.",
+        "status": "Noch unausgefüllt",
+        "href": null,
+        "unknown": true
+      }
+    ],
+    "groups": [
+      {
+        "id": "infestiiden",
+        "eyebrow": "Benannte Gattungen",
+        "title": "Infestiiden",
+        "intro": "Die Naga ist die bislang einzige gesichert benannte Gattung.",
+        "entryIds": [
+          "naga",
+          "offener-eintrag-01",
+          "offener-eintrag-02",
+          "offener-eintrag-03",
+          "offener-eintrag-04"
+        ]
+      },
+      {
+        "id": "infestiide-kreaturen",
+        "eyebrow": "Offene Kreaturenstellen",
+        "title": "Infestiide Kreaturen",
+        "intro": "Alle fünf Plätze dieser Reihe bleiben unausgefüllt.",
+        "entryIds": [
+          "offener-eintrag-05",
+          "offener-eintrag-06",
+          "offener-eintrag-07",
+          "offener-eintrag-08",
+          "offener-eintrag-09"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Infestiiden sind infernale Wesen unter Nergaloths Einfluss. Ihre gemeinsame Prägung liegt weniger in einer einheitlichen Gestalt als in der Art, wie sie in einen Lebensraum eindringen, sich festsetzen und ihre Anwesenheit ausweiten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da nur eine Gattung benannt ist, trennt das Archiv gesicherte Beobachtung klar von vorsichtiger Einordnung."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Ursprung und Bindung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als Schöpfer und ordnende Macht gilt Nergaloth. Infestiiden tragen diesen Einfluss in Körper, Verhalten und Ausbreitung weiter, ohne dass jede Form dieselben Merkmale besitzen muss."
+        }
+      ]
+    },
+    {
+      "id": "naga",
+      "title": "Die bekannte Naga",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Naga erscheint als gedrungene, rattenähnliche und aufrecht gehende Gestalt. Sie nutzt Werkzeuge und kann deshalb nicht wie ein gewöhnliches Tier eingeschätzt werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Weitergehende Aussagen über Rang, Sprache oder Verbreitung bleiben offen, bis ein eigenes Dossier vorliegt."
+        }
+      ]
+    },
+    {
+      "id": "ausbreitung",
+      "title": "Festsetzen und Ausbreitung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine einzelne Sichtung kann Teil eines größeren Befalls sein. Wiederkehrende Wege, beschädigte Vorräte und ungewöhnlich gleichförmige Spuren verdienen daher ebenso viel Aufmerksamkeit wie das sichtbare Wesen selbst."
+        }
+      ]
+    },
+    {
+      "id": "beobachtung",
+      "title": "Sichere Beobachtung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Funde sollten getrennt dokumentiert werden: das beobachtete Wesen, mögliche Rückzugswege und Veränderungen in der Umgebung. So lässt sich vermeiden, eine unbekannte Art vorschnell zu benennen."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung und Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frühe Eindämmung ist wirksamer als die Jagd auf verstreute Einzelwesen. Zugänge, Nahrung und mögliche Brutorte müssen gesichert und anschließend gereinigt werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da neun Formen unbekannt bleiben, dürfen Waffenwirkung und Schutzmaßnahmen nicht von der Naga auf jede Infestiide übertragen werden."
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Die alte Tafel enthält zehn Plätze, nennt aber nur die Naga.",
+            "Infestiiden und infestiide Kreaturen werden als getrennte Reihen geführt.",
+            "Die Naga-Abbildung zeigt Werkzeuggebrauch und eine aufrechte Haltung.",
+            "Alle fehlenden Namen bleiben sichtbar als Fragezeichen erhalten."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

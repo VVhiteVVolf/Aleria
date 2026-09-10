@@ -1,0 +1,415 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "goettliche",
+      "title": "Die Neun des Alten Glaubens",
+      "entries": [
+        {
+          "id": "ordates",
+          "name": "Ordates",
+          "epithet": "Der Drache",
+          "relatedIds": [
+            "ordan"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/ordates.png",
+            "alt": "Ordates – Der Drache",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "mariona",
+          "name": "Mariona",
+          "epithet": "Die Taube",
+          "relatedIds": [
+            "mariel"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/mariona.png",
+            "alt": "Mariona – Die Taube",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "balrion",
+          "name": "Balrion",
+          "epithet": "Der Bär",
+          "relatedIds": [
+            "baldran"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/balrion.png",
+            "alt": "Balrion – Der Bär",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "belenor",
+          "name": "Belenor",
+          "epithet": "Der Löwe",
+          "relatedIds": [
+            "maldras"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/belenor.png",
+            "alt": "Belenor – Der Löwe",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "silvanis",
+          "name": "Silvanis",
+          "epithet": "Die Hindin",
+          "relatedIds": [
+            "sylvana"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/silvanis.png",
+            "alt": "Silvanis – Die Hindin",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "lyrentia",
+          "name": "Lyrentia",
+          "epithet": "Die Nachtigall",
+          "relatedIds": [
+            "lyris"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/lyrentia.png",
+            "alt": "Lyrentia – Die Nachtigall",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "tharannis",
+          "name": "Tharannis",
+          "epithet": "Der Ochse",
+          "relatedIds": [
+            "tharim"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/tharannis.png",
+            "alt": "Tharannis – Der Ochse",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "oghma",
+          "name": "Oghma",
+          "epithet": "Die Eule",
+          "relatedIds": [
+            "orin"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/oghma.png",
+            "alt": "Oghma – Die Eule",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "kharan",
+          "name": "Kharan",
+          "epithet": "Der Rabe",
+          "relatedIds": [
+            "kharon"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/kharan.png",
+            "alt": "Kharan – Der Rabe",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    },
+    {
+      "id": "souveraene",
+      "title": "Die Fünf Souveräne",
+      "entries": [
+        {
+          "id": "nimue",
+          "name": "Nimue",
+          "epithet": "Die Schwalbe",
+          "relatedIds": [
+            "nimue"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/nimue.png",
+            "alt": "Nimue – Die Schwalbe",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "rhea",
+          "name": "Rhea",
+          "epithet": "Der Widder",
+          "relatedIds": [
+            "rhea"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/rhea.png",
+            "alt": "Rhea – Der Widder",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "zephyr",
+          "name": "Zephyr",
+          "epithet": "Der Adler",
+          "relatedIds": [
+            "zephyr"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/zephyr.png",
+            "alt": "Zephyr – Der Adler",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "aelthar",
+          "name": "Aelthar",
+          "epithet": "Der Greif",
+          "relatedIds": [
+            "aelthar"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/aelthar.png",
+            "alt": "Aelthar – Der Greif",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "thyrael",
+          "name": "Thyrael",
+          "epithet": "Der Phoenix",
+          "relatedIds": [
+            "thyrael"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/thyrael.png",
+            "alt": "Thyrael – Der Phoenix",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    },
+    {
+      "id": "untergoetter",
+      "title": "Die Untergötter",
+      "entries": [
+        {
+          "id": "muirenn",
+          "name": "Muirenn",
+          "epithet": "Die Möwe",
+          "relatedIds": [
+            "tethyra"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/muirenn.png",
+            "alt": "Muirenn – Die Möwe",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "jovellia",
+          "name": "Jovellia",
+          "epithet": "Der Schmetterling",
+          "relatedIds": [
+            "jovena"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/jovellia.png",
+            "alt": "Jovellia – Der Schmetterling",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "arvendil",
+          "name": "Arvendil",
+          "epithet": "Der Biber",
+          "relatedIds": [
+            "auron"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/arvendil.png",
+            "alt": "Arvendil – Der Biber",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "herion",
+          "name": "Herion",
+          "epithet": "Der Falke",
+          "relatedIds": [
+            "selarion"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/herion.png",
+            "alt": "Herion – Der Falke",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "oriadh",
+          "name": "Oriadh",
+          "epithet": "Die Krähe",
+          "relatedIds": [
+            "orith"
+          ],
+          "image": {
+            "src": "religionen/alter-pantheon/assets/oriadh.png",
+            "alt": "Oriadh – Die Krähe",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Druiden Hierarchie",
+    "entries": [
+      {
+        "id": "druiden-aeltester",
+        "title": "Druiden Ältester",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Druidenälteste ist der ranghöchste und autoritativste Führer innerhalb der druidischen Gemeinschaft. Er wird aus den Erz-Druiden gewählt und repräsentiert die höchste geistige und administrative Autorität der Druidenordnung. In seiner Rolle trägt der Druidenälteste die Verantwortung für die Gesamtleitung und das Wohl der druidischen Gemeinschaft. Er koordiniert die wichtigsten Entscheidungen, lenkt die strategische Ausrichtung und sorgt für die Wahrung der traditionellen Werte und Rituale. Der Druidenälteste fungiert als oberster Berater, Vermittler und Entscheidungsträger sowohl innerhalb der Gemeinschaft als auch in der Interaktion mit anderen Mächten und Königreichen. Seine Weisheit, Erfahrung und Macht sind entscheidend für die Stabilität und das Gleichgewicht der druidischen Welt."
+          }
+        ]
+      },
+      {
+        "id": "erz-druide",
+        "title": "Erz-Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Erz-Druide ist die höchste Stufe innerhalb der druidischen Hierarchie und nur wenigen Druiden ist es gegeben, diesen erhabenen Rang zu erreichen. Erz-Druiden sind wahre Naturgewalten, deren Macht und Weisheit nahezu göttlicher Natur sind. Sie beherrschen ihre jeweiligen Domänen in unvergleichlicher Weise und sind in der Lage, die tiefsten Geheimnisse der Natur zu verstehen und zu lenken. Als die stärksten und einflussreichsten Druiden führen sie bedeutende Entscheidungen für die Gemeinschaft und für das Gleichgewicht der Welt herbei. Unter den Erz-Druiden wählen sie einen Ältesten, der als Druidenältester fungiert und die höchste Autorität innerhalb der druidischen Ordnung darstellt. Dieser Älteste ist verantwortlich für die Leitung des gesamten druidischen Ordens und für die Aufrechterhaltung der übergeordneten Prinzipien und Ziele der druidischen Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "meister-druide",
+        "title": "Meister-Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Meister-Druide ist eine seltene und angesehene Position innerhalb der druidischen Hierarchie, die nur von wenigen erreicht wird. Als höchste Autorität nach den Erzdruiden ist der Meister-Druide ein Experte auf seinem speziellen Gebiet, sei es in den Bereichen der Naturmagie, der Heilkunst, der Ritualführung oder anderen druidischen Disziplinen. Obwohl er nicht alle Aspekte des druidischen Wissens gemeistert haben muss, zeichnet sich der Meister-Druide durch außergewöhnliche Fähigkeiten und tiefes Wissen in seinem Spezialgebiet aus. Seine Expertise wird für die fortgeschrittene Lehre, die Leitung komplexer Aufgaben und die Beratung der Erzdruiden genutzt. Der Meister-Druide spielt eine entscheidende Rolle bei der Weitergabe von fortgeschrittenem Wissen und der Entwicklung neuer druidischer Praktiken."
+          }
+        ]
+      },
+      {
+        "id": "hoch-druide",
+        "title": "Hoch-Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Hoch-Druide ist eine herausragende Persönlichkeit innerhalb der druidischen Gemeinschaft, die eine besonders bedeutende Rolle und umfassende Verantwortung innehat. Er kann als wichtiges Sprachrohr zwischen den Druidenorden und den Königreichen fungieren oder als Anführer eines großen Druidenzirkels agieren. Der Hoch-Druide trägt entscheidend zur Leitung und Koordination der druidischen Aktivitäten bei, organisiert große Zeremonien und Rituale und vertritt die Interessen der Druiden auf politischen und gesellschaftlichen Ebenen. Seine Aufgaben umfassen sowohl die strategische Planung und Entscheidungsfindung als auch die Aufrechterhaltung der druidischen Traditionen und der spirituellen Integrität der Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "gross-druide",
+        "title": "Groß-Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Groß-Druide ist ein erfahrener und hochrangiger Druide, der erheblich mehr Verantwortung innerhalb der druidischen Gemeinschaft trägt. Er verwaltet möglicherweise einen eigenen Hain oder ein Heiligtum und ist für die Aufrechterhaltung und Pflege dieser heiligen Orte zuständig. In seiner Rolle hat der Groß-Druide die Aufsicht über mehrere Druiden und Druidensprösslinge, denen er Anleitung und Führung bietet. Er ist verantwortlich für die Durchführung bedeutender Rituale und Zeremonien, die Pflege der druidischen Traditionen und die Wahrung des Gleichgewichts zwischen Natur und Zivilisation. Der Groß-Druide spielt eine Schlüsselrolle bei der Entscheidungsfindung innerhalb der Gemeinschaft und trägt zur strategischen Planung und Leitung bei."
+          }
+        ]
+      },
+      {
+        "id": "waechter-druide",
+        "title": "Wächter-Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Wächter-Druide ist ein erfahrener Druide, der sich auf die Ausbildung und Mentoring von weniger erfahrenen Druiden, insbesondere Druidensprösslingen, spezialisiert hat. Er übernimmt eine zentrale Rolle in der Ausbildung neuer Druiden und vermittelt ihnen sowohl praktisches Wissen als auch tiefere Einsichten in die druidischen Traditionen und Lehren. Als Mentor führt der Wächter-Druide seine Schützlinge durch ihre Entwicklung, leitet sie bei wichtigen Aufgaben und Ritualen an und sorgt dafür, dass sie die erforderlichen Fähigkeiten und das Verständnis für ihre zukünftige Rolle innerhalb des Ordens erwerben. Darüber hinaus wird er oft mit speziellen Aufgaben betraut, die seine umfassende Erfahrung und Expertise erfordern. Der Wächter-Druide spielt somit eine entscheidende Rolle in der Sicherstellung der Kontinuität und Integrität der druidischen Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "druide",
+        "title": "Druide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Druide ist ein vollwertiger Mitglied der druidischen Gemeinschaft, der den bedeutenden Prozess der \"Einswerdung\" erfolgreich absolviert hat. Durch diesen Prozess ist er „Eins mit der Welt“ geworden, was ihm tiefere Einblicke und eine besondere Verbindung zur Natur und den druidischen Kräften verleiht. Obwohl der Druide nun offiziell den Rang eines Druiden erreicht hat, befindet er sich noch am Anfang seiner Reise und hat viel zu lernen. In seiner aktuellen Rolle übernimmt er vorwiegend triviale Dienste und Aufgaben innerhalb seines Ordens, um praktische Erfahrung zu sammeln und sich weiter in die druidischen Traditionen einzuarbeiten. Der Druide arbeitet daran, seine Fähigkeiten zu vertiefen und sich auf künftige, verantwortungsvollere Rollen innerhalb der Gemeinschaft vorzubereiten."
+          }
+        ]
+      },
+      {
+        "id": "druiden-spross",
+        "title": "Druiden-Spross",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Druidenspross ist ein niederrangiger Druide, der auf eine alternative Weise in den Rang eines Druiden gelangt ist, sei es durch besondere Umstände, außergewöhnliche Umstände oder alternative Wege der Weihe. Obwohl er ein gewisses Maß an druidischem Wissen und Fähigkeiten besitzt, ist sein Potenzial begrenzt im Vergleich zu vollwertigen Druiden. Der Druidenspross erfüllt grundlegende Aufgaben innerhalb der druidischen Gemeinschaft und nimmt an Ritualen und Zeremonien teil, jedoch mit eingeschränkten Verantwortlichkeiten und Einflussbereichen. Er dient als Bindeglied zwischen den höheren Druiden und den weniger erfahrenen Mitgliedern der Gemeinschaft und trägt zur Erhaltung der druidischen Traditionen und Lehren bei."
+          }
+        ]
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Adept ist ein erfahrener Kleriker, der bereits bedeutende Verantwortung übernommen hat, jedoch noch kein vollwertiger Druide ist. In seiner Rolle dient er den Menschen als hochrangiger Kleriker und übernimmt oft leitende Aufgaben innerhalb der Gemeinschaft. Er fungiert als wichtiges Sprachrohr zwischen den Druiden und den Menschen, indem er die druidischen Lehren und Werte weitergibt und deren Anliegen an die Druiden übermittelt. Der Adept ist in der Lage, komplexe Rituale durchzuführen und wichtige Zeremonien zu leiten. Durch seine fortgeschrittene Position bereitet er sich darauf vor, tiefere Einblicke in die druidische Weisheit zu gewinnen und möglicherweise eines Tages in den Rang eines Druiden aufzusteigen."
+          }
+        ]
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Novize ist ein Kleriker, der bereits formale Weihen erhalten hat, aber noch kein vollwertiger Druide ist. In dieser Rolle dient er als Vermittler zwischen der druidischen Gemeinschaft und den Menschen. Der Novize wird intensiv in die Lehren des Pantheons eingeführt und übernimmt Aufgaben wie das Durchführen von Zeremonien und das Anleiten von religiösen Riten für die Gemeinschaft. Er ist auch dafür zuständig, als Sprachrohr zwischen den Druiden und der Zivilisation zu fungieren, und trägt somit dazu bei, das Wissen und die Werte des Druidentums weiterzugeben. Der Novize bereitet sich darauf vor, in den höheren Rang der Druiden aufzusteigen, indem er seine Fähigkeiten im Umgang mit Menschen und in der praktischen Anwendung der druidischen Prinzipien vertieft."
+          }
+        ]
+      },
+      {
+        "id": "schueler",
+        "title": "Schüler",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Der Schüler ist ein fortgeschrittener Laie, der bereits eine längere Zeit bei den Druiden verbracht hat. Obwohl er noch kein vollwertiger Druide ist, hat er begonnen, sich intensiver mit den Lehren und Praktiken des Druidentums auseinanderzusetzen. Als Schüler übernimmt er zunehmend verantwortungsvollere Aufgaben und beginnt, die Grundlagen der druidischen Rituale und Philosophie zu erlernen. Seine Rolle umfasst das Mitwirken an Zeremonien, die Pflege und Anwendung von Wissen über Pflanzen und die Unterstützung der Druiden bei komplexeren Aufgaben. Der Schüler ist auf dem Weg, ein tieferes Verständnis für die druidischen Prinzipien zu entwickeln und sich auf eine mögliche Weihe vorzubereiten."
+          }
+        ]
+      },
+      {
+        "id": "laie",
+        "title": "Laie",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Laien sind die ersten Schritte auf dem Weg zum Druiden. Sie sind noch keine vollwertigen Druiden, sondern dienen als Helfer und unterstützen die erfahrenen Druiden bei ihren Aufgaben. Ihre Hauptaufgaben umfassen die praktische Unterstützung bei Ritualen, die Pflege von Pflanzen und natürlichen Ressourcen sowie das Lernen grundlegender druidischer Kenntnisse. Laien arbeiten eng mit den Druiden zusammen, um die Prinzipien des Einklangs mit der Natur zu verstehen und umzusetzen. Durch ihre Unterstützung und ihr Lernen bereiten sie sich auf eine mögliche Weihe zum Druiden vor."
+          }
+        ]
+      }
+    ]
+  }
+}

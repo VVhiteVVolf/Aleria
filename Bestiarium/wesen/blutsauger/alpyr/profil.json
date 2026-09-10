@@ -1,0 +1,241 @@
+{
+  "id": "alpyr",
+  "name": "Alpyr",
+  "classification": "Gesellschaftlich getarnter Vampirspross des Alp",
+  "continent": "Aleria",
+  "region": "Städte und größere Gemeinschaften",
+  "folio": "IV / 03-B-2",
+  "parentGroupId": "blutsauger",
+  "summary": "Alpyr entstehen durch den schleichenden Sanguinaris Mendax eines Alp. Sie bewahren zunächst ungewöhnlich viel Willenskraft, erschaffen falsche Identitäten und leben unerkannt in menschlicher Gesellschaft. Der wachsende Blutdurst untergräbt diese Fassade jedoch, bis impulsive Jagden ihre sorgfältig aufgebaute Tarnung zerstören.",
+  "quote": "Der Alpyr fällt nicht durch das auf, was er verbirgt, sondern durch die eine Nacht, in der seine über Jahre geübte Beherrschung endet.",
+  "quoteAttribution": "Aus dem Handbuch städtischer Nachtwachen",
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Alpyr"
+    },
+    {
+      "label": "Typ",
+      "value": "Vampirspross und gesellschaftlicher Täuscher"
+    },
+    {
+      "label": "Schöpferlinie",
+      "value": "Alp"
+    },
+    {
+      "label": "Virus",
+      "value": "Sanguinaris Mendax"
+    },
+    {
+      "label": "Übertragung",
+      "value": "Blut oder Speichel eines Alp"
+    },
+    {
+      "label": "Verwandlungsdauer",
+      "value": "Etwa drei Monate bis zur Vollendung"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Städte, Handelsorte und große Gemeinschaften"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Strategischer Einzeljäger hinter falscher Identität"
+    },
+    {
+      "label": "Aktivzeit",
+      "value": "Zunehmend nachtaktiv, tagsüber oft gesellschaftlich präsent"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Illusion, Manipulation, geschärfte Sinne und körperliche Steigerung"
+    },
+    {
+      "label": "Stärken",
+      "value": "Willenskraft, Intelligenz und überzeugende Menschentarnung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Blutgier, impulsiver Kontrollverlust, Feuer und sakrale Waffen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Selbstkontrolle",
+      "Gesellschaftstarnung",
+      "Manipulation",
+      "Blutgier",
+      "Strategisches Denken",
+      "Enttarnungsrisiko"
+    ],
+    "values": [
+      7,
+      9,
+      7,
+      8,
+      8,
+      7
+    ],
+    "intro": "Der Alpyr ist unter den Sprossen der überzeugendste Gesellschaftstäuscher. Seine hohen Tarnwerte werden mit jedem unterdrückten Blutrausch instabiler.",
+    "source": "Aus dem langsamen Sanguinaris Mendax, der erhaltenen Willenskraft, falschen Identitäten, instinktiver Manipulation und dem späteren Kontrollverlust abgeleitet"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Alpyr ist der durch Infektion geschaffene Spross eines Alp. Mehr als andere Blutsauger kann er seine neue Natur zunächst unterdrücken und sich ohne sichtbaren Bruch in die Gesellschaft der Menschen einfügen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kontrolle bleibt endlich. Der Blutdurst wächst hinter der sorgsam gepflegten Fassade, bis ein einziger impulsiver Angriff Identität, Stellung und jahrelange Vorbereitung vernichtet."
+        }
+      ]
+    },
+    {
+      "id": "virus",
+      "title": "Sanguinaris Mendax",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Name des Erregers bedeutet trügerisches Blut. Er wirkt langsam, passt sich den natürlichen Abläufen des Körpers an und verbirgt seine Veränderungen so lange, dass viele Betroffene die Infektion erst erkennen, wenn Geist und Blut bereits tief korrumpiert sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Blut oder Speichel eines Alp übertragen die Verbindung. Biologische und magische Wirkung greifen ineinander: Der Körper gewinnt vampirische Eigenschaften, während Denken und Begehren schrittweise an Bhaals Dunkelheit gebunden werden."
+        }
+      ]
+    },
+    {
+      "id": "prozess",
+      "title": "Verwandlungsprozess",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Inkubation · 1–7 Tage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Leichte Schwäche, Unruhe und eine neue Vorliebe für die Nacht bleiben meist unauffällig. Der Wirt führt sein gewohntes Leben weiter."
+        },
+        {
+          "type": "subheading",
+          "text": "Anpassung · 1–4 Wochen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Haut erbleicht, Sinne schärfen sich und Blut übt eine wachsende Faszination aus. Erste innere Konflikte entstehen, doch die äußere Rolle bleibt überzeugend."
+        },
+        {
+          "type": "subheading",
+          "text": "Übergang · 1–3 Monate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kraft, Geschwindigkeit und nächtliches Sehvermögen nehmen zu. Illusion und Manipulation erscheinen als Jagdreflexe; der Wirt sucht gezielt Beute, während seine alte Identität weiterbesteht."
+        },
+        {
+          "type": "subheading",
+          "text": "Vollendung · ab 3 Monaten"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Alpyr ist äußerlich weiterhin menschenähnlich und setzt seine Kräfte zunehmend bewusst ein. Seine Tarnung bleibt möglich, aber die immer stärkere Gier nach Blut verrät ihn früher oder später."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Erscheinungsbild",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Alpyr wirkt gepflegt und nahezu vollständig menschlich. Blässe, ungewöhnlich wache Augen und kurze Momente sichtbarer Fangzähne sind oft die einzigen körperlichen Hinweise; Kleidung und Auftreten passen sich seiner gewählten Rolle an."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alpyr suchen Städte und größere Gemeinschaften, bauen falsche Lebensläufe auf und nutzen soziale Ordnung als Deckung. Sie beobachten Außenseiter und Schwächere, weil deren Verschwinden seltener eine geschlossene Suche auslöst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit wachsendem Hunger wird die Planung kürzer und das Handeln aggressiver. Der Alpyr besitzt die Intelligenz, seine Fehler zu verstehen, kann den entscheidenden Impuls aber nicht dauerhaft beherrschen."
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "title": "Fähigkeiten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Kräfte des Alpyr sind abgeschwächte, instinktive Fassungen der Magie seines Schöpfers. Gefahr und Hunger lösen Trugbilder, emotionale Beeinflussung oder plötzliche körperliche Steigerungen aus."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Überzeugende gesellschaftliche Tarnung",
+            "Instinktive Illusion und Beeinflussung",
+            "Gesteigerte Kraft, Geschwindigkeit und Nachtsicht",
+            "Strategische Auswahl unauffälliger Beute"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Begegnung & Bekämpfung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Alpyr wird zuerst durch Widersprüche in seiner Identität, wiederkehrende nächtliche Abwesenheit und die Auswahl isolierter Opfer enttarnt. In offener Konfrontation ist er schwächer als ein Alp; geweihte Waffen, Feuer und sakrale Magie treffen seinen unvollkommenen Zustand schwer."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Unterarten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Alpyr können dieselbe falsche Identität über Jahre pflegen, solange ihr Blutdurst beherrschbar bleibt.",
+            "Manche führen genaue Aufzeichnungen über ihre gesellschaftlichen Rollen, um Widersprüche zu vermeiden.",
+            "Ein Spiegel oder Fenster verrät nicht magisch ihre Natur, wird aber von erfahrenen Jägern genutzt, um unbeobachtete Gesichtszüge zu prüfen."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": [],
+  "icon": {
+    "src": "../../../assets/bloodsucker-profiles/alpyr-icon.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Alpyr in reisender Gestalt"
+  },
+  "hero": {
+    "src": "../../../assets/bloodsucker-profiles/alpyr-scene.webp",
+    "width": 1254,
+    "height": 1254,
+    "alt": "Alpyr und Ordensjäger vollständig sichtbar in einer abendlichen Gesellschaft",
+    "caption": "Neu angelegte Bildtafel · Der Alpyr unter Menschen"
+  }
+}

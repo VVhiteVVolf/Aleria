@@ -1,4 +1,4 @@
-import { getArchiveClassDefinition } from './character-archive-classification.js?v=20260905-cenyr-character-training-v1';
+import { getArchiveClassDefinition } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
 
 // Only canonical repository paths are rendered as links; user-entered archive
 // JSON never supplies arbitrary link destinations.

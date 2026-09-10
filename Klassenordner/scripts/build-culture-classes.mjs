@@ -8,6 +8,7 @@ import { ALDRIMAR_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/aldrima
 import { getAldrimarClassProgression } from '../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js';
 import { ALBEN_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/alben/alben-class-registry.js';
 import { NORDMAENNER_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/nordmaenner/nordmaenner-class-registry.js';
+import { MORGORN_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-registry.js';
 import { resolveCultureClassDocument } from '../modules/culture/culture-class-content.js';
 import { renderCultureClassPage } from '../modules/culture/culture-class-template.js';
 import { writeClassPageOutput } from './class-page-output.mjs';
@@ -19,7 +20,8 @@ const volumes = await Promise.all([
   { folder: 'Vennyr', ids: VENNYR_CLASS_IDS, progression: getVennyrClassProgression },
   { folder: 'Aldrimar', ids: ALDRIMAR_CLASS_IDS, progression: getAldrimarClassProgression },
   { folder: 'Alben', ids: ALBEN_CLASS_IDS, progression: null },
-  { folder: 'Nordmaenner', ids: NORDMAENNER_CLASS_IDS, progression: null }
+  { folder: 'Nordmaenner', ids: NORDMAENNER_CLASS_IDS, progression: null },
+  { folder: 'Morgorn', ids: MORGORN_CLASS_IDS, progression: null }
 ].map(async volume => {
   const culture = JSON.parse(await readFile(new URL(`${volume.folder}/kultur.json`, root), 'utf8'));
   const documents = await Promise.all(volume.ids.map(async id => resolveCultureClassDocument(

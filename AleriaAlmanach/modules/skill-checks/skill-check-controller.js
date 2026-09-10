@@ -1,6 +1,6 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260908-cenyr-paths-v1';
-import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260906-effect-rolls-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260909-dragon-parent-v2';
+import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260909-dragon-parent-v2';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -16,10 +16,10 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260906-effect-rolls-v1';
+} from './skill-check-model.js?v=20260909-dragon-parent-v2';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20260906-effect-rolls-v1';
-import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260906-effect-rolls-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20260909-dragon-parent-v2';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260909-dragon-parent-v2';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 
 const profileResolver = new CombatProfileResolver();

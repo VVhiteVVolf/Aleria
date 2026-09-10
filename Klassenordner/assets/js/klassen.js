@@ -3,7 +3,7 @@ import { readClassCatalog, createClassCatalogView } from '../../modules/catalog/
 import { appendClassLore } from '../../modules/lore/class-lore-ui.js?v=20260905-1';
 import { createClassSheetView } from '../../modules/sheets/class-sheet-ui.js?v=20260905-2';
 import { getUniversalClassPageHref } from '../../modules/pages/universal-class-registry.js?v=20260905-universal-v1';
-import { getCultureClassPageHref } from '../../modules/culture/culture-class-registry.js?v=20260905-cenyr-attacks-v1';
+import { getCultureClassPageHref } from '../../modules/culture/culture-class-registry.js?v=20260909-dragon-parent-v2';
 
 function initializeClassPage(root) {
   const catalog = readClassCatalog(root);

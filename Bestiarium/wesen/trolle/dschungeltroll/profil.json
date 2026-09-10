@@ -1,0 +1,185 @@
+{
+  "id": "dschungeltroll",
+  "name": "Dschungeltroll",
+  "classification": "Trollunterart · Archaischer Urwaldherrscher",
+  "continent": "Sundara",
+  "region": "Urwälder und überwucherte Ruinen Sundaras",
+  "folio": "III-T / 13",
+  "parentGroupId": "trolle",
+  "summary": "Dschungeltrolle gelten als archaische, primatenhafte Abzweigung aus Sundaras versunkenen Urwäldern. Greifarme, häufige dritte Augen und ritualisierte Rottenjagd machen sie zu Herrschern des Blätterdachs; Sprache und Metall kennen sie kaum, doch Klettern, Trommelsignale und Angriffe aus mehreren Höhen beherrschen sie meisterhaft.",
+  "quote": "Wo das Holz ohne Wind trommelt, hat der Dschungel bereits über dich gesprochen.",
+  "quoteAttribution": "Überlieferung sundarischer Seefahrer",
+  "icon": {
+    "src": "../../../assets/creature-group-profiles/trolle-dschungeltroll.webp",
+    "width": 408,
+    "height": 612,
+    "alt": "Vollständig sichtbarer Dschungeltroll als aquarelliertes Dossiersymbol"
+  },
+  "hero": {
+    "src": "../../../assets/troll-profiles/dschungeltroll.webp",
+    "width": 962,
+    "height": 1200,
+    "alt": "Szenentafel mit einem Dschungeltroll in seinem natürlichen Lebensraum",
+    "caption": "Bildtafel · Begegnung mit einem Dschungeltroll"
+  },
+  "facts": [
+    {
+      "label": "Name",
+      "value": "Dschungeltroll"
+    },
+    {
+      "label": "Typ",
+      "value": "Archaischer Troll; primatenhafter Rottenjäger"
+    },
+    {
+      "label": "Entstehung",
+      "value": "Sehr alte Trollabzweigung aus der Zeit vor Sundaras Untergang"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Sundara"
+    },
+    {
+      "label": "Lebensraum",
+      "value": "Dichte Urwälder, Baumriesen, Schluchten und überwucherte Ruinen"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Extrem territorial, ritualisiert und in kleinen Rotten jagend"
+    },
+    {
+      "label": "Aktivitätszeit",
+      "value": "Dämmerung und schattige Tagesstunden"
+    },
+    {
+      "label": "Fähigkeiten",
+      "value": "Klettern, Trommelsprache, Bewegungswahrnehmung und Hinterhalt"
+    },
+    {
+      "label": "Stärken",
+      "value": "Greifkraft, vertikale Bewegung, Rottenjagd und dichte Deckung"
+    },
+    {
+      "label": "Schwächen",
+      "value": "Offenes Gelände, Formation, Fernkampf und fehlende Deckung"
+    },
+    {
+      "label": "Ausbeute",
+      "value": "Knochenkeulen, Steingeräte und rituelle Trophäen"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Kletterkraft",
+      "Bewegungswahrnehmung",
+      "Rottenjagd",
+      "Ritualverhalten",
+      "Werkzeuggebrauch",
+      "Offenlandschwäche"
+    ],
+    "values": [
+      10,
+      9,
+      9,
+      8,
+      4,
+      10
+    ],
+    "source": "Aus Körperbau, Lebensraum, Verhalten, Fähigkeiten und überlieferten Jagdbeobachtungen des Dschungeltrolls abgeleitet",
+    "intro": "Der Dschungeltroll wird über seine Herrschaft im dreidimensionalen Urwald bewertet. Eine hohe Offenlandschwäche zeigt, wie viel seiner Gefahr an Deckung und Höhe gebunden ist."
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Dschungeltroll gilt als lebendes Relikt aus einer Zeit, in der Trolle noch weniger humanoide Züge trugen. Langer Armspann, gekrümmte Haltung und starke Greifhände erinnern an ein gewaltiges Primatenwesen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein drittes Auge tritt häufig auf und erkennt Bewegungen im dichten Blätterdach. Metall wird kaum verstanden; Knochenkeulen, Steine und einfache Speere genügen."
+        }
+      ]
+    },
+    {
+      "id": "hintergrund",
+      "title": "Hintergrund",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Linie stammt aus Sundara, lange bevor große Teile des Kontinents im Meer versanken. Einheimische Völker betrachteten sie als Naturwesen, verehrten, fürchteten oder besänftigten sie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heute berichten nur Mythen, Zeichnungen und wenige Seefahrer von Trollrotten auf verbliebenen Inseln. Ob Waldtrolle von ihnen abstammen oder nur ähnlich angepasst sind, bleibt offen."
+        }
+      ]
+    },
+    {
+      "id": "verhalten",
+      "title": "Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dschungeltrolle kommunizieren mit Brüllen, Gesten und rhythmischem Schlagen auf Holz. Kleine Rotten greifen aus mehreren Höhen an und ziehen den Kampf ins Blätterdach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fremde werden vertrieben, getötet oder rituell geopfert. Verhandlung ist kaum möglich, territoriale Zeichen sollten jedoch als klare Grenze verstanden werden."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Lebensraum",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nester aus Ästen, Knochen und Lehm liegen oft hoch über dem Boden. Feuchte Schluchten, Baumriesen und überwucherte Tempel bieten Nahrung, Deckung und vertikale Fluchtwege."
+        }
+      ]
+    },
+    {
+      "id": "bekaempfung",
+      "title": "Bekämpfung und Taktik",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klare Formationen, Fernkampf und Feuer zur Abschreckung sind nötig. Eine Verfolgung in dichten Wald oder in die Baumkronen endet meist in einer Umfassung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Offenes Gelände nimmt der Rotte Deckung und Höhe. Dort können Reichweite und geordnete Waffenwirkung ausgespielt werden."
+        }
+      ]
+    },
+    {
+      "id": "unterarten",
+      "title": "Weitere Ausprägungen",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "???"
+        }
+      ]
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Manche sundarischen Kulturen verehrten Dschungeltrolle als Waldgeister oder Ahnenwesen.",
+            "Schädel und Knochenkeulen besiegter Feinde gelten als Rangzeichen.",
+            "Steintempel sollen von einzelnen Rotten über Generationen bewacht worden sein.",
+            "Das Trommeln trägt weiter durch den Wald als gesprochene Sprache."
+          ]
+        }
+      ]
+    }
+  ],
+  "plates": []
+}

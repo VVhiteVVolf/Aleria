@@ -18,8 +18,8 @@ const load = async slug => JSON.parse(await readFile(new URL(`../../Charakter%20
 const average = formula => formula ? averageDamageFormula(formula) : 0;
 
 test('all three catalogues remain affordable at unlock and older training never loses damage', () => {
-  assert.equal(catalog.length, 540);
-  assert.equal(new Set(catalog.map(technique => technique.id)).size, 540);
+  assert.equal(catalog.length, 596);
+  assert.equal(new Set(catalog.map(technique => technique.id)).size, 596);
   for (const technique of catalog) {
     const economy = { ...getCombatActionEconomy(technique.minimumLevel), 'aura-focus': getAuraFocusMaximum(technique.minimumLevel) };
     for (const cost of technique.costs) assert(cost.amount <= economy[cost.resourceId], technique.id);

@@ -8,22 +8,22 @@ import {
   setCharacterHitPointMaximum,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260906-effect-rolls-v1';
+} from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
-import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260905-cenyr-character-training-v1';
-import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260908-cenyr-paths-v1';
-import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260908-cenyr-paths-v1';
-import { getCenyrClassDefinitionForProfile } from '../classes/cenyr/cenyr-class-registry.js?v=20260908-cenyr-paths-v1';
+import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260909-dragon-parent-v2';
+import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
+import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassDefinitionForProfile } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import {
   getCenyrLevelUpTrainingChoices,
   selectCenyrTrainingOption
-} from '../classes/cenyr/cenyr-class-training.js?v=20260908-cenyr-paths-v1';
+} from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 import {
   getCenyrTechniqueChoiceGroups,
   reconcileCenyrTrainingForLevel,
   selectCenyrTechniqueForSlot
-} from '../classes/cenyr/cenyr-technique-selection.js?v=20260906-effect-rolls-v1';
+} from '../classes/cenyr/cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
@@ -111,6 +111,7 @@ function normalizePlan(profile, value = {}) {
     resourceIncreases: normalizeResourceIncreases(profile, value.resourceIncreases),
     actionPoolChoices: Object.fromEntries(Object.entries(value.actionPoolChoices || {}).filter(([level, id]) => [10, 15, 20].includes(Number(level)) && Object.hasOwn(ACTION_POOL_LABELS, id))),
     classTrainingChoices: {
+      foundation: text(value.classTrainingChoices?.foundation, 120),
       branch: text(value.classTrainingChoices?.branch, 120),
       path: text(value.classTrainingChoices?.path, 120)
     },
@@ -344,7 +345,7 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
     const label = group.options.find(option => option.id === selectionId)?.name || selectionId;
     changes.push({
       key: `class-training-${group.kind}-${selectionId}`,
-      label: group.kind === 'path' ? 'Gewählter Expertenpfad' : 'Gewählter Waffenweg',
+      label: group.kind === 'foundation' ? 'Gewählte Grundausbildung' : group.kind === 'path' ? 'Gewählter Expertenpfad' : 'Gewählter Waffenweg',
       before: '—',
       after: `${label}${result.spentSlot ? ` · belegt ${result.spentSlot.id}` : ' · ohne Slotkosten'}`
     });
@@ -375,7 +376,7 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
     selectedTrainingProfile = result.profile;
     changes.push({
       key: `class-technique-${group.slotId}`,
-      label: 'Neue Drachentanz-Attacke',
+      label: 'Neue Klassenattacke',
       before: '—',
       after: result.technique.name
     });

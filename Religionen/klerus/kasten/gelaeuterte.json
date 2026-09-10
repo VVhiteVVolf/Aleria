@@ -1,0 +1,13 @@
+{
+  "id": "gelaeuterte", "title": "Büßer & Geläuterte", "number": "VI", "motto": "Durch den Glauben Erlösung suchen",
+  "summary": "Ein begrenzter Weg der Buße mit dem Ziel der freien Rückkehr in die Gesellschaft.",
+  "paragraphs": ["Ein Bußgänger legt einen Eid und ein Schweigegelübde ab und dient innerhalb einer kirchlichen Struktur. Der Anlass kann eine Verurteilung oder eine freiwillig gesuchte Umkehr sein. Aufgabe, Dauer und Bedingungen des Bußgangs werden mit der aufnehmenden Kirche vereinbart; sie können dem einzelnen Menschen und seiner Schuld angepasst werden.", "Mit der anerkannten Vollendung des Bußgangs endet die Verpflichtung. Der Geläuterte muss nicht weiter büßen, ist von den vereinbarten Diensten und Gelübden befreit und kann wieder in die Gesellschaft eingegliedert werden. Seine Vergangenheit begründet keinen Anspruch auf lebenslangen Dienst."],
+  "art": {"pattern": "BilderRüstungen/gelaeuterte.png", "placeholder": false},
+  "hierarchy": {
+    "title": "Bußgang und Entlassung", "note": "Genau zwei Stände. Die Begleitenden und Geistlichen, welche den Bußgang beaufsichtigen oder abschließen, gehören nicht als zusätzliche Ränge zu dieser Kaste.",
+    "ranks": [
+      {"title":"Bußgänger", "duty":"An Eid und Schweigegelübde gebunden; erfüllt den individuell vereinbarten Dienst innerhalb einer Kirche."},
+      {"title":"Geläuterter", "duty":"Hat den Bußgang vollendet; ist von den Bußpflichten befreit und kehrt als freier Mensch in die Gesellschaft zurück."}
+    ]
+  }
+}
