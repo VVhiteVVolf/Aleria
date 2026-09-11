@@ -17,7 +17,7 @@
 
 Sternwacht, Silberglanz, Lichtkehr, Himmelsbogen, Sonnenkranz, Goldschein,
 Hochlicht, Abendglut, Dämmerschleier, Mondpfad, Schattenruh, Nachtkrone,
-Jahreswende. Die Namen sind poetische Kalenderbegriffe und schreiben weder
+Jahrswend. Die Namen sind poetische Kalenderbegriffe und schreiben weder
 örtliche Witterung noch landwirtschaftliche Jahreszeiten vor. Gespeichert wird
 weiterhin die Monatsnummer; spätere Umbenennungen verändern keine Termine.
 

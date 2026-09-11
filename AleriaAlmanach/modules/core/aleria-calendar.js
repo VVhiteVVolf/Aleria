@@ -2,7 +2,7 @@
 // Additiv zu bestehenden Freitext-Zeitangaben nutzbar (siehe module-editor-aleria-date-field.js).
 
 const ALERIA_CALENDAR = Object.freeze({
-  months: Object.freeze(['Sternwacht', 'Silberglanz', 'Lichtkehr', 'Himmelsbogen', 'Sonnenkranz', 'Goldschein', 'Hochlicht', 'Abendglut', 'Dämmerschleier', 'Mondpfad', 'Schattenruh', 'Nachtkrone', 'Jahreswende']),
+  months: Object.freeze(['Sternwacht', 'Silberglanz', 'Lichtkehr', 'Himmelsbogen', 'Sonnenkranz', 'Goldschein', 'Hochlicht', 'Abendglut', 'Dämmerschleier', 'Mondpfad', 'Schattenruh', 'Nachtkrone', 'Jahrswend']),
   weekdays: ['Ordanstag', 'Marielstag', 'Maldrastag', 'Sylvanastag', 'Kharonstag', 'Orinstag', 'Tharimstag', 'Baldranstag', 'Lyristag'],
   daysPerWeek: 9,
   daysPerMonth: 36,
