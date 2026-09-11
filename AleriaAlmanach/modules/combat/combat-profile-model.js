@@ -1010,6 +1010,10 @@ export function getEffectiveCombatAttribute(profile = {}, key = 'strength') {
   return getAttribute(sanitizeCharacterCombatProfile(profile), key);
 }
 
+export function getCombatEffectAttributeModifier(profile = {}, effect = {}) {
+  return effect?.bonusAttribute ? getAttributeModifier(getEffectiveCombatAttribute(profile, effect.bonusAttribute)) : 0;
+}
+
 function collectActiveMechanicalSources(profile) {
   const auraSources = [];
   if (profile.aura?.enabled && profile.aura.latentPresence?.enabled && profile.aura.latentPresence?.active) {

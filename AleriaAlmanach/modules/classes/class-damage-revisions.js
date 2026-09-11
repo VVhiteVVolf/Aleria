@@ -1,5 +1,7 @@
 // Revisions of already authored non-Cenyr attacks. Shared by import, sheets and
 // server validation so old Firestore records cannot revive superseded damage.
+import { hasRhiannonSpellEconomy, reconcileRhiannonSpellEconomy } from './magier/rhiannon-spell-economy.js';
+
 const FORMULA_REVISIONS = Object.freeze({
   'rhiannon-magisches-geschoss': ['2d4+2', '1d4+1'],
   'rhiannon-windklinge': ['2d6', '1d8'],
@@ -33,7 +35,13 @@ function reviseEntry(entry) {
     return { ...replaceFormula(entry, previousFormula, revision.damageFormula), ...structuredClone(revision) };
   }
   const formula = FORMULA_REVISIONS[entry?.id];
-  if (formula) return replaceFormula(entry, ...formula);
+  if (formula) {
+    const revised = replaceFormula(entry, ...formula);
+    // Rhiannon's authored damage spells add her current INT modifier, including
+    // older saved copies. Keep an explicitly chosen bonus attribute intact.
+    return { ...revised, effects: revised.effects?.map(effect => effect.type === 'damage' && effect.target !== 'self'
+      ? { ...effect, bonusAttribute: effect.bonusAttribute || 'intelligence' } : effect) };
+  }
   if (entry?.id !== 'fenrir-twin-axe-flurry') return entry;
   return {
     ...entry,
@@ -54,10 +62,11 @@ export function reconcileClassDamageCondition(condition = {}) {
 export function reconcileClassDamageRevisions(profile = {}) {
   const collections = [profile.techniques, profile.abilities, profile.magic?.spells];
   const hasCondition = profile.conditions?.some(condition => String(condition.id || '').startsWith('fenrir-berserkergang-state'));
-  if (!hasCondition && !collections.some(entries => entries?.some(entry => FORMULA_REVISIONS[entry?.id] || FENRIR_TECHNIQUE_REVISIONS[entry?.id] || entry?.id === 'fenrir-twin-axe-flurry'))) return profile;
+  const hasSpellEconomy = profile.magic?.spells?.some(hasRhiannonSpellEconomy);
+  if (!hasCondition && !hasSpellEconomy && !collections.some(entries => entries?.some(entry => FORMULA_REVISIONS[entry?.id] || FENRIR_TECHNIQUE_REVISIONS[entry?.id] || entry?.id === 'fenrir-twin-axe-flurry'))) return profile;
   return { ...profile,
     techniques: profile.techniques?.map(reviseEntry), abilities: profile.abilities?.map(reviseEntry),
     ...(profile.conditions ? { conditions: profile.conditions.map(reconcileClassDamageCondition) } : {}),
-    ...(profile.magic ? { magic: { ...profile.magic, spells: profile.magic.spells?.map(reviseEntry) } } : {})
+    ...(profile.magic ? { magic: { ...profile.magic, spells: profile.magic.spells?.map(entry => reconcileRhiannonSpellEconomy(reviseEntry(entry))) } } : {})
   };
 }

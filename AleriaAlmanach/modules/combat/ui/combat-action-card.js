@@ -1,7 +1,5 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-import { estimateCombatDamage } from '../combat-action-estimates.js?v=20260909-dragon-parent-v2';
-import { getBonusDamageFormulas } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
-import { combineDamageFormulas, buildDamageNotation } from '../rules/combat-mvp-rules.js';
+import { getCombatDamagePreview } from '../combat-action-estimates.js?v=20260909-dragon-parent-v2';
 import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
@@ -21,20 +19,10 @@ export function activationLabel(value = '') {
     'special-action': 'Besondere Aktion', passive: 'Passiv' })[String(value || '')] || 'Aktion';
 }
 
-export function getCombatDisplayStats(actor = {}) {
-  const base = String(actor.weapon?.damageFormula || '');
-  const bonusDice = base ? getBonusDamageFormulas(actor) : [];
-  const formula = bonusDice.length ? combineDamageFormulas([base, ...bonusDice]) : base;
-  const modifier = Number(actor.damageModifier) || 0;
-  let damage = formula ? `${formula}${modifier ? ` ${signedNumber(modifier)}` : ''}` : '—';
-  if (formula) {
-    try {
-      damage = buildDamageNotation(formula, modifier);
-    } catch { /* Invalid imported formulas remain visible for correction. */ }
-  }
+export function getCombatDisplayStats(actor = {}, damagePreview = getCombatDamagePreview(actor)) {
   return {
     attack: actor.actionResolutionMode === 'automatic' ? 'Automatisch' : signedNumber(actor.attackModifier),
-    damage: damage.toUpperCase().replace(/D/g, 'W'),
+    damage: (damagePreview?.notation || '—').toUpperCase().replace(/D/g, 'W'),
     activation: activationLabel(actor.selectedAction?.activationType)
   };
 }
@@ -128,24 +116,28 @@ export function renderActionDetails(actor = {}, { open = false } = {}) {
   </details>`;
 }
 
-function renderValue(label, value, note = '') {
-  return `<div class="combat-action-value"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ''}</div>`;
+function renderValue(label, value, note = '', className = '') {
+  return `<div class="combat-action-value${className ? ` ${escapeHtml(className)}` : ''}"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ''}</div>`;
 }
 
 export function renderCombatValueStrip(actor = {}) {
   if (actor.selectedAction?.kind === 'equipment-switch') {
     return '<p class="combat-action-notice">Kein Angriffswurf. Die Waffe wird beim Eintragen gewechselt.</p>';
   }
-  const stats = getCombatDisplayStats(actor);
-  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, actor.weapon?.damageFormula ? actor.weapon.damageType || '' : '')}${renderDamageAverage(actor)}</div>`;
+  const damage = getCombatDamagePreview(actor);
+  const stats = getCombatDisplayStats(actor, damage);
+  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, damage?.damageType)}${renderDamageAverage(damage)}</div>`;
 }
 
-function renderDamageAverage(actor) {
-  const average = estimateCombatDamage(actor);
+function renderDamageAverage(damage) {
+  const average = damage?.average;
   return average == null ? '' : `<div class="combat-damage-average" title="Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.">${renderValue('Ø Schaden', average.toLocaleString('de-DE', { maximumFractionDigits: 2 }), 'Normaler Haupttreffer · vor Abwehr')}</div>`;
 }
 
 export function renderMagicValueStrip(actor = {}) {
   const stats = getMagicDisplayStats(actor);
-  return `<div class="combat-action-values combat-action-values--magic" aria-label="Zauberwerte">${renderValue('Zauber-SG', stats.saveDc)}${renderValue('Zauber-Treffer', signedNumber(stats.spellAttack))}${renderValue('Auflösung', stats.resolutionLabel, stats.cantrip ? 'Zaubertrick' : stats.spellLevelLabel)}${renderDamageAverage(actor)}</div>`;
+  const damage = getCombatDamagePreview(actor);
+  const damageNote = damage ? [damage.damageType, `Schadensmod. ${signedNumber(damage.modifier)}`].filter(Boolean).join(' · ') : '';
+  const damageValue = damage ? renderValue('Schaden', getCombatDisplayStats(actor, damage).damage, damageNote) : '';
+  return `<div class="combat-action-values combat-action-values--magic" aria-label="Zauberwerte">${renderValue('Zauber-SG', stats.saveDc)}${renderValue('Zauber-Treffer', signedNumber(stats.spellAttack))}${renderValue('Auflösung', stats.resolutionLabel, stats.cantrip ? 'Zaubertrick' : stats.spellLevelLabel, 'combat-action-value--resolution')}${damageValue}${renderDamageAverage(damage)}</div>`;
 }

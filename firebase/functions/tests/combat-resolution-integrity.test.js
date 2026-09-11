@@ -1,11 +1,40 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFile } from 'node:fs/promises';
 
 import { resolveCombatProfile, validateCombatActorProfile } from '../src/generated/combat/combat-profile-resolver.js';
 import { CombatResolutionService } from '../src/generated/combat/combat-resolution-service.js';
 import { ProvidedDiceAdapter } from '../src/mechanics/provided-dice-adapter.js';
 import { getEffectiveCombatSegmentKind } from '../src/generated/combat/combat-segment-model.js';
 import { withEquippedCombatWeapon } from '../src/generated/combat/combat-equipment-state.js';
+
+test('server recalculates Rhiannon INT damage and action packages from an old profile and raw dice', async () => {
+  const source = JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/rhiannon-draig.json', import.meta.url), 'utf8')).character;
+  for (const spell of source.combatProfile.magic.spells) {
+    for (const effect of spell.effects) delete effect.bonusAttribute;
+    spell.activationType = 'action';
+    spell.costs = [{ resourceId: 'action', amount: 1 }, ...spell.costs.filter(cost => cost.resourceId === 'mana-focus')];
+  }
+  const target = resolveCombatProfile(character('target', { hitPoints: { current: 60, maximumOverride: 60 } }));
+  for (const [id, castLevel, natural, diceResults, total] of [
+    ['druckstoss', 1, 1, [2], 7], ['druckstoss', 1, 20, [2], 3],
+    ['magisches-geschoss', 3, 1, [2, 3, 4], 15], ['hundert-klingen-sturm', 3, 1, [1, 2, 3], 11]
+  ]) {
+    const actor = resolveCombatProfile(source, { actionId: `spell:rhiannon-${id}`, segmentKind: 'spell', castLevel });
+    const submitted = { attack: { naturalRoll: natural, diceResults: [natural] }, damage: { diceResults, total: 999, modifier: 999 } };
+    const result = await new CombatResolutionService(new ProvidedDiceAdapter(submitted)).resolveAttack({ actor, target });
+    assert.equal(result.damage.total, total);
+    assert.equal(result.damage.modifier, id === 'magisches-geschoss' ? 6 : 5);
+    const actions = id === 'druckstoss' ? ['reaction', 'bonus-action']
+      : id === 'magisches-geschoss' ? ['action', 'bonus-action'] : ['action', 'special-action', 'reaction'];
+    assert.deepEqual(actor.resourceCosts.filter(cost => cost.resourceId !== 'mana-focus').map(cost => cost.resourceId), actions);
+    for (const resourceId of ['action', 'bonus-action', 'reaction', 'special-action']) {
+      const before = result.actorResourceSnapshot.before.find(resource => resource.id === resourceId).current;
+      const after = result.actorResourceSnapshot.after.find(resource => resource.id === resourceId).current;
+      assert.equal(before - after, actions.includes(resourceId) ? 1 : 0, `${id}: ${resourceId}`);
+    }
+  }
+});
 
 test('server resolves weapon-bound attacks from the weapon selected by scene state', () => {
   const source = character('actor', {

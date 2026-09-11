@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "type": "aleria-spell-attack-library",
-  "generatedAt": "2026-09-09T19:04:20.115Z",
+  "generatedAt": "2026-09-11T20:18:08.424Z",
   "notes": "Sammlung aller Zauber, Techniken und besonderen Fähigkeiten, die bislang für Spielercharaktere gebaut wurden - als Fundus für künftige Charaktere derselben Klasse/Waffe/Zauberschule. Direkt aus den Charakter-Archiv-Exporten zusammengestellt; jede Kopie trägt sourceCharacter/sourceClassId zur Herkunft. Änderungen hier wirken sich NICHT auf die lebenden Charaktere aus (keine Referenz, reine Ablage). Zum Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs (CHARACTERS-Liste im Skript um neue Charaktere ergänzen).",
   "byClass": {
     "teulu": {
@@ -6079,6 +6079,13 @@
               "scope": "comment"
             },
             {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
               "id": "rhiannon-magierhand-mana-cost",
               "resourceId": "mana-focus",
               "name": "Mana",
@@ -6107,7 +6114,7 @@
           "slotResourceId": "",
           "slotCost": 0,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "bonus-action",
           "resolutionType": "automatic",
           "saveAttribute": "intelligence",
           "halfDamageOnSave": false,
@@ -6128,9 +6135,9 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6163,7 +6170,7 @@
           "slotResourceId": "",
           "slotCost": 0,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "bonus-action",
           "resolutionType": "automatic",
           "saveAttribute": "intelligence",
           "halfDamageOnSave": false,
@@ -6184,9 +6191,9 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6219,7 +6226,7 @@
           "slotResourceId": "",
           "slotCost": 0,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "bonus-action",
           "resolutionType": "automatic",
           "saveAttribute": "intelligence",
           "halfDamageOnSave": false,
@@ -6240,9 +6247,9 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6299,6 +6306,13 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6378,6 +6392,13 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6561,7 +6582,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -6577,6 +6599,13 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6609,7 +6638,7 @@
           "slotResourceId": "spell-slot-1",
           "slotCost": 1,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "reaction",
           "resolutionType": "automatic",
           "saveAttribute": "intelligence",
           "halfDamageOnSave": false,
@@ -6630,9 +6659,9 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6808,7 +6837,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -6856,7 +6886,7 @@
           "slotResourceId": "spell-slot-1",
           "slotCost": 1,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "reaction",
           "resolutionType": "saving-throw",
           "saveAttribute": "strength",
           "halfDamageOnSave": true,
@@ -6887,7 +6917,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -6900,9 +6931,16 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -6935,7 +6973,7 @@
           "slotResourceId": "spell-slot-2",
           "slotCost": 1,
           "presentationKind": "spell",
-          "activationType": "action",
+          "activationType": "bonus-action",
           "resolutionType": "automatic",
           "saveAttribute": "intelligence",
           "halfDamageOnSave": false,
@@ -6956,9 +6994,9 @@
           },
           "costs": [
             {
-              "id": "activation-action",
-              "resourceId": "action",
-              "name": "Aktion",
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -7083,6 +7121,13 @@
               "scope": "comment"
             },
             {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
               "id": "rhiannon-spiegelbilder-mana-cost",
               "resourceId": "mana-focus",
               "name": "Mana",
@@ -7203,6 +7248,13 @@
               "scope": "comment"
             },
             {
+              "id": "activation-special-action",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            },
+            {
               "id": "rhiannon-person-festhalten-mana-cost",
               "resourceId": "mana-focus",
               "name": "Mana",
@@ -7318,7 +7370,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -7334,6 +7387,13 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -7397,7 +7457,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -7413,6 +7474,20 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -7473,6 +7548,13 @@
               "scope": "comment"
             },
             {
+              "id": "activation-bonus-action",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
               "id": "rhiannon-gegenzauber-mana-cost",
               "resourceId": "mana-focus",
               "name": "Mana",
@@ -7525,6 +7607,13 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -7588,7 +7677,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": true,
@@ -7604,6 +7694,20 @@
               "id": "activation-action",
               "resourceId": "action",
               "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "activation-special-action",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            },
+            {
+              "id": "activation-reaction",
+              "resourceId": "reaction",
+              "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
@@ -7667,7 +7771,8 @@
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "",
+              "bonusAttribute": "intelligence"
             }
           ],
           "concentration": false,
@@ -7685,6 +7790,13 @@
               "name": "Aktion",
               "amount": 1,
               "scope": "comment"
+            },
+            {
+              "id": "activation-special-action",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
             },
             {
               "id": "rhiannon-blitzfunken-mana-cost",
@@ -8263,6 +8375,13 @@
             "scope": "comment"
           },
           {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
             "id": "rhiannon-magierhand-mana-cost",
             "resourceId": "mana-focus",
             "name": "Mana",
@@ -8291,7 +8410,7 @@
         "slotResourceId": "",
         "slotCost": 0,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "bonus-action",
         "resolutionType": "automatic",
         "saveAttribute": "intelligence",
         "halfDamageOnSave": false,
@@ -8312,9 +8431,9 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -8487,6 +8606,13 @@
             "scope": "comment"
           },
           {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
             "id": "rhiannon-gegenzauber-mana-cost",
             "resourceId": "mana-focus",
             "name": "Mana",
@@ -8543,6 +8669,13 @@
             "scope": "comment"
           },
           {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
             "id": "rhiannon-magie-bannen-mana-cost",
             "resourceId": "mana-focus",
             "name": "Mana",
@@ -8573,7 +8706,7 @@
         "slotResourceId": "",
         "slotCost": 0,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "bonus-action",
         "resolutionType": "automatic",
         "saveAttribute": "intelligence",
         "halfDamageOnSave": false,
@@ -8594,9 +8727,9 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -8653,6 +8786,13 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -8777,6 +8917,13 @@
             "scope": "comment"
           },
           {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
             "id": "rhiannon-spiegelbilder-mana-cost",
             "resourceId": "mana-focus",
             "name": "Mana",
@@ -8897,6 +9044,13 @@
             "scope": "comment"
           },
           {
+            "id": "activation-special-action",
+            "resourceId": "special-action",
+            "name": "Besondere Aktion",
+            "amount": 1,
+            "scope": "persistent"
+          },
+          {
             "id": "rhiannon-person-festhalten-mana-cost",
             "resourceId": "mana-focus",
             "name": "Mana",
@@ -8927,7 +9081,7 @@
         "slotResourceId": "",
         "slotCost": 0,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "bonus-action",
         "resolutionType": "automatic",
         "saveAttribute": "intelligence",
         "halfDamageOnSave": false,
@@ -8948,9 +9102,9 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9014,7 +9168,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9030,6 +9185,13 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9093,7 +9255,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9141,7 +9304,7 @@
         "slotResourceId": "spell-slot-1",
         "slotCost": 1,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "reaction",
         "resolutionType": "saving-throw",
         "saveAttribute": "strength",
         "halfDamageOnSave": true,
@@ -9172,7 +9335,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9185,9 +9349,16 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9251,7 +9422,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9267,6 +9439,13 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9330,7 +9509,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9346,6 +9526,20 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9409,7 +9603,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": true,
@@ -9425,6 +9620,20 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-special-action",
+            "resourceId": "special-action",
+            "name": "Besondere Aktion",
+            "amount": 1,
+            "scope": "persistent"
+          },
+          {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9488,7 +9697,8 @@
             "concentration": false,
             "channelComments": 0,
             "nonlethal": false,
-            "notes": ""
+            "notes": "",
+            "bonusAttribute": "intelligence"
           }
         ],
         "concentration": false,
@@ -9506,6 +9716,13 @@
             "name": "Aktion",
             "amount": 1,
             "scope": "comment"
+          },
+          {
+            "id": "activation-special-action",
+            "resourceId": "special-action",
+            "name": "Besondere Aktion",
+            "amount": 1,
+            "scope": "persistent"
           },
           {
             "id": "rhiannon-blitzfunken-mana-cost",
@@ -9585,6 +9802,13 @@
             "id": "activation-action",
             "resourceId": "action",
             "name": "Aktion",
+            "amount": 1,
+            "scope": "comment"
+          },
+          {
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9737,7 +9961,7 @@
         "slotResourceId": "spell-slot-1",
         "slotCost": 1,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "reaction",
         "resolutionType": "automatic",
         "saveAttribute": "intelligence",
         "halfDamageOnSave": false,
@@ -9758,9 +9982,9 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-reaction",
+            "resourceId": "reaction",
+            "name": "Reaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -9849,7 +10073,7 @@
         "slotResourceId": "spell-slot-2",
         "slotCost": 1,
         "presentationKind": "spell",
-        "activationType": "action",
+        "activationType": "bonus-action",
         "resolutionType": "automatic",
         "saveAttribute": "intelligence",
         "halfDamageOnSave": false,
@@ -9870,9 +10094,9 @@
         },
         "costs": [
           {
-            "id": "activation-action",
-            "resourceId": "action",
-            "name": "Aktion",
+            "id": "activation-bonus-action",
+            "resourceId": "bonus-action",
+            "name": "Bonusaktion",
             "amount": 1,
             "scope": "comment"
           },
@@ -15398,6 +15622,13 @@
           "scope": "comment"
         },
         {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
           "id": "rhiannon-magierhand-mana-cost",
           "resourceId": "mana-focus",
           "name": "Mana",
@@ -15426,7 +15657,7 @@
       "slotResourceId": "",
       "slotCost": 0,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "bonus-action",
       "resolutionType": "automatic",
       "saveAttribute": "intelligence",
       "halfDamageOnSave": false,
@@ -15447,9 +15678,9 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15482,7 +15713,7 @@
       "slotResourceId": "",
       "slotCost": 0,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "bonus-action",
       "resolutionType": "automatic",
       "saveAttribute": "intelligence",
       "halfDamageOnSave": false,
@@ -15503,9 +15734,9 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15538,7 +15769,7 @@
       "slotResourceId": "",
       "slotCost": 0,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "bonus-action",
       "resolutionType": "automatic",
       "saveAttribute": "intelligence",
       "halfDamageOnSave": false,
@@ -15559,9 +15790,9 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15618,6 +15849,13 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15697,6 +15935,13 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15880,7 +16125,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -15896,6 +16142,13 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -15928,7 +16181,7 @@
       "slotResourceId": "spell-slot-1",
       "slotCost": 1,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "reaction",
       "resolutionType": "automatic",
       "saveAttribute": "intelligence",
       "halfDamageOnSave": false,
@@ -15949,9 +16202,9 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16127,7 +16380,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -16175,7 +16429,7 @@
       "slotResourceId": "spell-slot-1",
       "slotCost": 1,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "reaction",
       "resolutionType": "saving-throw",
       "saveAttribute": "strength",
       "halfDamageOnSave": true,
@@ -16206,7 +16460,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -16219,9 +16474,16 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16254,7 +16516,7 @@
       "slotResourceId": "spell-slot-2",
       "slotCost": 1,
       "presentationKind": "spell",
-      "activationType": "action",
+      "activationType": "bonus-action",
       "resolutionType": "automatic",
       "saveAttribute": "intelligence",
       "halfDamageOnSave": false,
@@ -16275,9 +16537,9 @@
       },
       "costs": [
         {
-          "id": "activation-action",
-          "resourceId": "action",
-          "name": "Aktion",
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16402,6 +16664,13 @@
           "scope": "comment"
         },
         {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
           "id": "rhiannon-spiegelbilder-mana-cost",
           "resourceId": "mana-focus",
           "name": "Mana",
@@ -16522,6 +16791,13 @@
           "scope": "comment"
         },
         {
+          "id": "activation-special-action",
+          "resourceId": "special-action",
+          "name": "Besondere Aktion",
+          "amount": 1,
+          "scope": "persistent"
+        },
+        {
           "id": "rhiannon-person-festhalten-mana-cost",
           "resourceId": "mana-focus",
           "name": "Mana",
@@ -16637,7 +16913,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -16653,6 +16930,13 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16716,7 +17000,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -16732,6 +17017,20 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16792,6 +17091,13 @@
           "scope": "comment"
         },
         {
+          "id": "activation-bonus-action",
+          "resourceId": "bonus-action",
+          "name": "Bonusaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
           "id": "rhiannon-gegenzauber-mana-cost",
           "resourceId": "mana-focus",
           "name": "Mana",
@@ -16844,6 +17150,13 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16907,7 +17220,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": true,
@@ -16923,6 +17237,20 @@
           "id": "activation-action",
           "resourceId": "action",
           "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-special-action",
+          "resourceId": "special-action",
+          "name": "Besondere Aktion",
+          "amount": 1,
+          "scope": "persistent"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
           "amount": 1,
           "scope": "comment"
         },
@@ -16986,7 +17314,8 @@
           "concentration": false,
           "channelComments": 0,
           "nonlethal": false,
-          "notes": ""
+          "notes": "",
+          "bonusAttribute": "intelligence"
         }
       ],
       "concentration": false,
@@ -17004,6 +17333,13 @@
           "name": "Aktion",
           "amount": 1,
           "scope": "comment"
+        },
+        {
+          "id": "activation-special-action",
+          "resourceId": "special-action",
+          "name": "Besondere Aktion",
+          "amount": 1,
+          "scope": "persistent"
         },
         {
           "id": "rhiannon-blitzfunken-mana-cost",

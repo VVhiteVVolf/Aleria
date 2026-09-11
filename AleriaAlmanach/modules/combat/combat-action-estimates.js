@@ -1,7 +1,7 @@
 import { getCombatRollContext } from './combat-resolution-service.js?v=20260909-dragon-parent-v2';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js?v=20260909-dragon-parent-v2';
-import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js';
-import { getBonusDamageFormulas, getUniversalDamageBonus } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { parseDamageFormula, combineDamageFormulas, buildDamageNotation } from './rules/combat-mvp-rules.js';
+import { getBonusDamageFormulas, getUniversalDamageBonus, getCombatEffectAttributeModifier } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 
 export function estimateCombatHitChance(actor, target, options = {}) {
   if (!actor || !target || actor.selectedAction?.compatible === false || actor.equipmentPreparation?.error
@@ -37,16 +37,34 @@ export function averageDamageFormula(formula, bonus = 0) {
   return distribution.reduce((sum, weight, value) => sum + weight * Math.max(0, value + modifier), 0);
 }
 
-export function estimateCombatDamage(actor = {}) {
+// Formula and mean describe the same normal main hit as the damage resolver.
+// Structured effects take precedence over the legacy weapon/roll formula.
+export function getCombatDamagePreview(actor = {}) {
   if (actor.selectedAction?.kind === 'equipment-switch') return null;
   const effects = actor.selectedAction?.effects || [];
   const primary = effects.find(effect => effect.type === 'damage' && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
   if (effects.length && !primary) return null;
-  if (primary?.amount > 0 && !primary.formula) return Number(primary.amount) + getUniversalDamageBonus(actor);
+  const damageType = primary?.damageType || actor.weapon?.damageType || '';
+  if (primary?.amount > 0 && !primary.formula) {
+    const modifier = getUniversalDamageBonus(actor);
+    const average = Number(primary.amount) + modifier;
+    return { notation: String(average), modifier, damageType, average };
+  }
   const formula = primary?.formula || actor.weapon?.damageFormula;
   if (!formula) return null;
-  try { return averageDamageFormula(combineDamageFormulas([formula, ...getBonusDamageFormulas(actor)]), actor.damageModifier); }
-  catch { return null; }
+  const formulas = [formula, ...getBonusDamageFormulas(actor)];
+  const modifier = (Number(actor.damageModifier) || 0) + getCombatEffectAttributeModifier(actor, primary);
+  try {
+    const combined = combineDamageFormulas(formulas);
+    return { notation: buildDamageNotation(combined, modifier), modifier, damageType, average: averageDamageFormula(combined, modifier) };
+  } catch {
+    // Invalid imported formulas remain visible for correction, without a guessed mean.
+    return { notation: `${formulas.join('+')}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`, modifier, damageType, average: null };
+  }
+}
+
+export function estimateCombatDamage(actor = {}) {
+  return getCombatDamagePreview(actor)?.average ?? null;
 }
 
 export function formatCombatChance(chance) {

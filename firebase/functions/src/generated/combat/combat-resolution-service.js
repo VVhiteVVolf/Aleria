@@ -4,6 +4,7 @@ import {
   getAuraTargetMechanics,
   getBonusDamageFormulas,
   getUniversalDamageBonus,
+  getCombatEffectAttributeModifier,
   getEffectiveCombatAttribute,
   getAttributeModifier,
   getSavingThrowTotal,
@@ -432,7 +433,8 @@ export class CombatResolutionService {
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
       const bonusDamageFormulas = (attack.hit && baseEffectFormula && primaryDamageEffect.target !== 'self') ? getBonusDamageFormulas(actor) : [];
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
-      const primaryDamageBonus = primaryDamageEffect.target === 'self' ? 0 : damageBonus;
+      const primaryDamageBonus = (primaryDamageEffect.target === 'self' ? 0 : damageBonus)
+        + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
       const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, attack.criticalSuccess) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
@@ -642,7 +644,7 @@ export class CombatResolutionService {
       if (effect.formula && !(effect.type === 'damage' && !consumedPrimaryDamage && damageRoll)) {
         roll = await this.dice.rollDamage({
           damageFormula: effect.formula,
-          bonus: effect.bonusAttribute ? getAttributeModifier(getEffectiveCombatAttribute(actor, effect.bonusAttribute)) : 0,
+          bonus: getCombatEffectAttributeModifier(actor, effect),
           critical: effect.type === 'damage' && attack.criticalSuccess,
           actorName: actor.name,
           targetName: target.name,
