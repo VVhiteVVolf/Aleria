@@ -8,35 +8,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Creepster&family=Eagle+Lake&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Fredericka+the+Great&family=Homemade+Apple&family=IM+Fell+English+SC&family=Macondo&family=MedievalSharp&family=Pirata+One&family=Rock+Salt&family=Shadows+Into+Light&family=Special+Elite&family=Uncial+Antiqua&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="DokumentenWerkstatt/css/werkstatt.css">
+<link rel="stylesheet" href="../Bestiarium/modules/book-reader/book-reader.css">
+<link rel="stylesheet" href="DokumentenWerkstatt/css/document.css">
+<link rel="stylesheet" href="DokumentenWerkstatt/css/workshop-studio.css">
 </head>
 <body>
 <div class="app">
   <header class="topbar">
     <div class="brand">
-      <div class="brand-kicker">Aleria Almanach</div>
+      <a class="brand-kicker" href="AleriaAlmanach.html">← Aleria Almanach</a>
       <h1>Dokumentenwerkstatt</h1>
     </div>
-    <div class="status" id="status">Bereit.</div>
+    <div class="status" id="status" role="status" aria-live="polite">Deine Geschichten. Dein Schriftbild.</div>
     <div class="topbar-actions">
       <button class="btn" type="button" data-workshop-action="new-document">Neu</button>
-      <button class="btn" type="button" data-workshop-action="save-draft">Entwurf speichern</button>
-      <button class="btn" type="button" data-workshop-action="load-draft">Entwurf laden</button>
-      <button class="btn" type="button" data-workshop-action="export-json">JSON</button>
-      <label class="btn" for="json-import">Import</label>
-      <input id="json-import" type="file" accept="application/json" hidden data-workshop-action="import-json">
-      <button class="btn primary" type="button" data-workshop-action="export-html">HTML exportieren</button>
+      <button class="btn" type="button" data-collection-action="save">In Sammlung speichern</button>
+      <button class="btn" type="button" data-collection-action="queue">Für Upload vormerken</button>
+      <button class="btn primary" type="button" data-enhance-action="export-png">PNG exportieren ↗</button>
     </div>
   </header>
 
   <main class="workspace">
     <section class="editor-pane">
       <div class="editor-inner">
+        <div class="studio-intro"><span class="studio-eyebrow">Das Skriptorium</span><h2>Worte werden<br>zu Fundstücken.</h2><p>Briefe, verbotene Schriften und Spuren aus Aleria. Erschaffe ein Dokument mit Geschichte.</p></div>
         <nav class="editor-tabs" aria-label="Werkzeugbereiche">
           <button class="tab-btn active" type="button" data-tab="document" data-workshop-action="switch-editor-tab">Dokument</button>
           <button class="tab-btn" type="button" data-tab="style" data-workshop-action="switch-editor-tab">Schrift</button>
           <button class="tab-btn" type="button" data-tab="paper" data-workshop-action="switch-editor-tab">Papier</button>
           <button class="tab-btn" type="button" data-tab="text" data-workshop-action="switch-editor-tab">Text</button>
           <button class="tab-btn" type="button" data-tab="export" data-workshop-action="switch-editor-tab">Export</button>
+          <button class="tab-btn" type="button" data-tab="library" data-workshop-action="switch-editor-tab">Sammlung</button>
         </nav>
 
         <section class="section editor-panel active" data-panel="document">
@@ -50,7 +52,7 @@
                 <option value="letter">Brief</option>
                 <option value="book">Buch / Seiten</option>
                 <option value="note">Zerrissene Notiz</option>
-                <option value="wanted">Fahndung</option>
+                <option value="wanted">Steckbrief / Plakat</option>
               </select>
             </div>
             <div class="field" data-field-key="preset">
@@ -68,8 +70,9 @@
             </div>
             <div class="field" data-field-key="slug">
               <label for="doc-slug">Dateiname / Link</label>
-              <input id="doc-slug" type="text" placeholder="archivnotiz-aelira">
+              <input id="doc-slug" type="text" placeholder="archivnotiz-aelira" maxlength="80">
             </div>
+            <div class="field wide"><label for="doc-category">Sammlung / Kategorie</label><input id="doc-category" placeholder="z. B. Chroniken von Cenyr"></div>
             <div class="field wide" data-field-key="title">
               <label for="doc-title">Titel</label>
               <input id="doc-title" type="text" value="Archivnotiz oder Dokument">
@@ -125,6 +128,7 @@
             </div>
           </div>
 
+          <div class="upload-strip"><label for="image-upload-target">Bild einfügen als</label><select id="image-upload-target"><option value="doc-image">Hauptbild</option><option value="doc-signature-image">Signatur</option><option value="doc-emblem-image">Siegel / Emblem</option><option value="doc-watermark-image">Wasserzeichen</option></select><label class="btn" for="local-image">Bilddatei einfügen</label><input id="local-image" type="file" accept="image/png,image/jpeg,image/webp" data-enhance-file="image" hidden><p class="hint">Bis 2 MB. PNG-Transparenz bleibt erhalten.</p></div>
           <div class="media-slots" data-field-key="media">
             <div class="media-slot" data-media-slot="signature">
               <div class="media-slot-head">
@@ -241,25 +245,34 @@
             </div>
             <div class="field">
               <label for="doc-font-size">Textgröße <span id="font-size-label">18px</span></label>
-              <input id="doc-font-size" type="range" min="14" max="30" step="1" value="18">
+              <input id="doc-font-size" type="range" min="12" max="48" step="1" value="18">
             </div>
           </div>
+          <div class="font-upload"><span class="studio-eyebrow">Deine Schrift, deine Welt</span><p>Die acht Schriften Alerias stehen direkt in der Auswahl. Weitere Schriftdateien kannst du hier hinzufügen.</p><label class="btn" for="custom-font-file">Eigene Schrift laden</label><input id="custom-font-file" type="file" accept=".woff2,.woff,.ttf,.otf" data-enhance-file="font" hidden><p class="hint" id="custom-font-name">WOFF2, WOFF, TTF oder OTF · bis 1,4 MB</p></div>
+          <div class="grid">
+            <div class="field"><label for="doc-ink">Tintenfarbe</label><input id="doc-ink" type="color" value="#302315"></div>
+            <div class="field"><label for="doc-line-height">Zeilenabstand</label><input id="doc-line-height" type="range" min="1.1" max="2.5" step="0.05" value="1.75"></div>
+            <div class="field wide"><label for="doc-letter-spacing">Zeichenabstand</label><input id="doc-letter-spacing" type="range" min="0" max="5" step="0.1" value="0"></div>
+          </div>
+          <p class="hint">Schreibe mit normalen Buchstaben: Die Schrift setzt sie in ihre Zeichen um. „Übersetzen“ zeigt deinen ursprünglichen Text. Für eingefügte Sonderzeichen kannst du eine eigene Lesefassung hinterlegen.</p>
         </section>
 
         <section class="section editor-panel" data-panel="paper">
           <div class="section-head">
-            <div class="section-title">Papier & Rahmen</div>
+            <div class="section-title">Pergamentatelier</div>
           </div>
+          <div class="paper-hero"><span>Material mit Geschichte</span><p>Echte Fasern. Verwitterte Kanten.<br>Jedes Blatt ein Unikat.</p></div>
+          <div data-role="paper-palette" class="paper-palette" aria-label="Pergamentfarben"></div>
           <div class="grid">
             <div class="field">
               <label for="doc-background">Hintergrund</label>
               <select id="doc-background">
-                <option value="parchment">Pergament</option>
+                <option value="generated">Eigenes Pergament</option><option value="parchment">Pergament</option>
                 <option value="aged">Fleckiges Papier</option>
                 <option value="fibers">Faserpapier</option>
                 <option value="plain">Hell schlicht</option>
                 <option value="dark">Dunkles Archivpapier</option>
-                <option value="custom">Imgur-Textur</option>
+                <option value="custom">Eigene Bildtextur</option>
               </select>
             </div>
             <div class="field">
@@ -272,17 +285,24 @@
                 <option value="ornate">Schmuckrahmen</option>
               </select>
             </div>
+            <div class="field"><label for="doc-paper-color">Papierfarbe</label><select id="doc-paper-color"><option value="ivory">Elfenbein</option><option value="honey">Honiggold</option><option value="rose">Altrosa</option><option value="sage">Salbei</option><option value="frost">Frostblau</option><option value="ash">Asche</option></select></div>
+            <div class="field"><label for="doc-paper-edge">Papierkanten</label><select id="doc-paper-edge"><option value="straight">Gerade geschnitten</option><option value="deckle">Büttenrand · transparent</option><option value="torn">Angerissen · transparent</option><option value="burnt">Brandrand · transparent</option></select></div>
+            <div class="field"><label for="doc-paper-age">Alterung & Flecken</label><input id="doc-paper-age" type="range" min="0" max="100" value="25"></div>
+            <div class="field"><label for="doc-paper-seed">Pergamentvariante</label><input id="doc-paper-seed" type="number" min="1" max="999999" value="17"></div>
+            <div class="field wide"><div class="export-grid"><button type="button" class="btn primary" data-enhance-action="generate-paper">Neues Pergament erzeugen</button><button type="button" class="btn" data-enhance-action="download-paper">Hintergrund als PNG</button></div></div>
             <div class="field wide">
               <label for="doc-texture">Eigene Textur</label>
               <input id="doc-texture" type="url" placeholder="https://i.imgur.com/...">
             </div>
+            <div class="field wide"><label class="btn" for="local-texture">Eigene Textur hochladen</label><input id="local-texture" type="file" accept="image/png,image/jpeg,image/webp" data-enhance-file="image" data-target="doc-texture" hidden></div>
+            <div class="field wide"><label for="doc-padding">Innenabstand</label><input id="doc-padding" type="range" min="32" max="140" step="4" value="64"></div>
             <div class="field wide">
               <label for="doc-width">Dokumentbreite <span id="width-label">820px</span></label>
               <input id="doc-width" type="range" min="520" max="1200" step="20" value="820">
             </div>
             <div class="field wide">
               <label for="doc-height">Dokumenthöhe <span id="height-label">780px</span></label>
-              <input id="doc-height" type="range" min="360" max="1200" step="20" value="780">
+              <input id="doc-height" type="range" min="360" max="1800" step="20" value="780">
             </div>
           </div>
         </section>
@@ -316,14 +336,18 @@
           </div>
           <div class="book-manager" id="book-manager" aria-label="Buchseiten verwalten"></div>
           <div id="doc-editor" class="rich-editor" contenteditable="true" spellcheck="true"></div>
-          <div class="hint">Die Formatierung ist direkt im Text. Keine BB-Codes. Bei Buch-Vorlagen bearbeitest du jeweils die aktive Seite.</div>
+          <details class="translation-editor"><summary>Eigene Übersetzung / Lesefassung</summary><label for="doc-translation">Optional für Runen, Sonderzeichen oder fremdsprachige Texte</label><textarea id="doc-translation" rows="7" placeholder="Leer lassen, um den Originaltext in normalen Buchstaben anzuzeigen."></textarea></details>
+          <div class="hint">Die Formatierung ist direkt im Text. Keine BB-Codes. Im Buch bearbeitest du Aufzeichnungen. Der Bestiarium-Buchleser setzt daraus automatisch vollständige Buchseiten; Kapitel beginnen auf einer neuen Seite.</div>
         </section>
 
         <section class="section editor-panel" data-panel="export">
           <div class="section-head">
-            <div class="section-title">Export & Entwuerfe</div>
+            <div class="section-title">Export & Sicherung</div>
           </div>
-          <div class="export-grid">
+          <div class="export-feature"><span class="studio-eyebrow">Bereit für deine Spielrunde</span><h3>Ein Fundstück zum Mitnehmen.</h3><p>Hochauflösende PNGs mit echten transparenten Papierkanten. Bücher auch als Paket aller gesetzten Seiten mit Einband.</p>
+            <div class="grid"><div class="field"><label for="png-scale">Auflösung</label><select id="png-scale"><option value="1">1× · Vorschau</option><option value="2">2× · Hoch</option><option value="3" selected>3× · Sehr hoch</option><option value="4">4× · Maximal</option></select></div><div class="field"><label for="png-pages">Buchumfang</label><select id="png-pages"><option value="current">Aktuelle Buchseite</option><option value="all">Alle Buchseiten (ZIP)</option></select></div></div>
+            <label class="check-label"><input id="png-readable" type="checkbox"> PNG in lesbarer Schrift</label><p class="hint" data-role="png-size"></p><button class="btn primary" type="button" data-enhance-action="export-png">PNG exportieren ↗</button>
+          </div><div class="export-grid">
             <button class="btn" type="button" data-workshop-action="save-draft">Entwurf speichern</button>
             <button class="btn" type="button" data-workshop-action="load-draft">Entwurf laden</button>
             <button class="btn" type="button" data-workshop-action="load-autosave">Autosave laden</button>
@@ -333,11 +357,25 @@
             <button class="btn primary" type="button" data-workshop-action="export-html">HTML exportieren</button>
           </div>
           <div class="snippet-box">
-            <label for="snippet-output">Almanach-Link</label>
+            <label for="snippet-output">Almanach-Link nach Veröffentlichung</label>
             <textarea id="snippet-output" readonly spellcheck="false"></textarea>
             <button class="btn" type="button" data-workshop-action="copy-snippet">Snippet kopieren</button>
+            <p class="hint">Der Link wird nach dem gemeinsamen Upload und der Aktualisierung der Website erreichbar.</p>
           </div>
-          <div class="hint">Der HTML-Export bettet die Werkstatt-CSS ein, damit das Dokument auch ausserhalb des Editors seine Gestaltung behaelt.</div>
+          <div class="hint">Der HTML-Export bettet die Werkstatt-CSS ein, damit das Dokument auch außerhalb des Editors seine Gestaltung behält.</div>
+        </section>
+        <section class="section editor-panel" data-panel="library">
+          <div class="section-head"><div class="section-title">Dein Dokumentenarchiv</div></div>
+          <p class="hint">1. In der Sammlung speichern · 2. Für Upload vormerken · 3. Gemeinsam veröffentlichen</p>
+          <div class="export-grid"><button class="btn" data-library-action="save">Aktuelles Dokument speichern</button><button class="btn primary" data-library-action="save-queue">Speichern & vormerken</button></div>
+          <div class="library-search"><label for="library-search">Sammlung durchsuchen</label><input id="library-search" type="search" data-role="library-search" placeholder="Titel, Kategorie oder Dateiname …"><label for="library-filter">Anzeigen</label><select id="library-filter" data-role="library-filter"><option value="all">Alle Dokumente</option><option value="local">Lokal gespeichert</option><option value="queued">Für Upload vorgemerkt</option><option value="published">Veröffentlicht</option></select></div>
+          <div class="queue-bar"><strong data-role="queue-count">0 vorgemerkt</strong><button class="btn primary" data-library-action="publish" data-role="publish-batch" disabled>Gemeinsam hochladen ↗</button></div>
+          <p class="hint" data-role="library-message" role="status"></p>
+          <h3 class="library-heading">Auf diesem Gerät</h3><div data-role="local-documents"></div>
+          <div class="section-head"><h3 class="library-heading">Im veröffentlichten Register</h3><button class="btn subtle" data-library-action="refresh">Aktualisieren</button></div><div data-role="published-documents"></div>
+          <label for="document-link">Dokumentenlink</label><input id="document-link" data-role="document-link" readonly placeholder="Bei einem veröffentlichten Dokument auf Link klicken.">
+          <p class="hint">Lokale Fassungen bleiben auf diesem Gerät. Nach dem GitHub-Upload sind Dokumente und eigene Schriftdateien öffentlich über die Website verfügbar. Sichere wichtige Entwürfe zusätzlich als JSON.</p>
+          <dialog class="publish-dialog"><form data-role="publish-form"><span class="studio-eyebrow">GitHub · Dokumentenregister</span><h2>Sammlung veröffentlichen</h2><p>Diese Dokumente werden gemeinsam gespeichert und erhalten feste Links:</p><pre data-role="publish-summary"></pre><label for="publish-key">Veröffentlichungsschlüssel</label><input id="publish-key" type="password" autocomplete="off" data-role="publish-key" required><p class="hint">Derselbe Schlüssel wie bei den Karten. Er wird nur für diesen Upload verwendet.</p><p data-role="publish-message" role="status"></p><div class="export-grid"><button type="button" class="btn" data-role="publish-close">Schließen</button><button type="submit" class="btn primary" data-role="publish-submit">Jetzt auf GitHub speichern</button></div></form></dialog>
         </section>
       </div>
     </section>
@@ -345,13 +383,15 @@
     <section class="preview-pane" id="preview-pane">
       <div class="preview-frame">
         <div class="preview-tools">
-          <span>Vorschau</span>
+          <div><span class="preview-label">Live-Vorschau</span><span class="document-metrics" data-role="document-metrics"></span></div>
+          <button class="btn translate-btn" type="button" data-enhance-action="translate" aria-expanded="false" aria-controls="reading-panel">Übersetzen ↔</button>
           <div class="preview-zoom">
             <button class="icon-btn" type="button" title="Verkleinern" data-workshop-action="set-preview-zoom" data-delta="-0.1">-</button>
             <button class="btn" type="button" data-workshop-action="reset-preview-zoom">Fit</button>
             <button class="icon-btn" type="button" title="Vergroessern" data-workshop-action="set-preview-zoom" data-delta="0.1">+</button>
           </div>
         </div>
+        <aside id="reading-panel" class="reading-panel" data-role="reading-panel" hidden><span class="studio-eyebrow">Übersetzung · lesbare Fassung</span><div class="reading-text"></div></aside>
         <div class="preview-scroll">
           <div id="preview"></div>
         </div>
@@ -360,7 +400,6 @@
   </main>
 </div>
 
-<script src="DokumentenWerkstatt/js/export-css.js"></script>
-<script src="DokumentenWerkstatt/js/werkstatt.js?v=20260705-event-delegation-v1"></script>
+<script type="module" src="DokumentenWerkstatt/js/werkstatt.js"></script>
 </body>
 </html>

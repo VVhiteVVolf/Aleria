@@ -295,3 +295,5 @@
   .world-date-dialog footer span { flex-basis: 100%; }
   .world-date-dialog footer button { flex: 1; }
 }
+.world-date-fields[hidden] { display: none; }
+.world-date-dialog > [data-world-date-calendar] { margin: 16px 20px; }

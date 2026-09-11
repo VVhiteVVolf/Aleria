@@ -41,7 +41,7 @@ const SCENE_TIME_EVENT_PRESETS = [
   },
   {
     key: 'next-day',
-    label: 'Naechster Tag',
+    label: 'Nächster Tag',
     title: 'Ein neuer Tag bricht an',
     timeLabel: 'Tagwechsel',
     iconMark: '+',
@@ -169,11 +169,13 @@ function normalizeSceneTimeEvent(input = {}) {
     segmentLabel: normalizeSceneTimeText(input.segmentLabel, input.dayLabel || ''),
     timeLabel: normalizeSceneTimeText(input.timeLabel, preset.timeLabel),
     anchorDay: Math.max(1, Math.floor(Number(input.anchorDay) || 1)),
-    anchorSeconds: Number.isFinite(describedAnchorSeconds) ? describedAnchorSeconds : storedAnchorSeconds,
+    anchorSeconds: Number.isFinite(storedAnchorSeconds) ? storedAnchorSeconds : describedAnchorSeconds,
+    ...(Number.isInteger(Number(input.calendarDay)) && Number(input.calendarDay) > 0 ? { calendarDay: Number(input.calendarDay) } : {}),
+    ...(typeof hasAleriaDate === 'function' && hasAleriaDate(input.calendarDate) ? { calendarDate: sanitizeAleriaDate(input.calendarDate) } : {}),
     body: normalizeSceneTimeText(input.body || input.text, ''),
     iconMark: normalizeSceneTimeText(input.iconMark, preset.iconMark),
     iconUrl: normalizeSceneTimeIconUrl(input.iconUrl || preset.iconUrl),
-    schemaVersion: 3
+    schemaVersion: 4
   };
 }
 
@@ -233,7 +235,9 @@ function buildSceneTimeline(comments = []) {
       // Die numerische Szenenuhr darf vor- oder zurueckgesetzt werden, ohne dadurch
       // stillschweigend das Welt-Datum zu veraendern. Nur ein ausdruecklicher
       // Tages-/Segmentwechsel schreibt einen neuen Aleria-Kalendertag fest.
-      if (isSceneTimeSegmentBreakEvent(event) && Number.isFinite(currentClockDay)) {
+      if (Number.isInteger(event.calendarDay) && event.calendarDay > 0) {
+        aleriaDayIndex = event.calendarDay;
+      } else if (isSceneTimeSegmentBreakEvent(event) && Number.isFinite(currentClockDay)) {
         const elapsedClockDays = previousClockDay == null
           ? Math.max(0, currentClockDay - 1)
           : Math.max(1, currentClockDay - previousClockDay);

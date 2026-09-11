@@ -1,0 +1,92 @@
+export const PRESETS = {
+  archiveLetter: {
+    template: "letter",
+    title: "Archivbrief",
+    subtitle: "Aus den Aufzeichnungen des Almanachs",
+    author: "Archivariat von Aleria",
+    font: "'EB Garamond'",
+    fontSize: 18,
+    background: "parchment",
+    border: "double",
+    width: 820,
+    height: 780
+  },
+  mageNote: {
+    template: "letter",
+    title: "Arkaner Vermerk",
+    subtitle: "Randnotiz aus einem versiegelten Konvolut",
+    author: "Unbekannter Magus",
+    font: "'Macondo'",
+    fontSize: 19,
+    background: "fibers",
+    border: "ornate",
+    width: 780,
+    height: 760
+  },
+  tavernNotice: {
+    template: "wanted",
+    title: "Aushang",
+    subtitle: "Anschlag am schwarzen Brett",
+    author: "",
+    font: "'Special Elite'",
+    fontSize: 19,
+    background: "aged",
+    border: "heavy",
+    imagePosition: "center",
+    imageSize: 360,
+    imageFrame: "heavy",
+    width: 700,
+    height: 820
+  },
+  cultFragment: {
+    template: "note",
+    title: "Zerrissenes Fragment",
+    subtitle: "",
+    author: "",
+    font: "'Creepster'",
+    fontSize: 22,
+    background: "dark",
+    border: "none",
+    width: 640,
+    height: 460
+  },
+  nobleDecree: {
+    template: "letter",
+    title: "Adelsdekret",
+    subtitle: "Im Namen des Hauses",
+    author: "Kanzlei des Hofes",
+    font: "'Cinzel'",
+    fontSize: 17,
+    background: "plain",
+    border: "ornate",
+    width: 860,
+    height: 900
+  },
+  fieldBook: {
+    template: "book",
+    title: "Forschungsbuch",
+    subtitle: "Feldaufzeichnungen und Beobachtungen",
+    author: "Chronist des Almanachs",
+    font: "'Eagle Lake'",
+    fontSize: 17,
+    background: "fibers",
+    border: "thin",
+    width: 1120,
+    height: 780
+  },
+  wantedPoster: {
+    template: "wanted",
+    title: "Steckbrief",
+    subtitle: "Gesucht im Namen der Obrigkeit",
+    author: "Stadtwache",
+    font: "'EB Garamond'",
+    fontSize: 23,
+    background: "aged",
+    border: "double",
+    imagePosition: "right",
+    imageSize: 200,
+    imageFrame: "none",
+    width: 680,
+    height: 900
+  }
+};

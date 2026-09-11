@@ -23,7 +23,7 @@ function renderSceneTimeEventBlock(eventInput, options = {}) {
   const timeLabel = event.timeLabel ? `<span>${escapeHtml(event.timeLabel)}</span>` : '';
   const body = event.body ? `<div class="scene-time-event-body">${parseCommentMarkup(event.body)}</div>` : '';
   const actions = options.commentId && !options.hideActions
-    ? `<div class="comment-narrator-actions scene-time-event-actions">${options.lockMarkup || `<button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${escapeHtml(options.commentId)}" title="Loeschen">Loeschen</button>`}</div>`
+    ? `<div class="comment-narrator-actions scene-time-event-actions">${options.lockMarkup || `<button type="button" data-scene-time-action="edit-event" data-comment-id="${escapeHtml(options.commentId)}">Bearbeiten</button><button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${escapeHtml(options.commentId)}" title="Löschen">Löschen</button>`}</div>`
     : '';
 
   return `
@@ -122,7 +122,7 @@ function ensureSceneTimeEventDialog() {
       </div>
       <div class="scene-time-event-card-body">
         <div class="scene-time-dialog-hint" data-scene-time-mode-hint style="display:none;">
-          Wird direkt nach dem gewählten Beitrag eingefügt – dieser Beitrag bleibt beim bisherigen Tag, alles danach (bis zum nächsten Tag-Marker) zählt zu diesem neu benannten Tag. Zeit/Tag der Zeitlinie sind so vorausgefüllt, dass die bisherige Zeitrechnung nicht springt.
+          Wird nach dem gewählten Beitrag eingefügt. Datum und Uhrzeit übernehmen zunächst den dortigen Stand; wähle den gewünschten Tag im Kalender.
         </div>
         <section class="scene-time-dialog-panel">
           <label>Tagesform oder Ereignis</label>
@@ -139,23 +139,24 @@ function ensureSceneTimeEventDialog() {
               <input id="ste-title" type="text" placeholder="Der Abend senkt sich">
             </label>
             <label>
-              <span>Tag / Abschnitt</span>
-              <input id="ste-day-label" type="text" placeholder="Tag 1, spaeter Abend">
+              <span>Datumsüberschrift (anpassbar)</span>
+              <input id="ste-day-label" type="text" placeholder="Wird aus dem Kalender übernommen">
             </label>
             <label>
               <span>Zeitangabe</span>
               <input id="ste-time-label" type="text" placeholder="18:30 Uhr, Abend, mehrere Stunden spaeter">
             </label>
+            <div class="scene-time-calendar-field">
+              <span>Datum in Aleria</span>
+              <div data-scene-time-calendar></div>
+              <input id="ste-anchor-day" type="hidden" value="1">
+            </div>
             <label>
-              <span>Tag der Zeitlinie</span>
-              <input id="ste-anchor-day" type="number" min="1" step="1" value="1">
-            </label>
-            <label>
-              <span>Verbindliche Uhrzeit</span>
+              <span>Verbindliche Uhrzeit · 24 Stunden</span>
               <input id="ste-anchor-time" type="text" inputmode="numeric" value="18:30:00" placeholder="HH:MM:SS" pattern="(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d)?" maxlength="8" autocomplete="off" required>
             </label>
             <label class="wide">
-              <span>Ankuendigungstext</span>
+              <span>Ankündigungstext</span>
               <textarea id="ste-body" rows="4" placeholder="Die Sonne verschwindet hinter den Mauern, und in der Szene vergeht Zeit."></textarea>
             </label>
           </div>
@@ -181,6 +182,7 @@ function ensureSceneTimeEventDialog() {
 function getSceneTimeDialogPayload() {
   const anchorTime = document.getElementById('ste-anchor-time')?.value || '';
   return normalizeSceneTimeEvent({
+    ...document.getElementById('scene-time-event-overlay')?.sceneCalendar?.getValue(),
     presetKey: document.getElementById('ste-preset')?.value || 'evening',
     title: document.getElementById('ste-title')?.value || '',
     dayLabel: document.getElementById('ste-day-label')?.value || '',
@@ -225,11 +227,9 @@ function setSceneTimePreset(presetKey) {
   if (title && !title.dataset.userEdited) title.value = preset.title;
   if (timeLabel && !timeLabel.dataset.userEdited) timeLabel.value = preset.timeLabel;
   if (dayLabel) {
-    dayLabel.placeholder = isSceneTimeSegmentBreakPreset(preset.key)
-      ? 'Leer lassen fuer Tag I, Tag II ...'
-      : 'Tag 1, spaeter Abend';
+    dayLabel.placeholder = 'Wird aus dem Kalender übernommen';
   }
-  document.querySelectorAll('[data-scene-time-preset]').forEach(btn => {
+  document.querySelectorAll('button[data-scene-time-preset]').forEach(btn => {
     const active = btn.dataset.sceneTimePreset === preset.key;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', active ? 'true' : 'false');

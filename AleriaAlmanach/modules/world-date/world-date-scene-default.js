@@ -3,6 +3,10 @@ function findSceneStartDateInComments(comments = []) {
   for (const comment of source) {
     const candidate = AleriaWorldDateModel.normalize(comment?.sceneStartDateAleria);
     if (AleriaWorldDateModel.isValid(candidate)) return candidate;
+    const marker = comment?.sceneTimeEvent;
+    if (AleriaWorldDateModel.isValid(marker?.calendarDate) && Number.isInteger(marker.calendarDay) && marker.calendarDay > 0) {
+      return AleriaWorldDateModel.shift(marker.calendarDate, 1 - marker.calendarDay);
+    }
   }
   return null;
 }
@@ -17,7 +21,7 @@ function resolveSceneStartDateAleria(thread = null, comments = null) {
   return findSceneStartDateInComments(cached);
 }
 
-function ensureCurrentSceneStartDateAleria() {
+function ensureCurrentSceneStartDateAleria(selectedDate = null) {
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
   if (!thread || thread.kind !== 'session') return null;
   const existing = resolveSceneStartDateAleria(thread);
@@ -31,7 +35,7 @@ function ensureCurrentSceneStartDateAleria() {
     return existing;
   }
 
-  const currentDate = AleriaWorldDateStore.getState().date;
+  const currentDate = AleriaWorldDateModel.isValid(selectedDate) ? selectedDate : AleriaWorldDateStore.getState().date;
   if (!AleriaWorldDateModel.isValid(currentDate)) return null;
   thread.page.sessionDateAleria = currentDate;
   if (typeof setModuleSceneStartDateAleria === 'function') {

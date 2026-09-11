@@ -1,0 +1,17 @@
+.ac-picker { position: relative; min-width: 0; color: #34291e; font: 14px/1.4 Georgia, serif; }
+.ac-picker summary { cursor: pointer; padding: 10px 12px; border: 1px solid #c5b394; border-radius: 5px; background: #fffaf0; list-style-position: inside; }
+.ac-picker-popover { margin-top: 6px; padding: 10px; border: 1px solid #bba580; border-radius: 6px; background: #fff9eb; box-shadow: 0 8px 20px #49382024; }
+.ac-picker-nav { display: grid; grid-template-columns: 30px minmax(95px, 1fr) 76px 30px; gap: 4px; margin-bottom: 10px; }
+.ac-picker-nav label { margin: 0; min-width: 0; }
+.ac-picker-nav select, .ac-picker-nav input { width: 100%; box-sizing: border-box; min-width: 0; padding: 6px 3px; color: inherit; background: #fffdf7; border: 1px solid #cbbda6; font: inherit; }
+.ac-picker button { cursor: pointer; border: 1px solid #d2c4ad; background: #fffdf7; color: inherit; font: inherit; border-radius: 3px; }
+.ac-weekdays, .ac-days { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; }
+.ac-weekdays { text-align: center; margin-bottom: 5px; font: 11px/1.6 system-ui, sans-serif; color: #756045; }
+.ac-weekdays abbr { text-decoration: none; }
+.ac-days button { min-height: 32px; padding: 4px 0; }
+.ac-days button[aria-current="date"] { box-shadow: inset 0 0 0 2px #ab8247; font-weight: bold; }
+.ac-days button[aria-pressed="true"] { background: #60452d; color: #fff8e8; }
+.ac-days button:hover { background: #e7d8bb; color: #35281c; }
+.ac-picker button[data-picker-today] { margin-top: 10px; padding: 6px 10px; }
+.ac-picker :focus-visible { outline: 2px solid #80603c; outline-offset: 2px; }
+.ac-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }

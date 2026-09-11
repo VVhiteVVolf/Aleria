@@ -156,12 +156,14 @@
 }
 
 .scene-time-event-card {
-  width: min(860px, 100%);
+  width: min(760px, 100%);
   max-height: min(92vh, 920px);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  border: 1px solid rgba(139,105,20,0.48);
-  background: var(--parchment);
+  border: 1px solid #c9b38c;
+  border-radius: 8px;
+  background: #fbf6ea;
+  overflow: hidden;
   box-shadow: 0 24px 72px rgba(0,0,0,0.42);
 }
 
@@ -182,18 +184,19 @@
 }
 
 .scene-time-event-dialog-kicker {
-  color: var(--gold);
-  font-size: 0.54rem;
+  color: #84704f;
+  font-size: 11px;
   margin-bottom: 0.2rem;
 }
 
 .scene-time-event-card h2 {
   margin: 0;
   color: var(--ink);
-  font-family: 'Cinzel', serif;
-  font-size: 0.98rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .scene-time-event-close {
@@ -214,9 +217,10 @@
 }
 
 .scene-time-dialog-panel {
-  border: 1px solid rgba(139,105,20,0.22);
-  background: rgba(255,255,255,0.18);
-  padding: 0.78rem;
+  border: 0;
+  border-bottom: 1px solid #e0d4bc;
+  background: transparent;
+  padding: 0 0 14px;
 }
 
 .scene-time-dialog-hint {
@@ -232,17 +236,17 @@
 .scene-time-dialog-panel label,
 .scene-time-dialog-panel label span {
   display: block;
-  color: var(--gold);
-  font-family: 'Cinzel', serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: #776247;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
   margin-bottom: 0.3rem;
 }
 
 .scene-time-preset-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.45rem;
 }
 
@@ -255,7 +259,10 @@
   background: rgba(255,255,255,0.28);
   color: var(--ink-faded);
   cursor: pointer;
-  font-size: 0.54rem;
+  font: 13px/1.4 system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 5px;
   padding: 0.35rem 0.5rem;
 }
 
@@ -267,8 +274,8 @@
 }
 
 .scene-time-preset-mark {
-  width: 1.45rem;
-  height: 1.45rem;
+  width: 29px;
+  height: 29px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(139,105,20,0.32);
@@ -296,12 +303,14 @@
 
 .scene-time-dialog-grid input,
 .scene-time-dialog-grid textarea {
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid rgba(139,105,20,0.32);
   background: rgba(255,255,255,0.4);
   color: var(--ink);
-  font: inherit;
-  padding: 0.45rem 0.55rem;
+  font: 14px/1.5 system-ui, sans-serif;
+  padding: 8px 10px;
+  border-radius: 4px;
 }
 
 .scene-time-dialog-grid textarea {
@@ -337,15 +346,18 @@
   background: rgba(255,255,255,0.28);
   color: var(--gold-dark);
   cursor: pointer;
-  font-size: 0.56rem;
+  font: 13px/1.5 system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 4px;
   font-weight: 700;
   padding: 0.38rem 0.65rem;
 }
 
 .scene-time-event-buttons button.primary {
-  background: #2c1a08;
-  border-color: var(--gold);
-  color: var(--gold-light);
+  background: #3e5051;
+  border-color: #3e5051;
+  color: #fff7e7;
 }
 
 .scene-time-event-buttons button:disabled {
@@ -375,6 +387,15 @@
     flex-direction: column;
   }
 }
+.scene-time-calendar-field > span { display: block; font: 12px/1.5 system-ui, sans-serif; color: #776247; margin-bottom: 5px; }
+.scene-time-event-card .scene-time-event-meta { font: 12px/1.4 system-ui, sans-serif; text-transform: none; letter-spacing: 0; }
+.scene-time-event-card .scene-time-event-title { font: bold 18px/1.3 Georgia, serif; letter-spacing: 0; }
+.scene-time-event-card .ac-picker-nav label { margin: 0; }
+.scene-time-event-card .ac-picker-nav input, .scene-time-event-card .ac-picker-nav select { padding: 6px 3px; font-size: 12px; }
+.scene-time-event-card .scene-time-preview { border: 0; padding: 0; }
+.scene-time-event-card .scene-time-event { width: 100%; margin: 0; }
+.scene-time-event-actions button[data-scene-time-action] { color: #79582f; background: #fff7e8; border: 1px solid #c8b799; padding: 3px 7px; cursor: pointer; }
+@media (max-width: 580px) { .scene-time-preset-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .scene-time-event-card-head { flex-direction: row; align-items: center; } }
 .scene-clock{position:relative;display:flex;align-items:center;gap:.55rem;min-width:0;padding:.2rem .25rem .2rem .15rem;border:0;background:transparent;color:inherit;white-space:nowrap}
 .scene-clock::after{content:"";position:absolute;right:0;bottom:-.18rem;left:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,145,66,.55),transparent)}
 .scene-clock-icon{display:grid;width:1.65rem;height:1.85rem;flex:0 0 1.65rem;place-items:center}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalender von Aleria · AleriaAlmanach</title>
+  <link rel="stylesheet" href="./modules/calendar/calendar-date-picker.css">
+  <link rel="stylesheet" href="./modules/calendar/calendar-preview.css">
+  <link rel="stylesheet" href="./modules/calendar/calendar-page.css">
+  <link rel="stylesheet" href="./styles/icon-directory.css">
+  <script defer src="./modules/core/content-safety.js"></script>
+  <script defer src="./modules/core/aleria-calendar.js?v=20260911-calendar-v2"></script>
+  <script defer src="./modules/app/dialog-manager.js"></script>
+  <script defer src="./modules/world-date/world-date-model.js"></script>
+  <script defer src="./modules/world-date/world-date-store.js"></script>
+  <script defer src="./modules/icon-directory/icon-directory-data.js"></script>
+  <script defer src="./modules/icon-directory/icon-directory.js"></script>
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20260911-calendar-v2"></script>
+  <script type="module" src="./modules/calendar/calendar-page.mjs"></script>
+</head>
+<body class="calendar-body">
+  <main class="calendar-page" data-calendar-page>
+    <nav class="calendar-breadcrumb"><a href="./AleriaAlmanach.html">← AleriaAlmanach</a><span>Zeit &amp; Überlieferung</span></nav>
+    <header class="calendar-hero"><div><p class="calendar-eyebrow">Die Tage der Welt</p><h1>Kalender von Aleria</h1><p>Zusammenkünfte, Festtage und Wege, die noch vor uns liegen.</p></div><div class="calendar-today"><small>Heute in Aleria</small><strong data-calendar-today></strong><button type="button" data-calendar-action="today">Zum heutigen Tag →</button></div></header>
+    <div class="calendar-toolbar"><div class="calendar-month-nav"><button type="button" data-calendar-move="-1" aria-label="Voriger Monat">‹</button><h2 data-calendar-heading></h2><button type="button" data-calendar-move="1" aria-label="Nächster Monat">›</button><label>Jahr <input data-calendar-year type="number" min="1" max="100000"></label></div><button type="button" class="calendar-primary" data-calendar-action="new">+ Termin eintragen</button></div>
+    <nav class="calendar-months" aria-label="Monat auswählen" data-calendar-months></nav>
+    <div class="calendar-layout"><section class="calendar-sheet" aria-label="Monatskalender"><div data-calendar-grid></div><div class="calendar-legend"><span>◉ Heute</span><span>● Ausgewählter Tag</span><span>Zahl am Tag: Termine</span></div><p class="calendar-calendar-note">13 Monate · 36 Tage je Monat · 9 Tage je Woche</p></section>
+    <aside class="calendar-agenda"><div class="calendar-agenda-head"><div><small>Das steht an</small><h2 data-calendar-day-title></h2></div><button type="button" data-calendar-action="new" aria-label="Termin für diesen Tag eintragen">+</button></div><div data-calendar-agenda></div></aside></div>
+    <section class="calendar-month-list"><header><h2>Termine im Monat</h2><label>Suche <input type="search" data-calendar-search placeholder="Titel, Ort oder Charakter …"></label></header><div data-calendar-month-events></div></section>
+    <footer class="calendar-sync"><p data-calendar-status role="status"></p><button type="button" data-calendar-action="reconnect">Verbindung prüfen</button><button type="button" data-calendar-action="publish" hidden>Lokale Termine veröffentlichen</button></footer>
+  </main>
+</body>
+</html>

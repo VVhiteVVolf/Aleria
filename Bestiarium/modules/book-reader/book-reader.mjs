@@ -1,7 +1,7 @@
 import { paginateBook, findAnchorPage, createLeaf } from './book-pagination.mjs?v=20260909-books-v2';
 import { createBookAnimation } from './book-animation.mjs';
 
-export function mountBookReader(root) {
+export function mountBookReader(root, { initialAnchor = null } = {}) {
   const element = role => root.querySelector(`[data-role="${role}"]`);
   const action = name => root.querySelector(`[data-action="${name}"]`);
   const source = element('source');
@@ -231,7 +231,7 @@ export function mountBookReader(root) {
   window.addEventListener('pageshow', event => { if (event.persisted && mode === 'book') void open(); }, { signal: lifetime.signal });
   element('toolbar').hidden = false;
   if (motion.matches) { showMode('article'); message('Reduzierte Bewegung ist aktiviert. Du liest das vollständige Werk in der Artikelansicht.'); }
-  else { position = location.hash ? { id: decodeHash(), offset: 0 } : null; void open(); }
+  else { position = initialAnchor || (location.hash ? { id: decodeHash(), offset: 0 } : null); void open(); }
   return { destroy() { stop(); lifetime.abort(); showMode('article'); element('toolbar').hidden = true; } };
 }
 

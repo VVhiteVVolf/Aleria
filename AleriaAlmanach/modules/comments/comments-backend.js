@@ -51,6 +51,7 @@ function assertLocalCommentMutable(comment, operation) {
 }
 
 function normalizeCommentModuleInsertForStorage(source = {}) {
+  if (!Object.hasOwn(source || {}, 'moduleInsert') && !Object.hasOwn(source || {}, 'moduleInsertJson')) return { ...(source || {}) };
   const next = { ...(source || {}) };
   if (typeof next.moduleInsert === 'string' && next.moduleInsert.trim()) {
     next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
@@ -129,6 +130,7 @@ function getLocalCommentBackend() {
         moduleInsertJson: commentMetadata.moduleInsertJson || '',
         documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
         sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
+        sceneStartDateAleria: commentMetadata.sceneStartDateAleria || null,
         sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
         scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,

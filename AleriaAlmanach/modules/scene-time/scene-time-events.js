@@ -2,9 +2,25 @@
 // gesetzt von openSceneTimeEventDialogAfter() fuers rueckwirkende
 // Benennen eines Tages, sonst null (normales "jetzt ankuendigen").
 let _sceneTimeInsertAfterId = null;
+let _sceneTimeEditingId = null;
+let _sceneTimeDialogRequest = 0;
 
-function openSceneTimeEventDialog() {
+async function mountSceneTimeCalendarDialog(thread, options = {}) {
+  const request = ++_sceneTimeDialogRequest;
+  const overlay = ensureSceneTimeEventDialog();
+  const { createSceneTimeCalendar } = await import('./scene-time-calendar.mjs');
+  if (request !== _sceneTimeDialogRequest) return;
+  overlay.sceneCalendar?.destroy();
+  overlay.sceneCalendar = createSceneTimeCalendar(overlay, {
+    thread, comments: _commentCache[String(getCurrentCommentThreadId() || '')] || [], ...options
+  });
+  overlay.sceneCalendar.sync();
+  activateDialog('scene-time-event-overlay', { initialFocus: '#ste-title' });
+}
+
+async function openSceneTimeEventDialog() {
   _sceneTimeInsertAfterId = null;
+  _sceneTimeEditingId = null;
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
   if (!thread || thread.kind !== 'session') {
     if (typeof showAppStatus === 'function') {
@@ -15,7 +31,7 @@ function openSceneTimeEventDialog() {
   ensureSceneTimeEventDialog();
   resetSceneTimeEventDialog();
   setSceneTimeEventDialogMode(false);
-  activateDialog('scene-time-event-overlay', { initialFocus: '#ste-title, button, input, textarea' });
+  await mountSceneTimeCalendarDialog(thread);
 }
 
 // Oeffnet denselben Dialog, aber so, dass der Eintrag rueckwirkend NACH einem
@@ -24,7 +40,8 @@ function openSceneTimeEventDialog() {
 // diesem benannten Tag, der angeklickte Beitrag selbst bleibt beim vorigen
 // Tag). Zeit/Tag der Zeitlinie werden automatisch so vorbefuellt, dass die
 // bisherige Zeitrechnung nicht springt.
-function openSceneTimeEventDialogAfter(commentId) {
+async function openSceneTimeEventDialogAfter(commentId) {
+  _sceneTimeEditingId = null;
   const safeCommentId = String(commentId || '').trim();
   if (!safeCommentId) return;
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
@@ -45,7 +62,25 @@ function openSceneTimeEventDialogAfter(commentId) {
   setSceneTimeEventDialogMode(true);
   prefillSceneTimeAnchorFromSeconds(cursorSeconds);
   setSceneTimePreset('next-day');
-  activateDialog('scene-time-event-overlay', { initialFocus: '#ste-day-label, button, input, textarea' });
+  await mountSceneTimeCalendarDialog(thread, { afterId: safeCommentId });
+}
+
+async function editSceneTimeEvent(commentId) {
+  const thread = getCurrentCommentThread();
+  const comments = _commentCache[String(getCurrentCommentThreadId() || '')] || [];
+  const comment = comments.find(item => String(item.id) === String(commentId));
+  if (!comment || !isSceneTimeEventComment(comment) || globalThis.AleriaCommentTransactions?.isImmutable(comment)) return;
+  _sceneTimeInsertAfterId = null; _sceneTimeEditingId = comment.id;
+  ensureSceneTimeEventDialog(); resetSceneTimeEventDialog(); setSceneTimeEventDialogMode(false);
+  const event = normalizeSceneTimeEvent(comment.sceneTimeEvent);
+  setSceneTimePreset(event.presetKey);
+  for (const [id, value] of [['ste-title', event.title], ['ste-day-label', event.dayLabel], ['ste-time-label', event.timeLabel], ['ste-body', event.body]]) {
+    const input = document.getElementById(id); input.value = value; input.dataset.userEdited = 'true';
+  }
+  if (event.calendarDate && event.dayLabel === formatAleriaDate(event.calendarDate)) document.getElementById('ste-day-label').dataset.userEdited = '';
+  document.getElementById('scene-time-event-title').textContent = 'Szenenzeit bearbeiten';
+  document.querySelector('[data-scene-time-action="submit-event"]').textContent = 'Änderungen speichern';
+  await mountSceneTimeCalendarDialog(thread, { editingId: comment.id });
 }
 
 function prefillSceneTimeAnchorFromSeconds(totalSeconds) {
@@ -68,9 +103,13 @@ function setSceneTimeEventDialogMode(isRetroactive) {
   if (kicker) kicker.textContent = isRetroactive ? 'Rückwirkend' : 'Erzählerereignis';
   if (title) title.textContent = isRetroactive ? 'Tag rückwirkend benennen' : 'Szenenzeit ankündigen';
   if (hint) hint.style.display = isRetroactive ? '' : 'none';
+  const submit = document.querySelector('[data-scene-time-action="submit-event"]');
+  if (submit) submit.textContent = 'Einläuten';
 }
 
 function closeSceneTimeEventDialog() {
+  _sceneTimeDialogRequest++;
+  _sceneTimeEditingId = null;
   _sceneTimeInsertAfterId = null;
   deactivateDialog('scene-time-event-overlay');
 }
@@ -109,6 +148,9 @@ function prepareSceneTimeEventForThread(eventInput, threadId, afterCommentId = n
 async function submitSceneTimeEvent() {
   const threadId = getCurrentCommentThreadId();
   const insertAfterId = _sceneTimeInsertAfterId;
+  const editingId = _sceneTimeEditingId;
+  const calendar = document.getElementById('scene-time-event-overlay')?.sceneCalendar;
+  try { calendar?.validate(); } catch (error) { setSceneTimeEventStatus(error.message, 'error'); return; }
   const event = prepareSceneTimeEventForThread(getSceneTimeDialogPayload(), threadId, insertAfterId);
   if (!threadId) {
     setSceneTimeEventStatus('Kein aktiver Szenen-Thread gefunden.', 'error');
@@ -138,11 +180,23 @@ async function submitSceneTimeEvent() {
     commentMode: 'scene-time',
     commentKind: SCENE_TIME_EVENT_KIND,
     sceneTimeEvent: event,
-    orderKey
+    orderKey,
+    sceneStartDateAleria: calendar?.getValue().sceneStartDateAleria || null
   };
 
   try {
     backend = await getCommentBackend({ timeoutMs: 1200 });
+    if (editingId) {
+      const existing = (_commentCache[String(threadId)] || []).find(item => item.id === editingId);
+      const editBackend = existing?.localOnly ? getLocalCommentBackend() : backend;
+      if (!existing?.localOnly && editBackend._localFallback) throw new Error('Zum Bearbeiten dieses gemeinsamen Eintrags ist eine Online-Verbindung erforderlich.');
+      await editBackend.updateComment(editingId, { text, sceneTimeEvent: event });
+      closeSceneTimeEventDialog();
+      await loadCommentsIntoPage(threadId, true);
+      setCommentPageForCommentId(threadId, editingId);
+      return;
+    }
+    globalThis.AleriaSceneDateDefaults?.ensureForCurrentThread?.(metadata.sceneStartDateAleria);
     const saved = await backend.addComment(
       threadId,
       'Erzähler',
@@ -166,7 +220,7 @@ async function submitSceneTimeEvent() {
     if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
     if (typeof showAppStatus === 'function') showAppStatus('Zeitereignis wurde in die Szene eingetragen.', 'success');
   } catch (error) {
-    if (backend && !backend._localFallback) {
+    if (!editingId && backend && !backend._localFallback) {
       try {
         const localBackend = getLocalCommentBackend();
         const saved = await localBackend.addComment(threadId, 'Erzähler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
@@ -192,7 +246,7 @@ async function submitSceneTimeEvent() {
   } finally {
     if (submit) {
       submit.disabled = false;
-      submit.textContent = 'Einlaeuten';
+      submit.textContent = editingId ? 'Änderungen speichern' : 'Einläuten';
     }
   }
 }
@@ -201,6 +255,7 @@ function handleSceneTimeEventClick(event) {
   const trigger = event.target?.closest?.('[data-scene-time-action]');
   if (!trigger) return;
   const action = trigger.dataset.sceneTimeAction;
+  if (action === 'edit-event') { event.preventDefault(); editSceneTimeEvent(trigger.dataset.commentId); return; }
 
   if (action === 'open-event-dialog') {
     event.preventDefault();
@@ -215,6 +270,7 @@ function handleSceneTimeEventClick(event) {
   if (action === 'select-preset') {
     event.preventDefault();
     setSceneTimePreset(trigger.dataset.sceneTimePreset || 'evening');
+    document.getElementById('scene-time-event-overlay')?.sceneCalendar?.preset(trigger.dataset.sceneTimePreset);
     return;
   }
   if (action === 'submit-event') {
@@ -225,7 +281,7 @@ function handleSceneTimeEventClick(event) {
 
 function handleSceneTimeEventInput(event) {
   if (!event.target?.closest?.('#scene-time-event-overlay')) return;
-  if (event.target.id === 'ste-title' || event.target.id === 'ste-time-label') {
+  if (['ste-title', 'ste-time-label', 'ste-day-label'].includes(event.target.id)) {
     event.target.dataset.userEdited = 'true';
   }
   if (event.target.id === 'ste-time-label') syncSceneTimeAnchorFromLabel();
@@ -234,3 +290,8 @@ function handleSceneTimeEventInput(event) {
 
 document.addEventListener('click', handleSceneTimeEventClick);
 document.addEventListener('input', handleSceneTimeEventInput);
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !event.defaultPrevented && globalThis.getTopActiveDialog?.()?.id === 'scene-time-event-overlay') {
+    event.preventDefault(); closeSceneTimeEventDialog();
+  }
+});

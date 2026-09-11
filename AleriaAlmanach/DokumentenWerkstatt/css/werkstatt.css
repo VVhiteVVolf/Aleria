@@ -606,94 +606,6 @@
   .template-letter .document {
     border-radius: 2px;
   }
-  .template-book .doc-shell {
-    width: min(1120px, 100%);
-  }
-  .template-book .document {
-    padding: clamp(1rem, 2.4vw, 2rem);
-    background:
-      linear-gradient(90deg, rgba(54,28,8,0.28), transparent 6%, transparent 94%, rgba(54,28,8,0.25)),
-      var(--document-background,
-      linear-gradient(180deg, #f0dfb6, #dbc390));
-  }
-  .book-stage {
-    position: relative;
-    min-height: max(520px, calc(var(--doc-height, 780px) - 6rem));
-    perspective: 1800px;
-  }
-  .book-spread {
-    display: none;
-    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-    gap: 0;
-    min-height: inherit;
-    transform-style: preserve-3d;
-  }
-  .book-spread.is-active {
-    display: grid;
-  }
-  .book-stage.turn-next .book-spread.is-active .book-page-left,
-  .book-stage.turn-prev .book-spread.is-active .book-page-right {
-    animation: bookPageTurn 520ms ease;
-  }
-  .book-page {
-    min-height: inherit;
-    padding: clamp(1.15rem, 2.2vw, 2rem);
-    background:
-      linear-gradient(90deg, rgba(255,255,255,0.22), transparent 18%, transparent 82%, rgba(92,62,21,0.08)),
-      rgba(255,248,230,0.38);
-    border: 1px solid rgba(139,105,20,0.28);
-    box-shadow: inset 0 0 28px rgba(85,50,13,0.12);
-    backface-visibility: hidden;
-  }
-  .book-page-left {
-    border-right: 0;
-    transform-origin: right center;
-  }
-  .book-page-right {
-    border-left: 1px solid rgba(83,47,12,0.26);
-    transform-origin: left center;
-    box-shadow: inset 22px 0 22px rgba(68,35,8,0.13), inset 0 0 28px rgba(85,50,13,0.12);
-  }
-  .book-page-number {
-    margin-top: 1.2rem;
-    text-align: center;
-    color: var(--gold);
-    font-family: "Cinzel", serif;
-    font-size: 0.62rem;
-  }
-  .book-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.65rem;
-    margin-top: 0.9rem;
-  }
-  .book-controls button {
-    width: 2.25rem;
-    height: 2.25rem;
-    border: 1px solid rgba(139,105,20,0.55);
-    background: rgba(255,248,230,0.62);
-    color: var(--ink);
-    font-family: "Cinzel", serif;
-    font-weight: 700;
-  }
-  .book-controls button:disabled {
-    opacity: 0.38;
-    cursor: default;
-  }
-  .book-counter {
-    min-width: 8rem;
-    text-align: center;
-    color: var(--gold);
-    font-family: "Cinzel", serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  @keyframes bookPageTurn {
-    0% { transform: rotateY(-72deg); opacity: 0.55; }
-    100% { transform: rotateY(0); opacity: 1; }
-  }
   .template-note .document {
     min-height: 42vh;
     padding: clamp(1.15rem, 3vw, 2rem);
@@ -707,25 +619,6 @@
   .template-note .signature,
   .template-note .doc-image-slot {
     display: none;
-  }
-  .template-wanted .document {
-    max-width: 680px;
-    margin: 0 auto;
-    border: 4px solid #2c1a08;
-    background:
-      linear-gradient(180deg, rgba(255,248,230,0.92), rgba(218,190,124,0.9)),
-      var(--parchment);
-    text-align: center;
-  }
-  .wanted-banner {
-    margin: -0.6rem 0 1rem;
-    padding: 0.4rem 0.7rem;
-    background: #2c1a08;
-    color: #d7b45c;
-    font-family: "Cinzel", serif;
-    font-size: 1.35rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
   }
   .template-wanted .doc-image-slot.slot-main {
     width: min(100%, var(--slot-image-size, 360px));
@@ -792,8 +685,6 @@
     .app { height: auto; min-height: 100dvh; }
     .workspace { grid-template-columns: 1fr; }
     .editor-pane { border-right: 0; border-bottom: 1px solid rgba(201,173,104,0.55); }
-    .book-spread { grid-template-columns: 1fr; }
-    .book-page-right { border-left: 1px solid rgba(139,105,20,0.28); border-top: 0; }
   }
   @media (max-width: 720px) {
     .topbar {

@@ -1,0 +1,19 @@
+.calendar-preview { display: flex; gap: 13px; padding: 16px 0; border-bottom: 1px solid #dfd3bf; color: #372e24; }
+.calendar-preview-icon { flex: 0 0 48px; width: 48px; height: 48px; object-fit: contain; }
+.calendar-preview-copy { min-width: 0; flex: 1; }
+.calendar-preview-kicker { font: 11px/1.4 system-ui, sans-serif; color: #826548; }
+.calendar-preview h3 { margin: 3px 0 6px; font: bold 19px/1.2 Georgia, serif; }
+.calendar-preview h3 button, .calendar-preview h3 a { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-align: left; cursor: pointer; text-decoration: none; }
+.calendar-preview p { margin: 6px 0; font: 14px/1.5 Georgia, serif; overflow-wrap: anywhere; white-space: pre-line; }
+.calendar-preview .calendar-preview-meta { font: 12px/1.5 system-ui, sans-serif; color: #746653; }
+.calendar-participants { display: flex; gap: 6px 12px; flex-wrap: wrap; margin-top: 10px; }
+.calendar-person { display: inline-flex; align-items: center; gap: 6px; font: 12px/1.3 system-ui, sans-serif; }
+.calendar-person img { width: 25px; height: 32px; object-fit: cover; object-position: top; border-radius: 3px; background: #e0d6c4; }
+.calendar-conflict { display: block; color: #974429; font: 12px/1.4 system-ui, sans-serif; margin-top: 7px; }
+.calendar-dashboard { grid-column: 1 / -1; padding: 20px; background: #fbf7ed; border: 1px solid #d5c4a6; border-radius: 6px; }
+.calendar-dashboard > header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.calendar-dashboard h3 { color: #392e21; }
+.calendar-dashboard > header h3 { margin: 0; font: bold 21px Georgia, serif; }
+.calendar-dashboard > header a { color: #785432; font: 13px system-ui, sans-serif; }
+.calendar-dashboard .calendar-help { font: 13px/1.5 system-ui, sans-serif; color: #756552; }
+.calendar-dashboard-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 0 25px; }

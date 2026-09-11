@@ -9,9 +9,8 @@
 // configuration - if ALERIA_GITHUB_TOKEN / ALERIA_GITHUB_PUBLISH_KEY are
 // already set for the Stammbäume publisher, this works without any new
 // Netlify setup.
-import { timingSafeEqual } from 'node:crypto';
+import { json, secureEqual, bearerToken, repositoryConfig, createGitHubClient } from './shared/github-publishing.mjs';
 
-const API_VERSION = '2026-03-10';
 // Netlify/Lambda synchronous functions cap request bodies well under this,
 // so this is really about failing fast with a clear message rather than
 // timing out - it's NOT meant for full-resolution hand-painted map layer
@@ -25,77 +24,6 @@ const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
 const DATA_PATH_PATTERN = /^[^./][^\n]*\/data\.json$/;
 const DATA_IMAGE = /^data:image\/(png|jpeg|webp);base64,([a-z0-9+/=\s]+)$/i;
 const IMAGE_EXTENSIONS = Object.freeze({ png: 'png', jpeg: 'jpg', webp: 'webp' });
-
-function json(statusCode, body) {
-  return {
-    statusCode,
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-    body: JSON.stringify(body),
-  };
-}
-
-function secureEqual(first, second) {
-  const left = Buffer.from(String(first || ''));
-  const right = Buffer.from(String(second || ''));
-  return left.length === right.length && timingSafeEqual(left, right);
-}
-
-function bearerToken(headers = {}) {
-  const value = String(headers.authorization || headers.Authorization || '');
-  return value.startsWith('Bearer ') ? value.slice(7).trim() : '';
-}
-
-function repositoryConfig() {
-  const repository = String(process.env.ALERIA_GITHUB_REPOSITORY || 'VVhiteVVolf/Aleria').trim();
-  const [owner, repo, ...rest] = repository.split('/');
-  if (!owner || !repo || rest.length) throw new Error('ALERIA_GITHUB_REPOSITORY muss als OWNER/REPOSITORY gesetzt sein.');
-  return {
-    owner,
-    repo,
-    repository,
-    branch: String(process.env.ALERIA_GITHUB_BRANCH || 'master').trim() || 'master',
-    token: String(process.env.ALERIA_GITHUB_TOKEN || ''),
-    publishKey: String(process.env.ALERIA_GITHUB_PUBLISH_KEY || ''),
-  };
-}
-
-function encodePath(path) {
-  return path.split('/').map(encodeURIComponent).join('/');
-}
-
-function createGitHubClient(config, fetchRef = fetch) {
-  const root = `https://api.github.com/repos/${encodeURIComponent(config.owner)}/${encodeURIComponent(config.repo)}`;
-
-  async function request(path, options = {}, allowMissing = false) {
-    const response = await fetchRef(`${root}${path}`, {
-      ...options,
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `Bearer ${config.token}`,
-        'X-GitHub-Api-Version': API_VERSION,
-        'User-Agent': 'Aleria-Karten-Publisher',
-        ...(options.headers || {}),
-      },
-    });
-    if (allowMissing && response.status === 404) return null;
-    const payload = await response.json().catch(() => ({}));
-    if (!response.ok) {
-      const error = new Error(payload.message || `GitHub antwortete mit HTTP ${response.status}.`);
-      error.status = response.status;
-      error.payload = payload;
-      throw error;
-    }
-    return payload;
-  }
-
-  return Object.freeze({
-    request,
-    readContent: (path, ref) => request(`/contents/${encodePath(path)}?ref=${encodeURIComponent(ref)}`, {}, true),
-  });
-}
 
 function decodeContent(record, fallback) {
   if (!record?.content) return fallback;

@@ -81,3 +81,9 @@ test('ein im ersten Kommentar gespeichertes Startdatum dient als stabile Wiederh
   )`, context);
   assert.deepEqual({ ...date }, { year: 1739, month: 13, day: 36 });
 });
+
+test('ausdrücklich datierte Zeitmarker stellen den Szenenbeginn auch ohne zusätzliches Backend-Feld wieder her', () => {
+  const context = runFiles(['../modules/world-date/world-date-model.js', '../modules/world-date/world-date-scene-default.js']);
+  const date = vm.runInContext(`AleriaSceneDateDefaults.resolve({page:{}}, [{sceneTimeEvent:{calendarDate:{year:1741,month:1,day:2},calendarDay:4}}])`, context);
+  assert.deepEqual({ ...date }, { year: 1740, month: 13, day: 35 });
+});

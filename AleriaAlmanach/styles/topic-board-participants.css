@@ -1,0 +1,42 @@
+/* The participant picker owns only its selection, result list and controls. */
+.topic-board-people-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.topic-board-people-heading p { margin: 0.35rem 0 0.85rem; font-size: 0.94rem; color: var(--ink-faded); }
+.topic-board-people-heading > strong { flex-shrink: 0; background: #e4e9d9; color: #344f42; border: 1px solid #bac7aa; border-radius: 4px; padding: 0.5rem; font: 600 0.8rem 'Cinzel', serif; }
+.topic-board-selected-people { display: flex; flex-wrap: wrap; gap: 0.4rem; min-height: 3.5rem; padding: 0.6rem; border: 1px dashed #c2b18a; border-radius: 4px; background: #f3eddc; }
+.topic-board-person-chip { display: inline-flex; gap: 0.4rem; align-items: center; max-width: 100%; padding: 0.2rem 0.5rem 0.2rem 0.2rem; border: 1px solid #b4c0a5; border-radius: 3px; background: #f5f7ec; color: #344f42; cursor: pointer; }
+.topic-board-person-chip > span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 0.85rem 'EB Garamond', serif; }
+.topic-board-person-chip img, .topic-board-person-chip .topic-board-person-initial { width: 1.6rem; height: 1.6rem; border-radius: 2px; object-fit: cover; object-position: top; }
+.topic-board-person-chip:hover { border-color: #8a4837; background: #f5e6dc; }
+.topic-board-people-placeholder { align-self: center; color: var(--ink-faded); font-size: 0.85rem; font-style: italic; }
+.topic-board-people-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin: 0.6rem 0 1rem; }
+.topic-board-people-tools label { display: flex; align-items: center; gap: 0.3rem; margin-left: auto; font-size: 0.8rem; }
+.topic-board-people-tools input { accent-color: #344f42; }
+.topic-board-people-tools button, .topic-board-people-results button, .topic-board-people-reuse button { min-height: 2.1rem; border: 1px solid #cabc9b; border-radius: 3px; background: #fff9ea; color: #344f42; cursor: pointer; padding: 0.4rem 0.6rem; font-size: 0.58rem; }
+.topic-board-people-tools button:disabled, .topic-board-people-results button:disabled { cursor: default; opacity: 0.45; }
+.topic-board-field > .topic-board-people-search { display: flex; margin: 0; }
+.topic-board-people-search input { min-width: 0; }
+.topic-board-people-search button { width: 2.5rem; flex-shrink: 0; border: 1px solid #cabc9b; border-left: 0; background: #f0ead8; cursor: pointer; color: #344f42; }
+.topic-board-people-help { margin: 0.35rem 0 0.9rem; color: var(--ink-faded); font-size: 0.78rem; line-height: 1.45; }
+.topic-board-people-results { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.78rem; color: var(--ink-faded); }
+.topic-board-character-list { max-height: 24rem; overflow-y: auto; overscroll-behavior: contain; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem; padding: 0.25rem; }
+.topic-board-character { min-width: 0; min-height: 3.6rem; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr) 1rem; gap: 0.5rem; align-items: center; border: 1px solid #d4c9ae; border-radius: 4px; background: #fffbef; color: var(--ink); cursor: pointer; padding: 0.4rem; text-align: left; }
+.topic-board-character[hidden] { display: none; }
+.topic-board-character:hover { background: #edf0e3; border-color: #8e9d7b; }
+.topic-board-character.selected { border-color: #6d855d; background: #e6ecd9; box-shadow: inset 3px 0 #607b51; }
+.topic-board-character img, .topic-board-character .topic-board-person-initial { width: 2.25rem; height: 2.6rem; object-fit: cover; object-position: top; border-radius: 3px; }
+.topic-board-person-initial { display: grid; place-items: center; background: #ded6bf; color: #5b674e; font: 600 1rem 'Cinzel', serif; }
+.topic-board-person-copy { min-width: 0; }
+.topic-board-person-copy strong { display: block; overflow-wrap: anywhere; font: 600 0.9rem/1.15 'EB Garamond', serif; }
+.topic-board-person-copy small { display: block; margin-top: 0.2rem; color: var(--ink-faded); font: 0.73rem/1.25 'EB Garamond', serif; }
+.topic-board-person-check { color: #526e42; font-size: 0.85rem; }
+.topic-board-character-filter-empty { padding: 1rem; color: var(--ink-faded); font-size: 0.85rem; text-align: center; }
+.topic-board-character-filter-empty[hidden] { display: none; }
+.topic-board-people-reuse { display: flex; align-items: end; gap: 0.5rem; margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid #ded1b2; }
+.topic-board-people-reuse .topic-board-field { flex: 1; margin: 0; }
+.topic-board-people-reuse button { min-height: 2.3rem; }
+.topic-board-people-status { margin: 0.65rem 0 0; color: #526442; font-size: 0.85rem; line-height: 1.4; }
+@media (max-width: 420px) {
+  .topic-board-character-list { grid-template-columns: 1fr; max-height: 22rem; }
+  .topic-board-people-tools label { margin-left: 0; }
+  .topic-board-people-reuse { flex-wrap: wrap; }
+}

@@ -84,3 +84,16 @@ test('Rast und Tagesressourcen verwenden denselben Kalendertag wie die Anzeige',
   assert.equal(getSceneAleriaDayIndex(comments, 2), 1);
   assert.equal(getSceneAleriaDayIndex(comments, 3), 2);
 });
+
+test('Datumsauswahl setzt einen ausdrücklichen Kalendertag, auch ohne Tageswechsel-Preset', () => {
+  const { buildSceneTimeline, getSceneAleriaDayIndex } = loadSceneTimeState();
+  const comments = [{ sceneTimeEvent: { presetKey: 'morning', anchorDay: 4, anchorSeconds: 36000, calendarDay: 8 } }];
+  assert.equal(buildSceneTimeline(comments)[0].aleriaDayIndex, 8);
+  assert.equal(getSceneAleriaDayIndex(comments), 8);
+});
+
+test('Bearbeitete verbindliche Uhrzeit hat Vorrang vor älteren Uhrzeiten im Text', () => {
+  const { buildSceneTimeline } = loadSceneTimeState();
+  const [entry] = buildSceneTimeline([{ sceneTimeEvent: { presetKey: 'morning', anchorDay: 1, anchorSeconds: 43200, timeLabel: '09:00 Uhr' } }]);
+  assert.equal(entry.startSeconds, 43200);
+});

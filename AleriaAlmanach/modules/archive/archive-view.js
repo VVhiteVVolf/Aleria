@@ -601,6 +601,7 @@ function renderAll() {
   dashboard.dataset.archiveDashboard = 'true';
   dashboard.innerHTML = renderArchiveDashboard(sections);
   main.appendChild(dashboard);
+  document.dispatchEvent(new CustomEvent('almanach-dashboard-rendered'));
   if (typeof refreshAlmanachDashboardSceneActivity === 'function') {
     refreshAlmanachDashboardSceneActivity(sections);
   }

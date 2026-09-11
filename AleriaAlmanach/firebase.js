@@ -12,6 +12,8 @@
     import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
       from "./modules/characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1";
 
+    import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
+
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
       authDomain: "aleriaprojekt.firebaseapp.com",
@@ -100,6 +102,7 @@
 
     function normalizeCommentModuleInsertForFirestore(source = {}) {
       const next = { ...(source || {}) };
+      if (!Object.hasOwn(next, 'moduleInsert') && !Object.hasOwn(next, 'moduleInsertJson')) return next;
       if (typeof next.moduleInsert === 'string' && next.moduleInsert.trim()) {
         next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
           ? next.moduleInsertJson
@@ -546,6 +549,10 @@
     }
 
     window._fb = {
+      calendar: createCalendarRepository({
+        db, sdk: { collection, onSnapshot, doc, runTransaction, serverTimestamp },
+        requireUser: requireFirebaseUser, getCalendar: () => globalThis.AleriaCalendar
+      }),
       async loadComments(entryId) {
         try {
           const q = query(

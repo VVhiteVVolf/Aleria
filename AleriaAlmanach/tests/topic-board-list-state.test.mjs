@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
+import { createParticipantSelection } from '../modules/topic-board/topic-board-participant-selection.mjs';
 
 function loadTopicBoardListState() {
   const context = vm.createContext({ console, Date, Math });
@@ -144,31 +145,19 @@ test('ein Themenzettel rendert zuerst als Vorschau und zeigt Details erst nach d
 });
 
 test('die Figurenfilterung blendet nicht passende Namen tatsaechlich aus', () => {
-  const context = loadTopicBoardUi();
-  const buttons = [
-    { dataset: { characterSearch: 'naria windreiter' }, hidden: false },
-    { dataset: { characterSearch: 'idwal draig' }, hidden: false },
-    { dataset: { characterSearch: 'edras goldsee' }, hidden: false }
-  ];
-  const counter = { textContent: '' };
-  const empty = { hidden: true };
-  context.document = {
-    querySelectorAll: selector => selector.includes('.topic-board-character') ? buttons : [],
-    querySelector: selector => selector.includes('character-count') ? counter : (selector.includes('character-empty') ? empty : null)
-  };
-
-  vm.runInContext("AleriaTopicBoardUI.filterTopicBoardCharacters('N')", context);
-
-  assert.deepEqual(buttons.map(button => button.hidden), [false, true, true]);
-  assert.equal(counter.textContent, '1 von 3 Figuren');
-  assert.equal(empty.hidden, true);
+  const selection = createParticipantSelection({ characters: [
+    { id: 'naria', name: 'Naria Windreiter' },
+    { id: 'idwal', name: 'Idwal Draig' },
+    { id: 'edras', name: 'Edras Goldsee' }
+  ] });
+  assert.deepEqual(selection.filter('N').map(record => record.id), ['naria']);
 });
 
 test('die Figurenfilter-Regel kann ausgeblendete Treffer nicht per display ueberschreiben', () => {
-  const css = fs.readFileSync(new URL('../styles/topic-board.css', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles/topic-board-participants.css', import.meta.url), 'utf8');
   const ui = fs.readFileSync(new URL('../modules/topic-board/topic-board-ui.js', import.meta.url), 'utf8');
 
   assert.match(css, /\.topic-board-character\[hidden\]\s*\{\s*display:\s*none;\s*\}/);
   assert.match(ui, /data-topic-board-action="toggle-details"/);
-  assert.match(ui, /data-topic-board-character-count/);
+  assert.match(ui, /data-topic-board-selected-count/);
 });

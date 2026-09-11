@@ -340,6 +340,7 @@ function renderArchiveDashboard(sections = []) {
       </div>
       <div class="archive-dashboard-recent" data-dashboard-recent>${buildArchiveDashboardRecentTrail(sections)}</div>
       <div class="archive-dashboard-grid">
+        <section class="calendar-dashboard" data-calendar-dashboard aria-label="Anstehende Termine"></section>
         <section class="archive-dashboard-panel archive-dashboard-panel-paths archive-dashboard-panel-full">
           <div class="archive-dashboard-panel-head">
             <div>

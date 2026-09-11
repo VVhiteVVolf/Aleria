@@ -16,7 +16,14 @@ function cover(topic, back = false) {
 export function renderBookArticleContent(topic) {
   return `<nav class="topic-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html#literatur">Literaturverweise</a><span aria-hidden="true">/</span><span aria-current="page">${escape(topic.title)}</span></nav>
       <header class="book-article-heading"><div><p class="eyebrow">Literaturverweis <span aria-hidden="true">·</span> ${escape(topic.classification)}</p><h1>${escape(topic.title)}</h1><p class="book-article-lead">${escape(topic.lead)}</p></div><aside class="book-metadata" aria-label="Buchinformationen"><p class="eyebrow">Buchinformationen</p><dl>${topic.facts.filter(fact => fact.label !== 'Titel').map(fact => `<div><dt>${escape(fact.label)}</dt><dd>${escape(fact.value)}</dd></div>`).join('')}</dl></aside></header>
-      <section class="book-reader" data-book-reader data-title="${escape(topic.title)}" aria-label="${escape(topic.title)} lesen">
+${renderBookReader(topic)}
+      <p class="book-source-note">${escape(topic.book.sourceNote || '')}</p>`;
+}
+
+
+// Shared by Bestiarium articles and the document workshop.
+export function renderBookReader(topic) {
+  return `      <section class="book-reader" data-book-reader data-title="${escape(topic.title)}" aria-label="${escape(topic.title)} lesen">
         <div class="book-toolbar" data-role="toolbar" hidden><div class="book-view-switch" role="group" aria-label="Leseansicht"><button type="button" data-action="book-view" aria-pressed="true">Buchansicht</button><button type="button" data-action="article-view" aria-pressed="false">Artikelansicht</button></div><span class="book-edition">${escape(topic.book.edition)}</span><button type="button" data-action="close-book" hidden>Buch schließen</button></div>
         <details class="book-contents"><summary>Inhalt &amp; Kapitel</summary><nav aria-label="Buchkapitel">${topic.sections.map(section => `<a href="#${escape(section.id)}">${escape(section.title)}</a>`).join('')}</nav></details>
         <p class="book-message" data-role="message" role="status" hidden></p>
@@ -29,6 +36,5 @@ export function renderBookArticleContent(topic) {
         <article class="book-prose book-article-source" data-role="source" aria-label="Vollständiger Artikel" tabindex="-1">${renderBookSource(topic)}</article>
         <template data-role="front-cover"><div class="book-leaf book-cover" data-density="hard">${cover(topic)}</div></template>
         <template data-role="back-cover"><div class="book-leaf book-cover" data-density="hard">${cover(topic, true)}</div></template>
-      </section>
-      <p class="book-source-note">${escape(topic.book.sourceNote || '')}</p>`;
+      </section>`;
 }

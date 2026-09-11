@@ -1,7 +1,5 @@
-const TOPIC_BOARD_ACTION_ICON_ASSET = './public/assets/topic-board/themenvorschlag-icon.png';
-
 let _topicBoardEditingProposalId = '';
-let _topicBoardSelectedParticipantIds = new Set();
+let _topicBoardParticipantPicker = null;
 let _topicBoardSelectedThemeIcon = '';
 let _topicBoardSelectedVehicleIcon = '';
 let _topicBoardIconTarget = '';
@@ -73,11 +71,11 @@ function ensureTopicBoardDialog() {
           <span class="topic-board-result-count" data-topic-board-result-count aria-live="polite"></span>
         </div>
         <button class="topic-board-sync" type="button" data-topic-board-sync data-topic-board-action="retry-sync" title="Online-Verbindung erneut prüfen"></button>
-        <button class="topic-board-new" type="button" data-topic-board-action="open-editor"><span aria-hidden="true">＋</span> Vorschlag anheften</button>
+        <button class="topic-board-new" type="button" data-topic-board-action="open-editor" aria-expanded="false" aria-controls="topic-board-editor"><span aria-hidden="true">＋</span> Vorschlag anheften</button>
       </div>
       <div class="topic-board-workspace">
         <main class="topic-board-list" data-topic-board-list></main>
-        <aside class="topic-board-editor" data-topic-board-editor hidden></aside>
+        <aside id="topic-board-editor" class="topic-board-editor" data-topic-board-editor hidden></aside>
       </div>
     </div>`;
   document.body.appendChild(overlay);
@@ -286,24 +284,6 @@ function toggleTopicBoardProposalDetails(proposalId) {
   });
 }
 
-function getTopicBoardParticipantPickerMarkup(selectedIds = []) {
-  const selected = new Set(selectedIds);
-  const characters = getTopicBoardCharacters();
-  if (!characters.length) return '<div class="topic-board-character-empty">Noch keine Figuren verfügbar.</div>';
-  return characters.map(character => {
-    const id = String(character.id || '').trim();
-    const portrait = topicBoardImage(getTopicBoardCharacterPortrait(character));
-    const isSelected = selected.has(id);
-    const search = globalThis.AleriaTopicBoardListState.normalizeSearchText(`${character.name || ''} ${character.title || ''} ${id}`);
-    return `<button type="button" class="topic-board-character${isSelected ? ' selected' : ''}" data-topic-board-action="toggle-character" data-character-id="${topicBoardEscape(id)}" data-character-search="${topicBoardEscape(search)}" aria-pressed="${isSelected}">
-      ${portrait
-        ? `<img src="${portrait}" alt="" loading="lazy" decoding="async">`
-        : `<span>${topicBoardEscape(topicBoardInitial(character.name))}</span>`}
-      <strong>${topicBoardEscape(character.name || 'Unbekannt')}</strong>
-    </button>`;
-  }).join('');
-}
-
 function renderTopicBoardIconField(kind, label, iconUrl) {
   const safeIcon = topicBoardImage(iconUrl);
   return `<div class="topic-board-icon-field">
@@ -376,58 +356,70 @@ function scrollTopicBoardEditorToSection(sectionName) {
   const allowed = new Set(['schedule', 'content', 'appearance', 'travel', 'participants', 'preview']);
   const safeName = String(sectionName || '').trim();
   if (!allowed.has(safeName)) return;
-  const section = document.querySelector(`[data-topic-board-editor-section="${safeName}"]`);
-  section?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+  const editor = document.querySelector('[data-topic-board-editor]');
+  if (!editor) return;
+  editor.querySelectorAll('[data-topic-board-editor-section]').forEach(section => {
+    section.hidden = section.dataset.topicBoardEditorSection !== safeName;
+  });
+  editor.querySelectorAll('[role="tab"]').forEach(button => {
+    const active = button.dataset.topicBoardEditorSectionTarget === safeName;
+    button.setAttribute('aria-selected', String(active));
+    button.tabIndex = active ? 0 : -1;
+  });
+  editor.querySelector('.topic-board-form-scroll')?.scrollTo({ top: 0 });
+  if (safeName === 'preview') renderTopicBoardEditorPreview();
 }
 
 function openTopicBoardEditor(proposalId = '') {
   const overlay = ensureTopicBoardDialog();
   const proposal = proposalId ? getTopicBoardProposalById(proposalId) : null;
   _topicBoardEditingProposalId = proposal?.id || '';
-  _topicBoardSelectedParticipantIds = new Set(proposal?.participants.map(participant => participant.id) || []);
+  _topicBoardParticipantPicker?.destroy();
+  _topicBoardParticipantPicker = null;
   _topicBoardSelectedThemeIcon = proposal?.themeIconUrl || '';
   _topicBoardSelectedVehicleIcon = proposal?.vehicleIconUrl || '';
   const editor = overlay.querySelector('[data-topic-board-editor]');
   editor.hidden = false;
+  overlay.classList.add('is-editing');
+  overlay.querySelector('[data-topic-board-action="open-editor"]').setAttribute('aria-expanded', 'true');
   editor.innerHTML = `<form class="topic-board-form" data-topic-board-form>
     <header>
       <div><small>${proposal ? 'Themenzettel überarbeiten' : 'Neuen Faden anheften'}</small><h3>${proposal ? 'Vorschlag bearbeiten' : 'Was spielen wir als Nächstes?'}</h3></div>
       <button type="button" data-topic-board-action="close-editor" aria-label="Editor schließen">×</button>
     </header>
-    <div class="topic-board-form-scroll">
-      <label class="topic-board-field topic-board-field-wide"><span>Überschrift *</span><input name="title" type="text" maxlength="${TOPIC_BOARD_LIMITS.title}" value="${topicBoardEscape(proposal?.title || '')}" placeholder="Idwal und Trevor segeln nach Abergwint" required></label>
-      <nav class="topic-board-editor-sections topic-board-field-wide" aria-label="Bearbeitungsbereiche">
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="schedule">Termin</button>
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="content">Inhalt</button>
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="appearance">Gestaltung</button>
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="travel">Reise</button>
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="participants">Personen</button>
-        <button type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="preview">Vorschau</button>
+      <nav class="topic-board-editor-sections" role="tablist" aria-label="Bearbeitungsbereiche">
+        <button type="button" role="tab" id="topic-tab-content" aria-controls="topic-panel-content" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="content">Inhalt</button>
+        <button type="button" role="tab" id="topic-tab-participants" aria-controls="topic-panel-participants" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="participants">Personen <span data-topic-board-selected-count>0</span></button>
+        <button type="button" role="tab" id="topic-tab-schedule" aria-controls="topic-panel-schedule" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="schedule">Termin</button>
+        <button type="button" role="tab" id="topic-tab-travel" aria-controls="topic-panel-travel" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="travel">Reise</button>
+        <button type="button" role="tab" id="topic-tab-appearance" aria-controls="topic-panel-appearance" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="appearance">Gestaltung</button>
+        <button type="button" role="tab" id="topic-tab-preview" aria-controls="topic-panel-preview" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="preview">Vorschau</button>
       </nav>
+    <div class="topic-board-form-scroll">
       <div class="topic-board-planning-slot topic-board-field-wide" data-topic-board-planning-slot="schedule" data-topic-board-editor-section="schedule"></div>
-      <label class="topic-board-field" data-topic-board-editor-section="content"><span>Art des Themas</span><select name="category">${TOPIC_BOARD_CATEGORIES.map(category => `<option value="${category.id}"${proposal?.category === category.id ? ' selected' : ''}>${topicBoardEscape(category.label)}</option>`).join('')}</select></label>
+      <section class="topic-board-content-fields topic-board-field-wide" data-topic-board-editor-section="content">
+      <div class="topic-board-section-intro topic-board-field-wide"><span>01 / Der nächste Faden</span><h4>Eine Idee wird zur Szene.</h4><p>Ein Titel und ein Aufhänger genügen für den Anfang. Beteiligte und Planung findest du in den weiteren Reitern.</p></div>
+      <label class="topic-board-field topic-board-field-wide"><span>Überschrift *</span><input name="title" type="text" maxlength="${TOPIC_BOARD_LIMITS.title}" value="${topicBoardEscape(proposal?.title || '')}" placeholder="Idwal und Trevor segeln nach Abergwint" required></label>
+      <label class="topic-board-field"><span>Art des Themas</span><select name="category">${TOPIC_BOARD_CATEGORIES.map(category => `<option value="${category.id}"${proposal?.category === category.id ? ' selected' : ''}>${topicBoardEscape(category.label)}</option>`).join('')}</select></label>
       <label class="topic-board-field"><span>Zeitangabe (erzählerisch)</span><input name="timeframe" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.timeframe || '')}" placeholder="Nach dem Herbstmarkt"></label>
       <label class="topic-board-field"><span>Dauer (Freitext)</span><input name="duration" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.duration || '')}" placeholder="2–3 Tage Fahrt"></label>
       <label class="topic-board-field"><span>Ort / Ziel</span><input name="location" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.location || '')}" placeholder="Abergwint"></label>
       <label class="topic-board-field topic-board-field-wide"><span>Worum geht es?</span><textarea name="description" rows="4" maxlength="${TOPIC_BOARD_LIMITS.description}" placeholder="Beschreibe den Aufhänger, offene Fragen und mögliche Beteiligte …">${topicBoardEscape(proposal?.description || '')}</textarea></label>
+      <button class="topic-board-continue topic-board-field-wide" type="button" data-topic-board-action="scroll-editor-section" data-topic-board-editor-section-target="participants">Weiter zur Besetzung →</button>
+      </section>
       <section class="topic-board-form-section topic-board-field-wide" data-topic-board-editor-section="appearance">
+        <div class="topic-board-section-intro"><span>Gestaltung</span><h4>Gib dem Faden ein Gesicht.</h4><p>Wähle ein passendes Symbol und bei Bedarf ein Reisegefährt.</p></div>
         <span class="topic-board-form-label">Themen-Icon</span>
         <div data-topic-board-theme-icon>${renderTopicBoardIconField('theme', 'Hauptsymbol des Vorschlags', _topicBoardSelectedThemeIcon)}</div>
-      </section>
-      <section class="topic-board-form-section topic-board-field-wide">
+      <div class="topic-board-vehicle-fields">
         <span class="topic-board-form-label">Vehikel / Reisegefährt</span>
         <label class="topic-board-field"><span>Bezeichnung</span><input name="vehicle" type="text" maxlength="${TOPIC_BOARD_LIMITS.meta}" value="${topicBoardEscape(proposal?.vehicle || '')}" placeholder="Idwals Schiff"></label>
         <div data-topic-board-vehicle-icon>${renderTopicBoardIconField('vehicle', 'Icon für Schiff, Pferd oder Wagen', _topicBoardSelectedVehicleIcon)}</div>
+      </div>
       </section>
       <div class="topic-board-planning-slot topic-board-field-wide" data-topic-board-planning-slot="travel" data-topic-board-editor-section="travel"></div>
       <section class="topic-board-form-section topic-board-field-wide" data-topic-board-editor-section="participants">
-        <span class="topic-board-form-label">Betroffene Personen</span>
-        <div class="topic-board-character-filter">
-          <input class="topic-board-character-search" type="search" data-topic-board-field="character-search" placeholder="Figur suchen …" autocomplete="off">
-          <span data-topic-board-character-count aria-live="polite">${getTopicBoardCharacters().length} Figuren</span>
-        </div>
-        <div class="topic-board-character-list" data-topic-board-characters>${getTopicBoardParticipantPickerMarkup(Array.from(_topicBoardSelectedParticipantIds))}</div>
-        <div class="topic-board-character-filter-empty" data-topic-board-character-empty hidden>Keine Figur passt zu dieser Suche.</div>
+        <div data-people-picker aria-busy="true">Die Figuren werden bereitgelegt …</div>
       </section>
       <section class="topic-board-form-section topic-board-field-wide topic-board-preview-section" data-topic-board-editor-section="preview">
         <span class="topic-board-form-label">Vorschau</span>
@@ -438,14 +430,23 @@ function openTopicBoardEditor(proposalId = '') {
       <div class="topic-board-form-status" data-topic-board-form-status role="status"></div>
       <div class="topic-board-form-actions">
         <button type="button" data-topic-board-action="close-editor">Abbrechen</button>
-        <button class="topic-board-save-button" type="submit" data-topic-board-action="submit" title="${proposal ? 'Änderungen speichern' : 'Themenvorschlag anlegen'}">
-          <img src="${TOPIC_BOARD_ACTION_ICON_ASSET}" alt="" decoding="async">
-          <span class="topic-board-visually-hidden">${proposal ? 'Änderungen speichern' : 'Themenvorschlag anlegen'}</span>
-        </button>
+        <button class="topic-board-save-button" type="submit" data-topic-board-action="submit">${proposal ? 'Speichern' : 'Eintragen'}</button>
       </div>
     </footer>
   </form>`;
   mountTopicBoardPlanningEditors(editor.querySelector('[data-topic-board-form]'), proposal);
+  editor.querySelectorAll('[data-topic-board-editor-section]').forEach(section => {
+    const name = section.dataset.topicBoardEditorSection;
+    section.id = `topic-panel-${name}`;
+    section.setAttribute('role', 'tabpanel');
+    section.setAttribute('aria-labelledby', `topic-tab-${name}`);
+  });
+  editor.querySelector('form').addEventListener('invalid', event => {
+    const section = event.target.closest('[data-topic-board-editor-section]');
+    if (section?.hidden) scrollTopicBoardEditorToSection(section.dataset.topicBoardEditorSection);
+  }, true);
+  scrollTopicBoardEditorToSection('content');
+  mountTopicBoardParticipants(editor, proposal);
   renderTopicBoardEditorPreview();
   globalThis.setTimeout?.(() => editor.querySelector('input[name="title"]')?.focus(), 20);
 }
@@ -454,25 +455,23 @@ function closeTopicBoardEditor() {
   const editor = document.querySelector('[data-topic-board-editor]');
   if (!editor) return;
   editor.hidden = true;
+  _topicBoardParticipantPicker?.destroy();
+  _topicBoardParticipantPicker = null;
   editor.innerHTML = '';
+  const overlay = editor.closest('.topic-board-overlay');
+  overlay?.classList.remove('is-editing');
+  const opener = overlay?.querySelector('[data-topic-board-action="open-editor"]');
+  opener?.setAttribute('aria-expanded', 'false');
+  opener?.focus({ preventScroll: true });
   _topicBoardEditingProposalId = '';
-  _topicBoardSelectedParticipantIds = new Set();
   _topicBoardIconTarget = '';
 }
 
 function collectTopicBoardFormPayload() {
   const form = document.querySelector('[data-topic-board-form]');
   if (!form) return normalizeTopicProposal({});
-  const charactersById = new Map(getTopicBoardCharacters().map(character => [String(character.id || ''), character]));
-  const participants = Array.from(_topicBoardSelectedParticipantIds).map(id => {
-    const character = charactersById.get(id);
-    return character ? {
-      id,
-      name: character.name || 'Unbekannt',
-      portrait: getTopicBoardCharacterPortrait(character)
-    } : null;
-  }).filter(Boolean);
   const current = _topicBoardEditingProposalId ? getTopicBoardProposalById(_topicBoardEditingProposalId) : null;
+  const participants = _topicBoardParticipantPicker?.collect() || current?.participants || [];
   const travel = globalThis.AleriaTopicBoardTravelUI?.collect?.(form)
     || globalThis.AleriaTopicBoardTravel?.normalize?.(current?.travel || {})
     || {};
@@ -516,32 +515,36 @@ function setTopicBoardFormStatus(message = '', type = 'info') {
   status.dataset.status = type;
 }
 
-function toggleTopicBoardCharacter(characterId) {
-  const id = String(characterId || '').trim();
-  if (!id) return;
-  if (_topicBoardSelectedParticipantIds.has(id)) _topicBoardSelectedParticipantIds.delete(id);
-  else if (_topicBoardSelectedParticipantIds.size < TOPIC_BOARD_LIMITS.participantCount) _topicBoardSelectedParticipantIds.add(id);
-  document.querySelectorAll('[data-topic-board-action="toggle-character"]').forEach(button => {
-    const selected = _topicBoardSelectedParticipantIds.has(button.dataset.characterId || '');
-    button.classList.toggle('selected', selected);
-    button.setAttribute('aria-pressed', String(selected));
-  });
-  renderTopicBoardEditorPreview();
+async function mountTopicBoardParticipants(editor, proposal) {
+  const host = editor.querySelector('[data-people-picker]');
+  try {
+    const { mountParticipantPicker } = await import('./topic-board-participants.mjs?v=20260911');
+    if (!host.isConnected) return;
+    _topicBoardParticipantPicker = mountParticipantPicker(host, {
+      characters: getTopicBoardCharacters().map(character => ({ ...character, portrait: getTopicBoardCharacterPortrait(character) })),
+      selected: proposal?.participants || [],
+      groups: getTopicBoardState().proposals.filter(item => item.id !== proposal?.id),
+      limit: TOPIC_BOARD_LIMITS.participantCount,
+      escape: topicBoardEscape,
+      image: topicBoardImage,
+      onChange: selected => {
+        editor.querySelector('[data-topic-board-selected-count]').textContent = selected.length;
+        renderTopicBoardEditorPreview();
+      }
+    });
+    host.setAttribute('aria-busy', 'false');
+    editor.querySelector('[data-topic-board-selected-count]').textContent = _topicBoardParticipantPicker.collect().length;
+  } catch (error) {
+    if (!host.isConnected) return;
+    host.setAttribute('aria-busy', 'false');
+    host.innerHTML = '<p>Die Personenauswahl konnte nicht geladen werden.</p><button type="button" data-topic-board-action="retry-participants">Erneut versuchen</button>';
+    console.error('Personenauswahl der Themenwand:', error);
+  }
 }
 
-function filterTopicBoardCharacters(value) {
-  const needle = globalThis.AleriaTopicBoardListState.normalizeSearchText(value);
-  const buttons = Array.from(document.querySelectorAll('[data-topic-board-characters] .topic-board-character'));
-  let visibleCount = 0;
-  buttons.forEach(button => {
-    const visible = !needle || String(button.dataset.characterSearch || '').includes(needle);
-    button.hidden = !visible;
-    if (visible) visibleCount += 1;
-  });
-  const counter = document.querySelector('[data-topic-board-character-count]');
-  if (counter) counter.textContent = `${visibleCount} von ${buttons.length} Figuren`;
-  const empty = document.querySelector('[data-topic-board-character-empty]');
-  if (empty) empty.hidden = visibleCount > 0 || !buttons.length;
+function retryTopicBoardParticipants() {
+  const editor = document.querySelector('[data-topic-board-editor]');
+  if (editor && !_topicBoardParticipantPicker) mountTopicBoardParticipants(editor, getTopicBoardProposalById(_topicBoardEditingProposalId));
 }
 
 function openTopicBoardIconPicker(target) {
@@ -561,16 +564,22 @@ async function submitTopicBoardEditor() {
   if (_topicBoardSubmitting) return;
   const payload = collectTopicBoardFormPayload();
   const form = document.querySelector('[data-topic-board-form]');
+  if (!_topicBoardParticipantPicker) {
+    setTopicBoardFormStatus('Die Personenauswahl wird noch geladen. Bitte versuche es gleich erneut.', 'error');
+    return;
+  }
   if (!isTopicBoardPlanningReady(form)) {
     setTopicBoardFormStatus('Termin- oder Reiseplanung wurde nicht vollständig geladen. Der unvollständige Themenzettel wird nicht gespeichert.', 'error');
     return;
   }
   if (!payload.title) {
+    scrollTopicBoardEditorToSection('content');
     setTopicBoardFormStatus('Bitte gib dem Vorschlag eine Überschrift.', 'error');
     document.querySelector('[data-topic-board-form] input[name="title"]')?.focus();
     return;
   }
   if (!globalThis.AleriaTopicBoardSchedule.hasDate(payload.schedule?.startDate)) {
+    scrollTopicBoardEditorToSection('schedule');
     setTopicBoardFormStatus('Bitte trage einen vollständigen Start- oder Fälligkeitstermin ein.', 'error');
     document.querySelector('[data-topic-board-form] input[name="scheduleStartDay"]')?.focus();
     return;
@@ -620,7 +629,6 @@ function closeTopicBoardDialog() {
 globalThis.AleriaTopicBoardUI = Object.freeze({
   closeTopicBoardDialog,
   closeTopicBoardEditor,
-  filterTopicBoardCharacters,
   openTopicBoardDialog,
   openTopicBoardEditor,
   openTopicBoardIconPicker,
@@ -632,7 +640,7 @@ globalThis.AleriaTopicBoardUI = Object.freeze({
   setTopicBoardFormStatus,
   setTopicBoardSelectedIcon,
   submitTopicBoardEditor,
-  toggleTopicBoardCharacter,
+  retryTopicBoardParticipants,
   toggleTopicBoardProposalDetails,
   updateTopicBoardSidebarSummary
 });

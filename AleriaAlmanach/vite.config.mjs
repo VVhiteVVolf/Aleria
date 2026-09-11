@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
@@ -42,13 +43,15 @@ const workspaceIconDirectories = [
   ['Zauber Icons', 'Baldurs Gate'],
   ['Traits Icon'],
   ['Etablissemant Icons'],
-  ['ReiterIcons']
+  ['ReiterIcons'],
+  ['Siluetten']
 ];
 
 function preserveClassicAlmanachScripts() {
   return {
     name: 'preserve-classic-almanach-scripts',
     async closeBundle() {
+      await copyCalendarIconAssets({ workspaceRoot, almanachRoot, buildRoot });
       await Promise.all(classicDirectories.map(directory => (
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
       )));
@@ -104,6 +107,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
+        kalender: resolve(almanachRoot, 'kalender.html'),
         ...getReligionPageInputs(),
         ...getClergyPageInputs(),
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),

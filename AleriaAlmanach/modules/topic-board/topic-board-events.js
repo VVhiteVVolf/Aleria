@@ -70,9 +70,9 @@ function handleTopicBoardClick(event) {
   } else if (['vote', 'archive', 'restore'].includes(action)) {
     event.preventDefault();
     handleTopicBoardStateAction(button, action);
-  } else if (action === 'toggle-character') {
+  } else if (action === 'retry-participants') {
     event.preventDefault();
-    toggleTopicBoardCharacter(button.dataset.characterId || '');
+    globalThis.AleriaTopicBoardUI.retryTopicBoardParticipants();
   } else if (action === 'pick-icon') {
     event.preventDefault();
     openTopicBoardIconPicker(button.dataset.topicBoardIconTarget || 'theme');
@@ -107,10 +107,7 @@ function handleTopicBoardInput(event) {
   }
   const form = event.target?.closest?.('[data-topic-board-form]');
   if (!form) return;
-  if (event.target?.dataset?.topicBoardField === 'character-search') {
-    filterTopicBoardCharacters(event.target.value || '');
-    return;
-  }
+  if (event.target.closest('[data-people-picker]')) return;
   renderTopicBoardEditorPreview();
 }
 
@@ -143,6 +140,31 @@ document.addEventListener('click', handleTopicBoardClick);
 document.addEventListener('input', handleTopicBoardInput);
 document.addEventListener('change', handleTopicBoardInput);
 document.addEventListener('submit', handleTopicBoardSubmit);
+document.addEventListener('keydown', event => {
+  const overlay = document.getElementById('topic-board-overlay');
+  if (event.key === 'Escape' && overlay?.classList.contains('active')
+    && (typeof getTopActiveDialog !== 'function' || getTopActiveDialog() === overlay)) {
+    event.preventDefault();
+    const editor = overlay.querySelector('[data-topic-board-editor]');
+    if (editor && !editor.hidden) closeTopicBoardEditor();
+    else closeTopicBoardDialog();
+    return;
+  }
+  const form = event.target?.closest?.('[data-topic-board-form]');
+  if (!form) return;
+  if ((event.ctrlKey || event.metaKey) && event.key === 'Enter' && !event.target.closest('[data-people-picker]')) {
+    event.preventDefault();
+    form.requestSubmit();
+  }
+  const tab = event.target.closest('.topic-board-editor-sections [role="tab"]');
+  if (!tab || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+  event.preventDefault();
+  const tabs = Array.from(tab.parentElement.querySelectorAll('[role="tab"]'));
+  const index = tabs.indexOf(tab);
+  const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+  globalThis.AleriaTopicBoardUI.scrollEditorToSection(tabs[next].dataset.topicBoardEditorSectionTarget);
+  tabs[next].focus();
+});
 document.addEventListener('almanach-icon-selected', handleTopicBoardIconSelected);
 document.addEventListener('almanach-topic-board-state', handleTopicBoardStateChanged);
 document.addEventListener('almanach-world-date-state', handleTopicBoardStateChanged);

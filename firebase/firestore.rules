@@ -43,6 +43,42 @@ service cloud.firestore {
       return request.resource.data.diff(resource.data).affectedKeys().hasAny(['combatProfile', 'inventory']);
     }
 
+    function pureTimeMarker(data) {
+      return data.get('sceneTimeEvent', null) is map
+        && data.get('sceneRest', null) == null
+        && data.get('restTransaction', null) == null
+        && data.get('combatTransaction', null) == null
+        && data.get('combatResolution', null) == null
+        && data.get('combatEncounter', null) == null
+        && data.get('combatStatus', null) == null
+        && data.get('inventoryTransaction', null) == null
+        && data.get('sceneInventoryTransfer', null) == null
+        && data.get('sceneDiceRoll', null) == null
+        && data.get('skillResolution', null) == null
+        && data.get('commentSegments', []) in [null, []];
+    }
+
+    function validCalendarDate(date) {
+      return date is map && date.keys().hasOnly(['year', 'month', 'day'])
+        && date.year is int && date.year >= 1 && date.year <= 100000
+        && date.month is int && date.month >= 1 && date.month <= 13
+        && date.day is int && date.day >= 1 && date.day <= 36;
+    }
+
+    function validTimeMarkerEdit() {
+      let event = request.resource.data.sceneTimeEvent;
+      return pureTimeMarker(resource.data) && pureTimeMarker(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'sceneTimeEvent', 'text', 'updatedAtClient', 'activityAtClient', 'updatedAt', 'activityAt'
+        ])
+        && event.anchorDay is int && event.anchorDay >= 1 && event.anchorDay <= 1000000
+        && event.anchorSeconds is int && event.anchorSeconds >= 0 && event.anchorSeconds < 86400
+        && event.calendarDay is int && event.calendarDay >= 1 && event.calendarDay <= 1000000
+        && validCalendarDate(event.calendarDate)
+        && event.title is string && event.title.size() <= 500
+        && request.resource.data.text is string && request.resource.data.text.size() <= 10000;
+    }
+
     match /comments/{commentId} {
       allow read: if true;
       allow create: if false;
@@ -50,8 +86,10 @@ service cloud.firestore {
         && !isMechanicalComment(request.resource.data)
         && signedIn()
         && request.resource.data.createdBy == resource.data.createdBy;
-      allow delete: if !isMechanicalComment(resource.data)
-        && signedIn();
+      allow update: if signedIn() && validTimeMarkerEdit();
+      // Pure time markers do not reverse a character, inventory or combat transaction.
+      allow delete: if signedIn()
+        && (!isMechanicalComment(resource.data) || pureTimeMarker(resource.data));
     }
 
     match /characters/{recordId} {
@@ -126,6 +164,33 @@ service cloud.firestore {
         && request.resource.data.status in ['open', 'archived']
         && request.resource.data.votes is map
         && request.resource.data.votes.size() <= 100;
+      allow delete: if false;
+    }
+
+    match /calendar_events/{eventId} {
+      function validEvent() {
+        let event = request.resource.data;
+        return event.keys().hasOnly([
+          'id', 'schemaVersion', 'title', 'type', 'start', 'end', 'startTime', 'endTime',
+          'location', 'summary', 'icon', 'articleHref', 'recurrence', 'participants',
+          'revision', 'deleted', 'updatedBy', 'updatedAt'
+        ]) && event.id == eventId && eventId.size() <= 100
+          && event.schemaVersion == 1 && event.updatedBy == request.auth.uid
+          && event.title is string && event.title.size() > 0 && event.title.size() <= 150
+          && validCalendarDate(event.start) && validCalendarDate(event.end)
+          && event.recurrence in ['none', 'week', 'year']
+          && event.startTime is string && event.startTime.size() <= 5
+          && event.endTime is string && event.endTime.size() <= 5
+          && event.summary is string && event.summary.size() <= 2400
+          && event.location is string && event.location.size() <= 200
+          && event.icon is string && event.icon.size() <= 2000
+          && event.articleHref is string && event.articleHref.size() <= 2000
+          && event.participants is list && event.participants.size() <= 40
+          && event.deleted is bool && event.revision is int;
+      }
+      allow read: if true;
+      allow create: if signedIn() && validEvent() && request.resource.data.revision == 1;
+      allow update: if signedIn() && validEvent() && request.resource.data.revision == resource.data.revision + 1;
       allow delete: if false;
     }
 

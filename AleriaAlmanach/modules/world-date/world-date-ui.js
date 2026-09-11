@@ -64,7 +64,8 @@ function renderWorldDateDialog() {
         <button type="button" data-world-date-action="close-editor" aria-label="Datumsfenster schließen">×</button>
       </header>
       <p>Undatierte interaktive Szenen übernehmen dieses Datum mit ihrem ersten Beitrag als festes Startdatum.</p>
-      <div class="world-date-fields">
+      <div data-world-date-calendar></div>
+      <div class="world-date-fields" hidden>
         <label><span>Jahr</span><input type="number" min="1" required value="${date.year}" data-world-date-field="year"></label>
         <label><span>Monat</span><select required data-world-date-field="month">${getWorldDateMonthOptions(date.month)}</select></label>
         <label><span>Tag</span><select required data-world-date-field="day">${getWorldDateDayOptions(date.day)}</select></label>
@@ -79,9 +80,18 @@ function renderWorldDateDialog() {
   return overlay;
 }
 
-function openWorldDateDialog() {
-  renderWorldDateDialog();
-  activateDialog('world-date-overlay', { initialFocus: '[data-world-date-field="year"], input, select, button' });
+async function openWorldDateDialog() {
+  const overlay = renderWorldDateDialog();
+  const { mountCalendarDatePicker } = await import('../calendar/calendar-date-picker.mjs');
+  overlay.worldDatePicker?.destroy();
+  overlay.worldDatePicker = mountCalendarDatePicker(overlay.querySelector('[data-world-date-calendar]'), {
+    value: getRenderableWorldDate(),
+    onChange: date => {
+      for (const key of ['year', 'month', 'day']) overlay.querySelector(`[data-world-date-field="${key}"]`).value = date[key];
+      renderWorldDatePreview(overlay.querySelector('form'));
+    }
+  });
+  activateDialog('world-date-overlay', { initialFocus: '[data-world-date-calendar] summary' });
 }
 
 function closeWorldDateDialog() {

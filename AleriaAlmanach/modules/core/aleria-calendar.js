@@ -2,6 +2,7 @@
 // Additiv zu bestehenden Freitext-Zeitangaben nutzbar (siehe module-editor-aleria-date-field.js).
 
 const ALERIA_CALENDAR = Object.freeze({
+  months: Object.freeze(['Sternwacht', 'Silberglanz', 'Lichtkehr', 'Himmelsbogen', 'Sonnenkranz', 'Goldschein', 'Hochlicht', 'Abendglut', 'Dämmerschleier', 'Mondpfad', 'Schattenruh', 'Nachtkrone', 'Jahreswende']),
   weekdays: ['Ordanstag', 'Marielstag', 'Maldrastag', 'Sylvanastag', 'Kharonstag', 'Orinstag', 'Tharimstag', 'Baldranstag', 'Lyristag'],
   daysPerWeek: 9,
   daysPerMonth: 36,
@@ -13,7 +14,7 @@ const ALERIA_CALENDAR = Object.freeze({
 });
 
 function getAleriaMonthLabel(month) {
-  return `Monat ${Number(month)}`;
+  return ALERIA_CALENDAR.months[Number(month) - 1] || `Monat ${Number(month)}`;
 }
 
 function getAleriaWeekdayIndex(dayOfMonth) {
@@ -75,13 +76,13 @@ function getAleriaDateEra(value) {
   return 'present';
 }
 
-function formatAleriaDate(value, { withWeekday = true } = {}) {
+function formatAleriaDate(value, { withWeekday = true, numeric = false } = {}) {
   const date = sanitizeAleriaDate(value);
   if (!hasAleriaDate(date)) return '';
   const weekday = withWeekday ? `${getAleriaWeekdayName(date.day)}, ` : '';
   const dd = String(date.day).padStart(2, '0');
   const mm = String(date.month).padStart(2, '0');
-  return `${weekday}${dd}.${mm} Jahr ${date.year}`;
+  return numeric ? `${weekday}${dd}.${mm} Jahr ${date.year}` : `${weekday}${date.day}. ${getAleriaMonthLabel(date.month)} ${date.year}`;
 }
 
 function aleriaDateFromOrdinal(ordinal) {
@@ -119,3 +120,17 @@ function buildAleriaDateBadge(value, className = 'aleria-date-badge') {
   const eraClass = era && era !== 'present' ? ` ${className}-${era}` : '';
   return `<span class="${className}${eraClass}">${escapeHtml(formatAleriaDate(date))}</span>`;
 }
+
+// Gemeinsamer, unveränderlicher Zugang für gekapselte Kalender-Module.
+globalThis.AleriaCalendar = Object.freeze({
+  ...ALERIA_CALENDAR,
+  current: getAleriaCurrentDate,
+  normalize: sanitizeAleriaDate,
+  isValid: hasAleriaDate,
+  ordinal: getAleriaDayOrdinal,
+  fromOrdinal: aleriaDateFromOrdinal,
+  shift: addAleriaDays,
+  format: formatAleriaDate,
+  monthLabel: getAleriaMonthLabel,
+  weekday: getAleriaWeekdayName
+});
