@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Aleria Arcana";
-  src: url("./fonts/AleriaArcana-Regular.woff2?v=2") format("woff2"),
-       url("./fonts/AleriaArcana-Regular.woff?v=2") format("woff"),
-       url("./fonts/AleriaArcana-Regular.ttf?v=2") format("truetype");
+  src: url("./fonts/AleriaArcana-Regular.woff2?v=3") format("woff2"),
+       url("./fonts/AleriaArcana-Regular.woff?v=3") format("woff"),
+       url("./fonts/AleriaArcana-Regular.ttf?v=3") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,4 +19,24 @@
 }
 .arcane-separated { font-variant-ligatures: none; font-feature-settings: "liga" 0; }
 
-/* Version 2: Alte Ritualrunen. Glyphs follow the CSS text color. */
+/* Version 3: Alte Ritualrunen. Glyphs follow the CSS text color. */
+
+@font-face {
+  font-family: "Aleria Arcana Text";
+  src: url("./fonts/AleriaArcana-Text.woff2?v=3") format("woff2"),
+       url("./fonts/AleriaArcana-Text.woff?v=3") format("woff"),
+       url("./fonts/AleriaArcana-Text.ttf?v=3") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.arcane-text {
+  font-family: "Aleria Arcana Text", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-synthesis: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+  letter-spacing: normal;
+  line-height: 1.45;
+}

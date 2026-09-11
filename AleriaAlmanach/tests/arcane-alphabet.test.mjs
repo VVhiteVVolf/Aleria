@@ -73,8 +73,16 @@ test('canonical token encoding distinguishes separate letters, digraphs, aliases
   assert.equal(encodeTokens(['C', 'H']), '\uE002\uE007');
   assert.equal(encodeTokens(['cH']), '\uE014');
   assert.equal(encodeTokens(["'", '’', 'Æ', 'æ']), '\uE013\uE013\uE01F\uE01F');
-  assert.throws(() => encodeTokens(['K']), /Unbekanntes Runentoken/);
+  assert.equal(encodeTokens(['K', 'k']), '\uE002\uE002');
+  assert.throws(() => encodeTokens(['J']), /Unbekanntes Runentoken/);
   assert.equal(context.createArcaneAlphabetFormulaPage().scriptTable.rows[2].symbol, encodeTokens(['F', 'C', '!']));
+});
+
+test('the extended font accepts German text and identifies unsupported characters', () => {
+  const { findUnsupported } = loadArcane().AleriaArcana;
+  assert.equal(findUnsupported('König Kök führt zwölf große Wölfe über die Straße. J Q W ẞ 0123456789 „Grüße“ & 25 €!').length, 0);
+  assert.equal(findUnsupported('A\u0308 O\u0308 U\u0308 e\u0301\n\t').length, 0);
+  assert.deepEqual(Array.from(findUnsupported('Hallo 😀 Ж 😀')), ['😀', 'Ж']);
 });
 
 test('spell and foreign bubbles preserve readable text and arcane selection in both editors and legacy data', () => {
