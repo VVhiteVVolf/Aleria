@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -318,6 +319,7 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Saethwyr-Tabelle und Stammbaumgrafik. Bereits in Arwydd, Gafyr oder Wyrm geführte Personen verwenden dieselben Weltpersonen-IDs und lokalen Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 3
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 4
   }
 });

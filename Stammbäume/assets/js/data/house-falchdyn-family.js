@@ -295,6 +295,12 @@ export const FALCHDYN_HOUSE_BIOGRAPHY = Object.freeze({
     documentsTitle: 'Betriebe & Besitz',
     documents: Object.freeze([
       Object.freeze({
+        icon: FALCHDYN_EMBLEM,
+        title: 'Haus Falchdyn · Hausseite',
+        text: 'Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.',
+        link: '../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-falchdyn'
+      }),
+      Object.freeze({
         icon: CELTIGERNS_ECHO_EMBLEM,
         title: 'Celtigerns Echo',
         text: 'Zeitungsblatt mit Hauptredaktion und Druckerei in Gwynthor sowie kleineren Redaktionsstuben in der Grafschaft.',

@@ -7,10 +7,13 @@
   const areaById = new Map(content.areas.map((area) => [area.id, area]));
   const areaByName = new Map(content.areas.map((area) => [normalize(area.name), area]));
   const sourceCache = new Map();
+  const rendererUrl = new URL('./administration-renderer.mjs?v=administration-dialog-20260911b', document.currentScript.src);
+  let loadRevision = 0;
   let dialog;
   let dialogKicker;
   let dialogTitle;
   let dialogBody;
+  let dialogIcon;
   let lastTrigger;
   let activeAreaId;
   let activeScopeId;
@@ -32,9 +35,10 @@
     element.innerHTML = `
       <div class="administration-dialog-shell">
         <header class="administration-dialog-header">
+          <img class="administration-dialog-icon" alt="">
           <div>
             <span class="administration-dialog-kicker">Verwaltungsstruktur</span>
-            <h2 id="administration-dialog-title"></h2>
+            <h2 id="administration-dialog-title" tabindex="-1"></h2>
           </div>
           <button class="administration-dialog-close" type="button" data-action="close-administration" aria-label="Fenster schließen">×</button>
         </header>
@@ -43,11 +47,15 @@
     document.body.append(element);
     dialogKicker = element.querySelector(".administration-dialog-kicker");
     dialogTitle = element.querySelector("#administration-dialog-title");
+    dialogIcon = element.querySelector('.administration-dialog-icon');
     dialogBody = element.querySelector('[data-role="administration-dialog-body"]');
     element.addEventListener("click", (event) => {
       if (event.target === element) closeDialog();
     });
-    element.addEventListener("close", () => lastTrigger?.focus());
+    element.addEventListener("close", () => {
+      loadRevision += 1;
+      lastTrigger?.focus();
+    });
     return element;
   }
 
@@ -61,86 +69,47 @@
     if (trigger) lastTrigger = trigger;
     activeAreaId = area.id;
     activeScopeId = normalize(requestedScopeId || trigger?.dataset.administrationScope || currentScopeId());
+    const revision = ++loadRevision;
+    const scopeId = activeScopeId;
     dialogKicker.textContent = `${currentDomainName()} · Verwaltungsstruktur`;
     dialogTitle.textContent = area.name;
+    dialogIcon.src = area.imageSrc;
     dialogBody.innerHTML = '<p class="administration-dialog-status">Inhalte werden geladen …</p>';
+    dialogBody.setAttribute('aria-busy', 'true');
+    dialogBody.scrollTop = 0;
     if (!dialog.open) dialog.showModal();
 
     try {
-      const rendered = await loadArea(area, activeScopeId);
-      rendered.append(createAreaNavigation(area, activeScopeId));
+      const rendered = await loadArea(area, scopeId);
+      if (revision !== loadRevision || !dialog.open) return;
+      rendered.append(createAreaNavigation(area, scopeId));
       dialogBody.replaceChildren(rendered);
+      dialogBody.removeAttribute('aria-busy');
+      if (!trigger) dialogTitle.focus({ preventScroll: true });
     } catch (error) {
+      if (revision !== loadRevision || !dialog.open) return;
       console.error("Verwaltungsbereich konnte nicht geladen werden.", error);
       dialogBody.innerHTML = '<p class="administration-dialog-status is-error">Die Inhalte konnten nicht geladen werden.</p>';
+      dialogBody.removeAttribute('aria-busy');
     }
   }
 
   async function loadArea(area, scopeId) {
+    const { renderLegacyContent, renderEmptyArea } = await import(rendererUrl.href);
     const source = content.sourceFor?.(scopeId, area.id) || "";
     if (!source) return renderEmptyArea();
     if (!sourceCache.has(source)) {
-      sourceCache.set(source, fetch(source).then((response) => {
+      const requestUrl = new URL(source, location.origin);
+      requestUrl.searchParams.set('v', 'administration-dialog-20260911b');
+      sourceCache.set(source, fetch(requestUrl).then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}: ${source}`);
         return response.text();
+      }).catch(error => {
+        sourceCache.delete(source);
+        throw error;
       }));
     }
     return renderLegacyContent(await sourceCache.get(source));
-  }
-
-  function renderEmptyArea() {
-    const result = document.createDocumentFragment();
-    const section = document.createElement("section");
-    section.className = "administration-dialog-section is-empty";
-    const placeholder = document.createElement("p");
-    placeholder.className = "administration-dialog-status";
-    placeholder.textContent = "…";
-    section.append(placeholder);
-    result.append(section);
-    return result;
-  }
-
-  function renderLegacyContent(source) {
-    const parsed = new DOMParser().parseFromString(source, "text/html");
-    const legacyRoot = parsed.querySelector(".user_css") || parsed.body;
-    const outerTable = Array.from(legacyRoot.children).find((element) => element.tagName === "TABLE");
-    const result = document.createDocumentFragment();
-
-    if (!outerTable?.tBodies?.[0]) {
-      const fallback = document.createElement("section");
-      fallback.className = "administration-dialog-section";
-      fallback.append(sanitize(legacyRoot.cloneNode(true)));
-      result.append(fallback);
-      return result;
-    }
-
-    const rows = Array.from(outerTable.tBodies[0].rows);
-    const metadata = extractMetadata(rows[0]);
-    if (metadata) result.append(metadata);
-
-    rows.slice(1).forEach((row) => {
-      Array.from(row.cells)
-        .filter((cell) => cell.colSpan >= 3)
-        .forEach((cell) => {
-          const section = document.createElement("section");
-          section.className = "administration-dialog-section";
-          const clone = sanitize(cell.cloneNode(true));
-          removeLegacyNavigation(clone);
-          while (clone.firstChild) section.append(clone.firstChild);
-          if (hasMeaningfulContent(section)) result.append(section);
-        });
-    });
-    return result;
-  }
-
-  function removeLegacyNavigation(root) {
-    root.querySelectorAll("table").forEach((table) => {
-      const text = table.textContent.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
-      if (text.includes("Verwaltungsapparat") && text.includes("Hauptseite")) {
-        table.closest(".administration-dialog-table-scroll")?.remove();
-        if (table.isConnected) table.remove();
-      }
-    });
   }
 
   function createAreaNavigation(area, scopeId) {
@@ -151,112 +120,13 @@
     navigation.className = "administration-dialog-navigation";
     navigation.setAttribute("aria-label", "Zwischen Verwaltungsbereichen wechseln");
     navigation.innerHTML = `
-      <button type="button" data-action="navigate-administration" data-administration-key="${previous.id}" data-administration-scope="${scopeId}" aria-label="Vorheriger Bereich: ${previous.name}">&lsaquo; Links</button>
-      <span aria-hidden="true">|</span>
-      <button type="button" data-action="navigate-administration" data-administration-key="${next.id}" data-administration-scope="${scopeId}" aria-label="Nächster Bereich: ${next.name}">Rechts &rsaquo;</button>`;
+      <button type="button" data-action="navigate-administration" data-administration-key="${previous.id}" data-administration-scope="${scopeId}" aria-label="Vorheriger Bereich: ${previous.name}">&lsaquo; ${previous.name}</button>
+      <button type="button" data-action="navigate-administration" data-administration-key="${next.id}" data-administration-scope="${scopeId}" aria-label="Nächster Bereich: ${next.name}">${next.name} &rsaquo;</button>`;
     return navigation;
   }
 
-  function extractMetadata(firstRow) {
-    if (!firstRow) return null;
-    const nestedTables = firstRow.querySelectorAll("table");
-    const infoTable = nestedTables[nestedTables.length - 1];
-    if (!infoTable) return null;
-    const list = document.createElement("dl");
-    list.className = "administration-dialog-facts";
-    Array.from(infoTable.rows).slice(1).forEach((row) => {
-      if (row.cells.length < 2) return;
-      const term = document.createElement("dt");
-      const description = document.createElement("dd");
-      term.textContent = row.cells[0].textContent.trim();
-      description.textContent = row.cells[1].textContent.trim();
-      if (term.textContent || description.textContent) list.append(term, description);
-    });
-    return list.children.length ? list : null;
-  }
-
-  function sanitize(root) {
-    root.querySelectorAll("script, style, link, iframe, object, embed, form, input, button, textarea, select").forEach((node) => node.remove());
-    root.querySelectorAll("*").forEach((element) => {
-      const legacyStyle = element.getAttribute("style") || "";
-      Array.from(element.attributes).forEach((attribute) => {
-        if (!["href", "src", "alt", "colspan", "rowspan", "open"].includes(attribute.name)) {
-          element.removeAttribute(attribute.name);
-        }
-      });
-      if (element.tagName === "A") {
-        const href = element.getAttribute("href") || "";
-        if (/^javascript:/i.test(href)) element.removeAttribute("href");
-        element.target = "_blank";
-        element.rel = "noopener noreferrer";
-      }
-      if (element.tagName === "IMG") {
-        const src = element.getAttribute("src") || "";
-        if (!/^(https?:|\/)/i.test(src)) element.removeAttribute("src");
-        element.className = getImageKind(legacyStyle);
-        element.loading = "lazy";
-        element.decoding = "async";
-      }
-      if (element.tagName === "DETAILS") element.className = "administration-dialog-details";
-    });
-    root.querySelectorAll("p").forEach((paragraph) => {
-      if (!paragraph.textContent.replace(/\u00a0/g, "").trim() && !paragraph.querySelector("img")) paragraph.remove();
-    });
-    root.querySelectorAll("tr").forEach((row) => {
-      if (!row.textContent.replace(/\u00a0/g, "").trim() && !row.querySelector("img")) row.remove();
-    });
-    root.querySelectorAll("p").forEach((paragraph) => {
-      if (/^\s*[1-6]\)\s*\S/.test(paragraph.textContent)) paragraph.className = "administration-dialog-heading";
-    });
-    root.querySelectorAll("table").forEach(classifyTable);
-    return root;
-  }
-
-  function getImageKind(style) {
-    const width = Number(style.match(/width\s*:\s*(\d+)px/i)?.[1] || 0);
-    const height = Number(style.match(/height\s*:\s*(\d+)px/i)?.[1] || 0);
-    if (width && height && height / width >= 1.25) return "administration-dialog-portrait";
-    if (width && height && width / height >= 1.45) return "administration-dialog-landscape";
-    return "administration-dialog-emblem";
-  }
-
-  function classifyTable(table) {
-    const hasPortraits = Boolean(table.querySelector(".administration-dialog-portrait"));
-    const hasImages = Boolean(table.querySelector("img"));
-    const headerColumns = table.querySelectorAll("thead th").length;
-    table.className = "administration-dialog-table";
-    if (headerColumns >= 3 && !hasImages) table.classList.add("is-office-table");
-    else if (hasPortraits || (hasImages && table.rows.length >= 4)) {
-      table.classList.add("is-hierarchy-table");
-      classifyHierarchyRows(table);
-    }
-    else table.classList.add("is-compact-table");
-
-    const scroller = document.createElement("div");
-    scroller.className = "administration-dialog-table-scroll";
-    table.before(scroller);
-    scroller.append(table);
-  }
-
-  function classifyHierarchyRows(table) {
-    const rows = Array.from(table.rows);
-    rows.forEach((row, index) => {
-      const portraits = row.querySelectorAll(".administration-dialog-portrait");
-      if (!portraits.length) return;
-      row.classList.add("is-portrait-row");
-      rows[index + 1]?.classList.add("is-person-name-row");
-      if (row.cells.length !== 1 || row.cells[0].colSpan < 3) return;
-      row.classList.add("is-primary-leader-row");
-      rows[index - 1]?.classList.add("is-primary-leader-title-row");
-      rows[index + 1]?.classList.add("is-primary-leader-name-row");
-    });
-  }
-
-  function hasMeaningfulContent(element) {
-    return Boolean(element.textContent.replace(/\u00a0/g, "").trim() || element.querySelector("img"));
-  }
-
   function createAdministrationCard(area, imageSrc, scopeId) {
+    imageSrc = area.imageSrc || imageSrc;
     const button = document.createElement("button");
     button.type = "button";
     button.className = "administration-card";
@@ -285,6 +155,8 @@
     const images = Array.from(table.querySelectorAll("img")).map((image) => image.getAttribute("src") || "");
     const grid = document.createElement("div");
     grid.className = "administration-grid";
+    grid.setAttribute('role', 'group');
+    grid.setAttribute('aria-label', 'Verwaltungsbereiche');
     const scopeId = currentScopeId();
     grid.dataset.administrationScope = scopeId;
     content.areas.forEach((area, index) => grid.append(createAdministrationCard(area, images[index], scopeId)));
@@ -304,6 +176,16 @@
       if (!element.dataset.administrationScope) element.dataset.administrationScope = scopeId;
       element.dataset.action = "open-administration";
       element.setAttribute("aria-haspopup", "dialog");
+      if (area.imageSrc && element.matches('.administration-card, .herrschaft-administration-card')) {
+        let image = element.querySelector('img');
+        if (!image) {
+          image = document.createElement('img');
+          image.alt = '';
+          image.loading = 'lazy';
+          element.prepend(image);
+        }
+        if (image.getAttribute('src') !== area.imageSrc) image.src = area.imageSrc;
+      }
     });
   }
 

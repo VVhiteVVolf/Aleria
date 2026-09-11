@@ -7,7 +7,7 @@
   const familyTreePage = data.familyTreePage;
   const houseRoot = "/Stammbäume/assets/images/houses/Artus Streben";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
-  const banner = "/Stammbäume/assets/images/regions/artus-streben.png";
+  const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/herrschaftsbanner.png";
   const mapImage = "/Kontinente/assets/images/celtigerns-wacht-map-preview.jpg";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
   const parentHref = "../Grafschaft%20Celtigerns%20Wacht.html";
@@ -15,7 +15,7 @@
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [
       data.family("Gwefrydd", {
-        familyId: "haus-gwefrydd",
+        familyId: "haus-gwefrydd", housePage: "haus.html",
         imageSrc: `${houseRoot}/haus-gwefrydd.png`,
         seat: "Rhosmere",
         liege: "Draig",
@@ -23,22 +23,22 @@
       }),
     ]),
     data.familySection("Ritterhäuser", [
-      data.family("Almarch", { familyId: "haus-almarch", imageSrc: `${houseRoot}/Niedere Ritterliche/Almarch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Brinmarch", { familyId: "haus-brinmarch", imageSrc: `${houseRoot}/Niedere Ritterliche/Brinmarch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Gwardin", { familyId: "haus-gwardin", imageSrc: `${houseRoot}/Niedere Ritterliche/Gwardin.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Tirwyn", { familyId: "haus-tirwyn", imageSrc: `${houseRoot}/Niedere Ritterliche/Tirwyn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Eirfael", { familyId: "haus-eirfael", imageSrc: `${houseRoot}/Niedere Ritterliche/Eirfael.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Ghorswyn", { familyId: "haus-ghorswyn", imageSrc: `${houseRoot}/Niedere Ritterliche/Ghorswyn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Coedvarn", { familyId: "haus-coedvarn", imageSrc: `${houseRoot}/Niedere Ritterliche/Coedvarn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Althin", { familyId: "haus-althin", imageSrc: `${houseRoot}/Niedere Ritterliche/Althin.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Talmeirch", { familyId: "haus-talmeirch", imageSrc: `${houseRoot}/Niedere Ritterliche/Talmeirch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Gwynrhos", { familyId: "haus-gwynrhos", imageSrc: `${houseRoot}/Niedere Ritterliche/Gwynrhos.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Almarch", { familyId: "haus-almarch", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Almarch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Brinmarch", { familyId: "haus-brinmarch", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Brinmarch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Gwardin", { familyId: "haus-gwardin", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Gwardin.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Tirwyn", { familyId: "haus-tirwyn", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Tirwyn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Eirfael", { familyId: "haus-eirfael", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Eirfael.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Ghorswyn", { familyId: "haus-ghorswyn", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Ghorswyn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Coedvarn", { familyId: "haus-coedvarn", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Coedvarn.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Althin", { familyId: "haus-althin", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Althin.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Talmeirch", { familyId: "haus-talmeirch", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Talmeirch.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Gwynrhos", { familyId: "haus-gwynrhos", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Niedere Ritterliche/Gwynrhos.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
     ]),
     data.familySection("Bürgerliche Häuser", [
-      data.family("Iorwen", { familyId: "haus-iorwen", imageSrc: `${houseRoot}/Bürgerliche/Iorwen.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Bekab", { familyId: "haus-bekab", imageSrc: `${houseRoot}/Bürgerliche/Bekab.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Rhen", { familyId: "haus-rhen", imageSrc: `${houseRoot}/Bürgerliche/Rhen.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
-      data.family("Maethan", { familyId: "haus-maethan", imageSrc: `${houseRoot}/Bürgerliche/Maethan.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Iorwen", { familyId: "haus-iorwen", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Bürgerliche/Iorwen.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Bekab", { familyId: "haus-bekab", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Bürgerliche/Bekab.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Rhen", { familyId: "haus-rhen", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Bürgerliche/Rhen.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
+      data.family("Maethan", { familyId: "haus-maethan", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Bürgerliche/Maethan.png`, seat: "Rhosmere", liege: "Gwefrydd" }),
     ]),
   ]);
 

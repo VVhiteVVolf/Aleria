@@ -2,6 +2,7 @@ import { getCenyrClassDefinition } from './cenyr/cenyr-class-registry.js?v=20260
 import { getVennyrClassDefinition } from './vennyr/vennyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { getAldrimarClassDefinition } from './aldrimar/aldrimar-class-registry.js';
 import { getMorgornClassDefinition } from './morgorn/morgorn-class-registry.js';
+import { getVenalysClassDefinition } from './venalys/venalys-class-registry.js';
 
 export function getCultureClassDefinitions(classId, cultures = []) {
   const result = [];
@@ -12,6 +13,10 @@ export function getCultureClassDefinitions(classId, cultures = []) {
   if (cultures.includes('Morgorn')) {
     const morgorn = getMorgornClassDefinition(classId);
     if (morgorn) result.push(morgorn);
+  }
+  if (cultures.includes('Venalys')) {
+    const venalys = getVenalysClassDefinition(classId);
+    if (venalys) result.push(venalys);
   }
   if (cultures.includes('Cenyr')) {
     const cenyr = getCenyrClassDefinition(classId);

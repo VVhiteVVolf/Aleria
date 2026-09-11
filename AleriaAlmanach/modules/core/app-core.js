@@ -275,7 +275,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.description != null) next.description = String(page.description || '').trim();
   if (page.quote != null) next.quote = String(page.quote || '').trim();
   if (page.quoteBy != null) next.quoteBy = String(page.quoteBy || '').trim();
-  if (page.enableComments) next.enableComments = true;
+  if (typeof page.enableComments === 'boolean') next.enableComments = page.enableComments;
   if (page.commentDivider) next.commentDivider = true;
 
   ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'organizationNetworkPage', 'languagePage', 'nameListPage', 'scriptTablePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'familyTreePage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
@@ -481,6 +481,7 @@ function normalizeEntryForEditor(entry) {
         image: clone.image || '',
         pageTitle: clone.pageTitle || '',
         description: clone.description || '',
+        enableComments: clone.enableComments,
         stats: clone.stats || [],
         commentator: clone.commentator || null,
         commentatorMood: clone.commentatorMood || '',

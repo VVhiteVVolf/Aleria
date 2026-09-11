@@ -21,7 +21,8 @@
 
   let publishedRevision = 0;
   let publishSessionKey = '';
-  let saveTimer = null;
+  let ready = false;
+  let hasPublishedState = false;
 
   function sd(state) {
     const dot = document.getElementById('sdot');
@@ -50,22 +51,28 @@
     }
   }
 
-  function clearDraft() {
+  function clearDraft({ required = false } = {}) {
     try {
       localStorage.removeItem(draftStorageKey);
       window.dispatchEvent(new CustomEvent('aleria:karto:draft-status', { detail: { hasDraft: false } }));
-    } catch {
-      /* ignore */
+    } catch (error) {
+      if (required) throw new Error('Der lokale Entwurf konnte nicht abgelöst werden. Die Karte bleibt unverändert.');
     }
   }
 
-  async function fetchPublished() {
-    if (!dataPath) return null;
+  async function fetchPublished({ required = false } = {}) {
     try {
+      if (!dataPath) throw new Error('Für diese Karte ist noch kein veröffentlichter Stand eingerichtet.');
       const response = await fetch(dataPath, { cache: 'no-store' });
-      if (!response.ok) return null;
-      return await response.json();
+      if (!response.ok) throw new Error('Die aktuelle Karte konnte nicht geladen werden. Bitte später erneut versuchen.');
+      const published = await response.json();
+      if (!Number.isSafeInteger(published?.revision) || published.revision < 0
+        || !published.state || typeof published.state !== 'object' || Array.isArray(published.state)) {
+        throw new Error('Es sind keine gültigen veröffentlichten Kartendaten verfügbar.');
+      }
+      return published;
     } catch (error) {
+      if (required) throw error;
       console.warn('[karto-storage] Veröffentlichte Kartendaten konnten nicht geladen werden:', error);
       return null;
     }
@@ -84,11 +91,14 @@
       (async () => {
         const published = await fetchPublished();
         publishedRevision = Math.max(0, Number(published?.revision || 0));
+        hasPublishedState = !!published;
+        ready = true;
         const draft = readDraft();
+        window.dispatchEvent(new CustomEvent('aleria:karto:draft-status', { detail: { hasDraft: !!draft } }));
         if (draft) {
           if (published && draft.basedOnRevision < publishedRevision) {
             window.KartoRuntime?.toast?.(
-              '⚠ Auf GitHub liegt eine neuere Fassung als dein lokaler Entwurf — beim Veröffentlichen ggf. Konflikt prüfen.',
+              'Eine neuere Kartenversion ist verfügbar. Mit „Aktuelle Karte laden“ kannst du wechseln.',
             );
           }
           callback(draft.state || {});
@@ -110,9 +120,20 @@
 
   window.KartoPublish = {
     isConfigured: () => !!dataPath,
+    isReady: () => ready,
+    hasPublishedState: () => hasPublishedState,
     hasSession: () => !!publishSessionKey,
     hasLocalDraft: () => !!readDraft(),
     publishedRevision: () => publishedRevision,
+
+    // Validate the online file before the UI secures the current in-memory
+    // state. The subsequent page reload resets all feature and editor state.
+    async preparePublishedReload(secureCurrentState) {
+      if (!ready) throw new Error('Bitte warten, bis die Karte geladen ist.');
+      await fetchPublished({ required: true });
+      secureCurrentState();
+      clearDraft({ required: true });
+    },
 
     // Turns a locally picked file into a data: URL that already works as
     // an <img src> right away (no network round-trip needed to preview or
@@ -175,6 +196,7 @@
         throw error;
       }
       publishedRevision = payload.revision;
+      hasPublishedState = true;
       clearDraft();
       return payload; // { revision, updatedAt, commitSha, commitUrl }
     },

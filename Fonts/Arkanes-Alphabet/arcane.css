@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Aleria Arcana";
+  src: url("./fonts/AleriaArcana-Regular.woff2?v=2") format("woff2"),
+       url("./fonts/AleriaArcana-Regular.woff?v=2") format("woff"),
+       url("./fonts/AleriaArcana-Regular.ttf?v=2") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.arcane {
+  font-family: "Aleria Arcana", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+.arcane-separated { font-variant-ligatures: none; font-feature-settings: "liga" 0; }
+
+/* Version 2: Alte Ritualrunen. Glyphs follow the CSS text color. */

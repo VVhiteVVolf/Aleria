@@ -4,6 +4,7 @@
   let activePinId = null;
   let activeTab = 'basis';
   let session = null;
+  let previewVisible = false;
 
   function state() { return runtime.state(); }
   function clone(value) { return JSON.parse(JSON.stringify(value)); }
@@ -18,6 +19,15 @@
     if (title) title.textContent = session?.isNew() ? 'Neuen Pin anlegen' : 'Pin bearbeiten';
     if (mode) mode.textContent = 'Editormodus';
     if (actions) actions.hidden = false;
+    if (actions && !actions.querySelector('[data-action="toggle-pin-editor-preview"]')) {
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'pin-editor-preview-toggle';
+      toggle.dataset.action = 'toggle-pin-editor-preview';
+      toggle.setAttribute('aria-controls', 'sb-preview');
+      actions.prepend(toggle);
+    }
+    renderPreviewMode();
     const publish = document.getElementById('sb-publish');
     if (publish) publish.hidden = !window.KartoPublish?.isConfigured() || !window.openPublishModal || !document.getElementById('publish-mo');
     updateStatus();
@@ -34,8 +44,10 @@
   function open(pinId, options = {}) {
     const pin = state().pins.find(item => item.id === pinId);
     if (!pin || !window.KartoPinDraft) return;
+    window.KartoPinRenderer?.hideTooltip();
     activePinId = pinId;
     activeTab = 'basis';
+    previewVisible = false;
     session = window.KartoPinDraft.create(pin, { isNew: options.isNew === true });
     document.getElementById('sidebar').classList.add('open');
     runtime.openEditorShell?.('pin', pin.id);
@@ -59,10 +71,26 @@
     if (session.isDirty() && !discard && !confirm('Nicht übernommene Änderungen verwerfen?')) return false;
     if (!options.keepNew) discardNewPlaceholder();
     runtime.closeEditorShell?.();
+    document.getElementById('sidebar')?.classList.remove('editor-preview-visible');
     activePinId = null;
     session = null;
     activeTab = 'basis';
     return true;
+  }
+
+  function renderPreviewMode() {
+    document.getElementById('sidebar')?.classList.toggle('editor-preview-visible', previewVisible);
+    const toggle = document.querySelector('[data-action="toggle-pin-editor-preview"]');
+    if (!toggle) return;
+    toggle.textContent = previewVisible ? 'Zur Bearbeitung' : 'Vorschau';
+    toggle.setAttribute('aria-pressed', String(previewVisible));
+  }
+
+  function togglePreview() {
+    syncFromForm();
+    previewVisible = !previewVisible;
+    runtime.renderEditorPreview?.(currentPin());
+    renderPreviewMode();
   }
 
   function tabButton(id, label) {
@@ -182,6 +210,13 @@
           ${mediaField({ role: 'crest', label: 'Wappen / Ortsbanner', url: pin.crest, link: pin.crestLink, fallback: '🏰', hint: 'Kleines Wappen im Kopf des Eintrags.' })}
           ${mediaField({ role: 'banner', label: 'Regionsbanner', url: pin.banner, link: pin.bannerLink, fallback: '⚑', hint: 'Optionales Banner der zugehörigen Herrschaft oder Region.' })}
           ${mediaField({ role: 'img', label: 'Vorschaubild', url: pin.img, link: pin.imgLink, previewUrl: previewImage?.src || pin.img, fallback: '▧', hint: 'Ohne eigenes Motiv erscheint automatisch ein fester, zufällig verteilter Ortsplatzhalter.' })}
+          <div class="e-row">
+            <label class="e-lbl" for="sb-img-position">Bildausschnitt</label>
+            <select class="e-sel" id="sb-img-position">
+              ${[['top', 'Oberen Bildbereich betonen'], ['center', 'Bildmitte betonen'], ['bottom', 'Unteren Bildbereich betonen']].map(([value, label]) => `<option value="${value}"${window.KartoPinCard.imagePosition(pin.imgPosition) === value ? ' selected' : ''}>${label}</option>`).join('')}
+            </select>
+            <p class="pin-editor-help">Das Bild füllt den Platz neben der Infotabelle. Die Vorschau zeigt den gewählten Ausschnitt.</p>
+          </div>
         `)}
 
         ${panel('infotabelle', `
@@ -250,6 +285,8 @@
     pin.cat = value('sb-cat', pin.cat);
     pin.img = value('sb-img', pin.img);
     pin.imgLink = value('sb-imglink', pin.imgLink);
+    const position = window.KartoPinCard.imagePosition(value('sb-img-position', pin.imgPosition));
+    if (position !== 'center' || pin.imgPosition) pin.imgPosition = position;
     pin.crest = value('sb-crest', pin.crest);
     pin.crestLink = value('sb-crestlink', pin.crestLink);
     pin.banner = value('sb-banner', pin.banner);
@@ -411,7 +448,7 @@
   }
 
   window.KartoPinEditor = {
-    open, close, isOpen, renderSidebarEdit, switchTab,
+    open, close, isOpen, renderSidebarEdit, switchTab, togglePreview,
     save: commit, saveAndPublish, openMedia, clearMedia, preview,
   };
 

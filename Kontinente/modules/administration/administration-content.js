@@ -4,15 +4,17 @@
   const sourceRoot = "/Kontinente/modules/administration/content";
 
   const areas = [
-    ["militaer", "Militär", "militaer.html"],
-    ["klerus", "Klerus", "klerus.html"],
-    ["gerichtsbarkeit", "Gerichtsbarkeit", "gerichtsbarkeit.html"],
-    ["finanzen", "Finanzen", "finanzen.html"],
-    ["spionage", "Spionage", "spionage.html"],
-    ["diplomatie", "Diplomatie", "diplomatie.html"],
-    ["magie", "Magie", "magie.html"],
-    ["unterhaltung", "Unterhaltung", "unterhaltung.html"],
-  ].map(([id, name, file]) => Object.freeze({ id, name, file }));
+    ["militaer", "Militär", "militaer.html", "Militär.png"],
+    ["klerus", "Klerus", "klerus.html", "Klerus.png"],
+    ["gerichtsbarkeit", "Gerichtsbarkeit", "gerichtsbarkeit.html", "Justiz.png"],
+    ["finanzen", "Finanzen", "finanzen.html", "Administration.png"],
+    ["spionage", "Spionage", "spionage.html", "Spionage.png"],
+    ["diplomatie", "Diplomatie", "diplomatie.html", "Diplomatie.png"],
+    ["magie", "Magie", "magie.html", "Magie.png"],
+    ["unterhaltung", "Unterhaltung", "unterhaltung.html", "Unterhaltung.png"],
+  ].map(([id, name, file, icon]) => Object.freeze({
+    id, name, file, imageSrc: `/IconOrdner/Organisationsicons/${encodeURIComponent(icon)}`,
+  }));
 
   function sourcesAt(root) {
     return Object.freeze(Object.fromEntries(

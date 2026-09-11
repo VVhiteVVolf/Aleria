@@ -11,6 +11,7 @@ import { ALDRIMAR_CLASS_IDS } from './modules/classes/aldrimar/aldrimar-class-re
 import { ALBEN_CLASS_IDS } from './modules/classes/alben/alben-class-registry.js';
 import { NORDMAENNER_CLASS_IDS } from './modules/classes/nordmaenner/nordmaenner-class-registry.js';
 import { MORGORN_CLASS_IDS } from './modules/classes/morgorn/morgorn-class-registry.js';
+import { VENALYS_CLASS_IDS } from './modules/classes/venalys/venalys-class-registry.js';
 import { CREATURE_PROFILE_IDS } from '../Bestiarium/modules/creature-profile/profile-registry.mjs';
 import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-article-registry.mjs';
 import { preserveBookReaderLicense } from '../Bestiarium/modules/book-reader/book-license-build.mjs';
@@ -52,6 +53,13 @@ function preserveClassicAlmanachScripts() {
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
       )));
       await mkdir(buildAlmanachRoot, { recursive: true });
+      // Classic entry data references these files without Vite asset rewriting.
+      const arcaneBuildRoot = resolve(buildRoot, 'Fonts/Arkanes-Alphabet');
+      await mkdir(arcaneBuildRoot, { recursive: true });
+      await Promise.all(['arcane.js', 'Schriftuebersicht.png'].map(file => copyFile(
+        resolve(workspaceRoot, 'Fonts/Arkanes-Alphabet', file),
+        resolve(arcaneBuildRoot, file)
+      )));
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await cp(
         resolve(almanachRoot, 'public/assets'),
@@ -176,6 +184,9 @@ export default defineConfig({
         ])),
         ...Object.fromEntries(MORGORN_CLASS_IDS.map(id => [
           `class-morgorn-${id}`, resolve(workspaceRoot, 'Klassenordner/Morgorn', id, 'index.html')
+        ])),
+        ...Object.fromEntries(VENALYS_CLASS_IDS.map(id => [
+          `class-venalys-${id}`, resolve(workspaceRoot, 'Klassenordner/Venalys', id, 'index.html')
         ]))
       }
     }

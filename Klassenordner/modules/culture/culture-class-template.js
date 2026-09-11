@@ -3,7 +3,8 @@ import { renderContents, renderIllustration, renderFacts, renderSection, renderP
 import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260909-dragon-parent-v2';
 import { getCultureOrderContentsEntry, renderCultureOrderOverview } from './culture-order-overview.js';
 
-const VERSION = '20260910-morgorn-v1';
+const VERSION = '20260911-venalys-v1';
+const STRUCTURE_ONLY_VERSION = '20260911-structure-only-v1';
 const FALLBACK = '../../../IconOrdner/ReiterIcons/Klassen.png';
 const CULTURE_FOLDERS = Object.freeze({
   cenyr: 'Cenyr',
@@ -11,7 +12,8 @@ const CULTURE_FOLDERS = Object.freeze({
   aldrimar: 'Aldrimar',
   alben: 'Alben',
   nordmaenner: 'Nordmaenner',
-  morgorn: 'Morgorn'
+  morgorn: 'Morgorn',
+  venalys: 'Venalys'
 });
 
 function culturePageLabels(culture) {
@@ -54,12 +56,18 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   const previous = documents[(index + documents.length - 1) % documents.length];
   const next = documents[(index + 1) % documents.length];
   const companion = document.companionArtwork;
-  const styleName = hasProgression ? document.id === 'derwyn' ? 'Wyrmtanz' : plan.styles[0]?.name || 'Skaldisches Repertoire' : '';
-  const trainingLabel = hasProgression && plan.authoredThroughLevel === 5 ? 'Ausbildung 1–5 · 6–20 offen' : 'Ausbildung 1–20';
+  const structureOnly = plan?.progressionStatus === 'structure-only';
+  const styleName = hasProgression
+    ? structureOnly ? 'Ausbildungsrahmen' : document.id === 'derwyn' ? 'Wyrmtanz' : plan.styles[0]?.name || 'Skaldisches Repertoire'
+    : '';
+  const trainingLabel = structureOnly
+    ? 'Struktur 1–20 · Inhalte offen'
+    : hasProgression && plan.authoredThroughLevel === 5 ? 'Ausbildung 1–5 · 6–20 offen' : 'Ausbildung 1–20';
   const focus = hasProgression ? plan.focus : document.subtitle;
   const affiliation = hasProgression ? plan.affiliation : `${document.subtitle} · ${culture.name}`;
   const progressionAttribute = hasProgression ? ` data-culture-class="${escape(plan.id)}"` : '';
-  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn'].includes(culture.id)
+  const orderOverview = renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) });
+  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn', 'venalys'].includes(culture.id)
     ? `<link rel="stylesheet" href="../../modules/culture/${culture.id}-class-page.css?v=${VERSION}">`
     : '';
   const labels = culturePageLabels(culture);
@@ -73,7 +81,7 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   <link rel="stylesheet" href="../../modules/culture/culture-class-page.css?v=${VERSION}">
   ${hasProgression && ['vennyr', 'aldrimar'].includes(culture.id) ? `<link rel="stylesheet" href="../../modules/culture/culture-training-controls.css?v=${VERSION}">` : ''}${cultureStyle}
   <script type="module" src="../../modules/pages/class-page.js?v=20260905-universal-v1"></script>
-  ${hasProgression ? `<script type="module" src="../../modules/culture/culture-class-page.js?v=${VERSION}"></script>` : ''}
+  ${hasProgression ? `<script type="module" src="../../modules/culture/culture-class-page.js?v=${structureOnly ? STRUCTURE_ONLY_VERSION : VERSION}"></script>` : ''}
 </head><body class="classes-page class-document-page cenyr-class-page ${escape(culture.id)}-class-page" data-class-document="${document.id}" data-culture="${escape(culture.id)}"${progressionAttribute} data-class-theme="sand" id="top">
   <a class="skip-link" href="#einfuehrung">Zum Klasseninhalt</a>
   <header class="site-header"><a href="../../Klassenseite.html#${escape(culture.id)}">← Zum Klassenregister</a><span class="site-brand">Aleria / ${escape(labels.brand)}</span><a class="class-almanach-link" href="../../../AleriaAlmanach/AleriaAlmanach.html">Zum Almanach</a></header>
@@ -85,8 +93,8 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   ${sharedCultureNote(document)}
   <details class="class-mobile-nav"><summary>Inhalt &amp; ${escape(culture.name)}-Klassen</summary>${renderContents(contents, pending.length > 0)}${cultureNavigation(documents, document.id, culture)}</details>
   <div class="class-reading-layout cenyr-introduction"><div class="class-chapters">${renderSection(written[0], 0)}</div><aside class="class-reference" aria-label="Klassenillustration">${renderIllustration(document)}</aside></div>
-  ${renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) })}
-  ${hasProgression ? renderCultureClassTraining(plan) : ''}
+  ${hasProgression && orderOverview ? renderCultureClassTraining(plan) : orderOverview}
+  ${hasProgression && orderOverview ? orderOverview : hasProgression ? renderCultureClassTraining(plan) : ''}
   <div class="class-reading-layout"><div class="class-chapters">${written.slice(1).map((section, index) => renderSection(section, index + 1)).join('\n')}${renderPending(pending)}</div><aside class="class-reference" aria-label="Klassenprofil">${renderFacts(document)}${companion ? renderIllustration({ name: document.name, title: companion.caption, illustration: companion.source, artwork: companion }) : ''}</aside></div>
   <nav class="class-next-pages" aria-label="Weitere ${escape(culture.name)}-Klassen"><a href="${pageHref(previous)}"><span>← Vorherige Klasse</span><strong>${escape(previous.name)}</strong></a><a href="${pageHref(next)}"><span>Nächste Klasse →</span><strong>${escape(next.name)}</strong></a></nav>
   <footer class="catalog-footer"><span>Aleria · Kulturklassen · ${escape(culture.name)}</span><div><button type="button" class="class-print-button" data-action="print-class" hidden>Drucken</button><a href="#top">Nach oben ↑</a></div></footer>

@@ -243,7 +243,7 @@ function buildModuleTemplateTransferPage(currentPage, config, pageIndex, transfe
     [config.dataKey]: config.sanitize(transferData)
   };
 
-  if (currentPage?.enableComments) next.enableComments = true;
+  if (typeof currentPage?.enableComments === 'boolean') next.enableComments = currentPage.enableComments;
   if (Array.isArray(currentPage?.sessionCast) && currentPage.sessionCast.length) {
     next.sessionCast = currentPage.sessionCast;
   }

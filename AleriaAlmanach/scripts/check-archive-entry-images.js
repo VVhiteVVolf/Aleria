@@ -10,6 +10,7 @@ const context = vm.createContext({
   document: { addEventListener() {} },
   console
 });
+context.window = context;
 
 function load(relativePath) {
   const filename = path.resolve(almanachRoot, relativePath);
@@ -21,6 +22,8 @@ load('modules/archive/archive-dashboard.js');
 load('modules/name-list/name-list-data.js');
 load('modules/script-table/script-table-data.js');
 load('modules/language/language-reference-entries.js');
+load('../Fonts/Arkanes-Alphabet/arcane.js');
+load('modules/language/arcane-alphabet-entry.js');
 load('data/sections.js');
 
 const results = vm.runInContext(`(() => {

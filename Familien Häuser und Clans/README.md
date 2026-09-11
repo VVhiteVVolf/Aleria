@@ -22,4 +22,6 @@ Wichtige Dateien:
 - `assets/js/haeuser-page.js` rendert strukturierte Vorlagendaten.
 - `assets/css/haeuser.css` enthält die featurebezogenen Styles.
 - `NEUES-HAUS.md` dokumentiert neue konkrete Eintraege.
+- [HAUSSEITEN-VORGEHEN.md](HAUSSEITEN-VORGEHEN.md) beschreibt die gemeinsame Erstellung von Hausseite und Stammbaum-Bio, beginnend mit Haus Draig.
+- [CELTIGERNS-WACHT-HAUSSEITEN.md](CELTIGERNS-WACHT-HAUSSEITEN.md) dokumentiert die sieben weiteren Hausseiten, Quellenentscheidungen und die gemeinsamen Darstellungsregeln.
 - `haeuser-storage.md` dokumentiert Speicherorte und IDs.

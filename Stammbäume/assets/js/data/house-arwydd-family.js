@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { HOUSE_ARWYDD_PORTRAITS } from './house-arwydd-portraits.js';
@@ -288,6 +289,7 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Portraitquellen wurden als lokale Projektdateien gesichert; fehlende Titel und Nebenwappen bleiben bewusst offen. Dyddi Dyngwn wird durch die Dyngwn-Gegenakte als Frau bestätigt. Dyddi und Iorwerth teilen mit der Dyngwn-Gegenakte dieselben weltweiten Personenidentitäten.',
     blankFamily: false,
-    sourceRevision: 2
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 3
   }
 });

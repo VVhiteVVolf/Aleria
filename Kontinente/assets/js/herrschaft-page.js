@@ -1,8 +1,11 @@
-(function () {
+(async function () {
   "use strict";
 
   const page = document.querySelector("[data-herrschaft-page]");
   if (!page) return;
+  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=panels-20260911a', document.currentScript.src);
+  const { renderSettlementDomain } = await import(directoryUrl);
+  const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=panels-20260911a', directoryUrl));
 
   renderPageModules();
   window.addEventListener("aleria:kontinente:data-ready", renderPageModules);
@@ -25,6 +28,8 @@
       window.KONTINENTE_DATA?.meta?.id || view.article?.id || "unbekannte-herrschaft"
     );
     renderGeography(page.querySelector("[data-herrschaft-geography]"), view.geography);
+    // Notify the shared table adapter after an asynchronously loaded shell exists.
+    window.dispatchEvent(new CustomEvent("aleria:kontinente:content-ready"));
   }
 
   function renderDataDrivenShell(root, view) {
@@ -301,71 +306,23 @@
 
   function renderPersonGroups(root, groups, familyTreePage) {
     if (!root || !Array.isArray(groups)) return;
-    const fragment = document.createDocumentFragment();
-
-    groups.forEach((group) => {
-      if (!Array.isArray(group?.members) || !group.members.length) return;
-
-      const section = document.createElement("section");
-      section.className = "herrschaft-person-group";
-
-      const heading = document.createElement("h3");
-      heading.textContent = group.title || "Amtsträger";
-      section.append(heading);
-
-      const grid = document.createElement("div");
-      grid.className = "herrschaft-person-grid";
-      group.members.forEach((member) => grid.append(renderPersonCard(member, familyTreePage)));
-      section.append(grid);
-      fragment.append(section);
-    });
-
-    root.replaceChildren(fragment);
-  }
-
-  function renderPersonCard(person, familyTreePage) {
-    const card = document.createElement("article");
-    card.className = `herrschaft-person-card${person.featured ? " is-featured" : ""}`;
-
-    const office = document.createElement("span");
-    office.className = "herrschaft-person-office";
-    office.textContent = person.office || "Amt";
-    card.append(office);
-
-    const portrait = document.createElement("div");
-    portrait.className = "herrschaft-person-portrait";
-    const portraitContent = person.imageSrc
-      ? createImage(person.imageSrc, person.imageAlt || `Porträt von ${person.name || "unbekannt"}`)
-      : createPortraitPlaceholder();
-    portrait.append(wrapFamilyLink(portraitContent, person.familyId, familyTreePage));
-    card.append(portrait);
-
-    const name = document.createElement("strong");
-    name.className = "herrschaft-person-name";
-    const nameContent = document.createElement("span");
-    nameContent.textContent = person.name || "...";
-    name.append(wrapFamilyLink(nameContent, person.familyId, familyTreePage));
-    card.append(name);
-
-    if (person.seat) {
-      const seat = document.createElement("span");
-      seat.className = "herrschaft-person-seat";
-      seat.textContent = person.seat;
-      card.append(seat);
-    }
-
-    if (person.note) {
-      const note = document.createElement("small");
-      note.className = "herrschaft-person-note";
-      note.textContent = person.note;
-      card.append(note);
-    }
-
-    return card;
+    const normalized = groups.map(group => ({
+      ...group,
+      members: (group.members || []).map(person => ({
+        ...person,
+        image: person.imageSrc ? createImage(person.imageSrc, person.imageAlt) : null,
+        href: person.familyId && familyTreePage
+          ? `${familyTreePage}?family=${encodeURIComponent(person.familyId)}&mode=view`
+          : '',
+      })),
+    }));
+    root.replaceChildren(renderCouncilGroups(normalized));
   }
 
   function renderAdministration(root, entries, scopeId) {
     if (!root || !Array.isArray(entries)) return;
+    root.setAttribute('role', 'group');
+    root.setAttribute('aria-label', 'Verwaltungsbereiche');
     root.dataset.administrationScope = scopeId;
     const fragment = document.createDocumentFragment();
     const administrationKeys = {
@@ -387,7 +344,9 @@
       card.dataset.administrationScope = scopeId;
       card.dataset.action = "open-administration";
       card.setAttribute("aria-haspopup", "dialog");
-      if (entry.imageSrc) card.append(createImage(entry.imageSrc, `Symbol für ${entry.name || "Verwaltungsbereich"}`));
+      const area = window.ALERIA_ADMINISTRATION_CONTENT?.areas.find(area => area.id === card.dataset.administrationKey);
+      const imageSrc = area?.imageSrc || entry.imageSrc;
+      if (imageSrc) card.append(createImage(imageSrc, ''));
 
       const name = document.createElement("strong");
       name.textContent = entry.name || "Verwaltungsbereich";
@@ -434,88 +393,20 @@
   }
 
   function renderDomain(domain) {
-    const section = document.createElement("section");
-    section.className = "kingdom-domain-card";
-
-    const header = document.createElement("header");
-    header.className = "kingdom-domain-header";
-
-    if (domain.crestSrc) {
-      const crest = document.createElement("div");
-      crest.className = "kingdom-domain-crest";
-      crest.append(createImage(domain.crestSrc, domain.crestAlt || "Banner der Herrschaft"));
-      header.append(crest);
-    }
-
-    const title = document.createElement("div");
-    title.className = "kingdom-domain-title";
-    const heading = document.createElement("h3");
-    heading.textContent = domain.title || "Herrschaft";
-    title.append(heading);
-
-    if (domain.center) {
-      const center = document.createElement("p");
-      center.append(document.createTextNode("Zentrum: "));
-      const value = document.createElement("strong");
-      value.textContent = domain.center;
-      const centerHref = getPlaceHref(domain.center);
-      if (centerHref) {
-        const link = document.createElement("a");
-        link.className = "kingdom-domain-center-link";
-        link.href = centerHref;
-        link.append(value);
-        center.append(link);
-      } else {
-        center.append(value);
-      }
-      title.append(center);
-    }
-
-    header.append(title);
-    section.append(header);
-
-    const grid = document.createElement("div");
-    grid.className = "kingdom-place-grid";
-    (domain.sections || []).forEach((placeSection) => {
-      const separator = document.createElement("div");
-      separator.className = "kingdom-place-separator";
-      separator.textContent = placeSection.title || "Orte";
-      grid.append(separator);
-      (placeSection.places || []).forEach((place) => grid.append(renderPlaceCard(place)));
+    return renderSettlementDomain({
+      title: domain.title,
+      href: domain.href || '',
+      crest: domain.crestSrc ? createImage(domain.crestSrc, domain.crestAlt || 'Banner der Herrschaft') : null,
+      center: domain.center,
+      centerHref: getPlaceHref(domain.center),
+      places: (domain.sections || []).flatMap((section) => [
+        { kind: 'separator', title: section.title || 'Orte' },
+        ...(section.places || []).map((place) => ({
+          ...place,
+          image: place.iconSrc ? createImage(place.iconSrc, place.iconAlt || `${place.type || 'Ort'}: ${place.name || ''}`) : null,
+        })),
+      ]),
     });
-    section.append(grid);
-
-    return section;
-  }
-
-  function renderPlaceCard(place) {
-    const card = document.createElement("article");
-    card.className = "kingdom-place-card";
-
-    if (place.href) {
-      const link = document.createElement("a");
-      link.className = "kingdom-place-card-link";
-      link.href = place.href;
-      link.setAttribute("aria-label", `${place.name || "Ort"} öffnen`);
-      card.classList.add("is-linked");
-      card.append(link);
-    }
-
-    const icon = document.createElement("span");
-    icon.className = "kingdom-place-icon-frame";
-    if (place.iconSrc) icon.append(createImage(place.iconSrc, place.iconAlt || `${place.type || "Ort"}: ${place.name || ""}`));
-    card.append(icon);
-
-    const type = document.createElement("span");
-    type.className = "kingdom-place-type";
-    type.textContent = place.type || "Ort";
-    card.append(type);
-
-    const name = document.createElement("strong");
-    name.className = "kingdom-place-name";
-    name.textContent = place.name || "Unbenannter Ort";
-    card.append(name);
-    return card;
   }
 
   function getPlaceHref(name) {
@@ -547,10 +438,5 @@
     return image;
   }
 
-  function createPortraitPlaceholder() {
-    const placeholder = document.createElement("span");
-    placeholder.className = "herrschaft-person-placeholder";
-    placeholder.textContent = "...";
-    return placeholder;
-  }
+
 })();

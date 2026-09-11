@@ -29,6 +29,11 @@ const CLASS_PAGE_ICONS = Object.freeze({
   skjaldr: { pageName: 'Skjaldr', source: 'https://i.imgur.com/TjnJlHf.png' },
   skytte: { pageName: 'Skytte', source: 'https://i.imgur.com/kUMAEYt.png' },
   skalde: { pageName: 'Skalde', source: 'https://i.imgur.com/wAuI5MD.png' },
+  limita: { pageName: 'Limita', source: 'https://i.imgur.com/XZceDty.png' },
+  condottieri: { pageName: 'Condottieri', source: 'https://i.imgur.com/gKl9fXV.png' },
+  gondoleri: { pageName: 'Gondoleri', source: 'https://i.imgur.com/oSquWWx.png' },
+  lancieri: { pageName: 'Lancieri', source: 'https://i.imgur.com/Cv8LgL4.png' },
+  stralieri: { pageName: 'Stralieri', source: 'https://i.imgur.com/AmUesQT.png' },
   magier: { pageName: 'Magier', source: 'https://i.imgur.com/n5A2PlT.png' },
   kleriker: { pageName: 'Kleriker', source: 'https://i.imgur.com/05uOAbw.png' },
   hexer: { pageName: 'Paktträger', source: 'https://i.imgur.com/5Dkv7Ri.png' },
@@ -49,6 +54,13 @@ const CLASS_PAGE_ICON_ALIASES = Object.freeze({
   raubritter: CLASS_PAGE_ICONS.teulu,
   schutze: CLASS_PAGE_ICONS.helwyr,
   skaldin: CLASS_PAGE_ICONS.skalde,
+  condottiere: CLASS_PAGE_ICONS.condottieri,
+  cavaliere: CLASS_PAGE_ICONS.condottieri,
+  kavallier: CLASS_PAGE_ICONS.condottieri,
+  gondoliere: CLASS_PAGE_ICONS.gondoleri,
+  gondolieri: CLASS_PAGE_ICONS.gondoleri,
+  lanciere: CLASS_PAGE_ICONS.lancieri,
+  straliere: CLASS_PAGE_ICONS.stralieri,
   waffenknecht: { pageName: 'Milwr', source: 'https://i.imgur.com/zj8Kobl.png' }
 });
 

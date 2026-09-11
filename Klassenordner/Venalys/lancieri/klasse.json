@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "lancieri",
+  "cultureId": "venalys",
+  "name": "Lancieri",
+  "title": "Der Lancieri",
+  "subtitle": "Speerträger zu Fuß und seltener Reiter Venalys'",
+  "aliases": ["Lanciere", "Lanzenträger", "Speerträger"],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/Cv8LgL4.png",
+  "illustration": "https://i.imgur.com/Cv8LgL4.png",
+  "artwork": { "source": "https://i.imgur.com/Cv8LgL4.png", "width": 1024, "height": 1536, "caption": "Lancieri · Venalys" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Venalys" },
+    { "group": "Einordnung", "label": "Laufbahn", "html": "Lancieri · Speer und Lanze" },
+    { "group": "Klassenprofil", "label": "Einsatz", "html": "Zu Fuß oder beritten" },
+    { "group": "Klassenprofil", "label": "Reiterei", "html": "Teil der kleinen venalischen Kavallerie" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Speer oder Lanze, Säbel und Schild" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Der Lancieri führt Speer oder Lanze und kann sowohl zu Fuß als auch beritten auftreten. Da Venalys nur wenig Kavallerie unterhält, gehören gerade die berittenen Lancieri zu den auffälligsten, aber seltenen Kräften der Republik.</p><p>Abgesessen bleibt dieselbe Laufbahn wertvoll: zum Halten eines Zugangs, für geordnetes Vorrücken und gegen Gegner, die auf Distanz gehalten werden müssen.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Republik", "status": "written", "sharedIntro": "republik", "html": "<p>Venalys' Gelände, Städte und maritime Ausrichtung begünstigen keine großen Reiterheere. Der Lancieri entwickelte sich deshalb nicht als reine Kavallerieklasse, sondern als Speerkämpfer, der ein Reittier nutzen kann, ohne seinen Wert zu Fuß zu verlieren.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Lancieri lernen Abstand, Richtung und Zeitpunkt eines Vorstoßes zu kontrollieren. Beritten nutzen sie den Antritt; zu Fuß sichern sie Raum, begleiten eine Linie und wechseln bei Bedarf zur Seitenwaffe.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Zu Fuß und beritten einsetzbar</li><li>Hohe Reichweite durch Speer oder Lanze</li><li>Stark im geordneten Antritt und beim Halten von Wegen</li></ul><h3>Schwächen</h3><ul><li>Berittene Ausbildung und Pferde sind in Venalys selten</li><li>Lange Waffen sind in sehr engen Räumen hinderlich</li><li>Der Wechsel der Einsatzweise verlangt passende Ausrüstung</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Die spätere Ausbildung muss dieselben Grundlagen für Speer und Lanze abbilden und zugleich zwischen Anritt und Fußkampf unterscheiden. Säbel und Schild bleiben als ergänzende Führung vorgemerkt.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Der Lancieri führt eine stabile Stangenwaffe, Seitenwaffe und je nach Auftrag Schild oder Reitausrüstung. Berittene Kämpfer benötigen zusätzlich ein geeignetes Tier und Gepäck für dessen Versorgung.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "html": "<p>Der Lancieri besitzt Ansehen als vielseitiger Speerträger. Berittene Vertreter fallen wegen der geringen Kavallerie Venalys' besonders auf, doch die Klasse selbst ist nicht auf einen Adelstitel beschränkt.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Laufbahn", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Venalische Klassen · Lancieri" }
+}

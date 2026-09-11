@@ -6,13 +6,13 @@
 
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
-  const banner = "https://i.imgur.com/va5xLbK.png";
+  const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/herrschaftsbanner.png";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
 
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [
       data.family("Saethwyr", {
-        familyId: "haus-saethwyr",
+        familyId: "haus-saethwyr", housePage: "haus.html",
         imageSrc: `${houseRoot}/haus-saethwyr.png`,
         seat: "Gwynthor",
         liege: "Draig",
@@ -20,14 +20,14 @@
       }),
     ]),
     data.familySection("Ritterhäuser", [
-      data.family("Chwedlonol", {
-        familyId: "haus-chwedlonol",
+      data.family("Chwedonol", {
+        familyId: "haus-chwedlonol", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-chwedlonol.png`,
         seat: "Gwynthor",
         liege: "Saethwyr",
       }),
       data.family("Eneiniog", {
-        familyId: "haus-eneiniog",
+        familyId: "haus-eneiniog", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-eneiniog.png`,
         seat: "Gwynthor",
         liege: "Saethwyr",

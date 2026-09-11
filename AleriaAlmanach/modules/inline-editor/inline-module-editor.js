@@ -83,7 +83,13 @@ function syncInlinePageField(input) {
     return;
   }
 
-  if (field === 'enableComments' || field === 'commentDivider') {
+  if (field === 'enableComments') {
+    applyModulePageCommentMode(page, input.value);
+    renderPage(currentPage, 0);
+    return;
+  }
+
+  if (field === 'commentDivider') {
     page[field] = !!input.checked;
     renderPage(currentPage, 0);
     return;
@@ -363,7 +369,7 @@ function buildInlineStandardEditor(entry, page) {
           <div class="inline-edit-field wide">
             <div class="inline-edit-minirow">
               <label class="module-editor-check"><input type="checkbox" data-inline-action="rerender-entry-field" data-entry-field="enablePageComments"${entry.enablePageComments ? ' checked' : ''}> Kommentare auf allen Seiten erlauben</label>
-              <label class="module-editor-check"><input type="checkbox" data-inline-action="rerender-page-field" data-page-field="enableComments"${page.enableComments ? ' checked' : ''}> Kommentare auf dieser Seite</label>
+              <label>Kommentare auf dieser Seite <select data-inline-action="rerender-page-field" data-page-field="enableComments">${buildModulePageCommentModeOptions(page)}</select></label>
             </div>
           </div>
           <div class="inline-edit-field wide">
@@ -414,7 +420,7 @@ function buildInlineComplexEditor(entry, page, type) {
         <div class="inline-edit-field wide">
           <div class="inline-edit-minirow">
             <label class="module-editor-check"><input type="checkbox" data-inline-action="rerender-entry-field" data-entry-field="enablePageComments"${entry.enablePageComments ? ' checked' : ''}> Kommentare auf allen Seiten erlauben</label>
-            <label class="module-editor-check"><input type="checkbox" data-inline-action="rerender-page-field" data-page-field="enableComments"${page.enableComments ? ' checked' : ''}> Kommentare auf dieser Seite</label>
+            <label>Kommentare auf dieser Seite <select data-inline-action="rerender-page-field" data-page-field="enableComments">${buildModulePageCommentModeOptions(page)}</select></label>
           </div>
         </div>
         <div class="inline-edit-field wide">

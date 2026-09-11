@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -373,6 +374,7 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd. Revision 4 übernimmt Tallulas individuelles Porträt aus ihrer ausgearbeiteten Ua’Eirce-Gegenakte.',
     blankFamily: false,
-    sourceRevision: 4
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 5
   }
 });

@@ -2,6 +2,7 @@
   "use strict";
 
   const familyTreePage = "/Stammbäume/Stammbaum.html";
+  const housePage = "/Familien%20H%C3%A4user%20und%20Clans/";
   const houseImageRoot = "/Stammbäume/assets/images/houses";
 
   function family(id, name, emblem, options = {}) {
@@ -10,10 +11,12 @@
       name,
       imageSrc: `${houseImageRoot}/${emblem}`,
       imageAlt: `Wappen Haus ${name}`,
-      href: `${familyTreePage}?family=${encodeURIComponent(id)}&mode=view`,
+      href: `${housePage}${options.page || "kleinehaeuser.html"}?haus=${encodeURIComponent(id)}`,
       seat: options.seat || "",
       liege: options.liege || "",
+      rank: options.rank || "",
       featured: options.featured === true,
+      featuredLabel: options.featuredLabel || "",
     });
   }
 
@@ -21,23 +24,24 @@
     return Object.freeze({ title, variant, cards: Object.freeze(cards) });
   }
 
+  // Grafschaft: große Häuser, Llamreis Ankunft und die ausdrücklich gewünschten alten Clans.
+  // Weitere Vasallen gehören auf ihre jeweilige Herrschaftsseite.
   const familySections = Object.freeze([
     familySection("Adelshäuser Celtigerns Wacht", [
-      family("haus-draig", "Draig", "Llamreis Ankunft/haus-draig.png", { seat: "Gwynthor", featured: true }),
-      family("haus-gafyr", "Gafyr", "Llamreis Ankunft/haus-gafyr.png", { seat: "Gwynthor" }),
-      family("haus-wyrm", "Wyrm", "Llamreis Ankunft/haus-wyrm.png", { seat: "Gwynthor" }),
-      family("haus-saethwyr", "Saethwyr", "Llamreis Ankunft/haus-saethwyr.png", { seat: "Gwynthor" }),
-      family("haus-gwefrydd", "Gwefrydd", "Artus Streben/haus-gwefrydd.png", { seat: "Rhosmere" }),
-      family("haus-gwyvern", "Gwyvern", "Gwendolyns Ufer/haus-gwyvern.png", { seat: "Abergwint" }),
-      family("haus-arwydd", "Arwydd", "Rhonwens Tränen/haus-arwydd.png", { seat: "Castellbryn" }),
+      family("haus-draig", "Draig", "Llamreis Ankunft/haus-draig.png", { seat: "Gwynthor", liege: "Haus Pendrag", featured: true, featuredLabel: "Grafenhaus", page: "haus.html" }),
+      family("haus-gafyr", "Gafyr", "Llamreis Ankunft/haus-gafyr.png", { seat: "Gwynthor", liege: "Haus Draig", page: "haus.html" }),
+      family("haus-wyrm", "Wyrm", "Llamreis Ankunft/haus-wyrm.png", { seat: "Gwynthor", liege: "Haus Draig", page: "haus.html" }),
+      family("haus-saethwyr", "Saethwyr", "Llamreis Ankunft/haus-saethwyr.png", { seat: "Gwynthor", liege: "Haus Draig", page: "haus.html" }),
+      family("haus-gwefrydd", "Gwefrydd", "Artus Streben/haus-gwefrydd.png", { seat: "Rhosmere", liege: "Haus Draig", page: "haus.html" }),
+      family("haus-gwyvern", "Gwyvern", "Gwendolyns Ufer/haus-gwyvern.png", { seat: "Abergwint", liege: "Haus Draig", page: "haus.html" }),
+      family("haus-arwydd", "Arwydd", "Rhonwens Tränen/haus-arwydd.png", { seat: "Castellbryn", liege: "Haus Draig", page: "haus.html" }),
     ]),
     familySection("Ritterhäuser · Llamreis Ankunft", [
       family("haus-tlawd", "Tlawd", "Llamreis Ankunft/haus-tlawd.png", { seat: "Gwynthor", liege: "Gafyr" }),
-      family("haus-von-hochreuth", "Von Hochreuth", "Goldmund/haus-von-hochreuth.png", { liege: "Gafyr" }),
       family("haus-rhyddid", "Rhyddid", "Llamreis Ankunft/haus-rhyddid.png", { seat: "Gwynthor, Mwyncraig", liege: "Wyrm" }),
       family("haus-gelyn", "Gelyn", "Llamreis Ankunft/haus-gelyn.png", { seat: "Gwynthor, Gwynthstorm", liege: "Draig" }),
       family("haus-cludwyr", "Cludwyr", "Llamreis Ankunft/haus-cludwyr.png", { seat: "Gwynthor, Bronhir", liege: "Wyrm" }),
-      family("haus-chwedlonol", "Chwedlonol", "Llamreis Ankunft/haus-chwedlonol.png", { seat: "Gwynthor, Glastraeth", liege: "Saethwyr" }),
+      family("haus-chwedlonol", "Chwedonol", "Llamreis Ankunft/haus-chwedlonol.png", { seat: "Gwynthor, Glastraeth", liege: "Saethwyr" }),
       family("haus-balchder", "Balchder", "Llamreis Ankunft/haus-balchder.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-eneiniog", "Eneiniog", "Llamreis Ankunft/haus-eneiniog.png", { seat: "Gwynthor", liege: "Saethwyr" }),
       family("haus-gostyn", "Gostyn", "Llamreis Ankunft/haus-gostyn.png", { seat: "Gwynthor, Bronfelen", liege: "Gafyr" }),
@@ -49,6 +53,7 @@
       family("haus-cymrath-o-traethlan", "Cymrath O'Traethlan", "Llamreis Ankunft/haus-cymrath-o-traethlan.png", { seat: "Tŵr Traethlan", liege: "Draig" }),
     ]),
     familySection("Bürgerliche Häuser · Llamreis Ankunft", [
+      family("haus-bradrhith", "Bradrhith", "Llamreis Ankunft/Bürgerliche/Gwynthor/Bradrhith.png", {"seat": "Bradrhith Hof", "liege": "Awenydd"}),
       family("haus-gwyllach", "Gwyllach", "Llamreis Ankunft/haus-gwyllach.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-sgrechiwr", "Sgrechiwr", "Llamreis Ankunft/haus-sgrechiwr.png", { seat: "Lynthor", liege: "Draig" }),
       family("haus-draenmelyn", "Draenmelyn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png", { seat: "Gwynthor", liege: "Draig" }),
@@ -62,6 +67,11 @@
       family("haus-falchdyn", "Falchdyn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),
     ]),
+    familySection("Ausgestorbene Häuser", [
+      family("haus-ard-conbhron", "Ard Conbhrón", "Antike Crannath Clans/haus-ard-conbhron.png", { seat: "Lycath", page: "haus.html" }),
+      family("haus-illysywen", "Illysywen", "Rhonwens Tränen/haus-illysywen.png", { seat: "Castellbryn", page: "haus.html" }),
+      family("haus-ui-talamh", "Ui Talamh", "Antike Crannath Clans/haus-ui-talamh.png", { seat: "Antikes Gwynthor", page: "haus.html" }),
+    ], "extinct"),
   ]);
 
   window.KONTINENTE_DATA = {
@@ -94,7 +104,7 @@
       },
       portraitImages: {
         "Meurig Draig": "/Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
-        "Name unklar (Haus Draig)": "/Stammbäume/assets/images/placeholders/male.png",
+        "Vakant": "/Stammbäume/assets/images/placeholders/male.png",
       },
       mapHref: "/Karten/karte.html?map=cenyr-celtigerns-wacht",
       familyTreePage,

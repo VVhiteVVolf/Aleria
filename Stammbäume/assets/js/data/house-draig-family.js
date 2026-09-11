@@ -10,6 +10,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
@@ -710,6 +711,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 7
+    sourceRevision: 9,
+    houseBiographyModule: HOUSE_BIOGRAPHY
   }
 });

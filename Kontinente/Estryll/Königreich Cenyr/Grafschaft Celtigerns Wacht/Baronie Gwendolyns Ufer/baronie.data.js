@@ -1,21 +1,20 @@
 (function () {
   "use strict";
 
-  const familyTreePage = "/Stammbäume/Stammbaum.html";
+  const data = window.ALERIA_HERRSCHAFT_DATA;
+  if (!data) throw new Error("Herrschafts-Datenhelfer wurde nicht geladen.");
+  const familyTreePage = data.familyTreePage;
   const houseImageRoot = "/Stammbäume/assets/images/houses/Gwendolyns Ufer";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
   const placeIconRoot = "/IconOrdner/Welt%20Pins";
 
   function family(id, name, emblem, options = {}) {
-    return Object.freeze({
-      id,
-      name,
+    return data.family(name, {
+      ...options,
+      familyId: id,
+      housePage: options.housePage || "kleinehaeuser.html",
       imageSrc: `${houseImageRoot}/${emblem}`,
       imageAlt: `Wappen Haus ${name}`,
-      href: `${familyTreePage}?family=${encodeURIComponent(id)}&mode=view`,
-      seat: options.seat || "",
-      liege: options.liege || "",
-      featured: options.featured === true,
     });
   }
 
@@ -49,6 +48,7 @@
   const familySections = Object.freeze([
     familySection("Adelshaus", [
       family("haus-gwyvern", "Gwyvern", "haus-gwyvern.png", {
+        housePage: "haus.html",
         seat: "Abergwint",
         liege: "Draig",
         featured: true,
@@ -153,7 +153,7 @@
     domain: Object.freeze({
       title: "Herrschaft des Hauses Gwyvern",
       center: "Abergwint",
-      crestSrc: "https://i.imgur.com/gdUM3iC.png",
+      crestSrc: "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/assets/herrschaftsbanner.png",
       crestAlt: "Banner der Baronie Gwendolyns Ufer",
       sections: Object.freeze([
         Object.freeze({

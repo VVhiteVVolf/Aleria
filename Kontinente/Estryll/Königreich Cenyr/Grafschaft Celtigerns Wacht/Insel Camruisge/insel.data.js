@@ -13,7 +13,7 @@
   const familySections = Object.freeze([
     data.familySection("Häuser Aberllans und Oileans", [
       data.family("Garrael", {
-        familyId: "haus-garrael",
+        familyId: "haus-garrael", housePage: "kleinehaeuser.html", housePage: "kleinehaeuser.html",
         imageSrc: "/Stammbäume/assets/images/houses/Camruisge/haus-garrael.png",
         seat: "Aberllan",
         liege: "Draig",

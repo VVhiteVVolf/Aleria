@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "limita",
+  "cultureId": "venalys",
+  "name": "Limita",
+  "title": "Der Limita",
+  "subtitle": "Waffenknecht und einfacher Soldat der Republik",
+  "aliases": ["Waffenknecht", "Soldat"],
+  "theme": "steel",
+  "icon": "https://i.imgur.com/XZceDty.png",
+  "illustration": "https://i.imgur.com/XZceDty.png",
+  "artwork": { "source": "https://i.imgur.com/XZceDty.png", "width": 1024, "height": 1536, "caption": "Limita · Venalys" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Venalys" },
+    { "group": "Einordnung", "label": "Laufbahn", "html": "Limita · einfacher Militärdienst" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Meist Mercantier oder Plebejer; kein Adel erforderlich" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Wache, Fußvolk und Linienkampf" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Dienstwaffe, Speer, Schild und Kurzwaffe" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Der Limita ist der Waffenknecht und einfache Soldat Venalys'. Er hält Tore, begleitet Transporte, versieht Hafenwache und bildet dort die Linie, wo die Republik verlässliche bewaffnete Hände benötigt.</p><p>Sein Stand ist kein Hindernis und kein Vorrecht. Für den Dienst zählen Ausbildung, Gehorsam und die Fähigkeit, gemeinsam mit anderen eine Stellung zu halten.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Republik", "status": "written", "sharedIntro": "republik", "html": "<p>Die Limita entstanden aus dem dauerhaften Bedarf einer Handelsrepublik nach Wachen und Soldaten, die nicht erst durch persönliche Gefolgschaft eines Adelshauses aufgeboten werden mussten. Sie dienen öffentlichen Stellen, Häusern, Häfen oder angeworbenen Verbänden.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Limita lernen Wachabläufe, gemeinsames Vorrücken, das Sichern von Zugängen und den Schutz einer Linie. Sie sind an wechselnde Auftraggeber und Einsatzorte gewöhnt und können einfache Befehle auch unter Unruhe zuverlässig ausführen.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Verlässlich im Verband und Wachdienst</li><li>Unkomplizierte, vielseitige Grundausrüstung</li><li>In großer Zahl rasch einsetzbar</li></ul><h3>Schwächen</h3><ul><li>Weniger individuelle Ausbildung als die edlen Laufbahnen</li><li>Stark von Formation und Führung abhängig</li><li>Kaum auf anspruchsvolle Einzelduelle ausgerichtet</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Limita kämpft zweckmäßig und geschlossen. Speer und Schild halten Abstand und Linie; eine Kurzwaffe bleibt für enge Räume oder den Verlust der Hauptwaffe bereit.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Seine Ausrüstung wird durch Aufgabe und Geldgeber bestimmt. Üblich sind belastbare Alltagsrüstung, Helm, Schild, Dienstwaffe und die notwendigen Dinge für Wache, Marsch oder Hafendienst.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "html": "<p>Limita genießen das Ansehen verlässlicher Berufssoldaten, stehen gesellschaftlich aber unter den militärischen Laufbahnen der Cavaliere. Bewährung kann Amt, Sold und Einfluss bringen, macht aus einem Soldaten allein jedoch keinen Edelmann.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Laufbahn", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Venalische Klassen · Limita" }
+}

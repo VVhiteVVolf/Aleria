@@ -7,7 +7,7 @@ import {
   sanitizeBiographyImageSource,
   sanitizeBiographyRichText
 } from '../person-biography/person-biography-content.js';
-import { normalizeHouseBiographyModule } from './house-biography-model.js';
+import { normalizeHouseBiographyModule } from './house-biography-model.js?v=20260911-celtigerns-all-house-bios';
 
 export function renderHouseBiographyHeader(family, biographyModule, documentRef = globalThis.document) {
   const module = normalizeHouseBiographyModule(biographyModule);

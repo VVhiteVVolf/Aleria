@@ -1,0 +1,292 @@
+/* Shared parchment directories for legacy and data-driven territory pages. */
+.kingdom-family-card-view,
+.kingdom-county-card-view {
+  display: grid;
+  gap: 1.15rem;
+  width: min(100%, 1120px);
+  margin: 1.2rem auto 1.8rem;
+}
+
+.territory-directory {
+  --directory-ink: #30281f;
+  --directory-muted: #786c5c;
+  --directory-line: #d9cbb0;
+  --directory-accent: #804737;
+  --directory-paper: #f7f0e2;
+  color: var(--directory-ink);
+  font: 0.87rem/1.5 Verdana, Arial, sans-serif;
+}
+
+.kingdom-family-section,
+.kingdom-domain-card {
+  min-width: 0;
+  padding: clamp(0.85rem, 2vw, 1.15rem);
+  border: 1px solid var(--directory-line);
+  border-radius: 4px;
+  background: var(--directory-paper);
+  box-shadow: 0 3px 12px #30281f0a;
+}
+
+.directory-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--directory-line);
+}
+
+.directory-section-header h3,
+.kingdom-domain-title h3 {
+  margin: 0;
+  color: var(--directory-ink);
+  font: 600 clamp(1.25rem, 2.1vw, 1.7rem)/1.2 Georgia, 'Times New Roman', serif;
+  text-wrap: balance;
+}
+
+.kingdom-family-count,
+.directory-place-count {
+  flex-shrink: 0;
+  color: var(--directory-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.kingdom-family-grid,
+.kingdom-place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.kingdom-family-grid { grid-auto-rows: 1fr; }
+
+.kingdom-family-featured {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+}
+.kingdom-family-featured > .kingdom-family-card { width: min(100%, 350px); }
+.kingdom-family-featured.has-subordinate-houses { margin-bottom: 1.2rem; }
+.kingdom-family-featured.has-subordinate-houses::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 1.2rem;
+  border-left: 1px solid #b6a17c;
+}
+
+.kingdom-family-card,
+.kingdom-place-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  min-height: 88px;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid #ded2bd;
+  border-radius: 3px;
+  background: #fffbf3;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.kingdom-family-card.is-family-featured {
+  border-inline-start: 3px solid var(--directory-accent);
+  background: #f3e7d1;
+}
+
+.kingdom-family-card.is-linked:hover,
+.kingdom-family-card:focus-within,
+.kingdom-place-card.is-linked:hover,
+.kingdom-place-card:focus-within {
+  border-color: #a58963;
+  background: #fffdf8;
+}
+
+.directory-entry-copy { min-width: 0; }
+
+.territory-directory .kingdom-family-name,
+.territory-directory .kingdom-place-name {
+  margin: 0 0 0.3rem;
+  color: var(--directory-ink);
+  font: 700 1.05rem/1.16 Georgia, 'Times New Roman', serif;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.directory-entry-link,
+.kingdom-domain-title a,
+.kingdom-domain-crest a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.directory-entry-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+}
+
+.directory-entry-link:focus-visible { outline: none; }
+.directory-entry-link:focus-visible::after {
+  outline: 2px solid var(--directory-accent);
+  outline-offset: 3px;
+}
+
+.directory-entry-note { color: var(--directory-muted); font-size: 0.7rem; }
+
+.kingdom-family-status {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--directory-accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+.directory-details { margin: 0; }
+.directory-details > div {
+  display: grid;
+  grid-template-columns: 4.3rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.2rem 0.35rem;
+  margin-top: 0.1rem;
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+.directory-details dt { color: var(--directory-muted); }
+.directory-details dd {
+  margin: 0;
+  color: var(--directory-ink);
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.directory-detail-link {
+  color: inherit;
+  text-underline-offset: 0.2em;
+  text-decoration-color: #b6a17c;
+}
+
+.kingdom-family-crest,
+.kingdom-place-icon-frame,
+.kingdom-domain-crest {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  width: 54px;
+  height: 64px;
+}
+.kingdom-family-crest a {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.territory-directory .kingdom-family-crest img,
+.territory-directory .kingdom-domain-crest img {
+  display: block;
+  width: 54px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px #30281f20);
+}
+.kingdom-family-crest-placeholder {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 58px;
+  padding: 0.5rem;
+  color: var(--directory-muted);
+  border: 1px dashed #bbaa8d;
+  border-radius: 3px 3px 45% 45%;
+  text-align: center;
+  font-size: 0.65rem;
+}
+
+.kingdom-domain-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--directory-line);
+}
+.kingdom-domain-title { flex: 1; min-width: 0; }
+.kingdom-domain-crest { flex: 0 0 54px; }
+.kingdom-domain-meta { margin-top: 0.55rem; }
+.kingdom-domain-meta > div { font-size: 0.82rem; }
+.kingdom-place-card { grid-template-columns: 48px minmax(0, 1fr); min-height: 76px; }
+.kingdom-place-icon-frame { width: 48px; height: 54px; }
+.territory-directory .kingdom-place-icon-frame img {
+  display: block;
+  width: 48px;
+  height: 54px;
+  object-fit: contain;
+}
+.territory-directory .kingdom-place-name { font-size: 1.02rem; }
+.directory-place-placeholder,
+.kingdom-card-image-placeholder {
+  color: var(--directory-muted, #786c5c);
+  font-size: 0.65rem;
+  text-align: center;
+}
+.kingdom-place-separator {
+  grid-column: 1 / -1;
+  margin: 0.65rem 0 0;
+  padding-bottom: 0.45rem;
+  color: var(--directory-muted);
+  border-bottom: 1px solid var(--directory-line);
+  font-size: 0.77rem;
+  font-weight: 600;
+}
+.kingdom-place-separator:first-child { margin-top: 0; }
+
+.kingdom-county-map-panel {
+  padding: 1.25rem;
+  border: 1px solid #d9cbb0;
+  border-radius: 4px;
+  background: #f7f0e2;
+  text-align: center;
+}
+.kingdom-county-map-panel h3 {
+  margin: 0 0 1rem;
+  color: #30281f;
+  font: 600 1.55rem/1.2 Georgia, 'Times New Roman', serif;
+}
+.kingdom-county-map-panel a { color: inherit; }
+.kingdom-county-map-panel img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 1100px) {
+  .kingdom-family-grid,
+  .kingdom-place-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .kingdom-family-grid,
+  .kingdom-place-grid { grid-template-columns: minmax(0, 1fr); }
+  .kingdom-family-section,
+  .kingdom-domain-card { padding: 0.85rem; }
+  .directory-section-header { gap: 0.6rem; }
+  .kingdom-domain-header { flex-wrap: wrap; gap: 0.75rem; }
+  .directory-place-count { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kingdom-family-card,
+  .kingdom-place-card { transition: none; }
+}

@@ -1,5 +1,5 @@
-import { getCultureClassProgression } from './culture-class-progression.js?v=20260909-dragon-parent-v2';
-import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260909-dragon-parent-v2';
+import { getCultureClassProgression } from './culture-class-progression.js?v=20260911-venalys-v1';
+import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260911-venalys-v1';
 import { describeTechniqueDamage } from '../../../AleriaAlmanach/modules/combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 
 function initializeCultureTraining(root) {
@@ -30,6 +30,9 @@ function initializeCultureTraining(root) {
     const confirmed = plan.availableAttacks.length;
     const attacksById = new Map(plan.attackCatalog.map(attack => [attack.id, attack]));
     summary.textContent = `Stufe ${plan.selectedLevel} · ${slots} ${slots === 1 ? 'Attackenslot' : 'Attackenslots'} verdient · ${available.size} ${available.size === 1 ? 'Katalogoption' : 'Katalogoptionen'} bis hier · ${plan.status === 'draft' ? 'Ausbildungsentwurf' : `${confirmed} bestätigt`}`;
+    if (plan.progressionStatus === 'structure-only') {
+      summary.textContent = `Stufe ${plan.selectedLevel} · Ausbildungsinhalt offen · keine automatische Kampfvergabe`;
+    }
     const resources = root.querySelector('[data-training-resources]');
     if (plan.skaldReference) {
       summary.textContent = plan.selectedLevel > 5 ? `Stufe ${plan.selectedLevel} · Weitere Skaldenausbildung offen; Referenz bis Stufe 5`

@@ -1,0 +1,97 @@
+{
+  "id": "venalys",
+  "name": "Venalys",
+  "emblem": "https://i.imgur.com/IjlPzT5.png",
+  "pageLabels": {
+    "brand": "Klassen Venalys'",
+    "collection": "Die Laufbahnen Venalys'",
+    "traditionsLines": [
+      "Republik & Dienst",
+      "Venalys"
+    ]
+  },
+  "sharedSections": {
+    "republik": "<p>Venalys ist eine Stadtrepublik, deren politische Ordnung von fünf Patrizier-Gründerhäusern getragen wird. Unter ihnen stehen die Magnarierhäuser, danach die Mercantier und schließlich die Plebejer. Diese Stände ersetzen eine feudale Leiter aus Königen, Grafen und Ritterherren.</p><p>Militärischer Dienst, Handel, Schifffahrt und öffentliche Ämter können einem Namen Gewicht geben, verändern aber nicht automatisch den Stand seines Hauses.</p>",
+    "cavaliere": "<p>Venalys besitzt keinen Ritterstand nach cenyrischem Vorbild. Der Cavaliere – im Alltag auch Kavallier genannt – ist ein Edelmann der Republik. Man spricht ihn mit <strong>Don</strong> und nicht mit Sir an. Cavaliere bezeichnet seine gesellschaftliche Würde; Limita, Condottieri, Gondoleri, Lancieri und Stralieri bezeichnen dagegen militärische Laufbahnen.</p>",
+    "ausbildung-offen": "<p>Aufgabe, bevorzugte Waffen und kulturelle Stellung dieser Laufbahn sind festgehalten. Ein verbindlicher Stufenplan, eigene Kampfformen und konkrete Attacken sind noch nicht ausgearbeitet und bleiben bis zur gemeinsamen Systemarbeit kampfneutral.</p>"
+  },
+  "orderOverview": {
+    "eyebrow": "Republik, Stände & militärische Laufbahnen",
+    "navigationTitle": "Venalys' Gesellschaftsordnung",
+    "title": "Namen, Ämter und die Republik",
+    "introduction": "Venalys kennt keine feudale Ritterhierarchie. Fünf Patrizier-Gründerhäuser führen die Republik; Magnarier, Mercantier und Plebejer folgen als eigene Stände. Der Cavaliere ist ein Edelmann und wird mit Don angesprochen, während die militärischen Klassen Ausbildung und Dienst beschreiben.",
+    "nobleTitle": "Die venalischen Stände",
+    "nobleRanks": [
+      {
+        "title": "Patrizier",
+        "subtitle": "Die fünf Gründerhäuser",
+        "scope": "Republik",
+        "description": "Die höchsten Familien Venalys', aus deren überlieferter Gründungsordnung politische Führung, Ämter und Vorrang hervorgehen."
+      },
+      {
+        "title": "Magnarier",
+        "subtitle": "Lehens- und Adelshäuser",
+        "scope": "Land & Amt",
+        "description": "Adelshäuser unter der patrizischen Ordnung. Ihre Edelleute erfüllen militärische und administrative Pflichten, ohne einem feudalen Ritteradel anzugehören."
+      },
+      {
+        "title": "Mercantier",
+        "subtitle": "Handels- und Bürgerhäuser",
+        "scope": "Handel",
+        "description": "Familien, deren Stellung vor allem auf Handel, Vermögen, Werkstätten, Schiffen und wirtschaftlichem Einfluss beruht."
+      },
+      {
+        "title": "Plebejer",
+        "subtitle": "Die übrige Bürgerschaft",
+        "scope": "Gemeinwesen",
+        "description": "Die breite Bevölkerung der Republik, die Handwerk, Arbeit, Versorgung und einen großen Teil des einfachen Militärdienstes trägt."
+      }
+    ],
+    "hierarchy": [
+      "Patrizier",
+      "Magnarier",
+      "Mercantier",
+      "Plebejer"
+    ],
+    "castesTitle": "Militärische Laufbahnen",
+    "castesIntroduction": "Eine Laufbahn legt Ausbildung, bevorzugte Waffen und Einsatzgebiet fest. Sie verleiht allein weder Patrizierwürde noch den Rang eines Cavaliere.",
+    "castes": [
+      {
+        "id": "limita",
+        "name": "Limita",
+        "designation": "Waffenknechte und Soldaten",
+        "function": "Einfaches Fußvolk für Wache, Linie, Hafen und den alltäglichen Militärdienst der Republik."
+      },
+      {
+        "id": "condottieri",
+        "name": "Condottieri",
+        "designation": "Berufskrieger und Edelleute",
+        "function": "Professionelle Krieger, Anführer und Cavaliere für wechselnde Aufträge, häufig auch auf See."
+      },
+      {
+        "id": "gondoleri",
+        "name": "Gondoleri",
+        "designation": "Edelleute zur See",
+        "function": "Spezialisierte Seefahrer und die bevorzugte militärische Laufbahn seefahrender venalischer Edelmänner."
+      },
+      {
+        "id": "lancieri",
+        "name": "Lancieri",
+        "designation": "Speer- und Lanzenträger",
+        "function": "Kämpfer mit Speer oder Lanze, die zu Fuß dienen oder die seltene Kavallerie Venalys' stellen."
+      },
+      {
+        "id": "stralieri",
+        "name": "Stralieri",
+        "designation": "Armbrustschützen",
+        "function": "Venalische Edelleute, die Armbrust und Säbel für Fernkampf, Stellung und Selbstschutz verbinden."
+      }
+    ],
+    "foundationTitle": "Stadt, Hafen und öffentliche Pflicht",
+    "foundation": "Die Republik lebt von Ämtern, Handel, Schiffen und bewaffnetem Schutz. Militärische Laufbahnen verbinden daher den Kampf mit Wachdienst, Seefahrt, Eskorte oder dem Schutz wirtschaftlicher Interessen.",
+    "selfImageTitle": "Cavaliere und Anrede",
+    "selfImage": "Ein Cavaliere gilt als Edelmann Venalys' und wird mit Don angesprochen. Diese Würde ist von seiner konkreten Waffenlaufbahn getrennt: Ein Don kann als Condottieri, Gondoleri, Lancieri oder Stralieri dienen.",
+    "quote": "Ein Name gibt Ansehen. Erst der Dienst gibt ihm Gewicht.",
+    "quoteAttribution": "Venalischer Lehrsatz"
+  }
+}

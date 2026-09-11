@@ -51,7 +51,7 @@
     } catch (error) {
       resultEl.style.color = 'var(--red)';
       if (error.status === 409) {
-        resultEl.textContent = '⚠ Konflikt: Auf GitHub liegt bereits eine neuere Fassung. Seite neu laden und Änderungen erneut anwenden.';
+        resultEl.textContent = '⚠ Eine neuere Fassung ist verfügbar. Schließe diesen Dialog und nutze „Aktuelle Karte laden“. Dein Entwurf wird dabei im Backup-Verlauf gesichert.';
       } else {
         resultEl.textContent = `✕ ${error.message}`;
       }

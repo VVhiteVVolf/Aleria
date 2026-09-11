@@ -2,7 +2,7 @@ import {
   FAMILY_REGISTRY,
   getRegisteredFamily,
   RETIRED_FAMILY_IDS
-} from '../data/families.registry.js';
+} from '../data/families.registry.js?v=20260911-gwendolyn-house-bios-h';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import {
@@ -15,7 +15,7 @@ import {
   isUntouchedBlankFamily,
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
-} from './family-registry-upgrade.js';
+} from './family-registry-upgrade.js?v=gwendolyn-20260911h';
 import { resolveCanonicalFamilyId } from '../modules/family-registry/family-id-aliases.js';
 
 export function normalizeFamilyId(value) {

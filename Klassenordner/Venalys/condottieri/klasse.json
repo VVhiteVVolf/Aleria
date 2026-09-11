@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "condottieri",
+  "cultureId": "venalys",
+  "name": "Condottieri",
+  "title": "Der Condottieri",
+  "subtitle": "Cavaliere, Berufskrieger und Anführer",
+  "aliases": ["Condottiere", "Cavaliere", "Kavallier"],
+  "theme": "wine",
+  "icon": "https://i.imgur.com/gKl9fXV.png",
+  "illustration": "https://i.imgur.com/gKl9fXV.png",
+  "artwork": { "source": "https://i.imgur.com/gKl9fXV.png", "width": 1024, "height": 1536, "caption": "Condottieri · Venalys" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Venalys" },
+    { "group": "Einordnung", "label": "Laufbahn", "html": "Condottieri · professionelles Kriegertum" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Gewöhnlich Cavaliere; Anrede Don" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Berufskrieger, Hauptmann und Auftragnehmer" },
+    { "group": "Klassenprofil", "label": "Einsatz", "html": "Zu Land und häufig zur See" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Schwert oder Säbel, Dolch und Armbrust" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Der Condottieri ist ein professioneller Kriegsmann Venalys' und häufig ein Cavaliere. Er verbindet persönliche Waffenübung mit der Erfahrung wechselnder Aufträge und kann als Kämpfer, Hauptmann, Eskorte oder Anführer eines angeworbenen Verbandes auftreten.</p><p>Viele Condottieri dienen auf Schiffen oder folgen Handelswegen über das Meer. Ihre Bindung entsteht durch Vertrag, Ehre und den Namen, unter dem sie den Auftrag angenommen haben.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Republik", "status": "written", "sharedIntro": "republik", "html": "<p>In einer Republik ohne feudalen Ritterstand wurde das Kriegshandwerk zu einem eigenen Beruf. Adlige Häuser, Handelsherren und öffentliche Ämter greifen auf erfahrene Condottieri zurück, wenn eine Aufgabe mehr verlangt als gewöhnlichen Wachdienst.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Condottieri beurteilen Auftrag, Mannschaft und Gelände rasch. Sie kennen das Führen kleiner Verbände, den Schutz wichtiger Personen und Güter sowie den Wechsel zwischen geordnetem Kampf und beweglicher Eigeninitiative.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Erfahrene und vielseitige Berufskrieger</li><li>Führung kleiner Mannschaften</li><li>Für Land- und Seedienst geeignet</li></ul><h3>Schwächen</h3><ul><li>Verträge und Auftraggeber können Loyalitäten verkomplizieren</li><li>Hochwertige Ausrüstung und Gefolge sind kostspielig</li><li>Weniger fest in eine einzige Schlachtordnung eingebunden</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Der Condottieri bevorzugt eine verlässliche Klinge und hält Seitenwaffe oder Armbrust für wechselnde Lagen bereit. Seine spätere Kampfkunst soll Führung, Duell und den engen Kampf an Bord miteinander verbinden.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Condottieri investieren in gepflegte Rüstung, eine persönliche Klinge und belastbare Reiseausstattung. Wer zur See dient, bevorzugt Stücke, die Bewegung auf engem Deck zulassen und Salz, Nässe und häufige Märsche ertragen.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "cavaliere", "html": "<p>Ein erfolgreicher Condottieri kann erhebliches Vermögen und Ansehen gewinnen. Aldo Falveri ist als Don, Cavaliere und ehemaliger Condottiere der Roten Kompanie ein belegtes Beispiel dafür, dass auch ein unbedeutender Magnarierzweig durch den Beruf Gewicht erlangen kann.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Laufbahn", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Venalische Klassen · Condottieri; Stammbaum Haus Falveri" }
+}

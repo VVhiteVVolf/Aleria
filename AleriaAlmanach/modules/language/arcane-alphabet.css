@@ -1,0 +1,33 @@
+@import url("../../../Fonts/Arkanes-Alphabet/arcane.css");
+
+.script-style-arcane {
+  font-family: "Aleria Arcana", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+
+.comment-kind-spell[data-comment-language="arcane"],
+.comment-kind-foreign[data-comment-language="arcane"] {
+  --language-script-font: "Aleria Arcana", serif;
+}
+
+.script-table-grid .script-style-arcane {
+  color: #254338;
+  font-size: 2.4rem;
+  padding-inline: 0.35rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+[data-comment-language="arcane"] .comment-language-script {
+  font-size: 1.8em;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: normal;
+  line-height: 1.45;
+}

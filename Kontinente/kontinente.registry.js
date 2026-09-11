@@ -70,8 +70,8 @@ window.KONTINENTE_REGISTRY = [
     name: "Grafschaft Celtigerns Wacht - Gwyl Celtigern",
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=celtigerns-view-20260901b",
-    contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=celtigerns-content-20260901d",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=administration-dialog-20260911b",
+    contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=administration-dialog-20260911b",
     contentPolicy: {
       blockedLinkHosts: ["animexx.de"],
       linkReplacements: {
@@ -95,7 +95,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Baronie Gwendolyns Ufer",
     type: "Baronie",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/baronie.data.js?v=gwendolyns-ufer-20260901b",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/baronie.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -111,7 +111,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Baronie Arthus Streben",
     type: "Baronie",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/Baronie Arthus Streben.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/baronie.data.js?v=arthus-streben-20260901a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/baronie.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -127,7 +127,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft Rhonwens Tränen",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/herrschaft.data.js?v=celtigerns-herrschaften-20260901a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/herrschaft.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -143,7 +143,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Insel Camruisge – Aberllan und Oilean",
     type: "Diarchie",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/Insel Camruisge.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js?v=celtigerns-herrschaften-20260901a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -159,7 +159,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Saethwyr",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/herrschaft.data.js?v=ritterfuersten-20260901b",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/herrschaft.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -175,7 +175,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Gafyr",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=ritterfuersten-20260901b",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -191,7 +191,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Wyrm",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/herrschaft.data.js?v=ritterfuersten-20260901b",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/herrschaft.data.js?v=panels-20260911a",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },

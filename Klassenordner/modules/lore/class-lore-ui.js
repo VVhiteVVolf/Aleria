@@ -1,4 +1,4 @@
-import { CLASS_LORE } from './class-lore-data.js?v=20260905-1';
+import { CLASS_LORE } from './class-lore-data.js?v=20260911-venalys-v1';
 
 export function appendClassLore(groups) {
   for (const group of groups) {

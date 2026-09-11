@@ -233,16 +233,12 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 .pin-dot{
   border-radius:50%;background:#111;border:2.5px solid #fff;
   box-shadow:0 2px 6px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.3);
-  display:none;transition:transform .12s;
+  display:block;transition:transform .12s;
 }
 /* edit mode: dot visible */
 .pin.edit-mode .pin-dot{display:block;opacity:1;}
 .pin.edit-mode:hover .pin-dot{transform:scale(1.25);box-shadow:0 2px 10px rgba(0,0,0,.8),0 0 0 2px rgba(255,255,255,.5);}
-/* view mode: very subtle dot hint on hover only */
-.pin:not(.edit-mode):hover .pin-dot{display:block;opacity:0.18;transform:scale(0.5);}
-/* Custom marker icon (assets/icons/... or Imgur, chosen via the Marker-Katalog
-   picker) - anchored bottom-center like a real map pin, always visible
-   (unlike .pin-dot, which stays hover-only). */
+/* Marker visibility is controlled by pin-visibility.css. */
 .pin-marker-img{
   position:absolute;left:0;bottom:0;transform:translate(-50%,0);
   object-fit:contain;
@@ -287,181 +283,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 .mo{display:none;position:fixed;inset:0;z-index:500;align-items:center;justify-content:center;background:rgba(30,15,0,.65);backdrop-filter:blur(4px);padding:16px;}
 .mo.open{display:flex;}
 
-/* ══ SCROLL / INFO CARD ══ */
-#scroll-card{
-  position:relative;width:min(960px,calc(100vw - 32px));max-height:calc(100vh - 32px);
-  display:flex;flex-direction:column;animation:unroll .28s ease;
-  background:#f8efd2;
-  border:2px solid #b99b55;
-  box-shadow:0 18px 48px rgba(0,0,0,.42);
-  border-radius:3px;
-}
-#scroll-card::before,#scroll-card::after{
-  content:'';display:block;height:22px;flex-shrink:0;
-  background:#8a641f;
-}
-#scroll-card::before{
-  border-bottom:1px solid #6f4d16;
-  box-shadow:none;
-  background-image:none;
-}
-#scroll-card::after{
-  border-top:1px solid #6f4d16;
-  box-shadow:none;
-  background-image:none;
-}
-@keyframes unroll{from{opacity:0.6;transform:scaleY(.88) translateY(-12px)}to{opacity:1;transform:scaleY(1) translateY(0)}}
-#scroll-close{position:absolute;top:29px;right:11px;z-index:10;background:rgba(40,20,0,.5);border:1px solid rgba(160,110,20,.4);color:rgba(210,160,50,.9);font-size:var(--fs-md);width:26px;height:26px;cursor:pointer;border-radius:2px;display:flex;align-items:center;justify-content:center;transition:all .12s;}
-#scroll-close:hover{background:rgba(100,55,0,.7);color:#ffd060;}
-#scroll-content{overflow-y:auto;padding:0;flex:1;min-height:0;}
-#scroll-content::-webkit-scrollbar{width:5px;}#scroll-content::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
-#scroll-actions{display:flex;gap:.45rem;justify-content:flex-end;padding:.5rem 1.4rem .22rem;flex-shrink:0;border-top:1px solid #d0bb7a;background:#f1e4bd;}
-
-/* ── Header Banner ── */
-.sv-header{
-  display:flex;align-items:center;gap:1.2rem;
-  padding:1.2rem 1.4rem 1.2rem 1.3rem;
-  border-bottom:1px solid #d0bb7a;
-  position:relative;overflow:hidden;
-  background:#f8efd2;
-}
-.sv-header::before{
-  content:none;
-}
-.sv-header::after{
-  content:none;
-}
-
-/* ── Wappen / Crest ── */
-.sv-crest{
-  width:96px;height:96px;flex-shrink:0;
-  border-radius:50%;
-  background:#efe0b6;
-  border:1px solid #d0bb7a;
-  display:flex;align-items:center;justify-content:center;
-  font-size:2.5rem;overflow:hidden;
-}
-.sv-crest img{width:100%;height:100%;object-fit:cover;display:block;}
-.sv-marker-icon{width:54px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3));}
-.sv-marker-icon img{width:100%;height:100%;object-fit:contain;}
-
-/* ── Regionsbanner oben rechts ── */
-.sv-banner{
-  position:absolute;top:.5rem;right:2.6rem;
-  width:88px;min-height:80px;max-height:130px;
-  display:flex;align-items:flex-start;justify-content:center;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.28));
-  z-index:2;
-}
-.sv-banner img{width:100%;height:auto;max-height:130px;object-fit:contain;}
-
-/* Outer glow ring — REMOVED, just a wrapper now */
-.sv-crest-wrap{
-  position:relative;width:96px;height:96px;flex-shrink:0;
-}
-.sv-crest-wrap .sv-crest{position:absolute;inset:0;width:100%;height:100%;z-index:1;}
-
-.sv-header-col{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.2rem;min-width:0;}
-.sv-title{
-  font-family:'Cinzel Decorative',serif;font-size:1.38rem;
-  color:var(--ink);line-height:1.15;margin-bottom:.15rem;
-  font-weight:700;
-  text-shadow:none;
-  letter-spacing:.02em;
-}
-.sv-subtitle-row{display:flex;flex-wrap:wrap;gap:.3rem .6rem;align-items:center;margin-bottom:.1rem;}
-.sv-cat-badge{
-  display:inline-flex;align-items:center;gap:5px;
-  font-family:'Cinzel',serif;font-size:var(--fs-xs);letter-spacing:0.04em;
-  padding:3px 11px 3px 8px;border-radius:20px;border:1.5px solid;
-  background:#efe0b6;font-weight:700;
-  box-shadow:none;
-}
-.sv-affils{display:flex;flex-direction:column;gap:.12rem;margin-top:.2rem;}
-.sv-affil{
-  display:inline-flex;align-items:baseline;gap:8px;
-  font-family:'EB Garamond',serif;font-size:.98rem;
-  color:var(--ink);
-  padding:2px 0;
-}
-.sv-affil-lbl{
-  font-family:'Cinzel',serif;font-size:.7rem;
-  color:rgba(80,50,10,.7);letter-spacing:0.07em;
-  font-style:normal;font-weight:700;
-  text-transform:uppercase;white-space:nowrap;
-  background:#ead9a8;
-  border-radius:2px;padding:1px 5px;
-}
-.sv-secret-badge{display:inline-block;font-family:'Cinzel',serif;font-size:var(--fs-xs);padding:2px 8px;border-radius:10px;border:1px solid rgba(80,30,120,.35);color:#5a2a8a;background:rgba(80,30,120,.1);}
-
-/* ── Body: image + table ── */
-.sv-body{display:flex;gap:0;align-items:stretch;border-bottom:1px solid #d0bb7a;background:#f8efd2;}
-
-/* Location image */
-.sv-img-wrap{
-  width:280px;flex-shrink:0;
-  border-right:1px solid #d0bb7a;
-  background:#efe0b6;
-  overflow:hidden;
-  display:flex;align-items:stretch;
-}
-.sv-img{width:100%;aspect-ratio:unset;border:none;box-shadow:none;background:none;}
-.sv-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.sv-img-ph{width:100%;height:100%;min-height:160px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;opacity:0.25;color:var(--ink);}
-
-/* Table */
-.sv-col{flex:1;min-width:0;}
-.sv-table{width:100%;border-collapse:collapse;}
-.sv-table tr{transition:background .1s;}
-.sv-table tr:hover td{background:#efe0b6;}
-.sv-table td{
-  font-family:'EB Garamond',serif;font-size:.96rem;
-  padding:6px 12px;
-  border-bottom:1px solid #dec991;
-  color:var(--ink);
-  vertical-align:middle;
-}
-.sv-table td:first-child{
-  font-family:'Cinzel',serif;
-  font-size:.68rem;
-  font-weight:700;
-  width:36%;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  color:#3d2507;
-  background:#e5d19a;
-  border-right:1px solid #d0bb7a;
-  text-shadow:none;
-  padding:6px 12px;
-}
-.sv-table tr:nth-child(even) td:last-child{background:#f4e7c5;}
-
-/* ── Flavour text / Lore ── */
-.sv-lore{
-  padding:1rem 1.5rem 1.1rem;
-  background:#f8efd2;
-  position:relative;
-}
-.sv-lore::before{
-  content:'❧  ✦  ❧';
-  display:block;
-  text-align:center;
-  font-size:.7rem;
-  color:var(--gold);
-  opacity:.55;
-  letter-spacing:.4em;
-  margin-bottom:.6rem;
-}
-.sv-text{
-  font-family:'EB Garamond',serif;
-  font-size:1.08rem;
-  line-height:1.85;
-  color:var(--ink2);
-  font-style:italic;
-}
-.sv-text p{margin-bottom:.45rem;}
-.sv-text strong{font-style:normal;color:var(--ink);font-weight:700;}
-.sv-text em{font-style:italic;}
+/* Location card styles live in pin-card.css. */
 
 /* Edit mode */
 .se-inner{display:flex;flex-direction:column;gap:.72rem;}
@@ -540,7 +362,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 /* ══ HINT & TOAST ══ */
 #hint{position:fixed;bottom:13px;left:50%;transform:translateX(-50%);background:rgba(245,234,208,.96);border:1px solid var(--border);font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.06em;color:var(--ink);padding:.28rem .9rem;pointer-events:none;opacity:0.75;transition:opacity .25s;white-space:nowrap;box-shadow:0 3px 12px var(--shadow);}
 #hint.on{opacity:1;}
-#toast{position:fixed;top:62px;right:13px;z-index:999;background:var(--p1);border:1px solid var(--border);font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.06em;color:var(--ink);padding:.32rem .9rem;pointer-events:none;opacity:0.75;transition:all .22s;transform:translateY(-5px);box-shadow:0 4px 14px var(--shadow);}
+#toast{position:fixed;top:62px;right:13px;z-index:999;background:var(--p1);border:1px solid var(--border);font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.06em;color:var(--ink);padding:.32rem .9rem;pointer-events:none;opacity:0;transition:all .22s;transform:translateY(-5px);box-shadow:0 4px 14px var(--shadow);}
 #toast.on{opacity:1;transform:translateY(0);}
 
 #bulk-bar{
@@ -654,7 +476,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 #sidebar.editor-fullscreen.open{transform:translateX(0);}
 #sidebar.editor-fullscreen #sb-main{
   display:grid;
-  grid-template-columns:minmax(460px,var(--editor-col-width,660px)) 10px minmax(420px,1fr);
+  grid-template-columns:minmax(380px,var(--editor-col-width,520px)) 10px minmax(0,1fr);
   min-height:0;
 }
 #sidebar.editor-fullscreen #sb-editor-col{
@@ -736,13 +558,6 @@ body.editor-resizing *{
   overflow:auto;
   padding:1rem;
 }
-.editor-preview-card{
-  width:min(920px,100%);
-  margin:0 auto;
-  background:var(--p1);
-  border:1px solid var(--border);
-  box-shadow:0 16px 42px rgba(0,0,0,.35);
-}
 .editor-preview-empty{
   font-family:'EB Garamond',serif;
   color:#f5e9c8;
@@ -750,19 +565,6 @@ body.editor-resizing *{
   text-align:center;
   padding:2rem;
 }
-.sv-linked-media{
-  display:block;
-  width:100%;
-  height:100%;
-  color:inherit;
-  text-decoration:none;
-  cursor:pointer;
-}
-.sv-linked-media:hover{
-  outline:2px solid rgba(180,140,50,.55);
-  outline-offset:2px;
-}
-.sv-linked-media img{display:block;}
 @media(max-width:900px){
   #sidebar.editor-fullscreen #sb-main{grid-template-columns:1fr;}
   #sidebar.editor-fullscreen #sb-resizer{display:none;}

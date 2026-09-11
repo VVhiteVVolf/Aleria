@@ -11,6 +11,8 @@ const sources = [
   'modules/name-list/name-list-data.js',
   'modules/script-table/script-table-data.js',
   'modules/language/language-reference-entries.js',
+  '../Fonts/Arkanes-Alphabet/arcane.js',
+  'modules/language/arcane-alphabet-entry.js',
   'data/sections.js',
   'modules/core/content-safety.js',
   'modules/house-warriors/house-warriors-data.js',

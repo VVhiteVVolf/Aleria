@@ -34,7 +34,7 @@ import {
   createFamilyChartAlignedParentageGroupPlan,
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
-import { resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js';
+import { resolveFamilyChartEntryFocus, resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js?v=20260911-person-entry';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import {
   insertTimeJumpAsSerialBarrier,
@@ -1262,7 +1262,8 @@ export function createFamilyChartSession(config) {
     const fittedScale = Number(container.querySelector('#f3Canvas')?.__zoom?.k);
     return resolveFamilyChartInitialViewport({
       chartViewport: family.extensions?.chartViewport,
-      fittedScale
+      fittedScale,
+      entryPersonId: resolveFamilyChartEntryFocus(family, config.options?.entryFocus)
     });
   }
 
@@ -1405,7 +1406,7 @@ export function createFamilyChartSession(config) {
   });
   chart.updateMainId?.(focusPersonId);
   chart.updateTree?.({ initial: true, tree_position: 'fit', transition_time: 0 });
-  scheduleReadableInitialViewport();
+  scheduleReadableInitialViewport(resolveFamilyChartEntryFocus(family, config.options?.entryFocus) || focusPersonId);
 
   return Object.freeze({
     update,

@@ -2,6 +2,7 @@ import { renderAldrimarTrainingDetails } from './aldrimar-training-details.js';
 import { escapeClassHtml as escape } from '../pages/class-page-content.js';
 import { describeTechniqueDamage } from '../../../AleriaAlmanach/modules/combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 import { renderPathFeatures, renderCultureTrainingTools, renderFoundationSelection, trainingIntro, renderTrainingNextSteps } from './culture-training-details.js?v=20260909-dragon-parent-v2';
+import { renderStructureOnlyTraining } from './structure-only-training-template.js?v=20260911-venalys-v1';
 
 function renderAttack(attack, selectedLevel) {
   const available = attack.minimumLevel != null && attack.minimumLevel <= selectedLevel;
@@ -65,6 +66,7 @@ function renderLevelTraining(row, plan) {
 }
 
 export function renderCultureClassTraining(plan) {
+  if (plan.progressionStatus === 'structure-only') return renderStructureOnlyTraining(plan);
   const partial = plan.authoredThroughLevel === 5;
   return `<section class="cenyr-training class-chapter" id="ausbildungsplan" aria-labelledby="heading-ausbildungsplan">
     <div class="class-chapter-heading"><span aria-hidden="true">✦</span><h2 id="heading-ausbildungsplan">Ausbildung · Stufe 1–20</h2></div>

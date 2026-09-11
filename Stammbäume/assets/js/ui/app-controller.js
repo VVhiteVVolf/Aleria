@@ -1,4 +1,4 @@
-import { createFamilyChartSession } from '../adapters/family-chart-adapter.js';
+import { createFamilyChartSession } from '../adapters/family-chart-adapter.js?v=20260911-person-entry';
 import { requiresFamilyChartRebuild } from '../adapters/family-chart-lifecycle-policy.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
@@ -8,8 +8,8 @@ import { createAlmanachCharacterController } from '../modules/almanach-bridge/al
 import { createEditorToolbarController } from '../modules/editor-toolbar/editor-toolbar-controller.js';
 import { buildRegisteredHouseIndex } from '../modules/family-assets/house-emblem-index.js';
 import { createTreeGeneratorController } from '../modules/tree-generator/tree-generator-controller.js';
-import { createHouseBiographyDialog } from '../modules/house-biography/house-biography-dialog.js';
-import { HOUSE_BIOGRAPHY_EXTENSION_ID } from '../modules/house-biography/house-biography-model.js';
+import { createHouseBiographyDialog } from '../modules/house-biography/house-biography-dialog.js?v=20260911-gwendolyn-house-bios-h';
+import { HOUSE_BIOGRAPHY_EXTENSION_ID } from '../modules/house-biography/house-biography-model.js?v=20260911-gwendolyn-house-bios-h';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
 import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
 import { assertUsablePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
@@ -21,7 +21,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   saveFamilyToLibrary
-} from '../services/family-library.js';
+} from '../services/family-library.js?v=20260911-gwendolyn-house-bios-h';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {
@@ -99,7 +99,8 @@ export function createAppController({
   latestLocalFamilySource = null,
   workspaceMode = WORKSPACE_MODE.view,
   requestEditOnInit = false,
-  autoOpenTreeGenerator = false
+  autoOpenTreeGenerator = false,
+  entryFocus = null
 }) {
   const isEditing = workspaceMode === WORKSPACE_MODE.edit;
   const root = documentRef.getElementById('family-app');
@@ -868,7 +869,7 @@ export function createAppController({
         container: chartContainer,
         family,
         view: family.view,
-        options: { resolveHouse: resolveRegisteredHouse },
+        options: { resolveHouse: resolveRegisteredHouse, entryFocus },
         runtime,
         onPersonClick({ personId }) {
           if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId);

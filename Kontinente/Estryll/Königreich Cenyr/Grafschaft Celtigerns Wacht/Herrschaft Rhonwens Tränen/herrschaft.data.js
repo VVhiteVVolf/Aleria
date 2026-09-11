@@ -7,7 +7,7 @@
   const familyTreePage = data.familyTreePage;
   const houseRoot = "/Stammbäume/assets/images/houses/Rhonwens%20Tränen";
   const portraitRoot = "/Stammbäume/assets/images/portraits/haus-arwydd";
-  const banner = "/Stammbäume/assets/images/regions/rhonwens-traenen.png";
+  const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/assets/herrschaftsbanner.png";
   const mapImage = "/Kontinente/assets/images/celtigerns-wacht-map-preview.jpg";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
   const parentHref = "../Grafschaft%20Celtigerns%20Wacht.html";
@@ -15,7 +15,7 @@
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [
       data.family("Arwydd", {
-        familyId: "haus-arwydd",
+        familyId: "haus-arwydd", housePage: "haus.html",
         imageSrc: `${houseRoot}/haus-arwydd.png`,
         seat: "Castellbryn",
         liege: "Draig",
@@ -23,16 +23,16 @@
       }),
     ]),
     data.familySection("Ritterhäuser", [
-      data.family("Gwared", { familyId: "haus-gwared", imageSrc: `${houseRoot}/Ritterliche/Gwared.png`, seat: "Castellbryn", liege: "Arwydd" }),
-      data.family("Rhenna", { familyId: "haus-rhenna", imageSrc: `${houseRoot}/Ritterliche/Rhenna.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
-      data.family("Madryn", { familyId: "haus-madryn", imageSrc: `${houseRoot}/Ritterliche/Madryn.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
-      data.family("Talinvyr", { familyId: "haus-talinvyr", imageSrc: `${houseRoot}/Ritterliche/Talinvyr.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
-      data.family("Merek", { familyId: "haus-merek", imageSrc: `${houseRoot}/Ritterliche/Merek.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
+      data.family("Gwared", { familyId: "haus-gwared", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Gwared.png`, seat: "Castellbryn", liege: "Arwydd" }),
+      data.family("Rhenna", { familyId: "haus-rhenna", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Rhenna.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
+      data.family("Madryn", { familyId: "haus-madryn", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Madryn.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
+      data.family("Talinvyr", { familyId: "haus-talinvyr", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Talinvyr.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
+      data.family("Merek", { familyId: "haus-merek", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Merek.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
     ]),
     data.familySection("Ausgestorbene Häuser", [
-      data.family("Illysywen", { familyId: "haus-illysywen", imageSrc: `${houseRoot}/haus-illysywen.png`, seat: "Castellbryn", liege: "..." }),
-      data.family("Skellor", { familyId: "haus-skellor", imageSrc: `${houseRoot}/Ausgestorben/Skellor.png`, seat: "Rhonwens Tränen", liege: "..." }),
-      data.family("Morveth", { familyId: "haus-morveth", imageSrc: `${houseRoot}/Ausgestorben/Morveth.png`, seat: "Rhonwens Tränen", liege: "..." }),
+      data.family("Illysywen", { familyId: "haus-illysywen", housePage: "haus.html", imageSrc: `${houseRoot}/haus-illysywen.png`, seat: "Castellbryn", liege: "..." }),
+      data.family("Skellor", { familyId: "haus-skellor", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ausgestorben/Skellor.png`, seat: "Rhonwens Tränen", liege: "..." }),
+      data.family("Morveth", { familyId: "haus-morveth", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ausgestorben/Morveth.png`, seat: "Rhonwens Tränen", liege: "..." }),
     ], { variant: "extinct" }),
   ]);
 

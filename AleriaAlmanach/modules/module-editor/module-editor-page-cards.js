@@ -25,7 +25,7 @@ function collectModulePageSharedFields(card, targetType = 'standard') {
   if (imagePosition !== defaultImagePosition) shared.imagePosition = imagePosition;
   if (pageCast.length) shared.sessionCast = pageCast;
   if (pageCastDetails.length) shared.sessionCastDetails = pageCastDetails;
-  if (card.querySelector('.me-page-comments-enabled')?.checked) shared.enableComments = true;
+  applyModulePageCommentMode(shared, getFormValue(card, '.me-page-comments-enabled'));
 
   return shared;
 }

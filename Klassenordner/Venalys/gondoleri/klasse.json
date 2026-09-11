@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "gondoleri",
+  "cultureId": "venalys",
+  "name": "Gondoleri",
+  "title": "Der Gondoleri",
+  "subtitle": "Seefahrender Edelmann Venalys'",
+  "aliases": ["Gondoliere", "Gondolieri"],
+  "theme": "sea",
+  "icon": "https://i.imgur.com/oSquWWx.png",
+  "illustration": "https://i.imgur.com/oSquWWx.png",
+  "artwork": { "source": "https://i.imgur.com/oSquWWx.png", "width": 1024, "height": 1536, "caption": "Gondoleri · Venalys" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Venalys" },
+    { "group": "Einordnung", "label": "Laufbahn", "html": "Gondoleri · Seefahrt" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Bevorzugte Laufbahn seefahrender Cavaliere" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Seefahrer, Bootsführer und Bordkämpfer" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Säbel, Dolch, Stangenhaken und Armbrust" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Der Gondoleri ist ein besonderer Seefahrer und bewaffneter Edelmann zur See. Unter den venalischen Cavaliere gilt diese Laufbahn als bevorzugter Weg für jene, deren Amt, Vermögen oder Familienpflicht sie an Schiffe, Häfen und Wasserwege bindet.</p><p>Er führt nicht nur eine Waffe. Er versteht das Fahrzeug, die Mannschaft und den Raum, in dem gekämpft wird.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Republik", "status": "written", "sharedIntro": "republik", "html": "<p>Handel und politische Macht Venalys' sind eng mit der Seefahrt verbunden. Daraus entstand eine Laufbahn, in der der Edelmann seinen Stand nicht vom Ufer aus vertritt, sondern selbst Verantwortung für Boot, Schiff, Ladung und Besatzung übernimmt.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Gondoleri lesen Wind, Wasser und Bewegung eines Decks. Sie geben knappe Befehle, bewegen sich sicher in engen Durchgängen und wissen, wann ein Boot gehalten, gelöst oder als Zugang zu einem größeren Schiff genutzt werden muss.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Sicher auf Booten, Schiffen und an Ufern</li><li>Verbindet Seemannschaft mit bewaffneter Führung</li><li>Stark in engen und beweglichen Kampfräumen</li></ul><h3>Schwächen</h3><ul><li>Spezialisierung verliert fern vom Wasser an Gewicht</li><li>Schwere Rüstung behindert viele Manöver</li><li>Abhängig von Mannschaft und Fahrzeug</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Säbel und Dolch eignen sich für enge Decks; Stangenhaken und Armbrust erweitern Reichweite und Kontrolle. Die späteren Formen sollen Boot, Bordkante und schwankenden Stand berücksichtigen.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Ein Gondoleri trägt bewegliche, wetterfeste Ausrüstung und sichert persönliche Gegenstände gegen Wasser und Sturz. Seil, Haken und nautische Werkzeuge gehören ebenso zum Dienst wie die eigentlichen Waffen.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "cavaliere", "html": "<p>Der Gondoleri verkörpert das Ideal des seefahrenden Edelmanns: sichtbar im Dienst, verantwortlich für Menschen und Wertgut und eng mit den Lebensadern der Republik verbunden.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Laufbahn", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Venalische Klassen · Gondoleri" }
+}

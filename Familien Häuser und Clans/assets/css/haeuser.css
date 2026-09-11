@@ -41,7 +41,7 @@ body {
 }
 
 .haeuser-template-frame {
-  width: 1320px !important;
+  width: var(--haeuser-frame-width, 1320px) !important;
   max-width: none;
   border-collapse: collapse;
   color: var(--haeuser-ink);
@@ -381,7 +381,8 @@ body {
   object-fit: contain;
 }
 
-[data-haeuser-content] {
+[data-haeuser-content],
+.haeuser-page [data-section] {
   white-space: pre-line;
 }
 
@@ -460,7 +461,9 @@ body {
 }
 
 .haeuser-history-portrait {
+  position: relative;
   width: 190px;
+  height: clamp(120px, 24vw, 315px);
   text-align: center;
   background: #c7b178 !important;
 }
@@ -470,11 +473,18 @@ body {
   background: #ddc990 !important;
 }
 
-.haeuser-history-portrait-slot {
-  width: 150px !important;
-  max-width: 150px !important;
-  aspect-ratio: 2 / 3 !important;
-  min-height: 225px !important;
+.haeuser-historical-table .portrait-cell .haeuser-history-portrait-slot {
+  position: absolute;
+  inset: 7px;
+  width: auto;
+  max-width: none;
+  aspect-ratio: auto;
+  min-height: 0;
+}
+
+.haeuser-historical-table .portrait-cell .haeuser-history-portrait-slot img {
+  max-height: none;
+  object-fit: contain;
 }
 
 .haeuser-template-frame .wappen .haeuser-icon-slot,
@@ -579,7 +589,7 @@ body {
   }
 
   .haeuser-template-frame {
-    width: 1101px !important;
+    width: var(--haeuser-frame-width, 1101px) !important;
     border-left: 0;
     border-right: 0;
     box-shadow: none;

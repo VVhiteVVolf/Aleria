@@ -1,0 +1,236 @@
+// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
+// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+export const HOUSE_CONTENT = {
+  "id": "haus-cludwyr",
+  "name": "Haus Cludwyr",
+  "type": "Ritterhaus",
+  "page": "kleinehaeuser.html",
+  "county": "Celtigerns Wacht",
+  "liege": "Haus Wyrm",
+  "territoryId": "herrschaft-wyrm",
+  "territoryName": "Herrschaft der Wyrm",
+  "territoryHref": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html",
+  "parentHouseId": "",
+  "extinct": false,
+  "showMotto": true,
+  "prepared": false,
+  "registerPage": true,
+  "biographySourceRevision": 4,
+  "biographyIntroTitle": "Über das Haus",
+  "biographyHistoryTitle": "Geschichte",
+  "biographySummary": {
+    "overview": "Haus Cludwyr dient den Wyrm und verwaltet Bronhir. Seine Ritter sind volksnah und eng mit Landwirtschaft und Versorgung verbunden. Ein weiteres Herrenhaus steht in Gwynthor.",
+    "history": "Der Bauernsohn Saith wurde von einem Ritter der Rhyddid aufgenommen. Seine Kenntnisse über Feldarbeit und Ernten überzeugten die Wyrm, ihn zum Ritterherrn und Lehenswart von Bronhir zu erheben.",
+    "character": "„Der Boden lügt nicht.“ erinnert an Arbeit, Verlässlichkeit und praktische Erfahrung. Rhain führt das Haus; Slevin ist sein erster Erbe."
+  },
+  "placeholders": {
+    "male": "../Stammbäume/assets/images/placeholders/male.png",
+    "female": "../Stammbäume/assets/images/placeholders/female.png"
+  },
+  "allies": [
+    {
+      "name": "Haus Wyrm",
+      "detail": "Lehnsherr",
+      "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+      "imageFormat": "square"
+    }
+  ],
+  "hierarchy": [
+    {
+      "type": "Sammlung",
+      "name": "Familien Häuser und Clans",
+      "slug": "familien-hauser-und-clans"
+    },
+    {
+      "type": "Kontinent",
+      "name": "Estryll",
+      "slug": "estryll"
+    },
+    {
+      "type": "Königreich",
+      "name": "Cenyr",
+      "slug": "cenyr"
+    },
+    {
+      "type": "Grafschaft",
+      "name": "Celtigerns Wacht",
+      "slug": "celtigerns-wacht"
+    },
+    {
+      "type": "Region",
+      "name": "Llamreis Ankunft",
+      "slug": "llamreis-ankunft"
+    },
+    {
+      "type": "Sitz",
+      "name": "Gwynthor",
+      "slug": "gwynthor"
+    },
+    {
+      "type": "Haus",
+      "name": "Haus Cludwyr",
+      "slug": "haus-cludwyr"
+    }
+  ],
+  "profile": {
+    "highestTitle": "Ritterherr",
+    "rank": "Ritterherr",
+    "houseType": "Ritterhaus",
+    "motto": "Der Boden lügt nicht.",
+    "quoteAuthor": "",
+    "seat": "",
+    "affiliation": "Haus Wyrm",
+    "liege": "Haus Wyrm",
+    "patron": "Haus Wyrm",
+    "knightingPatron": "Haus Wyrm",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
+    "founding": "",
+    "milestoneOne": "",
+    "milestoneTwo": "",
+    "people": "Cenyri",
+    "wealth": "",
+    "religion": "Die Alerische Kirche",
+    "patronDeities": "Der Knecht",
+    "origin": "Saith Cludwyr",
+    "cadetBranches": "",
+    "allies": "",
+    "enemies": ""
+  },
+  "sections": {
+    "overview": [
+      "Die Cludwyr stammen aus Gwynthor und zählen seit jeher zu den treuesten Vasallen des Ritterfürstenhauses Wyrm. Ihre wichtigste Aufgabe – die Verwaltung der Ortschaft Bronhir – erfüllen sie mit außerordentlicher Hingabe und einem Pflichtbewusstsein, das weit über das Erwartbare hinausgeht. Für die Cludwyr ist diese Aufgabe nicht bloß ein Lehen, sondern eine Verantwortung gegenüber den Menschen, die ihnen anvertraut sind.",
+      "Die Wyrm betrauen das Haus Cludwyr mit einer Vielzahl unterschiedlicher Aufgaben und tun dies im sicheren Wissen, dass diese ohne Zögern und ohne Murren erfüllt werden. Die Cludwyr gelten als einfach, aber niemals als schwierig; als zuverlässig, ohne fordernd zu sein. Entsprechend werden sie häufig dort eingesetzt, wo Standhaftigkeit und Präsenz wichtiger sind als politisches Kalkül: beim Schutz von Ortschaften, als Wachen, Hauptleute kleiner Einheiten oder auch als einfache Soldaten in den Reihen ihres Lehnsherrn.",
+      "Über die Grenzen der Grafschaft Celtigerns Wacht hinaus sind die Cludwyr weitgehend unbekannt. Dies ist kein Zeichen von Bedeutungslosigkeit, sondern Ergebnis ihrer stark lokal gebundenen Aufgaben. Ihre Pflicht liegt bei den Wyrm und innerhalb der Grafschaft – selten sieht man einen Cludwyr jenseits dieser Grenzen. Eine Ausnahme bildete der Krieg gegen Ceitheach, in dem sie dem Ruf des Königs ebenso folgten wie dem ihrer Lehnsherren. Erst dort wurden sie auch außerhalb der Grafschaft wahrgenommen.",
+      "Bis in die Gegenwart hinein gelten die Cludwyr als wichtige Stütze des Hauses Wyrm. Ihr politischer Einfluss mag gering sein, doch ihre tiefe Verwurzelung in der ländlichen Bevölkerung, ihre Beliebtheit in den Dörfern und ihr verlässlicher Dienst verleihen ihnen eine stille, aber spürbare Bedeutung innerhalb der Herrschaft."
+    ],
+    "history": [
+      "Das Haus Cludwyr führt seine Herkunft auf Saith Cludwyr zurück, einen Mann von einfacher Herkunft und ungewöhnlicher Klarheit. Saith war der Sohn eines Bauern, dessen Leben jäh und tragisch endete: Betrunken setzte der Vater eines Abends versehentlich sein eigenes Haus in Brand – und mit ihm sich selbst. Saith blieb allein zurück, ohne Hof, ohne Familie, ohne Halt.",
+      "Es war ein Ritter aus dem Hause Rhyddid, der den verwaisten Jungen aufnahm. Er brachte ihn nach Gwynthor, nahm ihn als Knappen an und ließ ihn in den Hallen der Ritter aufwachsen. Saith lernte den Umgang mit Schwert und Schild, mit Pflicht und Disziplin – und behielt doch stets das Denken eines Bauern. Später wurde er, auf Empfehlung seines Ritters, vom Ritterfürsten der Wyrm selbst zum Ritter geschlagen.",
+      "Saith diente fortan auf der Burg der Wyrm. Doch er eckte an – nicht aus Hochmut, nicht aus Unhöflichkeit und auch nicht aus Dummheit. Vielmehr war es seine Art, jede Lage mit einer Bauernweisheit zu kommentieren, die ihm den Ruf eines Narren einbrachte. Als die Küchenmeisterin erkrankte, meinte er lediglich: „Sind die Eier plötzlich eckig, geht’s den Hühnern ganz schön dreckig.“",
+      "Die Ritter verdrehten die Augen, die Dienerschaft lachte hinter vorgehaltener Hand, und Saith wurde zur stillen Zielscheibe des Spotts. Doch merkwürdigerweise trafen seine Worte stets ins Schwarze – nur wollte es niemand wahrhaben.",
+      "Eines Tages fragte ihn der Ritterfürst selbst, sichtlich gereizt: „Seid Ihr ein Idiot, Sir Saith?“",
+      "Saith lächelte nur und antwortete nicht. Der Ritterfürst wandte sich ab, doch von diesem Tag an ließ ihn der Gedanke an Saith nicht mehr los. Er beobachtete ihn: auf dem Markt, wenn die Wagen mit Waren eintrafen, in der Küche, wo Saith Äpfel prüfend drehte und wieder zurücklegte. Als der Ritterfürst schließlich die Bediensteten befragte, erklärten sie ihm, Saith wisse erstaunlich viel über Anbau, Qualität und Verderb. Er sage ihnen, warum das Gemüse so aussehe, wie es aussehe – und ob es noch gut sei.",
+      "Man flüsterte sogar, dass sich die Qualität der Speisen auf der Burg seit Saiths Ritterschlag verbessert habe. Und als Saith vorhersagte, dass die kommende Ernte schlecht ausfallen werde, staunte der Ritterfürst nicht schlecht, als sich diese Worte bewahrheiteten.",
+      "So rief er Saith zu sich und erteilte ihm einen besonderen Auftrag. Er solle nach Bronhir gehen, dort dem Hauptmann als Ritter dienen – und sich zugleich mit den Bauern befassen. Saith gehorchte ohne Zögern. Er sprach mit den Menschen, hörte zu, gab Ratschläge. Die nächste Ernte fiel gut aus. Berichte erreichten den Ritterfürsten, und keiner sprach schlecht über Saith.",
+      "Schließlich reiste der Ritterfürst selbst nach Bronhir. Er fand Saith auf den Feldern, wie er die restliche Ernte überwachte. Der Fürst lehnte sich an einen Zaun und fragte: „Was seid Ihr, Saith Cludwyr?“",
+      "Saith antwortete schlicht: „Euer Ritter, Sir.“",
+      "Der Ritterfürst sah ihn lange an. „Seid Ihr Euch da sicher?“",
+      "Saith dachte nach, kratzte sich am Kinn und sagte schließlich: „Vielleicht bin ich doch ein Idiot.“",
+      "Der Ritterfürst schüttelte den Kopf. „Nein. Ihr seid ein Bauer – und ein Ritter.“ Er trat näher. „Heute seid Ihr beides. Morgen seid Ihr Ritterherr und Lehenswart von Bronhir.“",
+      "So wurde Saith Cludwyr zum Begründer eines Hauses, das beides in sich vereint: den festen Stand eines Bauern und die Pflicht eines Ritters. Und so tragen die Cludwyr bis heute diese Herkunft in sich – bodenständig, zuverlässig und mit einem Wissen, das nicht aus Büchern stammt, sondern aus der Erde selbst."
+    ],
+    "traditions": [
+      "Die Cludwyr sind ein Ritterhaus, dem man seinen Stand oft nicht ansieht. Sie zeichnen sich durch ausgeprägte Volksnähe und ein nahezu vollständiges Desinteresse an Prunk, Etikette und höfischen Feinheiten aus. Ihre Wurzeln liegen in einer Bauernfamilie – und dieser Ursprung wird nicht verleugnet, sondern bewusst bewahrt.",
+      "Eine der wichtigsten Regeln des Hauses besagt, dass alle Sprösslinge in jungen Jahren bei Bauern mitarbeiten. Tag für Tag helfen sie auf den Feldern, bei Vieh und Ernte, um den Wert harter Arbeit und die Herkunft des Hauses zu verinnerlichen. Diese Praxis endet nicht mit der Pagenschaft oder Knappschaft: Selbst während ihrer Ausbildung werden sie in Erntezeiten erneut zu den Bauern geschickt, oft nach oder neben ihrem Dienst. Und selbst als vollwertige Ritter greifen die Cludwyr, sofern es ihre Pflichten erlauben, noch zur Sense, zur Hacke oder zum Pflug. So bleibt die Verbindung zur praktischen Arbeit lebendig – nicht als Pflicht, sondern als Selbstverständnis.",
+      "Kampftechnisch sind die Cludwyr nicht für große Eleganz oder außergewöhnliche Meisterschaft bekannt. Ihre Ritter werden meist als Cantref-Speerkämpfer ausgebildet, seltener auch als Teulu-Schwertkämpfer oder Uchelwyr-Reiter. Herausragende Fechtkunst ist selten ihr Markenzeichen. Stattdessen zeichnen sie sich durch Ausdauer, Standhaftigkeit und Zähigkeit aus. Das gegenwärtige Oberhaupt Rhain Cludwyr gilt als fähiger Krieger – nicht wegen makelloser Technik, sondern aufgrund seines Durchhaltevermögens und seiner unbeirrbaren Haltung im Kampf.",
+      "Eine weitere, tief verwurzelte Tradition des Hauses ist die Weitergabe der Bauernweisheiten ihres Gründers. Noch heute lernen die Nachkommen der Cludwyr die alten Regeln und Sprüche über Wetter, Ernte, Tiere und Menschen. So kommt es nicht selten vor, dass ein Cludwyr auf nahezu jede Situation mit einer Bauernweisheit reagiert – sehr zum Amüsement oder auch zur Verwunderung anderer. Gerade diese Haltung war es, die das Haus einst nach Bronhir führte und dort fest verankerte.",
+      "Auch in Fragen der Ehe bleiben die Cludwyr ihrem Wesen treu. Sie heiraten bevorzugt Bauern, Bauernsöhne oder -töchter oder Menschen aus dem einfachen Volk, zu denen sie sich meist näher fühlen als zum Adel. Politische Ehen kommen vor, sind jedoch selten und werden meist nur auf ausdrückliche Bitte oder Empfehlung anderer Häuser eingegangen. Für die Cludwyr zählt Nähe mehr als Einfluss.",
+      "So ist Haus Cludwyr ein Haus der einfachen Stärke: verwurzelt im Boden, getragen von Arbeit und geprägt von der Überzeugung, dass wahre Würde nicht aus Glanz, sondern aus Beständigkeit entsteht."
+    ],
+    "knighthood": "Folgt …",
+    "succession": "Folgt …",
+    "holdings": [
+      "Die Cludwyr verfügen über ein Herrenhaus in Gwynthor, das ihnen vom Hause Wyrm zur Verfügung gestellt wurde. Dieses Anwesen wird jedoch nur selten von Mitgliedern der Familie selbst bewohnt. Für gewöhnlich dient es den Cludwyr eher als Unterkunft auf Zeit, wenn sie an den Hof ihres Lehensherrn gerufen werden oder dienstliche Angelegenheiten in der Stadt zu erledigen haben. Den Alltag im Haus bestreiten meist ausschließlich die dort angestellten Bediensteten.",
+      "In früheren Zeiten, bevor dauerhaftes Personal eingesetzt wurde, kam es nicht selten vor, dass das Herrenhaus monatelang leer stand. In der Stadt erhielt es bald den Spitznamen „Geisterhaus“, und wurde zum Ziel zahlreicher Mutproben neugieriger Kinder. Diese Zustände gingen dem damaligen Ritterfürsten der Wyrm schließlich derart auf die Nerven, dass er das Haus regelmäßig reinigen ließ und die Cludwyr eindringlich darum bat, dort dauerhaftes Personal unterzubringen – eine Bitte, der sie schließlich nachkamen.",
+      "Der eigentliche Mittelpunkt des Hauses Cludwyr liegt jedoch nicht in Gwynthor, sondern in Bronhir, einer bäuerlich geprägten Ortschaft im Herrschaftsgebiet der Wyrm. Hier befindet sich die Burg der Cludwyr, ihr tatsächlicher Sitz und Lebensmittelpunkt. Bronhir ist von essenzieller Bedeutung für die Region: Gemüse, Kartoffeln und Getreide aus den umliegenden Feldern versorgen nicht nur die Wyrm, sondern auch Gwynthor und weite Teile der Grafschaft.",
+      "Seit ihrer Gründung sind die Cludwyr Lehenswarte von Bronhir. Sie sorgen dafür, dass das Dorf seinen geregelten Lauf nimmt, unterstützen die Bauern nicht nur durch Schutz, sondern auch durch ihr praktisches Wissen über Anbau, Ernte und Lagerung. Diese Nähe zur bäuerlichen Arbeit ist kein Pflichtdienst, sondern gelebte Tradition.",
+      "Als Entlohnung für diesen beständigen Dienst erhalten die Cludwyr einen kleinen Anteil an den Abgaben Bronhirs, was eine ihrer stabilsten Einnahmequellen darstellt. Darüber hinaus ergibt sich ein weiterer wirtschaftlicher Faktor aus ihren Heiratsbräuchen: Da die Cludwyr häufig Bauern oder Bauerntöchter ehelichen, gehen viele Höfe im Laufe der Zeit in den Besitz der Familie über. Die daraus resultierenden Einnahmen machen das Haus vermögender, als es auf den ersten Blick erscheint. Manche munkeln sogar, dass den Cludwyr selbst nicht ganz bewusst ist, wie wohlhabend sie tatsächlich sind.",
+      "Zudem gehört dem Haus die Taverne innerhalb der eigenen Burg, die als Treffpunkt für Dorfbewohner, Reisende und Soldaten gleichermaßen dient – schlicht geführt, gut besucht und ein weiterer Ausdruck der engen Verbindung zwischen Haus und Bevölkerung.",
+      "So gründet der Besitz der Cludwyr weniger auf großen Ländereien oder repräsentativen Bauten, sondern auf Arbeit, Boden und gewachsenen Bindungen – und genau darin liegt ihre Stärke."
+    ],
+    "cultureReligion": [
+      "Wie die meisten Cenyri bekennen sich auch die Cludwyr zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag der Familie eingebunden und zeigt sich weniger in großen Gesten oder öffentlichen Bekundungen als im beständigen, verlässlichen Handeln. Er begleitet sie gleichermaßen im Dienst wie im privaten Tun und ist Teil ihres Lebens, ohne je aufdringlich oder demonstrativ zu wirken.",
+      "Besondere Verehrung gilt dem Knecht, dem Gott der Arbeit, der Aufrichtigkeit und des Fleißes. Seine Werte spiegeln sich im täglichen Wirken des Hauses wider: im pflichtbewussten Dienst, im stillen Durchhalten und in der tief verankerten Überzeugung, dass jede Aufgabe – so klein sie auch sein mag – mit Ernst, Sorgfalt und Respekt zu erfüllen ist. Für die Cludwyr ist Frömmigkeit kein Wort, sondern eine Tat, sichtbar in dem, was sie tun, nicht in dem, was sie sagen."
+    ],
+    "conflictsAlliances": [
+      "Die Cludwyr pflegen eine enge Freundschaft mit dem Haus Rhyddid, nicht zuletzt, da beide Häuser unter demselben Lehensherrn, dem Hause Wyrm, dienen. Ihre Loyalität gegenüber den Wyrm ist dabei unerschütterlich und tief verwurzelt. Für die Cludwyr ist der Dienst an ihrem Lehnsherrn keine politische Notwendigkeit, sondern eine Selbstverständlichkeit, gewachsen aus Vertrauen, Pflichtgefühl und jahrzehntelanger gemeinsamer Geschichte.",
+      "Grundsätzlich verstehen sich die Cludwyr gut mit nahezu allen Häusern der Grafschaft. Besonders eng ist ihr Verhältnis jedoch zur allgemeinen Bevölkerung, deren Sorgen, Alltag und Bedürfnisse sie gut kennen. Diese Nähe verschafft ihnen breite Unterstützung und ein hohes Maß an Vertrauen in den Dörfern und Ortschaften ihres Wirkens.",
+      "Man sagt, es sei schwer, mit den Cludwyr ernsthaft anzuecken – solange man den allgemeinen Frieden wahrt. Wer jedoch Streit sät, Unruhe stiftet oder die Gemeinschaft gefährdet, lernt schnell eine ungewohnt strenge Seite des Hauses kennen. Ebenso reagieren die Cludwyr äußerst empfindlich auf Verschwendung, insbesondere von Lebensmitteln. In solchen Fällen kann ihre sonst so ruhige Art überraschend schroff werden, denn Verschwendung gilt ihnen nicht nur als Unachtsamkeit, sondern als moralisches Versagen.",
+      "Andere Ritterhäuser betrachten die Cludwyr im Allgemeinen als „gute Leute“: ehrlich, verlässlich und angenehm im Umgang. Mitunter gelten sie jedoch auch als leicht nervig – vor allem dann, wenn sie in ernsten oder komplexen Situationen mit einer ihrer allgegenwärtigen Bauernweisheiten aufwarten. Doch selbst dann muss man ihnen eingestehen, dass diese Weisheiten häufiger recht behalten, als man zunächst zugeben möchte."
+    ],
+    "values": [
+      "Das Haus Cludwyr lebt nach einfachen, aber tief verankerten Werten, die weniger aus Büchern als aus Erfahrung, Arbeit und dem täglichen Leben erwachsen sind. Ihre Tugenden sind nicht erlernt, um zu glänzen, sondern um zu bestehen.",
+      "Pflicht und Verlässlichkeit An erster Stelle steht für die Cludwyr die Erfüllung ihrer Aufgabe. Ein gegebenes Wort gilt, ein Auftrag wird ausgeführt. Sie streben nicht nach Ruhm oder Anerkennung, sondern danach, dass man sich auf sie verlassen kann – heute, morgen und auch dann, wenn niemand hinsieht.",
+      "Volksnähe und Verantwortung Die Cludwyr sehen sich nicht über der Bevölkerung, sondern als Teil von ihr. Sie kennen die Sorgen der Bauern, Handwerker und Tagelöhner aus eigener Erfahrung und fühlen sich für deren Wohlergehen verantwortlich. Herrschaft bedeutet für sie nicht Abstand, sondern Nähe und Fürsorge.",
+      "Arbeit als Würde Arbeit ist für die Cludwyr kein Makel, sondern Ausdruck von Anstand und Charakter. Jede ehrliche Tätigkeit verdient Respekt, gleich wie schlicht sie erscheinen mag. Verschwendung, Müßiggang und Hochmut gelten ihnen als Zeichen schlechter Führung.",
+      "Frieden und Ordnung Die Cludwyr schätzen Ruhe, Ausgleich und ein geordnetes Miteinander. Streit wird vermieden, wo er vermieden werden kann – doch wer den Frieden mutwillig stört, begegnet ihrem entschlossenen Widerstand. Ordnung ist für sie die Grundlage eines funktionierenden Gemeinwesens.",
+      "Bescheidenheit und Maß Reichtum, Einfluss oder Titel werden von den Cludwyr weder gesucht noch zur Schau gestellt. Sie glauben daran, dass Maßhalten, Demut und ein klarer Blick für das Notwendige ein Haus länger tragen als Ehrgeiz oder Prunk.",
+      "Überlieferte Weisheit Die alten Bauernregeln und Lebensweisheiten ihres Gründers sind kein Aberglaube, sondern gesammelte Erfahrung. Die Cludwyr hören zu, beobachten und ziehen ihre Schlüsse ruhig – oft langsamer als andere, dafür selten falsch."
+    ],
+    "court": "Überlieferte Personen und Aufgaben. Nicht belegte Angaben bleiben offen.",
+    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
+    "historicalFigures": "Folgt …"
+  },
+  "images": {
+    "crest": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-cludwyr.png",
+    "scene": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
+    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png",
+    "sceneAlt": "Hausmotiv · Haus Cludwyr"
+  },
+  "cadets": [],
+  "founder": {
+    "id": "saith-cludwyr",
+    "familyId": "haus-cludwyr",
+    "name": "Saith Cludwyr",
+    "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/saith-cludwyr.jpg",
+    "silhouette": "male",
+    "detail": ""
+  },
+  "heads": [
+    {
+      "id": "saith-cludwyr",
+      "familyId": "haus-cludwyr",
+      "name": "Saith Cludwyr",
+      "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/saith-cludwyr.jpg",
+      "silhouette": "male",
+      "detail": ""
+    },
+    {
+      "id": "godwyn-cludwyr",
+      "familyId": "haus-cludwyr",
+      "name": "Godwyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/godwyn-cludwyr.jpg",
+      "silhouette": "male",
+      "detail": "Amtszeit: …–1720"
+    },
+    {
+      "id": "rhain-cludwyr",
+      "familyId": "haus-cludwyr",
+      "name": "Rhain",
+      "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/rhain-cludwyr.jpg",
+      "silhouette": "male",
+      "detail": "Amtszeit: 1720–…"
+    }
+  ],
+  "heirs": [
+    {
+      "id": "slevin-cludwyr",
+      "familyId": "haus-cludwyr",
+      "name": "Slevin",
+      "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/slevin-cludwyr.jpg",
+      "silhouette": "male",
+      "detail": ""
+    },
+    {
+      "id": "aled-cludwyr",
+      "familyId": "haus-cludwyr",
+      "name": "Aled",
+      "image": "../Stammbäume/assets/images/portraits/haus-cludwyr/aled-cludwyr.jpg",
+      "silhouette": "male",
+      "detail": ""
+    }
+  ],
+  "offices": [],
+  "figuresTitle": "Persönlichkeiten des Hauses",
+  "figures": [],
+  "trivia": [
+    "Folgt …"
+  ],
+  "currentHead": "Rhain",
+  "firstHeir": "Slevin",
+  "scenes": [],
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+};

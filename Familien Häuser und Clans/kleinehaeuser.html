@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kleinehäuser-Vorlage - Aleria</title>
   <link rel="stylesheet" href="../Orte/assets/css/orte-grossstadt.css?v=haeuser-orte-basis-20260705a">
-  <link rel="stylesheet" href="assets/css/haeuser.css?v=kleinehaeuser-vorlage-20260706a">
-  <script src="haeuser.registry.js?v=kleinehaeuser-vorlage-20260706a"></script>
+  <link rel="stylesheet" href="assets/css/haeuser.css?v=historische-portraits-20260911d">
+  <link rel="stylesheet" href="modules/court/house-court.css?v=hausseiten-20260911c">
+  <link rel="stylesheet" href="assets/css/haeuser-responsive.css?v=ritterhaeuser-20260911f">
+  <script src="haeuser.registry.js?v=gwendolyn-20260911h"></script>
   <script src="assets/js/haeuser-loader.js?v=kleinehaeuser-vorlage-20260706a"></script>
-  <script src="assets/js/haeuser-page.js?v=kleinehaeuser-vorlage-20260706a" defer></script>
+  <script type="module" src="assets/js/haeuser-page.js?v=ritterhaeuser-20260911f"></script>
 </head>
 <body>
   <main class="haeuser-page grossstadt-template kleinehaeuser-template" data-haeuser-root data-orte-static-template data-default-id="kleinehaeuser-vorlage">
@@ -237,10 +239,10 @@
 
           <tr>
             <td class="haeuser-section-cell" colspan="10">
-              <h2 id="historische-figuren">11. Historische Figuren</h2>
+              <h2 id="historische-figuren" data-haeuser-figures-heading>11. Historische Figuren</h2>
               <p data-section="historicalFigures">Ahnen, Gruender, Verrater, Heilige, Heerfuehrer, tragische Figuren und andere Personen, die das Haus langfristig gepraegt haben.</p>
               <table class="haeuser-historical-table pt-s-0067" border="5" cellspacing="1" data-orte-table-id="haeuser-historische-figuren">
-                <tbody>
+                <tbody data-haeuser-figures-table-body>
                   <tr><th class="haeuser-table-title" colspan="4">Historische Personen und Figuren des Hauses</th></tr>
                   <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
                   <tr class="sub-header haeuser-history-header">

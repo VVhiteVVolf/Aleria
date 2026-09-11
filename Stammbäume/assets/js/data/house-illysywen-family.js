@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -242,6 +243,7 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Illysywen-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Gwefrydd, Gwyvern und Saethwyr verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die männliche Linie erlosch 1720 mit Hugwan und Sior; die Linie wird nicht über Bastarde oder Töchter fortgeführt.',
     blankFamily: false,
-    sourceRevision: 2
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 3
   }
 });

@@ -6,13 +6,13 @@
 
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
-  const banner = "https://i.imgur.com/E6oTNVH.png";
+  const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
 
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [
       data.family("Wyrm", {
-        familyId: "haus-wyrm",
+        familyId: "haus-wyrm", housePage: "haus.html",
         imageSrc: `${houseRoot}/haus-wyrm.png`,
         seat: "Gwynthor",
         liege: "Draig",
@@ -21,19 +21,19 @@
     ]),
     data.familySection("Ritterhäuser", [
       data.family("Rhyddid", {
-        familyId: "haus-rhyddid",
+        familyId: "haus-rhyddid", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-rhyddid.png`,
         seat: "Gwynthor",
         liege: "Wyrm",
       }),
       data.family("Cludwyr", {
-        familyId: "haus-cludwyr",
+        familyId: "haus-cludwyr", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-cludwyr.png`,
         seat: "Gwynthor und Bronhir",
         liege: "Wyrm",
       }),
       data.family("Loer", {
-        familyId: "haus-loer",
+        familyId: "haus-loer", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-loer.png`,
         seat: "Gwynthor und Craithglyn",
         liege: "Wyrm",
@@ -46,7 +46,7 @@
       data.family("Talfryn", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
       data.family("Blevis", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
       data.family("Argall", {
-        familyId: "haus-argall",
+        familyId: "haus-argall", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/Bürgerliche/Llysfaen/Argall.png`,
         seat: "Llysfaen",
         liege: "Wyrm",

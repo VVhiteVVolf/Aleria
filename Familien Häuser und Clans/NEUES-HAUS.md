@@ -1,5 +1,7 @@
 # Neues Haus, neue Familie oder neuer Clan
 
+Für die Übernahme alter Hausvorlagen **einschließlich Stammbaum-Hausbio** gilt der ergänzende Ablauf in [HAUSSEITEN-VORGEHEN.md](HAUSSEITEN-VORGEHEN.md). Beide Projektfassungen werden aus einer gemeinsamen Inhaltsquelle erzeugt; Haus Draig ist die erste vollständige Umsetzung.
+
 Diese Struktur ist für viele spätere Familien gedacht. Neue Häuser sollen nicht als kopierte Komplettseiten entstehen, sondern als eigene Datendateien in einer nachvollziehbaren Welt-Hierarchie.
 
 ## Grundregel

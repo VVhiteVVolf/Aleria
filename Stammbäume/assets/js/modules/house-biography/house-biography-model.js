@@ -59,8 +59,8 @@ export function normalizeHouseBiographyModule(value = {}) {
     stats: normalizeStats(value.stats),
     house: normalizeHouseData(houseSource),
     commentSequence: Array.isArray(value.commentSequence) ? [...value.commentSequence] : [],
-    quote: text(value.quote, '„Ein Leitsatz oder Hauswort dieses Hauses.“'),
-    quoteBy: text(value.quoteBy, '— Hauschronik')
+    quote: String(value.quote ?? '„Ein Leitsatz oder Hauswort dieses Hauses.“').trim(),
+    quoteBy: String(value.quoteBy ?? '— Hauschronik').trim()
   };
 }
 

@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Karten-Vorlage — Aleria</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/karto-map.css?v=llamreis-maps-20260902a">
-<link rel="stylesheet" href="assets/css/pin-editor.css?v=20260901c">
+<link rel="stylesheet" href="assets/css/karto-map.css?v=20260911b">
+<link rel="stylesheet" href="assets/css/pin-card.css?v=20260911b">
+<link rel="stylesheet" href="assets/css/pin-visibility.css?v=20260911b">
+<link rel="stylesheet" href="assets/css/pin-editor.css?v=20260911b">
 <link rel="stylesheet" href="assets/css/media-library.css?v=20260901c">
 
 <script src="assets/js/data/celtigerns-wacht-dominions.js?v=llamreis-maps-20260902a"></script>
@@ -107,7 +109,7 @@
 </script>
 <script>
 if (window.KARTO_BOOT_STATUS === 'active') {
-  document.write('<script src="assets/js/karto-storage.js?v=20260901a"><\/script>');
+  document.write('<script src="assets/js/karto-storage.js?v=20260911a"><\/script>');
 }
 </script>
 </head>
@@ -139,6 +141,14 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   </div>
   <div class="sep"></div>
 
+  <details class="map-view-settings">
+    <summary class="tbtn">⚙ Ansicht</summary>
+    <div class="map-view-settings-panel">
+      <label><input type="checkbox" data-role="show-view-markers"/>Markierungspunkte auch in der Ansicht anzeigen</label>
+      <p>Unsichtbare Punkte bleiben anklickbar. Im Bearbeitungsmodus sind sie immer sichtbar.</p>
+    </div>
+  </details>
+
   <!-- Search -->
   <div id="search-wrap">
     <input id="search-inp" placeholder="🔍 Ort suchen…" data-input-action="search-pins" data-blur-action="hide-search-results" autocomplete="off"/>
@@ -154,6 +164,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <!-- Edit toggle -->
   <button class="tbtn" id="btn-edit" data-action="toggle-edit">🔒 Bearbeiten</button>
   <span id="lock-lbl">gesperrt</span>
+  <button class="tbtn" data-action="load-published-map" title="Veröffentlichte Karte laden; dein Entwurf wird zuvor im Backup-Verlauf gesichert." hidden disabled>↻ Aktuelle Karte laden</button>
 
   <!-- Edit-mode controls -->
   <button class="tbtn" id="btn-add" data-action="start-add-pin" style="display:none">📍 Pin setzen</button>
@@ -193,7 +204,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <div class="sp"></div>
   <div style="display:flex;align-items:center;gap:4px;flex-shrink:0;">
     <div id="sdot"></div>
-    <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.65;letter-spacing:0.05em">LOKAL</span>
+    <span data-role="map-storage-status" style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.65;letter-spacing:0.05em">LOKAL</span>
   </div>
 </div>
 
@@ -549,7 +560,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
     <span id="sb-mode-lbl">Ansicht</span>
     <div class="pin-editor-header-actions" id="sb-header-actions" hidden>
       <span class="pin-editor-status" id="sb-editor-status">Keine offenen Eingaben</span>
-      <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; auf GitHub veröffentlichen</button>
+      <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; veröffentlichen</button>
     </div>
     <button id="sb-close" data-action="close-sidebar">✕</button>
   </div>
@@ -750,9 +761,9 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 </div>
 
 <!-- SCROLL MODAL (Ansichtsmodus) -->
-<div class="mo" id="scroll-mo">
+<div class="mo" id="scroll-mo" role="dialog" aria-modal="true" aria-labelledby="pin-detail-title">
   <div id="scroll-card">
-    <button id="scroll-close" data-action="close-scroll">✕</button>
+    <button id="scroll-close" data-action="close-scroll" aria-label="Ortskarte schließen">✕</button>
     <div id="scroll-content"></div>
     <div id="scroll-actions"></div>
   </div>
@@ -861,11 +872,12 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/data/default-marker-catalog.js"></script>
 <script src="assets/js/pins/pin-placeholder-images.js?v=20260902a"></script>
 <script src="assets/js/media/media-assets.registry.js?v=20260901a"></script>
-<script src="assets/js/karto-app.js?v=llamreis-maps-20260902a"></script>
+<script src="assets/js/pins/pin-card-renderer.js?v=20260911b"></script>
+<script src="assets/js/karto-app.js?v=20260911b"></script>
 <script src="assets/js/media/media-library.js?v=20260901b"></script>
 <script src="assets/js/lsb/lsb-groups.js"></script>
 <script src="assets/js/lsb/lsb-modals.js"></script>
-<script src="assets/js/data/data-manager.js"></script>
+<script src="assets/js/data/data-manager.js?v=20260911a"></script>
 <script src="assets/js/dm/dm-tools.js"></script>
 <script src="assets/js/map/map-panzoom.js"></script>
 <script src="assets/js/map/map-panning.js"></script>
@@ -876,13 +888,15 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/pins/pin-templates.js?v=20260901a"></script>
 <script src="assets/js/pins/stamp-overwrite.js"></script>
 <script src="assets/js/pins/pin-renderer.js"></script>
-<script src="assets/js/pins/pin-detail-view.js?v=20260902a"></script>
+<script src="assets/js/pins/pin-visibility.js?v=20260911b"></script>
+<script src="assets/js/pins/pin-detail-view.js?v=20260911b"></script>
 <script src="assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
-<script src="assets/js/pins/pin-editor.js?v=20260902a"></script>
+<script src="assets/js/pins/pin-editor.js?v=20260911b"></script>
 <script src="assets/js/pins/search.js"></script>
 <script src="assets/js/integrations/orte-poi-bridge.js"></script>
-<script src="assets/js/core/karto-publish-ui.js?v=20260901a"></script>
-<script src="assets/js/core/karto-actions.js?v=20260901a"></script>
+<script src="assets/js/core/karto-publish-ui.js?v=20260911a"></script>
+<script src="assets/js/core/karto-load-published-ui.js?v=20260911a"></script>
+<script src="assets/js/core/karto-actions.js?v=20260911b"></script>
 <script>
 (function(){
   const status = window.KARTO_BOOT_STATUS;

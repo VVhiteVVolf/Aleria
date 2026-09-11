@@ -25,7 +25,10 @@ function parseScriptTableSyllables(value) {
 }
 
 function buildScriptTableStyleOptions(selected) {
-  return `<option value="rheunwaith"${selected === 'rheunwaith' ? ' selected' : ''}>Rheunwaith</option><option value="ogham"${selected === 'ogham' ? ' selected' : ''}>Ogham</option><option value="karnrith"${selected === 'karnrith' ? ' selected' : ''}>Karnrith</option><option value="infernal"${selected === 'infernal' ? ' selected' : ''}>Infernal · Nharazim</option><option value="futhark"${selected === 'futhark' ? ' selected' : ''}>Futhark</option><option value="kanaanith"${selected === 'kanaanith' ? ' selected' : ''}>Kana’anith</option><option value="plain"${selected === 'plain' ? ' selected' : ''}>Normal</option>`;
+  return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'],
+    ['infernal', 'Infernal · Nharazim'], ['futhark', 'Futhark'], ['kanaanith', 'Kana’anith'],
+    ['argenti', 'Lingua Argenti'], ['stoicheia', 'Stoicheia'], ['arcane', 'Arkanes Alphabet · Alte Zunge'], ['plain', 'Normal']]
+    .map(([value, label]) => `<option value="${value}"${selected === value ? ' selected' : ''}>${label}</option>`).join('');
 }
 
 function buildScriptTableModuleEditorFields(page) {

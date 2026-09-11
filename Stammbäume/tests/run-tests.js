@@ -1,3 +1,4 @@
+import { assertHouseBiographyRegistrySource } from './house-biography-registry-assertions.js';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { __testables as githubPublisherTestables } from '../../netlify/functions/family-publisher.mjs';
@@ -7274,8 +7275,8 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
   assert.equal(loaded.source, 'registry-upgrade');
   assert.equal(loaded.family.persons.length, 177);
   assert.equal(loaded.family.view.descendantDepth, 20);
-  assert.equal(loaded.family.extensions.sourceRevision, 7);
-  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 7 });
+  assert.equal(loaded.family.extensions.sourceRevision, 9);
+  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 9 });
   assert.equal(loaded.family.lineage.originHouse.enabled, true);
   assert.equal(
     loaded.family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
@@ -8217,9 +8218,9 @@ test('registriert neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafsc
     assert.ok(emblem.length > 100);
     assert.equal(registryEntries.length, 1);
     assert.equal(registryEntries[0].type, 'commoner');
-    assert.equal(loaded.family, family);
+    assertHouseBiographyRegistrySource(loaded.family, family);
     assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor');
-    assert.match(countyHtml, new RegExp(`family=haus-${slug}&amp;mode=view`));
+    assert.match(countyHtml, new RegExp(`kleinehaeuser\\.html\\?haus=haus-${slug}`));
     assert.match(countyHtml, new RegExp(`>${expectedTitles[index]}<`));
 
     if (placeholderSlugs.has(slug)) {
@@ -8612,7 +8613,7 @@ test('gliedert Haus Argall als kleines Bürgerhaus aus Llysfaen mit Draig-Gegena
     const isPng = image[0] === 0x89 && image[1] === 0x50 && image[2] === 0x4e && image[3] === 0x47;
     assert.ok(isJpeg || isPng, `${personId}: lokale Bilddatei ist weder JPEG noch PNG.`);
   }));
-  assert.match(countyHtml, /family=haus-argall&amp;mode=view/);
+  assert.match(countyHtml, /kleinehaeuser\.html\?haus=haus-argall/);
   assert.match(countyHtml, />Argall</);
 });
 
@@ -8824,8 +8825,10 @@ test('Haus Draenmelyn bleibt kompakt: Taliesin und Myfanwy sind Cousins mit je z
   assert.deepEqual(Object.keys(sourceManifest), [
     'sioned-draenmelyn',
     'taliesin-draenmelyn',
-    'myfanwy-draenmelyn'
+    'myfanwy-draenmelyn',
+    'rhiannon-draenmelyn'
   ]);
+  assert.equal(sourceManifest['rhiannon-draenmelyn'], graph.getPerson('rhiannon-draenmelyn').portrait);
   assert.equal(
     graph.getPerson('sioned-draenmelyn').portrait,
     HOUSE_DRAENMELYN_PORTRAITS['sioned-draenmelyn']
@@ -9814,7 +9817,7 @@ test('ersetzt die Annwyl-Leerakte und migriert Eithne sowie Côr Mynyddfaen ohne
 
   const loaded = loadFamilyById('haus-annwyl', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_ANNWYL_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_ANNWYL_FAMILY);
   assert.equal(loaded.family.persons.length, 20);
   assert.equal(loaded.family.extensions.blankFamily, false);
 
@@ -9849,7 +9852,7 @@ test('ersetzt die Annwyl-Leerakte und migriert Eithne sowie Côr Mynyddfaen ohne
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-annwyl', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 3);
+  assert.equal(upgraded.family.extensions.sourceRevision, 5);
   assert.equal(upgraded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Côr Mynyddfaen');
   assert.equal(upgraded.family.document.houseProfile.seat, 'Côr Mynyddfaen');
   assert.deepEqual(upgraded.family.document.houseProfile.secondarySeats, []);
@@ -10039,7 +10042,7 @@ test('ersetzt die frühere Rhuddgar-Leerakte durch den ausgearbeiteten Register-
 
   const loaded = loadFamilyById('haus-rhuddgar', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_RHUDDGAR_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_RHUDDGAR_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.persons.length, 41);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -10290,7 +10293,7 @@ test('ersetzt die frühere Gwyntog-Leerakte durch den ausgearbeiteten Register-S
 
   const loaded = loadFamilyById('haus-gwyntog', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_GWYNTOG_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_GWYNTOG_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.persons.length, 33);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -10343,7 +10346,7 @@ test('ersetzt die frühere Gwyntog-Leerakte durch den ausgearbeiteten Register-S
     parentage.childId === 'adda-gwyntog'
   ));
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 2);
+  assert.equal(upgraded.family.extensions.sourceRevision, 4);
   assert.deepEqual([...upgradedAddaParentage.parentIds].sort(), [
     'elian-gwyntog',
     'unknown-spouse-elian-gwyntog'
@@ -10568,7 +10571,7 @@ test('ersetzt die frühere Trydar-Leerakte durch den ausgearbeiteten Register-St
 
   const loaded = loadFamilyById('haus-trydar', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_TRYDAR_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_TRYDAR_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.persons.length, 24);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -10619,7 +10622,7 @@ test('ersetzt die frühere Trydar-Leerakte durch den ausgearbeiteten Register-St
 
   const upgraded = loadFamilyById('haus-trydar', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 3);
+  assert.equal(upgraded.family.extensions.sourceRevision, 5);
   assert.equal(upgraded.family.persons.length, 24);
   assert.equal(upgraded.family.cadetBranches.length, 3);
   assert.equal(
@@ -10838,7 +10841,7 @@ test('ersetzt die Taranvyr-Leerakte und migriert Kenyons Gwyvern-Gegenakte ohne 
 
   const loaded = loadFamilyById('haus-taranvyr', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_TARANVYR_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_TARANVYR_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.persons.length, 35);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -10871,7 +10874,7 @@ test('ersetzt die Taranvyr-Leerakte und migriert Kenyons Gwyvern-Gegenakte ohne 
   const upgradedGwyvern = loadFamilyById('haus-gwyvern', gwyvernStorage);
   const upgradedKenyons = upgradedGwyvern.family.persons.filter(person => person.id === 'kenyon-taranvyr');
   assert.equal(upgradedGwyvern.source, 'registry-upgrade');
-  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 4);
+  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 5);
   assert.equal(upgradedKenyons.length, 1);
   assert.equal(upgradedKenyons[0].status, 'alive');
   assert.equal(upgradedKenyons[0].death, '');
@@ -11103,7 +11106,7 @@ test('ersetzt die Selog-Leerakte im Familienregister ohne einen zweiten Stammbau
 
   const loaded = loadFamilyById('haus-selog', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_SELOG_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_SELOG_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.persons.length, 33);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -11332,7 +11335,7 @@ test('ersetzt die Penwyn-Leerakte und aktualisiert Rhoswyns Awenydd-Gegenakte oh
 
   const loaded = loadFamilyById('haus-penwyn', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_PENWYN_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_PENWYN_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Morddyn');
   assert.equal(loaded.family.persons.length, 34);
   assert.equal(loaded.family.extensions.blankFamily, false);
@@ -11366,7 +11369,7 @@ test('ersetzt die Penwyn-Leerakte und aktualisiert Rhoswyns Awenydd-Gegenakte oh
   const upgradedAwenydd = loadFamilyById('haus-awenydd', awenyddStorage);
   const upgradedRhoswyns = upgradedAwenydd.family.persons.filter(person => person.id === 'rhoswyn-penwyn');
   assert.equal(upgradedAwenydd.source, 'registry-upgrade');
-  assert.equal(upgradedAwenydd.family.extensions.sourceRevision, 2);
+  assert.equal(upgradedAwenydd.family.extensions.sourceRevision, 3);
   assert.equal(upgradedRhoswyns.length, 1);
   assert.equal(upgradedRhoswyns[0].birth, '1700');
   assert.equal(upgradedRhoswyns[0].status, 'alive');
@@ -11553,7 +11556,7 @@ test('ersetzt die Seldryn-Leerakte und migriert die korrigierte Balchder-Gegenve
 
   const loaded = loadFamilyById('haus-seldryn', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_SELDRYN_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_SELDRYN_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-seldryn').length, 1);
 
@@ -11602,7 +11605,7 @@ test('ersetzt die Seldryn-Leerakte und migriert die korrigierte Balchder-Gegenve
     branch.id === 'married-away-seldryn-bronwen'
   ));
   assert.equal(upgradedBalchder.source, 'registry-upgrade');
-  assert.equal(upgradedBalchder.family.extensions.sourceRevision, 2);
+  assert.equal(upgradedBalchder.family.extensions.sourceRevision, 3);
   assert.equal(upgradedLugh.portrait, HOUSE_SELDRYN_PORTRAITS['lugh-seldryn']);
   assert.match(upgradedLugh.title, /Gründer.*Seldryn/);
   assert.equal(upgradedMarriage.status, 'ended');
@@ -11784,7 +11787,7 @@ test('ersetzt die Cysgodion-Leerakte im Familienregister ohne eine Doppelakte', 
 
   const loaded = loadFamilyById('haus-cysgodion', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_CYSGODION_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_CYSGODION_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-cysgodion').length, 1);
@@ -12006,7 +12009,7 @@ test('ersetzt die Edmy-Leerakte im Familienregister ohne eine Doppelakte', () =>
 
   const loaded = loadFamilyById('haus-edmy', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_EDMY_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_EDMY_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-edmy').length, 1);
@@ -12192,7 +12195,7 @@ test('ersetzt die Barus-Leerakte im Familienregister ohne eine Doppelakte', () =
 
   const loaded = loadFamilyById('haus-barus', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_BARUS_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_BARUS_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-barus').length, 1);
@@ -12389,7 +12392,7 @@ test('ersetzt die Cenfig-Leerakte im Familienregister ohne eine Doppelakte', () 
 
   const loaded = loadFamilyById('haus-cenfig', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_CENFIG_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_CENFIG_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-cenfig').length, 1);
@@ -12619,7 +12622,7 @@ test('ersetzt die Caerlaen-Leerakte im Familienregister ohne eine Doppelakte', (
 
   const loaded = loadFamilyById('haus-caerlaen', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_CAERLAEN_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_CAERLAEN_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-caerlaen').length, 1);
@@ -12835,7 +12838,7 @@ test('ersetzt die Caerthwyn-Leerakte im Familienregister ohne eine Doppelakte', 
 
   const loaded = loadFamilyById('haus-caerthwyn', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_CAERTHWYN_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_CAERTHWYN_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-caerthwyn').length, 1);
@@ -13053,7 +13056,7 @@ test('ersetzt die Tawelgar-Leerakte und migriert Emlyns Chwedonol-Gegenakte ohne
 
   const loaded = loadFamilyById('haus-tawelgar', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_TAWELGAR_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_TAWELGAR_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-tawelgar').length, 1);
@@ -13090,7 +13093,7 @@ test('ersetzt die Tawelgar-Leerakte und migriert Emlyns Chwedonol-Gegenakte ohne
   const upgradedChwedlonol = loadFamilyById('haus-chwedlonol', chwedlonolStorage);
   const upgradedEmlyn = upgradedChwedlonol.family.persons.find(person => person.id === 'emlyn-tawelgar');
   assert.equal(upgradedChwedlonol.source, 'registry-upgrade');
-  assert.equal(upgradedChwedlonol.family.extensions.sourceRevision, 3);
+  assert.equal(upgradedChwedlonol.family.extensions.sourceRevision, 4);
   assert.equal(upgradedEmlyn.worldPersonId, 'person--haus-tawelgar--emlyn-tawelgar');
   assert.equal(upgradedEmlyn.birth, '1707');
   assert.equal(upgradedEmlyn.portrait, HOUSE_CHWEDLONOL_PORTRAITS['emlyn-tawelgar']);
@@ -13244,7 +13247,7 @@ test('ersetzt die Ymladd-Leerakte im Register ohne eine zweite Familieninsel anz
 
   const loaded = loadFamilyById('haus-ymladd', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_YMLADD_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_YMLADD_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-ymladd').length, 1);
@@ -13436,7 +13439,7 @@ test('ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelg
 
   const loaded = loadFamilyById('haus-daran', storage);
   assert.equal(loaded.source, 'registry');
-  assert.equal(loaded.family, HOUSE_DARAN_FAMILY);
+  assertHouseBiographyRegistrySource(loaded.family, HOUSE_DARAN_FAMILY);
   assert.equal(loaded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Garwfaen');
   assert.equal(loaded.family.extensions.blankFamily, false);
   assert.equal(FAMILY_REGISTRY.filter(entry => entry.id === 'haus-daran').length, 1);
@@ -13480,7 +13483,7 @@ test('ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelg
     parentage.childId === 'morcant-trydar'
   ));
   assert.equal(upgradedDaran.source, 'registry-upgrade');
-  assert.equal(upgradedDaran.family.extensions.sourceRevision, 2);
+  assert.equal(upgradedDaran.family.extensions.sourceRevision, 4);
   assert.equal(upgradedMorcant.title, 'Knappe von Sir Seithved Daran · Mündel bei Haus Daran');
   assert.deepEqual(upgradedMorcantParentage.parentIds, ['seithved-daran']);
 
@@ -13504,7 +13507,7 @@ test('ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelg
 
   const upgradedGwyvern = loadFamilyById('haus-gwyvern', gwyvernStorage);
   assert.equal(upgradedGwyvern.source, 'registry-upgrade');
-  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 4);
+  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 5);
   assert.equal(upgradedGwyvern.family.persons.filter(person => person.id === 'maelgwyn-daran').length, 1);
   assert.equal(upgradedGwyvern.family.parentages.filter(parentage => parentage.childId === 'maelgwyn-daran').length, 1);
   assert.ok(upgradedGwyvern.family.houses.some(house => house.id === 'house-daran'));
@@ -17352,12 +17355,13 @@ test('übernimmt das Häuser-Template des Aleria Almanachs vollständig als Fami
 
 test('speichert Clanbeschreibungen mit Undo und rendert den originalen Häuser-Kopf über der Biographie', () => {
   const store = createFamilyStore(HOUSE_ARWYDD_FAMILY);
+  const previousBiography = getHouseBiographyModule(store.getState().family);
   const module = createHouseBiographyModule(store.getState().family);
   module.house.biographyText = 'Chronik des Hauses Arwydd';
   store.setFamilyExtension(HOUSE_BIOGRAPHY_EXTENSION_ID, module);
   assert.equal(getHouseBiographyModule(store.getState().family).house.biographyText, 'Chronik des Hauses Arwydd');
   assert.equal(store.undo(), true);
-  assert.equal(getHouseBiographyModule(store.getState().family), null);
+  assert.deepEqual(getHouseBiographyModule(store.getState().family), previousBiography);
 
   const html = renderHouseBiography({ family: HOUSE_ARWYDD_FAMILY, biographyModule: module });
   assert.ok(html.indexOf('class="house-header"') < html.indexOf('class="biography-page"'));
@@ -29678,7 +29682,7 @@ test('synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vor
   assert.deepEqual([arthFfionwen.birth, arthFfionwen.death], ['1662', '1733']);
   assert.equal(draigRevelyn.houseId, 'house-penderyn');
   assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 12);
-  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 7);
+  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 9);
 
   [
     ['gwales-illewod', HOUSE_ILLEWOD_PORTRAITS],
@@ -30149,7 +30153,7 @@ test('synchronisiert Dyngwns vorhandene Gegenakten ohne zweite Weltpersonen oder
   assert.equal(HOUSE_PYSGOD_FAMILY.extensions.sourceRevision, 8);
   const dyddi = HOUSE_ARWYDD_FAMILY.persons.find(person => person.id === 'dyddi-dyngwn');
   assert.equal(dyddi.sex, 'female');
-  assert.equal(HOUSE_ARWYDD_FAMILY.extensions.sourceRevision, 2);
+  assert.equal(HOUSE_ARWYDD_FAMILY.extensions.sourceRevision, 3);
 });
 
 test('registriert die ausgearbeitete Dyngwn-Akte genau einmal als Ritterfürstenhaus in Mathragon', () => {
@@ -32569,7 +32573,7 @@ test('bildet Bleiddorn als exakt abgegrenzte Wolfshorn-Auswanderungslinie ab', (
 
   const registered = FAMILY_REGISTRY.filter(record => record.id === 'haus-bleiddorn');
   assert.equal(registered.length, 1);
-  assert.equal(registered[0].family, HOUSE_BLEIDDORN_FAMILY);
+  assertHouseBiographyRegistrySource(registered[0].family, HOUSE_BLEIDDORN_FAMILY);
   assert.deepEqual(registered[0].folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
 });
 
@@ -32718,7 +32722,7 @@ test('bildet Haus Dubhan als exakt vierköpfige Auswanderungslinie der Sept ab',
   const registered = FAMILY_REGISTRY.filter(record => record.id === 'haus-dubhan-gwynthor');
   assert.equal(registered.length, 1);
   assert.equal(registered[0].title, 'Haus Dubhan');
-  assert.equal(registered[0].family, HOUSE_DUBHAN_GWYNTHOR_FAMILY);
+  assertHouseBiographyRegistrySource(registered[0].family, HOUSE_DUBHAN_GWYNTHOR_FAMILY);
   assert.deepEqual(registered[0].folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
 });
 
@@ -33010,7 +33014,7 @@ test('registriert von Hochreuth als Ritterherrenhaus unter Goldmund und zeigt da
   assert.equal(profile.liegeHouseName, 'Haus Roden');
   assert.equal(profile.regionEmblems.kingdom, GOLDMUND_REGION_EMBLEMS.goldmund);
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, HOUSE_HOCHREUTH_FAMILY);
+  assertHouseBiographyRegistrySource(records[0].family, HOUSE_HOCHREUTH_FAMILY);
   assert.equal(records[0].type, 'lower-nobility');
   assert.deepEqual(records[0].folderPath, ['Goldmund', 'Unsortierte Häuser']);
 
@@ -33642,7 +33646,7 @@ test("verknüpft Cymrath O'Traethlan wechselseitig mit der Falveri-Akte und regi
   assert.equal(sourceBranch.targetFamilyId, 'haus-cymrath-o-traethlan');
   assert.equal(sourceBranch.linkType, 'migration-offshoot');
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, HOUSE_CYMRATH_O_TRAETHLAN_FAMILY);
+  assertHouseBiographyRegistrySource(records[0].family, HOUSE_CYMRATH_O_TRAETHLAN_FAMILY);
   assert.equal(records[0].type, 'lower-nobility');
   assert.deepEqual(records[0].folderPath, [
     'Cenyr',

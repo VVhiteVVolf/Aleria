@@ -327,6 +327,11 @@ window.KartoRuntime = {
   formatText: fmtText,
   save: saveD,
   flushSave: persistDraftNow,
+  hasPendingSave: () => saveTimer !== null,
+  cancelPendingSave(){
+    clearTimeout(saveTimer);
+    saveTimer = null;
+  },
   toast,
   pushUndo,
   closeModal: closeLMo,
@@ -498,7 +503,7 @@ function applyState(remote){
   if(Array.isArray(remote.extraLayers)) S.extraLayers=cleanExtraLayers(remote.extraLayers);
   if(Array.isArray(remote.dominions)) S.dominions=cleanDominions(remote.dominions);
   if(remote.dm)         {S.dm=remote.dm;S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};}
-  if(remote.markerCatalog?.length) S.markerCatalog=remote.markerCatalog;
+  if(Array.isArray(remote.markerCatalog)) S.markerCatalog=remote.markerCatalog;
   applyMapImages();
   applyExtraLayerImages();
   renderLayerButtons();
@@ -506,6 +511,7 @@ function applyState(remote){
   applyRegionMeta();
   renderPins();
   renderCatBar();
+  if(remote.lsb) S.lsb=remote.lsb;
   lsbLoad(remote);
   window.KartoDmTools?.load();
   window.resetLayers?.();
@@ -961,8 +967,8 @@ mapWrap.addEventListener('touchend',()=>window.KartoPanning.stop(),{passive:true
 const EDITOR_SPLIT_KEY='karto-editor-split-width';
 
 function clampEditorWidth(value){
-  const max=Math.max(520,window.innerWidth-460);
-  return Math.max(460,Math.min(max,Number(value)||660));
+  const max=Math.max(380,window.innerWidth-430);
+  return Math.max(380,Math.min(max,Number(value)||520));
 }
 
 function applyEditorSplitWidth(value){
@@ -972,7 +978,7 @@ function applyEditorSplitWidth(value){
 }
 
 function restoreEditorSplitWidth(){
-  applyEditorSplitWidth(localStorage.getItem(EDITOR_SPLIT_KEY)||660);
+  applyEditorSplitWidth(localStorage.getItem(EDITOR_SPLIT_KEY)||520);
 }
 
 function startEditorResize(event){
@@ -1008,7 +1014,7 @@ function resetSidebarFrame(){
       <span id="sb-mode-lbl">Ansicht</span>
       <div class="pin-editor-header-actions" id="sb-header-actions" hidden>
         <span class="pin-editor-status" id="sb-editor-status">Keine offenen Eingaben</span>
-        <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; auf GitHub veröffentlichen</button>
+        <button class="pin-editor-publish" id="sb-publish" data-action="save-and-publish-pin">Übernehmen &amp; veröffentlichen</button>
       </div>
       <button id="sb-close" data-action="close-sidebar">x</button>
     </div>
@@ -1051,78 +1057,7 @@ function renderEditorPreview(pinOverride){
   const id=sidebar.dataset.editorId;
   const pin=pinOverride || S.pins.find(item=>item.id===id);
   if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
-  const category=catOf(pin);
-  const affiliations=[];
-  const dominion=dominionOf(pin);
-  if(dominion) affiliations.push({label:dominion.type || 'Herrschaft', value:dominionChain(dominion).map(x=>x.name).join(' → ')});
-  if(pin.region) affiliations.push({label:'Region', value:pin.region});
-  if(pin.house) affiliations.push({label:'Herrschaft/Haus', value:pin.house});
-  if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
-  const rgb=hexToRgb(category.color||'#8a6510');
-  const rows=(pin.table||[]).filter(row=>row.k||row.v);
-  const previewImage=window.KartoPinPlaceholders?.resolve(pin) || {
-    src:pin.img||'',
-    link:pin.imgLink||'',
-  };
-  content.innerHTML=`
-    <div class="editor-preview-card">
-      <div class="sv-header">
-        <div class="sv-crest-wrap">
-          <div class="sv-crest">
-            ${pin.crest
-              ? mediaLink(`<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`, pin.crestLink)
-              : `<span style="opacity:.3;font-size:2rem">🏰</span>`}
-          </div>
-        </div>
-        ${category.marker ? `<div class="sv-marker-icon" title="${esc(category.label)}"><img src="${esc(category.marker)}" onerror="this.style.display='none'"/></div>` : ''}
-        <div class="sv-header-col">
-          <div class="sv-title">${esc(pin.title||'Unbekannter Ort')}</div>
-          <div class="sv-subtitle-row">
-            <span class="sv-cat-badge" style="color:${category.color};border-color:${category.color}88;background:rgba(${rgb.r},${rgb.g},${rgb.b},.15);">
-              ${pin.pinMarker
-                ? `<img src="${esc(pin.pinMarker)}" style="width:14px;height:17px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'"/>`
-                : `<span style="width:7px;height:7px;border-radius:50%;background:${category.color};display:inline-block;flex-shrink:0;"></span>`}
-              ${esc(category.label)}
-            </span>
-            ${pin.secret ? `<span class="sv-secret-badge">Geheim</span>` : ''}
-          </div>
-          ${affiliations.length ? `<div class="sv-affils">
-            ${affiliations.map(item=>`<span class="sv-affil"><span class="sv-affil-lbl">${esc(item.label)}</span> ${esc(item.value)}</span>`).join('')}
-          </div>` : ''}
-        </div>
-        ${pin.banner ? `<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/>`, pin.bannerLink)}</div>` : ''}
-      </div>
-
-      ${(previewImage.src||rows.length) ? `
-      <div class="sv-body">
-        <div class="sv-img-wrap">
-          <div class="sv-img">
-            ${previewImage.src
-              ? mediaLink(`<img src="${esc(previewImage.src)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-                 <div class="sv-img-ph" style="display:none">Bild</div>`, previewImage.link)
-              : `<div class="sv-img-ph">Bild</div>`}
-          </div>
-        </div>
-        <div class="sv-col">
-          ${rows.length ? `<table class="sv-table">${rows.map(row=>`<tr><td>${esc(row.k)}</td><td>${esc(row.v)}</td></tr>`).join('')}</table>` : ''}
-        </div>
-      </div>` : ''}
-
-      ${pin.text ? `<div class="sv-lore"><div class="sv-text">${fmtText(pin.text)}</div></div>` : ''}
-    </div>`;
-}
-
-function hexToRgb(hex){
-  const clean=(hex||'#8a6510').replace('#','');
-  const normalized=clean.length===3?clean.split('').map(char=>char+char).join(''):clean.padEnd(6,'0').slice(0,6);
-  const r=parseInt(normalized.slice(0,2),16);
-  const g=parseInt(normalized.slice(2,4),16);
-  const b=parseInt(normalized.slice(4,6),16);
-  return {
-    r:Number.isNaN(r)?138:r,
-    g:Number.isNaN(g)?101:g,
-    b:Number.isNaN(b)?16:b,
-  };
+  content.innerHTML = `<div class="editor-preview-card">${window.KartoPinCard.render(pin, { titleId: 'pin-preview-title' })}</div>`;
 }
 
 function openSidebar(id, mode){

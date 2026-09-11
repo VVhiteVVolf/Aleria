@@ -1,16 +1,16 @@
-import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js';
+import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=hausbio-20260911b';
 import { HOUSE_GARRAEL_FAMILY } from './house-garrael-family.js';
 import { HOUSE_GWYLLACH_FAMILY } from './house-gwyllach-family.js';
 import { HOUSE_SGRECHIWR_FAMILY } from './house-sgrechiwr-family.js';
-import { HOUSE_GWEFRYDD_FAMILY } from './house-gwefrydd-family.js';
-import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js';
-import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js';
-import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js';
+import { HOUSE_GWEFRYDD_FAMILY } from './house-gwefrydd-family.js?v=hausbio-20260911c';
+import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js?v=hausbio-20260911c';
+import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js?v=hausbio-20260911c';
+import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js?v=hausbio-20260911c';
 import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
-import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
-import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
-import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js';
+import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js?v=hausbio-20260911c';
+import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=hausbio-20260911c';
+import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js?v=hausbio-20260911c';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
 import { HOUSE_DUBHAN_GWYNTHOR_FAMILY } from './house-dubhan-gwynthor-family.js';
 import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
@@ -61,6 +61,8 @@ import {
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=gwendolyn-20260911h';
+import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
 
@@ -96,6 +98,7 @@ function additionalPlacementsFor(family) {
 }
 
 function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' }) {
+  family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family);
   return Object.freeze({

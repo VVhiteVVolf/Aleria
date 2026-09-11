@@ -2185,7 +2185,8 @@ const SECTIONS = [
         ]
       },
       createLinguaArgentiModuleEntry(),
-      createStoicheiaModuleEntry()
+      createStoicheiaModuleEntry(),
+      createArcaneAlphabetModuleEntry()
     ]
   },
   {

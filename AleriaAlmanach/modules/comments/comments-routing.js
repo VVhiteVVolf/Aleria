@@ -39,6 +39,10 @@ function parseCommentThreadLocation(threadId) {
 
 function isCommentlessModulePage(page) {
   return !!(
+    page?.enableComments === false ||
+    page?.languagePage ||
+    page?.nameListPage ||
+    page?.scriptTablePage ||
     page?.castePage ||
     page?.courtPage ||
     page?.bountyFilePage ||
@@ -51,6 +55,22 @@ function isCommentlessModulePage(page) {
     page?.artifactPage ||
     page?.recipePage
   );
+}
+
+// Three states preserve inherited module behavior while allowing a page opt-out.
+function getModulePageCommentMode(page) {
+  return typeof page?.enableComments === 'boolean' ? String(page.enableComments) : 'inherit';
+}
+
+function applyModulePageCommentMode(page, mode) {
+  if (mode === 'true' || mode === 'false') page.enableComments = mode === 'true';
+  else delete page.enableComments;
+}
+
+function buildModulePageCommentModeOptions(page) {
+  const selected = getModulePageCommentMode(page);
+  return [['inherit', 'Modulvorgabe übernehmen'], ['true', 'Kommentare anzeigen'], ['false', 'Keine Kommentare']]
+    .map(([value, label]) => `<option value="${value}"${value === selected ? ' selected' : ''}>${label}</option>`).join('');
 }
 
 function getCommentThreadForPage(page, entry, pageIndex) {

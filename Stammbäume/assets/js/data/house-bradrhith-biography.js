@@ -25,6 +25,13 @@ export const BRADRHITH_HOUSE_BIOGRAPHY = Object.freeze({
   ],
   house: {
     crestImage: BRADRHITH_EMBLEM,
+    documentsTitle: 'Mehr über das Haus',
+    documents: [{
+      icon: BRADRHITH_EMBLEM,
+      title: 'Haus Bradrhith · Hausseite',
+      text: 'Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.',
+      link: '../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bradrhith'
+    }],
     biographyTitle: 'Der Hof der Bradrhith',
     biographyText: 'Die Bradrhith sind eine bürgerliche Pferdezüchterfamilie aus dem Norden des Gwynthorer Bannkreises, nahe der Grenze zu Mwyncreig. Ihr Gestüt geht auf einen Stallmeister im Dienst der Draig zurück und stand über Generationen in deren unmittelbarer Pacht. Auf dem Hof wurden Rösser für Feldarbeit, Alltag und Krieg aufgezogen; Pferdekenntnis, Zucht und Handel prägten den Lebensunterhalt der Familie.',
     historyTitle: 'Ceredigs Familie',

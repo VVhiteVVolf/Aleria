@@ -7,6 +7,12 @@ function boundedScale(value, fallback) {
   return Math.min(1, Math.max(0.25, parsed));
 }
 
+/** A person link changes the initial viewport only, never the family topology. */
+export function resolveFamilyChartEntryFocus(family, entryFocus) {
+  if (!entryFocus?.personId || entryFocus.familyId !== family?.document?.id) return '';
+  return family.persons.some(person => person.id === entryFocus.personId) ? entryFocus.personId : '';
+}
+
 /**
  * Resolves only the initial viewport policy. It never removes people or limits
  * generations: an oversized tree remains complete and can still be fitted via
@@ -14,8 +20,16 @@ function boundedScale(value, fallback) {
  */
 export function resolveFamilyChartInitialViewport({
   chartViewport,
-  fittedScale
+  fittedScale,
+  entryPersonId = ''
 } = {}) {
+  if (entryPersonId) {
+    return Object.freeze({
+      mode: 'focus',
+      scale: boundedScale(chartViewport?.initialScale, 0.55),
+      reason: 'person-link'
+    });
+  }
   if (chartViewport?.initialPosition === 'focus') {
     return Object.freeze({
       mode: 'focus',

@@ -137,7 +137,7 @@
   }
 
   function isGeneratedView(node) {
-    return !!node.closest(".kingdom-county-card-view, .kingdom-family-card-view");
+    return !!node.closest(".kingdom-county-card-view, .kingdom-family-card-view, [data-kontinente-generated-view]");
   }
 
   function sanitizeRepositoryHtml(html) {

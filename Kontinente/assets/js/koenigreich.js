@@ -1,6 +1,19 @@
-﻿(function () {
+﻿(async function () {
+  const housePageBase = new URL('../../../Familien Häuser und Clans/', document.currentScript.src);
   const page = document.querySelector('[data-page-type="kingdom"], [data-page-type="county"]');
   if (!page) return;
+
+  const directoryBase = new URL('../../modules/territory-directory/', document.currentScript.src);
+  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }] = await Promise.all([
+    import(new URL('house-directory.mjs?v=panels-20260911a', directoryBase)),
+    import(new URL('settlement-directory.mjs?v=panels-20260911a', directoryBase)),
+    import(new URL('legacy-council.mjs?v=panels-20260911a', directoryBase)),
+    import(new URL('infobox.mjs?v=panels-20260911a', directoryBase)),
+    import(new URL('modules/house-content/house-ranks.generated.mjs?v=panels-20260911a', housePageBase)),
+    import(new URL('haeuser.registry.js?v=gwendolyn-20260911h', housePageBase)).catch((error) => {
+      console.warn('Hausseitenregister konnte nicht geladen werden; vorhandene Familienlinks bleiben verfügbar.', error);
+    }),
+  ]);
 
   page.querySelectorAll('table').forEach((table) => {
     if (table.parentElement && table.parentElement.classList.contains('kingdom-table-scroll')) return;
@@ -17,12 +30,15 @@
   const countyObservers = new WeakMap();
   const familyCardViews = new WeakMap();
   const familyObservers = new WeakMap();
+  const councilController = createLegacyCouncilController({ cleanText: getCleanText, cloneImage });
   let geographySourceIndex = 0;
   let familySourceIndex = 0;
 
   enhanceCountyGeographyTables();
   enhanceCountyFamilyTables();
   enhanceCountyCouncilPortraits();
+  councilController.refresh(page);
+  enhanceInfoboxes(page);
   window.addEventListener('aleria:kontinente:content-ready', scheduleCountyViewsRefresh);
   window.addEventListener('aleria:kontinente:data-ready', scheduleCountyViewsRefresh);
 
@@ -102,6 +118,8 @@
       enhanceCountyGeographyTables();
       enhanceCountyFamilyTables();
       enhanceCountyCouncilPortraits();
+      councilController.refresh(page);
+      enhanceInfoboxes(page);
     }, 40);
   }
 
@@ -451,7 +469,7 @@
     if (!filledSections.length) return null;
 
     const view = document.createElement('div');
-    view.className = 'kingdom-family-card-view';
+    view.className = 'kingdom-family-card-view territory-directory';
     filledSections.forEach((section) => view.append(renderFamilySection(section)));
     return view;
   }
@@ -463,7 +481,7 @@
 
   function buildConfiguredFamilyView(sections) {
     const view = document.createElement('div');
-    view.className = 'kingdom-family-card-view is-structured-family-view';
+    view.className = 'kingdom-family-card-view territory-directory is-structured-family-view';
 
     sections.forEach((section) => {
       const cards = section.cards.map((card) => ({
@@ -488,74 +506,20 @@
   }
 
   function renderFamilySection(section) {
-    const block = document.createElement('section');
-    block.className = 'kingdom-family-section';
-    if (section.variant) block.dataset.familyVariant = section.variant;
-
-    const title = document.createElement('h3');
-    const titleText = document.createElement('span');
-    titleText.textContent = section.title || 'Adelshäuser';
-    const count = document.createElement('span');
-    count.className = 'kingdom-family-count';
-    count.textContent = String(section.cards.length);
-    count.setAttribute('aria-label', `${section.cards.length} Häuser`);
-    title.append(titleText, count);
-    block.append(title);
-
-    const grid = document.createElement('div');
-    grid.className = 'kingdom-family-grid';
-    const featuredCards = section.cards.filter((card) => card.featured);
-    const regularCards = section.cards.filter((card) => !card.featured);
-
-    if (featuredCards.length) {
-      const featuredGrid = document.createElement('div');
-      featuredGrid.className = 'kingdom-family-featured';
-      featuredCards.forEach((card) => featuredGrid.append(renderFamilyCard(card, true)));
-      block.append(featuredGrid);
-    }
-
-    regularCards.forEach((card) => grid.append(renderFamilyCard(card)));
-    block.append(grid);
-    return block;
+    const cards = section.cards.map(card => ({ ...card, rank: card.rank || HOUSE_RANKS[resolveFamilyId(card)] || '' }));
+    return renderHouseDirectorySection({ ...section, cards }, { resolveHref: resolveFamilyPageHref });
   }
 
-  function renderFamilyCard(card, featured = false) {
-    const element = document.createElement('article');
-    element.className = `kingdom-family-card${featured ? ' is-family-featured' : ''}`;
-    const meta = document.createElement('div');
-    meta.className = 'kingdom-family-meta';
-    if (card.liege) meta.append(renderFamilyMetaItem('Lehenstreue', card.liege));
-    if (card.seat) meta.append(renderFamilyMetaItem('Sitz', card.seat));
-    element.append(meta);
+  function resolveFamilyId(card) {
+    const parameters = card.href ? new URL(card.href, location.href).searchParams : null;
+    return card.id || parameters?.get('family') || parameters?.get('haus');
+  }
 
-    const crest = document.createElement('div');
-    crest.className = 'kingdom-family-crest';
-    const hasRealImage = card.image && !card.image.classList?.contains('kingdom-card-image-placeholder');
-    if (hasRealImage && card.href) {
-      const link = document.createElement('a');
-      link.href = card.href;
-      link.append(card.image);
-      crest.append(link);
-    } else if (hasRealImage) {
-      crest.append(card.image);
-    } else {
-      crest.append(renderFamilyCrestPlaceholder(card.source));
-    }
-    element.append(crest);
-
-    const name = document.createElement('strong');
-    name.className = 'kingdom-family-name';
-    if (card.href) {
-      const link = document.createElement('a');
-      link.className = 'kingdom-family-name-link';
-      link.href = card.href;
-      link.textContent = card.name || 'Unbenanntes Haus';
-      name.append(link);
-    } else {
-      name.textContent = card.name || 'Unbenanntes Haus';
-    }
-    element.append(name);
-    return element;
+  function resolveFamilyPageHref(card) {
+    const house = window.HaeuserRegistry?.byId(resolveFamilyId(card));
+    return house?.status === 'active'
+      ? new URL(window.HaeuserRegistry.linkFor(house.id), housePageBase).href
+      : card.href;
   }
 
   function enhanceCountyCouncilPortraits() {
@@ -612,148 +576,14 @@
     return entry?.[1] || '';
   }
 
-  function renderFamilyCrestPlaceholder(source) {
-    const placeholder = document.createElement('span');
-    placeholder.className = 'kingdom-family-crest-placeholder';
-    placeholder.textContent = '...';
-    return placeholder;
-  }
-
-  function renderFamilyMetaItem(label, value) {
-    const item = document.createElement('span');
-    item.className = `kingdom-family-meta-item kingdom-family-meta-${label === 'Lehenstreue' ? 'liege' : 'seat'}`;
-    item.setAttribute('aria-label', `${label}: ${value}`);
-    item.innerHTML = `<strong>${escapeHtml(value)}</strong>`;
-    return item;
-  }
-
   function renderDomainCard(domain) {
-    const placeCount = domain.places.filter((place) => place.kind !== 'separator').length;
-    const domainHref = getImageHref(domain.crestCell);
-    const centerHref = getPlaceHref(domain.center);
-    const section = document.createElement('section');
-    section.className = `kingdom-domain-card${placeCount === 1 ? ' kingdom-domain-card-compact' : ''}`;
-
-    const header = document.createElement('header');
-    header.className = 'kingdom-domain-header';
-
-    const crest = cloneLinkedImage(domain.crestCell);
-    if (crest) {
-      const crestWrap = document.createElement('div');
-      crestWrap.className = 'kingdom-domain-crest';
-      crestWrap.append(crest);
-      header.append(crestWrap);
-    }
-
-    const titleWrap = document.createElement('div');
-    titleWrap.className = 'kingdom-domain-title';
-    const title = document.createElement('h3');
-    if (domainHref) {
-      const link = document.createElement('a');
-      link.href = domainHref;
-      link.textContent = domain.title || 'Herrschaft';
-      title.append(link);
-    } else {
-      title.textContent = domain.title || 'Herrschaft';
-    }
-    titleWrap.append(title);
-    if (domain.center && domain.places.length) {
-      const center = document.createElement('p');
-      center.append(document.createTextNode('Zentrum: '));
-      const centerValue = document.createElement('strong');
-      centerValue.textContent = domain.center;
-      if (centerHref) {
-        const link = document.createElement('a');
-        link.className = 'kingdom-domain-center-link';
-        link.href = centerHref;
-        link.append(centerValue);
-        center.append(link);
-      } else {
-        center.append(centerValue);
-      }
-      titleWrap.append(center);
-    }
-    header.append(titleWrap);
-    section.append(header);
-
-    if (domain.places.length) {
-      const grid = document.createElement('div');
-      grid.className = 'kingdom-place-grid';
-      domain.places.forEach((place) => grid.append(renderPlaceCard(place)));
-      section.append(grid);
-    } else if (domain.center) {
-      const centerPanel = document.createElement('div');
-      centerPanel.className = 'kingdom-domain-center-panel';
-      if (centerHref) {
-        const link = document.createElement('a');
-        link.className = 'kingdom-place-card-link';
-        link.href = centerHref;
-        link.setAttribute('aria-label', `${domain.center} öffnen`);
-        centerPanel.append(link);
-      }
-      const centerImage = cloneImage(domain.centerCell);
-      centerPanel.classList.toggle('has-center-icon', !!centerImage);
-      if (centerImage) {
-        const imageFrame = document.createElement('span');
-        imageFrame.className = 'kingdom-domain-center-icon';
-        imageFrame.append(centerImage);
-        centerPanel.append(imageFrame);
-      }
-      const label = document.createElement('span');
-      label.className = 'kingdom-domain-center-label';
-      label.textContent = 'Zentrum';
-      const value = document.createElement('strong');
-      value.className = 'kingdom-domain-center-name';
-      value.textContent = domain.center;
-      centerPanel.append(label, value);
-      section.append(centerPanel);
-    }
-
-    return section;
-  }
-
-  function renderPlaceCard(place) {
-    if (place.kind === 'separator') {
-      const separator = document.createElement('div');
-      separator.className = 'kingdom-place-separator';
-      separator.textContent = place.title || 'Abschnitt';
-      return separator;
-    }
-
-    const card = document.createElement('article');
-    card.className = 'kingdom-place-card';
-
-    if (place.href) {
-      const link = document.createElement('a');
-      link.className = 'kingdom-place-card-link';
-      link.href = place.href;
-      link.setAttribute('aria-label', `${place.name || 'Ort'} öffnen`);
-      if (/^https?:\/\//i.test(place.href) && !place.href.startsWith(window.location.origin)) {
-        link.rel = 'noopener noreferrer';
-        link.target = '_blank';
-      }
-      card.classList.add('is-linked');
-      card.append(link);
-    }
-
-    const iconFrame = document.createElement('span');
-    iconFrame.className = 'kingdom-place-icon-frame';
-    if (place.image) {
-      iconFrame.append(place.image);
-    }
-    card.append(iconFrame);
-
-      const type = document.createElement('span');
-      type.className = 'kingdom-place-type';
-      type.textContent = place.type || 'Ort';
-      card.append(type);
-
-    const name = document.createElement('strong');
-      name.className = 'kingdom-place-name';
-      name.textContent = place.name || 'Unbenannter Ort';
-      card.append(name);
-
-    return card;
+    return renderSettlementDomain({
+      ...domain,
+      href: getImageHref(domain.crestCell),
+      crest: cloneLinkedImage(domain.crestCell),
+      centerHref: getPlaceHref(domain.center),
+      centerImage: cloneImage(domain.centerCell),
+    });
   }
 
   function extractPlaceCards(table, typeRow, imageRow, nameRow, groupLabel, rowSource) {

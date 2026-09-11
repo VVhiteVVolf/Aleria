@@ -8,6 +8,11 @@ const COMMENT_LANGUAGE_DEFAULT_COLORS = Object.freeze({
 });
 
 const COMMENT_LANGUAGES = Object.freeze({
+  arcane: {
+    label: 'Arkanes Alphabet · Alte Zunge',
+    cssFamily: 'Aleria Arcana',
+    transliterator: identityCommentLanguageText
+  },
   rheunwaith: {
     label: 'Rheunwaith · Avallornisch',
     cssFamily: 'Rheunwaith',

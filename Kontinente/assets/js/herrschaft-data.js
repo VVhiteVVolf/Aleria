@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  // Familienübersichten einschließlich ausgestorbener Häuser:
+  // siehe Kontinente/HERRSCHAFTSSEITEN-VORGEHEN.md.
+
   const familyTreePage = "/Stammbäume/Stammbaum.html";
 
   function family(name, options = {}) {
@@ -11,11 +14,15 @@
       imageSrc: options.imageSrc || "",
       imageAlt: options.imageAlt || `Wappen Haus ${name}`,
       href: familyId && options.linked !== false
-        ? `${familyTreePage}?family=${encodeURIComponent(familyId)}&mode=view`
+        ? (options.housePage
+          ? `/Familien%20H%C3%A4user%20und%20Clans/${options.housePage}?haus=${encodeURIComponent(familyId)}`
+          : `${familyTreePage}?family=${encodeURIComponent(familyId)}&mode=view`)
         : "",
       seat: options.seat || "",
       liege: options.liege || "",
+      rank: options.rank || "",
       featured: options.featured === true,
+      featuredLabel: options.featuredLabel || "",
     });
   }
 
@@ -56,14 +63,14 @@
 
   function administration() {
     return Object.freeze([
-      Object.freeze({ key: "militaer", name: "Militär", imageSrc: "https://i.imgur.com/F9LJyWL.png" }),
-      Object.freeze({ key: "klerus", name: "Klerus", imageSrc: "https://i.imgur.com/L8uSMda.png" }),
-      Object.freeze({ key: "gerichtsbarkeit", name: "Gerichtsbarkeit", imageSrc: "https://i.imgur.com/kAjtrx1.png" }),
-      Object.freeze({ key: "finanzen", name: "Finanzen", imageSrc: "https://i.imgur.com/Be2sUY9.png" }),
-      Object.freeze({ key: "spionage", name: "Spionage", imageSrc: "https://i.imgur.com/R8uzl5B.png" }),
-      Object.freeze({ key: "diplomatie", name: "Diplomatie", imageSrc: "https://i.imgur.com/VTYpitY.png" }),
-      Object.freeze({ key: "magie", name: "Magie", imageSrc: "https://i.imgur.com/4lCe05E.png" }),
-      Object.freeze({ key: "unterhaltung", name: "Unterhaltung", imageSrc: "https://i.imgur.com/xZDD0aV.png" }),
+      Object.freeze({ key: "militaer", name: "Militär" }),
+      Object.freeze({ key: "klerus", name: "Klerus" }),
+      Object.freeze({ key: "gerichtsbarkeit", name: "Gerichtsbarkeit" }),
+      Object.freeze({ key: "finanzen", name: "Finanzen" }),
+      Object.freeze({ key: "spionage", name: "Spionage" }),
+      Object.freeze({ key: "diplomatie", name: "Diplomatie" }),
+      Object.freeze({ key: "magie", name: "Magie" }),
+      Object.freeze({ key: "unterhaltung", name: "Unterhaltung" }),
     ]);
   }
 

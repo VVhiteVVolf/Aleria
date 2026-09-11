@@ -1,0 +1,252 @@
+@import url('../territory-directory/council.css?v=panels-20260911a');
+
+.administration-dialog {
+  box-sizing: border-box;
+  width: min(1100px, calc(100vw - 2rem));
+  height: min(900px, calc(100dvh - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #c2ac87;
+  border-radius: 6px;
+  color: #30281f;
+  background: #fffbf3;
+  box-shadow: 0 18px 70px #211a1266;
+}
+.administration-dialog *,
+.administration-dialog *::before,
+.administration-dialog *::after { box-sizing: border-box; }
+.administration-dialog::backdrop {
+  background: #211b146b;
+  backdrop-filter: blur(3px);
+}
+.administration-dialog-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+.administration-dialog-header {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 36px;
+  align-items: center;
+  gap: .8rem;
+  padding: .85rem 1.4rem;
+  border-bottom: 1px solid #d9cbb0;
+  background: #f3ead9;
+}
+.administration-dialog-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.administration-dialog-header h2 {
+  margin: .15rem 0 0;
+  color: #493327;
+  font: 700 clamp(1.4rem, 3vw, 1.8rem)/1.2 Georgia, serif;
+}
+.administration-dialog-kicker {
+  display: block;
+  color: #79664f;
+  font: 600 .64rem/1.4 Verdana, sans-serif;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.administration-dialog-close {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #caba9e;
+  border-radius: 50%;
+  color: #69503c;
+  background: #fffbf3;
+  font: 400 1.6rem/1 Georgia, serif;
+  cursor: pointer;
+}
+.administration-dialog-close:hover { background: #eadcc4; }
+.administration-dialog-body {
+  min-width: 0;
+  min-height: 0;
+  padding: 1.15rem 1.4rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b6a17c #f7f0e2;
+  font: .85rem/1.65 Verdana, Arial, sans-serif;
+}
+.administration-dialog-body p { margin: .4rem 0 .75rem; }
+.administration-dialog-body a { color: #794b39; text-underline-offset: 3px; }
+.administration-dialog-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  margin: 0 0 1rem;
+  padding: .45rem .8rem;
+  border: 1px solid #ded2bd;
+  border-radius: 3px;
+  background: #f7f0e2;
+}
+.administration-dialog-facts > div {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: .65rem;
+  padding: .3rem 0;
+  border-bottom: 1px solid #e5dac7;
+}
+.administration-dialog-facts > div:last-child { border-bottom: 0; }
+.administration-dialog-facts dt,
+.administration-dialog-facts dd { margin: 0; overflow-wrap: anywhere; }
+.administration-dialog-facts dt { color: #79664f; font-size: .75rem; }
+.administration-dialog-facts dd { font-size: .8rem; }
+.administration-dialog-facts .is-pending { color: #887963; font-style: italic; }
+.administration-dialog-section { margin-top: 1rem; }
+.administration-dialog-heading {
+  margin: 0 0 .5rem;
+  padding-top: .75rem;
+  border-top: 1px solid #ded2bd;
+  color: #493327;
+  font: 600 1.1rem/1.3 Georgia, serif;
+}
+.administration-dialog-section.is-pending {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .2rem 1rem;
+  margin-top: .4rem;
+  color: #887963;
+  font-size: .78rem;
+}
+.administration-dialog-section.is-pending .administration-dialog-heading {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  color: #79664f;
+  font-size: .95rem;
+}
+.administration-dialog-section.is-pending p { margin: 0; }
+.administration-dialog-details {
+  margin: .8rem 0;
+  border: 1px solid #ded2bd;
+  border-radius: 3px;
+  background: #f7f0e2;
+}
+.administration-dialog-details > summary {
+  padding: .55rem .75rem;
+  color: #69503c;
+  font: 600 .9rem/1.4 Georgia, serif;
+  cursor: pointer;
+}
+.administration-dialog-details > summary::marker { color: #9b7952; font-size: .8em; }
+.administration-dialog-details > summary:hover { background: #f0e5d1; }
+.administration-dialog-details[open] > summary { border-bottom: 1px solid #ded2bd; }
+.administration-dialog-table-scroll {
+  max-width: 100%;
+  margin: .65rem 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.administration-dialog-details > .administration-dialog-table-scroll { margin: 0; }
+.administration-dialog-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffbf3;
+  font-size: .78rem;
+}
+.administration-dialog-table th,
+.administration-dialog-table td {
+  padding: .55rem .7rem;
+  border: 0;
+  border-bottom: 1px solid #e5dac7;
+  text-align: left;
+  vertical-align: top;
+}
+.administration-dialog-table th,
+.administration-dialog-table td[colspan] {
+  background: #f1e7d5;
+  color: #69503c;
+  font-weight: 600;
+}
+.administration-dialog-table tbody tr:nth-child(even) > td:not([colspan]) { background: #f9f4ea; }
+.administration-dialog-table.is-office-table { min-width: 700px; table-layout: fixed; }
+.administration-dialog-table.is-office-table th:nth-child(1) { width: 23%; }
+.administration-dialog-table.is-office-table th:nth-child(2) { width: 30%; }
+.administration-dialog-table.is-office-table th:nth-child(3) { width: 30%; }
+.administration-dialog-table.is-office-table th:nth-child(4) { width: 17%; }
+.administration-dialog-emblem { display: block; width: 80px; height: 80px; object-fit: contain; margin: .4rem auto; }
+.administration-dialog-portrait { display: block; width: 100px; height: 150px; object-fit: contain; margin: .4rem auto; }
+.administration-dialog-landscape { display: block; width: min(100%, 440px); max-height: 280px; object-fit: contain; margin: .4rem auto; }
+
+/* Use the shared council renderer, with compact cards inside the dialog. */
+.administration-hierarchy { margin: .8rem 0 1.2rem; }
+.administration-hierarchy .territory-council { width: 100%; margin: .6rem 0; }
+.administration-hierarchy .herrschaft-person-group { padding: 0; border: 0; background: transparent; }
+.administration-hierarchy .herrschaft-person-group h3 {
+  padding-bottom: .4rem;
+  margin: 0 0 .65rem;
+  color: #69503c;
+  font-size: 1.05rem;
+}
+.administration-hierarchy .herrschaft-person-grid {
+  grid-template-columns: repeat(auto-fit, minmax(175px, 200px));
+  justify-content: center;
+  gap: .5rem;
+}
+.administration-hierarchy .herrschaft-person-card {
+  grid-template-columns: 56px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: .2rem .6rem;
+  padding: .5rem;
+  text-align: left;
+}
+.administration-hierarchy .herrschaft-person-card.is-featured {
+  width: min(100%, 310px);
+  grid-template-columns: 80px minmax(0, 1fr);
+  border-top-width: 2px;
+  background: #f7f0e2;
+}
+.administration-hierarchy .herrschaft-person-office { grid-column: 2; grid-row: 1; align-self: end; min-height: 0; font-size: .7rem; }
+.administration-hierarchy .herrschaft-person-name { grid-column: 2; grid-row: 2; margin: 0; font-size: .98rem; }
+.administration-hierarchy .herrschaft-person-portrait { grid-column: 1; grid-row: 1 / 3; }
+.administration-hierarchy .herrschaft-person-portrait,
+.administration-hierarchy .herrschaft-person-portrait a,
+.administration-hierarchy .herrschaft-person-portrait img { height: 84px; }
+.administration-hierarchy .is-featured .herrschaft-person-portrait,
+.administration-hierarchy .is-featured .herrschaft-person-portrait a,
+.administration-hierarchy .is-featured .herrschaft-person-portrait img { height: 120px; }
+.administration-pending-offices > .territory-council { padding: .65rem; margin: 0; }
+.administration-dialog-status { padding: 2rem 0; color: #887963; text-align: center; }
+.administration-dialog-status.is-error { color: #811d16; }
+.administration-dialog-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  padding-top: .8rem;
+  border-top: 1px solid #ded2bd;
+}
+.administration-dialog-navigation button {
+  padding: .35rem .6rem;
+  border: 1px solid #ded2bd;
+  border-radius: 3px;
+  color: #69503c;
+  background: #f7f0e2;
+  font: 600 .9rem/1.3 Georgia, serif;
+  cursor: pointer;
+}
+.administration-dialog-navigation button:hover { background: #eadcc4; }
+.administration-dialog :is(button, a, summary, [tabindex]):focus-visible { outline: 2px solid #804737; outline-offset: 2px; }
+@media (max-width: 680px) {
+  .administration-dialog { width: calc(100vw - 1rem); height: calc(100dvh - 1rem); max-height: calc(100dvh - 1rem); }
+  .administration-dialog-header { padding: .7rem; gap: .55rem; }
+  .administration-dialog-body { padding: .8rem; }
+  .administration-dialog-facts { grid-template-columns: 1fr; padding: .3rem .6rem; }
+  .administration-hierarchy .herrschaft-person-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .administration-hierarchy .herrschaft-person-card { grid-template-columns: 42px minmax(0, 1fr); gap: .2rem .4rem; padding: .4rem; }
+  .administration-hierarchy .herrschaft-person-portrait,
+  .administration-hierarchy .herrschaft-person-portrait a,
+  .administration-hierarchy .herrschaft-person-portrait img { height: 72px; }
+  .administration-hierarchy .herrschaft-person-name { font-size: .88rem; }
+}

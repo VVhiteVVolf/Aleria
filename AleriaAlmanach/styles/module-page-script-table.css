@@ -190,11 +190,14 @@
 
 .script-table-content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.3rem;
   padding: 1rem clamp(0.55rem, 2vw, 1.6rem) 1.5rem;
 }
 
 .script-table-scroll {
+  box-sizing: border-box;
+  min-width: 0;
   width: 100%;
   overflow-x: auto;
   border: 1px solid var(--script-line);

@@ -83,7 +83,37 @@ Die gemeinsame Technik liegt in:
 - `assets/js/pins/stamp-overwrite.js`
 - `assets/js/pins/search.js`
 
-## Status
+## Aktuelle Karte statt lokalem Entwurf laden
+
+Neben `Bearbeiten` steht `Aktuelle Karte laden`, auch bei gesperrter Karte.
+Der Knopf prüft den veröffentlichten Stand und sichert einen vorhandenen
+Entwurf vollständig unter `DM → Backup-Verlauf` mit dem Namen
+`Vor Laden der aktuellen Karte`. Erst danach wird der aktive Entwurf abgelöst
+und die Seite neu geladen. Offene Bearbeitungen müssen zuvor übernommen oder
+geschlossen werden. Bei einem Lade- oder Sicherungsfehler bleibt der Entwurf erhalten.
+
+Der geladene Stand stammt aus der aktuell bereitgestellten Website. Eine gerade
+auf GitHub gespeicherte Änderung wird nach Abschluss des Netlify-Deploys verfügbar.
+Die Anzeige rechts unterscheidet `ENTWURF` und `VERÖFFENTLICHT`.
+
+## Ortsansicht und Markierungspunkte
+
+Die Ortskarte nutzt bis zu 1180 px Breite. Bild und Infotabelle schließen bündig
+ab; auf schmalen Flächen stehen sie untereinander. Lesemodus und Editorvorschau
+verwenden denselben Renderer (`assets/js/pins/pin-card-renderer.js`) und die
+featurebezogenen Stile in `assets/css/pin-card.css`.
+
+Unter `Medien → Bildausschnitt` lässt sich der obere, mittlere oder untere
+Bildbereich betonen. Die Auswahl wird mit dem Pin gespeichert. Auf dem Handy
+wechselt `Vorschau` zwischen Formular und Vorschau, ohne Eingaben zu verwerfen.
+
+Im Markierungslayer sind Punkte und eigene Markersymbole im Lesemodus zunächst
+unsichtbar, aber weiterhin anklickbar. Im Bearbeitungsmodus sind sie sichtbar.
+Unter `⚙ Ansicht` kann `Markierungspunkte auch in der Ansicht anzeigen` aktiviert
+werden. Diese persönliche Einstellung gilt pro Karte und Browser und verändert
+keinen Kartenentwurf. Geheime Pins bleiben im Lesemodus verborgen.
+
+## Entwicklungsstand
 
 Die Kartenbasis ist modularisiert und bereit als Grundlage fuer weitere Karten.
 

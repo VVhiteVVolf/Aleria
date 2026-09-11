@@ -1,0 +1,12 @@
+languagesystem DFLT dflt; languagesystem latn dflt;
+feature liga {
+sub input02 input07 by rune20;
+sub input15 input07 by rune21;
+sub input16 input07 by rune22;
+sub input07 input09 by rune25;
+sub input06 input07 by rune26;
+sub input11 input06 by rune27;
+sub input03 input23 by rune28;
+sub input16 input15 by rune29;
+sub input00 input04 by rune31;
+} liga;

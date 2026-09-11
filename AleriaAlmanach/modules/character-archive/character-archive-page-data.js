@@ -1079,13 +1079,103 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     ]
   },
   {
+    "id": "limita",
+    "name": "Limita",
+    "baseClass": false,
+    "cultures": [
+      "Venalys"
+    ],
+    "order": 61,
+    "description": "Waffenknecht und einfacher Soldat",
+    "icon": "https://i.imgur.com/XZceDty.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Venalys",
+        "path": "Klassenordner/Venalys/limita/index.html"
+      }
+    ]
+  },
+  {
+    "id": "condottieri",
+    "name": "Condottieri",
+    "baseClass": false,
+    "cultures": [
+      "Venalys"
+    ],
+    "order": 62,
+    "description": "Cavaliere und professioneller Kriegsmann",
+    "icon": "https://i.imgur.com/gKl9fXV.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Venalys",
+        "path": "Klassenordner/Venalys/condottieri/index.html"
+      }
+    ]
+  },
+  {
+    "id": "gondoleri",
+    "name": "Gondoleri",
+    "baseClass": false,
+    "cultures": [
+      "Venalys"
+    ],
+    "order": 63,
+    "description": "Seefahrender Edelmann Venalys'",
+    "icon": "https://i.imgur.com/oSquWWx.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Venalys",
+        "path": "Klassenordner/Venalys/gondoleri/index.html"
+      }
+    ]
+  },
+  {
+    "id": "lancieri",
+    "name": "Lancieri",
+    "baseClass": false,
+    "cultures": [
+      "Venalys"
+    ],
+    "order": 64,
+    "description": "Speerträger zu Fuß oder zu Pferd",
+    "icon": "https://i.imgur.com/Cv8LgL4.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Venalys",
+        "path": "Klassenordner/Venalys/lancieri/index.html"
+      }
+    ]
+  },
+  {
+    "id": "stralieri",
+    "name": "Stralieri",
+    "baseClass": false,
+    "cultures": [
+      "Venalys"
+    ],
+    "order": 65,
+    "description": "Armbrustschütze mit Säbel",
+    "icon": "https://i.imgur.com/AmUesQT.png",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Venalys",
+        "path": "Klassenordner/Venalys/stralieri/index.html"
+      }
+    ]
+  },
+  {
     "id": "gold-aldknecht",
     "name": "Gold & Aldknecht",
     "baseClass": false,
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 61,
+    "order": 66,
     "description": "Gold & Aldknecht",
     "icon": "https://i.imgur.com/WYGSPpU.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1098,7 +1188,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 62,
+    "order": 67,
     "description": "Schockkavallerist Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/rwQoRC2.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1111,7 +1201,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 63,
+    "order": 68,
     "description": "Infanterist Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/HlhliDQ.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1124,7 +1214,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 64,
+    "order": 69,
     "description": "Grenzer Aldingens & Goldmunds",
     "icon": "https://i.imgur.com/yy0BAJB.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1137,7 +1227,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 65,
+    "order": 70,
     "description": "Fechtmeister & Barde",
     "icon": "https://i.imgur.com/d77KKNs.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1150,7 +1240,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 66,
+    "order": 71,
     "description": "Aldinger Schwertmeister",
     "icon": "https://i.imgur.com/4g4xFJZ.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1163,7 +1253,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 67,
+    "order": 72,
     "description": "Havner Aldingens",
     "icon": "https://i.imgur.com/ynFlx0y.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1176,7 +1266,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 68,
+    "order": 73,
     "description": "Goldritter Goldmunds",
     "icon": "https://i.imgur.com/9q7AX4t.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1189,7 +1279,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Goldmund & Aldingen"
     ],
-    "order": 69,
+    "order": 74,
     "description": "Goldener Ritter Goldmunds",
     "icon": "https://i.imgur.com/uB9Aa6L.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1202,7 +1292,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Blutstadt"
     ],
-    "order": 70,
+    "order": 75,
     "description": "Gardist der Blutstadt",
     "icon": "https://i.imgur.com/6vjWPt4.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1215,7 +1305,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Blutstadt"
     ],
-    "order": 71,
+    "order": 76,
     "description": "Ritter der Blutstadt",
     "icon": "https://i.imgur.com/wci55D2.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1228,7 +1318,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 72,
+    "order": 77,
     "description": "Miliz der Schwarzmarschen",
     "icon": "https://i.imgur.com/wgmxBe6.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1241,7 +1331,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 73,
+    "order": 78,
     "description": "Krieger der Schwarzmarschen",
     "icon": "https://i.imgur.com/J2suRuv.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1254,7 +1344,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 74,
+    "order": 79,
     "description": "Grenzer der Schwarzmarschen",
     "icon": "https://i.imgur.com/lLEDXlj.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1267,7 +1357,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 75,
+    "order": 80,
     "description": "Echsenreiter der Schwarzmarschen",
     "icon": "https://i.imgur.com/l4OtuHd.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1280,7 +1370,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 76,
+    "order": 81,
     "description": "Bestientöter der Schwarzmarschen",
     "icon": "https://i.imgur.com/kzb5WTu.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1293,7 +1383,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Móinneach – Die Schwarzmarschen"
     ],
-    "order": 77,
+    "order": 82,
     "description": "Alchemist der Schwarzmarschen",
     "icon": "https://i.imgur.com/m72MzP4.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1306,7 +1396,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 78,
+    "order": 83,
     "description": "Fußvolk & Miliz Weisenfluhs",
     "icon": "https://i.imgur.com/KT4sryu.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1319,7 +1409,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 79,
+    "order": 84,
     "description": "Ritter von Weisenfluh",
     "icon": "https://i.imgur.com/CDzMPrL.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1332,7 +1422,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 80,
+    "order": 85,
     "description": "Berittener Ritter Weisenfluhs",
     "icon": "https://i.imgur.com/ZHX2bny.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1345,7 +1435,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 81,
+    "order": 86,
     "description": "Narr, Ritter & Barde",
     "icon": "https://i.imgur.com/eOKihDK.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1358,7 +1448,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 82,
+    "order": 87,
     "description": "Ritter zur See Weisenfluhs",
     "icon": "https://i.imgur.com/coKMJ4o.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1371,7 +1461,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Weisenfluh"
     ],
-    "order": 83,
+    "order": 88,
     "description": "Ritter Waldläufer & Schütze",
     "icon": "https://i.imgur.com/BXUzhek.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1384,7 +1474,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 84,
+    "order": 89,
     "description": "Miliz Aeldrunmars & Talyndors",
     "icon": "https://i.imgur.com/UFDHJJ1.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1397,7 +1487,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 85,
+    "order": 90,
     "description": "Schwertkämpfer Ritter",
     "icon": "https://i.imgur.com/pdAjG6t.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1410,7 +1500,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 86,
+    "order": 91,
     "description": "Lanzenritter",
     "icon": "https://i.imgur.com/xxhC0DE.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1423,7 +1513,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 87,
+    "order": 92,
     "description": "Berittener Ritter",
     "icon": "https://i.imgur.com/A8dTu8r.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1436,7 +1526,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 88,
+    "order": 93,
     "description": "Waldläufer & Schütze",
     "icon": "https://i.imgur.com/7JXDvLR.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1449,7 +1539,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 89,
+    "order": 94,
     "description": "Ritter zur See Aeldrunmars",
     "icon": "https://i.imgur.com/5263xR7.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1462,7 +1552,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 90,
+    "order": 95,
     "description": "Ritter & Troubadour",
     "icon": "https://i.imgur.com/xBIoUEr.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1475,7 +1565,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 91,
+    "order": 96,
     "description": "Lanzierer Talyndors",
     "icon": "https://i.imgur.com/Z9OH3mu.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
@@ -1488,7 +1578,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "cultures": [
       "Aeldrunmar & Talyndor"
     ],
-    "order": 92,
+    "order": 97,
     "description": "Schwerer Ritter mit Morgenstern",
     "icon": "https://i.imgur.com/XVBDnZP.png",
     "sourcePage": "Klassenordner/Klassenseite.html",

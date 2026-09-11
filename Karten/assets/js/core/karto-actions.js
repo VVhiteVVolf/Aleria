@@ -48,6 +48,7 @@
     'save-pin-editor': () => window.KartoPinEditor?.save(),
     'save-and-publish-pin': () => window.KartoPinEditor?.saveAndPublish(),
     'switch-pin-editor-tab': el => window.KartoPinEditor?.switchTab(el.dataset.editorTab),
+    'toggle-pin-editor-preview': () => window.KartoPinEditor?.togglePreview(),
     'open-pin-media-library': el => window.KartoPinEditor?.openMedia(el.dataset.mediaTarget),
     'clear-pin-media': el => window.KartoPinEditor?.clearMedia(el.dataset.mediaTarget),
     'open-pin-marker-picker': el => window.sbOpenPinMarkerPicker(el.dataset.pinId),

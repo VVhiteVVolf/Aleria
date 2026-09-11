@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "stralieri",
+  "cultureId": "venalys",
+  "name": "Stralieri",
+  "title": "Der Stralieri",
+  "subtitle": "Armbrustschütze und bewaffneter Edelmann",
+  "aliases": ["Straliere", "Armbrustschütze"],
+  "theme": "sand",
+  "icon": "https://i.imgur.com/AmUesQT.png",
+  "illustration": "https://i.imgur.com/AmUesQT.png",
+  "artwork": { "source": "https://i.imgur.com/AmUesQT.png", "width": 1024, "height": 1536, "caption": "Stralieri · Venalys" },
+  "facts": [
+    { "group": "Einordnung", "label": "Kultur", "html": "Venalys" },
+    { "group": "Einordnung", "label": "Laufbahn", "html": "Stralieri · Armbrustschütze" },
+    { "group": "Klassenprofil", "label": "Stand", "html": "Venalischer Edelmann; Cavaliere" },
+    { "group": "Klassenprofil", "label": "Rolle", "html": "Fernkampf und vorbereitete Stellung" },
+    { "group": "Klassenprofil", "label": "Bewaffnung", "html": "Armbrust und Säbel" }
+  ],
+  "sections": [
+    { "id": "einfuehrung", "title": "Einführung", "status": "written", "html": "<p>Der Stralieri ist ein venalischer Edelmann, der die Armbrust als Hauptwaffe und den Säbel als verlässliche Seitenwaffe führt. Er sucht den kontrollierten Schuss aus guter Stellung und bleibt dennoch für den Nahkampf gerüstet.</p><p>Seine Laufbahn verbindet Geduld, Materialpflege und das genaue Lesen eines Zielraums.</p>" },
+    { "id": "geschichte", "title": "Geschichte & Republik", "status": "written", "sharedIntro": "republik", "html": "<p>Die Armbrust passt zu einer Republik, die befestigte Orte, Schiffe, Handelswege und wertvolle Güter schützen muss. Stralieri entwickelten daraus eine anerkannte edle Laufbahn, ohne den Säbel und damit die persönliche Wehrhaftigkeit aufzugeben.</p>" },
+    { "id": "faehigkeiten", "title": "Fähigkeiten", "status": "written", "html": "<p>Stralieri wählen Stellung und Ziel, halten ihre Armbrust einsatzbereit und wechseln unter Druck zur Klinge. Sie achten auf Sicht, Deckung, Nachladezeit und die Sicherheit der eigenen Leute.</p>" },
+    { "id": "staerken-schwaechen", "title": "Stärken & Schwächen", "status": "written", "html": "<h3>Stärken</h3><ul><li>Präziser und wirkungsvoller Fernkampf</li><li>Gute Eignung für Wache, Deck und befestigte Stellung</li><li>Säbel als vollwertige Seitenwaffe</li></ul><h3>Schwächen</h3><ul><li>Nachladen unter unmittelbarem Druck ist schwierig</li><li>Wirkung hängt stark von Stellung und Sicht ab</li><li>Im dauerhaften Nahkampf weniger spezialisiert</li></ul>" },
+    { "id": "kampfkunst", "title": "Kampfstil & Kampfkunst", "status": "written", "sharedIntro": "ausbildung-offen", "html": "<p>Die spätere Kampfkunst soll Armbrustschüsse, vorbereitete Stellungen und den Wechsel zum Säbel verbinden. Fern- und Nahkampftechniken bleiben dabei Teile derselben Laufbahn.</p>" },
+    { "id": "ausstattung", "title": "Ausstattung", "status": "written", "html": "<p>Neben Armbrust und Säbel führt der Stralieri Bolzen, Spannhilfe und Werkzeug zur Pflege der Mechanik. Seine Rüstung muss Schießen und Waffenwechsel erlauben, ohne den Träger bei Wache oder an Bord unnötig zu belasten.</p>" },
+    { "id": "kultureller-status", "title": "Kultureller Status", "status": "written", "sharedIntro": "cavaliere", "html": "<p>Der Stralieri gilt als bewaffneter Edelmann mit einer technischen, disziplinierten Waffenwahl. Seine gesellschaftliche Würde stammt aus Stand und Name, seine militärische Anerkennung aus dem sicheren Umgang mit Armbrust und Säbel.</p>" },
+    { "id": "gefaehrten", "title": "Gefährten", "status": "pending", "html": "" },
+    { "id": "trivia", "title": "Trivia", "status": "pending", "html": "" },
+    { "id": "historische-figuren", "title": "Historische Figuren der Laufbahn", "status": "pending", "html": "" }
+  ],
+  "source": { "kind": "user-provided-lore", "reference": "Venalische Klassen · Stralieri" }
+}

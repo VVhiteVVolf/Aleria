@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -272,6 +273,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwyvern-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Arwydd und Daran verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die in der Grafik angedeutete Verlobung Tegwens wurde auf Anweisung nicht übernommen. Kenyon Taranvyrs unbekanntes Endjahr wurde durch die ausführliche Taranvyr-Gegenakte präzisiert: Er lebt in der Gegenwart und dient als heutiger Waffenmeister des Barons. Maelgwyn Darans historischer Dienst als Page und Knappe Baron Seithveds ist als nichtbiologische Pflegebeziehung registriert und mit seiner Daran-Gegenakte synchronisiert.',
     blankFamily: false,
-    sourceRevision: 4
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 5
   }
 });

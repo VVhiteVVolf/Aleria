@@ -220,7 +220,8 @@ function buildModulePageEditorMarkup(page, index) {
           </div>
         </div>
         <div class="module-editor-inline">
-          <label class="module-editor-check"><input type="checkbox" class="me-page-comments-enabled"${page?.enableComments ? ' checked' : ''}> Kommentarbereich auf dieser Seite anzeigen</label>
+          <label>Kommentarbereich <select class="me-page-comments-enabled">${buildModulePageCommentModeOptions(page)}</select></label>
+          <span class="module-editor-help">Sprach-, Namen- und Zeichenregister bleiben ohne Kommentarbereich.</span>
         </div>
       </div>
 
@@ -436,7 +437,7 @@ function collectModulePageFromCard(card) {
   if (imagePosition !== defaultImagePosition) page.imagePosition = imagePosition;
   if (pageCast.length) page.sessionCast = pageCast;
   if (pageCastDetails.length) page.sessionCastDetails = pageCastDetails;
-  if (card.querySelector('.me-page-comments-enabled')?.checked) page.enableComments = true;
+  applyModulePageCommentMode(page, getFormValue(card, '.me-page-comments-enabled'));
 
   const registeredPage = collectRegisteredModuleEditorPage(card, page, type);
   if (registeredPage) {

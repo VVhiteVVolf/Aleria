@@ -6,13 +6,13 @@
 
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
-  const banner = "https://i.imgur.com/3NC5pb0.png";
+  const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/herrschaftsbanner.png";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
 
   const familySections = Object.freeze([
     data.familySection("Adelshaus", [
       data.family("Gafyr", {
-        familyId: "haus-gafyr",
+        familyId: "haus-gafyr", housePage: "haus.html",
         imageSrc: `${houseRoot}/haus-gafyr.png`,
         seat: "Gwynthor",
         liege: "Draig",
@@ -21,13 +21,13 @@
     ]),
     data.familySection("Ritterhäuser", [
       data.family("Tlawd", {
-        familyId: "haus-tlawd",
+        familyId: "haus-tlawd", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-tlawd.png`,
         seat: "Gwynthor",
         liege: "Gafyr",
       }),
       data.family("Gostyn", {
-        familyId: "haus-gostyn",
+        familyId: "haus-gostyn", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/haus-gostyn.png`,
         seat: "Gwynthor und Bronfelen",
         liege: "Gafyr",

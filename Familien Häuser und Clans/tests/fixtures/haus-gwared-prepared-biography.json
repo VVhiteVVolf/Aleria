@@ -1,0 +1,100 @@
+{
+  "id": "haus-gwared",
+  "sourceRevision": 4,
+  "biography": {
+    "schema": "aleria.house-module",
+    "schemaVersion": 1,
+    "pageTitle": "Haus Gwared",
+    "housePage": true,
+    "image": "",
+    "imageWidth": 30,
+    "imageSquare": true,
+    "description": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds.",
+    "quote": "",
+    "quoteBy": "",
+    "commentSequence": [],
+    "stats": [
+      [
+        "Voller Name",
+        "Haus Gwared"
+      ],
+      [
+        "Rang",
+        "Ritterherr"
+      ],
+      [
+        "Stammsitz",
+        "Castellbryn"
+      ],
+      [
+        "Grafschaft",
+        "Celtigerns Wacht"
+      ],
+      [
+        "Oberhaupt",
+        ""
+      ],
+      [
+        "Erbe",
+        ""
+      ],
+      [
+        "Lehnsherr",
+        "Haus Arwydd"
+      ],
+      [
+        "Ursprung",
+        ""
+      ],
+      [
+        "Schutzpatronin",
+        ""
+      ]
+    ],
+    "house": {
+      "crestImage": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png",
+      "sideWidth": 100,
+      "connectionPortraitHeight": 80,
+      "connectionTextOffset": 0,
+      "biographyTitle": "Über das Haus",
+      "biographyText": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds.",
+      "abilitiesTitle": "Einfluss und Aufgaben",
+      "abilities": [],
+      "historyTitle": "Geschichte",
+      "historyText": "Folgt …",
+      "worksTitle": "Hausgeschichte",
+      "works": [],
+      "extraSections": [
+        {
+          "position": "afterWorks",
+          "mode": "text",
+          "title": "Werte und Stellung",
+          "text": "Folgt …"
+        }
+      ],
+      "triviaTitle": "Besonderheiten",
+      "trivia": [],
+      "quotesTitle": "Hausmotto",
+      "quotes": [],
+      "connectionsTitle": "Verbündete und Kadettenhäuser",
+      "connections": [
+        {
+          "name": "Haus Arwydd",
+          "detail": "Lehnsherr",
+          "image": "../Stammbäume/assets/images/houses/Rhonwens Tränen/haus-arwydd.png",
+          "imageFormat": "square"
+        }
+      ],
+      "documentsTitle": "Mehr über das Haus",
+      "documents": [
+        {
+          "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png",
+          "title": "Haus Gwared · vollständige Hausseite",
+          "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+          "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwared"
+        }
+      ],
+      "footer": ""
+    }
+  }
+}

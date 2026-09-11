@@ -1,3 +1,4 @@
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -337,6 +338,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn ist gemäß Tabellenüberschrift der Sohn Edrics und Luneds; Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet. Die Hebog-Gegenakte ergänzt Iorwerths Verlobung mit Glinda Hebog gegenseitig in beiden Stammbäumen.',
     blankFamily: false,
-    sourceRevision: 4
+    houseBiographyModule: HOUSE_BIOGRAPHY,
+    sourceRevision: 5
   }
 });

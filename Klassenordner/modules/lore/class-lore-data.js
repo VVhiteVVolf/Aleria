@@ -138,6 +138,41 @@ export const CLASS_LORE = {
           { rank: 'Sweyn (Sklaven)', desc: 'Leibsklave' }
         ]
       },
+      morgorn: {
+        name: 'Morgorn',
+        subtitle: 'Hallen, Sippen und Eid',
+        wappen: 'https://i.imgur.com/gXAED3v.png',
+        warriorhood: `Die traditionellen <strong>Kriegerkasten Morgorns</strong> beschreiben Ausbildung, Aufgabe und gesellschaftliche Funktion eines Kriegers. Karnach sichern Berge und Engstellen, Haldr schützen Anvertrautes, Zernach wachen über Tore und Festen, Wairg hüten Herden und Wildnis, Dornach halten die Grenzen, Skarrach führen den schweren Angriff, Rheach dienen der Erdgöttin Rhea und Garnach verbinden Schwarzpulver mit Handwerk und Alchemie.<br><br>
+
+        Eine Kaste bildet keine zweite Adelshierarchie. Ihre Angehörigen können adelig sein, doch ihre Ausbildung und ihr Dienst verleihen allein weder Land noch Rang. Die Würde einer Kaste entsteht aus erfüllter Pflicht, bewahrtem Gut und gehaltenem Eid.`,
+        society: `Morgorn versteht Herrschaft weniger als höfisches Privileg denn als <strong>getragene Verantwortung</strong>. Land, Halle, Sippe und Amt werden einem Menschen anvertraut; für ihren Fortbestand steht er mit seinem Namen ein. Die Sippe bestimmt Herkunft, Bindung und Verpflichtung. Die Halle ist der Ort, an dem diese Gemeinschaft Bestand erhält.<br><br>
+
+        Rang beschreibt deshalb den Kreis der Verantwortung: Reich, Land, Feste, Halle und Sippe. Besitz begründet Pflicht, ein Amt gilt als Last und ein Name gewinnt Gewicht durch die Taten, die unter ihm vollbracht werden. <em>„Ein Wort gilt erst dann, wenn sein Träger es mit Tat, Stein oder Eid beschwert.“</em>`,
+        hierarchy: [
+          { rank: 'Urortharn · Hochkönig Morgorns', desc: 'Oberster Herrscher und höchster Träger der Eide. Sein Name steht für die Ordnung des gesamten Reiches.' },
+          { rank: 'Lannach · Großer Territorialherr', desc: 'Herr weiter Berglande, Täler, Minengebiete und zahlreicher Hallen eines großen Landesverbandes.' },
+          { rank: 'Karnath · Festungsherr', desc: 'Regionaler Hochadel über bedeutende Bergfesten, befestigte Städte, Minenkomplexe oder verbundene Hallen.' },
+          { rank: 'Haldran · Hallen- und Lokalherr', desc: 'Lokaler Adel über einzelne Hallen, kleinere Festungen, Bergsiedlungen oder strategisch wichtige Anlagen.' },
+          { rank: 'Rannach · Sippenherr', desc: 'Herr einer bedeutenden Sippe. Sein Einfluss kann aus Abstammung, Gefolgschaft, Reichtum, Rat oder einem alten Namen erwachsen.' }
+        ]
+      },
+      venalys: {
+        name: 'Venalys',
+        subtitle: 'Die Republik der Patrizier',
+        wappen: 'https://i.imgur.com/IjlPzT5.png',
+        warriorhood: `Venalys kennt keinen feudalen Ritterstand. Der <strong>Cavaliere</strong>, umgangssprachlich auch Kavallier, ist ein Edelmann der Republik und wird mit <strong>Don</strong> statt Sir angesprochen. Diese persönliche Würde bleibt von der militärischen Laufbahn getrennt.<br><br>
+
+        Limita bilden den einfachen Soldatenstand. Condottieri sind professionelle Krieger und Anführer, häufig auch zur See. Gondoleri gelten als bevorzugte Laufbahn seefahrender Edelmänner. Lancieri führen Speer oder Lanze zu Fuß und stellen bei Bedarf die kleine venalische Reiterei. Stralieri verbinden Armbrust und Säbel.`,
+        society: `Fünf <strong>Patrizier-Gründerhäuser</strong> tragen die höchste politische Ordnung der Stadtrepublik. Unter ihnen stehen die Magnarierhäuser, die militärische und administrative Pflichten erfüllen, ohne einem feudalen Ritteradel anzugehören. Darauf folgen Mercantier und Plebejer.<br><br>
+
+        Haus Falveri ist als Magnarierhaus eingeordnet. Aldo Falveri zeigt die Verbindung von Stand und Laufbahn: Er wird als Don und Cavaliere geführt und machte als Condottiere Karriere, ohne dadurch zum Patrizier aufzusteigen.`,
+        hierarchy: [
+          { rank: 'Patrizier', desc: 'Die fünf Gründerhäuser und höchsten politischen Familien der Republik.' },
+          { rank: 'Magnarier', desc: 'Venalische Lehens- und Adelshäuser unter der patrizischen Ordnung; hierzu zählt Haus Falveri.' },
+          { rank: 'Mercantier', desc: 'Handels- und Bürgerhäuser, deren Gewicht auf Vermögen, Schiffen, Werkstätten und wirtschaftlichem Einfluss beruht.' },
+          { rank: 'Plebejer', desc: 'Die übrige Bürgerschaft, die Handwerk, Arbeit, Versorgung und weite Teile des einfachen Militärdienstes trägt.' }
+        ]
+      },
       goldmund: {
         name: 'Goldmund & Aldingen',
         subtitle: 'Die Vereinten Fürstentümer',

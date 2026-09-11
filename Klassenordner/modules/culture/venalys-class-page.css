@@ -1,0 +1,73 @@
+/* Venalys: dunkler Wein, Lagunenblau, Messing und helles Handelspapier. */
+[data-culture="venalys"] {
+  --class-accent: #7b343d;
+  --class-accent-dark: #47242b;
+  --class-deep: #233f43;
+  --class-tint: #d8c79d;
+}
+
+[data-culture="venalys"] .class-book-page { border-top-color: #40676a; }
+[data-culture="venalys"] .class-cover {
+  background:
+    linear-gradient(104deg, rgba(44, 91, 94, .16), transparent 37%),
+    linear-gradient(128deg, #c4a76f, #f0e1bd 60%, #d4c39a);
+  border-bottom: 3px double #80545a;
+}
+[data-culture="venalys"] .class-cover h1,
+[data-culture="venalys"] .class-chapter-heading h2,
+[data-culture="venalys"] .class-facts h2 { color: #593039; }
+[data-culture="venalys"] .class-cover-top { border-bottom-color: #a27b4c; }
+[data-culture="venalys"] .class-emblem {
+  background: linear-gradient(145deg, #efe1bb, #b9b18f);
+  border-color: #45666a;
+  box-shadow: inset 0 0 0 4px rgba(255, 248, 225, .5), 0 7px 18px rgba(43, 44, 37, .2);
+}
+[data-culture="venalys"] .cenyr-cover-path {
+  margin-inline: -2px;
+  padding-inline: 16px;
+  background: linear-gradient(90deg, #29494d, #69323b);
+  color: #f8e9c5;
+}
+[data-culture="venalys"] .cenyr-cover-path a { color: #fff0cd; }
+[data-culture="venalys"] .class-book-mark,
+[data-culture="venalys"] .class-volume-nav a[aria-current="page"] {
+  border-color: #7b4a50;
+  background: #d9c397;
+}
+[data-culture="venalys"] .class-chapter-heading > span {
+  border-color: #8b5960;
+  color: #65343c;
+}
+[data-culture="venalys"] .class-prose h3 { color: #5b3439; }
+[data-culture="venalys"] .class-prose li::marker { color: #8b3d48; }
+[data-culture="venalys"] .class-facts {
+  border-top-color: #526f70;
+  background: linear-gradient(145deg, rgba(215, 195, 151, .76), rgba(248, 237, 210, .9));
+}
+[data-culture="venalys"] .class-portrait-frame {
+  background: #213b3f;
+  border-color: #765158;
+}
+[data-culture="venalys"] .class-pending {
+  border-color: #9a7b54;
+  background: #ead7ad;
+}
+[data-culture="venalys"] .culture-order-overview {
+  --order-line: #a47b52;
+  --order-panel: rgba(250, 239, 213, .74);
+  border-color: #765259;
+  background:
+    linear-gradient(135deg, rgba(48, 95, 98, .1), transparent 40%),
+    #e6d6ae;
+}
+[data-culture="venalys"] .culture-order-overview > header { border-bottom-color: #a17c54; }
+[data-culture="venalys"] .culture-rank-index { background: #29484b; color: #f5dfad; }
+[data-culture="venalys"] .culture-caste-card[aria-current="page"] {
+  border-color: #743741;
+  box-shadow: inset 4px 0 #743741;
+  background: #f3e3bf;
+}
+
+@media (max-width: 760px) {
+  [data-culture="venalys"] .cenyr-cover-path { margin-inline: 0; padding-inline: 12px; }
+}

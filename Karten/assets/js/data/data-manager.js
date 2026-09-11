@@ -66,15 +66,22 @@
     const snap = {
       ts: Date.now(),
       label: label || 'Automatisch',
-      data: JSON.stringify({pins:s.pins, cats:s.cats, regionTitle:s.regionTitle, lsb:s.lsb, dm:s.dm})
+      mapId: window.KARTO_CONFIG?.mapId,
+      data: JSON.stringify(s)
     };
     all.unshift(snap);
     if(all.length > BACKUP_MAX) all.length = BACKUP_MAX;
-    try{ localStorage.setItem(BACKUP_KEY, JSON.stringify(all)); } catch(e){}
+    try{
+      localStorage.setItem(BACKUP_KEY, JSON.stringify(all));
+      return true;
+    } catch(e){ return false; }
   }
 
   function backupSaveNow(){
-    backupSave('Manuell');
+    if(!backupSave('Manuell')){
+      runtime.toast('⚠ Backup konnte nicht gespeichert werden.');
+      return;
+    }
     runtime.toast('💾 Snapshot gespeichert');
     renderBackupList();
   }
@@ -121,21 +128,22 @@
   }
 
   function backupRestore(i){
-    if(!confirm('Aktuellen Stand mit diesem Backup überschreiben? (Ein neues Backup wird vorher erstellt)')) return;
-    backupSave('Vor Wiederherstellung');
     const all = backupGetAll();
     const b = all[i];
     if(!b) return;
+    if(b.mapId && b.mapId !== window.KARTO_CONFIG?.mapId){
+      runtime.toast('⚠ Dieses Backup gehört zu einer anderen Karte. Bitte diese Karte zuerst öffnen.');
+      return;
+    }
+    if(!confirm('Aktuellen Stand mit diesem Backup überschreiben? (Ein neues Backup wird vorher erstellt)')) return;
+    if(!backupSave('Vor Wiederherstellung')){
+      runtime.toast('⚠ Der aktuelle Stand konnte nicht gesichert werden.');
+      return;
+    }
     try{
-      const s = state();
       const d = JSON.parse(b.data);
-      if(d.pins) s.pins = d.pins;
-      if(d.cats) s.cats = d.cats;
-      if(d.regionTitle) s.regionTitle = d.regionTitle;
-      if(d.lsb) s.lsb = d.lsb;
-      if(d.dm) s.dm = d.dm;
+      runtime.applyState(d);
       runtime.save();
-      runtime.applyState(s);
       runtime.closeModal('backup-mo');
       runtime.toast('✓ Backup wiederhergestellt');
     } catch(e){

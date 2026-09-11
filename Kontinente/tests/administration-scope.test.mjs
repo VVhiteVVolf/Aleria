@@ -31,7 +31,7 @@ test("Celtigerns Wacht besetzt Verbindung und Zeichen mit Iestyn und Rhiannon", 
 
   assert.match(portraits[3], /alt="Iestyn Swyll"[^>]+person-iestyn-swyll-r1\.webp/);
   assert.match(officeHolders[3], /Iestyn[\s\S]*Swyll/);
-  assert.match(portraits[4], /alt="Rhiannon Draenmelyn"[^>]+cyJqlDG\.png/);
+  assert.match(portraits[4], /alt="Rhiannon Draenmelyn"[^>]+haus-draenmelyn\/rhiannon-draenmelyn\.png/);
   assert.match(officeHolders[4], /Rhiannon[\s\S]*Draenmelyn/);
   assert.doesNotMatch(officeHolders[3] + officeHolders[4], /\?\?/);
 });

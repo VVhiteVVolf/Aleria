@@ -1,0 +1,26 @@
+/* Opacity preserves the marker's hit area and existing tooltip/click events. */
+#pl:not(.show-view-markers) .pin:not(.edit-mode) { opacity: 0; }
+.map-view-settings { position: relative; }
+.map-view-settings > summary { list-style: none; }
+.map-view-settings > summary::-webkit-details-marker { display: none; }
+.map-view-settings[open] > summary { background: #e5d19a; }
+.map-view-settings-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 450;
+  width: min(300px, calc(100vw - 36px));
+  padding: .9rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--p1);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.map-view-settings-panel label { display: flex; align-items: flex-start; gap: .6rem; font: 1rem/1.35 'EB Garamond', serif; cursor: pointer; }
+.map-view-settings-panel input { margin-top: .25rem; accent-color: #8a641f; }
+.map-view-settings-panel p { margin: .6rem 0 0; font: .9rem/1.35 'EB Garamond', serif; color: var(--ink3); }
+
+@media (max-width: 1100px) {
+  .map-view-settings { position: static; }
+  .map-view-settings-panel { left: 12px; }
+}

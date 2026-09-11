@@ -1,5 +1,5 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
-import { RETIRED_FAMILY_IDS } from './data/families.registry.js';
+import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20260911-gwendolyn-house-bios-h';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
@@ -11,7 +11,7 @@ import { createLatestLocalFamilySource } from './modules/family-sync/latest-loca
 import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js';
 import { reconcileInitialFamilyDraft } from './modules/family-sync/project-origin-reconciliation.js';
 import { applyPublishedFamilyPriority } from './modules/family-sync/published-family-priority.js';
-import { loadFamilyById, normalizeFamilyId } from './services/family-library.js';
+import { loadFamilyById, normalizeFamilyId } from './services/family-library.js?v=20260911-gwendolyn-house-bios-h';
 import { loadPersistedFamily } from './services/family-persistence.js';
 import {
   hasPendingTreeGeneratorLaunch,
@@ -20,7 +20,7 @@ import {
   WORKSPACE_MODE
 } from './services/workspace-access.js';
 import { createFamilyStore } from './state/family-store.js';
-import { createAppController } from './ui/app-controller.js';
+import { createAppController } from './ui/app-controller.js?v=20260911-gwendolyn-house-bios-h';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
 const requestedFamilyId = normalizeFamilyId(requestedQuery.get('family'));
@@ -90,7 +90,8 @@ const controller = createAppController({
   latestLocalFamilySource,
   workspaceMode: workspaceAccess.mode,
   requestEditOnInit: workspaceAccess.shouldRequestPassword,
-  autoOpenTreeGenerator
+  autoOpenTreeGenerator,
+  entryFocus: { familyId: requestedFamilyId, personId: requestedPersonId }
 });
 const syncController = createFamilySyncController({
   store,

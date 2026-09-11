@@ -1,3 +1,6 @@
+import { renderHouseCourt } from '../../modules/court/house-court.js';
+import { renderHouseScenes } from '../../modules/house-content/house-scenes.js';
+
 (function () {
   "use strict";
 
@@ -28,13 +31,26 @@
     if (!data) return;
 
     currentHouseData = data;
+    root.dataset.haeuserLayout = data.layout || 'legacy';
     document.title = data.meta?.title || `${data.name || "Haus"} - Aleria`;
     setText("[data-haeuser-title]", data.name);
     setText("[data-haeuser-type]", data.classification?.houseType || data.meta?.type);
 
     renderProfile(data.profile || {});
+    renderProfileLabels(data.profileLabels || {});
+    if (typeof data.showMotto === 'boolean') {
+      root.querySelectorAll('.haeuser-quote, .haeuser-quote-source').forEach(node => { node.hidden = !data.showMotto; });
+      const quoteSource = root.querySelector('.haeuser-quote-source');
+      if (quoteSource) quoteSource.hidden = !data.showMotto || !data.profile?.quoteAuthor;
+    }
     renderSections(data.sections || {});
+    renderHouseScenes(root, data.scenes);
+    Object.entries(data.sectionTitles || {}).forEach(([key, value]) => {
+      const heading = root.querySelector(`[data-section="${escapeSelector(key)}"]`)?.previousElementSibling;
+      if (heading?.matches('h2')) heading.textContent = value;
+    });
     renderFigures(data.figures || null);
+    renderHouseCourt(root, data.court);
     renderImages(data.images || {});
     scheduleImageRefresh(data.images || {});
     renderContentTargets(data.contentTargets || {});
@@ -57,7 +73,13 @@
   function renderImages(images) {
     Object.entries(images).forEach(([key, image]) => {
       const slot = root.querySelector(`[data-orte-image-key="${escapeSelector(key)}"]`);
-      if (!slot || !image?.src) return;
+      if (!slot || !image) return;
+      if (!image.src && image.emptyLabel) {
+        slot.textContent = image.emptyLabel;
+        slot.classList.add('house-image-pending');
+        return;
+      }
+      if (!image.src) return;
 
       slot.dataset.orteTemplateImageSrc = image.src;
       slot.dataset.orteTemplateImageHref = image.href || "";
@@ -106,10 +128,23 @@
     });
   }
 
+  function renderProfileLabels(labels) {
+    Object.entries(labels).forEach(([key, label]) => {
+      const field = root.querySelector(`.haeuser-info-value[data-profile-field="${escapeSelector(key)}"]`);
+      const target = field?.previousElementSibling;
+      if (target?.matches('.haeuser-info-label')) target.textContent = label;
+    });
+  }
+
   function renderFigures(figures) {
     const entries = Array.isArray(figures?.entries) ? figures.entries : [];
     const target = root.querySelector("[data-haeuser-figures-table-body]");
-    if (!target || !entries.length) return;
+    if (!target || !figures) return;
+    target.closest('table').hidden = !entries.length;
+    if (!entries.length) {
+      target.replaceChildren();
+      return;
+    }
 
     setText("[data-haeuser-figures-heading]", figures.heading || "12. Historische Figuren");
 
@@ -174,7 +209,7 @@
 
   function renderTrivia(items) {
     const target = root.querySelector("[data-haeuser-trivia]");
-    if (!target || !items.length) return;
+    if (!target) return;
     target.innerHTML = items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   }
 

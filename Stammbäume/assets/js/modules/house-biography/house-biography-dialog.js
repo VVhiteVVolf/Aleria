@@ -13,11 +13,11 @@ import {
   HOUSE_BIOGRAPHY_SCHEMA_VERSION,
   normalizeHouseBiographyModule,
   parseHouseBiographyImportPayload
-} from './house-biography-model.js';
+} from './house-biography-model.js?v=20260911-celtigerns-all-house-bios';
 import {
   renderHouseBiography,
   renderHouseBiographyHeader
-} from './house-biography-renderer.js';
+} from './house-biography-renderer.js?v=20260911-celtigerns-all-house-bios';
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));

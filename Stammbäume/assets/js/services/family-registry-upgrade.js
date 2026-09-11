@@ -1,4 +1,5 @@
 import { normalizeFamily } from '../domain/family-schema.js';
+import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=gwendolyn-20260911h';
 
 const ENTITY_COLLECTIONS = Object.freeze([
   'persons',
@@ -226,6 +227,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     },
     extensions: {
       ...mergedExtensions,
+      ...houseBiographyDefaultUpgrade(registered, local),
       ...registryManagedUpgradeMetadata,
       registryTombstones: mergedRegistryTombstones,
       sourceRevision: registeredRevision,
