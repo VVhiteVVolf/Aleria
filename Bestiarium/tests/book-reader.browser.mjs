@@ -168,7 +168,7 @@ try {
   });
   await check('late font loading repaginates the existing source without losing content', async () => {
     await page.evaluate(() => document.querySelector('.book-flip').dataset.testLayoutMarker = 'before-font');
-    await page.addStyleTag({ content: `@font-face { font-family: BookAcceptanceFont; src: url('/Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2'); } .book-prose { font-family: BookAcceptanceFont, Georgia, serif; }` });
+    await page.addStyleTag({ content: `@font-face { font-family: BookAcceptanceFont; src: url('/Fonts/Infernal-Font-1.000/fonts/Nharazim-Regular.woff2?v=2-abgrund'); } .book-prose { font-family: BookAcceptanceFont, Georgia, serif; }` });
     await page.evaluate(() => document.fonts.ready);
     await page.waitForFunction(() => document.querySelector('.book-flip') && !document.querySelector('.book-flip').dataset.testLayoutMarker);
     await ready(page); await contentIntegrity(page);

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Nharazim";
+  src: url("./fonts/Nharazim-Regular.woff2?v=2-abgrund") format("woff2"),
+       url("./fonts/Nharazim-Regular.woff?v=2-abgrund") format("woff"),
+       url("./fonts/Nharazim-Regular.ttf?v=2-abgrund") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.infernales, .infernales-glut, .infernales-vertrag {
+  font-family: "Nharazim", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+  letter-spacing: .025em;
+  line-height: 1.5;
+}
+/* The actual font is monochrome. These optional effects are CSS only. */
+.infernales-glut { color: #731a25; text-shadow: 0 0 .22em #a3423c44; }
+.infernales-vertrag { writing-mode: vertical-rl; text-orientation: upright; }
+@media print { .infernales-glut { text-shadow: none; } }

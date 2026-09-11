@@ -1860,7 +1860,7 @@ const SECTIONS = [
         subtitle: "Die Machtsprache der infernalen Götter und Wesen",
         type: "Sprache · Brand-, Beschwörungs- und Vertragsschrift",
         category: "Sprachen · Infernal",
-        image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Zeichentafel.png",
+        image: "../Fonts/Infernal-Font-1.000/Zeichentafel.png",
         stamp: "INFERNALE SPHÄREN · NHARAZIM · VERBOTENES ARCHIV",
         multipage: true,
         appendCommentsPage: false,
@@ -1869,7 +1869,7 @@ const SECTIONS = [
         symbol: null,
         pages: [
           {
-            image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Render_Test.png",
+            image: "../Fonts/Infernal-Font-1.000/Leseprobe.png",
             imageFit: "contain",
             imagePosition: "center",
             imageWidth: 46,
@@ -1904,13 +1904,13 @@ const SECTIONS = [
               alphabetLayers: [
                 {
                   label: "Zeichentafel",
-                  image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Zeichentafel.png",
+                  image: "../Fonts/Infernal-Font-1.000/Zeichentafel.png",
                   alt: "Vollständige Nharazim-Zeichentafel mit 30 infernalen Sigillen, ihren Namen und Bedeutungen",
                   caption: "Die 26 Grundlaute sowie Ä, Ö, Ü und ß als eigenständige Sigillen verderbter Herkunft, gebrochenen Vertrages, Besessenheit und Meineids."
                 },
                 {
                   label: "Schriftprobe",
-                  image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Render_Test.png",
+                  image: "../Fonts/Infernal-Font-1.000/Leseprobe.png",
                   alt: "Schriftprobe des Nharazim mit Grundsigillen, Sonderzeichen und infernalen Sigillennamen",
                   caption: "Horizontale Brand- und Beschwörungsschrift mit eigener Zeichensetzung; Vertragstexte können zusätzlich senkrecht gesetzt werden."
                 },

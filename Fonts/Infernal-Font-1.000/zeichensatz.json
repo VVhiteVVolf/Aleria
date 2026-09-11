@@ -1,0 +1,2217 @@
+[
+  {
+    "character": " ",
+    "codepoint": "U+0020",
+    "glyph": "space"
+  },
+  {
+    "character": "!",
+    "codepoint": "U+0021",
+    "glyph": "exclamation"
+  },
+  {
+    "character": "\"",
+    "codepoint": "U+0022",
+    "glyph": "quoteDouble"
+  },
+  {
+    "character": "#",
+    "codepoint": "U+0023",
+    "glyph": "hash"
+  },
+  {
+    "character": "$",
+    "codepoint": "U+0024",
+    "glyph": "dollar"
+  },
+  {
+    "character": "%",
+    "codepoint": "U+0025",
+    "glyph": "percent"
+  },
+  {
+    "character": "&",
+    "codepoint": "U+0026",
+    "glyph": "ampersand"
+  },
+  {
+    "character": "'",
+    "codepoint": "U+0027",
+    "glyph": "quoteSingle"
+  },
+  {
+    "character": "(",
+    "codepoint": "U+0028",
+    "glyph": "parenLeft"
+  },
+  {
+    "character": ")",
+    "codepoint": "U+0029",
+    "glyph": "parenRight"
+  },
+  {
+    "character": "*",
+    "codepoint": "U+002A",
+    "glyph": "asterisk"
+  },
+  {
+    "character": "+",
+    "codepoint": "U+002B",
+    "glyph": "plus"
+  },
+  {
+    "character": ",",
+    "codepoint": "U+002C",
+    "glyph": "comma"
+  },
+  {
+    "character": "-",
+    "codepoint": "U+002D",
+    "glyph": "hyphen"
+  },
+  {
+    "character": ".",
+    "codepoint": "U+002E",
+    "glyph": "period"
+  },
+  {
+    "character": "/",
+    "codepoint": "U+002F",
+    "glyph": "slash"
+  },
+  {
+    "character": "0",
+    "codepoint": "U+0030",
+    "glyph": "digit0"
+  },
+  {
+    "character": "1",
+    "codepoint": "U+0031",
+    "glyph": "digit1"
+  },
+  {
+    "character": "2",
+    "codepoint": "U+0032",
+    "glyph": "digit2"
+  },
+  {
+    "character": "3",
+    "codepoint": "U+0033",
+    "glyph": "digit3"
+  },
+  {
+    "character": "4",
+    "codepoint": "U+0034",
+    "glyph": "digit4"
+  },
+  {
+    "character": "5",
+    "codepoint": "U+0035",
+    "glyph": "digit5"
+  },
+  {
+    "character": "6",
+    "codepoint": "U+0036",
+    "glyph": "digit6"
+  },
+  {
+    "character": "7",
+    "codepoint": "U+0037",
+    "glyph": "digit7"
+  },
+  {
+    "character": "8",
+    "codepoint": "U+0038",
+    "glyph": "digit8"
+  },
+  {
+    "character": "9",
+    "codepoint": "U+0039",
+    "glyph": "digit9"
+  },
+  {
+    "character": ":",
+    "codepoint": "U+003A",
+    "glyph": "colon"
+  },
+  {
+    "character": ";",
+    "codepoint": "U+003B",
+    "glyph": "semicolon"
+  },
+  {
+    "character": "<",
+    "codepoint": "U+003C",
+    "glyph": "less"
+  },
+  {
+    "character": "=",
+    "codepoint": "U+003D",
+    "glyph": "equal"
+  },
+  {
+    "character": ">",
+    "codepoint": "U+003E",
+    "glyph": "greater"
+  },
+  {
+    "character": "?",
+    "codepoint": "U+003F",
+    "glyph": "question"
+  },
+  {
+    "character": "@",
+    "codepoint": "U+0040",
+    "glyph": "at"
+  },
+  {
+    "character": "A",
+    "codepoint": "U+0041",
+    "glyph": "rune00"
+  },
+  {
+    "character": "B",
+    "codepoint": "U+0042",
+    "glyph": "rune01"
+  },
+  {
+    "character": "C",
+    "codepoint": "U+0043",
+    "glyph": "rune02"
+  },
+  {
+    "character": "D",
+    "codepoint": "U+0044",
+    "glyph": "rune03"
+  },
+  {
+    "character": "E",
+    "codepoint": "U+0045",
+    "glyph": "rune04"
+  },
+  {
+    "character": "F",
+    "codepoint": "U+0046",
+    "glyph": "rune05"
+  },
+  {
+    "character": "G",
+    "codepoint": "U+0047",
+    "glyph": "rune06"
+  },
+  {
+    "character": "H",
+    "codepoint": "U+0048",
+    "glyph": "rune07"
+  },
+  {
+    "character": "I",
+    "codepoint": "U+0049",
+    "glyph": "rune08"
+  },
+  {
+    "character": "J",
+    "codepoint": "U+004A",
+    "glyph": "rune09"
+  },
+  {
+    "character": "K",
+    "codepoint": "U+004B",
+    "glyph": "rune10"
+  },
+  {
+    "character": "L",
+    "codepoint": "U+004C",
+    "glyph": "rune11"
+  },
+  {
+    "character": "M",
+    "codepoint": "U+004D",
+    "glyph": "rune12"
+  },
+  {
+    "character": "N",
+    "codepoint": "U+004E",
+    "glyph": "rune13"
+  },
+  {
+    "character": "O",
+    "codepoint": "U+004F",
+    "glyph": "rune14"
+  },
+  {
+    "character": "P",
+    "codepoint": "U+0050",
+    "glyph": "rune15"
+  },
+  {
+    "character": "Q",
+    "codepoint": "U+0051",
+    "glyph": "rune16"
+  },
+  {
+    "character": "R",
+    "codepoint": "U+0052",
+    "glyph": "rune17"
+  },
+  {
+    "character": "S",
+    "codepoint": "U+0053",
+    "glyph": "rune18"
+  },
+  {
+    "character": "T",
+    "codepoint": "U+0054",
+    "glyph": "rune19"
+  },
+  {
+    "character": "U",
+    "codepoint": "U+0055",
+    "glyph": "rune20"
+  },
+  {
+    "character": "V",
+    "codepoint": "U+0056",
+    "glyph": "rune21"
+  },
+  {
+    "character": "W",
+    "codepoint": "U+0057",
+    "glyph": "rune22"
+  },
+  {
+    "character": "X",
+    "codepoint": "U+0058",
+    "glyph": "rune23"
+  },
+  {
+    "character": "Y",
+    "codepoint": "U+0059",
+    "glyph": "rune24"
+  },
+  {
+    "character": "Z",
+    "codepoint": "U+005A",
+    "glyph": "rune25"
+  },
+  {
+    "character": "[",
+    "codepoint": "U+005B",
+    "glyph": "bracketLeft"
+  },
+  {
+    "character": "\\",
+    "codepoint": "U+005C",
+    "glyph": "backslash"
+  },
+  {
+    "character": "]",
+    "codepoint": "U+005D",
+    "glyph": "bracketRight"
+  },
+  {
+    "character": "^",
+    "codepoint": "U+005E",
+    "glyph": "circumflex"
+  },
+  {
+    "character": "_",
+    "codepoint": "U+005F",
+    "glyph": "underscore"
+  },
+  {
+    "character": "`",
+    "codepoint": "U+0060",
+    "glyph": "grave"
+  },
+  {
+    "character": "a",
+    "codepoint": "U+0061",
+    "glyph": "rune00"
+  },
+  {
+    "character": "b",
+    "codepoint": "U+0062",
+    "glyph": "rune01"
+  },
+  {
+    "character": "c",
+    "codepoint": "U+0063",
+    "glyph": "rune02"
+  },
+  {
+    "character": "d",
+    "codepoint": "U+0064",
+    "glyph": "rune03"
+  },
+  {
+    "character": "e",
+    "codepoint": "U+0065",
+    "glyph": "rune04"
+  },
+  {
+    "character": "f",
+    "codepoint": "U+0066",
+    "glyph": "rune05"
+  },
+  {
+    "character": "g",
+    "codepoint": "U+0067",
+    "glyph": "rune06"
+  },
+  {
+    "character": "h",
+    "codepoint": "U+0068",
+    "glyph": "rune07"
+  },
+  {
+    "character": "i",
+    "codepoint": "U+0069",
+    "glyph": "rune08"
+  },
+  {
+    "character": "j",
+    "codepoint": "U+006A",
+    "glyph": "rune09"
+  },
+  {
+    "character": "k",
+    "codepoint": "U+006B",
+    "glyph": "rune10"
+  },
+  {
+    "character": "l",
+    "codepoint": "U+006C",
+    "glyph": "rune11"
+  },
+  {
+    "character": "m",
+    "codepoint": "U+006D",
+    "glyph": "rune12"
+  },
+  {
+    "character": "n",
+    "codepoint": "U+006E",
+    "glyph": "rune13"
+  },
+  {
+    "character": "o",
+    "codepoint": "U+006F",
+    "glyph": "rune14"
+  },
+  {
+    "character": "p",
+    "codepoint": "U+0070",
+    "glyph": "rune15"
+  },
+  {
+    "character": "q",
+    "codepoint": "U+0071",
+    "glyph": "rune16"
+  },
+  {
+    "character": "r",
+    "codepoint": "U+0072",
+    "glyph": "rune17"
+  },
+  {
+    "character": "s",
+    "codepoint": "U+0073",
+    "glyph": "rune18"
+  },
+  {
+    "character": "t",
+    "codepoint": "U+0074",
+    "glyph": "rune19"
+  },
+  {
+    "character": "u",
+    "codepoint": "U+0075",
+    "glyph": "rune20"
+  },
+  {
+    "character": "v",
+    "codepoint": "U+0076",
+    "glyph": "rune21"
+  },
+  {
+    "character": "w",
+    "codepoint": "U+0077",
+    "glyph": "rune22"
+  },
+  {
+    "character": "x",
+    "codepoint": "U+0078",
+    "glyph": "rune23"
+  },
+  {
+    "character": "y",
+    "codepoint": "U+0079",
+    "glyph": "rune24"
+  },
+  {
+    "character": "z",
+    "codepoint": "U+007A",
+    "glyph": "rune25"
+  },
+  {
+    "character": "{",
+    "codepoint": "U+007B",
+    "glyph": "braceLeft"
+  },
+  {
+    "character": "|",
+    "codepoint": "U+007C",
+    "glyph": "bar"
+  },
+  {
+    "character": "}",
+    "codepoint": "U+007D",
+    "glyph": "braceRight"
+  },
+  {
+    "character": "~",
+    "codepoint": "U+007E",
+    "glyph": "tilde"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+00A0",
+    "glyph": "space"
+  },
+  {
+    "character": "¡",
+    "codepoint": "U+00A1",
+    "glyph": "exclamationInverted"
+  },
+  {
+    "character": "¢",
+    "codepoint": "U+00A2",
+    "glyph": "cent"
+  },
+  {
+    "character": "£",
+    "codepoint": "U+00A3",
+    "glyph": "pound"
+  },
+  {
+    "character": "¤",
+    "codepoint": "U+00A4",
+    "glyph": "currency"
+  },
+  {
+    "character": "¥",
+    "codepoint": "U+00A5",
+    "glyph": "yen"
+  },
+  {
+    "character": "¦",
+    "codepoint": "U+00A6",
+    "glyph": "brokenbar"
+  },
+  {
+    "character": "§",
+    "codepoint": "U+00A7",
+    "glyph": "section"
+  },
+  {
+    "character": "¨",
+    "codepoint": "U+00A8",
+    "glyph": "dieresis"
+  },
+  {
+    "character": "©",
+    "codepoint": "U+00A9",
+    "glyph": "copyright"
+  },
+  {
+    "character": "ª",
+    "codepoint": "U+00AA",
+    "glyph": "ordinal170"
+  },
+  {
+    "character": "«",
+    "codepoint": "U+00AB",
+    "glyph": "guillemotLeft"
+  },
+  {
+    "character": "¬",
+    "codepoint": "U+00AC",
+    "glyph": "negation"
+  },
+  {
+    "character": "­",
+    "codepoint": "U+00AD",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": "®",
+    "codepoint": "U+00AE",
+    "glyph": "registered"
+  },
+  {
+    "character": "¯",
+    "codepoint": "U+00AF",
+    "glyph": "macron"
+  },
+  {
+    "character": "°",
+    "codepoint": "U+00B0",
+    "glyph": "degree"
+  },
+  {
+    "character": "±",
+    "codepoint": "U+00B1",
+    "glyph": "plusminus"
+  },
+  {
+    "character": "²",
+    "codepoint": "U+00B2",
+    "glyph": "super2"
+  },
+  {
+    "character": "³",
+    "codepoint": "U+00B3",
+    "glyph": "super3"
+  },
+  {
+    "character": "´",
+    "codepoint": "U+00B4",
+    "glyph": "acute"
+  },
+  {
+    "character": "µ",
+    "codepoint": "U+00B5",
+    "glyph": "rune20"
+  },
+  {
+    "character": "¶",
+    "codepoint": "U+00B6",
+    "glyph": "paragraph"
+  },
+  {
+    "character": "·",
+    "codepoint": "U+00B7",
+    "glyph": "middleDot"
+  },
+  {
+    "character": "¸",
+    "codepoint": "U+00B8",
+    "glyph": "cedilla"
+  },
+  {
+    "character": "¹",
+    "codepoint": "U+00B9",
+    "glyph": "super1"
+  },
+  {
+    "character": "º",
+    "codepoint": "U+00BA",
+    "glyph": "ordinal186"
+  },
+  {
+    "character": "»",
+    "codepoint": "U+00BB",
+    "glyph": "guillemotRight"
+  },
+  {
+    "character": "¼",
+    "codepoint": "U+00BC",
+    "glyph": "fraction188"
+  },
+  {
+    "character": "½",
+    "codepoint": "U+00BD",
+    "glyph": "fraction189"
+  },
+  {
+    "character": "¾",
+    "codepoint": "U+00BE",
+    "glyph": "fraction190"
+  },
+  {
+    "character": "¿",
+    "codepoint": "U+00BF",
+    "glyph": "questionInverted"
+  },
+  {
+    "character": "À",
+    "codepoint": "U+00C0",
+    "glyph": "latin00C0"
+  },
+  {
+    "character": "Á",
+    "codepoint": "U+00C1",
+    "glyph": "latin00C1"
+  },
+  {
+    "character": "Â",
+    "codepoint": "U+00C2",
+    "glyph": "latin00C2"
+  },
+  {
+    "character": "Ã",
+    "codepoint": "U+00C3",
+    "glyph": "latin00C3"
+  },
+  {
+    "character": "Ä",
+    "codepoint": "U+00C4",
+    "glyph": "rune26"
+  },
+  {
+    "character": "Å",
+    "codepoint": "U+00C5",
+    "glyph": "latin00C5"
+  },
+  {
+    "character": "Æ",
+    "codepoint": "U+00C6",
+    "glyph": "pair198"
+  },
+  {
+    "character": "Ç",
+    "codepoint": "U+00C7",
+    "glyph": "latin00C7"
+  },
+  {
+    "character": "È",
+    "codepoint": "U+00C8",
+    "glyph": "latin00C8"
+  },
+  {
+    "character": "É",
+    "codepoint": "U+00C9",
+    "glyph": "latin00C9"
+  },
+  {
+    "character": "Ê",
+    "codepoint": "U+00CA",
+    "glyph": "latin00CA"
+  },
+  {
+    "character": "Ë",
+    "codepoint": "U+00CB",
+    "glyph": "latin00CB"
+  },
+  {
+    "character": "Ì",
+    "codepoint": "U+00CC",
+    "glyph": "latin00CC"
+  },
+  {
+    "character": "Í",
+    "codepoint": "U+00CD",
+    "glyph": "latin00CD"
+  },
+  {
+    "character": "Î",
+    "codepoint": "U+00CE",
+    "glyph": "latin00CE"
+  },
+  {
+    "character": "Ï",
+    "codepoint": "U+00CF",
+    "glyph": "latin00CF"
+  },
+  {
+    "character": "Ð",
+    "codepoint": "U+00D0",
+    "glyph": "variantd0"
+  },
+  {
+    "character": "Ñ",
+    "codepoint": "U+00D1",
+    "glyph": "latin00D1"
+  },
+  {
+    "character": "Ò",
+    "codepoint": "U+00D2",
+    "glyph": "latin00D2"
+  },
+  {
+    "character": "Ó",
+    "codepoint": "U+00D3",
+    "glyph": "latin00D3"
+  },
+  {
+    "character": "Ô",
+    "codepoint": "U+00D4",
+    "glyph": "latin00D4"
+  },
+  {
+    "character": "Õ",
+    "codepoint": "U+00D5",
+    "glyph": "latin00D5"
+  },
+  {
+    "character": "Ö",
+    "codepoint": "U+00D6",
+    "glyph": "rune27"
+  },
+  {
+    "character": "×",
+    "codepoint": "U+00D7",
+    "glyph": "multiply"
+  },
+  {
+    "character": "Ø",
+    "codepoint": "U+00D8",
+    "glyph": "variantd8"
+  },
+  {
+    "character": "Ù",
+    "codepoint": "U+00D9",
+    "glyph": "latin00D9"
+  },
+  {
+    "character": "Ú",
+    "codepoint": "U+00DA",
+    "glyph": "latin00DA"
+  },
+  {
+    "character": "Û",
+    "codepoint": "U+00DB",
+    "glyph": "latin00DB"
+  },
+  {
+    "character": "Ü",
+    "codepoint": "U+00DC",
+    "glyph": "rune28"
+  },
+  {
+    "character": "Ý",
+    "codepoint": "U+00DD",
+    "glyph": "latin00DD"
+  },
+  {
+    "character": "Þ",
+    "codepoint": "U+00DE",
+    "glyph": "pair222"
+  },
+  {
+    "character": "ß",
+    "codepoint": "U+00DF",
+    "glyph": "rune29"
+  },
+  {
+    "character": "à",
+    "codepoint": "U+00E0",
+    "glyph": "latin00C0"
+  },
+  {
+    "character": "á",
+    "codepoint": "U+00E1",
+    "glyph": "latin00C1"
+  },
+  {
+    "character": "â",
+    "codepoint": "U+00E2",
+    "glyph": "latin00C2"
+  },
+  {
+    "character": "ã",
+    "codepoint": "U+00E3",
+    "glyph": "latin00C3"
+  },
+  {
+    "character": "ä",
+    "codepoint": "U+00E4",
+    "glyph": "rune26"
+  },
+  {
+    "character": "å",
+    "codepoint": "U+00E5",
+    "glyph": "latin00C5"
+  },
+  {
+    "character": "æ",
+    "codepoint": "U+00E6",
+    "glyph": "pair198"
+  },
+  {
+    "character": "ç",
+    "codepoint": "U+00E7",
+    "glyph": "latin00C7"
+  },
+  {
+    "character": "è",
+    "codepoint": "U+00E8",
+    "glyph": "latin00C8"
+  },
+  {
+    "character": "é",
+    "codepoint": "U+00E9",
+    "glyph": "latin00C9"
+  },
+  {
+    "character": "ê",
+    "codepoint": "U+00EA",
+    "glyph": "latin00CA"
+  },
+  {
+    "character": "ë",
+    "codepoint": "U+00EB",
+    "glyph": "latin00CB"
+  },
+  {
+    "character": "ì",
+    "codepoint": "U+00EC",
+    "glyph": "latin00CC"
+  },
+  {
+    "character": "í",
+    "codepoint": "U+00ED",
+    "glyph": "latin00CD"
+  },
+  {
+    "character": "î",
+    "codepoint": "U+00EE",
+    "glyph": "latin00CE"
+  },
+  {
+    "character": "ï",
+    "codepoint": "U+00EF",
+    "glyph": "latin00CF"
+  },
+  {
+    "character": "ð",
+    "codepoint": "U+00F0",
+    "glyph": "variantd0"
+  },
+  {
+    "character": "ñ",
+    "codepoint": "U+00F1",
+    "glyph": "latin00D1"
+  },
+  {
+    "character": "ò",
+    "codepoint": "U+00F2",
+    "glyph": "latin00D2"
+  },
+  {
+    "character": "ó",
+    "codepoint": "U+00F3",
+    "glyph": "latin00D3"
+  },
+  {
+    "character": "ô",
+    "codepoint": "U+00F4",
+    "glyph": "latin00D4"
+  },
+  {
+    "character": "õ",
+    "codepoint": "U+00F5",
+    "glyph": "latin00D5"
+  },
+  {
+    "character": "ö",
+    "codepoint": "U+00F6",
+    "glyph": "rune27"
+  },
+  {
+    "character": "÷",
+    "codepoint": "U+00F7",
+    "glyph": "divide"
+  },
+  {
+    "character": "ø",
+    "codepoint": "U+00F8",
+    "glyph": "variantd8"
+  },
+  {
+    "character": "ù",
+    "codepoint": "U+00F9",
+    "glyph": "latin00D9"
+  },
+  {
+    "character": "ú",
+    "codepoint": "U+00FA",
+    "glyph": "latin00DA"
+  },
+  {
+    "character": "û",
+    "codepoint": "U+00FB",
+    "glyph": "latin00DB"
+  },
+  {
+    "character": "ü",
+    "codepoint": "U+00FC",
+    "glyph": "rune28"
+  },
+  {
+    "character": "ý",
+    "codepoint": "U+00FD",
+    "glyph": "latin00DD"
+  },
+  {
+    "character": "þ",
+    "codepoint": "U+00FE",
+    "glyph": "pair222"
+  },
+  {
+    "character": "ÿ",
+    "codepoint": "U+00FF",
+    "glyph": "latin00FF"
+  },
+  {
+    "character": "Ā",
+    "codepoint": "U+0100",
+    "glyph": "latin0100"
+  },
+  {
+    "character": "ā",
+    "codepoint": "U+0101",
+    "glyph": "latin0100"
+  },
+  {
+    "character": "Ă",
+    "codepoint": "U+0102",
+    "glyph": "latin0102"
+  },
+  {
+    "character": "ă",
+    "codepoint": "U+0103",
+    "glyph": "latin0102"
+  },
+  {
+    "character": "Ą",
+    "codepoint": "U+0104",
+    "glyph": "latin0104"
+  },
+  {
+    "character": "ą",
+    "codepoint": "U+0105",
+    "glyph": "latin0104"
+  },
+  {
+    "character": "Ć",
+    "codepoint": "U+0106",
+    "glyph": "latin0106"
+  },
+  {
+    "character": "ć",
+    "codepoint": "U+0107",
+    "glyph": "latin0106"
+  },
+  {
+    "character": "Ĉ",
+    "codepoint": "U+0108",
+    "glyph": "latin0108"
+  },
+  {
+    "character": "ĉ",
+    "codepoint": "U+0109",
+    "glyph": "latin0108"
+  },
+  {
+    "character": "Ċ",
+    "codepoint": "U+010A",
+    "glyph": "latin010A"
+  },
+  {
+    "character": "ċ",
+    "codepoint": "U+010B",
+    "glyph": "latin010A"
+  },
+  {
+    "character": "Č",
+    "codepoint": "U+010C",
+    "glyph": "latin010C"
+  },
+  {
+    "character": "č",
+    "codepoint": "U+010D",
+    "glyph": "latin010C"
+  },
+  {
+    "character": "Ď",
+    "codepoint": "U+010E",
+    "glyph": "latin010E"
+  },
+  {
+    "character": "ď",
+    "codepoint": "U+010F",
+    "glyph": "latin010E"
+  },
+  {
+    "character": "Đ",
+    "codepoint": "U+0110",
+    "glyph": "variantd0"
+  },
+  {
+    "character": "đ",
+    "codepoint": "U+0111",
+    "glyph": "variantd0"
+  },
+  {
+    "character": "Ē",
+    "codepoint": "U+0112",
+    "glyph": "latin0112"
+  },
+  {
+    "character": "ē",
+    "codepoint": "U+0113",
+    "glyph": "latin0112"
+  },
+  {
+    "character": "Ĕ",
+    "codepoint": "U+0114",
+    "glyph": "latin0114"
+  },
+  {
+    "character": "ĕ",
+    "codepoint": "U+0115",
+    "glyph": "latin0114"
+  },
+  {
+    "character": "Ė",
+    "codepoint": "U+0116",
+    "glyph": "latin0116"
+  },
+  {
+    "character": "ė",
+    "codepoint": "U+0117",
+    "glyph": "latin0116"
+  },
+  {
+    "character": "Ę",
+    "codepoint": "U+0118",
+    "glyph": "latin0118"
+  },
+  {
+    "character": "ę",
+    "codepoint": "U+0119",
+    "glyph": "latin0118"
+  },
+  {
+    "character": "Ě",
+    "codepoint": "U+011A",
+    "glyph": "latin011A"
+  },
+  {
+    "character": "ě",
+    "codepoint": "U+011B",
+    "glyph": "latin011A"
+  },
+  {
+    "character": "Ĝ",
+    "codepoint": "U+011C",
+    "glyph": "latin011C"
+  },
+  {
+    "character": "ĝ",
+    "codepoint": "U+011D",
+    "glyph": "latin011C"
+  },
+  {
+    "character": "Ğ",
+    "codepoint": "U+011E",
+    "glyph": "latin011E"
+  },
+  {
+    "character": "ğ",
+    "codepoint": "U+011F",
+    "glyph": "latin011E"
+  },
+  {
+    "character": "Ġ",
+    "codepoint": "U+0120",
+    "glyph": "latin0120"
+  },
+  {
+    "character": "ġ",
+    "codepoint": "U+0121",
+    "glyph": "latin0120"
+  },
+  {
+    "character": "Ģ",
+    "codepoint": "U+0122",
+    "glyph": "latin0122"
+  },
+  {
+    "character": "ģ",
+    "codepoint": "U+0123",
+    "glyph": "latin0122"
+  },
+  {
+    "character": "Ĥ",
+    "codepoint": "U+0124",
+    "glyph": "latin0124"
+  },
+  {
+    "character": "ĥ",
+    "codepoint": "U+0125",
+    "glyph": "latin0124"
+  },
+  {
+    "character": "Ħ",
+    "codepoint": "U+0126",
+    "glyph": "variant126"
+  },
+  {
+    "character": "ħ",
+    "codepoint": "U+0127",
+    "glyph": "variant126"
+  },
+  {
+    "character": "Ĩ",
+    "codepoint": "U+0128",
+    "glyph": "latin0128"
+  },
+  {
+    "character": "ĩ",
+    "codepoint": "U+0129",
+    "glyph": "latin0128"
+  },
+  {
+    "character": "Ī",
+    "codepoint": "U+012A",
+    "glyph": "latin012A"
+  },
+  {
+    "character": "ī",
+    "codepoint": "U+012B",
+    "glyph": "latin012A"
+  },
+  {
+    "character": "Ĭ",
+    "codepoint": "U+012C",
+    "glyph": "latin012C"
+  },
+  {
+    "character": "ĭ",
+    "codepoint": "U+012D",
+    "glyph": "latin012C"
+  },
+  {
+    "character": "Į",
+    "codepoint": "U+012E",
+    "glyph": "latin012E"
+  },
+  {
+    "character": "į",
+    "codepoint": "U+012F",
+    "glyph": "latin012E"
+  },
+  {
+    "character": "İ",
+    "codepoint": "U+0130",
+    "glyph": "latin0130"
+  },
+  {
+    "character": "ı",
+    "codepoint": "U+0131",
+    "glyph": "rune08"
+  },
+  {
+    "character": "Ĳ",
+    "codepoint": "U+0132",
+    "glyph": "pair306"
+  },
+  {
+    "character": "ĳ",
+    "codepoint": "U+0133",
+    "glyph": "pair306"
+  },
+  {
+    "character": "Ĵ",
+    "codepoint": "U+0134",
+    "glyph": "latin0134"
+  },
+  {
+    "character": "ĵ",
+    "codepoint": "U+0135",
+    "glyph": "latin0134"
+  },
+  {
+    "character": "Ķ",
+    "codepoint": "U+0136",
+    "glyph": "latin0136"
+  },
+  {
+    "character": "ķ",
+    "codepoint": "U+0137",
+    "glyph": "latin0136"
+  },
+  {
+    "character": "ĸ",
+    "codepoint": "U+0138",
+    "glyph": "rune10"
+  },
+  {
+    "character": "Ĺ",
+    "codepoint": "U+0139",
+    "glyph": "latin0139"
+  },
+  {
+    "character": "ĺ",
+    "codepoint": "U+013A",
+    "glyph": "latin0139"
+  },
+  {
+    "character": "Ļ",
+    "codepoint": "U+013B",
+    "glyph": "latin013B"
+  },
+  {
+    "character": "ļ",
+    "codepoint": "U+013C",
+    "glyph": "latin013B"
+  },
+  {
+    "character": "Ľ",
+    "codepoint": "U+013D",
+    "glyph": "latin013D"
+  },
+  {
+    "character": "ľ",
+    "codepoint": "U+013E",
+    "glyph": "latin013D"
+  },
+  {
+    "character": "Ŀ",
+    "codepoint": "U+013F",
+    "glyph": "latin319"
+  },
+  {
+    "character": "ŀ",
+    "codepoint": "U+0140",
+    "glyph": "latin319"
+  },
+  {
+    "character": "Ł",
+    "codepoint": "U+0141",
+    "glyph": "variant141"
+  },
+  {
+    "character": "ł",
+    "codepoint": "U+0142",
+    "glyph": "variant141"
+  },
+  {
+    "character": "Ń",
+    "codepoint": "U+0143",
+    "glyph": "latin0143"
+  },
+  {
+    "character": "ń",
+    "codepoint": "U+0144",
+    "glyph": "latin0143"
+  },
+  {
+    "character": "Ņ",
+    "codepoint": "U+0145",
+    "glyph": "latin0145"
+  },
+  {
+    "character": "ņ",
+    "codepoint": "U+0146",
+    "glyph": "latin0145"
+  },
+  {
+    "character": "Ň",
+    "codepoint": "U+0147",
+    "glyph": "latin0147"
+  },
+  {
+    "character": "ň",
+    "codepoint": "U+0148",
+    "glyph": "latin0147"
+  },
+  {
+    "character": "ŉ",
+    "codepoint": "U+0149",
+    "glyph": "latin329"
+  },
+  {
+    "character": "Ŋ",
+    "codepoint": "U+014A",
+    "glyph": "pair330"
+  },
+  {
+    "character": "ŋ",
+    "codepoint": "U+014B",
+    "glyph": "pair330"
+  },
+  {
+    "character": "Ō",
+    "codepoint": "U+014C",
+    "glyph": "latin014C"
+  },
+  {
+    "character": "ō",
+    "codepoint": "U+014D",
+    "glyph": "latin014C"
+  },
+  {
+    "character": "Ŏ",
+    "codepoint": "U+014E",
+    "glyph": "latin014E"
+  },
+  {
+    "character": "ŏ",
+    "codepoint": "U+014F",
+    "glyph": "latin014E"
+  },
+  {
+    "character": "Ő",
+    "codepoint": "U+0150",
+    "glyph": "latin0150"
+  },
+  {
+    "character": "ő",
+    "codepoint": "U+0151",
+    "glyph": "latin0150"
+  },
+  {
+    "character": "Œ",
+    "codepoint": "U+0152",
+    "glyph": "pair338"
+  },
+  {
+    "character": "œ",
+    "codepoint": "U+0153",
+    "glyph": "pair338"
+  },
+  {
+    "character": "Ŕ",
+    "codepoint": "U+0154",
+    "glyph": "latin0154"
+  },
+  {
+    "character": "ŕ",
+    "codepoint": "U+0155",
+    "glyph": "latin0154"
+  },
+  {
+    "character": "Ŗ",
+    "codepoint": "U+0156",
+    "glyph": "latin0156"
+  },
+  {
+    "character": "ŗ",
+    "codepoint": "U+0157",
+    "glyph": "latin0156"
+  },
+  {
+    "character": "Ř",
+    "codepoint": "U+0158",
+    "glyph": "latin0158"
+  },
+  {
+    "character": "ř",
+    "codepoint": "U+0159",
+    "glyph": "latin0158"
+  },
+  {
+    "character": "Ś",
+    "codepoint": "U+015A",
+    "glyph": "latin015A"
+  },
+  {
+    "character": "ś",
+    "codepoint": "U+015B",
+    "glyph": "latin015A"
+  },
+  {
+    "character": "Ŝ",
+    "codepoint": "U+015C",
+    "glyph": "latin015C"
+  },
+  {
+    "character": "ŝ",
+    "codepoint": "U+015D",
+    "glyph": "latin015C"
+  },
+  {
+    "character": "Ş",
+    "codepoint": "U+015E",
+    "glyph": "latin015E"
+  },
+  {
+    "character": "ş",
+    "codepoint": "U+015F",
+    "glyph": "latin015E"
+  },
+  {
+    "character": "Š",
+    "codepoint": "U+0160",
+    "glyph": "latin0160"
+  },
+  {
+    "character": "š",
+    "codepoint": "U+0161",
+    "glyph": "latin0160"
+  },
+  {
+    "character": "Ţ",
+    "codepoint": "U+0162",
+    "glyph": "latin0162"
+  },
+  {
+    "character": "ţ",
+    "codepoint": "U+0163",
+    "glyph": "latin0162"
+  },
+  {
+    "character": "Ť",
+    "codepoint": "U+0164",
+    "glyph": "latin0164"
+  },
+  {
+    "character": "ť",
+    "codepoint": "U+0165",
+    "glyph": "latin0164"
+  },
+  {
+    "character": "Ŧ",
+    "codepoint": "U+0166",
+    "glyph": "variant166"
+  },
+  {
+    "character": "ŧ",
+    "codepoint": "U+0167",
+    "glyph": "variant166"
+  },
+  {
+    "character": "Ũ",
+    "codepoint": "U+0168",
+    "glyph": "latin0168"
+  },
+  {
+    "character": "ũ",
+    "codepoint": "U+0169",
+    "glyph": "latin0168"
+  },
+  {
+    "character": "Ū",
+    "codepoint": "U+016A",
+    "glyph": "latin016A"
+  },
+  {
+    "character": "ū",
+    "codepoint": "U+016B",
+    "glyph": "latin016A"
+  },
+  {
+    "character": "Ŭ",
+    "codepoint": "U+016C",
+    "glyph": "latin016C"
+  },
+  {
+    "character": "ŭ",
+    "codepoint": "U+016D",
+    "glyph": "latin016C"
+  },
+  {
+    "character": "Ů",
+    "codepoint": "U+016E",
+    "glyph": "latin016E"
+  },
+  {
+    "character": "ů",
+    "codepoint": "U+016F",
+    "glyph": "latin016E"
+  },
+  {
+    "character": "Ű",
+    "codepoint": "U+0170",
+    "glyph": "latin0170"
+  },
+  {
+    "character": "ű",
+    "codepoint": "U+0171",
+    "glyph": "latin0170"
+  },
+  {
+    "character": "Ų",
+    "codepoint": "U+0172",
+    "glyph": "latin0172"
+  },
+  {
+    "character": "ų",
+    "codepoint": "U+0173",
+    "glyph": "latin0172"
+  },
+  {
+    "character": "Ŵ",
+    "codepoint": "U+0174",
+    "glyph": "latin0174"
+  },
+  {
+    "character": "ŵ",
+    "codepoint": "U+0175",
+    "glyph": "latin0174"
+  },
+  {
+    "character": "Ŷ",
+    "codepoint": "U+0176",
+    "glyph": "latin0176"
+  },
+  {
+    "character": "ŷ",
+    "codepoint": "U+0177",
+    "glyph": "latin0176"
+  },
+  {
+    "character": "Ÿ",
+    "codepoint": "U+0178",
+    "glyph": "latin00FF"
+  },
+  {
+    "character": "Ź",
+    "codepoint": "U+0179",
+    "glyph": "latin0179"
+  },
+  {
+    "character": "ź",
+    "codepoint": "U+017A",
+    "glyph": "latin0179"
+  },
+  {
+    "character": "Ż",
+    "codepoint": "U+017B",
+    "glyph": "latin017B"
+  },
+  {
+    "character": "ż",
+    "codepoint": "U+017C",
+    "glyph": "latin017B"
+  },
+  {
+    "character": "Ž",
+    "codepoint": "U+017D",
+    "glyph": "latin017D"
+  },
+  {
+    "character": "ž",
+    "codepoint": "U+017E",
+    "glyph": "latin017D"
+  },
+  {
+    "character": "ſ",
+    "codepoint": "U+017F",
+    "glyph": "rune18"
+  },
+  {
+    "character": "̀",
+    "codepoint": "U+0300",
+    "glyph": "mark_grave"
+  },
+  {
+    "character": "́",
+    "codepoint": "U+0301",
+    "glyph": "mark_acute"
+  },
+  {
+    "character": "̂",
+    "codepoint": "U+0302",
+    "glyph": "mark_circumflex"
+  },
+  {
+    "character": "̃",
+    "codepoint": "U+0303",
+    "glyph": "mark_tilde"
+  },
+  {
+    "character": "̄",
+    "codepoint": "U+0304",
+    "glyph": "mark_macron"
+  },
+  {
+    "character": "̆",
+    "codepoint": "U+0306",
+    "glyph": "mark_breve"
+  },
+  {
+    "character": "̇",
+    "codepoint": "U+0307",
+    "glyph": "mark_dot"
+  },
+  {
+    "character": "̈",
+    "codepoint": "U+0308",
+    "glyph": "mark_dieresis"
+  },
+  {
+    "character": "̊",
+    "codepoint": "U+030A",
+    "glyph": "mark_ring"
+  },
+  {
+    "character": "̋",
+    "codepoint": "U+030B",
+    "glyph": "mark_doubleacute"
+  },
+  {
+    "character": "̌",
+    "codepoint": "U+030C",
+    "glyph": "mark_caron"
+  },
+  {
+    "character": "̧",
+    "codepoint": "U+0327",
+    "glyph": "mark_cedilla"
+  },
+  {
+    "character": "̨",
+    "codepoint": "U+0328",
+    "glyph": "mark_ogonek"
+  },
+  {
+    "character": "ẞ",
+    "codepoint": "U+1E9E",
+    "glyph": "rune29"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2000",
+    "glyph": "space2000"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2001",
+    "glyph": "space2001"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2002",
+    "glyph": "space2002"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2003",
+    "glyph": "space2003"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2004",
+    "glyph": "space2004"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2005",
+    "glyph": "space2005"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2006",
+    "glyph": "space2006"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2007",
+    "glyph": "space2007"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2008",
+    "glyph": "space2008"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2009",
+    "glyph": "space2009"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+200A",
+    "glyph": "space200a"
+  },
+  {
+    "character": "​",
+    "codepoint": "U+200B",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": "‌",
+    "codepoint": "U+200C",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": "‍",
+    "codepoint": "U+200D",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": "‐",
+    "codepoint": "U+2010",
+    "glyph": "hyphen"
+  },
+  {
+    "character": "‑",
+    "codepoint": "U+2011",
+    "glyph": "hyphen"
+  },
+  {
+    "character": "–",
+    "codepoint": "U+2013",
+    "glyph": "endash"
+  },
+  {
+    "character": "—",
+    "codepoint": "U+2014",
+    "glyph": "emdash"
+  },
+  {
+    "character": "‘",
+    "codepoint": "U+2018",
+    "glyph": "quoteLeft"
+  },
+  {
+    "character": "’",
+    "codepoint": "U+2019",
+    "glyph": "quoteSingle"
+  },
+  {
+    "character": "‚",
+    "codepoint": "U+201A",
+    "glyph": "quoteLow"
+  },
+  {
+    "character": "“",
+    "codepoint": "U+201C",
+    "glyph": "quotesLeft"
+  },
+  {
+    "character": "”",
+    "codepoint": "U+201D",
+    "glyph": "quoteDouble"
+  },
+  {
+    "character": "„",
+    "codepoint": "U+201E",
+    "glyph": "quotesLow"
+  },
+  {
+    "character": "†",
+    "codepoint": "U+2020",
+    "glyph": "dagger"
+  },
+  {
+    "character": "‡",
+    "codepoint": "U+2021",
+    "glyph": "doubleDagger"
+  },
+  {
+    "character": "•",
+    "codepoint": "U+2022",
+    "glyph": "middleDot"
+  },
+  {
+    "character": "…",
+    "codepoint": "U+2026",
+    "glyph": "ellipsis"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2028",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+2029",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": " ",
+    "codepoint": "U+202F",
+    "glyph": "space202f"
+  },
+  {
+    "character": "‰",
+    "codepoint": "U+2030",
+    "glyph": "permille"
+  },
+  {
+    "character": "′",
+    "codepoint": "U+2032",
+    "glyph": "quoteSingle"
+  },
+  {
+    "character": "″",
+    "codepoint": "U+2033",
+    "glyph": "quoteDouble"
+  },
+  {
+    "character": "‹",
+    "codepoint": "U+2039",
+    "glyph": "less"
+  },
+  {
+    "character": "›",
+    "codepoint": "U+203A",
+    "glyph": "greater"
+  },
+  {
+    "character": "⁠",
+    "codepoint": "U+2060",
+    "glyph": "zeroWidth"
+  },
+  {
+    "character": "⁰",
+    "codepoint": "U+2070",
+    "glyph": "super0"
+  },
+  {
+    "character": "⁴",
+    "codepoint": "U+2074",
+    "glyph": "super4"
+  },
+  {
+    "character": "⁵",
+    "codepoint": "U+2075",
+    "glyph": "super5"
+  },
+  {
+    "character": "⁶",
+    "codepoint": "U+2076",
+    "glyph": "super6"
+  },
+  {
+    "character": "⁷",
+    "codepoint": "U+2077",
+    "glyph": "super7"
+  },
+  {
+    "character": "⁸",
+    "codepoint": "U+2078",
+    "glyph": "super8"
+  },
+  {
+    "character": "⁹",
+    "codepoint": "U+2079",
+    "glyph": "super9"
+  },
+  {
+    "character": "⁺",
+    "codepoint": "U+207A",
+    "glyph": "superplus"
+  },
+  {
+    "character": "⁻",
+    "codepoint": "U+207B",
+    "glyph": "superhyphen"
+  },
+  {
+    "character": "⁼",
+    "codepoint": "U+207C",
+    "glyph": "superequal"
+  },
+  {
+    "character": "⁽",
+    "codepoint": "U+207D",
+    "glyph": "superparenLeft"
+  },
+  {
+    "character": "⁾",
+    "codepoint": "U+207E",
+    "glyph": "superparenRight"
+  },
+  {
+    "character": "₀",
+    "codepoint": "U+2080",
+    "glyph": "sub0"
+  },
+  {
+    "character": "₁",
+    "codepoint": "U+2081",
+    "glyph": "sub1"
+  },
+  {
+    "character": "₂",
+    "codepoint": "U+2082",
+    "glyph": "sub2"
+  },
+  {
+    "character": "₃",
+    "codepoint": "U+2083",
+    "glyph": "sub3"
+  },
+  {
+    "character": "₄",
+    "codepoint": "U+2084",
+    "glyph": "sub4"
+  },
+  {
+    "character": "₅",
+    "codepoint": "U+2085",
+    "glyph": "sub5"
+  },
+  {
+    "character": "₆",
+    "codepoint": "U+2086",
+    "glyph": "sub6"
+  },
+  {
+    "character": "₇",
+    "codepoint": "U+2087",
+    "glyph": "sub7"
+  },
+  {
+    "character": "₈",
+    "codepoint": "U+2088",
+    "glyph": "sub8"
+  },
+  {
+    "character": "₉",
+    "codepoint": "U+2089",
+    "glyph": "sub9"
+  },
+  {
+    "character": "₊",
+    "codepoint": "U+208A",
+    "glyph": "subplus"
+  },
+  {
+    "character": "₋",
+    "codepoint": "U+208B",
+    "glyph": "subhyphen"
+  },
+  {
+    "character": "₌",
+    "codepoint": "U+208C",
+    "glyph": "subequal"
+  },
+  {
+    "character": "₍",
+    "codepoint": "U+208D",
+    "glyph": "subparenLeft"
+  },
+  {
+    "character": "₎",
+    "codepoint": "U+208E",
+    "glyph": "subparenRight"
+  },
+  {
+    "character": "€",
+    "codepoint": "U+20AC",
+    "glyph": "euro"
+  },
+  {
+    "character": "₺",
+    "codepoint": "U+20BA",
+    "glyph": "turkishLira"
+  },
+  {
+    "character": "ℓ",
+    "codepoint": "U+2113",
+    "glyph": "rune11"
+  },
+  {
+    "character": "™",
+    "codepoint": "U+2122",
+    "glyph": "trademark"
+  },
+  {
+    "character": "←",
+    "codepoint": "U+2190",
+    "glyph": "arrowLeft"
+  },
+  {
+    "character": "↑",
+    "codepoint": "U+2191",
+    "glyph": "arrowUp"
+  },
+  {
+    "character": "→",
+    "codepoint": "U+2192",
+    "glyph": "arrowRight"
+  },
+  {
+    "character": "↓",
+    "codepoint": "U+2193",
+    "glyph": "arrowDown"
+  },
+  {
+    "character": "↔",
+    "codepoint": "U+2194",
+    "glyph": "arrowBoth"
+  },
+  {
+    "character": "−",
+    "codepoint": "U+2212",
+    "glyph": "hyphen"
+  },
+  {
+    "character": "∞",
+    "codepoint": "U+221E",
+    "glyph": "infinity"
+  },
+  {
+    "character": "≈",
+    "codepoint": "U+2248",
+    "glyph": "approximately"
+  },
+  {
+    "character": "≠",
+    "codepoint": "U+2260",
+    "glyph": "notEqual"
+  },
+  {
+    "character": "≤",
+    "codepoint": "U+2264",
+    "glyph": "lessEqual"
+  },
+  {
+    "character": "≥",
+    "codepoint": "U+2265",
+    "glyph": "greaterEqual"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E200",
+    "glyph": "rune00"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E201",
+    "glyph": "rune01"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E202",
+    "glyph": "rune02"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E203",
+    "glyph": "rune03"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E204",
+    "glyph": "rune04"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E205",
+    "glyph": "rune05"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E206",
+    "glyph": "rune06"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E207",
+    "glyph": "rune07"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E208",
+    "glyph": "rune08"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E209",
+    "glyph": "rune09"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20A",
+    "glyph": "rune10"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20B",
+    "glyph": "rune11"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20C",
+    "glyph": "rune12"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20D",
+    "glyph": "rune13"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20E",
+    "glyph": "rune14"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E20F",
+    "glyph": "rune15"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E210",
+    "glyph": "rune16"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E211",
+    "glyph": "rune17"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E212",
+    "glyph": "rune18"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E213",
+    "glyph": "rune19"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E214",
+    "glyph": "rune20"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E215",
+    "glyph": "rune21"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E216",
+    "glyph": "rune22"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E217",
+    "glyph": "rune23"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E218",
+    "glyph": "rune24"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E219",
+    "glyph": "rune25"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E21A",
+    "glyph": "rune26"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E21B",
+    "glyph": "rune27"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E21C",
+    "glyph": "rune28"
+  },
+  {
+    "character": "",
+    "codepoint": "U+E21D",
+    "glyph": "rune29"
+  },
+  {
+    "character": "﻿",
+    "codepoint": "U+FEFF",
+    "glyph": "zeroWidth"
+  }
+]

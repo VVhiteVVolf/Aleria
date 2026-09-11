@@ -57,12 +57,16 @@ function preserveClassicAlmanachScripts() {
       )));
       await mkdir(buildAlmanachRoot, { recursive: true });
       // Classic entry data references these files without Vite asset rewriting.
-      const arcaneBuildRoot = resolve(buildRoot, 'Fonts/Arkanes-Alphabet');
-      await mkdir(arcaneBuildRoot, { recursive: true });
-      await Promise.all(['arcane.js', 'Schriftuebersicht.png'].map(file => copyFile(
-        resolve(workspaceRoot, 'Fonts/Arkanes-Alphabet', file),
-        resolve(arcaneBuildRoot, file)
-      )));
+      await Promise.all([
+        'Fonts/Arkanes-Alphabet/arcane.js',
+        'Fonts/Arkanes-Alphabet/Schriftuebersicht.png',
+        'Fonts/Infernal-Font-1.000/Zeichentafel.png',
+        'Fonts/Infernal-Font-1.000/Leseprobe.png'
+      ].map(async file => {
+        const target = resolve(buildRoot, file);
+        await mkdir(dirname(target), { recursive: true });
+        await copyFile(resolve(workspaceRoot, file), target);
+      }));
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await cp(
         resolve(almanachRoot, 'public/assets'),

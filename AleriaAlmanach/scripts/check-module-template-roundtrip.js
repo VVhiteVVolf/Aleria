@@ -683,7 +683,7 @@ validatePackagedLanguage({
   '../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2',
   '../Fonts/Noto-Historic-Scripts/NotoSansOgham-Regular.ttf',
   '../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2',
-  '../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2',
+  '../Fonts/Infernal-Font-1.000/fonts/Nharazim-Regular.woff2',
   '../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf',
   '../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2',
   '../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff2',
