@@ -75,7 +75,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
     : 'Auswertung beim Eintragen';
   const spellAction = actor.selectedAction?.spellLevel != null ? actor.selectedAction : null;
   const selectedCastLevel = spellAction?.isCantrip ? 0 : Math.max(Number(spellAction?.spellLevel) || 1, Number(segment?.combatCastLevel) || Number(spellAction?.castLevel) || 1);
-  const maximumCastLevel = spellAction ? Math.max(Number(spellAction.spellLevel) || 0, Math.min(10, Number(spellAction.upcast?.maximumLevel) || 10)) : 0;
+  const maximumCastLevel = spellAction && !spellAction.isCantrip ? Math.max(Number(spellAction.spellLevel) || 0, Math.min(10, Number(spellAction.upcast?.maximumLevel) || 10)) : 0;
   const castLevelOptions = spellAction ? Array.from({ length: maximumCastLevel - Number(spellAction.spellLevel) + 1 }, (_entry, index) => {
     const level = Number(spellAction.spellLevel) + index;
     const slot = actor.resources?.find(resource => getSpellSlotLevel(resource) === level);
@@ -205,6 +205,8 @@ function getEvaluationLabel(resolution) {
   if (!hasDamage && (effectTypes.has('apply-condition') || effectTypes.has('buff') || effectTypes.has('debuff'))) return 'Wirkung angewandt';
   if (!hasDamage && effectTypes.has('summon')) return 'Beschwörung gelingt';
   if (!hasDamage && effectTypes.has('interrupt')) return 'Unterbrochen';
+  if (!hasDamage && resolution.attack?.resolutionMode === 'automatic'
+    && resolution.effectResults?.some(result => result.effect?.type === 'narrative')) return 'Zauberhandlung verbucht';
   if (resolution.attack?.forcedSuccess) return resolution.attack?.criticalSuccess ? 'Cheat · Kritischer Treffer' : 'Cheat · Erfolg';
   if (resolution.attack?.criticalFailure) return 'Kritischer Fehlschlag';
   if (resolution.attack?.criticalSuccess) return 'Kritischer Treffer';
@@ -228,6 +230,8 @@ function getEvaluationFallback(resolution) {
   if (!hasDamage && (effectTypes.has('apply-condition') || effectTypes.has('buff') || effectTypes.has('debuff'))) return 'Die vorbereitete Wirkung greift.';
   if (!hasDamage && effectTypes.has('summon')) return 'Die Beschwörung tritt in Kraft.';
   if (!hasDamage && effectTypes.has('interrupt')) return 'Die laufende Handlung wird unterbrochen.';
+  if (!hasDamage && resolution.attack?.resolutionMode === 'automatic'
+    && resolution.effectResults?.some(result => result.effect?.type === 'narrative')) return 'Die Wirkung wird gemeinsam mit der Spielleitung aufgelöst.';
   if (resolution.attack?.criticalFailure) return 'Der Angriff scheitert auf dramatische Weise.';
   if (resolution.attack?.criticalSuccess) return 'Der Angriff trifft mit voller Wucht.';
   if (resolution.attack?.resolutionMode === 'saving-throw') {
@@ -274,6 +278,7 @@ function summarizeRuleEffects(effects = {}) {
 
 function renderEffectResult(result = {}) {
   const effect = result.effect || {};
+  if (effect.type === 'narrative') return `<span class="combat-narrative-result"><b>Mit der Spielleitung auflösen${result.roll ? ` · Wurf: ${escapeHtml(result.amount)}` : ''}</b> · ${escapeHtml(effect.notes || 'Wirkung gemeinsam festlegen.')}</span>`;
   const recipient = result.recipient === 'actor' ? 'Selbst · ' : '';
   if (effect.type === 'damage' && result.applied) {
     const response = result.applied.damageResponse?.response;
@@ -338,8 +343,10 @@ export function renderCombatEvaluation(source = {}) {
   const narrationMeta = resolution.narration || {};
   const narrationSource = getNarrationSourceMeta(narrationMeta);
   const narration = String(narrationMeta.text || '').trim() || getEvaluationFallback(resolution);
+  const damageNotations = (resolution.effectResults || []).filter(result => result.effect?.type === 'damage' && result.recipient !== 'actor')
+    .map(result => result.roll?.notation || '').filter(Boolean);
   const damage = resolution.damage
-    ? `<span><b>${escapeHtml(resolution.damage.total)}</b> Schaden · ${escapeHtml(resolution.damage.notation || '')}</span>`
+    ? `<span><b>${escapeHtml(resolution.damage.total)}</b> Schaden · ${escapeHtml(damageNotations.length > 1 ? damageNotations.join(' + ') : resolution.damage.notation || '')}</span>`
     : '';
   const remainingHitPoints = resolution.targetSnapshot?.hitPointsAfter != null
     ? `<span>Ziel: <b>${escapeHtml(resolution.targetSnapshot.hitPointsAfter)}</b> TP${resolution.targetSnapshot.defeated ? ' · ausgeschaltet' : ''}</span>`

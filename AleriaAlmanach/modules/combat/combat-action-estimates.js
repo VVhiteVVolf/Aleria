@@ -39,10 +39,10 @@ export function averageDamageFormula(formula, bonus = 0) {
 
 // Formula and mean describe the same normal main hit as the damage resolver.
 // Structured effects take precedence over the legacy weapon/roll formula.
-export function getCombatDamagePreview(actor = {}) {
+function getPrimaryDamagePreview(actor = {}, selectedEffect = null, secondary = false) {
   if (actor.selectedAction?.kind === 'equipment-switch') return null;
   const effects = actor.selectedAction?.effects || [];
-  const primary = effects.find(effect => effect.type === 'damage' && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
+  const primary = selectedEffect || effects.find(effect => effect.type === 'damage' && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
   if (effects.length && !primary) return null;
   const damageType = primary?.damageType || actor.weapon?.damageType || '';
   if (primary?.amount > 0 && !primary.formula) {
@@ -52,8 +52,8 @@ export function getCombatDamagePreview(actor = {}) {
   }
   const formula = primary?.formula || actor.weapon?.damageFormula;
   if (!formula) return null;
-  const formulas = [formula, ...getBonusDamageFormulas(actor)];
-  const modifier = (Number(actor.damageModifier) || 0) + getCombatEffectAttributeModifier(actor, primary);
+  const formulas = [formula, ...(secondary ? [] : getBonusDamageFormulas(actor))];
+  const modifier = (secondary ? getUniversalDamageBonus(actor) : (Number(actor.damageModifier) || 0)) + getCombatEffectAttributeModifier(actor, primary);
   try {
     const combined = combineDamageFormulas(formulas);
     return { notation: buildDamageNotation(combined, modifier), modifier, damageType, average: averageDamageFormula(combined, modifier) };
@@ -61,6 +61,21 @@ export function getCombatDamagePreview(actor = {}) {
     // Invalid imported formulas remain visible for correction, without a guessed mean.
     return { notation: `${formulas.join('+')}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`, modifier, damageType, average: null };
   }
+}
+
+export function getCombatDamagePreview(actor = {}) {
+  const damageEffects = (actor.selectedAction?.effects || []).filter(effect => effect.type === 'damage'
+    && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
+  if (damageEffects.length < 2) return getPrimaryDamagePreview(actor);
+  const parts = damageEffects.map((effect, index) => getPrimaryDamagePreview(actor, effect, index > 0)).filter(Boolean);
+  if (!parts.length) return null;
+  return {
+    notation: parts.map(part => part.notation).join(' + '),
+    damageType: parts.map(part => part.damageType).join(' + '),
+    modifier: parts.reduce((sum, part) => sum + part.modifier, 0),
+    average: parts.every(part => part.average != null) ? parts.reduce((sum, part) => sum + part.average, 0) : null,
+    parts
+  };
 }
 
 export function estimateCombatDamage(actor = {}) {

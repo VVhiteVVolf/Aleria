@@ -41,6 +41,7 @@ const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
 const workspaceIconDirectories = [
   ['Zauber Icons', 'Oblivion Style'],
   ['Zauber Icons', 'Baldurs Gate'],
+  ['Zauberkarten Icons'],
   ['Traits Icon'],
   ['Etablissemant Icons'],
   ['ReiterIcons'],
@@ -113,6 +114,7 @@ export default defineConfig({
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
         magie: resolve(workspaceRoot, 'Magie/index.html'),
+        elementarismus: resolve(workspaceRoot, 'Magie/elementarismus/index.html'),
         ...getReligionPageInputs(),
         ...getClergyPageInputs(),
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),

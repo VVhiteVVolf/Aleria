@@ -210,6 +210,7 @@ function buildChannelingResolution(actor, target, description, rollMode, require
     weapon: { ...(actor.weapon || {}) },
     weaponGrip: actor.weaponGrip || 'one-handed',
     profileActionId: actionId,
+    ...(actor.selectedAction?.catalogReference ? { catalogReference: { ...actor.selectedAction.catalogReference } } : {}),
     profileActionKind: actor.profileActionKind || 'ability',
     resourceCosts: [],
     actorResourceSnapshot: null,
@@ -658,6 +659,13 @@ export class CombatResolutionService {
           roll = damageRoll;
           consumedPrimaryDamage = true;
         } else if (effect.target !== 'self') amount = Math.max(0, amount + getUniversalDamageBonus(actor));
+        // Every typed component shares the successful save, not only the first
+        // damage roll (e.g. hail's bludgeoning and cold components).
+        if (roll !== damageRoll && savingThrowMode && !attack.hit && actor.actionHalfDamageOnSave) {
+          const rawTotal = amount;
+          amount = Math.floor(amount / 2);
+          if (roll) roll = { ...roll, rawTotal, total: amount, halvedBySave: true };
+        }
         const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
           damageType: effect.inheritWeaponDamageType ? weapon.damageType : (effect.damageType || weapon.damageType),
           magical: effect.magical, conditions: recipientConditions
@@ -727,7 +735,7 @@ export class CombatResolutionService {
         effectResults.push({ effect, amount, applied, recipient });
         continue;
       }
-      effectResults.push({ effect, amount, applied: true, recipient });
+      effectResults.push({ effect, amount, roll, applied: effect.type !== 'narrative', recipient });
       }
     };
     await applyEffectList(effectiveEffects);
@@ -920,6 +928,7 @@ export class CombatResolutionService {
       } : null,
       effectResults,
       profileActionId: actor.profileActionId || '',
+      ...(actor.selectedAction?.catalogReference ? { catalogReference: { ...actor.selectedAction.catalogReference } } : {}),
       profileActionKind: actor.profileActionKind || 'weapon',
       castLevel: actor.selectedAction?.castLevel ?? actor.selectedAction?.spellLevel ?? null,
       resourceCosts: effectiveResourceCosts.map(cost => ({ ...cost })),

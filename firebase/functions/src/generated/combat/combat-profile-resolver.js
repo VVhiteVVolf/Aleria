@@ -1,3 +1,4 @@
+import { createCatalogSpell } from '../spell-catalog/spell-catalog.js';
 import {
   getAttributeModifier,
   getEffectiveCombatAttribute,
@@ -228,6 +229,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
       kind: presentationKind,
       kindLabel: presentationKind === 'prayer' ? 'Gebet' : (presentationKind === 'song' ? 'Gesang' : 'Zauber'),
       name: spell.name,
+      ...(spell.catalogReference ? { catalogReference: { ...spell.catalogReference }, maximumTargets: spell.maximumTargets } : {}),
       formula: spell.rollFormula,
       weapon: {
         id: spell.id,
@@ -319,7 +321,11 @@ function combineFormulas(base = '', addition = '', count = 0) {
 
 function applySpellCastLevel(action, profile, requestedLevel) {
   if (!action || action.spellLevel == null || (action.kind !== 'spell' && action.kind !== 'prayer' && action.kind !== 'song')) return action;
-  if (action.isCantrip) return { ...action, castLevel: 0, castLevelLabel: getSpellLevelLabel(0) };
+  if (action.isCantrip) {
+    const missingEdition = action.catalogReference && !createCatalogSpell(action.catalogReference.id, { revision: action.catalogReference.revision });
+    return { ...action, castLevel: 0, castLevelLabel: getSpellLevelLabel(0),
+      ...(missingEdition ? { compatible: false, disabledReason: 'Diese Katalogfassung ist noch nicht verfügbar.' } : {}) };
+  }
   const baseLevel = Math.max(1, Number(action.spellLevel) || 1);
   const maximumLevel = Math.max(baseLevel, Math.min(10, Number(action.upcast?.maximumLevel) || 10));
   const castLevel = Math.max(baseLevel, Math.min(maximumLevel, Number(requestedLevel) || baseLevel));
@@ -329,7 +335,7 @@ function applySpellCastLevel(action, profile, requestedLevel) {
   const difference = castLevel - baseLevel;
   const scaleFormula = action.upcast?.enabled ? action.upcast.formulaPerLevel : '';
   const scaleAmount = action.upcast?.enabled ? Number(action.upcast.amountPerLevel || 0) : 0;
-  const effects = (Array.isArray(action.effects) ? action.effects : []).map((effect, index) => {
+  let effects = (Array.isArray(action.effects) ? action.effects : []).map((effect, index) => {
     if (index !== 0 || !['damage', 'healing', 'temporary-hit-points'].includes(effect.type)) return { ...effect };
     return {
       ...effect,
@@ -339,21 +345,35 @@ function applySpellCastLevel(action, profile, requestedLevel) {
   });
   const dedicatedSlotIds = new Set(profile.resources.filter(resource => isSpellSlotResource(resource, profile.magic?.slotResourceIds)).map(resource => String(resource.id)));
   const manaResourceId = profile.magic?.manaResourceId || 'mana-focus';
-  const costs = (action.costs || [])
+  let costs = (action.costs || [])
     .filter(cost => !dedicatedSlotIds.has(String(cost.resourceId || '')))
     .map(cost => cost.resourceId === manaResourceId ? { ...cost, amount: getSpellManaCost(castLevel) } : cost);
-  const formula = combineFormulas(action.formula, scaleFormula, difference);
+  let formula = combineFormulas(action.formula, scaleFormula, difference);
+  const catalogSpell = action.catalogReference ? createCatalogSpell(action.catalogReference.id, {
+    revision: action.catalogReference.revision, level: castLevel, manaResourceId
+  }) : null;
+  if (catalogSpell) {
+    formula = catalogSpell.rollFormula;
+    effects = catalogSpell.effects;
+    costs = catalogSpell.costs;
+  }
+  const catalogFormMissing = Boolean(action.catalogReference && !catalogSpell);
   return {
     ...action,
+    ...(catalogSpell ? { activationType: catalogSpell.activationType, maximumTargets: catalogSpell.maximumTargets,
+      mechanicNotes: [catalogSpell.description, catalogSpell.aiInstructions].filter(Boolean),
+      range: catalogSpell.range, duration: catalogSpell.duration } : {}),
     formula,
     weapon: { ...action.weapon, damageFormula: formula,
+      ...(catalogSpell ? { damageType: catalogSpell.damageType, notes: catalogSpell.description, range: catalogSpell.range } : {}),
       properties: `${getSpellLevelLabel(castLevel)} · ${getSpellManaCost(castLevel)} ${profile.resources.find(resource => resource.id === manaResourceId)?.name || 'Mana'}` },
     effects,
     costs: normalizeCombatResourceCosts(costs),
     castLevel,
     castLevelLabel: getSpellLevelLabel(castLevel),
-    compatible: action.compatible !== false && gradeUnlocked,
-    disabledReason: !gradeUnlocked ? `${getSpellLevelLabel(castLevel)} ist noch nicht freigeschaltet.` : action.disabledReason
+    compatible: action.compatible !== false && gradeUnlocked && !catalogFormMissing,
+    disabledReason: catalogFormMissing ? 'Für diesen Wirkungsgrad ist keine Katalogfassung hinterlegt.'
+      : !gradeUnlocked ? `${getSpellLevelLabel(castLevel)} ist noch nicht freigeschaltet.` : action.disabledReason
   };
 }
 

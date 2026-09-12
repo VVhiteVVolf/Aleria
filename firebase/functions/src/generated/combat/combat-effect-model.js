@@ -5,7 +5,7 @@ import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
   'damage', 'healing', 'temporary-hit-points', 'apply-condition', 'remove-condition',
-  'restore-resource', 'spend-resource', 'move', 'summon', 'buff', 'debuff', 'interrupt'
+  'restore-resource', 'spend-resource', 'move', 'summon', 'buff', 'debuff', 'interrupt', 'narrative'
 ]);
 
 const EFFECT_TYPES = new Set(COMBAT_EFFECT_TYPES);

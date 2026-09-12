@@ -1,9 +1,9 @@
 import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260909-dragon-parent-v2';
+import { detachCatalogSpell } from '../spell-catalog/spell-catalog.js';
 import {
   cloneArchiveValue,
   CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION,
   extractItemRegisterArchiveEntries,
-  makeCharacterArchiveKey,
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260905-archive-order-v2';
@@ -145,6 +145,9 @@ async function persistEntries(entries) {
 
 export async function saveCharacterArchiveEntry(entry = {}) {
   await ensureCharacterArchiveLoaded();
+  if (entry.data?.catalogReference || String(entry.id || '').startsWith('catalog--')) {
+    entry = { ...entry, id: `custom--${entry.id}`, data: detachCatalogSpell(entry.data), builtin: false };
+  }
   const now = new Date().toISOString();
   const normalized = normalizeCharacterArchiveEntry({
     ...entry,
@@ -161,7 +164,7 @@ export async function archiveCharacterRecord(record = {}, sourceKind = '') {
   await ensureCharacterArchiveLoaded();
   const extracted = extractCurrentCharacterArchiveEntries(record, sourceKind);
   if (!extracted.length) return [];
-  const existingByKey = new Map(getCharacterArchiveEntries().map(entry => [makeCharacterArchiveKey(entry.kind, entry.name), entry]));
+  const existingByKey = new Map(getCharacterArchiveEntries().map(entry => [entry.key, entry]));
   const now = new Date().toISOString();
   const changed = extracted.map(entry => {
     const existing = existingByKey.get(entry.key);

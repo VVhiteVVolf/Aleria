@@ -1,4 +1,5 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
@@ -522,7 +523,7 @@ function sanitizeAbility(value = {}, index = 0) {
 }
 
 function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
-  const source = value && typeof value === 'object' ? value : {};
+  const source = resolveCatalogSpellSnapshot(value && typeof value === 'object' ? value : {}, manaResourceId);
   const activationType = normalizeText(source.activationType, 30);
   const resolutionType = normalizeText(source.resolutionType, 30);
   const inferredLegacyLevel = getSpellSlotLevel({ id: source.slotResourceId, name: source.slotResourceId })
@@ -538,6 +539,8 @@ function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
     id,
     name: normalizeText(source.name, 120),
     school: normalizeText(source.school, 60),
+    ...(normalizeSpellCatalogReference(source.catalogReference) ? { catalogReference: normalizeSpellCatalogReference(source.catalogReference), maximumTargets: normalizeNumber(source.maximumTargets, 1, 1, 20) } : {}),
+    ...(normalizeSpellCatalogReference(source.catalogOrigin) ? { catalogOrigin: normalizeSpellCatalogReference(source.catalogOrigin) } : {}),
     icon: normalizeText(source.icon, 1000),
     level,
     manaCost,

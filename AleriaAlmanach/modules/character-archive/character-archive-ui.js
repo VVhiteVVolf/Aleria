@@ -1,4 +1,5 @@
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
+import { getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/spell-catalog.js';
 import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
 import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
 import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
@@ -131,7 +132,7 @@ function renderEntryCard(entry) {
   const meta = getEntryMeta(entry);
   const pickerButton = state.picker
     ? `<button type="button" class="character-archive-primary" data-character-archive-action="select-entry" data-entry-id="${escapeHtml(entry.id)}">Hinzufügen</button>`
-    : `<button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(entry.id)}">Bearbeiten</button>`;
+    : `<button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(entry.id)}">${entry.data?.catalogReference ? 'Eigene Fassung anlegen' : 'Bearbeiten'}</button>`;
   const rulesButton = !state.picker && kind.editorKind
     ? `<button type="button" data-character-archive-action="edit-entry-rules" data-entry-id="${escapeHtml(entry.id)}">Regeldetails</button>`
     : '';
@@ -139,11 +140,11 @@ function renderEntryCard(entry) {
     <div class="character-archive-card-topline"><span>${escapeHtml(kind.group)}</span><span>${escapeHtml(kind.label)}</span></div>
     <div class="character-archive-card-main">
       ${image.source ? `<span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async"><i>${escapeHtml(kind.symbol)}</i></span>` : ''}
-      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3><p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
+      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>Elementarismus · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}<p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
     </div>
     ${meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     ${renderSourceBadges(entry)}
-    <div class="character-archive-card-actions">${pickerButton}${rulesButton}${getCharacterArchiveClassLinks(entry).map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>
+    <div class="character-archive-card-actions">${pickerButton}${rulesButton}${entry.data?.catalogReference ? `<a href="${escapeHtml(getSpellCatalogPageHref(entry.data.catalogReference))}" target="_blank" rel="noopener">Zum Zauberverzeichnis ↗</a>` : ''}${getCharacterArchiveClassLinks(entry).map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>
   </article>`;
 }
 
@@ -316,6 +317,7 @@ function openEntryEditor(entry = null) {
   overlay.innerHTML = `<form class="character-archive-editor" data-character-archive-editor-form>
     <header><div><span>Archivvorlage</span><h2>${current ? 'Eintrag bearbeiten' : 'Neuen Eintrag anlegen'}</h2></div><button type="button" data-character-archive-action="close-editor" aria-label="Editor schließen">×</button></header>
     <div class="character-archive-editor-body">
+      ${current?.data?.catalogReference ? '<p class="character-archive-editor-hint">Beim Speichern entsteht eine eigene Fassung. Der gemeinsame Katalog und bereits gelernte Charakterzauber behalten ihre Werte.</p>' : ''}
       <label><span>Bereich</span><select name="kind"${current ? ' disabled' : ''}>${CHARACTER_ARCHIVE_KINDS.map(kind => `<option value="${kind.id}"${kind.id === selectedKind ? ' selected' : ''}>${escapeHtml(kind.label)}</option>`).join('')}</select></label>
       <label><span>Name</span><input name="name" value="${escapeHtml(current?.name || '')}" maxlength="160" required></label>
       <label class="wide"><span>Beschreibung / Wirkung</span><textarea name="description" rows="5" maxlength="4000">${escapeHtml(current?.description || '')}</textarea></label>
@@ -391,9 +393,9 @@ async function openArchive(options = {}) {
   state.returnFocus = document.activeElement;
   state.open = true;
   state.picker = options.picker || null;
-  state.kind = state.picker?.kind || 'all';
+  state.kind = state.picker?.kind || options.kind || 'all';
   state.source = 'all';
-  state.search = '';
+  state.search = options.search || '';
   state.loading = true;
   refreshLiveEntries();
   const overlay = ensureOverlay();
@@ -537,3 +539,10 @@ queueMicrotask(() => {
     .then(() => refreshLiveEntries())
     .catch(error => console.info('Charakterbogen-Archiv wird beim ersten Öffnen erneut geladen.', error));
 });
+
+const requestedCatalogSpell = new URLSearchParams(globalThis.location?.search || '').get('zauberkatalog');
+if (requestedCatalogSpell === 'elementarismus' || getSpellCatalogEntry(requestedCatalogSpell)) {
+  const openRequestedCatalog = () => openArchive({ kind: 'spell', search: requestedCatalogSpell });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', openRequestedCatalog, { once: true });
+  else queueMicrotask(openRequestedCatalog);
+}

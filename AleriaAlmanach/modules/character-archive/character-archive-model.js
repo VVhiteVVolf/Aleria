@@ -1,3 +1,5 @@
+import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
+
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
 
@@ -112,7 +114,11 @@ export function normalizeCharacterArchiveEntry(value = {}) {
   return {
     schemaVersion: CHARACTER_ARCHIVE_SCHEMA_VERSION,
     id,
-    key: makeCharacterArchiveKey(kind, name),
+    key: kind === 'spell' && normalizeSpellCatalogReference(data.catalogReference)
+      ? `spell::catalog::${data.catalogReference.id}@${data.catalogReference.revision}`
+      : kind === 'spell' && normalizeSpellCatalogReference(data.catalogOrigin)
+        ? `spell::custom::${data.catalogOrigin.id}@${data.catalogOrigin.revision}::${normalizeArchiveSearchText(name)}`
+      : makeCharacterArchiveKey(kind, name),
     kind,
     name,
     description: getDescription(data, value.description),
@@ -293,6 +299,7 @@ export function getCharacterArchiveEntrySearchText(entry = {}) {
     ...(entry.tags || []),
     ...(entry.sources || []).flatMap(source => [source.name, source.kind]),
     entry.data?.school,
+    entry.data?.catalogReference?.id,
     entry.data?.damageType,
     entry.data?.trainingForm,
     entry.data?.group,

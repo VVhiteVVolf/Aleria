@@ -1,4 +1,5 @@
 import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { detachCatalogSpell, getSpellCatalogPageHref } from '../../spell-catalog/spell-catalog.js';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
 import {
@@ -90,7 +91,7 @@ const EFFECT_TYPE_OPTIONS = Object.freeze([
   ['apply-condition', 'Zustand geben'], ['remove-condition', 'Zustand entfernen'],
   ['restore-resource', 'Ressource auffüllen'], ['spend-resource', 'Ressource abziehen'],
   ['buff', 'Stärkung'], ['debuff', 'Schwächung'], ['move', 'Bewegen / Stoßen / Ziehen'],
-  ['summon', 'Beschwören'], ['interrupt', 'Unterbrechen']
+  ['summon', 'Beschwören'], ['interrupt', 'Unterbrechen'], ['narrative', 'Erzählerisch auflösen']
 ]);
 
 function createDefaultEffect() {
@@ -420,6 +421,7 @@ function render() {
   overlay.innerHTML = `<section class="combat-entry-editor-dialog" role="dialog" aria-modal="true" aria-labelledby="combat-entry-editor-title">
     <header><div><span>Kampfprofil · Detailwerkstatt</span><h2 id="combat-entry-editor-title">${kindTitle()}</h2></div><button type="button" data-entry-action="close" aria-label="Schließen">×</button></header>
     <div class="combat-entry-editor-body">
+      ${item.catalogReference ? `<p class="combat-entry-editor-hint">Elementarismus · Fassung ${escapeHtml(item.catalogReference.revision)}. <a href="${escapeHtml(getSpellCatalogPageHref(item.catalogReference))}" target="_blank" rel="noopener">Katalog öffnen</a>. Beim Übernehmen entsteht eine eigene Fassung ohne automatische Katalog-Verstärkungen; andere Charaktere behalten ihre Zauber.</p>` : ''}
       <div class="combat-entry-editor-name-row"><label><span>Name</span><input data-entry-field="name" value="${escapeHtml(item.name)}" maxlength="140" autofocus></label><label class="check"><input type="checkbox" data-entry-field="active"${checked(item.active !== false)}> Aktiv</label></div>
       ${renderRegeneration(item)}${content}
       <p class="combat-entry-editor-error" data-entry-role="error" hidden></p>
@@ -580,7 +582,7 @@ document.addEventListener('click', event => {
       return;
     }
     const callback = state.onSave;
-    const value = clone(state.item);
+    const value = detachCatalogSpell(clone(state.item));
     close();
     callback?.(value);
   }

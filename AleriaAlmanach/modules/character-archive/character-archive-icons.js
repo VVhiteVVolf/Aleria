@@ -67,13 +67,15 @@ export function getCharacterSheetEntryIconPresentation(combatKind, item = {}, ar
   const entries = Array.isArray(archiveEntries)
     ? archiveEntries
     : (globalThis.AleriaCharacterArchive?.getEntries?.() || []);
+  const itemKey = normalizeCharacterArchiveEntry({ kind: archiveKind, name: item.name, data: item }).key;
   const archiveEntry = entries.find(entry => (
     entry.kind === archiveKind
-    && normalizeEntryName(entry.name) === name
+    && normalizeCharacterArchiveEntry(entry).key === itemKey
   ));
   return archiveEntry
     ? { ...getCharacterArchiveEntryIconPresentation(archiveEntry), linked: true }
-    : { ...fallback, linked: false };
+    : item.catalogReference || item.catalogOrigin ? { source: item.icon || '', fallbackSource: '', custom: Boolean(item.icon), linked: Boolean(item.catalogReference) }
+      : { ...fallback, linked: false };
 }
 
 export const characterArchiveIconInternals = Object.freeze({

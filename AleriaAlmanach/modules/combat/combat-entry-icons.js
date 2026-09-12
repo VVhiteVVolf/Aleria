@@ -139,6 +139,9 @@ function getAutomaticEntryIconSource(kind, entry = {}) {
 }
 
 export function getCombatEntryIconPresentation(kind, entry = {}) {
+  if (kind === 'spell' && entry.catalogReference) {
+    return { source: String(entry.icon || ''), fallbackSource: '', custom: Boolean(entry.icon) };
+  }
   const fallbackSource = getAutomaticEntryIconSource(kind, entry);
   const customSource = String(entry.icon || '').trim();
   return {
@@ -203,7 +206,9 @@ export function getDurationIconSource({ duration, concentration } = {}) {
 export function getRollIconSource(formula, damageType) {
   const sides = String(formula || '').match(/[dw](4|6|8|10|12)\b/i)?.[1];
   if (!sides) return assetUrl('Zauber Icons/Baldurs Gate/Würfel Icons/D20.png');
-  return assetUrl(`Zauber Icons/Baldurs Gate/Würfel Icons/D${sides}_${getDamageAssetKey(damageType, 'Physical')}.png`);
+  const damageKey = getDamageAssetKey(damageType, 'Physical');
+  const dieKey = ['Bludgeoning', 'Piercing', 'Slashing'].includes(damageKey) ? 'Physical' : damageKey;
+  return assetUrl(`Zauber Icons/Baldurs Gate/Würfel Icons/D${sides}_${dieKey}.png`);
 }
 
 export const combatEntryIconInternals = Object.freeze({ normalizeSearchText, getDamageAssetKey });

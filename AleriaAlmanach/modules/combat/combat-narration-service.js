@@ -10,6 +10,7 @@ function getNarrativeEffectMode(facts = {}) {
   if (types.has('summon')) return 'summon';
   if (types.has('move')) return 'move';
   if (types.has('interrupt')) return 'interrupt';
+  if ((facts.effectResults || []).some(result => result.effect?.type === 'narrative')) return 'narrative';
   return 'attack';
 }
 
@@ -24,6 +25,7 @@ function fallbackNarration(facts = {}) {
       : `${facts.target} kann der Wirkung von ${facts.actor} nicht widerstehen.`;
   }
   const effectMode = getNarrativeEffectMode(facts);
+  if (effectMode === 'narrative') return `${facts.actor} wirkt ${facts.weapon || 'die vorbereitete Magie'}. Die genaue Wirkung wird gemeinsam mit der Spielleitung aufgelöst.`;
   if (effectMode === 'healing') return `${facts.actor} lässt die heilende Wirkung bei ${facts.target} wirksam werden.`;
   if (effectMode === 'temporary-hit-points') return `${facts.actor} stärkt den Schutz von ${facts.target} vorübergehend.`;
   if (effectMode === 'remove-condition') return `${facts.actor} löst eine belastende Wirkung von ${facts.target}.`;
@@ -50,6 +52,7 @@ function cleanNarration(value) {
 function enrichCombatNarrationRetrieval(retrieval = {}, facts = {}) {
   const combatContext = [
     'VERBINDLICHE KAMPFPROFIL-SNAPSHOTS',
+    'Effekte vom Typ narrative mit applied:false sind noch nicht angewandt. Beschreibe ihre Vorbereitung, ohne bestätigte Schäden, Schutz oder Geländeänderungen zu erfinden.',
     JSON.stringify({
       actorCombatProfile: facts.actorCombatProfile || null,
       targetCombatProfile: facts.targetCombatProfile || null,

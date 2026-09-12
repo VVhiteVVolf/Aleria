@@ -15,6 +15,7 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
+import { getCharacterSpellPresentation } from './character-spell-presentation.js';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
@@ -181,7 +182,7 @@ function renderEntryIcon(kind, item, className = '') {
   const presentation = getCharacterSheetEntryIconPresentation(kind, item);
   const fallbackSource = getSafeImageSource(presentation.fallbackSource);
   const source = getSafeImageSource(presentation.source, fallbackSource);
-  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"${source ? '' : ' hidden'}><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}"${source ? ` src="${escapeMarkup(source)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
+  return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"${source ? '' : ' hidden'}><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-id="${escapeMarkup(item.id || '')}" data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}"${source ? ` src="${escapeMarkup(source)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
 }
 
 function renderPropertyIcon(source) {
@@ -208,9 +209,11 @@ function activateEntryIconFallbacks(root) {
 
 function refreshArchiveLinkedEntryIcons(root = document.getElementById('cp-combat-sheet-root')) {
   root?.querySelectorAll?.('[data-combat-entry-icon][data-combat-entry-kind][data-combat-entry-name]').forEach(image => {
+    const spell = image.dataset.combatEntryKind === 'spell'
+      ? draftProfile.magic?.spells.find(item => item.id === image.dataset.combatEntryId) : null;
     const presentation = getCharacterSheetEntryIconPresentation(
       image.dataset.combatEntryKind,
-      { name: image.dataset.combatEntryName }
+      spell || { name: image.dataset.combatEntryName }
     );
     if (!presentation.linked) return;
     const fallbackSource = getSafeImageSource(presentation.fallbackSource);
@@ -829,14 +832,13 @@ function renderSpellSlotProfile(profile) {
   </section>`;
 }
 
-function renderSpellCard(spell, manaName) {
+function renderSpellCard(spell, manaName, profile) {
   const icon = getCharacterSheetEntryIconPresentation('spell', spell);
   const fallbackSource = getSafeImageSource(icon.fallbackSource);
   const iconSource = getSafeImageSource(icon.source, fallbackSource);
-  const rollFormula = String(spell.rollFormula || '').toUpperCase().replace(/D/g, 'W');
+  const presentation = getCharacterSpellPresentation(spell, profile, manaName);
   const presentationLabel = ({ spell: 'Zauberformel', prayer: 'Gebet', song: 'Gesang' })[spell.presentationKind] || 'Zauberformel';
-  const damageLabel = [rollFormula, spell.damageType].filter(Boolean).join(' · ');
-  const costLabel = `${spell.manaCost} ${manaName} · ${getSpellLevelLabel(spell.level)}`;
+  const costLabel = `${presentation.costs} · ${getSpellLevelLabel(spell.level)}`;
   const upcast = spell.upcast || {};
   const upcastParts = [
     upcast.formulaPerLevel ? `${String(upcast.formulaPerLevel).toUpperCase().replace(/D/g, 'W')} je Grad` : '',
@@ -848,16 +850,17 @@ function renderSpellCard(spell, manaName) {
     <div class="cp-spell-card-body">
       <section class="cp-spell-card-hero">
         <div><p><strong>${escapeMarkup(spell.name || 'Dieser Zauber')}</strong> ist ${escapeMarkup(getSpellLevelLabel(spell.level).toLowerCase())}${spell.damageType ? ` und wirkt mit ${escapeMarkup(spell.damageType)}.` : '.'}</p><h5>Beschreibung</h5><p>${escapeMarkup(spell.description || 'Noch keine Wirkung beschrieben.')}</p></div>
-        <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}"${iconSource ? ` src="${escapeMarkup(iconSource)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
+        <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-id="${escapeMarkup(spell.id || '')}" data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}"${iconSource ? ` src="${escapeMarkup(iconSource)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
       </section>
       <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
-        ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', `${getActivationLabel(spell.activationType)} · ${costLabel}`)}
-        ${renderCardProperty(getRollIconSource(spell.rollFormula, spell.damageType), 'Schaden / Wurf', damageLabel || 'Keine Schadensformel')}
+        ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', costLabel)}
+        ${renderCardProperty(getRollIconSource(presentation.damage.formula, presentation.damage.damageType), 'Schaden / Wurf', presentation.damage.label)}
         ${renderCardProperty(getResolutionIconSource(spell), 'Auflösung', getResolutionLabel(spell))}
         ${renderCardProperty(getRangeIconSource(), 'Reichweite', spell.range || 'Zauberreichweite')}
         ${renderCardProperty(getDurationIconSource(spell), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
       </div></section>
-      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5><p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann auf einem höheren freigeschalteten Grad gewirkt werden.')}</p></section>` : ''}
+      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5>${presentation.higherForms.length ? presentation.higherForms.map(form => `<p>${escapeMarkup(form)}</p>`).join('') : `<p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann auf einem höheren freigeschalteten Grad gewirkt werden.')}</p>`}</section>` : ''}
+      ${presentation.catalogHref ? `<p><a href="${escapeMarkup(presentation.catalogHref)}" target="_blank" rel="noopener">Zum Zauberverzeichnis · Fassung ${escapeMarkup(spell.catalogReference.revision)} ↗</a></p>` : ''}
       <details class="cp-spell-technical"><summary>Technische Details</summary><div><p><strong>Voraussetzungen:</strong> ${escapeMarkup(spell.requirements || 'Keine besonderen Voraussetzungen.')}</p><p><strong>Schlagworte:</strong> ${escapeMarkup(spell.tags || 'Keine Schlagworte.')}</p>${spell.aiInstructions ? `<p><strong>AleriaGPT:</strong> ${escapeMarkup(spell.aiInstructions)}</p>` : ''}</div></details>
       <div class="cp-spell-card-actions"><label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> vorbereitet</label><button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Zauber bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" aria-label="${escapeMarkup(spell.name || 'Zauber')} entfernen">×</button></div>
     </div>
@@ -878,7 +881,7 @@ function renderMagic(profile) {
     </div>
     ${renderSpellSlotProfile(profile)}
     <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Ein Zauber öffnet seine vollständige Karte mit Wirkung, Kosten und Regeln.</small></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="magic.spells" data-combat-entry-kind="spell">+ Zauber</button></div>
-    <div class="cp-sheet-spell-list">${magic.spells.map(spell => renderSpellCard(spell, manaName)).join('') || '<p class="cp-sheet-empty">Noch keine Zauber eingetragen.</p>'}</div>
+    <div class="cp-sheet-spell-list">${magic.spells.map(spell => renderSpellCard(spell, manaName, profile)).join('') || '<p class="cp-sheet-empty">Noch keine Zauber eingetragen.</p>'}</div>
   </article>`;
 }
 
