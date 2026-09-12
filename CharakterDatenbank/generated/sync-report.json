@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-12T12:53:16.498Z",
+  "sourceExportedAt": "2026-09-12T12:59:38.004Z",
   "summary": {
-    "sourceDocuments": 270,
+    "sourceDocuments": 271,
     "total": 236,
-    "mergedSameNameGroups": 26,
+    "mergedSameNameGroups": 27,
     "familyLinked": 155,
     "familyAmbiguous": 0,
     "familyPending": 81,
@@ -955,6 +955,15 @@
     }
   ],
   "mergedSameNameGroups": [
+    {
+      "name": "Anwyll Saethwyr",
+      "canonicalDocumentId": "N8D8c9EMPigmAhYWPayO",
+      "documentIds": [
+        "N8D8c9EMPigmAhYWPayO",
+        "N8D8c9EMPigmAhYWPayO"
+      ],
+      "ages": []
+    },
     {
       "name": "Cederic Chwedonol",
       "canonicalDocumentId": "03d4RFlsrtZmobcmryW5",

@@ -10,6 +10,7 @@ import {
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 import { MELYN_ARTH_BIOGRAPHY } from './person-biographies/melyn-arth.js';
+import { ANWYLL_SAETHWYR_BIOGRAPHY } from './person-biographies/anwyll-saethwyr.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
@@ -182,7 +183,9 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     // Generation 1692 bis 1703
     person('marmaduke-saethwyr', 'Marmaduke', 'male', '1695'),
     person('gwawr-saethwyr', 'Gwawr', 'female', '1699'),
-    person('anwyll-saethwyr', 'Anwyll', 'male', '1696'),
+    person('anwyll-saethwyr', 'Anwyll', 'male', '1696', '', SAETHWYR_HOUSE_ID, {
+      extensions: { biographyModule: ANWYLL_SAETHWYR_BIOGRAPHY }
+    }),
     person('enora-saethwyr', 'Enora', 'female', '1703'),
     person('jeanne-saethwyr', 'Jeanne', 'female', '1694'),
     person('caradog-saethwyr', 'Caradog', 'male', '1696'),

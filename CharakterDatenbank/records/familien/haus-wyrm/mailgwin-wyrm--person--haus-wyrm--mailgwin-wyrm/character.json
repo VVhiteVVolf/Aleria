@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-12T12:53:16.498Z",
+    "sourceExportedAt": "2026-09-12T12:59:38.004Z",
     "sourceUpdatedAt": "2026-09-03T23:41:57.663Z",
     "sourceDocumentIds": [
       "person--haus-wyrm--mailgwin-wyrm"
     ],
-    "contentHash": "2fd39d6e787d1ef9033be4b5d71c6f6d2964bf9487f01a2da2ebc5ec751dec32"
+    "contentHash": "80beb63730df3b871f5cee48a05c5e0de79a97fb85b9e7b383bb3df47e830af9"
   },
   "local": {
     "notes": "",
@@ -303,8 +303,8 @@
           "personId": "mailgwin-wyrm",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-12T12:53:16.498Z",
-          "lastSyncedAt": "2026-09-12T12:53:16.498Z",
+          "importedAt": "2026-09-12T12:59:38.004Z",
+          "lastSyncedAt": "2026-09-12T12:59:38.004Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=mailgwin-wyrm",
           "fingerprint": "{\"name\":\"Mailgwin Wyrm\",\"title\":\"\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"ceridwen-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--ceridwen-draig\",\"name\":\"Ceridwen Draig\"}],\"children\":[]}}"
         }
