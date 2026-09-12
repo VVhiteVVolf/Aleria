@@ -81,6 +81,18 @@ test('Platzhalterbilder und Platzhaltertexte werden nicht als Fundstück verwend
   assert.equal(context.isArchiveDashboardPlaceholderText('Ein belegter Satz aus der Chronik.'), false);
 });
 
+test('Der Magie-Weltpfad öffnet den Codex, andere Bereiche bleiben Archiv-Reiter', () => {
+  const { context } = createContext();
+  const html = context.buildArchiveDashboardSectionCards([
+    { key: 'Magie', tab: 'Magie', entries: [] },
+    { key: 'Chroniken', tab: 'Chroniken', entries: [] }
+  ]);
+  assert.match(html, /<a class="archive-dashboard-section" href="\.\.\/Magie\/index\.html"/);
+  assert.match(html, /<button class="archive-dashboard-section" type="button" data-archive-action="switch-tab" data-tab="Chroniken"/);
+  assert.doesNotMatch(html, /data-archive-action="switch-tab" data-tab="Magie"/);
+  assert.match(html, /Schulen, Druidenkunst &amp; göttliche Magie/);
+});
+
 test('Fundstücke bevorzugen echte Illustrationen und erhalten einen Rückfall auf Text', () => {
   const { context, sections } = createContext();
   const textEntry = {

@@ -33,7 +33,7 @@ export function renderShell({ outputPath, title, description, main, sidebar = ''
   </div>
 </body>
 </html>
-`;
+`.replace(/[\t ]+$/gm, '');
 }
 
 export function renderChapterRegister(chapters) {

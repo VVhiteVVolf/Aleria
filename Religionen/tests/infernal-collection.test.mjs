@@ -66,17 +66,21 @@ test('ambiguous origins and the present limits of fallen powers remain explicit'
   assert(get('thraal').relations.includes('bhaal') && get('thraal').relations.includes('hela'));
 });
 
-test('own colored symbols are distinct and supplied portraits and artifacts remain local and unchanged', () => {
-  const symbols = readJson('assets/infernal-symbols/sources.json').symbols;
+test('generated gold icons cover the entire infernal circle and supplied portraits remain unchanged', () => {
+  const symbols = readJson('assets/infernal-icons/image-prompts.json').images;
   assert.equal(symbols.length,23);
   const shapes = new Set();
+  const entries = [catalog.entries.find(entry => entry.id === 'infernus'), ...circle.entries];
   for (const symbol of symbols) {
-    const svg = readFileSync(resolve(RELIGION_ROOT,symbol.src),'utf8');
-    assert.match(svg,/<svg[^>]+viewBox="0 0 200 200"/);
-    assert.match(svg,/<(?:path|polygon|circle|ellipse|rect)\s/);
-    assert(!/<image|<script|\son\w+=/i.test(svg));
-    assert(symbol.colors.every(color=>svg.includes(color)));
-    shapes.add(hash(svg.replace(/<title>.*?<\/title>|<desc>.*?<\/desc>/gs,'')));
+    const path = `assets/infernal-icons/${symbol.file}`;
+    const bytes = readFileSync(resolve(RELIGION_ROOT,path));
+    assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a',symbol.id);
+    assert(bytes.readUInt32BE(16) >= 256 && bytes.readUInt32BE(20) >= 256,symbol.id);
+    assert.equal(bytes[25],6,`${symbol.id}: RGBA PNG`);
+    assert.equal(entries.find(entry => entry.id === symbol.id)?.symbol,path,symbol.id);
+    assert.equal(symbol.styleReferences.length,2);
+    assert(symbol.prompt.includes('Transparent background'));
+    shapes.add(hash(bytes));
   }
   assert.equal(shapes.size,23);
   const images = readJson('assets/infernal-art/sources.json').images;
@@ -92,7 +96,7 @@ test('own colored symbols are distinct and supplied portraits and artifacts rema
     assert.equal(entry.portrait.src,`assets/infernal-art/${entry.id}.png`);
     assert.match(html, /class="profile-cover has-portrait"/);
     assert(html.includes(entry.portrait.src));
-    assert.equal(entry.symbol,`assets/infernal-symbols/${entry.id}.svg`);
+    assert.equal(entry.symbol,`assets/infernal-icons/${entry.id}.png`);
   }
 });
 

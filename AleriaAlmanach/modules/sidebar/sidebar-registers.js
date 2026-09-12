@@ -34,7 +34,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'religion', label: 'Religion', note: 'Glaubenswelten, Gottheiten und Überlieferungen', icon: 'Religion.png', href: '../Religionen/index.html' },
   { key: 'stammbaeume', label: 'Stammbäume', note: 'Familienregister der Häuser', icon: 'Stammbäume.png', href: '../Stammbäume/register.html' },
   { key: 'sternzeichen', label: 'Sternzeichen', icon: 'Sternzeichen.png' },
-  { key: 'zauber', label: 'Zauber', icon: 'Zauber.png' },
+  { key: 'zauber', label: 'Magie', icon: 'Zauber.png', note: 'Schulen, Druidenkunst und göttliche Bindungen', href: '../Magie/index.html' },
   { key: 'zeitstrahl', label: 'Zeitstrahl', icon: 'Zeitstrahl.png' }
 ];
 

@@ -1,0 +1,22 @@
+{
+  "tool": "Built-in image_gen",
+  "style": "Eigene Symbole für sakrale und infernale Magie im Oblivion-Stil",
+  "images": [
+    {
+      "file": "sakrale-magie.png",
+      "name": "Sakrale Magie",
+      "prompt": "Create an original Sakrale Magie magic-path icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: two ivory wings curving upward around a small radiant golden sun, with one thin gold halo above. A simple unified emblem of a divine blessing, warm gold and pearl highlights. Keep the emblem bold and readable at small icon size, with no lettering. Isolated emblem on transparent background.",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ]
+    },
+    {
+      "file": "infernale-magie.png",
+      "name": "Infernale Magie",
+      "prompt": "Create an original Infernale Magie magic-path icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: a bold crimson flame between two upward-curving ivory horns, joined at the base by one antique bronze chain link. A compact infernal pact seal, deep garnet red and amber fire. Keep the emblem bold and readable at small icon size, with no lettering. Isolated emblem on transparent background.",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ]
+    }
+  ]
+}

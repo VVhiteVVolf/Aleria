@@ -67,7 +67,8 @@ function ensureModuleSectionPath(sectionInput, options = {}) {
         key: prefix[prefix.length - 1],
         tab: section.tab,
         path: prefix,
-        desc: index === path.length - 1 ? section.desc : ''
+        desc: index === path.length - 1 ? section.desc : '',
+        iconUrl: index === path.length - 1 ? section.iconUrl : ''
       }, { updateDesc: options.updateDesc && index === path.length - 1 });
       created = created || result.created;
     });
@@ -169,177 +170,7 @@ function getModuleSectionManagerEntries() {
   });
 }
 
-function ensureModuleSectionManagerDialog() {
-  let overlay = document.getElementById('module-section-manager-overlay');
-  if (overlay) return overlay;
 
-  overlay = document.createElement('div');
-  overlay.id = 'module-section-manager-overlay';
-  overlay.className = 'module-section-manager-overlay';
-  overlay.setAttribute('role', 'dialog');
-  overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-hidden', 'true');
-  overlay.setAttribute('aria-labelledby', 'module-section-manager-title');
-  overlay.setAttribute('tabindex', '-1');
-  overlay.innerHTML = `
-    <div class="module-section-manager-card">
-      <div class="module-section-manager-head">
-        <div>
-          <div class="module-section-manager-kicker">Archivstruktur</div>
-          <h2 id="module-section-manager-title">Reiter und Modulpositionen</h2>
-        </div>
-        <button class="module-section-manager-close" type="button" data-section-manager-action="close" aria-label="Verwaltung schliessen">×</button>
-      </div>
-      <div class="module-section-manager-body">
-        <section class="module-section-manager-panel">
-          <div class="module-section-manager-panel-head">
-            <h3>Bereich anlegen</h3>
-            <span id="module-section-manager-status" class="module-section-manager-status" role="status"></span>
-          </div>
-          <div class="module-section-manager-form">
-            <fieldset class="module-section-manager-mode" aria-label="Art des neuen Bereichs">
-              <label>
-                <input type="radio" name="msm-create-mode" value="root" data-section-manager-action="set-create-mode">
-                <span>Hauptreiter</span>
-                <small>Neue oberste Kategorie wie Sport, Kultur oder Schiffe.</small>
-              </label>
-              <label>
-                <input type="radio" name="msm-create-mode" value="child" data-section-manager-action="set-create-mode">
-                <span>Unterreiter</span>
-                <small>Bereich innerhalb eines bestehenden Hauptreiters.</small>
-              </label>
-            </fieldset>
-            <label>
-              <span>Hauptreiter</span>
-              <input id="msm-tab" type="text" list="msm-tab-options" placeholder="z.B. Völker & Kulturen" data-section-manager-field="tab">
-              <datalist id="msm-tab-options"></datalist>
-            </label>
-            <label>
-              <span>Pfad</span>
-              <input id="msm-path" type="text" placeholder="Cenyr > Celtigerns Wacht > Gwynthor > Castell Draig" data-section-manager-field="path">
-            </label>
-            <label class="wide">
-              <span>Beschreibung</span>
-              <input id="msm-desc" type="text" placeholder="Kurze Beschreibung für die Bereichsüberschrift" data-section-manager-field="desc">
-            </label>
-            <label class="wide">
-              <span>Icon URL / Pfad</span>
-              <span class="module-section-icon-picker-row">
-                <input id="msm-icon" type="text" placeholder="../IconOrdner/ReiterIcons/Markt.png oder https://i.imgur.com/..." data-section-manager-field="icon">
-                <button type="button" data-section-manager-action="open-icon-directory">Aus Liste wählen</button>
-              </span>
-            </label>
-            <div class="module-section-manager-actions">
-              <button type="button" data-section-manager-action="clear-form">Leeren</button>
-              <button type="button" class="primary" data-section-manager-action="save-section">Bereich speichern</button>
-            </div>
-          </div>
-        </section>
-
-        <section class="module-section-manager-panel">
-          <div class="module-section-manager-panel-head">
-            <h3>Bestehende Bereiche</h3>
-            <input id="msm-section-filter" type="search" placeholder="Reiter filtern" data-section-manager-field="section-filter">
-            <span id="msm-section-count"></span>
-          </div>
-          <div class="module-section-manager-tree-actions">
-            <button type="button" data-section-manager-action="expand-all-sections">Alle ausklappen</button>
-            <button type="button" data-section-manager-action="collapse-all-sections">Alle einklappen</button>
-          </div>
-          <div id="msm-section-list" class="module-section-manager-section-list"></div>
-        </section>
-
-        <section class="module-section-manager-panel module-section-import-panel">
-          <div class="module-section-manager-panel-head">
-            <h3>Modul direkt einfuegen</h3>
-            <span>Importiertes Modul sofort einsortieren</span>
-          </div>
-          <div class="module-section-manager-form">
-            <label>
-              <span>Zielbereich</span>
-              <select id="msm-import-target"></select>
-            </label>
-            <label>
-              <span>Neuer Titel optional</span>
-              <input id="msm-import-title" type="text" placeholder="Leer lassen = Titel aus Datei">
-            </label>
-            <label>
-              <span>Neue Modul-ID optional</span>
-              <input id="msm-import-id" type="text" placeholder="Leer lassen = ID aus Datei">
-            </label>
-            <label>
-              <span>Moduldatei</span>
-              <input id="msm-module-import-file" type="file" accept=".json,application/json" data-section-manager-action="import-module-file">
-            </label>
-            <div class="module-section-manager-help">
-              Einzelne Modul-Exports und Modulpakete werden direkt gespeichert. Titel und ID koennen leer bleiben, wenn der Export wirklich ersetzt werden soll.
-            </div>
-          </div>
-        </section>
-
-        <section class="module-section-manager-panel module-section-editor-panel" data-section-editor-panel hidden>
-          <div class="module-section-manager-panel-head">
-            <h3>Reiter bearbeiten</h3>
-            <button class="module-section-editor-close" type="button" data-section-manager-action="close-section-editor">Schliessen</button>
-          </div>
-          <div class="module-section-editor-summary" data-section-editor-summary></div>
-          <div class="module-section-editor-form">
-            <label>
-              <span>Reitername</span>
-              <input id="msm-edit-title" type="text" data-section-editor-field="title">
-            </label>
-            <label>
-              <span>Beschreibung</span>
-              <input id="msm-edit-desc" type="text" data-section-editor-field="desc">
-            </label>
-            <label>
-              <span>Icon URL / Pfad</span>
-              <span class="module-section-icon-picker-row">
-                <input id="msm-edit-icon" type="text" placeholder="../IconOrdner/... oder https://i.imgur.com/..." data-section-editor-field="icon">
-                <button type="button" data-section-manager-action="open-icon-directory">Aus Liste wählen</button>
-              </span>
-            </label>
-            <label>
-              <span>Unterreiter</span>
-              <input id="msm-edit-child-title" type="text" placeholder="z.B. Baronien" data-section-editor-field="child-title">
-            </label>
-            <label>
-              <span>Verschieben unter</span>
-              <select id="msm-edit-parent" class="module-section-manager-parent-select" data-section-manager-action="move-section-editor"></select>
-            </label>
-          </div>
-          <div class="module-section-editor-actions">
-            <button type="button" class="primary" data-section-manager-action="save-section-editor">Speichern</button>
-            <button type="button" data-section-manager-action="create-child-from-editor">Unterreiter anlegen</button>
-            <button type="button" class="danger" data-section-manager-action="release-section-editor">Reiter loesen</button>
-          </div>
-        </section>
-
-        <section class="module-section-manager-panel wide">
-          <div class="module-section-manager-panel-head">
-            <h3>Module verschieben</h3>
-            <input id="msm-module-filter" type="search" placeholder="Module filtern" data-section-manager-field="filter">
-          </div>
-          <div class="module-section-manager-bulk-row">
-            <label class="module-section-manager-select-all">
-              <input type="checkbox" id="msm-module-select-all">
-              <span>Sichtbare auswählen</span>
-            </label>
-            <div id="msm-module-bulk-bar" class="module-section-manager-bulk-bar" hidden>
-              <span id="msm-module-bulk-count"></span>
-              <select id="msm-module-bulk-target" aria-label="Zielbereich für Auswahl"></select>
-              <button type="button" data-section-manager-action="bulk-move-modules">Verschieben</button>
-              <button type="button" class="danger" data-section-manager-action="bulk-delete-modules">Löschen</button>
-              <button type="button" data-section-manager-action="clear-module-selection">Auswahl aufheben</button>
-            </div>
-          </div>
-          <div id="msm-module-list" class="module-section-manager-module-list"></div>
-        </section>
-      </div>
-    </div>`;
-  document.body.appendChild(overlay);
-  return overlay;
-}
 
 function normalizeModuleSectionCreateMode(mode) {
   return mode === 'root' ? 'root' : 'child';
@@ -408,12 +239,13 @@ function closeModuleSectionEditor() {
   _moduleSectionEditorMode = 'edit';
   const { panel } = getModuleSectionEditorElements();
   if (panel) panel.hidden = true;
+  if (moduleSectionManagerView.isEditing()) moduleSectionManagerView.showPanel('');
   renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
 }
 
 function renderModuleSectionEditor() {
   const { panel, summary, title, desc, icon, childTitle, parent } = getModuleSectionEditorElements();
-  if (!panel) return;
+  if (!panel || !moduleSectionManagerView.isEditing()) return;
 
   const section = getModuleSectionEditorSection();
   if (!section) {
@@ -424,7 +256,7 @@ function renderModuleSectionEditor() {
   const sections = sortModuleSectionsByHierarchy(getUniqueModuleSections());
   const signature = makeSectionSignature(section);
   const entryCount = findSectionBySignature(signature)?.entries?.length || 0;
-  const isVoid = signature === makeSectionSignature(getVoidModuleSection());
+  const isVoid = section.nodeId === getModulePathNodeId('Void', ['Geloeste Module']);
   const node = section.nodeId ? findModuleSectionNodeById(section.nodeId) : null;
   const isRootNode = section.nodeId && !String(node?.parentId || '').trim();
 
@@ -457,6 +289,8 @@ function renderModuleSectionEditor() {
     parent.innerHTML = buildModuleSectionParentOptions(section, sections);
     parent.disabled = Boolean(isVoid || !section.nodeId || isRootNode);
   }
+  const moveButton = panel.querySelector('[data-section-manager-action="apply-section-parent"]');
+  if (moveButton) moveButton.disabled = Boolean(parent?.disabled);
 
   const releaseButton = panel.querySelector('[data-section-manager-action="release-section-editor"]');
   if (releaseButton) releaseButton.disabled = isVoid;
@@ -470,6 +304,7 @@ function openModuleSectionEditor(signature, options = {}) {
   }
   _moduleSectionEditorSignature = makeSectionSignature(section);
   _moduleSectionEditorMode = options.mode === 'child' ? 'child' : 'edit';
+  moduleSectionManagerView.showPanel('edit');
   renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
   renderModuleSectionEditor();
   const focusTarget = _moduleSectionEditorMode === 'child'
@@ -521,57 +356,7 @@ function setAllModuleSectionsCollapsed(collapsed) {
 }
 
 function renderModuleSectionManagerSections(sections) {
-  const list = document.getElementById('msm-section-list');
-  const count = document.getElementById('msm-section-count');
-  if (!list) return;
-  const filterValue = document.getElementById('msm-section-filter')?.value || '';
-  const needle = normalizeSearchText(filterValue);
-  const parentNodeIds = getModuleSectionParentNodeIds(sections);
-  const visible = sections.filter(section => {
-    if (needle) {
-      const haystack = normalizeSearchText([getSectionLeafLabel(section), getSectionOptionLabel(section)].filter(Boolean).join(' '));
-      return haystack.includes(needle);
-    }
-    const ancestorIds = section.nodeId ? getModuleNodeAncestors(section.nodeId).map(ancestor => ancestor.id) : [];
-    return !ancestorIds.some(id => _collapsedModuleSectionNodeIds.has(id));
-  });
-  if (count) count.textContent = needle ? `${visible.length} von ${sections.length} Bereichen` : `${sections.length} Bereiche`;
-  list.innerHTML = visible.map(section => {
-    const signature = makeSectionSignature(section);
-    const entryCount = findSectionBySignature(signature)?.entries?.length || 0;
-    const path = getSectionPathLabel(section);
-    const depth = Math.min(section.nodeId ? getModuleNodeAncestors(section.nodeId).length + 1 : getSectionPathParts(section).length, 6);
-    const isVoid = makeSectionSignature(section) === makeSectionSignature(getVoidModuleSection());
-    const isRootNode = section.nodeId && !String(findModuleSectionNodeById(section.nodeId)?.parentId || '').trim();
-    const isSelected = signature === _moduleSectionEditorSignature;
-    const iconSrc = sanitizeImageSrc(section.iconUrl || findModuleSectionNodeById(section.nodeId)?.iconUrl || '');
-    const hasChildren = !!(section.nodeId && parentNodeIds.has(section.nodeId));
-    const collapsed = hasChildren && isModuleSectionNodeCollapsed(section.nodeId);
-    const toggleHtml = hasChildren
-      ? `<button class="module-section-manager-collapse-btn" type="button" data-section-manager-action="toggle-section-collapse" data-node-id="${escapeHtml(section.nodeId)}" aria-expanded="${collapsed ? 'false' : 'true'}" aria-label="${collapsed ? 'Unterreiter einblenden' : 'Unterreiter ausblenden'}">${collapsed ? '▸' : '▾'}</button>`
-      : `<span class="module-section-manager-collapse-spacer" aria-hidden="true"></span>`;
-    return `
-      <div class="module-section-manager-section-row${isSelected ? ' is-selected' : ''}" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
-        ${toggleHtml}
-        <button class="module-section-manager-section-main" type="button" data-section-manager-action="prefill-section" data-section-signature="${escapeHtml(signature)}">
-          <span class="module-section-manager-section-icon${iconSrc ? '' : ' empty'}">
-            ${iconSrc ? `<img src="${iconSrc}" alt="" loading="lazy" decoding="async">` : ''}
-          </span>
-          <span>
-            <strong>${escapeHtml(getSectionLeafLabel(section))}</strong>
-            <small>${escapeHtml(path ? `${section.tab || section.key} > ${path}` : getSectionOptionLabel(section))}</small>
-          </span>
-          <em>${entryCount} Module</em>
-        </button>
-        <div class="module-section-manager-row-actions">
-          <button class="module-section-manager-icon-btn" type="button" data-section-manager-action="create-child-section" data-section-signature="${escapeHtml(signature)}" title="Unterreiter anlegen" aria-label="Unterreiter anlegen">+</button>
-          <button class="module-section-manager-icon-btn danger" type="button" data-section-manager-action="release-section" data-section-signature="${escapeHtml(signature)}"${isVoid ? ' disabled' : ''} title="Reiter loesen" aria-label="Reiter loesen">-</button>
-          <select class="module-section-manager-parent-select" data-section-manager-action="move-section" data-section-signature="${escapeHtml(signature)}" aria-label="${escapeHtml(getSectionLeafLabel(section))} verschieben"${isVoid || !section.nodeId || isRootNode ? ' disabled' : ''}>
-            ${buildModuleSectionParentOptions(section, sections)}
-          </select>
-        </div>
-      </div>`;
-  }).join('') || '<div class="module-section-manager-empty">Keine Bereiche gefunden.</div>';
+  moduleSectionManagerView.renderSections(sections);
 }
 
 function getDefaultModuleImportTargetSignature(sections) {
@@ -595,16 +380,7 @@ function renderModuleSectionManagerImportTarget(sections) {
 }
 
 function getVisibleModuleSectionManagerEntries(entries, filterValue = '') {
-  const needle = normalizeSearchText(filterValue);
-  return entries.filter(item => {
-    if (!needle) return true;
-    return normalizeSearchText([
-      item.entry?.title,
-      item.entry?.type,
-      item.entry?.category,
-      getSectionOptionLabel(item.section)
-    ].filter(Boolean).join(' ')).includes(needle);
-  });
+  return moduleSectionManagerView.visibleEntries(entries, filterValue);
 }
 
 function pruneModuleSectionManagerSelection(entries) {
@@ -615,51 +391,11 @@ function pruneModuleSectionManagerSelection(entries) {
 }
 
 function renderModuleSectionManagerBulkBar(visibleEntries) {
-  const bar = document.getElementById('msm-module-bulk-bar');
-  const countEl = document.getElementById('msm-module-bulk-count');
-  const targetSelect = document.getElementById('msm-module-bulk-target');
-  const selectAll = document.getElementById('msm-module-select-all');
-  const selectedCount = _selectedModuleSectionManagerIds.size;
-  if (bar) bar.hidden = selectedCount === 0;
-  if (countEl) countEl.textContent = `${selectedCount} ausgewählt`;
-  if (targetSelect) {
-    const previous = targetSelect.value;
-    targetSelect.innerHTML = buildModuleSectionTargetOptions(previous);
-    if (previous) targetSelect.value = previous;
-  }
-  if (selectAll) {
-    const visibleIds = visibleEntries.map(item => String(item.entry?.id || '')).filter(Boolean);
-    const allSelected = visibleIds.length > 0 && visibleIds.every(id => _selectedModuleSectionManagerIds.has(id));
-    selectAll.checked = allSelected;
-    selectAll.indeterminate = !allSelected && visibleIds.some(id => _selectedModuleSectionManagerIds.has(id));
-  }
+  moduleSectionManagerView.renderBulkBar(visibleEntries);
 }
 
 function renderModuleSectionManagerModules(entries, filterValue = '') {
-  const list = document.getElementById('msm-module-list');
-  if (!list) return;
-  pruneModuleSectionManagerSelection(entries);
-  const visible = getVisibleModuleSectionManagerEntries(entries, filterValue);
-  list.innerHTML = visible.map(item => {
-    const entryId = String(item.entry?.id || '');
-    const checked = entryId && _selectedModuleSectionManagerIds.has(entryId);
-    return `
-    <div class="module-section-manager-module-row">
-      <label class="module-section-manager-module-select">
-        <input type="checkbox" data-section-manager-action="select-module" data-entry-id="${escapeHtml(entryId)}"${checked ? ' checked' : ''} aria-label="${escapeHtml(item.entry?.title || 'Modul')} auswählen">
-      </label>
-      <div class="module-section-manager-module-main">
-        <strong>${escapeHtml(item.entry?.title || item.entry?.id || 'Unbenanntes Modul')}</strong>
-        <span>${escapeHtml(getSectionOptionLabel(item.section))}</span>
-      </div>
-      <select data-section-manager-action="move-module" data-entry-id="${escapeHtml(entryId)}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} verschieben">
-        ${buildModuleSectionTargetOptions(item.sectionSignature)}
-      </select>
-      <button class="module-section-manager-delete-btn" type="button" data-section-manager-action="delete-module" data-entry-id="${escapeHtml(entryId)}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} loeschen">Loeschen</button>
-    </div>
-  `;
-  }).join('') || '<div class="module-section-manager-empty">Keine Module gefunden.</div>';
-  renderModuleSectionManagerBulkBar(visible);
+  moduleSectionManagerView.renderModules(entries, filterValue);
 }
 
 function bulkMoveModuleSectionManagerSelection() {
@@ -682,7 +418,7 @@ function bulkMoveModuleSectionManagerSelection() {
   renderAll();
   renderModuleSectionManager();
   setModuleSectionManagerStatus(
-    movedCount ? `${movedCount} Module verschoben.` : 'Keine Module wurden verschoben.',
+    movedCount ? `${movedCount} ${movedCount === 1 ? 'Modul' : 'Module'} verschoben.` : 'Keine Module wurden verschoben.',
     movedCount ? 'success' : 'info'
   );
 }
@@ -718,6 +454,7 @@ function renderModuleSectionManager() {
   const sections = sortModuleSectionsByHierarchy(getUniqueModuleSections());
   const entries = getModuleSectionManagerEntries();
   const filter = document.getElementById('msm-module-filter')?.value || '';
+  moduleSectionManagerView.refresh(sections, entries);
   renderModuleSectionManagerTabs(sections);
   renderModuleSectionManagerSections(sections);
   renderModuleSectionManagerImportTarget(sections);
@@ -731,6 +468,8 @@ function openModuleSectionManager(options = {}) {
     saveModuleStore();
     renderAll();
   }
+  closeModuleSectionEditor();
+  moduleSectionManagerView.reset();
   const createMode = normalizeModuleSectionCreateMode(options.createMode || _moduleSectionCreateMode);
   setModuleSectionCreateMode(createMode);
   _selectedModuleSectionManagerIds.clear();
@@ -738,7 +477,8 @@ function openModuleSectionManager(options = {}) {
   if (sectionFilter) sectionFilter.value = '';
   renderModuleSectionManager();
   clearModuleSectionManagerForm({ mode: createMode });
-  activateDialog('module-section-manager-overlay', { initialFocus: '#msm-tab' });
+  activateDialog('module-section-manager-overlay', { initialFocus: options.createMode ? '#msm-tab' : '#msm-module-filter' });
+  if (options.createMode) moduleSectionManagerView.showPanel('create', '#msm-tab');
 }
 
 function closeModuleSectionManager() {
@@ -1129,6 +869,10 @@ function handleModuleSectionManagerClick(event) {
   if (!trigger) return;
   const action = trigger.dataset.sectionManagerAction;
   if (!trigger.closest('#module-section-manager-overlay')) return;
+  if (moduleSectionManagerView.handleClick(action, trigger)) {
+    event.preventDefault();
+    return;
+  }
 
   if (action === 'close') {
     event.preventDefault();
@@ -1232,6 +976,8 @@ function handleModuleSectionManagerClick(event) {
 }
 
 function handleModuleSectionManagerChange(event) {
+  if (!event.target?.closest?.('#module-section-manager-overlay')) return;
+  if (moduleSectionManagerView.handleChange(event.target)) return;
   const importFileTrigger = event.target?.closest?.('[data-section-manager-action="import-module-file"]');
   if (importFileTrigger?.closest?.('#module-section-manager-overlay')) {
     handleModuleSectionManagerModuleImport(importFileTrigger);
@@ -1268,7 +1014,11 @@ function handleModuleSectionManagerChange(event) {
     }
     const entries = getModuleSectionManagerEntries();
     const filterValue = document.getElementById('msm-module-filter')?.value || '';
-    renderModuleSectionManagerBulkBar(getVisibleModuleSectionManagerEntries(entries, filterValue));
+    if (moduleSectionManagerView.isSelectedOnly()) renderModuleSectionManagerModules(entries, filterValue);
+    else {
+      selectTrigger.closest('[data-module-row]')?.classList.toggle('is-selected', selectTrigger.checked);
+      renderModuleSectionManagerBulkBar(getVisibleModuleSectionManagerEntries(entries, filterValue));
+    }
     return;
   }
   const trigger = event.target?.closest?.('[data-section-manager-action="move-module"]');
@@ -1292,7 +1042,8 @@ function handleModuleSectionIconSelected(event) {
   const iconUrl = String(event.detail?.src || '').trim();
   if (!iconUrl) return;
   const overlay = document.getElementById('module-section-manager-overlay');
-  const editorPanel = document.querySelector('[data-section-editor-panel]');
+  if (!overlay?.classList.contains('active')) return;
+  const editorPanel = overlay.querySelector('[data-section-editor-panel]');
   const editorActive = overlay?.classList.contains('active') && editorPanel && !editorPanel.hidden && _moduleSectionEditorSignature;
   const target = editorActive
     ? document.getElementById('msm-edit-icon')
@@ -1308,7 +1059,4 @@ function handleModuleSectionIconSelected(event) {
   );
 }
 
-document.addEventListener('click', handleModuleSectionManagerClick);
-document.addEventListener('change', handleModuleSectionManagerChange);
-document.addEventListener('input', handleModuleSectionManagerInput);
 document.addEventListener('almanach-icon-selected', handleModuleSectionIconSelected);

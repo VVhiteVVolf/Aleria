@@ -1,0 +1,104 @@
+{
+  "tool": "Built-in image_gen",
+  "style": "Eigene Symbole im Oblivion-Stil",
+  "images": [
+    {
+      "file": "elemente.png",
+      "name": "Elemente",
+      "prompt": "Create exactly ONE original small fantasy spell-school icon for the Aleria encyclopedia, in the visual tradition of the hand-painted spell UI icons from The Elder Scrolls IV: Oblivion. STYLE references are the provided existing icons, not edit targets: match their simple colored central glyphs, expressive deep warm sepia contours, ivory highlights, muted jewel-colored fills, and irregular antique copper curved bracket/ring surrounding the glyph with a tapered ornamental tip. Invent new artwork, do not copy a reference emblem. Compact strong silhouette that remains readable at 56 pixels. Gently hand-painted flat icon, slight pigment texture, restrained dimensional highlights. One single emblem centered, no square plaque, no parchment, no background disc, no text, no letters, no numbers, no watermark, no elaborate scene, no realistic lighting, no neon glow. Genuinely transparent alpha background including outside the emblem and open spaces inside; not a checkerboard painting. Subject occupies about 84 percent of a square image with clean transparent padding. Subject: A four-part elemental wheel: one red flame, one pale blue water curl, one ochre angular stone, one ivory lightning fork, fused into a SINGLE simple four-armed central glyph. Fiery red and storm blue accents.",
+      "styleReferences": [
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Shock.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Dispel.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Charm.png"
+      ]
+    },
+    {
+      "file": "restitution.png",
+      "name": "Restitution",
+      "prompt": "Create exactly ONE original small fantasy spell-school icon for the Aleria encyclopedia, in the visual tradition of the hand-painted spell UI icons from The Elder Scrolls IV: Oblivion. STYLE references are the provided existing icons, not edit targets: match their simple colored central glyphs, expressive deep warm sepia contours, ivory highlights, muted jewel-colored fills, and irregular antique copper curved bracket/ring surrounding the glyph with a tapered ornamental tip. Invent new artwork, do not copy a reference emblem. Compact strong silhouette that remains readable at 56 pixels. Gently hand-painted flat icon, slight pigment texture, restrained dimensional highlights. One single emblem centered, no square plaque, no parchment, no background disc, no text, no letters, no numbers, no watermark, no elaborate scene, no realistic lighting, no neon glow. Genuinely transparent alpha background including outside the emblem and open spaces inside; not a checkerboard painting. Subject occupies about 84 percent of a square image with clean transparent padding. Subject: Two open ivory hands curving around a small glowing crimson heart with one gold healing spark. The heart and hands form a single clean symmetric emblem. Warm coral red, pearl and gold.",
+      "styleReferences": [
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Shock.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Dispel.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Charm.png"
+      ]
+    },
+    {
+      "file": "verwandlung.png",
+      "name": "Verwandlung",
+      "prompt": "Create exactly ONE original small fantasy spell-school icon for the Aleria encyclopedia, in the visual tradition of the hand-painted spell UI icons from The Elder Scrolls IV: Oblivion. STYLE references are the provided existing icons, not edit targets: match their simple colored central glyphs, expressive deep warm sepia contours, ivory highlights, muted jewel-colored fills, and irregular antique copper curved bracket/ring surrounding the glyph with a tapered ornamental tip. Invent new artwork, do not copy a reference emblem. Compact strong silhouette that remains readable at 56 pixels. Gently hand-painted flat icon, slight pigment texture, restrained dimensional highlights. One single emblem centered, no square plaque, no parchment, no background disc, no text, no letters, no numbers, no watermark, no elaborate scene, no realistic lighting, no neon glow. Genuinely transparent alpha background including outside the emblem and open spaces inside; not a checkerboard painting. Subject occupies about 84 percent of a square image with clean transparent padding. Subject: A twisting spiral where one angular amber crystal changes fluidly into a turquoise feather-like wave, clear contrast of angular and flowing forms. One connected central transformation glyph. Amber and turquoise.",
+      "styleReferences": [
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Shock.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Dispel.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Charm.png"
+      ]
+    },
+    {
+      "file": "entzauberung.png",
+      "name": "Entzauberung",
+      "prompt": "Create exactly ONE original small fantasy spell-school icon for the Aleria encyclopedia, in the visual tradition of the hand-painted spell UI icons from The Elder Scrolls IV: Oblivion. STYLE references are the provided existing icons, not edit targets: match their simple colored central glyphs, expressive deep warm sepia contours, ivory highlights, muted jewel-colored fills, and irregular antique copper curved bracket/ring surrounding the glyph with a tapered ornamental tip. Invent new artwork, do not copy a reference emblem. Compact strong silhouette that remains readable at 56 pixels. Gently hand-painted flat icon, slight pigment texture, restrained dimensional highlights. One single emblem centered, no square plaque, no parchment, no background disc, no text, no letters, no numbers, no watermark, no elaborate scene, no realistic lighting, no neon glow. Genuinely transparent alpha background including outside the emblem and open spaces inside; not a checkerboard painting. Subject occupies about 84 percent of a square image with clean transparent padding. Subject: A bright ivory wedge of light splitting a sapphire ring-shaped magical knot; the ring's two broken ends visibly recoil. A clean single broken-binding symbol. Deep cobalt blue and ivory.",
+      "styleReferences": [
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Shock.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Dispel.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Charm.png"
+      ]
+    },
+    {
+      "file": "beschwoerung.png",
+      "name": "Beschwörung",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Beschwörung spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: A tall turquoise open portal arch with an ivory spectral hand emerging upward from its lower threshold, small amber summoning spark above palm. Strong single emblem, no character face. Teal and amber. Isolated emblem on transparent background."
+    },
+    {
+      "file": "illusion.png",
+      "name": "Illusion",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Illusion spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: One elegant mask silhouette split into an ivory visible face and a sapphire crescent reflection, slightly offset ghost contour conveying a mirage, no realistic portrait. Cobalt blue and pearl. Isolated emblem on transparent background."
+    },
+    {
+      "file": "verzauberung.png",
+      "name": "Verzauberung",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Verzauberung spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: An upright ivory sword blade with a tiny glowing amber diamond bound at its center by one curving cobalt rune-ribbon. Single concise enchanted-object glyph, antique bronze accents. Isolated emblem on transparent background."
+    },
+    {
+      "file": "schwarze-magie.png",
+      "name": "Schwarze Magie",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Schwarze Magie spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: A withered ivory thorn-branch curling around a dark crimson drop of life force, a dusky violet crescent behind it. Dark draining curse symbol, no gore, no skull face. Garnet and muted violet. Isolated emblem on transparent background."
+    },
+    {
+      "file": "toene.png",
+      "name": "Töne",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Töne spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: Three ivory curved resonance waves flowing from a small antique gold tuning-fork-like stem, arranged as a rhythmic spiral. A clear sound and music emblem, not a modern musical-note logo. Muted teal and gold. Isolated emblem on transparent background."
+    },
+    {
+      "file": "erkenntnis.png",
+      "name": "Erkenntnis",
+      "prompt": "Create exactly ONE original small fantasy spell-school icon for the Aleria encyclopedia, in the visual tradition of the hand-painted spell UI icons from The Elder Scrolls IV: Oblivion. STYLE references are the provided existing icons, not edit targets: match their simple colored central glyphs, expressive deep warm sepia contours, ivory highlights, muted jewel-colored fills, and irregular antique copper curved bracket/ring surrounding the glyph with a tapered ornamental tip. Invent new artwork, do not copy a reference emblem. Compact strong silhouette that remains readable at 56 pixels. Gently hand-painted flat icon, slight pigment texture, restrained dimensional highlights. One single emblem centered, no square plaque, no parchment, no background disc, no text, no letters, no numbers, no watermark, no elaborate scene, no realistic lighting, no neon glow. Genuinely transparent alpha background including outside the emblem and open spaces inside; not a checkerboard painting. Subject occupies about 84 percent of a square image with clean transparent padding. Subject: An ivory open eye with a golden four-pointed star instead of a pupil, framed by one deep sapphire crescent arc. Readable insight and perception symbol. Sapphire and luminous gold.",
+      "styleReferences": [
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Shock.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Dispel.png",
+        "IconOrdner/Zauber Icons/Oblivion Style/OB-icon-Charm.png"
+      ]
+    },
+    {
+      "file": "bezauberung.png",
+      "name": "Bezauberung",
+      "styleReferences": [
+        "Magie/assets/schools/entzauberung.png"
+      ],
+      "prompt": "Create an original Bezauberung spell-school icon matching the painted Oblivion-style bronze frame of the reference. Replace its central glyph with: An ivory human head profile with a small crimson heart inside the forehead, embraced by one gentle teal spiral entering at the temple. Symbol of feeling and will, not an object enchantment. Soft crimson and turquoise. Isolated emblem on transparent background."
+    }
+  ]
+}

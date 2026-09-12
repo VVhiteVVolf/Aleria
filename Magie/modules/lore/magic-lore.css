@@ -1,0 +1,63 @@
+.magic-prose { font-size: 15px; line-height: 1.9; }
+.magic-prose p + p { margin-top: 16px; }
+.magic-lead { font-size: 20px; line-height: 1.65; margin-bottom: 16px; }
+.magic-note { padding: 21px 25px; border-left: 3px solid var(--magic-gold); background: #dfcda629; margin-block: 25px; font-size: 14px; }
+.magic-note .magic-eyebrow { margin-bottom: 8px; display: block; }
+.magic-margin-note { margin-top: 20px; color: var(--magic-muted); font-style: italic; font-size: 13px; }
+.magic-foundation { display: grid; grid-template-columns: 160px minmax(0, 1fr); align-items: center; gap: 28px; padding: 24px; border: 1px solid var(--magic-line); background: #d9e0cc35; margin-bottom: 22px; }
+.magic-foundation > img { width: 160px; height: 160px; border: 1px solid #b4945e; }
+.magic-foundation h3 { font-size: 30px; margin: 5px 0 14px; }
+.magic-foundation p:not(.magic-eyebrow) { font-size: 14px; line-height: 1.8; }
+.magic-bound { background: #ddc8b12e; }
+.magic-related { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 0; margin-top: 18px; border-bottom: 1px solid var(--magic-line); font-size: 12px; text-decoration: none; }
+.magic-related:hover { text-decoration: underline; }
+.magic-lore-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 30px; margin-top: 22px; }
+.magic-lore-grid article { border-top: 1px solid var(--magic-line); padding-top: 19px; }
+.magic-lore-grid h3 { margin: 5px 0 14px; font-size: 25px; }
+.magic-lore-grid p:not(.magic-eyebrow) { font-size: 14px; }
+.magic-lore-grid p + p { margin-top: 12px; }
+.magic-alphabet { margin-top: 28px; border-block: 3px double var(--magic-line); padding: 26px 0; }
+.magic-alphabet h3 { font-size: 29px; margin: 6px 0 14px; }
+.magic-alphabet p:not(.magic-eyebrow) { font-size: 14px; margin-bottom: 12px; }
+.magic-alphabet a { font-size: 12px; }
+.magic-gems { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; padding-top: 29px; }
+.magic-gems h3 { font-size: 28px; margin: 6px 0 14px; }
+.magic-gems p:not(.magic-eyebrow), .magic-gems dd { font-size: 14px; }
+.magic-gems p + p { margin-top: 12px; }
+.magic-gems dl { border-left: 1px solid var(--magic-line); padding-left: 25px; }
+.magic-gems dl > div + div { margin-top: 17px; }
+.magic-gems dt { color: var(--magic-gold); font-size: 20px; margin-bottom: 4px; }
+.magic-pact-list article { display: flex; gap: 22px; padding: 23px 0; border-bottom: 1px solid var(--magic-line); }
+.magic-pact-list article > span { color: var(--magic-gold); font-size: 25px; line-height: 1.2; }
+.magic-pact-list h3 { font-size: 26px; margin-bottom: 13px; }
+.magic-pact-list p { font-size: 14px; }
+.magic-effects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; margin-top: 25px; }
+.magic-effects > article { padding-top: 20px; border-top: 1px solid var(--magic-line); min-width: 0; }
+.magic-effects .magic-eyebrow { margin-bottom: 8px; }
+.magic-effects h3 { font-size: 22px; margin-bottom: 12px; }
+.magic-effects p { font-size: 14px; }
+.magic-effects p + p { margin-top: 14px; }
+.magic-effects > :first-child, .magic-effects .magic-elemental-effects { grid-column: 1 / -1; }
+.magic-element-types { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; margin-top: 22px; padding: 22px; background: #dfcda621; border: 1px solid var(--magic-line); }
+.magic-element-types dt { font-size: 19px; color: var(--magic-gold); margin-bottom: 7px; }
+.magic-element-types dd { font-size: 13px; line-height: 1.8; }
+.magic-closing { border-block: 3px double var(--magic-line); padding: 30px 10px; text-align: center; }
+.magic-closing > span { color: var(--magic-gold); font-size: 35px; }
+.magic-closing p { font-size: 22px; line-height: 1.65; margin: 8px 0 20px; }
+.magic-closing em { font-size: 17px; color: var(--magic-muted); }
+.magic-closing a { font-size: 11px; text-decoration: none; }
+@media (max-width: 1100px) and (min-width: 801px) {
+  .magic-foundation { grid-template-columns: 110px minmax(0, 1fr); gap: 20px; padding: 20px; }
+  .magic-foundation > img { width: 110px; height: 110px; }
+  .magic-foundation h3 { font-size: 25px; }
+}
+@media (max-width: 580px) {
+  .magic-foundation, .magic-lore-grid, .magic-gems, .magic-effects { grid-template-columns: 1fr; }
+  .magic-foundation { padding: 21px; gap: 18px; }
+  .magic-foundation > img { width: 110px; height: 110px; }
+  .magic-lead { font-size: 19px; }
+  .magic-note { padding: 19px; }
+  .magic-gems dl { padding-left: 18px; }
+  .magic-pact-list article { gap: 15px; }
+  .magic-element-types { grid-template-columns: 1fr; padding: 19px; }
+}

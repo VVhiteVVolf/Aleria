@@ -285,15 +285,21 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const section = { key: group.label, tab: group.label };
     const entries = group.entries;
     const stats = getArchiveSectionStats(section, entries);
+    const href = group.label === 'Magie' ? '../Magie/index.html' : '';
+    const tag = href ? 'a' : 'button';
+    const action = href
+      ? `href="${escapeHtml(href)}"`
+      : `type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(group.label)}"`;
+    const description = href ? 'Schulen, Druidenkunst & göttliche Magie' : `${stats.moduleCount} Module · ${stats.pageCount} Seiten`;
     return `
-      <button class="archive-dashboard-section" type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(group.label)}" data-section-theme="${escapeHtml(group.theme.slug)}">
+      <${tag} class="archive-dashboard-section" ${action} data-section-theme="${escapeHtml(group.theme.slug)}">
         ${group.iconUrl ? `<img class="archive-dashboard-section-icon" src="${escapeHtml(group.iconUrl)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-section-mark" aria-hidden="true">✦</span>'}
         <span class="archive-dashboard-section-copy">
           <span class="archive-dashboard-section-name">${escapeHtml(group.label)}</span>
-          <span class="archive-dashboard-section-meta">${stats.moduleCount} Module &middot; ${stats.pageCount} Seiten</span>
+          <span class="archive-dashboard-section-meta">${escapeHtml(description)}</span>
         </span>
         <span class="archive-dashboard-section-arrow" aria-hidden="true">→</span>
-      </button>`;
+      </${tag}>`;
   }).join('');
 }
 

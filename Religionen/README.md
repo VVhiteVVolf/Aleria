@@ -26,7 +26,7 @@ Eigenständiger, statischer Codex unter `Religionen/index.html`, erreichbar übe
 - `scripts/build-religions.mjs`: erzeugt Hauptseite und lokale Profile aus demselben Register, das Vite verwendet.
 - `assets/symbols`: lokale Symbole der gelieferten Vorlage, vollständig und ohne Beschnitt. Verlustfreies WebP erhält die originalen RGBA-Pixel; Quellen, Original-Hashes und Maße stehen in `assets/sources.json`.
 - `assets/divine-art`: 19 unveränderte Glasmalerei-Porträts aus den gelieferten Einzelprofilen; Herkunft, Maße und Hashes in `sources.json`. Die farbigen Göttersymbole werden direkt aus `BilderRüstungen/<id>_icon.png` gelesen.
-- `assets/infernal-symbols`: 23 auf Nutzerwunsch selbst gestaltete farbige SVG-Zeichen für Infernus und seine 22 Einträge; Motive und Herkunft stehen in `sources.json`.
+- `assets/infernal-icons`: 23 einzeln generierte, transparente Icons für Infernus und seine 22 Einträge, in mattem Gold-Ocker mit dunklen Konturen passend zu den celestialen Göttersymbolen. Prompts und Stilreferenzen stehen in `image-prompts.json`. Auch die infernalen Magie-Domänen verwenden diese Dateien über die Religionsdaten. Die früheren SVG-Entwürfe in `assets/infernal-symbols` sind nicht mehr eingebunden.
 - `assets/infernal-art`: 22 unveränderte Bildnisse und sieben Artefaktbilder aus den Infernus-Vorlagen, mit lokalen Quellen, Bildmaßen und Hashes.
 - `tests`: Inhaltsintegrität, Verweise, Suche und reproduzierbare Seitenerzeugung.
 

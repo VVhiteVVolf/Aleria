@@ -112,5 +112,5 @@ test('Vite and the Almanach register resolve the new generated pages', () => {
   assert.match(html, /href="\.\.\/Religionen\/index.html"/);
   assert(!html.includes('aria-disabled'));
   const shell = readFileSync(resolve(workspace, 'AleriaAlmanach/AleriaAlmanach.html'), 'utf8');
-  assert.match(shell, /sidebar-registers\.js\?v=20260910-religions-v1/);
+  assert.match(shell, /sidebar-registers\.js\?v=[^"\s]+/);
 });

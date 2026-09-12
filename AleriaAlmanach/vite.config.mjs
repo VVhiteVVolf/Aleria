@@ -112,6 +112,7 @@ export default defineConfig({
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
+        magie: resolve(workspaceRoot, 'Magie/index.html'),
         ...getReligionPageInputs(),
         ...getClergyPageInputs(),
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),

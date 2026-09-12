@@ -30,7 +30,9 @@ Eindeutige Vorlagenreste wurden an die bestehende Aleria-Namensgebung angepasst:
 
 ## Bilder und eigene Zeichen
 
-Auf ausdrücklichen Nutzerwunsch wurden **23 farbige SVG-Zeichen** gezeichnet: je eines für die 22 Registereinträge und eines für Infernus. Sie verwenden eigenständige Motive in Bronze, Gold und gedeckten Farben. Sie sind redaktionelle Illustrationen für das Verzeichnis; die schwarzen Vorlagensymbole wurden nicht übernommen. Motive und Farben stehen in `assets/infernal-symbols/sources.json`.
+Die früheren SVG-Zeichen wurden auf ausdrücklichen Nutzerwunsch durch **23 einzeln generierte, transparente PNG-Icons** ersetzt: je eines für die 22 Registereinträge und eines für Infernus. Die eigenen Motive verwenden mattes Gold-Ocker, dunkle Sepiakonturen und eine feine Pigmentstruktur nach dem Vorbild der vorhandenen celestialen Icons von Ordan und Mariel. Dateien, vollständige Prompts und Stilreferenzen stehen in `assets/infernal-icons/image-prompts.json`; die Bilder stammen aus dem eingebauten Imagegen-Werkzeug. Die alten Entwürfe unter `assets/infernal-symbols` bleiben als historischer Bestand erhalten und sind nicht mehr eingebunden.
+
+Das `symbol`-Feld des jeweiligen Religionsdatensatzes ist die gemeinsame Bildquelle für Übersicht, Götterprofil und Magie-Domäne. Magie übernimmt die Symbole der zehn hohen Mächte und fünf Untergötter ohne Dateikopien. Geweihte und Gefallene erhalten ihre neuen Registericons, ohne ihnen zusätzliche magische Domänen zuzuschreiben.
 
 Die 22 gelieferten Bildnisse liegen unverändert unter `assets/infernal-art/`; die 17 Artikel zeigen sie groß und ohne Beschnitt. Die fünf übrigen Bildnisse sind direkt im Register erreichbar. `sources.json` hält Original-URL, lokalen Pfad, Maße und SHA-256 fest. Symbole und Artikelporträts bleiben getrennte Felder.
 
@@ -44,7 +46,7 @@ Sieben weitere Originalbilder liegen unter `assets/infernal-art/artefakte/`. Zar
 
 `artifacts` besitzt `intro` und `entries`. Jeder Eintrag braucht `id`, `title`, `paragraphs` sowie bei fehlendem Text eine `pending`-Angabe. Optional sind `keeper` und `image` mit `src`, `alt`, `width`, `height`. Validierung und Darstellung gehören zu `modules/profiles/profile-artifacts-*`. Bildlinks tragen `data-religion-image-link`, damit Vite sichtbares Bild und vollständige Datei gemeinsam verarbeitet.
 
-Der gemeinsame Generator und die bestehenden Vite-Einstiege erfassen die neue Sammlung automatisch. Vite gibt die eigenen SVG-Zeichen als wiederverwendbare Bilddateien aus. So werden sie über mehrere Seiten hinweg zwischengespeichert und XML-Textzeichen wie das `&` in Azrath & Morvath bleiben korrekt erhalten. Quelldaten und erzeugtes HTML werden zusammen gepflegt. Prüfung aus der Projektwurzel:
+Der gemeinsame Generator und die bestehenden Vite-Einstiege erfassen die Sammlung automatisch. Vite gibt die Icons als wiederverwendbare Bilddateien aus, die über mehrere Seiten hinweg zwischengespeichert werden. Quelldaten und erzeugtes HTML werden zusammen gepflegt. Prüfung aus der Projektwurzel:
 
 ```text
 node Religionen/scripts/build-religions.mjs
