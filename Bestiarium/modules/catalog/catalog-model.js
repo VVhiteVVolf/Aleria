@@ -4,7 +4,7 @@ export function normalizeSearch(value) {
 }
 
 export function matchesEntry(entry, query) {
-  const searchable = normalizeSearch([entry.title, entry.description, entry.note, entry.chapter, entry.group].join(' '));
+  const searchable = normalizeSearch([entry.title, entry.description, entry.note, entry.chapter, entry.group, ...(entry.searchTerms || [])].join(' '));
   return normalizeSearch(query).split(/\s+/).filter(Boolean).every(word => searchable.includes(word));
 }
 

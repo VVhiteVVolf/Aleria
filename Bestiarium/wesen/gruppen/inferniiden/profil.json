@@ -1,12 +1,12 @@
 {
   "id": "inferniiden",
   "name": "Inferniiden",
-  "classification": "Von Dagon und Sanguine geformte infernale Finsteralben, Dämonen und Teufel",
+  "classification": "Infernale Finsteralben, Dämonen und Teufel mit eigenen göttlichen Gefolgschaften",
   "continent": "Infernale Sphären",
-  "region": "Die Reiche Dagons und Sanguines",
+  "region": "Die Reiche Dagons, Sanguines und Maelachs",
   "folio": "IV / 04",
   "parentGroupId": "infernale-linien",
-  "summary": "Inferniiden sind eine mächtige Untergruppe der Finsteralben, deren Formen von gepeinigten Seelen und niederen Lemuren bis zu hohen Dagonaren, gestaltwandelnden Dienern Sanguines und den beinahe göttlichen Erzteufeln reichen. Ihre Ordnung folgt zwei deutlich getrennten Schöpferlinien.",
+  "summary": "Inferniiden umfassen Dagons Teufelshierarchie, Sanguines Dämonenlinie und Maelachs Gestaltendiebe. Ihre infernale Essenz verbindet diese Wesen, während Herkunft, Gefolgschaft und Wirken getrennt betrachtet werden: Herrschaft, Verführung und gestohlene Autorität bilden eigene Zweige.",
   "quote": "Frage bei einem Inferniiden nicht zuerst nach Hörnern oder Flammen; frage, wessen Wille durch seine Gestalt spricht.",
   "quoteAttribution": "Lehrsatz der Thalenorischen Akademie zur Infernalordnung",
   "icon": {
@@ -32,8 +32,8 @@
       "value": "Infernale Finsteralben, Dämonen und Teufel"
     },
     {
-      "label": "Schöpfer",
-      "value": "Dagon und Sanguine"
+      "label": "Göttliche Bezüge",
+      "value": "Dagon und Sanguine; Maelachs Umkreis der Gestaltendiebe"
     },
     {
       "label": "Ursprung",
@@ -49,7 +49,7 @@
     },
     {
       "label": "Sanguines Linie",
-      "value": "Erzdämonen, Inkubi, Sukkuben, Formwandler und niedere Diener"
+      "value": "Erzdämonen, Inkubi, Sukkuben und niedere Diener"
     },
     {
       "label": "Verhalten",
@@ -66,6 +66,10 @@
     {
       "label": "Schwächen",
       "value": "Sakrale Magie, heilige Symbole und artgebundene Gegenmittel"
+    },
+    {
+      "label": "Maelachs Umkreis",
+      "value": "Formwandler als Diebe von Gestalt, Stimme und Ansehen"
     }
   ],
   "metrics": {
@@ -89,9 +93,9 @@
     "source": "Aus Schöpfung, Rangordnung, Gattungsbreite, infernaler Magie und den überlieferten sakralen Gegenmitteln abgeleitet"
   },
   "related": {
-    "eyebrow": "Zwei Schöpferlinien",
-    "title": "Dagons Teufel und Sanguines Dämonen",
-    "intro": "Die beiden Linien teilen einen infernalen Ursprung, besitzen aber eigene Fürsten, hohe Diener und niedere Gefolgschaften. Balors Sprösslinge bilden innerhalb Dagons Linie eine gesonderte Unterordnung.",
+    "eyebrow": "Drei göttliche Gefolgschaften",
+    "title": "Teufel, Dämonen und Gestaltendiebe",
+    "intro": "Dagons Teufel und Sanguines Dämonen besitzen eigene Fürsten, hohe Diener und niedere Gefolgschaften. Balors Sprösslinge stehen innerhalb Dagons Linie. Maelachs Formwandler bilden einen eigenen Zweig gestohlener Autorität.",
     "entries": [
       {
         "id": "erzteufel",
@@ -238,20 +242,6 @@
         }
       },
       {
-        "id": "formwandler",
-        "name": "Formwandler",
-        "region": "Hohe Diener Sanguines",
-        "description": "Doppler und Formlinge stehlen Erscheinungen, Rollen und Vertrauen, um Gemeinschaften von innen zu lenken.",
-        "status": "Dossier öffnen",
-        "href": "../../inferniiden/formwandler/index.html",
-        "image": {
-          "src": "../../../assets/inferniid-profiles/inferniiden-formwandler.webp",
-          "width": 408,
-          "height": 612,
-          "alt": "Formwandler vollständig sichtbar zwischen zwei angenommenen Gestalten"
-        }
-      },
-      {
         "id": "lustling",
         "name": "Lustling",
         "region": "Niedere Diener Sanguines",
@@ -277,6 +267,20 @@
           "width": 408,
           "height": 612,
           "alt": "Satyr vollständig sichtbar beim Spiel seiner Flöte"
+        }
+      },
+      {
+        "id": "formwandler",
+        "name": "Formwandler",
+        "region": "Maelachs Gestaltendiebe",
+        "description": "Gestaltendiebe aus Maelachs Umkreis, die mit den Gesichtern und Stimmen angesehener Menschen widersprüchliche Aussagen verbreiten.",
+        "status": "Dossier öffnen",
+        "href": "../../inferniiden/formwandler/index.html",
+        "image": {
+          "src": "../../../assets/inferniid-profiles/inferniiden-formwandler.webp",
+          "width": 408,
+          "height": 612,
+          "alt": "Formwandler vollständig sichtbar zwischen zwei angenommenen Gestalten"
         }
       }
     ],
@@ -347,10 +351,9 @@
           {
             "id": "hohe",
             "eyebrow": "Hohe Inferniiden",
-            "title": "Verführer & Formwandler",
+            "title": "Verführer",
             "entryIds": [
-              "sukkubus-inkubus",
-              "formwandler"
+              "sukkubus-inkubus"
             ]
           },
           {
@@ -360,6 +363,23 @@
             "entryIds": [
               "lustling",
               "satyr"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "maelach",
+        "theme": "neutral",
+        "eyebrow": "Gestohlene Autorität",
+        "title": "Maelachs Gestaltendiebe",
+        "intro": "Maelachs Formwandler missbrauchen vertraute Gesichter und Stimmen, um eine Gemeinschaft gegen ihre eigenen Mitglieder aufzubringen.",
+        "levels": [
+          {
+            "id": "gestaltendiebe",
+            "eyebrow": "Maelachs Umkreis",
+            "title": "Formwandler",
+            "entryIds": [
+              "formwandler"
             ]
           }
         ]
@@ -429,7 +449,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sanguines Erzdämonen stehen über Inkubi, Sukkuben und Formwandlern. Diese hohen Diener gewinnen durch Traum, Verführung, Identitätsraub und die genaue Kenntnis sterblicher Schwächen."
+          "text": "Sanguines Erzdämonen stehen über Inkubi und Sukkuben. Sie gewinnen durch Verführung und die Kenntnis sterblicher Schwächen. Die Formwandler werden Maelachs eigenem Umkreis zugeordnet und missbrauchen gestohlene Gestalten und Stimmen als angemaßte Autorität."
         },
         {
           "type": "paragraph",
@@ -467,5 +487,12 @@
       ]
     }
   ],
-  "plates": []
+  "plates": [],
+  "readingLinks": [
+    {
+      "label": "Maelach · Der Heuchler",
+      "href": "../../../../Religionen/gottheiten/infernale/untergoetter/maelach/index.html",
+      "note": "Herkunft, Wesenheit und göttliche Gefolgschaft."
+    }
+  ]
 }

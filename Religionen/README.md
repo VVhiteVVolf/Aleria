@@ -6,7 +6,7 @@ Eigenständiger, statischer Codex unter `Religionen/index.html`, erreichbar übe
 
 - `data/register.json`: Kapitel, Reihenfolge und Pfade zu den redaktionellen Einträgen. Keine zweite Kopie der Texte.
 - `data/goettlicher-kreis.json`: eigenes Verzeichnis der neun Göttlichen, fünf Souveräne und fünf Untergottheiten; über `collections` am Hauptregister angemeldet.
-- `data/infernaler-kreis.json`: zehn hohe Mächte, fünf Untergötter, zwei Geweihte und fünf Gefallene. 17 vollständige Profile und fünf Registereinträge; Pflege in [docs/INFERNALER_KREIS.md](docs/INFERNALER_KREIS.md).
+- `data/infernaler-kreis.json`: zehn hohe Mächte, neun Untergötter, zwei Geweihte und fünf Gefallene. 21 vollständige Profile und fünf Registereinträge; Pflege in [docs/INFERNALER_KREIS.md](docs/INFERNALER_KREIS.md).
 - `data/goettliche-lehre.json`: gemeinsame Lehre zu Sphäre, Eiden, Aspekten, Segen, Bünden und Übertretungen; über `sharedLoreSource` im Register eingebunden.
 - `heilige/register.json`: acht namentlich überlieferte Heilige, vorerst ohne Bilder und Einzelbiografien.
 - `klerus/`: neuer Alerischer Klerus mit sechs Kasten, Hierarchien, 19 Götterunterseiten und monastischen Zünften; Struktur und verbindliche Regeln in [klerus/README.md](klerus/README.md).
@@ -26,8 +26,8 @@ Eigenständiger, statischer Codex unter `Religionen/index.html`, erreichbar übe
 - `scripts/build-religions.mjs`: erzeugt Hauptseite und lokale Profile aus demselben Register, das Vite verwendet.
 - `assets/symbols`: lokale Symbole der gelieferten Vorlage, vollständig und ohne Beschnitt. Verlustfreies WebP erhält die originalen RGBA-Pixel; Quellen, Original-Hashes und Maße stehen in `assets/sources.json`.
 - `assets/divine-art`: 19 unveränderte Glasmalerei-Porträts aus den gelieferten Einzelprofilen; Herkunft, Maße und Hashes in `sources.json`. Die farbigen Göttersymbole werden direkt aus `BilderRüstungen/<id>_icon.png` gelesen.
-- `assets/infernal-icons`: 23 einzeln generierte, transparente Icons für Infernus und seine 22 Einträge, in mattem Gold-Ocker mit dunklen Konturen passend zu den celestialen Göttersymbolen. Prompts und Stilreferenzen stehen in `image-prompts.json`. Auch die infernalen Magie-Domänen verwenden diese Dateien über die Religionsdaten. Die früheren SVG-Entwürfe in `assets/infernal-symbols` sind nicht mehr eingebunden.
-- `assets/infernal-art`: 22 unveränderte Bildnisse und sieben Artefaktbilder aus den Infernus-Vorlagen, mit lokalen Quellen, Bildmaßen und Hashes.
+- `assets/infernal-icons`: 27 einzeln generierte, transparente Icons für Infernus und seine 26 Einträge, in mattem Gold-Ocker mit dunklen Konturen passend zu den celestialen Göttersymbolen. Prompts und Stilreferenzen stehen in `image-prompts.json`. Auch die infernalen Magie-Domänen verwenden diese Dateien über die Religionsdaten. Die früheren SVG-Entwürfe in `assets/infernal-symbols` sind nicht mehr eingebunden.
+- `assets/infernal-art`: 22 unveränderte Bildnisse, vier neu generierte Götterporträts und sieben Artefaktbilder aus den Infernus-Vorlagen, mit lokalen Quellen, Bildmaßen und Hashes.
 - `tests`: Inhaltsintegrität, Verweise, Suche und reproduzierbare Seitenerzeugung.
 
 ## Weitere Religion oder Gottheit ergänzen
@@ -45,7 +45,7 @@ Reine Namens- und Bildregister einer Sammlung verwenden `recordOnly: true` ohne 
 
 Ein Religionsartikel kann über `traditionSource` ein eigenes `glaube.json` einbinden. Dessen lokale Götternamen, Aspekte und Ränge fließen automatisch in die Hauptsuche ein. Die bebilderten Gruppen im Artikel besitzen zusätzlich eigene Such- und Filterfunktionen. Kulturelle Aspektzuordnungen verweisen über `relatedIds` auf bestehende Profile oder benannte Registergestalten.
 
-Der Almanach-Vite-Build nimmt derzeit 70 HTML-Dateien über dieselben Register auf: Hauptseite, 48 Artikel, 20 Klerusseiten und eine Weiterleitung vom alten Infernalen-Pfad. Verwendete Bilder einschließlich der Links zur vollständigen Abbildung werden als lokale Assets verarbeitet. Die alte Klerusseite ist unter [Archiv/AlerischerKlerus](../Archiv/AlerischerKlerus/README.md) gesichert und aus dem aktiven Bestand entfernt.
+Der Almanach-Vite-Build nimmt derzeit 74 HTML-Dateien über dieselben Register auf: Hauptseite, 52 Artikel, 20 Klerusseiten und eine Weiterleitung vom alten Infernalen-Pfad. Verwendete Bilder einschließlich der Links zur vollständigen Abbildung werden als lokale Assets verarbeitet. Die alte Klerusseite ist unter [Archiv/AlerischerKlerus](../Archiv/AlerischerKlerus/README.md) gesichert und aus dem aktiven Bestand entfernt.
 
 ## Quellen und inhaltliche Grenzen
 
@@ -60,3 +60,5 @@ Morgath, Manât, Geweihte, Gefallene sowie Licht- und Finsteralben führen auf d
 ## Vorgemerktes Bildarchiv
 
 **Vom Nutzer am 10.09.2026 ausdrücklich vorgemerkt: `E:\Aleria\BilderRüstungen`.** Seine farbigen Göttericons werden im Verzeichnis verwendet. Priester-, Paladin- und Mönchsabbildungen sowie das Bild der Bußgänger werden im neuen Klerusbereich genutzt. Nachgereichte Magister- und Asketenbilder liegen unter `klerus/assets/`.
+
+Die vier neuen infernalen Untergötter und die autorisierten Korrekturen der Kreaturenzuordnungen sind in [INFERNALE_ERWEITERUNG.md](docs/INFERNALE_ERWEITERUNG.md) dokumentiert. Ihre Aspekte bleiben vorerst offen; nur Syressa besitzt einen Mythenabschnitt.

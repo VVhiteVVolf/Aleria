@@ -1,0 +1,134 @@
+{
+  "tool": "Built-in image_gen",
+  "note": "Vier transparente Gold-Ocker-Icons und vier Glasfenster-Themenbilder auf ruhigem Pergamentgrund. Maelach und Nymhra nach der zusätzlichen Nutzervorgabe überarbeitet.",
+  "images": [
+    {
+      "id": "syressa",
+      "kind": "portrait",
+      "name": "Syressa",
+      "epithet": "Die Starrende",
+      "prompt": "Create one new deity portrait as a matching continuation of these two provided stained-glass deity windows. Preserve their antique hand-painted Gothic stained-glass visual language: a single narrow pointed arch, dark lead outlines, muted jewel-colored glass, fine aged texture, a solemn half-length figure facing the viewer, small ornamental emblem at the peak, two integrated dark glass name panels with legible antique gold serif lettering at the bottom. Vertical 2:3 composition, entire pointed arch and base visible with a small even margin, 1024x1536 PNG. Transparent background outside the arch, genuine alpha channel, no black rectangle, no surrounding room or wall. This is an individual religious codex illustration, not a playing card or a split portrait. Keep the figure and hands anatomically coherent. An imperious stone-gray goddess with rigid upright posture, high angular mountain crown, cold unblinking amber eyes, long dark hair and heavy fully covering layered robes resembling strata of rock. Both hands rest naturally on a closed stone gate. Small serpents and carved gargoyles frame the base of the gate; winding subterranean passages and one tiny gold beetle decorate the glass. Her face is unmistakably a proud woman, not a skull, not a gorgon with snake hair. Smoky jade, deep brown, muted ochre, restrained crimson glass. Exact text on the panels: 'SYRESSA' and 'DIE STARRENDE'.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-art/nemsara.png",
+        "E:/Aleria/Religionen/assets/infernal-art/sanguine.png"
+      ],
+      "dest": "Religionen/assets/infernal-art/syressa.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-68b28446-5317-4e1d-bfb6-b30649178999.png",
+      "edits": [
+        {
+          "prompt": "Edit this exact stained-glass window image. Change ONLY the area OUTSIDE the pointed glass window: completely remove the gray and white checkerboard pattern and replace it with a smooth uniform light warm parchment color, hex #eee5ce. No squares, grid, transparency checkerboard, wallpaper or gradient. Preserve the window silhouette, all glass colors, figure and pose, lettering, emblems and fine antique texture exactly. Full window remains visible with the existing margins. Vertical 2:3 PNG. This is a precise background replacement, do not redesign or brighten the window.",
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-49f1ce98-e347-4a65-aaa9-18d9ea174773.png"
+        }
+      ]
+    },
+    {
+      "id": "syressa",
+      "kind": "icon",
+      "name": "Syressa",
+      "epithet": "Die Starrende",
+      "prompt": "Create one original deity emblem matching these provided icons: flat matte ochre-gold pigment, bold slightly irregular dark sepia outlines and interior cuts, subtle fine-grained texture. Simple compact heraldic silhouette clearly readable at 46 pixels, one isolated symbol centered with generous clear margin. Square PNG. Transparent background with genuine alpha channel, no opaque backdrop, no text, no letters, no shadows, no enclosing decorative frame. A mountain peak enclosing one unblinking eye above a shut stone doorway; one simple serpent curls around the foot of the mountain. Bold unified silhouette, no tiny decorative details.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-icons/nyxara.png",
+        "E:/Aleria/Religionen/assets/infernal-icons/migdal.png"
+      ],
+      "dest": "Religionen/assets/infernal-icons/syressa.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-09973c7d-c961-4e60-899b-6d22867e79b9.png"
+    },
+    {
+      "id": "nhaera",
+      "kind": "portrait",
+      "name": "Nhaera",
+      "epithet": "Die Heimatlose",
+      "prompt": "Create one new deity portrait as a matching continuation of these two provided stained-glass deity windows. Preserve their antique hand-painted Gothic stained-glass visual language: a single narrow pointed arch, dark lead outlines, muted jewel-colored glass, fine aged texture, a solemn half-length figure facing the viewer, small ornamental emblem at the peak, two integrated dark glass name panels with legible antique gold serif lettering at the bottom. Vertical 2:3 composition, entire pointed arch and base visible with a small even margin, 1024x1536 PNG. Transparent background outside the arch, genuine alpha channel, no black rectangle, no surrounding room or wall. This is an individual religious codex illustration, not a playing card or a split portrait. Keep the figure and hands anatomically coherent. A solitary pale goddess with long silver hair and a high-necked fully covering flowing indigo traveling robe; melancholy remote gaze, standing motionless in a vast starless void with only a few distant stars near the outer edges. She cradles a small unlit lantern in both hands; behind her a broken archway leads into empty darkness, a loose thread hangs from her cloak. Poignant cosmic isolation, austere beautiful figure, not a skeleton or sea monster. Midnight blue, deep violet, silver and muted gold glass with a restrained burgundy border matching the references. Exact text: 'NHAERA' and 'DIE HEIMATLOSE'.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-art/nemsara.png",
+        "E:/Aleria/Religionen/assets/infernal-art/sanguine.png"
+      ],
+      "dest": "Religionen/assets/infernal-art/nhaera.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-80efac4e-57ee-4efe-9002-6c74683f5a01.png",
+      "edits": [
+        {
+          "prompt": "Edit this exact stained-glass window image. Change ONLY the area OUTSIDE the pointed glass window: completely remove the gray and white checkerboard pattern and replace it with a smooth uniform light warm parchment color, hex #eee5ce. No squares, grid, transparency checkerboard, wallpaper or gradient. Preserve the window silhouette, all glass colors, figure and pose, lettering, emblems and fine antique texture exactly. Full window remains visible with the existing margins. Vertical 2:3 PNG. This is a precise background replacement, do not redesign or brighten the window.",
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-baf91c48-1c99-4ffb-ac48-e3cb47a7eec5.png"
+        }
+      ]
+    },
+    {
+      "id": "nhaera",
+      "kind": "icon",
+      "name": "Nhaera",
+      "epithet": "Die Heimatlose",
+      "prompt": "Create one original deity emblem matching these provided icons: flat matte ochre-gold pigment, bold slightly irregular dark sepia outlines and interior cuts, subtle fine-grained texture. Simple compact heraldic silhouette clearly readable at 46 pixels, one isolated symbol centered with generous clear margin. Square PNG. Transparent background with genuine alpha channel, no opaque backdrop, no text, no letters, no shadows, no enclosing decorative frame. A simple empty arched doorway with a broken threshold and a single small four-pointed star stranded above it; an open arc surrounds the doorway without closing at the bottom. Clearly convey an absent home.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-icons/nyxara.png",
+        "E:/Aleria/Religionen/assets/infernal-icons/migdal.png"
+      ],
+      "dest": "Religionen/assets/infernal-icons/nhaera.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-41c75bbf-d969-49d1-aa01-a724da004457.png"
+    },
+    {
+      "id": "nymhra",
+      "kind": "portrait",
+      "name": "Nymhra",
+      "epithet": "Die Träumerin",
+      "prompt": "Create one new deity portrait as a matching continuation of these two provided stained-glass deity windows. Preserve their antique hand-painted Gothic stained-glass visual language: a single narrow pointed arch, dark lead outlines, muted jewel-colored glass, fine aged texture, a solemn half-length figure facing the viewer, small ornamental emblem at the peak, two integrated dark glass name panels with legible antique gold serif lettering at the bottom. Vertical 2:3 composition, entire pointed arch and base visible with a small even margin, 1024x1536 PNG. Transparent background outside the arch, genuine alpha channel, no black rectangle, no surrounding room or wall. This is an individual religious codex illustration, not a playing card or a split portrait. Keep the figure and hands anatomically coherent. A deceptively gentle dream goddess with a translucent lavender veil over her long dark hair, fully clothed in a modest layered violet robe. Her eyes are closed; her relaxed hands cradle a shallow antique bowl containing a tiny labyrinth of impossible staircases and a single moth. Behind her the glass forms receding bedroom doorways that lead into further dream rooms; ominous serenity, a face subtly reflected in the glass, not multiple faces on the goddess. Plum, muted amethyst, midnight blue and antique gold glass, no bright neon. Exact text: 'NYMHRA' and 'DIE TRÄUMERIN'.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-art/nemsara.png",
+        "E:/Aleria/Religionen/assets/infernal-art/sanguine.png"
+      ],
+      "dest": "Religionen/assets/infernal-art/nymhra.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-347b6a8e-52a8-4107-bd69-7757d9f8ef6f.png",
+      "edits": [
+        {
+          "prompt": "Edit the supplied Nymhra Gothic stained-glass deity portrait. Transform her into a PALE VAMPIRIC ELF GODDESS with elegant gaunt elven features, very pale ivory-white skin, long pointed ears, subtle small vampire fangs, long dark hair, and fully OPEN PURE WHITE EYES with absolutely NO iris and NO pupil. Add two curled RAM HORNS, both visibly BROKEN OFF with rough broken ends, balanced on either side of her head. Replace her cloth robe with elaborate ALIEN OTHERWORLDLY ARMOR: strange organically curved layered dark amethyst and silvery plates, ribbed sculptural carapace, impossible yet elegant ancient extraterrestrial design, fully covering chest and shoulders, ominous mystical presence. No technological guns or gadgets, no space helmet. The armor and figure must be rendered in the SAME antique stained-glass language, dark lead lines and aged jewel glass texture, not photorealism or 3D. Keep the dream bowl with impossible stairways and the small moth held in both anatomically correct pale hands. Keep the window arch, receding dream doorways, golden moth emblem and exact nameplate text 'NYMHRA' and 'DIE TRÄUMERIN'. Keep the full window in frame, portrait 2:3. Outside the arch replace the checkerboard with plain uniform warm light parchment #eee5ce. No checkerboard anywhere.",
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-8f0aa362-da0e-4ee4-a84e-340559b2ad25.png"
+        }
+      ]
+    },
+    {
+      "id": "nymhra",
+      "kind": "icon",
+      "name": "Nymhra",
+      "epithet": "Die Träumerin",
+      "prompt": "Create one original deity emblem matching these provided icons: flat matte ochre-gold pigment, bold slightly irregular dark sepia outlines and interior cuts, subtle fine-grained texture. Simple compact heraldic silhouette clearly readable at 46 pixels, one isolated symbol centered with generous clear margin. Square PNG. Transparent background with genuine alpha channel, no opaque backdrop, no text, no letters, no shadows, no enclosing decorative frame. One closed dreaming eye above a crescent-shaped bowl, with a single stylized moth rising between them; compact and balanced, avoid confusing with an open staring eye.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-icons/nyxara.png",
+        "E:/Aleria/Religionen/assets/infernal-icons/migdal.png"
+      ],
+      "dest": "Religionen/assets/infernal-icons/nymhra.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-67605812-1317-47fa-948e-469154cac52d.png"
+    },
+    {
+      "id": "maelach",
+      "kind": "portrait",
+      "name": "Maelach",
+      "epithet": "Der Heuchler",
+      "prompt": "Create one new deity portrait as a matching continuation of these two provided stained-glass deity windows. Preserve their antique hand-painted Gothic stained-glass visual language: a single narrow pointed arch, dark lead outlines, muted jewel-colored glass, fine aged texture, a solemn half-length figure facing the viewer, small ornamental emblem at the peak, two integrated dark glass name panels with legible antique gold serif lettering at the bottom. Vertical 2:3 composition, entire pointed arch and base visible with a small even margin, 1024x1536 PNG. Transparent background outside the arch, genuine alpha channel, no black rectangle, no surrounding room or wall. This is an individual religious codex illustration, not a playing card or a split portrait. Keep the figure and hands anatomically coherent. An elegant male infernal orator with an attractive composed human face, long dark hair, a discreet knowing smile, a burgundy high-collared robe and a muted gold clasp. One hand holds a smooth pale theatrical mask beside his chest, the other gently gestures as if speaking. Behind him thin branching ribbons of whispered words become repeated small faceless crowd silhouettes in the glass; no readable writing in the ribbons, no wind or weather powers, no wings, no horns necessary. Deep burgundy, charcoal olive, warm amber and antique gold. The central figure must have one clear face and two coherent hands. Exact text: 'MAELACH' and 'DER HEUCHLER'.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-art/nemsara.png",
+        "E:/Aleria/Religionen/assets/infernal-art/sanguine.png"
+      ],
+      "dest": "Religionen/assets/infernal-art/maelach.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-fcd6ee64-ff76-4947-8a04-9dedac219b6d.png",
+      "edits": [
+        {
+          "prompt": "Edit the attached Maelach stained-glass portrait. Change the male figure into a RED-SKINNED TIEFLING-LIKE ELF: elegant angular elven face, clearly long pointed ears, two swept-back curved dark horns, mischievous playful sly grin, bright amber eyes, long flowing black hair. The exposed skin on face, ears and BOTH HANDS must all be deep warm crimson red. Charismatic trickster, impish and cunning, attractive and expressive, not grotesque or ferocious. Preserve the exact pointed Gothic stained-glass window composition, burgundy robe, antique gold details, theatrical mask in one hand, delicate speaking gesture with the other, crowd silhouettes and branching golden voice ribbons, exact bottom text 'MAELACH' and 'DER HEUCHLER'. Match the antique stained-glass texture and dark lead outlines. Whole window visible, vertical 2:3. Outside the arch remove all gray-white checkerboard and use an even plain warm light parchment color #eee5ce, with no squares, no patterns, no room, no wall. Only change the figure as requested and the outside backdrop; preserve the window art style.",
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-dad1e87b-40c2-469a-bd86-6677f3932f03.png"
+        }
+      ]
+    },
+    {
+      "id": "maelach",
+      "kind": "icon",
+      "name": "Maelach",
+      "epithet": "Der Heuchler",
+      "prompt": "Create one original deity emblem matching these provided icons: flat matte ochre-gold pigment, bold slightly irregular dark sepia outlines and interior cuts, subtle fine-grained texture. Simple compact heraldic silhouette clearly readable at 46 pixels, one isolated symbol centered with generous clear margin. Square PNG. Transparent background with genuine alpha channel, no opaque backdrop, no text, no letters, no shadows, no enclosing decorative frame. A single smiling theatrical mask with one short branching forked speech ribbon issuing from its mouth; the ribbon splits into three simple tips, a symbol of a rumor changing as it spreads.",
+      "refs": [
+        "E:/Aleria/Religionen/assets/infernal-icons/nyxara.png",
+        "E:/Aleria/Religionen/assets/infernal-icons/migdal.png"
+      ],
+      "dest": "Religionen/assets/infernal-icons/maelach.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-8142fd1c-8fb8-4c76-a50f-f6660b9099a8.png"
+    }
+  ]
+}

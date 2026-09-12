@@ -1,0 +1,50 @@
+.sky-form { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; padding: 22px; background: #b49d6914; border: 1px solid var(--faith-line); }
+.sky-form label { display: flex; flex-direction: column; gap: 6px; color: var(--faith-muted); font-size: 11px; }
+.sky-form input, .sky-form select { border: 1px solid var(--faith-line); background: var(--faith-light); min-height: 44px; padding: 8px 11px; font-size: 14px; border-radius: 0; }
+.sky-form input[name="day"] { width: 74px; }
+.sky-form input[name="year"] { width: 110px; }
+.sky-form .ink-button { min-height: 44px; padding-block: 10px; }
+.sky-form .text-button { padding: 12px 0; }
+.sky-error { color: var(--astro-red); padding: 10px; font-size: 13px; }
+.sky-summary { border: 1px solid var(--faith-line); border-top: 0; background: #fbf6ea80; }
+.sky-sign { padding: 23px 25px; }
+.sky-sign h3 { color: var(--faith-green); font-size: 26px; margin: 7px 0 9px; }
+.sky-sign h3 span { font-style: italic; color: var(--astro-gold); }
+.sky-sign > p:not(.eyebrow) { color: var(--faith-muted); font-size: 13px; }
+.sky-sign > a { display: inline-block; margin-top: 12px; color: var(--astro-blue); font-size: 12px; }
+.sky-moons { display: grid; grid-template-columns: 1fr 1fr; border-block: 1px solid var(--faith-line); }
+.sky-moon { display: flex; align-items: center; gap: 17px; padding: 18px 22px; }
+.sky-moon + .sky-moon { border-left: 1px solid var(--faith-line); }
+.moon-disc { flex: 0 0 60px; width: 60px; height: 60px; }
+.moon-dark { fill: #253647; }
+.moon-light { fill: #deded4; }
+.moon-disc--aonghus .moon-light { fill: #8aafc4; }
+.moon-rim { fill: none; stroke: #a38a5d; stroke-width: .65; }
+.sky-moon h4 { font-size: 17px; font-weight: normal; margin: 0; }
+.sky-moon p { font-size: 12px; color: var(--faith-muted); }
+.sky-moon small { display: block; font-size: 9px; color: var(--faith-muted); margin-top: 3px; }
+.sky-visitors { padding: 18px 25px; font-size: 13px; }
+.sky-visitors ul { list-style: none; padding: 0; margin: 7px 0; }
+.sky-visitors li { margin-top: 6px; }
+.sky-visitors li small { display: block; color: var(--faith-muted); }
+.sky-dragon { margin-top: 15px; color: var(--faith-muted); font-size: 11px; }
+.sky-dragon.is-visible { color: var(--astro-red); font-size: 16px; }
+.forecast-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 28px; }
+.forecast-wrap table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+.forecast-wrap caption { text-align: left; padding-bottom: 12px; font-style: italic; color: var(--faith-muted); }
+.forecast-wrap th, .forecast-wrap td { padding: 12px 14px; border-bottom: 1px solid var(--faith-line); vertical-align: top; }
+.forecast-wrap thead { background: #b49d691c; font-size: 10px; text-transform: uppercase; letter-spacing: .035em; }
+.forecast-wrap th { font-weight: normal; color: var(--faith-green); }
+.forecast-wrap small { display: block; font-size: 10px; color: var(--faith-muted); margin-top: 4px; }
+.visibility-badge { color: var(--astro-blue); font-weight: bold; }
+@media (max-width: 550px) {
+  .sky-form { padding: 14px; gap: 10px; }
+  .sky-form label:nth-child(2) { flex: 1; }
+  .sky-form label:nth-child(2) select { width: 100%; }
+  .sky-moons { grid-template-columns: 1fr; }
+  .sky-moon + .sky-moon { border-left: 0; border-top: 1px solid var(--faith-line); }
+  .sky-sign, .sky-visitors { padding: 19px; }
+  .sky-sign h3 { font-size: 23px; }
+  .forecast-wrap th, .forecast-wrap td { padding: 10px 8px; min-width: 95px; }
+}
+@media print { .sky-form { display: none; } }

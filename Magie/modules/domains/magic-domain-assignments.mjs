@@ -33,6 +33,10 @@ export const MAGIC_DOMAIN_ASSIGNMENTS = Object.freeze({
   nemsara: { domain: 'Vergeltung', aspect: 'Rache, Eifersucht und die Hinterlist eines nachtragenden Willens.' },
   'azrath-morvath': { domain: 'Zerrissener Geist', aspect: 'Die gegensätzlichen Extreme von ekstatischer Freude und tiefer Verzweiflung.' },
   migdal: { domain: 'Wunschbindung', aspect: 'Sehnsucht und Verlockung in Vereinbarungen mit einem verborgenen Preis.' },
+  syressa: { domain: 'Verschlossene Tiefe', aspect: 'Untiefen der Erde, steinerne Flüche und verschlossene Schwellen im Zeichen verweigerter Zuflucht.' },
+  nhaera: { domain: 'Heimatlose Leere', aspect: 'Verlorene Heimwege, kosmische Isolation und die Auflösung von Bindungen.' },
+  nymhra: { domain: 'Trugträume', aspect: 'Albträume, Alpdruck, Erinnerungsraub und das falsche Erwachen.' },
+  maelach: { domain: 'Verderbte Stimme', aspect: 'Gerücht, Demagogie und Aufruhr durch angemaßte Stimmen; keine Herrschaft über echten Wind.' },
   nergaloth: { domain: 'Pestilenz', aspect: 'Seuchen, Krankheit und die Ausbreitung von Verderbnis.' }
 });
 

@@ -19,16 +19,16 @@ const get = id => profiles.find(entry => entry.id === id);
 const readJson = path => JSON.parse(readFileSync(resolve(RELIGION_ROOT, path), 'utf8'));
 const hash = value => createHash('sha256').update(value).digest('hex');
 
-test('infernal register preserves ten high powers, five lesser powers, two consecrated and five fallen', () => {
-  assert.deepEqual(collection.groups.map(group => group.memberIds.length), [10,5,2,5]);
-  assert.equal(profiles.length,17);
-  assert.equal(circle.entries.length,22);
+test('infernal register contains ten high powers, nine lesser powers, two consecrated and five fallen', () => {
+  assert.deepEqual(collection.groups.map(group => group.memberIds.length), [10,9,2,5]);
+  assert.equal(profiles.length,21);
+  assert.equal(circle.entries.length,26);
   assert.equal(catalog.records.length,5);
   assert.deepEqual(circle.entries.filter(entry => entry.chapterId === 'gefallene').map(entry => entry.id), ['seelenherr','narzisst','narath','zarakhul','balor']);
   assert.deepEqual(catalog.records.map(entry => entry.id),['arkeon','asphyra','seelenherr','narzisst','narath']);
   for (const entry of profiles) {
     const { siblings } = profileContext(catalog,entry);
-    assert.equal(siblings.length,entry.groupId==='infernale'?10:entry.groupId==='untergoetter'?5:2);
+    assert.equal(siblings.length,entry.groupId==='infernale'?10:entry.groupId==='untergoetter'?9:2);
     assert(siblings.every(sibling => sibling.collectionId===collection.id && sibling.groupId===entry.groupId));
   }
 });
@@ -37,12 +37,24 @@ test('all seventeen imported profiles retain their audited text including nested
   const audit = readJson('docs/infernaler-kreis-import.json');
   assert.equal(audit.sourceCount,18);
   assert.equal(audit.profiles.length,17);
+  const revisions = readJson('docs/infernale-erweiterung-redaktion.json').profiles;
   for (const source of audit.profiles) {
     const entry = get(source.id);
+    const revision = revisions.find(item => item.id === source.id);
     const text = [...entry.sections.flatMap(section => section.blocks.map(block => block.type==='list' ? block.items.join(' ') : block.text)),
       ...(entry.artifacts?.entries || []).flatMap(artifact => artifact.paragraphs), ...(entry.artifacts?.intro || [])].join(' ');
-    assert.equal(hash(text),source.contentSha256,entry.id);
-    assert.equal(Array.from(text).length,source.loreCharacters,entry.id);
+    assert.equal(hash(text),revision?.contentSha256 || source.contentSha256,entry.id);
+    assert.equal(Array.from(text).length,revision?.loreCharacters || source.loreCharacters,entry.id);
+    if (revision) {
+      const restored = structuredClone(entry.sections);
+      for (const change of revision.changes) {
+        const section = restored.find(section => section.id === change.section);
+        assert.deepEqual(section.blocks[change.block], change.after);
+        section.blocks[change.block] = change.before;
+      }
+      const originalText = restored.flatMap(section => section.blocks.map(block => block.type === 'list' ? block.items.join(' ') : block.text)).join(' ');
+      assert.equal(hash(originalText), source.contentSha256, 'Nur dokumentierte Zuordnungen dürfen den Import verändern');
+    }
     assert.equal(entry.source.sha256,source.sha256);
     assert(source.paragraphs.length>=13);
     assert(text.length>7000);
@@ -68,7 +80,7 @@ test('ambiguous origins and the present limits of fallen powers remain explicit'
 
 test('generated gold icons cover the entire infernal circle and supplied portraits remain unchanged', () => {
   const symbols = readJson('assets/infernal-icons/image-prompts.json').images;
-  assert.equal(symbols.length,23);
+  assert.equal(symbols.length,27);
   const shapes = new Set();
   const entries = [catalog.entries.find(entry => entry.id === 'infernus'), ...circle.entries];
   for (const symbol of symbols) {
@@ -82,9 +94,9 @@ test('generated gold icons cover the entire infernal circle and supplied portrai
     assert(symbol.prompt.includes('Transparent background'));
     shapes.add(hash(bytes));
   }
-  assert.equal(shapes.size,23);
+  assert.equal(shapes.size,27);
   const images = readJson('assets/infernal-art/sources.json').images;
-  assert.equal(images.length,29);
+  assert.equal(images.length,33);
   for (const image of images) {
     const bytes = readFileSync(resolve(RELIGION_ROOT,image.src));
     assert.equal(hash(bytes),image.sha256,image.id);

@@ -15,10 +15,10 @@ const workspace = resolve(RELIGION_ROOT, '..');
 const searchable = rootCatalogEntries(catalog).map((entry, order) => ({ ...entry, order, searchText: entrySearchText(entry) }));
 
 test('preserves all named legacy entries and prepares empty future chapters', () => {
-  assert.equal(catalog.entries.length, 54);
+  assert.equal(catalog.entries.length, 58);
   assert.equal(catalog.chapters.length, 7);
   assert.equal(catalog.entries.filter(entry => entry.chapterId === 'religionen').length, 10);
-  assert.equal(catalog.entries.filter(entry => entry.page).length, 48);
+  assert.equal(catalog.entries.filter(entry => entry.page).length, 52);
   for (const title of ['Die Celestische Synode', 'Manât', 'Der Phalantische Bund', 'Der Zirkel des Ewigen Waldes', 'Die Offenbarung der Schwarzen Sonne']) {
     assert(catalog.entries.some(entry => entry.title === title));
   }
@@ -105,7 +105,7 @@ test('all generated pages are current, escaped, independently readable and local
 
 test('Vite and the Almanach register resolve the new generated pages', () => {
   const inputs = getReligionPageInputs();
-  assert.equal(Object.keys(inputs).length, 50);
+  assert.equal(Object.keys(inputs).length, 54);
   for (const value of Object.values(inputs)) assert(existsSync(value), value);
   const source = readFileSync(resolve(workspace, 'AleriaAlmanach/modules/sidebar/sidebar-registers.js'), 'utf8');
   const html = vm.runInNewContext(`${source}\nbuildAlmanachLeftRegisterItem(ALMANACH_LEFT_REGISTER_ITEMS.find(item => item.key === 'religion'))`, { document: { querySelector: () => null }, escapeHtml });

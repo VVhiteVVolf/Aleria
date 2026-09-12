@@ -155,7 +155,7 @@ Zarok und Hornling werden aus der Sylvaniidenübersicht mit ihren bereits vorhan
 
 ## Inferniidendossiers
 
-Die Seite `wesen/gruppen/inferniiden/index.html` trennt die Ordnung sichtbar in Dagons Teufelshierarchie und Sanguines Dämonenlinie. In Dagons Zweig stehen die Erzteufel gesondert über Dagonaren und Ignarii, darunter folgen Igniten und Nixhunde sowie Balors Sprösslinge Balgrath und Flickerlinge. Zwei nicht überlieferte Sprösslinge bleiben als `???` offen. Sanguines Zweig beginnt mit dem vorgemerkten Erzdämon, gefolgt von Sukkubus und Inkubus, Formwandlern, Lustlingen und Satyren.
+Die Seite `wesen/gruppen/inferniiden/index.html` trennt die Ordnung sichtbar in Dagons Teufelshierarchie und Sanguines Dämonenlinie. In Dagons Zweig stehen die Erzteufel gesondert über Dagonaren und Ignarii, darunter folgen Igniten und Nixhunde sowie Balors Sprösslinge Balgrath und Flickerlinge. Zwei nicht überlieferte Sprösslinge bleiben als `???` offen. Sanguines Zweig beginnt mit dem vorgemerkten Erzdämon, gefolgt von Sukkubus und Inkubus, Lustlingen und Satyren. Maelachs Formwandler bilden einen eigenen dritten Zweig.
 
 Das Erzteufelregister unter `wesen/gruppen/erzteufel/` bewahrt Asharon, Malekar, Nashira, Tamaraon, Zabaron und Balor mit ihren Fürstentiteln und Aspekten. Neun neue Einzeldossiers liegen unter `wesen/inferniiden/`. Der bereits im Koboldregister ausgearbeitete Lustling bleibt ein gemeinsames kanonisches Dossier und wird aus beiden Übersichten verlinkt, damit seine Lore nicht doppelt gepflegt werden muss.
 
@@ -228,3 +228,9 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/psionid-profiles.test.mjs`
 
 Vom Repository-Stamm über einen statischen HTTP-Server `Bestiarium/index.html` öffnen. Filter und Namenssuche, Themenvorschauen, Escape/Schließen mit Fokus-Rückgabe, Kapitelwechsel nach aktiver Suche und schmale Ansichten prüfen. Geänderte Modul-URLs erhalten wie im Almanach einen neuen Cache-Parameter.
+
+## Ergänzte infernale Kreaturen
+
+`modules/catalog/infernal-creatures.js` pflegt 13 benannte Kreaturen von Syressa und Maelach im bestehenden Abschnitt „Einzelne infernale Wesen“. Zwei vorhandene Bilder werden verwendet, elf Bildplätze bleiben als „Bild folgt“ sichtbar. Die bestehende Vorschau zeigt die Beschreibungen; vorhandene Dossiers sind direkt verlinkt. Es gibt keine zusätzliche Umkreis-Sektion und keine Umkreis-Seiten oder Generatoren. Trolle bleiben neutrale Kreaturen, Insekten bleiben Tiere und der Mahr bleibt im Geisterregister.
+
+Die gemeinsame Feldvorlage unterstützt optionale weiterführende Links. Formwandler und Inferniiden verweisen auf Maelach; die Riesenüberlieferung verweist auf Syressa. Dafür werden die bestehenden Dossiergeneratoren verwendet.

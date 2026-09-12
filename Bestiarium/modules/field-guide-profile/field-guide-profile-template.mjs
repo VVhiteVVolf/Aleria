@@ -124,6 +124,11 @@ function renderSibling(link, direction, context) {
   return `<a class="field-profile-sibling field-profile-sibling--${direction}" href="../${escapeHtml(link.id)}/index.html"><span>${label}</span><strong>${escapeHtml(link.name)}</strong></a>`;
 }
 
+function renderReadingLinks(links) {
+  if (!links?.length) return '';
+  return `<section class="field-profile-section" id="weiterlesen"><h2>Verbindungen & Überlieferungen</h2><div class="field-related-grid">${links.map(link => `<a class="field-related-card" href="${escapeHtml(link.href)}"><div><h3>${escapeHtml(link.label)}</h3><p>${escapeHtml(link.note)}</p><span class="field-related-status">Weiterlesen ↗</span></div></a>`).join('')}</div></section>`;
+}
+
 export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
   const context = {
     categoryName: 'Arten',
@@ -179,12 +184,12 @@ export function renderFieldGuideProfile(record, navigation = {}, options = {}) {
       </section>
       <blockquote class="field-profile-quote"><span aria-hidden="true">❧</span><p>„${escapeHtml(record.quote)}“<cite>${escapeHtml(record.quoteAttribution)}</cite></p><span aria-hidden="true">❧</span></blockquote>
       <div class="field-profile-book">
-        <aside class="field-profile-register"><div><p class="eyebrow">In diesem Dossier</p><nav aria-label="Kapitel des ${escapeHtml(context.dossierName)}"><a href="#feldbewertung"><span>I</span>Archivbewertung</a>${hasRelated ? `<a href="#verwandtschaft"><span>II</span>${escapeHtml(context.relatedLabel)}</a>` : ''}${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + sectionOffset)}</span>${escapeHtml(section.title)}</a>`).join('\n')}${record.plates?.length ? `<a href="#bildtafeln"><span>${romanNumeral(plateNumber)}</span>Bildtafeln</a>` : ''}</nav><a class="field-profile-register-back" href="${escapeHtml(categoryHref)}">← ${escapeHtml(registerBackLabel)}</a></div></aside>
+        <aside class="field-profile-register"><div><p class="eyebrow">In diesem Dossier</p><nav aria-label="Kapitel des ${escapeHtml(context.dossierName)}"><a href="#feldbewertung"><span>I</span>Archivbewertung</a>${hasRelated ? `<a href="#verwandtschaft"><span>II</span>${escapeHtml(context.relatedLabel)}</a>` : ''}${record.sections.map((section, index) => `<a href="#${escapeHtml(section.id)}"><span>${romanNumeral(index + sectionOffset)}</span>${escapeHtml(section.title)}</a>`).join('\n')}${record.readingLinks?.length ? '<a href="#weiterlesen">Verbindungen</a>' : ''}${record.plates?.length ? `<a href="#bildtafeln"><span>${romanNumeral(plateNumber)}</span>Bildtafeln</a>` : ''}</nav><a class="field-profile-register-back" href="${escapeHtml(categoryHref)}">← ${escapeHtml(registerBackLabel)}</a></div></aside>
         <div class="field-profile-content">
           <section class="field-profile-metrics" id="feldbewertung" aria-labelledby="metrics-title"><header class="field-profile-feature-heading"><span aria-hidden="true">I</span><div><p class="eyebrow">Sechs Merkmale · Skala 1–10</p><h2 id="metrics-title">Archivbewertung</h2></div></header><p class="field-profile-feature-intro">${escapeHtml(metricIntro)}</p>${renderProfileMetrics(record.metrics, { chartTitle: `Archivbewertung für ${record.name}` })}<p class="field-profile-metrics-source">Quelle der Einordnung: ${escapeHtml(record.metrics.source)}</p></section>
           ${renderRelated(record.related, context)}
           <div class="field-profile-reading"><article class="field-profile-narrative" aria-label="Überlieferung zu ${escapeHtml(record.name)}">${record.sections.map((section, index) => renderSection(section, index, sectionOffset)).join('\n')}</article>${renderFacts(record.facts)}</div>
-          ${renderPlates(record.plates, plateNumber, { title: record.platesTitle, eyebrow: record.platesEyebrow })}
+          ${renderReadingLinks(record.readingLinks)}${renderPlates(record.plates, plateNumber, { title: record.platesTitle, eyebrow: record.platesEyebrow })}
           <nav class="field-profile-navigation" aria-label="Weitere ${escapeHtml(context.categoryName)}-Dossiers">${renderSibling(navigation.previous, 'previous', context)}<a class="field-profile-all" href="${escapeHtml(categoryHref)}">${escapeHtml(registerBackLabel)}</a>${renderSibling(navigation.next, 'next', context)}</nav>
         </div>
       </div>

@@ -289,6 +289,50 @@
       "height": 612,
       "sha256": "09e93f7187aa78ca67834d4150324f0053e7c49e5c009bd4ff3253b915f6f2fb",
       "source": "Bildquelle aus den vom Nutzer gelieferten Infernus-Vorlagen"
+    },
+    {
+      "id": "syressa",
+      "role": "portrait",
+      "src": "assets/infernal-art/syressa.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9aeadb4c23d7ebe9224e8fda3a17a4f9ea2c00a297b953970ff6ee27c910fbfb",
+      "source": "Built-in image_gen; Nutzervorgaben und vorhandene Glasfenster als Stilvorlage.",
+      "promptManifest": "assets/infernal-extension-prompts.json",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-68b28446-5317-4e1d-bfb6-b30649178999.png"
+    },
+    {
+      "id": "nhaera",
+      "role": "portrait",
+      "src": "assets/infernal-art/nhaera.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "21f97b8600557fc1228f02862fa436a9a2716508c1ca916eda6ddd2f383d4731",
+      "source": "Built-in image_gen; Nutzervorgaben und vorhandene Glasfenster als Stilvorlage.",
+      "promptManifest": "assets/infernal-extension-prompts.json",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-80efac4e-57ee-4efe-9002-6c74683f5a01.png"
+    },
+    {
+      "id": "nymhra",
+      "role": "portrait",
+      "src": "assets/infernal-art/nymhra.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8b77bfd8e9c111d96303f10053e52284ca406c73b49c0dbc6baf7e643085bade",
+      "source": "Built-in image_gen; Nutzervorgaben und vorhandene Glasfenster als Stilvorlage.",
+      "promptManifest": "assets/infernal-extension-prompts.json",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-347b6a8e-52a8-4107-bd69-7757d9f8ef6f.png"
+    },
+    {
+      "id": "maelach",
+      "role": "portrait",
+      "src": "assets/infernal-art/maelach.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "22cad48b480686f5e18255a5505af2cf41d954a72b299864369842bd26625b0b",
+      "source": "Built-in image_gen; Nutzervorgaben und vorhandene Glasfenster als Stilvorlage.",
+      "promptManifest": "assets/infernal-extension-prompts.json",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a09670-ea25-7301-bb7a-116a678441a5\\exec-fcd6ee64-ff76-4947-8a04-9dedac219b6d.png"
     }
   ]
 }

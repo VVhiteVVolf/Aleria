@@ -120,6 +120,7 @@ export default defineConfig({
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
+        astrologie: resolve(workspaceRoot, 'Astrologie/index.html'),
         magie: resolve(workspaceRoot, 'Magie/index.html'),
         ...Object.fromEntries(listSpellCatalogSchools().map(school => [school.id, resolve(workspaceRoot, `Magie/${school.id}/index.html`)])),
         elementarismusArchiv: resolve(workspaceRoot, 'Magie/elementarismus/index.html'),

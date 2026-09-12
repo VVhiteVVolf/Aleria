@@ -1,13 +1,13 @@
 # Infernus — Quellen und Pflege
 
-Stand: 10.09.2026. Grundlage sind eine Übersicht und 17 vollständige Einzelvorlagen des Nutzers. Die Übersicht nennt **zehn** Infernalen. Der frühere Neuner-Pfad bleibt als statische Weiterleitung erhalten; der aktuelle Bereich liegt unter `pantheons/infernus/index.html`.
+Stand: 12.09.2026. Grundlage sind eine Übersicht und 17 vollständige Einzelvorlagen des Nutzers. Die Übersicht nennt **zehn** Infernalen. Der frühere Neuner-Pfad bleibt als statische Weiterleitung erhalten; der aktuelle Bereich liegt unter `pantheons/infernus/index.html`.
 
 ## Inhalt und Gliederung
 
 | Gruppe | Einträge | Vollständige Artikel |
 | --- | --- | --- |
 | Hohe Mächte | Dagon, Lunara, Grimnar, Bhaal, Zatrach, Sanguine, Nyxara, Adar, Amon, Hela | 10 |
-| Untergötter | Thraal, Nemsara, Azrath & Morvath, Migdal, Nergaloth | 5 |
+| Untergötter | Thraal, Nemsara, Azrath & Morvath, Migdal, Nergaloth, Syressa, Nhaera, Nymhra, Maelach | 9 |
 | Infernale Geweihte | Arkeon, Asphyra | 0 |
 | Gefallene | Der Seelenherr, Der Narzisst, Narath, Zarakhul, Balor | 2 |
 
@@ -30,9 +30,9 @@ Eindeutige Vorlagenreste wurden an die bestehende Aleria-Namensgebung angepasst:
 
 ## Bilder und eigene Zeichen
 
-Die früheren SVG-Zeichen wurden auf ausdrücklichen Nutzerwunsch durch **23 einzeln generierte, transparente PNG-Icons** ersetzt: je eines für die 22 Registereinträge und eines für Infernus. Die eigenen Motive verwenden mattes Gold-Ocker, dunkle Sepiakonturen und eine feine Pigmentstruktur nach dem Vorbild der vorhandenen celestialen Icons von Ordan und Mariel. Dateien, vollständige Prompts und Stilreferenzen stehen in `assets/infernal-icons/image-prompts.json`; die Bilder stammen aus dem eingebauten Imagegen-Werkzeug. Die alten Entwürfe unter `assets/infernal-symbols` bleiben als historischer Bestand erhalten und sind nicht mehr eingebunden.
+Die früheren SVG-Zeichen wurden auf ausdrücklichen Nutzerwunsch durch **27 einzeln generierte, transparente PNG-Icons** ersetzt: je eines für die 26 Registereinträge und eines für Infernus. Die eigenen Motive verwenden mattes Gold-Ocker, dunkle Sepiakonturen und eine feine Pigmentstruktur nach dem Vorbild der vorhandenen celestialen Icons von Ordan und Mariel. Dateien, vollständige Prompts und Stilreferenzen stehen in `assets/infernal-icons/image-prompts.json`; die Bilder stammen aus dem eingebauten Imagegen-Werkzeug. Die alten Entwürfe unter `assets/infernal-symbols` bleiben als historischer Bestand erhalten und sind nicht mehr eingebunden.
 
-Das `symbol`-Feld des jeweiligen Religionsdatensatzes ist die gemeinsame Bildquelle für Übersicht, Götterprofil und Magie-Domäne. Magie übernimmt die Symbole der zehn hohen Mächte und fünf Untergötter ohne Dateikopien. Geweihte und Gefallene erhalten ihre neuen Registericons, ohne ihnen zusätzliche magische Domänen zuzuschreiben.
+Das `symbol`-Feld des jeweiligen Religionsdatensatzes ist die gemeinsame Bildquelle für Übersicht, Götterprofil und Magie-Domäne. Magie übernimmt die Symbole der zehn hohen Mächte und neun Untergötter ohne Dateikopien. Geweihte und Gefallene erhalten ihre neuen Registericons, ohne ihnen zusätzliche magische Domänen zuzuschreiben.
 
 Die 22 gelieferten Bildnisse liegen unverändert unter `assets/infernal-art/`; die 17 Artikel zeigen sie groß und ohne Beschnitt. Die fünf übrigen Bildnisse sind direkt im Register erreichbar. `sources.json` hält Original-URL, lokalen Pfad, Maße und SHA-256 fest. Symbole und Artikelporträts bleiben getrennte Felder.
 
@@ -55,3 +55,7 @@ node --test Religionen/tests/*.test.mjs
 ```
 
 In eingeschränkten Windows-Testumgebungen kann zusätzlich `--experimental-test-isolation=none` verwendet werden.
+
+## Erweiterung vom 12. September 2026
+
+Vier ausgearbeitete Untergötter ergänzen die 17 importierten Profile. Ihre Bilder, Icons und die nachgereichten inhaltlichen Einschränkungen stehen in [INFERNALE_ERWEITERUNG.md](INFERNALE_ERWEITERUNG.md). Änderungen an importierten Kreaturenzuordnungen werden gegen das unveränderte Originalimportprotokoll geprüft.

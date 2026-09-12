@@ -65,18 +65,18 @@ for (const [index, profile] of profiles.entries()) {
   });
 }
 
-test('the Inferniid overview renders two explicit creator branches in the requested order', async () => {
+test('the Inferniid overview renders three explicit deity branches in the requested order', async () => {
   const directory = new URL('../wesen/gruppen/inferniiden/', import.meta.url);
   const profile = JSON.parse(await readFile(new URL('profil.json', directory), 'utf8'));
   const html = await readFile(new URL('index.html', directory), 'utf8');
-  const [dagon, sanguine] = profile.related.branches;
+  const [dagon, sanguine, maelach] = profile.related.branches;
 
-  assert.deepEqual([dagon.id, sanguine.id], ['dagon', 'sanguine']);
+  assert.deepEqual([dagon.id, sanguine.id, maelach.id], ['dagon', 'sanguine', 'maelach']);
   assert.deepEqual(dagon.levels.map(level => level.entryIds), [
     ['erzteufel'], ['dagonar', 'ignarii'], ['ignit', 'nixhund'], ['balgrath', 'flickerling', 'balor-unbekannt-1', 'balor-unbekannt-2']
   ]);
   assert.deepEqual(sanguine.levels.map(level => level.entryIds), [
-    ['erzdaemon'], ['sukkubus-inkubus', 'formwandler'], ['lustling', 'satyr']
+    ['erzdaemon'], ['sukkubus-inkubus'], ['lustling', 'satyr']
   ]);
   assert.equal(profile.related.entries.filter(entry => entry.unknown).length, 2);
   assert.equal(profile.related.entries.find(entry => entry.id === 'erzteufel').href, '../erzteufel/index.html');
@@ -85,7 +85,7 @@ test('the Inferniid overview renders two explicit creator branches in the reques
   assert.match(html, /field-related-branches\.css/);
   assert.match(html, /data-related-branch="dagon"/);
   assert.match(html, /data-related-branch="sanguine"/);
-  assert.equal((html.match(/data-related-branch-level=/g) || []).length, 7);
+  assert.equal((html.match(/data-related-branch-level=/g) || []).length, 8);
 
   const known = profile.related.entries.filter(entry => !entry.unknown);
   assert(known.every(entry => /vollständig/i.test(entry.image.alt)));

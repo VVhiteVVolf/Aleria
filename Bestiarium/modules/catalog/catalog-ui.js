@@ -1,16 +1,21 @@
-import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20260909-infernal-profiles-v1';
-import { filterEntries } from './catalog-model.js?v=20260907-bestiarium-v1';
+import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20260912-infernal-corrections-v2';
+import { filterEntries } from './catalog-model.js?v=20260912-infernal-corrections-v2';
 import { createEntryLink } from '../entry-preview/entry-link.js?v=20260907-bestiarium-v1';
 
 function createCard(entry, featured) {
   const card = createEntryLink(entry, `creature-card${featured ? ' creature-card-featured' : ''}`);
-  const image = document.createElement('img');
-  image.src = entry.image;
-  image.alt = '';
-  image.width = 384;
-  image.height = 384;
-  image.loading = 'lazy';
-  image.decoding = 'async';
+  const image = document.createElement(entry.image ? 'img' : 'span');
+  if (entry.image) {
+    image.src = entry.image;
+    image.alt = '';
+    image.width = 384;
+    image.height = 384;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+  } else {
+    image.className = 'creature-card-placeholder';
+    image.textContent = 'Bild folgt';
+  }
   const copy = document.createElement('span');
   copy.className = 'creature-card-copy';
   const title = document.createElement('strong');

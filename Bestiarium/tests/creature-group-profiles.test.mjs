@@ -15,7 +15,7 @@ const expectedKnownNames = {
   kobolde: ['Feuerkobold', 'Leidling', 'Grimling', 'Blutling', 'Hornling', 'Drachling', 'Schädling', 'Racheling', 'Wunschling', 'Lustling'],
   ogroiden: ['Gorak', 'Ognir', 'Grimnak', 'Bhalgar', 'Zarok'],
   vampire: ['Vampirfürst', 'Nosferat', 'Mula', 'Alp', 'Nachzehrer', 'Striga', 'Blutsauger'],
-  inferniiden: ['Erzteufel', 'Dagonar', 'Ignarii', 'Ignit', 'Nixhunde', 'Balgrath', 'Flickerlinge', 'Erzdämon', 'Sukkubus & Inkubus', 'Formwandler', 'Lustling', 'Satyr'],
+  inferniiden: ['Erzteufel', 'Dagonar', 'Ignarii', 'Ignit', 'Nixhunde', 'Balgrath', 'Flickerlinge', 'Erzdämon', 'Sukkubus & Inkubus', 'Lustling', 'Satyr', 'Formwandler'],
   aelvar: ['Lunen (Lunara)', 'Lamenta (Hela)', 'Nyxaren (Nyxara)', 'Erinyen (Nemsara)', 'Umbren (Nyxara)'],
   unhold: ['Basilisk', 'Tschort', 'Lykan', 'Ursa', 'Drakar', 'Tuskar', 'Stravin', 'Araknor', 'Felkris', 'Lithrak', 'Chimäre', 'Mantikor', 'Phönix', 'Hydra', 'Sphinx'],
   nautiloiden: ['Thraalkin', 'Sirenen', 'Leviathane'],

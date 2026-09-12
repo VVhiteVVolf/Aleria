@@ -1,12 +1,12 @@
 {
   "id": "formwandler",
   "name": "Formling & Formwandler",
-  "classification": "Sanguinarer Doppler und Meister gestohlener Identitäten",
+  "classification": "Infernalische Gestaltendiebe in Maelachs Umkreis",
   "continent": "Infernale Sphären",
   "region": "Städte, Dörfer und abgeschiedene Gemeinschaften",
   "folio": "IV / 04-I",
   "parentGroupId": "inferniiden",
-  "summary": "Formlinge, Doppler und Formwandler sind sanguinare Inferniiden, die Körper, Stimme und soziale Rolle anderer Wesen nachahmen. Sie überleben durch genaue Beobachtung und eingeschobene Identitäten, stiften Verwirrung oder lenken Gemeinschaften, ohne ihre eigentliche Gestalt offenbaren zu müssen.",
+  "summary": "Formlinge, Doppler und Formwandler ahmen Körper, Stimme und soziale Rolle anderer Wesen nach. Maelachs Varianten stehlen die Gestalt angesehener Personen und verbreiten widersprüchliche Aussagen in deren Namen. Ihre Macht liegt in gestohlener Autorität, genauer Beobachtung und langfristig eingeschobenen Identitäten.",
   "quote": "Der Doppler stiehlt nicht nur dein Gesicht; er wartet, bis deine Freunde ihm erklären, wie du es tragen musst.",
   "quoteAttribution": "Verhörnotiz eines Ordensrichters",
   "facts": [
@@ -16,19 +16,19 @@
     },
     {
       "label": "Typ",
-      "value": "Hoher sanguinarer Inferniide"
+      "value": "Inferniider Gestaltwandler"
     },
     {
-      "label": "Schöpfer",
-      "value": "Sanguine"
+      "label": "Göttlicher Umkreis",
+      "value": "Maelach; besonders seine Varianten der Stimmen- und Gestaltendiebe"
     },
     {
       "label": "Rang",
-      "value": "Gestaltwandler unterhalb der Erzdämonen"
+      "value": "Eigenständige Gestaltendiebe im Umkreis des Heuchlers"
     },
     {
       "label": "Herkunft",
-      "value": "Sanguines Domäne"
+      "value": "Infernale Sphären; Maelachs Markt der tausend Münder"
     },
     {
       "label": "Lebensraum",
@@ -83,6 +83,10 @@
         {
           "type": "paragraph",
           "text": "Formwandler gelangen nicht durch einen sichtbaren Angriff in eine Gemeinschaft. Sie beobachten, übernehmen ein Gesicht und lassen andere die fehlenden Einzelheiten ihrer neuen Rolle ergänzen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maelachs Formwandler nehmen bevorzugt das Ansehen von Amtsträgern, Vertrauten und anderen anerkannten Personen an. Sie verbreiten widersprüchliche Aussagen in deren Namen, sodass eine Gemeinschaft ihren wirklichen Mitgliedern zu misstrauen beginnt. Die Zuordnung beschreibt diesen Umkreis und behauptet keine einheitliche Erschaffung jedes denkbaren Gestaltwandlers."
         }
       ]
     },
@@ -102,7 +106,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Viele Doppler suchen nicht sofort körperlichen Schaden. Verwirrung, Spiel und das Erproben einer Rolle können ebenso wichtig sein; gefährlich werden sie, sobald Einfluss, Schutz oder Sanguines Auftrag eine dauerhafte Täuschung verlangen."
+          "text": "Viele Doppler suchen nicht sofort körperlichen Schaden. Verwirrung, Spiel und das Erproben einer Rolle können ebenso wichtig sein; gefährlich werden sie, sobald Einfluss, Schutz oder Maelachs Auftrag eine dauerhafte Täuschung verlangen."
         }
       ]
     },
@@ -174,5 +178,12 @@
     "alt": "Szenentafel mit einem Formling & Formwandler",
     "caption": "Überlieferte Bildtafel · Ein Formwandler wechselt vor einem Ordensritter die Gestalt"
   },
-  "plates": []
+  "plates": [],
+  "readingLinks": [
+    {
+      "label": "Maelach · Der Heuchler",
+      "href": "../../../../Religionen/gottheiten/infernale/untergoetter/maelach/index.html",
+      "note": "Herkunft, Wesenheit und göttliche Gefolgschaft."
+    }
+  ]
 }

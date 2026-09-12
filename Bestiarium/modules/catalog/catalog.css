@@ -35,6 +35,7 @@
 .creature-card::before { content: ''; position: absolute; inset: 4px; border: 1px solid #b6a17c24; pointer-events: none; }
 .creature-card:hover { background: #fff9eaab; border-color: var(--chapter-ink); transform: translateY(-3px); }
 .creature-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 3px; }
+.creature-card-placeholder { display: grid; place-items: center; width: 100%; aspect-ratio: 1; color: var(--muted); font-size: 12px; font-style: italic; margin-bottom: 3px; }
 .creature-card-copy { display: block; max-width: 100%; padding: 0 3px; }
 .creature-card strong { display: block; font-weight: 400; font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
 .creature-card small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }

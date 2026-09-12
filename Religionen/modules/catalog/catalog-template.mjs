@@ -20,6 +20,7 @@ export function renderCatalog(catalog) {
       <noscript><p class="reading-note">Alle Archivblätter sind unten direkt erreichbar. Mit JavaScript stehen zusätzlich Suche, Kapitelfilter und Sortierung zur Verfügung.</p></noscript>
       <div id="catalog-chapters">${catalog.chapters.map(chapter => renderCatalogChapter(chapter, entries, link)).join('')}</div>
       ${renderCatalogEmpty()}
+      <a class="further-reading" href="${link('Astrologie/index.html')}"><span class="reading-mark" aria-hidden="true">✧</span><div><p class="eyebrow">Unter dem Firmament</p><h2>Der Sternencodex</h2><p>Dreizehn Monatszeichen und ihre infernalen Schatten, zwei Monde und die seltene Drachennacht.</p></div><span aria-hidden="true">↗</span></a>
       <a class="further-reading" href="${link('Religionen/klerus/index.html')}"><span class="reading-mark" aria-hidden="true">❧</span><div><p class="eyebrow">Die Menschen im Dienst der Göttlichen</p><h2>Der Alerische Klerus</h2><p>Sechs Kasten, eigene Hierarchien und die monastischen Zünfte der Kirche.</p></div><span aria-hidden="true">↗</span></a>
       <a class="further-reading" href="${link('Bestiarium/themen/wesen-des-infernalen/index.html')}"><span class="reading-mark" aria-hidden="true">❧</span><div><p class="eyebrow">Aus der Bibliothek des Bestiariums</p><h2>Das Wesen des Infernalen</h2><p>Weiterlesen in den Überlieferungen jenseits der sterblichen Welt.</p></div><span aria-hidden="true">↗</span></a>
     </div>

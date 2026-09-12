@@ -70,7 +70,8 @@
     ] },
     { "id": "mythos", "title": "Mythos", "blocks": [
       { "type": "paragraph", "text": "Eine Überlieferung aus dem Äon der Göttlichen führt die Riesen auf albische Stämme zurück. Migdal der Trickser und Grimnar der Plünderer sollen ihnen Stärke, Größe und einen Anteil an Göttlichkeit versprochen haben. Die geschlossenen Pakte vergrößerten ihre Körper, während Verstand und Kultur verfielen." },
-      { "type": "paragraph", "text": "Seitdem gelten Riesen als Zeichen gefallener Größe und ungestillter Hybris. Ob der Wandel auch Unsterblichkeit brachte oder nur ein außergewöhnlich langes, rastloses Leben, bleibt ungeklärt." }
+      { "type": "paragraph", "text": "Seitdem gelten Riesen als Zeichen gefallener Größe und ungestillter Hybris. Ob der Wandel auch Unsterblichkeit brachte oder nur ein außergewöhnlich langes, rastloses Leben, bleibt ungeklärt." },
+      { "type": "paragraph", "text": "Die Steinriesen des heutigen Morgorn folgen einer eigenen Überlieferung: Sie huldigten Syressa, der Starrenden, und verwehrten den frühen Alben auf deren Flucht das erbetene Obdach. Die erzürnten Götter verfluchten sie, sodass die Alben sie besiegen und unter die Berge vertreiben konnten. Diese Geschichte betrifft jene Steinriesen und ersetzt nicht die Herkunft anderer Riesenlinien." }
     ] },
     { "id": "lebensraum", "title": "Lebensraum", "blocks": [
       { "type": "paragraph", "text": "Riesen meiden dicht bewohnte Gebiete und ziehen sich in Berge, Höhlen, alte Wälder und kalte Wildnis zurück. Ihre Lager sind an gebrochenem Fels, tiefen Tritten und unnatürlich verschobenen Baumstämmen oft schon aus großer Entfernung zu erkennen." },
@@ -88,5 +89,12 @@
       { "type": "list", "items": ["Drei unterschiedlich große Trittsiegel an einem Ort bedeuten nicht zwingend drei Riesen; derselbe Riese kann je nach Boden sehr verschiedene Spuren hinterlassen.", "Riesen verwenden abgebrochene Baumstämme und Gebäudeteile oft so selbstverständlich wie Menschen Stäbe und Keulen.", "Ein Riese, der einen alten Gegenstand bewacht, reagiert häufig stärker auf dessen Berührung als auf das bloße Betreten seines Reviers.", "Beobachter schätzen Entfernung und Reichweite grundsätzlich zu niedrig ein, weil die langsamen Bewegungen der Riesen ihre tatsächliche Geschwindigkeit verschleiern."] }
     ] }
   ],
-  "plates": []
+  "plates": [],
+  "readingLinks": [
+    {
+      "label": "Syressa · Die Starrende",
+      "href": "../../../../Religionen/gottheiten/infernale/untergoetter/syressa/index.html",
+      "note": "Herkunft, Wesenheit und göttliche Gefolgschaft."
+    }
+  ]
 }

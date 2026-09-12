@@ -1,5 +1,6 @@
 // Editorial catalog only. Creature mechanics and Firebase records belong to the Almanach.
 // Set an entry's href once its local detail page exists; null opens an archive preview.
+import { INFERNAL_CREATURE_ENTRIES } from './infernal-creatures.js?v=20260912-infernal-corrections-v2';
 const icon = id => new URL(`../../assets/icons/${id}.webp`, import.meta.url).href;
 
 function entry(id, title, description, note = '', href = null) {
@@ -68,7 +69,7 @@ export const BESTIARY_CHAPTERS = [
         entry('kobolde', 'Kobolde', 'Kobolde, Wichtel und Goblins sowie ihre Bindung an die infernalen Götter.', '', './wesen/gruppen/kobolde/index.html'),
         entry('ogroiden', 'Ogroiden', 'Die infernalen Kriegslinien der Goraks, Ognir, Grimnaks, Bhalgar und Zaroks.', '', './wesen/gruppen/ogroiden/index.html'),
         entry('vampire', 'Vampire', 'Bhaals blutgebundene Ordnung von den Vampirfürsten bis zu ihren niederen Sprossen.', '', './wesen/gruppen/vampire/index.html'),
-        entry('inferniiden', 'Inferniiden', 'Dagons Teufelshierarchie und Sanguines Dämonenlinie mit Fürsten, hohen Dienern und niederen Gefolgschaften.', '', './wesen/gruppen/inferniiden/index.html'),
+        entry('inferniiden', 'Inferniiden', 'Dagons Teufelshierarchie, Sanguines Dämonenlinie und Maelachs Gestaltendiebe mit ihren jeweiligen Gefolgschaften.', '', './wesen/gruppen/inferniiden/index.html'),
         entry('aelvar', 'Aelvar', 'Matriarchale Finsteralben und ihre fünf überlieferten Linien im Dienst infernaler Göttinnen.', '', './wesen/gruppen/aelvar/index.html'),
         entry('unhold', 'Unholde', 'Zatrachs überformte Jagdgestalten, seltene Relikte und offene Stellen für einzigartige Unholde.', '', './wesen/gruppen/unhold/index.html'),
         entry('nautiloiden', 'Nautiloiden', 'Thraalkin, Sirenen und Leviathane innerhalb Thraals wassergebundener Ordnung.', '', './wesen/gruppen/nautiloiden/index.html'),
@@ -79,7 +80,7 @@ export const BESTIARY_CHAPTERS = [
       { id: 'einzelne-infernale', title: 'Einzelne infernale Wesen', description: 'Besondere Wesen und individuelle Exemplare abseits der großen Linien.', entries: [
         entry('djinn', 'Djinn', 'Naraths gefallene Diener: gebundene Willenswesen zwischen astraler Gestalt, Magie und gefährlich genauem Gehorsam.', '', './wesen/infernale/djinn/index.html'),
         entry('muhmen', 'Muhmen', 'Helas uralte Druidenhexen: Paktmagie, Fluchweberei und geduldig eingeforderte Preise.', '', './wesen/infernale/muhmen/index.html'),
-        entry('gorgonnen', 'Gorgonnen', 'Eine eigene Tafel für die Gorgonnen Alerias.')
+        ...INFERNAL_CREATURE_ENTRIES
       ] }
     ],
     specimenNote: 'Benannte infernale Exemplare und ihre Zugehörigkeit werden hier nach und nach ergänzt.'

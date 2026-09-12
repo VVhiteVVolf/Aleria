@@ -10,9 +10,9 @@ const catalog = readReligionCatalog();
 
 test('Jede Haupt-, souveräne und Untergottheit der beiden Kreise besitzt genau eine Domäne', () => {
   const circles = getMagicDomainCircles(catalog);
-  assert.deepEqual(circles.map(circle => circle.count), [19, 15]);
+  assert.deepEqual(circles.map(circle => circle.count), [19, 19]);
   const entries = circles.flatMap(circle => circle.groups.flatMap(group => group.entries));
-  assert.equal(new Set(entries.map(entry => entry.id)).size, 34);
+  assert.equal(new Set(entries.map(entry => entry.id)).size, 38);
   assert.equal(entries.find(entry => entry.id === 'adar').kind, 'Kosmische Entität');
   assert.match(entries.find(entry => entry.id === 'adar').note, /außerhalb einer eindeutigen Zuordnung/);
   assert.match(entries.find(entry => entry.id === 'ordan').href, /Religionen\/gottheiten\/goettliche\/ordan\/index.html$/);
@@ -33,8 +33,8 @@ test('Das ausgelieferte Register enthält den vollständigen aktuellen Religions
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   const generated = renderMagicDomains(getMagicDomainCircles(catalog));
   assert.ok(html.replace(/\r\n/g, '\n').includes(generated));
-  assert.equal((generated.match(/data-magic-domain>/g) || []).length, 34);
-  assert.equal((generated.match(/class="magic-domain-symbol"/g) || []).length, 34);
+  assert.equal((generated.match(/data-magic-domain>/g) || []).length, 38);
+  assert.equal((generated.match(/class="magic-domain-symbol"/g) || []).length, 38);
   assert.equal((generated.match(/class="magic-domain-placeholder"/g) || []).length, 0);
   assert.doesNotMatch(generated, /<details[^>]+\sopen(?:\s|>)/);
 });
