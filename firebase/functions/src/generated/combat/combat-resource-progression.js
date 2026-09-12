@@ -12,12 +12,12 @@ export { getCombatActionEconomy } from './combat-action-progression.js?v=2026090
 export const MANA_BYPASS_RESOURCE_IDS = Object.freeze(['celestial-points', 'infernal-points']);
 
 
-// Index 0 = Zaubertrick (cantrip), index N = Grad N. Zaubertricks kosten immer 1 Mana - das ist
-// ein echter, wiederkehrender Verbrauch (kein Freebie wie in D&D), also müssen die Manapools
-// unten das mit einrechnen. Grade I-IX übernehmen D&Ds eigene DMG-Spielpunkte-Umrechnung
-// (2,3,5,6,7,9,10,11,13) als bereits durchgetestetes Verhältnis; Grad X ist die naheliegende
-// Fortsetzung des Musters (+1) auf 15.
-export const SPELL_GRADE_MANA_COST = Object.freeze([1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 15]);
+// Index 0 = Zaubertrick, index N = Grad N. The global balance change of
+// 2026-09-12 raises every grade's mana cost by 15%, rounded up to whole points.
+// Always derive from the original table, never from a saved spell's manaCost:
+// normalizing a character repeatedly must not compound the increase.
+const BASE_SPELL_GRADE_MANA_COST = Object.freeze([1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 15]);
+export const SPELL_GRADE_MANA_COST = Object.freeze(BASE_SPELL_GRADE_MANA_COST.map(cost => Math.ceil(cost * 115 / 100)));
 
 // Mirrors D&D's full-caster slot cadence (grade N unlocks every two levels starting at 1),
 // stretched one extra rung to cover Aleria's tenth spell grade by level 19.

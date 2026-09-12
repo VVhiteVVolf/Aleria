@@ -97,13 +97,13 @@ test('Hervorragende Arkane Ausbildung gibt Vorteil bei Arkaner Kunde, andere Fer
   assert.equal(athletics.rollMode, 'normal');
 });
 
-test('Alle 5 Zaubertricks kosten 1 Mana und sind rein freitextbasiert ohne Struktureffekt', async () => {
+test('Alle 5 Zaubertricks kosten 2 Mana und sind rein freitextbasiert ohne Struktureffekt', async () => {
   const rhiannon = await loadRhiannon();
   const resolved = resolveCombatProfile(rhiannon);
   const cantrips = resolved.magic.spells.filter(spell => spell.level === 0);
   assert.equal(cantrips.length, 5);
   cantrips.forEach(spell => {
-    assert.equal(spell.manaCost, 1, `${spell.name} soll 1 Mana kosten`);
+    assert.equal(spell.manaCost, 2, `${spell.name} soll 2 Mana kosten`);
     assert.equal(spell.effects.length, 0, `${spell.name} soll keinen Struktureffekt haben`);
     assert.equal(spell.resolutionType, 'automatic');
   });

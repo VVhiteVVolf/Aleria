@@ -900,10 +900,10 @@ test('ein freigeschalteter Zaubergrad begrenzt keine Anwendungen zusätzlich zum
   assert.equal(actor.selectedAction.compatible, true);
   assert.equal(validateCombatActorProfile(actor).ready, true);
   assert.equal(actor.resourceCosts.some(cost => cost.resourceId === 'slot-1'), false);
-  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus')?.amount, 2);
+  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus')?.amount, 3);
 });
 
-test('Zaubertricks kosten 1 Mana und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
+test('Zaubertricks kosten 2 Mana und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
   const profile = sanitizeCharacterCombatProfile({
     magic: {
       enabled: true,
@@ -916,7 +916,7 @@ test('Zaubertricks kosten 1 Mana und Zaubergrade I bis X erhalten eigene Langras
   const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
   assert.equal(COMBAT_SPELL_SLOT_DEFINITIONS.length, 10);
   assert.deepEqual(slots.map(slot => [slot.spellLevel, slot.recovery]), Array.from({ length: 10 }, (_entry, index) => [index + 1, 'long-rest']));
-  assert.equal(profile.magic.spells[0].manaCost, 1);
+  assert.equal(profile.magic.spells[0].manaCost, 2);
   assert.equal(profile.magic.spells[0].slotCost, 0);
   assert.equal(profile.magic.spells[0].slotResourceId, '');
   assert.equal(profile.magic.spells[1].level, 10);

@@ -1,3 +1,4 @@
+import { getSpellManaCost } from '../combat-resource-progression.js';
 import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { detachCatalogSpell, getSpellCatalogPageHref } from '../../spell-catalog/spell-catalog.js';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
@@ -226,7 +227,7 @@ function renderCosts(item) {
       <label class="check"><input type="checkbox" data-entry-field="auraBypass.allowed"${checked(item.auraBypass?.allowed !== false)}> Durch Aura-Fokus ersetzbar</label>
       <label><span>Aura-Kosten</span><input type="number" min="1" max="999" data-entry-field="auraBypass.cost" value="${escapeHtml(item.auraBypass?.cost ?? 1)}"></label>
     </div>
-    ${state.kind === 'spell' ? '<p>Mana und Zauberplätze werden ausschließlich über die getrennten Zauberfelder berechnet. Aura-Fokus ersetzt bei Auswahl das gesamte reguläre Paket.</p>' : ''}
+    ${state.kind === 'spell' ? '<p>Mana wird automatisch nach Wirkungsgrad berechnet. Aura-Fokus ersetzt bei Auswahl das gesamte reguläre Paket.</p>' : ''}
   </fieldset>`;
 }
 
@@ -377,7 +378,7 @@ function renderSpell(item) {
     <label><span>Zaubergrad</span><select data-entry-field="level">${renderSpellLevelOptions(item.level)}</select></label>
     <label><span>Würfelformel</span><input data-entry-field="rollFormula" value="${escapeHtml(String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="2W6"></label>
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>
-    <label><span>Mana</span><input type="number" min="0" max="999" data-entry-field="manaCost" value="${escapeHtml(item.manaCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}></label>
+    <label><span>Mana</span><input type="number" data-entry-field="manaCost" value="${getSpellManaCost(item.level)}" readonly title="Manakosten nach Wirkungsgrad"></label>
     <label><span>Zauberplatz</span><select data-entry-field="slotResourceId"${cantrip ? ' disabled' : ''}><option value="">${cantrip ? 'Zaubertrick · kein Platz' : 'Zauberplatz wählen'}</option>${spellSlots.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(item.slotResourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
     <label><span>Platzkosten</span><input type="number" min="0" max="99" data-entry-field="slotCost" value="${escapeHtml(item.slotCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
@@ -389,7 +390,7 @@ function renderSpell(item) {
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div><p class="combat-entry-editor-spell-rule">${cantrip ? 'Zaubertrick: verbraucht weiterhin seine Aktionsart, aber weder Mana noch einen Zauberplatz.' : `${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht die hinterlegte Aktionsart sowie Mana- und Zauberplatzkosten.`}</p>
+  </div><p class="combat-entry-editor-spell-rule">${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht das hinterlegte Aktionspaket und ${getSpellManaCost(item.level)} Mana. Zaubergrade sind Freischaltungen und werden nicht verbraucht.</p>
   ${cantrip ? '' : `<fieldset class="combat-entry-editor-mechanics"><legend>Höherstufig wirken</legend><div class="combat-entry-editor-grid">
     <label class="check"><input type="checkbox" data-entry-field="upcast.enabled"${checked(upcast.enabled)}> Höhere Zauberplätze erlauben</label>
     <label><span>Zusatzwurf je Grad</span><input data-entry-field="upcast.formulaPerLevel" value="${escapeHtml(String(upcast.formulaPerLevel || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W6"></label>

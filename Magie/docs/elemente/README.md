@@ -12,19 +12,19 @@ Die Regeln liegen nach Element getrennt in `AleriaAlmanach/modules/spell-catalog
 
 | Zauber | Grundgrad | Grundschaden | Mana | Aktionskosten | Höhere Formen |
 | --- | --- | --- | --- | --- | --- |
-| Feuerball | 2 | 3W6 Feuer | 3 | Aktion + Reaktion | Grad 3: 4W6; 4: 5W6; 5: 6W6; 6: 7W6 |
-| Großer Feuerball | 7 | 8W6 Feuer | 10 | Aktion + Besondere Aktion + Reaktion | Grad 8: 9W6; 9: 10W6 |
-| Blitzbahn | 2 | 3W6 Blitz | 3 | Aktion + Reaktion | Wie der kleine Feuerball, maximal 7W6 |
-| Große Blitzbahn | 7 | 8W6 Blitz | 10 | Aktion + Besondere Aktion + Reaktion | Grad 8: 9W6; 9: 10W6 |
-| Eislanze | 3 | 3W8 Kälte | 5 | Aktion + Reaktion | Grad 4: 4W8; 5: 5W8 |
-| Große Eislanze | 6 | 6W8 Kälte | 9 | Aktion + Besondere Aktion | Grad 7: 7W8; 8: 8W8 |
-| Donnerkuppel | 3 | 4W6 Donner | 5 | Aktion + Reaktion | Grad 4: 5W6; 5: 6W6 |
-| Große Donnerkuppel | 6 | 7W6 Donner | 9 | Aktion + Besondere Aktion | Grad 7: 8W6; 8: 9W6 |
-| Großer Hagelsturm | 6 | 4W6 Wucht + 3W6 Kälte | 9 | Aktion + Besondere Aktion | Grad 7: 4W6 + 4W6; 8: 5W6 + 4W6 |
+| Feuerball | 2 | 3W6 Feuer | 4 | Aktion + Reaktion | Grad 3: 4W6; 4: 5W6; 5: 6W6; 6: 7W6 |
+| Großer Feuerball | 7 | 8W6 Feuer | 12 | Aktion + Besondere Aktion + Reaktion | Grad 8: 9W6; 9: 10W6 |
+| Blitzbahn | 2 | 3W6 Blitz | 4 | Aktion + Reaktion | Wie der kleine Feuerball, maximal 7W6 |
+| Große Blitzbahn | 7 | 8W6 Blitz | 12 | Aktion + Besondere Aktion + Reaktion | Grad 8: 9W6; 9: 10W6 |
+| Eislanze | 3 | 3W8 Kälte | 6 | Aktion + Reaktion | Grad 4: 4W8; 5: 5W8 |
+| Große Eislanze | 6 | 6W8 Kälte | 11 | Aktion + Besondere Aktion | Grad 7: 7W8; 8: 8W8 |
+| Donnerkuppel | 3 | 4W6 Donner | 6 | Aktion + Reaktion | Grad 4: 5W6; 5: 6W6 |
+| Große Donnerkuppel | 6 | 7W6 Donner | 11 | Aktion + Besondere Aktion | Grad 7: 8W6; 8: 9W6 |
+| Großer Hagelsturm | 6 | 4W6 Wucht + 3W6 Kälte | 11 | Aktion + Besondere Aktion | Grad 7: 4W6 + 4W6; 8: 5W6 + 4W6 |
 
 Die Tabelle zeigt Grundkosten; höhere Formen haben eigene, im Katalog ausgewiesene Pakete. Großformen werden separat gelernt. Die kleine Feuerkugel bleibt bei 3 m Radius, die große wirkt auf 6 m. Ein kleiner Zauber erweitert nicht nebenbei Reichweite, Fläche, Dauer und Zielzahl.
 
-Die gemeinsame Manastaffel bleibt unverändert: Grade 0–9 kosten 1, 2, 3, 5, 6, 7, 9, 10, 11 und 13 Mana. Die höheren Grade erhöhen damit zugleich Manakosten und erforderliche Charakterstufe. Besondere Aktionen bleiben eine dauerhafte Ressource. Die Aktionspakete folgen `AGENTS.md` und werden nach Rolle gewählt: kurze Tricks, direkte Angriffe, Vorbereitung, Reaktionen und starke Flächen sind unterschiedlich bepreist.
+Auf Wunsch des Nutzers wurden am 12. September 2026 die Manakosten aller Zaubergrade um 15 % erhöht und auf ganze Punkte aufgerundet. Grade 0–10 kosten jetzt **2, 3, 4, 6, 7, 9, 11, 12, 13, 15 und 18 Mana**. Die gemeinsame Funktion leitet diese Werte einmalig aus der bisherigen Grundstaffel ab; wiederholtes Laden oder Speichern erhöht sie nicht erneut. Das gilt für eigene Zauber und alle Katalogfassungen. Manavorräte, Regeneration und die Aktionspakete bleiben unverändert. Die Aktionspakete folgen `AGENTS.md` und werden nach Rolle gewählt: kurze Tricks, direkte Angriffe, Vorbereitung, Reaktionen und starke Flächen sind unterschiedlich bepreist.
 
 Für normale Flächenschäden gilt als Orientierung eine allmähliche Steigerung von 3W6 auf Grad 2 bis 8W6 auf Grad 7. Das ist keine starre Formel. Einzelzielangriffe dürfen höhere Würfel haben, weil sie bei Verfehlen vollständig ausfallen. Wetter- oder Materialvoraussetzungen, kurze Reichweite und Vorwarnung schränken manche Zauber ein. Zusätzliche Kontrolle oder wiederholte Kontakte rechtfertigen höhere Kosten auch bei weniger Sofortschaden.
 
@@ -35,7 +35,7 @@ Die früher sehr hohen Verstärkungen wurden ebenfalls überarbeitet: Großer Br
 - `Magie/elemente/index.html` und das Archiv verwenden Fassung 2. Die Magie-Hauptseite verlinkt sie ausschließlich unter der gelehrten Schule Elemente.
 - Fassung 1 ist unverändert im Datenregister erhalten. Ihre frühere URL bleibt als deutlich gekennzeichnete Archivseite lesbar. Die Seite stellt keine neue druidische Zauberliste dar.
 - Bestehende Katalog-IDs mit dem historischen Präfix `elementarismus-` bleiben stabile technische Identitäten. Zusammen mit `revision: 2` verweisen sie auf die neue Regelversion. Neue kleinere Zauber besitzen eigene IDs mit `elemente-`.
-- Ein vorhandener Charakter mit `catalogReference: { id, revision: 1 }` behält Werte, Namen, Kosten und höhere Formen seiner alten Fassung. Es gibt keine Namensmigration, Massenänderung oder Ersetzung von Rhiannons profilgebundenen Zaubern.
+- Ein vorhandener Charakter mit `catalogReference: { id, revision: 1 }` behält Namen, Wirkungen, Aktionspakete und höhere Formen seiner alten Fassung. Die ausdrücklich global erhöhte Manastaffel gilt auch hier. Es gibt keine Namensmigration, Massenänderung oder Ersetzung von Rhiannons profilgebundenen Zaubern.
 - Ohne explizite Revision liefern Katalogabfragen die aktuelle Vorlage. Mit expliziter Revision wird ausschließlich diese Fassung aufgelöst. Archivvorlagen, Karten, Sprechblasen, Kampf und Server verwenden dieselben Funktionen.
 - Die getrennten Archivschlüssel erlauben alte und neue Fassungen nebeneinander. Das Hinzufügen einer neuen Vorlage ersetzt einen bereits gelernten Zauber nicht automatisch. Eigene Bearbeitungen werden weiterhin als unabhängige Ableitungen behandelt.
 

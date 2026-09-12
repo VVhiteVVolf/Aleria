@@ -34,13 +34,12 @@ test('Aktionsökonomie wächst durch gewählte Pools und bleibt auf 2/2/2 sowie 
   });
 });
 
-test('Zaubergrade werden teurer: Zaubertrick kostet 1 Mana, Grad X kostet 15 (D&Ds DMG-Umrechnung, fortgesetzt)', () => {
-  assert.equal(SPELL_GRADE_MANA_COST.length, 11);
-  assert.equal(getSpellManaCost(0), 1);
-  assert.equal(getSpellManaCost(1), 2);
-  assert.equal(getSpellManaCost(5), 7);
-  assert.equal(getSpellManaCost(10), 15);
-  assert.equal(getSpellManaCost(99), 15, 'wird auf Grad X begrenzt');
+test('alle Zaubergrade kosten 15 Prozent mehr, auf ganze Manapunkte aufgerundet', () => {
+  const expected = [2, 3, 4, 6, 7, 9, 11, 12, 13, 15, 18];
+  assert.deepEqual(SPELL_GRADE_MANA_COST, expected);
+  assert.deepEqual(expected.map((_cost, grade) => getSpellManaCost(grade)), expected);
+  assert.equal(getSpellManaCost(99), 18, 'wird auf Grad X begrenzt');
+  assert.equal(getSpellManaCost(-1), 2, 'wird auf Zaubertrick begrenzt');
 });
 
 test('Vollcaster schaltet Zaubergrade im Zweijahresrhythmus bis Grad X bei Stufe 19 frei', () => {

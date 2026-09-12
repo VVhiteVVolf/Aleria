@@ -112,7 +112,7 @@ test('höherstufiges Wirken berechnet Mana nach Grad und skaliert den Schadenswu
   const resolved = resolveCombatProfile(caster, { actionId: 'spell:flame', segmentKind: 'spell', castLevel: 2 });
   assert.equal(resolved.selectedAction.castLevel, 2);
   assert.equal(resolved.weapon.damageFormula, '2d8');
-  assert.ok(resolved.resourceCosts.some(cost => cost.resourceId === 'mana-focus' && cost.amount === 3));
+  assert.ok(resolved.resourceCosts.some(cost => cost.resourceId === 'mana-focus' && cost.amount === 4));
   assert.ok(!resolved.resourceCosts.some(cost => cost.resourceId === 'spell-slot-2'));
   assert.ok(!resolved.resourceCosts.some(cost => cost.resourceId === 'spell-slot-1'));
 });

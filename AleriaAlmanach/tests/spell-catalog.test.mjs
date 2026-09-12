@@ -100,12 +100,12 @@ test('archive, profile and serialized snapshots preserve references without merg
 
 test('Feuerball uses authored upcast damage and pays mana plus both actions; missing resources block it', async () => {
   const card = getCharacterSpellPresentation(createCatalogSpell('elementarismus-feuerball', { revision: 1 }));
-  assert.equal(card.costs, 'Aktion + Besondere Aktion · 5 Mana');
+  assert.equal(card.costs, 'Aktion + Besondere Aktion · 6 Mana');
   assert.match(card.higherForms[1], /10W6/);
   const actor = actorFor('feuerball', 5);
   assert.equal(actor.weapon.damageFormula, '10d6');
   assert.equal(actor.selectedAction.maximumTargets, 20);
-  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus').amount, 7);
+  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus').amount, 9);
   assert.deepEqual(actor.resourceCosts.filter(cost => cost.resourceId !== 'mana-focus').map(cost => cost.resourceId), ['action', 'special-action']);
   const result = await new CombatResolutionService(dice()).resolveAttack({ actor, target: target() });
   assertCostsPaid(result, actor);

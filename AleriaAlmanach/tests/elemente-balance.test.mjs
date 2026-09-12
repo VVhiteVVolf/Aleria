@@ -64,7 +64,7 @@ test('Feuerball progresses 3W6 to 7W6; its separately learned greater form start
   assert.equal(createCatalogSpell(small.id,{level:7}),null);
   assert.equal(large.name,'Großer Feuerball');
   assert.deepEqual([large,...large.forms].map(f=>[f.level,f.damage[0].formula]),[[7,'8d6'],[8,'9d6'],[9,'10d6']]);
-  assert.equal(getCharacterSpellPresentation(createCatalogSpell(large.id)).costs,'Aktion + Besondere Aktion + Reaktion · 10 Mana');
+  assert.equal(getCharacterSpellPresentation(createCatalogSpell(large.id)).costs,'Aktion + Besondere Aktion + Reaktion · 12 Mana');
   for(const id of ['elementarismus-feuerball','elementarismus-blitzbahn','elementarismus-flutstoss','elementarismus-flammenkrone']) {
     const entry=getSpellCatalogEntry(id);assert.ok(entry.level>=7,id);assert.match(entry.name,/Groß/);
   }
@@ -89,11 +89,11 @@ test('learned edition 1 and current edition 2 coexist without migrating saved ru
 
 test('mini combat: small fireball, greater fireball and reactive discharge pay exact packages and halve saves',async()=>{
   for(const [id,grade,formula,costs,damage] of [
-    ['elemente-feuerball',2,'3d6',[['action',1],['reaction',1],['mana-focus',3]],6],
-    ['elemente-feuerball',6,'7d6',[['action',1],['special-action',1],['mana-focus',9]],14],
-    ['elementarismus-feuerball',7,'8d6',[['action',1],['special-action',1],['reaction',1],['mana-focus',10]],16],
-    ['elemente-gegenknall',3,'4d6',[['reaction',1],['bonus-action',1],['mana-focus',5]],8],
-    ['elemente-rueckentladung',3,'4d6',[['reaction',1],['bonus-action',1],['mana-focus',5]],8]
+    ['elemente-feuerball',2,'3d6',[['action',1],['reaction',1],['mana-focus',4]],6],
+    ['elemente-feuerball',6,'7d6',[['action',1],['special-action',1],['mana-focus',11]],14],
+    ['elementarismus-feuerball',7,'8d6',[['action',1],['special-action',1],['reaction',1],['mana-focus',12]],16],
+    ['elemente-gegenknall',3,'4d6',[['reaction',1],['bonus-action',1],['mana-focus',6]],8],
+    ['elemente-rueckentladung',3,'4d6',[['reaction',1],['bonus-action',1],['mana-focus',6]],8]
   ]) {
     const actor=actorFor(id,grade);assert.equal(actor.weapon.damageFormula,formula);
     const result=await new CombatResolutionService(dice).resolveAttack({actor,target:target()});

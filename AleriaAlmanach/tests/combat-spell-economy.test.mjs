@@ -84,7 +84,7 @@ test('Rhiannons früher verbrauchter Grad-I-Zähler sperrt weder Schild noch Mag
     const actor = resolveCombatProfile(character, { actionId: `spell:${id}`, segmentKind: 'spell' });
     assert.equal(validateCombatActorProfile(actor).ready, true);
     assert.ok(!actor.resourceCosts.some(cost => cost.resourceId.startsWith('spell-slot-')));
-    assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus').amount, 2);
+    assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'mana-focus').amount, 3);
   }
 });
 

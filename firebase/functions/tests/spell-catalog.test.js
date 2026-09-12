@@ -15,8 +15,8 @@ test('all spell editions and authored grades are identical in browser and genera
 
 test('server resolves learned catalog references authoritatively and consumes the selected grade package', async () => {
   for (const [revision, castLevel, formula, costs] of [
-    [1, 5, '5d6', [['action',1],['special-action',1],['mana-focus',7]]],
-    [2, 7, '4d6', [['action',1],['special-action',1],['reaction',1],['mana-focus',10]]]
+    [1, 5, '5d6', [['action',1],['special-action',1],['mana-focus',9]]],
+    [2, 7, '4d6', [['action',1],['special-action',1],['reaction',1],['mana-focus',12]]]
   ]) {
   const original = createCatalogSpell('elementarismus-hagelsturm', { revision });
   const character = { id:'catalog-server-caster', name:'Elementarist', combatProfile: {
