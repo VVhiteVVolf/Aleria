@@ -2,7 +2,7 @@ import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { HOUSE_AWENOR_FAMILY } from './house-awenor-family.js';
 import { HOUSE_AWENYDD_FAMILY } from './house-awenydd-family.js';
-import { HOUSE_BALCHDER_FAMILY } from './house-balchder-family.js';
+import { HOUSE_BALCHDER_FAMILY } from './house-balchder-family.js?v=armel-bio-20260912';
 import { HOUSE_CHWEDLONOL_FAMILY } from './house-chwedlonol-family.js';
 import { HOUSE_CLUDWYR_FAMILY } from './house-cludwyr-family.js';
 import { HOUSE_ENEINIOG_FAMILY } from './house-eneiniog-family.js';

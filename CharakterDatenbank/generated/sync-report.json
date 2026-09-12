@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-12T12:59:38.004Z",
+  "sourceExportedAt": "2026-09-12T13:56:03.107Z",
   "summary": {
-    "sourceDocuments": 271,
+    "sourceDocuments": 272,
     "total": 236,
-    "mergedSameNameGroups": 27,
+    "mergedSameNameGroups": 28,
     "familyLinked": 155,
     "familyAmbiguous": 0,
     "familyPending": 81,
@@ -963,6 +963,17 @@
         "N8D8c9EMPigmAhYWPayO"
       ],
       "ages": []
+    },
+    {
+      "name": "Armel Balchder",
+      "canonicalDocumentId": "person--haus-balchder--armel-balchder",
+      "documentIds": [
+        "person--haus-balchder--armel-balchder",
+        "person--haus-balchder--armel-balchder"
+      ],
+      "ages": [
+        "Geburtsjahr 1717"
+      ]
     },
     {
       "name": "Cederic Chwedonol",

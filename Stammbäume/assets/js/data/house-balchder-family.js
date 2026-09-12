@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
+import { ARMEL_BALCHDER_BIOGRAPHY } from './person-biographies/armel-balchder.js';
 
 const BALCHDER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-balchder.png';
 const SELDRYN_EMBLEM = 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Seldryn.png';
@@ -147,7 +148,14 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     person('morgaine-chwedlonol', 'Morgaine Chwedonol', 'female', '1695', '', 'house-chwedlonol'),
 
     // Kinder von Avan und Ronda; Sheev ist Avans Mündel, kein leibliches Kind
-    person('armel-balchder', 'Armel Balchder', 'male', '1717', ''),
+    person('armel-balchder', 'Armel Balchder', 'male', '1717', '', BALCHDER_HOUSE_ID, {
+      title: 'Sir · Uchelwyr des Hauses Balchder',
+      notes: 'Schüler der Balchder-Schule und angehender Vogt; mathematisches und wirtschaftliches Genie. Großvater Dalvin war sein Rittervater; Armel erhielt einen formellen Ritterschlag, besitzt aber kaum praktische Kampfbefähigung. Bester Freund, Geschäftspartner und Trauzeuge Tudwal Draigs, dessen Vermögen er informell verwaltet. Reitet einen Herzogsschimmer.',
+      extensions: {
+        biographyModule: ARMEL_BALCHDER_BIOGRAPHY,
+        registryManagedFields: ['title', 'notes']
+      }
+    }),
     person('anwen-balchder', 'Anwen Balchder', 'female', '1721', ''),
     person('brina-balchder', 'Brina Balchder', 'female', '1726', ''),
     person('owen-balchder', 'Owen Balchder', 'male', '1727', ''),
@@ -302,6 +310,6 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Balchder-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Bronwen, Genofeva, Aerona, Klervi und Cerrin besitzen Wegverheiratungs-Knoten zu ihren Zielhäusern; Aerona ist als älteste Tochter Dalvins ergänzt. Avan und Ronda Rhyddid, Klervi und Rhain Cludwyr, Kamber und Senara Gelyn sowie Marven und Morgaine Chwedonol sind mit ihren bestehenden Stammbäumen als dieselben Weltpersonen verknüpft. Sheev Gwared ist Avans aufgenommenes Mündel und wird ausschließlich als Schutzbefohlener mit Vormundschaft, nicht als leibliches Kind, geführt. Als Ritterherrenhaus führt Balchder den silbernen Wappenrahmen. Die ergänzende Seldryn-Quelle synchronisiert Lugh und Bronwen samt beendeter Ehe, ersetzt Lughs älteres Portrait und gibt Bronwens Zielknoten das echte silbern gerahmte Wappen von Haus Seldryn.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });
