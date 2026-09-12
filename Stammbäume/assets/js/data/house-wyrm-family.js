@@ -4,6 +4,7 @@ import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
+import { GAIS_WYRM_BIOGRAPHY } from './person-biographies/gais-wyrm.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
@@ -234,7 +235,11 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     member('fotor-wyrm', 'Fotor', 'male', '1729?', '', { notes: 'Das Geburtsjahr ist in der Quelle als unsicher markiert.' }),
     member('marvo-wyrm', 'Marvo', 'male', '1722'),
     member('marvine-wyrm', 'Marvine', 'female', '1723'),
-    member('gais-wyrm', 'Gais', 'male', '1721'),
+    {
+      ...member('gais-wyrm', 'Gais', 'male', '1721'),
+      title: 'Sir',
+      extensions: { biographyModule: GAIS_WYRM_BIOGRAPHY }
+    },
     member('eilir-wyrm', 'Eilir', 'unknown', '1723'),
     member('tudor-wyrm', 'Tudor', 'male', '1725')
   ],

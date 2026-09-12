@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-12T11:53:47.460Z",
+  "sourceExportedAt": "2026-09-12T12:53:16.498Z",
   "summary": {
-    "sourceDocuments": 269,
+    "sourceDocuments": 270,
     "total": 236,
-    "mergedSameNameGroups": 25,
+    "mergedSameNameGroups": 26,
     "familyLinked": 155,
     "familyAmbiguous": 0,
     "familyPending": 81,
@@ -1017,6 +1017,17 @@
       ],
       "ages": [
         "Geburtsjahr 1720"
+      ]
+    },
+    {
+      "name": "Gais Wyrm",
+      "canonicalDocumentId": "person--haus-wyrm--gais-wyrm",
+      "documentIds": [
+        "person--haus-wyrm--gais-wyrm",
+        "person--haus-wyrm--gais-wyrm"
+      ],
+      "ages": [
+        "Geburtsjahr 1721"
       ]
     },
     {

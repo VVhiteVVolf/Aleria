@@ -1520,6 +1520,18 @@
   .cp-avatar-import-status.is-error {
     color: var(--red-wax);
   }
+  .emote-image-error { display: none; }
+  .emote-slot.is-image-error .emote-image-error {
+    display: block;
+    position: absolute;
+    inset: 0 0 1.6rem;
+    padding: 1.4rem 0.3rem 0.3rem;
+    background: var(--parchment);
+    color: var(--red-wax);
+    font-size: 0.65rem;
+    text-align: center;
+    pointer-events: none;
+  }
 
   /* Info fields (edit mode, Tab 2) */
   .char-field-group { display: flex; flex-direction: column; gap: 0.25rem; }

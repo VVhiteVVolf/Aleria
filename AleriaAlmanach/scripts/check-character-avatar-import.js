@@ -1,9 +1,10 @@
-const assert = require('node:assert/strict');
-const fs = require('node:fs');
-const path = require('node:path');
-const vm = require('node:vm');
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(__dirname, '..');
+const root = fileURLToPath(new URL('..', import.meta.url));
 const source = fs.readFileSync(
   path.join(root, 'modules', 'characters', 'character-avatar-import.js'),
   'utf8'
@@ -32,24 +33,18 @@ async function run() {
 
   context.testSlots = Array.from({ length: 80 }, () => null);
   context.testSlots[0] = { img: 'https://img.example/already.png', label: 'Schon da' };
-  context.testLoader = async url => {
-    if (url.includes('broken')) throw new Error('not loadable');
-    return url;
-  };
   context.testRaw = [
     'https://img.example/already.png',
     'https://img.example/happy-face.png',
-    'https://img.example/broken.png'
+    'https://img.example/slow.png'
   ].join('\n');
 
   const result = await vm.runInContext(`buildCharacterAvatarImport({
     rawValue: testRaw,
-    slots: testSlots,
-    loadImage: testLoader
+    slots: testSlots
   })`, context);
-  assert.equal(result.addedCount, 1);
+  assert.equal(result.addedCount, 2);
   assert.equal(result.duplicateCount, 1);
-  assert.equal(result.rejectedCount, 1);
   assert.equal(result.slots[1].img, 'https://img.example/happy-face.png');
   assert.equal(result.slots[1].label, 'happy face');
 
@@ -59,8 +54,7 @@ async function run() {
   }));
   const fullResult = await vm.runInContext(`buildCharacterAvatarImport({
     rawValue: 'https://img.example/overflow.png',
-    slots: fullSlots,
-    loadImage: testLoader
+    slots: fullSlots
   })`, context);
   assert.equal(fullResult.addedCount, 0);
   assert.equal(fullResult.skippedCapacityCount, 1);

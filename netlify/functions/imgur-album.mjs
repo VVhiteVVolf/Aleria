@@ -27,11 +27,15 @@ export async function handler(event = {}) {
 
   const clientId = String(process.env.ALERIA_IMGUR_CLIENT_ID || '').trim();
   if (!clientId) {
-    return json(503, { error: 'Der Imgur-Albumimport ist noch nicht konfiguriert. In Netlify fehlt ALERIA_IMGUR_CLIENT_ID.' });
+    return json(503, {
+      code: 'IMGUR_NOT_CONFIGURED',
+      error: 'Der Albumimport ist auf dieser Website noch nicht eingerichtet. Einzelne Bildlinks kannst du bereits hinzufügen.'
+    });
   }
 
   try {
     const response = await fetch(`${IMGUR_API_ROOT}/album/${encodeURIComponent(albumHash)}/images`, {
+      signal: AbortSignal.timeout(10000),
       headers: {
         Accept: 'application/json',
         Authorization: `Client-ID ${clientId}`,
@@ -39,14 +43,23 @@ export async function handler(event = {}) {
       }
     });
     const payload = await response.json().catch(() => ({}));
-    if (!response.ok || payload.success === false) {
+    if (response.status === 401 || response.status === 403) {
+      return json(503, { code: 'IMGUR_AUTH_FAILED', error: 'Der Imgur-Zugang der Website wurde abgelehnt. Die Albumimport-Einrichtung muss geprüft werden.' });
+    }
+    if (response.status === 429) {
+      return json(429, { code: 'IMGUR_RATE_LIMITED', error: 'Imgur erhält gerade zu viele Albumanfragen. Bitte versuche es später erneut.' });
+    }
+    if (!response.ok || payload?.success === false) {
       const message = response.status === 404
         ? 'Das Imgur-Album wurde nicht gefunden oder ist nicht öffentlich erreichbar.'
         : 'Imgur konnte das Album derzeit nicht liefern.';
-      return json(response.status === 404 ? 404 : 502, { error: message });
+      return json(response.status === 404 ? 404 : 502, { code: response.status === 404 ? 'IMGUR_ALBUM_NOT_FOUND' : 'IMGUR_UPSTREAM_ERROR', error: message });
     }
-    const images = (Array.isArray(payload.data) ? payload.data : [])
-      .filter(image => /^https:\/\/i\.imgur\.com\//i.test(String(image?.link || '')))
+    if (!Array.isArray(payload?.data)) {
+      return json(502, { code: 'IMGUR_INVALID_RESPONSE', error: 'Imgur hat keine gültige Bilderliste geliefert. Bitte versuche es erneut.' });
+    }
+    const images = payload.data
+      .filter(image => /^https:\/\/i\.imgur\.com\/[^?#]+\.(?:png|jpe?g|gif|webp|avif)(?:[?#]|$)/i.test(String(image?.link || '')))
       .slice(0, MAX_ALBUM_IMAGES)
       .map(image => ({
         url: String(image.link),

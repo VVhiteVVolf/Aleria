@@ -174,11 +174,15 @@ document.addEventListener('input', event => {
   handleCharacterProfileInput(event);
 });
 
-document.addEventListener('dragover', event => {
+function handleCharacterAvatarDrag(event) {
   if (!event.target.closest('#cp-avatar-import-zone')) return;
   event.preventDefault();
+  if (event.dataTransfer) event.dataTransfer.dropEffect = 'copy';
   setCharacterAvatarDropActive(true);
-});
+}
+
+document.addEventListener('dragenter', handleCharacterAvatarDrag);
+document.addEventListener('dragover', handleCharacterAvatarDrag);
 
 document.addEventListener('dragleave', event => {
   if (!event.target.closest('#cp-avatar-import-zone')) return;
@@ -195,3 +199,17 @@ document.addEventListener('drop', event => {
   if (input) input.value = rawValue;
   void importCharacterAvatarLinks(rawValue);
 });
+
+// Image load/error events do not bubble. Capture them in one delegated listener
+// so previews report failures without delaying storage or adding inline handlers.
+document.addEventListener('error', event => {
+  const preview = event.target;
+  if (!preview.matches?.('#cp-emote-grid .emote-slot > img')) return;
+  preview.closest('.emote-slot').classList.add('is-image-error');
+}, true);
+
+document.addEventListener('load', event => {
+  const preview = event.target;
+  if (!preview.matches?.('#cp-emote-grid .emote-slot > img')) return;
+  preview.closest('.emote-slot').classList.remove('is-image-error');
+}, true);

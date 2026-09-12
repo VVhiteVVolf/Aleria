@@ -4,7 +4,7 @@ function extractCharacterAvatarUrls(rawValue, normalizeUrl = normalizeImageUrlFo
   const raw = String(rawValue || '').trim();
   if (!raw) return [];
 
-  const tokens = raw.match(/https?:\/\/[^\s<>"']+/gi)
+  const tokens = raw.match(/(?<![\w:])https?:\/\/[^\s<>"']+/gi)
     || raw.split(/[\r\n]+/).map(value => value.trim()).filter(Boolean);
   const seen = new Set();
   return tokens.reduce((urls, token) => {
@@ -34,20 +34,12 @@ function deriveCharacterAvatarLabel(url, fallbackIndex = 0) {
   return `Avatar ${fallbackIndex + 1}`;
 }
 
-function loadCharacterAvatarImage(url) {
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.addEventListener('load', () => resolve(url), { once: true });
-    image.addEventListener('error', () => reject(new Error(`Bild konnte nicht geladen werden: ${url}`)), { once: true });
-    image.src = url;
-  });
-}
-
-async function buildCharacterAvatarImport({
+// Store valid links immediately. Preview loading belongs to the grid and must
+// neither block an import nor discard a link during a temporary host failure.
+function buildCharacterAvatarImport({
   rawValue,
   slots,
   normalizeUrl = normalizeImageUrlForStorage,
-  loadImage = loadCharacterAvatarImage,
   limit = CHARACTER_AVATAR_LIMIT
 }) {
   const nextSlots = Array.from({ length: limit }, (_, index) => slots?.[index] ? { ...slots[index] } : null);
@@ -63,32 +55,19 @@ async function buildCharacterAvatarImport({
     .filter(index => index >= 0);
   const candidateUrls = uniqueUrls.slice(0, availableIndices.length);
   const skippedCapacityCount = uniqueUrls.length - candidateUrls.length;
-  const checkedUrls = await Promise.all(candidateUrls.map(async url => {
-    try {
-      await loadImage(url);
-      return { url, valid: true };
-    } catch {
-      return { url, valid: false };
-    }
-  }));
-
-  let addedCount = 0;
-  checkedUrls.forEach(result => {
-    if (!result.valid) return;
-    const slotIndex = availableIndices[addedCount];
+  candidateUrls.forEach((url, index) => {
+    const slotIndex = availableIndices[index];
     nextSlots[slotIndex] = {
-      img: result.url,
-      label: deriveCharacterAvatarLabel(result.url, slotIndex)
+      img: url,
+      label: deriveCharacterAvatarLabel(url, slotIndex)
     };
-    addedCount += 1;
   });
 
   return {
     slots: nextSlots,
     parsedCount: parsedUrls.length,
-    addedCount,
+    addedCount: candidateUrls.length,
     duplicateCount,
-    rejectedCount: checkedUrls.length - addedCount,
     skippedCapacityCount
   };
 }
@@ -122,18 +101,21 @@ async function importCharacterAvatarLinks(rawValue) {
   }
 
   const albumUrl = typeof findImgurAlbumUrl === 'function' ? findImgurAlbumUrl(source) : '';
-  const sourceUrls = source.match(/https?:\/\/[^\s<>"']+/gi) || [];
-  if (albumUrl && sourceUrls.length === 1 && typeof importCharacterImgurAlbum === 'function') {
+  const sourceUrls = extractCharacterAvatarUrls(source);
+  if (albumUrl && sourceUrls.length > 1) {
+    setCharacterAvatarImportStatus('Bitte einen Album-Link einzeln übernehmen. Mehrere direkte Bildlinks können gemeinsam importiert werden.', true);
+    return;
+  }
+  if (albumUrl && sourceUrls.length <= 1 && typeof importCharacterImgurAlbum === 'function') {
     await importCharacterImgurAlbum(albumUrl);
     return;
   }
 
-  setCharacterAvatarImportStatus('Bilder werden geprüft …');
-  const result = await buildCharacterAvatarImport({ rawValue: source, slots: _emoteSlots });
+  const result = buildCharacterAvatarImport({ rawValue: source, slots: _emoteSlots });
   _emoteSlots = result.slots;
   renderEmoteGrid();
   if (result.addedCount) scheduleCharacterImageLibraryPersistence('avatar-import');
-  if (input) input.value = '';
+  if (input && result.addedCount) input.value = '';
 
   if (!result.parsedCount) {
     setCharacterAvatarImportStatus('Es wurde kein gültiger Bild-Link erkannt.', true);
@@ -141,7 +123,6 @@ async function importCharacterAvatarLinks(rawValue) {
   }
   const details = [];
   if (result.duplicateCount) details.push(`${result.duplicateCount} bereits vorhanden`);
-  if (result.rejectedCount) details.push(`${result.rejectedCount} nicht ladbar`);
   if (result.skippedCapacityCount) details.push(`${result.skippedCapacityCount} über dem Limit`);
   setCharacterAvatarImportStatus(
     `${result.addedCount} Avatar${result.addedCount === 1 ? '' : 'e'} übernommen${details.length ? ` · ${details.join(' · ')}` : ''}.`,
@@ -187,7 +168,21 @@ async function pasteCharacterPortraitLink() {
 }
 
 function readCharacterAvatarDropText(dataTransfer) {
-  return dataTransfer?.getData('text/uri-list') || dataTransfer?.getData('text/plain') || '';
+  if (!dataTransfer) return '';
+  // Dragging a linked image often supplies the surrounding page as uri-list.
+  // Prefer the actual image source carried by the browser's HTML fragment.
+  const html = dataTransfer.getData('text/html');
+  if (html) {
+    const fragment = new DOMParser().parseFromString(html, 'text/html');
+    const images = Array.from(fragment.querySelectorAll('img[src]'))
+      .map(image => normalizeImageUrlForStorage(image.getAttribute('src')))
+      .filter(Boolean);
+    if (images.length) return images.join('\n');
+  }
+  const uriList = dataTransfer.getData('text/uri-list')
+    .split(/\r?\n/).filter(line => line.trim() && !line.trim().startsWith('#')).join('\n');
+  return uriList || dataTransfer.getData('text/plain')
+    || dataTransfer.getData('text/x-moz-url').split(/\r?\n/)[0] || '';
 }
 
 function setCharacterAvatarDropActive(active) {

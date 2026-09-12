@@ -99,6 +99,7 @@ test('Imgur-Proxy verwendet den offiziellen Album-Endpunkt und gibt nur direkte 
         success: true,
         data: [
           { link: 'https://i.imgur.com/one.png', title: 'Eins' },
+          { link: 'https://i.imgur.com/clip.mp4', type: 'video/mp4' },
           { link: 'https://example.com/not-imgur.png', title: 'Fremd' }
         ]
       })
@@ -110,6 +111,7 @@ test('Imgur-Proxy verwendet den offiziellen Album-Endpunkt und gibt nur direkte 
     assert.equal(response.statusCode, 200);
     assert.match(request.url, /\/album\/AbC123\/images$/);
     assert.equal(request.options.headers.Authorization, 'Client-ID test-client');
+    assert.ok(request.options.signal);
     assert.deepEqual(body.images, [{ url: 'https://i.imgur.com/one.png', title: 'Eins', description: '' }]);
   } finally {
     globalThis.fetch = previousFetch;
@@ -124,8 +126,53 @@ test('Imgur-Proxy meldet eine fehlende Serverkonfiguration verständlich', async
   try {
     const response = await imgurAlbumHandler({ httpMethod: 'GET', queryStringParameters: { album: 'AbC123' } });
     assert.equal(response.statusCode, 503);
-    assert.match(JSON.parse(response.body).error, /ALERIA_IMGUR_CLIENT_ID/);
+    assert.equal(JSON.parse(response.body).code, 'IMGUR_NOT_CONFIGURED');
+    assert.match(JSON.parse(response.body).error, /noch nicht eingerichtet/);
   } finally {
     if (previousClientId !== undefined) process.env.ALERIA_IMGUR_CLIENT_ID = previousClientId;
+  }
+});
+
+test('Imgur-Proxy unterscheidet Zugang, Anfragelimits und fehlerhafte Antworten', async () => {
+  const previousClientId = process.env.ALERIA_IMGUR_CLIENT_ID;
+  const previousFetch = globalThis.fetch;
+  process.env.ALERIA_IMGUR_CLIENT_ID = 'test-client';
+  try {
+    for (const [upstreamStatus, payload, expectedStatus, code] of [
+      [401, {}, 503, 'IMGUR_AUTH_FAILED'],
+      [403, {}, 503, 'IMGUR_AUTH_FAILED'],
+      [429, {}, 429, 'IMGUR_RATE_LIMITED'],
+      [404, {}, 404, 'IMGUR_ALBUM_NOT_FOUND'],
+      [500, {}, 502, 'IMGUR_UPSTREAM_ERROR'],
+      [200, null, 502, 'IMGUR_INVALID_RESPONSE'],
+      [200, { data: {} }, 502, 'IMGUR_INVALID_RESPONSE']
+    ]) {
+      globalThis.fetch = async () => ({
+        ok: upstreamStatus === 200, status: upstreamStatus, json: async () => payload
+      });
+      const response = await imgurAlbumHandler({ queryStringParameters: { album: 'AbC123' } });
+      assert.equal(response.statusCode, expectedStatus);
+      assert.equal(JSON.parse(response.body).code, code);
+      assert.equal(response.headers['Cache-Control'], 'no-store');
+    }
+  } finally {
+    globalThis.fetch = previousFetch;
+    if (previousClientId === undefined) delete process.env.ALERIA_IMGUR_CLIENT_ID;
+    else process.env.ALERIA_IMGUR_CLIENT_ID = previousClientId;
+  }
+});
+
+test('Imgur-Proxy lehnt ungültige IDs und schreibende Anfragen vor dem API-Aufruf ab', async () => {
+  const previousFetch = globalThis.fetch;
+  let requests = 0;
+  globalThis.fetch = async () => { requests++; throw new Error('Unexpected request'); };
+  try {
+    assert.equal((await imgurAlbumHandler({ httpMethod: 'POST' })).statusCode, 405);
+    for (const album of ['', '../../example.com', 'https://imgur.com/a/AbC123']) {
+      assert.equal((await imgurAlbumHandler({ queryStringParameters: { album } })).statusCode, 400);
+    }
+    assert.equal(requests, 0);
+  } finally {
+    globalThis.fetch = previousFetch;
   }
 });

@@ -9,7 +9,7 @@ import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js?v=hausbio-20260911
 import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js?v=hausbio-20260911c';
-import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=hausbio-20260911c';
+import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=gais-bio-20260912';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js?v=hausbio-20260911c';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
 import { HOUSE_DUBHAN_GWYNTHOR_FAMILY } from './house-dubhan-gwynthor-family.js';

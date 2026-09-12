@@ -309,14 +309,19 @@ function renderEmoteGrid() {
   const grid = document.getElementById('cp-emote-grid');
   if (!grid) return;
 
-  grid.innerHTML = '';
   _emoteSlots.forEach((slot, i) => {
-    const div = document.createElement('div');
+    const div = grid.children[i] || document.createElement('div');
+    const imageUrl = slot?.img || '';
+    const label = slot?.label || '';
+    if (div.dataset.imageUrl === imageUrl
+        && div.querySelector('.emote-label-input')?.value === label) return;
     div.className = 'emote-slot';
+    div.dataset.imageUrl = imageUrl;
     if (slot && slot.img) {
       const safeLabel = escapeHtml(slot.label || '');
       div.innerHTML = `
         <img src="${sanitizeImageSrc(slot.img)}" alt="Emote ${i+1}" loading="lazy" decoding="async">
+        <span class="emote-image-error" role="status">Vorschau nicht ladbar · Link bleibt erhalten</span>
         <button class="emote-remove-btn" type="button" data-char-profile-action="remove-emote" data-emote-index="${i}">✕</button>
         <input class="emote-label-input" type="text" value="${safeLabel}"
           placeholder="Label" maxlength="20"
@@ -326,11 +331,12 @@ function renderEmoteGrid() {
         <div class="emote-slot-placeholder" role="button" tabindex="0" data-char-profile-action="open-emote-url" data-emote-index="${i}" title="URL eingeben">
           <span>+</span>
         </div>
-        <input class="emote-label-input" type="text" placeholder="Label" maxlength="20"
+        <input class="emote-label-input" type="text" value="${escapeHtml(label)}" placeholder="Label" maxlength="20"
           data-char-profile-action="update-emote-label" data-emote-index="${i}">`;
     }
-    grid.appendChild(div);
+    if (!div.parentElement) grid.appendChild(div);
   });
+  while (grid.children.length > _emoteSlots.length) grid.lastElementChild.remove();
   updateCharacterAvatarImportSummary();
 }
 
