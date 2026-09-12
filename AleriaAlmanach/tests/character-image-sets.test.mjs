@@ -120,15 +120,52 @@ test('Imgur-Proxy verwendet den offiziellen Album-Endpunkt und gibt nur direkte 
   }
 });
 
-test('Imgur-Proxy meldet eine fehlende Serverkonfiguration verständlich', async () => {
+test('Imgur-Proxy liest ohne Client-ID die öffentliche Einbettung und bewahrt Reihenfolge und Bildlimit', async () => {
   const previousClientId = process.env.ALERIA_IMGUR_CLIENT_ID;
+  const previousFetch = globalThis.fetch;
   delete process.env.ALERIA_IMGUR_CLIENT_ID;
+  const images = [
+    { hash: 'Video01', ext: '.mp4' },
+    ...Array.from({ length: 82 }, (_, index) => ({ hash: `Image${index}`, ext: '.png', title: `Bild ${index}` }))
+  ];
+  globalThis.fetch = async (url, options) => {
+    assert.equal(url, 'https://imgur.com/a/AbC123/embed?pub=true');
+    assert.equal(options.headers.Authorization, undefined);
+    assert.equal(options.redirect, 'manual');
+    assert.ok(options.signal);
+    return new Response(`<script>var images = ${JSON.stringify({ count: images.length, images })}, albumHash = 'AbC123', currentIndex = 0;</script>`, {
+      headers: { 'Content-Type': 'text/html;charset=UTF-8' }
+    });
+  };
   try {
     const response = await imgurAlbumHandler({ httpMethod: 'GET', queryStringParameters: { album: 'AbC123' } });
-    assert.equal(response.statusCode, 503);
-    assert.equal(JSON.parse(response.body).code, 'IMGUR_NOT_CONFIGURED');
-    assert.match(JSON.parse(response.body).error, /noch nicht eingerichtet/);
+    assert.equal(response.statusCode, 200);
+    const body = JSON.parse(response.body);
+    assert.equal(body.images.length, 80);
+    assert.deepEqual(body.images[0], { url: 'https://i.imgur.com/Image0.png', title: 'Bild 0', description: '' });
+    assert.equal(body.images.at(-1).url, 'https://i.imgur.com/Image79.png');
+    assert.equal(response.headers['Cache-Control'], 'public, max-age=300');
   } finally {
+    globalThis.fetch = previousFetch;
+    if (previousClientId !== undefined) process.env.ALERIA_IMGUR_CLIENT_ID = previousClientId;
+  }
+});
+
+test('Imgur-Proxy gibt bei unvollständiger Einbettung keine Teilimporte zurück', async () => {
+  const previousClientId = process.env.ALERIA_IMGUR_CLIENT_ID;
+  const previousFetch = globalThis.fetch;
+  delete process.env.ALERIA_IMGUR_CLIENT_ID;
+  globalThis.fetch = async () => new Response(`<script>var images = {"count":9,"images":[]}, albumHash = 'AbC123', currentIndex = 0;</script>`, {
+    headers: { 'Content-Type': 'text/html' }
+  });
+  try {
+    const response = await imgurAlbumHandler({ queryStringParameters: { album: 'AbC123' } });
+    assert.equal(response.statusCode, 502);
+    assert.equal(JSON.parse(response.body).code, 'IMGUR_EMBED_UNAVAILABLE');
+    assert.equal(JSON.parse(response.body).images, undefined);
+    assert.equal(response.headers['Cache-Control'], 'no-store');
+  } finally {
+    globalThis.fetch = previousFetch;
     if (previousClientId !== undefined) process.env.ALERIA_IMGUR_CLIENT_ID = previousClientId;
   }
 });

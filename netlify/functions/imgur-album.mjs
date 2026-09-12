@@ -1,3 +1,5 @@
+import { ImgurEmbedError, requestEmbeddedAlbumImages } from '../lib/imgur-albums/embed-source.mjs';
+
 const IMGUR_API_ROOT = 'https://api.imgur.com/3';
 const MAX_ALBUM_IMAGES = 80;
 
@@ -18,6 +20,18 @@ function getAlbumHash(event = {}) {
   return /^[a-z0-9]{5,32}$/i.test(candidate) ? candidate : '';
 }
 
+function albumResponse(albumHash, records) {
+  const images = records
+    .filter(image => /^https:\/\/i\.imgur\.com\/[^?#]+\.(?:png|jpe?g|gif|webp|avif)(?:[?#]|$)/i.test(String(image?.link || '')))
+    .slice(0, MAX_ALBUM_IMAGES)
+    .map(image => ({
+      url: String(image.link),
+      title: String(image.title || '').slice(0, 80),
+      description: String(image.description || '').slice(0, 120)
+    }));
+  return json(200, { albumHash, images });
+}
+
 export async function handler(event = {}) {
   if (String(event.httpMethod || 'GET').toUpperCase() !== 'GET') {
     return json(405, { error: 'Nur GET ist für den Albumimport erlaubt.' });
@@ -26,14 +40,8 @@ export async function handler(event = {}) {
   if (!albumHash) return json(400, { error: 'Die Imgur-Album-ID ist ungültig.' });
 
   const clientId = String(process.env.ALERIA_IMGUR_CLIENT_ID || '').trim();
-  if (!clientId) {
-    return json(503, {
-      code: 'IMGUR_NOT_CONFIGURED',
-      error: 'Der Albumimport ist auf dieser Website noch nicht eingerichtet. Einzelne Bildlinks kannst du bereits hinzufügen.'
-    });
-  }
-
   try {
+    if (!clientId) return albumResponse(albumHash, await requestEmbeddedAlbumImages(albumHash));
     const response = await fetch(`${IMGUR_API_ROOT}/album/${encodeURIComponent(albumHash)}/images`, {
       signal: AbortSignal.timeout(10000),
       headers: {
@@ -58,16 +66,9 @@ export async function handler(event = {}) {
     if (!Array.isArray(payload?.data)) {
       return json(502, { code: 'IMGUR_INVALID_RESPONSE', error: 'Imgur hat keine gültige Bilderliste geliefert. Bitte versuche es erneut.' });
     }
-    const images = payload.data
-      .filter(image => /^https:\/\/i\.imgur\.com\/[^?#]+\.(?:png|jpe?g|gif|webp|avif)(?:[?#]|$)/i.test(String(image?.link || '')))
-      .slice(0, MAX_ALBUM_IMAGES)
-      .map(image => ({
-        url: String(image.link),
-        title: String(image.title || '').slice(0, 80),
-        description: String(image.description || '').slice(0, 120)
-      }));
-    return json(200, { albumHash, images });
+    return albumResponse(albumHash, payload.data);
   } catch (error) {
+    if (error instanceof ImgurEmbedError) return json(error.status, { code: error.code, error: error.message });
     console.error('imgur album import failed:', error);
     return json(502, { error: 'Imgur ist für den Albumimport momentan nicht erreichbar.' });
   }

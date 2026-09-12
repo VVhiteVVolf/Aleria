@@ -1,6 +1,6 @@
 // Imgur album import for character image sets.
 // Album expansion is delegated to the same-origin Netlify function so the
-// Imgur Client-ID never becomes part of the browser bundle.
+// optional Imgur Client-ID never becomes part of the browser bundle.
 
 function extractImgurAlbumHash(value) {
   const raw = String(value || '').trim().replace(/[),.;]+$/, '');
