@@ -1,7 +1,8 @@
 import { createCatalogSpell, listSpellCatalogEntries } from './spell-catalog.js';
+import { listSpellCatalogSchools } from './spell-catalog-schools.js';
 
 export function buildSpellCatalogArchiveEntries() {
-  return listSpellCatalogEntries().map(entry => {
+  return listSpellCatalogSchools().flatMap(school => listSpellCatalogEntries({ catalog: school.id })).map(entry => {
     const data = createCatalogSpell(entry.id, { revision: entry.revision });
     return {
       id: `catalog--${entry.id}--v${entry.revision}`, kind: 'spell', name: entry.name,

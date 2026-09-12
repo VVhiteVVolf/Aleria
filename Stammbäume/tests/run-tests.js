@@ -7275,8 +7275,8 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
   assert.equal(loaded.source, 'registry-upgrade');
   assert.equal(loaded.family.persons.length, 177);
   assert.equal(loaded.family.view.descendantDepth, 20);
-  assert.equal(loaded.family.extensions.sourceRevision, 9);
-  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 9 });
+  assert.equal(loaded.family.extensions.sourceRevision, 10);
+  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 10 });
   assert.equal(loaded.family.lineage.originHouse.enabled, true);
   assert.equal(
     loaded.family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
@@ -15797,7 +15797,7 @@ test('bildet Haus Arth vollständig mit vier strikt seriellen Zeitsprüngen und 
   assert.equal(family.lineage.crestFrame, 'gold');
   assert.equal(family.lineage.timeGap.enabled, false);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 12);
+  assert.equal(family.extensions.sourceRevision, 13);
 
   const crest = converted.data.find(node => node.data.nodeKind === 'house-crest');
   assert.ok(crest, 'Der Stammwappenknoten des Hauses Arth fehlt.');
@@ -16151,8 +16151,8 @@ test('ersetzt die Arth-Leerakte und migriert einen älteren lokalen Arth-Stand o
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-arth', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 12);
-  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 12 });
+  assert.equal(upgraded.family.extensions.sourceRevision, 13);
+  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 13 });
   assert.equal(upgraded.family.persons.length, 116);
   assert.equal(new Set(upgraded.family.persons.map(person => person.id)).size, 116);
   assert.equal(upgraded.family.partnerships.length, 55);
@@ -29681,8 +29681,8 @@ test('synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vor
   const draigRevelyn = HOUSE_DRAIG_FAMILY.persons.find(person => person.id === 'revelyn-penderyn');
   assert.deepEqual([arthFfionwen.birth, arthFfionwen.death], ['1662', '1733']);
   assert.equal(draigRevelyn.houseId, 'house-penderyn');
-  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 12);
-  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 9);
+  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 13);
+  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 10);
 
   [
     ['gwales-illewod', HOUSE_ILLEWOD_PORTRAITS],
@@ -30385,7 +30385,7 @@ test('synchronisiert Marwolaeths vorhandene Gegenakten und korrigiert deren Lebe
   );
   assert.equal(HOUSE_DYNGWN_FAMILY.extensions.sourceRevision, 4);
   assert.equal(HOUSE_DIENYDDIWR_FAMILY.extensions.sourceRevision, 3);
-  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 12);
+  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 13);
 
   const correctionCases = [
     {

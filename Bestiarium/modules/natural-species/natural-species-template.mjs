@@ -3,6 +3,14 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ 
 const roman = number => ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'][number - 1] || String(number);
 const paragraphs = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
 
+function renderToolShortcuts(tools = []) {
+  return tools.map(tool => `<a class="species-atlas-shortcut" href="${escape(tool.href)}">${escape(tool.label)} <span aria-hidden="true">↗</span></a>`).join('');
+}
+
+function renderToolRegister(tools = [], startNumber) {
+  return tools.map((tool, index) => `<a class="species-register-extra" href="${escape(tool.href)}"><span>${roman(startNumber + index)}</span>${escape(tool.title)}</a>`).join('\n');
+}
+
 function picture(image, { className = '', eager = false } = {}) {
   return `<img class="${escape(className)}" src="${escape(image.src)}" alt="${escape(image.alt)}" width="${image.width}" height="${image.height}" ${eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>`;
 }
@@ -77,12 +85,12 @@ export function renderNaturalSpecies(record) {
     <main>
       <nav class="species-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html#tiere">Tiere</a><span aria-hidden="true">/</span><span aria-current="page">${escape(record.title)}</span></nav>
       <section class="species-hero" aria-labelledby="species-title">
-        <div class="species-hero-copy"><div class="species-icon-seal">${picture(record.icon, { className: 'species-header-icon', eager: true })}</div><p class="eyebrow">${escape(record.classification)} <span aria-hidden="true">·</span> Archivblatt ${escape(record.folio)}</p><h1 id="species-title">${escape(record.title)}</h1><p class="species-subtitle">${escape(record.subtitle)}</p><p class="species-lead">${escape(record.lead)}</p><a class="ink-button" href="#${escape(record.sections[0].id)}">Die Artenkunde lesen <span aria-hidden="true">↓</span></a><a class="species-atlas-shortcut" href="#artenregister">Zum Artenregister ↗</a></div>
+        <div class="species-hero-copy"><div class="species-icon-seal">${picture(record.icon, { className: 'species-header-icon', eager: true })}</div><p class="eyebrow">${escape(record.classification)} <span aria-hidden="true">·</span> Archivblatt ${escape(record.folio)}</p><h1 id="species-title">${escape(record.title)}</h1><p class="species-subtitle">${escape(record.subtitle)}</p><p class="species-lead">${escape(record.lead)}</p><a class="ink-button" href="#${escape(record.sections[0].id)}">Die Artenkunde lesen <span aria-hidden="true">↓</span></a><a class="species-atlas-shortcut" href="#artenregister">Zum Artenregister ↗</a>${renderToolShortcuts(record.tools)}</div>
         <figure class="species-hero-figure">${picture(record.hero, { className: 'species-hero-image', eager: true })}<figcaption>${escape(record.hero.caption)}</figcaption></figure>
       </section>
       <blockquote class="species-pullquote"><span aria-hidden="true">❧</span><p>„${escape(record.pullQuote)}“</p><span aria-hidden="true">❧</span></blockquote>
       <div class="species-book">
-        <aside class="species-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="Kapitel der Artenkunde">${record.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 1)}</span>${escape(section.title)}</a>`).join('\n')}<a class="species-register-extra" href="#artenregister"><span>${atlasNumber}</span>${escape(record.atlas.title)}</a></nav><a class="species-register-back" href="../../index.html#tiere">← Zu den natürlichen Arten</a></div></aside>
+        <aside class="species-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="Kapitel der Artenkunde">${record.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 1)}</span>${escape(section.title)}</a>`).join('\n')}<a class="species-register-extra" href="#artenregister"><span>${atlasNumber}</span>${escape(record.atlas.title)}</a>${renderToolRegister(record.tools, record.sections.length + 2)}</nav><a class="species-register-back" href="../../index.html#tiere">← Zu den natürlichen Arten</a></div></aside>
         <div class="species-content">
           <div class="species-reading"><article class="species-narrative" aria-label="Naturkunde zu ${escape(record.title)}">${record.sections.map(renderSection).join('\n')}</article>${renderFacts(record)}</div>
           <section class="species-atlas" id="artenregister" aria-labelledby="atlas-title"><header class="species-atlas-heading"><p class="eyebrow">${atlasNumber} · Systematik & weiterführende Dossiers</p><h2 id="atlas-title">${escape(record.atlas.title)}</h2><p>${escape(record.atlas.intro)}</p></header>${record.atlas.groups.map(renderGroup).join('\n')}</section>

@@ -13,6 +13,7 @@ export const ARMOR_ROUTINE_CLASS_IDS = Object.freeze([
   'riada', 'silvaner', 'galloghlaigh', 'fathach',
   'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde',
   'hird-kona', 'stjorn', 'ravnar', 'ulfhednar', 'berserkir', 'veigir', 'tungur', 'hestgar',
+  'limita', 'condottieri', 'gondoleri', 'lancieri', 'stralieri',
   'karnach', 'haldr', 'zernach', 'wairg', 'dornach', 'skarrach', 'rheach', 'garnach',
   'gold-aldknecht', 'husar', 'aldmar', 'eldner', 'schirmer', 'flamberger', 'havner', 'guldner', 'oraner',
   'gardist', 'ritter', 'slogar', 'rathaire', 'coillan', 'druan', 'mordan',
@@ -29,7 +30,7 @@ export function hasArmorRoutineClass(profile = {}) {
   const value = profile.templateSelections?.classId || profile.identity?.archetype || '';
   const key = String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-    .replace(/^(cenyr|vennyr|alben|aldrimar|universal)-/, '');
+    .replace(/^(cenyr|vennyr|alben|aldrimar|venalys|universal)-/, '');
   return fighterClasses.has(aliases[key] || key);
 }
 

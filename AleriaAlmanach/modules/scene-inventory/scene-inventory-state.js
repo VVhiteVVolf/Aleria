@@ -55,18 +55,20 @@ function buildSceneItemTransfer(giver, receiver, itemId, amount) {
   const index = giverInventory.items.findIndex((item, itemIndex) => String(item.id || itemIndex) === String(itemId));
   if (index < 0) throw new Error('Der Gegenstand wurde im Inventar nicht gefunden.');
   const source = giverInventory.items[index];
+  if (source.equipped) throw new Error('Bitte die Ausrüstung vor der Übergabe ablegen.');
   const available = getSceneInventoryItemQuantity(source);
   const quantity = Math.max(1, Math.floor(Number(amount) || 1));
   if (quantity > available) throw new Error(`Nur ${available} Stück verfügbar.`);
   if (quantity === available) giverInventory.items.splice(index, 1);
   else giverInventory.items[index] = { ...source, quantity: String(available - quantity) };
   const receiverMatch = receiverInventory.items.find(item => (
-    (item.itemDbKey && item.itemDbKey === source.itemDbKey)
-    || (!item.itemDbKey && item.name === source.name && item.type === source.type)
+    !item.instanceId && !source.instanceId && ((item.itemDbKey && item.itemDbKey === source.itemDbKey)
+    || (!item.itemDbKey && item.name === source.name && item.type === source.type))
   ));
   if (receiverMatch) receiverMatch.quantity = String(getSceneInventoryItemQuantity(receiverMatch) + quantity);
   else {
-    const transferredItem = sanitizeCharacterInventoryItems([{ ...source, id: `transfer-${Date.now()}`, quantity: String(quantity), ownerCharacterId: receiver.id, ownerCharacterName: receiver.name, acquiredAt: new Date().toISOString() }])[0];
+    const nextId = quantity === available ? source.id : `transfer-${Date.now()}`;
+    const transferredItem = sanitizeCharacterInventoryItems([{ ...source, id: nextId, instanceId: quantity === available ? source.instanceId || source.id : nextId, quantity: String(quantity), ownerCharacterId: receiver.id, ownerCharacterName: receiver.name, acquiredAt: new Date().toISOString() }])[0];
     if (!transferredItem) throw new Error('Der Gegenstand konnte nicht übertragen werden.');
     receiverInventory.items.push(transferredItem);
   }
@@ -88,7 +90,7 @@ function buildSceneRegisterItemTransfer(giver, receiver, registerItem, amount) {
     name: receiver.name
   });
   if (!source) throw new Error('Das Registeritem konnte nicht in ein Inventaritem umgewandelt werden.');
-  const receiverMatch = receiverInventory.items.find(item => item.itemDbKey === source.itemDbKey);
+  const receiverMatch = source.itemDbKey && receiverInventory.items.find(item => !item.instanceId && item.itemDbKey === source.itemDbKey);
   if (receiverMatch) receiverMatch.quantity = String(getSceneInventoryItemQuantity(receiverMatch) + quantity);
   else receiverInventory.items.push({ ...source, quantity: String(quantity) });
   return {

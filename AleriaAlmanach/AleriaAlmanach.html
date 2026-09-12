@@ -51,7 +51,7 @@
 <link rel="stylesheet" href="./styles/characters.css?v=20260906-inventory-layout-v1">
 <link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260906-character-vitality-v1">
 <link rel="stylesheet" href="./styles/character-combat-status.css?v=20260906-character-vitality-v1">
-<link rel="stylesheet" href="./styles/character-archive.css?v=20260905-archive-order-v2">
+<link rel="stylesheet" href="./styles/character-archive.css?v=20260912-almanach-v1">
 <link rel="stylesheet" href="./styles/character-combat-setup.css?v=20260906-character-vitality-v1">
 <link rel="stylesheet" href="./styles/combat-entry-editor.css?v=20260803-spell-grades-v1">
 <link rel="stylesheet" href="./styles/creatures.css?v=20260803-spell-grades-v1">
@@ -91,6 +91,7 @@
 <link rel="stylesheet" href="./styles/scene-blocks.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260910-home-design-v1">
 <link rel="stylesheet" href="./styles/item-database.css?v=20260625-item-db-register-v2">
+<link rel="stylesheet" href="./modules/item-register/item-register.css?v=20260912-register-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
 <link rel="stylesheet" href="./styles/topic-board.css?v=20260911-topic-board-studio-v1">
 <link rel="stylesheet" href="./styles/topic-board-participants.css?v=20260911-topic-board-studio-v1">
@@ -106,7 +107,7 @@
 <link rel="stylesheet" href="./modules/module-editor/module-preview.css?v=20260909-template-layout-v1">
   <link rel="stylesheet" href="./modules/organization-network/organization-network.css?v=20260909-newspaper-guilds-v1">
   <!-- Firebase -->
-  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20260911-calendar-v2"></script>
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20260912-register-v2"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260903-genealogy-portrait-sync-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260911-arcane-v1" defer></script>
@@ -135,7 +136,7 @@
   <script type="module" src="./modules/calendar/calendar-dashboard.mjs?v=20260911-calendar-v2"></script>
   <script src="./modules/module-editor/module-editor-aleria-date-field.js?v=20260723-aleria-calendar-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/app/dialog-manager.js?v=20260908-disclosure-focus-v1" defer></script>
+  <script src="./modules/app/dialog-manager.js?v=20260912-archive-dialogs-v1" defer></script>
   <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
@@ -165,9 +166,9 @@
   <script src="./modules/family/services/family-presentation-service.js?v=20260715-family-editor-v1" defer></script>
   <script src="./modules/item-database/item-db-normalizer.js?v=20260625-item-db-config-v1" defer></script>
   <script src="./modules/item-database/item-db-extractors.js?v=20260625-item-db-market-folder-v1" defer></script>
-  <script src="./modules/item-database/item-db-store.js?v=20260629-item-db-global-v1" defer></script>
-  <script src="./modules/item-database/item-db-ui.js?v=20260629-item-db-global-v1" defer></script>
-  <script src="./modules/item-database/item-db-picker.js?v=20260629-item-db-global-v1" defer></script>
+  <script src="./modules/item-database/item-db-store.js?v=20260912-register-v2" defer></script>
+  <script src="./modules/item-database/item-db-ui.js?v=20260912-register-v2" defer></script>
+  <script src="./modules/item-database/item-db-picker.js?v=20260912-register-v2" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260712-caste-dossier-v1" defer></script>
   <script src="./modules/court/court-editor-schema.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bounty.js?v=20260712-bounty-traits-v1" defer></script>
@@ -193,7 +194,7 @@
   <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260905-draig-equipment-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260912-register-v2" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20260909-empty-info-rows-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260909-newspaper-guilds-v1" defer></script>
@@ -254,7 +255,7 @@
   <script src="./modules/name-list/name-list-renderer.js?v=20260712-name-list-v2" defer></script>
   <script src="./modules/script-table/script-table-renderer.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/landing/landing-renderer.js?v=20260623-landing-editor-v1" defer></script>
-  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20260906-inventory-layout-v1" defer></script>
+  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20260912-register-v2" defer></script>
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260909-newspaper-guilds-v1" defer></script>
   <script src="./vendor/d3/7.9.0/d3.min.js?v=20260715-family-chart-v1" defer></script>
@@ -281,12 +282,12 @@
   <script src="./modules/characters/character-image-sets.js?v=20260808-character-sections-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260906-character-vitality-v2" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260903-character-register-v2" defer></script>
-  <script src="./modules/characters/character-tabs.js?v=20260906-character-vitality-v2" defer></script>
+  <script src="./modules/characters/character-tabs.js?v=20260912-register-v2" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260808-character-storage-audit-v1" defer></script>
   <script src="./modules/characters/character-inventory-profile.js?v=20260906-character-vitality-v1" defer></script>
   <script type="module" src="./modules/characters/character-combat-profile.js?v=20260909-dragon-parent-v2"></script>
-  <script type="module" src="./modules/creatures/creature-system.js?v=20260909-dragon-parent-v2"></script>
-  <script type="module" src="./modules/character-archive/character-archive-ui.js?v=20260909-dragon-parent-v2"></script>
+  <script type="module" src="./modules/creatures/creature-system.js?v=20260912-register-v2"></script>
+  <script type="module" src="./modules/character-archive/character-archive-ui.js?v=20260912-almanach-v1"></script>
   <script src="./modules/characters/character-avatar-import.js?v=20260808-character-media-save-v1" defer></script>
   <script src="./modules/characters/character-album-import.js?v=20260808-character-media-save-v1" defer></script>
   <script src="./modules/characters/character-image-set-editor.js?v=20260808-character-sections-v1" defer></script>

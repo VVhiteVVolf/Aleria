@@ -25,7 +25,13 @@ export function createArchiveMountEntry(mount) {
 // Classify both persisted legacy entries and fresh profile/register projections.
 // This is an archive projection: character species and combat packages stay intact.
 export function classifyCharacterArchiveEntries(entries = []) {
+  const registeredMounts = new Map(entries.filter(entry => entry.data?.section === 'standard' && entry.data?.mountId)
+    .map(entry => [entry.data.mountId, entry]));
+  const mountEntry = mount => registeredMounts.get(mount.id) || createArchiveMountEntry(mount);
   return entries.flatMap(entry => {
+    // Register variants and individual possessions own their identity and imagery.
+    // A matching breed name must never replace their stable ID or custom fields.
+    if (['standard', 'offer', 'owned'].includes(entry.data?.section)) return [entry];
     if (entry.kind === 'combat-style' && entry.archivedFromProfile
       && !entry.data?.id && !entry.data?.archivePlacement) return [];
     if (entry.kind === 'class') {
@@ -43,7 +49,7 @@ export function classifyCharacterArchiveEntries(entries = []) {
     if (entry.kind === 'ancestry') {
       if (genericHumanNames.has(name)) return [];
       if (mount) {
-        const canonical = createArchiveMountEntry(mount);
+        const canonical = mountEntry(mount);
         return [{ ...canonical, sources: [...canonical.sources, ...(entry.sources || [])] }];
       }
       const breed = ARCHIVE_PAGE_MOUNTS.find(item => name.startsWith(`${normalizeArchiveSearchText(item.name)} `));
@@ -56,6 +62,10 @@ export function classifyCharacterArchiveEntries(entries = []) {
       return onlyCreatureSources ? [] : [entry];
     }
     if (entry.kind === 'register-pferde' && mount) {
+      if (entry.builtin && registeredMounts.has(mount.id)) {
+        const canonical = mountEntry(mount);
+        return [{ ...canonical, sources: [...canonical.sources, ...(entry.sources || [])] }];
+      }
       // The current market page replaces older markdown-table prices and origins.
       const canonical = createArchiveMountEntry(mount);
       return [normalizeCharacterArchiveEntry({ ...entry, kind: canonical.kind,
@@ -64,6 +74,7 @@ export function classifyCharacterArchiveEntries(entries = []) {
         data: { ...entry.data, ...canonical.data }, tags: [...(entry.tags || []), ...canonical.tags]
       })];
     }
+    if (entry.kind === 'register-vieh' && entry.builtin && mount && registeredMounts.has(mount.id)) return [mountEntry(mount)];
     if (entry.kind === 'register-pferde' && entry.builtin && !entry.data?.section) {
       // Legacy prose tables contain coats, breeding rules and equipment as well as
       // breeds. Only the actual Rossmarkt rows belong to its automatic catalogue.
@@ -90,6 +101,6 @@ export function getCharacterArchiveHorseGroups(entries = []) {
   const labels = { roesser: 'Rösser', ponys: 'Ponys', mischlinge: 'Mischlinge', weitere: 'Weitere Pferde' };
   return Object.entries(labels).map(([section, name]) => ({
     id: `horses-${section}`, type: 'mount', typeLabel: 'Rossmarkt', name, symbol: '♞', children: [],
-    entries: entries.filter(entry => (entry.data?.section || 'weitere') === section)
+    entries: entries.filter(entry => (entry.data?.mountSection || (['roesser', 'ponys', 'mischlinge'].includes(entry.data?.section) ? entry.data.section : 'weitere')) === section)
   })).filter(group => group.entries.length);
 }

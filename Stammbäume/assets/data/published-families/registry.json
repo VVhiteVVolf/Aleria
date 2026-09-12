@@ -69,6 +69,40 @@
       "source": "github"
     },
     {
+      "id": "haus-arth",
+      "familyId": "haus-arth",
+      "title": "Haus Arth O'Talgarth",
+      "motto": "Dros y rheng!",
+      "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+      "folderPath": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 116,
+      "link": "Stammbaum.html?family=haus-arth&mode=view",
+      "source": "github",
+      "revision": 2,
+      "updatedAt": "2026-09-12T11:58:42.936Z"
+    },
+    {
       "id": "haus-beran",
       "familyId": "haus-beran",
       "title": "Haus Beran",
@@ -169,6 +203,40 @@
       "source": "github"
     },
     {
+      "id": "haus-draig",
+      "familyId": "haus-draig",
+      "title": "Haus Draig",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 177,
+      "link": "Stammbaum.html?family=haus-draig&mode=view",
+      "source": "github",
+      "revision": 1,
+      "updatedAt": "2026-09-12T11:58:42.936Z"
+    },
+    {
       "id": "haus-estmere",
       "familyId": "haus-estmere",
       "title": "Haus Estmere",
@@ -261,8 +329,8 @@
         }
       },
       "personCount": 57,
-      "revision": 1,
-      "updatedAt": "2026-09-03T16:18:14.931Z",
+      "revision": 3,
+      "updatedAt": "2026-09-12T11:58:42.936Z",
       "link": "Stammbaum.html?family=haus-gafyr&mode=view",
       "source": "github"
     },
@@ -295,8 +363,8 @@
         }
       },
       "personCount": 59,
-      "revision": 1,
-      "updatedAt": "2026-09-12T10:28:47.358Z",
+      "revision": 4,
+      "updatedAt": "2026-09-12T11:58:42.936Z",
       "link": "Stammbaum.html?family=haus-saethwyr&mode=view",
       "source": "github"
     },

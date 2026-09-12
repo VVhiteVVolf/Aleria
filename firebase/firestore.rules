@@ -105,7 +105,8 @@ service cloud.firestore {
       allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
       allow update: if signedIn()
         && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId));
-      allow delete: if signedIn() && !combatProfileLocked('creatures', recordId);
+      allow delete: if signedIn() && !combatProfileLocked('creatures', recordId)
+        && (resource.data.get('itemOrigin', null) == null || resource.data.itemOrigin.get('ownerCharacterId', '') == '');
     }
 
     match /combat_profile_locks/{kind}/records/{recordId} {
@@ -127,6 +128,16 @@ service cloud.firestore {
     match /module_store_entries/{documentId} {
       allow read: if true;
       allow write: if signedIn();
+    }
+
+    match /item_register_offers/{documentId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /item_register_transactions/{documentId} {
+      allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
+      allow write: if false;
     }
 
     match /item_database/{documentId} {

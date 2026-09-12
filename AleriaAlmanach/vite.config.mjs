@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
@@ -18,6 +19,7 @@ import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-art
 import { preserveBookReaderLicense } from '../Bestiarium/modules/book-reader/book-license-build.mjs';
 import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natural-species-registry.mjs';
 import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
+import { HORSE_BREEDING_PAGE_ID } from '../Bestiarium/modules/horse-breeding/horse-breeding-registry.mjs';
 import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS } from '../Bestiarium/modules/predator-profile/predator-registry.mjs';
 import { LIVESTOCK_CATEGORY_IDS } from '../Bestiarium/modules/livestock-category/livestock-category-registry.mjs';
 import { PET_BREED_GROUP_IDS } from '../Bestiarium/modules/pet-breed/pet-breed-registry.mjs';
@@ -37,7 +39,6 @@ const classicRootFiles = ['app.js', 'module-richtext.js', 'module-import-export.
 const almanachRoot = dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = resolve(almanachRoot, '..');
 const buildRoot = resolve(almanachRoot, 'dist');
-const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
 const workspaceIconDirectories = [
   ['Zauber Icons', 'Oblivion Style'],
   ['Zauber Icons', 'Baldurs Gate'],
@@ -49,9 +50,15 @@ const workspaceIconDirectories = [
 ];
 
 function preserveClassicAlmanachScripts() {
+  let outputDirectory = buildRoot;
   return {
     name: 'preserve-classic-almanach-scripts',
+    configResolved(config) {
+      outputDirectory = resolve(config.root, config.build.outDir);
+    },
     async closeBundle() {
+      const buildRoot = outputDirectory;
+      const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
       await copyCalendarIconAssets({ workspaceRoot, almanachRoot, buildRoot });
       await Promise.all(classicDirectories.map(directory => (
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
@@ -114,7 +121,7 @@ export default defineConfig({
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
         magie: resolve(workspaceRoot, 'Magie/index.html'),
-        elemente: resolve(workspaceRoot, 'Magie/elemente/index.html'),
+        ...Object.fromEntries(listSpellCatalogSchools().map(school => [school.id, resolve(workspaceRoot, `Magie/${school.id}/index.html`)])),
         elementarismusArchiv: resolve(workspaceRoot, 'Magie/elementarismus/index.html'),
         ...getReligionPageInputs(),
         ...getClergyPageInputs(),
@@ -131,6 +138,7 @@ export default defineConfig({
         ...Object.fromEntries(HORSE_PROFILE_IDS.map(id => [
           `bestiary-horse-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/pferde', id, 'index.html')
         ])),
+        [`bestiary-horse-${HORSE_BREEDING_PAGE_ID}`]: resolve(workspaceRoot, 'Bestiarium/tiere/pferde', HORSE_BREEDING_PAGE_ID, 'index.html'),
         ...Object.fromEntries(PREDATOR_GROUPS.map(group => [
           `bestiary-predator-${group.id}`, resolve(workspaceRoot, 'Bestiarium/tiere/raubtiere', group.id, 'index.html')
         ])),

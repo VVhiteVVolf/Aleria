@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-06T04:36:36.261Z",
+    "sourceExportedAt": "2026-09-12T11:53:47.460Z",
     "sourceUpdatedAt": "2026-09-03T23:41:59.588Z",
     "sourceDocumentIds": [
       "person--haus-draig--dwynwen-draig"
     ],
-    "contentHash": "e4d8756821ea50793a2207a81e02bfef0bc991d77d6ac90b82c91ad1779da867"
+    "contentHash": "68867572f202faf4488fbf7f1fe9df0a6ba57295e2e5e841463e43949f43785c"
   },
   "local": {
     "notes": "",
@@ -269,8 +269,8 @@
           "personId": "dwynwen-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-06T04:36:36.261Z",
-          "lastSyncedAt": "2026-09-06T04:36:36.261Z",
+          "importedAt": "2026-09-12T11:53:47.460Z",
+          "lastSyncedAt": "2026-09-12T11:53:47.460Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=dwynwen-draig",
           "fingerprint": "{\"name\":\"Dwynwen Draig\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/dwynwen-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"caswallon-grael\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--caswallon-grael\",\"name\":\"Caswallon Grael\"}],\"children\":[{\"personId\":\"gwalchmei-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--gwalchmei-grael\",\"name\":\"Gwalchmei Grael\"},{\"personId\":\"tylwyth-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--tylwyth-grael\",\"name\":\"Tylwyth Grael\"},{\"personId\":\"medrawd-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--medrawd-grael\",\"name\":\"Medrawd Grael\"}]}}"
         }

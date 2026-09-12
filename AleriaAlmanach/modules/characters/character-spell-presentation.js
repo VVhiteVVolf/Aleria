@@ -2,6 +2,7 @@ import { getCombatDamagePreview } from '../combat/combat-action-estimates.js';
 import { getUniversalDamageBonus } from '../combat/combat-profile-model.js';
 import { getDefaultActivationCosts, normalizeCombatResourceCosts } from '../combat/combat-action-economy.js';
 import { createCatalogSpell, getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/spell-catalog.js';
+import { getHealingSpellPresentation } from '../spell-catalog/spell-catalog-presentation.js';
 
 const dice = value => String(value || '').toUpperCase().replaceAll('D', 'W');
 
@@ -12,7 +13,10 @@ function actionLabel(spell, manaResourceId) {
 }
 
 function damagePresentation(spell, profile, entry) {
+  const healing = getHealingSpellPresentation(spell, entry);
+  if (healing) return healing;
   const preview = getCombatDamagePreview({ ...profile,
+    profileActionKind: 'spell',
     selectedAction: { kind: 'spell', effects: spell.effects || [] },
     damageModifier: getUniversalDamageBonus(profile),
     weapon: { damageFormula: spell.rollFormula, damageType: spell.damageType }

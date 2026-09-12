@@ -110,6 +110,8 @@ export function sanitizeCreature(value = {}) {
   const result = {
     schemaVersion: CREATURE_SCHEMA_VERSION,
     entityType: 'creature',
+    itemOrigin: source.itemOrigin && typeof source.itemOrigin === 'object' ? { ...source.itemOrigin } : null,
+    needsStatReview: source.needsStatReview === true,
     name: normalizeText(source.name || 'Unbenannte Kreatur', 140),
     type: normalizeText(source.type || 'Kreatur', 100),
     species: normalizeText(source.species, 120),
@@ -188,6 +190,7 @@ export function createCreatureDuplicate(source, allCreatures = []) {
   const duplicate = sanitizeCreature({
     ...original,
     id: '',
+    itemOrigin: null,
     name: `${baseName} ${toRomanNumeral(ordinal)}.`,
     templateId,
     instanceOrdinal: ordinal,

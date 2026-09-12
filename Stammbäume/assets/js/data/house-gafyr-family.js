@@ -9,6 +9,7 @@ import {
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
+import { HELEDD_GAFYR_BIOGRAPHY } from './person-biographies/heledd-gafyr.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
@@ -170,7 +171,10 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     }),
     person('aerwyn-gafyr', 'Aerwyn', 'female', '1699'),
     person('rheinallt-gafyr', 'Rheinallt', 'male', '1694'),
-    person('heledd-gafyr', 'Heledd', 'female', '1696'),
+    person('heledd-gafyr', 'Heledd', 'female', '1696', '', GAFYR_HOUSE_ID, {
+      title: 'Lady',
+      extensions: { biographyModule: HELEDD_GAFYR_BIOGRAPHY }
+    }),
     person('roderic-gafyr', 'Roderic', 'male', '1699'),
     person('kelyddon-gafyr', 'Kelyddon', 'male', '1698', '', GAFYR_HOUSE_ID, {
       worldPersonId: 'person--haus-gafyr--kelyddon-gafyr'
@@ -375,6 +379,6 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd. Revision 4 übernimmt Tallulas individuelles Porträt aus ihrer ausgearbeiteten Ua’Eirce-Gegenakte.',
     blankFamily: false,
     houseBiographyModule: HOUSE_BIOGRAPHY,
-    sourceRevision: 5
+    sourceRevision: 6
   }
 });

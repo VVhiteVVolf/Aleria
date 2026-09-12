@@ -2,15 +2,15 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-06T04:36:36.261Z",
+  "sourceExportedAt": "2026-09-12T11:53:47.460Z",
   "summary": {
-    "sourceDocuments": 266,
-    "total": 234,
-    "mergedSameNameGroups": 24,
-    "familyLinked": 153,
+    "sourceDocuments": 269,
+    "total": 236,
+    "mergedSameNameGroups": 25,
+    "familyLinked": 155,
     "familyAmbiguous": 0,
     "familyPending": 81,
-    "primaryFamily": 153,
+    "primaryFamily": 155,
     "primaryGroup": 26,
     "primaryPlace": 19,
     "primaryUnassigned": 36,
@@ -1162,6 +1162,15 @@
       "ages": [
         "Geburtsjahr 1716"
       ]
+    },
+    {
+      "name": "Oweta Draig",
+      "canonicalDocumentId": "vk0xAa3ZcEhVvGC1CzNq",
+      "documentIds": [
+        "vk0xAa3ZcEhVvGC1CzNq",
+        "vk0xAa3ZcEhVvGC1CzNq"
+      ],
+      "ages": []
     },
     {
       "name": "Rhiannon Draig",

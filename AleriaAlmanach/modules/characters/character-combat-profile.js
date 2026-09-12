@@ -14,8 +14,9 @@ import {
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260912-archive-dialogs-v1';
 import { getCharacterSpellPresentation } from './character-spell-presentation.js';
+import { updateCharacterSpellPresentations } from './character-spell-view.js';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
@@ -662,9 +663,9 @@ function getResolutionLabel(spell) {
   return 'Zauberangriff';
 }
 
-function renderCardProperty(iconSource, label, value) {
+function renderCardProperty(iconSource, label, value, valueRole = '') {
   if (!String(value || '').trim()) return '';
-  return `<div class="cp-card-property">${renderPropertyIcon(iconSource)}<div><span>${escapeMarkup(label)}</span><strong>${escapeMarkup(value)}</strong></div></div>`;
+  return `<div class="cp-card-property">${renderPropertyIcon(iconSource)}<div><span>${escapeMarkup(label)}</span><strong${valueRole ? ` data-role="${escapeMarkup(valueRole)}"` : ''}>${escapeMarkup(value)}</strong></div></div>`;
 }
 
 function renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items) {
@@ -845,7 +846,7 @@ function renderSpellCard(spell, manaName, profile) {
     Number(upcast.amountPerLevel) ? `+${upcast.amountPerLevel} je Grad` : '',
     upcast.maximumLevel ? `bis Grad ${upcast.maximumLevel}` : ''
   ].filter(Boolean);
-  return `<details class="cp-spell-card ${spell.prepared ? 'prepared' : 'unprepared'}">
+  return `<details class="cp-spell-card ${spell.prepared ? 'prepared' : 'unprepared'}" data-spell-id="${escapeMarkup(spell.id)}">
     <summary>${renderEntryIcon('spell', spell, 'cp-spell-summary-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup([spell.school, presentationLabel, getSpellLevelLabel(spell.level)].filter(Boolean).join(' · '))}</small><strong>${escapeMarkup(spell.name || 'Unbenannter Zauber')}</strong><span>${escapeMarkup(spell.description || 'Noch keine Zauberbeschreibung.')}</span></span><span class="cp-spell-ready-state">${spell.prepared ? 'Bereit' : 'Nicht bereit'}</span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
     <div class="cp-spell-card-body">
       <section class="cp-spell-card-hero">
@@ -853,13 +854,13 @@ function renderSpellCard(spell, manaName, profile) {
         <img class="cp-spell-card-art" data-combat-entry-icon data-combat-entry-id="${escapeMarkup(spell.id || '')}" data-combat-entry-kind="spell" data-combat-entry-name="${escapeMarkup(spell.name || '')}"${iconSource ? ` src="${escapeMarkup(iconSource)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async">
       </section>
       <section><h5>Eigenschaften</h5><div class="cp-card-property-grid cp-spell-property-grid">
-        ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', costLabel)}
-        ${renderCardProperty(getRollIconSource(presentation.damage.formula, presentation.damage.damageType), 'Schaden / Wurf', presentation.damage.label)}
+        ${renderCardProperty(getActivationIconSource(spell.activationType), 'Kosten', costLabel, 'spell-cost-value')}
+        ${renderCardProperty(getRollIconSource(presentation.damage.formula, presentation.damage.damageType), 'Wirkung / Wurf', presentation.damage.label, 'spell-damage-value')}
         ${renderCardProperty(getResolutionIconSource(spell), 'Auflösung', getResolutionLabel(spell))}
         ${renderCardProperty(getRangeIconSource(), 'Reichweite', spell.range || 'Zauberreichweite')}
         ${renderCardProperty(getDurationIconSource(spell), 'Dauer', [spell.duration, spell.concentration ? 'Konzentration' : ''].filter(Boolean).join(' · ') || 'Sofort')}
       </div></section>
-      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5>${presentation.higherForms.length ? presentation.higherForms.map(form => `<p>${escapeMarkup(form)}</p>`).join('') : `<p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann auf einem höheren freigeschalteten Grad gewirkt werden.')}</p>`}</section>` : ''}
+      ${upcast.enabled ? `<section class="cp-spell-upcast"><h5>Auf höheren Graden</h5>${presentation.higherForms.length ? presentation.higherForms.map(form => `<p data-role="spell-higher-form">${escapeMarkup(form)}</p>`).join('') : `<p>${escapeMarkup(upcastParts.join(' · ') || 'Der Zauber kann auf einem höheren freigeschalteten Grad gewirkt werden.')}</p>`}</section>` : ''}
       ${presentation.catalogHref ? `<p><a href="${escapeMarkup(presentation.catalogHref)}" target="_blank" rel="noopener">Zum Zauberverzeichnis · Fassung ${escapeMarkup(spell.catalogReference.revision)} ↗</a></p>` : ''}
       <details class="cp-spell-technical"><summary>Technische Details</summary><div><p><strong>Voraussetzungen:</strong> ${escapeMarkup(spell.requirements || 'Keine besonderen Voraussetzungen.')}</p><p><strong>Schlagworte:</strong> ${escapeMarkup(spell.tags || 'Keine Schlagworte.')}</p>${spell.aiInstructions ? `<p><strong>AleriaGPT:</strong> ${escapeMarkup(spell.aiInstructions)}</p>` : ''}</div></details>
       <div class="cp-spell-card-actions"><label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> vorbereitet</label><button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Zauber bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" aria-label="${escapeMarkup(spell.name || 'Zauber')} entfernen">×</button></div>
@@ -1107,6 +1108,7 @@ function updateDerivedView() {
   });
   const radar = document.querySelector('[data-combat-radar-polygon]');
   if (radar) radar.setAttribute('points', getRadarPoints(profile));
+  updateCharacterSpellPresentations(document.getElementById('cp-combat-sheet-root'), profile);
 }
 
 function createEmptyItem(collection) {
@@ -1179,6 +1181,7 @@ function openDetailItemEditor(collectionPath, itemId, kind, defaultActivation = 
     kind,
     item,
     resources: draftProfile.resources,
+    manaResourceId: draftProfile.magic.manaResourceId,
     weapons: draftProfile.weapons,
     inventoryItems: Array.isArray(getInventoryDraft()?.items) ? getInventoryDraft().items : [],
     onSave: updated => {

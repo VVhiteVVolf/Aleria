@@ -3,6 +3,7 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { applySceneInventoryTransfer } from '../generated/scene-inventory/scene-inventory-transfer-model.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { canManageCharacter } from '../generated/item-register/item-register-model.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -28,7 +29,7 @@ export const commitInventoryTransfer = onCall({
   const submittedTransfer = submittedEvent.transfer && typeof submittedEvent.transfer === 'object' ? submittedEvent.transfer : {};
   const submittedObject = submittedTransfer.object && typeof submittedTransfer.object === 'object' ? submittedTransfer.object : {};
   if (!giverId || !receiverId || giverId === receiverId || !entryId) {
-    fail('invalid-argument', 'Geber, EmpfÃ¤nger und Szene mÃ¼ssen eindeutig sein.');
+    fail('invalid-argument', 'Geber, Empfänger und Szene müssen eindeutig sein.');
   }
 
   const database = getFirestore();
@@ -43,9 +44,22 @@ export const commitInventoryTransfer = onCall({
       transaction.get(giverRef),
       transaction.get(receiverRef)
     ]);
-    if (!giverSnapshot.exists || !receiverSnapshot.exists) fail('not-found', 'Geber oder EmpfÃ¤nger wurde nicht gefunden.');
+    if (!giverSnapshot.exists || !receiverSnapshot.exists) fail('not-found', 'Geber oder Empfänger wurde nicht gefunden.');
     const giver = { id: giverId, ...(giverSnapshot.data() || {}) };
     const receiver = { id: receiverId, ...(receiverSnapshot.data() || {}) };
+    const role = String(request.auth.token?.aleriaRole || 'player');
+    if (!canManageCharacter(giver, { uid: request.auth.uid, authenticated: true, canModerate: ['admin', 'moderator'].includes(role) })) fail('permission-denied', 'Nur der Besitzer oder die Spielleitung kann Gegenstände dieser Figur übergeben.');
+    if (submittedObject.kind === 'register-item' && !['admin', 'moderator', 'editor'].includes(role)) fail('permission-denied', 'Bitte Waren über das Güterregister kaufen. Freie Zuteilungen erstellt die Spielleitung.');
+    const characterLocks = await Promise.all([giverId, receiverId].map(id => transaction.get(database.doc(`combat_profile_locks/characters/records/${id}`))));
+    if (characterLocks.some(snap => snap.data()?.activeEncounterKeys?.length)) fail('failed-precondition', 'Eine der Figuren nimmt gerade an einem Kampf teil.');
+    const sourceItem = (giver.inventory?.items || []).find(item => item.id === submittedObject.itemId);
+    const linkedCreatureRef = sourceItem?.creatureId ? database.collection('creatures').doc(sourceItem.creatureId) : null;
+    const linkedCreatureSnapshot = linkedCreatureRef ? await transaction.get(linkedCreatureRef) : null;
+    if (linkedCreatureRef && (!linkedCreatureSnapshot.exists || linkedCreatureSnapshot.data().itemOrigin?.ownerCharacterId !== giverId)) fail('failed-precondition', 'Die Begleiterverknüpfung wurde geändert.');
+    if (linkedCreatureRef) {
+      const lock = await transaction.get(database.doc(`combat_profile_locks/creatures/records/${linkedCreatureRef.id}`));
+      if (lock.data()?.activeEncounterKeys?.length) fail('failed-precondition', 'Der Begleiter nimmt gerade an einem Kampf teil.');
+    }
     try {
       result = applySceneInventoryTransfer(giver, receiver, submittedObject, {
         allowRegisterItem: true,
@@ -53,17 +67,21 @@ export const commitInventoryTransfer = onCall({
         transferredAt: now.toISOString()
       });
     } catch (error) {
-      fail('failed-precondition', error?.message || 'Die InventarÃ¼bergabe ist nicht mehr gÃ¼ltig.');
+      fail('failed-precondition', error?.message || 'Die Inventarübergabe ist nicht mehr gültig.');
     }
 
+    if (linkedCreatureRef) transaction.update(linkedCreatureRef, { itemOrigin: { ...linkedCreatureSnapshot.data().itemOrigin,
+      ownerCharacterId: receiverId, ownerCharacterName: receiver.name || '', disposition: 'owned' }, updatedAt: now.toISOString() });
     transaction.update(giverRef, withProtectedRecordRevisions(giver, {
       inventory: result.giverInventory,
+      combatProfile: result.giverCombatProfile,
       updatedAt: now.toISOString()
-    }, ['inventory'], now.getTime()));
+    }, ['inventory', 'combatProfile'], now.getTime()));
     transaction.update(receiverRef, withProtectedRecordRevisions(receiver, {
       inventory: result.receiverInventory,
+      combatProfile: result.receiverCombatProfile,
       updatedAt: now.toISOString()
-    }, ['inventory'], now.getTime()));
+    }, ['inventory', 'combatProfile'], now.getTime()));
     const transfer = {
       transferId: randomUUID(),
       giver: { id: giverId, name: clean(giver.name, 160), portrait: clean(giver.portrait, 2000) },
@@ -73,10 +91,10 @@ export const commitInventoryTransfer = onCall({
       createdAt: now.toISOString(),
       schemaVersion: 2
     };
-    const text = `${giver.name || 'Eine Figur'} Ã¼bergibt ${receiver.name || 'einer Figur'} ${result.object.name || 'einen Gegenstand'}.`;
+    const text = `${giver.name || 'Eine Figur'} übergibt ${receiver.name || 'einer Figur'} ${result.object.name || 'einen Gegenstand'}.`;
     transaction.create(commentRef, {
       entryId,
-      charName: 'ErzÃ¤hler',
+      charName: 'Erzähler',
       charTitle: '',
       portrait: null,
       text,

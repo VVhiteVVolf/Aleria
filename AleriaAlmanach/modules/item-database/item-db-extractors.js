@@ -207,7 +207,8 @@ function itemDbExtractMarketItems(data, config = {}) {
     image: item.image || data.defaultImage || '',
     tags: item.tags || [],
     attributes: itemDbMarketAttributes(item.stats, data.profileLabels),
-    sourceRefs: [{ kind: 'market-folder', market: config.market, rowIndex: index }],
+    sourceRefs: [{ kind: 'market-folder', market: config.market, sourceId: String(item.id || ''), rowIndex: index }],
+    combatDefinition: item.combatDefinition || item.combat || null,
     hiddenMeta: {
       sourceTemplate: config.sourceTemplate,
       originalCategory: item.category || '',

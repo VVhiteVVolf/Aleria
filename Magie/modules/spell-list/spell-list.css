@@ -1,4 +1,20 @@
 .spell-cover { display:grid; grid-template-columns:1fr 260px; align-items:center; gap:50px; padding:38px 0 42px; border-bottom:1px solid var(--magic-line); }
+.spell-list-page[data-school="restitution"] { --magic-green:#30473e; }
+.spell-filters.spell-filters-expanded { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.spell-filters-expanded label:first-child { grid-column:1 / -1; }
+.spell-outcome-average { display:block; margin-top:5px; font-size:11px; color:var(--magic-muted); }
+.spell-timing { padding:12px 15px; margin-bottom:16px; border-left:2px solid var(--magic-gold); background:#e4e8da66; font-size:13px; }
+.spell-timing b { margin-right:8px; }
+.spell-pending { border-block:1px solid var(--magic-line); margin:28px 0 40px; scroll-margin-top:24px; }
+.spell-pending > summary { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:22px 0; font-size:24px; list-style:none; }
+.spell-pending small { display:block; font-size:10px; color:var(--magic-gold); letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; }
+.spell-pending > div { padding-bottom:22px; font-size:13px; color:var(--magic-muted); }
+.spell-pending-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:18px; }
+.spell-pending article { border:1px dashed var(--magic-line); padding:20px; }
+.spell-pending h3 { color:var(--magic-ink); font-size:21px; margin:8px 0 12px; }
+.spell-pending[open] > summary > span:last-child { font-size:0; }
+.spell-pending[open] > summary > span:last-child::after { content:'−'; font-size:24px; }
+@media (max-width:540px) { .spell-filters.spell-filters-expanded { grid-template-columns:repeat(2,minmax(0,1fr)); } .spell-pending-grid { grid-template-columns:1fr; } }
 .spell-breadcrumb { display:inline-block; margin-bottom:28px; font-size:12px; color:var(--magic-muted); text-decoration:none; }
 .spell-cover h1 { margin:12px 0 4px; font-size:clamp(38px,5.4vw,76px); letter-spacing:-.045em; }
 .spell-cover-subtitle { font-size:25px; font-style:italic; color:var(--magic-gold); }
@@ -41,6 +57,7 @@
 .spell-section > header { display:flex; align-items:center; gap:17px; margin-bottom:18px; padding-bottom:15px; border-bottom:1px solid var(--magic-line); }
 .spell-section-number { color:var(--magic-gold); font-size:32px; font-style:italic; }
 .spell-section h2 { font-size:27px; }
+.spell-section > header > div { min-width:0; overflow-wrap:anywhere; hyphens:auto; }
 .spell-section > header p { margin-top:3px; font-size:12px; color:var(--magic-muted); }
 .spell-section > header > a { margin-left:auto; text-decoration:none; color:var(--magic-gold); }
 .spell-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; align-items:start; }

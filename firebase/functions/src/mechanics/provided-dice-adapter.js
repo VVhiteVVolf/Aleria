@@ -29,14 +29,16 @@ export class ProvidedDiceAdapter {
     const rememberDamage = source => {
       if (!source || typeof source !== 'object') return;
       const dice = source.diceResults || source.keptDice;
-      if (!Array.isArray(dice)) return;
+      // Fixed effects have a damage summary but never request a dice roll.
+      // They must not displace the next real effect's receipt in the queue.
+      if (!Array.isArray(dice) || !dice.length) return;
       const key = String(source.rollId || source.id || `${source.notation || ''}:${dice.join(',')}:${damageSources.length}`);
       if (seenRolls.has(key)) return;
       seenRolls.add(key);
       damageSources.push(source);
     };
     rememberDamage(submittedResolution.turnStart?.roll);
-    rememberDamage(submittedResolution.damage);
+    if (submittedResolution.damage?.rollSource !== 'effect') rememberDamage(submittedResolution.damage);
     (Array.isArray(submittedResolution.followUpAttacks) ? submittedResolution.followUpAttacks : []).forEach(followUp => rememberDamage(followUp?.damage));
     (Array.isArray(submittedResolution.effectResults) ? submittedResolution.effectResults : []).forEach(result => rememberDamage(result?.roll));
     this.damageSources = damageSources;

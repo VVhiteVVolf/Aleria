@@ -13,6 +13,8 @@
       from "./modules/characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1";
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
+    import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
+    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js';
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -1079,7 +1081,10 @@
                 replaceImageLibrary: options.replaceImageLibrary === true
               }
             );
+            const companionWrites = await prepareInventoryCompanionWrites({ transaction, db, doc, characterId: id,
+              before: existingSnap.data(), after: write.data });
             transaction.set(ref, write.data, { merge: write.merge });
+            companionWrites.forEach(write => transaction.update(write.ref, write.data));
             return write;
           });
           return options.returnWriteResult === true
@@ -1210,6 +1215,10 @@
           void ignoredOwnerUid;
           void ignoredCreatedBy;
           const existing = await getDoc(ref);
+          if (existing.data()?.itemOrigin?.ownerCharacterId) {
+            return saveLinkedCreature({ db, doc, runTransaction, id, data: safeData, forceOverwrite: options.forceOverwrite });
+          }
+          if (existing.data()?.itemOrigin) safeData.itemOrigin = existing.data().itemOrigin;
           // Derselbe Schutz gegen veraltete Browser-Tabs wie bei saveCharacter() - siehe dort für
           // die ausführliche Begründung. Kreaturen haben statt inventory ein loot-Feld. Ein
           // expliziter Import (forceOverwrite) setzt sich immer durch.
@@ -1233,7 +1242,14 @@
       },
       async deleteCreature(id) {
         await requireFirebaseUser();
-        return deleteDoc(doc(db, 'creatures', id));
+        return runTransaction(db, async transaction => {
+          const ref = doc(db, 'creatures', id);
+          const current = await transaction.get(ref);
+          if (current.data()?.itemOrigin?.ownerCharacterId) throw new Error('Bitte den Begleiter zuerst aus dem Inventar seiner Besitzerfigur entfernen oder verkaufen.');
+          const lock = await transaction.get(doc(db, 'combat_profile_locks', 'creatures', 'records', id));
+          if (lock.data()?.activeEncounterKeys?.length) throw new Error('Diese Kreatur nimmt gerade an einem Kampf teil.');
+          transaction.delete(ref);
+        });
       },
       async transferCharacterInventories(giverId, giverInventory, receiverId, receiverInventory, threadId, sceneEvent, deleteCode) {
         await requireFirebaseUser();
@@ -1347,6 +1363,7 @@
           if (onError) onError(error);
         });
       },
+      itemRegister: createItemRegisterFirebase({ db, collection, onSnapshot, httpsCallable, functions, requireUser: requireFirebaseUser }),
       async loadItemDatabase() {
         try {
           const snap = await getDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC));

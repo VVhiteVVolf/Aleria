@@ -125,11 +125,11 @@ test('Rhiannons höher gewirktes Geschoss kostet den gewählten Grad, lässt sic
   for (let count = 0; count < 2; count += 1) {
     const result = await party.commit(await party.prepare({ actor: 'rhiannon', targets: ['gildas'], actionId: 'spell:rhiannon-magisches-geschoss', castLevel: 3 }));
     const costs = result.mechanics.commentSegments[0].combatResolution.resourceCosts;
-    assert.equal(costs.find(cost => cost.resourceId === 'mana-focus').amount, 5);
+    assert.equal(costs.find(cost => cost.resourceId === 'mana-focus').amount, 6);
     assert.ok(!costs.some(cost => cost.resourceId.startsWith('spell-slot-')));
     receipts.push(result.id);
   }
-  assert.equal((await party.snapshot()).profiles.get('rhiannon').resources.find(resource => resource.id === 'mana-focus').current, manaBefore - 10);
+  assert.equal((await party.snapshot()).profiles.get('rhiannon').resources.find(resource => resource.id === 'mana-focus').current, manaBefore - 12);
   await assert.rejects(() => party.prepare({ actor: 'rhiannon', targets: ['gildas'], actionId: 'spell:rhiannon-magisches-geschoss', castLevel: 4 }), /freigeschaltet/);
   for (const id of receipts.reverse()) await undo(id);
   assert.deepEqual((await party.assertConsistent()).profiles.get('rhiannon').resources, before.resources);

@@ -539,7 +539,8 @@ function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
     id,
     name: normalizeText(source.name, 120),
     school: normalizeText(source.school, 60),
-    ...(normalizeSpellCatalogReference(source.catalogReference) ? { catalogReference: normalizeSpellCatalogReference(source.catalogReference), maximumTargets: normalizeNumber(source.maximumTargets, 1, 1, 20) } : {}),
+    ...(normalizeSpellCatalogReference(source.catalogReference) ? { catalogReference: normalizeSpellCatalogReference(source.catalogReference) } : {}),
+    ...(source.maximumTargets != null ? { maximumTargets: normalizeNumber(source.maximumTargets, 1, 1, 20) } : {}),
     ...(normalizeSpellCatalogReference(source.catalogOrigin) ? { catalogOrigin: normalizeSpellCatalogReference(source.catalogOrigin) } : {}),
     icon: normalizeText(source.icon, 1000),
     level,
@@ -1009,6 +1010,13 @@ function getAttribute(profile, key) {
       + Math.floor((attribute.score + bonus - 10) / 2) - Math.floor((attribute.score - 10) / 2) };
 }
 
+// Archive copies need the same spell rules before receiving a new instance ID.
+// Keep unrelated archive metadata outside this normalized mechanical snapshot.
+export function normalizeCombatSpell(value = {}, manaResourceId = 'mana-focus') {
+  const revised = reconcileClassDamageRevisions({ magic: { spells: [value] } });
+  return sanitizeSpell(revised.magic.spells[0], 0, manaResourceId);
+}
+
 export function getEffectiveCombatAttribute(profile = {}, key = 'strength') {
   return getAttribute(sanitizeCharacterCombatProfile(profile), key);
 }
@@ -1284,7 +1292,7 @@ export function getSpellcastingValues(profile = {}) {
   const proficiency = getProficiencyBonus(normalized);
   return {
     attack: normalized.magic.spellAttackOverride
-      ?? abilityModifier + proficiency + sumMechanicalModifier(normalized, 'spellAttack'),
+      ?? abilityModifier + proficiency + sumMechanicalModifier(normalized, 'attack') + sumMechanicalModifier(normalized, 'spellAttack'),
     saveDc: normalized.magic.spellSaveDcOverride
       ?? 8 + abilityModifier + proficiency + sumMechanicalModifier(normalized, 'spellSaveDc')
   };

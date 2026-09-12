@@ -1,0 +1,156 @@
+// Quelle: melyn-arth-biographie.json, Export 2026-09-12T10:48:07.171Z.
+// Am 12.09.2026 zugeordnet, Formatierung bereinigt und vorhandene CK2-Trait-Icons ergänzt.
+export const MELYN_ARTH_BIOGRAPHY = {
+  "schema": "aleria.biography-module",
+  "schemaVersion": 1,
+  "stats": [
+    [
+      "Vollständiger Name",
+      "Melyn Arth"
+    ],
+    [
+      "Haus",
+      "Haus Arth"
+    ],
+    [
+      "Titel / Anrede",
+      "Lady"
+    ],
+    [
+      "Geboren",
+      "1674"
+    ],
+    [
+      "Geburtsort",
+      "Talgarth"
+    ],
+    [
+      "Gestorben",
+      "Lebend"
+    ],
+    [
+      "Alter im Jahr 1740",
+      "66 Jahre"
+    ],
+    [
+      "Geschlecht",
+      "Weiblich"
+    ],
+    [
+      "Familienstand",
+      "verheiratet"
+    ],
+    [
+      "Rang / Stand",
+      "Ritter"
+    ],
+    [
+      "Tätigkeit",
+      "Kommandantin der Saethwyr"
+    ],
+    [
+      "Wohnsitz",
+      "Gwynthor"
+    ]
+  ],
+  "quote": "",
+  "quoteBy": "",
+  "biography": {
+    "portraitStages": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sideWidth": 100,
+    "connectionPortraitHeight": 68,
+    "connectionTextOffset": 0,
+    "biographyTitle": "Biografie",
+    "biographyText": "<p>Lady Melyn Saethwyr wurde vor sechsundsechzig Jahren als <strong>Melyn Arth</strong> auf den Klaueninseln geboren. Ihr Vater war <strong>Graf Rhydderch Arth</strong>, Graf der Klaueninseln, ihre Mutter <strong>Talaith Arth, geborene Morfil</strong>, stammte aus der Grauen Weite.</p><p>Melyn wuchs in einem Haus auf, das seit Generationen den Norden Cenyrs gegen Überfälle der Nordmänner schützt. Die Arth gelten als rau, kräftig und kriegerisch; viele von ihnen sind große Seefahrer und Kapitäne. Melyn kannte dieses Leben, fühlte sich jedoch nie wirklich zum Meer hingezogen. Ihr Element war der Kampf an Land. Sie wuchs mit vier Geschwistern auf. Ihr ältester Bruder <strong>Run Arth</strong> folgte dem Vater später als Graf der Klaueninseln und wurde Vater des berühmten <strong>Sir Parzifal Arth</strong>. Ihre Brüder <strong>Domnall</strong> und <strong>Denawal</strong> sowie ihre Schwester <strong>Llewella</strong> sind ebenso wie Run inzwischen verstorben.</p><p>Melyn selbst zeigte früh die typische Körperkraft der Arth. Als Teulu erlernte sie den <strong>Drachentanz</strong>, wobei ihr besonders der <strong>Tanz des brüllenden Drachen</strong> lag. Sie kämpft mit dem Schwert und nutzt ihre Stärke kompromisslos, ohne dabei auf Technik zu verzichten. Später wurde ihre Ehe mit <strong>Gwalchgwynn Saethwyr</strong> arrangiert. Ausgangspunkt war eine Verbindung zwischen Arth und Saethwyr, unter anderem im Zusammenhang mit Schiffbau und militärischer Unterstützung für die Klaueninseln.</p><p>Aus der politischen Ehe wurde allerdings eine erstaunlich harmonische Partnerschaft. Gwalchgwynn erdet sie. Melyn übernimmt für ihn das Grobe. Gemeinsam bekamen sie zwei Kinder: <strong>Anwyll Saethwyr</strong>, den Herold des Hauses, und <strong>Enora Saethwyr</strong>, die später auf die Silberinsel verheiratet wurde.</p><p>Melyn blieb währenddessen Ritterin. Als sie eines Tages die junge <strong>Heledd Gafyr</strong> beim Training beobachtete, entschied sie offenbar sehr schnell, sie als Knappin zu nehmen. Heledd wurde dadurch Teil einer Ausbildung, die hart, praktisch und wenig sentimental war. Melyn erwartete Ausdauer, Aufmerksamkeit und die Bereitschaft, auch dann weiterzumachen, wenn es unangenehm wurde. Sie wollte aus Heledd jedoch keine zweite Melyn machen. Sie wollte eine gute Ritterin aus ihr machen.</p><p>Im <strong>Krieg gegen Ceitheach</strong> kämpften beide später gemeinsam. Während eines Gefechts fing Melyn einen Angriff ab, der Heledd galt, und wurde dabei schwer im Gesicht verletzt. Die markante Narbe trägt sie bis heute. Für Melyn selbst ist die Geschichte weniger heroisch, als andere sie erzählen würden. Der Schlag kam auf Heledd. Also ging sie dazwischen. Mit dem Kopf. Mehr gibt es für sie daran kaum zu erklären.</p><p>Über die folgenden Jahrzehnte stieg Melyn innerhalb des Hauses Saethwyr weiter auf. Heute dient sie als <strong>Kommandantin der Saethwyr-Truppen </strong>direkt unter dem Marschall des Hauses. Mit sechsundsechzig Jahren führt sie häufiger von der Burg aus als früher, ist jedoch weiterhin aktiv und alles andere als eine ehemalige Kriegerin.</p><p>Auch privat bleibt Melyn eine harte Frau. Sie kann einschüchternd sein, spricht direkt und besitzt wenig Geduld für Gejammer. Ihre Zuneigung zeigt sie auf andere Weise. Sie versorgt Menschen. Sie kocht für Kinder und Enkel, sorgt dafür, dass Verletzungen behandelt werden und dass niemand friert oder hungrig bleibt.</p><p>Ein Teller wird hingestellt. <strong>„Da.“ </strong>Mehr braucht es bei Melyn oft nicht.</p>",
+    "abilitiesTitle": "Persönlichkeit",
+    "abilities": [
+      {
+        "title": "Hart",
+        "detail": "Melyn erwartet Widerstandsfähigkeit von sich und anderen. Schwierigkeiten werden für sie zuerst bewältigt und erst danach beklagt.",
+        "icon": "../IconOrdner/Traits%20Icon/Stubborn.png"
+      },
+      {
+        "title": "Direkt",
+        "detail": "Sie spricht klar und ohne große Umwege. Höfische Umschreibungen benutzt sie, wenn sie notwendig sind, nicht weil sie Freude daran hätte.",
+        "icon": "../IconOrdner/Traits%20Icon/Honest.png"
+      },
+      {
+        "title": "Kämpferisch",
+        "detail": "Melyn ist auch mit sechsundsechzig im Kern Kriegerin. Kampf ist für sie Handwerk, Disziplin und Verantwortung.",
+        "icon": "../IconOrdner/Traits%20Icon/Duelist.png"
+      },
+      {
+        "title": "Beschützend",
+        "detail": "Hat sie Verantwortung für jemanden übernommen, nimmt sie diese sehr ernst. Dass sie sich im Krieg zwischen Heledd und einen Schlag stellte, entsprach für sie schlicht dieser Pflicht.",
+        "icon": "../IconOrdner/Traits%20Icon/Defensive_leader.png"
+      },
+      {
+        "title": "Fürsorglich",
+        "detail": "Melyn zeigt Zuneigung durch Versorgung, nicht durch große Worte. Essen, warme Kleidung oder eine kontrollierte Wunde sagen bei ihr häufig mehr als eine Umarmung.",
+        "icon": "../IconOrdner/Traits%20Icon/Kind.png"
+      },
+      {
+        "title": "Fordernd",
+        "detail": "Als Rittermutter und Kommandantin verlangt sie viel. Fehler sind erlaubt. Nachlässigkeit deutlich weniger.",
+        "icon": "../IconOrdner/Traits%20Icon/Diligent.png"
+      },
+      {
+        "title": "Loyal",
+        "detail": "Wer einmal zu den Ihren gehört, kann sich auf Melyn verlassen.",
+        "icon": "../IconOrdner/Traits%20Icon/Family_focus.png"
+      }
+    ],
+    "extraSections": [],
+    "historyTitle": "Geschichte & Wirkung",
+    "historyText": "<p>Melyn gehört zu einer älteren Generation von Rittern, die Krieg nicht nur aus Erzählungen kennt. Als Tochter des Grafen der Klaueninseln wuchs sie an einer der härtesten Grenzen Cenyrs auf, kämpfte später gegen Ceitheach und verlor einen großen Teil ihrer Geschwister.</p><p>Dennoch definiert sie sich nicht über Verlust. Sondern über Dienst. Sie besitzt keinen legendären Ruf wie ihr Neffe Parzifal, ist innerhalb Celtigerns Wacht und besonders unter Rittern jedoch hoch angesehen.</p><p>Ihre vielleicht nachhaltigste Wirkung liegt in ihrer Rolle als Rittermutter. Aus einer Entscheidung auf einem Übungsplatz entstand damit über Jahrzehnte eine kleine ritterliche Lehrlinie.</p>",
+    "worksTitle": "Bekannte Werke",
+    "works": [],
+    "triviaTitle": "Trivia",
+    "trivia": [
+      "Obwohl sie auf den Klaueninseln aufwuchs, betrachtet Melyn sich selbst nicht als Seefahrerin.",
+      "Sie entschied offenbar sehr spontan, Heledd Gafyr als Knappin zu nehmen. Nachdem sie sie beim Training gesehen hatte, war die Sache für Melyn im Grunde entschieden.",
+      "Auf die Frage, was sie damals in Heledd gesehen habe, könnte ihre Antwort schlicht lauten: „Sie war gut.“",
+      "Melyn betrachtet ihre Gesichtsnarbe nicht als große Heldengeschichte. Heledd dürfte das deutlich anders sehen.",
+      "Ihr Neffe Parzifal Arth mag einer der berühmtesten Ritter seiner Generation sein. Für Melyn bleibt er trotzdem auch der Junge, den sie kannte, bevor irgendjemand Lieder über ihn sang.",
+      "Gwalchgwynn gehört zu den wenigen Menschen, die Melyn zuverlässig bremsen können.",
+      "Umgekehrt übernimmt Melyn zuverlässig jene Situationen, in denen Gwalchgwynn feststellen muss, dass Geduld allein nicht mehr reicht.",
+      "Sie kocht gelegentlich persönlich für Kinder, Enkel und Menschen, die sie als Familie betrachtet.",
+      "Ihr Essen ist schlicht, sättigend und zweckmäßig. Besonders ansprechend sieht es gewöhnlich nicht aus.",
+      "Melyn scheint darin allerdings kein Problem zu erkennen. Es ist warm. Es ist nahrhaft. Sie hat es gekocht. Was genau fehlt noch?",
+      "Ein hingestellter Teller und ein knappes „Da.“ gehören zu ihren zuverlässigsten Formen von Zuneigung.",
+      "Wer sich dafür überschwänglich bedankt, bekommt wahrscheinlich nur: „Iss.“ Auch wenn er es nicht mag.",
+      "Melyns letzte Knappin war Gwenna Crafanc, das Mündel Sir Egon Gafyrs.",
+      "Dass die Crafanc ein Kadettenhaus der Arth sind, dürfte Melyns Aufmerksamkeit ursprünglich geweckt haben. Geschont hat Gwenna das allerdings nicht.",
+      "Wer Melyn kennt, würde sogar vermuten, dass das genaue Gegenteil der Fall war.",
+      "Melyn bildete damit sowohl Heledd Gafyr als auch Gwenna Crafanc aus – zwei Ritterinnen, die später auf unterschiedliche Weise eng mit Haus Gafyr verbunden wurden.",
+      "Fragt man Melyn, weshalb sie Gwenna als Knappin nahm, dürfte die Antwort ähnlich ausfallen wie einst bei Heledd: „Sie konnte was.“"
+    ],
+    "quotesTitle": "Zitate",
+    "quotes": [],
+    "connectionsTitle": "Verbindungen",
+    "connections": [
+      {
+        "type": "connection",
+        "name": "Heledd Gafyr",
+        "detail": "frühere Knappin",
+        "image": "https://i.imgur.com/L41oFjx.png",
+        "imageFormat": "portrait"
+      },
+      {
+        "type": "connection",
+        "name": "Gwenna Crafanc",
+        "detail": "frühere Knappin",
+        "image": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+        "imageFormat": "portrait"
+      }
+    ],
+    "documentsTitle": "Eigentum & Besitz",
+    "documents": [],
+    "footer": "Personenakte · Melyn Arth"
+  }
+};

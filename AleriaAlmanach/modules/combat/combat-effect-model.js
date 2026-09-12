@@ -48,7 +48,9 @@ export function normalizeCombatEffect(value = {}, index = 0) {
   const condition = source.condition && typeof source.condition === 'object'
     ? normalizeRuntimeCondition({
         ...source.condition,
-        durationModel: normalizeConditionDuration(source.condition.durationModel || source.durationModel, source.condition.duration)
+        // Let the runtime normalizer migrate legacy counters when no explicit
+        // duration model exists; an empty permanent model would erase them.
+        durationModel: source.condition.durationModel || source.durationModel
       })
     : null;
   return {

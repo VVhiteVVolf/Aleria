@@ -1,9 +1,10 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { listSpellCatalogEntries } from '../../AleriaAlmanach/modules/spell-catalog/spell-catalog.js';
 import { renderSpellListPage } from '../modules/spell-list/spell-list-template.mjs';
+import { listSpellCatalogSchools } from '../../AleriaAlmanach/modules/spell-catalog/spell-catalog-schools.js';
 
 for (const edition of [
-  { directory: 'elemente', entries: listSpellCatalogEntries(), archived: false },
+  ...listSpellCatalogSchools().map(school => ({ directory: school.id, entries: listSpellCatalogEntries({ catalog: school.id }), archived: false })),
   { directory: 'elementarismus', entries: listSpellCatalogEntries({ revision: 1 }), archived: true }
 ]) {
   const directory = new URL(`../${edition.directory}/`, import.meta.url);
@@ -16,5 +17,5 @@ for (const edition of [
     await mkdir(directory, { recursive: true });
     await writeFile(target, generated, 'utf8');
   }
-  console.log(`${edition.entries.length} Elemente-Zauber${edition.archived ? ' (Archivfassung)' : ''} ${process.argv.includes('--check') ? 'geprüft' : 'abgeglichen'}.`);
+  console.log(`${edition.entries.length} ${edition.directory}-Zauber${edition.archived ? ' (Archivfassung)' : ''} ${process.argv.includes('--check') ? 'geprüft' : 'abgeglichen'}.`);
 }

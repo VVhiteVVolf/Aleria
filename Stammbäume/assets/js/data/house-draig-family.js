@@ -10,6 +10,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -407,7 +408,10 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     ),
     person('mair-draig', 'Mair', 'female', '1720', ''),
     person('kane-draig', 'Kane', 'male', '1721', ''),
-    person('oweta-draig', 'Oweta', 'female', '1723', ''),
+    person('oweta-draig', 'Oweta', 'female', '1723', '', DRAIG_HOUSE_ID, {
+      title: 'Lady',
+      extensions: { biographyModule: OWETA_DRAIG_BIOGRAPHY }
+    }),
     person('gethin-1722-draig', 'Gethin', 'male', '1722', ''),
     person('tegan-draig', 'Tegan', 'female', '1725', ''),
     person('einion-draig', 'Einion', 'male', '1723', ''),
@@ -711,7 +715,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 9,
+    sourceRevision: 10,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }
 });

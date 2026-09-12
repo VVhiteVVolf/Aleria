@@ -1,0 +1,826 @@
+.horse-breeding main {
+  padding-bottom: 88px;
+}
+
+.breeding-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 22px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.breeding-breadcrumb a,
+.breeding-hero-actions > a:last-child {
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+
+.breeding-breadcrumb a:hover,
+.breeding-hero-actions > a:last-child:hover {
+  border-color: currentColor;
+  color: var(--red);
+}
+
+.breeding-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center;
+  gap: clamp(45px, 8vw, 110px);
+  min-height: 510px;
+  padding: 64px 7vw 70px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.breeding-hero h1 {
+  max-width: 780px;
+  margin-top: 12px;
+  color: #2e261c;
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 400;
+  letter-spacing: -.06em;
+  line-height: .92;
+  text-wrap: balance;
+}
+
+.breeding-subtitle {
+  max-width: 680px;
+  margin-top: 25px;
+  color: #554837;
+  font-size: clamp(17px, 2vw, 23px);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.breeding-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.breeding-hero-actions > a:last-child {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.breeding-seal {
+  display: grid;
+  place-items: center;
+  width: 260px;
+  min-height: 300px;
+  padding: 23px;
+  border: 1px solid #9e8966;
+  outline: 1px solid #cfbd98;
+  outline-offset: 7px;
+  background: radial-gradient(circle, #f7efdd 0 48%, #dfcfaf 72%, transparent 73%);
+  color: var(--red);
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.breeding-seal img {
+  width: 215px;
+  height: 215px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 9px #3b2a1d30);
+  mix-blend-mode: multiply;
+}
+
+.breeding-seal span {
+  padding-top: 13px;
+  border-top: 1px solid #aa9570;
+}
+
+.breeding-quote {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 720px) 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 29px 0;
+  border-bottom: 3px double var(--line);
+  color: #594130;
+  text-align: center;
+}
+
+.breeding-quote > span {
+  color: var(--red);
+}
+
+.breeding-quote p {
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.breeding-quote cite {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.breeding-register {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.breeding-register a {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 7px;
+  padding: 19px 17px;
+  border-right: 1px solid var(--line-soft);
+  font-size: 11px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.breeding-register a:last-child {
+  border-right: 0;
+}
+
+.breeding-register a:hover {
+  background: #f8efdc80;
+  color: var(--red);
+}
+
+.breeding-register span {
+  color: var(--red);
+  font-size: 9px;
+}
+
+.breeding-section {
+  padding: 78px 0 8px;
+  scroll-margin-top: 20px;
+}
+
+.breeding-section + .breeding-section {
+  margin-top: 64px;
+  border-top: 3px double var(--line);
+}
+
+.breeding-section-heading {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 760px);
+  gap: 13px;
+  margin-bottom: 38px;
+}
+
+.breeding-section-heading > span {
+  padding-top: 9px;
+  color: var(--red);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.breeding-section-heading h2 {
+  margin-top: 5px;
+  color: #30271d;
+  font-size: clamp(34px, 4.4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: 1.02;
+}
+
+.breeding-section-heading div > p:last-child {
+  margin-top: 17px;
+  color: #574b3c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.breeding-form {
+  padding: clamp(24px, 4vw, 50px);
+  border: 1px solid #9f8964;
+  background: linear-gradient(135deg, #f7eedca8, #ded0b491);
+  box-shadow: inset 0 0 0 6px #f8f1df66, 8px 12px 34px #48351f14;
+}
+
+.breeding-parent-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 24px;
+}
+
+.breeding-parent {
+  min-width: 0;
+  margin: 0;
+  padding: 23px;
+  border: 1px solid var(--line);
+  background: #f7efdd8c;
+}
+
+.breeding-parent legend {
+  padding: 0 10px;
+  color: var(--red);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.breeding-parent label,
+.breeding-names label,
+.breeding-matrix-controls label {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.breeding-parent select,
+.breeding-names input,
+.breeding-names textarea,
+.breeding-matrix-controls input[type='search'] {
+  width: 100%;
+  margin-top: 8px;
+  border: 0;
+  border-bottom: 1px solid #9e8966;
+  border-radius: 0;
+  background: #fffaf060;
+  color: var(--ink);
+  font: 15px Georgia, serif;
+}
+
+.breeding-parent select,
+.breeding-names input,
+.breeding-matrix-controls input[type='search'] {
+  min-height: 44px;
+  padding: 10px 11px;
+}
+
+.breeding-names textarea {
+  min-height: 88px;
+  padding: 11px;
+  resize: vertical;
+}
+
+.breeding-parent select:focus-visible,
+.breeding-names input:focus-visible,
+.breeding-names textarea:focus-visible,
+.breeding-matrix-controls input:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+.breeding-parent-preview {
+  min-height: 305px;
+  margin-top: 17px;
+  padding: 17px;
+  border-top: 1px solid #baa783;
+}
+
+.breeding-parent-preview > p:only-child {
+  padding-top: 110px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.breeding-parent-preview figure {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  align-items: center;
+  gap: 19px;
+}
+
+.breeding-parent-preview img {
+  width: 118px;
+  height: 145px;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 7px #3f2f2038);
+}
+
+.breeding-parent-preview figcaption strong {
+  display: block;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.breeding-parent-preview figcaption span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.breeding-preview-stats {
+  display: grid;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.breeding-preview-stat {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+}
+
+.breeding-preview-stat i,
+.breeding-stat-track {
+  overflow: hidden;
+  height: 5px;
+  background: #b5a48175;
+}
+
+.breeding-preview-stat i span,
+.breeding-stat-track span {
+  display: block;
+  height: 100%;
+  background: var(--green);
+}
+
+.breeding-cross-mark {
+  display: grid;
+  place-content: center;
+  color: var(--red);
+  text-align: center;
+}
+
+.breeding-cross-mark span {
+  font-size: 45px;
+  font-style: italic;
+}
+
+.breeding-cross-mark small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.breeding-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+  margin-top: 28px;
+}
+
+.breeding-notes {
+  grid-column: 1 / -1;
+}
+
+.breeding-pair-note {
+  min-height: 25px;
+  margin-top: 22px;
+  color: var(--red);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.breeding-calculate {
+  margin-top: 12px;
+}
+
+.breeding-calculate:disabled {
+  cursor: not-allowed;
+  opacity: .48;
+}
+
+.breeding-result {
+  margin-top: 32px;
+  border: 1px solid #8c7858;
+  background: #f8f1e2b5;
+  box-shadow: 7px 10px 30px #43311f14;
+}
+
+.breeding-result-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 30px;
+  padding: 32px 35px 26px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.breeding-result-header h3 {
+  margin-top: 5px;
+  font-size: clamp(31px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.breeding-result-meta {
+  display: grid;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.breeding-result-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, .8fr);
+  gap: 40px;
+  padding: 34px 35px;
+}
+
+.breeding-stat-list {
+  display: grid;
+  gap: 13px;
+}
+
+.breeding-stat-row {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 13px;
+  font-size: 11px;
+}
+
+.breeding-stat-row output {
+  color: var(--red);
+  font-size: 15px;
+  text-align: right;
+}
+
+.breeding-stat-row--talent .breeding-stat-track span {
+  background: #8c5d31;
+}
+
+.breeding-stat-row--talent output::after {
+  content: ' ✦';
+  font-size: 8px;
+}
+
+.breeding-result-summary {
+  padding-left: 34px;
+  border-left: 1px solid var(--line-soft);
+}
+
+.breeding-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.breeding-traits span {
+  padding: 6px 9px;
+  border: 1px solid #a7926e;
+  color: #4f4333;
+  font-size: 9px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.breeding-result-summary dl {
+  margin: 23px 0 0;
+}
+
+.breeding-result-summary dl > div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #b7a48273;
+}
+
+.breeding-result-summary dt {
+  color: var(--red);
+  font-size: 8px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.breeding-result-summary dd {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.breeding-interpretation {
+  padding: 30px 35px;
+  border-top: 3px double var(--line);
+  background: #e5d7bd6e;
+}
+
+.breeding-interpretation h4 {
+  margin: 5px 0 12px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.breeding-interpretation p:last-child {
+  white-space: pre-line;
+  color: #463a2c;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.breeding-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 35px 32px;
+}
+
+.breeding-secondary-button,
+.breeding-delete,
+.breeding-matrix-cell {
+  border: 1px solid #9e8966;
+  background: transparent;
+}
+
+.breeding-secondary-button {
+  min-height: 43px;
+  padding: 10px 17px;
+  font-size: 11px;
+}
+
+.breeding-secondary-button:hover,
+.breeding-delete:hover {
+  background: #eee1c7;
+  color: var(--red);
+}
+
+.breeding-records {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.breeding-record,
+.breeding-known-card {
+  border: 1px solid var(--line);
+  background: #f7efde7d;
+}
+
+.breeding-record {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  padding: 23px;
+}
+
+.breeding-record h3,
+.breeding-known-card h3 {
+  margin: 6px 0 10px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.breeding-record p:not(.eyebrow),
+.breeding-known-card p:not(.eyebrow) {
+  color: #574a39;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.breeding-record small,
+.breeding-known-card small,
+.breeding-known-card > span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.breeding-delete {
+  align-self: start;
+  min-width: 34px;
+  min-height: 34px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.breeding-empty {
+  grid-column: 1 / -1;
+  padding: 35px;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+.breeding-known-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.breeding-known-card {
+  min-height: 220px;
+  padding: 24px;
+}
+
+.breeding-matrix-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 26px;
+  margin-bottom: 18px;
+}
+
+.breeding-matrix-controls label:first-child {
+  width: min(360px, 100%);
+}
+
+.breeding-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.breeding-check input {
+  accent-color: var(--red);
+}
+
+.breeding-matrix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.breeding-matrix-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.breeding-matrix-legend i {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #9b8665;
+}
+
+.breeding-matrix-legend .known { background: #774538; }
+.breeding-matrix-legend .custom { background: #657052; }
+.breeding-matrix-legend .open { background: #eee2c9; }
+
+.breeding-matrix-scroll {
+  max-height: min(75vh, 780px);
+  overflow: auto;
+  border: 1px solid #8d7959;
+  background: #f5ecd9;
+  box-shadow: inset 10px 0 30px #5d452710;
+  scrollbar-color: #9e8966 #e7d9bc;
+}
+
+.breeding-matrix {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 10px;
+}
+
+.breeding-matrix th,
+.breeding-matrix td {
+  width: 105px;
+  min-width: 105px;
+  height: 64px;
+  padding: 0;
+  border-right: 1px solid #beac8978;
+  border-bottom: 1px solid #beac8978;
+}
+
+.breeding-matrix th {
+  z-index: 2;
+  padding: 8px;
+  background: #dfcfaf;
+  color: #4b3c2c;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.breeding-matrix thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.breeding-matrix tbody th {
+  position: sticky;
+  left: 0;
+  text-align: left;
+}
+
+.breeding-matrix thead th:first-child {
+  left: 0;
+  z-index: 4;
+}
+
+.breeding-matrix td {
+  background: #f9f2e2;
+  text-align: center;
+}
+
+.breeding-matrix-diagonal {
+  color: #9f8e72;
+  background: #e8dcc5;
+}
+
+.breeding-matrix-cell {
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  border: 0;
+  color: #685945;
+  font-size: 9px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.breeding-matrix-cell:hover,
+.breeding-matrix-cell:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--red);
+  outline-offset: -3px;
+}
+
+.breeding-matrix-cell--known {
+  background: #774538;
+  color: #fff8e8;
+}
+
+.breeding-matrix-cell--custom {
+  background: #657052;
+  color: #fff8e8;
+}
+
+.breeding-matrix-cell--open {
+  background: #f7efde;
+  color: #89775c;
+  font-size: 16px;
+}
+
+.breeding-matrix-empty-cell {
+  color: #a09075;
+  background: #eadfc9;
+}
+
+.breeding-noscript {
+  margin-top: 35px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .breeding-hero { grid-template-columns: minmax(0, 1fr) 210px; padding-inline: 3vw; }
+  .breeding-seal { width: 200px; min-height: 240px; }
+  .breeding-seal img { width: 170px; height: 170px; }
+  .breeding-parent-grid { grid-template-columns: 1fr; }
+  .breeding-cross-mark { min-height: 50px; }
+  .breeding-cross-mark small { display: none; }
+  .breeding-result-body { grid-template-columns: 1fr; }
+  .breeding-result-summary { padding: 28px 0 0; border-top: 1px solid var(--line-soft); border-left: 0; }
+  .breeding-known-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .breeding-hero { grid-template-columns: 1fr; min-height: 0; padding-block: 48px; }
+  .breeding-seal { justify-self: center; }
+  .breeding-register { grid-template-columns: repeat(2, 1fr); }
+  .breeding-register a:nth-child(2) { border-right: 0; }
+  .breeding-register a:nth-child(-n + 2) { border-bottom: 1px solid var(--line-soft); }
+  .breeding-section { padding-top: 60px; }
+  .breeding-section-heading { grid-template-columns: 28px minmax(0, 1fr); }
+  .breeding-parent-preview figure { grid-template-columns: 95px minmax(0, 1fr); }
+  .breeding-parent-preview img { width: 95px; height: 120px; }
+  .breeding-records,
+  .breeding-known-grid,
+  .breeding-names { grid-template-columns: 1fr; }
+  .breeding-notes { grid-column: auto; }
+  .breeding-result-header { grid-template-columns: 1fr; }
+  .breeding-result-meta { text-align: left; }
+}
+
+@media (max-width: 520px) {
+  .breeding-hero h1 { font-size: 50px; }
+  .breeding-form { padding: 18px; }
+  .breeding-parent { padding: 17px; }
+  .breeding-parent-preview { padding-inline: 0; }
+  .breeding-result-header,
+  .breeding-result-body,
+  .breeding-interpretation { padding-inline: 22px; }
+  .breeding-result-actions { padding-inline: 22px; }
+  .breeding-stat-row { grid-template-columns: 94px minmax(0, 1fr) 30px; }
+  .breeding-record { grid-template-columns: minmax(0, 1fr); }
+  .breeding-delete { justify-self: start; }
+}

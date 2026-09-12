@@ -9,6 +9,7 @@ import {
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
+import { MELYN_ARTH_BIOGRAPHY } from './person-biographies/melyn-arth.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
@@ -168,7 +169,13 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     person('breandan-saethwyr', 'Breandan', 'male', '1670', '1730'),
     person('morwenna-gwyvern', 'Morwenna Gwyvern', 'female', '1672', '', 'house-gwyvern'),
     person('ercwlff-illyswen', 'Ercwlff Illyswen', 'male', '1661', '1720', 'house-illyswen'),
-    person('melyn-arth', 'Melyn Arth', 'male', '1684', '1735', 'house-arth'),
+    person('melyn-arth', 'Melyn Arth', 'female', '1674', '', 'house-arth', {
+      title: 'Lady',
+      extensions: {
+        biographyModule: MELYN_ARTH_BIOGRAPHY,
+        registryManagedFields: ['sex', 'birth', 'death', 'status']
+      }
+    }),
     person('derwen-wyrm', 'Derwen Wyrm', 'male', '1674', '', 'house-wyrm'),
     person('imogen-arwydd', 'Imogen Arwydd', 'female', '1675', '', 'house-arwydd'),
 
@@ -320,6 +327,6 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Saethwyr-Tabelle und Stammbaumgrafik. Bereits in Arwydd, Gafyr oder Wyrm geführte Personen verwenden dieselben Weltpersonen-IDs und lokalen Portraitdateien.',
     blankFamily: false,
     houseBiographyModule: HOUSE_BIOGRAPHY,
-    sourceRevision: 4
+    sourceRevision: 5
   }
 });

@@ -218,7 +218,7 @@ function relationAllows(rule, source = {}) {
 function distanceAllows(rule, source = {}) {
   if (rule.radiusMeters == null) return true;
   const value = rule.recipient === 'actor' ? source.distanceToActor : source.distanceToTarget;
-  return Number.isFinite(Number(value)) && Number(value) >= 0 && Number(value) <= rule.radiusMeters;
+  return value != null && value !== '' && Number.isFinite(Number(value)) && Number(value) >= 0 && Number(value) <= rule.radiusMeters;
 }
 
 function conditionAllows(rule, state = {}) {

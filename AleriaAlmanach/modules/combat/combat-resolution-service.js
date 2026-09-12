@@ -1,4 +1,5 @@
 import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260909-dragon-parent-v2';
+import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import {
   getAuraTargetMechanics,
@@ -34,7 +35,8 @@ import { isSkjaldrBerserkAbility } from '../classes/aldrimar/skjaldr-combat-prof
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
 import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260909-dragon-parent-v2';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
-import { refreshRuntimeCondition, getConditionConcentrationOwnerId } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
+import { refreshRuntimeCondition } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
+import { resolveCombatConcentration } from './combat-concentration-resolution.js';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
@@ -252,7 +254,8 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   // Freie Wurfart-Vorgaben sind keine Regelquelle; die aufgelöste Technik darf eine vorgeben.
   const requestedRollMode = normalizeRollMode(actor.forcedRollMode);
   const relationship = options.relationship === 'ally' ? 'ally' : 'enemy';
-  const distanceMeters = Number.isFinite(Number(options.distanceMeters)) ? Number(options.distanceMeters) : null;
+  const distanceMeters = options.distanceMeters != null && options.distanceMeters !== '' && Number.isFinite(Number(options.distanceMeters))
+    ? Number(options.distanceMeters) : null;
   const auraContext = { relation: relationship, distanceMeters: options.distanceMeters };
   const actorAuraOnTarget = getAuraTargetMechanics(actor, auraContext);
   const targetAuraOnActor = getAuraTargetMechanics(target, auraContext);
@@ -307,6 +310,7 @@ export class CombatResolutionService {
     if (!actorCheck.ready) throw new Error(getCombatActorValidationMessage(actor, actorCheck));
     const targetCheck = validateCombatTargetProfile(target);
     if (!targetCheck.ready) throw new Error('Für das Ziel fehlt die Verteidigung in den Kampfdaten.');
+    validateSpellCatalogTarget(actor.selectedAction, target);
     const structuredEffects = normalizeCombatEffects(actor.selectedAction?.effects || []);
     const actionEffects = structuredEffects.length ? structuredEffects : normalizeCombatEffects([{
       id: 'implicit-weapon-damage',
@@ -436,6 +440,8 @@ export class CombatResolutionService {
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
       const primaryDamageBonus = (primaryDamageEffect.target === 'self' ? 0 : damageBonus)
         + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
+      const fixedDamageBonus = getCombatEffectAttributeModifier(actor, primaryDamageEffect)
+        + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor));
       const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, attack.criticalSuccess) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
@@ -446,10 +452,10 @@ export class CombatResolutionService {
         targetName: target.name,
         container: options.container
       }) : {
-        notation: String(primaryDamageEffect.amount),
+        notation: `${primaryDamageEffect.amount}${fixedDamageBonus ? `${fixedDamageBonus > 0 ? '+' : ''}${fixedDamageBonus}` : ''}`,
         keptDice: [],
-        modifier: 0,
-        total: Number(primaryDamageEffect.amount) + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor)),
+        modifier: fixedDamageBonus,
+        total: Math.max(0, Number(primaryDamageEffect.amount) + fixedDamageBonus),
         id: '',
         visualMode: 'automatic'
       };
@@ -640,7 +646,7 @@ export class CombatResolutionService {
       let recipientResources = appliesToActor ? actorResources : targetResources;
       let recipientConditions = appliesToActor ? actorConditions : targetConditions;
       const recipient = appliesToActor ? 'actor' : 'target';
-      let amount = Number(effect.amount) || 0;
+      let amount = Math.max(0, (Number(effect.amount) || 0) + getCombatEffectAttributeModifier(actor, effect));
       let roll = null;
       if (effect.formula && !(effect.type === 'damage' && !consumedPrimaryDamage && damageRoll)) {
         roll = await this.dice.rollDamage({
@@ -739,6 +745,9 @@ export class CombatResolutionService {
       }
     };
     await applyEffectList(effectiveEffects);
+    // Structured consequences from the attack phases share the same result
+    // pipeline as late rules and are each applied once.
+    await applyEffectList(allRuleApplications.flatMap(application => normalizeCombatEffects(application.resultEffects || [])));
     followUpAttacks.forEach((followUpResult, index) => {
       if (!followUpResult.damage || !followUpResult.attack?.hit) return;
       const effect = normalizeCombatEffect({
@@ -759,74 +768,65 @@ export class CombatResolutionService {
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
     });
     if (appliedTemporaryCondition) targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));
-    const damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
-    const totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
-    const rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming || result.amount || 0), 0);
+    let damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
+    let totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
+    let rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);
     const healed = effectResults.reduce((sum, result) => sum + Number(result.applied?.restored || 0), 0);
     const conditionsApplied = effectResults.filter(result => result.condition).length + (appliedTemporaryCondition ? 1 : 0);
     const conditionsRemoved = effectResults.reduce((sum, result) => sum + (Array.isArray(result.removed) ? result.removed.length : 0), 0);
     let defeated = Number(target.currentHitPoints) > 0 && targetHitPoints.current === 0;
     let nonlethalDefeat = defeated && damageEffectResults.some(result => result.effect?.nonlethal === true);
     let targetConcentrationSnapshot = null;
-    const lateResultEffects = [];
-    const interruptTriggered = effectResults.some(result => result.effect?.type === 'interrupt' && result.applied !== false);
-    const targetChannelingSnapshot = target.channeling && interruptTriggered ? {
-      before: { ...target.channeling },
-      after: null,
-      reason: 'interrupted'
+    let actorConcentrationSnapshot = sustainsConcentration && !options.skipSelfEffects ? {
+      before: actor.concentration || null,
+      after: { actionId: actor.profileActionId || '',
+        actionName: actor.selectedAction?.name || actor.weapon?.name || 'Wirkung',
+        ownerActorId: actor.characterId, instanceId: concentrationInstanceId,
+        tracksConditions: effectiveEffects.some(effect => effect.condition && ['apply-condition', 'buff', 'debuff'].includes(effect.type)),
+        startedAtResolution: true },
+      reason: actor.concentration ? 'replaced' : 'started'
     } : null;
-    if (target.concentration && (totalDamageApplied > 0 || interruptTriggered || defeated)) {
-      const beforeConcentration = { ...target.concentration };
-      let concentrationRetained = !interruptTriggered && !defeated;
-      if (concentrationRetained && totalDamageApplied > 0 && typeof this.dice.rollSavingThrow === 'function') {
-        const concentrationApplications = collectApplicableCombatRules({
-          phase: 'on-concentration-check', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-          usedFrequencyKeys: usedRuleFrequencyKeys,
-          state: { ...ruleProfileState, ...attack, damage: totalDamageApplied, concentration: beforeConcentration }
-        });
-        markCombatRuleApplications(concentrationApplications, usedRuleFrequencyKeys);
-        const concentrationEffects = mergeCombatRuleEffects(concentrationApplications);
-        allRuleApplications = allRuleApplications.concat(concentrationApplications);
-        concentrationApplications.forEach(application => {
-          lateResultEffects.push(...normalizeCombatEffects(application.resultEffects || []));
-        });
-        if (Array.isArray(concentrationEffects.conflicts) && concentrationEffects.conflicts.length) {
-          followRuleConflicts.push({ phase: 'on-concentration-check', applications: concentrationEffects.conflicts });
+    let actorChannelingSnapshot = (actor.channeling || requiredChannelComments > 0)
+      ? { before: actor.channeling || null, after: null, reason: requiredChannelComments > 0 ? 'completed' : 'interrupted' } : null;
+    let targetChannelingSnapshot = null;
+    const lateResultEffects = [];
+    const checkConcentrationEffects = async (results, allowResultEffects) => {
+      const selfTarget = String(actor.characterId) === String(target.characterId);
+      for (const recipient of selfTarget ? ['target'] : ['target', 'actor']) {
+        const affected = results.filter(result => (result.recipient || 'target') === recipient);
+        const ownerIsActor = recipient === 'actor' || selfTarget;
+        const owner = ownerIsActor ? actor : target;
+        const previousSnapshot = ownerIsActor ? actorConcentrationSnapshot : targetConcentrationSnapshot;
+        const hitPoints = recipient === 'actor' ? actorHitPoints : targetHitPoints;
+        const interrupted = affected.some(result => result.effect?.type === 'interrupt' && result.applied !== false);
+        if (owner.channeling && (interrupted || hitPoints.current <= 0)
+          && (ownerIsActor ? actorChannelingSnapshot : targetChannelingSnapshot)?.after !== null) {
+          const snapshot = { before: owner.channeling, after: null, reason: interrupted ? 'interrupted' : 'defeated' };
+          if (ownerIsActor) actorChannelingSnapshot = snapshot;
+          else targetChannelingSnapshot = snapshot;
         }
-        const dc = Math.max(10, Math.floor(totalDamageApplied / 2));
-        const modifier = getSavingThrowTotal(target, 'constitution') + Number(concentrationEffects.savingThrowModifier || 0);
-        const savingThrowRoll = await this.dice.rollSavingThrow({
-          modifier,
-          rollMode: resolveSavingThrowRollMode(target, 'constitution', concentrationEffects.rollMode || 'normal'),
-          actorName: target.name,
-          targetName: actor.name,
-          container: options.container
+        const result = await resolveCombatConcentration({
+          profile: previousSnapshot ? { ...owner, concentration: previousSnapshot.after } : owner,
+          counterpart: ownerIsActor ? target : actor, hitPoints,
+          conditions: recipient === 'actor' ? actorConditions : targetConditions,
+          damage: affected.filter(entry => entry.effect?.type === 'damage').reduce((sum, entry) => sum + Number(entry.applied?.incoming || 0), 0),
+          interrupted, dice: this.dice, container: options.container, allowResultEffects,
+          context: { actorId: actor.characterId, actionKind, profileActionId, ruleSources, rulePeriods, usedRuleFrequencyKeys, attack }
         });
-        let succeeded = Number(savingThrowRoll.total) >= dc;
-        if (concentrationEffects.outcome === 'force-save-success') succeeded = true;
-        if (concentrationEffects.outcome === 'force-save-failure') succeeded = false;
-        secondarySaves.push({
-          type: 'concentration', attributeKey: 'constitution', dc,
-          naturalRoll: Number(savingThrowRoll.natural),
-          diceResults: Array.isArray(savingThrowRoll.dice) ? savingThrowRoll.dice.slice() : [],
-          keptDice: Array.isArray(savingThrowRoll.keptDice) ? savingThrowRoll.keptDice.slice() : [],
-          modifier, total: Number(savingThrowRoll.total), succeeded,
-          rollId: savingThrowRoll.id || '', visualMode: savingThrowRoll.visualMode || 'text'
-        });
-        concentrationRetained = succeeded;
+        if (result.snapshot) {
+          const snapshot = { ...result.snapshot, before: previousSnapshot ? previousSnapshot.before : result.snapshot.before };
+          if (ownerIsActor) actorConcentrationSnapshot = snapshot;
+          else targetConcentrationSnapshot = snapshot;
+        }
+        if (recipient === 'actor') actorConditions = result.conditions;
+        else targetConditions = result.conditions;
+        secondarySaves.push(...result.saves);
+        allRuleApplications.push(...result.applications);
+        lateResultEffects.push(...result.resultEffects);
+        if (result.conflicts.length) followRuleConflicts.push({ phase: 'on-concentration-check', applications: result.conflicts });
       }
-      targetConcentrationSnapshot = {
-        before: beforeConcentration,
-        after: concentrationRetained ? beforeConcentration : null,
-        reason: defeated ? 'defeated' : (interruptTriggered ? 'interrupted' : (concentrationRetained ? 'save-succeeded' : 'save-failed'))
-      };
-      if (!concentrationRetained) {
-        targetConditions = targetConditions.filter(condition =>
-          getConditionConcentrationOwnerId(condition)
-            ? getConditionConcentrationOwnerId(condition) !== String(target.characterId)
-            : condition?.durationModel?.kind !== 'concentration');
-      }
-    }
+    };
+    await checkConcentrationEffects(effectResults, true);
     const latePhases = [
       ...(totalDamageApplied > 0 ? ['on-damaged', 'post-damage'] : []),
       ...(healed > 0 ? ['on-heal'] : []),
@@ -834,6 +834,7 @@ export class CombatResolutionService {
       ...(conditionsRemoved > 0 ? ['on-condition-removed'] : []),
       ...((resourceCheck.applied.changes.length || effectResults.some(result => (
         result.effect?.type === 'spend-resource' && result.applied?.changed
+          && result.applied.changed.before > result.applied.changed.after
       ))) ? ['on-resource-spent'] : []),
       ...(defeated ? ['on-defeat'] : [])
     ];
@@ -854,14 +855,24 @@ export class CombatResolutionService {
     // Result effects are applied once after all triggering phases have been
     // collected. They do not recursively trigger another phase in the same
     // resolution; this prevents reaction loops while keeping the full ledger.
+    const lateEffectStart = effectResults.length;
     await applyEffectList(lateResultEffects);
+    // Core lifecycle checks still apply to late damage and interruption. Their
+    // reactions cannot recursively add another generation of result effects.
+    await checkConcentrationEffects(effectResults.slice(lateEffectStart), false);
+    damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
+    totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
+    rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);
     defeated = Number(target.currentHitPoints) > 0 && targetHitPoints.current === 0;
     nonlethalDefeat = defeated && effectResults
       .filter(result => result.effect?.type === 'damage' && result.recipient !== 'actor')
       .some(result => result.effect?.nonlethal === true);
     const ruleResourceSnapshots = consumeCombatRuleResources(allRuleApplications, ruleSources, {
       actorId: actor.characterId,
-      actorResourcesAfter: resourceCheck.applied.after
+      resourcesByActor: new Map([
+        [String(actor.characterId), actorResources],
+        [String(target.characterId), targetResources]
+      ])
     });
     const preRollLedger = createRuleLedger(preRollApplications, {
       attackModifier: attackModifier - (savingThrowMode ? preRollEffects.savingThrowModifier : preRollEffects.attackModifier),
@@ -883,6 +894,10 @@ export class CombatResolutionService {
       hit: postHitAttackState.hit,
       damage: damageRoll?.rawTotal ?? damageRoll?.total ?? null
     }, { hit: preDamageAttackState.hit, damage: damageRoll?.total ?? null });
+    const firstDamageResult = damageEffectResults[0];
+    const summaryDamageRoll = damageRoll || (firstDamageResult && (firstDamageResult.roll || {
+      notation: String(firstDamageResult.amount), keptDice: [], modifier: 0, total: firstDamageResult.amount
+    }));
     const baseResolution = {
       schemaVersion: 4,
       rulesVersion: COMBAT_EVALUATION_RULES_VERSION,
@@ -942,21 +957,8 @@ export class CombatResolutionService {
         after: ammunition.after,
         ammunitionUse: ammunition.use
       } : null,
-      actorChannelingSnapshot: (actor.channeling || requiredChannelComments > 0)
-        ? { before: actor.channeling || null, after: null, reason: requiredChannelComments > 0 ? 'completed' : 'interrupted' }
-        : null,
-      actorConcentrationSnapshot: sustainsConcentration && !options.skipSelfEffects ? {
-        before: actor.concentration || null,
-        after: {
-          actionId: actor.profileActionId || '',
-          actionName: actor.selectedAction?.name || actor.weapon?.name || 'Wirkung',
-          ownerActorId: actor.characterId,
-          instanceId: concentrationInstanceId,
-          tracksConditions: effectiveEffects.some(effect => effect.condition && ['apply-condition', 'buff', 'debuff'].includes(effect.type)),
-          startedAtResolution: true
-        },
-        reason: actor.concentration ? 'replaced' : 'started'
-      } : null,
+      actorChannelingSnapshot,
+      actorConcentrationSnapshot,
       targetConcentrationSnapshot,
       targetChannelingSnapshot,
       defeat: defeated ? {
@@ -1007,19 +1009,20 @@ export class CombatResolutionService {
         visualMode: attackRoll.visualMode || 'text',
         rollId: attackRoll.id || ''
       },
-      damage: damageRoll ? {
-        notation: damageRoll.notation,
-        diceResults: Array.isArray(damageRoll.keptDice) ? damageRoll.keptDice.slice() : [],
-        modifier: Number(damageRoll.modifier) || 0,
+      damage: summaryDamageRoll ? {
+        rollSource: damageRoll ? 'primary' : 'effect',
+        notation: summaryDamageRoll.notation,
+        diceResults: Array.isArray(summaryDamageRoll.keptDice) ? summaryDamageRoll.keptDice.slice() : [],
+        modifier: Number(summaryDamageRoll.modifier) || 0,
         total: totalDamageApplied,
-        primaryTotal: damageRoll.primaryTotal == null ? Number(damageRoll.total) : Number(damageRoll.primaryTotal),
+        primaryTotal: summaryDamageRoll.primaryTotal == null ? Number(summaryDamageRoll.total) : Number(summaryDamageRoll.primaryTotal),
         rawTotal: rawDamageRolled,
-        damageReduction: Number(damageRoll.damageReduction || 0),
-        halvedBySave: !!damageRoll.halvedBySave,
-        damageType: primaryDamageEffect?.damageType || weapon.damageType || 'physisch',
+        damageReduction: Number(summaryDamageRoll.damageReduction || 0),
+        halvedBySave: !!summaryDamageRoll.halvedBySave,
+        damageType: primaryDamageEffect?.damageType || firstDamageResult?.effect?.damageType || weapon.damageType || 'physisch',
         damageResponse: damageEffectResults[0]?.applied?.damageResponse || null,
-        visualMode: damageRoll.visualMode || 'text',
-        rollId: damageRoll.id || ''
+        visualMode: summaryDamageRoll.visualMode || 'text',
+        rollId: summaryDamageRoll.id || ''
       } : null,
       targetSnapshot: {
         currentHitPoints: target.currentHitPoints,

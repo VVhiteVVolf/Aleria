@@ -1,4 +1,9 @@
 const DIALOG_CONFIGS = {
+  'item-register-overlay': { label: 'Items und Güter', initialFocus: '[data-ir-field="search"]' },
+  'item-register-editor': { label: 'Güter und Besitz verwalten', initialFocus: 'input, select, button[type="submit"]' },
+  'character-archive-overlay': { label: 'Charakterbogen-Archiv', initialFocus: '[data-character-archive-field="search"]' },
+  'character-archive-editor-overlay': { label: 'Archivvorlage bearbeiten', initialFocus: '[name="name"]' },
+  'combat-entry-editor-overlay': { label: 'Regeldetails bearbeiten', initialFocus: '[data-entry-field="name"]' },
   'modal-overlay': { label: 'Almanach-Eintrag', initialFocus: '.modal-close, button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])' },
   'comment-form-overlay': { label: 'Kommentar schreiben', initialFocus: '#cf-editor, #cf-text, button, input, textarea, select' },
   'showcase-form-overlay': { label: 'Objekt vorstellen', initialFocus: '#sf-title, button, input, textarea, select' },

@@ -10,6 +10,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_ARTH_PORTRAITS } from './house-arth-portraits.js';
+import { MELYN_ARTH_BIOGRAPHY } from './person-biographies/melyn-arth.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
@@ -328,8 +329,13 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     person('dolena-trachwyll', 'Dolena Trachwyll', 'female', '1685', '1710', 'house-trachwyll-talfronwyn'),
     person('llewella-arth', 'Llewella Arth', 'female', '1675', '1720'),
     person('gingalain-1671-pysgod', 'Gingalain Pysgod', 'male', '1671', '1720', 'house-pysgod'),
-    person('melyn-arth', 'Melyn Arth', 'male', '1684', '1735', ARTH_HOUSE_ID, {
-      notes: 'Geschlecht, Ehe und Nachkommen folgen der bereits ausgearbeiteten Saethwyr-Gegenakte.'
+    person('melyn-arth', 'Melyn Arth', 'female', '1674', '', ARTH_HOUSE_ID, {
+      title: 'Lady',
+      notes: 'Weiblich, geboren 1674 und im Jahr 1740 lebend; bestätigt durch die vom Benutzer bereitgestellte Biografie vom 12.09.2026. Ehe und Nachkommen folgen der Saethwyr-Gegenakte.',
+      extensions: {
+        biographyModule: MELYN_ARTH_BIOGRAPHY,
+        registryManagedFields: ['sex', 'birth', 'death', 'status', 'notes']
+      }
     }),
     person('gwalchgwyn-saethwyr', 'Gwalchgwyn Saethwyr', 'male', '1680', '', 'house-saethwyr'),
     person('afal-arth', 'Afal Arth', 'male', '1675', '', ARTH_HOUSE_ID, {
@@ -566,7 +572,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 12,
+    sourceRevision: 13,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

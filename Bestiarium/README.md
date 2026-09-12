@@ -167,6 +167,14 @@ Lenker, Sucher, Lauerer, Schädling, Brütling und Wandler besitzen vollständig
 
 Jedes Diagramm beschreibt die jeweilige Schwarmfunktion: beim Lenker geistige Herrschaft und Körperhärte, beim Sucher Archivierung und Magiestörung, beim Lauerer Körperkraft und Willensleere, beim Schädling Zahl und Bauleistung, beim Brütling Entwicklung und beim Wandler Metamorphose. Artenfiguren und Titelbilder werden getrennt, lokal und vollständig dargestellt. Quellen und Maße der sechs gelieferten Titelbilder stehen in `assets/psionid-profile-sources.json`. Die Seiten entstehen mit `node Bestiarium/scripts/build-psionid-profiles.mjs`; die Übersicht wird über den Gruppendossier-Generator gebaut.
 
+## Pferdezuchtbuch
+
+Unter `tiere/pferde/zuchtbuch/` liegt das interaktive Zuchtbuch der Pferde Alerias. Es verbindet die 27 Rossmarktrassen mit ihren lokalen Dossiers, übernimmt deren sechs Leistungswerte, Lebensspannen und Marktpreise und berechnet daraus einzelne Fohlen mit natürlicher Streuung und seltenem Talent. Owain Draig deutet das Ergebnis über den bestehenden KI-Dienst immersiv; bei einem nicht erreichbaren Dienst bleibt eine lokale Archivdeutung verfügbar. Eigene Fohlen und selbst benannte Kreuzungen werden ausschließlich im Browser gespeichert. Bereits unter `rmskt_zb2` abgelegte Namen aus der alten Rossmarkt-Matrix werden automatisch in die neue symmetrische Matrix übernommen.
+
+Die vollständige symmetrische 27×27-Matrix enthält alle 351 möglichen Rassenpaare. Sie hebt die fünf alten Rossmarktnamen Hochblut, Kronforst, Kronhest, Roh-Rhyfel und Edelsale sowie die in den Dossiers belegten Zuchtlinien Brycing und Tirashan hervor. Roh-Rhyfel verweist zusätzlich auf die später gefestigte Rhyfel-Linie. Datenaufbereitung, Rechenmodell, Speicherung, KI-Zugriff und Oberfläche bleiben als getrennte Module unter `modules/horse-breeding/` gekapselt. Die Seite entsteht mit `node Bestiarium/scripts/build-horse-breeding.mjs`.
+
+Das Zuchtarchiv verwendet ein eigenes transparentes Aquarellsymbol mit einer vollständig sichtbaren Stute und ihrem Fohlen. Die PNG-Datei liegt unter `assets/icons/horse-breeding.png`; Maße, Transparenz und der verwendete Generierungsprompt sind in `assets/horse-breeding-icon-source.json` dokumentiert.
+
 ## Bilder
 
 Alle 42 Bildtafeln wurden einzeln mit dem integrierten `image_gen` erzeugt. Der gemeinsame Aquarell-Stil und die einzelnen Motiv-Prompts stehen in `assets/icon-prompts.json`. Optimierte lokale WebP-Dateien liegen in `assets/icons/`. Das zusätzliche Sidebar-Symbol `../IconOrdner/ReiterIcons/Bestiarium-register.webp` orientiert sich an den bestehenden sepiafarbenen Almanach-Reiterbildern. Die Originalausgaben bleiben im Codex-Ordner `generated_images` erhalten; die ausgelieferten Dateien sind davon unabhängig.
@@ -186,6 +194,8 @@ Das Banner stammt aus dem vom Nutzer vorgegebenen Bild `https://i.imgur.com/bh0N
 `node --test Bestiarium/tests/natural-species.test.mjs`
 
 `node --test Bestiarium/tests/horse-profiles.test.mjs`
+
+`node --test Bestiarium/tests/horse-breeding.test.mjs`
 
 `node --test Bestiarium/tests/predator-profiles.test.mjs`
 

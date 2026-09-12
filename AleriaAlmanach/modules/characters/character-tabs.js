@@ -147,6 +147,31 @@ function handleExternallySavedCharacter(event) {
 
 document.addEventListener('aleria:character-saved', handleExternallySavedCharacter);
 
+// Register snapshots carry authoritative inventories; updating this feature's
+// records also refreshes the character picker and the archive's live projections.
+document.addEventListener('aleria:item-register-records', event => {
+  if (!event.detail?.charactersReady) return;
+  let changed = false;
+  for (const record of event.detail.characters || []) {
+    const index = _characters.findIndex(character => character.id === record.id);
+    if (index >= 0 && JSON.stringify(_characters[index]) === JSON.stringify(record)) continue;
+    const normalized = cloneCharacterRecord(record);
+    if (index >= 0) _characters[index] = normalized;
+    else _characters.push(normalized);
+    changed = true;
+    if (typeof _editingChar !== 'undefined' && _editingChar === record.id && record.inventory) {
+      if (typeof _characterInventoryEditMode !== 'undefined' && !_characterInventoryEditMode) {
+        setCharacterInventoryProfileData(record.inventory, { render: true });
+      } else {
+        const status = document.getElementById('cp-save-status');
+        if (status) status.textContent = 'Das Inventar wurde anderswo geändert. Bitte den Bogen vor dem Speichern neu öffnen.';
+      }
+    }
+  }
+  if (!changed) return;
+  renderCharGrid(); renderCharPickerInForm(); dispatchCharactersChanged();
+});
+
 function applyCommittedCharacterCombatProfile(event) {
   const updates = Array.isArray(event?.detail?.updates) ? event.detail.updates : [];
   let changed = false;

@@ -10,7 +10,7 @@
     "sync:mechanics": "node scripts/sync-almanach-mechanics.mjs",
     "test": "npm run sync:mechanics && node --test tests/*.test.js",
     "test:landtroll": "npm run sync:mechanics && node --test tests/integration/combat-troll.integration.mjs",
-    "test:combat-integration": "npm run sync:mechanics && node --test --test-concurrency=1 tests/integration/combat-checkup.integration.mjs tests/integration/combat-party.integration.mjs tests/integration/combat-status.integration.mjs tests/integration/combat-nondamage.integration.mjs tests/integration/combat-loadout.integration.mjs tests/integration/combat-berserk.integration.mjs",
+    "test:combat-integration": "npm run sync:mechanics && node --test --test-concurrency=1 tests/integration/combat-checkup.integration.mjs tests/integration/combat-party.integration.mjs tests/integration/combat-status.integration.mjs tests/integration/combat-nondamage.integration.mjs tests/integration/combat-loadout.integration.mjs tests/integration/combat-berserk.integration.mjs tests/integration/combat-checkup-regressions.integration.mjs",
     "test:combat-simulation": "npm run sync:mechanics && node --test tests/integration/combat-party-simulation.integration.mjs",
     "test:class-forms": "npm run sync:mechanics && node --test --test-concurrency=1 tests/integration/combat-class-forms.integration.mjs"
   },

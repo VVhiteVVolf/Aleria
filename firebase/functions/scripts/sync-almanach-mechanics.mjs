@@ -6,6 +6,12 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
+  'item-register/item-register-money.js',
+  'item-register/item-register-model.js',
+  'item-register/item-register-trade.js',
+  'item-register/item-register-standard.js',
+  'character-equipment/character-equipment-sync.js',
+  'character-equipment/character-equipment-registration.js',
   'classes/aldrimar/skjaldr-berserk-progression.js',
   'classes/aldrimar/skjaldr-combat-profile.js',
   'combat/combat-berserk-state.js',

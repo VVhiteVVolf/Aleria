@@ -11,7 +11,9 @@ function initializeSpellList(root) {
     for (const card of cards) {
       const matches = terms.every(term => normalize(card.dataset.search).includes(term));
       card.hidden = !matches || (values.get('grade') !== 'all' && card.dataset.grade !== values.get('grade'))
-        || (values.get('role') !== 'all' && card.dataset.role !== values.get('role'));
+        || (values.get('role') !== 'all' && card.dataset.role !== values.get('role'))
+        || (values.has('delivery') && values.get('delivery') !== 'all' && card.dataset.delivery !== values.get('delivery'))
+        || (values.has('concentration') && values.get('concentration') !== 'all' && card.dataset.concentration !== values.get('concentration'));
     }
     for (const section of sections) section.hidden = !section.querySelector('[data-spell]:not([hidden])');
     const count = cards.filter(card => !card.hidden).length;
@@ -28,12 +30,16 @@ function initializeSpellList(root) {
   form.addEventListener('change', filter);
   form.addEventListener('submit', event => event.preventDefault());
   root.addEventListener('click', async event => {
-    const sectionLink = event.target.closest('.spell-register a[href^="#element-"]');
+    const sectionLink = event.target.closest('.spell-register a[href^="#"]');
     if (sectionLink && root.querySelector(sectionLink.getAttribute('href'))?.hidden) { form.reset(); filter(); }
+    if (sectionLink?.getAttribute('href') === '#grenzkunst') root.querySelector('#grenzkunst').open = true;
     const button = event.target.closest('[data-action]');
     if (!button) return;
     if (button.dataset.action === 'reset-filters') { form.reset(); filter(); }
-    if (button.dataset.action === 'collapse-spells') cards.forEach(card => { card.open = false; });
+    if (button.dataset.action === 'collapse-spells') {
+      cards.forEach(card => { card.open = false; });
+      root.querySelectorAll('.spell-pending').forEach(section => { section.open = false; });
+    }
     if (button.dataset.action === 'copy-spell-link') {
       const url = new URL(location.href); url.hash = button.dataset.spellId;
       try { await navigator.clipboard.writeText(url.href); root.querySelector('[data-role="copy-status"]').textContent = 'Zauberlink kopiert.'; }

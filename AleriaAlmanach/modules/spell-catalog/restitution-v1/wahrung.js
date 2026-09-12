@@ -1,0 +1,158 @@
+import { defineRestitutionSpell } from './restitution-spell.js';
+
+// Authored Restitution edition 1; higher forms replace the stated base values.
+export const WAHRUNG_SPELLS = [
+  {
+    "section": "wahrung",
+    "sourceId": "R33",
+    "slug": "lebenspolster",
+    "name": "Lebenspolster",
+    "level": 1,
+    "actions": "A+R",
+    "role": "Lebenswahrung",
+    "summary": "2W6 temporäre TP",
+    "effect": "Eine vitale Reserve legt sich über den lebenden Körper. Sie bietet einmalig 2W6 temporäre TP. Mit vorhandenen temporären TP gilt ausschließlich der höhere Vorrat.",
+    "limits": "Keine reguläre Heilung oder Rückkehr aus 0 TP. Der Ablauf gehört nur zum tatsächlich übernommenen Vorrat; eine spätere andere Quelle wird nicht mitgelöscht.",
+    "duration": "Zwei folgende Zielbeiträge, Verbrauch oder lange Rast.",
+    "outcomeKind": "temporary-hit-points",
+    "previewFormula": "2d6",
+    "guidedRoll": "2d6",
+    "manualResolution": "2W6 werden als Angebot gewürfelt. Den höheren temporären Vorrat und dessen Quelle gemeinsam übernehmen; nach zwei folgenden Zielbeiträgen nur den verbliebenen Anteil dieser Quelle entfernen.",
+    "forms": [
+      {
+        "level": 3,
+        "actions": "A+R",
+        "summary": "4W6 temporäre TP",
+        "previewFormula": "4d6",
+        "guidedRoll": "4d6",
+        "manualResolution": "4W6 werden als Angebot gewürfelt. Den höheren temporären Vorrat und dessen Quelle gemeinsam übernehmen; nach zwei folgenden Zielbeiträgen nur den verbliebenen Anteil dieser Quelle entfernen.",
+        "effect": "Der Körper erhält ein Angebot von 4W6 temporären TP. Nur der höhere Vorrat gilt; dieselbe Laufzeit, Quelle und Ersetzungsregel wie in der Grundform."
+      }
+    ],
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Aid_Unfaded_Icon.webp"
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R34",
+    "slug": "standhafter-kreislauf",
+    "name": "Standhafter Kreislauf",
+    "level": 2,
+    "actions": "R",
+    "role": "Reaktiver Schutz",
+    "summary": "+2 auf eine körperliche KON-Rettung",
+    "effect": "Ein gefestigter Herzschlag unterstützt genau eine zugeordnete Konstitutionsrettung gegen Gift, gewöhnliche Krankheit oder körperliche Lähmung um +2.",
+    "limits": "Kein Konzentrationsbonus oder neuer Rettungswurf. Gleiche Hilfen addieren sich nicht; die ursprünglichen Erfolgsfolgen bleiben bestehen.",
+    "range": "9 m; ein sichtbares Ziel",
+    "trigger": "Vor dem Wurf oder seiner endgültigen Bestätigung als Unterstützerreaktion zuordnen.",
+    "forms": [
+      {
+        "level": 4,
+        "actions": "R+B",
+        "summary": "+4 auf eine körperliche KON-Rettung",
+        "effect": "Genau eine zulässige KON-Rettung erhält +4 statt +2. Keine zweite Rettung, Stapelung oder Hilfe gegen Konzentrationsverlust."
+      }
+    ],
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Resistance_Cantrip_Unfaded_Icon.webp",
+    "manualResolution": "Kosten werden verbucht. Die beschriebene Behandlung und ihre Grenzen mit der Spielleitung am konkreten Ziel auflösen; Zustände werden nicht pauschal entfernt."
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R35",
+    "slug": "reiner-blutstrom",
+    "name": "Reiner Blutstrom",
+    "level": 3,
+    "actions": "A+R",
+    "role": "Lebenswahrung",
+    "summary": "Resistenz gegen Giftschaden",
+    "effect": "Der Blutstrom widersteht toxischer Verletzung. Nur der Giftanteil eingehenden Schadens wird nach den bestehenden Resistenzregeln halbiert und abgerundet.",
+    "limits": "Vergiftung, Lähmung und andere Begleitfolgen bleiben bestehen. Keine Entfernung eines Giftes und keine zusätzliche Halbierung bei bereits vorhandener Giftresistenz.",
+    "duration": "Drei folgende Zielbeiträge; spätestens bis Kampfende.",
+    "concentration": true,
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Protection_from_Poison_Unfaded_Icon.webp",
+    "manualResolution": "Kosten werden verbucht. Die beschriebene Behandlung und ihre Grenzen mit der Spielleitung am konkreten Ziel auflösen; Zustände werden nicht pauschal entfernt."
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R36",
+    "slug": "letzter-halt",
+    "minimumHitPoints": 1,
+    "name": "Letzter Halt",
+    "level": 5,
+    "actions": "A+S",
+    "role": "Lebenswahrung",
+    "summary": "Einmal bei 1 TP verbleiben",
+    "effect": "Ein vorbereiteter Lebensfaden hält ein Ziel mit mindestens 1 TP. Würde ein späteres Schadensereignis es nach aller Abwehr auf 0 TP bringen, bleibt es stattdessen bei 1 TP; die Wacht endet.",
+    "limits": "Weitere Treffer wirken normal. Kein Schutz gegen Körperzerstörung oder Tod ohne TP-Schaden. Mit Lebenswacht eine gemeinsame Nutzung je Ziel und Aleria-Tag, bereits beim Auflegen belegt.",
+    "duration": "Bis Auslösung oder Ende des dritten folgenden Zielbeitrags; spätestens Kampfende.",
+    "trigger": "Erstes passendes Schadensereignis nach dem Auflegen; vor dem Setzen auf 0 TP.",
+    "manualResolution": "Die gemeinsame Tagesmarkierung des Ziels vor dem Auflegen prüfen und verbrauchen. Eine Ladung vorbereiten, beim Auslöser gemeinsam vor 0 TP anwenden. Keine weiteren Kosten oder automatische Heilbuchung.",
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Death_Ward_Unfaded_Icon.webp"
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R37",
+    "slug": "lebenswacht",
+    "minimumHitPoints": 1,
+    "name": "Lebenswacht",
+    "level": 6,
+    "actions": "A+S",
+    "role": "Lebenswahrung",
+    "summary": "Einmal 4W8 Notfallheilung",
+    "effect": "Ein Schimmer wartet in einem lebenden Ziel mit mindestens 1 TP. Bringt es ein späterer Schaden auf 0 TP, erhält es danach einmal 4W8 Heilung, sofern es noch lebt.",
+    "limits": "Schaden, Zustände und Konzentrationsverlust bleiben bestehen. Mit Letzter Halt eine gemeinsame Nutzung je Ziel und Aleria-Tag; Belegung beim Auflegen. Keine Mehrfachwachten.",
+    "duration": "Bis Auslösung oder Ende des dritten folgenden Zielbeitrags; spätestens Kampfende.",
+    "outcomeKind": "healing",
+    "previewFormula": "4d8",
+    "trigger": "Erstes Absinken durch späteren Schaden von mindestens 1 auf 0 TP.",
+    "manualResolution": "Gemeinsame Tagesmarkierung und Einmalladung beim Auflegen nachhalten. Erst beim zulässigen Auslöser 4W8 würfeln und nach dem Schaden heilen; keine Wirkung nach bestätigtem Tod."
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R38",
+    "slug": "licht-der-genesung",
+    "name": "Licht der Genesung",
+    "level": 2,
+    "actions": "A+R",
+    "role": "Lebenswahrung",
+    "summary": "Bis zu drei Heilzauber erhalten +3 TP",
+    "effect": "Die nächsten drei bezahlten Heilzauber ab Grad I auf das gewählte Ziel stellen jeweils 3 zusätzliche TP wieder her. Pro Zauberanwendung gilt der Zuschlag höchstens einmal, auch bei mehreren Pulsen.",
+    "limits": "Maximal +9 TP. Nur bei tatsächlicher positiver Heilung; keine Tränke, temporären TP oder reine Zustandsbehandlung. Keine Stapelung gleicher Lichter und kein Auslösen durch den eigenen Zuschlag.",
+    "duration": "Drei Ladungen oder drei folgende Zielbeiträge; spätestens Kampfende.",
+    "manualResolution": "Drei Ladungen nachhalten. Pro eindeutiger bezahlter Heilzauberanwendung höchstens einmal +3 heilen, weiter am TP-Maximum begrenzt. Mehrere Pulse derselben Anwendung verbrauchen keine weitere Ladung.",
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Beacon_of_Hope_Unfaded_Icon.webp"
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R39",
+    "slug": "narbenwacht",
+    "name": "Narbenwacht",
+    "level": 3,
+    "actions": "R+B",
+    "role": "Reaktiver Schutz",
+    "summary": "2W8 Schutz gegen körperlichen Schaden",
+    "effect": "Gewebe festigt sich im Augenblick eines Treffers. Die bereits regulär abgewehrten Hieb-, Stich- und Wuchtanteile genau dieses Angriffs werden um zusammen 2W8 vermindert, mindestens auf 0.",
+    "limits": "Den gewürfelten Betrag insgesamt nur einmal verteilen, nicht erneut je Schadensart. Keine Abwehr anderer Schadensarten oder weiterer Treffer.",
+    "range": "6 m; ein sichtbares Ziel",
+    "trigger": "Vor Schadensbestätigung einem treffenden Angriff zuordnen.",
+    "guidedRoll": "2d8",
+    "previewFormula": "2d8",
+    "outcomeKind": "protection",
+    "manualResolution": "Nach regulärer Abwehr die gewürfelten 2W8 genau einmal auf die verbleibenden körperlichen Schadensanteile dieses Treffers verteilen. Keine TP-Heilung."
+  },
+  {
+    "section": "wahrung",
+    "sourceId": "R40",
+    "slug": "bewahrender-schlaf",
+    "name": "Bewahrender Schlaf",
+    "level": 3,
+    "actions": "A+R",
+    "role": "Ritual",
+    "summary": "Lebensruhe bei 0 TP",
+    "effect": "Eine Minute Vorbereitung legt einen noch lebenden Körper bei 0 TP in weckbare, kampfunfähige Lebensruhe. Nur die Verschlechterung bereits vorhandener nichtmagischer Blutungen und gewöhnlicher Krankheiten pausiert.",
+    "limits": "0 TP bleiben 0. Kein Schutz vor neuem Schaden, Gift, Ersticken oder Tod. Keine automatische Rast; pausierte Ursachen laufen danach weiter.",
+    "ritual": "Eine ununterbrochene Minute.",
+    "duration": "Vier erzählerische Stunden.",
+    "manualResolution": "Nur bei fortbestehendem Leben den Ritualabschluss buchen. Lebensruhe und genau die pausierten Zustandsuhren gemeinsam nachhalten; keine TP oder Rastressourcen auffüllen.",
+    "iconPath": "IconOrdner/Zauber Icons/Baldurs Gate/Spell Icons/Sanctuary_Unfaded_Icon.webp"
+  }
+].map(defineRestitutionSpell);

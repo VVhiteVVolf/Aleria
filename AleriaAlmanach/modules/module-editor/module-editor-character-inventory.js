@@ -124,7 +124,8 @@ function parseCharacterInventoryInt(value, fallback = 0) {
 }
 
 function splitCharacterInventoryCopper(totalCopper = 0) {
-  let rest = parseCharacterInventoryInt(totalCopper);
+  if (window.AleriaItemRegister?.moneyState) return window.AleriaItemRegister.moneyState(Number(totalCopper) || 0);
+  let rest = Math.round(Math.max(0, Number(totalCopper) || 0) * 100) / 100;
   const gold = Math.floor(rest / 1000);
   rest %= 1000;
   const silver = Math.floor(rest / 100);
@@ -139,12 +140,14 @@ function splitCharacterInventoryCopper(totalCopper = 0) {
 
 function getCharacterInventoryMoneyTotal(money = {}) {
   if (!money || typeof money !== 'object') return 0;
+  if (window.AleriaItemRegister?.moneyTotal) return window.AleriaItemRegister.moneyTotal(money);
   return CHARACTER_INVENTORY_CURRENCIES.reduce((sum, currency) => (
     sum + parseCharacterInventoryInt(money[currency.id]) * currency.value
   ), 0);
 }
 
 function parseCharacterInventoryMoneyText(text = '') {
+  if (window.AleriaItemRegister?.moneyTotal) return window.AleriaItemRegister.moneyState(window.AleriaItemRegister.moneyTotal(text));
   const source = String(text || '').toLowerCase();
   const readUnit = units => {
     const pattern = new RegExp(`(\\d[\\d\\.,]*)\\s*(?:${units.join('|')})`, 'i');
@@ -161,7 +164,7 @@ function parseCharacterInventoryMoneyText(text = '') {
 function sanitizeCharacterInventoryMoney(value = {}) {
   if (typeof value === 'string') return parseCharacterInventoryMoneyText(value);
   if (!value || typeof value !== 'object') return splitCharacterInventoryCopper(0);
-  const total = value.totalCopper != null ? parseCharacterInventoryInt(value.totalCopper) : getCharacterInventoryMoneyTotal(value);
+  const total = value.totalCopper != null ? Number(value.totalCopper) : getCharacterInventoryMoneyTotal(value);
   return splitCharacterInventoryCopper(total);
 }
 
@@ -238,6 +241,14 @@ function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('item', index),
+      instanceId: String(item?.instanceId || item?.id || '').trim(),
+      templateId: String(item?.templateId || item?.originItemDbKey || item?.itemDbKey || '').trim(),
+      templateName: String(item?.templateName || '').trim(),
+      offerId: String(item?.offerId || '').trim(),
+      registerCategory: String(item?.registerCategory || '').trim(),
+      creatureId: String(item?.creatureId || '').trim(),
+      valuation: item?.valuation && typeof item.valuation === 'object' ? { ...item.valuation } : null,
+      purchase: item?.purchase && typeof item.purchase === 'object' ? { ...item.purchase } : null,
       itemDbKey: String(item?.itemDbKey || '').trim(),
       originItemDbKey: String(item?.originItemDbKey || '').trim(),
       itemStorageMode: String(item?.itemStorageMode || (item?.itemDbKey ? 'linked' : 'character')).trim(),
@@ -515,6 +526,7 @@ function buildCharacterInventoryCategoryOptions(categories = [], current = '') {
 
 function getCharacterInventoryItemDbItemByKey(canonicalKey) {
   const key = String(canonicalKey || '').trim();
+  if (key && window.AleriaItemRegister?.getByKey) return window.AleriaItemRegister.getByKey(key);
   if (!key || typeof itemDbBuildIndex !== 'function') return null;
   return itemDbBuildIndex().find(item => item.canonicalKey === key) || null;
 }
@@ -556,6 +568,7 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
   return `
     <section class="ci-editor-card" data-ci-item-row>
       <input type="hidden" class="me-ci-item-id" value="${escapeHtml(item.id)}">
+      <input type="hidden" class="me-ci-item-register-data" value="${escapeHtml(JSON.stringify({ instanceId: item.instanceId, templateId: item.templateId, templateName: item.templateName, offerId: item.offerId, registerCategory: item.registerCategory, creatureId: item.creatureId, valuation: item.valuation, purchase: item.purchase, value: item.value, equipped: item.equipped }))}">
       <input type="hidden" class="me-ci-item-db-key" value="${escapeHtml(item.itemDbKey || '')}">
       <input type="hidden" class="me-ci-item-origin-db-key" value="${escapeHtml(item.originItemDbKey || '')}">
       <input type="hidden" class="me-ci-item-storage-mode" value="${escapeHtml(item.itemStorageMode || 'character')}">
@@ -777,6 +790,7 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
       const draftItem = { itemDbKey };
       const individualized = itemDbKey && isCharacterInventoryEditorItemModified(row, draftItem);
       return {
+        ...collectCharacterInventoryJsonField(row, '.me-ci-item-register-data', {}),
         id: getTrimmedFormValue(row, '.me-ci-item-id'),
         itemDbKey: individualized ? '' : itemDbKey,
         originItemDbKey: individualized ? itemDbKey : originItemDbKey,
@@ -1078,7 +1092,12 @@ function duplicateCharacterInventoryItem(button) {
     const item = data.items[index];
     if (!item) return;
     const clone = JSON.parse(JSON.stringify(item));
-    clone.id = '';
+    clone.id = makeCharacterInventoryId('item', index + 1);
+    clone.instanceId = clone.id;
+    clone.creatureId = '';
+    clone.purchase = null;
+    clone.equipmentLink = null;
+    clone.equipped = false;
     clone.name = `${clone.name || 'Gegenstand'} Kopie`;
     data.items.splice(index + 1, 0, clone);
   });

@@ -15,7 +15,7 @@ function getCharacterInventoryImageClass(className, options = {}) {
 function buildCharacterInventoryImage(src, alt, className, fallback = '*', options = {}) {
   const image = sanitizeImageSrc(src || '');
   const imageClass = getCharacterInventoryImageClass(className, options);
-  if (image) return `<img class="${imageClass}" src="${image}" alt="${escapeHtml(alt || '')}" loading="lazy" decoding="async">`;
+  if (image) return `<img class="${imageClass}" src="${image}" alt="${escapeHtml(alt || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
   return `<div class="${imageClass} ci-placeholder">${escapeHtml(fallback || '*')}</div>`;
 }
 
@@ -69,8 +69,15 @@ function buildCharacterInventoryItemFromDbItem(dbItem = {}, data = {}) {
   const owner = getCharacterInventoryOwner(data);
   return sanitizeCharacterInventoryItems([{
     id: makeCharacterInventoryId('item-db', 0),
-    itemDbKey: dbItem.canonicalKey,
-    itemStorageMode: 'linked',
+    instanceId: '',
+    templateId: dbItem.templateId || dbItem.id || dbItem.canonicalKey,
+    templateName: dbItem.title || '',
+    registerCategory: dbItem.category || '',
+    itemDbKey: '',
+    originItemDbKey: dbItem.templateId || dbItem.id || dbItem.canonicalKey,
+    itemStorageMode: 'character',
+    combatDefinition: dbItem.combatDefinition || null,
+    valuation: dbItem.priceRange || null,
     ownerCharacterId: owner.ownerCharacterId,
     ownerCharacterName: owner.ownerCharacterName,
     acquiredAt: new Date().toISOString(),
@@ -95,7 +102,7 @@ function getCharacterInventoryItemDbMatch(item = {}) {
   if (typeof itemDbBuildIndex !== 'function') return null;
   const key = String(item.itemDbKey || '').trim();
   if (!key) return null;
-  return itemDbBuildIndex().find(candidate => candidate.canonicalKey === key) || null;
+  return window.AleriaItemRegister?.getByKey(key) || itemDbBuildIndex().find(candidate => candidate.canonicalKey === key) || null;
 }
 
 function mergeCharacterInventoryItemWithDb(item = {}) {
@@ -704,14 +711,15 @@ function getCharacterInventoryItemDbUpdates(item = {}) {
 }
 
 function saveCharacterInventoryItemToItemDb(item = {}) {
-  if (typeof itemDbCreateCustomItem !== 'function') return item;
-  const updates = getCharacterInventoryItemDbUpdates(item);
-  const key = itemDbCreateCustomItem(updates);
+  // The character inventory is the authoritative individual list. Publishing a
+  // second template here used to duplicate and detach customized possessions.
   return sanitizeCharacterInventoryItems([{
     ...item,
-    itemDbKey: key,
+    instanceId: item.instanceId || item.id,
+    templateId: item.templateId || item.originItemDbKey || item.itemDbKey || '',
+    itemDbKey: '',
     originItemDbKey: item.originItemDbKey || item.itemDbKey || '',
-    itemStorageMode: 'linked',
+    itemStorageMode: 'character',
     individualizedAt: item.individualizedAt || new Date().toISOString()
   }])[0] || item;
 }

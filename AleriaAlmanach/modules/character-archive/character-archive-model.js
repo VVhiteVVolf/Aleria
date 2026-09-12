@@ -1,4 +1,5 @@
 import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
+import { normalizeCombatSpell } from '../combat/combat-profile-model.js';
 
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
@@ -21,7 +22,11 @@ export const CHARACTER_ARCHIVE_KINDS = Object.freeze([
   { id: 'register-alchemie', label: 'Alchemie & Tränke', singular: 'Alchemie', group: 'Register', registerCategory: 'alchemie', symbol: '⚗' },
   { id: 'register-speisen', label: 'Speisen', singular: 'Speise', group: 'Register', registerCategory: 'speisen', symbol: '❧' },
   { id: 'register-arkanes', label: 'Arkanes', singular: 'Arkanum', group: 'Register', registerCategory: 'arkanes', symbol: '☄' },
-  { id: 'register-waffen', label: 'Waffen (Register)', singular: 'Ware', group: 'Register', registerCategory: 'waffen', symbol: '⚒' }
+  { id: 'register-waffen', label: 'Waffen (Register)', singular: 'Ware', group: 'Register', registerCategory: 'waffen', symbol: '⚒' },
+  { id: 'register-ruestungen', label: 'Rüstungen (Register)', singular: 'Rüstung', group: 'Register', registerCategory: 'ruestungen', symbol: '◇' },
+  { id: 'register-getraenke', label: 'Getränke', singular: 'Getränk', group: 'Register', registerCategory: 'getraenke', symbol: '♜' },
+  { id: 'register-werkzeuge', label: 'Werkzeuge', singular: 'Werkzeug', group: 'Register', registerCategory: 'werkzeuge', symbol: '⚒' },
+  { id: 'register-sonstiges', label: 'Sonstige Güter', singular: 'Ware', group: 'Register', registerCategory: 'sonstiges', symbol: '◈' }
 ]);
 
 const KIND_BY_ID = new Map(CHARACTER_ARCHIVE_KINDS.map(kind => [kind.id, kind]));
@@ -103,7 +108,10 @@ function getDescription(data = {}, fallback = '') {
 export function normalizeCharacterArchiveEntry(value = {}) {
   const kind = KIND_BY_ID.has(String(value.kind || '')) ? String(value.kind) : 'ability';
   const data = value.data && typeof value.data === 'object' ? cloneArchiveValue(value.data, {}) : {};
-  const name = String(value.name || data.name || data.label || '').trim();
+  if (kind === 'spell' && Object.keys(data).length) {
+    Object.assign(data, normalizeCombatSpell(data));
+  }
+  const name = String((kind === 'spell' && data.catalogReference ? data.name : '') || value.name || data.name || data.label || '').trim();
   const id = String(value.id || '').trim() || makeCharacterArchiveId(kind, name);
   const iconAssignmentVersion = Number(value.iconAssignmentVersion) === CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION ? CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION : 0;
   const resetSpellIcon = kind === 'spell' && !iconAssignmentVersion;
@@ -114,14 +122,16 @@ export function normalizeCharacterArchiveEntry(value = {}) {
   return {
     schemaVersion: CHARACTER_ARCHIVE_SCHEMA_VERSION,
     id,
-    key: kind === 'spell' && normalizeSpellCatalogReference(data.catalogReference)
+    key: data.section && ['standard', 'offer', 'owned'].includes(data.section) && data.id
+      ? `item-register::${data.id}`
+      : kind === 'spell' && normalizeSpellCatalogReference(data.catalogReference)
       ? `spell::catalog::${data.catalogReference.id}@${data.catalogReference.revision}`
       : kind === 'spell' && normalizeSpellCatalogReference(data.catalogOrigin)
         ? `spell::custom::${data.catalogOrigin.id}@${data.catalogOrigin.revision}::${normalizeArchiveSearchText(name)}`
       : makeCharacterArchiveKey(kind, name),
     kind,
     name,
-    description: getDescription(data, value.description),
+    description: getDescription(data, kind === 'spell' ? data.description || value.description : value.description),
     icon: resetSpellIcon ? '' : iconOverride || String(value.icon || dataIcon).trim(),
     iconOverride,
     iconAssignmentVersion,
@@ -252,7 +262,7 @@ function entryFromRegisterItem(item = {}) {
     icon: item.image || '',
     tags: [item.categoryLabel, item.type, ...(item.tags || [])],
     data: item,
-    sources: [{ kind: 'item-register', id: item.canonicalKey, name: 'Inventar-Register' }],
+    sources: [{ kind: 'item-register', id: item.canonicalKey, name: item.ownerCharacterName || item.listName || 'Standardgüter' }],
     builtin: true
   });
 }

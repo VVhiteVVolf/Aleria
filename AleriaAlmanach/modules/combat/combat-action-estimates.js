@@ -46,8 +46,8 @@ function getPrimaryDamagePreview(actor = {}, selectedEffect = null, secondary = 
   if (effects.length && !primary) return null;
   const damageType = primary?.damageType || actor.weapon?.damageType || '';
   if (primary?.amount > 0 && !primary.formula) {
-    const modifier = getUniversalDamageBonus(actor);
-    const average = Number(primary.amount) + modifier;
+    const modifier = getUniversalDamageBonus(actor) + getCombatEffectAttributeModifier(actor, primary);
+    const average = Math.max(0, Number(primary.amount) + modifier);
     return { notation: String(average), modifier, damageType, average };
   }
   const formula = primary?.formula || actor.weapon?.damageFormula;

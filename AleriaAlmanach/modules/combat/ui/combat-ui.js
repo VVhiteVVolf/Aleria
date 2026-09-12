@@ -1,4 +1,5 @@
 import { getSpellLevelLabel, getSpellSlotLevel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
+import { getSpellCatalogEntry } from '../../spell-catalog/spell-catalog.js';
 import {
   aggregateCosts, buildPaymentResourceCards, classifyPaymentResourceCards,
   isMagicSegmentKind, isSpellSlotResource, renderPaymentPanel
@@ -74,10 +75,12 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
     ? 'Wechsel beim Eintragen'
     : 'Auswertung beim Eintragen';
   const spellAction = actor.selectedAction?.spellLevel != null ? actor.selectedAction : null;
-  const selectedCastLevel = spellAction?.isCantrip ? 0 : Math.max(Number(spellAction?.spellLevel) || 1, Number(segment?.combatCastLevel) || Number(spellAction?.castLevel) || 1);
+  const catalogEntry = spellAction?.catalogReference ? getSpellCatalogEntry(spellAction.catalogReference.id, spellAction.catalogReference.revision) : null;
+  const selectedCastLevel = Number(segment?.combatCastLevel ?? spellAction?.castLevel ?? spellAction?.spellLevel ?? 0);
   const maximumCastLevel = spellAction && !spellAction.isCantrip ? Math.max(Number(spellAction.spellLevel) || 0, Math.min(10, Number(spellAction.upcast?.maximumLevel) || 10)) : 0;
-  const castLevelOptions = spellAction ? Array.from({ length: maximumCastLevel - Number(spellAction.spellLevel) + 1 }, (_entry, index) => {
-    const level = Number(spellAction.spellLevel) + index;
+  const castLevels = catalogEntry ? [catalogEntry.level, ...catalogEntry.forms.map(form => form.level)]
+    : Array.from({ length: maximumCastLevel - Number(spellAction?.spellLevel || 0) + 1 }, (_entry, index) => Number(spellAction?.spellLevel || 0) + index);
+  const castLevelOptions = spellAction ? castLevels.map(level => {
     const slot = actor.resources?.find(resource => getSpellSlotLevel(resource) === level);
     const disabled = level > 0 && (!slot || Number(slot.maximum) < 1);
     return `<option value="${level}"${level === selectedCastLevel ? ' selected' : ''}${disabled ? ' disabled' : ''}>${escapeHtml(getSpellLevelLabel(level))}${level > Number(spellAction.spellLevel) ? ' · höherstufig' : ''}${disabled ? ' · nicht freigeschaltet' : ''}</option>`;
@@ -344,7 +347,7 @@ export function renderCombatEvaluation(source = {}) {
   const narrationSource = getNarrationSourceMeta(narrationMeta);
   const narration = String(narrationMeta.text || '').trim() || getEvaluationFallback(resolution);
   const damageNotations = (resolution.effectResults || []).filter(result => result.effect?.type === 'damage' && result.recipient !== 'actor')
-    .map(result => result.roll?.notation || '').filter(Boolean);
+    .map(result => result.roll?.notation || (Number.isFinite(result.amount) ? String(result.amount) : '')).filter(Boolean);
   const damage = resolution.damage
     ? `<span><b>${escapeHtml(resolution.damage.total)}</b> Schaden · ${escapeHtml(damageNotations.length > 1 ? damageNotations.join(' + ') : resolution.damage.notation || '')}</span>`
     : '';

@@ -16,6 +16,7 @@ import { commitLootClaim } from './mechanics/commit-loot-claim.js';
 import { finalizeCombatNarration } from './mechanics/finalize-combat-narration.js';
 import { importBackupRecords } from './backup/import-backup-records.js';
 import { commitInventoryTransfer } from './mechanics/commit-inventory-transfer.js';
+export { commitItemRegister } from './mechanics/commit-item-register.js';
 import { commitNarrativeComment } from './comments/commit-narrative-comment.js';
 
 initializeApp();

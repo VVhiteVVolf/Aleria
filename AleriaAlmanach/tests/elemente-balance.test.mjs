@@ -83,7 +83,7 @@ test('learned edition 1 and current edition 2 coexist without migrating saved ru
   const merged=mergeCharacterArchiveEntries([{kind:'spell',name:old.name,data:old}],archive);
   assert.ok(merged.some(e=>e.data.catalogReference?.id===old.catalogReference.id&&e.data.catalogReference.revision===1));
   assert.ok(merged.some(e=>e.data.catalogReference?.id===old.catalogReference.id&&e.data.catalogReference.revision===2));
-  assert.equal(archive.filter(e=>e.data.catalogReference.revision===1).length,0);
+  assert.equal(archive.filter(e=>e.data.school==='Elemente'&&e.data.catalogReference.revision===1).length,0);
   assert.equal(getSpellCatalogEntry(old.id,999),null);
 });
 

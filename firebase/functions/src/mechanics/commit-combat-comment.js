@@ -531,7 +531,8 @@ export const commitCombatComment = onCall({
       if (targetPersistence.persistent) {
         const existing = persistentUpdates.get(targetRecordKey) || { entry: uniqueRecords.get(targetRecordKey), record: targetRecord };
         existing.hitPoints = targetNext;
-        if (targetResources) existing.resources = getPersistentCombatResources(targetBase.resources, targetResources);
+        if (targetResources) existing.resources = getPersistentCombatResources(targetBase.resources,
+          workingStates.get(String(submitted.targetId))?.resources || targetResources);
         persistentUpdates.set(targetRecordKey, existing);
       }
       if (actorPersistence.persistent) {

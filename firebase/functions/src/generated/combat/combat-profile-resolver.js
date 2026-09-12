@@ -229,7 +229,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       kind: presentationKind,
       kindLabel: presentationKind === 'prayer' ? 'Gebet' : (presentationKind === 'song' ? 'Gesang' : 'Zauber'),
       name: spell.name,
-      ...(spell.catalogReference ? { catalogReference: { ...spell.catalogReference }, maximumTargets: spell.maximumTargets } : {}),
+      ...(spell.catalogReference ? { catalogReference: { ...spell.catalogReference } } : {}),
+      ...(spell.maximumTargets != null ? { maximumTargets: spell.maximumTargets } : {}),
       formula: spell.rollFormula,
       weapon: {
         id: spell.id,
@@ -321,12 +322,12 @@ function combineFormulas(base = '', addition = '', count = 0) {
 
 function applySpellCastLevel(action, profile, requestedLevel) {
   if (!action || action.spellLevel == null || (action.kind !== 'spell' && action.kind !== 'prayer' && action.kind !== 'song')) return action;
-  if (action.isCantrip) {
+  if (action.isCantrip && !(action.catalogReference && action.upcast?.enabled && Number(requestedLevel) > 0)) {
     const missingEdition = action.catalogReference && !createCatalogSpell(action.catalogReference.id, { revision: action.catalogReference.revision });
     return { ...action, castLevel: 0, castLevelLabel: getSpellLevelLabel(0),
       ...(missingEdition ? { compatible: false, disabledReason: 'Diese Katalogfassung ist noch nicht verfügbar.' } : {}) };
   }
-  const baseLevel = Math.max(1, Number(action.spellLevel) || 1);
+  const baseLevel = Math.max(0, Number(action.spellLevel) || 0);
   const maximumLevel = Math.max(baseLevel, Math.min(10, Number(action.upcast?.maximumLevel) || 10));
   const castLevel = Math.max(baseLevel, Math.min(maximumLevel, Number(requestedLevel) || baseLevel));
   const slotResource = profile.resources.find(resource => castLevel === baseLevel
@@ -370,6 +371,7 @@ function applySpellCastLevel(action, profile, requestedLevel) {
     effects,
     costs: normalizeCombatResourceCosts(costs),
     castLevel,
+    isCantrip: castLevel === 0,
     castLevelLabel: getSpellLevelLabel(castLevel),
     compatible: action.compatible !== false && gradeUnlocked && !catalogFormMissing,
     disabledReason: catalogFormMissing ? 'Für diesen Wirkungsgrad ist keine Katalogfassung hinterlegt.'

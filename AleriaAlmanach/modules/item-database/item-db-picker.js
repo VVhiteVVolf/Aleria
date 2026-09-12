@@ -55,21 +55,21 @@ function renderItemDbPickerPanel() {
     panel.innerHTML = '';
     return;
   }
-  const items = itemDbBuildIndex();
+  const items = itemDbBuildIndex().filter(item => item.section !== 'owned');
   const visibleItems = itemDbFilterPickerItems(items);
   panel.hidden = false;
   panel.innerHTML = `
     <div class="item-db-picker-shell">
       <header class="item-db-picker-head">
         <div>
-          <div class="item-db-kicker">Items und Gueter</div>
+          <div class="item-db-kicker">Items und Güter</div>
           <h3>${itemDbEscapeHtml(_itemDbPickerSession.title || 'Item laden')}</h3>
         </div>
-        <button type="button" data-item-db-picker-action="close" aria-label="Schliessen">x</button>
+        <button type="button" data-item-db-picker-action="close" aria-label="Schließen">×</button>
       </header>
       <div class="item-db-picker-toolbar">
         <input type="search" value="${itemDbEscapeHtml(_itemDbPickerSession.search || '')}" placeholder="Item suchen..." data-item-db-picker-action="search">
-        <button type="button" data-item-db-picker-action="refresh">Neu scannen</button>
+        <button type="button" data-item-db-picker-action="refresh">Aktualisieren</button>
       </div>
       <div class="item-db-picker-list">${itemDbRenderPickerItems(visibleItems)}</div>
     </div>`;
@@ -87,13 +87,9 @@ async function openItemDbPicker(options = {}) {
       console.error('Item picker global sync failed:', error);
     });
   }
-  if (typeof itemDbLoadMarketSources === 'function') {
-    await itemDbLoadMarketSources();
-    if (typeof itemDbAppendScanCandidates === 'function' && typeof itemDbCollectSourceCandidates === 'function') {
-      itemDbAppendScanCandidates(itemDbCollectSourceCandidates());
-    }
-    renderItemDbPickerPanel();
-  }
+  await itemDbEnsureGlobalSync();
+  if (!_itemDbPickerSession) return;
+  renderItemDbPickerPanel();
   document.querySelector('#item-db-picker-panel [data-item-db-picker-action="search"]')?.focus();
 }
 
@@ -115,10 +111,7 @@ async function handleItemDbPickerClick(event) {
   }
   if (action === 'refresh') {
     event.preventDefault();
-    if (typeof itemDbLoadMarketSources === 'function') await itemDbLoadMarketSources();
-    if (typeof itemDbAppendScanCandidates === 'function' && typeof itemDbCollectSourceCandidates === 'function') {
-      itemDbAppendScanCandidates(itemDbCollectSourceCandidates());
-    }
+    await itemDbEnsureGlobalSync();
     renderItemDbPickerPanel();
     return;
   }

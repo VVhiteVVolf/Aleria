@@ -1,22 +1,22 @@
 import { ELEMENTARISMUS_V1 } from './elementarismus-v1.js';
 import { ELEMENTE_V2 } from './elemente-v2/index.js';
+import { RESTITUTION_V1 } from './restitution-v1/index.js';
+import { getSpellCatalogSchool } from './spell-catalog-schools.js';
 import { getDefaultActivationCosts } from '../combat/combat-action-economy.js';
 import { getSpellManaCost } from '../combat/combat-resource-progression.js';
 
-export const SPELL_CATALOG_SECTIONS = Object.freeze([
-  { id: 'F', name: 'Feuer', subtitle: 'Glut, Wärme und verzehrende Flammen' },
-  { id: 'W', name: 'Wasser', subtitle: 'Strömung, Quellen und gebundenes Eis' },
-  { id: 'L', name: 'Wind', subtitle: 'Atem, Auftrieb und bewegte Luft' },
-  { id: 'DN', name: 'Donner', subtitle: 'Schall, Druck und Widerhall' },
-  { id: 'BL', name: 'Blitz', subtitle: 'Ladung, Entladung und Erdung' },
-  { id: 'E', name: 'Erde', subtitle: 'Boden, Stein und tragende Formen' },
-  { id: 'Z', name: 'Sonstiges & Zusammenspiel', subtitle: 'Wo mehrere Elemente einander begegnen' }
-]);
+// Kept for older Elemente consumers. New consumers select a school explicitly.
+export const SPELL_CATALOG_SECTIONS = Object.freeze(getSpellCatalogSchool('elemente').sections);
 
 // Revisions are immutable editions, not timestamps. Add a new edition instead
 // of silently changing the rules of an already learned character spell.
-const editions = new Map([...ELEMENTARISMUS_V1, ...ELEMENTE_V2].map(spell => [`${spell.id}@${spell.revision}`, spell]));
-const currentEntries = new Map(ELEMENTE_V2.map(spell => [spell.id, spell]));
+const catalogs = new Map([
+  ['elemente', { current: 2, editions: new Map([[1, ELEMENTARISMUS_V1], [2, ELEMENTE_V2]]) }],
+  ['restitution', { current: 1, editions: new Map([[1, RESTITUTION_V1]]) }]
+]);
+const editions = new Map([...catalogs.values()].flatMap(catalog => [...catalog.editions.values()].flat())
+  .map(spell => [`${spell.id}@${spell.revision}`, spell]));
+const currentEntries = new Map([...catalogs.values()].flatMap(catalog => catalog.editions.get(catalog.current)).map(spell => [spell.id, spell]));
 const clone = value => JSON.parse(JSON.stringify(value));
 
 export function normalizeSpellCatalogReference(value) {
@@ -32,8 +32,9 @@ export function getSpellCatalogEntry(id, revision) {
   return entry ? clone(entry) : null;
 }
 
-export function listSpellCatalogEntries({ revision } = {}) {
-  return (revision === 1 ? ELEMENTARISMUS_V1 : revision === undefined || revision === 2 ? ELEMENTE_V2 : []).map(clone);
+export function listSpellCatalogEntries({ catalog = 'elemente', revision } = {}) {
+  const selected = catalogs.get(catalog);
+  return (selected?.editions.get(revision ?? selected.current) || []).map(clone);
 }
 
 export function getSpellCatalogForm(entry, level = entry.level) {
@@ -47,7 +48,7 @@ export function getSpellCatalogPageHref(reference, rootPrefix = '../') {
 }
 
 function spellDescription(entry, form) {
-  let effect = entry.effect;
+  let effect = form.effect || entry.effect;
   entry.damage.forEach((part, index) => {
     const replacement = form.damage[index];
     if (replacement) effect = effect.replace(part.formula.toUpperCase().replaceAll('D', 'W'), replacement.formula.toUpperCase().replaceAll('D', 'W'));
@@ -69,13 +70,17 @@ export function createCatalogSpell(id, { revision, level, manaResourceId = 'mana
     id: `${entry.id}-damage-${index + 1}`, type: 'damage', target: form.maximumTargets > 1 ? 'selected' : 'target',
     ...part, magical: true, on: 'hit'
   }));
-  const procedure = [entry.manualResolution, !damageEffects.length ? spellDescription(entry, form) : '', form.changes].filter(Boolean).join('\n');
-  const effects = [...damageEffects];
+  const authoredEffects = (form.effects || []).map((effect, index) => ({
+    ...clone(effect), id: `${entry.id}-${effect.type}-${index + 1}`
+  }));
+  const manualResolution = form.manualResolution ?? entry.manualResolution;
+  const procedure = [manualResolution, !damageEffects.length ? spellDescription(entry, form) : '', form.changes].filter(Boolean).join('\n');
+  const effects = [...damageEffects, ...authoredEffects];
   // A narrated effect is a real, non-damaging combat action. Protection and
   // structure rolls are reported without applying them to a creature's HP.
   if (procedure || !effects.length) effects.push({
     id: `${entry.id}-procedure`, type: 'narrative', target: form.maximumTargets > 1 ? 'selected' : 'target', on: 'always',
-    formula: form.protectionRoll || '', notes: procedure || entry.effect
+    formula: form.guidedRoll || form.protectionRoll || '', notes: procedure || entry.effect
   });
   return {
     id: entry.id, catalogReference: { id: entry.id, revision: entry.revision },
@@ -93,12 +98,12 @@ export function createCatalogSpell(id, { revision, level, manaResourceId = 'mana
     rollFormula: form.damage[0]?.formula || '', damageType: form.damage[0]?.damageType || '',
     description: spellDescription(entry, form), effects,
     range: form.range || entry.range, duration: form.duration || entry.duration, requirements: entry.requirements,
-    tags: `${entry.school}; ${SPELL_CATALOG_SECTIONS.find(section => section.id === entry.section)?.name}; ${entry.role}`,
+    tags: `${entry.school}; ${getSpellCatalogSchool(entry.catalog || 'elemente')?.sections.find(section => section.id === entry.section)?.name || ''}; ${entry.role}`,
     concentration: entry.concentration, channelComments: entry.channelComments,
     upcast: { enabled: entry.forms.length > 0, formulaPerLevel: '', amountPerLevel: 0,
       maximumLevel: entry.forms.at(-1)?.level || Math.max(1, entry.level) },
     prepared: true, auraBypass: { allowed: true, resourceId: '', cost: 1 },
-    aiInstructions: entry.manualResolution
+    aiInstructions: manualResolution
   };
 }
 

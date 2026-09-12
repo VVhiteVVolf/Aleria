@@ -13,7 +13,7 @@ import {
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260909-dragon-parent-v2';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
-import { getEffectiveCombatAttribute, getAttributeModifier } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { getEffectiveCombatAttribute, getAttributeModifier, getUniversalDamageBonus } from './combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { getBurningArmorPenalty } from './combat-creature-traits.js';
 
 function finiteOrNull(value) {
@@ -416,6 +416,13 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     });
     return result;
   }, {});
+  // A generic attack modifier applies to every attack. Damage bonuses are
+  // weapon-only unless their source explicitly includes all effects.
+  const magicalAction = ['spell', 'song', 'prayer'].includes(profile.profileActionKind);
+  const temporaryDamageBonus = magicalAction
+    ? getUniversalDamageBonus({ conditions: temporaryConditions })
+    : Number(temporaryMechanics.damage || 0);
+  const temporarySpellAttackBonus = Number(temporaryMechanics.attack || 0) + Number(temporaryMechanics.spellAttack || 0);
   const strengthBefore = getAttributeModifier(getEffectiveCombatAttribute(profile, 'strength'));
   temporaryMechanics.armorClass = Number(temporaryMechanics.armorClass || 0)
     - getBurningArmorPenalty({ ...profile, temporaryConditions }) + getBurningArmorPenalty(profile);
@@ -439,7 +446,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       armorClass: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
       initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
       movementMeters: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
-      spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
+      spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
       spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
       passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0)
     },
@@ -486,9 +493,9 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
     movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
     initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
-    damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0) + weaponStrengthDelta,
+    damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus + weaponStrengthDelta,
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
-    spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
+    spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
     spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
     passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0),
     aiSnapshot,

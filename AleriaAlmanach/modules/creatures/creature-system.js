@@ -12,7 +12,7 @@ import {
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260909-dragon-parent-v2';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260912-archive-dialogs-v1';
 import { renderCreatureDossier } from './creature-dossier.js?v=20260909-dragon-parent-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
@@ -249,7 +249,7 @@ function renderCreatureCard(creature) {
     <article class="creature-card" data-creature-id="${escapeHtml(creature.id)}">
       <button class="creature-card-open" type="button" data-creature-action="open" data-creature-id="${escapeHtml(creature.id)}">
         <span class="creature-card-portrait">
-          ${portrait ? `<img src="${escapeHtml(portrait)}" alt="" loading="lazy" decoding="async">` : '<span class="creature-card-sigil">☠</span>'}
+          ${portrait ? `<img src="${escapeHtml(portrait)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : '<span class="creature-card-sigil">☠</span>'}
           <span class="creature-card-badge">${escapeHtml(instanceLabel)}</span>
         </span>
         <span class="creature-card-body">
@@ -339,7 +339,7 @@ function renderSheet() {
       <section class="creature-sheet-section creature-portrait-section">
         <div class="creature-section-title"><span>2</span> Erscheinung</div>
         <div class="creature-portrait-frame">
-          ${portrait ? `<img src="${escapeHtml(portrait)}" alt="${escapeHtml(creature.name)}">` : '<div class="creature-portrait-placeholder">☠<small>Portrait-URL eintragen</small></div>'}
+          ${portrait ? `<img src="${escapeHtml(portrait)}" alt="${escapeHtml(creature.name)}" referrerpolicy="no-referrer">` : '<div class="creature-portrait-placeholder">☠<small>Portrait-URL eintragen</small></div>'}
         </div>
         ${renderField('Portrait-URL', 'portrait', creature.portrait, { type: 'url' })}
         ${renderField('Bildunterschrift', 'portraitCaption', creature.portraitCaption)}
@@ -1095,6 +1095,15 @@ document.addEventListener('input', handleInput);
 document.addEventListener('change', handleInput);
 document.addEventListener('keydown', handleKeydown);
 document.addEventListener('aleria:combat-profile-committed', handleCommittedCreatureCombatProfile);
+document.addEventListener('aleria:item-register-records', event => {
+  if (!event.detail?.creaturesReady) return;
+  const next = mergeCreatureCatalog(event.detail.creatures || []);
+  if (JSON.stringify(next) === JSON.stringify(state.creatures)) return;
+  state.creatures = next;
+  state.loaded = true;
+  renderLibrary();
+  dispatchChanged();
+});
 window.addEventListener('fb-ready', () => loadCreatures({ force: true }));
 
 window.AleriaCreatures = Object.freeze({

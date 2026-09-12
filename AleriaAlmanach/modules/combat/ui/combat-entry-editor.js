@@ -1,16 +1,17 @@
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS, normalizeCombatSpell } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { getSpellManaCost } from '../combat-resource-progression.js';
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260909-dragon-parent-v2';
 import { detachCatalogSpell, getSpellCatalogPageHref } from '../../spell-catalog/spell-catalog.js';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
+  getSpellSlotLevel,
   getSpellLevelLabel,
   isSpellSlotResource
 } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 
-const state = { kind: '', item: null, resources: [], weapons: [], inventoryItems: [], theme: '', onSave: null };
+const state = { kind: '', item: null, resources: [], weapons: [], inventoryItems: [], manaResourceId: 'mana-focus', theme: '', onSave: null };
 const COMMENT_ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
 
 function clone(value) {
@@ -210,14 +211,16 @@ function renderTriggerRules(item) {
 }
 
 function renderCosts(item) {
-  const costs = Array.isArray(item.costs) ? item.costs : [];
+  const isMagicCost = cost => [state.manaResourceId, 'mana-focus', 'pact-points'].includes(cost.resourceId)
+    || isSpellSlotResource(state.resources.find(resource => resource.id === cost.resourceId) || { id: cost.resourceId });
+  const costs = (Array.isArray(item.costs) ? item.costs : []).map((cost, index) => ({ cost, index }))
+    .filter(({ cost }) => state.kind !== 'spell' || !isMagicCost(cost));
   const selectableResources = state.kind === 'spell'
     ? state.resources.filter(resource => resource.id !== 'aura-focus'
-      && !/mana/i.test(`${resource.id || ''} ${resource.name || ''}`)
-      && !isSpellSlotResource(resource))
+      && !isMagicCost({ resourceId: resource.id }))
     : state.resources;
   return `<fieldset class="combat-entry-editor-costs"><legend>Kosten & Aktionsökonomie</legend>
-    <div class="combat-entry-editor-cost-list">${costs.map((cost, index) => `<div class="combat-entry-editor-cost-row">
+    <div class="combat-entry-editor-cost-list">${costs.map(({ cost, index }) => `<div class="combat-entry-editor-cost-row">
       <select data-entry-cost-index="${index}" data-entry-cost-field="resourceId"><option value="">Ressource wählen</option>${selectableResources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(cost.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select>
       <input type="number" min="0" max="9999" data-entry-cost-index="${index}" data-entry-cost-field="amount" value="${escapeHtml(cost.amount ?? 1)}" aria-label="Kosten">
       <button type="button" data-entry-action="remove-cost" data-entry-index="${index}" aria-label="Kosten entfernen">×</button>
@@ -227,7 +230,7 @@ function renderCosts(item) {
       <label class="check"><input type="checkbox" data-entry-field="auraBypass.allowed"${checked(item.auraBypass?.allowed !== false)}> Durch Aura-Fokus ersetzbar</label>
       <label><span>Aura-Kosten</span><input type="number" min="1" max="999" data-entry-field="auraBypass.cost" value="${escapeHtml(item.auraBypass?.cost ?? 1)}"></label>
     </div>
-    ${state.kind === 'spell' ? '<p>Mana wird automatisch nach Wirkungsgrad berechnet. Aura-Fokus ersetzt bei Auswahl das gesamte reguläre Paket.</p>' : ''}
+    ${state.kind === 'spell' ? '<p>Die Zauberressource wird einmal nach Wirkungsgrad berechnet. Gradfreigaben werden nicht verbraucht. Aura-Fokus ersetzt bei Auswahl das gesamte reguläre Paket.</p>' : ''}
   </fieldset>`;
 }
 
@@ -367,7 +370,8 @@ function renderWeapon(item) {
 
 function renderSpell(item) {
   const cantrip = Number(item.level) === 0;
-  const spellSlots = getOrderedSpellSlotResources(state.resources);
+  const spellSlots = getOrderedSpellSlotResources(state.resources).filter(resource => getSpellSlotLevel(resource) === Number(item.level));
+  const manaName = state.resources.find(resource => resource.id === state.manaResourceId)?.name || (state.manaResourceId === 'pact-points' ? 'Paktpunkte' : 'Mana');
   const upcast = item.upcast || {};
   return `<div class="combat-entry-editor-grid">
     <label class="wide"><span>Zaubericon (optional)</span><input data-entry-field="icon" value="${escapeHtml(item.icon)}" placeholder="Leer lassen für automatische Auswahl aus den Oblivion-Icons"><small>Akzeptiert einen relativen Bildpfad oder eine Bild-URL. Ohne Angabe wird das Icon passend zu Name, Schule und Schadensart gewählt.</small></label>
@@ -376,23 +380,21 @@ function renderSpell(item) {
     <label><span>Auflösung</span><select data-entry-field="resolutionType"><option value="spell-attack"${selected(item.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(item.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(item.resolutionType, 'automatic')}>Automatische Wirkung</option></select></label>
     <label><span>Rettungsattribut</span><select data-entry-field="saveAttribute">${renderAttributeOptions(item.saveAttribute)}</select></label>
     <label><span>Zaubergrad</span><select data-entry-field="level">${renderSpellLevelOptions(item.level)}</select></label>
-    <label><span>Würfelformel</span><input data-entry-field="rollFormula" value="${escapeHtml(String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="2W6"></label>
-    <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>
-    <label><span>Mana</span><input type="number" data-entry-field="manaCost" value="${getSpellManaCost(item.level)}" readonly title="Manakosten nach Wirkungsgrad"></label>
-    <label><span>Zauberplatz</span><select data-entry-field="slotResourceId"${cantrip ? ' disabled' : ''}><option value="">${cantrip ? 'Zaubertrick · kein Platz' : 'Zauberplatz wählen'}</option>${spellSlots.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(item.slotResourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
-    <label><span>Platzkosten</span><input type="number" min="0" max="99" data-entry-field="slotCost" value="${escapeHtml(item.slotCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}></label>
+    ${item.effects?.length ? '<p class="wide">Würfelformeln und Schadensarten werden unten bei den auswertbaren Effekten festgelegt.</p>' : `<label><span>Würfelformel</span><input data-entry-field="rollFormula" value="${escapeHtml(String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="2W6"></label><label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>`}
+    <label><span>${escapeHtml(manaName)}</span><input type="number" data-entry-role="spell-mana-cost" value="${getSpellManaCost(item.level)}" readonly><small>Automatisch nach Wirkungsgrad; Zaubertricks kosten ${getSpellManaCost(0)} Punkte.</small></label>
+    <label><span>Gradfreigabe</span><select data-entry-field="slotResourceId"${cantrip ? ' disabled' : ''}><option value="">${cantrip ? 'Zaubertrick · keine Gradfreigabe nötig' : 'Automatisch nach Grad'}</option>${spellSlots.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(item.slotResourceId, resource.id)}>${escapeHtml(getSpellLevelLabel(getSpellSlotLevel(resource)))}</option>`).join('')}</select><small>Wird beim Wirken nicht verbraucht.</small></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
     <label class="check"><input type="checkbox" data-entry-field="concentration"${checked(item.concentration)}> Benötigt Konzentration</label>
-    <label><span>Kanalisierung</span><input type="number" min="0" max="99" data-entry-field="channelComments" value="${escapeHtml(item.channelComments ?? 0)}"><small>0 = sofort, sonst Anzahl eigener Abschnitte bis zur Wirkung</small></label>
+    <label><span>Kanalisierung</span><input type="number" min="0" max="99" data-entry-field="channelComments" value="${escapeHtml(item.channelComments ?? 0)}"><small>0 = sofort, sonst Anzahl verschiedener eigener Gesamtbeiträge bis zur Wirkung</small></label>
     <label class="check"><input type="checkbox" data-entry-field="halfDamageOnSave"${checked(item.halfDamageOnSave)}> Halber Schaden bei gelungener Rettung</label>
     <label class="wide"><span>Beschreibung & Wirkung</span><textarea data-entry-field="description" rows="5">${escapeHtml(item.description)}</textarea></label>
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div><p class="combat-entry-editor-spell-rule">${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht das hinterlegte Aktionspaket und ${getSpellManaCost(item.level)} Mana. Zaubergrade sind Freischaltungen und werden nicht verbraucht.</p>
+  </div><p class="combat-entry-editor-spell-rule">${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht das vollständige Aktionspaket und ${getSpellManaCost(item.level)} ${escapeHtml(manaName)}. Freigeschaltete Grade bleiben verfügbar.</p>
   ${cantrip ? '' : `<fieldset class="combat-entry-editor-mechanics"><legend>Höherstufig wirken</legend><div class="combat-entry-editor-grid">
-    <label class="check"><input type="checkbox" data-entry-field="upcast.enabled"${checked(upcast.enabled)}> Höhere Zauberplätze erlauben</label>
+    <label class="check"><input type="checkbox" data-entry-field="upcast.enabled"${checked(upcast.enabled)}> Verstärkung auf höheren Wirkungsgraden</label>
     <label><span>Zusatzwurf je Grad</span><input data-entry-field="upcast.formulaPerLevel" value="${escapeHtml(String(upcast.formulaPerLevel || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W6"></label>
     <label><span>Fester Zusatz je Grad</span><input type="number" min="0" max="999" data-entry-field="upcast.amountPerLevel" value="${escapeHtml(upcast.amountPerLevel ?? 0)}"></label>
     <label><span>Höchster Grad</span><input type="number" min="${escapeHtml(item.level || 1)}" max="10" data-entry-field="upcast.maximumLevel" value="${escapeHtml(upcast.maximumLevel ?? 10)}"></label>
@@ -406,6 +408,10 @@ function ensureOverlay() {
   overlay.id = 'combat-entry-editor-overlay';
   overlay.className = 'combat-entry-editor-overlay';
   overlay.setAttribute('aria-hidden', 'true');
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'combat-entry-editor-title');
+  overlay.setAttribute('tabindex', '-1');
   document.body.appendChild(overlay);
   return overlay;
 }
@@ -419,7 +425,7 @@ function render() {
     : (state.kind === 'ability'
       ? renderAbility(item)
       : (state.kind === 'weapon' ? renderWeapon(item) : (state.kind === 'spell' ? renderSpell(item) : renderTechnique(item))));
-  overlay.innerHTML = `<section class="combat-entry-editor-dialog" role="dialog" aria-modal="true" aria-labelledby="combat-entry-editor-title">
+  overlay.innerHTML = `<section class="combat-entry-editor-dialog">
     <header><div><span>Kampfprofil · Detailwerkstatt</span><h2 id="combat-entry-editor-title">${kindTitle()}</h2></div><button type="button" data-entry-action="close" aria-label="Schließen">×</button></header>
     <div class="combat-entry-editor-body">
       ${item.catalogReference ? `<p class="combat-entry-editor-hint">${escapeHtml(item.school || 'Zauberkatalog')} · Fassung ${escapeHtml(item.catalogReference.revision)}. <a href="${escapeHtml(getSpellCatalogPageHref(item.catalogReference))}" target="_blank" rel="noopener">Katalog öffnen</a>. Beim Übernehmen entsteht eine eigene Fassung ohne automatische Katalog-Verstärkungen; andere Charaktere behalten ihre Zauber.</p>` : ''}
@@ -438,6 +444,7 @@ function close() {
   const overlay = ensureOverlay();
   overlay.classList.remove('active');
   overlay.setAttribute('aria-hidden', 'true');
+  globalThis.deactivateDialog?.('combat-entry-editor-overlay');
   state.kind = '';
   state.item = null;
   state.onSave = null;
@@ -474,7 +481,7 @@ function syncSpellLevel(field) {
   if (state.kind !== 'spell' || field.dataset.entryField !== 'level') return false;
   const level = Math.max(0, Math.min(10, Number(field.value) || 0));
   state.item.level = level;
-  state.item.manaCost = level === 0 ? 0 : Math.max(0, Number(state.item.manaCost) || 0);
+  state.item.manaCost = getSpellManaCost(level);
   state.item.slotCost = level === 0 ? 0 : Math.max(1, Number(state.item.slotCost) || 1);
   state.item.slotResourceId = level === 0 ? '' : findSpellSlotResourceId(state.resources, level);
   render();
@@ -583,7 +590,8 @@ document.addEventListener('click', event => {
       return;
     }
     const callback = state.onSave;
-    const value = detachCatalogSpell(clone(state.item));
+    const detached = detachCatalogSpell(clone(state.item));
+    const value = state.kind === 'spell' ? { ...detached, ...normalizeCombatSpell(detached, state.manaResourceId) } : detached;
     close();
     callback?.(value);
   }
@@ -593,7 +601,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && document.getElementById('combat-entry-editor-overlay')?.classList.contains('active')) close();
 });
 
-export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], inventoryItems = [], theme = '', onSave } = {}) {
+export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], inventoryItems = [], manaResourceId = 'mana-focus', theme = '', onSave } = {}) {
   if (!['quirk', 'ability', 'technique', 'weapon', 'spell'].includes(kind)) throw new Error('Unbekannter Kampfprofil-Editor.');
   state.kind = kind;
   state.theme = theme === 'parchment' ? theme : '';
@@ -601,8 +609,10 @@ export function openCombatEntryEditor({ kind, item, resources = [], weapons = []
   state.resources = clone(resources || []);
   state.weapons = clone(weapons || []);
   state.inventoryItems = clone(inventoryItems || []);
+  state.manaResourceId = manaResourceId || 'mana-focus';
   state.onSave = typeof onSave === 'function' ? onSave : null;
   render();
+  globalThis.activateDialog?.('combat-entry-editor-overlay', { initialFocus: '[data-entry-field="name"]' });
 }
 
 export const combatEntryEditorInternals = Object.freeze({ getAtPath, setAtPath, fieldValue });

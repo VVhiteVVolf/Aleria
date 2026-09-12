@@ -120,7 +120,7 @@ export function setCharacterArchiveLiveRecords(characters = [], creatures = []) 
 
 export function refreshItemRegisterArchiveEntries() {
   const entries = extractItemRegisterArchiveEntries();
-  const changed = JSON.stringify(entries.map(entry => entry.id)) !== JSON.stringify(state.register.map(entry => entry.id));
+  const changed = JSON.stringify(entries) !== JSON.stringify(state.register);
   state.register = entries;
   if (state.loaded && changed) dispatchChanged();
 }
@@ -144,6 +144,7 @@ async function persistEntries(entries) {
 }
 
 export async function saveCharacterArchiveEntry(entry = {}) {
+  if (['standard', 'offer', 'owned'].includes(entry.data?.section)) throw new Error('Diese Ware wird im Güterregister verwaltet. Bitte dort die Variante oder den persönlichen Besitz bearbeiten.');
   await ensureCharacterArchiveLoaded();
   if (entry.data?.catalogReference || String(entry.id || '').startsWith('catalog--')) {
     entry = { ...entry, id: `custom--${entry.id}`, data: detachCatalogSpell(entry.data), builtin: false };
